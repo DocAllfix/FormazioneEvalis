@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+# Guard inderogabile: nessun commit di questo progetto puo' contenere una firma
+# o co-author di assistenti AI (Claude/Anthropic) o "Generated with".
+# Vedi README.md / CLAUDE.md. Non bypassare con --no-verify.
+
+msg_file="$1"
+
+if grep -Eiq 'co-authored-by:.*(claude|anthropic)|generated with (\[?claude|claude code)|🤖 generated with|noreply@anthropic' "$msg_file"; then
+  echo "✖ commit-msg hook: rilevata una firma vietata (Claude/Anthropic/Generated with)." >&2
+  echo "  I commit di FormazioneEvalis devono essere firmati solo come DocAllfix," >&2
+  echo "  senza alcun co-author o trailer di assistenti AI. Rimuovi la riga e riprova." >&2
+  exit 1
+fi
+
+exit 0

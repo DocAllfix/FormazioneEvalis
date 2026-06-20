@@ -1,0 +1,15 @@
+# Normalizza i fine-riga a LF nel repo (evita churn CRLF su Windows).
+* text=auto eol=lf
+
+# Gli hook shell devono restare LF per essere eseguibili ovunque.
+.githooks/* text eol=lf
+
+# Binari
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary

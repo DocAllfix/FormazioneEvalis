@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Env (mai committare segreti; .env.example sì)
+.env
+.env.*
+!.env.example
+
+# Cloni di studio (vedi references/_REPORT per l'analisi)
+references/
+
+# Logs / cache
+*.log
+npm-debug.log*
+.turbo/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Deploy / IDE / OS
+.vercel
+.DS_Store
+.idea/
+.vscode/
