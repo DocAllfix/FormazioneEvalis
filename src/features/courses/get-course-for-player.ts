@@ -1,0 +1,77 @@
+// Contratto di lettura per il player: la UI Base44 consuma QUESTO. Ritorna il corso
+// strutturato (slide ordinate + URL clip + progress per-slide), i quiz e lo stato timer
+// (tempo effettivo + monte ore). Nessuna logica di compliance nella UI.
+
+import { and, asc, eq } from "drizzle-orm";
+import { db } from "@/lib/db";
+import { course, enrollment, module, lesson, slide, slideProgress, quiz } from "@/lib/db/schema";
+import { getClipStreamUrl } from "@/lib/cloudflare/stream";
+import { courseEffectiveSeconds } from "@/features/tracking/progress";
+
+export async function getCourseForPlayer(enrollmentId: string) {
+  const [enr] = await db
+    .select({ courseId: enrollment.courseId })
+    .from(enrollment)
+    .where(eq(enrollment.id, enrollmentId))
+    .limit(1);
+  if (!enr) throw new Error("Enrollment inesistente.");
+  const courseId = enr.courseId;
+
+  const [crs] = await db
+    .select({ id: course.id, title: course.title, requiredMinutes: course.requiredMinutes })
+    .from(course)
+    .where(eq(course.id, courseId))
+    .limit(1);
+  if (!crs) throw new Error("Corso inesistente.");
+
+  const rows = await db
+    .select({
+      slideId: slide.id,
+      lessonId: slide.lessonId,
+      moduleId: lesson.moduleId,
+      title: slide.title,
+      blocks: slide.blocks,
+      clipUid: slide.avatarClipUid,
+      audioSeconds: slide.audioSeconds,
+      effectiveSeconds: slideProgress.effectiveSeconds,
+      completedAt: slideProgress.completedAt,
+    })
+    .from(slide)
+    .innerJoin(lesson, eq(lesson.id, slide.lessonId))
+    .innerJoin(module, eq(module.id, lesson.moduleId))
+    .leftJoin(
+      slideProgress,
+      and(eq(slideProgress.slideId, slide.id), eq(slideProgress.enrollmentId, enrollmentId)),
+    )
+    .where(eq(module.courseId, courseId))
+    .orderBy(asc(module.position), asc(lesson.position), asc(slide.position));
+
+  const slides = await Promise.all(
+    rows.map(async (r) => ({
+      id: r.slideId,
+      lessonId: r.lessonId,
+      moduleId: r.moduleId,
+      title: r.title,
+      blocks: r.blocks,
+      audioSeconds: r.audioSeconds,
+      clipUrl: await getClipStreamUrl(r.clipUid),
+      effectiveSeconds: r.effectiveSeconds ?? 0,
+      completed: !!r.completedAt,
+    })),
+  );
+
+  const quizzes = await db
+    .select({ id: quiz.id, type: quiz.type, title: quiz.title, position: quiz.position })
+    .from(quiz)
+    .where(eq(quiz.courseId, courseId))
+    .orderBy(asc(quiz.position));
+
+  const effectiveSeconds = await courseEffectiveSeconds(enrollmentId, courseId);
+
+  return {
+    course: { id: crs.id, title: crs.title, requiredMinutes: crs.requiredMinutes },
+    timer: { effectiveSeconds, requiredSeconds: crs.requiredMinutes * 60 },
+    slides,
+    quizzes,
+  };
+}

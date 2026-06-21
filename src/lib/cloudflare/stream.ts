@@ -23,3 +23,8 @@ export async function getLessonStreamUrl(
   // https://customer-<code>.cloudflarestream.com/<token>/manifest/video.m3u8
   return TEST_HLS_MANIFEST;
 }
+
+// La clip avatar di una slide è un video: stessa sorgente firmata della lezione.
+export async function getClipStreamUrl(clipUid: string | null): Promise<string> {
+  return getLessonStreamUrl(clipUid);
+}

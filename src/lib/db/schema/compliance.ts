@@ -21,7 +21,7 @@ import {
   index,
 } from "drizzle-orm/pg-core";
 
-import { enrollment, lesson } from "./catalog";
+import { enrollment, lesson, slide } from "./catalog";
 
 export const certificateStatus = pgEnum("certificate_status", [
   "ready_for_review",
@@ -64,7 +64,9 @@ export const heartbeat = pgTable(
     lessonId: uuid("lesson_id")
       .notNull()
       .references(() => lesson.id, { onDelete: "cascade" }),
-    // posizione corrente nel video (secondi)
+    // slide corrente (lezioni html); null per lezioni video/scorm
+    slideId: uuid("slide_id").references(() => slide.id, { onDelete: "cascade" }),
+    // posizione corrente nel video/clip (secondi)
     position: integer("position").notNull(),
     // finestra/tab attiva al momento del ping
     focus: boolean("focus").notNull(),

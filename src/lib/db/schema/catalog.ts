@@ -29,10 +29,13 @@ export const courseStatus = pgEnum("course_status", [
 ]);
 
 export const activityType = pgEnum("activity_type", [
+  "html",
   "video",
   "scorm",
   "document",
 ]);
+
+export const quizType = pgEnum("quiz_type", ["checkpoint", "final"]);
 
 export const enrollmentSource = pgEnum("enrollment_source", [
   "b2b_seat",
@@ -56,6 +59,8 @@ export const course = pgTable(
     title: text("title").notNull(),
     description: text("description"),
     durationHours: integer("duration_hours"),
+    // Monte ore legale del tipo corso (Accordo): la fruizione deve raggiungerlo.
+    requiredMinutes: integer("required_minutes").notNull().default(0),
     status: courseStatus("status").notNull().default("draft"),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
@@ -96,6 +101,49 @@ export const lesson = pgTable(
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [index("lesson_module_idx").on(t.moduleId)],
+);
+
+// --- Slide (lezione html: unità didattica, base del tracciamento per-unità) ---
+export const slide = pgTable(
+  "slide",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    lessonId: uuid("lesson_id")
+      .notNull()
+      .references(() => lesson.id, { onDelete: "cascade" }),
+    position: integer("position").notNull().default(0),
+    title: text("title").notNull(),
+    // contenuto strutturato a blocchi [{ type, ... }] — renderizzato da Base44
+    blocks: jsonb("blocks").notNull(),
+    // clip avatar (Cloudflare Stream UID); null = slide senza avatar
+    avatarClipUid: text("avatar_clip_uid"),
+    // durata narrazione/clip (secondi) -> guida il tempo minimo della slide
+    audioSeconds: integer("audio_seconds").notNull().default(0),
+    speakerNotes: text("speaker_notes"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("slide_lesson_idx").on(t.lessonId)],
+);
+
+// --- Quiz (checkpoint intermedio obbligatorio | esame finale) ---
+export const quiz = pgTable(
+  "quiz",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    courseId: uuid("course_id")
+      .notNull()
+      .references(() => course.id, { onDelete: "cascade" }),
+    type: quizType("type").notNull(),
+    title: text("title").notNull(),
+    position: integer("position").notNull().default(0),
+    questionsToDraw: integer("questions_to_draw").notNull().default(1),
+    passThreshold: integer("pass_threshold").notNull().default(80), // %
+    timeLimitSeconds: integer("time_limit_seconds").notNull().default(0),
+    cooldownSeconds: integer("cooldown_seconds").notNull().default(0),
+    maxAttempts: integer("max_attempts"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("quiz_course_idx").on(t.courseId)],
 );
 
 // --- Enrollment ---
@@ -142,6 +190,26 @@ export const lessonProgress = pgTable(
   (t) => [unique("progress_enrollment_lesson_uq").on(t.enrollmentId, t.lessonId)],
 );
 
+// --- Slide progress (server-authoritative, per-unità — requisito Accordo) ---
+export const slideProgress = pgTable(
+  "slide_progress",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    enrollmentId: uuid("enrollment_id")
+      .notNull()
+      .references(() => enrollment.id, { onDelete: "cascade" }),
+    slideId: uuid("slide_id")
+      .notNull()
+      .references(() => slide.id, { onDelete: "cascade" }),
+    // secondi effettivi validati dal server (solo playing+visibile+no-salto)
+    effectiveSeconds: integer("effective_seconds").notNull().default(0),
+    audioCompleted: boolean("audio_completed").notNull().default(false),
+    completedAt: timestamp("completed_at", { withTimezone: true }),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [unique("slide_progress_enrollment_slide_uq").on(t.enrollmentId, t.slideId)],
+);
+
 // --- Quiz: banca domande ---
 export const quizQuestion = pgTable(
   "quiz_question",
@@ -150,13 +218,18 @@ export const quizQuestion = pgTable(
     courseId: uuid("course_id")
       .notNull()
       .references(() => course.id, { onDelete: "cascade" }),
+    // banca di appartenenza (checkpoint o esame finale)
+    quizId: uuid("quiz_id").references(() => quiz.id, { onDelete: "cascade" }),
     text: text("text").notNull(),
     // opzioni come array JSON [{ id, text }]
     options: jsonb("options").notNull(),
     correctOptionId: text("correct_option_id").notNull(),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
-  (t) => [index("quiz_question_course_idx").on(t.courseId)],
+  (t) => [
+    index("quiz_question_course_idx").on(t.courseId),
+    index("quiz_question_quiz_idx").on(t.quizId),
+  ],
 );
 
 // --- Quiz: tentativi ---
@@ -167,8 +240,12 @@ export const quizAttempt = pgTable(
     enrollmentId: uuid("enrollment_id")
       .notNull()
       .references(() => enrollment.id, { onDelete: "cascade" }),
+    quizId: uuid("quiz_id").references(() => quiz.id, { onDelete: "cascade" }),
     score: integer("score").notNull().default(0),
     passed: boolean("passed").notNull().default(false),
+    // finestra di tempo del tentativo (per il limite di tempo, validato lato server)
+    startedAt: timestamp("started_at", { withTimezone: true }),
+    submittedAt: timestamp("submitted_at", { withTimezone: true }),
     // blocco temporale dopo tentativi falliti (cooldown)
     lockedUntil: timestamp("locked_until", { withTimezone: true }),
     // dettaglio: domande estratte, risposte date, tempi
