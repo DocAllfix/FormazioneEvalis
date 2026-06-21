@@ -11,7 +11,11 @@ export default defineConfig({
     include: ["src/**/*.{test,spec}.ts"],
     exclude: ["node_modules", "references", ".next", "dist"],
     setupFiles: ["dotenv/config"], // carica .env per i test di integrazione DB
+    // I test di integrazione colpiscono lo stesso Supabase e usano hashing password
+    // (scrypt) pesante: eseguiti in PARALLELO causano contesa ("Deriving bits failed").
+    // File in sequenza = affidabile e sicuro sullo stato DB condiviso.
+    fileParallelism: false,
     hookTimeout: 30000,
-    testTimeout: 30000,
+    testTimeout: 90000,
   },
 });

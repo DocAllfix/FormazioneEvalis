@@ -42,7 +42,9 @@ const schema = z.object({
   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: z.string().optional(),
   CLOUDFLARE_ACCOUNT_ID: z.string().optional(),
   CLOUDFLARE_STREAM_API_TOKEN: z.string().optional(),
-  CLOUDFLARE_STREAM_SIGNING_KEY: z.string().optional(),
+  CLOUDFLARE_STREAM_SIGNING_KEY: z.string().optional(), // PEM privata (base64)
+  CLOUDFLARE_STREAM_SIGNING_KEY_ID: z.string().optional(), // kid della signing key
+  CLOUDFLARE_STREAM_CUSTOMER_CODE: z.string().optional(), // customer-<code>.cloudflarestream.com
   BREVO_API_KEY: z.string().optional(),
   RESEND_API_KEY: z.string().optional(),
   // staff piattaforma autorizzato ad approvare/revocare certificati (CSV di email)

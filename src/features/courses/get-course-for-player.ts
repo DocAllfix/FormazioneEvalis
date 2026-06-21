@@ -5,7 +5,6 @@
 import { and, asc, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { course, enrollment, module, lesson, slide, slideProgress, quiz } from "@/lib/db/schema";
-import { getClipStreamUrl } from "@/lib/cloudflare/stream";
 import { courseEffectiveSeconds } from "@/features/tracking/progress";
 
 export async function getCourseForPlayer(enrollmentId: string) {
@@ -46,19 +45,19 @@ export async function getCourseForPlayer(enrollmentId: string) {
     .where(eq(module.courseId, courseId))
     .orderBy(asc(module.position), asc(lesson.position), asc(slide.position));
 
-  const slides = await Promise.all(
-    rows.map(async (r) => ({
-      id: r.slideId,
-      lessonId: r.lessonId,
-      moduleId: r.moduleId,
-      title: r.title,
-      blocks: r.blocks,
-      audioSeconds: r.audioSeconds,
-      clipUrl: await getClipStreamUrl(r.clipUid),
-      effectiveSeconds: r.effectiveSeconds ?? 0,
-      completed: !!r.completedAt,
-    })),
-  );
+  // L'URL firmato della clip NON va qui (token a vita breve): il player lo chiede
+  // per-slide via getMyClipUrl quando raggiunge la slide. Qui solo i metadati.
+  const slides = rows.map((r) => ({
+    id: r.slideId,
+    lessonId: r.lessonId,
+    moduleId: r.moduleId,
+    title: r.title,
+    blocks: r.blocks,
+    audioSeconds: r.audioSeconds,
+    hasClip: !!r.clipUid,
+    effectiveSeconds: r.effectiveSeconds ?? 0,
+    completed: !!r.completedAt,
+  }));
 
   const quizzes = await db
     .select({ id: quiz.id, type: quiz.type, title: quiz.title, position: quiz.position })

@@ -3,9 +3,18 @@
 // Le funzioni-contratto grezze (getCourseForPlayer, startQuiz, …) non si espongono mai
 // direttamente al client: passano sempre da qui.
 
+import { eq } from "drizzle-orm";
+import { db } from "@/lib/db";
+import { slide, lesson, module } from "@/lib/db/schema";
 import { requireSession } from "@/features/auth/guards";
-import { assertEnrollmentOwnedBy, assertAttemptOwnedBy } from "@/features/access/ownership";
+import {
+  assertEnrollmentOwnedBy,
+  assertAttemptOwnedBy,
+  loadOwnedEnrollment,
+  AccessDeniedError,
+} from "@/features/access/ownership";
 import { getCourseForPlayer } from "@/features/courses/get-course-for-player";
+import { getSignedClipUrl } from "@/lib/cloudflare/stream";
 import { startQuiz, submitQuiz } from "@/features/quiz/engine";
 import { ensureCertificateRecord } from "@/features/certificates/lifecycle";
 
@@ -34,4 +43,21 @@ export async function requestMyCertificate(enrollmentId: string) {
   const { user } = await requireSession();
   await assertEnrollmentOwnedBy(enrollmentId, user.id);
   return ensureCertificateRecord(enrollmentId);
+}
+
+/** URL firmato (a vita breve) della clip avatar di una slide del MIO corso. */
+export async function getMyClipUrl(enrollmentId: string, slideId: string): Promise<string> {
+  const { user } = await requireSession();
+  const enr = await loadOwnedEnrollment(enrollmentId, user.id);
+  const [row] = await db
+    .select({ clipUid: slide.avatarClipUid, courseId: module.courseId })
+    .from(slide)
+    .innerJoin(lesson, eq(lesson.id, slide.lessonId))
+    .innerJoin(module, eq(module.id, lesson.moduleId))
+    .where(eq(slide.id, slideId))
+    .limit(1);
+  if (!row || row.courseId !== enr.courseId) {
+    throw new AccessDeniedError("Slide non appartenente al corso dell'iscrizione.");
+  }
+  return getSignedClipUrl(row.clipUid);
 }
