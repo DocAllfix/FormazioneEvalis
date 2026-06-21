@@ -1,0 +1,2 @@
+CREATE UNIQUE INDEX "activity_log_org_hash_uq" ON "activity_log" USING btree ("organization_id","hash");--> statement-breakpoint
+CREATE INDEX "activity_log_org_prev_idx" ON "activity_log" USING btree ("organization_id","prev_hash");

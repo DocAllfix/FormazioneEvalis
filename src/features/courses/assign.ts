@@ -6,6 +6,7 @@ import { and, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { course, enrollment, member } from "@/lib/db/schema";
 import { requireRole, requireActiveOrg } from "@/features/auth/guards";
+import { appendActivity } from "@/features/audit/log";
 
 /** Server Action: l'admin/owner dell'org attiva assegna un corso a un dipendente. */
 export async function assignCourse(memberUserId: string, courseId: string) {
@@ -43,10 +44,24 @@ export async function enrollMemberInCourse(params: {
     throw new Error("Corso non disponibile per questa organizzazione.");
   }
 
-  await db
-    .insert(enrollment)
-    .values({ organizationId: orgId, userId: memberUserId, courseId, source: "b2b_seat", status: "active" })
-    .onConflictDoNothing({ target: [enrollment.userId, enrollment.courseId] });
+  // insert + audit atomici: l'evento `enrolled` si scrive solo se l'enrollment è
+  // davvero nuovo (l'idempotenza non deve generare eventi duplicati).
+  await db.transaction(async (tx) => {
+    const inserted = await tx
+      .insert(enrollment)
+      .values({ organizationId: orgId, userId: memberUserId, courseId, source: "b2b_seat", status: "active" })
+      .onConflictDoNothing({ target: [enrollment.userId, enrollment.courseId] })
+      .returning({ id: enrollment.id });
+    if (inserted.length > 0) {
+      await appendActivity(tx, {
+        organizationId: orgId,
+        userId: memberUserId,
+        verb: "enrolled",
+        object: `course:${courseId}`,
+        payload: { enrollmentId: inserted[0].id, source: "b2b_seat" },
+      });
+    }
+  });
 
   return { ok: true as const, orgId, userId: memberUserId, courseId };
 }

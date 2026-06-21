@@ -19,6 +19,7 @@ import {
   timestamp,
   uuid,
   index,
+  uniqueIndex,
 } from "drizzle-orm/pg-core";
 
 import { enrollment, lesson, slide } from "./catalog";
@@ -50,6 +51,9 @@ export const activityLog = pgTable(
   (t) => [
     index("activity_log_org_idx").on(t.organizationId),
     index("activity_log_created_idx").on(t.createdAt),
+    // integrità hash-chain: hash unico per org + traversal veloce per prev_hash
+    uniqueIndex("activity_log_org_hash_uq").on(t.organizationId, t.hash),
+    index("activity_log_org_prev_idx").on(t.organizationId, t.prevHash),
   ],
 );
 

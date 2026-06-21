@@ -5,6 +5,7 @@
 import { and, eq, inArray } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { quiz, quizQuestion, quizAttempt } from "@/lib/db/schema";
+import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
 
 // --- Logica pura (testabile) ---
 
@@ -61,14 +62,25 @@ export async function startQuiz(enrollmentId: string, quizId: string) {
   const drawn = shuffleTake(bank, qz.questionsToDraw);
   const drawnIds = drawn.map((q) => q.id);
 
-  const [attempt] = await db
-    .insert(quizAttempt)
-    .values({ enrollmentId, quizId, startedAt: now, detail: { drawnIds } })
-    .returning({ id: quizAttempt.id });
+  const attemptId = await db.transaction(async (tx) => {
+    const [attempt] = await tx
+      .insert(quizAttempt)
+      .values({ enrollmentId, quizId, startedAt: now, detail: { drawnIds } })
+      .returning({ id: quizAttempt.id });
+    const { organizationId, userId } = await auditContextFromEnrollment(tx, enrollmentId);
+    await appendActivity(tx, {
+      organizationId,
+      userId,
+      verb: "initialized",
+      object: `quiz:${quizId}`,
+      payload: { attemptId: attempt.id },
+    });
+    return attempt.id;
+  });
 
   // SENZA risposte corrette
   return {
-    attemptId: attempt.id,
+    attemptId,
     timeLimitSeconds: qz.timeLimitSeconds,
     questions: drawn.map((q) => ({ id: q.id, text: q.text, options: q.options })),
   };
@@ -101,10 +113,20 @@ export async function submitQuiz(
   const passed = !over && graded.score >= qz.passThreshold;
   const lockedUntil = passed ? null : new Date(now.getTime() + qz.cooldownSeconds * 1000);
 
-  await db
-    .update(quizAttempt)
-    .set({ score: graded.score, passed, submittedAt: now, lockedUntil, detail: { drawnIds, answers, over } })
-    .where(eq(quizAttempt.id, attemptId));
+  await db.transaction(async (tx) => {
+    await tx
+      .update(quizAttempt)
+      .set({ score: graded.score, passed, submittedAt: now, lockedUntil, detail: { drawnIds, answers, over } })
+      .where(eq(quizAttempt.id, attemptId));
+    const { organizationId, userId } = await auditContextFromEnrollment(tx, att.enrollmentId);
+    await appendActivity(tx, {
+      organizationId,
+      userId,
+      verb: passed ? "passed" : "failed",
+      object: `quiz:${att.quizId}`,
+      payload: { score: graded.score, over },
+    });
+  });
 
   return { score: graded.score, passed, over };
 }

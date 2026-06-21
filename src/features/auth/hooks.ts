@@ -9,6 +9,7 @@ import type { BetterAuthOptions } from "better-auth";
 import { and, eq, ne } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { invitation, member, session as sessionTable } from "@/lib/db/schema";
+import { appendActivity } from "@/features/audit/log";
 import { createPersonalOrg } from "./orgs";
 
 /** Esiste un invito pendente per questa email? (se sì → utente B2B, niente org personale) */
@@ -45,9 +46,35 @@ export const authDatabaseHooks = {
       },
       // Sessione singola attiva (Modulo 11): al nuovo login revoca le altre sessioni dell'utente.
       after: async (session) => {
-        await db
+        const revoked = await db
           .delete(sessionTable)
-          .where(and(eq(sessionTable.userId, session.userId), ne(sessionTable.id, session.id)));
+          .where(and(eq(sessionTable.userId, session.userId), ne(sessionTable.id, session.id)))
+          .returning({ id: sessionTable.id });
+
+        // Audit best-effort: un guasto qui NON deve impedire il login.
+        try {
+          const activeOrg = (session as { activeOrganizationId?: string | null }).activeOrganizationId;
+          let organizationId = activeOrg ?? undefined;
+          if (!organizationId) {
+            const [m] = await db
+              .select({ orgId: member.organizationId })
+              .from(member)
+              .where(eq(member.userId, session.userId))
+              .limit(1);
+            organizationId = m?.orgId;
+          }
+          if (organizationId) {
+            const org = organizationId;
+            await db.transaction(async (tx) => {
+              await appendActivity(tx, { organizationId: org, userId: session.userId, verb: "logged-in", object: `session:${session.id}` });
+              for (const r of revoked) {
+                await appendActivity(tx, { organizationId: org, userId: session.userId, verb: "session-revoked", object: `session:${r.id}` });
+              }
+            });
+          }
+        } catch (e) {
+          console.error("[audit] logged-in append failed", e);
+        }
       },
     },
   },
