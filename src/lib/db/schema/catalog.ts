@@ -61,6 +61,8 @@ export const course = pgTable(
     durationHours: integer("duration_hours"),
     // Monte ore legale del tipo corso (Accordo): la fruizione deve raggiungerlo.
     requiredMinutes: integer("required_minutes").notNull().default(0),
+    // Prezzo Stripe per l'acquisto one-off B2C (Modulo 2); null = non acquistabile singolarmente.
+    stripePriceId: text("stripe_price_id"),
     status: courseStatus("status").notNull().default("draft"),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),

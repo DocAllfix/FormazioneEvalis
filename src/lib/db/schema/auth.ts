@@ -2,6 +2,7 @@ import { relations } from "drizzle-orm";
 import {
   pgTable,
   text,
+  integer,
   timestamp,
   boolean,
   index,
@@ -90,8 +91,18 @@ export const organization = pgTable(
     logo: text("logo"),
     createdAt: timestamp("created_at").notNull(),
     metadata: text("metadata"),
+    // Billing Stripe (Modulo 2): stato abbonamento sincronizzato dal webhook.
+    stripeCustomerId: text("stripe_customer_id").unique(),
+    stripeSubscriptionId: text("stripe_subscription_id"),
+    plan: text("plan"),
+    subscriptionStatus: text("subscription_status"),
+    seats: integer("seats"),
   },
-  (table) => [uniqueIndex("organization_slug_uidx").on(table.slug)],
+  (table) => [
+    uniqueIndex("organization_slug_uidx").on(table.slug),
+    index("organization_stripe_customer_idx").on(table.stripeCustomerId),
+    index("organization_stripe_subscription_idx").on(table.stripeSubscriptionId),
+  ],
 );
 
 export const member = pgTable(

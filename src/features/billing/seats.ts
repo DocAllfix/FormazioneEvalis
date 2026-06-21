@@ -17,11 +17,13 @@ export async function countMembers(orgId: string): Promise<number> {
 
 export async function getSeatLimit(orgId: string): Promise<number> {
   const [org] = await db
-    .select({ metadata: organization.metadata })
+    .select({ seats: organization.seats, metadata: organization.metadata })
     .from(organization)
     .where(eq(organization.id, orgId))
     .limit(1);
-  return parseOrgMetadata(org?.metadata)?.seatLimit ?? 0;
+  // Org azienda: posti dall'abbonamento (colonna `seats`, popolata dal webhook).
+  // Org personale B2C: nessun abbonamento → fallback su metadata.seatLimit (= 1).
+  return org?.seats ?? parseOrgMetadata(org?.metadata)?.seatLimit ?? 0;
 }
 
 /** Lancia se non ci sono posti liberi (membri attuali ≥ seatLimit). */
