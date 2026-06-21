@@ -43,6 +43,9 @@ const schema = z.object({
   CLOUDFLARE_STREAM_API_TOKEN: z.string().optional(),
   CLOUDFLARE_STREAM_SIGNING_KEY: z.string().optional(),
   BREVO_API_KEY: z.string().optional(),
+  RESEND_API_KEY: z.string().optional(),
+  // staff piattaforma autorizzato ad approvare/revocare certificati (CSV di email)
+  PLATFORM_STAFF_EMAILS: z.string().optional(),
   SENTRY_DSN: z.string().optional(),
 });
 

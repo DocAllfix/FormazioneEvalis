@@ -53,3 +53,24 @@ export async function requireRole(...roles: string[]) {
   }
   return { user, session, orgId, role };
 }
+
+/**
+ * Staff della piattaforma (ente accreditato): revisore certificati, TRASVERSALE alle org.
+ * Allowlist via env `PLATFORM_STAFF_EMAILS` (CSV), letta a runtime. Funzione pura testabile.
+ */
+export function isPlatformStaffEmail(email: string): boolean {
+  const list = (process.env.PLATFORM_STAFF_EMAILS ?? "")
+    .split(",")
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
+  return list.includes(email.trim().toLowerCase());
+}
+
+/** Richiede che l'utente in sessione sia staff piattaforma, altrimenti lancia. */
+export async function requirePlatformStaff() {
+  const ctx = await requireSession();
+  if (!isPlatformStaffEmail(ctx.user.email)) {
+    throw new Error("Permesso negato: richiesto staff piattaforma.");
+  }
+  return ctx;
+}

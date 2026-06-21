@@ -88,6 +88,8 @@ export const certificate = pgTable(
       .notNull()
       .references(() => enrollment.id, { onDelete: "cascade" }),
     status: certificateStatus("status").notNull().default("ready_for_review"),
+    // numero attestato leggibile (valorizzato all'emissione)
+    number: text("number").unique(),
     // token pubblico per la pagina /verify/:uuid
     verifyUuid: uuid("verify_uuid").notNull().defaultRandom().unique(),
     // percorso del PDF su Supabase Storage (valorizzato all'emissione)
@@ -96,8 +98,10 @@ export const certificate = pgTable(
     approvedBy: text("approved_by"),
     approvedAt: timestamp("approved_at", { withTimezone: true }),
     issuedAt: timestamp("issued_at", { withTimezone: true }),
+    revokedAt: timestamp("revoked_at", { withTimezone: true }),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
   },
-  (t) => [index("certificate_enrollment_idx").on(t.enrollmentId)],
+  // un solo certificato per enrollment (idempotenza)
+  (t) => [uniqueIndex("certificate_enrollment_uq").on(t.enrollmentId)],
 );
