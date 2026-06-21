@@ -2,10 +2,8 @@
 // server-authoritative. L'enrollment deve appartenere all'utente in sessione.
 
 import { z } from "zod";
-import { eq } from "drizzle-orm";
-import { db } from "@/lib/db";
-import { enrollment } from "@/lib/db/schema";
 import { getCurrentSession } from "@/lib/auth/server";
+import { assertEnrollmentOwnedBy } from "@/features/access/ownership";
 import { recordHeartbeat } from "@/features/tracking/progress";
 
 const bodySchema = z.object({
@@ -25,12 +23,11 @@ export async function POST(req: Request) {
   if (!parsed.success) return new Response("bad request", { status: 400 });
   const body = parsed.data;
 
-  const [enr] = await db
-    .select({ userId: enrollment.userId })
-    .from(enrollment)
-    .where(eq(enrollment.id, body.enrollmentId))
-    .limit(1);
-  if (!enr || enr.userId !== ctx.user.id) return new Response("forbidden", { status: 403 });
+  try {
+    await assertEnrollmentOwnedBy(body.enrollmentId, ctx.user.id);
+  } catch {
+    return new Response("forbidden", { status: 403 });
+  }
 
   const result = await recordHeartbeat(body);
   return Response.json(result);
