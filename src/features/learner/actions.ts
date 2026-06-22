@@ -1,4 +1,4 @@
-// Entry-point discente: le superfici che Base44 chiama per il flusso di fruizione.
+// Entry-point discente: le superfici che il frontend chiama per il flusso di fruizione.
 // Ogni azione applica la PRIMA BARRIERA: sessione → ownership → logica esistente.
 // Le funzioni-contratto grezze (getCourseForPlayer, startQuiz, …) non si espongono mai
 // direttamente al client: passano sempre da qui.

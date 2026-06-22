@@ -1,8 +1,11 @@
-export default function HomePage() {
-  return (
-    <main style={{ padding: "4rem", fontFamily: "system-ui" }}>
-      <h1>FormazioneEvalis</h1>
-      <p>Piattaforma di erogazione corsi di formazione professionale. Skeleton iniziale.</p>
-    </main>
-  );
+import Home from "@/components/pages/Home";
+
+export const metadata = {
+  title: "Evalis — Certifica le tue competenze professionali",
+  description:
+    "Preparazione online, esame di verifica e certificato verificabile con QR. Auditor ISO, mestieri e professioni, settore bancario.",
+};
+
+export default function Page() {
+  return <Home />;
 }

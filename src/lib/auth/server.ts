@@ -1,5 +1,5 @@
 // Helper server-side per leggere la sessione corrente nei Server Components e
-// nelle Server Actions. Superficie che consumeranno le pagine (anche il frontend Base44).
+// nelle Server Actions. Superficie che consumeranno le pagine (anche il frontend).
 
 import { headers } from "next/headers";
 import { auth } from "@/lib/auth";

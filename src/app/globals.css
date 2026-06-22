@@ -1,1 +1,126 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+/* Design tokens portati dalla landing approvata (export della landing -> Tailwind v4).
+   Palette calda: arancione #EA5A0C, crema, quasi-nero caldo. Font DM Serif / DM Sans. */
+@theme {
+  --color-background: hsl(60 20% 97%);
+  --color-foreground: hsl(26 48% 7%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(26 48% 7%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(26 48% 7%);
+  --color-primary: hsl(20 92% 47%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(38 35% 93%);
+  --color-secondary-foreground: hsl(26 48% 7%);
+  --color-muted: hsl(38 35% 93%);
+  --color-muted-foreground: hsl(33 13% 32%);
+  --color-accent: hsl(20 92% 47%);
+  --color-accent-foreground: hsl(0 0% 100%);
+  --color-destructive: hsl(0 72% 51%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  --color-border: hsl(37 24% 89%);
+  --color-input: hsl(37 24% 89%);
+  --color-ring: hsl(20 92% 47%);
+  --color-near-black: hsl(26 48% 7%);
+  --color-cream-dark: hsl(38 35% 93%);
+  --color-text-secondary: hsl(32 9% 57%);
+  --color-success: #15803d;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+
+  --font-body: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-dm-serif), ui-serif, Georgia, serif;
+  --font-display: var(--font-dm-serif), ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+@keyframes badge-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.02); opacity: 1; }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    font-weight: 400;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+  }
+  /* "Manina" su tutto ciò che è realmente cliccabile (Tailwind v4 non la mette di default). */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  label[for],
+  summary {
+    cursor: pointer;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(26, 18, 9, 0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .badge-pulse {
+    animation: badge-pulse 4s ease-in-out infinite;
+  }
+  .skip-link {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .skip-link:focus {
+    position: absolute;
+    width: auto;
+    height: auto;
+    clip: auto;
+    top: 1rem;
+    left: 1rem;
+    z-index: 50;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    overflow: visible;
+    white-space: normal;
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    border-radius: 0.375rem;
+  }
+}

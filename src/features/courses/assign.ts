@@ -66,7 +66,7 @@ export async function enrollMemberInCourse(params: {
   return { ok: true as const, orgId, userId: memberUserId, courseId };
 }
 
-/** Lista membri dell'org attiva (superficie per la dashboard admin Base44). Progress: slice tracking. */
+/** Lista membri dell'org attiva (superficie per la dashboard admin). Progress: slice tracking. */
 export async function listOrgMembers() {
   const { orgId } = await requireActiveOrg();
   return db

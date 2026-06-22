@@ -1,5 +1,5 @@
 // Guard server-side: sessione, organizzazione attiva, ruolo. Superficie che le
-// Server Actions e (tramite esse) il frontend Base44 useranno per proteggere le azioni.
+// Server Actions e (tramite esse) il frontend useranno per proteggere le azioni.
 // Convenzione scoping: ogni query di dominio filtra per l'org attiva (prima barriera);
 // RLS Supabase = seconda barriera (slice successivo).
 

@@ -115,7 +115,7 @@ export const slide = pgTable(
       .references(() => lesson.id, { onDelete: "cascade" }),
     position: integer("position").notNull().default(0),
     title: text("title").notNull(),
-    // contenuto strutturato a blocchi [{ type, ... }] — renderizzato da Base44
+    // contenuto strutturato a blocchi [{ type, ... }] — renderizzato dal frontend
     blocks: jsonb("blocks").notNull(),
     // clip avatar (Cloudflare Stream UID); null = slide senza avatar
     avatarClipUid: text("avatar_clip_uid"),

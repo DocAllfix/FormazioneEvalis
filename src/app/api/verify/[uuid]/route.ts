@@ -1,5 +1,5 @@
 // Verifica pubblica del certificato (per token). API dati: la pagina /verify/:uuid
-// la costruisce Base44 consumando questo endpoint. Nessuna autenticazione.
+// la costruisce il frontend consumando questo endpoint. Nessuna autenticazione.
 
 import { getCertificateByVerifyUuid } from "@/features/certificates/lifecycle";
 

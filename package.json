@@ -17,20 +17,30 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.3",
+    "@radix-ui/react-dialog": "^1.1.6",
+    "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-slot": "^1.1.2",
     "@sentry/nextjs": "^9.40.0",
     "@supabase/supabase-js": "^2.49.4",
     "better-auth": "^1.6.20",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "drizzle-orm": "^0.45.2",
+    "framer-motion": "^11.16.4",
     "hls.js": "^1.6.5",
+    "lucide-react": "^0.475.0",
     "next": "15.5.4",
     "pdf-lib": "^1.17.1",
     "postgres": "^3.4.5",
     "qrcode": "^1.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-markdown": "^9.0.1",
     "resend": "^6.14.0",
     "scorm-again": "^3.0.5",
     "stripe": "^18.5.0",
+    "tailwind-merge": "^3.0.2",
     "zod": "^3.25.0"
   },
   "devDependencies": {
@@ -43,6 +53,7 @@
     "drizzle-kit": "^0.31.1",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.7",
+    "tw-animate-css": "^1.2.5",
     "typescript": "^5.8.3",
     "vitest": "^2.1.9"
   },

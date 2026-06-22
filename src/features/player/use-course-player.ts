@@ -1,7 +1,7 @@
 "use client";
 
 // Hook React di RIFERIMENTO: collega il controller puro a <video>+hls.js, alla
-// Page Visibility API e all'invio heartbeat (sendBeacon). Base44 costruisce la UI
+// Page Visibility API e all'invio heartbeat (sendBeacon). Il frontend costruisce la UI
 // e consuma questo hook (o lo adatta); nessuna logica di compliance vive nella UI.
 
 import { useCallback, useEffect, useRef, useState } from "react";

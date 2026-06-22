@@ -1,4 +1,4 @@
-// Contratto di lettura per il player: la UI Base44 consuma QUESTO. Ritorna il corso
+// Contratto di lettura per il player: la UI consuma QUESTO. Ritorna il corso
 // strutturato (slide ordinate + URL clip + progress per-slide), i quiz e lo stato timer
 // (tempo effettivo + monte ore). Nessuna logica di compliance nella UI.
 

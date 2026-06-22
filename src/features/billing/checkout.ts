@@ -1,4 +1,4 @@
-// Azioni di checkout (avviate dall'utente). Ritornano un URL Stripe che la UI Base44
+// Azioni di checkout (avviate dall'utente). Ritornano un URL Stripe che la UI
 // usa per il redirect. Protette dai guard esistenti. Nessuna logica di pagamento qui:
 // il pagamento vive su Stripe, la verità di stato arriva dal webhook.
 
