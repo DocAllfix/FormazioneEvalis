@@ -5,7 +5,7 @@
 
 import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { slide, lesson, module } from "@/lib/db/schema";
+import { slide, lesson, module as courseModule } from "@/lib/db/schema";
 import { requireSession } from "@/features/auth/guards";
 import {
   assertEnrollmentOwnedBy,
@@ -50,10 +50,10 @@ export async function getMyClipUrl(enrollmentId: string, slideId: string): Promi
   const { user } = await requireSession();
   const enr = await loadOwnedEnrollment(enrollmentId, user.id);
   const [row] = await db
-    .select({ clipUid: slide.avatarClipUid, courseId: module.courseId })
+    .select({ clipUid: slide.avatarClipUid, courseId: courseModule.courseId })
     .from(slide)
     .innerJoin(lesson, eq(lesson.id, slide.lessonId))
-    .innerJoin(module, eq(module.id, lesson.moduleId))
+    .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
     .where(eq(slide.id, slideId))
     .limit(1);
   if (!row || row.courseId !== enr.courseId) {

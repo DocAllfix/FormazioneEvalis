@@ -4,7 +4,7 @@
 
 import { and, asc, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { course, enrollment, module, lesson, slide, slideProgress, quiz } from "@/lib/db/schema";
+import { course, enrollment, module as courseModule, lesson, slide, slideProgress, quiz } from "@/lib/db/schema";
 import { courseEffectiveSeconds } from "@/features/tracking/progress";
 
 export async function getCourseForPlayer(enrollmentId: string) {
@@ -37,13 +37,13 @@ export async function getCourseForPlayer(enrollmentId: string) {
     })
     .from(slide)
     .innerJoin(lesson, eq(lesson.id, slide.lessonId))
-    .innerJoin(module, eq(module.id, lesson.moduleId))
+    .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
     .leftJoin(
       slideProgress,
       and(eq(slideProgress.slideId, slide.id), eq(slideProgress.enrollmentId, enrollmentId)),
     )
-    .where(eq(module.courseId, courseId))
-    .orderBy(asc(module.position), asc(lesson.position), asc(slide.position));
+    .where(eq(courseModule.courseId, courseId))
+    .orderBy(asc(courseModule.position), asc(lesson.position), asc(slide.position));
 
   // L'URL firmato della clip NON va qui (token a vita breve): il player lo chiede
   // per-slide via getMyClipUrl quando raggiunge la slide. Qui solo i metadati.

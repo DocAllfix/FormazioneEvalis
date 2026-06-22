@@ -3,7 +3,7 @@
 
 import { and, count, eq, isNotNull } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { course, enrollment, slide, lesson, module, slideProgress, quiz } from "@/lib/db/schema";
+import { course, enrollment, slide, lesson, module as courseModule, slideProgress, quiz } from "@/lib/db/schema";
 import { courseEffectiveSeconds } from "@/features/tracking/progress";
 import { isQuizPassed } from "@/features/quiz/engine";
 
@@ -34,18 +34,18 @@ export async function isReadyForCertificate(
     .select({ total: count() })
     .from(slide)
     .innerJoin(lesson, eq(lesson.id, slide.lessonId))
-    .innerJoin(module, eq(module.id, lesson.moduleId))
-    .where(eq(module.courseId, courseId));
+    .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
+    .where(eq(courseModule.courseId, courseId));
   const [{ done }] = await db
     .select({ done: count() })
     .from(slideProgress)
     .innerJoin(slide, eq(slide.id, slideProgress.slideId))
     .innerJoin(lesson, eq(lesson.id, slide.lessonId))
-    .innerJoin(module, eq(module.id, lesson.moduleId))
+    .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
     .where(
       and(
         eq(slideProgress.enrollmentId, enrollmentId),
-        eq(module.courseId, courseId),
+        eq(courseModule.courseId, courseId),
         isNotNull(slideProgress.completedAt),
       ),
     );

@@ -3,7 +3,7 @@
 // Generatore-agnostico: Claude/EduVault/manuale producono il formato canonico.
 
 import { db } from "@/lib/db";
-import { course, module, lesson, slide, quiz, quizQuestion } from "@/lib/db/schema";
+import { course, module as courseModule, lesson, slide, quiz, quizQuestion } from "@/lib/db/schema";
 import { courseInputSchema, type CourseInput, type QuizInput } from "./course-format";
 
 export async function ingestCourse(input: unknown): Promise<{ courseId: string }> {
@@ -32,9 +32,9 @@ export async function ingestCourse(input: unknown): Promise<{ courseId: string }
 
     for (const [mi, m] of pkg.modules.entries()) {
       const [mod] = await tx
-        .insert(module)
+        .insert(courseModule)
         .values({ courseId, title: m.title, position: mi })
-        .returning({ id: module.id });
+        .returning({ id: courseModule.id });
 
       for (const [li, l] of m.lessons.entries()) {
         const [les] = await tx

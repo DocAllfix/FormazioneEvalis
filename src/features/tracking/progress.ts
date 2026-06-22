@@ -5,7 +5,7 @@
 
 import { and, desc, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { slide, slideProgress, lesson, module } from "@/lib/db/schema";
+import { slide, slideProgress, lesson, module as courseModule } from "@/lib/db/schema";
 import { heartbeat } from "@/lib/db/schema";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
 
@@ -134,7 +134,7 @@ export async function courseEffectiveSeconds(enrollmentId: string, courseId: str
     .from(slideProgress)
     .innerJoin(slide, eq(slide.id, slideProgress.slideId))
     .innerJoin(lesson, eq(lesson.id, slide.lessonId))
-    .innerJoin(module, eq(module.id, lesson.moduleId))
-    .where(and(eq(slideProgress.enrollmentId, enrollmentId), eq(module.courseId, courseId)));
+    .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
+    .where(and(eq(slideProgress.enrollmentId, enrollmentId), eq(courseModule.courseId, courseId)));
   return rows.reduce((a, r) => a + r.s, 0);
 }
