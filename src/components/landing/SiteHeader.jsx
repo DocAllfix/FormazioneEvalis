@@ -8,6 +8,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
+import { useSession } from "@/lib/auth/client";
 
 const navLinks = [
   { label: "Per le aziende", to: "/aziende" },
@@ -32,6 +33,7 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const { data: session } = useSession();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -114,18 +116,29 @@ export default function SiteHeader() {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <Link
-            href="/login"
-            className="text-sm text-[#5C5347] hover:text-near-black transition-colors"
-          >
-            Accedi
-          </Link>
-          <Link
-            href="/registrati"
-            className="text-sm font-medium text-white bg-primary rounded-lg px-4 py-2 hover:brightness-110 hover:scale-[1.02] transition-all duration-200"
-          >
-            Registrati
-          </Link>
+          {session?.user ? (
+            <Link
+              href="/dashboard"
+              className="text-sm font-medium text-white bg-primary rounded-lg px-4 py-2 hover:brightness-110 hover:scale-[1.02] transition-all duration-200"
+            >
+              Vai alla dashboard
+            </Link>
+          ) : (
+            <>
+              <Link
+                href="/login"
+                className="text-sm text-[#5C5347] hover:text-near-black transition-colors"
+              >
+                Accedi
+              </Link>
+              <Link
+                href="/registrati"
+                className="text-sm font-medium text-white bg-primary rounded-lg px-4 py-2 hover:brightness-110 hover:scale-[1.02] transition-all duration-200"
+              >
+                Registrati
+              </Link>
+            </>
+          )}
         </div>
 
         <Sheet open={open} onOpenChange={setOpen}>
@@ -194,20 +207,32 @@ export default function SiteHeader() {
                 </Link>
               </nav>
               <div className="mt-auto px-4 pb-6 flex flex-col gap-3">
-                <Link
-                  href="/login"
-                  onClick={() => setOpen(false)}
-                  className="text-sm text-center font-medium text-near-black border border-[#EAE4DB] rounded-lg py-2.5 hover:bg-[#FAFAF7] transition-colors"
-                >
-                  Accedi
-                </Link>
-                <Link
-                  href="/registrati"
-                  onClick={() => setOpen(false)}
-                  className="text-sm text-center font-medium text-white bg-primary rounded-lg py-2.5 hover:brightness-110 transition-all"
-                >
-                  Registrati
-                </Link>
+                {session?.user ? (
+                  <Link
+                    href="/dashboard"
+                    onClick={() => setOpen(false)}
+                    className="text-sm text-center font-medium text-white bg-primary rounded-lg py-2.5 hover:brightness-110 transition-all"
+                  >
+                    Vai alla dashboard
+                  </Link>
+                ) : (
+                  <>
+                    <Link
+                      href="/login"
+                      onClick={() => setOpen(false)}
+                      className="text-sm text-center font-medium text-near-black border border-[#EAE4DB] rounded-lg py-2.5 hover:bg-[#FAFAF7] transition-colors"
+                    >
+                      Accedi
+                    </Link>
+                    <Link
+                      href="/registrati"
+                      onClick={() => setOpen(false)}
+                      className="text-sm text-center font-medium text-white bg-primary rounded-lg py-2.5 hover:brightness-110 transition-all"
+                    >
+                      Registrati
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
           </SheetContent>

@@ -32,7 +32,8 @@ export default function Register() {
       setError(error.message || "Registrazione non riuscita");
       return;
     }
-    router.push("/");
+    router.push("/dashboard");
+    router.refresh();
   };
 
   return (

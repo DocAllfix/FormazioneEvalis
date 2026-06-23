@@ -26,7 +26,8 @@ export default function Login() {
       setError(error.message || "Email o password non validi");
       return;
     }
-    router.push("/");
+    router.push("/dashboard");
+    router.refresh();
   };
 
   return (
