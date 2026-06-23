@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Check, Clock, Lock } from "lucide-react";
-import { BlockRenderer } from "./block-renderer";
-import { useSlidePlayer } from "./use-slide-player";
-import { getMyClipUrlAction } from "@/features/learner/server-actions";
+import { ArrowLeft, ArrowRight, Award, Check, FileQuestion, Lock } from "lucide-react";
+import { SlideStep } from "./slide-step";
+import { QuizStep } from "./quiz-step";
+import { requestMyCertificateAction } from "@/features/learner/server-actions";
 
 type Slide = {
   id: string;
@@ -19,17 +19,47 @@ type Slide = {
   completed: boolean;
 };
 
+type Quiz = {
+  id: string;
+  type: string;
+  title: string;
+  position: number;
+  passed: boolean;
+};
+
 type Data = {
   course: { id: string; title: string; requiredMinutes: number };
   timer: { effectiveSeconds: number; requiredSeconds: number };
   slides: Slide[];
-  quizzes: { id: string; type: string; title: string; position: number }[];
+  quizzes: Quiz[];
 };
 
-function fmt(sec: number) {
-  const m = Math.floor(sec / 60).toString().padStart(2, "0");
-  const s = Math.floor(sec % 60).toString().padStart(2, "0");
-  return `${m}:${s}`;
+type Step =
+  | { key: string; kind: "slide"; slide: Slide; label: string }
+  | { key: string; kind: "quiz"; quiz: Quiz; label: string };
+
+// Sequenza del corso: slide della lezione → eventuale checkpoint → ... → esame finale.
+// (Mono-modulo: il checkpoint con position = indice lezione segue quella lezione.)
+function buildSteps(data: Data): Step[] {
+  const lessons: { lessonId: string; slides: Slide[] }[] = [];
+  for (const s of data.slides) {
+    const last = lessons[lessons.length - 1];
+    if (last && last.lessonId === s.lessonId) last.slides.push(s);
+    else lessons.push({ lessonId: s.lessonId, slides: [s] });
+  }
+  const checkpoints = data.quizzes.filter((q) => q.type === "checkpoint");
+  const final = data.quizzes.find((q) => q.type === "final");
+
+  const steps: Step[] = [];
+  lessons.forEach((lesson, li) => {
+    lesson.slides.forEach((s) =>
+      steps.push({ key: `s:${s.id}`, kind: "slide", slide: s, label: "Unità" }),
+    );
+    const cp = checkpoints.find((q) => q.position === li);
+    if (cp) steps.push({ key: `q:${cp.id}`, kind: "quiz", quiz: cp, label: "Checkpoint" });
+  });
+  if (final) steps.push({ key: `q:${final.id}`, kind: "quiz", quiz: final, label: "Esame finale" });
+  return steps;
 }
 
 export function CoursePlayer({
@@ -39,55 +69,47 @@ export function CoursePlayer({
   enrollmentId: string;
   data: Data;
 }) {
-  const slides = data.slides;
+  const steps = useMemo(() => buildSteps(data), [data]);
+  const initialDone = useMemo(() => {
+    const m: Record<string, boolean> = {};
+    for (const st of steps) m[st.key] = st.kind === "slide" ? st.slide.completed : st.quiz.passed;
+    return m;
+  }, [steps]);
+
+  const [doneMap, setDoneMap] = useState(initialDone);
   const [index, setIndex] = useState(() => {
-    const i = slides.findIndex((s) => !s.completed);
-    return i === -1 ? 0 : i;
+    const i = steps.findIndex((st) => !initialDone[st.key]);
+    return i === -1 ? Math.max(0, steps.length - 1) : i;
   });
-  const slide = slides[index];
-  const [manifestUrl, setManifestUrl] = useState<string | null>(null);
+  const [courseDone, setCourseDone] = useState(false);
 
-  useEffect(() => {
-    setManifestUrl(null);
-    if (slide.hasClip) {
-      getMyClipUrlAction(enrollmentId, slide.id)
-        .then(setManifestUrl)
-        .catch(() => {});
-    }
-  }, [slide.id, slide.hasClip, enrollmentId]);
+  const markDone = useCallback((key: string) => {
+    setDoneMap((m) => (m[key] ? m : { ...m, [key]: true }));
+  }, []);
 
-  const player = useSlidePlayer({
-    enrollmentId,
-    slide: {
-      id: slide.id,
-      hasClip: slide.hasClip,
-      audioSeconds: slide.audioSeconds,
-      completed: slide.completed,
+  const onSlideDone = useCallback((key: string) => markDone(key), [markDone]);
+
+  const onQuizPassed = useCallback(
+    async (st: Step) => {
+      markDone(st.key);
+      if (st.kind === "quiz" && st.quiz.type === "final") {
+        // esame superato → predisposizione certificato (server: solo se a norma)
+        await requestMyCertificateAction(enrollmentId).catch(() => {});
+        setCourseDone(true);
+      }
     },
-    manifestUrl,
-    heartbeatUrl: `/api/lessons/${enrollmentId}/heartbeat`,
-  });
+    [enrollmentId, markDone],
+  );
 
-  const completedSet = useMemo(() => {
-    const set = new Set(slides.filter((s) => s.completed).map((s) => s.id));
-    if (player.completed) set.add(slide.id);
-    return set;
-  }, [slides, player.completed, slide.id]);
-
+  const step = steps[index];
   const reachableMax = useMemo(() => {
-    const firstIncomplete = slides.findIndex((s) => !completedSet.has(s.id));
-    return firstIncomplete === -1 ? slides.length - 1 : firstIncomplete;
-  }, [slides, completedSet]);
+    const i = steps.findIndex((st) => !doneMap[st.key]);
+    return i === -1 ? steps.length - 1 : i;
+  }, [steps, doneMap]);
 
-  const courseEffective = Math.max(
-    0,
-    data.timer.effectiveSeconds - slide.effectiveSeconds + player.serverEffectiveSeconds,
-  );
-  const canAdvance = player.completed && index < slides.length - 1;
-  const minProgress = Math.min(
-    100,
-    Math.round((player.serverEffectiveSeconds / Math.max(1, slide.audioSeconds)) * 100),
-  );
+  const currentDone = !!doneMap[step.key];
+  const isLast = index === steps.length - 1;
+  const canAdvance = currentDone && !isLast;
 
   return (
     <div className="flex h-screen flex-col bg-background">
@@ -98,82 +120,79 @@ export function CoursePlayer({
         >
           <ArrowLeft className="h-4 w-4" /> Esci
         </Link>
-        <span className="truncate px-4 font-heading text-near-black">
-          {data.course.title}
-        </span>
-        <span className="inline-flex items-center gap-1.5 text-sm tabular-nums text-muted-foreground">
-          <Clock className="h-4 w-4 text-primary" />
-          {fmt(courseEffective)} / {fmt(data.timer.requiredSeconds)}
+        <span className="truncate px-4 font-heading text-near-black">{data.course.title}</span>
+        <span className="text-sm tabular-nums text-muted-foreground">
+          Passo {index + 1} di {steps.length}
         </span>
       </header>
 
       <div className="flex flex-1 overflow-hidden">
         <main className="flex flex-1 flex-col overflow-hidden">
           <div className="flex-1 overflow-y-auto">
-            <div className="mx-auto w-full max-w-3xl px-6 py-8">
-              <p className="text-xs uppercase tracking-wider text-primary">
-                Unità {index + 1} di {slides.length}
-              </p>
-              <h1 className="mt-2 font-heading text-3xl text-near-black">{slide.title}</h1>
-
-              {slide.hasClip && (
-                <div className="mt-6 overflow-hidden rounded-xl border border-border bg-near-black">
-                  <video ref={player.videoRef} controls className="aspect-video w-full" />
+            {courseDone ? (
+              <div className="mx-auto flex w-full max-w-xl flex-col items-center px-6 py-16 text-center">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-success/10 text-success">
+                  <Award className="h-8 w-8" />
+                </span>
+                <h1 className="mt-5 font-heading text-3xl text-near-black">Corso completato</h1>
+                <p className="mt-2 max-w-sm text-muted-foreground">
+                  Hai superato l&apos;esame finale. Il certificato è ora in revisione: lo riceverai
+                  dopo l&apos;approvazione dello staff.
+                </p>
+                <div className="mt-6 flex gap-3">
+                  <Link
+                    href="/certificati"
+                    className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:brightness-110"
+                  >
+                    Vai ai certificati
+                  </Link>
+                  <Link
+                    href="/dashboard"
+                    className="inline-flex items-center rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-near-black transition hover:bg-secondary"
+                  >
+                    Torna ai percorsi
+                  </Link>
                 </div>
-              )}
-
-              <div className="mt-6">
-                <BlockRenderer blocks={slide.blocks} />
               </div>
-            </div>
+            ) : step.kind === "slide" ? (
+              <SlideStep
+                key={step.key}
+                enrollmentId={enrollmentId}
+                slide={step.slide}
+                label={`${step.label} ${index + 1} di ${steps.length}`}
+                onDone={() => onSlideDone(step.key)}
+              />
+            ) : (
+              <QuizStep
+                key={step.key}
+                enrollmentId={enrollmentId}
+                quiz={step.quiz}
+                label={step.label}
+                onPassed={() => onQuizPassed(step)}
+              />
+            )}
           </div>
 
-          <div className="border-t border-border bg-background/95 px-6 py-3 backdrop-blur">
-            <div className="mx-auto flex w-full max-w-3xl items-center gap-4">
-              <button
-                onClick={() => setIndex((i) => Math.max(0, i - 1))}
-                disabled={index === 0}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-border px-4 py-2 text-sm font-medium text-near-black transition hover:bg-secondary disabled:opacity-40"
-              >
-                <ArrowLeft className="h-4 w-4" /> Indietro
-              </button>
-
-              <div className="flex-1">
-                {player.completed ? (
-                  <p className="inline-flex items-center gap-1.5 text-sm font-medium text-success">
-                    <Check className="h-4 w-4" /> Unità completata
-                  </p>
-                ) : (
-                  <>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground">
-                      <span>
-                        {player.visible
-                          ? "Tempo minimo di fruizione"
-                          : "In pausa: torna su questa scheda"}
-                      </span>
-                      <span className="tabular-nums">
-                        {fmt(player.serverEffectiveSeconds)} / {fmt(slide.audioSeconds)}
-                      </span>
-                    </div>
-                    <div className="mt-1.5 h-2 w-full overflow-hidden rounded-full bg-secondary">
-                      <div
-                        className="h-full rounded-full bg-primary transition-all"
-                        style={{ width: `${minProgress}%` }}
-                      />
-                    </div>
-                  </>
-                )}
+          {!courseDone && (
+            <div className="border-t border-border bg-background/95 px-6 py-3 backdrop-blur">
+              <div className="mx-auto flex w-full max-w-3xl items-center justify-between gap-4">
+                <button
+                  onClick={() => setIndex((i) => Math.max(0, i - 1))}
+                  disabled={index === 0}
+                  className="inline-flex items-center gap-1.5 rounded-lg border border-border px-4 py-2 text-sm font-medium text-near-black transition hover:bg-secondary disabled:opacity-40"
+                >
+                  <ArrowLeft className="h-4 w-4" /> Indietro
+                </button>
+                <button
+                  onClick={() => setIndex((i) => Math.min(steps.length - 1, i + 1))}
+                  disabled={!canAdvance}
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-5 py-2 text-sm font-medium text-white transition hover:brightness-110 disabled:opacity-40"
+                >
+                  Avanti <ArrowRight className="h-4 w-4" />
+                </button>
               </div>
-
-              <button
-                onClick={() => setIndex((i) => Math.min(slides.length - 1, i + 1))}
-                disabled={!canAdvance}
-                className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-5 py-2 text-sm font-medium text-white transition hover:brightness-110 disabled:opacity-40"
-              >
-                Avanti <ArrowRight className="h-4 w-4" />
-              </button>
             </div>
-          </div>
+          )}
         </main>
 
         <aside className="hidden w-72 shrink-0 overflow-y-auto border-l border-border bg-sidebar p-4 lg:block">
@@ -181,15 +200,15 @@ export function CoursePlayer({
             Indice
           </p>
           <ol className="space-y-1">
-            {slides.map((s, i) => {
-              const done = completedSet.has(s.id);
-              const current = i === index;
+            {steps.map((st, i) => {
+              const done = !!doneMap[st.key];
+              const current = i === index && !courseDone;
               const locked = i > reachableMax;
               return (
-                <li key={s.id}>
+                <li key={st.key}>
                   <button
-                    onClick={() => !locked && setIndex(i)}
-                    disabled={locked}
+                    onClick={() => !locked && !courseDone && setIndex(i)}
+                    disabled={locked || courseDone}
                     className={`flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-left text-sm transition ${
                       current
                         ? "bg-sidebar-accent font-medium text-near-black"
@@ -209,11 +228,15 @@ export function CoursePlayer({
                         <Check className="h-3 w-3" />
                       ) : locked ? (
                         <Lock className="h-2.5 w-2.5" />
+                      ) : st.kind === "quiz" ? (
+                        <FileQuestion className="h-3 w-3" />
                       ) : (
                         i + 1
                       )}
                     </span>
-                    <span className="truncate">{s.title}</span>
+                    <span className="truncate">
+                      {st.kind === "slide" ? st.slide.title : st.quiz.title}
+                    </span>
                   </button>
                 </li>
               );

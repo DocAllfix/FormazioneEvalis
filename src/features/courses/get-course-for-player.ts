@@ -6,6 +6,7 @@ import { and, asc, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { course, enrollment, module as courseModule, lesson, slide, slideProgress, quiz } from "@/lib/db/schema";
 import { courseEffectiveSeconds } from "@/features/tracking/progress";
+import { isQuizPassed } from "@/features/quiz/engine";
 
 export async function getCourseForPlayer(enrollmentId: string) {
   const [enr] = await db
@@ -59,11 +60,15 @@ export async function getCourseForPlayer(enrollmentId: string) {
     completed: !!r.completedAt,
   }));
 
-  const quizzes = await db
+  const quizRows = await db
     .select({ id: quiz.id, type: quiz.type, title: quiz.title, position: quiz.position })
     .from(quiz)
     .where(eq(quiz.courseId, courseId))
     .orderBy(asc(quiz.position));
+  // `passed` per quiz: serve alla UI per resume + gating dei checkpoint.
+  const quizzes = await Promise.all(
+    quizRows.map(async (q) => ({ ...q, passed: await isQuizPassed(enrollmentId, q.id) })),
+  );
 
   const effectiveSeconds = await courseEffectiveSeconds(enrollmentId, courseId);
 
