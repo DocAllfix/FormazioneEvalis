@@ -10,7 +10,7 @@ import { buildCertificatePdf } from "./pdf";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
 import { uploadCertificatePdf, signedCertificateUrl } from "@/lib/supabase/storage";
 import { sendCertificateIssuedEmail } from "@/lib/email/resend";
-import { requirePlatformStaff, requireSession, isPlatformStaffEmail } from "@/features/auth/guards";
+import { requirePlatformAdmin, requireSession, isPlatformStaffEmail } from "@/features/auth/guards";
 
 function makeCertificateNumber(date: Date, verifyUuid: string): string {
   return `EVALIS-${date.getFullYear()}-${verifyUuid.slice(0, 8).toUpperCase()}`;
@@ -66,7 +66,7 @@ export async function ensureCertificateRecord(
 
 /** Coda di revisione per lo staff piattaforma. */
 export async function listPendingCertificates() {
-  await requirePlatformStaff();
+  await requirePlatformAdmin();
   return db
     .select({
       id: certificate.id,
@@ -149,7 +149,7 @@ export async function approveCertificateById(certificateId: string, reviewerUser
 
 /** Server Action: approvazione (solo staff piattaforma). */
 export async function approveCertificate(certificateId: string) {
-  const ctx = await requirePlatformStaff();
+  const ctx = await requirePlatformAdmin();
   return approveCertificateById(certificateId, ctx.user.id);
 }
 
@@ -182,7 +182,7 @@ export async function revokeCertificateById(certificateId: string, _reviewerUser
 
 /** Server Action: revoca (solo staff piattaforma). */
 export async function revokeCertificate(certificateId: string, reason: string) {
-  const ctx = await requirePlatformStaff();
+  const ctx = await requirePlatformAdmin();
   return revokeCertificateById(certificateId, ctx.user.id, reason);
 }
 

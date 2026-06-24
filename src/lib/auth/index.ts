@@ -29,6 +29,12 @@ export const auth = betterAuth({
   secret: env.BETTER_AUTH_SECRET,
   baseURL: env.BETTER_AUTH_URL,
   trustedOrigins: [env.NEXT_PUBLIC_APP_URL],
+  user: {
+    additionalFields: {
+      // Ruolo di piattaforma: leggibile in sessione, NON impostabile dall'utente (sicurezza).
+      platformRole: { type: "string", required: false, input: false },
+    },
+  },
   emailAndPassword: {
     enabled: true,
     // Verifica email cablata ma NON imposta: si attiverà (true) al lancio, quando

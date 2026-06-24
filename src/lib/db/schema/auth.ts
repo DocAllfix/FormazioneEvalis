@@ -15,6 +15,10 @@ export const user = pgTable("user", {
   email: text("email").notNull().unique(),
   emailVerified: boolean("email_verified").default(false).notNull(),
   image: text("image"),
+  // Ruolo di PIATTAFORMA (Evalis), distinto dai ruoli per-org (member.role) e dal
+  // canale B2C/B2B: null = utente normale, 'admin' = admin piattaforma (catalogo, certificati).
+  // Non auto-assegnabile (better-auth additionalFields input:false).
+  platformRole: text("platform_role"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at")
     .defaultNow()

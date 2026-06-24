@@ -66,11 +66,19 @@ export function isPlatformStaffEmail(email: string): boolean {
   return list.includes(email.trim().toLowerCase());
 }
 
-/** Richiede che l'utente in sessione sia staff piattaforma, altrimenti lancia. */
-export async function requirePlatformStaff() {
+/**
+ * Admin di PIATTAFORMA (Evalis): canonico = campo `user.platformRole === 'admin'`;
+ * la allowlist email resta come BOOTSTRAP (primi admin / fallback). Check puro, no throw.
+ */
+export function isPlatformAdmin(u: { email: string; platformRole?: string | null }): boolean {
+  return u.platformRole === "admin" || isPlatformStaffEmail(u.email);
+}
+
+/** Richiede che l'utente in sessione sia admin di piattaforma, altrimenti lancia. */
+export async function requirePlatformAdmin() {
   const ctx = await requireSession();
-  if (!isPlatformStaffEmail(ctx.user.email)) {
-    throw new Error("Permesso negato: richiesto staff piattaforma.");
+  if (!isPlatformAdmin(ctx.user as { email: string; platformRole?: string | null })) {
+    throw new Error("Permesso negato: richiesto admin di piattaforma.");
   }
   return ctx;
 }
