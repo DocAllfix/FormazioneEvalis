@@ -8,7 +8,6 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
-  canCompleteSlide,
   illegalSeekTarget,
   initSlideGate,
   reduceSlideGate,
@@ -33,6 +32,7 @@ interface Opts {
 export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl }: Opts) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const stateRef = useRef<SlideGateState>(initSlideGate(slide.audioSeconds));
+  const baselineRef = useRef(false); // primo heartbeat (baseline) inviato all'avvio
   const [snapshot, setSnapshot] = useState<SlideGateState>(stateRef.current);
   const [serverEffectiveSeconds, setServerEffectiveSeconds] = useState(slide.completed ? slide.audioSeconds : 0);
   const [completed, setCompleted] = useState(slide.completed);
@@ -48,6 +48,7 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
     setSnapshot(stateRef.current);
     setServerEffectiveSeconds(slide.completed ? slide.audioSeconds : 0);
     setCompleted(slide.completed);
+    baselineRef.current = false;
   }, [slide.id, slide.audioSeconds, slide.completed]);
 
   // invio heartbeat: fetch (ritorna lo stato server) o sendBeacon (unload)
@@ -93,6 +94,8 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
     let cancelled = false;
     let hls: { destroy: () => void } | null = null;
 
+    const tryPlay = () => void video.play().catch(() => {});
+
     void (async () => {
       const Hls = (await import("hls.js")).default;
       if (cancelled || !videoRef.current) return;
@@ -104,9 +107,24 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
         instance.attachMedia(video);
         hls = instance;
       }
+      tryPlay();
     })();
 
-    const onPlay = () => dispatch({ type: "play" });
+    // autoplay: appena pronto; fallback al primo gesto utente se il browser lo blocca
+    const onCanPlay = () => tryPlay();
+    const onGesture = () => tryPlay();
+    video.addEventListener("canplay", onCanPlay);
+    window.addEventListener("pointerdown", onGesture, { once: true });
+    window.addEventListener("keydown", onGesture, { once: true });
+
+    const onPlay = () => {
+      dispatch({ type: "play" });
+      // heartbeat baseline all'avvio: senza, il primo intervallo non si accredita
+      if (!baselineRef.current) {
+        baselineRef.current = true;
+        void sendHeartbeat(false);
+      }
+    };
     const onPause = () => dispatch({ type: "pause" });
     const onEnded = () => dispatch({ type: "ended" });
     const onTime = () => dispatch({ type: "timeupdate", position: Math.floor(video.currentTime) });
@@ -121,6 +139,9 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
     video.addEventListener("seeking", onSeeking);
     return () => {
       cancelled = true;
+      video.removeEventListener("canplay", onCanPlay);
+      window.removeEventListener("pointerdown", onGesture);
+      window.removeEventListener("keydown", onGesture);
       video.removeEventListener("play", onPlay);
       video.removeEventListener("pause", onPause);
       video.removeEventListener("ended", onEnded);
@@ -128,7 +149,7 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
       video.removeEventListener("seeking", onSeeking);
       hls?.destroy();
     };
-  }, [slide.hasClip, manifestUrl, dispatch]);
+  }, [slide.hasClip, manifestUrl, dispatch, sendHeartbeat]);
 
   // --- MODALITÀ LETTURA: +1s/sec solo a tab visibile ---
   useEffect(() => {
@@ -156,7 +177,7 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
   // heartbeat periodico (fetch) finché la slide non è completata + beacon su uscita.
   // A completamento server (`completed`) si ferma: niente heartbeat/DB write inutili.
   useEffect(() => {
-    const id = completed ? null : setInterval(() => void sendHeartbeat(false), 10_000);
+    const id = completed ? null : setInterval(() => void sendHeartbeat(false), 5_000);
     const onHide = () => {
       if (document.visibilityState === "hidden") void sendHeartbeat(true);
     };
@@ -170,15 +191,17 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
     };
   }, [completed, sendHeartbeat]);
 
-  // appena il client pensa di poter completare, conferma subito col server
+  // a clip finita conferma col server (che valida il tempo effettivo e completa)
   useEffect(() => {
-    if (canCompleteSlide(snapshot) && !completed) void sendHeartbeat(false);
-  }, [snapshot, completed, sendHeartbeat]);
+    if (snapshot.audioCompleted && !completed) void sendHeartbeat(false);
+  }, [snapshot.audioCompleted, completed, sendHeartbeat]);
 
   return {
     videoRef,
     visible: snapshot.visible,
     serverEffectiveSeconds,
+    // valore mostrato: client (fluido, ogni secondo) ma mai oltre il minimo
+    displaySeconds: Math.min(slide.audioSeconds, Math.max(serverEffectiveSeconds, snapshot.effectiveSeconds)),
     minSeconds: slide.audioSeconds,
     completed, // server-authoritative
   };

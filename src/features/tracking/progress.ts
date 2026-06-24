@@ -11,6 +11,11 @@ import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log
 
 export const CREDIT_TOLERANCE_SECONDS = 3; // scarto ammesso tra tempo reale e avanzamento posizione
 export const MAX_GAP_MS = 30_000; // oltre questo, l'intervallo non viene accreditato
+// Tempo minimo di fruizione (vincolo Accordo Stato-Regioni): la slide si completa solo
+// se la clip è stata vista fino in fondo (audioCompleted, no-seek) E il tempo EFFETTIVO
+// accreditato lato server copre ≥ 90% della durata. L'accredito è sempre wall-time reale
+// (non la posizione dichiarata): impossibile da falsificare istantaneamente.
+export const MIN_WATCH_RATIO = 0.9;
 
 /** Quanti secondi accreditare tra due heartbeat consecutivi (LOGICA PURA, testabile). */
 export function creditableSeconds(p: {
@@ -21,10 +26,14 @@ export function creditableSeconds(p: {
   position: number;
   focus: boolean;
   playing: boolean;
+  audioCompleted?: boolean;
   maxGapMs?: number;
 }): number {
   if (p.prevTsMs === null || p.prevPosition === null) return 0; // primo heartbeat
-  if (!p.playing || !p.focus || !p.prevFocus) return 0; // deve essere in play, visibile (prima e ora)
+  if (!p.focus || !p.prevFocus) return 0; // deve essere visibile (prima e ora)
+  // deve essere in play; UNICA eccezione: l'intervallo finale a clip conclusa
+  // (audioCompleted) si accredita perché il video ERA in play fino alla fine.
+  if (!p.playing && !p.audioCompleted) return 0;
   const wall = (p.nowMs - p.prevTsMs) / 1000;
   const pos = p.position - p.prevPosition;
   if (wall <= 0 || p.nowMs - p.prevTsMs > (p.maxGapMs ?? MAX_GAP_MS)) return 0; // gap/AFK
@@ -67,6 +76,7 @@ export async function recordHeartbeat(params: {
     position,
     focus,
     playing,
+    audioCompleted: params.audioCompleted,
   });
 
   // audit grezzo del ping
@@ -80,7 +90,13 @@ export async function recordHeartbeat(params: {
 
   const audioCompleted = (existing?.audioCompleted ?? false) || (params.audioCompleted ?? false);
   const effectiveSeconds = (existing?.effectiveSeconds ?? 0) + credit;
-  const completed = audioCompleted && effectiveSeconds >= sl.audioSeconds;
+  // Completa quando la clip è stata vista FINO IN FONDO (audioCompleted: il gate
+  // impedisce di saltare avanti) E il tempo EFFETTIVO accreditato copre ≥ MIN_WATCH_RATIO
+  // della durata. L'accredito dell'ultimo intervallo (vedi creditableSeconds) porta una
+  // visione onesta vicino al 100%, lasciando margine sopra la soglia; un completamento
+  // istantaneo avrebbe 0s effettivi e resta bloccato.
+  const requiredSeconds = Math.max(3, Math.floor(sl.audioSeconds * MIN_WATCH_RATIO));
+  const completed = audioCompleted && effectiveSeconds >= requiredSeconds;
   const completedAt = completed ? existing?.completedAt ?? now : existing?.completedAt ?? null;
   const justCompleted = completed && !existing?.completedAt;
   const setValues = { effectiveSeconds, audioCompleted, completedAt, updatedAt: now };

@@ -56,6 +56,18 @@ describe("creditableSeconds (server)", () => {
   it("rifiuta se non in play", () => {
     expect(creditableSeconds({ ...base, playing: false, nowMs: 12000, position: 12 })).toBe(0);
   });
+  it("accredita l'ultimo intervallo a clip conclusa anche senza playing", () => {
+    // video terminato (pause+ended): playing=false ma audioCompleted=true → la coda
+    // reale (18→22) viene accreditata perché validata da wall≈avanzamento posizione.
+    expect(
+      creditableSeconds({ ...base, playing: false, audioCompleted: true, prevTsMs: 18000, prevPosition: 18, nowMs: 22000, position: 22 }),
+    ).toBe(4);
+  });
+  it("a clip conclusa NON accredita se la posizione non avanza (spam post-fine)", () => {
+    expect(
+      creditableSeconds({ ...base, playing: false, audioCompleted: true, prevTsMs: 22000, prevPosition: 22, nowMs: 27000, position: 22 }),
+    ).toBe(0);
+  });
   it("rifiuta il primo heartbeat e i gap lunghi", () => {
     expect(creditableSeconds({ ...base, prevTsMs: null, prevPosition: null, nowMs: 12000, position: 12 })).toBe(0);
     expect(creditableSeconds({ ...base, nowMs: 40000, position: 40 })).toBe(0);

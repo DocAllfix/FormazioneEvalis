@@ -1,8 +1,18 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Award, Check, FileQuestion, Lock } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Award,
+  Check,
+  FileQuestion,
+  List,
+  Lock,
+  Maximize,
+  Minimize,
+} from "lucide-react";
 import { SlideStep } from "./slide-step";
 import { QuizStep } from "./quiz-step";
 import { requestMyCertificateAction } from "@/features/learner/server-actions";
@@ -83,6 +93,20 @@ export function CoursePlayer({
   });
   const [courseDone, setCourseDone] = useState(false);
 
+  // Indice nascosto di default (corso a tutto schermo) + fullscreen reale.
+  const rootRef = useRef<HTMLDivElement | null>(null);
+  const [showIndex, setShowIndex] = useState(false);
+  const [isFull, setIsFull] = useState(false);
+  const toggleFull = useCallback(() => {
+    if (!document.fullscreenElement) rootRef.current?.requestFullscreen?.().catch(() => {});
+    else document.exitFullscreen?.().catch(() => {});
+  }, []);
+  useEffect(() => {
+    const onFs = () => setIsFull(!!document.fullscreenElement);
+    document.addEventListener("fullscreenchange", onFs);
+    return () => document.removeEventListener("fullscreenchange", onFs);
+  }, []);
+
   const markDone = useCallback((key: string) => {
     setDoneMap((m) => (m[key] ? m : { ...m, [key]: true }));
   }, []);
@@ -112,7 +136,7 @@ export function CoursePlayer({
   const canAdvance = currentDone && !isLast;
 
   return (
-    <div className="flex h-screen flex-col bg-background">
+    <div ref={rootRef} className="flex h-screen flex-col bg-background">
       <header className="flex h-14 shrink-0 items-center justify-between border-b border-border px-4">
         <Link
           href="/dashboard"
@@ -120,17 +144,35 @@ export function CoursePlayer({
         >
           <ArrowLeft className="h-4 w-4" /> Esci
         </Link>
-        <span className="truncate px-4 font-heading text-near-black">{data.course.title}</span>
-        <span className="text-sm tabular-nums text-muted-foreground">
-          Passo {index + 1} di {steps.length}
+        <span className="hidden truncate px-4 font-heading text-near-black md:block">
+          {data.course.title}
         </span>
+        <div className="flex items-center gap-2">
+          <span className="hidden text-sm tabular-nums text-muted-foreground sm:inline">
+            Passo {index + 1} di {steps.length}
+          </span>
+          <button
+            onClick={() => setShowIndex((v) => !v)}
+            className={`inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-sm font-medium transition hover:bg-secondary ${showIndex ? "bg-secondary text-near-black" : "text-muted-foreground"}`}
+            aria-pressed={showIndex}
+          >
+            <List className="h-4 w-4" /> Indice
+          </button>
+          <button
+            onClick={toggleFull}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-sm font-medium text-muted-foreground transition hover:bg-secondary"
+          >
+            {isFull ? <Minimize className="h-4 w-4" /> : <Maximize className="h-4 w-4" />}
+            {isFull ? "Riduci" : "Schermo intero"}
+          </button>
+        </div>
       </header>
 
       <div className="flex flex-1 overflow-hidden">
         <main className="flex flex-1 flex-col overflow-hidden">
-          <div className="flex-1 overflow-y-auto">
+          <div className="min-h-0 flex-1 overflow-hidden">
             {courseDone ? (
-              <div className="mx-auto flex w-full max-w-xl flex-col items-center px-6 py-16 text-center">
+              <div className="mx-auto flex h-full w-full max-w-xl flex-col items-center justify-center px-6 py-16 text-center">
                 <span className="flex h-16 w-16 items-center justify-center rounded-full bg-success/10 text-success">
                   <Award className="h-8 w-8" />
                 </span>
@@ -163,13 +205,15 @@ export function CoursePlayer({
                 onDone={() => onSlideDone(step.key)}
               />
             ) : (
-              <QuizStep
-                key={step.key}
-                enrollmentId={enrollmentId}
-                quiz={step.quiz}
-                label={step.label}
-                onPassed={() => onQuizPassed(step)}
-              />
+              <div className="h-full overflow-y-auto">
+                <QuizStep
+                  key={step.key}
+                  enrollmentId={enrollmentId}
+                  quiz={step.quiz}
+                  label={step.label}
+                  onPassed={() => onQuizPassed(step)}
+                />
+              </div>
             )}
           </div>
 
@@ -186,7 +230,11 @@ export function CoursePlayer({
                 <button
                   onClick={() => setIndex((i) => Math.min(steps.length - 1, i + 1))}
                   disabled={!canAdvance}
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-5 py-2 text-sm font-medium text-white transition hover:brightness-110 disabled:opacity-40"
+                  className={`inline-flex items-center gap-1.5 rounded-lg px-5 py-2 text-sm font-medium text-white transition disabled:cursor-not-allowed disabled:bg-secondary disabled:text-muted-foreground ${
+                    canAdvance
+                      ? "animate-pulse bg-primary shadow-lg shadow-primary/30 ring-2 ring-primary/50 ring-offset-2 ring-offset-background hover:animate-none hover:brightness-110"
+                      : "bg-primary"
+                  }`}
                 >
                   Avanti <ArrowRight className="h-4 w-4" />
                 </button>
@@ -195,7 +243,9 @@ export function CoursePlayer({
           )}
         </main>
 
-        <aside className="hidden w-72 shrink-0 overflow-y-auto border-l border-border bg-sidebar p-4 lg:block">
+        <aside
+          className={`${showIndex ? "block" : "hidden"} w-72 shrink-0 overflow-y-auto border-l border-border bg-sidebar p-4`}
+        >
           <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
             Indice
           </p>

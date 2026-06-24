@@ -4,11 +4,14 @@
 import { z } from "zod";
 
 // Blocco di contenuto slide (estendibile). MVP: heading, paragraph, list, image.
+// `html`: contenuto già impaginato (es. slide importate da sorgenti HTML), reso
+// dal player in iframe isolato — vedi slide-html.tsx.
 export const slideBlockSchema = z.discriminatedUnion("type", [
   z.object({ type: z.literal("heading"), text: z.string().min(1) }),
   z.object({ type: z.literal("paragraph"), text: z.string().min(1) }),
   z.object({ type: z.literal("list"), items: z.array(z.string().min(1)).min(1) }),
   z.object({ type: z.literal("image"), url: z.string().min(1), alt: z.string().optional() }),
+  z.object({ type: z.literal("html"), html: z.string().min(1) }),
 ]);
 
 export const slideInputSchema = z.object({
