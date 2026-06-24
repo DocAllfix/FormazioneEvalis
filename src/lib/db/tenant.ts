@@ -4,7 +4,7 @@
 // - In produzione l'app si connette come `app_rls` (NOBYPASSRLS) → la RLS è attiva e
 //   queste GUC la guidano: nessuna riga di altri tenant è raggiungibile.
 // - In dev l'app si connette come `postgres` (bypassrls) → le GUC sono innocue e il
-//   comportamento è identico a oggi. (Vedi scripts/rls/apply-rls.sql e PRE-LAUNCH §6.)
+//   comportamento è identico a oggi. (Vedi migration 0007_rls_tenant_isolation e PRE-LAUNCH §6.)
 
 import { sql } from "drizzle-orm";
 import { db } from "./index";

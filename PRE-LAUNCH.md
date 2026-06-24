@@ -37,7 +37,8 @@ Servizi:
 
 ## 6. Isolamento dati (RLS) — cutover
 FATTO (committato): ruolo `app_rls` (NOBYPASSRLS) + FORCE RLS + policy sulle 4 tabelle
-sensibili (`scripts/rls/apply-rls.sql`), helper `withTenant` (`src/lib/db/tenant.ts`),
+sensibili come **migration versionata** (`0007_rls_tenant_isolation.sql`, applicata via
+`db:migrate` → riproducibile su ogni ambiente), helper `withTenant` (`src/lib/db/tenant.ts`),
 prova cross-tenant verde (`src/__tests__/rls.db.test.ts`). L'app gira come `postgres`
 (bypassrls) → RLS pronta ma non ancora effettiva. `app_rls` si connette via pooler (verificato).
 
