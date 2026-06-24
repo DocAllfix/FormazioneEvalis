@@ -98,7 +98,7 @@ export function CertReviewList({ items }: { items: PendingCert[] }) {
                     <button
                       onClick={() => approve(c.id)}
                       disabled={busy === c.id}
-                      className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-xs font-medium text-white transition hover:brightness-110 disabled:opacity-50"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-primary min-h-9 px-3 py-2 text-xs font-medium text-white transition hover:brightness-110 disabled:opacity-50"
                     >
                       {busy === c.id ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Check className="h-3.5 w-3.5" />}
                       Approva ed emetti
@@ -106,7 +106,7 @@ export function CertReviewList({ items }: { items: PendingCert[] }) {
                     <button
                       onClick={() => revoke(c.id)}
                       disabled={busy === c.id}
-                      className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-destructive transition hover:bg-destructive/5 disabled:opacity-50"
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-border min-h-9 px-3 py-2 text-xs font-medium text-destructive transition hover:bg-destructive/5 disabled:opacity-50"
                     >
                       <ShieldX className="h-3.5 w-3.5" />
                       Revoca

@@ -24,7 +24,7 @@ export default async function AdminOverviewPage() {
       </div>
 
       {!hasSubscription ? (
-        <div className="flex flex-col gap-3 rounded-2xl border border-amber-500/30 bg-amber-500/5 p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 rounded-2xl border border-warning/30 bg-warning/5 p-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="font-medium text-near-black">Attiva l'abbonamento</p>
             <p className="text-sm text-muted-foreground">

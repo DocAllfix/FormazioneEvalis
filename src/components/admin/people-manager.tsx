@@ -115,9 +115,9 @@ export function PeopleManager({
           <ul className="mt-3 flex flex-col gap-2">
             {invitations.map((inv) => (
               <li key={inv.id} className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4 text-amber-600" />
+                <Mail className="h-4 w-4 text-warning" />
                 <span className="text-near-black">{inv.email}</span>
-                <span className="rounded-full bg-amber-500/10 px-2 py-0.5 text-xs text-amber-700">
+                <span className="rounded-full bg-warning/10 px-2 py-0.5 text-xs font-medium text-warning">
                   in attesa · {inv.role === "admin" ? "amministratore" : "dipendente"}
                 </span>
               </li>
@@ -172,7 +172,7 @@ export function PeopleManager({
                         assign(m.userId, e.target.value);
                         e.target.value = "";
                       }}
-                      className="rounded-lg border border-border bg-background px-2 py-1.5 text-xs outline-none ring-primary/30 focus:ring-2 disabled:opacity-50"
+                      className="min-h-9 rounded-lg border border-border bg-background px-2 py-2 text-xs outline-none ring-primary/30 focus:ring-2 disabled:opacity-50"
                       aria-label={`Assegna corso a ${m.name || m.email}`}
                     >
                       <option value="" disabled>

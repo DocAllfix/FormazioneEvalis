@@ -51,39 +51,37 @@ export type OrgMember = {
 export async function getOrgMembersWithDetails(): Promise<OrgMember[]> {
   const { org } = await requireCompanyContext();
   const orgId = org.id;
+
   const members = await db
     .select({ userId: member.userId, role: member.role, name: user.name, email: user.email })
     .from(member)
     .innerJoin(user, eq(user.id, member.userId))
     .where(eq(member.organizationId, orgId));
 
-  const out: OrgMember[] = [];
-  for (const m of members) {
-    const [a] = await db
-      .select({ n: count() })
-      .from(enrollment)
-      .where(and(eq(enrollment.organizationId, orgId), eq(enrollment.userId, m.userId)));
-    const [c] = await db
-      .select({ n: count() })
-      .from(certificate)
-      .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
-      .where(
-        and(
-          eq(enrollment.organizationId, orgId),
-          eq(enrollment.userId, m.userId),
-          eq(certificate.status, "issued"),
-        ),
-      );
-    out.push({
-      userId: m.userId,
-      name: m.name,
-      email: m.email,
-      role: m.role,
-      assigned: Number(a.n),
-      certified: Number(c.n),
-    });
-  }
-  return out;
+  // Conteggi aggregati per utente (2 query con GROUP BY, non N+1).
+  const assignedRows = await db
+    .select({ userId: enrollment.userId, n: count() })
+    .from(enrollment)
+    .where(eq(enrollment.organizationId, orgId))
+    .groupBy(enrollment.userId);
+  const assigned = new Map(assignedRows.map((r) => [r.userId, Number(r.n)]));
+
+  const certRows = await db
+    .select({ userId: enrollment.userId, n: count() })
+    .from(certificate)
+    .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
+    .where(and(eq(enrollment.organizationId, orgId), eq(certificate.status, "issued")))
+    .groupBy(enrollment.userId);
+  const certified = new Map(certRows.map((r) => [r.userId, Number(r.n)]));
+
+  return members.map((m) => ({
+    userId: m.userId,
+    name: m.name,
+    email: m.email,
+    role: m.role,
+    assigned: assigned.get(m.userId) ?? 0,
+    certified: certified.get(m.userId) ?? 0,
+  }));
 }
 
 export type OrgInvitation = { id: string; email: string; role: string };
