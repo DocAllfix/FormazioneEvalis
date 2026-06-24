@@ -77,6 +77,12 @@
   summary {
     cursor: pointer;
   }
+  /* Focus visibile coerente (anello Ambra) sui bottoni custom (i componenti shadcn
+     hanno data-slot e gestiscono già il proprio ring). */
+  button:not([data-slot]):focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

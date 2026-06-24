@@ -127,8 +127,8 @@ export function PeopleManager({
       ) : null}
 
       {/* Tabella membri */}
-      <div className="overflow-hidden rounded-2xl border border-border bg-card">
-        <table className="w-full text-sm">
+      <div className="overflow-x-auto rounded-2xl border border-border bg-card">
+        <table className="w-full min-w-[44rem] text-sm">
           <thead>
             <tr className="border-b border-border bg-secondary/40 text-left text-xs uppercase tracking-wide text-muted-foreground">
               <th className="px-4 py-3 font-medium">Persona</th>
@@ -145,7 +145,7 @@ export function PeopleManager({
                 className="border-b border-border/60 transition-colors last:border-0 hover:bg-secondary/30"
               >
                 <td className="px-4 py-3">
-                  <div className="font-medium text-near-black">{m.name || "—"}</div>
+                  <div className="font-medium text-near-black">{m.name || "Senza nome"}</div>
                   <div className="text-xs text-muted-foreground">{m.email}</div>
                 </td>
                 <td className="px-4 py-3 text-foreground/80">

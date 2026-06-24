@@ -51,14 +51,16 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
               <Clock className="h-4 w-4 text-primary" /> {durationLabel(course)}
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <Layers className="h-4 w-4 text-primary" /> {course.modules} moduli · {course.lessons} lezioni
+              <Layers className="h-4 w-4 text-primary" /> {course.modules}{" "}
+              {course.modules === 1 ? "modulo" : "moduli"} · {course.lessons}{" "}
+              {course.lessons === 1 ? "lezione" : "lezioni"}
             </span>
           </div>
 
           <h2 className="mt-10 font-heading text-xl text-near-black">Cosa include</h2>
-          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+          <ul className="mt-4 grid gap-x-8 gap-y-3.5 sm:grid-cols-2">
             {included.map((f) => (
-              <li key={f.label} className="flex items-start gap-3 rounded-xl border border-border bg-card p-4">
+              <li key={f.label} className="flex items-start gap-3">
                 <f.icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                 <span className="text-sm text-foreground/80">{f.label}</span>
               </li>
