@@ -26,7 +26,10 @@ export default function Login() {
       setError(error.message || "Email o password non validi");
       return;
     }
-    router.push("/dashboard");
+    // Rispetta ?next= (solo path interni: evita open-redirect verso domini esterni).
+    const raw = new URLSearchParams(window.location.search).get("next");
+    const next = raw && raw.startsWith("/") && !raw.startsWith("//") ? raw : "/dashboard";
+    router.push(next);
     router.refresh();
   };
 

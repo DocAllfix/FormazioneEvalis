@@ -20,7 +20,8 @@ export default function ForgotPassword() {
     // lato server (src/lib/auth/index.ts). Finché non è configurata mostriamo
     // comunque il messaggio generico (nessun leak sull'esistenza dell'account).
     try {
-      await authClient.forgetPassword({
+      // better-auth 1.6.x: requestPasswordReset (forgetPassword è rimosso → 404).
+      await authClient.requestPasswordReset({
         email,
         redirectTo: "/reimposta-password",
       });

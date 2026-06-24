@@ -14,6 +14,7 @@ import { nextCookies } from "better-auth/next-js";
 import { db } from "@/lib/db";
 import { env } from "@/lib/env";
 import { authDatabaseHooks } from "@/features/auth/hooks";
+import { sendPasswordResetEmail, sendVerificationEmail } from "@/lib/email/resend";
 
 // Dominio radice per i sottodomini multi-tenant.
 // In dev (`localhost`) NON attiviamo i cookie cross-subdomain: la condivisione del
@@ -30,9 +31,18 @@ export const auth = betterAuth({
   trustedOrigins: [env.NEXT_PUBLIC_APP_URL],
   emailAndPassword: {
     enabled: true,
-    // TODO Fase email: requireEmailVerification + invio via Brevo.
-    // Per ora disattivato per poter testare signup/login in dev.
+    // Verifica email cablata ma NON imposta: si attiverà (true) al lancio, quando
+    // ci sarà un dominio Resend verificato per consegnare i link a indirizzi arbitrari.
     requireEmailVerification: false,
+    async sendResetPassword({ user, url }) {
+      await sendPasswordResetEmail({ to: user.email, url });
+    },
+  },
+  emailVerification: {
+    // Callback pronta: usata quando requireEmailVerification passerà a true.
+    async sendVerificationEmail({ user, url }) {
+      await sendVerificationEmail({ to: user.email, url });
+    },
   },
   session: {
     expiresIn: 60 * 60 * 24 * 7, // 7 giorni
