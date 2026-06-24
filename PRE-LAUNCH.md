@@ -35,10 +35,19 @@ Servizi:
 ## 5. Osservabilità
 - Impostare i DSN Sentry e forzare un errore di prova → l'evento deve arrivare al progetto Sentry.
 
-## 6. Isolamento dati (RLS)
-- Creato il ruolo `app_rls` (NOSUPERUSER/NOBYPASSRLS) + policy sulle 4 tabelle sensibili.
-- Far puntare `DATABASE_URL` ad `app_rls`; tenere `DIRECT_URL` sul ruolo privilegiato per le migrazioni.
-- Prova: un utente non vede dati di un altro tenant nemmeno forzando gli ID (test DB cross-tenant).
+## 6. Isolamento dati (RLS) — cutover
+FATTO (committato): ruolo `app_rls` (NOBYPASSRLS) + FORCE RLS + policy sulle 4 tabelle
+sensibili (`scripts/rls/apply-rls.sql`), helper `withTenant` (`src/lib/db/tenant.ts`),
+prova cross-tenant verde (`src/__tests__/rls.db.test.ts`). L'app gira come `postgres`
+(bypassrls) → RLS pronta ma non ancora effettiva. `app_rls` si connette via pooler (verificato).
+
+CUTOVER (rimane, tutto-o-niente — fare come effort dedicato e verificato):
+1. Avvolgere in `withTenant(ctx, fn)` TUTTE le query alle 4 tabelle (anche
+   `recordHeartbeat` e l'emissione certificati — codice di compliance, con cura).
+2. `ALTER ROLE app_rls LOGIN PASSWORD '<segreto>'`; far puntare `DATABASE_URL` al pooler
+   come `app_rls.<ref>`; tenere `DIRECT_URL` sul ruolo privilegiato per le migrazioni.
+3. Verifica: ogni flusso (discente/azienda/staff) verde come `app_rls`; un utente non vede
+   dati di un altro tenant nemmeno forzando gli ID. Rollback: revert `DATABASE_URL` + `DISABLE FORCE RLS`.
 
 ## 7. Data residency & backup
 - DB/Storage/Auth in UE: Supabase `aws-1-eu-central-1` ✓, Cloudflare Stream.
