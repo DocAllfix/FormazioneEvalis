@@ -11,12 +11,19 @@ import { invitation } from "@/lib/db/schema";
 import { requireActiveOrg } from "@/features/auth/guards";
 import { assertSeatAvailable } from "@/features/billing/seats";
 
-/** Invita un'email nell'organizzazione attiva (azienda). Rifiuta se posti esauriti. */
-export async function inviteMember(email: string, role: "admin" | "member" = "member") {
-  const { orgId } = await requireActiveOrg();
-  await assertSeatAvailable(orgId); // gate posti (oltre alla RBAC nativa)
+/**
+ * Invita un'email nell'azienda. `orgId` esplicito (dall'area admin, già verificata
+ * owner/admin) oppure fallback all'org attiva. Rifiuta se posti esauriti.
+ */
+export async function inviteMember(
+  email: string,
+  role: "admin" | "member" = "member",
+  orgId?: string,
+) {
+  const targetOrg = orgId ?? (await requireActiveOrg()).orgId;
+  await assertSeatAvailable(targetOrg); // gate posti (oltre alla RBAC nativa)
   return auth.api.createInvitation({
-    body: { email, role, organizationId: orgId },
+    body: { email, role, organizationId: targetOrg },
     headers: await headers(),
   });
 }
