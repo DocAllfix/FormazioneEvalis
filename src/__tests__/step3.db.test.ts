@@ -118,4 +118,38 @@ describe("Step 3 — integrazione DB", () => {
     const readiness = await isReadyForCertificate(enrollmentId);
     expect(readiness.ready).toBe(true);
   });
+
+  it("antifrode: un solo heartbeat 'clip finita' NON completa (zero tempo effettivo)", async () => {
+    const { courseId } = await ingestCourse(sampleCourse());
+    createdCourseIds.push(courseId);
+    const res = await auth.api.signUpEmail({ body: { name: "Fraud", email: `evalis-fraud+${RUN}@example.test`, password: PW } });
+    const uid = res.user.id;
+    createdUserIds.push(uid);
+    const orgId = (await firstMembershipOrgId(uid))!;
+    const [enr] = await db
+      .insert(enrollment)
+      .values({ organizationId: orgId, userId: uid, courseId, source: "manual", status: "active" })
+      .returning({ id: enrollment.id });
+
+    const [s] = await db
+      .select({ id: slide.id, audioSeconds: slide.audioSeconds })
+      .from(slide)
+      .innerJoin(lesson, eq(lesson.id, slide.lessonId))
+      .innerJoin(module, eq(module.id, lesson.moduleId))
+      .where(eq(module.courseId, courseId))
+      .orderBy(asc(slide.position))
+      .limit(1);
+
+    // Tentativo di completamento istantaneo: dichiaro la clip finita alla durata piena,
+    // senza alcun tempo reale accreditato. Il server (wall-time) non accredita nulla.
+    const t = Date.now();
+    const r1 = await recordHeartbeat({ enrollmentId: enr.id, slideId: s.id, position: s.audioSeconds, focus: true, playing: true, audioCompleted: true, nowMs: t });
+    expect(r1.effectiveSeconds).toBe(0);
+    expect(r1.completed).toBe(false);
+
+    // Secondo ping che prova a "incollare" la posizione alla fine in mezzo secondo → niente credito utile.
+    const r2 = await recordHeartbeat({ enrollmentId: enr.id, slideId: s.id, position: s.audioSeconds, focus: true, playing: true, audioCompleted: true, nowMs: t + 500 });
+    expect(r2.completed).toBe(false);
+    expect(await isSlideCompleted(enr.id, s.id)).toBe(false);
+  });
 });

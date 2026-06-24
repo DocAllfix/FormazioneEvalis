@@ -40,6 +40,35 @@ describe("controller slide", () => {
     s = reduceSlideGate(s, { type: "timeupdate", position: 1 });
     expect(s.effectiveSeconds).toBe(0);
   });
+
+  it("la pausa interrompe l'accredito; la ripresa lo riprende", () => {
+    let s = play(initSlideGate(10), [1, 2, 3]); // eff=3
+    expect(s.effectiveSeconds).toBe(3);
+    s = reduceSlideGate(s, { type: "pause" });
+    s = reduceSlideGate(s, { type: "timeupdate", position: 4 }); // in pausa → niente credito
+    expect(s.effectiveSeconds).toBe(3);
+    s = reduceSlideGate(s, { type: "play" });
+    s = reduceSlideGate(s, { type: "timeupdate", position: 5 }); // ripresa → +1
+    expect(s.effectiveSeconds).toBe(4);
+  });
+
+  it("snap-back: consente il micro-seek entro tolleranza, blocca il salto oltre il validato", () => {
+    const s = play(initSlideGate(10), [1, 2, 3]); // maxValidated=3
+    expect(illegalSeekTarget(s, 4)).toBeNull(); // entro 3+MAX_STEP → permesso
+    expect(illegalSeekTarget(s, 30)).toBe(3); // oltre → riportato a maxValidated
+  });
+
+  it("canCompleteSlide richiede SIA audio finito SIA tempo minimo", () => {
+    // tempo minimo raggiunto ma audio non finito → no
+    let s = play(initSlideGate(3), [1, 2, 3]);
+    expect(canCompleteSlide(s)).toBe(false);
+    // audio finito ma tempo minimo NON raggiunto → no
+    let s2 = reduceSlideGate(play(initSlideGate(50), [1, 2, 3]), { type: "ended" });
+    expect(canCompleteSlide(s2)).toBe(false);
+    // entrambi → sì
+    s = reduceSlideGate(s, { type: "ended" });
+    expect(canCompleteSlide(s)).toBe(true);
+  });
 });
 
 describe("creditableSeconds (server)", () => {
