@@ -11,6 +11,9 @@ export type CatalogCourse = {
   description: string | null;
   durationHours: number | null;
   requiredMinutes: number;
+  category: string | null;
+  priceCents: number | null;
+  currency: string | null;
   purchasable: boolean;
 };
 
@@ -23,6 +26,9 @@ export async function listPublishedCourses(): Promise<CatalogCourse[]> {
       description: course.description,
       durationHours: course.durationHours,
       requiredMinutes: course.requiredMinutes,
+      category: course.category,
+      priceCents: course.priceCents,
+      currency: course.currency,
       stripePriceId: course.stripePriceId,
     })
     .from(course)
@@ -35,6 +41,9 @@ export async function listPublishedCourses(): Promise<CatalogCourse[]> {
     description: r.description,
     durationHours: r.durationHours,
     requiredMinutes: r.requiredMinutes,
+    category: r.category,
+    priceCents: r.priceCents,
+    currency: r.currency,
     purchasable: !!r.stripePriceId,
   }));
 }
@@ -50,6 +59,9 @@ export async function getPublicCourse(courseId: string): Promise<PublicCourse | 
       description: course.description,
       durationHours: course.durationHours,
       requiredMinutes: course.requiredMinutes,
+      category: course.category,
+      priceCents: course.priceCents,
+      currency: course.currency,
       stripePriceId: course.stripePriceId,
       status: course.status,
     })
@@ -77,6 +89,9 @@ export async function getPublicCourse(courseId: string): Promise<PublicCourse | 
     description: c.description,
     durationHours: c.durationHours,
     requiredMinutes: c.requiredMinutes,
+    category: c.category,
+    priceCents: c.priceCents,
+    currency: c.currency,
     purchasable: !!c.stripePriceId,
     modules: Number(mods.n),
     lessons: Number(les.n),

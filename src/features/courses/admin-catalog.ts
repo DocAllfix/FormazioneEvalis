@@ -12,6 +12,9 @@ export type AdminCourse = {
   status: string;
   requiredMinutes: number;
   durationHours: number | null;
+  category: string | null;
+  priceCents: number | null;
+  currency: string | null;
   purchasable: boolean;
   slides: number;
 };
@@ -26,6 +29,9 @@ export async function listGlobalCoursesForAdmin(): Promise<AdminCourse[]> {
       status: course.status,
       requiredMinutes: course.requiredMinutes,
       durationHours: course.durationHours,
+      category: course.category,
+      priceCents: course.priceCents,
+      currency: course.currency,
       stripePriceId: course.stripePriceId,
     })
     .from(course)
@@ -46,6 +52,9 @@ export async function listGlobalCoursesForAdmin(): Promise<AdminCourse[]> {
     status: c.status,
     requiredMinutes: c.requiredMinutes,
     durationHours: c.durationHours,
+    category: c.category,
+    priceCents: c.priceCents,
+    currency: c.currency,
     purchasable: !!c.stripePriceId,
     slides: slidesByCourse.get(c.id) ?? 0,
   }));
