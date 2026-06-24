@@ -62,3 +62,14 @@ CUTOVER (rimane, tutto-o-niente — fare come effort dedicato e verificato):
 ## 9. Revisione esterna
 - Prima del go-live: revisione indipendente security/stress/scalabilità.
   Consegnare `ARCHITETTURA.md`. Codebase pronta: test verdi, RLS attiva, Sentry on.
+
+## 10. Innesti già predisposti (authoring → catalogo → Stripe)
+L'authoring (admin piattaforma `/staff/corsi`) crea corsi globali pubblicati con le **ore
+reali** (`durationHours` da `requiredMinutes`). Due innesti puliti restano da collegare:
+- **Catalogo pubblico DB-backed:** la lista `/catalogo` è ancora la pagina marketing statica
+  (Base44, 15 card curate). La query `listPublishedCourses` ([catalog/queries.ts](src/features/catalog/queries.ts))
+  è già pronta a back-arla con i corsi reali del DB. La scheda `/catalogo/[id]` è già DB-backed.
+- **Prezzo Stripe (B2C):** `course.stripePriceId` + `purchasable` + `createCoursePurchaseCheckout`
+  esistono. Lo slice = aggiungere all'authoring l'input prezzo → creare uno Stripe Price →
+  salvare `stripePriceId`. (Nessun campo nuovo necessario salvo eventuale `priceCents/currency`.)
+- I corsi creati sono **già assegnabili dalle aziende** (B2B) senza prezzo.
