@@ -62,6 +62,45 @@ export async function uploadClipFromUrl(url: string): Promise<string> {
   return json.result.uid;
 }
 
+/**
+ * One-time upload URL per il caricamento DIRETTO dal browser (l'mp4 non passa dal
+ * nostro server). Ritorna { uid, uploadURL }. requireSignedURLs come per tutte le clip.
+ */
+export async function createDirectUpload(maxDurationSeconds = 3600): Promise<{ uid: string; uploadURL: string }> {
+  const acct = process.env.CLOUDFLARE_ACCOUNT_ID;
+  const token = process.env.CLOUDFLARE_STREAM_API_TOKEN;
+  if (!acct || !token) throw new Error("Credenziali Cloudflare non configurate.");
+  const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${acct}/stream/direct_upload`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ requireSignedURLs: true, maxDurationSeconds }),
+  });
+  const json = (await res.json()) as {
+    success: boolean;
+    result?: { uid: string; uploadURL: string };
+    errors?: unknown;
+  };
+  if (!json.success || !json.result) {
+    throw new Error(`Direct upload Cloudflare fallito: ${JSON.stringify(json.errors)}`);
+  }
+  return { uid: json.result.uid, uploadURL: json.result.uploadURL };
+}
+
+/** Stato di una clip: pronta a riprodurre + durata (per il polling dopo l'upload). */
+export async function getClipStatus(uid: string): Promise<{ ready: boolean; duration: number; errored: boolean }> {
+  const acct = process.env.CLOUDFLARE_ACCOUNT_ID;
+  const token = process.env.CLOUDFLARE_STREAM_API_TOKEN;
+  if (!acct || !token) throw new Error("Credenziali Cloudflare non configurate.");
+  const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${acct}/stream/${uid}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  const json = (await res.json()) as {
+    result?: { readyToStream?: boolean; duration?: number; status?: { state?: string } };
+  };
+  const r = json.result ?? {};
+  return { ready: !!r.readyToStream, duration: Math.ceil(r.duration ?? 0), errored: r.status?.state === "error" };
+}
+
 /** Elimina una clip (cleanup test / amministrazione). */
 export async function deleteClip(uid: string): Promise<void> {
   const acct = process.env.CLOUDFLARE_ACCOUNT_ID;
