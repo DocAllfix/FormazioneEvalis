@@ -73,6 +73,14 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
           <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
             <p className="text-sm text-muted-foreground">Certificazione professionale</p>
             <p className="mt-1 font-heading text-2xl text-near-black">{course.title}</p>
+            {course.priceCents != null ? (
+              <p className="mt-3 font-heading text-3xl text-primary">
+                {new Intl.NumberFormat("it-IT", {
+                  style: "currency",
+                  currency: (course.currency ?? "eur").toUpperCase(),
+                }).format(course.priceCents / 100)}
+              </p>
+            ) : null}
 
             <div className="mt-5">
               {enrollment ? (
