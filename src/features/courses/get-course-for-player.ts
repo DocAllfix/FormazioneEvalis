@@ -3,13 +3,14 @@
 // (tempo effettivo + monte ore). Nessuna logica di compliance nella UI.
 
 import { and, asc, eq } from "drizzle-orm";
-import { db } from "@/lib/db";
 import { course, enrollment, module as courseModule, lesson, slide, slideProgress, quiz } from "@/lib/db/schema";
 import { courseEffectiveSeconds } from "@/features/tracking/progress";
 import { isQuizPassed } from "@/features/quiz/engine";
+import { withTenant, type TenantCtx } from "@/lib/db/tenant";
 
-export async function getCourseForPlayer(enrollmentId: string) {
-  const [enr] = await db
+export async function getCourseForPlayer(enrollmentId: string, ctx: TenantCtx) {
+  return withTenant(ctx, async (tx) => {
+  const [enr] = await tx
     .select({ courseId: enrollment.courseId })
     .from(enrollment)
     .where(eq(enrollment.id, enrollmentId))
@@ -17,14 +18,14 @@ export async function getCourseForPlayer(enrollmentId: string) {
   if (!enr) throw new Error("Enrollment inesistente.");
   const courseId = enr.courseId;
 
-  const [crs] = await db
+  const [crs] = await tx
     .select({ id: course.id, title: course.title, requiredMinutes: course.requiredMinutes })
     .from(course)
     .where(eq(course.id, courseId))
     .limit(1);
   if (!crs) throw new Error("Corso inesistente.");
 
-  const rows = await db
+  const rows = await tx
     .select({
       slideId: slide.id,
       lessonId: slide.lessonId,
@@ -60,17 +61,19 @@ export async function getCourseForPlayer(enrollmentId: string) {
     completed: !!r.completedAt,
   }));
 
-  const quizRows = await db
+  const quizRows = await tx
     .select({ id: quiz.id, type: quiz.type, title: quiz.title, position: quiz.position })
     .from(quiz)
     .where(eq(quiz.courseId, courseId))
     .orderBy(asc(quiz.position));
   // `passed` per quiz: serve alla UI per resume + gating dei checkpoint.
-  const quizzes = await Promise.all(
-    quizRows.map(async (q) => ({ ...q, passed: await isQuizPassed(enrollmentId, q.id) })),
-  );
+  // Sequenziale (NON Promise.all): le query condividono l'unica connessione della tx.
+  const quizzes: ((typeof quizRows)[number] & { passed: boolean })[] = [];
+  for (const q of quizRows) {
+    quizzes.push({ ...q, passed: await isQuizPassed(enrollmentId, q.id, tx) });
+  }
 
-  const effectiveSeconds = await courseEffectiveSeconds(enrollmentId, courseId);
+  const effectiveSeconds = await courseEffectiveSeconds(enrollmentId, courseId, tx);
 
   return {
     course: { id: crs.id, title: crs.title, requiredMinutes: crs.requiredMinutes },
@@ -78,4 +81,5 @@ export async function getCourseForPlayer(enrollmentId: string) {
     slides,
     quizzes,
   };
+  });
 }

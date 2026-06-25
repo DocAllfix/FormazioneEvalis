@@ -21,7 +21,7 @@ import { ensureCertificateRecord } from "@/features/certificates/lifecycle";
 export async function getMyCourse(enrollmentId: string) {
   const { user } = await requireSession();
   await assertEnrollmentOwnedBy(enrollmentId, user.id);
-  return getCourseForPlayer(enrollmentId);
+  return getCourseForPlayer(enrollmentId, { userId: user.id });
 }
 
 export async function startMyQuiz(enrollmentId: string, quizId: string) {

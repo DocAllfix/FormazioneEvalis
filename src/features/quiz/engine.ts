@@ -7,6 +7,9 @@ import { db } from "@/lib/db";
 import { quiz, quizQuestion, quizAttempt } from "@/lib/db/schema";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
 
+// Executor: db globale OPPURE una transazione (per ereditare le GUC di tenant da withTenant).
+type DbOrTx = typeof db | Parameters<Parameters<typeof db.transaction>[0]>[0];
+
 // --- Logica pura (testabile) ---
 
 export function isOverTimeLimit(startedAtMs: number, nowMs: number, timeLimitSeconds: number): boolean {
@@ -131,9 +134,15 @@ export async function submitQuiz(
   return { score: graded.score, passed, over };
 }
 
-/** Un quiz risulta superato se esiste almeno un tentativo passato (checkpoint/esame). */
-export async function isQuizPassed(enrollmentId: string, quizId: string): Promise<boolean> {
-  const [a] = await db
+/** Un quiz risulta superato se esiste almeno un tentativo passato (checkpoint/esame).
+ * `exec` opzionale: l'entry-point che apre withTenant passa il proprio tx (lettura
+ * sotto le GUC di tenant, una sola transazione). */
+export async function isQuizPassed(
+  enrollmentId: string,
+  quizId: string,
+  exec: DbOrTx = db,
+): Promise<boolean> {
+  const [a] = await exec
     .select({ id: quizAttempt.id })
     .from(quizAttempt)
     .where(
