@@ -36,19 +36,30 @@ Servizi:
 - Impostare i DSN Sentry e forzare un errore di prova → l'evento deve arrivare al progetto Sentry.
 
 ## 6. Isolamento dati (RLS) — cutover
-FATTO (committato): ruolo `app_rls` (NOBYPASSRLS) + FORCE RLS + policy sulle 4 tabelle
-sensibili come **migration versionata** (`0007_rls_tenant_isolation.sql`, applicata via
-`db:migrate` → riproducibile su ogni ambiente), helper `withTenant` (`src/lib/db/tenant.ts`),
-prova cross-tenant verde (`src/__tests__/rls.db.test.ts`). L'app gira come `postgres`
-(bypassrls) → RLS pronta ma non ancora effettiva. `app_rls` si connette via pooler (verificato).
+FATTO e VERIFICATO (committato): ruolo `app_rls` (NOBYPASSRLS) + FORCE RLS + policy sulle 4
+tabelle sensibili (`0007`), valvole staff/verifica (`0012`), funzione `verify_certificate`
+SECURITY DEFINER per la verifica pubblica per-uuid (`0014`, evita la ricorsione tra le policy),
+e policy **passthrough scoped a `app_rls`** sulle tabelle non-tenant (`0015`: erano RLS-enabled
+senza policy = deny-all → avrebbero rotto l'app come `app_rls`; i ruoli PostgREST restano negati).
+Tutte le query alle 4 tabelle sono instradate in `withTenant(ctx, fn)` con il ctx corretto per
+ruolo (discente=`userId`, azienda=`orgId`, staff=`platformAdmin`, verifica=`verify_certificate`).
 
-CUTOVER (rimane, tutto-o-niente — fare come effort dedicato e verificato):
-1. Avvolgere in `withTenant(ctx, fn)` TUTTE le query alle 4 tabelle (anche
-   `recordHeartbeat` e l'emissione certificati — codice di compliance, con cura).
-2. `ALTER ROLE app_rls LOGIN PASSWORD '<segreto>'`; far puntare `DATABASE_URL` al pooler
-   come `app_rls.<ref>`; tenere `DIRECT_URL` sul ruolo privilegiato per le migrazioni.
-3. Verifica: ogni flusso (discente/azienda/staff) verde come `app_rls`; un utente non vede
-   dati di un altro tenant nemmeno forzando gli ID. Rollback: revert `DATABASE_URL` + `DISABLE FORCE RLS`.
+Prove: `rls.db.test.ts` (le policy isolano come `app_rls`) + `rls-routing.db.test.ts`
+(le funzioni instradate funzionano e il **cross-tenant è negato** end-to-end come `app_rls`).
+Il guardrail si esegue forzando il ruolo: `RLS_FORCE_ROLE=app_rls npx vitest run
+src/__tests__/rls-routing.db.test.ts` (col flag, ogni `withTenant` fa `SET LOCAL ROLE app_rls`;
+il seeding dei test resta sul ruolo di connessione = bypass). Senza il flag il test è skippato.
+**In CI aggiungere questo step** (con `RLS_FORCE_ROLE=app_rls`) per evitare regressioni.
+
+CUTOVER PRODUZIONE (rimane solo lo switch del ruolo di connessione — fail-closed):
+1. `ALTER ROLE app_rls LOGIN PASSWORD '<segreto>'` (lo step ops; il segreto NON va in git).
+2. Far puntare `DATABASE_URL` al pooler come utente `app_rls.<ref>`; tenere `DIRECT_URL` sul
+   ruolo privilegiato (`postgres`) per le migrazioni. NON impostare `RLS_FORCE_ROLE` in prod:
+   la connessione È `app_rls` (fail-closed → una query non avvolta fallisce, non bypassa).
+3. Verifica post-switch: ogni flusso (discente/azienda/staff/verifica pubblica) verde; un utente
+   non vede dati di un altro tenant nemmeno forzando gli ID.
+4. Rollback: revert `DATABASE_URL` al ruolo privilegiato (le policy restano, inerti sotto
+   bypass). Nessun `DISABLE FORCE RLS` necessario.
 
 ## 7. Data residency & backup
 - DB/Storage/Auth in UE: Supabase `aws-1-eu-central-1` ✓, Cloudflare Stream.
