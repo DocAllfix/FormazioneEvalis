@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import { JsonLd } from "@/components/seo/json-ld";
+
+const APP_URL = (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -17,9 +20,22 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Evalis — Certifica le tue competenze professionali",
+  metadataBase: new URL(APP_URL),
+  title: {
+    default: "Evalis — Certifica le tue competenze professionali",
+    template: "%s",
+  },
   description:
     "Preparazione online, esame di verifica e certificato verificabile con QR. Auditor ISO, mestieri e professioni, settore bancario.",
+  openGraph: { siteName: "Evalis", locale: "it_IT", type: "website" },
+};
+
+const orgLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Evalis",
+  url: APP_URL,
+  description: "Piattaforma di certificazione delle competenze professionali.",
 };
 
 export default function RootLayout({
@@ -27,7 +43,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="it" className={`${dmSans.variable} ${dmSerif.variable}`}>
-      <body>{children}</body>
+      <body>
+        <JsonLd data={orgLd} />
+        {children}
+      </body>
     </html>
   );
 }

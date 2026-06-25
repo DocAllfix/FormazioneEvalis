@@ -8,6 +8,7 @@ import type { CourseDetails } from "@/features/courses/course-details";
 
 export type CatalogCourse = {
   id: string;
+  slug: string | null;
   title: string;
   description: string | null;
   durationHours: number | null;
@@ -24,6 +25,7 @@ export async function listPublishedCourses(): Promise<CatalogCourse[]> {
   const rows = await db
     .select({
       id: course.id,
+      slug: course.slug,
       title: course.title,
       description: course.description,
       durationHours: course.durationHours,
@@ -40,6 +42,7 @@ export async function listPublishedCourses(): Promise<CatalogCourse[]> {
 
   return rows.map((r) => ({
     id: r.id,
+    slug: r.slug,
     title: r.title,
     description: r.description,
     durationHours: r.durationHours,
@@ -74,6 +77,7 @@ export async function getPublicCourse(courseId: string): Promise<PublicCourse | 
   const [c] = await db
     .select({
       id: course.id,
+      slug: course.slug,
       title: course.title,
       description: course.description,
       durationHours: course.durationHours,
@@ -128,6 +132,7 @@ export async function getPublicCourse(courseId: string): Promise<PublicCourse | 
 
   return {
     id: c.id,
+    slug: c.slug,
     title: c.title,
     description: c.description,
     durationHours: c.durationHours,
@@ -144,6 +149,16 @@ export async function getPublicCourse(courseId: string): Promise<PublicCourse | 
     program,
     exam: finalQuiz ?? null,
   };
+}
+
+/** Dettaglio pubblico per SLUG (pagina teaser SEO). Solo corsi pubblicati. */
+export async function getPublicCourseBySlug(slug: string): Promise<PublicCourse | null> {
+  const [c] = await db
+    .select({ id: course.id })
+    .from(course)
+    .where(and(eq(course.slug, slug), eq(course.status, "published"), isNull(course.organizationId)))
+    .limit(1);
+  return c ? getPublicCourse(c.id) : null;
 }
 
 /** L'iscrizione attiva dell'utente a un corso, se esiste (per lo stato CTA). */

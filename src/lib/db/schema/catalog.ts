@@ -61,6 +61,8 @@ export const course = pgTable(
     durationHours: integer("duration_hours"),
     // Monte ore legale del tipo corso (Accordo): la fruizione deve raggiungerlo.
     requiredMinutes: integer("required_minutes").notNull().default(0),
+    // Slug SEO-friendly per la pagina pubblica teaser (/corso/[slug]). Unico.
+    slug: text("slug").unique(),
     // Categoria per il filtro del catalogo (es. auditor/mestieri/bancario). null = nessuna.
     category: text("category"),
     // Contenuti descrittivi opzionali della scheda (catalogo post-login), in UN jsonb ordinato.

@@ -2,9 +2,24 @@
 // MONTE-ORE (somma durate slide ≥ minuti richiesti) e inserisce tutto in transazione.
 // Generatore-agnostico: Claude/EduVault/manuale producono il formato canonico.
 
+import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { course, module as courseModule, lesson, slide, quiz, quizQuestion } from "@/lib/db/schema";
 import { courseInputSchema, type CourseInput, type QuizInput } from "./course-format";
+import { slugify } from "./slug";
+
+type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
+
+/** Slug unico da un titolo (append -2, -3… in caso di collisione). */
+async function uniqueSlug(tx: Tx, title: string): Promise<string> {
+  const base = slugify(title);
+  let slug = base;
+  for (let n = 2; ; n++) {
+    const [hit] = await tx.select({ id: course.id }).from(course).where(eq(course.slug, slug)).limit(1);
+    if (!hit) return slug;
+    slug = `${base}-${n}`;
+  }
+}
 
 export async function ingestCourse(input: unknown): Promise<{ courseId: string }> {
   const pkg = courseInputSchema.parse(input);
@@ -19,12 +34,14 @@ export async function ingestCourse(input: unknown): Promise<{ courseId: string }
   }
 
   return db.transaction(async (tx) => {
+    const slug = await uniqueSlug(tx, pkg.title);
     const [c] = await tx
       .insert(course)
       .values({
         title: pkg.title,
         description: pkg.description ?? null,
         requiredMinutes: pkg.requiredMinutes,
+        slug,
         status: "published",
       })
       .returning({ id: course.id });
