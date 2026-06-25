@@ -8,6 +8,7 @@ import { db } from "@/lib/db";
 import { course } from "@/lib/db/schema";
 import { requirePlatformAdmin } from "@/features/auth/guards";
 import { courseManifestSchema, resolveManifestToCourse, type ClipInfo } from "./authoring-manifest";
+import { courseDetailsSchema, type CourseDetails } from "./course-details";
 import { ingestCourse } from "./ingest";
 
 export async function createCourseFromManifest(
@@ -19,14 +20,27 @@ export async function createCourseFromManifest(
   const courseInput = resolveManifestToCourse(manifest, clipMap);
   const { courseId } = await ingestCourse(courseInput); // valida monte-ore + crea atomico (published, globale)
 
-  // Ore reali per il catalogo (display): il monte-ore legale tradotto in ore.
-  if (manifest.requiredMinutes >= 60) {
-    await db
-      .update(course)
-      .set({ durationHours: Math.round(manifest.requiredMinutes / 60) })
-      .where(eq(course.id, courseId));
-  }
+  // Metadati catalogo post-ingest: ore reali (display) + categoria + scheda ricca.
+  const patch: { durationHours?: number; category?: string; details?: CourseDetails } = {};
+  if (manifest.requiredMinutes >= 60) patch.durationHours = Math.round(manifest.requiredMinutes / 60);
+  if (manifest.category) patch.category = manifest.category;
+  if (manifest.details) patch.details = manifest.details;
+  if (Object.keys(patch).length) await db.update(course).set(patch).where(eq(course.id, courseId));
+
   return { courseId };
+}
+
+/** Imposta/azzera i contenuti ricchi della scheda (catalogo post-login). Gated admin. */
+export async function setCourseDetails(courseId: string, detailsRaw: unknown): Promise<void> {
+  await requirePlatformAdmin();
+  const details = detailsRaw ? courseDetailsSchema.parse(detailsRaw) : null;
+  await db.update(course).set({ details }).where(eq(course.id, courseId));
+}
+
+/** Rimuove l'immagine dalla scheda (il blob nel bucket resta, innocuo). Gated admin. */
+export async function removeCourseImage(courseId: string): Promise<void> {
+  await requirePlatformAdmin();
+  await db.update(course).set({ imageUrl: null }).where(eq(course.id, courseId));
 }
 
 /** Pubblica / ritira dal catalogo (solo corsi globali). */

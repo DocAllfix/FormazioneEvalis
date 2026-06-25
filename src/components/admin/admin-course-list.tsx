@@ -4,6 +4,7 @@
 // pubblica/ritira. Controlli inline (niente modale). Consuma authoring + pricing actions.
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Check, Loader2, X } from "lucide-react";
 import { setCoursePublishedAction } from "@/features/courses/authoring-actions";
@@ -90,7 +91,11 @@ export function AdminCourseList({ courses }: { courses: AdminCourse[] }) {
               const busy = busyId === c.id;
               return (
                 <tr key={c.id} className="border-b border-border/60 transition-colors last:border-0 hover:bg-secondary/30">
-                  <td className="px-4 py-3 font-medium text-near-black">{c.title}</td>
+                  <td className="px-4 py-3">
+                    <Link href={`/staff/corsi/${c.id}`} className="font-medium text-near-black transition hover:text-primary hover:underline">
+                      {c.title}
+                    </Link>
+                  </td>
                   <td className="px-4 py-3">
                     <select
                       value={c.category ?? ""}

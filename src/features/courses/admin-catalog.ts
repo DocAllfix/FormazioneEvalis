@@ -67,3 +67,28 @@ export async function listGlobalCoursesForAdmin(): Promise<AdminCourse[]> {
     slides: slidesByCourse.get(c.id) ?? 0,
   }));
 }
+
+export type AdminCourseEdit = {
+  id: string;
+  title: string;
+  category: string | null;
+  imageUrl: string | null;
+  details: CourseDetails | null;
+};
+
+/** Singolo corso per la pagina di modifica (immagine + scheda). Gated admin. */
+export async function getAdminCourse(courseId: string): Promise<AdminCourseEdit | null> {
+  await requirePlatformAdmin();
+  const [c] = await db
+    .select({
+      id: course.id,
+      title: course.title,
+      category: course.category,
+      imageUrl: course.imageUrl,
+      details: course.details,
+    })
+    .from(course)
+    .where(eq(course.id, courseId))
+    .limit(1);
+  return c ? { ...c, details: c.details ?? null } : null;
+}

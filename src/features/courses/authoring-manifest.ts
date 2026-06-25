@@ -6,6 +6,7 @@
 
 import { z } from "zod";
 import { quizInputSchema, type CourseInput } from "./course-format";
+import { courseDetailsSchema } from "./course-details";
 
 export const manifestSlideSchema = z.object({
   title: z.string().min(1),
@@ -30,6 +31,9 @@ export const courseManifestSchema = z.object({
   description: z.string().optional(),
   // monte ore LEGALE del tipo-corso (minuti): la durata dei contenuti dovrà raggiungerlo
   requiredMinutes: z.number().int().nonnegative(),
+  // metadati catalogo (opzionali): categoria + scheda ricca
+  category: z.string().trim().min(1).optional(),
+  details: courseDetailsSchema.optional(),
   modules: z.array(manifestModuleSchema).min(1),
   finalExam: quizInputSchema.optional(),
 });
