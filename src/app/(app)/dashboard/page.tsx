@@ -51,7 +51,7 @@ export default async function DashboardPage() {
             Scegli una certificazione dal catalogo per iniziare la tua preparazione.
           </p>
           <Link
-            href="/catalogo"
+            href="/corsi"
             className="mt-5 inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:brightness-110"
           >
             Esplora le certificazioni

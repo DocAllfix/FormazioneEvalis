@@ -1,22 +1,16 @@
 "use client";
 
-// Vetrina catalogo DB-backed: filtro categoria + ricerca + card reali (ore + prezzo),
-// cliccabili verso la scheda /catalogo/[id]. Preserva il design approvato del catalogo.
+// Vetrina catalogo POST-LOGIN: filtro categoria + ricerca + card accattivanti (immagine
+// di copertina o grafica per categoria) con ore e prezzo, cliccabili → scheda /corsi/[id].
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, BookOpen, ClipboardCheck, QrCode, Search } from "lucide-react";
+import { Clock, Search } from "lucide-react";
 import type { CatalogCourse } from "@/features/catalog/queries";
-
-const CATEGORY_LABEL: Record<string, string> = {
-  auditor: "Auditor ISO",
-  mestieri: "Mestieri e professioni",
-  bancario: "Settore bancario",
-  sicurezza: "Sicurezza",
-};
+import { categoryVisual } from "./category-visual";
 
 const AREAS = [
-  { id: "all", label: "Tutte" },
+  { id: "all", label: "Tutti" },
   { id: "auditor", label: "Auditor ISO" },
   { id: "mestieri", label: "Mestieri e professioni" },
   { id: "bancario", label: "Settore bancario" },
@@ -37,35 +31,38 @@ function priceLabel(c: CatalogCourse): string {
 }
 
 function Card({ c }: { c: CatalogCourse }) {
-  const area = c.category ? CATEGORY_LABEL[c.category] ?? "Corso" : "Corso";
+  const v = categoryVisual(c.category);
   return (
     <Link
-      href={`/catalogo/${c.id}`}
-      className="group flex h-full flex-col rounded-2xl border border-[#EAE4DB] bg-white p-6 text-left transition-all duration-200 hover:-translate-y-[3px] hover:border-primary hover:shadow-[0_12px_32px_rgba(26,18,9,0.12)]"
+      href={`/corsi/${c.id}`}
+      className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_16px_40px_rgba(26,18,9,0.12)]"
     >
-      <div className="mb-4 flex items-start justify-between">
-        <span className="inline-block rounded-full bg-[#FEF0EB] px-3 py-1 text-[11px] font-medium text-[#C03E08]">
-          {area}
-        </span>
-        <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#F5EFE6] text-[#766E66] transition-all duration-200 group-hover:bg-primary group-hover:text-white">
-          <ArrowRight className="h-3.5 w-3.5" />
+      <div className="relative aspect-[16/10] overflow-hidden">
+        {c.imageUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={c.imageUrl} alt="" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
+        ) : (
+          <div className={`flex h-full w-full items-center justify-center bg-linear-to-br ${v.gradient}`}>
+            <v.Icon className="h-14 w-14 text-white/25" strokeWidth={1.5} />
+          </div>
+        )}
+        <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-medium text-near-black shadow-sm backdrop-blur">
+          {v.label}
         </span>
       </div>
-      <h3 className="font-heading text-lg text-near-black transition-colors duration-200 group-hover:text-primary">
-        {c.title}
-      </h3>
-      {c.description ? (
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-[#5C5347] line-clamp-3">{c.description}</p>
-      ) : (
-        <p className="mt-2 flex-1" />
-      )}
-      <div className="mt-5 flex items-center justify-between border-t border-[#EAE4DB] pt-4">
-        <span className="inline-flex items-center gap-1.5 text-xs text-[#766E66]">
-          <ClipboardCheck className="h-3.5 w-3.5 text-primary" /> {hoursLabel(c)}
-          <span className="text-[#D9D2C7]">·</span>
-          <QrCode className="h-3.5 w-3.5 text-primary" /> QR
-        </span>
-        <span className="text-sm font-medium text-near-black">{priceLabel(c)}</span>
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="font-heading text-lg leading-snug text-near-black transition-colors group-hover:text-primary">
+          {c.title}
+        </h3>
+        {c.description ? (
+          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">{c.description}</p>
+        ) : null}
+        <div className="mt-4 flex items-center justify-between border-t border-border pt-4">
+          <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+            <Clock className="h-3.5 w-3.5 text-primary" /> {hoursLabel(c)}
+          </span>
+          <span className="font-heading text-lg text-near-black">{priceLabel(c)}</span>
+        </div>
       </div>
     </Link>
   );
@@ -79,83 +76,59 @@ export function CatalogBrowser({ courses }: { courses: CatalogCourse[] }) {
     const q = query.toLowerCase().trim();
     return courses.filter((c) => {
       const areaMatch = activeArea === "all" || c.category === activeArea;
-      const queryMatch =
-        !q || c.title.toLowerCase().includes(q) || (c.description ?? "").toLowerCase().includes(q);
+      const queryMatch = !q || c.title.toLowerCase().includes(q) || (c.description ?? "").toLowerCase().includes(q);
       return areaMatch && queryMatch;
     });
   }, [courses, activeArea, query]);
 
   return (
-    <>
-      {/* Filter bar */}
-      <section className="sticky top-16 z-40 w-full border-y border-[#EAE4DB] bg-white/90 py-4 backdrop-blur-[12px]">
-        <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-4 px-6 md:flex-row md:items-center md:px-10">
-          <div className="flex flex-wrap gap-2">
-            {AREAS.map((area) => (
-              <button
-                key={area.id}
-                onClick={() => setActiveArea(area.id)}
-                className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 ${
-                  activeArea === area.id
-                    ? "bg-primary text-white"
-                    : "border border-[#EAE4DB] bg-white text-[#5C5347] hover:border-near-black/20"
-                }`}
-              >
-                {area.label}
-              </button>
-            ))}
-          </div>
-          <div className="relative w-full md:w-72">
-            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#766E66]" />
-            <input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              aria-label="Cerca un corso"
-              placeholder="Cerca corso..."
-              className="h-11 w-full rounded-lg border border-[#EAE4DB] bg-background pl-10 pr-4 text-sm text-near-black placeholder:text-[#766E66] transition-colors focus:border-primary focus:outline-none"
-            />
-          </div>
+    <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-wrap gap-2">
+          {AREAS.map((area) => (
+            <button
+              key={area.id}
+              onClick={() => setActiveArea(area.id)}
+              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                activeArea === area.id
+                  ? "bg-primary text-white"
+                  : "border border-border bg-card text-foreground/80 hover:border-primary/40"
+              }`}
+            >
+              {area.label}
+            </button>
+          ))}
         </div>
-      </section>
-
-      {/* Results */}
-      <section className="w-full bg-background py-12 md:py-16">
-        <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-          <div className="mb-6 flex items-center justify-between">
-            <p className="text-sm text-[#766E66]">
-              {filtered.length} {filtered.length === 1 ? "corso" : "corsi"}
-            </p>
-            <span className="inline-flex items-center gap-1.5 text-xs text-[#766E66]">
-              <BookOpen className="h-3.5 w-3.5 text-primary" /> Preparazione + esame online
-            </span>
-          </div>
-
-          {filtered.length > 0 ? (
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {filtered.map((c) => (
-                <Card key={c.id} c={c} />
-              ))}
-            </div>
-          ) : courses.length === 0 ? (
-            <div className="py-20 text-center">
-              <p className="text-[#766E66]">Il catalogo si sta popolando. Nuovi corsi in arrivo a breve.</p>
-            </div>
-          ) : (
-            <div className="py-20 text-center">
-              <p className="text-[#766E66]">Nessun corso trovato per la tua ricerca.</p>
-              <button
-                onClick={() => {
-                  setQuery("");
-                  setActiveArea("all");
-                }}
-                className="mt-4 text-sm font-medium text-primary hover:underline"
-              >
-                Resetta filtri
-              </button>
-            </div>
-          )}
+        <div className="relative w-full sm:w-64">
+          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            aria-label="Cerca un corso"
+            placeholder="Cerca corso..."
+            className="h-10 w-full rounded-lg border border-border bg-background pl-9 pr-3 text-sm outline-none ring-primary/30 focus:ring-2"
+          />
         </div>
-      </section>
-    </>
+      </div>
+
+      {filtered.length > 0 ? (
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((c) => (
+            <Card key={c.id} c={c} />
+          ))}
+        </div>
+      ) : courses.length === 0 ? (
+        <div className="rounded-2xl border border-dashed border-border bg-card py-20 text-center">
+          <p className="text-muted-foreground">Il catalogo si sta popolando. Nuovi corsi in arrivo a breve.</p>
+        </div>
+      ) : (
+        <div className="rounded-2xl border border-dashed border-border bg-card py-20 text-center">
+          <p className="text-muted-foreground">Nessun corso trovato.</p>
+          <button onClick={() => { setQuery(""); setActiveArea("all"); }} className="mt-3 text-sm font-medium text-primary hover:underline">
+            Resetta filtri
+          </button>
+        </div>
+      )}
+    </div>
   );
 }

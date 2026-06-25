@@ -140,8 +140,8 @@ export function CourseImportWizard() {
           <Link href="/staff/corsi" className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition hover:brightness-110">
             Torna ai corsi
           </Link>
-          <Link href={`/catalogo/${result.courseId}`} className="rounded-lg border border-border px-4 py-2 text-sm font-medium text-near-black transition hover:bg-secondary/40">
-            Vedi nel catalogo
+          <Link href={`/staff/corsi/${result.courseId}`} className="rounded-lg border border-border px-4 py-2 text-sm font-medium text-near-black transition hover:bg-secondary/40">
+            Apri la scheda (immagine + dettagli)
           </Link>
         </div>
       </div>
