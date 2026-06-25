@@ -9,6 +9,9 @@ import { slide, slideProgress, lesson, module as courseModule } from "@/lib/db/s
 import { heartbeat } from "@/lib/db/schema";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
 
+// Executor: db globale OPPURE una transazione (per ereditare le GUC di tenant da withTenant).
+type DbOrTx = typeof db | Parameters<Parameters<typeof db.transaction>[0]>[0];
+
 export const CREDIT_TOLERANCE_SECONDS = 3; // scarto ammesso tra tempo reale e avanzamento posizione
 export const MAX_GAP_MS = 30_000; // oltre questo, l'intervallo non viene accreditato
 // Tempo minimo di fruizione (vincolo Accordo Stato-Regioni): la slide si completa solo
@@ -143,9 +146,15 @@ export async function assertSlideCompleted(enrollmentId: string, slideId: string
   }
 }
 
-/** Secondi effettivi totali fruiti per un corso (per timer e readiness certificato). */
-export async function courseEffectiveSeconds(enrollmentId: string, courseId: string): Promise<number> {
-  const rows = await db
+/** Secondi effettivi totali fruiti per un corso (per timer e readiness certificato).
+ * `exec` opzionale: l'entry-point che apre withTenant passa il proprio tx così la
+ * lettura eredita le GUC di tenant (una sola transazione, niente annidamenti). */
+export async function courseEffectiveSeconds(
+  enrollmentId: string,
+  courseId: string,
+  exec: DbOrTx = db,
+): Promise<number> {
+  const rows = await exec
     .select({ s: slideProgress.effectiveSeconds })
     .from(slideProgress)
     .innerJoin(slide, eq(slide.id, slideProgress.slideId))
