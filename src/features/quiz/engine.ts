@@ -6,6 +6,7 @@ import { and, eq, inArray } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { quiz, quizQuestion, quizAttempt } from "@/lib/db/schema";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
+import { withTenant, type TenantCtx } from "@/lib/db/tenant";
 
 // Executor: db globale OPPURE una transazione (per ereditare le GUC di tenant da withTenant).
 type DbOrTx = typeof db | Parameters<Parameters<typeof db.transaction>[0]>[0];
@@ -40,32 +41,33 @@ function shuffleTake<T>(arr: T[], n: number): T[] {
 
 // --- Operazioni ---
 
-export async function startQuiz(enrollmentId: string, quizId: string) {
-  const [qz] = await db.select().from(quiz).where(eq(quiz.id, quizId)).limit(1);
-  if (!qz) throw new Error("Quiz inesistente.");
+export async function startQuiz(enrollmentId: string, quizId: string, ctx: TenantCtx = {}) {
+  return withTenant(ctx, async (tx) => {
+    const [qz] = await tx.select().from(quiz).where(eq(quiz.id, quizId)).limit(1);
+    if (!qz) throw new Error("Quiz inesistente.");
 
-  const attempts = await db
-    .select({ lockedUntil: quizAttempt.lockedUntil })
-    .from(quizAttempt)
-    .where(and(eq(quizAttempt.enrollmentId, enrollmentId), eq(quizAttempt.quizId, quizId)));
-  const now = new Date();
-  if (qz.maxAttempts != null && attempts.length >= qz.maxAttempts) {
-    throw new Error("Numero massimo di tentativi raggiunto.");
-  }
-  if (attempts.some((a) => a.lockedUntil && a.lockedUntil > now)) {
-    throw new Error("Quiz in cooldown: riprova più tardi.");
-  }
+    const attempts = await tx
+      .select({ lockedUntil: quizAttempt.lockedUntil })
+      .from(quizAttempt)
+      .where(and(eq(quizAttempt.enrollmentId, enrollmentId), eq(quizAttempt.quizId, quizId)));
+    const now = new Date();
+    if (qz.maxAttempts != null && attempts.length >= qz.maxAttempts) {
+      throw new Error("Numero massimo di tentativi raggiunto.");
+    }
+    if (attempts.some((a) => a.lockedUntil && a.lockedUntil > now)) {
+      throw new Error("Quiz in cooldown: riprova più tardi.");
+    }
 
-  const bank = await db
-    .select({ id: quizQuestion.id, text: quizQuestion.text, options: quizQuestion.options })
-    .from(quizQuestion)
-    .where(eq(quizQuestion.quizId, quizId));
-  if (bank.length < qz.questionsToDraw) throw new Error("Banca domande insufficiente.");
+    const bank = await tx
+      .select({ id: quizQuestion.id, text: quizQuestion.text, options: quizQuestion.options })
+      .from(quizQuestion)
+      .where(eq(quizQuestion.quizId, quizId));
+    if (bank.length < qz.questionsToDraw) throw new Error("Banca domande insufficiente.");
 
-  const drawn = shuffleTake(bank, qz.questionsToDraw);
-  const drawnIds = drawn.map((q) => q.id);
+    const drawn = shuffleTake(bank, qz.questionsToDraw);
+    const drawnIds = drawn.map((q) => q.id);
 
-  const attemptId = await db.transaction(async (tx) => {
+    // insert tentativo + audit (già nell'unica tx → atomici)
     const [attempt] = await tx
       .insert(quizAttempt)
       .values({ enrollmentId, quizId, startedAt: now, detail: { drawnIds } })
@@ -78,45 +80,46 @@ export async function startQuiz(enrollmentId: string, quizId: string) {
       object: `quiz:${quizId}`,
       payload: { attemptId: attempt.id },
     });
-    return attempt.id;
-  });
 
-  // SENZA risposte corrette
-  return {
-    attemptId,
-    timeLimitSeconds: qz.timeLimitSeconds,
-    questions: drawn.map((q) => ({ id: q.id, text: q.text, options: q.options })),
-  };
+    // SENZA risposte corrette
+    return {
+      attemptId: attempt.id,
+      timeLimitSeconds: qz.timeLimitSeconds,
+      questions: drawn.map((q) => ({ id: q.id, text: q.text, options: q.options })),
+    };
+  });
 }
 
 export async function submitQuiz(
   attemptId: string,
   answers: { questionId: string; optionId: string }[],
+  ctx: TenantCtx = {},
 ) {
-  const [att] = await db.select().from(quizAttempt).where(eq(quizAttempt.id, attemptId)).limit(1);
-  if (!att) throw new Error("Tentativo inesistente.");
-  if (att.submittedAt) throw new Error("Tentativo già inviato.");
-  if (!att.quizId || !att.startedAt) throw new Error("Tentativo non valido.");
+  return withTenant(ctx, async (tx) => {
+    const [att] = await tx.select().from(quizAttempt).where(eq(quizAttempt.id, attemptId)).limit(1);
+    if (!att) throw new Error("Tentativo inesistente.");
+    if (att.submittedAt) throw new Error("Tentativo già inviato.");
+    if (!att.quizId || !att.startedAt) throw new Error("Tentativo non valido.");
 
-  const [qz] = await db.select().from(quiz).where(eq(quiz.id, att.quizId)).limit(1);
-  if (!qz) throw new Error("Quiz inesistente.");
+    const [qz] = await tx.select().from(quiz).where(eq(quiz.id, att.quizId)).limit(1);
+    if (!qz) throw new Error("Quiz inesistente.");
 
-  const now = new Date();
-  const over = isOverTimeLimit(att.startedAt.getTime(), now.getTime(), qz.timeLimitSeconds);
+    const now = new Date();
+    const over = isOverTimeLimit(att.startedAt.getTime(), now.getTime(), qz.timeLimitSeconds);
 
-  const drawnIds = (att.detail as { drawnIds?: string[] } | null)?.drawnIds ?? [];
-  const drawn = drawnIds.length
-    ? await db
-        .select({ id: quizQuestion.id, correctOptionId: quizQuestion.correctOptionId })
-        .from(quizQuestion)
-        .where(inArray(quizQuestion.id, drawnIds))
-    : [];
+    const drawnIds = (att.detail as { drawnIds?: string[] } | null)?.drawnIds ?? [];
+    const drawn = drawnIds.length
+      ? await tx
+          .select({ id: quizQuestion.id, correctOptionId: quizQuestion.correctOptionId })
+          .from(quizQuestion)
+          .where(inArray(quizQuestion.id, drawnIds))
+      : [];
 
-  const graded = over ? { score: 0, correctCount: 0, total: drawn.length } : gradeAnswers(drawn, answers);
-  const passed = !over && graded.score >= qz.passThreshold;
-  const lockedUntil = passed ? null : new Date(now.getTime() + qz.cooldownSeconds * 1000);
+    const graded = over ? { score: 0, correctCount: 0, total: drawn.length } : gradeAnswers(drawn, answers);
+    const passed = !over && graded.score >= qz.passThreshold;
+    const lockedUntil = passed ? null : new Date(now.getTime() + qz.cooldownSeconds * 1000);
 
-  await db.transaction(async (tx) => {
+    // update tentativo + audit (già nell'unica tx → atomici)
     await tx
       .update(quizAttempt)
       .set({ score: graded.score, passed, submittedAt: now, lockedUntil, detail: { drawnIds, answers, over } })
@@ -129,9 +132,9 @@ export async function submitQuiz(
       object: `quiz:${att.quizId}`,
       payload: { score: graded.score, over },
     });
-  });
 
-  return { score: graded.score, passed, over };
+    return { score: graded.score, passed, over };
+  });
 }
 
 /** Un quiz risulta superato se esiste almeno un tentativo passato (checkpoint/esame).

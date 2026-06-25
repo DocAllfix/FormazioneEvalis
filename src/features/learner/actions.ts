@@ -27,7 +27,7 @@ export async function getMyCourse(enrollmentId: string) {
 export async function startMyQuiz(enrollmentId: string, quizId: string) {
   const { user } = await requireSession();
   await assertEnrollmentOwnedBy(enrollmentId, user.id);
-  return startQuiz(enrollmentId, quizId);
+  return startQuiz(enrollmentId, quizId, { userId: user.id });
 }
 
 export async function submitMyQuiz(
@@ -36,7 +36,7 @@ export async function submitMyQuiz(
 ) {
   const { user } = await requireSession();
   await assertAttemptOwnedBy(attemptId, user.id);
-  return submitQuiz(attemptId, answers);
+  return submitQuiz(attemptId, answers, { userId: user.id });
 }
 
 export async function requestMyCertificate(enrollmentId: string) {
