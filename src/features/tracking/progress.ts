@@ -8,6 +8,7 @@ import { db } from "@/lib/db";
 import { slide, slideProgress, lesson, module as courseModule } from "@/lib/db/schema";
 import { heartbeat } from "@/lib/db/schema";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
+import { withTenant, type TenantCtx } from "@/lib/db/tenant";
 
 // Executor: db globale OPPURE una transazione (per ereditare le GUC di tenant da withTenant).
 type DbOrTx = typeof db | Parameters<Parameters<typeof db.transaction>[0]>[0];
@@ -52,61 +53,65 @@ export async function recordHeartbeat(params: {
   playing: boolean;
   audioCompleted?: boolean;
   nowMs?: number; // iniettabile per i test; default = ora
+  ctx?: TenantCtx; // identità tenant (dal route: { userId }); assente nei test → bypass
 }) {
   const { enrollmentId, slideId, position, focus, playing } = params;
   const nowMs = params.nowMs ?? Date.now();
   const now = new Date(nowMs);
 
-  const [sl] = await db
-    .select({ audioSeconds: slide.audioSeconds, lessonId: slide.lessonId })
-    .from(slide)
-    .where(eq(slide.id, slideId))
-    .limit(1);
-  if (!sl) throw new Error("Slide inesistente.");
+  // L'INTERO heartbeat gira in un'unica transazione sotto le GUC di tenant: la lettura
+  // dell'esistente, il ping grezzo e la transizione a completata (progress + audit) sono
+  // atomici. La contabilità server-authoritative dei secondi resta identica.
+  return withTenant(params.ctx ?? {}, async (tx) => {
+    const [sl] = await tx
+      .select({ audioSeconds: slide.audioSeconds, lessonId: slide.lessonId })
+      .from(slide)
+      .where(eq(slide.id, slideId))
+      .limit(1);
+    if (!sl) throw new Error("Slide inesistente.");
 
-  const [prev] = await db
-    .select({ ts: heartbeat.ts, position: heartbeat.position, focus: heartbeat.focus })
-    .from(heartbeat)
-    .where(and(eq(heartbeat.enrollmentId, enrollmentId), eq(heartbeat.slideId, slideId)))
-    .orderBy(desc(heartbeat.ts))
-    .limit(1);
+    const [prev] = await tx
+      .select({ ts: heartbeat.ts, position: heartbeat.position, focus: heartbeat.focus })
+      .from(heartbeat)
+      .where(and(eq(heartbeat.enrollmentId, enrollmentId), eq(heartbeat.slideId, slideId)))
+      .orderBy(desc(heartbeat.ts))
+      .limit(1);
 
-  const credit = creditableSeconds({
-    prevTsMs: prev ? prev.ts.getTime() : null,
-    prevFocus: prev ? prev.focus : null,
-    prevPosition: prev ? prev.position : null,
-    nowMs,
-    position,
-    focus,
-    playing,
-    audioCompleted: params.audioCompleted,
-  });
+    const credit = creditableSeconds({
+      prevTsMs: prev ? prev.ts.getTime() : null,
+      prevFocus: prev ? prev.focus : null,
+      prevPosition: prev ? prev.position : null,
+      nowMs,
+      position,
+      focus,
+      playing,
+      audioCompleted: params.audioCompleted,
+    });
 
-  // audit grezzo del ping
-  await db.insert(heartbeat).values({ enrollmentId, lessonId: sl.lessonId, slideId, position, focus, ts: now });
+    // audit grezzo del ping
+    await tx.insert(heartbeat).values({ enrollmentId, lessonId: sl.lessonId, slideId, position, focus, ts: now });
 
-  const [existing] = await db
-    .select()
-    .from(slideProgress)
-    .where(and(eq(slideProgress.enrollmentId, enrollmentId), eq(slideProgress.slideId, slideId)))
-    .limit(1);
+    const [existing] = await tx
+      .select()
+      .from(slideProgress)
+      .where(and(eq(slideProgress.enrollmentId, enrollmentId), eq(slideProgress.slideId, slideId)))
+      .limit(1);
 
-  const audioCompleted = (existing?.audioCompleted ?? false) || (params.audioCompleted ?? false);
-  const effectiveSeconds = (existing?.effectiveSeconds ?? 0) + credit;
-  // Completa quando la clip è stata vista FINO IN FONDO (audioCompleted: il gate
-  // impedisce di saltare avanti) E il tempo EFFETTIVO accreditato copre ≥ MIN_WATCH_RATIO
-  // della durata. L'accredito dell'ultimo intervallo (vedi creditableSeconds) porta una
-  // visione onesta vicino al 100%, lasciando margine sopra la soglia; un completamento
-  // istantaneo avrebbe 0s effettivi e resta bloccato.
-  const requiredSeconds = Math.max(3, Math.floor(sl.audioSeconds * MIN_WATCH_RATIO));
-  const completed = audioCompleted && effectiveSeconds >= requiredSeconds;
-  const completedAt = completed ? existing?.completedAt ?? now : existing?.completedAt ?? null;
-  const justCompleted = completed && !existing?.completedAt;
-  const setValues = { effectiveSeconds, audioCompleted, completedAt, updatedAt: now };
+    const audioCompleted = (existing?.audioCompleted ?? false) || (params.audioCompleted ?? false);
+    const effectiveSeconds = (existing?.effectiveSeconds ?? 0) + credit;
+    // Completa quando la clip è stata vista FINO IN FONDO (audioCompleted: il gate
+    // impedisce di saltare avanti) E il tempo EFFETTIVO accreditato copre ≥ MIN_WATCH_RATIO
+    // della durata. L'accredito dell'ultimo intervallo (vedi creditableSeconds) porta una
+    // visione onesta vicino al 100%, lasciando margine sopra la soglia; un completamento
+    // istantaneo avrebbe 0s effettivi e resta bloccato.
+    const requiredSeconds = Math.max(3, Math.floor(sl.audioSeconds * MIN_WATCH_RATIO));
+    const completed = audioCompleted && effectiveSeconds >= requiredSeconds;
+    const completedAt = completed ? existing?.completedAt ?? now : existing?.completedAt ?? null;
+    const justCompleted = completed && !existing?.completedAt;
+    const setValues = { effectiveSeconds, audioCompleted, completedAt, updatedAt: now };
 
-  if (justCompleted) {
-    // transizione a completata: progress + evento audit atomici
-    await db.transaction(async (tx) => {
+    if (justCompleted) {
+      // transizione a completata: progress + evento audit (già nell'unica tx → atomici)
       if (existing) {
         await tx.update(slideProgress).set(setValues).where(eq(slideProgress.id, existing.id));
       } else {
@@ -120,14 +125,14 @@ export async function recordHeartbeat(params: {
         object: `slide:${slideId}`,
         payload: { effectiveSeconds, audioSeconds: sl.audioSeconds },
       });
-    });
-  } else if (existing) {
-    await db.update(slideProgress).set(setValues).where(eq(slideProgress.id, existing.id));
-  } else {
-    await db.insert(slideProgress).values({ enrollmentId, slideId, ...setValues });
-  }
+    } else if (existing) {
+      await tx.update(slideProgress).set(setValues).where(eq(slideProgress.id, existing.id));
+    } else {
+      await tx.insert(slideProgress).values({ enrollmentId, slideId, ...setValues });
+    }
 
-  return { effectiveSeconds, audioCompleted, completed };
+    return { effectiveSeconds, audioCompleted, completed };
+  });
 }
 
 export async function isSlideCompleted(enrollmentId: string, slideId: string): Promise<boolean> {

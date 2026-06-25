@@ -29,6 +29,6 @@ export async function POST(req: Request) {
     return new Response("forbidden", { status: 403 });
   }
 
-  const result = await recordHeartbeat(body);
+  const result = await recordHeartbeat({ ...body, ctx: { userId: ctx.user.id } });
   return Response.json(result);
 }
