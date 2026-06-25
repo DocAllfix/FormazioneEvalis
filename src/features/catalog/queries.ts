@@ -3,7 +3,8 @@
 
 import { and, asc, count, eq, isNull } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { course, enrollment, lesson, module as courseModule, slide } from "@/lib/db/schema";
+import { course, enrollment, lesson, module as courseModule, quiz, slide } from "@/lib/db/schema";
+import type { CourseDetails } from "@/features/courses/course-details";
 
 export type CatalogCourse = {
   id: string;
@@ -14,6 +15,7 @@ export type CatalogCourse = {
   category: string | null;
   priceCents: number | null;
   currency: string | null;
+  imageUrl: string | null;
   purchasable: boolean;
 };
 
@@ -29,6 +31,7 @@ export async function listPublishedCourses(): Promise<CatalogCourse[]> {
       category: course.category,
       priceCents: course.priceCents,
       currency: course.currency,
+      imageUrl: course.imageUrl,
       stripePriceId: course.stripePriceId,
     })
     .from(course)
@@ -44,11 +47,27 @@ export async function listPublishedCourses(): Promise<CatalogCourse[]> {
     category: r.category,
     priceCents: r.priceCents,
     currency: r.currency,
+    imageUrl: r.imageUrl,
     purchasable: !!r.stripePriceId,
   }));
 }
 
-export type PublicCourse = CatalogCourse & { modules: number; lessons: number; slides: number };
+export type CourseProgramModule = { title: string; lessons: string[] };
+export type CourseExam = {
+  passThreshold: number;
+  questionsToDraw: number;
+  maxAttempts: number | null;
+  timeLimitSeconds: number;
+} | null;
+
+export type PublicCourse = CatalogCourse & {
+  details: CourseDetails | null;
+  modules: number;
+  lessons: number;
+  slides: number;
+  program: CourseProgramModule[];
+  exam: CourseExam;
+};
 
 /** Dettaglio pubblico di un corso pubblicato + conteggi struttura. Null se inesistente. */
 export async function getPublicCourse(courseId: string): Promise<PublicCourse | null> {
@@ -62,6 +81,8 @@ export async function getPublicCourse(courseId: string): Promise<PublicCourse | 
       category: course.category,
       priceCents: course.priceCents,
       currency: course.currency,
+      imageUrl: course.imageUrl,
+      details: course.details,
       stripePriceId: course.stripePriceId,
       status: course.status,
     })
@@ -70,18 +91,40 @@ export async function getPublicCourse(courseId: string): Promise<PublicCourse | 
     .limit(1);
   if (!c || c.status !== "published") return null;
 
-  const [mods] = await db.select({ n: count() }).from(courseModule).where(eq(courseModule.courseId, courseId));
-  const [les] = await db
-    .select({ n: count() })
+  // Struttura per i conteggi + il PROGRAMMA (moduli → lezioni).
+  const mods = await db
+    .select({ id: courseModule.id, title: courseModule.title })
+    .from(courseModule)
+    .where(eq(courseModule.courseId, courseId))
+    .orderBy(asc(courseModule.position));
+  const less = await db
+    .select({ moduleId: lesson.moduleId, title: lesson.title })
     .from(lesson)
     .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
-    .where(eq(courseModule.courseId, courseId));
+    .where(eq(courseModule.courseId, courseId))
+    .orderBy(asc(lesson.position));
   const [sl] = await db
     .select({ n: count() })
     .from(slide)
     .innerJoin(lesson, eq(lesson.id, slide.lessonId))
     .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
     .where(eq(courseModule.courseId, courseId));
+
+  const program: CourseProgramModule[] = mods.map((m) => ({
+    title: m.title,
+    lessons: less.filter((l) => l.moduleId === m.id).map((l) => l.title),
+  }));
+
+  const [finalQuiz] = await db
+    .select({
+      passThreshold: quiz.passThreshold,
+      questionsToDraw: quiz.questionsToDraw,
+      maxAttempts: quiz.maxAttempts,
+      timeLimitSeconds: quiz.timeLimitSeconds,
+    })
+    .from(quiz)
+    .where(and(eq(quiz.courseId, courseId), eq(quiz.type, "final")))
+    .limit(1);
 
   return {
     id: c.id,
@@ -92,10 +135,14 @@ export async function getPublicCourse(courseId: string): Promise<PublicCourse | 
     category: c.category,
     priceCents: c.priceCents,
     currency: c.currency,
+    imageUrl: c.imageUrl,
+    details: c.details ?? null,
     purchasable: !!c.stripePriceId,
-    modules: Number(mods.n),
-    lessons: Number(les.n),
+    modules: mods.length,
+    lessons: less.length,
     slides: Number(sl.n),
+    program,
+    exam: finalQuiz ?? null,
   };
 }
 

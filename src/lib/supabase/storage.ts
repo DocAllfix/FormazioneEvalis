@@ -49,6 +49,31 @@ export async function deleteCertificatePdf(path: string): Promise<void> {
   await c.storage.from(BUCKET).remove([path]);
 }
 
+// --- Immagini corso (bucket PUBBLICO: non sono PII, servite via URL pubblico) ---
+const IMAGE_BUCKET = "course-images";
+
+async function ensurePublicBucket(c: SupabaseClient): Promise<void> {
+  const { data } = await c.storage.getBucket(IMAGE_BUCKET);
+  if (!data) {
+    const { error } = await c.storage.createBucket(IMAGE_BUCKET, { public: true });
+    if (error && !/already exists/i.test(error.message)) throw error;
+  }
+}
+
+/** Carica l'immagine di un corso e ritorna l'URL pubblico stabile. */
+export async function uploadCourseImage(courseId: string, bytes: Uint8Array, ext: string): Promise<string> {
+  const c = storageClient();
+  await ensurePublicBucket(c);
+  const safeExt = /^(png|webp|jpg|jpeg)$/i.test(ext) ? ext.toLowerCase() : "jpg";
+  const contentType = safeExt === "png" ? "image/png" : safeExt === "webp" ? "image/webp" : "image/jpeg";
+  const path = `${courseId}.${safeExt}`;
+  const { error } = await c.storage
+    .from(IMAGE_BUCKET)
+    .upload(path, Buffer.from(bytes), { contentType, upsert: true });
+  if (error) throw error;
+  return c.storage.from(IMAGE_BUCKET).getPublicUrl(path).data.publicUrl;
+}
+
 export function isStorageConfigured(): boolean {
   return !!(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY);
 }

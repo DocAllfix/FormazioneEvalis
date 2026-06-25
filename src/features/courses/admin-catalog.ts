@@ -6,6 +6,8 @@ import { db } from "@/lib/db";
 import { course, module as courseModule, lesson, slide } from "@/lib/db/schema";
 import { requirePlatformAdmin } from "@/features/auth/guards";
 
+import type { CourseDetails } from "@/features/courses/course-details";
+
 export type AdminCourse = {
   id: string;
   title: string;
@@ -15,6 +17,8 @@ export type AdminCourse = {
   category: string | null;
   priceCents: number | null;
   currency: string | null;
+  imageUrl: string | null;
+  details: CourseDetails | null;
   purchasable: boolean;
   slides: number;
 };
@@ -32,6 +36,8 @@ export async function listGlobalCoursesForAdmin(): Promise<AdminCourse[]> {
       category: course.category,
       priceCents: course.priceCents,
       currency: course.currency,
+      imageUrl: course.imageUrl,
+      details: course.details,
       stripePriceId: course.stripePriceId,
     })
     .from(course)
@@ -55,6 +61,8 @@ export async function listGlobalCoursesForAdmin(): Promise<AdminCourse[]> {
     category: c.category,
     priceCents: c.priceCents,
     currency: c.currency,
+    imageUrl: c.imageUrl,
+    details: c.details ?? null,
     purchasable: !!c.stripePriceId,
     slides: slidesByCourse.get(c.id) ?? 0,
   }));
