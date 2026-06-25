@@ -85,6 +85,8 @@ describe("RLS — isolamento tenant (ruolo app_rls)", () => {
     });
 
     // Valvola VERIFICA pubblica (app.verify_uuid) → SOLO quel certificato, niente enrollment.
+    // (La verifica pubblica reale legge via funzione SECURITY DEFINER verify_certificate,
+    // migration 0014: il join enrollment NON passa dalla valvola, niente ricorsione di policy.)
     await db.transaction(async (tx) => {
       await tx.execute(sql`SET LOCAL ROLE app_rls`);
       await tx.execute(sql`SELECT set_config('app.verify_uuid', ${cB.verifyUuid}, true)`);
@@ -94,6 +96,16 @@ describe("RLS — isolamento tenant (ruolo app_rls)", () => {
       expect(cids).not.toContain(cA.id); // non gli altri
       const enr = (await tx.execute(sql`SELECT count(*)::int AS n FROM enrollment`)) as unknown as { n: number }[];
       expect(enr[0].n).toBe(0); // la valvola verify NON apre gli enrollment
+    });
+
+    // Funzione SECURITY DEFINER: la verifica pubblica per-uuid ritorna ESATTAMENTE il cert
+    // di quell'uuid (anche come app_rls), col join enrollment/user/course bypassato.
+    await db.transaction(async (tx) => {
+      await tx.execute(sql`SET LOCAL ROLE app_rls`);
+      const r = (await tx.execute(
+        sql`SELECT status, learner_name FROM verify_certificate(${cB.verifyUuid}::uuid)`,
+      )) as unknown as { status: string; learner_name: string }[];
+      expect(r.length).toBe(1); // trova il certificato per uuid
     });
   });
 });

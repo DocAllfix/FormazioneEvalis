@@ -2,7 +2,7 @@
 // raggiungimento dei requisiti, APPROVAZIONE UMANA dello staff (mai automatica) che
 // genera PDF+QR, archivia e emette, verifica pubblica, revoca. Eventi nella catena audit.
 
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { certificate, enrollment, course, user } from "@/lib/db/schema";
 import { isReadyForCertificate } from "./readiness";
@@ -205,28 +205,27 @@ export async function revokeCertificate(certificateId: string, reason: string) {
 
 /** Verifica pubblica (per token): dati minimi d'attestazione + validità. */
 export async function getCertificateByVerifyUuid(verifyUuid: string) {
-  const [row] = await db
-    .select({
-      status: certificate.status,
-      number: certificate.number,
-      issuedAt: certificate.issuedAt,
-      learnerName: user.name,
-      courseTitle: course.title,
-    })
-    .from(certificate)
-    .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
-    .innerJoin(user, eq(user.id, enrollment.userId))
-    .innerJoin(course, eq(course.id, enrollment.courseId))
-    .where(eq(certificate.verifyUuid, verifyUuid))
-    .limit(1);
+  // Verifica pubblica per-uuid: funzione SECURITY DEFINER (migration 0014) che legge UN solo
+  // certificato bypassando la RLS in modo controllato (l'uuid è un segreto non indovinabile).
+  // Evita la ricorsione tra le policy enrollment↔certificate.
+  const rows = (await db.execute(
+    sql`SELECT status, number, issued_at, learner_name, course_title FROM verify_certificate(${verifyUuid}::uuid)`,
+  )) as unknown as {
+    status: string;
+    number: string | null;
+    issued_at: Date | null;
+    learner_name: string; // user.name notNull
+    course_title: string; // course.title notNull
+  }[];
+  const row = rows[0];
   if (!row) return null;
   return {
     valid: row.status === "issued",
     status: row.status,
     number: row.number,
-    issuedAt: row.issuedAt,
-    learnerName: row.learnerName,
-    courseTitle: row.courseTitle,
+    issuedAt: row.issued_at,
+    learnerName: row.learner_name,
+    courseTitle: row.course_title,
   };
 }
 
