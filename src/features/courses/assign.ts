@@ -7,6 +7,7 @@ import { db } from "@/lib/db";
 import { course, enrollment, member } from "@/lib/db/schema";
 import { requireRole, requireActiveOrg } from "@/features/auth/guards";
 import { appendActivity } from "@/features/audit/log";
+import { withTenant } from "@/lib/db/tenant";
 
 /** Server Action: l'admin/owner dell'org attiva assegna un corso a un dipendente. */
 export async function assignCourse(memberUserId: string, courseId: string) {
@@ -46,7 +47,7 @@ export async function enrollMemberInCourse(params: {
 
   // insert + audit atomici: l'evento `enrolled` si scrive solo se l'enrollment è
   // davvero nuovo (l'idempotenza non deve generare eventi duplicati).
-  await db.transaction(async (tx) => {
+  await withTenant({ orgId }, async (tx) => {
     const inserted = await tx
       .insert(enrollment)
       .values({ organizationId: orgId, userId: memberUserId, courseId, source: "b2b_seat", status: "active" })
