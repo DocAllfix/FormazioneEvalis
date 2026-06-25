@@ -5,6 +5,7 @@ import { and, asc, count, eq, isNull } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { course, enrollment, lesson, module as courseModule, quiz, slide } from "@/lib/db/schema";
 import type { CourseDetails } from "@/features/courses/course-details";
+import { withTenant } from "@/lib/db/tenant";
 
 export type CatalogCourse = {
   id: string;
@@ -163,16 +164,18 @@ export async function getPublicCourseBySlug(slug: string): Promise<PublicCourse 
 
 /** L'iscrizione attiva dell'utente a un corso, se esiste (per lo stato CTA). */
 export async function getMyEnrollmentForCourse(userId: string, courseId: string) {
-  const [e] = await db
-    .select({ id: enrollment.id })
-    .from(enrollment)
-    .where(
-      and(
-        eq(enrollment.userId, userId),
-        eq(enrollment.courseId, courseId),
-        eq(enrollment.status, "active"),
-      ),
-    )
-    .limit(1);
+  const [e] = await withTenant({ userId }, async (tx) =>
+    tx
+      .select({ id: enrollment.id })
+      .from(enrollment)
+      .where(
+        and(
+          eq(enrollment.userId, userId),
+          eq(enrollment.courseId, courseId),
+          eq(enrollment.status, "active"),
+        ),
+      )
+      .limit(1),
+  );
   return e ?? null;
 }

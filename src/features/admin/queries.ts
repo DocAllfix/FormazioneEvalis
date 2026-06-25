@@ -7,6 +7,7 @@ import { member, user, enrollment, certificate, invitation, organization } from 
 import { countMembers, getSeatLimit } from "@/features/billing/seats";
 import { parseOrgMetadata } from "@/features/auth/org-metadata";
 import { requireCompanyContext } from "@/features/admin/context";
+import { withTenant } from "@/lib/db/tenant";
 
 export type OrgOverview = {
   orgId: string;
@@ -58,20 +59,23 @@ export async function getOrgMembersWithDetails(): Promise<OrgMember[]> {
     .innerJoin(user, eq(user.id, member.userId))
     .where(eq(member.organizationId, orgId));
 
-  // Conteggi aggregati per utente (2 query con GROUP BY, non N+1).
-  const assignedRows = await db
-    .select({ userId: enrollment.userId, n: count() })
-    .from(enrollment)
-    .where(eq(enrollment.organizationId, orgId))
-    .groupBy(enrollment.userId);
+  // Conteggi aggregati per utente (2 query con GROUP BY, non N+1) sotto le GUC di tenant
+  // dell'azienda (scope org). Sequenziali nell'unica transazione.
+  const { assignedRows, certRows } = await withTenant({ orgId }, async (tx) => {
+    const assignedRows = await tx
+      .select({ userId: enrollment.userId, n: count() })
+      .from(enrollment)
+      .where(eq(enrollment.organizationId, orgId))
+      .groupBy(enrollment.userId);
+    const certRows = await tx
+      .select({ userId: enrollment.userId, n: count() })
+      .from(certificate)
+      .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
+      .where(and(eq(enrollment.organizationId, orgId), eq(certificate.status, "issued")))
+      .groupBy(enrollment.userId);
+    return { assignedRows, certRows };
+  });
   const assigned = new Map(assignedRows.map((r) => [r.userId, Number(r.n)]));
-
-  const certRows = await db
-    .select({ userId: enrollment.userId, n: count() })
-    .from(certificate)
-    .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
-    .where(and(eq(enrollment.organizationId, orgId), eq(certificate.status, "issued")))
-    .groupBy(enrollment.userId);
   const certified = new Map(certRows.map((r) => [r.userId, Number(r.n)]));
 
   return members.map((m) => ({
