@@ -11,6 +11,7 @@ import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log
 import { uploadCertificatePdf, signedCertificateUrl } from "@/lib/supabase/storage";
 import { sendCertificateIssuedEmail } from "@/lib/email/resend";
 import { requirePlatformAdmin, requireSession, isPlatformStaffEmail } from "@/features/auth/guards";
+import { withTenant, type TenantCtx } from "@/lib/db/tenant";
 
 function makeCertificateNumber(date: Date, verifyUuid: string): string {
   return `EVALIS-${date.getFullYear()}-${verifyUuid.slice(0, 8).toUpperCase()}`;
@@ -28,18 +29,19 @@ function verifyUrlFor(verifyUuid: string): string {
  */
 export async function ensureCertificateRecord(
   enrollmentId: string,
+  ctx: TenantCtx = {},
 ): Promise<{ id: string; status: string } | null> {
-  const readiness = await isReadyForCertificate(enrollmentId);
+  const readiness = await isReadyForCertificate(enrollmentId, ctx);
   if (!readiness.ready) return null;
 
-  const [existing] = await db
-    .select({ id: certificate.id, status: certificate.status })
-    .from(certificate)
-    .where(eq(certificate.enrollmentId, enrollmentId))
-    .limit(1);
-  if (existing) return existing;
+  return withTenant(ctx, async (tx) => {
+    const [existing] = await tx
+      .select({ id: certificate.id, status: certificate.status })
+      .from(certificate)
+      .where(eq(certificate.enrollmentId, enrollmentId))
+      .limit(1);
+    if (existing) return existing;
 
-  return db.transaction(async (tx) => {
     const inserted = await tx
       .insert(certificate)
       .values({ enrollmentId, status: "ready_for_review" })
@@ -67,46 +69,56 @@ export async function ensureCertificateRecord(
 /** Coda di revisione per lo staff piattaforma. */
 export async function listPendingCertificates() {
   await requirePlatformAdmin();
-  return db
-    .select({
-      id: certificate.id,
-      enrollmentId: certificate.enrollmentId,
-      learnerName: user.name,
-      learnerEmail: user.email,
-      courseTitle: course.title,
-      createdAt: certificate.createdAt,
-    })
-    .from(certificate)
-    .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
-    .innerJoin(user, eq(user.id, enrollment.userId))
-    .innerJoin(course, eq(course.id, enrollment.courseId))
-    .where(eq(certificate.status, "ready_for_review"));
+  return withTenant({ platformAdmin: true }, async (tx) =>
+    tx
+      .select({
+        id: certificate.id,
+        enrollmentId: certificate.enrollmentId,
+        learnerName: user.name,
+        learnerEmail: user.email,
+        courseTitle: course.title,
+        createdAt: certificate.createdAt,
+      })
+      .from(certificate)
+      .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
+      .innerJoin(user, eq(user.id, enrollment.userId))
+      .innerJoin(course, eq(course.id, enrollment.courseId))
+      .where(eq(certificate.status, "ready_for_review")),
+  );
 }
 
 /** Logica di approvazione+emissione (testabile, senza guard). */
-export async function approveCertificateById(certificateId: string, reviewerUserId: string) {
-  const [cert] = await db.select().from(certificate).where(eq(certificate.id, certificateId)).limit(1);
+export async function approveCertificateById(
+  certificateId: string,
+  reviewerUserId: string,
+  ctx: TenantCtx = {},
+) {
+  const [cert] = await withTenant(ctx, async (tx) =>
+    tx.select().from(certificate).where(eq(certificate.id, certificateId)).limit(1),
+  );
   if (!cert) throw new Error("Certificato inesistente.");
   if (cert.status === "issued") return { id: cert.id, status: "issued" as const, number: cert.number };
   if (cert.status === "revoked") throw new Error("Certificato revocato: non emettibile.");
 
   // ri-controllo dei requisiti al momento dell'emissione (difesa)
-  const readiness = await isReadyForCertificate(cert.enrollmentId);
+  const readiness = await isReadyForCertificate(cert.enrollmentId, ctx);
   if (!readiness.ready) throw new Error(`Requisiti non soddisfatti: ${readiness.reasons.join("; ")}`);
 
-  const [info] = await db
-    .select({
-      learnerName: user.name,
-      learnerEmail: user.email,
-      courseTitle: course.title,
-      organizationId: enrollment.organizationId,
-      userId: enrollment.userId,
-    })
-    .from(enrollment)
-    .innerJoin(user, eq(user.id, enrollment.userId))
-    .innerJoin(course, eq(course.id, enrollment.courseId))
-    .where(eq(enrollment.id, cert.enrollmentId))
-    .limit(1);
+  const [info] = await withTenant(ctx, async (tx) =>
+    tx
+      .select({
+        learnerName: user.name,
+        learnerEmail: user.email,
+        courseTitle: course.title,
+        organizationId: enrollment.organizationId,
+        userId: enrollment.userId,
+      })
+      .from(enrollment)
+      .innerJoin(user, eq(user.id, enrollment.userId))
+      .innerJoin(course, eq(course.id, enrollment.courseId))
+      .where(eq(enrollment.id, cert.enrollmentId))
+      .limit(1),
+  );
   if (!info) throw new Error("Dati enrollment incompleti.");
 
   const now = new Date();
@@ -122,7 +134,7 @@ export async function approveCertificateById(certificateId: string, reviewerUser
   });
   const pdfPath = await uploadCertificatePdf(cert.verifyUuid, pdf);
 
-  await db.transaction(async (tx) => {
+  await withTenant(ctx, async (tx) => {
     await tx
       .update(certificate)
       .set({ status: "issued", number, pdfPath, approvedBy: reviewerUserId, approvedAt: now, issuedAt: now, updatedAt: now })
@@ -150,20 +162,25 @@ export async function approveCertificateById(certificateId: string, reviewerUser
 /** Server Action: approvazione (solo staff piattaforma). */
 export async function approveCertificate(certificateId: string) {
   const ctx = await requirePlatformAdmin();
-  return approveCertificateById(certificateId, ctx.user.id);
+  return approveCertificateById(certificateId, ctx.user.id, { platformAdmin: true });
 }
 
 /** Logica di revoca (testabile, senza guard). */
-export async function revokeCertificateById(certificateId: string, _reviewerUserId: string, reason: string) {
-  const [cert] = await db
-    .select({ id: certificate.id, enrollmentId: certificate.enrollmentId })
-    .from(certificate)
-    .where(eq(certificate.id, certificateId))
-    .limit(1);
-  if (!cert) throw new Error("Certificato inesistente.");
-
+export async function revokeCertificateById(
+  certificateId: string,
+  _reviewerUserId: string,
+  reason: string,
+  ctx: TenantCtx = {},
+) {
   const now = new Date();
-  await db.transaction(async (tx) => {
+  return withTenant(ctx, async (tx) => {
+    const [cert] = await tx
+      .select({ id: certificate.id, enrollmentId: certificate.enrollmentId })
+      .from(certificate)
+      .where(eq(certificate.id, certificateId))
+      .limit(1);
+    if (!cert) throw new Error("Certificato inesistente.");
+
     await tx
       .update(certificate)
       .set({ status: "revoked", revokedAt: now, updatedAt: now })
@@ -176,14 +193,14 @@ export async function revokeCertificateById(certificateId: string, _reviewerUser
       object: `certificate:${certificateId}`,
       payload: { reason },
     });
+    return { id: certificateId, status: "revoked" as const };
   });
-  return { id: certificateId, status: "revoked" as const };
 }
 
 /** Server Action: revoca (solo staff piattaforma). */
 export async function revokeCertificate(certificateId: string, reason: string) {
   const ctx = await requirePlatformAdmin();
-  return revokeCertificateById(certificateId, ctx.user.id, reason);
+  return revokeCertificateById(certificateId, ctx.user.id, reason, { platformAdmin: true });
 }
 
 /** Verifica pubblica (per token): dati minimi d'attestazione + validità. */
@@ -216,14 +233,20 @@ export async function getCertificateByVerifyUuid(verifyUuid: string) {
 /** Download protetto del PDF: solo il proprietario dell'enrollment o lo staff. */
 export async function getCertificateDownloadUrl(certificateId: string): Promise<string> {
   const ctx = await requireSession();
-  const [cert] = await db
-    .select({ pdfPath: certificate.pdfPath, ownerId: enrollment.userId })
-    .from(certificate)
-    .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
-    .where(eq(certificate.id, certificateId))
-    .limit(1);
+  // staff vede tutti (valvola), altrimenti scope al proprio userId: in entrambi i casi
+  // la lettura è gated dalla RLS, e il controllo ownership/staff sotto resta la barriera.
+  const staff = isPlatformStaffEmail(ctx.user.email);
+  const tenantCtx: TenantCtx = staff ? { platformAdmin: true } : { userId: ctx.user.id };
+  const [cert] = await withTenant(tenantCtx, async (tx) =>
+    tx
+      .select({ pdfPath: certificate.pdfPath, ownerId: enrollment.userId })
+      .from(certificate)
+      .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
+      .where(eq(certificate.id, certificateId))
+      .limit(1),
+  );
   if (!cert || !cert.pdfPath) throw new Error("Certificato non disponibile.");
   const isOwner = cert.ownerId === ctx.user.id;
-  if (!isOwner && !isPlatformStaffEmail(ctx.user.email)) throw new Error("Permesso negato.");
+  if (!isOwner && !staff) throw new Error("Permesso negato.");
   return signedCertificateUrl(cert.pdfPath);
 }

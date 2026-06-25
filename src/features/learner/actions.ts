@@ -42,7 +42,7 @@ export async function submitMyQuiz(
 export async function requestMyCertificate(enrollmentId: string) {
   const { user } = await requireSession();
   await assertEnrollmentOwnedBy(enrollmentId, user.id);
-  return ensureCertificateRecord(enrollmentId);
+  return ensureCertificateRecord(enrollmentId, { userId: user.id });
 }
 
 /** URL firmato (a vita breve) della clip avatar di una slide del MIO corso. */

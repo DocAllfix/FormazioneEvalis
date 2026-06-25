@@ -5,11 +5,13 @@ import { and, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { organization, enrollment } from "@/lib/db/schema";
 import { appendActivity } from "@/features/audit/log";
+import { withTenant } from "@/lib/db/tenant";
 
 type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
+type DbOrTx = typeof db | Tx;
 
-async function orgIdByCustomer(tx: Tx, stripeCustomerId: string): Promise<string | undefined> {
-  const [o] = await tx
+async function orgIdByCustomer(exec: DbOrTx, stripeCustomerId: string): Promise<string | undefined> {
+  const [o] = await exec
     .select({ id: organization.id })
     .from(organization)
     .where(eq(organization.stripeCustomerId, stripeCustomerId))
@@ -17,14 +19,14 @@ async function orgIdByCustomer(tx: Tx, stripeCustomerId: string): Promise<string
   return o?.id;
 }
 
-/** B2C: acquisto corso → enrollment idempotente + audit `purchased`. */
+/** B2C: acquisto corso → enrollment idempotente + audit `purchased`. Scope org (GUC). */
 export async function provisionCoursePurchase(params: {
   userId: string;
   courseId: string;
   orgId: string;
 }): Promise<{ enrolled: boolean }> {
   const { userId, courseId, orgId } = params;
-  return db.transaction(async (tx) => {
+  return withTenant({ orgId }, async (tx) => {
     const inserted = await tx
       .insert(enrollment)
       .values({ organizationId: orgId, userId, courseId, source: "b2c_purchase", status: "active" })
@@ -74,9 +76,9 @@ export async function applySubscriptionState(params: {
 export async function revokeOrgSubscription(
   stripeCustomerId: string,
 ): Promise<{ revoked: boolean; orgId?: string }> {
-  return db.transaction(async (tx) => {
-    const orgId = await orgIdByCustomer(tx, stripeCustomerId);
-    if (!orgId) return { revoked: false };
+  const orgId = await orgIdByCustomer(db, stripeCustomerId);
+  if (!orgId) return { revoked: false };
+  return withTenant({ orgId }, async (tx) => {
     await tx
       .update(organization)
       .set({ subscriptionStatus: "canceled", seats: 0 })
