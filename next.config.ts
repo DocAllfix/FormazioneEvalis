@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { withSentryConfig } from "@sentry/nextjs";
+import bundleAnalyzer from "@next/bundle-analyzer";
 
 const nextConfig: NextConfig = {
   // Configurazione minima. Le opzioni (immagini Cloudflare, headers CSP)
@@ -7,9 +8,12 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 };
 
+// Bundle analyzer: attivo solo con ANALYZE=true (no-op nelle build normali).
+const withBundleAnalyzer = bundleAnalyzer({ enabled: process.env.ANALYZE === "true" });
+
 // Sentry: wrap additivo. Senza DSN/authToken si comporta da no-op (build identica);
 // l'upload delle source map avviene solo se SENTRY_AUTH_TOKEN/ORG/PROJECT sono presenti.
-export default withSentryConfig(nextConfig, {
+export default withSentryConfig(withBundleAnalyzer(nextConfig), {
   org: process.env.SENTRY_ORG,
   project: process.env.SENTRY_PROJECT,
   authToken: process.env.SENTRY_AUTH_TOKEN,
