@@ -3,7 +3,7 @@
 // Sidebar discente. Mostra link condizionali "Area azienda" (se l'utente amministra
 // un'azienda) e "Area staff" (se è staff piattaforma). Struttura dal SidebarShell.
 
-import { Award, BookOpen, Building2, GraduationCap, ShieldCheck } from "lucide-react";
+import { Award, BookOpen, Building2, GraduationCap, LifeBuoy, ShieldCheck } from "lucide-react";
 import { SidebarShell, type NavGroup } from "./sidebar-shell";
 
 export function AppSidebar({
@@ -22,6 +22,7 @@ export function AppSidebar({
         { title: "I miei percorsi", url: "/dashboard", icon: GraduationCap },
         { title: "Catalogo", url: "/corsi", icon: BookOpen },
         { title: "Certificati", url: "/certificati", icon: Award },
+        { title: "Assistenza", url: "/assistenza", icon: LifeBuoy },
       ],
     },
   ];

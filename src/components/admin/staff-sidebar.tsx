@@ -2,7 +2,7 @@
 
 // Sidebar console ADMIN PIATTAFORMA (Evalis): catalogo corsi, certificati, team.
 
-import { Award, BookPlus, LogIn, Users } from "lucide-react";
+import { Award, BookPlus, LifeBuoy, LogIn, Users } from "lucide-react";
 import { SidebarShell, type NavGroup } from "@/components/app/sidebar-shell";
 
 export function StaffSidebar({ user }: { user: { name?: string | null; email: string } }) {
@@ -12,6 +12,7 @@ export function StaffSidebar({ user }: { user: { name?: string | null; email: st
       items: [
         { title: "Corsi", url: "/staff/corsi", icon: BookPlus },
         { title: "Certificati", url: "/staff/certificati", icon: Award },
+        { title: "Ticket", url: "/staff/ticket", icon: LifeBuoy },
         { title: "Team", url: "/staff/team", icon: Users },
       ],
     },
