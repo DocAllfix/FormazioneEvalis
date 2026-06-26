@@ -133,6 +133,7 @@ export function SupportChatWidget({ enabled }: { enabled: boolean }) {
               messages.map((m, i) => (
                 <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                   <div
+                    data-testid={m.role === "assistant" ? "bot-msg" : "user-msg"}
                     className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-sm ${
                       m.role === "user" ? "bg-primary text-white" : "border border-border bg-background text-foreground"
                     }`}

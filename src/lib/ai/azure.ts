@@ -24,6 +24,11 @@ const provider = createOpenAI({
     const headers = new Headers(options?.headers);
     headers.delete("authorization");
     headers.set("api-key", apiKey);
+    // `Connection: close` → niente keep-alive: ogni richiesta apre una connessione fresca,
+    // load-balanced sui backend del Data Zone. Senza, undici pinna la connessione a UN backend
+    // e, se quello non ha ancora sincronizzato il deployment embeddings (propagazione), ritorna
+    // "Unknown model" in modo sostenuto. Vedi diagnosi: 8/15 → 14/15 con questo header.
+    headers.set("connection", "close");
     return fetch(url, { ...options, headers });
   }) as typeof fetch,
 });
@@ -50,9 +55,9 @@ export async function withRetry<T>(fn: () => Promise<T>, tries = 7): Promise<T> 
   throw lastErr;
 }
 
-/** Embedding di una query (con retry). */
-export async function embedQuery(value: string): Promise<number[]> {
-  const { embedding } = await withRetry(() => embed({ model: embeddingModel, value }));
+/** Embedding di una query (con retry). `tries` basso sul path interattivo → degrada in fretta. */
+export async function embedQuery(value: string, tries = 4): Promise<number[]> {
+  const { embedding } = await withRetry(() => embed({ model: embeddingModel, value }), tries);
   return embedding;
 }
 

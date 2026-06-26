@@ -21,7 +21,16 @@ export async function buildSupportChat(messages: ChatMessage[]): Promise<{
   topSimilarity: number;
 }> {
   const lastUser = [...messages].reverse().find((m) => m.role === "user")?.content ?? "";
-  const hits = lastUser ? await findRelevantContent(lastUser, 4, 0.25) : [];
+  // Graceful degradation: se il retrieval fallisce (es. propagazione deployment embeddings),
+  // si procede SENZA contesto → il modello risponde col fallback "apri un ticket". Mai 500.
+  let hits: Awaited<ReturnType<typeof findRelevantContent>> = [];
+  if (lastUser) {
+    try {
+      hits = await findRelevantContent(lastUser, 4, 0.25);
+    } catch (e) {
+      console.error("[chatbot] retrieval fallito, degrado senza contesto:", e instanceof Error ? e.message : e);
+    }
+  }
   const relevant = hits.filter((h) => h.similarity >= RELEVANCE_THRESHOLD);
   const context = relevant.length
     ? relevant.map((h, i) => `[${i + 1}] ${h.title}\n${h.content}`).join("\n\n")

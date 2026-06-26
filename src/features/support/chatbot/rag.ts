@@ -40,8 +40,9 @@ export async function findRelevantContent(
   query: string,
   k = 4,
   minSimilarity = 0.3,
+  embedTries = 4,
 ): Promise<RetrievedChunk[]> {
-  const qVec = await embedQuery(query);
+  const qVec = await embedQuery(query, embedTries);
   const similarity = sql<number>`1 - (${cosineDistance(kbEmbedding.embedding, qVec)})`;
   const rows = await db
     .select({
