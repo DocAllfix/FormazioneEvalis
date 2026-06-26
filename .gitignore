@@ -47,3 +47,9 @@ next-env.d.ts
 /test-results/
 /playwright-report/
 *.png
+
+# ...ma gli asset di brand devono essere versionati e deployati su Vercel
+!src/app/icon.png
+!src/app/apple-icon.png
+!src/app/opengraph-image.png
+!public/brand/monogram.png

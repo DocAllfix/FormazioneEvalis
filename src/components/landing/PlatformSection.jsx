@@ -31,7 +31,7 @@ export default function PlatformSection() {
               </div>
               <div className="flex-1 flex justify-center">
                 <div className="px-4 py-1 rounded-md bg-[#FAFAF7] text-xs text-[#766E66] font-mono">
-                  app.evalis.it/dashboard
+                  evalisacademy.it/dashboard
                 </div>
               </div>
             </div>

@@ -44,13 +44,10 @@ export default function DashboardMockup() {
       <div className="flex flex-1">
         <div className="w-48 bg-white border-r border-[#EAE4DB] p-4 hidden md:flex flex-col shrink-0">
           <div className="flex items-center gap-2 mb-6">
-            <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-white font-body font-bold text-[10px]">
-                FE
-              </span>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/brand/monogram.png" alt="" className="w-7 h-7 object-contain shrink-0" />
             <span className="font-body font-medium text-sm text-near-black">
-              Formazione Evalis
+              Evalis Academy
             </span>
           </div>
           <nav className="space-y-1">

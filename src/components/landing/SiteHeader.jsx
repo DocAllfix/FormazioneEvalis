@@ -50,9 +50,14 @@ export default function SiteHeader() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="font-heading text-lg text-near-black hover:opacity-80 transition-opacity whitespace-nowrap"
+          className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
+          aria-label="Evalis Academy — home"
         >
-          Formazione <span className="text-primary">Evalis</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/monogram.png" alt="" className="h-9 w-9 object-contain" />
+          <span className="font-heading text-lg text-near-black whitespace-nowrap">
+            Evalis <span className="text-primary">Academy</span>
+          </span>
         </Link>
 
         <nav
@@ -154,8 +159,10 @@ export default function SiteHeader() {
           <SheetContent side="right" className="w-72 bg-white p-0">
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between px-5 h-16 border-b border-[#EAE4DB]">
-                <span className="font-heading text-base text-near-black">
-                  Formazione <span className="text-primary">Evalis</span>
+                <span className="flex items-center gap-2 font-heading text-base text-near-black">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/brand/monogram.png" alt="" className="h-7 w-7 object-contain" />
+                  Evalis <span className="text-primary">Academy</span>
                 </span>
                 <SheetClose asChild>
                   <button className="p-2 text-[#5C5347]" aria-label="Chiudi menu">

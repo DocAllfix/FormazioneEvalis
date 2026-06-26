@@ -33,5 +33,11 @@ export function AppSidebar({
   if (isStaff) alt.push({ title: "Area staff", url: "/staff/certificati", icon: ShieldCheck });
   if (alt.length) groups.push({ label: "Gestione", items: alt });
 
-  return <SidebarShell brand={{ initial: "E", name: "Evalis" }} groups={groups} user={user} />;
+  return (
+    <SidebarShell
+      brand={{ initial: "E", name: "Evalis Academy", mark: "/brand/monogram.png" }}
+      groups={groups}
+      user={user}
+    />
+  );
 }

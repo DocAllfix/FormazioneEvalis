@@ -21,5 +21,11 @@ export function StaffSidebar({ user }: { user: { name?: string | null; email: st
       items: [{ title: "Area personale", url: "/dashboard", icon: LogIn }],
     },
   ];
-  return <SidebarShell brand={{ initial: "E", name: "Evalis Admin" }} groups={groups} user={user} />;
+  return (
+    <SidebarShell
+      brand={{ initial: "E", name: "Evalis Admin", mark: "/brand/monogram.png" }}
+      groups={groups}
+      user={user}
+    />
+  );
 }

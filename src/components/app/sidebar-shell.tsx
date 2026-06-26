@@ -38,7 +38,7 @@ export function SidebarShell({
   groups,
   user,
 }: {
-  brand: { initial: string; name: string };
+  brand: { initial: string; name: string; mark?: string };
   groups: NavGroup[];
   user: { name?: string | null; email: string };
 }) {
@@ -56,9 +56,18 @@ export function SidebarShell({
     <Sidebar collapsible="icon">
       <SidebarHeader>
         <div className="flex items-center gap-2 px-1 py-1.5">
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary font-heading text-white">
-            {brand.initial}
-          </span>
+          {brand.mark ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={brand.mark}
+              alt={brand.name}
+              className="h-8 w-8 shrink-0 object-contain"
+            />
+          ) : (
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary font-heading text-white">
+              {brand.initial}
+            </span>
+          )}
           <span className="font-heading text-lg text-near-black group-data-[collapsible=icon]:hidden">
             {brand.name}
           </span>
