@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { getCurrentSession } from "@/lib/auth/server";
 import { getNavContext } from "@/features/admin/context";
+import { needsOnboarding } from "@/features/onboarding/state";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app/app-sidebar";
 import { AppHeader } from "@/components/app/app-header";
@@ -19,6 +20,12 @@ export default async function AppLayout({
   if (!ctx) redirect("/login");
 
   const nav = await getNavContext({ id: ctx.user.id, email: ctx.user.email });
+
+  // Gate onboarding: i discenti al primo accesso vanno al wizard finché non lo completano/saltano.
+  // Lo staff di piattaforma è esente (niente rumore per l'uso interno).
+  if (!nav.isStaff && (await needsOnboarding(ctx.user.id))) {
+    redirect("/onboarding");
+  }
 
   return (
     <SidebarProvider>
