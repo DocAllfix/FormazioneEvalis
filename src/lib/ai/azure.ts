@@ -31,8 +31,9 @@ const provider = createOpenAI({
 export const chatModel = provider.chat(chatDeployment);
 export const embeddingModel = provider.embedding(embedDeployment);
 
-/** Ritenta i transitori (propagazione deployment "Unknown model", 429, 5xx, rete) con backoff. */
-export async function withRetry<T>(fn: () => Promise<T>, tries = 5): Promise<T> {
+/** Ritenta i transitori (propagazione deployment "Unknown model", 429, 5xx, rete) con backoff
+ * esponenziale + JITTER (decorrela i retry sotto burst concorrente). */
+export async function withRetry<T>(fn: () => Promise<T>, tries = 7): Promise<T> {
   let lastErr: unknown;
   for (let i = 0; i < tries; i++) {
     try {
@@ -42,7 +43,8 @@ export async function withRetry<T>(fn: () => Promise<T>, tries = 5): Promise<T> 
       const msg = e instanceof Error ? e.message : String(e);
       const transient = /Unknown model|rate limit|429|temporar|timeout|ECONN|ETIMEDOUT|fetch failed|50[234]/i.test(msg);
       if (!transient || i === tries - 1) throw e;
-      await new Promise((r) => setTimeout(r, 250 * 2 ** i)); // 250,500,1000,2000ms
+      const backoff = 250 * 2 ** i + Math.floor(Math.random() * 250); // jitter
+      await new Promise((r) => setTimeout(r, backoff));
     }
   }
   throw lastErr;
