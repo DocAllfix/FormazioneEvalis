@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Inbox } from "lucide-react";
 import { PageHeader } from "@/components/admin/page-header";
+import { ReindexKbButton } from "@/components/admin/reindex-kb-button";
 import { listStaffQueue, type TicketStatus } from "@/features/support/lifecycle";
 
 export const metadata = { title: "Ticket — Evalis Staff" };
@@ -19,6 +20,7 @@ export default async function StaffTicketPage() {
       <PageHeader
         title="Ticket di assistenza"
         description="Le richieste aperte dai discenti. Rispondi e chiudi quando risolte."
+        actions={<ReindexKbButton />}
       />
 
       {queue.length === 0 ? (
