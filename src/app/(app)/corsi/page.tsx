@@ -15,7 +15,9 @@ export default async function CorsiPage() {
           Scegli una certificazione, preparati online e ottieni un certificato verificabile.
         </p>
       </div>
-      <CatalogBrowser courses={courses} />
+      <div data-tour="catalog">
+        <CatalogBrowser courses={courses} />
+      </div>
     </div>
   );
 }

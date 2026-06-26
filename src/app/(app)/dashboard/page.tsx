@@ -26,7 +26,7 @@ export default async function DashboardPage() {
         <p className="mt-1 text-muted-foreground">Riprendi da dove avevi lasciato.</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div data-tour="dashboard-stats" className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         {[
           { label: "Percorsi attivi", value: enrollments.length, icon: BookOpen },
           { label: "In corso", value: inCorso, icon: GraduationCap },

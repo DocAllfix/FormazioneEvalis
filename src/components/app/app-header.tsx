@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Separator } from "@/components/ui/separator";
+import { HelpButton } from "@/components/app/help-button";
 
 const titles: Record<string, string> = {
   "/dashboard": "I miei percorsi",
@@ -18,6 +19,7 @@ export function AppHeader() {
       <SidebarTrigger className="-ml-1" />
       <Separator orientation="vertical" className="mr-1 h-4" />
       <span className="text-sm font-medium text-near-black">{title}</span>
+      <HelpButton />
     </header>
   );
 }

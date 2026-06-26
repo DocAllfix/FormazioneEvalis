@@ -55,7 +55,7 @@ export function SidebarShell({
   }
 
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" data-tour="app-sidebar">
       <SidebarHeader>
         <div className="flex items-center gap-2 px-1 py-1.5">
           {brand.mark ? (
