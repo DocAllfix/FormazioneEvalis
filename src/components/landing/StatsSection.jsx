@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
+import { useInView } from "motion/react";
 
 const stats = [
   { value: 15, suffix: "+", label: "Corsi" },

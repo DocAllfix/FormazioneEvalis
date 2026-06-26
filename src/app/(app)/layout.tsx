@@ -4,7 +4,7 @@ import { getNavContext } from "@/features/admin/context";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app/app-sidebar";
 import { AppHeader } from "@/components/app/app-header";
-import { SupportChatWidget } from "@/components/support/chat/support-chat-widget";
+import { LazySupportChat } from "@/components/support/chat/lazy-support-chat";
 import { azureConfigured } from "@/lib/ai/azure";
 
 // Shell discente con sidebar (adattata da dashboard-starter). Server Component:
@@ -31,7 +31,7 @@ export default async function AppLayout({
         <AppHeader />
         <div className="flex flex-1 flex-col p-4 md:p-6">{children}</div>
       </SidebarInset>
-      <SupportChatWidget enabled={azureConfigured} />
+      <LazySupportChat enabled={azureConfigured} />
     </SidebarProvider>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import { QrCode, Search, ShieldCheck, ClipboardCheck, BarChart3 } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
