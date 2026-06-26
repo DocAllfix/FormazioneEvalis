@@ -4,7 +4,9 @@
 // gruppi nav configurabili, eventuale gruppo "cambia area", footer utente con logout.
 // Una sola struttura → niente duplicazione tra le shell. Auth = better-auth.
 
-import Link from "next/link";
+// Link di next-view-transitions: anima il cambio sezione (crossfade nativo del browser,
+// fallback istantaneo dove l'API non c'è). Drop-in di next/link.
+import { Link } from "next-view-transitions";
 import { usePathname, useRouter } from "next/navigation";
 import { ChevronsUpDown, LogOut, User, type LucideIcon } from "lucide-react";
 import { signOut } from "@/lib/auth/client";

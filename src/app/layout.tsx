@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import { ViewTransitions } from "next-view-transitions";
 import { JsonLd } from "@/components/seo/json-ld";
 
 const APP_URL = (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
@@ -42,11 +43,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="it" className={`${dmSans.variable} ${dmSerif.variable}`}>
-      <body>
-        <JsonLd data={orgLd} />
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="it" className={`${dmSans.variable} ${dmSerif.variable}`}>
+        <body>
+          <JsonLd data={orgLd} />
+          {children}
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
