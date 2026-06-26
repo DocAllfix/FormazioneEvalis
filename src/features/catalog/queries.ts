@@ -2,6 +2,7 @@
 // il catalogo è pubblico; l'acquisto/iscrizione richiede sessione (gate nelle azioni).
 
 import { and, asc, count, eq, isNull } from "drizzle-orm";
+import { unstable_cache } from "next/cache";
 import { db } from "@/lib/db";
 import { course, enrollment, lesson, module as courseModule, quiz, slide } from "@/lib/db/schema";
 import type { CourseDetails } from "@/features/courses/course-details";
@@ -22,7 +23,7 @@ export type CatalogCourse = {
 };
 
 /** Corsi globali pubblicati (catalogo pubblico B2C). */
-export async function listPublishedCourses(): Promise<CatalogCourse[]> {
+async function _listPublishedCourses(): Promise<CatalogCourse[]> {
   const rows = await db
     .select({
       id: course.id,
@@ -56,6 +57,12 @@ export async function listPublishedCourses(): Promise<CatalogCourse[]> {
   }));
 }
 
+/** Catalogo pubblico cachato (dati GLOBALI, nessun dato per-utente). Revalida ogni 60s. */
+export const listPublishedCourses = unstable_cache(_listPublishedCourses, ["catalog:published"], {
+  revalidate: 60,
+  tags: ["catalog"],
+});
+
 export type CourseProgramModule = { title: string; lessons: string[] };
 export type CourseExam = {
   passThreshold: number;
@@ -74,7 +81,7 @@ export type PublicCourse = CatalogCourse & {
 };
 
 /** Dettaglio pubblico di un corso pubblicato + conteggi struttura. Null se inesistente. */
-export async function getPublicCourse(courseId: string): Promise<PublicCourse | null> {
+async function _getPublicCourse(courseId: string): Promise<PublicCourse | null> {
   const [c] = await db
     .select({
       id: course.id,
@@ -96,40 +103,43 @@ export async function getPublicCourse(courseId: string): Promise<PublicCourse | 
     .limit(1);
   if (!c || c.status !== "published") return null;
 
-  // Struttura per i conteggi + il PROGRAMMA (moduli → lezioni).
-  const mods = await db
-    .select({ id: courseModule.id, title: courseModule.title })
-    .from(courseModule)
-    .where(eq(courseModule.courseId, courseId))
-    .orderBy(asc(courseModule.position));
-  const less = await db
-    .select({ moduleId: lesson.moduleId, title: lesson.title })
-    .from(lesson)
-    .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
-    .where(eq(courseModule.courseId, courseId))
-    .orderBy(asc(lesson.position));
-  const [sl] = await db
-    .select({ n: count() })
-    .from(slide)
-    .innerJoin(lesson, eq(lesson.id, slide.lessonId))
-    .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
-    .where(eq(courseModule.courseId, courseId));
+  // Struttura (moduli/lezioni), conteggio slide e quiz finale: query indipendenti → in PARALLELO.
+  const [mods, less, slRows, finalQuizRows] = await Promise.all([
+    db
+      .select({ id: courseModule.id, title: courseModule.title })
+      .from(courseModule)
+      .where(eq(courseModule.courseId, courseId))
+      .orderBy(asc(courseModule.position)),
+    db
+      .select({ moduleId: lesson.moduleId, title: lesson.title })
+      .from(lesson)
+      .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
+      .where(eq(courseModule.courseId, courseId))
+      .orderBy(asc(lesson.position)),
+    db
+      .select({ n: count() })
+      .from(slide)
+      .innerJoin(lesson, eq(lesson.id, slide.lessonId))
+      .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
+      .where(eq(courseModule.courseId, courseId)),
+    db
+      .select({
+        passThreshold: quiz.passThreshold,
+        questionsToDraw: quiz.questionsToDraw,
+        maxAttempts: quiz.maxAttempts,
+        timeLimitSeconds: quiz.timeLimitSeconds,
+      })
+      .from(quiz)
+      .where(and(eq(quiz.courseId, courseId), eq(quiz.type, "final")))
+      .limit(1),
+  ]);
+  const sl = slRows[0];
+  const finalQuiz = finalQuizRows[0];
 
   const program: CourseProgramModule[] = mods.map((m) => ({
     title: m.title,
     lessons: less.filter((l) => l.moduleId === m.id).map((l) => l.title),
   }));
-
-  const [finalQuiz] = await db
-    .select({
-      passThreshold: quiz.passThreshold,
-      questionsToDraw: quiz.questionsToDraw,
-      maxAttempts: quiz.maxAttempts,
-      timeLimitSeconds: quiz.timeLimitSeconds,
-    })
-    .from(quiz)
-    .where(and(eq(quiz.courseId, courseId), eq(quiz.type, "final")))
-    .limit(1);
 
   return {
     id: c.id,
@@ -151,6 +161,12 @@ export async function getPublicCourse(courseId: string): Promise<PublicCourse | 
     exam: finalQuiz ?? null,
   };
 }
+
+/** Dettaglio pubblico cachato per ID (dati GLOBALI). Revalida ogni 60s. */
+export const getPublicCourse = unstable_cache(_getPublicCourse, ["catalog:course"], {
+  revalidate: 60,
+  tags: ["catalog"],
+});
 
 /** Dettaglio pubblico per SLUG (pagina teaser SEO). Solo corsi pubblicati. */
 export async function getPublicCourseBySlug(slug: string): Promise<PublicCourse | null> {
