@@ -6,6 +6,14 @@ const nextConfig: NextConfig = {
   // Configurazione minima. Le opzioni (immagini Cloudflare, headers CSP)
   // vengono aggiunte nei rispettivi step di implementazione (vedi ARCHITETTURA.md).
   reactStrictMode: true,
+  // Router cache client: tiene le sezioni già visitate per 30s → rivisitare una sezione
+  // (back/forward, click rapido) è ISTANTANEO dalla cache, niente skeleton, niente hit
+  // server. Lo skeleton resta solo per la PRIMA visita. Valore conservativo (30s) per la
+  // freschezza di progressi/iscrizioni; le mutazioni chiamano già router.refresh() per
+  // invalidare subito (logout incluso). Tecnica presa da NEXUS-SEO (che usa 120s su Next 16).
+  experimental: {
+    staleTimes: { dynamic: 30, static: 180 },
+  },
 };
 
 // Bundle analyzer: attivo solo con ANALYZE=true (no-op nelle build normali).
