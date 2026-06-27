@@ -51,15 +51,25 @@ src/__tests__/rls-routing.db.test.ts` (col flag, ogni `withTenant` fa `SET LOCAL
 il seeding dei test resta sul ruolo di connessione = bypass). Senza il flag il test è skippato.
 **In CI aggiungere questo step** (con `RLS_FORCE_ROLE=app_rls`) per evitare regressioni.
 
-CUTOVER PRODUZIONE (rimane solo lo switch del ruolo di connessione — fail-closed):
-1. `ALTER ROLE app_rls LOGIN PASSWORD '<segreto>'` (lo step ops; il segreto NON va in git).
-2. Far puntare `DATABASE_URL` al pooler come utente `app_rls.<ref>`; tenere `DIRECT_URL` sul
-   ruolo privilegiato (`postgres`) per le migrazioni. NON impostare `RLS_FORCE_ROLE` in prod:
-   la connessione È `app_rls` (fail-closed → una query non avvolta fallisce, non bypassa).
-3. Verifica post-switch: ogni flusso (discente/azienda/staff/verifica pubblica) verde; un utente
-   non vede dati di un altro tenant nemmeno forzando gli ID.
-4. Rollback: revert `DATABASE_URL` al ruolo privilegiato (le policy restano, inerti sotto
-   bypass). Nessun `DISABLE FORCE RLS` necessario.
+CUTOVER PRODUZIONE — ✅ **FATTO il 2026-06-27** (fail-closed, attivo):
+1. ✅ `ALTER ROLE app_rls LOGIN PASSWORD '<segreto>'` eseguito (il segreto è SOLO nelle env
+   Vercel/password manager, NON in git).
+2. ✅ Vercel **Production** `DATABASE_URL` → `app_rls.<ref>` sul pooler (6543); `DIRECT_URL`
+   resta su `postgres` (migrazioni). `RLS_FORCE_ROLE` NON impostato in prod (la connessione È
+   `app_rls`, fail-closed). Local dev + test restano su `postgres` (i test di seeding usano il
+   bypass; il guardrail app_rls è `RLS_FORCE_ROLE=app_rls npx vitest run rls-routing.db.test`).
+3. ✅ Verifica live sotto app_rls: connessione `app_rls` NOBYPASS confermata; tabella tenant
+   senza GUC ritorna 0 (RLS filtra); login better-auth + dashboard RLS-scoped verdi in locale e
+   in produzione (0 errori). Cross-tenant negato (`rls-routing.db.test` verde sotto app_rls).
+4. ROLLBACK (se servisse): su Vercel rimettere `DATABASE_URL` (Production) al valore `postgres`
+   (è in `.env` locale) + redeploy. Le policy restano inerti sotto bypass; nessun `DISABLE RLS`.
+
+RESIDUI di hardening (non bloccanti, post-cutover):
+- Defense-in-depth: `heartbeat` + `lesson_progress` sono ancora **passthrough** (no GUC) — dare
+  loro la policy EXISTS-su-enrollment di `slide_progress` (migration additiva).
+- I 4 test "bypass-seeding" (step3/audit/access/certificate) non passano sotto `app_rls` perché
+  seedano via funzioni app senza `ctx`; renderli app_rls-aware per un guardrail full-suite verde.
+- Env **Preview** Vercel: `DATABASE_URL` ancora su `postgres` (cutover fatto solo su Production).
 
 ## 7. Data residency & backup
 - DB/Storage/Auth in UE: Supabase `aws-1-eu-central-1` ✓, Cloudflare Stream.
