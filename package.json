@@ -5,8 +5,8 @@
   "description": "LMS multi-tenant B2B+B2C per formazione professionale (erogazione, antifrode, quiz, certificati). Vedi ARCHITETTURA.md.",
   "type": "module",
   "scripts": {
-    "dev": "next dev --webpack",
-    "build": "next build --webpack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "db:generate": "drizzle-kit generate",
