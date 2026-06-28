@@ -15,25 +15,27 @@ const fieldCls =
 
 function InlineTitle({ value, onSave, className }: { value: string; onSave: (t: string) => Promise<void>; className?: string }) {
   const [v, setV] = useState(value);
+  const [saved, setSaved] = useState(value); // baseline persistito (aggiornato dopo ogni save)
   const [state, setState] = useState<"idle" | "saving" | "ok" | "err">("idle");
   const [err, setErr] = useState("");
 
   async function commit() {
     const next = v.trim();
-    if (next === value.trim() || !next) {
-      setV(value);
+    if (next === saved.trim() || !next) {
+      setV(saved);
       return;
     }
     setState("saving");
     setErr("");
     try {
       await onSave(next);
+      setSaved(next);
       setState("ok");
       setTimeout(() => setState("idle"), 1500);
     } catch (e) {
       setState("err");
       setErr(e instanceof Error ? e.message : "Salvataggio non riuscito.");
-      setV(value);
+      setV(saved);
     }
   }
 
