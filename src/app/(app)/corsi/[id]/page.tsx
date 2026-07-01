@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, BadgeCheck, Clock, Layers, Signal } from "lucide-react";
 import { getCurrentSession } from "@/lib/auth/server";
 import { getPublicCourse, getMyEnrollmentForCourse } from "@/features/catalog/queries";
+import { iso19011Advisory } from "@/features/prerequisites/advisory";
 import { CourseDetailBody, hoursLabel } from "@/components/catalog/course-detail-body";
 import { BuyButton } from "@/components/catalog/buy-button";
 
@@ -24,6 +25,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
 
   const ctx = await getCurrentSession();
   const enrollment = ctx ? await getMyEnrollmentForCourse(ctx.user.id, c.id) : null;
+  const advisory = ctx ? await iso19011Advisory(ctx.user.id, c.id) : null;
   const d = c.details ?? {};
 
   const aside = (
@@ -35,7 +37,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
             Vai al corso <ArrowRight className="h-4 w-4" />
           </Link>
         ) : c.purchasable ? (
-          <BuyButton courseId={c.id} />
+          <BuyButton courseId={c.id} advisory={advisory} />
         ) : (
           <p className="rounded-lg border border-border bg-secondary/40 px-4 py-3 text-sm text-muted-foreground">
             Disponibile tramite la tua azienda o su richiesta.
