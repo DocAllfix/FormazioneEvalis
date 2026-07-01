@@ -1,7 +1,7 @@
 // Catalogo lato ADMIN piattaforma: tutti i corsi globali (published + draft) con conteggi
 // e ore. Gated requirePlatformAdmin. Conteggio slide aggregato (no N+1).
 
-import { asc, count, eq, isNull, inArray } from "drizzle-orm";
+import { and, asc, count, eq, isNull, inArray, ne } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { course, module as courseModule, lesson, slide, quiz, quizQuestion } from "@/lib/db/schema";
 import { requirePlatformAdmin } from "@/features/auth/guards";
@@ -83,6 +83,9 @@ export type CourseTree = {
   id: string;
   title: string;
   status: string;
+  // Prerequisito INFORMATIVO (ISO 19011) attualmente impostato + candidati selezionabili.
+  prerequisiteCourseId: string | null;
+  prerequisiteCandidates: { id: string; title: string }[];
   modules: {
     id: string;
     title: string;
@@ -109,11 +112,18 @@ export type CourseTree = {
 export async function getCourseTreeForEdit(courseId: string): Promise<CourseTree | null> {
   await requirePlatformAdmin();
   const [c] = await db
-    .select({ id: course.id, title: course.title, status: course.status })
+    .select({ id: course.id, title: course.title, status: course.status, prerequisiteCourseId: course.prerequisiteCourseId })
     .from(course)
     .where(eq(course.id, courseId))
     .limit(1);
   if (!c) return null;
+
+  // Candidati prerequisito: altri corsi globali (es. il corso ISO 19011).
+  const candidates = await db
+    .select({ id: course.id, title: course.title })
+    .from(course)
+    .where(and(isNull(course.organizationId), ne(course.id, courseId)))
+    .orderBy(asc(course.title));
 
   const mods = await db
     .select({ id: courseModule.id, title: courseModule.title })
@@ -159,6 +169,8 @@ export async function getCourseTreeForEdit(courseId: string): Promise<CourseTree
     id: c.id,
     title: c.title,
     status: c.status,
+    prerequisiteCourseId: c.prerequisiteCourseId ?? null,
+    prerequisiteCandidates: candidates,
     modules: mods.map((m) => ({
       id: m.id,
       title: m.title,

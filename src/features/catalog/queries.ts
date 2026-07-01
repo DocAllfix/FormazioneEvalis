@@ -78,6 +78,9 @@ export type PublicCourse = CatalogCourse & {
   slides: number;
   program: CourseProgramModule[];
   exam: CourseExam;
+  // Prerequisito INFORMATIVO (ISO 19011): valorizzato solo sui corsi ISO marcati.
+  prerequisiteCourseId: string | null;
+  prerequisiteTitle: string | null;
 };
 
 /** Dettaglio pubblico di un corso pubblicato + conteggi struttura. Null se inesistente. */
@@ -97,11 +100,19 @@ async function _getPublicCourse(courseId: string): Promise<PublicCourse | null> 
       details: course.details,
       stripePriceId: course.stripePriceId,
       status: course.status,
+      prerequisiteCourseId: course.prerequisiteCourseId,
     })
     .from(course)
     .where(eq(course.id, courseId))
     .limit(1);
   if (!c || c.status !== "published") return null;
+
+  // Titolo del corso prerequisito (per il badge informativo), se marcato.
+  let prerequisiteTitle: string | null = null;
+  if (c.prerequisiteCourseId) {
+    const [p] = await db.select({ title: course.title }).from(course).where(eq(course.id, c.prerequisiteCourseId)).limit(1);
+    prerequisiteTitle = p?.title ?? null;
+  }
 
   // Struttura (moduli/lezioni), conteggio slide e quiz finale: query indipendenti → in PARALLELO.
   const [mods, less, slRows, finalQuizRows] = await Promise.all([
@@ -159,6 +170,8 @@ async function _getPublicCourse(courseId: string): Promise<PublicCourse | null> 
     slides: Number(sl.n),
     program,
     exam: finalQuiz ?? null,
+    prerequisiteCourseId: c.prerequisiteCourseId ?? null,
+    prerequisiteTitle,
   };
 }
 

@@ -10,6 +10,7 @@ import {
   Globe,
   Layers,
   PlayCircle,
+  ShieldAlert,
   ShieldCheck,
   Signal,
 } from "lucide-react";
@@ -61,6 +62,24 @@ export function CourseDetailBody({ c, aside }: { c: PublicCourse; aside: React.R
 
       <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
         <div className="flex flex-col gap-10">
+          {c.prerequisiteCourseId ? (
+            <section className="rounded-2xl border border-amber-200 bg-amber-50/60 p-5">
+              <div className="flex items-start gap-3">
+                <ShieldAlert className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" />
+                <div>
+                  <p className="font-medium text-amber-900">
+                    Richiede la {c.prerequisiteTitle ?? "ISO 19011"} per l&apos;applicabilità professionale
+                  </p>
+                  <p className="mt-1 text-sm text-amber-800">
+                    Puoi seguire e completare questo corso liberamente. Senza la certificazione{" "}
+                    {c.prerequisiteTitle ?? "ISO 19011"}, però, questa certificazione non è spendibile in
+                    ambito lavorativo.
+                  </p>
+                </div>
+              </div>
+            </section>
+          ) : null}
+
           {c.description ? <p className="text-lg leading-relaxed text-foreground/80">{c.description}</p> : null}
 
           {d.objectives && d.objectives.length > 0 ? (

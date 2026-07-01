@@ -8,7 +8,7 @@
 import { z } from "zod";
 import { eq, and, count } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { module as courseModule, lesson, slide, quiz, quizQuestion } from "@/lib/db/schema";
+import { course, module as courseModule, lesson, slide, quiz, quizQuestion } from "@/lib/db/schema";
 import { requirePlatformAdmin } from "@/features/auth/guards";
 import { withTenant } from "@/lib/db/tenant";
 import { appendActivity } from "@/features/audit/log";
@@ -115,6 +115,24 @@ export async function upsertQuizQuestion(courseId: string, quizId: string, dataR
       .returning({ id: quizQuestion.id });
     await appendActivity(tx, { organizationId: PLATFORM_ORG, userId: ctx.user.id, verb: "question-created", object: `question:${r[0].id}`, payload: { quizId } });
     return { id: r[0].id };
+  });
+}
+
+/**
+ * Setta (o azzera con null) il corso prerequisito INFORMATIVO (ISO 19011) di un corso ISO.
+ * Advisory: non blocca nulla, guida solo gli avvisi/badge. Gated admin + audit.
+ */
+export async function setCoursePrerequisite(courseId: string, prerequisiteCourseId: string | null): Promise<void> {
+  const ctx = await requirePlatformAdmin();
+  if (prerequisiteCourseId === courseId) throw new Error("Un corso non può essere prerequisito di sé stesso.");
+  await withTenant({ platformAdmin: true }, async (tx) => {
+    if (prerequisiteCourseId) {
+      const [p] = await tx.select({ id: course.id }).from(course).where(eq(course.id, prerequisiteCourseId)).limit(1);
+      if (!p) throw new Error("Corso prerequisito inesistente.");
+    }
+    const r = await tx.update(course).set({ prerequisiteCourseId }).where(eq(course.id, courseId)).returning({ id: course.id });
+    if (!r.length) throw new Error("Corso inesistente.");
+    await audit(tx, ctx.user.id, "course-prerequisite-set", `course:${courseId}`, { prerequisiteCourseId });
   });
 }
 
