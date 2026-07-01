@@ -15,6 +15,12 @@ export async function saveOnboardingGoalAction(goal: string): Promise<void> {
   await patchOnboarding(user.id, { goal });
 }
 
+/** Autodichiarazione ISO 19011 (advisory). Settabile in onboarding e al momento dell'avviso. */
+export async function setIso19011DeclarationAction(iso19011Certified: boolean): Promise<void> {
+  const { user } = await requireSession();
+  await patchOnboarding(user.id, { iso19011Certified });
+}
+
 export async function advanceOnboardingStepAction(
   currentStep: number,
   completedSteps: string[],

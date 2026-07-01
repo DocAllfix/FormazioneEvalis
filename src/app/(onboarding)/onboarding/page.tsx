@@ -26,6 +26,7 @@ export default async function OnboardingPage() {
       companyName={companyName}
       initialGoal={ob.goal}
       initialStep={ob.currentStep}
+      initialIso19011={ob.iso19011Certified}
     />
   );
 }

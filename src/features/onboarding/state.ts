@@ -39,6 +39,7 @@ type Patch = {
   currentStep?: number;
   completedSteps?: string[];
   goal?: string | null;
+  iso19011Certified?: boolean;
 };
 
 /** Aggiorna step/goal (avanzamento wizard). */
