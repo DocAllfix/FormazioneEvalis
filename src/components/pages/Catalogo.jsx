@@ -21,12 +21,16 @@ const areas = [
 ];
 
 const allCerts = [
+  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 19011", badge: "Propedeutico", line: "Corso propedeutico sull'auditing dei Sistemi di Gestione, richiesto per le altre certificazioni ISO" },
   { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 9001", badge: "ISO 9001", line: "Auditor per i Sistemi di Gestione della Qualità" },
   { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 14001", badge: "ISO 14001", line: "Auditor per i Sistemi di Gestione dell'Ambiente" },
   { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 45001", badge: "ISO 45001", line: "Auditor per i Sistemi di Gestione della Sicurezza e Salute sul lavoro" },
   { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 27001", badge: "ISO 27001", line: "Auditor per i Sistemi di Gestione della Sicurezza delle Informazioni" },
   { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 22000", badge: "ISO 22000", line: "Auditor per i Sistemi di Gestione della Sicurezza Alimentare" },
   { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 50001", badge: "ISO 50001", line: "Auditor per i Sistemi di Gestione dell'Energia" },
+  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 37001", badge: "ISO 37001", line: "Auditor per i Sistemi di Gestione Anti-Corruzione" },
+  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 39001", badge: "ISO 39001", line: "Auditor per i Sistemi di Gestione della Sicurezza Stradale" },
+  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 42001", badge: "ISO 42001", line: "Auditor per i Sistemi di Gestione dell'Intelligenza Artificiale" },
   { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Elettricista specializzato", badge: "Professionale", line: "Competenze per interventi elettrici specialistici" },
   { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Idraulico", badge: "Professionale", line: "Competenze per impianti idraulici e sanitari" },
   { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Muratore", badge: "Professionale", line: "Competenze per lavori murari e costruzioni" },

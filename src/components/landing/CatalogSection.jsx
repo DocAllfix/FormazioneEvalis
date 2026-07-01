@@ -9,12 +9,16 @@ const areas = [
     id: "auditor",
     label: "Auditor ISO",
     cards: [
+      { name: "ISO 19011", badge: "Propedeutico", line: "Corso propedeutico sull'auditing dei Sistemi di Gestione, richiesto per le altre certificazioni ISO" },
       { name: "ISO 9001", badge: "ISO 9001", line: "Auditor per i Sistemi di Gestione della Qualità" },
       { name: "ISO 14001", badge: "ISO 14001", line: "Auditor per i Sistemi di Gestione dell'Ambiente" },
       { name: "ISO 45001", badge: "ISO 45001", line: "Auditor per i Sistemi di Gestione della Sicurezza e Salute sul lavoro" },
       { name: "ISO 27001", badge: "ISO 27001", line: "Auditor per i Sistemi di Gestione della Sicurezza delle Informazioni" },
       { name: "ISO 22000", badge: "ISO 22000", line: "Auditor per i Sistemi di Gestione della Sicurezza Alimentare" },
       { name: "ISO 50001", badge: "ISO 50001", line: "Auditor per i Sistemi di Gestione dell'Energia" },
+      { name: "ISO 37001", badge: "ISO 37001", line: "Auditor per i Sistemi di Gestione Anti-Corruzione" },
+      { name: "ISO 39001", badge: "ISO 39001", line: "Auditor per i Sistemi di Gestione della Sicurezza Stradale" },
+      { name: "ISO 42001", badge: "ISO 42001", line: "Auditor per i Sistemi di Gestione dell'Intelligenza Artificiale" },
     ],
   },
   {
