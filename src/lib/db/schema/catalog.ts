@@ -19,6 +19,7 @@ import {
   uuid,
   index,
   unique,
+  type AnyPgColumn,
 } from "drizzle-orm/pg-core";
 
 // --- Enum ---
@@ -80,6 +81,11 @@ export const course = pgTable(
     // Prezzo denormalizzato per la VETRINA (display); il checkout usa stripePriceId.
     priceCents: integer("price_cents"),
     currency: text("currency").default("eur"),
+    // Prerequisito INFORMATIVO (advisory, NON blocca): i corsi ISO puntano al corso ISO 19011.
+    // NULL = nessun avviso (19011 stesso + tutti i corsi professionali). Self-FK, ON DELETE SET NULL.
+    prerequisiteCourseId: uuid("prerequisite_course_id").references((): AnyPgColumn => course.id, {
+      onDelete: "set null",
+    }),
     status: courseStatus("status").notNull().default("draft"),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),

@@ -4,7 +4,7 @@
 // `organization_id` aggancia l'eventuale audit alla catena dell'org dell'attore.
 
 import { sql } from "drizzle-orm";
-import { pgTable, text, uuid, integer, jsonb, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
+import { pgTable, text, uuid, integer, jsonb, boolean, timestamp, uniqueIndex } from "drizzle-orm/pg-core";
 import { user, organization } from "./auth";
 
 // 'b2c' = learner auto-registrato · 'b2b_admin' = admin azienda · 'b2b_member' = dipendente invitato
@@ -30,6 +30,8 @@ export const userOnboarding = pgTable(
       .default(sql`'[]'::jsonb`),
     // area scelta dal B2C (es. 'auditor_iso' | 'mestieri' | 'bancario'); null per gli altri
     goal: text("goal"),
+    // Autodichiarazione ISO 19011 (advisory): null = non chiesto, true/false = risposto in onboarding.
+    iso19011Certified: boolean("iso19011_certified"),
     status: text("status").$type<OnboardingStatus>().notNull().default("pending"),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
