@@ -31,7 +31,11 @@
 | 2026-07-02 | 43613998 | Casting v7 pod A: Azzurra + Sibilia (gender check) | RTX 4090 · Ungheria | $0,4276 | ~30 min | ~$0,21 | ✅ **ENTRAMBE ESCLUSE: voci femminili** (Azzurra 191,6 Hz) — check da 60s ha evitato 2 provini interi |
 | 2026-07-02 | 43614004 | Casting v7 pod B: VoxCPM2-clone + Qwen3-clone (voce cliente, ricetta completa) | RTX 4090 · Norvegia | $0,5352 | ~35 min | ~$0,31 | ✅ 2 provini (fix al volo: triton vuole build-essential) |
 
-**Totale speso: ~$3,45 (giornata completa: A/B 3 motori + 7 casting + ricetta congelata) · 3 snapshot riusabili su R2 · tutte le lezioni in RICETTA-TTS.md. Istanze attive a fine giornata: 0.**
+| 2026-07-02 | 43616145 | Casting v8 pod A: XTTS ricetta + F5 speed 0,78 | RTX 4090 · Polonia | $0,3654 | ~35 min | ~$0,21 | ✅ **v8-xtts = GOLDEN SAMPLE approvato dall'utente** |
+| 2026-07-02 | 43616148 | Casting v8 pod B + v9el (4 motori su ref ElevenLabs) + v10 (3 ref EL via tts_ricetta) | RTX 4090 · Bulgaria | $0,4014 | ~2h50 | ~$1,14 | ✅ v8 vox/qwen + pron test · v9el ×4 (v9el-xtts = il preferito) · v10 ×3 · fix torch cu126 (driver 12.6) + VoxCPM device=cuda |
+| 2026-07-02 | 43621380 | v11: XTTS virgola-finale (anti-ingoio) + VoxCPM fix in-context (ref EL1 + ref_text esatto) | RTX 4090 · Ungheria | $0,4415 | ~35 min | ~$0,26 | ✅ 2 provini finali |
+
+**Totale speso GIORNATA: ~$5,06 · Esito: GOLDEN SAMPLE (v8/v9el-xtts) + tts_ricetta.py con seed deterministici + metodo del riferimento raffinato ElevenLabs + ~50 provini (v2→v11) + tutte le lezioni scritte. Istanze attive a fine giornata: 0.**
 
 ## Dati misurati (2026-07-02, riferimento per dimensionare il burst TTS del blitz)
 
