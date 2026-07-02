@@ -24,7 +24,9 @@
 
 | 2026-07-02 | 43601480 | Casting v3: XTTS profondità F0 (58 voci) + Chatterbox predefinite + Qwen3 voice design | RTX 4090 · Bulgaria | $0,3711 | ~45 min | ~$0,28 | ✅ 9 provini + 2 classifiche Hz; lezione GROSSA: un motore = un venv (transformers incompatibili), torch ≤2.4 per coqui |
 
-**Totale speso: ~$2,26 (con casting ~$0,49) · Missione A/B compiuta: 4 sample + tempi misurati + 3 snapshot riusabili su R2 + tutte le lezioni nello script (commit a9edfec). Istanze attive a fine giornata: 0.**
+| 2026-07-02 | 43609008 | Voce cliente: 4+2 varianti XTTS perfezionate + 2 F5 italiano (paralleli) | RTX 4090 · Bulgaria | $0,3609 | ~75 min | ~$0,45 | ✅ 8 provini; F5 = ~20-25× realtime (!) ma output troncato a 22s (ref >15s, fix noto); disco pieno da repo 18-checkpoint (lezione: download selettivo) |
+
+**Totale speso: ~$2,71 (giornata completa: A/B motori + 3 casting + voce cliente) · Missione A/B compiuta: 4 sample + tempi misurati + 3 snapshot riusabili su R2 + tutte le lezioni nello script (commit a9edfec). Istanze attive a fine giornata: 0.**
 
 ## Dati misurati (2026-07-02, riferimento per dimensionare il burst TTS del blitz)
 
