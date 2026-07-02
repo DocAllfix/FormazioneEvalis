@@ -33,7 +33,22 @@ Il template slide che claude design produrrà DEVE rispettare questo contratto:
   hotlinkate): tutto self-contained o servito da noi. Una slide non può "rompersi dopo".
 - Doppio template (Ambra / Evalis navy): stesso identico contratto geometrico, cambia solo la pelle.
 
-### A.3 Verifica del contratto (una volta per template, non per slide)
+### A.3 Input contenuti a claude design: slide-content.json (MAI i copioni grezzi, MAI la norma)
+- Riferimento visivo del risultato atteso: `slide4-check.jpeg` (avatar in bolla fissa a sinistra,
+  contenuto a card editoriali, poco testo, gerarchia chiara).
+- A claude design NON si danno i copioni discorsivi (~650 parole/slide: o li stipa creando
+  overflow, o seleziona lui cosa mostrare → scelte incoerenti tra slide) e NON si dà il testo
+  della norma (copyright + creerebbe una SECONDA fonte di verità che diverge dalla narrazione).
+- Gli si dà `produzione/<corso>/slide-content.json`, derivato dai copioni (che restano l'UNICA
+  fonte di verità): per ogni ID → titolo, kicker/categoria, 3-6 punti brevi entro i limiti A.2,
+  eventuale elemento visivo suggerito (schema, tabella, timeline), termini chiave. La slide è
+  la proiezione visiva del copione, mai un contenuto autonomo.
+- Fuori da palette, logo, zona avatar, limiti A.2 e slide-content.json, claude design ha
+  LIBERTÀ creativa: poche specifiche → risultato migliore.
+- Bonus QA: i termini chiave di ogni slide devono comparire nel copione dello STESSO ID →
+  controllo automatico di coerenza slide↔narrazione (anti-mescolamento a livello contenuti, C.1-bis).
+
+### A.4 Verifica del contratto (una volta per template, non per slide)
 - Slide di prova con contenuto MIN (una riga) e MAX (limiti pieni) → screenshot 1920×1080 e
   mobile → controllo umano UNA volta.
 - Clip di prova nella zona avatar → verifica proporzione/allineamento UNA volta.
@@ -76,6 +91,19 @@ Per il corso ingestato verifica: ogni slide ha `avatarClipUid` valido · ogni ui
 `requiredMinutes×60` (ridondante con l'ingest, ma qui è il controllo pre-pubblicazione) ·
 checkpoint per modulo + esame finale presenti · nessuna slide senza blocchi HTML.
 
+### C.1-bis Controllo quiz-per-quiz e coerenza contenuti (script, zero occhi)
+Per OGNI quiz di ogni corso (checkpoint + esame finale):
+- struttura: banca ≥ `questionsToDraw`, ogni domanda ha 3-4 opzioni tutte diverse, UNA sola
+  corretta ed esiste tra le opzioni (già forzato dallo zod all'ingest — qui ridondante), soglie
+  e tempi nei range di progetto, nessuna domanda duplicata (confronto normalizzato);
+- semantica: la risposta corretta di ogni domanda deve trovare riscontro nel copione del modulo
+  (verifica automatica per termini chiave + campione umano in Parte D);
+- funzionale (con C.3): il quiz si apre, estrae il numero giusto di domande, accetta la risposta
+  corretta, rifiuta l'errata, blocca l'avanzamento sotto soglia (tentativo simulato su utente di
+  test in ambiente di verifica, MAI su utenti reali).
+Coerenza slide↔copione: per ogni ID, i termini chiave di `slide-content.json` compaiono nel
+copione dello stesso ID → un mismatch segnala slide montata sul contenuto sbagliato.
+
 ### C.2 Anteprima staff (piccola aggiunta di piattaforma, da costruire)
 Pagina gated `requirePlatformAdmin` che apre QUALSIASI slide di qualsiasi corso con la sua clip
 firmata, senza enrollment e senza gating sequenziale. NON tocca né indebolisce l'antifrode dei
@@ -114,6 +142,7 @@ confidenza superiore a una visione integrale distratta.
 - [ ] Upload Cloudflare completo, tutte le clip `readyToStream`.
 - [ ] Ingest riuscito (monte-ore validato dal server).
 - [ ] Controllo integrità C.1 pulito.
+- [ ] Controllo quiz-per-quiz + coerenza slide↔copione C.1-bis pulito.
 - [ ] Passata Playwright C.3 senza errori + contact sheet generato.
 - [ ] Scansione contact sheet fatta (C.4).
 - [ ] Revisione umana mirata fatta (D): FLAGGED + prime/ultime + campione.
@@ -131,6 +160,7 @@ archivio (~$0–2/mese).
 
 1. Script gate sul pod: ffprobe + Whisper round-trip + silencedetect/loudness + SyncNet → `qa-report.json`.
 2. Script integrità piattaforma (C.1) — riusa `getClipStatus` di `src/lib/cloudflare/stream.ts`.
+2-bis. Script quiz+coerenza (C.1-bis) — legge manifest/DB + slide-content.json + copioni.json.
 3. Pagina anteprima staff (C.2) — gated `requirePlatformAdmin`, nessuna modifica all'antifrode.
 4. Passata Playwright + generatore contact sheet (C.3).
 5. Il contratto template (Parte A) si consegna a claude design PRIMA di generare i template.
