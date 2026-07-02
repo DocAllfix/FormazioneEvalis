@@ -44,7 +44,11 @@
   costa 5 min dallo snapshot R2, mai "in anticipo per sicurezza"); (3) spegnimento PROGRESSIVO:
   meno corsi in coda = meno pod, distrutti man mano, coda vuota = zero pod vivi. 12-16×4090
   equivalenti sul costo (~$60-120): 16 fanno ~16-19h invece di ~21-25h.
-- **Upload Stream + clip-map: SINGLE-WRITER** — un solo processo, mai i pod in parallelo.
+  **Scala 8 ore (se richiesta): ~32-48×4090**, stesso costo totale; a quella scala l'upload
+  parallelo per corso è obbligatorio. Numero esatto calibrato sui tempi REALI del corso campione.
+- **Upload Stream + clip-map: SINGLE-WRITER PER CORSO** — la clip-map è per corso, quindi
+  UN processo uploader per corso (fino a 9 in parallelo, mai due sullo stesso corso, mai i pod
+  render). A grande scala l'upload parallelo per corso evita che diventi lui la coda (~3.000 clip).
 - **Slide**: claude design impagina corso per corso da `slide-content.json` sul template congelato;
   non blocca mai audio/render (le slide servono solo all'ingest).
 - **Anti-mescolamento (5 barriere, già collaudate col test di sabotaggio)**: ID = nome file =
