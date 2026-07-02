@@ -14,10 +14,19 @@
 | 2026-07-02 | 43585266 | A/B voce CosyVoice (tentativo 2) | RTX 4090 · Svezia (host 34031) | $0,3878 | ~30 min | ~$0,19 | ❌ idem — host 34031 in blacklist |
 | 2026-07-02 | 43588120 | A/B voce XTTS (tentativo 3, immagine runtime 2,5GB) | RTX 4090 · Romania | $0,3414 | ~25 min | ~$0,14 | ❌ pipeline ok ma bug NOSTRI: transformers vecchio (import XTTS fallito) — distrutto |
 | 2026-07-02 | 43588122 | A/B voce CosyVoice (tentativo 3, immagine runtime) | RTX 4090 · Ungheria (6,8 Gbps) | $0,4276 | ~25 min | ~$0,18 | ❌ requirements CosyVoice falliti in silenzio (pynini) — distrutto |
-| 2026-07-02 | 43589092 | A/B voce XTTS (tentativo 4: pin transformers 4.46) | RTX 4090 · Romania (host caldo, immagine in cache) | **$0,3414** | in corso | — | ⏳ |
-| 2026-07-02 | 43589098 | A/B voce CosyVoice (tentativo 4: req filtrati + wetext) | RTX 4090 · Ungheria (host caldo) | **$0,4276** | in corso | — | ⏳ |
+| 2026-07-02 | 43589092 | A/B voce XTTS (tentativo 4) | RTX 4090 · Romania | $0,3414 | ~60 min | ~$0,34 | ✅ **2 sample generati: 612s audio in 255s GPU (2,4× realtime)** + snapshot modello su R2 |
+| 2026-07-02 | 43589098 | A/B voce CosyVoice (tentativo 4, fix live via SSH) | RTX 4090 · Ungheria | $0,4276 | ~85 min | ~$0,61 | ✅ **2 sample generati: 1.494s audio in 1.076s GPU (1,4× realtime)** + snapshot modelli/whisper su R2 |
 
-**Totale speso finora: ~$1,13** (di cui ~$0,44 il tentativo fallito — lezione: il `dph_total`
+**Totale speso: ~$1,70 · Missione A/B compiuta: 4 sample + tempi misurati + 3 snapshot riusabili su R2 + tutte le lezioni nello script (commit a9edfec). Istanze attive a fine giornata: 0.**
+
+## Dati misurati (2026-07-02, riferimento per dimensionare il burst TTS del blitz)
+
+- **XTTS v2**: 2,4× realtime su 4090 (incluso caricamento modello) · ritmo parlato ~2,0 parole/s
+  → 232h di catalogo ≈ **97 ore-GPU** ≈ 5 pod per farlo in una notte, ~20 pod in ~5h.
+- **CosyVoice2**: 1,4× realtime · MA ritmo parlato ~0,8 parole/s (audio 2,4× più lungo degli
+  stessi testi: da capire all'ascolto se è pausa/lentezza patologica o cadenza del riferimento).
+- I due ritmi cambiano la calibrazione dei copioni: con XTTS ~2,0 p/s reali (budget provvisorio
+  2,4 era ottimista del 20%); riconciliazione monte-ore lo assorbe. (di cui ~$0,44 il tentativo fallito — lezione: il `dph_total`
 reale è ~4-7% sopra il prezzo di search, e il bootstrap va sempre collaudato su UN pod prima
 di lanciarne N).
 
