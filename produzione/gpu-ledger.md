@@ -22,7 +22,9 @@
 | 2026-07-02 | 43600020 | rigenerazione (nato e distrutto subito: fix env spazi) | RTX 4090 · Bulgaria | $0,3609 | ~3 min | ~$0,02 | ↺ |
 | 2026-07-02 | 43600133 | Rigenerazione provini v2 (Luis Moray + Kokoro, fix punto/àudit/cadenza) | RTX 4090 · Bulgaria (host caldo) | $0,3609 | ~12 min | ~$0,07 | ✅ 2 provini v2 su R2, snapshot XTTS da R2 funzionante |
 
-**Totale speso: ~$1,98 (con casting ~$0,21) · Missione A/B compiuta: 4 sample + tempi misurati + 3 snapshot riusabili su R2 + tutte le lezioni nello script (commit a9edfec). Istanze attive a fine giornata: 0.**
+| 2026-07-02 | 43601480 | Casting v3: XTTS profondità F0 (58 voci) + Chatterbox predefinite + Qwen3 voice design | RTX 4090 · Bulgaria | $0,3711 | ~45 min | ~$0,28 | ✅ 9 provini + 2 classifiche Hz; lezione GROSSA: un motore = un venv (transformers incompatibili), torch ≤2.4 per coqui |
+
+**Totale speso: ~$2,26 (con casting ~$0,49) · Missione A/B compiuta: 4 sample + tempi misurati + 3 snapshot riusabili su R2 + tutte le lezioni nello script (commit a9edfec). Istanze attive a fine giornata: 0.**
 
 ## Dati misurati (2026-07-02, riferimento per dimensionare il burst TTS del blitz)
 
@@ -50,3 +52,6 @@ di lanciarne N).
    pull 3× più veloce, meno finestre di fallimento.
 7. Watchdog SEMPRE attivo sui pod (stato + gpu_util + log ogni 2,5 min, allarme stallo/loading):
    un pod rotto in silenzio si vede in minuti, non a fine timeout.
+8. `vastai create` con "success: false" ma istanza esistente = istanza creata FERMA
+   (`intended_status: stopped`): controllare intended_status e fare `vastai start`. Al blitz:
+   il controllo create→verify→start va nello script di orchestrazione, mai a mano.
