@@ -25,8 +25,11 @@ trap push_log EXIT
 
 echo "== deps di base =="
 export DEBIAN_FRONTEND=noninteractive
-apt-get update -qq && apt-get install -y -qq ffmpeg curl unzip git > /dev/null
+apt-get update -qq && apt-get install -y -qq ffmpeg curl unzip git build-essential python3-dev > /dev/null
 curl -fsSL https://rclone.org/install.sh | bash > /dev/null 2>&1 || true
+# il token R2 è object-scoped: rclone non può verificare/creare bucket -> flag obbligatorio
+alias rclone="rclone --s3-no-check-bucket"
+shopt -s expand_aliases
 rclone config create r2 s3 provider Cloudflare access_key_id "$R2_ACCESS_KEY_ID" \
   secret_access_key "$R2_SECRET_ACCESS_KEY" endpoint "$R2_ENDPOINT" acl private > /dev/null
 
@@ -35,14 +38,15 @@ mkdir -p "$W/in"
 rclone copy "$R2REMOTE/in/" "$W/in/" || { echo "FATAL: input R2 mancanti"; exit 1; }
 ls -la "$W/in"
 
-echo "== voce di riferimento: mp3 -> wav 24k mono =="
+echo "== voce di riferimento: mp3 -> wav 24k mono (+ taglio 28s: CosyVoice accetta max 30s) =="
 ffmpeg -v error -y -i "$W/in/voce-riferimento.mp3" -ar 24000 -ac 1 "$W/voce.wav"
+ffmpeg -v error -y -i "$W/voce.wav" -t 28 "$W/voce-28s.wav"
 
 echo "== trascrizione del riferimento (faster-whisper, serve a CosyVoice) =="
 pip install -q faster-whisper
 python - <<'PY'
 from faster_whisper import WhisperModel
-m = WhisperModel("small", device="cuda", compute_type="float16")
+m = WhisperModel("large-v3", device="cuda", compute_type="float16")
 segs, _ = m.transcribe("/workspace/pilot/voce.wav", language="it")
 text = " ".join(s.text.strip() for s in segs)
 open("/workspace/pilot/ref-text.txt", "w", encoding="utf-8").write(text)
@@ -57,7 +61,12 @@ done
 
 if [ "$ENGINE" = "xtts" ] || [ "$ENGINE" = "all" ]; then
 echo "== XTTS v2 =="
-pip install -q coqui-tts && {
+# coqui-tts 0.27 richiede transformers>=4.57 ma la 5.x rompe (simboli rimossi): pin alla 4.x alta
+# se esiste lo snapshot del modello su R2, si evita il download da HuggingFace
+rclone copyto r2:$R2_BUCKET/snapshot/xtts-model.tar.gz /workspace/xtts-model.tar.gz 2>/dev/null \
+  && mkdir -p /root/.local/share && tar -xzf /workspace/xtts-model.tar.gz -C /root/.local/share \
+  && echo "modello XTTS ripristinato da snapshot R2"
+pip install -q coqui-tts && pip install -q "transformers>=4.57,<5" && {
   export COQUI_TOS_AGREED=1
   export PRODUZIONE_ROOT="$W/ab-xtts"
   T0=$SECONDS
@@ -71,8 +80,20 @@ echo "== CosyVoice2 =="
 cd /workspace
 if [ ! -d CosyVoice ]; then git clone -q --recursive https://github.com/FunAudioLLM/CosyVoice.git; fi
 cd CosyVoice
-pip install -q -r requirements.txt || pip install -q -r requirements.txt --no-deps || true
-pip show modelscope > /dev/null 2>&1 || pip install -q modelscope
+# pynini/WeTextProcessing/ttsfrd non compilano via pip: fuori dai requirements,
+# dentro il fallback puro-python `wetext`. Fallimenti pip VISIBILI (niente || true muto).
+grep -viE "pynini|wetextprocessing|ttsfrd|tensorrt|deepspeed|grpcio|gradio" requirements.txt > /tmp/req-cosy.txt
+pip install -q -r /tmp/req-cosy.txt || echo "PIP-FAIL: requirements filtrati (vedi sopra)"
+# lista COLLAUDATA (pilota 2026-07-02): i requirements sopra falliscono spesso a metà;
+# questi sono i moduli che CosyVoice/Matcha importano DAVVERO a runtime (pyworld vuole build-essential)
+pip install -q wetext hyperpyyaml modelscope openai-whisper scipy inflect matplotlib \
+  librosa pyarrow gdown wget pyworld "transformers>=4.51,<5" \
+  || echo "PIP-FAIL: dipendenze runtime CosyVoice"
+# se esiste lo snapshot su R2 si evita il download da modelscope
+rclone copyto r2:$R2_BUCKET/snapshot/cosy-model.tar.gz /workspace/cosy-model.tar.gz 2>/dev/null \
+  && mkdir -p /workspace/CosyVoice/pretrained_models \
+  && tar -xzf /workspace/cosy-model.tar.gz -C /workspace/CosyVoice/pretrained_models \
+  && echo "modello CosyVoice ripristinato da snapshot R2"
 python - <<'PY' || true
 from modelscope import snapshot_download
 snapshot_download("iic/CosyVoice2-0.5B", local_dir="/workspace/CosyVoice/pretrained_models/CosyVoice2-0.5B")
@@ -83,7 +104,7 @@ export COSYVOICE_REF_TEXT="$(cat $W/ref-text.txt)"
 export PRODUZIONE_ROOT="$W/ab-cosy"
 T0=$SECONDS
 cd "$W"
-python "$W/in/gen-audio.py" 19011 --engine cosyvoice --ref "$W/voce.wav" --only "$IDS" \
+python "$W/in/gen-audio.py" 19011 --engine cosyvoice --ref "$W/voce-28s.wav" --only "$IDS" \
   && { COSY_STATUS=ok; echo "COSY_WALL_SECONDS=$((SECONDS-T0))" >> /workspace/timings.txt; }
 fi
 

@@ -89,14 +89,20 @@ def gen_cosyvoice(text: str, ref: str, out: Path) -> None:
     qualità dello zero-shot (il pilota la produce con Whisper sul sample stesso)."""
     import torchaudio
     from cosyvoice.cli.cosyvoice import CosyVoice2
-    from cosyvoice.utils.file_utils import load_wav
 
-    global _COSY, _COSY_REF
+    global _COSY
     if "_COSY" not in globals():
         _COSY = CosyVoice2(os.environ.get("COSYVOICE_MODEL_DIR", "pretrained_models/CosyVoice2-0.5B"))
-        _COSY_REF = load_wav(ref, 16000)
     ref_text = os.environ.get("COSYVOICE_REF_TEXT", "")
-    chunks = [c["tts_speech"] for c in _COSY.inference_zero_shot(text, ref_text, _COSY_REF, stream=False)]
+    try:
+        # API recente: riferimento come PERCORSO file (lo carica il frontend)
+        gen = _COSY.inference_zero_shot(text, ref_text, ref, stream=False)
+        chunks = [c["tts_speech"] for c in gen]
+    except (TypeError, RuntimeError):
+        # API precedente: riferimento come tensore 16k
+        from cosyvoice.utils.file_utils import load_wav
+        gen = _COSY.inference_zero_shot(text, ref_text, load_wav(ref, 16000), stream=False)
+        chunks = [c["tts_speech"] for c in gen]
     import torch
     torchaudio.save(str(out), torch.cat(chunks, dim=1), _COSY.sample_rate)
 
