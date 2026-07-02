@@ -26,7 +26,12 @@
 
 | 2026-07-02 | 43609008 | Voce cliente: 4+2 varianti XTTS perfezionate + 2 F5 italiano (paralleli) | RTX 4090 · Bulgaria | $0,3609 | ~75 min | ~$0,45 | ✅ 8 provini; F5 = ~20-25× realtime (!) ma output troncato a 22s (ref >15s, fix noto); disco pieno da repo 18-checkpoint (lezione: download selettivo) |
 
-**Totale speso: ~$2,71 (giornata completa: A/B motori + 3 casting + voce cliente) · Missione A/B compiuta: 4 sample + tempi misurati + 3 snapshot riusabili su R2 + tutte le lezioni nello script (commit a9edfec). Istanze attive a fine giornata: 0.**
+| 2026-07-02 | 43611957 | Casting v6: fix pause XTTS (trim+gap esatto, no rumore sintetico) + fix velocità F5 (ref 10s) | RTX 4090 · Bulgaria | $0,3609 | ~30 min | ~$0,18 | ✅ A3+D3+F5v2; MA v6 ha reintrodotto "punto" (punti INTERNI ai blocchi) e tagli (blocchi >213 char) → regole in RICETTA-TTS.md |
+| 2026-07-02 | 43613827 | Casting v7 (nato e distrutto: split su 2 pod) | RTX 4090 · Ungheria | $0,4276 | ~5 min | ~$0,04 | ↺ |
+| 2026-07-02 | 43613998 | Casting v7 pod A: Azzurra + Sibilia (gender check) | RTX 4090 · Ungheria | $0,4276 | ~30 min | ~$0,21 | ✅ **ENTRAMBE ESCLUSE: voci femminili** (Azzurra 191,6 Hz) — check da 60s ha evitato 2 provini interi |
+| 2026-07-02 | 43614004 | Casting v7 pod B: VoxCPM2-clone + Qwen3-clone (voce cliente, ricetta completa) | RTX 4090 · Norvegia | $0,5352 | ~35 min | ~$0,31 | ✅ 2 provini (fix al volo: triton vuole build-essential) |
+
+**Totale speso: ~$3,45 (giornata completa: A/B 3 motori + 7 casting + ricetta congelata) · 3 snapshot riusabili su R2 · tutte le lezioni in RICETTA-TTS.md. Istanze attive a fine giornata: 0.**
 
 ## Dati misurati (2026-07-02, riferimento per dimensionare il burst TTS del blitz)
 
