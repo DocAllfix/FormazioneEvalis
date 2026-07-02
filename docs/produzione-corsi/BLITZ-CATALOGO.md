@@ -41,6 +41,24 @@
   clipKey = chiave clip-map · tag ID nei metadati mp4 · cross-check durate ±1s bloccante
   all'ingest · Whisper round-trip per ID · verifica DB/Cloudflare pre-pubblicazione.
 
+## Track design: kit di archetipi + fan-out multi-account
+
+1. **Prima il KIT** (su UN solo account claude design, DOPO la scelta del video base — la zona
+   avatar si misura sul base vincente): 2 template (Ambra / Evalis navy) × archetipi:
+   apertura corso · chiusura corso · apertura modulo · chiusura/riepilogo modulo ·
+   slide contenuto (testo+punti, card definizione, schema, tabella, timeline).
+   Tutti con zona avatar fissa (anche aperture/chiusure: sono narrate).
+   **NIENTE slide quiz/esame nel kit**: quiz e checkpoint sono DATI renderizzati dal motore
+   quiz della piattaforma (UI già esistente) — la chiusura modulo li annuncia soltanto.
+2. **Validazione del kit una volta** (contratto A.4: slide MIN/MAX, clip nella zona, mobile),
+   poi il kit si **CONGELA**: i suoi file diventano l'input identico di ogni sessione successiva.
+3. **Fan-out un-corso-per-account** (l'utente ha più account Claude): ogni account riceve lo
+   stesso pacchetto = kit congelato + contratto/limiti + `slide-content.json` del SUO corso,
+   con istruzione "riempi gli archetipi, NON ristilizzare". Output nominato per ID
+   (`<id>.html`) → il manifest aggancia per ID come tutto il resto.
+4. La coerenza non dipende dagli account: contact sheet per corso + check termini-chiave↔copione
+   per ID beccano slide fuori stile o montate sul contenuto sbagliato, chiunque le abbia fatte.
+
 ## Calendario del blitz
 
 | Giorno | Attività | Gate |
