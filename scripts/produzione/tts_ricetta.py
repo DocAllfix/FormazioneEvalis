@@ -50,12 +50,31 @@ def applica_glossario(text: str, glossario: dict) -> str:
     return text
 
 
+MIN_CHARS = 50  # frasi più corte si FONDONO con la successiva via virgola
+                # (fix 2026-07-02 sera: le 2 uniche imperfezioni di v8/v9 erano le 2 frasi <30 char:
+                #  "Sembra una frase densa" e "Seconda idea: indipendente" con parola finale ingoiata)
+
 def frasi_ricetta(text: str) -> list[str]:
     """Formattazione GOLDEN: frase-per-frase, mai oltre 213 char (spezzate all'ultima
-    virgola utile), punto finale e '…' RIMOSSI ('?' e '!' conservati)."""
+    virgola utile), MAI sotto 50 char (fuse con la successiva via virgola — XTTS non
+    legge la virgola), punto finale e '…' RIMOSSI ('?' e '!' conservati)."""
     sents = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
-    out = []
+    # fusione in avanti delle frasi corte TERMINANTI COL PUNTO (la virgola lo sostituisce;
+    # le corte con '?' o '!' NON si fondono: la loro punteggiatura resta e le protegge)
+    def fondibile(s):
+        return s.rstrip().endswith((".", "…")) and len(s.rstrip(".…")) < MIN_CHARS
+    merged = []
     for s in sents:
+        if merged and fondibile(merged[-1]):
+            merged[-1] = merged[-1].rstrip(".…").strip() + ", " + s[0].lower() + s[1:]
+        else:
+            merged.append(s)
+    # l'ultima frase non deve restare corta col punto: si fonde all'indietro
+    if len(merged) > 1 and fondibile(merged[-1]):
+        last = merged.pop()
+        merged[-1] = merged[-1].rstrip(".…").strip() + ", " + last[0].lower() + last[1:]
+    out = []
+    for s in merged:
         while len(s) > MAX_CHARS:
             cut = s.rfind(",", 0, MAX_CHARS)
             if cut < 60:
