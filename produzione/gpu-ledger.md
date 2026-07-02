@@ -17,6 +17,8 @@
 | 2026-07-02 | 43589092 | A/B voce XTTS (tentativo 4) | RTX 4090 · Romania | $0,3414 | ~60 min | ~$0,34 | ✅ **2 sample generati: 612s audio in 255s GPU (2,4× realtime)** + snapshot modello su R2 |
 | 2026-07-02 | 43589098 | A/B voce CosyVoice (tentativo 4, fix live via SSH) | RTX 4090 · Ungheria | $0,4276 | ~85 min | ~$0,61 | ✅ **2 sample generati: 1.494s audio in 1.076s GPU (1,4× realtime)** + snapshot modelli/whisper su R2 |
 
+| 2026-07-02 | 43598093 | CASTING voce narrante (58 speaker XTTS pre-selezionati per somiglianza col cliente + Kokoro; niente clonazione) | RTX 4090 · Bulgaria | **$0,3609** | in corso | — | ⏳ |
+
 **Totale speso: ~$1,70 · Missione A/B compiuta: 4 sample + tempi misurati + 3 snapshot riusabili su R2 + tutte le lezioni nello script (commit a9edfec). Istanze attive a fine giornata: 0.**
 
 ## Dati misurati (2026-07-02, riferimento per dimensionare il burst TTS del blitz)
