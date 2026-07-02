@@ -18,7 +18,7 @@ const requiredMinutes = Number(process.argv[reqIx + 1]);
 
 const d = dirs(corso);
 const copioni = readJson(d.copioni);
-slideIds(copioni); // valida gli ID
+slideIds(copioni, corso); // valida gli ID (formato, unicità, appartenenza al corso)
 
 function provisionalHtml(slide) {
   const punti = (slide.speakerNotes ?? "")

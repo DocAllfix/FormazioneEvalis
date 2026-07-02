@@ -84,16 +84,19 @@ def gen_xtts(text: str, ref: str, out: Path) -> None:
 
 
 def gen_cosyvoice(text: str, ref: str, out: Path) -> None:
-    """CosyVoice2 zero-shot. Richiede il repo CosyVoice nel PYTHONPATH (pod-setup.sh)."""
+    """CosyVoice2 zero-shot. Richiede il repo CosyVoice nel PYTHONPATH (pod-setup.sh).
+    COSYVOICE_REF_TEXT (env) = trascrizione del sample di riferimento: migliora molto la
+    qualità dello zero-shot (il pilota la produce con Whisper sul sample stesso)."""
     import torchaudio
     from cosyvoice.cli.cosyvoice import CosyVoice2
     from cosyvoice.utils.file_utils import load_wav
 
     global _COSY, _COSY_REF
     if "_COSY" not in globals():
-        _COSY = CosyVoice2("pretrained_models/CosyVoice2-0.5B")
+        _COSY = CosyVoice2(os.environ.get("COSYVOICE_MODEL_DIR", "pretrained_models/CosyVoice2-0.5B"))
         _COSY_REF = load_wav(ref, 16000)
-    chunks = [c["tts_speech"] for c in _COSY.inference_zero_shot(text, "", _COSY_REF, stream=False)]
+    ref_text = os.environ.get("COSYVOICE_REF_TEXT", "")
+    chunks = [c["tts_speech"] for c in _COSY.inference_zero_shot(text, ref_text, _COSY_REF, stream=False)]
     import torch
     torchaudio.save(str(out), torch.cat(chunks, dim=1), _COSY.sample_rate)
 
@@ -115,6 +118,12 @@ def main() -> None:
 
     base = ROOT / args.corso
     copioni = read_json(base / "copioni.json")
+    ids = [s["id"] for s in copioni["slides"]]
+    if len(ids) != len(set(ids)):
+        sys.exit(f"ERRORE: ID duplicati nei copioni: {[i for i in ids if ids.count(i) > 1][:3]}")
+    wrong = [i for i in ids if not i.startswith(args.corso + "_")]
+    if wrong:
+        sys.exit(f"ERRORE: ID di un altro corso in questi copioni: {wrong[:3]}")
     glossario = read_json(base / "glossario-tts.json", fallback={"map": {}})
     audio_map = read_json(base / "audio-map.json", fallback={})
     wps = copioni.get("budget", {}).get("paroleAlSecondoProvvisorio", 2.4)

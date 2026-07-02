@@ -87,10 +87,17 @@ export function probeComment(file) {
   }
 }
 
-/** ID slide del corso, in ordine, dal copioni.json. */
-export function slideIds(copioni) {
-  return copioni.slides.map((s) => {
+/** ID slide del corso, in ordine, dal copioni.json. Blindature: formato canonico,
+ * nessun duplicato (un duplicato = due contenuti sullo stesso file = mescolamento),
+ * e se `corso` è dato ogni ID deve appartenergli (contro copioni nel folder sbagliato). */
+export function slideIds(copioni, corso) {
+  const ids = copioni.slides.map((s) => {
     if (!ID_RE.test(s.id)) throw new Error(`ID slide non canonico: "${s.id}"`);
+    if (corso && !s.id.startsWith(`${corso}_`))
+      throw new Error(`ID "${s.id}" non appartiene al corso "${corso}" (copioni nella cartella sbagliata?)`);
     return s.id;
   });
+  const dup = ids.find((id, i) => ids.indexOf(id) !== i);
+  if (dup) throw new Error(`ID slide DUPLICATO nei copioni: "${dup}"`);
+  return ids;
 }

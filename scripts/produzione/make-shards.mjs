@@ -21,7 +21,7 @@ const copioni = readJson(d.copioni);
 const audioMap = readJson(d.audioMap);
 const clipMap = readJson(d.clipMap, {});
 
-const all = slideIds(copioni);
+const all = slideIds(copioni, corso);
 const noAudio = all.filter((id) => !audioMap[id]);
 if (noAudio.length) {
   console.error(`ERRORE: ${noAudio.length} slide senza audio (l'avatar si rende SOLO dopo il lock audio): ${noAudio.join(", ")}`);
