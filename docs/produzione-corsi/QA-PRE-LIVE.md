@@ -15,8 +15,11 @@ Il template slide che claude design produrrà DEVE rispettare questo contratto:
 
 ### A.1 Zona avatar fissa e non negoziabile
 - **Canvas**: 1920×1080 (16:9), sempre.
-- **Zona avatar**: riquadro FISSO, stessa posizione e dimensione su OGNI slide di OGNI corso
-  (default di progetto: pannello sinistro, ~32% larghezza, proporzione = quella del video base).
+- **Zona avatar**: riquadro FISSO, stessa posizione e dimensione su OGNI slide di OGNI corso.
+  **Dimensione e posizione APPROVATE dall'utente (2026-07-02): come `slide4-check.jpeg`** —
+  bolla compatta in alto a sinistra, non invadente ("non si notano neanche troppo i dettagli").
+  Proporzione = quella del video base (che è verticale pillarboxed: si croppa il contenuto utile
+  in pre-processing e la zona si dimensiona su QUEL crop, misurato con ffprobe).
 - Il player inserisce il `<video>` della clip in quella zona: **la proporzione della zona DEVE
   combaciare esattamente con la proporzione del video base scelto** (si misura il base con
   ffprobe e si fissa nel template — mai adattare a occhio, mai `object-fit: cover` che taglia il volto).
