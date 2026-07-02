@@ -58,6 +58,16 @@ def frasi_ricetta(text: str) -> list[str]:
     parola (niente ingoi, niente accenti spostati), la virgola non viene letta e il silenzio
     residuo lo taglia il postproc."""
     sents = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+    # domande/esclamazioni ULTRA-CORTE (<25 char, es. "Perché?") si attaccano alla frase
+    # successiva tenendo il segno: il '?' interno dà l'intonazione senza essere letto,
+    # e la parola non resta mai sola senza contesto (fix v12: taglio su "Perché?")
+    attached = []
+    for s in sents:
+        if attached and attached[-1].rstrip().endswith(("?", "!")) and len(attached[-1]) < 25:
+            attached[-1] = attached[-1].rstrip() + " " + s
+        else:
+            attached.append(s)
+    sents = attached
     out = []
     for s in sents:
         while len(s) > MAX_CHARS:
