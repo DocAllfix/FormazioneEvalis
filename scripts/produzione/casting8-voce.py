@@ -17,6 +17,7 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 PHASE = os.environ.get("PHASE", "prep")
+PREFIX = os.environ.get("OUT_PREFIX", "v8")
 
 W = Path("/workspace/c8")
 OUT = W / "out"
@@ -111,7 +112,28 @@ def push():
                     "r2:evalis-produzione/pilot/casting8/"], check=True)
 
 # ================= PREP: riferimento SENZA esitazioni =================
-if PHASE == "prep":
+# EL_REF=1 (env): usa il riferimento RAFFINATO ElevenLabs (già pulito, da studio):
+# niente denoise, niente caccia alle esitazioni — solo loudnorm + taglio ~11s a un silenzio.
+if PHASE == "prep" and os.environ.get("EL_REF"):
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(W / "voce-el.wav"), "-af",
+                    "loudnorm=I=-20:TP=-2", "-ar", "24000", "-ac", "1", CLEAN], check=True)
+    y, sr = librosa.load(CLEAN, sr=24000, mono=True)
+    # taglio alla pausa più vicina agli 11s (energia minima in finestra 9-13s)
+    lo, hi = 9 * sr, min(13 * sr, len(y))
+    if hi > lo + sr:
+        seg = np.abs(y[lo:hi])
+        k = int(np.argmin([seg[i:i + sr // 4].mean() for i in range(0, len(seg) - sr // 4, sr // 20)]))
+        cut = lo + k * (sr // 20)
+    else:
+        cut = len(y)
+    sf.write(REF10, y[:cut], sr)
+    from faster_whisper import WhisperModel
+    m = WhisperModel("small", device="cuda", compute_type="float16")
+    segs, _ = m.transcribe(REF10, language="it")
+    REFTXT.write_text(" ".join(s.text.strip() for s in segs), encoding="utf-8")
+    print(f"PREP-EL OK · ref {cut/sr:.1f}s · testo: {REFTXT.read_text(encoding='utf-8')[:90]}")
+
+elif PHASE == "prep":
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", RAW, "-af",
                     "afftdn=nf=-25,silenceremove=start_periods=1:start_threshold=-38dB:"
                     "stop_periods=-1:stop_threshold=-38dB:stop_duration=0.35,"
@@ -157,8 +179,8 @@ if PHASE == "xtts":
          "speed": 0.96, "gpt_cond_len": 30, "gpt_cond_chunk_len": 6}
     pieces = [tts.tts(text=s, speaker_wav=CLEAN, language="it", **P)
               for s in sentences_213(SCRIPT, strip_dot=True)]
-    sf.write(str(OUT / "v8-xtts.wav"), postproc(pieces, 24000, 0.28), SR_OUT)
-    print("provino completo: v8-xtts.wav")
+    sf.write(str(OUT / f"{PREFIX}-xtts.wav"), postproc(pieces, 24000, 0.28), SR_OUT)
+    print(f"provino completo: {PREFIX}-xtts.wav")
     push()
   except Exception as e:
     print(f"XTTS FALLITA: {e}")
@@ -185,8 +207,8 @@ if PHASE == "f5":
                                nfe_step=64, cfg_strength=2.0, sway_sampling_coef=-1.0,
                                speed=0.78, remove_silence=False)
         pieces.append(wav)
-    sf.write(str(OUT / "v8-f5.wav"), postproc(pieces, sr5, 0.15), SR_OUT)
-    print("provino completo: v8-f5.wav")
+    sf.write(str(OUT / f"{PREFIX}-f5.wav"), postproc(pieces, sr5, 0.15), SR_OUT)
+    print(f"provino completo: {PREFIX}-f5.wav")
     push()
   except Exception as e:
     print(f"F5 FALLITA: {e}")
@@ -196,7 +218,7 @@ if PHASE == "voxcpm":
   try:
     from voxcpm import VoxCPM
 
-    model = VoxCPM.from_pretrained("openbmb/VoxCPM2", load_denoiser=False)
+    model = VoxCPM.from_pretrained("openbmb/VoxCPM2", load_denoiser=False, device="cuda")
     ref_text = REFTXT.read_text(encoding="utf-8")
     sr_v = model.tts_model.sample_rate
 
@@ -205,11 +227,11 @@ if PHASE == "voxcpm":
                               reference_wav_path=REF10, cfg_value=cfg)
 
     pieces = [gen(b) for b in blocks_with_punct(SCRIPT)]
-    sf.write(str(OUT / "v8-voxcpm.wav"), postproc(pieces, sr_v, 0.15), SR_OUT)
-    print("provino completo: v8-voxcpm.wav")
+    sf.write(str(OUT / f"{PREFIX}-voxcpm.wav"), postproc(pieces, sr_v, 0.15), SR_OUT)
+    print(f"provino completo: {PREFIX}-voxcpm.wav")
     for tag, sent in PRON_VARIANTS.items():
-        sf.write(str(OUT / f"v8-voxcpm-pron-{tag}.wav"), postproc([gen(sent)], sr_v, 0.15), SR_OUT)
-        print(f"pron test: v8-voxcpm-pron-{tag}.wav")
+        sf.write(str(OUT / f"{PREFIX}-voxcpm-pron-{tag}.wav"), postproc([gen(sent)], sr_v, 0.15), SR_OUT)
+        print(f"pron test: {PREFIX}-voxcpm-pron-{tag}.wav")
     push()
   except Exception as e:
     print(f"VOXCPM FALLITA: {e}")
@@ -236,12 +258,12 @@ if PHASE == "qwenclone":
     for b in blocks_with_punct(SCRIPT):
         w, sr_q = gen(b)
         pieces.append(w)
-    sf.write(str(OUT / "v8-qwen.wav"), postproc(pieces, sr_q, 0.15), SR_OUT)
-    print("provino completo: v8-qwen.wav")
+    sf.write(str(OUT / f"{PREFIX}-qwen.wav"), postproc(pieces, sr_q, 0.15), SR_OUT)
+    print(f"provino completo: {PREFIX}-qwen.wav")
     for tag, sent in PRON_VARIANTS.items():
         w, sr_q = gen(sent)
-        sf.write(str(OUT / f"v8-qwen-pron-{tag}.wav"), postproc([w], sr_q, 0.15), SR_OUT)
-        print(f"pron test: v8-qwen-pron-{tag}.wav")
+        sf.write(str(OUT / f"{PREFIX}-qwen-pron-{tag}.wav"), postproc([w], sr_q, 0.15), SR_OUT)
+        print(f"pron test: {PREFIX}-qwen-pron-{tag}.wav")
     push()
   except Exception as e:
     print(f"QWENCLONE FALLITA: {e}")

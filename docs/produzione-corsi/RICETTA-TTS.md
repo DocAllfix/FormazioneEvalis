@@ -1,5 +1,11 @@
 # RICETTA TTS — parametri FISSI e vincolanti per la produzione audio
 
+> **IL MODULO ESISTE: `scripts/produzione/tts_ricetta.py`** — estratto esatto della pipeline del
+> golden sample `v8-xtts.wav` (approvato 2026-07-02). La produzione DEVE usare
+> `genera_slide_xtts()`. **Determinismo**: seed per frase = hash(slide_id+testo+retry) → stessa
+> frase = stesso audio per sempre; il QA rigenera le frasi FLAGGED con retry+1 e REGISTRA il seed
+> vincente in audio-map. Golden test: ogni modifica al modulo deve riprodurre il golden sample.
+
 > **Scopo.** Ogni difetto sentito nei provini del 2026-07-02 ha una causa meccanica precisa e una
 > regola che lo rende impossibile. Queste regole sono LEGGE per qualsiasi generazione audio del
 > catalogo (232h): vanno implementate in UN modulo condiviso (`scripts/produzione/tts_ricetta.py`,
