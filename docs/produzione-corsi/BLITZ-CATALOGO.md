@@ -32,8 +32,12 @@
   condividono stato → nessuna collisione, stesso principio degli shard GPU.
 - **Audio**: appena un modulo chiude → TTS + ffprobe + Whisper QA + reconcile + LOCK di quel modulo.
   L'audio non aspetta il catalogo: gira in continuo.
-- **Render**: shard statici disgiunti (`make-shards`, `indice % N`), worker per GPU, gate per clip,
-  sync R2 immediato. Idempotente: un crash = si riparte dai mancanti.
+- **Render A ONDATE (deciso 2026-07-02)**: TUTTE le GPU su UN corso alla volta, in sequenza di
+  priorità commerciale. Tempo totale identico al tutto-in-parallelo (le ore-GPU non cambiano),
+  ma un corso completo esce ogni ~2h → QA e revisione utente scorrono in parallelo al render, e
+  un eventuale difetto sistemico ferma la coda avendo speso 1/9 del compute. Per corso: shard
+  statici disgiunti (`make-shards`, `indice % N`), worker per GPU, gate per clip, sync R2
+  immediato. Idempotente: un crash = si riparte dai mancanti.
 - **Upload Stream + clip-map: SINGLE-WRITER** — un solo processo, mai i pod in parallelo.
 - **Slide**: claude design impagina corso per corso da `slide-content.json` sul template congelato;
   non blocca mai audio/render (le slide servono solo all'ingest).
