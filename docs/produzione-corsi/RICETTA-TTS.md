@@ -62,6 +62,14 @@
 6. host 34031 blacklist · immagine `-runtime` · disco 80GB se multi-modello · download HF selettivi
 7. bootstrap collaudato su 1 pod PRIMA di scalare a N
 
+## 5-bis. Consistenza della voce su TUTTO il catalogo (domanda utente 2026-07-02)
+
+La voce non viene mai "ricreata": è il file di riferimento (immutabile, versionato su R2 con
+sha256) che ogni chiamata LEGGE. Tre serrature: (1) stesso file = stessa identità vocale su
+qualsiasi pod/giorno; (2) seed per frase + parametri fissi + RMS = micro-consegna ingabbiata;
+(3) al pilota: **pre-calcolo dei conditioning latents** del riferimento (una volta, riusati
+identici per ogni frase → conditioning bit-identico su 232h + generazione più veloce).
+
 ## 6. Il gate finale che rende tutto sostenibile su 232h
 
 La ricetta riduce i difetti, il **QA li azzera**: ogni audio passa Whisper round-trip (similarità
