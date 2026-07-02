@@ -12,10 +12,12 @@
 | 2026-07-02 | 43582823 | A/B voce CosyVoice (tentativo 1) | RTX 4090 · Svezia | ~$0,388 | ~35 min | ~$0,23 | ❌ idem — distrutto |
 | 2026-07-02 | 43585253 | A/B voce XTTS (tentativo 2) | RTX 4090 · Finlandia | $0,3633 | ~30 min | ~$0,18 | ❌ host bloccato in `loading` (pull immagine mai completato) — distrutto |
 | 2026-07-02 | 43585266 | A/B voce CosyVoice (tentativo 2) | RTX 4090 · Svezia (host 34031) | $0,3878 | ~30 min | ~$0,19 | ❌ idem — host 34031 in blacklist |
-| 2026-07-02 | 43588120 | A/B voce XTTS (tentativo 3, immagine runtime 2,5GB) | RTX 4090 · Romania | **$0,3414** | in corso | — | ⏳ |
-| 2026-07-02 | 43588122 | A/B voce CosyVoice (tentativo 3, immagine runtime) | RTX 4090 · Ungheria (6,8 Gbps) | **$0,4276** | in corso | — | ⏳ |
+| 2026-07-02 | 43588120 | A/B voce XTTS (tentativo 3, immagine runtime 2,5GB) | RTX 4090 · Romania | $0,3414 | ~25 min | ~$0,14 | ❌ pipeline ok ma bug NOSTRI: transformers vecchio (import XTTS fallito) — distrutto |
+| 2026-07-02 | 43588122 | A/B voce CosyVoice (tentativo 3, immagine runtime) | RTX 4090 · Ungheria (6,8 Gbps) | $0,4276 | ~25 min | ~$0,18 | ❌ requirements CosyVoice falliti in silenzio (pynini) — distrutto |
+| 2026-07-02 | 43589092 | A/B voce XTTS (tentativo 4: pin transformers 4.46) | RTX 4090 · Romania (host caldo, immagine in cache) | **$0,3414** | in corso | — | ⏳ |
+| 2026-07-02 | 43589098 | A/B voce CosyVoice (tentativo 4: req filtrati + wetext) | RTX 4090 · Ungheria (host caldo) | **$0,4276** | in corso | — | ⏳ |
 
-**Totale speso finora: ~$0,81** (di cui ~$0,44 il tentativo fallito — lezione: il `dph_total`
+**Totale speso finora: ~$1,13** (di cui ~$0,44 il tentativo fallito — lezione: il `dph_total`
 reale è ~4-7% sopra il prezzo di search, e il bootstrap va sempre collaudato su UN pod prima
 di lanciarne N).
 
