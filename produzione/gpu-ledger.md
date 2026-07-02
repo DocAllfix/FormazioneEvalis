@@ -35,7 +35,10 @@
 | 2026-07-02 | 43616148 | Casting v8 pod B + v9el (4 motori su ref ElevenLabs) + v10 (3 ref EL via tts_ricetta) | RTX 4090 · Bulgaria | $0,4014 | ~2h50 | ~$1,14 | ✅ v8 vox/qwen + pron test · v9el ×4 (v9el-xtts = il preferito) · v10 ×3 · fix torch cu126 (driver 12.6) + VoxCPM device=cuda |
 | 2026-07-02 | 43621380 | v11: XTTS virgola-finale (anti-ingoio) + VoxCPM fix in-context (ref EL1 + ref_text esatto) | RTX 4090 · Ungheria | $0,4415 | ~35 min | ~$0,26 | ✅ 2 provini finali |
 
-**Totale speso GIORNATA: ~$5,06 · Esito: GOLDEN SAMPLE (v8/v9el-xtts) + tts_ricetta.py con seed deterministici + metodo del riferimento raffinato ElevenLabs + ~50 provini (v2→v11) + tutte le lezioni scritte. Istanze attive a fine giornata: 0.**
+| 2026-07-02 | 43623701 | v12 DEFINITIVO: XTTS 3min ricetta completa + cronometro | RTX 4090 · Romania | $0,3136 | ~25 min | ~$0,13 | ✅ **198,8s audio in 35,7s = 5,57× realtime** (load 12s da snapshot) |
+| 2026-07-02 | 43623705 | v12 DEFINITIVO: VoxCPM 3min fix in-context + cronometro | RTX 4090 · Ungheria | $0,3890 | ~40 min | ~$0,26 | ✅ 165s audio in 88,2s = 1,87× realtime (load 141s) |
+
+**Totale speso GIORNATA: ~$5,45 · Esito: GOLDEN SAMPLE (v8/v9el-xtts) + tts_ricetta.py con seed deterministici + metodo del riferimento raffinato ElevenLabs + ~50 provini (v2→v11) + tutte le lezioni scritte. Istanze attive a fine giornata: 0.**
 
 ## Dati misurati (2026-07-02, riferimento per dimensionare il burst TTS del blitz)
 
