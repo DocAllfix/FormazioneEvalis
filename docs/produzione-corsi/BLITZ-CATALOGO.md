@@ -38,6 +38,12 @@
   un eventuale difetto sistemico ferma la coda avendo speso 1/9 del compute. Per corso: shard
   statici disgiunti (`make-shards`, `indice % N`), worker per GPU, gate per clip, sync R2
   immediato. Idempotente: un crash = si riparte dai mancanti.
+  **Anti-spreco GPU (deciso 2026-07-02, target utilizzo >95%):** (1) ondate SCORREVOLI — una GPU
+  che finisce il suo shard del corso N prende subito uno shard del corso N+1, nessuna attesa di
+  fine ondata; (2) i pod render si accendono SOLO dopo il LOCK audio del primo corso (accendersi
+  costa 5 min dallo snapshot R2, mai "in anticipo per sicurezza"); (3) spegnimento PROGRESSIVO:
+  meno corsi in coda = meno pod, distrutti man mano, coda vuota = zero pod vivi. 12-16×4090
+  equivalenti sul costo (~$60-120): 16 fanno ~16-19h invece di ~21-25h.
 - **Upload Stream + clip-map: SINGLE-WRITER** — un solo processo, mai i pod in parallelo.
 - **Slide**: claude design impagina corso per corso da `slide-content.json` sul template congelato;
   non blocca mai audio/render (le slide servono solo all'ingest).
