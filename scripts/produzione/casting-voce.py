@@ -24,10 +24,11 @@ OUT.mkdir(exist_ok=True)
 CLIENT_REF = "/workspace/casting/voce-cliente.wav"  # preparato dal bootstrap
 TOP_N = 5
 
-# --- testi (tema audit, con le pronunce volute: audìt / auditòr) ---
+# --- testi (tema audit, pronunce CORRETTE: àudit / àuditor — accento sulla A;
+# l'accento grafico guida lo stress sia nel tokenizer XTTS che in espeak per Kokoro) ---
 def respell(text: str) -> str:
-    text = re.sub(r"\bauditor\b", "auditòr", text, flags=re.IGNORECASE)
-    text = re.sub(r"\baudit\b", "audìt", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bauditor\b", "àuditor", text, flags=re.IGNORECASE)
+    text = re.sub(r"\baudit\b", "àudit", text, flags=re.IGNORECASE)
     return text
 
 PROVINO = respell("L'audit è un processo sistematico, indipendente e documentato.")
@@ -66,8 +67,10 @@ def similarity(wav_path: str) -> float:
 # Accortezze anti-difetto (analisi pilota + Gemini): sintesi FRASE-PER-FRASE con pausa
 # programmata tra le frasi (niente artefatti ai giunti, niente limite 213 char) e
 # parametri anti-loop (repetition_penalty alta contro le ripetizioni "attention collapse").
-XTTS_PARAMS = {"temperature": 0.7, "repetition_penalty": 9.0, "top_k": 50, "top_p": 0.85}
-PAUSE_S = 0.4
+XTTS_PARAMS = {"temperature": 0.7, "repetition_penalty": 9.0, "top_k": 50, "top_p": 0.85,
+               "speed": 0.96}  # leggermente posato: cadenza da docente
+PAUSE_S = 0.55  # pausa tra frasi "da spiegazione"
+KOKORO_SPEED = 0.92
 SAMPLE_RATE = 24000
 
 def gen_xtts(text: str, speaker: str, out_path: str) -> None:
@@ -75,6 +78,9 @@ def gen_xtts(text: str, speaker: str, out_path: str) -> None:
     pieces = []
     pause = np.zeros(int(PAUSE_S * SAMPLE_RATE), dtype=np.float32)
     for i, sent in enumerate(sentences):
+        # BUG NOTO XTTS (issue #2952/#3701): il "." finale viene LETTO ("punto").
+        # Lo togliamo: la pausa la mettiamo noi. "?" e "!" restano (danno l'intonazione).
+        sent = sent.rstrip(".…").strip()
         wav = tts.tts(text=sent, speaker=speaker, language="it", **XTTS_PARAMS)
         pieces.append(np.asarray(wav, dtype=np.float32))
         if i < len(sentences) - 1:
@@ -82,6 +88,13 @@ def gen_xtts(text: str, speaker: str, out_path: str) -> None:
     sf.write(out_path, np.concatenate(pieces), SAMPLE_RATE)
 
 # --- fase 1: provino corto per OGNI speaker + punteggio ---
+# CASTING_SPEAKERS (env, nomi separati da ';'): salta la sfilata e genera SOLO quelli.
+forced = os.environ.get("CASTING_SPEAKERS", "")
+if forced:
+    # underscore al posto degli spazi (gli env di Vast non amano gli spazi)
+    speakers = [s.strip().replace("_", " ") for s in forced.split(";") if s.strip()]
+    print(f"Rosa forzata da env: {speakers}")
+
 scores = {}
 snip_dir = W / "snippets"
 snip_dir.mkdir(exist_ok=True)
@@ -111,7 +124,7 @@ try:
     import soundfile as sf
 
     pipe = KPipeline(lang_code="i")
-    chunks = [audio for _, _, audio in pipe(SCRIPT_FULL, voice="im_nicola")]
+    chunks = [audio for _, _, audio in pipe(SCRIPT_FULL, voice="im_nicola", speed=KOKORO_SPEED)]
     kout = OUT / "kokoro-im_nicola.wav"
     sf.write(str(kout), np.concatenate(chunks), 24000)
     kscore = round(similarity(str(kout)), 4)

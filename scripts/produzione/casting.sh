@@ -15,8 +15,9 @@ trap push_log EXIT
 
 echo "== deps =="
 export DEBIAN_FRONTEND=noninteractive
-apt-get update -qq && apt-get install -y -qq ffmpeg curl git espeak-ng build-essential python3-dev > /dev/null
+apt-get update -qq && apt-get install -y -qq ffmpeg curl git unzip espeak-ng build-essential python3-dev > /dev/null
 curl -fsSL https://rclone.org/install.sh | bash > /dev/null 2>&1 || true
+command -v rclone > /dev/null || { echo "FATAL: rclone non installato"; exit 1; }
 rclone config create r2 s3 provider Cloudflare access_key_id "$R2_ACCESS_KEY_ID" \
   secret_access_key "$R2_SECRET_ACCESS_KEY" endpoint "$R2_ENDPOINT" acl private > /dev/null
 
