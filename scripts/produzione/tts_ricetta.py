@@ -38,8 +38,11 @@ XTTS_PARAMS = {
 
 
 def respell(text: str) -> str:
-    """Pronunce imposte (confini di parola). Estendibile via glossario del corso."""
-    text = re.sub(r"\bauditor\b", "àuditor", text, flags=re.IGNORECASE)
+    """Pronunce imposte (confini di parola). Estendibile via glossario del corso.
+    "AUditor" (non "àuditor"): vincitore della matrice d'ascolto 2026-07-03 su
+    riferimento v2 — con l'accento grafico Vox sbaglia spesso, con le maiuscole
+    sulla sillaba accentata quasi mai. Il QA non ne risente (canon() minuscola)."""
+    text = re.sub(r"\bauditor\b", "AUditor", text, flags=re.IGNORECASE)
     return re.sub(r"\baudit\b", "àudit", text, flags=re.IGNORECASE)
 
 

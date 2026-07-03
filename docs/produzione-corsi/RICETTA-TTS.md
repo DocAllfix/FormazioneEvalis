@@ -20,7 +20,7 @@
 | Nessuna frase oltre **213 caratteri** (le lunghe si spezzano all'ultima virgola) | oltre il limite XTTS tronca l'audio a metà parola ("soddisfatto") |
 | Punto finale RIMOSSO da ogni frase ("?" e "!" restano) | bug noto XTTS: legge il "." (issue coqui #2952/#3701) |
 | Glossario pronuncia applicato: numeri per esteso spaziati ("diciannove milaundici"), sigle sillabate ("I E C") | il TTS inventa la lettura dei numeri lunghi |
-| Riscritture accentate: "àudit", "àuditor" (confini di parola, mai dentro "auditare") | stress sbagliato sui prestiti inglesi |
+| Riscritture: "àudit", **"AUditor"** (confini di parola, mai dentro "auditare") | stress sbagliato sui prestiti inglesi. AGGIORNATO 2026-07-03 (matrice 18 clip + 2 audio da 2 min, verdetto cliente): per "auditor" l'accento grafico NON basta a Vox — vince "AUditor" (maiuscole sulla sillaba tonica) INSIEME al riferimento v2 (EL1 + frase densa di àudit/àuditor detti bene, stessa voce EL). Fonemi CMUDict {AW1...} SCARTATI: Vox legge le cifre ("auditzeror"). Il QA non ne risente (canon() minuscola). **Metodo standard per ogni nuova parola ostica**: 1) frase corretta col termine aggiunta al riferimento (stessa voce EL), 2) matrice grafie su GPU (~$0,20, pod-pronuncia.sh), 3) verdetto d'orecchio, 4) regola congelata in respell/glossario |
 | ECCEZIONE F5-italiano: la punteggiatura si CONSERVA | il finetune la usa per pause/intonazione (addestrato così) |
 
 ## 2. Riferimento voce (per i motori a clonazione)
