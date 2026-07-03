@@ -46,6 +46,17 @@ def similarita(atteso: str, sentito: str, glossario: dict | None = None) -> floa
                                    canon(sentito, glossario)).ratio()
 
 
+def coda_ok(atteso: str, sentito: str, glossario: dict | None = None) -> bool:
+    """Rinforzo anti-taglio (2026-07-03): l'ULTIMA parola del blocco deve comparire
+    nel finale della trascrizione. Un blocco lungo con la sola coda mangiata può
+    restare sopra la soglia di similarità globale: questo check chiude lo spiraglio."""
+    ca = canon(atteso, glossario).split()
+    cs = canon(sentito, glossario).split()
+    if not ca or not cs:
+        return False
+    return ca[-1] in cs[-4:]
+
+
 def trascrivi(whisper, audio: np.ndarray, sr: int) -> str:
     """Trascrive un array audio (via wav temporaneo, robusto su ogni sr)."""
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
@@ -66,18 +77,21 @@ def genera_slide_vox_qa(model, whisper, slide_id: str, testo: str, ref_wav: str,
     sr_v = model.tts_model.sample_rate
     pieces, report = [], []
     for i, b in enumerate(blocchi_vox(testo_norm)):
-        best, best_sim, retries = None, -1.0, 0
+        best, best_sim, best_coda, retries = None, -1.0, False, 0
         for retry in range(MAX_RETRY):
             p = vox_blocco(model, b, ref_wav, ref_text)
-            sim = similarita(b, trascrivi(whisper, p, sr_v), glossario)
-            if sim > best_sim:
-                best, best_sim = p, sim
+            t = trascrivi(whisper, p, sr_v)
+            sim = similarita(b, t, glossario)
+            coda = coda_ok(b, t, glossario)
+            # una take con la coda intera batte sempre una take monca, poi conta la sim
+            if (coda, sim) > (best_coda, best_sim):
+                best, best_sim, best_coda = p, sim, coda
             retries = retry
-            if sim >= SOGLIA_BLOCCO:
+            if sim >= SOGLIA_BLOCCO and coda:
                 break
-        status = "PASS" if best_sim >= SOGLIA_BLOCCO else "FLAGGED"
+        status = "PASS" if (best_sim >= SOGLIA_BLOCCO and best_coda) else "FLAGGED"
         report.append({"blocco": i, "sim": round(best_sim, 3), "retry": retries,
-                       "status": status, "testo": b[:80]})
-        print(f"  [{slide_id} b{i}] {status} sim={best_sim:.3f} retry={retries}")
+                       "coda_ok": best_coda, "status": status, "testo": b[:80]})
+        print(f"  [{slide_id} b{i}] {status} sim={best_sim:.3f} coda={'ok' if best_coda else 'MONCA'} retry={retries}")
         pieces.append(best)
     return cuci_vox(pieces, sr_v, sr_out), report
