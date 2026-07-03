@@ -269,128 +269,128 @@
   "checkpoint": {
     "m01": {
       "modulo": "m01",
-      "questionsToDraw": 5,
-      "passThreshold": 80,
-      "questions": [
+      "estrazione": 5,
+      "soglia": 0.8,
+      "banca": [
         {
-          "id": "19011_m01_q01",
-          "domanda": "Quale delle seguenti caratteristiche NON fa parte della definizione di audit?",
+          "q": "Che cos'è un audit?",
           "opzioni": [
-            "Processo sistematico",
-            "Processo indipendente",
-            "Processo documentato",
-            "Processo obbligatorio per legge"
-          ],
-          "corretta": 3,
-          "spiegazione": "L'audit è un processo sistematico, indipendente e documentato basato su evidenze oggettive. L'obbligatorietà di legge non fa parte della definizione: molti audit sono volontari."
-        },
-        {
-          "id": "19011_m01_q02",
-          "domanda": "Durante un audit, il responsabile di reparto afferma che le tarature degli strumenti vengono eseguite ogni sei mesi. Per l'auditor questa affermazione è:",
-          "opzioni": [
-            "Un'evidenza oggettiva sufficiente per una risultanza di conformità",
-            "Una dichiarazione da riscontrare con elementi verificabili come registri o certificati di taratura",
-            "Una non conformità, perché le dichiarazioni verbali non sono ammesse",
-            "Una conclusione dell'audit"
+            "Un'ispezione a sorpresa per trovare i colpevoli",
+            "Un processo sistematico, indipendente e documentato che valuta evidenze rispetto a criteri",
+            "Una consulenza per migliorare l'organizzazione",
+            "Un controllo obbligatorio disposto dalle autorità"
           ],
           "corretta": 1,
-          "spiegazione": "Le dichiarazioni vanno riscontrate con elementi verificabili: documenti, registrazioni, osservazioni. La dichiarazione da sola non basta, ma non è nemmeno una non conformità."
+          "slide": "s002",
+          "tipo": "riconoscimento"
         },
         {
-          "id": "19011_m01_q03",
-          "domanda": "Un cliente conduce un audit presso lo stabilimento di un proprio fornitore per verificare il rispetto dei requisiti contrattuali. Di che tipo di audit si tratta?",
+          "q": "La ISO 19011 è:",
           "opzioni": [
-            "Audit di prima parte",
-            "Audit di seconda parte",
-            "Audit di terza parte",
-            "Audit congiunto"
+            "Una norma certificabile per le organizzazioni",
+            "Un regolamento europeo obbligatorio",
+            "La linea guida internazionale per gli audit dei sistemi di gestione",
+            "Una norma che vale solo per la qualità"
+          ],
+          "corretta": 2,
+          "slide": "s006",
+          "tipo": "riconoscimento"
+        },
+        {
+          "q": "Gli audit di prima parte sono:",
+          "opzioni": [
+            "Gli audit interni, condotti dall'organizzazione stessa o per suo conto",
+            "Gli audit condotti dai clienti sui fornitori",
+            "Gli audit degli organismi di certificazione",
+            "Gli audit delle autorità di vigilanza"
+          ],
+          "corretta": 0,
+          "slide": "s005",
+          "tipo": "riconoscimento"
+        },
+        {
+          "q": "Il valore dell'audit per l'organizzazione sta principalmente nel:",
+          "opzioni": [
+            "Punire chi lavora male",
+            "Produrre documenti per l'archivio",
+            "Fornire alla direzione informazioni affidabili su cui decidere e migliorare",
+            "Ridurre il numero di dipendenti necessari"
+          ],
+          "corretta": 2,
+          "slide": "s003",
+          "tipo": "riconoscimento"
+        },
+        {
+          "q": "Un cliente invia i propri auditor a verificare un fornitore strategico. Si tratta di un audit di:",
+          "opzioni": [
+            "Prima parte",
+            "Seconda parte",
+            "Terza parte",
+            "Parte interna"
           ],
           "corretta": 1,
-          "spiegazione": "Gli audit di seconda parte sono condotti da parti che hanno un interesse nell'organizzazione, come i clienti verso i fornitori."
+          "slide": "s005",
+          "tipo": "comprensione"
         },
         {
-          "id": "19011_m01_q04",
-          "domanda": "La ISO 19011 è:",
+          "q": "Che differenza c'è tra la ISO 19011 e le norme come la ISO 9001?",
           "opzioni": [
-            "Una norma di requisiti rispetto alla quale le organizzazioni possono certificarsi",
-            "Una linea guida che fornisce raccomandazioni sull'audit di sistemi di gestione",
-            "La norma che stabilisce i requisiti per gli organismi di certificazione di terza parte",
-            "Una norma che definisce i requisiti dei sistemi di gestione per la qualità"
+            "Nessuna: sono tutte norme di sistema di gestione",
+            "La 19011 guida CHI VERIFICA i sistemi, le altre stabiliscono i requisiti DEI sistemi",
+            "La 19011 è più recente e le sostituisce",
+            "La 19011 vale solo per gli audit interni"
           ],
           "corretta": 1,
-          "spiegazione": "La ISO 19011 è una linea guida: fornisce raccomandazioni, non requisiti certificabili. I requisiti per gli organismi di certificazione di terza parte sono nella ISO/IEC 17021-1."
+          "slide": "s007",
+          "tipo": "comprensione"
         },
         {
-          "id": "19011_m01_q05",
-          "domanda": "Quale norma stabilisce i requisiti per l'audit di sistemi di gestione ai fini della certificazione di terza parte?",
+          "q": "Nel gruppo di audit, l'esperto tecnico:",
           "opzioni": [
-            "ISO 19011",
-            "ISO/IEC 17021-1",
-            "ISO 9001",
-            "ISO/IEC TS 17012"
+            "Conduce le interviste al posto degli auditor",
+            "Fornisce conoscenza specialistica ma non formula giudizi di audit",
+            "Firma il rapporto insieme al responsabile",
+            "Sostituisce il responsabile del gruppo se assente"
           ],
           "corretta": 1,
-          "spiegazione": "La ISO/IEC 17021-1 fornisce i requisiti per la certificazione di terza parte; la ISO 19011 è focalizzata su audit di prima e seconda parte, pur potendo fornire guida aggiuntiva."
+          "slide": "s009",
+          "tipo": "comprensione"
         },
         {
-          "id": "19011_m01_q06",
-          "domanda": "Che cos'è un programma di audit?",
-          "opzioni": [
-            "Il documento che descrive le attività di un singolo audit",
-            "L'insieme di uno o più audit pianificati per un arco di tempo definito e orientati verso uno scopo specifico",
-            "Il software utilizzato per registrare le risultanze dell'audit",
-            "L'elenco delle non conformità rilevate durante l'anno"
-          ],
-          "corretta": 1,
-          "spiegazione": "Il programma di audit è la regia complessiva: le disposizioni per un insieme di audit pianificati nel tempo. La descrizione delle attività del singolo audit è il piano dell'audit."
-        },
-        {
-          "id": "19011_m01_q07",
-          "domanda": "Nel gruppo di audit partecipa un ingegnere metallurgico che fornisce conoscenze specialistiche su un processo di saldatura, senza condurre attività di audit. Questa figura è:",
-          "opzioni": [
-            "Un auditor in addestramento",
-            "Un esperto tecnico",
-            "Un osservatore",
-            "Il responsabile del gruppo di audit"
-          ],
-          "corretta": 1,
-          "spiegazione": "L'esperto tecnico fornisce conoscenze o esperienza specifiche al gruppo di audit ma non agisce come auditor."
-        },
-        {
-          "id": "19011_m01_q08",
-          "domanda": "Un unico audit verifica contemporaneamente, presso la stessa organizzazione, il sistema qualità ISO 9001 e il sistema ambientale ISO 14001. Si tratta di un audit:",
+          "q": "Un'unica organizzazione riceve una sola visita che copre qualità e ambiente insieme, da un solo gruppo di audit. È un audit:",
           "opzioni": [
             "Congiunto",
             "Combinato",
-            "Di terza parte, necessariamente",
-            "A distanza"
+            "A distanza",
+            "Di seconda parte"
           ],
           "corretta": 1,
-          "spiegazione": "L'audit combinato verifica due o più sistemi di gestione contemporaneamente presso un'unica organizzazione. L'audit congiunto è invece condotto da due o più organizzazioni di audit."
+          "slide": "s010",
+          "tipo": "comprensione"
         },
         {
-          "id": "19011_m01_q09",
-          "domanda": "Quale delle seguenti affermazioni sui metodi di audit a distanza è corretta secondo la ISO 19011:2026?",
+          "q": "Una software house senza uffici, con persone che lavorano da luoghi diversi in un ambiente interamente online, deve essere verificata. Quale approccio è coerente con la norma?",
           "opzioni": [
-            "Sostituiscono integralmente i metodi in sito, che sono considerati superati",
-            "Possono essere utilizzati in combinazione con i metodi in sito e anche per auditare siti virtuali",
-            "Non sono ammessi per gli audit di prima parte",
-            "Modificano i principi fondamentali dell'attività di audit"
+            "Non può essere verificata: manca il sito fisico",
+            "Metodi di audit a distanza, eventualmente combinati con attività in presenza",
+            "Solo un audit documentale senza interviste",
+            "Va verificata la sede legale anche se vuota"
           ],
           "corretta": 1,
-          "spiegazione": "I metodi a distanza possono combinarsi con quelli in sito e servono anche per i siti virtuali; i principi dell'attività di audit restano immutati."
+          "slide": "s011",
+          "tipo": "applicazione"
         },
         {
-          "id": "19011_m01_q10",
-          "domanda": "Secondo la definizione della norma, la competenza è:",
+          "q": "Hai completato la formazione come auditor e vuoi arrivare alla certificazione delle competenze. Qual è il percorso coerente con quanto visto nel modulo?",
           "opzioni": [
-            "L'insieme dei titoli di studio posseduti da una persona",
-            "La capacità di applicare conoscenze e abilità per conseguire i risultati attesi",
-            "Il numero di audit condotti nella propria carriera",
-            "La conoscenza a memoria delle norme di sistema di gestione"
+            "Basta il superamento di questo corso",
+            "Formazione, poi esperienza sul campo (anche come auditor in addestramento), poi esame di certificazione secondo lo schema",
+            "Serve solo l'iscrizione a un albo",
+            "Cinque anni di anzianità aziendale in qualsiasi ruolo"
           ],
           "corretta": 1,
-          "spiegazione": "La competenza è la capacità di applicare conoscenze e abilità per conseguire i risultati attesi: non basta sapere, bisogna saper fare e produrre i risultati."
+          "slide": "s012",
+          "tipo": "applicazione"
         }
       ]
     },
@@ -407,7 +407,9 @@
             "Risultanze, evidenze, criteri, conclusioni",
             "Conclusioni, risultanze, criteri, evidenze"
           ],
-          "corretta": 1
+          "corretta": 1,
+          "tipo": "riconoscimento",
+          "slide": "s015"
         },
         {
           "q": "Le evidenze dell'audit devono essere:",
@@ -417,7 +419,9 @@
             "Esclusivamente documentali",
             "Raccolte solo tramite interviste"
           ],
-          "corretta": 1
+          "corretta": 1,
+          "tipo": "riconoscimento",
+          "slide": "s004"
         },
         {
           "q": "Un requisito può essere:",
@@ -427,7 +431,9 @@
             "Esplicito, generalmente implicito oppure obbligatorio",
             "Solo contrattuale"
           ],
-          "corretta": 2
+          "corretta": 2,
+          "tipo": "riconoscimento",
+          "slide": "s005"
         },
         {
           "q": "Che differenza c'è tra programma di audit e piano dell'audit?",
@@ -437,7 +443,9 @@
             "Il piano è pluriennale, il programma è giornaliero",
             "Il programma è redatto dall'organizzazione oggetto"
           ],
-          "corretta": 1
+          "corretta": 1,
+          "tipo": "comprensione",
+          "slide": "s008"
         },
         {
           "q": "L'esperto tecnico nel gruppo di audit:",
@@ -447,7 +455,9 @@
             "Firma il rapporto di audit",
             "Decide sulla certificazione"
           ],
-          "corretta": 1
+          "corretta": 1,
+          "tipo": "comprensione",
+          "slide": "s010"
         },
         {
           "q": "Le risultanze dell'audit possono indicare:",
@@ -457,7 +467,9 @@
             "Conformità, non conformità, rischi, opportunità di miglioramento e buone prassi",
             "Solo osservazioni generiche"
           ],
-          "corretta": 2
+          "corretta": 2,
+          "tipo": "riconoscimento",
+          "slide": "s006"
         },
         {
           "q": "Il principio di integrità comprende anche:",
@@ -467,7 +479,9 @@
             "Non documentare le divergenze",
             "Evitare di riferire gli ostacoli incontrati"
           ],
-          "corretta": 1
+          "corretta": 1,
+          "tipo": "comprensione",
+          "slide": "s017"
         },
         {
           "q": "Secondo la presentazione imparziale, gli ostacoli significativi incontrati durante la verifica:",
@@ -477,7 +491,9 @@
             "Vanno documentati nel rapporto",
             "Vanno comunicati solo all'organizzazione oggetto"
           ],
-          "corretta": 2
+          "corretta": 2,
+          "tipo": "comprensione",
+          "slide": "s018"
         },
         {
           "q": "Quando gli auditor interni non possono essere pienamente indipendenti dall'attività verificata:",
@@ -487,7 +503,9 @@
             "L'indipendenza non è più richiesta",
             "Si rinuncia a documentare le risultanze"
           ],
-          "corretta": 1
+          "corretta": 1,
+          "tipo": "comprensione",
+          "slide": "s021"
         },
         {
           "q": "Perché il campionamento è legato alla fiducia nelle conclusioni?",
@@ -497,7 +515,9 @@
             "Perché il campionamento è richiesto solo negli audit di terza parte",
             "Non c'è alcun legame"
           ],
-          "corretta": 1
+          "corretta": 1,
+          "tipo": "applicazione",
+          "slide": "s022"
         },
         {
           "q": "L'approccio basato sul rischio richiede di:",
@@ -507,7 +527,9 @@
             "Evitare le aree a rischio elevato",
             "Ridurre la durata delle verifiche"
           ],
-          "corretta": 1
+          "corretta": 1,
+          "tipo": "applicazione",
+          "slide": "s023"
         }
       ]
     }
