@@ -51,14 +51,6 @@ Checkpoint quiz bloccante a ogni modulo (fuori monte-ore) + esame finale con ban
 - **39001**: modulo dedicato ai fattori di prestazione RTS (esposizione/esito finale/esito intermedio) · modulo dedicato all'indagine sugli incidenti stradali
 - **42001**: modulo "capire l'IA quanto basta per verificarla" (unico nel catalogo) · doppio motore rischio+valutazione d'impatto (8.2-8.4) · controlli Appendice A con guida B
 
-## Domande aperte per il cliente (da sciogliere PRIMA della scrittura)
-
-1. **Durate confermate?** 19011 = 16h, tutti gli altri = 24h (così sono dimensionati gli skeleton).
-2. **Ordine di produzione**: proposto 9001 → 45001 → 27001 → 14001 → 22000 → 37001 → 42001 → 50001 → 39001 (priorità commerciale). Conferma o modifica?
-3. **Titolazione moduli**: i titoli sono definitivi o il cliente vuole rivederli (es. terminologia interna CERTIS)?
-4. **M1 di ogni corso** cita lo schema di certificazione (esame, requisiti, mantenimento): servono i dettagli reali degli schemi CERTIS per scrivere quelle slide con precisione.
-5. **Casi completi (M12)**: i settori scelti per i casi vanno bene o preferisce settori dove ha più clienti?
-
 ## Nota di produzione
 
 Ogni riga di questi skeleton è già misurabile dai gate automatici: budget parole per modulo
