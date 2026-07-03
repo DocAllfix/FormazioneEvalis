@@ -1,0 +1,1614 @@
+La presente norma è la versione ufficiale in lingua italiana della norma europea EN ISO 50001 
+(edizione agosto 2018) e dell'aggiornamento A1 (edizione settembre 2024).
+La presente norma sostituisce la UNI CEI EN ISO 50001:2018. 
+© Copyright UNI - Tutti i diritti riservati
+TESTO ITALIANO
+NORMA EUROPEA
+UNI CEI EN ISO 50001:2018+A1
+OTTOBRE 2024
+Versione italiana dell'ottobre 2024
+Sistemi di gestione dell'energia – Requisiti e linee 
+guida per l'uso
+Energy management systems – Requirements with guidance for use
+ICS 03.100.70; 27.015
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+SOMMARIO
+La norma definisce i requisiti per creare, attuare, mantenere e migliorare un sistema di gestione dell'energia 
+(SGE). L'obiettivo della norma è quello di consentire che un'organizzazione persegua, con un approccio 
+sistematico, il miglioramento continuo della propria prestazione energetica e dello stesso SGE. La 
+presente norma:
+a. è applicabile ad ogni organizzazione indipendentemente dalla tipologia, taglia, complessità, posizione
+geografica, approccio organizzativo o dai prodotti o servizi che fornisce;
+b. è applicabile alle attività che infl uenzano la prestazione energetica che sono gestite e controllate
+dall'organizzazione;
+c. è applicabile indipendentemente dalla quantità, uso e tipologia di energia consumata;
+d. richiede la dimostrazione di un miglioramento continuo della prestazione energetica, ma non
+definisce livelli di prestazione energetica da raggiungere;
+e. può essere utilizzata indipendentemente o essere allineata o integrata con altri sistemi di gestione.
+L'appendice A fornisce una linea guida per l'utilizzo della norma. 
+L'appendice B fornisce un confronto tra questa versione e la versione del 2011.
+La presente edizione della norma si differenzia dalla precedente dalla sola inclusione 
+dell'aggiornamento A1 (edizione settembre 2024) che riguarda le azioni relative al cambiamento 
+climatico.
+PREMESSA NAZIONALE
+La presente norma costituisce il recepimento in lingua italiana della norma europea EN ISO 50001 (edizione 
+agosto 2018) e dell'aggiornamento A1 (edizione settembre 2024) che assumono così lo status di norma 
+nazionale italiana.
+La presente norma è stata elaborata sotto la competenza dell'ente federato all'UNI
+CTI - Comitato Termotecnico Italiano
+e del
+CEI - Comitato Elettrotecnico Italiano
+La presente norma è stata ratificata dal Presidente del CEI, con delibera del 7 ottobre 2024.
+La presente norma è stata ratificata dal Presidente dell'UNI ed è entrata a far parte del corpo normativo 
+nazionale il 16 ottobre 2024.
+© UNI
+Riproduzione vietata ai sensi della Legge 22 aprile 1941 N° 633 e ss.mm.ii. 
+I contenuti del documento possono essere riprodotti o diffusi solo previa autorizzazione scritta di UNI.
+Le norme UNI (così come le EN e le ISO) sono documenti tutelati da copyright e sono disponibili a pagamento. Con l’acquisto di questo documento 
+(e con l’associazione a UNI) si partecipa al mantenimento e alla crescita di un sistema di autoregolamentazione che crea e tiene aggiornato lo stato 
+dell’arte, a garanzia di una qualità disponibile e diffusa.
+Le norme UNI sono elaborate grazie al contributo delle parti interessate, tutti i dettagli sull’iter sono riportati nella regolamentazione applicabile, 
+disponibile sul sito www.uni.com (Chi Siamo – Documenti).
+Si richiama l’attenzione sulla possibilità che alcuni degli elementi del presente documento possano essere oggetto di diritti di brevetto. UNI non deve 
+essere ritenuto responsabile dell’identificazione di tali diritti di brevetto.
+Le norme UNI sono riesaminate periodicamente, pertanto è importante che l’utente si accerti di essere in possesso dell’edizione in vigore. Si 
+raccomanda inoltre di verificare l’esistenza di norme UNI corrispondenti alle norme EN o ISO ove citate nei riferimenti normativi.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+INDICE
+© UNI Pagina IIIUNI CEI EN ISO 50001:2018+A1:2024
+PREMESSA CEN ALLA NORMA EN ISO 50001 1
+PREMESSA CEN ALL’AGGIORNAMENTO A1  1
+PREMESSA ISO ALLA NORMA ISO 50001 2
+PREMESSA ISO ALL’AGGIORNAMENTO AMD 1 3
+INTRODUZIONE 4
+0.1 Generalità ...................................................................................................................................................... 4
+0.2 Approccio alla prestazione energetica .......................................................................................... 4
+0.3 Ciclo Plan-Do-Check-Act (PDCA) .................................................................................................... 4
+figura 1 Ciclo Plan-Do-Check-Act ........................................................................................................................... 5
+0.4 Compatibilità con altre norme di sistemi di gestione ............................................................. 5
+0.5 Vantaggi del presente documento ................................................................................................... 6
+1 SCOPO E CAMPO DI APPLICAZIONE 7
+2 RIFERIMENTI NORMATIVI  7
+3 TERMINI E DEFINIZIONI  7
+3.1 Termini relativi all’organizzazione .................................................................................................... 7
+3.2 Termini relativi al sistema di gestione ............................................................................................ 8
+3.3 Termini relativi al requisito ................................................................................................................... 8
+3.4 Termini relativi alla prestazione ......................................................................................................... 9
+3.5 Termini relativi all’energia ..................................................................................................................  11
+4 CONTESTO DELL'ORGANIZZAZIONE  12
+4.1 Comprendere l'organizzazione e il suo contesto ..................................................................  12
+4.2 Comprendere le esigenze e le aspettative delle parti interessate ..............................  12
+4.3 Determinare il campo di applicazi one del sistema di gestione dell'energia ...........  12
+4.4 Sistema di gestione dell'energia ....................................................................................................  13
+5 LEADERSHIP  13
+5.1 Leadership e impegno .........................................................................................................................  13
+5.2 Politica energetica .................................................................................................................................  13
+5.3 Ruoli, responsabilità e autorità nell'organizzazione ............................................................  14
+6 PIANIFICAZIONE  14
+6.1 Azioni per affrontare rischi e opportunità ..................................................................................  14
+6.2 Obiettivi, traguardi energetici e piani ficazione per il loro raggiungimento...............  15
+6.3 Analisi energetica ..................................................................................................................................  15
+6.4 Indicatori della prestazione energetica ......................................................................................  16
+6.5 Consumo di riferimento ......................................................................................................................  16
+6.6 Pianificazione della raccolta dei dati energetici .....................................................................  16
+7 SUPPORTO 17
+7.1 Risorse .........................................................................................................................................................  17
+7.2 Competenza .............................................................................................................................................  17
+7.3 Consapevolezza .....................................................................................................................................  17
+7.4 Comunicazione .......................................................................................................................................  17
+7.5 Informazioni documentate .................................................................................................................  18
+7.5.1 Generalità .....................................................................................................................................................  18
+7.5.2 Creazione e aggiornamento ...................................................................................................................  18
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina IVUNI CEI EN ISO 50001:2018+A1:2024
+7.5.3 Controllo delle informazioni documentate .........................................................................................  18
+8 ATTIVITÀ OPERATIVE  18
+8.1 Pianificazione e controllo operativi ...............................................................................................  18
+8.2 Progettazione ...........................................................................................................................................  19
+8.3 Approvvigionamento ............................................................................................................................  19
+9 VALUTAZIONE DELLA PRESTAZIONE  19
+9.1 Monitoraggio, misurazione, analisi e valutazione della prestazione energetica 
+e del SGE .............................................................................................................................. .................... 19
+9.1.1 Generalità ....................................................................................................................................................  19
+9.1.2 Valutazione della conformità ai requisiti legislativi e ad altri requisiti ......................................  20
+9.2 Audit interno .............................................................................................................................................  20
+9.3 Riesame di direzione ...........................................................................................................................  20
+10 MIGLIORAMENTO  21
+10.1 Non conformità e azioni correttive ................................................................................................  21
+10.2 Miglioramento continuo ......................................................................................................................  22
+APPENDICE A LINEE GUIDA PER L'USO 23
+(informativa)
+figura A.1 Relazione tra la prestazione energetica e il SGE...........................................................................  23
+figura A.2 Processo di pianificazione energetica................................................................................................  26
+figura A.3 EnPI e valore dell'EnPI............................................................................................................................  28
+APPENDICE B CORRISPONDENZA TR A LA ISO 50001:2011 E LA ISO 50001:2018 32
+(informativa)
+prospetto B.1 Corrispondenza tra la ISO 50001:2011 e la ISO 50001:2018 ...................................................  32
+BIBLIOGRAFIA 34
+INDICE ALFABETICO DEI TERMINI 35
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 1 UNI CEI EN ISO 50001:2018+A1:2024
+PREMESSA CEN ALLA NORMA EN ISO 50001
+Il presente documento (EN ISO 50001:2018) è stato elaborato dal Comitato Tecnico
+ISO/TC 301 "Energy management and energy savings", in collaborazione con il Comitato
+Tecnico CEN/CLC/JTC 14 "Eneregy management, energy audits, energy savings" la cui
+segreteria è affidata all’UNI.
+Alla presente norma europea deve essere attr ibuito lo status di norma nazionale, o
+mediante pubblicazione di un testo identico o mediante notifica di adozione, al più tardi
+entro febbraio 2019, e le norme nazionali in contrasto devono essere ritirate al più tardi
+entro febbraio 2019.
+Si richiama l’attenzione alla possibilità che alcuni degli elementi del presente documento
+possano essere oggetto di brevetti. Il CEN non deve essere ritenuto responsabile di avere
+citato tali brevetti.
+Il presente documento sostituisce la EN ISO 50001:2011.
+In conformità alle Regole Comuni CEN/CENE LEC, gli enti nazionali di normazione dei
+seguenti Paesi sono tenuti a recepire la presente norma europea: Austria, Belgio,
+Bulgaria, Cipro, Croazia, Danimarca, Estonia, Finlandia, Francia, Germania, Grecia,
+Irlanda, Islanda, Italia, Lettonia, Lituania, Lussemburgo, Malta, Norvegia, Paesi Bassi,
+Polonia, Portogallo, Regno Unito, Repubblica Ceca, Repubblica Ex Jugoslava di
+Macedonia, Romania, Serbia, Slovacchia, Slovenia, Spagna, Svezia, Svizzera, Turchia e
+Ungheria.
+NOTIFICA DI ADOZIONE
+Il testo della ISO 50001:2018 è stato approvato dal CEN come EN ISO 50001:2018 senza
+alcuna modifica.
+PREMESSA CEN ALL’AGGIORNAMENTO A1
+Il testo della ISO 50001:2018/Amd 1:2024 è stato elaborato dal Comitato Tecnico
+ISO/TC 301 "Energy management and energy savings" dell'Organizzazione
+Internazionale per la Standardizzazione (ISO) ed è stato ripreso come
+EN ISO 50001:2018/A1:2024 dal Comitato Tecnico CEN-CENELEC/JTC 14 "Energy
+management and energy efficiency in the framework of energy transition" la cui segreteria
+è affidata all’UNI.
+Al presente aggiornamento della norma europea EN ISO 50001:2018 deve essere
+attribuito lo status di norma nazionale, o mediante pubblicazione di un testo identico o
+mediante notifica di adozione, al più tardi entro marzo 2025, e le norme nazionali in
+contrasto devono essere ritirate al più tardi entro marzo 2025.
+Si richiama l’attenzione alla possibilità che alcuni degli elementi del presente documento
+possano essere oggetto di brevetti. Il  CEN-CENELC non deve essere ritenuto
+responsabile di avere citato tali brevetti.
+Qualsiasi commento o richiesta sul presente documento dovrebbe essere rivolta al
+proprio ente di normazione nazionale. Una lista completa di tali enti è disponibile nel sito
+web del CEN e CENELEC.
+In conformità alle Regole Comuni CEN-CENELEC, gli ent i nazionali di normazione dei
+seguenti Paesi sono tenuti a recepire la presente norma europea: Austria, Belgio,
+Bulgaria, Cipro, Croazia, Danimarca, Estonia, Finlandia, Francia, Germania, Grecia,
+Irlanda, Islanda, Italia, Lettonia, Lituania, Lussemburgo, Malta, Norvegia, Paesi Bassi,
+Polonia, Portogallo, Regno Unito, Repubblica Ceca, Repubblica della Macedonia del
+Nord, Romania, Serbia, Slovacchia, Sloveni a, Spagna, Svezia, Svizzera, Turchia e
+Ungheria.
+NOTIFICA DI ADOZIONE
+Il testo della ISO 50001:2018/Amd 1:2024 è stato approvato dal CEN-CENELEC come
+EN ISO 50001:2018/A1:2024 senza alcuna modifica.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 2UNI CEI EN ISO 50001:2018+A1:2024
+PREMESSA ISO ALLA NORMA ISO 50001
+L'ISO (Organizzazione Internazionale di No rmazione) è la federazione mondiale degli
+organismi di normazione nazionali (membri ISO). L'attività di stesura delle norme
+internazionali è svolta generalmente attraverso comitati tecnici ISO. Ogni organismo
+membro interessato ad un argomento per il quale è stato istituito un comitato tecnico ha
+il diritto di essere rappresentato in tale co mitato. Anche le organi zzazioni internazionali,
+governative e non-governative, in collaborazione con l'ISO, partecipano ai suddetti lavori.
+L'ISO collabora strettamente con l'IEC (Commissione Elettrotecnica Internazionale) su
+tutti gli argomenti della normazione elettrotecnica.
+Le procedure seguite per sviluppare il presente documento, unitamente a quelle seguite
+per il suo successivo aggiornamento, sono descritte nelle Direttive ISO/IEC, Parte 1.
+Inoltre si dovrebbe prestare attenzione ai di versi criteri di approvazione necessari per i
+diversi tipi di documenti ISO. Il presente documento è stato redatto in conformità alle
+regole editoriali contenute nelle Direttive ISO/IEC, Parte 2. (vedere:
+www.iso.org/directives
+).
+Si richiama l'attenzione sulla possibilità che alcuni degli elementi del presente documento
+possano essere oggetto di brevetti. L'ISO n on deve essere ritenuto responsabile di aver
+citato alcuni o tutti questi brevetti. I dettagli sui brevetti identificati durante lo sviluppo del
+documento sono indicati nell'Introduzione e/o nell'elenco ISO delle dichiarazioni di
+brevetto ricevute (vedere www.iso.org/patents
+). 
+Qualsiasi denominazione commerciale utilizzata nel presente documento costituisce
+un'informazione fornita a supporto degli utenti e non costituisce un'approvazione. 
+Per una spiegazione sulla natura volontaria delle norme, sul significato di termini specifici
+ISO e delle espressioni relative alla valutazione di conformità, nonché informazioni
+sull'osservanza dell'ISO ai principi dell'Or ganizzazione Mondiale del Commercio (WTO)
+nell'ambito delle barriere tecniche per il commercio (TBT) vedere il seguente URL:
+www.iso.org/iso/foreword.html. 
+Questo documento è stato elaborato dal Comitato Tecnico ISO/TC 301 Energy
+management and energy savings.
+Questa seconda edizione ritira e sostituisce la prima edizione (ISO 50001:2011) che è
+stata revisionata da un punto di vista tecnico
+Le principali modifiche rispetto alla precedente versione sono: 
+- l’adozione dei requisiti ISO per le norme sui sistemi di gestione, inclusa la struttura di
+alto livello (HLS), l’impostazione comune del testo, termini e definizioni comuni al fine
+di assicurare un’elevata compatibilità con le altre norme; 
+- una agevolata integrazione con i processi di gestione strategica; 
+- un miglior leggibilità e organizzazione dei punti; 
+- una rafforzata en fasi al ruolo dell’alta direzione; 
+- un aggiornamento e riordino dei termini e delle definizioni al punto 3; 
+- nuove definizioni compresa quella del miglioramento della prestazione energetica; 
+- alcuni chiarimenti sulle tipologie di energia da considerare; 
+- alcuni chiarimenti in me rito all’analisi energetica; 
+- la normalizzazione degli indicatori di prestazione energetica (EnPI) e del relativo
+consumo di riferimento (EnB); 
+- dettagli aggiuntivi relativi al piano di raccolta dati e ai relativi requisiti; 
+- maggior chiarezza del testo relativo agli indicatori di prestazione energetica (EnPI) e
+del consumo di riferimento (EnB) per permettere una miglior comprensione. 
+Eventuali commenti o quesiti relativi al presente documento dovrebbero essere indirizzati
+all'ente di normazione nazionale del soggetto richiedente. La lista completa degli enti di
+normazione può essere visionata sul sito www.iso.org/members.html
+.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 3 UNI CEI EN ISO 50001:2018+A1:2024
+PREMESSA ISO ALL’AGGIORNAMENTO AMD 1
+L'ISO (Organizzazione Internazionale di No rmazione) è la federazione mondiale degli
+organismi di normazione nazionali (membri ISO). L'attività di stesura delle norme
+internazionali è svolta generalmente attraverso comitati tecnici ISO. Ogni organismo
+membro interessato ad un argomento per il quale è stato istituito un comitato tecnico ha
+il diritto di essere rappresentato in tale co mitato. Anche le organizzazioni internazionali,
+governative e non-governative, in collaborazione con l'ISO, partecipano ai suddetti lavori.
+L'ISO collabora strettamente con l'IEC (Commissione Elettrotecnica Internazionale) su
+tutti gli argomenti della normazione elettrotecnica.
+Le procedure seguite per sviluppare il presente documento, unitamente a quelle seguite
+per il suo successivo aggiornamento, sono descritte nelle Direttive ISO/IEC, Parte 1.
+Inoltre si dovrebbe prestare attenzione ai di versi criteri di approvazione necessari per i
+diversi tipi di documenti ISO. Il presente documento è stato elaborato in conformità alle
+regole editoriali contenute nelle Direttive ISO/IEC, Parte 2 (vedere
+www.iso.org/directives
+).
+L’ISO richiama l'attenzio ne sulla possibilità che l’impl ementazione del presente
+documento possa comportare l'uso di (un) brevetto/i. L'ISO non prende posizione in
+merito all'evidenza, alla validità o all'applicabilità di eventuali diritti di brevetto rivendicati in
+merito. Alla data di pubblicazione del presente documento, l'ISO non aveva ricevuto
+notifica circa (un) brevetto/i che può/possono essere necessario/i per implementare il
+presente documento. Tuttavia, si avverte chi implementa che essa può non rappresentare
+le informazioni più recenti, che possono essere ottenute dalla banca dati dei brevetti
+disponibile all'indirizzo www.iso.org/patents.
+ L'ISO non deve essere ritenuto responsabile
+dell’identificazione di alcuni o di tutti questi diritti di brevetto.
+Qualsiasi denominazione commerciale utilizzata nel presente documento costituisce
+un'informazione fornita a supporto degli utenti e non costituisce un'approvazione.
+Per una spiegazione sulla natura volontaria delle norme, sul significato di termini specifici
+ISO e delle espressioni relative alla valutazione di conformità, nonché informazioni
+sull'osservanza dell'ISO ai principi dell'Or ganizzazione Mondiale del Commercio (WTO)
+nell'ambito delle barriere tecniche per il commercio (TBT) vedere il seguente URL:
+www.iso.org/iso/foreword.html.
+Il presente documento è stato elaborato dal Comitato Tecnico ISO/TC 301, Energy
+management and energy savings , in conformità alla Risoluzione 75/2023 del Technical
+Management Board.
+Qualsiasi commento o richiesta sul presente documento dovrebbe essere rivolta al
+proprio ente di normazione nazionale. Una lista completa di tali enti è fornita al sito web
+www.iso.org/members.html.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 4UNI CEI EN ISO 50001:2018+A1:2024
+INTRODUZIONE
+0.1 Generalità
+La finalità del presente documento è quella di consentire alle organizzazioni di stabilire i
+sistemi e i processi necessari per migliora re continuamente la prestazione energetica,
+che comprende l'efficienza energetica, l' uso e il consumo energetico. Il presente
+documento specifica i requisiti del sistema di gestione dell'energia (SGE) per
+un'organizzazione. Il successo nell'attuazione di un SGE favorisce una cultura del
+miglioramento della prestazione energetica che dipende dall'impegno di tutti i livelli
+dell'organizzazione, in particolare dell'alta direzione. In molti casi, questo comporta
+cambiamenti culturali all'interno di un'organizzazione.
+Il presente documento si applica alle attività sotto il controllo dell'organizzazione. La sua
+applicazione può essere adattata ai requisiti specifici dell'organizzazione, che
+comprendono la complessità dei suoi sistemi, il grado di informazione documentata e le
+risorse disponibili. Il presente documento non si applica all'uso del prodotto da parte degli
+utenti finali al di fuori del campo di applicazione e dei confini del SGE, né alla
+progettazione del prodotto al di fuori di impianti, attrezzature, sistemi o processi che
+usano energia. Il presente documento si applica alla progettazione e
+all'approvvigionamento di impianti, attrezzature, sistemi o processi che usano energia nel
+campo di applicazione e nei confini del SGE.
+Lo sviluppo e l'attuazione di un SGE comprende una politica energetica, obiettivi, traguardi
+energetici e piani d'azione correlati alla sua efficienza energetica, all'uso dell'energia e al
+consumo energetico, nel rispetto dei requisiti di legge applicabili e di altri requisiti. Un SGE
+consente a un'organizzazione di definire e raggi ungere obiettivi e traguardi energetici, di
+intraprendere le azioni necessarie per migliorare la propria prestazione energetica e di
+dimostrare la conformità del proprio sistema ai requisiti del presente documento.
+0.2 Approccio alla prestazione energetica
+Il presente documento fornisce i requisiti pe r un processo sistematico, basato sui dati e
+sui fatti, focalizzato sul miglioramento continuo della prestazione energetica. La
+prestazione energetica è un elemento chiave integrato nei concetti introdotti nel presente
+documento per garantire risultati efficaci e misurabili nel tempo. La prestazione energetica
+è un concetto legato all'efficienza energetica, all’uso di energia e al consumo energetico.
+Indicatori di prestazione energetica (EnPI)  e consumi di riferimento (EnB) sono due
+elementi correlati trattati nel presente documento per consentire alle organizzazioni di
+dimostrare il miglioramento della prestazione energetica.
+0.3 Ciclo Plan-Do-Check-Act (PDCA)
+Il SGE descritto nel presente documento si basa sul quadro di miglioramento continuo
+Plan-Do-Check-Act (PDCA) e incorpora la gestione dell'energia nelle pratiche
+organizzative esistenti, come illustrato nella figura 1.
+Nel contesto della gestione dell'energia, l'approccio PDCA può essere delineato come segue.
+- Plan (Pianificare): comprendere il contesto dell'organizzazione, stabilire una politica
+energetica e un gruppo di gestione dell'en ergia, considerare azioni per affrontare
+rischi e opportunità, condurre un'analisi energetica, identificare gli usi significativi
+dell'energia (USE) e stabilire indicatori di prestazione energetica (EnPI), consumo(i)
+di riferimento (EnB), obiettivi e traguardi energetici e piani d'azione necessari per
+ottenere risultati che migliorino la prestazione energetica in conformità alla politica
+energetica dell'organizzazione.
+- Do (Fare): attuare i piani d'azione, i co ntrolli operativi e di  manutenzione e la
+comunicazione, assicurare la competenza e considerare la prestazione energetica
+nella progettazione e nell'approvvigionamento.
+- Check (Verificare): monitorare, misurare, analizzare, valutare, condurre audit e
+svolgere riesami della direzione della prestazione energetica e del SGE.
+- Act (Agire): intraprendere azioni per affrontare le non conformità e migliorare
+continuamente la prestazione energetica e il SGE.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 5 UNI CEI EN ISO 50001:2018+A1:2024
+figura 1 Ciclo Plan-Do-Check-Act
+0.4 Compatibilità con altre nor me di sistemi di gestione
+Il presente documento è conforme ai requisiti dell'ISO per le norme sui sistemi di
+gestione, che comprendono una struttura di alto livello, un testo di base identico e termini
+e definizioni comuni, garantendo così un elevato livello di compatibilità con altre norme sui
+sistemi di gestione. Il presente documento può essere utilizzato in modo indipendente;
+tuttavia, un'organizzazione può scegliere di combinare il proprio SGE con altri sistemi di
+gestione, oppure integrare il proprio SGE nel raggiungimento di altri obiettivi aziendali,
+ambientali o sociali. Due organ izzazioni che svolgono attività  operative simili, ma con
+prestazioni energetiche diverse, possono entrambe rispettare i requisiti della ISO 50001.
+Il presente documento conti ene i requisiti utilizzati per  valutare la conformità.
+Un'organizzazione che desidera dimostrare la conformità al presente documento può
+farlo:
+- effettuando una valutazione e un'auto-dichiarazione, oppure
+- chiedendo conferma della sua conformità o auto-dichiarazione da parte delle parti
+interessate, come i clienti, oppure
+- chiedendo la certificazione/registrazione del proprio SGE presso un organismo
+esterno.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 6UNI CEI EN ISO 50001:2018+A1:2024
+Nel presente documento sono utilizzate le seguenti forme verbali:
+- "deve" indica un requisito;
+- "dovrebbe" indica una raccomandazione;
+- “può" 1) indica un permesso (may), una possibilità o capacità (can).
+Le informazioni contrassegnate come “Nota” intendono contribuire alla comprensione o
+all’utilizzo del documento. Le  “Note” utilizzate nel punto  3 forniscono informazioni
+aggiuntive che integrano la terminologia e possono contenere prescrizioni relative
+all'utilizzo di un termine.
+0.5 Vantaggi del presente documento
+L'efficace attuazione del presente documento fornisce un approccio sistematico al
+miglioramento della prestazione energetica che può trasformare il modo in cui le
+organizzazioni gestiscono l'energia. Integrando la gestione dell'energia nella prassi
+aziendale, le organizzazioni possono stabilire un processo  di miglioramento continuo
+della prestazione energetica. Migliorando la prestazione energetica e i costi energetici
+associati, le organizzazioni possono essere più competitive. Inoltre, l'attuazione può
+portare le organizzazioni a raggiungere gli obiettivi generali di mitigazione del
+cambiamento climatico riducendo le proprie emissioni di gas serra legate all'energia.
+1) Nota nazionale - Nella presente norma è utilizzato lo stesso verbo per la traduzione in italiano di “may” e “can”. La
+diversa accezione è desumibile dal contesto relativo alla specifica frase.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 7 UNI CEI EN ISO 50001:2018+A1:2024
+1 SCOPO E CAMPO DI APPLICAZIONE
+Il presente documento specifica i requisiti per stabilire, attuare, mantenere e migliorare un
+sistema di gestione dell'energia (SGE). L'esito atteso è quello di consentire a
+un'organizzazione di seguire un approccio sistematico per ottenere un miglioramento
+continuo della prestazione energetica e del SGE.
+Il presente documento:
+a) è applicabile a qualsiasi organizzazione indipendentemente dal tipo, dalle
+dimensioni, dalla complessità, dalla posizione geografica, dalla cultura organizzativa
+o dai prodotti e servizi forniti;
+b) è applicabile alle attività che influenzano la prestazione energetica che sono gestite
+e controllate dall'organizzazione;
+c) è applicabile a prescindere dalla quantità, dall'uso o dai tipi di energia consumata;
+d) richiede la dimostrazione del continuo miglioramento della prestazione energetica,
+ma non definisce i livelli di migliora mento della prestazi one energetica da
+raggiungere;
+e) può essere utilizzato in m odo indipendente, oppure essere allineato o integrato con
+altri sistemi di gestione.
+L’appendice A fornisce linee guida per l’uso del presente documento. L'appendice  B
+fornisce un confronto tra la presente edizione e la precedente.
+2 RIFERIMENTI NORMATIVI
+Il presente documento non contiene riferimenti normativi.
+3 TERMINI E DEFINIZIONI
+Ai fini del presente documento, si applicano i seguenti termini e definizioni.
+ISO e IEC mantengono banche dati terminologiche a supporto della normazione ai
+seguenti indirizzi:
+- ISO Online browsing platform: disponibile all'indirizzo http://www.iso.org/obp
+- IEC Electropedia: disponibile all’in dirizzo http://www.electropedia.org/
+3.1 Termini relativi all’organizzazione
+3.1.1 organizzazione : Persona o gruppo di persone avente funzioni proprie con responsabilità,
+autorità e relazioni per conseguire i propri obiettivi (punto 3.4.13).
+Nota 1 Il concetto di organizzazione include, senza limitarsi a ciò, commerciante in proprio, società, raggruppamento
+di società, azienda, impresa, au torità, partnership, organismo umanita rio o istituzione, o loro parti o
+combinazioni, in forma associata o meno, pubblica o privata.
+3.1.2 alta direzione : Persona o gruppo di persone che, dal livello più elevato, guidano e tengono
+sotto controllo un'organizzazione (3.1.1).
+Nota 1 L’alta direzione ha il potere di delegare l’autorità e mettere a disposizione le risorse all’interno
+dell’organizzazione.
+Nota 2 Se il campo di applicazione del sistema di gestione (punto 3.2.1) copre solo una parte di un’organizzazione,
+l’alta direzione si riferisce a coloro che guidano e t engono sotto controllo quella parte dell’organizzazione
+stessa.
+Nota 3 L'alta direzione controlla l'organizzazi one come definito nel contesto del campo di applicazione del SGE
+(punto 3.1.4) e dei confini (punto 3.1.3) del sistema di gestione dell'energia (punto 3.2.2).
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 8UNI CEI EN ISO 50001:2018+A1:2024
+3.1.3 confine : Limiti fisici o organizzativi.
+Esempi:
+Un processo (punto 3.3.6); un gruppo di processi; un sito; più siti sotto il controllo di
+un'organizzazione, o un'intera organizzazione (punto 3.1.1).
+Nota 1 L'organizzazione definisce il(i) confine(i) del proprio SGE.
+3.1.4 campo di applicazione del si stema di gestione dell'energia; campo di applicazione del SGE:
+Insieme di attività, che un'organizzazione (punto 3.1.1) gestisce per mezzo di un sistemi
+di gestione dell'energia (punto 3.2.2).
+Nota 1 Il campo di applicazione del SGE può comprendere diversi confini (punto 3.1.3) e può comprendere le attività
+di trasporto.
+3.1.5 parte interessata (termine preferito) ; stakeholder (termine ammesso) : Persona oppure
+organizzazione (punto 3.1.1) che può influenzare, essere influenzata, o percepire se
+stessa come influenzata da una decisione o attività.
+3.2 Termini relativi al sistema di gestione
+3.2.1 sistema di gestione : Insieme di elementi correlati o interagenti di un'organizzazione (punto
+3.1.1) finalizzato a stabilire politiche (punto 3.2.3) e obiettivi (punto 3.4.13) e processi
+(punto 3.3.6) per conseguire tali obiettivi.
+Nota 1 Un sistema di gestione può affrontare a una o più discipline.
+Nota 2 Gli elementi del sistema comprendono la struttura, i ruoli e le responsabilità, la pianificazione e il
+funzionamento dell’organizzazione.
+Nota 3 In alcuni sistemi di gestione, il  campo di applicazione di un sistem a di gestione può comprendere l'intera
+organizzazione, funzioni specifiche ed identificate dell'organizzazione, settori specifici ed identificati
+dell'organizzazione, oppure una o pi ù funzioni nell'ambito di un gruppo di organizzazioni. Il campo di
+applicazione del SGE (punto 3.1.4) comprende tutti i tipi di energia all'interno dei suoi confini (punto 3.1.3).
+3.2.2 sistema di gestione dell'energia; SGE : Sistema di gestione (punto 3.2.1) per stabilire una
+politica energetica  (punto 3.2.4), obiettivi (punto 3.4.13), traguardi energetici  (punto
+3.4.15), piani di azione e processo(i) (punto 3.3.6) per ottenere gli obiettivi e i traguardi
+energetici.
+3.2.3 politica : Orientamenti e indirizzi di un' organizzazione (punto 3.1.1) espressi in modo
+formale dalla sua alta direzione (punto 3.1.2).
+3.2.4 politica energetica : Dichiarazione da parte dell' organizzazione (punto 3.1.1) della(e)
+propria(e) intenzione(i), direzione(i) e impegno(i) generale(i) relativi alla propria
+prestazione energetica  (punto 3.4.3), come formalmente espressi dall' alta direzione
+(punto 3.1.2).
+3.2.5 gruppo di gestione dell’energia : Persona(e) con re sponsabilità e autorità per l’efficace
+attuazione di un sistema di gestione dell'energia (punto 3.2.2) e per il conseguimento del
+miglioramento della prestazione energetica (punto 3.4.6).
+Nota 1 Nel determinare la dimensione di un gruppo di ges tione dell'energia si prendono in considerazione la
+dimensione e la natura di un' organizzazione (punto 3.1.1) e le risorse di sponibili. Una singola persona può
+svolgere il ruolo del gruppo.
+3.3 Termini relativi al requisito
+3.3.1 requisito : Esigenza o aspettativa che può essere esplicita, generalmente implicita, oppure
+obbligatoria.
+Nota 1 "Generalmente implicita" significa che è uso o prassi comune, per l'organizzazione (punto 3.1.1) e per le parti
+interessate (punto 3.1.5), che l’esigenza o l’aspettativa in esame sia implicita.
+Nota 2 Un requisito esplicito è un requisito che è specificato, per esempio, in informazioni documentate (punto 3.3.5).
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 9 UNI CEI EN ISO 50001:2018+A1:2024
+3.3.2 conformità : Soddisfacimento di un requisito (punto 3.3.1).
+3.3.3 non conformità : Mancato soddisfacimento di un requisito (punto 3.3.1).
+3.3.4 azione correttiva : Azione per eliminare la causa di una non conformità (punto 3.3.3) e per
+prevenirne la ripetizione.
+3.3.5 informazioni documentate : Informazioni che devono essere controllate e conservate da
+parte di un'organizzazione (punto 3.1.1) incluso il supporto che le contiene.
+Nota 1 Le informazioni documentate possono essere in qual siasi formato o su qualsiasi mezzo e provenire da
+qualsiasi fonte.
+Nota 2 Le informazioni documentate possono riferirsi a:
+-i l  sistema di gestione (punto 3.2.1), compresi i processi (punto 3.3.6) correlati;
+- le informazioni prodotte per il funzi onamento dell’organizzazione (documentazione);
+- l’evidenza dei risultati conseguiti (registrazioni).
+3.3.6 processo : Insieme di attività correlate o interagenti che trasformano input in output.
+Nota 1 Un processo relativo alle attività di un'organizzazione (punto 3.1.1) può essere
+- fisico (per esempio processi che us ano energia, come la combustione), oppure
+- attività o servizio (per  esempio evasione ordine).
+3.3.7 monitoraggio : Determinazione dello stato di un sistema, di un processo (punto 3.3.6) o di
+un'attività.
+Nota 1 Per determinare lo stato, può essere necessario verificare, sorvegliare oppure osservare in modo critico.
+Nota 2 In un sistema di gestione dell'energia (punto 3.2.2), il monitoraggio può essere un'analisi dei dati energetici.
+3.3.8 audit : Processo (punto 3.3.6) sistematico, indipendente e documentato per ottenere
+evidenze di audit e  valutarle oggettivamente al fine di determinare in quale misura i criteri
+di audit siano soddisfatti.
+Nota 1 Un audit può essere un audit interno (di prima parte) o un audit esterno (di seconda parte o di terza parte) e
+può essere un audit combinato (che combina due o più discipline).
+Nota 2 Un audit interno è condotto dall’organizzazione (punto 3.1.1) stessa o da una parte esterna per suo conto.
+Nota 3 Le “evidenze di audit” e i “criteri di audit” sono definiti nella ISO 19011.
+Nota 4 Il termine "audit" come qui definito e come utilizzato  nel presente documento signi fica l'audit interno di un
+sistema di gestione dell'energia  (punto 3.2.2). Questo è divers o da un "audit energetico". In questa
+definizione, per "evidenze di audit" si intendono le evidenze di un audit interno del sistema di gestione
+dell'energia e non le evidenze di un audit energetico.
+3.3.9 affidare all'esterno (verbo): Fare un accordo in cui un'organizzazione (punto 3.1.1) esterna
+svolge parte della funzione o processo (punto 3.3.6) di un'organizzazione.
+Nota 1 Sebbene un’organizzazione esterna sia fuori dal campo di applicazione del sistema di gestione (punto 3.2.1),
+la funzione o il processo affidato all'esterno ricade nel campo di applicazione stesso.
+3.4 Termini relativi alla prestazione
+3.4.1 misurazione : Processo (punto 3.3.6) finalizzato a determinare un valore.
+Nota 1 Vedere la ISO/IEC Guide 99 per informazioni aggiuntive sui concetti relativi alle misure.
+3.4.2 prestazione : Risultato misurabile.
+Nota 1 La prestazione può riguardare risultanze sia quantitative sia qualitative.
+Nota 2 La prestazione può riguardare la gestione di attività, processi (punto 3.3.6), prodotti (compresi i servizi),
+sistemi od organizzazioni (punto 3.1.1).
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 10UNI CEI EN ISO 50001:2018+A1:2024
+3.4.3 prestazione energetica : Risultato(i) misurabile(i) relativo(i) all'efficienza energetica (punto
+3.5.3), all'uso dell'energia (punto 3.5.4) e al consumo energetico (punto 3.5.2).
+Nota 1 La prestazione energetica può essere misurata rispetto agli obiettivi (punto 3.4.13), ai traguardi energetici
+(punto 3.4.15) e ad altri requisiti di prestazione energetica dell'organizzazione  (punto 3.1.1).
+Nota 2 La prestazione energetica è una componente della prestazione (punto 3.4.2) del sistema di gestione
+dell'energia (punto 3.2.2).
+3.4.4 indicatore di prestazione energetica; EnPI : misura o unità di prestazione energetica (punto
+3.4.3), come definita dall'organizzazione (punto 3.1.1).
+Nota 1 L'(gli) EnPI può(possono) essere espresso(i) util izzando un numero semplice, un rapporto o un modello, a
+seconda della natura delle attività da misurare.
+Nota 2 Vedere ISO 50006 per informazioni aggiuntive sul(sugli) EnPI.
+3.4.5 valore dell'indicatore di pres tazione energetica; valore dell'EnPI : La quantificazione
+dell'EnPI (punto 3.4.4) in un momento o in un periodo di tempo determinato.
+3.4.6 miglioramento della prestazione energetica : Miglioramento dei risultati misurabili
+dell'efficienza energetica  (punto 3.5.3), o del consumo energetico  (punto 3.5.2) in
+relazione all' uso dell'energia  (punto 3.5.4), rispetto al consumo di riferimento (energy
+baseline) (punto 3.4.7).
+3.4.7 consumo di riferimento (energy baseline); EnB : Riferimento(i) quantitativo(i) che fornisce
+una base di confronto per la prestazione energetica (punto 3.4.3).
+Nota 1 Un consumo di riferimento si basa su dati relativi ad un periodo di tempo e/o su condizioni specifiche, come
+definito dall'organizzazione (punto 3.1.1).
+Nota 2 Uno o più consumi di riferimento sono utilizzati per la determinazione del miglioramento della prestazione
+energetica (punto 3.4.6), come riferimento prima e dopo, o con e senza l'implem entazione di azioni di
+miglioramento della prestazione energetica.
+Nota 3 Vedere ISO 50015 per informazioni aggiuntive sulla misurazione e la verifica della prestazione energetica.
+Nota 4 Vedere ISO 50006 per informazioni aggiuntive su EnPI ed EnB.
+3.4.8 fattore statico : Fattore noto che influisce sulla prestazione energetica (punto 3.4.3) e che
+non cambia regolarmente.
+Nota 1 I criteri di significatività sono determinati dall'organizzazione (punto 3.1.1).
+Esempi:
+Dimensioni dell'impianto; progettazione delle attrezzature installate; numero di turni
+settimanali; gamma di prodotti.
+[FONTE: ISO  50015:2014, punto 3.22, modificato  - la nota 1 e l'esempio 1 sono stati
+modificati e l'esempio 2 è stato eliminato.]
+3.4.9 variabile pertinente : Fattore quantificabile che infl uisce in modo significativo sulla
+prestazione energetica (punto 3.4.3) e che cambia regolarmente.
+Nota 1 I criteri di significatività sono determinati dall'organizzazione (punto 3.1.1).
+Esempi: 
+Le condizioni atmosferiche; le condizioni operative (temperatura interna, livello di
+illuminamento), le ore di lavoro, la produzione.
+[FONTE: ISO  50015:2014, punto 3.18, modificato - la nota 1 è stata aggiunta e la
+formulazione degli esempi è stata modificata.]
+3.4.10 normalizzazione : Modifica dei dati per tener conto delle variazioni per consentire il
+confronto delle prestazioni energetiche (punto 3.4.3) in condizioni equivalenti.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 11 UNI CEI EN ISO 50001:2018+A1:2024
+3.4.11 rischio : Effetto dell'incertezza.
+Nota 1 Un effetto è uno scostamento da quanto atteso - positivo o negativo.
+Nota 2 L’incertezza è lo stato, anche parziale, di carenza di informazioni relative o di comprensione o conoscenza di
+un evento, delle sue conseguenze o della sua probabilità.
+Nota 3 Il rischio è spesso caratterizzato dal riferimento a potenziali “eventi” (come defin ito nella ISO Guide 73) e
+“conseguenze” (come definito nella ISO Guide 73), o da una loro combinazione.
+Nota 4 Il rischio è spesso espresso in termini di combinazione delle conseguenz e di un evento (compresi
+cambiamenti nelle circostanze) e della “probabilità” (come definito nella ISO Guide 73) associata al suo
+verificarsi.
+3.4.12 competenza : Capacità di applicare conoscenze e abilità per conseguire i risultati attesi.
+3.4.13 obiettivo : Risultati da ottenere.
+Nota 1 Un obiettivo può essere strategico, tattico od operativo.
+Nota 2 Gli obiettivi possono riguardare differenti discipline (quali obiettivi finanziari, di salute e sicurezza e ambientali)
+e possono applicarsi a livelli differenti [come quello st rategico, dell’intera organizzazione, di progetto, di
+prodotto e di processo (punto 3.3.6)].
+Nota 3 Un obiettivo può essere espresso in altri modi, per  esempio come un esito atteso, uno scopo, un criterio
+operativo, come un obiettivo energetico, oppure mediante l' utilizzo di altre parole di  significato simile (per
+esempio finalità, scopo).
+Nota 4 Nel contesto dei sistemi di gestione dell'energia  (punto 3.2.2), gli obiettivi sono definiti dall' organizzazione
+(punto 3.1.1), in coerenza con la politica energetica (punto 3.2.4), per conseguire specifici risultati.
+3.4.14 efficacia : Grado di realizzazione delle attività pianificate e di conseguimento dei risultati
+pianificati.
+3.4.15 traguardo energetico : Obiettivo (punto 3.4.13) quantificabile di miglioramento della
+prestazione energetica (punto 3.4.6).
+Nota 1 Un traguardo energetico può essere compreso in un obiettivo.
+3.4.16 miglioramento continuo : Attività ricorrente per aumentare la prestazione (punto 3.4.2).
+Nota 1 Il concetto riguarda il miglioramento della prestazione energetica  (punto 3.4.3) e il sistema di gestione
+dell'energia (punto 3.2.2).
+3.5 Termini relativi all’energia
+3.5.1 energia : Elettricità, combustibili, vapore, calore, aria compressa ed altri mezzi simili.
+Nota 1 Ai fini del presente documento, il termine energia fa riferimento ai vari tipi di energia, incluse le rinnovabili, che
+possono essere acquistate, immagazzinate, trattate, utilizzate in attrezzature o in processi, o recuperate.
+3.5.2 consumo energetico : Quantità di energia (punto 3.5.1) utilizzata.
+3.5.3 efficienza energetica : Rapporto o altra relazione quantitativa tra i risultati in termini di
+prestazioni (punto 3.4.2), servizi, beni, merci o energia (punto 3.5.1), e l’immissione di
+energia.
+Esempi:
+Efficienza di conversione; energia richiesta/energia consumata.
+Nota 1 Sia l'input che l'output dovrebbero essere chiaramente specificati in quantità e qualità ed essere misurabili.
+3.5.4 uso dell'energia : Modalità di impiego dell'energia (punto 3.5.1).
+Esempi:
+Ventilazione, illuminazione, riscaldamento, raffreddamento, trasporto, archiviazione dati,
+processi di produzione.
+Nota 1 L'uso dell'energia è talvolta definito "uso finale dell'energia".
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 12UNI CEI EN ISO 50001:2018+A1:2024
+3.5.5 analisi energetica : Analisi dell' efficienza energetica  (punto 3.5.3), dell' uso dell’energia
+(punto 3.5.4) e del consumo energetico (punto 3.5.2) sulla base di dati e altre informazioni,
+che portano all'identificazione degli USE (punto 3.5.6) e delle opportunità di
+miglioramento della prestazione energetica (punto 3.4.6).
+3.5.6 uso significativo dell'energia; USE : Uso dell'energia  (punto 3.5.4) che determina un
+sostanziale consumo energetico  (punto 3.5.2) e/o che offre considerevoli potenziali di
+miglioramento della prestazione energetica (punto 3.4.6).
+Nota 1 I criteri di significatività sono determinati dall'organizzazione (punto 3.1.1).
+Nota 2 Gli USE possono essere impianti, sistemi, processi o attrezzature.
+4 CONTESTO DELL'ORGANIZZAZIONE
+4.1 Comprendere l'organizz azione e il suo contesto
+L'organizzazione deve determinare gli aspetti esterni e interni pertinenti al suo scopo e
+che influiscono sulla sua capacità di ottenere l'(gli) esito(i) atteso(i) del suo SGE e
+migliorare la sua prestazione energetica.
+L’organizzazione deve stabilire se il cambiamento climatico sia un fattore rilevante.
+4.2 Comprendere le esigenze e le aspettative delle parti interessate
+L'organizzazione deve determinare:
+a) le parti interessate pertinenti per la prestazione energetica e il SGE;
+b) i requisiti pertinenti di tali parti interessate;
+c) quali tra le esigenze e le aspettative identificate sono affrontate dall'organizzazione
+mediante il proprio SGE.
+L'organizzazione deve:
+- garantire di avere accesso ai  requisiti legislativi applicabili e ad altri requisiti relativi
+alla sua efficienza energetica, all'uso dell'energia e al consumo energetico;
+- determinare in che modo questi requisiti siano app licabili alla sua efficienza
+energetica, all'uso dell'energia e al consumo energetico;
+- garantire che tali requisiti si ano presi in considerazione;
+- riesaminare a intervalli definiti i pr opri requisiti legali e altri requisiti.
+Nota Per informazioni aggiuntive sulla gestione della conformità, vedere la ISO 19600.
+Nota Le parti interessate rilevanti possono avere requisiti relativi ai cambiamenti climatici. 
+4.3 Determinare il campo di applicazione  del sistema di gestione dell'energia
+L'organizzazione deve determ inare i confini e l'applicab ilità del SGE per stabilirne il
+relativo campo di applicazione.
+Nel determinare il campo di applicazione del SGE, l’organizzazione deve considerare:
+a) gli aspetti esterni e interni di cui al punto 4.1;
+b) i requisiti di cui al punto 4.2.
+L'organizzazione deve assicurare di avere l' autorità per controllare la propria efficienza
+energetica, uso dell’energia e consumo energetico entro il campo di applicazione e i
+confini. L'organizzazione non deve escludere nessun tipo di energia presente all'interno
+del campo di applicazione e dei confini.
+Il campo di applicazione e i confini del SGE devono essere mantenuti come informazioni
+documentate (vedere punto 7.5).
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 13 UNI CEI EN ISO 50001:2018+A1:2024
+4.4 Sistema di gestione dell'energia
+L'organizzazione deve stabilire,  attuare, mantenere e miglio rare in modo continuo un
+SGE, compresi i processi necessari e le lo ro interazioni, e migliorare continuamente la
+prestazione energetica, in conformità ai requisiti del presente documento.
+I processi necessari possono variare da un'organizzazione all'altra a causa:
+- della dimensione dell'organizzazione e del suo ti po di attività, processi, prodotti e servizi;
+- della complessità dei processi e delle loro interazioni;
+- della competenza del personale.
+5 LEADERSHIP
+5.1 Leadership e impegno
+L'alta direzione deve dimostrare leadership e impegno per quanto riguarda il
+miglioramento continuo delle proprie prestazioni energetiche e l'efficacia del SGE:
+a) assicurando che siano stabiliti il cam po di applicazione e i confini del SGE;
+b) assicurando che la politica energetica (vedere punto 5.2), gli obiettivi e i traguardi
+energetici (vedere punto 6.2) siano stabiliti e che siano compatibili con la direzione
+strategica dell'organizzazione;
+c) assicurando l’integrazione  dei requisiti del SGE nei processi aziendali
+dell’organizzazione;
+Nota L’espressione “aziendale” nel presente documento può essere intesa in senso ampio, indicando quelle attività
+che sono determinanti per gli scopi dell'organizzazione.
+d) assicurando che siano approvati e attuati i piani di azione;
+e) assicurando la disponibilità delle risorse necessarie al SGE;
+f) comunicando l'importanza di una gestione dell'energia efficace e della conformità ai
+requisiti del SGE;
+g) assicurando che il SGE consegua l'(gli) esito(i) atteso(i);
+h) promuovendo il miglioramento continuo delle prestazioni energetiche e del SGE;
+i) assicurando la formazione di un gruppo di gestione dell'energia;
+j) guidando e sostenendo le persone affinché contribuiscano all'efficacia del SGE e al
+miglioramento della prestazione energetica;
+k) fornendo sostegno agli altri pertinenti  ruoli gestionali per dimostrare la loro
+leadership, come essa si applica alle rispettive aree di responsabilità;
+l) assicurando che l'(gli) EnPI rappresenti(no) adeguatamente le prestazioni
+energetiche;
+m) assicurando che i processi siano stabiliti e attuati per identifi care e affrontare i
+cambiamenti che riguardano il SGE e la prestazione energetica nel campo di
+applicazione e nei confini del SGE.
+5.2 Politica energetica
+L'alta direzione deve stabilire una politica energetica che:
+a) sia appropriata agli scopi dell'organizzazione;
+b) fornisca un quadro di riferimento per la definizione e la revisione degli obiettivi e dei
+traguardi energetici (vedere punto 6.2);
+c) comprenda un impegno a gar antire la disponibilità di in formazioni e le risorse
+necessarie per raggiungere gli obiettivi e i traguardi energetici prefissati;
+d) comprenda un impegno a soddi sfare i requisiti legislativ i applicabili e altri requisiti
+(vedere punto 4.2) relativi all'efficienza energetica, all'uso dell'energia e al consumo
+energetico;
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 14UNI CEI EN ISO 50001:2018+A1:2024
+e) comprenda un impegno al miglioramento continuo (vedere punto 10.2) della
+prestazione energetica e del SGE;
+f) sostenga l'approvvigionamento (vedere punt o 8.3) di prodotti e servizi efficienti
+energeticamente che hanno un impatto sulla prestazione energetica;
+g) supporti le attività di progettazione (vedere punto 8.2) che considerano il
+miglioramento della prestazione energetica.
+La politica energetica deve:
+- essere disponibile in forma di informazione documentata (vedere punto 7.5);
+- essere comunicata all'interno dell'organizzazione;
+- essere disponibile alle parti interessate, per quanto appropriato;
+- essere periodicamente riesaminata e aggiornata per quanto necessario.
+5.3 Ruoli, responsabilità e au torità nell'organizzazione
+L'alta direzione deve assicura re che le responsabilità e le autorità per i ruoli pertinenti
+siano assegnate e comunicate all’interno dell'organizzazione.
+L'alta direzione deve assegnar e le responsabilità e l'autorità per il gruppo di gestione
+dell’energia per:
+a) assicurare che il SGE sia st abilito, attuato, mantenuto e continuamente migliorato;
+b) assicurare che il SGE sia conforme ai requisiti del presente documento;
+c) attuare piani d'azione (vedere punto 6.2) per migliorare continuamente la
+prestazione energetica;
+d) riportare all'alta direzione,  a determinati intervalli di tempo, le prestazioni del SGE e
+il miglioramento della prestazione energetica;
+e) stabilire i criteri ed i metodi necessari per assicurare l'effi cace funzionamento e
+controllo del SGE.
+6 PIANIFICAZIONE
+6.1 Azioni per affrontare rischi e opportunità
+6.1.1 Nel pianificare il SGE, l'organizzazione deve considerare gli aspetti di cui al punto 4.1 e i
+requisiti di cui al punto 4.2 e riesaminare le  attività dell'organizzazione e i processi che
+possono influenzare la prestazione energetic a. La pianificazione deve essere coerente
+con la politica energetica e deve portare ad azioni che si traducano in un miglioramento
+continuo della prestazione energetica. L'organizzazione deve determinare i rischi e le
+opportunità che necessitano di essere affrontati per:
+- fornire la garanzia che il SGE può raggiungere il(i) risultato(i) previsto(i), compreso il
+miglioramento della prestazione energetica;
+- prevenire o ridurre gli effetti indesiderati;
+- ottenere un miglioramento continuo del SGE e della prestazione energetica.
+Nota La figura A.2 mostra un diagramma concettuale che illustra il processo di pianificazione energetica.
+6.1.2 L'organizzazione deve pianificare:
+a) le azioni per affrontare questi rischi e opportunità;
+b) le modalità per:
+1) integrare e attuare le azioni nei processi del proprio SGE e nei processi della
+prestazione energetica;
+2) valutare l'effica cia di tali azioni.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 15 UNI CEI EN ISO 50001:2018+A1:2024
+6.2 Obiettivi, traguardi energetici e pi anificazione per il loro raggiungimento
+6.2.1 L'organizzazione deve stabilire obiettivi per le funzioni e i livelli pertinenti.
+L'organizzazione deve stabilire traguardi energetici.
+6.2.2 Gli obiettivi e i traguardi energetici devono:
+a) essere coerenti con la politica energetica (vedere punto 5.2);
+b) essere misurabili (se fattibile);
+c) tenere in consid erazione i requisiti applicabili;
+d) considerare gli USE (vedere punto 6.3);
+e) tenere in considerazione le opportunità (vedere punto 6.3) per migliorare la
+prestazione energetica;
+f) essere monitorati;
+g) essere comunicati;
+h) essere aggiornati per quanto appropriato.
+L'organizzazione deve conservare informazioni documentate (vedere punto 7.5) sugli
+obiettivi e i traguardi energetici.
+6.2.3 Quando pianifica come raggiungere i propri obiettivi e traguardi energetici,
+l'organizzazione deve stabilire e mantenere piani d'azione che comprendano:
+- cosa sarà fatto;
+- quali risorse saranno richieste;
+- chi ne sarà responsabile;
+- quando sarà completato;
+- come saranno valutati i risultati, compresi il(i) metodo(i) utilizzato(i) per verificare il
+miglioramento della prestazione energetica (vedere punto 9.1).
+L'organizzazione deve considerare in che modo le azioni per il raggiungimento dei propri
+obiettivi e traguardi energetici possono essere integrate nei processi aziendali
+dell'organizzazione. L'organizzazione deve conservare informazioni documentate sui
+piani di azione (vedere punto 7.5).
+6.3 Analisi energetica
+L'organizzazione deve sviluppare e condurre un'analisi energetica.
+Per sviluppare l'analisi energetica, l'organizzazione deve:
+a) analizzare l'uso e il consumo di energia sulla base delle misurazioni e di altri dati,
+cioè:
+1) identificare i tipi di energia correnti (vedere punto 3.5.1);
+2) valutare l'uso (gli usi) dell'energia e il consumo energetico passati e correnti;
+b) sulla base dell'analisi, identificare gli USE (vedere punto 3.5.6);
+c) per ogni USE:
+1) determinare le variabili pertinenti;
+2) determinare la prestazione energetica corrente;
+3) identificare la(e) persona(e) che opera(no) sotto il suo controllo e che
+influenza(no) gli USE o ha(nno) effetto su di essi;
+d) determinare e dare priorità alle opportunità di miglioramento della prestazione
+energetica;
+e) stimare l'uso (gli usi) dell'energia e il consumo energetico in futuro.
+L'analisi energetica deve es sere aggiornata a intervalli def initi, nonché in risposta a
+cambiamenti importanti negli impianti, nelle attrezzature, nei sistemi o nei processi che
+usano energia.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 16UNI CEI EN ISO 50001:2018+A1:2024
+L'organizzazione deve conservare come in formazioni documentate (vedere punto 7.5) i
+metodi e i criteri utilizzati per sviluppare l'analisi energetica e deve conservare
+informazioni documentate sui suoi risultati.
+6.4 Indicatori della prestazione energetica
+L’organizzazione deve determinare EnPI che:
+a) siano appropriati per misurare e monitorare la sua prestazione energetica;
+b) consentano all'organizzazione di dimostrare il miglioramento della prestazione
+energetica.
+Il metodo per la determinazione e l'aggiornamento del(degli) EnPI deve essere mantenuto
+come informazione documentata (vedere punto 7.5). Se l'organizzazione dispone di dati
+che indicano che le variabili pertinenti influi scono significativamente sulla prestazione
+energetica, l'organizzazione deve considerare tali dati per stabilire l'(gli) EnPI appropriati.
+Il(I) valore(i) dell'EnPI deve(ono) essere rivisto(i) e confrontato(i) con il(i) rispettivo(i)i EnB,
+pe quanto appropriato. L'organizzazione deve conservare le informazioni documentate
+(vedere punto 7.5) del(i) valore(i) dell'(degli) EnPI.
+6.5 Consumo di riferimento
+L'organizzazione deve stabilire (uno o più)  EnB utilizzando le in formazioni ricavate
+dall'analisi(dalle analisi) energetica(che) (vedere punto 6.3), tenendo conto di un periodo
+di tempo adeguato.
+Se l'organizzazione dispone di  dati che indicano che le variabili pertinenti influiscono
+significativamente sulla prestazione energetica, l'organizzazione deve effettuare la
+normalizzazione del(i) valore(i) del(degli) EnPI e del(degli) EnB corrispondenti.
+Nota A seconda della natura delle attività, la normali zzazione può essere un semplice aggiustamento o una
+procedura più complessa.
+L'(Gli) EnB deve(ono) essere rivisto(i) in presenza di una o più delle seguenti situazioni:
+a) l'(gli) EnPI non riflette(ono) più la prestazione energetica dell'organizzazione;
+b) si sono verificati cambiamenti importanti dei fattori statici;
+c) secondo un metodo predeterminato.
+L'organizzazione deve conservare le informazioni pertinenti a uno o più EnB, i dati delle
+variabili rilevanti e le modifiche agli EnB come informazioni documentate (vedere punto 7.5).
+6.6 Pianificazione della raccolta dei dati energetici
+L'organizzazione deve assicurare che le caratteristiche chiave delle sue operazioni che
+influenzano la prestazione energetica siano identificate, misurate, monitorate e analizzate
+ad intervalli pianificati (veder e punto 9.1). L'organizzazione  deve definire e attuare un
+piano di raccolta dei dati energetici adeguato alle sue dimensioni, alla sua complessità,
+alle sue risorse e alle sue attrezzature di misurazione e monitoraggio. Il piano deve
+specificare i dati necessari per monitorare le caratteristiche principali e indicare come e
+con quale frequenza i dati devono essere raccolti e conservati.
+I dati da raccogliere (o acquisire mediante misurazione, a seconda dei casi) e le
+informazioni documentate conservate (vedere punto 7.5) devono comprendere:
+a) le variabili pertinenti per gli USE;
+b) il consumo energetico relativo agli USE e all'organizzazione;
+c) i criteri operativi relativi agli USE;
+d) i fattori statici, se applicabili;
+e) i dati specificati nei piani d'azione.
+Il piano di raccolta dei dati energetici deve essere riesam inato a intervalli definiti e, se
+appropriato, aggiornato.
+L'organizzazione deve assicura re che le attrezzature utiliz zate per la misurazione delle
+caratteristiche chiave forniscano dati accu rati e ripetibili. L' organizzazione deve
+conservare informazioni documentate (vedere punto 7.5) sulla misurazione, il
+monitoraggio e altri mezzi per stabilire l'accuratezza e la ripetibilità.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 17 UNI CEI EN ISO 50001:2018+A1:2024
+7 SUPPORTO
+7.1 Risorse
+L'organizzazione deve determinare e fornire le risorse necessarie per la definizione,
+l'attuazione, il manten imento attivo e il migliorament o continuo della prestazione
+energetica e il SGE.
+7.2 Competenza
+L'organizzazione deve:
+a) determinare le competenze necessarie della(e) persona(e) che lavorano sotto il suo
+controllo che influisce sulla sua prestazione energetica e sul SGE;
+b) assicurare che queste persone siano competenti sulla base di istruzione,
+formazione, abilità o esperienza appropriate;
+c) ove applicabile, intraprendere azioni per acquisire le necessarie competenze e
+valutare l'efficacia delle azioni intraprese;
+d) conservare informazioni documentate (vedere punto 7.5) appropriate a riprova della
+competenza.
+Nota Le azioni applicabili possono comprender e, per esempio: il provvedere al la formazione, il mentoring, o la
+riallocazione delle persone attualmente impiegate; oppur e l’assunzione o l’incarico a contratto di persone
+competenti.
+7.3 Consapevolezza
+Le persone che lavorano sotto il controllo dell'organizzazione devono essere consapevoli
+di quanto segue:
+a) la politica energetica (vedere punto 5.2);
+b) il proprio contributo all'efficacia del SGE, compreso il raggiungimento degli obiettivi e
+dei traguardi energetici (vedere punto 6.2), e i benefici di una migliore prestazione
+energetica;
+c) l'impatto delle loro attività  o dei loro comportamenti in  relazione alla prestazione
+energetica;
+d) le implicazioni derivanti dal non essere conformi ai requisiti del SGE.
+7.4 Comunicazione
+L'organizzazione deve determinare le comunicazioni interne ed esterne pertinenti al
+SGE, includendo:
+a) cosa deve comunicare;
+b) quando comunicare;
+c) con chi comunicare;
+d) come comunicare;
+e) chi comunica.
+Quando stabilisce il(i) proprio(i) processo(i) di comunicazione, l'organizzazione deve
+assicurare che le informazioni comunicate siano coerenti con le informazioni generate
+all'interno del SGE e siano affidabili.
+L'organizzazione deve stabilire e attuare un processo mediante il quale qualsiasi persona
+che lavori sotto il proprio controllo possa fare commenti o suggerire miglioramenti al SGE
+e alla prestazione energetica. L'organizzazione deve prendere in considerazione la
+conservazione di informazioni documentat e (vedere punto 7.5) dei miglioramenti
+suggeriti.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 18UNI CEI EN ISO 50001:2018+A1:2024
+7.5 Informazioni documentate
+7.5.1 Generalità
+Il SGE dell'organizzazione deve comprendere:
+a) le informazioni documentate richieste dal presente documento;
+b) le informazioni documentate che l'organizzazione determina essere necessarie per
+l'efficacia del SGE e per dimostrare il miglioramento della prestazione energetica.
+Nota L’estensione delle informazioni documentate del SGE può variare da un'organizzazione all'altra sulla base:
+- della dimensione dell'organizzazione e del suo tipo  di attività, processi, prodotti e servizi;
+- della complessità dei processi e delle loro interazioni;
+- della competenza delle persone.
+7.5.2 Creazione e aggiornamento
+Nel creare e aggiornare le informazioni documentate, l’organizzazione deve assicurare
+appropriati:
+a) identificazione e descrizione (per esempio titolo, data, autore o numero di
+riferimento);
+b) formato (per esempio lingua, versione del software, grafica) e supporto (per esempio
+cartaceo, elettronico);
+c) riesame e approvazione in meri to all’idoneità e all’adeguatezza.
+7.5.3 Controllo delle informazioni documentate
+Le informazioni documentate richieste dal SGE e dal presente documento devono essere
+controllate per assicurare che:
+a) siano disponibili e idonee all’ut ilizzo, dove e quando necessario;
+b) siano adeguatamente prote tte (per esempio da perdit a di riservatezza, utilizzo
+improprio, perdita d’integrità).
+Per controllare le informazioni documentate, l'organizzazione deve occuparsi delle
+seguenti attività, per quanto applicabile:
+- distribuzione, accesso, reperimento e utilizzo;
+- archiviazione e conservazione, compre so il mantenimento della leggibilità;
+- controllo delle modifiche (per esempio controllo delle versioni);
+- memorizzazione ed eliminazione.
+Le informazioni documentate di origine esterna, ritenute necessarie dall'organizzazione
+per la pianificazione e per il funzionamento del SGE, devono essere identificate per
+quanto appropriato, e tenute sotto controllo.
+Nota L’accesso può comportare una decisione in merito ai permessi di sola visione delle informazioni documentate,
+o ai permessi e all’autorità per visualizzarle e modificarle.
+8 ATTIVITÀ OPERATIVE
+8.1 Pianificazione e controllo operativi
+L'organizzazione deve pianificare, attuare e tenere sotto controllo i processi, correlati ai
+suoi USE (vedere punto 6.3), necessari per soddisfare i requisiti e per attuare le azioni
+determinate nel punto 6.2, mediante ciò che segue:
+a) stabilire criteri per i processi, compreso efficace funzionamento e manutenzione di
+impianti, attrezzature, sistemi e processi che usano energia, la cui assenza possa
+portare ad uno scostamento significativo dalla prestazione energetica attesa;
+Nota I criteri di scostamento significativo sono determinati dall’organizzazione.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 19 UNI CEI EN ISO 50001:2018+A1:2024
+b) comunicare (vedere punto 7.4) i criteri alla(e) persona(e) pertinente(i) che opera(no)
+sotto il controllo dell'organizzazione;
+c) attuare il controllo dei processi in conformi tà ai criteri, compresi il funzionamento e la
+manutenzione degli impianti, delle attrezzature, dei sistemi e dei processi che usano
+energia in conformità ai criteri stabiliti;
+d) raccogliere le informazioni documentate (vedere punto 7.5) nella misura necessaria
+ad avere fiducia che i processi siano stati effettuati come pianificato.
+L'organizzazione deve tenere sotto controllo le modifiche pianificate e riesaminare le
+conseguenze dei cambiamenti involontari, intraprendendo azioni per mitigare ogni effetto
+negativo, per quanto necessario.
+L'organizzazione deve garantire che gli USE affidati all'esterno o i processi relativi ai suoi
+USE (vedere punto 6.3) siano sotto controllo (vedere punto 8.3).
+8.2 Progettazione
+L'organizzazione deve considerare le opportunità di miglioramento della prestazione
+energetica e il controllo operativo nella progettazione di nuovi, modificati e rinnovati
+impianti, attrezzature, sistemi e processi  che usano energia e che possono avere un
+impatto significativo sulla sua prestazione energetica durante la vita operativa pianificata
+o attesa.
+Dove applicabile, i risultati della valutazione della prestazione energetica devono essere
+trasferiti nelle attività di specificazione, progettazione e approvvigionamento.
+L'organizzazione deve conservare informazioni documentate sulle attività di
+progettazione relative alla prestazione energetica (vedere punto 7.5).
+8.3 Approvvigionamento
+L'organizzazione deve stabilire e attuare criteri per la va lutazione della prestazione
+energetica durante la vita operativa pianificata o attesa, quando si acquistano prodotti,
+attrezzature e servizi che usano energia e che si prevede abbiano un impatto significativo
+sulla prestazione energetica dell'organizzazione.
+Quando si acquistano prodotti, attrezzature e servizi che usano energia e che hanno o
+possono avere un impatto sugli USE, l'organizzazione deve informare i fornitori che la
+prestazione energetica è uno dei criteri di valutazione per l'approvvigionamento.
+Dove applicabile, l'organizzazione deve definire e comunicare le specifiche per:
+a) assicurare la prestazione energetica delle attrezzature e dei servizi acquistati;
+b) l'acquisto di energia.
+9 VALUTAZIONE DELLA PRESTAZIONE
+9.1 Monitoraggio, misurazione, analisi e valutazi one della prestazione energetica e del SGE
+9.1.1 Generalità
+L'organizzazione deve determinare per la prestazione energetica e il SGE:
+a) cosa deve essere monitorato e misurato, comprendendo almeno le seguenti
+caratteristiche chiave:
+1) l'efficacia dei piani d'azione nel raggiungimento degli obiettivi e dei traguardi
+energetici;
+2) l'(gli) EnPI;
+3) il funzionamento degli USE;
+4) il consumo energetico effettivo rispetto a quello atteso;
+b) i metodi per il monitoraggio , la misurazione, l’analisi e la valutazione, per quanto
+applicabili, per assicurare risultati validi;
+c) quando si devono eseguire il monitoraggio e la misurazione;
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 20UNI CEI EN ISO 50001:2018+A1:2024
+d) quando devono essere analizzati e valutati i risultati del monitoraggio e della
+misurazione.
+L'organizzazione deve valutare la sua prestazione energetica e l'efficacia del SGE
+(vedere punto 6.6).
+Il miglioramento della prestazione energetica deve essere valutato confrontando il(i)
+valore(i) degli EnPI (vedere punto 6.4) con gli EnB corrispondenti (vedere punto 6.5).
+L'organizzazione deve indagare e reagire a scostamenti significativi nella prestazione
+energetica. L'organizzazione deve conservare informazioni documentate sui risultati
+dell'indagine e sulla reazione (vedere punto 7.5).
+L'organizzazione deve conservare adeguate informazioni documentate sui risultati del
+monitoraggio e delle misurazioni (vedere punto 7.5).
+9.1.2 Valutazione della conformità ai re quisiti legislativi e ad altri requisiti
+A intervalli programmati, l'organizzazione deve valutare il rispetto dei requisiti legislativi e
+di altro tipo (vedere punto 4.2) relativi alla sua efficienza energetica, uso dell'energia,
+consumo energetico e al SGE. L'organizzazione deve conservare informazioni
+documentate (vedere punto 7.5) sui risultati della valutazione di conformità e su ogni
+azione intrapresa.
+9.2 Audit interno
+9.2.1 L’organizzazione deve condurre, a intervalli pianificati, audit interni del SGE allo scopo di
+fornire informazioni per accertare se il SGE:
+a) migliora la prestazione energetica;
+b) è conforme a:
+- requisiti propri dell’organizzazione relativi al suo SGE;
+- politica energetica (vedere punto 5.2), obiettivi e traguardi energetici (vedere
+punto 6.2) stabiliti dall'organizzazione;
+- requisiti del presente documento;
+c) sia stato efficacemente realizzato e mantenuto.
+9.2.2 L’organizzazione deve:
+a) pianificare, stabilire, attuare e manten ere uno o più programmi di audit, che
+comprendano la frequenza, i metodi, le responsabilità, i requisiti di pianificazione e i
+rapporti, e che devono pr endere in considerazione  l’importanza dei processi
+interessati e i risultati degli audit precedenti;
+b) definire i criteri di audit e il campo di applicazione per ciascun audit;
+c) selezionare gli auditor e condurre gli audit in modo tale da assicurare l'obiettività e
+l'imparzialità del processo di audit;
+d) assicurare che i risultati degli audit siano riportati al pertinente livello direzionale;
+e) adottare le azioni appropriate in conformità ai punti 10.1 e 10.2;
+f) conservare informazioni documentate (vedere punto 7.5) quale evidenza
+dell'attuazione del(i) programma(i) di audit e dei risultati di audit.
+9.3 Riesame di direzione
+9.3.1 L'alta direzione deve, a intervalli pianificat i, riesaminare il SGE dell'organizzazione, per
+assicurarne la continua idoneità, adeguatezza ed efficacia, nonché l’allineamento agli
+indirizzi strategici dell’organizzazione.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 21 UNI CEI EN ISO 50001:2018+A1:2024
+9.3.2 Il riesame di direzione deve comprendere considerazioni su:
+a) lo stato delle azioni derivanti da precedenti riesami di direzione;
+b) i cambiamenti negli aspetti es terni e interni e gli associati rischi e le opportunità
+pertinenti per il SGE;
+c) le informazioni sulle prestazioni del SGE, compresi gli andamenti relativi:
+1) alle non conformità e alle azioni correttive;
+2) ai risultati del monitoraggio e della misurazione;
+3) ai risultati di audit;
+4) ai risultati della valutazione della conformità ai requisiti legislativi e ad altri
+requisiti;
+d) opportunità per il miglioramento continuo, comprese quelle per la competenza;
+e) politica energetica.
+9.3.3 Gli input relativi alla prestazione energetica per il riesame di direzione devono
+comprendere:
+- il grado di raggiungimento degli obiettivi e dei traguardi energetici;
+- la prestazione energetica e il miglioramento della prestazione energetica sulla base
+dei risultati del monitoraggio e della misurazione, compresa(i) l'(gli) EnPI;
+- lo stato dei piani d'azione.
+9.3.4 Gli output del riesame di direzione devono comprendere decisioni relative alle opportunità
+di miglioramento continuo e ogni esigenza di modifiche al SGE, tra cui:
+a) le opportunità di migliorare la prestazione energetica;
+b) la politica energetica;
+c) l'(gli) EnPI o il(gli) EnB;
+d) gli obiettivi, i traguardi energetici, i piani d'azione o altri elementi del SGE e le azioni
+da effettuare se non sono raggiunti;
+e) le opportunità di migliorare l'integrazione con i processi aziendali;
+f) l'allocazione delle risorse;
+g) il miglioramento delle competenze, della consapevolezza e della comunicazione.
+L’organizzazione deve conservare informazioni documentate quale evidenza dei risultati
+dei riesami di direzione.
+10 MIGLIORAMENTO
+10.1 Non conformità e azioni correttive
+Quando si verifica una non conformità, l’organizzazione deve:
+a) reagire alla non conformità, e, per quanto applicabile:
+1) intraprendere azioni per controllarla e correggerla;
+2) affrontarne le conseguenze;
+b) valutare l’esigenza di azioni per eliminare la causa o le cause della non conformità in
+modo che non si ripeta o non si verifichi altrove:
+1) riesaminando la non conformità;
+2) determinando le cause della non conformità;
+3) determinando se esistono o potrebbero verificarsi non conformità simili;
+c) attuare ogni azione necessaria;
+d) riesaminare l’efficacia di ogni  azione correttiva intrapresa;
+e) effettuare, se necessario, modifiche al SGE.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 22UNI CEI EN ISO 50001:2018+A1:2024
+Le azioni correttive devono essere appropriate agli effetti delle non conformità riscontrate.
+L'organizzazione deve conservare informazioni documentate relative:
+- della natura delle non conformità e di ogni successiva azione intrapresa;
+- dei risultati di ogni azione correttiva.
+10.2 Miglioramento continuo
+L'organizzazione deve migliorare in modo continuo l’idoneità, l'adeguatezza e l'efficacia
+del SGE. L'organizzazione deve dimostrare il miglioramento continuo della prestazione
+energetica.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 23 UNI CEI EN ISO 50001:2018+A1:2024
+APPENDICE A LINEE GUIDA PER L'USO
+(informativa)
+A.1 Generalità
+Il testo aggiuntivo riportato in questa appendice è strettamente informativo e ha lo scopo
+di prevenire interpretazioni errate dei requisiti del presente documento. Sebbene esso si
+riferisca a questi requisiti e sia coerente con essi, non ha lo scopo di integrare, ridurre o
+modificare in alcun modo questi requisiti.
+A.2 Relazione tra la prest azione energetica e il SGE
+Il presente documento si occupa sia del mig lioramento della prestazione energetica che
+di un approccio sistemico alla gestione dell'energia. Il SGE utilizza elementi correlati
+come indicatori di prestazione energetica  (EnPI) e consumi di riferimento (EnB) come
+mezzi per dimostrare migliora menti misurabili dell'efficienza  energetica o del consumo
+energetico, relativi all'uso dell’energia (vedere figure A.1).
+figura A.1 Relazione tra la prestazione energetica e il SGE
+Sebbene il presente documento richieda la dimostrazione del miglioramento della
+prestazione energetica, è l'organizzazione che definisce la propria prestazione energetica
+e i traguardi energetici, nonché le modalità di dimostrazione del miglioramento della
+prestazione energetica.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 24UNI CEI EN ISO 50001:2018+A1:2024
+A.3 Chiarimento della terminologia
+La struttura dei punti e di alcuni termini del presente documento è stata modificata rispetto
+alla precedente edizione per meglio allinearla con le al tre norme sui sistemi di gestione.
+Non sussistono tuttavia requisiti nel presente documento che richiedano di applicare la
+struttura dei rispettivi punti o la terminologia alla documentazione del SGE
+dell'organizzazione. Non sussisto no requisiti di sostituzione  dei termini utilizzati da una
+organizzazione con i termini utilizzati nel presente documento. Le organizzazioni possono
+scegliere di utilizzare termini che si adattano alla loro attività e a lle loro esigenze, o di
+utilizzare quelli che si trovano nel presente documento.
+- Nel presente documento, l'utilizzo della par ola “qualsiasi” implica una selezione o
+una scelta.
+- Le parole “appropriato” e “applicabile” non sono intercambiab ili. “Appropriato”
+significa idoneo (per, a) e implica un certo grado di libertà, mentre “applicabile”
+significa pertinente o possibile da applicare e implica che se è possibile farlo, è
+necessario che sia fatto.
+- La parola “considerare” significa che è necessario pensare all'argomento ma che
+può essere escluso, mentre “tenere in considerazione” significa che è necessario
+pensare all'argomento ma che non è possibile escluderlo.
+- La parola “assicurar e” significa che la responsabilità può essere delegata ma non la
+rendicontabilità.
+- Il presente documento utilizza il termine “parte interessata”; il termine “stakeholder”
+è un sinonimo in quanto rappresenta lo stesso concetto.
+La presente edizione utilizza alcuni termini nuovi. Segue una breve spiegazione.
+Come elemento di allineament o ad altre norme di sistemi di gestione, è stato adottato,
+senza significative modifiche o aggiunte, il punto comune sulle "informazioni
+documentate" (vedere punto 7.5). Di conseguenza, i termini "procedura documentata" e
+"registrazione" sono stati entrambi sostituiti in tutto il testo da "informazioni documentate".
+- “Informazioni documentate” sostituisce i vocaboli “documentazione”, “documenti” e
+“registrazioni” utilizzati ne lle edizioni precedenti del presente documento. Per
+distinguere l'intento del termine generico “informazioni documentate”, il presente
+documento ora utilizza l'espressione “conservare informazioni documentate...” per
+indicare le registrazioni, e utilizza “m antenere info rmazioni documentate” per
+indicare la documentazione diversa dalle registrazioni mantenute aggiornate.
+- L'espressione “esiti attesi” è ciò che l' organizzazione intende raggiungere mediante
+l'attuazione del proprio SGE e cercando di raggiungere una prestazione energetica
+migliorata.
+- L'espressione “persona(e) che svolge(svolg ono) attività lavorative sotto il suo
+controllo” include persone che svolgono attività per l'organizzazione e quelle che
+svolgono attività per conto di essa, per le quali è l'organizzazione che ha la
+responsabilità (per esempio appaltatori, fornitori di servizi). Sostituisce l'espressione
+“persone che lavorano per essa e per conto di essa” e “persone che lavorano per
+l'organizzazione o per conto di essa” utilizzata nelle versioni precedenti del presente
+documento. L'intento di questa nuova espressione non è diverso da quello
+dell'edizione precedente.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 25 UNI CEI EN ISO 50001:2018+A1:2024
+A.4 Contesto dell'organizzazione
+L'analisi del contesto organizzativo fornisce una comprensione concettuale di alto livello
+degli aspetti esterni e interni che possono influenzare, positivamente o negativamente, la
+prestazione energetica e il SGE dell'organizzazione.
+Esempi di aspetti esterni possono comprendere:
+- aspetti relativi alle parti in teressate, come gli obiettivi, i requisiti o le norme nazionali
+o settoriali esistenti;
+- restrizioni o limitazioni all’approvvigio namento, alla sicurezza e all'affidabilità
+energetica;
+- costi energetici o disponib ilità dei tipi di energia;
+- effetti delle condizioni meteorologiche;
+- effetti del cambiamento climatico;
+- effetto sulle emissioni di gas a effetto serra (GHG).
+Esempi di aspetti interni possono comprendere:
+- obiettivi e strategia aziendale principale;
+- piani di gestione delle risorse;
+- risorse finanziarie (manodopera, finanziar ie, ecc.) che influenzano l'organizzazione;
+- maturità e cultura della gestione dell'energia;
+- considerazioni sulla sostenibilità;
+- piani di emergenza per le interruzioni della fornitura energetica;
+- maturità della tecnologia esistente;
+- rischi operativi e considerazioni  sulla responsabilità giuridica.
+Dimostrare un miglioramento continuo della prestazione energetica in tutto il campo di
+applicazione e i confini del SGE non significa che tutti i valori dell'EnPI migliorino. Alcuni
+valori dell'EnPI migliorano, mentre altri non lo fanno; ma nel campo di applicazione del
+SGE, l'organizzazione dimostra il miglioramento della prestazione energetica.
+A.5 Leadership
+A.5.1 Leadership e impegno
+L'alta direzione ha la resp onsabilità generale di soddisfa re i requisiti del presente
+documento. Anche se delega  alcune responsabilità, la rendicontabilità complessiva
+rimane comunque di competenza dell'alta direzione.
+Quando comunica con i membri dell'organizzazione, l'alta direzione può sottolineare
+l'importanza della gestione dell'energia attraverso attività di coinvolgimento dei dipendenti
+come responsabilizzazi one, motivazione, riconoscimen to, formazione, premiazione e
+partecipazione.
+A.5.2 Politica energetica
+Una politica energetica è la base per lo sviluppo del SGE di un'organizzazione attraverso
+tutte le fasi di pianificazione, attuazione, funzionamento, valutazione delle prestazioni e
+miglioramento. La politica energetica può essere una breve dichiarazione che i membri
+dell'organizzazione possono facilmente comprendere e applicare alle loro attività
+lavorative.
+A.5.3 Ruoli, responsabilità e au torità nell'organizzazione
+Non sono indicate linee guida aggiuntive.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 26UNI CEI EN ISO 50001:2018+A1:2024
+A.6 Pianificazione
+A.6.1 Azioni per gestire rischi e opportunità
+Le considerazioni sui rischi e sulle opportunità fanno parte di un processo decisionale
+strategico di alto livello in un'organizzazione. Identificando i rischi e le opportunità quando
+si pianifica il SGE, un'organizzazione può anticipare potenziali scenari e conseguenze in
+modo che gli effetti indesiderati possano essere affrontati prima che si verifichino. Allo
+stesso modo, possono essere identificate e perseguite consider azioni o circostanze
+favorevoli che possono offrire potenziali vantaggi o risultati benefici.
+La figura A.2 fornisce un diagramma concettuale per migliorare la comprensione del
+processo di pianificazione energetica. La figura A.2 non rappresenta i dettagli di una
+specifica organizzazione. Le informazioni della figura A.2 sono illustrative, ma non sono
+da intendersi come esaustive, e possono esserci altri dettagli specifici dell'organizzazione
+o legati a circostanze particolari.
+figura A.2 Processo di pianificazione energetica
+A.6.2 Obiettivi, traguardi en ergetici e pianificazione per il loro raggiungimento
+Gli obiettivi possono comprende re sia miglioramenti comple ssivi di un SGE sia obiettivi
+specifici e misurabili di miglioramento de lla prestazione energetica. Sebbene alcuni
+obiettivi siano quantificabili e abbiano tragu ardi di migliorament o della prestazione
+energetica (per esempio, riduzione del consumo di elettricità del 3% entro la fine
+dell'anno, miglioramento del 2% dell'efficienza dell'impianto entro il quarto trimestre), altri
+obiettivi possono essere qualitativi (per esempio, relativi al comportamento energetico, al
+cambiamento culturale). Spesso è possibile fornire alcuni valori quantitativi per gli obiettivi
+qualitativi, mediante indagini o altri meccanismi analoghi.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 27 UNI CEI EN ISO 50001:2018+A1:2024
+A.6.3 Analisi energetica
+Il processo di identificazione dei tipi di energia e di valutazione dell'uso e del consumo
+energetico porta l'organizzazione a determinare le aree di uso significativo dell'energia e
+ad identificare le opportunità di miglioramento della prestazione energetica. Nel
+determinare i pr opri USE, l'organizzazione definisce  i criteri per stabilire quale sia il
+consumo energetico sostanziale e/o quale sia un potenziale considerevole di
+miglioramento della prestazione energetica. Gli USE possono essere definiti a seconda
+delle esigenze dell'organizzazione, come per esempio per impianto (per esempio,
+magazzino, fabbrica, ufficio), per processo o sistema (per esempio, illuminazione, vapore,
+trasporto, elettrolisi, azionamenti a motore ) o per attrezzatura (per esempio, motore,
+caldaia). Una volta individuati, la gestione e il controllo degli USE sono parte integrante
+del SGE.
+Il personale che lavora sotto il controllo dell'organizzazione può comprendere appaltatori
+di servizi, personale a tempo parziale e personale temporaneo.
+L'aggiornamento dell'analisi energetica comprende l'aggiornamento dei dati e delle
+informazioni relative all' analisi dell'uso dell’energia e del consumo energetico, la
+determinazione degli USE e l'identificazione delle opportunità di miglioramento della
+prestazione energetica. Non tutte le parti dell'analisi energetica devono essere aggiornate
+contemporaneamente. Si può ricorrere a una diagnosi energetica formale per aiutare a
+identificare nel dettaglio le opportunità di miglioramento della prestazione energetica.
+Una diagnosi energetica può fornire informazioni su una o più parti dell'analisi energetica.
+Lo scopo di una diagnosi energetica può comprendere un'analisi dettagliata della
+prestazione energetica di un'organizzazione, di uno o più USE, di sistemi, di processi e/o
+attrezzature che usano energia. Generalmente si basa su misurazioni e osservazioni
+appropriate della prestazione energetica effettiva per il campo di applicazione della
+diagnosi energetica definita. I risultati delle diagnosi energetiche comprendono
+generalmente informazioni sul consumo energetico corrente e sulla prestazione
+energetica e possono essere accompagnati da una serie di raccomandazioni specifiche
+classificate in base al miglioramento della pr estazione energetica o al ritorno finanziario
+dell'investimento, sulla base dell'analisi dei dati specific i del sito e delle condizioni
+operative.
+Quando si cercano opportunità di miglioramento della prestazione energetica, le
+organizzazioni dovrebbero considerare in quale misura l'energia è richiesta per un
+particolare processo, o è recuperabile. Anche quando un processo come una reazione
+chimica ha limitate opportunità di miglioramento a causa di requisiti energetici basati su
+leggi scientifiche, le attrezza ture ausiliarie possono offrire un significativo potenziale di
+miglioramento della prestazione energetica, così come possono essere migliorati il
+controllo di processo o la programmazione delle attrezzature. Le opportunità possono
+anche emergere nel tempo, a causa dei cambiamenti dei carichi e dei parametri di
+funzionamento, del degrado delle attrezzature e dei miglioramenti delle tecnologie e delle
+tecniche disponibili. Si possono inoltre i dentificare opportunità nel modo in cui le
+attrezzature e i sistemi sono azionati e mantenuti.
+L'installazione di un tipo di energia rinnovabile nel campo di applicazione e nei confini del
+SGE, come definito dall'organizzazione, non rappresenta un miglioramento della
+prestazione energetica. Il consumo energetic o che attraversa i confini può diminuire,
+tuttavia, non ci sarà un miglioramento misurabile dell'efficienza energetica o del consumo
+energetico legato all'uso dell'energia come risultato del cambiamento. Il consumo di
+energia rinnovabile può avere un effetto po sitivo sull'ambiente e altri benefici e
+un'organizzazione può avere l'obiettivo di aumentare i propri impianti di energia
+rinnovabile. In questi casi, un'organizzazione deve valutare separatamente la produzione
+di energia rinnovabile.
+Ove del caso, un'analisi energetic a può anche considerare la sicurezza e la disponibilità
+della fornitura energetica.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 28UNI CEI EN ISO 50001:2018+A1:2024
+A.6.4 Indicatori di prestazione energetica
+Un EnPI è un "righello" utilizzato per confrontare le prestazioni energetiche prima (valore
+dell'EnPI di riferimento) e dopo (valore dell'EnPI risultante o corrente) l'attuazione di piani
+d'azione e altre azioni (vedere figura  A.3). La differenza tra il valore di riferimento e il
+valore risultante è la misura di una variazione della prestazione energetica.
+Quando cambiano le attività aziendali o gli EnB, l'organizzazione può aggiornare il(i)
+proprio(i) EnPI, se pertinente.
+figura A.3 EnPI e valore dell'EnPI
+A.6.5 Consumo di riferimento
+Un periodo di tempo adeguato significa che l'organizzazione contabilizza i cicli operativi,
+i requisiti normativi o le variabili che infl uenzano il consumo ener getico e l'efficienza
+energetica, in modo che il periodo di dati dimostri adeguatamente una gamma completa
+di prestazioni. I dati di cui l'organizzazione dispone possono essere dati che ha generato
+(per esempio, tramite misurazione) o dat i a cui ha accesso (per esempio, dati
+meteorologici di pubblico dominio).
+Lo scopo della norm alizzazione è quello di consen tire confronti affidabili. La
+normalizzazione di un valore dell'EnPI che tiene conto delle variazioni delle variabili
+pertinenti fornisce un'indicazione più accurata della prestazione energetica.
+Quando un uso dell'energia che consuma una qu antità significativa di energia è rimosso
+o introdotto nel campo di applicazione e nei confini del SGE, l'EnB dovrebbe essere
+modificato di conseguenza.
+A.6.6 Pianificazione della raccolta dei dati energetici
+I dati sono di fondamentale importanza per il monitoraggio e il miglioramento continuo
+della prestazione energetica. Pianificare qua li dati raccogliere, co me raccoglierli e con
+quale frequenza raccoglierli, contribuisce a garantire la disponibilità dei dati necessari per
+mantenere l'analisi energetica e i processi di monitoraggio, misurazione, analisi e
+valutazione.
+I dati possono variare da un semplice conteggio numerico fino a sistemi completi di
+monitoraggio e misurazione collegati a un'applicazione software in grado di consolidare i
+dati e fornire analisi automatiche.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 29 UNI CEI EN ISO 50001:2018+A1:2024
+A.7 Supporto
+A.7.1 Risorse
+Le risorse comprendono risors e umane, abilità specifiche, te cnologie, infrastruttura di
+raccolta dati e risorse finanziarie.
+A.7.2 Competenza
+I requisiti di competenza dovrebbero essere adeguati alla funzione, al livello e al ruolo
+delle persone (compresa l'alta direzione) che svolgono compiti che influenzano la
+prestazione energetica e il SGE. I requisiti di competenza sono determinati
+dall'organizzazione.
+La formazione è uno dei tanti metodi per acquisire competenza. I membri del team SGE
+dovrebbero essere incoraggiati a sviluppare, mantenere e migliorare continuamente le
+proprie conoscenze, abilità ed esperienze. Dove siano disponibili schemi di qualificazione
+nazionali o locali (o equivalenti), si può prendere in considerazione la certificazione.
+A.7.3 Consapevolezza
+Non sono indicate linee guida aggiuntive.
+A.7.4 Comunicazione
+Non sono indicate linee guida aggiuntive.
+A.7.5 Informazioni documentate
+Il presente documento fornisce dettagli su quali informazioni documentate devono essere
+mantenute o conservate. L'organizzazione può scegliere di sviluppare informazioni
+aggiuntive documentate, se lo ritiene necessario, per dimostrare efficacemente la
+prestazione energetica e supportare il SGE. Le informazioni documentate di origine
+esterna possono comprendere leggi, regolamenti, norme, manuali d’uso, dati
+meteorologici e dati a supporto di fattori statici e variabili pertinenti.
+A.8 Attività operative
+A.8.1 Pianificazione e controllo operativi
+Non sono indicate linee guida aggiuntive.
+A.8.2 Progettazione
+Considerare la prestazione energetica ne l corso della vita operativa non richiede
+un'analisi del ciclo di vita o una gestione del ciclo di vita. Il presente documento si applica
+alla progettazione di impianti, attrezzature, sistemi o processi che usano energia nel
+campo di applicazione e nei confini del SGE.
+Per i nuovi impianti, le tecnologie e le tecniche migliorate, dovrebbero essere prese in
+considerazione le energie alternative come le energie rinnovabili o le tipologie di energia
+meno inquinanti.
+A.8.3 Approvvigionamento
+L'approvvigionamento è un'opportunità per migliorare la prestazione energetica mediante
+l'uso di prodotti e servizi che usano energia in modo più efficiente. Esso offre l'opportunità
+di lavorare con la filiera dei fornitori e di influenzarne il comportamento energetico.
+L'applicabilità delle specifiche di acquisto di energia può variare da mercato a mercato. Le
+specifiche per gli acquisti di energia possono comprendere la qualità, la quantità,
+l'affidabilità e la disponibilità dell'energia, la composizione dei costi, l'impatto ambientale e
+tipi alternativi di energia. L' organizzazione può utilizzare le  specifiche proposte da un
+fornitore di energia, a seconda dei casi.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 30UNI CEI EN ISO 50001:2018+A1:2024
+Una modifica o un aumento dell'approvvigionamento di energia rinnovabile al di fuori del
+campo di applicazione del SGE non influisce sul consumo energetico, né migliora la
+prestazione energetica, ma può avere impatti ambientali positivi. Le organizzazioni
+possono scegliere di includere l'approvvigi onamento di energia rinnovabile tra i propri
+criteri o le proprie specifiche di approvvigionamento energetico.
+A.9 Valutazione delle prestazioni
+A.9.1 Monitoraggio, misurazione, analisi e valuta zione della prestazione energetica e del SGE
+Questo punto interessa l'attuazione del piano di raccolta dati (vedere punto 6.6) e la
+valutazione sia del miglioramento della prestazione energetica sia dell'efficacia del SGE.
+L'efficacia del SGE può essere dimostrata dal miglioramento della prestazione energetica
+e da altri risultati attesi. Il miglioramento della prestazione energetica può essere
+dimostrato da miglioramenti dei valori dell'EnPI nel tempo, rispetto al corrispondente EnB.
+Ci possono essere situazioni in cui il miglioramento della prestazione energetica è
+ottenuto da un'attività che non è correlata a un USE o a una caratteristica chiave. In questi
+casi, è possibile definire un EnPI e un EnB per dimostrare il miglioramento della
+prestazione energetica.
+Nel condurre l'analisi, prima di giungere alle conclusioni finali, si dovrebbe tener conto dei
+limiti dei dati (accuratezza, precisione, ince rtezza di misura) e della coerenza della
+contabilità energetica.
+A.9.2 Audit interno
+Gli audit interni di un SGE possono essere eseguiti da personale interno
+all'organizzazione, oppure da persone esterne selezionate dall'organizzazione, che
+lavorano per suo conto. L'indipendenza dell'auditor può essere dimostrata da un auditor
+che non abbia responsabilità per l'attività sottoposta ad audit.
+Una diagnosi interna o una valutazione energetica sono concetti diversi da un audit
+interno di un SGE.
+A.9.3 Riesame di direzione
+Il riesame di direzione contempla l'intero campo di applicazione del SGE, anche se non
+tutti gli elementi del SGE devono essere rivisti contemporaneamente. Il processo di
+revisione può svolgersi durante un periodo di tempo.
+A.10 MIGLIORAMENTO
+“Continuo” implica un'occorrenza per un periodo di tempo, ma può comprendere intervalli
+di interruzione (a differenza di “continuativo” che indica un'occorrenza senza
+interruzione). Nel contesto de l miglioramento continuo, l'a ttesa è che i miglioramenti si
+verifichino periodicamente, nel tempo. Il ritmo,  la portata e la tempis tica delle azioni che
+supportano il miglioramento continuo sono determinati dall'organizzazione, alla luce del
+suo contesto, dei fattori economici e di altre circostanze.
+Il miglioramento della prestazione energetica può essere dimostrato in diversi modi,
+come, per esempio:
+a) riduzione del consumo energetico normalizzato per il campo di applicazione e i
+confini del SGE;
+b) progressi verso il(i) traguardo(i) energetico(i) e la gestione degli USE.
+Si riconosce il fatto che i miglioramenti siano raggiunti sulla base delle priorità
+dell'organizzazione.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 31 UNI CEI EN ISO 50001:2018+A1:2024
+Esempi di miglioramento continuo della prestazione energetica comprendono, ma non
+sono limitati a, i seguenti.
+- Il consumo totale di energia diminuisce ne l tempo in condizioni simili, per esempio in
+un edificio commerciale in una regione in cui la temperatura non varia in modo
+significativo.
+- Il consumo totale di energia aumenta, ma la misura della prestazione energetica,
+come definita dall’organizzazione, migliora. In  questo caso si tr atta di un rapporto
+semplice dove c'è una variabile pertinente e nessun carico di base.
+- La strumentazione mostra la prevista ri duzione della prestazione energetica a causa
+dell’invecchiamento. Un ritardo o una ri duzione nella curva di riduzione della
+prestazione, determinati da corretti controlli di gestione e di manutenzione, possono
+dimostrare un miglioramento della prestazione energetica come definita dagli EnPI
+organizzativi.
+- Nelle industrie di estrazione delle risorse, dove la prestazione energetica tende a
+diminuire man mano che le risorse si esauriscono, per esempio in un impianto
+minerario dove la profondità e la produzione variano, ridurre il tasso di declino
+rispetto all'EnB può essere considerato un miglioramento della prestazione.
+- Nella maggior parte delle situazioni e delle  organizzazioni, ci sono molteplici variabili
+pertinenti che richiedono una normalizzazione, per esempio un caseificio che
+produce tre diversi prodotti (latte, formaggio, yogurt) e che risente delle condizioni
+atmosferiche.
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 32UNI CEI EN ISO 50001:2018+A1:2024
+APPENDICE B CORRISPON DENZA TRA LA ISO 50001:2011 E LA ISO 50001:2018
+(informativa)
+prospetto B.1 Corrispondenza tra la ISO 50001:2011 e la ISO 50001:2018
+ISO 50001:2011 ISO 50001:2018
+Introduzione Introduzione
+1 Scopo e campo di applicazione 1 Scopo e campo di applicazione
+2 Riferimenti normativi 2 Riferimenti normativi
+3 Termini e definizioni 3 Termini e Definizioni
+ 4 Contesto dell'organizzazione
+ 4.1 Comprensione dell'organizzazione e del suo contesto
+4 Requisiti del sistema di gestione dell'energia
+ 
+4.1 Requisiti generali 4.3 Determinare il campo di applicazione del sistema di gestione dell'energia
+4.4 Sistema di gestione dell'energia
+4.2 Responsabilità della Direzione 5.1 Leadership e impegno
+4.2.1 Alta direzione 4.3 Determinare il campo di applicazione del sistema di gestione dell'energia
+5.1 Leadership e impegno
+7.1 Risorse
+4.2.2 Rappresentante della Direzione 5.1 Leadership e impegno
+5.3 Ruoli, responsabilità e autorità nell’organizzazione
+4.3 Politica energetica 5.2 Politica energetica
+4.4 Pianificazione energetica 6 Pianificazione
+4.4.1 Generalità 6.1 Azioni per affrontare rischi e opportunità
+4.4.2 Requisiti legislativi ed altri requisiti 4.2 Comprendere le esigenze e le aspettative delle parti interessate
+4.4.3 Analisi energetica 6.3 Analisi energetica
+ 6.1 Azioni per affrontare rischi e opportunità
+4.4.4 Consumo di riferimento 6.5 Consumo di riferimento
+4.4.5 Indicatori di prestazione energetica 6.4 Indicatori della prestazione energetica
+4.4.6 Obiettivi energetici, traguardi energetici e piani d'azione 
+per la gestione dell'energia
+6.2 Obiettivi, traguardi energetici e pianificazione per il loro raggiungimento
+4.5 Attuazione e funzionamento 7 Supporto
+8 Attività operative
+4.5.1 Generalità
+ 
+4.5.2 Competenza, formazione e consapevolezza 7.2 Competenza
+7.3 Consapevolezza
+4.5.3 Comunicazione 7.4 Comunicazione
+4.5.4 Documentazione 7.5 Informazioni documentate
+ 7.5.1 Generalità
+ 7.5.2 Creazione e aggiornamento
+ 7.5.3 Controllo delle informazioni documentate
+4.5.5 Controllo operativo 8.1 Pianificazione e controllo operativi
+4.5.6 Progettazione 8.2 Progettazione
+4.5.7 Acquisto di servizi energetici, prodotti, apparecchiature 
+ed energia
+8.3 Approvvigionamento
+4.6. Verifica 9 Valutazione della prestazione
+4.6.1 Monitoraggio, misurazione e analisi 9.1 Monitoraggio, misurazione, analisi e valutazione della prestazione energetica 
+e del SGE
+6.6 Pianificazione della raccolta dei dati energetici
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 33 UNI CEI EN ISO 50001:2018+A1:2024
+prospetto B.1 Corrispondenza tra la ISO 50001:2011 e la ISO 50001:2018 (Continua)
+ISO 50001:2011 ISO 50001:2018
+4.6.2 Valutazione della conformità ai requisiti legislativi e ad 
+altri requisiti
+9.1.2 Valutazione della conformità ai requisiti legislativi e ad altri requisiti
+4.6.3 Audit interno del SGE 9.2 Audit interno
+4.6.4 Non conformità, correzioni, azioni correttive ed azioni 
+preventive
+10.1 Non conformità e azioni correttive
+4.6.5 Controllo delle registrazioni 7.5 Informazioni documentate (vedere sopra, nella sezione Documentazione)
+4.7 Riesame della Direzione 9.3 Riesame da parte della direzione
+ 10.2 Miglioramento continuo
+Appendice A (informativa) Guida sull’utilizzo della presente 
+norma internazionale
+Appendice A (informativa) Linee guida per l'uso
+Appendice B (informativa) Corrispondenza tra ISO 50001:2011, 
+ISO 9001:2008, ISO 14001:2004 e ISO 22000:2005
+Appendice B (informativa) Corrispondenza tra la ISO 50001:2011 e la 
+ISO 50001:2018
+BIBLIOGRAFIA BIBLIOGRAFIA
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 34UNI CEI EN ISO 50001:2018+A1:2024
+BIBLIOGRAFIA
+[1] ISO  19011 Guidelines for auditing management systems
+[2] ISO  19600 Compliance management systems  - Guidelines
+[3] ISO  50002 Energy audits  - Requirements with guidance for use
+[4] ISO  50003 Energy management systems  - Requirements for bodies
+providing audit and certification of energy management
+systems
+[5] ISO  50004 Energy management systems  - Guidance for the
+implementation, maintenance and improvement of an energy
+management system
+[6] ISO  50006 Energy management systems  - Measuring energy
+performance using energy baselines (EnB) and energy
+performance indicators (EnPI)  - General principles and
+guidance
+[7] ISO  50015:2014 Energy management systems  - Measurement and verification
+of energy performance of organizations  - General principles
+and guidance
+[8] ISO  50047 Energy savings  - Determination of energy savings in
+organizations
+[9] ISO  Guide 73 Risk management - Vocabulary
+[10] ISO/IEC  Guide 99 International vocabulary of metrology - Basic and general
+concepts and associated terms (VIM)
+[11]
+http://www.iso.org/iso/home/standards/benefitsofstandards/benefits_repository.htm?type=EBS-CS
+[12] http://www.iso.org/iso/mss-list , ISO Management System Standards list
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+© UNI Pagina 35 UNI CEI EN ISO 50001:2018+A1:2024
+INDICE ALFABETICO DEI TERMINI
+affidare all'esterno ................................................... 3.3.9
+alta direzione ........................................................... 3.1.2
+analisi energetica..................................................... 3.5.5
+audit........................................................................  3.3.8
+azione correttiva ...................................................... 3.3.4
+campo di applicazione del sistema di gestione 
+dell'energia; campo di applicazione del SGE .......... 3.1.4
+competenza ........................................................... 3.4.12
+confine ...................................................................  3.1.3
+conformità ..............................................................  3.3.2
+consumo di riferimento (energy baseline), EnB....... 3.4.7
+consumo energetico ................................................ 3.5.2
+efficacia.................................................................. 3.4.14
+efficienza energetica................................................ 3.5.3
+energia..................................................................... 3.5.1
+fattore statico ........................................................... 3.4.8
+gruppo di gestione dell’energia................................ 3.2.5
+indicatore di prestazione energetica, EnPI .............. 3.4.4
+informazioni documentate........................................ 3.3.5
+miglioramento continuo ........................................  3.4.16
+miglioramento della prestazione energetica ............ 3.4.6
+misurazione ............................................................. 3.4.1
+monitoraggio............................................................ 3.3.7
+non conformità......................................................... 3.3.3
+normalizzazione..................................................... 3.4.10
+obiettivo ................................................................. 3.4.13
+organizzazione......................................................... 3.1.1
+parte interessata; stakeholder ................................. 3.1.5
+politica...................................................................... 3.2.3
+politica energetica.................................................... 3.2.4
+prestazione .............................................................. 3.4.2
+prestazione energetica ............................................ 3.4.3
+processo .................................................................. 3.3.6
+requisito ................................................................... 3.3.1
+rischio .................................................................... 3.4.11
+sistema di gestione.................................................. 3.2.1
+sistema di gestione dell'energia; SGE ...................  3.2.2
+traguardo energetico.............................................. 3.4.15
+uso dell'energia........................................................ 3.5.4
+uso significativo dell'energia, USE........................... 3.5.6
+valore dell'indicatore di prestazione energetica; 
+valore dell'EnPI ......................................................  3.4.5
+variabile pertinente ................................................  3.4.9
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026
+normeUNI @normeUNI normeUNInormeUNI @normeUNI
+UNI Ente Italiano di Normazione
+Membro italiano ISO e CEN
+Via Sannio, 2 - 20137 Milano 
+Via del Collegio Capranica, 4 - 00186 Roma
+www.uni.com
+ROMEO RAIMONDO
+UNIstore - 844513 - download del 29/06/2026

@@ -1,0 +1,2563 @@
+La presente norma è l'adozione nazionale in lingua italiana della norma internazionale ISO/
+IEC 42001 (edizione dicembre 2023).
+© Copyright UNI - Tutti i diritti riservati
+TESTO IT ALIANO
+NORMA ITALIANA
+UNI CEI ISO/IEC 42001
+GIUGNO 2024
+Versione italiana del gennaio 2025
+Corretta il 7 ottobre 2025
+Tecnologie informatiche – Intelligenza artificiale – 
+Sistema di gestione
+Information technology – Artificial intelligence – Management system
+ICS 35.020; 03.100.70
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+SOMMARIO
+La norma specifica i requisiti e fornisce una guida per la creazione, l'implementazione, la manutenzione 
+e il miglioramento continuo di un sistema di gestione dell'IA (intelligenza artificiale) nel contesto di 
+un'organizzazione. Il documento è destinato a un'organizzazione che fornisca o utilizzi prodotti o servizi 
+che si avvalgano si sistemi di IA.
+La norma ha lo scopo di aiutare l'organizzazione a sviluppare, fornire o utilizzare sistemi di IA in modo 
+responsabile nel perseguire i propri obiettivi e soddisfare i requisiti applicabili, gli obblighi relativi alle parti 
+interessate e le aspettative nei loro confronti. Il presente documento è applicabile a qualsiasi organizzazione, 
+indipendentemente dalle dimensioni, dal tipo e dalla natura, che fornisca o utilizzi prodotti o servizi che 
+utilizzano sistemi di IA.
+PREMESSA NAZIONALE
+La presente norma costituisce l'adozione nazionale, in lingua italiana, della norma internazionale ISO/IEC 
+42001 (edizione dicembre 2023) che assume così lo status di norma nazionale italiana.
+La norma internazionale ISO/IEC 42001 è stata elaborata dal Comitato Tecnico ISO/IEC JTC 1 “Information 
+technology” .
+La presente norma è stata elaborata sotto la competenza dell'ente federato all'UNI
+UNINFO - Tecnologie Informatiche e loro applicazioni
+e del
+CEI - Comitato Elettrotecnico Italiano
+che hanno giudicato la norma ISO/IEC 42001 rispondente, da un punto di vista tecnico, alle esigenze 
+nazionali e ne hanno proposto alla Commissione Centrale Tecnica dell'UNI l'adozione nella presente 
+versione in lingua italiana.
+La Commissione Centrale Tecnica dell'UNI ha dato la sua approvazione il 31 maggio 2024.
+La presente norma è stata ratificata dal Presidente del CEI, con delibera del 17 giugno 2024.
+La presente norma è stata ratificata dal Presidente dell'UNI ed è entrata a far parte del corpo normativo 
+nazionale il 27 giugno 2024.
+© UNI
+Riproduzione vietata ai sensi della Legge 22 aprile 1941 N° 633 e ss.mm.ii. 
+I contenuti del documento possono essere riprodotti o diffusi solo previa autorizzazione scritta di UNI.
+Le norme UNI (così come le EN e le ISO) sono documenti tutelati da copyright e sono disponibili a pagamento. Con l’acquisto di questo documento 
+(e con l’associazione a UNI) si partecipa al mantenimento e alla crescita di un sistema di autoregolamentazione che crea e tiene aggiornato lo stato 
+dell’arte, a garanzia di una qualità disponibile e diffusa.
+Le norme UNI sono elaborate grazie al contributo delle parti interessate, tutti i dettagli sull’iter sono riportati nella regolamentazione applicabile, 
+disponibile sul sito www.uni.com (Chi Siamo – Documenti).
+Si richiama l’attenzione sulla possibilità che alcuni degli elementi del presente documento possano essere oggetto di diritti di brevetto. UNI non deve 
+essere ritenuto responsabile dell’identificazione di tali diritti di brevetto.
+Le norme UNI sono riesaminate periodicamente, pertanto è importante che l’utente si accerti di essere in possesso dell’edizione in vigore. Si 
+raccomanda inoltre di verificare l’esistenza di norme UNI corrispondenti alle norme EN o ISO ove citate nei riferimenti normativi.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+INDICE
+© UNI Pagina IIIUNI CEI ISO/IEC 42001:2024
+PREMESSA 1
+INTRODUZIONE 2
+1 SCOPO E CAMPO DI APPLICAZIONE 4
+2 RIFERIMENTI NORMATIVI  4
+3 TERMINI E DEFINIZIONI  4
+4 CONTESTO DELL’ORGANIZZAZIONE  7
+4.1 Comprendere l’organizzazione e il suo contesto ..................................................................... 7
+4.2 Comprendere le esigenze e le aspettative delle parti interessate ................................. 8
+4.3 Determinazione del campo di applic azione del sistema di gestione dell’IA.............. 8
+4.4 Sistema di gestione dell’IA ................................................................................................................... 8
+5 LEADERSHIP  8
+5.1 Leadership e impegno ............................................................................................................................ 8
+5.2 Politica ............................................................................................................................................................ 9
+5.3 Ruoli, responsabilità e autorità .......................................................................................................... 9
+6 PIANIFICAZIONE  9
+6.1 Azioni per affrontare rischi e opportunità ..................................................................................... 9
+6.1.1 Generalità ........................................................................................................................................................ 9
+6.1.2 Valutazione del rischio dell’IA ................................................................................................................  10
+6.1.3 Trattamento del rischio dell’IA ...............................................................................................................  11
+6.1.4 Valutazione dell'impatto del sistema di IA .........................................................................................  11
+6.2 Obiettivi per l’IA e pianifi cazione per il loro raggiungimento...........................................  12
+6.3 Pianificazione delle modifiche .........................................................................................................  12
+7 SUPPORTO  12
+7.1 Risorse .........................................................................................................................................................  12
+7.2 Competenze .............................................................................................................................................  13
+7.3 Consapevolezza .....................................................................................................................................  13
+7.4 Comunicazione .......................................................................................................................................  13
+7.5 Informazioni documentate .................................................................................................................  13
+7.5.1 Generalità .....................................................................................................................................................  13
+7.5.2 Creazione e aggiornamento delle informazioni documentate ....................................................  13
+7.5.3 Controllo delle informazioni documentate .........................................................................................  14
+8 ATTIVITÀ OPERATIVE  14
+8.1 Pianificazione e controlli operativi .................................................................................................  14
+8.2 Valutazione del rischio dell’IA .........................................................................................................  14
+8.3 Trattamento del rischio dell’IA .........................................................................................................  15
+8.4 Valutazione dell'impatto del sistema di IA ................................................................................  15
+9 VALUTAZIONE DELLE PRESTAZIONI  15
+9.1 Monitoraggio, misurazione, analisi e valutazione .................................................................  15
+9.2 Audit interno ..............................................................................................................................................  15
+9.2.1 Generalità .....................................................................................................................................................  15
+9.2.2 Programma di audit interno ....................................................................................................................  15
+9.3 Riesame di direzione ...........................................................................................................................  16
+9.3.1 Generalità .....................................................................................................................................................  16
+9.3.2 Elementi in ingresso al riesame di direzione ....................................................................................  16
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina IVUNI CEI ISO/IEC 42001:2024
+9.3.3 Risultati del riesame di direzione .......................................................................................................... 16
+10 MIGLIORAMENTO  16
+10.1 Miglioramento continuo ....................................................................................................................... 16
+10.2 Non conformità e azioni correttive ................................................................................................ 16
+APPENDICE  A OBIETTIVI DI CONTROLLO E CONTROLLI DI RIFERIMENTO 18
+(normativa)
+prospetto A.1 Controlli e obiettivi di controllo............................................................................................................... 18
+APPENDICE B GUIDA ALL’IMPLEMENTAZIONE DEI CONTROLLI SULL'IA 21
+(normativa)
+APPENDICE C POTENZIALI OBIETTIVI ORGANIZZATIVI E FATTORI DI RISCHIO LEGATI 
+(informativa) ALL'IA 46
+APPENDICE D UTILIZZO DEL SISTEMA DI GESTIONE DELL'IA IN DIVERSI DOMINI O 
+(informativa) SETTORI 48
+BIBLIOGRAFIA 50
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 1 UNI CEI ISO/IEC 42001:2024
+PREMESSA
+L'ISO (l'Organizzazione Internazionale di Normazione) e l'IEC (la Commissione
+Elettrotecnica Internazionale) costituiscon o il sistema specializzato per la normazione
+tecnica mondiale. Gli organismi nazion ali che sono membri dell'ISO o dell'IEC
+partecipano allo sviluppo delle norme internaz ionali attraverso comitati tecnici istituiti
+dalla rispettiva organizzazione per occuparsi di  particolari campi di attività tecnica. I
+comitati tecnici ISO e IEC collaborano in settori di reciproco interesse. Ai lavori
+partecipano anche altre organizzazioni internazionali, governative e non governative, in
+collegamento con ISO e IEC.
+Le procedure utilizzate per lo sviluppo di questo documento e quelle previste per il suo
+ulteriore mantenimento sono descritte nelle Direttive ISO/IEC, Parte 1. In Particolare,
+vanno notati i diversi criteri di approvazione necessari per i diversi tipi di documento.
+Questo documento è stato redatto in conformità con le regole editoriali delle Direttive
+ISO/IEC, Parte 2. (vedere: www.iso.org/directives
+, www.iso.org/directives  o
+www.iec.ch/members_experts/refdocs ).
+Si richiama l’attenzione sulla possibilità che alcuni elementi del present e documento
+possano essere oggetto di diritti di brevetto. ISO e IEC non saranno ritenuti responsabili
+dell’identificazione di uno o di tu tti questi diritti di brevetto . Tuttavia, gli utilizzatori sono
+avvertiti del fatto che tali informazioni potrebbero non essere aggiornate, e che possono
+essere reperite nell’elenco IS O delle dichiarazioni di brev etto ricevute agli indirizzi
+www.iso.org/patents
+ e https://patents.iec.ch. ISO e IEC in nessun caso potranno essere
+ritenuti responsabili dell''individuazione di tali diritti di brevetto o di qualsiasi altro brevetto.
+Qualsiasi nome commerciale utilizzato in questo documento è un’informazione fornita per
+comodità degli utenti e non costituisce un’approvazione.
+Per una spiegazione della natura volontaria delle norme, del significato dei termini e delle
+espressioni specifici dell’ISO relativi alla  valutazione della conformità, nonché per
+informazioni sull’adesione dell’ISO ai pr incipi dell'Organizzazione Mondiale del
+Commercio (WTO) nell'ambito degli ostaco li tecnici per il comm ercio (TBT) vedere:
+www.iso.org/iso/foreword.html. Nella IEC, vedasi www.iec.ch/understanding-standards.
+Il presente documento è stato preparato dal Comitato Tecnico Congiunto ISO/IEC JTC 1,
+Tecnologie Informatiche, Sottocomitato SC 42, Intelligenza artificiale.
+Eventuali commenti o domande poste su questo documento dovrebbero essere indirizzati
+all’organismo di normazione na zionale dell’utilizzatore. Un elenco completo di questi
+organismi può essere trovato su www.iso.org/members.html  e
+www.iec.ch/national-committees.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 2UNI CEI ISO/IEC 42001:2024
+INTRODUZIONE
+L’Intelligenza Artificiale (IA) è sempre più a pplicata in tutti quei settori che utilizzano le
+tecnologie dell’informazione, e si ritiene che sarà uno dei principali settori di sviluppo
+economico. Come conseguenza di tale tendenza, nei prossimi anni alcune delle
+applicazioni in questione potranno dare origine a nuove sfide per la nostra società.
+Il presente documento intende supportare le organizzazioni a operare responsabilmente
+(responsibly) in relazione ai sistemi di IA (per esempio, utilizzare, sviluppare, monitorare o
+fornire prodotti o servizi che utilizzano l'IA). L’IA suscita potenzialmente considerazioni
+specifiche quali:
+- L'utilizzo dell'IA per processi decisionali automatici, a volte condotto in modo non
+trasparente e non spiegabile, che può richiedere una specifica gestione che va al di
+là della gestione dei classici sistemi IT.
+- L'uso dell'analisi dei dati, delle  informazioni (insight*) [
+* Nota alla traduzione - Per una
+maggiore comprensione del termine “insight”, nel contesto del machine learning suggeriamo
+la seguente fonte: https://arxiv.org/abs/2307.06551] e del machine learning, piuttosto che
+della logica codificata dall'uomo per progettare sistemi, aumentano le opportunità di
+applicazione dei sistemi di IA e camb iano il modo in cui tali sistemi vengono
+sviluppati, giustificati e distribuiti.
+- I sistemi di IA ad apprendimento continuo mutano il loro comportamento durante
+l'uso. Essi richiedono un'attenzione pa rticolare al fine di garantire un uso
+responsabile (responsible) e continuo anche in presenza di un cambiamento di tale
+comportamento.
+Il presente documento è stato elaborato allo  scopo di fornire i requisiti per stabilire,
+attuare, mantenere e migliorare in modo continuo un sistema di gestione dell’IA nel
+contesto di un'organizzazione. Le organizza zioni dovrebbero concentrare l'applicazione
+dei requisiti su caratteristiche che siano uniche dell'IA. Alcune caratteristiche dell'IA, come
+la capacità di apprendere e migliorare continuamente o la mancanza di trasparenza o
+spiegabilità, possono gi ustificare misure di salvaguardi a diverse se generano ulteriori
+criticità rispetto alle moda lità con cui il compito (task**)
+ [** Nota alla traduzione - Per una
+maggiore comprensione del termine “task” nel cont esto dell’IA, suggeriamo la seguente fonte:
+https://arvix.org/abs/1604.04660.] verrebbe svolto tradizionalmente. L'adozione di un sistema
+di gestione dell'IA per estendere le attuali strutture di gestione rappresenta una decisione
+strategica per un’organizzazione.
+Le esigenze e gli obiettivi dell'organizzazione , i processi, le dimensioni e la struttura,
+nonché le aspettative delle varie parti interessate influenzano la creazione e l'attuazione
+del sistema di gestione dell'IA. Un'altra serie di fattori che influenzano la creazione e
+l'attuazione del sistema di gestione dell'IA sono i numerosi casi di utilizzo dell'IA e la
+necessità di trovare il giusto  equilibrio tra i meccanismi di governance e innovazione. Le
+organizzazioni possono scegliere di applic are questi requisiti utilizzando un approccio
+basato sul rischio per garantire l'applicazione del livello di controllo appropriato per i
+particolari casi di utilizzo dell'IA, i servizi o i prodo tti che rientrano nell'ambito
+dell'organizzazione. Tutti questi fattori di influenza sono destinati a cambiare e a essere
+soggetti a riesame di volta in volta.
+Il sistema di gestione dell'IA dovrebbe essere integrato con i processi dell'organizzazione
+e con la struttura gestionale complessiva. Nella progettazione di processi, sistemi
+informativi e controlli si dovrebbero prendere in considerazione problemi specifici correlati
+all'IA. Esempi fondamentali di tali processi di gestione sono:
+- determinazione di obiettivi organizzativi, coinvolgimento delle parti interessate e
+politica dell’organizzazione;
+- gestione dei rischi e delle opportunità;
+- processi per la gestione de lle problematiche le gate all’affidabilità (trustworthiness)
+dei sistemi di intelligenza artificiale, q uali sicurezza (security), salvaguardia delle
+persone/incolumità (safety), correttezza (fairness), trasparenza (transparency),
+qualità dei dati e qualità dei sistemi di IA durante il loro ciclo di vita;
+- processi per la gestione di fornitori, partner e terze parti che forniscono o sviluppano
+sistemi di IA per l'organizzazione.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 3 UNI CEI ISO/IEC 42001:2024
+Il presente documento fornisce una guida per l'attuazione dei controlli applicabili a
+supporto di tali processi.
+Il presente documento non fornisce indicazi oni specifiche sui processi di gestione.
+L'organizzazione può combinare schemi e modelli di riferime nto generalmente accettati,
+altre norme internazionali e la propria esperienza per attuare processi cruciali come
+gestione del rischio (risk management), gestione del ciclo di vita (life cycle management)
+e gestione della qualità dei dati (data quality management) che sono appropriati per gli
+specifici casi d'utilizzo dell'IA, prodotti o servizi all'interno del campo di applicazione.
+Un'organizzazione conforme ai requisiti del presente documento può dare evidenza della
+propria responsab ilità (responsibility) e della propri a affidabilità (acco untability) del
+proprio ruolo nei confronti dei sistemi di IA.
+L'ordine in cui i requisiti sono presentati nel presente documento non riflette la loro
+importanza né implica l'ordine in cui sono attuati. Le voci dell'elenco sono enumerate solo
+a scopo di riferimento.
+Compatibilità con altre norme di sistemi di gestione
+Il presente documento utilizza la struttura armonizzata (numeri di punti, titoli, testo e
+termini comuni e definizioni fondamentali identici) sviluppata per migliorare l'allineamento
+tra le norme dei sistemi di gestione (MSS). Il sistema di gestione dell'IA fornisce requisiti
+specifici per la gestione dei problemi e dei rischi derivanti dall'utilizzo dell'IA in
+un'organizzazione. Questo approccio comune facilita l'attuazione e la coerenza con altre
+norme di sistemi di gestione, per esempio in materia di qualità, salvaguardia delle
+persone/incolumità (safety), sicurezza (security) e protezione dei dati personali (privacy).
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 4UNI CEI ISO/IEC 42001:2024
+1 SCOPO E CAMPO DI APPLICAZIONE
+Il presente documento specifica i requisiti e fornisce una guida per la creazione,
+l'attuazione, la manutenzione e il miglioramento continuo di un sistema di gestione dell'IA
+(intelligenza artificiale) nel contesto di un'organizzazione.
+La norma è destinata a un'organizzazione che fornisca o utilizzi prodotti o servizi che si
+avvalgono di sistemi di IA. Il documento ha lo scopo di aiutare l'organizzazione a
+sviluppare, fornire o utilizzare sistemi di IA in modo responsabile nel perseguire i propri
+obiettivi e soddisfare i requisiti applicabili, gli obblighi relativi alle parti interessate e le loro
+aspettative.
+Il presente documento è applicabile a qualsiasi organizzazione, indipendentemente dalle
+dimensioni, dal tipo e dalla na tura, che fornisca o utilizzi prodotti o servizi che utilizzano
+sistemi di IA.
+2 RIFERIMENTI NORMATIVI
+I seguenti documenti, in tutto o in parte, sono richiamati con carattere normativo nel
+presente documento e sono indispensabili per la sua applicazione. Per quanto riguarda i
+riferimenti datati, si applica esclusivamente l'edizione citata. Per i riferimenti non datati
+vale l'ultima edizione del documento a cui si fa riferimento (compresi gli aggiornamenti).
+ISO/IEC 22989:2023 Tecnologia dell'informazione - Intelligenza artificiale -
+Concetti e terminologia dell'intelligenza artificiale
+3 TERMINI E DEFINIZIONI
+Ai fini del presente documento si applicano i termini e le definizioni di cui ISO/IEC 22989
+e i termini e le definizioni seguenti.
+ISO e IEC mantengono dei datab ase di termini utilizzati ne lla normazione e reperibili ai
+seguenti indirizzi:
+- ISO Online browsing  platform: disponibile all'indirizzo https://www.iso.org/obp
+- IEC Electropedia: disponibile all'indirizzo https://www.electropedia.org/ .
+3.1 organizzazione : Persona o gruppo di persone avente funzioni proprie con responsabilità,
+autorità e relazioni per conseguire i propri obiettivi (punto 3.6).
+Nota 1 Il concetto di organizzazione comprende, in termini non esaustivi, chi opera singol armente, società, gruppi,
+aziende, imprese, autorità, partenaria to (partnership), enti di beneficenz a o istituzioni, o loro parti o
+combinazioni, costituiti in persona giuridica o meno, pubblici o privati.
+Nota 2 Se l’organizzazione è parte di una entità più grande, il te rmine “organizzazione” si riferisce soltanto a quella
+parte dell’entità più ampia che rientra nel campo di applicazione del sistema di gestione (punto 3.4).
+3.2 parte interessata (termine preferito) , stakeholder (termine ammesso) : Persona od
+organizzazione (3.1) che può influenzare, essere influenzata, o percepire sé stessa come
+influenzata, da una decisione o attività.
+Nota 1 Una panoramica delle parti interessate all'IA è contenuta nella norma ISO/IEC 22989:2022, punto 5.19.
+3.3 alta direzione (top management) : Persona o gruppo di persone che, al livello più elevato,
+guidano e tengono sotto controllo un’organizzazione (punto 3.1).
+Nota 1 L’alta direzione ha la facoltà di  delegare i poteri e mettere a disp osizione le risorse all’interno
+dell’organizzazione.
+Nota 2 Se lo scopo e campo di applicazione del sistema di gestione  (punto 3.4) copre solo una parte di
+un’organizzazione, il termine “alta direzione” si riferisce a coloro che guidano e tengono sotto controllo quella
+parte dell’organizzazione stessa.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 5 UNI CEI ISO/IEC 42001:2024
+3.4 sistema di gestione : Insieme di elementi correlati o interagenti di un’ organizzazione
+(punto 3.1) finalizzato a stabilire le politiche (punto 3.5) e gli obiettivi (punto 3.6), nonché
+i processi (punto 3.8) per conseguire tali obiettivi.
+Nota 1 Un sistema di gestione può riferirsi a una o più discipline.
+Nota 2 Gli elementi del sistema comprendono la struttura, i ruoli e le responsabilità, la pianificazione e il
+funzionamento dell’organizzazione.
+3.5 politica : Orientamenti e indirizzi di organizzazione (punto 3.1) espressi in modo formale
+dalla sua alta direzione (punto 3.3).
+3.6 obiettivo : Risultato da conseguire.
+Nota 1 Un obiettivo può essere strategico, tattico od operativo.
+Nota 2 Gli obiettivi possono riguardare diverse discipline (come finanza, salute e sicurezza, ambiente). Possono essere,
+per esempio, a livello di organizzazione o specifici per un progetto, un prodotto o un processo (punto 3.8).
+Nota 3 Un obiettivo può essere espresso in altre forme, per esempio come un risultato atteso, una finalità, un criterio
+operativo, come un obiettivo di IA, o ancora attraverso  l’utilizzo di altre parole di significato analogo (per
+esempio intento, scopo, o traguardo).
+Nota 4 Nel contesto dei sistemi di gestione (punto 3.4) di IA, gli obiettivi di IA sono stabiliti dall’organizzazione (punto
+3.1), in coerenza con la politica (punto 3.5), per conseguire specifici risultati.
+3.7 rischio : Effetto dell’incertezza.
+Nota 1 Un effetto è uno scostamento - positivo o negativo - da quanto atteso.
+Nota 2 L’incertezza è lo stato, anche parziale, di carenza di informazioni relative alla comprensione o conoscenza di
+un evento, delle sue conseguenze o della loro probabilità.
+Nota 3 Il rischio è spesso caratterizzato da l riferimento a potenziali “eventi” (come definito nella Guida ISO 73) e
+“conseguenze” (come definito nella Guida ISO 73), o da una loro combinazione.
+Nota 4 Il rischio è frequentemente espresso in termini di combinazione delle conseguenze di un evento (compresi
+cambiamenti nelle circostanze) e della probabilità (c ome definito nella Guida ISO 73) associata al suo
+verificarsi.
+3.8 processo : Insieme di attività correlate o interagenti che usano o trasformano un input per
+fornire un risultato.
+Nota 1 Il risultato di un processo può essere chiamato “out put”, “prodotto” o “servizio” , in base al contesto di
+riferimento.
+3.9 competenza : Capacità di applicare conoscenze e abilità per conseguire i risultati attesi.
+3.10 informazioni documentate : Informazioni che necessitano di essere tenute sotto controllo
+e mantenute da parte di un’organizzazione (punto 3.1) e il supporto che le contiene.
+Nota 1 Le informazioni documentate possono essere in un qual siasi formato, su qualsias i supporto e provenire da
+qualsiasi fonte.
+Nota 2 Le informazioni documentate possono riferirsi a:
+-i l  sistema di gestione (punto 3.4), compresi i relativi processi (punto 3.8);
+- le informazioni prodotte per il funzi onamento dell’organizzazione (documentazione);
+- le evidenze dei risultati conseguiti (registrazioni).
+3.11 prestazioni (performance) : Risultati misurabili.
+Nota 1 Le prestazioni possono riguardare risultanze sia quantitative sia qualitative.
+Nota 2 Le prestazioni possono riguardare la gestione di attività, processi (punto 3.8), prodotti, servizi, sistemi od
+organizzazioni (punto 3.1).
+Nota 3 Nel contesto del presente documento, le prestazioni si riferiscono sia ai risultati ottenuti mediante l'utilizzo di
+sistemi di IA sia ai risultati relativi al sistema di gestione  (punto 3.4) dell’IA. La corretta interpretazione del
+termine risulta chiara dal contesto in cui viene utilizzato.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 6UNI CEI ISO/IEC 42001:2024
+3.12 miglioramento continuo : Attività sistematica per accrescere le prestazioni (punto 3.11).
+3.13 efficacia (effectiveness) : Grado di realizzazione delle attività pianificate e di
+conseguimento dei risultati pianificati.
+3.14 requisito : Esigenza o aspettativa che può essere esplicita, generalmente implicita oppure
+obbligatoria.
+Nota 1 “Generalmente implicita” significa che è uso o prassi comune, per l’ organizzazione (punto 3.1) e per le parti
+interessate (punto 3.2), che l’esigenza o l’aspettativa in esame sia implicita.
+Nota 2 Un requisito specificato è un requisito che è esplicitato, per esempio, nelle informazioni documentate (punto 3.10).
+3.15 conformità : Soddisfacimento di un requisito (punto 3.14).
+3.16 non conformità : Mancato soddisfacimento di un requisito (punto 3.14).
+3.17 azione correttiva : Azione per eliminare la causa o le cause di una non conformità (punto
+3.16) e per prevenirne la ripetizione.
+3.18 audit : Processo (punto 3.8) sist ematico e indipendente per ottenere evidenze dell’audit e
+valutarle con obiettività, al fine di stabilire in quale misura i criteri dell’audit sono stati soddisfatti.
+Nota 1 Un audit può essere un audit interno (di prima parte) o un audit esterno (di seconda parte o di terza parte) e
+può essere un audit combinato (che combina due o più discipline).
+Nota 2 Un audit interno è condotto dall’organizzazione (punto 3.1) stessa o da una parte esterna per suo conto.
+Nota 3 Le “evidenze dell’audit” ed i “criteri dell’audit” sono definiti nella norma ISO 19011.
+3.19 misurazione : Processo (punto 3.8) per determinare un valore.
+3.20 monitoraggio : Determinazione dello stato di un sistema, di un processo (punto 3.8) o di
+un’attività.
+Nota 1 Per determinare lo stato può essere necessario verificare, sorvegliare od osservare criticamente.
+3.21 controllo : <rischio> Misura che mantiene e/o modifica il rischio (punto 3.7).
+Nota 1 I controlli includono, senza ad essi limitarsi, qualsiasi processo, politica, dispositivo, pratica o altre condizioni
+e/o azioni che mantengono e/o modificano il rischio.
+Nota 2 I controlli non sempre esercitano l'effetto modificatore previsto o presunto.
+[FONTE: ISO 31000:2018, 3.8, modificata - Aggiunto <rischio> come ambito di
+applicazione].
+3.22 organo di governo : Persona o gruppo di  persone che sono res ponsabili (accountable)
+delle prestazioni e della conformità dell'organizzazione.
+Nota 1 Non tutte le organizzazioni, soprattutto quelle di piccole dimensioni, hanno un organo di governo separato
+dall'alta direzione.
+Nota 2 Un organo di governo può includere, a titolo esemplificativo ma non esaustivo, il consiglio di amministrazione,
+i comitati del consiglio, il consiglio di vigilanza, i fiduciari o i supervisori.
+[FONTE: ISO/IEC 38500:2020, 2.9, modificata - Aggiunte note alla voce].
+3.23 sicurezza delle informazioni : Preservazione della riservatezza, dell'integrità (integrity) e
+della disponibilità delle informazioni.
+Nota 1 Possono essere coinvolte anche altre proprietà come  l'autenticità (l’accountab ility), la non ripudiabilità
+(non-repudiation) e l'affidabilità (reliability).
+[FONTE: ISO/IEC 27000:2020, punto 3.28]
+3.24 valutazione dell'impatto del sistem a di IA (AI system impact assessment) : Processo
+formale e documentato attraverso il quale si identificano, valutano e affrontano gli impatti
+sugli individui (e sui gruppi di individui) e sulle società da parte di un'organizzazione che
+sviluppa, fornisce o utilizza prodotti o servizi che utilizzano l'intelligenza artificiale.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 7 UNI CEI ISO/IEC 42001:2024
+3.25 qualità dei dati (data quality) : Caratteristica dei dati per cui essi soddisfano i requisiti attesi
+dall'organizzazione per un contesto specifico.
+[FONTE: ISO/IEC 5259-1:-1), punto 3.4]
+3.26 dichiarazione di applicabilità: (statement of applicability) : Documentazione di tutti i
+necessari controlli (punto 3.23) e giustificativi dell'inclusione o dell'esclusione dei controlli.
+Nota 1 Le organizzazioni possono non richiedere tutti i cont rolli elencati nell'Appendice  A o addirittura superare
+l'elenco dell'Appendice A con controlli aggiuntivi stabiliti dall'organizzazione stessa.
+Nota 2 Tutti i rischi identificati devono essere documentati dall'organizzazione secondo i requisiti del presente
+documento. Tutti i rischi identificati e le misure di gestione del rischio (controlli) stabilite per affrontarli devono
+essere riportati nella dichiarazione di applicabilità.
+4 CONTESTO DELL’ORGANIZZAZIONE
+4.1 Comprendere l’organizz azione e il suo contesto
+L’organizzazione deve individuare i fattori esterni e interni che sono rilevanti per le sue
+finalità e che influenzano la sua capacità di conseguire i risultati attesi per il proprio
+sistema di gestione dell’IA. 
+L'organizzazione deve stabilire se il cambiamento climatico è una questione rilevante.
+L'organizzazione deve tenere in considerazione lo scopo per cui i sistemi di IA sono stati
+sviluppati, forniti o ut ilizzati. L'organizzazione deve stabilir e i propri ruoli rispetto a tali
+sistemi di IA.
+Nota 1 Per comprendere l'organizzazione e il suo contesto, può essere utile che l'organizzazione determini il proprio
+ruolo rispetto al sistema di IA. Questi ruoli possono includere, ma non sono limitati a, uno o più dei seguenti:
+- Fornitori di IA (AI providers), co mpresi i fornitori di piattaforme di IA e di prodotti o servizi di IA;
+- Produttori di IA (AI producers), compresi sviluppa tori di IA (AI developers), progettisti di IA (AI
+designers), operatori di IA (AI operat ors), tecnici di laboratorio e valutatori di IA (AI testers and
+evaluators), implementatori di IA (AI deployers), esperti delle sci enze sociali e umane applicate all'AI
+(AI human factor professionals), esperti di dominio ( domain experts), valutatori dell'impatto dell'IA (AI
+impact assessors), committenti (procurers), professionisti della governance e della supervisione dell'IA
+(AI governance and oversight professionals);
+- Clienti dell'IA (AI customers), co mpresi gli utilizzatori di IA;
+- Partner di sistemi IA (AI partners), compresi in tegratori di sistemi di IA e fornitori di dati;
+- Soggetti dell'IA (AI subjects), compresi g li interessati (data subjects) e altri soggetti;
+- Autorità competenti, compresi i decisori politici (pol icymakers) e l’autorità di controllo/enti/autorità di
+regolamentazione (regulators).
+Una descrizione dettagliata di tali ruoli è fornita nella norma ISO/IEC 22989. Inoltre, il tipo di ruoli e la loro
+relazione con il ciclo di vita del sistema di IA sono descritti anche nel framework di gestione del rischio dell'IA
+(AI risk management) del NIST [29]. I ruoli dell'organizzazione possono determinare l'applicabilità e il grado di
+applicazione dei requisiti e dei controlli previsti dal presente documento.
+Nota 2 I fattori esterni e interni di cui tenere conto ai fini della presente clausola possono variare a seconda dei ruoli
+e della giurisdizione in cui opera l'or ganizzazione e del loro impatto sulla rispettiva capacità di conseguire i
+risultati previsti dal proprio sistema di gestione dell'IA. Questi possono includere, ma non sono limitati a:
+a) considerazioni relative al contesto esterno, quali:
+1) requisiti legali applicabili, co mpresi gli usi vietati dell'IA;
+2) politiche, linee guida e decisioni delle autor ità di controllo/enti/aut orità di regolamentazione
+(regulators) che hanno un impatto sull'interpretazione o sull'applicazione dei requisiti legali per lo
+sviluppo e l'utilizzo dei sistemi di IA;
+3) incentivi o conseguenze associati allo sc opo atteso e all'uso dei sistemi di IA;
+4) cultura, tradizioni, valori, norme ed etica in  relazione allo sviluppo e all'utilizzo dell'IA;
+1) In preparazione. Stadio al momento della pubblicazione ISO/IEC DIS 5259-1:2023.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 8UNI CEI ISO/IEC 42001:2024
+5) il mercato della concorrenza e le tendenze dei nuovi prodotti e servizi che impiegano i sistemi di IA;
+b) considerazioni relative al contesto interno, quali:
+1) contesto organizzativo, governance, obietti vi (vedasi punto 6.2), politiche e procedure;
+2) obblighi contrattuali;
+3) scopo atteso per il sistema di IA che si intende sviluppare o utilizzare.
+Nota 3 La determinazione del ruolo può derivar e dagli obblighi correlati alle cat egorie di dati che l'organizzazione
+tratta (per esempio, responsabile del trattamento dei dati personali delle  persone fisiche (PII) o titolare del
+trattamento dei dati personali delle persone fisiche (PII). Per la identificazione dei dati personali delle persone
+fisiche (PII) e i relativi ruoli si veda la norma ISO /IEC 29100. I ruoli possono anche essere definiti in base ai
+requisiti legali specifici dei sistemi di IA.
+4.2 Comprendere le esigenze e le aspettative delle parti interessate
+L’organizzazione deve determinare:
+- le parti interessate rilevanti per il sistema di gestione dell’IA;
+- i requisiti pertinenti delle parti interessate;
+- quali di tali requisiti verr anno gestiti attraverso il sistema di gestione dell’IA.
+Nota Le parti interessate possono avere esigenze legate al cambiamento climatico.
+4.3 Determinazione del campo di applicaz ione del sistema di gestione dell’IA
+L’organizzazione deve determinare i confini e l’applicabilità del sistema di gestione dell’IA
+per stabilirne il campo di applicazione.
+Nello stabilire il campo di applicazione, l’organizzazione deve considerare:
+- i fattori esterni e interni di cui al punto 4.1;
+- i requisiti di cui al punto 4.2.
+Il campo di applicazione deve essere disponibile come informazione documentata.
+Il campo di applicazione del sistema di gestione dell'IA deve determinare le attività
+dell'organizzazione con riferimento ai requi siti del presente documento sul sistema di
+gestione dell'IA, la leadership, la pianificazione, il supporto, il funzionamento, le
+prestazioni, la valutazione, il miglioramento, i controlli e gli obiettivi.
+4.4 Sistema di gestione dell’IA
+L'organizzazione deve stabilire, implementare, mantenere, migliorare in modo continuo e
+documentare il sistema di gestione dell'IA, compresi i processi interessati e le relative
+correlazioni, in conformità ai requisiti del presente documento.
+5 LEADERSHIP
+5.1 Leadership e impegno
+L’alta direzione (top management) deve dimostrare leadership e impegno in riferimento al
+sistema di gestione dell’IA:
+- assicurando che siano stabiliti la politica di IA (vedasi punto 5.2) e gli obiettivi di IA
+(vedasi punto 6.2) e che questi siano compatibili con gli indirizzi strategici
+dell’organizzazione;
+- assicurando l’integrazio ne dei requisiti del sistema di gestione dell’IA nei processi di
+business dell’organizzazione;
+- assicurando che siano disponib ili le risorse necessarie al sistema di gestione dell’IA;
+- comunicando l'importanza di una efficace gestione delle Al e della conformità ai
+requisiti del sistema di gestione dell'IA;
+- assicurando che il sistema di gestione  dell’IA consegua i risultati attesi;
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 9 UNI CEI ISO/IEC 42001:2024
+- indirizzando e supportando le persone affinché contribuiscano all'efficacia del
+sistema di gestione dell’IA;
+- promuovendo il miglioramento continuo;
+- supportando gli altri ruoli pertinenti per dimostrare la loro leadership nelle aree di
+propria responsabilità.
+Nota 1 Il riferimento al “business” nel  presente documento può essere interpretato in modo ampio in modo da
+comprendere quell'insieme di attività che sono alla base degli scopi per cui l'organizzazione esiste.
+Nota 2 Stabilire, promuovere e modellare una cultura all'in terno dell'organizzazione, per adottare un approccio
+responsabile (responsible) all'uso, allo sviluppo e alla  gestione dei sistemi di IA può essere un'importante
+manifestazione dell’impegno e della leader ship dell’alta direzione. La consapevolezza e il rispetto di tale
+approccio responsabile e il supporto del sistema di gestione dell'IA attraverso la leadership possono favorire
+il successo del sistema di gestione dell'IA.
+5.2 Politica
+L'alta direzione deve stabilire una politica di IA che:
+a) sia appropriata alle finalità dell'organizzazione;
+b) costituisca un quadro di riferimento per fissare gli obiettivi per l’ IA (vedere punto
+6.2);
+c) comprenda l'impegno a soddis fare i requisiti applicabili;
+d) comprenda l'impegno per il miglioramento continuo del sistema di gestione dell’IA.
+La politica per l’ IA deve:
+- essere disponibile come informazione documentata;
+- fare riferimento, per quanto pertinente, ad altre politiche dell'organizzazione;
+- essere comunicata all'interno dell'organizzazione;
+- essere disponibile alle parti interessate, per quanto appropriato.
+Gli obiettivi di controllo e i controlli per la definizione di una politica di IA sono riportati nel
+punto A.2 del prospetto A.1. Le linee guida per l'attuazione di tali controlli sono fornite nel
+punto B.2.
+Nota La norma ISO/IEC 38507 fornisce considerazioni alle organizzazioni in merito allo sviluppo di politiche di IA.
+5.3 Ruoli, responsabilità e autorità
+L'alta direzione deve assicurare che le responsabilità e le autorità relative ai ruoli rilevanti
+siano assegnate e comunicate all’interno dell'organizzazione.
+L'alta direzione deve assegnare le responsabilità e le autorità per:
+a) assicurare che il sistema di gestione de ll’IA sia conforme ai requisiti del presente
+documento;
+b) riferire all'alta direzione sulle pr estazioni del sistema di gestione dell’IA.
+Nota Un controllo per la definizione e l'a ttribuzione di ruoli e responsabilità è fornito nel punto A.3.2 del prospetto
+A.1. Una guida per l'attuazione di questo controllo è fornita nel punto B.3.2.
+6 PIANIFICAZIONE
+6.1 Azioni per affrontare rischi e opportunità
+6.1.1 Generalità
+Nel pianificare il sistema di gestione dell’IA, l’organizzazione deve considerare i fattori di
+cui al punto 4.1 e i requisiti di cui al punto 4.2 e determinare i rischi e le opportunità che è
+necessario affrontare per:
+- fornire assicurazione che il sistema di gest ione dell’IA può conseguire il(i) risultato(i)
+atteso(i);
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 10UNI CEI ISO/IEC 42001:2024
+- prevenire o ridurre gli effetti indesiderati;
+- conseguire il miglioramento continuo.
+L'organizzazione deve stabilire e mantenere criteri di rischio dell'IA che supportino:
+- la distinzione tra rischi acce ttabili e rischi non accettabili;
+- l’esecuzione (performing) di valutazioni del rischio dell’IA (AI risk assessments);
+- la conduzione (conducting) del  trattamento del rischio dell’IA (AI risk treatment);
+- la valutazione(assessing) degli impatt i del rischio dell’IA (AI risk impacts).
+Nota 1 Le considerazioni per determinare l’entità e il tipo di rischio che un' organizzazione è disposta a correre o
+accettare sono fornite nelle norme ISO/IEC 38507 e ISO/IEC 23894.
+L'organizzazione deve determinare i rischi e le opportunità secondo:
+- il dominio e il contesto applicativo di un sistema di IA;
+- l’utilizzo previsto;
+- il contesto interno ed esterno descritto nel punto 4.1.
+Nota 2 Nello scopo del sistema di gestione dell'IA possono essere presi in considerazione più sistemi di IA. In questo
+caso, la definizione delle opportunità e degli utilizzi si effettua per ogni sistema di IA o per ogni loro
+raggruppamento.
+L’organizzazione deve pianificare:
+a) le azioni per affrontare / gestire tali rischi e opportunità;
+b) come:
+1) integrare e at tuare le azioni nei processi del proprio sistema di gestione dell’IA;
+2) valutare l’efficacia di tali azioni.
+L'organizzazione deve conservare informazi oni documentate sulle azioni intraprese per
+identificare e gestire i rischi e le opportunità dell'IA.
+Nota 3 La guida su come implementare la gestione del rischio (risk management) per le organizzazioni che sviluppano,
+forniscono o utilizzano prodotti, sistemi e servizi di IA è fornita nella norma ISO/IEC 23894.
+Nota 4 Il contesto dell'organizzazione e delle sue attività può avere un impatto sulle attività di gestione del rischio (risk
+management) dell'organizzazione.
+Nota 5 Il modo di definire il rischio e,  di conseguenza, il modo di concepir ne la gestione può variare a seconda dei
+settori e delle industrie. La definizione di rischio di cui al punto 3.7 fornisce una visione ampia del rischio che
+si adatta a qualsiasi settore, come ad esempio i settori  citati nell' Appendice D. In ogni caso, è compito
+dell'organizzazione, nell'ambito del la valutazione del rischio, innanzitutto adottare una visione del rischio
+adatta al proprio contesto. Ciò può includere l'approccio al rischio attraverso le definizioni utilizzate nei settori
+per i quali il sistema di IA viene sviluppato e utilizzato, tipo la definizione della Guida 51 ISO/IEC.
+6.1.2 Valutazione del rischio dell’IA
+L'organizzazione deve definire e stabilire un  processo di valutazione del rischio (risk
+assessment) dell’IA che:
+a) sia informato da, e allineato alla politica di IA (vedasi punto 5.2) e agli obiettivi di IA
+(vedasi punto 6.2);
+Nota Quando si valutano le conseguenze come parte del punt o 6.1.2 d) 1), l'organizzazione può utilizzare una
+valutazione dell'impatto del sistema di IA come indicato nel punto 6.1.4.
+b) sia progettato in modo tale che reiter ate valutazioni del rischio dell’IA possano
+produrre risultati coerenti, validi e comparabili;
+c) identifichi i rischi che favoriscono o impedisc ono il raggiungimento degli obiettivi di IA;
+d) analizzi i rischi dell'IA per:
+1) valutare le potenziali conseguenze per l'organizzazione, gli individui e la società
+che si potrebbero verificare se i rischi identificati dovessero concretizzarsi;
+2) valutare, ove applicabile , la probabilità realistica dei rischi identificati;
+3) determinare i livelli di rischio;
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 11 UNI CEI ISO/IEC 42001:2024
+e) valuti i rischi dell’IA per:
+1) confrontare i risultati dell'analisi dei rischi con i criteri di rischio (vedasi punto
+6.1.1);
+2) dare priorità ai rischi valutati per il trattamento del rischio.
+L'organizzazione deve conservare informazioni documentate sul processo di valutazione
+del rischio (risk assessment) dell’IA.
+6.1.3 Trattamento del rischio dell’IA
+Tenendo conto dei risultati della valutazione del rischio, l'organizzazione deve definire un
+processo di trattamento del rischio di IA per:
+a) selezionare le più appropriate opzi oni di trattamento del rischio dell’IA;
+b) determinare tutti i controlli necessari per at tuare le opzioni di trattamento del rischio
+di IA scelte e confrontare i controlli con quelli dell'Appendice A per verificare che non
+siano stati omessi controlli necessari;
+Nota 1 L’Appendice A fornisce i controlli di riferimento per  il raggiungimento degli obiettivi dell’organizzazione e per
+la gestione dei rischi legati alla progettazione e all'utilizzo dei sistemi di IA.
+c) tenere conto dei controlli del l'Appendice A che sono rileva nti per l'attuazione delle
+opzioni di trattamento del rischio dell’IA;
+d) identificare se sono  necessari ulteriori controlli oltre a quelli previsti dall’Appendice A
+per attuare tutte le opzioni di trattamento del rischio;
+e) considerare la guida dell’Appendice B per  l'attuazione dei co ntrolli determinati ai
+punti b) e c);
+Nota 2 Gli obiettivi di controllo sono implicitamente inclus i nei controlli scelti. L'organizzazione può selezionare un
+insieme appropriato di obiettivi di controllo e di controlli dall’Appendice A. I controlli dell’Appendice A non sono
+esaustivi e potrebbero essere necessari  ulteriori controlli e obiettivi di controllo. Nel caso in cui siano
+necessari controlli diversi o aggiuntivi rispetto a quel li dell'Appendice A, l'organizzazione può progettare tali
+controlli o ricavarli da fonti esistenti. La gestione del rischio dell'IA (AI risk management) può essere integrata,
+ove applicabile, anche ad altri sistemi di gestione.
+f) produrre una dichiarazione di  applicabilità (statement of applicability) che contenga i
+controlli necessari [vedasi b), c) e d)] e forn ire una giustificazione per l'inclusione e
+l'esclusione dei controlli. Tra le giustificazioni per l'esclusione è possibile annoverare
+i casi in cui i controlli non sono consider ati come necessari dalla valutazione del
+rischio e quelli in cui non sono richiesti da  (o sono soggetti a eccezioni in base a)
+requisiti esterni applicabili.
+Nota 3 L'organizzazione può fornire gi ustificazioni documentate per l'esclusione di qualsiasi obiettivo di controllo in
+generale o per specifici sistemi di IA, sia esso elencato nell'Appendice A o stabilito dall'organizzazione stessa.
+g) formulare un piano di trat tamento del rischio dell’IA (AI risk treatment plan).
+Per il piano di trattamento del rischio di IA e per l'accettazione dei rischi residui di IA,
+l'organizzazione deve ottenere l'approvazione della direzione designata. I controlli
+considerati come necessari devono essere:
+- allineati agli obietti vi del punto 6.2;
+- disponibili come inform azioni documentate;
+- comunicati all'interno dell'organizzazione;
+- disponibili alle parti intere ssate, per quanto appropriato.
+L'organizzazione deve conservare informazioni documentate sul processo di trattamento
+del rischio dell’IA.
+6.1.4 Valutazione dell'impatto del sistema di IA
+L'organizzazione deve definire un processo di valutazione delle potenziali conseguenze
+per gli individui o gruppi di individui, o entrambi, e per le società, che possono derivare
+dallo sviluppo, dalla fornitura o dall'utilizzo di sistemi di IA.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 12UNI CEI ISO/IEC 42001:2024
+La valutazione dell'impatto del sistema di IA deve determinare le potenziali conseguenze
+che l'impiego, l'uso previsto e il prevedibile abuso di un sistema di IA hanno sugli individui
+o gruppi di individui, o entrambi, e sulle società.
+La valutazione dell'impatto del sistema di IA deve tener conto del contesto tecnico e
+sociale specifico in cui il sistema di IA è impiegato e delle giurisdizioni applicabili.
+Il risultato della valutazione dell’impatto del sistema di IA deve essere documentato. Se
+appropriato, il risultato de lla valutazione dell’impatto de l sistema può essere reso
+disponibile alle parti interessate rilevanti, come definito dall'organizzazione.
+L'organizzazione deve prendere in considerazione i risultati della valutazione dell'impatto
+del sistema di IA nella valutazione dei rischi (vedasi punto 6.1.2). Il punto A.5 del
+prospetto A.1 fornisce controlli per la valutazione degli impatti dei sistemi di IA.
+Nota In alcuni contesti (come i sistemi di IA critici per la sicurezza o la protezi one dei dati personali (privacy),
+l'organizzazione può richiedere che le valutazioni dell’impatto dei sistemi di IA specifiche per la disciplina (per
+esempio, impatto sulla sicurezza, sulla protezione dei dati personali (privacy) o sulla salvaguardia delle
+persone (safety) siano eseguite come parte delle a ttività di gestione del rischio complessivo di
+un'organizzazione.
+6.2 Obiettivi per l’IA e pianificazione per il loro raggiungimento
+L’organizzazione deve stabilire gli obiettivi di IA a funzioni e livelli pertinenti.
+Gli obiettivi di IA devono:
+a) essere coerenti con la politica di IA (vedasi punto 5.2);
+b) essere misurab ili (se praticabile);
+c) tenere in considerazione  i requisiti applicabili;
+d) essere monitorati;
+e) essere comunicati;
+f) essere aggiornati per quanto appropriato;
+g) essere disponibili come informazioni documentate.
+Nel pianificare come raggiu ngere i propri obiettivi di IA, l’organizzazione deve
+determinare:
+- cosa viene fatto;
+- quali risorse vengono richieste;
+- chi ne è responsabile;
+- quando viene completato;
+- come sono valutati i risultati.
+Nota Un elenco non esclusivo di obiettivi di IA relativi alla gestione del rischio è fornito nell’Appendice C. I controlli
+e gli obiettivi di controllo per l'identificazione degli obiettivi per lo sviluppo e l'utilizzo responsabile dei sistemi
+di IA e le misure per raggiungerli, sono forniti nei punti A.6.1 e A.9.3 nel prospetto A.1. Una guida di attuazione
+di questi controlli è fornita nei punti B.6.1 e B.9.3.
+6.3 Pianificazione delle modifiche
+Quando l'organizzazione determina la necessità di apportare modifiche al sistema di
+gestione dell’IA, queste devono essere eseguite in modo pianificato.
+7 SUPPORTO
+7.1 Risorse
+L'organizzazione deve determinare e fornir e le risorse necessarie per l'istituzione,
+l'attuazione, il mantenimento e il miglioramento continuo del sistema di gestione dell’IA.
+Nota Gli obiettivi di controllo e i controlli  per le risorse di IA sono forniti nel punto A.4 del prospetto A.1. La guida
+per l'attuazione di questi controlli è fornita nel punto B.4.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 13 UNI CEI ISO/IEC 42001:2024
+7.2 Competenze
+L’organizzazione deve:
+- stabilire le competenze nece ssarie per la(e) persona(e) che svolge/svolgono attività
+lavorative sotto il suo controllo e che influenzano le sue prestazioni di IA;
+- assicurare che queste persone siano competenti sulla base di istruzione,
+formazione, o esperienza appropriate;
+- ove applicabile, intraprendere azioni per acquisire le necessarie competenze e
+valutare l'efficacia delle azioni intraprese.
+Devono essere disponibili informazioni doc umentate appropriate  quale evidenza delle
+competenze.
+Nota 1 Una guida all'implementazione delle risorse umane,  che includono la determinazione delle competenze
+necessarie, è fornita nel punto B.4.6.
+Nota 2 Le azioni applicabili possono comp rendere, per esempio: l'erogazi one di formazione, l’affiancamento
+(mentoring) o la riallocazione delle persone attual mente impiegate; oppure l’assunzione o l’incarico a
+contratto di persone competenti.
+7.3 Consapevolezza
+Le persone che svolgono attivi tà lavorative sotto  il controllo dell’organizzazione devono
+essere consapevoli:
+- della politica di IA (vedasi punto 5.2);
+- del proprio contributo all’efficacia del sist ema di gestione dell’IA, compresi i benefici
+derivanti dal miglioramento delle prestazioni di IA;
+- delle implicazioni derivanti dalla non conformità ai requisiti del sistema di gestione
+dell’IA.
+7.4 Comunicazione
+L’organizzazione deve stabilire le comunicazioni interne ed esterne rilevanti per il sistema
+di gestione dell'IA, compreso:
+- che cosa comunicherà;
+- quando comunicare;
+- con chi comunicare;
+- come comunicare.
+7.5 Informazioni documentate
+7.5.1 Generalità
+Il sistema di gestione dell'IA dell’organizzazione deve comprendere:
+a) le informazioni documentate richieste dal presente documento;
+b) le informazioni documentate che l'organizzazione determina come necessarie per
+l'efficacia del sistema di gestione dell'IA.
+Nota L'estensione delle informazioni documentate di  un sistema di gestione dell'IA può variare da
+un'organizzazione all'altra in base alla:
+- dimensione dell'organizzaz ione e il suo tipo di attività, processi, prodotti e servizi;
+- complessità dei processi e delle loro interazioni;
+- competenza delle persone.
+7.5.2 Creazione e aggiornamento delle informazioni documentate
+Nel creare e aggiornare le informazioni documentate, l’organizzazione deve assicurare:
+- l’identificazione e descrizione appropriate (per esempio titolo, data, autore/autrice o
+numero di riferimento);
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 14UNI CEI ISO/IEC 42001:2024
+- il formato appropriato (per esempio lingua, versione del software, grafica) e supporto
+(per esempio cartaceo, elettronico);
+- il riesame e approvazione appropriati in  merito all’idoneità e all’adeguatezza.
+7.5.3 Controllo delle informazioni documentate
+Le informazioni documentate richieste dal sistema di gestione dell'IA e dal presente
+documento devono essere controllate per assicurare che:
+a) siano disponibili e pronte all’u so, dove e quando necessario;
+b) siano adeguatamente prote tte (per esempio da perdit a di riservatezza, utilizzo
+improprio, o perdita d’integrità).
+Per tenere sotto controllo le informazioni documentate, ove applicabile, l’organizzazione
+deve intraprendere le seguenti attività:
+- distribuzione, accesso,  recupero e utilizzo;
+- archiviazione e preservazione, compre so il mantenimento della leggibilità;
+- tenuta sotto controllo delle modifiche (per esempio controllo delle versioni);
+- conservazione e successive disposizioni.
+Le informazioni documentate di origine esterna, determinate come necessarie
+dall'organizzazione per la pianificazione e il funzionamento del sistema di gestione dell'IA,
+devono essere identificate come appropriato, e tenute sotto controllo.
+Nota L'accesso può riguardare il permesso di  visualizzare solo le informaz ioni documentate o il permesso e
+l'autorità di visualizzare e modificare le informazioni documentate.
+8 ATTIVITÀ OPERATIVE
+8.1 Pianificazione e controlli operativi
+L'organizzazione deve pianificare, attuare e tenere sotto controllo i processi necessari per
+soddisfare i requisiti e per attuare le azioni determinate al punto 6:
+- stabilendo i criteri per i processi;
+- attuando il controllo dei processi, in conformità ai criteri.
+L'organizzazione deve attuare i controlli, determinati in co nformità al 6.1.3, che sono
+correlati al funzioname nto del sistema di gestione dell'IA  (per esempio, controlli relativi
+allo sviluppo del sistema di IA e all’utilizzo del ciclo di vita).
+L'efficacia di tali controlli deve essere  monitorata e devono essere prese in
+considerazione azioni correttive se non si raggiungono i risultati previsti. L’Appendice A
+elenca i controlli di riferimento e l'Appendice B fornisce una guida per la loro attuazione.
+Le informazioni documentate devono essere disponibili nella misura necessaria a ritenere
+che i processi siano stati eseguiti come pianificato.
+L'organizzazione deve tenere sotto controllo le modifiche pianificate e riesaminare le
+conseguenze dei cambiamenti involontari, intraprendendo azioni per mitigare ogni effetto
+negativo, a seconda delle necessità.
+L'organizzazione deve assicurare che i processi, prodotti o servizi pertinenti al sistema di
+gestione dell’IA affidati all’esterno siano tenuti sotto controllo.
+8.2 Valutazione de l rischio dell’IA
+L'organizzazione deve eseguire valutazioni del rischio dell’IA in conformità al punto 6.1.2
+a intervalli pianificati o quando vengono proposti o si verificano cambiamenti significativi.
+L'organizzazione deve conservare informazioni documentate sui risultati di tutte le
+valutazioni del rischio dell’IA.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 15 UNI CEI ISO/IEC 42001:2024
+8.3 Trattamento del rischio dell’IA
+L'organizzazione deve attuare il piano di trattamento del ri schio dell’IA in conformità al
+punto 6.1.3 e verificarne l’efficacia.
+Se le valutazioni del rischio identificano nuovi rischi che richiedono un trattamento, per
+questi rischi deve essere eseguito un processo di trattamento del rischio in conformità al
+punto 6.1.3.
+Quando le opzioni di trattamento del rischio definite dal piano di trattamento del rischio
+non sono efficaci, queste opzioni di trattamento devono essere riesaminate e rivalidate a
+seguito del processo di trattamento del rischio in conformità al 6.1.3, e il piano di
+trattamento del rischio deve essere aggiornato.
+L'organizzazione deve conservare informazioni documentate sui risultati di tutti i
+trattamenti del rischio dell’IA.
+8.4 Valutazione dell'impatto del sistema di IA
+L'organizzazione deve eseguire valutazioni dell'impatto del sistema di IA in conformità al
+6.1.4 a intervalli pianificati o quando si propone di apportare modifiche significative.
+L'organizzazione deve conservare informazioni documentate sui risultati di tutte le
+valutazioni di impatto del sistema di IA.
+9 VALUTAZIONE DELLE PRESTAZIONI
+9.1 Monitoraggio, misurazione, analisi e valutazione
+L’organizzazione deve determinare:
+- cosa è necessario monitorare e misurare;
+- i metodi per il monitoraggio , la misurazione, l’analisi e la valutazione, per quanto
+applicabile, per assicurare risultati validi;
+- quando il monitoraggio e la misurazione devono essere eseguiti; 
+- quando i risultati del monitoraggio e della misurazione devono essere analizzati e
+valutati.
+Devono essere disponibili informazioni documentate quale evidenza dei risultati.
+L’organizzazione deve valutare le prestazioni e l’efficacia del sistema di gestione dell'IA.
+9.2 Audit interno
+9.2.1 Generalità
+L’organizzazione deve condurre, a intervalli pian ificati, audit interni allo scopo di fornire
+informazioni per accertare se il sistema di gestione dell’IA:
+a) è conforme: 
+1) ai requisiti propri dell’or ganizzazione relativi al suo sistema di gestione dell’IA; 
+2) ai requisiti del presente documento;
+b) è efficacemente attuato e mantenuto.
+9.2.2 Programma di audit interno
+L’organizzazione deve pianificare, stabilire, attuare e mantenere uno o più programmi di audit
+comprensivi di frequenza, metodi, responsabilità, requisiti di pianificazione e reporting.
+Nello stabilire uno o più prog rammi di audit interno, l’o rganizzazione de ve tenere in
+considerazione l’importanza dei processi coinvolti e i risultati degli audit precedenti.
+L’organizzazione deve:
+a) definire gli obiettivi, i crit eri dell’audit e il campo di applicazione per ciascun audit;
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 16UNI CEI ISO/IEC 42001:2024
+b) selezionare gli/le auditor e condurre gli audit in modo tale da assicurare l'obiettività e
+l'imparzialità del processo di audit;
+c) assicurare che i risultati degli audit si ano riportati ai/alle responsabili pertinenti.
+Devono essere disponibili informazioni do cumentate quale evid enza dell’attuazione dei
+programmi e dei risultati di audit.
+9.3 Riesame di direzione
+9.3.1 Generalità
+L'alta direzione deve, a intervalli pianificat i, riesaminare il sistem a di gestione dell’IA
+dell'organizzazione, per assicu rarne la continua idoneità  (suitability), adeguatezza
+(adequacy) ed efficacia (effectiveness).
+9.3.2 Elementi in ingresso al riesame di direzione 
+Il riesame di direzione deve includere:
+a) lo stato delle azioni derivanti da precedenti riesami di direzione;
+b) i cambiamenti nei fattori este rni e interni che sono rilevanti per il sistema di gestione
+dell’IA;
+c) i cambiamenti nelle esigenze ed aspettative delle parti interessate che sono
+pertinenti al sistema di gestione dell’IA;
+d) le informazioni sulle prestazioni del sistema di gestione dell'IA, compresi gli
+andamenti relativi:
+1) alle non conformità e alle azioni correttive;
+2) ai risultati del monitoraggio e della misurazione;
+3) ai risultati di audit;
+e) le opportunità per il miglioramento continuo.
+9.3.3 Risultati del riesame di direzione
+I risultati del riesame di direzione devono comprendere decisioni relative alle opportunità
+per il miglioramento continuo e ogni esigenza di modifiche che al sistema di gestione
+dell’IA.
+Devono essere disponibili informazioni docu mentate quale eviden za dei risultati dei
+riesami di direzione.
+10 MIGLIORAMENTO
+10.1 Miglioramento continuo
+L'organizzazione deve miglio rare in modo conti nuo l’idoneità (suitability), l’adeguatezza
+(adequacy) e l’efficacia (effectiveness) del sistema di gestione dell’IA.
+10.2 Non conformità e azioni correttive
+Quando si verifica una non conformità, l’organizzazione deve:
+a) reagire alla non conformità, e, per quanto applicabile:
+1) intraprendere azioni per tenerla sotto controllo e correggerla;
+2) affrontarne le conseguenze;
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 17 UNI CEI ISO/IEC 42001:2024
+b) valutare l’esigenza di azioni per eliminare la(e) causa(e) della non conformità, in
+modo che non si ripeta o non si verifichi altrove:
+1) riesaminando le non conformità;
+2) determinando le cause della non conformità;
+3) determinando se esistono o potrebbero verificarsi non conformità simili;
+c) attuare ogni azione necessaria;
+d) riesaminare l’efficacia di ogni  azione correttiva intrapresa;
+e) apportare, se necessario, modifi che al sistema di gestione dell’IA.
+Le azioni correttive devono essere adeguate agli effetti delle non conformità riscontrate.
+Devono essere disponibili informazioni documentate quali evidenza:
+- della natura delle non conformità e di ogni successiva azione intrapresa;
+- dei risultati di ogni azione correttiva.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 18UNI CEI ISO/IEC 42001:2024
+APPENDICE  A OBIETTI VI DI CONTROLLO E CONTROLLI DI RIFERIMENTO
+(normativa)
+A.1 Generalità
+I controlli descritti nel prospe tto A.1 forniscono all'organi zzazione un riferimento per
+raggiungere gli obiettivi dell’organizzazione e affrontare i rischi legati alla progettazione e
+al funzionamento dei sistemi di IA. Non tutti gli obiettivi di controllo e i controlli elencati nel
+prospetto A.1 sono da utilizzarsi obbligatoriamente e l'organizzazione può progettare e
+attuare i propri controlli (vedasi 6.1.3).
+Il prospetto B fornisce una guida all’implem entazione di tutti i controlli elencati nel
+prospetto A.1.
+prospetto A.1 Controlli e obiettivi di controllo
+A.2 Politiche relative all'IA
+Obiettivo: Fornire indirizzi e supporto di gestione per i sistemi di IA secondo i requisiti aziendali.
+Argomento (Topic) Controllo
+A.2.2 Politica di IA L'organizzazione deve documentare una politica per lo sviluppo o l'utilizzo di 
+sistemi di IA.
+A.2.3 Allineamento con altre politiche 
+dell’organizzazione
+L'organizzazione deve determinare in quali casi eventuali altre politiche 
+possono essere influenzate o essere applicate agli obiettivi dell'organizzazione 
+in relazione ai sistemi di IA.
+A.2.4 Riesame della politica di IA La politica di AI deve essere rivista a intervalli pianificati o, se necessario, in più 
+occasioni, per garantirne l'idoneità, l'adeguatezza e l'efficacia.
+A.3 Organizzazione interna
+Obiettivo: Stabilire la responsabilità (accountability) all'interno dell'organizzazione per sostenere il suo approccio responsabile all'attuazione, al 
+funzionamento e alla gestione dei sistemi di IA.
+Argomento (Topic) Controllo
+A.3.2 Ruoli e responsabilità dell'IA I ruoli e le responsabilità dell'IA devono essere definiti e assegnati in base alle 
+esigenze dell'organizzazione.
+A.3.3 Reporting dei reclami L'organizzazione deve definire e mettere in atto un processo per la 
+segnalazione di dubbi sul ruolo dell'organizzazione rispetto a un sistema di IA 
+lungo tutto il suo ciclo di vita.
+A.4 Risorse per i sistemi di IA
+Obiettivo: Assicurare che l'organizzazione tenga conto delle risorse del sistema di IA (compresi i componenti e gli asset del sistema di IA) al fine di 
+comprendere e affrontare pienamente i rischi e gli impatti.
+Argomento (Topic) Controllo
+A.4.2 Documentazione delle risorse L'organizzazione deve identificare e documentare le risorse appropriate che 
+sono necessarie per le attività delle fasi del ciclo di vita del sistema di IA e di 
+altre attività relative all'IA rilevanti per l'organizzazione.
+A.4.3 Risorse per i dati Nell'ambito dell'identificazione delle risorse, l'organizzazione deve 
+documentare le informazioni concernenti quelle relative alle risorse di dati (data 
+resources) utilizzate per il sistema di IA.
+A.4.4 Risorse per gli strumenti Nell'ambito dell'identificazione delle risorse, l'organizzazione deve 
+documentare le informazioni concernenti gli strumenti utilizzati (tooling 
+resources) per il sistema di IA.
+A.4.5 Sistema e risorse informatiche Nell'ambito dell'identificazione delle risorse, l'organizzazione deve 
+documentare le informazioni sul sistema e sulle risorse computazionali 
+(computing resources) utilizzate per il sistema di IA.
+A.4.6 Risorse umane Nell'ambito dell'identificazione delle risorse, l'organizzazione deve documentare le 
+informazioni relative alle risorse umane e alle relative competenze utilizzate per lo 
+sviluppo (development), l’implementazione (deployment), il funzionamento 
+(operation), la gestione delle modifiche (change management), la manutenzione 
+(maintenance), il trasferimento (transfer) e la dismissione (decommissioning), nonché 
+la verifica (verification) e l’integrazione (integration) del sistema di IA.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 19 UNI CEI ISO/IEC 42001:2024
+prospetto A.1 Controlli e obiettivi di controllo (Continua)
+A.5 Valutazione dell'impatto dei sistemi di IA
+Obiettivo: Valutare l'impatto del sistema di IA su individui o gruppi di individui, o entrambi, e sulle società interessate dal sistema di IA lungo il suo ciclo 
+di vita.
+Argomento (Topic) Controllo
+A.5.2 Processo di valutazione dell'impatto del 
+sistema di IA
+L'organizzazione deve stabilire un processo per valutare le potenziali 
+conseguenze che possono derivare dal sistema di IA lungo il suo ciclo di vita 
+per individui o gruppi di individui, o entrambi, e per le società.
+A.5.3 Documentazione delle valutazioni d'impatto dei 
+sistemi di IA
+L'organizzazione deve documentare i risultati della valutazione d'impatto del sistema 
+di IA (AI system impact assessment) e conservarli per un periodo definito.
+A.5.4 Valutazione d’impatto del sistema di IA su 
+individui o gruppi di individui
+L'organizzazione deve valutare e documentare i potenziali impatti dei sistemi di 
+IA su individui o gruppi di individui per l'intero ciclo di vita del sistema.
+A.5.5 Valutazione l'impatto sociale dei sistemi di IA L'organizzazione deve valutare e documentare i potenziali impatti sociali d ei 
+propri sistemi di IA per tutto il loro ciclo di vita.
+A.6 Ciclo di vita del sistema di IA
+A.6.1 Guida alla gestione per lo sviluppo di sistemi di IA
+Obiettivo: Assicurare che l'organizzazione identifichi e documenti gli obiettivi e implementi i processi per una progettazione e uno sviluppo 
+responsabili dei sistemi di IA.
+Argomento (Topic) Controllo
+A.6.1.2 Obiettivi per uno sviluppo responsabile del 
+sistema di IA
+L'organizzazione deve identificare e documentare gli obiettivi che guidano lo 
+sviluppo responsabile dei sistemi di IA, tenere conto di tali obiettivi e integrare 
+le misure per raggiungerli lungo il ciclo di vita di sviluppo.
+A.6.1.3 Processi per la progettazione e lo sviluppo 
+responsabili (trustworthiness) del sistema di IA
+L'organizzazione deve definire e documentare gli specifici processi per la 
+progettazione e lo sviluppo responsabili (responsible) del sistema di IA.
+A.6.2 Ciclo di vita del sistema di IA
+Obiettivo: Definire i criteri e i requisiti per ogni fase del ciclo di vita del sistema di IA.
+Argomento (Topic) Controllo
+A.6.2.2 Requisiti e specifiche del sistema di IA L'organizzazione deve specificare e documentare i requisiti per i nuovi sistemi di IA o 
+per i miglioramenti materiali (material enhancements) dei sistemi esistenti.
+A.6.2.3 Documentazione della progettazione e dello 
+sviluppo del sistema di IA
+L'organizzazione deve documentare la progettazione e lo sviluppo del sistema di IA 
+sulla base degli obiettivi della stessa, dei requisiti documentati e dei criteri di specifica.
+A.6.2.4 Verifica e validazione del sistema di IA L'organizzazione deve definire e documentare le misure di verifica e 
+validazione per il sistema di IA e specificare i criteri per il loro utilizzo.
+A.6.2.5 Implementazione (deployment) del sistema di 
+IA
+L'organizzazione deve documentare un piano di implementazione e assicurare 
+che i requisiti appropriati (appropriate requirements) siano soddisfatti prima 
+della implementazione.
+A.6.2.6 Funzionamento e monitoraggio del sistema di 
+IA
+L'organizzazione deve definire e documentare gli elementi necessari per il 
+funzionamento continuo del sistema di IA. Questo dovrebbe includere, almeno, 
+il monitoraggio del sistema e delle performance (performance monitoring), le 
+riparazioni (repairs), gli aggiornamenti (updates) e l’assistenza (support).
+A.6.2.7 Documentazione tecnica del sistema di IA L'organizzazione deve determinare la documentazione tecnica del sistema di 
+IA che è necessaria per ogni categoria di parti interessate, quali utilizzatori 
+(users), partner, autorità di vigilanza (supervisory authorities), e fornire loro, 
+nella forma appropriata, la documentazione tecnica.
+A.6.2.8 Registrazione di eventi da parte del sistema di 
+IA
+L'organizzazione deve determinare in quali fasi del ciclo di vita del sistema di IA 
+dovrebbe essere attivata la conservazione di registri di eventi (event logs), ma, 
+come minimo, a partire da quando il sistema di IA è in uso.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 20UNI CEI ISO/IEC 42001:2024
+prospetto A.1 Controlli e obiettivi di controllo (Continua)
+A.7 Dati per i sistemi di IA
+Obiettivo: Assicurare che l'organizzazione comprenda il ruolo e l'impatto dei dati nei sistemi di IA nell'applicazione e nello sviluppo, nella fornitura o 
+nell'utilizzo dei sistemi di IA durante il loro ciclo di vita.
+Argomento (Topic) Controllo
+A.7.2 Dati per lo sviluppo e il potenziamento del 
+sistema di IA.
+L'organizzazione deve definire, documentare e implementare i processi di gestione dei 
+dati (data management processes) relativi allo sviluppo dei sistemi di IA.
+A.7.3 Acquisizione dei dati L'organizzazione deve determinare e documentare i dettagli relativi 
+all'acquisizione e alla selezione dei dati utilizzati nei sistemi di IA.
+A.7.4 Qualità dei dati per i sistemi di IA L'organizzazione deve definire e documentare i requisiti per la qualità dei dati e 
+garantire che i dati utilizzati per sviluppare e gestire il sistema di IA soddisfino 
+tali requisiti.
+A.7.5 Provenienza dei dati L'organizzazione deve definire e documentare un processo per la registrazione 
+della provenienza dei dati utilizzati nei suoi sistemi di IA lungo il ciclo di vita dei 
+dati e del sistema di IA.
+A.7.6 Preparazione dei dati L'organizzazione deve definire e documentare i criteri di selezione dei dati da 
+elaborare e i metodi di elaborazione degli stessi.
+A.8 Informazioni per le parti interessate ai sistemi di IA
+Obiettivo: Garantire che le parti interessate abbiano le informazioni necessarie per comprendere e valutare i rischi e i loro impatti (sia positivi che negativi).
+Argomento (Topic) Controllo
+A.8.2 Documentazione del sistema e informazioni per 
+gli utilizzatori (users)
+L'organizzazione deve determinare e fornire le informazioni necessarie agli 
+utilizzatori del sistema di IA.
+A.8.3 Reporting esterno L'organizzazione deve fornire alle parti interessate la possibilità di segnalare gli 
+impatti negativi del sistema di IA.
+A.8.4 Comunicazione degli incidenti L'organizzazione deve determinare e documentare un piano per la 
+comunicazione degli incidenti agli utilizzatori del sistema di IA.
+A.8.5 Informazioni per le parti interessate L'organizzazione deve determinare e documentare i propri obblighi di comunicazione, 
+alle parti interessate, delle informazioni relative al sistema di IA.
+A.9 Utilizzo di sistemi di IA
+Obiettivo: Assicurare che l'organizzazione utilizzi i sistemi di IA in modo responsabile (responsibly) e secondo le politiche dell'organizzazione.
+Argomento (Topic) Controllo
+A.9.2 Processi per un utilizzo responsabile 
+(responsible) dei sistemi di IA
+L'organizzazione deve definire e documentare i processi per l'utilizzo 
+responsabile dei sistemi di IA.
+A.9.3 Obiettivi per un utilizzo responsabile 
+(responsible) del sistema di IA
+L'organizzazione deve identificare e documentare gli obiettivi per guidare 
+l'utilizzo responsabile dei sistemi di IA.
+A.9.4 Uso previsto del sistema di IA L'organizzazione deve garantire che il sistema di IA sia utilizzato secondo gli 
+usi previsti del sistema stesso e secondo la documentazione a corredo.
+A.10 Rapporti con terzi e clienti
+Obiettivo: Assicurare che l'organizzazione comprenda le proprie responsabilità e rimanga responsabile (accountable), e che i rischi siano ripartiti in 
+modo appropriato quando sono coinvolte terze parti in qualsiasi fase del ciclo di vita del sistema di IA.
+Argomento (Topic) Controllo
+A.10.2 Assegnazione di responsabilità L'organizzazione deve garantire che, nell'ambito del ciclo di vita del proprio 
+sistema di IA, le responsabilità siano ripartite tra l'organizzazione, i suoi 
+partner, fornitori, clienti e terze parti.
+A.10.3 Fornitori L'organizzazione deve stabilire un processo per garantire che l'utilizzo di 
+servizi, prodotti o materiali forniti dai fornitori, sia in linea con l'approccio della 
+stessa allo sviluppo e all'utilizzo responsabile (responsible) dei sistemi di IA.
+A.10.4 Clienti L'organizzazione deve garantire che il suo approccio responsabile 
+(responsible) allo sviluppo e all'utilizzo dei sistemi di IA tenga conto delle 
+aspettative e delle esigenze dei clienti.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 21 UNI CEI ISO/IEC 42001:2024
+APPENDICE B GUIDA ALL’ IMPLEMENTAZIONE DEI CONTROLLI SULL'IA
+(normativa)
+B.1 Generalità
+La guida all'implementazione documentata in questa Appendice si riferisce ai controlli
+elencati nel prospetto A.1. Questa sezione fornisce informazioni a supporto
+dell'implementazione dei controlli riportati nel prospetto A.1 e per raggiungere l'obiettivo
+di controllo, ma le organizzazioni non devono documentare o giustificare l'inclusione o
+l'esclusione della guida all' implementazione nella dichiara zione di applicabilità (vedasi
+punto 6.1.3).
+La guida all'implementazione non è sempre appropriata o sufficiente per tutte le
+circostanze e non sempre soddisfa i requisiti di controllo specifici dell'organizzazione.
+L'organizzazione può estendere o modificare la guida all'implementazione o definire in
+modo autonomo l’implementazione di un controllo in funzione dei propri requisiti specifici
+e delle proprie esigenze di trattamento del rischio.
+La presente Appendice deve essere utilizzata come guida per la determinazione e
+l’implementazione dei controlli per il trattamento del rischio di IA all’interno del sistema di
+gestione dell'IA definito nel presente documento. È po ssibile stabilire controlli
+organizzativi e tecnici aggiuntivi oltre a qu elli inclusi in questa  Appendice (vedasi il
+trattamento del rischio di gestione del sistema AI in 6.1.3). Tale Appendice può essere
+considerata un punto di partenza per lo sviluppo dell’implementazione di controlli specifici
+per l'organizzazione.
+B.2 Politiche relative all'IA
+B.2.1 Obiettivo
+Fornire direzione e supporto ai sistemi di intelligenza artificiale conformemente ai requisiti
+aziendali.
+B.2.2 Politica di IA
+Controllo
+L'organizzazione dovrebbe documentare una politica per lo sviluppo o l'utilizzo dei sistemi
+di IA.
+Guida di attuazione
+La politica di AI dovrebbe essere conforme:
+- alla strategia di business;
+- ai valori e alla cultura dell'organizzazione e al livello di rischio che l'organizzazione è
+disposta a correre o accettare/assumersi (is willing to pursue or retain);
+- al livello di rischio che i sistemi di IA comportano;
+- ai requisiti legali, compresi i contratti;
+- all’ambiente di ri schio in cui opera l’organizzazione;
+- all’impatto sulle parti intere ssate (vedasi punto 6.1.4).
+La politica sull'IA dovrebbe includere (oltre ai requisiti del punto 5.2):
+- i principi che orientano tutte le attività dell'organizzazione correlate all'IA;
+- i processi per la gestione degli scostamenti ed eccezioni alla politica.
+La politica di IA dovrebbe considerare, ove necessario, specifici aspetti tematici, al fine di
+definire una guida aggiuntiva o stabilire riferimenti incrociati ad altre politiche che trattano
+tali aspetti. Esempi di tali argomenti comprendono:
+- le risorse e asset dell'IA;
+- le valutazioni d'impatto del sistema di IA (vedasi punto 6.1.4);
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 22UNI CEI ISO/IEC 42001:2024
+- lo sviluppo del sistema di IA.
+Tutte le politiche correlate dovrebbero guidare  lo sviluppo, l'acquisto, il funzionamento e
+l'uso dei sistemi di IA.
+B.2.3 Coordinamento con altre politiche dell’organizzazione
+Controllo
+L'organizzazione dovrebbe determinare dove altre politiche possono essere influenzate o
+applicate agli obiettivi dell'organizzazione in relazione ai sistemi di IA.
+Guida di attuazione
+Molti ambiti si collegano con l'IA, tra cui la qualità (quality), la si curezza (security), la
+salvaguardia delle persone (safety) e la protezione dei dati personali (privacy).
+L'organizzazione dovrebbe prendere in co nsiderazione lo svolgimento di un'analisi
+approfondita per determinare se e dove le politiche in vigore possono necessariamente
+incrociarsi, e aggiornarle o includerne alcune disposizioni nella politica di IA, se
+necessario.
+Altre informazioni
+Le politiche che l'Alta Direzione stabilisce per conto dell'organizzazione dovrebbero
+riflettersi sulla politica di IA. La norma ISO/IEC 38507 fornisce una guida ai membri
+dell'Alta Direzione di un'organizzazione al fine di rendere efficace e governare il sistema di
+IA lungo il suo ciclo di vita.
+B.2.4 Riesame della politica di IA
+Controllo
+La politica di IA dovrebbe essere riesaminata a intervalli pianificati o, se necessario, in più
+occasioni, al fine di assicurarne la continua idoneità (suitability), adeguatezza (adequacy)
+ed efficacia (effectiveness).
+Guida di attuazione
+Una figura approvata dalla Direzione dovrebbe essere responsabile dello sviluppo, del
+riesame e della valutazione della politica sull'IA o delle sue sezioni. La revisione dovrebbe
+includere la valutazione delle opportunità di miglioramento delle politiche e dell'approccio
+dell'organizzazione alla gestione dei sistemi di IA in risposta ai cambiamenti del contesto
+organizzativo, delle circostanze aziendali (business circumstances), delle condizioni legali
+(legal conditions) o dell’ambiente tecnico (technical environment) dell’organizzazione.
+La revisione della politica di IA dovrebbe tenere conto dei risultati dei Riesami della
+Direzione.
+B.3 Organizzazione interna
+B.3.1 Obiettivo
+Stabilire la responsab ilità (accountability) all'intern o dell'organizzazione al fine di
+sostenere un approccio resp onsabile all’implementazione, al funzionamento e alla
+gestione dei sistemi di IA.
+B.3.2 Ruoli e respons abilità dell'IA
+Controllo
+Dovrebbero essere definiti e assegnati ruoli e le responsabilità dell'IA a seconda delle
+esigenze dell'organizzazione.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 23 UNI CEI ISO/IEC 42001:2024
+Guida di attuazione
+Definire ruoli e responsabilità è fondamentale per garantire che l’organizzazione agisca in
+maniera responsabile (accountability) in merito al suo ruolo rispetto al sistema di IA, lungo
+il suo ciclo di vita. Nell’assegnare ruoli e responsabilità, l'organizzazione dovrebbe tenere
+conto delle politiche di IA, degli obiettivi di IA e dei rischi identificati, al fine di garantire la
+copertura di tutte le aree rilevanti. L'organizzazione può definire un ordine di priorità per
+l’assegnazione di ruoli e responsabilità. Tra le aree per le quali è necessario definire ruoli
+e responsabilità possono rientrare, per esempio:
+- gestione del rischio (risk management);
+- valutazione dell’impatto dei sistemi di IA;
+- gestione dei asset delle risorse;
+- sicurezza (security);
+- salvaguardia delle persone (safety);
+- protezione dei dati personali (privacy);
+- sviluppo;
+- prestazioni;
+- sorveglianza / supervisione umana (human oversight);
+- rapporti con i fornitori;
+- dimostrazione della propria capacità di soddisfare in modo coerente i requisiti di
+legge;
+- gestione della qualità dei dati (data quality management) durante l'intero ciclo di
+vita).
+Al fine di consentire ai singoli soggetti di svolgere le proprie mansioni, dovrebbero essere
+definite in modo adeguato le responsabilità dei vari ruoli.
+B.3.3 Registrazione dei reclami 
+Controllo
+L'organizzazione dovrebbe definire e mettere in atto un processo per la segnalazione dei
+reclami sul ruolo della stessa rispetto a un sistema di IA, lungo il suo ciclo di vita.
+Guida di attuazione
+Il meccanismo di reporting dei reclami dovrebbe soddisfare le seguenti esigenze:
+a) la previsione di opzioni che consentono la riservatezza (confidentiality), l’anonimato
+o entrambi;
+b) l’accessibilità e l’incentivaz ione (al reclamo) da part e delle person e assunte e a
+contratto;
+c) personale qualificato;
+d) per i soggetti di cui alla lettera c), la previsione di adeguati poteri di indagine e di
+risoluzione;
+e) la definizione di meccanismi di reclamo e di segnalazione diretta alla direzione in
+tempi rapidi;
+f) la previsione di un'efficace protezione dalle ritorsioni sia per le persone coinvolte
+nella segnalazione sia per le indagini (per esempio, consentendo di effettuare i
+reclami in modo anonimo e confidenziale);
+g) la predisposizione di rapporti in conformità al punto 4.4 e, ove appropriato, in
+conformità alla lettera e), mantenendo la riservatezza e l'anonimato di cui alla lettera
+a) e rispettando le considerazioni generali sulla riservatezza aziendale;
+h) la definizione di meccanismi di risposta in tempi adeguati.
+Nota Come parte di questo processo, l'organizzazione può utilizzare i meccanismi di reporting esistenti.
+Altre informazioni
+Oltre alla guida all’implementazione fornita nel presente punto, l'organizzazione dovrebbe
+prendere in considerazione la norma ISO 37002.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 24UNI CEI ISO/IEC 42001:2024
+B.4 Risorse per i sistemi di IA
+B.4.1 Obiettivo
+Assicurare che l'organizzazione tenga conto de lle risorse del sistema di IA (compresi le
+componenti e gli asset del sistema di IA) al fine di comprendere e affrontare pienamente
+i rischi e gli impatti.
+B.4.2 Documentazione delle risorse
+Controllo
+L'organizzazione deve identificare e documentare le risorse necessarie per le attività
+relative a determinate fasi del ciclo di vita del sistema di IA e per le altre attività relative
+all'IA rilevanti per l'organizzazione.
+Guida di attuazione
+La documentazione delle risorse del sistema di IA è fondamentale per la comprensione
+dei rischi e dei potenziali impatti (sia positivi che negativi) del sistema di IA su individui o
+gruppi di individui, o su entrambi, e sulle società. La documentazione di tali risorse (per la
+quale si possono utilizzare, per esempio, diagrammi di flusso dei dati o diagrammi
+dell'architettura del sistema) può contribuire alle valutazioni d'impatto del sistema di IA
+(vedere punto B.5).
+Le risorse possono includere, ma non sono limitate a:
+- componenti del sistema AI;
+- risorse di dati, cioè i dati utilizzati in qual siasi fase del ciclo di vita del sistema di IA;
+- risorse di tool (per esempio algo ritmi IA, modelli o strumenti (tools));
+- risorse di sistema e informatiche (per esempio, hardware per sviluppare ed eseguire
+modelli di IA, sistemi di archiviazione de i dati e risorse per g li strumenti (tooling
+resources));
+- risorse umane, cioè persone in possesso delle competenze necessarie (per
+esempio per lo sviluppo, la vendita, la formazione, il funzionamento e la
+manutenzione del sistema di IA) in relazi one al ruolo dell'organizzazione nel corso
+del ciclo di vita del sistema di IA.
+Le risorse possono essere fornite dall'organi zzazione stessa, dai s uoi clienti o da terze
+parti.
+Altre informazioni
+La documentazione delle riso rse, inoltre, cons ente di stabilire se sono disponibili le
+risorse e, in caso contrario, l'organizzazione dovrebbe riconsiderare le specifiche di
+progettazione del sistema di IA o i suoi requisiti di implementazione (deployment).
+B.4.3 Risorse per i dati
+Controllo
+Nell'ambito dell'identificazione delle risorse, l'organizzazione dovrebbe documentare le
+informazioni sulle risorse di dati utilizzate per il sistema di IA.
+Guida di attuazione
+La documentazione sui dati dovrebbe includere, senza ad essi limitarsi, i seguenti temi:
+- la provenienza dei dati;
+- la data dell'ultimo aggiornamento o modifica dei dati (per esempio il tag data nei
+metadati);
+- per il machine learning, le categorie di dati (per esempio dati di addestramento, di
+convalida, di test e di produzione);
+- le categorie di dati (per esempio, come definite nella norma ISO/IEC 19944-1);
+- il processo di etichettatura dei dati;
+- l’uso previsto dei dati;
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 25 UNI CEI ISO/IEC 42001:2024
+- la qualità dei dati (per esempio, come descritto nella serie ISO/IEC 5259 2));
+- le politiche di conservazione e smaltimento dei dati applicabili;
+- i problemi di pregiudizio /discriminazione  (bias) noti o potenziali presenti nei dati;
+- la preparazione dei dati.
+B.4.4 Risorse per gli strumenti
+Controllo
+Come parte dell'identificazione delle risorse, l'organizzazione dovrebbe documentare le
+informazioni sulle risorse per gli strumenti, utilizzate per il sistema di IA.
+Guida di attuazione
+Le risorse per gli strumenti (tooling resources) per un sistema di IA, in particolare per il
+machine learning, possono includere, a titolo esemplificativo e non esaustivo:
+- i tipi di algoritmi e i mo delli di il machine learning;
+- gli strumenti o i processi di condizionamento dei dati (data conditioning);
+- metodi di ottimizzazione;
+- metodi di valutazione;
+- strumenti di approvvigionamento delle risorse;
+- strumenti di supporto allo sviluppo dei modelli;
+- software e hardware per la  progettazione (design), lo  sviluppo e l’implementazione
+(deployment) di sistemi di IA.
+Altre informazioni
+Lo norma ISO/IEC 23053 fornisce una guida dettagliata sui tipi, i metodi e gli approcci per
+le varie risorse per gli strumenti con riferimento al machine learning.
+B.4.5 Sistema e risorse informatiche
+Controllo
+Nell’ambito dell'identificazione delle risorse, l'organizzazi one dovrebbe documentare le
+informazioni sul sistema e sulle risorse informatiche utilizzate per il sistema di IA.
+Guida di attuazione
+Le informazioni sulle risorse di sistema e di calcolo relative a un sistema di IA possono
+includere, senza limitarsi ad esse, le seguenti informazioni:
+- i requisiti di risorse del sistema di IA (per esempio, per garantire che il sistema possa
+funzionare su dispositivi con risorse limitate);
+- dove sono localizzati il sistema e le risorse informatiche (per esempio, in sede, in
+cloud computing o in edge computing);
+- le risorse di elaborazione (comprese rete e storage);
+- l'impatto dell'hardware utilizzato per eseguire  i carichi di lavoro del sistema di IA (per
+esempio, l'impatto sull'ambiente attraverso l'utilizzo o la produzione dell'hardware o il
+costo dell'utilizzo dell'hardware).
+L'organizzazione dovrebbe tenere in considerazione il fatto che, per consentire il
+miglioramento continuo dei sistemi di IA, possono essere necessarie diverse risorse. Lo
+sviluppo, l'attuazione e il funzionamento del sistema possono avere esigenze e requisiti
+diversi.
+Nota La norma ISO/IEC 22989 definisce diverse considerazioni con riferimento alle risorse di sistema.
+2) In preparazione. Stadio al momento della pubblicazione: ISO/IEC DIS 5259-1:2023, ISO/IEC DIS 5259-2:2023,
+ISO/IEC DIS 5259-3:2023, ISO/IEC DIS 5259-4:2023, ISO/IEC CD 5259-5:2023.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 26UNI CEI ISO/IEC 42001:2024
+B.4.6 Risorse umane
+Controllo
+Nel quadro dell'identificazione delle risorse, l'organizzazione dovrebbe documentare le
+informazioni relative alle risorse umane e alle relative competenze impiegate per lo
+sviluppo, l'attuazione (deploym ent), il funzionamento, la gestione delle modifiche, la
+manutenzione, il trasferimento e la dismissi one (transfer and decommissioning), nonché
+la verifica e l'integrazione del sistema di IA.
+Guida di attuazione
+L'organizzazione dovrebbe considerare la  necessità di disporre di competenze
+diversificate e includere le tipologie di ruoli che sono necessari per il sistema. Per
+esempio, laddove la loro inclusione sia una componente necessaria della progettazione
+del sistema, l'organizzazione può includere specifici gruppi demografici correlati ai set di
+dati utilizzati per addestrare i modelli di machine learning / apprendimento automatico. Le
+risorse umane necessarie possono includere, a titolo esemplificativo e non esaustivo:
+- data scientists;
+- ruoli legati alla sorveglianza / supervisione umana (human oversight) dei sistemi di IA;
+- esperti di affidabilità (trustworthiness) de l sistema di IA come la salvaguardia delle
+persone / incolumità (safety), la sicurezza (security) e la protezione dei dati personali
+(privacy);
+- ricercatori e specialisti di IA ed esperti  di domini rilevanti per i sistemi di IA.
+Possono essere necessarie risorse diverse in fasi diverse del ciclo di vita del sistema di IA.
+B.5 Valutazione dell'impatto  dei sistemi di IA 
+B.5.1 Obiettivo
+Valutare l'impatto del sistema di IA, lungo il suo ciclo di vita, su individui o gruppi di
+individui, o entrambi, e sulle società interessate dal sistema di IA.
+B.5.2 Processo di valutazione dell'impatto del sistema di IA
+Controllo
+L'organizzazione dovrebbe st abilire un processo di va lutazione delle potenziali
+conseguenze, che possono derivare dal sistem a di IA lungo il suo ciclo di vita, sugli
+individui o sui gruppi di individui, o su entrambi, e sulle società.
+Guida di attuazione
+Poiché i sistemi di IA possono, potenzialmente, generare un impatto significativo su
+individui, gruppi di individui o entrambi, e sulle società, l'organizzazione che fornisce e
+utilizza tali sistemi dovrebbe, in base allo scopo e all'uso previsto di tali sistemi, valutarne
+il potenziale impatto su questi gruppi.
+L'organizzazione dovrebbe valutare se un sistema di IA influisce:
+- sulla posizione giuridica o le op portunità di vita degli individui;
+- sul benessere fisico o psicologico degli individui;
+- sui diritti umani universali;
+- sulle società.
+Le procedure dell'organizzazione dovrebbero includere, a titolo esemplificativo e non
+esaustivo, i seguenti punti:
+a) le circostanze per le quali dovrebbe essere eseguita una valutazione d'impatto del
+sistema di IA, che possono includere, senza limitarsi ad essi, i seguenti aspetti:
+1) criticità dello scopo e del contesto in cui il sistema di IA è utilizzato o qualsiasi
+relativa modifica significativa;
+2) la complessità della tecnologia di IA e il livello di automazione dei sistemi di IA o
+qualsiasi relativa modifica significativa;
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 27 UNI CEI ISO/IEC 42001:2024
+3) la delicatezza delle tipologie dei dati, e delle relative fonti, trattati dal sistema di
+IA o qualsiasi relativa modifica significativa;
+b) elementi che fanno parte del processo di valutazione dell'impatto del sistema di IA,
+tra cui:
+1) l’identificazione (per esempio,  fonti, eventi e risultati);
+2) l’analisi (per esempio, conseguenze e probabilità);
+3) la valutazione (per esempio, decisioni di accettazione e definizione delle
+priorità);
+4) il trattamento (per esempio, misure di mitigazione);
+5) la documentazione, la relazione (reporting) e la comunicazione (vedasi punti 7.4,
+7.5 e B.3.3);
+c) il soggetto che esegue la valutazione d'impatto del sistema di IA;
+d) le modalità di utilizzo della valutazione d'impatto del sistema di IA [per esempio, in
+che modo può influenzare la progettazione o l'utilizzo del sistema (vedasi punto B.6
+e B.9), oppure se può dare origine a revisioni e approvazioni];
+e) gli individui e le società potenzialmente impattate a causa dello scopo, dell’utilizzo e
+delle caratteristiche del sistema (per esem pio, valutazione per individui, gruppi di
+individui o società).
+La valutazione di impatto dovrebbe prendere in considerazione vari fattori del sistema di
+IA, tra cui i dati utilizzati per lo sviluppo del sistema di IA, le tecnologie di IA utilizzate e la
+funzionalità del sistema nel suo complesso.
+I processi possono variare a seconda del ruolo dell'organizzazione e del dominio dell'IA e
+in funzione delle discipline specifiche per le quali occorre valutare l'impatto (per esempio
+sicurezza (security), protezione dei dati personali (privacy) e salvaguardia delle persone /
+incolumità (safety).
+Altre informazioni
+Per alcune discipline o organizzazioni, è parte della gestione del rischio la considerazione
+dettagliata dell'impatto sugli individui o sui gruppi di individui, o su entrambi, e sulle
+società, in particolare in quelle disciplin e come la sicurezza delle informazioni, la
+salvaguardia delle persone / incolumità (safety) e la gestione ambientale.
+L'organizzazione dovrebb e stabilire se le specifiche valu tazioni d'impatto condotte, per
+ogni disciplina, nell'ambito del processo di gestione del rischio, integrano in modo
+sufficiente le considerazioni sull'IA per quegli aspetti specifici [per esempio, la protezione
+dei dati personali / riservatezza (privacy)].
+Nota La norma ISO/IEC 23894 definisce come un'organizzazi one possa eseguire analisi d'impatto per sé stessa,
+per individui o gruppi di individui,  o per entrambi, e per le società,  quale parte di un processo globale di
+gestione del rischio.
+B.5.3 Documentazione de lle valutazioni d'impatto dei sistemi di IA
+Controllo
+L'organizzazione dovrebbe documentare i risultati delle valutazioni d'impatto del sistema
+di IA e conservarle per un periodo di tempo definito.
+Guida di attuazione
+La documentazione può essere utile per determ inare le informazioni da comunicare agli
+utilizzatori e alle altre parti interessate.
+Le valutazioni d'impatto del sistema di IA dovrebbero essere conservate e aggiornate, se
+necessario, in conformità con gli elementi per una valutazione d'impatto del sistema di IA,
+come documentata nel punto B.5.2. I periodi di conservazione possono basarsi sulle
+tabelle dei tempi di conserva zione stabiliti dall'organizzazi one o essere determinati in
+base ai requisiti legali o altri requisiti.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 28UNI CEI ISO/IEC 42001:2024
+Gli elementi che l'organizzazione dovrebbe valutare se documentare possono includere,
+ma non sono limitati a:
+- l’utilizzo previsto del sistema di IA  e qualsiasi suo uso improprio che sia
+ragionevolmente prevedibile;
+- gli impatti positivi e negativi del sistema di  IA nei confronti di individui o gruppi di
+individui interessati, o per entrambi, e per le società;
+- i guasti prevedibili (predictable failure), i re lativi potenziali impatti e le misure adottate
+per la loro mitigazione;
+- i gruppi demografici rilevanti, a cui il sistema può essere applicato;
+- la complessità del sistema;
+- il ruolo degli esseri umani nelle relazioni con il sistema, comprese le capacità di
+sorveglianza / supervisione um ana (human oversight capab ilities), i processi e gli
+strumenti disponibili ad evitare impatti negativi;
+- occupazione e qualificazione del personale.
+B.5.4 Valutazione dell' impatto del sistema di IA su individui o gruppi di individui
+Controllo
+L'organizzazione dovrebbe valutare e documentare, durante l'intero ciclo di vita del
+sistema, i potenziali impatti dei sistemi di IA su individui o gruppi di individui.
+Guida di attuazione
+Nel valutare gli impatti su individui o gruppi di individui, o su entrambi, e sulle società,
+l'organizzazione dovrebbe tenere conto dei propri principi di governance, delle politiche e
+degli obiettivi di IA. Le persone  che utilizzano il sistema di IA o i cui dati personali - PII
+sono elaborati dal sistema di IA, possono nutrire delle aspettative correlate all’affidabilità
+(trustworthiness) del sistema di IA. Occorre, inoltre, prendere in considerazione le
+specifiche esigenze di protez ione di gruppi di pers one, come i bambini, i disabili, gli
+anziani e i lavoratori. L'organizzazione do vrebbe valutare tali as pettative e stabilire,
+nell'ambito della valutazione dell'impatto del sistema, i metodi per affrontarle.
+A seconda dello scopo e dell'utilizzo / impiego del  sistema di IA, tra le aree di impatto da
+considerare nell'ambito della valutazione, a titolo esemplificativo ma non esaustivo,
+possono includersi le seguenti:
+- correttezza (fairness);
+- affidabilità (accountability);
+- trasparenza ed esplicabilità (tr ansparency and explainability);
+- sicurezza (security) e protezi one dei dati personali (privacy);
+- salvaguardia delle persone e salute / incolumità (safety and health);
+- conseguenze finanziarie;
+- accessibilità;
+- diritti umani.
+Altre informazioni
+Ove necessario, l'organizzazione dovrebbe c onsultare esperti (per esempio ricercatori,
+esperti in materia e utenti) al fine di ottenere una comprensione piena dei potenziali
+impatti del sistema di IA su individui o gruppi di individui, o su entrambi, e sulle società.
+B.5.5 Valutazione de ll'impatto sociale dei sistemi di IA
+Controllo
+L'organizzazione dovrebbe valutare e documentare i potenziali impatti sociali dei propri
+sistemi di IA durante il relativo ciclo di vita.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 29 UNI CEI ISO/IEC 42001:2024
+Guida di attuazione
+Gli impatti sociali possono variare notevolmente a seconda del contesto
+dell'organizzazione e della tipologia dei sistemi di IA. L'impatto sociale dei sistemi di IA
+può essere sia vantaggioso sia dannoso. Esempi di tali impatti potenziali sulla società
+possono includere:
+- la sostenibilità ambientale (compresi gli impa tti sulle risorse naturali e sulle emissioni
+di gas serra);
+- l’ambito economico (compreso l’accesso ai se rvizi finanziari, le opportunità di lavoro,
+le tasse, gli scambi commerciali e il settore commercio);
+- il governo (compresi i processi legislativ i, la disinformazione a fini politici, la
+sicurezza nazionale e i sistemi di giustizia penale);
+- la salute e salvaguardia / incolumità delle persone (health and safety) (compreso
+l’accesso all'assistenza sanitaria, alla diagnosi e al trattamento medico, nonché i
+potenziali danni fisici e psicologici);
+- le norme, le tradizioni , la cultura e i valori (compresa la disinformazione che porta a
+pregiudizi / discriminazioni (bias) o a danni a individui o gruppi di individui, o a
+entrambi, e alle società).
+Altre informazioni
+Lo sviluppo e l'utilizzo dei sistemi di IA possono richiedere un’alta capacità
+computazionale, la quale comp orta impatti correl ati sulla sostenibilit à ambientale (per
+esempio, le emissioni di gas serra dovute all'aumento dell'utilizzo di energia, impatto su
+acqua, terra, flora e fauna). Allo stesso modo, i sistemi di IA possono essere impiegati per
+migliorare la sostenib ilità ambientale di altr i sistemi (per esempio, la riduzione delle
+emissioni di gas serra legate agli edifici e ai trasporti). L'organizzazione dovrebbe
+considerare gli impatti dei propri sistemi di IA nel contesto degli obiettivi e delle strategie
+generali di sostenibilità ambientale.
+L'organizzazione dovrebbe prendere in considerazione il modo in cui i propri sistemi di IA
+potrebbero essere utilizzati in modo improprio per creare danni alla società e il modo in
+cui gli stessi potrebbero essere utilizzati per affrontare i danni pregressi. Per esempio,
+l’organizzazione dovrebbe valutare se i sistemi di IA sono in grado di precludere l'accesso
+a servizi finanziari come prestiti, sovvenzioni, assicurazioni e investimenti, e , allo stesso
+modo, possono migliorare l'accesso a questi strumenti?
+I sistemi di IA sono stati utilizzati per influenzare i risultati delle elezioni e per creare
+disinformazione (per esempio, i falsi (deepfak es) nei mezzi di comunicazione digitali), la
+quale, a sua volta, può causare disordini politici e sociali. L'utilizzo di sistemi di IA da parte
+dei Governi per scopi giudiziari penali ha esposto al rischio di pregiudizio /
+discriminazione (bias) nei confronti di società, individui o gruppi di individui.
+L'organizzazione dovrebbe esaminare in che modo gli attori potrebbero fare un uso
+improprio dei sistemi di IA e come tali sistemi potrebbero rafforzare i pregiudizi / le
+discriminazioni storico-sociali indesiderati.
+I sistemi di IA possono essere  utilizzati per diagnosticare e trattare le ma lattie e per
+determinare le condizioni di accesso alle prestazioni sanitarie. Inoltre, i sistemi di IA sono
+impiegati anche in ambiti in cui i malfunzionamenti possono causare morte o lesioni alle
+persone (ad per esempio, automobili a guida autonoma, te am uomo-macchina
+(human-machine teaming). Quando vengono utilizzati i sistemi di IA, come, ad esempio in
+ambiti legati alla salu te (health) e alla salvaguardia de lle persone / incolumità (safety),
+l'organizzazione dovrebbe considerare sia gli esiti positivi sia quelli negativi. 
+Nota La specifica tecnica ISO/IEC TR 24368 fornisce una panoramica di livello superiore delle problematiche etiche
+e sociali legate ai sistemi e alle applicazioni di IA.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 30UNI CEI ISO/IEC 42001:2024
+B.6 Ciclo di vita del sistema di IA
+B.6.1 Guida alla  gestione per lo sviluppo di sistemi di IA
+B.6.1.1 Obiettivo
+Garantire che l'organizzazione identifichi e documenti gli obiettivi e implementi i processi
+per una progettazione e uno sviluppo responsabili dei sistemi di IA.
+B.6.1.2 Obiettivi per uno sviluppo responsabile del sistema di IA
+Controllo
+L'organizzazione dovrebbe identificare e documentare gli obiettivi che guidano lo sviluppo
+responsabile dei sistemi di IA, tenere conto di tali obiettivi e integrare le misure per
+raggiungerli lungo ciclo di vita del processo di sviluppo.
+Guida di attuazione
+L'organizzazione dovrebbe identificare gli obiettivi (vedasi punto 6.2) che influenzano i
+processi di progettazione e di sviluppo del sistema di IA. Tali obiettivi devono essere presi
+in considerazione nei processi di progettazione e di sviluppo. Per esempio, se
+un'organizzazione definisce la correttezza (fairness) come un obiettivo, questo dovrebbe
+essere incorporato nelle specifiche dei requisiti, nell'acquisizione dei dati, nel
+condizionamento dei dati, nell'addestramento del modello, nella verifica e nella
+validazione, ecc. Al fine di raggiungere tali obiettivi, l'organizzazione dovrebbe fornire i
+requisiti e le linee guida necessarie per garantire che le misure siano integrate nelle varie
+fasi (per esempio il requisito di utilizzare uno strumento o un metodo di test specifico per
+affrontare la mancanza di correttezza (unfairness) o i pregiudizi / discriminazioni (bias)
+indesiderati).
+Altre informazioni
+Le tecniche di IA sono utilizzate per aumentare le misure di sicurezza, come la rilevazione
+della previsione delle minacce e la prevenzione degli attacchi alla sicurezza. Questa è
+un'applicazione delle tecniche di IA che può essere utilizzata per ra fforzare le misure di
+sicurezza e per proteggere sia i sistemi di IA sia i tradizionali sistemi software non basati
+sull'IA. L’Appendice C fornisce esempi di obiettivi organizzativi per la gestione del rischio,
+che possono essere utili per determinare gli obiettivi dello sviluppo del sistema di IA.
+B.6.1.3 Processi per una progettazione e sviluppo responsabili dei sistemi di IA
+Controllo
+L'organizzazione dovrebbe definire e docu mentare gli specifici processi per una
+progettazione e uno sviluppo del sistema di IA responsabile (responsible design).
+Guida di attuazione
+Lo sviluppo responsabile (responsible devel opment) dei processi del sistema di IA
+dovrebbe includere, senza limitazioni, i seguenti aspetti:
+- le fasi del ciclo di vita (un modello generico del ciclo di vita del sistema di IA è fornito
+nella norma ISO/IEC 22989, ma l'organizzazione può specificare le fasi del proprio
+ciclo di vita);
+- i requisiti di collaudo/verifica (tes t) e i mezzi previsti per i test;
+- i requisiti di supervisione umana (human  oversight), compresi i processi e gli
+strumenti, soprattutto per i casi in cui il sistema di IA può avere un impatto sulle
+persone fisiche.
+- in quali fasi devono essere eseguite le valutazioni d'impatto del sistema di AI;
+- le aspettative e le regole sui dati di formazione (per esempio, quali dati possono
+essere utilizzati, fornitori di dati  qualificati/certif icati (approved  data suppliers) ed
+l’etichettatura);
+- le competenze (ambito settoriale o altro) richieste o la formazione per gli sviluppatori
+di sistemi di IA o entrambe;
+- i criteri di rilascio;
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 31 UNI CEI ISO/IEC 42001:2024
+- le approvazioni e autorizzazioni per le diverse fasi;
+- il controllo dei cambiamenti;
+- l’usabilità (usability) e la controllabilità / capacità di controllo (controllability);
+- il coinvolgimento de lle parti interessate.
+Gli specifici processi di progettazione e sviluppo dipendono dalla funzionalità e dalle
+tecnologie di IA che si intende utilizzare per il sistema di IA.
+B.6.2 Ciclo di vita del sistema di IA
+B.6.2.1 Obiettivo
+Definire i criteri e i requisiti per ogni fase del ciclo di vita del sistema di IA.
+B.6.2.2 Requisiti e specifiche del sistema di IA
+Controllo
+L'organizzazione dovrebbe specificare e documentare i requisiti per i nuovi sistemi di IA o
+per miglioramenti sostanziali ai sistemi esistenti.
+Guida di attuazione
+L'organizzazione dovrebbe documentare le ragioni dello lo sviluppo di un sistema di IA e
+i suoi obiettivi. Alcuni dei fattori che dovrebbero essere considerati, documentati e
+compresi possono includere:
+a) il motivo per cui il sistema di IA deve essere sviluppato, per esempio se è guidato da
+un caso aziendale, da una richiesta del cliente o da una politica governativa;
+b) il modo in cui il modello può essere addestrato e come si possono ottenere i requisiti
+dei dati.
+I requisiti del sistema di IA dovrebbero essere specificati e dovrebbero coprire l'intero ciclo
+di vita del sistema di IA. Tali requisiti dovrebbero essere rivisti nei casi in cui il sistema di
+IA sviluppato non sia in grado di funziona re come previsto o qualora emergano nuove
+informazioni che possono essere  utilizzate per modificare e migliorare i requisiti. Per
+esempio, lo sviluppo di un sistema di IA può diventare irrealizzabile dal punto di vista
+finanziario.
+Altre informazioni
+I processi per descrivere il ciclo di vita del sistema di IA sono forniti nella norma ISO/IEC
+5338. Per ulteriori informazioni sulla progettazione incentrata sull'uomo per i sistemi
+interattivi, vedasi la norma ISO 9241-210.
+B.6.2.3 Documentazione della progettazi one e dello sviluppo del sistema di IA
+Controllo
+L'organizzazione dovrebbe documentare la progettazione e lo sviluppo del sistema di IA
+sulla base degli obiettivi organizzativi, dei requisiti document ati e dei criteri di
+specificazione.
+Guida di attuazione
+Sono molte le scelte progettuali necessarie per un sistema di IA, tra cui, ma non
+limitatamente, le seguenti:
+- l’approccio al machine learning / apprendimento automatico (per esempio
+supervisionato o non supervisionato);
+- l’algoritmo di apprendimento e il tipo di modello di machine learning / apprendimento
+automatico utilizzato;
+- come si intende addestrare il modello e quale qualità dei dati si vuole ottenere
+(vedasi punto B.7);
+- la valutazione e il per fezionamento dei modelli;
+- le componenti hardware e software;
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 32UNI CEI ISO/IEC 42001:2024
+- le minacce alla sicurezza contemplate durante l'intero ciclo di vita del sistema di IA;
+le minacce alla sicurezza che riguardano i sistemi di IA includono il “data poisoning”,
+il “model stealing” o attacchi di tipo “model inversion”;
+- l’interfaccia e la presentazione dei risultati;
+- come gli esseri umani possono interagire con il sistema;
+- considerazioni sull'intero perabilità e la portabilità.
+Tra i processi di progettazione e sviluppo po ssono configurarsi molteplici iterazioni,
+tuttavia dovrebbe essere mantenuta la documentazione sulla fase e essere resa
+disponibile una documentazione finale sull'architettura del sistema.
+Altre informazioni
+Per ulteriori informazioni sulla progettazione incentrata sull'uomo per i sistemi interattivi,
+vedasi la norma ISO 9241-210.
+B.6.2.4 Verifica e validazione del sistema di IA
+Controllo
+L'organizzazione dovrebbe definire e documentare le misure di verifica e validazione del
+sistema di IA e specificare i criteri per il loro utilizzo.
+Guida di attuazione
+Le misure di verifica e validazione possono includere, ma non sono limitate a:
+- le metodologie e strumenti di test;
+- la selezione dei dati di test e loro rappresentazione del dominio di utilizzo previsto;
+- i requisiti dei criteri di rilascio.
+L'organizzazione dovrebbe definire e documentare i criteri di valutazione quali, tra questi:
+- un piano per valutare i componenti del sistema di IA e l'intero sistema di IA per i rischi
+legati all'impatto su individui o gruppi di individui, o entrambi, e sulle società;
+- il piano di valutazione che può basarsi, per esempio, su:
+- i requisiti di affidabilità (reliability) e salvaguardia delle persone / incolumità
+(safety) del sistema di IA, compresi i livelli accettabili di errore delle prestazioni
+del sistema di IA;
+- gli obiettivi di sviluppo e utilizzo del si stema di IA responsa bile, come quelli del
+punto B.6.1.2 e del punto B.9.3;
+- i fattori operativi come la qualità dei da ti, l'uso previsto, compresi gli intervalli
+accettabili di ciascun fattore operativo;
+- gli usi previsti che possono richiedere la definizione di fattori operativi più
+rigorosi, compresi diversi intervalli di a ccettabilità per i fattori operativi o tassi di
+errore più bassi;
+- i metodi, linee guida o parametri da utilizzare per valutare  se le parti interessate, in
+grado di prendere decisioni o di essere soggette a decisioni basate sui risultati del
+sistema di IA, possono interpretare adeguatamente i risultati di tale sistema. È
+opportuno stabilire la frequenza della valutazione, che può basarsi sui risultati della
+valutazione dell'impatto del sistema di IA;
+- qualsiasi fattore accettabile che possa giustificare l'incapacità di raggiungere un
+livello minimo di prestazioni, soprattutto quando la valutazione del sistema di IA
+riguarda l'impatto su individui o gruppi di individui, o su entrambi, e sulle società (per
+esempio, una scarsa risoluzione delle immagini per i sistemi di visione artificiale o un
+rumore di fondo che influisce sui sistemi di riconoscimento vocale). È opportuno
+documentare anche i meccanismi per far fronte ad eventuali problemi di
+performance del sistema di IA dovuti a questi fattori.
+Il sistema di IA dovrebbe essere valutato in base ai criteri di valutazione documentati.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 33 UNI CEI ISO/IEC 42001:2024
+Laddove il sistema di IA non sia in grado di soddisfare i documentati criteri di valutazione,
+in particolare rispetto agli obiettivi di sviluppo e di utilizzo responsabile di un sistema di IA
+(vedasi punto B.6.1.2 e punto B.9.3), l'organizzazione dovrebbe riconsiderare o gestire le
+carenze dell'utilizzo programmat o del sistema di IA, i suoi requisiti di performance e il
+modo in cui la stessa è in grado di affrontare efficacemente gli impatti sugli individui o sui
+gruppi di individui, o su entrambi, e sulla società.
+Nota Ulteriori informazioni su come gestire la robustezza (robustness) delle reti neurali sono disponibili nella norma
+ISO/IEC TR 24029-1.
+B.6.2.5 Implementazione (deployment) del sistema di IA
+Controllo
+L'organizzazione dovrebbe documentare un piano di implementazione (deployment plan)
+e assicurarsi che i requisiti appropriati siano soddisfatti prima della stessa.
+Guida di attuazione
+I sistemi di IA possono essere sviluppati in vari ambienti e implementati (deployed) in altri
+(per esempio, sviluppati sul luogo (on premises) e implementati (deployed) nel cloud
+computing), e l'organizzazione dovrebbe tenere conto di tali differenze del piano di
+implementazione. L'organizzazione dovrebbe anche prendere in considerazione la
+possibilità che i componenti poss ano essere distribuiti sepa ratamente (per esempio, il
+software e il modello potrebbero essere distribuiti in maniera del tutto indipendente).
+Inoltre, l'organizzazione dovrebbe definire una serie di requisiti da soddisfare prima del
+rilascio e della implementazione (talvolta indi cati come "criteri di rilascio"). Ciò può
+includere le misure di verifica e convalida che devono essere soddisfatte, le metriche di
+performance che devono essere rispettate, il test degli utilizzatori che deve essere
+completati, nonché approvazioni e le autorizzazioni da ottenere. Il piano di
+implementazione dovrebbe tenere conto delle prospettive e degli impatti sulle parti
+interessate.
+B.6.2.6 Funzionamento e monitoraggio del sistema di IA
+Controllo
+L'organizzazione dovrebbe definire e documentare gli elementi necessari per il
+funzionamento continuo del sistema di IA. Questo dovrebbe includere, almeno, il
+monitoraggio del sistema e delle prestazioni, le riparazioni, gli aggiornamenti e
+l'assistenza.
+Guida di attuazione
+Per ciascuna attività di funzionamento e di monitoraggio si può tenere conto di diverse
+considerazioni. Per esempio:
+- Il monitoraggio del sistema e delle prestazi oni può includere il controllo degli errori e
+dei guasti generali, nonché la verifica del  funzionamento del sistema con i dati di
+fabbricazione. I criteri di performance pos sono includere i livelli di successo nella
+risoluzione dei problemi o nel raggiungimento dei compiti, o i livelli di fiducia. Altri criteri
+possono essere legati al rispetto dell’impegno o delle aspettative e delle esigenze
+delle parti interessate, tra cui, per esem pio il monitoraggio c ontinuo finalizzato a
+garantire la conformità ai requisiti del cliente o ai requisiti legali applicabili.
+- In alcuni sistemi di IA implementati le prestazioni evolvono come risultato del ML, in
+cui i dati di produzione e i dati di output sono utilizzati per addestrare ulteriormente il
+modello di ML. Nei casi in cui si utilizza  l'apprendimento continuo, l'organizzazione
+dovrebbe monitorare le prestazioni del sistema di IA, al fine di assicurare che lo
+stesso continui a soddisfare gli obiettivi di progettazione e che operi, come previsto,
+sui dati di produzione.
+- Le prestazioni di alcuni sistemi di IA s ono soggette a cambiamenti anche se questi
+non utilizzano l'apprendimento continuo, di solito dovuti al “concept drift” o al “data
+drift”. In questi casi, il monitoraggio può identificare la necessità di riqualificare il
+sistema di IA al fine di garantire che esso continui a soddisfare gli obiettivi di
+progettazione e a operare sui dati di produzione come previsto. Ulteriori informazioni
+sono disponibili nella norma ISO/IEC 23053.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 34UNI CEI ISO/IEC 42001:2024
+- Le riparazioni possono includere risposte a errori e guasti del sistema.
+L'organizzazione dovrebbe disporre di processi per la gestione e la risoluzione di tali
+problemi. Inoltre, in seguito all'evoluzione del sistema o all'identificazione di problemi
+critici, o come risultato di problemi identificati dall'esterno (per esempio, non
+conformità alle aspettative dei clienti o ai requisiti legali), possono rendersi necessari
+degli aggiornamenti. Si dovrebbero prevedere processi di aggiornamento del
+sistema che includano i componenti interessati, il programma di aggiornamento e le
+informazioni agli utilizzatori su ciò che è incluso nell'aggiornamento.
+- Gli aggiornamenti del sistema possono anche includere modifiche alle operazioni
+del sistema, utilizzi nuovi o modificati, o altre modifiche alla funzionalità del sistema.
+L'organizzazione dovrebbe disporre di procedure per affrontare le modifiche
+operative, compresa la comunicazione agli utilizzatori.
+- Il supporto al sistema può essere interno, esterno o entrambi, a seconda delle
+esigenze dell'organizzazione e delle modalità di acquisizione del sistema. I processi
+di supporto dovrebbero considerare le modalità con cui gli utilizzatori possono
+contattare l'assistenza appropriata, le modalità di segnalazione di problemi e
+incidenti, gli accordi sui livelli di servizio di supporto e le metriche.
+- Nel caso in cui i sistemi di IA vengano ut ilizzati per scopi diversi da quelli per cui sono
+stati progettati o in modi non previsti, si dovrebbe considerare l'opportunità di tali
+utilizzi.
+- Si dovrebbero identificare le minacce alla  sicurezza delle informazioni specifiche
+dell'IA relative ai sistemi di IA applicati e sviluppati dall'organizzazione. Le minacce
+alla sicurezza delle informazioni specif iche dell'IA includono, ma non solo,
+l'avvelenamento dei dati, il furto di modelli e gli attacchi di inversione dei modelli.
+Altre informazioni
+L'organizzazione dovrebbe considerare le prestazioni operative che possono influenzare
+le parti interessate e tenerne conto nella progettazione e nella determinazione dei criteri
+di prestazione.
+I criteri di prestazione per i sistemi di IA in funzione dovrebbero essere determinati dal
+compito in esame, come la classificazione, la regressione, la classificazione, il clustering
+o la riduzione della dimensionalità.
+I criteri di prestazione possono includere aspetti statistici come i tassi di errore e la durata
+dell'elaborazione. Per ogni criterio, l'organizzazione dovrebbe identificare tutte le metriche
+pertinenti e le interdipendenze tra metriche. Per ogni metrica, l'organizzazione dovrebbe
+considerare valori accettabili basati, per es empio, sulle raccomandazioni di esperti del
+dominio e sull'analisi delle aspettative delle par ti interessate, in re lazione alle pratiche
+non-IA esistenti.
+Per esempio, un'organizzazione può stabilire che il valore F
+1 è una metrica di prestazione
+appropriata in base alla valutazione dell'impatto dei falsi positivi e dei falsi negativi, come
+descritto nella norma ISO/IEC TS 4213. L'organizzazione può quindi stabilire un valore F1
+che il sistema di IA è tenuto a soddisfare. Si dovrebbe valutare se tali problemi possano
+essere gestiti mediante le misure esistenti. Se così non fosse, al fine di individuare e
+gestire questi problemi, si dovrebbero prendere in considerazione delle modifiche alle
+misure esistenti o definire misure aggiuntive.
+Quando si stabiliscono i criteri di performance, l'organizzazione dovrebbe prendere in
+considerazione le prestazioni dei sistemi o dei processi non-IA già operativi e utilizzarli
+come contesto potenzialmente pertinente.
+L'organizzazione dovrebbe, inoltre, garantire che i mezzi e i processi utilizzati per valutare
+il sistema di IA, compresa, se del caso, la se lezione e la gestione dei dati di valutazione,
+consentano di migliorare la completezza e l'affidabilità della valutazione delle sue
+prestazioni rispetto ai criteri predefiniti.
+Lo sviluppo di metodologie di valutazione delle performance può essere basato su criteri,
+metriche e valori. Questi dovrebbero determinare  la quantità di dati e i tipi di processi
+utilizzati nella valutazione, nonché i ruoli e le competenze del pe rsonale che esegue la
+valutazione.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 35 UNI CEI ISO/IEC 42001:2024
+Per assicurare che i risultati della valutazi one siano utili e pertinent i, le metodologie di
+valutazione delle performance dovrebbero rispecchiare il più possibile gli attributi e le
+caratteristiche di funzionamento e di utilizzo. Per valutare l'impatto sulle prestazioni, alcuni
+elementi della valutazione delle performance possono richiedere l'introduzione controllata
+di dati o processi errati o spuri.
+Il modello di qualità della norma ISO/IEC 25059 può essere utilizzato per definire i criteri
+di prestazione. 
+B.6.2.7 Documentazione tecnica del sistema di IA
+Controllo
+Per ogni categoria di parti interessate, come utilizzatori, partner, autorità di vigilanza,
+l'organizzazione dovrebbe determinare quale documentazione tecnica del sistema di IA
+sia necessaria e fornire loro la documentazione tecnica nel formato appropriato.
+Guida di attuazione
+La documentazione tecnica del sistema di IA può includere, a titolo esemplificativo e non
+esaustivo, i seguenti elementi:
+- una descrizione generale del sistema di IA, compreso il suo scopo;
+- le istruzioni per l'uso;
+- le ipotesi tecniche sulla sua distribuzione e sul suo funzionamento (ambiente di
+esecuzione, capacità del software e dell'hardware correlati, ipotesi sui dati, ecc.);
+- i limiti tecnici (per esempio tassi di errore accettabili, ac curatezza (accuracy),
+affidabilità (reliability), robustezza (robustness);
+- le capacità di monitoraggio e le funzioni che consentono agli utilizzatori o agli
+operatori di influenzare il funzionamento del sistema.
+Gli elementi della documentazione relativi a tutte le fasi del ciclo di vita del sistema di IA
+(come definito nella norma ISO/IEC 22989) possono includere, senza ad essi limitarsi:
+- la progettazione e la specifica architettura del sistema;
+- le scelte progettuali e le misure di qualità adottate durante il processo di sviluppo del
+sistema;
+- le informazioni sui da ti utilizzati durante lo sviluppo del sistema;
+- le ipotesi fatte e le misure adottate per la qualità dei dati (per esempio le distribuzioni
+statistiche presunte);
+- le attività di gestione (per esempio gesti one del rischio) adottate durante lo sviluppo
+o il funzionamento del sistema di IA;
+- le registrazioni di verifica e autorizzazione;
+- le modifiche apportate al sistema di IA quando è in funzione;
+- la documentazione della valutazione dell'impatto, come descritta nel punto B.5.
+L'organizzazione dovrebbe documentare le informazioni tecniche relative al
+funzionamento responsabile (responsible op eration) del sistema di IA. Questo può
+includere, ma non solo, i seguenti aspetti:
+- documentare un piano per la gestione dei fallimenti. Ciò può includere, per esempio,
+la necessità di descrivere un piano di ripristino per il sistema di IA, la disattivazione
+delle relative funzioni, un processo di aggiornamento o un piano di notifica delle
+modifiche apportate al sistema di IA ai clienti, agli utilizzatori, ecc., informazioni
+aggiornate sui malfunzionamenti del sistema e sul modo in cui questi possono
+essere attenuati;
+- documentare i processi per il monitoraggio dello stato di salute del sistema di IA (cioè
+che il sistema di IA funzioni come previsto ed entro i suoi normali margini operativi,
+altrimenti detto “osservabilità”) e i processi per affrontare i guasti del sistema di IA;
+- documentare le procedure operative standard che regolano il sistema di IA,
+compresi gli eventi da monitorare e le modalità di prioritizzazione e revisione dei log
+degli eventi. Possono essere incluse anche le modalità di verifica dei guasti e la loro
+prevenzione;
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 36UNI CEI ISO/IEC 42001:2024
+- documentare i ruoli del personale responsabile (responsible) del funzionamento del
+sistema di IA e di quello responsabile per l’affidabilità (accountability) con riferimento
+all'uso del sistema, soprattutto in relazione alla gestione delle conseguenze dei
+guasti del sistema di IA o alla manutenzione degli aggiornamenti del sistema di IA;
+- documentare gli aggiornamenti del sistema, come le modifiche alle operazioni
+effettuate, gli usi previsti (nuovi o modi ficati) o altre modifiche apportate alla
+funzionalità del sistema.
+L'organizzazione dovrebbe disporre di procedure per affrontare i cambiamenti operativi,
+compresa la comunicazione agli utilizzatori e le valu tazioni interne sul tipo di
+cambiamento.
+La documentazione dovrebbe essere agg iornata e accurata. La documentazione
+dovrebbe essere approvata dall’Alta Direzione dell'organizzazione.
+Devono essere presi in considerazione i cont rolli indicati nel prospetto A.1, qualora gli
+stessi siano forniti all’utente come parte della documentazione.
+B.6.2.8 Registrazione di eventi da parte del sistema di IA
+Controllo
+L'organizzazione dovreb be stabilire in quali fasi del cicl o di vita del sistema di IA è
+necessario attivare la registrazione dei log degli eventi, e ciò almeno deve essere previsto
+per i casi in cui il sistema di IA è in uso.
+Guida di attuazione
+Per i sistemi di IA implementati, l'organizzazione dovrebbe assicurare la registrazione per
+raccogliere e registrare automaticamente i log degli eventi che si verificano durante il
+funzionamento. Tale registrazione può includere, senza ad essi limitarsi:
+- la tracciabilità della funziona lità del sistema di IA per assicurare che il sistema di IA
+operi come previsto;
+- il rilevamento delle prestazioni del sistema di IA al di fuori delle condizioni operative
+previste dal sistema di IA, che possono comportare prestazioni indesiderate sui dati
+di produzione o impatti sulle parti interessate attraverso il monitoraggio del
+funzionamento del sistema di IA.
+I registri degli eventi del sistema di IA possono includere informazioni quali l'ora e la data
+di ogni utilizzo dello stesso, i dati di produzione su cui esso opera, gli output che non
+rientrano nell'ambito del funzionamento previsto del sistema di IA, ecc.
+I registri degli eventi dovrebbero essere conservati per tutto il tempo necessario all'uso
+previsto del sistema di IA e nell'ambito  delle politiche di conservazione dei dati
+dell'organizzazione. È possibile applicare i re quisiti legali relativi alla conservazione dei
+dati.
+Altre informazioni
+Per alcuni sistemi di IA, come i sistemi di identificazione biometrica, si possono prevedere
+requisiti di registrazione aggiuntivi a seconda della giurisdizione. Le organizzazioni
+dovrebbero essere consapevoli di tali requisiti aggiuntivi.
+B.7 Dati per i sistemi di IA
+B.7.1 Obiettivo
+Assicurare che l'organizzazione comprenda il ruolo e l'impatto dei dati sui sistemi di IA
+nella loro applicazione e nello sviluppo, nella fornitura o nell'uso di tali sistemi per tutto il
+loro ciclo di vita.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 37 UNI CEI ISO/IEC 42001:2024
+B.7.2 Dati per lo sviluppo e il po tenziamento del sistema di IA
+Controllo
+L'organizzazione dovrebbe definire, documentare e attuare i processi di gestione dei dati
+relativi allo sviluppo dei sistemi di IA.
+Guida di attuazione
+La gestione dei dati può comprendere, vari argomenti, quali, a titolo esemplificativo:
+- le implicazioni per la protezione dei dati personali (privacy) e la sicurezza (security)
+dovute all'utilizzo dei dati, alcuni dei quali possono essere di natura sensibile;
+- le minacce alla sicurezza e alla salvaguardia / incolumità delle persone (security and
+safety) che possono derivare dallo sviluppo di sistemi di IA dipendenti dai dati;
+- gli aspetti di trasparenza e esplicabilità (t ransparency and explainability), tra cui la
+provenienza dei dati e la capacità di fornire una spiegazione di come i dati sono
+utilizzati al fine di determinare l'output di  un sistema di IA, se il sistema richiede
+trasparenza ed esplicabilità;
+- la rappresentatività dei dati  di training rispetto al dominio operativo di utilizzo;
+- accuratezza (accuracy) e integrità (integrity) dei dati.
+Nota Informazioni dettagliate sul ciclo di vita del sistema di  IA e sui concetti di gestione dei dati sono fornite nella
+norma ISO/IEC 22989.
+B.7.3 Acquisizione dei dati
+Controllo
+L'organizzazione dovrebbe determinare e documentare i dettagli relativi all'acquisizione e
+alla selezione dei dati utilizzati nei sistemi di IA.
+Guida di attuazione
+A seconda della portata e dell'uso dei propri sistemi di IA, l'organizzazione potrebbe avere
+bisogno di differenti categorie di dati, provenienti da fonti diverse. I dettagli per
+l'acquisizione dei dati possono includere:
+- le categorie di dati necessari per il sistema di IA;
+- la quantità di dati necessari;
+- le fonti di dati (per esempio interni, acquistati, condivisi, open data, sintetici);
+- le caratteristiche della fonte di dati (per esempio statica, in streaming, raccolta ,
+generata dalla macchina);
+- i dati demografici e caratteristiche dei soggetti (per esempio pregiudizi /
+discriminazioni (bias) noti o potenziali o altri errori sistematici);
+- il trattamento preventivo (prior handling) dei dati (per esempio, utilizzi precedenti,
+conformità ai requisiti di protezione dei dati personali (privacy) e sicurezza (security);
+- i diritti sui dati (per esempio, dati personali delle persone fisiche - PII, copyright);
+- i metadati associati (per esempio dettagli sull'etichettatura e sulla valorizzazione dei
+dati);
+- la provenienza dei dati.
+Altre informazioni
+Per documentare i dettagli sull'acquisizione e l'utilizzo dei dati, possono essere utilizzate le
+categorie di dati e la struttura per l'utilizzo degli stessi presenti nella norma ISO/IEC 19944-1.
+B.7.4 Qualità dei dati per i sistemi di IA
+Controllo
+L'organizzazione dovrebbe definire e documentare i requisiti per la qualità dei dati e
+garantire che i dati utilizzati per sviluppare e gestire il sistema di IA soddisfino tali requisiti.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 38UNI CEI ISO/IEC 42001:2024
+Guida di attuazione
+La qualità dei dati utilizza ti per sviluppare e gestire i sistemi di IA può avere,
+potenzialmente, un impatto sign ificativo sulla validità dei ri sultati del sistema. La norma
+ISO/IEC 25024 definisce la qualità dei dati come il grado in cui le caratteristiche dei dati
+soddisfano le esigenze spec ificate e implicite,  quando gli stessi sono utilizzati in
+condizioni specifiche. Per i sistemi di IA che utilizzano il machine learning / apprendimento
+automatico supervisionato o semi-supervisionato, è importante che la qualità dei dati di
+addestramento (training), di validazione, di test e di produzione sia definita, misurata e
+migliorata per quanto possibile, e che l'organizzazione si assicuri che i dati siano adatti
+allo scopo previsto. L'organizzazione dovrebbe considerare l'impatto dei pregiudizi /
+discriminazioni (bias) sulle prestazioni e correttezza (fairness) del sistema e apportare le
+modifiche necessarie al modello e ai dati utilizzati per migliorare le prestazioni e
+correttezza in modo tale che gli stessi siano accettabili per il caso d'uso.
+Altre informazioni
+Ulteriori informazioni sulla qualità dei dati sono disponibili nella serie ISO/IEC 5259
+2) sulla
+qualità dei dati per l'analisi dei dati e il ML. Ul teriori informazioni sulle diverse pregiudizi /
+discriminazioni (bias) dei dati utilizzati nei sistemi di IA sono disponibili in ISO/IEC/TR 24027.
+B.7.5 Provenienza dei dati
+Controllo
+L'organizzazione dovrebbe definire e documentare un processo per registrare la
+provenienza dei dati utilizzati ne i propri sistemi di IA durante il ciclo di vita dei dati e del
+sistema di IA.
+Guida di attuazione
+Secondo la norma ISO 8000-2, la registrazione della provenienza dei dati può includere
+informazioni sulla creazione, l'aggiornamento, la trascrizione, l'estrazione, la convalida e il
+trasferimento del controllo dei dati. Inoltre, la condivisione dei dati (senza trasferimento
+del controllo) e le relative trasformazioni possono essere prese in considerazione per
+quanto attiene alla provenienza degli stessi. A seconda dei fattori come la fonte dei dati, il
+loro contenuto e il contesto di  utilizzo, le organizzazioni dovrebbero valu tare se sono
+necessarie misure per verificare la provenienza degli stessi.
+B.7.6 Preparazione dei dati
+Controllo
+L'organizzazione dovrebbe definire e documentare i criteri di selezione per la
+preparazione dei dati e i metodi utilizzati a tale scopo.
+Guida di attuazione
+Normalmente, i dati utilizzati in un sistema di IA necessitano di una fase di preparazione  al
+fine di renderli utilizzabili per un determinato compito di IA. Per esempio, talvolta, gli algoritmi
+di machine learning / apprendimento automatico non tollerano voci mancanti o errate, una
+distribuzione non normale e scale molto variabili. Per aumentare la qualità dei dati possono
+essere utilizzati metodi di preparazione e trasformazioni. La mancata preparazione dei dati
+può potenzialmente portare a errori del sistema di IA. I metodi di preparazione e le
+trasformazioni più comuni per i dati utilizzati nei sistemi di IA comprendono:
+- analisi statistica dei dati (per esempio, distribuzione, media, mediana, scostamento
+tipo, intervallo, stratificazione, campionamento) e i metadati statistici (per esempio la
+specifica DDI (data documentation initiative) 
+[28]);
+- la pulizia o correzione dei dati (cioè correzione delle voci, gestione delle voci
+mancanti);
+- l’inserimento (cioè i metodi per inserire le voci mancanti);
+- la normalizzazione;
+- il ridimensionamento ed estensione;
+- l’etichettatura de lle variabili target;
+- la codifica (per esempio conversion e di variabili categoriali in numeri).
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 39 UNI CEI ISO/IEC 42001:2024
+Per un determinato compito di IA, l'organizzazione dovrebbe documentare i criteri di
+selezione dei metodi di preparazione dei dati e delle trasformazioni specifiche, nonché i
+metodi e le trasformazioni specifiche utilizzate nel compito di IA.
+Nota Per ulteriori informazioni sulla specifica preparazione / elaborazione dei dati per il machine learning /
+apprendimento automatico, consultare la serie ISO/IEC 52592) e la norma ISO/IEC 23053.
+B.8 Informazioni per le parti interessate
+B.8.1 Obiettivo
+Garantire che le parti interessate abbiano le informazioni necessarie per comprendere e
+valutare i rischi e i relativi impatti (sia positivi che negativi).
+B.8.2 Documentazione del sistema e informazioni per gli utilizzatori
+Controllo
+L'organizzazione dovrebbe determinare e fornire le informazioni necessarie agli
+utilizzatori del sistema.
+Guida di attuazione
+Le informazioni sul sistema di IA possono includere sia dettagli tecnici e istruzioni, sia
+notifiche generali destinate agli utilizzatori che interagiscono con un sistema di IA, a
+seconda del contesto. Possono anche essere inclusi il sistema stesso e i suoi potenziali
+risultati (per esempio la notifica agli utilizzatori che un'immagine è stata creata dall'IA).
+Sebbene i sistemi di IA possano essere complessi, è fondamentale che gli utilizzatori
+siano in grado di comprendere come funziona un sistema di IA nei casi in cui
+interagiscono con esso. Gli utilizzatori devono anche capire lo scopo e gli usi previsti, il
+potenziale di danno o di beneficio per l'utiliz zatore. La documentazione di alcuni sistemi
+può essere necessar iamente destinata a utilizzi pi ù tecnici (per esempio agli
+amministratori di sistema), e l'organizzazione dovrebbe comprendere le esigenze delle
+diverse parti interessate e il significato che la comprens ibilità può avere per loro. Le
+informazioni dovrebbero anche essere accessibili, in termi ni di facilità di reperimento, e
+dovrebbero compre nsibili per gli utilizzatori che posso no avere necessità di ulteriori
+caratteristiche di affidabilità.
+Le informazioni che possono essere fornite agli utilizzatori includono, senza limitazioni:
+- lo scopo del sistema;
+- l’informazione che l'ut ilizzatore sta interagendo con un sistema di IA;
+- come interagire con il sistema;
+- come e quando escludere il sistema;
+- i requisiti tecnici per il funzionamento del sistema, comprese le risorse
+computazionali necessarie, i limiti del sistema e la sua durata prevista;
+- la necessità di supervisi one umana (human oversight);
+- le informazioni sulla precisione e sulle performance;
+- le informazioni rilevanti circa la valutazione d'impatto, compresi i potenziali benefici e
+danni, in particolare se sono applicabili in contesti spec ifici o a dete rminati gruppi
+demografici (vedasi punto B.5.2 e B.5.4);
+- le revisioni delle dichiarazioni relative ai benefici del sistema;
+- gli aggiornamenti e modifiche del funzionamento del sistema, nonché le misure di
+manutenzione necessarie, compresa la loro periodicità;
+- le informazioni di contatto;
+- i materiali didattici ad uso del sistema.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 40UNI CEI ISO/IEC 42001:2024
+Dovrebbero essere documentati i criteri utilizzati dall'organizzazione per determinare se e
+quali informazioni devono essere fornite. I criteri rilevanti includono, ma non sono limitati,
+all'uso previsto e all'abuso ragionevolmente prevedibile del sistema di IA, alla competenza
+dell'utilizzatore e all'impatto specifico del sistema di IA.
+Le informazioni possono essere fornite agli utenti in svariati modi, tra cui istruzioni d'uso
+documentate, avvisi e altre notifiche integrate nel sistema stesso, informazioni su una
+pagina web, ecc. A seconda dei metodi utilizzati per fornire informazioni, l'organizzazione
+dovrebbe verificare che gli utilizzatori abbiano accesso a tali informazioni e che le
+informazioni fornite siano complete, aggiornate e accurate.
+B.8.3 Reporting esterno
+Controllo
+L'organizzazione dovrebb e fornire alle parti interessate la possibilità di segnalare gli
+impatti negativi del sistema.
+Guida di attuazione
+Se da un lato il funzionamento del sistema dovrebbe essere monitorato per verificare la
+presenza di problemi e guasti, dall'altro l'organizzazione dovrebbe consentire agli
+utilizzatori o ad altre parti es terne la possibilità di segnal are gli impatti negativi (per
+esempio la mancanza di correttezza).
+B.8.4 Comunicazione degli incidenti
+Controllo
+L'organizzazione dovrebbe stabilire e documen tare un piano per la  comunicazione, agli
+utilizzatori del sistema, degli incidenti.
+Guida di attuazione
+Gli incidenti legati al sistema di IA possono essere specifici del sistema stesso, o legati
+alla sicurezza delle informazioni o alla protezione dei dati personali (privacy) (per
+esempio, una violazione dei dati - data breach). A seconda del contesto in cui opera il
+sistema, l'organizzazione dovrebbe comprendere quali sono gli obblighi di notifica degli
+incidenti da realizzare nei co nfronti degli utilizzatori e delle  altre parti interessate. Per
+esempio, un incidente con un componente di IA che fa parte di un prodotto che influisce
+sulla salvaguardia delle persone / incolumità (safety) può avere requisiti di notifica diversi
+rispetto ad altri tipi di sistemi. Possono essere applicati i requisiti legali (come i contratti)
+e le attività di regolamentazione, che possono specificare i requisiti per:
+- i tipi di incidenti che devono essere comunicati;
+- la tempistica per la notifica;
+- se e quali autorità devono essere informate;
+- i dettagli da comunicare.
+L'organizzazione può integrare le attività di risposta agli incidenti e di reporting relative
+all'IA all'interno delle attività più generali di gestione degli incidenti dell'organizzazione,
+ma dovrebbe essere a conoscenza dei requisiti specifici relativi ai sistemi di IA o ai singoli
+componenti di tali sistemi (per esempio una violazione dei dati personali delle persone
+fisiche - PII nei dati di addestramento del sistema può avere requisiti di segnalazione
+diversi rispetto alla protezione dei dati personali).
+Altre informazioni
+Le norme ISO/IEC 27001e ISO/IEC 27701 forniscono, rispettivamente, ulteriori dettagli
+sulla gestione degli incidenti per la sicurezza (security) e la protezione dei dati personali
+(privacy).
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 41 UNI CEI ISO/IEC 42001:2024
+B.8.5 Informazioni per le parti interessate
+Controllo
+L'organizzazione dovrebbe determinare e documentare i propri obblighi di comunicazione
+alle parti interessate delle informazioni sul sistema di IA.
+Guida di attuazione
+In alcuni casi, una giurisdizione può richiedere che le informazioni sul sistema siano
+condivise con autorità come quelle di regolamentazione. Le informazioni possono essere
+comunicate alle parti interessate, come clienti o autorità di regolamentazione, entro i
+tempi previsti. Le informazioni condivise possono includere, per esempio:
+- la documentazione tecnica del sistema, comp resi, senza limitarsi ad essi, i set di dati
+per l'addestramento, la validazione e il test, nonché le giustificazioni delle scelte
+algoritmiche e le registrazioni di verifica e validazione;
+- i rischi legati al sistema;
+- i risultati delle va lutazioni d'impatto;
+- i registri e altre registrazioni del sistema.
+L'organizzazione dovrebbe comprendere i propri obblighi in tal senso e garantire che le
+appropriate informazioni siano condivise con le autorità competenti. Inoltre, si presume
+che l'organizzazione sia a conoscenza dei requisiti giurisdizionali relativi alle informazioni
+condivise con le autorità di polizia.
+B.9 Utilizzo di sistemi di IA
+B.9.1 Obiettivo
+Assicurare che l'organizzazione utilizzi i sistemi di IA in modo responsabile (responsibly)
+e secondo le politiche della stessa.
+B.9.2 Processi per un utilizzo responsabile dei sistemi di IA
+Controllo
+L'organizzazione dovrebbe definire e document are i processi per l'utilizzo responsabile
+(responsible) dei sistemi di IA.
+Guida di attuazione
+A seconda del contesto in cui si trova, l'organizzazione potrebbe avere molte valutazioni
+da fare sull'opportunità di utilizzare un particolare sistema di IA. Sia che il sistema di IA sia
+sviluppato dall'organizzazione stessa, o fornito da terzi, l'organizzazione dovrebbe avere
+ben chiaro quali sono tali valutazioni e sviluppare politiche per affrontarle. Alcuni esempi
+sono:
+- le autorizzazioni necessarie;
+- il costo (anche per il monitoraggio e la manutenzione continua);
+- i requisiti di approvvigionamento ammessi;
+- i requisiti legali applic abili all'organizzazione.
+Qualora l'organizzazione disponga di politiche approvate per l'utilizzo di altri sistemi,
+asset, ecc. è possibile incorporarle.
+B.9.3 Obiettivi per un utilizzo responsabile del sistema di IA
+Controllo
+L'organizzazione dovrebbe identificare e documentare gli obiettivi volti a guidare l'uso
+responsabile (responsible) dei sistemi di IA.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 42UNI CEI ISO/IEC 42001:2024
+Guida di attuazione
+Le organizzazioni che operano in vari cont esti potrebbero avere aspettative e obiettivi
+distinti per lo sviluppo responsabile dei sistemi di IA. A seconda del contesto,
+l'organizzazione dovrebbe identificare gli obiettivi legati all'utilizzo responsabile. Alcuni di
+questi obiettivi includono:
+- correttezza (fairness);
+- responsabilità (accountability);
+- la trasparenza (transparency);
+- l’esplicabilità (explainability);
+- l’affidabilità (reliability);
+- la salvaguardia delle pers one / incolumità (safety);
+- la robustezza e ridondanza (robustness and redundancy);
+- la protezione dei dati personali (privacy) e sicurezza (security);
+- l’accessibilità.
+Una volta definiti, l'organizzazione dovrebbe  attuare i meccanismi per raggiungere gli
+obiettivi all'interno della stessa. Ciò può includere il determinare se una soluzione di terza
+parte soddisfa gli obiettivi dell'organizzazione o se sia applicabile, per l’uso previsto, una
+soluzione sviluppata internamen te. L'organizzazione dovrebbe  stabilire in quali fasi del
+ciclo di vita del sistema di IA si dovrebbero incorporare obiettivi significativi di
+supervisione umana (human oversight). Questo può comprendere:
+- il coinvolgimento di revisori umani (human reviewers) per controllare i risultati del
+sistema di IA, che abbiano anche l'autorità di annullare le decisioni prese dal sistema
+di IA;
+- garantire che la supervisione umana (human
+ oversight) sia inclusa, se necessario,
+per un uso accettabile del sistema di IA, conformemente alle istruzioni o altra
+documentazione associata all’implementazione (deployment) prevista del sistema di
+IA;
+- il monitoraggio delle prestazioni del sistema di IA, compresa l'accuratezza
+(accuracy) dei risultati dello stesso;
+- la segnalazione, alle parti interessate, di problemi relativi ai risultati del sistema di IA
+e al relativo impatto;
+- la segnalazione di problemi relativi a cambiamenti nelle prestazioni o nella capacità
+del sistema di IA di produrre output corretti sui dati di produzione;
+- valutare se il processo decisionale automatizzato è appropriato per un approccio
+responsabile all'utilizzo di un sistema di IA e all'uso previsto del sistema di IA.
+La necessità di una supervisione umana può essere influenzata dalle valutazioni
+dell’impatto del sistema di IA (vedasi punto B.5). Il personale interessa to nelle attività di
+supervisione umana relative al sistema di IA dovrebbe essere informato, addestrato e
+dovrebbe comprendere le istruzioni e ogni altra documentazione del sistema, nonché i
+compiti che da svolgere per soddisfare gli obiettivi di supervisione umana. Se vengono
+segnalati dei problemi di prestazioni, la supervisione umana può integrare il controllo
+automatico.
+Altre informazioni
+L’Appendice C fornisce esempi di obiettivi organizzativi relativi alla gestione del rischio,
+che possono essere utili per determinare gli obiettivi legati l'utilizzo del sistema di IA.
+B.9.4 Uso previsto del sistema di IA
+Controllo
+L'organizzazione dovrebbe assi curarsi che il sistema di IA sia utilizzato secondo gli usi
+stabiliti per esso e secondo la documentazione che lo correda.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 43 UNI CEI ISO/IEC 42001:2024
+Guida di attuazione
+Il sistema di IA dovrebbe essere attuato secondo le istruzioni e ogni altra documentazione
+ad esso associata (vedasi punto B.8.2). Per l’implementazione (deployment) possono
+essere richieste risorse specifiche per supportarla, compresa la necessità di garantire che
+la supervisione umana (human oversight) sia applicata come richiesto (vedasi punto
+B.9.3). Per un utilizzo accettab ile del sistema di IA, può essere necessario che i dati
+utilizzati dallo stesso siano in  linea con la documentazione ad esso associata, al fine di
+garantire che le prestazioni del sistema di IA siano accurate.
+Il funzionamento del sistema di AI dovrebbe essere monitorato (vedasi punto B.6.2.6). Nel
+caso in cui la corretta implem entazione del sistema di IA, in base alle istruzioni ad esso
+associate, causi preoccupazioni in merito all'impatto sulle parti interessate o sui requisiti
+legali dell'organizzazione, l'organizzazione dovrebbe comunicare le proprie
+preoccupazioni al personale competente al suo interno dell'organizzazione, nonché a
+eventuali fornitori terzi del sistema di IA.
+L'organizzazione dovrebbe conservare i registri degli eventi (event  logs) o altra
+documentazione relativa all’implementazione e al funziona mento del sistema di IA, da
+utilizzare per dimostra re che il sistema di IA viene utilizzato conformemente a quanto
+stabilito o per aiutare a comunicare le criticità relative all'uso previsto. Il periodo di tempo
+per la conservazione dei registri degli eventi e di ogni altra documentazione dipende
+dall’impiego cui il sistema di IA è destinato, dalle politiche di conservazione dei dati (data
+retention policies) dell'organizzazione e dai requisiti legali in materia di conservazione dei
+dati.
+B.10 Rapporti con terzi e clienti
+B.10.1 Obiettivo
+Garantire che l'organizzazi one comprenda le  proprie responsabilità e che sia
+responsabile (accountable), e che i rischi siano ripartiti in modo appropriato nei casi in cui
+vengono coinvolte terze parti in qualsiasi fase del ciclo di vita del sistema di IA.
+B.10.2 Assegnazione di responsabilità
+Controllo
+L'organizzazione dovrebbe garantire che le res ponsabilità, legate al ciclo di vita del
+sistema di IA, siano assegnate tra l'organizzazione stessa, i suoi partner, i fornitori, i
+clienti e le terze parti.
+Guida di attuazione
+Durante il ciclo di vita di un sistema di IA, le responsabilità possono essere suddivise tra
+le parti che forniscono i dati , le parti che fornis cono algoritmi e m odelli, le parti che
+sviluppano o utilizzano il sist ema di IA e coloro che de vono essere responsabili
+(accountable) nei confronti di alcune o tutte le parti interessate. L'organizzazione
+dovrebbe documentare tutte le parti che intervengono durante il ciclo di vita del sistema di
+IA e i relativi ruoli, nonché determinare le responsabilità.
+Nel caso in cui l'organizzazione fornisca un sistema di IA a una terza parte, essa
+(l’organizzazione) dovrebbe assicurarsi di adottare un approccio responsabile allo
+sviluppo del sistema di IA. Si vedano i controlli e la guida nel punto B.6. L'organizzazione
+dovrebbe essere in grado di fornire la documentazione necessaria (vedasi punto B.6.2.7
+e B.8.2) per il sistema di IA alle parti interessate e alla terza parte a cui l'organizzazione
+fornisce tale sistema.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 44UNI CEI ISO/IEC 42001:2024
+Solitamente, quando i dati trattati includono le  informazioni di identificazione personale /
+dati personali delle persone fisiche - PII, le respon sabilità vengono ripartite tra i
+Responsabili del trattamento dei dati personali delle persone fisiche - PII e ii Titolari del
+trattamento. La norma ISO/IEC 29100 fornisce ulteriori informazioni sui Titolari del
+trattamento e sui Responsabili del trattamento dei dati pers onali delle persone fisiche -
+PII. Se si vuole preservare la protezione dei dati personali delle persone fisiche - PII
+(privacy), si dovrebbero pr endere in considerazione cont rolli come quelli descritti nella
+norma ISO/IEC 27701. Sulla scorta delle attività di trattamento dei dati personali delle
+persone fisiche - PII in funzione del ruolo dell'organizzazione nell'applicazione e nello
+sviluppo del sistema di IA duran te l’intero ciclo di vita, l'or ganizzazione può ricoprire il
+ruolo di Titolare del trattamento dei dati personali delle persone fisiche - PII (o di
+Contitolare del trattamento dei dati personali delle persone fisiche - PII), di Responsabile
+del trattamento dei dati personali delle persone fisiche - PII o di entrambi.
+B.10.3 Fornitori
+Controllo
+L'organizzazione dovrebbe stabilire un proce sso per garantire che l'utilizzo di servizi,
+prodotti o materiali messi a disposizione dai fornitori siano in  linea con l'approccio
+dell'organizzazione allo sviluppo e all'utilizzo responsabile dei sistemi di IA.
+Guida di attuazione
+Le organizzazioni che sviluppano o utilizzano un sistema di IA possono utilizzare i fornitori
+in diversi modi, dall'approvvigionamento di set di dati, algoritmi o modelli di machine
+learning / apprendimento automatico, o altri componenti di un sistema come librerie
+software, fino a un intero sist ema di IA da utilizzare da so lo o come parte di un altro
+prodotto (per esempio un veicolo).
+Le organizzazioni dovrebbero tenere in considerazione le varie tipologie di fornitori, cosa
+forniscono e il diverso livello di rischio che ciò può comportare per il sistema e
+l'organizzazione nel suo complesso, nel determina re la selezione dei fo rnitori, i requisiti
+imposti a questi ultimi e i livelli di monitora ggio e valutazione continui necessari per gli
+stessi.
+Le organizzazioni dovrebbero documentare il modo in cui il sistema di IA e le componenti
+dello stesso siano integrate nei sistemi di IA sviluppati o utilizzati da essa.
+Qualora l'organizzazione ritenga che il sistema di IA o le componenti di un fornitore non
+funzionino come previsto o possano causare impatti su individui o gruppi di individui, o su
+entrambi, e su società e che non sono in linea con l'approccio responsabile adottato
+dall'organizzazione, la stessa dovrebbe richiedere al fornitore di intraprendere le
+necessarie azioni correttive. L'organizzazione può decidere di collaborare con il fornitore
+per raggiungere tale obiettivo.
+L'organizzazione dovrebbe garantire che il fornitore di un sistema di IA metta a
+disposizione la documentazione appropriata  e adeguata relativamente al sistema di IA
+(vedere punto B.6.2.7 e B.8.2).
+B.10.4 Clienti
+Controllo
+L'organizzazione dovrebbe garantire che il suo approccio responsabile allo sviluppo e
+all'utilizzo dei sistemi di IA tenga in considerazione le aspettative e le esigenze dei clienti.
+Guida di attuazione
+L'organizzazione, quando fornisce un prodotto o un servizio legato a un sistema di IA
+(cioè quando è essa stessa fornitore), dovrebbe comprendere le aspettative e le esigenze
+del cliente. Queste possono presentarsi sotto forma di requisiti per il prodotto o il servizio
+stesso, durante la fase di progettazione o di ingegnerizzazione, oppure sotto forma di
+requisiti contrattuali o di accordi generali di utilizzo. Un'organizzazione può avere molti tipi
+di relazioni con i clienti, tutte con esigenze e aspettative diverse.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 45 UNI CEI ISO/IEC 42001:2024
+In particolare, l'organizzazione dovrebbe comprendere la natura complessa dei rapporti
+tra fornitori e clienti e capire dove ricade la responsabilità del fornitore del sistema di IA e
+quando, invece, tale responsa bilità grava sul cliente, pur rispettando le esigenze e le
+aspettative.
+Per esempio, l'organizzazione può identificare i rischi legati all'utilizzo dei propri prodotti e
+servizi di IA da parte del cliente e può decidere di trattare i rischi identificati fornendo
+informazioni appropriate allo stesso, in modo che quest'ultimo possa poi trattare i rischi
+corrispondenti.
+Come esempio di informazione appropriata, quando un sistema di IA è valido per un certo
+ambito di utilizzo dovrebbero essere comunica ti al cliente i limiti di tale ambito. Vedasi
+punto B.6.2.7 e punto B.8.2.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 46UNI CEI ISO/IEC 42001:2024
+APPENDICE C POTENZIALI OBIETTIVI  ORGANIZZATIVI E FATTORI DI RISCHIO LEGATI ALL'IA
+(informativa)
+C.1 Generalità
+Il presente Appendice delinea i potenziali obiettivi organizzativi, le fonti di rischio e le
+relative descrizioni che possono essere pr esi in considerazione dall'organizzazione
+nell’attività di gestione dei rischi. Tale Appendice non è da considerarsi esaustivo o
+applicabile a tutte le organizzazioni. L'organizzazione dovrebbe determinare gli obiettivi e
+le fonti di rischio ritenga rilevanti. La norma ISO/IEC 23894 fornisce informazioni più
+dettagliate su tali obiettivi e sulle fonti di rischio, nonché sulla loro relazione con la
+gestione del rischio. La valutazione dei sist emi di IA, inizialmente , sistematicamente e
+quando necessaria, fornisce l’evidenza che un sistema di IA è in corso di valutazione con
+riferimento agli obiettivi organizzativi.
+C.2 Obiettivi
+C.2.1 Responsabilit à (Accountability)
+L'uso dell'IA può modificare gli attuali quadri di riferimento dell’accountability. Se finora le
+persone erano ritenute responsa bili delle loro azioni, ora le  loro azioni possono essere
+supportate sull'utilizzo di un sistema di IA o derivare da esse.
+C.2.2 Competenze in materia di IA
+Si rende necessaria una selezione di esperti specialisti dedicati in possesso di
+competenze interdisciplinari ed esperienza nella valutazione, nello sviluppo e
+nell'implementazione (deploying) di sistemi di IA.
+C.2.3 Disponibilità e qualità dei dati di training e di test
+I sistemi di IA basati sul ML necessitano di dati di addestramento (training), validazione e
+test per addestrare e verificare i sistemi per il comportamento programmato (behaviour).
+C.2.4 Impatto ambientale
+L'uso dell'IA può avere impatti positivi e negativi sull'ambiente.
+C.2.5 Correttezza (Fairness)
+L'applicazione inappropriata di sistemi di IA per il processo decisionale automatizzato può
+risultare ingiusta verso persone o gruppi specifici di persone.
+C.2.6 Manutenibilità (Maintainability)
+La manutenibilità è correlata alla capacità dell'organizzazione di gestire le modifiche del
+sistema di IA alla fine di correggerne i difetti o adattarlo a nuovi requisiti.
+C.2.7 Protezione dei dati personali de lle persone fisiche - PII (Privacy)
+L'uso improprio o la divulgazione di dati personali e particolari (ex sensibili) (per esempio,
+le cartelle cliniche) può avere effetti dannosi per le persone interessate.
+C.2.8 Robustezza (Robustness)
+Nell'IA, gli attributi di robustezza permettono di dimostrare la capacità (o l'incapacità) del
+sistema di avere una performance analoga anche rispetto a dati nuovi rispetto quelli su cui
+il sistema era stato addestrato o ai dati di operazioni tipiche.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 47 UNI CEI ISO/IEC 42001:2024
+C.2.9 Salvaguardia delle pers one / incolumità (Safety)
+La salvaguardia delle persone / incolumità riguarda all'aspettativa che un sistema, in
+condizioni definite, non comporti un pericolo per la vita umana, la salute, la proprietà o
+l'ambiente.
+C.2.10 Sicurezza (Security)
+Nell’ambito dell'IA, e in particolare dei sistemi di IA basati su logiche di ML, dovrebbero
+essere prese in considerazione nuove esigenze di sicurezza (security issues), al di là dei
+classici problemi di sicurezza delle informazioni e dei sistemi.
+C.2.11 Trasparenza ed esplicabilità (Transparency and explainability)
+La trasparenza è legata sia alle caratteristiche di un'organizzazione che gestisce i sistemi
+di IA, sia i sistemi stessi. L’esplicabilità (explainability) concerne le spiegazioni di
+importanti fattori che influenzano i risultati del sistema di IA e che sono fornite alle parti
+interessate in un modo che risulti comprensibile agli esseri umani.
+C.3 Fonti di rischio
+C.3.1 Complessità dell'ambiente
+Quando i sistemi di IA operano in ambienti complessi, nei quali la gamma di circostanze
+è ampia, le prestazioni potrebbero risultare incerte e, quindi, costituire una fonte di rischio
+(per esempio ambiente complesso della guida autonoma).
+C.3.2 Mancanza di trasparenz a (transparency) e di esplicabilità (explainability)
+Potrebbe rappresentare una fonte di rischio (per esempio in termini di trustworthiness e
+dell’affidabilità (accountability) dell'organizzazione) l'incapacità di fornire informazioni
+adeguate alle parti interessate.
+C.3.3 Livello di automazione
+Il livello di automazione può avere un impatto su diverse aree di rischio, come la
+salvaguardia delle persone / incolumità (safety), correttezza o la sicurezza (security).
+C.3.4 Fonti di rischio legate al mach ine learning / apprendimento automatico
+Possono rappresentare fonti di rischio la qualità dei dati utilizzati per l’ML e il processo di
+raccolta dei dati, poiché potrebbero avere un impatto su obiettivi quali la salvaguardia
+delle persone / incolumità (safety) e la robustezza (robustness) (per esempio, per
+problemi relativi alla qualità dei dati o della corruzione degli stessi (data poisoning).
+C.3.5 Questioni relative all’hardware del sistema
+Le fonti di rischio correlate all'hardware includono errori hardware basati su componenti
+difettosi o il trasferimento di modelli ML addestrati all’interno di sistemi diversi.
+C.3.6 Problemi del ciclo di vita del sistema
+Le fonti di rischio possono manifestarsi durante l'intero ciclo di vita del sistema di IA (per
+esempio, difetti di progettazione, implementazione inadeguata, mancanza di
+manutenzione, problemi di smantellamento.
+C.3.7 Prontezza tecnologica
+Le fonti di rischio possono essere legate alla tecnologia non ancora completamente
+matura a causa di fattori sconosciuti (per esempio, limitazioni del sistema e condizioni di
+contorno, deriva delle prestazioni), ma anche dalla tecnologia tradizionale a causa della
+noncuranza tecnologica.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 48UNI CEI ISO/IEC 42001:2024
+APPENDICE D UTILIZZO DEL SIST EMA DI GESTIONE DELL'IA IN DIVERSI DOMINI O SETTORI
+(informativa)
+D.1 Generalità
+Il presente sistema di gestione è applicabile a qualsiasi organizzazione che sviluppi
+(developing), fornisca o utilizzi prodotti o servizi che impieghino un sistema di IA.
+Pertanto, esso è potenzialmente applicabile a una grande / vasta varietà di prodotti e
+servizi, in diversi settori, soggetti a obb ligazioni , buone pratiche, aspettative o obblighi
+contrattuali (nei confronti delle parti interessate. Esempi di settori sono:
+- salute;
+- difesa;
+- trasporti;
+- finanza;
+- impiego occupazionale;
+-e n e r g i a .
+È possibile prendere in considerazione diversi obiettivi organizzativi per lo sviluppo e
+l'utilizzo responsabile di un sistema di IA (vedasi l’Appendice C per i possibili obiettivi). Il
+presente documento definisce requisiti e direttive partendo da una visione specifica della
+tecnologia di IA. Per molti dei potenziali ob iettivi sono disponibili norme di sistema di
+gestione generici o specifici di settore. Solitamente, tali norme di sistema di gestione si
+pongono in modo neutrale rispetto alla tecnologia, a differenza del sistema di gestione
+dell'IA che fornisce considerazioni specifiche sulla tecnologia dell'IA.
+I sistemi di IA non sono soltanto composti da componenti che utilizzano la tecnologia di
+IA, ma possono impiegare una varietà di tecnologie e di componenti. Pertanto, lo sviluppo
+e l'utilizzo responsabile di un sistema di IA presuppone che si tenga conto non solo delle
+considerazioni specifiche dell'IA, ma anche del sistema considerato nel suo complesso,
+comprensivo di tutte le tecnologie e delle componenti utilizzate. Anche per quanto attiene
+alla specifica tecnologia didi IA si dovr ebbero prendere in considerazione, oltre alle
+considerazioni specifiche sull'IA, anche altri aspetti. Per esempio, poiché l'IA è una
+tecnologia basata sull’elaborazione delle informazioni, generalmente ad essa si applica la
+sicurezza delle in formazioni. Obiettivi come la salvaguardia delle persone / incolumità
+(safety), la sicurezza (security), la protezione dei dati personali (privacy) e l'impatto
+ambientale dovrebbero essere gestiti in modo olistico e non in modo distinto per l'IA e gli
+altri componenti del sistema. Pertanto, l'integrazione del sistema di gestione dell'IA con le
+norme di sistema di gestione generici o specifici del settore di appartenenza è essenziale
+per lo sviluppo e l'utilizzo responsabile di un sistema di IA. 
+D.2 Integrazione del sistema di gestione dell'IA ad altre norme di sistemi di gestione
+Nel fornire o utilizzare sistemi di IA, l'organizzazione può avere obiettivi o obblighi relativi ad
+aspetti che sono coperti da altre norme di sistema di gestione. Tra questi possono rientrare,
+per esempio, la sicurezza (security), la protezione dei dati personali (privacy), la qualità, temi
+trattati, rispettivamente, nelle norme ISO/IEC 27001, ISO/IEC 27701 e ISO 9001.
+Quando si forniscono, utilizzano o sviluppano sistemi di IA, le potenziali norme di sistema
+di gestione generici applicabili, seppur non limitati a questi, sono:
+- ISO/IEC 27001: Nella maggior parte dei cont esti, la sicurezza è essenziale per il
+raggiungimento degli obiettivi dell'organizzazione mediante il sistema di IA. Il modo in
+cui un'organizzazione persegue gli obiettivi di sicurezza dipende dal suo contesto e
+dalle sue politiche. Se un'organizzazione i dentifica la necessità di implementare un
+sistema di gestione dell'IA e di affrontare gli obiettivi di sicurezza in modo altrettanto
+accurato e sistematico, essa potrà implementare un sistema di gestione della
+sicurezza delle informazioni in conformità alla norma ISO/IEC 27001. Considerando
+che sia la norma ISO/IEC 27001 sia i si stemi di gestione dell'IA si basano sulla
+struttura di alto livello (high-level struct ure) la loro implementazione, attraverso un
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 49 UNI CEI ISO/IEC 42001:2024
+sistema di gestione integrato, è facilitata e di grande utilità per l'organizzazione. In tal
+caso, le modalità di attuazione dei controlli del presente documento, che riguardano (in
+parte) la sicurezza delle informazioni (vedasi punto B.6.1.2), possono essere integrate
+nell’implementazione, da parte dell'organizzazione, della norma ISO/IEC 27001. 
+- ISO/IEC 27701: In molti contesti e ambiti applicativi, i dati personali delle persone
+fisiche - PII vengono elaborate da sistemi di IA. Attraverso le proprie politiche e gli
+obiettivi, l'organizzazione può quindi, conf ormarsi agli obblighi applicabili in materia
+di protezione dei dati personali (privacy). Allo stesso modo, come per la norma
+ISO/IEC 27001, l'organizzazione può trarre vantaggio dall'integrazione dalla norma
+ISO/IEC 27701 con il sistema di gestione dell'IA. Possono essere integrati,
+attraverso l'implementazione della norma ISO/IEC 27701 da parte
+dell'organizzazione, gli obiettivi e i controlli relativi alla  protezione dei dati personali
+del sistema di gestione dell'IA (vedasi punto B.2.3 e punto B.5.4).
+- ISO 9001: Per molte organizzazioni, la conformità alla norma ISO 9001rappresenta
+un indicatore fondamentale di orientamento al cliente e di reale volontà di efficacia
+interna del sistema. Una valutazione indipendente della conformità alla norma ISO
+9001 agevola gli affari tra le organizzazioni e aumenta la fiducia dei clienti riguardo ai
+prodotti o ai servizi. In caso di utilizzo  delle tecnologie di  IA, implementando un
+sistema di gestione dell'IA è implementato in modo integrato alla norma ISO 9001 è
+possibile rafforzare il livello di fiducia del cliente verso un'organizzazione o verso un
+sistema di IA. A supporto dell’organizzazione nel raggiungimento dei propri obiettivi,
+il sistema di gestione dell'IA può integrarsi ai requisiti della norma ISO 9001
+(gestione del rischio, sviluppo del software, coerenza della catena di fornitura, ecc.) 
+Oltre alle norme generiche dei sistemi di gestione sopra menzionati, un sistema di
+gestione dell'IA può essere ut ilizzato congiuntamente a un sistema di gestione specifico
+per un settore. Per esempio, sia la norma ISO 22000 sia un sistema di gestione dell'IA
+possono essere rilevanti per un sistema di IA utilizzato per la produzione, la preparazione
+e la logistica degli alimenti. Un altro esempio è la norma ISO 13485. L'implementazione di
+un sistema di gestione dell'IA può integrare i requisiti relativi al software dei dispositivi
+medici della norma ISO 13485 o i requisiti di altre norme internazionali del settore medico,
+come la norma tecnica IEC 62304.
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 50UNI CEI ISO/IEC 42001:2024
+BIBLIOGRAFIA
+[1] ISO 8000-2 Data quality - Part 2: Vocabulary
+[2] ISO 9001 Quality managemen t systems - Requirements
+[3] ISO 9241-210 Ergonomics of human-system interaction - Part 210:
+Human-centred design for interactive systems
+[4] ISO 13485 Medical devices - Quality management systems -
+Requirements for regulatory purposes
+[5] ISO 22000 Food safety management systems - Requirements
+for any organization in the food chain
+[6] IEC 62304 Medical device software - Software life cycle processes
+[7] ISO/IEC Guide 51 Safety aspects - Guidelines for th eir inclusion in
+standards
+[8] ISO/IEC TS 4213 Inform ation technology - Arti ficial intelligence -
+Assessment of machine learning classification
+performance
+[9] ISO/IEC 5259 (tutte le parti)
+2)Data quality for analytics and machine learning (ML)
+[10] ISO/IEC 5338 Information technology - Artificial intelligence - AI
+system life cycle process
+[11] ISO/IEC 17065 Conformity assessment - Requirements for bodies
+certifying products, processes and services
+[12] ISO/IEC 19944-1 Cloud computing and distributed platforms - Data
+flow, data categories and data use - Part 1:
+Fundamentals
+[13] ISO/IEC 23053 Framework for Arti ficial Intelligence (AI) Systems
+Using Machine learning (ML)
+[14] ISO/IEC 23894 Tecnolog ie Informatiche - Inte lligenza artificiale -
+Guida alla gestione del rischio 
+[15] ISO/IEC TR 24027 Information technology - Artificial intelligence (AI) -
+Bias in AI systems and AI aided decision making
+[16] ISO/IEC TR 24029-1 Artificial Intelligence (AI) - Assessment of the
+robustness of neural networks - Part 1: Overview
+[17] ISO/IEC TR 24368 Infor mation technology - Arti ficial intelligence -
+Overview of ethical and societal concerns
+[18] ISO/IEC 25024 Systems and software engineering - Systems and
+software Quality Requirements and Evaluation
+(SQuaRE) - Measurement of data quality
+[19] ISO/IEC 25059 Software engineering - Systems and software Quality
+Requirements and Evaluation (SQuaRE) - Quality
+model for AI systems
+[20] ISO/IEC 27000:2020 Tecnologie informatiche - Tecniche di sicurezza -
+Sistemi di gestione per la sicurezza delle
+informazioni - Panoramica e vocabolario 
+[21] ISO/IEC 27701 Security techniques - Extension to ISO/IEC 27001
+and ISO/IEC 27002 for privacy information
+management - Requirements and guidelines
+[22] ISO/IEC 27001 Information secu rity, cybersecurity and privacy
+protection - Information security management
+systems - Requirements
+[23] ISO/IEC 29100 Tecnologie Informatiche - Tecniche di sicurezza -
+Quadro di riferimento per la privacy 
+[24] ISO 31000:2018 Gestione del rischio - Linee guida 
+[25] ISO 37002 Whistleblowing management systems - Guidelines
+[26] ISO/IEC 38500:2020 Tecnologie Informatiche - La governance dell'IT per
+l'organizzazione
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+© UNI Pagina 51 UNI CEI ISO/IEC 42001:2024
+[27] ISO/IEC 38507 Information technology - Governance of IT -
+Governance implications of the use of artificial
+intelligence by organizations
+[28] Lifecycle D.D.I. 3.3, 2020 -04-15. Data Documentation Initiative (DDI) Alliance. 
+[viewed on 2022-02-19]. Available at: 
+https://ddialliance.org/Specification/DDI-Lifecycle/3.3/
+[29] Risk Framework N.I.S.T.-A.I. 1.0, 2023-01-26. National Institute of Technology 
+(NIST) [viewed on 2023-04-17] 
+https://www.nist.gov/itl/ai-risk-management-framework
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026
+normeUNI @normeUNI normeUNInormeUNI @normeUNI
+UNI Ente Italiano di Normazione
+Membro italiano ISO e CEN
+Via Sannio, 2 - 20137 Milano 
+Via del Collegio Capranica, 4 - 00186 Roma
+www.uni.com
+ROMEO RAIMONDO
+UNIstore - 844636 - download del 30/06/2026

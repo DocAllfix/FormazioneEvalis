@@ -66,8 +66,9 @@ const canon = (t) =>
     .replace(/[òó]/g, "o").replace(/[ùú]/g, "u")
     .replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter(Boolean);
 let normaShingles = null;
+// match ESATTO ISO<corso> seguito da non-cifra: "9001" NON deve pescare ISO19011-2026.txt
 const normaFile = existsSync("testonorme")
-  ? readdirSync("testonorme").find((f) => f.endsWith(".txt") && f.includes(corso))
+  ? readdirSync("testonorme").find((f) => f.endsWith(".txt") && new RegExp(`^ISO${corso}(\\D|$)`).test(f.replace(/\s+/g, "")))
   : null;
 if (normaFile) {
   const parole = canon(readFileSync(`testonorme/${normaFile}`, "utf8"));
