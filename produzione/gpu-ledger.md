@@ -40,6 +40,11 @@
 
 **Totale speso GIORNATA: ~$5,45 · Esito: GOLDEN SAMPLE (v8/v9el-xtts) + tts_ricetta.py con seed deterministici + metodo del riferimento raffinato ElevenLabs + ~50 provini (v2→v11) + tutte le lezioni scritte. Istanze attive a fine giornata: 0.**
 
+| 2026-07-03 | 43680811 | PILOTA M1 pod A (s001-007) + snapshot env/HF su R2 | RTX 4090 · Ungheria | $0,3823 | ~45 min | ~$0,29 | ✅ 7 slide, QA loop live (1 FLAGGED auto-segnalato) — 3 tentativi bootstrap (snapshot-branch, env SSH) |
+| 2026-07-03 | 43680812 | PILOTA M1 pod B (s008-013) | RTX 4090 · Ungheria | $0,3903 | ~30 min | ~$0,20 | ✅ 6 slide, zero flagged |
+
+**PILOTA M1: 56,3 min di corso in 32,2 min GPU (1,75× medio, ~2,0× a regime) · 257 blocchi QA · 1,2% retry · 0,4% FLAGGED · proiezione: corso 19011 ≈ $3,50, catalogo ≈ $45-50.**
+
 ## Dati misurati (2026-07-02, riferimento per dimensionare il burst TTS del blitz)
 
 - **XTTS v2**: 2,4× realtime su 4090 (incluso caricamento modello) · ritmo parlato ~2,0 parole/s
