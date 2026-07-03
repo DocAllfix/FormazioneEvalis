@@ -12,7 +12,7 @@ push_log() { rclone copyto --s3-no-check-bucket "$LOG" "r2:$R2_BUCKET/produzione
 trap push_log EXIT
 
 export DEBIAN_FRONTEND=noninteractive
-apt-get update -qq && apt-get install -y -qq ffmpeg curl git unzip build-essential python3-dev > /dev/null
+apt-get update -qq && apt-get install -y -qq ffmpeg curl git unzip build-essential python3-dev zstd > /dev/null
 curl -fsSL https://rclone.org/install.sh | bash > /dev/null 2>&1 || true
 command -v rclone > /dev/null || { echo "FATALE: rclone non installato"; exit 1; }
 rclone config create r2 s3 provider Cloudflare access_key_id "$R2_ACCESS_KEY_ID" \
@@ -40,9 +40,24 @@ print("hash riferimento VERIFICATO:", h[:16], "…")
 PY
 
 echo "== venv vox (torch cu126 — lezione driver; CUDA obbligatoria) =="
-if rclone copyto --s3-no-check-bucket "r2:$R2_BUCKET/snapshot/voxprod-env.tar.zst" /workspace/env.tzst 2>/dev/null; then
-  echo "ambiente da snapshot R2"; tar --zstd -xf /workspace/env.tzst -C /workspace && rm /workspace/env.tzst
-else
+# snapshot: si usa SOLO se scaricato, non vuoto ED estratto con successo; altrimenti
+# fallback SEMPRE alla build da zero (lezione: mai fidarsi di un ramo felice non verificato)
+SNAP_OK=0
+# venv già presente e funzionante sul pod (rilanci) -> si riusa, niente rebuild
+if [ -x /workspace/vv/bin/python ] && /workspace/vv/bin/python -c "import torch, voxcpm" 2>/dev/null; then
+  SNAP_OK=1; echo "venv già presente sul pod: riuso"
+elif rclone copyto --s3-no-check-bucket "r2:$R2_BUCKET/snapshot/voxprod-env.tar.zst" /workspace/env.tzst 2>/dev/null \
+   && [ -s /workspace/env.tzst ] \
+   && tar --zstd -xf /workspace/env.tzst -C /workspace 2>/dev/null \
+   && [ -x /workspace/vv/bin/python ]; then
+  SNAP_OK=1; echo "ambiente da snapshot R2"
+  rclone copyto --s3-no-check-bucket "r2:$R2_BUCKET/snapshot/voxprod-hf.tar.zst" /workspace/hf.tzst 2>/dev/null \
+    && [ -s /workspace/hf.tzst ] && tar --zstd -xf /workspace/hf.tzst -C /root 2>/dev/null && echo "cache HF da snapshot"
+fi
+rm -f /workspace/env.tzst /workspace/hf.tzst
+if [ $SNAP_OK -eq 0 ]; then
+  echo "snapshot assente/corrotto: build venv da zero"
+  rm -rf /workspace/vv
   python -m venv /workspace/vv
   /workspace/vv/bin/pip install -q torch==2.7.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu126
   /workspace/vv/bin/pip install -q voxcpm faster-whisper librosa soundfile
@@ -53,7 +68,8 @@ fi
 echo "== GENERAZIONE (loop QA autonomo dentro gen-audio) =="
 cd "$W"
 ARGS=""
-[ -n "${SOLO_IDS:-}" ] && ARGS="--only $SOLO_IDS"
+# SOLO_IDS separati da ':' (le virgole negli env di Vast sono a rischio parsing)
+[ -n "${SOLO_IDS:-}" ] && ARGS="--only $(echo "$SOLO_IDS" | tr ':' ',')"
 CC=gcc /workspace/vv/bin/python scripts/produzione/gen-audio.py "$CORSO" --engine vox \
   --ref produzione/asset/voce-riferimento-el.wav --manifest produzione/asset/voce-manifest.json $ARGS
 

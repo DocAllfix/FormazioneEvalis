@@ -106,14 +106,22 @@ def gen_vox(slide_id: str, testo_raw: str, ref: str, out: Path,
                                                device="cuda")
         _VOX["whisper"] = WhisperModel("large-v3", device="cuda", compute_type="float16")
 
+    import time
+    t0 = time.time()
     audio, report = genera_slide_vox_qa(_VOX["model"], _VOX["whisper"], slide_id,
                                         testo_raw, ref, manifest["ref_text"],
                                         glossario=glossario)
+    gen_s = round(time.time() - t0, 1)
     sf.write(str(out), audio, 24000)
+    audio_s = round(len(audio) / 24000, 1)
     flagged = sum(1 for r in report if r["status"] == "FLAGGED")
+    print(f"  [{slide_id}] TIMING: {audio_s}s audio in {gen_s}s "
+          f"({round(audio_s / gen_s, 2)}x realtime, QA incluso)")
     return {"blocchi": len(report), "flagged": flagged,
             "retry_totali": sum(r["retry"] for r in report),
-            "sim_min": min(r["sim"] for r in report)}
+            "sim_min": min(r["sim"] for r in report),
+            "gen_s": gen_s, "audio_s": audio_s,
+            "x_realtime": round(audio_s / gen_s, 2)}
 
 
 def gen_cosyvoice(text: str, ref: str, out: Path) -> None:
