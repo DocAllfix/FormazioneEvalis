@@ -119,6 +119,69 @@ def cuci(pieces: list[np.ndarray]) -> np.ndarray:
     return np.concatenate(out)
 
 
+# ================= RICETTA VOXCPM (TITOLARE, dal v12 approvato) =================
+VOX_PARAMS = {"cfg_value": 3.0}
+VOX_GAP_S = 0.15  # Vox pausa già da solo sui punti: gap tra blocchi più corto
+
+def blocchi_vox(text: str, lo: int = 120, hi: int = 280) -> list[str]:
+    """Formattazione VOX (dal v12 approvato): blocchi di 2-3 frasi CON punteggiatura
+    INTEGRALE (Vox la usa per pause/prosodia e non legge il punto), 120-280 char."""
+    sents = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+    out, cur = [], ""
+    for s in sents:
+        cand = f"{cur} {s}".strip()
+        if cur and len(cand) > hi:
+            out.append(cur)
+            cur = s
+        else:
+            cur = cand
+        if len(cur) >= lo and len(cur) >= 150:
+            out.append(cur)
+            cur = ""
+    if cur:
+        out.append(cur)
+    return out
+
+def vox_blocco(model, testo_blocco: str, ref_wav: str, ref_text: str) -> np.ndarray:
+    """UN blocco VOX, postprocessato (trim testa, fade coda, RMS) al sample rate nativo."""
+    sr_v = model.tts_model.sample_rate
+    wav = model.generate(text=testo_blocco, prompt_wav_path=ref_wav, prompt_text=ref_text,
+                         reference_wav_path=ref_wav, **VOX_PARAMS)
+    p = np.asarray(wav, dtype=np.float32).squeeze()
+    peak = float(np.max(np.abs(p))) or 1.0
+    idx = np.where(np.abs(p) > peak * 10 ** (TRIM_DB / 20))[0]
+    if len(idx):
+        p = p[max(0, idx[0] - int(0.02 * sr_v)):]
+    fade_n = int(FADE_TAIL_S * sr_v)
+    if len(p) > fade_n:
+        p[-fade_n:] *= np.linspace(1, 0, fade_n, dtype=np.float32)
+    rms = float(np.sqrt(np.mean(p ** 2))) or 1e-9
+    return (p * (RMS_TARGET / rms)).astype(np.float32)
+
+def cuci_vox(pieces: list[np.ndarray], sr_nativo: int, sr_out: int = SR) -> np.ndarray:
+    """Giunzione VOX: gap 0.15s (Vox pausa già da solo sui punti) + resample a sr_out."""
+    import librosa
+
+    gap = np.zeros(int(VOX_GAP_S * sr_nativo), dtype=np.float32)
+    out = []
+    for i, p in enumerate(pieces):
+        out.append(p)
+        if i < len(pieces) - 1:
+            out.append(gap)
+    audio = np.concatenate(out)
+    if sr_nativo != sr_out:
+        audio = librosa.resample(audio, orig_sr=sr_nativo, target_sr=sr_out)
+    return audio.astype(np.float32)
+
+def genera_slide_vox(model, slide_id: str, testo: str, ref_wav: str, ref_text: str,
+                     glossario: dict | None = None, sr_out: int = SR):
+    """Pipeline VOX completa per UNA slide (identica al v12 approvato dal cliente),
+    SENZA QA (per il loop con QA-retry usare qa_ricetta.genera_slide_vox_qa)."""
+    testo = respell(applica_glossario(testo, glossario or {"map": {}}))
+    blocchi = blocchi_vox(testo)
+    pieces = [vox_blocco(model, b, ref_wav, ref_text) for b in blocchi]
+    return cuci_vox(pieces, model.tts_model.sample_rate, sr_out), blocchi
+
 def genera_slide_xtts(tts, slide_id: str, testo: str, speaker_wav: str,
                       glossario: dict | None = None, seeds: dict | None = None) -> np.ndarray:
     """Pipeline completa per UNA slide, identica al golden sample.

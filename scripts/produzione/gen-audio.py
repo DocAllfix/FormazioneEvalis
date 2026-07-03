@@ -83,6 +83,39 @@ def gen_xtts(text: str, ref: str, out: Path) -> None:
     _XTTS.tts_to_file(text=text, speaker_wav=ref, language="it", file_path=str(out))
 
 
+_VOX = {}
+
+def gen_vox(slide_id: str, testo_raw: str, ref: str, out: Path,
+            glossario: dict, manifest: dict) -> dict:
+    """VOX TITOLARE con QA-retry autonomo (qa_ricetta). Verifica PRIMA l'hash del
+    riferimento contro il manifest (voce immutabile: mismatch = FATALE)."""
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).parent))
+    import soundfile as sf
+    from qa_ricetta import genera_slide_vox_qa
+
+    ref_hash = hashlib.sha256(Path(ref).read_bytes()).hexdigest()
+    if manifest.get("sha256") and ref_hash != manifest["sha256"]:
+        _sys.exit(f"FATALE: hash riferimento {ref_hash[:12]}… ≠ manifest "
+                  f"{manifest['sha256'][:12]}… — la voce NON è quella ufficiale")
+
+    if "model" not in _VOX:
+        from voxcpm import VoxCPM
+        from faster_whisper import WhisperModel
+        _VOX["model"] = VoxCPM.from_pretrained("openbmb/VoxCPM2", load_denoiser=False,
+                                               device="cuda")
+        _VOX["whisper"] = WhisperModel("large-v3", device="cuda", compute_type="float16")
+
+    audio, report = genera_slide_vox_qa(_VOX["model"], _VOX["whisper"], slide_id,
+                                        testo_raw, ref, manifest["ref_text"],
+                                        glossario=glossario)
+    sf.write(str(out), audio, 24000)
+    flagged = sum(1 for r in report if r["status"] == "FLAGGED")
+    return {"blocchi": len(report), "flagged": flagged,
+            "retry_totali": sum(r["retry"] for r in report),
+            "sim_min": min(r["sim"] for r in report)}
+
+
 def gen_cosyvoice(text: str, ref: str, out: Path) -> None:
     """CosyVoice2 zero-shot. Richiede il repo CosyVoice nel PYTHONPATH (pod-setup.sh).
     COSYVOICE_REF_TEXT (env) = trascrizione del sample di riferimento: migliora molto la
@@ -111,8 +144,10 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("corso")
     ap.add_argument("--mock", action="store_true")
-    ap.add_argument("--engine", choices=["xtts", "cosyvoice"])
+    ap.add_argument("--engine", choices=["xtts", "cosyvoice", "vox"])
     ap.add_argument("--ref", help="wav di riferimento della voce clonata")
+    ap.add_argument("--manifest", default="produzione/asset/voce-manifest.json",
+                    help="manifest voce (sha256 + ref_text) — obbligatorio per --engine vox")
     ap.add_argument("--only", help="ID separati da virgola (default: tutti)")
     ap.add_argument("--force", action="store_true", help="rigenera anche gli ID già mappati")
     args = ap.parse_args()
@@ -149,8 +184,13 @@ def main() -> None:
 
         text = normalize_text(slide["testo"], glossario)
         print(f"~ {sid} ({len(text.split())} parole) ...", flush=True)
+        qa_info = None
         if args.mock:
             gen_mock(text, wps, wav)
+        elif args.engine == "vox":
+            # vox riceve il testo RAW: glossario+respell li applica qa_ricetta (mai doppi)
+            manifest = read_json(Path(args.manifest))
+            qa_info = gen_vox(sid, slide["testo"], args.ref, wav, glossario, manifest)
         elif args.engine == "xtts":
             gen_xtts(text, args.ref, wav)
         else:
@@ -162,6 +202,8 @@ def main() -> None:
             "words": len(text.split()),
             "engine": "mock" if args.mock else args.engine,
         }
+        if qa_info:
+            audio_map[sid]["qa"] = qa_info
         write_json(base / "audio-map.json", audio_map)  # salvataggio incrementale (ripartibile)
         done += 1
         print(f"  ok {audio_map[sid]['duration']}s")
