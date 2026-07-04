@@ -20,6 +20,10 @@ const nMod = parseInt(mod.slice(1), 10);
 const riga = md.match(new RegExp(`\\|\\s*M${nMod}\\s*\\|([^|]+)\\|([^|]+)\\|\\s*(\\d+)\\s*min\\s*\\|\\s*(\\d+)\\s*\\|`));
 if (!riga) { console.error(`M${nMod} non trovato nello skeleton`); process.exit(1); }
 const [, titolo, copre, minuti, nSlide] = riga.map((x) => (x ?? "").toString().trim());
+// titolo del modulo SUCCESSIVO (per l'aggancio dell'ultima slide — lacuna emersa nel rodaggio M4)
+const rigaNext = md.match(new RegExp(`\\|\\s*M${nMod + 1}\\s*\\|([^|]+)\\|`));
+const titoloNext = rigaNext ? rigaNext[1].trim().replace(/\*/g, "")
+  : "NESSUNO: è l'ultimo modulo — l'ultima slide chiude il CORSO e prepara all'esame finale";
 const blocco = md.split(/### /).slice(1).find((s) => s.match(/^M(\d+)/)?.[1] === String(nMod));
 if (!blocco) { console.error(`Blocco argomenti M${nMod} non trovato`); process.exit(1); }
 const argomenti = blocco.split("\n").slice(1).join("\n").split("## ")[0].trim();
@@ -89,6 +93,7 @@ const out = `# PACCHETTO MODULO — corso ${corso} · ${mod.toUpperCase()}
 - Copertura norma dichiarata: ${copre}
 - Budget: **${minuti} minuti · ${nSlide} slide · ~${budgetParole} parole totali** (limiti modulo: da ${Math.round(budgetParole * 0.95)} a ${Math.round(budgetParole * 1.02)} parole — in dubbio, PIÙ CORTO)
 - ID slide: \`${corso}_${mod}_s001\` … \`${corso}_${mod}_s${String(nSlide).padStart(3, "0")}\`
+- Modulo successivo (per l'aggancio finale): ${titoloNext}
 - Output: SOLO il file \`produzione/${corso}/_bozze/${mod}.json\` (formato in fondo). NON toccare nessun altro file.
 
 ## Struttura del modulo (dallo skeleton — OGNI blocco va sviluppato, coi conteggi slide indicati)
