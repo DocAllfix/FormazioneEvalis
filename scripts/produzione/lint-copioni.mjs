@@ -9,10 +9,17 @@
 //   E4  caratteri anomali (simboli, emoji, markup) che il TTS leggerebbe o storpierebbe
 //   E5  ANTI-VERBATIM: sequenza di >=8 parole in comune col testo della norma
 //       (testonorme/*<corso>*.txt) — protezione copyright verificata a macchina
-//   E6  BUDGET: parole del modulo fuori dal budget ±5% (minuti modulo × 60 × 2,35 p/s
-//       misurati sul M1 reale) — richiede budget.minutiPerModulo nei copioni
+//   E6  BUDGET ASIMMETRICO: parole del modulo fuori da [-5%, +2%] del budget (minuti
+//       modulo × 60 × 2,35 p/s misurati) — decisione utente 2026-07-04: meglio corti
+//       che lunghi. Guardia di CORSO: somma stimata >= minuti legali +1% (bloccante,
+//       solo su lint dell'intero corso con budget.minutiLegali presente)
 //   E7  COPERTURA: concetto chiave del modulo (produzione/<corso>/copertura.json,
 //       checklist derivata dallo skeleton) assente dai copioni del modulo
+//   E8  ANTI-FOTOCOPIA CROSS-CORSO: sequenza >=10 parole in comune coi copioni di un
+//       ALTRO corso (i moduli armonizzati si somigliano per natura: la struttura può,
+//       il testo NO)
+//   Q*  QUIZ-LINT (QUIZ-STANDARD.md): banca >=10, 4 opzioni, corretta valida, mix tipi
+//       ~40/40/20, slide di tracciabilità esistente, posizione risposta variata
 // AVVISI (non bloccanti):
 //   W1  frase oltre 35 parole (prosodia faticosa; la ricetta la spezza comunque a 213 char)
 //   W2  frase lunga (>15 parole) senza virgole (respiro assente)
@@ -127,7 +134,7 @@ for (const s of copioni.slides) {
   }
 }
 
-// E6 — budget parole per modulo (a 2,35 p/s misurati)
+// E6 — budget parole per modulo, ASIMMETRICO [-5%, +2%] (meglio corti che lunghi)
 const minutiPerModulo = copioni.budget?.minutiPerModulo || null;
 if (minutiPerModulo) {
   for (const [mod, parole] of Object.entries(paroleModulo)) {
@@ -135,13 +142,107 @@ if (minutiPerModulo) {
     if (!minuti) { err(mod, "E6", `modulo senza budget minuti in budget.minutiPerModulo`); continue; }
     const target = minuti * 60 * PAROLE_AL_SECONDO;
     const scarto = (parole - target) / target;
-    if (Math.abs(scarto) > 0.05)
-      err(mod, "E6", `${parole} parole vs target ${Math.round(target)} (${minuti} min): scarto ${(scarto * 100).toFixed(1)}% (limite ±5%)`);
+    if (scarto < -0.05 || scarto > 0.02)
+      err(mod, "E6", `${parole} parole vs target ${Math.round(target)} (${minuti} min): scarto ${(scarto * 100).toFixed(1)}% (limiti -5% / +2%)`);
     else
-      console.log(`  E6 ok [${mod}] ${parole} parole ≈ ${(parole / PAROLE_AL_SECONDO / 60).toFixed(1)} min (target ${minuti})`);
+      console.log(`  E6 ok [${mod}] ${parole} parole ≈ ${(parole / PAROLE_AL_SECONDO / 60).toFixed(1)} min (target ${minuti}, ${(scarto * 100).toFixed(1)}%)`);
+  }
+  // guardia di CORSO (solo lint completo): somma stimata >= minuti legali +1%
+  const legali = copioni.budget?.minutiLegali;
+  if (legali && !modulo) {
+    // la guardia ha senso solo quando il budget dichiarato copre l'intero corso
+    // e tutti i moduli dichiarati sono stati scritti
+    const budgetTot = Object.values(minutiPerModulo).reduce((a, b) => a + b, 0);
+    const tuttiIModuli = budgetTot >= legali
+      && Object.keys(minutiPerModulo).every((m) => m in paroleModulo);
+    if (tuttiIModuli) {
+      const minutiStimati = Object.values(paroleModulo).reduce((a, b) => a + b, 0) / PAROLE_AL_SECONDO / 60;
+      const soglia = legali * 1.01;
+      if (minutiStimati < soglia)
+        err("corso", "E6", `monte-ore stimato ${minutiStimati.toFixed(0)} min < soglia ${soglia.toFixed(0)} (legali ${legali} +1%) — il corso è TROPPO CORTO`);
+      else
+        console.log(`  E6 corso ok: ${minutiStimati.toFixed(0)} min stimati ≥ ${soglia.toFixed(0)} (legali ${legali} +1%)`);
+    } else {
+      console.log("  E6 corso: moduli mancanti all'appello — guardia monte-ore rinviata");
+    }
   }
 } else {
   console.log("E6: budget.minutiPerModulo assente dai copioni — check budget SALTATO");
+}
+
+// E8 — anti-fotocopia cross-corso (n-grammi >=10 parole vs copioni degli ALTRI corsi)
+const NGRAM_XCORSO = 10;
+const altriCorsi = existsSync("produzione")
+  ? readdirSync("produzione").filter((d) => /^\d+$/.test(d) && d !== corso
+      && existsSync(`produzione/${d}/copioni.json`))
+  : [];
+if (altriCorsi.length) {
+  const mieShingles = new Map(); // shingle -> id slide (per il messaggio d'errore)
+  for (const s of copioni.slides) {
+    if (modulo && !s.id.includes(`_${modulo}_`)) continue;
+    const parole = canon(s.testo);
+    for (let i = 0; i + NGRAM_XCORSO <= parole.length; i++)
+      mieShingles.set(parole.slice(i, i + NGRAM_XCORSO).join(" "), s.id);
+  }
+  let e8 = 0;
+  for (const altro of altriCorsi) {
+    const ac = JSON.parse(readFileSync(`produzione/${altro}/copioni.json`, "utf8"));
+    for (const s of ac.slides || []) {
+      const parole = canon(s.testo);
+      for (let i = 0; i + NGRAM_XCORSO <= parole.length; i++) {
+        const sh = parole.slice(i, i + NGRAM_XCORSO).join(" ");
+        if (mieShingles.has(sh)) {
+          err(mieShingles.get(sh), "E8", `fotocopia da ${altro}/${s.id}: "${sh.slice(0, 60)}…"`);
+          e8++; i += NGRAM_XCORSO - 1;
+          if (e8 > 20) break;
+        }
+      }
+      if (e8 > 20) break;
+    }
+    if (e8 > 20) { console.log("  E8: oltre 20 fotocopie — output troncato"); break; }
+  }
+  if (!e8) console.log(`E8 ok: nessuna fotocopia dagli altri ${altriCorsi.length} corsi`);
+} else {
+  console.log("E8: nessun altro corso con copioni — check fotocopia SALTATO");
+}
+
+// Q* — quiz-lint (QUIZ-STANDARD.md)
+const checkpoint = copioni.checkpoint || {};
+for (const [mod, blocco] of Object.entries(checkpoint)) {
+  if (modulo && mod !== modulo) continue;
+  if (!(mod in paroleModulo)) continue; // banca di un modulo non ancora scritto: la si lint-a col modulo
+  const banca = blocco?.banca;
+  if (!Array.isArray(banca) || banca.length < 10) {
+    err(mod, "Q1", `banca checkpoint assente o < 10 domande (${banca?.length ?? 0})`);
+    continue;
+  }
+  const slideIdsMod = new Set(copioni.slides.filter((s) => s.id.includes(`_${mod}_`))
+    .map((s) => s.id.split("_").pop()));
+  const tipi = { riconoscimento: 0, comprensione: 0, applicazione: 0 };
+  const posizioni = new Set();
+  banca.forEach((q, i) => {
+    if (!Array.isArray(q.opzioni) || q.opzioni.length !== 4)
+      err(mod, "Q2", `domanda ${i}: servono esattamente 4 opzioni`);
+    if (!(Number.isInteger(q.corretta) && q.corretta >= 0 && q.corretta <= 3))
+      err(mod, "Q2", `domanda ${i}: indice risposta corretta non valido`);
+    else posizioni.add(q.corretta);
+    if (!q.tipo || !(q.tipo in tipi)) err(mod, "Q3", `domanda ${i}: tipo mancante o non valido`);
+    else tipi[q.tipo]++;
+    if (!q.slide || !slideIdsMod.has(q.slide))
+      err(mod, "Q4", `domanda ${i}: slide di tracciabilità "${q.slide ?? "-"}" inesistente nel modulo`);
+    if ((q.opzioni || []).some((o) => /tutte le precedenti|nessuna delle precedenti/i.test(o)))
+      err(mod, "Q2", `domanda ${i}: vietato "tutte/nessuna delle precedenti"`);
+  });
+  const n = banca.length;
+  if (tipi.riconoscimento < Math.floor(n * 0.4) - 1 || tipi.comprensione < Math.floor(n * 0.4) - 1
+      || tipi.applicazione < Math.max(1, Math.floor(n * 0.2) - 1))
+    err(mod, "Q3", `mix tipi sbilanciato: ${JSON.stringify(tipi)} su ${n} (atteso ~40/40/20)`);
+  if (posizioni.size < 3)
+    err(mod, "Q5", `risposta corretta sempre nelle stesse posizioni (${[...posizioni].join(",")}): variare`);
+  if (!Object.values(checkpoint).length) continue;
+}
+for (const mod of Object.keys(paroleModulo)) {
+  if (!(mod in checkpoint)) err(mod, "Q1", "modulo senza banca checkpoint");
 }
 
 // E7 — copertura concetti chiave (produzione/<corso>/copertura.json: { "mNN": ["concetto", ...] })

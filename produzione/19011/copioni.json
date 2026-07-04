@@ -9,7 +9,8 @@
     "minutiPerModulo": {
       "m01": 60,
       "m02": 120
-    }
+    },
+    "minutiLegali": 960
   },
   "slides": [
     {
@@ -275,36 +276,36 @@
         {
           "q": "Che cos'è un audit?",
           "opzioni": [
-            "Un'ispezione a sorpresa per trovare i colpevoli",
             "Un processo sistematico, indipendente e documentato che valuta evidenze rispetto a criteri",
+            "Un'ispezione a sorpresa per trovare i colpevoli",
             "Una consulenza per migliorare l'organizzazione",
             "Un controllo obbligatorio disposto dalle autorità"
           ],
-          "corretta": 1,
+          "corretta": 0,
           "slide": "s002",
           "tipo": "riconoscimento"
         },
         {
           "q": "La ISO 19011 è:",
           "opzioni": [
-            "Una norma certificabile per le organizzazioni",
+            "Una norma che vale solo per la qualità",
             "Un regolamento europeo obbligatorio",
-            "La linea guida internazionale per gli audit dei sistemi di gestione",
-            "Una norma che vale solo per la qualità"
+            "Una norma certificabile per le organizzazioni",
+            "La linea guida internazionale per gli audit dei sistemi di gestione"
           ],
-          "corretta": 2,
+          "corretta": 3,
           "slide": "s006",
           "tipo": "riconoscimento"
         },
         {
           "q": "Gli audit di prima parte sono:",
           "opzioni": [
+            "Gli audit delle autorità di vigilanza",
             "Gli audit interni, condotti dall'organizzazione stessa o per suo conto",
-            "Gli audit condotti dai clienti sui fornitori",
             "Gli audit degli organismi di certificazione",
-            "Gli audit delle autorità di vigilanza"
+            "Gli audit condotti dai clienti sui fornitori"
           ],
-          "corretta": 0,
+          "corretta": 1,
           "slide": "s005",
           "tipo": "riconoscimento"
         },
@@ -324,44 +325,44 @@
           "q": "Un cliente invia i propri auditor a verificare un fornitore strategico. Si tratta di un audit di:",
           "opzioni": [
             "Prima parte",
-            "Seconda parte",
+            "Parte interna",
             "Terza parte",
-            "Parte interna"
+            "Seconda parte"
           ],
-          "corretta": 1,
+          "corretta": 3,
           "slide": "s005",
           "tipo": "comprensione"
         },
         {
           "q": "Che differenza c'è tra la ISO 19011 e le norme come la ISO 9001?",
           "opzioni": [
-            "Nessuna: sono tutte norme di sistema di gestione",
             "La 19011 guida CHI VERIFICA i sistemi, le altre stabiliscono i requisiti DEI sistemi",
-            "La 19011 è più recente e le sostituisce",
-            "La 19011 vale solo per gli audit interni"
+            "La 19011 vale solo per gli audit interni",
+            "Nessuna: sono tutte norme di sistema di gestione",
+            "La 19011 è più recente e le sostituisce"
           ],
-          "corretta": 1,
+          "corretta": 0,
           "slide": "s007",
           "tipo": "comprensione"
         },
         {
           "q": "Nel gruppo di audit, l'esperto tecnico:",
           "opzioni": [
+            "Sostituisce il responsabile del gruppo se assente",
             "Conduce le interviste al posto degli auditor",
             "Fornisce conoscenza specialistica ma non formula giudizi di audit",
-            "Firma il rapporto insieme al responsabile",
-            "Sostituisce il responsabile del gruppo se assente"
+            "Firma il rapporto insieme al responsabile"
           ],
-          "corretta": 1,
+          "corretta": 2,
           "slide": "s009",
           "tipo": "comprensione"
         },
         {
           "q": "Un'unica organizzazione riceve una sola visita che copre qualità e ambiente insieme, da un solo gruppo di audit. È un audit:",
           "opzioni": [
-            "Congiunto",
-            "Combinato",
             "A distanza",
+            "Combinato",
+            "Congiunto",
             "Di seconda parte"
           ],
           "corretta": 1,
@@ -371,24 +372,24 @@
         {
           "q": "Una software house senza uffici, con persone che lavorano da luoghi diversi in un ambiente interamente online, deve essere verificata. Quale approccio è coerente con la norma?",
           "opzioni": [
+            "Va verificata la sede legale anche se vuota",
             "Non può essere verificata: manca il sito fisico",
-            "Metodi di audit a distanza, eventualmente combinati con attività in presenza",
             "Solo un audit documentale senza interviste",
-            "Va verificata la sede legale anche se vuota"
+            "Metodi di audit a distanza, eventualmente combinati con attività in presenza"
           ],
-          "corretta": 1,
+          "corretta": 3,
           "slide": "s011",
           "tipo": "applicazione"
         },
         {
           "q": "Hai completato la formazione come auditor e vuoi arrivare alla certificazione delle competenze. Qual è il percorso coerente con quanto visto nel modulo?",
           "opzioni": [
-            "Basta il superamento di questo corso",
             "Formazione, poi esperienza sul campo (anche come auditor in addestramento), poi esame di certificazione secondo lo schema",
             "Serve solo l'iscrizione a un albo",
+            "Basta il superamento di questo corso",
             "Cinque anni di anzianità aziendale in qualsiasi ruolo"
           ],
-          "corretta": 1,
+          "corretta": 0,
           "slide": "s012",
           "tipo": "applicazione"
         }
@@ -402,24 +403,24 @@
         {
           "q": "Qual è l'ordine corretto della catena del giudizio nella verifica?",
           "opzioni": [
-            "Criteri, conclusioni, evidenze, risultanze",
             "Evidenze confrontate con i criteri, risultanze, conclusioni",
             "Risultanze, evidenze, criteri, conclusioni",
+            "Criteri, conclusioni, evidenze, risultanze",
             "Conclusioni, risultanze, criteri, evidenze"
           ],
-          "corretta": 1,
+          "corretta": 0,
           "tipo": "riconoscimento",
           "slide": "s015"
         },
         {
           "q": "Le evidenze dell'audit devono essere:",
           "opzioni": [
+            "Raccolte solo tramite interviste",
             "Numerose e dettagliate",
-            "Pertinenti ai criteri e verificabili",
             "Esclusivamente documentali",
-            "Raccolte solo tramite interviste"
+            "Pertinenti ai criteri e verificabili"
           ],
-          "corretta": 1,
+          "corretta": 3,
           "tipo": "riconoscimento",
           "slide": "s004"
         },
@@ -427,59 +428,59 @@
           "q": "Un requisito può essere:",
           "opzioni": [
             "Solo esplicito e scritto",
-            "Solo obbligatorio per legge",
             "Esplicito, generalmente implicito oppure obbligatorio",
-            "Solo contrattuale"
+            "Solo contrattuale",
+            "Solo obbligatorio per legge"
           ],
-          "corretta": 2,
+          "corretta": 1,
           "tipo": "riconoscimento",
           "slide": "s005"
         },
         {
           "q": "Che differenza c'è tra programma di audit e piano dell'audit?",
           "opzioni": [
+            "Il piano è pluriennale, il programma è giornaliero",
             "Sono sinonimi",
             "Il programma riguarda un insieme di verifiche in un arco di tempo, il piano descrive le attività della singola verifica",
-            "Il piano è pluriennale, il programma è giornaliero",
             "Il programma è redatto dall'organizzazione oggetto"
           ],
-          "corretta": 1,
+          "corretta": 2,
           "tipo": "comprensione",
           "slide": "s008"
         },
         {
           "q": "L'esperto tecnico nel gruppo di audit:",
           "opzioni": [
-            "Conduce le interviste al posto dell'auditor",
-            "Fornisce conoscenze specifiche ma non agisce come auditor",
             "Firma il rapporto di audit",
-            "Decide sulla certificazione"
+            "Decide sulla certificazione",
+            "Conduce le interviste al posto dell'auditor",
+            "Fornisce conoscenze specifiche ma non agisce come auditor"
           ],
-          "corretta": 1,
+          "corretta": 3,
           "tipo": "comprensione",
           "slide": "s010"
         },
         {
           "q": "Le risultanze dell'audit possono indicare:",
           "opzioni": [
-            "Solo non conformità",
-            "Solo conformità e non conformità",
             "Conformità, non conformità, rischi, opportunità di miglioramento e buone prassi",
-            "Solo osservazioni generiche"
+            "Solo osservazioni generiche",
+            "Solo non conformità",
+            "Solo conformità e non conformità"
           ],
-          "corretta": 2,
+          "corretta": 0,
           "tipo": "riconoscimento",
           "slide": "s006"
         },
         {
           "q": "Il principio di integrità comprende anche:",
           "opzioni": [
-            "Accettare ogni incarico proposto",
-            "Intraprendere attività di audit solo se si è competenti",
             "Non documentare le divergenze",
-            "Evitare di riferire gli ostacoli incontrati"
+            "Evitare di riferire gli ostacoli incontrati",
+            "Intraprendere attività di audit solo se si è competenti",
+            "Accettare ogni incarico proposto"
           ],
-          "corretta": 1,
+          "corretta": 2,
           "tipo": "comprensione",
           "slide": "s017"
         },
@@ -487,35 +488,35 @@
           "q": "Secondo la presentazione imparziale, gli ostacoli significativi incontrati durante la verifica:",
           "opzioni": [
             "Vanno omessi dal rapporto",
-            "Vanno riferiti solo verbalmente",
             "Vanno documentati nel rapporto",
-            "Vanno comunicati solo all'organizzazione oggetto"
+            "Vanno comunicati solo all'organizzazione oggetto",
+            "Vanno riferiti solo verbalmente"
           ],
-          "corretta": 2,
+          "corretta": 1,
           "tipo": "comprensione",
           "slide": "s018"
         },
         {
           "q": "Quando gli auditor interni non possono essere pienamente indipendenti dall'attività verificata:",
           "opzioni": [
-            "La verifica non si può svolgere",
-            "Va fatto ogni sforzo per eliminare i pregiudizi e favorire l'obiettività",
+            "Si rinuncia a documentare le risultanze",
             "L'indipendenza non è più richiesta",
-            "Si rinuncia a documentare le risultanze"
+            "La verifica non si può svolgere",
+            "Va fatto ogni sforzo per eliminare i pregiudizi e favorire l'obiettività"
           ],
-          "corretta": 1,
+          "corretta": 3,
           "tipo": "comprensione",
           "slide": "s021"
         },
         {
           "q": "Perché il campionamento è legato alla fiducia nelle conclusioni?",
           "opzioni": [
-            "Perché più campioni significano rapporti più lunghi",
             "Perché le conclusioni generalizzano a partire dal campione: un campione inappropriato le rende inaffidabili",
-            "Perché il campionamento è richiesto solo negli audit di terza parte",
-            "Non c'è alcun legame"
+            "Non c'è alcun legame",
+            "Perché più campioni significano rapporti più lunghi",
+            "Perché il campionamento è richiesto solo negli audit di terza parte"
           ],
-          "corretta": 1,
+          "corretta": 0,
           "tipo": "applicazione",
           "slide": "s022"
         },
@@ -523,11 +524,11 @@
           "q": "L'approccio basato sul rischio richiede di:",
           "opzioni": [
             "Verificare tutto con la stessa intensità",
+            "Ridurre la durata delle verifiche",
             "Concentrare l'attenzione dove rischi e opportunità sono più significativi",
-            "Evitare le aree a rischio elevato",
-            "Ridurre la durata delle verifiche"
+            "Evitare le aree a rischio elevato"
           ],
-          "corretta": 1,
+          "corretta": 2,
           "tipo": "applicazione",
           "slide": "s023"
         }
