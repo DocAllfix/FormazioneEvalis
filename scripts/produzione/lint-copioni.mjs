@@ -253,6 +253,7 @@ if (existsSync(coperturaPath)) {
   const copertura = JSON.parse(readFileSync(coperturaPath, "utf8"));
   for (const [mod, concetti] of Object.entries(copertura)) {
     if (modulo && mod !== modulo) continue;
+    if (!(mod in paroleModulo)) continue; // modulo non ancora scritto: si verifica al suo merge
     const testoMod = canon(copioni.slides
       .filter((s) => s.id.includes(`_${mod}_`)).map((s) => s.testo).join(" ")).join(" ");
     for (const c of concetti)

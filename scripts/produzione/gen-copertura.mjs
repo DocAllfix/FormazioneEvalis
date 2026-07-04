@@ -22,10 +22,10 @@ for (const sec of md.split(/### /).slice(1)) {
   for (const r of righe) {
     const b = r.trim().match(/^\d+\.\s+(.*?)\s*(?:\(\d+(?:\s*slide)?\))?\s*$/);
     if (!b) continue;
-    // primo segmento del titolo del blocco, senza parentesi/riferimenti di clausola
-    let c = b[1].split(/[:—]/)[0].replace(/\(§?[\d.,\s-]+\)/g, "").trim();
-    c = c.replace(/\s+/g, " ");
-    if (c.length >= 6 && !/^(sintesi|benvenuto|riepilogo|ripasso)/i.test(c)) concetti.push(c);
+    // primo segmento del titolo del blocco, senza QUALSIASI parentesi/riferimento
+    let c = b[1].split(/[:—]/)[0].replace(/\([^)]*\)/g, "").trim();
+    c = c.replace(/\s+/g, " ").replace(/[,;]\s*$/, "");
+    if (c.length >= 6 && !/^(sintesi|benvenut|bentornat|riepilogo|ripasso)/i.test(c)) concetti.push(c);
   }
   if (concetti.length) out[mod] = concetti;
 }
