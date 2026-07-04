@@ -39,8 +39,14 @@
    perché il glossario la converte). Ogni ALTRO numero va scritto in lettere ("tre
    requisiti", "cinque giorni"). Niente date in cifre, niente percentuali in cifre
    ("l'ottanta per cento"). Gate E3 blocca ogni cifra fuori glossario.
-4. **Niente**: elenchi puntati, markdown, virgolette tipografiche strane, simboli
-   (%, &, /, °), emoji, parentesi quadre (gate E4). Il testo è PARLATO CONTINUO.
+4. **È UN COPIONE, non un testo da leggere**: PARLATO CONTINUO e discorsivo. Vietati in
+   assoluto: parentesi di OGNI tipo (tonde, quadre, graffe), virgolette di ogni tipo,
+   elenchi puntati o numerati, markdown, trattini lunghi, simboli (percento, e commerciale,
+   barra, gradi), emoji, abbreviazioni da testo scritto ("es.", "ecc.", "n."): si scrive
+   "per esempio", "eccetera", "numero". Ammessi SOLO: punto, virgola, due punti, punto e
+   virgola, punto interrogativo, punto esclamativo, apostrofo, trattino corto nelle parole
+   composte. Ogni inciso si rende con le virgole, ogni elenco si scioglie nel discorso
+   ("tre cose: la prima… la seconda… e infine…"). Gate E4 blocca tutto il resto.
 5. Niente riferimenti a numeri di pagina o figure della norma. I numeri di clausola
    (es. "il punto sei uno") con parsimonia e solo se nel glossario o in lettere.
 6. Parole straniere: ammesse quelle correnti del settore (management, leadership…);

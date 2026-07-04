@@ -56,7 +56,9 @@ try {
 }
 
 const AMBIGUE = /\b(audit|auditor)\b/i;
-const CHAR_OK = /^[\wàèéìòùÀÈÉÌÒÙ\s.,;:!?'"()«»%–—-]+$/u;
+// SOLO punteggiatura da PARLATO (regola utente 2026-07-04: è un copione, non un testo da
+// leggere): niente parentesi di alcun tipo, virgolette, simboli, trattini lunghi, percentuali
+const CHAR_OK = /^[\wàèéìòùÀÈÉÌÒÙ\s.,;:!?'-]+$/u;
 
 // il glossario si applica PRIMA dei check sui caratteri: "ISO/IEC TS 17012" diventa
 // la sua forma parlata, quindi lo slash della sigla non è un carattere anomalo
