@@ -2516,5 +2516,371 @@
         }
       ]
     }
+  },
+  "esameFinale": {
+    "estrazione": 20,
+    "soglia": 0.75,
+    "banca": [
+      {
+        "q": "Un'organizzazione manda i propri auditor interni a verificare un reparto della stessa azienda. Che tipo di verifica è?",
+        "opzioni": [
+          "Di parte esterna",
+          "Di seconda parte",
+          "Di prima parte",
+          "Di terza parte"
+        ],
+        "corretta": 2,
+        "tipo": "comprensione",
+        "modulo": "m01"
+      },
+      {
+        "q": "Qual è la differenza fondamentale tra la ISO 19011 e una norma come la ISO 9001?",
+        "opzioni": [
+          "La 19011 stabilisce i requisiti di un sistema, la 9001 guida chi verifica",
+          "La 19011 vale solo per la qualità, la 9001 per tutti i settori",
+          "La 19011 guida chi conduce le verifiche, la 9001 stabilisce i requisiti del sistema",
+          "Sono due edizioni della stessa norma"
+        ],
+        "corretta": 2,
+        "tipo": "riconoscimento",
+        "modulo": "m01"
+      },
+      {
+        "q": "Perché l'audit produce valore per un'organizzazione?",
+        "opzioni": [
+          "Perché individua i responsabili degli errori",
+          "Perché riduce il numero di procedure necessarie",
+          "Perché sostituisce i controlli interni",
+          "Perché fornisce alla direzione informazioni affidabili su cui decidere"
+        ],
+        "corretta": 3,
+        "tipo": "comprensione",
+        "modulo": "m01"
+      },
+      {
+        "q": "Nella catena del giudizio, qual è l'ordine corretto?",
+        "opzioni": [
+          "Criteri, evidenze, conclusioni, risultanze",
+          "Conclusioni, criteri, evidenze, risultanze",
+          "Evidenze confrontate con i criteri, risultanze, conclusioni",
+          "Risultanze, conclusioni, evidenze, criteri"
+        ],
+        "corretta": 2,
+        "tipo": "comprensione",
+        "modulo": "m02"
+      },
+      {
+        "q": "Un'informazione raccolta durante la verifica, per essere un'evidenza dell'audit, deve essere:",
+        "opzioni": [
+          "Confermata da almeno tre persone",
+          "Raccolta per iscritto e firmata",
+          "Pertinente ai criteri e verificabile",
+          "Registrata su supporto digitale"
+        ],
+        "corretta": 2,
+        "tipo": "riconoscimento",
+        "modulo": "m02"
+      },
+      {
+        "q": "Il principio di integrità, secondo la norma, comprende anche il dovere di:",
+        "opzioni": [
+          "Accettare ogni incarico per non deludere il committente",
+          "Evitare di documentare le divergenze di opinione",
+          "Intraprendere attività di verifica solo se si è competenti",
+          "Riferire soltanto le risultanze positive"
+        ],
+        "corretta": 2,
+        "tipo": "comprensione",
+        "modulo": "m02"
+      },
+      {
+        "q": "Durante una verifica scopri un'informazione riservata dell'organizzazione. Il principio di riservatezza ti impone di:",
+        "opzioni": [
+          "Ometterla dal rapporto anche se pertinente agli obiettivi",
+          "Comunicarla a tutte le parti interessate",
+          "Condividerla solo con i colleghi auditor",
+          "Non usarla impropriamente né a vantaggio personale né a danno dell'organizzazione"
+        ],
+        "corretta": 3,
+        "tipo": "applicazione",
+        "modulo": "m02"
+      },
+      {
+        "q": "Perché il campionamento è legato alla fiducia nelle conclusioni?",
+        "opzioni": [
+          "Perché il campionamento serve solo negli audit di terza parte",
+          "Perché le conclusioni generalizzano dal campione: se è scelto male diventano inaffidabili",
+          "Perché riduce il tempo della verifica",
+          "Perché un campione più grande allunga il rapporto"
+        ],
+        "corretta": 1,
+        "tipo": "comprensione",
+        "modulo": "m02"
+      },
+      {
+        "q": "L'estensione di un programma di audit dovrebbe basarsi principalmente su:",
+        "opzioni": [
+          "La dimensione, la complessità, i rischi e la maturità dei sistemi",
+          "Il numero di certificazioni possedute",
+          "Il budget disponibile per le verifiche",
+          "Il numero di dipendenti dell'organizzazione"
+        ],
+        "corretta": 0,
+        "tipo": "riconoscimento",
+        "modulo": "m03"
+      },
+      {
+        "q": "Chi ha la responsabilità di assicurare che gli obiettivi del programma di audit siano stabiliti?",
+        "opzioni": [
+          "Il responsabile del gruppo di audit",
+          "L'esperto tecnico",
+          "Il committente dell'audit",
+          "L'organizzazione oggetto dell'audit"
+        ],
+        "corretta": 2,
+        "tipo": "riconoscimento",
+        "modulo": "m03"
+      },
+      {
+        "q": "Nell'allocare le risorse di un programma, a quali aree si dà priorità?",
+        "opzioni": [
+          "Quelle scelte dall'organizzazione oggetto",
+          "Quelle più facili da verificare",
+          "Quelle già verificate l'anno precedente",
+          "Quelle con rischio intrinseco più alto e prestazioni più basse"
+        ],
+        "corretta": 3,
+        "tipo": "comprensione",
+        "modulo": "m03"
+      },
+      {
+        "q": "Un responsabile qualità pianifica a inizio anno tutte le verifiche interne dei prossimi dodici mesi, con frequenze e obiettivi. Sta definendo:",
+        "opzioni": [
+          "Un campo di applicazione",
+          "Una checklist di audit",
+          "Un piano dell'audit",
+          "Un programma di audit"
+        ],
+        "corretta": 3,
+        "tipo": "applicazione",
+        "modulo": "m03"
+      },
+      {
+        "q": "Chi gestisce un programma di audit dovrebbe possedere soprattutto:",
+        "opzioni": [
+          "L'autorità per firmare i certificati",
+          "La competenza per progettare, attuare e migliorare il programma",
+          "La disponibilità a condurre personalmente ogni verifica",
+          "La competenza tecnica su ogni processo verificato"
+        ],
+        "corretta": 1,
+        "tipo": "comprensione",
+        "modulo": "m04"
+      },
+      {
+        "q": "Il monitoraggio di un programma di audit serve a:",
+        "opzioni": [
+          "Valutare i singoli auditor",
+          "Verificare che gli obiettivi del programma siano raggiunti e coglierne le derive",
+          "Sostituire i singoli audit",
+          "Ridurre il numero di verifiche"
+        ],
+        "corretta": 1,
+        "tipo": "riconoscimento",
+        "modulo": "m04"
+      },
+      {
+        "q": "Al termine di un ciclo di programma emergono alcune criticità ricorrenti. Coerentemente con la norma, chi gestisce il programma dovrebbe:",
+        "opzioni": [
+          "Riesaminare il programma per individuare modifiche e opportunità di miglioramento",
+          "Trasferire la responsabilità al gruppo di audit",
+          "Attendere il ciclo successivo senza intervenire",
+          "Ignorarle se le verifiche sono state completate"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m04"
+      },
+      {
+        "q": "Prima di condurre una verifica, il riesame delle informazioni documentate serve a:",
+        "opzioni": [
+          "Comprendere il sistema e preparare le attività di audit",
+          "Sostituire la visita sul posto",
+          "Decidere l'esito della certificazione",
+          "Redigere già le risultanze"
+        ],
+        "corretta": 0,
+        "tipo": "comprensione",
+        "modulo": "m05"
+      },
+      {
+        "q": "Il piano dell'audit di un singolo incarico descrive:",
+        "opzioni": [
+          "La banca dati delle domande d'esame",
+          "Le attività e le disposizioni di quella specifica verifica",
+          "I requisiti del sistema di gestione",
+          "Tutte le verifiche dell'anno"
+        ],
+        "corretta": 1,
+        "tipo": "riconoscimento",
+        "modulo": "m05"
+      },
+      {
+        "q": "Nel preparare un audit, l'assegnazione del lavoro al gruppo dovrebbe tenere conto soprattutto di:",
+        "opzioni": [
+          "Le competenze necessarie e l'indipendenza rispetto alle aree verificate",
+          "La vicinanza geografica dei componenti",
+          "L'anzianità dei singoli auditor",
+          "Le preferenze personali del gruppo"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m05"
+      },
+      {
+        "q": "Qual è lo scopo principale della riunione di apertura?",
+        "opzioni": [
+          "Firmare il rapporto di audit",
+          "Selezionare il gruppo di audit",
+          "Comunicare già le risultanze",
+          "Confermare piano, criteri e modalità della verifica con l'organizzazione"
+        ],
+        "corretta": 3,
+        "tipo": "riconoscimento",
+        "modulo": "m06"
+      },
+      {
+        "q": "Un'informazione rilevante raccolta a voce durante un'intervista dovrebbe essere:",
+        "opzioni": [
+          "Corroborata da un riscontro documentale o osservativo",
+          "Accettata come prova senza altre verifiche",
+          "Inserita direttamente tra le non conformità",
+          "Ignorata perché non scritta"
+        ],
+        "corretta": 0,
+        "tipo": "comprensione",
+        "modulo": "m06"
+      },
+      {
+        "q": "Durante la verifica emerge un rilievo critico importante. Coerentemente con il principio di comunicazione, l'auditor dovrebbe:",
+        "opzioni": [
+          "Discuterlo soltanto con il proprio gruppo",
+          "Attendere il rapporto finale per comunicarlo",
+          "Informarne tempestivamente l'organizzazione, senza sorprese finali",
+          "Comunicarlo solo al committente"
+        ],
+        "corretta": 2,
+        "tipo": "applicazione",
+        "modulo": "m06"
+      },
+      {
+        "q": "Nella conduzione di una verifica, il campionamento delle evidenze è necessario perché:",
+        "opzioni": [
+          "La norma vieta di esaminare tutto",
+          "Riduce la responsabilità dell'auditor",
+          "Le organizzazioni lo richiedono per contratto",
+          "Il tempo e le risorse sono limitati e non si può esaminare ogni cosa"
+        ],
+        "corretta": 3,
+        "tipo": "comprensione",
+        "modulo": "m06"
+      },
+      {
+        "q": "Una non conformità ben formulata contiene sempre:",
+        "opzioni": [
+          "Il requisito violato, l'evidenza e la descrizione del fatto",
+          "Il nome del responsabile dell'area",
+          "Un giudizio sulle persone coinvolte",
+          "Una proposta di sanzione"
+        ],
+        "corretta": 0,
+        "tipo": "riconoscimento",
+        "modulo": "m07"
+      },
+      {
+        "q": "Qual è la differenza tra risultanze e conclusioni dell'audit?",
+        "opzioni": [
+          "Sono sinonimi",
+          "Le risultanze le scrive il committente, le conclusioni l'auditor",
+          "Le conclusioni precedono le risultanze",
+          "Le risultanze sono giudizi puntuali sui criteri, le conclusioni sono il giudizio d'insieme rispetto agli obiettivi"
+        ],
+        "corretta": 3,
+        "tipo": "comprensione",
+        "modulo": "m07"
+      },
+      {
+        "q": "Nella riunione di chiusura emerge una divergenza di opinione non risolta tra gruppo e organizzazione. Coerentemente con la norma, va:",
+        "opzioni": [
+          "Rinviata alla verifica successiva",
+          "Documentata, riportando le posizioni di entrambe le parti",
+          "Rimossa dal rapporto per non creare tensioni",
+          "Decisa a favore dell'organizzazione"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m07"
+      },
+      {
+        "q": "L'audit di follow-up serve a:",
+        "opzioni": [
+          "Verificare l'attuazione e l'efficacia delle azioni intraprese",
+          "Ripetere l'intera verifica",
+          "Sostituire il rapporto di audit",
+          "Valutare il gruppo di audit"
+        ],
+        "corretta": 0,
+        "tipo": "riconoscimento",
+        "modulo": "m07"
+      },
+      {
+        "q": "Secondo la norma, la competenza di un auditor è:",
+        "opzioni": [
+          "L'iscrizione a un registro professionale",
+          "La capacità di applicare conoscenze e abilità per conseguire i risultati attesi",
+          "Il possesso di titoli di studio adeguati",
+          "Il numero di anni di esperienza"
+        ],
+        "corretta": 1,
+        "tipo": "comprensione",
+        "modulo": "m08"
+      },
+      {
+        "q": "La valutazione della competenza di un auditor dovrebbe basarsi su:",
+        "opzioni": [
+          "Più metodi combinati, come riesame, osservazione, interviste ed esami",
+          "Il giudizio dell'organizzazione oggetto",
+          "La sola anzianità di servizio",
+          "Un solo esame teorico"
+        ],
+        "corretta": 0,
+        "tipo": "riconoscimento",
+        "modulo": "m08"
+      },
+      {
+        "q": "Il giudizio professionale dell'auditor serve soprattutto quando:",
+        "opzioni": [
+          "L'organizzazione lo richiede per iscritto",
+          "Occorre valutare situazioni che i manuali non risolvono da soli",
+          "Le procedure coprono ogni situazione possibile",
+          "Si vuole accelerare la chiusura"
+        ],
+        "corretta": 1,
+        "tipo": "comprensione",
+        "modulo": "m09"
+      },
+      {
+        "q": "Verificare un processo seguendone il filo, da un capo all'altro, invece di esaminare un ufficio per volta, permette di:",
+        "opzioni": [
+          "Evitare del tutto il campionamento",
+          "Scoprire i punti di passaggio critici dove i sistemi si rompono",
+          "Concludere la verifica senza evidenze",
+          "Ridurre il numero di interviste obbligatorie"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m09"
+      }
+    ]
   }
 }
