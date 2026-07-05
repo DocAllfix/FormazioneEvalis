@@ -80,3 +80,10 @@ UN solo file: `produzione/<corso>/_bozze/<mNN>.json` nel formato indicato nel pa
 Non toccare copioni.json, non toccare altri file, non creare file extra. Se qualcosa
 nel pacchetto è contraddittorio o impossibile, scrivi il problema in un campo "note"
 nel JSON invece di improvvisare.
+
+**ANTI-MEZZO-LAVORO (obbligatorio):** componi PRIMA tutto il contenuto del modulo, poi
+scrivilo in UN UNICO Write finale con tutto dentro (tutte le slide + la banca). Non
+salvare versioni parziali intermedie: se la sessione si interrompe, è meglio nessun file
+che un file a metà. Il file finale deve essere JSON valido e COMPLETO — un file troncato
+viene comunque rifiutato dal merge, quindi è lavoro perso. Verifica con python (json.load)
+prima di considerare finito.
