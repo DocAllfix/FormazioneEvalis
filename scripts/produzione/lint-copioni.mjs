@@ -56,6 +56,24 @@ try {
 }
 
 const AMBIGUE = /\b(audit|auditor)\b/i;
+
+// E9 — parole SEMPRE accentate in italiano: la forma piana è un errore certo che la
+// voce sintetica leggerebbe male. Esclusi i casi ambigui (saranno/sarà, meta/metà,
+// efficacia sempre piana, subito/subìto, ecc.).
+// escluse le parole con forma piana valida comune: terra(suolo), meta(obiettivo),
+// pero(albero), unita(participio "unita"), sara(nome) — per non bloccare su falsi allarmi
+const ACCENTI_MANCANTI = /\b(perche|poiche|benche|affinche|giacche|sicche|cosi|piu|gia|puo|verra|andra|dara|fara|potra|dovra|vorra|cioe|percio|finche|nonche|citta|qualita|attivita|possibilita|realta|societa|verita|liberta|responsabilita|autorita|priorita|maturita|complessita|conformita|proprieta|universita|identita|entita|novita|virtu|tribu|caffe)\b/gi;
+const _ACC = { perche: "perché", poiche: "poiché", benche: "benché", affinche: "affinché",
+  giacche: "giacché", sicche: "sicché", cosi: "così", piu: "più", gia: "già", puo: "può",
+  sara: "sarà", verra: "verrà", terra: "terrà", andra: "andrà", dara: "darà", fara: "farà",
+  stara: "starà", potra: "potrà", dovra: "dovrà", vorra: "vorrà", cioe: "cioè", percio: "perciò",
+  finche: "finché", nonche: "nonché", citta: "città", qualita: "qualità", attivita: "attività",
+  possibilita: "possibilità", realta: "realtà", societa: "società", verita: "verità",
+  liberta: "libertà", responsabilita: "responsabilità", autorita: "autorità", priorita: "priorità",
+  maturita: "maturità", complessita: "complessità", conformita: "conformità", proprieta: "proprietà",
+  universita: "università", identita: "identità", unita: "unità", entita: "entità", novita: "novità",
+  meta: "metà", virtu: "virtù", tribu: "tribù", caffe: "caffè", pero: "però" };
+const accentoCorretto = (w) => _ACC[w.toLowerCase()] || w + "…";
 // SOLO punteggiatura da PARLATO (regola utente 2026-07-04: è un copione, non un testo da
 // leggere): niente parentesi di alcun tipo, virgolette, simboli, trattini lunghi, percentuali
 const CHAR_OK = /^[\wàèéìòùÀÈÉÌÒÙ\s.,;:!?'-]+$/u;
@@ -126,6 +144,12 @@ for (const s of copioni.slides) {
     const strani = [...new Set([...t].filter((c) => !CHAR_OK.test(c)))].join(" ");
     err(s.id, "E4", `caratteri anomali: ${strani}`);
   }
+
+  // E9 — accenti mancanti (la voce sintetica legge l'errore: parole SEMPRE accentate
+  // la cui forma piana è sempre sbagliata in italiano). NON include "saranno" (piana
+  // corretta: solo "sarà" singolare è accentata), né "efficacia"/"meta" (piane valide).
+  for (const m of s.testo.matchAll(ACCENTI_MANCANTI))
+    err(s.id, "E9", `accento mancante: "${m[0]}" (verso ${accentoCorretto(m[0])})`);
 
   // W1/W2 — stile frasi
   for (const fr of t.split(/(?<=[.!?])\s+/)) {
