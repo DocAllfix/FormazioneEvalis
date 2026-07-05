@@ -52,6 +52,13 @@
 6. Parole straniere: ammesse quelle correnti del settore (management, leadership…);
    la pronuncia inglese imperfetta è accettata (decisione cliente). Le parole ITALIANE
    devono essere ortograficamente perfette: la voce legge gli errori.
+7. **ACCENTI OBBLIGATORI** (gate E9): ogni parola che in italiano è sempre accentata va
+   scritta con l'accento — perché, poiché, benché, affinché, così, più, già, può, sarà,
+   verrà, potrà, dovrà, cioè, perciò, finché, e TUTTI i nomi in -tà (città, qualità,
+   attività, possibilità, realtà, società, verità, libertà, responsabilità, autorità,
+   priorità, maturità, complessità, conformità, proprietà, università, identità, entità,
+   novità). Scrivere "perche" o "attivita" senza accento è un ERRORE bloccante: la voce
+   sintetica leggerebbe la parola sbagliata.
 
 ## 3. Lunghezza
 
