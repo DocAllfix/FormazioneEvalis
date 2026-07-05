@@ -182,12 +182,15 @@ if (minutiPerModulo) {
     const tuttiIModuli = budgetTot >= legali
       && Object.keys(minutiPerModulo).every((m) => m in paroleModulo);
     if (tuttiIModuli) {
+      // margine +0,5% sopra il minimo LEGALE: cuscinetto reale (la stima è calibrata a 2,35
+      // p/s misurati sul pilota, quindi ≈ audio reale) senza forzare corsi lunghi (pref. utente
+      // "meglio corti"). L'autorità FINALE resta la durata audio misurata in build-course.
       const minutiStimati = Object.values(paroleModulo).reduce((a, b) => a + b, 0) / PAROLE_AL_SECONDO / 60;
-      const soglia = legali * 1.01;
+      const soglia = legali * 1.005;
       if (minutiStimati < soglia)
-        err("corso", "E6", `monte-ore stimato ${minutiStimati.toFixed(0)} min < soglia ${soglia.toFixed(0)} (legali ${legali} +1%) — il corso è TROPPO CORTO`);
+        err("corso", "E6", `monte-ore stimato ${minutiStimati.toFixed(0)} min < soglia ${soglia.toFixed(0)} (legali ${legali} +0,5%) — allungare il modulo più corto`);
       else
-        console.log(`  E6 corso ok: ${minutiStimati.toFixed(0)} min stimati ≥ ${soglia.toFixed(0)} (legali ${legali} +1%)`);
+        console.log(`  E6 corso ok: ${minutiStimati.toFixed(0)} min stimati ≥ ${soglia.toFixed(0)} (legali ${legali}, margine +${(minutiStimati/legali*100-100).toFixed(1)}%)`);
     } else {
       console.log("  E6 corso: moduli mancanti all'appello — guardia monte-ore rinviata");
     }
