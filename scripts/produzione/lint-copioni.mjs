@@ -62,7 +62,7 @@ const AMBIGUE = /\b(audit|auditor)\b/i;
 // efficacia sempre piana, subito/subìto, ecc.).
 // escluse le parole con forma piana valida comune: terra(suolo), meta(obiettivo),
 // pero(albero), unita(participio "unita"), sara(nome) — per non bloccare su falsi allarmi
-const ACCENTI_MANCANTI = /\b(perche|poiche|benche|affinche|giacche|sicche|cosi|piu|gia|puo|verra|andra|dara|fara|potra|dovra|vorra|cioe|percio|finche|nonche|citta|qualita|attivita|possibilita|realta|societa|verita|liberta|responsabilita|autorita|priorita|maturita|complessita|conformita|proprieta|universita|identita|entita|novita|virtu|tribu|caffe)\b/gi;
+const ACCENTI_MANCANTI = /\b(perche|poiche|benche|affinche|giacche|sicche|anziche|dacche|cosi|piu|gia|puo|verra|andra|dara|fara|potra|dovra|vorra|avra|dira|sapra|vivra|terra(?=\s+(conto|presente|fede))|cioe|percio|finche|nonche|citta|qualita|attivita|possibilita|realta|societa|verita|liberta|responsabilita|autorita|priorita|maturita|complessita|conformita|proprieta|universita|identita|entita|novita|unanimita|generalita|specificita|efficacia(?=[a-z])|virtu|tribu|caffe|ahime|cosicche|dappertutto(?!x))\b/gi;
 const _ACC = { perche: "perché", poiche: "poiché", benche: "benché", affinche: "affinché",
   giacche: "giacché", sicche: "sicché", cosi: "così", piu: "più", gia: "già", puo: "può",
   sara: "sarà", verra: "verrà", terra: "terrà", andra: "andrà", dara: "darà", fara: "farà",
