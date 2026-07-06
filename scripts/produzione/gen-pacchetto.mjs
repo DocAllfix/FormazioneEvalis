@@ -49,7 +49,8 @@ const fine = (n) => {
   return txt.length;
 };
 
-const capitoliCoperti = [...new Set([...copre.matchAll(/§?\s*(\d+)(?:\.\d+)?/g)]
+// clausole multilivello ("6.4.1-6.4.7"): conta SOLO il capitolo di testa
+const capitoliCoperti = [...new Set([...copre.matchAll(/§?\s*(\d+)(?:\.\d+)*/g)]
   .map((m) => parseInt(m[1], 10)).filter((n) => n >= 1 && n <= 10))];
 let sezione;
 if (capitoliCoperti.length) {
