@@ -86,12 +86,29 @@ function conGlossario(t) {
   return t;
 }
 
-// E5 — indice n-grammi della norma (forma canonica: minuscole, senza accenti/punteggiatura)
-const canon = (t) =>
-  t.toLowerCase()
+// Termini di sistema DEFINITI dalle norme: nomi tecnici lunghi e inevitabili (ogni corso
+// deve poterli usare, non sono "copia" della norma ma il nome della cosa). Si collassano a
+// un token PRIMA dell'n-gram, così E5/E8 controllano il CONTORNO, non il termine definito.
+const TERMINI_SISTEMA = [
+  "sistema di gestione per la qualità", "sistema di gestione ambientale",
+  "sistema di gestione per la sicurezza delle informazioni",
+  "sistema di gestione per la salute e sicurezza sul lavoro",
+  "sistema di gestione per la sicurezza alimentare", "sistema di gestione dell'energia",
+  "sistema di gestione per la prevenzione della corruzione",
+  "sistema di gestione dell'intelligenza artificiale", "sistema di gestione di rts",
+  "sistema di gestione", "sistemi di gestione", "parti interessate rilevanti",
+].map((t) => t.replace(/[àèéìòù']/g, (c) => ({à:"a",è:"e",é:"e",ì:"i",ò:"o",ù:"u","'":" "}[c])));
+
+// E5 — indice n-grammi della norma (forma canonica: minuscole, senza accenti/punteggiatura,
+// termini di sistema collassati a "§")
+const canon = (t) => {
+  let s = t.toLowerCase()
     .replace(/[àá]/g, "a").replace(/[èé]/g, "e").replace(/[ìí]/g, "i")
     .replace(/[òó]/g, "o").replace(/[ùú]/g, "u")
-    .replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter(Boolean);
+    .replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ");
+  for (const term of TERMINI_SISTEMA) s = s.split(term).join(" § ");
+  return s.split(/\s+/).filter(Boolean);
+};
 let normaShingles = null;
 // match ESATTO ISO<corso> seguito da non-cifra: "9001" NON deve pescare ISO19011-2026.txt
 const normaFile = existsSync("testonorme")
