@@ -42,11 +42,14 @@ if (txt.includes("�")) txt = readFileSync(`testonorme/${normaFile}`, "latin1")
 const cap = {};
 for (const m of txt.matchAll(/^\s{0,8}([1-9]|10)\s+[A-ZÀ-ÚÈÉ][A-ZÀ-ÚÈÉ '’-]{3,60}$/gm))
   cap[parseInt(m[1], 10)] = m.index; // sovrascrive: resta l'ultima (il corpo)
-const appendice = txt.search(/^\s{0,8}APPENDICE\s+A/m);
+// appendice del CORPO: l'ultima occorrenza (l'indice iniziale la cita prima, va scartata)
+let appendice = -1;
+for (const m of txt.matchAll(/^\s{0,8}(?:APPENDICE|Appendice|ANNEX|Allegato)\s+A\b/gm)) appendice = m.index;
 const fine = (n) => {
-  for (let k = n + 1; k <= 11; k++) if (k === 11) return appendice > 0 ? appendice : txt.length;
-    else if (cap[k] !== undefined && cap[k] > (cap[n] ?? 0)) return cap[k];
-  return txt.length;
+  for (let k = n + 1; k <= 10; k++)
+    if (cap[k] !== undefined && cap[k] > (cap[n] ?? 0)) return cap[k];
+  // nessun capitolo successivo: fino all'appendice del corpo (se dopo n) o a fine testo
+  return appendice > (cap[n] ?? 0) ? appendice : txt.length;
 };
 
 // clausole multilivello ("6.4.1-6.4.7"): conta SOLO il capitolo di testa
