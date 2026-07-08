@@ -3532,5 +3532,371 @@
         }
       ]
     }
+  },
+  "esameFinale": {
+    "estrazione": 20,
+    "soglia": 0.75,
+    "banca": [
+      {
+        "q": "Che differenza c'è tra la ISO 9000 e la ISO 9001?",
+        "opzioni": [
+          "La ISO 9001 riguarda l'ambiente, la ISO 9000 la qualità",
+          "Sono la stessa norma in due edizioni",
+          "La ISO 9000 dà fondamenti e vocabolario, la ISO 9001 stabilisce i requisiti certificabili",
+          "La ISO 9000 è obbligatoria per legge"
+        ],
+        "corretta": 2,
+        "tipo": "riconoscimento",
+        "modulo": "m01"
+      },
+      {
+        "q": "Che cosa significa che la ISO 9001 è una norma certificabile?",
+        "opzioni": [
+          "Che un organismo terzo può verificare e attestare la conformità dell'organizzazione ai suoi requisiti",
+          "Che riguarda solo le grandi imprese",
+          "Che va rinnovata ogni anno per legge",
+          "Che è obbligatoria per tutte le aziende"
+        ],
+        "corretta": 0,
+        "tipo": "comprensione",
+        "modulo": "m01"
+      },
+      {
+        "q": "Quale dei seguenti è uno dei sette principi di gestione per la qualità?",
+        "opzioni": [
+          "La riduzione del personale",
+          "La massimizzazione del profitto",
+          "L'esternalizzazione dei controlli",
+          "L'approccio per processi"
+        ],
+        "corretta": 3,
+        "tipo": "riconoscimento",
+        "modulo": "m02"
+      },
+      {
+        "q": "Nel ciclo PDCA applicato alla struttura della norma, il Supporto e le Attività operative rientrano nella fase:",
+        "opzioni": [
+          "Do (Fare)",
+          "Check (Verificare)",
+          "Plan (Pianificare)",
+          "Act (Agire)"
+        ],
+        "corretta": 0,
+        "tipo": "comprensione",
+        "modulo": "m02"
+      },
+      {
+        "q": "Che cos'è il risk-based thinking secondo la ISO 9001?",
+        "opzioni": [
+          "Una certificazione aggiuntiva",
+          "Un obbligo di adottare un metodo formale e documentato di gestione del rischio",
+          "Un modo di ragionare che porta a considerare rischi e opportunità nei processi, senza imporre uno strumento specifico",
+          "Un registro dei rischi da compilare ogni mese"
+        ],
+        "corretta": 2,
+        "tipo": "comprensione",
+        "modulo": "m02"
+      },
+      {
+        "q": "La soddisfazione del cliente, nel vocabolario della norma, è:",
+        "opzioni": [
+          "Il numero di reclami ricevuti",
+          "Un obbligo contrattuale",
+          "La percezione del cliente su quanto le sue aspettative siano state soddisfatte",
+          "Il fatturato generato dai clienti"
+        ],
+        "corretta": 2,
+        "tipo": "riconoscimento",
+        "modulo": "m02"
+      },
+      {
+        "q": "Comprendere il contesto dell'organizzazione (punto 4.1) significa:",
+        "opzioni": [
+          "Definire il prezzo dei prodotti",
+          "Elencare tutti i dipendenti",
+          "Redigere il bilancio annuale",
+          "Determinare i fattori interni ed esterni rilevanti per gli obiettivi del sistema"
+        ],
+        "corretta": 3,
+        "tipo": "comprensione",
+        "modulo": "m03"
+      },
+      {
+        "q": "Un'esclusione dal campo di applicazione del sistema di gestione per la qualità è ammissibile se:",
+        "opzioni": [
+          "È giustificata e non intacca la capacità di fornire prodotti conformi e accrescere la soddisfazione del cliente",
+          "Il cliente non se ne accorge",
+          "Riguarda un requisito ritenuto troppo costoso",
+          "L'organizzazione lo decide senza motivarlo"
+        ],
+        "corretta": 0,
+        "tipo": "comprensione",
+        "modulo": "m03"
+      },
+      {
+        "q": "Fra le responsabilità che la norma assegna esplicitamente all'alta direzione c'è:",
+        "opzioni": [
+          "Condurre di persona gli audit interni",
+          "Assumersi la responsabilità dell'efficacia del sistema di gestione per la qualità",
+          "Approvare ogni singolo documento",
+          "Compilare personalmente le registrazioni"
+        ],
+        "corretta": 1,
+        "tipo": "riconoscimento",
+        "modulo": "m03"
+      },
+      {
+        "q": "Nella pianificazione, le azioni per affrontare rischi e opportunità devono essere:",
+        "opzioni": [
+          "Le stesse per ogni organizzazione",
+          "Sempre documentate in un registro dedicato",
+          "Approvate dal cliente",
+          "Proporzionate all'impatto potenziale sulla conformità di prodotti e servizi"
+        ],
+        "corretta": 3,
+        "tipo": "comprensione",
+        "modulo": "m04"
+      },
+      {
+        "q": "Gli obiettivi per la qualità, secondo la norma, devono tra l'altro essere:",
+        "opzioni": [
+          "Fissati una volta e mai aggiornati",
+          "Segreti e noti solo alla direzione",
+          "Uguali agli obiettivi di vendita",
+          "Misurabili e coerenti con la politica per la qualità"
+        ],
+        "corretta": 3,
+        "tipo": "riconoscimento",
+        "modulo": "m04"
+      },
+      {
+        "q": "Quando un'organizzazione decide una modifica al proprio sistema, la norma chiede di:",
+        "opzioni": [
+          "Attuarla il più rapidamente possibile senza formalità",
+          "Effettuarla in modo pianificato, considerando scopo, conseguenze e risorse",
+          "Chiedere il permesso all'organismo di certificazione",
+          "Evitare qualsiasi modifica dopo la certificazione"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m04"
+      },
+      {
+        "q": "Nel controllo delle risorse di monitoraggio e misurazione, tarare uno strumento significa:",
+        "opzioni": [
+          "Sostituirlo ogni anno",
+          "Registrarne il numero di serie",
+          "Confrontarlo con un campione più preciso per conoscere lo scostamento",
+          "Pulirlo periodicamente"
+        ],
+        "corretta": 2,
+        "tipo": "comprensione",
+        "modulo": "m05"
+      },
+      {
+        "q": "Qual è la differenza tra competenza e consapevolezza secondo la norma?",
+        "opzioni": [
+          "La competenza è la capacità di ottenere risultati applicando conoscenze e abilità; la consapevolezza è capire il senso e l'importanza del proprio contributo",
+          "La consapevolezza si dimostra con un titolo di studio",
+          "La competenza riguarda solo i dirigenti",
+          "Sono sinonimi"
+        ],
+        "corretta": 0,
+        "tipo": "comprensione",
+        "modulo": "m05"
+      },
+      {
+        "q": "Le informazioni documentate richieste dalla norma vanno:",
+        "opzioni": [
+          "Conservate per sempre senza eccezioni",
+          "Controllate quanto a disponibilità, idoneità e protezione",
+          "Rese pubbliche",
+          "Stampate e archiviate solo in cartaceo"
+        ],
+        "corretta": 1,
+        "tipo": "riconoscimento",
+        "modulo": "m05"
+      },
+      {
+        "q": "Prima di impegnarsi a fornire prodotti e servizi a un cliente, l'organizzazione deve:",
+        "opzioni": [
+          "Riesaminare i requisiti per assicurarsi di poterli soddisfare",
+          "Avviare subito la produzione",
+          "Emettere la fattura",
+          "Chiedere un anticipo"
+        ],
+        "corretta": 0,
+        "tipo": "comprensione",
+        "modulo": "m06"
+      },
+      {
+        "q": "Nella progettazione e sviluppo, la differenza tra verifica e validazione è che:",
+        "opzioni": [
+          "La validazione precede sempre la verifica",
+          "La verifica la fa il cliente, la validazione il fornitore",
+          "Sono la stessa attività",
+          "La verifica controlla che l'output soddisfi i requisiti di input; la validazione controlla che il risultato sia idoneo all'uso previsto"
+        ],
+        "corretta": 3,
+        "tipo": "comprensione",
+        "modulo": "m06"
+      },
+      {
+        "q": "Quando affida all'esterno un processo, l'organizzazione:",
+        "opzioni": [
+          "Trasferisce al fornitore ogni responsabilità sulla conformità",
+          "Mantiene la responsabilità e applica un controllo proporzionato all'impatto e all'affidabilità del fornitore",
+          "Deve internalizzarlo entro un anno",
+          "Non deve più controllarlo"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m06"
+      },
+      {
+        "q": "Il controllo degli output non conformi richiede prima di tutto di:",
+        "opzioni": [
+          "Consegnarli comunque al cliente",
+          "Distruggerli sempre",
+          "Identificarli e tenerli sotto controllo per evitarne l'uso involontario",
+          "Ignorarli se sono pochi"
+        ],
+        "corretta": 2,
+        "tipo": "riconoscimento",
+        "modulo": "m07"
+      },
+      {
+        "q": "Che cos'è l'identificazione e rintracciabilità in produzione?",
+        "opzioni": [
+          "Un obbligo di marchiare ogni prodotto col logo",
+          "Un sistema antifurto",
+          "La numerazione delle fatture",
+          "Sapere qual è lo stato dell'output rispetto ai controlli e, dove richiesto, poterne ricostruire la storia"
+        ],
+        "corretta": 3,
+        "tipo": "comprensione",
+        "modulo": "m07"
+      },
+      {
+        "q": "Il rilascio di un prodotto al cliente prima del completamento delle verifiche pianificate è possibile solo:",
+        "opzioni": [
+          "Se il cliente non lo saprà",
+          "Su approvazione di un'autorità competente e, ove applicabile, del cliente, con registrazione",
+          "Mai, in nessun caso",
+          "Se il magazzino è pieno"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m07"
+      },
+      {
+        "q": "L'audit interno richiesto dalla norma serve a:",
+        "opzioni": [
+          "Sostituire l'audit di certificazione",
+          "Verificare che il sistema sia conforme ai requisiti e attuato con efficacia",
+          "Valutare lo stipendio dei dipendenti",
+          "Controllare i concorrenti"
+        ],
+        "corretta": 1,
+        "tipo": "riconoscimento",
+        "modulo": "m08"
+      },
+      {
+        "q": "Tra gli input del riesame di direzione la norma include:",
+        "opzioni": [
+          "I prezzi dei fornitori",
+          "Le prestazioni del sistema, i risultati degli audit, la soddisfazione del cliente e lo stato delle azioni",
+          "Le ferie del personale",
+          "Solo il fatturato"
+        ],
+        "corretta": 1,
+        "tipo": "comprensione",
+        "modulo": "m08"
+      },
+      {
+        "q": "Un indicatore di prestazione di un processo serve al verificatore soprattutto per:",
+        "opzioni": [
+          "Capire se il processo raggiunge i risultati attesi, oltre a esistere sulla carta",
+          "Decidere le promozioni",
+          "Sostituire l'osservazione diretta",
+          "Calcolare le tasse"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m08"
+      },
+      {
+        "q": "Di fronte a una non conformità, la norma chiede tra l'altro di:",
+        "opzioni": [
+          "Nasconderla se minore",
+          "Licenziare il responsabile",
+          "Reagire, valutare l'esigenza di eliminarne le cause, attuare le azioni e riesaminarne l'efficacia",
+          "Attendere il prossimo audit"
+        ],
+        "corretta": 2,
+        "tipo": "comprensione",
+        "modulo": "m09"
+      },
+      {
+        "q": "Qual è la differenza tra correzione e azione correttiva?",
+        "opzioni": [
+          "Sono sinonimi",
+          "La correzione rimuove l'effetto immediato, l'azione correttiva elimina la causa perché non si ripeta",
+          "L'azione correttiva è più veloce",
+          "La correzione riguarda solo i documenti"
+        ],
+        "corretta": 1,
+        "tipo": "comprensione",
+        "modulo": "m09"
+      },
+      {
+        "q": "La norma impone di aprire un'azione correttiva per ogni non conformità?",
+        "opzioni": [
+          "No: chiede di valutare l'esigenza di agire sulle cause, con azioni adeguate agli effetti",
+          "Sì, sempre e automaticamente",
+          "Solo per le non conformità dei clienti",
+          "Solo durante l'audit di certificazione"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m09"
+      },
+      {
+        "q": "Nel verificare un sistema di gestione per la qualità, la distinzione corretta è:",
+        "opzioni": [
+          "Tutto è stabilito dalla ISO 9001",
+          "Il metodo di audit è nella ISO 9001",
+          "I requisiti sul sistema stanno nella ISO 9001, il metodo di conduzione dell'audit nella ISO 19011",
+          "Non esiste distinzione"
+        ],
+        "corretta": 2,
+        "tipo": "comprensione",
+        "modulo": "m10"
+      },
+      {
+        "q": "Poiché la verifica lavora per campionamento, l'assenza di rilievi in un'area:",
+        "opzioni": [
+          "Non è una garanzia assoluta: il campione non copre l'intero universo",
+          "Garantisce che non ci siano problemi",
+          "Obbliga a estendere l'audit a tutto",
+          "Significa che l'audit è fallito"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m11"
+      },
+      {
+        "q": "In un audit di terza parte, chi conduce la verifica e chi decide sulla certificazione:",
+        "opzioni": [
+          "Sono la stessa persona",
+          "Decide il singolo auditor sul posto",
+          "Decide sempre il cliente",
+          "Sono separati: il gruppo di audit propone, l'organismo decide con un processo distinto"
+        ],
+        "corretta": 3,
+        "tipo": "comprensione",
+        "modulo": "m12"
+      }
+    ]
   }
 }
