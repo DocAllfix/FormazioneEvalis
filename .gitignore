@@ -70,5 +70,9 @@ produzione/pronuncia-test/
 # Fabbrica copioni: staging e pacchetti (rigenerabili)
 produzione/*/_bozze/
 produzione/*/_pacchetti/
+produzione/*/_log/
+produzione/_staging/
+# Fabbrica v3: credenziali produzione (template versionato, segreti no)
+!.env.produzione.example
 # spellcheck: dizionario Hunspell (scaricabile, non versionare i .dic/.aff pesanti)
 scripts/produzione/dict/

@@ -27,7 +27,7 @@
 // Uso: node scripts/produzione/lint-copioni.mjs <corso> [--modulo mNN]
 
 import { existsSync, readFileSync, readdirSync } from "node:fs";
-import { dirs, readJson, slideIds } from "./lib.mjs";
+import { ROOT, dirs, readJson, slideIds } from "./lib.mjs";
 
 const PAROLE_AL_SECONDO = 2.35; // misurato: M1 reale, 8.044 parole = 57,0 min (2026-07-03)
 const NGRAM_VERBATIM = 8;
@@ -292,7 +292,8 @@ for (const mod of Object.keys(paroleModulo)) {
 }
 
 // E7 — copertura concetti chiave (produzione/<corso>/copertura.json: { "mNN": ["concetto", ...] })
-const coperturaPath = `produzione/${corso}/copertura.json`;
+// (ROOT-aware: la staging root dell'orchestratore porta la sua copia di copertura.json)
+const coperturaPath = `${ROOT}/${corso}/copertura.json`;
 if (existsSync(coperturaPath)) {
   const copertura = JSON.parse(readFileSync(coperturaPath, "utf8"));
   for (const [mod, concetti] of Object.entries(copertura)) {

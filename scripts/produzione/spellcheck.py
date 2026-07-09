@@ -15,7 +15,7 @@ Uso: python scripts/produzione/spellcheck.py <corso> [--modulo mNN] [--strict]
   --strict: gli AVVISI diventano errori (exit 1) — utile prima del LOCK
 Exit 1 se ci sono ERRORI accento (o avvisi con --strict).
 """
-import sys, json, re, itertools
+import os, sys, json, re, itertools
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -51,7 +51,8 @@ def in_dict(w):
     except Exception:
         return False
 
-base = Path("produzione") / corso
+# PRODUZIONE_ROOT: stessa convenzione di lib.mjs (staging root dell'orchestratore)
+base = Path(os.environ.get("PRODUZIONE_ROOT", "produzione")) / corso
 copioni = json.loads((base / "copioni.json").read_text(encoding="utf-8"))
 
 errori, avvisi = [], []
