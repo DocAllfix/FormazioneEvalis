@@ -54,9 +54,25 @@ VERSIONE_STANDARD = "marcello-v1 (2026-07-09)"
 
 # ---------------------------------------------------------------- testo → SSML
 def con_glossario(testo: str, glossario: dict) -> str:
-    """Forme parlate del glossario (chiavi più lunghe prima), come conGlossario del lint."""
+    """Forme parlate del glossario (chiavi più lunghe prima), come conGlossario del lint.
+
+    RETE DI SICUREZZA TRATTINI (2026-07-10, richiesta utente): dopo il glossario,
+    QUALUNQUE trattino residuo tra due lettere viene sciolto in spazio — la voce
+    non deve mai vedere un trattino (quasi-incidente -> quasi incidente, follow-up
+    -> follow up). I trattini nei NUMERI restano vietati a monte (gate E3) e le
+    fusioni preferite (ri-valutazione -> rivalutazione) restano nel glossario.
+    """
     for k in sorted(glossario.get("map", {}), key=len, reverse=True):
         testo = testo.replace(k, glossario["map"][k])
+    testo = re.sub(r"(?<=[a-zà-ùA-ZÀ-Ù])-(?=[a-zà-ùA-ZÀ-Ù])", " ", testo)
+    # LISTA BIANCA DURA (2026-07-10, richiesta utente): dopo glossario e scioglimento
+    # trattini, il testo parlato può contenere SOLO alfabeto, cifre, spazi e
+    # punteggiatura di pausa. Trattini residui, parentesi, slash, virgolette o
+    # simboli => la sintesi si RIFIUTA (mai audio sbagliato in silenzio).
+    residui = sorted(set(re.findall(r"[^a-zA-Zà-ùÀ-Ù0-9\s.,;:!?']", testo)))
+    if residui:
+        raise ValueError(f"testo NON parlabile, caratteri fuori lista bianca {residui}: "
+                         f"aggiungere forma parlata al glossario del corso")
     return testo
 
 
