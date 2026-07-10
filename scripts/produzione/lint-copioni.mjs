@@ -174,6 +174,31 @@ for (const s of copioni.slides) {
   for (const m of s.testo.matchAll(ACCENTI_MANCANTI))
     err(s.id, "E9", `accento mancante: "${m[0]}" (verso ${accentoCorretto(m[0])})`);
 
+  // E10 — lessico vietato (revisione 45001, 2026-07-10): anglicismi al posto del
+  // termine tecnico del corso. BLOCCANTE: il termine giusto esiste ed è definito nei moduli.
+  const LESSICO_VIETATO = [
+    [/\bnear[ -]miss(es)?\b/i, ["mancato infortunio", "quasi incidente", "quasi-incidente"]],
+  ];
+  for (const [rx, italiani] of LESSICO_VIETATO) {
+    for (const fr of t.split(/(?<=[.!?])\s+/)) {
+      const m = fr.match(rx);
+      if (!m) continue;
+      // menzione definitoria ammessa: la stessa frase contiene anche il termine italiano
+      if (italiani.some((it) => fr.toLowerCase().includes(it))) continue;
+      err(s.id, "E10", `lessico vietato "${m[0]}" — usare: ${italiani[0]}`);
+    }
+  }
+
+  // W3 — concordanza articolo singolare + sostantivo plurale (visto "un quasi-incidenti"
+  // nel 45001). Solo sostantivi del lessico corso, per evitare falsi positivi.
+  const W3_PLURALI = /\b(?:un|uno|una|il|lo|la) (?:incidenti|rischi|controlli|obiettivi|requisiti|pericoli|processi|lavoratori|documenti|moduli|eventi|segnali|criteri|metodi|ruoli|turni|reparti|impianti|fornitori|appaltatori|indicatori|verifiche|azioni|cause|misure|indagini|emergenze|risultanze|procedure|quasi-incidenti|non conformità multiple)\b/gi;
+  for (const m of s.testo.matchAll(W3_PLURALI))
+    warn(s.id, "W3", `possibile concordanza rotta: "${m[0]}"`);
+
+  // W4 — "disciplina" come verbo: trappola di prosodia TTS (FABBRICA-MODULO §2.7).
+  for (const m of s.testo.matchAll(/\bdisciplina (?:l'|il |la |le |gli |i |lo |un |una )/gi))
+    warn(s.id, "W4", `"disciplina" probabilmente usato come verbo (trappola prosodia): "${m[0]}…" — preferire stabilisce/definisce/richiede`);
+
   // W1/W2 — stile frasi
   for (const fr of t.split(/(?<=[.!?])\s+/)) {
     const parole = fr.split(/\s+/).length;
@@ -302,6 +327,15 @@ for (const mod of Object.keys(paroleModulo)) {
 const coperturaPath = `${ROOT}/${corso}/copertura.json`;
 if (existsSync(coperturaPath)) {
   const copertura = JSON.parse(readFileSync(coperturaPath, "utf8"));
+  // guardia anti-stem-tronchi (lezione "risultanz" 45001): uno stem non-parola il modello
+  // tende a scriverlo LETTERALMENTE nel testo → parola spezzata in TTS. Le parole italiane
+  // finiscono in vocale: un termine mono-parola che finisce in consonante e non è una
+  // sigla maiuscola né un forestierismo noto è quasi certamente uno stem tronco.
+  const STEM_OK = /(?:[aeiouàèéìòù]|[A-Z]{2,}|cloud|log|backup|malware|standard|audit|auditor|team|leader|leadership|checklist|manager|software|hardware|password|phishing|business|report)$/;
+  for (const [mod, concetti] of Object.entries(copertura))
+    for (const c of concetti)
+      if (!c.includes(" ") && !STEM_OK.test(c))
+        warn(mod, "W5", `copertura: "${c}" sembra uno stem tronco — usare la parola intera (il modello può scriverlo letteralmente nel testo)`);
   for (const [mod, concetti] of Object.entries(copertura)) {
     if (modulo && mod !== modulo) continue;
     if (!(mod in paroleModulo)) continue; // modulo non ancora scritto: si verifica al suo merge
