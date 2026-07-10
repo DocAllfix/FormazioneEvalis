@@ -65,13 +65,19 @@ def carica_env() -> dict[str, str]:
 
 
 def client_azure(env: dict[str, str]):
-    from openai import AsyncAzureOpenAI
     mancanti = [k for k in ("AZURE_OPENAI_ENDPOINT", "AZURE_OPENAI_API_KEY",
                             "AZURE_OPENAI_DEPLOYMENT") if not env.get(k)]
     if mancanti:
         sys.exit(f"credenziali mancanti in .env.produzione: {', '.join(mancanti)}")
+    endpoint = env["AZURE_OPENAI_ENDPOINT"].rstrip("/")
+    if endpoint.endswith("/openai/v1"):
+        # endpoint "v1" di Azure (versionless): si usa il client OpenAI standard
+        from openai import AsyncOpenAI
+        return AsyncOpenAI(base_url=endpoint, api_key=env["AZURE_OPENAI_API_KEY"],
+                           max_retries=5)
+    from openai import AsyncAzureOpenAI
     return AsyncAzureOpenAI(
-        azure_endpoint=env["AZURE_OPENAI_ENDPOINT"],
+        azure_endpoint=endpoint,
         api_key=env["AZURE_OPENAI_API_KEY"],
         api_version=env.get("AZURE_OPENAI_API_VERSION", "2024-10-21"),
         max_retries=5,  # 429/5xx: backoff esponenziale dell'SDK
@@ -108,9 +114,9 @@ def init_copioni(corso: str) -> None:
     md = (PROD / corso / "struttura.md").read_text(encoding="utf-8")
     tot = sum(v["minuti"] for v in mod.values())
     legali = 1440 if tot >= 1400 else 960  # 24h o 16h dal monte-ore skeleton
-    m_leg = re.search(r"(\d+)\s*(?:min(?:uti)?)\s+legali", md, re.I)
+    m_leg = re.search(r"([\d.]+)\s*(?:min(?:uti)?)\s+legali", md, re.I)
     if m_leg:
-        legali = int(m_leg.group(1))
+        legali = int(m_leg.group(1).replace(".", ""))  # "1.440" = millesep, non decimale
     base = {
         "corso": corso,
         "titolo": f"Auditor ISO {corso}",
@@ -313,6 +319,10 @@ async def genera_blocchi(mdl: Modello, corso: str, mod: str, pacchetto: str,
             f"Scrivi ORA il blocco {blocco_n} di {n_blocchi}: le slide da {ids[0]} a {ids[-1]} "
             f"(tutte, nessuna esclusa), seguendo lo skeleton e riprendendo il filo dalle slide "
             f"già scritte, senza ripeterne i contenuti.\n\n"
+            f"LUNGHEZZA (taratura 2026-07-09: i primi draft uscivano CORTI del sei per cento e "
+            f"il gate E6 li respinge): scrivi PIENO — ogni slide tra 630 e 660 parole; una slide "
+            f"sotto 600 è un errore. Riempi con sostanza (esempi sviluppati, casi concreti, "
+            f"passaggi spiegati fino in fondo), mai con giri di parole.\n\n"
             f"SLIDE GIÀ SCRITTE DEI BLOCCHI PRECEDENTI (per continuità e anti-ripetizione):\n{precedenti}"
         )
         out = await mdl.chiama(
@@ -349,7 +359,16 @@ async def correggi(mdl: Modello, pacchetto: str, bozza: dict, report: str, origi
          {"role": "user", "content": pacchetto},
          {"role": "user", "content":
           f"{NOTA_CANALE}\n\nIl tuo modulo ha violazioni segnalate da {origine}. Correggi SOLO "
-          f"le slide e le domande coinvolte, mantenendo budget parole e regole del pacchetto. "
+          f"le slide e le domande coinvolte, mantenendo le regole del pacchetto. "
+          f"Come correggere, per tipo di errore:\n"
+          f"- E6 modulo CORTO: scegli le quattro o cinque slide più corte e ESPANDILE con "
+          f"contenuto sostanziale nuovo (un esempio concreto sviluppato, un passaggio spiegato "
+          f"fino in fondo) portando ciascuna verso le seicentocinquanta parole — mai riempitivo, "
+          f"mai ripetere cose già dette altrove nel modulo.\n"
+          f"- E5 o E8 (verbatim/fotocopia): riscrivi COMPLETAMENTE la frase segnalata con "
+          f"struttura e parole diverse, mantenendo il significato.\n"
+          f"- E9 o ortografia: correggi la parola indicata.\n"
+          f"- Quiz: sistema la domanda segnalata secondo QUIZ-STANDARD.\n"
           f"Restituisci nello schema: in slides le sole slide corrette (intere), in banca la "
           f"banca INTERA corretta se una domanda era coinvolta, altrimenti banca vuota.\n\n"
           f"SEGNALAZIONI:\n{report}\n\nSLIDE ATTUALI:\n{testo_slides}\n\n"

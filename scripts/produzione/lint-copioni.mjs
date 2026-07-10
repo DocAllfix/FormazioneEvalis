@@ -149,11 +149,17 @@ for (const s of copioni.slides) {
   if (AMBIGUE.test(prime10))
     err(s.id, "E2", `"audit/auditor" nelle prime 10 parole: "${prime10.slice(0, 60)}…"`);
 
-  // E3 — numeri non coperti dal glossario
+  // E3 — numeri: STANDARD AZURE marcello-v1 (2026-07-09, verdetto ascolto utente):
+  // Marcello legge bene norme, anni e clausole in cifre. Restano vietati (fuori
+  // glossario): numeri con TRATTINO (17021-1: il TTS legge il trattino — vanno in
+  // glossario come "parte N"), conteggi brevi (in lettere), percentuali in cifre.
+  const NUM_OK = /^(?:(?:19|20)\d\d|\d{4,5}|\d+(?:\.\d+)+)$/; // anno | norma | clausola 6.1.2
   for (const m of t.matchAll(/\d[\d.,-]*/g)) {
     const num = m[0].replace(/[.,]$/, "");
+    if (NUM_OK.test(num)) continue;
     const coperto = Object.keys(glossario.map).some((k) => k.includes(num));
-    if (!coperto) err(s.id, "E3", `numero "${num}" senza voce di glossario`);
+    if (!coperto) err(s.id, "E3", `numero "${num}" non ammesso in cifre (né in glossario): ${
+      num.includes("-") ? "TRATTINO nel numero — serve la forma parlata (glossario, es. parte uno)" : "va scritto in lettere"}`);
   }
 
   // E4 — caratteri anomali

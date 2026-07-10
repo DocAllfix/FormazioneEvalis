@@ -35,10 +35,15 @@
    35 parole è un errore di stile.
 2. **"audit" e "auditor" MAI nelle prime 10 parole** di una slide (gate E2). Apri la
    slide con altre parole, poi usali liberamente.
-3. **Numeri e sigle**: usa SOLO le chiavi del glossario consegnato (es. "ISO 19011" sì,
-   perché il glossario la converte). Ogni ALTRO numero va scritto in lettere ("tre
-   requisiti", "cinque giorni"). Niente date in cifre, niente percentuali in cifre
-   ("l'ottanta per cento"). Gate E3 blocca ogni cifra fuori glossario.
+3. **Numeri e sigle** (STANDARD AZURE 2026-07-09): in CIFRE sono ammessi SOLO i numeri
+   di norma ("ISO 45001"), gli anni ("nel 2023") e i numeri di clausola col punto
+   ("il punto 6.1.2"). Ogni ALTRO numero va scritto in lettere ("tre requisiti",
+   "quarantasette siti", "l'ottanta per cento" — mai "80%"). VIETATO il formato
+   norma:anno ("ISO 45001:2023"): scrivi "ISO 45001 del 2023". **TRATTINI: mai un
+   numero col trattino** ("17021-1", "2018-2023"): la voce legge il trattino. Le sigle
+   con trattino passano dal glossario ("ISO/IEC 17021-1" → "ISO IEC diciassettemila
+   ventuno parte uno"); gli intervalli si sciolgono ("dal 2018 al 2023"). Il trattino
+   corto resta ammesso solo nelle parole composte ("follow-up"). Gate E3 blocca il resto.
 4. **È UN COPIONE, non un testo da leggere**: PARLATO CONTINUO e discorsivo. Vietati in
    assoluto: parentesi di OGNI tipo (tonde, quadre, graffe), virgolette di ogni tipo,
    elenchi puntati o numerati, markdown, trattini lunghi, simboli (percento, e commerciale,
