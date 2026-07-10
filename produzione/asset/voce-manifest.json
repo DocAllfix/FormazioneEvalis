@@ -1,9 +1,27 @@
 {
-  "file": "voce-riferimento-el.wav",
-  "sha256": "81b5c649882f13b99306da1c5d458e33f03aab016823732f4bd64cc5093713aa",
-  "bytes": 4078844,
-  "origine": "EL1 (IVC del cliente, 2026-07-02 16:58:59 s50 v3) + frase densa àudit/àuditor (EL 2026-07-03 08:24:56, stessa voce IVC) — riferimento v2 PROMOSSO a ufficiale dopo matrice pronuncia (verdetto cliente: AUditor+v2 quasi perfetto)",
-  "congelato": "2026-07-03",
-  "ruolo": "RIFERIMENTO UFFICIALE del catalogo — immutabile; i pod verificano questo hash prima di generare (mismatch = FATALE)",
-  "ref_text": "Benvenuto in questo percorso di formazione. In ogni lezione analizzeremo insieme i concetti fondamentali, con esempi concreti e un linguaggio chiaro. L'àudit è uno strumento di fiducia: l'àuditor raccoglie le evidenze, le confronta con i criteri di riferimento, e formula le proprie conclusioni con metodo e con calma. Prenditi il tempo necessario per ogni passaggio. La qualità di un lavoro si costruisce così: un'osservazione precisa, una domanda ben posta, una verifica alla volta. Cominciamo. L'àuditor conduce l'àudit con metodo. Un bravo àuditor prepara ogni àudit in anticipo, e ogni àuditor documenta ciò che osserva."
+  "motore": "azure-tts-batch",
+  "voce": "it-IT-MarcelloMultilingualNeural",
+  "standard": "marcello-v1 (2026-07-09)",
+  "config": {
+    "rate": "-5%",
+    "pitch": "-3%",
+    "sil_frase": "400ms",
+    "sil_virgola": "180ms",
+    "sil_pv": "250ms",
+    "flusso": "naturale (niente break fissi: mstts:silence sulla punteggiatura)"
+  },
+  "convenzioni_testo": {
+    "numeri_norma": "in CIFRE (ISO 19011 — Azure le legge bene, verdetto ascolto 2026-07-09)",
+    "clausole": "in cifre col punto (6.1.2 → sei punto uno punto due, nativo)",
+    "trattini_sigle": "forma parlata nel glossario: ISO/IEC 17021-1 → 'ISO IEC diciassettemila ventuno parte uno'",
+    "verbi_vietati": "mai 'disciplina' come verbo (pausa prosodica errata — FABBRICA-MODULO §2.7)"
+  },
+  "ruolo": "STANDARD UFFICIALE del catalogo — ogni audio porta lo sha di (testo glossariato + questa config): cambiarla rende STALE tutto l'audio prodotto (rigenerazione consapevole, mai silenziosa)",
+  "congelato": "2026-07-09",
+  "predecessore": {
+    "motore": "voxcpm",
+    "file": "voce-riferimento-el.wav",
+    "sha256": "81b5c649882f13b99306da1c5d458e33f03aab016823732f4bd64cc5093713aa",
+    "nota": "riferimento v2 VoxCPM, ritirato col passaggio ad Azure (2026-07-09)"
+  }
 }

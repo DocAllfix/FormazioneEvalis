@@ -52,7 +52,13 @@
 6. Parole straniere: ammesse quelle correnti del settore (management, leadership…);
    la pronuncia inglese imperfetta è accettata (decisione cliente). Le parole ITALIANE
    devono essere ortograficamente perfette: la voce legge gli errori.
-7. **ACCENTI OBBLIGATORI** (gate E9): ogni parola che in italiano è sempre accentata va
+7. **Verbi-trappola per la prosodia**: mai usare "disciplina" come verbo (es. "il punto
+   9.2 disciplina l'audit"): il motore TTS lo interpreta come sostantivo e mette una
+   pausa nel punto sbagliato (difetto verificato all'ascolto, 2026-07-09). Con i numeri
+   di clausola preferisci sempre verbi inequivocabili: stabilisce, definisce, richiede,
+   descrive, prevede. In generale diffida dei verbi che sono anche sostantivi quando
+   precedono un anglicismo.
+8. **ACCENTI OBBLIGATORI** (gate E9): ogni parola che in italiano è sempre accentata va
    scritta con l'accento — perché, poiché, benché, affinché, così, più, già, può, sarà,
    verrà, potrà, dovrà, cioè, perciò, finché, e TUTTI i nomi in -tà (città, qualità,
    attività, possibilità, realtà, società, verità, libertà, responsabilità, autorità,
