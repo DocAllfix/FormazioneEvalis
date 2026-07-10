@@ -189,6 +189,25 @@ for (const s of copioni.slides) {
     }
   }
 
+  // E11 — leak di prompt, forme inequivocabili (revisione 27001, 2026-07-11): il modello
+  // nomina il pacchetto di lavoro ricevuto ("la sezione che hai ricevuto", "la sezione
+  // normativa") invece di parlare allo studente, che non riceve niente: guarda un video.
+  // BLOCCANTE: nel loop dell'orchestratore forza l'auto-correzione prima del verde.
+  // Riferire sempre a "la norma" (o "in questo punto"/numero di clausola) o "il corso".
+  // BLOCCANTI: solo le forme che tradiscono il pacchetto ("ricevuta/assegnata/fornita",
+  // "sezione normativa", "skeleton"). "Sezione" nuda resta W6: può essere legittima
+  // ("la norma dedica una sezione ai principi") — giudica l'occhio umano.
+  const E11_LEAK = /\bsezion[ei][^.!?]{0,40}?\b(?:normativ[ae]|ricevut[ae]|assegnat[ae]|fornit[ae]|che hai ricevuto)\b|\bsezione normativa\b|\bhai ricevuto (?:la |il |questo |questa )?(?:sezione|testo|norma|materiale|estratto)\b|\bskeleton\b/gi;
+  for (const m of s.testo.matchAll(E11_LEAK))
+    err(s.id, "E11", `leak di prompt: "${m[0]}…" — lo studente non riceve sezioni/materiali, riferire alla norma o al corso`);
+
+  // W6 — forme ambigue, da giudicare in revisione: "sezione" nuda (spesso è struttura
+  // della norma, legittima), materiale/testo ricevuto o fornito (può essere scenario
+  // d'audit legittimo), "prompt" (legittimo nel corso 42001 sull'IA).
+  const W6_LEAK = /\bsezion[ei]\b|\b(?:testo|materiale|pacchetto|estratto) (?:che hai |che ti è stat[oa] |ricevut[oa]|fornit[oa])|\bprompt\b/gi;
+  for (const m of s.testo.matchAll(W6_LEAK))
+    warn(s.id, "W6", `possibile leak di prompt: "${m[0]}…" — verificare che parli allo studente, non del pacchetto di lavoro`);
+
   // W3 — concordanza articolo singolare + sostantivo plurale (visto "un quasi-incidenti"
   // nel 45001). Solo sostantivi del lessico corso, per evitare falsi positivi.
   const W3_PLURALI = /\b(?:un|uno|una|il|lo|la) (?:incidenti|rischi|controlli|obiettivi|requisiti|pericoli|processi|lavoratori|documenti|moduli|eventi|segnali|criteri|metodi|ruoli|turni|reparti|impianti|fornitori|appaltatori|indicatori|verifiche|azioni|cause|misure|indagini|emergenze|risultanze|procedure|quasi-incidenti|non conformità multiple)\b/gi;

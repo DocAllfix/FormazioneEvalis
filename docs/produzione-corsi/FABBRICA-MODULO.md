@@ -76,6 +76,16 @@
    priorità, maturità, complessità, conformità, proprietà, università, identità, entità,
    novità). Scrivere "perche" o "attivita" senza accento è un ERRORE bloccante: la voce
    sintetica leggerebbe la parola sbagliata.
+9. **MAI nominare il materiale di lavoro che ricevi** (avviso W6, revisione 27001,
+   2026-07-11). Tu ricevi una sezione della norma nel pacchetto, ma lo STUDENTE non
+   riceve niente: sta guardando un video. Vietate quindi formule come "la sezione che
+   hai ricevuto", "la sezione che stai studiando/usando", "la sezione normativa",
+   "il materiale che ti è stato fornito", "il testo assegnato". Per lo studente
+   esistono solo "la norma" (eventualmente "in questo punto" o il numero di clausola)
+   e "il corso/il modulo". Evita in generale la parola "sezione": per la struttura
+   della norma di' "punto" o "parte" (gate E11 blocca le forme inequivocabili,
+   W6 segnala le altre). Ogni riferimento al pacchetto, al prompt o allo skeleton
+   è un difetto di produzione che verrà corretto in revisione.
 
 ## 3. Lunghezza
 
