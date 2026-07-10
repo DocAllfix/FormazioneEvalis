@@ -44,6 +44,12 @@
    con trattino passano dal glossario ("ISO/IEC 17021-1" → "ISO IEC diciassettemila
    ventuno parte uno"); gli intervalli si sciolgono ("dal 2018 al 2023"). Il trattino
    corto resta ammesso solo nelle parole composte ("follow-up"). Gate E3 blocca il resto.
+   **REGOLA ASSOLUTA (2026-07-10, richiesta utente): la voce non vede MAI un trattino,
+   una parentesi o un simbolo.** Il motore TTS (azure_tts.con_glossario) scioglie in
+   spazio qualunque trattino residuo tra due lettere e RIFIUTA la sintesi se nel testo
+   parlato resta un carattere fuori dalla lista bianca (alfabeto, cifre ammesse,
+   punteggiatura di pausa, apostrofo). Preferire comunque, in scrittura, la forma
+   senza trattino quando è naturale ("quasi incidente").
 4. **È UN COPIONE, non un testo da leggere**: PARLATO CONTINUO e discorsivo. Vietati in
    assoluto: parentesi di OGNI tipo (tonde, quadre, graffe), virgolette di ogni tipo,
    elenchi puntati o numerati, markdown, trattini lunghi, simboli (percento, e commerciale,

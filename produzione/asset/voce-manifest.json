@@ -14,7 +14,8 @@
     "numeri_norma": "in CIFRE (ISO 19011 — Azure le legge bene, verdetto ascolto 2026-07-09)",
     "clausole": "in cifre col punto (6.1.2 → sei punto uno punto due, nativo)",
     "trattini_sigle": "forma parlata nel glossario: ISO/IEC 17021-1 → 'ISO IEC diciassettemila ventuno parte uno'",
-    "verbi_vietati": "mai 'disciplina' come verbo (pausa prosodica errata — FABBRICA-MODULO §2.7)"
+    "verbi_vietati": "mai 'disciplina' come verbo (pausa prosodica errata — FABBRICA-MODULO §2.7)",
+    "trattini_e_simboli": "REGOLA ASSOLUTA 2026-07-10 (utente): la voce non vede MAI trattini, parentesi o simboli. Il motore (azure_tts.con_glossario) scioglie in spazio ogni trattino tra lettere dopo il glossario e RIFIUTA la sintesi se resta un carattere fuori lista bianca (alfabeto, cifre ammesse, . , ; : ! ? apostrofo)."
   },
   "ruolo": "STANDARD UFFICIALE del catalogo — ogni audio porta lo sha di (testo glossariato + questa config): cambiarla rende STALE tutto l'audio prodotto (rigenerazione consapevole, mai silenziosa)",
   "congelato": "2026-07-09",
