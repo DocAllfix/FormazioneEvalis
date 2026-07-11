@@ -100,7 +100,7 @@ const out = `# PACCHETTO MODULO — corso ${corso} · ${mod.toUpperCase()}
 - Modulo successivo (per l'aggancio finale): ${titoloNext}
 - Output: SOLO il file \`produzione/${corso}/_bozze/${mod}.json\` (formato in fondo). NON toccare nessun altro file.
 
-## Struttura del modulo (dallo skeleton — OGNI blocco va sviluppato, coi conteggi slide indicati)
+## Struttura del modulo (vincolante — OGNI blocco va sviluppato, coi conteggi slide indicati)
 ${argomenti}
 
 ## Concetti che DEVONO comparire (gate automatico E7)
@@ -129,7 +129,11 @@ ${JSON.stringify(esempioQuiz, null, 1)}
 }
 \`\`\`
 
-## LA SEZIONE DELLA NORMA (la tua UNICA fonte tecnica — mai copiarla verbatim: gate E5)
+## IL TESTO DELLA NORMA (la tua UNICA fonte tecnica — mai copiarla verbatim: gate E5)
+ATTENZIONE: questo estratto è materiale di lavoro TUO. Lo studente non lo riceve e non
+deve mai sentirne parlare: nel copione di' solo "la norma", "in questo punto" o il
+numero di clausola. Le parole "sezione", "estratto", "materiale ricevuto" nel copione
+sono un difetto bloccante (gate E11).
 ${sezione}
 `;
 
