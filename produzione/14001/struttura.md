@@ -12,10 +12,10 @@
 | M1 | Il percorso Auditor 14001: l'ambiente come disciplina di gestione | contesto, schema, evoluzione della gestione ambientale | 100 min | 22 |
 | M2 | La norma 14001: struttura, concetti, termini ambientali | §1-3, prospettiva del ciclo di vita, struttura armonizzata | 125 min | 28 |
 | M3 | Contesto e leadership ambientale | §4 (contesto, parti interessate, campo), §5 (impegno, politica ambientale, ruoli) | 125 min | 28 |
-| M4 | Pianificazione I: aspetti ambientali e obblighi di conformità | §6.1 (rischi, aspetti ambientali significativi, obblighi di conformità) | 125 min | 28 |
+| M4 | Pianificazione I: aspetti ambientali e obblighi di compliance | §6.1 (rischi, aspetti ambientali significativi, obblighi di compliance) | 125 min | 28 |
 | M5 | Pianificazione II e supporto | §6.2-6.3 (obiettivi ambientali, modifiche), §7.1-7.5 | 125 min | 28 |
 | M6 | Attività operative: controllo operativo e ciclo di vita | §8.1 (controllo operativo, prospettiva ciclo di vita, processi esternalizzati) | 125 min | 28 |
-| M7 | Emergenze ambientali e valutazione della conformità | §8.2 (preparazione e risposta), §9.1.2 (valutazione della conformità legale) | 125 min | 28 |
+| M7 | Emergenze ambientali e valutazione della compliance | §8.2 (preparazione e risposta), §9.1.2 (valutazione della compliance) | 125 min | 28 |
 | M8 | Valutazione delle prestazioni ambientali | §9.1, 9.2, 9.3 (monitoraggio, indicatori, audit interno, riesame) | 125 min | 28 |
 | M9 | Miglioramento e le NC tipiche del SGA | §10, casistica ambientale ricorrente | 125 min | 28 |
 | M10 | Verificare il SGA I: programma e preparazione | 19011 applicata all'ambiente: rischio ambientale nel programma, competenze, checklist | 125 min | 28 |
@@ -37,7 +37,7 @@
 ### M2 (28 slide)
 1. Scopo e campo di applicazione della norma; gli esiti attesi di un SGA (3)
 2. La prospettiva del ciclo di vita: cosa chiede davvero la norma (4)
-3. Termini ambientali chiave: aspetto, impatto, condizione ambientale, obbligo di conformità, prestazione (7)
+3. Termini ambientali chiave: aspetto, impatto, condizione ambientale, obbligo di compliance, prestazione (7)
 4. La struttura armonizzata applicata alla 14001 (3)
 5. PDCA ambientale: la logica del sistema (4)
 6. Rischi e opportunità in chiave ambientale (4)
@@ -60,7 +60,7 @@
 2. Aspetti ambientali (6.1.2): identificazione, condizioni normali/anomale/emergenza (6)
 3. La significatività: criteri di valutazione, esempi per settore (5)
 4. Prospettiva del ciclo di vita negli aspetti: monte e valle (3)
-5. Obblighi di conformità (6.1.3): identificazione, accesso, aggiornamento (5)
+5. Obblighi di compliance (6.1.3): identificazione, accesso, aggiornamento (5)
 6. Azioni pianificate (6.1.4) e integrazione (2)
 7. Verificare aspetti e obblighi: il cuore di ogni audit 14001, evidenze attese (3)
 8. Sintesi (1)
@@ -86,7 +86,7 @@
 ### M7 — Emergenze e conformità legale (28 slide)
 1. Preparazione e risposta alle emergenze (8.2): scenari, prove periodiche, lezioni apprese (7)
 2. Le emergenze ambientali tipiche: sversamenti, incendi, guasti agli abbattimenti (5)
-3. Valutazione della conformità (9.1.2): processo, frequenza, evidenze (6)
+3. Valutazione della compliance (9.1.2): processo, frequenza, evidenze (6)
 4. Il rapporto con le autorità di controllo: autorizzazioni, prescrizioni, scadenze (5)
 5. Verificare emergenze e conformità: simulazioni, registri, interviste (4)
 6. Sintesi (1)
