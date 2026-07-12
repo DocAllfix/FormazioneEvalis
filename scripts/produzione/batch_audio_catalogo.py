@@ -139,53 +139,74 @@ def main() -> None:
     threads = [threading.Thread(target=worker, daemon=True) for _ in range(a.parallel)]
     for t in threads:
         t.start()
-    for t in threads:
-        t.join()
 
-    # per corso completo: QA -> campione -> upload -> pulizia wav
+    # supervisore: appena un corso ha TUTTI i moduli OK -> QA -> campione -> upload -> pulizia,
+    # IN PARALLELO alla sintesi degli altri (il disco si libera strada facendo)
     env_rc, bucket = (None, None) if a.no_upload else env_r2()
     rcl = None if a.no_upload else rclone_bin()
-    for c in corsi:
+
+    def finalizza(c: str) -> None:
         sc = stato["corsi"][c]
-        if sc["stato"] == "ROSSO" or any(v != "OK" for v in sc["moduli"].values()):
-            print(f"[{c}] ROSSO o incompleto: salto QA/upload")
-            continue
         log = LOGDIR / f"{c}-qa.log"
         rc = run_log([PY, "scripts/produzione/azure_tts.py", c, "--qa"], log)
         if rc != 0:
-            sc["stato"] = "QA_ROSSO"; salva_stato(stato)
+            with lock:
+                sc["stato"] = "QA_ROSSO"; salva_stato(stato)
             print(f"[{c}] QA ROSSO — vedere {log}")
-            continue
-        # clip campione per l'ascolto umano (prima, centrale, ultima)
+            return
         cop = leggi_json(PROD / c / "copioni.json")
         ids = [s["id"] for s in cop["slides"]]
-        campione = [ids[0], ids[len(ids) // 2], ids[-1]]
         cdir = PROD / "_campione" / c
         cdir.mkdir(parents=True, exist_ok=True)
-        for sid in campione:
+        for sid in (ids[0], ids[len(ids) // 2], ids[-1]):
             mod = re.search(r"_(m\d\d)_", sid).group(1)
             src = PROD / c / "audio" / mod / f"{sid}.wav"
             if src.exists():
                 shutil.copy2(src, cdir / f"{sid}.wav")
         if a.no_upload:
-            sc["stato"] = "OK_LOCALE"; salva_stato(stato)
-            continue
+            with lock:
+                sc["stato"] = "OK_LOCALE"; salva_stato(stato)
+            return
         rc = run_log([rcl, "copy", str(PROD / c / "audio"), f"r2:{bucket}/audio-master/{c}/audio",
                       "--transfers", "8", "--checksum"], LOGDIR / f"{c}-upload.log", env=env_rc)
+        if rc == 0:
+            rc = run_log([rcl, "check", str(PROD / c / "audio"), f"r2:{bucket}/audio-master/{c}/audio",
+                          "--size-only"], LOGDIR / f"{c}-upload.log", env=env_rc)
         if rc != 0:
-            sc["stato"] = "UPLOAD_ROSSO"; salva_stato(stato)
-            continue
-        rc = run_log([rcl, "check", str(PROD / c / "audio"), f"r2:{bucket}/audio-master/{c}/audio",
-                      "--size-only"], LOGDIR / f"{c}-upload.log", env=env_rc)
-        if rc != 0:
-            sc["stato"] = "CHECK_ROSSO"; salva_stato(stato)
-            continue
+            with lock:
+                sc["stato"] = "UPLOAD_ROSSO"; salva_stato(stato)
+            return
         n = 0
         for w in (PROD / c / "audio").rglob("*.wav"):
             w.unlink(); n += 1
-        sc["stato"] = "SU_R2"
-        salva_stato(stato)
-        print(f"[{c}] SU_R2 · {n} wav caricati e puliti in locale · liberi {gb_liberi():.1f}GB")
+        with lock:
+            sc["stato"] = "SU_R2"; salva_stato(stato)
+        print(f"[{c}] SU_R2 · {n} wav caricati e puliti · liberi {gb_liberi():.1f}GB")
+
+    in_finalizzazione: set = set()
+
+    def supervisore():
+        while True:
+            with lock:
+                pronti = [c for c in corsi
+                          if stato["corsi"][c]["stato"] == "IN_CODA"
+                          and c not in in_finalizzazione
+                          and len(stato["corsi"][c]["moduli"]) == len(piano[c])
+                          and all(v == "OK" for v in stato["corsi"][c]["moduli"].values())]
+                aperti = any(stato["corsi"][c]["stato"] == "IN_CODA" for c in corsi)
+                for c in pronti:
+                    in_finalizzazione.add(c)
+            for c in pronti:
+                finalizza(c)
+            if not aperti and not pronti:
+                return
+            time.sleep(20)
+
+    sup = threading.Thread(target=supervisore, daemon=True)
+    sup.start()
+    for t in threads:
+        t.join()
+    sup.join(timeout=7200)
 
     print("\n=== ESITO ===")
     for c in corsi:

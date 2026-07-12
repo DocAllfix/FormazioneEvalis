@@ -165,12 +165,24 @@ class BatchTTS:
         }
         r = self.http.put(self._url(job_id), json=body)
         if r.status_code not in (200, 201):
-            raise RuntimeError(f"PUT job {job_id}: {r.status_code} {r.text[:400]}")
+            if r.status_code == 400 and "already exists" in r.text:
+                print(f"  [{job_id}] job già presente su Azure (retry dopo caduta rete): mi aggancio")
+            else:
+                raise RuntimeError(f"PUT job {job_id}: {r.status_code} {r.text[:400]}")
         t0 = time.time()
+        errori_rete = 0
         while True:
             time.sleep(POLL_S)
-            r = self.http.get(self._url(job_id))
-            r.raise_for_status()
+            try:
+                r = self.http.get(self._url(job_id))
+                r.raise_for_status()
+                errori_rete = 0
+            except Exception as e:  # blip di rete: tollera fino a 6 di fila
+                errori_rete += 1
+                if errori_rete > 6:
+                    raise RuntimeError(f"job {job_id}: rete instabile ({e})")
+                time.sleep(20)
+                continue
             job = r.json()
             if job["status"] == "Succeeded":
                 break
