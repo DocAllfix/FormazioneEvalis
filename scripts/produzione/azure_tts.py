@@ -80,21 +80,54 @@ def con_glossario(testo: str, glossario: dict) -> str:
     return testo
 
 
-def ssml_slide(testo: str, voce: str, cfg: dict) -> str:
-    """SSML dello standard: flusso naturale + silenzi di punteggiatura + prosodia."""
+def carica_lessico() -> dict:
+    """Lessico fonetico IPA del catalogo (omografi): produzione/lessico-fonetico.json."""
+    return (leggi_json(PROD / "lessico-fonetico.json", {"map": {}}) or {"map": {}}).get("map", {})
+
+
+def lessico_applicabile(testo: str, lessico: dict) -> dict:
+    """Solo le voci del lessico presenti in QUESTO testo (per lo sha: una voce nuova
+    nel lessico rigenera solo le slide che la contengono)."""
+    out = {}
+    for parola, ipa in lessico.items():
+        if re.search(rf"(?<![a-zà-ùA-ZÀ-Ù]){re.escape(parola)}(?![a-zà-ùA-ZÀ-Ù])", testo, re.I):
+            out[parola] = ipa
+    return out
+
+
+def con_fonemi(testo_escapato: str, lessico: dict) -> str:
+    """Avvolge gli omografi del lessico in tag phoneme IPA (dopo l'escape XML).
+    Match case-insensitive; il testo visibile resta quello originale."""
+    for parola, ipa in lessico.items():
+        testo_escapato = re.sub(
+            rf"(?<![a-zà-ùA-ZÀ-Ù])({re.escape(parola)})(?![a-zà-ùA-ZÀ-Ù])",
+            rf'<phoneme alphabet="ipa" ph="{ipa}">\1</phoneme>',
+            testo_escapato, flags=re.I)
+    return testo_escapato
+
+
+def ssml_slide(testo: str, voce: str, cfg: dict, lessico: dict | None = None) -> str:
+    """SSML dello standard: flusso naturale + silenzi di punteggiatura + prosodia
+    + lessico fonetico IPA per gli omografi + coda di 1s."""
     sil = (f'<mstts:silence type="Sentenceboundary-exact" value="{cfg["sil_frase"]}"/>'
            f'<mstts:silence type="Comma-exact" value="{cfg["sil_virgola"]}"/>'
            f'<mstts:silence type="Semicolon-exact" value="{cfg["sil_pv"]}"/>')
-    corpo = f'<prosody rate="{cfg["rate"]}" pitch="{cfg["pitch"]}">{escape(testo)}</prosody>'
+    t = escape(testo)
+    if lessico:
+        t = con_fonemi(t, lessico)
+    corpo = f'<prosody rate="{cfg["rate"]}" pitch="{cfg["pitch"]}">{t}</prosody>'
     coda = f'<break time="{CODA_FINE_SLIDE}"/>'  # aria a fine slide (monte-ore + tagli avatar)
     return (f'<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" '
             f'xmlns:mstts="http://www.w3.org/2001/mstts" xml:lang="it-IT">'
             f'<voice name="{voce}">{sil}{corpo}{coda}</voice></speak>')
 
 
-def sha_slide(testo_glossariato: str, voce: str, cfg: dict) -> str:
-    """Impronta di ciò che determina l'audio: testo parlato + voce + standard."""
-    base = testo_glossariato + "|" + voce + "|" + json.dumps(cfg, sort_keys=True) + "|" + VERSIONE_STANDARD
+def sha_slide(testo_glossariato: str, voce: str, cfg: dict, lessico: dict | None = None) -> str:
+    """Impronta di ciò che determina l'audio: testo parlato + voce + standard +
+    voci del lessico fonetico APPLICABILI a questa slide."""
+    less = json.dumps(lessico_applicabile(testo_glossariato, lessico or {}), sort_keys=True)
+    base = (testo_glossariato + "|" + voce + "|" + json.dumps(cfg, sort_keys=True)
+            + "|" + VERSIONE_STANDARD + "|" + less)
     return hashlib.sha256(base.encode()).hexdigest()
 
 
@@ -189,7 +222,7 @@ def _allinea(words: list[dict], attesi: list[str]) -> tuple[int, int]:
 
 
 def qa_slide(corso: str, mod: str, slide: dict, glossario: dict, voce: str,
-             cfg: dict, registro: dict) -> list[str]:
+             cfg: dict, registro: dict, lessico: dict | None = None) -> list[str]:
     """Checks A-E su una slide. Ritorna la lista dei problemi (vuota = ok)."""
     problemi = []
     sid = slide["id"]
@@ -227,7 +260,7 @@ def qa_slide(corso: str, mod: str, slide: dict, glossario: dict, voce: str,
 
     # staleness — l'audio corrisponde al testo/standard ATTUALI?
     testo_g = con_glossario(slide["testo"], glossario)
-    sha = sha_slide(testo_g, voce, cfg)
+    sha = sha_slide(testo_g, voce, cfg, lessico)
     reg = registro.get("slide", {}).get(sid, {})
     if reg.get("sha") != sha:
         problemi.append("G: STALE — testo o standard voce cambiati dopo la sintesi")
@@ -257,12 +290,12 @@ def qa_slide(corso: str, mod: str, slide: dict, glossario: dict, voce: str,
 
 
 def qa_modulo(corso: str, mod: str, slides: list[dict], glossario: dict,
-              voce: str, cfg: dict) -> bool:
+              voce: str, cfg: dict, lessico: dict | None = None) -> bool:
     registro = leggi_json(PROD / corso / "_log" / f"audio-{mod}.json", {})
     out_dir = PROD / corso / "audio" / mod
     tutti_ok = True
     for s in slides:
-        problemi = qa_slide(corso, mod, s, glossario, voce, cfg, registro)
+        problemi = qa_slide(corso, mod, s, glossario, voce, cfg, registro, lessico)
         if problemi:
             tutti_ok = False
             for p in problemi:
@@ -283,7 +316,7 @@ def qa_modulo(corso: str, mod: str, slides: list[dict], glossario: dict,
 
 # ---------------------------------------------------------------- pipeline modulo
 def sintetizza_modulo(tts: BatchTTS, corso: str, mod: str, slides: list[dict],
-                      glossario: dict, force: bool) -> None:
+                      glossario: dict, force: bool, lessico: dict | None = None) -> None:
     out_dir = PROD / corso / "audio" / mod
     reg_path = PROD / corso / "_log" / f"audio-{mod}.json"
     registro = leggi_json(reg_path, {"slide": {}})
@@ -292,7 +325,7 @@ def sintetizza_modulo(tts: BatchTTS, corso: str, mod: str, slides: list[dict],
         sid = s["id"]
         if not ((out_dir / f"{sid}.wav").exists() and (out_dir / f"{sid}.word.json").exists()):
             return False
-        sha = sha_slide(con_glossario(s["testo"], glossario), tts.voce, tts.cfg)
+        sha = sha_slide(con_glossario(s["testo"], glossario), tts.voce, tts.cfg, lessico)
         return registro["slide"].get(sid, {}).get("sha") == sha
 
     da_fare = [s for s in slides if force or not fresco(s)]
@@ -300,7 +333,7 @@ def sintetizza_modulo(tts: BatchTTS, corso: str, mod: str, slides: list[dict],
         print(f"[{mod}] tutte le {len(slides)} slide fresche (testo+standard invariati): skip")
         return
 
-    ssml = [ssml_slide(con_glossario(s["testo"], glossario), tts.voce, tts.cfg) for s in da_fare]
+    ssml = [ssml_slide(con_glossario(s["testo"], glossario), tts.voce, tts.cfg, lessico) for s in da_fare]
     print(f"[{mod}] job batch: {len(da_fare)} slide da sintetizzare "
           f"({len(slides)-len(da_fare)} fresche) · standard {VERSIONE_STANDARD}")
     job_id = f"{corso}-{mod}-{hashlib.sha1(''.join(ssml).encode()).hexdigest()[:8]}"
@@ -321,7 +354,7 @@ def sintetizza_modulo(tts: BatchTTS, corso: str, mod: str, slides: list[dict],
             testo_g = con_glossario(s["testo"], glossario)
             stima = len(s["testo"].split()) / PAROLE_AL_SECONDO
             registro["slide"][s["id"]] = {
-                "sha": sha_slide(testo_g, tts.voce, tts.cfg),
+                "sha": sha_slide(testo_g, tts.voce, tts.cfg, lessico),
                 "wav_sha": hashlib.sha256(dati).hexdigest(),
                 "durata_s": durata, "stima_s": round(stima, 1),
                 "delta_pct": round((durata / stima - 1) * 100, 1),
@@ -333,7 +366,7 @@ def sintetizza_modulo(tts: BatchTTS, corso: str, mod: str, slides: list[dict],
     scrivi_atomico(reg_path, json.dumps(registro, ensure_ascii=False, indent=2) + "\n")
     print(f"[{mod}] sintetizzate {len(da_fare)} slide · {registro['totale_s']/60:.1f} min totali modulo")
     # QA obbligatorio subito dopo la sintesi: niente audio non verificato nel repo
-    if not qa_modulo(corso, mod, slides, glossario, tts.voce, tts.cfg):
+    if not qa_modulo(corso, mod, slides, glossario, tts.voce, tts.cfg, lessico):
         raise RuntimeError(f"[{mod}] QA FALLITO dopo la sintesi — vedere i problemi sopra")
 
 
@@ -387,15 +420,16 @@ def main() -> None:
         print(f"standard: {VERSIONE_STANDARD} · voce {voce}")
         return
 
+    lessico = carica_lessico()
     if a.qa:
         tts_cfg = {k: env.get(f"AZURE_TTS_{k.upper()}", v) for k, v in STD.items()}
         voce = env.get("AZURE_SPEECH_VOICE", "")
-        ok = all(qa_modulo(a.corso, m, per_mod[m], glossario, voce, tts_cfg) for m in moduli)
+        ok = all(qa_modulo(a.corso, m, per_mod[m], glossario, voce, tts_cfg, lessico) for m in moduli)
         sys.exit(0 if ok else 1)
 
     tts = BatchTTS(env)
     for m in moduli:
-        sintetizza_modulo(tts, a.corso, m, per_mod[m], glossario, a.force)
+        sintetizza_modulo(tts, a.corso, m, per_mod[m], glossario, a.force, lessico)
 
 
 if __name__ == "__main__":
