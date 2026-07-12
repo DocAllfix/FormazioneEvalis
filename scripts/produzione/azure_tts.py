@@ -47,9 +47,13 @@ FORMATO = "riff-24khz-16bit-mono-pcm"
 POLL_S = 10
 TIMEOUT_JOB_S = 1800
 # standard congelato (overridabili via env solo per esperimenti, mai in produzione)
-STD = {"rate": "-5%", "pitch": "-3%",
-       "sil_frase": "400ms", "sil_virgola": "180ms", "sil_pv": "250ms"}
-VERSIONE_STANDARD = "marcello-v1 (2026-07-09)"
+# v2 (2026-07-12, verdetto utente sul test velocità, variante F): parlato a rate 0%
+# (piu dinamico del -5% di v1), pause allungate 550/230/320 + coda di 1s a fine slide
+# per compensare il monte-ore legale (margine reale +1,2-1,4%) e dare aria ai tagli avatar.
+STD = {"rate": "0%", "pitch": "-3%",
+       "sil_frase": "550ms", "sil_virgola": "230ms", "sil_pv": "320ms"}
+CODA_FINE_SLIDE = "1000ms"
+VERSIONE_STANDARD = "marcello-v2 (2026-07-12)"
 
 
 # ---------------------------------------------------------------- testo → SSML
@@ -82,9 +86,10 @@ def ssml_slide(testo: str, voce: str, cfg: dict) -> str:
            f'<mstts:silence type="Comma-exact" value="{cfg["sil_virgola"]}"/>'
            f'<mstts:silence type="Semicolon-exact" value="{cfg["sil_pv"]}"/>')
     corpo = f'<prosody rate="{cfg["rate"]}" pitch="{cfg["pitch"]}">{escape(testo)}</prosody>'
+    coda = f'<break time="{CODA_FINE_SLIDE}"/>'  # aria a fine slide (monte-ore + tagli avatar)
     return (f'<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" '
             f'xmlns:mstts="http://www.w3.org/2001/mstts" xml:lang="it-IT">'
-            f'<voice name="{voce}">{sil}{corpo}</voice></speak>')
+            f'<voice name="{voce}">{sil}{corpo}{coda}</voice></speak>')
 
 
 def sha_slide(testo_glossariato: str, voce: str, cfg: dict) -> str:
