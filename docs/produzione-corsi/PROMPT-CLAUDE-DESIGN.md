@@ -70,6 +70,26 @@ Vincoli tecnici (servono al player, non sono scelte di stile):
 
 ---
 
+## PROMPT DI CORREZIONE (dopo la prima consegna del 2026-07-13 — ALLEGARE slide4-check.jpeg
+## e/o demo-adaptive.jpeg: entrambi mostrano l'obiettivo finale)
+
+Ti allego uno screenshot di come apparirà il risultato finale dentro il player dei corsi:
+guarda bene. Il riquadro con il video del relatore in alto a sinistra
+e la colonna su cui poggia NON fanno parte della slide: li aggiunge il player automaticamente,
+a sinistra della slide, usando lo stesso colore di sfondo della slide. La slide che disegni
+tu è SOLO la parte di contenuto che nello screenshot sta a destra del video.
+
+Correggi quindi il template, su TUTTE le slide:
+1. RIMUOVI completamente la colonna sinistra del relatore che hai disegnato (cerchio
+   segnaposto, scritta RELATORE e tutto lo spazio dedicato): il contenuto deve occupare
+   l'intera larghezza dei 1280px. Sposta il logo Evalis Academy dove sta meglio nel contenuto.
+2. Togli tutte le animazioni CSS: le slide devono essere completamente statiche.
+3. Su ogni `<section>` sostituisci `height:720px; overflow:hidden` con `min-height:720px`
+   e senza overflow nascosto: se un contenuto è troppo lungo deve VEDERSI che sborda,
+   non essere tagliato in silenzio.
+
+Tutto il resto (stile, palette, tipografia, i dieci tipi di slide) va bene così.
+
 ## Nota sui tipi 9-10 (quiz ed esame)
 
 I quiz e l'esame in piattaforma sono renderizzati dal motore quiz (domande estratte

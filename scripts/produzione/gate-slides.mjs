@@ -107,13 +107,19 @@ for (const f of files) {
       const sec = document.querySelector("#stage>section");
       if (!sec) return null;
       sec.style.height = "auto";
-      return Math.ceil(sec.scrollHeight);
+      const nat = Math.ceil(sec.scrollHeight);
+      // come il player (slide-html.tsx): canvas = max(720, naturale) — e l'elemento
+      // resta visibile anche per le slide "a canvas" (figli tutti absolute, nat≈0)
+      sec.style.height = Math.max(720, nat + 6) + "px";
+      return Math.max(720, nat);
     });
     if (height == null) probs.push("S6: section non misurabile");
     else if (height > H_FAIL) probs.push(`S6: altezza ${height}px > ${H_FAIL}px (contenuto fuori misura)`);
     else if (height > H_WARN) warns.push(`S6: altezza ${height}px > ${H_WARN}px (testo piccolo a schermo)`);
     const sec = page.locator("#stage>section");
-    await sec.screenshot({ path: path.join(thumbsDir, `${id}.png`), scale: "css" });
+    // animations:disabled — le animazioni CSS infinite manderebbero in timeout lo screenshot
+    await sec.screenshot({ path: path.join(thumbsDir, `${id}.png`), scale: "css",
+      animations: "disabled", timeout: 15000 });
   } catch (e) {
     probs.push(`S6: render fallito (${String(e).slice(0, 120)})`);
   }
