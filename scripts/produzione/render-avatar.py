@@ -3,14 +3,22 @@
 
 Uso:
   python scripts/produzione/render-avatar.py <corso> --shard produzione/<corso>/shards/gpu-0.txt \
-      --base produzione/asset/base-neo2.mp4 [--mock] [--batch 16]
+      --base produzione/asset/base-neo2.mp4 [--mock] [--batch 16] [--purge-local]
+
+Era Azure/R2: i wav vivono in audio/mNN/<id>.wav; se assenti in locale vengono scaricati
+on-demand da R2 (env R2_AUDIO_REMOTE, es. r2:evalis-produzione/audio-master). audio-map.json
+viene da gen-audio-map.mjs (registri _log) e porta {duration, sha}.
 
 Pipeline per ID (job atomico, idempotente):
   1. skip se esiste clips/<id>.mp4.ok (già renderizzato E validato);
-  2. render: MuseTalk (reale, batch, preparation una sola volta per base) o mock (ffmpeg);
-  3. mux con tag -metadata comment=<id> (barriera anti-mescolamento #2);
-  4. GATE (QA-PRE-LIVE §B.1): durata = durata audio ±0.3s, stream video con frame, tag corretto;
-  5. scrive clips/<id>.mp4.ok {duration, sha256}; se R2_REMOTE è settato, rclone copy su R2.
+  2. GATE IDENTITÀ AUDIO: sha256(wav) == sha del registro (l'audio che entra nel mux è
+     ESATTAMENTE quello lockato e QA-parola-per-parola; becca anche download corrotti);
+  3. render: MuseTalk (reale, batch, preparation una sola volta per base) o mock (ffmpeg);
+  4. mux con tag -metadata comment=<id> (barriera anti-mescolamento #2);
+  5. GATE (QA-PRE-LIVE §B.1): durata = durata audio ±0.3s, stream video con frame, tag corretto;
+  6. scrive clips/<id>.mp4.ok {duration, sha256}; se R2_REMOTE è settato, rclone copyto di
+     clip + .ok su {R2_REMOTE}/avatar-clips/<corso>/; con --purge-local la clip locale si
+     elimina dopo l'upload verificato (dischi pod piccoli).
 Un fallimento = quella clip resta senza .ok; make-shards la rimette in lista al giro dopo.
 """
 
@@ -18,6 +26,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -47,6 +56,27 @@ def probe(args_: list[str]) -> str:
 
 def probe_duration(p: Path) -> float:
     return round(float(probe(["-show_entries", "format=duration", "-of", "csv=p=0", str(p)])), 3)
+
+
+def wav_path(base_dir: Path, sid: str) -> Path:
+    mod = re.search(r"_(m\d\d)_", sid).group(1)
+    return base_dir / "audio" / mod / f"{sid}.wav"
+
+
+def fetch_wav(base_dir: Path, corso: str, sid: str) -> Path:
+    """Wav locale in audio/mNN/; se assente lo scarica da R2 (R2_AUDIO_REMOTE)."""
+    wav = wav_path(base_dir, sid)
+    if wav.exists():
+        return wav
+    remote = os.environ.get("R2_AUDIO_REMOTE")
+    if not remote:
+        sys.exit(f"ERRORE: wav mancante per {sid} ({wav}) e R2_AUDIO_REMOTE non settato")
+    wav.parent.mkdir(parents=True, exist_ok=True)
+    mod = wav.parent.name
+    subprocess.run(["rclone", "copyto", f"{remote}/{corso}/audio/{mod}/{sid}.wav", str(wav)], check=True)
+    if not wav.exists():
+        sys.exit(f"ERRORE: download R2 fallito per {sid}")
+    return wav
 
 
 def make_pingpong(base: Path, out: Path) -> None:
@@ -85,7 +115,7 @@ def render_mock(wav: Path, sid: str, out: Path) -> None:
         mux_with_id(raw, wav, sid, out)
 
 
-def render_musetalk_batch(ids: list[str], base_pingpong: Path, audio_dir: Path, clips_dir: Path, batch: int) -> None:
+def render_musetalk_batch(ids: list[str], base_pingpong: Path, base_dir: Path, clips_dir: Path, batch: int) -> None:
     """Render REALE: un'unica invocazione MuseTalk per tutte le clip dello shard
     (i modelli si caricano una volta; l'avatar si prepara una volta: preparation=True
     solo alla prima esecuzione con questo base, poi riusato con preparation=False)."""
@@ -94,9 +124,9 @@ def render_musetalk_batch(ids: list[str], base_pingpong: Path, audio_dir: Path, 
     cfg = {
         avatar_id: {
             "preparation": not prepared,
-            "bbox_shift": 0,
+            "bbox_shift": int(os.environ.get("MUSETALK_BBOX_SHIFT", "0")),
             "video_path": str(base_pingpong.resolve()),
-            "audio_clips": {sid: str((audio_dir / f"{sid}.wav").resolve()) for sid in ids},
+            "audio_clips": {sid: str(wav_path(base_dir, sid).resolve()) for sid in ids},
         }
     }
     cfg_file = clips_dir / "_musetalk-config.yaml"
@@ -144,13 +174,14 @@ def main() -> None:
     ap.add_argument("--base", help="video-base dell'avatar (obbligatorio senza --mock)")
     ap.add_argument("--mock", action="store_true")
     ap.add_argument("--batch", type=int, default=16)
+    ap.add_argument("--purge-local", action="store_true",
+                    help="elimina la clip locale dopo l'upload R2 verificato (dischi pod piccoli)")
     args = ap.parse_args()
     if not args.mock and not args.base:
         sys.exit("Serve --base <video-base> (oppure --mock per il dry-run)")
 
     base_dir = ROOT / args.corso
     audio_map = read_json(base_dir / "audio-map.json")
-    audio_dir = base_dir / "audio"
     clips_dir = base_dir / "clips"
     clips_dir.mkdir(parents=True, exist_ok=True)
 
@@ -168,9 +199,11 @@ def main() -> None:
             continue
         if sid not in audio_map:
             sys.exit(f"ERRORE: {sid} non è in audio-map.json (render SOLO dopo il lock audio)")
-        wav = audio_dir / f"{sid}.wav"
-        if not wav.exists():
-            sys.exit(f"ERRORE: wav mancante per {sid}: {wav}")
+        wav = fetch_wav(base_dir, args.corso, sid)
+        # GATE IDENTITÀ: l'audio che entra nel mux è ESATTAMENTE quello lockato dal registro
+        sha_atteso = audio_map[sid].get("sha")
+        if sha_atteso and hashlib.sha256(wav.read_bytes()).hexdigest() != sha_atteso:
+            sys.exit(f"ERRORE: sha del wav di {sid} DIVERSO dal registro (file alterato o download corrotto)")
         todo.append(sid)
     if not todo:
         print("Niente da fare.")
@@ -181,11 +214,11 @@ def main() -> None:
         pingpong = base.with_name(base.stem + "-pingpong.mp4")
         make_pingpong(base, pingpong)
         print(f"Render MuseTalk di {len(todo)} clip (batch {args.batch}) ...")
-        render_musetalk_batch(todo, pingpong, audio_dir, clips_dir, args.batch)
+        render_musetalk_batch(todo, pingpong, base_dir, clips_dir, args.batch)
 
     ok = failed = 0
     for sid in todo:
-        wav = audio_dir / f"{sid}.wav"
+        wav = wav_path(base_dir, sid)
         out = clips_dir / f"{sid}.mp4"
         try:
             if args.mock:
@@ -203,10 +236,15 @@ def main() -> None:
 
             ok_data = {"duration": probe_duration(out),
                        "sha256": hashlib.sha256(out.read_bytes()).hexdigest()}
-            (clips_dir / f"{sid}.mp4.ok").write_text(json.dumps(ok_data) + "\n", encoding="utf-8")
+            ok_file = clips_dir / f"{sid}.mp4.ok"
+            ok_file.write_text(json.dumps(ok_data) + "\n", encoding="utf-8")
             remote = os.environ.get("R2_REMOTE")
             if remote:
-                subprocess.run(["rclone", "copyto", str(out), f"{remote}/{args.corso}/clips/{sid}.mp4"], check=True)
+                dest = f"{remote}/avatar-clips/{args.corso}"
+                subprocess.run(["rclone", "copyto", str(out), f"{dest}/{sid}.mp4"], check=True)
+                subprocess.run(["rclone", "copyto", str(ok_file), f"{dest}/{sid}.mp4.ok"], check=True)
+                if args.purge_local:
+                    out.unlink()  # il .ok locale resta: è il marcatore di idempotenza
             ok += 1
             print(f"✓ {sid}: PASS ({ok_data['duration']}s)")
         except Exception as e:  # job atomico: un errore = una clip, non ferma lo shard

@@ -1,24 +1,43 @@
-// Costruisce produzione/<corso>/manifest.json (formato courseManifestSchema) dai copioni,
-// con slide HTML PROVVISORIE (titolo + punti dagli speakerNotes). Le slide definitive
-// arriveranno dal track design: si rigenera il manifest con quell'HTML e si re-ingesta.
-// clipKey = ID canonico (barriera anti-mescolamento #1). Quiz mappati dal copioni.checkpoint.
+// Costruisce produzione/<corso>/manifest.json (formato courseManifestSchema) dai copioni.
+// Slide HTML: definitive da --slides-dir <dir> (un <id>.html per slide, dal track design),
+// altrimenti PROVVISORIE (titolo + punti dagli speakerNotes) per il collaudo tecnico.
+// clipKey = ID canonico (barriera anti-mescolamento #1).
+// Quiz dallo schema REALE dei copioni (era fabbrica v3):
+//   checkpoint = mappa { mNN: { estrazione, soglia (0-1), banca[{q, opzioni[], corretta, slide, tipo}] } }
+//   esameFinale = { estrazione, soglia, banca[{..., modulo}] }
+// -> quizInputSchema piattaforma: { questionsToDraw, passThreshold (1-100), questions[{text,
+//    options[{id,text}], correctOptionId}], timeLimitSeconds, cooldownSeconds }.
+// requiredMinutes = budget.minutiLegali dei copioni (override con --required-min).
 //
-// Uso: node scripts/produzione/make-manifest.mjs <corso> --required-min <minuti> [--title "..."]
+// Uso: node scripts/produzione/make-manifest.mjs <corso> [--slides-dir <dir>] [--required-min <minuti>]
+//      [--title "..."] [--checkpoint-time 600] [--exam-time 3600]
 
+import fs from "node:fs";
+import path from "node:path";
 import { dirs, readJson, writeJson, slideIds } from "./lib.mjs";
 
 const corso = process.argv[2];
-const reqIx = process.argv.indexOf("--required-min");
-const titleIx = process.argv.indexOf("--title");
-if (!corso || reqIx === -1) {
-  console.error('Uso: node scripts/produzione/make-manifest.mjs <corso> --required-min <minuti> [--title "..."]');
+if (!corso) {
+  console.error('Uso: node scripts/produzione/make-manifest.mjs <corso> [--slides-dir <dir>] [--required-min <min>] [--title "..."]');
   process.exit(2);
 }
-const requiredMinutes = Number(process.argv[reqIx + 1]);
+const argOf = (flag) => {
+  const i = process.argv.indexOf(flag);
+  return i !== -1 ? process.argv[i + 1] : undefined;
+};
 
 const d = dirs(corso);
 const copioni = readJson(d.copioni);
 slideIds(copioni, corso); // valida gli ID (formato, unicità, appartenenza al corso)
+
+const requiredMinutes = Number(argOf("--required-min") ?? copioni.budget?.minutiLegali);
+if (!Number.isInteger(requiredMinutes) || requiredMinutes <= 0) {
+  console.error(`requiredMinutes non valido (${requiredMinutes}): manca budget.minutiLegali nei copioni e --required-min`);
+  process.exit(1);
+}
+const checkpointTime = Number(argOf("--checkpoint-time") ?? 600);
+const examTime = Number(argOf("--exam-time") ?? 3600);
+const slidesDir = argOf("--slides-dir");
 
 function provisionalHtml(slide) {
   const punti = (slide.speakerNotes ?? "")
@@ -34,13 +53,31 @@ function provisionalHtml(slide) {
 </section>`;
 }
 
-// domande copioni ({domanda,opzioni,corretta,spiegazione}) -> formato canonico quiz
-function toQuestions(bank) {
-  return bank.map((q) => ({
-    text: q.domanda,
+function htmlFor(slide) {
+  if (!slidesDir) return provisionalHtml(slide);
+  const f = path.join(slidesDir, `${slide.id}.html`);
+  if (!fs.existsSync(f)) throw new Error(`slide HTML definitiva mancante: ${f}`);
+  return fs.readFileSync(f, "utf8");
+}
+
+// banca copioni [{q, opzioni[], corretta}] -> formato canonico piattaforma
+function toQuestions(banca) {
+  return banca.map((q) => ({
+    text: q.q,
     options: q.opzioni.map((text, i) => ({ id: String.fromCharCode(97 + i), text })),
     correctOptionId: String.fromCharCode(97 + q.corretta),
   }));
+}
+
+function toQuiz(quiz, title, timeLimitSeconds, cooldownSeconds) {
+  return {
+    title,
+    questionsToDraw: quiz.estrazione,
+    passThreshold: Math.round(quiz.soglia * 100),
+    timeLimitSeconds,
+    cooldownSeconds,
+    questions: toQuestions(quiz.banca),
+  };
 }
 
 // raggruppa le slide per modulo (dall'ID: <corso>_mNN_sNNN)
@@ -51,7 +88,13 @@ for (const s of copioni.slides) {
   byModule.get(m).push(s);
 }
 
-const checkpoint = copioni.checkpoint;
+const checkpoint = copioni.checkpoint ?? {};
+const senzaCheckpoint = [...byModule.keys()].filter((num) => !checkpoint[`m${num}`]);
+if (senzaCheckpoint.length) {
+  console.error(`ERRORE: moduli SENZA checkpoint nei copioni: ${senzaCheckpoint.map((n) => `m${n}`).join(", ")}`);
+  process.exit(1);
+}
+
 const modules = [...byModule.entries()].map(([num, slides]) => ({
   title: `Modulo ${Number(num)}`,
   lessons: [
@@ -59,32 +102,33 @@ const modules = [...byModule.entries()].map(([num, slides]) => ({
       title: `Modulo ${Number(num)} — Lezione`,
       slides: slides.map((s) => ({
         title: s.titolo,
-        html: provisionalHtml(s),
+        html: htmlFor(s),
         clipKey: s.id,
         speakerNotes: s.speakerNotes,
       })),
-      ...(checkpoint && checkpoint.modulo === `m${num}`
-        ? {
-            checkpointQuiz: {
-              title: `Checkpoint Modulo ${Number(num)}`,
-              questionsToDraw: checkpoint.questionsToDraw,
-              passThreshold: checkpoint.passThreshold,
-              timeLimitSeconds: 300,
-              cooldownSeconds: 60,
-              questions: toQuestions(checkpoint.questions),
-            },
-          }
-        : {}),
+      checkpointQuiz: toQuiz(checkpoint[`m${num}`], `Checkpoint Modulo ${Number(num)}`, checkpointTime, 60),
     },
   ],
 }));
 
+if (!copioni.esameFinale?.banca?.length) {
+  console.error("ERRORE: esameFinale mancante o senza banca nei copioni");
+  process.exit(1);
+}
+
 const manifest = {
-  title: titleIx !== -1 ? process.argv[titleIx + 1] : copioni.titolo,
+  title: argOf("--title") ?? copioni.titolo,
   requiredMinutes,
   modules,
+  finalExam: toQuiz(copioni.esameFinale, "Esame finale", examTime, 3600),
 };
 
 writeJson(d.manifest, manifest);
-const nSlides = copioni.slides.length;
-console.log(`OK · ${d.manifest}: ${modules.length} moduli, ${nSlides} slide, requiredMinutes=${requiredMinutes}`);
+const nQ = Object.values(checkpoint).reduce((a, c) => a + c.banca.length, 0);
+console.log(
+  `OK · ${d.manifest}: ${modules.length} moduli, ${copioni.slides.length} slide ` +
+  `(${slidesDir ? "HTML DEFINITIVE da " + slidesDir : "HTML PROVVISORIE"}), ` +
+  `${modules.length} checkpoint (${nQ} domande in banca), esame ${copioni.esameFinale.banca.length} domande ` +
+  `(estrae ${copioni.esameFinale.estrazione}, soglia ${Math.round(copioni.esameFinale.soglia * 100)}%), ` +
+  `requiredMinutes=${requiredMinutes}`,
+);
