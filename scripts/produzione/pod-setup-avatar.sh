@@ -9,12 +9,17 @@
 set -uo pipefail
 cd /workspace
 
+# l'ffmpeg di conda (nell'immagine pytorch) NON ha libx264: metto SOLO ffmpeg/ffprobe di /usr/bin
+# davanti nel PATH (python resta quello di conda coi nostri pacchetti). apt lo installa a [0].
+setup_ffmpeg_path(){ mkdir -p /workspace/bin; ln -sf /usr/bin/ffmpeg /workspace/bin/ffmpeg; [ -x /usr/bin/ffprobe ] && ln -sf /usr/bin/ffprobe /workspace/bin/ffprobe; export PATH=/workspace/bin:$PATH; }
+
 dl(){ for i in 1 2 3 4 5 6 7 8; do "$@" && return 0; echo "retry $i: $*" >&2; sleep 15; done; return 1; }
 
 echo "== [0] prerequisiti (unzip PRIMA di rclone: il suo installer muore senza, in silenzio)"
 apt-get update -qq >/dev/null 2>&1 || true
 apt-get install -y -qq unzip zstd git ffmpeg >/dev/null 2>&1
 command -v rclone >/dev/null || (curl -fsS https://rclone.org/install.sh | bash) >/dev/null
+setup_ffmpeg_path   # /usr/bin/ffmpeg (con libx264) davanti a quello di conda
 
 export RCLONE_CONFIG_R2_TYPE=s3 RCLONE_CONFIG_R2_PROVIDER=Cloudflare \
        RCLONE_CONFIG_R2_ACCESS_KEY_ID="$R2_ACCESS_KEY_ID" \
