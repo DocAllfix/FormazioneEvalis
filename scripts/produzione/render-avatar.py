@@ -146,11 +146,13 @@ def render_musetalk_batch(ids: list[str], base_pingpong: Path, base_dir: Path, c
              "--left_cheek_width", os.environ.get("MUSETALK_CHEEK", "90"),
              "--right_cheek_width", os.environ.get("MUSETALK_CHEEK", "90"),
              "--fps", "25"]
+    # stdin=DEVNULL: se l'avatar esiste MuseTalk chiede "re-create? (y/n)" via input() e
+    # senza tty va in EOFError. Con l'avatar prep-una-volta questo non capita, ma blindiamo.
     subprocess.run(
         [sys.executable, "-m", "scripts.realtime_inference",
          "--inference_config", str(cfg_file.resolve()),
          "--batch_size", str(batch), "--version", "v15", *extra],
-        cwd=MUSETALK_DIR, check=True,
+        cwd=MUSETALK_DIR, check=True, stdin=subprocess.DEVNULL,
     )
     # gli output MuseTalk (results/v15/avatars/<avatar_id>/vid_output/<sid>.mp4) si spostano in clips/
     out_dir = MUSETALK_DIR / "results" / "v15" / "avatars" / avatar_id / "vid_output"
