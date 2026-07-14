@@ -192,8 +192,12 @@ class BatchTTS:
                 raise RuntimeError(f"job {job_id}: timeout dopo {TIMEOUT_JOB_S}s (status {job['status']})")
         r = self.http.get(job["outputs"]["result"])
         r.raise_for_status()
-        self.http.delete(self._url(job_id))
-        return r.content
+        contenuto = r.content
+        try:  # pulizia non critica: il job scade da solo (timeToLive); un blip di rete qui
+            self.http.delete(self._url(job_id))  # NON deve buttare via una sintesi riuscita
+        except Exception:
+            pass
+        return contenuto
 
 
 def durata_wav_bytes(dati: bytes) -> float:
