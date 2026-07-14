@@ -25,9 +25,11 @@ R2="r2:${R2_BUCKET:-evalis-produzione}"
 
 SNAP="$R2/snapshot/musetalk-fullenv.tar.zst"
 # ATTENZIONE: su S3 `rclone lsf` di un file inesistente esce 0 con output vuoto -> testare l'OUTPUT
+PYSITE="$(python -c 'import site;print(site.getsitepackages()[0])')"
 if [ -n "$(rclone lsf "$SNAP" 2>/dev/null)" ]; then
-  echo "== [1] ripristino full-env da R2 (~5 min)"
-  rclone cat "$SNAP" | tar -I zstd -xf - -C /workspace
+  echo "== [1] ripristino full-env da R2 (~5-10 min): MuseTalk (codice+modelli) + site-packages"
+  # snapshot contiene percorsi ASSOLUTI (workspace/MuseTalk + il site-packages) -> estrai da /
+  rclone cat "$SNAP" | tar -I zstd -xf - -C /
 else
   echo "== [1] installazione MuseTalk 1.5 pulita (pin OBBLIGATORI, scoperti a caro prezzo)"
   git clone --depth 1 https://github.com/TMElyralab/MuseTalk.git
@@ -54,8 +56,9 @@ else
     [ -s "$f" ] || { echo "PESO MANCANTE: $f" >&2; exit 1; }
   done
   cd /workspace
-  echo "== [1c] snapshot full-env su R2 (i prossimi pod partono in 5 min)"
-  tar -I "zstd -3" -cf - MuseTalk | rclone rcat "$SNAP"
+  echo "== [1c] snapshot full-env su R2: MuseTalk (codice+modelli) + site-packages (i pacchetti Python!)"
+  # percorsi ASSOLUTI: MuseTalk in /workspace + il site-packages di conda -> estrazione da /
+  tar -I "zstd -3" -cf - /workspace/MuseTalk "$PYSITE" 2>/dev/null | rclone rcat "$SNAP"
 fi
 
 echo "== [2] toolkit da R2 (PRIMA della patch, che lo usa) + asset base"
