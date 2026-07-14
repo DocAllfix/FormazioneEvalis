@@ -34,6 +34,8 @@ import tempfile
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # console Windows cp1252
+sys.path.insert(0, str(Path(__file__).parent))
+from naturalizza import naturalizza  # noqa: E402
 
 FFMPEG = os.environ.get("FFMPEG", "ffmpeg")
 FFPROBE = os.environ.get("FFPROBE", "ffprobe")
@@ -124,7 +126,7 @@ def render_musetalk_batch(ids: list[str], base_pingpong: Path, base_dir: Path, c
     cfg = {
         avatar_id: {
             "preparation": not prepared,
-            "bbox_shift": int(os.environ.get("MUSETALK_BBOX_SHIFT", "0")),
+            "bbox_shift": int(os.environ.get("MUSETALK_BBOX_SHIFT", "-7")),
             "video_path": str(base_pingpong.resolve()),
             "audio_clips": {sid: str(wav_path(base_dir, sid).resolve()) for sid in ids},
         }
@@ -137,10 +139,17 @@ def render_musetalk_batch(ids: list[str], base_pingpong: Path, base_dir: Path, c
         lines += [f"    {k}: {v}" for k, v in a["audio_clips"].items()]
     cfg_file.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
+    # parametri di naturalezza (ricetta 2026, env-driven): meno over-articulation, bordi stabili.
+    # La bbox FISSA e' iniettata da patch-musetalk.py; qui passiamo margini/parsing/fps.
+    extra = ["--extra_margin", os.environ.get("MUSETALK_EXTRA_MARGIN", "8"),
+             "--parsing_mode", os.environ.get("MUSETALK_PARSING_MODE", "jaw"),
+             "--left_cheek_width", os.environ.get("MUSETALK_CHEEK", "90"),
+             "--right_cheek_width", os.environ.get("MUSETALK_CHEEK", "90"),
+             "--fps", "25"]
     subprocess.run(
         [sys.executable, "-m", "scripts.realtime_inference",
          "--inference_config", str(cfg_file.resolve()),
-         "--batch_size", str(batch), "--version", "v15"],
+         "--batch_size", str(batch), "--version", "v15", *extra],
         cwd=MUSETALK_DIR, check=True,
     )
     # gli output MuseTalk (results/v15/avatars/<avatar_id>/vid_output/<sid>.mp4) si spostano in clips/
@@ -227,7 +236,13 @@ def main() -> None:
                 raw = clips_dir / f"{sid}.raw.mp4"
                 if not raw.exists():
                     raise RuntimeError("output MuseTalk mancante")
-                mux_with_id(raw, wav, sid, out)
+                # NATURALIZZA: gate-silenzi NITIDO (frame base reale dove l'audio e' muto) +
+                # mux audio + tag + NVENC. NIENTE deflicker/sharpen di default (sfocano la bocca,
+                # bocciati dall'utente): la nitidezza viene dalla bbox fissa + GFPGAN al render.
+                pingpong = Path(args.base).with_name(Path(args.base).stem + "-pingpong.mp4")
+                naturalizza(raw, pingpong, wav, sid, out,
+                            deflicker=os.environ.get("NAT_DEFLICKER", "0") == "1",
+                            sharpen=float(os.environ.get("NAT_SHARPEN", "0")))
                 raw.unlink()
 
             problems = validate(sid, out, audio_map[sid]["duration"])

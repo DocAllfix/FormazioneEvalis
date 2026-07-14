@@ -72,8 +72,10 @@ def _nvenc_disponibile() -> bool:
 
 
 def naturalizza(clip: Path, base_pingpong: Path, wav: Path, sid: str, out: Path,
-                rms_db: float = -45.0, min_ms: int = 150, deflicker: bool = True,
-                sharpen: float = 0.8) -> None:
+                rms_db: float = -45.0, min_ms: int = 150, deflicker: bool = False,
+                sharpen: float = 0.0) -> None:
+    """Default = SOLO gate-silenzi (nitido): l'utente ha bocciato deflicker/sharpen (sfocano
+    la bocca). deflicker/sharpen restano opzionali via parametro per casi specifici."""
     wins = silenzi(wav, rms_db, min_ms)
     vf = []
     filtri = f"[0:v][1:v]overlay=enable='{'+'.join(f'between(t,{a:.3f},{b:.3f})' for a,b in wins)}'[g]" if wins \
