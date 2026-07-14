@@ -58,16 +58,16 @@ else
   tar -I "zstd -3" -cf - MuseTalk | rclone rcat "$SNAP"
 fi
 
-echo "== [2] patch bbox FISSA (volto statico: mediana dei coord su tutti i frame)"
+echo "== [2] toolkit da R2 (PRIMA della patch, che lo usa) + asset base"
+mkdir -p /workspace/asset /workspace/toolkit
+rclone copy "$R2/avatar-assets/toolkit/" /workspace/toolkit/
+rclone copy "$R2/avatar-assets/" /workspace/asset/ --include "*.mp4"
+
+echo "== [3] patch bbox FISSA (volto statico: mediana dei coord su tutti i frame)"
 python /workspace/toolkit/patch-musetalk.py || { echo "PATCH FALLITA"; exit 1; }
 
-echo "== [3] sanity import"
+echo "== [4] sanity import + crop di produzione"
 python -c "import torch,mmcv,cv2,numpy,transformers; assert torch.cuda.is_available(), 'CUDA giu'; print('stack ok:', torch.__version__)"
-
-echo "== [4] asset (base) + toolkit da R2 + crop di produzione"
-mkdir -p /workspace/asset /workspace/toolkit
-rclone copy "$R2/avatar-assets/" /workspace/asset/ --include "*.mp4"
-rclone copy "$R2/avatar-assets/toolkit/" /workspace/toolkit/
 # crop di produzione: base ALT, trim dei fade (face-detect crasha sui frame senza volto),
 # quadrato 1080 -> 540 (identico a schermo nella bolla 332px, ~2x piu' veloce end-to-end)
 D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 /workspace/asset/base-alt.mp4)
