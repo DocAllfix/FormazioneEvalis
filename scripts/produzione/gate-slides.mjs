@@ -75,8 +75,13 @@ function stageHtml(inner, bg) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>html,body{margin:0;padding:0;background:${bg};overflow:hidden}
-#stage{width:1660px}#stage>section{margin-left:380px;width:1280px!important}</style></head>
-<body><div id="stage">${inner}</div></body></html>`;
+#stage{position:relative;width:1660px}#stage>section{margin-left:380px;width:1280px!important}
+/* segnaposto della bolla RELATORE nel gutter sinistro (come slide-step.tsx: left 1.5% top 4.5% w 20%) */
+#bolla{position:absolute;left:1.5%;top:4.5%;width:20%;aspect-ratio:16/9;z-index:10;
+  background:rgba(20,15,10,.35);border:2px dashed rgba(255,255,255,.55);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.8);
+  font:600 18px/1 'IBM Plex Sans',sans-serif;letter-spacing:.08em}</style></head>
+<body><div id="stage"><div id="bolla">RELATORE</div>${inner}</div></body></html>`;
 }
 
 const report = { corso: isKit ? "(kit)" : corso, slide: {}, generato: new Date().toISOString() };
@@ -122,15 +127,18 @@ for (const f of files) {
       const nat = Math.ceil(sec.scrollHeight);
       // come il player (slide-html.tsx): canvas = max(720, naturale) — e l'elemento
       // resta visibile anche per le slide "a canvas" (figli tutti absolute, nat≈0)
-      sec.style.height = Math.max(720, nat + 6) + "px";
+      const H = Math.max(720, nat + 6);
+      sec.style.height = H + "px";
+      document.getElementById("stage").style.height = H + "px";
       return Math.max(720, nat);
     });
     if (height == null) probs.push("S6: section non misurabile");
     else if (height > H_FAIL) probs.push(`S6: altezza ${height}px > ${H_FAIL}px (contenuto fuori misura)`);
     else if (height > H_WARN) warns.push(`S6: altezza ${height}px > ${H_WARN}px (testo piccolo a schermo)`);
-    const sec = page.locator("#stage>section");
+    // screenshot dell'INTERA composizione player (gutter+bolla a sinistra + slide), come lo studente
+    const stage = page.locator("#stage");
     // animations:disabled — le animazioni CSS infinite manderebbero in timeout lo screenshot
-    await sec.screenshot({ path: path.join(thumbsDir, `${id}.png`), scale: "css",
+    await stage.screenshot({ path: path.join(thumbsDir, `${id}.png`), scale: "css",
       animations: "disabled", timeout: 15000 });
   } catch (e) {
     probs.push(`S6: render fallito (${String(e).slice(0, 120)})`);
