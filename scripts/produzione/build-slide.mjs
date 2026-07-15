@@ -159,6 +159,63 @@ const LAYOUTS = {
     return shell(inner, C.cream, s.label);
   },
 
+  // evidenza (scura di default): una frase-manifesto grande + contesto opzionale
+  evidenza(s) {
+    const dark = s.dark !== false;
+    const inner =
+      header(s.kicker || "", s.ref || "", dark) +
+      mid(
+        (s.eyebrow ? `<div style="font-family:${F.mono}; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:${C.orange}; margin-bottom:20px;">${esc(s.eyebrow)}</div>` : "") +
+        `<div style="font-family:${F.grot}; font-weight:600; font-size:46px; line-height:1.18; letter-spacing:-.015em; color:${dark ? "#F4EDE1" : C.ink}; max-width:26ch;">${esc(s.titolo)}</div>` +
+        (s.testo ? `<p style="font-size:19px; line-height:1.55; color:${dark ? C.onDarkMuted : C.muted}; margin:26px 0 0; max-width:76ch;">${esc(s.testo)}</p>` : ""),
+      ) +
+      footer(s.footer, dark);
+    return shell(inner, dark ? C.dark : C.cream, s.label);
+  },
+
+  // numeri (cream): callout con numeroni (per le slide che "contano" qualcosa)
+  numeri(s) {
+    const items = s.numeri.map((x) =>
+      `<div style="flex:1;"><div style="font-family:${F.grot}; font-weight:700; font-size:70px; line-height:1; color:${C.orange}; letter-spacing:-.02em;">${esc(x.n)}</div><div style="font-family:${F.grot}; font-weight:600; font-size:20px; color:${C.ink}; margin-top:8px; line-height:1.2;">${esc(x.h)}</div><div style="font-size:14px; color:${C.muted}; margin-top:6px; line-height:1.5;">${esc(x.d || "")}</div></div>`).join("");
+    const inner =
+      header(s.kicker || "", s.ref || "", false) +
+      mid(
+        `<h1 style="font-family:${F.grot}; font-weight:600; font-size:40px; line-height:1.06; letter-spacing:-.015em; margin:0 0 ${s.intro ? "16" : "34"}px; color:${C.ink};">${esc(s.titolo)}</h1>` +
+        (s.intro ? `<p style="font-size:18px; line-height:1.5; color:${C.muted}; margin:0 0 34px; max-width:82ch;">${esc(s.intro)}</p>` : "") +
+        `<div style="display:flex; gap:48px;">${items}</div>`,
+      ) +
+      footer(s.footer, false);
+    return shell(inner, C.cream, s.label);
+  },
+
+  // split (cream): asimmetrico — a sinistra un'affermazione guida, a destra l'elenco
+  split(s) {
+    const items = (s.punti || []).map((p, i) => rigaPunto(s.numerati === false ? "·" : String(i + 1).padStart(2, "0"), p, false)).join("");
+    const inner =
+      header(s.kicker || "", s.ref || "", false) +
+      mid(
+        `<div style="display:grid; grid-template-columns:2fr 3fr; gap:56px; align-items:start;"><div><h1 style="font-family:${F.grot}; font-weight:600; font-size:38px; line-height:1.08; letter-spacing:-.015em; margin:0; color:${C.ink};">${esc(s.titolo)}</h1>${s.lead ? `<p style="font-size:17px; line-height:1.5; color:${C.muted}; margin:18px 0 0;">${esc(s.lead)}</p>` : ""}</div><div>${items}</div></div>`,
+      ) +
+      footer(s.footer, false);
+    return shell(inner, C.cream, s.label);
+  },
+
+  // timeline (cream): linea del tempo orizzontale (storia, evoluzione)
+  timeline(s) {
+    const n = s.tappe.length;
+    const cells = s.tappe.map((t, i) =>
+      `<div style="flex:1; padding-right:${i < n - 1 ? "20px" : "0"};"><div style="font-family:${F.grot}; font-weight:700; font-size:26px; color:${C.orange}; letter-spacing:-.01em;">${esc(t.t)}</div><div style="height:14px; display:flex; align-items:center; margin:10px 0;"><span style="width:11px; height:11px; border-radius:50%; background:${C.orange}; flex:0 0 auto;"></span><span style="flex:1; height:2px; background:${i < n - 1 ? C.line : "transparent"};"></span></div><div style="font-family:${F.grot}; font-weight:600; font-size:17px; color:${C.ink}; line-height:1.2; margin-bottom:6px;">${esc(t.h)}</div><div style="font-size:14px; color:${C.muted}; line-height:1.5;">${esc(t.d || "")}</div></div>`).join("");
+    const inner =
+      header(s.kicker || "", s.ref || "", false) +
+      mid(
+        `<h1 style="font-family:${F.grot}; font-weight:600; font-size:40px; line-height:1.06; letter-spacing:-.015em; margin:0 0 ${s.intro ? "16" : "34"}px; color:${C.ink};">${esc(s.titolo)}</h1>` +
+        (s.intro ? `<p style="font-size:18px; line-height:1.5; color:${C.muted}; margin:0 0 30px; max-width:82ch;">${esc(s.intro)}</p>` : "") +
+        `<div style="display:flex;">${cells}</div>`,
+      ) +
+      footer(s.footer, false);
+    return shell(inner, C.cream, s.label);
+  },
+
   // tabella (cream): titolo + tabella (cols + righe)
   tabella(s) {
     const th = s.cols.map((c) => `<th style="text-align:left; font-family:${F.mono}; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:${C.orange}; padding:0 18px 12px; border-bottom:2px solid ${C.line};">${esc(c)}</th>`).join("");
