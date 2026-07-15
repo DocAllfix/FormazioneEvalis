@@ -14,6 +14,8 @@ const dirIx = process.argv.indexOf("--dir");
 const dir = dirIx !== -1 ? process.argv[dirIx + 1] : null;
 const outIx = process.argv.indexOf("--out");
 const out = outIx !== -1 ? process.argv[outIx + 1] : `${corso}-corso-completo.html`;
+// --pulito: SOLO le slide (nessuna bolla RELATORE, nessun gutter) — deck di sole slide
+const pulito = process.argv.includes("--pulito") || process.argv.includes("--senza-bolla");
 if (!corso || !dir) {
   console.error("Uso: node scripts/produzione/impacchetta-corso.mjs <corso> --dir <dir> [--out file.html]");
   process.exit(2);
@@ -35,13 +37,19 @@ const slides = files.map((f) => {
   const id = f.replace(/\.html$/, "");
   const section = fs.readFileSync(path.join(dir, f), "utf8").trim();
   const m = narr.get(id);
+  const stage = pulito
+    ? `<div class="stage">${section}</div>`
+    : `<div class="stage">${section}<div class="bolla">RELATORE</div></div>`;
   return `<div class="slide" data-id="${esc(id)}">
-    <div class="stage">${section}<div class="bolla">RELATORE</div></div>
+    ${stage}
     <div class="meta"><b>${esc(id)}</b>${m ? " · " + esc(m.titolo) : ""}
       ${m ? `<details><summary>Narrazione (voce avatar)</summary><p>${esc(m.testo)}</p></details>` : ""}
     </div>
   </div>`;
 }).join("\n");
+
+// larghezza del palco: 1660 (gutter+slide+bolla) oppure 1280 (solo slide)
+const STAGE_W = pulito ? 1280 : 1660;
 
 const FONTS = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap";
 const html = `<!doctype html><html lang="it"><head><meta charset="utf-8">
@@ -55,18 +63,17 @@ const html = `<!doctype html><html lang="it"><head><meta charset="utf-8">
  header b{color:#EA580C}
  button{background:#EA580C;border:0;color:#fff;padding:8px 14px;border-radius:8px;font-weight:600;cursor:pointer}
  button:disabled{opacity:.4;cursor:default}
- #wrap{display:flex;justify-content:center;padding:24px}
- .slide{display:none;max-width:1660px;width:100%}
+ #wrap{padding:24px;overflow-x:hidden}
+ .slide{display:none;text-align:center}
  .slide.on{display:block}
- /* composizione player: stage 1660 = gutter 380 + section 1280, bolla nel gutter */
- .stage{position:relative;width:1660px;max-width:100%;aspect-ratio:auto;background:#000;border-radius:10px;overflow:hidden;
-   transform-origin:top left}
- .stage>section{margin-left:380px!important;width:1280px!important}
+ /* palco: ${pulito ? "solo la slide" : "composizione player = gutter + section + bolla"} — inline-block dimensionato sul contenuto, rimpicciolito con zoom in fit() (mai clip) */
+ .stage{position:relative;display:inline-block;text-align:left;background:#000;border-radius:10px}
+${pulito ? "" : ` .stage>section{margin-left:380px!important;width:1280px!important}
  .bolla{position:absolute;left:1.5%;top:4.5%;width:20%;aspect-ratio:16/9;z-index:10;
    background:rgba(20,15,10,.35);border:2px dashed rgba(255,255,255,.55);border-radius:12px;
    display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.8);
    font:600 18px/1 'IBM Plex Sans';letter-spacing:.08em}
- .meta{max-width:1280px;margin:14px auto 0;color:#c9bda9;font-size:14px}
+`} .meta{max-width:1280px;margin:14px auto 0;color:#c9bda9;font-size:14px;text-align:left}
  details{margin-top:8px}summary{cursor:pointer;color:#EA580C}
  details p{white-space:pre-wrap;line-height:1.5;color:#ddd;background:#1c1710;padding:12px;border-radius:8px}
 </style></head><body>
@@ -80,8 +87,10 @@ const html = `<!doctype html><html lang="it"><head><meta charset="utf-8">
  const S=[...document.querySelectorAll('.slide')];let i=0;
  const cnt=document.getElementById('cnt');
  function fit(){const st=S[i].querySelector('.stage');if(!st)return;
-   const avail=Math.min(document.documentElement.clientWidth-48,1660);
-   st.style.transform='scale('+(avail/1660)+')';st.style.height=(st.querySelector('section').offsetHeight)+'px';}
+   st.style.zoom='';                                   // reset per misurare la larghezza reale
+   const natW=Math.max(st.scrollWidth,st.offsetWidth); // contenuto effettivo (include eventuali sbordi)
+   const avail=document.documentElement.clientWidth-48;
+   st.style.zoom = natW>avail ? (avail/natW) : 1;}
  function show(n){S[i].classList.remove('on');i=Math.max(0,Math.min(S.length-1,n));S[i].classList.add('on');
    cnt.textContent=(i+1)+' / '+S.length;prev.disabled=i===0;next.disabled=i===S.length-1;fit();}
  prev.onclick=()=>show(i-1);next.onclick=()=>show(i+1);
