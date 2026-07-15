@@ -1,0 +1,382 @@
+[
+ {
+  "id": "45001_m07_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 45001 — Salute e sicurezza sul lavoro",
+  "kicker": "Modulo 07",
+  "eyebrow": "Emergenze, incidenti e indagine",
+  "titolo": "Quando la normalità si rompe",
+  "testo": "Molte organizzazioni appaiono ordinate finché le attività scorrono senza attriti. La qualità reale si vede quando serve proteggere subito, capire bene, correggere con criterio e imparare senza rifugiarsi in spiegazioni comode. Userai una lente doppia: la risposta all'emergenza protegge le persone nell'immediato; l'indagine lavora sul perché, così da impedire che la stessa vulnerabilità torni domani. Un'organizzazione può evacuare bene e indagare male, o fare relazioni eccellenti e reagire con lentezza. In entrambi i casi, maturità incompleta.",
+  "agenda": [
+   "La preparazione alle emergenze (punto 8.2)",
+   "La catena di incidente e non conformità (punto 10.2)",
+   "Il metodo di indagine e le cause radice",
+   "I quasi-incidenti, imparare prima del danno",
+   "Verificare emergenze e indagini con le evidenze"
+  ]
+ },
+ {
+  "id": "45001_m07_s002",
+  "layout": "punti",
+  "kicker": "Emergenze · 8.2",
+  "titolo": "Dagli scenari alla preparazione",
+  "intro": "Emergenza rispetto a cosa? La norma collega le potenziali situazioni di emergenza ai pericoli già individuati: il piano nasce dalla realtà del sito, non da modelli generici. Uno dei segnali più affidabili di maturità è la coerenza tra analisi dei pericoli e scenari.",
+  "punti": [
+   { "h": "Scenari pertinenti", "d": "Non infiniti, ma coerenti col sito: officina, magazzino refrigerato o cantiere hanno scenari diversi. La differenza è la credibilità del sistema." },
+   { "h": "Quattro elementi insieme", "d": "L'innesco, l'evoluzione nei primi minuti, chi potrebbe essere esposto (anche esterni), quali risorse e limiti il sito avrebbe in quel momento." },
+   { "h": "Il coordinamento tra datori", "d": "Con manutentori, pulizie, trasportatori: piani isolati che si ignorano fanno perdere tempo su chi comanda e chi chiama i soccorsi." },
+   { "h": "La variabile temporale", "d": "Uno scenario di giorno cambia volto di notte o in fermata impianto: meno persone, accessi diversi, più interferenze con esterni." }
+  ]
+ },
+ {
+  "id": "45001_m07_s003",
+  "layout": "punti",
+  "kicker": "Emergenze · 8.2",
+  "titolo": "La risposta pianificata",
+  "intro": "Vale se, nel momento critico, riduce l'incertezza e orienta i primi minuti. Non scrivere molto: far sì che le persone sappiano cosa fare, in quale ordine e con quali priorità. Non è lunga, è leggibile.",
+  "punti": [
+   { "h": "Ruoli chiari", "d": "Chi allerta, chi mette in sicurezza, chi presta primo soccorso, chi verifica le presenze, chi accoglie i soccorritori all'ingresso corretto." },
+   { "h": "Anche cosa non improvvisare", "d": "Un primo intervento si ferma entro le competenze disponibili; oltre quel confine, il compito è proteggere, informare, facilitare l'aiuto esterno." },
+   { "h": "Le priorità nette", "d": "Prima le persone esposte, poi l'allarme, poi il contenimento se sicuro: nessuna attrezzatura vale più dell'integrità di chi è presente." },
+   { "h": "Comunicazioni utili", "d": "Al lavoratore il segnale e il percorso, al visitatore una guida essenziale, ai soccorritori dati precisi: accessi, sostanze, persone da cercare." }
+  ]
+ },
+ {
+  "id": "45001_m07_s004",
+  "layout": "punti",
+  "kicker": "Emergenze · 8.2",
+  "titolo": "Formazione per l'emergenza",
+  "intro": "Sapere che esiste un piano non significa saperlo usare. In emergenza le persone fanno ciò che hanno provato o capito bene, non ciò che è scritto in un file dimenticato. La domanda: saprebbero fare la cosa giusta nel posto giusto?",
+  "punti": [
+   { "h": "Commisurata ai ruoli", "d": "Chi coordina, chi presta primo soccorso, chi lavora in reparto, chi entra come visitatore: non tutti devono sapere tutto, ciascuno ciò che gli serve." },
+   { "h": "I tre piani", "d": "Orientamento iniziale (all'ingresso), addestramento di ruolo (più profondo), richiamo periodico che mantiene viva la prontezza." },
+   { "h": "L'aggiornamento", "d": "Se il sito cambia layout, accessi, materiali o allarmi, la formazione deve seguire: la gestione del cambiamento incrocia l'emergenza." }
+  ]
+ },
+ {
+  "id": "45001_m07_s005",
+  "layout": "punti",
+  "kicker": "Emergenze · 8.2",
+  "titolo": "Prove ed esercitazioni",
+  "intro": "Il valore di un piano emerge quando lo metti alla prova. Se tutto è annunciato e privo di sorprese, il risultato è rassicurante ma povero. Una prova utile fa emergere esitazioni, tempi morti ed errori che sulla carta restano invisibili.",
+  "punti": [
+   { "h": "Il tempo di attivazione", "d": "L'allarme parte davvero quando dovrebbe?" },
+   { "h": "La comprensione", "d": "Le persone capiscono il segnale e il comportamento richiesto?" },
+   { "h": "La praticabilità", "d": "Uscite, percorsi, presidi e punti di raccolta sono realmente utilizzabili?" },
+   { "h": "Il coordinamento", "d": "Chi ha un ruolo lo esercita con chiarezza, senza confusione e senza buchi (incluso il conteggio degli esterni)?" },
+   { "h": "L'apprendimento", "d": "La prova si chiude con osservazioni concrete e seguiti? «Nessuna anomalia rilevata» in siti complessi merita qualche domanda in più." }
+  ]
+ },
+ {
+  "id": "45001_m07_s006",
+  "layout": "punti",
+  "kicker": "Emergenze · 8.2",
+  "titolo": "Dopo prova o evento: valutare",
+  "intro": "Il piano non è un prodotto da archiviare: è un oggetto che apprende. Ogni prova, e ancor più ogni evento reale, dovrebbe lasciare una traccia di miglioramento. Cerca la traiettoria tra prova, valutazione e modifica concreta.",
+  "punti": [
+   { "h": "La tempestività", "d": "L'allarme è partito in tempo? Il primo aiuto è arrivato rapidamente? La chiamata ai soccorsi è stata chiara e senza esitazioni?" },
+   { "h": "L'efficacia", "d": "Le persone hanno fatto la cosa giusta, nel punto giusto? Il punto di raccolta ha funzionato? La gestione delle presenze era affidabile?" },
+   { "h": "Il coordinamento", "d": "Informazioni, ruoli e priorità hanno circolato bene tra reparti, turni, esterni e responsabili?" },
+   { "h": "L'adeguatezza alle persone reali", "d": "La più trascurata: chi vive il luogo da angolazioni diverse contribuisce; il debriefing immediato coglie ciò che poi si perde." }
+  ]
+ },
+ {
+  "id": "45001_m07_s007",
+  "layout": "punti",
+  "kicker": "Emergenze · 8.2",
+  "titolo": "Informazioni documentate",
+  "intro": "Non raccogliere carta, ma rendere leggibile, tracciabile e utilizzabile il modo in cui l'organizzazione governa le emergenze. Due errori opposti: troppi documenti difficili da consultare, o istruzioni troppo povere.",
+  "punti": [
+   { "h": "Coerenza d'insieme", "d": "Scenari, ruoli, mezzi, comunicazioni, formazione, prove e revisioni devono reggere insieme, anche in documenti diversi." },
+   { "h": "L'accessibilità nel momento utile", "d": "Istruzioni raggiungibili durante un blackout; un autista legge indicazioni immediate, non decine di pagine. Un piano irraggiungibile non sostiene la risposta." },
+   { "h": "Adattamento, non solo esistenza", "d": "Due siti con lo stesso piano identico: la conformità sembra salva, ma la pertinenza è debole. Dopo un cambio del sito, cosa è stato aggiornato?" }
+  ]
+ },
+ {
+  "id": "45001_m07_s008",
+  "layout": "confronto",
+  "kicker": "Incidenti · 10.2",
+  "titolo": "La catena parte dalla reazione",
+  "intro": "Non una pratica isolata, ma una filiera: segnalazione, esame del fatto, decisioni, attuazione, follow up. Il primo anello è la reazione tempestiva: prima si protegge, poi si indaga. Distinguere bene i termini orienta anche la verifica.",
+  "a": {
+   "h": "L'incidente",
+   "sub": "Un evento",
+   "punti": [
+    { "d": "Un evento legato al lavoro che causa lesioni e malattie, o che potrebbe causarle: abbraccia anche gli eventi senza danno." },
+    { "d": "Un carrellista che urta un pedone: primo aiuto, area sicura, sospensione se necessario, raccolta delle prime informazioni." }
+   ]
+  },
+  "b": {
+   "h": "La non conformità",
+   "sub": "Una regola disattesa",
+   "punti": [
+    { "d": "Ciò che ci si attendeva da un requisito, un controllo o una regola non è stato rispettato." },
+    { "d": "Un microinterruttore escluso, scoperto prima del danno: non conformità seria anche senza incidente." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m07_s009",
+  "layout": "punti",
+  "kicker": "Incidenti · 10.2",
+  "titolo": "Partecipazione e indagine",
+  "intro": "La parte più istruttiva: sposta l'attenzione dal fatto visibile al sistema che lo ha reso possibile. La norma vuole che avvenga con la partecipazione dei lavoratori. Non stai cercando solo cosa è successo qui, ma perché è potuto succedere e dove potrebbe accadere ancora.",
+  "punti": [
+   { "h": "Oltre le formule povere", "d": "«Disattenzione», «errore umano», «mancato rispetto della procedura» descrivono l'ultimo anello, quasi mai la radice." },
+   { "h": "Le domande vere", "d": "Perché quel passaggio è stato saltato? La procedura era usabile? Il tempo assegnato realistico? C'erano segnali precedenti senza seguito?" },
+   { "h": "La voce di chi lavora", "d": "Chi svolge l'attività conosce vincoli, adattamenti, scorciatoie tollerate che sfuggono ai livelli alti: senza, si legge il lavoro immaginato." },
+   { "h": "Non ricerca del colpevole", "d": "«Fare più attenzione»: chiediti sempre cosa nel sistema avrebbe dovuto aiutare le persone a lavorare bene anche sotto pressione." }
+  ]
+ },
+ {
+  "id": "45001_m07_s010",
+  "layout": "punti",
+  "kicker": "Incidenti · 10.2",
+  "titolo": "Dall'indagine all'azione",
+  "intro": "Qui si decide se l'apprendimento resterà una buona intenzione o diventerà prevenzione concreta. Due errori: chiudere con una misura debole perché rapida, o introdurre una correzione che apre un altro problema.",
+  "punti": [
+   { "h": "Rileggere i rischi", "d": "Rivedere le valutazioni già presenti sui pericoli e sui rischi del lavoro alla luce di ciò che è emerso." },
+   { "h": "La gerarchia dei controlli", "d": "Più l'azione agisce vicino alla fonte, più è robusta: non «state più attenti», ma modificare il percorso, il drenaggio, i flussi." },
+   { "h": "La gestione del cambiamento", "d": "Se per attuare le misure cambi layout o attrezzature, chiediti quali rischi nuovi o modificati stai introducendo." },
+   { "h": "Efficacia e comunicazione", "d": "Cosa è cambiato in concreto? E le informazioni tornano ai lavoratori: chi segnala deve vedere che il sistema reagisce e migliora." }
+  ]
+ },
+ {
+  "id": "45001_m07_s011",
+  "layout": "punti",
+  "kicker": "Incidenti · 10.2",
+  "titolo": "Segnalazione efficace",
+  "intro": "La qualità del processo dipende da quanto presto i fatti arrivano alla luce. Se la segnalazione è lenta o temuta, l'organizzazione perde informazioni proprio mentre il pericolo è ancora governabile. La velocità, qui, è prevenzione.",
+  "punti": [
+   { "h": "Far emergere presto", "d": "Un incidente, una non conformità o una situazione pericolosa, con un canale semplice, accessibile anche a turnisti e appaltatori." },
+   { "h": "Attivare il contenimento", "d": "Senza attendere procedure troppo lente o il superiore giusto: conservare i dati essenziali prima che memoria e contesto cambino." },
+   { "h": "Fatto, non causa", "d": "Chi segnala descrive cosa ha visto, dove, quando; se il modulo costringe subito a spiegare la causa, arrivano formule premature." },
+   { "h": "Il segnale culturale", "d": "Poche segnalazioni non sono sempre un buon segno: a volte la rete non pesca nulla, non che il mare sia tranquillo." }
+  ]
+ },
+ {
+  "id": "45001_m07_s012",
+  "layout": "punti",
+  "kicker": "Incidenti · 10.2",
+  "titolo": "Dal caso singolo al sistema",
+  "intro": "La tentazione è richiudere l'evento nel punto in cui è comparso. La norma chiede di capire se incidenti o non conformità simili si siano già verificati o possano verificarsi altrove: dalla correzione locale alla prevenzione sistemica. La domanda: quanto è replicabile la vulnerabilità?",
+  "punti": [
+   { "h": "In direzione temporale", "d": "È già successo prima, magari con esiti minori o con un quasi-incidente rimasto senza seguito?" },
+   { "h": "In direzione spaziale", "d": "Ci sono altri reparti, altri turni, altri siti con condizioni paragonabili?" },
+   { "h": "In direzione funzionale", "d": "Esistono processi diversi che condividono la stessa debolezza: una manutenzione non governata, un accesso poco controllato?" }
+  ]
+ },
+ {
+  "id": "45001_m07_s013",
+  "layout": "punti",
+  "kicker": "Incidenti · 10.2",
+  "titolo": "Chiudere il ciclo",
+  "intro": "Il processo è maturo solo quando la chiusura è curata quanto l'apertura. Il sistema deve ricordare, spiegare e restituire: se ricorda male non impara, se non restituisce nulla a chi lavora spegne la fiducia nel processo di segnalazione.",
+  "punti": [
+   { "h": "Documentare per imparare", "d": "Cosa è successo, cosa è stato fatto subito, cosa ha mostrato l'indagine sulle cause, quali azioni con quale verifica di efficacia." },
+   { "h": "Comunicare l'operativo", "d": "Chi ha segnalato e chi lavora in condizioni simili deve capire cosa si è deciso e perché: non dettagli inutili, il messaggio giusto." },
+   { "h": "La prova del racconto", "d": "«Abbiamo segnalato, hanno capito e poi hanno modificato davvero»: un indicatore molto forte di credibilità del sistema." },
+   { "h": "Alimentare il riesame", "d": "Il livello decisionale ha bisogno di dati leggibili sugli andamenti: se la base documentale è debole, decide peggio." }
+  ]
+ },
+ {
+  "id": "45001_m07_s014",
+  "layout": "flusso",
+  "kicker": "Metodo di indagine",
+  "titolo": "Separare fatti, ipotesi e giudizi",
+  "intro": "Evitare che l'analisi venga contaminata da fretta o dal desiderio di chiudere il caso. Il metodo non è il modulo: è la disciplina mentale con cui i dati vengono raccolti e interpretati. Un modulo standard con giudizi anticipati produce lo stesso errore, solo più elegante.",
+  "passi": [
+   { "h": "Mettere in sicurezza", "d": "Proteggere le informazioni disponibili: ogni elemento osservato presto vale più di una memoria raccolta tardi." },
+   { "h": "Raccogliere i fatti", "d": "Dati osservabili senza interpretarli troppo presto: posizione, stato dei comandi, condizioni dell'area, persone sul posto." },
+   { "h": "Ricostruire la sequenza", "d": "Rimettere in ordine cosa è accaduto, sposta il fuoco dal colpevole apparente al contesto tecnico e organizzativo." },
+   { "h": "Formulare le ipotesi", "d": "Solo dopo, ipotesi causali da verificare: distinguere ciò che sai con certezza da ciò che devi ancora verificare." }
+  ]
+ },
+ {
+  "id": "45001_m07_s015",
+  "layout": "punti",
+  "kicker": "Metodo di indagine",
+  "titolo": "Ricostruire la sequenza",
+  "intro": "Molti eventi diventano comprensibili solo quando li rimetti in ordine. Nelle interviste, «perché è successo» porta a spiegazioni povere; «fammi capire cosa stava accadendo nei cinque minuti precedenti» aiuta a ricordare fatti, non interpretazioni.",
+  "punti": [
+   { "h": "L'asse del tempo", "d": "Quando è iniziata l'attività, quando è comparsa l'anomalia, quanto è durato il tentativo di gestione, quando il danno." },
+   { "h": "L'asse dello spazio", "d": "Dove si trovavano macchina, persone, materiali, vie di accesso, protezioni, ostacoli e segnali." },
+   { "h": "L'asse delle condizioni", "d": "Quale turno, quale carico di lavoro, quali condizioni ambientali, quale configurazione dell'impianto era attiva." }
+  ]
+ },
+ {
+  "id": "45001_m07_s016",
+  "layout": "flusso",
+  "kicker": "Metodo di indagine",
+  "titolo": "I tre livelli delle cause",
+  "intro": "Mescolarli produce azioni deboli. Una causa merita di essere chiamata radice quando, controllandola seriamente, riduci la probabilità che l'evento si ripeta. Una causa utile è formulata in modo che qualcuno possa agire su di essa: «mancanza di attenzione» non dice cosa fare lunedì mattina.",
+  "passi": [
+   { "h": "Cause immediate", "d": "Ciò che ha reso possibile l'evento nel momento in cui è accaduto: fermarsi qui porta a «state più attenti»." },
+   { "h": "Fattori contributivi", "d": "Condizioni tecniche, organizzative o ambientali che hanno facilitato la deviazione: visibilità, procedura poco usabile, ritmi elevati." },
+   { "h": "Cause radice", "d": "I meccanismi profondi che, se non corretti, lasciano aperta la ripetizione: un layout mai rivisto, una gestione del cambiamento debole." }
+  ]
+ },
+ {
+  "id": "45001_m07_s017",
+  "layout": "punti",
+  "kicker": "Metodo di indagine",
+  "titolo": "La partecipazione dei lavoratori",
+  "intro": "Non un dettaglio politico, ma una scelta tecnica. Il lavoro reale contiene adattamenti e segnali deboli che raramente emergono dai documenti. Se l'indagine resta a pochi specialisti lontani dall'attività, legge il lavoro immaginato, non quello svolto.",
+  "punti": [
+   { "h": "Un contesto non punitivo", "d": "Se la prima sensazione è che si cerchi il colpevole, la qualità delle informazioni si abbassa: le persone si proteggono e semplificano." },
+   { "h": "Dal comportamento al sistema", "d": "Con chi lavora sulla linea emerge che la procedura richiede tempi incompatibili, che un sensore dà falsi allarmi: il quadro diventa sistemico." },
+   { "h": "Non decidere in assemblea", "d": "Chi conosce il processo contribuisce alla ricostruzione, alla lettura delle condizioni e alla praticabilità delle azioni." },
+   { "h": "Il circolo virtuoso", "d": "Quando le persone vedono che il contributo entra nel miglioramento, aumenta la disponibilità a segnalare: l'indagine riceve più informazioni." }
+  ]
+ },
+ {
+  "id": "45001_m07_s018",
+  "layout": "punti",
+  "kicker": "Metodo di indagine",
+  "titolo": "Raccogliere le evidenze",
+  "intro": "Non basta avere buone intenzioni: raccogliere evidenze in modo coerente e tempestivo. Il valore sta nell'incrocio fra le fonti. Le incongruenze non vanno cancellate in fretta: spesso indicano una differenza tra pratica reale e prescrizione ufficiale.",
+  "punti": [
+   { "h": "Il sopralluogo", "d": "Stato dell'area, accessi, visibilità, protezioni, disposizione dei materiali: vedere ciò che potrebbe sparire presto nel ripristino." },
+   { "h": "Le interviste", "d": "«Raccontami cosa stavi facendo poco prima» genera dati; «perché non hai seguito la procedura» genera difesa. Partire da chi era più vicino ai fatti." },
+   { "h": "I documenti", "d": "Confrontare il lavoro previsto con quello reale, non chiudere subito la discussione; conservare cosa è visto, riferito e dedotto." }
+  ]
+ },
+ {
+  "id": "45001_m07_s019",
+  "layout": "punti",
+  "kicker": "Metodo di indagine",
+  "titolo": "Gli errori tipici",
+  "intro": "Producono rapporti apparentemente ordinati ma poco utili a prevenire la ripetizione. Paradossalmente, il rapporto che ammette di non sapere tutto è spesso più affidabile di quello che spiega tutto con troppa sicurezza.",
+  "punti": [
+   { "h": "Il colpevolismo veloce", "d": "L'evento è complesso, ma il rapporto si chiude su «disattenzione»: descrive l'ultimo gesto, non perché il sistema non l'ha impedito." },
+   { "h": "La raccolta povera", "d": "Si intervista poco, si osserva tardi, si perdono dettagli; poi si deduce molto su una base troppo fragile." },
+   { "h": "Correzione o azione correttiva", "d": "Si rimette a posto ciò che era fuori posto e si dichiara chiuso, ma il meccanismo che ha generato l'evento resta intatto." },
+   { "h": "La genericità e la non verifica", "d": "«Formare di nuovo, sensibilizzare» senza toccare layout o manutenzione; e nessuno controlla se l'azione ha ridotto il rischio." },
+   { "h": "L'indagine interrotta", "d": "Il responsabile cambia ruolo, il fascicolo resta a metà: il processo dipendeva da una persona, non da una responsabilità." },
+   { "h": "L'incertezza non tollerata", "d": "Alcuni eventi restano parzialmente spiegati: un sistema maturo lo dichiara e adotta misure prudenziali, uno immaturo chiude col comodo." }
+  ]
+ },
+ {
+  "id": "45001_m07_s020",
+  "layout": "definizione",
+  "kicker": "Quasi-incidenti",
+  "eyebrow": "Un incidente senza lesioni",
+  "titolo": "Perché valgono oro",
+  "definizione": "Un evento che non ha prodotto danno, o non lo ha prodotto per puro margine favorevole, ma ha mostrato che il sistema era vicino a un esito peggiore. Per la norma è a tutti gli effetti un incidente, solo senza lesioni: cambia l'esito, non la natura.",
+  "punti": [
+   { "h": "Materiale prezioso", "d": "Informazioni reali sul funzionamento del lavoro senza il prezzo umano di un infortunio serio: la forma più economica di apprendimento." },
+   { "h": "Non è una fortuna da archiviare", "d": "Un carico che cade a pochi centimetri da un pedone non rende buono il controllo: rende solo fortunata quella specifica occasione." },
+   { "h": "Come l'organizzazione ne parla", "d": "Perdite di tempo o segnali utili? Se un evento serio è «un piccolo spavento», il sistema sta già abbassando il segnale." }
+  ]
+ },
+ {
+  "id": "45001_m07_s021",
+  "layout": "punti",
+  "kicker": "Quasi-incidenti",
+  "titolo": "Il segnale forte dal rumore",
+  "intro": "Non ogni anomalia merita lo stesso trattamento. La domanda non è solo se il danno c'è stato, ma quanto l'esito sfavorevole fosse vicino e quanto potesse essere grave. I segnali migliori sono spesso i meno teatrali.",
+  "punti": [
+   { "h": "Il potenziale del danno", "d": "Se l'esito mancato poteva essere severo, la priorità sale subito." },
+   { "h": "La ripetibilità", "d": "Se la stessa condizione può ripresentarsi facilmente, non sei davanti a un caso isolato." },
+   { "h": "La diffusione", "d": "Se quella vulnerabilità esiste anche in altre aree o turni, il valore informativo cresce ancora." }
+  ]
+ },
+ {
+  "id": "45001_m07_s022",
+  "layout": "punti",
+  "kicker": "Quasi-incidenti",
+  "titolo": "Trasformarli in prevenzione",
+  "intro": "Contano spesso più degli infortuni già accaduti: arrivano prima, sono più numerosi, meno deformati dalla difesa. Sono una finestra temporanea sul futuro dell'incidente, aperta prima che qualcuno paghi il prezzo. Servono tre condizioni.",
+  "punti": [
+   { "h": "Una cultura che premia il segnale", "d": "Non l'eroismo silenzioso: se chi racconta un mancato urto teme di essere giudicato, smetterà presto di farlo." },
+   { "h": "La proporzionalità", "d": "Non ogni quasi-incidente richiede la stessa profondità, ma quelli ad alto potenziale devono ricevere attenzione vera." },
+   { "h": "La restituzione", "d": "Chi segnala deve vedere che qualcosa cambia, altrimenti il canale si svuota; dieci quasi-incidenti coerenti raccontano già una storia di sistema." }
+  ]
+ },
+ {
+  "id": "45001_m07_s023",
+  "layout": "punti",
+  "kicker": "Verifica",
+  "titolo": "Leggere registri e piani",
+  "intro": "La prima tentazione è lasciarsi convincere dal documento ben scritto. Leggi piani e registri come ipotesi da confermare sul campo. La domanda: questo materiale aiuterebbe persone reali a reagire bene oggi, in questo sito, in questo turno?",
+  "punti": [
+   { "h": "Il piano parla del sito reale", "d": "Coerente con pericoli, turni, appaltatori, accessi: se potrebbe adattarsi a qualunque stabilimento senza cambiare una riga, la pertinenza è dubbia." },
+   { "h": "La continuità nei registri", "d": "Formazione aggiornata? Prove periodiche rispetto ai rischi? Le revisioni sono collegate a prove, eventi o modifiche del sito?" },
+   { "h": "La qualità delle registrazioni", "d": "Osservazioni concrete o formule sempre rassicuranti? L'assenza totale di criticità è spesso meno credibile di problemi riconosciuti e corretti." },
+   { "h": "Le fratture tra registri", "d": "Un nuovo formato ma non sa indicare il punto di raccolta; numeri aggiornati nel verbale ma superati sulla scheda esposta." }
+  ]
+ },
+ {
+  "id": "45001_m07_s024",
+  "layout": "punti",
+  "kicker": "Verifica",
+  "titolo": "Vedere una simulazione",
+  "intro": "Qui il sistema smette di raccontarsi e comincia a comportarsi. Non limitarti al tempo di evacuazione: segui il filo delle decisioni, non solo il flusso dei corpi. Cerca una prestazione sincera, non teatrale.",
+  "punti": [
+   { "h": "Il segnale e le istruzioni", "d": "Le persone riconoscono il segnale e la priorità iniziale, senza incertezza?" },
+   { "h": "La praticabilità fisica", "d": "Porte, ostacoli, illuminazione, accessi: un'uscita occupata da materiale temporaneo emerge solo nella prova." },
+   { "h": "Il coordinamento", "d": "La gestione delle presenze interne ed esterne: il preposto sa dire se un addetto alle pulizie è già fuori?" },
+   { "h": "Gli esterni nello scenario", "d": "Se sul sito ci sono abitualmente appaltatori ma non compaiono mai nelle prove, stai vedendo una porzione ridotta della realtà." },
+   { "h": "La chiusura della prova", "d": "Le persone parlano apertamente di ciò che non ha funzionato, o tutto si chiude con un commento rassicurante e veloce?" }
+  ]
+ },
+ {
+  "id": "45001_m07_s025",
+  "layout": "punti",
+  "kicker": "Verifica",
+  "titolo": "Interviste efficaci",
+  "intro": "Ti mostrano quanto il sistema sia davvero compreso, non solo formalmente assegnato. «Conosci il piano?» produce un sì poco utile; «se scattasse ora l'allarme, dove andresti e chi controlleresti?» apre una finestra affidabile. Lo scopo non è mettere in difficoltà.",
+  "punti": [
+   { "h": "Domande concrete e situate", "d": "Cercano orientamento operativo, non memoria scolastica: cosa faresti, a chi ti rivolgeresti, quale priorità seguiresti." },
+   { "h": "Ruoli diversi", "d": "Lavoratore, preposto, addetto al primo soccorso, appaltatore, chi gestisce le indagini: se convergono, il sistema ha spessore." },
+   { "h": "La catena, non episodi", "d": "A chi segnala cosa accade dopo; a chi indaga come distingue fatti e cause; a chi subisce l'azione se la ritiene praticabile." },
+   { "h": "L'arte della variante", "d": "Se manca il preposto? Se l'uscita è chiusa? Se l'appaltatore è solo? Le varianti mostrano quanto il processo sia interiorizzato." }
+  ]
+ },
+ {
+  "id": "45001_m07_s026",
+  "layout": "punti",
+  "kicker": "Verifica",
+  "titolo": "Verificare un caso chiuso",
+  "intro": "Prendi un caso dichiarato chiuso e segui tutta la traiettoria, dal primo report alla prova di efficacia. La domanda finale: se domani si ripresentasse una condizione simile, il sistema sarebbe davvero più forte di prima?",
+  "punti": [
+   { "h": "La catena completa", "d": "La segnalazione descrive il fatto? La reazione è rintracciabile? L'indagine distingue fatti e interpretazioni? Le cause vanno oltre il sintomo?" },
+   { "h": "La profondità delle cause", "d": "«Operatore non conforme» è debole; mostrare che la procedura non era applicabile e che il guasto aveva normalizzato l'intervento cambia tutto." },
+   { "h": "La prova di efficacia", "d": "Molti scrivono «azione completata» e chiudono; cerca la prova che qualcosa è cambiato: meno inceppamenti, nuovo metodo osservato sul campo." },
+   { "h": "Tempi e comunicazione", "d": "Un evento serio analizzato tardi perde affidabilità; e il fascicolo mostra se i lavoratori interessati sono stati informati." }
+  ]
+ },
+ {
+  "id": "45001_m07_s027",
+  "layout": "punti",
+  "kicker": "Verifica",
+  "titolo": "Triangolare le evidenze",
+  "intro": "La verifica robusta nasce dal confronto disciplinato tra documenti, osservazioni, interviste e risultati. Nessuna singola evidenza grida disastro, ma la convergenza degli scarti mostra un problema sistemico. Alcuni segnali deboli sono molto utili.",
+  "punti": [
+   { "h": "Sicurezza dichiarata, incertezza reale", "d": "La discrepanza stabile tra ciò che i documenti affermano e l'incertezza operativa delle persone." },
+   { "h": "La perfezione sospetta", "d": "Documenti sempre positivi in contesti che dovrebbero generare almeno qualche criticità osservata e corretta." },
+   { "h": "La ripetizione mascherata", "d": "Episodi simili con cause apparentemente sempre nuove: le indagini precedenti probabilmente non sono andate in profondità." },
+   { "h": "La dipendenza da individui", "d": "Se il processo regge solo perché due persone sanno tutto, e non perché il sistema è robusto, la vulnerabilità resta alta." }
+  ]
+ },
+ {
+  "id": "45001_m07_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 07",
+  "modNum": "07",
+  "titolo": "Reagire bene, capire meglio, imparare prima",
+  "punti": [
+   { "h": "La preparazione alle emergenze", "d": "Scenari pertinenti, ruoli chiari, formazione utile, prove sincere, revisione dopo prove o eventi, documentazione accessibile." },
+   { "h": "La catena del 10.2", "d": "Reagire, contenere, indagare, determinare le cause, cercare similitudini, agire secondo la gerarchia, verificare l'efficacia." },
+   { "h": "Il metodo di indagine", "d": "Separare fatti e giudizi, ricostruire la sequenza, distinguere cause immediate, contributive e radice, ascoltare il lavoro reale." },
+   { "h": "I quasi-incidenti", "d": "Imparare prima del danno: un quasi-incidente ad alto potenziale è un'occasione da usare, non una fortuna da archiviare." },
+   { "h": "La verifica", "d": "Registri, piani, simulazioni, interviste, fascicoli e campo devono convergere; gli scarti non si coprono, si capiscono." },
+   { "h": "Registrare o migliorare", "d": "Un'organizzazione amministrativa registra; una che migliora trasforma il fatto in apprendimento." }
+  ],
+  "prossimo": {
+   "modulo": "08",
+   "titolo": "Valutazione delle prestazioni SSL",
+   "testo": "Monitoraggio, analisi e riesame rendono misurabile ciò che hai imparato a leggere nei fatti."
+  }
+ }
+]
