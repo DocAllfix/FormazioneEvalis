@@ -1,0 +1,417 @@
+[
+ {
+  "id": "27001_m03_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 3",
+  "eyebrow": "Contesto, leadership e pianificazione",
+  "titolo": "Dove il sistema prende forma",
+  "testo": "Impari a capire se il sistema nasce da una lettura seria della realtà, oppure da un documento elegante ma scollegato dal lavoro quotidiano. Il problema raramente è una procedura mancante: più spesso è un sistema scritto bene, ma appoggiato sul vuoto. Otto parole da riconoscere, collegare e mettere alla prova — se sono solide, il sistema respira; se sono deboli, tutto il resto traballa.",
+  "agenda": [
+   "Contesto 4.1 e parti interessate 4.2",
+   "Campo di applicazione 4.3: il perimetro reale",
+   "SGSI 4.4: dal perimetro al sistema che lavora",
+   "Leadership 5.1, politica 5.2, ruoli e autorità 5.3",
+   "Obiettivi 6.2 e pianificazione delle modifiche 6.3"
+  ]
+ },
+ {
+  "id": "27001_m03_s002",
+  "layout": "punti",
+  "kicker": "Contesto · 4.1",
+  "titolo": "Leggere la realtà prima di scrivere il sistema",
+  "intro": "Non una descrizione generica del settore né un elenco da brochure: i fattori esterni e interni che contano per le finalità dell'organizzazione e influenzano la capacità del sistema di raggiungere i risultati attesi. Il contesto non è sfondo: è materia operativa.",
+  "punti": [
+   { "h": "I fattori esterni", "d": "Mercato, clienti, fornitori critici, evoluzione tecnologica, requisiti regolatori, vincoli territoriali, dipendenza da infrastrutture, disponibilità di competenze." },
+   { "h": "I fattori interni", "d": "Struttura, processi, cultura, responsabilità, formalizzazione, maturità tecnica, centralizzazione, sedi remote, collaborazione tra funzioni." },
+   { "h": "Il legame, non le liste", "d": "Se il contesto parla di dipendenza da terzi, ti aspetti attenzione alle interfacce; se parla di crescita veloce, meccanismi per incorporare nuove attività. Quando la coerenza manca, è stato preparato per adempiere." },
+   { "h": "Il cambiamento climatico", "d": "Il punto 4.1 chiede una valutazione esplicita sulla sua rilevanza in quel caso concreto. Non diventa automaticamente il tema dominante: conta la qualità del ragionamento, non una risposta standard." }
+  ]
+ },
+ {
+  "id": "27001_m03_s003",
+  "layout": "flusso",
+  "kicker": "Contesto · 4.1",
+  "titolo": "Dai fattori alle scelte",
+  "intro": "Capire il contesto è il primo passo. Il secondo, quello rivelatore, è vedere se questa comprensione guida scelte concrete. Tre qualità più utili di un documento lungo e ben impaginato. E il contesto non è una fotografia eterna: se non segue i cambiamenti, non può orientare nulla.",
+  "passi": [
+   { "h": "Selettiva", "d": "Non un inventario infinito. Se reputazione del brand, arredi degli uffici, traffico cittadino ed evoluzione normativa stanno sullo stesso piano, manca il filtro." },
+   { "h": "Motivata", "d": "Non basta dire che un fornitore è critico: devi vedere il nesso. L'espansione in nuovi Paesi aumenta complessità, differenze contrattuali, requisiti locali, dipendenza da partner." },
+   { "h": "Con conseguenze", "d": "Segui un fattore lungo il sistema come un filo: la dipendenza da un outsourcer dovrebbe portarti al perimetro, alla leadership, agli obiettivi. Se il filo si spezza subito, il contesto è rimasto isolato." }
+  ]
+ },
+ {
+  "id": "27001_m03_s004",
+  "layout": "punti",
+  "kicker": "Parti interessate · 4.2",
+  "titolo": "Chi conta davvero per il sistema",
+  "intro": "Individuare quelle rilevanti, comprenderne i requisiti pertinenti, e stabilire quali di questi vengono gestiti attraverso il sistema. La parola chiave è rilevanti: non tutti pesano allo stesso modo.",
+  "punti": [
+   { "h": "Chi può esserci", "d": "Clienti, dipendenti, fornitori strategici, partner, proprietari, autorità, società del gruppo, assicuratori, chi gestisce infrastrutture condivise. Ma la lista non basta." },
+   { "h": "Quali requisiti portano", "d": "Espliciti: clausole contrattuali, leggi, capitolati, livelli di servizio, obblighi di notifica. O aspettative meno formalizzate, purché l'organizzazione le consideri pertinenti." },
+   { "h": "La scelta consapevole", "d": "Non tutti i requisiti esistenti devono essere gestiti attraverso il sistema, ma dev'esserci una decisione su quali vi rientrano. Un buon punto di verifica." },
+   { "h": "Come avete deciso?", "d": "La risposta non dev'essere accademica: chi impone requisiti di sicurezza, da chi dipende l'erogazione, a chi un incidente causerebbe impatto. Conta la logica, non il formato." }
+  ]
+ },
+ {
+  "id": "27001_m03_s005",
+  "layout": "confronto",
+  "kicker": "Parti interessate · 4.2",
+  "titolo": "Requisiti legali e contrattuali",
+  "intro": "Diversi per origine, ma con una caratteristica comune: se influenzano la sicurezza delle informazioni, non possono restare sullo sfondo. Due errori opposti: includere tutto senza criterio, creando un sistema gonfio di promesse ingestibili; o escludere proprio ciò che incide su riservatezza, integrità e disponibilità. Un buon sistema è selettivo ma non evasivo.",
+  "a": {
+   "h": "Requisiti legali",
+   "sub": "Valgono perché una fonte obbligatoria li impone",
+   "punti": [
+    { "d": "Leggi, regolamenti, direttive o altre prescrizioni obbligatorie." },
+    { "d": "Protezione dei dati, conservazione, continuità dei servizi, segnalazione di incidenti, obblighi verso autorità." },
+    { "d": "Non possono essere trattati come questione separata dalla sicurezza delle informazioni." },
+    { "d": "Dove si vede la presa in carico? Nel perimetro, negli obiettivi, nelle responsabilità, nei criteri di priorità." }
+   ]
+  },
+  "b": {
+   "h": "Requisiti contrattuali",
+   "sub": "Valgono perché l'organizzazione li ha accettati",
+   "punti": [
+    { "d": "Impegni assunti con clienti, fornitori, partner o società del gruppo." },
+    { "d": "Tempi di risposta, disponibilità minima, segregazione degli accessi, vincoli su subfornitura, tracciabilità." },
+    { "d": "La clausola di notifica entro poche ore non nasce da una legge, ma se il sistema la ignora la debolezza è reale." },
+    { "d": "La frammentazione: il legale conosce le leggi, il commerciale i contratti, l'IT le piattaforme — e nessuno governa l'insieme." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m03_s006",
+  "layout": "punti",
+  "kicker": "Campo di applicazione · 4.3",
+  "titolo": "Il perimetro senza autoinganni",
+  "intro": "Determinare confini e applicabilità del sistema. Un perimetro maturo non separa soltanto: spiega connessioni, dipendenze e punti di contatto. La domanda più rivelatrice: se si verifica un incidente rilevante appena fuori dal perimetro dichiarato, in che modo il sistema ne risente?",
+  "punti": [
+   { "h": "Il contesto", "d": "I fattori interni ed esterni rilevanti. Se una banca digitale dichiara un perimetro limitato alla sede amministrativa, capisci subito che qualcosa non torna." },
+   { "h": "I requisiti pertinenti", "d": "Quelli delle parti interessate. Il perimetro deve tenerne conto, non ignorarli per comodità di gestione." },
+   { "h": "Interfacce e interdipendenze", "d": "Tra attività proprie e attività di altre organizzazioni. È qui che emergono gli errori più seri: molti sistemi diventano vaghi dove iniziano le dipendenze da terzi." },
+   { "h": "Documentato e vivo", "d": "Non può vivere nella testa di chi gestisce il sistema. «Tutti i processi rilevanti per la sicurezza», senza precisazioni, nasconde più problemi di quanti ne risolva." }
+  ]
+ },
+ {
+  "id": "27001_m03_s007",
+  "layout": "punti",
+  "kicker": "Campo di applicazione · 4.3",
+  "titolo": "Dove il perimetro incontra il mondo reale",
+  "intro": "Definire un perimetro è facile quando immagini l'organizzazione come un'isola. Quasi nessuna lo è. Un'interfaccia è un punto di relazione; un'interdipendenza è un legame per cui il risultato di un'attività dipende da un'altra. Spesso convivono.",
+  "punti": [
+   { "h": "L'e-commerce che tace", "d": "Include web, ordini e assistenza; ma i pagamenti sono di un partner, il magazzino di un outsourcer, il monitoraggio è centralizzato di gruppo. Fuori dal controllo diretto, non fuori dalla realtà del sistema." },
+   { "h": "Non tutto dev'essere dentro", "d": "Ma le interfacce vanno comprese, dichiarate e presidiate: servizi esterni rilevanti, flussi informativi, responsabilità distribuite, canali di escalation, obblighi contrattuali." },
+   { "h": "Il test del processo", "d": "Segui un ticket critico da inizio a fine: chi riceve, chi accede ai dati, chi interviene, quali terzi. Se incontri attività esterne decisive ma invisibili, hai trovato una debolezza." },
+   { "h": "Anche decisionali", "d": "Una filiale può dipendere dalla capogruppo per policy, budget, approvazione fornitori. Se il sistema locale finge autonomia completa, descrive una realtà semplificata." }
+  ]
+ },
+ {
+  "id": "27001_m03_s008",
+  "layout": "punti",
+  "kicker": "Campo di applicazione · 4.3",
+  "titolo": "Il perimetro cosmetico",
+  "intro": "L'errore ricorre con tale frequenza da meritare un nome proprio: il campo disegnato per apparire pulito e governabile, ma costruito lasciando fuori proprio le aree che generano dipendenze ed esposizioni. Non sempre è deliberato — il risultato è lo stesso.",
+  "punti": [
+   { "h": "I segnali", "d": "Include una funzione tecnica ma esclude acquisti e contrattualistica che ne guidano le priorità. O una sede ma non le piattaforme senza cui quella sede non lavora." },
+   { "h": "La teleassistenza", "d": "Include solo chi amministra gli applicativi interni; fuori il contact center, il fornitore di connettività, chi definisce gli accordi, chi autorizza gli accessi d'emergenza." },
+   { "h": "Il criterio guida", "d": "Un campo può essere limitato, ma non ingannevole. Se escludi una parte rilevante, devi saper spiegare perché e mostrare come ne gestisci l'interfaccia." },
+   { "h": "Il test degli incidenti", "d": "Gli eventi che mettono sotto stress l'organizzazione stanno dentro il perimetro o ai margini? Se copre bene solo attività tranquille, c'è un problema di impostazione." }
+  ]
+ },
+ {
+  "id": "27001_m03_s009",
+  "layout": "cards",
+  "kicker": "Campo di applicazione · 4.3",
+  "titolo": "Un perimetro credibile",
+  "intro": "La norma richiede che sia disponibile come informazione documentata: una base formale che non esaurisce il lavoro. Leggi la documentazione come una mappa da verificare sul terreno, non come una prova autosufficiente.",
+  "cards": [
+   { "h": "Chiarezza", "d": "Attività, sedi, servizi, funzioni e rapporti con l'esterno devono emergere leggibili, senza dover interpretare troppe allusioni." },
+   { "h": "Coerenza", "d": "Se il contesto segnala dipendenza da terzi o requisiti contrattuali impegnativi, questi elementi devono trovare spazio nel modo in cui il perimetro è formulato." },
+   { "h": "Esclusioni tracciabili", "d": "Se qualcosa resta fuori, dev'essere chiaro perché e con quali conseguenze governate." },
+   { "h": "Aderenza operativa", "d": "Chi lavora dentro il sistema deve riconoscere quella descrizione come realistica. Se responsabile SGSI, IT, operations e commerciale danno versioni divergenti, hai un segnale." }
+  ]
+ },
+ {
+  "id": "27001_m03_s010",
+  "layout": "flusso",
+  "kicker": "Il primo blocco",
+  "titolo": "La catena dei primi tre pezzi",
+  "intro": "Separati sembrano temi diversi: in realtà formano una catena logica precisa. Se uno è debole, anche gli altri tendono a deformarsi. La domanda guida: riesci a vedere il filo, o senti tre racconti separati che non si toccano mai?",
+  "passi": [
+   { "h": "Il contesto", "d": "Ti dice in quale realtà il sistema deve funzionare: quali fattori influenzano davvero la capacità di raggiungere i risultati attesi." },
+   { "h": "Le parti interessate", "d": "Ti dicono a chi e a quali requisiti pertinenti il sistema deve rispondere. Impediscono al sistema di parlare solo di sé stesso." },
+   { "h": "Il campo di applicazione", "d": "Traduce tutto in un perimetro operativo: confini chiari, applicabilità concreta, interfacce e dipendenze dichiarate. Se include solo lo sviluppo mentre il contesto parla di dipendenza dal cloud, la catena si è spezzata." }
+  ]
+ },
+ {
+  "id": "27001_m03_s011",
+  "layout": "flusso",
+  "kicker": "SGSI · 4.4",
+  "titolo": "Dal perimetro al sistema che lavora",
+  "intro": "L'SGSI non coincide con un fascicolo, una politica o una cartella ben ordinata: quelle sono tracce, non il sistema. Il sistema esiste quando attività, decisioni, responsabilità, controlli, comunicazioni e riesami si collegano in modo comprensibile.",
+  "passi": [
+   { "h": "Stabilire", "d": "La progettazione iniziale: quali processi serviranno, come interagiranno, quali informazioni documentate, quali ruoli e con quale logica." },
+   { "h": "Attuare", "d": "Non basta che una procedura esista: viene usata davvero, orienta comportamenti, si inserisce nei processi reali?" },
+   { "h": "Mantenere", "d": "Un sistema che funziona solo nei mesi vicini alla verifica non è mantenuto: è riattivato a intermittenza." },
+   { "h": "Migliorare con continuità", "d": "Non una struttura statica: una costruzione che apprende dagli scarti, dai cambiamenti e dai risultati. Se il presidio regge solo grazie a un referente instancabile, è una fragilità mascherata." }
+  ]
+ },
+ {
+  "id": "27001_m03_s012",
+  "layout": "punti",
+  "kicker": "Leadership · 5.1",
+  "titolo": "Quando la direzione dà forma al sistema",
+  "intro": "Non approvazioni di rito né sostegno simbolico: la norma richiede che la direzione dimostri leadership e impegno. È una delle aree più rivelatrici, perché distingue chi tratta la sicurezza come parte delle scelte aziendali da chi la relega a progetto laterale.",
+  "punti": [
+   { "h": "Compatibili con la strategia", "d": "Politica e obiettivi devono esistere ed essere compatibili con gli indirizzi strategici: non copiati da modelli generici. La sicurezza accompagna la strategia, non la insegue in ritardo." },
+   { "h": "Integrazione nei processi", "d": "I requisiti devono entrare nei processi con cui si lavora davvero. Se attivi fornitori in tempi rapidi, si vede nel processo acquisti — non in un documento di sicurezza." },
+   { "h": "Decisioni, non dichiarazioni", "d": "Se un progetto redditizio comporta rischi evidenti, la leadership autentica definisce condizioni, assegna risorse, chiede evidenze e accetta tempi realistici." },
+   { "h": "Sponsorship ≠ leadership", "d": "Sponsorship è approvare, sostenere, firmare. Leadership è orientare, integrare, rendere le priorità compatibili col funzionamento del sistema." }
+  ]
+ },
+ {
+  "id": "27001_m03_s013",
+  "layout": "punti",
+  "kicker": "Leadership · 5.1",
+  "titolo": "Risorse, persone, risultati",
+  "intro": "La leadership si osserva in una seconda serie di comportamenti molto concreti. È qui che smette di essere un titolo e diventa comportamento organizzativo osservabile.",
+  "punti": [
+   { "h": "Le risorse", "d": "Non solo budget: tempo, competenze, strumenti, persone, coordinamento, accesso alle decisioni. Molti sistemi falliscono perché caricati su strutture già sature." },
+   { "h": "La comunicazione", "d": "Dire che la sicurezza conta non basta. Se il messaggio implicito è «consegnare comunque, risolvere dopo», le persone imparano presto quale priorità prevale." },
+   { "h": "I risultati attesi", "d": "La direzione deve pretendere di capire se il sistema funziona: chiedere evidenze, porre domande sensate, mantenere attenzione sugli esiti — non misurare ogni dettaglio tecnico." },
+   { "h": "Il sostegno alle persone", "d": "Chiarire aspettative, rimuovere ostacoli, coordinare le aree. Una buona leadership rende possibile il contributo; una debole pretende risultati senza creare le condizioni." },
+   { "h": "Il miglioramento e la linea", "d": "Favorire un ambiente in cui i problemi vengono affrontati, non nascosti. E sostenere gli altri manager perché esercitino leadership nelle proprie aree: l'SGSI non può dipendere solo dal vertice." }
+  ]
+ },
+ {
+  "id": "27001_m03_s014",
+  "layout": "flusso",
+  "kicker": "Politica · 5.2",
+  "titolo": "Il testo breve che deve orientare",
+  "intro": "La politica non serve a decorare il sistema: serve a dargli una direzione esplicita. Quattro elementi apparentemente lineari, che fanno molta differenza quando li guardi sul serio. Non cerchi uno stile elegante: cerchi una funzione di guida reale.",
+  "passi": [
+   { "h": "Appropriata alle finalità", "d": "Parla la lingua dell'organizzazione reale. Se vive di servizi digitali continuativi e la politica parla vagamente di «tutela delle informazioni», qualcosa è fuori fuoco." },
+   { "h": "Quadro per gli obiettivi", "d": "Evita che resti un testo isolato. Se afferma che protezione e continuità sono essenziali per i clienti, è naturale vedere obiettivi su disponibilità, incidenti, fornitori critici." },
+   { "h": "Impegno sui requisiti applicabili", "d": "Tiene insieme regole interne e requisiti esterni, legali e contrattuali. Non solo principi: assunzione di responsabilità su ciò che il sistema deve prendere sul serio." },
+   { "h": "Impegno al miglioramento", "d": "Non una frase obbligatoria in fondo al documento: la dichiarazione che il sistema verrà osservato, corretto e sviluppato nel tempo." }
+  ]
+ },
+ {
+  "id": "27001_m03_s015",
+  "layout": "punti",
+  "kicker": "Politica · 5.2",
+  "titolo": "Documentata, comunicata, disponibile",
+  "intro": "Il testo conta, ma conta altrettanto il modo in cui viene tenuto vivo. Un segnale di maturità: la convergenza tra politica, leadership e comportamento dei manager. Se ciascuno agisce secondo logiche isolate, il documento non è un quadro condiviso.",
+  "punti": [
+   { "h": "Documentata", "d": "Rintracciabile, controllata, riconoscibile. Ma guarda anche se la versione in uso è coerente con l'organizzazione attuale: una politica impeccabile riferita a un'azienda cambiata smette di orientare." },
+   { "h": "Comunicata", "d": "Non solo pubblicata su una intranet poco frequentata. Non serve memoria letterale: serve che chi opera sappia collegare il proprio lavoro agli impegni dichiarati." },
+   { "h": "Disponibile come appropriato", "d": "Non distribuirla a chiunque: renderla accessibile ai soggetti per cui è pertinente. Se parla anche all'esterno, il messaggio dev'essere credibile rispetto a ciò che si può sostenere." }
+  ]
+ },
+ {
+  "id": "27001_m03_s016",
+  "layout": "definizione",
+  "kicker": "Ruoli e autorità · 5.3",
+  "eyebrow": "Chiarezza organizzativa, non burocrazia",
+  "titolo": "Tre parole che non sono sinonimi",
+  "definizione": "Quando il sistema cresce, una delle prime fonti di debolezza è la confusione organizzativa: tutti pensano che qualcun altro se ne stia occupando, o più persone intervengono senza sapere chi decide.",
+  "punti": [
+   { "h": "Il ruolo", "d": "La posizione o funzione nel sistema. Deve essere assegnato in modo chiaro: organigrammi, incarichi, matrici — la forma varia, la chiarezza sostanziale no." },
+   { "h": "La responsabilità", "d": "Ciò che quel ruolo deve presidiare o realizzare. Una responsabilità assegnata ma non compresa resta debole quasi quanto una non assegnata." },
+   { "h": "L'autorità", "d": "Il potere legittimo di decidere, chiedere, approvare, fermare. Si vede nei momenti di attrito: chi può fermare una scorciatoia rischiosa? Chi coordina una risposta interfunzionale?" }
+  ]
+ },
+ {
+  "id": "27001_m03_s017",
+  "layout": "punti",
+  "kicker": "Ruoli e autorità · 5.3",
+  "titolo": "Conformità del sistema e reporting",
+  "intro": "Due attribuzioni molto precise: assicurare che l'SGSI sia conforme ai requisiti, e riferire all'alta direzione sulle prestazioni. Evitano due vuoti pericolosi: il vuoto di governo della conformità e il vuoto di visibilità verso chi decide.",
+  "punti": [
+   { "h": "La regia della conformità", "d": "Non garantire in assoluto che non esista mai una carenza: avere mandato e autorità per presidiare l'allineamento, evitando che ogni funzione proceda senza coerenza complessiva." },
+   { "h": "Il reporting", "d": "Trasforma il sistema in oggetto di decisione, non in materia specialistica relegata ai tecnici. Conta se ciò che viene riferito permette di capire stato, criticità, progressi, limiti." },
+   { "h": "Il nome non basta", "d": "Poche righe generiche una volta l'anno: niente dipendenze dai fornitori, ritardi, problemi di risorse. Formalmente esiste un incaricato; sostanzialmente la direzione resta cieca." },
+   { "h": "Anche la diffusione", "d": "L'alta direzione può decidere chi diffonde nel resto dell'organizzazione le informazioni sull'andamento: l'SGSI deve circolare, non solo salire verso l'alto." }
+  ]
+ },
+ {
+  "id": "27001_m03_s018",
+  "layout": "punti",
+  "kicker": "Obiettivi · 6.2",
+  "titolo": "Da intenzioni generiche a risultati governabili",
+  "intro": "Stabilire obiettivi ai livelli e nelle funzioni pertinenti: non tutti concentrati al vertice, ma là dove il lavoro avviene. Non ogni area ha bisogno degli stessi obiettivi, ma ciascuna funzione rilevante deve contribuire in modo coerente.",
+  "punti": [
+   { "h": "Coerenti con la politica", "d": "Servono a tradurla in movimento, non a riempire una tabella. Se sono scelti solo perché facili da misurare o gradevoli da presentare, il sistema perde coerenza." },
+   { "h": "Misurabili, se praticabile", "d": "La formula evita sia il dogmatismo sia l'alibi. «Migliorare la consapevolezza» è troppo vago da solo: diventa governabile se si decide come leggerne il progresso." },
+   { "h": "In dialogo col rischio", "d": "Devono nascere tenendo presente ciò che l'organizzazione è chiamata a rispettare e ciò che emerge dalle analisi sui rischi e dalle scelte per affrontarli." },
+   { "h": "Vivi", "d": "Monitorati, comunicati, aggiornati come appropriato, disponibili come informazione documentata. Un obiettivo che nessuno controlla non governa nulla." }
+  ]
+ },
+ {
+  "id": "27001_m03_s019",
+  "layout": "flusso",
+  "kicker": "Obiettivi · 6.2",
+  "titolo": "Pianificare come raggiungerli",
+  "intro": "Stabilire buoni obiettivi non basta: come intendete raggiungerli? Ogni obiettivo va trasformato in un piano leggibile. È questo che impedisce agli obiettivi di restare aspirazioni generiche.",
+  "passi": [
+   { "h": "Che cosa sarà fatto", "d": "«Migliorare la gestione degli accessi privilegiati» resta aperto a ogni interpretazione: rivedere criteri, chiarire ruoli, semplificare i passaggi urgenti, introdurre verifiche periodiche." },
+   { "h": "Quali risorse", "d": "Se richiede tempo di persone sature, competenze assenti o coordinamento tra funzioni senza regia, l'insuccesso è alto fin dall'inizio. Un sistema maturo non promette in automatico." },
+   { "h": "Chi è responsabile", "d": "Non un nome su una tabella: il responsabile deve avere autorità sufficiente per coordinare, non soltanto per essere giudicato a posteriori." },
+   { "h": "Entro quando", "d": "Non una data spettacolare: una scansione credibile, con tappe o cicli di verifica. Senza cadenza, l'obiettivo scivola dietro le urgenze quotidiane." },
+   { "h": "Come si valuta l'esito", "d": "Se la revisione dei diritti di accesso è completata ma gli accessi impropri continuano, il risultato va riletto. La valutazione degli esiti distingue il fare dal migliorare." }
+  ]
+ },
+ {
+  "id": "27001_m03_s020",
+  "layout": "punti",
+  "kicker": "Modifiche · 6.3",
+  "titolo": "Cambiare l'SGSI senza perdere governo",
+  "intro": "Un sistema fermo troppo a lungo smette di rappresentare l'organizzazione; uno che cambia in modo impulsivo perde coerenza. Quando serve una modifica, dev'essere eseguita in modo pianificato: il cambiamento è parte normale della vita del sistema.",
+  "punti": [
+   { "h": "Non solo i grandi progetti", "d": "Riorganizzazione, nuovo servizio, nuova sede, cambio fornitore, piattaforma condivisa, variazione contrattuale. Il criterio non è la dimensione: è l'effetto sull'SGSI." },
+   { "h": "Prima, non dopo", "d": "Se apri un canale di servizio e solo dopo ti chiedi quali ruoli e dipendenze siano toccati, lavori in ritardo. Non serve immobilizzare il business: serve non aggiornare l'SGSI per ultimo." },
+   { "h": "L'esternalizzazione", "d": "Il supporto di primo livello affidato all'esterno apre subito domande: come cambia il perimetro? Chi autorizza gli accessi? Come si comunicano gli incidenti? Se arrivano dopo il go-live, è troppo tardi." },
+   { "h": "Non basta il documento", "d": "Riguarda la sequenza delle decisioni: chi è coinvolto, quali impatti si leggono, quali responsabilità cambiano, quali obiettivi e risorse vanno rivisti." }
+  ]
+ },
+ {
+  "id": "27001_m03_s021",
+  "layout": "confronto",
+  "kicker": "Obiettivi · 6.2",
+  "titolo": "Errori frequenti e segnali di maturità",
+  "intro": "Cambiano le aziende e i settori, ma i difetti di impostazione tendono a ripetersi. La domanda utile: se togliessimo questi obiettivi dal sistema, cosa peggiorerebbe davvero?",
+  "a": {
+   "h": "Gli errori",
+   "sub": "Ordine apparente",
+   "punti": [
+    { "d": "L'ornamentale: «rafforzare la sicurezza» suona bene ma non sposta nessuna decisione, non genera priorità." },
+    { "d": "Il disconnesso: formato buono — misura, scadenza, responsabile — ma non nasce dalla politica né dalle aree di maggiore esposizione." },
+    { "d": "L'impossibile: traguardi ambiziosi senza risorse né tempi. Le persone imparano che gli obiettivi servono a fare bella figura." }
+   ]
+  },
+  "b": {
+   "h": "La maturità",
+   "sub": "Governo reale",
+   "punti": [
+    { "d": "Nasce da una tensione reale: i picchi di fine mese generano eccezioni, autorizzazioni affrettate, tracciabilità incompleta." },
+    { "d": "Conversa con contesto, parti interessate e perimetro: da lì discendono azioni, risorse, monitoraggio e riesami." },
+    { "d": "Si aggiorna quando cambia la realtà. Tenerli identici per inerzia non è stabilità: è distanza dall'organizzazione reale." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m03_s022",
+  "layout": "cards",
+  "kicker": "Modifiche · 6.3",
+  "titolo": "Casi tipici e domande giuste",
+  "intro": "La debolezza non sta nelle dichiarazioni: sta nel modo in cui l'organizzazione reagisce quando qualcosa cambia davvero. La domanda non è se l'SGSI subirà modifiche, ma se verranno governate o assorbite in ritardo.",
+  "cards": [
+   { "h": "Il nuovo fornitore critico", "d": "Non riguarda solo il contratto: tocca perimetro delle interfacce, responsabilità, escalation, obiettivi di servizio, monitoraggio di ciò che accade fuori dai confini diretti." },
+   { "h": "La riorganizzazione", "d": "Spostare funzioni non è mai neutro: cambia chi decide, chi riferisce, chi approva eccezioni, chi possiede le informazioni. I ruoli restano chiari? Il reporting resta leggibile?" },
+   { "h": "Il nuovo servizio digitale", "d": "La tentazione è far partire e aggiornare dopo. Nuove informazioni, utenti, orari, dipendenze, requisiti: il rischio non è documentale, è operativo." },
+   { "h": "La fusione", "d": "Cultura, strumenti, ruoli e formalizzazione diversi. Senza pianificazione, l'SGSI continua a raccontare due mondi separati anche a operazione conclusa." }
+  ]
+ },
+ {
+  "id": "27001_m03_s023",
+  "layout": "flusso",
+  "kicker": "La verifica",
+  "titolo": "Leggere l'SGSI come una catena",
+  "intro": "Le debolezze più serie raramente si presentano isolate: si manifestano come incoerenze tra pezzi che, presi singolarmente, sembrano accettabili. Più una risposta è generica, più devi cercare il collegamento con un fatto.",
+  "passi": [
+   { "h": "Il contesto", "d": "Quali fattori influenzano davvero la capacità di ottenere i risultati attesi. Se ti dicono che è aggiornato, chiedi quale cambiamento recente lo ha modificato." },
+   { "h": "Le parti interessate", "d": "Quali soggetti sono rilevanti, quali requisiti portano, quali di quei requisiti sono gestiti dal sistema." },
+   { "h": "Il perimetro", "d": "Tiene conto di quei fattori e requisiti, o sembra costruito per comodità? Le interfacce emergono?" },
+   { "h": "Il sistema in azione", "d": "Processi e interazioni riconoscibili; la leadership visibile in decisioni, risorse, comunicazione, supporto. Se ti dicono che è forte, chiedi quale decisione recente lo dimostra." },
+   { "h": "Politica, obiettivi, modifiche", "d": "La politica orienta gli obiettivi? Gli obiettivi sono credibili? Le modifiche sono pianificate? Quando la sequenza fila, il sistema è coerente." }
+  ]
+ },
+ {
+  "id": "27001_m03_s024",
+  "layout": "confronto",
+  "kicker": "La verifica",
+  "titolo": "Segnali deboli e segnali forti",
+  "intro": "Il problema non è trovare informazioni: di solito ci sono in abbondanza. È capire quali meritano fiducia. Non farti impressionare né da documenti eleganti né da spiegazioni troppo sicure di sé.",
+  "a": {
+   "h": "Segnali deboli",
+   "sub": "Non irrilevanti, ma insufficienti",
+   "punti": [
+    { "d": "Una presentazione fatta bene, una firma sulla politica, il documento intitolato «analisi del contesto»." },
+    { "d": "L'uniformità perfetta delle risposte: tutti ripetono la stessa formula senza adattarla al proprio ruolo." },
+    { "d": "«Monitoriamo, presidiamo, valutiamo» senza esempi. E l'SGSI che vive solo nella testa del referente principale." }
+   ]
+  },
+  "b": {
+   "h": "Segnali forti",
+   "sub": "Connessioni, decisioni, conseguenze",
+   "punti": [
+    { "d": "Il contesto lascia tracce riconoscibili altrove: nei ruoli, negli obiettivi, nella pianificazione delle modifiche." },
+    { "d": "La direzione ha rinviato un'iniziativa perché le condizioni di governo non erano adeguate, o ha messo tempo e competenze su un'area critica." },
+    { "d": "La convergenza ragionata: parole diverse, stesso sistema raccontato da punti di vista coerenti." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m03_s025",
+  "layout": "punti",
+  "kicker": "La verifica",
+  "titolo": "Mini-scenario: assistenza applicativa",
+  "intro": "Un'organizzazione che assiste studi professionali in più città: ha ampliato gli orari, introdotto un partner per il presidio serale, stretto contratti più impegnativi su continuità e comunicazioni rapide. L'SGSI esiste da tempo. Come lo leggi senza fermarti alla superficie?",
+  "punti": [
+   { "h": "Il contesto", "d": "Orari ampliati, partner serale, pressione contrattuale sono fattori che influenzano i risultati attesi. Se descrive ancora una struttura diurna e interna, il sistema insegue una realtà superata." },
+   { "h": "Le parti interessate", "d": "I clienti pesano di più per gli impegni assunti; il partner introduce interfaccia e dipendenza. Se compaiono solo clienti e dipendenti, c'è un ritardo nella comprensione." },
+   { "h": "Il perimetro", "d": "Include solo il team diurno, o rende visibili le interfacce col partner e le dipendenze del nuovo modello? Se resta immobile mentre il servizio cambia, è un segnale importante." },
+   { "h": "La leadership", "d": "Ha adattato risorse e priorità? Ha chiarito chi governa il rapporto col partner? Se trovi solo «la sicurezza è importante», è più dichiarata che praticata." },
+   { "h": "La politica", "d": "Se ignora affidabilità del servizio e rispetto degli impegni, è troppo generica. Non cerchi un testo nuovo ogni mese: cerchi un quadro che regga quando la realtà cambia." },
+   { "h": "Obiettivi e modifiche", "d": "Ti aspetti obiettivi sul nuovo assetto — consegne, urgenze, interfacce — e una storia di modifica pianificata. Se l'SGSI è aggiornato solo dopo, la pianificazione è debole." }
+  ]
+ },
+ {
+  "id": "27001_m03_s026",
+  "layout": "cards",
+  "kicker": "La verifica",
+  "titolo": "Domande guida per non perdere il filo",
+  "intro": "Non formule rigide e non sostituiscono il giudizio: il tuo compito non è raccogliere documenti in ordine sparso, è capire se il sistema ha una logica, se è credibile e se resta in piedi quando l'organizzazione cambia.",
+  "cards": [
+   { "h": "Il contesto", "d": "Quale realtà concreta racconta? Cerca fattori con conseguenze riconoscibili. Se non compaiono da nessuna parte, è descrittivo ma non operativo." },
+   { "h": "Le parti interessate", "d": "Chi conta davvero e quali requisiti pertinenti porta? Un sistema debole confonde rilevanza con vicinanza organizzativa." },
+   { "h": "Il perimetro", "d": "È fedele alla realtà operativa o è stato ristretto per comodità? Può essere limitato, mai ingannevole." },
+   { "h": "La leadership", "d": "Dove la vedi in azione? Scelte su risorse, integrazione, supporto, gestione dei conflitti tra velocità e controllo. Non slogan condivisibili." },
+   { "h": "Politica e obiettivi", "d": "La politica orienta davvero qualcosa? Gli obiettivi muovono il sistema verso ciò che conta, o fotografano attività facili?" },
+   { "h": "Le modifiche", "d": "Il cambiamento è governato prima di produrre effetti disordinati? Se tutto viene spiegato solo dopo, il sistema sta inseguendo." }
+  ]
+ },
+ {
+  "id": "27001_m03_s027",
+  "layout": "flusso",
+  "kicker": "Sintesi",
+  "titolo": "I tre livelli da leggere insieme",
+  "intro": "Il modulo si legge come la costruzione di una sola domanda di fondo: questo SGSI nasce dalla realtà dell'organizzazione, è sostenuto dalla sua direzione, e viene pianificato in modo credibile?",
+  "passi": [
+   { "h": "Realtà", "d": "Contesto, parti interessate e perimetro vero. Il sistema non può essere progettato nel vuoto, e non può parlare solo di sé stesso." },
+   { "h": "Direzione", "d": "Leadership, politica, ruoli e priorità. Non sostegno simbolico: integrazione nei processi, risorse, comunicazione, supporto, miglioramento." },
+   { "h": "Capacità di adattamento", "d": "Obiettivi sensati e pianificazione delle modifiche. Il sistema cambia perché cambia l'organizzazione: se non è governato, diventa una fotografia vecchia." }
+  ]
+ },
+ {
+  "id": "27001_m03_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 3",
+  "modNum": "03",
+  "titolo": "Il telaio del sistema",
+  "punti": [
+   { "h": "Il contesto", "d": "Non una premessa narrativa: la base che spiega perché il sistema è fatto in un certo modo." },
+   { "h": "Le parti interessate", "d": "Contano perché portano requisiti pertinenti, inclusi quelli legali e contrattuali che il sistema deve prendere sul serio." },
+   { "h": "Il campo di applicazione", "d": "Traduce contesto e requisiti in un perimetro credibile, con interfacce e dipendenze leggibili." },
+   { "h": "La leadership", "d": "Non si prova con dichiarazioni di principio: integrazione nei processi, risorse, comunicazione, supporto alle persone, miglioramento continuo." },
+   { "h": "Politica e obiettivi", "d": "Devono parlarsi. E ruoli, responsabilità e autorità servono a evitare zone grigie e decisioni senza padrone." },
+   { "h": "Le modifiche", "d": "Ogni cambiamento rilevante richiede pianificazione, altrimenti l'SGSI rincorre l'organizzazione invece di accompagnarla." }
+  ],
+  "prossimo": {
+   "modulo": "04",
+   "titolo": "Valutazione e trattamento del rischio",
+   "testo": "Il motore dell'SGSI: da contesto e requisiti a criteri, analisi, decisioni e controlli coerenti."
+  }
+ }
+]
