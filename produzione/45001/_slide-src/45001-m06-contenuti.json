@@ -1,0 +1,394 @@
+[
+ {
+  "id": "45001_m06_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 45001 — Salute e sicurezza sul lavoro",
+  "kicker": "Modulo 06",
+  "eyebrow": "Attività operative · Punto 8.1",
+  "titolo": "Dove il rischio si materializza",
+  "testo": "Entri nella parte più concreta del sistema: il lavoro quotidiano. Un sistema vale se guida le attività operative quando la pressione aumenta, i tempi si stringono e le variabili cambiano. È il passaggio dal dire al fare. Due organizzazioni possono avere procedure simili e risultati molto diversi: in una le persone sanno quando fermarsi e le difese reggono anche nei picchi; nell'altra la carta è corretta ma il lavoro procede per accomodamenti successivi. La domanda guida: questo modo di lavorare riduce davvero il rischio, o lo sposta soltanto di posto?",
+  "agenda": [
+   "Il controllo operativo dei processi",
+   "La gerarchia dei controlli, dai gradini forti a quelli deboli",
+   "La gestione del cambiamento",
+   "Approvvigionamento, appaltatori e affidamento all'esterno",
+   "Il cantiere e il reparto come banco di prova"
+  ]
+ },
+ {
+  "id": "45001_m06_s002",
+  "layout": "punti",
+  "kicker": "Controllo operativo",
+  "titolo": "Dai requisiti ai criteri",
+  "intro": "Non un piano generico appeso in bacheca. L'organizzazione deve individuare i processi necessari, farli funzionare e mantenerli. Il cuore è stabilire criteri: come il processo deve svolgersi affinché il risultato sia accettabile anche sul piano SSL. Senza criteri, il processo esiste solo di nome.",
+  "punti": [
+   { "h": "I criteri, non solo l'attività", "d": "Non «la manutenzione deve essere eseguita», ma condizioni, responsabilità, sequenze, autorizzazioni, limiti, competenze, interfacce." },
+   { "h": "Le tre qualità", "d": "Comprensibile da chi lavora, verificabile (osservi se è rispettato), proporzionato al rischio: ordinario diverso da avviamenti e fermi." },
+   { "h": "La variabilità nascosta", "d": "Se i criteri sono affidati alla memoria dei capi, quando cambia la persona cambia il livello di protezione." },
+   { "h": "Gli snodi decisionali", "d": "Chi può fermare il lavoro, chi autorizza una deroga temporanea, quali segnali impongono di riprogrammare l'attività." }
+  ]
+ },
+ {
+  "id": "45001_m06_s003",
+  "layout": "punti",
+  "kicker": "Controllo operativo",
+  "titolo": "Dai criteri all'azione",
+  "intro": "Stabilire criteri è solo l'inizio. Il controllo operativo esiste quando il lavoro resta dentro i confini attesi anche sotto pressione, con persone diverse e piccoli imprevisti. Si riconosce nei fatti osservabili, non nelle intenzioni dichiarate.",
+  "punti": [
+   { "h": "La prova sotto pressione", "d": "Quando il flusso rallenta e il responsabile sollecita: fermano l'impianto come previsto, o infilano una mano dove capita per non perdere tempo?" },
+   { "h": "Il documento utile", "d": "Le informazioni documentate seguono il processo e lasciano tracce credibili; il documento inutile lo imita (firme in serie a fine turno)." },
+   { "h": "La combinazione di evidenze", "d": "Di rado basta una fonte: vedi la barriera, ascolti chi la usa, controlli come viene mantenuta. Quando convergono, il giudizio si rafforza." },
+   { "h": "Stabile nel tempo", "d": "In un'organizzazione matura le condizioni importanti non dipendono dall'operatore più esperto o dal capo più presente: sono incorporate nel processo." }
+  ]
+ },
+ {
+  "id": "45001_m06_s004",
+  "layout": "confronto",
+  "kicker": "Controllo operativo",
+  "titolo": "Adattare il lavoro e coordinare",
+  "intro": "Due elementi che rendono la lettura più concreta. Adattare il lavoro ai lavoratori non è un favore organizzativo, è una scelta di prevenzione: quando il lavoro è costruito contro chi lo esegue, il sistema genera errori, fatica e aggiramenti.",
+  "a": {
+   "h": "Adattare il lavoro",
+   "sub": "Alle persone reali",
+   "punti": [
+    { "d": "Attività, strumenti, ritmi e condizioni compatibili con chi c'è davvero, non un lavoratore teorico." },
+    { "d": "Dimensioni fisiche, cognitive e organizzative; le fasi di apprendimento rivelano se è davvero adattato." }
+   ]
+  },
+  "b": {
+   "h": "Coordinare le interferenze",
+   "sub": "Più datori di lavoro",
+   "punti": [
+    { "d": "Non un incontro iniziale e basta: allineamento continuo tra chi condivide spazio e attività." },
+    { "d": "Il rischio nasce tra un compito e l'altro: ciascuno lavora bene nel suo recinto, nessuno governa i contatti." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m06_s005",
+  "layout": "flusso",
+  "kicker": "Gerarchia dei controlli",
+  "titolo": "L'ordine di preferenza delle misure",
+  "intro": "Quando un pericolo è individuato, non tutte le risposte hanno lo stesso valore. La gerarchia dà un ordine, così da ridurre i rischi in modo robusto e meno fragile. Non una scelta esclusiva: le misure si combinano — il punto è non saltare troppo in fretta ai gradini più bassi.",
+  "passi": [
+   { "h": "Eliminare", "d": "Togliere la fonte del danno: la più forte, perché non dipende dall'attenzione continua." },
+   { "h": "Sostituire", "d": "Con processi, materiali o attrezzature meno pericolosi: si abbassa il rischio prima che il lavoro inizi." },
+   { "h": "Tecnico-progettuali e organizzazione", "d": "Ripari, aspirazione, separazione dei flussi: riducono l'esposizione in modo stabile." },
+   { "h": "Amministrative e formazione", "d": "Procedure, regole, addestramento: il sistema dipende di più dalle persone." },
+   { "h": "Dispositivi di protezione", "d": "L'ultima barriera: utili, ma la zona meno solida della gerarchia." }
+  ]
+ },
+ {
+  "id": "45001_m06_s006",
+  "layout": "definizione",
+  "kicker": "Gerarchia · 1",
+  "eyebrow": "Il gradino più alto",
+  "titolo": "Eliminare il pericolo",
+  "definizione": "Togliere di mezzo la fonte del danno, oppure rimuovere la situazione che rende possibile l'esposizione: se il pericolo non c'è più, il rischio collegato si riduce in modo radicale.",
+  "punti": [
+   { "h": "Non attenuare né presidiare", "d": "Non permessi e DPI per entrare in uno spazio confinato, ma riprogettare lo scarico così che l'ingresso umano non serva più." },
+   { "h": "Spesso sul processo", "d": "Ricevere semilavorati già dimensionati, abbassare le ubicazioni ad alta frequenza: intervenire sul processo, non solo sul compito." },
+   { "h": "Non spostare il pericolo", "d": "Automatizzare una fase ma ignorare l'esposizione durante il cambio contenitore o la manutenzione: il pericolo è cambiato di posto, non sparito." }
+  ]
+ },
+ {
+  "id": "45001_m06_s007",
+  "layout": "definizione",
+  "kicker": "Gerarchia · 2",
+  "eyebrow": "Ancora vicino alla fonte",
+  "titolo": "Sostituire con soluzioni meno pericolose",
+  "definizione": "Cambiare il materiale, l'attrezzatura, l'attività o il processo con qualcosa di meno pericoloso: il pericolo resta in qualche forma, ma si abbassa la sua capacità di produrre danno.",
+  "punti": [
+   { "h": "Non la bravura, la scelta", "d": "Un detergente meno nocivo riduce il rischio perché il materiale è meno pericoloso, non perché gli addetti lo maneggiano meglio." },
+   { "h": "Non alla cieca", "d": "Confrontare profili di rischio e impatti: un prodotto meno tossico può essere più infiammabile o meno efficace." },
+   { "h": "La trappola del cambio marca", "d": "«In cosa la nuova soluzione è meno pericolosa?» Se la risposta non è chiara, non è una vera sostituzione." }
+  ]
+ },
+ {
+  "id": "45001_m06_s008",
+  "layout": "punti",
+  "kicker": "Gerarchia · 3",
+  "titolo": "Misure tecniche e riorganizzazione",
+  "intro": "Un livello molto robusto: il pericolo può restare, ma il sistema riduce il contatto, separa le persone dalle zone pericolose e rende il lavoro meno esposto per impostazione. Non si affida alla memoria del singolo.",
+  "punti": [
+   { "h": "Le misure tecniche", "d": "Ripari interbloccati, aspirazione localizzata, barriere, manipolatori, sensori: la protezione è incorporata nel sistema tecnico." },
+   { "h": "Riorganizzare non è debole", "d": "Separare percorsi di pedoni e carrelli, programmare manutenzioni in finestre di fermo: riduce l'esposizione in modo strutturale." },
+   { "h": "Il sistema aiuta il gesto giusto", "d": "Ausili meccanici e spazi adeguati trasformano un compito gravoso in uno più sicuro: il sistema aiuta il comportamento, non lo raccomanda soltanto." },
+   { "h": "Coerenza con l'uso reale", "d": "Una barriera che ostacola viene bypassata, un'aspirazione scomoda finisce spenta: progettata per il lavoro reale, e confermata da esso." }
+  ]
+ },
+ {
+  "id": "45001_m06_s009",
+  "layout": "punti",
+  "kicker": "Gerarchia · 4",
+  "titolo": "Misure amministrative e formazione",
+  "intro": "Diffusissime, ma spesso sopravvalutate. Funzionano quando le persone le conoscono, le capiscono e riescono ad applicarle nel contesto reale: proprio per questo sono meno robuste di una buona eliminazione o protezione tecnica.",
+  "punti": [
+   { "h": "Cosa comprendono", "d": "Procedure, permessi di lavoro, cartellonistica, turnazioni, check list, supervisione, limitazioni di esposizione, addestramento." },
+   { "h": "Necessarie, non principali", "d": "Se i percorsi sono stretti e la separazione mezzi-pedoni assente, le regole da sole non reggono quando il rischio è significativo." },
+   { "h": "La formazione non elimina", "d": "Chiarisce pericoli e allena comportamenti, ma non tocca la fonte: «facciamo altra formazione» è a volte il gradino più basso applicabile in fretta." },
+   { "h": "Il degrado silenzioso", "d": "Il permesso diventa automatico, la segnaletica si moltiplica fino a non essere vista, la check list si compila per abitudine." }
+  ]
+ },
+ {
+  "id": "45001_m06_s010",
+  "layout": "definizione",
+  "kicker": "Gerarchia · 5",
+  "eyebrow": "Utili, ma ultimi",
+  "titolo": "I dispositivi di protezione individuale",
+  "definizione": "La barriera finale, indossata dal lavoratore: il rischio resta presente nell'ambiente o nel processo. Indispensabili in molte situazioni, ma intrinsecamente più fragili di altri controlli.",
+  "punti": [
+   { "h": "Fragili per natura", "d": "Vanno scelti, disponibili, adatti alla persona, mantenuti, usati per tutto il tempo necessario: basta poco perché l'efficacia si abbassi." },
+   { "h": "Non tutti equivalenti", "d": "Un facciale che appanna gli occhiali, un guanto che riduce la destrezza: anche l'ultimo gradino chiede progettazione e ascolto degli utilizzatori." },
+   { "h": "Non un alibi", "d": "Non devono diventare la scusa per non migliorare il processo; e l'onere dell'ultima barriera cade sulla persona esposta: comfort e durata contano." }
+  ]
+ },
+ {
+  "id": "45001_m06_s011",
+  "layout": "punti",
+  "kicker": "Gestione del cambiamento",
+  "titolo": "Quando il cambiamento mette alla prova",
+  "intro": "Anche una buona misura può perdere efficacia quando il lavoro cambia. Un reparto può essere sicuro oggi e fragile domani, senza alcun evento clamoroso. La gestione del cambiamento non è un rituale: è controllare prima, accompagnare durante, verificare dopo.",
+  "punti": [
+   { "h": "Non solo i grandi progetti", "d": "Modifiche pianificate, temporanee o permanenti: molte deviazioni nascono da soluzioni provvisorie che nessuno tratta come vere modifiche." },
+   { "h": "Allargare lo sguardo", "d": "Non solo «cosa vogliamo modificare», ma chi verrà esposto, dove, quando, con quali nuove interazioni." },
+   { "h": "Anche opportunità", "d": "Un impianto sostituito consente misure migliori, una nuova disposizione separa flussi incompatibili — se lo leggi per tempo." },
+   { "h": "La domanda guida", "d": "La modifica è stata trattata come un progetto da governare, oppure come un fatto da subire?" }
+  ]
+ },
+ {
+  "id": "45001_m06_s012",
+  "layout": "punti",
+  "kicker": "Gestione del cambiamento",
+  "titolo": "Modifiche pianificate: leggere l'impatto",
+  "intro": "Quando una modifica è pianificata, l'organizzazione ha il vantaggio più prezioso: il tempo. Una gestione credibile non aspetta l'avviamento per vedere cosa succede: costruisce prima un quadro realistico degli effetti.",
+  "punti": [
+   { "h": "Non solo l'oggetto tecnico", "d": "Una nuova macchina cambia accessi, ingombri, pulizia, manutenzione, rumore, ritmi, competenze e sequenze." },
+   { "h": "Scomporre in domande", "d": "Dove, chi, con quali attrezzature e tempi; cosa accade in inceppamenti, pulizia, manutenzione: le criticità nascono nelle fasi non ordinarie." },
+   { "h": "I cambiamenti organizzativi", "d": "Sottovalutati perché non portano bulloni: passare a due turni altera manutenzione e supervisione; ridurre l'organico aumenta ritmo e scorciatoie." },
+   { "h": "Coinvolgere presto e verificare", "d": "Chi opera vede ingombri ed eccezioni; prove, avvio graduale e feedback intercettano gli effetti non previsti." }
+  ]
+ },
+ {
+  "id": "45001_m06_s013",
+  "layout": "punti",
+  "kicker": "Gestione del cambiamento",
+  "titolo": "Modifiche non pianificate",
+  "intro": "Molte modifiche arrivano di colpo o emergono come deviazioni. Dire che non era programmata non significa che sia fuori controllo: significa che il controllo deve attivarsi in tempi diversi, spesso più rapidi.",
+  "punti": [
+   { "h": "Il provvisorio che diventa normale", "d": "Una barriera rimossa ieri diventa lo standard entro tre settimane; il provvisorio è tollerato, documentato meno, e si cristallizza." },
+   { "h": "Le tracce fisiche", "d": "Un cavo dove non c'era, un riparo fissato con sistemi di fortuna, un operatore che spiega una procedura diversa da quella in vigore." },
+   { "h": "I quattro movimenti", "d": "Capire cosa è cambiato, valutarne l'impatto, introdurre misure temporanee proporzionate, riportare a condizioni stabili." },
+   { "h": "Sentirsi autorizzati a segnalare", "d": "Se il clima premia solo chi fa andare avanti il lavoro, la modifica non pianificata resta invisibile fino al problema successivo." }
+  ]
+ },
+ {
+  "id": "45001_m06_s014",
+  "layout": "punti",
+  "kicker": "Gestione del cambiamento",
+  "titolo": "Verificare il cambiamento",
+  "intro": "Non cercare una perfezione teorica: cerca coerenza tra decisione, controllo e realtà operativa. Il cambiamento non finisce il giorno dell'avvio — le prime settimane ne sono parte, non un'appendice.",
+  "punti": [
+   { "h": "L'anticipazione", "d": "Qualcuno si è posto domande prima dell'avvio, oppure tutto è stato deciso e comunicato a valle?" },
+   { "h": "L'ampiezza dello sguardo", "d": "La modifica letta solo per l'obiettivo produttivo, o anche per accessi, manutenzione, ritmi, competenze, emergenze, interferenze?" },
+   { "h": "Il coinvolgimento", "d": "Se gli operatori la sentono calata dall'alto, emergono adattamenti informali già nei primi giorni: «all'inizio era diverso, poi ci si è arrangiati»." },
+   { "h": "La traccia specifica", "d": "Non un modulo generico adatto a qualsiasi progetto, ma una traccia specifica, anche sobria, che ha prodotto azioni visibili sul campo." }
+  ]
+ },
+ {
+  "id": "45001_m06_s015",
+  "layout": "punti",
+  "kicker": "Approvvigionamento",
+  "titolo": "Comprare bene è comprare sicuro",
+  "intro": "Non solo costo, tempi e disponibilità. Ciò che acquisti entra nel lavoro quotidiano e ne modifica la tenuta sul piano SSL: l'approvvigionamento non è una funzione neutra, è un punto in cui il rischio si riduce a monte o si introduce silenziosamente.",
+  "punti": [
+   { "h": "Comprare è già scegliere la protezione", "d": "Beni e servizi devono essere coerenti con il modo in cui l'organizzazione governa le attività operative, non solo arrivare in tempo." },
+   { "h": "La compatibilità col contesto", "d": "Una piattaforma inadatta ai corridoi, un detergente che richiede più ventilazione: il problema nasce nella scelta, non nell'uso." },
+   { "h": "I servizi introducono metodi", "d": "Acquistare una manutenzione o una pulizia significa introdurre attrezzature, tempi e persone che agiranno nel tuo contesto reale." },
+   { "h": "La verifica all'arrivo", "d": "Se hai chiesto una soluzione compatibile, qualcuno deve controllare sul campo che quella compatibilità esista davvero." }
+  ]
+ },
+ {
+  "id": "45001_m06_s016",
+  "layout": "punti",
+  "kicker": "Appaltatori",
+  "titolo": "Scegliere con criteri coerenti",
+  "intro": "Quando affidi attività a imprese esterne, la selezione riguarda anche la capacità di operare in modo compatibile con il tuo sistema SSL. Requisiti espliciti, realmente usati nella valutazione, non aggiunti dopo come clausole decorative.",
+  "punti": [
+   { "h": "Criteri sul lavoro reale", "d": "Non generici: riflettono luoghi, vincoli e condizioni in cui l'appaltatore dovrà operare; per lavori in quota o elettrici, un esame più accurato." },
+   { "h": "Le tre dimensioni", "d": "Tecnica (svolgere il lavoro), organizzativa (inserirsi nel sito rispettando vincoli e tempi), culturale (operare dentro regole condivise)." },
+   { "h": "Non solo attestazioni", "d": "Un'impresa può essere formalmente in regola e poco adatta a quel contesto: chiedi come intende lavorare, quali attrezzature, quale esperienza simile." },
+   { "h": "Requisiti come condizioni", "d": "Trasformarli in condizioni chiare di affidamento; ma scriverli non basta: devono ritrovarsi nel coordinamento, negli accessi, nel comportamento." }
+  ]
+ },
+ {
+  "id": "45001_m06_s017",
+  "layout": "punti",
+  "kicker": "Appaltatori",
+  "titolo": "I rischi si muovono in tutte le direzioni",
+  "intro": "Quando un'impresa esterna entra, la domanda non è solo come lavorerà lei in sicurezza, ma come le attività si influenzeranno a vicenda. I rischi non restano chiusi nel perimetro del contratto: le interferenze sono la parte più critica.",
+  "punti": [
+   { "h": "Dall'appaltatore al sito", "d": "Lavori a caldo, sezionamenti, demolizioni: l'impresa non incide solo sui propri lavoratori, ma sul contesto che la ospita." },
+   { "h": "Dal sito all'appaltatore", "d": "Mezzi interni in movimento, reparto rumoroso, urgenze produttive: una parte del rischio nasce dal modo di lavorare dell'ospitante." },
+   { "h": "Verso le altre persone", "d": "Visitatori, autisti, ditte vicine, uffici adiacenti: un percorso di esodo deviato o vapori verso gli uffici vanno oltre il rapporto bilaterale." }
+  ]
+ },
+ {
+  "id": "45001_m06_s018",
+  "layout": "flusso",
+  "kicker": "Appaltatori",
+  "titolo": "Coordinare: prima, durante, dopo",
+  "intro": "Il coordinamento non è un momento singolo, ma un processo che accompagna tutto il lavoro. Molti incidenti avvengono proprio nella coda finale, quando il lavoro è percepito come chiuso e l'attenzione cala.",
+  "passi": [
+   { "h": "Prima del lavoro", "d": "Trasformare informazioni generiche in condizioni chiare: accessi, percorsi, emergenze, permessi, energie, aree interdette, responsabilità." },
+   { "h": "Durante il lavoro", "d": "Mantenere allineamento tra previsto e reale: scambi brevi, presidio delle interfacce, possibilità di fermarsi quando si esce dal perimetro." },
+   { "h": "Dopo il lavoro", "d": "Ripristino dell'area, materiali rimossi, ripari rimessi, barriere tolte, criticità segnalate: la chiusura distingue il coordinamento reale da quello formale." }
+  ]
+ },
+ {
+  "id": "45001_m06_s019",
+  "layout": "punti",
+  "kicker": "Outsourcing",
+  "titolo": "Il processo resta tuo",
+  "intro": "Nell'affidamento all'esterno affidi una funzione o un processo che incide sui risultati attesi del tuo sistema SSL. Il messaggio è netto: delegare l'esecuzione non significa trasferire la responsabilità del governo.",
+  "punti": [
+   { "h": "Aumenta la complessità", "d": "Presentato come semplificazione, allunga la catena decisionale, introduce interfacce e rischia di far perdere sensibilità sui segnali deboli." },
+   { "h": "Controllo proporzionato", "d": "Definire tipo ed estensione del controllo in base a ciò che il processo esternalizzato può generare in rischio e impatto." },
+   { "h": "La chiarezza del confine", "d": "Non per scaricare responsabilità, ma per governare interfacce: chi gestisce accessi, approva modifiche, aggiorna le informazioni sui rischi." },
+   { "h": "Una relazione, non solo ispezione", "d": "Dialogare, condividere aspettative, correggere presto: senza relazione il rapporto si riduce a contestazioni tardive o compromessi silenziosi." }
+  ]
+ },
+ {
+  "id": "45001_m06_s020",
+  "layout": "confronto",
+  "kicker": "Prova di maturità",
+  "titolo": "Approvvigionamento e fornitori esterni",
+  "intro": "Per capire quanto un sistema sia radicato, osserva come gestisce approvvigionamento, appaltatori e outsourcing. Ciò che vedi sul campo è spesso l'effetto finale di decisioni prese molto prima.",
+  "a": {
+   "h": "Il sistema maturo",
+   "sub": "Coerenza a monte",
+   "punti": [
+    { "d": "I criteri SSL compaiono presto; la selezione non è solo prezzo; il coordinamento è preparato, mantenuto e chiuso." },
+    { "d": "I processi affidati all'esterno restano leggibili e governati, non spariscono dietro il contratto." }
+   ]
+  },
+  "b": {
+   "h": "Il sistema debole",
+   "sub": "Correggere a valle",
+   "punti": [
+    { "d": "Si compra prima e si corregge dopo; si sceglie l'impresa più rapida e si scoprono in campo le incompatibilità." },
+    { "d": "Le regole consegnate all'ingresso senza presidiare le interferenze; l'outsourcing usato come schermo." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m06_s021",
+  "layout": "punti",
+  "kicker": "Sul campo",
+  "titolo": "Il cantiere e il reparto come prova",
+  "intro": "Il luogo dove il lavoro avviene davvero è un banco di prova molto onesto: parla anche quando nessuno commenta. Ma evita due errori — fermarti alla facciata, o trasformare ogni dettaglio imperfetto in prova di fallimento generale.",
+  "punti": [
+   { "h": "Osservare relazioni, non oggetti", "d": "Un riparo conta se usato senza ostacolare il compito; un'area segregata conta se i flussi la rispettano nelle urgenze." },
+   { "h": "Il criterio più utile", "d": "Il luogo rende il comportamento corretto più facile di quello scorretto? Se seguire le regole richiede sforzo inutile, il sistema è fragile." },
+   { "h": "I punti di osservazione", "d": "Avvii, cambi turno, manutenzioni, picchi, accessi di imprese esterne, pulizia: più istruttivi della routine tranquilla." },
+   { "h": "La coerenza del linguaggio", "d": "Se responsabili e operatori descrivono il lavoro con parole molto diverse, forse il sistema non è realmente condiviso." }
+  ]
+ },
+ {
+  "id": "45001_m06_s022",
+  "layout": "flusso",
+  "kicker": "Sul campo",
+  "titolo": "Osservare, ascoltare, verificare",
+  "intro": "Non basta guardare, e non basta chiedere. Servono tre fonti che si controllano a vicenda. Quando convergono, il giudizio è solido; quando divergono, hai trovato il punto interessante da approfondire.",
+  "passi": [
+   { "h": "Osservare", "d": "Come il lavoro accade davvero: posture, percorsi, protezioni, reazioni agli imprevisti. La fonte più viva, ma esposta all'effetto presenza." },
+   { "h": "Ascoltare", "d": "Il senso di ciò che vedi: come interpretano il compito, cosa cambia nelle situazioni non ordinarie, cosa li porta a fermarsi." },
+   { "h": "Verificare", "d": "Le informazioni documentate: il documento da solo non dimostra la realtà, il suo valore cresce se coerente con osservazione e colloquio." }
+  ]
+ },
+ {
+  "id": "45001_m06_s023",
+  "layout": "punti",
+  "kicker": "Sul campo",
+  "titolo": "Segnali di allineamento",
+  "intro": "Quando il sistema è davvero presente, non lo riconosci da un solo indizio spettacolare, ma da una serie di segnali coerenti che si confermano a vicenda. L'allineamento non è perfezione estetica: è coerenza operativa.",
+  "punti": [
+   { "h": "Chiarezza delle condizioni", "d": "Le persone sanno dove stare, quando fermarsi, a chi segnalare; descrivono situazioni concrete che tornano con ciò che osservi." },
+   { "h": "Stabilità delle misure", "d": "Protezioni usabili e mantenute, percorsi sensati, attrezzature scelte per il compito: misure forti alla fonte, non solo cartelli." },
+   { "h": "Coerenza normale/non-ordinario", "d": "Funziona anche durante pulizia, manutenzione, inceppamenti, cambi formato, presenza di appaltatori." },
+   { "h": "Il linguaggio delle persone", "d": "Collegano la sicurezza al lavoro: «questa barriera evita interferenze», «questo percorso riduce gli incroci ciechi»." }
+  ]
+ },
+ {
+  "id": "45001_m06_s024",
+  "layout": "punti",
+  "kicker": "Sul campo",
+  "titolo": "Fragilità e normalizzazione",
+  "intro": "I sistemi deboli raramente si presentano come disordine totale. Più spesso: piccole deviazioni tollerate, compromessi diventati normali, soluzioni provvisorie che nessuno mette più in discussione. Un dettaglio dice poco; una costellazione racconta una fragilità.",
+  "punti": [
+   { "h": "La scorciatoia ricorrente", "d": "Un riparo tenuto aperto, un controllo saltato quando c'è fretta: descritti come eccezioni rare, ma osservati come routine silenziosa." },
+   { "h": "La dipendenza dai gradini bassi", "d": "Cartelli, istruzioni, DPI sempre più centrali danno impressione d'impegno, ma chiedono alle persone di compensare difetti più a monte." },
+   { "h": "L'opacità delle responsabilità", "d": "Tutti sanno cosa fare in teoria, ma nessuno sa chi decide quando cambia una condizione o serve fermare il lavoro: aree grigie." },
+   { "h": "Occasionale o sistemica", "d": "«Abbiamo sempre fatto così», «per pochi minuti»: se la deviazione è corretta e discussa, il sistema reagisce; se nessuno la nomina, si è abituato." }
+  ]
+ },
+ {
+  "id": "45001_m06_s025",
+  "layout": "punti",
+  "kicker": "Sul campo",
+  "titolo": "Modifiche e interferenze osservate",
+  "intro": "Per capire quanto sia viva la gestione del cambiamento, osservala mentre il lavoro si muove. Sul campo il cambiamento non si annuncia con un cartello: si vede in un percorso spostato, una barriera mobile, una macchina appena installata.",
+  "punti": [
+   { "h": "Chi sa cosa è cambiato", "d": "Se la risposta è chiara e diffusa, esiste un processo; se varia da persona a persona, il cambiamento è stato assorbito in modo informale." },
+   { "h": "Le soluzioni temporanee", "d": "I nuovi percorsi sono comprensibili, praticabili, mantenuti liberi? Cartelli nuovi ma persone al vecchio varco: non è stata governata." },
+   { "h": "Le interferenze", "d": "Quando più attività si sovrappongono, il sistema rende visibili priorità, confini e condizioni di stop, o ciascuno va avanti per inerzia?" },
+   { "h": "Il temporaneo nominato", "d": "Le condizioni temporanee hanno un responsabile, una ragione, una durata e criteri per il ritorno a una situazione stabile." }
+  ]
+ },
+ {
+  "id": "45001_m06_s026",
+  "layout": "punti",
+  "kicker": "Sul campo",
+  "titolo": "Appaltatori e fornitori osservati",
+  "intro": "Dove lavorano imprese esterne, leggi come l'organizzazione governa rapporti, interferenze e responsabilità che attraversano confini diversi. Un appaltatore ben coordinato non si muove come ospite casuale, ma come parte temporanea di un sistema con regole precise.",
+  "punti": [
+   { "h": "Davvero integrato nel quadro", "d": "Regole comprese, accessi coerenti, confini leggibili; le delimitazioni proteggono anche il personale interno, non solo il proprio perimetro." },
+   { "h": "L'impatto del sito sull'esterno", "d": "I mezzi interni rispettano l'area esterna? I ritmi costringono la ditta a lavorare in fretta? Le info sui rischi arrivano davvero?" },
+   { "h": "L'outsourcing sul campo", "d": "In un magazzino affidato fuori, chiedi come si segnala un problema, chi decide una modifica, chi controlla: risposte chiare e coerenti tra interno ed esterno." },
+   { "h": "Quando cambia una condizione", "d": "Un mezzo fuori orario, meteo che peggiora: le persone si riallineano e ridefiniscono le condizioni, o tirano avanti confidando nell'adattamento?" }
+  ]
+ },
+ {
+  "id": "45001_m06_s027",
+  "layout": "punti",
+  "kicker": "Il giudizio",
+  "titolo": "Dalle osservazioni al giudizio operativo",
+  "intro": "Trasformare ciò che hai raccolto in un giudizio fondato. Non inseguire l'episodio più vistoso, né lasciarti tranquillizzare da una buona impressione. Le conclusioni devono restare tracciabili, ricondotte a osservazioni, colloqui e informazioni coerenti.",
+  "punti": [
+   { "h": "Isolato o pattern", "d": "Un pallet scomodo per pochi minuti, corretto subito, è contingente; trovato più volte e spiegato come inevitabile è organizzazione fragile." },
+   { "h": "La forza dei controlli", "d": "Se il rischio è governato soprattutto da attenzione e DPI, giudizio più cauto; se trovi eliminazione e protezioni efficaci, gerarchia usata bene." },
+   { "h": "La tenuta nel variabile", "d": "Un processo che funziona solo nella routine ma si disfa in manutenzione o coi picchi non è davvero sotto controllo." },
+   { "h": "La capacità di correzione", "d": "Un sistema maturo non è quello senza problemi, ma quello che li riconosce, li contiene e li riporta dentro confini chiari prima che diventino abitudine." }
+  ]
+ },
+ {
+  "id": "45001_m06_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 06",
+  "modNum": "06",
+  "titolo": "Governare davvero il lavoro quotidiano",
+  "punti": [
+   { "h": "Il controllo operativo", "d": "Nasce da processi pianificati in modo credibile, con criteri leggibili e lavoro adattato ai lavoratori; il coordinamento è parte del governo." },
+   { "h": "La gerarchia dei controlli", "d": "Molte misure non equivalgono a buona prevenzione: conta dove agiscono e quanto reggono nel lavoro reale." },
+   { "h": "La gestione del cambiamento", "d": "Il sistema si indebolisce anche quando cambia senza essere governato; il provvisorio è il più insidioso." },
+   { "h": "Approvvigionamento ed esterni", "d": "La prevenzione non si ferma al personale interno: entra negli acquisti, negli appalti, nell'outsourcing e nel coordinamento." },
+   { "h": "Il campo come prova", "d": "Incrociare osservazione, colloquio e documenti; leggere segnali di allineamento e di normalizzazione delle deviazioni." },
+   { "h": "Il giudizio operativo", "d": "Distinguere il fatto isolato dal pattern, pesare la forza dei controlli e la tenuta quando la pressione aumenta." }
+  ],
+  "prossimo": {
+   "modulo": "07",
+   "titolo": "Emergenze, incidenti e indagine",
+   "testo": "Cosa succede quando il lavoro devia, si rompe o richiede una risposta straordinaria."
+  }
+ }
+]
