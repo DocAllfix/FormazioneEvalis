@@ -13,6 +13,8 @@
 //   S6 [Playwright] altezza naturale della section a 1280px: >900px = W overflow
 //      (testo piccolo a schermo), >1400px = FAIL; screenshot -> thumbnail
 //   S7 titolo dei copioni rintracciabile nel testo della slide (W avviso se assente)
+//   S8 font-family solo tra IBM Plex Sans/Mono e Space Grotesk (gli altri non si caricano)
+//   S9 nessun quiz FUNZIONANTE nell'HTML (il quiz valutato è server-side; W avviso)
 // Output: produzione/_staging/slide-gates/<corso>/report.json + contact-sheet.html
 //         (miniature cliccabili per la revisione umana C.4)
 //
@@ -98,6 +100,16 @@ for (const f of files) {
     if (!FONT_OK.test(m[1])) probs.push(`S4: risorsa esterna non consentita: ${m[1].slice(0, 80)}`);
   }
   if (/<script[\s>]/i.test(html)) warns.push("S5: contiene <script> (slide statiche preferite)");
+
+  // S8: font-family solo tra i 3 caricati dal player nell'iframe (altri non si caricano)
+  const FONT_ALLOW = /^(ibm plex sans|ibm plex mono|space grotesk|sans-serif|monospace|serif|inherit|initial|ui-monospace|-apple-system|blinkmacsystemfont|system-ui)$/i;
+  for (const m of html.matchAll(/font-family\s*:\s*([^;"'}]+)/gi)) {
+    const bad = m[1].split(",").map((s) => s.trim().replace(/^['"]|['"]$/g, "")).filter((fam) => fam && !FONT_ALLOW.test(fam));
+    if (bad.length) { warns.push(`S8: font non caricato dal player: "${bad[0]}" (usa IBM Plex Sans/Mono o Space Grotesk)`); break; }
+  }
+  // S9: niente quiz FUNZIONANTE nell'HTML — il quiz valutato è server-side (compliance)
+  if (/data-quiz|data-result|data-correct|correctoption|iscorrect/i.test(html))
+    warns.push("S9: sembra un quiz funzionante nell'HTML — il quiz valutato è lato piattaforma, non nelle slide");
 
   // S6: misura e screenshot nelle condizioni del player
   let height = null;
