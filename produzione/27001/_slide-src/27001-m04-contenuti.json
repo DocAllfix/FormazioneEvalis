@@ -1,0 +1,422 @@
+[
+ {
+  "id": "27001_m04_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 4",
+  "eyebrow": "Valutazione e trattamento del rischio",
+  "titolo": "Il motore dell'SGSI",
+  "testo": "Il punto in cui il sistema prende decisioni concrete. Se questo motore è debole, il sistema sembra ordinato ma non protegge davvero. La norma richiede processi, risultati documentati e coerenza: non ti impone un unico metodo matematico né una formula universale. Stai verificando la solidità del processo, non il tuo gusto personale.",
+  "agenda": [
+   "Dal punto 6.1 ai punti 8.2 e 8.3",
+   "I criteri: prima il metro, poi il giudizio",
+   "Identificazione, analisi, ponderazione",
+   "Il trattamento: opzioni, controlli, piano, rischio residuo",
+   "La Dichiarazione di Applicabilità e il ciclo vivo"
+  ]
+ },
+ {
+  "id": "27001_m04_s002",
+  "layout": "confronto",
+  "kicker": "L'architettura",
+  "titolo": "Pianificare ed eseguire",
+  "intro": "Immagina il rischio come un circuito, non come un episodio isolato. Se i due piani si confondono, nascono errori tipici: metodi descritti ma mai usati, oppure attività eseguite senza un impianto coerente alle spalle. La domanda chiave: vedi un filo continuo tra il 6.1 e i punti 8.2 e 8.3?",
+  "a": {
+   "h": "Il punto 6.1",
+   "sub": "La pianificazione",
+   "punti": [
+    { "d": "Capire quali rischi e opportunità affrontare, pianificare azioni adeguate, valutarne l'efficacia." },
+    { "d": "Definire come si farà la valutazione, quali criteri, come si accetteranno certi livelli, come si selezioneranno le azioni." },
+    { "d": "Integrare le azioni nei processi del sistema: non un'analisi parallela e scollegata dal resto." }
+   ]
+  },
+  "b": {
+   "h": "I punti 8.2 e 8.3",
+   "sub": "Le attività operative",
+   "punti": [
+    { "d": "Applicare davvero quel processo: il rischio viene rivalutato, il piano di trattamento viene messo in opera." },
+    { "d": "Registrare gli esiti prodotti: non basta avere il metodo, devi vedere ciò che ha prodotto nel tempo." },
+    { "d": "Le due trappole opposte: fermarsi al manuale, o guardare solo i controlli tecnici dimenticando la logica che li ha generati." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m04_s003",
+  "layout": "punti",
+  "kicker": "Il motore vivo",
+  "titolo": "Decisioni, riesame e cambiamento",
+  "intro": "Non un adempimento da compilare all'avvio e poi archiviare: un meccanismo che resta vivo mentre l'organizzazione cambia, cresce, esternalizza. Il punto 8.2 richiede valutazioni con periodicità pianificata, ma anche quando arrivano cambiamenti significativi.",
+  "punti": [
+   { "h": "L'analisi datata non è un punto di forza", "d": "Se è ben scritta ma precede il passaggio al cloud o l'avvio di un centro esterno, la base decisionale è ancorata a un mondo che non esiste più. È un problema, non un pregio." },
+   { "h": "Processo e innesco", "d": "Il processo definito deve produrre risultati coerenti e confrontabili. L'innesco deve scattare per cadenza pianificata e quando il contesto lo richiede." },
+   { "h": "Perché ora?", "d": "Non basta chiedere quando è stata fatta l'ultima valutazione: devi capire che cosa l'ha attivata. Chi aggiorna solo in vista della verifica ha date corrette e poca sostanza." },
+   { "h": "Confermare non è cieco", "d": "Se una nuova valutazione dà sempre gli stessi risultati, può essere stabilità o routine cieca. Il motore vivo non alza i rischi per forza: genera letture credibili del momento attuale." }
+  ]
+ },
+ {
+  "id": "27001_m04_s004",
+  "layout": "definizione",
+  "kicker": "La valutazione",
+  "eyebrow": "Prima il metro, poi il giudizio",
+  "titolo": "I criteri di rischio",
+  "definizione": "Il processo deve stabilire e mantenere i criteri di rischio: le regole per accettare il rischio e le regole per svolgere la valutazione. Senza questo metro iniziale, i risultati sembrano ordinati ma restano arbitrari.",
+  "punti": [
+   { "h": "L'elenco non basta", "d": "Se non sai come distingue rischio accettabile, da monitorare e da trattare con priorità, non puoi capire il senso delle scelte. Ti serve il sistema di lettura che ha permesso di produrlo." },
+   { "h": "Regole, non intuizioni", "d": "Criteri significa regole dichiarate, mantenute e usate in modo coerente. La norma non impone una scala unica, ma pretende che la scala adottata esista davvero e regga nel tempo." },
+   { "h": "Non premiare il sofisticato", "d": "Il metodo è comprensibile, ripetibile, coerente con la realtà? Un modello elegante ma incomprensibile a chi lo usa è più fragile di uno essenziale ben applicato." }
+  ]
+ },
+ {
+  "id": "27001_m04_s005",
+  "layout": "punti",
+  "kicker": "La valutazione",
+  "titolo": "Accettazione, coerenza, confronto nel tempo",
+  "intro": "La norma chiede non solo di stabilire i criteri, ma di mantenerli. Il metro non deve comparire una volta in un documento iniziale e poi dissolversi. Se cambia, il cambiamento deve avere una ragione chiara — altrimenti perdi la comparabilità.",
+  "punti": [
+   { "h": "L'accettazione", "d": "Quali livelli sono tollerabili e quali richiedono intervento. Senza soglia decisionale nota, la ponderazione non ha punto di appoggio: non sai rispetto a quale confine stai giudicando." },
+   { "h": "Come si svolge", "d": "Regole per attribuire conseguenze, verosimiglianza e livello risultante. «Impatto alto» può significare interruzione di un servizio critico o violazione di obblighi: se è nebuloso, il processo è impressionistico." },
+   { "h": "Il medio che diventa basso", "d": "Stesso scenario, tre mesi dopo, senza cambi di processo o controlli, e nessuno sa spiegare perché. Non è flessibilità: è assenza di criteri applicati." },
+   { "h": "Scritto e raccontato", "d": "Se responsabile sicurezza, area tecnica e proprietario di processo spiegano il criterio in modo simile, il processo vive. La coerenza non si dimostra con un file: con risultati e comportamenti allineati." }
+  ]
+ },
+ {
+  "id": "27001_m04_s006",
+  "layout": "flusso",
+  "kicker": "Identificazione",
+  "titolo": "Partire da ciò che è nel perimetro",
+  "intro": "Non compilare un catalogo generico di minacce: riconoscere scenari che possono esporre dati a persone non autorizzate, comprometterne l'integrità o ridurne la disponibilità. Tre ancore per non perdere l'aggancio.",
+  "passi": [
+   { "h": "Il perimetro", "d": "I rischi che riguardano le informazioni incluse nel campo di applicazione: processi, servizi, archivi, persone, tecnologie, sedi, relazioni esterne dentro il perimetro definito." },
+   { "h": "Il tipo di danno", "d": "Collegato a riservatezza, integrità, disponibilità. «Il gestionale potrebbe avere problemi» è troppo generico: un evento può mostrare dati a chi non deve, alterarli o renderli inutilizzabili." },
+   { "h": "Il responsabile", "d": "Un rischio senza responsabile diventa un tema di nessuno. Non è attribuire una colpa: è sapere chi ha titolo per valutarlo, approvare il trattamento, accettare il residuo o chiedere risorse." }
+  ]
+ },
+ {
+  "id": "27001_m04_s007",
+  "layout": "confronto",
+  "kicker": "Identificazione",
+  "titolo": "Evitare cataloghi generici",
+  "intro": "Un elenco lungo può sembrare maturità: spesso nasconde il problema opposto. La qualità non sta nel numero di righe, ma nella pertinenza. E i processi affidati all'esterno devono essere tenuti sotto controllo: il rischio non sparisce fuori dal cancello.",
+  "a": {
+   "h": "Il catalogo generico",
+   "sub": "Vale per chiunque, serve a nessuno",
+   "punti": [
+    { "d": "«Attacco informatico ai sistemi»: un'etichetta vasta, quasi impersonale." },
+    { "d": "«Problemi nel processo di onboarding»: dopo averlo letto, sai ancora poco." },
+    { "d": "Elenchi copiati da modelli dove cambiano solo il logo e il nome del reparto." }
+   ]
+  },
+  "b": {
+   "h": "Il rischio pertinente",
+   "sub": "Ancorato a informazioni e processi",
+   "punti": [
+    { "d": "«Uso improprio di credenziali privilegiate sul sistema ordini, con possibilità di alterare quantità e date»." },
+    { "d": "«Invio errato di documenti personali a destinatari interni non autorizzati»." },
+    { "d": "Sul payroll esternalizzato: accessi non autorizzati, invio errato di file, indisponibilità del portale, alterazioni nei dati trasmessi." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m04_s008",
+  "layout": "punti",
+  "kicker": "Analisi",
+  "titolo": "Conseguenze e verosimiglianza",
+  "intro": "L'analisi prende i rischi nominati e li trasforma in giudizi strutturati: quali conseguenze deriverebbero, quanto è realistico che avvenga, quale livello risulta. È il passaggio che collega la descrizione del problema alla possibilità di decidere una priorità.",
+  "punti": [
+   { "h": "Le conseguenze", "d": "Non «grave» o «fastidioso»: quali effetti sulle informazioni e sui processi. La riservatezza espone dati; l'integrità altera decisioni, ordini, report; la disponibilità ferma attività essenziali." },
+   { "h": "La verosimiglianza realistica", "d": "Né scenari fantascientifici né «non è mai successo». Contano vulnerabilità presenti, esposizione, esperienza interna, tipo di attività, credibilità del contesto." },
+   { "h": "Non è ancora decisione", "d": "Stai misurando, non hai stabilito se accettare o trattare: quella scelta arriva con la ponderazione. Ma se l'analisi è debole, la ponderazione sarà fragile — da fuori la matrice sembra impeccabile, dentro manca sostanza." }
+  ]
+ },
+ {
+  "id": "27001_m04_s009",
+  "layout": "punti",
+  "kicker": "Ponderazione",
+  "titolo": "Decidere le priorità",
+  "intro": "Confrontare i risultati dell'analisi con i criteri stabiliti e definire le priorità per il trattamento. È la soglia in cui il giudizio diventa decisione: fino a qui hai descritto e misurato.",
+  "punti": [
+   { "h": "Un atto ragionato", "d": "Il livello può derivare da una matrice, ma la decisione finale non è ordinamento meccanico: è il confronto tra quel livello e i criteri di accettazione." },
+   { "h": "Non una classifica cieca", "d": "Un medio sulla disponibilità di un servizio essenziale può non essere accettabile; un medio su un archivio meno critico può esserlo temporaneamente." },
+   { "h": "Il test in verifica", "d": "«Questo livello supera la soglia definita», «questo impatto è non accettabile per noi». Se la risposta è «sembrava più urgente», la ponderazione è debole anche con una tabella ordinata." },
+   { "h": "Usare bene le risorse", "d": "Nessuno tratta tutto con la stessa intensità nello stesso momento. Priorità non significa abbandonare i rischi minori: significa che tempi, responsabilità e investimenti seguono un ordine credibile." }
+  ]
+ },
+ {
+  "id": "27001_m04_s010",
+  "layout": "flusso",
+  "kicker": "La valutazione",
+  "titolo": "Tre piani che devono combaciare",
+  "intro": "Come riconosci una valutazione ben governata? La maturità non coincide con il volume della carta, ma con la capacità di governare decisioni ripetibili. Se uno di questi piani manca, il motore perde affidabilità.",
+  "passi": [
+   { "h": "Il processo definito", "d": "Criteri chiari e mantenuti nel tempo. Un metodo semplice ma compreso vale più di uno curato ma applicato a un'ultima valutazione incompleta." },
+   { "h": "L'applicazione concreta", "d": "Identificazione, analisi e ponderazione svolte davvero sul perimetro. Se chiedi perché il portale è stato rivalutato ora, la risposta solida richiama il cambiamento — non «era tempo di aggiornare»." },
+   { "h": "Le tracce", "d": "Come la valutazione viene condotta e quali esiti ha prodotto. La confrontabilità nel tempo: capire cosa è rimasto stabile, cosa è cambiato e perché." }
+  ]
+ },
+ {
+  "id": "27001_m04_s011",
+  "layout": "punti",
+  "kicker": "Il trattamento",
+  "titolo": "Dal giudizio all'azione",
+  "intro": "Il 6.1.3 richiede un processo che parta dai risultati della valutazione e porti a scelte concrete e governate; il 8.3 chiede di attuare il piano. Trattare non significa automaticamente installare una misura o comprare un prodotto.",
+  "punti": [
+   { "h": "Una catena completa", "d": "Scegliere l'opzione, determinare i controlli necessari, verificare di non aver trascurato nulla, costruire il piano, farlo approvare, ottenere l'accettazione dei rischi residui. Se ne salti un pezzo, perde forza." },
+   { "h": "Adeguato, non assoluto", "d": "Non esiste un trattamento corretto staccato dal contesto: esiste quello coerente con quel rischio, quella priorità, quel servizio, quelle responsabilità." },
+   { "h": "Il sistema al contrario", "d": "Misure sparse in molte aree e nessuno sa quale rischio trattano: prima i rimedi, poi la giustificazione. La norma chiede l'opposto." },
+   { "h": "Non è la chiusura del problema", "d": "Ogni trattamento modifica il profilo di rischio ma non elimina ogni esposizione. Il sistema non promette invulnerabilità: promette decisioni consapevoli con responsabilità chiare." }
+  ]
+ },
+ {
+  "id": "27001_m04_s012",
+  "layout": "punti",
+  "kicker": "Il trattamento",
+  "titolo": "Scegliere l'opzione adeguata",
+  "intro": "Adeguate non vuol dire massime, costose o tecnologicamente brillanti: proporzionate al rischio analizzato e coerenti con i criteri e la ponderazione che hanno guidato la priorità. Il tuo compito non è cercare una parola specifica, ma verificare la logica della scelta.",
+  "punti": [
+   { "h": "Le modalità", "d": "Ridurre la probabilità che l'evento accada; ridurne le conseguenze; modificare il processo che espone l'informazione. E una quota di residuo può essere accettata, se assunta dai responsabili dei rischi." },
+   { "h": "Partire dal rischio reale", "d": "Cartelle condivise senza scadenza e con permessi eccessivi: si rivede il processo di condivisione. Investire subito in un monitoraggio sofisticato lasciando intatti i permessi è poco credibile." },
+   { "h": "Il trattamento fotocopia", "d": "Firewall nuovo, formazione generica, procedura standard, e si dichiara concluso. Se il trattamento è identico per tutti i rischi, il processo è poco vivo." },
+   { "h": "Adeguatezza ≠ perfezione", "d": "Un trattamento progressivo, ben motivato e approvato, può essere più solido di un annuncio ambizioso che nessuno realizzerà. Cerca realismo, non promesse solenni." }
+  ]
+ },
+ {
+  "id": "27001_m04_s013",
+  "layout": "punti",
+  "kicker": "Il trattamento",
+  "titolo": "Determinare i controlli necessari",
+  "intro": "Due idee importanti: completezza e necessità. Non raccogliere misure disponibili a caso, né limitarsi a quelle più familiari: capire quali servono davvero perché quel trattamento funzioni nel contesto reale.",
+  "punti": [
+   { "h": "Progettati o da qualunque fonte", "d": "Il sistema non è obbligato a vivere solo di soluzioni già nominate in un elenco: se un rischio richiede una misura specifica, l'organizzazione può progettarla." },
+   { "h": "L'Appendice A come rete", "d": "Il confronto serve a un controllo di completezza: è rimasto fuori qualcosa di importante? Non significa copiarla tutta, né consultarla a fine progetto per ornamento." },
+   { "h": "Non uno soltanto", "d": "Sugli account condivisi fuori sede: identità individuali, revisione dei privilegi, approvazioni, tracciabilità, procedure per le emergenze. È la combinazione a rendere credibile il trattamento." },
+   { "h": "Necessario ≠ presente", "d": "Le misure storiche installate negli anni non entrano automaticamente nel trattamento corrente. La qualità non sta nell'accumulare: sta nel selezionare con criterio." }
+  ]
+ },
+ {
+  "id": "27001_m04_s014",
+  "layout": "punti",
+  "kicker": "Il trattamento",
+  "titolo": "Il piano: responsabilità, tempi, rischio residuo",
+  "intro": "Qui il sistema esce dalla fase dichiarativa: il trattamento diventa lavoro organizzato. La norma non offre un modello prestampato, ma il senso è chiaro — azione programmata, con responsabilità riconoscibili e un percorso che si possa attuare e seguire.",
+  "punti": [
+   { "h": "Integrato, non isolato", "d": "Un piano credibile non resta in una tabella della funzione sicurezza: tocca progetti, risorse, attività operative, cambiamenti tecnologici. Quando non si collega a nulla, è un elenco di desideri." },
+   { "h": "Realismo", "d": "Dieci azioni senza responsabile, senza risorse e senza priorità dicono poco. Poche azioni chiare, collegate ai processi e comprensibili da chi le eseguirà, dicono molto." },
+   { "h": "L'approvazione", "d": "Indica che il trattamento è stato assunto come decisione dell'organizzazione, non come proposta lasciata a metà." },
+   { "h": "Il rischio residuo accettato", "d": "Anche dopo il trattamento un livello di esposizione può restare: non viene ignorato, viene assunto da chi ha la responsabilità. Se resta senza padrone, manca un tassello di governo." }
+  ]
+ },
+ {
+  "id": "27001_m04_s015",
+  "layout": "punti",
+  "kicker": "Il trattamento",
+  "titolo": "Dalla carta alla realtà",
+  "intro": "Il punto 8.3 chiede di attuare il trattamento e di mantenere tracce documentate degli esiti. La parola esiti è importante: non basta dimostrare che un piano esiste, devi vedere che cosa è stato effettivamente realizzato.",
+  "punti": [
+   { "h": "Intenzioni o attuazione", "d": "Finché guardi il piano osservi intenzioni governate. I risultati sono configurazioni modificate, procedure aggiornate, autorizzazioni riviste, test eseguiti, registrazioni di avanzamento." },
+   { "h": "Le quattro domande", "d": "Che cosa era stato pianificato. Che cosa è stato fatto. Dove si vede. Che effetto ha prodotto sul rischio. Se la catena manca, il sistema è più dichiarato che operativo." },
+   { "h": "Gli esiti alimentano il ciclo", "d": "Se un controllo è stato introdotto, modificato o non completato, questo influenzerà la prossima valutazione. Il trattamento non chiude la storia: produce fatti nuovi da rileggere." },
+   { "h": "La convergenza", "d": "Se il responsabile descrive un trattamento concluso ma i documenti mostrano azioni ferme, la credibilità si incrina. Un'azione ancora aperta va bene, purché il ritardo sia noto, motivato e trasparente." }
+  ]
+ },
+ {
+  "id": "27001_m04_s016",
+  "layout": "definizione",
+  "kicker": "La SoA",
+  "eyebrow": "La mappa dei controlli necessari",
+  "titolo": "La Dichiarazione di Applicabilità",
+  "definizione": "Non un allegato ornamentale: non sostituisce la valutazione né il piano di trattamento — sta in mezzo come documento di raccordo, e traduce il trattamento in una dichiarazione ordinata e verificabile delle scelte sui controlli.",
+  "punti": [
+   { "h": "I controlli necessari", "d": "Non «quali controlli esistono in azienda»: quali sono applicabili e necessari per il sistema, alla luce del trattamento e del confronto con l'Appendice A." },
+   { "h": "Le giustificazioni di inclusione", "d": "È un documento di motivazione, non di inventario: l'inclusione non può dipendere da abitudini storiche o modelli copiati." },
+   { "h": "Lo stato di implementazione", "d": "Se i controlli necessari sono implementati o meno. È ciò che la collega al punto 8.3." },
+   { "h": "Le giustificazioni delle esclusioni", "d": "Perché eventuali controlli dell'Appendice A sono esclusi. Non trasformarla in un test di memoria dell'Appendice A: il punto è la coerenza col proprio sistema." }
+  ]
+ },
+ {
+  "id": "27001_m04_s017",
+  "layout": "confronto",
+  "kicker": "La SoA",
+  "titolo": "Includere i controlli con una ragione",
+  "intro": "Un elenco da solo non basta: serve capire perché quel controllo è stato scelto, quale rischio sostiene, quale vuoto evita. Più che la lunghezza, conta la precisione — se capisci a colpo d'occhio perché è incluso, la SoA sta facendo il suo mestiere.",
+  "a": {
+   "h": "Giustificazione debole",
+   "sub": "Sembra corretta, spiega pochissimo",
+   "punti": [
+    { "d": "«Necessario per la sicurezza»: una formula che vale per qualunque riga." },
+    { "d": "«Gestione accessi»: troppo ampia per far capire cosa sostiene." },
+    { "d": "Frasi standard identiche su tutte le righe: il documento smette di raccontare il sistema." }
+   ]
+  },
+  "b": {
+   "h": "Giustificazione forte",
+   "sub": "Parla di perimetro e rischio",
+   "punti": [
+    { "d": "«Incluso per ridurre accessi non autorizzati a informazioni commerciali riservate»." },
+    { "d": "«Per limitare accessi non più necessari a cartelle di commessa dopo la chiusura dell'incarico»." },
+    { "d": "Ospita anche controlli progettati ad hoc, non solo quelli che richiamano l'Appendice A." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m04_s018",
+  "layout": "punti",
+  "kicker": "La SoA",
+  "titolo": "Implementato oppure no",
+  "intro": "Elemento spesso sottovalutato: la SoA non dice solo che cosa serve, dice anche a che punto è la realizzazione. È il ponte diretto tra il trattamento del rischio e l'attuazione del piano.",
+  "punti": [
+   { "h": "Non implementato non è un difetto", "d": "Un controllo può essere necessario e non ancora attuato perché rientra in un piano in corso: purché sia trasparente, coerente col piano approvato e con i tempi." },
+   { "h": "Quando diventa critico", "d": "Quando dichiara controlli implementati senza evidenze credibili, o lascia in sospeso a lungo controlli essenziali senza gestire il rischio residuo." },
+   { "h": "L'incrocio", "d": "Confronti lo stato dichiarato con il piano, le responsabilità e le evidenze. Se il personale non conosce un controllo «implementato», la SoA sta dichiarando un'intenzione data per compiuta." },
+   { "h": "Una bussola per il campionamento", "d": "I controlli dichiarati implementati guidano verifiche puntuali; quelli non implementati mostrano quali rischi residui l'organizzazione sta ancora gestendo." }
+  ]
+ },
+ {
+  "id": "27001_m04_s019",
+  "layout": "punti",
+  "kicker": "La SoA",
+  "titolo": "Escludere con criterio",
+  "intro": "Un'esclusione ben motivata è segno di maturità; una vaga rivela un processo debole. Dire «non applicabile» è legittimo solo se sai spiegare perché, alla luce del perimetro, dei rischi valutati e del trattamento scelto.",
+  "punti": [
+   { "h": "Non è rifiuto di una buona pratica", "d": "Significa che per quel sistema e in quel contesto il controllo non è necessario: per il campo di applicazione, per l'assenza di certe attività, o perché l'obiettivo è coperto da controlli progettati ad hoc." },
+   { "h": "Il criterio dei tre piani", "d": "Ogni esclusione regge se la colleghi al campo di applicazione, alla valutazione del rischio o alla logica del trattamento. Se non regge su nessuno, è arbitraria." },
+   { "h": "La trappola delle risorse", "d": "«Non abbiamo risorse per implementarlo» non è una ragione di non applicabilità: è pianificazione, implementazione incompleta o rischio residuo. Distinguere non applicabile da non ancora implementato è un test chiave." },
+   { "h": "Le migliori sono semplici", "d": "Parlano del perimetro reale e della mancanza di pertinenza rispetto ai rischi identificati. Le peggiori sembrano prudenti, ma non dicono nulla e cambiano da una spiegazione all'altra." }
+  ]
+ },
+ {
+  "id": "27001_m04_s020",
+  "layout": "punti",
+  "kicker": "La SoA",
+  "titolo": "Una SoA viva",
+  "intro": "Può essere costruita bene all'inizio, ma se non segue i cambiamenti, le rivalutazioni e i risultati del trattamento smette presto di rappresentare la realtà. È una mappa che deve seguire la strada reale, non la strada ricordata.",
+  "punti": [
+   { "h": "Segue i movimenti", "d": "Se un nuovo rischio richiede controlli ulteriori, li recepisce. Se un controllo non è più necessario per un cambio di perimetro, la giustificazione va rivista. Se uno stato cambia, lo dice." },
+   { "h": "Il nuovo fornitore", "d": "Cambia la piattaforma di erogazione: la rivalutazione individua esigenze diverse su accessi e disponibilità. Se la SoA resta identica, non racconta più il sistema attuale." },
+   { "h": "Dialoga col resto", "d": "Confrontala con le ultime valutazioni, col piano, con le evidenze di attuazione. Se trovi controlli non più pertinenti o stati superati, è diventata un archivio statico." },
+   { "h": "Punto di raccordo", "d": "Le organizzazioni mature la usano nelle revisioni e nelle decisioni sui trattamenti: aiuta tutti a vedere lo stesso quadro. Le altre la aggiornano tardi, per allinearla a documenti già cambiati." }
+  ]
+ },
+ {
+  "id": "27001_m04_s021",
+  "layout": "punti",
+  "kicker": "Il ciclo vivo",
+  "titolo": "Quando la rivalutazione deve riaccendersi",
+  "intro": "Il punto 8.2 chiede valutazioni a intervalli pianificati, ma aggiunge una seconda condizione decisiva: quando vengono proposti o si verificano cambiamenti significativi. Il sistema non può limitarsi a una cadenza rigida, come se il contesto aspettasse la prossima riunione.",
+  "punti": [
+   { "h": "Che cosa è significativo", "d": "Quando può alterare riservatezza, integrità o disponibilità nel perimetro, o quando cambiano responsabilità, processi, tecnologie e relazioni al punto da rendere inaffidabile la fotografia precedente." },
+   { "h": "Non solo le grandi trasformazioni", "d": "Un nuovo applicativo con dati critici, una modifica alle autorizzazioni, la chiusura di un servizio, un incidente rilevante, una diversa dipendenza da un fornitore." },
+   { "h": "Il servizio che si complica", "d": "Registrazioni video delle lezioni e valutazione online sembrano un normale ampliamento: aumentano i dati, cambiano gli accessi, compaiono fornitori. Il motore si spegne proprio mentre il perimetro si complica." },
+   { "h": "La domanda decisiva", "d": "Che cosa fa capire all'organizzazione che deve rivalutare? Se è solo una data in agenda, hai una gestione minima. Se collega periodicità e cambiamenti, il motore reagisce al contesto." }
+  ]
+ },
+ {
+  "id": "27001_m04_s022",
+  "layout": "punti",
+  "kicker": "Il ciclo vivo",
+  "titolo": "Rivalutare non è riscrivere tutto",
+  "intro": "Alcuni confondono la rivalutazione con la riscrittura integrale; altri cambiano solo la data del documento. Nessuna delle due convince: il valore sta nel capire che cosa è rimasto stabile e che cosa richiede una nuova ponderazione.",
+  "punti": [
+   { "h": "Stessi criteri", "d": "Salvo che siano stati modificati in modo governato. Se ogni rivalutazione cambia il metro senza dichiararlo, non sai più se il rischio è aumentato o solo misurato diversamente." },
+   { "h": "Che cosa può muoversi", "d": "I rischi identificati, le conseguenze attese, la verosimiglianza, la ponderazione finale. Se nulla si muove mai anche con cambiamenti reali, la rivalutazione è rituale." },
+   { "h": "Il rischio residuo", "d": "Se sono stati introdotti controlli, la nuova valutazione deve tenerne conto; se controlli promessi non sono stati implementati o hanno funzionato meno del previsto, deve rifletterlo." },
+   { "h": "Che cosa ha spostato", "d": "Il buon segnale è quando i responsabili non dicono solo che la rivalutazione è stata fatta, ma che un rischio è salito perché il processo è distribuito, o sceso perché i controlli funzionano." }
+  ]
+ },
+ {
+  "id": "27001_m04_s023",
+  "layout": "punti",
+  "kicker": "Il ciclo vivo",
+  "titolo": "Evitare il disallineamento",
+  "intro": "Una rivalutazione serve solo se rimette in movimento il resto: trattamento rivisto dove necessario, controlli confermati o modificati, SoA che torna a rappresentare ciò che è necessario, implementato ed escluso. Altrimenti il motore gira in un punto e il sistema corre in un altro.",
+  "punti": [
+   { "h": "La valutazione cambia, il piano no", "d": "La forma più evidente: le priorità si aggiornano ma il piano di trattamento resta identico al ciclo precedente." },
+   { "h": "Il piano cambia, la SoA no", "d": "Più sottile: la Dichiarazione continua a mostrare controlli e stati riferiti al ciclo precedente." },
+   { "h": "I controlli cambiano, i documenti no", "d": "La più insidiosa: nuovi controlli realizzati sul campo, ma la documentazione che ne spiega la ragione non viene aggiornata. La tracciabilità si indebolisce." },
+   { "h": "La catena da costruire", "d": "Ultima valutazione → priorità cambiate → azioni e accettazioni nel piano → SoA con controlli, giustificazioni, stati ed esclusioni coerenti. Quando regge, il sistema è leggibile." }
+  ]
+ },
+ {
+  "id": "27001_m04_s024",
+  "layout": "flusso",
+  "kicker": "La verifica",
+  "titolo": "Leggere il motore del rischio",
+  "intro": "Il primo errore da evitare è l'approccio a silos. La verifica funziona come un percorso a catena — e ti aiuta a usare meglio il tempo: invece di inseguire ogni documento con la stessa intensità, ti concentri dove la catena si indebolisce.",
+  "passi": [
+   { "h": "Il metodo", "d": "Non per giudicarne l'eleganza: per capire se esistono criteri chiari, mantenuti e applicati in modo coerente." },
+   { "h": "I risultati", "d": "Pertinenti al perimetro, con responsabilità identificate, conseguenze e verosimiglianza analizzate, ponderazione che porta a priorità leggibili." },
+   { "h": "Il trattamento", "d": "Opzioni adeguate, controlli necessari, piano approvato, gestione del rischio residuo." },
+   { "h": "La SoA", "d": "Inclusioni spiegabili alla luce dei rischi prioritari, esclusioni coerenti col perimetro, stato di implementazione corrispondente alla realtà osservabile." },
+   { "h": "Il campo", "d": "Permessi rivisti, responsabilità note, evidenze documentate. Qui non stai controllando moduli separati: stai leggendo un motore che funziona." }
+  ]
+ },
+ {
+  "id": "27001_m04_s025",
+  "layout": "confronto",
+  "kicker": "La verifica",
+  "titolo": "Robustezza e fragilità",
+  "intro": "La robustezza non coincide con la complessità: un sistema piccolo può essere solido, uno grande fragile se la documentazione è ricca ma il filo logico è debole. Nessun indizio, da solo, basta a concludere — ma quando si sommano, raccontano.",
+  "a": {
+   "h": "Segnali di robustezza",
+   "sub": "Il sistema governa",
+   "punti": [
+    { "d": "Coerenza del racconto: parole diverse, ma si percepisce che parlano dello stesso sistema." },
+    { "d": "Tracciabilità: una linea chiara dalla valutazione al trattamento, ai controlli, alla SoA, alle evidenze." },
+    { "d": "Reattività: quando il contesto si modifica, trovi rivalutazioni e aggiornamenti sensati." }
+   ]
+  },
+  "b": {
+   "h": "Segnali deboli",
+   "sub": "Il sistema recita",
+   "punti": [
+    { "d": "Rischi generici e quasi intercambiabili tra organizzazioni diverse; priorità che nessuno sa giustificare coi criteri." },
+    { "d": "Documenti che non dialogano, come scritti da mani diverse senza coordinamento." },
+    { "d": "Date aggiornate senza contenuti aggiornati; «perché è previsto», «perché era nella tabella»." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m04_s026",
+  "layout": "cards",
+  "kicker": "La verifica",
+  "titolo": "Le domande che fanno emergere sostanza",
+  "intro": "Se chiedi solo se esiste una valutazione del rischio, otterrai quasi sempre un sì. La verifica diventa utile quando trasforma documenti statici in ragionamenti espliciti — e quando vari gli interlocutori: il motore non appartiene solo alla funzione sicurezza.",
+  "cards": [
+   { "h": "Il metodo", "d": "Come definite l'accettazione. Come assicurate coerenza tra valutazioni ripetute. Chi è responsabile del rischio. Come decidete che serve rivalutare quando cambia un processo o arriva un fornitore." },
+   { "h": "La catena decisionale", "d": "Perché questo rischio prima di un altro. Quale opzione e perché adeguata. Quali controlli necessari e come avete verificato di non averne omessi. Chi ha approvato. Chi ha accettato il residuo." },
+   { "h": "La SoA", "d": "Perché incluso, perché escluso. Se implementato, dove si vedono le evidenze. Se non implementato, quale trattamento lo governa nel frattempo." }
+  ]
+ },
+ {
+  "id": "27001_m04_s027",
+  "layout": "cards",
+  "kicker": "Il giudizio",
+  "titolo": "Dal rilievo locale al problema sistemico",
+  "intro": "Non tutte le debolezze pesano uguale. Più la frattura risale a monte, più è probabile che l'impatto sia sistemico. Il giudizio migliore è sempre quello tracciabile: devi poter mostrare la catena di evidenze che lo dimostra.",
+  "cards": [
+   { "h": "Lo stato non aggiornato", "d": "La SoA è allineata quasi ovunque ma uno stato non è stato aggiornato dopo il completamento. Se il resto della catena regge, è un problema limitato di mantenimento documentale." },
+   { "h": "Il motore fermo", "d": "Rivaluta raramente, non collega i cambiamenti, mantiene priorità vecchie, aggiorna la SoA in superficie, nessuno ha accettato i residui. Qui il problema tocca la spina dorsale." },
+   { "h": "I controlli senza perché", "d": "Molti controlli nuovi ma nessuna rivalutazione: trovi movimento e investimento, ma un sistema che agisce senza governare il perché." },
+   { "h": "Il ritardo dichiarato", "d": "Piano parzialmente fermo per un progetto rinviato: se il ritardo è noto, il residuo accettato e la SoA corretta, c'è ancora governo. Se è nascosto, il problema cresce." }
+  ]
+ },
+ {
+  "id": "27001_m04_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 4",
+  "modNum": "04",
+  "titolo": "Il motore dell'SGSI",
+  "punti": [
+   { "h": "L'architettura", "d": "Il 6.1 imposta la logica con cui si pianificano le azioni; i punti 8.2 e 8.3 la trasformano in attività operative ripetute e verificabili." },
+   { "h": "Prima i criteri", "d": "La valutazione non comincia dall'elenco dei pericoli: senza criteri chiari e mantenuti non hai confrontabilità, ponderazione affidabile né basi per scegliere." },
+   { "h": "Il percorso", "d": "Identificazione, analisi e ponderazione trasformano il perimetro in priorità leggibili, con responsabili riconosciuti e decisioni che puoi seguire fino ai controlli." },
+   { "h": "Il trattamento", "d": "Opzioni adeguate, controlli necessari, verifica di completezza, piano, approvazione, accettazione dei residui. I controlli contano se sai quale rischio trattano." },
+   { "h": "La SoA", "d": "Non sostituisce valutazione né piano: li rende leggibili dove le scelte sui controlli diventano dichiarazione di sistema." },
+   { "h": "Il ciclo vivo", "d": "Rischi rivalutati, trattamenti aggiornati, SoA allineata. È qui che distingui la conformità formale dalla capacità reale di governo." }
+  ],
+  "prossimo": {
+   "modulo": "05",
+   "titolo": "Supporto e attività operative",
+   "testo": "Dopo aver capito come il sistema decide, come si mette in condizione di funzionare ogni giorno."
+  }
+ }
+]
