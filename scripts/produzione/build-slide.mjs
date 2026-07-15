@@ -122,6 +122,43 @@ const LAYOUTS = {
     return shell(inner, C.dark, s.label);
   },
 
+  // flusso (cream): titolo + step orizzontali collegati da frecce (sequenze, cicli, processi)
+  flusso(s) {
+    const n = s.passi.length;
+    const parts = s.passi.map((p, i) => {
+      const box = `<div style="flex:1; background:${C.card}; border:1px solid ${C.line}; border-radius:12px; padding:22px;"><div style="font-family:${F.mono}; font-size:13px; color:${C.orange}; margin-bottom:12px;">${String(i + 1).padStart(2, "0")}</div><div style="font-family:${F.grot}; font-weight:600; font-size:19px; color:${C.ink}; margin-bottom:6px; line-height:1.2;">${esc(p.h)}</div><div style="font-size:14px; color:${C.muted}; line-height:1.5;">${esc(p.d || "")}</div></div>`;
+      const arrow = i < n - 1 ? `<div style="align-self:center; color:${C.orange}; font-size:22px; padding:0 2px; flex:0 0 auto;">→</div>` : "";
+      return box + arrow;
+    }).join("");
+    const inner =
+      header(s.kicker || "", s.ref || "", false) +
+      mid(
+        `<h1 style="font-family:${F.grot}; font-weight:600; font-size:40px; line-height:1.06; letter-spacing:-.015em; margin:0 0 ${s.intro ? "16" : "28"}px; color:${C.ink};">${esc(s.titolo)}</h1>` +
+        (s.intro ? `<p style="font-size:18px; line-height:1.5; color:${C.muted}; margin:0 0 26px; max-width:82ch;">${esc(s.intro)}</p>` : "") +
+        `<div style="display:flex; align-items:stretch; gap:8px;">${parts}</div>`,
+      ) +
+      footer(s.footer, false);
+    return shell(inner, C.cream, s.label);
+  },
+
+  // confronto (cream): titolo + due colonne affiancate (A vs B) con divisore
+  confronto(s) {
+    const colonna = (c) => {
+      const pts = (c.punti || []).map((p) =>
+        `<div style="display:flex; gap:14px; align-items:baseline; padding:10px 0; border-top:1px solid ${C.line};"><span style="color:${C.orange}; font-size:13px;">◆</span><span style="font-size:16px; color:${C.body}; line-height:1.45;">${esc(p.d || p)}</span></div>`).join("");
+      return `<div><div style="font-family:${F.grot}; font-weight:600; font-size:24px; color:${C.ink}; margin-bottom:6px;">${esc(c.h)}</div>${c.sub ? `<div style="font-size:14px; color:${C.orange}; font-family:${F.mono}; text-transform:uppercase; letter-spacing:.12em; margin-bottom:10px;">${esc(c.sub)}</div>` : ""}<div>${pts}</div></div>`;
+    };
+    const inner =
+      header(s.kicker || "", s.ref || "", false) +
+      mid(
+        `<h1 style="font-family:${F.grot}; font-weight:600; font-size:40px; line-height:1.06; letter-spacing:-.015em; margin:0 0 ${s.intro ? "16" : "28"}px; color:${C.ink};">${esc(s.titolo)}</h1>` +
+        (s.intro ? `<p style="font-size:18px; line-height:1.5; color:${C.muted}; margin:0 0 26px; max-width:82ch;">${esc(s.intro)}</p>` : "") +
+        `<div style="display:grid; grid-template-columns:1fr 1fr; gap:56px;">${colonna(s.a)}${colonna(s.b)}</div>`,
+      ) +
+      footer(s.footer, false);
+    return shell(inner, C.cream, s.label);
+  },
+
   // tabella (cream): titolo + tabella (cols + righe)
   tabella(s) {
     const th = s.cols.map((c) => `<th style="text-align:left; font-family:${F.mono}; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:${C.orange}; padding:0 18px 12px; border-bottom:2px solid ${C.line};">${esc(c)}</th>`).join("");
