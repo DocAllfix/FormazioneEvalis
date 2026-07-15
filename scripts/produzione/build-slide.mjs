@@ -1,0 +1,157 @@
+// GENERATORE SLIDE — da un JSON di contenuti distillati produce gli <id>.html nello stile
+// ESATTO del template Evalis (le stesse strutture/CSS di m01-m03 già validate). Separa il
+// lavoro creativo (distillazione dei copioni, che faccio io) dall'assemblaggio HTML (meccanico
+// e sempre corretto). Ogni slide è un <section> 1280×min-720, self-contained, file = <id>.html.
+//
+// Uso: node scripts/produzione/build-slide.mjs <contenuti.json> --out slide-in/<corso>
+// Il JSON è un array di slide, ognuna: { id, layout, ... } (vedi i layout sotto).
+
+import fs from "node:fs";
+import path from "node:path";
+
+const F = { mono: "'IBM Plex Mono',monospace", sans: "'IBM Plex Sans',sans-serif", grot: "'Space Grotesk',sans-serif" };
+const C = {
+  cream: "#F8F4EC", dark: "#231A12", ink: "#241C13", body: "#3B3226", orange: "#EA580C",
+  taupe: "#8A7B66", taupe2: "#A0917B", muted: "#7A6C58", card: "#FFFDF9", line: "#E6DCCB",
+  onDarkText: "#E6DCCB", onDarkMuted: "#A0917B", onDarkLine: "rgba(230,220,203,.18)",
+};
+const esc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+function header(kicker, ref, dark) {
+  const rc = dark ? "#8A7860" : C.taupe;
+  return `<div style="display:flex; justify-content:space-between; align-items:flex-start;"><span style="font-family:${F.mono}; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:${C.orange};">${esc(kicker)}</span>${ref ? `<span style="font-family:${F.mono}; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:${rc};">${esc(ref)}</span>` : ""}</div>`;
+}
+function footer(label, dark) {
+  return `<div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid ${dark ? C.onDarkLine : C.line}; padding-top:22px;"><div style="display:flex; flex-direction:column; line-height:1; gap:5px;"><div style="font-family:${F.grot}; font-weight:700; font-size:16px; letter-spacing:-.02em; color:${C.orange};">evalis</div><div style="font-family:${F.mono}; font-size:8px; letter-spacing:.34em; color:${C.taupe2};">ACADEMY</div></div><span style="font-family:${F.mono}; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:${C.taupe2};">${esc(label)}</span></div>`;
+}
+function shell(inner, bg, label) {
+  return `<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;background:#E7DECD;"><section data-screen-label="${esc(label)}" style="width:1280px; min-height:720px; background:${bg}; font-family:${F.sans}; display:flex; flex-direction:column; padding:58px 80px;">${inner}</section></body></html>`;
+}
+const mid = (inner) => `<div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:40px 0;">${inner}</div>`;
+
+// numerino monospace arancione
+const num = (n) => `<span style="font-family:${F.mono}; font-size:12px; color:${C.orange}; min-width:26px;">${esc(n)}</span>`;
+
+// riga elenco: { h?, d } — h grassetto opzionale + descrizione
+function rigaPunto(n, p, dark) {
+  const tcol = dark ? C.onDarkText : C.body;
+  const inner = p.h
+    ? `<span style="font-size:17px; line-height:1.4; color:${dark ? "#F4EDE1" : C.ink};"><b style="font-weight:600;">${esc(p.h)}</b> — <span style="color:${tcol};">${esc(p.d || "")}</span></span>`
+    : `<span style="font-size:17px; color:${tcol}; line-height:1.4;">${esc(p.d || p)}</span>`;
+  return `<div style="display:flex; gap:20px; align-items:baseline; padding:11px 0; border-top:1px solid ${dark ? C.onDarkLine : C.line};">${num(n)}${inner}</div>`;
+}
+
+const LAYOUTS = {
+  // copertina scura: kicker (Modulo NN) + label corso, titolo grande, sottotitolo, agenda opz.
+  apertura(s) {
+    const label = s.corsoLabel || "Corso di certificazione auditor";
+    const agenda = (s.agenda || []).map((a, i) =>
+      `<div style="display:flex; gap:16px; align-items:baseline; padding:10px 0; border-top:1px solid ${C.onDarkLine};">${num(String(i + 1).padStart(2, "0"))}<span style="font-size:16px; color:${C.onDarkText}; line-height:1.4;">${esc(a)}</span></div>`).join("");
+    const agendaGrid = agenda ? `<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 56px; margin-top:26px;">${agenda}</div>` : "";
+    const inner =
+      header(label, s.kicker || "", true) +
+      mid(
+        `<div style="font-family:${F.mono}; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:${C.onDarkMuted}; margin-bottom:18px;">${esc(s.eyebrow || "")}</div>` +
+        `<h1 style="font-family:${F.grot}; font-weight:600; font-size:${s.big ? "108px" : "64px"}; line-height:.98; letter-spacing:-.02em; margin:0; color:${C.orange};">${esc(s.titolo)}</h1>` +
+        (s.sottotitolo ? `<div style="font-family:${F.grot}; font-weight:600; font-size:34px; color:#F4EDE1; margin-top:10px; letter-spacing:-.01em;">${esc(s.sottotitolo)}</div>` : "") +
+        (s.testo ? `<p style="font-size:19px; line-height:1.5; color:${C.onDarkMuted}; margin:22px 0 0; max-width:80ch;">${esc(s.testo)}</p>` : "") +
+        agendaGrid,
+      ) +
+      footer(s.footer, true);
+    return shell(inner, C.dark, s.label);
+  },
+
+  // chiusura modulo: kicker riepilogo, "Fine modulo", titolo, recap 2-col, box prossimo
+  chiusura(s) {
+    const rec = (s.punti || []).map((p, i) => rigaPunto(String(i + 1).padStart(2, "0"), p, false)).join("");
+    const grid = `<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 56px;">${rec}</div>`;
+    const box = s.prossimo
+      ? `<div style="display:flex; gap:26px; align-items:center; background:${C.dark}; border-radius:14px; padding:22px 28px; margin-top:26px;"><span style="font-family:${F.mono}; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:${C.orange}; white-space:nowrap;">Prossimo →</span><div><div style="font-family:${F.grot}; font-weight:700; font-size:20px; color:#F4EDE1;">Modulo ${esc(s.prossimo.modulo)} — ${esc(s.prossimo.titolo)}</div>${s.prossimo.testo ? `<div style="font-size:14px; color:${C.onDarkMuted}; margin-top:4px;">${esc(s.prossimo.testo)}</div>` : ""}</div></div>`
+      : "";
+    const inner =
+      header(s.kicker || `Riepilogo · Modulo ${s.modNum || ""}`, "Fine modulo", false) +
+      mid(`<h1 style="font-family:${F.grot}; font-weight:600; font-size:44px; line-height:1.04; letter-spacing:-.015em; margin:0 0 26px; color:${C.ink};">${esc(s.titolo)}</h1>${grid}${box}`) +
+      footer(s.footer, false);
+    return shell(inner, C.cream, s.label);
+  },
+
+  // elenco punti (cream): titolo + intro opz + punti (1 o 2 colonne)
+  punti(s) {
+    const cols = s.colonne || (s.punti.length > 4 ? 2 : 1);
+    const items = s.punti.map((p, i) => rigaPunto(s.numerati === false ? "·" : String(i + 1).padStart(2, "0"), p, false)).join("");
+    const list = cols === 2
+      ? `<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 56px;">${items}</div>`
+      : `<div>${items}</div>`;
+    const inner =
+      header(s.kicker || "", s.ref || "", false) +
+      mid(
+        `<h1 style="font-family:${F.grot}; font-weight:600; font-size:40px; line-height:1.06; letter-spacing:-.015em; margin:0 0 ${s.intro ? "16" : "24"}px; color:${C.ink};">${esc(s.titolo)}</h1>` +
+        (s.intro ? `<p style="font-size:18px; line-height:1.5; color:${C.muted}; margin:0 0 24px; max-width:82ch;">${esc(s.intro)}</p>` : "") +
+        list,
+      ) +
+      footer(s.footer, false);
+    return shell(inner, C.cream, s.label);
+  },
+
+  // card 3-col (cream): titolo + card { h, d }
+  cards(s) {
+    const n = s.cards.length;
+    const colStyle = n <= 3 ? `repeat(${n},1fr)` : "repeat(3,1fr)";
+    const pad = n > 6 ? "22px" : "26px";
+    const cards = s.cards.map((c, i) =>
+      `<div style="background:${C.card}; border:1px solid ${C.line}; border-radius:12px; padding:${pad};"><div style="font-family:${F.mono}; font-size:13px; color:${C.orange}; margin-bottom:14px;">${String(i + 1).padStart(2, "0")}</div><div style="font-family:${F.grot}; font-weight:600; font-size:${n > 6 ? "19" : "20"}px; color:${C.ink}; margin-bottom:8px; line-height:1.2;">${esc(c.h)}</div><div style="font-size:${n > 6 ? "14" : "15"}px; color:${C.muted}; line-height:1.5;">${esc(c.d || "")}</div></div>`).join("");
+    const inner =
+      header(s.kicker || "", s.ref || "", false) +
+      mid(`<h1 style="font-family:${F.grot}; font-weight:600; font-size:40px; line-height:1.06; letter-spacing:-.015em; margin:0 0 26px; color:${C.ink};">${esc(s.titolo)}</h1><div style="display:grid; grid-template-columns:${colStyle}; gap:16px;">${cards}</div>`) +
+      footer(s.footer, false);
+    return shell(inner, C.cream, s.label);
+  },
+
+  // definizione (scura): termine grande + definizione (bordo sx) + punti a supporto
+  definizione(s) {
+    const pts = (s.punti || []).map((p, i) => rigaPunto(String(i + 1).padStart(2, "0"), p, true)).join("");
+    const inner =
+      header(s.kicker || "Definizione", s.ref || "", true) +
+      mid(
+        (s.eyebrow ? `<div style="font-family:${F.mono}; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:${C.orange}; margin-bottom:14px;">${esc(s.eyebrow)}</div>` : "") +
+        `<h1 style="font-family:${F.grot}; font-weight:700; font-size:52px; line-height:1; letter-spacing:-.02em; margin:0 0 22px; color:#F4EDE1;">${esc(s.titolo)}</h1>` +
+        `<div style="border-left:3px solid ${C.orange}; padding-left:26px; max-width:70ch; margin:6px 0 ${pts ? "30" : "0"}px;"><p style="font-size:23px; line-height:1.4; font-weight:500; color:#F4EDE1; margin:0;">${esc(s.definizione)}</p></div>` +
+        (pts ? `<div>${pts}</div>` : ""),
+      ) +
+      footer(s.footer, true);
+    return shell(inner, C.dark, s.label);
+  },
+
+  // tabella (cream): titolo + tabella (cols + righe)
+  tabella(s) {
+    const th = s.cols.map((c) => `<th style="text-align:left; font-family:${F.mono}; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:${C.orange}; padding:0 18px 12px; border-bottom:2px solid ${C.line};">${esc(c)}</th>`).join("");
+    const rows = s.righe.map((r) =>
+      `<tr>${r.map((cell, ci) => `<td style="padding:13px 18px; border-bottom:1px solid ${C.line}; font-size:${ci === 0 ? "16" : "15"}px; color:${ci === 0 ? C.ink : C.body}; ${ci === 0 ? "font-weight:600;" : ""} vertical-align:top; line-height:1.4;">${esc(cell)}</td>`).join("")}</tr>`).join("");
+    const inner =
+      header(s.kicker || "", s.ref || "", false) +
+      mid(`<h1 style="font-family:${F.grot}; font-weight:600; font-size:40px; line-height:1.06; letter-spacing:-.015em; margin:0 0 26px; color:${C.ink};">${esc(s.titolo)}</h1><table style="width:100%; border-collapse:collapse;"><thead><tr>${th}</tr></thead><tbody>${rows}</tbody></table>`) +
+      footer(s.footer, false);
+    return shell(inner, C.cream, s.label);
+  },
+};
+
+// --- main ---
+const jsonPath = process.argv[2];
+const outIx = process.argv.indexOf("--out");
+const outDir = outIx !== -1 ? process.argv[outIx + 1] : null;
+if (!jsonPath || !outDir) {
+  console.error("Uso: node scripts/produzione/build-slide.mjs <contenuti.json> --out <dir>");
+  process.exit(2);
+}
+const slides = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
+fs.mkdirSync(outDir, { recursive: true });
+let ok = 0;
+for (const s of slides) {
+  const fn = LAYOUTS[s.layout];
+  if (!fn) { console.error(`✗ ${s.id}: layout sconosciuto "${s.layout}"`); process.exit(1); }
+  if (!s.footer) s.footer = `Modulo ${(s.id.match(/_m(\d\d)_/) || [])[1] || ""} · ${s.titolo}`;
+  if (!s.label) s.label = s.id;
+  fs.writeFileSync(path.join(outDir, `${s.id}.html`), fn(s));
+  ok++;
+}
+console.log(`Generate ${ok} slide in ${outDir}`);
