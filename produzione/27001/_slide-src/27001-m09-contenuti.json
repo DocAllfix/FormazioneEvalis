@@ -1,0 +1,388 @@
+[
+ {
+  "id": "27001_m09_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 9",
+  "eyebrow": "Miglioramento e non conformità tipiche",
+  "titolo": "La maturità si vede quando qualcosa non torna",
+  "testo": "La maturità di un SGSI non si vede quando tutto fila liscio, ma quando un problema emerge e l'organizzazione reagisce con metodo. Miglioramento non significa perfezione, e non conformità non significa fallimento totale. Il punto non è negare che accadano scostamenti: è vedere se l'organizzazione li intercetta, li comprende, ne affronta le conseguenze e agisce sulla causa.",
+  "agenda": [
+   "10.2 Non conformità e azione correttiva",
+   "10.1 Miglioramento continuo",
+   "Le non conformità tipiche per clausola",
+   "Le NC tipiche per famiglie di controlli",
+   "Incidente vs NC, e il rapporto al management"
+  ]
+ },
+ {
+  "id": "27001_m09_s002",
+  "layout": "punti",
+  "kicker": "10.2 · Non conformità",
+  "titolo": "Quando nasce nell'SGSI",
+  "intro": "Succede quando ciò che l'organizzazione aveva stabilito, o ciò che la norma richiede, non trova riscontro nei fatti. Non guardi l'impressione generale: guardi il confronto tra requisito e realtà. Non richiede sempre un danno già avvenuto.",
+  "punti": [
+   { "h": "Il confronto, non il fastidio", "d": "Collega sempre il fatto osservato a un requisito applicabile. Il fornitore critico è nel campo di applicazione, ma nessuno definisce come verificarne i livelli di sicurezza: gestione dichiarata che nei fatti non si vede." },
+   { "h": "L'attività non salva", "d": "Tante riunioni, molti file, strumenti nuovi non sostituiscono il requisito. Se la politica esiste ma nessuno sa spiegarla, la vivacità organizzativa non salva la situazione." },
+   { "h": "Evento, sintomo, scostamento", "d": "L'accesso troppo ampio è l'evento; la confusione nei permessi è il sintomo; lo scostamento sta a monte — criteri non definiti, ruoli non assegnati, controllo dei cambiamenti debole." },
+   { "h": "Isolato o sistemico", "d": "Un documento senza data è una svista; dieci documenti chiave senza controllo di versione raccontano altro. La differenza non è solo quantitativa: è di significato per il funzionamento dell'SGSI." }
+  ]
+ },
+ {
+  "id": "27001_m09_s003",
+  "layout": "flusso",
+  "kicker": "10.2 · Reazione",
+  "titolo": "Contenere, correggere, gestire le conseguenze",
+  "intro": "La prima tentazione è chiudere in fretta. Il 10.2 chiede una risposta ordinata, con tre componenti distinte. Attenzione: correggere non equivale ancora a fare un'azione correttiva — una ferma il sintomo, l'altra riduce la probabilità che torni.",
+  "passi": [
+   { "h": "Contenere", "d": "Mettere il problema sotto controllo: restringere subito i permessi troppo ampi sulle cartelle riservate, bloccare ulteriori propagazioni." },
+   { "h": "Correggere", "d": "Ripristinare ciò che doveva esserci: riallineare le autorizzazioni secondo i criteri definiti." },
+   { "h": "Gestire le conseguenze", "d": "Chi ha avuto accesso, da quando, se esistono copie locali, se il management va informato. Proporzionalità: la firma mancante non pesa come un processo critico non monitorato da mesi." }
+  ]
+ },
+ {
+  "id": "27001_m09_s004",
+  "layout": "punti",
+  "kicker": "10.2 · La causa",
+  "titolo": "Analisi, recidive, casi simili",
+  "intro": "Il tratto più importante e più facile da fare male. Non indovinare una spiegazione plausibile: capire perché il sistema ha permesso quello sbaglio, non lo ha prevenuto o non lo ha intercettato. Qui nasce la differenza tra un SGSI che rincorre e uno che impara.",
+  "punti": [
+   { "h": "Oltre l'errore individuale", "d": "I neoassunti abilitati prima della formazione: la spiegazione facile è «errore del singolo». La vera causa è un processo che non collega abilitazione tecnica e formazione, con responsabilità frammentate." },
+   { "h": "L'abuso dell'«errore umano»", "d": "Esiste, ma è spesso l'ultima maglia di una catena: istruzioni poco chiare, carichi eccessivi, autorizzazioni non presidiate. Se ti fermi alla persona, proteggi il sistema da un'analisi seria." },
+   { "h": "Le domande, più del metodo", "d": "Cosa doveva accadere? Cosa è accaduto invece? Quale controllo era assente, inefficace o non riesaminato? Chi doveva accorgersene prima? Quale informazione documentata mancava?" },
+   { "h": "Dove altro può fallire", "d": "Se manca il collegamento tra change management e valutazione del rischio, il difetto non riguarda solo quell'applicazione: dove altro il sistema può fallire per la stessa ragione? Osservi uno schema, non un punto." }
+  ]
+ },
+ {
+  "id": "27001_m09_s005",
+  "layout": "punti",
+  "kicker": "10.2 · Chiusura",
+  "titolo": "Efficacia, proporzionalità, tracce",
+  "intro": "Una non conformità non si chiude quando l'organizzazione promette di fare meglio: si chiude quando l'azione è realizzata, verificata e collegata al sistema. Non un atto amministrativo — una conclusione fondata su fatti osservabili.",
+  "punti": [
+   { "h": "L'efficacia", "d": "Deve ridurre la probabilità di ritorno, non abbellire il processo. La domanda: che cosa dovrebbe accadere d'ora in poi, che prima non accadeva? Se la risposta resta vaga, l'azione è debole." },
+   { "h": "La proporzionalità", "d": "Evita due errori: il sottodimensionamento (risposta minima a impatti rilevanti) e l'iperreazione (processi pesanti per un difetto locale). Non serve una nuova piattaforma e tre comitati per un calendario di riesame mancante." },
+   { "h": "Modificare l'SGSI", "d": "Più forte di quanto sembri: la non conformità ben trattata può cambiare procedure, ruoli, criteri, monitoraggi. Se il sistema resta identico dopo una NC significativa, l'apprendimento è stato reale?" },
+   { "h": "Le tracce documentate", "d": "Poter ricostruire la storia: cosa osservato, quale requisito, cosa fatto subito, quale causa, quali azioni, chi le ha attuate, quando, con quali risultati. Senza, la memoria si perde e la debolezza riappare." }
+  ]
+ },
+ {
+  "id": "27001_m09_s006",
+  "layout": "punti",
+  "kicker": "10.1 · Miglioramento",
+  "titolo": "Che cosa significa davvero",
+  "intro": "La norma richiede che l'SGSI diventi più idoneo, più adeguato e più efficace nel tempo. Non inseguire la novità per principio: puoi migliorare anche semplificando, chiarendo, eliminando duplicazioni. La continuità sta nel metodo, non nella spettacolarità dell'intervento.",
+  "punti": [
+   { "h": "Non solo aggiungere", "d": "La valutazione del rischio formalmente corretta ma che richiede settimane: standardizzare criteri, chiarire responsabilità, collegare i cambiamenti a un riesame. Più adeguato al ritmo operativo, senza burocrazia in più." },
+   { "h": "Non solo dalle NC", "d": "Le non conformità sono una fonte preziosa, ma non l'unica: monitoraggio, misurazioni, obiettivi, riesami, feedback, cambiamenti. Un SGSI maturo impara anche dai segnali deboli." },
+   { "h": "Meccanismi, non progetti visibili", "d": "Non ogni mese un progetto: il sistema ha meccanismi che trasformano ciò che osserva in decisioni sensate. A volte grandi (ripensare i fornitori), a volte piccole (un criterio di classificazione)." },
+   { "h": "Miglioramento narrato", "d": "Se i riesami producono sempre le stesse conclusioni, gli indicatori non guidano decisioni e le stesse NC ritornano, il miglioramento dichiarato non è continuo: è raccontato." }
+  ]
+ },
+ {
+  "id": "27001_m09_s007",
+  "layout": "punti",
+  "kicker": "10.1 · Le fonti",
+  "titolo": "Da dati dispersi a priorità",
+  "intro": "Se le decisioni di miglioramento nascono dall'intuizione del momento, il sistema resta fragile. Le fonti sono molte, e la loro forza sta nel convergere. Pensa in termini di priorità, non di accumulo.",
+  "punti": [
+   { "h": "I segnali che convergono", "d": "Nessun incidente da mesi rassicura, ma le revoche rallentano, i fornitori sfuggono al controllo, gli asset critici sono in ritardo per la terza volta: letti insieme raccontano una perdita di tenuta." },
+   { "h": "La qualità dei dati", "d": "Non basta raccoglierne molti: affidabili, comparabili, leggibili. La carenza più frequente non è l'assenza di misure, è la presenza di misure inutilizzabili — così si decide su impressioni." },
+   { "h": "Il feedback sottostimato", "d": "Un cliente che chiede trasparenza sugli accessi, il personale che fatica con la classificazione: riconoscere quando una richiesta rivela una fragilità o un cambiamento del contesto da assorbire." },
+   { "h": "Priorità, non accumulo", "d": "Quali azioni riducono i rischi più rilevanti, migliorano l'efficacia, eliminano ricorrenze che consumano tempo. Correggere un modulo poco usato è utile; ma se il nodo è il passaggio di consegne, quella è la priorità." }
+  ]
+ },
+ {
+  "id": "27001_m09_s008",
+  "layout": "punti",
+  "kicker": "10.1 · Integrazione",
+  "titolo": "Senza creare un cantiere infinito",
+  "intro": "Molte organizzazioni immaginano un grande progetto. Il miglioramento funziona quando entra nei processi ordinari: se ogni intervento richiede un cantiere straordinario, il sistema si stanca presto e smette di imparare. Integrare non significa disperdere.",
+  "punti": [
+   { "h": "Nei processi esistenti", "d": "Invece di lanciare un programma sulla cultura della sicurezza: un punto di verifica obbligato nel change management, la classificazione con casi d'uso nell'onboarding. Più coerente senza diventare più pesante." },
+   { "h": "Quattro elementi chiari", "d": "Ogni azione ha un obiettivo comprensibile, un responsabile reale (non nominale), un tempo ragionevole, un modo per verificare il risultato. Molti piani falliscono qui: pieni di iniziative, vuoti di proprietà e verifica." },
+   { "h": "Effetti osservabili", "d": "Se hai integrato un controllo sui cambiamenti, puoi vedere se i casi coperti aumentano; se hai chiarito responsabilità sui documenti esterni, la tempestività degli aggiornamenti. L'azione lascia tracce." },
+   { "h": "La vista d'insieme", "d": "Se ogni funzione introduce modifiche senza coordinamento, il sistema si frammenta. Il miglioramento è fatto di passi operativi, ma deve restare leggibile come direzione complessiva." }
+  ]
+ },
+ {
+  "id": "27001_m09_s009",
+  "layout": "cards",
+  "kicker": "10.1 · Distinzioni",
+  "titolo": "Manutenzione, progetto, vero miglioramento",
+  "intro": "Tre cose spesso mescolate, più una quarta confusione. Tutte comportano attività e risorse, ma il loro significato è diverso, e confonderle porta a conclusioni deboli.",
+  "cards": [
+   { "h": "La manutenzione", "d": "Aggiornare una lista, rinnovare una procedura scaduta: necessaria, tiene il sistema in funzione. Ma riporta l'SGSI al livello atteso senza innalzarlo — come rimettere in bolla un tavolo." },
+   { "h": "Il progetto una tantum", "d": "Un nuovo strumento di monitoraggio, mesi di lavoro, cambiamento visibile. Ma se dopo il rilascio nessuno verifica l'efficacia e i ruoli restano ambigui, hai avuto un progetto, non un miglioramento stabile." },
+   { "h": "Il vero miglioramento", "d": "Tre segni: cambia come il sistema apprende, rende più affidabile la prevenzione, resiste al tempo perché entra nei processi e nelle responsabilità." },
+   { "h": "La crescita del perimetro", "d": "La quarta confusione: aggiungere siti, tecnologie, controlli. Tutto aumenta, ma se l'SGSI diventa più grande e più difficile da governare, la postura peggiora. Migliorare vuol dire scegliere e collegare meglio." }
+  ]
+ },
+ {
+  "id": "27001_m09_s010",
+  "layout": "punti",
+  "kicker": "NC tipiche",
+  "titolo": "Leggere per schemi, non per sintomi",
+  "intro": "Non un catalogo meccanico: nella pratica le non conformità tornano per schemi, non per dettagli identici. Riconoscerli aiuta più che memorizzare cento casi. Ma gli schemi servono a leggere meglio, non a saltare il ragionamento: parti sempre dai fatti.",
+  "punti": [
+   { "h": "La disconnessione dichiara/governa", "d": "Campo di applicazione ottimistico, responsabilità assegnate ma non vissute, controlli dichiarati senza prova. La NC nasce perché l'SGSI promette una capacità che nei fatti non dimostra." },
+   { "h": "La perdita di collegamento", "d": "Un SGSI raramente fallisce per un solo tassello: fallisce nei passaggi. Cambiamenti che non arrivano al rischio, formazione che non incontra gli accessi, riesame che non assorbe il monitoraggio." },
+   { "h": "La ritualizzazione", "d": "Tutto esiste, poco incide: la politica non orienta, gli obiettivi non guidano, le misurazioni non si leggono, i riesami non producono cambiamenti. La forma più insidiosa: dall'esterno sembra ordine." },
+   { "h": "Non forzare gli schemi", "d": "Il fatto che una famiglia sia frequente non significa che ogni situazione vada forzata dentro quella categoria: parti dai fatti, dai requisiti applicabili e dalle evidenze." }
+  ]
+ },
+ {
+  "id": "27001_m09_s011",
+  "layout": "punti",
+  "kicker": "NC · Clausola 4",
+  "titolo": "Contesto e campo di applicazione",
+  "intro": "Molte NC nascono prima dei controlli tecnici, quando l'organizzazione definisce male il contesto o delimita il perimetro in modo più rassicurante che realistico. Raramente restano isolate: trascinano rischi incompleti, monitoraggi parziali, riesami poco utili.",
+  "punti": [
+   { "h": "Il contesto dimenticato", "d": "Descritto una volta e mai riesaminato quando cambiano mercati, servizi, tecnologie: l'SGSI continua a leggere l'organizzazione di ieri. Perde idoneità rispetto alla realtà che dovrebbe governare." },
+   { "h": "Le parti interessate generiche", "d": "Elenchi copiati da modelli, senza collegamento ai requisiti pertinenti. Se sono nominate ma i loro requisiti non orientano decisioni, il sistema recita comprensione, non la dimostra." },
+   { "h": "Il perimetro ottimista", "d": "Escludere servizi cloud critici, interfacce con terzi, sedi poco presidiate. La NC non è l'esclusione in sé: è l'esclusione non sostenibile rispetto ai fatti e alle interdipendenze reali." },
+   { "h": "Il perimetro sconosciuto", "d": "Formalmente corretto ma i responsabili non sanno quali processi sono inclusi e il management parla dell'SGSI come confinato all'IT: il documento esiste, ma non guida il comportamento." }
+  ]
+ },
+ {
+  "id": "27001_m09_s012",
+  "layout": "punti",
+  "kicker": "NC · Clausola 5",
+  "titolo": "Leadership, politica, ruoli",
+  "intro": "Quasi mai l'assenza totale di dichiarazioni: più spesso dichiarazioni corrette sulla carta, ma poco presenti nelle decisioni e nelle responsabilità quotidiane. Se le stesse carenze tornano in aree diverse, non hai una somma di errori locali: hai una debolezza di governo.",
+  "punti": [
+   { "h": "La politica non integrata", "d": "Pubblicata e distribuita, ma non orienta gli obiettivi, non compare nei riesami, non è conosciuta. Non manca — non funziona come quadro di riferimento." },
+   { "h": "Le risorse mancanti", "d": "Non solo budget: riunioni rimandate, responsabilità aggiuntive senza capacità reale, decisioni attese per mesi, dipendenza da una sola persona chiave, obiettivi affidati a chi non controlla i mezzi." },
+   { "h": "I ruoli nominali", "d": "Sulla matrice tutto è chiaro, ma nessuno sa chi riferisce le prestazioni al vertice, chi coordina il trattamento del rischio, chi segue le azioni correttive. L'autorità dichiarata ma non resa operativa." },
+   { "h": "La comunicazione simbolica", "d": "Il management parla di sicurezza solo dopo incidenti o richieste esterne: le persone la percepiscono come tema episodico o barriera amministrativa, non come parte del lavoro ben fatto." }
+  ]
+ },
+ {
+  "id": "27001_m09_s013",
+  "layout": "punti",
+  "kicker": "NC · Clausola 6",
+  "titolo": "Rischio, obiettivi, modifiche",
+  "intro": "Se vuoi capire rapidamente la maturità di un SGSI, guarda come pianifica. Se il rischio è letto male, gli obiettivi diventano decorativi e quando l'organizzazione cambia il sistema non riesce a seguirla. Tre lenti: coerenza, reattività, traducibilità.",
+  "punti": [
+   { "h": "Il processo generico", "d": "Criteri poco chiari o non mantenuti: chi valuta usa scale diverse e interpreta diversamente le soglie. La coerenza si basa sull'esperienza del singolo, non su criteri applicati. Riguarda la tenuta del processo." },
+   { "h": "I cambiamenti non assorbiti", "d": "Nuovi servizi, fornitori, migrazioni cloud: tutto si muove, ma la valutazione resta ferma. Crea l'illusione di controllo mentre il contesto è già cambiato. L'azione vera riguarda il legame cambiamento-riesame." },
+   { "h": "Il trattamento senza governo", "d": "Piani che elencano azioni senza priorità, responsabilità, stato, accettazione del residuo; la SoA trattata come allegato statico. Non il formato: il piano non governa decisioni reali." },
+   { "h": "Gli obiettivi decorativi", "d": "«Migliorare la sicurezza» non dice cosa sarà fatto, da chi, quando, come si valuta. Senza traduzione operativa l'obiettivo resta un auspicio. «Il rischio è stato considerato» — ma dove si vede il collegamento?" }
+  ]
+ },
+ {
+  "id": "27001_m09_s014",
+  "layout": "punti",
+  "kicker": "NC · Clausola 7",
+  "titolo": "Competenze, consapevolezza, documenti",
+  "intro": "Il supporto è spesso il punto in cui le buone intenzioni si spezzano: non dettagli amministrativi, ma i meccanismi che fanno funzionare il sistema in modo ripetibile e affidabile. C'è un legame stretto con la capacità di fare azione correttiva.",
+  "punti": [
+   { "h": "Ruolo = competenza", "d": "Si presume competente chi occupa una posizione chiave, ma mancano criteri, evidenze di formazione, valutazione dell'efficacia. Decisioni rilevanti prese senza una base dimostrabile." },
+   { "h": "La consapevolezza rituale", "d": "Corso seguito, presa visione firmata, ma non sanno collegare la politica al proprio lavoro né percepiscono le implicazioni. Emerge quando parli con ruoli diversi e ottieni risposte stereotipate." },
+   { "h": "La comunicazione informale", "d": "Tutti parlano con tutti, ma non sono definiti argomenti, tempi, destinatari delle comunicazioni rilevanti. Un cambiamento importante si affida alla buona volontà — che da sola non è un controllo." },
+   { "h": "I documenti ingovernabili", "d": "Versioni concorrenti, riesami non rintracciabili, fonti esterne non presidiate. La procedura locale aggiornata mentre il repository ha la vecchia: il problema non è la quantità, è la governabilità." }
+  ]
+ },
+ {
+  "id": "27001_m09_s015",
+  "layout": "punti",
+  "kicker": "NC · Clausola 8",
+  "titolo": "Operatività, cambiamenti, esternalizzati",
+  "intro": "Il punto in cui l'SGSI deve dimostrare di saper funzionare nel quotidiano. Tre parole: criteri, cambiamenti, controllo dell'esterno. Queste NC non esplodono come eventi drammatici: producono una lenta erosione della capacità di governo.",
+  "punti": [
+   { "h": "I criteri dei processi", "d": "Si afferma di tenere sotto controllo le attività, ma non si mostrano criteri comprensibili per considerarle svolte come pianificato. Impossibile collegare il lavoro reale al disegno del sistema." },
+   { "h": "I cambiamenti non riesaminati", "d": "Si gestisce il cambiamento come progetto tecnico, non come cambiamento dell'SGSI: nuove applicazioni, flussi di accesso, servizi esterni, ma nessuno ne riesamina in modo ordinato le conseguenze." },
+   { "h": "L'esterno solo contrattualizzato", "d": "Un servizio critico presidiato solo al contratto iniziale. Il provider cambia autenticazione, le sedi introducono eccezioni: nessuno consolida gli effetti sul rischio. Contratto e controllo non coincidono." },
+   { "h": "Le registrazioni minime", "d": "Un controllo periodico segnato come «eseguito», ma non si capisce cosa sia stato verificato, con quali criteri, con quale esito: una chiusura amministrativa, non una prova utile." }
+  ]
+ },
+ {
+  "id": "27001_m09_s016",
+  "layout": "punti",
+  "kicker": "NC · Clausola 9",
+  "titolo": "Monitoraggio, verifiche, riesame",
+  "intro": "Quando un SGSI perde lucidità su se stesso, le NC emergono nella valutazione delle prestazioni. Se il sistema non sa leggere il proprio stato, farà fatica anche a migliorare. Quattro domande: le misure sono utili? I risultati letti nel tempo? Le verifiche vedono ciò che conta? Il riesame decide?",
+  "punti": [
+   { "h": "Il monitoraggio scollegato", "d": "Indicatori non collegati ai processi rilevanti, o metodi che cambiano senza logica: i risultati non sono confrontabili. Non l'assenza di numeri — l'assenza di validità decisionale." },
+   { "h": "L'analisi debole", "d": "Dati raccolti, presentati, archiviati, ma non trasformati in valutazioni: mancano trend, interpretazione delle deviazioni, priorità. Il paradosso: molte informazioni, decisioni su impressioni." },
+   { "h": "Le verifiche che non imparano", "d": "Programmi che non tengono conto dell'importanza dei processi e dei risultati precedenti; risultati senza traduzione in priorità; obiettività dichiarata ma non salvaguardata." },
+   { "h": "Il riesame sterile", "d": "Incompleto (trascura trend, feedback, azioni correttive) o formalmente completo ma povero di decisioni: si prende atto, si aggiorna il verbale, ma non emergono cambiamenti. Informazione senza governo." }
+  ]
+ },
+ {
+  "id": "27001_m09_s017",
+  "layout": "punti",
+  "kicker": "NC · Famiglie di controlli",
+  "titolo": "Asset, identità, accessi",
+  "intro": "Dalla pratica ricorrente, non da un elenco prescrittivo. Una trappola culturale: considerarli materia puramente tecnica — dipendono invece da leadership, ruoli, comunicazioni. Tre piani: cosa proteggere, come si assegnano i diritti, quali tracce lo dimostrano.",
+  "punti": [
+   { "h": "Gli asset non mappati", "d": "Elenco che non segue l'evoluzione dei servizi: nuove applicazioni, repository, ambienti cloud crescono più in fretta della capacità di mantenere un quadro coerente. Autorizzazioni su una mappa incompleta." },
+   { "h": "Gli accessi", "d": "Non solo il privilegio eccessivo: criteri poco uniformi, attribuzioni per consuetudine, revoche lente, eccezioni urgenti diventate permanenti, responsabilità frammentate. Una debolezza di controllo e decisione." },
+   { "h": "Il ciclo di vita delle persone", "d": "Se assunzioni, cambi di ruolo, uscite non attivano aggiornamenti affidabili delle autorizzazioni, il sistema accumula accessi non giustificati. La causa sta nel processo interfunzionale, non nel singolo amministratore." },
+   { "h": "Guardare a monte", "d": "Quale perimetro manca, quale decisione non viene presa, quale informazione non arriva. Evita i rimedi cosmetici e costruisce un'azione correttiva più robusta." }
+  ]
+ },
+ {
+  "id": "27001_m09_s018",
+  "layout": "punti",
+  "kicker": "NC · Famiglie di controlli",
+  "titolo": "Fornitori, servizi esterni, tecnologia",
+  "intro": "Si può affidare all'esterno attività e piattaforme, ma non la responsabilità di governarne gli effetti sull'SGSI. Spesso sottovalutata: finché il servizio funziona, tutto appare sotto controllo — ma l'SGSI valuta il governo del rischio, non la disponibilità del servizio.",
+  "punti": [
+   { "h": "Fiducia contrattuale = controllo", "d": "Contratto, clausole, fornitore noto con proprie certificazioni: ma manca il presidio periodico su prestazioni, modifiche del servizio, dipendenze. Selezionato, ma non governato nel tempo." },
+   { "h": "Il cambiamento troppo rapido", "d": "La tecnologia cambia perché il business spinge, ma rischio, trattamento e competenze restano indietro. La NC di superficie riguarda accessi o classificazione; la causa è il mancato assorbimento del cambiamento." },
+   { "h": "Le interfacce", "d": "Il fornitore opera bene nel suo perimetro, ma chi approva le richieste, chi verifica le eccezioni, chi riceve le notifiche di modifica? Se le interfacce non sono chiare, il sistema si riempie di zone grigie." },
+   { "h": "Il collegamento col miglioramento", "d": "Le organizzazioni mature usano dati, feedback e cambiamenti per ridefinire criteri e punti di verifica; le altre inseguono ogni volta il sintomo del momento." }
+  ]
+ },
+ {
+  "id": "27001_m09_s019",
+  "layout": "punti",
+  "kicker": "NC · Famiglie di controlli",
+  "titolo": "Consapevolezza, monitoraggio, evidenze",
+  "intro": "NC apparentemente minori ma molto istruttive. La domanda che le legge bene: il controllo lascia una traccia utile a un terzo competente? Se domani una persona diversa dovesse capire cosa è stato fatto, perché e con quale esito, riuscirebbe?",
+  "punti": [
+   { "h": "La consapevolezza operativa", "d": "Non solo la formazione iniziale: riconoscere situazioni rilevanti, segnalare tempestivamente. La sensibilizzazione esiste come evento, non come pratica — ricordano i messaggi, esitano davanti ai casi reali." },
+   { "h": "Il monitoraggio quotidiano", "d": "Controlli pensati bene, ma nessuno ne osserva l'andamento, o senza criteri stabili. Una NC silenziosa: l'SGSI crede di presidiare un'attività, ma non verifica più se il presidio resta efficace." },
+   { "h": "Le evidenze", "d": "Registrazioni in ritardo, tracciabilità debole, esiti annotati senza criterio, chiusure che non permettono di capire cosa è accaduto. Colpiscono la capacità di ricostruire una storia e dimostrare l'efficacia." },
+   { "h": "Il legame col rapporto", "d": "Se le evidenze sono povere, il rapporto sarà generico; se solide, distingui sintomo, causa e priorità. Le carenze sulle evidenze non sono secondarie: influiscono su tutto il ciclo di governo." }
+  ]
+ },
+ {
+  "id": "27001_m09_s020",
+  "layout": "confronto",
+  "kicker": "Incidente e NC",
+  "titolo": "Due piani diversi",
+  "intro": "Possono incontrarsi, ma appartengono a piani diversi. Confonderli porta a conclusioni frettolose, sia quando si drammatizza tutto, sia quando si minimizza troppo. La differenza sta nel confronto tra requisito e realtà, non nell'intensità del danno.",
+  "a": {
+   "h": "L'incidente",
+   "sub": "Ciò che è accaduto",
+   "punti": [
+    { "d": "Un evento che produce o può produrre effetti sulla sicurezza delle informazioni." },
+    { "d": "Non ogni incidente dimostra una NC: può accadere anche in un sistema ben gestito che un rischio residuo si materializzi." },
+    { "d": "Richiede risposta, analisi e apprendimento — ma non autorizza da solo a concludere una non conformità." }
+   ]
+  },
+  "b": {
+   "h": "La non conformità",
+   "sub": "Ciò che il sistema non ha fatto",
+   "punti": [
+    { "d": "Uno scostamento rispetto a un requisito applicabile dell'SGSI." },
+    { "d": "Può emergere prima di ogni incidente: un processo non monitorato da mesi è già NC, anche senza danni." },
+    { "d": "Il fatto che un incidente sia stato contenuto non significa che l'SGSI fosse conforme." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m09_s021",
+  "layout": "flusso",
+  "kicker": "Incidente e NC",
+  "titolo": "Quando l'incidente rivela una NC",
+  "intro": "Molti incidenti non creano la non conformità, ma la rendono finalmente visibile. Dopo l'evento tutti guardano l'effetto immediato; tu devi risalire al requisito non rispettato e alla causa che agiva già prima. Ricostruisci la sequenza in ordine logico.",
+  "passi": [
+   { "h": "L'evento e gli effetti", "d": "Il blocco su una piattaforma documentale, il recupero molto più lungo del previsto, dati temporaneamente indisponibili. Da solo, ti dice che il servizio ha avuto un problema." },
+   { "h": "Il requisito coinvolto", "d": "L'analisi mostra il piano di trattamento non aggiornato dopo una modifica dell'architettura, responsabilità incerte sul riesame del fornitore. Non più un disservizio: una NC nel governo del cambiamento." },
+   { "h": "I segnali che c'erano già", "d": "Piccoli ritardi, eccezioni non riesaminate, documenti non aggiornati: nessuno decisivo da solo, ma insieme preparavano il terreno. Chiedi cosa il sistema non aveva chiarito, collegato o monitorato." },
+   { "h": "Dove altro può accadere", "d": "Se una modifica non ha attivato il riesame del rischio, dove altro avvengono modifiche senza quel collegamento? Evita la correzione locale e apre la strada a una vera azione correttiva." }
+  ]
+ },
+ {
+  "id": "27001_m09_s022",
+  "layout": "punti",
+  "kicker": "Incidente e NC",
+  "titolo": "Quando un incidente non basta",
+  "intro": "L'altro lato: un incidente può essere serio, costoso, visibile, e tuttavia non dimostrare da solo una NC. Non è indulgenza, è rigore: il sistema non promette che nessun evento accadrà mai, promette un governo ragionevole dei rischi.",
+  "punti": [
+   { "h": "La verifica precisa", "d": "Il rischio era stato considerato? I controlli pertinenti attuati? Le responsabilità chiare? La risposta ha seguito ciò che il sistema prevedeva? Se sì, hai il materializzarsi di un rischio, non una NC." },
+   { "h": "Il phishing gestito", "d": "Credenziali inserite su un sito falso, ma rilevamento rapido, cambio credenziali, analisi log. La formazione era stata fatta, i controlli attivi, il rischio già considerato come residuo: incidente, non NC automatica." },
+   { "h": "Resta l'apprendimento", "d": "Potrebbe emergere un'opportunità di miglioramento — esempi pratici nella formazione, un passaggio di segnalazione più chiaro. Ma chiamarlo subito NC confonderebbe un evento gestito con uno scostamento." },
+   { "h": "L'errore speculare", "d": "Non usare la prudenza per assolvere troppo in fretta: se la formazione non era aggiornata da anni e le segnalazioni precedenti mai analizzate, l'incidente diventa la traccia di una NC." }
+  ]
+ },
+ {
+  "id": "27001_m09_s023",
+  "layout": "punti",
+  "kicker": "Incidente e NC",
+  "titolo": "Dall'analisi all'apprendimento",
+  "intro": "Il passaggio più importante: trasformare l'analisi in apprendimento del sistema. Le organizzazioni immature chiudono l'evento appena l'urgenza si abbassa; quelle solide lo usano per capire i collegamenti deboli. Il compito non è rendere l'evento più drammatico, ma più intelligibile.",
+  "punti": [
+   { "h": "La catena ordinata", "d": "Evento e conseguenze, requisito coinvolto, causa, correzione immediata, azione correttiva se necessaria, verifica dell'efficacia. Evita la caccia al colpevole e la chiusura affrettata." },
+   { "h": "Correzione vs causa", "d": "L'archivio accessibile dopo un progetto chiuso: la correzione restringe gli accessi, ma l'azione correttiva interviene sul collegamento debole tra processo, ruoli e controllo degli accessi." },
+   { "h": "Quattro esiti possibili", "d": "Migliorare la risposta operativa; una vera azione correttiva; modifiche più ampie all'SGSI; o la conferma che i controlli hanno retto con un affinamento utile. Nessuno automatico: dipende dalla qualità dell'analisi." },
+   { "h": "Il valore delle evidenze", "d": "Senza tracce affidabili, l'analisi resta opinabile. Con evidenze solide distingui deviazione occasionale, recidiva, debolezza di processo, carenza di governo." }
+  ]
+ },
+ {
+  "id": "27001_m09_s024",
+  "layout": "punti",
+  "kicker": "Il rapporto",
+  "titolo": "Che cosa deve ricevere il management",
+  "intro": "Un management non ha bisogno di un resoconto di fatti sparsi: ha bisogno di un quadro che permetta di decidere. Il rapporto utile sta nel mezzo — abbastanza concreto da orientare l'azione, abbastanza sintetico da restare leggibile. E crea memoria.",
+  "punti": [
+   { "h": "Le cinque cose", "d": "La natura del problema, il requisito coinvolto in modo comprensibile, l'effetto sul sistema, la causa più probabile, la proposta di direzione con urgenza e perimetro. Se una manca, la decisione è più lenta." },
+   { "h": "Il pattern, non i tre casi", "d": "Tre ritardi di revoca in tre funzioni: presentarli separati è corretto ma poco governabile. Mostrare la causa comune fa capire che non sono tre sviste ma una debolezza che chiede decisioni trasversali." },
+   { "h": "Il tono", "d": "Non accusatorio e non difensivo: non drammatizza per attirare attenzione, non attenua per proteggere sensibilità. Più il tema è sensibile, più il linguaggio deve essere limpido." },
+   { "h": "Sintesi e dettaglio", "d": "Non ha sempre bisogno dell'intera catena operativa, ma deve poterla recuperare. Un rapporto maturo tiene in primo piano la sintesi decisionale e disponibile il dettaglio: organizza la complessità, non la nasconde." }
+  ]
+ },
+ {
+  "id": "27001_m09_s025",
+  "layout": "flusso",
+  "kicker": "Il rapporto",
+  "titolo": "La struttura che orienta le decisioni",
+  "intro": "Non serve un documento lungo: un percorso chiaro che accompagni dal fatto osservato alla decisione. Quando manca, anche evidenze buone perdono forza. Chiude sempre con la priorità — non tutte le risultanze chiedono la stessa attenzione.",
+  "passi": [
+   { "h": "Il fatto", "d": "Cosa hai osservato, in quale contesto, con quali evidenze convergenti. Concreto, non ornamentale: chi legge capisce il perimetro senza perdersi nei dettagli minori." },
+   { "h": "Il requisito", "d": "Collegare il fatto al requisito applicabile dell'SGSI, in linguaggio comprensibile e non solo formale." },
+   { "h": "Il significato", "d": "Perché conta: influisce sul controllo di un processo? Espone a ricorrenze? Indebolisce il governo dei fornitori? Traduce la NC in un tema di gestione su cui il management può agire." },
+   { "h": "La causa", "d": "La migliore lettura disponibile: quale meccanismo del sistema non ha funzionato — ruoli poco chiari, passaggi fragili, criteri non uniformi. Non spiegazioni eleganti né accuse frettolose." },
+   { "h": "Stato e priorità", "d": "Cosa è già corretto, cosa resta da decidere; e la gerarchia — decisioni immediate, cambiamenti più ampi, o il ciclo ordinario di miglioramento. Distingue contenimento, correzione, azione correttiva, verifica." }
+  ]
+ },
+ {
+  "id": "27001_m09_s026",
+  "layout": "punti",
+  "kicker": "Il rapporto",
+  "titolo": "Il linguaggio giusto",
+  "intro": "Due rapporti possono descrivere lo stesso fatto e produrre effetti molto diversi. La credibilità si costruisce nell'equilibrio: severità quando serve, precisione sempre. La sobrietà aumenta la fiducia di chi legge.",
+  "punti": [
+   { "h": "La chiarezza", "d": "Non «criticità nella gestione documentale» senza spiegare cosa significhi: chi legge deve capire quale processo non ha retto e perché non è disordine locale. La vaghezza non rende prudenti, rende più difficile decidere." },
+   { "h": "La proporzionalità", "d": "Quando è serio, dirlo con nettezza; quando è circoscritto, non farlo sembrare sistemico senza evidenze. Se gonfi, il management diffida; se attenui, rimanda decisioni che meritavano priorità." },
+   { "h": "Fatto vs interpretazione", "d": "«Le evidenze non consentono di ritenere il controllo svolto come pianificato» è diverso da «il controllo è assente»: la prima mostra il limite osservato e lascia spazio a un confronto fondato." },
+   { "h": "Il tempo verbale", "d": "Vicino alle evidenze sui fatti; onesto se la causa è consolidata o da verificare; senza far sembrare già efficaci azioni solo avviate. «Scarsa attenzione dei team» sembra forte ma non aiuta." }
+  ]
+ },
+ {
+  "id": "27001_m09_s027",
+  "layout": "punti",
+  "kicker": "Il rapporto",
+  "titolo": "Dal singolo rilievo ai trend",
+  "intro": "Serve davvero quando non fotografa il caso del momento ma aiuta a vedere l'andamento: la differenza tra informazione e governo. Molte decisioni diventano chiare solo collegando casi diversi, recidive e famiglie di causa.",
+  "punti": [
+   { "h": "Mettere in relazione", "d": "NC, azioni correttive, monitoraggio, feedback, verifiche, piano di trattamento, decisioni del riesame. Separati, il management vede frammenti; in relazione, l'SGSI diventa leggibile come traiettoria." },
+   { "h": "Il pattern comune", "d": "Revoche lente + modifica cloud senza riesame + comunicazioni tardive: sembrano distinti, ma il rapporto mostra che i passaggi interfunzionali dipendono da comunicazioni informali. Una decisione trasversale, non tre correzioni." },
+   { "h": "Le tre cose di un rapporto di trend", "d": "Raggruppa per causa (non per data); mostra se le azioni riducono la ricorrenza o i casi cambiano faccia mantenendo la radice; collega i rilievi agli effetti sul sistema." },
+   { "h": "Anche ciò che funziona", "d": "Un rapporto maturo non mostra solo criticità: anche dove un'azione ha ridotto recidive, dove il miglioramento produce effetti osservabili. Aumenta la qualità del dialogo e il sostegno alle azioni prioritarie." }
+  ]
+ },
+ {
+  "id": "27001_m09_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 9",
+  "modNum": "09",
+  "titolo": "Chiudere il ciclo",
+  "punti": [
+   { "h": "Il ciclo 10.2", "d": "Contenere/correggere/gestire non basta: l'azione correttiva serve a impedire la ricorrenza o la comparsa in aree simili, ed è chiusa solo quando verificata." },
+   { "h": "Il miglioramento 10.1", "d": "Diventare più idoneo, adeguato ed efficace nel tempo. La continuità sta nel metodo — meccanismi che trasformano ciò che il sistema osserva in decisioni verificabili." },
+   { "h": "Gli schemi ricorrenti", "d": "Le NC tornano per famiglie: perimetri non realistici, ruoli nominali, rischio non aggiornato, servizi esterni solo contrattualizzati, riesami che registrano ma non decidono." },
+   { "h": "Incidente ≠ NC", "d": "Non coincidono: un incidente può avvenire in un sistema ragionevole, o può rivelare una NC già presente. Né accusa automatica, né assoluzione frettolosa." },
+   { "h": "Il rapporto è governo", "d": "Fatto, requisito, effetti, causa, stato, priorità e trend. La sua qualità incide direttamente sulla qualità del miglioramento continuo." },
+   { "h": "Le cinque domande", "d": "Cosa osservato? Quale requisito? Dove la causa (non il sintomo)? L'azione riduce la ricorrenza? Il rapporto mostra priorità e pattern?" }
+  ],
+  "prossimo": {
+   "modulo": "10",
+   "titolo": "Verificare l'SGSI I: programma e preparazione",
+   "testo": "Sapere dove le NC nascono per costruire verifiche più intelligenti, mirate e utili."
+  }
+ }
+]
