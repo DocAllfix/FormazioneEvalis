@@ -1,0 +1,375 @@
+[
+ {
+  "id": "27001_m10_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 10",
+  "eyebrow": "Verificare l'SGSI I: programma e preparazione",
+  "titolo": "Molti errori nascono prima degli incontri",
+  "testo": "Impari a preparare bene una verifica, prima ancora di condurla. Molti errori non nascono durante gli incontri, ma molto prima: quando il programma è confuso, il perimetro è vago, il campionamento è debole e le competenze del gruppo non sono allineate. Non cercherai il mito della copertura totale, ma una copertura ragionevole, fondata sul rischio.",
+  "agenda": [
+   "Metodo con gli occhiali dell'SGSI: rischio e campionamento",
+   "Programma di audit, priorità, cicli di copertura",
+   "La SoA come mappa e la griglia di campionamento",
+   "Competenze del gruppo e l'esperto tecnico IT",
+   "Preparazione pratica e checklist per evidenze"
+  ]
+ },
+ {
+  "id": "27001_m10_s002",
+  "layout": "punti",
+  "kicker": "Il metodo",
+  "titolo": "Con gli occhiali dell'SGSI",
+  "intro": "Il primo rischio è pensare che cambi solo il vocabolario. Cambia soprattutto la sensibilità con cui osservi il contesto: un SGSI protegge informazioni in modo trasversale, la verifica non si ferma dentro un solo reparto. Se porti una mentalità lineare, guardi attività isolate.",
+  "punti": [
+   { "h": "Seguire le connessioni", "d": "Direzione, HR, acquisti, operations IT, sviluppo, fornitori, continuità: muoversi seguendo interfacce e punti in cui il rischio cambia forma mentre attraversa l'organizzazione." },
+   { "h": "Coerenza, non solo documenti", "d": "Politica elegante e registri completi, ma gli amministratori condividono account, le revoche ritardano, il fornitore ha credenziali sempre attive: il collegamento rischio-controllo-attuazione mostra la debolezza." },
+   { "h": "L'oggetto è intangibile", "d": "Spesso lavori su tracce: log, ticket, configurazioni, verbali. Distingui il verificabile dal plausibile — «i backup sono testati» non basta: dove trovi la prova, chi l'ha approvato, con quale esito?" },
+   { "h": "La risposta perfetta", "d": "Merita spesso una verifica supplementare: il flusso reale può dipendere da un portale esterno, da una reperibilità informale, da escalation non documentate. Incrocia interviste, registrazioni ed evidenze." }
+  ]
+ },
+ {
+  "id": "27001_m10_s003",
+  "layout": "punti",
+  "kicker": "Il metodo",
+  "titolo": "Rischio e campionamento",
+  "intro": "Un SGSI vive nei processi e nelle eccezioni che nessuno ama raccontare. Se provassi a controllare tutto, saresti superficiale ovunque. Il campionamento non è un ripiego: è una scelta professionale ragionata, e quella logica deve essere spiegabile.",
+  "punti": [
+   { "h": "Dove l'impatto è maggiore", "d": "Dove una carenza produrrebbe conseguenze più serie su riservatezza, integrità, disponibilità. Ma anche cambiamento recente, incidenti, dipendenza da terzi, maturità del processo." },
+   { "h": "Campioni che raccontano", "d": "Non «erano a portata di mano»: un caso ordinario, uno urgente, uno di un fornitore. Il campionamento diventa strumento di comprensione, non una collezione casuale." },
+   { "h": "Il fenomeno della vetrina", "d": "L'organizzazione mostra il caso più pulito. Se ti presentano un onboarding perfetto, chiedi un offboarding; un account interno, chiedi un privilegiato temporaneo; un incidente standard, uno con fornitore coinvolto." },
+   { "h": "Adattabile", "d": "Se un campione conferma un controllo stabile, riduci la profondità; se emergono incongruenze, amplia. Non cambi metro: segui le evidenze, mantenendo tracciabilità delle ragioni." }
+  ]
+ },
+ {
+  "id": "27001_m10_s004",
+  "layout": "punti",
+  "kicker": "Il metodo",
+  "titolo": "Indipendenza e riservatezza del lavoro",
+  "intro": "La verifica tocca punti nevralgici: debolezze, account privilegiati, incidenti, decisioni non ancora comunicate. Se il tuo comportamento è disordinato, potresti generare tu stesso un nuovo rischio mentre verifichi come l'organizzazione governa i suoi.",
+  "punti": [
+   { "h": "L'indipendenza", "d": "La competenza tecnica serve, ma non sostituisce l'indipendenza. Chi giudica attività di cui è responsabile fatica a vedere le proprie scorciatoie. Distingui chi gestisce da chi esamina, anche nelle piccole realtà." },
+   { "h": "La minimizzazione", "d": "Raccogli solo ciò che serve al giudizio, non ciò che è interessante. Se ti basta osservare una configurazione col responsabile, forse non serve una copia. Meno materiale sensibile porti, meno rischi crei." },
+   { "h": "La comunicazione controllata", "d": "Non tutte le risultanze preliminari devono circolare in tempo reale: fatti da confermare, vulnerabilità in analisi, incidenti aperti. Chiarisci chi riceve gli aggiornamenti, con quale dettaglio, quando." },
+   { "h": "Le pressioni", "d": "Se un'informazione non può essere mostrata integralmente, cerca modalità alternative: dimostrazioni guidate, estratti limitati, evidenze indirette, tracciati anonimizzati. Riservatezza senza rinunciare alla sostanza." }
+  ]
+ },
+ {
+  "id": "27001_m10_s005",
+  "layout": "flusso",
+  "kicker": "Il programma",
+  "titolo": "Dal calendario al programma",
+  "intro": "Distingui tre livelli: il programma (la visione nel tempo), il piano della singola verifica, l'agenda concreta. Molti credono di avere un buon governo quando possiedono solo una data in calendario. Regolare ma non rigido: se cambia il contesto, il programma reagisce.",
+  "passi": [
+   { "h": "Il perimetro", "d": "Sedi, processi, servizi, funzioni e fornitori compresi. La base su cui distribuire l'attenzione." },
+   { "h": "Il rischio", "d": "Non solo teorico: combinazione di criticità, cambiamento, incidenti, dipendenze esterne, valore delle informazioni trattate." },
+   { "h": "La storia", "d": "Risultanze ricorrenti, azioni correttive lente, aree mai esaminate in profondità, controlli verificati solo in forma documentale." },
+   { "h": "La capacità", "d": "Tempo, competenze e accessi realmente ottenibili. E criteri di priorità dichiarati: se un'area riceve più tempo, dev'essere chiaro perché — dati sensibili, dipendenza da terzi, incidenti recenti." }
+  ]
+ },
+ {
+  "id": "27001_m10_s006",
+  "layout": "punti",
+  "kicker": "Il programma",
+  "titolo": "Dove guardare prima",
+  "intro": "Se tutto appare importante, nulla riceve l'attenzione giusta. Il programma funziona solo quando discrimina. Distingui priorità stabili (dalla struttura del business) e priorità emergenti (dal cambiamento). Il metodo serve a sostenere la scelta, non a bloccarla.",
+  "punti": [
+   { "h": "Le domande severe", "d": "Dove sono le informazioni più sensibili, quali processi sostengono i servizi critici, quali aree sono cambiate, dove le verifiche precedenti hanno mostrato fragilità." },
+   { "h": "La probabilità di errore", "d": "Non solo l'impatto: controlli standardizzati vs passaggi manuali e coordinamento tra ruoli. La revoca al cambio mansione non è spettacolare, ma un disallineamento produce credenziali eccedenti." },
+   { "h": "Non solo il vertice", "d": "La percezione del management è preziosa ma non esaurisce: i tecnici segnalano eccezioni ricorrenti, il service desk mostra dove i flussi deviano, gli acquisti fornitori entrati senza valutazione." },
+   { "h": "Il cambiamento recente", "d": "Nuovo strumento collaborativo + lavoro remoto + freelance: la priorità alta non nasce da una clausola, ma dall'incrocio tra valore delle informazioni, velocità del cambiamento e moltiplicazione delle interfacce." }
+  ]
+ },
+ {
+  "id": "27001_m10_s007",
+  "layout": "punti",
+  "kicker": "Il programma",
+  "titolo": "Cicli di copertura",
+  "intro": "Dopo i primi cicli: alcuni temi tornano sempre (facili da organizzare), altri slittano (richiedono accessi speciali, prove operative). Il risultato è un programma regolare ma sbilanciato. Ti serve una logica di cicli, non una somma di visite indipendenti.",
+  "punti": [
+   { "h": "I temi permanenti", "d": "Presenza quasi costante: trattamento del rischio, incidenti, gestione degli accessi, leadership e riesame, perché influenzano l'intero SGSI." },
+   { "h": "I controlli stabili", "d": "Importanti ma cambiano poco: certe misure fisiche, processi di supporto. Da ruotare con una cadenza ragionata." },
+   { "h": "I controlli trainati dal cambiamento", "d": "Escono dalla rotazione ordinaria e vengono anticipati quando un progetto, un fornitore o un incidente li rende improvvisamente prioritari." },
+   { "h": "Rendere visibili i buchi", "d": "Un ciclo esplicito ti fa accorgere se una famiglia non è toccata da troppo tempo. E ogni ciclo dovrebbe prevedere un minimo di prova sostanziale, non solo interviste e documenti." }
+  ]
+ },
+ {
+  "id": "27001_m10_s008",
+  "layout": "flusso",
+  "kicker": "Il programma",
+  "titolo": "Dal programma alla singola verifica",
+  "intro": "Qui il programma smette di essere una cornice astratta e diventa lavoro vero. Se obiettivo, perimetro e campionamento restano vaghi, l'audit scivola verso una visita generica: si ascolta molto, si osserva poco, si conclude meno del possibile.",
+  "passi": [
+   { "h": "L'obiettivo", "d": "Non il titolo «verifica dell'SGSI»: quale domanda vuoi poter rispondere alla fine. «La gestione accessi è coerente col rischio nei processi critici?» guida persone, registrazioni e campioni." },
+   { "h": "Il perimetro", "d": "Abbastanza stretto per la profondità, abbastanza ampio per non perdere le interfacce. Definito pensando ai flussi: sugli accessi, include HR, service desk, amministrazione identità, una o due applicazioni." },
+   { "h": "L'ipotesi di campionamento", "d": "Non il dettaglio finale: casi, periodi, ruoli e sistemi che promettono massima informazione — nuovi ingressi, cessazioni, consulenti esterni, un accesso privilegiato." },
+   { "h": "La disciplina", "d": "Un buon incarico sceglie un fuoco principale. I temi fuori perimetro ma rilevanti si annotano per il programma futuro: protegge dalla deriva quando le persone ti portano ogni problema collegato." }
+  ]
+ },
+ {
+  "id": "27001_m10_s009",
+  "layout": "punti",
+  "kicker": "La SoA",
+  "titolo": "La cartina dell'SGSI da verificare",
+  "intro": "La Dichiarazione di Applicabilità vale come cartina del territorio: mostra il ponte tra valutazione del rischio, decisioni di trattamento e controlli scelti. Molti la usano male, come allegato da spuntare — così perdi la sua utilità più grande: orientare le domande.",
+  "punti": [
+   { "h": "Le relazioni, non solo i contenuti", "d": "Se un controllo è incluso, quale rischio lo sostiene, chi ne è responsabile, come è tradotto nei processi, quali registrazioni aspetti. Se è escluso, l'esclusione è coerente col contesto?" },
+   { "h": "La mappa la costruisci tu", "d": "La SoA da sola non ti dice già dove cercare le evidenze: il percorso verso il campionamento nasce collegandola a perimetro, trattamenti, ruoli, procedure, interviste. Non attribuirle più di quanto dichiara." },
+   { "h": "Vedere catene", "d": "Con controlli su accessi, logging, backup, fornitori, continuità: la sicurezza degli accessi non è isolata, la continuità va letta con backup, ripristino, dipendenza dal provider, ruoli decisionali." },
+   { "h": "Anche la qualità della SoA", "d": "Troppo generica, scollegata dai rischi, aggiornata solo formalmente: non prova che i controlli non esistano, ma la mappa è debole — e una mappa debole segnala un SGSI difficile da governare." }
+  ]
+ },
+ {
+  "id": "27001_m10_s010",
+  "layout": "flusso",
+  "kicker": "La SoA",
+  "titolo": "Al piano iniziale di campionamento",
+  "intro": "La domanda guida: quali elementi della SoA, osservati bene, mi dicono se i controlli dichiarati vivono nei processi e non solo nei documenti? Se non riesci a derivarne percorsi logici, hai già un indizio sulla maturità dell'SGSI.",
+  "passi": [
+   { "h": "Raggruppa per percorso", "d": "Non per etichetta: identità/autorizzazioni/privilegi → filone accessi; continuità/backup/fornitori → filone resilienza; logging/incidenti/vulnerabilità → un altro percorso naturale. Evita l'effetto lista." },
+   { "h": "Scegli casi rappresentativi", "d": "Non controlli astratti, situazioni in cui si manifestano: un nuovo assunto, una cessazione, un consulente, un privilegio; l'ultimo test di ripristino, uno parziale, un servizio da terzi." },
+   { "h": "Associa tre fonti", "d": "Un'intervista con chi gestisce, una traccia documentata, una conferma sul sistema. Su una revoca: il ticket, l'approvazione, la disattivazione effettiva, il collegamento con l'uscita registrata da HR." }
+  ]
+ },
+ {
+  "id": "27001_m10_s011",
+  "layout": "punti",
+  "kicker": "La SoA",
+  "titolo": "Inclusioni ed esclusioni con occhio critico",
+  "intro": "Non usarla solo per vedere cosa c'è, ma per capire il senso delle scelte. Non un inventario neutro: racconta perché certi controlli sono necessari e altri no. Non la leggi per confermare, ma per mettere alla prova la plausibilità.",
+  "punti": [
+   { "h": "Il confronto a tre", "d": "Con perimetro, profilo dell'organizzazione, trattamento del rischio. Se la SoA è sbilanciata su temi periferici e muta sulle interfacce esposte, non è una NC, ma un segnale di approfondimento." },
+   { "h": "Le esclusioni", "d": "Spesso ragionevoli, ma la motivazione deve reggere al contesto. «Non abbiamo supporti fisici» — ma ci sono copie locali, portatili di amministratori, dispositivi dei manutentori: l'esclusione diventa una domanda seria." },
+   { "h": "Le inclusioni complesse", "d": "Una riga può aprire una catena lunga: «gestione degli accessi» = richiesta, approvazione, attivazione, modifica, revoca, eccezioni, privilegiati, esterni, verifiche periodiche." },
+   { "h": "Il linguaggio", "d": "Motivazioni troppo standard e intercambiabili segnalano una SoA compilata per adempimento, non come strumento di governo: il lavoro preparatorio diventa più cauto, il campione iniziale più ampio." }
+  ]
+ },
+ {
+  "id": "27001_m10_s012",
+  "layout": "punti",
+  "kicker": "La SoA",
+  "titolo": "Dalle scelte alle tracce da seguire",
+  "intro": "Trasforma le scelte dichiarate in percorsi osservabili: la SoA diventa un generatore di piste. La domanda da ripetere quasi meccanicamente: se questo controllo è davvero applicato, dove dovrebbe lasciarne traccia nel lavoro quotidiano?",
+  "punti": [
+   { "h": "Parti dal processo, non dal modulo", "d": "Su un controllo sulle identità: chi avvia, chi approva, quale sistema riceve, dove resta evidenza, chi verifica le autorizzazioni superflue. Molte debolezze emergono nei passaggi tra funzioni." },
+   { "h": "Tre fonti che convergono", "d": "Una persona che conosce il processo, una traccia documentata, l'osservazione del sistema. Quando divergono, non correre alla conclusione: eccezione giustificata, processo non compreso, o debolezza reale?" },
+   { "h": "La checklist come promemoria", "d": "Non un questionario da recitare: processo coinvolto, ruoli, registrazioni attese, eccezioni, sistemi, rischi di riservatezza. Sostiene il ragionamento senza irrigidirlo." },
+   { "h": "Un campione denso", "d": "L'ingresso di un consulente può raccontarti approvazioni, gestione fornitori, attivazione credenziali, limiti temporali, comunicazione interna e revoca finale. Vale più di cinque documenti scollegati." }
+  ]
+ },
+ {
+  "id": "27001_m10_s013",
+  "layout": "punti",
+  "kicker": "La SoA",
+  "titolo": "Incoerenze tra mappa e realtà",
+  "intro": "Non stai formulando giudizi finali: verifichi se la mappa dichiarata coincide col funzionamento. Riconoscere i disallineamenti presto orienta bene il campionamento, invece di scoprirli alla fine quando resta poco tempo.",
+  "punti": [
+   { "h": "Perimetro vs processi necessari", "d": "L'SGSI include un servizio ma tratta marginalmente acquisti, HR, funzione legale che pure incidono sulla sicurezza. Il sistema descritto troppo sull'area tecnica, troppo poco sul flusso complessivo." },
+   { "h": "I cambiamenti non riflessi", "d": "SoA formalmente aggiornata ma con motivazioni identiche a un contesto precedente: il documento è stato riesaminato con profondità, o solo mantenuto?" },
+   { "h": "L'incoerenza di linguaggio", "d": "La SoA suggerisce un presidio strutturato delle eccezioni, ma le interviste raccontano gestioni informali via mail e accordi verbali: un problema di traduzione tra governo e operatività." },
+   { "h": "La matrice mentale", "d": "Per ogni area: la SoA è coerente con perimetro, rischio, cambiamenti recenti, racconto operativo? Se una risposta è incerta, annota quali evidenze la chiariscono." }
+  ]
+ },
+ {
+  "id": "27001_m10_s014",
+  "layout": "punti",
+  "kicker": "La SoA",
+  "titolo": "La griglia di campionamento",
+  "intro": "Il ponte tra preparazione e lavoro sul campo. Ben costruita, arrivi con un disegno chiaro ma non rigido. Poche colonne mentali, nel formato che preferisci — leggibile e difendibile. Non una gabbia: se emergono anomalie, adattala seguendo le evidenze.",
+  "punti": [
+   { "h": "Le sei colonne", "d": "La scelta prioritaria dalla SoA, il processo reale in cui vive, il campione concreto, i ruoli da ascoltare, le evidenze attese (non infinite), le cautele di riservatezza." },
+   { "h": "L'esempio accessi", "d": "Priorità identità → processo ingresso/modifica/uscita → campioni: nuovo assunto, consulente, cessazione, privilegio temporaneo → ruoli: HR, funzione, amministrazione identità, fornitore → evidenze: ticket, approvazione, attivazione, revoca." },
+   { "h": "La profondità variabile", "d": "Campioni esplorativi (una pista è promettente?) e confermativi (rafforzano o smentiscono). Se il primo caso di revoca è ordinato, il secondo scegli una cessazione urgente o un consulente esterno." },
+   { "h": "Il coordinamento", "d": "Con più persone, una struttura comune evita sovrapposizioni e vuoti: ciascuno sa perché un campione è scelto, quali domande chiarisce, quali confini di riservatezza rispettare." }
+  ]
+ },
+ {
+  "id": "27001_m10_s015",
+  "layout": "punti",
+  "kicker": "Le competenze",
+  "titolo": "Le basi minime del gruppo",
+  "intro": "Il sistema intreccia governo, processi, tecnologia, fornitori e comportamento. Sarebbe un errore pensare che basti l'esperienza informatica; sarebbe un errore opposto credere che la competenza sui sistemi renda irrilevante la comprensione dei processi tecnici. Il punto sta nell'equilibrio.",
+  "punti": [
+   { "h": "Leggere il sistema come sistema", "d": "Collegare contesto, rischio, obiettivi, trattamenti, monitoraggio, riesame, miglioramento. Chi è forte su reti può cogliere dettagli tecnici e perdere che il vero problema è un riesame debole." },
+   { "h": "La familiarità coi processi", "d": "Non specialisti di ogni tecnologia, ma capire abbastanza accessi, incidenti, fornitori, continuità: distinguere un racconto plausibile da un processo davvero governato." },
+   { "h": "La tecnica di verifica", "d": "Intervistare senza suggerire, verificare senza umiliare, ampliare il campione quando serve, fermarsi quando le evidenze bastano. Rispettare l'esperto senza delegargli il giudizio." },
+   { "h": "Capire i propri limiti", "d": "Una qualità professionale: con architetture complesse o alta automazione, chiedersi con onestà se il gruppo ha profondità per fare domande utili e interpretare le risposte." }
+  ]
+ },
+ {
+  "id": "27001_m10_s016",
+  "layout": "punti",
+  "kicker": "Le competenze",
+  "titolo": "Quando serve l'esperto tecnico IT",
+  "intro": "L'errore comune è doppio: chi lo coinvolge sempre come se l'SGSI fosse solo tecnologia, e chi non lo coinvolge mai. La scelta dipende dal perimetro, dagli obiettivi, dalla profondità richiesta e dalla distanza tra le competenze del gruppo e la realtà tecnica.",
+  "punti": [
+   { "h": "Quando le evidenze passano dai sistemi", "d": "Se basta verificare che un processo esista e sia governato, la buona metodologia può bastare. Se serve distinguere una configurazione adeguata da una solo plausibile, l'apporto tecnico è decisivo." },
+   { "h": "Gli indicatori", "d": "Complessità dell'ambiente (cloud multi-fornitore, identità federate, legacy); centralità dell'area tecnica rispetto all'obiettivo; segnali di fragilità precedenti che chiedono più profondità." },
+   { "h": "Non sostituisce il giudizio", "d": "Porta profondità e domande più precise, ma il giudizio finale resta ancorato ai criteri e alla logica dell'SGSI. Delegare tutto darebbe una fotografia dettagliata ma scollegata dal sistema." },
+   { "h": "La modalità", "d": "Tutta la verifica, o una sessione mirata su log/backup/piattaforma, o una preparazione preliminare con revisione successiva. Il bisogno va definito prima, non improvvisato a tempo quasi finito." }
+  ]
+ },
+ {
+  "id": "27001_m10_s017",
+  "layout": "punti",
+  "kicker": "Le competenze",
+  "titolo": "Distribuire ruoli e integrare",
+  "intro": "Avere le persone giuste non basta se il gruppo lavora scoordinato. Due rischi opposti: la sovrapposizione (tutti guardano lo stesso, nessuno le interfacce) e la frammentazione (ciascuno il proprio pezzo senza il quadro). La preparazione non è solo orari e nomi.",
+  "punti": [
+   { "h": "Chi conduce", "d": "Tiene insieme obiettivi, criteri, perimetro, campionamento; decide quando una pista merita approfondimento e quando un tema va rinviato. Non deve sapere tutto, ma governare il lavoro del gruppo." },
+   { "h": "La matrice di responsabilità", "d": "Poche righe: chi apre gli accessi, chi segue i fornitori, chi osserva incidenti e azioni correttive, chi prende nota, chi verifica che le informazioni non escano oltre il necessario." },
+   { "h": "Le domande-chiave condivise", "d": "Sugli accessi privilegiati: concordare che una risposta organizzativa soddisfacente va accompagnata da traccia autorizzativa e verifica tecnica coerente. Evita che ciascuno usi metri diversi." },
+   { "h": "La riservatezza interna", "d": "Non tutte le note circolano integralmente: chi raccoglie elementi tecnici molto specifici può sintetizzarli per il team, mantenendo il significato utile senza diffondere informazioni eccedenti." }
+  ]
+ },
+ {
+  "id": "27001_m10_s018",
+  "layout": "punti",
+  "kicker": "Preparazione pratica",
+  "titolo": "I documenti da chiedere prima",
+  "intro": "La tentazione di richiedere troppo è fortissima. Una raccolta indiscriminata disperde il tempo e aumenta i rischi di riservatezza. Non ricevere tutto: ricevere ciò che aiuta a costruire il percorso. E leggerli per formulare ipotesi, non per chiudere giudizi.",
+  "punti": [
+   { "h": "La cornice dell'SGSI", "d": "Perimetro, politica, principali responsabilità, obiettivi pertinenti, la SoA aggiornata." },
+   { "h": "Il rischio", "d": "Metodo di valutazione, ultime revisioni significative, sintesi dei trattamenti collegati alle aree da osservare." },
+   { "h": "La storia recente", "d": "Esiti di verifiche precedenti, azioni correttive aperte, incidenti rilevanti, cambiamenti organizzativi o tecnologici che hanno modificato il rischio." },
+   { "h": "Il livello di dettaglio", "d": "Sintesi, estratti o versioni controllate quando i documenti completi sarebbero sproporzionati. Meglio un indice del materiale disponibile che accumulare tutto dall'inizio." }
+  ]
+ },
+ {
+  "id": "27001_m10_s019",
+  "layout": "punti",
+  "kicker": "Preparazione pratica",
+  "titolo": "Perimetro e interfacce",
+  "intro": "Dire che il perimetro riguarda un servizio, una sede o un processo non basta quasi mai. Ragiona in termini di confini e attraversamenti: il confine è ciò che osservi direttamente, gli attraversamenti sono i passaggi in cui dipende da altre funzioni. Nell'SGSI sono frequentissimi.",
+  "punti": [
+   { "h": "Oggetto, confine, interfacce", "d": "«Gestione accessi ai sistemi critici del servizio clienti — ingresso, modifica, revoca — con interfacce verso HR, responsabili di funzione, amministrazione identità.» Orienta subito le aspettative." },
+   { "h": "Le funzioni condivise", "d": "SGSI limitato a una business unit ma acquisti, legale, HR gestiti centralmente: dichiarare che alcune funzioni saranno osservate nella misura in cui influenzano il processo, evitando di ricostruirle sul campo." },
+   { "h": "Le esclusioni comprese", "d": "Non approfondire la sicurezza fisica in una verifica sugli accessi logici è legittimo — ma se gli accessi dipendono da postazioni protette, riconosci l'interfaccia. Evitare zone ambigue." },
+   { "h": "Il vantaggio relazionale", "d": "Un perimetro chiaro fa percepire la verifica come mirata e rispettosa del tempo: si capisce perché alcuni ruoli sono coinvolti e altri no. Riduce resistenze e incomprensioni." }
+  ]
+ },
+ {
+  "id": "27001_m10_s020",
+  "layout": "punti",
+  "kicker": "Preparazione pratica",
+  "titolo": "Accessi, credenziali, protezione",
+  "intro": "La verifica stessa deve essere preparata in modo sicuro: non un dettaglio logistico. Se questa preparazione è debole, puoi creare un nuovo rischio proprio mentre valuti come l'organizzazione gestisce i propri.",
+  "punti": [
+   { "h": "Minimizzare gli accessi", "d": "Solo ciò che serve; preferire l'osservazione guidata a accessi ampi o persistenti. Se ti consegnano un account generico con privilegi estesi e durata indefinita, hai già un segnale di debolezza." },
+   { "h": "Le credenziali temporanee", "d": "Concordare prima chi le crea, con quali autorizzazioni, per quanto tempo, come si verifica la disattivazione finale. Un accesso senza scadenza né tracciabilità è cattiva prassi anche in buona fede." },
+   { "h": "Note ed evidenze", "d": "Dove prendi appunti, come conservi estratti, chi vi accede, quando si elimina. Se una schermata ha account privilegiati o dati personali eccedenti, registra l'esito osservato, non l'immagine completa." },
+   { "h": "La checklist preparatoria", "d": "Chi ottiene gli accessi, con quale livello, dove le note, cosa copiabile e cosa solo osservabile, chi riceve aggiornamenti, come si chiudono gli accessi a fine lavoro." }
+  ]
+ },
+ {
+  "id": "27001_m10_s021",
+  "layout": "punti",
+  "kicker": "Preparazione pratica",
+  "titolo": "Agenda e regole di ingaggio",
+  "intro": "Molte verifiche si indeboliscono qui, non per mancanza di metodo, ma perché gli interlocutori sono scelti male e i tempi distribuiti senza logica. Una buona agenda è già parte della qualità. E lascia spazi di respiro: la fretta è nemica delle evidenze.",
+  "punti": [
+   { "h": "Le persone", "d": "Non solo i responsabili formali: chi vede il processo nel funzionamento quotidiano. Sugli accessi, anche chi amministra le identità, chi approva lato business, chi registra ingressi e uscite." },
+   { "h": "L'ordine degli incontri", "d": "Prima il processo dichiarato, poi i casi campionati, infine le dimostrazioni tecniche. Se rovesci, ti fai guidare dalle schermate invece che dalle domande." },
+   { "h": "I canali", "d": "Alcuni materiali prima, altri solo durante l'incontro, altri in visualizzazione controllata senza copie. Un'area condivisa protetta per i preparatori, sessioni guidate per le evidenze sensibili." },
+   { "h": "Le regole all'apertura", "d": "Chi decide sul perimetro se emerge una pista nuova, come si chiede un campione alternativo se quello proposto è troppo preparato, quali osservazioni si condividono subito." }
+  ]
+ },
+ {
+  "id": "27001_m10_s022",
+  "layout": "flusso",
+  "kicker": "Preparazione pratica",
+  "titolo": "Il pre-brief finale",
+  "intro": "Quando pensi di essere pronto, fermati ancora qualche minuto. Non aggiungi temi: metti a fuoco ciò che hai deciso e ti chiedi se il disegno regge. Evita improvvisazioni e rende il gruppo molto più coerente.",
+  "passi": [
+   { "h": "Quale decisione sostenere", "d": "Se la risposta è «capire come va l'SGSI», non è matura. Serve nettezza: «la gestione accessi è coerente coi rischi delle aree critiche?»." },
+   { "h": "Il campionamento", "d": "Rappresentativo del rischio e del cambiamento, o solo comodo? Almeno alcuni casi ordinari e alcuni meno lineari — eccezioni, cambi di ruolo, attività dei fornitori." },
+   { "h": "Le evidenze attese", "d": "Per ogni pista, una triangolazione chiara tra racconto, traccia documentata e osservazione operativa. Un'intervista da sola non basta quasi mai." },
+   { "h": "La riservatezza", "d": "Hai davvero bisogno di copie di tutto? Dove finiscono le note? Un criterio condiviso per oscurare o sintetizzare i dettagli sensibili." }
+  ]
+ },
+ {
+  "id": "27001_m10_s023",
+  "layout": "punti",
+  "kicker": "Le checklist",
+  "titolo": "Una spina dorsale, non una gabbia",
+  "intro": "Qui si vede la differenza tra una verifica viva e una rituale. La checklist non deve sostituire il giudizio: darti una spina dorsale per collegare domande, campionamento ed evidenze. Come gabbia, poni domande uguali in contesti diversi.",
+  "punti": [
+   { "h": "Struttura per aree", "d": "Contesto e perimetro; leadership, ruoli, politica; rischio, obiettivi, pianificazione; risorse, competenze, comunicazione, documenti; operatività, prestazioni, miglioramento. Il filo del sistema anche in profondità." },
+   { "h": "Domande + evidenze attese", "d": "Sul contesto non basta che il perimetro esista: riflette servizi, dipendenze, cambiamenti recenti? Sul rischio non basta la metodologia: la valutazione orienta il trattamento?" },
+   { "h": "Orientamento vs prova", "d": "«Come vengono gestiti gli accessi?» orienta; «seguiamo un caso di ingresso, modifica, revoca» prova. Protegge dal fermarti a risposte ben formulate ma non verificate." },
+   { "h": "Le esclusioni consapevoli", "d": "Non tutto va approfondito allo stesso livello: se decidi di non entrare in un'area per tempo o priorità, annota la ragione. Trasparente e utile al programma futuro." }
+  ]
+ },
+ {
+  "id": "27001_m10_s024",
+  "layout": "punti",
+  "kicker": "Evidenze attese · 1",
+  "titolo": "Contesto, leadership, pianificazione",
+  "intro": "Stai verificando se il sistema ha fondamenta reali o solo un linguaggio corretto. Le evidenze più utili raramente sono spettacolari: sono connessioni tra ciò che l'organizzazione dichiara, decide e mette in atto. Qui verifichi ancora il telaio.",
+  "punti": [
+   { "h": "Il contesto", "d": "Una definizione di perimetro aggiornata e compresa dai ruoli chiave, con esempi di come funzioni esterne influenzano l'SGSI. Segnale debole: un perimetro pulito ma incapace di spiegare come passano responsabilità." },
+   { "h": "Leadership e ruoli", "d": "Non una politica firmata: decisioni prese, riesaminate e sostenute da chi ha autorità. Verbali, approvazioni, follow up. Una leadership reale lascia segni nelle scelte, non solo nei documenti." },
+   { "h": "La pianificazione", "d": "Il rapporto rischio-trattamento-obiettivi: l'organizzazione non classifica solo i rischi, li usa per orientare decisioni. Il tema alzato dopo i disservizi compare nel riesame, nei piani, nelle verifiche." },
+   { "h": "Il telaio prima delle prove", "d": "Non pretendere qui tutte le prove operative: cerca la coerenza che renderà sensato il campionamento. Se il telaio è fragile, rafforza il campionamento nella parte operativa." }
+  ]
+ },
+ {
+  "id": "27001_m10_s025",
+  "layout": "punti",
+  "kicker": "Evidenze attese · 2",
+  "titolo": "Supporto, operatività, prestazioni, miglioramento",
+  "intro": "Dopo le fondamenta, se l'SGSI ha gambe per camminare. Aree diverse ma collegate: le risorse abilitano i processi, i processi trasformano il rischio in controllo, il monitoraggio verifica, le azioni correttive chiudono il cerchio. Dal dire al fare.",
+  "punti": [
+   { "h": "Il supporto", "d": "Non la presenza di formazione o documenti: la capacità delle persone di spiegare il proprio ruolo e trovare istruzioni aggiornate. Sui documenti, non quantità ma governo: versioni, aggiornamenti, protezione." },
+   { "h": "L'operatività", "d": "Casi reali: sugli accessi un campione di richieste/approvazioni/revoche; sulla continuità test, esiti, correzioni; sugli incidenti classificazione, presa in carico, chiusura, apprendimento." },
+   { "h": "Le prestazioni", "d": "Non gli stessi cruscotti per tutti: se l'organizzazione misura o valuta ciò che le serve per governare il rischio. Dati raccolti ma mai discussi valgono poco." },
+   { "h": "Il miglioramento", "d": "La trappola è la chiusura formale: un'azione «completata» che non ha cambiato il processo. Collega un caso chiuso a una verifica sul campo — un campione successivo alla correzione." }
+  ]
+ },
+ {
+  "id": "27001_m10_s026",
+  "layout": "punti",
+  "kicker": "Famiglie A · 1",
+  "titolo": "I controlli organizzativi",
+  "intro": "Passando dalle clausole alle famiglie dell'Appendice A, il rischio è perdere il filo tra controlli scollegati. La famiglia organizzativa traduce decisioni e responsabilità in assetti stabili di governo: una seconda checklist, complementare a quella delle clausole.",
+  "punti": [
+   { "h": "I flussi, non i documenti", "d": "Chiarezza dei flussi, responsabilità leggibili, capacità di gestire eccezioni. Se sostengono di governare bene i fornitori: come li selezionano, chiariscono aspettative, seguono le prestazioni, gestiscono gli scostamenti." },
+   { "h": "Le domande semplici", "d": "Chi decide, chi approva, chi controlla, chi è coinvolto quando cambia il contesto, come si gestiscono le eccezioni, dove restano le tracce, cosa succede quando un processo attraversa più funzioni." },
+   { "h": "Un percorso trasversale", "d": "Il ciclo di una modifica urgente: chi la richiede, chi l'autorizza, come si informa il fornitore, dove si registra, come si verifica l'esito. Tocca più controlli organizzativi insieme." },
+   { "h": "Le eccezioni governate", "d": "Nei SGSI maturi esistono deroghe e passaggi accelerati. La domanda non è se esistono, ma se restano governate: chi le autorizza, con quale durata, con quale verifica successiva." }
+  ]
+ },
+ {
+  "id": "27001_m10_s027",
+  "layout": "punti",
+  "kicker": "Famiglie A · 2",
+  "titolo": "Persone, fisico, tecnologia",
+  "intro": "Le altre tre famiglie pratiche. Non memorizzare un catalogo: capire quali evidenze cercare per verificare se i controlli dichiarati sono in funzione. Lette insieme, passi dal governo al comportamento quotidiano e ai meccanismi tecnici.",
+  "punti": [
+   { "h": "Le persone", "d": "Consapevolezza, responsabilità operative, ciclo di vita dei ruoli. Non l'avvenuta formazione: la capacità di descrivere regole pratiche, segnalare eventi, rispettare limiti. Un caso completo di attivazione e revoca tocca tutto." },
+   { "h": "La protezione fisica", "d": "Anche in organizzazioni digitali: come locali, postazioni, aree tecniche, dispositivi sono protetti coerentemente col rischio. Accessi controllati, custodia, visitatori. Osservala come parte di un flusso." },
+   { "h": "La tecnologia", "d": "Accessi logici, logging, backup, configurazioni, vulnerabilità. Costruisci campioni che mostrino un effetto osservabile: sul monitoraggio un evento reale dall'origine alla chiusura; sul backup l'ultima prova di ripristino." },
+   { "h": "Un unico scenario", "d": "L'ingresso di un tecnico ibrido: persone (formazione, consapevolezza), fisico (aree e dotazioni), tecnologia (credenziali, privilegi, revoca). In un percorso colleghi tre famiglie." }
+  ]
+ },
+ {
+  "id": "27001_m10_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 10",
+  "modNum": "10",
+  "titolo": "La preparazione decide la qualità",
+  "punti": [
+   { "h": "Non comincia in riunione", "d": "Una buona verifica comincia prima: programma coerente col rischio, SoA come mappa, campionamento ragionato, competenze allineate, documenti/perimetro/accessi preparati." },
+   { "h": "Programma ≠ calendario", "d": "Distribuire attenzione nel tempo in base a rischio, cambiamento, criticità, risultati precedenti — regolare ma non rigido." },
+   { "h": "La SoA come cartina", "d": "Non un allegato da spuntare: da lì ricavi piste, casi, persone e prime ipotesi di evidenze. Campionare bene significa scegliere situazioni che raccontano il tutto." },
+   { "h": "L'equilibrio delle competenze", "d": "Metodo, comprensione dei processi e, quando la profondità lo richiede, l'esperto tecnico IT — che porta profondità ma non sostituisce il giudizio." },
+   { "h": "La parola chiave: proporzione", "d": "Nel tempo, nella profondità, nelle richieste documentali, nella raccolta delle evidenze e nella protezione della riservatezza." },
+   { "h": "Come un percorso in montagna", "d": "Non vedi ogni metro prima di partire, ma studi la mappa, scegli il tracciato, porti le persone giuste e decidi cosa fare se il tempo cambia." }
+  ],
+  "prossimo": {
+   "modulo": "11",
+   "titolo": "Verificare l'SGSI II: la conduzione",
+   "testo": "Dalla preparazione al campo: interviste, osservazione, risultanze e tenuta del ritmo."
+  }
+ }
+]
