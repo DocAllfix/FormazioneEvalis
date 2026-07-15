@@ -1,0 +1,450 @@
+[
+ {
+  "id": "27001_m12_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 12",
+  "eyebrow": "Casi completi, simulazione e certificazione",
+  "titolo": "Rimettere insieme tutto il percorso",
+  "testo": "Non più concetti isolati, ma fatti lavorare dentro casi credibili, con priorità, tensioni e decisioni che si influenzano. È il passaggio in cui la teoria comincia davvero a somigliare al mestiere: due organizzazioni inventate ma plausibili, le risultanze come palestra di giudizio, una simulazione commentata e un orientamento prudente su esame finale e certificazione.",
+  "agenda": [
+   "Caso Novera: servizi digitali dal contesto alle risultanze",
+   "Caso Metalnova: manifattura ibrida e fornitori esterni",
+   "Discussione: cosa cambia, cosa resta, indizio vs risultanza",
+   "Simulazione d'esame commentata e errori tipici",
+   "Schema di certificazione e mantenimento della competenza",
+   "Riepilogo finale e chiusura del corso"
+  ]
+ },
+ {
+  "id": "27001_m12_s002",
+  "layout": "punti",
+  "kicker": "Caso 1 · Novera",
+  "titolo": "Contesto e campo di applicazione",
+  "intro": "Novera Cloud Services sviluppa applicazioni gestionali erogate come servizio, ospita dati su infrastrutture esterne, offre assistenza continua e integra sistemi contabili e di pagamento. Il valore dipende da disponibilità, fiducia del cliente e capacità di cambiare in fretta senza perdere controllo. Prima di cercare documenti, capisci bene che cosa stai guardando.",
+  "punti": [
+   { "h": "Il contesto interno", "d": "Azienda cresciuta in fretta, tecnici capaci ma processi discontinui. Commerciale promette tempi stretti, supporto lavora fuori orario, il responsabile tecnico accentra e alcune pratiche nascono per consuetudine." },
+   { "h": "Il contesto esterno", "d": "Clienti esigenti, forte dipendenza da terze parti tecnologiche, richieste frequenti di nuove funzioni, aspettativa di continuità quasi costante. Pressione che pesa sul sistema." },
+   { "h": "Il perimetro reale", "d": "Sviluppo, erogazione, assistenza, accessi delicati, fornitori critici, dati dei clienti. Escludere il supporto lo renderebbe artificiale: è il principale contatto e via d'accesso alle informazioni." },
+   { "h": "I bordi che rivelano", "d": "Accessi remoti in lavoro ibrido, ambienti di prova con dati realistici, credenziali a consulenti temporanei. Un ambiente-copia nato ai margini rende il sistema ordinato al centro e debole sul bordo." }
+  ]
+ },
+ {
+  "id": "27001_m12_s003",
+  "layout": "punti",
+  "kicker": "Caso 1 · Novera",
+  "titolo": "Leadership, ruoli e obiettivi",
+  "intro": "La direzione dichiara che la sicurezza conta, perché una perdita di fiducia colpirebbe clienti e ricavi. Ma una dichiarazione non basta: conta ciò che accade quando l'intenzione incontra urgenze e conflitti di priorità. La leadership, nel caso, non è un discorso ispirazionale: è come si distribuiscono responsabilità e si governano i conflitti.",
+  "punti": [
+   { "h": "Governo distribuito, non accentrato", "d": "Non tutto a una sola persona esperta: comodo sulla carta, fragile nella realtà. Chi coordina, sviluppo sulle modifiche, infrastruttura su accessi e disponibilità, supporto sugli incidenti, HR su ingressi e uscite." },
+   { "h": "Confini impliciti = equivoci", "d": "Appena sale la pressione, sviluppo pensa che il controllo spetti all'infrastruttura, il supporto immagina già autorizzato, il commerciale promette tempi non validati. Il sistema dipende da una persona sola." },
+   { "h": "Obiettivi concreti, non vaghi", "d": "Non «migliorare la sicurezza» ma priorità seguibili: chiudere prima le vulnerabilità gravi, rendere affidabile la revisione degli accessi privilegiati, migliorare la risposta agli incidenti. Ognuno nasce da un rischio reale." },
+   { "h": "Il test del conflitto", "d": "Cliente che chiede una funzione in pochi giorni contro verifiche minime ancora da fare: se la direzione spinge solo a correre, la velocità vince sempre. Se governa l'urgenza preservando passaggi non rinunciabili, è governo vero." }
+  ]
+ },
+ {
+  "id": "27001_m12_s004",
+  "layout": "cards",
+  "kicker": "Caso 1 · Novera",
+  "titolo": "Valutazione del rischio nel digitale",
+  "intro": "Valutazione e trattamento adattati all'organizzazione, non copiati da una moda. Novera individua informazioni rilevanti — dati dei clienti, credenziali privilegiate, codice, registri, informazioni contrattuali — e processi critici. Il valore emerge quando ogni rischio si collega a conseguenze reali.",
+  "cards": [
+   { "h": "Errore di configurazione", "d": "In un rilascio urgente, la piattaforma resta indisponibile per mezza mattina: interruzione, richieste al supporto, possibile violazione contrattuale, perdita di fiducia, nuovi errori sotto pressione." },
+   { "h": "Account condiviso attivo", "d": "Un amministrativo resta abilitato dopo il cambio di ruolo di un tecnico: non solo accesso improprio, ma perdita di tracciabilità e difficoltà di attribuzione delle azioni." },
+   { "h": "Fornitore che modifica", "d": "Un terzo cambia una configurazione di rete o servizio e Novera non intercetta l'impatto in tempo: il rischio nasce dalla dipendenza operativa e dal controllo debole sulle interfacce." },
+   { "h": "Reset con verifica debole", "d": "Il supporto riceve una richiesta apparentemente legittima ma l'identificazione è poco robusta: tocca insieme riservatezza, integrità delle autorizzazioni e affidabilità della prima linea." }
+  ]
+ },
+ {
+  "id": "27001_m12_s005",
+  "layout": "punti",
+  "kicker": "Caso 1 · Novera",
+  "titolo": "Dal rischio al trattamento",
+  "intro": "Una valutazione fatta bene si prova subito: l'organizzazione trasforma le priorità in scelte operative, oppure si ferma a un registro elegante. Trattare il rischio non coincide con comprare tecnologia: spesso il nodo è chiarezza del processo, disciplina di esecuzione, controlli minimi che reggono anche quando il lavoro accelera.",
+  "punti": [
+   { "h": "Le scelte operative", "d": "Elimina gli account condivisi e chiarisce chi approva e abilita; anche le urgenze di rilascio passano da un controllo minimo tracciabile; rafforza monitoraggio ed escalation sul provider; rende robusta l'identificazione nel supporto." },
+   { "h": "I due estremi da evitare", "d": "Il sistema puramente documentale, pieno di regole che nessuno consulta; e quello affidato alla memoria dei più esperti, veloce ma che perde tenuta quando cambiano persone, turni o priorità." },
+   { "h": "Le competenze, non solo le regole", "d": "Rafforzare l'identificazione del chiamante non basta scriverlo: il personale deve riconoscere i casi ambigui e sapere quando fermarsi. Chi difende la regola quando arriva pressione commerciale?" },
+   { "h": "Tracce coerenti in più punti", "d": "Una misura è credibile quando lascia segni in attività, formazione, autorizzazioni e registrazioni. Il sapere del tecnico senior è prezioso, ma se il processo dipende solo da lui, il sistema resta debole." }
+  ]
+ },
+ {
+  "id": "27001_m12_s006",
+  "layout": "flusso",
+  "kicker": "Caso 1 · Novera",
+  "titolo": "Come si svolge la verifica interna",
+  "intro": "Il sistema esiste sulla carta e nelle attività. Ora la verifica come simulazione realistica: non confermare che i documenti esistano, ma capire se il sistema è conforme, attuato davvero e se sostiene il business promesso. In Novera sviluppo, supporto e infrastruttura si intrecciano, quindi il campionamento non si ferma a un reparto.",
+  "passi": [
+   { "h": "Apertura e clima", "d": "Chiarisci finalità, perimetro, tempi, raccolta delle evidenze. Se l'azienda vive la verifica come esame punitivo mostra solo la superficie; come fotografia professionale offre informazioni utili." },
+   { "h": "Interviste per ruolo", "d": "Dalla direzione sulle priorità, poi nei processi: rilasci e urgenze con sviluppo, accessi privilegiati e provider con l'infrastruttura, identificazione ed escalation col supporto, ingressi e uscite con HR." },
+   { "h": "Evidenze oggettive", "d": "Se dicono che gli accessi sono rivisti, cerchi tracce di revisioni, esiti, tempi. Se ogni rilascio urgente è controllato, chiedi esempi recenti e confronta col racconto: pratica uniforme o dipendente dal più esperto?" },
+   { "h": "Le tensioni che emergono", "d": "Il processo urgenze aggirato nei picchi con accordi informali; revisione accessi senza evidenza delle revoche; buona procedura incidenti ma classificazione usata in modo incoerente. Non dettagli: punti di instabilità." }
+  ]
+ },
+ {
+  "id": "27001_m12_s007",
+  "layout": "confronto",
+  "kicker": "Caso 1 · Novera",
+  "titolo": "Risultanze e capacità di migliorare",
+  "intro": "Trasformi osservazioni, documenti e interviste in risultanze, senza ammorbidire né forzare. Non dici che tutto va male, né che il sistema è buono se le eccezioni sono frequenti: colleghi ogni risultanza a evidenze e distingui non conformità da opportunità.",
+  "a": {
+   "h": "Conformità solide",
+   "sub": "Dove il sistema regge",
+   "punti": [
+    { "d": "Campo di applicazione coerente col modello di business e rischi principali individuati in modo ragionevole." },
+    { "d": "Direzione coinvolta nelle priorità; rapporto col provider cloud riconosciuto come area critica da governare." },
+    { "d": "Gestione di incidenti recenti con aggiornamento di procedure e comunicazioni: l'azienda impara da ciò che accade." }
+   ]
+  },
+  "b": {
+   "h": "Debolezze significative",
+   "sub": "Dove serve azione sulla causa",
+   "punti": [
+    { "d": "Urgenze di rilascio aggirate con accordi verbali: se la pressione sospende i controlli, la pianificazione perde affidabilità." },
+    { "d": "Accessi privilegiati con revisioni pianificate ma esiti non tracciabili: chi ha revocato, quando? La fiducia si indebolisce." },
+    { "d": "Supporto che varia i criteri di identificazione secondo fretta e familiarità: la buona azione correttiva parte dalla causa, non dal sintomo." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m12_s008",
+  "layout": "punti",
+  "kicker": "Caso 2 · Metalnova",
+  "titolo": "Contesto e perimetro nella manifattura",
+  "intro": "Metalnova Components produce componenti meccanici di precisione: stabilimento, ufficio tecnico, rete di macchine interconnesse, laboratorio qualità e servizi cloud. Qui la sicurezza delle informazioni non riguarda solo dati d'ufficio: tocca continuità produttiva, integrità delle istruzioni tecniche e governo dei fornitori con accessi delicati.",
+  "punti": [
+   { "h": "L'informazione governa il fisico", "d": "Nei servizi digitali il prodotto quasi coincide col sistema informativo; qui l'informazione sostiene macchine, turni, manutenzione e tempi di fermo costosi. Contesto interno eterogeneo: IT, produzione e manutenzione parlano lingue diverse." },
+   { "h": "Le pressioni esterne", "d": "Clienti che chiedono puntualità e protezione dei disegni; fornitori di automazione con accessi delicati; servizi cloud che aggiungono dipendenze; eventi energetici o logistici che incidono sulla capacità di produrre." },
+   { "h": "Un perimetro che segue le interfacce", "d": "Include ufficio tecnico, ordini, qualità, sistemi centrali, connessioni cloud rilevanti e produzione digitale che incide sulla sicurezza. Non assorbe tutto, ma non isola la produzione come universo separato." },
+   { "h": "Il rischio della frammentazione", "d": "Un disegno nasce in ufficio tecnico, è approvato, condiviso via cloud, usato in reparto e discusso col fornitore. Se il perimetro non segue la catena, ognuno presidia il proprio pezzo ma nessuno vede l'intero flusso." }
+  ]
+ },
+ {
+  "id": "27001_m12_s009",
+  "layout": "cards",
+  "kicker": "Caso 2 · Metalnova",
+  "titolo": "Il rischio tra produzione e fornitori",
+  "intro": "Qui la valutazione è più delicata perché ogni rischio attraversa confini organizzativi e tecnici. La priorità dipende dal contesto: la valutazione non classifica per abitudine, classifica per impatto sul business e sulle parti interessate.",
+  "cards": [
+   { "h": "Assistenza remota opaca", "d": "Un fornitore si collega a una macchina per una diagnosi urgente, ma autorizzazione e tracciatura non sono chiare: modifiche non documentate, integrità delle configurazioni a rischio, eventi difficili da ricostruire." },
+   { "h": "Cloud che si interrompe", "d": "Il servizio che condivide istruzioni tecniche e report qualità subisce un'interruzione o un errore di sincronizzazione: ritardi nella validazione, uso di versioni non aggiornate, tensione tra reparti." },
+   { "h": "Parametri copiati a mano", "d": "Una stazione usa parametri copiati da un file esportato con controllo versione debole: rischio su integrità dell'informazione, qualità del prodotto, rilavorazione o scarto." },
+   { "h": "Cambio turno senza revisione", "d": "Un avvicendamento del personale manutentivo senza revisione delle autorizzazioni: accesso indebito che qui può incidere anche sulla continuità produttiva." }
+  ]
+ },
+ {
+  "id": "27001_m12_s010",
+  "layout": "flusso",
+  "kicker": "Caso 2 · Metalnova",
+  "titolo": "Preparare la verifica in uno stabilimento ibrido",
+  "intro": "Non un'organizzazione quasi interamente digitale: uffici, laboratorio, produzione, manutenzione, fornitori e cloud interagiscono di continuo. Solo l'IT o solo il reparto perdono metà del quadro. Parti da una mappa dei processi e segui un filo concreto: come un'informazione tecnica nasce, è approvata, resa disponibile, modificata, registrata.",
+  "passi": [
+   { "h": "Ufficio tecnico", "d": "Gestione dei documenti critici, versioni, autorizzazioni, comunicazione delle modifiche. Scopri che non tutti distinguono l'ultima versione approvata dalle copie di lavoro salvate per comodità." },
+   { "h": "Produzione", "d": "Come le istruzioni arrivano agli operatori, come si gestiscono parametri e anomalie, quali accessi remoti sono consentiti. Osservi il linguaggio del reparto: fermo, istruzione sbagliata, collegamento." },
+   { "h": "Manutenzione", "d": "Chi interviene sui sistemi, con quale tracciabilità e limiti. Un fornitore interviene da remoto su una macchina critica, ma richiesta e conferma di chiusura non sono registrate con lo stesso rigore ogni volta." },
+   { "h": "Sistemi informativi e cloud", "d": "Identità, registrazione degli eventi, interfacce con i fornitori. Buona gestione contrattuale iniziale ma poca evidenza di riesame periodico delle prestazioni e delle modifiche del fornitore." }
+  ]
+ },
+ {
+  "id": "27001_m12_s011",
+  "layout": "confronto",
+  "kicker": "Caso 2 · Metalnova",
+  "titolo": "Locale o sistemico?",
+  "intro": "Trasformi i segnali in risultanze difendibili: capire se osservi episodi isolati, da correggere, o un problema sistemico che indebolisce l'insieme. Una risultanza sbagliata produce reazioni sbagliate. La ripetizione e la diffusione contano moltissimo.",
+  "a": {
+   "h": "Debolezza locale",
+   "sub": "Episodio circoscritto",
+   "punti": [
+    { "d": "L'incertezza sulla versione emerge una volta sola, in una situazione transitoria ben compresa e spiegabile." },
+    { "d": "Un accesso remoto poco tracciato legato a un guasto urgente, seguito però da una regolarizzazione chiara." },
+    { "d": "Elementi iniziali di riesame dei fornitori cloud presenti ma ancora poco maturi: un'osservazione, non una non conformità." }
+   ]
+  },
+  "b": {
+   "h": "Problema sistemico",
+   "sub": "Difetto nel modo di governare",
+   "punti": [
+    { "d": "La stessa incertezza sulle versioni su più linee e turni, senza un punto ufficiale di verità: difetto nell'integrità dell'informazione." },
+    { "d": "Pratiche di accesso variabili da fornitore a fornitore: il controllo dipende troppo dalle abitudini individuali." },
+    { "d": "Contratti presenti ma nessuna routine di riesame: l'organizzazione fonda processi critici su una dipendenza che non riesamina." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m12_s012",
+  "layout": "punti",
+  "kicker": "Caso 2 · Metalnova",
+  "titolo": "Azioni correttive credibili",
+  "intro": "Metalnova può chiudere i rilievi con correzioni rapide o usare il caso per rafforzare il sistema. Tu osservi se l'organizzazione ha compreso la causa e se la risposta è proporzionata al rischio. Non ti interessa la promessa generica di sistemare tutto.",
+  "punti": [
+   { "h": "Istruzioni tecniche", "d": "Dire agli operatori di usare meglio la cartella non basta: se canale ufficiale e copie di lavoro convivono, il problema è l'architettura. Un unico punto controllato di pubblicazione, chi approva, come si ritirano le versioni superate." },
+   { "h": "Accessi remoti dei fornitori", "d": "Registrare meglio le attività lascia intatto il nodo: chi autorizza, con quali limiti, con quale conferma finale. Un flusso chiaro di richiesta, approvazione, monitoraggio e chiusura, senza burocrazia ingestibile." },
+   { "h": "Fornitori cloud", "d": "Un riesame periodico di prestazioni e modifiche. Se è solo una riunione annuale formale cambia poco; se include incidenti, modifiche dichiarate, impatti sui processi e follow up, il controllo diventa reale." },
+   { "h": "La causa trasversale", "d": "Spesso è la distanza tra linguaggi e priorità dei reparti. Un breve riesame congiunto delle modifiche che toccano documenti, accessi remoti o cloud critici: a volte manca solo un passaggio di coordinamento." }
+  ]
+ },
+ {
+  "id": "27001_m12_s013",
+  "layout": "punti",
+  "kicker": "Caso 2 · Metalnova",
+  "titolo": "Misurare e portare i temi alla direzione",
+  "intro": "La domanda non è se Metalnova sia perfetta, ma se sappia capire con continuità se le scelte stanno migliorando il sistema. Misurare bene significa collegare il dato agli effetti sul business, non produrre numeri senza utilità decisionale.",
+  "punti": [
+   { "h": "Informazioni tecniche", "d": "Non quanti documenti esistono, ma quante anomalie nascono da versioni non corrette, quanto rapidamente si ritirano le superate, se le deviazioni si concentrano sempre negli stessi reparti o turni." },
+   { "h": "Accessi remoti", "d": "Non il conteggio dei collegamenti, ma se ogni intervento lascia traccia chiara, se le autorizzazioni straordinarie aumentano, se dopo gli interventi emergono effetti collaterali su produzione o qualità." },
+   { "h": "Consapevolezza sul campo", "d": "Non quante persone hanno partecipato alla formazione, ma se i comportamenti sono stabili: l'operatore riconosce la versione valida, il laboratorio collega una deriva a un evento tecnico recente." },
+   { "h": "Poche domande fondate alla direzione", "d": "Non un catalogo di dati: crescono le eccezioni ai passaggi minimi? I fornitori sono governati solo all'inizio? Interventi remoti urgenti e scostamenti qualità, letti insieme, rivelano una debolezza di coordinamento." }
+  ]
+ },
+ {
+  "id": "27001_m12_s014",
+  "layout": "numeri",
+  "kicker": "Caso 2 · Metalnova",
+  "titolo": "Che cosa insegna davvero il caso",
+  "intro": "Né caos totale né ordine perfetto: la situazione più comune, un'organizzazione seria che deve ancora trasformare competenze distribuite in un sistema coerente. Cinque lezioni che porti con te.",
+  "numeri": [
+   { "n": "1", "h": "Il perimetro segue le interfacce", "d": "Non le caselle dell'organigramma. IT solido ma istruzioni ambigue in reparto: il sistema non è forte." },
+   { "n": "2", "h": "Presidio locale ≠ governo", "d": "Molti fanno bene il proprio lavoro, ma il sistema non può dipendere dalla bravura dei singoli quando cambiano turni e fornitori." },
+   { "n": "3", "h": "Urgenza e disciplina", "d": "L'urgenza è reale, non una scusa. Proprio per questo serve il minimo controllo che non salta neppure in emergenza." },
+   { "n": "4", "h": "Documenti ≠ governo", "d": "Il punto non è se esistano contratti e istruzioni, ma se si parlino tra loro e guidino il lavoro quotidiano." },
+   { "n": "5", "h": "Il tono del giudizio", "d": "Né entusiasmo ingenuo né pessimismo automatico: riconoscere i progressi e la chiarezza sulle aree critiche insieme." }
+  ]
+ },
+ {
+  "id": "27001_m12_s015",
+  "layout": "confronto",
+  "kicker": "Discussione dei casi",
+  "titolo": "Cosa cambia, cosa resta uguale",
+  "intro": "Novera e Metalnova sembrano molto diverse, e lo sono. Ma le logiche che rendono credibile un sistema restano simili. Questo ti evita due errori: pensare che ogni settore richieda un metodo nuovo, o credere che basti lo stesso modello ovunque.",
+  "a": {
+   "h": "Le differenze",
+   "sub": "Dove cercare le evidenze",
+   "punti": [
+    { "d": "Novera vive di disponibilità, rilasci frequenti, accessi privilegiati e relazione col provider cloud." },
+    { "d": "Metalnova governa processi materiali: istruzioni, parametri, qualità, manutenzione, accessi remoti a macchine." },
+    { "d": "Nel primo caso ti muovi tra rilasci e identità; nel secondo tra versioni documentali e passaggi tra reparti." }
+   ]
+  },
+  "b": {
+   "h": "Le costanti",
+   "sub": "Gli schemi che tornano",
+   "punti": [
+    { "d": "Il contesto è decisivo: senza una buona lettura di sé, il campo di applicazione è debole." },
+    { "d": "La qualità si misura sulle interfacce: i problemi seri nascono nei passaggi tra funzioni, non nel singolo documento." },
+    { "d": "Le scorciatoie ripetute e la dipendenza dai fornitori: eccezioni che tendono a diventare norma, da governare nel tempo." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m12_s016",
+  "layout": "punti",
+  "kicker": "Discussione dei casi",
+  "titolo": "Da sensazione a risultanza fondata",
+  "intro": "L'errore più frequente è trasformare in fretta una sensazione in conclusione. L'intuizione è utile, ma non è ancora una risultanza: tra il sospetto e il giudizio serve un lavoro fatto di evidenze pertinenti, verificabili e collegate ai criteri. I casi ti aiutano a vedere questo passaggio.",
+  "punti": [
+   { "h": "Il sospetto non basta", "d": "In Novera «i rilasci urgenti talvolta saltano passaggi» può essere un episodio corretto, una percezione, o attività fuori campo. Serve convergenza: esempi recenti, registrazioni incomplete, incoerenze tra ruoli, effetti osservabili." },
+   { "h": "Tre piani da non mescolare", "d": "Un segnale debole merita approfondimento; una carenza di evidenza è affermare senza dimostrare; una non conformità è una distanza reale e significativa tra ciò che il sistema richiede e ciò che trovi." },
+   { "h": "La ripetizione conta", "d": "Un supporto con criteri variabili in un solo operatore è un rinforzo formativo; in più persone con casi documentati è qualcosa di più profondo. Un fornitore che una volta non registra è una svista; più fornitori senza flusso è sistemico." },
+   { "h": "Il rischio opposto", "d": "Molta documentazione non significa controllo. Se un processo descritto bene viene aggirato nelle urgenze, o i registri non dicono chi ha deciso cosa e quando, la presenza del documento non prova l'efficacia." }
+  ]
+ },
+ {
+  "id": "27001_m12_s017",
+  "layout": "confronto",
+  "kicker": "Discussione dei casi",
+  "titolo": "Azione seria o cosmetica?",
+  "intro": "Quando arriva una risultanza, la tentazione è chiudere in fretta il punto visibile. Qui si decide se il miglioramento sarà vero o apparente. Un'azione seria non mira a far sparire il rilievo dal registro, ma a ridurre la probabilità che il problema si ripresenti.",
+  "a": {
+   "h": "Cosmetica",
+   "sub": "Agisce sul sintomo",
+   "punti": [
+    { "d": "Un promemoria al team di sviluppo davanti a rilasci urgenti poco tracciati: non tocca la pressione commerciale continua." },
+    { "d": "«Siate più attenti» sulle copie parallele in reparto: chiede alle persone di compensare un sistema ambiguo." },
+    { "d": "Revocare oggi l'account eccessivo o ritirare la copia obsoleta: hai corretto un fatto, non ridotto la probabilità." }
+   ]
+  },
+  "b": {
+   "h": "Seria",
+   "sub": "Agisce sulla causa",
+   "punti": [
+    { "d": "Chiarisce chi autorizza l'urgenza, i controlli minimi obbligatori, come si lascia traccia e come la direzione verifica le eccezioni." },
+    { "d": "Riprogetta il flusso documentale e il punto ufficiale di disponibilità, riducendo l'ambiguità del sistema." },
+    { "d": "Proporzionata al fenomeno e assegnata al ruolo giusto: se il difetto è all'interfaccia, non lo risolve un solo reparto." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m12_s018",
+  "layout": "numeri",
+  "kicker": "Discussione dei casi",
+  "titolo": "Le regole pratiche per la simulazione",
+  "intro": "Non formule magiche, ma un ordine per ragionare quando un caso ti mette davanti molte informazioni insieme. Cinque regole che emergono da tutto il lavoro fatto.",
+  "numeri": [
+   { "n": "1", "h": "Parti da contesto e perimetro", "d": "È il punto da cui dipendono quasi tutte le risposte. Cosa conta davvero per quell'organizzazione, quali interfacce sono critiche." },
+   { "n": "2", "h": "Segui i collegamenti", "d": "Non i compartimenti. Quando reparti o processi diversi sono nello stesso evento, pensa subito alle interfacce." },
+   { "n": "3", "h": "Affermazione, evidenza, conclusione", "d": "Distinguili sempre. Dichiarazione, poi registrazioni coerenti, poi il legame coi criteri: impedisce i salti logici." },
+   { "n": "4", "h": "Diffida delle risposte drastiche", "d": "L'azione seria colpisce il meccanismo, non la più appariscente. Più formazione o più documenti da soli raramente bastano." },
+   { "n": "5", "h": "Maturità non è rigidità", "d": "Urgenze e dipendenze non si eliminano: la questione è se il controllo minimo regge sotto pressione. La risposta sta nel mezzo professionale." }
+  ]
+ },
+ {
+  "id": "27001_m12_s019",
+  "layout": "flusso",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Leggere bene una domanda",
+  "intro": "Non addestrarti al trucco, ma al ragionamento pulito: una buona prova si supera leggendo la domanda come un caso sul campo, cercando contesto, problema reale e risposta proporzionata. Davanti a rilasci urgenti approvati verbalmente, il nocciolo non è l'esistenza delle urgenze, ma l'assenza di un controllo minimo tracciabile.",
+  "passi": [
+   { "h": "Leggi il fatto", "d": "Capisci che cosa la domanda ti sta chiedendo davvero, il primo passo più trascurato. Non cercare la soluzione più dura o più tecnologica: individua il difetto reale descritto." },
+   { "h": "Identifica il difetto di sistema", "d": "Non «vietare ogni urgenza» (poco credibile) né «autonomia totale all'esperto» (dipende dal singolo) né «rinviare al riesame annuale» (troppo lento): il problema è il controllo minimo mancante." },
+   { "h": "Scegli il controllo coerente", "d": "Criteri minimi di autorizzazione e registrazione anche per i casi rapidi, con responsabilità chiare e verifica successiva. Non la più lunga o elegante: quella che affronta la causa nel contesto reale." },
+   { "h": "Distingui il cuore dal contorno", "d": "I distrattori non sono assurdi, sono mezze verità o conseguenze minori. Nella domanda sulle versioni non distinte, il cuore è l'integrità dell'informazione, non i costi di stampa." }
+  ]
+ },
+ {
+  "id": "27001_m12_s020",
+  "layout": "punti",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Fornitori, accessi remoti, azioni correttive",
+  "intro": "Entriamo dove le domande diventano più interessanti: dipendenze esterne e qualità delle azioni correttive. Qui la risposta giusta richiede di vedere il sistema in movimento, non un fatto isolato.",
+  "punti": [
+   { "h": "L'intervento remoto senza tracce", "d": "Un fornitore risolve il fermo ma non lascia tracce uniformi. Il successo immediato non cancella il problema: la lettura corretta coglie il nesso tra dipendenza esterna, autorizzazione, tracciabilità e ricostruzione degli eventi." },
+   { "h": "Il richiamo generale al personale", "d": "Dopo una non conformità, invitare tutti a più attenzione può avere un ruolo, ma agisce sul comportamento, non sulla causa: un flusso ambiguo, un'autorizzazione mal definita, un'interfaccia non governata." },
+   { "h": "Il cloud senza riesame", "d": "Contratto iniziale ben definito ma nessun riesame di prestazioni, modifiche e incidenti: la debolezza è nel mantenimento del controllo sulla dipendenza esterna nel tempo. Ricorda la parola: mantenimento." },
+   { "h": "La regola comune", "d": "Non fermarti mai al fatto che una soluzione tecnica o contrattuale esista già. Chiediti se l'organizzazione la governa con continuità. Se sì, il sistema respira; se no, il controllo è solo iniziale." }
+  ]
+ },
+ {
+  "id": "27001_m12_s021",
+  "layout": "punti",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Evidenze, risultanze, decisioni della direzione",
+  "intro": "Quando la domanda mette insieme evidenze, risultanze e decisioni della direzione, il rischio è confondere i piani del ragionamento. Vedi la domanda come una piccola scena organizzativa, non come un indovinello lessicale.",
+  "punti": [
+   { "h": "La decisione della direzione", "d": "Davanti a eccezioni frequenti e autorizzazioni verbali, non basta prendere atto che il team è competente né chiedere di rispettare la procedura senza cambiare nulla: rimettere il sistema in coerenza col contesto operativo." },
+   { "h": "La risultanza più fondata", "d": "Con canale ufficiale ma copie parallele in reparto, la lettura solida nomina la debolezza nel governo dell'integrità delle informazioni: la versione valida non è disponibile in modo uniforme e riconoscibile dove serve." },
+   { "h": "Bastano le evidenze?", "d": "Separa il dichiarato dal verificato, valuta se la variabilità è episodica o ricorrente, chiedi se tocca un controllo critico. L'opzione giusta non conclude troppo presto né minimizza perché qualche caso è gestito bene." },
+   { "h": "Il riesame di direzione", "d": "Non il numero assoluto di rilasci urgenti, ma se le eccezioni stiano diventando il modo normale di lavorare. Il compito della direzione è vedere pattern e connessioni. La professionalità è proporzione, non durezza." }
+  ]
+ },
+ {
+  "id": "27001_m12_s022",
+  "layout": "cards",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Mini scenari e priorità di intervento",
+  "intro": "Leggere una situazione breve, individuare il nodo centrale e scegliere la priorità più coerente. Quando molti effetti sono visibili, chiediti quale passaggio organizzativo ha generato il maggior numero di conseguenze: di solito la priorità nasce lì.",
+  "cards": [
+   { "h": "Rallentamenti dopo un rilascio urgente", "d": "Modifica con registrazione incompleta, supporto non avvisato, pressione commerciale: la priorità è il controllo del cambiamento nelle urgenze, non la comunicazione esterna o più capacità infrastrutturale." },
+   { "h": "Modifica remota e deriva qualità", "d": "Non chiedere solo più campioni al laboratorio né vietare il collegamento: un flusso chiaro di autorizzazione, registrazione, comunicazione alle funzioni impattate e riesame congiunto degli eventi." },
+   { "h": "Cloud usato ma non riesaminato", "d": "Distrattori plausibili — produttività, licenza, preferenze. Il rischio centrale è la perdita di controllo nel mantenimento di una dipendenza critica. La parola implicita: mantenimento." },
+   { "h": "Identificazione variabile nel supporto", "d": "Non nuova formazione generica o sanzioni: chiarimento operativo con esempi, verifica a campione dei casi gestiti e riesame del processo di ingresso dei nuovi operatori." }
+  ]
+ },
+ {
+  "id": "27001_m12_s023",
+  "layout": "numeri",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Gli errori tipici che fanno sbagliare",
+  "intro": "In una simulazione ben costruita i distrattori non sono sciocchi: sono pensati per chi ha studiato in fretta o in modo mnemonico. Sei trappole da riconoscere anche quando conosci la materia.",
+  "numeri": [
+   { "n": "1", "h": "Innamorarsi di una parola chiave", "d": "La domanda non chiede di abbinare etichette, ma di riconoscere una relazione. «Fornitore» può comparire, ma la questione è la tracciabilità." },
+   { "n": "2", "h": "Scegliere la più drastica", "d": "Vietare ogni urgenza, eliminare ogni accesso esterno, bloccare la produzione: forti in apparenza, scollegate dal contesto." },
+   { "n": "3", "h": "Fidarsi del documento", "d": "Se esiste una procedura molti concludono che il controllo ci sia. Ma in Novera e Metalnova i processi c'erano ed erano aggirati." },
+   { "n": "4", "h": "Correzione ≠ azione correttiva", "d": "Rimuovere subito l'account o ritirare la copia è incompleto se la domanda misura la causa. Capisci cosa sta misurando il quesito." },
+   { "n": "5", "h": "Trascurare le interfacce", "d": "Spesso la risposta non sta nel reparto più esposto ma nel collegamento tra reparti. Più funzioni in scena: pensa alla loro interazione." },
+   { "n": "6", "h": "Ragionare per abitudini proprie", "d": "L'organizzazione ideale non esiste, e la prova non valuta le tue preferenze: resta dentro il perimetro del caso e i fatti dati." }
+  ]
+ },
+ {
+  "id": "27001_m12_s024",
+  "layout": "punti",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Mini prova finale ragionata",
+  "intro": "Metti insieme metodo, attenzione e capacità di scegliere. Non per misurarti in modo definitivo, ma per fissare il tipo di mente utile all'esame. Le domande migliori cercano il nesso tra contesto, rischio, operatività, evidenza e miglioramento.",
+  "punti": [
+   { "h": "Eccezioni in aumento", "d": "Rilasci urgenti con controlli definiti ma eccezioni cresciute e supporto avvisato in ritardo: non che il processo non esista né solo comunicazione — il meccanismo di urgenza sta diventando pratica ordinaria da riesaminare." },
+   { "h": "Versioni non distinguibili", "d": "In manifattura le istruzioni non sono sempre distinguibili in reparto: la dimensione più esposta è l'integrità dell'informazione applicata a produzione e qualità, non il semplice ordine archivistico." },
+   { "h": "Fornitore cloud senza riesame", "d": "Scelto con cura all'inizio ma senza riesame regolare: manca soprattutto il mantenimento del governo sulla dipendenza esterna. Molti sistemi falliscono nel mantenimento, non nella partenza." },
+   { "h": "Richiamo generico alla prudenza", "d": "Su accessi poco tracciati è debole non perché la prudenza sia inutile, ma perché non dimostra di aver compreso la causa organizzativa: autorizzazione, limiti, registrazione e chiusura dell'intervento." },
+   { "h": "Quasi incidenti nei picchi", "d": "Non basta dire che le persone sono sotto stress: capire se obiettivi, risorse, priorità e controlli minimi restano coerenti quando la pressione cresce. La direzione legge il sistema in condizioni reali." }
+  ]
+ },
+ {
+  "id": "27001_m12_s025",
+  "layout": "punti",
+  "kicker": "Schema di certificazione",
+  "titolo": "Tre piani da non confondere",
+  "intro": "Il materiale non riporta un regolamento dettagliato di certificazione personale: sarebbe scorretto presentare uno schema ufficiale come se avessimo tutte le regole formali. Possiamo però separare tre piani, evitando errori di preparazione. Il metodo corretto è progressivo: prima consolidi modulo per modulo, poi ricostruisci i fili trasversali.",
+  "punti": [
+   { "h": "Il corso e i checkpoint", "d": "Significato didattico e progressivo: verificano se hai seguito con attenzione sufficiente per andare avanti, non sostituiscono la valutazione conclusiva. Studiando, punta a lessico, logica del modulo ed esempi ricorrenti." },
+   { "h": "L'esame finale del percorso", "d": "Il corso prepara a ragionare, ma non autorizza a inventare criteri ufficiali. Niente pesi o griglie non dichiarati: arriva con una preparazione coerente — linguaggio, contesto e rischio, evidenze e risultanze, lettura dei casi." },
+   { "h": "La certificazione in senso proprio", "d": "Non coincide con l'aver seguito un corso: appartiene a un quadro formale che definisce condizioni, prove e valore dell'esito. Non riportato qui in dettaglio: usare il modulo per orientarsi, senza trasformare consigli in norme." }
+  ]
+ },
+ {
+  "id": "27001_m12_s026",
+  "layout": "punti",
+  "kicker": "Schema di certificazione",
+  "titolo": "Prepararti bene senza inventare criteri",
+  "intro": "La tentazione è chiederti quali domande usciranno e cosa verrà osservato. Senza un regolamento esplicito, non prometterti criteri nascosti: identifica invece le capacità che rendono la preparazione robusta in qualunque valutazione seria e coerente col percorso.",
+  "punti": [
+   { "h": "Padronanza del linguaggio", "d": "Non memoria meccanica: usare con chiarezza evidenze, risultanze, non conformità, azioni correttive, monitoraggio, riesame, rischio, contesto, miglioramento. Se il lessico è naturale, leggi meglio domanda e caso." },
+   { "h": "Ragionamento per connessioni", "d": "I problemi seri nascono da relazioni mal governate: urgenza e controllo, produzione e qualità, fornitore e tracciabilità, documento e pratica. Allenarti a collegare i pezzi, non a ripetere capitoli separati." },
+   { "h": "Leggere lo scenario in tre passi", "d": "Prima il contesto, poi il difetto di sistema che il caso suggerisce, infine la risposta che ricostruisce il controllo. Questo ritmo ti protegge dalla fretta e dalle risposte appariscenti ma deboli." },
+   { "h": "Correzione o miglioramento", "d": "Se il problema è corretto oggi ma può tornare uguale domani, resta prudente; se l'organizzazione modifica il processo che generava la debolezza, il miglioramento è più credibile. Forte su molte famiglie di quesiti." }
+  ]
+ },
+ {
+  "id": "27001_m12_s027",
+  "layout": "confronto",
+  "kicker": "Schema di certificazione",
+  "titolo": "Mantenimento: formale e sostanziale",
+  "intro": "La parola mantenimento confonde due piani diversi. Il materiale non ha il dettaglio di uno schema formale completo, perciò la cosa corretta è distinguerli bene, senza sovrapporli. Evita l'idea della linea d'arrivo definitiva: il valore duraturo nasce da ciò che continui a fare dopo.",
+  "a": {
+   "h": "Mantenimento formale",
+   "sub": "Regola di prudenza",
+   "punti": [
+    { "d": "Fai sempre riferimento al regolamento applicabile: lì stanno condizioni, scadenze, richieste documentali e modalità di verifica." },
+    { "d": "Attribuire al modulo indicazioni formali che non riporta sarebbe poco serio: i consigli di crescita non equivalgono a regole ufficiali." },
+    { "d": "Tenere distinti i due piani è già un segno di maturità professionale." }
+   ]
+  },
+  "b": {
+   "h": "Mantenimento sostanziale",
+   "sub": "Su cui lavori da subito",
+   "punti": [
+    { "d": "Non lasciare che lessico, metodo e giudizio si spengano: confrontarti coi casi, rileggere gli errori, aggiornare il linguaggio." },
+    { "d": "Restare vigile contro due derive: irrigidirsi sullo stesso schema mentale, o diventare troppo confidente perdendo disciplina." },
+    { "d": "Momenti brevi e regolari: richiamare il lessico, raccontare un caso a voce, analizzare un mini scenario, rileggere una risposta debole." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m12_s028",
+  "layout": "timeline",
+  "kicker": "Riepilogo finale",
+  "titolo": "La mappa che porti all'esame",
+  "intro": "Se ricordi ogni dettaglio isolato, ti senti pieno di informazioni ma senza direzione. Se ricostruisci la logica che attraversa il percorso, arrivi con una base stabile. Una sequenza semplice, l'ossatura di tutto il corso: i due casi cambiano forma senza cambiare logica.",
+  "tappe": [
+   { "t": "1", "h": "Contesto", "d": "Parti interessate e campo di applicazione: dove nasce il valore e dove un problema informativo farebbe più danni." },
+   { "t": "2", "h": "Leadership", "d": "Rende il sistema praticabile: politica, ruoli, risorse e priorità, governo dei conflitti." },
+   { "t": "3", "h": "Rischio", "d": "Valutazione e trattamento coerenti con la realtà dell'organizzazione, non con modelli copiati." },
+   { "t": "4", "h": "Operatività", "d": "Processi, competenze, comunicazione e informazioni documentate che sostengono il lavoro quotidiano." },
+   { "t": "5", "h": "Verifica e miglioramento", "d": "Monitoraggio, verifica interna, riesame di direzione, non conformità e azioni correttive che vanno alla causa." }
+  ]
+ },
+ {
+  "id": "27001_m12_s029",
+  "layout": "chiusura",
+  "kicker": "Fine del corso · Modulo 12",
+  "modNum": "12",
+  "titolo": "Prossimi passi e continuità della crescita",
+  "punti": [
+   { "h": "Ripassa in modo trasversale", "d": "Non moduli come stanze separate, ma fili lunghi: dal contesto al rischio, dalle evidenze alle risultanze, da non conformità ad azione correttiva e riesame. Somiglia al ragionamento davanti a un caso reale." },
+   { "h": "Allena la spiegazione orale", "d": "Racconta a voce cosa rende credibile un sistema, cosa distingue un'evidenza da una conclusione, cosa rende seria un'azione correttiva. Se inciampi, hai trovato un punto da chiarire." },
+   { "h": "Usa i casi come specchio", "d": "Non memorizzarli: chiediti come avresti ragionato tu. In Novera quale evidenza ti avrebbe convinto delle urgenze diventate regola; in Metalnova quale segnale rivelava un problema sistemico." },
+   { "h": "L'atteggiamento alla prova", "d": "Non come chi si difende da trappole, ma come chi mostra un modo solido di ragionare: leggi con calma, resta nel caso, cerca la causa, scegli la risposta più proporzionata." },
+   { "h": "Il valore oltre il traguardo", "d": "Se arriverai alla certificazione, il valore non sta solo nell'ottenimento iniziale ma nel mantenimento della competenza e della credibilità nel tempo. Il corso ti ha dato una base seria." },
+   { "h": "Un unico circuito", "d": "All'inizio i temi sembravano capitoli separati; ora un unico circuito: contesto, rischio, operatività, verifica, miglioramento, di nuovo contesto. Quando ti diventa naturale, inizi a pensare come serve nel mestiere." }
+  ]
+ }
+]
