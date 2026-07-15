@@ -1,0 +1,388 @@
+[
+ {
+  "id": "27001_m11_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 11",
+  "eyebrow": "Verificare l'SGSI II: la conduzione",
+  "titolo": "Dalla preparazione alla presenza sul campo",
+  "testo": "Il momento in cui le ipotesi smettono di essere astratte: politiche, processi e responsabilità devono lasciare tracce verificabili. Non devi diventare un sistemista: devi capire cosa conta, cercare coerenza non spettacolo, distinguere un racconto ben confezionato da un controllo che vive davvero. In sicurezza non vince chi sa più sigle: vince chi collega processi, persone, prove e rischi.",
+  "agenda": [
+   "Evidenze tecniche senza essere sistemisti",
+   "Interviste efficaci, adattate al ruolo",
+   "Osservazione diretta di spazi e comportamenti",
+   "Campionamento su log, accessi, incidenti, backup",
+   "Dalle note alle risultanze, chiusura e rapporto"
+  ]
+ },
+ {
+  "id": "27001_m11_s002",
+  "layout": "flusso",
+  "kicker": "Evidenze tecniche",
+  "titolo": "Che cosa chiedere davvero",
+  "intro": "Non recitare una competenza che non hai: chi hai davanti può chiuderti o guidarti su dettagli irrilevanti. Ciò che conta non è vincere una discussione tecnica, ma capire se il controllo è definito, applicato, compreso e mantenuto. Una sequenza mentale per restare sul governo.",
+  "passi": [
+   { "h": "Quale rischio presidia", "d": "Da quale esigenza nasce il controllo. Davanti a una console piena di indicatori verdi, è rassicurante ma dice poco: parti dall'intento, non dall'effetto scenico." },
+   { "h": "Come è attuato", "d": "Nella realtà, non nella teoria. Chiedi la catena completa, non un frammento: sulla revoca, dall'uscita della persona alla disattivazione, fino alla verifica finale." },
+   { "h": "Chi ne risponde, come si verifica", "d": "Responsabilità, monitoraggio, cosa accade se qualcosa va storto. Domande precise non chiedono competenza specialistica: chiedono chiarezza di processo." },
+   { "h": "Non smascherare, capire", "d": "Se fai domande per mettere in difficoltà, ricevi difese; per ricostruire un flusso, ricevi informazioni migliori. L'attivazione via ticket ma la revoca via mail informale rivela già una fragilità." }
+  ]
+ },
+ {
+  "id": "27001_m11_s003",
+  "layout": "punti",
+  "kicker": "Evidenze tecniche",
+  "titolo": "Leggere ciò che vedi",
+  "intro": "Davanti a una schermata, il rischio è fidarsi dell'immediatezza visiva. Una rappresentazione grafica non sostituisce la comprensione del processo che la genera. Quattro filtri: se una prova regge su tutti, sta diventando affidabile; se ne manca uno, chiedi integrazioni.",
+  "punti": [
+   { "h": "Pertinenza", "d": "Ciò che vedi risponde alla domanda che facevi, o porta altrove? Se hai chiesto dei fallimenti dei backup, un inventario degli asset non aiuta. Il freno contro le deviazioni." },
+   { "h": "Attualità", "d": "Non la freschezza del file: la capacità di rappresentare il funzionamento presente. Un elenco utenti stampato mesi fa dice poco sugli accessi di oggi." },
+   { "h": "Copertura", "d": "Un controllo può funzionare su una parte e male su un'altra. Gli aggiornamenti coprono i portatili ma non i server legacy? Il monitoraggio i sistemi centrali ma non le applicazioni locali del fornitore?" },
+   { "h": "Tracciabilità", "d": "Lascia una registrazione, o esiste solo mentre te lo mostrano? Una cronologia, un ticket collegato, un registro di azioni rende l'evidenza più robusta. E puoi chiedere di rallentare." }
+  ]
+ },
+ {
+  "id": "27001_m11_s004",
+  "layout": "punti",
+  "kicker": "Evidenze tecniche",
+  "titolo": "Identità e accessi",
+  "intro": "Un'area trasversale, concreta e molto rivelatrice. Non limitarti a chiedere se esiste una regola: capire se il ciclo di vita dell'accesso è governato, dall'attivazione fino alla revoca. La parte più istruttiva è spesso la revoca.",
+  "punti": [
+   { "h": "Come nasce un accesso", "d": "Chi lo richiede, chi approva, come si distingue ordinario da privilegiato. Una risposta fragile si appoggia a formule elastiche: «di solito passa dal capo», «ci pensa il service desk»." },
+   { "h": "La revoca", "d": "Un caso recente di dimissioni o fine incarico: quando arriva l'informazione, chi la riceve, entro quanto, cosa viene disattivato davvero. HR puntuale, ma i consulenti restano attivi oltre il necessario." },
+   { "h": "La revisione periodica", "d": "Non «viene fatta?» — quasi tutti dicono sì. Chi legge l'elenco, lo legge o lo approva in blocco? Cento nomi riconsegnati firmati in pochi minuti: la forma esiste, il controllo sostanziale è dubbio." },
+   { "h": "Account condivisi e di servizio", "d": "Non la configurazione interna: perché esistono, chi ne controlla l'uso, come si registra l'attività. Se la motivazione è storica e nessuno la sa più spiegare, hai un nodo da comprendere." }
+  ]
+ },
+ {
+  "id": "27001_m11_s005",
+  "layout": "punti",
+  "kicker": "Evidenze tecniche",
+  "titolo": "Aggiornamenti, endpoint, infrastruttura",
+  "intro": "Protezione tecnica non significa inseguire sigle: capire se l'organizzazione mantiene sotto controllo strumenti e ambienti che cambiano. Poche domande strutturali — cosa proteggere, con quale regolarità, quali eccezioni, quale verifica, quale reazione. Non cercare l'effetto wow.",
+  "punti": [
+   { "h": "Gli aggiornamenti", "d": "«Aggiorniamo regolarmente tutto» suona bene. La parola chiave è eccezione: non esiste ambiente senza. Il punto non è eliminarle, ma se sono note, motivate, autorizzate, rivalutate nel tempo." },
+   { "h": "Gli endpoint", "d": "Non fermarti alla presenza dello strumento: quanta parte copre, come si gestiscono i dispositivi fuori rete. «Tutti i portatili sono cifrati», ma quelli dei consulenti su progetti sensibili no." },
+   { "h": "La difficoltà concreta", "d": "«Qual è l'ultima difficoltà che avete avuto?» abbassa la retorica: un aggiornamento rimandato, un agente che rallentava, un dispositivo non gestito trovato in rete. Il funzionamento reale, comprese le tensioni." },
+   { "h": "Parlare dei limiti", "d": "Un reparto affidabile non sostiene che tutto sia perfetto: sa dove è solido e dove serve attenzione, quali rischi residui sono stati accettati. Le rappresentazioni senza ombre nascondono processi poco riflessivi." }
+  ]
+ },
+ {
+  "id": "27001_m11_s006",
+  "layout": "punti",
+  "kicker": "Evidenze tecniche",
+  "titolo": "Backup, incidenti, log",
+  "intro": "Qui l'SGSI smette di essere buone intenzioni e diventa comportamento osservabile. Backup falliti e recuperati, allarmi analizzati, ticket chiusi male o bene: raccontano il presidio più di una dichiarazione. Un'area quasi sempre ad alto valore informativo.",
+  "punti": [
+   { "h": "I backup", "d": "Non «fate i backup?»: come si controllano gli esiti, chi vede i fallimenti, casi recenti di errore, prova di ripristino non solo di copie. Copiare dati non equivale a saperli recuperare." },
+   { "h": "Gli incidenti", "d": "Chiedi un caso recente anche piccolo — phishing, accesso sospetto, mail al destinatario sbagliato. Il caso reale costringe il processo a mostrarsi: chi l'ha ricevuto, classificato, deciso; quali lezioni." },
+   { "h": "I log", "d": "Non analista forense: sa quali eventi registrare, dove conservarli, chi li consulta. Un log raccolto e mai guardato è l'illusione del controllo. Chiedi un allarme o una ricerca eseguita davvero." },
+   { "h": "L'esempio integrato", "d": "Backup regolari e pochi allarmi, ma un'indisponibilità recente: ripristino riuscito, tempo di recupero lungo perché la documentazione non era aggiornata. La tecnologia c'era, l'organizzazione più debole." }
+  ]
+ },
+ {
+  "id": "27001_m11_s007",
+  "layout": "flusso",
+  "kicker": "Evidenze tecniche",
+  "titolo": "Triangolare le prove",
+  "intro": "Vedere non basta, sentire non basta, leggere non basta. Molti controlli sono invisibili finché non li guardi da più angolazioni. La triangolazione è una delle migliori difese contro conclusioni affrettate — serve a rendere visibili le incoerenze, non a cogliere in fallo.",
+  "passi": [
+   { "h": "I documenti", "d": "Una procedura ti dice come l'organizzazione intende governare: un'intenzione formalizzata. Da sola non prova che il processo funzioni." },
+   { "h": "Le interviste", "d": "Una persona racconta come viene eseguito, con eccezioni e difficoltà. Molto utile, ma resta una fonte parziale." },
+   { "h": "L'osservazione", "d": "Guardi ambiente, postazioni, flussi, comportamenti reali. Il blocco sessioni «attivo ovunque», ma due postazioni condivise con sessioni aperte: uno scarto che merita attenzione." },
+   { "h": "La contraddizione", "d": "Se una fonte contraddice un'altra, resisti a scegliere subito la più convincente: differenza tra siti, turni, periodi, o problema reale? La prima evidenza forte non deve orientare tutto il resto." }
+  ]
+ },
+ {
+  "id": "27001_m11_s008",
+  "layout": "punti",
+  "kicker": "Le interviste",
+  "titolo": "Far parlare il sistema attraverso le persone",
+  "intro": "Domande troppo larghe danno formule generiche; troppo tecniche, risposte difensive; giudicanti, una barriera. Un equilibrio: ascolto aperto, guida ferma, linguaggio chiaro. Le interviste testano allineamento, consapevolezza, confini di responsabilità.",
+  "punti": [
+   { "h": "Partire dal ruolo", "d": "Non «come gestite la sicurezza», ma «cosa fai tu quando entra una persona nuova, quando un fornitore chiede accesso, quando un alert richiede intervento». Le domande contestualizzate fanno emergere il processo reale." },
+   { "h": "Il racconto operativo", "d": "Come avviene, non se avviene; l'ultimo caso, non la teoria; chi fa il passaggio successivo, non chi è formalmente responsabile. Raccogli sostanza, non eloquenza." },
+   { "h": "La tecnica del cono", "d": "Larga all'inizio (come rappresenta il processo), stretta alla fine (un caso, una traccia, una data recente, un'eccezione). Evita il questionario rigido e la conversazione dispersiva." },
+   { "h": "Il silenzio e il riassunto", "d": "Dopo una risposta breve, non riempire lo spazio: spesso il dettaglio più importante arriva nell'intervallo. «Se capisco bene, la richiesta parte dal capo, passa da HR... è corretto?»" }
+  ]
+ },
+ {
+  "id": "27001_m11_s009",
+  "layout": "punti",
+  "kicker": "Interviste · IT e supporto",
+  "titolo": "Domande che aprono i processi reali",
+  "intro": "La tentazione è fare domande enciclopediche: chi lavora su sistemi possiede molto dettaglio tecnico. Senza rotta, passi un'ora ad ascoltare informazioni interessanti ma inutili. La bussola resta: come è attuato, con quali responsabilità, registrazioni, eccezioni, reazioni.",
+  "punti": [
+   { "h": "La giornata tipica", "d": "Quali eventi guardate a inizio turno, quali code presidiate, cosa richiede intervento immediato, chi decide la priorità. Descrive il lavoro reale e apre il ponte per approfondire in modo naturale." },
+   { "h": "Regola e pressione", "d": "L'ultima richiesta di accesso urgente: chi l'ha autorizzata, è rimasta traccia, c'è stato un controllo dopo? Molti processi sembrano robusti finché non arriva l'urgenza." },
+   { "h": "Il primo sensore", "d": "Sul supporto: come distinguono una richiesta comune da un incidente. In un e-commerce le telefonate dei dirigenti gestite direttamente senza registrazione completa: una categoria che elude il processo standard." },
+   { "h": "L'apprendimento", "d": "«Negli ultimi mesi, cosa vi ha fatto cambiare qualcosa nel modo di lavorare?» Dice se il presidio è statico o capace di migliorare. E chiarisci i confini: «cosa intendete per tutto?»" }
+  ]
+ },
+ {
+  "id": "27001_m11_s010",
+  "layout": "punti",
+  "kicker": "Interviste · Sviluppo",
+  "titolo": "La sicurezza entra nel cambiamento?",
+  "intro": "Nello sviluppo le risposte suonano ordinate: ambienti separati, revisioni, rilasci approvati. Non fermarti al lessico corretto: la sicurezza entra davvero nel ciclo, o è un controllo esterno che compare solo alla fine? Segui una modifica concreta fino all'esercizio.",
+  "punti": [
+   { "h": "Come nasce un cambiamento", "d": "Come viene valutato l'impatto sulla sicurezza — non metodologie sofisticate: se qualcuno si pone la domanda, in quale momento, con quali criteri. Se la sicurezza è solo una firma finale, il processo è formale." },
+   { "h": "Gli ambienti separati", "d": "Chi accede a ciascuno, come si autorizzano le eccezioni, come si gestiscono i dati di prova. «La produzione è accessibile solo in emergenza»: chiedi l'ultimo caso — le eccezioni raccontano più della regola." },
+   { "h": "Il rilascio", "d": "Come si decide che è pronto, chi approva, finestre di rollback. Su un rilascio urgente collega sviluppo, esercizio e continuità — tre mondi più allineati sulla carta che nella realtà." },
+   { "h": "Raccontare gli errori", "d": "Un team che spiega un difetto sfuggito ai test o una modifica ritirata mostra un contesto che impara. Descrizioni solo perfette e astratte invitano alla prudenza: i processi vivi hanno sempre attrito." }
+  ]
+ },
+ {
+  "id": "27001_m11_s011",
+  "layout": "punti",
+  "kicker": "Interviste · Risorse umane",
+  "titolo": "Il ciclo di vita delle persone",
+  "intro": "Non esci dal perimetro della sicurezza: entri in uno dei suoi snodi. Molti controlli informatici dipendono da eventi che nascono qui — assunzioni, cambi ruolo, cessazioni, consulenze. Se HR comunica tardi o in modo informale, anche l'IT più competente inseguirà.",
+  "punti": [
+   { "h": "Gli eventi che attivano", "d": "Non «entrata e uscita»: nuovi assunti, interinali, cambi mansione, fine progetto. Più il racconto è concreto, più vedi se c'è un processo maturo o eccezioni continue senza nominarle." },
+   { "h": "Il flusso informativo", "d": "Chi comunica l'arrivo all'IT, con quali dati, con quale anticipo; chi segnala il cambio ruolo, chi informa sulla cessazione e quando. Una risposta fragile: «normalmente», «appena possibile», «dipende dal responsabile»." },
+   { "h": "Interni vs esterni", "d": "I dipendenti seguono un percorso ordinato, ma consulenti e appaltatori restano in zone grigie. HR presidia bene i dipendenti ma non le presenze gestite dai responsabili o dai fornitori." },
+   { "h": "La consapevolezza", "d": "Non solo se esiste la formazione: quando è erogata, prima o dopo gli accessi, cosa accade se un manager spinge per anticipare l'operatività. Il rapporto tra urgenza del business e protezione minima." }
+  ]
+ },
+ {
+  "id": "27001_m11_s012",
+  "layout": "punti",
+  "kicker": "Interviste · Fornitori",
+  "titolo": "Dove finiscono i confini interni",
+  "intro": "Non basta capire come lavora l'organizzazione dentro: come definisce aspettative, assegna responsabilità e controlla ciò che non esegue direttamente. Non tutto ciò che è esterno è fuori controllo, né tutto ciò che è interno è sicuro: ricostruisci il meccanismo di governo.",
+  "punti": [
+   { "h": "La mappa per impatto", "d": "L'organizzazione distingue i fornitori per criticità? Un fornitore di cancelleria e uno che amministra piattaforme critiche non stanno sullo stesso piano. Se sembrano tutti uguali, la gestione è più amministrativa che orientata al rischio." },
+   { "h": "Dal contratto alla pratica", "d": "Come si valuta un nuovo fornitore, chi decide i requisiti di sicurezza, chi verifica che siano compresi, cosa succede se il servizio cambia. Clausole corrette non usate hanno valore limitato." },
+   { "h": "Gli accessi di terze parti", "d": "Chi li approva, continuativi vs temporanei, proroghe e chiusure. L'account tecnico permanente e condiviso del manutentore: autorizzazione, tracciabilità e responsabilità personale indebolite. L'efficienza che erode il presidio." },
+   { "h": "Gli incidenti con terzi", "d": "Non «il fornitore ci informa»: un caso recente anche minore. Chi viene avvisato, con quali tempi, chi valuta l'impatto interno. I casi reali mostrano se il rapporto è governato o solo sperato." }
+  ]
+ },
+ {
+  "id": "27001_m11_s013",
+  "layout": "punti",
+  "kicker": "L'osservazione",
+  "titolo": "Guardare senza fare l'ispettore scenico",
+  "intro": "Il momento in cui il sistema si lascia vedere nelle sue abitudini. Non cercare dettagli pittoreschi: confrontare il racconto con il contesto reale, in modo rispettoso e metodico. Una forma di lettura professionale dell'ambiente di lavoro.",
+  "punti": [
+   { "h": "Naturalezza", "d": "Non entrare con atteggiamento teatrale come per sorprendere qualcuno: generi tensione e ottieni poco. Osserva ciò che emerge mentre l'organizzazione ti accompagna nelle attività normali." },
+   { "h": "Pertinenza", "d": "Non tutto ciò che noti ha lo stesso valore: collega l'osservazione a un criterio, un rischio, un processo già emerso. Una verifica silenziosa della coerenza tra detto e visibile." },
+   { "h": "Contesto", "d": "Una scrivania con documenti aperti in un ufficio chiuso ≠ la stessa scena in zona con passaggio di esterni. Una sala tecnica aperta durante un intervento presidiato ≠ senza controllo." },
+   { "h": "Completa, non sostituisce", "d": "Una porta aperta non prova che l'intero controllo fisico sia inadeguato: chiedi, capisci, collega. E tutto ordinato durante il tuo passaggio non prova che la disciplina sia radicata." }
+  ]
+ },
+ {
+  "id": "27001_m11_s014",
+  "layout": "punti",
+  "kicker": "L'osservazione",
+  "titolo": "Postazioni e aree comuni",
+  "intro": "Un laboratorio straordinario: la sicurezza come somma di gesti semplici ripetuti ogni giorno. Ti parla di abitudini, tolleranza verso le scorciatoie e di quanto la consapevolezza sia diventata comportamento. Non cercare la perfezione da brochure.",
+  "punti": [
+   { "h": "La protezione delle sessioni", "d": "Schermi aperti in assenza, credenziali visibili, sessioni amministrative non presidiate. Il contesto conta: una sessione aperta mentre la persona è a pochi passi ≠ una postazione incustodita in area attraversata." },
+   { "h": "I documenti fisici", "d": "Non tutto il rischio è digitale: stampe, appunti, etichette raccontano ancora. Documenti sensibili nelle aree condivise, stampanti che trattengono materiale non ritirato — il livello di attenzione materiale." },
+   { "h": "La soglia", "d": "Badge sui tavoli, porte tenute aperte, persone che entrano dietro altre, visitatori indistinguibili dal personale: indicano la cultura reale della soglia. Se il confine fisico è un fastidio, anche altri si indeboliscono." },
+   { "h": "Regola e pressione", "d": "Nei momenti intensi la disciplina regge o si allenta? Reception affollata, sala appena liberata, area break. Se la sicurezza vive solo nelle situazioni tranquille, il sistema è più fragile di quanto sembri." }
+  ]
+ },
+ {
+  "id": "27001_m11_s015",
+  "layout": "punti",
+  "kicker": "L'osservazione",
+  "titolo": "Sale server e locali tecnici",
+  "intro": "È facile sentirsi trascinati sul terreno dello specialismo. Puoi osservare molto senza competenze da progettista: resta sul governo del contesto. La chiave: rischio, controllo, responsabilità, reazione, evidenza. Non giudicare parametri tecnici.",
+  "punti": [
+   { "h": "L'accesso fisico", "d": "Chi entra, come è autorizzato, l'accesso è limitato o ampio per comodità. Badge, serrature, registrazioni, accompagnamento: capisci se il locale è trattato come area sensibile o solo stanza con apparecchiature." },
+   { "h": "L'ordine operativo", "d": "Non un feticcio estetico: cavi identificati, armadi non improvvisati, assenza di oggetti estranei. Un disordine marcato accompagna spesso processi meno stabili e responsabilità non ben presidiate." },
+   { "h": "I confini adiacenti", "d": "La sala principale ben protetta, ma i locali vicini e i passaggi secondari raccontano altro: una porta tecnica usata come scorciatoia, una chiave condivisa tra troppe persone." },
+   { "h": "Il manutentore in autonomia", "d": "Entra in alcune finestre orarie senza accompagnamento costante: non è detto sia sbagliato, ma come si limita il perimetro dell'intervento, si registra la presenza, si verifica ciò che ha fatto?" }
+  ]
+ },
+ {
+  "id": "27001_m11_s016",
+  "layout": "punti",
+  "kicker": "L'osservazione",
+  "titolo": "Comportamenti osservabili",
+  "intro": "Ci sono aspetti che non stanno né nei documenti né nelle console: stanno nei comportamenti. Non trasformarti in psicologo — leggi pratiche visibili che parlano della cultura in azione. Un episodio isolato non va assolutizzato; più segnali nella stessa direzione sì.",
+  "punti": [
+   { "h": "Le regole minime", "d": "Le conoscono come slogan o le usano spontaneamente? Quando un visitatore entra, qualcuno si attiva? Se una porta riservata resta aperta, qualcuno la richiude o la considera normale?" },
+   { "h": "L'urgenza", "d": "Se un dirigente chiede accesso immediato, il processo viene comunque rispettato o si salta tutto per velocità? La sicurezza reale si misura spesso nei casi che sembrano piccoli." },
+   { "h": "L'attenzione reciproca", "d": "In un contesto maturo le persone si correggono con naturalezza; in uno fragile la regola è un fastidio. «Facciamo prima così», «qui ci conosciamo tutti», «è solo per oggi» ricorrenti meritano attenzione." },
+   { "h": "La cultura non è monolitica", "d": "Personale che abbassa la voce sui dati delicati in corridoio (segnale positivo), ma un fornitore che attraversa una zona riservata senza registrazione (presidio debole). Va letta con finezza." }
+  ]
+ },
+ {
+  "id": "27001_m11_s017",
+  "layout": "punti",
+  "kicker": "Il campionamento",
+  "titolo": "Pochi casi che dicano qualcosa",
+  "intro": "La tentazione più pericolosa è voler controllare tutto: impossibile e inutile. Il valore nasce dal selezionare casi che illuminino il funzionamento abituale. Se hai poco tempo, meglio pochi casi completi che molti sfiorati: la profondità conta più dell'ampiezza.",
+  "punti": [
+   { "h": "Rilevanza", "d": "Non tutti gli oggetti hanno lo stesso potere: un accesso privilegiato dice più di uno ordinario, un backup fallito e recuperato più di dieci esiti verdi. Cerca casi che abbiano qualcosa da insegnare." },
+   { "h": "Varietà", "d": "Se campioni solo esempi comodi, vedi la vetrina. Mescola: un caso standard e uno urgente, un'attività interna e una coi fornitori, un sistema critico e uno secondario, uno riuscito e uno problematico." },
+   { "h": "Temporalità", "d": "Esempi recenti, ma non solo dell'ultima settimana: confronta un caso vicino con uno di qualche mese prima per vedere se una correzione ha tenuto. Senza disperderti in ricostruzioni infinite." },
+   { "h": "Tracciabilità", "d": "Casi con una catena consultabile — richiesta, autorizzazione, esecuzione, chiusura. E dichiara la logica di scelta: se sai spiegare perché proprio questi casi, la verifica resta trasparente e difendibile." }
+  ]
+ },
+ {
+  "id": "27001_m11_s018",
+  "layout": "punti",
+  "kicker": "Campionamento · Log e accessi",
+  "titolo": "Eventi leggibili, non montagne di dati",
+  "intro": "Il rischio è immaginare quantità enormi e pensare servano competenze forensi. L'obiettivo non è leggere tutto: scegliere un campione che mostri se la registrazione è utile, consultata e collegata a decisioni. Dieci schermate senza filo valgono meno di un caso compreso.",
+  "punti": [
+   { "h": "Partire da un evento", "d": "Un allarme reale, un accesso non riuscito, una modifica amministrativa: come compare nei log, chi lo ha guardato, cosa è successo dopo. Parti da una storia concreta e usa il log come traccia del processo." },
+   { "h": "Campioni diversi per natura", "d": "Un accesso ordinario, uno privilegiato, uno temporaneo, uno revocato; se ci sono fornitori, un caso esterno. Tocchi autorizzazione, esecuzione, durata, controllo, chiusura con pochi casi ben tracciati." },
+   { "h": "L'accesso del fine settimana", "d": "Amministrativo per un intervento urgente: dal log l'ora, poi il ticket di autorizzazione, l'identità, la chiusura. Se la catena tiene, prova forte; se l'autorizzazione è ricostruita a memoria, debolezza vera." },
+   { "h": "Campionare le assenze", "d": "Un accesso che dovrebbe lasciare traccia e non la lascia, un account che dovrebbe essere chiuso e risulta attivo. Le lacune, se ben contestualizzate, sono spesso più istruttive dei casi perfetti." }
+  ]
+ },
+ {
+  "id": "27001_m11_s019",
+  "layout": "punti",
+  "kicker": "Campionamento · Incidenti",
+  "titolo": "Come il sistema reagisce quando conta",
+  "intro": "Quando tutto scorre bene, quasi ogni organizzazione appare ordinata: è nelle anomalie che emergono ruoli, tempi, comunicazione, apprendimento. Non cercare solo i casi gravi: spesso i casi medi o piccoli raccontano meglio il funzionamento abituale.",
+  "punti": [
+   { "h": "Eventi diversi per natura", "d": "Un phishing segnalato, un'indisponibilità, un invio errato, un malware bloccato, una revoca mancata scoperta tardi. Vedi se il processo regge oltre la singola categoria e quanto il metodo è trasferibile." },
+   { "h": "La sequenza", "d": "Come è stata ricevuta, chi l'ha classificata, dove si vedono le decisioni, come si è arrivati alla chiusura, quali comunicazioni. Anche modesto, mostra se l'organizzazione trasforma un evento in gestione ordinata." },
+   { "h": "Incidenti e quasi incidenti", "d": "Le organizzazioni mature imparano anche dagli scampati casi. Chiedi esempi risolti prima dell'impatto: se ti mostrano solo casi chiusi formalmente come incidenti, perdi parte della sensibilità organizzativa." },
+   { "h": "Non giudicare solo l'esito", "d": "Il phishing bloccato ma segnalato per telefono, riportato a sistema dopo, avviso agli utenti ore dopo: buona sensibilità dell'utente, tracciabilità iniziale debole, comunicazione tardiva. Come ci si è arrivati conta." }
+  ]
+ },
+ {
+  "id": "27001_m11_s020",
+  "layout": "punti",
+  "kicker": "Campionamento · Backup",
+  "titolo": "Chiedi prova di recupero",
+  "intro": "Molte organizzazioni presentano subito esiti regolari. Il campionamento utile non cerca solo la conferma che le copie vengano eseguite: cerca il controllo dei fallimenti e la capacità di recuperare davvero. La differenza tra copia esistente e ripristino efficace è enorme.",
+  "punti": [
+   { "h": "Criticità diverse", "d": "Un servizio centrale, un'applicazione di supporto, un archivio meno urgente, uno gestito da un fornitore. Se campioni solo i più presidiati, vedi la parte migliore: cerca coerenza tra criticità e capacità di ripristino." },
+   { "h": "Includere un fallimento", "d": "Un backup sempre riuscito dice poco sulle eccezioni. Un fallimento racconta chi se ne accorge, con quali tempi, come si corregge, dove resta la traccia. Se nessuno ne mostra uno, il processo forse non li rende visibili." },
+   { "h": "Ripristini reali", "d": "Il punto più importante: l'ultimo test o un recupero necessario. Quanto tempo, i passaggi documentati, sorprese — file mancanti, permessi non previsti, dipendenze ignorate. Una lettura seria della resilienza." },
+   { "h": "Il caso rivelatore", "d": "Copie regolari, ma il test recente: recupero tecnico riuscito, tempo perso perché le istruzioni non riflettevano la collocazione degli archivi e una persona chiave era assente. L'esito verde non l'avrebbe mai raccontato." }
+  ]
+ },
+ {
+  "id": "27001_m11_s021",
+  "layout": "flusso",
+  "kicker": "Le risultanze",
+  "titolo": "La struttura che rende solido il giudizio",
+  "intro": "Se la scrittura è confusa o sproporzionata, anche una verifica ben condotta perde forza. La qualità non sta nell'aggiungere parole: nel collegare limpidamente ciò che hai visto, il criterio usato e la valutazione. Scrivi sempre a partire dai fatti, non dall'etichetta.",
+  "passi": [
+   { "h": "Il riferimento", "d": "La regola interna, il processo dichiarato, l'assetto che l'organizzazione ha definito. Rispetto a cosa stai leggendo i fatti." },
+   { "h": "L'evidenza", "d": "Ciò che hai effettivamente osservato, ascoltato o ricostruito da registrazioni attendibili. Prima descrivi con precisione, poi valuti." },
+   { "h": "Il significato", "d": "Perché quello scarto conta. «La gestione degli accessi è debole» è una conclusione nuda: mancano il riferimento, i fatti e la strada che porta da quei fatti alla valutazione." },
+   { "h": "Il perimetro del campione", "d": "«In due casi su tre», «nella visita osservata»: così non fai sembrare universale ciò che hai visto solo in alcuni casi. Scrivi come se l'interessato potesse chiederti «su quale fatto ti basi?»" }
+  ]
+ },
+ {
+  "id": "27001_m11_s022",
+  "layout": "confronto",
+  "kicker": "Esempi · Accessi",
+  "titolo": "Scritti male o bene",
+  "intro": "Il confronto è più utile della teoria. Due account applicativi ancora attivi dopo la cessazione, in due casi su tre esaminati, contro un flusso di revoca coordinata dichiarato. Scrivere bene significa ridurre lo spazio dell'interpretazione arbitraria.",
+  "a": {
+   "h": "Formulazione debole",
+   "sub": "Etichetta, non esito",
+   "punti": [
+    { "d": "«La gestione delle revoche è carente e può generare rischi seri.» Non dice quali casi, non mostra il perimetro." },
+    { "d": "«Carente» come etichetta, non come esito motivato: chi legge non ha una base per capire." },
+    { "d": "«Il processo non è rispettato e il reparto opera in modo informale»: generalizza da un caso e giudica il reparto, accendendo la difesa." }
+   ]
+  },
+  "b": {
+   "h": "Formulazione robusta",
+   "sub": "Fatto, contesto, scarto",
+   "punti": [
+    { "d": "«Nel campione di tre cessazioni, in due casi risultavano ancora attivi un accesso applicativo e una credenziale remota dopo la data comunicata.»" },
+    { "d": "«L'evidenza non appare coerente col flusso di revoca coordinata descritto»: descrive il campione, i fatti, lo scarto." },
+    { "d": "Non attribuisce intenzioni: prima i fatti ben scritti, poi la qualificazione. Mai il contrario." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m11_s023",
+  "layout": "punti",
+  "kicker": "Esempi · Backup, incidenti, log",
+  "titolo": "Senza toni sbagliati",
+  "intro": "Il rischio è duplice: un linguaggio troppo tecnico che diventa oscuro, o troppo generico che non fa capire il problema. La qualità nasce dalla precisione dei fatti, dalla delimitazione del campione e dalla capacità di nominare il punto debole esatto.",
+  "punti": [
+   { "h": "Backup", "d": "Non «i backup non garantiscono il recupero» (troppo largo): «il sistema critico non presentava evidenza recente di prova di ripristino, e in un recupero le istruzioni non erano aggiornate, con allungamento della ripresa»." },
+   { "h": "Incidenti", "d": "Non «il processo incidenti è inefficace e lento» (generalizza da un caso): «nel caso di phishing, la registrazione è risultata successiva alla presa in carico e l'avviso agli utenti diverse ore dopo»." },
+   { "h": "Log", "d": "Non «i log non sono gestiti correttamente»: «il log consentiva di rilevare l'evento, ma l'autorizzazione risultava incompleta e la chiusura non era supportata da traccia equivalente». Distingue il dato dal significato." },
+   { "h": "Il filo comune", "d": "Precisione dei fatti, delimitazione del campione, il punto debole esatto. «Margini di rafforzamento» al posto di formule nette, quando il fatto è reale ma il perimetro non consente conclusioni assolute." }
+  ]
+ },
+ {
+  "id": "27001_m11_s024",
+  "layout": "punti",
+  "kicker": "Le risultanze",
+  "titolo": "Proporzione e prudenza",
+  "intro": "Due esigenze insieme: il testo deve essere abbastanza concreto per decidere, ma non una mappa troppo ricca di dettagli operativi sensibili. Un rapporto povero non aiuta a migliorare; uno troppo dettagliato può esporre vulnerabilità ancora aperte.",
+  "punti": [
+   { "h": "Identificativo vs sfruttabile", "d": "«Un account amministrativo esterno risultava attivo oltre il termine» può servire. Indicare nel rapporto generale il nome preciso, il sistema e la finestra oraria abituale è troppo." },
+   { "h": "I log", "d": "Non riversare sequenze complete o indirizzi interni: dire quale evento è stato cercato, quale tracciabilità era presente e quale no. Il dettaglio tecnico eventuale in un allegato riservato." },
+   { "h": "Fatto e generalizzazione", "d": "Due monitor sbloccati → «nel passaggio osservato erano presenti postazioni non bloccate». Non automaticamente «il personale non applica le regole»: servirebbe una base più ampia." },
+   { "h": "Chiarezza e tatto", "d": "Nomina il processo prima della persona: «il flusso di revoca non ha mostrato piena coerenza nel caso esaminato» apre un lavoro; «il reparto non ha fatto il proprio dovere» accende difese." }
+  ]
+ },
+ {
+  "id": "27001_m11_s025",
+  "layout": "punti",
+  "kicker": "Prima di chiudere",
+  "titolo": "Verificare i fatti",
+  "intro": "Ripulire le note, verificare che i fatti siano sostenuti, trasformare appunti in formulazioni coerenti. Se salti questo, o porti frasi premature o arrivi con materiale vero ma troppo grezzo. La chiusura non deve essere un luogo di sorprese improvvisate.",
+  "punti": [
+   { "h": "Lavorare per catene", "d": "Per ogni tema: qual era il criterio, quali evidenze, da quali fonti, quante convergono, quali contraddizioni aperte. Capisci se è una risultanza pronta, una pista, o un fatto che non regge." },
+   { "h": "Fatti e sospetti intelligenti", "d": "Un sospetto guida domande, ma non basta per una risultanza. La porta «spesso aperta» secondo qualcuno, ma tu l'hai vista chiusa e senza altre conferme: attenzione sì, fatto scritto no." },
+   { "h": "La proporzione interna", "d": "Non dare lo stesso peso testuale a un episodio isolato e a una fragilità in più campioni. «In due casi su tre», «nella visita osservata»: formule che regolano la forza senza alzare la voce." },
+   { "h": "La prova dei trenta secondi", "d": "Prova a spiegare ogni risultanza a voce senza leggere. Se ti impigli, la struttura logica non è pulita. Quello che non sai dire con chiarezza, difficilmente sarà scritto bene." }
+  ]
+ },
+ {
+  "id": "27001_m11_s026",
+  "layout": "punti",
+  "kicker": "La chiusura",
+  "titolo": "Presentare senza sorprese inutili",
+  "intro": "Non un rito formale: il lavoro sul campo restituito in modo comprensibile e leale. Il principio guida: niente effetti scenici, niente rilievi importanti comparsi dal nulla all'ultimo minuto. La preparazione comincia prima di entrare in sala.",
+  "punti": [
+   { "h": "Partire dal perimetro", "d": "Aree visitate, persone coinvolte, casi campionati, fonti. Poi il quadro generale, distinguendo ciò che è coerente da ciò che richiede attenzione — parlare anche del positivo, se sostenuto, è correttezza." },
+   { "h": "La struttura della scrittura", "d": "Descrivi il fatto, collega il criterio, spiega il significato: abbassa la conflittualità. «Il vostro controllo è debole» sposta il confronto sul piano identitario." },
+   { "h": "La contestazione", "d": "Non un attacco personale. Ascolta, chiedi elementi aggiuntivi verificabili, distingui spiegazione da giustificazione. Se una traccia nuova cambia il quadro, esserne contento: correggere con fatti migliori è qualità." },
+   { "h": "Non negoziare la realtà", "d": "La chiusura non serve a contrattare i fatti: verificare che siano compresi e che i nuovi elementi pertinenti siano considerati. La fermezza tranquilla funziona meglio dell'insistenza." }
+  ]
+ },
+ {
+  "id": "27001_m11_s027",
+  "layout": "punti",
+  "kicker": "Il rapporto",
+  "titolo": "Proteggere anche ciò che scrivi",
+  "intro": "Il rapporto conserva il senso della verifica e orienta le azioni. Nella sicurezza non è un file amministrativo: contiene debolezze, incidenti, elementi su accessi e controlli. La riservatezza non inizia quando è firmato — inizia mentre lo costruisci.",
+  "punti": [
+   { "h": "Il contenuto selezionato", "d": "Perimetro, metodo, fonti, limiti del campione, sintesi delle evidenze, risultanze chiare. Non un deposito di appunti grezzi: la selezione è già una misura di protezione." },
+   { "h": "La distribuzione", "d": "Il principio del bisogno di sapere: chi deve agire riceve ciò che gli serve. Chi non ha ruolo operativo o decisionale non ha motivo di accedere a ogni dettaglio, specie sulle debolezze aperte." },
+   { "h": "Le bozze", "d": "Circolano più del dovuto perché considerate provvisorie, ma possono essere più delicate del finale: formulazioni non consolidate, appunti nominativi, tracce incomplete. Cura anche note e copie locali." },
+   { "h": "La custodia nel tempo", "d": "Archiviazione, controllo versioni, trasmissione, protezione degli allegati: parte della stessa professionalità. Un documento accurato conservato con leggerezza contraddice il messaggio della verifica." }
+  ]
+ },
+ {
+  "id": "27001_m11_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 11",
+  "modNum": "11",
+  "titolo": "Dalla raccolta delle prove al rapporto",
+  "punti": [
+   { "h": "Le evidenze tecniche", "d": "Non «come funziona ogni tecnologia», ma quale rischio presidia, chi la governa, come si verifica, che tracce lascia. Console e log letti con occhi professionali." },
+   { "h": "Le interviste", "d": "Adattate al ruolo, partendo dal lavoro reale e chiedendo casi concreti: far parlare il sistema attraverso le persone giuste, dall'IT ai fornitori." },
+   { "h": "L'osservazione", "d": "Postazioni, sale tecniche, comportamenti mostrano ciò che i documenti non dicono. Non sostituisce le altre fonti: le completa e spesso le rende più affidabili." },
+   { "h": "Il campionamento", "d": "Pochi casi che raccontino il sistema, per rilevanza, varietà, temporalità, tracciabilità. Meglio pochi completi che montagne di dati senza filo." },
+   { "h": "Le risultanze", "d": "Criterio, evidenza, significato, perimetro. Con proporzione: concrete da guidare l'azione, ma non così ricche da esporre informazioni sensibili." },
+   { "h": "La fase conclusiva", "d": "Consolidare le note, condurre la chiusura senza sorprese, proteggere il rapporto: in sicurezza la riservatezza continua fino all'ultimo passaggio documentale." }
+  ],
+  "prossimo": {
+   "modulo": "12",
+   "titolo": "Casi completi, simulazione e certificazione",
+   "testo": "Dalla tecnica del singolo passaggio alla tenuta dell'intera prova professionale."
+  }
+ }
+]
