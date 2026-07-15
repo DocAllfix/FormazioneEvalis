@@ -18,7 +18,7 @@
 // Output: produzione/_staging/slide-gates/<corso>/report.json + contact-sheet.html
 //         (miniature cliccabili per la revisione umana C.4)
 //
-// Uso: node scripts/produzione/gate-slides.mjs <corso> --dir <cartella con <id>.html>
+// Uso: node scripts/produzione/gate-slides.mjs <corso> --dir <cartella con <id>.html> [--modulo mNN]
 //      node scripts/produzione/gate-slides.mjs --kit <cartella>   (valida un template kit:
 //        solo S2-S6, nomi file liberi — per il gate di approvazione dei 2 template)
 
@@ -32,6 +32,8 @@ const isKit = kitIx !== -1;
 const corso = isKit ? null : process.argv[2];
 const dirIx = process.argv.indexOf("--dir");
 const slidesDir = isKit ? process.argv[kitIx + 1] : dirIx !== -1 ? process.argv[dirIx + 1] : null;
+const modIx = process.argv.indexOf("--modulo"); // valuta UN modulo alla volta (completezza sul modulo)
+const modulo = modIx !== -1 ? process.argv[modIx + 1] : null;
 if (!slidesDir) {
   console.error("Uso: node scripts/produzione/gate-slides.mjs <corso> --dir <dir>  |  --kit <dir>");
   process.exit(2);
@@ -58,7 +60,7 @@ const errors = [];
 if (!isKit) {
   const d = dirs(corso);
   const copioni = readJson(d.copioni);
-  const ids = slideIds(copioni, corso);
+  const ids = slideIds(copioni, corso).filter((id) => !modulo || id.includes(`_${modulo}_`));
   titoli = new Map(copioni.slides.map((s) => [s.id, s.titolo]));
   const presenti = new Set(files.map((f) => f.replace(/\.html$/, "")));
   for (const f of files) {
