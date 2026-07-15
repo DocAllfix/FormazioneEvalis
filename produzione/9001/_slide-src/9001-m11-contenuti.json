@@ -1,0 +1,412 @@
+[
+ {
+  "id": "9001_m11_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 9001 — Sistemi di gestione per la qualità",
+  "kicker": "Modulo 11",
+  "eyebrow": "La conduzione sul campo",
+  "titolo": "Bentornato sul campo",
+  "testo": "La preparazione diventa azione: da oggi lavori sulle persone, nei reparti, dentro i processi che si muovono. Una premessa di sostanza: il metodo di conduzione nasce dalla prassi e dalla ISO 19011; i requisiti che verifichi vivono nella ISO 9001. Non mescolare mai le due cose. Il filo che tiene tutto è l'approccio per processi. E ricorda: sei ospite di persone che lavorano, la competenza ti apre la porta, il rispetto ti fa entrare davvero.",
+  "agenda": [
+   "La riunione di apertura e il governo del tempo",
+   "Verificare per processo: il filo dall'ordine alla consegna",
+   "Il campionamento e il campionamento dichiarato",
+   "L'intervista: le domande giuste per ogni ruolo",
+   "Le situazioni difficili e restare saldi",
+   "Le risultanze, la riunione di chiusura, il rapporto"
+  ]
+ },
+ {
+  "id": "9001_m11_s002",
+  "layout": "punti",
+  "kicker": "Aprire bene",
+  "titolo": "La riunione di apertura",
+  "intro": "Un rito breve, spesso un quarto d'ora, che decide il clima di tutto ciò che segue. In quei minuti ottieni tre cose insieme: confermi le regole, sciogli le tensioni, dimostri di sapere cosa stai facendo.",
+  "punti": [
+   { "h": "Presentazioni e ruoli", "d": "Chi guida, chi verifica quali aree, l'eventuale esperto tecnico che accompagna." },
+   { "h": "Scopo, campo e criteri", "d": "Cosa guarderai e cosa resta fuori; il metro si dichiara all'inizio, mai a giochi fatti." },
+   { "h": "Confermare il programma", "d": "Orari, aree, persone disponibili: gli imprevisti emergono subito, ed è bene che emergano." },
+   { "h": "Riservatezza e sicurezza", "d": "Ciò che vedrai resta protetto; chiedi i dispositivi e le regole del reparto." },
+   { "h": "Il metodo, senza agguati", "d": "Documenti, osservazioni e colloqui; i rilievi condivisi con calma alla fine, mai a sorpresa." },
+   { "h": "Comunicazione e tono", "d": "L'accompagnatore, un momento di allineamento, spazio alle domande: fermo sulle regole, caldo nei modi." }
+  ]
+ },
+ {
+  "id": "9001_m11_s003",
+  "layout": "split",
+  "kicker": "La risorsa che non torna",
+  "titolo": "Governare il tempo",
+  "lead": "Il tempo non si compra, non si prende in prestito, non si recupera. Gestirlo è una competenza tecnica vera, che distingue chi porta a casa un lavoro solido da chi arriva a sera con metà programma e conclusioni fragili.",
+  "punti": [
+   { "h": "Il piano orario è la bussola", "d": "La finestra assegnata è una stima, non una legge: ti dice se vai troppo lento o troppo veloce." },
+   { "h": "La trappola dell'approfondimento", "d": "Mi serve per una conclusione o sto solo soddisfacendo la curiosità? Quando basta, chiudi e vai avanti." },
+   { "h": "L'errore opposto: la corsa", "d": "Attraversare i reparti di fretta è un fallimento mascherato da efficienza. Dosa la profondità sul rischio." },
+   { "h": "Gli accorgimenti", "d": "Un cuscinetto per gli imprevisti, spostamenti raggruppati, appunti mentre osservi, rinegoziare con trasparenza." }
+  ]
+ },
+ {
+  "id": "9001_m11_s004",
+  "layout": "confronto",
+  "kicker": "Due modi di verificare",
+  "titolo": "Per processo, non per paragrafo",
+  "intro": "La differenza segna la distanza tra un principiante e un professionista. La ISO 9001 mette al centro l'approccio per processi: se l'organizzazione pensa per processi, la verifica più naturale è quella che li percorre.",
+  "a": {
+   "h": "Per paragrafo",
+   "sub": "Il principiante",
+   "punti": [
+    { "d": "Parti dal primo punto della norma e scendi voce per voce chiedendo la prova." },
+    { "d": "Ordinato e rassicurante, ma cieco proprio sulle interfacce, dove nascono i problemi." }
+   ]
+  },
+  "b": {
+   "h": "Per processo",
+   "sub": "Il professionista",
+   "punti": [
+    { "d": "Segui un'attività reale dall'inizio alla fine, giudicando tanti requisiti nel loro contesto." },
+    { "d": "Vedi le cuciture: se l'informazione del commerciale è arrivata intatta a chi produce." }
+   ]
+  }
+ },
+ {
+  "id": "9001_m11_s005",
+  "layout": "flusso",
+  "kicker": "La spina dorsale della verifica",
+  "titolo": "Il filo dall'ordine alla consegna",
+  "intro": "Segui un solo ordine, uno vero, dall'istante in cui il cliente lo formula fino a quando il prodotto arriva a destinazione. Un ordine ben scelto è una sonda calata dentro l'organizzazione.",
+  "passi": [
+   { "h": "La richiesta del cliente", "d": "Requisiti determinati e riesaminati: come avete capito cosa voleva e come sapete di poterlo fare." },
+   { "h": "La traduzione", "d": "L'ordine diventa commessa, distinta, istruzioni; progettazione se nuovo, specifiche se a catalogo." },
+   { "h": "Gli approvvigionamenti", "d": "Materiali e lavorazioni esterne: come sono scelti i fornitori e come si controlla ciò che arriva." },
+   { "h": "La produzione", "d": "Istruzioni, strumenti sotto controllo, registrazioni, tracciabilità, gestione dell'output non conforme." },
+   { "h": "Rilascio e consegna", "d": "I controlli di rilascio, l'imballaggio, la conservazione, il trasporto e la vita dopo la consegna." }
+  ]
+ },
+ {
+  "id": "9001_m11_s006",
+  "layout": "definizione",
+  "kicker": "Uno schema sempre uguale",
+  "eyebrow": "La lente per ogni tappa",
+  "titolo": "Ingressi, uscite, interazioni",
+  "definizione": "Ogni tappa è un piccolo processo: prende degli ingressi, li trasforma con un'attività, produce delle uscite, mentre lungo il percorso ci sono punti in cui si controlla e si misura.",
+  "punti": [
+   { "h": "Le stesse poche domande", "d": "Da dove arriva l'ingresso, chi lo fornisce, cosa produci, a chi lo consegni, come ti accorgi se va storto." },
+   { "h": "La parola chiave: interazioni", "d": "L'uscita di uno è l'ingresso del prossimo. La qualità dipende dalla pulizia dei passaggi tra i processi." },
+   { "h": "La cucitura che cede", "d": "La tolleranza stretta registrata dal commerciale finisce in un campo che nessuno legge in produzione." }
+  ]
+ },
+ {
+  "id": "9001_m11_s007",
+  "layout": "punti",
+  "kicker": "La verifica è per sondaggi",
+  "titolo": "Perché si campiona",
+  "intro": "Nessuna verifica può guardare tutto: è la natura del metodo, non una debolezza. Da un insieme grande scegli pochi casi da esaminare in profondità. Il rischio che il campione non rappresenti l'insieme non si azzera, ma si governa.",
+  "punti": [
+   { "h": "La rappresentatività", "d": "Il campione rispecchia la varietà: le diverse linee di prodotto, i clienti, i periodi." },
+   { "h": "L'orientamento al rischio", "d": "Pesa verso le zone calde: un prodotto nuovo, una linea con reclami, un picco, un fornitore cambiato." },
+   { "h": "La sana imprevedibilità", "d": "Alterna casi scelti con criterio e casi presi sul momento, così vedi la realtà e non una vetrina." }
+  ]
+ },
+ {
+  "id": "9001_m11_s008",
+  "layout": "split",
+  "kicker": "Dire cosa hai guardato",
+  "titolo": "Il campionamento dichiarato",
+  "lead": "Mettere per iscritto quali casi concreti hai esaminato: non 'ho controllato la produzione', ma 'ho esaminato questi ordini, con questi numeri, di queste date'. È il passaggio che separa un'impressione personale da un giudizio professionale.",
+  "punti": [
+   { "h": "La difendibilità", "d": "Se domani qualcuno contesta il tuo giudizio, la risposta esiste, è scritta ed è verificabile." },
+   { "h": "La ripetibilità", "d": "Un collega, leggendo cosa hai guardato, può rifare il percorso e arrivare a conclusioni compatibili." },
+   { "h": "L'onestà verso l'organizzazione", "d": "Dichiari anche ciò che non hai guardato: niente parole assolute dopo aver visto quattro casi su mille." }
+  ]
+ },
+ {
+  "id": "9001_m11_s009",
+  "layout": "flusso",
+  "kicker": "Camminare lungo il filo",
+  "titolo": "Seguire il caso attraverso le funzioni",
+  "intro": "Prendi un ordine e inseguilo fisicamente attraverso i reparti, chiedendo a ciascuno di mostrarti la sua parte. Tutto ruota attorno allo stesso caso, così le risposte delle diverse funzioni si possono confrontare.",
+  "passi": [
+   { "h": "L'ufficio commerciale", "d": "Come è arrivata la richiesta, come è stato fatto il riesame, a chi sono passate le informazioni." },
+   { "h": "Gli acquisti", "d": "Per questo lavoro cosa avete comprato e da chi: le registrazioni del controllo proprio di quei materiali." },
+   { "h": "La produzione", "d": "Le istruzioni davvero disponibili, gli strumenti tarati, e risalire dal pezzo al lotto: la tracciabilità." },
+   { "h": "Controllo finale e spedizione", "d": "Chi ha deciso il rilascio e su quali controlli; come è stato imballato e conservato per arrivare integro." }
+  ]
+ },
+ {
+  "id": "9001_m11_s010",
+  "layout": "confronto",
+  "kicker": "Due direzioni",
+  "titolo": "Tracciare in avanti e all'indietro",
+  "intro": "Un professionista usa entrambe le direzioni, scegliendo la più rivelatrice. Il cuore resta lo stesso: mettere alla prova le interfacce, chiedendo della stessa cosa da entrambi i lati della giunzione.",
+  "a": {
+   "h": "In avanti",
+   "sub": "Dall'origine alla fine",
+   "punti": [
+    { "d": "Parti dalla richiesta del cliente e segui il caso fino alla consegna." },
+    { "d": "Verifica che nulla si sia perso lungo la strada: la richiesta è arrivata intatta?" }
+   ]
+  },
+  "b": {
+   "h": "All'indietro",
+   "sub": "Dalla fine all'origine",
+   "punti": [
+    { "d": "Prendi un prodotto a caso sulla banchina e chiedi di risalire alla sua storia." },
+    { "d": "È il test della tracciabilità reale: difficile da addomesticare, toglie la vetrina." }
+   ]
+  }
+ },
+ {
+  "id": "9001_m11_s011",
+  "layout": "punti",
+  "kicker": "Far parlare i fatti",
+  "titolo": "L'arte dell'intervista",
+  "intro": "Le persone sono la fonte di evidenza più ricca e più insidiosa: nessun documento racconta un processo meglio di chi lo esegue, ma le parole vanno sempre riportate a un fatto.",
+  "punti": [
+   { "h": "Comincia sempre aperto", "d": "'Raccontami cosa succede quando arriva un materiale' fa emergere il processo reale; il sì o no viene dopo." },
+   { "h": "Le domande del 'mostrami'", "d": "Come fai a sapere che è conforme? Fammi vedere dove lo registri: dal piano delle intenzioni a quello dei fatti." },
+   { "h": "Ascoltare davvero", "d": "Dietro un 'di solito' o un 'dipende' c'è spesso un'eccezione. Il silenzio, dopo una risposta, è un alleato." },
+   { "h": "Rispetto, niente domande guidate", "d": "Non un interrogatorio: verifichi il sistema, non la persona. Evita le domande che suggeriscono la risposta." }
+  ]
+ },
+ {
+  "id": "9001_m11_s012",
+  "layout": "punti",
+  "kicker": "Chi tocca il prodotto",
+  "titolo": "Intervistare l'operatore e il magazziniere",
+  "intro": "Sono loro a dirti come stanno davvero le cose, lontano dalle presentazioni. L'obiettivo è capire cosa succede, non cosa dovrebbe succedere: parla la lingua concreta del gesto e dell'esempio.",
+  "punti": [
+   { "h": "Domande sul fare", "d": "Come inizi il turno, cosa controlli, come ti accorgi se qualcosa non va, a chi lo segnali." },
+   { "h": "Ciò che ha a portata di mano", "d": "Le istruzioni presenti e aggiornate, lo strumento di misura con la taratura in corso di validità." },
+   { "h": "La consapevolezza senza recite", "d": "Non la politica a memoria: perché quel controllo conta, cosa succederebbe al cliente se saltasse." },
+   { "h": "Il magazziniere", "d": "Tracciabilità e conservazione: quale materiale usare, separare il controllato dal non ancora, lo scaduto." }
+  ]
+ },
+ {
+  "id": "9001_m11_s013",
+  "layout": "punti",
+  "kicker": "Figure a cerniera",
+  "titolo": "Intervistare i responsabili di processo",
+  "intro": "Schiacciati tra gli obiettivi che ricevono dall'alto e i problemi concreti che gestiscono dal basso, sono gli interlocutori più preziosi per capire se il sistema funziona come un tutto.",
+  "punti": [
+   { "h": "Come tieni sotto controllo", "d": "Quali indicatori guardi, ogni quanto, cosa fai quando un numero peggiora: il monitoraggio è vivo o è un tabellone?" },
+   { "h": "L'ultima non conformità", "d": "Come l'hai gestita e cosa hai fatto perché non si ripeta: rimuovere la causa, non solo tappare il buco." },
+   { "h": "Le interfacce con gli altri", "d": "Come ricevi e come passi il testimone: è qui che emergono le tensioni e le cuciture più deboli." },
+   { "h": "Ascolto e prova", "d": "Ha interesse a mostrarsi bene: ascolta con rispetto e poi chiedi i dati. Sa spiegarti il perché delle scelte." }
+  ]
+ },
+ {
+  "id": "9001_m11_s014",
+  "layout": "cards",
+  "kicker": "La cima dell'organizzazione",
+  "titolo": "Intervistare la direzione",
+  "intro": "L'interlocutore più delicato: qui si concentra una parte importante di ciò che la norma chiede. Chiedi fatti, non professioni di fede, con fermezza e tatto insieme.",
+  "cards": [
+   { "h": "Leadership e impegno", "d": "Non parole ma azioni: mostrami una decisione recente in cui il sistema ha guidato una vostra scelta." },
+   { "h": "La politica per la qualità", "d": "Non recitarla: cosa significa nella pratica, quali priorità esprime, se orienta le decisioni o è un quadro appeso." },
+   { "h": "Il riesame di direzione", "d": "L'ultimo riesame: cosa avete guardato, cosa deciso, cosa è cambiato dopo. Un riesame vero lascia tracce." },
+   { "h": "Gli obiettivi per la qualità", "d": "Misurabili e pianificati; poi verifica se sono conosciuti più in basso: se coincidono, il sistema è coeso." }
+  ]
+ },
+ {
+  "id": "9001_m11_s015",
+  "layout": "punti",
+  "kicker": "Non fidarsi di una sola voce",
+  "titolo": "Ascoltare, verificare, triangolare",
+  "intro": "Raccogliere risposte è facile; pesarle è il vero mestiere. Nessuna parola, da sola, fa un'evidenza solida. Cerca conferme con serenità e metodo, con curiosità onesta e non con diffidenza.",
+  "punti": [
+   { "h": "Verificare la parola", "d": "Una dichiarazione resta tale finché non la ancori a un fatto: dal 'sentire dire' al 'mostramelo'." },
+   { "h": "Triangolare le fonti", "d": "La stessa informazione chiesta a fonti indipendenti: se è vera regge, se è falsa si crepa." },
+   { "h": "Le tre famiglie di evidenza", "d": "Colloqui, osservazione diretta, documenti: nessuna è sovrana da sola, è l'incrocio a dare la verità." }
+  ]
+ },
+ {
+  "id": "9001_m11_s016",
+  "layout": "punti",
+  "kicker": "Situazioni difficili · 1",
+  "titolo": "Le resistenze",
+  "intro": "Non tutti hanno voglia di collaborare. La resistenza quasi mai riguarda te come persona: riguarda ciò che rappresenti, un giudizio che qualcuno teme. La tua forza non è la voce alta, è la calma.",
+  "punti": [
+   { "h": "Capire le radici", "d": "Paura che il rilievo diventi colpa, brutte esperienze passate, diffidenza dell'ignoto: l'antidoto è la chiarezza rassicurante." },
+   { "h": "Chi si chiude o chi inonda", "d": "Ai monosillabi rispondi con domande aperte; a chi parla troppo, gentile ma fermo, riporti al punto." },
+   { "h": "Il polemico e l'accompagnatore", "d": "Mai lo scontro; e se il responsabile risponde al posto dell'operatore, ristabilisci con garbo chi deve parlare." },
+   { "h": "Il limite: l'impedimento", "d": "Se ti negano l'accesso a un'area o a un documento, non è più stile: è un fatto da registrare." }
+  ]
+ },
+ {
+  "id": "9001_m11_s017",
+  "layout": "punti",
+  "kicker": "Situazioni difficili · 2",
+  "titolo": "Quando i dati mancano",
+  "intro": "Chiedi una prova e ti senti dire che non c'è. Il dato mancante mette alla prova la tua capacità di distinguere un'assenza che è un problema da una che non lo è. La domanda-guida: come dimostrerà, tra un anno, di averlo fatto?",
+  "punti": [
+   { "h": "Doveva esistere?", "d": "Manca in senso pieno solo se un requisito o una procedura ne chiedeva la presenza; altrimenti è buona pratica." },
+   { "h": "Documento o attività?", "d": "A volte l'attività è stata svolta ma non registrata; a volte non è mai avvenuta: non saltare al peggio." },
+   { "h": "Non riempire i vuoti", "d": "'L'avranno certamente fatto' è l'erosione che mina il giudizio: premia ciò che si può dimostrare." },
+   { "h": "Isolato o sistematico", "d": "Prendi altri casi: un buco singolo e spiegabile è cosa diversa da un vuoto ripetuto." }
+  ]
+ },
+ {
+  "id": "9001_m11_s018",
+  "layout": "punti",
+  "kicker": "Situazioni difficili · 3",
+  "titolo": "I processi affidati all'esterno",
+  "intro": "Quasi tutte le organizzazioni affidano fuori una parte del lavoro. Il principio della norma è rigoroso: affidare all'esterno un processo non significa affidarne fuori la responsabilità. Segui un caso concreto, come sempre.",
+  "punti": [
+   { "h": "La responsabilità resta", "d": "L'organizzazione risponde della conformità di ciò che ha esternalizzato, come se lo facesse in casa." },
+   { "h": "Controllo proporzionato", "d": "La severità coerente col rischio: un componente di sicurezza non è l'imballaggio secondario." },
+   { "h": "Comunicare le attese", "d": "Requisiti, controlli, competenze: un fornitore non rispetta ciò che nessuno gli ha comunicato." },
+   { "h": "Verificare in casa", "d": "Il fornitore non lo visiti: guardi valutazioni, controlli in accettazione, reclami. Né scatola nera né eccesso." }
+  ]
+ },
+ {
+  "id": "9001_m11_s019",
+  "layout": "punti",
+  "kicker": "Il carattere sul campo",
+  "titolo": "Restare saldi",
+  "intro": "Il campo prova non solo la tua tecnica ma il tuo carattere. Le spinte a spostare il giudizio arrivano garbate, mai come richieste esplicite: riconoscerle è il primo passo per non subirle.",
+  "punti": [
+   { "h": "Le pressioni travestite", "d": "L'accoglienza che mette in debito, il 'quanto pesa quel certificato', il collega gentile a cui dispiace muovere un appunto." },
+   { "h": "L'erosione da dentro", "d": "Il rilievo addolcito per stanchezza, la non conformità retrocessa a osservazione: ogni concessione minima, sommate no." },
+   { "h": "Le due ancore del metodo", "d": "I criteri si dichiarano all'inizio e non si cambiano in corsa; ogni conclusione poggia su un campione dichiarato." },
+   { "h": "L'imparzialità", "d": "Accorgersi dei moti dell'animo — fastidio, benevolenza, idee già fatte — e impedire che influenzino la valutazione." }
+  ]
+ },
+ {
+  "id": "9001_m11_s020",
+  "layout": "definizione",
+  "kicker": "Scrivere ciò che si trova",
+  "eyebrow": "Un piccolo ragionamento completo",
+  "titolo": "L'anatomia di una risultanza",
+  "definizione": "Una risultanza è il risultato del confronto tra le evidenze raccolte e i criteri della verifica: su un lato i fatti, sull'altro il metro dichiarato, e nel mezzo il confronto che li misura.",
+  "punti": [
+   { "h": "L'evidenza oggettiva", "d": "Cosa hai visto, letto o sentito, in modo concreto e verificabile: non 'non appare adeguato'." },
+   { "h": "Il criterio", "d": "Rispetto a quale requisito giudichi. Senza il criterio l'evidenza è muta: un fatto da solo non è né buono né cattivo." },
+   { "h": "La collocazione", "d": "Dove, quando, su quali casi: è qui che entra il campione dichiarato, con gli identificativi e le date." },
+   { "h": "La rilevanza, per fatti", "d": "Perché conta, quale rischio porta. Si descrivono fatti, mai giudizi sulle persone: la causa spetta all'organizzazione." }
+  ]
+ },
+ {
+  "id": "9001_m11_s021",
+  "layout": "punti",
+  "kicker": "Imparare dagli errori",
+  "titolo": "Risultanze scritte male",
+  "intro": "Riconoscere una risultanza scritta male è il modo più rapido per imparare a scriverne di buone. Tienili come una lista di sintomi: se ti accorgi di scrivere così, fermati e correggi.",
+  "punti": [
+   { "h": "La vaghezza", "d": "'La documentazione non è del tutto adeguata': cosa hai visto, dove, rispetto a quale requisito? Non si può verificare." },
+   { "h": "Il giudizio sulle persone", "d": "'L'addetto non è sufficientemente attento': giudichi una persona e proponi una causa, invece di descrivere un fatto." },
+   { "h": "La soluzione al posto del problema", "d": "'Occorre comprare un nuovo gestionale': non spetta a te il rimedio, e se la tua strada fallisce, il fallimento è tuo." },
+   { "h": "L'assenza del criterio", "d": "'Le schede sono compilate a matita': e allora? È un problema solo se una procedura lo vietava." },
+   { "h": "La parola assoluta", "d": "'Gli ordini non sono gestiti correttamente' dopo averne visti quattro su mille: promette più di quanto hai verificato." },
+   { "h": "L'aggressività o l'ironia", "d": "'Sorprende che nessuno se ne sia accorto': anche se il fatto è vero, avvelena il rapporto e mette sulla difensiva." }
+  ]
+ },
+ {
+  "id": "9001_m11_s022",
+  "layout": "confronto",
+  "kicker": "Dal difetto alla forma corretta",
+  "titolo": "Risultanze scritte bene",
+  "intro": "La cura segue sempre lo stesso schema: aggiungere il fatto concreto, dichiarare il criterio, collocare nel tempo e nei casi, togliere il giudizio sulle persone. Non scrivere di più per abbellire, ma quel che serve perché la risultanza si regga da sola.",
+  "a": {
+   "h": "Prima",
+   "sub": "La scrittura debole",
+   "punti": [
+    { "d": "La documentazione non è del tutto adeguata." },
+    { "d": "L'addetto al controllo non è sufficientemente attento." },
+    { "d": "Gli ordini non sono gestiti correttamente." }
+   ]
+  },
+  "b": {
+   "h": "Dopo",
+   "sub": "La scrittura solida",
+   "punti": [
+    { "d": "La procedura, nell'ultima versione, non riporta i criteri di accettazione per due lavorazioni critiche." },
+    { "d": "Su cinque schede della settimana scorsa, tre erano prive della firma di validazione prevista." },
+    { "d": "Su quattro ordini degli ultimi tre mesi, in due il riesame dei requisiti non risultava registrato." }
+   ]
+  }
+ },
+ {
+  "id": "9001_m11_s023",
+  "layout": "punti",
+  "kicker": "La disciplina sotto ogni rilievo",
+  "titolo": "Il linguaggio fattuale: fatto, non giudizio",
+  "intro": "Separare il fatto dal giudizio è la competenza linguistica più importante del mestiere, e la più difficile, perché va contro il modo naturale di parlare. Un giudizio si può contestare; un fatto no.",
+  "punti": [
+   { "h": "Che cos'è un fatto", "d": "Qualcosa che chiunque, guardando la stessa evidenza, constaterebbe allo stesso modo: la firma c'è o non c'è." },
+   { "h": "La prova del nove", "d": "Se due persone competenti lo descriverebbero diversamente secondo la loro opinione, è un giudizio: riscrivi." },
+   { "h": "Gli aggettivi che tradiscono", "d": "Insufficiente, inadeguato, scarso, carente: rispetto a quale metro misurabile? Sostituiscili con un fatto e un criterio." },
+   { "h": "Non anticipare la causa", "d": "Descrivi lo scarto; l'analisi delle cause la fa l'organizzazione. Ma chiaro e leggibile, mai arido o incomprensibile." }
+  ]
+ },
+ {
+  "id": "9001_m11_s024",
+  "layout": "cards",
+  "kicker": "Il vocabolario dell'esito",
+  "titolo": "Classificare le risultanze",
+  "intro": "Classificare con giustizia: gonfiare un dettaglio è ingiusto verso l'organizzazione, declassare un problema serio tradisce lo scopo della verifica. La stessa situazione, in due aziende, deve ricevere la stessa etichetta.",
+  "cards": [
+   { "h": "La conformità", "d": "L'evidenza soddisfa il criterio. Registrare dove il sistema funziona dà al rapporto un quadro equilibrato." },
+   { "h": "La non conformità", "d": "Lo scarto tra richiesto e trovato: alla radice e sistematico, oppure un cedimento isolato e circoscritto." },
+   { "h": "L'osservazione", "d": "Una debolezza o un rischio in formazione, non ancora una violazione. Non il rifugio per le NC scomode." },
+   { "h": "L'opportunità di miglioramento", "d": "Un suggerimento per far meglio ciò che è già conforme: si può cogliere o lasciare, non è una prescrizione." }
+  ]
+ },
+ {
+  "id": "9001_m11_s025",
+  "layout": "punti",
+  "kicker": "Consegnare i risultati",
+  "titolo": "La riunione di chiusura",
+  "intro": "Ogni verifica si chiude come si è aperta, con un incontro attorno a un tavolo. La struttura è collaudata: ringraziare, richiamare scopo e campo, presentare i risultati, spiegare cosa succederà dopo.",
+  "punti": [
+   { "h": "Nessuna sorpresa", "d": "In chiusura non emerge nulla che non sia già stato condiviso durante la verifica con le persone interessate." },
+   { "h": "Comincia dai punti di forza", "d": "Predispone all'ascolto; poi le non conformità una per una, per fatti e criteri, mai riferite alle persone." },
+   { "h": "Preparati alle reazioni", "d": "Nuove evidenze che cambiano il quadro: rivedi. Contestazione pretestuosa di un fatto verificato: fermezza gentile." },
+   { "h": "Il confine dei tuoi poteri", "d": "Non decidi il destino della certificazione, non trovi le cause né imponi le soluzioni: consegni i problemi ben descritti." }
+  ]
+ },
+ {
+  "id": "9001_m11_s026",
+  "layout": "punti",
+  "kicker": "Dare proporzione al lavoro",
+  "titolo": "La gerarchia dei rilievi",
+  "intro": "Presentare i rilievi senza ordinarli per gravità è come dare a un medico dei sintomi senza dire quali sono urgenti. Il principio che tiene insieme tutta la scala è la proporzione: la gravità nasce dai fatti, non dall'umore.",
+  "punti": [
+   { "h": "La non conformità grave", "d": "Requisito importante disatteso o problema sistematico: tocca la sostanza, chiede una risposta profonda e tempi stretti." },
+   { "h": "La non conformità lieve", "d": "Un cedimento isolato in un sistema che per il resto tiene: chiede una correzione mirata." },
+   { "h": "Isolato o sistematico", "d": "Una scheda senza firma è una svista; venti su venti sono un controllo che non esiste. Verifica subito con altri casi." },
+   { "h": "Osservazione e opportunità", "d": "Sotto le non conformità: un rischio in formazione, un suggerimento. Non obbligano, ma danno valore alla verifica." }
+  ]
+ },
+ {
+  "id": "9001_m11_s027",
+  "layout": "punti",
+  "kicker": "Il documento che resta",
+  "titolo": "Il rapporto",
+  "intro": "Quando te ne sei andato, di tutta la verifica resta una cosa sola. Molte verifiche eccellenti vengono ricordate come mediocri solo per colpa di un rapporto scritto in fretta: deve reggersi da solo.",
+  "punti": [
+   { "h": "Prendere per mano chi legge", "d": "Chi lo leggerà spesso non ha vissuto la verifica: il rapporto deve permettergli di orientarsi da solo." },
+   { "h": "La struttura stabile", "d": "Identificazione, scopo e campo, criteri, svolgimento con gli scostamenti, e il cuore: risultanze e conclusioni." },
+   { "h": "La tracciabilità", "d": "Ogni risultanza ricondotta alle sue evidenze: è qui che il campione dichiarato, raccolto sul campo, diventa oro." },
+   { "h": "La proporzione", "d": "Dà spazio a ciò che conta e sintetizza il secondario. Ha conseguenze reali: si scrive con la consapevolezza del suo peso." }
+  ]
+ },
+ {
+  "id": "9001_m11_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 11",
+  "modNum": "11",
+  "titolo": "La conduzione è diventata un mestiere",
+  "punti": [
+   { "h": "Aprire e governare il tempo", "d": "La riunione di apertura fissa le regole e i criteri; il tempo è la risorsa che non torna." },
+   { "h": "Verificare per processo", "d": "Il filo dall'ordine alla consegna, ogni tappa nei suoi ingressi e uscite, l'occhio sulle interfacce." },
+   { "h": "Campionare e dichiararlo", "d": "Un giudizio vale quanto la trasparenza sui casi che lo sostengono." },
+   { "h": "L'arte dell'intervista", "d": "Domande aperte, il potere del 'mostrami', l'ascolto vero, triangolare le fonti." },
+   { "h": "Le situazioni difficili", "d": "Resistenze, dati mancanti, processi esterni, e le pressioni che provano a deviarti." },
+   { "h": "Scrivere e classificare", "d": "L'anatomia della risultanza, il linguaggio dei fatti, la gerarchia, la chiusura, il rapporto." }
+  ],
+  "prossimo": {
+   "modulo": "12",
+   "titolo": "L'ultimo modulo: casi, simulazione, certificazione",
+   "testo": "Il metodo diventa esperienza viva: casi completi, la simulazione d'esame, il percorso verso il titolo."
+  }
+ }
+]
