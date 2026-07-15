@@ -1,0 +1,314 @@
+[
+ {
+  "id": "27001_m01_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 1",
+  "eyebrow": "Il terreno prima della norma",
+  "titolo": "Non parti da una norma isolata",
+  "testo": "Parti da un mestiere, da un contesto e da una responsabilità concreta. Un bravo auditor non memorizza punti di norma: impara a collegare rischio, contesto, persone, processi e decisioni. La norma presenta il sistema di gestione come una scelta strategica dell'organizzazione, non come un accessorio tecnico — e questo dettaglio è decisivo anche per te.",
+  "agenda": [
+   "L'informazione come asset e il suo valore nascosto",
+   "Minaccia, vulnerabilità, incidente: la catena",
+   "Il panorama esterno: privacy, Europa, settori",
+   "La famiglia 27000 e il ruolo certificabile",
+   "Lo schema professionale e il metodo di ISO 19011"
+  ]
+ },
+ {
+  "id": "27001_m01_s002",
+  "layout": "cards",
+  "kicker": "Gli obiettivi",
+  "titolo": "Che cosa devi saper vedere",
+  "intro": "Non ti basta sapere che esiste ISO 27001: devi capire a quale bisogno risponde, perché le organizzazioni la adottano e in quale ecosistema si colloca. Sei obiettivi, per ascoltare con uno scopo preciso.",
+  "cards": [
+   { "h": "L'informazione come asset", "d": "Non è importante perché è digitale o costosa: perché ha valore per qualcuno, sostiene un processo, prova un'attività o consente una decisione." },
+   { "h": "Rischio, minaccia, incidente", "d": "Parole vicine che non coincidono. Confonderle porta a valutazioni deboli e domande poco efficaci." },
+   { "h": "Non vive da sola", "d": "Si intreccia con privacy, continuità, aspettative dei clienti, obblighi contrattuali. Il tema entra in riunione per una gara da vincere, non per amore delle norme." },
+   { "h": "La famiglia 27000", "d": "Non tutte le norme della serie hanno lo stesso ruolo: vocabolario, guide, e una sola con ruolo certificabile." },
+   { "h": "Il tuo cammino", "d": "Verifiche interne, seconde parti, schemi accreditati: capire la differenza dà il giusto peso a titoli, competenze e aspettative." },
+   { "h": "Il criterio", "d": "Serve quando la realtà non si presenta in ordine. Non accumulare definizioni: capire quale tipo di esposizione stai osservando e perché è rilevante." }
+  ]
+ },
+ {
+  "id": "27001_m01_s003",
+  "layout": "timeline",
+  "kicker": "La mappa del viaggio",
+  "titolo": "Dal contesto al metodo",
+  "intro": "Oggi non salteremo da un argomento all'altro: un tragitto che parte dal valore delle informazioni e arriva al tuo metodo professionale. Ascolta la sequenza come una storia unica, non come capitoli isolati.",
+  "tappe": [
+   { "t": "1", "h": "Che cosa proteggi", "d": "Non solo dati digitali: capacità operative, decisioni, prove, relazioni, proprietà intellettuale, fiducia." },
+   { "t": "2", "h": "Le minacce", "d": "Non solo attacchi sofisticati dall'esterno: errore, distrazione, fretta, cattiva progettazione, dipendenza da fornitori, cambiamenti gestiti male." },
+   { "t": "3", "h": "Incidenti e costi reali", "d": "Non solo economici: ritardi, lavoro perso, interruzione del servizio, fiducia, reputazione. Allena a collegare evidenze e conseguenze." },
+   { "t": "4", "h": "Il panorama esterno", "d": "Privacy, spinte regolatorie europee, settori osservati con più attenzione. Non un catalogo di leggi: il perché le organizzazioni ci arrivano." },
+   { "t": "5", "h": "La famiglia 27000", "d": "Vocabolario, linee guida, supporti metodologici: capire il ruolo relativo di ciascuno evita l'errore iniziale più comune." },
+   { "t": "6", "h": "Certificazione e metodo", "d": "Lo schema professionale, il passaggio verso il lead auditor, e ciò che riuserai da ISO 19011 come bussola." }
+  ]
+ },
+ {
+  "id": "27001_m01_s004",
+  "layout": "definizione",
+  "kicker": "L'informazione come asset",
+  "eyebrow": "Le tre parole che ti accompagneranno sempre",
+  "titolo": "Valore visibile e valore nascosto",
+  "definizione": "Il sistema di gestione serve a preservare riservatezza, integrità e disponibilità delle informazioni. Se perdi anche uno solo di questi tre aspetti, l'asset può smettere di essere utile.",
+  "punti": [
+   { "h": "Riservatezza", "d": "L'informazione arriva soltanto a chi deve conoscerla. Se i disegni tecnici escono all'esterno, crolla." },
+   { "h": "Integrità", "d": "Resta corretta, completa, non alterata in modo improprio. Se qualcuno modifica una quota senza controllo, salta." },
+   { "h": "Disponibilità", "d": "È accessibile quando serve davvero. Se il sistema resta fermo durante una consegna urgente, manca." }
+  ]
+ },
+ {
+  "id": "27001_m01_s005",
+  "layout": "flusso",
+  "kicker": "La catena",
+  "titolo": "Minaccia, vulnerabilità, incidente",
+  "intro": "Se non distingui bene i passaggi, il ragionamento sul rischio resta confuso. Molte organizzazioni descrivono l'incidente partendo dall'ultimo anello: «abbiamo perso file», «è partita una e-mail sbagliata». Per comprendere devi risalire la catena.",
+  "passi": [
+   { "h": "La minaccia", "d": "Ciò che può provocare un danno a un'informazione o a chi la gestisce: intenzionale, accidentale, interna, esterna, tecnica, organizzativa o fisica. Da sola non basta a spiegare l'esposizione." },
+   { "h": "La vulnerabilità", "d": "Una debolezza sfruttabile o un punto scoperto: formazione insufficiente, procedura di cambiamento povera, abitudine poco controllata sui documenti." },
+   { "h": "L'incidente", "d": "Quando l'evento dannoso si manifesta. Ma attenzione: una minaccia evidente può non generare alcun incidente, se controlli e comportamenti reggono." }
+  ]
+ },
+ {
+  "id": "27001_m01_s006",
+  "layout": "cards",
+  "kicker": "Scenari realistici",
+  "titolo": "Come nasce un incidente che sembra improvviso",
+  "intro": "Raramente nascono dal nulla: crescono per accumulo di scelte deboli, ritardi e segnali ignorati. In tutti e tre i casi l'informazione è centrale, ma cambia il tipo di impatto — e per un auditor questo è decisivo.",
+  "cards": [
+   { "h": "L'ospedale privato", "d": "Account di emergenza condivisi, dispositivi non aggiornati per paura di fermare il servizio. Un allegato malevolo blocca le attività: saltano appuntamenti, si lavora su fogli provvisori. Prevale la continuità del servizio." },
+   { "h": "I servizi ingegneristici", "d": "Cartella esterna condivisa con partner, nessuno revoca gli accessi a fine contratto. Nessun attacco: perdita graduale di riservatezza, scoperta quando un cliente nota somiglianze sospette." },
+   { "h": "L'e-commerce professionale", "d": "Ritmo alto, campagne frequenti: in una modifica rapida un'interfaccia di amministrazione resta esposta. Rilevato tardi, perché i monitoraggi guardavano i picchi di vendita." }
+  ]
+ },
+ {
+  "id": "27001_m01_s007",
+  "layout": "punti",
+  "kicker": "I costi reali",
+  "titolo": "Denaro, tempo, fiducia e lavoro invisibile",
+  "intro": "Un danno informativo non pesa solo per ciò che rompe. Pesa anche per tutto il lavoro che devia dalle attività normali. In molti casi si lavora il doppio per tornare semplicemente al livello di prima.",
+  "punti": [
+   { "h": "La spesa immediata", "d": "Contenere, analizzare, correggere, ripartire: strumenti, consulenze, ripristino tecnico, ore extra. È solo una parte del quadro." },
+   { "h": "Il lavoro invisibile", "d": "Il personale rincorre urgenze, si riaprono pratiche, si ricostruiscono versioni, si gestiscono reclami. Il costo vero è il tempo di figure ad alta responsabilità." },
+   { "h": "La reputazione", "d": "Non è vaga: rinnovi mancati, trattative più lente, garanzie aggiuntive richieste, minore disponibilità a condividere. La fiducia persa richiede molto tempo." },
+   { "h": "La tensione organizzativa", "d": "Due reazioni opposte e ugualmente pericolose: il panico, con controlli introdotti in fretta e male; la minimizzazione, sperando che il problema venga dimenticato." }
+  ]
+ },
+ {
+  "id": "27001_m01_s008",
+  "layout": "confronto",
+  "kicker": "Il panorama esterno",
+  "titolo": "Sicurezza delle informazioni e privacy",
+  "intro": "Le due aree non coincidono, ma si toccano spesso. ISO 27001 non arriva mai in una stanza vuota: arriva in un ambiente fatto di clienti, autorità, partner, contratti, gare, filiere. Devi vedere le sovrapposizioni senza confonderle.",
+  "a": {
+   "h": "Sicurezza delle informazioni",
+   "sub": "Il quadro più largo",
+   "punti": [
+    { "d": "Protegge le informazioni in senso ampio, non solo i dati personali." },
+    { "d": "Segreti commerciali, offerte, credenziali, disegni, risultati di prova, decisioni interne." },
+    { "d": "Una bozza riservata di gara persa: danno enorme senza alcun dato personale." }
+   ]
+  },
+  "b": {
+   "h": "Privacy",
+   "sub": "Una parte importante del panorama",
+   "punti": [
+    { "d": "Guarda le informazioni che identificano una persona e il modo in cui sono trattate." },
+    { "d": "ISO 27001 può sostenerla e renderla più ordinata, ma non la sostituisce." },
+    { "d": "L'errore opposto: informative ben redatte, ma account condivisi e scarsa tracciabilità." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m01_s009",
+  "layout": "punti",
+  "kicker": "Il panorama esterno",
+  "titolo": "Direttive europee e NIS due",
+  "intro": "Il messaggio del contesto europeo: alcuni servizi e organizzazioni hanno un impatto tale da non poter trattare la protezione informativa come materia opzionale o improvvisata. Non serve il dettaglio giuridico — serve la logica di fondo.",
+  "punti": [
+   { "h": "La spinta si propaga", "d": "Lungo la catena di fornitura: l'impresa grande chiede garanzie ai fornitori, il committente internazionale inserisce requisiti nei contratti. Anche chi non è regolato ne sente l'effetto." },
+   { "h": "Non confondere i piani", "d": "Contesto più esigente non significa che ogni obbligo si traduca automaticamente in certificazione. È uno strumento possibile, non l'intero panorama degli adempimenti." },
+   { "h": "Il nesso operativo", "d": "Più il contesto chiede affidabilità, più cresce il valore di un sistema che dimostri metodo, controllo e miglioramento. Restare informali diventa più costoso." },
+   { "h": "Reazione autentica o vetrina", "d": "Alcune sviluppano maturità reale; altre cercano documenti eleganti e strumenti comprati in fretta. Qui entra il tuo occhio critico." }
+  ]
+ },
+ {
+  "id": "27001_m01_s010",
+  "layout": "punti",
+  "kicker": "Il panorama esterno",
+  "titolo": "Settori regolati e filiere sensibili",
+  "intro": "La sicurezza delle informazioni è trasversale, ma le sue priorità si colorano in modo diverso a seconda del contesto. Devi portare metodo costante e sensibilità variabile: la differenza non sta nel se proteggere, ma nel come calibrare.",
+  "punti": [
+   { "h": "Sanità", "d": "Informazioni sensibili, disponibilità dei sistemi e continuità convivono strettamente: un problema informativo incide su tempi di cura e coordinamento clinico." },
+   { "h": "Energia e trasporti", "d": "La disponibilità assume un peso enorme: l'interruzione di un flusso informativo si riverbera su servizi essenziali." },
+   { "h": "Finanza", "d": "Tracciabilità, integrità delle registrazioni, affidabilità delle operazioni, fiducia del mercato." },
+   { "h": "Ricerca e sviluppo", "d": "Riservatezza, tutela del know-how, controllo delle collaborazioni con terzi." },
+   { "h": "La filiera", "d": "Un'impresa ordinata al proprio interno diventa fragile se dipende da terzi poco governati. La sensibilità non dipende dalla fama del settore, ma dalla posizione nella rete di scambi." }
+  ]
+ },
+ {
+  "id": "27001_m01_s011",
+  "layout": "punti",
+  "kicker": "La famiglia 27000",
+  "titolo": "Una mappa, non un mucchio di sigle",
+  "intro": "Non un blocco indistinto: una famiglia di documenti collegati. Se confondi i piani, cercherai obblighi dove ci sono suggerimenti, o libertà dove ci sono richieste vere. Non ti serve memorizzare un catalogo — tieni vive tre domande.",
+  "punti": [
+   { "h": "Con che parole parlo?", "d": "Quale documento mi aiuta a essere coerente nel lessico. Una sola norma non può contenere tutto con la stessa efficacia: diventerebbe troppo pesante da usare e confusa da verificare." },
+   { "h": "Con che metro sarò valutato?", "d": "Quale documento contiene i requisiti che possono essere oggetto di valutazione di conformità e quindi di certificazione." },
+   { "h": "Con che aiuti costruisco?", "d": "Quali documenti traducono i requisiti in scelte, controlli, misure e ragionamenti concreti. Come una cassetta degli attrezzi: martello, livello e metro non si confondono." }
+  ]
+ },
+ {
+  "id": "27001_m01_s012",
+  "layout": "punti",
+  "kicker": "La famiglia 27000",
+  "titolo": "ISO IEC 27000: il vocabolario",
+  "intro": "Sembra la parte meno affascinante, invece è quella che ti salva da molti fraintendimenti. Ogni organizzazione ha il proprio lessico: una parla di procedure, un'altra di istruzioni; una chiama incidente ciò che un'altra descrive come disservizio. Il vocabolario non è un orpello: è un pezzo di controllo.",
+  "punti": [
+   { "h": "Un linguaggio più stabile", "d": "Senza riferimento ti adatti troppo al lessico locale e perdi precisione: tutti sembrano capirsi, ma ognuno parla di qualcosa di diverso. Il problema diventa gestionale." },
+   { "h": "Domande migliori", "d": "Una parola ambigua genera risposte ambigue. «Come gestite i rischi» può farsi raccontare i problemi già avvenuti; «gli incidenti» può escludere invii errati e versioni sbagliate." },
+   { "h": "Non è gergo", "d": "Se l'addetto di magazzino non dice riservatezza ma capisce che non deve lasciare visibili gli ordini, il tuo compito è collegare i due livelli — non imporre un lessico." }
+  ]
+ },
+ {
+  "id": "27001_m01_s013",
+  "layout": "punti",
+  "kicker": "La famiglia 27000",
+  "titolo": "ISO 27001 al centro",
+  "intro": "Il documento che definisce che cosa deve avere un sistema di gestione dedicato alla protezione informativa, dall'impostazione iniziale fino alla capacità di restare attivo e migliorare. Tre idee forti: requisito, adattamento al contesto, applicabilità ampia.",
+  "punti": [
+   { "h": "Il ruolo certificabile", "d": "Un requisito è qualcosa rispetto a cui puoi valutare la conformità. Non certifichi la perfezione tecnica né la scomparsa del rischio: valuti se esiste un sistema coerente." },
+   { "h": "Le guide non sostituiscono", "d": "La norma richiama ISO IEC 27003, 27004 e 27005, con la visione d'insieme di ISO IEC 27000: aiutano a comprendere, progettare, misurare, ragionare sui rischi." },
+   { "h": "L'Appendice A", "d": "Richiamata come appendice normativa dei controlli di riferimento. Non un catalogo da spuntare meccanicamente: i controlli contano dentro una logica di sistema." },
+   { "h": "L'effetto concreto", "d": "Le organizzazioni la usano per parlare col mercato in modo credibile: la protezione non dipende dalla buona volontà di qualche persona competente, ma da una struttura gestionale." }
+  ]
+ },
+ {
+  "id": "27001_m01_s014",
+  "layout": "cards",
+  "kicker": "Lo schema professionale",
+  "titolo": "Tre piani che il mercato confonde",
+  "intro": "Se non li distingui, attribuisci ai titoli un significato sbagliato e sopravvaluti documenti che, da soli, non dimostrano la stessa cosa. Collegali, ma non confonderli.",
+  "cards": [
+   { "h": "La certificazione dell'organizzazione", "d": "L'oggetto non sei tu, non è il singolo strumento, non è il reparto tecnico: è il sistema con cui definisce contesto, responsabilità, rischio, operatività, monitoraggio, miglioramento." },
+   { "h": "La qualifica del professionista", "d": "Si valuta se una persona possieda conoscenze, capacità di applicazione, metodo, comportamento e, in alcuni casi, esperienza coerente. Esistono organizzazioni certificate con professionisti poco maturi." },
+   { "h": "L'attestato del corso", "d": "Dimostra che hai seguito un percorso e forse superato una verifica didattica. Utile, spesso indispensabile come base, ma non esaurisce la questione della competenza." }
+  ]
+ },
+ {
+  "id": "27001_m01_s015",
+  "layout": "timeline",
+  "kicker": "Lo schema professionale",
+  "titolo": "Come cresce la responsabilità",
+  "intro": "Guarda i ruoli in sequenza, così eviti di pensare al lead auditor come a un'etichetta improvvisa o commerciale. Cambia il contesto, ma cresce soprattutto il livello di responsabilità nel modo in cui prepari, conduci e concludi.",
+  "tappe": [
+   { "t": "1", "h": "Le verifiche interne", "d": "Affiancando colleghi più esperti, raccolta documentale, osservazione dei processi. Fase preziosa: ti insegna come funzionano domande, evidenze, tempi e relazioni." },
+   { "t": "2", "h": "La seconda parte", "d": "Verso fornitori o partner: il contesto contrattuale pesa di più e il focus tende a essere molto operativo." },
+   { "t": "3", "h": "La terza parte", "d": "La formalità del metodo, la gestione delle evidenze e la qualità del rapporto diventano ancora più decisive." },
+   { "t": "4", "h": "Il lead auditor", "d": "Guidare con visione d'insieme: coordinare persone, tenere il filo dei criteri, gestire il tempo, portare le risultanze a conclusioni coerenti. Non è chi parla di più." }
+  ]
+ },
+ {
+  "id": "27001_m01_s016",
+  "layout": "cards",
+  "kicker": "Il profilo maturo",
+  "titolo": "Che cosa lo rende credibile",
+  "intro": "Non basta conoscere la tecnologia, e non basta saper parlare bene della norma. Un professionista credibile mette insieme competenze diverse, che devono reggere contemporaneamente.",
+  "cards": [
+   { "h": "Il sistema", "d": "Intuire come contesto, scelte di direzione, pianificazione, risorse, attività quotidiane, controllo e correzione si influenzino a vicenda." },
+   { "h": "Il rischio", "d": "Capire che cosa conta davvero per quell'organizzazione, quali dipendenze amplificano il danno, quali controlli meritano attenzione." },
+   { "h": "La relazione", "d": "Una buona intervista non è una chiacchiera amichevole, ma nemmeno un interrogatorio teatrale: aiuta le persone a descrivere fatti e responsabilità." },
+   { "h": "La sintesi", "d": "Il valore non sta nell'accumulo: capire cosa è pertinente, verificabile e rilevante. O ti perdi nei dettagli, o salti a conclusioni non sostenute." },
+   { "h": "La scrittura", "d": "Un testo vago crea discussioni inutili, uno aggressivo irrigidisce, uno confuso rende difficile il miglioramento. Non è ornamento stilistico." },
+   { "h": "La tenuta etica", "d": "Se una persona è brillante ma si lascia influenzare dal cliente, dalla fretta o dal desiderio di compiacere, il valore del giudizio cala drasticamente." }
+  ]
+ },
+ {
+  "id": "27001_m01_s017",
+  "layout": "flusso",
+  "kicker": "Lo schema professionale",
+  "titolo": "Titoli, esami, esperienza",
+  "intro": "Nel mercato c'è chi enfatizza molto la qualifica formale e chi la svaluta quasi del tutto: la posizione professionale sta nel mezzo. Pensa al percorso come a un triangolo — se manca un lato, la figura resta fragile.",
+  "passi": [
+   { "h": "La formazione strutturata", "d": "Ordina i concetti, distingue i ruoli, fa capire i requisiti, dà un lessico coerente e una logica di verifica." },
+   { "h": "L'esperienza concreta", "d": "Mostra come le organizzazioni reali complicano, sfumano o mettono alla prova ciò che hai studiato." },
+   { "h": "La riflessione continua", "d": "Per non ripetere gesti meccanici, correggere abitudini deboli, riconoscere i tuoi bias. Se il contesto cambia e tu no, il titolo resta uguale ma il valore diminuisce." }
+  ]
+ },
+ {
+  "id": "27001_m01_s018",
+  "layout": "punti",
+  "kicker": "Il metodo",
+  "titolo": "ISO 19011: la bussola riusabile",
+  "intro": "Non è la norma dei requisiti e non prende il posto di ISO 27001. Ma offre principi, logiche di conduzione, attenzione alla competenza e impostazione del lavoro che puoi riusare con grande vantaggio. Molte regole del buon mestiere non cambiano quando cambi tema.",
+  "punti": [
+   { "h": "L'impalcatura che resta", "d": "Integrità, imparzialità, evidenze, riferire in modo fedele, prudenza professionale, pianificazione, campionamento, confronto con criteri chiari, conclusioni sostenibili." },
+   { "h": "Chi arriva dalla qualità", "d": "Se pensa di dover buttare via tutto ciò che sa sul metodo, parte male. Può trasferire conduzione, preparazione, intervista, osservazione e reporting." },
+   { "h": "Il metodo va colorato", "d": "Riusarlo non significa trattare ISO 27001 come qualunque altro sistema: ha il suo lessico, le sue esposizioni tipiche, il rapporto con accessi, disponibilità, terze parti." },
+   { "h": "Le due trappole", "d": "Appoggiarsi solo al contenuto tecnico e perdere metodo; oppure appoggiarsi solo al metodo e non vedere più la sostanza informativa." }
+  ]
+ },
+ {
+  "id": "27001_m01_s019",
+  "layout": "flusso",
+  "kicker": "Il metodo",
+  "titolo": "Trasformare concetti in domande utili",
+  "intro": "Non ti allenerai a ripetere formule, ma a costruire domande: passare dal concetto astratto al fatto osservabile. Un ritmo costante, disciplina mentale prima ancora che documentale.",
+  "passi": [
+   { "h": "Contestualizza", "d": "Prima di giudicare, capisci dove sei: quali informazioni hanno valore, quali processi dipendono da esse, chi esercita pressione, quali cambiamenti recenti hanno alterato gli equilibri." },
+   { "h": "Traduci in domande", "d": "Se dichiara di gestire il rischio, cerchi tracce di metodo e criteri. Se dichiara di proteggere gli accessi, chiedi come sono attribuiti, rivisti, revocati, e cosa accade con i fornitori." },
+   { "h": "Cerca la coerenza", "d": "La direzione parla bene, il responsabile mostra una procedura elegante, l'operatore descrive una prassi diversa: collega i piani e capisci se il sistema regge." },
+   { "h": "Sintetizza", "d": "Non ogni disallineamento ha lo stesso significato, non ogni buon documento prova buona attuazione. È l'antidoto alla verifica spettacolare e povera di giudizio." },
+   { "h": "Controlla te stesso", "d": "Nota quando cerchi conferme alla prima impressione, quando una risposta elegante ti seduce, quando la pressione del tempo ti fa chiudere in fretta." }
+  ]
+ },
+ {
+  "id": "27001_m01_s020",
+  "layout": "punti",
+  "kicker": "Il metodo",
+  "titolo": "Le trappole del mestiere",
+  "intro": "Non rituali esteriori, ma piccoli gesti mentali che fanno una grande differenza. Sono il ponte tra studio e pratica: senza di essi, anche buoni concetti restano astratti.",
+  "punti": [
+   { "h": "Contesto prima della checklist", "d": "Se parti con domande standard, perdi ciò che rende critica quell'organizzazione. Non rallenta la verifica: la rende più intelligente." },
+   { "h": "Dichiarato ≠ dimostrato", "d": "Non sempre per malafede: a volte confondono una regola scritta con una pratica diffusa. Una procedura esiste — come viene applicata, chi la conosce, che tracce lascia." },
+   { "h": "Note con criterio", "d": "Non trascrivere tutto: registra ciò che collega affermazioni, criteri, evidenze e possibili risultanze. Una nota utile è una traccia ragionata, non una stenografia." },
+   { "h": "Ipotesi con prudenza", "d": "Il rischio nasce quando trasformi troppo presto l'intuizione in convinzione: da lì cerchi solo conferme. Prova a verificarla anche contro spiegazioni alternative." },
+   { "h": "Non innamorarti dello strumento", "d": "Il portale delle identità con la demo perfetta, ma le utenze tecniche di terze parti fuori dal processo ordinario. Chiedi dove il sistema esce dai suoi stessi binari." },
+   { "h": "Sapere quando chiudere", "d": "Alcuni scavano per insicurezza, altri chiudono troppo presto. Ho elementi pertinenti, verificabili e sufficienti per sostenere ciò che sto per dire?" }
+  ]
+ },
+ {
+  "id": "27001_m01_s021",
+  "layout": "punti",
+  "kicker": "Allenarti bene",
+  "titolo": "Dal corso alla competenza spendibile",
+  "intro": "Non ascoltare come se dovessi soltanto ricordare parole chiave: chiediti continuamente che cosa osserveresti in un'organizzazione vera. Chi studia in modo mnemonico riconosce i termini, ma si blocca davanti a una situazione reale.",
+  "punti": [
+   { "h": "Trasforma il concetto in scena", "d": "Se senti «contesto», immagina quali informazioni contano in una clinica, in una software house, in uno studio. Se senti «rischio», chiediti quale minaccia incontrerebbe una vulnerabilità reale." },
+   { "h": "Concetto stabile, esempio mobile", "d": "La riservatezza vale in un ospedale, in una fabbrica e in una banca, ma cambia l'informazione da proteggere. Così leggi organizzazioni diverse senza perdere il metro." },
+   { "h": "Il tuo bias di provenienza", "d": "Da ruoli tecnici, vedrai tutto come problema di tecnologia; da ruoli di compliance, darai troppo peso ai documenti ben scritti. Il corso ti chiede equilibrio." },
+   { "h": "Il checkpoint è uno specchio", "d": "Non un ostacolo amministrativo. Se una risposta ti sembra incerta, non memorizzarla: torna al ragionamento che la sostiene. È lì che cresce la competenza." }
+  ]
+ },
+ {
+  "id": "27001_m01_s022",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 1",
+  "modNum": "01",
+  "titolo": "Che cosa porti via",
+  "punti": [
+   { "h": "Non è solo informatica", "d": "È una scelta che tocca processi, decisioni, continuità e fiducia. L'informazione è asset perché sostiene attività, prova fatti, guida decisioni." },
+   { "h": "La catena", "d": "Una minaccia incontra una vulnerabilità, può produrre un evento dannoso; quando il danno diventa reale parliamo di incidente. Uno dei cardini del tuo sguardo." },
+   { "h": "I costi", "d": "Non solo denaro speso in emergenza: tempo, deviazione del lavoro, tensione, rallentamento commerciale, fiducia erosa. Non è un lusso per aziende grandi." },
+   { "h": "Il panorama", "d": "La privacy si intreccia ma non esaurisce; il contesto europeo e NIS due rendono evidente il valore di modelli ordinati; filiere e fornitori allargano i confini." },
+   { "h": "La famiglia e i tre piani", "d": "Vocabolario, guide, requisiti certificabili. E: certificazione dell'organizzazione, percorso del professionista, formazione — necessaria ma non sufficiente." },
+   { "h": "Il metodo", "d": "ISO 19011 come base riusabile; e il gesto continuo: partire dal contesto, tradurre in domande, cercare elementi verificabili, confrontarli coi criteri, sintetizzare." }
+  ],
+  "prossimo": {
+   "modulo": "02",
+   "titolo": "La norma 27001: struttura, concetti, termini",
+   "testo": "Dal terreno alla struttura: un sistema di gestione, non un catalogo di misure."
+  }
+ }
+]
