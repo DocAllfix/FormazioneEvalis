@@ -108,6 +108,61 @@ essere coerente e fedele a ciò che il relatore narra in quella slide". Fan-out 
 Al rientro: gates automatici (FASE 5c) — completezza ID, anti-overflow via screenshot,
 coerenza termini col copione, contact sheet per corso.
 
+## PROMPT T2 v2 — "Blu petrolio" PARTENDO DAL TEMPLATE ATTUALE (2026-07-15)
+
+> Da incollare a claude design **allegando il template Ambra attuale** come riferimento
+> (il file `Evalis Academy - Template Slide (standalone).html`). Obiettivo: un SECONDO template
+> gemello nella struttura, diverso solo nella palette, per alternarlo con l'attuale corso per corso.
+> Le slide vere le genero io in-repo con questa stessa palette; questo template serve come
+> riferimento visivo approvato dal cliente.
+
+Ti allego un template di slide già approvato per dei corsi video di formazione e certificazione
+auditor ISO (palette calda "ambra": crema + arancione). Ne voglio una **seconda versione gemella**,
+identica in tutto tranne la palette dei colori, così da poter alternare i due stili corso per corso.
+
+**Cosa NON deve cambiare (copia esattamente dal template allegato):**
+- La struttura e la griglia di ogni tipo di slide, le proporzioni, gli spazi, gli allineamenti.
+- La tipografia: font, pesi, dimensioni, interlinea, spaziatura lettere (IBM Plex Sans, IBM Plex
+  Mono, Space Grotesk; titoli in Space Grotesk 600/700, etichette in IBM Plex Mono maiuscolo con
+  tracking largo, corpo in IBM Plex Sans).
+- Tutti i tipi di slide presenti nel template (apertura corso, chiusura corso, apertura/chiusura
+  modulo, contenuto a punti, cards, definizione su fondo scuro, tabella, schema/flusso, confronto
+  a due colonne, evidenza/manifesto, numeri, split, timeline, schermate quiz/esame).
+- I vincoli tecnici: ogni slide è un `<section>` largo 1280px e alto almeno 720px (`min-height:720px`,
+  MAI `overflow:hidden`), CSS inline o in `<style>` interno, sfondo della section dichiarato inline
+  come colore esadecimale (es. `background:#EEF2F5`), nessuna immagine esterna (solo HTML/CSS/SVG
+  inline), nessuna animazione CSS, nessuna colonna/segnaposto per il relatore (il contenuto occupa
+  tutti i 1280px; la bolla del video la aggiunge il player fuori dalla slide).
+
+**Cosa deve cambiare — SOLO la palette, "Blu petrolio" (fredda, istituzionale). Usa esattamente
+questi colori nei rispettivi ruoli** (sostituendo 1:1 i colori caldi del template allegato):
+
+| Ruolo nel template attuale (ambra) | Nuovo colore (blu petrolio) |
+|---|---|
+| Sfondo chiaro delle slide (crema `#F8F4EC`) | **`#EEF2F5`** (ghiaccio grigio-azzurro) |
+| Sfondo scuro delle slide (testudine `#231A12`) | **`#15293C`** (navy notte) |
+| Titoli su fondo chiaro (`#241C13`) | **`#142A3E`** |
+| Titoli su fondo scuro (`#F4EDE1`) | **`#EAF1F5`** |
+| Testo corrente su chiaro (`#3B3226`) | **`#33475B`** |
+| **Accento principale** su fondo CHIARO (arancione `#EA580C`: numerini, etichette, filetti, frecce, "evalis") | **`#0E7490`** (petrolio) |
+| **Accento principale** su fondo SCURO (stesso ruolo, ma più luminoso per restare leggibile sul navy) | **`#34D3C0`** (petrolio chiaro) |
+| Colore secondario/oro (`#C7A06A`) | **`#8FB0C4`** (acciaio) |
+| Testo secondario/tenue (`#7A6C58`) | **`#6B7E90`** |
+| Riferimenti tenui / taupe (`#8A7B66`, `#A0917B`) | **`#8496A6`** |
+| Sfondo delle card (`#FFFDF9`) | **`#FFFFFF`** |
+| Bordi e filetti su chiaro (`#E6DCCB`) | **`#DCE4EA`** |
+| Testo tenue su scuro (`#A0917B`) | **`#8FA3B4`** |
+| Filetti su scuro (`rgba(230,220,203,.18)`) | **`rgba(220,232,240,.16)`** |
+
+Regola di leggibilità: l'accento petrolio ha DUE tinte perché nessun singolo teal è leggibile sia
+su chiaro sia su navy — usa `#0E7490` ovunque l'accento sta su fondo chiaro e `#34D3C0` ovunque sta
+sul navy scuro. Il logo Evalis Academy resta com'è, integrato con discrezione come nel template.
+
+Consegnami il template completo (un esempio per ogni tipo di slide) in un unico file HTML standalone,
+nello stesso formato del template che ti ho allegato.
+
+---
+
 ## Geometria player (fatti verificati, per i gate — NON vanno nel prompt)
 
 - Canvas iframe: 1660px totali = gutter avatar 380px (sinistra) + slide 1280px
