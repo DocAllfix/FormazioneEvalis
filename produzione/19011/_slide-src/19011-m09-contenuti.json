@@ -1,0 +1,263 @@
+[
+  {
+    "id": "19011_m09_s001",
+    "layout": "apertura",
+    "corsoLabel": "ISO 19011 · Linee guida per gli audit",
+    "kicker": "Modulo 09",
+    "eyebrow": "Guida pratica per gli auditor",
+    "titolo": "La cassetta degli attrezzi",
+    "testo": "L'appendice informativa della norma: non aggiunge obblighi, offre saggezza operativa. È qui che si vede la differenza tra chi ha letto la norma e chi la sa usare. Non cercare requisiti da memorizzare: cerca situazioni che riconoscerai sul campo.",
+    "agenda": [
+      "I metodi di audit e l'audit di processi",
+      "Giudizio professionale e risultati di prestazione",
+      "Verifica delle informazioni e campionamento",
+      "Il poker: compliance, contesto, leadership, rischi",
+      "Ciclo di vita e catena di fornitura",
+      "Documenti, fonti e visita del sito",
+      "Metodi a distanza, intervista e risultanze"
+    ]
+  },
+  {
+    "id": "19011_m09_s002",
+    "layout": "tabella",
+    "kicker": "Applicare i metodi di audit",
+    "titolo": "La matrice delle possibilità",
+    "cols": ["Metodo", "Con interazione umana", "Senza interazione umana"],
+    "righe": [
+      ["In campo (sul sito)", "Interviste faccia a faccia, osservazione del lavoro, liste compilate col personale, campionamento", "Osservazione, riesame di registrazioni, analisi di dati, liste e campionamento — senza coinvolgere le persone"],
+      ["A distanza (fuori dal sito)", "Interviste in videochiamata, osservazione del lavoro con guida remota via telecamera", "Riesame documentale remoto, analisi di dati, osservazione via sorveglianza — con vincoli su diritti e privacy"]
+    ]
+  },
+  {
+    "id": "19011_m09_s003",
+    "layout": "evidenza",
+    "kicker": "L'audit di processi",
+    "eyebrow": "Il sistema come organismo vivo",
+    "titolo": "Verifichi i processi e le loro connessioni, non le funzioni",
+    "testo": "Un'organizzazione non è una collezione di reparti indipendenti: l'uscita di un processo diventa l'ingresso di un altro, e un difetto in un punto si propaga lungo la catena. Segui il filo reale — dalla specifica del cliente alla spedizione — e a ogni passaggio chiedi se l'informazione arriva completa, se chi la riceve la capisce, cosa succede quando qualcosa cambia in corsa."
+  },
+  {
+    "id": "19011_m09_s004",
+    "layout": "split",
+    "kicker": "Giudizio professionale",
+    "titolo": "Oltre la lettera del requisito",
+    "lead": "La domanda matura non è «la procedura contiene le parole giuste», ma «lo scopo del requisito si sta realizzando in questa organizzazione».",
+    "punti": [
+      { "h": "Dove non basta il confronto", "d": "Contesto, leadership, pensiero basato sul rischio non si spuntano riga per riga." },
+      { "h": "Giudizio non è opinione", "d": "Resta ancorato alle evidenze: il giudizio senza fatti è pregiudizio." },
+      { "h": "Una responsabilità in più", "d": "Devi argomentare l'intento con fatti e ragionamento, non nasconderti dietro la lista." }
+    ]
+  },
+  {
+    "id": "19011_m09_s005",
+    "layout": "evidenza",
+    "dark": false,
+    "kicker": "Risultati di prestazione",
+    "eyebrow": "Ciò che conta è l'esito",
+    "titolo": "La mancanza di un documento non è automaticamente un problema: dipende dal rischio e dalla complessità",
+    "testo": "Lo sguardo resta fisso sull'esito che il sistema deve produrre: clienti soddisfatti, impatti ridotti, persone che tornano a casa intere. Prestazioni in peggioramento sotto un sistema impeccabile sono il filo da tirare; prestazioni eccellenti con documentazione spartana meritano rispetto, non sospetto."
+  },
+  {
+    "id": "19011_m09_s006",
+    "layout": "cards",
+    "kicker": "Verifica delle informazioni",
+    "titolo": "Le quattro qualità dell'evidenza",
+    "cards": [
+      { "h": "Completa", "d": "Tutti i contenuti attesi sono presenti: nessun campo vuoto, nessuna firma mancante." },
+      { "h": "Corretta", "d": "Conforme ad altre fonti affidabili, come norme e regolamenti aggiornati." },
+      { "h": "Coerente", "d": "In accordo con sé stessa e con i documenti correlati." },
+      { "h": "Attuale", "d": "Aggiornata a oggi, non un reperto vero due anni fa." }
+    ]
+  },
+  {
+    "id": "19011_m09_s007",
+    "layout": "punti",
+    "kicker": "Campionamento",
+    "titolo": "Scegliere poco per giudicare tutto",
+    "intro": "Guardi una parte e concludi sul tutto: è il cuore del campionamento. Il rischio che il campione non sia rappresentativo non si elimina mai — si conosce, si gestisce, si dichiara. La guida raccomanda sei fasi.",
+    "punti": [
+      { "h": "Stabilire gli obiettivi", "d": "Cosa vuoi scoprire con il campione." },
+      { "h": "Definire la popolazione", "d": "Da quale insieme peschi, con quali confini temporali e organizzativi." },
+      { "h": "Scegliere il metodo", "d": "Basato sul giudizio oppure statistico." },
+      { "h": "Determinare la numerosità", "d": "Quanti elementi servono per una fiducia ragionevole." },
+      { "h": "Condurre il campionamento", "d": "La selezione materiale degli elementi." },
+      { "h": "Compilare e documentare", "d": "Valutare, riportare e documentare i risultati e il loro livello di fiducia." }
+    ]
+  },
+  {
+    "id": "19011_m09_s008",
+    "layout": "confronto",
+    "kicker": "Le due strade del campione",
+    "titolo": "Basato sul giudizio o statistico",
+    "intro": "Due filosofie per selezionare gli elementi, con forze e debolezze speculari.",
+    "a": {
+      "h": "Basato sul giudizio",
+      "sub": "Competenza ed esperienza",
+      "punti": [
+        { "d": "Vai dove il rischio è più alto e il cambiamento è più recente." },
+        { "d": "Giustificato da esperienza, complessità, cambiamenti e rischi noti." },
+        { "d": "Svantaggio: non quantifica l'incertezza che ti sfugge." }
+      ]
+    },
+    "b": {
+      "h": "Statistico",
+      "sub": "Teoria della probabilità",
+      "punti": [
+        { "d": "Ogni elemento ha una probabilità nota di essere estratto." },
+        { "d": "Per attributi (passa / non passa) o per variabili (intervallo continuo)." },
+        { "d": "Quantifica l'incertezza: un rischio del 5% = un livello di fiducia del 95%." }
+      ]
+    }
+  },
+  {
+    "id": "19011_m09_s009",
+    "layout": "cards",
+    "kicker": "Audit di compliance",
+    "titolo": "Quando i criteri sono la legge",
+    "intro": "Non un ispettorato che controlla ogni adempimento: verifichi che l'organizzazione abbia processi efficaci per governare la propria conformità. La responsabilità di essere in regola resta sua.",
+    "cards": [
+      { "h": "Identificare i requisiti", "d": "La mappa degli obblighi legali e regolamentari che l'organizzazione si impegna a soddisfare." },
+      { "h": "Gestire per conseguirli", "d": "Tradurre gli obblighi in prassi operative su attività, prodotti e servizi." },
+      { "h": "Valutare il proprio stato", "d": "Verificare periodicamente di essere conformi, non solo dichiararlo." }
+    ]
+  },
+  {
+    "id": "19011_m09_s010",
+    "layout": "punti",
+    "kicker": "Audit del contesto",
+    "titolo": "Verificare la comprensione del mondo",
+    "intro": "Nessun metodo imposto: non verifichi la forma dell'analisi ma la sua vitalità. La domanda regina resta «dove hanno portato questi risultati?». Cinque fronti su cui raccogliere evidenze.",
+    "punti": [
+      { "h": "Il processo o metodo usato", "d": "Qualunque tecnica di analisi strategica, purché adeguata allo scopo." },
+      { "h": "Le persone che contribuiscono", "d": "La loro adeguatezza e competenza a leggere il mercato." },
+      { "h": "I risultati del processo", "d": "Cosa è concretamente emerso dall'analisi." },
+      { "h": "Dove i risultati sono applicati", "d": "Il fronte più rivelatore: hanno orientato campo di applicazione e sistema?" },
+      { "h": "Il riesame periodico", "d": "Perché il mondo non sta fermo e un'analisi vecchia descrive un'azienda che non esiste più." }
+    ]
+  },
+  {
+    "id": "19011_m09_s011",
+    "layout": "punti",
+    "kicker": "Audit della leadership",
+    "titolo": "L'alta direzione sotto la lente",
+    "intro": "L'obbligo di rendere conto dell'efficacia non è delegabile. L'impegno si verifica nei fatti, non nelle dichiarazioni.",
+    "punti": [
+      { "h": "Riesame dei processi pertinenti", "d": "Politiche, obiettivi, risorse, comunicazioni della direzione, riesami di direzione." },
+      { "h": "Parlare con il personale", "d": "Il termometro più onesto di quanto la direzione sia coinvolta davvero." },
+      { "h": "Colloquio con l'alta direzione", "d": "Che sappia di dover rispondere in prima persona e comprenda disciplina e contesto." },
+      { "h": "Anche i livelli intermedi", "d": "Dove l'impegno dichiarato in alto diventa comportamento quotidiano, o si dissolve." }
+    ]
+  },
+  {
+    "id": "19011_m09_s012",
+    "layout": "split",
+    "kicker": "Audit di rischi e opportunità",
+    "titolo": "Un filo che attraversa tutto",
+    "lead": "Non un'attività separata col suo blocchetto di domande: il pensiero basato sul rischio si intercetta in ogni conversazione, comprese quelle con l'alta direzione.",
+    "punti": [
+      { "h": "Credibilità del processo", "d": "Assicurazione su come rischi e opportunità vengono identificati." },
+      { "h": "Determinazione e gestione corrette", "d": "Assicurazione che siano determinati e gestiti nel modo giusto." },
+      { "h": "Rassegna delle azioni", "d": "Passare in rassegna il trattamento concreto dei rischi e delle opportunità individuati." }
+    ]
+  },
+  {
+    "id": "19011_m09_s013",
+    "layout": "timeline",
+    "kicker": "Prospettiva del ciclo di vita",
+    "titolo": "Dalla culla alla dismissione",
+    "intro": "Prospettiva non significa imporre uno studio analitico completo: significa considerare quanto controllo e quanta influenza l'organizzazione esercita su ogni fase.",
+    "tappe": [
+      { "t": "01", "h": "Acquisizione", "d": "Risorse e materie prime in ingresso." },
+      { "t": "02", "h": "Progettazione", "d": "Le scelte che determinano gli impatti futuri." },
+      { "t": "03", "h": "Produzione", "d": "La fase a controllo diretto dell'organizzazione." },
+      { "t": "04", "h": "Distribuzione", "d": "Trasporto e logistica verso il cliente." },
+      { "t": "05", "h": "Utilizzo", "d": "La vita utile del prodotto o del servizio." },
+      { "t": "06", "h": "Fine vita", "d": "Trattamento: recupero, riciclo, riuso." },
+      { "t": "07", "h": "Dismissione", "d": "Smaltimento finale." }
+    ]
+  },
+  {
+    "id": "19011_m09_s014",
+    "layout": "punti",
+    "kicker": "Catena di fornitura",
+    "titolo": "Le verifiche di seconda parte",
+    "intro": "L'interesse in gioco è quello del cliente verso il fornitore; criteri e campo di applicazione si adattano alla natura di ogni anello. Ecco perché si conducono.",
+    "punti": [
+      { "h": "Verifica pre-contrattuale", "d": "Capire natura ed estensione dei rischi prima di firmare la fornitura." },
+      { "h": "Rispetto dei patti", "d": "Garantire che i processi siano gestiti come concordato." },
+      { "h": "Sorveglianza continua", "d": "Un fornitore eccellente alla qualifica può degradare in silenzio." },
+      { "h": "Migliorare le prestazioni", "d": "La verifica come strumento di crescita comune, non solo di controllo." },
+      { "h": "Etica e qualità", "d": "Determinare che ciò che compri nasca da una produzione etica e al livello desiderato." }
+    ]
+  },
+  {
+    "id": "19011_m09_s015",
+    "layout": "split",
+    "kicker": "Documenti di lavoro e fonti",
+    "titolo": "Gli strumenti che porti con te",
+    "lead": "Le fonti sono una tavolozza: interviste, osservazioni, informazioni documentate, registrazioni, dati e indicatori, banche dati e siti — combinate per triangolare. I documenti di lavoro, invece, si progettano dallo scopo, con quattro domande.",
+    "punti": [
+      { "h": "Quale registrazione produrrà?", "d": "Se non genera nulla di utile, è zavorra." },
+      { "h": "A quale attività è collegato?", "d": "Ogni strumento deve agganciarsi a un'attività del piano." },
+      { "h": "Chi ne sarà l'utilizzatore?", "d": "Va pensato per chi lo userà sul campo." },
+      { "h": "Quali informazioni servono?", "d": "Cosa occorre per prepararlo davvero." }
+    ]
+  },
+  {
+    "id": "19011_m09_s016",
+    "layout": "punti",
+    "kicker": "La visita del sito",
+    "titolo": "Rispetto, sicurezza e buone maniere",
+    "intro": "Due obiettivi prima delle evidenze: contenere le interferenze coi processi operativi di chi ospita e proteggere la salute e la sicurezza del gruppo. La professionalità si vede dal comportamento.",
+    "punti": [
+      { "h": "Autorizzazione e accessi", "d": "Concordati in anticipo, coerenti col campo di applicazione." },
+      { "h": "Salute, sicurezza e DPI", "d": "Indicazioni ricevute prima; dispositivi di protezione forniti dove servono." },
+      { "h": "Regole su foto e dispositivi", "d": "Chiarite in anticipo, nel rispetto di riservatezza e sicurezza." },
+      { "h": "Evitare disturbo ai processi", "d": "Sei un ospite, non un ispettore di scena." },
+      { "h": "Non toccare senza permesso", "d": "Nessuna apparecchiatura si manovra, nemmeno se sei competente." },
+      { "h": "Niente dati personali negli appunti", "d": "Salvo che obiettivi o criteri della verifica li richiedano." }
+    ]
+  },
+  {
+    "id": "19011_m09_s017",
+    "layout": "cards",
+    "kicker": "Metodi a distanza",
+    "titolo": "La verifica attraverso lo schermo",
+    "intro": "Efficacia della verifica e raggiungimento degli obiettivi sono responsabilità congiunta dell'organizzazione e di chi la conduce. Servono risorse appropriate.",
+    "cards": [
+      { "h": "Protocolli di accesso remoto", "d": "Dispositivi e software concordati prima, non improvvisati all'ultimo momento." },
+      { "h": "Verifiche tecniche preventive", "d": "Una prova di collegamento il giorno prima salva una mattinata." },
+      { "h": "Piani di emergenza", "d": "Cosa fare se l'accesso cade, con tecnologie alternative ed eventuale tempo extra." }
+    ]
+  },
+  {
+    "id": "19011_m09_s018",
+    "layout": "split",
+    "kicker": "Intervista e risultanze",
+    "titolo": "L'arte dell'intervista",
+    "lead": "Poi, dalle informazioni alle risultanze: per le conformità criteri ed evidenze; per le non conformità serve in più la spiegazione del perché i criteri risultano disattesi.",
+    "punti": [
+      { "h": "Le persone giuste", "d": "Per ruolo e funzione, dentro il campo di applicazione." },
+      { "h": "Nel loro orario e posto di lavoro", "d": "Dove mostrano le cose invece di raccontarle." },
+      { "h": "Metterle a proprio agio", "d": "Chi ha paura non racconta, e chi non racconta non serve." },
+      { "h": "Iniziare da «descriva il suo lavoro»", "d": "La domanda più disarmante e produttiva che esista." },
+      { "h": "Scegliere il tipo di domanda", "d": "Aperte per esplorare, chiuse per confermare, attenzione a quelle che orientano." },
+      { "h": "Riassumere, riesaminare e ringraziare", "d": "Il grazie è il seme della prossima verifica." }
+    ]
+  },
+  {
+    "id": "19011_m09_s019",
+    "layout": "chiusura",
+    "kicker": "Fine del corso · Riepilogo",
+    "modNum": "09",
+    "titolo": "Nove moduli in uno sguardo",
+    "punti": [
+      { "h": "Metodi e audit di processi", "d": "Campo o distanza, con o senza interazione; si verificano i processi e le connessioni." },
+      { "h": "Giudizio e risultati", "d": "L'intento del requisito e l'esito del sistema, oltre la carta." },
+      { "h": "Informazioni e campionamento", "d": "Le quattro qualità dell'evidenza; scelta sul giudizio o statistica." },
+      { "h": "Temi speciali", "d": "Compliance, contesto, leadership, rischi e opportunità." },
+      { "h": "Ciclo di vita e fornitura", "d": "La verifica che guarda oltre i cancelli dell'organizzazione." },
+      { "h": "Verso l'esame finale", "d": "Ripassa per intenti non per formule, appoggiati agli esempi, applica la catena criteri–evidenze–conclusione." }
+    ]
+  }
+]
