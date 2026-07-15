@@ -1,0 +1,410 @@
+[
+ {
+  "id": "27001_m05_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 5",
+  "eyebrow": "Supporto e attività operative",
+  "titolo": "Ciò che fa funzionare il sistema ogni giorno",
+  "testo": "Due domande concrete: con quali mezzi il sistema resta vivo, e come si controlla che le attività avvengano come previsto. Questi temi sembrano di supporto, ma decidono la credibilità dell'intero impianto. La domanda da tenere sempre attiva: ciò che vedi è adeguato per quel contesto specifico, oppure è solo una copia rassicurante di modelli altrui?",
+  "agenda": [
+   "Risorse e competenza: ciò che rende possibile il sistema",
+   "Consapevolezza e fattore umano",
+   "Comunicazione: cosa, quando, a chi, come",
+   "Informazioni documentate senza teatro",
+   "Controllo operativo, esternalizzati e cloud"
+  ]
+ },
+ {
+  "id": "27001_m05_s002",
+  "layout": "punti",
+  "kicker": "Le risorse",
+  "titolo": "Ciò che rende credibile il sistema",
+  "intro": "L'organizzazione deve capire di che cosa ha bisogno e metterlo a disposizione. Risorse è più ampio di quanto sembri: non solo budget e teste, ma tempo, competenze, strumenti, accessi, supporto dei responsabili, capacità decisionale, priorità. Adeguatezza non significa abbondanza: significa proporzione.",
+  "punti": [
+   { "h": "Il piano umano", "d": "Quante persone incidono sul sistema e con quale disponibilità effettiva. Un referente senza tempo, senza autorità e coinvolto a decisioni prese esiste formalmente, non sostanzialmente." },
+   { "h": "Il piano organizzativo", "d": "Chi decide, chi approva, chi interviene quando le priorità sono in conflitto. Se il presidio non ha accesso alle decisioni sui fornitori, il sistema potrebbe non reggere il proprio perimetro." },
+   { "h": "Il piano tecnico", "d": "Strumenti, ambienti, accessi, repository, canali di coordinamento. La piattaforma documentale c'è, ma nessuno ha il tempo di governarne versioni e permessi." },
+   { "h": "Il piano temporale", "d": "«Ci penseremo appena cala il carico», «la gestiamo nei ritagli». Un sistema di gestione vive di continuità, non di eroismi episodici — e le risorse riducono la dipendenza dai singoli." }
+  ]
+ },
+ {
+  "id": "27001_m05_s003",
+  "layout": "punti",
+  "kicker": "La competenza",
+  "titolo": "Le figure che influenzano davvero il sistema",
+  "intro": "Dietro ogni procedura ben scritta c'è una persona che la applica, la interpreta o la aggira. La competenza riguarda tutte le attività che possono influenzare i risultati — non solo i ruoli specialistici della sicurezza.",
+  "punti": [
+   { "h": "Chi conta davvero", "d": "Non solo dipendenti diretti né ruoli dal nome rassicurante: l'addetto al service desk che abilita accessi, il PM che sceglie un fornitore, chi gestisce l'onboarding." },
+   { "h": "Non è il titolo", "d": "La competenza si lega a basi appropriate — istruzione, formazione o esperienza. L'organizzazione deve poter sostenere con elementi plausibili che la persona è in grado di fare ciò che le si chiede." },
+   { "h": "Le combinazioni sono varie", "d": "Il senior fortissimo sugli ambienti tradizionali e impreparato sul cloud; il neoassunto con ottime basi teoriche che non conosce processi e vincoli. Mappare ruoli, attività e rischi, non distribuire etichette." },
+   { "h": "Anche i confini", "d": "Una persona competente sa eseguire, ma sa anche quando fermarsi e chiedere supporto. Le situazioni più rischiose nascono da persone in buona fede che hanno agito oltre il proprio perimetro." }
+  ]
+ },
+ {
+  "id": "27001_m05_s004",
+  "layout": "punti",
+  "kicker": "La competenza",
+  "titolo": "Colmare i gap e dimostrarlo",
+  "intro": "Capire un fabbisogno non basta. Spesso le aziende si fermano alla formazione erogata, come se l'aula coincidesse col risultato: la norma spinge a ragionare per esito. Se l'azione non cambia la capacità di operare, il problema resta aperto.",
+  "punti": [
+   { "h": "Le strade possibili", "d": "Formazione mirata, affiancamento, riallocazione, assunzione, specialisti esterni. Nessuna è sempre la migliore: carenza occasionale su un tema specialistico ≠ fabbisogno strutturale e quotidiano." },
+   { "h": "Azioni coerenti col ruolo", "d": "Sul processo incidenti: esercitazioni su casi reali per il service desk, sessioni su scenari e soglie per i responsabili, affiancamento per chi coordina. Non un corso di due ore per tutti." },
+   { "h": "Verificare l'efficacia", "d": "Osservare se alla prova successiva tempi, scelte e passaggi migliorano davvero. Non basta aver mosso qualcosa: devi poter sostenere che la competenza è cresciuta in modo percepibile." },
+   { "h": "L'evidenza", "d": "Non solo attestati: curriculum, registri, esiti di affiancamento, valutazioni, prove pratiche, assegnazioni motivate. Un corso generico di anni fa per attività sensibili è evidenza debole." }
+  ]
+ },
+ {
+  "id": "27001_m05_s005",
+  "layout": "flusso",
+  "kicker": "La consapevolezza",
+  "titolo": "Sapere non basta",
+  "intro": "Distinta dalla competenza, ma strettamente collegata: la competenza riguarda il saper svolgere; la consapevolezza il capire perché conta e quali effetti produce una deviazione. Non si sostituiscono, si rinforzano. Tre piani da separare.",
+  "passi": [
+   { "h": "La politica", "d": "L'orientamento generale. Senza, il sistema appare come una raccolta di obblighi isolati: divieti e passaggi da eseguire, senza senso complessivo." },
+   { "h": "Il contributo personale", "d": "Non basta aver sentito che la sicurezza è importante: capire dove il proprio comportamento rafforza il sistema e dove lo indebolisce." },
+   { "h": "Le conseguenze", "d": "Se una deviazione sembra una piccola furbizia innocua, si ripete. Se la persona vede l'effetto su dati, continuità, clienti e fiducia, la regola smette di sembrare arbitraria." }
+  ]
+ },
+ {
+  "id": "27001_m05_s006",
+  "layout": "punti",
+  "kicker": "Il fattore umano",
+  "titolo": "Perché molte campagne non cambiano nulla",
+  "intro": "Non è un problema separato dal sistema: è il sistema che prende forma nelle scelte di ogni giorno. Tante campagne trasferiscono informazioni ma non cambiano il contesto in cui le persone decidono.",
+  "punti": [
+   { "h": "Le micro-scelte ripetute", "d": "Una regola viene aggirata per fretta, urgenza o imitazione: se il capo chiede il file subito si usa il canale più rapido; se l'accesso è macchinoso si condividono credenziali." },
+   { "h": "Il magazzino ignorato", "d": "La campagna insiste su password robuste e posta sospetta, ma nessuno affronta la sessione lasciata aperta sui terminali condivisi o i documenti sul banco comune." },
+   { "h": "Non colpevolizzare", "d": "Se un comportamento insicuro è diffuso, il problema non è solo individuale: procedure irrealistiche, strumenti lenti, responsabilità confuse, indicatori orientati solo alla velocità." },
+   { "h": "Rendere semplice il corretto", "d": "Una campagna efficace rende più semplice il comportamento giusto, non solo più colpevole quello sbagliato. La sicurezza non è un'aggiunta al lavoro: è una qualità del lavoro ben fatto." }
+  ]
+ },
+ {
+  "id": "27001_m05_s007",
+  "layout": "punti",
+  "kicker": "Il fattore umano",
+  "titolo": "Campagne efficaci",
+  "intro": "Esci dalla logica del messaggio uguale per tutti: se commerciale, sistemista, HR e front office ricevono lo stesso testo, ognuno tratterrà solo la parte che per caso gli sembra pertinente. Non cento programmi: segmentare con intelligenza.",
+  "punti": [
+   { "h": "Partire dal ruolo", "d": "Quali decisioni quotidiane espongono a errori ricorrenti, quali segnali deve riconoscere, quali comportamenti devono diventare automatici, quale canale e ritmo funzionano." },
+   { "h": "La cadenza", "d": "Se concentri tutto in un momento dell'anno, chiedi alla memoria un lavoro che spetta al sistema. Il comportamento stabile nasce dalla ripetizione intelligente, non dalla saturazione." },
+   { "h": "Il tono", "d": "Solo minacce e colpe = ascolto breve e difesa. «Una buona gestione dei permessi evita ritardi e rilavorazioni» è più efficace di un elenco di divieti." },
+   { "h": "I responsabili diretti", "d": "Le persone osservano ciò che viene premiato o tollerato. Un manager che chiede scorciatoie sotto pressione neutralizza in pochi minuti mesi di campagna." }
+  ]
+ },
+ {
+  "id": "27001_m05_s008",
+  "layout": "punti",
+  "kicker": "Il fattore umano",
+  "titolo": "Incorporata nel lavoro quotidiano",
+  "intro": "C'è un momento in cui la consapevolezza smette di essere campagna e diventa modo normale di lavorare: quando i messaggi sono agganciati ai momenti in cui le persone cambiano qualcosa, dove l'attenzione è naturalmente più alta.",
+  "punti": [
+   { "h": "L'onboarding", "d": "Non un pacchetto di policy da leggere e firmare: quali informazioni tratterà, quali strumenti userà, quali errori sono probabili nel suo ruolo, cosa fare davanti a un dubbio." },
+   { "h": "Le transizioni", "d": "Dopo un'acquisizione, le persone integrate continuano per settimane con le vecchie abitudini. La consapevolezza non mancava in assoluto: mancava nel punto in cui serviva di più." },
+   { "h": "Imparare dagli errori", "d": "Dopo un quasi incidente puoi trasformare l'episodio in colpa individuale e chiudere, oppure chiarire il contesto e diffondere una lezione pratica. La seconda strada mostra che il sistema osserva la realtà." },
+   { "h": "Il linguaggio", "d": "«Non fare questo» è meno efficace di «se ti trovi in questa situazione, fai questi passaggi e chiedi supporto qui». Le persone lavorano meglio con istruzioni applicabili." }
+  ]
+ },
+ {
+  "id": "27001_m05_s009",
+  "layout": "flusso",
+  "kicker": "La comunicazione",
+  "titolo": "Quattro elementi da definire",
+  "intro": "Non un accessorio elegante: una condizione operativa del funzionamento. Non basta dire «comunichiamo quando serve». Qui capisci la differenza tra pubblicare e comunicare: pubblicare rende accessibile, comunicare rende probabile che raggiunga chi deve agire.",
+  "passi": [
+   { "h": "Su che cosa", "d": "Il contenuto essenziale. Un sistema maturo distingue comunicazioni di routine, di coordinamento, di escalation e verso l'esterno: se tutto finisce nello stesso contenitore, l'importante si confonde col rumore." },
+   { "h": "Quando", "d": "In quale momento e con quale anticipo. La procedura sui privilegi pubblicata nel repository e non intercettata: per settimane i team applicano la versione precedente." },
+   { "h": "A chi", "d": "Verso quali destinatari — e anche all'esterno: clienti, partner, fornitori. Una comunicazione al destinatario sbagliato produce immobilità." },
+   { "h": "Come", "d": "Con quale canale o modalità. Quando questi passaggi sono pensati prima, la comunicazione è parte del processo; quando nascono al bisogno, dipende da memoria personale e fortuna." }
+  ]
+ },
+ {
+  "id": "27001_m05_s010",
+  "layout": "punti",
+  "kicker": "La comunicazione",
+  "titolo": "Coerenza, tempestività, canali adatti",
+  "intro": "Definita male produce due effetti opposti e ugualmente dannosi: alcuni ricevono troppo e smettono di distinguere le priorità, altri troppo poco e agiscono in ritardo. Non contare i messaggi: comunicare di più non è comunicare meglio.",
+  "punti": [
+   { "h": "Coordinamento, non notizie", "d": "Il guasto cloud: il team lo scopre presto, ma un responsabile lo legge in chat, un altro dagli utenti irritati, il front office non sa cosa dire ai clienti, il fornitore pubblica su un portale che pochi consultano." },
+   { "h": "Il canale porta contenuto", "d": "Un messaggio urgente sul canale più rapido è inefficace se raggiunge persone non autorizzate o non lascia traccia. Un canale molto formale può essere troppo lento nelle prime fasi." },
+   { "h": "I segnali da cercare", "d": "Le persone distinguono aggiornamento, decisione, escalation ed esterno. I messaggi critici hanno responsabili riconosciuti. Non dipendono dal fatto che qualcuno si ricordi chi avvisare." },
+   { "h": "I punti di confine", "d": "La qualità si vede quando entrano in gioco fornitori, clienti, gruppi societari o funzioni con interessi diversi: è lì che emergono ritardi e responsabilità sfumate." }
+  ]
+ },
+ {
+  "id": "27001_m05_s011",
+  "layout": "punti",
+  "kicker": "Informazioni documentate",
+  "titolo": "Ciò che serve davvero al sistema",
+  "intro": "C'è chi documenta troppo e chi troppo poco: il punto utile sta nel mezzo. La norma richiede sia ciò che è espressamente richiesto, sia ciò che l'organizzazione ritiene necessario per l'efficacia. La domanda giusta non è quante pagine mancano: è che cosa si rischia di perdere se quella conoscenza resta implicita.",
+  "punti": [
+   { "h": "Dipende dal contesto", "d": "Dimensione, attività, processi, complessità delle interazioni, competenza delle persone. Una realtà piccola con processi lineari può avere un impianto snello." },
+   { "h": "Quando l'equilibrio si rompe", "d": "L'azienda cresce, apre una sede, inserisce tecnici, va in cloud: le decisioni non passano più dalle stesse persone. Senza ampliare i documenti, il sistema resta appeso a conversazioni informali." },
+   { "h": "Non valgono perché esistono", "d": "Valgono se orientano l'azione, preservano coerenza, chiariscono responsabilità e dimostrano che le attività sono state svolte come pianificato." },
+   { "h": "I due sintomi", "d": "La documentazione vetrina, elegante e mai usata nelle decisioni vere. E quella invisibile, sostituita da messaggi sparsi e file locali: sembra agile, ma regge finché nulla cambia." }
+  ]
+ },
+ {
+  "id": "27001_m05_s012",
+  "layout": "flusso",
+  "kicker": "Informazioni documentate",
+  "titolo": "Creazione e aggiornamento",
+  "intro": "Quando una procedura è creata male, il problema diventa operativo quasi subito: le persone non sanno se stanno guardando il testo giusto, non distinguono una bozza da una versione valida, e finiscono per lavorare per abitudine.",
+  "passi": [
+   { "h": "Identificazione e descrizione", "d": "Titolo, data, autore, riferimento non riempiono un'intestazione: fanno capire cosa stai leggendo, da quando vale e chi lo presidia. «Versione nuova finale davvero aggiornata» è un rischio travestito da file." },
+   { "h": "Formato e supporto", "d": "Non esiste un modello sempre corretto: la domanda è se aiuta il ruolo che deve usarlo. Un'istruzione per il magazzino leggibile solo da desktop esiste formalmente e manca operativamente." },
+   { "h": "Riesame e approvazione", "d": "Non una firma su un testo già deciso: il momento in cui verifichi se è adatto allo scopo e chiaro per chi lo applicherà. Se è rituale, i problemi passano indenni fino al primo errore." }
+  ]
+ },
+ {
+  "id": "27001_m05_s013",
+  "layout": "punti",
+  "kicker": "Informazioni documentate",
+  "titolo": "Disponibilità, protezione, versioni",
+  "intro": "Il controllo mette insieme due esigenze a volte trattate come nemiche: permettere l'uso e ridurre i rischi. Se sbagli l'equilibrio, o blocchi il lavoro o esponi il sistema. Il documento va giudicato nel suo ambiente operativo, non nel repository.",
+  "punti": [
+   { "h": "La disponibilità", "d": "Un documento utile ma introvabile equivale spesso a un documento assente. E l'idoneità all'uso non è solo presenza del file: è chiarezza, leggibilità, aderenza al contesto d'impiego." },
+   { "h": "La protezione", "d": "L'accesso comporta decisioni sui permessi di sola visione o di modifica. Non tutti quelli che consultano devono poter alterare; non tutti quelli che modificano devono farlo senza tracciabilità." },
+   { "h": "Il ciclo di vita", "d": "Distribuzione, accesso, reperimento e utilizzo (il quotidiano); archiviazione e leggibilità nel tempo (la durata); controllo dei cambiamenti (le versioni); conservazione e disposizione finale." },
+   { "h": "La versione fantasma", "d": "La procedura di escalation aggiornata, ma il vecchio schema resta allegato ai ticket modello: un neoassunto lo usa durante un disservizio. Non è solo errore umano." }
+  ]
+ },
+ {
+  "id": "27001_m05_s014",
+  "layout": "confronto",
+  "kicker": "Informazioni documentate",
+  "titolo": "Fonti esterne e teatro documentale",
+  "intro": "Due cose da ricordare insieme: anche ciò che nasce fuori può dover essere identificato e governato, se serve a far funzionare il sistema; e il valore della documentazione non cresce con il volume, ma con l'uso corretto.",
+  "a": {
+   "h": "Le fonti esterne",
+   "sub": "Nascono fuori, incidono dentro",
+   "punti": [
+    { "d": "Manuali del fornitore, specifiche contrattuali, note di rilascio, condizioni di servizio, modelli condivisi con partner." },
+    { "d": "Un'impostazione modificata dal provider può alterare un flusso approvativo; un cambiamento nei log può incidere sulla ricostruzione di un evento." },
+    { "d": "Se nessuno decide chi le monitora e come vengono recepite, l'organizzazione vive di scoperte tardive." }
+   ]
+  },
+  "b": {
+   "h": "Il teatro documentale",
+   "sub": "Accumulo non è controllo",
+   "punti": [
+    { "d": "Ogni processo ha una procedura, ogni procedura un allegato, ogni allegato un modello: sulla carta una fortezza." },
+    { "d": "Poi i team usano checklist locali, si passano istruzioni in chat e consultano raramente il repository ufficiale." },
+    { "d": "Il danno non è estetico: disorienta i ruoli, rallenta gli aggiornamenti e fa perdere credibilità ai documenti che contano." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m05_s015",
+  "layout": "punti",
+  "kicker": "Attività operative",
+  "titolo": "Dal disegno al lavoro reale",
+  "intro": "Il sistema deve preparare, realizzare e governare i processi nel tempo: pensati prima, eseguiti poi, tenuti sotto osservazione. Se manca una di queste tre dimensioni, il processo resta fragile.",
+  "punti": [
+   { "h": "Criteri e controllo insieme", "d": "Senza criteri, ogni reparto decide da sé; senza controllo, i criteri restano carta. Non basta dire «gestiamo accessi e fornitori»: chiarire che cosa significa gestirli bene in quel contesto." },
+   { "h": "Il processo implicito", "d": "Ingresso e uscita del personale: HR informa quando si ricorda, gli account arrivano in tempi variabili, le revoche slittano. Pianificato, invece, ha criteri, autorizzazioni, tempi e tracce." },
+   { "h": "Fiducia ragionevole", "d": "Documentazione sufficiente a sostenere che i processi si sono svolti come previsto. Non ogni gesto: abbastanza elementi per un legame credibile tra processo definito, attività e risultato." },
+   { "h": "I processi trasversali", "d": "Quelli che attraversano più funzioni sono i più delicati: il rischio non nasce solo dal cambiamento tecnico, ma dalla discontinuità organizzativa." }
+  ]
+ },
+ {
+  "id": "27001_m05_s016",
+  "layout": "confronto",
+  "kicker": "Attività operative",
+  "titolo": "Criteri utili e formule vaghe",
+  "intro": "I criteri permettono di capire quando il processo funziona come atteso e quando esce dal seminato. Il punto non è scrivere molto: è scrivere ciò che serve a mantenere prevedibilità e qualità delle decisioni.",
+  "a": {
+   "h": "La formula vaga",
+   "sub": "Non orienta, non controlla",
+   "punti": [
+    { "d": "«Le correzioni vengono installate quando necessario»: non è un criterio." },
+    { "d": "«Il cambiamento viene gestito con attenzione»: lascia tutto all'interpretazione personale." },
+    { "d": "Foglio elettronico aggiornato saltuariamente, senza data certa né origine dei dati: evidenza formalmente esistente, sostanzialmente debole." }
+   ]
+  },
+  "b": {
+   "h": "Il criterio leggibile",
+   "sub": "Guida l'azione e rende possibile il controllo",
+   "punti": [
+    { "d": "Ogni correzione con impatto sulla disponibilità richiede valutazione, autorizzazione, finestra definita e verifica successiva." },
+    { "d": "Distingue le situazioni ordinarie dalle urgenti e chiarisce chi decide che cosa in ciascun caso." },
+    { "d": "Elenco estratto dal sistema, data, responsabile del riesame, decisioni sui casi dubbi, chiusura delle azioni." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m05_s017",
+  "layout": "confronto",
+  "kicker": "Attività operative",
+  "titolo": "Cambiamenti pianificati e involontari",
+  "intro": "Molti processi sembrano solidi finché l'ambiente resta stabile. Il rischio non sta solo nell'operazione finale: spesso nasce nella transizione. È lì che compaiono responsabilità incerte, vecchie abitudini e passaggi saltati.",
+  "a": {
+   "h": "Pianificati",
+   "sub": "Governare il percorso, non solo lo stato finale",
+   "punti": [
+    { "d": "Quali criteri governano la transizione, chi va coinvolto, quali controlli preventivi, cosa va comunicato, quali evidenze." },
+    { "d": "La migrazione in cloud trattata come semplice sostituzione tecnica: permessi incoerenti, repository locali, istruzioni non aggiornate." },
+    { "d": "Non basta desiderare il nuovo stato: devi governare il percorso che ci porta lì." }
+   ]
+  },
+  "b": {
+   "h": "Involontari",
+   "sub": "Riesaminare le conseguenze",
+   "punti": [
+    { "d": "Una modifica applicata per errore, una dipendenza non prevista, un comportamento locale sfuggito al disegno." },
+    { "d": "Il canale informale di approvazione utenze nato come soluzione temporanea: dopo settimane è normale e aggira i controlli." },
+    { "d": "Correggere i singoli casi senza rivedere la dinamica che li ha generati significa che il problema tornerà." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m05_s018",
+  "layout": "punti",
+  "kicker": "Attività operative",
+  "titolo": "Processi esternalizzati",
+  "intro": "La scorciatoia mentale pericolosa: siccome il lavoro lo svolge un fornitore, il rischio si è spostato fuori. Il messaggio della norma è netto: ciò che è affidato all'esterno e incide sul sistema deve restare sotto controllo. Esternalizzare non elimina il governo: spesso lo rende più delicato.",
+  "punti": [
+   { "h": "Che cosa comprende", "d": "Servizi gestiti da terzi, supporto specialistico, componenti tecnologiche essenziali, elaborazioni dati, gestione infrastrutturale, archiviazione, assistenza utenti." },
+   { "h": "Il service desk esterno", "d": "Le classificazioni non seguono i criteri attesi, le priorità si interpretano, le evidenze restano nel sistema del fornitore. Il punto non è che lavori male: è che il controllo non è definito." },
+   { "h": "Non microgestire", "d": "Significa sapere quali risultati aspettarsi, quali condizioni non sono negoziabili, quali informazioni servono e cosa fare quando qualcosa devia." },
+   { "h": "Contratto ≠ controllo", "d": "Se l'unica misura di successo è che il contratto sia attivo e le fatture arrivino, stai confondendo gestione amministrativa e controllo operativo." }
+  ]
+ },
+ {
+  "id": "27001_m05_s019",
+  "layout": "punti",
+  "kicker": "Attività operative",
+  "titolo": "Cloud: comodità e zone grigie",
+  "intro": "La facilità di attivazione non coincide con la facilità di controllo. Il cloud non è un problema a parte: è un banco di prova della capacità di governo in presenza di dipendenze esterne e cambiamenti frequenti.",
+  "punti": [
+   { "h": "I punti di confine", "d": "L'IT crede che certe impostazioni siano predefinite e quindi sicure; le funzioni pensano che il provider gestisca ciò che dipende dalle loro scelte d'uso. Un controllo apparente, reso insidioso dal fatto che tutto sembra funzionare." },
+   { "h": "L'adozione rapida", "d": "Dopo pochi mesi: permessi ereditati in modo improprio, link di condivisione usati più ampiamente del previsto, notifiche lette solo da un amministratore. Non deriva dal cloud: dall'assenza di criteri proporzionati." },
+   { "h": "I cambiamenti dal fornitore", "d": "Aggiornamenti, nuove opzioni, variazioni di autenticazione: una parte dell'evoluzione arriva da fuori, con ritmi rapidi. Serve intercettare, valutare l'impatto, tradurre in azione interna." },
+   { "h": "Le evidenze", "d": "I log sono disponibili e comprensibili? Le modifiche alle configurazioni rintracciabili? Se senti «ci pensa la piattaforma», il perimetro di responsabilità non è compreso abbastanza." }
+  ]
+ },
+ {
+  "id": "27001_m05_s020",
+  "layout": "punti",
+  "kicker": "Attività operative",
+  "titolo": "Leggere il controllo in modo integrato",
+  "intro": "Documentazione, criteri, cambiamenti, esternalizzati e cloud si intrecciano continuamente. Se li osservi uno alla volta perdi il disegno; se li colleghi attorno a un processo concreto, vedi la maturità reale.",
+  "punti": [
+   { "h": "Il caso che va storto", "d": "Il provider introduce una nuova condivisione: la notifica arriva al referente ma non diventa indicazione operativa; il fornitore usa il flusso vecchio; i team creano link troppo ampi. Un fascicolo cliente resta visibile oltre il necessario." },
+   { "h": "Lo stesso caso, gestito", "d": "La notifica è intercettata da un ruolo incaricato, l'impatto valutato coi reparti, le istruzioni aggiornate, il fornitore informato su cosa cambia e da quando, i primi casi controllati." },
+   { "h": "I tre errori del verificatore", "d": "Trovare un buon documento e concludere che il processo è governato; vedere un contratto ben scritto e assumere il controllo; scambiare la continuità tecnica del cloud per maturità gestionale." },
+   { "h": "La prova sta ai confini", "d": "Chi si accorge del cambiamento, chi decide, chi aggiorna i documenti, chi comunica ai ruoli operativi, quali evidenze restano." }
+  ]
+ },
+ {
+  "id": "27001_m05_s021",
+  "layout": "punti",
+  "kicker": "La verifica",
+  "titolo": "Risorse e competenza",
+  "intro": "Il primo rischio è farti guidare dai titoli dei ruoli o dall'eleganza dei documenti. La domanda utile: l'organizzazione ha davvero le risorse e la competenza per far funzionare ciò che dichiara? Non cerchi abbondanza ideale: proporzione, continuità, coerenza col contesto.",
+  "punti": [
+   { "h": "Le quattro direzioni", "d": "Tempo disponibile, copertura dei ruoli critici, accesso a strumenti e informazioni, autorità reale. Chi lavora per frammenti senza priorità riconosciuta è insufficiente anche se esiste sulla carta." },
+   { "h": "Le domande incisive", "d": "Che cosa succede quando emergono priorità concorrenti. Quali attività vengono rinviate più spesso e perché. Dove si concentrano dipendenze eccessive da singole persone." },
+   { "h": "Il colloquio giusto", "d": "Non un esame teorico: chiedi di descrivere un passaggio che influenza la sicurezza, quali errori considera probabili, quando coinvolge altri ruoli." },
+   { "h": "Come colmano i divari", "d": "Formazione, affiancamento, riallocazione, supporto esterno scelti con senso — o un corso generico e questione chiusa? La differenza si vede nell'efficacia." }
+  ]
+ },
+ {
+  "id": "27001_m05_s022",
+  "layout": "punti",
+  "kicker": "La verifica",
+  "titolo": "Consapevolezza e comunicazione",
+  "intro": "Le risposte migliori non sono le più scolastiche, ma quelle che collegano le regole al lavoro quotidiano. Non ti interessa se ricordano una presentazione di mesi fa: se conoscono la politica in modo pratico e vedono il proprio contributo.",
+  "punti": [
+   { "h": "Domande aperte", "d": "Che cosa potrebbe accadere se saltasse un passaggio. In che modo il suo ruolo protegge o espone informazioni. Cosa farebbe davanti a una richiesta anomala." },
+   { "h": "Il beneficio, non solo il freno", "d": "Se vedono la sicurezza solo come ostacolo, la consapevolezza regge male sotto pressione. Se la collegano a meno errori e migliore coordinamento, il sistema ha lavorato sul significato." },
+   { "h": "Segui un evento recente", "d": "Una modifica, un'anomalia, un aggiornamento del fornitore: chi ha saputo, quando, con quale canale, con quale azione attesa. Se il racconto cambia troppo, la comunicazione è lasciata all'iniziativa personale." },
+   { "h": "Confronta i ruoli", "d": "Se tutti rispondono identico, forse hanno imparato un copione; se tutti in modo scollegato, manca un sistema comune. La maturità è stessa direzione, applicazioni coerenti col ruolo." }
+  ]
+ },
+ {
+  "id": "27001_m05_s023",
+  "layout": "cards",
+  "kicker": "La verifica",
+  "titolo": "Le informazioni documentate",
+  "intro": "Il rischio è farsi impressionare da quantità, grafica o lessico ordinato. Valgono per ciò che permettono di fare, non per come appaiono. Comincia sempre dall'uso reale: dove trovi l'istruzione che applichi più spesso?",
+  "cards": [
+   { "h": "Esistono e sono riconoscibili", "d": "I documenti davvero rilevanti — non quelli che riempiono un indice." },
+   { "h": "Si trova la versione valida", "d": "Senza incertezza. Se le persone esitano, cercano in più posti o usano copie locali, hai un indizio di debolezza." },
+   { "h": "Accesso e modifica governati", "d": "In modo sensato rispetto ai ruoli: un registro sensibile modificabile da troppi senza tracciabilità non è protetto." },
+   { "h": "Le evidenze restano", "d": "Leggibili e reperibili nel tempo, anche quando cambiano software, formato o supporto, o quando un collega lascia l'azienda." },
+   { "h": "Le fonti esterne", "d": "Identificate e presidiate: se il provider aggiorna la gestione dei permessi e nessuno la traduce internamente, l'impianto è incompleto dove servirebbe di più." }
+  ]
+ },
+ {
+  "id": "27001_m05_s024",
+  "layout": "punti",
+  "kicker": "La verifica",
+  "titolo": "Il controllo operativo",
+  "intro": "Segui un processo dall'inizio alla fine invece di collezionare frammenti. Devi vedere una catena credibile tra ciò che l'organizzazione ha stabilito, ciò che le persone fanno e ciò che resta come prova.",
+  "punti": [
+   { "h": "Scegli un processo trasversale", "d": "Gestione accessi, modifica applicativa, onboarding, disattivazione utenze, escalation. Poi cerca i criteri: chi decide quando un caso richiede escalation, quali autorizzazioni servono, quali verifiche chiudono il ciclo." },
+   { "h": "Il walkthrough", "d": "Segui un caso reale recente e fatti raccontare i passaggi dai diversi ruoli. Se ogni funzione racconta un flusso diverso e le tracce si recuperano con fatica, il processo è meno stabile di quanto sembri." },
+   { "h": "I casi urgenti", "d": "Molti processi sono puliti nell'ordinario e si sfaldano sotto pressione. Un processo maturo distingue l'urgenza dal caos; uno fragile usa l'urgenza come giustificazione permanente." },
+   { "h": "Le deviazioni visibili", "d": "Non cerchi perfezione meccanica: in un sistema solido le deviazioni emergono e vengono riesaminate; in uno debole si accumulano fino a riscrivere il processo reale senza che nessuno lo riconosca." }
+  ]
+ },
+ {
+  "id": "27001_m05_s025",
+  "layout": "punti",
+  "kicker": "La verifica",
+  "titolo": "Leggere bene i confini",
+  "intro": "Le zone più istruttive emergono ai confini. Smonta l'idea che ciò che sta fuori dal reparto o dall'organizzazione sia automaticamente fuori dal controllo: è il contrario. Più aumenta la dipendenza, più devi capire come il governo viene mantenuto.",
+  "punti": [
+   { "h": "I cambiamenti", "d": "Non fermarti al fatto che una modifica sia stata eseguita: come è stata preparata, chi ha valutato l'impatto, chi è stato informato, cosa è stato osservato dopo. «Abbiamo aggiornato il sistema» salta la parte più delicata." },
+   { "h": "Gli esternalizzati", "d": "Quale parte del sistema dipende dal fornitore e come si mantiene il controllo. Servono criteri di servizio, interfacce chiare, gestione dei cambiamenti: le interfacce raccontano quasi sempre più del contratto." },
+   { "h": "Il cloud", "d": "Spesso funziona bene e proprio per questo si smette di interrogarsi. Quali configurazioni incidono, chi presidia permessi e condivisioni, come vengono recepite le notifiche del provider. E triangola sempre: referente, ruolo operativo, traccia concreta." }
+  ]
+ },
+ {
+  "id": "27001_m05_s026",
+  "layout": "punti",
+  "kicker": "Il giudizio",
+  "titolo": "Collegare segnali, evidenze e impatto",
+  "intro": "Molti segnali sono distribuiti in punti diversi: una carenza di risorse si riflette in ritardi documentali, un gap di competenza in criteri applicati male. Il tuo compito non è sommare rilievi scollegati: è ricostruire una storia coerente.",
+  "punti": [
+   { "h": "Effetto e sistematicità", "d": "Un documento aggiornato in ritardo può essere isolato, o il sintomo di risorse insufficienti. Una modifica del provider recepita tardi può essere un episodio, o l'assenza di governo sui rapporti esterni." },
+   { "h": "I tre fatti che si parlano", "d": "Il responsabile sovraccarico, i reparti che conoscono in modo disomogeneo l'ultima procedura, l'aggiornamento cloud recepito a metà. Separati sembrano difetti minori; collegati raccontano una debolezza profonda." },
+   { "h": "Anche il contrario", "d": "Piccole imperfezioni locali in un impianto ben governato: un giudizio equilibrato evita di gonfiare un dettaglio fino a farlo sembrare un cedimento sistemico." },
+   { "h": "Presenza ≠ efficacia", "d": "La procedura esiste, ma viene usata? La formazione è stata erogata, ma ha colmato il gap? Il fornitore è contrattualizzato, ma il processo resta sotto controllo?" }
+  ]
+ },
+ {
+  "id": "27001_m05_s027",
+  "layout": "flusso",
+  "kicker": "Sintesi",
+  "titolo": "La catena di affidabilità",
+  "intro": "Il supporto non è il backstage del sistema e l'operatività non è una fase successiva indipendente: si alimentano a vicenda. Se un anello cede, gli altri non bastano a lungo.",
+  "passi": [
+   { "h": "Le condizioni", "d": "Risorse adeguate e persone competenti: ciò che rende possibile il sistema. Se mancano, i processi slittano e i criteri vengono applicati male." },
+   { "h": "La comprensione", "d": "Consapevolezza e comunicazione: come le persone capiscono il proprio ruolo e ricevono messaggi utili. Se sono deboli, crescono scorciatoie e i cambiamenti si propagano in modo confuso." },
+   { "h": "Il patrimonio stabile", "d": "Informazioni documentate create, aggiornate e controllate con criterio: orientano il lavoro e ne lasciano traccia affidabile." },
+   { "h": "I processi", "d": "Pianificati, attuati e tenuti sotto controllo, anche quando cambiano o dipendono da esternalizzati e cloud. Smetti di contare presenze e inizi a leggere capacità." }
+  ]
+ },
+ {
+  "id": "27001_m05_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 5",
+  "modNum": "05",
+  "titolo": "Che cosa porti al checkpoint",
+  "punti": [
+   { "h": "Le risorse", "d": "Non solo budget o nomine: tempo, autorità, strumenti, continuità. Un sistema credibile non vive di intenzioni, ma di condizioni rese disponibili." },
+   { "h": "Competenza ≠ consapevolezza", "d": "La prima va collegata alle attività che influenzano la sicurezza e sostenuta con azioni efficaci; la seconda è comprensione del proprio contributo e delle implicazioni." },
+   { "h": "Pubblicare ≠ comunicare", "d": "Devi sapere che cosa comunicare, quando, a chi e come, dentro e verso l'esterno." },
+   { "h": "Molti documenti ≠ più controllo", "d": "Valgono se sostengono il lavoro: sufficienti per l'efficacia, creati e aggiornati con chiarezza, controllati perché restino disponibili, leggibili e protetti — fonti esterne comprese." },
+   { "h": "Eseguito ≠ sotto controllo", "d": "I criteri dicono che cosa significa eseguire bene nel contesto reale; le evidenze sostengono con ragionevole affidabilità che è avvenuto come pianificato. E i cambiamenti meritano attenzione speciale." },
+   { "h": "Affidare fuori ≠ trasferire il governo", "d": "Nei processi esternalizzati e nel cloud il controllo non sparisce solo perché una parte dell'attività è fuori dai confini interni." }
+  ],
+  "prossimo": {
+   "modulo": "06",
+   "titolo": "I controlli organizzativi dell'Appendice A",
+   "testo": "Dalle condizioni che rendono possibile il sistema alle famiglie di controlli e al loro posto."
+  }
+ }
+]
