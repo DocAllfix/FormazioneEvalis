@@ -1,0 +1,388 @@
+[
+ {
+  "id": "27001_m08_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 8",
+  "eyebrow": "La valutazione delle prestazioni",
+  "titolo": "L'SGSI sta davvero funzionando?",
+  "testo": "Non ti chiedi più soltanto che cosa è stato definito, ma se quello che è stato definito viene seguito, misurato e riesaminato con maturità. Una catena di governo: prima si osserva, poi si verifica, infine si decide. Se misuri senza interpretare, accumuli numeri muti; se verifichi senza portare i risultati a chi decide, produci rapporti che non spostano nulla.",
+  "agenda": [
+   "9.1 Monitoraggio, misurazione, analisi, valutazione",
+   "9.2 Il programma di audit interno",
+   "9.3 Il riesame di direzione",
+   "Esercizi di lettura delle metriche",
+   "Verificare il capitolo 9 come un ciclo"
+  ]
+ },
+ {
+  "id": "27001_m08_s002",
+  "layout": "punti",
+  "kicker": "9.1 · Monitoraggio",
+  "titolo": "Che cosa monitorare davvero",
+  "intro": "La norma non consegna un elenco pronto, ed è una scelta intelligente: ogni organizzazione ha rischi e priorità diverse. Non rincorrere una lista universale — dimostrare che la scelta ha senso rispetto a obiettivi e controlli. Monitorare (osservare) e misurare (quantificare) non sono sinonimi perfetti.",
+  "punti": [
+   { "h": "Processi, controlli, risultati", "d": "Un processo è un flusso (gestione utenze, backup); un controllo è una misura dentro o attorno (revisione dei privilegi); il risultato è l'effetto osservabile che interessa all'SGSI." },
+   { "h": "Non solo il facile da contare", "d": "Se il rischio prioritario è l'uso improprio degli accessi privilegiati, contare gli account creati ogni mese è periferico: meglio i tempi di revoca al cambio ruolo, l'esito delle revisioni, le eccezioni aperte." },
+   { "h": "Anche i processi organizzativi", "d": "Onboarding frettoloso, gestione fornitori poco rigorosa: i problemi nascono prima dei controlli tecnologici. Monitorare approvazioni, eccezioni, ritardi, punti di contatto tra funzioni." },
+   { "h": "Perché proprio quelle?", "d": "Una metrica è significativa quando aiuta a capire uno stato, un andamento o un effetto — non perché è facile da esportare. Un indicatore scomodo può essere decisivo se illumina un rischio critico." }
+  ]
+ },
+ {
+  "id": "27001_m08_s003",
+  "layout": "punti",
+  "kicker": "9.1 · Metodo",
+  "titolo": "Quando un dato diventa affidabile",
+  "intro": "Il punto 9.1 richiede metodi che producano risultati validi. Un dato non è valido solo perché esiste: lo è quando nasce da un procedimento coerente, ripetibile e stabile abbastanza da consentire un confronto sensato nel tempo.",
+  "punti": [
+   { "h": "Le regole non dette", "d": "Il tempo di chiusura delle vulnerabilità: da quando parte il conteggio? Cosa è chiusura — la patch, il riavvio, la verifica finale? Includi le eccezioni? Se cambia da un mese all'altro, l'andamento racconta solo un modo diverso di contare." },
+   { "h": "Le domande al metodo", "d": "Qual è la fonte, con quale frequenza è estratta, chi la valida, come si escludono anomalie, quali soglie interpretano il dato — e lo stesso metodo porta risultati simili in condizioni analoghe?" },
+   { "h": "Analisi ≠ dato grezzo", "d": "Estrarre un report non basta. Cento reset password dicono poco; se arrivano dopo un aggiornamento del portale, non segnalano superficialità degli utenti ma debolezza del processo di cambiamento." },
+   { "h": "La definizione che cambia", "d": "Un mese gli incidenti aperti, poi i confermati, poi quelli ad impatto alto: tutto lecito se dichiarato. Ma se il cambiamento resta implicito, la comparabilità si spezza." }
+  ]
+ },
+ {
+  "id": "27001_m08_s004",
+  "layout": "punti",
+  "kicker": "9.1 · Tempi e ruoli",
+  "titolo": "Quando misurare e chi deve farlo",
+  "intro": "Se tempi e responsabilità restano vaghi, i dati arrivano tardi, si perdono, o nessuno li interpreta con autorevolezza. Una domanda finale, semplice ma potente: quando il risultato viene letto, è ancora utile per agire? Valutare tardi equivale spesso a non valutare.",
+  "punti": [
+   { "h": "La frequenza", "d": "Non tutto ha la stessa cadenza. Il criterio: quanto rapidamente un peggioramento produce effetti seri. Rivedere gli accessi amministrativi una volta l'anno è formalmente una misurazione, operativamente un tempo troppo lungo." },
+   { "h": "Non tutto alla stessa cadenza", "d": "Usare la stessa frequenza per tutto crea due effetti opposti: alcuni dati letti troppo spesso (rumore), altri troppo tardi (problema già cresciuto)." },
+   { "h": "Separare i ruoli", "d": "Raccogliere, analizzare e valutare non devono coincidere: il team operativo produce, una funzione trasversale collega a obiettivi e rischi, il management valuta il significato decisionale." },
+   { "h": "Responsabilità agita", "d": "Non fermarti alla casella in organigramma. Una funzione centrale che riceve decine di report ma non li interpreta ha la responsabilità scritta, non agita." }
+  ]
+ },
+ {
+  "id": "27001_m08_s005",
+  "layout": "confronto",
+  "kicker": "9.1 · Evidenze",
+  "titolo": "Documentazione ed efficacia",
+  "intro": "Devono esistere informazioni documentate che dimostrino i risultati. Ma avere registrazioni non significa valutare le prestazioni: la parola chiave è efficacia — non aver svolto un'attività, ma che quell'attività ha prodotto l'effetto atteso.",
+  "a": {
+   "h": "Prova dell'attività",
+   "sub": "Registrare",
+   "punti": [
+    { "d": "Il registro dei backup eseguiti ogni notte: c'è evidenza che l'attività è stata lanciata e completata." },
+    { "d": "Il registro presenze della formazione: dimostra che una sessione è stata erogata." },
+    { "d": "Utile, ma è prova di un'azione, non della sua capacità di proteggere l'informazione." }
+   ]
+  },
+  "b": {
+   "h": "Prova dell'efficacia",
+   "sub": "Valutare",
+   "punti": [
+    { "d": "I backup sono ripristinabili? Coprono i sistemi prioritari? I tempi di recupero sono compatibili col business?" },
+    { "d": "Il personale ha compreso le aspettative, cambiato comportamenti, imparato a segnalare?" },
+    { "d": "Quale domanda consentono davvero di rispondere? Se si fermano al «è stato svolto», il sistema registra bene ma valuta poco." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m08_s006",
+  "layout": "cards",
+  "kicker": "9.1 · Metriche",
+  "titolo": "Segnali utili, non numeri cosmetici",
+  "intro": "Una metrica è significativa quando aiuta un responsabile a capire uno stato o una priorità e può guidare una decisione. Le più utili collegano rischio, controllo, dato osservabile e soglia interpretativa. Un set ristretto e discusso vale più di una dashboard sterminata.",
+  "cards": [
+   { "h": "Prevenzione", "d": "Copertura aggiornamenti su asset critici, esito delle revisioni degli accessi, chiusura delle eccezioni, qualità delle configurazioni di base." },
+   { "h": "Rilevazione", "d": "Tempi di identificazione degli eventi, completezza dei log essenziali, qualità delle segnalazioni interne, esiti del monitoraggio su attività anomale." },
+   { "h": "Risposta e recupero", "d": "Tempi di contenimento, esito dei test di ripristino, chiusura delle azioni post-incidente, riduzione della ricorrenza di cause note." },
+   { "h": "Evitare distorsioni", "d": "Se misuri solo gli incidenti chiusi, spingi a chiudere in fretta non a risolvere. Affianca la ricorrenza di problemi simili; alla copertura della formazione, la qualità delle segnalazioni." },
+   { "h": "Le metriche che nessuno commenta", "d": "Se un indicatore compare ogni mese ma non genera domande, azioni o decisioni, forse non è significativo — o è nelle mani sbagliate, con la frequenza sbagliata." }
+  ]
+ },
+ {
+  "id": "27001_m08_s007",
+  "layout": "punti",
+  "kicker": "9.2 · Audit interno",
+  "titolo": "Perché servono verifiche pianificate",
+  "intro": "Non aggiungere burocrazia: ottenere informazioni indipendenti su due domande. L'SGSI è conforme a ciò che l'organizzazione si è dato e alla norma? Ed è attuato e mantenuto in modo efficace? Il monitoraggio ti fa vedere segnali; l'audit interno ti fa capire se il sistema regge il confronto coi criteri.",
+  "punti": [
+   { "h": "Profondità che i numeri nascondono", "d": "Le metriche sul patching sembrano rassicuranti, ma l'audit scopre server fuori perimetro, eccezioni senza scadenza, flussi diversi tra business unit. Il monitoraggio non era falso: era incompleto." },
+   { "h": "Pianificato, non reattivo", "d": "Deciso prima, con logica — non attivato solo all'emergenza o alla paura di una visita esterna. Un sistema che verifica solo in reazione assomiglia a una medicina presa quando il sintomo è già forte." },
+   { "h": "Conformità ed efficacia", "d": "Una procedura può essere completa e seguita, ma se lascia troppe eccezioni non riesaminate o troppo tempo tra cambio ruolo e revoca, l'efficacia resta discutibile." },
+   { "h": "Contro la normalizzazione", "d": "Chi vive ogni giorno un processo ne normalizza le debolezze. La verifica riporta distanza critica: perché questa pratica esiste, a quale requisito risponde, quali evidenze ne mostrano la tenuta." }
+  ]
+ },
+ {
+  "id": "27001_m08_s008",
+  "layout": "punti",
+  "kicker": "9.2 · Programma",
+  "titolo": "Frequenza, metodo, responsabilità",
+  "intro": "Non stai preparando un calendario, ma un meccanismo stabile di controllo. La norma richiede intervalli pianificati, senza imporre una cadenza identica per tutte le aree: l'impostazione tiene conto dell'importanza dei processi e dei risultati delle verifiche precedenti.",
+  "punti": [
+   { "h": "La frequenza per rischio", "d": "Accessi privilegiati con eccezioni non riesaminate, fornitori in trasformazione, formazione stabile: sarebbe poco sensato dedicare la stessa intensità a tutte e tre. Il programma segue il bisogno di conoscenza." },
+   { "h": "Il metodo", "d": "Non tutte hanno lo stesso taglio: documentale, per interviste, o seguendo casi reali dall'inizio alla fine. Per capire come si revoca un accesso, seguire alcuni casi concreti è più rivelatore che leggere la procedura." },
+   { "h": "Le responsabilità", "d": "Chi governa il programma, chi pianifica, chi partecipa, chi riceve i risultati, chi segue le azioni. Due errori opposti: tutto in una funzione minuscola sovraccarica, o tutto distribuito senza regia." },
+   { "h": "Il collegamento col passato", "d": "I risultati precedenti orientano il programma futuro: ricorrenza di problemi, ritardi nelle azioni, cambiamenti importanti. È così che la verifica smette di essere routine e diventa dinamica." }
+  ]
+ },
+ {
+  "id": "27001_m08_s009",
+  "layout": "flusso",
+  "kicker": "9.2 · La singola verifica",
+  "titolo": "Obiettivi, criteri, campo di applicazione",
+  "intro": "Ogni verifica nasce con tre coordinate: se restano confuse, il lavoro si allarga senza controllo e produce conclusioni discutibili. Chiediti sempre se le tre componenti sono coerenti tra loro — e come è scelto il campione.",
+  "passi": [
+   { "h": "Obiettivi", "d": "Che cosa vuoi accertare. Non «valutare la sicurezza in senso ampio»: «verificare se il ciclo di vita delle utenze assicura assegnazione, modifica e revoca coerenti coi ruoli e nei tempi previsti»." },
+   { "h": "Criteri", "d": "Il metro di confronto — politiche, procedure, requisiti dell'SGSI e della norma. Dichiarati prima e coerenti durante: se cambi il metro senza dirlo, il giudizio perde solidità." },
+   { "h": "Campo di applicazione", "d": "Dove inizia e finisce: processi, unità, sistemi, periodi, categorie di utenze. Evita l'estensione incontrollata e il campo troppo stretto che non tocca dove si concentra il rischio." }
+  ]
+ },
+ {
+  "id": "27001_m08_s010",
+  "layout": "punti",
+  "kicker": "9.2 · Imparzialità",
+  "titolo": "Obiettività e imparzialità",
+  "intro": "La qualità tecnica di una verifica perde valore se il giudizio è condizionato da interessi o relazioni troppo strette con l'area esaminata. Obiettività (evidenze e criteri, non impressioni) e imparzialità (chi verifica non compromette la neutralità) sono due livelli.",
+  "punti": [
+   { "h": "Non giudicare il proprio lavoro", "d": "Se gestisci il backup, non sei la scelta migliore per valutarne la conformità: competente, ma esposto a un conflitto evidente." },
+   { "h": "Le misure compensative", "d": "Nelle organizzazioni piccole la separazione perfetta è difficile: team misti, riesami incrociati, piano approvato da una funzione autonoma. L'importante è dimostrare di aver trattato il rischio di autoreferenzialità." },
+   { "h": "Non solo chi firma", "d": "Dipende anche da come si selezionano i campioni, da quanto sono libere le interviste, da come si gestiscono le contestazioni. Se i campioni li propone solo l'area verificata, la tutela è debole." },
+   { "h": "La percezione", "d": "Quando il processo è ben protetto, chi riceve la verifica può non gradire i rilievi ma riconosce che il metro è coerente. Un gruppo troppo vicino all'area abbassa la credibilità." }
+  ]
+ },
+ {
+  "id": "27001_m08_s011",
+  "layout": "punti",
+  "kicker": "9.2 · Risultati",
+  "titolo": "Reporting utile ed evidenze credibili",
+  "intro": "Ciò che non viene riportato bene non orienta chi deve agire; ciò che non lascia traccia diventa fragile. Le risultanze devono arrivare a chi ha titolo, capacità e responsabilità per decidere. Un reporting utile ha quattro qualità.",
+  "punti": [
+   { "h": "Le quattro qualità", "d": "Tempestivo (arriva quando può ancora influenzare azioni), chiaro (distingue fatti da interpretazioni), pertinente (ciò che conta per il rischio), proporzionato (non ogni scostamento diventa allarme)." },
+   { "h": "Descrivere, non generalizzare", "d": "«Esistono debolezze nel processo» fa capire poco. Descrivere i casi osservati, collegarli ai criteri, mostrare l'impatto sul rischio trasforma il reporting in strumento di governo." },
+   { "h": "Anche una lettura equilibrata", "d": "Se le richieste ordinarie sono gestite bene ma le eccezioni male, la distinzione è preziosa: evita diagnosi grossolane e indirizza il miglioramento dove serve." },
+   { "h": "Le informazioni documentate", "d": "Tracce del disegno e dell'esecuzione. Programma elegante ma nessuna prova di verifiche svolte = presidio debole; rapporti senza chi li ha ricevuti = ciclo incompleto." }
+  ]
+ },
+ {
+  "id": "27001_m08_s012",
+  "layout": "definizione",
+  "kicker": "9.3 · Riesame di direzione",
+  "eyebrow": "Dove l'SGSI viene davvero governato",
+  "titolo": "Idoneo, adeguato, efficace",
+  "definizione": "Non fare una riunione solenne: verificare se il sistema resta idoneo, adeguato ed efficace nel tempo. Tre parole che non sono sinonimi. L'SGSI non può restare confinato a specialisti: deve essere letto da chi governa risorse, priorità e tolleranza al rischio.",
+  "punti": [
+   { "h": "Idoneo", "d": "Adatto allo scopo per cui il sistema esiste." },
+   { "h": "Adeguato", "d": "Coerente col contesto reale, i suoi cambiamenti e le sue priorità. Non fotografare il passato: interrogare il presente che cambia — l'esternalizzazione avviata, i nuovi flussi di accesso remoto." },
+   { "h": "Efficace", "d": "Capace di produrre i risultati attesi, non solo di esibire attività. L'indizio più forte: la qualità delle decisioni successive. Se tutto resta com'è a prescindere dai segnali, non funziona." }
+  ]
+ },
+ {
+  "id": "27001_m08_s013",
+  "layout": "punti",
+  "kicker": "9.3 · Ingressi",
+  "titolo": "Azioni aperte, cambiamenti, parti interessate",
+  "intro": "Tre ingressi che parlano di memoria e contesto: impediscono al confronto di direzione di diventare una fotografia senza storia e senza ambiente. Sono trattati come note generiche o collegati a possibili effetti sull'SGSI?",
+  "punti": [
+   { "h": "Lo stato delle azioni precedenti", "d": "Uno dei più rivelatori. Un'azione chiusa solo sulla carta non è efficace; una sempre rinviata dice molto sulla priorità reale. Misura la capacità del sistema di apprendere da sé." },
+   { "h": "I cambiamenti interni ed esterni", "d": "Riorganizzazione, nuova piattaforma, uscita di figure chiave; o nuovi obblighi, dipendenza da fornitori, scenario di minacce più aggressivo. Il sistema è ancora adeguato a ciò che l'organizzazione è diventata?" },
+   { "h": "Le parti interessate", "d": "Non solo clienti: proprietari, autorità, partner, personale, fornitori critici. Non ogni desiderio, ma quali aspettative hanno impatto reale — il cliente che chiede evidenze più forti sui fornitori." },
+   { "h": "Il servizio remoto internazionale", "d": "Buona notizia commerciale, ma cambia l'esposizione degli accessi remoti, i privilegi ai fornitori, gli orari di presidio. Senza leggere questi cambiamenti, si giudica un contesto che non esiste più." }
+  ]
+ },
+ {
+  "id": "27001_m08_s014",
+  "layout": "punti",
+  "kicker": "9.3 · Ingressi",
+  "titolo": "Prestazioni, andamenti, obiettivi",
+  "intro": "Il cuore informativo. La norma chiede andamenti — non dati isolati: direzione, stabilità, ricorrenza, cambiamento nel tempo. Una direzione non ha bisogno di eccesso di dettaglio operativo né di una presentazione edulcorata.",
+  "punti": [
+   { "h": "Non conformità e azioni correttive", "d": "Non contare rilievi come colpe: capire se il sistema scopre i propri problemi e riduce la ricorrenza. Un numero basso può indicare stabilità, o scarsa capacità di rilevare criticità." },
+   { "h": "Monitoraggio e misurazione", "d": "Le metriche significative già imparate: non riversare ogni dettaglio, portare ciò che illumina la prestazione. Non «i backup vanno quasi sempre bene», ma l'andamento dei test di ripristino." },
+   { "h": "Risultati di audit interno", "d": "Non riepilogare ogni verifica: far emergere pattern. Ricorrenze, aree migliorate, cause trasversali come ruoli poco chiari o eccezioni mal governate. Una lente strutturata, non un archivio." },
+   { "h": "Il raggiungimento degli obiettivi", "d": "Non basta «raggiunto o non raggiunto»: quanto manca, perché manca, se l'obiettivo resta coerente col contesto attuale." }
+  ]
+ },
+ {
+  "id": "27001_m08_s015",
+  "layout": "punti",
+  "kicker": "9.3 · Ingressi",
+  "titolo": "Feedback, rischio, miglioramento",
+  "intro": "L'ultimo gruppo collega il sistema al suo ambiente e al suo futuro: se letto bene, l'SGSI non si limita a registrare prestazioni passate — comincia a capire dove sta andando e cosa cambiare prima che il problema diventi evidente.",
+  "punti": [
+   { "h": "Il feedback delle parti interessate", "d": "Non solo reclami: richieste ricorrenti, difficoltà del personale, apprezzamenti. La procedura più severa sugli accessi riduce le eccezioni, ma i responsabili di progetto gestiscono le urgenze con percorsi informali." },
+   { "h": "I risultati della valutazione del rischio", "d": "Non se l'analisi è stata fatta, ma cosa racconta oggi: rischi nuovi, rischi saliti per cambio di processi, rischi ridotti da trattamenti efficaci. Rischio e prestazione non su binari separati." },
+   { "h": "Lo stato del piano di trattamento", "d": "Le misure cambiano davvero il profilo di rischio? Il nuovo sistema di identità «completato» sul piano progettuale, ma molte applicazioni critiche fuori integrazione: trattamento solo parzialmente efficace." },
+   { "h": "Le opportunità di miglioramento", "d": "Oltre la correzione dei problemi: rendere il sistema più semplice, robusto, tempestivo. Da un incidente, da una buona pratica di un'unità, da una tecnologia, da una semplificazione che riduce aggiramenti." }
+  ]
+ },
+ {
+  "id": "27001_m08_s016",
+  "layout": "punti",
+  "kicker": "9.3 · Esiti",
+  "titolo": "Decisioni, cambiamenti, evidenze",
+  "intro": "Da quella stanza deve uscire qualcosa di concreto: decisioni sulle opportunità di miglioramento e su ogni esigenza di cambiamento, con informazioni documentate che ne diano evidenza. La differenza tra una riunione informativa e un vero riesame.",
+  "punti": [
+   { "h": "Decisione, non auspicio", "d": "«Sarebbe utile rafforzare» non è una decisione. Una decisione orienta: conferma, accelera, ricalibra, chiede approfondimenti, modifica una priorità. Dopo il riesame, si sa cosa si farà di diverso." },
+   { "h": "Dalla constatazione al governo", "d": "«La continuità merita attenzione» è una constatazione. «Ridefinire il programma di test di ripristino, includere scenari realistici, assegnare un coordinamento, rivedere le priorità dei sistemi» è governo." },
+   { "h": "I cambiamenti all'SGSI", "d": "Non solo grandi trasformazioni: modifica dei criteri per le eccezioni, nuova frequenza di riesame, metriche più significative, rafforzamento di un punto debole emerso dagli audit." },
+   { "h": "Le tracce nel tempo", "d": "Se guardo il riesame precedente e i mesi successivi, vedo tracce delle decisioni assunte? Se sì, forte indizio di efficacia; se no, un passaggio formale." }
+  ]
+ },
+ {
+  "id": "27001_m08_s017",
+  "layout": "punti",
+  "kicker": "Esercizio · Phishing",
+  "titolo": "Oltre il numero dei click",
+  "intro": "Il tasso di click scende dal 12% al 9% al 7% su tre trimestri: molti si fermerebbero qui. Non confondere un segnale positivo con una prova definitiva di efficacia: i dati diventano azione solo quando vengono letti insieme, non in isolamento.",
+  "punti": [
+   { "h": "La comparabilità", "d": "La prima simulazione era molto credibile, la terza conteneva errori linguistici evidenti: il calo dei click può dipendere da prove progressivamente più facili, non da maggiore consapevolezza." },
+   { "h": "Il secondo indicatore", "d": "Nello stesso periodo le segnalazioni spontanee scendono da 30 a 13. Se le persone sono più attente, perché segnalano meno? Forse cancellano senza segnalare, forse il canale è percepito lento." },
+   { "h": "Il perimetro", "d": "Molti collaboratori esterni non partecipano ai moduli formativi pur avendo accesso a caselle e documenti: le metriche del personale interno migliorano, ma una parte dell'ecosistema resta esposta." },
+   { "h": "La decisione", "d": "Rivedere la progettazione delle simulazioni, migliorare il canale di segnalazione, ampliare la formazione ai collaboratori esterni con accessi significativi." }
+  ]
+ },
+ {
+  "id": "27001_m08_s018",
+  "layout": "punti",
+  "kicker": "Esercizio · Patching",
+  "titolo": "Il perimetro è davvero completo?",
+  "intro": "Il 96% delle vulnerabilità alte chiuso entro il termine, stabile da mesi: la direzione lo considera prova forte di efficacia. La prima domanda non è quanto vale il numero, ma che cosa entra davvero nel conteggio. Una metrica ad alta performance può essere corretta e insieme insufficiente.",
+  "punti": [
+   { "h": "L'esclusione del perimetro", "d": "L'indicatore include solo i sistemi della piattaforma centrale: fuori restano server specialistici, appliance di rete, macchine dei team di sviluppo. Descrive la parte più governata, non l'intero perimetro esposto." },
+   { "h": "La frequenza di scansione", "d": "Le vulnerabilità alte rilevate calano, ma le scansioni sono passate da settimanali a mensili: meno occasioni di vederle, non necessariamente meno rischio." },
+   { "h": "Le eccezioni", "d": "Numericamente basse, ma molte restano aperte più del previsto e prorogate con motivazioni ripetitive: il processo di deroga assorbe rischio senza lettura critica sufficiente." },
+   { "h": "Efficacia nel perimetro ≠ presidio complessivo", "d": "Nel perimetro coperto il processo mostra buoni risultati; ma la lettura è incompleta senza sistemi fuori piattaforma, ritmo di rilevazione, qualità delle eccezioni." }
+  ]
+ },
+ {
+  "id": "27001_m08_s019",
+  "layout": "punti",
+  "kicker": "Esercizio · Backup",
+  "titolo": "Il ripristino regge davvero?",
+  "intro": "Il 99% dei job notturni completato con successo, mostrato in apertura di ogni report: percepito come segnale forte. Ma job completato vuol dire che la copia è arrivata a termine — non che i dati siano consistenti o il ripristino praticabile nei tempi richiesti.",
+  "punti": [
+   { "h": "Attività ≠ efficacia", "d": "Il passaggio da «attività eseguita» a «efficacia del controllo» è centrale: hai una metrica eccellente sulla produzione della copia, non sulla resilienza del servizio." },
+   { "h": "I test di restore", "d": "Pochi, per lo più su file singoli o ambienti non critici. Quando è stato simulato il recupero di un'applicazione centrale con dipendenze, il tempo è risultato molto superiore alle attese del business." },
+   { "h": "Il pattern ricorrente", "d": "La maggior parte dei fallimenti residui ricade sempre sugli stessi sistemi periferici: tollerati perché l'impatto quotidiano sembra basso, si trascinano nel tempo. Il dato aggregato rassicura, la ricorrenza no." },
+   { "h": "L'indicatore favorevole", "d": "Spesso mostrato perché disponibile e comprensibile; i test realistici di ripristino arrivano dopo e portano notizie meno rassicuranti. Un riesame maturo li vuole entrambi." }
+  ]
+ },
+ {
+  "id": "27001_m08_s020",
+  "layout": "punti",
+  "kicker": "Esercizio · Accessi",
+  "titolo": "Che cosa stai davvero misurando?",
+  "intro": "Il 98% degli accessi revocato entro il termine dopo cessazione o cambio ruolo: citato come prova di controllo maturo. La qualità di una metrica dipende dalla precisione della domanda sottostante — da quale evento parte il conteggio del tempo?",
+  "punti": [
+   { "h": "Il punto di partenza", "d": "Il conteggio parte dall'apertura del ticket, non dalla cessazione effettiva. Se il ticket è aperto in ritardo, la metrica resta ottima mentre l'esposizione reale si allunga: misuri la velocità dopo la segnalazione." },
+   { "h": "Le eccezioni invisibili", "d": "Posizioni tecniche e fornitori privilegiati generano proroghe e richieste urgenti, gestite in un registro separato: il 98% descrive le utenze standard, proprio i casi più delicati restano fuori dal cruscotto." },
+   { "h": "L'integrazione dei sistemi", "d": "Gli accessi di dominio revocati nei tempi, ma alcune utenze applicative locali restano attive per giorni perché dipendono da amministratori locali o fornitori. L'indicatore è più stretto del rischio." },
+   { "h": "Il giudizio equilibrato", "d": "Il processo di chiusura, una volta ricevuta la richiesta, è rapido; ma la metrica non copre i ritardi di attivazione, le eccezioni privilegiate, i sistemi locali." }
+  ]
+ },
+ {
+  "id": "27001_m08_s021",
+  "layout": "punti",
+  "kicker": "Esercizio · Incidenti",
+  "titolo": "Meno incidenti, o meno capacità di vederli?",
+  "intro": "Gli incidenti registrati scendono da 24 a 16 a 10: la lettura intuitiva è «meno incidenti, prestazioni migliori». La domanda giusta: è un miglioramento reale, o una diversa capacità di rilevare, classificare e segnalare? Un numero basso non è automaticamente prova di efficacia.",
+  "punti": [
+   { "h": "Il criterio cambiato", "d": "Eventi che prima entravano come incidenti ora sono trattati come anomalie operative e chiusi in un flusso separato: il calo dipende in parte dal perimetro di conteggio, non dallo stato della sicurezza." },
+   { "h": "Il filtro a monte", "d": "Il tempo di presa in carico migliora, ma molti casi arrivano già selezionati dal service desk che risolve in autonomia gli eventi minori: il team è più rapido sui casi che riceve." },
+   { "h": "Le segnalazioni spontanee", "d": "Diminuiscono in parallelo: il canale è percepito lento, molti avvisano il referente invece del processo ufficiale. Alcuni eventi non arrivano al conteggio centrale." },
+   { "h": "Gli eventi ad impatto alto", "d": "Pochi, ma non calano con la stessa velocità del totale: si abbassano soprattutto i casi medi e bassi. Il sistema sta migliorando, o perdendo sensibilità sugli eventi minori?" }
+  ]
+ },
+ {
+  "id": "27001_m08_s022",
+  "layout": "punti",
+  "kicker": "Esercizio · Fornitori",
+  "titolo": "Il rischio di terza parte è sotto controllo?",
+  "intro": "Il 95% dei fornitori critici valutato entro l'anno, in verde nel report. Chi rientra davvero nella categoria, e cosa significa valutato? Le metriche sono significative quando descrivono con fedeltà il rischio che l'organizzazione cerca di governare.",
+  "punti": [
+   { "h": "Il perimetro formale", "d": "Critici sono soprattutto i fornitori già noti con contratto quadro. Restano meno visibili soggetti con accessi tecnici occasionali, piccoli partner, consulenti che trattano dati sensibili fuori dal processo ordinario." },
+   { "h": "Il significato di «valutato»", "d": "Il dato non distingue tra valutazione completa, auto-dichiarazione non approfondita e riesame di aggiornamento: mescola livelli di affidabilità diversi in un'impressione di omogeneità che non esiste." },
+   { "h": "Le azioni aperte", "d": "I piani di miglioramento accettati restano senza verifica chiara di chiusura: puoi aver valutato quasi tutti, ma se le debolezze non sono seguite, il rischio residuo resta alto." },
+   { "h": "Il contesto che corre", "d": "L'esternalizzazione accelera: i fornitori con accesso crescono più della capacità di valutarli, ma il report usa la fotografia iniziale. Il numero è in ritardo sul cambiamento." }
+  ]
+ },
+ {
+  "id": "27001_m08_s023",
+  "layout": "flusso",
+  "kicker": "Verificare il capitolo 9",
+  "titolo": "Cerca il ciclo che funziona",
+  "intro": "L'errore più comune è cercare prove isolate: un cruscotto, un rapporto, un verbale, e concludere che il requisito è coperto. Il valore emerge quando vedi il ciclo completo. Il tuo compito non è accumulare documenti: è capire se le parti si parlano tra loro.",
+  "passi": [
+   { "h": "Si decide cosa osservare", "d": "Monitoraggio e misurazione su processi, controlli e risultati che contano davvero." },
+   { "h": "Si raccoglie con metodo", "d": "Dati validi, confrontabili, ripetibili. Una metrica significativa compare nel riesame, o resta confinata a un report operativo?" },
+   { "h": "Si verifica a intervalli", "d": "L'audit interno dove il sistema è importante o fragile; i risultati riportati ai responsabili pertinenti e riletti in direzione." },
+   { "h": "La direzione decide", "d": "Le decisioni tornano a influenzare cosa viene monitorato, con quale frequenza, con quali priorità. Se il flusso è leggibile, l'SGSI è maturo; se ogni pezzo esiste da solo, la conformità è fragile." }
+  ]
+ },
+ {
+  "id": "27001_m08_s024",
+  "layout": "punti",
+  "kicker": "Verifica · 9.1",
+  "titolo": "Smascherare numeri vuoti",
+  "intro": "Non chiedere subito quali metriche esistono, ma perché esistono proprio quelle. Trasforma ogni grafico in una conversazione sul sistema: perché misuriamo questo, come, quando, chi trae conclusioni, quale decisione può derivarne.",
+  "punti": [
+   { "h": "L'oggetto", "d": "Qual è il legame con processi, controlli, obiettivi o rischi rilevanti? Se emergono indicatori scelti perché facili da estrarre, la verifica entra subito in una zona debole." },
+   { "h": "Il metodo", "d": "Da dove arriva, con quale regola, chi verifica la fonte, come si trattano casi dubbi. Risultati validi significa anche confrontabili e ripetibili." },
+   { "h": "Tempo e ruoli", "d": "Quando si misura e si valuta, coerente con la velocità del rischio; chi produce, analizza, valuta. I due estremi: tutto nel team operativo che si autogiudica, o una funzione centrale distante e sovraccarica." },
+   { "h": "Le evidenze", "d": "Non solo se esistono registrazioni, ma cosa dimostrano: che il monitoraggio è avvenuto? Un andamento? L'efficacia di un controllo? Una decisione? Più sali, più il sistema è credibile." }
+  ]
+ },
+ {
+  "id": "27001_m08_s025",
+  "layout": "punti",
+  "kicker": "Verifica · 9.2",
+  "titolo": "Programma, imparzialità, reporting",
+  "intro": "Il punto 9.2 non ti chiede di ammirare un calendario: capire se l'audit interno produce informazioni affidabili su conformità ed efficace attuazione. Tre livelli: programma, singole verifiche, uso dei risultati. Un modo efficace: seguire una verifica campione dall'inizio alla fine.",
+  "punti": [
+   { "h": "Il programma", "d": "Pianificazione mantenuta nel tempo, non iniziative occasionali. Non basta che frequenza, metodi e responsabilità siano elencati: capire la logica. Un'area critica trattata come una marginale = presidio di superficie." },
+   { "h": "La singola verifica", "d": "Obiettivi, criteri e campo chiari. Un buon rapporto è quasi sempre il riflesso di una buona progettazione iniziale." },
+   { "h": "Obiettività e imparzialità", "d": "Non una perfezione irrealistica, ma il rischio di autoreferenzialità riconosciuto e trattato: chi verifica un processo ne è anche responsabile? Esistono team misti o riesami incrociati?" },
+   { "h": "Il reporting e le evidenze", "d": "Risultati riportati ai responsabili pertinenti in modo utile. E prove sia dell'attuazione del programma sia dei risultati — senza segni di ricezione, manca la chiusura del ciclo." }
+  ]
+ },
+ {
+  "id": "27001_m08_s026",
+  "layout": "punti",
+  "kicker": "Verifica · 9.3",
+  "titolo": "Sostanziale o rito documentato?",
+  "intro": "Non stai più osservando dati o verifiche interne: stai cercando se l'SGSI è governato dall'alto in modo consapevole. Avviene a intervalli pianificati è la base necessaria; la differenza emerge nella qualità di ingressi ed esiti.",
+  "punti": [
+   { "h": "La continuità", "d": "Viene considerato lo stato delle azioni dei riesami precedenti? Un buon riesame non riparte da zero: tiene memoria delle decisioni e ne valuta l'avanzamento." },
+   { "h": "Il contesto e gli andamenti", "d": "Cambiamenti interni ed esterni, richieste delle parti interessate; e trend su non conformità, monitoraggio, audit, obiettivi. Se i verbali restano identici anno dopo anno, segnale di debolezza." },
+   { "h": "Rischio e miglioramento", "d": "Feedback, risultati della valutazione del rischio, stato del piano di trattamento, opportunità di miglioramento. Se restano ai margini, il riesame è descrittivo invece che governante." },
+   { "h": "Il test finale", "d": "Prendendo un tema del riesame precedente, vedi nei mesi successivi effetti reali su priorità, monitoraggio, audit o trattamento? Se sì, sostanza; se no, un rito ben documentato." }
+  ]
+ },
+ {
+  "id": "27001_m08_s027",
+  "layout": "cards",
+  "kicker": "Sintesi",
+  "titolo": "Dalle metriche alle decisioni",
+  "intro": "Il capitolo 9 è una catena logica: si decide cosa osservare, si costruisce monitoraggio con metodi validi, si stabiliscono tempi e ruoli, si innesta l'audit interno, si porta tutto nel riesame di direzione. Tre distinzioni tengono saldo il cuore del modulo.",
+  "cards": [
+   { "h": "Attività ≠ efficacia", "d": "Un backup eseguito non dimostra capacità di ripristino; una formazione erogata non dimostra cambiamento di comportamenti; un questionario ai fornitori compilato non equivale a rischio sotto controllo." },
+   { "h": "Dato ≠ metodo", "d": "Le metriche valgono solo se sai come sono costruite, quale perimetro coprono, quando sono lette e chi le interpreta. Un numero favorevole può raccontare una realtà parziale." },
+   { "h": "Documentazione ≠ governo", "d": "Un archivio ricco non basta: devi vedere il passaggio dai dati alla valutazione, dalle verifiche al riesame, dalle decisioni ai cambiamenti. Se ogni parte vive da sola, la conformità è fragile." },
+   { "h": "L'abitudine mentale", "d": "Non fermarti al numero appariscente: cosa entra nel conteggio, cosa resta fuori, quale metodo, quali trend, quale decisione. Vale più di molte formule memorizzate." },
+   { "h": "La traccia di verifica", "d": "9.1 oggetti/metodi/tempi/ruoli/evidenze; 9.2 programma/criteri/imparzialità/reporting; 9.3 ingressi/andamenti/decisioni/tracce. Un filo che non si lascia sedurre dalle presentazioni cosmetiche." }
+  ]
+ },
+ {
+  "id": "27001_m08_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 8",
+  "modNum": "08",
+  "titolo": "Misurare serve solo se poi migliori",
+  "punti": [
+   { "h": "Lo sguardo nuovo", "d": "Non ti limiti a vedere numeri, verbali e rapporti: sai collegarli. Questa capacità di collegamento fa crescere davvero il profilo professionale." },
+   { "h": "La domanda guida", "d": "L'SGSI sta solo registrando attività, o sta davvero valutando le proprie prestazioni per migliorare? Attività vs efficacia, dato vs metodo, report vs decisione." },
+   { "h": "Le cautele", "d": "Diffida dei numeri troppo belli senza perimetro; dei trend che migliorano quando il metodo è cambiato in silenzio; dei riesami che commentano molto e decidono poco." },
+   { "h": "Ma non ingiusto", "d": "Non essere severo con dati parziali ma onesti: spesso la maturità si vede proprio nella capacità di riconoscere i limiti delle proprie metriche e migliorarle apertamente." },
+   { "h": "Un sistema di apprendimento", "d": "La valutazione delle prestazioni non è una collezione di formalità: è dove la sicurezza smette di essere solo progettazione di controlli e diventa governo del loro funzionamento nel tempo." }
+  ],
+  "prossimo": {
+   "modulo": "09",
+   "titolo": "Miglioramento e le non conformità tipiche",
+   "testo": "Che cosa accade quando dalla valutazione emergono scostamenti, e come diventano azioni correttive."
+  }
+ }
+]
