@@ -54,6 +54,14 @@ const SYS =
   "Valuta due assi da 1 a 5:\n" +
   "PRECISIONE: il contenuto a schermo è corretto e fedele alla narrazione (5=nessun errore né invenzione; " +
   "1=errori o affermazioni non supportate dalla narrazione).\n" +
+  "  REGOLA DURA — questi sono ERRORI FATTUALI e impongono precisione 1-2 (mai 3+):\n" +
+  "   • una voce di elenco INVENTATA o non presente nel copione;\n" +
+  "   • un CONTEGGIO sbagliato (es. dice 'sette fonti' ma una voce è inventata o ne manca una);\n" +
+  "   • voci di elenco SCAMBIATE, fuse o attribuite al numero sbagliato;\n" +
+  "   • numeri di norma, anni, edizioni, numeri di clausola ERRATI;\n" +
+  "   • definizioni alterate o termini tecnici sbagliati.\n" +
+  "  Le semplici OMISSIONI (la slide riassume e tralascia dettagli presenti solo nella voce) NON sono " +
+  "errori: in quel caso la precisione resta 4-5. Distingui con cura errore-fattuale vs omissione.\n" +
   "CONTESTUALITÀ: la slide copre i concetti CHIAVE della narrazione ed è on-topic e coerente col titolo " +
   "(5=centra i punti giusti; 1=fuori tema, superficiale o incoerente).\n" +
   "Rispondi SOLO con JSON: " +
