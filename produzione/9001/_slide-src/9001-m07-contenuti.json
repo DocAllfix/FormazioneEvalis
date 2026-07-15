@@ -1,0 +1,397 @@
+[
+  {
+    "id": "9001_m07_s001",
+    "layout": "apertura",
+    "corsoLabel": "ISO 9001 · Sistemi di gestione per la qualità",
+    "kicker": "Modulo 07",
+    "eyebrow": "Le attività operative · seconda parte",
+    "titolo": "Dalla preparazione alla realizzazione",
+    "testo": "Il territorio del Fare del ciclo PDCA. Un'organizzazione dice la verità su sé stessa nel modo in cui gestisce un output difettoso, molto più che nei suoi bei documenti iniziali. Un sistema maturo controlla le condizioni; uno fragile spera che tutto vada bene.",
+    "agenda": [
+      "Produzione ed erogazione in condizioni controllate",
+      "Identificazione, rintracciabilità, proprietà, preservazione",
+      "Il rilascio: chi autorizza e con quali evidenze",
+      "Il controllo degli output non conformi",
+      "Il flusso completo e dove guardare in verifica"
+    ]
+  },
+  {
+    "id": "9001_m07_s002",
+    "layout": "split",
+    "kicker": "Condizioni controllate",
+    "titolo": "Nulla lasciato al caso",
+    "lead": "Realizzare qualcosa una volta, bene, per fortuna o per bravura del singolo, non è ciò che chiede un sistema. La differenza tra un colpo di fortuna e un processo sotto controllo è enorme per chi deve dare fiducia.",
+    "punti": [
+      { "h": "Prevedibile e ripetibile", "d": "Realizzare sempre allo stesso modo, indipendentemente da chi è di turno." },
+      { "h": "Prodotti e servizi insieme", "d": "Lo sportello, la sala, l'aula, il reparto: la qualità si produce mentre si eroga." },
+      { "h": "Per quanto applicabile", "d": "Non ogni voce vale per tutti: capire quali condizioni sono rilevanti per quel processo." }
+    ]
+  },
+  {
+    "id": "9001_m07_s003",
+    "layout": "cards",
+    "kicker": "Condizioni controllate · 1",
+    "titolo": "Informazioni, misure, controlli",
+    "intro": "I criteri di accettazione sono la traduzione operativa dei requisiti, e vanno fissati prima di controllare: chi decide durante la lavorazione cosa è accettabile cambia il metro mentre misura.",
+    "cards": [
+      { "h": "Informazioni documentate", "d": "Istruzioni e specifiche disponibili nel punto e nel momento in cui servono, non chiuse in un ufficio." },
+      { "h": "Risorse di misura idonee", "d": "Uno strumento inadatto o non tarato non misura, illude." },
+      { "h": "Controlli in fasi appropriate", "d": "Nei momenti giusti del percorso, non solo alla fine, per intercettare la deriva mentre è piccola." }
+    ]
+  },
+  {
+    "id": "9001_m07_s004",
+    "layout": "punti",
+    "kicker": "Condizioni controllate · 2",
+    "titolo": "Persone, ambienti, processi speciali",
+    "intro": "La norma non dice solo 'state attenti': chiede di progettare il lavoro perché l'errore sia difficile.",
+    "punti": [
+      { "h": "Infrastrutture e ambienti idonei", "d": "L'ambiente non è mai un dettaglio estetico: influisce direttamente sul risultato." },
+      { "h": "Persone competenti e qualificate", "d": "La persona giusta con la qualifica giusta al posto giusto." },
+      { "h": "Validazione dei processi speciali", "d": "Quando l'output non si può verificare dopo (una saldatura interna): fidarsi del processo validato." },
+      { "h": "Prevenzione dell'errore umano", "d": "Connettori a un solo verso, liste che impediscono di saltare passaggi, barriere intelligenti." }
+    ]
+  },
+  {
+    "id": "9001_m07_s005",
+    "layout": "confronto",
+    "kicker": "Gli output",
+    "titolo": "Identificazione e rintracciabilità",
+    "intro": "Imparentate ma non identiche. La rintracciabilità che funziona rende un richiamo chirurgico; assente, lo rende impossibile o rovinoso.",
+    "a": {
+      "h": "Identificazione",
+      "sub": "Che cosa è",
+      "punti": [
+        { "d": "Sapere in ogni momento cosa è quella cosa: etichetta, colore, area dedicata." },
+        { "d": "Anche lo stato: da controllare, controllato e buono, da scartare." }
+      ]
+    },
+    "b": {
+      "h": "Rintracciabilità",
+      "sub": "La sua storia",
+      "punti": [
+        { "d": "Ricostruire da dove viene, quale lotto, quali materiali, chi e quando." },
+        { "d": "Richiesta solo quando è un requisito: legge, contratto o scelta." }
+      ]
+    }
+  },
+  {
+    "id": "9001_m07_s006",
+    "layout": "split",
+    "kicker": "Il tema della fiducia",
+    "titolo": "La proprietà del cliente e dei fornitori",
+    "lead": "Materiali, strumenti prestati, un sito, e sempre più spesso proprietà intellettuali e dati personali. Comunicare spontaneamente un danno è integrità, non debolezza.",
+    "punti": [
+      { "h": "Identificare", "d": "Sapere cosa appartiene al cliente e distinguerlo da ciò che è proprio." },
+      { "h": "Verificare", "d": "Controllare che ciò che si riceve sia integro e adeguato." },
+      { "h": "Proteggere e salvaguardare", "d": "Custodire da danni, perdite e usi impropri." },
+      { "h": "Se danneggiata: riferire e registrare", "d": "Niente silenzi né danni nascosti: comunicarlo e conservarne traccia." }
+    ]
+  },
+  {
+    "id": "9001_m07_s007",
+    "layout": "punti",
+    "kicker": "Gli output",
+    "titolo": "La preservazione",
+    "intro": "Non basta fare bene una cosa: bisogna fare in modo che resti buona finché arriva a destinazione. Una catena in cui basta un anello debole. Vale anche per servizi e informazioni. Conta l'effetto reale sul prodotto.",
+    "punti": [
+      { "h": "Movimentazione", "d": "Spostare e maneggiare gli output senza danneggiarli." },
+      { "h": "Controllo della contaminazione", "d": "Decisivo dove la pulizia conta: alimentare, farmaceutico, elettronica." },
+      { "h": "Imballaggio", "d": "Protegge durante trasporto e stoccaggio." },
+      { "h": "Stoccaggio", "d": "Come e dove si conservano le cose, con le scadenze." },
+      { "h": "Trasporto", "d": "Il viaggio verso la destinazione (la catena del freddo, ininterrotta)." },
+      { "h": "Protezione", "d": "Da tutto ciò che può nuocere, oggetti fisici e dati." }
+    ]
+  },
+  {
+    "id": "9001_m07_s008",
+    "layout": "punti",
+    "kicker": "Le attività post-consegna",
+    "titolo": "La responsabilità non finisce alla consegna",
+    "intro": "Non una misura uguale per tutti: l'estensione è tanto maggiore quanto più il prodotto è delicato, duraturo, pericoloso e regolato. Può comprendere garanzia, manutenzione, e persino il riciclo o lo smaltimento finale.",
+    "punti": [
+      { "h": "I requisiti cogenti", "d": "Obblighi di legge su assistenza, garanzia, sicurezza nel tempo." },
+      { "h": "Le conseguenze indesiderate", "d": "Più un prodotto può far danni, più il dopo va presidiato." },
+      { "h": "Natura, uso e durata", "d": "Un bene per vent'anni chiede una presenza diversa da un usa e getta." },
+      { "h": "I requisiti del cliente", "d": "Ciò che il cliente si aspetta o ha pattuito." },
+      { "h": "Il ritorno del cliente", "d": "Una fonte preziosa per capire come sta andando davvero." }
+    ]
+  },
+  {
+    "id": "9001_m07_s009",
+    "layout": "split",
+    "kicker": "Produzione",
+    "titolo": "Il controllo delle modifiche",
+    "lead": "Una modifica non deve rompere ciò che prima funzionava. Cambiare prima e vedere poi cosa succede è esattamente ciò che la norma vuole scongiurare. Nella misura necessaria: dosare l'attenzione sull'impatto.",
+    "punti": [
+      { "h": "I risultati del riesame", "d": "Cosa si è deciso e perché, prima di applicare il cambiamento." },
+      { "h": "Chi ha autorizzato", "d": "Una modifica senza responsabile chiaro è una modifica orfana." },
+      { "h": "Le azioni necessarie", "d": "Una nuova taratura, una prova, un aggiornamento delle istruzioni." }
+    ]
+  },
+  {
+    "id": "9001_m07_s010",
+    "layout": "evidenza",
+    "kicker": "Il rilascio",
+    "eyebrow": "Un cancello, non un corridoio",
+    "titolo": "Prima si completano le verifiche, poi si consegna. Mai il contrario",
+    "testo": "Rilasciare non è consegnare: è dichiarare, con un atto responsabile, che l'output ha superato i controlli previsti. Il punto di arrivo di verifiche pianificate, non improvvisate. Una porta stretta resta aperta: il rilascio prima del completamento è possibile solo col benestare di chi ne ha l'autorità e, dove serve, del cliente — una deroga con un nome e una firma, non una scorciatoia."
+  },
+  {
+    "id": "9001_m07_s011",
+    "layout": "split",
+    "kicker": "Il rilascio",
+    "titolo": "Chi lo autorizza",
+    "lead": "Il filo del responsabile identificabile che attraversa tutto il capitolo. Chi rilascia si assume una garanzia col proprio nome dietro: le verifiche sono complete e i criteri soddisfatti.",
+    "punti": [
+      { "h": "Una persona autorizzata", "d": "Non un reparto generico, non un ufficio impersonale: chi ha la facoltà formale." },
+      { "h": "Stabilita in anticipo", "d": "Per ciascun tipo di prodotto o servizio, secondo complessità e rischio." },
+      { "h": "La domanda in verifica", "d": "Chi ha autorizzato la partenza di questo lotto? Se nessuno sa dirlo, è una fragilità." }
+    ]
+  },
+  {
+    "id": "9001_m07_s012",
+    "layout": "split",
+    "kicker": "Il rilascio",
+    "titolo": "Le informazioni documentate",
+    "lead": "Ciò che non lascia traccia è come se non fosse accaduto: il rilascio più accurato, se non documentato, è indistinguibile da uno mai avvenuto. Due elementi che formano una coppia potente.",
+    "punti": [
+      { "h": "L'evidenza della conformità", "d": "Non l'affermazione, ma la prova che i criteri di accettazione erano rispettati: rapporto, misura registrata." },
+      { "h": "La riferibilità a chi ha autorizzato", "d": "Guardando i documenti si deve poter dire chi ha dato il via libera." }
+    ]
+  },
+  {
+    "id": "9001_m07_s013",
+    "layout": "split",
+    "kicker": "Il rilascio",
+    "titolo": "Nei servizi e nei casi difficili",
+    "lead": "Quando il servizio si produce e si consuma nello stesso istante, non c'è un momento intermedio per fermarsi. Il cliente è spesso presente: ogni errore avviene sotto i suoi occhi, non c'è quasi mai una seconda occasione.",
+    "punti": [
+      { "h": "Se non puoi controllare dopo, controlla prima", "d": "Il rilascio si distribuisce lungo tutto il processo, invece di concentrarsi alla fine." },
+      { "h": "Le condizioni controllate diventano decisive", "d": "Competenza di chi eroga, informazioni, ambiente, controlli durante l'erogazione." },
+      { "h": "La validazione del processo", "d": "Quando non puoi ispezionare il risultato, dai prima solide garanzie su ciò che lo genera." }
+    ]
+  },
+  {
+    "id": "9001_m07_s014",
+    "layout": "split",
+    "kicker": "Output non conformi",
+    "titolo": "Identificare e isolare",
+    "lead": "La non conformità non è il segno di un sistema malato: chi dichiara di non averne mai, spesso è solo chi non se ne accorge. Come una mela guasta nella cassetta: toglierla e metterla da parte ferma il danno.",
+    "punti": [
+      { "h": "Identificare", "d": "Riconoscere che l'output è non conforme e renderlo distinguibile da tutto il resto." },
+      { "h": "Tenere sotto controllo", "d": "Prevenire l'utilizzo o la consegna involontari: la vera posta in gioco è la sbadataggine." },
+      { "h": "Segregazione", "d": "Marcare con un segno inequivocabile e separare in un'area dedicata." }
+    ]
+  },
+  {
+    "id": "9001_m07_s015",
+    "layout": "punti",
+    "kicker": "Output non conformi",
+    "titolo": "Le azioni possibili",
+    "intro": "Calibrate su gravità e ricadute: un graffio estetico e una crepa strutturale chiedono risposte diverse. Spesso si combinano. Regola d'oro: dopo aver corretto, riverificare — un pezzo rilavorato è un nuovo output.",
+    "punti": [
+      { "h": "La correzione", "d": "Eliminare la non conformità: riparare, rilavorare, rifare." },
+      { "h": "Il contenimento", "d": "Segregare, restituire, sospendere: impedire che il problema si propaghi." },
+      { "h": "Informare il cliente", "d": "Quando la non conformità lo riguarda o deve poter decidere." },
+      { "h": "L'accettazione in concessione", "d": "Usare consapevolmente un output non del tutto conforme: la strada più delicata." }
+    ]
+  },
+  {
+    "id": "9001_m07_s016",
+    "layout": "confronto",
+    "kicker": "Output non conformi",
+    "titolo": "Concessione o occultamento",
+    "intro": "Il difetto fisico può essere identico; la differenza è tutta nella trasparenza e nella responsabilità della decisione. Una concessione è potente, e per questo pericolosa se usata male.",
+    "a": {
+      "h": "Concessione corretta",
+      "sub": "Alla luce del sole",
+      "punti": [
+        { "d": "Il difetto è riconosciuto, valutato accettabile in quel caso." },
+        { "d": "Autorizzata da chi ne ha il titolo, cliente informato, e registrata." }
+      ]
+    },
+    "b": {
+      "h": "Occultamento",
+      "sub": "In silenzio",
+      "punti": [
+        { "d": "Lo stesso difetto fatto passare senza dirlo a nessuno." },
+        { "d": "Senza autorizzazione né registrazione: una violazione grave." }
+      ]
+    }
+  },
+  {
+    "id": "9001_m07_s017",
+    "layout": "split",
+    "kicker": "Output non conformi",
+    "titolo": "Quando la NC emerge dopo la consegna",
+    "lead": "La responsabilità non si spegne quando il prodotto esce dal cancello. Un difetto scoperto quando è già nelle case dei clienti richiede una reazione ben più complessa — ed è qui che la rintracciabilità paga i suoi dividendi.",
+    "punti": [
+      { "h": "La responsabilità continua", "d": "L'output è comunque non conforme, con rigore forse ancora maggiore." },
+      { "h": "Il richiamo mirato", "d": "Con la rintracciabilità si raggiungono esattamente i prodotti coinvolti, e solo quelli." },
+      { "h": "La tempestività", "d": "Più a lungo il difettoso resta in uso, più cresce il rischio che il danno si realizzi." }
+    ]
+  },
+  {
+    "id": "9001_m07_s018",
+    "layout": "cards",
+    "kicker": "Output non conformi",
+    "titolo": "Registrare la non conformità",
+    "intro": "Non una scocciatura burocratica: la memoria dell'organizzazione. Senza, ogni problema si ripete come se fosse la prima volta. Quattro elementi che formano un racconto completo — e la materia prima del miglioramento.",
+    "cards": [
+      { "h": "La descrizione", "d": "Cosa è andato storto, in modo chiaro e concreto: quale difetto, dove, di quale entità." },
+      { "h": "Le azioni adottate", "d": "Cosa si è fatto: corretto, segregato, restituito, scartato? Il cliente informato?" },
+      { "h": "Le concessioni ottenute", "d": "Se si è accettato l'output nonostante il difetto: qui la trasparenza prende corpo." },
+      { "h": "Chi ha l'autorità", "d": "Chi ha deciso come trattare la non conformità: il responsabile identificabile." }
+    ]
+  },
+  {
+    "id": "9001_m07_s019",
+    "layout": "flusso",
+    "kicker": "Un caso completo",
+    "titolo": "Gli output non conformi in azione",
+    "intro": "Una partita di finestre non tiene l'acqua. Segui il difetto lungo tutto il percorso: funziona come un organismo, non come adempimenti separati. Attenzione allo stato del prodotto: un cartellino, un'area dedicata, un elenco aggiornato.",
+    "passi": [
+      { "h": "Identificare e isolare", "d": "Cartellino rosso e area di quarantena: nessuno le spedisce per errore." },
+      { "h": "Valutare e decidere", "d": "La tenuta è essenziale: concessione esclusa, si sceglie la correzione." },
+      { "h": "Correggere e riverificare", "d": "Le guarnizioni rifatte ripassano la prova di tenuta, come pezzi nuovi." },
+      { "h": "Registrare tutto", "d": "Difetto, azioni, assenza di concessione, responsabile: la storia è ricostruibile." }
+    ]
+  },
+  {
+    "id": "9001_m07_s020",
+    "layout": "flusso",
+    "kicker": "La mappa mentale",
+    "titolo": "Il flusso operativo completo",
+    "intro": "Un fiume con ponti di controllo: l'acqua è il prodotto, i ponti i controlli, le chiuse i rilasci. Lungo le rive corre la rete degli output non conformi, pronta a raccogliere ciò che non va — anche dopo la consegna.",
+    "passi": [
+      { "h": "Ordine e riesame", "d": "Il cliente chiede, l'organizzazione verifica di poterlo fare e si impegna." },
+      { "h": "Produzione controllata", "d": "In condizioni controllate, con identificazione, rintracciabilità e preservazione." },
+      { "h": "Rilascio", "d": "Un autorizzato dichiara che l'output può andare, e lascia traccia." },
+      { "h": "Consegna", "d": "Solo dopo il rilascio l'output raggiunge il cliente." },
+      { "h": "Post-consegna", "d": "Garanzia, manutenzione, fino allo smaltimento: il viaggio non finisce alla consegna." }
+    ]
+  },
+  {
+    "id": "9001_m07_s021",
+    "layout": "punti",
+    "kicker": "Dove guardare · 1",
+    "titolo": "La produzione controllata",
+    "intro": "Il capitolo meno da scrivania e più da reparto: vai a vedere. Molte non conformità si vedono con gli occhi, non nei documenti. La misura giusta: questa condizione è davvero importante per la qualità di questo prodotto?",
+    "punti": [
+      { "h": "Le informazioni al posto di lavoro", "d": "L'istruzione è lì, aggiornata? O l'esperto lavora a memoria mentre il raccoglitore dorme?" },
+      { "h": "Gli strumenti tarati", "d": "Un'etichetta di taratura scaduta è un rilievo: decisioni su misure inaffidabili." },
+      { "h": "I controlli lungo il percorso", "d": "Intercettano i problemi presto, o si scommette tutto sull'ispezione finale?" },
+      { "h": "Persone e ambienti", "d": "Competenza o qualifica richiesta; ambiente idoneo al tipo di lavoro." },
+      { "h": "I processi speciali validati", "d": "Per quelli non verificabili dopo: esiste la prova che producono sistematicamente risultati buoni?" }
+    ]
+  },
+  {
+    "id": "9001_m07_s022",
+    "layout": "cards",
+    "kicker": "Dove guardare · 2",
+    "titolo": "Tracce, proprietà altrui, integrità",
+    "intro": "Tre temi che si verificano con i piedi e con gli occhi, non con le sole carte: la qualità vive dove le cose si fanno, si spostano e si conservano.",
+    "cards": [
+      { "h": "Rintracciabilità", "d": "La prova a ritroso e in avanti: se serve mezza giornata per capire dov'è finito un lotto, è una fragilità." },
+      { "h": "Proprietà del cliente", "d": "C'è qualcosa che appartiene ad altri? Cosa succede se si rovina? L'imbarazzo rivela un punto scoperto." },
+      { "h": "Preservazione", "d": "In magazzino e nei trasporti: un prodotto perfetto che si degrada diventa un problema di qualità." }
+    ]
+  },
+  {
+    "id": "9001_m07_s023",
+    "layout": "confronto",
+    "kicker": "Dove guardare · 3",
+    "titolo": "Il rilascio e i difetti gestiti",
+    "intro": "I due momenti più rivelatori: riguardano le decisioni, non solo l'esecuzione. Si verificano seguendo le decisioni — chi ha deciso, e su quali prove.",
+    "a": {
+      "h": "Il rilascio",
+      "sub": "Chi decide",
+      "punti": [
+        { "d": "L'evidenza della conformità e un responsabile riconoscibile, non un timbro anonimo." },
+        { "d": "Il punto debole classico: la consegna urgente che scavalca il collaudo." }
+      ]
+    },
+    "b": {
+      "h": "I difetti gestiti",
+      "sub": "La cultura",
+      "punti": [
+        { "d": "Identificati e isolati sul campo; il registro racconta la storia completa." },
+        { "d": "La riverifica dopo la correzione, e le concessioni trasparenti, non occulte." }
+      ]
+    }
+  },
+  {
+    "id": "9001_m07_s024",
+    "layout": "split",
+    "kicker": "La verifica tracciante",
+    "titolo": "Seguire un output lungo tutto il flusso",
+    "lead": "La tecnica più potente: scegli un output reale e camminagli accanto, dall'inizio alla fine. Un'organizzazione può preparare bei documenti, ma è molto più difficile fingere un intero flusso reale. Scegline uno significativo, e fatti accompagnare da chi lo ha prodotto.",
+    "punti": [
+      { "h": "Dall'ordine ai fornitori", "d": "Il riesame dei requisiti e il controllo di ciò che arriva dall'esterno." },
+      { "h": "La produzione controllata", "d": "Istruzioni al posto, strumenti tarati, competenza, controlli intermedi." },
+      { "h": "Rintracciabilità e preservazione", "d": "L'output è collegato ai lotti? È rimasto integro fino al cantiere?" },
+      { "h": "Il rilascio e le non conformità", "d": "La prova del collaudo e della firma; come è stato gestito ogni difetto." }
+    ]
+  },
+  {
+    "id": "9001_m07_s025",
+    "layout": "punti",
+    "kicker": "Le non conformità tipiche · 1",
+    "titolo": "Produzione e tracce",
+    "intro": "Quelle che imparerai a riconoscere quasi al volo. Non pesano tutte uguale: l'effetto reale sulla conformità e sui rischi guida il giudizio.",
+    "punti": [
+      { "h": "Produzione senza condizioni controllate", "d": "La qualità dipende dalla bravura del singolo: togli quella persona e il sistema crolla." },
+      { "h": "Rintracciabilità assente o rotta", "d": "Quando è un requisito e la traccia si spezza: un filo tagliato, inutile durante un richiamo." },
+      { "h": "Proprietà del cliente non gestita", "d": "Nessuno ha considerato cosa appartiene ad altri: sempre più spesso dati riservati." },
+      { "h": "Preservazione trascurata", "d": "Prodotti nati buoni che si degradano in silenzio, conservati male." }
+    ]
+  },
+  {
+    "id": "9001_m07_s026",
+    "layout": "punti",
+    "kicker": "Le non conformità tipiche · 2",
+    "titolo": "Rilascio e difetti",
+    "intro": "Gli ambiti dove i difetti pesano di più, perché riguardano le decisioni e la trasparenza. Quelle che toccano l'integrità dicono più di un cartellino mancante.",
+    "punti": [
+      { "h": "Rilascio prima delle verifiche", "d": "La più grave: si spedisce per fretta, senza autorizzazione formale." },
+      { "h": "Responsabile del rilascio mancante", "d": "Rilasciato, ma non si capisce chi ha autorizzato: un timbro impersonale." },
+      { "h": "Rilascio senza evidenza", "d": "Manca la prova della conformità ai criteri di accettazione." },
+      { "h": "Difettoso non separato dal buono", "d": "Senza cartellini né area dedicata: rischio di uso involontario, si vede a occhio." },
+      { "h": "Riverifica saltata", "d": "Il pezzo rilavorato torna nel flusso senza essere controllato di nuovo." },
+      { "h": "Concessione occulta o registrazione assente", "d": "Il difetto nascosto, o le NC che accadono senza lasciare traccia." }
+    ]
+  },
+  {
+    "id": "9001_m07_s027",
+    "layout": "cards",
+    "kicker": "Documentare bene",
+    "titolo": "Una non conformità solida",
+    "intro": "Una NC scritta male è attaccabile e sterile; una scritta bene è inoppugnabile e fa migliorare. Non confondere il sintomo con la causa, non proporre tu la soluzione, non gonfiare né sminuire. Precisa, ma non ostile: descrive un fatto, non giudica le persone.",
+    "cards": [
+      { "h": "Il requisito violato", "d": "Quale regola non è stata rispettata: senza, non hai una NC, hai un'opinione." },
+      { "h": "L'evidenza oggettiva", "d": "Il fatto concreto e verificabile, così che chiunque tornando sul posto potrebbe ritrovarlo." },
+      { "h": "Lo scostamento chiaro", "d": "Perché quel fatto viola quel requisito: requisito, fatto, conseguenza, la catena completa." }
+    ]
+  },
+  {
+    "id": "9001_m07_s028",
+    "layout": "chiusura",
+    "kicker": "Riepilogo · Modulo 07",
+    "modNum": "07",
+    "titolo": "È nella routine che i sistemi si rivelano",
+    "punti": [
+      { "h": "Condizioni controllate", "d": "Informazioni, strumenti, controlli, ambienti, persone, processi validati, barriere all'errore." },
+      { "h": "Tracce e proprietà", "d": "Identificazione e rintracciabilità, proprietà del cliente, preservazione." },
+      { "h": "Il rilascio", "d": "Prima le verifiche, poi la consegna; un responsabile e un'evidenza." },
+      { "h": "Gli output non conformi", "d": "Identificare, isolare, agire, riverificare; concessione trasparente, non occulta." },
+      { "h": "Il flusso e la verifica", "d": "Segui un output reale: è più difficile fingere un intero flusso." },
+      { "h": "Verso il checkpoint", "d": "Un'organizzazione dice la verità nel modo in cui gestisce un difetto." }
+    ],
+    "prossimo": {
+      "modulo": "08",
+      "titolo": "La valutazione delle prestazioni",
+      "testo": "Monitorare, misurare, analizzare: le verifiche interne e il riesame di direzione."
+    }
+  }
+]
