@@ -1,0 +1,390 @@
+[
+  {
+    "id": "9001_m10_s001",
+    "layout": "apertura",
+    "corsoLabel": "ISO 9001 · Sistemi di gestione per la qualità",
+    "kicker": "Modulo 10",
+    "eyebrow": "Dai requisiti alla verifica",
+    "titolo": "Prepararsi alla verifica",
+    "testo": "Il punto di vista cambia: dal costruire un sistema al saper accertare, con metodo e prove, se un'organizzazione lo rispetta. La regola d'oro: una verifica si vince prima di cominciarla. Chi improvvisa raccoglie prove deboli; chi è preparato guida il lavoro.",
+    "agenda": [
+      "Il programma, i suoi rischi, le competenze",
+      "La priorità per rischio e i processi critici",
+      "La preparazione: documenti, mappa, piano, tempo",
+      "La checklist: costruirla e usarla",
+      "Le evidenze attese, capitolo per capitolo",
+      "Le verifiche di prima, seconda e terza parte"
+    ]
+  },
+  {
+    "id": "9001_m10_s002",
+    "layout": "confronto",
+    "kicker": "Due cose diverse",
+    "titolo": "Programma e singola verifica",
+    "intro": "I requisiti sono della ISO 9001, il metodo per verificarli della ISO 19011: due norme diverse, non confonderle. Chi ragiona per singole verifiche vede alberi isolati; chi ragiona per programma vede il bosco.",
+    "a": {
+      "h": "Il programma",
+      "sub": "Il disegno complessivo",
+      "punti": [
+        { "d": "Un insieme di verifiche su un arco di tempo, per uno scopo." },
+        { "d": "Chi lo governa decide la strategia e assegna le risorse." }
+      ]
+    },
+    "b": {
+      "h": "La singola verifica",
+      "sub": "Un evento circoscritto",
+      "punti": [
+        { "d": "Una data, un luogo, un gruppo, un ambito, un rapporto." },
+        { "d": "La sua qualità dipende in gran parte dalle scelte del programma." }
+      ]
+    }
+  },
+  {
+    "id": "9001_m10_s003",
+    "layout": "punti",
+    "kicker": "Il programma",
+    "titolo": "I rischi da governare",
+    "intro": "Un programma non si giudica solo da ciò che decide di guardare, ma da quanto è consapevole di ciò che potrebbe minacciarlo. La norma chiede anche di cogliere le opportunità.",
+    "punti": [
+      { "h": "La pianificazione", "d": "Obiettivi vaghi, tempi mal calcolati, ambito definito male: il gruppo vaga senza direzione." },
+      { "h": "Le risorse", "d": "Persone insufficienti, competenze non adatte: un programma che promette ciò che non può mantenere." },
+      { "h": "I tempi", "d": "Giornate compresse, margini inesistenti: la fretta erode la profondità." },
+      { "h": "Il campionamento", "d": "Un campione mal scelto dichiara sano un sistema che nasconde problemi." },
+      { "h": "La riservatezza", "d": "L'accesso a dati sensibili gestito con poca attenzione." },
+      { "h": "L'obiettività", "d": "Legami con l'organizzazione o un giudizio già formato minano il programma alla radice." }
+    ]
+  },
+  {
+    "id": "9001_m10_s004",
+    "layout": "cards",
+    "kicker": "Le persone",
+    "titolo": "Le competenze del gruppo",
+    "intro": "Raramente una sola persona possiede tutto ad alto livello: il gruppo vale più della somma delle parti. Competenza non è saper tutto, è riconoscere con onestà i propri limiti.",
+    "cards": [
+      { "h": "La norma di riferimento", "d": "Non basta averla letta: capirne la logica e i legami. Chi non la padroneggia non sa cosa cercare." },
+      { "h": "Il settore e i processi", "d": "Chi ignora il mestiere del verificato si fa raccontare qualsiasi cosa." },
+      { "h": "Le tecniche del mestiere", "d": "Pianificare, raccogliere prove, condurre un colloquio, scrivere un rilievo difendibile." },
+      { "h": "Il comportamento personale", "d": "Equilibrio, ascolto, fermezza senza arroganza, integrità: spesso sottovalutato." }
+    ]
+  },
+  {
+    "id": "9001_m10_s005",
+    "layout": "punti",
+    "kicker": "Il programma",
+    "titolo": "Dare priorità in base al rischio",
+    "intro": "Non distribuire date in modo uniforme, come se ogni processo pesasse uguale: sarebbe comodo, ma cieco. Per ogni processo: quanto sarebbe grave un problema qui, e quanto è probabile? La priorità non è fissa per sempre.",
+    "punti": [
+      { "h": "L'impatto su cliente e prodotto", "d": "Ciò che tocca direttamente il risultato merita più attenzione." },
+      { "h": "La storia", "d": "Un processo che ha già generato non conformità o reclami va guardato più da vicino." },
+      { "h": "I cambiamenti", "d": "Una linea nuova, un fornitore appena cambiato: il nuovo non è ancora consolidato." },
+      { "h": "La complessità", "d": "Un processo intricato, con molte interfacce, offre più occasioni di errore." }
+    ]
+  },
+  {
+    "id": "9001_m10_s006",
+    "layout": "cards",
+    "kicker": "Il programma",
+    "titolo": "Riconoscere i processi critici",
+    "intro": "Critico è il processo il cui buon funzionamento incide direttamente sulla promessa fatta al cliente. Non farti abbagliare dalla visibilità: spesso i più critici sono i più umili, come una taratura. Se questo processo fallisse domani, quanto sarebbe grave?",
+    "cards": [
+      { "h": "Chi realizza il prodotto", "d": "Produzione, erogazione, controllo finale: qui un errore arriva dritto al cliente." },
+      { "h": "Chi li alimenta", "d": "Acquisti e fornitori (un materiale difettoso genera problemi a valle), progettazione." },
+      { "h": "Chi tiene in piedi il sistema", "d": "Gestione delle NC e azioni correttive: chi gestisce male i problemi è destinato a ripeterli." }
+    ]
+  },
+  {
+    "id": "9001_m10_s007",
+    "layout": "split",
+    "kicker": "Il programma",
+    "titolo": "Frequenza, copertura e ciclo",
+    "lead": "Una singola visita è una fotografia; un programma è un film. Nell'arco di un ciclo deve coprire tutto, ma con frequenze diverse. La prevedibilità totale è nemica della verifica: non per cogliere di sorpresa, ma per vedere il sistema com'è ogni giorno.",
+    "punti": [
+      { "h": "Coprire tutto nel ciclo", "d": "Come la manutenzione di una casa: non ogni stanza ogni giorno, ma nessuna trascurata nell'anno." },
+      { "h": "La frequenza traduce il rischio", "d": "Più un processo è critico, più stretto l'intervallo con cui torni." },
+      { "h": "Un pizzico di imprevedibilità", "d": "Evitare che l'organizzazione mostri solo ciò che ha avuto il tempo di sistemare." }
+    ]
+  },
+  {
+    "id": "9001_m10_s008",
+    "layout": "cards",
+    "kicker": "La singola verifica",
+    "titolo": "Obiettivi, estensione, campo",
+    "intro": "Tre coordinate da avere chiare prima di partire, dichiarate e concordate con l'organizzazione. Attenzione a due campi diversi: quello del sistema (dichiarato dall'organizzazione, oggetto della verifica) e quello della verifica (deciso da te). La tua verifica sta dentro il cerchio più grande, non può allargarlo.",
+    "cards": [
+      { "h": "Gli obiettivi", "d": "Perché la facciamo: accertare la conformità, la capacità, o un problema specifico." },
+      { "h": "L'estensione", "d": "Quanto in profondità e in ampiezza: una sede o tutte, un processo o l'intero sistema." },
+      { "h": "Il campo di applicazione", "d": "Che cosa rientra e che cosa resta fuori in questa occasione." }
+    ]
+  },
+  {
+    "id": "9001_m10_s009",
+    "layout": "split",
+    "kicker": "La preparazione",
+    "titolo": "Lo studio documentale",
+    "lead": "Prima ancora di incontrare una persona, ci si siede e si studia. La carta racconta le intenzioni, non i fatti: ti dice dove guardare, non che cosa troverai. Leggi come un investigatore, cerca le incoerenze e i punti vaghi proprio dove dovrebbero essere precisi.",
+    "punti": [
+      { "h": "Lo scopo preparatorio", "d": "Arrivare informato, costruire domande sensate e checklist mirate." },
+      { "h": "Lo scopo valutativo", "d": "I documenti sono adeguati, coprono i requisiti, sono coerenti? Un primo segnale prima di partire." },
+      { "h": "Due prodotti concreti", "d": "Un elenco di punti di attenzione e una bozza di percorso: il ponte tra studio e azione." }
+    ]
+  },
+  {
+    "id": "9001_m10_s010",
+    "layout": "split",
+    "kicker": "La preparazione",
+    "titolo": "La mappa dei processi come bussola",
+    "lead": "La norma è organizzata in capitoli, ma l'organizzazione vive di processi. Seguire una commessa reale dall'ordine alla consegna tocca mezza norma nel modo in cui le cose accadono davvero — e le crepe tra un processo e l'altro saltano agli occhi.",
+    "punti": [
+      { "h": "Seguire il flusso del lavoro", "d": "Più efficace che rincorrere l'ordine dei capitoli, che salta da un ufficio all'altro senza logica." },
+      { "h": "Le interfacce", "d": "I passaggi di consegne: è lì che si nascondono più problemi, che un approccio per capitoli tende a nascondere." },
+      { "h": "La bussola e la lista", "d": "La mappa dice dove andare, la norma è la lista da non dimenticare." }
+    ]
+  },
+  {
+    "id": "9001_m10_s011",
+    "layout": "split",
+    "kicker": "La preparazione",
+    "titolo": "Il piano costruito per processo",
+    "lead": "La sceneggiatura della giornata. Organizzato per processi, incontri ogni funzione una volta sola, nel suo contesto naturale, e raccogli più prove in meno tempo — invece di un questionario burocratico che salta da un tema all'altro.",
+    "punti": [
+      { "h": "Per processi, non per capitoli", "d": "In ogni blocco tocchi tutti i requisiti che riguardano quel processo." },
+      { "h": "Una guida flessibile", "d": "Si adatta senza stravolgersi: fermi gli obiettivi e il campo, riorganizza l'ordine quando serve." },
+      { "h": "La trasparenza", "d": "Un piano condiviso permette di preparare le persone giuste e ridurre i tempi morti, senza togliere rigore." }
+    ]
+  },
+  {
+    "id": "9001_m10_s012",
+    "layout": "cards",
+    "kicker": "La preparazione",
+    "titolo": "Gestire il tempo e la sequenza",
+    "intro": "Il vincolo più concreto. La profondità vale più dell'ampiezza quando entrano in conflitto: meglio guardare meno cose ma vederle davvero. Il tempo si pianifica, ma non si idolatra.",
+    "cards": [
+      { "h": "In proporzione al rischio", "d": "I processi critici meritano blocchi più ampi, non parti uguali democratiche." },
+      { "h": "La sequenza sensata", "d": "Il flusso del lavoro, i temi impegnativi quando l'attenzione è alta, i luoghi raggruppati." },
+      { "h": "Prevedere margini", "d": "Una giornata al minuto salta al primo imprevisto: i margini assorbono senza panico." }
+    ]
+  },
+  {
+    "id": "9001_m10_s013",
+    "layout": "punti",
+    "kicker": "La preparazione",
+    "titolo": "Contatti, logistica e riservatezza",
+    "intro": "Non contorno, ma la cornice dentro cui la verifica diventa possibile e credibile. Curarli è già fare bene il proprio mestiere.",
+    "punti": [
+      { "h": "Il contatto iniziale", "d": "Confermare date e referenti, verificare la fattibilità: previene gran parte dei problemi." },
+      { "h": "Logistica e sicurezza", "d": "Accessi, autorizzazioni, DPI; rispettare le regole di sicurezza come chi vi lavora." },
+      { "h": "La riservatezza", "d": "Ciò che si apprende resta dentro la verifica: divulgare distrugge la fiducia su cui il mestiere si regge." },
+      { "h": "Guide e riunione di apertura", "d": "Accettare l'accompagnamento senza esserne guidati; aprire richiamando obiettivi e campo." }
+    ]
+  },
+  {
+    "id": "9001_m10_s014",
+    "layout": "split",
+    "kicker": "Gli strumenti",
+    "titolo": "I documenti di lavoro",
+    "lead": "Preparati prima, liberano l'attenzione per ciò che conta: cogliere i segnali. Sono saldi nella struttura e aperti nell'uso — un rischio è diventarne schiavi: supportano il giudizio, non lo sostituiscono.",
+    "punti": [
+      { "h": "La checklist", "d": "L'elenco ragionato di ciò che intendi verificare: il filo che tiene insieme la giornata." },
+      { "h": "I moduli per le evidenze", "d": "Spazi organizzati per segnare cosa hai visto, dove, con quale fonte." },
+      { "h": "Gli schemi di campionamento", "d": "Decidere in anticipo quanti e quali esempi esaminare, senza improvvisare." },
+      { "h": "Il piano e i documenti studiati", "d": "La rotta della giornata e le annotazioni con i punti di attenzione." }
+    ]
+  },
+  {
+    "id": "9001_m10_s015",
+    "layout": "cards",
+    "kicker": "La checklist",
+    "titolo": "Che cos'è e a che cosa serve",
+    "intro": "Non un semplice elenco di caselle: la memoria organizzata di ciò che intendi verificare. È il ponte tra i requisiti astratti e le domande concrete a quella specifica organizzazione — una lista copiata da un'altra azienda serve a poco.",
+    "cards": [
+      { "h": "La copertura", "d": "La rete di sicurezza contro il dimenticare un requisito essenziale in una giornata intensa." },
+      { "h": "Struttura e ritmo", "d": "Sai dove parti e dove sei; se lavori in gruppo, tutti seguono la stessa traccia." },
+      { "h": "La tracciabilità", "d": "Una traccia di ciò che è stato guardato e trovato: memoria documentata del lavoro." }
+    ]
+  },
+  {
+    "id": "9001_m10_s016",
+    "layout": "split",
+    "kicker": "La checklist",
+    "titolo": "Costruirla clausola per clausola",
+    "lead": "Per ogni requisito, la domanda seme: se questo è soddisfatto, che cosa dovrei riuscire a vedere in questa organizzazione? Il passaggio dal requisito astratto all'osservazione concreta è il cuore della costruzione.",
+    "punti": [
+      { "h": "Partire dai requisiti", "d": "Tradurre ciascuno in ciò che, concretamente, potrai osservare, chiedere, esaminare." },
+      { "h": "Calare sull'organizzazione", "d": "La norma è uguale per tutti, ma ognuna la realizza a modo suo: cucita sul suo caso reale." },
+      { "h": "Cose da accertare, non sì/no", "d": "'Come funziona' invita a raccogliere prove; 'esiste?' invita a spuntare senza pensare." }
+    ]
+  },
+  {
+    "id": "9001_m10_s017",
+    "layout": "punti",
+    "kicker": "La checklist",
+    "titolo": "Usarla bene sul campo",
+    "intro": "Ho visto liste eccellenti condurre verifiche mediocri, e liste essenziali condurre verifiche brillanti. La differenza sta nell'uso.",
+    "punti": [
+      { "h": "Una guida, non un copione", "d": "Sta sullo sfondo della conversazione, non al centro: non si legge parola per parola." },
+      { "h": "Seguire le tracce impreviste", "d": "Lasciare temporaneamente il previsto per l'imprevisto, poi tornare alla lista per la copertura." },
+      { "h": "Annotare le evidenze", "d": "Il segno di spunta certifica che hai guardato; l'annotazione, che cosa hai trovato." },
+      { "h": "Adattare al volo", "d": "La realtà è più mossa della carta: più attenzione dove il campo la richiede." }
+    ]
+  },
+  {
+    "id": "9001_m10_s018",
+    "layout": "punti",
+    "kicker": "La checklist",
+    "titolo": "I limiti e i pericoli",
+    "intro": "Una serva eccellente e una padrona pessima. Finché tu la usi, ti rende più forte; nel momento in cui è lei a usare te, ti rende cieco. Il difetto non è nella lista, ma nel modo cieco di usarla.",
+    "punti": [
+      { "h": "La verifica meccanica", "d": "Leggi, spunti, passi: il cervello si spegne e non vedi l'espressione imbarazzata o il documento nascosto." },
+      { "h": "La falsa sicurezza", "d": "Una lista tutta spuntata rassicura, ma spuntare non è aver capito." },
+      { "h": "La rigidità", "d": "Seguirla alla lettera ti impedisce di seguire le porte socchiuse, spesso le più preziose." },
+      { "h": "La prevedibilità", "d": "Sempre la stessa lista nello stesso ordine: l'organizzazione impara a prepararsi." }
+    ]
+  },
+  {
+    "id": "9001_m10_s019",
+    "layout": "split",
+    "kicker": "L'arte del colloquio",
+    "titolo": "Domande e ascolto",
+    "lead": "Le domande aperte fanno emergere la realtà; le chiuse la nascondono dietro un monosillabo. La tecnica dell'imbuto: si comincia largo (racconta come...) e si stringe verso il dettaglio. Non trasformare mai la verifica in un interrogatorio.",
+    "punti": [
+      { "h": "Aperte per far raccontare", "d": "Mentre descrive, la persona rivela come funzionano davvero le cose, dove si inceppa." },
+      { "h": "Chiuse per confermare", "d": "Utili in un momento preciso: fissare un dettaglio, chiudere un ragionamento." },
+      { "h": "Ascolto e osservazione", "d": "Cogliere esitazioni e silenzi; e le evidenze migliori nascono dall'incrocio tra ciò che senti e ciò che vedi." }
+    ]
+  },
+  {
+    "id": "9001_m10_s020",
+    "layout": "split",
+    "kicker": "Le evidenze attese",
+    "titolo": "La tabella di lavoro",
+    "lead": "Sapere in anticipo che cosa cercare è metà del mestiere: per ogni requisito, che cosa dovrei vedere in un'organizzazione che lo soddisfa davvero. L'assenza di un'evidenza attesa non è ancora una carenza: è un segnale che invita ad approfondire.",
+    "punti": [
+      { "h": "Il ponte tra requisito e prova", "d": "Non vaghi, ma sapere subito dove scavare se la prova non c'è." },
+      { "h": "Tre forme di evidenza", "d": "Informazioni documentate, dichiarazioni delle persone, osservazioni dirette." },
+      { "h": "Una guida, non una gabbia", "d": "Se l'organizzazione dimostra la stessa cosa in un altro modo valido, il requisito è soddisfatto." }
+    ]
+  },
+  {
+    "id": "9001_m10_s021",
+    "layout": "split",
+    "kicker": "Evidenze attese · 1",
+    "titolo": "Contesto e leadership",
+    "lead": "Nelle fondamenta del sistema il rischio più grande è accontentarsi delle evidenze documentali. Documenti perfetti possono nascondere un sistema di facciata: cerca sempre la prova che, dietro la carta, ci sono pensiero e impegno reali.",
+    "punti": [
+      { "h": "Il contesto", "d": "Un'analisi dei fattori e una mappatura delle parti interessate — pensate davvero, non copiate da un modello." },
+      { "h": "Il campo di applicazione", "d": "Il perimetro documentato e coerente; le esclusioni giustificate, non un modo di nascondere le parti scomode." },
+      { "h": "La leadership", "d": "Non solo la politica firmata: la prova sta nei comportamenti, nelle decisioni, nella focalizzazione sul cliente." }
+    ]
+  },
+  {
+    "id": "9001_m10_s022",
+    "layout": "punti",
+    "kicker": "Evidenze attese · 2",
+    "titolo": "Pianificazione e supporto",
+    "intro": "Aree ricche di prove: il rischio non è trovarne troppo poche, ma accontentarsi della loro esistenza senza verificarne la sostanza. Un obiettivo esiste, ma è seguito? Una formazione è registrata, ma è servita?",
+    "punti": [
+      { "h": "Rischi affrontati", "d": "La prova del ragionamento su cosa può far deviare i processi, con decisioni concrete." },
+      { "h": "Obiettivi con un piano", "d": "Misurabili, assegnati, con un modo per raggiungerli: un obiettivo senza piano è un desiderio." },
+      { "h": "Competenze e strumenti tarati", "d": "Registrazioni di formazione; strumenti di misura tenuti sotto controllo, o falsano tutto a valle." },
+      { "h": "Consapevolezza e documenti", "d": "Chi sa perché il suo lavoro conta; documenti aggiornati, reperibili, protetti." }
+    ]
+  },
+  {
+    "id": "9001_m10_s023",
+    "layout": "punti",
+    "kicker": "Evidenze attese · 3",
+    "titolo": "Attività operative",
+    "intro": "Il capitolo più corposo, con più prove da raccogliere. Segui sempre il flusso reale del lavoro, e in ogni punto chiediti quale prova dimostra che qui il controllo esiste davvero. È il capitolo dove osservare con i propri occhi conta più che altrove.",
+    "punti": [
+      { "h": "Pianificazione operativa e riesame", "d": "Criteri stabiliti, non alla giornata; e il riesame prima di impegnarsi con il cliente." },
+      { "h": "Progettazione (o l'esclusione)", "d": "Un percorso governato; oppure la giustificazione coerente se non si progetta." },
+      { "h": "Il controllo dei fornitori", "d": "Come li scelgono, controllano l'ingresso, reagiscono al non conforme." },
+      { "h": "Produzione: condizioni controllate", "d": "Informazioni giuste, strumenti adeguati, controlli nei punti previsti." },
+      { "h": "Rintracciabilità e preservazione", "d": "Sapere cosa è stato fatto e con quali materiali; proteggere fino al cliente." },
+      { "h": "Rilascio e output non conformi", "d": "Nulla consegnato senza i controlli; il difettoso identificato, separato, gestito." }
+    ]
+  },
+  {
+    "id": "9001_m10_s024",
+    "layout": "punti",
+    "kicker": "Evidenze attese · 4",
+    "titolo": "Valutazione e miglioramento",
+    "intro": "I capitoli in cui il sistema si guarda allo specchio e reagisce. Non cercare la perfezione, ma la capacità di reazione: un sistema che sbaglia ma se ne accorge e corregge è più sano di uno perfetto che non trova mai nulla.",
+    "punti": [
+      { "h": "Monitoraggio e analisi", "d": "Non montagne di dati mai analizzati: la prova che qualcuno li guardi e li usi per decidere." },
+      { "h": "Soddisfazione del cliente", "d": "Ascolto con metodi adatti, e la prova di aver reagito a un segnale negativo." },
+      { "h": "Verifiche interne", "d": "Che l'organizzazione si verifichi è requisito della qualità; il come è materia della ISO 19011." },
+      { "h": "Riesame di direzione", "d": "Che avvenga davvero e produca decisioni, non solo verbali." },
+      { "h": "Non conformità e azioni correttive", "d": "Non tamponare: cercare la causa e agire perché non si ripeta." }
+    ]
+  },
+  {
+    "id": "9001_m10_s025",
+    "layout": "split",
+    "kicker": "La solidità del giudizio",
+    "titolo": "Evidenze verificabili e sufficienti",
+    "lead": "Raccogliere prove non basta: devono reggere. Attenzione alla tentazione di fermarsi alla prima evidenza che conferma ciò che già pensavi — un professionista onesto cerca attivamente ciò che potrebbe smentirlo.",
+    "punti": [
+      { "h": "Verificabilità", "d": "Controllabile da un altro al tuo posto: un'impressione o un 'si dice' non è evidenza." },
+      { "h": "Pertinenza", "d": "Deve parlare del requisito in esame: mille fatti veri ma scollegati sono rumore." },
+      { "h": "Sufficienza", "d": "Il campione proporzionato al rischio: piccolo su un processo critico dà falsa sicurezza." },
+      { "h": "L'incrocio delle fonti", "d": "La tecnica più efficace: persone, documenti e osservazione che convergono." }
+    ]
+  },
+  {
+    "id": "9001_m10_s026",
+    "layout": "confronto",
+    "kicker": "Le tre famiglie · prima e seconda",
+    "titolo": "Prima e seconda parte",
+    "intro": "La stessa norma si verifica in contesti diversi: i principi non cambiano, ma cambiano scopo, indipendenza e conseguenze.",
+    "a": {
+      "h": "Prima parte",
+      "sub": "La verifica interna",
+      "punti": [
+        { "d": "L'organizzazione su sé stessa, per migliorarsi." },
+        { "d": "Clima collaborativo; il rischio: la troppa vicinanza ammorbidisce lo sguardo." }
+      ]
+    },
+    "b": {
+      "h": "Seconda parte",
+      "sub": "Il cliente sul fornitore",
+      "punti": [
+        { "d": "Lo scopo è tutelare chi verifica, non migliorare il verificato." },
+        { "d": "Indipendente ma non neutrale: interesse dichiarato, spesso requisiti propri." }
+      ]
+    }
+  },
+  {
+    "id": "9001_m10_s027",
+    "layout": "cards",
+    "kicker": "Le tre famiglie · terza parte",
+    "titolo": "Terza parte e certificazione",
+    "intro": "Condotta da un soggetto esterno e indipendente da tutti: porta la certificazione, la più formale e regolata. Attesta che, sul campione esaminato e nel momento della verifica, il sistema è risultato conforme — non una garanzia assoluta.",
+    "cards": [
+      { "h": "Indipendenza piena", "d": "Nessun interesse commerciale sul risultato: è il valore stesso della certificazione." },
+      { "h": "Un ciclo nel tempo", "d": "Verifica iniziale, sorveglianze più brevi, rinnovo ampio dopo alcuni anni." },
+      { "h": "Conseguenze formali", "d": "Una carenza grave può sospendere il certificato: i rilievi devono poggiare su prove inattaccabili." },
+      { "h": "Campionamento accorto", "d": "Reso il più significativo possibile, così che il giudizio sul campione dica il vero sul tutto." }
+    ]
+  },
+  {
+    "id": "9001_m10_s028",
+    "layout": "chiusura",
+    "kicker": "Riepilogo · Modulo 10",
+    "modNum": "10",
+    "titolo": "Una verifica si vince prima di cominciarla",
+    "punti": [
+      { "h": "Programma e competenze", "d": "Il disegno complessivo, i suoi rischi, il gruppo che verifica." },
+      { "h": "La priorità per rischio", "d": "Concentrare l'attenzione sui processi critici, dosarla sui minori." },
+      { "h": "La preparazione", "d": "Studio documentale, mappa dei processi, piano per processo, gestione del tempo." },
+      { "h": "La checklist", "d": "Costruita clausola per clausola, usata come guida — serva eccellente, non padrona." },
+      { "h": "Le evidenze attese", "d": "Sapere in anticipo quali prove cercare; verificabili, pertinenti, sufficienti." },
+      { "h": "Le tre famiglie", "d": "Prima parte per migliorarsi, seconda per tutelarsi, terza per certificare." }
+    ],
+    "prossimo": {
+      "modulo": "11",
+      "titolo": "La conduzione sul campo",
+      "testo": "Dall'aula al reparto: condurre la verifica davanti alle persone."
+    }
+  }
+]
