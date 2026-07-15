@@ -1,0 +1,386 @@
+[
+ {
+  "id": "27001_m07_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 7",
+  "eyebrow": "Appendice A: persone, fisico, tecnologia",
+  "titolo": "I controlli che diventano pratica quotidiana",
+  "testo": "I rischi non si riducono con formule astratte: si riducono quando qualcuno seleziona bene una persona, protegge un locale, aggiorna un sistema, conserva un backup utile e controlla i log con criterio. Non chiederti solo se un controllo esiste: chiediti se è pensato per il rischio giusto, se le persone lo capiscono, se viene usato davvero e se lascia tracce affidabili.",
+  "agenda": [
+   "Controlli sulle persone: dalla selezione alle segnalazioni",
+   "Controlli fisici: aree, scrivania, apparecchiature, dismissione",
+   "Endpoint, privilegi, malware, vulnerabilità, configurazioni",
+   "Backup, ridondanza, log, tempo, reti, crittografia",
+   "Sviluppo sicuro, ambienti, test, cambiamenti"
+  ]
+ },
+ {
+  "id": "27001_m07_s002",
+  "layout": "punti",
+  "kicker": "Persone",
+  "titolo": "Accesso iniziale: selezione e accordi",
+  "intro": "La sicurezza comincia molto prima delle credenziali: dal modo in cui selezioni, dalla chiarezza delle aspettative e dagli accordi che definiscono responsabilità e limiti. Non basta un contratto firmato: il processo d'ingresso dev'essere coerente col rischio del ruolo.",
+  "punti": [
+   { "h": "Proporzione, non formalismo", "d": "Un profilo che gestirà dati sensibili o account privilegiati richiede verifiche più accurate. Referenze coerenti col ruolo, abilitazione graduale: trattare un rischio, non compilare una casella." },
+   { "h": "Gli accordi", "d": "Riservatezza, uso accettabile, obblighi dopo la cessazione, gestione credenziali, segnalazione incidenti. Una firma presa in fretta produce adesione apparente: unisci documento, momento formativo e verifica di comprensione." },
+   { "h": "Anche il personale esterno", "d": "Il rischio non scompare perché il rapporto non è subordinato: chiunque operi sotto il controllo dell'organizzazione va considerato con la stessa serietà." },
+   { "h": "Il ritmo dell'onboarding", "d": "Consegnare subito accessi rimandando accordi e spiegazioni è più rischioso di quanto sembri: i primi giorni formano le abitudini. Abilitazioni iniziali limitate al necessario." }
+  ]
+ },
+ {
+  "id": "27001_m07_s003",
+  "layout": "punti",
+  "kicker": "Persone",
+  "titolo": "Dalla firma alla consapevolezza",
+  "intro": "La domanda vera: le persone hanno capito cosa devono fare, o hanno solo firmato? La maggior parte degli incidenti quotidiani nasce da comportamenti ordinari, non da intenzioni ostili. La consapevolezza efficace ha tre caratteristiche.",
+  "punti": [
+   { "h": "Vicinanza al lavoro reale", "d": "Le regole spiegate in astratto si dimenticano; tradotte in situazioni vissute ogni settimana restano. Se intervisti un tecnico esterno, chiedi cosa farebbe trovando dati non necessari alla sua attività." },
+   { "h": "Tempestività", "d": "Non spiegare tutto solo all'inizio e poi tacere per mesi: riprendere i messaggi quando cambiano rischi, strumenti o modalità — nuove campagne di phishing, nuovi strumenti di collaborazione." },
+   { "h": "Verificabilità", "d": "Se nessuno controlla se il messaggio è stato compreso, la formazione diventa un rito. Se aumentano le segnalazioni tempestive e calano gli errori ripetitivi, la consapevolezza funziona." },
+   { "h": "Il clima conta più dello slogan", "d": "Se chi gestisce i team aggira le regole per correre, il messaggio reale annulla quello formale. La sicurezza osservata si apprende quasi più di quella spiegata." }
+  ]
+ },
+ {
+  "id": "27001_m07_s004",
+  "layout": "flusso",
+  "kicker": "Persone",
+  "titolo": "Violazioni, cambi di ruolo, cessazione",
+  "intro": "La robustezza di un controllo si vede quando qualcuno sbaglia, cambia ruolo o lascia l'organizzazione. È lì che emergono velocità, chiarezza e coordinamento. Non basta togliere: togliere in modo ordinato, preservando ciò che serve alla continuità.",
+  "passi": [
+   { "h": "Le violazioni interne", "d": "Conseguenze note, proporzionate, coerenti — senza clima punitivo, ma evitando il messaggio che le regole valgono solo finché non intralciano. L'errore segnalato subito ≠ credenziali condivise deliberatamente." },
+   { "h": "I cambi di ruolo", "d": "Generano incidenti più spesso di quanto si pensi: la persona resta, la percezione di urgenza cala. Il PM che passa al commerciale ma mantiene accesso ai repository tecnici accumula privilegi inutili." },
+   { "h": "La cessazione", "d": "Non basta il badge l'ultimo giorno se account, caselle e accessi remoti restano attivi. I casi critici nascono dal disallineamento HR-funzioni-IT: chi avvisa, quando, cosa disabilitare, come si documenta." }
+  ]
+ },
+ {
+  "id": "27001_m07_s005",
+  "layout": "punti",
+  "kicker": "Persone",
+  "titolo": "Lavoro a distanza e segnalazioni",
+  "intro": "Il perimetro non coincide più con l'edificio: cambia il modo di valutare i controlli. Non basta autorizzarlo in generale — verificare se è tradotto in regole pratiche, strumenti e comportamenti osservabili. E il lavoro a distanza non è solo casa: coworking, treno, sede del cliente, hotel.",
+  "punti": [
+   { "h": "Serve un attaccante sofisticato?", "d": "Account locale condiviso coi familiari, schermo visibile in treno, documenti stampati a casa lasciati in vista: bastano leggerezza, fretta, falsa confidenza con l'ambiente domestico." },
+   { "h": "Anche le conversazioni", "d": "Il consulente che in area comune legge ad alta voce nomi di clienti e dettagli di un incidente: il rischio non nasce dal dispositivo, nasce dal contesto. Le regole devono parlare di connessioni e di conversazioni." },
+   { "h": "Il canale di segnalazione", "d": "Serve che le persone riferiscano incidenti, phishing, perdita di dispositivi, dubbi. Se chi sbaglia teme di essere umiliato, tace — e il silenzio trasforma un piccolo evento in un problema maggiore." },
+   { "h": "«Se perdessi il portatile in un taxi?»", "d": "Una risposta vaga rivela un controllo fragile; una concreta, con canale, priorità e contenimento, mostra preparazione. E raccogliere anche i quasi incidenti fa imparare più in fretta." }
+  ]
+ },
+ {
+  "id": "27001_m07_s006",
+  "layout": "punti",
+  "kicker": "Fisico",
+  "titolo": "Aree sicure e accessi agli ambienti",
+  "intro": "Sembrano meno moderni dei controlli digitali, ma restano una base: se chiunque può entrare, vedere o toccare ciò che non dovrebbe, molte misure logiche perdono forza. Non costruire fortezze: mettere protezione dove il rischio la giustifica.",
+  "punti": [
+   { "h": "Le aree sicure", "d": "Reception, archivio, sala riunioni, ufficio condiviso e server room richiedono misure diverse. Se dati critici e apparati stanno in aree indistinte, il trattamento del rischio è debole." },
+   { "h": "I passaggi di confine", "d": "L'area protetta non è solo la stanza finale: ingressi, corridoi, finestre, punti ciechi, ingresso secondario dei fornitori. A volte si protegge la server room ma resta aperta la stanza attigua da cui passano i cavi." },
+   { "h": "Visitatori e familiarità", "d": "Registro, badge temporanei, accompagnamento non sono dettagli amministrativi. In una sede piccola la confidenza è più alta: uno sconosciuto con una scatola passa per corriere e resta inosservato." },
+   { "h": "Il fornitore da solo", "d": "In una sede sanitaria un manutentore resta solo 20 minuti perché il referente è chiamato altrove: il controllo dipendeva troppo dalla presenza di una persona sola. Serviva accompagnamento sostitutivo." }
+  ]
+ },
+ {
+  "id": "27001_m07_s007",
+  "layout": "punti",
+  "kicker": "Fisico",
+  "titolo": "Scrivania e schermo pulito",
+  "intro": "Molti incidenti non avvengono perché un sistema è violato, ma perché un'informazione resta visibile più del necessario. Semplice da enunciare, facile da trascurare. Un controllo efficace facilita il comportamento corretto: la regola da sola non basta se l'ambiente la rende scomoda.",
+  "punti": [
+   { "h": "Regole semplici", "d": "Documenti riservati mai incustoditi, stampe ritirate subito, lavagne cancellate, blocco schermo quando ti allontani. Un monitor rivolto al corridoio con un ticket su un incidente di sicurezza." },
+   { "h": "Accorgimenti fisici", "d": "Orientare i monitor, filtri dove servono, armadi chiudibili, stampanti fuori dalle aree di passaggio, contenitori idonei per gli scarti sensibili." },
+   { "h": "Rimuovere gli ostacoli", "d": "Poster sullo schermo pulito ma sale riunioni senza armadi e stampante davanti al corridoio dei visitatori: la maturità non sta nello slogan, ma nella rimozione degli ostacoli pratici." },
+   { "h": "I momenti fuori routine", "d": "A fine giornata, durante le pulizie, nelle pause, negli spostamenti rapidi l'attenzione cala. Un singolo foglio dimenticato è un incidente isolato; una serie coerente racconta un controllo debole." }
+  ]
+ },
+ {
+  "id": "27001_m07_s008",
+  "layout": "punti",
+  "kicker": "Fisico",
+  "titolo": "Apparecchiature e supporti",
+  "intro": "Proteggi anche gli oggetti che contengono informazioni: notebook, telefoni, dischi, chiavette, multifunzione, apparati di rete. Attenzione lungo tutto il ciclo di vita. Il primo principio è la proporzione: regole coerenti col rischio, non uguali per tutti.",
+  "punti": [
+   { "h": "Strumenti praticabili", "d": "Un divieto sui supporti rimovibili non basta: se il canale approvato è troppo lento, il PM userà la chiavetta personale per mesi. Serve inventario, responsabilità, custodia e verifiche sull'uso reale." },
+   { "h": "La protezione ambientale", "d": "Calore, polvere, umidità, alimentazione instabile incidono su disponibilità e integrità. Un server vicino a una finestra al sole, un armadio di rete in un locale-deposito raccontano controlli fragili." },
+   { "h": "I supporti misti", "d": "Fascicoli cartacei, fotografie di lavagne, badge temporanei, chiavi di armadi: sfuggono perché non sembrano moderni, ma conservano informazioni o aprono accessi." },
+   { "h": "I beni temporanei", "d": "Dispositivi sostitutivi, portatili di cortesia, un disco del fornitore per una migrazione: la provvisorietà non governata crea zone grigie. Presa in carico, custodia definita, restituzione o cancellazione." }
+  ]
+ },
+ {
+  "id": "27001_m07_s009",
+  "layout": "punti",
+  "kicker": "Fisico",
+  "titolo": "Cablaggi, manutenzione, beni fuori sede",
+  "intro": "Elementi fisici che lavorano in silenzio e per questo vengono ignorati, finché qualcosa non va storto. Il percorso fisico delle informazioni non finisce dove smette la scrivania.",
+  "punti": [
+   { "h": "I cablaggi", "d": "Trasportano dati e alimentazione, attraversano aree di passaggio e armadi condivisi. Se esposti o aggrovigliati aumentano danneggiamento, manomissione, scollegamento involontario, interruzione." },
+   { "h": "La manutenzione", "d": "Ogni intervento introduce persone e possibilità di errore. Una multifunzione ritirata con memoria interna non gestita, un notebook inviato in assistenza con dati presenti: il rischio esce dal perimetro." },
+   { "h": "I beni fuori sede", "d": "Portatili e documenti viaggiano tra casa, clienti, mezzi, hotel. Il disco cifrato ma nessuna regola sulla custodia fisica durante gli spostamenti: il notebook nel bagagliaio, il vetro rotto." },
+   { "h": "La manutenzione urgente", "d": "Il tecnico che arriva la sera per un apparato guasto: chi lo accoglie, quali aree raggiunge, cosa resta incustodito. Un controllo maturo ripristina e governa insieme." }
+  ]
+ },
+ {
+  "id": "27001_m07_s010",
+  "layout": "punti",
+  "kicker": "Fisico",
+  "titolo": "Riutilizzo e dismissione sicura",
+  "intro": "Un errore comune è pensare che il rischio finisca quando un dispositivo non serve più: l'attenzione cala proprio mentre il bene può contenere ancora dati, credenziali e tracce. Non dismetti un oggetto: dismetti un contenitore di informazioni.",
+  "punti": [
+   { "h": "Quattro scenari diversi", "d": "Riutilizzo interno, restituzione a terzi, smaltimento, distruzione. Se un portatile passa a un'altra persona non basta cancellare i file visibili: dati, account, cache, chiavi non devono restare recuperabili." },
+   { "h": "La multifunzione a fine noleggio", "d": "Scollegata e pronta al ritiro, «convinti che non contenga nulla»: ma ha memoria di stampe e scansioni recenti. Serviva verifica, cancellazione o rimozione del supporto, traccia della gestione." },
+   { "h": "Gli scarti intermedi", "d": "Bozze, etichette con dati, supporti difettosi in attesa, vecchi badge: il rischio nasce negli oggetti che nessuno considera in uso ma che nessuno ha messo in sicurezza." },
+   { "h": "I tempi morti", "d": "I telefoni restituiti dopo un rinnovo, lasciati accesi con accesso automatico a posta e app: nessuno li usa, nessuno li ha messi in sicurezza. La dismissione comincia quando cessa l'uso, non al cassonetto." }
+  ]
+ },
+ {
+  "id": "27001_m07_s011",
+  "layout": "punti",
+  "kicker": "Tecnologia",
+  "titolo": "Endpoint: il confine più esposto",
+  "intro": "Notebook, desktop, telefoni, workstation: il punto in cui la persona lavora davvero, apre file, usa credenziali. Proteggerlo non è riempirlo di strumenti: governarne il ciclo di vita. E un endpoint fragile spinge le persone a cercare scorciatoie.",
+  "punti": [
+   { "h": "Sapere cosa esiste", "d": "Quali endpoint ci sono, a chi affidati, per quale scopo. Distribuire portatili senza responsabilità chiara fa perdere subito visibilità e capacità di intervento." },
+   { "h": "Configurazione e deriva", "d": "Un'immagine standard con protezioni minime uguali per tutti. Piena libertà d'installazione produce utility scaricate, sincronizzazioni personali, strumenti di accesso remoto scelti per comodità." },
+   { "h": "I dati locali", "d": "Documenti scaricati per lavorare offline, allegati in viaggio, credenziali del browser, cache: cifratura, blocco automatico, pulizia delle sessioni, regole sui supporti esterni." },
+   { "h": "La rapidità di reazione", "d": "Su un dispositivo smarrito: bloccarlo, revocarne gli accessi, guidare la persona. Se dipende da catene di mail lente, l'esposizione cresce proprio quando il tempo conta." }
+  ]
+ },
+ {
+  "id": "27001_m07_s012",
+  "layout": "punti",
+  "kicker": "Tecnologia",
+  "titolo": "Accessi privilegiati",
+  "intro": "Account che installano software, cambiano configurazioni, amministrano utenti: consentono molto, quindi pochi, motivati e governati. Il primo errore è confondere privilegio con seniority o comodità: li ricevi quando un'attività li richiede, per il tempo necessario.",
+  "punti": [
+   { "h": "Separare le identità", "d": "Un'identità normale per il lavoro quotidiano, un accesso privilegiato solo per attività specifiche: riduce gli errori banali e limita l'effetto di un phishing riuscito." },
+   { "h": "L'utenza condivisa", "d": "Gli sviluppatori con la stessa utenza amministrativa in un file noto: al primo cambiamento non autorizzato nessuno sa chi sia intervenuto. I privilegi condivisi distruggono responsabilità e tracciabilità." },
+   { "h": "Anche l'emergenza ha regole", "d": "L'accesso di emergenza serve, ma chiede regole — chi lo attiva, come si documenta, chi lo riesamina — o diventa la scorciatoia abituale." },
+   { "h": "Il riesame periodico", "d": "I privilegi si accumulano quando le persone cambiano incarico ma restano: un tecnico passato al commerciale che conserva diritti amministrativi è un rischio silenzioso. E i fornitori: account nominativi, finestre temporali." }
+  ]
+ },
+ {
+  "id": "27001_m07_s013",
+  "layout": "flusso",
+  "kicker": "Tecnologia",
+  "titolo": "Malware: prevenire, contenere, imparare",
+  "intro": "Facile da comprendere e da sottovalutare. Il primo errore è trattarlo come risolvibile con un solo prodotto: la difesa nasce da più strati coerenti. Un ambiente ordinato non elimina il malware, ma lo rende gestibile; uno confuso trasforma un errore in crisi diffusa.",
+  "passi": [
+   { "h": "Prevenire", "d": "Ridurre le occasioni d'ingresso: filtri, blocchi di esecuzione, privilegi minimi, aggiornamenti. Lo stesso allegato su un sistema debole con macro e diritti amministrativi diventa un disastro in pochi minuti." },
+   { "h": "Contenere", "d": "Segmentazione e isolamento rapido: il malware raramente si accontenta del primo dispositivo se trova credenziali, cartelle condivise, connessioni laterali. I primi minuti vengono spesso sprecati tra dubbi e silenzio." },
+   { "h": "Imparare", "d": "Non solo rimettere in piedi l'operatività: capire da dove è entrato, quali barriere hanno funzionato, cosa cambiare. Se ogni incidente è chiuso come episodio isolato, il sistema non cresce." }
+  ]
+ },
+ {
+  "id": "27001_m07_s014",
+  "layout": "punti",
+  "kicker": "Tecnologia",
+  "titolo": "Vulnerabilità",
+  "intro": "Debolezze tecniche sfruttabili: software non aggiornato, impostazioni errate, componenti obsoleti, servizi esposti. La presenza da sola non produce sempre un incidente — il rischio cresce quando la debolezza è raggiungibile e riguarda un bene importante. Non una caccia frenetica: un processo continuo.",
+  "punti": [
+   { "h": "Non puoi ridurre ciò che non sai di avere", "d": "Senza inventario, visibilità delle versioni e responsabilità chiare, il processo parte zoppo. Il server periferico non aggiornato da anni con accesso remoto verso l'interno resta senza proprietario operativo." },
+   { "h": "Rinvio ≠ abbandono", "d": "Aggiornare non è installare tutto in modo cieco: alcuni ambienti chiedono test e finestre. Ma la prudenza non è un alibi: un controllo maturo distingue rinvio giustificato da abbandono tacito." },
+   { "h": "Spesso è coordinamento", "d": "L'infrastruttura aspetta l'applicativo, l'applicativo il fornitore, il fornitore una finestra approvata: la sicurezza è operatività organizzata, non pura tecnologia." },
+   { "h": "Il debito tecnico visibile", "d": "Quando eccezioni, sistemi fuori supporto e rinvii diventano abitudine, la superficie d'attacco cresce in silenzio. Un buon processo lo porta a decisione invece di lasciarlo sedimentare." }
+  ]
+ },
+ {
+  "id": "27001_m07_s015",
+  "layout": "punti",
+  "kicker": "Tecnologia",
+  "titolo": "Configurazioni sicure",
+  "intro": "Il terreno su cui molte vulnerabilità diventano più o meno sfruttabili. Un sistema alle opzioni predefinite, carico di servizi inutili e differenze casuali, espone più superficie. Molti incidenti nascono da scorciatoie in fase d'installazione mai riviste, non da attacchi sofisticati.",
+  "punti": [
+   { "h": "Baseline ripetibili", "d": "Configurazioni standard, approvate, coerenti per server, notebook, apparati, cloud. Quando ogni amministratore costruisce a modo suo, si perde confrontabilità, velocità di ripristino, controllo." },
+   { "h": "La deriva progressiva", "d": "Nuovi server attivati in fretta, ognuno con la propria sequenza: settimane dopo, porte non necessarie, credenziali locali dimenticate, politiche di log diverse. Non un errore clamoroso: una deriva." },
+   { "h": "Le impostazioni predefinite", "d": "Password iniziali mai cambiate, accessi remoti aperti, interfacce di amministrazione esposte, directory troppo permissive: terreno fertile per incidenti evitabili." },
+   { "h": "Configurazione e cambiamento", "d": "Cambiare direttamente in produzione senza registrazione fa dipendere la configurazione dalla memoria dei singoli — poco affidabile sotto pressione. E le baseline facilitano incident response e continuità." }
+  ]
+ },
+ {
+  "id": "27001_m07_s016",
+  "layout": "punti",
+  "kicker": "Tecnologia",
+  "titolo": "Backup",
+  "intro": "La tentazione è pensare a una copia e considerare il problema risolto. Ma il backup vale solo se puoi ritrovare i dati giusti, fidarti dell'integrità e ripristinarli quando servono. La domanda decisiva non è se il sistema fa backup: è se un ripristino riuscirebbe entro limiti compatibili.",
+  "punti": [
+   { "h": "Le domande concrete", "d": "Cosa copiare, con quale frequenza, dove finiscono le copie, chi verifica, quanto tempo accetti di perdere, quanto puoi tollerare prima di tornare operativo. Collegano il backup al rischio, non a un'attività invisibile." },
+   { "h": "Anche errori logici", "d": "Le copie notturne col messaggio di completamento, ma una corruzione silenziosa era già nelle copie recenti. Il ripristino va provato, non solo dichiarato: le prove raccontano più delle schermate verdi." },
+   { "h": "La separazione", "d": "Se copie e originali dipendono dallo stesso ambiente o dalla stessa credenziale, un incidente li colpisce insieme. Copie separate, conservazione fuori linea, meccanismi contro cancellazioni accidentali." },
+   { "h": "Gli ambiti nascosti", "d": "Postazioni utente, repository di configurazione, log, contenuti cloud, dati dei fornitori sfuggono al perimetro se nessuno li mappa. Il vuoto si scopre in emergenza, quando è troppo tardi." }
+  ]
+ },
+ {
+  "id": "27001_m07_s017",
+  "layout": "confronto",
+  "kicker": "Tecnologia",
+  "titolo": "Backup e ridondanza",
+  "intro": "Un equivoco diffusissimo: non sono la stessa cosa. Confonderli porta a investire male e a scoprire il problema nel momento peggiore. I due controlli si completano, non si escludono — la ridondanza non protegge da errori logici replicati sui gemelli.",
+  "a": {
+   "h": "Il backup",
+   "sub": "Recuperare",
+   "punti": [
+    { "d": "Ti aiuta a tornare indietro o ricostruire dati dopo perdita, corruzione o cancellazione." },
+    { "d": "Protegge il contenuto e le configurazioni, anche da errori logici e azioni malevole." },
+    { "d": "Serve quando l'informazione va ripristinata, non quando un componente si guasta." }
+   ]
+  },
+  "b": {
+   "h": "La ridondanza",
+   "sub": "Non fermarsi",
+   "punti": [
+    { "d": "Ti aiuta a continuare il servizio quando un componente si guasta. Dati e copie esistono, ma manca la via alternativa immediata: lo switch guasto ferma gli utenti." },
+    { "d": "Chiede indipendenza reale: due server nello stesso rack, stessa presa, stessa credenziale sono ridondanti solo da lontano." },
+    { "d": "Le sorprese arrivano nel rientro: due linee acquistate per continuità, ma nello stesso cavidotto cittadino." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m07_s018",
+  "layout": "punti",
+  "kicker": "Tecnologia",
+  "titolo": "Log e monitoraggio",
+  "intro": "Molti controlli lavorano in silenzio, ma diventano utili solo se qualcuno vede ciò che accade. I log sono le tracce; il monitoraggio è la capacità di leggerle con criterio. Il primo errore è raccogliere tutto senza una domanda chiara: più dati non è più controllo.",
+  "punti": [
+   { "h": "Scegliere gli eventi", "d": "Accessi riusciti e falliti, elevazioni di privilegio, modifiche alle configurazioni, creazione/cancellazione utenti, trasferimenti insoliti, interventi su dati sensibili." },
+   { "h": "Le due metà", "d": "I log rilevanti vengono prodotti e conservati; e qualcuno li usa davvero. È frequente trovare molta raccolta e poca interpretazione, o persone attente ma senza dati coerenti." },
+   { "h": "La qualità del contenuto", "d": "Un log senza utente riconoscibile, origine o tempo attendibile aiuta poco; troppo ricco espone dati da non diffondere. Serve proporzione: registrare il necessario, proteggerlo, limitarne l'accesso." },
+   { "h": "Il rumore degli allarmi", "d": "Troppi allarmi abituano a ignorarli, pochi mal calibrati lasciano passare i segnali. Un'organizzazione matura rivede i criteri e collega gli eventi al rischio reale." }
+  ]
+ },
+ {
+  "id": "27001_m07_s019",
+  "layout": "punti",
+  "kicker": "Tecnologia",
+  "titolo": "Sincronizzazione del tempo",
+  "intro": "Sembra un dettaglio infrastrutturale, finché non devi capire cosa sia successo: orologi incoerenti trasformano i log in un puzzle. Un accesso può apparire successivo a una modifica che l'ha preceduto. Non evita l'incidente, ma riduce drasticamente il tempo di comprensione.",
+  "punti": [
+   { "h": "Una base comune", "d": "Server, endpoint, apparati e applicazioni hanno bisogno di un riferimento condiviso. Non serve una soluzione misteriosa: serve governo — quale sorgente, come si sincronizzano, come rilevi le derive." },
+   { "h": "Anche nei piccoli ambienti", "d": "Pochi minuti di differenza complicano molto analisi tecniche e verifica delle responsabilità. Il firewall indietro, l'applicazione avanti, il portatile con un fuso non corretto: sequenza ambigua, ore perse." },
+   { "h": "Il legame con la manutenzione", "d": "Nuovi server, apparati sostituiti, macchine virtuali duplicate, ambienti di test promossi possono ereditare impostazioni scorrette. Dialoga con configurazioni e gestione delle modifiche." },
+   { "h": "La credibilità delle tracce", "d": "Se l'orario non è affidabile, anche una traccia genuina perde forza interpretativa. Dopo un aggiornamento, un log incoerente fece concludere che l'errore fosse iniziato prima del rilascio." }
+  ]
+ },
+ {
+  "id": "27001_m07_s020",
+  "layout": "punti",
+  "kicker": "Tecnologia",
+  "titolo": "Reti e segregazione",
+  "intro": "Una rete non è solo trasporto di dati: è il disegno dei confini, dei percorsi consentiti e delle fiducie implicite. Se è troppo aperto, un problema locale si propaga; se pensato con criterio, dà contenimento e visibilità. Una buona rete non collega tutto a tutto.",
+  "punti": [
+   { "h": "La segregazione", "d": "Separare ciò che non deve comunicare liberamente. Postazioni, server, strumenti amministrativi, reti per ospiti, dispositivi di terzi, ambienti di test non dovrebbero avere tutti lo stesso livello di fiducia." },
+   { "h": "Il movimento laterale", "d": "Il portatile compromesso che entra da un collegamento remoto ed esplora segmenti che non avrebbe dovuto raggiungere: l'incidente non nasce solo dal dispositivo, nasce dal fatto che la rete gli permette di muoversi troppo." },
+   { "h": "Ospiti e amministrazione", "d": "Connettività agli ospiti senza separazione apre rischi inutili. Consolle di gestione e repository di configurazione dovrebbero stare in porzioni particolarmente presidiate." },
+   { "h": "Le eccezioni che invecchiano male", "d": "Una porta aperta per un progetto urgente, un accesso di terzi mai revocato restano invisibili per anni. La segregazione è una disciplina di revisione, non un disegno fatto una volta." }
+  ]
+ },
+ {
+  "id": "27001_m07_s021",
+  "layout": "punti",
+  "kicker": "Tecnologia",
+  "titolo": "Web filtering",
+  "intro": "Non sorvegliare ogni clic né ostacolare il lavoro: ridurre l'esposizione inutile verso contenuti e destinazioni rischiose. La domanda buona: il controllo riduce i rischi più probabili senza spingere le persone fuori dal perimetro governato?",
+  "punti": [
+   { "h": "La proporzione", "d": "Un blocco cieco genera eccezioni e sfiducia. Capire quali categorie, tipi di file e canali di condivisione espongono rischi non compatibili col contesto — e differenziare i profili per ruolo." },
+   { "h": "Non solo negare", "d": "Il servizio gratuito di trasferimento file trovato con una ricerca veloce apre dispersione e caricamenti non autorizzati. Un buon filtro spiega, registra, indirizza verso strumenti approvati." },
+   { "h": "Anche un sensore", "d": "Collegato ai log, mostra download anomali, tentativi verso destinazioni bloccate, cambi improvvisi di abitudine. Senza lettura resta barriera parziale; con lettura intelligente diventa segnale." },
+   { "h": "Fuori sede e cifratura", "d": "Se il controllo vale solo in ufficio ma si dissolve appena il portatile esce, la protezione perde coerenza. E gran parte del traffico è cifrato: serve equilibrio tra protezione, ispezione e contesto." }
+  ]
+ },
+ {
+  "id": "27001_m07_s022",
+  "layout": "punti",
+  "kicker": "Tecnologia",
+  "titolo": "Crittografia in transito",
+  "intro": "Quando un'informazione si muove, attraversa reti, fornitori e tratti di internet che non controlli. Non basta proteggere partenza e arrivo se il tragitto resta esposto. Protegge il percorso, non sostituisce il governo dell'intero processo.",
+  "punti": [
+   { "h": "Anche i segmenti interni", "d": "Il responsabile che consulta il portale da un albergo su rete pubblica è il caso intuitivo; ma anche segmenti interni apparentemente fidati, in ambienti complessi con molti fornitori, meritano valutazione." },
+   { "h": "Certificati e chiavi", "d": "Non dettagli amministrativi: parte viva del controllo. Se il certificato è scaduto o gli utenti cliccano avanti per abitudine, la fiducia diventa apparente." },
+   { "h": "Rendere praticabile il corretto", "d": "Se l'accesso remoto richiede procedure confuse, cresce la tentazione di inviare file via canali impropri — la posta ordinaria col consulente, «perché la piattaforma ufficiale è lenta»." },
+   { "h": "L'operatività nascosta", "d": "Servizi che parlano tra loro, agenti di monitoraggio, trasferimenti automatici, sincronizzazioni scambiano dati senza intervento umano: se non sono mappati e protetti, il rischio resta fuori dal radar." }
+  ]
+ },
+ {
+  "id": "27001_m07_s023",
+  "layout": "punti",
+  "kicker": "Tecnologia",
+  "titolo": "Crittografia a riposo e chiavi",
+  "intro": "Che cosa succede quando i dati si fermano su un disco, una base dati, un backup? Preziosa contro furto fisico e smarrimento. Ma non è una polvere magica: se una persona è già autorizzata, la cifratura non le impedisce l'uso improprio. Il cuore non è cifrare, ma governare le chiavi.",
+  "punti": [
+   { "h": "L'utilità immediata", "d": "Notebook rubato dall'auto, disco smarrito, copia presso un fornitore, multifunzione in assistenza: proteggere il contenuto riduce fortemente il danno possibile." },
+   { "h": "Governare le chiavi", "d": "Chi genera, custodisce, distribuisce, rinnova, revoca, recupera. La chiave di recupero in una cartella condivisa a troppi tecnici: il controllo esiste ma la sua forza è ridotta." },
+   { "h": "La chiave persa", "d": "Può trasformare un controllo di protezione in un incidente di disponibilità — vale soprattutto per archivi storici, repository e backup cifrati. Prove che il recupero è possibile quando serve." },
+   { "h": "Tecnica e organizzazione", "d": "La tecnologia cifra bene, ma se consegna, manutenzione o cessazione lasciano chiavi accessibili oltre il necessario, il rischio resta. Non sostituisce monitoraggio, log e disciplina dei privilegi." }
+  ]
+ },
+ {
+  "id": "27001_m07_s024",
+  "layout": "punti",
+  "kicker": "Sviluppo",
+  "titolo": "Sviluppo sicuro",
+  "intro": "Guardi il momento in cui software e servizi vengono progettati o modificati. La sicurezza non va aggiunta alla fine come una vernice: va incorporata nel ciclo di vita fin dalle prime scelte. Costruire con intenzione, non correggere per rincorsa.",
+  "punti": [
+   { "h": "Le domande iniziali", "d": "Quali dati tratterà, quali ruoli avranno accesso a cosa, quali abusi sono plausibili, cosa registrare nei log, quali dipendenze introducono rischio, come gestire segreti e chiavi." },
+   { "h": "Il portale in fretta", "d": "Funzionalità commerciali definite bene, ma autorizzazioni e audit trail rimandati: al rilascio, dati visibili oltre il dovuto e log troppo poveri. La sicurezza trattata come accessorio." },
+   { "h": "Le dipendenze", "d": "Librerie, framework e servizi di terzi accelerano ma trasferiscono rischio. Se il team non sa quali componenti include e con quale stato di aggiornamento, le vulnerabilità si accumulano sotto la superficie." },
+   { "h": "I segreti", "d": "Password applicative, token, chiavi, stringhe di connessione non dovrebbero comparire nel codice o in cartelle condivise a troppi: un singolo accesso improprio svela molto più del necessario." }
+  ]
+ },
+ {
+  "id": "27001_m07_s025",
+  "layout": "punti",
+  "kicker": "Sviluppo",
+  "titolo": "Ambienti separati",
+  "intro": "Sviluppo, test e produzione hanno scopi, persone, dati e protezioni diverse: trattarli come intercambiabili dà comodità a breve e rischio strutturale. Chiediti se sono distinti solo di nome oppure anche nei fatti.",
+  "punti": [
+   { "h": "Costruzione vs servizio", "d": "Se gli sviluppatori lavorano in produzione per correggere urgenze, la distinzione si dissolve: risolvi oggi ma perdi tracciabilità. La correzione manuale sovrascritta dal rilascio successivo, il problema che torna in orario critico." },
+   { "h": "Distinti nei fatti", "d": "Differiscono davvero per accessi, dati, configurazioni, reti e privilegi, o condividono account e repository come un unico spazio? Sviluppatori con accesso ordinario alla produzione senza necessità circoscritta." },
+   { "h": "I dati reali in test", "d": "Copiati per comodità senza mascheramento espongono informazioni e allargano chi può vederle. Un controllo maturo cerca dati sintetici, ridotti o mascherati." },
+   { "h": "I flussi di rilascio", "d": "Codice e configurazioni dovrebbero seguire un percorso leggibile di promozione. Quando il passaggio avviene tramite cartelle personali e comandi improvvisati, è difficile capire cosa sia stato rilasciato." }
+  ]
+ },
+ {
+  "id": "27001_m07_s026",
+  "layout": "punti",
+  "kicker": "Sviluppo",
+  "titolo": "Test di sicurezza",
+  "intro": "Separare gli ambienti non basta se rilasci senza provare ciò che conta. I test verificano che il sistema regga anche quando un utente sbaglia o un attaccante insiste. Testare sicurezza non è diffidare del team: è dargli un modo ordinato per trovare errori prima che diventino incidenti.",
+  "punti": [
+   { "h": "Oltre il funzionale", "d": "Un'app può fare ciò che promette e restare debole su sessioni, errori, autorizzazioni. Il reset password perfetto lato utente, ma il link dura troppo, gli errori rivelano informazioni, i tentativi non sono limitati." },
+   { "h": "Un approccio strutturato", "d": "Chi definisce i casi, quando si eseguono, quali difetti sono bloccanti, come si verifica che la correzione abbia risolto senza creare altro. Non controlli occasionali «quando c'è tempo»." },
+   { "h": "La copertura per priorità", "d": "Autenticazione, autorizzazioni, sessioni, input, esportazione dati, interfacce amministrative, integrazioni, caricamento file: aree meritevoli di attenzione prioritaria. E le dipendenze esterne." },
+   { "h": "I risultati che decidono", "d": "Un elenco di problemi non gestiti è poco meglio di un problema non visto: servono priorità, responsabilità di correzione, tempi attesi, riesame delle eccezioni." }
+  ]
+ },
+ {
+  "id": "27001_m07_s027",
+  "layout": "punti",
+  "kicker": "Sviluppo",
+  "titolo": "Cambiamenti: rilasciare con controllo",
+  "intro": "Ogni controllo incontra il momento del cambiamento: una correzione urgente, un rilascio, una modifica sposta l'equilibrio. Non un freno burocratico: il modo di trasformare una necessità tecnica in un intervento comprensibile, autorizzato e verificabile. Governare l'urgenza, non negarla.",
+  "punti": [
+   { "h": "Il percorso accelerato", "d": "L'aggiornamento urgente di un componente esposto: entrare in produzione senza valutare dipendenze, finestra e piano di ritorno può correggere una debolezza introducendone un'altra. Registrazione minima ma chiara anche per le urgenze." },
+   { "h": "Il piano di ritorno", "d": "Non tutti gli interventi si annullano, ma ogni cambiamento importante dovrebbe considerare cosa accadrà se l'esito è negativo. Senza, il team resta prigioniero della modifica appena eseguita." },
+   { "h": "Non finisce col pulsante", "d": "Dopo il rilascio, osservare indicatori, errori, accessi anomali, segnali di regressione. Finisce quando hai motivo ragionevole di credere il servizio stabile." },
+   { "h": "Il quando e il con chi", "d": "La regola di autenticazione cambiata il venerdì sera che blocca un servizio esterno non mappato: il cambiamento non è mancato di intenzione, è mancato di visione d'insieme sulle dipendenze." }
+  ]
+ },
+ {
+  "id": "27001_m07_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 7",
+  "modNum": "07",
+  "titolo": "Dai controlli alle evidenze di efficacia",
+  "punti": [
+   { "h": "Le persone", "d": "Selezione coerente col ruolo, accordi chiari, consapevolezza concreta, violazioni e cessazioni governate, lavoro a distanza e segnalazioni: la sicurezza comincia dai comportamenti." },
+   { "h": "Il fisico", "d": "Aree sicure, schermo pulito, apparecchiature, supporti, cablaggi, dismissione: barriere contro accessi impropri, furti, indisponibilità e dispersione, non dettagli logistici." },
+   { "h": "La tecnologia", "d": "Endpoint, privilegi, malware, vulnerabilità e configurazioni si influenzano; backup ≠ ridondanza; log e monitoraggio per leggere i segnali; il tempo per renderli credibili." },
+   { "h": "Percorsi e dati", "d": "Reti e segregazione, web filtering, crittografia in transito e a riposo con governo delle chiavi: proteggere il tragitto e il contenuto fermo." },
+   { "h": "Lo sviluppo", "d": "Sicurezza dentro il ciclo di vita, ambienti separati, test mirati, cambiamenti governati: costruire con intenzione." },
+   { "h": "L'allineamento delle fragilità", "d": "Raramente un incidente nasce da un solo punto debole: collega i controlli, non osservarli come fotografie separate. È adatto al rischio, compreso, usato, tracciabile, e regge quando qualcosa cambia?" }
+  ],
+  "prossimo": {
+   "modulo": "08",
+   "titolo": "La valutazione delle prestazioni dell'SGSI",
+   "testo": "Dopo aver visto cosa mettere in campo, come misurare, analizzare e usare le evidenze per il miglioramento."
+  }
+ }
+]
