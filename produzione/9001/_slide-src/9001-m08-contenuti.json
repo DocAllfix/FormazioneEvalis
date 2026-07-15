@@ -1,0 +1,398 @@
+[
+  {
+    "id": "9001_m08_s001",
+    "layout": "apertura",
+    "corsoLabel": "ISO 9001 · Sistemi di gestione per la qualità",
+    "kicker": "Modulo 08",
+    "eyebrow": "La valutazione delle prestazioni",
+    "titolo": "Il capitolo del controllo",
+    "testo": "La lettera Controllare del ciclo PDCA: l'organizzazione si ferma, si guarda allo specchio e si chiede se sta funzionando come aveva promesso. È il battito cardiaco del sistema: finché batte, il sistema è vivo e può correggersi.",
+    "agenda": [
+      "Monitoraggio, misurazione e analisi dei dati",
+      "La soddisfazione del cliente",
+      "Le verifiche interne",
+      "Il riesame di direzione",
+      "Gli indicatori: leggere i numeri senza farsi ingannare",
+      "Il triangolo e cosa cercare in verifica"
+    ]
+  },
+  {
+    "id": "9001_m08_s002",
+    "layout": "cards",
+    "kicker": "Monitoraggio e misurazione",
+    "titolo": "Le quattro domande",
+    "intro": "Prima degli strumenti, la norma chiede di rispondere a quattro domande. La norma vuole scelte consapevoli, non collezioni di cifre.",
+    "cards": [
+      { "h": "Cosa misurare?", "d": "Non misurare tutto: scegliere i pochi elementi che raccontano come sta andando." },
+      { "h": "Con quali metodi?", "d": "Come si raccoglie il dato, perché i risultati siano validi e affidabili." },
+      { "h": "Con quale cadenza?", "d": "Ogni quanto tornare a osservare: già una decisione di qualità." },
+      { "h": "Quando analizzare?", "d": "La più trascurata: pianificare anche il momento della riflessione, non solo la raccolta." }
+    ]
+  },
+  {
+    "id": "9001_m08_s003",
+    "layout": "confronto",
+    "kicker": "Due gesti diversi",
+    "titolo": "Monitorare e misurare",
+    "intro": "Nel linguaggio comune sono sinonimi, nel sistema no. Il giudizio è doppio: sulle prestazioni (i risultati) e sull'efficacia (la capacità di raggiungere gli obiettivi). I buoni numeri nascono dal sistema, o gli capitano accanto per caso?",
+    "a": {
+      "h": "Misurare",
+      "sub": "Un numero",
+      "punti": [
+        { "d": "Assegnare un valore con uno strumento e una scala definita." },
+        { "d": "Affidabile quanto lo strumento e il metodo che lo producono." }
+      ]
+    },
+    "b": {
+      "h": "Monitorare",
+      "sub": "Un'osservazione",
+      "punti": [
+        { "d": "Tenere sotto osservazione un fenomeno nel tempo." },
+        { "d": "Anche quando non si traduce in una cifra secca (il clima di un reparto)." }
+      ]
+    }
+  },
+  {
+    "id": "9001_m08_s004",
+    "layout": "split",
+    "kicker": "La soddisfazione del cliente",
+    "titolo": "La percezione al centro",
+    "lead": "La norma non chiede quanto è bravo il prodotto secondo i tuoi criteri, ma come il cliente percepisce il risultato. La percezione appartiene al cliente, va ascoltata non dedotta. E il silenzio è ambiguo: non va mai scambiato per consenso.",
+    "punti": [
+      { "h": "Ottenere", "d": "Raccogliere la voce del cliente con strumenti adatti — andarla attivamente a cercare." },
+      { "h": "Tenere sotto controllo", "d": "Non una fotografia isolata: seguire l'andamento nel tempo." },
+      { "h": "Riesaminare", "d": "Tornare periodicamente su quelle informazioni per trarne conseguenze e decisioni." }
+    ]
+  },
+  {
+    "id": "9001_m08_s005",
+    "layout": "punti",
+    "kicker": "La soddisfazione del cliente",
+    "titolo": "Come si ascolta la voce del cliente",
+    "intro": "Una tastiera ricca di fonti: la soddisfazione si legge incrociandone più di una, mai affidandosi a una sola. Il mestiere di chi valuta è accorgersi delle voci che nessuno sta ascoltando.",
+    "punti": [
+      { "h": "Indagini dirette", "d": "Il questionario; ma risponde solo chi vuole, spesso i molto contenti o molto arrabbiati." },
+      { "h": "Ritorno spontaneo", "d": "Commenti e segnalazioni che arrivano senza essere sollecitati: preziosi perché spontanei." },
+      { "h": "Riunioni con i clienti", "d": "Gli incontri diretti fanno emergere cose che nessun questionario farebbe uscire." },
+      { "h": "Quote di mercato", "d": "Un segnale indiretto ma potente: se la fetta si assottiglia, qualcosa non va." },
+      { "h": "Richieste di garanzia", "d": "Ogni intervento in garanzia dice, senza parole, che il prodotto non ha retto le aspettative." },
+      { "h": "Rapporti di chi vende", "d": "I venditori stanno sul campo e raccolgono segnali deboli che non arrivano agli uffici." }
+    ]
+  },
+  {
+    "id": "9001_m08_s006",
+    "layout": "evidenza",
+    "kicker": "L'analisi dei dati",
+    "eyebrow": "Dai numeri alle decisioni",
+    "titolo": "Un grafico che nessuno interpreta è ancora un dato, non un'informazione",
+    "testo": "Un dato è un numero grezzo e muto: 'cinque resi questo mese'. Diventa informazione quando lo metti in relazione: contro i due del mese scorso, su mille pezzi, tutti dello stesso modello. Molte organizzazioni confondono la raccolta con l'analisi. La domanda giusta non è quanti grafici avete, ma cosa avete capito e cosa avete deciso di conseguenza."
+  },
+  {
+    "id": "9001_m08_s007",
+    "layout": "punti",
+    "kicker": "L'analisi dei dati",
+    "titolo": "I sette scopi",
+    "intro": "La norma indica a quali fini l'analisi va condotta: una griglia per giudicare se un'organizzazione usa i dati in modo completo. Molte analizzano bene solo i primi due, i più visibili, e dimenticano gli altri.",
+    "punti": [
+      { "h": "Conformità di prodotti e servizi", "d": "Se ciò che si consegna rispetta i requisiti." },
+      { "h": "Grado di soddisfazione del cliente", "d": "L'andamento del gradimento." },
+      { "h": "Prestazioni ed efficacia del sistema", "d": "La salute complessiva, non il singolo prodotto." },
+      { "h": "Efficacia della pianificazione", "d": "Guardare indietro: i piani che ci eravamo dati hanno funzionato?" },
+      { "h": "Efficacia delle azioni su rischi e opportunità", "d": "Hanno prodotto l'effetto sperato, o sono rimaste sulla carta?" },
+      { "h": "Prestazioni dei fornitori esterni", "d": "La qualità di ciò che entra condiziona quella di ciò che esce." },
+      { "h": "Esigenze di miglioramento", "d": "Dove il sistema può e deve diventare migliore." }
+    ]
+  },
+  {
+    "id": "9001_m08_s008",
+    "layout": "split",
+    "kicker": "Gli strumenti dell'analisi",
+    "titolo": "Le tecniche statistiche e la cultura del dato",
+    "lead": "La norma dice che le tecniche statistiche 'possono' trovare posto — non 'devono'. La differenza non sta negli strumenti, sta nella testa: la cultura del dato è l'abitudine a fondare le decisioni sui fatti invece che sulle sensazioni.",
+    "punti": [
+      { "h": "Non un obbligo di matematica", "d": "Un'analisi semplice, fatta con la testa, vale più di una statistica complicata fatta per finta." },
+      { "h": "Due errori opposti", "d": "La statistica spaventata (chi si crede fuori regola) e la statistica di facciata (indici senza comprensione)." },
+      { "h": "La cultura del dato", "d": "Anche un quaderno di resi vale più di mille cruscotti, se produce una decisione." }
+    ]
+  },
+  {
+    "id": "9001_m08_s009",
+    "layout": "split",
+    "kicker": "Le verifiche interne",
+    "titolo": "Perché l'organizzazione verifica sé stessa",
+    "lead": "Il controllo esterno arriva una volta l'anno; la verifica interna è frequente, capillare, continua. Serve a scoprire lo scarto tra ciò che è scritto e ciò che accade — la zona dove si nascondono i problemi più insidiosi.",
+    "punti": [
+      { "h": "Conforme al doppio metro", "d": "Alle proprie procedure interne E ai requisiti della norma: molte NC nascono dal non seguire le proprie regole." },
+      { "h": "Efficacemente attuato", "d": "Le regole non solo sulla carta, ma applicate nel lavoro di tutti i giorni." },
+      { "h": "Mantenuto nel tempo", "d": "Vive ancora, non si è spento dopo lo slancio iniziale." }
+    ]
+  },
+  {
+    "id": "9001_m08_s010",
+    "layout": "split",
+    "kicker": "Le verifiche interne",
+    "titolo": "Costruire il programma",
+    "lead": "Un programma, non verifiche a caso: la regia che tiene insieme frequenza, metodi, responsabilità e reporting. E deve imparare dal proprio passato, non ripartire ogni volta da zero.",
+    "punti": [
+      { "h": "L'importanza dei processi", "d": "Più energie dove il rischio è maggiore, meno su quelli marginali." },
+      { "h": "I cambiamenti nell'organizzazione", "d": "Le zone di novità (un reparto riorganizzato, un fornitore nuovo) con occhi più attenti." },
+      { "h": "I risultati delle verifiche precedenti", "d": "Dove l'anno scorso sono emersi problemi, si torna con più frequenza." }
+    ]
+  },
+  {
+    "id": "9001_m08_s011",
+    "layout": "cards",
+    "kicker": "Le verifiche interne",
+    "titolo": "Criteri, campo e chi verifica",
+    "intro": "Tre decisioni per ciascuna verifica. La credibilità di tutte le verifiche interne poggia sull'indipendenza.",
+    "cards": [
+      { "h": "I criteri", "d": "Il metro dichiarato prima: quali procedure, requisiti, regole faranno da riferimento." },
+      { "h": "Il campo di applicazione", "d": "I confini: quali processi, reparti, periodo. Senza confini si guarda tutto male." },
+      { "h": "Chi verifica", "d": "Obiettività e imparzialità: nessuno verifica il proprio lavoro — l'indipendenza." }
+    ]
+  },
+  {
+    "id": "9001_m08_s012",
+    "layout": "punti",
+    "kicker": "Le verifiche interne",
+    "titolo": "Dai risultati alle azioni",
+    "intro": "Una verifica che trova un problema e lo lascia lì è sprecata. Correzione (spegne l'incendio) e azione correttiva (va alla causa) sono diverse e servono entrambe.",
+    "punti": [
+      { "h": "Riportare al livello direzionale", "d": "L'informazione deve salire a chi ha il potere di decidere e stanziare risorse." },
+      { "h": "Correzioni e azioni correttive", "d": "Senza indebito ritardo: un problema aperto per mesi è un problema scelto di ignorare." },
+      { "h": "Conservare le evidenze", "d": "Prove dell'attuazione e dei risultati: la memoria che alimenta l'anno successivo." }
+    ]
+  },
+  {
+    "id": "9001_m08_s013",
+    "layout": "confronto",
+    "kicker": "Un confronto utile",
+    "titolo": "Verifica interna ed esterna",
+    "intro": "Le due si completano: la verifica interna è la palestra, quella esterna la gara. Entrambe condividono il principio dell'indipendenza (per la conduzione la norma rimanda alla ISO 19011).",
+    "a": {
+      "h": "Verifica interna",
+      "sub": "Prima parte",
+      "punti": [
+        { "d": "L'organizzazione controlla sé stessa, con proprie persone." },
+        { "d": "Strumento di miglioramento: trovare i problemi prima che diventino gravi." },
+        { "d": "Numerosa, ravvicinata, capillare lungo tutto l'anno." }
+      ]
+    },
+    "b": {
+      "h": "Verifica di terza parte",
+      "sub": "Ente indipendente",
+      "punti": [
+        { "d": "Un soggetto esterno, senza interesse a compiacere." },
+        { "d": "Scopo di attestazione: dichiarare al mercato la conformità." },
+        { "d": "Concentrata nel tempo, osserva un campione del sistema." }
+      ]
+    }
+  },
+  {
+    "id": "9001_m08_s014",
+    "layout": "cards",
+    "kicker": "Le verifiche interne",
+    "titolo": "Farle bene",
+    "intro": "La norma fissa i requisiti; il come farli funzionare è esperienza. Il campanello d'allarme è l'assenza totale di rilievi interni.",
+    "cards": [
+      { "h": "La competenza di chi conduce", "d": "Non basta l'indipendenza: bisogna capire il processo, o si guarda solo la carta." },
+      { "h": "Il modo di porsi", "d": "Non un tribunale che cerca colpevoli: se temuta, le persone nascondono i problemi." },
+      { "h": "Apprezzare le non conformità", "d": "Un sistema sano è contento quando trova qualcosa: scoperto in casa, in tempo." }
+    ]
+  },
+  {
+    "id": "9001_m08_s015",
+    "layout": "split",
+    "kicker": "Il riesame di direzione",
+    "titolo": "Quando i vertici decidono",
+    "lead": "Affidato all'alta direzione e non delegabile: chi comanda si assume la responsabilità di ciò che il sistema è diventato. Ad intervalli pianificati. Lo scopo, in tre parole più una.",
+    "punti": [
+      { "h": "Idoneo", "d": "Ancora adatto allo scopo, o il mondo è cambiato e lui è rimasto fermo?" },
+      { "h": "Adeguato", "d": "Proporzionato all'organizzazione così com'è oggi, magari cresciuta." },
+      { "h": "Efficace", "d": "Capace di raggiungere i risultati che ci si aspetta da esso." },
+      { "h": "Allineato alla strategia", "d": "Non un mondo separato: deve remare nella direzione degli indirizzi strategici." }
+    ]
+  },
+  {
+    "id": "9001_m08_s016",
+    "layout": "split",
+    "kicker": "Gli ingressi del riesame · 1",
+    "titolo": "Il passato e i cambiamenti",
+    "lead": "Un riesame che non controlla le proprie decisioni passate è come chi ogni capodanno prende gli stessi propositi senza chiedersi perché quelli dell'anno prima non si sono avverati. La continuità rende credibile il meccanismo.",
+    "punti": [
+      { "h": "Lo stato delle azioni precedenti", "d": "Cosa avevamo deciso l'ultima volta è stato attuato, o è rimasto lettera morta?" },
+      { "h": "I cambiamenti nei fattori", "d": "Esterni e interni: leggi, mercati, tecnologie, organico. Contro l'invecchiamento silenzioso." }
+    ]
+  },
+  {
+    "id": "9001_m08_s017",
+    "layout": "punti",
+    "kicker": "Gli ingressi del riesame · 2",
+    "titolo": "Le informazioni sulle prestazioni",
+    "intro": "La voce più corposa: non fotografie, ma andamenti. È il punto in cui tutti i fili del capitolo si annodano insieme davanti a chi deve decidere. Un riesame che guarda solo le buone notizie è cieco da un occhio.",
+    "punti": [
+      { "h": "Soddisfazione del cliente", "d": "E le informazioni di ritorno dalle parti interessate rilevanti." },
+      { "h": "Il raggiungimento degli obiettivi", "d": "Quei traguardi che ci eravamo dati, li abbiamo centrati?" },
+      { "h": "Prestazioni dei processi e conformità", "d": "Come hanno funzionato i processi e quanto era conforme il consegnato." },
+      { "h": "Non conformità e azioni correttive", "d": "I problemi emersi e i rimedi presi alla radice." },
+      { "h": "Risultati del monitoraggio", "d": "Tutti i dati raccolti nel primo blocco, che salgono a nutrire la decisione." },
+      { "h": "Risultati degli audit", "d": "Interni ed esterni: ciò che è emerso dal controllo su sé stessi." },
+      { "h": "Prestazioni dei fornitori", "d": "La salute del sistema dipende anche da chi lo rifornisce." }
+    ]
+  },
+  {
+    "id": "9001_m08_s018",
+    "layout": "cards",
+    "kicker": "Gli ingressi del riesame · 3",
+    "titolo": "Risorse, rischi e occasioni",
+    "intro": "Le ultime voci spostano lo sguardo dal passato al futuro: un riesame che elenca solo ciò che è successo frena invece di guidare.",
+    "cards": [
+      { "h": "L'adeguatezza delle risorse", "d": "Il sistema ha abbastanza mezzi? L'unico tavolo dove siede chi può stanziarli." },
+      { "h": "L'efficacia delle azioni su rischi", "d": "Le mosse contro i rischi e per le opportunità hanno funzionato davvero?" },
+      { "h": "Le opportunità di miglioramento", "d": "Guardare in avanti: non solo correggere ciò che è rotto, ma migliorare ciò che funziona." }
+    ]
+  },
+  {
+    "id": "9001_m08_s019",
+    "layout": "punti",
+    "kicker": "Gli esiti del riesame",
+    "titolo": "Cosa esce: le decisioni",
+    "intro": "Un riesame vero produce scelte; uno finto produce solo constatazioni. La norma indica tre aree in cui devono ricadere le decisioni, con un responsabile e una scadenza.",
+    "punti": [
+      { "h": "Opportunità di miglioramento", "d": "Trasformare le occasioni emerse in decisioni operative, in cose che verranno fatte." },
+      { "h": "Modifiche al sistema", "d": "Il sistema è vivo: il riesame è il momento istituzionale in cui lo si aggiorna." },
+      { "h": "Le risorse necessarie", "d": "Una decisione senza i mezzi per attuarla è morta in partenza." }
+    ]
+  },
+  {
+    "id": "9001_m08_s020",
+    "layout": "confronto",
+    "kicker": "Il riesame",
+    "titolo": "Vivo o di facciata",
+    "intro": "Su questo tema, più di ogni altro, la tentazione di produrre il documento senza vivere la sostanza. La verità di un riesame non sta nel documento, sta in ciò che accade dopo.",
+    "a": {
+      "h": "Riesame vivo",
+      "sub": "Cambia la realtà",
+      "punti": [
+        { "d": "I vertici discutono davvero, qualcuno si scontra." },
+        { "d": "Nascono decisioni concrete, con responsabili e scadenze." },
+        { "d": "Nei mesi seguenti quelle decisioni diventano fatti visibili." }
+      ]
+    },
+    "b": {
+      "h": "Riesame di facciata",
+      "sub": "Una recita",
+      "punti": [
+        { "d": "Verbale identico all'anno prima, numeri copiati." },
+        { "d": "Una firma su un testo preparato da altri, senza partecipare." },
+        { "d": "Decisioni vaghe come 'continuare a migliorare', e nulla cambia." }
+      ]
+    }
+  },
+  {
+    "id": "9001_m08_s021",
+    "layout": "split",
+    "kicker": "Gli indicatori",
+    "titolo": "Che cos'è un indicatore",
+    "lead": "Una spia sul cruscotto: non ti mostra tutto il motore, ma ti dice se una cosa importante funziona. Più indicatori non è meglio: un cruscotto con cento spie è un cruscotto che nessuno guarda.",
+    "punti": [
+      { "h": "Condensa la realtà in un segnale", "d": "Il linguaggio con cui il sistema racconta sé stesso ai suoi vertici." },
+      { "h": "Lo strumento del monitoraggio", "d": "Attua il monitoraggio, alimenta l'analisi, prepara le informazioni per il riesame." },
+      { "h": "Le tre domande", "d": "Perché questi? Chi li osserva? Cosa avete fatto quando uno è peggiorato?" }
+    ]
+  },
+  {
+    "id": "9001_m08_s022",
+    "layout": "cards",
+    "kicker": "Gli indicatori",
+    "titolo": "Che cosa rende buono un indicatore",
+    "intro": "Non tutte le spie sono affidabili: alcune ingannano. Distingui gli indicatori di risultato (lo specchietto: ti dice dove sei stato) da quelli di processo (la strada davanti: avvertono in tempo). Attenzione a quelli che spingono al comportamento sbagliato.",
+    "cards": [
+      { "h": "Pertinenza", "d": "Misura ciò che conta davvero, non ciò che è facile misurare." },
+      { "h": "Affidabilità", "d": "Raccolto sempre nello stesso modo, o confronti mele con pere." },
+      { "h": "Chiarezza", "d": "Comprensibile a chi deve agire, senza bisogno di un traduttore." }
+    ]
+  },
+  {
+    "id": "9001_m08_s023",
+    "layout": "evidenza",
+    "dark": false,
+    "kicker": "Gli indicatori",
+    "eyebrow": "Leggere gli andamenti",
+    "titolo": "Il valore di oggi conta poco: conta la direzione in cui si muove",
+    "testo": "Un numero isolato è muto: otto reclami sono un disastro se prima erano due, un successo se erano venti. Come il livello di un fiume: in un solo istante non sai se sei verso la piena o dopo. Chi guarda la fotografia dorme tranquillo; chi guarda il film si sveglia in tempo. E ogni numero prende senso anche confrontato con l'obiettivo che ci si era dati."
+  },
+  {
+    "id": "9001_m08_s024",
+    "layout": "flusso",
+    "kicker": "Gli indicatori",
+    "titolo": "Indicatori e obiettivi: la catena",
+    "intro": "Un obiettivo senza indicatore è un desiderio senza termometro; un indicatore senza obiettivo è un numero che galleggia. Insieme chiudono il grande cerchio del capitolo.",
+    "passi": [
+      { "h": "Obiettivo", "d": "L'organizzazione si dà un traguardo per la qualità." },
+      { "h": "Indicatore", "d": "Lo strumento che lo rende misurabile." },
+      { "h": "Dati", "d": "Il monitoraggio raccoglie i valori nel tempo." },
+      { "h": "Analisi", "d": "Ne legge l'andamento: ci si avvicina al traguardo?" },
+      { "h": "Decisione", "d": "Al riesame, vedendo la distanza, i vertici decidono cosa fare." }
+    ]
+  },
+  {
+    "id": "9001_m08_s025",
+    "layout": "cards",
+    "kicker": "Lo sguardo d'insieme",
+    "titolo": "Il triangolo del capitolo",
+    "intro": "Tre vertici che si sostengono a vicenda; se togli un vertice, la figura crolla. La verifica più potente segue un problema attraverso tutti e tre: è stato rilevato? è arrivato al riesame? ha prodotto una decisione? ha riorientato i controlli?",
+    "cards": [
+      { "h": "I dati", "d": "Monitoraggio, misurazione, analisi. Se deboli, il riesame decide alla cieca." },
+      { "h": "Le verifiche interne", "d": "L'organizzazione controlla sé stessa. Se deboli, il quadro è incompleto." },
+      { "h": "Il riesame di direzione", "d": "I vertici decidono. Se debole, le informazioni non diventano mai decisioni." }
+    ]
+  },
+  {
+    "id": "9001_m08_s026",
+    "layout": "punti",
+    "kicker": "Dove guardare",
+    "titolo": "Cosa cercare nel capitolo nove",
+    "intro": "Nel capitolo nove non cercare la carta, cerca la vita: la documentazione ci sarà quasi sempre; ciò che manca, quando manca, è la sostanza. Segui un problema reale attraverso tutto il capitolo.",
+    "punti": [
+      { "h": "Monitoraggio senza analisi", "d": "Misurano diligentemente, ma nessuno ragiona sui numeri: mostratemi una decisione nata dai dati." },
+      { "h": "Soddisfazione ridotta a rito", "d": "Un questionario archiviato senza cambiare nulla; una sola fonte ascoltata." },
+      { "h": "Verifiche interne finte", "d": "Che non trovano mai nulla; mancanza di indipendenza; rilievi non chiusi." },
+      { "h": "Riesame come formalità", "d": "La più frequente: verbale copiato, decisioni generiche, quelle passate mai attuate." }
+    ]
+  },
+  {
+    "id": "9001_m08_s027",
+    "layout": "punti",
+    "kicker": "La bussola tascabile",
+    "titolo": "Le domande che rivelano la verità",
+    "intro": "Cinque domande che seguono il triangolo e ne verificano i collegamenti. Valgono più di qualsiasi lettura di documenti: ascolta non solo le parole, ma anche le esitazioni.",
+    "punti": [
+      { "h": "Perché misurate proprio queste cose?", "d": "Una risposta sicura rivela chi ha pensato; un 'si è sempre fatto così' rivela numeri senza criterio." },
+      { "h": "Mostratemi una decisione nata dai dati", "d": "La più rivelatrice: smaschera chi raccoglie senza analizzare." },
+      { "h": "Cosa avete cambiato quando il gradimento è peggiorato?", "d": "La soddisfazione muove le scelte o resta un voto appeso?" },
+      { "h": "L'ultima scoperta di una verifica interna?", "d": "Un ritrovamento reale, o 'va sempre tutto bene'?" },
+      { "h": "Una decisione dell'ultimo riesame, a che punto è?", "d": "Verifica insieme che il riesame decida e che le decisioni diventino realtà." }
+    ]
+  },
+  {
+    "id": "9001_m08_s028",
+    "layout": "chiusura",
+    "kicker": "Riepilogo · Modulo 08",
+    "modNum": "08",
+    "titolo": "Il battito cardiaco del sistema",
+    "punti": [
+      { "h": "Monitoraggio e analisi", "d": "Quattro domande, sette scopi; il dato muto che diventa informazione." },
+      { "h": "La soddisfazione del cliente", "d": "La percezione al centro, ascoltata incrociando più fonti." },
+      { "h": "Le verifiche interne", "d": "Lo scarto tra scritto e reale; programma, indipendenza, azioni." },
+      { "h": "Il riesame di direzione", "d": "Idoneo, adeguato, efficace; decisioni concrete che cambiano la realtà." },
+      { "h": "Gli indicatori", "d": "Pochi e pertinenti; leggere l'andamento, legarli agli obiettivi." },
+      { "h": "Il triangolo", "d": "Dati, verifiche, riesame: verifica che si parlino, non solo che esistano." }
+    ],
+    "prossimo": {
+      "modulo": "09",
+      "titolo": "Il miglioramento",
+      "testo": "Non conformità, azioni correttive e miglioramento continuo: chiudere il ciclo PDCA."
+    }
+  }
+]
