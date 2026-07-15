@@ -1,0 +1,403 @@
+[
+ {
+  "id": "27001_m02_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 2",
+  "eyebrow": "Il lessico fondamentale",
+  "titolo": "Le parole che userai per capire la norma",
+  "testo": "Entri nel vocabolario tecnico minimo, quello che ti serve per leggere la norma senza inciampare nelle parole. Il punto di partenza è semplice: ISO IEC 27001 non parla soltanto di tecnologie, parla di gestione. Il punto non è memorizzare definizioni da dizionario: è saper riconoscere, in una situazione concreta, quale parola descrive meglio ciò che stai osservando.",
+  "agenda": [
+   "Scopo e campo di applicazione della norma",
+   "Il triangolo: riservatezza, integrità, disponibilità",
+   "Informazione, asset, minaccia, vulnerabilità, evento, incidente",
+   "Rischio e controllo nella cornice giusta",
+   "Struttura armonizzata: corpo della norma e Appendice A"
+  ]
+ },
+ {
+  "id": "27001_m02_s002",
+  "layout": "flusso",
+  "kicker": "Lo scopo",
+  "titolo": "Un sistema di gestione, non un catalogo di misure",
+  "intro": "La norma non nasce come elenco di difese: indica ciò che serve per far nascere, mettere in funzione, tenere efficace e far evolvere un sistema di gestione. Non promette sicurezza assoluta, perché non esiste: promette un quadro capace di ridurre l'esposizione in modo ragionato.",
+  "passi": [
+   { "h": "Far nascere", "d": "Impostarlo in modo coerente con il contesto reale dell'organizzazione, non con un modello preso altrove." },
+   { "h": "Mettere in funzione", "d": "Portarlo nelle attività quotidiane, non lasciarlo fermo in un documento ben scritto ma inutilizzato." },
+   { "h": "Tenere efficace", "d": "Evitare che si consumi appena passa l'attenzione iniziale. Se la procedura dice una cosa e le persone ne fanno un'altra, il sistema non è attivo." },
+   { "h": "Far evolvere", "d": "Un sistema maturo non resta immobile: cambiano persone, strumenti, processi, minacce e priorità. E il rischio non è un'aggiunta facoltativa: è incorporato." }
+  ]
+ },
+ {
+  "id": "27001_m02_s003",
+  "layout": "punti",
+  "kicker": "Il campo di applicazione",
+  "titolo": "Generale, adattabile, senza scegliere solo il comodo",
+  "intro": "I requisiti hanno carattere generale e sono preparati per valere in organizzazioni diverse per tipologia, dimensione e natura. Una cooperativa sociale, un laboratorio, un ente locale, una software house, uno studio professionale.",
+  "punti": [
+   { "h": "Adattata, non copiata", "d": "Il sistema prende forma in base alle informazioni trattate, alle attività, alle parti interessate, alle tecnologie e al profilo di rischio effettivo. La generalità non annulla le differenze: le ospita." },
+   { "h": "Nessuna versione comoda", "d": "Chi dichiara conformità non può escludere a piacere i requisiti delle parti centrali del sistema. La flessibilità riguarda il come applicarli, non il diritto di cancellarli." },
+   { "h": "Piccolo non è esentato", "d": "Significa che il sistema sarà proporzionato, più snello, meno stratificato — ma completo nella sua architettura. Semplificare la forma è legittimo, eliminare la sostanza no." },
+   { "h": "La distinzione professionale", "d": "«Questo requisito non lo abbiamo considerato perché per noi non serve»: l'adattamento è ragionato, motivato e inserito nel sistema; l'esclusione arbitraria prova a sottrarsi." }
+  ]
+ },
+ {
+  "id": "27001_m02_s004",
+  "layout": "definizione",
+  "kicker": "Il triangolo",
+  "eyebrow": "Tre qualità, un solo equilibrio",
+  "titolo": "Che cosa protegge la sicurezza",
+  "definizione": "Non tre slogan da ripetere a memoria: tre qualità diverse che un'informazione può dover conservare. Lo stesso asset può subire danni diversi — pensa al file delle retribuzioni.",
+  "punti": [
+   { "h": "Riservatezza", "d": "Accessibile soltanto a chi è autorizzato. Se il file è visto da persone senza titolo, è colpita — anche senza alcun furto." },
+   { "h": "Integrità", "d": "Corretta, completa, non alterata in modo improprio. Se qualcuno modifica importi o coordinate senza autorizzazione, è colpita." },
+   { "h": "Disponibilità", "d": "Raggiungibile quando serve. Se il file non è accessibile il giorno della chiusura paghe, è colpita — anche se resta segreto e corretto." }
+  ]
+ },
+ {
+  "id": "27001_m02_s005",
+  "layout": "punti",
+  "kicker": "Il triangolo",
+  "titolo": "Riservatezza: vedere solo ciò che serve",
+  "intro": "La questione non è nascondere tutto: è fare in modo che l'informazione sia conoscibile soltanto da chi ha titolo. Due errori opposti: credere che più chiudi meglio proteggi, o pensare che se molti collaborano l'accesso ampio sia inevitabile.",
+  "punti": [
+   { "h": "La domanda continua", "d": "Chi ha davvero bisogno di questo dato, per fare quale attività, in quale momento? Se il caporeparto curioso apre un fascicolo senza motivo, è già compromessa." },
+   { "h": "Non solo tecnologia", "d": "Allegato al destinatario sbagliato, schermo aperto in sala condivisa, file su dispositivo personale, conversazione ad alta voce in ascensore: regole, abitudini, formazione, accessi fisici." },
+   { "h": "Differenziare", "d": "Un catalogo pubblico ha vocazione aperta, un piano commerciale ancora riservato incide su trattative e vantaggio. La maturità si vede nel saper differenziare, non nel trattare tutto uguale." },
+   { "h": "I permessi che si accumulano", "d": "Chi passa da risorse umane ad amministrazione non ha più motivo di vedere certe informazioni. Se restano per inerzia, la riservatezza si indebolisce senza rumore." }
+  ]
+ },
+ {
+  "id": "27001_m02_s006",
+  "layout": "punti",
+  "kicker": "Il triangolo",
+  "titolo": "Integrità: dati degni di fiducia",
+  "intro": "Se la riservatezza chiede chi può vedere, l'integrità chiede se l'informazione è ancora affidabile. Meno appariscente, spesso decisiva: una decisione presa su informazioni sbagliate costa moltissimo, anche senza alcuna fuga.",
+  "punti": [
+   { "h": "Il danno economico diretto", "d": "Cambiano le coordinate bancarie di un fornitore senza controllo adeguato: i pagamenti vengono dirottati. Nessuno ha visto un dato segreto — il dato è stato alterato e trattato come valido." },
+   { "h": "Non solo i database", "d": "I parametri di una macchina caricati da un file sovrascritto con una versione vecchia: pezzi fuori tolleranza, rilavorazioni, scarti. Riguarda ogni informazione usata per decidere, pagare, produrre." },
+   { "h": "Non sempre intenzionale", "d": "Errore umano, malfunzionamento, sincronizzazione difettosa, migrazione mal gestita, formula errata in un foglio di calcolo. Un listino con una colonna spostata male: l'informazione circola come se fosse buona." },
+   { "h": "Il falso amico", "d": "Qui integrità non è onestà personale: parliamo dell'informazione. Un documento può essere riservatissimo e totalmente inaffidabile — un livello alto di riservatezza non compensa una bassa integrità." }
+  ]
+ },
+ {
+  "id": "27001_m02_s007",
+  "layout": "punti",
+  "kicker": "Il triangolo",
+  "titolo": "Disponibilità: quando il lavoro non può aspettare",
+  "intro": "La dimensione che senti immediatamente, perché il suo fallimento blocca il lavoro sotto gli occhi di tutti. Se il dato esiste ma non riesci ad accedervi, per il processo che lo aspetta è quasi come non esistesse.",
+  "punti": [
+   { "h": "Non presenza continua", "d": "È accessibilità coerente con il bisogno del processo: un archivio storico tollera ripristini lunghi, una piattaforma di prenotazioni no. Se tutto è «urgente», nulla è stato prioritizzato." },
+   { "h": "Non solo infrastruttura", "d": "Se l'unica persona che sa usare un'applicazione chiave è assente, o se le credenziali d'emergenza sono in un armadio inaccessibile, il servizio resta fermo pur avendo dati intatti." },
+   { "h": "Acceso ma fermo", "d": "Applicazione lentissima, rete che regge a fatica, fornitore esterno non disponibile: qualcuno dirà che il sistema non è guasto, ma il processo non procede con tempi utili." },
+   { "h": "L'effetto collaterale", "d": "Condividere account per evitare blocchi sembra pratico, ma crea problemi di riservatezza e integrità. Ottieni un beneficio rapido e apri nuove vulnerabilità." }
+  ]
+ },
+ {
+  "id": "27001_m02_s008",
+  "layout": "cards",
+  "kicker": "Il triangolo",
+  "titolo": "Uno stesso evento, tre effetti diversi",
+  "intro": "Non basta dire «c'è stato un attacco» o «c'è stato un guasto». Devi chiederti che cosa è stato colpito davvero. Usare il termine corretto aiuta anche a scegliere il controllo appropriato.",
+  "cards": [
+   { "h": "Il malware negli archivi", "d": "File cifrati e illeggibili: disponibilità. Se durante l'evento vengono copiati dati verso l'esterno: anche riservatezza. Se tornano accessibili ma incompleti o corrotti: entra l'integrità." },
+   { "h": "L'export sincronizzato", "d": "Un elenco clienti esportato per lavorare da casa finisce per errore in una cartella condivisa. Disponibilità invariata, integrità intatta: è colpita solo la riservatezza — il perimetro si allarga." },
+   { "h": "La migrazione applicativa", "d": "Alcuni campi dell'anagrafica ordini vengono troncati. Gli utenti accedono normalmente, nessun estraneo vede i dati: è danneggiata l'integrità." }
+  ]
+ },
+ {
+  "id": "27001_m02_s009",
+  "layout": "punti",
+  "kicker": "Il triangolo",
+  "titolo": "Bilanciare senza rompere il lavoro",
+  "intro": "Nella vita organizzativa queste qualità vanno bilanciate, non massimizzate tutte in modo cieco. Un sistema maturo non rende il lavoro impossibile: lo protegge mantenendolo praticabile.",
+  "punti": [
+   { "h": "La riservatezza troppo stretta", "d": "Se rallenti ogni attività legittima, le persone cercheranno scorciatoie: copie locali, credenziali condivise, canali non approvati. Hai irrigidito la protezione e creato nuove vulnerabilità." },
+   { "h": "La disponibilità a ogni costo", "d": "Permessi troppo ampi o controlli aggirati per garantire accesso continuo compromettono integrità e riservatezza. E vale il contrario: approvazioni troppo complesse rallentano operazioni urgenti." },
+   { "h": "Severità ≠ bontà", "d": "Non chiederti solo se una regola è severa: chiediti se è coerente col bisogno operativo. Una regola poco rispettata perché irrealistica indica un bilanciamento sbagliato." },
+   { "h": "Tradurre le percezioni", "d": "Diranno «serve più sicurezza» quando chiedono più disponibilità; «il sistema è troppo aperto» quando il problema è l'integrità delle modifiche." }
+  ]
+ },
+ {
+  "id": "27001_m02_s010",
+  "layout": "definizione",
+  "kicker": "I termini chiave",
+  "eyebrow": "Il punto da cui parte tutto",
+  "titolo": "Informazione e asset",
+  "definizione": "La norma rinvia a ISO IEC 27000 per termini e definizioni: qui lavoriamo con significati operativi utili nella pratica, senza attribuire alla norma formule che non esplicita.",
+  "punti": [
+   { "h": "L'informazione", "d": "Qualsiasi contenuto che ha valore perché guida decisioni, azioni, autorizzazioni, relazioni o servizi. Digitale, cartaceo, verbale, visivo — perfino nella memoria di una persona esperta." },
+   { "h": "L'asset", "d": "Una risorsa che ha valore e merita protezione: spesso l'informazione stessa, ma anche ciò che la contiene, elabora, trasmette. Un archivio, un'applicazione, una stanza tecnica, un fornitore critico, le competenze." },
+   { "h": "Non coincidono", "d": "La cartella del paziente è informazione; l'applicazione che la contiene è asset. Se guardi solo il file, perdi metà del quadro; se guardi solo la tecnologia, perdi il contenuto e il suo significato." }
+  ]
+ },
+ {
+  "id": "27001_m02_s011",
+  "layout": "confronto",
+  "kicker": "I termini chiave",
+  "titolo": "Minaccia e vulnerabilità",
+  "intro": "Se scambi l'una per l'altra, scegli contromisure fuori bersaglio. Un pregiudizio da togliere: la minaccia non è sempre esterna e criminale, la vulnerabilità non è sempre tecnica.",
+  "a": {
+   "h": "La minaccia",
+   "sub": "Può accadere o manifestarsi",
+   "punti": [
+    { "d": "Ciò che può causare un effetto dannoso su informazioni o asset. Preme dall'esterno o dall'interno." },
+    { "d": "Errore umano, guasto, disservizio di un fornitore, cancellazione involontaria, incendio, comportamento scorretto interno — non solo attacco deliberato." },
+    { "d": "La campagna di messaggi fraudolenti: il tentativo di inganno è la minaccia." }
+   ]
+  },
+  "b": {
+   "h": "La vulnerabilità",
+   "sub": "Può essere sfruttata",
+   "punti": [
+    { "d": "Un punto debole che rende più facile quel danno. Apre il varco." },
+    { "d": "Software, ma anche processi, ruoli, autorizzazioni, spazi fisici, competenze mancanti, tempi di reazione lunghi." },
+    { "d": "Non il messaggio: la scarsa verifica del mittente, la formazione insufficiente, le credenziali riutilizzabili." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m02_s012",
+  "layout": "definizione",
+  "kicker": "I termini chiave",
+  "eyebrow": "Non fatti qualunque",
+  "titolo": "Evento e incidente",
+  "definizione": "Un evento di sicurezza è un'occorrenza identificata che segnala qualcosa di anomalo, potenzialmente pericoloso o significativo per la protezione delle informazioni. Non è una generica attività quotidiana.",
+  "punti": [
+   { "h": "Gli eventi", "d": "Accessi negati ripetuti sullo stesso account; una protezione disattivata inaspettatamente; un allegato malevolo bloccato dal sistema di posta; il tentativo di aprire una cartella riservata." },
+   { "h": "L'incidente", "d": "Uno o più eventi indesiderati con probabilità significativa di compromettere le attività e minacciare la sicurezza. Ogni incidente è legato a eventi, ma non ogni evento diventa incidente." },
+   { "h": "Il criterio pratico", "d": "Stai osservando un segnale significativo, o una situazione che richiede contenimento, analisi, ripristino e decisioni perché l'impatto è serio o altamente probabile?" }
+  ]
+ },
+ {
+  "id": "27001_m02_s013",
+  "layout": "flusso",
+  "kicker": "I termini chiave",
+  "titolo": "Dalla risorsa al danno",
+  "intro": "Nel lavoro reale i problemi non arrivano con il cartellino del nome: sei tu che devi riconoscere in quale punto della catena ti trovi. Ti protegge da due errori: fermarti troppo presto, chiamando problema una vulnerabilità non ancora sfruttata; o arrivare troppo tardi.",
+  "passi": [
+   { "h": "Ciò che ha valore", "d": "Un contratto, un progetto, una cartella clinica; e l'asset che consente di usarlo: un'applicazione, un archivio, una competenza critica." },
+   { "h": "Che cosa lo può colpire", "d": "Errore umano, comportamento scorretto, attacco intenzionale, guasto, interruzione del fornitore, incendio, perdita accidentale." },
+   { "h": "Dove può entrare", "d": "Permessi troppo ampi, copie in chiaro, modifiche non controllate, secondo livello di approvazione assente, locale non protetto, conoscenza concentrata in una persona." },
+   { "h": "Il fatto osservabile", "d": "L'apertura del file da parte di chi non ne ha titolo; l'eliminazione involontaria di documenti; la modifica del dato a sistema." },
+   { "h": "Quando diventa incidente", "d": "Quando l'accesso improprio espone dati riservati, o la cancellazione produce indisponibilità alla vigilia di una trattativa, o partono pagamenti verso il conto sbagliato." }
+  ]
+ },
+ {
+  "id": "27001_m02_s014",
+  "layout": "punti",
+  "kicker": "Caso completo",
+  "titolo": "Leggere un episodio col lessico giusto",
+  "intro": "Un'azienda di servizi tecnici: i tecnici ricevono incarichi su tablet, consultano schede cliente, caricano rapporti e chiudono ordini in mobilità. Il valore dell'analisi non sta nelle parole eleganti: sta nel fatto che ogni termine orienta l'azione.",
+  "punti": [
+   { "h": "Il valore e gli asset", "d": "Dati cliente, dettagli impianti, appuntamenti, consuntivi. E: applicazione mobile, servizio cloud, tablet, connettività, autenticazione, competenze. Non è ancora un problema." },
+   { "h": "Le minacce", "d": "Un messaggio che simula una richiesta interna di aggiornamento credenziali con pagina imitata. E una più ordinaria: lo smarrimento del tablet durante gli spostamenti." },
+   { "h": "Le vulnerabilità", "d": "Indicazioni poco chiare sui messaggi anomali; blocco automatico assente su parte dei dispositivi; sessione tenuta aperta per ore per comodità operativa. Non sono conseguenze: sono punti deboli." },
+   { "h": "Evento o incidente", "d": "Il tecnico inserisce le credenziali: evento. Se l'anomalia è rilevata e la sessione revocata subito, resta evento. Se le credenziali vengono usate per scaricare allegati, è incidente di riservatezza." },
+   { "h": "Il tablet smarrito", "d": "Cifrato, con blocco rapido e cancellazione remota: spiacevole ma contenuto. Aperto, con documenti in locale e senza cancellazione: la vulnerabilità rende concreta la minaccia." }
+  ]
+ },
+ {
+  "id": "27001_m02_s015",
+  "layout": "punti",
+  "kicker": "Il lessico sul campo",
+  "titolo": "Ascoltare bene per nominare meglio",
+  "intro": "Quasi nessuno ti parlerà usando il vocabolario perfetto: ti diranno che il sistema è fragile, che c'è stato un problema, che un file è sparito. Il tuo compito è tradurre senza forzature e senza fretta.",
+  "punti": [
+   { "h": "«Troppe persone aprono la cartella»", "d": "La parola «esposti» fa pensare al rischio, ma prima riconosci una vulnerabilità: permessi troppo ampi. L'incidente non c'è ancora, almeno da quanto sai." },
+   { "h": "«Il sistema ordini è andato in blocco»", "d": "Un evento che ha inciso sulla disponibilità — e con buone probabilità un incidente, se l'impatto operativo è stato rilevante." },
+   { "h": "«Di solito ce ne accorgiamo»", "d": "Sulle richieste di cambio IBAN: emergono una minaccia (la frode) e forse una vulnerabilità, se la verifica è affidata all'attenzione personale invece che a un controllo stabile." },
+   { "h": "La tecnica di ascolto", "d": "Quando la descrizione resta confusa, ricostruisci con domande brevi: cosa doveva essere protetto, cosa è successo, cosa l'ha reso possibile, che effetto ha avuto, chi è intervenuto." }
+  ]
+ },
+ {
+  "id": "27001_m02_s016",
+  "layout": "definizione",
+  "kicker": "Il rischio",
+  "eyebrow": "Non basta temere qualcosa",
+  "titolo": "Che cosa può succedere",
+  "definizione": "Il rischio non coincide con una minaccia presa da sola, né con una vulnerabilità isolata. Emerge quando metti in relazione ciò che ha valore, ciò che lo può colpire, la debolezza sfruttabile e l'impatto che ne deriverebbe.",
+  "punti": [
+   { "h": "Sempre rischio per qualcosa", "d": "«Abbiamo il rischio del phishing» è una scorciatoia. Due organizzazioni ricevono la stessa mail: cambia la vulnerabilità e cambia l'impatto, quindi il rischio non è lo stesso." },
+   { "h": "Non solo probabilità", "d": "Serve anche la dimensione delle conseguenze. Un evento poco probabile ma devastante può meritare grande attenzione; uno frequente con effetti minimi chiede altro." },
+   { "h": "La conseguenza, non il fenomeno", "d": "Con un solo archivio per i disegni tecnici, il rischio non è «il ransomware»: è l'impossibilità di produrre, con ritardi, penali, rilavorazioni e tensioni coi clienti." }
+  ]
+ },
+ {
+  "id": "27001_m02_s017",
+  "layout": "flusso",
+  "kicker": "Il rischio",
+  "titolo": "La catena: minaccia, vulnerabilità, impatto",
+  "intro": "Quando questi elementi si allineano, il rischio diventa intelligibile e discutibile sul serio: non più una sensazione vaga, ma una relazione osservabile. E ti suggerisce dove intervenire — se non sai dove la catena si appoggia, difficilmente la spezzerai nel punto giusto.",
+  "passi": [
+   { "h": "La minaccia", "d": "La richiesta di modifica coordinate a nome di un fornitore. Ma anche un guasto del collegamento dati, o un errore umano nell'importazione: non serve il male intenzionale." },
+   { "h": "La vulnerabilità", "d": "Nessuna conferma su canale indipendente, o un solo addetto che riceve, approva e registra. Nessuna ridondanza. Nessun controllo di congruenza né possibilità di annullamento." },
+   { "h": "L'impatto", "d": "Pagamento verso il conto errato, con contenziosi. Blocco delle attività di sportello e arretrato. Anagrafica prodotti corrotta, ordini errati, reclami." }
+  ]
+ },
+ {
+  "id": "27001_m02_s018",
+  "layout": "punti",
+  "kicker": "Il rischio",
+  "titolo": "Lo stesso pericolo, rischi diversi",
+  "intro": "Il rischio cambia con il contesto: impedisce di valutare tutto in modo uniforme o di copiare giudizi da un'organizzazione all'altra. Non perché la minaccia cambi nome, ma perché cambiano valore, vulnerabilità, dipendenze e conseguenze.",
+  "punti": [
+   { "h": "La disponibilità", "d": "L'archivio immagini di un'agenzia creativa fermo per qualche ora crea disagio. Lo stesso blocco su chi coordina manutenzioni urgenti di impianti critici ha effetti molto più pesanti." },
+   { "h": "La riservatezza", "d": "Con la stessa vulnerabilità — permessi eccessivi su una cartella — bozze di comunicazione interna e archivi con dati sanitari o disciplinari non producono lo stesso rischio." },
+   { "h": "L'integrità", "d": "Un'imprecisione in un elenco contatti marketing è fastidiosa. Un'alterazione nei parametri di produzione o nei dati di fatturazione produce errori economici e di servizio molto più seri." },
+   { "h": "Il tempo", "d": "Mezz'ora è trascurabile in alcuni processi e intollerabile in altri. Una modifica errata corretta in pochi minuti resta evento minore; scoperta dopo giorni, genera impatti ben più ampi." }
+  ]
+ },
+ {
+  "id": "27001_m02_s019",
+  "layout": "punti",
+  "kicker": "Il rischio",
+  "titolo": "Dal capire al decidere",
+  "intro": "Valutare significa leggere la catena e il peso nel contesto. Trattare significa decidere come intervenire in modo coerente con quel quadro, invece di reagire per istinto o per moda tecnica. Se non sai dove nasce il problema, rischi di intervenire nel posto sbagliato.",
+  "punti": [
+   { "h": "Le leve", "d": "Rendere meno efficace la minaccia; chiudere o ridurre la vulnerabilità; limitare l'impatto se l'evento si verifica; oppure combinare più azioni." },
+   { "h": "Il punto giusto", "d": "Se il rischio nasce dall'assenza di verifica indipendente, la misura agirà sulla vulnerabilità del processo — non sulla sensibilizzazione generica contro le frodi." },
+   { "h": "Nessuna soluzione universale", "d": "La stessa misura è eccellente in un contesto e poco utile in un altro. Un accesso di emergenza rapido sostiene la disponibilità, ma se mal progettato crea nuove vulnerabilità." },
+   { "h": "Il segnale di debolezza", "d": "«Perché si fa così ovunque». Le misure scollegate dal rischio sopravvivono per inerzia, costano energie e non proteggono ciò che conta." }
+  ]
+ },
+ {
+  "id": "27001_m02_s020",
+  "layout": "definizione",
+  "kicker": "Il controllo",
+  "eyebrow": "Una misura utile, non un talismano",
+  "titolo": "Che cos'è davvero un controllo",
+  "definizione": "Una misura scelta e applicata per ridurre un rischio: prevenire un evento indesiderato, limitarne la probabilità, contenerne l'impatto o renderlo rilevabile e gestibile in tempo utile.",
+  "punti": [
+   { "h": "Non è solo ciò che blocca", "d": "Può avvisare, verificare, separare, registrare, ripristinare. La conferma su canale indipendente, la revisione dei permessi, il blocco del dispositivo, la separazione tra chi inserisce e chi approva." },
+   { "h": "Che cosa non è", "d": "Una buona intenzione non è un controllo. Una regola sconosciuta non è efficace. Nemmeno uno strumento è garanzia, se è disattivato, mal configurato o aggirato nella pratica." },
+   { "h": "Obiettivo ≠ misura", "d": "La riservatezza non è un controllo: è una qualità da proteggere. Il controllo è ciò che fai per sostenerla — autorizzazioni appropriate, canali gestiti, protezione degli schermi." }
+  ]
+ },
+ {
+  "id": "27001_m02_s021",
+  "layout": "punti",
+  "kicker": "Il controllo",
+  "titolo": "Spezzare la catena nel punto giusto",
+  "intro": "Un controllo utile nasce da un rischio capito bene, non da un'abitudine, da una moda tecnica o da un acquisto impulsivo. Progettarlo significa decidere dove interrompere la catena che porta al danno.",
+  "punti": [
+   { "h": "Prima, durante o dopo", "d": "Può prevenire, rilevare, contenere, correggere o aiutare a ripristinare. La sicurezza non vive solo di blocchi: vive anche di segnali tempestivi e capacità di tornare operativi." },
+   { "h": "Chiudere il punto debole", "d": "Sul cambio coordinate: conferma su canale indipendente, o separazione tra chi riceve e chi approva. Non stai dicendo alle persone di «stare attente»." },
+   { "h": "Coerente col lavoro reale", "d": "Se una regola rallenta troppo, verrà aggirata; se una misura genera interruzioni inutili, si cercheranno scorciatoie. Efficace non è solo severo: è chiaro, praticabile, proporzionato." },
+   { "h": "Raramente lavorano da soli", "d": "Accesso autorizzato, tracciabilità affidabile e revisione periodica insieme valgono più di ciascun elemento isolato. Come copia, ripristino e continuità per la disponibilità." }
+  ]
+ },
+ {
+  "id": "27001_m02_s022",
+  "layout": "punti",
+  "kicker": "Il controllo",
+  "titolo": "Reale o solo apparente",
+  "intro": "Molte organizzazioni possiedono regole, strumenti e procedure che sembrano rassicuranti ma non incidono abbastanza sul rischio. Un controllo va sempre osservato in azione, non solo dichiarato.",
+  "punti": [
+   { "h": "L'uso effettivo", "d": "Il badge personale sembra un buon controllo fisico. Poi vedi la porta tenuta aperta per comodità, i visitatori che si accodano, nessuna verifica delle presenze esterne." },
+   { "h": "Le tracce leggibili", "d": "Se una modifica critica richiede approvazione, deve restare evidente chi ha chiesto, chi ha approvato e quando. Se una copia serve alla disponibilità, il ripristino dev'essere verificabile." },
+   { "h": "La combinazione", "d": "Il blocco automatico del tablet è utile, ma da solo può non bastare: servono anche accessi adeguati, cifratura, cancellazione remota, istruzioni sullo smarrimento." },
+   { "h": "Costoso ≠ buono", "d": "Una regola semplice, compresa e applicata con costanza riduce il rischio più di una piattaforma avanzata configurata male. Le domande rivelatrici: chi se ne occupa, come vi accorgete se non funziona." }
+  ]
+ },
+ {
+  "id": "27001_m02_s023",
+  "layout": "punti",
+  "kicker": "La cornice",
+  "titolo": "La struttura armonizzata",
+  "intro": "Un'architettura comune usata da molte norme sui sistemi di gestione: non rende identici i contenuti, rende simile il telaio. Prima il contesto, poi la direzione, la pianificazione, il supporto, le attività operative, la valutazione e il miglioramento.",
+  "punti": [
+   { "h": "Una logica riconoscibile", "d": "Anche quando la materia cambia, il percorso mentale resta familiare. In questa parte iniziale della norma il tema non è ancora sviluppato, ma capirlo aiuta a non perdersi." },
+   { "h": "Non una raccolta di misure", "d": "Ti ricorda che ISO IEC 27001 è un sistema di gestione: il suo corpo non va letto come elenco di difese sparse, ma come costruzione che arriva al miglioramento continuo." },
+   { "h": "L'integrazione", "d": "Chi già lavora con ISO 9001 del 2015 collega più naturalmente processi, ruoli, riesami e responsabilità direzionali. Non tutto si sovrappone: la conversazione diventa più coerente." },
+   { "h": "Cercare i legami", "d": "Se dichiara di aver identificato rischi importanti, ti aspetti che questa lettura influenzi pianificazione, controlli, monitoraggio e miglioramento. Il sistema è una rete di relazioni." }
+  ]
+ },
+ {
+  "id": "27001_m02_s024",
+  "layout": "flusso",
+  "kicker": "La cornice",
+  "titolo": "Il corpo della norma come ciclo",
+  "intro": "Non inizi da un controllo isolato: inizi da domande di governo. La sicurezza delle informazioni non è un gesto tecnico unico, è un ciclo organizzativo. E ha un effetto sulle responsabilità: non può essere lasciata tutta a una funzione tecnica.",
+  "passi": [
+   { "h": "Comprendi", "d": "Qual è il contesto, quali sono le necessità dell'organizzazione, chi guida le scelte. Chi dipende dal lavoro da remoto chiarisce prima quali informazioni sono critiche e quali ruoli ne hanno bisogno." },
+   { "h": "Decidi", "d": "Come si pianifica, quali priorità stabilire, di quali risorse e competenze c'è bisogno." },
+   { "h": "Realizzi", "d": "Come si mettono in pratica le decisioni. Le misure arrivano, ma arrivano al posto giusto." },
+   { "h": "Controlli", "d": "Come si verifica se il sistema funziona. Se salti i passaggi iniziali costruisci difese scollegate dal contesto." },
+   { "h": "Migliori", "d": "Come si corregge quando emergono limiti o cambiamenti. Se non arrivi qui, il sistema invecchia e perde efficacia." }
+  ]
+ },
+ {
+  "id": "27001_m02_s025",
+  "layout": "confronto",
+  "kicker": "La cornice",
+  "titolo": "Corpo della norma e Appendice A",
+  "intro": "Collaborano, ma non fanno lo stesso mestiere. Se confondi i due livelli, inizi a leggere male tutto il sistema. Devono parlarsi, non sostituirsi.",
+  "a": {
+   "h": "Il corpo della norma",
+   "sub": "Governa il sistema",
+   "punti": [
+    { "d": "Come l'organizzazione decide, pianifica, assegna responsabilità, valuta il rischio, attua, verifica e migliora." },
+    { "d": "Sul rischio di accessi non necessari: il rischio è stato capito? Le responsabilità sono chiare? Il tema viene riesaminato?" },
+    { "d": "Senza controlli concreti dove servono, però, manca la traduzione operativa." }
+   ]
+  },
+  "b": {
+   "h": "L'Appendice A",
+   "sub": "Orienta i controlli",
+   "punti": [
+    { "d": "Un insieme di controlli di riferimento: quali possono essere rilevanti per trattare i rischi individuati." },
+    { "d": "Sullo stesso rischio: gestione degli accessi, regole di autorizzazione, protezione delle informazioni." },
+    { "d": "Ridurre la norma a questa lista salta il perché: contro quale rischio, in quale contesto, con quale priorità." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m02_s026",
+  "layout": "punti",
+  "kicker": "La cornice",
+  "titolo": "Usare bene l'Appendice A",
+  "intro": "Non la apri per copiare tutto indistintamente: la usi per chiederti quali controlli sono pertinenti rispetto ai rischi individuati e alle necessità reali. Stessa architettura di sistema, diversa configurazione dei controlli in base al rischio.",
+  "punti": [
+   { "h": "Due organizzazioni, due enfasi", "d": "Lo studio di progettazione peserà i controlli su riservatezza e proprietà delle informazioni; il centro di assistenza sul campo quelli su continuità, accesso tempestivo e ripristino." },
+   { "h": "Il copia e incolla", "d": "Modello generico, tutto dichiarato presente, si spera che basti. Se i controlli non parlano coi rischi reali, il sistema è fragile dietro una facciata ordinata." },
+   { "h": "L'arbitrarietà", "d": "Controlli scelti perché comodi, economici o già disponibili, senza chiedersi se trattano la vulnerabilità principale. Anche questo porta a dispersione." },
+   { "h": "Un controllo, più dimensioni", "d": "Una buona gestione degli accessi sostiene la riservatezza ma aiuta l'integrità, limitando modifiche improprie. La scelta non è meccanica: richiede comprensione delle interdipendenze." }
+  ]
+ },
+ {
+  "id": "27001_m02_s027",
+  "layout": "cards",
+  "kicker": "Sintesi operativa",
+  "titolo": "La mappa mentale da portare con te",
+  "intro": "Un'organizzazione tratta informazioni di valore. Quelle informazioni vivono su certi asset. Una minaccia può colpirle sfruttando una vulnerabilità. Da lì nasce un evento, che può diventare incidente.",
+  "cards": [
+   { "h": "Lo scopo", "d": "Un sistema di gestione, non un catalogo di strumenti — e la valutazione e il trattamento del rischio stanno dentro la logica del sistema." },
+   { "h": "Il campo", "d": "Generale e adattabile: vale per organizzazioni molto diverse, ma senza esclusioni arbitrarie delle parti scomode." },
+   { "h": "Il triangolo", "d": "Riservatezza (chi accede), integrità (correttezza e affidabilità), disponibilità (usabile quando serve). Uno stesso evento può colpirne più di una." },
+   { "h": "I termini", "d": "Informazione e asset (ciò che ha valore); minaccia e vulnerabilità (ciò che colpisce e la debolezza); evento e incidente (il fatto e la conseguenza rilevante)." },
+   { "h": "Rischio e controllo", "d": "Il rischio è la lettura della possibilità di danno; il controllo è la leva per spezzarne la catena — e vale se entra nel lavoro quotidiano, non se è dichiarato." },
+   { "h": "La cornice", "d": "La struttura armonizzata rende leggibili i sistemi. Il sistema senza controlli resta astratto; i controlli senza sistema sono una collezione disordinata." }
+  ]
+ },
+ {
+  "id": "27001_m02_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 2",
+  "modNum": "02",
+  "titolo": "Che cosa devi saper riconoscere",
+  "punti": [
+   { "h": "Non recitare, riconoscere", "d": "Non un glossario scolastico: ascoltare una situazione e capire quali parole del lessico corretto entrano davvero in gioco." },
+   { "h": "Le tre qualità", "d": "File visto da non autorizzati → riservatezza. Dato modificato senza controllo → integrità. Servizio inaccessibile quando il lavoro dipende → disponibilità." },
+   { "h": "Le coppie", "d": "Un pericolo descritto: minaccia o vulnerabilità? Un fatto accaduto: evento minore o incidente con impatto rilevante?" },
+   { "h": "Il controllo non è un talismano", "d": "Non basta possedere uno strumento, scrivere una procedura o proclamare attenzione: esiste quando riduce il rischio in modo osservabile." },
+   { "h": "L'architettura", "d": "Corpo della norma e Appendice A hanno ruoli diversi e complementari: il primo governa il sistema, la seconda orienta i controlli." },
+   { "h": "L'esercizio", "d": "Prendi il cambio IBAN, il tablet smarrito o la cartella troppo aperta e ricostruisci tutta la sequenza: valore, minaccia, vulnerabilità, evento, incidente, rischio, controllo." }
+  ],
+  "prossimo": {
+   "modulo": "03",
+   "titolo": "Contesto, leadership e pianificazione",
+   "testo": "Dal dizionario vivo alla costruzione del sistema nella sua parte organizzativa."
+  }
+ }
+]
