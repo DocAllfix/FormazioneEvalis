@@ -1,0 +1,418 @@
+[
+ {
+  "id": "45001_m02_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 45001 — Salute e sicurezza sul lavoro",
+  "kicker": "Modulo 02",
+  "eyebrow": "Struttura, concetti, termini della SSL",
+  "titolo": "Il vocabolario della norma",
+  "testo": "Entri nella norma dalla sua porta d'ingresso: lo scopo, il campo di applicazione e i termini che reggono tutto il resto. Le prime sezioni sembrano introduttive, ma fissano i confini del sistema e il significato delle parole chiave. Se restano vaghe, ogni lettura successiva diventa meccanica. Userai due lenti insieme: quella normativa (cosa intende la norma) e quella professionale (come quel termine prende forma in situazioni reali).",
+  "agenda": [
+   "Scopo, campo di applicazione ed esiti attesi",
+   "I termini fondanti: lavoratore, luogo di lavoro, pericolo, rischio",
+   "La gerarchia degli eventi: incidente, quasi-incidente, lesione",
+   "Consultazione e partecipazione dei lavoratori",
+   "Struttura armonizzata, ciclo, rischi e opportunità"
+  ]
+ },
+ {
+  "id": "45001_m02_s002",
+  "layout": "punti",
+  "kicker": "Le fondamenta",
+  "titolo": "Scopo della norma e campo di applicazione",
+  "intro": "La ISO 45001 definisce i requisiti di un sistema di gestione per la SSL e ne accompagna l'uso con indicazioni di guida. Non un ideale di buona organizzazione, ma una struttura da istituire, attuare e mantenere.",
+  "punti": [
+   { "h": "Uno scopo proattivo", "d": "Favorire la prevenzione di lesione e malattia legate al lavoro, e sostenere un miglioramento proattivo delle prestazioni." },
+   { "h": "Un campo ampio", "d": "Utilizzabile da qualunque organizzazione, senza limiti di dimensione, settore o attività: la struttura si adatta al contesto." },
+   { "h": "L'idea di controllo", "d": "Il sistema governa i rischi per la SSL che l'organizzazione può controllare, dentro una realtà concreta, non in astratto." },
+   { "h": "La conformità piena", "d": "Puoi ispirarti in parte per crescere, ma la piena conformità richiede tutti i requisiti soddisfatti, senza esclusioni." }
+  ]
+ },
+ {
+  "id": "45001_m02_s003",
+  "layout": "confronto",
+  "kicker": "Promesse e limiti",
+  "titolo": "Esiti attesi e ciò che la norma non fa",
+  "intro": "La norma lega il sistema a traguardi centrali, ma non pretende di prescrivere tutto. Capire questo lato spiega perché due organizzazioni entrambe conformi possano apparire molto diverse.",
+  "a": {
+   "h": "Gli esiti attesi",
+   "sub": "Il cuore della promessa",
+   "punti": [
+    { "d": "Un avanzamento costante dei risultati di SSL nel tempo." },
+    { "d": "Il rispetto dei requisiti legali e degli altri impegni pertinenti." },
+    { "d": "Il raggiungimento degli obiettivi di SSL coerenti con la politica." }
+   ]
+  },
+  "b": {
+   "h": "Ciò che non fa",
+   "sub": "I limiti della norma",
+   "punti": [
+    { "d": "Non stabilisce livelli prestazionali specifici uguali per tutti." },
+    { "d": "Non impone un unico modello di progettazione del sistema." },
+    { "d": "Non sostituisce la capacità di giudizio dell'organizzazione." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m02_s004",
+  "layout": "definizione",
+  "kicker": "Termine fondante · 1",
+  "eyebrow": "Non solo il personale assunto direttamente",
+  "titolo": "Lavoratore",
+  "definizione": "Per la norma è lavoratore chi svolge un'attività di lavoro sotto il controllo dell'organizzazione: la chiave non è il tipo di contratto, ma il legame tra attività svolta e controllo organizzativo.",
+  "punti": [
+   { "h": "Ogni forma di lavoro", "d": "Retribuito o non retribuito, permanente o temporaneo, stagionale, saltuario: il rischio guarda la presenza, non il contratto." },
+   { "h": "Manageriali e operativi", "d": "Non restano fuori né l'alta direzione né i responsabili: anche chi organizza e coordina è esposto ed è dentro il sistema." },
+   { "h": "Una lente, non un glossario", "d": "Se l'organizzazione riferisce formazione o consultazione solo ai dipendenti diretti, il perimetro umano potrebbe essere ristretto." }
+  ]
+ },
+ {
+  "id": "45001_m02_s005",
+  "layout": "punti",
+  "kicker": "Termine fondante · 1b",
+  "titolo": "Lavoratore sotto controllo condiviso",
+  "intro": "La parte più operativa della definizione sta nel controllo dell'organizzazione. Se l'organizzazione incide davvero sul modo in cui un'attività si svolge, non può trattare quelle persone come invisibili al sistema.",
+  "punti": [
+   { "h": "Chi può rientrare", "d": "Lavoratori di fornitori esterni, appaltatori, autonomi, personale di agenzia: quando il lavoro ricade in un'area di controllo condiviso." },
+   { "h": "Presenza o lavoro controllato", "d": "Il corriere che consegna e riparte è diverso dalla squadra che opera per giorni seguendo permessi, percorsi e regole del sito." },
+   { "h": "Come si manifesta il controllo", "d": "Accessi, autorizzazioni, sequenze operative, vincoli temporali, isolamenti energetici: la capacità effettiva di influire sulle condizioni." },
+   { "h": "L'errore opposto", "d": "Dichiarare di controllare tutto è una lettura debole: il controllo va letto dove esiste davvero, dove è parziale, dove è di altri." }
+  ]
+ },
+ {
+  "id": "45001_m02_s006",
+  "layout": "definizione",
+  "kicker": "Termine fondante · 2",
+  "eyebrow": "Dal posto fisso allo spazio necessario al lavoro",
+  "titolo": "Luogo di lavoro",
+  "definizione": "Qualunque luogo che ricada sotto il controllo dell'organizzazione e nel quale una persona debba trovarsi, o debba andare, per ragioni di lavoro.",
+  "punti": [
+   { "h": "Non solo l'edificio principale", "d": "Un piazzale, una zona di carico, un locale tecnico, un archivio, un corridoio operativo: conta la necessità di presenza, non il nome del locale." },
+   { "h": "Controllo, non proprietà", "d": "Si può lavorare in spazi non propri ma gestiti operativamente, o in ambienti condivisi dove il controllo è distribuito." },
+   { "h": "Le aree dimenticate", "d": "Accessi secondari, locali di servizio, zone temporanee, passaggi: proprio perché marginali, sfuggono alla percezione organizzativa." }
+  ]
+ },
+ {
+  "id": "45001_m02_s007",
+  "layout": "punti",
+  "kicker": "Termine fondante · 2b",
+  "titolo": "I confini dinamici del luogo di lavoro",
+  "intro": "Il luogo di lavoro raramente è un contenitore stabile: i confini cambiano, si estendono, si condividono. Ragionando per controllo effettivo e necessità di presenza, leggi anche i contesti più mobili senza perdere coerenza.",
+  "punti": [
+   { "h": "I confini che cambiano", "d": "Un cantiere con affidataria, subappaltatori e autonomi cambia configurazione ogni settimana: non una fotografia immobile." },
+   { "h": "I contesti condivisi", "d": "In un polo industriale chiediti dove controlli direttamente, dove influenzi le regole, dove dipendi da altri." },
+   { "h": "I confini troppo comodi", "d": "Emergenze pensate solo per le aree principali, interferenze trattate come eccezioni: segnali di confini tracciati con comodità." }
+  ]
+ },
+ {
+  "id": "45001_m02_s008",
+  "layout": "definizione",
+  "kicker": "Termine fondante · 3",
+  "eyebrow": "La fonte, non il danno",
+  "titolo": "Pericolo",
+  "definizione": "Una fonte che ha il potenziale di produrre lesione e malattia: non il danno già avvenuto, e non l'intera valutazione del rischio, ma ciò che può dare origine a un evento dannoso.",
+  "punti": [
+   { "h": "Sorgente o situazione", "d": "Una parte in movimento, un agente chimico, una superficie calda; ma anche una situazione o una circostanza di esposizione." },
+   { "h": "Oltre il danno fisico immediato", "d": "Poiché i danni includono la sfera mentale e cognitiva, un assetto confuso o tempi incompatibili possono essere condizioni pericolose." },
+   { "h": "Gli errori tipici", "d": "«Il pericolo è il numero di infortuni» parla di esiti; «il pericolo è il rischio alto» mescola due termini diversi." }
+  ]
+ },
+ {
+  "id": "45001_m02_s009",
+  "layout": "definizione",
+  "kicker": "Termine fondante · 4",
+  "eyebrow": "Dall'incertezza alla combinazione probabilità-severità",
+  "titolo": "Rischio per la SSL",
+  "definizione": "La combinazione della possibilità che eventi pericolosi o esposizioni legate al lavoro si manifestino, e della gravità delle lesione e malattia che potrebbero derivarne.",
+  "punti": [
+   { "h": "Il rischio in senso generale", "d": "Nelle norme di sistema riguarda l'effetto dell'incertezza: lo scostamento rispetto a ciò che ci si attende, non solo il danno." },
+   { "h": "Lo stesso pericolo, rischi diversi", "d": "Una sostanza irritante è un pericolo; il rischio dipende da uso, esposizione, misure ed effetti possibili in quel contesto." },
+   { "h": "Non un semplice numero", "d": "È un modo di leggere una situazione concreta: la qualità del ragionamento conta quanto l'eventuale punteggio usato." }
+  ]
+ },
+ {
+  "id": "45001_m02_s010",
+  "layout": "flusso",
+  "kicker": "Mettere insieme i termini",
+  "titolo": "Caso integrato: il fermo di una linea",
+  "intro": "Uno stabilimento alimentare ferma una linea per sostituire un motore in quota. Manutentore interno, due tecnici esterni, un preposto. Le definizioni non complicano il ragionamento: lo rendono più preciso.",
+  "passi": [
+   { "h": "I lavoratori", "d": "Non solo il personale dipendente: anche i tecnici esterni, che operano sotto un controllo almeno in parte condiviso." },
+   { "h": "Il luogo di lavoro", "d": "Non solo la macchina: l'area, il percorso di accesso, la zona di segregazione, il quadro da isolare, il punto di controllo." },
+   { "h": "I pericoli", "d": "L'energia residua, la quota, la caduta di oggetti, la circolazione di altri addetti, la fretta della ripartenza, una comunicazione incompleta." },
+   { "h": "I rischi per la SSL", "d": "Per ciascun pericolo, la probabilità che si manifesti combinata con la severità delle conseguenze possibili." }
+  ]
+ },
+ {
+  "id": "45001_m02_s011",
+  "layout": "definizione",
+  "kicker": "Gli accadimenti · 1",
+  "eyebrow": "L'effetto sulla persona",
+  "titolo": "Lesione e malattia",
+  "definizione": "Conseguenze sfavorevoli che colpiscono la persona sul piano fisico, mentale o cognitivo: non la fonte del danno, non la stima del rischio, ma l'effetto sullo stato di salute.",
+  "punti": [
+   { "h": "Un campo ampio", "d": "Comprende malattia professionale, infermità e morte: esiti molto diversi per natura, durata e gravità." },
+   { "h": "L'effetto, non l'evento", "d": "Una frattura è l'effetto, non il pericolo; una patologia da esposizione è l'effetto, non la semplice presenza di un pericolo." },
+   { "h": "Non il modulo compilato", "d": "La definizione non dipende dalla voce scelta nel software: dipende dall'effetto negativo reale sulla persona." }
+  ]
+ },
+ {
+  "id": "45001_m02_s012",
+  "layout": "definizione",
+  "kicker": "Gli accadimenti · 2",
+  "eyebrow": "Con danno o con potenziale di danno",
+  "titolo": "Incidente",
+  "definizione": "Un evento che deriva da un lavoro, o nasce nel corso di un lavoro, e che causa o potrebbe causare lesione e malattia: non definito solo dal danno avvenuto.",
+  "punti": [
+   { "h": "Più ampio dell'infortunio", "d": "Un infortunio è un incidente, ma l'evento resta incidente anche quando nessuno si fa male, se il potenziale era reale." },
+   { "h": "Con o senza non conformità", "d": "Può essere collegato a una non conformità, ma può verificarsi anche senza: non sempre c'è una violazione già evidente." },
+   { "h": "Non la spettacolarità", "d": "Gli eventi più istruttivi sono spesso silenziosi: una protezione rimossa per pochi minuti, un carico instabile corretto in tempo." }
+  ]
+ },
+ {
+  "id": "45001_m02_s013",
+  "layout": "definizione",
+  "kicker": "Gli accadimenti · 3",
+  "eyebrow": "Imparare senza il costo umano",
+  "titolo": "Quasi-incidente",
+  "definizione": "Un evento connesso al lavoro con potenziale realistico di causare lesione e malattia, che però non ha prodotto danno in quella circostanza. Non un non-evento: una finestra aperta su un rischio reale.",
+  "punti": [
+   { "h": "Un segnale prezioso", "d": "Consegna informazioni reali sul sistema senza il costo della lesione: rivela un difetto di coordinamento o una barriera fragile." },
+   { "h": "Non ogni anomalia", "d": "Un estintore con cartello scolorito è una carenza, non un quasi-incidente: serve un potenziale realistico di danno alla persona." },
+   { "h": "Come lo tratta l'organizzazione", "d": "Una debole lo nasconde come episodio fortunato; una matura lo ricerca, lo rende discutibile senza colpevolizzare, ne impara." }
+  ]
+ },
+ {
+  "id": "45001_m02_s014",
+  "layout": "flusso",
+  "kicker": "Gli accadimenti · 4",
+  "titolo": "La gerarchia degli eventi",
+  "intro": "Una sequenza semplice per collocare ogni termine al posto giusto. La non conformità — il mancato soddisfacimento di un requisito — può essere collegata a un incidente, ma non coincide con esso: può esistere anche senza evento, e viceversa.",
+  "passi": [
+   { "h": "Il pericolo", "d": "La sorgente o la situazione con potenziale di causare lesione e malattia." },
+   { "h": "Il rischio per la SSL", "d": "Il livello di esposizione e la gravità possibile in un contesto dato." },
+   { "h": "L'incidente", "d": "L'evento lavorativo che fa emergere il problema, con danno o con potenziale." },
+   { "h": "Il quasi-incidente", "d": "L'incidente senza danno attuale, ma con potenziale reale." },
+   { "h": "La lesione e malattia", "d": "L'effetto negativo sulla persona, quando il danno si manifesta." }
+  ]
+ },
+ {
+  "id": "45001_m02_s015",
+  "layout": "definizione",
+  "kicker": "Il ruolo delle persone · 1",
+  "eyebrow": "Non ascolto passivo, ma coinvolgimento",
+  "titolo": "Partecipazione",
+  "definizione": "Coinvolgimento nel processo decisionale. Non semplice presenza, non comunicazione a valle di scelte già prese: le persone entrano nella costruzione delle scelte che influenzano il lavoro.",
+  "punti": [
+   { "h": "Individuale e collettiva", "d": "Include il coinvolgimento dei comitati per la SSL e, dove esistono, dei rappresentanti dei lavoratori." },
+   { "h": "La conoscenza del lavoro reale", "d": "Chi opera vede scorciatoie, pressioni, interferenze: coinvolgerlo migliora la qualità delle scelte, non è una concessione." },
+   { "h": "I segnali concreti", "d": "Le persone sanno dire dove hanno contribuito a cambiare una modalità; distinguono una decisione comunicata da una costruita." }
+  ]
+ },
+ {
+  "id": "45001_m02_s016",
+  "layout": "definizione",
+  "kicker": "Il ruolo delle persone · 2",
+  "eyebrow": "Prima, non dopo la decisione",
+  "titolo": "Consultazione",
+  "definizione": "Ricerca di pareri prima di prendere decisioni. Non a decisione chiusa, non come ratifica simbolica: la collocazione temporale — prima — è parte del senso della definizione.",
+  "punti": [
+   { "h": "Una finestra preventiva", "d": "Intercetta informazioni che, se emergessero dopo la decisione, costerebbero molto di più in inefficienza o rischio residuo." },
+   { "h": "Reale o apparente", "d": "Presentare un piano già chiuso chiedendo osservazioni rapide è consultazione apparente: manca uno spazio vero di influenza." },
+   { "h": "Non consenso unanime", "d": "Si può consultare seriamente e poi decidere diversamente, purché il confronto sia stato reale, tempestivo e motivato." }
+  ]
+ },
+ {
+  "id": "45001_m02_s017",
+  "layout": "confronto",
+  "kicker": "Il ruolo delle persone · 3",
+  "titolo": "Perché consultazione e partecipazione pesano",
+  "intro": "Non un abbellimento sociale del sistema: due modalità con cui l'organizzazione costruisce decisioni più aderenti al lavoro reale e intercetta segnali nascosti. Hanno anche una funzione di fiducia: chi si sente ascoltato segnala di più.",
+  "a": {
+   "h": "Consultazione",
+   "sub": "Cercare pareri",
+   "punti": [
+    { "d": "Apre lo spazio del parere prima che la scelta sia presa." },
+    { "d": "Raccoglie punti critici, vincoli, effetti che l'ufficio non vede." }
+   ]
+  },
+  "b": {
+   "h": "Partecipazione",
+   "sub": "Entrare nella decisione",
+   "punti": [
+    { "d": "Coinvolge nel processo decisionale, non solo nella raccolta." },
+    { "d": "Le misure diventano scelte comprese e spesso migliorate dal campo." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m02_s018",
+  "layout": "definizione",
+  "kicker": "La cornice · 1",
+  "eyebrow": "Non capitoli isolati, ma un sistema",
+  "titolo": "La struttura armonizzata",
+  "definizione": "Un'architettura comune adottata da molte norme di gestione: una base coerente di temi, termini e logica, così che qualità, ambiente e SSL si leggano con un linguaggio in parte condiviso.",
+  "punti": [
+   { "h": "Termini comuni", "d": "Organizzazione, parte interessata, requisito, obiettivo, processo, conformità: una grammatica che ritorna in più standard." },
+   { "h": "Leggere per collegamenti", "d": "Contesto, leadership, pianificazione, supporto, operatività, valutazione, miglioramento non sono scatole chiuse, ma un unico disegno." },
+   { "h": "Smaschera le contraddizioni", "d": "La forma comune mette in evidenza i sistemi costruiti per compartimenti che non dialogano tra loro." }
+  ]
+ },
+ {
+  "id": "45001_m02_s019",
+  "layout": "flusso",
+  "kicker": "La cornice · 2",
+  "titolo": "Il ciclo della SSL",
+  "intro": "Il movimento che attraversa la struttura: pianificare, fare, verificare, agire. La salute e sicurezza non è una somma di documenti, ma un processo ricorrente. Migliorare non è fare tutto insieme, ma tornare sui temi con maggiore maturità.",
+  "passi": [
+   { "h": "Pianificare", "d": "Capire la situazione, chi lavora e dove, riconoscere pericoli e rischi, definire obiettivi e azioni." },
+   { "h": "Attuare", "d": "Le decisioni diventano istruzioni, risorse, competenze, coordinamento, canali di consultazione: il sistema esce dalla carta." },
+   { "h": "Verificare", "d": "Le misure funzionano? I quasi-incidenti diminuiscono? Gli obiettivi si avvicinano? Confrontare il pianificato con l'accaduto." },
+   { "h": "Migliorare", "d": "Non limitarsi a registrare scostamenti e fragilità: apprendere e intervenire, trasformando esperienza in nuove decisioni." }
+  ]
+ },
+ {
+  "id": "45001_m02_s020",
+  "layout": "punti",
+  "kicker": "La cornice · 3",
+  "titolo": "Usare struttura e ciclo per orientarti",
+  "intro": "Non due etichette eleganti, ma uno strumento pratico di lettura. Insieme, smetti di guardare pezzi isolati e vedi il sistema come un organismo che pensa, agisce, controlla e apprende.",
+  "punti": [
+   { "h": "La struttura cerca i collegamenti", "d": "Se l'organizzazione ti parla di un obiettivo, chiediti da quale lettura dei rischi nasce e come viene verificato." },
+   { "h": "Il ciclo cerca il movimento", "d": "Se racconta un incidente, chiediti come l'apprendimento rientra nel ciclo e quali parti del sistema vengono aggiornate." },
+   { "h": "Forma o sostanza", "d": "Modulistica ordinata e verbali frequenti non bastano se i pezzi non si alimentano a vicenda: distingui la forma dalla sostanza." }
+  ]
+ },
+ {
+  "id": "45001_m02_s021",
+  "layout": "definizione",
+  "kicker": "Rischi e opportunità · 1",
+  "eyebrow": "Non un elenco da compilare per abitudine",
+  "titolo": "Rischi e opportunità: il significato",
+  "definizione": "Un modo di leggere in anticipo ciò che può compromettere i risultati attesi della SSL, e ciò che può rafforzarli: una lente che collega persone, decisioni, processi, condizioni di lavoro e risultati.",
+  "punti": [
+   { "h": "Oltre i pericoli immediati", "d": "Riducendo tutto ai pericoli visibili si perdono i fattori organizzativi che, senza far male direttamente, peggiorano la prevenzione." },
+   { "h": "Non una formula astratta", "d": "Nemmeno uno slogan da piano strategico: la buona lettura sta nel mezzo, ancorata al lavoro reale." },
+   { "h": "Collegato al ciclo", "d": "Pianifichi guardando ciò che ostacola o favorisce i risultati, attui, verifichi gli effetti, migliori su ciò che hai imparato." }
+  ]
+ },
+ {
+  "id": "45001_m02_s022",
+  "layout": "confronto",
+  "kicker": "Rischi e opportunità · 2",
+  "titolo": "Dove guardano i rischi",
+  "intro": "Due piani che si intrecciano continuamente. Non sono rivali, sono collegati in sequenza: una debolezza organizzativa può trasformarsi molto rapidamente in esposizione reale. E non sono gerarchie: i rischi del sistema spesso spiegano perché gli eventi si ripetono.",
+  "a": {
+   "h": "Il rischio per la SSL",
+   "sub": "Verso le persone",
+   "punti": [
+    { "d": "Eventi pericolosi, esposizioni lavorative, possibili effetti negativi sulle persone." },
+    { "d": "L'accesso in quota, l'energia residua, l'esposizione a sostanze." }
+   ]
+  },
+  "b": {
+   "h": "Il rischio del sistema",
+   "sub": "Verso il funzionamento",
+   "punti": [
+    { "d": "Ciò che compromette la capacità dell'organizzazione di prevenire con continuità." },
+    { "d": "Briefing frettolosi, informazioni incomprensibili, competenze distribuite male." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m02_s023",
+  "layout": "definizione",
+  "kicker": "Rischi e opportunità · 3",
+  "eyebrow": "Si misura sui risultati di tutela",
+  "titolo": "Opportunità per la SSL",
+  "definizione": "Una circostanza, o una serie di circostanze, che possono portare a un miglioramento dei risultati di salute e sicurezza sul lavoro: non un evento eccezionale, ma qualcosa che fa proteggere meglio le persone.",
+  "punti": [
+   { "h": "Non ogni vantaggio di business", "d": "Un'automazione è opportunità di SSL se riduce esposizioni e manovre rischiose, non solo se aumenta la produttività." },
+   { "h": "Anche piccole modifiche", "d": "Una consultazione meglio progettata, un canale credibile per i quasi-incidenti, percorsi rivisti: alto valore, poca appariscenza." },
+   { "h": "Nasce da una vulnerabilità", "d": "Un'opportunità seria nasce spesso dal prendere sul serio un rischio riconosciuto, non dall'addolcire i problemi." }
+  ]
+ },
+ {
+  "id": "45001_m02_s024",
+  "layout": "confronto",
+  "kicker": "Rischi e opportunità · 4",
+  "titolo": "Caso: ampliare un deposito farmaceutico",
+  "intro": "Nuove postazioni mobili con terminali digitali per aumentare rapidità e precisione: la decisione tocca percorsi pedonali, manovre dei mezzi, ritmo di lavoro. L'approccio debole compila e installa; quello robusto usa il cambiamento per interrogare il lavoro reale.",
+  "a": {
+   "h": "I rischi",
+   "sub": "Cosa può peggiorare",
+   "punti": [
+    { "d": "Nuovi incroci tra pedoni e mezzi, soste improprie nelle corsie." },
+    { "d": "Distrazioni legate ai terminali, affaticamento se i turni si comprimono." },
+    { "d": "Interferenze nelle baie se gli autisti esterni non sono informati." }
+   ]
+  },
+  "b": {
+   "h": "Le opportunità",
+   "sub": "Cosa può migliorare",
+   "punti": [
+    { "d": "Separare meglio i flussi di persone e mezzi, eliminare attraversamenti." },
+    { "d": "Chiarire gli accessi delle imprese esterne, ridisegnare le attese." },
+    { "d": "Rivedere la segnalazione dei quasi-incidenti sui punti ciechi emersi." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m02_s025",
+  "layout": "punti",
+  "kicker": "Strumenti di lettura · 1",
+  "titolo": "L'appendice come guida",
+  "intro": "Nella ISO 45001 incontri l'appendice A (guida sull'utilizzo) e l'appendice nazionale (chiavi di lettura rispetto alla legislazione italiana). Diversi termini comuni rinviano poi all'Appendice SL delle direttive ISO/IEC.",
+  "punti": [
+   { "h": "Una funzione di cornice", "d": "Aiuta a capire da dove viene la grammatica comune dei sistemi di gestione e ad allineare la terminologia." },
+   { "h": "Non un nuovo capitolo di requisiti", "d": "Svolge un ruolo di guida, chiarimento e contestualizzazione: serve a interpretare, non a inventare obblighi ulteriori." },
+   { "h": "La domanda giusta", "d": "Quando incontri un'appendice, chiediti a cosa serve: chiarire, collegare, contestualizzare, oppure stabilire requisiti." }
+  ]
+ },
+ {
+  "id": "45001_m02_s026",
+  "layout": "flusso",
+  "kicker": "Strumenti di lettura · 2",
+  "titolo": "Appendice: chiarire, collegare, non sostituire",
+  "intro": "L'appendice ti aiuta a capire il testo principale, ma non deve prenderne il posto. Tre azioni molto semplici ti proteggono dalle letture deboli: né letterale in modo sterile, né creativo in modo arbitrario.",
+  "passi": [
+   { "h": "Leggi il testo della norma", "d": "Prima vengono i requisiti e le definizioni: sono loro il livello prescrittivo." },
+   { "h": "Usa l'appendice per la logica", "d": "Comprendi la logica dietro la formulazione, la parentela tra standard, il perché di certe scelte linguistiche." },
+   { "h": "Torna al testo e verifica", "d": "Controlla che la tua interpretazione resti aderente al campo della salute e sicurezza sul lavoro." }
+  ]
+ },
+ {
+  "id": "45001_m02_s027",
+  "layout": "punti",
+  "kicker": "Sintesi",
+  "titolo": "La mappa del modulo",
+  "intro": "Prima di valutare un sistema devi capire chi protegge, dove agisce, quali fonti di danno considera, come legge eventi e segnali, come coinvolge le persone e con quale logica collega decisioni, risultati e miglioramento.",
+  "punti": [
+   { "h": "Scopo e campo", "d": "Requisiti per un sistema che previene lesione e malattia; un campo ampio, adattabile, centrato sul controllo." },
+   { "h": "I termini fondanti", "d": "Lavoratore e luogo di lavoro letti per controllo; il pericolo come fonte, il rischio come probabilità e severità." },
+   { "h": "La gerarchia degli eventi", "d": "Pericolo, rischio, incidente, quasi-incidente, lesione: e la non conformità distinta dall'evento." },
+   { "h": "Le persone nelle decisioni", "d": "Consultazione (pareri prima) e partecipazione (nel processo): leve di efficacia, non decorazioni." },
+   { "h": "Struttura e ciclo", "d": "La grammatica comune dei sistemi di gestione e il movimento pianificare-attuare-verificare-migliorare." },
+   { "h": "Rischi, opportunità, appendice", "d": "Leggere in anticipo ciò che ostacola o favorisce i risultati; l'appendice come guida, non come requisito." }
+  ]
+ },
+ {
+  "id": "45001_m02_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 02",
+  "modNum": "02",
+  "titolo": "Definizioni come lenti, non come glossario",
+  "punti": [
+   { "h": "Chi è lavoratore", "d": "Non solo il dipendente diretto: chi opera sotto il controllo dell'organizzazione, anche condiviso." },
+   { "h": "Quali spazi contano", "d": "Ogni luogo dove una persona deve trovarsi per lavoro, secondo il grado di controllo: non solo la sede." },
+   { "h": "Pericolo o rischio", "d": "La fonte con potenziale di danno, distinta dalla combinazione di probabilità ed effetti in un contesto dato." },
+   { "h": "Leggere gli eventi", "d": "Distinguere incidente, quasi-incidente, lesione e non conformità senza scambiarli tra loro." },
+   { "h": "Informazione o coinvolgimento", "d": "Dove finisce la semplice informazione e dove iniziano consultazione e partecipazione dei lavoratori." }
+  ],
+  "prossimo": {
+   "modulo": "03",
+   "titolo": "Contesto, leadership e partecipazione dei lavoratori",
+   "testo": "Dai termini ai requisiti: le fondamenta su cui poggia ogni sistema."
+  }
+ }
+]
