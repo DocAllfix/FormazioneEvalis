@@ -122,21 +122,27 @@ for (const f of files) {
   let height = null;
   try {
     await page.setContent(stageHtml(html, /^#/.test(bg) ? bg : "#F4F3EF"), { waitUntil: "networkidle" });
-    height = await page.evaluate(() => {
+    const measure = await page.evaluate(() => {
       const sec = document.querySelector("#stage>section");
       if (!sec) return null;
       sec.style.height = "auto";
       const nat = Math.ceil(sec.scrollHeight);
+      // overflow ORIZZONTALE: contenuto più largo dei 1280px del player = tagliato a destra
+      const overflowX = Math.max(0, Math.ceil(sec.scrollWidth) - Math.ceil(sec.clientWidth));
       // come il player (slide-html.tsx): canvas = max(720, naturale) — e l'elemento
       // resta visibile anche per le slide "a canvas" (figli tutti absolute, nat≈0)
       const H = Math.max(720, nat + 6);
       sec.style.height = H + "px";
       document.getElementById("stage").style.height = H + "px";
-      return Math.max(720, nat);
+      return { height: Math.max(720, nat), overflowX };
     });
+    height = measure?.height ?? null;
+    const overflowX = measure?.overflowX ?? 0;
     if (height == null) probs.push("S6: section non misurabile");
     else if (height > H_FAIL) probs.push(`S6: altezza ${height}px > ${H_FAIL}px (contenuto fuori misura)`);
     else if (height > H_WARN) warns.push(`S6: altezza ${height}px > ${H_WARN}px (testo piccolo a schermo)`);
+    if (overflowX > 40) probs.push(`S6X: overflow ORIZZONTALE ${overflowX}px — contenuto TAGLIATO a destra`);
+    else if (overflowX > 8) warns.push(`S6X: overflow orizzontale ${overflowX}px (contenuto vicino/oltre il bordo destro)`);
     // screenshot dell'INTERA composizione player (gutter+bolla a sinistra + slide), come lo studente
     const stage = page.locator("#stage");
     // animations:disabled — le animazioni CSS infinite manderebbero in timeout lo screenshot
