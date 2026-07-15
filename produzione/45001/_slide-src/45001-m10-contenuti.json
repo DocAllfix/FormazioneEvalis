@@ -1,0 +1,382 @@
+[
+ {
+  "id": "45001_m10_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 45001 — Salute e sicurezza sul lavoro",
+  "kicker": "Modulo 10",
+  "eyebrow": "Pianificare la verifica dell'SGSSL",
+  "titolo": "Il lavoro prima del reparto",
+  "testo": "L'audit dell'SGSSL come attività preparata con metodo, governata dal rischio e sostenuta da competenze adeguate. Non basta verificare se esistono procedure: devi capire se il sistema aiuta davvero a prevenire lesioni e malattie. La preparazione conta quasi quanto la conduzione: se pianifichi male raccoglierai dati deboli, se pianifichi bene le evidenze parleranno con chiarezza. La regola che attraversa tutto: prepara la verifica seguendo il rischio, non la comodità.",
+  "agenda": [
+   "Che cosa cambia quando l'oggetto è la sicurezza",
+   "Il programma di audit governato dal rischio",
+   "Le competenze del gruppo e l'esperto tecnico",
+   "La preparazione: documenti, DVR, permessi, sopralluogo",
+   "Checklist, evidenze attese e audit combinati"
+  ]
+ },
+ {
+  "id": "45001_m10_s002",
+  "layout": "punti",
+  "kicker": "La chiave SSL",
+  "titolo": "Che cosa cambia in salute e sicurezza",
+  "intro": "Il tema non è solo la conformità documentale, ma la tenuta concreta del controllo dei pericoli nelle attività reali. Il giudizio deve avvicinarsi al lavoro vero, non fermarsi alle carte ben tenute.",
+  "punti": [
+   { "h": "La posta in gioco", "d": "In qualità una deviazione produce un difetto; in sicurezza una lacuna può coincidere con l'esposizione immediata della persona a un danno grave." },
+   { "h": "Arriva al luogo di lavoro?", "d": "Una procedura di lockout impeccabile su file serve a poco se in manutenzione i lucchetti non ci sono o l'appaltatore ha abitudini diverse." },
+   { "h": "L'osservazione ha l'ultima parola", "d": "La carta orienta e rende tracciabili le scelte, ma la prova dell'efficacia si vede nelle condizioni operative e nei comportamenti." },
+   { "h": "I temi sensibili", "d": "Persone esposte, eventi mancati, pressione sui tempi, prassi informali: serve una comunicazione ferma e rispettosa, chiara nello scopo." }
+  ]
+ },
+ {
+  "id": "45001_m10_s003",
+  "layout": "punti",
+  "kicker": "La chiave SSL",
+  "titolo": "Criteri, campionamento, evidenze",
+  "intro": "Un audit efficace parte da criteri dichiarati e da un campionamento coerente con i pericoli. Il punto decisivo: non scegli i campioni perché sono facili da trovare, li scegli perché sono significativi rispetto al rischio.",
+  "punti": [
+   { "h": "I criteri dichiarati", "d": "La norma, le procedure, i requisiti legali pertinenti, le regole di sito, i permessi, gli standard interni applicabili." },
+   { "h": "Campionamento intelligente", "d": "Non due procedure a caso: attività critiche, turni diversi, manutenzioni recenti, aree modificate, reparti con quasi incidenti. Far parlare il rischio prima delle persone." },
+   { "h": "L'incrocio delle fonti", "d": "Documento, intervista, osservazione diretta e registrazione: se tutto concorda la fiducia cresce, se una fonte smentisce hai un punto da approfondire." },
+   { "h": "Le trappole", "d": "L'assenza di incidenti non prova l'efficacia (fortuna, sottosegnalazione); molte registrazioni non dimostrano controllo (check compilati ma ripari elusi)." }
+  ]
+ },
+ {
+  "id": "45001_m10_s004",
+  "layout": "punti",
+  "kicker": "La chiave SSL",
+  "titolo": "Indipendenza e comportamento sicuro",
+  "intro": "In SSL l'integrità professionale si intreccia con la capacità di non diventare parte del problema che stai osservando. Il tuo comportamento comunica quanto prendi sul serio il sistema che stai valutando.",
+  "punti": [
+   { "h": "Libertà di giudizio", "d": "Non distanza fredda: se un'area è critica la visiti anche se richiede tempo; se la tua competenza non basta, lo dichiari. Fingere padronanza è debolezza etica." },
+   { "h": "L'imparzialità", "d": "Un reparto ordinato non è automaticamente sotto controllo; un interlocutore agitato non è inattendibile: fai tornare la discussione ai criteri e ai fatti." },
+   { "h": "La sicurezza personale", "d": "Verifichi accessi, dispositivi, permessi, accompagnamento; se il sito prevede un'induzione, la segui. Chi pretende eccezioni si squalifica da solo." },
+   { "h": "Il tono", "d": "Né ispettore teatrale né ospite timido: calma, chiarezza, controllo del ritmo; distinguere sempre percezione personale da evidenza." }
+  ]
+ },
+ {
+  "id": "45001_m10_s005",
+  "layout": "punti",
+  "kicker": "Programma di audit",
+  "titolo": "Dal piano annuale al programma",
+  "intro": "Non un calendario riempito di date, ma una scelta di governo: il programma deve riflettere il profilo di rischio e la necessità di capire se il sistema protegge davvero le persone.",
+  "punti": [
+   { "h": "Le quattro domande", "d": "Dove andare prima (priorità), quanto spesso tornare (frequenza), con quale profondità, chi mettere nel gruppo (competenze). Se le tratti come indipendenti, il programma perde coerenza." },
+   { "h": "Da cosa parti", "d": "Contesto, processi, luoghi, cambiamenti recenti, incidenti, esiti di verifiche precedenti, appaltatori, pressione produttiva, complessità dei turni." },
+   { "h": "L'errore tipico", "d": "Confondere ciò che è importante per l'organizzazione con ciò che è più pericoloso per i lavoratori: il criterio non è la visibilità del reparto, ma l'esposizione." },
+   { "h": "Un programma vivo", "d": "Se cambiano layout, appalti o mix produttivo, ritaralo: la rigidità è rassicurante solo sulla carta." }
+  ]
+ },
+ {
+  "id": "45001_m10_s006",
+  "layout": "punti",
+  "kicker": "Programma di audit",
+  "titolo": "Le priorità dal rischio",
+  "intro": "Trasformare il rischio in una scala di priorità operativa, senza formule complicate. Usa i segnali sentinella: incidenti recenti, turnover elevato, personale esterno, modifiche d'impianto, azioni correttive di scarsa qualità. E assegna priorità anche ai cambiamenti che aumentano l'incertezza senza aver ancora prodotto incidenti.",
+  "punti": [
+   { "h": "La gravità potenziale", "d": "La conseguenza immaginabile se il controllo fallisce: un contatto con energia pericolosa non è un disordine documentale." },
+   { "h": "La probabilità di esposizione", "d": "Quanto spesso le persone si trovano in quella condizione, o quanto facilmente il compito può degenerare." },
+   { "h": "L'affidabilità dei controlli", "d": "Fa la differenza: stesso pericolo, priorità diverse se le barriere sono robuste o affidate alla memoria degli operatori." }
+  ]
+ },
+ {
+  "id": "45001_m10_s007",
+  "layout": "punti",
+  "kicker": "Programma di audit",
+  "titolo": "Frequenza, durata, profondità",
+  "intro": "Tre decisioni che sembrano amministrative ma esprimono la tua valutazione sul rischio. Se sbagli qui, aree decisive viste di corsa e conclusioni deboli.",
+  "punti": [
+   { "h": "La frequenza", "d": "Non premio né sanzione: un'area ad alta esposizione richiede visite ravvicinate perché il contesto cambia in fretta." },
+   { "h": "La durata", "d": "Non più tempo a ciò che è grande, ma a ciò che è complesso: un piccolo locale tecnico con energia pericolosa può chiedere più di un open space." },
+   { "h": "La profondità", "d": "Non più domande indistinte: seguire il processo fino al suo punto critico — chi emette il permesso, come si coordina, come si verifica il ripristino." },
+   { "h": "L'orario", "d": "Alcune attività critiche avvengono fuori turno standard: talvolta devi programmare quando il rischio si manifesta, non quando è comodo." }
+  ]
+ },
+ {
+  "id": "45001_m10_s008",
+  "layout": "punti",
+  "kicker": "Programma di audit",
+  "titolo": "Esempio: un'organizzazione multisito",
+  "intro": "Tre siti, un SGSSL unico, profili di rischio molto diversi. L'equità non è assegnare a tutti lo stesso formato: è dare a ciascun contesto l'attenzione di cui ha bisogno per essere compreso e presidiato.",
+  "punti": [
+   { "h": "Il centro direzionale", "d": "Verifiche sulla governance: politica, obiettivi, monitoraggio, riesame, partecipazione, coordinamento delle azioni. Copertura regolare, meno intensa sul piano operativo." },
+   { "h": "Il sito produttivo", "d": "Più tempo in campo: energia pericolosa, manutenzioni, imprese esterne in fermata; campioni sui lavori non routinari e sugli avvii." },
+   { "h": "Il deposito logistico", "d": "Interazione mezzi-pedoni, carico, ricarica batterie, officina: almeno una verifica in un momento rappresentativo del picco, non solo nei periodi tranquilli." },
+   { "h": "Il programma che intercetta", "d": "Una nuova linea robotizzata e la manutenzione esternalizzata giustificano una verifica anticipata sul cambiamento; e il team si compone di conseguenza." }
+  ]
+ },
+ {
+  "id": "45001_m10_s009",
+  "layout": "punti",
+  "kicker": "Competenze",
+  "titolo": "Base comune e limiti da riconoscere",
+  "intro": "Il problema non è più dove andare, ma con chi andarci. In SSL lo zoccolo comune della verifica non basta sempre: devi capire il lavoro reale, il lessico operativo, le logiche di pericolo e i punti in cui una procedura corretta smette di proteggere.",
+  "punti": [
+   { "h": "La base comune", "d": "Preparare, leggere le informazioni, domandare, osservare senza invadere, collegare fatti, restare imparziale, registrare con accuratezza." },
+   { "h": "Sistema o processo tecnico", "d": "Puoi verificare bene politica e monitoraggi e trovarti in difficoltà davanti a protezioni interbloccate, logiche di by-pass o aree classificate." },
+   { "h": "Ciò che sai non improvvisare", "d": "Se la tua conoscenza non basta a capire se un controllo è adeguato, il rischio non è un'analisi superficiale: è un giudizio fuorviante per l'organizzazione." }
+  ]
+ },
+ {
+  "id": "45001_m10_s010",
+  "layout": "punti",
+  "kicker": "Competenze",
+  "titolo": "Quando serve l'esperto",
+  "intro": "Quando il rischio o la complessità tecnica superano ciò che puoi valutare con sufficiente sicurezza professionale. Non serve un esperto per ogni verifica: serve quando senza quel supporto raccoglieresti evidenze fragili.",
+  "punti": [
+   { "h": "I segnali chiari", "d": "Energie pericolose complesse, automazione con logiche di sicurezza articolate, atmosfere esplosive, spazi confinati, grandi fermate, cantieri interni." },
+   { "h": "Integra, non sostituisce", "d": "Ti aiuta a leggere adeguatezza delle protezioni e plausibilità dei permessi; tu resti responsabile della coerenza tra criteri, campionamento e risultanze." },
+   { "h": "Preparalo bene", "d": "Chiarisci obiettivi, criteri, limiti del ruolo, modo di verbalizzare: senza regia si concentra sui dettagli tecnici che conosce meglio." },
+   { "h": "Il tecnico interno proposto", "d": "Utile come interlocutore, ma se ti affidi troppo a una figura vedrai il sito attraverso la sua interpretazione: l'esperto amplia, non restringe." }
+  ]
+ },
+ {
+  "id": "45001_m10_s011",
+  "layout": "punti",
+  "kicker": "Competenze",
+  "titolo": "Coordinare ruoli diversi",
+  "intro": "La competenza non basta se resta sparsa. Il tecnico guarda le barriere, chi conosce il sistema guarda processi e registrazioni: se non li fai convergere, raccoglierai molte informazioni poco collegabili.",
+  "punti": [
+   { "h": "Una domanda comune", "d": "Non una divisione meccanica del lavoro: «il sistema governa davvero le interferenze, o si limita a formalizzarle?» fa comporre osservazioni diverse." },
+   { "h": "Ruoli chiari, non compartimenti", "d": "Chi conduce l'apertura, chi presidia i criteri, chi approfondisce il tecnico: evitare sovrapposizioni e zone scoperte, ma restare comunicanti." },
+   { "h": "Il lessico comune", "d": "Cosa intendete per controllo efficace? Che differenza fate tra prassi tollerata, eccezione episodica e debolezza sistemica?" },
+   { "h": "Come registrare", "d": "Concordare prima cosa annotare sempre: processo osservato, fonte, contesto, rischio per le persone, criterio richiamato, follow up." }
+  ]
+ },
+ {
+  "id": "45001_m10_s012",
+  "layout": "punti",
+  "kicker": "Preparazione",
+  "titolo": "Chiedere poco, leggere bene",
+  "intro": "La tentazione è chiedere troppo e senza gerarchia: sembra prudente, ma produce cartelle immense che assorbono tempo senza aumentare la comprensione. E ricorda: i documenti fotografano il sistema dichiarato, non quello vissuto — sono ipotesi da verificare.",
+  "punti": [
+   { "h": "Un nucleo essenziale", "d": "Perimetro del sistema, mappa dei processi, ruoli, obiettivi e monitoraggi, verifiche precedenti, azioni aperte, incidenti, formazione sulle attività critiche." },
+   { "h": "Uno scopo di lettura", "d": "Ogni documento richiesto deve già avere una domanda: se chiedi il registro formativo, sai che cerchi copertura dei ruoli esposti e addestramento pratico." },
+   { "h": "Leggere in sequenza", "d": "Prima la mappa del sito, poi dove stanno i pericoli e i cambiamenti, solo dopo il dettaglio delle procedure: la preparazione diventa selettiva." }
+  ]
+ },
+ {
+  "id": "45001_m10_s013",
+  "layout": "punti",
+  "kicker": "Preparazione",
+  "titolo": "Leggere il DVR come mappa",
+  "intro": "Non cercare la pagina da citare: cerca la logica con cui il sito si racconta i propri rischi. Prezioso se riflette il lavoro reale, ingannevole se ordinato ma astratto. Il DVR è una mappa da mettere alla prova, non la fine del ragionamento.",
+  "punti": [
+   { "h": "Descrive ciò che vedrai?", "d": "Mansioni, ambienti, turni, imprese esterne, lavorazioni non routinarie: un documento aggiornato nella data può essere vecchio nella sostanza." },
+   { "h": "La profondità", "d": "Distingue le esposizioni o appiattisce in descrizioni generiche? Se non ti guida verso le attività critiche, dovrai ricostruire la mappa altrove." },
+   { "h": "Le misure", "d": "Una misura utile collega il pericolo a un'azione o a una responsabilità; dove il documento resta sfumato, vai a vedere cosa succede sul campo." },
+   { "h": "I lavoratori coinvolti", "d": "Chi è esposto, chi cambia ambiente, chi entra solo in alcune fasi: decisivo per costruire le interviste oltre le persone stabili e ben inserite." }
+  ]
+ },
+ {
+  "id": "45001_m10_s014",
+  "layout": "punti",
+  "kicker": "Preparazione",
+  "titolo": "Permessi e lavori critici",
+  "intro": "I documenti che accompagnano il rischio nel momento in cui si manifesta: permessi, autorizzazioni, coordinamenti, pianificazioni di fermata. È qui che il sistema passa dalla pianificazione generale alla gestione delle esposizioni più sensibili.",
+  "punti": [
+   { "h": "Il campione più istruttivo", "d": "Non il primo disponibile: un lavoro a caldo recente, un intervento elettrico con isolamento, un'attività in quota, un lavoro slittato su più turni." },
+   { "h": "Le domande chiave", "d": "Chi autorizza ed esegue, i pericoli specifici sono riconoscibili, c'è traccia del coordinamento, esiste un controllo di chiusura, come si gestisce una variazione." },
+   { "h": "Confrontare più campioni", "d": "Un permesso interno diurno ben gestito e uno esterno in fermata notturna: capisci se il controllo è robusto o regge solo nelle condizioni semplici." },
+   { "h": "L'esistenza non basta", "d": "In alcuni contesti il modulo è una consuetudine mentre il lavoro si adatta con accordi verbali: collega sempre i permessi a interviste e campo." }
+  ]
+ },
+ {
+  "id": "45001_m10_s015",
+  "layout": "punti",
+  "kicker": "Preparazione",
+  "titolo": "Il piano del sopralluogo",
+  "intro": "La visita non si improvvisa la mattina stessa. Devi conoscere in anticipo dispositivi richiesti, limitazioni, briefing locali, percorsi consentiti, e cosa fare se scatta un'allerta. Tre obiettivi insieme.",
+  "punti": [
+   { "h": "Proteggere il gruppo", "d": "Accessi, induzioni, zone interdette, interferenze con lavori in corso: un dettaglio prevedibile non deve costarti un'area chiave." },
+   { "h": "Rendere osservabile ciò che conta", "d": "Se vuoi vedere il cambio turno o la consegna a un'impresa esterna, l'orario conta quasi quanto il luogo: non un lungo giro generale." },
+   { "h": "Limitare l'interferenza", "d": "Il luogo migliore per capire non è sempre il più vicino all'azione: osservare in modo sufficientemente chiaro e sufficientemente sicuro." }
+  ]
+ },
+ {
+  "id": "45001_m10_s016",
+  "layout": "punti",
+  "kicker": "Preparazione",
+  "titolo": "Agenda e interviste",
+  "intro": "Non una sfilata di ruoli istituzionali, ma una sequenza che verifica il sistema lungo il percorso del lavoro. Se parli solo con chi è preparato a ricevere verifiche, otterrai un sistema pulito ma troppo levigato.",
+  "punti": [
+   { "h": "L'ordine degli incontri", "d": "Il quadro organizzativo, poi presto chi presidia le attività critiche, il campo, i preposti, e infine il ritorno a chi governa per chiudere i cerchi." },
+   { "h": "Collegare ai fatti", "d": "Se hai visto un permesso, chiedi a chi lo emette come gestisce le variazioni: eviti domande generiche che producono risposte scolastiche." },
+   { "h": "Il tono della domanda", "d": "«Cosa succede quando si complica» invece di «esiste una procedura»; «come si decide chi entra» invece di «l'accesso è controllato»." },
+   { "h": "Chi lavora ai margini", "d": "Turni meno presidiati, personale mobile, appaltatori, neo inseriti: raccontano la partecipazione meglio di chi presidia il sistema da anni." }
+  ]
+ },
+ {
+  "id": "45001_m10_s017",
+  "layout": "punti",
+  "kicker": "Preparazione",
+  "titolo": "I moltiplicatori di significato",
+  "intro": "Non potrai vedere tutto, e va bene. La qualità non dipende dall'ampiezza del campione, ma dalla capacità di raccontare il sistema dove il rischio è più esposto. Quattro fattori aumentano la probabilità di vedere l'SGSSL sotto sforzo.",
+  "punti": [
+   { "h": "I cambiamenti recenti", "d": "Segui il cambiamento lungo la catena: valutazione, informazione, addestramento, prove, monitoraggio dei primi problemi, correzioni." },
+   { "h": "Incidenti e quasi incidenti", "d": "Condensano molte informazioni in un caso concreto: come il sito analizza, quanto va in profondità, se verifica l'efficacia, se condivide l'apprendimento." },
+   { "h": "Le differenze tra turni", "d": "Un sistema può funzionare di giorno e indebolirsi la sera: non serve visitare di notte, basta una consegna, un registro, un'intervista." },
+   { "h": "Appaltatori e fornitori", "d": "Un test di maturità: scegli non la procedura, ma un caso reale — un intervento recente, una fermata con più imprese." }
+  ]
+ },
+ {
+  "id": "45001_m10_s018",
+  "layout": "punti",
+  "kicker": "Preparazione",
+  "titolo": "Siti complessi e imprevisti",
+  "intro": "Devi prevedere cosa farai se le condizioni cambiano mentre sei lì. Non è prudenza eccessiva, è metodo: se hai pensato prima a come reagire, manterrai sia sicurezza sia qualità.",
+  "punti": [
+   { "h": "Negoziabile e non negoziabile", "d": "Negoziabile: ordine delle visite, orari, dettaglio su temi secondari. Non negoziabile: accesso sicuro, regole di sito, competenza adeguata, tracciabilità." },
+   { "h": "La gerarchia di priorità", "d": "Cosa devi assolutamente vedere se il tempo si riduce, cosa puoi rinviare, cosa può essere sostituito da un campione analogo." },
+   { "h": "Le emergenze", "d": "Se scatta un'emergenza reale smetti di essere osservatore: segui le istruzioni, metti in sicurezza il gruppo. Prima la sicurezza, poi la metodologia." },
+   { "h": "La flessibilità guidata", "d": "Né irrigidirsi né accettare qualsiasi modifica proposta: adattare il percorso senza perdere criteri, obiettivi e disciplina." }
+  ]
+ },
+ {
+  "id": "45001_m10_s019",
+  "layout": "punti",
+  "kicker": "Checklist",
+  "titolo": "Usare le clausole senza farsi guidare solo da loro",
+  "intro": "Una checklist ben fatta sostiene il ragionamento, una povera lo atrofizza. Non una lista piatta uguale per tutti i siti: la traduzione operativa di ciò che hai già capito in preparazione. Non ti dice cosa pensare: ti ricorda dove non dimenticare di pensare.",
+  "punti": [
+   { "h": "La matrice mentale", "d": "Da un lato i temi del sistema, dall'altro i processi e i luoghi che visiterai; in mezzo le domande che cercano evidenze pertinenti." },
+   { "h": "Promemoria, non formule", "d": "Non «esiste una procedura», ma «come il sito assicura che questa attività sia svolta in sicurezza nei diversi turni e con imprese esterne»." },
+   { "h": "La selettività", "d": "Struttura completa, ma enfasi diversa: un centro direzionale chiede obiettivi e riesame, un'officina controllo operativo e lavori critici." },
+   { "h": "Il vantaggio per il gruppo", "d": "Chi legge il sistema sa quali snodi seguire, l'esperto capisce dove contribuire, chi annota collega i fatti ai criteri senza ricostruzioni a fine giornata." }
+  ]
+ },
+ {
+  "id": "45001_m10_s020",
+  "layout": "punti",
+  "kicker": "Checklist",
+  "titolo": "Le evidenze attese",
+  "intro": "Le evidenze utili non hanno tutte la stessa forma, ma devono essere pertinenti al criterio e abbastanza solide. In SSL questo significa quasi sempre combinare più fonti: quando convergono, la valutazione si rafforza molto.",
+  "punti": [
+   { "h": "Contesto e campo", "d": "Coerenza tra mappa organizzativa, processi reali, cambiamenti e perimetro: se un'attività importante è poco visibile, il campanello si accende." },
+   { "h": "Leadership e partecipazione", "d": "Non organigrammi o verbali: indirizzo chiaro, canali ascoltati, consultazione che produce ritorno, preposti che sanno cosa presidiare." },
+   { "h": "Controllo operativo", "d": "Il cuore della visita: condizioni coerenti con le regole, permessi pertinenti, barriere comprese, capacità di fermarsi quando le condizioni non sono corrette." },
+   { "h": "Monitoraggio e miglioramento", "d": "Registrazioni, analisi, verifiche di efficacia — ma anche la prova che l'apprendimento ha cambiato qualcosa sul campo, non solo nel software." }
+  ]
+ },
+ {
+  "id": "45001_m10_s021",
+  "layout": "punti",
+  "kicker": "Checklist per clausola",
+  "titolo": "Contesto, leadership, pianificazione",
+  "intro": "Le fondamenta: la checklist deve aiutarti a capire se l'SGSSL nasce da una lettura reale dell'organizzazione o da una costruzione formale. Una nuova linea automatica dovrebbe riflettersi in tutte queste clausole: se la checklist ti aiuta a seguire quel filo, la stai usando bene.",
+  "punti": [
+   { "h": "Il contesto", "d": "Coerenza tra attività, luoghi, persone esposte e confini dichiarati: se appaltatori, turni e reparti temporanei restano ai margini, l'attenzione sale." },
+   { "h": "La leadership", "d": "Non la sensibilità generica: come l'indirizzo si traduce in scelte, priorità, risorse e presenza sui temi critici. Anche il linguaggio dei responsabili conta." },
+   { "h": "Ruoli e partecipazione", "d": "Oltre l'organigramma e i verbali: un preposto sa dirti come controlla il turno; le persone raccontano come una segnalazione riceve risposta." },
+   { "h": "La pianificazione", "d": "Il sito usa la lettura del rischio per decidere? Se i rischi maggiori non producono obiettivi, azioni o verifiche dedicate, il sistema è poco selettivo." }
+  ]
+ },
+ {
+  "id": "45001_m10_s022",
+  "layout": "punti",
+  "kicker": "Checklist per clausola",
+  "titolo": "Supporto, controllo operativo, emergenze",
+  "intro": "La parte in cui il sistema deve dimostrare di saper funzionare ogni giorno: distinguere tra mezzi disponibili e mezzi davvero efficaci.",
+  "punti": [
+   { "h": "Le risorse", "d": "Non budget elencati: se arrivano dove il rischio si manifesta. Se il sito dichiara attenzione ma i reparti critici lavorano sempre al limite, la lettura cambia." },
+   { "h": "La competenza applicata", "d": "Chi opera riconosce i controlli essenziali, chi emette un permesso capisce cosa firma: collegare sempre documento e intervista o osservazione." },
+   { "h": "Il controllo operativo", "d": "Corrispondenza tra pericoli, misure previste e pratica: per un lavoro a caldo esterno cerchi briefing, delimitazione, coordinamento, controllo finale." },
+   { "h": "Cambiamento ed emergenze", "d": "Valutazione prima della modifica, verifica nelle prime fasi d'uso; e non accontentarti del piano: prove, ruoli chiari, apprendimento dopo le simulazioni." }
+  ]
+ },
+ {
+  "id": "45001_m10_s023",
+  "layout": "punti",
+  "kicker": "Checklist per clausola",
+  "titolo": "Monitoraggio, incidenti, miglioramento",
+  "intro": "La domanda cambia: il sistema sa misurarsi e sa correggersi davvero? Non cerchi solo numeri, ma la capacità di leggere gli scostamenti e trasformare gli eventi in apprendimento.",
+  "punti": [
+   { "h": "Monitoraggio e decisioni", "d": "Un cruscotto diventa evidenza forte solo quando genera attenzione, priorità e azioni: se i dati si leggono in riunione e si archiviano, è controllo apparente." },
+   { "h": "La conformità", "d": "Non una dichiarazione rassicurante: metodo, aggiornamento e traccia di come i requisiti entrano nei processi reali." },
+   { "h": "Verifiche interne e riesame", "d": "Il programma copre davvero i rischi? Se le verifiche evitano le attività difficili o producono solo rilievi minori, l'utilità è limitata." },
+   { "h": "Incidenti e azioni correttive", "d": "La qualità dell'analisi: distingue errore immediato e cause di sistema? Le azioni agiscono sulle cause? L'efficacia è verificata dopo l'attuazione?" }
+  ]
+ },
+ {
+  "id": "45001_m10_s024",
+  "layout": "punti",
+  "kicker": "Checklist",
+  "titolo": "Dalle clausole alle risultanze",
+  "intro": "Il rischio ora è usare la checklist in modo rigido. Nell'SGSSL le debolezze importanti attraversano quasi sempre più aree insieme: la tua lettura deve restare trasversale.",
+  "punti": [
+   { "h": "Una mappa di collegamenti", "d": "Non caselle da spuntare: quando trovi un fatto significativo, chiediti quali altre aree tocca — competenza, comunicazione, supervisione, cambiamento." },
+   { "h": "Risultanza forte o debole", "d": "La debole descrive il fatto isolato; la forte lo ancora alle evidenze e lo collega al punto del sistema che ne spiega la rilevanza." },
+   { "h": "Sintomo e radice probabile", "d": "Non risolvere il problema al posto del sito, ma evitare formulazioni che lo riducano a episodio senza contesto." },
+   { "h": "Poche evidenze convergenti", "d": "Documento, intervista, osservazione e registrazione coerenti valgono più di un fascicolo pieno di note sparse." }
+  ]
+ },
+ {
+  "id": "45001_m10_s025",
+  "layout": "confronto",
+  "kicker": "Audit combinati",
+  "titolo": "Quando hanno senso",
+  "intro": "Se un'organizzazione gestisce insieme qualità, ambiente e SSL, alcune parti possono essere lette in modo integrato. Ma la SSL non è una disciplina aggiuntiva: porta pericoli per le persone e urgenze che chiedono spazio dedicato.",
+  "a": {
+   "h": "I vantaggi",
+   "sub": "Efficienza ragionata",
+   "punti": [
+    { "d": "Una sola apertura, meno duplicazioni, visione più completa del management." },
+    { "d": "Cogliere le interazioni reali: una modifica che migliora la produttività può incidere sulla sicurezza." }
+   ]
+  },
+  "b": {
+   "h": "I rischi",
+   "sub": "L'appiattimento",
+   "punti": [
+    { "d": "Molto tempo sui punti facili da condividere, poco spazio dove la SSL è davvero diversa." },
+    { "d": "La falsa equivalenza: una lacuna documentale e una debolezza su un lavoro critico non pesano uguale." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m10_s026",
+  "layout": "punti",
+  "kicker": "Audit combinati",
+  "titolo": "Progettarli senza perdere profondità",
+  "intro": "Non riescono bene per caso: riescono quando gruppo, agenda e campionamento tengono insieme efficienza e profondità. Anche il linguaggio della chiusura deve restare chiaro: una criticità rilevante per la SSL non deve perdersi in una sintesi uniforme.",
+  "punti": [
+   { "h": "Cosa è comune e cosa no", "d": "Comuni: contesto, obiettivi trasversali, sistema documentale, azioni correttive, riesame. Dedicati: pericoli specifici, appaltatori, emergenze, incidenti." },
+   { "h": "La regia del gruppo", "d": "Non sommare specialisti: chi guida le parti trasversali, chi presidia il rischio per le persone, chi verifica che la SSL non finisca negli ultimi minuti." },
+   { "h": "L'agenda a blocchi", "d": "Apertura comune, poi finestre dedicate: lo stesso processo osservato con lenti diverse, ma con tempo per fermarsi sui punti critici." },
+   { "h": "Il campionamento doppio", "d": "Alcuni casi scelti perché mostrano l'integrazione, altri perché rappresentano il profilo di rischio SSL, anche se meno adatti alle altre discipline." }
+  ]
+ },
+ {
+  "id": "45001_m10_s027",
+  "layout": "punti",
+  "kicker": "Audit combinati",
+  "titolo": "Casi riusciti e trappole",
+  "intro": "L'efficienza non viene da quanto tutto appare unificato. Viene da quanto l'integrazione resta fedele al profilo di rischio.",
+  "punti": [
+   { "h": "Il caso riuscito", "d": "Una nuova linea di lavaggio: qualità osserva i parametri, ambiente scarichi e prodotti, sicurezza accessi, ventilazione e anomalie. Una decisione, nessuna disciplina diluita." },
+   { "h": "Il caso meno riuscito", "d": "Un deposito con attività integrata su documenti e indicatori, ma sopralluogo veloce alle baie: la SSL resta assente dove il rischio era maggiore." },
+   { "h": "La trappola dei processi di supporto", "d": "Perfetti per la parte comune, ma diventano un rifugio: si conclude molto sulla struttura e poco sulla tenuta operativa dei controlli." },
+   { "h": "I segnali di deraglio", "d": "Troppo tempo in sala riunioni, checklist troppo uniforme, gruppo sbilanciato sulle aree comuni, campione scelto perché comodo da condividere." }
+  ]
+ },
+ {
+  "id": "45001_m10_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 10",
+  "modNum": "10",
+  "titolo": "Prepara seguendo il rischio, non la comodità",
+  "punti": [
+   { "h": "Il programma di audit", "d": "Non un calendario neutro: priorità governate dal rischio, dai cambiamenti e dalla maturità dei controlli." },
+   { "h": "Le competenze", "d": "Riconoscere quando servono competenze aggiuntive e quando una falsa sicurezza tecnica indebolisce il giudizio." },
+   { "h": "La preparazione", "d": "Pochi documenti mirati, il DVR come mappa, permessi e lavori critici, sopralluogo in sicurezza, interlocutori che fanno parlare il lavoro vero." },
+   { "h": "La checklist", "d": "Uno strumento vivo che collega clausole, processi, cambiamenti, turni e appaltatori: le NC serie raramente stanno in una sola clausola." },
+   { "h": "Gli audit combinati", "d": "Unire ciò che è davvero comune, proteggere ciò che in SSL richiede profondità propria." },
+   { "h": "La regola unica", "d": "Segui il rischio nel programma, nelle competenze, nei documenti, nella checklist e anche quando integri più sistemi." }
+  ],
+  "prossimo": {
+   "modulo": "11",
+   "titolo": "La conduzione sul campo",
+   "testo": "Dalla preparazione all'azione: apertura, interviste, osservazione, risultanze e chiusura."
+  }
+ }
+]
