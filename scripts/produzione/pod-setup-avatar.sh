@@ -70,12 +70,19 @@ echo "== [2] toolkit da R2 (PRIMA della patch, che lo usa) + asset base"
 mkdir -p /workspace/asset /workspace/toolkit
 rclone copy "$R2/avatar-assets/toolkit/" /workspace/toolkit/
 rclone copy "$R2/avatar-assets/" /workspace/asset/ --include "*.mp4"
+# s3fd (rilevatore volti) da R2 nella cache torch: il download esterno da adrianbulat.com si
+# impianta e blocca la prep della base (visto 14-15/07). Da R2 e' affidabile e veloce.
+mkdir -p /root/.cache/torch/hub/checkpoints
+[ -s /root/.cache/torch/hub/checkpoints/s3fd-619a316812.pth ] || \
+  dl rclone copyto "$R2/avatar-assets/weights/s3fd-619a316812.pth" /root/.cache/torch/hub/checkpoints/s3fd-619a316812.pth
 
-echo "== [3] patch bbox FISSA (volto statico: mediana dei coord su tutti i frame)"
+echo "== [3] patch bbox — DISATTIVATA di default: la bbox fissa e' stata BOCCIATA (bocca fissa)."
+# ricetta congelata = P0 (nessuna bbox fissa). Default 0; un caller puo' forzare 1 esplicitamente.
+export MUSETALK_FIXED_BBOX="${MUSETALK_FIXED_BBOX:-0}"
 python /workspace/toolkit/patch-musetalk.py || { echo "PATCH FALLITA"; exit 1; }
 
 echo "== [4] sanity import + crop di produzione"
-python -c "import torch,mmcv,cv2,numpy,transformers; assert torch.cuda.is_available(), 'CUDA giu'; print('stack ok:', torch.__version__)"
+python -c "import torch,mmcv,cv2,numpy,transformers; assert torch.cuda.is_available(), 'CUDA giu'; print('stack ok:', torch.__version__)" || { echo "SANITY IMPORT FALLITA: ambiente rotto (mmcv/cv2/torch) — STOP prima del render"; exit 1; }
 # crop di produzione: base ALT, trim dei fade (face-detect crasha sui frame senza volto),
 # quadrato 1080 -> 540 (identico a schermo nella bolla 332px, ~2x piu' veloce end-to-end)
 D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 /workspace/asset/base-alt.mp4)

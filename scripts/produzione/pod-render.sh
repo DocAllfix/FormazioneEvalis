@@ -16,7 +16,7 @@ export RCLONE_CONFIG_R2_TYPE=s3 RCLONE_CONFIG_R2_PROVIDER=Cloudflare \
 R2="r2:${R2_BUCKET}"
 export PRODUZIONE_ROOT=/workspace/produzione MUSETALK_DIR=/workspace/MuseTalk \
        R2_AUDIO_REMOTE="$R2/audio-master" R2_REMOTE="$R2" \
-       MUSETALK_BBOX_SHIFT=-7 MUSETALK_EXTRA_MARGIN=8 MUSETALK_PARSING_MODE=jaw MUSETALK_FIXED_BBOX=1
+       MUSETALK_BBOX_SHIFT=-7 MUSETALK_EXTRA_MARGIN=8 MUSETALK_PARSING_MODE=jaw MUSETALK_FIXED_BBOX=0
 
 mkdir -p /workspace/produzione/"$CORSO"
 rclone copyto "$R2/audio-master/$CORSO/audio-map.json" /workspace/produzione/"$CORSO"/audio-map.json 2>/dev/null \
@@ -38,6 +38,19 @@ PY
 N=$(wc -l < /workspace/pending.txt)
 echo "== $CORSO: $N slide pendenti, $NPROC processi su questa GPU"
 [ "$N" -eq 0 ] && { echo "niente da fare"; exit 0; }
+
+# PREP BASE UNA VOLTA prima di sdoppiare: se N processi partono insieme, tutti vedono la base
+# "non preparata" e la preparano sulla STESSA cartella results/.../avatars/<id> -> corruzione.
+# Renderizzo la prima clip da solo (fa la prep + 1 clip), poi le altre in parallelo (prep gia' fatta).
+if [ "$NPROC" -gt 1 ]; then
+  FIRST=$(head -1 /workspace/pending.txt)
+  echo "== prep base una volta (render della prima clip $FIRST) ..."
+  python /workspace/toolkit/render-avatar.py "$CORSO" --only "$FIRST" --base "$BASE" --batch 20 --purge-local \
+    > /workspace/render-prep.log 2>&1 || { echo "PREP BASE FALLITA"; tail -20 /workspace/render-prep.log; exit 1; }
+  tail -n +2 /workspace/pending.txt > /workspace/pending.next && mv /workspace/pending.next /workspace/pending.txt
+  N=$(wc -l < /workspace/pending.txt)
+  [ "$N" -eq 0 ] && { echo "solo 1 clip, gia' fatta in prep"; exit 0; }
+fi
 
 # split in NPROC fette e lancia
 split -n l/"$NPROC" -d /workspace/pending.txt /workspace/shard-
