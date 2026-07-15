@@ -1,0 +1,389 @@
+[
+ {
+  "id": "27001_m06_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 27001 — Sicurezza delle informazioni",
+  "kicker": "Modulo 6",
+  "eyebrow": "I controlli organizzativi dell'Appendice A",
+  "titolo": "Non carta, ma meccanismi di decisione",
+  "testo": "Le regole di governo che danno direzione, priorità e coerenza. Se leggi l'Appendice A come un elenco unico, ricordi nomi sparsi; se la organizzi in gruppi logici, ogni controllo trova il suo posto. Mentre ascolti, visualizza la vita quotidiana: chi decide, chi esegue, chi controlla, chi viene avvisato, chi ha il potere di correggere una deviazione.",
+  "agenda": [
+   "Le quattro famiglie e il metodo di lettura",
+   "Governance: politica, ruoli, segregazione",
+   "Threat intelligence, inventario, classificazione",
+   "Accessi, identità, fornitori e cloud",
+   "Incidenti, continuità, requisiti, dati personali"
+  ]
+ },
+ {
+  "id": "27001_m06_s002",
+  "layout": "cards",
+  "kicker": "La bussola",
+  "titolo": "Le quattro famiglie",
+  "intro": "Non cassetti chiusi: una bussola. Un problema serio attraversa quasi sempre più famiglie nello stesso momento. Dire quale è coinvolta di più non significa escludere le altre: significa capire da dove nasce la leva di correzione.",
+  "cards": [
+   { "h": "Organizzazione", "d": "Regole, decisioni, responsabilità, relazioni esterne, coordinamento complessivo. Una scelta organizzativa debole rende inefficaci anche strumenti costosi." },
+   { "h": "Persone", "d": "Comportamento, consapevolezza, impegni, gestione del ciclo di vita del personale." },
+   { "h": "Fisico", "d": "Protegge luoghi, aree, apparati e condizioni ambientali." },
+   { "h": "Tecnologia", "d": "Sistemi, reti, configurazioni, registrazioni, sviluppo, operatività. È la più visibile, e per questo spesso sopravvalutata rispetto alle altre." }
+  ]
+ },
+ {
+  "id": "27001_m06_s003",
+  "layout": "flusso",
+  "kicker": "Il metodo",
+  "titolo": "Dal nome alla sostanza",
+  "intro": "Sapere che un controllo è organizzativo non ti dice se è progettato bene, applicato e mantenuto. Cinque passaggi pratici. La domanda trasversale: cosa succede se questo controllo salta proprio nel momento peggiore?",
+  "passi": [
+   { "h": "L'intento", "d": "Ogni controllo nasce per governare una decisione, ridurre un rischio o rendere prevedibile un comportamento. Senza intento, ti fermi alla superficie." },
+   { "h": "Il proprietario", "d": "Qualcuno deve avere l'autorità di approvare, far applicare, misurare e correggere. Quando è vago, il controllo si dissolve nelle buone intenzioni." },
+   { "h": "I punti di contatto", "d": "Un controllo quasi mai vive da solo: procedure, strumenti, persone, fornitori, registrazioni che lo sostengono." },
+   { "h": "Le evidenze realistiche", "d": "Non tutto è un documento, ma qualcosa di osservabile deve esserci: decisioni, registri, approvazioni, revisioni, esempi concreti." },
+   { "h": "Il ciclo di riesame", "d": "Un controllo vero non nasce perfetto e immobile: viene corretto quando il contesto cambia o l'esperienza mostra debolezze." }
+  ]
+ },
+ {
+  "id": "27001_m06_s004",
+  "layout": "punti",
+  "kicker": "Governance",
+  "titolo": "Leadership e integrazione nel lavoro reale",
+  "intro": "La prima domanda non è tecnica: la sicurezza viene guidata davvero, o lasciata a una funzione specialistica senza leve? La norma attribuisce all'alta direzione un ruolo diretto. La leadership qui non è retorica: è architettura decisionale.",
+  "punti": [
+   { "h": "Dentro i processi", "d": "La sicurezza non può vivere ai margini come pratica separata: deve entrare in dove l'organizzazione produce valore, decide e investe. Se entra solo alla fine del progetto, nasce con un debito organizzativo." },
+   { "h": "Le risorse", "d": "Non puoi chiedere risultati seri se mancano tempo, competenze, strumenti e priorità decisionali. E non c'è miglioramento se ogni iniziativa resta sospesa quando arriva un'urgenza più rumorosa." },
+   { "h": "La cultura", "d": "Se un dirigente dice che la protezione è cruciale ma premia solo la velocità e tollera scorciatoie, il messaggio reale è un altro." },
+   { "h": "I segnali in verifica", "d": "Le riunioni citano la sicurezza solo dopo un problema o già in pianificazione? I responsabili parlano di vincoli subiti o di criteri condivisi?" }
+  ]
+ },
+ {
+  "id": "27001_m06_s005",
+  "layout": "punti",
+  "kicker": "Governance",
+  "titolo": "La politica che orienta decisioni",
+  "intro": "Non serve a riempire un archivio: dà una direzione comune, comprensibile e coerente con le finalità. Adatta al contesto, aiuta a fissare gli obiettivi, richiama i requisiti applicabili, sostiene il miglioramento. La domanda utile: questa politica aiuta a decidere?",
+  "punti": [
+   { "h": "Il linguaggio", "d": "Formule solenni ma indeterminate lasciano sole le persone quando devono scegliere. Una politica utile chiarisce la direzione: quali priorità non sono negoziabili, quali criteri guidano." },
+   { "h": "Reperibile e viva", "d": "Deve poter essere richiamata, letta e usata, non solo archiviata. Una politica sconosciuta ai responsabili e assente nei momenti critici è formalmente presente ma sostanzialmente muta." },
+   { "h": "Risolve un conflitto reale", "d": "Il commerciale vuole attivare uno strumento in pochi giorni, l'IT teme esposizioni: una politica viva offre il criterio — rapidità sì, ma dentro regole coerenti col valore delle informazioni." },
+   { "h": "La prova della coerenza", "d": "Quando persone di aree diverse la raccontano, usano parole compatibili o descrivono priorità in conflitto? Se ciascuno ne ricava un messaggio opposto, non sta orientando." }
+  ]
+ },
+ {
+  "id": "27001_m06_s006",
+  "layout": "definizione",
+  "kicker": "Governance",
+  "eyebrow": "Quando il governo smette di essere anonimo",
+  "titolo": "Ruolo, responsabilità, autorità",
+  "definizione": "Ciò che riguarda tutti, se non viene attribuito a nessuno, finisce spesso trascurato. Tre livelli che nel parlato vengono confusi: se manca uno dei tre, il controllo si indebolisce.",
+  "punti": [
+   { "h": "La responsabilità", "d": "Il dovere di far accadere qualcosa o di garantirne l'esito." },
+   { "h": "L'autorità", "d": "Il potere legittimo di decidere, approvare, bloccare o indirizzare. Chi può approvare le eccezioni sugli accessi? Chi deve riferire periodicamente?" },
+   { "h": "Il ruolo", "d": "La posizione organizzativa dove doveri e poteri trovano collocazione. Non l'organigramma: quello dice chi esiste, non chi decide davvero nei passaggi meno comodi." }
+  ]
+ },
+ {
+  "id": "27001_m06_s007",
+  "layout": "punti",
+  "kicker": "Governance",
+  "titolo": "Segregazione dei compiti e relazioni esterne",
+  "intro": "Due elementi che rendono la struttura più robusta sotto pressione. Separare i compiti non è moltiplicare la burocrazia: è distribuire i passaggi critici così che un controllo compensi la debolezza di un altro.",
+  "punti": [
+   { "h": "Il punto cieco", "d": "Se la stessa persona richiede, approva, esegue e controlla la stessa attività, aumentano errore non intercettato, abuso e opacità. Anche se è competente e in buona fede, basta un'urgenza." },
+   { "h": "Nelle realtà piccole", "d": "La segregazione totale è difficile: si introducono compensazioni — riesami indipendenti, registrazioni più forti, scadenza dei privilegi, verifica da un responsabile diverso. Riconoscere il rischio, non fingere che sparisca." },
+   { "h": "I contatti esterni", "d": "Quando succede qualcosa di serio, improvvisare i riferimenti costa tempo prezioso. Autorità per obblighi e supporto investigativo; gruppi specialistici per allerta e lettura anticipata delle minacce." },
+   { "h": "Il telaio", "d": "La governance non è un capitolo isolato: la segregazione sostiene gli accessi, i contatti esterni si intrecciano con gli incidenti, le reti alimentano la threat intelligence." }
+  ]
+ },
+ {
+  "id": "27001_m06_s008",
+  "layout": "flusso",
+  "kicker": "Conoscenza e asset",
+  "titolo": "Threat intelligence",
+  "intro": "Non qualcosa di remoto o riservato ai grandi: raccogliere e interpretare informazioni sulle minacce per decidere meglio. Evita due estremi — la cecità e il panico. Il passaggio chiave è dall'informazione alla scelta: la verifica non chiede se la ricevi, ma se la usi.",
+  "passi": [
+   { "h": "Partire dal contesto", "d": "Quali informazioni sono sensibili, quali servizi non possono fermarsi, quali accessi esterni esistono, quali modalità colpiscono organizzazioni simili." },
+   { "h": "Le fonti", "d": "Canali istituzionali, reti di settore, esperienza interna: phishing ricorrenti, anomalie dei tecnici, segnalazioni dei clienti, incidenti presso i fornitori." },
+   { "h": "Leggerle insieme", "d": "Reset password insoliti + vulnerabilità comunicata dal fornitore + mail che imitano l'assistenza: separati sembrano episodi; insieme, pressione crescente su identità e canali." },
+   { "h": "Il filtro", "d": "Non ogni segnale merita lo stesso peso. Una struttura matura scarta il rumore, collega i segnali agli asset e trasforma il pertinente in istruzioni operative." }
+  ]
+ },
+ {
+  "id": "27001_m06_s009",
+  "layout": "punti",
+  "kicker": "Conoscenza e asset",
+  "titolo": "L'inventario degli asset",
+  "intro": "Ti dice che cosa conta, dove si trova, chi lo usa, chi ne risponde e da quali dipendenze è sostenuto. Non una lista statica di computer: se il valore è l'informazione, collega dati, supporti, sistemi, servizi, responsabili e fornitori. Non monumentale: mantenibile e utile alle decisioni.",
+  "punti": [
+   { "h": "Oltre l'hardware", "d": "Uno studio legale che censisce solo portatili e licenze manca il nucleo del valore: categorie informative, archivi, piattaforme condivise coi clienti, dipendenza da servizi terzi." },
+   { "h": "La proprietà", "d": "Non possesso legale del bene: responsabilità nel definirne uso, protezione, aggiornamento e priorità. Senza proprietari, gli asset diventano terra di nessuno." },
+   { "h": "Il caso classico", "d": "Una funzione adotta un servizio online per scambiare file coi clienti; dopo mesi contiene bozze contrattuali e dati personali. Se l'inventario non intercetta la crescita, si perde visibilità dove nascono valore e rischio." },
+   { "h": "Rende visibile il territorio", "d": "E una volta che il territorio è visibile, diventa possibile attribuire livelli di protezione diversi: fare classificazione in modo non arbitrario." }
+  ]
+ },
+ {
+  "id": "27001_m06_s010",
+  "layout": "punti",
+  "kicker": "Conoscenza e asset",
+  "titolo": "Classificazione e uso accettabile",
+  "intro": "Non tutte le informazioni meritano lo stesso trattamento. Classificare rende esplicite differenze di valore e sensibilità: senza, ciascuno si regola per percezione — alcuni proteggono troppo poco ciò che conta, altri appesantiscono l'ordinario. È il ponte tra valore informativo e comportamento concreto.",
+  "punti": [
+   { "h": "Comprensibile e applicabile", "d": "Non un'etichetta elegante: aiuta a decidere dove conservare, con chi condividere, quanto mantenere, quali canali sono ammessi, quale controllo degli accessi." },
+   { "h": "L'uso accettabile", "d": "Non una raccolta infinita di divieti: traduce i principi in comportamenti quotidiani — come usare i dispositivi, trattare file e credenziali, quali strumenti sono consentiti." },
+   { "h": "Senza recitare formule", "d": "Se chiedi a un commerciale come invia un documento sensibile, dovresti percepire criteri stabili, non improvvisazioni." },
+   { "h": "I casi di confine", "d": "Quando funziona, le persone sanno anche come richiedere una condivisione eccezionale, chi la approva, e cosa cambia se il documento viene copiato fuori dal contesto ordinario." }
+  ]
+ },
+ {
+  "id": "27001_m06_s011",
+  "layout": "flusso",
+  "kicker": "Accessi e identità",
+  "titolo": "Il controllo degli accessi",
+  "intro": "Dove le scelte organizzative diventano autorizzazioni concrete: chi può fare che cosa, su quale informazione, con quale limite, per quanto tempo, con quale tracciabilità. Non comincia davanti alla tastiera — comincia nella chiarezza dei ruoli e nella capacità di dire, qualche volta, no.",
+  "passi": [
+   { "h": "La regola generale", "d": "La necessità operativa: accedere a ciò che serve per lavorare, non a tutto ciò che è comodo vedere. Erosa da urgenze, permessi copiati da un collega, accessi lasciati ampi per evitare richieste future." },
+   { "h": "Il modello dei ruoli", "d": "Traduce il criterio in gruppi di permessi coerenti con la classificazione. Se hai distinto le informazioni, i livelli di accesso devono riflettere quella differenza." },
+   { "h": "Il processo di approvazione", "d": "Decide le eccezioni e ne motiva la ragione. Un modello brillante fallisce se le approvazioni sono automatiche e nessuno legge le richieste." },
+   { "h": "L'esercizio quotidiano", "d": "Persone e sistemi applicano davvero quelle scelte. Se l'accesso è un favore rapido, i permessi si allargano; se è una decisione di rischio da motivare, il comportamento diventa leggibile." }
+  ]
+ },
+ {
+  "id": "27001_m06_s012",
+  "layout": "timeline",
+  "kicker": "Accessi e identità",
+  "titolo": "Il ciclo di vita delle identità",
+  "intro": "Non solo creare un account: governare il ciclo di vita di chi ottiene accesso. Le identità non sono solo dipendenti stabili: collaboratori, consulenti, fornitori remoti, account di servizio, profili temporanei. Tre punti allineati — fonte, accessi, evento di chiusura — o l'accumulo sale in fretta.",
+  "tappe": [
+   { "t": "1", "h": "L'apertura", "d": "Collegata a una fonte affidabile — assunzione confermata, contratto attivo, incarico approvato — così non nascono account senza vero proprietario." },
+   { "t": "2", "h": "I cambiamenti", "d": "La fase più trascurata: cambio ruolo, progetti temporanei, incarichi sostitutivi. Se il sistema gestisce bene solo ingresso e uscita, accumula l'eredità invisibile di privilegi non più giustificati." },
+   { "t": "3", "h": "L'uscita", "d": "La tempestività conta: la revoca collegata a un evento chiaro, non «quando qualcuno si ricorda». Se HR, funzioni e IT non parlano la stessa lingua, restano account dimenticati." },
+   { "t": "4", "h": "Gli account non personali", "d": "Quelli di applicazioni e processi, tollerati come eccezioni permanenti: richiedono più attenzione, perché hanno privilegi elevati e visibilità minore." }
+  ]
+ },
+ {
+  "id": "27001_m06_s013",
+  "layout": "punti",
+  "kicker": "Accessi e identità",
+  "titolo": "Autenticazione",
+  "intro": "Il punto in cui l'organizzazione decide quanto si fida della prova presentata. Non solo la qualità della password: scegliere un livello coerente col valore, il servizio, il contesto e le conseguenze. Il punto non è complicare sempre, è calibrare. Autenticazione e autorizzazione non sono la stessa cosa.",
+  "punti": [
+   { "h": "I quattro fattori", "d": "La sensibilità di ciò che proteggi; il tipo di soggetto (interno/esterno, stabile/temporaneo); il canale (locale, remoto, amministrativo); il momento e il contesto." },
+   { "h": "La porta laterale", "d": "Se l'autenticazione è forte ma il recupero è improvvisato — codici su canali impropri, controlli ridotti perché «il direttore deve entrare subito» — il presidio si apre dal fianco." },
+   { "h": "Le domande utili", "d": "Come si gestiscono i reset, chi può fare eccezioni, come si verifica l'identità quando la persona non usa più il metodo ordinario, cosa succede per accessi privilegiati o utenti esterni." },
+   { "h": "Comunicare il perché", "d": "Un meccanismo forte ma incomprensibile è percepito come ostacolo arbitrario; spiegato bene — protegge dati sensibili, previene modifiche critiche — riduce l'attrito." }
+  ]
+ },
+ {
+  "id": "27001_m06_s014",
+  "layout": "punti",
+  "kicker": "Accessi e identità",
+  "titolo": "Riesami, privilegi ed eccezioni",
+  "intro": "Molti sistemi partono bene e si deformano lentamente: nuovi progetti, sostituzioni temporanee, eccezioni diventate permanenti. I riesami periodici non sono formalità: sono il momento in cui verifichi se i diritti hanno ancora una ragione attuale.",
+  "punti": [
+   { "h": "I privilegi elevati", "d": "Profili che modificano configurazioni, creano utenti, accedono a volumi ampi: indispensabili ma delicati. Il privilegio straordinario che entra nell'ordinario rende difficile ricostruire i fatti." },
+   { "h": "Le eccezioni con cornice", "d": "Non impedirle: dare loro motivazione, approvazione, durata, tracciabilità e revisione. Quando queste cinque cose mancano, l'eccezione è il principale canale con cui il sistema si indebolisce." },
+   { "h": "Le tracce di un buon riesame", "d": "I responsabili ricevono elenchi comprensibili, sanno cosa confermano, distinguono ciò che serve dall'inerzia. Se ogni riesame conferma tutto, sempre, la credibilità cala." },
+   { "h": "L'aspetto umano", "d": "Riesaminare significa dire che un potere acquisito non serve più. Spiegato male è vissuto come sfiducia; coerente con ruoli e classificazione è buona amministrazione del rischio." }
+  ]
+ },
+ {
+  "id": "27001_m06_s015",
+  "layout": "punti",
+  "kicker": "Fornitori e cloud",
+  "titolo": "Attività esternalizzate, responsabilità interne",
+  "intro": "Affidare fuori sembra una semplificazione. Ma la responsabilità di governo non scompare: cambia forma, confini e strumenti, e resta interna. La domanda utile: il rapporto è governato come un acquisto, o come una dipendenza di sicurezza?",
+  "punti": [
+   { "h": "Non una categoria uniforme", "d": "Cambia quasi tutto tra pulizie, un consulente su dati reali, un gestore di posta, un partner che sviluppa integrazioni critiche, un cloud che ospita processi centrali." },
+   { "h": "Segmentare", "d": "Chi vede che cosa, chi può intervenire sui sistemi, chi dipende da subfornitori, chi ha accessi amministrativi, chi in caso di guasto incide sulla continuità." },
+   { "h": "Non sempre più maturo", "d": "Anche un fornitore competente va verificato nell'allineamento col tuo contesto: un servizio eccellente in astratto può non supportare la tua classificazione o i tempi attesi." },
+   { "h": "Le tracce del governo", "d": "Sai chi li approva, chi li segue, quali informazioni trattano, come si gestiscono gli accessi, cosa succede in caso di incidente o cessazione. Se restano vaghe, nessuno possiede la relazione." }
+  ]
+ },
+ {
+  "id": "27001_m06_s016",
+  "layout": "punti",
+  "kicker": "Fornitori e cloud",
+  "titolo": "Scegliere prima di dipendere",
+  "intro": "Il momento della scelta è il più favorevole per chiarire aspettative e responsabilità: dopo la firma, le leve si riducono. La domanda chiave sul cloud: l'organizzazione ha capito la propria parte di responsabilità? Il rischio più frequente non è il cloud, è la confusione su chi fa che cosa.",
+  "punti": [
+   { "h": "La valutazione proporzionata", "d": "Non prezzo e funzionalità soltanto: quali informazioni passeranno, con quali accessi, cosa succede se il servizio si interrompe, quanto è facile cambiare fornitore." },
+   { "h": "La ripartizione mal capita", "d": "L'organizzazione pensa che il provider protegga tutto; il provider protegge la propria parte e lascia al cliente configurazioni, accessi, dati, uso quotidiano. Da lì nascono esposizioni banali e dannose." },
+   { "h": "La dipendenza costruita", "d": "All'inizio semplice supporto, poi integrato con identità, archivi, workflow. Se la crescita non è governata, il servizio diventa critico senza che nessuno lo abbia riconosciuto." },
+   { "h": "«Ci pensa il cloud»", "d": "Indica un rapporto troppo passivo. Un'organizzazione matura sa dire cosa governa direttamente, cosa pretende dal fornitore e come verifica che il confine resti comprensibile." }
+  ]
+ },
+ {
+  "id": "27001_m06_s017",
+  "layout": "punti",
+  "kicker": "Fornitori e cloud",
+  "titolo": "Monitorare i fornitori nel tempo",
+  "intro": "Il vero banco di prova arriva durante l'erogazione: il rapporto va seguito come una relazione viva, non concluso dopo la firma né dipendente dalla memoria di un singolo referente.",
+  "punti": [
+   { "h": "Il livello di servizio reale", "d": "Non solo i tempi dichiarati: la qualità della risposta, l'escalation, la coerenza delle modifiche. Chi interviene spesso in urgenza fuori procedura aumenta il rischio anche con un contratto solido." },
+   { "h": "Il contesto che cambia", "d": "Un fornitore del sistema ticket che passa da richieste tecniche a segnalazioni disciplinari e dati su siti critici: resta lo stesso, ma il peso informativo è ormai molto più alto." },
+   { "h": "I subfornitori", "d": "Spesso conosci il soggetto con cui hai firmato, molto meno chi dietro le quinte eroga parti rilevanti: capire la catena abbastanza da valutare impatti e responsabilità." },
+   { "h": "I segnali deboli", "d": "Ritardi ripetuti, ticket chiusi senza spiegazioni, rotazione del personale, documentazione che peggiora. Uno alla volta sono fastidi; letti insieme anticipano un deterioramento." }
+  ]
+ },
+ {
+  "id": "27001_m06_s018",
+  "layout": "punti",
+  "kicker": "Fornitori e cloud",
+  "titolo": "Cloud: concentrazione, uscita, resilienza",
+  "intro": "La sensazione di grande disponibilità è vera solo in parte: il cloud cambia il profilo del rischio più che eliminarlo. Non serve presumere il disastro ogni giorno: serve consapevolezza operativa.",
+  "punti": [
+   { "h": "La concentrazione", "d": "Quando archivio, collaborazione, autenticazione e flussi verso clienti passano dalla stessa famiglia di servizi, la dipendenza non è più periferica: è strategica, e va resa visibile." },
+   { "h": "La portabilità", "d": "Molti la scoprono tardi. La domanda non è se puoi migrare domani senza sforzo: è se sai cosa servirebbe, quanto tempo, e quali elementi sono davvero bloccanti." },
+   { "h": "La resilienza operativa", "d": "Un servizio affidabile può comunque degradare: capire quali funzioni non possono attendere, quali dati devono restare accessibili in altro modo, quali procedure alternative esistono." },
+   { "h": "Gli indizi in verifica", "d": "L'organizzazione sa quali servizi cloud sono critici, chi li governa, come recuperare i dati e quali dipendenze rendono complesso un cambio. Non promesse eroiche: consapevolezza." }
+  ]
+ },
+ {
+  "id": "27001_m06_s019",
+  "layout": "punti",
+  "kicker": "Incidenti",
+  "titolo": "Preparazione e triage",
+  "intro": "Non solo il momento drammatico: soprattutto preparazione. Le organizzazioni che reagiscono meglio non sperano di non avere problemi — hanno chiarito prima cosa considerano un incidente, come segnalarlo e chi decide le priorità.",
+  "punti": [
+   { "h": "Evento e incidente", "d": "Non tutti gli eventi diventano incidenti. L'incidente richiede una risposta organizzata perché minaccia informazioni, servizi, continuità o controllo. Se tratti tutto come grave, perdi credibilità; se minimizzi, lasci crescere." },
+   { "h": "Segnalare bene", "d": "Le persone devono sapere cosa segnalare, a chi, con quale urgenza. Molti sistemi si inceppano qui: segnalazioni su chat informali, a persone assenti, o bloccate per timore di essere giudicati." },
+   { "h": "Il triage", "d": "La prima valutazione non richiede onniscienza: quanto è esteso, quali servizi coinvolti, che impatto avrebbe l'attesa, chi informare subito, quali azioni urgenti limitano il danno senza peggiorare." },
+   { "h": "Il coordinamento", "d": "Se tutti parlano e nessuno decide, la risposta si frammenta; se decide uno senza ascoltare chi ha i dati, si sbaglia. Serve un meccanismo proporzionato che trasformi segnalazioni in decisioni." }
+  ]
+ },
+ {
+  "id": "27001_m06_s020",
+  "layout": "punti",
+  "kicker": "Incidenti",
+  "titolo": "Risposta coordinata",
+  "intro": "La fase più esposta: la qualità tecnica conta, ma la differenza la fa l'organizzazione. Tre obiettivi iniziali — contenere l'impatto, capire abbastanza per decidere, mantenere una comunicazione ordinata. Non sapere tutto prima di agire: sapere abbastanza da non agire alla cieca.",
+  "punti": [
+   { "h": "Misure proporzionate e progressive", "d": "Sugli account anomali della cooperativa: azzerare tutto fermerebbe la pianificazione degli interventi. Contenimento mirato + verifiche rafforzate + procedure manuali temporanee è più governato, non più morbido." },
+   { "h": "La regia della comunicazione", "d": "Se ogni funzione comunica in autonomia, messaggi incoerenti. Chiarire chi parla, a chi, con quale conferma e frequenza: anche «stiamo verificando, prossimo punto alle undici» riduce il disordine." },
+   { "h": "Il registro delle decisioni", "d": "Poche righe per ogni passaggio: cosa deciso, da chi, quando, su quali informazioni. Serve alla comunicazione, alle decisioni successive, all'apprendimento, e a proteggere chi ha deciso con dati incompleti." },
+   { "h": "Non finisce col sintomo", "d": "Considerare concluso l'incidente appena sparisce il sintomo più visibile è un errore frequente: servono verifiche, conferma delle cause, ripristino ordinato." }
+  ]
+ },
+ {
+  "id": "27001_m06_s021",
+  "layout": "punti",
+  "kicker": "Incidenti",
+  "titolo": "Apprendere senza cercare un colpevole",
+  "intro": "Quando il picco scende comincia la parte più utile. La parola chiave non è colpa, ma apprendimento: cercare il responsabile personale troppo presto irrigidisce i racconti e impoverisce i fatti. Spesso la causa è una concatenazione, non un singolo errore.",
+  "punti": [
+   { "h": "Il momento giusto", "d": "Quando i fatti sono abbastanza stabili: troppo presto hai impressioni confuse, troppo tardi memoria e turnover erodono i dettagli. Con persone che hanno visto il problema da angolazioni diverse." },
+   { "h": "Causa immediata e di contesto", "d": "La credenziale rubata è la causa immediata; l'autenticazione troppo debole, la cattiva classificazione, la dipendenza dal fornitore senza contatti efficaci sono le cause di contesto. Distinguerle evita correzioni cosmetiche." },
+   { "h": "Azioni con proprietario", "d": "Un riesame che produce dieci idee e nessun proprietario serve poco: scopo chiaro, responsabile, priorità, un modo per capire se funzionano. Evitare l'entusiasmo del giorno dopo." },
+   { "h": "Il beneficio culturale", "d": "Se da un errore nasce miglioramento, le persone segnalano di più; se nasce caccia al colpevole, segnalano meno. L'apprendimento non è un lusso post evento: è un controllo che rafforza il sistema." }
+  ]
+ },
+ {
+  "id": "27001_m06_s022",
+  "layout": "punti",
+  "kicker": "Incidenti",
+  "titolo": "Prove forensi e ricostruzione",
+  "intro": "Mentre un incidente è in corso, la tentazione è fare qualunque cosa pur di spegnerlo: ma riavviare, sovrascrivere o ripulire senza criterio distrugge le informazioni che ti serviranno dopo. Non appartiene solo agli specialisti: chi coordina deve capire il principio.",
+  "punti": [
+   { "h": "Contenimento e preservazione insieme", "d": "Puoi isolare un account senza cancellarne le tracce, togliere un accesso amministrativo preservando i log, sospendere un servizio dopo aver acquisito copie ragionevoli." },
+   { "h": "Prima di correggere", "d": "Sui documenti visibili a utenti sbagliati: quali log fotografano lo stato attuale, quali prove mostrano l'estensione, quando è iniziato. Corretta la configurazione, ricostruire il perimetro diventa molto più difficile." },
+   { "h": "La catena delle evidenze", "d": "Non una scena da film: chi ha raccolto cosa, quando, da dove, con quali passaggi. Utile soprattutto se l'incidente coinvolge fornitori, con tracce distribuite tra sistemi interni ed esterni." },
+   { "h": "Chiedere aiuto è integrità", "d": "Alcuni scenari rendono essenziale una ricostruzione robusta: specialisti forensi, funzioni legali, autorità. Non ogni incidente lo richiede, ma saperlo riconoscere è maturità, non debolezza." }
+  ]
+ },
+ {
+  "id": "27001_m06_s023",
+  "layout": "punti",
+  "kicker": "Continuità",
+  "titolo": "Mantenere vive le attività essenziali",
+  "intro": "Aggiunge una prospettiva diversa dagli incidenti: non come fermare il problema, ma come continuare a erogare ciò che non può attendere in un contesto degradato. Non promettere che nulla si fermerà: decidere in anticipo cosa deve ripartire prima, con quali compromessi accettabili.",
+  "punti": [
+   { "h": "Le attività essenziali", "d": "Quali processi non possono fermarsi a lungo, quali informazioni sono indispensabili, quali persone/sistemi/fornitori li sostengono, quali procedure alternative esistono." },
+   { "h": "Ragionare per scenari", "d": "Non prevedere ogni disastro: mettere alla prova la capacità di priorità. Negli ambulatori, senza priorità condivise scatta la lotta tra front office, medici e amministrazione." },
+   { "h": "Il collegamento", "d": "Se non sai quali asset sostengono un processo, non ne proteggi la ripresa; se non distingui le informazioni sensibili, rischi scorciatoie proprio sotto pressione." },
+   { "h": "Selezionare è lucidità", "d": "In emergenza le persone vogliono ripristinare tutto insieme: raramente funziona. La continuità insegna a semplificare e proteggere l'essenziale — e a comunicare cosa resta disponibile e con quali tempi." }
+  ]
+ },
+ {
+  "id": "27001_m06_s024",
+  "layout": "punti",
+  "kicker": "Continuità",
+  "titolo": "Prontezza ICT",
+  "intro": "La continuità definisce ciò che deve restare vivo; la prontezza ICT verifica se i sistemi possono davvero sostenerlo. Non basta avere copie in astratto: capire se consentono un ritorno ordinato con tempi e sequenze credibili.",
+  "punti": [
+   { "h": "Le dipendenze", "d": "Un'applicazione dipende da identità, reti, basi dati, cloud, connettività, fornitore, configurazioni. Se pianifichi guardando solo il sistema visibile, dimentichi il componente che ne impedisce la riattivazione." },
+   { "h": "Possibilità teorica e prova reale", "d": "Alla prima prova seria emergono password non più note, script mai aggiornati, dipendenze non documentate, ambienti di test troppo diversi. Una prova imperfetta vale più di una certezza non verificata." },
+   { "h": "Prove che insegnano", "d": "Le prove servono a imparare o solo a rassicurare? Quelle utili producono quasi sempre qualche scoperta scomoda, e quindi un miglioramento." },
+   { "h": "Il legame con gli accessi", "d": "Nel ripristino si aprono privilegi temporanei e credenziali d'emergenza: se non è preparato, l'urgenza tecnica crea nuovi rischi mentre ne risolvi uno." }
+  ]
+ },
+ {
+  "id": "27001_m06_s025",
+  "layout": "punti",
+  "kicker": "Requisiti e diritti",
+  "titolo": "Requisiti legali e contrattuali",
+  "intro": "L'impegno a soddisfare i requisiti applicabili prende forma quando l'organizzazione sa riconoscere gli obblighi e tradurli in comportamenti e controlli. Il rischio non è solo non conoscerli: è conoscerli in modo frammentato, così la conformità diventa episodica.",
+  "punti": [
+   { "h": "Input organizzativi", "d": "Non note a margine del lavoro legale: leggi, impegni coi clienti, condizioni d'uso, clausole di riservatezza. Un contratto promette tempi di notifica stringenti, ma una procedura non sa chi debba attivarla." },
+   { "h": "Tradotti in controlli", "d": "Le funzioni sanno quali obblighi influenzano il proprio lavoro; i fornitori sono valutati anche rispetto a questi impegni; le regole di conservazione nascono da un quadro compreso, non da abitudini." },
+   { "h": "Dare peso alle priorità", "d": "Se un archivio contiene informazioni soggette a impegni forti verso terzi, classificazione e continuità non potranno trattarlo come uno qualsiasi." },
+   { "h": "La catena completa", "d": "Un obbligo di notifica deve arrivare a chi fa il triage, a chi mantiene i contatti col cliente e a chi decide il contenuto. Se si interrompe a metà, l'obbligo resta teorico." }
+  ]
+ },
+ {
+  "id": "27001_m06_s026",
+  "layout": "confronto",
+  "kicker": "Requisiti e diritti",
+  "titolo": "Proprietà intellettuale",
+  "intro": "Un'altra dimensione concreta del valore informativo: codice, contenuti, basi dati, modelli, licenze, materiali creativi. Riguarda due lati speculari — e dove il rispetto di ciò che è altrui è debole, spesso è debole anche la disciplina su ciò che è proprio.",
+  "a": {
+   "h": "Proteggere il proprio",
+   "sub": "Il patrimonio da tutelare",
+   "punti": [
+    { "d": "Distinguere materiale pubblico, condivisibile e proprietario: senza, alcuni diffondono troppo, altri bloccano troppo." },
+    { "d": "Il consulente che lascia il progetto e conserva copie locali: senza limiti d'uso e regole di restituzione, la reazione è debole e tardiva." },
+    { "d": "Le uscite includono restituzione, chiusura accessi, attenzione ai materiali sviluppati." }
+   ]
+  },
+  "b": {
+   "h": "Rispettare l'altrui",
+   "sub": "Indicatore di governo informativo",
+   "punti": [
+    { "d": "Software senza licenza adeguata, immagini da fonti incerte, componenti incorporati senza chiarirne le condizioni." },
+    { "d": "Documenti di clienti riadattati come se fossero interni: non solo un problema giuridico astratto." },
+    { "d": "Le licenze rilevanti non sono dettagli amministrativi separati dal rischio operativo." }
+   ]
+  }
+ },
+ {
+  "id": "27001_m06_s027",
+  "layout": "punti",
+  "kicker": "Requisiti e diritti",
+  "titolo": "Protezione dei dati personali",
+  "intro": "Strettamente collegata alla sicurezza delle informazioni, ma non identica. Vanno letti dentro il sistema visto finora, non in un universo parallelo: la domanda è come inventario, accessi, fornitori, incidenti e continuità diventano più stringenti quando le informazioni riguardano individui.",
+  "punti": [
+   { "h": "Non basta etichettare", "d": "Serve tradurre l'attenzione in comportamenti: evitare cartelle troppo ampie, limitare copie locali, chiarire i canali di invio ammessi, definire regole di conservazione, impedire che finalità diverse si mescolino." },
+   { "h": "I segnali narrativi", "d": "Le persone sanno riconoscere quando trattano dati personali in contesti delicati, chi può vederli e perché, cosa fare davanti a un invio errato o un accesso anomalo." },
+   { "h": "Non un tema del solo legale", "d": "Se lo descrivono come materia dell'ufficio legale, il collegamento coi controlli organizzativi è ancora debole. Collegarlo a esempi concreti lo rende comprensibile." },
+   { "h": "Decisioni proporzionate", "d": "Non tutti i dati personali hanno lo stesso impatto: una rubrica generica e un archivio sanitario non pongono le stesse esigenze. Serve proporzione, non automatismi ciechi." }
+  ]
+ },
+ {
+  "id": "27001_m06_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 6",
+  "modNum": "06",
+  "titolo": "Le cinque domande guida",
+  "punti": [
+   { "h": "La decisione", "d": "Quale decisione organizzativa sostiene questo controllo? I controlli organizzativi non sono ornamenti: orientano decisioni, responsabilità e priorità." },
+   { "h": "L'autorità", "d": "Chi ha autorità e responsabilità reali? Senza leadership, politica leggibile, ruoli chiari e segregazione, gli altri controlli vivono in ordine sparso." },
+   { "h": "Le evidenze", "d": "Che cosa mi mostra che il controllo vive nel lavoro quotidiano? Il portale clienti, gli accessi ereditati, il ripristino con dipendenze nascoste rendono la teoria verificabile." },
+   { "h": "Il momento peggiore", "d": "Che cosa succede se il controllo manca proprio quando serve? Esternalizzare un'attività non esternalizza la responsabilità di governo." },
+   { "h": "I collegamenti", "d": "Threat intelligence con inventario, classificazione con accessi, fornitori con continuità, incidenti con apprendimento. Non memorizzare titoli isolati: ripercorri i nessi." },
+   { "h": "Nominale o governato", "d": "Le domande del checkpoint chiederanno di distinguere il controllo nominale da quello realmente governato." }
+  ],
+  "prossimo": {
+   "modulo": "07",
+   "titolo": "Appendice A due: persone, fisico, tecnologia",
+   "testo": "I controlli sulle persone, sugli ambienti e sugli strumenti completano il telaio organizzativo."
+  }
+ }
+]
