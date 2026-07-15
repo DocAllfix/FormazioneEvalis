@@ -1,0 +1,391 @@
+[
+ {
+  "id": "45001_m08_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 45001 — Salute e sicurezza sul lavoro",
+  "kicker": "Modulo 08",
+  "eyebrow": "Valutazione delle prestazioni · Capitolo 9",
+  "titolo": "Sta funzionando davvero?",
+  "testo": "Il capitolo nove porta dal fare al verificare, e dal verificare al decidere. È il momento in cui il sistema smette di essere una promessa e diventa un insieme di evidenze leggibili. Attenzione a una parola che ricorre nei cruscotti: indicator. Ogni dato deve indicare qualcosa, non occupare una casella. E tieni distinti tre termini: il monitoraggio osserva un andamento, la misurazione attribuisce un valore, l'analisi e la valutazione trasformano il dato in giudizio professionale.",
+  "agenda": [
+   "Monitoraggio e misurazione: cosa guardare e con quali metodi",
+   "La valutazione della conformità",
+   "L'audit interno del sistema",
+   "Il riesame di direzione",
+   "Esercizi di lettura degli indicatori"
+  ]
+ },
+ {
+  "id": "45001_m08_s002",
+  "layout": "punti",
+  "kicker": "Monitoraggio · 9.1.1",
+  "titolo": "Cosa monitorare e cosa misurare",
+  "intro": "Se scegli male gli oggetti da osservare, anche il cruscotto più elegante ti porta fuori strada. Una parola decisiva: necessario. Non tutto ciò che è disponibile merita attenzione. C'è un errore ricorrente: misurare ciò che è comodo (corsi, firme), non ciò che conta (comportamenti, controlli efficaci).",
+  "punti": [
+   { "h": "Il grado di conformità", "d": "Quanto soddisfi requisiti legali e altri requisiti: la conformità è una dimensione della prestazione, deve essere visibile." },
+   { "h": "Le attività critiche", "d": "Non il lavoro in astratto, ma i punti dove la valutazione dei rischi ha già segnalato che si gioca la partita più importante." },
+   { "h": "L'avanzamento degli obiettivi", "d": "Se hai fissato un obiettivo, devi vedere se ti stai muovendo davvero nella direzione promessa." },
+   { "h": "L'efficacia dei controlli", "d": "Non basta sapere che un controllo esiste: capire se sta producendo l'effetto atteso." }
+  ]
+ },
+ {
+  "id": "45001_m08_s003",
+  "layout": "punti",
+  "kicker": "Monitoraggio · 9.1.1",
+  "titolo": "Indicatori proattivi: vedere prima",
+  "intro": "Per governare il rischio devi imparare a vedere prima. Un indicator proattivo non racconta il danno: indica se il sistema si sta muovendo nella direzione che rende il danno meno probabile. Ma proattivo non significa automaticamente buono.",
+  "punti": [
+   { "h": "Segnali anticipati", "d": "Non il numero di infortuni (già accaduto), ma quante ispezioni pianificate esegui, quante anomalie chiudi nei tempi." },
+   { "h": "Relazione col rischio", "d": "Utile solo se ha relazione credibile: il numero di riunioni che non producono decisioni vale poco." },
+   { "h": "Oltre l'attività", "d": "«Corsi pianificati contro svolti» non dice se il comportamento è cambiato: avvicinarsi alla prova di efficacia." },
+   { "h": "La prova pratica", "d": "Se domani il dato peggiora, sai chi dovrebbe accorgersene, che domanda porre e quale azione partire? Se no, l'indicatore è immaturo." }
+  ]
+ },
+ {
+  "id": "45001_m08_s004",
+  "layout": "punti",
+  "kicker": "Monitoraggio · 9.1.1",
+  "titolo": "Indicatori reattivi: leggere gli esiti",
+  "intro": "I dati che descrivono eventi, esiti, scostamenti già manifestati. Indispensabili, ma un dato reattivo preso da solo può essere molto ingannevole: zero infortuni non prova un controllo eccellente, e più segnalazioni non sono sempre un peggioramento.",
+  "punti": [
+   { "h": "Tre aspetti insieme", "d": "La gravità, la frequenza o ricorrenza, la relazione con i dati proattivi e col contesto operativo." },
+   { "h": "Non per fare classifiche", "d": "Se ogni dato serve a cercare un responsabile, le persone segnalano meno: un apparente miglioramento costruito sull'opacità." },
+   { "h": "Il rapporto con l'esposizione", "d": "Dieci medicazioni pesano diversamente in venti persone o in quattrocento presenze: leggere il numero rispetto alla dimensione reale." },
+   { "h": "La serie storica", "d": "Il dato acquista senso nel tempo; se cambi spesso i criteri di classificazione, la serie si spezza. Diffida delle medie troppo aggregate." }
+  ]
+ },
+ {
+  "id": "45001_m08_s005",
+  "layout": "punti",
+  "kicker": "Monitoraggio · 9.1.1",
+  "titolo": "Metodi, criteri, tempi",
+  "intro": "Non basta scegliere gli oggetti: devi decidere come raccoglierli, con quali criteri interpretarli e in quali tempi farli circolare. La norma chiede risultati validi: un dato nasce da un metodo coerente, ripetibile, adatto allo scopo.",
+  "punti": [
+   { "h": "Metodi validi", "d": "Se ogni preposto osserva cose diverse in orari casuali, il numero non vale; definisci aree, momenti, comportamenti, regole di registrazione." },
+   { "h": "Criteri chiari prima", "d": "Stabilire cosa rende un risultato accettabile, preoccupante o critico prima dell'analisi, non inventati dopo: senza criteri hai informazioni, non valutazione." },
+   { "h": "Tempi definiti", "d": "Quando raccogliere, quando analizzare, quando comunicare: alcuni dati vanno letti subito, altri a cadenza più ampia." },
+   { "h": "Attrezzature affidabili", "d": "Strumenti verificati o tarati dove applicabile: se il fonometro è inaffidabile, anche la tua decisione lo sarà. Conservare le tracce." }
+  ]
+ },
+ {
+  "id": "45001_m08_s006",
+  "layout": "punti",
+  "kicker": "Monitoraggio · 9.1.1",
+  "titolo": "Dal dato al cruscotto",
+  "intro": "Trasformare dati sparsi in un cruscotto leggibile che orienta priorità e azioni. Non una collezione di colonne, ma una narrazione sintetica. La prestazione SSL non coincide con l'assenza di eventi gravi: coincide con la capacità di controllare il lavoro nel tempo.",
+  "punti": [
+   { "h": "Evitare due errori", "d": "L'eccesso di dati (nessuno capisce cosa conta) e la povertà di lettura (tutto sembra semplice, si perdono i segnali)." },
+   { "h": "Leggere insieme", "d": "Eventi gravi assenti ma urti minori in crescita, verifiche pre-uso in calo e manutenzioni che slittano: i controlli stanno perdendo efficacia." },
+   { "h": "La scheda mentale del dato", "d": "Da dove arriva, con quale metodo, quale rischio rappresenta, con quale criterio lo giudichi, chi lo legge, quale decisione attiva." },
+   { "h": "Stabile ma vivo", "d": "Abbastanza stabile per confronti nel tempo, abbastanza vivo per cambiare quando cambiano processi, rischi o obiettivi." }
+  ]
+ },
+ {
+  "id": "45001_m08_s007",
+  "layout": "punti",
+  "kicker": "Conformità · 9.1.2",
+  "titolo": "Capire dove sei davvero",
+  "intro": "Molte organizzazioni confondono tre cose: avere un elenco di obblighi, avere procedure interne, sapere davvero il proprio stato di conformità. Solo la terza risponde al 9.1.2. Non basta conoscere la regola: devi verificare se la stai rispettando.",
+  "punti": [
+   { "h": "Un processo dedicato", "d": "Impostare e mantenere processi con frequenza e metodi definiti; il giudizio deriva da evidenze leggibili, non da impressioni generiche." },
+   { "h": "Non un esercizio documentale", "d": "Un file con le scadenze non basta: verificare se le verifiche sono eseguite, le prescrizioni gestite, l'attrezzatura usata coerentemente sul campo." },
+   { "h": "Una conoscenza viva", "d": "Saper dire, in un dato momento, se sei conforme, dove hai lacune, quali azioni sono aperte: la conformità non è un archivio." }
+  ]
+ },
+ {
+  "id": "45001_m08_s008",
+  "layout": "punti",
+  "kicker": "Conformità · 9.1.2",
+  "titolo": "Frequenza e metodi",
+  "intro": "Ritmo e metodo non sono libertà casuale, ma una responsabilità di progettazione. Una matrice semplice aiuta: quanto è critico il requisito? quanto cambia il contesto? cosa mi hanno detto le verifiche precedenti?",
+  "punti": [
+   { "h": "La frequenza dai fattori", "d": "Natura dei requisiti, rischi delle attività, velocità del contesto, risultati precedenti: dove ci sono stati scostamenti, verifiche più ravvicinate." },
+   { "h": "Metodi combinati", "d": "Dal requisito alle evidenze attese: documentazione, osservazione del campo, confronto con chi gestisce; un solo file può nascondere una sostanza nuova." },
+   { "h": "Ricorrenti e straordinarie", "d": "Le prime seguono una programmazione; le seconde scattano quando cambiano impianti, processi, personale chiave o dopo un evento rilevante." }
+  ]
+ },
+ {
+  "id": "45001_m08_s009",
+  "layout": "punti",
+  "kicker": "Conformità · 9.1.2",
+  "titolo": "Dallo scostamento all'azione",
+  "intro": "Il momento più delicato: formulare un giudizio e comportarti di conseguenza. Due debolezze opposte: la fretta di dichiararsi conformi su indizi incompleti, e l'accumulo di verifiche senza mai tradurle in decisioni.",
+  "punti": [
+   { "h": "Una sequenza di domande", "d": "Qual è il requisito? Quali evidenze? Dimostrano rispetto effettivo? Se emergono lacune, cosa attivare e con quale priorità?" },
+   { "h": "Formale o sostanziale", "d": "Le evidenze documentali complete, ma il comportamento reale non coincide: la conformità formale non dimostra controllo sostanziale." },
+   { "h": "Conoscenza mantenuta", "d": "Se lo stato è disperso tra email, tabelle non aggiornate e memoria delle persone, la comprensione non è davvero mantenuta." },
+   { "h": "L'azione aperta da tempo", "d": "Un'azione ferma da molto su un tema critico: la durata stessa del ritardo dice già qualcosa sulla tenuta del controllo." }
+  ]
+ },
+ {
+  "id": "45001_m08_s010",
+  "layout": "punti",
+  "kicker": "Conformità · 9.1.2",
+  "titolo": "Evidenze e reporting",
+  "intro": "La valutazione ha peso solo se lascia tracce leggibili. Evita registrazioni con parole generiche («verificato», «ok»): sembrano rassicuranti ma non spiegano nulla. Un reporting graduato aiuta la direzione ad allocare tempi e priorità.",
+  "punti": [
+   { "h": "Cinque elementi", "d": "Il requisito, il metodo usato, le evidenze esaminate, il giudizio formulato, le azioni conseguenti con responsabilità e tempi." },
+   { "h": "Le tre situazioni", "d": "Requisito rispettato e presidiato; rispettato ma con controllo fragile; non rispettato o non ancora dimostrato: evita ottimismo comodo e allarmismo indistinto." },
+   { "h": "Sostenere la comprensione", "d": "Un archivio ordinato è utile solo se qualcuno sa leggerlo e usarlo per decidere: la registrazione sostiene la conoscenza, non la sostituisce." }
+  ]
+ },
+ {
+  "id": "45001_m08_s011",
+  "layout": "punti",
+  "kicker": "Conformità · 9.1.2",
+  "titolo": "Caso: la cabina di verniciatura",
+  "intro": "Una carpenteria introduce una nuova cabina. Il responsabile ha l'elenco dei requisiti, ma vuole lo stato reale. Il risultato: alcuni requisiti presidiati, altri fragili, altri da intervenire subito. La valutazione produce consapevolezza operativa, non un'etichetta.",
+  "punti": [
+   { "h": "I requisiti toccati dal cambiamento", "d": "Gestione sostanze, aspirazione, manutenzione, formazione, procedure operative: partire da ciò che il cambiamento ha modificato." },
+   { "h": "Più metodi, non una sola fonte", "d": "Riesame delle registrazioni, sopralluogo, confronto col caporeparto, colloqui con due operatori: ogni fonte copre solo una parte." },
+   { "h": "Il sopralluogo aggiunge", "d": "Le carte sembrano ordinate, ma un filtro è prossimo alla sostituzione senza data, un prodotto nuovo non è nell'elenco, un operatore è incerto." },
+   { "h": "Non un'etichetta, azioni", "d": "Registra le evidenze, assegna le azioni, definisce priorità: la conformità diventa una conoscenza viva che orienta le decisioni." }
+  ]
+ },
+ {
+  "id": "45001_m08_s012",
+  "layout": "punti",
+  "kicker": "Audit interno · 9.2",
+  "titolo": "Perché serve davvero",
+  "intro": "Una funzione diversa dai controlli operativi quotidiani: una verifica pianificata del sistema nel suo insieme. Non nasce per cercare colpevoli né per premiare chi compila meglio, ma per fornire informazioni affidabili a chi deve correggere e migliorare.",
+  "punti": [
+   { "h": "Il sistema, non la singola area", "d": "Capire se politica, obiettivi, regole, ruoli e controlli reggono come sistema, e se ciò che è progettato è davvero attuato." },
+   { "h": "Conformità ed efficacia", "d": "Se stai rispettando l'assetto dichiarato, e se quell'assetto produce risultati credibili: mette insieme le due domande." },
+   { "h": "Riduce l'impressionismo", "d": "Un momento formalizzato di confronto tra evidenze e criteri, che protegge dall'ottimismo comodo e dal pessimismo generico." },
+   { "h": "Non ispezione dopo un evento", "d": "Segue una logica programmata e guarda l'assetto generale, anche quando tutto sembra tranquillo: non rincorre solo ciò che è andato male." }
+  ]
+ },
+ {
+  "id": "45001_m08_s013",
+  "layout": "punti",
+  "kicker": "Audit interno · 9.2",
+  "titolo": "Il programma di audit",
+  "intro": "Non visite occasionali, ma una regia stabile: frequenze, metodi, responsabilità, consultazione, pianificazione, reporting. L'equità vera non è trattare tutto allo stesso modo, ma trattare con più attenzione ciò che incide di più sulla SSL.",
+  "punti": [
+   { "h": "Priorità, non uniformità", "d": "Un processo centrale o che ha mostrato debolezze merita attenzione più ravvicinata; distribuzione coerente con l'importanza." },
+   { "h": "I risultati precedenti", "d": "Se un sito ha avuto ritardi ripetuti nelle azioni, il programma successivo prevede un ritorno mirato, non ignora il problema." },
+   { "h": "La consultazione", "d": "Costruire il piano ascoltando chi conosce processi e cambiamenti: una nuova linea nel secondo semestre, difficoltà dei turni notturni." },
+   { "h": "Le responsabilità", "d": "Chi pianifica, coordina, esegue, riceve i risultati, segue le azioni: quando i ruoli sono confusi, le date slittano e i rapporti restano sospesi." }
+  ]
+ },
+ {
+  "id": "45001_m08_s014",
+  "layout": "confronto",
+  "kicker": "Audit interno · 9.2",
+  "titolo": "Criteri e campo di applicazione",
+  "intro": "La domanda decisiva non è quanto tempo hai, ma che cosa vuoi accertare e rispetto a quale riferimento. Senza questi due elementi il lavoro diventa impressionistico. Le persone verificate devono sapere cosa viene osservato e con quale logica.",
+  "a": {
+   "h": "I criteri",
+   "sub": "Il metro",
+   "punti": [
+    { "d": "Politica, obiettivi, procedure interne, requisiti della norma: dichiarati prima e usati con coerenza." },
+    { "d": "Dicono che cosa conta: senza criterio, molti fatti ma nessuno sa quali sono pertinenti." }
+   ]
+  },
+  "b": {
+   "h": "Il campo",
+   "sub": "Il perimetro",
+   "punti": [
+    { "d": "Un sito, un reparto, un processo, una fase: dice fin dove arriva la verifica." },
+    { "d": "Troppo largo resta superficiale, troppo ristretto perde i collegamenti." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m08_s015",
+  "layout": "punti",
+  "kicker": "Audit interno · 9.2",
+  "titolo": "Obiettività e imparzialità",
+  "intro": "Esiste una tentazione comune: controllarsi da soli e darsi ragione. Non serve carattere inflessibile: servono condizioni organizzative che rendano più facile un giudizio onesto. Un riferimento noto per competenza e processo è la ISO 19011.",
+  "punti": [
+   { "h": "Indipendenza di giudizio", "d": "Non per forza dall'esterno, ma non dovrebbero verificare il lavoro di cui sono direttamente responsabili: l'autoassoluzione è troppo facile." },
+   { "h": "Le verifiche incrociate", "d": "Chi gestisce la logistica verifica l'officina e viceversa: si mantiene la conoscenza, si riduce il coinvolgimento diretto." },
+   { "h": "La competenza", "d": "Capire i criteri, raccogliere evidenze, distinguere fatti da opinioni, formulare rilievi leggibili: indipendenza e competenza insieme." },
+   { "h": "Proteggere dalle pressioni", "d": "Audit in un picco, rilievo che tocca un dirigente influente: chi coordina il processo protegge il lavoro degli auditor." }
+  ]
+ },
+ {
+  "id": "45001_m08_s016",
+  "layout": "punti",
+  "kicker": "Audit interno · 9.2",
+  "titolo": "Risultati, azioni, lavoratori",
+  "intro": "L'audit si conclude quando le evidenze diventano decisioni praticabili e azioni seguite. Un rilievo utile ma fermo nel cassetto non cambia nulla. La qualità si vede non tanto nelle interviste, ma nelle conseguenze organizzative.",
+  "punti": [
+   { "h": "Reporting ai manager", "d": "Chi ha autorità sul processo riceve un quadro chiaro: cosa è stato verificato, quali evidenze, perché il rilievo conta." },
+   { "h": "Anche ai lavoratori", "d": "I risultati pertinenti tornano a chi vive il rischio; quando il reporting si ferma ai vertici, la partecipazione si indebolisce." },
+   { "h": "Le azioni conseguenti", "d": "Ogni rilievo genera una risposta proporzionata con responsabilità e tempi; se è registrato ma non affrontato, il messaggio è devastante." },
+   { "h": "Documentare risultati e programma", "d": "Ricostruire non solo i rilievi, ma la serietà con cui il programma è stato attuato: memoria organizzativa e continuità." }
+  ]
+ },
+ {
+  "id": "45001_m08_s017",
+  "layout": "punti",
+  "kicker": "Riesame · 9.3",
+  "titolo": "Il momento in cui il vertice decide",
+  "intro": "Il sistema non si governa da solo: il riesame di direzione collega evidenze e leadership. Non una riunione generica né un passaggio rituale, ma un esame periodico della tenuta. La domanda: il sistema resta adatto, sufficiente ed efficace?",
+  "punti": [
+   { "h": "Non un rito", "d": "L'alta direzione non riceve un riassunto ottimistico: si confronta con andamenti, problemi aperti, cambiamenti, risorse, opportunità." },
+   { "h": "La responsabilità del vertice", "d": "Non conoscere ogni dettaglio, ma non delegare il giudizio finale sulla salute del sistema a un resoconto automatico." },
+   { "h": "Ricomporre oltre l'episodio", "d": "Un infortunio o un audit, presi da soli, possono distorcere la lettura: il riesame li ricompone in continuità e tendenze." },
+   { "h": "Locale o sistema", "d": "Un ritardo isolato non è come ritardi diffusi per mancanza cronica di risorse; se più temi raccontano la stessa tensione, è un segnale di sistema." }
+  ]
+ },
+ {
+  "id": "45001_m08_s018",
+  "layout": "punti",
+  "kicker": "Riesame · 9.3",
+  "titolo": "Gli input: il contesto",
+  "intro": "Perché il riesame sia utile, devi portargli le informazioni giuste. Prepararlo come un dossier ragionato, non come una pila di documenti: ogni input mostra tendenza, causa plausibile e possibile impatto sul sistema.",
+  "punti": [
+   { "h": "Stato delle azioni precedenti", "d": "Se una decisione è ancora sospesa al riesame successivo, è un segnale sulla capacità del sistema di trasformare le scelte in risultati." },
+   { "h": "I cambiamenti rilevanti", "d": "Aspettative delle parti, requisiti legali, rischi e opportunità, ma anche mercato, organizzazione, tecnologie, processi, persone." },
+   { "h": "Realizzazione di politica e obiettivi", "d": "Non un commento astratto: gli impegni prendono forma nel lavoro reale? Un obiettivo formalmente chiuso ma sterile non è un risultato." },
+   { "h": "Informazioni vive", "d": "Non «le segnalazioni sono cresciute», ma se la crescita deriva da partecipazione, da un cambio di processo o da un controllo che si indebolisce." }
+  ]
+ },
+ {
+  "id": "45001_m08_s019",
+  "layout": "punti",
+  "kicker": "Riesame · 9.3",
+  "titolo": "Gli input: le prestazioni",
+  "intro": "Il cuore del riesame. Il vertice non deve innamorarsi di un unico dato, né usare un solo indicator come sintesi di tutto: mette in relazione esiti, processi, coinvolgimento, risorse e capacità di risposta.",
+  "punti": [
+   { "h": "Il quadro integrato", "d": "Meno eventi con assenza ma più non conformità di manutenzione, azioni che si allungano, turni scoperti: il sistema sta consumando margini." },
+   { "h": "Conformità e audit interno", "d": "Requisiti gestiti in modo discontinuo; e una sequenza di rilievi simili in aree diverse è spesso un segnale di sistema, non locale." },
+   { "h": "Consultazione e partecipazione", "d": "Le persone segnalano ostacoli e soluzioni invisibili ai cruscotti: non un'aggiunta gentile, una fonte di conoscenza." },
+   { "h": "L'adeguatezza delle risorse", "d": "La domanda diretta: le risorse attuali bastano a mantenere un sistema efficace? Se la pressione cresce ma tempi e organici restano, riconoscere la tensione." }
+  ]
+ },
+ {
+  "id": "45001_m08_s020",
+  "layout": "punti",
+  "kicker": "Riesame · 9.3",
+  "titolo": "Gli output: le decisioni",
+  "intro": "Senza output chiari il confronto resta interessante ma sterile. Un output è buono quando, dopo averlo letto, sai quale tema cambierà, chi lo guiderà e con quale effetto atteso: il riesame non è il luogo delle mezze parole.",
+  "punti": [
+   { "h": "Il giudizio di adeguatezza", "d": "Se il sistema, per com'è oggi, può continuare a reggere oppure richiede correzioni importanti." },
+   { "h": "Miglioramento e modifiche", "d": "Aree in cui diventare più solido; modifiche a ruoli, processi, criteri di monitoraggio, controlli operativi." },
+   { "h": "Le risorse necessarie", "d": "Se emergono carenze di personale, competenze, tempo, manutenzione: decidere come affrontarle, altrimenti è diagnosi senza terapia." },
+   { "h": "L'integrazione col business", "d": "Riconoscere che alcune criticità nascono da come è organizzato il business: la SSL entra dentro, non a margine." }
+  ]
+ },
+ {
+  "id": "45001_m08_s021",
+  "layout": "punti",
+  "kicker": "Riesame · 9.3",
+  "titolo": "Comunicare e lasciare evidenza",
+  "intro": "Un riesame utile non finisce al tavolo del vertice. Se le decisioni restano tra direzione e specialisti, il sistema perde forza dove dovrebbe diventare operativo: le persone vedono cambiare priorità senza capire da quali evidenze nascono.",
+  "punti": [
+   { "h": "Comunicare ai lavoratori", "d": "Tradurre gli esiti in messaggi comprensibili: cosa cambia, quale rischio si presidia meglio, quale contributo è atteso." },
+   { "h": "La forma conta", "d": "«Confermata l'adeguatezza del sistema» dice poco; spiegare che alla luce dei dati verranno introdotti controlli più ravvicinati rende visibile il legame." },
+   { "h": "Documentare le evidenze", "d": "Non basta ricordare che la riunione si è svolta: ricostruire input, decisioni, risorse autorizzate, azioni da seguire; rende il riesame cumulativo." }
+  ]
+ },
+ {
+  "id": "45001_m08_s022",
+  "layout": "punti",
+  "kicker": "Esercizio · 1",
+  "titolo": "Leggere un cruscotto",
+  "intro": "Un centro logistico: infortuni con assenza a zero nell'ultimo semestre. Ma crescono i danneggiamenti alle scaffalature e i quasi-incidenti agli incroci, le verifiche pre-uso calano, le segnalazioni di viabilità restano aperte. Il dato zero non basta a descrivere la prestazione.",
+  "punti": [
+   { "h": "Il rischio o la gestione?", "d": "È cambiato il rischio, oppure è cambiata la capacità di gestirlo? I controlli sono ancora adeguati e sostenuti dalle risorse?" },
+   { "h": "Localizzato o diffuso?", "d": "Quali informazioni servono subito per capire se il peggioramento è concentrato o esteso: personale interinale nei picchi, preposti esperti da sostituire." },
+   { "h": "Non un giudizio moralistico", "d": "Non celebrare lo zero né richiamare genericamente alla prudenza: la lettura porta a domande operative, non a moralismi." }
+  ]
+ },
+ {
+  "id": "45001_m08_s023",
+  "layout": "punti",
+  "kicker": "Esercizio · 2",
+  "titolo": "Conformità solo apparente",
+  "intro": "Un'officina di manutenzione: scadenze presidiate, registri ordinati, schede archiviate. Ma durante la verifica emergono tre particolari. La conformità non coincide con un'impressione di ordine: coincide con la capacità di mostrare il rispetto nel lavoro reale.",
+  "punti": [
+   { "h": "L'aggiornamento in ritardo", "d": "Una sostanza nuova non ancora nell'elenco interno: il processo di aggiornamento non segue il cambiamento con la velocità necessaria." },
+   { "h": "La tenuta discontinua", "d": "Intervalli irregolari nei controlli dell'aspirazione: un presidio importante con continuità incerta." },
+   { "h": "Il trasferimento operativo", "d": "Un nuovo inserito incerto sulla gestione di un'anomalia: la trasmissione delle regole non è ancora robusta." }
+  ]
+ },
+ {
+  "id": "45001_m08_s024",
+  "layout": "punti",
+  "kicker": "Esercizio · 3",
+  "titolo": "Dal rilievo al segnale di sistema",
+  "intro": "Tre sedi: in una le azioni si chiudono in ritardo, in un'altra la consultazione è sporadica, nella terza gli obiettivi sono poco tradotti in controlli. Ogni rilievo sembra locale; insieme, potrebbero rivelare una debolezza più profonda nella capacità di attuazione.",
+  "punti": [
+   { "h": "Cercare le ricorrenze", "d": "L'audit non elenca solo rilievi: fa emergere pattern che i singoli responsabili non vedono. Una causa comune: manca una regia nel follow up?" },
+   { "h": "L'equilibrio del giudizio", "d": "Né tre azioni separate senza connessioni, né un allarme sull'intero sistema senza verifiche: riconoscere il pattern e raccogliere evidenze." },
+   { "h": "Lo stesso snodo in luoghi diversi", "d": "Verificare se in tutti i siti le azioni hanno responsabilità chiare e riscontro utile: se le debolezze sono simili, il segnale di sistema si rafforza." }
+  ]
+ },
+ {
+  "id": "45001_m08_s025",
+  "layout": "punti",
+  "kicker": "Esercizio · 4",
+  "titolo": "Mettere insieme i segnali e decidere",
+  "intro": "Un'azienda alimentare in crescita con un nuovo turno serale: manutenzioni che slittano, chiusure più lente, consultazione debole del serale, quasi-incidenti in aumento. Non un fallimento, ma un fondato sospetto di deterioramento del presidio. Si decide quando i segnali convergono, non solo dopo un evento grave.",
+  "punti": [
+   { "h": "I segnali convergono", "d": "La crescita è stata assorbita solo in parte dal sistema; il turno serale appare il punto più esposto: né minimizzare né drammatizzare." },
+   { "h": "Presentazione utile", "d": "Non «il sito è ancora conforme», ma che i controlli mostrano minore stabilità e dove: così il vertice può decidere davvero." },
+   { "h": "Decisioni coerenti", "d": "Rafforzare il supporto manutentivo nell'avvio serale, un momento di consultazione, rivedere il passaggio di consegne tra turni." },
+   { "h": "Il segnale di miglioramento atteso", "d": "Definire cosa aspettarsi nelle settimane: chiusure più rapide, manutenzioni puntuali; decisione presa non è problema risolto." }
+  ]
+ },
+ {
+  "id": "45001_m08_s026",
+  "layout": "punti",
+  "kicker": "Verifica del cap. 9",
+  "titolo": "Le quattro piste sul terreno",
+  "intro": "Una griglia mentale. Non percorrerla come un questionario in sequenza, ma come mappa mentre segui il filo naturale della verifica; la profondità la decide l'evidenza, non la scaletta. Se il tempo è poco, scegli la pista dove il rischio è più alto.",
+  "punti": [
+   { "h": "Monitoraggio e misurazione", "d": "Ha deciso cosa è necessario seguire, o raccoglie dati per abitudine? Metodi chiari, criteri stabiliti prima, strumenti verificati?" },
+   { "h": "Valutazione della conformità", "d": "Un processo reale o un elenco di obblighi? Le persone sanno spiegare lo stato delle aree che gestiscono, o rimandano a un archivio?" },
+   { "h": "L'audit interno", "d": "Programma con logica, criteri e campo chiari, auditor imparziali; i risultati generano azioni leggibili o il rapporto resta isolato?" },
+   { "h": "Il riesame di direzione", "d": "Il vertice legge il sistema o formalizza una riunione? Input completi, output con decisioni reali, comunicazione ai lavoratori?" }
+  ]
+ },
+ {
+  "id": "45001_m08_s027",
+  "layout": "confronto",
+  "kicker": "Verifica del cap. 9",
+  "titolo": "Tenuta e fragilità",
+  "intro": "Riconoscere al volo cosa distingue un sistema solido da uno fragile. Il capitolo nove chiede sempre la stessa cosa: provare che il sistema sa guardarsi allo specchio con lucidità e sa reagire.",
+  "a": {
+   "h": "Segnali di tenuta",
+   "sub": "Il sistema regge",
+   "punti": [
+    { "d": "Il monitoraggio è collegato a rischi, obiettivi e controlli, non casuale." },
+    { "d": "La conformità produce conoscenza viva dello stato reale." },
+    { "d": "Audit e riesame trasformano le evidenze in decisioni, azioni, risorse." }
+   ]
+  },
+  "b": {
+   "h": "Segnali di fragilità",
+   "sub": "Da riconoscere presto",
+   "punti": [
+    { "d": "Molti dati poco utili, senza criteri chiari di lettura." },
+    { "d": "Conformità descritta come presenza di documenti, non stato reale." },
+    { "d": "Rilievi che ritornano simili nel tempo: si ascolta senza correggersi." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m08_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 08",
+  "modNum": "08",
+  "titolo": "Osservare, valutare, verificare, decidere",
+  "punti": [
+   { "h": "Monitoraggio e misurazione", "d": "Osservare ciò che conta con metodi validi; l'indicator non è quello più facile da contare, ma quello utile per decidere." },
+   { "h": "La valutazione della conformità", "d": "Non un archivio ordinato, ma conoscenza viva dello stato reale rispetto ai requisiti applicabili." },
+   { "h": "L'audit interno", "d": "Non rapporti eleganti, ma verifica che rende visibili debolezze, ricorrenze e opportunità di miglioramento." },
+   { "h": "Il riesame di direzione", "d": "Il vertice legge il quadro e decide cambiamenti, risorse e priorità; i risultati tornano ai lavoratori e restano documentati." },
+   { "h": "Leggere i dati come sistema", "d": "L'assenza di eventi gravi non basta; segnali convergenti diventano scelte ragionate prima del danno." },
+   { "h": "La catena completa", "d": "Osservare, confrontare, valutare, verificare, decidere, comunicare: se un anello si indebolisce, il sistema perde affidabilità." }
+  ],
+  "prossimo": {
+   "modulo": "09",
+   "titolo": "Il miglioramento e le non conformità",
+   "testo": "Usare la chiarezza acquisita per correggere, migliorare e rendere il sistema più robusto."
+  }
+ }
+]
