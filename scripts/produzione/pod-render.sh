@@ -5,6 +5,9 @@
 # carica su R2. Idempotente: le clip gia' .ok su R2 si saltano.
 #
 # Uso: bash pod-render.sh <corso> <processi> [base]
+# Flotta: esporta SHARD_INDEX=<i> SHARD_TOTAL=<N> per far prendere a questo pod solo
+# la sua fetta (md5(id)%N==i). Il pod "finisher" gira con SHARD_TOTAL=1 (vede tutto il
+# pendente) per chiudere i buchi dei pod revocati.
 set -uo pipefail
 CORSO="${1:?corso}"; NPROC="${2:-2}"; BASE="${3:-/workspace/asset/base-produzione.mp4}"
 cd /workspace
@@ -21,19 +24,26 @@ export PRODUZIONE_ROOT=/workspace/produzione MUSETALK_DIR=/workspace/MuseTalk \
 mkdir -p /workspace/produzione/"$CORSO"
 rclone copyto "$R2/audio-master/$CORSO/audio-map.json" /workspace/produzione/"$CORSO"/audio-map.json 2>/dev/null \
   || rclone copyto "$R2/../$CORSO/audio-map.json" /workspace/produzione/"$CORSO"/audio-map.json 2>/dev/null || true
-# lista slide PENDENTI = attese meno quelle gia' .ok su R2
+# lista slide PENDENTI = attese, meno le .ok su R2, meno quelle di ALTRI shard.
+# SHARD deterministico: con SHARD_TOTAL>1 questo pod prende SOLO gli id per cui
+# md5(id) % SHARD_TOTAL == SHARD_INDEX. Fette disgiunte, nessun coordinamento, nessun
+# doppione tra pod. I buchi di un pod morto li recupera un pod "finisher" (SHARD_TOTAL=1,
+# che vede TUTTO il pendente) grazie ai marcatori .ok idempotenti.
 python - "$CORSO" <<'PY' > /workspace/pending.txt
-import json,sys,subprocess,os
+import json,sys,subprocess,os,hashlib
 c=sys.argv[1]; b=os.environ["R2_BUCKET"]
+si=int(os.environ.get("SHARD_INDEX","0")); st=int(os.environ.get("SHARD_TOTAL","1"))
+solo=os.environ.get("SOLO_MODULO","")  # es. m01 -> pilota su un solo modulo
 am=json.load(open(f"/workspace/produzione/{c}/audio-map.json"))
 ids=[k for k in am if not k.startswith("_")]
+if solo: ids=[i for i in ids if f"_{solo}_" in i]
 env=dict(os.environ)
-done=set()
 out=subprocess.run(["rclone","lsf",f"r2:{b}/avatar-clips/{c}/","--include","*.mp4.ok"],
                    capture_output=True,text=True,env=env).stdout.split()
 done={x[:-7] for x in out if x.endswith(".mp4.ok")}
+def inshard(x): return st<=1 or (int(hashlib.md5(x.encode()).hexdigest(),16) % st) == si
 for i in ids:
-    if i not in done: print(i)
+    if i not in done and inshard(i): print(i)
 PY
 N=$(wc -l < /workspace/pending.txt)
 echo "== $CORSO: $N slide pendenti, $NPROC processi su questa GPU"
