@@ -1,0 +1,405 @@
+[
+ {
+  "id": "9001_m12_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 9001 — Sistemi di gestione per la qualità",
+  "kicker": "Modulo 12",
+  "eyebrow": "Casi pratici, simulazione, certificazione",
+  "titolo": "Mettere tutto in pratica",
+  "testo": "L'ultimo modulo non introduce quasi nulla di nuovo: serve a farti vedere il mestiere in azione, dall'inizio alla fine. La chiave di lettura: non storie da memorizzare, ma ragionamenti da imitare. Mentre seguiamo i casi, chiediti cosa faresti tu al posto del verificatore — quale documento chiederesti, quale domanda porresti, quale prova cercheresti. È il modo migliore per trasformare l'ascolto in competenza.",
+  "agenda": [
+   "Due casi pratici completi, dall'incarico al rapporto",
+   "Classificare le risultanze: maggiore, minore, osservazione",
+   "La simulazione d'esame, area per area",
+   "Il percorso di certificazione della persona",
+   "Il riepilogo del corso e l'esame finale"
+  ]
+ },
+ {
+  "id": "9001_m12_s002",
+  "layout": "punti",
+  "kicker": "Caso primo · Verifica interna",
+  "titolo": "L'incarico",
+  "intro": "Un'azienda che produce componenti metallici programma le sue verifiche interne. Il protagonista è un verificatore interno, di una funzione diversa da quelle che esaminerà. Riceve un mandato scritto: traducilo subito nella domanda finale a cui dovrai rispondere.",
+  "punti": [
+   { "h": "L'obiettivo", "d": "Verificare se produzione e controllo rispettano i requisiti, e se il sistema funziona davvero, non solo sulla carta." },
+   { "h": "Il campo", "d": "Uno stabilimento e alcuni processi: acquisti, produzione, controllo qualità, non conformità. Fuori commerciale e progettazione." },
+   { "h": "I criteri", "d": "La norma, le procedure interne, le specifiche dei clienti: il metro è dichiarato prima, non è il gusto personale." },
+   { "h": "Durata e riferimenti", "d": "Due giornate, un verificatore; le persone da incontrare e l'obbligo di riservatezza. La familiarità aiuta, ma non addormenti lo sguardo." }
+  ]
+ },
+ {
+  "id": "9001_m12_s003",
+  "layout": "flusso",
+  "kicker": "Caso primo · Preparazione",
+  "titolo": "Prepararsi ed elencare le evidenze attese",
+  "intro": "Con il mandato in mano, il verificatore non corre in reparto: si siede e studia. La preparazione è la fase in cui una verifica si vince o si perde. Il piano guida, non imprigiona.",
+  "passi": [
+   { "h": "Studiare documenti e dati", "d": "Manuale, procedure, verifiche precedenti, non conformità, reclami: raccontano dove l'azienda ha già sofferto." },
+   { "h": "La mappa dei processi", "d": "Come il materiale entra, si lavora, si controlla ed esce: seguire il flusso del valore, dove si annidano i rischi." },
+   { "h": "Il piano per le due giornate", "d": "Apertura e produzione, poi acquisti; il giorno dopo qualità, taratura e gestione delle non conformità." },
+   { "h": "La lista di riscontro", "d": "Per ogni requisito, le evidenze attese: la norma astratta diventa una lista di cose concrete da chiedere e da vedere." }
+  ]
+ },
+ {
+  "id": "9001_m12_s004",
+  "layout": "punti",
+  "kicker": "Caso primo · Giorno uno",
+  "titolo": "Sul campo: apertura, produzione, acquisti",
+  "intro": "La mattina del primo giorno. Il metodo che tiene insieme cortesia e rigore è sempre lo stesso: racconto più evidenza. Non si accontenta delle parole, ma non tratta nessuno come un sospettato.",
+  "punti": [
+   { "h": "La riunione di apertura", "d": "Obiettivo, campo, raccolta per campioni, rilievi discussi prima di essere scritti: abbassa le difese e apre la collaborazione." },
+   { "h": "La produzione", "d": "Osserva le persone e segue un ordine. Il primo segnale: alcuni autocontrolli compilati tutti insieme a fine turno, non durante la lavorazione." },
+   { "h": "Gli acquisti", "d": "Fornitori valutati, controlli in ingresso fatti e registrati: lo annota come un punto di forza, perché una verifica onesta racconta anche ciò che funziona." },
+   { "h": "Credere o verificare", "d": "Un responsabile assicura, ma le registrazioni tardano: insiste con garbo, e solo quando la prova arriva mette a posto la questione." }
+  ]
+ },
+ {
+  "id": "9001_m12_s005",
+  "layout": "punti",
+  "kicker": "Caso primo · Giorno due",
+  "titolo": "Controllo qualità, taratura, non conformità",
+  "intro": "La seconda giornata entra nel cuore della qualità. Un sistema non è mai tutto buono o tutto cattivo: ha zone solide e zone fragili, e il compito è mapparle con la stessa onestà. Tre situazioni, tre pesi diversi.",
+  "punti": [
+   { "h": "Il rilievo più serio", "d": "Un calibro usato per accettare i pezzi ha la taratura scaduta da mesi, e non c'è un sistema che avvisi delle scadenze: un buco nel processo." },
+   { "h": "Le non conformità di prodotto", "d": "Pezzi difettosi segregati, decisioni registrate, azioni correttive tracciate: l'azienda sa imparare dai propri errori. Un punto di forza." },
+   { "h": "Gli autocontrolli in ritardo", "d": "Confermati con un campione più ampio, ma circoscritti a una linea e a un breve periodo: una debolezza reale ma limitata." },
+   { "h": "L'indicatore fermo", "d": "Quello sui resi dei clienti non è aggiornato da un trimestre: non una violazione grave, ma un'occasione da segnalare come osservazione." }
+  ]
+ },
+ {
+  "id": "9001_m12_s006",
+  "layout": "tabella",
+  "kicker": "Caso primo · Classificare",
+  "titolo": "Dagli appunti alle risultanze",
+  "intro": "Una risultanza è il confronto tra un fatto raccolto e un criterio dichiarato, con l'esito. La classe non dipende dall'umore: dipende da due domande — il requisito è violato? e quanto profondo è il problema?",
+  "cols": ["Rilievo", "Classe e perché"],
+  "righe": [
+   ["Strumento di misura non tarato", "Maggiore — un buco nel processo che mina la fiducia in molti controlli a valle."],
+   ["Autocontrolli compilati in ritardo", "Minore — requisito soddisfatto nella sostanza, problema locale e circoscritto."],
+   ["Indicatore sui resi non aggiornato", "Osservazione — nessun requisito violato, solo un'occasione di miglioramento."]
+  ]
+ },
+ {
+  "id": "9001_m12_s007",
+  "layout": "punti",
+  "kicker": "Caso primo · Chiudere",
+  "titolo": "La riunione di chiusura e il rapporto",
+  "intro": "L'ultimo atto: non un tribunale, un confronto professionale. Una verifica ben fatta non si misura da quante non conformità trova, ma dalla solidità con cui le sostiene e dal rispetto con cui le comunica.",
+  "punti": [
+   { "h": "Cominciare dai punti di forza", "d": "Poi le risultanze, con metodo costante: il fatto, il criterio, l'esito. Si parla dei fatti, non delle persone." },
+   { "h": "Fermezza e disponibilità", "d": "Se l'evidenza è solida, il rilievo resta; ma davanti a un fatto nuovo è pronto a rivalutare. Chi non arretra mai è testardo, non rigoroso." },
+   { "h": "Segnalare, non prescrivere", "d": "Indica il problema e lascia la soluzione a chi ne ha la responsabilità: l'organizzazione conosce i propri vincoli." },
+   { "h": "Il rapporto che resta", "d": "Oggetto, campo, criteri, persone, risultanze classificate, richieste di azione: asciutto, ordinato, tracciabile a distanza di un anno." }
+  ]
+ },
+ {
+  "id": "9001_m12_s008",
+  "layout": "cards",
+  "kicker": "Caso secondo · Terza parte",
+  "titolo": "Il contesto della verifica di certificazione",
+  "intro": "Cambia scenario: una società che eroga servizi di manutenzione, e una verifica condotta da un organismo esterno e indipendente per rinnovare la certificazione. Chi certifica deve essere e apparire indipendente, competente e coerente (ISO/IEC 17021-1).",
+  "cards": [
+   { "h": "L'indipendenza", "d": "Nessun legame né consulenza con l'organizzazione: qui la distanza è un requisito, non un limite." },
+   { "h": "Lo scopo", "d": "Non migliorarsi in casa, ma decidere se rilasciare o mantenere un certificato che vale verso il mercato." },
+   { "h": "Il divieto di consulenza", "d": "Accerta e riferisce: non può dire come sistemare i problemi, o diventerebbe giudice e consulente della stessa cosa." },
+   { "h": "Le conseguenze", "d": "Un rilievo può mettere in discussione il certificato: la solidità delle prove non è un lusso, è una necessità." }
+  ]
+ },
+ {
+  "id": "9001_m12_s009",
+  "layout": "punti",
+  "kicker": "Caso secondo · Organizzare",
+  "titolo": "L'incarico, il gruppo e il piano",
+  "intro": "L'incarico non arriva da un responsabile interno, ma dall'organismo di certificazione. È una verifica di rinnovo: accertare se il sistema continua a rispettare la norma e a funzionare.",
+  "punti": [
+   { "h": "Il gruppo", "d": "Un capo del gruppo di verifica, affiancato da un secondo verificatore per coprire l'ampiezza del lavoro." },
+   { "h": "Obiettivo, campo, criteri", "d": "Conformità ed efficacia del sistema; la sede e le attività presso i clienti; la norma e le procedure della società." },
+   { "h": "Le differenze dal primo caso", "d": "L'indipendenza verificata prima di accettare; il servizio svolto fuori sede; il campione ragionato, guidato dal rischio." },
+   { "h": "La posta in gioco pubblica", "d": "Il giudizio diventa una raccomandazione all'organismo: ogni evidenza deve essere così chiara da parlare da sola." }
+  ]
+ },
+ {
+  "id": "9001_m12_s010",
+  "layout": "punti",
+  "kicker": "Caso secondo · Preparazione",
+  "titolo": "Prepararsi a verificare un servizio",
+  "intro": "In una fabbrica la qualità ha spesso una forma tangibile; in un servizio il risultato è più sfuggente. L'immaterialità non è una scusa per abbassare il rigore, ma un motivo per cercare con più cura le tracce giuste.",
+  "punti": [
+   { "h": "Dove si nasconde la qualità", "d": "Non un pezzo sullo scaffale, ma un impianto che funziona, un cliente soddisfatto, un rapporto di lavoro compilato." },
+   { "h": "Studiare documenti e dati", "d": "Procedure, reclami, misure di soddisfazione, tempi di intervento: raccontano dove guardare." },
+   { "h": "Le evidenze attese, per processo", "d": "Pianificazione, erogazione con i rapporti, soddisfazione misurata con metodo, competenza dei tecnici, fornitori esterni." },
+   { "h": "Tracce e osservazione diretta", "d": "Esaminare i rapporti e le misure, e quando possibile parlare col cliente: una parola sincera vale più di dieci moduli." }
+  ]
+ },
+ {
+  "id": "9001_m12_s011",
+  "layout": "punti",
+  "kicker": "Caso secondo · Sul campo",
+  "titolo": "Erogazione del servizio e soddisfazione",
+  "intro": "Il gruppo segue come nasce e come si chiude un intervento, dalla chiamata al ripristino dell'impianto. Si delinea il profilo di un'organizzazione matura, che funziona bene ma conserva qualche imperfezione.",
+  "punti": [
+   { "h": "La pianificazione", "d": "Richieste registrate, tecnici assegnati per competenza e urgenza, una corsia veloce per le chiamate critiche: un buon punto di partenza." },
+   { "h": "Il primo segnale", "d": "Diversi rapporti di intervento privi della firma del cliente, che la procedura prevede: il lavoro è fatto, ma manca la prova formale dell'accettazione." },
+   { "h": "La soddisfazione del cliente", "d": "Questionari dopo gli interventi, analisi periodica, confronto tra squadre: i dati vengono guardati e discussi. Un chiaro punto di forza." },
+   { "h": "Moltiplicare le fonti", "d": "Rapporti scritti, misure di soddisfazione, voce diretta dei clienti: quando fonti indipendenti convergono, la prova diventa robusta." }
+  ]
+ },
+ {
+  "id": "9001_m12_s012",
+  "layout": "punti",
+  "kicker": "Caso secondo · Dietro le quinte",
+  "titolo": "Competenza, reclami, fornitori esterni",
+  "intro": "Tre processi che sostengono la qualità del servizio. La regolarità del caso: i problemi non sono di sostanza, ma di forma e di tracciabilità. La forma, in un sistema di gestione, serve a proteggere la sostanza nel tempo.",
+  "punti": [
+   { "h": "La competenza dei tecnici", "d": "Reale ma dimostrata in modo informale: mancano registrazioni ordinate di chi è formato su cosa. La norma la vuole determinata e conservata." },
+   { "h": "La gestione dei reclami", "d": "Registrati e risolti uno per uno, ma l'analisi complessiva che cerca le cause ricorrenti resta debole: un'occasione persa, un'osservazione." },
+   { "h": "I fornitori esterni", "d": "Criteri ragionevoli per i ricambi, gestione più sfumata delle squadre esterne, valutate sulla fiducia con poche registrazioni." }
+  ]
+ },
+ {
+  "id": "9001_m12_s013",
+  "layout": "tabella",
+  "kicker": "Caso secondo · Classificare",
+  "titolo": "Le risultanze e il loro peso",
+  "intro": "Qui il giudizio inciderà su un certificato. Il confine tra non conformità e osservazione non dipende da quanto la cosa ci sembra importante, ma dall'esistenza di un requisito violato. Nessun rilievo grave: due minori di forma.",
+  "cols": ["Rilievo", "Classe e perché"],
+  "righe": [
+   ["Rapporti senza firma del cliente", "Minore — servizio erogato, ma manca in modo ricorrente una registrazione prevista dalla procedura."],
+   ["Competenza non documentata", "Minore — competenza reale ma non dimostrabile; tocca un requisito importante."],
+   ["Analisi dei reclami poco sfruttata", "Osservazione — nessun requisito puntuale impone quella specifica analisi."],
+   ["Squadre esterne poco formalizzate", "Osservazione — la sostanza è presidiata dalla fiducia, la forma andrebbe rafforzata."]
+  ]
+ },
+ {
+  "id": "9001_m12_s014",
+  "layout": "punti",
+  "kicker": "Caso secondo · Decidere",
+  "titolo": "La raccomandazione e la certificazione",
+  "intro": "L'atto conclusivo è diverso dalla verifica interna. Stesso metodo, stessa norma, stesso rigore nelle prove; ma ruolo, indipendenza, scopo e conseguenze diversi. Il metodo è uno, le situazioni sono infinite.",
+  "punti": [
+   { "h": "Il gruppo non decide", "d": "Formula una raccomandazione e la consegna all'organismo, che decide con una funzione distinta, non presente alla verifica." },
+   { "h": "La separazione protegge", "d": "Chi raccoglie le prove non è l'unico a pronunciare la sentenza: un secondo sguardo a mente fredda tutela l'imparzialità." },
+   { "h": "La raccomandazione del caso", "d": "Due minori e nessun grave: confermare a condizione che la società presenti analisi delle cause e azioni correttive." },
+   { "h": "Interna o di terza parte", "d": "Nel primo caso un rapporto per i colleghi; qui una raccomandazione su un certificato valido verso il mercato." }
+  ]
+ },
+ {
+  "id": "9001_m12_s015",
+  "layout": "cards",
+  "kicker": "Le risultanze in generale",
+  "titolo": "Maggiore, minore, osservazione",
+  "intro": "La parte più delicata del mestiere. Due domande fanno da bussola: il problema è isolato o nasce da una causa di sistema? e quanto pesano le conseguenze sulla qualità? Chiamare le cose con il loro nome, né più né meno grave dei fatti.",
+  "cards": [
+   { "h": "Non conformità maggiore", "d": "Un requisito non soddisfatto che compromette il sistema: sistematicità e impatto entrambi alti. È il caso dello strumento non tarato." },
+   { "h": "Non conformità minore", "d": "Un requisito non soddisfatto ma isolato, circoscritto, di forma: si corregge con un'azione ordinata, non rimette in discussione il sistema." },
+   { "h": "Osservazione", "d": "Nessun requisito violato: un rischio che si affaccia, un'opportunità di miglioramento. Preziosa con misura, inutile se diventa una lista infinita." }
+  ]
+ },
+ {
+  "id": "9001_m12_s016",
+  "layout": "definizione",
+  "kicker": "Scrivere bene",
+  "eyebrow": "Il giudizio nasce dopo il fatto e la regola, mai prima",
+  "titolo": "Una risultanza solida e difendibile",
+  "definizione": "Una risultanza solida tiene insieme tre elementi, sempre gli stessi: l'evidenza oggettiva, il criterio rispetto a cui la giudichi, e l'esito del loro confronto.",
+  "punti": [
+   { "h": "L'evidenza oggettiva", "d": "Il fatto concreto e verificabile: lo strumento con la taratura scaduta, con la sua identificazione e la sua data. Non l'impressione." },
+   { "h": "Il criterio", "d": "La regola puntuale — norma, procedura o contratto. Senza il criterio, l'evidenza resta muta: non dice perché sarebbe un problema." },
+   { "h": "L'esito, con i dettagli", "d": "Dove e quando, l'estensione del problema, un linguaggio neutro. La regola d'oro: descrive il problema, non prescrive la soluzione." }
+  ]
+ },
+ {
+  "id": "9001_m12_s017",
+  "layout": "punti",
+  "kicker": "Da riconoscere ed evitare",
+  "titolo": "Gli errori tipici nelle risultanze",
+  "intro": "Il filo comune di tutti questi errori: nascono quando il giudizio corre più veloce dei fatti. Il rimedio è uno solo — rallentare, tornare ai fatti, verificare l'evidenza e il criterio. Prima di consegnare un rilievo, immagina di doverlo difendere davanti a un responsabile intelligente e in disaccordo.",
+  "punti": [
+   { "h": "La risultanza vaga", "d": "'Qui si potrebbe fare meglio' non è un rilievo: è un'impressione. Mancano il fatto preciso e il criterio." },
+   { "h": "Il requisito inventato", "d": "Attribuire alla norma un obbligo di forma che non impone: distrugge la credibilità, perché chi è competente se ne accorge." },
+   { "h": "La classificazione emotiva", "d": "Alzare la gravità perché il responsabile è antipatico, o abbassarla per simpatia: dipende dai fatti, mai dal clima." },
+   { "h": "Il doppio conteggio", "d": "Spezzare un problema in tre rilievi per far numero, o impacchettarne tre in uno confuso: un rilievo, un problema." },
+   { "h": "La soluzione imposta", "d": "Dire all'organizzazione come rimediare sconfina nella consulenza e la lega a una strada che forse non è la sua." },
+   { "h": "Il rilievo senza evidenza", "d": "Un sospetto fondato ma non provato non è un rilievo: è una pista, e se il tempo è finito resta una pista." }
+  ]
+ },
+ {
+  "id": "9001_m12_s018",
+  "layout": "confronto",
+  "kicker": "Comporre il giudizio",
+  "titolo": "Dalle risultanze alla conclusione",
+  "intro": "Una verifica non si esaurisce nell'elenco dei rilievi: occorre comporli in un giudizio. Non si contano i rilievi, si pesano — una sola non conformità grave può segnarlo. Le risultanze sono le fotografie, la conclusione è il ritratto.",
+  "a": {
+   "h": "Conformità",
+   "sub": "Il rispetto dei requisiti",
+   "punti": [
+    { "d": "Riguarda il rispetto dei requisiti, requisito per requisito." },
+    { "d": "Si può essere conformi sulla carta ma poco efficaci: documenti perfetti e clienti scontenti." }
+   ]
+  },
+  "b": {
+   "h": "Efficacia",
+   "sub": "Il raggiungimento dei risultati",
+   "punti": [
+    { "d": "Riguarda la capacità del sistema di raggiungere i risultati che si è prefisso." },
+    { "d": "Il secondo caso: qualche difetto di forma, ma clienti soddisfatti e impianti funzionanti." }
+   ]
+  }
+ },
+ {
+  "id": "9001_m12_s019",
+  "layout": "punti",
+  "kicker": "Simulazione · I principi",
+  "titolo": "Metodo e area dei principi",
+  "intro": "Le domande che seguono sono esempi didattici, non la prova finale del corso. Il meccanismo ricorrente: i distrattori esagerano o deviano, la risposta corretta è misurata. La trappola più comune è la fretta: leggi tutte le opzioni fino in fondo.",
+  "punti": [
+   { "h": "I principi di gestione", "d": "Riconoscere l'elenco — cliente, leadership, coinvolgimento, processi, miglioramento, evidenze, relazioni — e scartare intrusi come 'il profitto'." },
+   { "h": "Il ciclo PDCA", "d": "Pianificare, fare, verificare, agire: struttura il sistema e ne alimenta il miglioramento. Non un metodo contabile né una tecnica di vendita." },
+   { "h": "Lo scopo della norma", "d": "Fornire con regolarità prodotti e servizi conformi, accrescendo la soddisfazione del cliente. Non il profitto, non la perfezione assoluta." }
+  ]
+ },
+ {
+  "id": "9001_m12_s020",
+  "layout": "punti",
+  "kicker": "Simulazione · I requisiti",
+  "titolo": "L'area dei requisiti",
+  "intro": "Qui non basta ricordare: bisogna capire. La bussola: la norma chiede un risultato o una forma precisa? Nella grande maggioranza dei casi chiede un risultato, e le opzioni che pretendono una forma rigida sono distrattori. Attento al verbo: 'deve' o 'può'.",
+  "punti": [
+   { "h": "Il contesto dell'organizzazione", "d": "Individuare i fattori interni ed esterni rilevanti: entrambe le dimensioni, non solo il mercato né solo la struttura interna." },
+   { "h": "Le parti interessate", "d": "Non tutte le aspettative diventano obblighi, solo quelle rilevanti e pertinenti: la risposta equilibrata, non l'estremismo." },
+   { "h": "Rischi e opportunità", "d": "Individuare ciò che può far deviare il sistema e agire, cogliendo le occasioni: il ragionamento sul rischio, non un formato obbligatorio." },
+   { "h": "Competenza non registrata", "d": "Una non conformità: la norma la vuole determinata e conservata. È lo scenario del nostro secondo caso." }
+  ]
+ },
+ {
+  "id": "9001_m12_s021",
+  "layout": "punti",
+  "kicker": "Simulazione · Operatività",
+  "titolo": "Attività operative e prestazioni",
+  "intro": "Il territorio più concreto della norma. Due domande illuminano quasi sempre la risposta: chi resta responsabile, e a che cosa servono i dati? Ritrovi il secondo caso, dove i reclami erano raccolti ma poco analizzati, e per questo diventavano un'osservazione.",
+  "punti": [
+   { "h": "I processi affidati all'esterno", "d": "L'organizzazione resta responsabile della qualità anche di ciò che fa fare ad altri: non può scaricarla sul fornitore." },
+   { "h": "L'output non conforme", "d": "Identificarlo, tenerlo sotto controllo per impedirne l'uso involontario, e decidere che farne: non solo lo scarto automatico." },
+   { "h": "Monitorare e misurare", "d": "Per sapere se il sistema funziona e decidere sui dati, non per un adempimento burocratico fine a se stesso." },
+   { "h": "Analisi dei dati", "d": "I dati grezzi non servono finché non vengono letti e interpretati; e l'analisi spetta all'organizzazione, non a chi verifica." }
+  ]
+ },
+ {
+  "id": "9001_m12_s022",
+  "layout": "punti",
+  "kicker": "Simulazione · Il metodo",
+  "titolo": "Le domande sul metodo di verifica",
+  "intro": "L'area che mette in difficoltà molti, perché confonde due piani: i requisiti che l'organizzazione rispetta (norma sulla qualità) e il metodo con cui si verifica (ISO 19011). Individua il soggetto: se è l'organizzazione pensa ai requisiti, se è chi verifica pensa al metodo.",
+  "punti": [
+   { "h": "La catena del giudizio", "d": "Evidenze, confronto con i criteri, risultanze, conclusioni: il giudizio nasce dai fatti e non li precede." },
+   { "h": "Come devono essere le evidenze", "d": "Pertinenti ai criteri e verificabili: conta la qualità dell'evidenza, non la quantità né la forma documentale." },
+   { "h": "I principi di chi verifica", "d": "La presentazione imparziale: riportare i fatti in modo veritiero e preciso. Non la ricerca del massimo numero di rilievi." },
+   { "h": "Le tecniche di raccolta", "d": "Osservare le attività, esaminare i documenti, intervistare le persone: le fonti vanno incrociate, è la triangolazione." }
+  ]
+ },
+ {
+  "id": "9001_m12_s023",
+  "layout": "punti",
+  "kicker": "Simulazione · Gli scenari",
+  "titolo": "Le domande applicative",
+  "intro": "Le più vicine al lavoro vero: non la regola a memoria, ma leggere lo scenario e ricostruire fatto, criterio, esito. Due tentazioni da evitare: l'indulgenza — chiudere un occhio perché il risultato sembra buono — e l'eccesso opposto, il dramma su ogni scostamento.",
+  "punti": [
+   { "h": "Lo strumento con taratura scaduta", "d": "Una non conformità che tocca la fiducia nei controlli. È il cuore del primo caso: chi l'ha seguito risponde con naturalezza." },
+   { "h": "I tecnici competenti ma non registrati", "d": "Rilevare la non conformità; suggerire tu stesso come creare i registri sarebbe sconfinare nella consulenza." },
+   { "h": "L'area non esaminata per il tempo", "d": "Dichiarare con onestà il limite della copertura: un rapporto veritiero vale più di una completezza finta." },
+   { "h": "La procedura applicata diversamente", "d": "Rilevare lo scostamento tra il dire e il fare, senza drammatizzare e senza ignorare: la coerenza è essa stessa un requisito." }
+  ]
+ },
+ {
+  "id": "9001_m12_s024",
+  "layout": "punti",
+  "kicker": "Simulazione · Deontologia",
+  "titolo": "Comportamento professionale e strategia",
+  "intro": "Quest'area misura non ciò che sai, ma chi sei. La regolarità: la scelta corretta è quasi sempre quella che protegge l'imparzialità e la verità, anche quando è la più scomoda. Le strategie generali: leggi tutto, elimina gli estremi, ricostruisci la catena, gestisci il tempo, rispondi da professionista e non da furbo.",
+  "punti": [
+   { "h": "Il conflitto d'interesse", "d": "Hai lavorato in passato per l'organizzazione: dichiara il potenziale conflitto a chi gestisce il programma." },
+   { "h": "La riservatezza", "d": "Informazioni commerciali sensibili: trattale con riservatezza e usale solo ai fini della verifica, senza divulgarle." },
+   { "h": "La pressione sul certificato", "d": "Resta fedele ai fatti, pur ascoltando con rispetto: ammorbidire i rilievi è l'erosione dell'integrità." },
+   { "h": "L'incarico fuori portata", "d": "Dichiara il tuo limite e chiedi un esperto tecnico, o declina: è un errore prima etico che tecnico." }
+  ]
+ },
+ {
+  "id": "9001_m12_s025",
+  "layout": "definizione",
+  "kicker": "Certificazione della persona",
+  "eyebrow": "Non un attestato di partecipazione",
+  "titolo": "L'esame e i tre pilastri",
+  "definizione": "La certificazione della persona è il riconoscimento formale, da parte di un soggetto indipendente, che un individuo possiede competenze verificate secondo regole precise e uguali per tutti.",
+  "punti": [
+   { "h": "I tre pilastri", "d": "La formazione dà le conoscenze, l'esame accerta se le hai acquisite, l'esperienza dimostra che sai applicarle sul campo." },
+   { "h": "L'esame", "d": "Mette alla prova la conoscenza della norma e la capacità di applicarla: non si supera con la sola memoria." },
+   { "h": "Il valore della terzietà", "d": "Vale perché lo rilascia chi non ha interesse a compiacerti. Superare questo corso non equivale automaticamente a essere certificati." }
+  ]
+ },
+ {
+  "id": "9001_m12_s026",
+  "layout": "confronto",
+  "kicker": "Certificazione · L'esperienza",
+  "titolo": "Verificatore e guida del gruppo",
+  "intro": "La conoscenza si dimostra con l'esame, la capacità di applicarla con l'esperienza sul campo. Nessuno può guidare bene un lavoro che non ha prima imparato a fare: gli schemi non permettono di saltare la gavetta. Registra la tua esperienza, come un diario professionale.",
+  "a": {
+   "h": "Il verificatore",
+   "sub": "Membro del gruppo",
+   "punti": [
+    { "d": "Conduce come membro del gruppo: raccoglie evidenze, formula risultanze, contribuisce al giudizio." },
+    { "d": "Formazione, esame superato, e verifiche condotte sotto la guida di un esperto: la fase dell'affiancamento." }
+   ]
+  },
+  "b": {
+   "h": "La guida del gruppo",
+   "sub": "Responsabile del gruppo",
+   "punti": [
+    { "d": "Oltre a verificare, coordina, pianifica, gestisce i rapporti e si assume la responsabilità complessiva." },
+    { "d": "Richiede più esperienza: ci si arriva dopo aver fatto a lungo il verificatore." }
+   ]
+  }
+ },
+ {
+  "id": "9001_m12_s027",
+  "layout": "punti",
+  "kicker": "Certificazione · Nel tempo",
+  "titolo": "Il mantenimento della qualifica",
+  "intro": "Ottenere una qualifica non è un traguardo definitivo, ma l'inizio di un impegno. Il senso è sempre lo stesso: la fiducia. Il miglioramento non è mai finito, né per un'organizzazione né per una persona.",
+  "punti": [
+   { "h": "L'aggiornamento continuo", "d": "Le norme cambiano — di recente il tema del cambiamento climatico nella norma sulla qualità; la competenza si mantiene solo rinnovandola." },
+   { "h": "L'attività effettiva", "d": "Per restare un buon verificatore bisogna continuare a verificare: una competenza non praticata si arrugginisce." },
+   { "h": "Registrazione e rinnovo", "d": "Documentare verifiche e aggiornamento; il rinnovo è una nuova verifica, stavolta sul professionista." }
+  ]
+ },
+ {
+  "id": "9001_m12_s028",
+  "layout": "timeline",
+  "kicker": "Riepilogo del corso",
+  "titolo": "I dodici moduli in uno sguardo",
+  "intro": "La prima metà del corso ti ha insegnato che cosa chiede la norma; la seconda, come accertare se qualcuno la rispetta. In mezzo un filo mai spezzato: il rigore dei fatti, il rispetto delle persone, l'onestà del giudizio. La norma è un ciclo, non una lista.",
+  "tappe": [
+   { "t": "Mod. 1-2", "h": "Le fondamenta", "d": "La qualità come mestiere, la struttura della norma, i principi, il vocabolario." },
+   { "t": "Mod. 3-4", "h": "Contesto e piano", "d": "Le fondamenta di ogni sistema e il ragionamento sul rischio." },
+   { "t": "Mod. 5", "h": "Il supporto", "d": "Risorse, competenza, informazioni documentate: ciò che rende possibile il lavoro." },
+   { "t": "Mod. 6-9", "h": "Fare e misurare", "d": "Le attività operative, la valutazione delle prestazioni, il miglioramento." },
+   { "t": "Mod. 10-11", "h": "Chi verifica", "d": "Il programma e la preparazione, poi la conduzione sul campo." },
+   { "t": "Mod. 12", "h": "La pratica", "d": "Due casi completi, la simulazione d'esame, il percorso di certificazione." }
+  ]
+ },
+ {
+  "id": "9001_m12_s029",
+  "layout": "chiusura",
+  "kicker": "Fine del corso · In bocca al lupo",
+  "modNum": "12",
+  "titolo": "Verso l'esame finale",
+  "punti": [
+   { "h": "L'esame finale", "d": "Pesca da tutto il corso — struttura, requisiti, metodo, casi, deontologia: dimostri un sapere unitario, non dodici isole." },
+   { "h": "Non studiare a memoria", "d": "Ripercorri i ragionamenti; torna sui due casi pratici, che legano requisiti, metodo e giudizio in una storia." },
+   { "h": "Riconosci il tipo di domanda", "d": "Di riconoscimento richiama la definizione, di comprensione cerca la distinzione, applicativa ricostruisci fatto-criterio-esito." },
+   { "h": "Calma e principi", "d": "La fretta è il primo nemico. Integrità, imparzialità, rispetto dei fatti: la spina dorsale che non deve mai piegarsi." },
+   { "h": "Una responsabilità in più", "d": "Dietro ogni risultanza che firmerai ci saranno persone, aziende, lavoro, fiducia. Diventare chi verifica non è arrivare, è mettersi in cammino." },
+   { "h": "Ora tocca a te", "d": "La competenza si insegna, l'onestà è una scelta che rinnoverai ogni giorno. Il corso finisce qui, il tuo mestiere comincia adesso." }
+  ]
+ }
+]
