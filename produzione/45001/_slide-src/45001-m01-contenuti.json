@@ -1,0 +1,337 @@
+[
+ {
+  "id": "45001_m01_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 45001 — Salute e sicurezza sul lavoro",
+  "kicker": "Modulo 01",
+  "eyebrow": "Perché un sistema per la SSL",
+  "titolo": "La mappa del percorso",
+  "testo": "Prima delle definizioni, il fondamento: capire perché la salute e sicurezza sul lavoro va trattata come un sistema, e non come una raccolta di pratiche sparse o di interventi reattivi dopo un problema. Se questa base è chiara adesso, tutto il resto del corso apparirà molto più coerente. Un filo rosso ci accompagnerà: qual è il problema che il sistema governa, quali risultati attendono le persone, e dove finisce lo standard e cominciano gli obblighi di legge.",
+  "agenda": [
+   "Perché un sistema, invece di interventi episodici",
+   "Norma volontaria e obblighi di legge: due piani distinti",
+   "La prospettiva storica: da OHSAS 18001 a ISO 45001",
+   "Il percorso professionale: auditor e lead auditor",
+   "ISO 19011, la cornice metodologica del corso"
+  ]
+ },
+ {
+  "id": "45001_m01_s002",
+  "layout": "punti",
+  "kicker": "Obiettivi",
+  "titolo": "Che cosa saprai fare alla fine",
+  "intro": "Un buon modulo non ti riempie di parole nuove: ti rende capace di guardare un'organizzazione con una lente più nitida. Ecco i quattro risultati concreti.",
+  "punti": [
+   { "h": "Distinguere i piani", "d": "Spiegare senza esitazioni che ISO 45001 è volontaria, mentre gli obblighi di legge operano su un piano diverso." },
+   { "h": "La logica del sistema", "d": "Riconoscere che lo standard non promette sicurezza assoluta: offre una struttura per il miglioramento continuo, ordinato e coerente." },
+   { "h": "Il contesto", "d": "Capire perché la stessa norma si applica a realtà diverse, adattandola: un'elasticità che è una forza, non un difetto." },
+   { "h": "La postura del ruolo", "d": "Non l'ispettore centrato sull'errore, ma la lettura sistemica: capire se il sistema regge e governa ciò che conta." }
+  ]
+ },
+ {
+  "id": "45001_m01_s003",
+  "layout": "punti",
+  "kicker": "Il metodo di ascolto",
+  "titolo": "Dal quadro generale alla lettura professionale",
+  "intro": "Procederemo dal quadro generale ai dettagli, non il contrario: nelle materie di sistema l'errore più comune è entrare troppo presto nei singoli requisiti senza una mappa. Segui ogni slide con tre domande.",
+  "punti": [
+   { "h": "Quale problema", "d": "Quale problema organizzativo stiamo cercando di risolvere con questo elemento del sistema?" },
+   { "h": "Quali risultati", "d": "Quali risultati rendiamo più probabili se il sistema è ben progettato e mantenuto nel tempo?" },
+   { "h": "Carta o gestione reale", "d": "Come riconoscere, in un caso reale, se quell'elemento esiste solo sulla carta o è parte della gestione quotidiana?" }
+  ]
+ },
+ {
+  "id": "45001_m01_s004",
+  "layout": "punti",
+  "kicker": "Perché un sistema · 1",
+  "titolo": "Tutela delle persone e responsabilità",
+  "intro": "Il lavoro sicuro non è un adempimento: parla di persone reali, di esposizioni e di conseguenze che durano più di un turno. Ogni organizzazione ha la responsabilità di proteggere chi opera sotto il suo controllo.",
+  "punti": [
+   { "h": "Oltre il confine del contratto", "d": "La responsabilità considera anche gli altri soggetti che le attività dell'organizzazione possono toccare." },
+   { "h": "Salute fisica e mentale", "d": "Non solo macchine e cadute: anche condizioni di lavoro, pressione, chiarezza dei ruoli, carichi, coordinamento." },
+   { "h": "Una rete, non gesti isolati", "d": "Il sistema collega i pericoli ai processi, le decisioni alle responsabilità, le informazioni ai riesami successivi." },
+   { "h": "La ragione etica", "d": "L'organizzazione chiede tempo, energia e fiducia: ha il dovere di non esporre le persone a danni evitabili." }
+  ]
+ },
+ {
+  "id": "45001_m01_s005",
+  "layout": "confronto",
+  "kicker": "Perché un sistema · 2",
+  "titolo": "I costi visibili e quelli nascosti",
+  "intro": "Dietro ogni incidente c'è molto più di un fermo. Chi ragiona solo sul danno immediato sottostima quasi sempre la portata reale. Attenzione: il sistema non promette invulnerabilità, ma riduce dispersioni che restano invisibili finché esplodono.",
+  "a": {
+   "h": "I costi visibili",
+   "sub": "Immediati, facili da vedere",
+   "punti": [
+    { "d": "Un'area si ferma, una macchina resta inutilizzata, una consegna slitta." },
+    { "d": "Urgenze, sostituzioni, comunicazioni e verifiche da gestire subito." },
+    { "d": "Sono i costi che tutti riconoscono a caldo, e che sembrano gli unici." }
+   ]
+  },
+  "b": {
+   "h": "I costi nascosti",
+   "sub": "Spesso pesano di più",
+   "punti": [
+    { "d": "Il tempo dei responsabili per ricostruire fatti, riassegnare, calmare tensioni." },
+    { "d": "La perdita di fiducia: la prevenzione affrontata solo dopo perde credibilità." },
+    { "d": "La dispersione di attenzione e l'apprendimento mancato che indebolisce il sistema." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m01_s006",
+  "layout": "cards",
+  "kicker": "Perché un sistema · 3",
+  "titolo": "Cultura, leadership e partecipazione",
+  "intro": "Nelle organizzazioni più solide la sicurezza non compare solo nei documenti, ma nel modo in cui si decide, si comunica e si ascolta chi lavora. Questi fattori, insieme, descrivono una cultura, non un adempimento isolato.",
+  "cards": [
+   { "h": "La leadership", "d": "Orienta le priorità reali: se si premia solo la velocità, il messaggio vero arriva comunque alle persone." },
+   { "h": "La partecipazione", "d": "Chi sta nelle attività vede dettagli invisibili dall'alto: informazioni preziose, non lamentele da gestire." },
+   { "h": "La comunicazione", "d": "Non solo diffondere istruzioni: far circolare le ragioni delle decisioni, non soltanto gli ordini." },
+   { "h": "Il miglioramento continuo", "d": "Tornare periodicamente su obiettivi e problemi; leggere gli errori come segnali, non solo come colpe." }
+  ]
+ },
+ {
+  "id": "45001_m01_s007",
+  "layout": "confronto",
+  "kicker": "Perché un sistema · 4",
+  "titolo": "Dalla reazione al governo coerente",
+  "intro": "La norma descrive il sistema come un insieme di elementi correlati e interagenti, orientati a politiche, obiettivi e processi. Questa correlazione è lo spartiacque: quando gli elementi dialogano, il sistema produce apprendimento e stabilità.",
+  "a": {
+   "h": "La reazione episodica",
+   "sub": "Iniziative sparse",
+   "punti": [
+    { "d": "Aggiorna una regola dopo un problema, richiama il personale quando nota un comportamento scorretto." },
+    { "d": "Compra un'attrezzatura quando qualcuno la chiede con insistenza: gesti utili ma slegati." }
+   ]
+  },
+  "b": {
+   "h": "Il sistema",
+   "sub": "Un impianto coerente",
+   "punti": [
+    { "d": "Definisce una politica, fissa obiettivi coerenti, consulta i lavoratori, collega gli acquisti ai rischi." },
+    { "d": "Valuta periodicamente le prestazioni e usa gli esiti per decidere azioni correttive e priorità." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m01_s008",
+  "layout": "confronto",
+  "kicker": "Norma e legge",
+  "titolo": "Due piani distinti",
+  "intro": "Una distinzione decisiva, dimenticata di continuo nella pratica. Sono piani collegati, ma diversi per origine e funzione. La formula da tenere a mente: la legge dice ciò che devi fare perché obbligatorio, la norma descrive una struttura con cui governare in modo sistematico.",
+  "a": {
+   "h": "La norma volontaria",
+   "sub": "ISO 45001",
+   "punti": [
+    { "d": "L'adesione appartiene a una scelta organizzativa: definisce requisiti per un sistema di gestione." },
+    { "d": "Può agevolare l'organizzazione nel soddisfare i requisiti legali — agevolare, non sostituire." }
+   ]
+  },
+  "b": {
+   "h": "La legge cogente",
+   "sub": "D.Lgs. 81",
+   "punti": [
+    { "d": "Impone doveri, responsabilità e conseguenze indipendentemente dalla scelta di certificarsi." },
+    { "d": "Adottare uno standard non equivale ad aver soddisfatto la legge: l'obbligo resta dell'organizzazione." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m01_s009",
+  "layout": "punti",
+  "kicker": "Attenzione",
+  "titolo": "Gli errori quando si confondono i piani",
+  "intro": "L'errore nasce da una scorciatoia mentale: si pensa che certificazione voglia dire piena legalità, o che legalità voglia dire sistema maturo. Nessuna modalità di dimostrazione, presa da sola, è una patente universale.",
+  "punti": [
+   { "h": "Il certificato come patente", "d": "Attesta conformità a requisiti di sistema, entro criteri specifici; non sostituisce il dovere di rispettare gli obblighi cogenti." },
+   { "h": "La legalità come sistema", "d": "Si possono rispettare i doveri di legge senza una politica, obiettivi collegati, un vero miglioramento continuo." },
+   { "h": "La norma come vetrina", "d": "Sistemi ordinati in apparenza ma deboli nell'uso quotidiano: la norma ridotta ad abbellimento documentale." },
+   { "h": "La ricaduta sulle decisioni", "d": "Chi crede che basti il certificato investe meno nei requisiti; chi crede basti la legge trascura ascolto e riesame." }
+  ]
+ },
+ {
+  "id": "45001_m01_s010",
+  "layout": "punti",
+  "kicker": "Il collegamento",
+  "titolo": "I requisiti legali entrano nel sistema",
+  "intro": "Proprio perché i piani sono distinti, conta capire come si collegano. La norma usa un'espressione utile: «requisiti legali e altri requisiti». Il sistema non inventa gli obblighi, ma crea il quadro entro cui vengono identificati, gestiti e riesaminati.",
+  "punti": [
+   { "h": "Requisiti legali e altri", "d": "Ciò che si è obbligati a soddisfare per legge, e altri impegni pertinenti che si deve o si è scelto di soddisfare." },
+   { "h": "Da dove nascono gli altri", "d": "Accordi, richieste dei clienti, regole interne, impegni verso parti interessate: una volta adottati, entrano nel sistema." },
+   { "h": "Elenco o governo", "d": "Tenerli in un archivio statico, oppure inserirli davvero nella gestione: la differenza è enorme per la robustezza." },
+   { "h": "Il criterio per chi valuta", "d": "L'organizzazione ha capito quali requisiti sono pertinenti, e li ha inseriti nelle decisioni quotidiane?" }
+  ]
+ },
+ {
+  "id": "45001_m01_s011",
+  "layout": "punti",
+  "kicker": "Prospettiva storica · 1",
+  "titolo": "Dalle prassi disperse a OHSAS 18001",
+  "intro": "ISO 45001 non nasce in un vuoto storico. Per anni le organizzazioni hanno gestito la SSL con combinazioni molto diverse. Il punto non è una frattura tra un prima confuso e un dopo perfetto, ma vedere un'evoluzione.",
+  "punti": [
+   { "h": "Le prassi disperse", "d": "Regole interne, adempimenti, istruzioni operative, consuetudini di reparto: spesso mancava un linguaggio comune." },
+   { "h": "Il ruolo di OHSAS 18001", "d": "Non ancora uno standard ISO, ma per anni il riferimento più noto per strutturare un sistema dedicato alla SSL." },
+   { "h": "Il bisogno di un salto", "d": "Aziende già certificate su qualità o ambiente volevano integrare i sistemi con una struttura comune e riconoscibile." }
+  ]
+ },
+ {
+  "id": "45001_m01_s012",
+  "layout": "punti",
+  "kicker": "Prospettiva storica · 2",
+  "titolo": "L'arrivo di ISO 45001 e la logica comune",
+  "intro": "Con ISO 45001 cambia soprattutto il contesto in cui il sistema viene collocato: entra nella famiglia degli standard ISO sui sistemi di gestione. Non stai studiando formalità separate, stai entrando in una grammatica organizzativa.",
+  "punti": [
+   { "h": "La struttura comune", "d": "Una grammatica simile a ISO 9001:2015 e ISO 14001:2015: contesto, leadership, pianificazione, supporto, operatività, valutazione, miglioramento." },
+   { "h": "La SSL tra le decisioni", "d": "Non più materia confinata al presidio tecnico: la prevenzione efficace dipende da come l'organizzazione è governata." },
+   { "h": "Consultazione e partecipazione", "d": "Il baricentro si sposta verso la conoscenza operativa di chi svolge il lavoro, e dei suoi rappresentanti dove esistono." },
+   { "h": "Le parti interessate", "d": "Comprendere esigenze e aspettative non solo dei lavoratori: la SSL non si sviluppa in isolamento." }
+  ]
+ },
+ {
+  "id": "45001_m01_s013",
+  "layout": "timeline",
+  "kicker": "Prospettiva storica · 3",
+  "titolo": "Sapere quale testo stai leggendo",
+  "intro": "Gli standard non sono statue immobili: vengono mantenuti, aggiornati e recepiti. Sapere quale edizione stai leggendo non è formalità: serve a non scambiare differenze di edizione per difetti di comprensione.",
+  "tappe": [
+   { "t": "Pre-ISO", "h": "OHSAS 18001", "d": "Il riferimento più noto prima dell'ingresso nella famiglia ISO." },
+   { "t": "2018", "h": "ISO 45001", "d": "La base tecnica internazionale richiamata nella versione nazionale." },
+   { "t": "2023", "h": "Norma europea", "d": "L'edizione nazionale più recente recepisce la norma europea." },
+   { "t": "2024", "h": "Il clima", "d": "Un aggiornamento legato alle azioni relative al cambiamento climatico." }
+  ]
+ },
+ {
+  "id": "45001_m01_s014",
+  "layout": "punti",
+  "kicker": "Percorso professionale · 1",
+  "titolo": "Corso, qualifica e ruolo",
+  "intro": "Auditor e lead auditor non indicano due mestieri diversi, ma due livelli di responsabilità. E il corso offre conoscenza e metodo, non trasforma da solo una persona in professionista qualificato: la postura viene prima del cartellino.",
+  "punti": [
+   { "h": "La comprensione della norma", "d": "Leggerne la logica e collegarla ai processi organizzativi: è ciò su cui il corso lavora soprattutto." },
+   { "h": "La competenza di verifica", "d": "Pianificare, raccogliere evidenze, porre domande pertinenti, valutare rispetto a criteri, riferire con chiarezza." },
+   { "h": "La maturità professionale", "d": "Indipendenza di giudizio, tenuta relazionale, ascolto: si costruisce molto anche sul campo." }
+  ]
+ },
+ {
+  "id": "45001_m01_s015",
+  "layout": "punti",
+  "kicker": "Percorso professionale · 2",
+  "titolo": "Che cosa ci si aspetta dall'auditor 45001",
+  "intro": "Non un titolo decorativo, ma una funzione precisa: leggere un sistema in modo ordinato, confrontando ciò che l'organizzazione dichiara con ciò che realizza e con i criteri applicabili. Nel lavoro reale conta moltissimo la qualità delle domande.",
+  "punti": [
+   { "h": "Dichiarato, agito, criteri", "d": "Capire se esiste una distanza significativa tra sistema dichiarato e agito, e se tocca requisiti o risultati attesi." },
+   { "h": "La qualità delle domande", "d": "Non domande chiuse o orientate a confermare un'idea: domande mirate che fanno emergere funzionamenti, non solo presenze documentali." },
+   { "h": "Il lavoro nel gruppo", "d": "Preparare le attività assegnate, riferire informazioni affidabili, contribuire a una valutazione coerente." },
+   { "h": "L'affidabilità personale", "d": "Arrivare preparati, tenere traccia ordinata, distinguere subito impressioni e fatti; restare fedeli al metodo." }
+  ]
+ },
+ {
+  "id": "45001_m01_s016",
+  "layout": "punti",
+  "kicker": "Percorso professionale · 3",
+  "titolo": "Che cosa aggiunge il lead auditor",
+  "intro": "La differenza non sta nel conoscere una norma diversa, ma nel tipo di responsabilità. Non è un salto di prestigio: il titolo alza il livello di servizio richiesto, non il diritto a sentirsi superiore.",
+  "punti": [
+   { "h": "Governare il processo", "d": "Preparare il lavoro, distribuire i compiti, tenere insieme tempi, profondità, relazioni e qualità del giudizio." },
+   { "h": "La capacità di sintesi", "d": "Capire se le criticità osservate dai colleghi sono episodi separati o segnali convergenti di un problema più profondo." },
+   { "h": "La responsabilità relazionale", "d": "Condurre apertura e chiusura, gestire le tensioni, proteggere la qualità del lavoro dalle pressioni di tempo." },
+   { "h": "Un rapporto coerente", "d": "Non basta che le osservazioni siano corrette: l'insieme dev'essere proporzionato, leggibile e difendibile." }
+  ]
+ },
+ {
+  "id": "45001_m01_s017",
+  "layout": "confronto",
+  "kicker": "Aspettative giuste",
+  "titolo": "Il corso e ciò che verrà dopo",
+  "intro": "Un corso serio ti dà strumenti importanti, ma non deve illuderti su ciò che non può fare da solo. L'aula ti consegna una cassetta degli attrezzi iniziale e ti insegna a non usarli male; poi dovrai affinarli nel lavoro reale.",
+  "a": {
+   "h": "Il corso ti dà",
+   "sub": "La soglia di qualità",
+   "punti": [
+    { "d": "Una mappa della norma e un linguaggio tecnico più pulito." },
+    { "d": "I criteri per distinguere norma volontaria e obblighi di legge." },
+    { "d": "I primi riferimenti metodologici e l'allenamento alla postura." }
+   ]
+  },
+  "b": {
+   "h": "Dovrai costruire",
+   "sub": "Oltre l'aula",
+   "punti": [
+    { "d": "L'esperienza situata: le organizzazioni reali non parlano come i manuali." },
+    { "d": "La familiarità con il contesto cogente applicabile (il D.Lgs. 81)." },
+    { "d": "L'etica del giudizio: competenza, metodo e integrità che si sostengono." }
+   ]
+  }
+ },
+ {
+  "id": "45001_m01_s018",
+  "layout": "definizione",
+  "kicker": "La cornice metodologica",
+  "eyebrow": "Contenuto e metodo, un'unica costruzione a due piani",
+  "titolo": "Perché ISO 19011 ti accompagnerà",
+  "definizione": "ISO 19011 offre linee guida per le verifiche dei sistemi di gestione: mentre ISO 45001 dice che cosa un sistema deve saper governare, ISO 19011 dice come impostare in modo credibile il lavoro di verifica.",
+  "punti": [
+   { "h": "Un lessico comune", "d": "La definizione di audit rinvia a ISO 19011 per termini chiave come evidenze e criteri: una grammatica da non reinventare." },
+   { "h": "Una base riusabile", "d": "Pianificazione, raccolta, obiettività, risultanze, competenza: una cornice generale valida su ogni schema di sistema." },
+   { "h": "Non due mondi separati", "d": "Non il mondo della norma da un lato e quello della verifica dall'altro, ma un'unica costruzione: contenuto e metodo." }
+  ]
+ },
+ {
+  "id": "45001_m01_s019",
+  "layout": "cards",
+  "kicker": "Metodo",
+  "titolo": "Che cosa riuserai da ISO 19011",
+  "intro": "Più che tecniche singole, una serie di abitudini professionali che puoi allenare fin da subito, mentre consolidi il quadro generale di ISO 45001.",
+  "cards": [
+   { "h": "Criteri ed evidenze", "d": "Distinguere ciò che si dichiara, ciò che si può verificare e il riferimento rispetto a cui il confronto acquista senso." },
+   { "h": "La lettura per processi", "d": "Non osservare gli elementi come scatole chiuse: la norma diventa una rete di relazioni, non una lista." },
+   { "h": "L'ascolto disciplinato", "d": "Seguire il filo, riconoscere quando un'affermazione resta generica, riportare la conversazione a fatti osservabili." },
+   { "h": "La proporzione", "d": "Attribuire il giusto peso: una debolezza locale non è sempre una falla sistemica, ma molte incoerenze ricorrenti sì." }
+  ]
+ },
+ {
+  "id": "45001_m01_s020",
+  "layout": "flusso",
+  "kicker": "Il metodo del corso",
+  "titolo": "I tre movimenti ricorrenti",
+  "intro": "Non studierai ISO 45001 come un testo da memorizzare, né ISO 19011 come un manuale astratto. Lavoreremo su un intreccio costante, con tre movimenti che tornano a ogni concetto.",
+  "passi": [
+   { "h": "La comprensione del quadro", "d": "Prima di giudicare un requisito, capirne la funzione: se non sai a cosa serve, ne cerchi solo la traccia documentale." },
+   { "h": "La traduzione organizzativa", "d": "Come quel concetto prende forma in realtà diverse, da un piccolo servizio tecnico a un'impresa più strutturata." },
+   { "h": "La lettura professionale", "d": "Che cosa osserveresti, quali domande porresti, quali evidenze cercheresti una volta compreso il senso." }
+  ]
+ },
+ {
+  "id": "45001_m01_s021",
+  "layout": "punti",
+  "kicker": "Consolidare",
+  "titolo": "Studiare, collegare, non irrigidirsi",
+  "intro": "Il rischio è duplice: ridurre tutto a definizioni, o cercare scorciatoie operative senza una mappa. Il metodo dev'essere fermo nei principi e flessibile nella lettura delle soluzioni: non innamorarti del primo modello che capisci.",
+  "punti": [
+   { "h": "La triade di domande", "d": "Quale problema aiuta a governare, quale comportamento rende più probabile, cosa ti aspetteresti di trovare in una verifica." },
+   { "h": "Immaginare contesti diversi", "d": "Lo stesso requisito in un deposito, un laboratorio, un ufficio con appaltatori: conformità non è somiglianza." },
+   { "h": "La precisione del linguaggio", "d": "Non dire partecipazione quando c'è solo comunicazione dall'alto: il lessico guida il pensiero e il giudizio." }
+  ]
+ },
+ {
+  "id": "45001_m01_s022",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 01",
+  "modNum": "01",
+  "titolo": "Fondamenta, non semplici premesse",
+  "punti": [
+   { "h": "Perché un sistema", "d": "Non una somma di interventi episodici: una struttura che collega responsabilità, processi, controllo e apprendimento." },
+   { "h": "Norma e legge", "d": "ISO 45001 volontaria, il D.Lgs. 81 cogente: i due piani dialogano e si sostengono, ma non si confondono mai." },
+   { "h": "Il percorso storico", "d": "Dalle prassi disperse a OHSAS 18001, poi l'ingresso di ISO 45001 nella famiglia dei sistemi di gestione." },
+   { "h": "Il percorso professionale", "d": "Tra corso, competenza e ruolo non c'è scorciatoia; il lead auditor è più responsabilità, non un titolo ornamentale." },
+   { "h": "ISO 19011", "d": "La guida trasversale per pensare in termini di criteri, evidenze, processi e proporzione del giudizio." },
+   { "h": "Le tre domande guida", "d": "Perché serve un sistema; come norma e legge si collegano senza coincidere; a cosa servono storia e metodo." }
+  ],
+  "prossimo": {
+   "modulo": "02",
+   "titolo": "La norma 45001: struttura, concetti, termini",
+   "testo": "Dal perché al vocabolario: l'architettura del testo e le parole chiave della SSL."
+  }
+ }
+]
