@@ -1,0 +1,400 @@
+[
+ {
+  "id": "42001_m09_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 42001 — Sistemi di gestione dell'IA",
+  "kicker": "Modulo 9",
+  "eyebrow": "Il sistema ha corretto, o ha imparato?",
+  "titolo": "Miglioramento e non conformità",
+  "testo": "Fin qui hai visto come si governa, si pianifica e si controlla. Adesso guardi ciò che distingue un sistema vivo da un apparato formale: la capacità di riconoscere una non conformità, capirne la causa, scegliere un'azione correttiva sensata e trasformare l'esperienza in miglioramento continuo. È il cuore del punto 10, ed è anche il punto in cui molte organizzazioni si scoprono immature: sulla carta quasi tutte dichiarano di voler migliorare, nella pratica molte reagiscono solo quando un problema è già diventato visibile, costoso o imbarazzante. Vedrai prima come si affronta una non conformità senza confondere la correzione immediata con il lavoro più profondo sulla causa; poi che cosa significa miglioramento continuo dove il contesto cambia rapidamente. Seguiranno la rassegna delle non conformità tipiche emergenti, il confine delicato tra incidente di IA e non conformità, e infine quale rapporto serve davvero alla direzione in un campo nuovo e pieno di ambiguità. Ogni volta che sentirai parlare di rilievo, problema, anomalia o incidente, la domanda sarà sempre la stessa: il sistema ha corretto il fatto, oppure ha davvero imparato?",
+  "agenda": [
+   "Punto 10.2: reagire, cercare la causa, agire in modo adeguato",
+   "Punto 10.1: idoneità, adeguatezza, efficacia",
+   "Le non conformità tipiche emergenti nel governo dell'IA",
+   "Il confine tra incidente di IA e non conformità",
+   "Dall'incidente all'apprendimento del sistema",
+   "Il rapporto alla direzione: meno rumore, più decisione"
+  ]
+ },
+ {
+  "id": "42001_m09_s002",
+  "layout": "flusso",
+  "kicker": "Non conformità · 1",
+  "titolo": "Quando la non conformità accade: reagire con lucidità",
+  "intro": "Il punto 10.2 ti porta subito sulla reazione: l'organizzazione deve prendere in mano il problema, tenerlo sotto controllo, correggerlo per quanto applicabile e affrontarne le conseguenze. L'ordine è importante, perché evita un errore frequente: aprire discussioni profonde sulla causa mentre il danno continua. Reagire alla non conformità non coincide ancora con fare un'azione correttiva completa: la reazione stabilizza, l'azione correttiva impedisce il ritorno.",
+  "passi": [
+   { "h": "Tenere sotto controllo", "d": "Impedire che lo scostamento produca altri effetti indesiderati. Se un modello che assegna priorità sbaglia dopo un aggiornamento, blocchi o limiti l'uso della versione problematica, così il problema non si estende." },
+   { "h": "Correggere il fatto concreto", "d": "Intervenire sul caso che hai davanti: ripristinare la versione precedente, modificare la regola che produce l'errore. È la mano sul rubinetto che chiude l'acqua, non ancora la spiegazione di perché il tubo ha ceduto." },
+   { "h": "Affrontare le conseguenze", "d": "Guardare ciò che il problema ha già generato: reclami già trattati male, tempi sforati, clienti non richiamati, esposizioni regolatorie o reputazionali. Se salti questo passaggio, puoi dichiarare il problema corretto mentre i suoi effetti continuano a circolare." }
+  ]
+ },
+ {
+  "id": "42001_m09_s003",
+  "layout": "split",
+  "kicker": "Non conformità · 2",
+  "titolo": "Dalla correzione alla causa: capire perché il problema esiste",
+  "lead": "Dopo la reazione, il punto decisivo è capire se servano interventi capaci di eliminare la causa, così da ridurre davvero la possibilità che il problema ritorni. Non stai più gestendo l'urgenza del caso singolo: stai verificando se il sistema abbia un difetto di governo, di progettazione o di controllo. Il percorso richiede tre passaggi collegati: riesamini i fatti con calma, identifichi la causa reale, ti chiedi dove lo stesso schema possa già essere presente.",
+  "punti": [
+   { "h": "Riesaminare senza istinto accusatorio", "d": "Che cosa è successo davvero, in quale punto del processo, da quanto tempo poteva essere già attivo, quale requisito è stato mancato, quali controlli avrebbero dovuto intercettarlo, chi ha visto i primi segnali. Senza questo riesame, la ricerca della causa si appoggia alle impressioni e punta al colpevole più visibile." },
+   { "h": "La causa è la condizione che l'ha reso normale", "d": "Se qualcuno ha autorizzato un aggiornamento senza il riesame previsto, il gesto esiste ma non spiega il sistema: mancavano criteri chiari, i ruoli erano ambigui, il tempo era insufficiente, il fornitore ha cambiato qualcosa senza notifica. La causa rilevante non è l'ultimo atto sbagliato." },
+   { "h": "Un esempio: acquisti mal smistati", "d": "Forniture critiche finite nel flusso ordinario. La causa non è «modello impreciso»: è un governo debole dei cambiamenti del processo — un catalogo che non includeva nuove tipologie, nessun riesame quando il vocabolario cambiava, correzioni manuali senza traccia." },
+   { "h": "Dove altro può vivere lo stesso difetto", "d": "Forse un secondo strumento usa lo stesso catalogo, altri reparti modificano le categorie localmente, un servizio esterno è aggiornato con logica simile. Se non fai questo passo, chiudi il caso qui e lo ritrovi altrove con un nome diverso. Una buona analisi prima allarga, cerca il pattern, poi decide." }
+  ]
+ },
+ {
+  "id": "42001_m09_s004",
+  "layout": "punti",
+  "kicker": "Non conformità · 3",
+  "titolo": "Azione correttiva: deve essere quella giusta",
+  "intro": "Chiarita la causa, arriva la decisione più delicata: attuare ogni azione necessaria e poi riesaminarne l'efficacia. Molte organizzazioni cadono in una scorciatoia: siccome hanno fatto qualcosa, pensano di avere gestito il problema. Ma il punto 10.2 non premia il movimento, premia la pertinenza. L'azione deve essere adeguata agli effetti della non conformità: proporzionata all'impatto, coerente con la causa, capace di ridurre la ricorrenza.",
+  "punti": [
+   { "h": "Reazione minima o azione adeguata", "d": "Se un fornitore aggiorna il motore senza attivare il riesame previsto, la reazione minima è chiedere spiegazioni e sospendere la funzione; l'azione adeguata rivede le condizioni contrattuali di notifica, introduce un presidio che intercetti le variazioni di versione, chiarisce i ruoli e stabilisce un riesame obbligatorio prima del riutilizzo." },
+   { "h": "Controllo di efficacia, non di completamento", "d": "Riesaminare l'efficacia non è chiedersi se l'azione è stata completata, ma se ha funzionato: hai ridotto il rischio di ripetizione, attenuato la causa, scoperto se il problema si stava già manifestando altrove? Se dopo una NC sui dati introduci un modulo di autorizzazione ma viene compilato tardi o solo per alcuni progetti, l'azione non è efficace." },
+   { "h": "Le formulazioni deboli", "d": "«Sensibilizzare il personale», «ricordare la procedura», «aumentare l'attenzione»: a volte serve anche questo, ma se la causa è strutturale la risposta deve toccare processo, controlli, ruoli, criteri e strumenti di sorveglianza. Altrimenti scarichi sul fattore umano la responsabilità di compensare un sistema mal progettato." },
+   { "h": "Adeguatezza in entrambe le direzioni", "d": "Di fronte a effetti modesti, alcune scelgono azioni enormi, complicate e lente: sembra rigore, spesso è inefficienza. Un problema circoscritto può richiedere una correzione semplice e un presidio mirato. L'importante è che il sistema sappia spiegare perché quell'azione era la più sensata per quella causa e quegli effetti." }
+  ]
+ },
+ {
+  "id": "42001_m09_s005",
+  "layout": "split",
+  "kicker": "Non conformità · 4",
+  "titolo": "Tracciare, dimostrare, modificare il sistema",
+  "lead": "Un buon trattamento della non conformità deve lasciare tracce affidabili. Il punto 10.2 vuole tracce documentate di due aspetti: da una parte lo scostamento emerso e il percorso avviato, dall'altra ciò che l'azione correttiva ha effettivamente prodotto. Sembra amministrativo, ma è sostanziale: se non puoi ricostruire il fatto, le decisioni e l'esito, non stai governando l'apprendimento, stai affidando la memoria a ricordi frammentati.",
+  "punti": [
+   { "h": "Che cosa mostra una registrazione utile", "d": "La natura della non conformità (fatto osservato, requisito mancato, contesto, effetti), la sequenza delle azioni (contenimento, correzione, analisi della causa, decisioni, responsabilità, tempi, verifica), e come è andata a finire: l'azione ha ridotto davvero la probabilità di ricorrenza, oppure no?" },
+   { "h": "Debole contro utile", "d": "«Collegamento rimosso, personale avvisato» chiude un fascicolo ma non racconta il sistema. Una registrazione utile spiega che la NC ha riguardato una sorgente non prevista, che è stata contenuta, che le decisioni del periodo sono state riesaminate, che la causa era in permessi troppo larghi, e che dopo l'osservazione non si sono più visti casi analoghi." },
+   { "h": "Se necessario, modificare il SGIA", "d": "Il punto 10.2 impedisce di trattare ogni problema come episodio isolato. Se una NC mostra che una procedura è debole, una responsabilità confusa o un controllo mancante, non basta sanare il caso: aggiorni il flusso di approvazione, inserisci un riesame obbligatorio, chiarisci chi autorizza un ritorno in esercizio." },
+   { "h": "Il segnale dell'apprendimento mancato", "d": "Gli archivi si riempiono di casi chiusi ma gli stessi problemi tornano con parole diverse; le riunioni parlano di episodi, non di pattern; la direzione vede molte chiusure e poco apprendimento. Prima reagisci, poi chiarisci la causa, poi intervieni sul sistema, poi verifichi il risultato." }
+  ]
+ },
+ {
+  "id": "42001_m09_s006",
+  "layout": "punti",
+  "kicker": "Miglioramento continuo · 1",
+  "titolo": "Un sistema che impara, non solo che reagisce",
+  "intro": "Il punto 10.1 chiede di migliorare in modo continuo idoneità, adeguatezza ed efficacia del SGIA. Non parla solo di riparare ciò che si rompe: ti chiede di far evolvere il sistema nel tempo, così che resti utile al contesto reale. Continuo non significa cambiare tutto ogni mese né inseguire ogni novità: significa coltivare una capacità costante di osservare, capire, decidere e correggere il sistema prima che diventi inadatto.",
+  "punti": [
+   { "h": "Il contesto si muove su molti piani", "d": "Cambiano strumenti, dati, fornitori, funzioni incluse nei servizi acquistati, aspettative delle parti interessate, modi in cui i reparti usano la tecnologia. Se il sistema resta fermo mentre il contesto si sposta, può apparire ordinato e tuttavia diventare poco utile." },
+   { "h": "Non aspettare il guasto evidente", "d": "Un buon processo di approvazione dei casi d'uso funziona finché i progetti sono pochi e centralizzati; quando i reparti iniziano a usare funzioni già presenti in software acquistati, copre male la nuova realtà. Rileggere per tempo il perimetro, aggiornare responsabilità e criteri è lavorare nel senso del miglioramento continuo." },
+   { "h": "Migliorare può voler dire semplificare", "d": "Non solo aggiungere controlli, ma chiarire, eliminare passaggi inutili, rendere più comprensibile una responsabilità. Se ogni risposta ai problemi produce solo più moduli, più autorizzazioni e più eccezioni, il sistema si appesantisce e le persone cercano scorciatoie: non è miglioramento, è accumulo." },
+   { "h": "Leggere i segnali giusti", "d": "Non fermarti a chiedere se i casi precedenti sono stati dichiarati chiusi: chiediti se l'organizzazione ha appreso da cambiamenti, incidenti mancati, reclami interni, risultati del monitoraggio e difficoltà ricorrenti. Un sistema che migliora mostra ruoli meglio definiti, perimetri più leggibili, criteri più chiari, decisioni più tracciabili." }
+  ]
+ },
+ {
+  "id": "42001_m09_s007",
+  "layout": "definizione",
+  "kicker": "Miglioramento continuo · 2",
+  "eyebrow": "Tre domande diverse",
+  "titolo": "Idoneità, adeguatezza, efficacia",
+  "definizione": "Il SGIA deve essere migliorato con continuità così da restare adatto al contesto (idoneità), sufficientemente robusto nella sua costruzione (adeguatezza) e capace di produrre i risultati attesi (efficacia). Le tre idee sono vicine ma non coincidono: se le sovrapponi, rischi di giudicare bene un sistema che ha una debolezza seria, soltanto collocata in una dimensione diversa.",
+  "punti": [
+   "Idoneità — «stiamo usando la mappa giusta?». Processi, regole e controlli rispondono al contesto reale. Una procedura pensata per pochi progetti centrali diventa poco idonea quando l'organizzazione introduce decine di servizi distribuiti: la regola esiste ma non incontra più il lavoro reale.",
+   "Adeguatezza — «la mappa è abbastanza dettagliata?». Non mancano pezzi essenziali, i ruoli sono coperti, i passaggi critici non sono lasciati alla sola buona volontà. Un sistema può aver capito il problema giusto ma presidiarlo troppo leggermente: manca chi autorizza il ritorno in produzione dopo una modifica.",
+   "Efficacia — «con questa mappa stiamo arrivando dove dobbiamo?». Le procedure vengono applicate, i controlli intercettano davvero, le responsabilità sono esercitate e non solo nominate. Un buon riesame dei fornitori con criteri chiari resta debole se le rivalutazioni vengono rinviate ogni volta per urgenze."
+  ]
+ },
+ {
+  "id": "42001_m09_s008",
+  "layout": "punti",
+  "kicker": "Miglioramento continuo · 3",
+  "titolo": "Alimentare il miglioramento senza rincorrere le mode",
+  "intro": "Se il miglioramento continuo non coincide solo con la gestione delle non conformità, da dove nasce il materiale utile? Nella pratica l'organizzazione lo alimenta osservando fonti diverse: non conformità e azioni correttive, ma anche esiti dei controlli, reclami, anomalie minori, quasi incidenti, cambiamenti di contesto, difficoltà ripetute, limiti emersi coi fornitori. Il punto è trasformare segnali sparsi in decisioni ordinate.",
+  "punti": [
+   { "h": "Selezionare e collegare i segnali", "d": "Un'organizzazione acerba accumula osservazioni e le discute in modo episodico; una matura seleziona i segnali rilevanti, li collega tra loro e decide dove intervenire per un guadagno reale di idoneità, adeguatezza o efficacia. Tempi lunghi di approvazione, formulazioni incoerenti e più dubbi del legale, insieme, dicono che il processo è poco fluido." },
+   { "h": "La qualità delle priorità", "d": "Migliorare tutto subito è impossibile e spesso dannoso. Favorisci gli interventi sulle cause ricorrenti, sulle aree con effetti più rilevanti, sui passaggi che coinvolgono più processi, sui cambiamenti che semplificano senza perdere controllo. Evita i due estremi: l'inerzia e l'iperattività." },
+   { "h": "Ritmo, non frenesia", "d": "Se cambi criteri, ruoli e strumenti troppo spesso, chi opera smette di capire quale sia la regola stabile; se non cambi mai nulla, il sistema invecchia più in fretta dei processi. Un indicatore qualitativo: dopo un intervento, le persone capiscono meglio il processo o si sentono solo più cariche di adempimenti?" },
+   { "h": "Canali di raccolta semplici e abituali", "d": "Se il miglioramento dipende dal fatto che qualcuno si ricordi di segnalare, il flusso si secca. Serve un punto unico dove far arrivare anomalie, momenti periodici di lettura, un confronto trimestrale: un reclamo di marzo e un'anomalia di giugno, messi in fila, rivelano la stessa causa. E quando le osservazioni producono cambiamenti, le persone continuano a osservare." }
+  ]
+ },
+ {
+  "id": "42001_m09_s009",
+  "layout": "split",
+  "kicker": "Non conformità emergenti · 1",
+  "titolo": "Inventario incompleto dei sistemi di IA",
+  "lead": "Una delle non conformità più frequenti nasce da una premessa banale e devastante: l'organizzazione non sa davvero che cosa sta governando. L'inventario dei sistemi, degli usi o delle funzioni di IA è incompleto, vecchio o parziale. Accade spesso perché l'IA entra in molti modi: progetti approvati facili da vedere, ma anche funzioni attivate dentro software acquistati, sperimentazioni di reparto, componenti di terzi, servizi che aggiungono capacità di IA senza aggiornare il perimetro.",
+  "punti": [
+   { "h": "Il caso tipico", "d": "Un applicativo di gestione candidature che, dopo un aggiornamento del fornitore, classifica profili, propone priorità di lettura e genera sintesi automatiche. Nessuno lo segnala alla governance, perché nessuno lo percepisce come nuovo uso di IA: il sistema continua a rappresentare un perimetro più piccolo di quello reale." },
+   { "h": "I segnali riconoscibili", "d": "Elenchi che coincidono solo con i grandi progetti ufficiali, nessuna traccia di strumenti sperimentali, dipendenza da una sola funzione per sapere cosa esiste, mancanza di criteri per decidere quando una funzione acquistata rientra nel perimetro, o un inventario che descrive il nome del software ma non lo scopo, i dati e le decisioni supportate." },
+   { "h": "È un problema di governo, non archivistico", "d": "Se non vedi un uso di IA, non puoi valutarne gli impatti, assegnare responsabilità, definire controlli adeguati, né capire dove cercare non conformità simili. Rendi cieco il sistema proprio dove dovrebbe vedere." },
+   { "h": "Non basta aggiornare l'elenco", "d": "Quella è una correzione iniziale utile ma raramente sufficiente. Chiediti quale causa ha reso incompleto l'inventario: mancano criteri di identificazione, i reparti non sanno quando segnalare, i contratti non prevedono notifiche, nessuno presidia gli strumenti sperimentali. Ogni causa porta a un'azione correttiva diversa." }
+  ]
+ },
+ {
+  "id": "42001_m09_s010",
+  "layout": "cards",
+  "kicker": "Non conformità emergenti · 2",
+  "titolo": "Impatti non valutati, o valutati male",
+  "intro": "Se l'inventario incompleto nasconde ciò che esiste, la valutazione povera degli impatti distorce ciò che il sistema dovrebbe capire. L'organizzazione ha identificato un uso di IA, magari registrato bene, ma non ha valutato a sufficienza gli effetti su persone, processi, risultati o obblighi. Oppure li ha valutati solo in termini tecnici, come se prestazioni e impatti fossero la stessa cosa. Non lo sono.",
+  "cards": [
+   { "h": "Il motore, non il veicolo in strada", "d": "Uno strumento antifrode misura buoni risultati su velocità e intercettazione, ma i casi segnalati richiedono enormi riesami manuali, rallentano processi sensibili e concentrano l'attenzione su categorie non critiche. L'impatto sul processo, sul carico umano e sugli effetti decisionali non era stato valutato con profondità." },
+   { "h": "Le forme della non conformità", "d": "Valutazioni ridotte a una sola dimensione tecnica, moduli con formule generiche, assenza di domande sulle conseguenze indirette, mancato coinvolgimento delle funzioni che subiranno gli effetti, riesami che confermano sempre il progetto iniziale senza mostrare quali ipotesi siano state verificate." },
+   { "h": "Il segnale linguistico", "d": "Tutto viene descritto con «precisione», «accuratezza», «performance», ma quasi nulla su errori gestibili, impatti sui diritti, tempi di intervento umano, qualità delle decisioni o spostamenti di responsabilità. Se ascolti solo il linguaggio tecnico, rischi di farti convincere da una presentazione pulita." },
+   { "h": "L'azione correttiva tocca il metodo", "d": "Se la causa è una visione troppo ristretta degli impatti, non basta aggiungere una casella: servono criteri più chiari, ruoli diversi coinvolti, la distinzione tra prestazione tecnica e conseguenza organizzativa, la verifica degli effetti reali dopo l'avvio. Spesso la causa profonda è una cultura che vede la valutazione come passaggio da superare." }
+  ]
+ },
+ {
+  "id": "42001_m09_s011",
+  "layout": "split",
+  "kicker": "Non conformità emergenti · 3",
+  "titolo": "Dati non governati",
+  "lead": "Sembra un tema tecnico, ma tocca il cuore del sistema. Quando i dati entrano, escono, si trasformano, si combinano o si riusano senza regole chiare, il sistema perde controllo sull'elemento che alimenta l'IA. E quando perde controllo sui dati, spesso perde anche la capacità di spiegare decisioni, valutare effetti e prevenire errori ripetuti. Dati non governati non significa solo dati sporchi: significa dati di cui non sai provenienza, criteri, trasformazioni, autorizzazioni e responsabilità.",
+  "punti": [
+   { "h": "Una fragilità sistemica", "d": "Il sistema usa una materia prima rilevante senza una catena di governo abbastanza leggibile. Un modello per classificare urgenza dei messaggi parte bene, poi entrano nuovi canali ed etichette, un reparto corregge manualmente, un altro esporta copie, un tecnico introduce trasformazioni, e nessuno ricostruisce il percorso." },
+   { "h": "I segnali riconoscibili", "d": "Fonti descritte in modo incoerente, versioni dei dataset che non coincidono tra team, etichette che cambiano significato, trasformazioni non tracciate, criteri di esclusione non ricostruibili, e — soprattutto — risposte incerte quando chiedi chi è responsabile del presidio di una base dati critica." },
+   { "h": "Invisibile a lungo", "d": "Un modello può produrre risultati accettabili mentre la qualità del governo si deteriora. Finché il contesto resta stabile i difetti si vedono poco; poi cambia una sorgente o aumenta il volume, ed emergono classificazioni incoerenti. Molti parlano di malfunzionamento dell'IA, ma è il sintomo finale, non la radice." },
+   { "h": "Più dati senza governo è più opacità", "d": "Se non distingui dati approvati da dati solo disponibili, correnti da storici, idonei da comodi, allarghi il perimetro del rischio invece di migliorare la base decisionale. La domanda: il sistema sa raccontare la vita del dato, o solo mostrarne l'ultima fotografia? Se sa solo la fotografia, manca il controllo." }
+  ]
+ },
+ {
+  "id": "42001_m09_s012",
+  "layout": "cards",
+  "kicker": "Non conformità emergenti · 4",
+  "titolo": "Quando il dato cambia senza governo",
+  "intro": "Il problema dei dati non governati diventa più serio quando guardi al loro movimento nel tempo. I dati vengono puliti, aggregati, selezionati, anonimizzati, etichettati, arricchiti e riutilizzati: ogni passaggio può essere sensato. Il rischio nasce quando avviene senza una storia ricostruibile. Il sistema non cade per un grande errore, si indebolisce per piccole deviazioni non governate.",
+  "cards": [
+   { "h": "Trasformazioni senza logica condivisa", "d": "Nuove variabili derivate, valori anomali eliminati, formati uniformati: se le modifiche avvengono senza criteri di approvazione né collegamento con la validazione, il sistema perde la capacità di spiegare perché la versione attuale si comporta diversamente dalla precedente." },
+   { "h": "Le tre derive", "d": "Deriva del contenuto, quando le informazioni non rappresentano più il contesto attuale; deriva del significato, quando la stessa etichetta viene usata in modo diverso nel tempo; deriva operativa, quando cambiano i modi in cui i reparti raccolgono o correggono i dati. Effetti importanti anche senza toccare l'algoritmo." },
+   { "h": "I due volti dell'opacità", "d": "L'organizzazione sa dire che cosa è cambiato ma non perché sia stato autorizzato e come sia stato verificato; oppure sa chi ha autorizzato un aggiornamento ma non quali dati o trasformazioni siano entrati davvero in esercizio. In entrambi i casi il governo è insufficiente, e il rischio diventa organizzativo." },
+   { "h": "La diagnosi sbagliata", "d": "Davanti a risultati peggiorati, molti accusano subito il modello o il fornitore. A volte hanno ragione, ma spesso il problema è un accumulo di micro cambiamenti nei dati. Non migliori solo introducendo un controllo sofisticato: migliori anche rendendo visibile e comprensibile il percorso dei dati, così che una deviazione si interpreti in tempo." }
+  ]
+ },
+ {
+  "id": "42001_m09_s013",
+  "layout": "confronto",
+  "kicker": "Non conformità emergenti · 5",
+  "titolo": "Dati: dalla correzione locale all'azione vera",
+  "intro": "Quando una non conformità riguarda i dati, la tentazione è intervenire sul pezzo visibile e chiudere in fretta: sostituire un file, ripristinare una versione, correggere alcune etichette. Utile e a volte necessario, ma è correzione iniziale, non azione correttiva. Per parlare di azione correttiva devi dire quale causa ha permesso al problema di nascere e quali modifiche ridurranno la probabilità che si ripeta.",
+  "a": {
+   "h": "Il sistema debole",
+   "sub": "Apprendimento mancato",
+   "punti": [
+    { "d": "Linguaggio minimo e chiusura rapida: il problema è descritto come «eccezione», la causa attribuita a «disattenzione», l'azione consiste nel «ricordare a tutti di fare più attenzione». Dopo poco emerge un caso simile in un altro processo e nessuno lo collega al precedente." },
+    { "d": "Ci si ferma al pezzo visibile: si ripuliscono le etichette e si riesaminano i ticket, ma non ci si chiede perché un dataset con etichette incoerenti sia arrivato a influenzare il servizio, né dove altre basi dati critiche seguano la stessa logica." }
+   ]
+  },
+  "b": {
+   "h": "Il sistema maturo",
+   "sub": "Impara sul proprio funzionamento",
+   "punti": [
+    { "d": "Informazioni documentate che raccontano l'intera sequenza: natura precisa della NC, conseguenze considerate (ticket ritardati, riesami aggiuntivi), causa argomentata non intuita, e un controllo di efficacia che osserva se il comportamento reale è cambiato." },
+    { "d": "L'azione tocca il sistema: criteri comuni di etichettatura, verifiche prima del riutilizzo, responsabilità esplicite sui dataset critici, riesami periodici. E guarda fuori dal caso singolo, coinvolgendo le funzioni operative che alimentano le fonti senza percepirne gli effetti a valle." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m09_s014",
+  "layout": "split",
+  "kicker": "Non conformità emergenti · 6",
+  "titolo": "Fornitori opachi",
+  "lead": "Quando un'organizzazione introduce servizi esterni di IA spesso guadagna velocità, ma può perdere la visibilità su ciò che sta usando davvero. Fornitore opaco non significa necessariamente fornitore scorretto: significa che, dal punto di vista del sistema di gestione, informazioni decisive su funzionamento, cambiamenti, limiti e responsabilità non sono abbastanza chiare per un governo solido. È un'illusione di controllo.",
+  "punti": [
+   { "h": "La complessità si sposta fuori dal perimetro", "d": "Attivi la funzione, ottieni un risultato, ricevi dashboard pulite. Ma alla domanda su come vengano gestiti gli aggiornamenti, quali componenti terze siano coinvolte, quali dati transitino e chi risponda di un'anomalia, le risposte diventano vaghe. Il sistema crede di aver delegato un'attività, e ha delegato anche parte della propria capacità di capire." },
+   { "h": "Il caso tipico", "d": "Un servizio di preselezione curriculum modifica criteri di classificazione, introduce nuove logiche di sintesi e usa componenti non evidenti nel cruscotto. Internamente nessuno se ne accorge, perché il governo verifica solo che il servizio sia disponibile e il contratto in vigore. Quando compaiono esiti inattesi, manca la visibilità per spiegarli." },
+   { "h": "I segnali", "d": "Contratti sui livelli di servizio ma poco chiari sui cambiamenti funzionali, assenza di un punto interno che dialoghi con fornitore e processi, scarsa conoscenza dei subfornitori, documentazione ricca di promesse ma povera di dettagli utili, mancanza di criteri per decidere quando un aggiornamento esterno richiede riesame." },
+   { "h": "Affidarsi non trasferisce la responsabilità", "d": "Il fornitore può svolgere un pezzo del lavoro, ma il sistema deve sapere cosa presidia, quali limiti accetta e come reagirà se le condizioni cambiano. La domanda matura non è «il fornitore è affidabile», ma «il nostro sistema riesce a governarlo con un livello di comprensione coerente con gli effetti che quel servizio può generare?»" }
+  ]
+ },
+ {
+  "id": "42001_m09_s015",
+  "layout": "punti",
+  "kicker": "Non conformità emergenti · 7",
+  "titolo": "Fornitori: contratto, cambiamento, responsabilità",
+  "intro": "L'opacità diventa una NC seria quando il sistema interno non sa trasformare il rapporto contrattuale in un vero controllo operativo. Molte organizzazioni hanno un contratto, un referente commerciale, qualche indicatore di disponibilità e un documento tecnico iniziale, e pensano che basti. Ma il punto critico è capire se l'accordo, insieme ai presidi interni, consenta davvero di governare cambiamenti, effetti e responsabilità.",
+  "punti": [
+   { "h": "Il ponte mancante", "d": "Un servizio di trascrizione chiamate aggiorna il motore, cambia le logiche di riepilogo e aggiunge un'estrazione automatica; nessuno attiva un riesame. Mancava un criterio per distinguere un aggiornamento tecnico da una modifica che incide sugli output, un presidio che ricevesse le notifiche, un riesame periodico delle condizioni operative." },
+   { "h": "La responsabilità non si ferma al perimetro esterno", "d": "Dal punto di vista del sistema di gestione, la responsabilità interna resta piena sul governo del servizio usato. Se il fornitore è opaco, il sistema deve riconoscere l'opacità come condizione da presidiare, non come fatto neutro: altrimenti ogni incidente si ferma davanti a una scatola nera." },
+   { "h": "L'approccio maturo", "d": "L'organizzazione sa quali informazioni le servono davvero — visibilità sui cambiamenti, limiti dichiarati, condizioni d'uso, ruoli di supporto, punti di contatto in caso di deviazione — e le collega a un processo interno leggibile: se arriva una modifica rilevante qualcuno la valuta, se manca chiarezza qualcuno apre un approfondimento." },
+   { "h": "L'approccio fragile", "d": "«Ci fidiamo del fornitore», «il servizio è standard per tutti»: formule rassicuranti che non spiegano nulla sul governo concreto. Quando emerge una NC, l'azione correttiva si riduce a una richiesta generica di maggiore trasparenza, senza modificare il processo interno che aveva accettato l'opacità senza condizioni." }
+  ]
+ },
+ {
+  "id": "42001_m09_s016",
+  "layout": "timeline",
+  "kicker": "Non conformità emergenti · 8",
+  "titolo": "Quando le non conformità si intrecciano",
+  "intro": "Nella realtà le non conformità spesso non arrivano isolate: si presentano in combinazione e si rafforzano. Un'organizzazione logistica introduce un'IA per assegnare priorità agli interventi su anomalie di magazzino, combinando dati interni, immagini da telecamere e un componente analitico esterno. La causa non è quasi mai una sola: è una combinazione di scelte deboli che, prese separatamente, sembravano tollerabili.",
+  "tappe": [
+   { "t": "01", "h": "Perimetro non censito", "d": "Il progetto parte come sperimentazione in un solo sito e non entra subito in un inventario centrale completo. Il perimetro reale del sistema non coincide con quello formalmente governato." },
+   { "t": "02", "h": "Impatti letti male", "d": "Estendendosi ad altri magazzini, si guarda soprattutto alla velocità di identificazione, ma si valuta poco che alcune segnalazioni richiedono personale specializzato, fermo impianto o materiali sensibili. Impatti troppo tecnici, troppo poco operativi." },
+   { "t": "03", "h": "Dati trasformati senza governo", "d": "Il team locale filtra immagini, rimuove casi e modifica criteri di etichettatura senza un processo comune tra i siti. Il comportamento della soluzione cambia senza una storia leggibile." },
+   { "t": "04", "h": "Fornitore opaco", "d": "Il fornitore aggiorna il servizio migliorando la sensibilità ma aumentando i falsi allarmi in scarsa illuminazione. L'informazione arriva generica nel portale, senza attivare un riesame interno." },
+   { "t": "05", "h": "L'episodio e l'azione", "d": "In un magazzino periferico anomalie urgenti sono classificate come basse: ritardi e rilavorazioni. L'azione efficace non è minima — aggiorna l'inventario, riesamina gli impatti, ordina le regole sui dati, chiarisce i presidi sul fornitore e cerca lo stesso schema altrove." }
+  ]
+ },
+ {
+  "id": "42001_m09_s017",
+  "layout": "confronto",
+  "kicker": "Non conformità emergenti · 9",
+  "titolo": "La rassegna emergente come prova di maturità",
+  "intro": "Inventario incompleto, impatti letti male, dati non governati, fornitori opachi: a prima vista problemi diversi, in realtà raccontano quasi sempre la stessa storia — la distanza tra il sistema dichiarato e il sistema reale. Non guardare solo il numero dei casi: guarda il tipo di debolezza che rivelano e la qualità dell'apprendimento che segue. Un sistema può avere poche NC formali e restare fragile.",
+  "a": {
+   "h": "Il sistema maturo",
+   "sub": "Comprende, non solo agisce",
+   "punti": [
+    { "d": "Allarga lo sguardo dal caso locale alle aree simili, collega i problemi invece di archiviarli separatamente, evita spiegazioni comode come «errore umano» quando i segnali parlano di un difetto di processo, produce informazioni documentate ricostruibili." },
+    { "d": "Sa modificare il proprio modo di governare, non solo l'oggetto del rilievo. Alla domanda su cosa abbia imparato da una NC, sa dirti che cosa ha capito, non solo che cosa ha fatto: il miglioramento continuo vive nella comprensione, non nella sola attività." }
+   ]
+  },
+  "b": {
+   "h": "Il sistema immaturo",
+   "sub": "Attività senza comprensione",
+   "punti": [
+    { "d": "Registra in ritardo, corregge prima di capire, chiude i casi per stanchezza o pressione. Vede il fornitore come una scusa, il dato come un dettaglio tecnico, la valutazione degli impatti come un passaggio formale." },
+    { "d": "Tratta come episodi separati casi che ruotano tutti attorno alla stessa causa. Due aziende con tre NC nel semestre: la prima ha casi scollegati, cause analizzate e azioni verificate; la seconda casi legati a un perimetro poco chiaro trattati isolatamente. Il numero è lo stesso, la maturità no." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m09_s018",
+  "layout": "confronto",
+  "kicker": "Incidente e non conformità · 1",
+  "titolo": "Due concetti da separare",
+  "intro": "La prima mossa utile è metodologica: separare bene i concetti. Le due cose possono incontrarsi, ma non sempre viaggiano insieme. Se le sovrapponi, rischi due errori opposti: ridurre l'analisi dell'incidente a una caccia al colpevole procedurale, o trattare una non conformità evidente come irrilevante finché non succede qualcosa di grave. Il sistema maturo li usa per capire quale domanda sta affrontando.",
+  "a": {
+   "h": "L'incidente di IA",
+   "sub": "Che cosa è successo?",
+   "punti": [
+    { "d": "Un evento che produce, o rischia di produrre, un effetto indesiderato rilevante: un disservizio serio, una decisione errata con conseguenze concrete, un danno operativo, un'esposizione reputazionale, un impatto su persone e processi. Ti spinge, giustamente, all'urgenza." },
+    { "d": "La sua presenza, da sola, non dimostra ancora una non conformità: devi analizzare se il sistema fosse ragionevolmente idoneo, adeguato ed efficace rispetto a ciò che era prevedibile e controllabile." }
+   ]
+  },
+  "b": {
+   "h": "La non conformità",
+   "sub": "Quale requisito è stato mancato?",
+   "punti": [
+    { "d": "Compare quando un fatto non rispetta un requisito, una procedura, un criterio o una regola che l'organizzazione ha deciso di seguire. Ti obbliga al confronto con un requisito e alla ricerca della causa." },
+    { "d": "Puoi averne una importante anche senza incidente visibile: un controllo obbligatorio saltato, una rivalutazione non eseguita, un inventario incompleto. Proprio perché l'effetto non si è ancora manifestato, conviene prenderla sul serio — è spesso la NC gestita male a preparare l'incidente successivo." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m09_s019",
+  "layout": "tabella",
+  "kicker": "Incidente e non conformità · 2",
+  "titolo": "Quando coincidono, quando no",
+  "intro": "Lavorare su scenari concreti è il modo migliore per evitare risposte automatiche. L'incidente risponde a «che cosa è successo e con quali effetti», la non conformità a «quale requisito non è stato rispettato». Le due indagini si parlano, ma non si sostituiscono. Un incidente può rivelare una NC latente, ma può anche essere l'occasione per migliorare un sistema che, pur conforme, deve diventare più robusto.",
+  "cols": ["Scenario", "Incidente?", "Non conformità?", "La lezione"],
+  "righe": [
+   ["Riesame dati saltato, poi richieste urgenti trascurate", "Sì, effetto indesiderato rilevante", "Sì, requisito interno ignorato", "Le due dimensioni coincidono: gestisci l'evento e la causa insieme"],
+   ["Funzione generativa non registrata nell'inventario, nessun danno", "No, nessun effetto reale", "Sì, requisito mancato", "Non sottovalutarla perché «non è successo nulla»: è prevenzione preziosa"],
+   ["Assistente usato correttamente, ondata anomala di richieste esterne", "Sì, disservizio reale", "Da verificare: forse i controlli erano presenti e applicati", "L'incidente non prova una NC: il sistema apprende comunque, per robustezza"],
+   ["In generale", "Guarda effetti e urgenza", "Guarda il confronto con un requisito", "Ordina le domande prima di forzare l'etichetta unica"]
+  ]
+ },
+ {
+  "id": "42001_m09_s020",
+  "layout": "punti",
+  "kicker": "Incidente e non conformità · 3",
+  "titolo": "Dalle lezioni dell'incidente all'apprendimento",
+  "intro": "Quando si verifica un incidente, la pressione spinge verso tre mosse immediate: contenere l'effetto, rassicurare le persone, ripristinare il servizio. Necessarie, ma se ti fermi lì l'organizzazione avrà gestito l'urgenza senza produrre apprendimento. Il passaggio decisivo è trasformare l'esperienza in conoscenza utile, e qui tornano i principi del 10.2: natura, conseguenze, causa, casi simili, azione adeguata, efficacia.",
+  "punti": [
+   { "h": "Cultura della colpa contro cultura dell'apprendimento", "d": "La prima cerca in fretta un responsabile individuale, perché semplifica la storia; la seconda cerca una spiegazione sistemica precisa da guidare una modifica. Non significa ignorare gli errori personali: se un tecnico ha autorizzato un passaggio sbagliato, devi ancora capire perché il sistema lo abbia reso possibile, invisibile o normale." },
+   { "h": "Le informazioni documentate mantengono la logica", "d": "Non servono solo a dimostrare che hai fatto qualcosa: mostrano il fatto, le conseguenze, la sequenza delle decisioni, l'ipotesi di causa, le verifiche e il controllo di efficacia. Senza traccia, il racconto si semplifica, cambia a seconda di chi lo riferisce e perde valore come base di miglioramento." },
+   { "h": "Non ogni lezione è una NC formale", "d": "A volte l'evento mostra che il sistema era conforme ai criteri dati, ma quei criteri non bastano più rispetto al contesto reale. Il sistema deve migliorare comunque, non perché ha violato una regola, ma perché l'esperienza ha mostrato un limite di idoneità o adeguatezza." },
+   { "h": "Evitare la soluzione rapida e visibile", "d": "Chiudere l'incidente con una formazione urgente o un blocco temporaneo, senza toccare il processo che ha consentito la deviazione, appare energico ma lascia intatta la causa. Dopo qualche mese il presidio eccezionale viene meno e il problema ritorna in altra forma." }
+  ]
+ },
+ {
+  "id": "42001_m09_s021",
+  "layout": "split",
+  "kicker": "Incidente e non conformità · 4",
+  "titolo": "Dopo l'incidente: due piste, un solo apprendimento",
+  "lead": "Quando si presenta un evento ambiguo, con effetti visibili ma cause incerte, la risposta più utile è aprire due piste parallele senza confonderle. Se le tieni unite ma distinte, impari più in fretta e sbagli meno la diagnosi. Molte organizzazioni inciampano cercando subito un'etichetta unica: all'inizio la cosa più utile non è forzare il nome del problema, ma ordinare le domande.",
+  "punti": [
+   { "h": "La pista dell'evento", "d": "Contenere gli effetti, proteggere il processo, ristabilire condizioni accettabili, capire chi è stato toccato. Se un motore trascura richieste urgenti, blocchi temporaneamente il suggerimento automatico, riassegni manualmente e valuti se ci siano già effetti su sicurezza, tempi o qualità. Questa pista protegge il presente." },
+   { "h": "La pista del sistema", "d": "Verificare se un requisito non è stato rispettato, quali controlli esistevano, come sono stati applicati, dove potrebbe annidarsi una vulnerabilità simile. L'ultima modifica era stata riesaminata? I dati erano quelli previsti? I limiti erano noti agli operatori? Il monitoraggio era eseguito? Questa pista costruisce futuro." },
+   { "h": "Tracce diverse ma collegate", "d": "La storia dell'evento (quando è emerso, chi lo ha visto, impatti, correzioni immediate) e la storia del riesame di sistema (quale requisito confrontato, quale causa esplorata, quali ipotesi escluse, quali NC simili cercate). Senza distinzione, il racconto si deforma e si perde il nesso tra evento e miglioramento." },
+   { "h": "Le due piste non competono", "d": "Se l'evento è gestito bene ma il sistema non impara, hai una bella emergenza risolta e una vulnerabilità intatta; se il sistema analizza bene ma l'evento è contenuto male, danneggi persone e processi mentre ti congratuli per l'analisi. Maturità è tenere insieme protezione immediata e lettura strutturale." }
+  ]
+ },
+ {
+  "id": "42001_m09_s022",
+  "layout": "numeri",
+  "kicker": "Incidente e non conformità · 5",
+  "titolo": "Quattro lezioni da ogni incidente",
+  "intro": "Quando un'organizzazione dice di avere imparato, spesso significa che il servizio è stato ripristinato e la pressione si è abbassata. Utile, ma non sufficiente: l'apprendimento nasce solo quando l'evento modifica il modo in cui il sistema vede, decide e controlla. Attenzione anche alla finta precisione — presentare una causa unica e definitiva quando l'analisi è ancora in corso. Un sistema maturo trae almeno quattro lezioni.",
+  "numeri": [
+   { "n": "1", "h": "Rilevazione", "d": "Come possiamo accorgercene prima la prossima volta? Il primo errore frequente è confondere la soluzione tampone con l'azione correttiva: disattivare una funzione e dichiarare il caso sotto controllo non basta se non arrivi alla causa." },
+   { "n": "2", "h": "Prevenzione", "d": "Quale regola, controllo o responsabilità va rafforzata? Il secondo errore è cercare un colpevole prima di cercare un meccanismo: attribuire tutto a una persona dà sollievo ma impoverisce l'analisi, perché la causa è quasi sempre una combinazione di condizioni rese normali nel tempo." },
+   { "n": "3", "h": "Propagazione", "d": "Dove altro potrebbe ripetersi in modo simile? Il terzo errore è non guardare ai casi analoghi: se un incidente ha rivelato una debolezza in un punto, il 10.2 chiede di domandarti dove la stessa debolezza possa emergere." },
+   { "n": "4", "h": "Comunicazione", "d": "Quale informazione doveva arrivare prima, a chi, e perché non è arrivata? Un incidente ben gestito non è quello che scompare in fretta dal radar, ma quello che lascia un sistema più capace di vedere, capire e intervenire." }
+  ]
+ },
+ {
+  "id": "42001_m09_s023",
+  "layout": "numeri",
+  "kicker": "Il rapporto alla direzione · 1",
+  "titolo": "Meno rumore, più decisione",
+  "intro": "Quando porti alla direzione miglioramento, non conformità e incidenti, il rischio più grande non è dire poco, è dire troppo nel modo sbagliato. La direzione riceve spesso due rapporti ugualmente inutili: uno troppo tecnico, pieno di dettagli che nessuno collega alle decisioni; uno troppo rassicurante, poche righe generiche senza priorità reali. Un buon rapporto sta in mezzo, e risponde a tre domande.",
+  "numeri": [
+   { "n": "1", "h": "Dove siamo esposti davvero", "d": "Non in astratto, ma nel perimetro reale: quali usi di IA sostengono processi importanti, dove si sono concentrate le NC, quali incidenti hanno mostrato conseguenze concrete, dove il rapporto coi fornitori è troppo opaco, dove i dati sono poco governati. Senza questo, la direzione reagisce solo all'ultimo caso rumoroso." },
+   { "n": "2", "h": "Che cosa sta cambiando", "d": "In un campo nuovo la fotografia ferma vale poco: dove le NC diminuiscono perché le azioni funzionano, dove i casi piccoli ma ricorrenti indicano una causa strutturale, quali usi nuovi sono entrati nel perimetro, quali fornitori hanno modificato servizi aumentando l'incertezza. Distinguere il rumore occasionale dal movimento rilevante." },
+   { "n": "3", "h": "Che cosa serve dalla direzione", "d": "Risorse, chiarimento di priorità, tolleranze diverse, limiti più netti su alcuni usi, riesame di un fornitore, sospensione di un'attivazione troppo veloce, rafforzamento di un controllo che esiste solo sulla carta. Se il rapporto descrive ma non porta a una scelta, diventa rituale." }
+  ]
+ },
+ {
+  "id": "42001_m09_s024",
+  "layout": "flusso",
+  "kicker": "Il rapporto alla direzione · 2",
+  "titolo": "Una sequenza che la direzione capisce",
+  "intro": "Il rapporto deve avere una struttura narrativa chiara: non una raccolta di allegati, ma una sequenza che accompagni dalla comprensione del quadro fino alla scelta di ciò che conta. Evita due difetti comuni: partire dai dettagli tecnici prima del contesto, o partire dalle conclusioni senza mostrare come ci sei arrivato. Così anche un campo nuovo smette di sembrare nebuloso.",
+  "passi": [
+   { "h": "Il perimetro reale", "d": "Che cosa stai governando adesso: il perimetro è stabile o si sta ampliando, sono entrati nuovi usi, alcuni servizi esterni hanno cambiato caratteristiche, aree prima marginali stanno diventando critiche. La direzione deve capire dove si concentra il valore e dove l'esposizione." },
+   { "h": "I fatti del periodo", "d": "Non conformità, incidenti, quasi incidenti e segnali deboli, spiegando perché meritino attenzione. Una NC isolata e compresa non pesa come una serie di casi piccoli con la stessa causa. Non appiattire tutto sullo stesso piano: la direzione deve percepire differenze di significato, non solo di etichetta." },
+   { "h": "Le cause ricorrenti", "d": "Il pezzo più prezioso e spesso mancante: dietro i casi si vedono alcuni pattern — perimetro non aggiornato, impatti troppo tecnici, governo dei dati disomogeneo, trasparenza insufficiente dei fornitori. Quando la direzione vede i pattern, smette di ragionare caso per caso." },
+   { "h": "Follow-up, priorità e decisioni", "d": "Non basta dire quali azioni sono chiuse: spiega se hanno funzionato — meno ricorrenze, controlli adottati, responsabilità più chiare — e se l'efficacia è incerta, dillo. Poi le priorità e le decisioni richieste: qui il rapporto smette di essere cronaca e diventa strumento di governo." }
+  ]
+ },
+ {
+  "id": "42001_m09_s025",
+  "layout": "punti",
+  "kicker": "Il rapporto alla direzione · 3",
+  "titolo": "Dire la causa senza fingere certezze",
+  "intro": "Parlare della causa senza cadere in due estremi: l'allarmismo confuso, dove tutto sembra grave ma non si capisce cosa richieda una decisione; e la falsa sicurezza, dove presenti una spiegazione unica e definitiva anche quando l'analisi è in corso. La direzione ha bisogno di un terzo stile, più sobrio e più forte: distinguere ciò che è osservato, ciò che è inferito con buona ragione e ciò che resta da verificare.",
+  "punti": [
+   { "h": "Organizzare l'incertezza, non nasconderla", "d": "Nell'IA i problemi nascono da catene causali miste — tecnica, organizzativa, dati, fornitura. «La causa è il modello» è elegante ma spesso sbagliato. Meglio: i fatti mostrano incoerenze tra reparti, l'analisi indica come cause probabili criteri di configurazione diversi e una base aggiornata in modo non uniforme, resta aperta una verifica sul fornitore." },
+   { "h": "Le priorità con lo stesso rigore", "d": "Una priorità non nasce solo dalla gravità dell'ultimo evento, ma dalla combinazione tra effetti osservati, probabilità di ricorrenza, ampiezza della propagazione possibile e debolezza del controllo attuale. Un problema con effetti contenuti ma ripetibile in molte aree merita attenzione alta." },
+   { "h": "Il linguaggio della maturità", "d": "In un campo nuovo la direzione non si aspetta perfezione immediata, ma onestà sulla posizione reale. Descrivi anche il livello di apprendimento: l'organizzazione ha migliorato l'identificazione degli usi non censiti, ma mostra ancora debolezze nella valutazione degli impatti dei servizi acquistati." },
+   { "h": "Evitare le formule vuote", "d": "«Situazione monitorata», «tema presidiato», «sensibilità elevata» danno una sensazione di controllo ma spesso non dicono nulla, se non le accompagni a fatti e decisioni. Un buon rapporto non ha paura di dire: sappiamo questo, riteniamo probabile quest'altro, dobbiamo ancora verificare quest'altro ancora." }
+  ]
+ },
+ {
+  "id": "42001_m09_s026",
+  "layout": "cards",
+  "kicker": "Il rapporto alla direzione · 4",
+  "titolo": "Dal rapporto alla decisione della direzione",
+  "intro": "Un rapporto ben scritto serve a poco se non si traduce in decisioni chiare. Nell'IA il rischio più frequente non è la mancanza di informazioni, ma la loro cattiva trasformazione in scelte. La direzione non deve diventare tecnica, ma capace di decidere su perimetro, priorità, risorse, tolleranze e limiti accettabili. La consapevolezza, da sola, non corregge una NC e non rende efficace un'azione.",
+  "cards": [
+   { "h": "Le domande concrete", "d": "Il perimetro è ancora coerente coi presidi o si è allargato oltre? Quali cause ricorrenti richiedono un investimento organizzativo e non solo una correzione locale? Dove la dipendenza da fornitori o dati critici richiede limiti più chiari? Quali azioni funzionano e quali vanno rafforzate? Cosa conviene rallentare o sospendere?" },
+   { "h": "Contenimento e maturazione", "d": "Le decisioni di contenimento riducono l'esposizione immediata (sospendere un uso, rinforzare il controllo umano, imporre un riesame straordinario); quelle di maturazione servono al miglioramento continuo (chiarire ruoli permanenti, ridefinire criteri sui fornitori, rafforzare l'aggiornamento dell'inventario). Servono entrambe." },
+   { "h": "La domanda che rivela la qualità", "d": "Una domanda debole è «avete chiuso il caso?»; una forte è «in che modo questa azione ha ridotto la probabilità che il problema si ripeta o compaia altrove?». La prima guarda all'archivio, la seconda al sistema. Il 10.2, letto bene, ti porta esattamente lì." },
+   { "h": "Chiudere con decisioni attese", "d": "Il rapporto non dovrebbe mai chiudersi con un generico «tutto monitorato», ma con alcune decisioni attese, alcuni punti ancora incerti e un momento di riesame in cui verificare se le scelte hanno prodotto effetto. Solo così la direzione entra nel ciclo di apprendimento, e non resta spettatrice." }
+  ]
+ },
+ {
+  "id": "42001_m09_s027",
+  "layout": "evidenza",
+  "kicker": "Il rapporto alla direzione · 5",
+  "eyebrow": "Non un documento occasionale",
+  "titolo": "Il valore del rapporto si misura qualche mese dopo",
+  "testo": "Il valore vero del rapporto non si misura nel giorno in cui viene presentato, ma qualche mese dopo, quando puoi capire se le decisioni prese abbiano modificato davvero il sistema. Per questo non deve essere un documento occasionale, compilato solo quando succede qualcosa di rumoroso: deve diventare un punto stabile del ciclo di governo, collegato al follow-up delle azioni, alla verifica della loro efficacia e alla capacità di riconoscere le stesse cause quando ricompaiono altrove. Dare continuità significa che ogni aggiornamento riprende le decisioni precedenti e chiede con onestà che cosa abbiano prodotto: se la direzione aveva chiesto maggiore trasparenza ai fornitori, oggi ne vede gli effetti reali o solo una formula contrattuale diversa? Se era stata avviata un'azione sui dati, la ricorrenza è diminuita o il problema si è solo spostato? Così il rapporto non celebra il lavoro svolto, misura l'apprendimento ottenuto. C'è un vantaggio anche per la cultura: la direzione smette di interpretare i rilievi come episodi fastidiosi e comincia a leggerli come materiale normale del miglioramento continuo. Un rapporto occasionale tratterebbe tre problemi diversi separatamente; un rapporto vivo mostra che la causa ricorrente è una sola — la debolezza del presidio sul perimetro reale dei servizi acquistati — e allora la direzione non discute tre casi, ma una priorità di sistema. Deve essere comprensibile senza impoverire i fatti, guidare decisioni e vivere nel tempo."
+ },
+ {
+  "id": "42001_m09_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 9",
+  "modNum": "9",
+  "titolo": "Dal problema locale al sistema che impara",
+  "punti": [
+   { "h": "La logica del punto 10.2", "d": "Reagire alla non conformità, contenerla, correggerla, affrontarne le conseguenze, cercarne la causa, allargare lo sguardo ai casi simili, attuare l'azione correttiva necessaria, riesaminarne l'efficacia e, se serve, modificare il sistema. La domanda decisiva: il sistema ha corretto il sintomo, o ha imparato sulla propria causa profonda?" },
+   { "h": "Le non conformità emergenti", "d": "L'inventario incompleto: non puoi governare ciò che non sai di usare. Gli impatti valutati male: la prestazione tecnica non esaurisce le conseguenze reali. I dati non governati: una base informativa opaca rende fragile tutto. I fornitori opachi: acquistare un servizio non significa acquistare comprensione e controllo." },
+   { "h": "Incidente e non conformità", "d": "Possono incontrarsi ma non coincidono per definizione: l'incidente parla di effetti e urgenza, la non conformità del mancato rispetto di un requisito. Tenerle distinte evita di banalizzare i segnali deboli e di trasformare ogni evento in una conclusione affrettata. Aprire due piste protegge il presente e costruisce futuro." },
+   { "h": "Il rapporto e le quattro domande", "d": "Alla direzione serve un rapporto leggibile: perimetro reale, fatti rilevanti, cause ricorrenti, efficacia delle azioni, decisioni richieste. Porta con te quattro domande: quale requisito è stato mancato, quale causa lo ha reso possibile, dove potrebbero esistere NC simili, come verificherai che l'azione correttiva abbia funzionato." }
+  ],
+  "prossimo": {
+   "modulo": "10",
+   "titolo": "Verificare l'SGIA: programma e preparazione",
+   "testo": "Fin qui hai osservato come il sistema corregge, comprende e migliora; da qui in avanti vedrai come impostare il lavoro di verifica in modo coerente, credibile e utile al suo apprendimento."
+  }
+ }
+]
