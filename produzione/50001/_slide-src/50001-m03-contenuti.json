@@ -1,0 +1,394 @@
+[
+ {
+  "id": "50001_m03_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 50001 — Sistemi di gestione dell'energia",
+  "kicker": "Modulo 3",
+  "eyebrow": "Ciò che dà direzione al sistema",
+  "titolo": "Contesto, leadership e pianificazione generale",
+  "testo": "Fin qui hai costruito il quadro generale del sistema; ora entri nella parte che gli dà direzione, priorità e responsabilità. È una tappa decisiva, perché qui capisci se il sistema nasce dalla realtà dell'organizzazione oppure se viene appoggiato sopra la realtà senza guidarla davvero. La domanda vera non è se esista un documento gradevole: è se il sistema energetico sia stato pensato attorno ai processi, alle persone e alle decisioni che contano. C'è un motivo pratico nell'ordine: se parti dagli obiettivi senza aver chiarito contesto e confini, fissi traguardi che parlano dei temi sbagliati; se scrivi la politica senza un coinvolgimento reale della direzione, ottieni un testo corretto e poco influente; se assegni ruoli senza chiarire autorità, il gruppo di gestione resta un nome in organigramma. Userai una lente precisa: non ti fermerai a chiedere se qualcosa esiste, ma se è pertinente, coerente, applicato, compreso e aggiornato. Non entriamo ancora nel motore quantitativo (analisi energetica, EnPI, dati): qui prepari il terreno.",
+  "agenda": [
+   "Il contesto e le parti interessate pertinenti",
+   "Campo di applicazione, confini e la regola dura sui tipi di energia",
+   "L'SGE come sistema di processi e la leadership dell'alta direzione",
+   "La politica energetica come bussola operativa",
+   "Ruoli, responsabilità, autorità e gruppo di gestione dell'energia",
+   "Rischi e opportunità, obiettivi, traguardi e piani d'azione"
+  ]
+ },
+ {
+  "id": "50001_m03_s002",
+  "layout": "split",
+  "kicker": "Contesto e perimetro · 1",
+  "titolo": "Capire il contesto, non fare una fotografia",
+  "lead": "La norma non chiede una descrizione generica: chiede di individuare gli aspetti interni ed esterni pertinenti allo scopo dell'organizzazione, che possono influenzare i risultati attesi dell'SGE e il miglioramento della prestazione energetica. La parola chiave è pertinenti: non raccogli tutto ciò che esiste, selezioni ciò che conta davvero per l'energia. Un buon contesto non è un elenco neutro, è una lettura causale.",
+  "punti": [
+   { "h": "Aspetti interni ed esterni", "d": "Interni: modello produttivo, età degli impianti, competenze, decisioni di investimento, manutenzione, turni, qualità dei dati. Esterni: costo e disponibilità dei vettori, richieste dei clienti, regole del proprietario dell'immobile, clima locale, stabilità della rete, incentivi. Diventano rilevanti se incidono sulla prestazione o sui risultati." },
+   { "h": "Il cambiamento climatico va valutato", "d": "L'organizzazione deve chiedersi apertamente quanto il cambiamento climatico pesi nel proprio quadro: non allo stesso modo per tutti, ma la domanda non può essere saltata. In un deposito refrigerato incide su fabbisogni, carichi di punta e continuità; in un piccolo ufficio il peso è diverso. Ciò che non può mancare è la prova che sia stata presa sul serio." },
+   { "h": "Uno sfondo dinamico, non una foto", "d": "Se cambiano prezzi dell'energia, arriva una nuova linea, il sito viene ampliato o una funzione esternalizzata, il quadro cambia — e con esso rischi, opportunità, priorità, talvolta i confini. Non fermarti al documento iniziale: cerca segnali di aggiornamento — riunioni, riesami, decisioni, piani rivisti." },
+   { "h": "La base logica di tutto il resto", "d": "Obiettivi scollegati dal contesto difficilmente saranno stabili: ridurre i consumi notturni ha senso in un sito a turni flessibili, molto meno in un processo continuo. Contesto significa capire cosa, dentro e fuori, può aiutare o ostacolare i risultati energetici attesi: se manca questa lettura, il sistema perde orientamento." }
+  ]
+ },
+ {
+  "id": "50001_m03_s003",
+  "layout": "punti",
+  "kicker": "Contesto e perimetro · 2",
+  "titolo": "Parti interessate, esigenze e aspettative pertinenti",
+  "intro": "Il criterio non è fare un catalogo dell'universo: devi identificare i soggetti che contano davvero rispetto alla prestazione energetica e all'SGE, capire quali requisiti portano, e stabilire quali esigenze l'organizzazione decide di affrontare tramite il sistema. La pertinenza non dipende dal prestigio, ma dall'effetto concreto sull'energia o sui requisiti.",
+  "punti": [
+   { "h": "Chi conta rispetto all'energia", "d": "Autorità, fornitori di energia, proprietari di immobili, clienti con richieste ambientali, investitori, casa madre, comunità, personale, manutentori esterni. Un piccolo locatore che decide sugli impianti centrali può essere più rilevante di un grande cliente che non formula alcuna richiesta energetica." },
+   { "h": "Determinare i requisiti pertinenti", "d": "Distingue il sistema serio da quello decorativo. Se un cliente chiede dati energetici su un prodotto, se il proprietario impone regole sugli interventi, se la casa madre fissa criteri di approvvigionamento: sono requisiti da individuare e capire. Non tutti i desideri diventano obblighi, ma tutti i requisiti pertinenti vanno compresi." },
+   { "h": "Cosa affronta mediante l'SGE", "d": "L'organizzazione sceglie: può trattare nel sistema le richieste dei clienti sui consumi di processo ma non quelle sugli imballaggi, perché non attengono all'energia. Non pretendi che ogni aspettativa entri: cerchi coerenza, criterio e motivazione." },
+   { "h": "Due domande di test", "d": "Se questa parte cambiasse richiesta o comportamento, la prestazione o il sistema ne risentirebbero davvero? L'organizzazione sa spiegare quale risposta dà a quel requisito? Se entrambe le risposte sono sì, la parte è davvero pertinente; se prevalgono nomi generici e aspettative vaghe, è un elenco di contorno." }
+  ]
+ },
+ {
+  "id": "50001_m03_s004",
+  "layout": "flusso",
+  "kicker": "Contesto e perimetro · 3",
+  "titolo": "Requisiti legali e altri requisiti energetici",
+  "intro": "La norma riserva attenzione specifica ai requisiti legali applicabili e agli altri requisiti che incidono su prestazioni energetiche, modi d'uso dell'energia e livelli di consumo. Il punto non è solo conoscerli in astratto: è una catena completa, non un semplice archivio normativo. Un test pratico: se chiedi a una funzione tecnica quali obblighi influenzano una decisione, trovi una risposta concreta o solo un rinvio a un elenco centrale?",
+  "passi": [
+   { "h": "Accesso", "d": "Poter consultare in modo affidabile le prescrizioni che contano — non per forza una banca dati sofisticata: per una piccola realtà una responsabilità interna chiara con supporto mirato; per un gruppo articolato un monitoraggio strutturato. Non fermarti alla dichiarazione: l'organizzazione sa dove reperire i requisiti e mantiene l'accesso nel tempo?" },
+   { "h": "Applicabilità", "d": "Qui molti sistemi si indeboliscono: un elenco di leggi da solo non dice quasi nulla. Serve il collegamento con processi, impianti, usi energetici, ruoli e decisioni. Un obbligo su controlli di rendimento interessa alcuni impianti e non altri; applicare non è copiare il requisito, è tradurlo in impatto operativo." },
+   { "h": "Considerarli nel sistema", "d": "La conformità energetica non vive separata dall'SGE: i requisiti devono influenzare decisioni, priorità, controlli, obiettivi, piani e riesami. Se l'organizzazione conosce un obbligo ma non lo riflette in alcun processo, non lo sta gestendo. E deve considerare i limiti imposti da autorizzazioni, contratti di servizio, obblighi di manutenzione." },
+   { "h": "Riesame periodico", "d": "Le leggi cambiano, i contratti si aggiornano, il sito si modifica: un requisito prima non applicabile può diventarlo dopo un nuovo impianto. Un registro identico a quello dell'anno prima, mentre l'azienda installa punti di ricarica e amplia il magazzino, segnala che si insegue il sistema invece di governarlo." }
+  ]
+ },
+ {
+  "id": "50001_m03_s005",
+  "layout": "split",
+  "kicker": "Contesto e perimetro · 4",
+  "titolo": "Campo di applicazione e confini: il perimetro vero",
+  "lead": "Serve una scelta di perimetro: dove il sistema vale, su quali attività si applica, quali elementi rientrano nel governo energetico dichiarato. Senza, il sistema resta ambiguo — e un sistema ambiguo è difficile da valutare e facile da piegare a convenienza. La norma chiede di determinare confini e applicabilità considerando gli aspetti del contesto e i requisiti pertinenti: il perimetro non nasce da una scelta arbitraria, ma da una lettura ragionata.",
+  "punti": [
+   { "h": "Non è la mappa dei siti", "d": "Il campo di applicazione è una definizione di applicabilità: a quali attività, processi, reparti, edifici o servizi il sistema si estende. Due organizzazioni con siti simili possono definire campi diversi, se diverso è il livello di controllo, la struttura contrattuale o il peso energetico. Ciò che conta è che la scelta sia motivata e coerente." },
+   { "h": "La domanda decisiva", "d": "L'organizzazione ha leve sufficienti per governare le prestazioni nel perimetro dichiarato? Se include attività su cui non può decidere né intervenire, costruisce un sistema poco credibile; se lascia fuori aree rilevanti solo perché difficili da governare, lo alleggerisce artificialmente. Il problema non è formale, è la tenuta logica del perimetro." },
+   { "h": "Un caso a due stabilimenti", "d": "Uno di proprietà, uno in affitto con impianti gestiti dal locatore, un magazzino affidato a terzi, una sede a consumi modesti: definire il campo non significa includere ogni luogo del bilancio. Può essere sensato includere i due stabilimenti e la sede, ma non il magazzino esterno gestito integralmente da terzi." },
+   { "h": "I confini evitano confusione", "d": "Non creano zone d'ombra: aiutano a stabilire chi è responsabile, quali dati raccogliere, dove fissare obiettivi, quali risorse mettere. Con un centro dati esterno che pesa molto ma di cui controlli solo alcuni parametri contrattuali, la scelta va resa chiara — non «è esterno, quindi non conta», ma quanto controllo esiste e quali requisiti derivano dal contratto." }
+  ]
+ },
+ {
+  "id": "50001_m03_s006",
+  "layout": "punti",
+  "kicker": "Contesto e perimetro · 5",
+  "titolo": "Autorità e controllo entro i confini dichiarati",
+  "intro": "La norma non chiede solo un perimetro dichiarato: chiede che, dentro la porzione scelta, esistano leve reali per governare come l'energia viene usata, con quali rendimenti e livelli di consumo. Il controllo richiesto è sostanziale, non puramente proprietario: cercalo nelle decisioni, nei contratti, nelle interfacce, nelle responsabilità e nei margini operativi.",
+  "punti": [
+   { "h": "Non controllo assoluto, ma potere decisionale", "d": "Avere un potere sufficiente, diretto o organizzato tramite accordi, per incidere sulle prestazioni. Un'azienda in affitto può non possedere la centrale termica, ma avere accordi per definire temperature, orari, manutenzione e ottimizzazioni: il controllo esiste anche senza la proprietà." },
+   { "h": "Il ruolo delle interfacce", "d": "Molte realtà non controllano tutto direttamente, ma controllano come i rapporti con terzi sono strutturati: un contratto di manutenzione può imporre criteri di efficienza, un capitolato livelli minimi di servizio, un contratto con il gestore parametri e fasce orarie. Il controllo passa dalla capacità di tradurre il fabbisogno in responsabilità contrattuali." },
+   { "h": "Il test di realismo", "d": "Se l'organizzazione dichiara di voler migliorare il rendimento di una centrale che non può né regolare né far modificare, dov'è la leva? Se invece mostra accordi, responsabilità e indicatori condivisi col terzo, il quadro cambia. Non serve un controllo perfetto, serve un controllo efficace e dimostrabile." },
+   { "h": "L'errore opposto", "d": "Restringere troppo il campo solo perché alcune leve sono condivise. Un sito chimico che usa vapore da una centrale di polo, ma definisce finestre operative, richiede livelli di servizio e concorda interventi, ha un controllo significativo pur non proprietario. La domanda corretta non è «di chi è l'impianto», ma «quali decisioni energetiche l'organizzazione può orientare»." }
+  ]
+ },
+ {
+  "id": "50001_m03_s007",
+  "layout": "evidenza",
+  "kicker": "Contesto e perimetro · 6",
+  "eyebrow": "La regola dura",
+  "titolo": "Dentro il perimetro, nessun tipo di energia escluso",
+  "testo": "È uno dei passaggi più netti dell'intero blocco. Dopo che campo di applicazione e confini sono stati definiti, ogni forma di energia che esiste entro quel perimetro deve restare nel quadro del sistema. Non vuol dire che ogni tipo di energia avrà lo stesso peso o la stessa priorità: vuol dire che non puoi disegnare un perimetro ampio e poi far sparire, dentro quel perimetro, alcune fonti o vettori solo perché scomodi da gestire. Immagina uno stabilimento incluso integralmente: al suo interno si usano energia elettrica, gas naturale e gasolio per alcuni mezzi. Se il sistema considera solo l'energia elettrica, perché più misurata e più semplice da analizzare, sta violando la logica della norma. Attenzione: non ti si chiede di trattare tutto con identica profondità dal primo giorno. Alcuni tipi di energia avranno un impatto molto maggiore, e riceveranno più attenzione nelle analisi, negli obiettivi e nei piani; ma la loro priorità nasce da una valutazione tecnica successiva, non da un'esclusione arbitraria iniziale. Prima riconosci che quei tipi di energia esistono nel perimetro, poi ne valuti peso, variabilità, opportunità e significatività. Questa severità evita che il sistema diventi cosmetico, centrato solo sulle fonti più facili da misurare: protegge l'integrità del sistema e la comparabilità dei miglioramenti dichiarati. In una frase: prima scegli in modo onesto il perimetro, poi dentro quel perimetro accetti tutta l'energia che esiste, senza esclusioni selettive."
+ },
+ {
+  "id": "50001_m03_s008",
+  "layout": "confronto",
+  "kicker": "Contesto e perimetro · 7",
+  "titolo": "Perimetro documentato, chiaro, aggiornabile",
+  "intro": "La norma chiede che campo di applicazione e confini siano mantenuti come informazioni documentate: serve a rendere il perimetro stabile, comprensibile e verificabile. Se resta solo nella testa di poche persone, ogni cambio di ruolo o sito lo modifica in modo implicito. Una descrizione deve essere comprensibile senza interpretazioni creative — non basta scrivere «si applica alle attività aziendali».",
+  "a": {
+   "h": "Formulazione debole",
+   "sub": "Larga e poco informativa",
+   "punti": [
+    { "d": "«Il sistema si applica alla gestione dell'energia dell'organizzazione»: non spiega quasi nulla. Non dice dove, con quali confini, se comprende produzione, uffici, flotte, depositi o attività affidate a terzi." },
+    { "d": "Se è documentato ma nessuno lo sa spiegare, è stato scritto senza essere interiorizzato; se viene descritto in modi diversi da funzioni diverse, il sistema lavora con confini instabili, e l'ambiguità si trascina in tutti i punti successivi." }
+   ]
+  },
+  "b": {
+   "h": "Formulazione utile",
+   "sub": "Il dove, il cosa, il perché",
+   "punti": [
+    { "d": "«Il sistema si applica al sito produttivo di Ravenna e alla sede collegata, includendo stampaggio, raffreddamento, utilities e servizi ausiliari sotto controllo, con esclusione del magazzino logistico esterno gestito da terzi.» Il lettore capisce dove, cosa e il perché dell'esclusione." },
+    { "d": "Coerente tra documento, pratica, ruoli e raccolta dati, e aggiornato quando l'organizzazione acquisisce un reparto, chiude una linea, internalizza un servizio. Riduce ambiguità e discussioni improduttive: sai cosa rientra, quindi valuti meglio obiettivi, azioni e risultati." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m03_s009",
+  "layout": "definizione",
+  "kicker": "Il sistema di gestione",
+  "eyebrow": "Un sistema vivo di processi",
+  "titolo": "L'SGE non è un documento, è una rete di processi",
+  "definizione": "L'organizzazione deve costruire, far funzionare, mantenere e far evolvere un SGE, includendo i processi necessari e i legami tra questi processi, per sostenere nel tempo il miglioramento della prestazione energetica. Il sistema non è un singolo documento, ma un insieme di processi collegati; e il miglioramento atteso non riguarda solo il sistema in sé, ma anche la prestazione energetica.",
+  "punti": [
+   "Le interazioni contano quanto i processi: se il reparto energia individua opportunità ma acquisti non le considera, il sistema si inceppa; se il riesame vede gli scostamenti ma nessuno aggiorna i piani, il miglioramento continuo si ferma.",
+   "Non esiste uno stampo unico: i processi variano per dimensione, tipo di attività, complessità e competenza. Una piccola torrefazione avrà un sistema più snello di un gruppo multisito con utilities centralizzate. Non tutte devono assomigliarsi, ma tutte devono essere coerenti con la propria realtà.",
+   "Chiediti sempre dove passa il flusso delle decisioni: chi rileva un problema energetico, chi lo traduce in azione, chi approva le risorse, chi verifica l'efficacia, chi aggiorna dati e priorità. Se le risposte convergono, anche con strumenti semplici, stai vedendo un sistema vivo."
+  ]
+ },
+ {
+  "id": "50001_m03_s010",
+  "layout": "punti",
+  "kicker": "Leadership · 1",
+  "titolo": "Leadership e impegno: la prova che il sistema conta",
+  "intro": "La norma non chiede una presenza simbolica: chiede impegno concreto verso il miglioramento continuo della prestazione e l'efficacia dell'SGE. Molti sistemi nascono bene sul piano tecnico ma restano deboli su quello manageriale — e quando manca la guida dall'alto, prima o poi mancano risorse, priorità, integrazione e continuità.",
+  "punti": [
+   { "h": "Presidiare perimetro e coerenza strategica", "d": "L'alta direzione assicura che campo di applicazione e confini siano stabiliti, e che politica, obiettivi e traguardi siano compatibili con la direzione strategica. Gli obiettivi energetici non devono vivere su un binario separato dal business: devono essere allineati alla traiettoria dell'organizzazione." },
+   { "h": "Integrazione nei processi aziendali", "d": "L'energia non può restare confinata a una funzione tecnica isolata: deve entrare in acquisti, manutenzione, investimenti, gestione operativa, pianificazione, responsabilità di linea. Se la direzione approva un nuovo impianto senza alcuna considerazione energetica, l'integrazione promessa non esiste." },
+   { "h": "Piani approvati e risorse reali", "d": "I piani d'azione ricevono approvazione chiara e vengono messi in pratica, con risorse disponibili. Se il responsabile energia propone un piano ma nessuno lo finanzia, la leadership è debole; se il piano è approvato ma nessuno ne segue l'attuazione, l'impegno è solo dichiarato." },
+   { "h": "Un gruppo energia e il governo del cambiamento", "d": "Il sistema non può poggiare su una sola persona eroica: serve un gruppo di gestione dell'energia riconoscibile e sostenuto. La leadership sostiene le persone, presidia i cambiamenti che toccano la prestazione, e assicura che gli EnPI la rappresentino adeguatamente — i vertici non si perdono nel dettaglio, ma non si disinteressano di come il miglioramento viene misurato." }
+  ]
+ },
+ {
+  "id": "50001_m03_s011",
+  "layout": "split",
+  "kicker": "Leadership · 2",
+  "titolo": "Leadership che entra nei processi aziendali",
+  "lead": "La leadership non coincide con una firma. Il criterio concreto: l'energia deve entrare nei processi aziendali, non restare ai margini. Se questi collegamenti non esistono, il sistema può sembrare ordinato ma lavorerà in parallelo al business — e un sistema parallelo, prima o poi, perde priorità, risorse e credibilità.",
+  "punti": [
+   { "h": "Cercare tracce di integrazione reale", "d": "Quando si sostituisce un compressore, si valuta solo il prezzo iniziale o anche l'impatto energetico nel tempo? Quando si pianifica la manutenzione, si guarda solo la continuità o anche l'efficienza? Quando si ridefiniscono i turni, si considerano avviamenti e picchi? Domande che cercano tracce, non perfezione." },
+   { "h": "Dare criteri e togliere ostacoli", "d": "Se un responsabile acquisti sa che per certe categorie la valutazione energetica è obbligatoria, agirà diversamente. E se i reparti vedono il tema come un carico senza supporto, lo rimandano; se trovano dati, priorità chiare e decisioni coerenti, lo usano come criterio normale." },
+   { "h": "L'errore da riconoscere", "d": "L'organizzazione afferma che l'energia è importante, ma i processi decisionali restano identici: investimenti approvati senza confronto tra alternative, capitolati senza requisiti coerenti, manutenzione valutata solo per guasti, pianificazione che ignora i consumi. L'SGE esiste sulla carta ma non è penetrato nel funzionamento reale." },
+   { "h": "Risorse in senso ampio, e comunicazione", "d": "Risorse non è solo budget: tempo delle persone, competenze, strumenti di misura, accesso ai dati, coordinamento, attenzione del management. E quando i vertici parlano di energia solo durante la certificazione, il tema è episodico; quando lo collegano a continuità, costo industriale, affidabilità e competitività, diventa cultura organizzativa." }
+  ]
+ },
+ {
+  "id": "50001_m03_s012",
+  "layout": "cards",
+  "kicker": "Leadership · 3",
+  "titolo": "Il gruppo di gestione dell'energia",
+  "intro": "Far esistere un gruppo di gestione dell'energia non è una formalità elegante: è un presidio organizzativo che tiene insieme decisioni, dati, priorità e attuazione. Il tema attraversa funzioni diverse — produzione, manutenzione, acquisti, amministrazione: senza un luogo di coordinamento, ciascuno vede solo un pezzo del problema. Non deve essere numeroso, ma composto da ruoli che possano incidere davvero.",
+  "cards": [
+   { "h": "Le competenze e le leve giuste", "d": "In una realtà manifatturiera media: responsabile manutenzione, referente di produzione, figura acquisti, chi presidia dati e utilities, una persona che riporta all'alta direzione. In una piccola realtà alcuni ruoli coincidono. Non il titolo perfetto, ma la presenza delle competenze e delle leve necessarie." },
+   { "h": "Serve un mandato reale", "d": "Se il gruppo nasce senza mandato, tempo e autorevolezza, diventa un tavolo che si riunisce poco e decide meno. Se l'alta direzione chiarisce aspettative, responsabilità e priorità, il gruppo funziona come motore: raccoglie informazioni affidabili, propone piani, segue avanzamenti, segnala ostacoli, connette funzioni." },
+   { "h": "Il rischio del gruppo che non governa", "d": "Molti nomi ma nessuna disciplina: riunioni con commenti generici, dati in ritardo, azioni non seguite, problemi rinviati. In apparenza esiste, nella pratica non governa. Servono regole semplici: quali informazioni si portano, come si valutano, chi prende in carico le azioni, quando si verifica l'avanzamento, come si riporta alla direzione." },
+   { "h": "Mantenere viva la vitalità", "d": "Dopo il primo anno l'attenzione cala e il gruppo rischia la routine — stesse persone, stessi temi. Le realtà mature rivedono la composizione (chi è toccato dai nuovi temi siede al tavolo), alternano il fuoco delle riunioni e si chiedono se producono ancora decisioni o solo aggiornamenti. Un gruppo giovane va valutato sul mandato, uno maturo sulla capacità di rinnovarsi." }
+  ]
+ },
+ {
+  "id": "50001_m03_s013",
+  "layout": "cards",
+  "kicker": "Leadership · 4",
+  "titolo": "Guidare il cambiamento, pretendere indicatori credibili",
+  "intro": "Un tratto della leadership emerge quando le cose cambiano. La norma chiede processi per identificare e affrontare i cambiamenti che riguardano l'SGE e la prestazione entro il campo di applicazione: il sistema non deve reagire solo dopo aver subito gli effetti, deve vederli arrivare, valutarli e tradurli in decisioni. E c'è una connessione stretta con la qualità degli indicatori.",
+  "cards": [
+   { "h": "Quali cambiamenti contano", "d": "Una nuova linea, una ristrutturazione, un cambio di orario o mix, l'esternalizzazione di un servizio, un nuovo locatore tecnico, un grande fermo, la sostituzione di utilities, perfino un cambiamento commerciale che modifica volumi e finestre operative." },
+   { "h": "Governare, non rincorrere", "d": "Un magazzino del freddo che amplia e modifica i flussi: se è gestito solo come tema immobiliare, i carichi e le sequenze si destabilizzano. Se il gruppo energia entra tardi, il sistema rincorre; se la leadership pretende che il tema entri fin dall'inizio, il cambiamento viene governato." },
+   { "h": "Non difendere riferimenti superati", "d": "L'organizzazione misura bene il passato ma non riconosce quando i vecchi riferimenti non bastano più. La leadership matura non difende procedure e obiettivi solo perché esistono: li riesamina quando la realtà si sposta." },
+   { "h": "Indicatori che non ingannano", "d": "I vertici non possono accontentarsi di indicatori comodi ma fuorvianti. Se un'azienda guarda solo il consumo totale mensile e nel mese cambiano volumi, mix e ore, il totale non dice abbastanza. La direzione non progetta gli indicatori, ma chiede: «questo numero aiuta davvero a capire come stiamo andando?»" }
+  ]
+ },
+ {
+  "id": "50001_m03_s014",
+  "layout": "split",
+  "kicker": "Politica energetica · 1",
+  "titolo": "Politica energetica: bussola, non slogan",
+  "lead": "Molte organizzazioni trattano la politica come un testo istituzionale per fare buona impressione. Dovrebbe invece essere una bussola operativa: dichiara la direzione scelta dall'alta direzione e offre l'orientamento stabile da cui far nascere, correggere e mantenere coerenti obiettivi e traguardi. Se non orienta le decisioni, resta una pagina ben scritta e poco utile.",
+  "punti": [
+   { "h": "Appropriata agli scopi dell'organizzazione", "d": "Non può essere generica: deve parlare la lingua della realtà aziendale. Un'impresa con forti consumi termici e margini stretti avrà una politica diversa da una società di servizi con edifici distribuiti. Il testo può essere breve, ma deve riflettere priorità vere, non formule intercambiabili." },
+   { "h": "Parlare la lingua dell'impresa", "d": "Se una logistica del freddo dice solo «promuoviamo l'uso razionale dell'energia», è corretto ma debole. Se collega la gestione dell'energia alla continuità della catena del freddo, all'affidabilità degli impianti, alla riduzione degli sprechi e alla qualità del servizio, la politica inizia a parlare la lingua dell'impresa." },
+   { "h": "Un riferimento per le scelte successive", "d": "La politica dà la direzione generale, obiettivi e traguardi la traducono in risultati. Prendi un obiettivo e chiediti se riesci a collegarlo alla politica senza forzature: se sì, orienta davvero; se no, è un testo decorativo. Davanti a due alternative di investimento, la politica non decide da sola, ma rende legittimo che l'impatto energetico entri nella valutazione." },
+   { "h": "L'equilibrio giusto", "d": "Una politica troppo dettagliata invecchia presto e diventa rigida; una troppo vaga non guida nessuno. Dichiara impegni solidi, coerenti e abbastanza stabili, lasciando a obiettivi e piani il dettaglio operativo. Pensala come un patto interno: questa è la direzione che consideriamo importante, questi gli impegni che ci assumiamo." }
+  ]
+ },
+ {
+  "id": "50001_m03_s015",
+  "layout": "cards",
+  "kicker": "Politica energetica · 2",
+  "titolo": "Gli impegni che la rendono solida",
+  "intro": "Una politica utile non si limita a buone intenzioni: la norma chiede alcuni impegni precisi, e ciascuno ha conseguenze operative. Visti insieme, mostrano che la politica non è un testo ornamentale, ma una dichiarazione di priorità che tocca risorse, conformità, miglioramento, acquisti e progettazione.",
+  "cards": [
+   { "h": "Informazioni e risorse", "d": "L'impegno a garantire disponibilità di informazioni e risorse per raggiungere obiettivi e traguardi lega la politica alla fattibilità. Se parla di miglioramento ma nessuno mette tempo per i rilievi, competenze per le analisi e budget per gli interventi, l'impegno è vuoto. La politica protegge dal rischio di obiettivi senza mezzi." },
+   { "h": "Conformità e miglioramento continuo", "d": "L'impegno a soddisfare i requisiti legali applicabili e gli altri requisiti pertinenti fa della politica un ponte tra prestazione e conformità. E l'impegno al miglioramento continuo della prestazione e dell'SGE tiene i due elementi insieme: non solo un sistema più ordinato, ma usarlo per progredire nel tempo." },
+   { "h": "Acquisti efficienti", "d": "La politica sostiene l'approvvigionamento di prodotti e servizi efficienti quando hanno impatto sulla prestazione: una delle prove più chiare di integrazione. Sostituendo un gruppo pompe, gli acquisti non chiedono solo prezzo e tempi, ma dati di efficienza, condizioni operative, prestazione nel ciclo di vita — considerare l'efficienza come criterio serio." },
+   { "h": "Progettazione", "d": "La politica supporta le attività di progettazione che considerano il miglioramento della prestazione. Ogni volta che si progettano nuovi spazi, linee, modifiche o revisioni, l'energia non dovrebbe arrivare tardi: se la politica la richiama, progettisti e responsabili hanno un riferimento per inserirla fin dall'inizio." }
+  ]
+ },
+ {
+  "id": "50001_m03_s016",
+  "layout": "cards",
+  "kicker": "Politica energetica · 3",
+  "titolo": "Una politica che circola, si capisce, si aggiorna",
+  "intro": "Anche la migliore politica perde valore se resta invisibile o incompresa. La norma chiede che sia documentata, comunicata all'interno, resa accessibile all'esterno quando ha senso, e periodicamente riesaminata e aggiornata. Quattro richieste semplici in apparenza, ma rivelatrici di come il sistema vive davvero. Il segnale migliore è la coerenza.",
+  "cards": [
+   { "h": "Documentata", "d": "Esiste in una forma stabile e riconoscibile, non dipende dalla memoria orale: evita derive interpretative e permette di verificare se ciò che le persone dicono corrisponde all'impegno assunto. Una politica documentata può essere riesaminata, aggiornata e collegata agli altri elementi con più coerenza." },
+   { "h": "Comunicata (non solo pubblicata)", "d": "Non basta affiggerla o inviarla per email: le persone rilevanti devono comprenderla nel lavoro concreto. Un manutentore ne coglie il senso rispetto a perdite e tarature; chi compra rispetto a criteri e capitolati; un capo reparto rispetto a regolazioni, turni, comportamenti. Se è letta una volta e dimenticata, la comunicazione è stata debole." },
+   { "h": "Accessibile all'esterno quando serve", "d": "In certi contesti è utile metterla a disposizione di clienti, proprietari di immobili, casa madre, partner. A un locatore che controlla impianti centrali favorisce scelte coerenti; a un cliente che chiede attenzione lungo la filiera diventa strumento di dialogo. Non sostituisce dati e risultati, ma chiarisce l'orientamento della direzione." },
+   { "h": "Riesaminata periodicamente", "d": "Protegge dall'invecchiamento: se cambiano strategia, processi, perimetro o priorità, il testo potrebbe dover cambiare. Una politica immutata per anni non è per forza sbagliata, ma deve essere il risultato di una conferma consapevole, non di semplice inerzia." }
+  ]
+ },
+ {
+  "id": "50001_m03_s017",
+  "layout": "confronto",
+  "kicker": "Ruoli · 1",
+  "titolo": "Responsabilità e autorità non sono la stessa cosa",
+  "intro": "Quando arrivi ai ruoli, una distinzione diventa decisiva. La norma chiede che, per i ruoli rilevanti, compiti e leve decisionali siano definiti con chiarezza e resi noti. Non basta dire chi deve fare qualcosa: devi capire chi ha il potere, o almeno la leva, per farla accadere. Se assegni responsabilità senza autorità, costruisci frustrazione più che governance. Cerca sempre la corrispondenza tra ruolo dichiarato e comportamento osservabile.",
+  "a": {
+   "h": "La responsabilità",
+   "sub": "Rispondere di un risultato",
+   "punti": [
+    { "d": "Un ruolo risponde di un risultato o di un'attività. Ma un responsabile manutenzione dichiarato figura chiave per la riduzione delle perdite di vapore, se non può programmare fermate, richiedere materiali adeguati e portare le priorità ai capi produzione, ha una responsabilità solo teorica." },
+    { "d": "L'errore frequente: tutto il tema energia attribuito a una sola figura, competente ma isolata, che raccoglie dati e propone azioni senza autorità su acquisti, produzione o investimenti. In superficie un referente chiaro; in profondità un sistema che dipende da una persona sola, e quindi fragile." }
+   ]
+  },
+  "b": {
+   "h": "L'autorità",
+   "sub": "Poter decidere e intervenire",
+   "punti": [
+    { "d": "Il ruolo può decidere, approvare, richiedere, coordinare o intervenire in modo coerente con la responsabilità. Non devono coincidere in modo assoluto — molte decisioni sono condivise — ma devono essere compatibili: chiedere di migliorare la prestazione di un reparto senza poter influenzare manutenzione, settaggi, dati o investimenti è un obiettivo senza strumenti." },
+    { "d": "Comunicare ruoli e autorità è altrettanto importante: produzione deve sapere quando coinvolgere manutenzione, acquisti chi consultare per una specifica, chi gestisce utilities a chi riportare gli scostamenti. Senza questa chiarezza, il sistema si appoggia sulle relazioni personali invece che su meccanismi stabili." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m03_s018",
+  "layout": "numeri",
+  "kicker": "Ruoli · 2",
+  "titolo": "Il mandato del gruppo energia",
+  "intro": "La norma entra nel merito: l'alta direzione deve assegnare al gruppo di gestione dell'energia responsabilità e autorità per compiti precisi. Questo trasforma il gruppo da tavolo di coordinamento a presidio con un mandato definito — una griglia utile per capire se il sistema ha struttura.",
+  "numeri": [
+   { "n": "1", "h": "Stabilire, attuare, mantenere, migliorare", "d": "Assicurare che l'SGE sia stabilito (costruzione e regole), attuato (passaggio alla pratica), mantenuto (continuità) e migliorato (correggere e rafforzare). Se il gruppo lavora solo sul primo punto — documenti e riunioni iniziali — ma non segue attuazione e mantenimento, il mandato resta incompleto." },
+   { "n": "2", "h": "Assicurare la conformità alla norma", "d": "Vigilare che i processi esistano, siano applicati e restino coerenti con quanto richiesto. Non che il gruppo faccia tutto da solo, ma che abbia visione e autorità per capire dove il sistema si indebolisce e attivare correzioni o escalation verso l'alta direzione." },
+   { "n": "3", "h": "Attuare i piani d'azione", "d": "Sposta il gruppo dal coordinamento formale alla realizzazione: seguirne avanzamento, risorse, responsabilità, ostacoli e risultati. Se un intervento si blocca per mancanza di dati, di fermata o di approvazione economica, il gruppo deve avere il mandato per far emergere il problema e cercare una soluzione." },
+   { "n": "4", "h": "Riportare all'alta direzione", "d": "A intervalli stabiliti, le prestazioni del sistema e il miglioramento della prestazione energetica. Un reporting efficace non presenta solo numeri: spiega scostamenti, cause, rischi, opportunità, avanzamento e bisogni di supporto. Con indicatori grezzi senza interpretazione, la direzione fatica a decidere." },
+   { "n": "5", "h": "Stabilire criteri e metodi", "d": "Definire come si valutano le azioni, come si leggono i dati, quali regole guidano priorità e controlli, quali modalità rendono stabile il funzionamento. Senza criteri condivisi, ogni reparto agisce secondo logiche diverse — e in un'azienda multisito il sistema perde unità." }
+  ]
+ },
+ {
+  "id": "50001_m03_s019",
+  "layout": "split",
+  "kicker": "Pianificazione · 1",
+  "titolo": "Rischi e opportunità che nascono dal contesto",
+  "lead": "Entrando nella pianificazione, la norma chiede di determinare i rischi e opportunità da affrontare, considerando il contesto, i requisiti pertinenti e il riesame delle attività e dei processi che possono influenzare la prestazione. Non una lista astratta: nascono dalla realtà dell'organizzazione e dal modo in cui usa energia. Un rischio ostacola i risultati attesi; un'opportunità, se colta, migliora il sistema o la prestazione — e spesso sono collegati.",
+  "punti": [
+   { "h": "A che cosa servono", "d": "A dare ragionevole fiducia che il sistema raggiunga i risultati previsti, a prevenire o ridurre effetti indesiderati, a sostenere il miglioramento continuo. Se un rischio non ha relazione con risultati energetici o con il funzionamento dell'SGE, probabilmente non appartiene a questo punto." },
+   { "h": "Un esempio dal contesto", "d": "Un'azienda con impianti frigoriferi sa che d'estate la domanda elettrica cresce e che alcune regolazioni restano troppo conservative per timore di fermate. Il rischio è una prestazione peggiore, con picchi e costi; l'opportunità è rivedere logiche di controllo, manutenzione e formazione. Non stai ancora scrivendo il piano: individui il nodo da affrontare." },
+   { "h": "Evitare le formule generiche", "d": "Riempire il registro con «aumento dei costi energetici» è troppo vago se non chiarisci perché tocca il sistema, dove si manifesta, quali processi coinvolge. Un'analisi utile mette in relazione fonti, effetti e aree: più il legame è chiaro, più le azioni successive avranno senso." },
+   { "h": "Non solo impianti", "d": "Rischi e opportunità nascono anche da competenze insufficienti, dati poco affidabili, ruoli poco chiari, contratti che limitano il controllo, cambiamenti nel mix, richieste delle parti interessate, investimenti rimandati. E devono restare coerenti con la politica: se questa enfatizza conformità e acquisti efficienti, dovresti ritrovarli nel modo in cui l'organizzazione legge i propri rischi." }
+  ]
+ },
+ {
+  "id": "50001_m03_s020",
+  "layout": "punti",
+  "kicker": "Pianificazione · 2",
+  "titolo": "Dai rischi e opportunità alle azioni verificabili",
+  "intro": "Individuare rischi e opportunità è metà del lavoro. La norma chiede di pianificare le azioni per affrontarli, integrarle e attuarle nei processi del sistema e della prestazione, e valutarne l'efficacia. Questo distingue un'analisi interessante da una pianificazione capace di cambiare davvero i risultati.",
+  "punti": [
+   { "h": "Nominare non è affrontare", "d": "Un rischio non è gestito perché descritto bene, ma quando esiste un'azione coerente, assegnata, inserita nei processi e verificata. Se l'organizzazione sa di avere perdite ricorrenti o dati incompleti ma si limita a registrarlo in una tabella, non ha affrontato nulla: ha solo nominato il problema." },
+   { "h": "Integrare, non creare un mondo parallelo", "d": "Se l'azione riguarda acquisti, entra nei criteri di approvvigionamento; se manutenzione, nella programmazione e nei controlli; se gestione operativa, nelle istruzioni e nelle routine; se competenze, nella formazione. Da «migliorare gli avviamenti» a sequenze più stabili, capi turno formati, dati mirati e settaggi rivisti: questa è pianificazione." },
+   { "h": "Completare non è essere efficaci", "d": "Molte organizzazioni verificano se un'attività è chiusa, non se ha funzionato. Chiudere un'azione significa completarla; valutarne l'efficacia significa capire se ha ridotto il rischio o migliorato la prestazione. Cambiare una procedura non basta se il comportamento resta identico; una nuova regolazione non basta se i risultati non migliorano." },
+   { "h": "Preparare il metodo prima", "d": "Già in fase di pianificazione: quali evidenze mostreranno che l'azione ha funzionato, quali dati, chi li leggerà. Le azioni devono restare coerenti con la politica e realistiche rispetto ai processi: un piano troppo ambizioso senza risorse si ferma presto, uno troppo prudente non incide. La buona pianificazione tiene insieme pertinenza, integrazione e verificabilità." }
+  ]
+ },
+ {
+  "id": "50001_m03_s021",
+  "layout": "punti",
+  "kicker": "Pianificazione · 3",
+  "titolo": "Obiettivi e traguardi, dalla direzione ai livelli pertinenti",
+  "intro": "Il sistema deve trasformare le priorità in risultati attesi: entrano obiettivi e traguardi energetici, che la norma chiede di stabilire per le funzioni e i livelli pertinenti. Questa formula impedisce un errore diffuso: un solo obiettivo generale, elegante da mostrare ma lontano dai punti in cui l'energia viene davvero influenzata.",
+  "punti": [
+   { "h": "Scendere dove ci sono leve reali", "d": "La prestazione nasce in luoghi concreti: regolazioni di linea, manutenzione, acquisti, orari, utilities, investimenti. Un obiettivo direzionale dà orientamento, ma da solo non basta: serve capire quali funzioni possono incidere e quali livelli devono ricevere una responsabilità leggibile." },
+   { "h": "Obiettivo e traguardo", "d": "L'obiettivo esprime la direzione di miglioramento; il traguardo la rende più concreta, vicina a un risultato verificabile. «Migliorare l'efficienza delle utilities» resta alto; i traguardi scendono: ridurre perdite di aria compressa, stabilizzare le accensioni dei sistemi ausiliari, migliorare la gestione dei carichi fuori produzione. Allora le funzioni pertinenti diventano evidenti." },
+   { "h": "La parola «pertinenti»", "d": "Evita due trappole opposte: assegnare obiettivi a funzioni senza influenza reale, solo per dare impressione di coinvolgimento; o concentrare tutto su una figura tecnica isolata, lasciando fuori i ruoli che governano le cause dei consumi. Un sistema maturo colloca gli obiettivi dove esistono responsabilità, dati e potere di intervento." },
+   { "h": "Coerenti con la storia del sistema", "d": "Gli obiettivi non sono un elenco autonomo scritto alla fine: riflettono il contesto letto, i requisiti delle parti interessate, la direzione della politica. Se il quadro segnala impianti datati e oscillazioni di carico, gli obiettivi ne parlano. E guidano conversazioni concrete: se un capo reparto li collega a settaggi, tempi morti e fermate, l'obiettivo sta scendendo nel lavoro vero." }
+  ]
+ },
+ {
+  "id": "50001_m03_s022",
+  "layout": "numeri",
+  "kicker": "Pianificazione · 4",
+  "titolo": "Come devono essere per reggere alla prova dei fatti",
+  "intro": "Una volta stabiliti, obiettivi e traguardi devono avere alcune qualità precise. Se una sola manca, il sistema si indebolisce. Una regola pratica: un buon obiettivo nasce dalla politica, guarda ai requisiti applicabili, si concentra sugli usi che contano, è monitorabile, viene comunicato e non resta immobile per inerzia.",
+  "numeri": [
+   { "n": "1", "h": "Coerenti con la politica", "d": "Un controllo potente: se la politica promette miglioramento continuo, rispetto dei requisiti, risorse e attenzione ad acquisti e progettazione, gli obiettivi devono essere la traduzione concreta di quegli impegni, non un elenco indipendente scritto all'ultimo momento." },
+   { "n": "2", "h": "Misurabili, quando fattibile", "d": "Non tutto ridotto a un numero, ma dove ha senso devi capire se il risultato si muove nella direzione attesa. «Ridurre i consumi anomali durante gli avviamenti» con criteri chiari è più utile di «migliorare la gestione». Attento a non usare «fattibile» come scusa per evitare ogni misura: spesso un modo ragionevole esiste." },
+   { "n": "3", "h": "Legati a requisiti e usi che contano", "d": "Devono considerare i requisiti applicabili, gli usi significativi e le opportunità di miglioramento. Se un'azienda con grandi forni insiste quasi solo sulle lampade in ufficio, guarda gli usi sbagliati; se il cuore riguarda forni, utilities e modalità operative che spostano i consumi principali, la pianificazione è credibile." },
+   { "n": "4", "h": "Monitorati, comunicati, aggiornati, documentati", "d": "Qualcuno li guarda davvero nel tempo, non solo dodici mesi dopo; chi ha una parte nell'attuazione sa cosa si cerca e perché; vengono aggiornati quando la realtà si sposta — non ogni mese, ma con il coraggio di rivederli; e restano informazione documentata, a protezione di memoria, allineamento e tracciabilità." }
+  ]
+ },
+ {
+  "id": "50001_m03_s023",
+  "layout": "flusso",
+  "kicker": "Pianificazione · 5",
+  "titolo": "Piani d'azione: il ponte tra obiettivi e risultati",
+  "intro": "La norma chiede di pianificare come raggiungere obiettivi e traguardi, mantenendo piani d'azione leggibili e governabili. Un obiettivo senza piano resta un auspicio; un piano senza obiettivo diventa attività dispersa. E le azioni devono essere considerate nei processi aziendali: se prevedono acquisti, entrano negli acquisti; se manutenzione, nella manutenzione. Cinque domande a cui ogni piano deve rispondere.",
+  "passi": [
+   { "h": "Che cosa verrà fatto", "d": "Non un titolo generico: non «ottimizzare i consumi della verniciatura», ma revisione delle logiche di avvio dei forni, ricerca perdite nel circuito di aria compressa, aggiornamento dei parametri di stand-by, formazione dei capi turno sulle sequenze corrette. Più l'azione è chiara, più diventa attuabile e controllabile." },
+   { "h": "Con quali risorse", "d": "Non solo denaro: ore delle persone, competenze, supporto manutentivo, accesso ai dati, fermate programmate, strumenti di misura, tempo di coordinamento. Molti piani falliscono qui: l'azione è ben descritta ma nessuno ha chiarito quali mezzi servono, e il piano resta aperto o si chiude solo sulla carta." },
+   { "h": "Chi ne è responsabile", "d": "Non chi partecipa, ma chi risponde del fatto che l'azione proceda e arrivi a una verifica finale. Se la responsabilità è diffusa in modo indistinto, nessuno sente il piano come proprio; se è assegnata con chiarezza, è più facile seguire avanzamento, ostacoli e scostamenti." },
+   { "h": "Entro quali tempi", "d": "Ogni azione ha una scadenza o una finestra coerente: senza tempo, la priorità si abbassa. Ma serve realismo — una revisione di settaggi può richiedere settimane, una sostituzione impiantistica mesi. Un piano maturo ordina le azioni secondo complessità, dipendenze e impatto atteso." },
+   { "h": "Come si valutano i risultati", "d": "La domanda più importante: non solo se l'azione è completata, ma con quale metodo capirai se ha prodotto miglioramento della prestazione. Dati di consumo, tempi di funzionamento, stabilità operativa, andamento di un indicatore: il metodo può cambiare, ma va pensato prima, non inventato a posteriori." }
+  ]
+ },
+ {
+  "id": "50001_m03_s024",
+  "layout": "timeline",
+  "kicker": "Pianificazione · 6",
+  "titolo": "Esempio completo: dal rischio al piano che regge",
+  "intro": "Un caso realistico dall'inizio alla fine — un'azienda di alimenti surgelati. Il valore non sta nel numero di azioni, ma nella coerenza della catena: contesto, parti interessate, politica, rischi e opportunità, obiettivi, traguardi e piano devono raccontare la stessa storia. Confronta ogni tappa con la versione debole («rischio: consumi elevati; obiettivo: migliorare l'efficienza; piano: sensibilizzare»), dove formalmente esiste qualcosa ma manca quasi tutto.",
+  "tappe": [
+   { "t": "01", "h": "Contesto e parti interessate", "d": "Estati sempre più gravose, impianti frigoriferi a rendimento disomogeneo, forte pressione dei clienti sulla continuità del freddo. Parti interessate pertinenti: cliente, proprietà dell'immobile, manutentore esterno, alta direzione. La politica richiama miglioramento continuo, risorse, acquisti e requisiti applicabili." },
+   { "t": "02", "h": "Rischi e opportunità", "d": "Rischio: aumento dei consumi elettrici nelle fasce critiche, aggravato da porte aperte, regolazioni conservative e manutenzione non tempestiva. Opportunità: migliorare la stabilità del sistema frigorifero intervenendo su comportamenti, logiche di controllo e priorità manutentive." },
+   { "t": "03", "h": "Obiettivo e traguardi", "d": "Obiettivo: migliorare la prestazione del sistema di refrigerazione nel sito principale — chiaro ma alto. Traguardi che lo rendono gestibile: ridurre i consumi anomali notturni, stabilizzare i parametri nelle celle critiche, diminuire le dispersioni da aperture non controllate." },
+   { "t": "04", "h": "Il piano d'azione", "d": "Per il primo traguardo: revisione dei timer, verifica dei settaggi dei compressori, confronto settimanale tecnico–capi turno. Per il secondo: verifiche manutentive mirate su valvole e sensori in deriva. Per il terzo: chiusure automatiche, routine di carico, formazione dei turni serali. Ogni azione descritta con precisione." },
+   { "t": "05", "h": "Risorse, responsabilità, verifica", "d": "Ore manutentive, accesso ai dati, supporto del fornitore dei controlli, un piccolo budget, tempo di coordinamento. Manutenzione guida le attività tecniche, logistica i comportamenti, il gruppo energia verifica avanzamento, la direzione sblocca le risorse. E si dichiara come sarà letta l'efficacia: andamenti di consumo, stabilità, anomalie notturne, a cadenza regolare." }
+  ]
+ },
+ {
+  "id": "50001_m03_s025",
+  "layout": "split",
+  "kicker": "In verifica · 1",
+  "titolo": "Verificare contesto, parti interessate e perimetro",
+  "lead": "Ora ti alleni a verificare la logica costruita. Su contesto, parti interessate e perimetro, la domanda centrale non è se esista un fascicolo ordinato, ma se la lettura dell'organizzazione sia pertinente, attuale e coerente con le decisioni prese. Parti sempre da un confronto tra racconto formale e realtà operativa: devi collegare ciò che l'organizzazione dice di essere con ciò che realmente governa.",
+  "punti": [
+   { "h": "Contesto: cerca collegamenti causali", "d": "Se dichiara come fattori rilevanti prezzi dell'energia, età degli impianti, stagionalità o clima, dovresti ritrovarli in priorità, obiettivi e azioni. Se il contesto è descritto in modo elegante ma non lascia tracce, è stato compilato come introduzione. Un buon segnale: persone diverse raccontano gli stessi fattori con parole proprie ma convergenti." },
+   { "h": "Parti interessate e requisiti", "d": "Non un elenco infinito: i soggetti davvero pertinenti. Se mancano quelli che influenzano chiaramente le prestazioni, la lettura è debole; se compaiono molti nomi senza requisiti associati, il sistema accumula rumore. Sui requisiti: c'è accesso, sa spiegare come si applicano, li riesamina? Cosa è cambiato dopo una modifica del sito?" },
+   { "h": "Perimetro leggibile e la regola dura", "d": "Una buona definizione fa capire dove si applica, quali attività include, quali interfacce, quale autorità di controllo. Una debole usa formule larghe o cambia a seconda di chi la spiega. E confronta il perimetro con dati, obiettivi e report: se un vettore energetico esiste nel sito ma non compare mai, è fuori perimetro con coerenza o escluso in modo improprio?" },
+   { "h": "L'aggiornamento", "d": "Contesto, parti interessate e perimetro sono stati rivisti quando l'organizzazione ha cambiato sito, processo, locatore tecnico, mix o assetto impiantistico? Un quadro immobile da anni in una realtà molto cambiata segnala che il sistema non segue la vita dell'organizzazione; revisioni motivate e coerenti sono un segnale forte di maturità." }
+  ]
+ },
+ {
+  "id": "50001_m03_s026",
+  "layout": "punti",
+  "kicker": "In verifica · 2",
+  "titolo": "Verificare leadership, politica e ruoli",
+  "intro": "Il rischio più grande è fermarti alle prove formali: una politica firmata, un organigramma aggiornato e qualche verbale esistono anche in un sistema debole. Per capire se la leadership è reale, cerca tracce di presenza manageriale nelle decisioni e nelle interazioni tra funzioni. La leadership si verifica meglio nei fatti che nei testi, e i ruoli nelle decisioni più che negli organigrammi.",
+  "punti": [
+   { "h": "L'alta direzione nei fatti", "d": "Ha approvato perimetro, politica, obiettivi e piani, ma soprattutto li conosce e li sostiene? Chiede aggiornamenti, mette a disposizione risorse, collega l'energia a strategia, investimenti e processi? Se ne parla solo alla certificazione, la leadership è sottile; se il tema ricompare in decisioni operative e riesami, il segnale cambia." },
+   { "h": "La politica letta insieme al resto", "d": "Da sola non prova nulla, ma dice molto se la leggi con il resto: appropriata allo scopo, coerente col contesto, capace di fornire un quadro per obiettivi. Chiedi alle persone chiave cosa ricordano e come la traducono: se produzione, manutenzione e acquisti la collegano a decisioni concrete, vive; se nessuno va oltre formule generiche, è rimasta lontana dalla pratica." },
+   { "h": "Ruoli con autorità compatibili", "d": "Le responsabilità sono chiare e accompagnate da autorità compatibili? È il test decisivo: una figura responsabile di un risultato ma senza influenza su decisioni, priorità o risorse ha una responsabilità fragile. E il gruppo energia esiste come presidio o è solo un nome? Verifica chi ne fa parte, come segue i piani, come riporta, quali criteri adotta." },
+   { "h": "Come affrontano i cambiamenti", "d": "Quando arriva un nuovo impianto o un diverso assetto produttivo, qualcuno si chiede che effetto avrà sull'SGE e sulla prestazione? Se nessuno presidia questo passaggio, la leadership non governa ancora in modo maturo; se il cambiamento viene intercettato, discusso e portato nei processi, stai vedendo un'organizzazione più credibile." }
+  ]
+ },
+ {
+  "id": "50001_m03_s027",
+  "layout": "tabella",
+  "kicker": "In verifica · 3",
+  "titolo": "Verificare la pianificazione: la catena logica",
+  "intro": "Il tuo compito è seguire una catena logica completa: rischi e opportunità nascono da contesto, parti interessate e processi? Gli obiettivi sono coerenti con la politica? I piani traducono tutto in attività integrate e verificabili? Se la catena si interrompe, il sistema perde forza. Cerca la storia di almeno un caso concreto: prendi un rischio, segui obiettivo, traguardo, piano, responsabilità, efficacia.",
+  "cols": ["Anello", "Cosa cercare", "Segnale debole"],
+  "righe": [
+   ["Rischi e opportunità", "Pertinenti alla prestazione e all'SGE, in lingua di impianti, processi, dati, vincoli", "Formule astratte prese da altri sistemi, senza collegamento con la realtà energetica"],
+   ["Obiettivi e traguardi", "I rischi importanti tradotti in priorità, ai livelli pertinenti, sui requisiti e le aree rilevanti", "Obiettivi eleganti ma scollegati dalle criticità emerse; traguardi come desideri indistinti"],
+   ["Piani d'azione", "Cosa/risorse/responsabile/tempi/metodo di valutazione, integrati in acquisti, manutenzione, conduzione", "Manca uno degli elementi; le azioni non entrano nei processi aziendali"],
+   ["Efficacia e apprendimento", "Distinguere completamento da risultato; dopo la verifica il sistema capisce perché e aggiorna i criteri", "Si dimostra che l'azione è chiusa, non che ha funzionato; nessun apprendimento estende l'intervento"]
+  ]
+ },
+ {
+  "id": "50001_m03_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 3",
+  "modNum": "3",
+  "titolo": "La catena che tiene insieme il sistema energetico",
+  "punti": [
+   { "h": "Dal contesto al perimetro", "d": "Tutto parte dal contesto — ciò che dentro e fuori può influenzare i risultati attesi — poi le parti interessate e i loro requisiti pertinenti, poi il perimetro, con la regola severa: dentro il campo di applicazione non puoi escludere selettivamente i tipi di energia presenti. L'SGE è una rete di processi e interazioni, non un documento." },
+   { "h": "Leadership e politica", "d": "La leadership dell'alta direzione è decisiva: senza guida reale mancano integrazione, priorità, risorse e continuità. La politica energetica non è uno slogan, ma una bussola che orienta obiettivi e traguardi. E hai distinto responsabilità da autorità, con il gruppo energia che trasforma l'impegno in presidio concreto." },
+   { "h": "La pianificazione", "d": "Rischi e opportunità nascono da contesto, requisiti, processi e cambiamenti; gli obiettivi e traguardi devono essere coerenti con la politica, ai livelli pertinenti, monitorati e aggiornati; i piani d'azione chiariscono cosa si farà, con quali mezzi, chi ne risponde, entro quali tempi, con quale metodo di valutazione." },
+   { "h": "La formula da portare via", "d": "Prima capisci la realtà, poi definisci il perimetro, coinvolgi la leadership, dichiari una direzione con la politica, assegni ruoli credibili, leggi rischi e opportunità, stabilisci obiettivi e traguardi, e solo allora organizzi piani che producano risultati. E verifichi cercando pertinenza, integrazione ed efficacia, non solo presenza di documenti." }
+  ],
+  "prossimo": {
+   "modulo": "4",
+   "titolo": "Il motore quantitativo: analisi energetica, EnPI e dati",
+   "testo": "Ora che sai chi guida il sistema, su quale perimetro e con quali priorità, entrerai nel cuore quantitativo: analisi energetica, indicatori di prestazione, consumi di riferimento e raccolta dei dati."
+  }
+ }
+]
