@@ -1,0 +1,401 @@
+[
+ {
+  "id": "42001_m10_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 42001 — Sistemi di gestione dell'IA",
+  "kicker": "Modulo 10",
+  "eyebrow": "Un buon esito nasce prima del campo",
+  "titolo": "Verificare l'SGIA: programma e preparazione",
+  "testo": "In questo modulo passi dalla teoria alla preparazione concreta. Un buon esito nasce prima dell'apertura formale sul campo: quando definisci bene obiettivi, priorità, persone, documenti da studiare e piste di prova. Se questa fase è debole, anche un gruppo esperto raccoglie molte informazioni e poche evidenze utili. In un SGIA vale ancora di più, perché i sistemi di IA non sono tutti uguali: alcuni a basso impatto, altri influenzano persone, decisioni, sicurezza, reputazione e conformità. Non puoi preparare ogni intervento con lo stesso stampo: ti serve un criterio di priorità chiaro, difendibile e coerente col contesto. La bussola è la metodologia generale di ISO 19011:2026, applicata però alle particolarità dell'IA. Ascolta con una domanda fissa: dove potrebbe nascondersi il vero rischio di perdere il controllo? E l'oggetto non è solo il modello né il software, ma l'insieme di processi, ruoli, controlli, dati, monitoraggi e decisioni che consentono un uso responsabile.",
+  "agenda": [
+   "ISO 19011 in chiave IA: stessi principi, oggetto più complesso",
+   "Il programma di audit guidato da impatto e criticità",
+   "L'inventario: la mappa che rende visibile il perimetro",
+   "Le competenze del gruppo: quando servono profili specialistici",
+   "La preparazione documentale e il dossier",
+   "La checklist come guida ragionata delle prove"
+  ]
+ },
+ {
+  "id": "42001_m10_s002",
+  "layout": "split",
+  "kicker": "Metodo in chiave IA · 1",
+  "titolo": "ISO 19011 in chiave IA: stessi principi, oggetto più complesso",
+  "lead": "La metodologia generale resta la stessa, ma l'oggetto che osservi è più mobile, più tecnico e spesso meno trasparente. I principi professionali non cambiano — integrità, imparzialità, approccio basato su evidenze, pianificazione ragionata — ma cambia il modo di metterli a terra. Se li applichi in modo meccanico, rischi di vedere solo la superficie: dati che cambiano qualità nel tempo, modelli riaddestrati, fornitori esterni, scelte automatizzate poco spiegabili.",
+  "punti": [
+   { "h": "Il controllo adatto alla natura del sistema", "d": "Non ti prepari a verificare solo se esiste un controllo, ma se quel controllo è adatto alla natura del sistema. Un motore di classificazione fornito da un partner con contratto e indicatore di puntualità sembra ordinato, ma non sai ancora come è alimentato, chi controlla gli errori, se le decisioni vengono riesaminate." },
+   { "h": "Il rischio come criterio di focalizzazione", "d": "Non una parola generica da presentazione, ma un criterio: dove l'impatto potenziale su persone, processi o risultati è più elevato, aumenta la profondità della preparazione; dove il caso d'uso è semplice e poco critico, calibri in modo più leggero tempi e campionamento." },
+   { "h": "Tre piani da tenere insieme", "d": "Se ti fermi al modello perdi il contesto; se guardi solo il sistema di gestione perdi le specificità tecniche. Devi tenere insieme governance, ciclo di vita del sistema e impatti concreti del suo uso, senza confonderli." },
+   { "h": "Evidenze pertinenti, non schermate", "d": "Non basta accumulare policy e diagrammi: cerchi evidenze verificabili che colleghino ciò che l'organizzazione dichiara con ciò che governa. Non verifichi la perfezione tecnica del modello in assoluto, ma se l'organizzazione ha impostato e mantiene controlli adeguati e coerenti con obiettivi e requisiti applicabili." }
+  ]
+ },
+ {
+  "id": "42001_m10_s003",
+  "layout": "punti",
+  "kicker": "Metodo in chiave IA · 2",
+  "titolo": "Obiettivi, criteri e campo: definire bene prima di partire",
+  "intro": "Se non definisci bene perché stai verificando, contro cosa verifichi e fino a dove arrivi, tutto il resto si confonde. Nell'IA questa chiarezza conta ancora di più, perché il perimetro reale è spesso più ampio di quello percepito: un sistema apparentemente piccolo può dipendere da dati esterni, da un servizio cloud, da regole di business e da un processo umano di revisione.",
+  "punti": [
+   { "h": "Obiettivi operativi, non vaghi", "d": "«Verifichiamo l'IA dell'azienda» non orienta né la raccolta documentale né il campionamento. Molto meglio: valutare se l'organizzazione identifica i sistemi di IA nel campo, ne classifica la criticità, assegna responsabilità chiare e mantiene controlli coerenti con gli impatti attesi." },
+   { "h": "Criteri da più fonti coerenti", "d": "Non una sola fonte: la norma, ma anche procedure interne, ruoli formalizzati, criteri di accettazione, obblighi contrattuali, requisiti legali e impegni auto-assunti. Molti problemi emergono dal confronto tra fonti che dovrebbero essere coerenti — la procedura chiede una valutazione preventiva, ma il registro mostra un aggiornamento entrato in produzione senza riesame." },
+   { "h": "Il campo è più articolato del modello", "d": "Non «verifichiamo il modello» o «la piattaforma»: includi almeno il processo che decide l'uso, chi lo governa, da quali dati dipende, con quali monitoraggi viene seguito e quali attività umane ne correggono gli esiti. Solo così colleghi gestione e operatività." },
+   { "h": "Priorità motivata, non evasione", "d": "Il campo generale può includere tutti i sistemi, ma il campo specifico può concentrarsi sui più rilevanti — quelli che influenzano persone, conformità, sicurezza o decisioni sensibili — usando gli altri come campione secondario. Non stai evitando il lavoro: applichi un criterio professionale di priorità." }
+  ]
+ },
+ {
+  "id": "42001_m10_s004",
+  "layout": "split",
+  "kicker": "Metodo in chiave IA · 3",
+  "titolo": "Dalla carta alle piste di evidenza: seguire il flusso reale",
+  "lead": "La trappola più comune è confondere una buona descrizione del sistema con una buona gestione del sistema. Le organizzazioni preparano presentazioni curate e policy ben scritte, ma non sempre mantengono la stessa solidità nel controllo operativo. Per uscirne, imposta piste di evidenza che seguano il flusso reale, con una domanda: se ciò che mi viene raccontato fosse vero fino in fondo, quali tracce concrete dovrei poter vedere?",
+  "punti": [
+   { "h": "Collegare, non collezionare", "d": "Se esiste un processo di approvazione, non basta il diagramma: dovresti trovare un caso recente, le responsabilità, i criteri, gli esiti, le condizioni d'avvio. Se monitorano l'affidabilità, non basta un indicatore generico: chi osserva, con quale frequenza, con quali soglie e cosa accade quando il sistema si scosta." },
+   { "h": "Ragionare per ciclo di vita", "d": "Ideazione, sviluppo o acquisizione, rilascio, uso operativo, monitoraggio, gestione delle modifiche, uscita dal servizio. Se la pista di evidenza si interrompe sempre nello stesso punto, lì spesso si nasconde la debolezza. Un sistema può avere molto materiale sull'avvio e quasi nulla sul mantenimento del controllo nel tempo." },
+   { "h": "Le interviste giuste, non tante", "d": "Raramente basta un solo responsabile: servono chi governa il sistema, chi lo usa, chi gestisce i dati, chi controlla i fornitori, chi segue conformità o sicurezza, chi approva modifiche. Non per principio, ma per ricostruire il percorso reale delle decisioni. Più il sistema ha impatto, più questa ricostruzione deve essere robusta." },
+   { "h": "Sobrietà professionale", "d": "Non devi dimostrare che ogni rischio immaginabile è stato annullato, ma verificare se l'organizzazione ha identificato i rischi rilevanti e attivato controlli ragionevoli, coerenti e tracciabili. Una differenza cruciale, che evita sia l'approccio indulgente sia quello impossibile da sostenere." }
+  ]
+ },
+ {
+  "id": "42001_m10_s005",
+  "layout": "confronto",
+  "kicker": "Programma di audit · 1",
+  "titolo": "Priorità guidate da impatto e criticità",
+  "intro": "Il programma di audit non è un calendario elegante da esibire: è la traduzione pratica di una scelta di priorità. Se distribuisci il tempo in modo uniforme, trasmetti equità apparente ma produci scarso valore; se lo distribuisci in base a impatto e criticità, aumenti la probabilità di vedere ciò che conta. Le due dimensioni non sono sinonimi, e il programma deve tenerle insieme.",
+  "a": {
+   "h": "L'impatto",
+   "sub": "Che cosa può succedere, e a chi",
+   "punti": [
+    { "d": "Chiedi che cosa può accadere se quel sistema funziona male, è usato fuori contesto, viene modificato senza controllo o produce esiti non governati. Le conseguenze toccano persone, gruppi, processi, clienti, sicurezza, reputazione, obblighi legali o decisioni sensibili." },
+    { "d": "Un sistema può avere criticità tecnica limitata ma impatto elevato, perché influenza persone o accesso a servizi. Un assistente che suggerisce bozze rilette sempre dall'operatore ha impatto mediato; un sistema che ordina interventi su impianti critici no." }
+   ]
+  },
+  "b": {
+   "h": "La criticità",
+   "sub": "Quanto è centrale e difficile da presidiare",
+   "punti": [
+    { "d": "Quanto il sistema è centrale per l'organizzazione, dipendente da dati complessi, da terze parti, da aggiornamenti frequenti o da condizioni operative difficili. Un sistema può avere impatto medio ma criticità alta, perché poco trasparente, molto variabile o fortemente integrato." },
+    { "d": "Conta anche la maturità del controllo: un sistema nuovo merita un esame ravvicinato anche se non è il più impattante, perché emergono ruoli incerti e monitoraggi immaturi. Attenzione a non confondere abitudine con affidabilità: un sistema consolidato può diventare invisibile perché tutti lo danno per scontato." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m10_s006",
+  "layout": "punti",
+  "kicker": "Programma di audit · 2",
+  "titolo": "Frequenza, ampiezza e metodo: non tutto allo stesso modo",
+  "intro": "Molte organizzazioni sbagliano per eccesso di simmetria: stesso tempo, frequenza e profondità per ogni area, perché sembra più ordinato. È spesso il modo più sicuro per sprecare risorse. La logica corretta non è improvvisare, è calibrare: pensa al programma come a una matrice di intensità dove elementi diversi cambiano frequenza, ampiezza e metodo.",
+  "punti": [
+   { "h": "Che cosa cambia la frequenza", "d": "Il fatto che il sistema sia nuovo, abbia avuto modifiche recenti, dipenda da fornitori esterni o abbia generato reclami. Un classificatore di segnalazioni di frode merita più frequenza di un suggeritore di articoli di conoscenza, non perché più moderno, ma perché tocca conseguenze più sensibili." },
+   { "h": "Che cosa cambia ampiezza e metodo", "d": "L'ampiezza dipende dal numero di processi, dalla varietà dei dati e dalle funzioni interessate; il metodo dalla natura del caso — in alcuni conta la revisione documentale, in altri le interviste, la ricostruzione di casi reali, il riesame delle modifiche o il confronto tra indicatori dichiarati e decisioni prese." },
+   { "h": "Le modifiche attivano il programma", "d": "Nell'IA una modifica non è sempre un cambio di versione evidente: un nuovo set di dati, un riaddestramento, una sorgente aggiornata, un fornitore che cambia servizio. Prevedi criteri di attivazione anticipata — un incidente, una deviazione, una segnalazione, una novità normativa — così il programma resta vivo, non rituale." },
+   { "h": "Alternare profondità e trasversalità", "d": "Anche dando priorità a singoli sistemi, non perdere le aree trasversali: risorse, competenze, informazioni documentate, monitoraggi, trattamenti del rischio, riesami di direzione indeboliscono più sistemi insieme. Solo profondità e perdi la vista del sistema; solo trasversalità e perdi la realtà operativa. Ogni scelta deve essere spiegabile in poche frasi." }
+  ]
+ },
+ {
+  "id": "42001_m10_s007",
+  "layout": "numeri",
+  "kicker": "Programma di audit · 3",
+  "titolo": "Segnali che fanno alzare la priorità",
+  "intro": "Un programma utile non vive chiuso nel calendario: ascolta i segnali dall'organizzazione e li traduce in priorità aggiornate. Con l'IA è essenziale, perché alcuni problemi emergono gradualmente e altri esplodono dopo una modifica o un uso non previsto. Non seguire solo ciò che l'organizzazione considera urgente: potresti trascurare aree silenziose ma decisive.",
+  "numeri": [
+   { "n": "1", "h": "Gli eventi evidenti", "d": "Incidenti operativi, reclami, anomalie ripetute, errori con effetti concreti, contestazioni interne, richieste di chiarimento da clienti o funzioni di conformità. Non serve che il danno sia grave: basta che il segnale indichi una perdita di controllo o una debolezza non compresa." },
+   { "n": "2", "h": "Il cambiamento", "d": "Nuovi casi d'uso, espansione a nuove popolazioni, nuove fonti dati, riaddestramenti, nuovi fornitori, nuovi criteri di decisione, modifiche nei ruoli chiave. Anche quando tutto sembra andare bene, il cambiamento aumenta l'incertezza e quindi la necessità di verifica." },
+   { "n": "3", "h": "La visibilità che svanisce", "d": "Se un sistema è diventato così integrato da non essere più messo in discussione, rischia di essere trattato come infrastruttura neutra, pur continuando a influenzare decisioni importanti senza riesame. Un segnale sottile ma serio." },
+   { "n": "4", "h": "Le evidenze deboli", "d": "Documentazione che invecchia, responsabilità che si sovrappongono, indicatori monitorati ma mai discussi, riesami senza decisioni, fornitori che rilasciano aggiornamenti poco spiegati. Nessuno prova da solo una non conformità, ma tutti insieme indicano che il controllo si sta assottigliando." }
+  ]
+ },
+ {
+  "id": "42001_m10_s008",
+  "layout": "timeline",
+  "kicker": "Programma di audit · 4",
+  "titolo": "Un programma annuale: copertura ragionata",
+  "intro": "Un'organizzazione media usa sei applicazioni con componenti di IA: due interne a basso impatto, due operative, una sui fornitori, una sperimentale nel servizio clienti. Se pianificassi sei verifiche identiche otterresti una bella griglia ma poca sostanza. Un programma utile combina tre cose: coprire i meccanismi trasversali, approfondire i sistemi critici, lasciare spazio a eventi che impongono anticipo.",
+  "tappe": [
+   { "t": "01", "h": "Verifica trasversale iniziale", "d": "Inventario dei sistemi, criteri di classificazione della criticità, ruoli, gestione delle modifiche, monitoraggi, informazioni documentate. Una base per capire se l'architettura del sistema di gestione regge." },
+   { "t": "02", "h": "Approfondimento sul sistema operativo critico", "d": "Il sistema che assegna priorità agli interventi tocca tempi, sicurezza e continuità: casi concreti, modifiche recenti, soglie di monitoraggio, correzioni umane, governo del fornitore." },
+   { "t": "03", "h": "Fornitori e applicazioni interne", "d": "Una verifica sul sistema di valutazione fornitori, per impatto reputazionale e commerciale; in parallelo, una copertura più leggera delle applicazioni interne a basso impatto, concentrata su aggiornamenti e confini d'uso." },
+   { "t": "04", "h": "Il sistema sperimentale", "d": "Un intervento mirato sul nuovo sistema del servizio clienti, non perché oggi sia il più critico, ma perché è nuovo e quindi più esposto a incertezze di processo. Le competenze tecniche si pianificano quando è disponibile un supporto specialistico." },
+   { "t": "05", "h": "Revisione intermedia", "d": "A metà anno si riesaminano reclami, incidenti, modifiche, nuovi fornitori e risultati già ottenuti: se il sistema sperimentale viene esteso a nuovi clienti, la sua priorità sale. Un buon programma si legge in due minuti da un dirigente e in venti da chi lo esegue." }
+  ]
+ },
+ {
+  "id": "42001_m10_s009",
+  "layout": "evidenza",
+  "kicker": "L'inventario · 1",
+  "eyebrow": "Il punto d'incontro tra gestione e realtà tecnica",
+  "titolo": "Senza inventario, la preparazione resta cieca",
+  "testo": "L'inventario non è una tabella amministrativa creata per fare contenta la governance: è la mappa operativa senza la quale il lavoro di preparazione resta cieco. Se non sai quali sistemi esistono, dove sono usati, chi li governa, da quali dati dipendono e quali effetti producono, non puoi definire priorità credibili né raccogliere evidenze con logica. In molte organizzazioni esiste già qualcosa che assomiglia a un inventario, ma non basta che esista: deve essere utile. Un inventario utile dovrebbe permetterti di rispondere a domande essenziali: qual è lo scopo del sistema, in quale processo viene usato, chi ne è responsabile lato business e lato tecnico, se è sviluppato internamente o acquistato, quali dati principali usa, quale output produce, chi prende la decisione finale, quali impatti sensibili sono stati identificati, quali monitoraggi esistono e quali modifiche recenti sono avvenute. Due sistemi possono chiamarsi entrambi «assistente intelligente»: se però uno suggerisce risposte a personale qualificato e l'altro propone esiti usati per assegnare priorità a persone fragili, la rilevanza è completamente diversa. L'inventario serve anche a smascherare zone grigie — strumenti acquisiti da singole funzioni, componenti incorporate in piattaforme più ampie — e a ridurre la dipendenza dalle persone chiave. Non significa catalogare solo modelli sofisticati: la domanda corretta non è quanto è avanzata la tecnologia, ma che ruolo ha nel processo e quale impatto può generare."
+ },
+ {
+  "id": "42001_m10_s010",
+  "layout": "numeri",
+  "kicker": "L'inventario · 2",
+  "titolo": "Come leggerlo: famiglie, snodi di rischio, piste",
+  "intro": "Avere un inventario è molto, ma il valore emerge quando impari a leggerlo. La lettura utile non consiste nel controllare che ogni riga sia compilata, ma nel riconoscere schemi, concentrazioni di rischio e lacune che orientano subito la preparazione. Trasformi una lista in una mappa decisionale, leggibile in quattro modi.",
+  "numeri": [
+   { "n": "1", "h": "Per famiglie di sistemi", "d": "Raggruppa per finalità — supporto a decisioni, automazione di classificazioni, generazione di contenuti, rilevazione anomalie — perché rischi ed evidenze attese cambiano con la funzione. Un sistema che genera testo richiede domande diverse da uno che ordina priorità o segnala frodi." },
+   { "n": "2", "h": "Per processo aziendale", "d": "Osserva dove i sistemi si concentrano: se molte applicazioni sono nella relazione coi clienti o in funzioni operative critiche, la priorità sale, perché più sistemi nello stesso processo amplificano effetti e dipendenze." },
+   { "n": "3", "h": "Per dipendenze", "d": "Quali sistemi usano gli stessi dati, lo stesso fornitore, la stessa piattaforma o gli stessi ruoli di controllo. Se cinque sistemi si appoggiano allo stesso fornitore con governo contrattuale debole, non hai cinque problemi separati: hai un unico nodo sistemico." },
+   { "n": "4", "h": "Per cambiamento e assenze", "d": "Quali sistemi sono nuovi, modificati di recente, in via di estensione. E le assenze: quando mancano dati su monitoraggi, criteri di impatto o modifiche, non archiviarlo come incompletezza formale — spesso è il primo indizio di una gestione debole. L'inventario parla anche attraverso ciò che non riesce a dire." }
+  ]
+ },
+ {
+  "id": "42001_m10_s011",
+  "layout": "punti",
+  "kicker": "L'inventario · 3",
+  "titolo": "Dall'inventario al campione: dove entrare in profondità",
+  "intro": "La lista dei sistemi smette di essere descrittiva e diventa selettiva. Dall'inventario devi ricavare un campione che renda la verifica credibile, utile e proporzionata. Se scegli male puoi lavorare molto e capire poco; se scegli bene, anche un tempo limitato produce evidenze forti. Il campione non si sceglie per rappresentanza statistica, ma per capacità di generare giudizio professionale.",
+  "punti": [
+   { "h": "L'unità di campionamento", "d": "A volte conviene un singolo sistema, altre una famiglia che condivide dati, fornitore, processo o regole di governo. Se tre applicazioni del servizio clienti usano la stessa piattaforma e lo stesso flusso di approvazione, esaminarle insieme mostra se il problema, o il punto di forza, è locale o trasversale." },
+   { "h": "Profondità e contrasto", "d": "Un sistema molto impattante merita un percorso completo; uno meno critico un taglio più snello su uno snodo preciso. E includi almeno un caso ordinario, ben stabilizzato, come termine di confronto: ti impedisce di leggere ogni anomalia come destino inevitabile dei sistemi di IA." },
+   { "h": "Quanto recenti i casi", "d": "Privilegia casi abbastanza recenti da rappresentare l'uso attuale, ma abbastanza completi da mostrare monitoraggio e reazioni successive. Un caso appena avviato racconta l'ingresso in esercizio ma poco la tenuta nel tempo; quando l'inventario segnala modifiche importanti, seleziona casi successivi a quelle modifiche." },
+   { "h": "Il bias del più comodo", "d": "L'organizzazione tenderà a proporti i sistemi meglio documentati o che conosce meglio. Comprensibile, ma il tuo compito è cercare il campione più rivelatore, non il più comodo: righe incomplete, responsabilità opache o sistemi acquisiti fuori dai canali ordinari sono spesso il materiale più istruttivo." }
+  ]
+ },
+ {
+  "id": "42001_m10_s012",
+  "layout": "split",
+  "kicker": "L'inventario · 4",
+  "titolo": "Sistemi invisibili, confini incerti, inventario incompleto",
+  "lead": "Appena leggi l'inventario con occhio critico, compare un problema frequente: alcuni sistemi ci sono, funzionano, incidono, ma non sono descritti in modo adeguato; altri non compaiono affatto, entrati da percorsi informali o da funzionalità incluse in piattaforme più grandi. Non è solo una mancanza amministrativa: è un segnale che il perimetro del controllo potrebbe essere più stretto del perimetro dell'uso reale.",
+  "punti": [
+   { "h": "Gli indizi di incompletezza", "d": "Genericità eccessiva delle descrizioni («assistente intelligente», «motore avanzato» senza capire quale decisione influenzino); assenza di collegamenti (non sai da quali dati dipenda o come sia monitorato); discontinuità temporale (attivo, ma senza modifiche o conferme recenti — stabilità o abbandono narrativo?)." },
+   { "h": "La singola etichetta non basta", "d": "Una piattaforma «include funzioni di IA per migliorare il servizio»: solo parlando col responsabile emerge che propone priorità, suggerisce risposte e sintetizza segnalazioni. Di colpo non hai una funzionalità accessoria, ma più sistemi di IA con impatti diversi, che richiedono domande e forse competenze diverse." },
+   { "h": "Dove la componente cambia la natura del processo", "d": "Se una piattaforma documentale si limita a cercare testi, il rischio è uno; se genera sintesi usate per decidere, cambia. Con inventario ambiguo, usa domande semplici: il sistema produce solo supporto o orienta una decisione? L'utente corregge facilmente o tende a seguirlo? Le modifiche arrivano solo da configurazioni interne o anche dal fornitore?" },
+   { "h": "Un test di maturità del censimento", "d": "Team che usano strumenti esterni o funzioni predittive incluse in software già acquistati sfuggono ai canali classici. Se il censimento non le intercetta, l'organizzazione crede di governare tutti i sistemi mentre ne governa una parte. Un inventario incompleto non ti blocca: ti avvisa dove il sistema di gestione vede bene e dove vede male." }
+  ]
+ },
+ {
+  "id": "42001_m10_s013",
+  "layout": "cards",
+  "kicker": "L'inventario · 5",
+  "titolo": "Usare l'inventario per documenti, interviste e casi",
+  "intro": "Letto bene, l'inventario comincia a suggerirti il lavoro quasi da solo: non sostituisce il giudizio, ma orienta in modo ordinato tre scelte preparatorie. E quando costruisci documenti, interviste e casi a partire dall'inventario, stai già testando la qualità della governance: se per un sistema non riesci a identificare chi decide, chi controlla, quali documenti esistono e quale caso seguire, hai già una pista forte.",
+  "cards": [
+   { "h": "I documenti", "d": "Ogni riga aiuta a capire quale informazione è plausibile attendersi: per un sistema critico e maturo, scopo, ruoli, fonti dati, monitoraggi, modifiche; per uno nuovo, approvazione e condizioni di rilascio; se dipende da un fornitore, contratto, responsabilità e gestione degli aggiornamenti. Non chiedi tutto a tutti." },
+   { "h": "Le interviste", "d": "L'inventario ti impedisce di fermarti al responsabile più visibile e di convocare molte persone senza ragione. Se mostra ruoli distinti — proprietario, referente tecnico, funzione dati, conformità, utilizzatori — sai che una sola intervista non basta. L'obiettivo non è moltiplicare le voci, ma verificare se la stessa storia regge da prospettive diverse." },
+   { "h": "I casi da seguire", "d": "Sceglie casi significativi, dove il sistema incide di più o dove sono avvenute modifiche recenti. Se un'applicazione è stata estesa a nuovi utenti, segui un caso nato dopo l'estensione. Non fermarti a un esempio lineare: cerca un caso corretto da una persona, andato in eccezione o che ha richiesto escalation." },
+   { "h": "Il lavoro diventa comune", "d": "Costruire documenti, interviste e casi dall'inventario riduce le domande improvvisate e aumenta la qualità delle prove. La preparazione smette di essere una somma di letture individuali e diventa una mappa condivisa di lettura e di prova." }
+  ]
+ },
+ {
+  "id": "42001_m10_s014",
+  "layout": "punti",
+  "kicker": "Competenze del gruppo · 1",
+  "titolo": "La qualità del giudizio nasce prima del campo",
+  "intro": "Prima di fissare interviste e richieste documentali, una domanda scomoda: il gruppo che prepari è davvero in grado di capire ciò che andrà a vedere? L'errore più pericoloso non è non trovare un problema, è credere di aver capito quando si è letta solo la superficie. Le competenze non sono un dettaglio organizzativo: sono una condizione di affidabilità del giudizio, e servono già nella preparazione.",
+  "punti": [
+   { "h": "La base resta metodo e sistemi di gestione", "d": "Saper definire obiettivi, criteri, campo, campione, piste di evidenza, interviste e prove; mantenere indipendenza, equilibrio e tracciabilità del ragionamento. Senza questa base, anche il miglior tecnico fatica a trasformare osservazioni sparse in una valutazione solida." },
+   { "h": "Quattro aree di competenza", "d": "Metodologica (verifica, evidenze, campionamento, giudizio); di business (il processo in cui il sistema opera e i suoi impatti reali); normativa e di conformità (requisiti applicabili, obblighi interni, attese); tecnico-specialistica (dati, modelli, architetture, monitoraggi, limiti). Non sempre tutte allo stesso livello, ma devi sapere quali servono nel caso concreto." },
+   { "h": "Familiarità lessicale non è competenza", "d": "Saper usare parole come modello, addestramento, prompt o deriva non significa saper verificare se l'organizzazione controlla davvero quei fenomeni. E conoscere la norma non garantisce di capire quando una spiegazione tecnica è evasiva, incompleta o fuorviante." },
+   { "h": "Proporzionalità alla complessità", "d": "Le competenze devono essere proporzionate alla complessità del sistema e all'importanza del giudizio. Per un assistente documentale con forte controllo umano può bastare esperienza di governance; per un sistema che classifica segnalazioni di sicurezza, con dati da fonti diverse e fornitore che aggiorna, un gruppo solo generalista può cogliere le procedure ma non il significato di certe metriche. Riconoscerlo prima è integrità professionale." }
+  ]
+ },
+ {
+  "id": "42001_m10_s015",
+  "layout": "confronto",
+  "kicker": "Competenze del gruppo · 2",
+  "titolo": "Quando bastano le competenze generaliste, quando no",
+  "intro": "Evita sia l'eccesso di fiducia — ogni verifica richiede solo buon senso e metodo — sia l'eccesso opposto — senza un esperto tecnico ogni lavoro è impossibile. La domanda corretta è: quale livello di comprensione serve per formulare un giudizio affidabile in questo caso specifico? La soglia non dipende dalla moda del sistema, ma da quanto la comprensione tecnica condiziona la possibilità di verificare governo, rischio e impatto.",
+  "a": {
+   "h": "Bastano le generaliste",
+   "sub": "Il governo è al centro",
+   "punti": [
+    { "d": "Quando il sistema ha impatto contenuto, il controllo umano è forte, le modifiche sono rare, la logica d'uso è ben delimitata e fornitore o team interno forniscono spiegazioni comprensibili e tracciabili. Il cuore riguarda governance, ruoli, criteri d'uso, monitoraggi, modifiche." },
+    { "d": "Un assistente che propone bozze rilette e corrette dall'operatore prima dell'invio: la domanda non è entrare nel modello, ma capire se è usato entro confini dichiarati, se i rischi sono noti e se le modifiche sono governate." }
+   ]
+  },
+  "b": {
+   "h": "Non bastano più",
+   "sub": "Quattro segnali",
+   "punti": [
+    { "d": "Le decisioni del sistema incidono direttamente su persone, servizi o sicurezza; i dati sono numerosi ed eterogenei e la loro qualità influenza gli esiti; il sistema è modificato spesso o si appoggia a componenti poco trasparenti; l'organizzazione fatica a spiegare come monitora risultati, errori e limiti." },
+    { "d": "Un altro criterio è la qualità delle domande: se, preparando, ti accorgi che le questioni decisive richiedono di capire fonti dati, metriche o logiche di aggiornamento che il gruppo non sa interpretare, la sola competenza generalista non basta più. Ma coinvolgere lo specialista senza una domanda chiara genera dispersione." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m10_s016",
+  "layout": "split",
+  "kicker": "Competenze del gruppo · 3",
+  "titolo": "L'esperto di dati o modelli: inserirlo senza perdere il controllo",
+  "lead": "Quando servono competenze specialistiche, il passo non è aggiungere una persona al gruppo: devi chiarire perché la coinvolgi, su quali domande deve aiutarti e come il suo contributo entrerà nel giudizio. Altrimenti due problemi speculari — l'esperto resta decorativo, oppure assorbe tutta l'attenzione e la verifica perde la prospettiva di sistema. La soluzione è una regia chiara: l'esperto non decide al posto del gruppo, aiuta il gruppo a vedere meglio.",
+  "punti": [
+   { "h": "Tre situazioni in cui serve", "d": "Capire se i dati sono adatti allo scopo e come l'organizzazione ne controlla qualità e limiti; comprendere il comportamento del sistema che cambia nel tempo per modifiche o aggiornamenti; leggere prestazioni che richiedono competenze tecniche che il gruppo generalista non possiede con sicurezza." },
+   { "h": "Ruoli dichiarati prima", "d": "Chi guida la verifica resta responsabile del metodo, del collegamento con criteri e obiettivi, della sintesi e del giudizio complessivo; l'esperto porta una lente specialistica su punti delimitati. Questo evita che il lavoro deragli verso domande tecniche impressionanti ma poco rilevanti per il sistema di gestione." },
+   { "h": "Distinguere chi spiega da chi valuta", "d": "Se l'esperto ha partecipato allo sviluppo o alla gestione, il suo apporto è utile come fonte informativa, ma non ha il valore di un contributo indipendente. Nella preparazione questa distinzione è essenziale per calibrare il peso delle affermazioni e prevenire auto-conferme troppo facili." },
+   { "h": "Bisogni tradotti in domande verificabili", "d": "Non «spiegami tutto il modello», ma «come vengono governati aggiornamenti, limiti noti, prestazioni attese, anomalie e dipendenze dai dati». Così il contributo resta agganciato a evidenze, controlli e impatti, ed entra nella checklist solo dove serve, senza invadere l'intero lavoro." }
+  ]
+ },
+ {
+  "id": "42001_m10_s017",
+  "layout": "cards",
+  "kicker": "Preparazione documentale · 1",
+  "titolo": "Chiedere il necessario, non tutto il possibile",
+  "intro": "Con priorità, inventario e competenze devi ora costruire una richiesta documentale intelligente. Se chiedi troppo, sommergi l'organizzazione e ricevi materiali eterogenei e poco pertinenti; se chiedi troppo poco, arrivi sul campo senza contesto. L'obiettivo non è accumulare documenti, ma ottenere le informazioni giuste per orientare bene il lavoro.",
+  "cards": [
+   { "h": "Pertinenza", "d": "Ogni richiesta risponde a una domanda preparatoria chiara: scopo del sistema, chi lo governa, quali rischi e impatti sono stati considerati, come si monitora, come si modificano dati e modelli, quali requisiti lo toccano. Se un documento non chiarisce almeno uno di questi punti, non è prioritario nella fase iniziale." },
+   { "h": "Proporzionalità", "d": "Un sistema a basso impatto non richiede lo stesso set di uno che influenza decisioni sensibili: per il primo bastano descrizione d'uso, ruoli, monitoraggi essenziali e traccia delle modifiche; per il secondo servono anche valutazioni strutturate, evidenze di riesame, informazioni sul fornitore e casi operativi selezionati." },
+   { "h": "Leggibilità", "d": "Chiedi, quando possibile, non solo documenti formali estesi, ma materiali che aiutino a capire velocemente il funzionamento reale: mappe di processo, schede sintetiche, riepiloghi dei monitoraggi, esempi di decisioni o schermate commentate. Non sostituiscono la documentazione controllata, ma accelerano la comprensione iniziale." },
+   { "h": "Tempistica coerente", "d": "I documenti devono arrivare con abbastanza anticipo per una lettura ragionata, ma non così presto da diventare superati. Utile chiedere prima la documentazione stabile — ruoli, descrizioni, criteri — e più vicino alla verifica i materiali dinamici: modifiche recenti, indicatori, reclami, segnalazioni." }
+  ]
+ },
+ {
+  "id": "42001_m10_s018",
+  "layout": "split",
+  "kicker": "Preparazione documentale · 2",
+  "titolo": "Documentazione dei sistemi di IA: capire l'oggetto reale",
+  "lead": "Devi entrare nel cuore dell'oggetto rispondendo a una domanda fondamentale: che cosa fa davvero questo sistema, dentro quale processo, con quali confini e sotto quali controlli. Molte raccolte falliscono qui: offrono molta tecnologia descritta in astratto e poca comprensione del ruolo reale. La documentazione più utile collega scopo, uso, responsabilità, dati, output e controllo umano.",
+  "punti": [
+   { "h": "Dall'etichetta al funzionamento verificabile", "d": "«Motore intelligente di supporto operativo» è elegante ma insufficiente. Serve sapere quali dati entrano, con quale frequenza si aggiornano, chi approva le regole, in quali casi l'operatore deve intervenire, come si registrano le correzioni, quando una modifica richiede nuova valutazione." },
+   { "h": "I ruoli, spesso distribuiti", "d": "C'è chi possiede il processo, chi mantiene la piattaforma, chi governa i dati, chi autorizza modifiche e chi usa gli output. Se questa distribuzione non è chiara, potresti ascoltare la persona sbagliata, chiedere la prova nel punto sbagliato o interpretare come controllo ciò che è solo abitudine operativa." },
+   { "h": "La vista sul ciclo di vita", "d": "Quando è stato introdotto, se è stato modificato, se esistono criteri per estenderne l'uso, se il fornitore rilascia aggiornamenti, se c'è un riesame del comportamento nel tempo. Molti problemi non nascono dal progetto iniziale, ma dal modo in cui il sistema evolve con piccoli cambiamenti non riletti insieme." },
+   { "h": "I dati, senza corso tecnico", "d": "Non ti serve tutta la matematica: quali dati sono rilevanti, da dove vengono, che ruolo giocano, come l'organizzazione ne considera qualità, aggiornamento e limiti. Se i dati storici sono incompleti o il contesto è cambiato, questi elementi incidono su rischio e controlli attesi. Quando manca comprensibilità, spesso manca una parte di governance." }
+  ]
+ },
+ {
+  "id": "42001_m10_s019",
+  "layout": "confronto",
+  "kicker": "Preparazione documentale · 3",
+  "titolo": "Valutazioni del rischio e dell'impatto",
+  "intro": "Dopo aver capito cos'è il sistema, la domanda più importante: come ha ragionato l'organizzazione sulle conseguenze del suo uso? Due famiglie di materiali dialogano strettamente ma non coincidono. In preparazione la cosa decisiva non è trovare un modulo compilato, ma capire se il ragionamento esiste davvero, è documentato e ha prodotto decisioni coerenti. Sono due finestre sulla maturità del governo.",
+  "a": {
+   "h": "La valutazione del rischio",
+   "sub": "Dove l'organizzazione vede incertezza",
+   "punti": [
+    { "d": "Ti aiuta a capire in quali punti l'organizzazione vede incertezza, vulnerabilità e necessità di controllo — per esempio dipendenza da dati storici non omogenei e possibilità di errori nelle priorità." },
+    { "d": "Mostra il lessico reale: se compare solo il rischio di malfunzionamento tecnico, ma quasi mai l'uso improprio, la dipendenza dall'output o le conseguenze su persone e processi, sai già che alcune interviste dovranno scavare lì." }
+   ]
+  },
+  "b": {
+   "h": "La valutazione dell'impatto",
+   "sub": "Gli effetti su persone e processi",
+   "punti": [
+    { "d": "Come l'organizzazione considera gli effetti su individui, gruppi, società e processi — il rischio di ritardi penalizzanti per alcune categorie, la necessità di revisione umana nei casi dubbi. Se poi trovi che quella revisione esiste davvero, il quadro tiene." },
+    { "d": "Deve reggere nel tempo: se il sistema si espande — da supporto interno a interazioni con clienti — l'impatto atteso muta anche senza cambio evidente della funzione. Confrontala con l'inventario: se un sistema è ad alta criticità ma trattato in modo sommario, c'è una discrepanza da capire." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m10_s020",
+  "layout": "punti",
+  "kicker": "Preparazione documentale · 4",
+  "titolo": "Il quadro regolatorio: preparare il metro prima delle prove",
+  "intro": "Puoi capire bene un sistema, i suoi rischi e i suoi impatti, ma senza un quadro chiaro dei requisiti applicabili rischi di leggere tutto in modo impressionistico. La parola chiave è applicabile: non una raccolta enciclopedica, ma una selezione ragionata di ciò che incide davvero. Preparare il quadro non significa trasformarsi in consulente legale, ma verificare se l'organizzazione sa individuare e tradurre nei propri processi i requisiti che la riguardano.",
+  "punti": [
+   { "h": "Quattro fonti coerenti", "d": "La norma del sistema di gestione, che offre la struttura del giudizio; la documentazione interna (politiche, procedure, ruoli, criteri di approvazione, regole di modifica); ciò che deriva da contratti, fornitori e impegni verso le parti interessate; i requisiti legali o regolatori pertinenti al caso concreto. Non tutte con lo stesso peso, ma visibili e coerenti." },
+   { "h": "Un esempio applicativo", "d": "Un sistema che classifica reclami e suggerisce risposte: non basta la procedura interna e la scheda: servono le regole di gestione dei reclami, gli obblighi sulla protezione delle persone, i vincoli contrattuali col fornitore, le aspettative formalizzate su controllo umano, tempi e tracciabilità. Solo così i documenti diventano leggibili rispetto a criteri precisi." },
+   { "h": "Evitare la separazione tecnica-conformità", "d": "A volte la funzione tecnica descrive il sistema in un modo e le funzioni legali lo collocano in un perimetro diverso: questa divergenza segnala possibili incoerenze di governo. Se il team tecnico lo considera semplice supporto informativo ma di fatto orienta decisioni rilevanti, il quadro va letto con più attenzione." },
+   { "h": "Priorità nella profondità", "d": "Per i sistemi a basso impatto basta una verifica mirata dei criteri interni e dei requisiti essenziali; per i più critici conviene una vera mappa dei criteri — quali obblighi toccano i dati, quali limiti riguardano il processo, dove queste regole devono emergere nella pratica. È il ponte verso la checklist: se il metro è chiaro, le domande diventano più semplici e più forti." }
+  ]
+ },
+ {
+  "id": "42001_m10_s021",
+  "layout": "cards",
+  "kicker": "Dossier e segnali · 1",
+  "titolo": "Dal dossier: ordinare i materiali per capire prima",
+  "intro": "Finché i materiali restano dispersi tra cartelle, mail e presentazioni, la preparazione sembra ricca ma è fragile. Il dossier non è un archivio parallelo né un riassunto burocratico: è la sintesi ragionata con cui colleghi sistema, criteri, rischi, impatti, ruoli e prove da cercare. Non devi riscrivere tutto: devi selezionare ciò che cambia davvero la tua capacità di giudizio.",
+  "cards": [
+   { "h": "Per oggetto e per domanda", "d": "Per oggetto, cioè per sistema o famiglia già selezionati dall'inventario; per domanda, cioè i punti da chiarire prima del merito: scopo, processo, decisioni influenzate, chi governa, rischi e impatti considerati, requisiti applicabili, modifiche recenti. Quando ogni domanda trova il suo materiale, la lettura smette di essere dispersiva." },
+   { "h": "Una scheda per sistema", "d": "Poche pagine che tengono insieme i dati essenziali — finalità, processo, responsabile business e referente tecnico, fornitore, dati principali, output, controllo umano, monitoraggi, valutazioni, requisiti, modifiche — più una colonna preziosa: i dubbi aperti. È lì che nasce il vero piano delle interviste." },
+   { "h": "L'uso comparativo", "d": "Con due sistemi a impatto diverso, prepara due schede con la stessa struttura e mettile accanto: vedi subito dove i criteri sono coerenti e dove casi simili sono trattati in modi poco spiegabili. Se il sistema meno critico è tracciato benissimo e quello sensibile è raccontato in modo vago, l'asimmetria orienta la profondità delle prove." },
+   { "h": "Le discrepanze come miniera", "d": "Quando due documenti raccontano storie diverse, non è un fastidio: è spesso il punto più fertile. Se l'inventario indica un sistema stabile ma il registro mostra aggiornamenti frequenti, hai una domanda forte. Se la valutazione parla di supervisione umana ma le istruzioni non la descrivono, hai un altro nodo da chiarire." }
+  ]
+ },
+ {
+  "id": "42001_m10_s022",
+  "layout": "numeri",
+  "kicker": "Dossier e segnali · 2",
+  "titolo": "Segnali preliminari: la preparazione ti avvisa prima del campo",
+  "intro": "Quando il dossier è pronto, cominci a vedere segnali che non sono conclusioni, ma meritano attenzione immediata. Questa lettura preliminare è una competenza vera: ti fa arrivare alla conduzione con domande già ben posizionate. In un SGIA maturo i materiali non devono essere perfetti, ma coerenti, aggiornati e capaci di spiegare come l'organizzazione governa i sistemi nel tempo.",
+  "numeri": [
+   { "n": "1", "h": "La coerenza tra le fonti", "d": "Se inventario, descrizione, valutazione del rischio e istruzioni raccontano lo stesso oggetto con parole diverse ma compatibili, il controllo appare almeno pensato. Se cambiano scopo, perimetro o ruoli, segna priorità alta di chiarimento: spesso la debolezza sta nel fatto che nessuno ha ricomposto l'insieme." },
+   { "n": "2", "h": "L'aggiornamento", "d": "Una valutazione curata ma ferma a prima di un'estensione importante vale meno di quanto sembri; un registro modifiche ricco senza traccia di riesame dei rischi segnala lo stesso problema. Un materiale non aggiornato può raccontare un sistema che non esiste più in quella forma: conta il nesso tra cambiamento e riesame." },
+   { "n": "3", "h": "La chiarezza delle responsabilità", "d": "Sempre gli stessi nomi su decisione, approvazione, monitoraggio e correzione: efficienza in un contesto piccolo, o dipendenza eccessiva da poche persone. Più la conoscenza è concentrata, più è difficile distinguere tra controllo di sistema e controllo affidato alla memoria di qualcuno." },
+   { "n": "4", "h": "Le assenze (e la finta perfezione)", "d": "Mancano criteri di monitoraggio, la spiegazione del ruolo umano, la giustificazione di un controllo escluso: ti dicono dove la checklist dovrà essere più incisiva. Ma anche una coerenza troppo perfetta merita attenzione: se tutti i documenti ripetono le stesse frasi senza esempi operativi ed eccezioni, potresti avere un allineamento solo formale." }
+  ]
+ },
+ {
+  "id": "42001_m10_s023",
+  "layout": "definizione",
+  "kicker": "La checklist · 1",
+  "eyebrow": "Da schema rigido a guida ragionata",
+  "titolo": "Un aiuto al giudizio, non un sostituto",
+  "definizione": "La checklist è utile solo se resta un aiuto al giudizio, non un sostituto del giudizio. Molte falliscono perché vogliono essere complete su carta e finiscono povere sul campo. Nei sistemi di IA il rischio cresce: la tentazione di trasformare tutto in un elenco sterminato produce una verifica meccanica che copre molto e capisce poco. La buona pratica è una checklist breve quanto basta, ma abbastanza strutturata da non perdere criteri, evidenze e collegamenti.",
+  "punti": [
+   "Doppia lettura: segue sia le clausole del sistema di gestione sia il profilo del sistema selezionato. Una matrice semplice — i punti della norma su una linea, i sistemi dall'inventario sull'altra — con domande, evidenze attese e interlocutori nei punti di incrocio.",
+   "Pertinenza e tracciabilità: non tutte le domande valgono per tutti i sistemi, e ogni domanda importante ha già accanto il tipo di evidenza attesa — documento, registro, caso operativo, intervista, riesame, decisione. Così la checklist non genera conversazioni astratte, ma ricerca di elementi verificabili.",
+   "Ordine e misura: apri col contesto, poi pianificazione, supporto, operatività, monitoraggio, miglioramento. Un nucleo comune stabile più blocchi aggiuntivi attivabili per impatto, fornitore, dati o frequenza delle modifiche: una troppo lunga diventa un alibi, una troppo corta fa dimenticare snodi importanti."
+  ]
+ },
+ {
+  "id": "42001_m10_s024",
+  "layout": "punti",
+  "kicker": "La checklist · 2",
+  "titolo": "Contesto, leadership e pianificazione",
+  "intro": "Parti dai punti che danno forma al sistema prima dell'operatività: se l'organizzazione ha capito dove si collocano i sistemi di IA, chi li governa e come pianifica rischi, obiettivi e cambiamenti. Se questa base è debole, anche controlli curati nelle fasi successive poggiano su fondamenta incerte. Non cercare dettagli tecnici del modello prima del tempo: verifica se il governo esiste e orienta le scelte.",
+  "punti": [
+   { "h": "Punto quattro — contesto e campo", "d": "Se l'organizzazione ha compreso il proprio contesto rispetto all'uso o alla fornitura di IA, identificato le parti interessate rilevanti, definito il campo di applicazione in modo leggibile e coerente con l'inventario. Domanda utile: come avete deciso quali sistemi rientrano nel campo e quali no?" },
+   { "h": "Punto cinque — leadership reale o formale", "d": "Se l'alta direzione ha dato indirizzi coerenti con l'uso responsabile e se questi si riflettono in responsabilità chiare. La domanda chiave non è solo chi è responsabile, ma chi decide, chi approva modifiche, chi accetta rischi residui e chi segue monitoraggi e miglioramenti." },
+   { "h": "Punto sei — pianificazione", "d": "Il ragionamento su rischi e opportunità, obiettivi per l'IA e pianificazione delle modifiche. Con sistemi ad impatto rilevante, l'analisi dei rischi e il riesame degli effetti su persone e processi devono incidere sulle scelte. Domanda: quando il sistema cambia, come decidete se rivedere rischi, effetti attesi e controlli?" },
+   { "h": "Forma o sostanza quando il sistema cambia", "d": "Se lo stesso sistema viene esteso a un nuovo canale, la politica resta invariata ma la checklist deve spingerti a chiedere se il contesto è stato riesaminato, se sono cambiate le aspettative, se gli obiettivi sono aggiornati. Affianca a ogni domanda la prova attesa e il possibile interlocutore: la checklist diventa già guida di conduzione." }
+  ]
+ },
+ {
+  "id": "42001_m10_s025",
+  "layout": "tabella",
+  "kicker": "La checklist · 3",
+  "titolo": "I punti 7 e 8: supporto e attività operative",
+  "intro": "Qui la checklist scende dove il sistema prende forma concreta e smette di chiedere se qualcosa esiste per chiedere se funziona. Il punto 7 guarda la capacità di supportare il controllo — risorse, competenze, consapevolezza, comunicazione, informazioni documentate; il punto 8 guarda il controllo in azione — pianificazione operativa, trattamento del rischio, valutazione dell'impatto. Netti ma complementari.",
+  "cols": ["Aspetto", "Punto 7 · supporto", "Punto 8 · operatività"],
+  "righe": [
+   ["Domanda centrale", "Le risorse sono adeguate alla criticità? Chi usa o governa ha competenze adeguate al ruolo?", "Il funzionamento è pianificato e controllato coerentemente con rischi e impatti identificati?"],
+   ["Evidenze attese", "Attribuzioni di ruolo, piani formativi, flussi di comunicazione, controllo delle informazioni documentate", "Procedure operative, registri di eccezione, casi gestiti, monitoraggi applicati, traccia delle correzioni umane"],
+   ["Su un sistema di priorità interventi", "Quali competenze hanno gli operatori, chi li forma, come si comunicano limitazioni e cambiamenti", "Quando l'operatore può discostarsi, come si registra la correzione, quando si rivalutano rischi e impatti"],
+   ["Dati e fornitore", "Riconoscere il ruolo dei dati e mantenere presidi coerenti con la loro importanza", "Come si governano aggiornamenti, condizioni d'uso e limiti dichiarati dal fornitore, con almeno un caso e un'intervista operativa"]
+  ]
+ },
+ {
+  "id": "42001_m10_s026",
+  "layout": "flusso",
+  "kicker": "La checklist · 4",
+  "titolo": "Il punto 9: monitorare, verificare, riesaminare",
+  "intro": "Al punto 9 la checklist cambia tono: entri nella capacità del sistema di guardarsi e correggersi con continuità. Il tema non è controllare la presenza di numeri, ma verificare l'uso manageriale delle evidenze e la coerenza tra livelli — se il monitoraggio segnala problemi ma le verifiche interne non li considerano e il riesame non li riceve, hai un'interruzione del circuito di apprendimento.",
+  "passi": [
+   { "h": "Monitoraggio e misurazione", "d": "Quali aspetti vengono osservati, con quale frequenza, da chi e con quali criteri di interpretazione. Non molti indicatori, ma quelli che dicono se il sistema resta entro limiti accettabili. Domande forti: quali segnali vi fanno capire che il sistema sta uscendo dal comportamento atteso, e cosa succede concretamente quando compaiono." },
+   { "h": "Audit interno", "d": "Non solo se esiste un programma, ma se riflette priorità, criticità dei sistemi, modifiche recenti e risultati precedenti. Se appare uniforme, non aggiornato o scollegato da incidenti e cambiamenti, la domanda non è solo organizzativa: è sulla qualità della sorveglianza interna." },
+   { "h": "Riesame di direzione", "d": "Se i temi legati ai sistemi di IA arrivano al livello decisionale appropriato, con ingressi coerenti e decisioni che modificano controlli, priorità o risorse. Se un aumento delle correzioni manuali migliora i tempi medi ma nessuno lo interpreta, non entra nell'audit e il riesame non lo discute, il circuito è rotto." }
+  ]
+ },
+ {
+  "id": "42001_m10_s027",
+  "layout": "split",
+  "kicker": "La checklist · 5",
+  "titolo": "Miglioramento e controlli dell'Appendice A",
+  "lead": "L'ultima parte chiude il cerchio: da un lato il punto 10 — miglioramento, non conformità e azioni correttive; dall'altro i controlli dell'Appendice A, letti insieme alla dichiarazione di applicabilità. La checklist diventa concreta, perché chiede non solo se l'organizzazione sa individuare problemi, ma se sa collegare rischi, controlli scelti e miglioramento nel tempo.",
+  "punti": [
+   { "h": "Il punto dieci", "d": "Come vengono rilevate le non conformità, analizzate le cause e impedita la ripetizione — importante nell'IA, dove i problemi riappaiono dopo modifiche o aggiornamenti. Domanda forte: come distinguete un errore occasionale da un problema che richiede azione strutturata, e come verificate che l'azione abbia ridotto il rischio di ripetizione?" },
+   { "h": "La selezione dei controlli", "d": "Non partire dall'idea che tutti i controlli valgano sempre allo stesso modo: verifica se l'organizzazione ha documentato i controlli necessari e motivato inclusioni ed esclusioni nella dichiarazione di applicabilità, coerentemente con rischi identificati, impatti e sistemi nel campo." },
+   { "h": "Il doppio movimento", "d": "Parti da un rischio rilevante e chiediti quali controlli dichiarati lo presidiano; poi parti da un controllo applicabile e chiediti in quale processo, sistema, ruolo o registrazione dovrebbe lasciare traccia. Evita sia il formalismo della sola dichiarazione sia il tecnicismo scollegato dal sistema di gestione." },
+   { "h": "L'esclusione deve restare difendibile", "d": "Se un controllo sul presidio del fornitore è escluso come «non pertinente», ma tre sistemi critici dipendono dallo stesso servizio esterno, metti accanto giustificazione, rischio collegato ed evidenze operative sui tre sistemi. Non perché il controllo debba per forza essere incluso, ma perché l'esclusione deve restare difendibile." }
+  ]
+ },
+ {
+  "id": "42001_m10_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 10",
+  "modNum": "10",
+  "titolo": "Un unico dispositivo di preparazione",
+  "punti": [
+   { "h": "Metodo stabile, oggetto mobile", "d": "Sei partito dai richiami di ISO 19011:2026 letti in chiave IA: il metodo resta stabile mentre l'oggetto diventa più mobile, tecnico e meno trasparente. Da lì il programma di audit come strumento di priorità — il tempo va concentrato dove impatto, criticità, cambiamento e maturità del controllo rendono più probabile un giudizio utile." },
+   { "h": "Inventario e competenze", "d": "L'inventario come vera mappa del campo, da leggere per famiglie, processi, dipendenze, cambiamenti e assenze: senza un inventario credibile, anche la preparazione più diligente parte dal perimetro sbagliato. E le competenze, con la distinzione tra ciò che il gruppo può fare da solo e ciò per cui serve un esperto di dati o modelli." },
+   { "h": "Documenti, dossier, checklist", "d": "Chiedere la documentazione senza sommergere, leggere descrizioni, valutazioni di rischio e impatto e quadro regolatorio; costruire un dossier che collega materiali e fa emergere discrepanze; infine la checklist come guida ragionata delle prove, su due piani — per clausola e per sistema — con evidenze attese, interlocutori e casi." },
+   { "h": "Cinque snodi per il campo", "d": "Non cinque oggetti separati, ma un unico dispositivo: come si definiscono le priorità del programma, perché l'inventario è la mappa, quando le competenze vanno integrate, quali documenti servono davvero, come una checklist ben costruita rende il lavoro mirato. Qui hai costruito la mappa; nella conduzione imparerai a camminarci sopra." }
+  ],
+  "prossimo": {
+   "modulo": "11",
+   "titolo": "Verificare il SGIA II: conduzione",
+   "testo": "Entrerai nel momento in cui tutta la preparazione prende vita: aprire bene il lavoro, condurre interviste, seguire i casi, leggere le evidenze in tempo reale e tenere il filo del giudizio senza perderti nei dettagli."
+  }
+ }
+]
