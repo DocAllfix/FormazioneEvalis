@@ -1,0 +1,413 @@
+[
+ {
+  "id": "50001_m02_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 50001 — Sistemi di gestione dell'energia",
+  "kicker": "Modulo 2",
+  "eyebrow": "Il lessico che diventa giudizio",
+  "titolo": "La norma 50001: struttura, concetti, termini energetici",
+  "testo": "Dopo aver fissato il mestiere di chi verifica, entri nel lessico di base della ISO 50001. Le parole sembrano familiari, ma hanno un significato molto preciso: se confondi i termini, rischi di giudicare bene un dato raccolto male, o male un miglioramento reale. Chiariremo scopo e campo di applicazione, cioè a che cosa serve la norma e fin dove arriva. Poi la prestazione energetica, che non è una formula vaga ma una tripletta concreta — uso dell'energia, consumo di energia ed efficienza energetica. Sono tre idee diverse, e proprio la loro distinzione ti permette di capire se un'organizzazione sta migliorando davvero. Poi gli usi energetici significativi (il cuore operativo), le parole della misura (EnPI, consumo di riferimento), il confine e il campo di applicazione, e infine la struttura armonizzata col ciclo PDCA. Le definizioni non sono un preambolo ornamentale: sono il punto in cui il giudizio professionale impara il linguaggio corretto. Ascolta ogni definizione non come una frase da ricordare, ma come uno strumento da usare.",
+  "agenda": [
+   "Scopo e campo di applicazione: metodo, non ricetta",
+   "La prestazione energetica: una parola, tre dimensioni",
+   "Gli usi energetici significativi: il baricentro del sistema",
+   "La misura: EnPI, valore, consumo di riferimento (EnB)",
+   "Confine e campo di applicazione del sistema",
+   "La struttura armonizzata e il ciclo PDCA energetico"
+  ]
+ },
+ {
+  "id": "50001_m02_s002",
+  "layout": "split",
+  "kicker": "Scopo e campo · 1",
+  "titolo": "Scopo: metodo, non ricetta",
+  "lead": "La ISO 50001 ti consegna un metodo di gestione, non un elenco universale di soluzioni tecniche. Non decide al posto tuo quale macchina installare o quale riduzione numerica valga per tutti: ti chiede di costruire un modo ordinato di governare l'energia, capace di reggere nel tempo e di portare risultati leggibili. La buona idea tecnica, da sola, non basta: serve una struttura che la sostenga, la controlli e la faccia durare.",
+  "punti": [
+   { "h": "Impostare, far vivere, mantenere, migliorare", "d": "Il punto non è avere un progetto brillante per qualche mese, ma trasformare l'attenzione all'energia in una pratica stabile, con responsabilità riconoscibili, dati utili e decisioni coerenti. Una lavanderia che sostituisce il generatore di vapore ma non definisce chi controlla i parametri vede il beneficio dissolversi in pochi mesi." },
+   { "h": "L'esito atteso è concreto", "d": "Lo scopo non si esaurisce nel mettere ordine ai documenti o convocare riunioni: crea le condizioni perché i risultati energetici migliorino nel tempo e perché anche il sistema diventi più maturo. Se organizzi bene le carte ma non sposti nulla nella prestazione, manca un pezzo; se risparmi per caso senza metodo, manca l'altro." },
+   { "h": "Applicabilità senza taglia minima", "d": "Non nasce per un solo settore e non richiede una dimensione minima: funziona in una realtà grande o piccola, in un sito produttivo o in un servizio, nel pubblico o nel privato. Un centro dati, un ospedale, un deposito refrigerato hanno profili diversi, ma tutti possono essere governati con logica sistematica." },
+   { "h": "Progresso, non una soglia uguale per tutti", "d": "La norma richiede di dimostrare che la prestazione progredisce, ma non consegna una soglia identica: le organizzazioni partono da condizioni diverse. Un sito già evoluto ottiene miglioramenti piccoli ma robusti; uno trascurato fa passi rapidi. La domanda non è chi promette il numero più impressionante, ma se il miglioramento nasce da un sistema credibile e viene sostenuto." }
+  ]
+ },
+ {
+  "id": "50001_m02_s003",
+  "layout": "punti",
+  "kicker": "Scopo e campo · 2",
+  "titolo": "Campo di applicazione: cosa entra, cosa resta fuori",
+  "intro": "Molti immaginano che la norma riguardi solo grandi impianti, o solo l'energia acquistata, o solo consumi molto elevati. Il perimetro logico è più ampio e più rigoroso: la norma si applica alle attività che influenzano la prestazione energetica e che sono gestite e controllate dall'organizzazione. Non ti chiede di occuparti di tutto il mondo attorno, ma di ciò che essa governa davvero.",
+  "punti": [
+   { "h": "Ciò che l'organizzazione governa davvero", "d": "Un'azienda con due stabilimenti, un deposito affidato a un operatore logistico e una flotta in parte noleggiata: alcune attività sono sotto controllo diretto, altre dipendono da accordi esterni. Il lavoro serio è capire cosa può gestire, decidere e migliorare con strumenti propri." },
+   { "h": "Qualunque quantità e tipo di energia", "d": "Non si può dire «consumiamo poco, non fa per noi» né «usiamo quasi solo elettricità, non è pertinente». L'energia non è solo elettricità o gas: include combustibili, vapore, calore, aria compressa. Il sistema deve guardare al mosaico energetico reale, non a una porzione conveniente." },
+   { "h": "Miglioramento, non un livello numerico imposto", "d": "La norma chiede di dimostrare il miglioramento continuo, ma non stabilisce quale livello raggiungere. Una cartiera già efficiente ottiene miglioramenti piccoli ma solidi; un magazzino energivoro e poco controllato può migliorare molto. La domanda corretta è se il sistema produce un miglioramento credibile, misurato e mantenuto." },
+   { "h": "Da sola o integrata", "d": "La ISO 50001 può vivere autonomamente oppure integrarsi con qualità, ambiente, sicurezza e altri schemi. Non cambia la sostanza energetica, ma cambia il modo in cui la struttura viene cucita nella vita aziendale." }
+  ]
+ },
+ {
+  "id": "50001_m02_s004",
+  "layout": "definizione",
+  "kicker": "Prestazione energetica · 1",
+  "eyebrow": "Una parola, tre dimensioni",
+  "titolo": "La prestazione energetica è una tripletta",
+  "definizione": "Quando la norma parla di prestazione energetica non offre uno slogan, ma un risultato misurabile che riguarda tre dimensioni inseparabili: uso dell'energia, consumo di energia ed efficienza energetica. Se togli uno dei tre elementi, la lettura diventa zoppa. L'energia non viene osservata in modo impressionistico: servono risultati che possano essere letti, confrontati e interpretati.",
+  "punti": [
+   "Il consumo di energia risponde a «quanta energia è stata usata»; l'uso dell'energia a «per che cosa è stata impiegata»; l'efficienza energetica a «con quale rapporto tra energia immessa e risultato ottenuto». La prestazione energetica nasce dall'insieme di queste risposte, non da una sola.",
+   "In un ufficio che ristruttura un piano e aggiunge postazioni, il consumo elettrico annuo può salire: ma se l'uso mostra più ventilazione compensata da meno stampanti, e l'efficienza dell'illuminazione produce lo stesso servizio con meno energia per postazione, il giudizio cambia. Consumo totale più alto non significa prestazione peggiore.",
+   "L'errore più comune è assolutizzare un solo dato: chi guarda solo la bolletta, chi solo l'efficienza di una macchina, chi solo gli usi principali trascurando quelli emergenti. Da ora, quando senti «prestazione energetica», pensa a una visione composta."
+  ]
+ },
+ {
+  "id": "50001_m02_s005",
+  "layout": "confronto",
+  "kicker": "Prestazione energetica · 2",
+  "titolo": "Uso dell'energia e consumo: non sono sinonimi",
+  "intro": "Nella conversazione ordinaria vengono spesso scambiati, ma nella logica della norma descrivono due aspetti distinti e complementari. Due organizzazioni possono avere consumi simili e usi molto diversi, oppure lo stesso uso e consumi molto differenti. Una formula mentale rapida: uso dell'energia significa funzione, consumo di energia significa quantità. Tenerli distinti ti evita errori di priorità.",
+  "a": {
+   "h": "L'uso dell'energia",
+   "sub": "La funzione — dove e per che cosa",
+   "punti": [
+    { "d": "Indica la modalità di impiego: dove e per quale funzione l'energia viene utilizzata. In un ospedale gli usi includono illuminazione, sterilizzazione, climatizzazione, acqua calda, ventilazione delle sale, apparecchiature diagnostiche, conservazione refrigerata." },
+    { "d": "Una buona mappa degli usi genera domande migliori: dove si concentra il funzionamento continuo, quali impieghi variano con la produzione, quali dipendono dal clima, quali sono stabili ma poco efficienti. Non nascono dal solo dato di consumo." }
+   ]
+  },
+  "b": {
+   "h": "Il consumo di energia",
+   "sub": "La quantità — quanto",
+   "punti": [
+    { "d": "È la quantità di energia usata: ti dice quanto. Due magazzini frigoriferi hanno lo stesso uso dominante — il raffreddamento — ma consumi molto diversi secondo isolamento, carico, turni e controllo operativo." },
+    { "d": "Una tipografia riduce il consumo notturno spegnendo l'illuminazione esterna: miglioramento sì, ma limitato. Se il principale uso è l'essiccazione, che vale metà dei consumi annui, non hai toccato il centro del problema. L'analisi non può fermarsi alla somma dei chilowattora." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m02_s006",
+  "layout": "punti",
+  "kicker": "Prestazione energetica · 3",
+  "titolo": "Efficienza energetica: il rapporto che dà senso ai dati",
+  "intro": "Nel linguaggio comune «efficiente» resta un'impressione generale. La norma la porta su un terreno preciso: l'efficienza energetica è un rapporto, o un'altra relazione quantitativa, tra un risultato utile e l'energia immessa. Non coincide automaticamente con il basso consumo — guarda alla relazione, non al valore isolato.",
+  "punti": [
+   { "h": "Stesso output, meno energia", "d": "Due compressori alimentano la stessa rete: il primo assorbe venti megawattora a settimana, il secondo ne assorbe quindici per lo stesso servizio. A parità di risultato utile, il secondo è più efficiente. Il rapporto è intuitivo: stesso output, meno energia in ingresso." },
+   { "h": "Dichiarare input e output", "d": "Input e output devono essere specificati in modo comprensibile e misurabile, altrimenti il rapporto diventa arbitrario. Chiediti sempre qual è il bene, il servizio o la prestazione che l'organizzazione vuole ottenere: il metallo fuso in fonderia, il comfort in una scuola, la capacità di elaborazione in un data center." },
+   { "h": "La scorciatoia pericolosa", "d": "Un albergo abbassa molto la temperatura dell'acqua calda per ridurre il gas: il consumo scende, ma se il servizio non soddisfa più il livello atteso, hai solo ridotto l'energia sacrificando la prestazione. L'efficienza richiede una relazione con il risultato utile, non una semplice contrazione dell'input." },
+   { "h": "Stesso input, più output", "d": "Una linea produce mille pezzi buoni con dieci megawattora, poi millecento con gli stessi dieci: consumo e uso invariati, ma efficienza migliorata perché l'output utile è cresciuto. E al contrario: un consumo più basso può nascondere un'efficienza peggiore se l'output crolla ancora di più — processo fuori regolazione, scarti, tempi morti." }
+  ]
+ },
+ {
+  "id": "50001_m02_s007",
+  "layout": "timeline",
+  "kicker": "Prestazione energetica · 4",
+  "titolo": "La tripletta in azione: stesso consumo, giudizi diversi",
+  "intro": "È nel confronto che la tripletta diventa chiara. Un forno industriale che cuoce componenti ceramici, seguito anno per anno, mostra come il consumo di energia racconti la dimensione assoluta, l'uso la destinazione funzionale, l'efficienza la qualità del rapporto tra input ed esito. La prestazione energetica emerge dal loro incrocio — e non si lascia leggere con una sola cifra.",
+  "tappe": [
+   { "t": "Anno 1", "h": "Il riferimento", "d": "Il reparto usa duecento megawattora e produce diecimila pezzi conformi. È la base con cui confronterai i periodi successivi: un dato di partenza, non ancora un giudizio." },
+   { "t": "Anno 2", "h": "Consumo invariato, efficienza migliore", "d": "Ancora duecento megawattora, ma undicimila pezzi conformi grazie a una migliore regolazione dei cicli e a minori scarti. Il consumo non è cambiato, l'uso è lo stesso, ma il rapporto tra energia e risultato utile è migliorato: la prestazione energetica è migliorata pur con consumo invariato." },
+   { "t": "Anno 3", "h": "Consumo minore, efficienza peggiore", "d": "Centonovanta megawattora, quindi meno, ma solo novemila pezzi per fermate e cattiva regolazione. Il consumo è diminuito, ma l'efficienza può essere peggiorata: il calo dell'output utile è più pesante del calo dell'input. Un numero più basso non è automaticamente un progresso." },
+   { "t": "In un servizio", "h": "Consumo maggiore, prestazione migliore", "d": "Un albergo con serramenti migliori vede salire il consumo elettrico estivo per la maggiore occupazione e il caldo. Ma l'efficienza della climatizzazione, misurata sulle camere occupate e sulle condizioni operative, può essere nettamente migliorata: la prestazione migliora nonostante un consumo maggiore." }
+  ]
+ },
+ {
+  "id": "50001_m02_s008",
+  "layout": "cards",
+  "kicker": "Prestazione energetica · 5",
+  "titolo": "La tripletta in settori diversi",
+  "intro": "Cambia il contesto, ma la logica regge: la prestazione energetica si legge sempre attraverso uso, consumo ed efficienza, anche se l'organizzazione cambia completamente volto. Non stai cercando la stessa soluzione tecnica ovunque, ma la stessa qualità del ragionamento — dove viene usata l'energia, quanta ne viene usata, quanto bene sostiene il risultato utile.",
+  "cards": [
+   { "h": "Produzione", "d": "In uno stabilimento di imbottigliamento gli usi principali sono compressione, movimentazione, lavaggio, riempimento, raffrescamento. L'efficienza può leggersi come energia per mille bottiglie conformi: se la produzione cresce e il consumo sale meno che proporzionalmente, l'efficienza migliora; se crescono scarti e fermate, peggiora." },
+   { "h": "Edifici pubblici", "d": "In una biblioteca gli usi includono illuminazione, riscaldamento, raffrescamento, ventilazione, ascensori, informatica. Il consumo totale non basta: devi capire se il raffrescamento cresce per un'ondata di caldo o se la ventilazione resta eccessiva in fasce poco frequentate. L'efficienza si collega al servizio: ore di apertura, aree servite, comfort." },
+   { "h": "Servizi digitali", "d": "In un centro dati gli usi sono elaborazione, archiviazione, raffrescamento delle sale, continuità, illuminazione. Il consumo può essere elevato anche senza produzione manifatturiera: l'efficienza non si legge in pezzi prodotti, ma nel rapporto tra energia immessa e capacità utile di elaborazione o servizio." },
+   { "h": "Ricettivo", "d": "In un hotel l'uso comprende climatizzazione, lavanderia, cucina, acqua calda. Un aumento delle presenze fa salire il consumo senza indicare peggioramento; un controllo scadente dell'acqua calda peggiora l'efficienza pur con occupazione stabile. L'efficienza non è solo rendimento di macchine: riguarda sistemi, processi, servizi." }
+  ]
+ },
+ {
+  "id": "50001_m02_s009",
+  "layout": "punti",
+  "kicker": "Prestazione energetica · 6",
+  "titolo": "Dalla tripletta alle priorità",
+  "intro": "La tripletta non serve solo a descrivere l'energia, serve a scegliere dove agire. Quando distingui uso, consumo ed efficienza, inizi a vedere quali aree meritano priorità e quali, pur presenti, hanno un peso secondario. La sequenza è preziosa: prima localizzi, poi quantifichi, infine capisci la qualità della trasformazione.",
+  "punti": [
+   { "h": "Localizzare con l'uso", "d": "Un'azienda di imballaggi con consumo totale elevato può solo avviare una campagna generica. Ma mappando l'uso vede che estrusione, aria compressa e raffrescamento sono quasi tutto il profilo: sostituire lampade in ufficio non toccherà il centro, ridurre le perdite di aria compressa incide molto di più." },
+   { "h": "Quantificare, poi leggere l'efficienza", "d": "Il consumo segnala il peso del processo, l'uso mostra dove si concentra il fabbisogno, l'efficienza fa emergere il potenziale interno: due linee di estrusione producono lo stesso articolo con risultati energetici molto diversi. Prima localizzi, poi quantifichi, infine capisci la qualità." },
+   { "h": "Non seguire il più visibile", "d": "Molte organizzazioni scelgono le priorità in base a ciò che è più visibile, facile o economico nell'immediato. Un intervento facile può avere impatto minimo; un uso poco appariscente può assorbire moltissima energia anno dopo anno. Le priorità nascono dai dati e dalla loro interpretazione, non dall'intuizione." },
+   { "h": "Verso gli usi significativi", "d": "Esistono usi che determinano una parte sostanziale del consumo, oppure offrono un forte potenziale di miglioramento. Non sono importanti in senso generico: diventano il punto di concentrazione del sistema, perché lì si giocano le decisioni più influenti." }
+  ]
+ },
+ {
+  "id": "50001_m02_s010",
+  "layout": "evidenza",
+  "kicker": "Usi significativi · 1",
+  "eyebrow": "Il baricentro operativo",
+  "titolo": "Significativo vuol dire influente, non soltanto grande",
+  "testo": "Gli usi energetici significativi sono uno dei concetti più importanti dell'intero modulo. La logica è semplice ma produce conseguenze concrete: non tutti gli impieghi hanno lo stesso peso. Alcuni assorbono una parte molto rilevante del consumo; altri, pur non essendo dominanti in valore assoluto, mostrano margini di miglioramento così ampi da meritare attenzione prioritaria. Quando un uso rientra in una di queste due situazioni, entra nell'area degli usi energetici significativi. La significatività non coincide solo con il grande consumo: la norma invita a guardare anche dove esiste uno spazio realistico per migliorare in modo rilevante. In uno stabilimento i forni assorbono gran parte dell'energia ed è naturale considerarli centrali; ma la rete di aria compressa, che pesa meno, ha perdite e ore a vuoto, e può meritare una priorità seria. Significativo vuol dire influente, non soltanto grande. La norma non fissa un criterio numerico valido per tutti: spetta all'organizzazione stabilire come riconoscere la significatività nel proprio contesto, con criteri coerenti ai dati e al modo in cui l'energia viene davvero usata. Un uso significativo non è per forza una grande area: può coincidere con un impianto, un sistema, un processo o una specifica attrezzatura. Serve a concentrare attenzione, monitoraggio, responsabilità e risorse dove il sistema può incidere davvero: senza questo fuoco, l'organizzazione lavora molto ma sposta poco."
+ },
+ {
+  "id": "50001_m02_s011",
+  "layout": "punti",
+  "kicker": "Usi significativi · 2",
+  "titolo": "Come riconoscerli",
+  "intro": "Un uso entra al centro dell'attenzione quando assorbe una quota rilevante di energia, oppure quando offre un margine di miglioramento molto forte. La significatività nasce da due porte diverse: il peso attuale del consumo, e il potenziale di migliorare la prestazione. Tenendo presenti entrambe, eviti due errori opposti — guardare solo a ciò che consuma di più, o inseguire interventi promettenti ma marginali.",
+  "punti": [
+   { "h": "Criteri dell'organizzazione, non arbitrio", "d": "La norma non fissa una soglia uguale per tutti: l'organizzazione stabilisce i propri criteri, coerenti con attività, dati e realtà operativa. Non è arbitrio: i criteri devono avere logica, stabilità e capacità di spiegare perché un uso è significativo e un altro no." },
+   { "h": "Un quadro concreto", "d": "I forni assorbono quasi metà dell'energia annua: entrano per il peso evidente. La rete di aria compressa pesa meno ma ha perdite e funzionamento a vuoto: entra per il potenziale. L'illuminazione uffici, poco rilevante e già ben regolata, può restare fuori dal gruppo prioritario senza essere ignorata del tutto." },
+   { "h": "Più elementi insieme", "d": "I criteri possono considerare quota di consumo, ore di funzionamento, continuità del servizio, instabilità dei dati, distanza da condizioni efficienti, presenza di scarti o perdite, rilevanza del processo servito. Buone pratiche, non un elenco imposto: la scelta deriva dai dati, non dall'intuizione del momento." },
+   { "h": "Non confondere significativo e facile", "d": "Una pompa secondaria può essere facilissima da ottimizzare, un forno continuo molto più complesso; ma la facilità non coincide con la centralità energetica. Il sistema guarda prima dove si concentrano peso e opportunità, poi decide il come. La priorità nasce dall'effetto atteso sul risultato energetico complessivo." }
+  ]
+ },
+ {
+  "id": "50001_m02_s012",
+  "layout": "split",
+  "kicker": "Usi significativi · 3",
+  "titolo": "Quanto grande deve essere un uso significativo",
+  "lead": "Un uso significativo può coincidere con un impianto, un sistema, un processo o una specifica attrezzatura. La domanda pratica non è solo quale uso conta, ma a quale livello definirlo perché diventi governabile. Troppo ampio, non capisci dove intervenire; troppo stretto, spezzi il quadro e perdi il senso d'insieme. È un equilibrio metodologico, non un dettaglio lessicale.",
+  "punti": [
+   { "h": "Collegare a decisioni concrete", "d": "In una centrale del latte, dichiarare come uso significativo l'intero sito è un contenitore troppo grande; una singola valvola è l'estremo opposto. Molto più sensato: il sistema di generazione e distribuzione del vapore, o il processo di pastorizzazione, secondo come sono organizzati dati, responsabilità e azioni." },
+   { "h": "Dipende da come è gestito", "d": "In un albergo il raffrescamento può essere l'intero sistema di climatizzazione, solo la produzione di acqua refrigerata, o camere e aree comuni separate. Se il problema è la regolazione centrale, ha senso una definizione sistemica; se una macchina lavora in condizioni anomale e pesa molto, si identifica proprio quell'attrezzatura." },
+   { "h": "Anche il trasporto", "d": "Il trasporto può rientrare nel campo di applicazione e diventare un uso significativo. In un'impresa di distribuzione alimentare con mezzi refrigerati, limitarsi agli edifici sarebbe miope: se il trasporto pesa molto o offre ampio margine, va definito come uso energetico significativo a pieno titolo." },
+   { "h": "La domanda che orienta", "d": "«A questo livello riesco a capire i consumi, assegnare responsabilità, leggere l'efficienza e impostare azioni sensate?» Se la risposta è no, il livello non è giusto. Non trattare usi diversi come un blocco solo perché condividono la fonte; più macchine simili con la stessa funzione possono invece essere un sistema unico." }
+  ]
+ },
+ {
+  "id": "50001_m02_s013",
+  "layout": "cards",
+  "kicker": "Usi significativi · 4",
+  "titolo": "Il baricentro del sistema",
+  "intro": "Gli usi energetici significativi non sono una fotografia statica: sono il baricentro operativo dell'SGE, il punto verso cui convergono attenzione, risorse e controllo. Quando un'organizzazione li individua bene, capisce dove misurare con più cura, dove assegnare responsabilità nitide, dove cercare il miglioramento. Trasformano l'analisi in governo. Pensali come nodi: in ciascuno devono convergere quattro cose.",
+  "cards": [
+   { "h": "Comprensione dell'uso", "d": "Capire davvero come e quando quell'uso impiega energia, in quale processo, con quali logiche operative. Senza comprensione, il nodo è un'etichetta: si nomina un uso significativo ma non lo si conosce abbastanza per governarlo." },
+   { "h": "Misura adeguata", "d": "Dati raccolti dove serve, non dove è comodo. Un'azienda che identifica forni e aria compressa come significativi, ma raccoglie dati dettagliati solo sull'illuminazione perché i contatori sono comodi, ha nominato i propri usi senza governarli. Il problema non è lessicale, è strutturale." },
+   { "h": "Responsabilità concreta", "d": "Un volto e un compito per ogni uso significativo. Assegnare il miglioramento dell'aria compressa «a nessuno in particolare» significa non governarlo. Un'impresa logistica che dà indicatori chiari, responsabilità e routine di controllo a raffrescamento e ricarica dei mezzi inizia a respirare nel punto giusto." },
+   { "h": "Possibilità di miglioramento", "d": "Il nodo regge se lì il sistema può davvero incidere. Difende dall'innamoramento per piccoli interventi molto comunicabili mentre un uso meno elegante ma più pesante resta trascurato. Se si vede che gli usi più rilevanti guidano davvero le priorità, il sistema è maturo; se compaiono solo in una tabella iniziale e poi scompaiono, è debole." }
+  ]
+ },
+ {
+  "id": "50001_m02_s014",
+  "layout": "split",
+  "kicker": "La misura · 1",
+  "titolo": "EnPI: l'indicatore che traduce la prestazione",
+  "lead": "Serve una lingua comune per misurare ciò che conta, e la prima parola è EnPI: una misura, o un'unità di prestazione energetica, definita dall'organizzazione. L'indicatore non cade dal cielo e non è uguale per tutti: viene scelto in funzione delle attività che vuoi capire, confrontare e migliorare. Una lettura di contatore è un dato; un EnPI è una misura costruita per esprimere la prestazione in modo utile al governo.",
+  "punti": [
+   { "h": "La forma segue la domanda", "d": "In un impianto, energia per unità di prodotto conforme; in un ufficio, energia per area servita o per postazione usata; in un albergo, un indicatore legato alle camere occupate. La forma cambia perché cambia la domanda: quanto costa in energia ottenere questo risultato utile." },
+   { "h": "Numero, rapporto o modello", "d": "Un numero semplice basta per un uso molto specifico e stabile; un rapporto collega energia e risultato utile; un modello serve quando la prestazione dipende da più fattori. Il principio: l'indicatore deve rappresentare bene il fenomeno che vuoi governare." },
+   { "h": "Uno strumento di interpretazione", "d": "Un magazzino refrigerato che guarda solo il consumo mensile è ingannato da carichi, stagioni e attività diverse; un EnPI che collega l'energia al volume utile gestito dà una lettura robusta. Una linea che consuma uguale in due settimane ma produce più scarti: un indicatore sui pezzi buoni rende visibile il problema." },
+   { "h": "Più EnPI insieme", "d": "La stessa organizzazione può averne più di uno: uno generale per il sito, altri mirati per gli usi significativi, altri per specifici processi. Sarebbe strano che un unico indicatore racconti nello stesso modo una centrale termica, una linea e un edificio uffici. L'importante è che ognuno abbia scopo chiaro e logica leggibile." }
+  ]
+ },
+ {
+  "id": "50001_m02_s015",
+  "layout": "confronto",
+  "kicker": "La misura · 2",
+  "titolo": "Indicatore e valore: la regola e il suo risultato",
+  "intro": "Una distinzione che evita molti equivoci: l'EnPI è la regola con cui misuri la prestazione; il valore dell'EnPI è la quantificazione concreta di quella regola in un dato momento o periodo. Se li confondi, credi che cambiare un numero significhi cambiare indicatore, o confronti valori ottenuti con logiche diverse come se fossero paragonabili. Quando due colleghi arrivano a conclusioni opposte, spesso usano regole diverse senza saperlo.",
+  "a": {
+   "h": "L'indicatore (la regola)",
+   "sub": "Resta stabile nel tempo",
+   "punti": [
+    { "d": "«Energia per unità di prodotto conforme» è l'indicatore. Il confronto tra periodi ha senso solo se la regola di misura rimane coerente: passare da «energia per area servita» a «energia per postazione occupata» è un cambio di EnPI, non un normale andamento della prestazione." },
+    { "d": "Quando incontri un EnPI, la prima cosa da chiedere non è il valore, ma la definizione: che cosa sta al numeratore, che cosa al denominatore, su quale periodo, con quali esclusioni, da quali fonti. Una definizione completa rende l'indicatore trasferibile — chiunque, con gli stessi dati, arriverebbe allo stesso numero." }
+   ]
+  },
+  "b": {
+   "h": "Il valore (il risultato)",
+   "sub": "Cambia col periodo",
+   "punti": [
+    { "d": "È la quantificazione in un momento o periodo definito: in inverno sale, in primavera scende, senza che tu abbia cambiato indicatore. Devi sapere a quale orizzonte guardi ed evitare confronti tra periodi non omogenei — giornaliero, mensile e annuale non sono intercambiabili." },
+    { "d": "Un valore isolato dice poco, una serie racconta molto: stabilità, scostamenti, stagionalità, effetti degli interventi, anomalie. In un albergo l'EnPI della climatizzazione per camera occupata può scendere pur salendo il consumo assoluto, perché il servizio utile è cresciuto con una relazione energetica migliore." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m02_s016",
+  "layout": "split",
+  "kicker": "La misura · 3",
+  "titolo": "EnB: la base che rende leggibile il miglioramento",
+  "lead": "Quando dici che la prestazione è migliorata, rispetto a che cosa? La norma risponde con l'EnB, il consumo di riferimento: il riferimento quantitativo che fornisce la base per confrontare la prestazione energetica. Senza una base, il miglioramento resta un'impressione. L'EnB dà un «prima» sensato al confronto.",
+  "punti": [
+   { "h": "Non un obiettivo, non il record", "d": "Il consumo di riferimento non è un traguardo da raggiungere né automaticamente il miglior risultato mai visto: è una base quantitativa costruita sui dati di un certo periodo e, se necessario, su condizioni ben definite. Va scelto con attenzione — un mese anomalo o poco rappresentativo rende fragile ogni confronto successivo." },
+   { "h": "Uno o più riferimenti", "d": "Un solo EnB basta per un uso stabile e ben definito; con processi diversi o cambiamenti rilevanti servono basi differenti. Un gruppo con più siti può avere un riferimento per il deposito refrigerato e un altro per la flotta, o un riferimento generale più riferimenti mirati per alcuni usi significativi." },
+   { "h": "Confronti «prima e dopo»", "d": "L'EnB permette confronti del tipo prima e dopo, o con e senza un'azione. Se una rete di aria compressa viene risanata, il confronto con il riferimento precedente aiuta a vedere se il sistema ha davvero ridotto perdite e sprechi, al netto di letture superficiali." },
+   { "h": "Tre qualità", "d": "Un buon EnB è rappresentativo (non nasce da un periodo strano), comprensibile (chi legge sa da quali dati deriva) e coerente con l'indicatore (non confronta grandezze scollegate). Quando manca una di queste, il miglioramento dichiarato diventa difficile da sostenere." }
+  ]
+ },
+ {
+  "id": "50001_m02_s017",
+  "layout": "confronto",
+  "kicker": "La misura · 4",
+  "titolo": "Fattori statici e variabili pertinenti",
+  "intro": "Per confrontare la prestazione in modo serio non basta avere un indicatore e una base: devi capire quali fattori influenzano i risultati. La differenza sta nel modo in cui incidono nel tempo. Ignorarli distingue un confronto ingenuo — che mette un valore accanto a un altro e conclude subito — da uno robusto, che si chiede prima quali condizioni sono cambiate e quanto hanno influito.",
+  "a": {
+   "h": "I fattori statici",
+   "sub": "Noti, ma non cambiano regolarmente",
+   "punti": [
+    { "d": "Un elemento noto che influenza la prestazione ma non cambia con regolarità: la dimensione dell'impianto, la progettazione delle attrezzature, il numero di turni stabilmente adottati, la gamma di prodotti di base. Plasmano il comportamento energetico ma non oscillano mese per mese." },
+    { "d": "Se cambiano, il cambiamento è spesso strutturale e può richiedere di rivedere la base di confronto. Un magazzino che aggiunge una nuova cella permanente cambia l'assetto di base del sistema: ignorarlo significa confrontare come equivalenti due sistemi che equivalenti non sono più." }
+   ]
+  },
+  "b": {
+   "h": "Le variabili pertinenti",
+   "sub": "Quantificabili e cambiano spesso",
+   "punti": [
+    { "d": "Un fattore quantificabile che incide in modo significativo e cambia regolarmente: la produzione, le ore di lavoro, le condizioni atmosferiche, alcune condizioni operative. Spostano il valore degli indicatori anche quando l'efficienza di fondo non è cambiata." },
+    { "d": "Se la seconda estate è molto più calda, parte dell'aumento dei consumi dipende dalla temperatura esterna. Ignorare le variabili pertinenti significa attribuire all'efficienza scostamenti dovuti a condizioni operative normali. I criteri di significatività spettano all'organizzazione." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m02_s018",
+  "layout": "punti",
+  "kicker": "La misura · 5",
+  "titolo": "Normalizzazione: confrontare in condizioni equivalenti",
+  "intro": "Normalizzare significa modificare i dati per tenere conto delle variazioni e rendere possibile il confronto in condizioni equivalenti. Senza, rischi di attribuire a un miglioramento ciò che dipende da clima, produzione o ore di lavoro, o di non vedere un miglioramento reale perché il contesto è diventato più gravoso. Non significa manipolare i numeri per farli apparire migliori: significa togliere il rumore che renderebbe ingiusta la lettura.",
+  "punti": [
+   { "h": "Restituire un quadro equo", "d": "Un albergo confronta due estati: nella seconda occupazione più alta e temperature più severe, consumo della climatizzazione in crescita. Fermandoti qui, penseresti a un peggioramento; tenendo conto di camere occupate e clima, scopri che il servizio è stato erogato in modo più efficiente." },
+   { "h": "Le due derive opposte", "d": "Non normalizzare mai: ogni estate calda diventa un peggioramento e le decisioni inseguono il rumore. Normalizzare troppo: correzioni su correzioni finché il dato non dice più nulla di verificabile. La regola pratica è proporzionare lo sforzo all'influenza reale delle variabili." },
+   { "h": "Il requisito di onestà", "d": "Chiunque legga il confronto deve poter capire quali correzioni sono state applicate, su quali dati, con quale logica. Una normalizzazione che non si lascia raccontare in poche frasi chiare è già un segnale di fragilità: prima viene la domanda gestionale, poi lo strumento che rende equa la risposta." },
+   { "h": "Un test rapido per chi verifica", "d": "Chiedi di spiegare, senza tabelle davanti, perché il confronto tra due periodi è considerato equo. Se la risposta collega variabili, dati e metodo in modo comprensibile, la misura è governata; se si rifugia nel foglio di calcolo, la misura esiste ma non è ancora patrimonio dell'organizzazione." }
+  ]
+ },
+ {
+  "id": "50001_m02_s019",
+  "layout": "split",
+  "kicker": "Confine e campo · 1",
+  "titolo": "Il confine: i limiti fisici o organizzativi",
+  "lead": "Devi capire dove il sistema comincia e dove finisce. Il confine indica i limiti fisici oppure organizzativi entro i quali l'SGE opera. Decide quali attività entrano nell'osservazione, quali dati raccogliere, chi ha responsabilità reali e su quali consumi l'organizzazione può dimostrare un miglioramento credibile. Non è un concetto puramente edilizio: è il perimetro reale del governo energetico.",
+  "punti": [
+   { "h": "Non una sola forma", "d": "Può coincidere con un processo, abbracciare più processi collegati, identificarsi con uno stabilimento, una rete di siti coordinati o l'intera organizzazione. Una scelta sensata per una piccola impresa può essere inadatta a un gruppo multisito." },
+   { "h": "Segue la sfera di responsabilità", "d": "Un'azienda con stabilimento, deposito esterno e sede amministrativa: se il governo è concentrato sullo stabilimento, il confine si fissa lì; se la direzione governa consumi e dati in modo integrato anche sul deposito, si estende. Il limite non coincide solo con muri e cancelli, ma con la sfera di decisione." },
+   { "h": "Né troppo ampio né troppo stretto", "d": "Dichiarare un confine molto ampio senza dati affidabili, autorità operative o capacità di intervento indebolisce il sistema fin dall'inizio; sceglierlo troppo stretto lasciando fuori una parte importante del profilo crea un sistema elegante ma poco rappresentativo. Definire bene significa essere accurati, non prudenti in eccesso." },
+   { "h": "Perché regge tanta sostanza", "d": "Indicatori, consumo di riferimento, lettura degli usi e responsabilità dipendono tutti dal perimetro scelto: se cambi il confine, cambiano i dati che entrano e il significato dei confronti. Alcune attività svolte da esterni restano rilevanti se l'organizzazione ne governa criteri, modalità e risultati — il limite segue il controllo reale." }
+  ]
+ },
+ {
+  "id": "50001_m02_s020",
+  "layout": "numeri",
+  "kicker": "Confine e campo · 2",
+  "titolo": "Il campo di applicazione: quali attività sono governate",
+  "intro": "Se il confine definisce i limiti, il campo di applicazione chiarisce quali attività l'organizzazione gestisce attraverso il proprio SGE. Le due idee sono collegate ma non coincidono: dentro un confine ben definito decidi con precisione quali attività rientrano nel governo. Il campo può comprendere più confini e includere anche il trasporto. Un buon campo ha tre qualità.",
+  "numeri": [
+   { "n": "1", "h": "Comprensibile", "d": "Chi ascolta capisce subito che cosa rientra, senza descrizioni vaghe come «tutto il sito». Un'impresa di distribuzione con deposito, flotta e sede deve dire con chiarezza quali attività sono effettivamente gestite mediante l'SGE." },
+   { "n": "2", "h": "Coerente", "d": "Non esclude senza motivo le attività che influenzano la prestazione. Dichiarare un sistema riferito solo agli uffici lasciando fuori deposito refrigerato e flotta — dove si concentra la prestazione — è un campo debole e poco credibile. E dentro i confini rientrano tutti i tipi di energia presenti." },
+   { "n": "3", "h": "Governabile", "d": "L'organizzazione dispone davvero di responsabilità, dati e capacità di azione sulle attività incluse. In una lavanderia che monitora solo l'elettricità e trascura il calore dell'asciugatura, il sistema perde aderenza alla realtà. Troppo largo promette controllo dove non esiste; troppo stretto protegge dal rischio ma anche dal miglioramento." }
+  ]
+ },
+ {
+  "id": "50001_m02_s021",
+  "layout": "tabella",
+  "kicker": "Confine e campo · 3",
+  "titolo": "Una coppia da tenere sempre unita",
+  "intro": "Confine e campo di applicazione non vanno mai separati. Insieme costruiscono il perimetro reale della responsabilità energetica, che deve essere coerente con gli usi significativi, con i dati disponibili e con l'autorità reale. Prendi un'impresa di surgelati con stabilimento, deposito, sede amministrativa e trasporto esterno: la tabella mostra come le due parole lavorano insieme, e le quattro domande di controllo.",
+  "cols": ["Aspetto", "Il confine", "Il campo di applicazione"],
+  "righe": [
+   ["Che cosa definisce", "I limiti fisici o organizzativi entro cui l'SGE opera", "Quali attività sono effettivamente gestite mediante l'SGE"],
+   ["Nell'esempio surgelati", "Stabilimento e deposito, dove si controllano impianti, misure e decisioni", "Ricezione, produzione, surgelazione, stoccaggio refrigerato, servizi ausiliari"],
+   ["Il caso del trasporto", "Rientra se mezzi e profili di missione sono davvero governati", "Incluso solo se l'impresa definisce temperature, manutenzione e regole; non per dare un'immagine più completa"],
+   ["La domanda di controllo", "I limiti sono descritti in modo chiaro?", "Le attività incluse sono esplicitate, con dati e autorità sufficienti a governarle?"]
+  ]
+ },
+ {
+  "id": "50001_m02_s022",
+  "layout": "cards",
+  "kicker": "Struttura e PDCA · 1",
+  "titolo": "Leggere il sistema con la struttura armonizzata",
+  "intro": "Le parole tecniche vanno ad abitare un'architettura generale. La struttura armonizzata non è un tecnicismo astratto: è una forma comune che rende le norme di sistema più leggibili e integrabili. Molte norme moderne seguono un disegno ricorrente — contesto, direzione, pianificazione, supporto, operatività, valutazione, miglioramento. Nel caso dell'energia non sostituisce il contenuto specialistico: lo ospita e lo ordina.",
+  "cards": [
+   { "h": "Il tema energetico entra nel governo", "d": "Prestazione, uso, consumo, efficienza e usi significativi non vivono in una stanza separata: entrano nel modo in cui l'organizzazione decide, assegna risorse, pianifica obiettivi, controlla attività e interpreta risultati. Il tema smette di essere un progetto laterale e diventa parte del governo." },
+   { "h": "Il rischio senza la struttura", "d": "In un gruppo con stabilimenti, magazzini e flotta, trattare l'energia come sola iniziativa tecnica produce buone analisi di consumo ma ruoli confusi, priorità scollegate dal business e interventi lasciati alla buona volontà di pochi." },
+   { "h": "Il quadro cambia dentro la struttura", "d": "Il contesto chiarisce dove l'energia pesa; la direzione orienta scelte e risorse; la pianificazione collega dati, indicatori e azioni; il supporto assicura competenze e misure affidabili; l'operatività traduce le decisioni; la valutazione controlla i risultati; il miglioramento aggiorna il sistema quando il contesto cambia." },
+   { "h": "Domande più mature", "d": "Riduce il linguaggio dei compartimenti chiusi: non più il reparto tecnico che parla di chilowattora e la gestione che parla di obiettivi, ma un solo sistema. Dove entrano gli usi significativi nella pianificazione? Come la direzione usa la prestazione per orientare priorità, non solo per ricevere report? Domande da sistema, non da impianto." }
+  ]
+ },
+ {
+  "id": "50001_m02_s023",
+  "layout": "flusso",
+  "kicker": "Struttura e PDCA · 2",
+  "titolo": "Il ciclo PDCA energetico: il sistema in movimento",
+  "intro": "Se la struttura armonizzata aiuta a leggere l'architettura, il PDCA aiuta a leggere il movimento: è come un sistema smette di essere carta ordinata e diventa apprendimento. Nel caso dell'energia il ciclo non gira attorno a parole vuote, ma attorno alla prestazione energetica, e usa proprio il lessico consolidato in questo modulo.",
+  "passi": [
+   { "h": "Pianificare", "d": "Non solo un calendario: capire come si usa energia, quanto se ne consuma, con quale efficienza si ottiene il risultato, quali usi sono significativi, quali indicatori servono, quale base di confronto è credibile. La pianificazione nasce quando i dati diventano priorità — non partire dall'intervento preferito, ma dalla comprensione del fenomeno." },
+   { "h": "Fare", "d": "Non coincide con comprare una tecnologia nuova: può voler dire modificare regolazioni, chiarire responsabilità, migliorare routine, formare chi gestisce un uso significativo, raccogliere dati con più qualità. Il sistema prende forma quando la priorità scelta entra nella pratica reale." },
+   { "h": "Verificare", "d": "Osservare se gli indicatori si muovono nella direzione attesa, se il confronto con il riferimento resta credibile, se le variabili pertinenti spiegano gli scostamenti, se le azioni hanno prodotto effetti veri o apparenti. Un aumento assoluto dei consumi può non essere peggioramento se il servizio utile è cresciuto." },
+   { "h": "Agire per migliorare", "d": "Il sistema non registra soltanto: impara. Conferma ciò che funziona, corregge ciò che non funziona, aggiorna priorità e rivede il piano quando il contesto cambia. Il cuore del miglioramento continuo non è difendere l'idea iniziale, ma lasciare che i dati guidino il passo successivo." }
+  ]
+ },
+ {
+  "id": "50001_m02_s024",
+  "layout": "split",
+  "kicker": "Struttura e PDCA · 3",
+  "titolo": "Pianificare e fare: il lessico diventa decisione",
+  "lead": "È qui che il lessico smette di essere teorico e diventa pratica quotidiana. Pianificare significa capire dove concentrare l'attenzione e perché; fare significa tradurre quella scelta in ruoli, controlli, routine e azioni concrete. Se salti la prima fase, la seconda diventa una raccolta di iniziative sparse; se salti la seconda, il piano resta una buona intenzione.",
+  "punti": [
+   { "h": "Pianificare è scegliere priorità", "d": "In una lavanderia con lavaggio, asciugatura, finissaggio e servizi ausiliari, l'organizzazione legge il profilo, distingue i principali usi, scopre che asciugatura e generazione del calore incidono molto, osserva che alcune linee sono meno efficienti, identifica gli usi significativi, sceglie gli EnPI utili e definisce un EnB credibile." },
+   { "h": "Fare è assegnare volti e tempi", "d": "Se l'asciugatura è significativa, qualcuno governa i set point, qualcuno controlla le perdite di calore, qualcuno verifica le routine di avvio e arresto, qualcuno raccoglie dati in continuo. Le priorità devono atterrare nella vita reale dell'organizzazione." },
+   { "h": "Fare non è sempre spendere molto", "d": "A volte il miglioramento nasce da una nuova tecnologia, altre da una gestione migliore dell'esistente: una centrale termica con una regolazione più accurata, una rete di aria compressa che recupera efficienza riducendo perdite e tempi a vuoto. Il sistema serio non si innamora della soluzione vistosa: parte dalle priorità." },
+   { "h": "Un indizio di maturità", "d": "Quando chiedi come l'organizzazione trasforma l'analisi in attività reali, emergono risposte precise o solo formule generiche. Un sistema maturo collega gli usi significativi ai controlli, gli EnPI alle decisioni, la prestazione ai comportamenti quotidiani. E pianificare e fare non sono mai definitivi: se cambiano confini o priorità, il sistema si adatta." }
+  ]
+ },
+ {
+  "id": "50001_m02_s025",
+  "layout": "confronto",
+  "kicker": "Struttura e PDCA · 4",
+  "titolo": "Verificare e migliorare: la prova e l'apprendimento",
+  "intro": "Le ultime due fasi impediscono al sistema di raccontarsi una storia troppo comoda. In ambito energetico sono inseparabili, perché la prestazione non si intuisce: si misura, si confronta, si interpreta. Qui si vede la differenza tra conformità apparente e vitalità del sistema. Un'idea semplice: verificare misura la distanza tra ciò che speravi e ciò che è accaduto, migliorare decide che cosa fare di quella distanza.",
+  "a": {
+   "h": "Verificare",
+   "sub": "Leggere i dati nel contesto",
+   "punti": [
+    { "d": "Osservare con rigore cosa è successo: gli EnPI si muovono come atteso? Le variazioni dipendono da reale efficienza o da mix produttivo, ore di lavoro, altre variabili? Qui torna tutto il vocabolario — consumo, uso, efficienza, usi significativi, indicatore, riferimento, normalizzazione." },
+    { "d": "In un ospedale, dopo una revisione della ventilazione il consumo mensile sale leggermente: chi guarda solo quel dato conclude che non ha funzionato; una verifica matura vede che il mese è stato più caldo, l'occupazione è cresciuta e a condizioni comparabili la prestazione è migliorata. Attento a controllare solo ciò che è facile misurare." }
+   ]
+  },
+  "b": {
+   "h": "Migliorare",
+   "sub": "Impedire la fedeltà a una foto superata",
+   "punti": [
+    { "d": "Fare tesoro di ciò che la verifica ha mostrato: se un'azione ha funzionato meno del previsto, il sistema non difende l'idea per orgoglio, la corregge. Se un uso prima secondario è diventato rilevante, le priorità si aggiornano; se un indicatore non aiuta, si rivede; se confine o campo non riflettono più il governo reale, si ripensano." },
+    { "d": "Qui si vede la differenza tra un sistema ordinato ma statico — tabelle, riunioni, report, ma nessun apprendimento — e uno vitale, che usa la verifica per decisioni migliori anche quando i risultati non sono quelli sperati. Questa disponibilità a correggersi è il centro del miglioramento continuo." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m02_s026",
+  "layout": "punti",
+  "kicker": "Sintesi · 1",
+  "titolo": "Le parole che ti fanno leggere bene il sistema",
+  "intro": "L'idea da portare via: nella ISO 50001 le parole non sono etichette decorative, ma strumenti di giudizio. Ogni termine serve a leggere la realtà energetica con più precisione e a evitare conclusioni veloci ma deboli. Una mappa compatta per orientarti.",
+  "punti": [
+   { "h": "Uso e consumo", "d": "L'uso dell'energia dice per quale funzione è impiegata; il consumo dice quanta. Se li confondi, perdi la capacità di capire dove si trova davvero il peso energetico: un ospedale, un magazzino refrigerato e un centro dati hanno consumi elevati in modi diversi perché cambiano gli usi, non solo i volumi." },
+   { "h": "Efficienza e prestazione", "d": "L'efficienza è la relazione tra energia immessa e risultato utile: non basta consumare meno. E la prestazione energetica non si legge con una sola cifra, ma incrociando funzione, quantità e qualità del rapporto — un risultato misurabile, non un'impressione." },
+   { "h": "Priorità e misura", "d": "Gli usi significativi assorbono una quota rilevante o offrono margini interessanti: dicono dove concentrare attenzione e risorse. L'EnPI è la misura scelta, il suo valore è la quantificazione in un periodo, l'EnB è la base di confronto. Fattori statici, variabili pertinenti e normalizzazione rendono i confronti comparabili." },
+   { "h": "Dove tutto si applica", "d": "Il confine definisce i limiti fisici o organizzativi, il campo di applicazione chiarisce quali attività sono governate. La struttura armonizzata mostra che queste parole non restano isolate: entrano in un sistema che pianifica, attua, verifica e migliora secondo il ciclo PDCA." }
+  ]
+ },
+ {
+  "id": "50001_m02_s027",
+  "layout": "numeri",
+  "kicker": "Sintesi · 2",
+  "titolo": "Sette domande per non perderti davanti a un caso",
+  "intro": "Nella pratica non ti muovi ripetendo definizioni a memoria: ti muovi ponendo domande giuste. Se le domande sono buone, anche la lettura del sistema diventa più chiara. Ogni domanda apre poi temi di responsabilità, leadership, pianificazione e decisione — un ponte naturale verso ciò che verrà dopo.",
+  "numeri": [
+   { "n": "1", "h": "Dove viene usata l'energia", "d": "Cerchi l'uso dell'energia: quali funzioni assorbono energia e con quale logica operativa. Senza questa mappa degli usi, il sistema resta cieco." },
+   { "n": "2", "h": "Quanta energia viene usata", "d": "Entri nel consumo di energia: la dimensione quantitativa. Ma ricorda: il consumo da solo ti dà la massa del problema, non la sua struttura." },
+   { "n": "3", "h": "Quale risultato utile ottengo", "d": "Entri nell'efficienza energetica: il rapporto tra input energetico e servizio ottenuto. Se questo rapporto migliora, la prestazione può migliorare anche quando i consumi non scendono." },
+   { "n": "4", "h": "Quali usi contano di più", "d": "Cerchi gli usi energetici significativi: dove si concentrano consumo sostanziale o potenziale di miglioramento. Trasforma la descrizione in priorità — se non sai quali usi sono centrali, non sai dove orientare il sistema." },
+   { "n": "5", "h": "Con quale misura leggo", "d": "Entrano gli EnPI: quale misura o unità di prestazione è stata scelta e se è coerente col fenomeno. Ciò che conta è la sua capacità di rappresentare bene il rapporto energetico che vuoi governare." },
+   { "n": "6", "h": "Rispetto a che cosa confronto", "d": "La domanda dell'EnB: senza base di riferimento il miglioramento resta dichiarato ma non dimostrato. Con variabili pertinenti importanti — clima, produzione — chiediti anche se il confronto è stato reso equo con una normalizzazione sensata." },
+   { "n": "7", "h": "Dove finisce il sistema", "d": "Tornano confine e campo di applicazione: quali limiti fisici o organizzativi sono definiti e quali attività sono davvero governate. Protegge da due illusioni — credere che il sistema copra tutto, o non vedere che copre troppo poco." }
+  ]
+ },
+ {
+  "id": "50001_m02_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · 3",
+  "modNum": "2",
+  "titolo": "Il vocabolario minimo per non leggere male la norma",
+  "punti": [
+   { "h": "La tripletta cambia la lettura", "d": "Da ora, quando senti «prestazione energetica», non pensi a una riduzione generica dei consumi, ma alla tripletta uso-consumo-efficienza. E hai capito che non tutti gli impieghi meritano la stessa attenzione: gli usi significativi sono quelli che pesano davvero o offrono lo spazio più interessante per migliorare." },
+   { "h": "La grammatica della misura", "d": "Sai distinguere l'indicatore, il suo valore e la base di riferimento: un EnPI è una misura scelta per leggere la prestazione, l'EnB non è un traguardo ma un termine di confronto, e fattori statici, variabili pertinenti e normalizzazione rendono il confronto serio, non artificiosamente complicato." },
+   { "h": "La chiarezza organizzativa", "d": "Il confine definisce i limiti fisici o organizzativi, il campo di applicazione chiarisce quali attività sono gestite mediante l'SGE. La struttura armonizzata mostra che questo lessico vive dentro un sistema, non ai margini: un metodo per rendere governabile il miglioramento nel tempo." },
+   { "h": "Il ripasso per il checkpoint", "d": "Prendi un caso — un ufficio, un supermercato, un laboratorio — e chiediti: quali usi, quale consumo, come leggeresti l'efficienza, quali usi significativi, quale EnPI, quale EnB, quali variabili pertinenti, quali confini e campo. Se riesci a raccontare a voce il passaggio da un termine all'altro, pensi già come chi sa leggere un sistema." }
+  ],
+  "prossimo": {
+   "modulo": "3",
+   "titolo": "Contesto, leadership e pianificazione generale",
+   "testo": "Ora che sai che cos'è il sistema, che cosa misura e dove si applica, puoi chiederti chi lo guida, in quale contesto opera e come si pianifica in modo coerente."
+  }
+ }
+]
