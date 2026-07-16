@@ -1,0 +1,398 @@
+[
+ {
+  "id": "22000_m06_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 22000 — Sicurezza alimentare",
+  "kicker": "Modulo 6",
+  "eyebrow": "Dal contesto alla decisione tecnica",
+  "titolo": "Operativo 2: analisi dei pericoli e piano HACCP",
+  "testo": "Il cuore operativo del controllo dei pericoli: il percorso che porta dai dati iniziali al piano di controllo, passando per l'analisi, la distinzione CCP/OPRP, la logica del limite critico e la validazione. La sicurezza alimentare smette di essere un'intenzione generale e diventa una scelta motivata, documentata e verificabile. La norma (8.5) non parte da una tabella di pericoli, ma da una preparazione accurata — e affida il lavoro al gruppo sicurezza alimentare. In un HACCP maturo non trovi moduli compilati e basta: trovi collegamenti logici, dove ogni passaggio parla la stessa lingua del successivo.",
+  "agenda": [
+   "Informazioni preliminari: ingressi, prodotto, uso, flusso",
+   "Analisi dei pericoli: identificare, collocare, valutare",
+   "Livelli accettabili e pericoli significativi",
+   "Misure di controllo: selezione e classificazione CCP/OPRP",
+   "Validazione: dimostrare prima dell'attuazione",
+   "Il piano di controllo e la verifica sul campo"
+  ]
+ },
+ {
+  "id": "22000_m06_s002",
+  "layout": "punti",
+  "kicker": "Informazioni preliminari · 8.5.1",
+  "titolo": "Materie prime, ingredienti e materiali a contatto",
+  "intro": "La prima domanda non è che cosa può andare storto, ma che cosa entra davvero nel processo. Chiarire quali requisiti valgono per ogni ingresso (materie prime, ingredienti, materiali a contatto) e conservare informazioni documentate sufficienti a sostenere l'analisi — guardare l'ingrediente non come voce di ricetta, ma come possibile veicolo di pericolo.",
+  "punti": [
+   { "h": "Un campo ampio", "d": "Caratteristiche biologiche, chimiche e fisiche; composizione (additivi e coadiuvanti); fonte e provenienza; modalità di produzione, confezionamento e consegna; condizioni di stoccaggio e durata; preparazione prima dell'uso; criteri di accettazione collegati alla sicurezza. Le nocciole tostate per una crema: scrivere «nocciole» dice quasi nulla — contano sgusciate o no, provenienza, rischio frammenti, specifiche microbiologiche, gestione allergeni del fornitore, imballo, trasporto, e se subiranno cernita o macinazione." },
+   { "h": "Anche i materiali a contatto", "d": "Spesso trattati come tema amministrativo, incidono direttamente sul prodotto: un film non idoneo, un contenitore con migrazione non valutata, una guarnizione usurata, un lubrificante non adatto. Descriverli in modo generico fa perdere profondità e trascura pericoli chimici o fisici poco visibili ma reali." },
+   { "h": "Nella misura necessaria", "d": "Evitare due estremi: la scheda povera di due righe inutili, e la raccolta enciclopedica che nessuno consulta. Il criterio: ogni dato tenuto deve aiutare a identificare, valutare o controllare un pericolo — se non sostiene nessuna decisione è peso documentale; se manca un dato che spiegherebbe una decisione importante, è una lacuna vera. Le spezie in dose minima ma da filiere diverse secondo la stagione pesano molto nel rischio." },
+   { "h": "Ingressi reali, non teorici", "d": "Le informazioni devono raccontare ciò che l'azienda compra, riceve, immagazzina e usa davvero. Se la descrizione parla di un ingrediente stabile a temperatura ambiente ma in reparto lo trovi refrigerato (o viceversa), la base dell'analisi potrebbe non essere aggiornata — e se il sistema non fotografa gli ingressi reali, difficilmente leggerà bene i pericoli reali." }
+  ]
+ },
+ {
+  "id": "22000_m06_s003",
+  "layout": "punti",
+  "kicker": "Informazioni preliminari · 8.5.1",
+  "titolo": "Descrivere il prodotto finale in modo utile",
+  "intro": "Dopo ciò che entra, descrivere bene ciò che esce: identificare i requisiti applicabili e mantenere informazioni sufficienti per l'analisi. La chiave non è copiare un'etichetta commerciale, ma descrivere il prodotto come oggetto di sicurezza — due prodotti con nome simile possono avere rischi molto diversi.",
+  "punti": [
+   { "h": "Zuppa fresca vs sterilizzata", "d": "Non si distinguono solo per la ricetta, ma per stabilità microbiologica, condizioni di trasporto, comportamento atteso del consumatore, conseguenze di un'interruzione del freddo. Se la descrizione appiattisce queste differenze, anche l'analisi le appiattisce." },
+   { "h": "Il dessert al cucchiaio", "d": "Non basta «gusto vaniglia, vasetto monodose»: pronto al consumo, con una certa durabilità in refrigerazione, mantenimento a freddo fino all'uso, confezionamento che protegge dalla ricontaminazione post processo, etichetta che informa sulla conservazione, distribuzione controllata. Trascurarne uno rende difficile motivare perché certi pericoli sono significativi e altri no." },
+   { "h": "Caratteristiche pertinenti", "d": "La parola pertinenti conta: non ogni dato analitico esistente, ma quelli che incidono su crescita microbica, sopravvivenza dei pericoli, contaminazione o corretto uso. Per un prodotto acido l'acidità, per un secco l'umidità disponibile, per un affettato confezionato la protezione dell'imballo e il rischio di ricontaminazione. Il prosciutto cotto affettato in atmosfera protettiva ha un profilo di rischio diverso dallo stesso cotto e venduto intero." },
+   { "h": "La distribuzione", "d": "Un prodotto che passa da deposito a trasporto a esposizione refrigerata richiede coerenza lungo tutta la catena; uno a temperatura ambiente segue logiche diverse. Quando il metodo di consegna cambia, può cambiare la tenuta del controllo — spesso rivela versioni datate dell'analisi: il prodotto è passato dal canale tradizionale alla vendita online, ma il profilo documentato è rimasto fermo." }
+  ]
+ },
+ {
+  "id": "22000_m06_s004",
+  "layout": "punti",
+  "kicker": "Informazioni preliminari · 8.5.1",
+  "titolo": "Utilizzo previsto e consumatori vulnerabili",
+  "intro": "Un prodotto sicuro non esiste in astratto: esiste sempre in relazione a un uso previsto. Considerare l'utilizzo previsto, la manipolazione ragionevolmente prevedibile, l'uso improprio non voluto ma atteso in modo realistico, e — quando appropriato — identificare i gruppi di consumatori, individuando quelli particolarmente vulnerabili a specifici pericoli.",
+  "punti": [
+   { "h": "Chi controlla a valle", "d": "La salsa per ristorazione da consumare dopo riscaldamento consente di ragionare sul trattamento successivo del cliente professionale; il pronto al consumo per il pubblico no — deve essere sicuro nelle condizioni in cui viene consumato. Confondere gli scenari attribuisce al cliente o al consumatore un controllo che in realtà non c'è." },
+   { "h": "Uso improprio prevedibile", "d": "Non farsi carico di ogni comportamento assurdo, ma considerare ciò che un consumatore può realisticamente fare: il consumo insufficiente di un prodotto che richiederebbe cottura completa (se l'etichetta è poco chiara o il prodotto somiglia a un già pronto), o un alimento refrigerato lasciato troppo a lungo fuori frigo. Non l'uso corretto, ma un comportamento da valutare." },
+   { "h": "I gruppi vulnerabili", "d": "Sensibilità, non genericità: neonati, anziani fragili, immunocompromessi, allergici, pazienti ospedalieri possono subire conseguenze più gravi dallo stesso pericolo. Un prodotto per mense ospedaliere o prima infanzia non può avere la stessa superficialità documentale di un generico da dispensa — cresce l'attenzione perché cresce la severità potenziale del danno." },
+   { "h": "Una lente, non una frase standard", "d": "Il formaggio fresco per il consumo generale segue un quadro; lo stesso destinato a una struttura sanitaria ne segue un altro. Il test in verifica: leggendo uso previsto e istruzioni, capisci chiaramente quale responsabilità resta al produttore e quale passa al cliente o al consumatore? Se no, la base dell'analisi è fragile e produrrà valutazioni poco difendibili — e attenzione alle dissonanze (dice «previa cottura» ma packaging e canale fanno pensare a consumo immediato)." }
+  ]
+ },
+ {
+  "id": "22000_m06_s005",
+  "layout": "punti",
+  "kicker": "Informazioni preliminari · 8.5.1",
+  "titolo": "Il diagramma di flusso come spina dorsale",
+  "intro": "Predisporre, aggiornare e conservare gli schemi del processo che rappresentano i prodotti (o famiglie simili) e i passaggi coperti dal sistema. Non un puro disegno descrittivo: la base per capire dove un pericolo possa comparire, essere introdotto, ridursi o trovare condizioni favorevoli per crescere. Se l'ossatura è sbagliata, il resto apparirà ordinato ma non reggerà.",
+  "punti": [
+   { "h": "Chiaro, accurato, sufficientemente dettagliato", "d": "Chiaro = leggibile da chi lo usa davvero; accurato = fedele alla realtà; sufficientemente dettagliato = né troppo povero né eccessivamente frammentato. Se nasconde fasi critiche perdi informazione; se esplode in micro-passaggi inutili, il gruppo lo tratta come disegno burocratico invece che strumento di pensiero." },
+   { "h": "Che cosa deve apparire", "d": "La sequenza delle fasi e come interagiscono; le attività esternalizzate; i punti di ingresso di ingredienti, coadiuvanti, materiali di confezionamento, servizi e semilavorati; i momenti di rilavorazione e riciclo; i punti di uscita di prodotto finito, intermedi, sottoprodotti e rifiuti. I pericoli non abitano solo nelle fasi principali di trasformazione." },
+   { "h": "Lo yogurt alla frutta", "d": "Un diagramma povero dice «ricezione, miscelazione, trattamento termico, riempimento, stoccaggio, spedizione»: ordinato ma nasconde quasi tutto. Uno utile mostra dove entrano latte, fermenti, purea, zucchero, imballaggi; se la purea arriva già trattata; dove si accumulano semilavorati; dove avvengono i cambi formato; dove escono scarti. E i processi esternalizzati vanno resi visibili — spariscono dalla vista quotidiana, non dal rischio." },
+   { "h": "Strumento di coerenza", "d": "Un buon diagramma costringe reparti diversi a usare la stessa mappa mentale — acquisti, produzione, qualità, manutenzione, logistica discutono sulle stesse fasi. E deve corrispondere a descrizioni di prodotto, materiali, turni, attrezzature e modo reale di operare: se una fase critica è sul campo ma assente dal disegno, non è solo un errore grafico — l'analisi potrebbe essere stata fatta su un processo semplificato." }
+  ]
+ },
+ {
+  "id": "22000_m06_s006",
+  "layout": "punti",
+  "kicker": "Informazioni preliminari · 8.5.1",
+  "titolo": "Confermare sul posto il flusso reale",
+  "intro": "Un diagramma ben disegnato non basta: il gruppo ne conferma sul posto l'accuratezza, lo aggiorna e lo conserva. Tra ciò che l'azienda pensa di fare e ciò che fa davvero ci sono differenze piccole in apparenza ma enormi per la sicurezza — la conferma sul posto chiude questa distanza. Un buon sistema non racconta un processo perfetto: racconta un processo vero.",
+  "punti": [
+   { "h": "Corrispondenza carta-pratica", "d": "Le fasi esistono nell'ordine descritto? Ingressi e uscite sono quelli indicati? Rilavorazioni e deviazioni temporanee non sono dimenticate? I punti di accumulo non creano soste invisibili? Molte criticità emergono qui: un prodotto che sostava cinque minuti oggi ne aspetta trenta, una fase «in linea» in realtà svolta a fine turno, un materiale che entra da un lato diverso incrociando un'area sporca." },
+   { "h": "Descrivere processo e ambiente", "d": "Oltre al diagramma: disposizione dei locali (aree alimentari e non), attrezzature, materiali a contatto, coadiuvanti, flusso dei materiali, PRP esistenti, parametri di processo, misure già presenti e rigore con cui sono applicate, requisiti esterni di autorità o clienti. Il pericolo non nasce solo dalla sequenza tecnica, ma dal contesto in cui avviene." },
+   { "h": "Il contesto che cambia il rischio", "d": "Un locale umido, un'area di confezionamento vicino a un deposito non alimentare, un lavaggio mani mal posizionato, una linea difficile da sanificare, un cambio turno con sorveglianza in calo, una stagione calda con carichi microbiologici diversi: tutto può modificare probabilità di presenza, introduzione o aumento del pericolo. Se non lo descrivi, l'analisi è formalmente ordinata e praticamente cieca." },
+   { "h": "Variazioni stagionali e turni", "d": "Includere variazioni stagionali e cambi turno previsti: il processo reale non è sempre identico a sé stesso — estate e inverno non hanno la stessa pressione sul freddo, diurno e notturno non hanno lo stesso ritmo e supervisione. Nell'affettamento e confezionamento di cotto: al cambio bobina il prodotto resta esposto più a lungo, il percorso dei carrelli incrocia più traffico, di notte la pulizia è meno rigorosa — insieme cambiano la lettura del processo." }
+  ]
+ },
+ {
+  "id": "22000_m06_s007",
+  "layout": "punti",
+  "kicker": "Analisi dei pericoli · 8.5.2",
+  "titolo": "Dalla descrizione alla decisione",
+  "intro": "La base informativa è pronta: il gruppo lavora a partire dalle informazioni preliminari per capire quali pericoli richiedono controllo per assicurare la sicurezza del prodotto finale. Non compilare un elenco generico, ma trasformare descrizioni, dati ed esperienza in decisioni tecniche che devono reggere nella pratica quotidiana.",
+  "punti": [
+   { "h": "Usare la fotografia per decidere", "d": "Fino a qui hai costruito la fotografia — materie prime, prodotto finale, uso previsto, diagramma, ambiente, attrezzature, persone, requisiti. Ora la usi per capire quali pericoli sono ragionevolmente attesi e quali, tra questi, andranno governati. L'analisi non nasce da schemi standard presi altrove: nasce dall'incontro tra metodo e realtà del processo." },
+   { "h": "I PRP non sono una scorciatoia", "d": "Le informazioni preliminari comprendono PRP, parametri e misure già presenti: utili a descrivere il contesto reale, ma non per sminuire in anticipo il peso di un pericolo. La norma chiede di ragionare sulla probabilità nel prodotto finale prima dell'applicazione delle misure di controllo — se un gruppo dice che un pericolo conta poco solo perché esiste una buona prassi igienica, il ragionamento parte già inclinato." },
+   { "h": "Il percorso giusto", "d": "Prima riconosci il pericolo nel contesto reale di prodotto e processo; poi lo valuti col metodo previsto; solo dopo scegli la misura, o la combinazione, capace di portarlo entro livelli accettabili. Nei panini refrigerati pronti al consumo, non concludere subito che la ricontaminazione post-assemblaggio sia trascurabile perché i programmi di base sembrano solidi — identifica, colloca, definisci il livello, poi valuta." },
+   { "h": "La combinazione di misure", "d": "Quando appropriato, il controllo deriva da una combinazione di misure: eviti l'errore di cercare sempre un unico punto risolutivo. In molti processi la sicurezza nasce dall'effetto congiunto di più barriere — caratteristiche del prodotto, condizioni operative, tempi, temperatura, prevenzione della ricontaminazione, disciplina esecutiva. Se il terreno logico è solido, tutto ciò che verrà dopo sarà più chiaro." }
+  ]
+ },
+ {
+  "id": "22000_m06_s008",
+  "layout": "punti",
+  "kicker": "Analisi dei pericoli · 8.5.2.2",
+  "titolo": "Identificare i pericoli in modo completo",
+  "intro": "Il primo passaggio operativo: riconoscere e registrare i pericoli che, nel tuo contesto, hanno una possibilità concreta di manifestarsi, tenendo conto di prodotto, processo e ambiente. Formulazione equilibrata — non ignorare scenari plausibili, non inseguire ipotesi remote. La parola chiave è concretezza.",
+  "punti": [
+   { "h": "Molte fonti, non una sola", "d": "Le basi da usare: informazioni preliminari, esperienza, informazioni interne ed esterne (dati epidemiologici, scientifici, storici per quanto possibile), segnali della filiera sui pericoli di prodotti finali/intermedi e al momento del consumo, requisiti legislativi, regolamentari e del cliente. L'identificazione nasce dall'incrocio di molte fonti." },
+   { "h": "L'esperienza non basta da sola", "d": "Nessun reclamo su un difetto non significa che il pericolo non esista; un dato scientifico generico non basta senza conoscenza del processo reale. Il gruppo mette insieme storia interna e segnali esterni: cosa è già successo, cosa potrebbe succedere in base alle conoscenze, cosa la filiera segnala come rilevante per quel tipo di prodotto." },
+   { "h": "Dettaglio sufficiente", "d": "I pericoli descritti con dettaglio sufficiente a permettere valutazione e scelta delle misure. «Contaminazione biologica» è troppo poco se il tema vero è la ricontaminazione post-cottura in area di assemblaggio; «presenza di allergeni» troppo poco se il punto è la sostituzione di un ingrediente stagionale con uno contenente senape; «corpo estraneo» troppo poco se il rischio nasce da parti plastiche fragili di una specifica tramoggia." },
+   { "h": "Ascoltare la filiera", "d": "Se il fornitore segnala una tendenza, un ingrediente cambia origine, un cliente impone una specifica, il settore registra un problema emergente: tutto può entrare nell'identificazione. Le insalate pronte con una nuova miscela di semi «per motivi commerciali»: può spostare il profilo allergenico, la gestione del confezionamento, il rischio di corpi estranei se il fornitore usa setacci diversi. Trattarla come semplice ingrediente aggiuntivo rende l'identificazione superficiale." }
+  ]
+ },
+ {
+  "id": "22000_m06_s009",
+  "layout": "punti",
+  "kicker": "Analisi dei pericoli · 8.5.2.2",
+  "titolo": "Dove nasce il pericolo: collegarlo alle fasi",
+  "intro": "Dopo l'identificazione, capire in quali punti del processo ciascun pericolo entra in gioco: dove può già trovarsi, comparire durante la lavorazione, crescere, o continuare a rimanere fino al prodotto finale. I pericoli non si comportano tutti allo stesso modo — alcuni arrivano con la materia prima, altri sono introdotti dalla lavorazione, altri trovano condizioni favorevoli per svilupparsi.",
+  "punti": [
+   { "h": "La fase non è la casella", "d": "Considerare le fasi precedenti e successive della filiera, tutte le fasi del diagramma, e anche attrezzature, strutture, servizi, ambiente e persone. La fase è l'insieme delle condizioni che la rendono concreta: la ricezione non è «ricezione», è temperatura del mezzo, tempi di attesa, integrità dell'imballo, comportamento del personale, affidabilità del controllo in accettazione." },
+   { "h": "Un pericolo attraversa più fasi", "d": "Nei tramezzini refrigerati, un allergene può essere presente in un ingrediente ricevuto, introdotto al cambio ricetta se gli utensili non sono gestiti bene, aumentare come contaminazione crociata in un'area promiscua, persistere fino al consumo se l'etichettatura non intercetta l'errore. Lo stesso pericolo non è legato a una sola casella: attraversa più fasi, va letto in modo dinamico." },
+   { "h": "Il tratto dopo la cottura", "d": "Per un microbiologico: un prodotto cotto, raffreddato, affettato e confezionato può vedere il pericolo ridotto dal trattamento ma reintrodotto in affettamento o confezionamento, aumentato in un raffreddamento lento o sosta prolungata, persistente in una nicchia igienica difficile da sanificare. Se l'analisi lo associa solo alla cottura, perde il tratto più insidioso — ciò che succede dopo." },
+   { "h": "Attrezzature, servizi, persone", "d": "Un compressore, una fornitura d'acqua, una manutenzione mal eseguita, una guarnizione usurata, un addetto che attraversa aree con flussi non separati, una procedura non compresa di notte: introducono o favoriscono pericoli pur non essendo una fase produttiva. L'indicatore: quando l'organizzazione sa raccontare il percorso del pericolo dall'ingresso al prodotto finito, il lavoro aderisce alla realtà; se il racconto resta generico, le misure saranno scelte in modo debole." }
+  ]
+ },
+ {
+  "id": "22000_m06_s010",
+  "layout": "definizione",
+  "kicker": "Analisi dei pericoli · 8.5.2.2",
+  "eyebrow": "Livello accettabile",
+  "titolo": "Il traguardo del controllo",
+  "definizione": "Determinare il livello accettabile di ciascun pericolo identificato nel prodotto finale, e mantenere informazioni documentate sia sulla determinazione sia sulla giustificazione. Senza un traguardo definito, il controllo resta vago.",
+  "punti": [
+   "Tre ancoraggi: i requisiti applicabili (legislativi, regolamentari, del cliente); l'utilizzo previsto dei prodotti finali; ogni altra informazione pertinente. Evitano due errori — fissare livelli arbitrari senza legame con obblighi o uso, o appiattire tutto su un adempimento esterno senza guardare il contesto reale.",
+   "L'uso previsto cambia il punto di arrivo: un pronto al consumo refrigerato non può avere lo stesso livello microbiologico di un ingrediente destinato a cottura industriale. Per gli allergeni, in molti casi il livello accettabile è legato all'assenza di presenza non dichiarata — non una preferenza interna, ma il dovere di non esporre a un rischio occulto.",
+   "La giustificazione documentata distingue il sistema maturo da quello fragile: non basta scrivere il livello, devi spiegare perché è quello — coerente coi requisiti, col prodotto, con l'uso, con le informazioni disponibili. Un livello accettabile senza motivazione è come una conclusione senza percorso logico.",
+   "Il livello accettabile prepara la valutazione: definisce il risultato finale che vuoi garantire, il riferimento per giudicare se il processo, senza controllo adeguato, rischia di superarlo. Il prodotto secco per ricostituzione senza collegamento all'uso domestico, o la catena del freddo lunga assente dalla giustificazione, producono valutazioni ottimiste."
+  ]
+ },
+ {
+  "id": "22000_m06_s011",
+  "layout": "punti",
+  "kicker": "Analisi dei pericoli · 8.5.2.3",
+  "titolo": "Valutare: probabilità, gravità, significatività",
+  "intro": "L'analisi diventa decisione strutturata: esaminare ciascun pericolo per capire se tenerlo lontano dal prodotto, o abbassarlo fino al livello tollerabile, sia indispensabile. Due dimensioni insieme: la probabilità che arrivi al prodotto finale prima delle misure di controllo, e la severità dei danni possibili in rapporto all'uso previsto.",
+  "punti": [
+   { "h": "Le due dimensioni in coppia", "d": "Un pericolo molto grave ma poco probabile non si giudica come uno frequente ma con effetti contenuti; e un pericolo di impatto modesto su consumatori generici assume peso diverso se il prodotto è per gruppi vulnerabili. La gravità non si valuta in astratto: la leghi al prodotto reale, al consumo reale, ai consumatori descritti." },
+   { "h": "Metodologia documentata", "d": "Descrivere la metodologia usata e mantenerne il risultato: non basta arrivare a una conclusione, devi poter spiegare come ci sei arrivato. Può assumere forme diverse purché chiara, coerente e applicata con disciplina — il punto non è la matrice più elegante, ma criteri comprensibili, ripetibili e difendibili." },
+   { "h": "Probabilità prima delle misure", "d": "La probabilità riguarda il prodotto finale prima dell'applicazione delle misure di controllo: evita l'errore comune di giudicare il pericolo guardando già il processo come se fosse sotto controllo, sottostimando proprio ciò che si dovrebbe valutare. Chiediti cosa accadrebbe se quel pericolo percorresse il processo prima della barriera scelta." },
+   { "h": "Identificare i pericoli significativi", "d": "Non i pericoli più impressionanti in assoluto, ma quelli per cui prevenzione o riduzione fino al livello accettabile sono essenziali: una definizione operativa e potente, che dice quali richiedono una risposta mirata. Nella purea per consumatori fragili, una lieve deviazione nei tempi di raffreddamento pesa più che su un prodotto da cuocere — non perché il processo sia peggiore, ma per l'effetto sul consumatore." }
+  ]
+ },
+ {
+  "id": "22000_m06_s012",
+  "layout": "numeri",
+  "kicker": "Analisi dei pericoli · Metodo",
+  "titolo": "Errori tipici e lettura critica",
+  "intro": "La domanda giusta non è solo se i voti ti sembrano sensati, ma se il metodo produce risultati coerenti lungo tutto il processo. Una buona valutazione non è quella severa per principio: è quella in cui criteri, esempi, giustificazioni e conclusioni parlano la stessa lingua. Molti problemi nascono da un metodo poco stabile, non da un singolo giudizio.",
+  "numeri": [
+   { "n": "1", "h": "Gravità vs fastidio operativo", "d": "Un'etichetta errata su un allergene non dichiarato può avere effetti molto seri sulla salute, anche se sembra amministrativa; una deviazione che crea disordine in reparto non è automaticamente un pericolo. Restare ancorati agli effetti nocivi per la salute, non al disagio organizzativo o al costo della non conformità." },
+   { "n": "2", "h": "Probabilità impressionistica", "d": "«Capita raramente», «non è mai successo qui» da sole non bastano: la probabilità va letta alla luce di processo, ambiente, persone, storia interna, segnali della filiera e conoscenza scientifica. Se un pericolo è raro nello stabilimento ma noto nel settore per quel prodotto, non liquidarlo con «non l'abbiamo mai visto»." },
+   { "n": "3", "h": "Dettaglio troppo generico", "d": "«Contaminazione biologica» — poi come giustifichi la probabilità, in quale fase, con quale meccanismo? Meglio «ricontaminazione post-trattamento in area di confezionamento refrigerato» o «presenza non dichiarata di senape per cambio formato e pulizia insufficiente». Più la descrizione è aderente al processo, meno la valutazione è astratta." },
+   { "n": "4", "h": "Coerenza tra pericoli diversi", "d": "Il test: prendi due pericoli di natura diversa (uno microbiologico, uno allergenico) e chiediti se il metodo li tratta con criteri comparabili — non devono uscire uguali, ma valutati con la stessa logica. Se per uno il gruppo porta dati, esempi e storia, e per l'altro si affida a impressioni, il sistema è sbilanciato. La metodologia dichiarata deve vivere nei giudizi, non solo nell'introduzione." }
+  ]
+ },
+ {
+  "id": "22000_m06_s013",
+  "layout": "punti",
+  "kicker": "Misure di controllo · 8.5.2.4",
+  "titolo": "Dai pericoli significativi alle misure",
+  "intro": "Individuati i pericoli significativi, scegliere come governarli: selezionare una misura appropriata, o una combinazione, capace di prevenire o ridurre quei pericoli ai livelli accettabili. Tre idee — appropriatezza (adatta al pericolo e al contesto), efficacia (porta davvero al risultato), e che il controllo può nascere da più misure che lavorano insieme.",
+  "punti": [
+   { "h": "Non un unico punto miracoloso", "d": "Se un pericolo è significativo, non significa che esista un solo punto che lo elimini: in molti processi il controllo nasce da formulazione, parametri, igiene, tempi, temperatura, gestione dei materiali e prevenzione della ricontaminazione. Ti impedisce di cercare per forza un unico protagonista quando il processo funziona per effetto combinato." },
+   { "h": "Coerente con la valutazione", "d": "Se hai giudicato il pericolo essenziale, la misura non può essere generica o debole: deve agire sul meccanismo con cui il pericolo è presente, viene introdotto, aumenta o persiste. Un pericolo fisico da frammenti metallici richiede una logica diversa da un allergenico da cross-contact, e diversa ancora da un microbiologico favorito da tempi e temperature." },
+   { "h": "Selezionare e categorizzare", "d": "Non solo selezionare, ma categorizzare le misure da gestire come CCP o OPRP — non per fare teoria, ma per impostare in modo diverso criteri, monitoraggio e reazione alle deviazioni. Non basta «controlleremo questo pericolo con quella misura»: devi chiarire con quale logica gestionale la misura entrerà nel sistema." },
+   { "h": "La domanda che orienta", "d": "Se questa misura fallisce, che cosa succede al pericolo? E quanto rapidamente devi accorgertene per proteggere il prodotto? Alcune misure richiedono limiti netti e rilevazione tempestiva di ogni superamento; altre lavorano con criteri osservabili o misurabili che contribuiscono al controllo, senza la struttura di un CCP. La norma traduce questa differenza in CCP e OPRP." }
+  ]
+ },
+ {
+  "id": "22000_m06_s014",
+  "layout": "punti",
+  "kicker": "Classificazione · 8.5.4",
+  "titolo": "L'approccio sistematico tra CCP e OPRP",
+  "intro": "Uno dei punti più osservati, ma la norma non lo risolve con una formula magica: chiede un approccio sistematico. Per ciascuna misura, valutare almeno la probabilità che il funzionamento fallisca, la gravità delle conseguenze del fallimento, l'effetto sui pericoli significativi, la posizione rispetto ad altre misure, e se sia stabilita specificamente per ridurre il pericolo o faccia parte di una combinazione.",
+  "punti": [
+   { "h": "Niente classificazioni automatiche", "d": "Non «è importante, quindi CCP» né «è operativa, quindi OPRP»: leggerla dentro il processo, nel rapporto col pericolo e con le altre barriere. Una misura può essere importante ma agire come parte di un insieme; un'altra singola, specifica e decisiva. È il ragionamento sistematico, non il nome della fase, a orientare." },
+   { "h": "Due esempi a confronto", "d": "Un trattamento termico finale su un pronto al consumo, stabilito specificamente per ridurre un pericolo, con fallimento dalle conseguenze gravi e deviazione da intercettare subito: tende al CCP. Il controllo dell'integrità di un cambio allergenico opera spesso insieme a programmazione, segregazione, pulizia, rilascio linea, etichettatura: la sua gestione ragionata può portare a un OPRP — non perché meno serio, ma perché tipo di controllo e struttura sono diversi." },
+   { "h": "La posizione rispetto alle altre", "d": "Se una misura sta a valle di barriere già efficaci, il suo ruolo può essere di conferma o rinforzo; se è l'ultimo presidio utile prima del rilascio, il peso del suo fallimento cresce. E l'essere singola o parte di una combinazione conta: una misura singola pensata per riportare il pericolo al livello accettabile tende al CCP; una inserita in una catena può essere OPRP se il risultato nasce dall'effetto complessivo." },
+   { "h": "Spiegabile senza frasi rituali", "d": "La classificazione deve essere spiegabile: chiesto perché una misura è CCP, l'organizzazione parla del pericolo significativo, del ruolo, delle conseguenze del fallimento, della relazione con le altre barriere; lo stesso per un OPRP. Quando le risposte si riducono a «l'abbiamo sempre fatta così», la classificazione perde forza — non nasce dal tipo di attività, ma dal suo significato nel controllo del pericolo." }
+  ]
+ },
+ {
+  "id": "22000_m06_s015",
+  "layout": "confronto",
+  "kicker": "Classificazione · 8.5.4",
+  "titolo": "Limite critico, criteri di azione, fattibilità",
+  "intro": "Un secondo livello di valutazione, molto concreto: per ogni misura, se sia fattibile definire limiti critici misurabili o criteri di azione misurabili/osservabili, se sia possibile monitorare il rispetto per rilevare il fallimento, e se si possano applicare correzioni tempestive. Traduce la scelta teorica in una domanda operativa: posso davvero governare questa misura come dichiaro?",
+  "a": {
+   "h": "CCP — il limite critico",
+   "sub": "Il confine netto",
+   "punti": [
+    { "d": "La logica ruota attorno al limite critico: misurabile, il cui rispetto mantiene il pericolo entro la soglia finale accettabile. In una cottura dove tempo e temperatura determinano il risultato, se puoi stabilire un valore netto, misurarlo in modo affidabile e rilevare subito ogni scostamento, sei nel terreno classico del CCP." },
+    { "d": "Non classificare CCP solo perché sembra importante, se poi non sei in grado di definire un limite misurabile e monitorarlo tempestivamente. Un presunto CCP senza limite realmente misurabile, o con monitoraggio troppo lento, è un segnale di incoerenza." }
+   ]
+  },
+  "b": {
+   "h": "OPRP — il criterio di azione",
+   "sub": "Misurabile o osservabile",
+   "punti": [
+    { "d": "Il sistema lavora con criteri di azione misurabili o osservabili, il cui rispetto aiuta a conservare il controllo anche quando il risultato dipende da una misura operativa o da una combinazione. Il controllo visivo e operativo della separazione di utensili durante un cambio allergenico: rigore sì, ma su criteri osservabili, istruzioni dettagliate, sorveglianza operativa." },
+    { "d": "Non rifugiarti in un OPRP per evitare la disciplina di un CCP, se la misura è specifica, misurabile e decisiva. E la tempestività è decisiva per entrambi: un monitoraggio che coglie la deviazione troppo tardi rende il controllo fragile anche col parametro giusto. La classificazione credibile nasce dall'onestà metodologica: chiedi al processo ciò che può sostenere davvero." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m06_s016",
+  "layout": "punti",
+  "kicker": "Classificazione · 8.5.4",
+  "titolo": "Documentare la decisione e i requisiti esterni",
+  "intro": "La norma non si accontenta di una classificazione corretta: vuole tracciabile il percorso con cui hai scelto le misure e le hai collocate come CCP o OPRP, e conservati i riferimenti esterni che hanno inciso su scelta e severità (legge, regolamenti, impegni col cliente). È il modo con cui il sistema rende visibile il proprio ragionamento.",
+  "punti": [
+   { "h": "Rendere leggibile il percorso logico", "d": "Ricostruire quale pericolo significativo hai considerato, quale misura hai selezionato, perché adatta, come hai letto il suo ruolo rispetto alle altre, su quale base l'hai classificata. Quando questa storia è leggibile, il sistema è robusto; quando restano solo etichette finali senza traccia, ogni revisione futura diventa difficile e la verifica un confronto di opinioni." },
+   { "h": "Il peso dei requisiti esterni", "d": "Un cliente può richiedere un certo rigore su un allergene, un'autorità un certo criterio, una specifica di filiera un controllo più stringente. Non subirli passivamente: identificarli e conservarli come parte del quadro che ha influenzato la decisione — mostrare come il mondo esterno entra nel ragionamento tecnico senza spezzarne la coerenza." },
+   { "h": "Distinguere il vivo dal copiato", "d": "Nei sistemi deboli, tabelle standard con la stessa classificazione per prodotti diversi e motivazioni generiche; nei maturi, il collegamento specifico con prodotto, processo, uso previsto, pericolo, misura e requisiti esterni. Il dessert per marca del distributore con cambio allergenico rigoroso richiesto dal cliente: ben documentato, è chiaro che il rigore nasce da un requisito esterno integrato, non da una preferenza occasionale." },
+   { "h": "Una base per aggiornare", "d": "Quando cambia una materia prima, si introduce una tecnologia, varia il confezionamento o muta il canale, il gruppo torna al percorso decisionale e capisce quali assunzioni non valgono più. La linea di salse fresche che passa dalla distribuzione locale a una rete più ampia con tempi logistici più lunghi: se le ragioni delle scelte restano visibili, la revisione è ordinata; con sole tabelle finali, ogni aggiornamento ricomincia quasi da zero." }
+  ]
+ },
+ {
+  "id": "22000_m06_s017",
+  "layout": "cards",
+  "kicker": "Classificazione · Casi",
+  "titolo": "Mini casi: leggere CCP e OPRP nel reale",
+  "intro": "Uscire dal linguaggio generale per allenare il ragionamento — non ricette universali. Gli esempi non sostituiscono la valutazione del tuo contesto: aiutano a leggere ruolo, rischio del fallimento, posizione e modalità di governo. Le discussioni sterili nascono dall'etichetta, quelle utili dal pericolo significativo.",
+  "cards": [
+   { "h": "Crema cotta refrigerata → CCP", "d": "Microbiologico se il trattamento termico non raggiunge il risultato: misura specifica, parametri misurabili, monitoraggio ravvicinato, fallimento dalle conseguenze immediate. Non perché cottura significhi sempre CCP, ma perché qui la misura è specifica, decisiva e governabile con limite critico." },
+   { "h": "Cambio allergenico biscotti → OPRP", "d": "Presenza non dichiarata per contaminazione crociata ed errato riavvio: il controllo nasce da programmazione, segregazione, pulizia, rilascio linea, etichette, supervisione. Criteri osservabili e misurabili, risultato dalla combinazione: OPRP — non meno importante, ma con struttura diversa da un punto critico singolo." },
+   { "h": "Metal detector fine linea", "d": "Frammenti metallici verso il consumatore: se il dispositivo è l'ultimo presidio specifico, con capacità definita, prova di funzionamento e reazione immediata, si orienta al CCP. Se il controllo è distribuito su più barriere precedenti, serve un'analisi più sfumata — non il nome dello strumento, ma il suo ruolo." },
+   { "h": "Raffreddamento rapido → dipende", "d": "Tempi e temperature non controllati favoriscono la crescita microbica: se il raffreddamento, con cottura e refrigerazione, è parte essenziale della combinazione, la classificazione dipende da come il gruppo ha costruito il modello — CCP o OPRP forte, purché il processo decisionale sia chiaro." }
+  ]
+ },
+ {
+  "id": "22000_m06_s018",
+  "layout": "punti",
+  "kicker": "Validazione · 8.5.3",
+  "titolo": "Dimostrare prima che il controllo funzionerà",
+  "intro": "Selezionate e classificate le misure, resta una domanda fondamentale: sei sicuro che siano davvero capaci di ottenere il controllo atteso? Il gruppo effettua la validazione delle misure e delle combinazioni per dimostrare che controllano i pericoli significativi come previsto. Non una formalità: la prova ragionata che la scelta tecnica funziona.",
+  "punti": [
+   { "h": "Prima dell'attuazione", "d": "La validazione va fatta prima dell'attuazione delle misure che entreranno nel piano — prima costruisci il ragionamento, poi lo confermi, solo dopo incorpori le misure nel governo ordinario. E va ripetuta dopo ogni cambiamento che possa influenzare le misure o la combinazione: non un atto unico e immutabile, ma qualcosa che vive col processo." },
+   { "h": "Tre concetti da non confondere", "d": "Validazione: questa misura può funzionare per ottenere il controllo atteso? Monitoraggio: oggi la misura sta restando entro i criteri? Verifica: il sistema, nel funzionamento reale, sta confermando ciò che avevamo previsto? Se li mescoli, rischi di dare per valida una misura solo perché la monitori, o di scoprire tardi che non era mai stata dimostrata adeguata." },
+   { "h": "Il profilo di cottura", "d": "Un nuovo profilo di cottura per una preparazione pronta: la validazione non è «abbiamo sempre cotto prodotti simili», ma dimostrare che per quel prodotto, con quella composizione, formato, impianto e profilo, il controllo atteso è raggiunto. Solo dopo imposti il monitoraggio quotidiano dei parametri e la verifica periodica dell'efficacia." },
+   { "h": "Anche la combinazione", "d": "Se controlli un pericolo attraverso formulazione, raffreddamento e refrigerazione, la validazione deve dimostrare che l'effetto combinato è sufficiente — non basta validare ogni pezzo isolato se il risultato nasce dall'interazione. Molti sistemi sanno elencare le misure ma faticano a dimostrare la capacità della combinazione. La validazione non celebra ciò che già fai: mette alla prova l'ipotesi prima che diventi fiducia operativa." }
+  ]
+ },
+ {
+  "id": "22000_m06_s019",
+  "layout": "punti",
+  "kicker": "Validazione · 8.5.3",
+  "titolo": "Metodo, evidenze e prove di capacità",
+  "intro": "Se la validazione deve dimostrare la capacità di una misura o combinazione, con quali elementi lo dimostri? La norma non impone un'unica tecnica, ma richiede due cose: mantenere la metodologia di validazione, e conservare l'evidenza della capacità di raggiungere il controllo atteso. Non dati sparsi: come hai condotto la validazione e quali prove sostengono la conclusione.",
+  "punti": [
+   { "h": "Le fonti possibili", "d": "Prove interne di processo, dati di progetto, studi tecnici, risultati analitici, letteratura scientifica pertinente, esperienza consolidata ben supportata, o combinazioni. Non l'opzione più sofisticata in assoluto: l'evidenza adeguata al pericolo, alla misura e al processo reale — una misura molto sensibile o una combinazione complessa richiedono un supporto più robusto." },
+   { "h": "Il nuovo formato di vaschetta", "d": "Ricetta quasi uguale, ma cambiano massa, geometria del contenitore, dinamica di raffreddamento: dire «il vecchio profilo era già valido» non basta — la validazione deve dimostrare che col nuovo formato il trattamento e il raffreddamento raggiungono ancora il risultato. In assenza di prova, il sistema si affida a un'assunzione, e la norma chiede qualcosa di più forte." },
+   { "h": "Anche un OPRP", "d": "Per la gestione allergenica, dimostrare che la combinazione tra sequenza di produzione, pulizia, rilascio linea e controlli riduce davvero il rischio di presenza non dichiarata al livello atteso. Non basta dire che la procedura esiste ed è seguita: la validazione riguarda la capacità della misura, non ancora l'esecuzione quotidiana." },
+   { "h": "La pertinenza", "d": "Dati ottimi ma riferiti a un altro prodotto, impianto o fase possono essere un supporto iniziale, ma non sempre bastano: più il processo si allontana dal contesto dei dati, più serve conferma specifica. Il gruppo mostra competenza usando conoscenze esterne senza trattarle come scorciatoie automatiche, integrandole con prove coerenti sul proprio processo — e sapendo guardare la combinazione, non solo i singoli pezzi." }
+  ]
+ },
+ {
+  "id": "22000_m06_s020",
+  "layout": "punti",
+  "kicker": "Validazione · 8.5.3",
+  "titolo": "Quando non basta: modificare, rivalutare",
+  "intro": "Un punto che distingue un sistema maturo da uno difensivo: se la validazione mostra che una misura o l'insieme delle misure non fornisce il risultato atteso sul pericolo significativo, il gruppo deve intervenire, modificarne l'impostazione e ripetere la valutazione. La validazione non conferma a tutti i costi una scelta già fatta: la mette davvero alla prova.",
+  "punti": [
+   { "h": "Che cosa può voler dire modificare", "d": "Cambiare un parametro di processo, aumentare il rigore, rivedere la combinazione di barriere, introdurre una tecnologia diversa, ripensare una fase, cambiare caratteristiche di materia prima, prodotto finale, distribuzione o perfino uso previsto. Se il controllo non regge, non ritocchi il modulo: rimetti mano al disegno tecnico dietro la misura." },
+   { "h": "Barriera contro l'ottimismo", "d": "Un prodotto fresco la cui durata commerciale viene estesa per il mercato: se la validazione non dimostra che il controllo resta adeguato lungo tutta la vita del prodotto, non puoi procedere come nulla fosse — modificare la combinazione, ridurre la durata, o rafforzare condizioni di processo e distribuzione. E un cambio fornitore con variabilità diversa nella carica iniziale può cambiare l'esito, anche se il processo a valle sembra lo stesso." },
+   { "h": "Anche in positivo", "d": "Un'organizzazione introduce una tecnologia più efficace e scopre, tramite validazione, che alcune misure possono essere ridisegnate in modo più lineare. La validazione non segnala solo carenze: può mostrare che una combinazione è diventata più robusta o più semplice da governare. L'essenziale è che il cambiamento resti motivato e documentato." },
+   { "h": "Il comportamento rivelatore", "d": "Davanti a una validazione non soddisfacente, un sistema debole giustifica, rinvia, minimizza; uno solido usa il risultato come informazione preziosa — modifica e rivaluta. Questo non indebolisce il sistema: lo rende credibile. E resta documentato metodologia ed evidenza, incluso il percorso di modifica e rivalutazione: memoria tecnica per capire domani quali condizioni erano decisive." }
+  ]
+ },
+ {
+  "id": "22000_m06_s021",
+  "layout": "punti",
+  "kicker": "Piano di controllo · 8.5.4",
+  "titolo": "Dal progetto tecnico alla gestione quotidiana",
+  "intro": "Costruito il ragionamento tecnico, trasformarlo in governo operativo: il piano di controllo dei pericoli prende ciò che hai deciso nell'analisi, nella classificazione e nella validazione e lo rende utilizzabile ogni giorno da chi lavora sul processo. Se questa traduzione riesce male, anche un'ottima analisi resta chiusa nel documento e non protegge il prodotto.",
+  "punti": [
+   { "h": "Stabilire, attuare, mantenere", "d": "Non un testo statico preparato una volta e archiviato: pensato per vivere nel processo, mantenuto come informazione documentata. Non serve solo a spiegare cosa fare — mostra in modo tracciabile quale misura governa quale pericolo, in quale punto, con quali criteri, chi ne risponde, quale registrazione deve restare." },
+   { "h": "Il nucleo per ogni CCP/OPRP", "d": "Il pericolo specifico da governare in quel punto; il riferimento operativo (limite critico se CCP, criterio di azione se OPRP); come verrà monitorata; quali correzioni scattano se il criterio non è rispettato; chi ha responsabilità e autorità; quali evidenze registrare. Una logica chiara: cosa controlli, come capisci se sei sotto controllo, cosa fai se non lo sei, chi agisce." },
+   { "h": "Punto di contatto tecnica-operatività", "d": "Sulla linea di piatti refrigerati con la cottura come CCP validato, il piano non può limitarsi a «cottura»: lega la fase al pericolo, al limite critico, al metodo e frequenza di monitoraggio, a chi controlla e valuta, a cosa accade a uno scostamento. Idem per un OPRP di cambio allergenico sui biscotti — la differenza non è che il controllo sia secondario, ma il tipo di criterio, di monitoraggio e la logica con cui il fallimento viene intercettato." },
+   { "h": "Coerenza e minor dipendenza dalla memoria", "d": "Se nel piano ritrovi gli stessi pericoli emersi prima, le misure validate, criteri adatti alla classificazione e responsabilità chiare, il filo tiene; se compaiono criteri generici o responsabilità ambigue, il processo reale è meno controllato di quanto sembri. Spesso le debolezze non nascono dall'analisi, ma dalla sua traduzione incompleta nel piano — che riduce la dipendenza dalla memoria individuale nei cambi turno e sotto pressione." }
+  ]
+ },
+ {
+  "id": "22000_m06_s022",
+  "layout": "confronto",
+  "kicker": "Piano di controllo · 8.5.4",
+  "titolo": "Limiti critici e criteri di azione",
+  "intro": "Uno dei passaggi più delicati del piano: ai CCP associ uno o più limiti critici, agli OPRP criteri di azione. La differenza non è terminologica — riguarda come il sistema riconosce il controllo, la natura del monitoraggio e la conseguenza di uno scostamento. Se i criteri sono scritti male, l'intero piano perde forza.",
+  "a": {
+   "h": "Limite critico (CCP)",
+   "sub": "Il confine misurabile",
+   "punti": [
+    { "d": "Specificato, giustificato e misurabile: non «temperatura adeguata» o «tempo sufficiente», ma un valore (o combinazione) che il processo controlla e registra, il cui rispetto mantiene il pericolo entro il valore finale ammissibile. In una cottura CCP, «ben cotto» descrive un'impressione — serve un valore per rilevare tempestivamente un superamento e impedire il rilascio." },
+    { "d": "Il collegamento con la validazione è diretto: il limite critico non nasce dal nulla, ma dalla dimostrazione che quel parametro protegge il livello accettabile." }
+   ]
+  },
+  "b": {
+   "h": "Criterio di azione (OPRP)",
+   "sub": "Misurabile o osservabile",
+   "punti": [
+    { "d": "Specificato e giustificato, misurabile o osservabile, il cui rispetto contribuisce a mantenere il pericolo entro la soglia tollerabile: l'OPRP lavora dentro una combinazione o attraverso controlli operativi senza la nettezza numerica di un limite critico, ma resta decisivo." },
+    { "d": "Nel cambio allergenico: «pulizia fatta correttamente» non definisce quasi nulla; descrivere che cosa osservare, da chi, con quale riferimento — assenza di residui, corretta identificazione dei materiali, completamento del rilascio linea — trasforma un'attività generica in criterio governabile. Il test: leggendo il criterio, sai esattamente quando il processo è conforme e quando no?" }
+   ]
+  }
+ },
+ {
+  "id": "22000_m06_s023",
+  "layout": "punti",
+  "kicker": "Piano di controllo · 8.5.4",
+  "titolo": "Monitorare bene: metodo, frequenza, affidabilità",
+  "intro": "Definire un criterio non basta: serve un sistema che dica, in tempo utile, se viene rispettato. A ciascun CCP un sistema di monitoraggio che faccia emergere ogni mancato rispetto dei limiti critici; a ciascun OPRP uno che faccia emergere il mancato rispetto del criterio di azione. Il punto: intercettare il fallimento mentre puoi ancora agire su prodotto e processo.",
+  "punti": [
+   { "h": "Gli elementi documentati", "d": "Misurazioni o osservazioni programmate; metodi o dispositivi; metodi di taratura (o negli OPRP metodi equivalenti che assicurino osservazioni affidabili); frequenza; risultati; e — spesso sottovalutato — responsabilità e autorità sia per l'esecuzione sia per la valutazione. Monitorare non è leggere un numero: è costruire un processo affidabile di rilevazione e decisione." },
+   { "h": "CCP: tempestività", "d": "Metodo e frequenza devono permettere di scoprire rapidamente uno scostamento, così da bloccare o isolare senza ritardo il prodotto e valutarlo. Se scopri troppo tardi che la cottura non ha raggiunto il valore, hai perso la finestra utile per fermare il rilascio e gestire il lotto — tempestività è una parola operativa, non teorica." },
+   { "h": "OPRP: coerenza col rischio", "d": "Metodo e frequenza scelti in coerenza con quanto è probabile che la misura fallisca e con la gravità delle conseguenze: evita eccesso e difetto di controllo. Un OPRP ad alto rischio richiede monitoraggi più serrati; uno meno severo un'intensità diversa. E quando si basa su dati soggettivi da osservazione, il metodo va supportato da istruzioni o specifiche — altrimenti il risultato varia da persona a persona." },
+   { "h": "Cosa raccontano i monitoraggi", "d": "In una linea di zuppe: il CCP-cottura con metodo, frequenza, dispositivo, responsabilità e gestione immediata del superamento; l'OPRP del cambio etichetta con osservazioni guidate, controlli specifici, autorizzazione al riavvio. Se i criteri sono buoni ma il metodo non è affidabile, il controllo è apparente; se la frequenza è troppo rada, la deviazione passa inosservata; se l'addetto registra ma nessuno valuta il dato, manca un pezzo della catena decisionale." }
+  ]
+ },
+ {
+  "id": "22000_m06_s024",
+  "layout": "punti",
+  "kicker": "Piano di controllo · 8.5.4",
+  "titolo": "Quando il criterio non è rispettato",
+  "intro": "Il valore del piano si vede quando qualcosa esce dal controllo. Alla non conformità di un limite critico o criterio di azione, specificare correzioni e azioni correttive, assicurando quattro risultati: i prodotti potenzialmente non sicuri non vengono rilasciati, la causa è identificata, il parametro rientra nei limiti/criteri, il ripetersi è impedito.",
+  "punti": [
+   { "h": "Correzione vs azione correttiva", "d": "La correzione ripristina subito la situazione sotto controllo e gestisce il prodotto coinvolto; l'azione correttiva guarda alla causa e alla prevenzione del nuovo verificarsi. Molte organizzazioni sono discrete nelle correzioni (fermano, separano, ripartono) e deboli nelle azioni correttive — non vanno a fondo sulle ragioni. La norma vuole entrambe." },
+   { "h": "Su un CCP", "d": "La cottura non rispetta il limite critico: la correzione immediata blocca il prodotto, lo identifica, lo isola, ripristina il parametro. Ma non basta — perché il limite non è stato rispettato? Guasto del dispositivo, impostazione errata, problema umano, variazione del carico, manutenzione incompleta? Senza questa analisi, il processo torna a funzionare solo in apparenza." },
+   { "h": "Su un OPRP", "d": "Il criterio del cambio allergenico non è soddisfatto, si osservano residui della produzione precedente: la correzione ferma il riavvio, completa la pulizia, riesegue il controllo, gestisce il prodotto coinvolto. L'azione correttiva va oltre: procedura poco chiara, attrezzatura difficile da pulire, tempi di cambio compressi, addestramento insufficiente, supervisione debole. La sicurezza nasce dalla doppia capacità di reagire e imparare." },
+   { "h": "Protezione del prodotto e ritorno sotto controllo", "d": "Assicurare che il prodotto potenzialmente non sicuro non venga rilasciato: non basta una registrazione di scostamento e una firma — il lotto è identificabile, le decisioni prese da persone competenti, la valutazione coerente. E il parametro va riportato nel criterio: a volte si gestisce il prodotto e si riparte senza aver ristabilito le condizioni, esponendo a deviazioni ripetute. Le deviazioni sono più istruttive delle conformità: raccontano se il piano è realistico." }
+  ]
+ },
+ {
+  "id": "22000_m06_s025",
+  "layout": "punti",
+  "kicker": "Piano di controllo · 8.5.4",
+  "titolo": "Attuare e mantenere il piano",
+  "intro": "Un piano ben scritto è solo l'inizio: attuarlo, mantenerlo e conservare l'evidenza dell'attuazione come informazione documentata. L'attenzione si sposta dal progetto alla prova d'uso — non basta che il piano dica cosa dovrebbe accadere: devi dimostrare che accade davvero, con criteri applicati, monitoraggi eseguiti, decisioni prese e registrazioni coerenti col processo reale.",
+  "punti": [
+   { "h": "Registrazioni come prova", "d": "Non riempire archivi: dimostrare che il controllo è stato eseguito come pianificato. Per un CCP il dato rilevato, il momento, chi lo ha eseguito e — se necessario — la valutazione; per un OPRP l'osservazione o misura prevista, l'esito, l'eventuale autorizzazione a proseguire. Dati incompleti, tardivi o incoerenti indeboliscono subito la prova." },
+   { "h": "Disciplina temporale", "d": "Un controllo registrato molto dopo l'evento, o compilato in blocco a fine turno, perde gran parte del valore: riduce affidabilità e tracciabilità, e segnala che il monitoraggio forse non sta guidando le decisioni in tempo reale. Se il piano prevede un controllo per proteggere il prodotto, deve vivere nel momento in cui il rischio può essere intercettato — altrimenti resta teorico." },
+   { "h": "Aggiornamento", "d": "Aggiornare quando necessario: caratteristiche di materie prime e materiali a contatto, prodotti finali, uso previsto, diagramma di flusso, descrizioni di processo e ambiente. Il nuovo formato di confezione per una zuppa cambia volume, raffreddamento, tempi di stabilizzazione: se il piano resta identico, hai una bella tabella ma un controllo non più allineato. Idem per un cambio fornitore o una nuova destinazione commerciale." },
+   { "h": "Coerenza in tre direzioni", "d": "Verticale (tra analisi, validazione, classificazione e criteri operativi); orizzontale (tra piano, istruzioni, registrazioni, stato degli strumenti, comportamento delle persone); temporale (tra il processo di oggi e il piano di oggi). Quando una si rompe, il sistema perde affidabilità. Un buon piano aiuta anche a lavorare sotto pressione: chiarisce chi controlla, valuta, blocca il prodotto, autorizza il riavvio." }
+  ]
+ },
+ {
+  "id": "22000_m06_s026",
+  "layout": "punti",
+  "kicker": "Verifica HACCP · 1",
+  "titolo": "Il flusso reale conferma il piano?",
+  "intro": "Passando dai documenti al processo, la domanda decisiva: il flusso reale conferma ciò che il piano dichiara? Non controllare se le caselle sono complete, ma confrontare diagramma, descrizioni operative e piano con ciò che avviene in reparto — è qui che molte incoerenze emergono, perché il processo vivo mostra dettagli che la documentazione semplifica o dimentica.",
+  "punti": [
+   { "h": "La sequenza reale delle fasi", "d": "Le operazioni si svolgono nell'ordine descritto? Esistono soste, attese, accumuli o rilavorazioni che il diagramma non mostra? Percorsi alternativi nei momenti di carico o a impianto fermo? Ognuna può cambiare il profilo del pericolo e la pertinenza del piano — un sistema coerente al tavolo tecnico può diventare fragile appena entri in reparto." },
+   { "h": "Ingressi e uscite", "d": "Materie prime, semilavorati, materiali di confezionamento, rifiuti e rilavorazioni entrano ed escono dove il diagramma li colloca? Se il confezionamento attraversa un'area diversa, o una rilavorazione rientra in un punto non documentato, il controllo potrebbe non essere più quello immaginato — particolarmente per allergeni, ricontaminazione post-trattamento e rischi fisici." },
+   { "h": "Il fattore umano", "d": "Il piano assegna responsabilità, ma sul campo: le persone sanno quando controllano un CCP, quando monitorano un OPRP, quale criterio rispettare, cosa fare a uno scostamento? Una registrazione formalmente corretta non basta se l'operatore non sa spiegare il senso del controllo — la coerenza vera è anche tra foglio e comportamento." },
+   { "h": "Descrive un processo vero o ideale?", "d": "Un criterio può essere scritto bene e monitorato male, un'istruzione chiara ma impraticabile, un OPRP dipendente dall'esperienza del turno, un CCP con strumenti presenti ma non consultati al momento giusto. Nella linea di cotti e affettati, i carrelli che nei picchi sostano più a lungo prima dell'affettamento non compaiono nel diagramma ma incidono: in un sistema maturo diventa un segnale da riportare al gruppo. Più il sistema è maturo, più la distanza tra processo vero e ideale si riduce." }
+  ]
+ },
+ {
+  "id": "22000_m06_s027",
+  "layout": "punti",
+  "kicker": "Verifica HACCP · 2",
+  "titolo": "Segnali di incoerenza tra piano e realtà",
+  "intro": "La coerenza tra flusso reale e piano raramente si rompe con un evento clamoroso: più spesso si incrina con segnali piccoli, ripetuti, apparentemente innocui. Saperli leggere significa capire se il sistema controlla ancora i pericoli come previsto, o se il piano è rimasto fermo mentre il processo si è spostato altrove.",
+  "punti": [
+   { "h": "Registrazioni perfette, contesto disordinato", "d": "Schede sempre con dati regolari, ma sul campo strumenti poco consultati, sequenze accelerate, addetti incerti sul criterio: approfondisci. La perfezione documentale può nascondere compilazioni tardive o controlli solo apparenti — le registrazioni devono raccontare un controllo vissuto, non un'abitudine amministrativa." },
+   { "h": "Il linguaggio delle persone", "d": "Chiesto a un operatore quale pericolo controlla una misura, quale limite o criterio rispettare, cosa fa a uno scostamento: non ti aspetti una lezione teorica, ma consapevolezza operativa. Quando sanno solo dire «si è sempre fatto così», o indicano azioni diverse da quelle previste, la distanza tra documento e pratica diventa concreta." },
+   { "h": "Scorciatoie non documentate", "d": "Un cambio formato con sequenza diversa, una rilavorazione in un punto non riportato, una sosta in un'area non descritta, una pulizia abbreviata nei turni tesi: possono nascere da esigenze pratiche comprensibili, ma se non riportate al sistema cambiano il profilo di rischio senza che analisi e piano ne tengano conto. Il controllo del cambio etichetta fatto mentre la linea riprende già a muoversi: se il pericolo riguarda allergeni, quel dettaglio smette subito di essere piccolo." },
+   { "h": "Incrociare le tre fonti", "d": "Mettere in relazione osservazione diretta, interviste e registrazioni dello stesso momento: se il dato non coincide con l'ora reale, l'operatore descrive una sequenza diversa, o lo stato dell'impianto suggerisce che il controllo non poteva essere eseguito come scritto, hai una traccia concreta — evita sia il formalismo documentale sia l'impressione soggettiva. Un piano maturo non è quello senza deviazioni: è quello che riconosce i cambiamenti, li riporta nel diagramma, rivaluta e adegua." }
+  ]
+ },
+ {
+  "id": "22000_m06_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 6",
+  "modNum": "6",
+  "titolo": "Il controllo dei pericoli come catena di decisioni",
+  "punti": [
+   { "h": "Una catena, non una tabella", "d": "Informazioni preliminari, analisi dei pericoli, valutazione della significatività, scelta delle misure, distinzione CCP/OPRP, validazione, piano di controllo. L'idea da trattenere: ogni passaggio deve sostenere il successivo." },
+   { "h": "La base informativa", "d": "Senza prodotto ben descritto, uso previsto chiaro, diagramma confermato sul posto e conoscenza del processo reale, l'analisi resta fragile — non eleganza documentale, ma aderenza alla realtà. Un processo immaginato porta a misure poco convincenti o mal calibrate." },
+   { "h": "La qualità del ragionamento", "d": "Collegare i pericoli alle fasi in cui possono essere presenti, introdotti, aumentare o persistere; definire livelli accettabili; valutare probabilità e gravità con metodo coerente. Solo così i pericoli significativi emergono come esito di un'analisi, non come riflesso di abitudini." },
+   { "h": "Misure e validazione", "d": "Non etichette rapide, ma selezione appropriata o combinazioni, classificazione sistematica, limite critico non ornamentale, criterio di azione non vago. E la validazione prima dell'attuazione: se non conferma l'efficacia, non difendi il piano per inerzia — lo modifichi e lo rivaluti." },
+   { "h": "L'operatività quotidiana", "d": "Il piano traduce tutto in criteri, monitoraggi, correzioni, responsabilità e registrazioni — ma vale solo se il processo reale lo conferma. Un HACCP vivo si aggiorna quando il processo cambia; uno statico prima o poi smette di proteggere." },
+   { "h": "Verso il prossimo passo", "d": "Al checkpoint ripassa il filo logico più che le formule: come si riconosce un pericolo significativo, come si decide tra CCP e OPRP, perché la validazione viene prima. Poi: monitoraggio, verifica e non conformità di prodotto." }
+  ],
+  "prossimo": {
+   "modulo": "7",
+   "titolo": "Operativo 3: monitoraggio, verifica e non conformità di prodotto",
+   "testo": "Come il sistema controlla nel tempo ciò che ha progettato, valuta i risultati e gestisce i prodotti potenzialmente non sicuri."
+  }
+ }
+]
