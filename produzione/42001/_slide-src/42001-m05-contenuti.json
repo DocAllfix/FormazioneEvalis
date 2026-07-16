@@ -1,0 +1,400 @@
+[
+ {
+  "id": "42001_m05_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 42001 — Sistemi di gestione dell'IA",
+  "kicker": "Modulo 5",
+  "eyebrow": "Il cuore operativo della norma",
+  "titolo": "Il motore del sistema: rischio e impatto",
+  "testo": "Fin qui hai visto contesto, leadership e pianificazione generale. Adesso incontri il motore che fa davvero muovere il sistema di gestione dell'IA: il punto in cui le intenzioni diventano decisioni, priorità, controlli e verifiche. Per te, come auditor, è anche il posto dove la maturità di un'organizzazione si vede subito: se il motore funziona, il sistema respira; se è debole, il resto regge poco. La norma lavora su due binari inseparabili. Il primo guarda il rischio per l'organizzazione, ciò che può ostacolare gli obiettivi di IA. Il secondo guarda l'impatto su individui, gruppi di individui e società. Sembrano vicini, ma non coincidono: un sistema può essere redditizio e produrre conseguenze serie per le persone. Da questa architettura entreremo nella valutazione del rischio, poi nel trattamento con i controlli dell'Appendice A e la dichiarazione di applicabilità, quindi nella valutazione d'impatto dei sistemi di IA. Seguiremo rischio e impatto lungo il ciclo di vita, dal disegno alla dismissione, e infine dal punto di vista della verifica. Mentre ascolti, fatti sempre due domande: che cosa mette a rischio l'organizzazione e i suoi obiettivi? Quali conseguenze potrebbe subire chi entra in contatto con il sistema?",
+  "agenda": [
+   "Architettura a doppio binario: rischio e impatto",
+   "La valutazione del rischio: processo, criteri, priorità",
+   "Il trattamento del rischio, i controlli, la dichiarazione di applicabilità",
+   "La valutazione d'impatto su individui, gruppi e società",
+   "Rischio e impatto lungo il ciclo di vita",
+   "Il motore visto con gli occhi della verifica"
+  ]
+ },
+ {
+  "id": "42001_m05_s002",
+  "layout": "confronto",
+  "kicker": "Doppio binario · 1",
+  "titolo": "Due binari, un solo sistema decisionale",
+  "intro": "La differenza centrale del modulo: da una parte il rischio per l'organizzazione, dall'altra l'impatto dei sistemi di IA su individui e società. I due piani dialogano sempre, ma non coincidono mai del tutto. La forza di ISO/IEC 42001 sta proprio qui: non ti lascia scegliere un solo punto di vista, ti chiede un sistema in cui le due valutazioni si alimentano a vicenda.",
+  "a": {
+   "h": "Rischio per l'organizzazione",
+   "sub": "La tenuta degli obiettivi",
+   "punti": [
+    { "d": "Riguarda ciò che può favorire o impedire il raggiungimento degli obiettivi di IA: errori tecnici, prestazioni instabili, non conformità, reclami, costi inattesi, interruzioni operative, perdita di clienti, danni reputazionali." },
+    { "d": "La domanda è: se questo evento si verifica, che cosa succede agli obiettivi, ai processi e alla tenuta dell'organizzazione? Guardi la solidità del sistema dall'interno." }
+   ]
+  },
+  "b": {
+   "h": "Impatto su individui e società",
+   "sub": "Le conseguenze esterne",
+   "punti": [
+    { "d": "Sposta il centro: esclusioni ingiuste, peggioramento dell'accesso a servizi, rischi per la sicurezza, riduzione dell'autonomia decisionale, effetti discriminatori, erosione della fiducia collettiva." },
+    { "d": "La domanda cambia: chi subisce le conseguenze concrete, con quale intensità, e la risposta cambierebbe se le persone fossero più fragili o meno capaci di contestare? Un sistema poco rilevante per il bilancio può incidere profondamente su un gruppo ristretto ma vulnerabile." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m05_s003",
+  "layout": "split",
+  "kicker": "Doppio binario · 2",
+  "titolo": "Lo stesso evento, due letture diverse",
+  "lead": "Il doppio binario non è solo teoria: lo stesso evento produce una lettura organizzativa e una di impatto molto diverse. Immagina un ente che usa l'IA per ordinare le richieste di accesso a un contributo sociale. Dopo alcuni mesi il modello perde precisione, perché il contesto economico è cambiato e i dati storici non descrivono più la realtà. Le due letture a volte puntano nella stessa direzione, ma non sempre si sovrappongono in modo perfetto.",
+  "punti": [
+   { "h": "Lettura organizzativa", "d": "L'ente rischia ritardi, aumento dei reclami, inefficienza del servizio, contestazioni, sovraccarico degli sportelli, perdita di fiducia nella capacità amministrativa. Il problema è la tenuta del servizio e dei suoi obiettivi." },
+   { "h": "Lettura di impatto", "d": "Famiglie fragili messe in coda proprio quando avrebbero maggiore urgenza, un quartiere già svantaggiato meno seguito, crescita del senso di ingiustizia. In casi estremi, l'errore si traduce in rinuncia a cure o esclusione da un sostegno decisivo." },
+   { "h": "Anche l'abuso prevedibile", "d": "Il secondo binario considera non solo l'uso previsto ma il prevedibile abuso. Se alcuni operatori prendono il punteggio come decisione finale, saltando il riesame umano, per le persone viene meno proprio lo spazio di correzione che avrebbe evitato l'esclusione." },
+   { "h": "Separati ma collegati", "d": "Una buona organizzazione non confonde i binari, ma nemmeno li isola. Se la valutazione d'impatto segnala effetti severi su un gruppo vulnerabile, quell'informazione deve pesare nella valutazione del rischio complessiva." }
+  ]
+ },
+ {
+  "id": "42001_m05_s004",
+  "layout": "punti",
+  "kicker": "Doppio binario · 3",
+  "titolo": "Perché il doppio binario cambia le decisioni",
+  "intro": "Binari diversi portano priorità diverse, controlli diversi e prove diverse da cercare. Se guardi solo il rischio organizzativo privilegi stabilità, continuità, costo, conformità; se includi l'impatto devi considerare equità, comprensibilità, possibilità di contestazione, protezione dei soggetti esposti. Non cambia solo ciò che valuti: cambia ciò che ritieni accettabile. Pensa a una rete sanitaria che introduce un assistente conversazionale per prenotare visite.",
+  "punti": [
+   { "h": "Cambia l'oggetto delle domande", "d": "Dal lato organizzativo guardi indisponibilità del servizio, risposte scorrette, picchi di traffico, escalation mal gestite. Dal lato impatto ti chiedi se un paziente anziano capisce di dialogare con un'IA, se chi ha scarsa alfabetizzazione ottiene comunque aiuto, se il sistema indica con chiarezza quando rivolgersi a un umano." },
+   { "h": "Lo stesso controllo, due scopi", "d": "Un messaggio di avviso, dal lato organizzativo, riduce uso improprio e reclami; dal lato impatto protegge persone vulnerabili da un affidamento eccessivo. Anche la soglia di attenzione cambia: un errore raro ma molto grave per un individuo può meritare priorità alta pur con danno economico limitato." },
+   { "h": "La convenienza interna non basta", "d": "Le organizzazioni mature accettano che il livello di rischio accettabile non si definisca solo sulla convenienza: entrano criteri, contesto applicativo, uso previsto e potenziali conseguenze. Alcune categorie di utenti possono meritare prima un supporto umano, anche se rallenta un poco il flusso." },
+   { "h": "Cambia la lettura delle evidenze", "d": "Un'analisi molto ricca sulle prestazioni del modello ma quasi muta sugli effetti per le persone non descrive un sistema completo. Una riflessione etica senza connessione con processi, responsabilità e risultati non descrive un sistema governato. Devi vedere entrambe le cose e il loro collegamento." }
+  ]
+ },
+ {
+  "id": "42001_m05_s005",
+  "layout": "split",
+  "kicker": "Valutazione del rischio · 1",
+  "titolo": "Il processo prima della tabella",
+  "lead": "Il punto 6.1.2 non chiede una tabella compilata una volta e poi dimenticata, ma un processo riconoscibile, stabile nel tempo e capace di produrre giudizi affidabili. Molte organizzazioni pensano di essere a posto quando hanno un file con qualche rischio colorato: se manca il metodo, quel file non governa nulla. Il processo deve partire dalla politica di IA e restare coerente con gli obiettivi.",
+  "punti": [
+   { "h": "Allineato a politica e obiettivi", "d": "Se l'organizzazione dichiara di voler garantire supervisione umana significativa e uso responsabile, il processo deve riflettere davvero queste priorità, non limitarsi a disponibilità del software, costi e tempi." },
+   { "h": "Coerente, valido, comparabile", "d": "Coerente: persone diverse, davanti allo stesso scenario e agli stessi criteri, non arrivano a conclusioni casuali. Valido: il metodo misura ciò che serve governare. Comparabile: puoi capire se il rischio è cambiato davvero oppure se è cambiato solo il modo di giudicarlo." },
+   { "h": "Ponte con la valutazione d'impatto", "d": "Quando esamini le conseguenze puoi usare ciò che emerge dall'analisi di impatto, senza confondere i due processi: il secondo dà sostanza al primo, soprattutto per capire chi può essere colpito, con quale gravità e con quali aggravanti." },
+   { "h": "Utilizzabile nel tempo", "d": "Il punto 8.2 chiede di ripetere la valutazione secondo una cadenza pianificata e quando sistema o contesto cambiano in modo rilevante. In verifica non chiedi solo se esiste una valutazione, ma se il processo produce, ogni volta che serve, giudizi credibili e confrontabili." }
+  ]
+ },
+ {
+  "id": "42001_m05_s006",
+  "layout": "numeri",
+  "kicker": "Valutazione del rischio · 2",
+  "titolo": "I criteri, il metro che rende leggibile il rischio",
+  "intro": "Se la valutazione è il processo, i criteri sono il metro che lo rende comprensibile e difendibile. Senza criteri l'analisi resta una raccolta di impressioni; con criteri chiari distingui ciò che è tollerabile da ciò che richiede intervento, confronti casi diversi e spieghi le priorità. Non vanno copiati da un'altra realtà: la norma richiama dominio applicativo, uso previsto e contesto. Un buon set chiarisce almeno quattro cose.",
+  "numeri": [
+   { "n": "1", "h": "Quali conseguenze contano", "d": "Quali tipi di conseguenze sono rilevanti per quell'organizzazione e per quel sistema. Un sistema che raccomanda prodotti e uno che orienta l'accesso a un servizio essenziale non hanno la stessa soglia di accettabilità." },
+   { "n": "2", "h": "Quali soglie scattano", "d": "Quali combinazioni di gravità fanno scattare attenzione, escalation o intervento prioritario. Se i criteri non catturano la differenza tra contesti, il sistema appiattisce realtà che andrebbero trattate in modo diverso." },
+   { "n": "3", "h": "Quando pesa la probabilità", "d": "In quali casi la probabilità realistica pesa davvero nella priorità. I criteri possono valere per singolo sistema o per gruppi omogenei, ma raggruppare sistemi troppo diversi li rende generici e poco incisivi." },
+   { "n": "4", "h": "Chi accetta il rischio residuo", "d": "Chi ha il livello di autorità necessario per accettare il rischio residuo. Un metro che vive solo nel documento serve a poco: se due persone raccontano soglie diverse, i criteri esistono sulla carta ma non nella pratica." }
+  ]
+ },
+ {
+  "id": "42001_m05_s007",
+  "layout": "cards",
+  "kicker": "Valutazione del rischio · 3",
+  "titolo": "Identificare i rischi che aiutano o ostacolano gli obiettivi",
+  "intro": "Il punto 6.1.2 chiede di individuare i rischi che favoriscono o impediscono il raggiungimento degli obiettivi di IA: non solo che cosa può andare male, ma anche che cosa può contribuire, e a quali condizioni quel contributo resta affidabile. Molte organizzazioni vedono solo metà del quadro. Identificare bene significa collegare i rischi agli obiettivi dichiarati, al contesto d'uso e alle parti interessate, senza fermarsi al modello in senso stretto.",
+  "cards": [
+   { "h": "Ciò che ostacola gli obiettivi", "d": "In un sistema che prevede guasti su macchine critiche: dati di sensore incompleti, modelli addestrati su condizioni non più attuali, allarmi difficili da interpretare, eccessiva fiducia degli operatori, integrazione debole col software di manutenzione." },
+   { "h": "Ciò che li favorisce", "d": "Qualità storica dei dati, supervisione tecnica competente, manutentori formati a leggere i segnali, procedure chiare di conferma umana. Riconoscere queste condizioni positive evita una gestione del rischio solo difensiva." },
+   { "h": "Tutto ciò che sta attorno al modello", "d": "Dati, persone, processi, contesto operativo, fornitori, cambiamenti d'uso, limiti dell'interfaccia, scostamenti tra uso previsto e uso reale. Spesso i problemi più gravi nascono dall'interazione tra tecnologia, interfaccia e comportamento umano." },
+   { "h": "La pluralità delle fonti", "d": "L'identificazione migliora con profili diversi: chi gestisce il processo conosce le pressioni operative, chi sviluppa conosce limiti e assunzioni, chi segue gli utenti conosce errori d'uso e fragilità concrete. Le organizzazioni mature descrivono scenari, non formule generiche." }
+  ]
+ },
+ {
+  "id": "42001_m05_s008",
+  "layout": "flusso",
+  "kicker": "Valutazione del rischio · 4",
+  "titolo": "Analizzare conseguenze, probabilità e livello",
+  "intro": "Dopo l'identificazione arriva l'analisi. Il punto 6.1.2 porta a tre movimenti precisi. Analizzare bene non vuol dire moltiplicare parole, ma collegare cause, contesto, conseguenze e plausibilità in modo credibile. Pensa a un sistema di visione che segnala situazioni pericolose nelle aree di carico e a un rischio: la mancata rilevazione di un pedone in certe condizioni di luce.",
+  "passi": [
+   { "h": "Esamina gli effetti su tutti i piani", "d": "Guarda non solo l'organizzazione, ma anche individui e società. Fermo operativo, contenzioso e danno reputazionale per l'ente; un infortunio serio per la persona; sul piano sociale, sfiducia verso soluzioni simili e maggiore pressione regolatoria se il limite è sistemico." },
+   { "h": "Stima la probabilità realistica", "d": "Non basta dire improbabile o possibile. Chiediti con quale frequenza compaiono quelle condizioni, se esistono barriere, quanto gli operatori si fidano, quale storico di errori è disponibile, come l'interfaccia segnala l'incertezza. La norma chiede il plausibile, senza catastrofismi né minimizzazioni comode." },
+   { "h": "Traduci in livello di rischio", "d": "Spesso si combinano severità e probabilità, ma la norma non impone una formula unica: chiede coerenza con i criteri. Il livello non serve a impressionare, serve a decidere, quindi va motivato con ragioni leggibili, dati e un legame chiaro col contesto reale di esercizio." }
+  ]
+ },
+ {
+  "id": "42001_m05_s009",
+  "layout": "split",
+  "kicker": "Valutazione del rischio · 5",
+  "titolo": "Dall'analisi alla decisione: confronto e priorità",
+  "lead": "Il sistema di gestione deve arrivare a una decisione, non fermarsi a un commento. Nel punto 6.1.2 il rischio smette di essere descritto e diventa accettabile, non accettabile oppure prioritario per il trattamento. Se i criteri sono vaghi, il giudizio cambia da persona a persona; se sono chiari, il confronto diventa trasparente e difendibile. La norma chiede anche di ordinare i rischi in funzione del trattamento.",
+  "punti": [
+   { "h": "Il confronto con i criteri", "d": "Un rischio di sottovalutazione della solvibilità di imprese giovani sale di classe se l'organizzazione ha stabilito che effetti severi su gruppi con accesso già fragile richiedono intervento rapido; appare basso se i criteri guardano quasi solo alla perdita economica attesa." },
+   { "h": "La priorità è esplicita", "d": "Può tener conto del livello di rischio, ma anche della difficoltà di intercettare il problema in tempo, della vulnerabilità dei soggetti esposti, della rapidità del cambiamento e della possibilità che un errore si diffonda prima di essere corretto. Questa logica non va nascosta dietro un colore in tabella." },
+   { "h": "Due errori tipici", "d": "Confondere priorità alta con probabilità alta: alcuni eventi sono rari ma intollerabili per gravità. E dichiarare priorità elevata senza cambiare nulla in processi, controlli o responsabilità: in quel caso la priorità è solo decorativa." },
+   { "h": "Tracciabilità e coerenza pratica", "d": "In verifica segui il percorso da un rischio identificato all'analisi, al confronto con i criteri, fino alla priorità assegnata; poi controlli se i rischi prioritari producono davvero decisioni e controlli. La documentazione rende leggibile la storia delle decisioni nel tempo." }
+  ]
+ },
+ {
+  "id": "42001_m05_s010",
+  "layout": "numeri",
+  "kicker": "Valutazione del rischio · 6",
+  "titolo": "Quando rivalutare e capire se il processo è vivo",
+  "intro": "Il punto 8.2 dà una risposta operativa: la valutazione va ripresa secondo una cadenza programmata e ogni volta che entra in gioco un cambiamento rilevante. Non è una fotografia di avvio, ma una funzione di governo che si riattiva quando il contesto cambia abbastanza da modificare conseguenze, probabilità o livelli. La parola rilevante non va letta in modo burocratico. Un processo vivo si riconosce da quattro segnali.",
+  "numeri": [
+   { "n": "1", "h": "Trigger chiari", "d": "Esistono segnali che dicono quando attivare una nuova valutazione: nuovi dati di addestramento, cambiamento degli obiettivi, ingresso in una nuova giurisdizione, crescita della platea, interfaccia più persuasiva, affidamento all'esterno, errori non visti prima in esercizio." },
+   { "n": "2", "h": "Risultati registrati", "d": "Le valutazioni vengono registrate ogni volta, non solo quando il progetto è sotto i riflettori. Un nuovo canale di dati più informale, con utenti diversi, può alterare prestazioni e conseguenze: lasciare intatta la vecchia valutazione significa solo sperare che tutto funzioni." },
+   { "n": "3", "h": "Valutazioni comparabili", "d": "Le analisi successive si possono leggere una accanto all'altra, perché criteri e logica restano comprensibili. Così capisci se il rischio è cambiato davvero oppure se è cambiato solo il metro di giudizio." },
+   { "n": "4", "h": "Nuovi rischi al trattamento", "d": "Se emergono nuovi rischi, passano davvero al trattamento, senza restare note marginali. Nelle organizzazioni mature le persone operative sanno riconoscere un cambiamento significativo e sanno a chi segnalarlo." }
+  ]
+ },
+ {
+  "id": "42001_m05_s011",
+  "layout": "definizione",
+  "kicker": "Trattamento del rischio · 1",
+  "eyebrow": "Dal giudizio all'azione",
+  "titolo": "Come nasce il trattamento del rischio",
+  "definizione": "Il punto 6.1.3 richiede un processo di trattamento del rischio dell'IA: un modo ordinato per scegliere che cosa fare rispetto ai rischi emersi. Trattamento non significa eliminare ogni rischio, ma scegliere opzioni appropriate, attuarle con controlli adeguati e arrivare a un livello residuo che l'organizzazione possa accettare in modo consapevole.",
+  "punti": [
+   "La qualità si vede nella capacità di motivare perché un rischio viene ridotto, trasferito, evitato in parte o accettato entro limiti definiti — non nella promessa irrealistica di rischio zero.",
+   "L'opzione scelta deve rispondere al rischio specifico, non al rischio in astratto: a volte si modifica il sistema, altre si cambia il processo attorno, si rafforza la supervisione, si limita il contesto d'uso o si rinuncia a una funzione.",
+   "In verifica cerchi il legame tra rischio valutato, opzione scelta e controllo che la rende reale; e l'allineamento con gli obiettivi di IA e la politica: se si dichiara supervisione umana significativa, il piano non può spingere verso automazione cieca."
+  ]
+ },
+ {
+  "id": "42001_m05_s012",
+  "layout": "punti",
+  "kicker": "Trattamento del rischio · 2",
+  "titolo": "Controlli necessari e Appendice A: evitare buchi nel presidio",
+  "intro": "La norma chiede di individuare i controlli necessari per rendere operative le opzioni scelte e di confrontarli con i controlli di riferimento dell'Appendice A, per capire se qualcosa di importante è rimasto fuori. La logica corretta sta nel mezzo: parti dai rischi valutati, scegli i controlli necessari, poi usi l'Appendice A come confronto strutturato. Non inizi dai controlli per cercare dopo un rischio che li giustifichi.",
+  "punti": [
+   { "h": "Due errori opposti", "d": "Usare sempre gli stessi controlli familiari anche quando il rischio ne richiederebbe altri; oppure trattare l'Appendice A come una lista da spuntare in modo meccanico, senza legame con i rischi emersi." },
+   { "h": "Controlli diversi ma coordinati", "d": "In un sistema che suggerisce turni nell'assistenza domiciliare: una regola di bilanciamento contro l'assegnazione ripetuta dei casi più gravosi, una spiegazione chiara dei suggerimenti, un controllo procedurale con conferma umana e formazione dei coordinatori contro la dipendenza eccessiva." },
+   { "h": "L'Appendice A non esaurisce tutto", "d": "È un riferimento forte, ma il contesto può richiedere misure ulteriori: obblighi esterni, vulnerabilità specifiche, controlli su misura. Riconoscerlo è un segnale di maturità: il rischio reale viene prima della comodità del catalogo. L'Appendice B aiuta a mettere a terra i controlli." },
+   { "h": "Un controllo credibile ha un proprietario", "d": "Ha un criterio di attivazione, una frequenza e una prova di esecuzione. Senza questi elementi resta un titolo elegante. La domanda utile: se il rischio si ripresenta domani, quale controllo lo intercetta o ne riduce gli effetti, e come lo verifico?" }
+  ]
+ },
+ {
+  "id": "42001_m05_s013",
+  "layout": "split",
+  "kicker": "Trattamento del rischio · 3",
+  "titolo": "La dichiarazione di applicabilità: il perché dietro ogni controllo",
+  "lead": "Non è solo un elenco di controlli: è il documento che rende visibile quali sono necessari, quali inclusi, quali esclusi e soprattutto perché. La sua forza sta nella qualità della giustificazione, non nella quantità. La norma chiede che contenga i controlli necessari individuati dal trattamento e una motivazione per inclusioni ed esclusioni: così impedisce sia il formalismo sia l'arbitrarietà.",
+  "punti": [
+   { "h": "Includere ed escludere con ragioni", "d": "Se un controllo è incluso, spieghi a quale esigenza risponde. Se è escluso, mostri perché non è necessario o non è richiesto da obblighi esterni applicabili. Escludere è ammesso in base a valutazione del rischio e requisiti esterni, ma è una responsabilità, non una scorciatoia." },
+   { "h": "Trasparenza per sistema", "d": "Sistemi diversi possono condividere alcuni controlli (qualità dei dati, gestione delle modifiche, competenze) e differire su altri. La dichiarazione non appiattisce tutto in un set indistinto: rende leggibile la scelta, sistema per sistema o per gruppi omogenei motivati." },
+   { "h": "I due difetti da evitare", "d": "La tabella copiata da un modello standard, dove quasi tutto è incluso per prudenza e quasi nulla spiegato; oppure esclusioni con motivazioni troppo generiche come «non applicabile al nostro contesto». Entrambe sono segnali di debolezza." },
+   { "h": "Una mappa per l'auditor", "d": "Ti permette di seguire il filo tra rischi, decisioni e controlli. Quale rischio rende necessario questo controllo? Su quale processo si applica? Quale prova mostra che è stato previsto e integrato? Se la mappa è chiara, il resto del sistema si lascia leggere." }
+  ]
+ },
+ {
+  "id": "42001_m05_s014",
+  "layout": "punti",
+  "kicker": "Trattamento del rischio · 4",
+  "titolo": "Piano di trattamento e rischio residuo",
+  "intro": "Selezionare i controlli non basta. Il punto 6.1.3 richiede di formulare un piano di trattamento del rischio dell'IA e di ottenere l'approvazione della direzione designata sia per il piano sia per l'accettazione dei rischi residui. Qui il sistema mostra chi decide davvero e su quali basi. Il piano è il ponte fra scelta e attuazione: un rischio prioritario non può restare affidato a intenzioni generiche.",
+  "punti": [
+   { "h": "Il piano trasforma le scelte in lavoro governato", "d": "Deve dire che cosa verrà fatto, da chi, con quali risorse, entro quali tempi e con quale logica di verifica. Chi rivede la soglia? Entro quando? Chi approva la regola di verifica umana? Come si misura l'efficacia? Senza queste risposte è un promemoria, non un piano." },
+   { "h": "Il rischio residuo va accettato consapevolmente", "d": "È il rischio che resta dopo le misure. La sua accettazione deve essere approvata dalla direzione designata, così i rischi più delicati non vengono accettati in basso per inerzia. Qualcuno con autorità dichiara: conosciamo questo rischio residuo e lo riteniamo tollerabile entro i limiti definiti." },
+   { "h": "Controlli allineati e comunicati", "d": "I controlli necessari devono essere allineati agli obiettivi di IA, documentati, comunicati internamente e disponibili alle parti interessate per quanto appropriato. Una regola di supervisione che gli operatori non conoscono esiste solo sulla carta." },
+   { "h": "Cosa cerchi in verifica", "d": "Piani ben costruiti ma senza traccia di approvazione: manca un pezzo di governance. Approvazioni formali senza evidenza del ragionamento: la governance è solo apparente. I piani migliori collegano azione, responsabilità, prova di esecuzione e criterio di efficacia." }
+  ]
+ },
+ {
+  "id": "42001_m05_s015",
+  "layout": "split",
+  "kicker": "Trattamento del rischio · 5",
+  "titolo": "Attuare il piano e provarne l'efficacia nel tempo",
+  "lead": "Il punto 8.3 non si accontenta che le misure siano scritte: chiede che il piano venga attuato e che la sua efficacia venga verificata. È la differenza tra controlli reali e controlli dichiarati. Un controllo vale se, nel contesto vero di esercizio, riduce il rischio o ne contiene le conseguenze come previsto. Ed è qui che molte organizzazioni scoprono la distanza tra intenzione e realtà.",
+  "punti": [
+   { "h": "Attuato non basta, deve essere efficace", "d": "Un riesame dei casi non urgenti associati a categorie esposte sembra un buon presidio, ma se arriva troppo tardi, quando il cittadino ha già rinunciato, il controllo è stato attuato ma non è efficace. Devi rivedere l'opzione: forse il riesame va anticipato, forse servono soglie diverse o più formazione." },
+   { "h": "Il sistema deve imparare", "d": "Se emergono nuovi rischi che richiedono intervento, si avvia un nuovo trattamento. Se le opzioni scelte non funzionano, vanno riesaminate, rivalidate e inserite in un piano aggiornato. Il trattamento non è un monumento immobile, è un meccanismo adattivo." },
+   { "h": "Le prove dell'efficacia", "d": "Indicatori, campionamenti di casi, analisi prima e dopo l'introduzione del controllo, reclami, decisioni correttive, riesami degli errori. Nessuna evidenza basta da sola: il quadro complessivo deve mostrare se il rischio è diminuito o se almeno gli effetti più gravi sono meglio governati." },
+   { "h": "Tre cose da cercare", "d": "Evidenza dell'attuazione reale, evidenza che qualcuno misuri l'efficacia, evidenza che il piano venga aggiornato quando la realtà smentisce le ipotesi iniziali. Se trovi solo la prima, il sistema esegue ma non governa; se le trovi tutte e tre, il motore è vivo." }
+  ]
+ },
+ {
+  "id": "42001_m05_s016",
+  "layout": "evidenza",
+  "kicker": "Valutazione d'impatto · 1",
+  "eyebrow": "Guardare oltre il perimetro interno",
+  "titolo": "L'impatto non coincide con il malfunzionamento tecnico",
+  "testo": "Il punto 6.1.4 richiede un processo di valutazione d'impatto dei sistemi di IA orientato alle possibili conseguenze per individui, gruppi di individui e società. Qui l'angolo di osservazione cambia: non solo che cosa può danneggiare l'azienda, ma che cosa può accadere alle persone e al contesto sociale quando un sistema viene progettato, messo a disposizione o utilizzato. Attenzione a un equivoco comune: non stiamo parlando soltanto di protezione dei dati personali. Le conseguenze possono riguardare accesso a servizi, possibilità di contestazione, sicurezza, esclusioni ingiuste, compressione dell'autonomia, effetti sproporzionati su gruppi vulnerabili, peggioramento della fiducia in un servizio. Il punto chiave è che un sistema può fare esattamente ciò per cui è stato progettato e produrre comunque conseguenze problematiche, se il contesto sociale è stato letto male. Per questo la valutazione d'impatto è una lente specifica, non un allegato facoltativo della valutazione del rischio, e le conseguenze possono nascere in fasi diverse della vita del sistema: mentre viene concepito, quando viene offerto o integrato, oppure nel suo uso quotidiano. Non devi aspettare un danno già avvenuto per iniziare a guardare: devi ragionare sui meccanismi che possono generare effetti rilevanti. Un'analisi credibile sa nominare i soggetti esposti, descrivere scenari concreti e spiegare perché certe conseguenze sono ritenute importanti."
+ },
+ {
+  "id": "42001_m05_s017",
+  "layout": "cards",
+  "kicker": "Valutazione d'impatto · 2",
+  "titolo": "Quando farla e cosa la riattiva",
+  "intro": "Il punto 8.4 chiede di eseguire le valutazioni secondo una cadenza programmata o quando vengono proposte modifiche significative. Il motore di attivazione non è solo tecnico. Un elemento essenziale del 6.1.4 è considerare tre cose nello stesso quadro: l'impiego concreto, la finalità dichiarata e gli usi distorti ma ragionevolmente prevedibili. Anche modifiche poco appariscenti possono cambiare profondamente le conseguenze.",
+  "cards": [
+   { "h": "L'impiego concreto", "d": "Il contesto reale di applicazione, che può discostarsi dalla finalità. Un sistema nato per supportare i responsabili nella lettura di indicatori, se collegato a suggerimenti automatici su premi e crescita, cambia le conseguenze possibili per i lavoratori anche se l'algoritmo cambia poco." },
+   { "h": "La finalità dichiarata", "d": "Ciò che l'organizzazione intende fare. Va tenuta accanto all'impiego reale e agli usi distorti, considerando anche il contesto tecnico e sociale specifico e le giurisdizioni applicabili: la stessa funzione può produrre effetti diversi in ambienti diversi." },
+   { "h": "Gli usi distorti prevedibili", "d": "Deviazioni plausibili, senza rifugiarsi nell'idea che tutto ciò che non era voluto esca dal perimetro. Un sistema nato per sintetizzare informazioni prima di un colloquio, usato per valutare informalmente l'affidabilità delle persone, cambia l'impatto pur restando un uso ragionevolmente prevedibile." },
+   { "h": "I segnali deboli", "d": "Un buon aggiornamento non aspetta passivamente il danno: osserva aumento di contestazioni, nuove modalità d'uso, gruppi che faticano più degli altri, decisioni che attribuiscono al sistema un peso crescente. Servono trigger chiari e la memoria documentale dei risultati." }
+  ]
+ },
+ {
+  "id": "42001_m05_s018",
+  "layout": "numeri",
+  "kicker": "Valutazione d'impatto · 3",
+  "titolo": "Su chi guardare: individui, gruppi, società",
+  "intro": "La norma indica tre livelli, e questa tripla prospettiva ti protegge da una lettura troppo stretta. Se guardi solo l'utente medio perdi effetti concentrati su gruppi specifici; se guardi solo categorie astratte non vedi il danno sulla persona; se ignori la dimensione sociale trascuri effetti diffusi ma progressivi. Prendi una piattaforma che suggerisce annunci di lavoro e percorsi di aggiornamento.",
+  "numeri": [
+   { "n": "1", "h": "L'individuo", "d": "Chiediti se la persona riceve suggerimenti coerenti, comprensibili e contestabili. Anche sistemi apparentemente leggeri possono produrre conseguenze importanti se usati su larga scala o in contesti delicati." },
+   { "n": "2", "h": "I gruppi", "d": "Chiediti se alcuni profili — per età, provenienza, tipo di curriculum o stile linguistico — vengono sistematicamente associati a opportunità meno qualificate. Serve rendere visibili i gruppi vulnerabili o meno rappresentati, non nasconderli nella media dell'utente standard." },
+   { "n": "3", "h": "La società", "d": "Chiediti se il sistema rafforza segregazioni già presenti, rendendo meno mobile il mercato del lavoro. Allarga lo sguardo oltre gli utenti diretti: familiari, operatori che devono spiegare un esito, comunità locali che vedono cambiare l'accesso a un servizio subiscono comunque gli effetti." }
+  ]
+ },
+ {
+  "id": "42001_m05_s019",
+  "layout": "punti",
+  "kicker": "Valutazione d'impatto · 4",
+  "titolo": "Documentare l'impatto: un giudizio utile e leggibile",
+  "intro": "Una valutazione d'impatto è utile solo se il suo esito diventa leggibile, discutibile e utilizzabile nelle decisioni. Il punto 6.1.4 richiede che l'esito sia documentato e, quando appropriato, reso disponibile alle parti interessate rilevanti. Due indicazioni importanti: la memoria del sistema e la trasparenza verso chi può essere toccato. Documentare non significa riempire pagine, ma rendere espliciti alcuni elementi essenziali.",
+  "punti": [
+   { "h": "Cosa deve rendere esplicito", "d": "Quale sistema è stato considerato, in quale contesto, quali soggetti sono stati analizzati, quali conseguenze potenziali sono emerse, con quale gravità e con quali assunzioni. Un esito ben documentato non scrive «rischio di incomprensione», ma spiega in quali situazioni emerge e chi risulta più esposto." },
+   { "h": "Le parti interessate rilevanti", "d": "La norma non impone pubblicazione indiscriminata, ma apre alla condivisione quando è appropriato. Se l'organizzazione condivide, deve farlo in modo comprensibile; se non condivide, deve avere una ragione legata al contesto, non una chiusura difensiva." },
+   { "h": "Livello interno e livello esterno", "d": "All'interno un'analisi più ricca, con ipotesi, casi osservati, decisioni e responsabilità; verso l'esterno una sintesi chiara che spieghi quali conseguenze sono state considerate, quali tutele esistono e come una persona può chiedere chiarimenti o contestare un esito." },
+   { "h": "Un documento che non confonde i piani", "d": "Distingue tra fatto osservato, ipotesi plausibile e misura di risposta: non gonfia e non minimizza. Ed è aggiornabile, così vedi che cosa è cambiato, quali ipotesi sono state confermate o smentite e quali decisioni ne sono derivate." }
+  ]
+ },
+ {
+  "id": "42001_m05_s020",
+  "layout": "punti",
+  "kicker": "Valutazione d'impatto · 5",
+  "titolo": "Dall'impatto al rischio: far dialogare i due binari",
+  "intro": "La norma chiede di considerare, dentro la valutazione del rischio, ciò che emerge dalla valutazione d'impatto. I due binari non possono procedere affiancati senza mai incontrarsi. Se il collegamento manca, il sistema perde profondità; se funziona, le decisioni diventano più credibili, proporzionate e leggibili. Le conseguenze esterne non sono una riflessione morale a margine: sono elementi decisivi per il governo dei sistemi di IA.",
+  "punti": [
+   { "h": "L'impatto entra nel rischio", "d": "Se la valutazione d'impatto mostra che alcune persone anziane, con linguaggio poco standard, rischiano una classificazione meno accurata, questa informazione può cambiare il livello attribuito, la priorità, i controlli scelti e persino i criteri con cui il rischio residuo è considerato accettabile." },
+   { "h": "Tracce concrete del collegamento", "d": "Nel linguaggio dei documenti e delle riunioni trovi riferimenti chiari ai soggetti esposti; nelle decisioni, i rischi con conseguenze severe ricevono priorità coerenti; nell'organizzazione del lavoro, chi ha curato l'impatto dialoga davvero con chi gestisce rischio, controlli e processi." },
+   { "h": "I sintomi della separazione", "d": "La valutazione d'impatto usa parole ricche ma non produce azioni; la valutazione del rischio resta centrata quasi solo su continuità, costo e reputazione; i controlli guardano a tecnologia e documenti, ma trascurano comprensibilità, contestazione, supervisione e protezione dei soggetti esposti." },
+   { "h": "Il filo, in verifica", "d": "Scegli un rischio rilevante e chiedi come l'analisi di impatto lo ha influenzato; oppure parti da una conseguenza importante e chiedi dove si vede nel rischio, nel piano di trattamento e nei controlli. Se il filo è visibile, il sistema ha coerenza; se si spezza, hai trovato un difetto strutturale." }
+  ]
+ },
+ {
+  "id": "42001_m05_s021",
+  "layout": "tabella",
+  "kicker": "Valutazione d'impatto · 6",
+  "titolo": "Profondità proporzionata e giurisdizioni",
+  "intro": "Non tutte le valutazioni d'impatto hanno la stessa profondità: la norma chiede di considerare il contesto tecnico e sociale specifico e le giurisdizioni applicabili. Non puoi usare un modello unico, devi calibrare l'analisi sul tipo di attività, sulle persone esposte e sulla natura delle conseguenze possibili. In alcuni contesti possono servire valutazioni specifiche su una certa disciplina — sicurezza delle persone, protezione dei dati — che però non vivono da sole: rientrano nella gestione complessiva del rischio.",
+  "cols": ["Contesto d'uso", "Cosa la rende più profonda", "Valutazione specifica utile", "Rischio se uniformi tutto"],
+  "righe": [
+   ["Triage telefonico in assistenza territoriale", "Persone fragili orientate peggio; il contesto sanitario aggrava le conseguenze", "Sulla sicurezza delle persone: un errore può ritardare l'accesso a cure necessarie", "Un errore sistemico resta invisibile dietro la sola continuità del servizio"],
+   ["Assistente per richieste amministrative", "Effetti su accesso ai diritti, correttezza delle informazioni, comprensione", "Sulla protezione dei dati, se il sistema induce a inserire dati non necessari", "Tutto si appiattisce sulla privacy, ma qui quella dimensione pesa davvero sulle persone"],
+   ["Stesso sistema in territori diversi", "Cambiano categorie esposte, canali di contestazione, linguaggi, soglie di accettabilità", "Verificare le differenze, non reinventare l'intera analisi da zero", "Un'interfaccia chiara altrove può escludere dove l'alfabetizzazione è minore"],
+   ["Segnale di maturità", "L'organizzazione motiva perché ha dato a una valutazione una certa profondità", "La valutazione specifica alimenta rischio, trattamento e scelta dei controlli", "Uniformità assoluta su sistemi molto diversi nasconde conseguenze rilevanti"]
+  ]
+ },
+ {
+  "id": "42001_m05_s022",
+  "layout": "confronto",
+  "kicker": "Valutazione d'impatto · 7",
+  "titolo": "Come riconosci una valutazione d'impatto matura",
+  "intro": "Una buona valutazione d'impatto non è solenne, è utile: ti fa vedere chi può subire conseguenze, in quali condizioni, con quali meccanismi e possibilità di rimedio. Una debole usa le parole giuste ma resta astratta. Per chi svolge un audit la differenza si vede quasi subito, appena inizi a fare domande sui casi reali. Un segnale forte è la presenza di scenari narrati con precisione e la distinzione tra conseguenze dirette e indirette.",
+  "a": {
+   "h": "La valutazione matura",
+   "sub": "Utile e concreta",
+   "punti": [
+    { "d": "Entra nel merito: chiede se persone con competenze linguistiche limitate descrivono peggio la propria situazione, se un tono rigido scoraggia chi ha già un forte carico emotivo, se la revisione è chiara e raggiungibile, se alcuni gruppi subiscono ritardi maggiori senza che l'organizzazione se ne accorga." },
+    { "d": "Distingue le conseguenze dirette (un'esclusione immediata dal servizio) da quelle indirette, più lente, come la normalizzazione di un certo tipo di decisione che riduce progressivamente la varietà dei casi trattati in modo equo." }
+   ]
+  },
+  "b": {
+   "h": "I difetti ricorrenti",
+   "sub": "Le scorciatoie tipiche",
+   "punti": [
+    { "d": "L'utente medio immaginario, ordinato e sicuro di sé al punto da contestare un esito: così spariscono i soggetti più esposti. E la riduzione dell'impatto al solo rischio reputazionale, che svuota il secondo binario." },
+    { "d": "La mancata traduzione in azioni: si riconosce un impatto potenziale serio, ma controlli, processi e priorità restano identici. Il test: quale gruppo è risultato più esposto nell'ultima valutazione, e quale cambiamento concreto è stato deciso dopo?" }
+   ]
+  }
+ },
+ {
+  "id": "42001_m05_s023",
+  "layout": "split",
+  "kicker": "Ciclo di vita · 1",
+  "titolo": "Rischio e impatto nascono già nel disegno",
+  "lead": "Rischio e impatto non iniziano in produzione: nascono già nel disegno, quando definisci scopo, contesto, utenti, dati, interfacce e forme di supervisione. Il punto 8.1 chiede di organizzare i processi, metterli in opera e governarli nel tempo, fissando criteri chiari e applicando controlli in coerenza. Il motore non si accende dopo: deve essere incorporato dall'inizio, quando le decisioni sono ancora poco costose da correggere.",
+  "punti": [
+   { "h": "Le scelte iniziali preparano le conseguenze", "d": "Uno scopo troppo ampio, un'interfaccia che suggerisce più autorità del reale, una supervisione solo nominale hanno già preparato molte conseguenze. Se parti con criteri confusi, i rischi identificati saranno generici e il trattamento inseguirà i problemi invece di prevenirli." },
+   { "h": "Valutazioni dentro le scelte, non a valle", "d": "Le organizzazioni mature portano valutazione del rischio e d'impatto dentro le decisioni iniziali. In un sistema che smista richieste di supporto psicologico scolastico, chiarire fin dal disegno cosa deve e non deve fare, quali segnali richiedono intervento umano, come è presentato il risultato, fa entrare rischio e impatto in decisioni concrete." },
+   { "h": "I criteri dei processi operativi", "d": "Nel disegno si fissano i criteri: che cosa conta come dato accettabile, quando una previsione è troppo incerta, che cosa definisce una modifica significativa, quali risultati mostrano che il controllo funziona. Se arrivano tardi, l'organizzazione lavora in rincorsa." },
+   { "h": "Un indizio di maturità", "d": "Le organizzazioni solide mostrano come le decisioni iniziali abbiano incorporato rischi, impatti e controlli; le immature presentano un sistema tecnicamente pronto e un apparato di governo costruito dopo, per giustificare ciò che ormai esiste. È qui che l'8.1 si collega ai punti 6.1.2, 6.1.3 e 6.1.4." }
+  ]
+ },
+ {
+  "id": "42001_m05_s024",
+  "layout": "punti",
+  "kicker": "Ciclo di vita · 2",
+  "titolo": "In esercizio: cambiamenti, fornitori, controllo operativo",
+  "intro": "Quando il sistema entra in uso, il ciclo di vita diventa meno ordinato dei diagrammi: pressioni di tempo, abitudini operative, casi inattesi, aggiornamenti tecnici, dipendenze da fornitori. Per questo il punto 8.1 insiste sul controllo operativo: i processi vanno pianificati, attuati e tenuti sotto controllo, l'efficacia va monitorata e, se i risultati previsti non arrivano, vanno considerate azioni correttive. Qui il motore mostra se sa reggere la realtà.",
+  "punti": [
+   { "h": "Il comportamento cambia nell'ecosistema", "d": "Un fornitore aggiorna una parte del modello, i tecnici usano scorciatoie, alcune segnalazioni vengono chiuse troppo in fretta: in teoria nulla di drammatico, in pratica è cambiato il comportamento del sistema. Senza monitoraggio dell'efficacia, la valutazione del rischio invecchia rapidamente." },
+   { "h": "Modifiche pianificate e cambiamenti involontari", "d": "Le modifiche pianificate vanno tenute sotto controllo; per i cambiamenti involontari, le conseguenze vanno riesaminate e mitigate quando serve. A volte cambia il profilo degli utenti, a volte un'integrazione produce dati diversi, a volte il personale usa il sistema in modo più automatico del previsto." },
+   { "h": "Anche i cambiamenti negli effetti", "d": "Un aggiornamento che mette più in evidenza il riassunto automatico rispetto al testo originario può spingere gli operatori a leggere meno le descrizioni complete: dettagli importanti spariscono. È un cambiamento involontario negli effetti, anche se l'aggiornamento era pianificato." },
+   { "h": "Il governo dei fornitori esterni", "d": "Processi, prodotti o servizi affidati all'esterno vanno tenuti sotto controllo: affidarsi non trasferisce la responsabilità di governo. Se un fornitore aggiorna un modello o una soglia, devi sapere che cosa succede ai tuoi rischi, ai tuoi controlli e alle tue conseguenze." }
+  ]
+ },
+ {
+  "id": "42001_m05_s025",
+  "layout": "cards",
+  "kicker": "Ciclo di vita · 3",
+  "titolo": "Fino alla dismissione: chiudere bene fa parte del governo",
+  "intro": "È la fase meno celebrata, ma spesso molto rivelatrice. La dismissione o sostituzione di un sistema di IA può generare perdita di tracciabilità, interruzioni di servizio, confusione sulle responsabilità, uso residuo di versioni superate, dati non più governati. Trattata solo come progetto tecnico, lascia aperte domande di rischio e di impatto. Una transizione ben governata prevede misure concrete.",
+  "cards": [
+   { "h": "Governare i nodi aperti", "d": "Che fine fanno i criteri usati per i casi in attesa? Come garantisci continuità alle persone già inserite nel processo? Gli operatori sanno quando fidarsi del vecchio sistema e quando no? I dati storici restano accessibili e leggibili? Non sono finezze amministrative, sono nodi di rischio." },
+   { "h": "Accompagnare la transizione", "d": "L'inerzia organizzativa fa continuare a usare logiche e soglie del vecchio sistema come se fossero valide. Rimuovere il software non basta a ripristinare il giudizio umano: serve chiarire nuovi criteri, comunicare le differenze e controllare il comportamento reale." },
+   { "h": "L'impatto della transizione", "d": "Chiediti chi può subire effetti negativi: utenti che perdono canali di accesso che avevano imparato a usare, gruppi davanti a messaggi nuovi meno comprensibili, persone temporaneamente escluse durante il passaggio. Guardando solo la sostituzione tecnica, queste conseguenze restano invisibili." },
+   { "h": "Misure concrete di trattamento", "d": "Una finestra di doppio controllo per i casi sensibili, una regola chiara su quale versione è autorizzata, una procedura di accesso alle informazioni documentate, una comunicazione interna — e, in contesti delicati, verso parti interessate rilevanti quando l'interazione cambia in modo percepibile." }
+  ]
+ },
+ {
+  "id": "42001_m05_s026",
+  "layout": "timeline",
+  "kicker": "In verifica · 1",
+  "titolo": "La spina dorsale della verifica: seguire il filo",
+  "intro": "In un audit 42001 la parte più rivelatrice non è la presenza di molti documenti, ma la continuità del filo decisionale. Imposta la verifica come una catena, partendo da un sistema di IA concreto e non da affermazioni generali. Se il filo tiene, il sistema è leggibile; se si spezza, il resto perde credibilità in fretta. Cerca sempre tre allineamenti: criteri e livelli, rischi prioritari e controlli, conseguenze d'impatto e decisioni reali.",
+  "tappe": [
+   { "t": "01", "h": "Obiettivi e criteri", "d": "Parti da un sistema concreto: quale obiettivo di IA supporta, quali criteri di rischio sono stati applicati. È qui che si vede se la lettura del rischio nasce dal contesto o da un modello generico." },
+   { "t": "02", "h": "Valutazione del rischio", "d": "Quali rischi identificati, quali conseguenze analizzate per organizzazione, individui e società, quale priorità assegnata e perché. Cerca il primo allineamento: tra criteri e livelli di rischio." },
+   { "t": "03", "h": "Trattamento e controlli", "d": "Quali opzioni scelte, quali controlli necessari, come confrontati con l'Appendice A, che cosa dice la dichiarazione di applicabilità, quale piano approvato. Cerca il secondo allineamento: tra rischi prioritari e controlli scelti." },
+   { "t": "04", "h": "La prova sul campo", "d": "I controlli esistono davvero, sono conosciuti, vengono eseguiti e producono l'effetto atteso? Un controllo può essere eseguito bene il giorno della visita e restare scollegato dai rischi reali: il filo mette alla prova entrambi i lati." },
+   { "t": "05", "h": "Aggiornamenti e apprendimento", "d": "Campiona snodi ad alta densità: l'ultima modifica significativa, l'ultimo rischio nuovo, l'ultimo controllo rivelatosi inefficace, l'ultima approvazione del rischio residuo. Cerca il terzo allineamento: tra conseguenze d'impatto e decisioni operative reali." }
+  ]
+ },
+ {
+  "id": "42001_m05_s027",
+  "layout": "confronto",
+  "kicker": "In verifica · 2",
+  "titolo": "Segnali di maturità e domande che smascherano il rituale",
+  "intro": "Come distingui un sistema maturo da uno solo ben presentato? I segnali sono abbastanza nitidi se sai dove guardare. Un sistema maturo sa spiegare le proprie scelte, non soltanto mostrarle; un sistema rituale ha documenti ordinati ma risposte povere quando chiedi il nesso tra le cose. Alcune domande fanno emergere la differenza in poco tempo, e la coerenza temporale tra due momenti diversi è un'altra prova utile.",
+  "a": {
+   "h": "I segnali di maturità",
+   "sub": "Un motore vivo",
+   "punti": [
+    { "d": "Specificità: non parlano di rischio in generale, portano scenari, casi, gruppi esposti, cambiamenti recenti, risultati di controlli. Se chiedi quale conseguenza ha guidato una decisione, sanno dirtelo; se chiedi quale controllo ha ridotto un rischio, sanno mostrartelo." },
+    { "d": "Apprendimento: se una misura non funziona, il piano viene rivisto, le ipotesi rivalidate, la documentazione aggiornata. E dialogo tra funzioni: chi segue sviluppo, operatività, rischio e impatto usa un linguaggio compatibile e si riconosce nello stesso processo." }
+   ]
+  },
+  "b": {
+   "h": "I segnali di debolezza",
+   "sub": "Un sistema rituale",
+   "punti": [
+    { "d": "Linguaggio generico, sempre le parole giuste ma mai un esempio; priorità senza effetti, rischi classificati alti che non generano controlli né risorse diverse; impatto isolato, che non modifica livelli, piani o scelte operative." },
+    { "d": "Dipendenza eccessiva dal fornitore: alla domanda su come sono governati gli aggiornamenti, la risposta è che il partner è affidabile — una non risposta. Domande efficaci: l'ultimo cambiamento significativo, l'ultimo rischio residuo accettato, un caso in cui un controllo non ha funzionato." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m05_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 5",
+  "modNum": "5",
+  "titolo": "Il motore che pensa, decide, agisce e corregge",
+  "punti": [
+   { "h": "Due binari inseparabili", "d": "Il rischio per l'organizzazione — obiettivi, stabilità, continuità, conformità, tenuta dei processi — e l'impatto su individui, gruppi e società — accesso, equità, sicurezza, possibilità di contestazione, vulnerabilità. La chiave non è scegliere uno dei due, ma farli dialogare bene." },
+   { "h": "La catena della valutazione del rischio", "d": "Criteri chiari coerenti con politica e contesto; poi identificazione, analisi delle conseguenze, probabilità realistica quando applicabile, livello di rischio; infine il confronto con i criteri che trasforma l'analisi in priorità. Le conseguenze per le persone possono cambiare seriamente quella priorità." },
+   { "h": "Il trattamento e la valutazione d'impatto", "d": "Opzioni appropriate, controlli necessari confrontati con l'Appendice A, motivazioni nella dichiarazione di applicabilità, piano con responsabilità e accettazione consapevole del rischio residuo, efficacia verificata nel tempo. E l'impatto, con la giusta profondità, deve rientrare nel rischio, non restare isolato." },
+   { "h": "Il motore lungo il ciclo di vita", "d": "Dal disegno all'esercizio, dalle modifiche pianificate ai cambiamenti involontari, dal governo dei fornitori fino alla dismissione: non un'attività una tantum, ma una capacità continua di leggere, decidere, verificare e correggere. In audit, segui il filo che unisce contesto, criteri, rischio, impatto, controlli e aggiornamenti." }
+  ],
+  "prossimo": {
+   "modulo": "6",
+   "titolo": "Supporto e attività operative",
+   "testo": "Il motore che hai studiato qui vive ogni giorno solo se risorse, competenze, comunicazione, informazioni documentate e controllo dei processi lo sostengono: è il terreno del prossimo modulo."
+  }
+ }
+]
