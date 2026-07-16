@@ -1,0 +1,387 @@
+[
+ {
+  "id": "50001_m04_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 50001 — Sistemi di gestione dell'energia",
+  "kicker": "Modulo 4",
+  "eyebrow": "Il motore quantitativo del sistema",
+  "titolo": "Analisi energetica, EnPI, consumo di riferimento e dati",
+  "testo": "Fin qui hai visto la cornice, le responsabilità e la logica della pianificazione. Adesso entri nel punto in cui il sistema smette di essere una buona intenzione e diventa capacità concreta di leggere l'energia, scegliere le priorità e dimostrare i risultati. La norma concentra qui il motore del miglioramento: senza una base analitica seria nessun obiettivo regge, nessun piano convince, nessuna verifica successiva può dire davvero se stai andando meglio. Dall'analisi energetica emergono gli usi energetici significativi, quelli che pesano di più o offrono i margini maggiori, e da questi le opportunità di miglioramento, ordinate per priorità. Poi entri negli indicatori di prestazione energetica e nel consumo di riferimento, la base di confronto con cui leggi gli scostamenti nel tempo. Infine la raccolta dei dati: piano di misura, contatori, frequenze e responsabilità. Ogni volta che la norma chiede di analizzare, misurare, confrontare o aggiornare, sta proteggendo la qualità delle decisioni.",
+  "agenda": [
+   "6.3 Analisi energetica: usi significativi, opportunità, priorità",
+   "6.4 Indicatori di prestazione (EnPI): quando sono appropriati",
+   "6.5 Consumo di riferimento (EnB): periodo e revisione",
+   "6.6 Raccolta dei dati: piano di misura, contatori, qualità",
+   "La spina dorsale di ogni verifica e gli errori ricorrenti"
+  ]
+ },
+ {
+  "id": "50001_m04_s002",
+  "layout": "definizione",
+  "kicker": "Analisi energetica · 6.3 · 1",
+  "eyebrow": "Il punto 6.3",
+  "titolo": "L'analisi energetica non è un foglio, è un processo",
+  "definizione": "L'analisi energetica è il processo con cui l'organizzazione costruisce una lettura ragionata dei propri usi e consumi, usando misurazioni e altri dati disponibili, per capire dove l'energia entra, come viene trasformata, dove viene utilizzata e quali aree influenzano davvero la prestazione. Non è un file né una fotografia scattata una volta e archiviata. La norma chiede di sviluppare e condurre questa analisi: due verbi diversi.",
+  "punti": [
+   "Sviluppare vuol dire definire metodo, perimetro, criteri e fonti informative. Condurre vuol dire applicare quel metodo alle operazioni reali: leggere dati, confrontare periodi, verificare coerenze, interrogare i responsabili, arrivare a conclusioni utilizzabili. Senza il primo il lavoro è improvvisato; senza il secondo il metodo resta teorico.",
+   "La base è misurazioni e altri dati: il sistema non vive di impressioni, ma non devi aspettare una strumentazione perfetta per iniziare. Si parte con bollette, letture dei contatori principali, registri di produzione, ore di esercizio, dati di fermata, temperature esterne, turni, ricette di processo, report di manutenzione.",
+   "Uso e consumo non sono la stessa cosa: l'uso ti dice dove e per che cosa serve l'energia (forno, compressione aria, refrigerazione, pompaggio); il consumo ti dice quanta energia quegli usi assorbono in un periodo. Se conosci solo il consumo totale sai quanto spendi, ma non dove agire; l'analisi tiene insieme entrambe le dimensioni e corregge le illusioni ottiche dell'organizzazione."
+  ]
+ },
+ {
+  "id": "50001_m04_s003",
+  "layout": "split",
+  "kicker": "Analisi energetica · 6.3 · 2",
+  "titolo": "Da dove comincia: dati, fonti e perimetro",
+  "lead": "La prima mossa non è cercare i grandi sprechi, ma mettere ordine nel quadro informativo. La norma chiede di identificare i tipi di energia correnti e di valutare usi e consumi passati e correnti. Il riferimento ai dati passati impedisce di leggere il presente come unico stato possibile; il riferimento ai dati correnti evita analisi archeologiche, belle ma inutili. Devi sempre arrivare a una fotografia attuale, spendibile per decidere.",
+  "punti": [
+   { "h": "Quali vettori entrano, dove, con quale intensità", "d": "Elettricità, gas, vapore acquistato, gasolio, acqua surriscaldata, altra energia di processo: dove vengono usati, con quale intensità e con quali cambiamenti rispetto ai periodi precedenti. Se una linea oggi consuma molto, devi capire se è sempre stato così o se il salto è recente e da cosa dipende." },
+   { "h": "Il perimetro è chiaro?", "d": "Molti problemi nascono qui. Un'azienda dichiara di aver analizzato lo stabilimento, ma ha escluso il magazzino refrigerato, la manutenzione, il circuito acqua calda o i servizi ausiliari fuori orario. Spesso non è malafede, è rappresentazione incompleta. Servono mappa degli impianti, confini operativi chiari, collegamento tra utenze, contatori e reparti." },
+   { "h": "Partire con metodo, non con la perfezione", "d": "Un'azienda con bollette elettriche dettagliate, letture manuali del gas, ore macchina, registro turni e rapporti di manutenzione può già distinguere i tipi di energia, ricostruire l'andamento storico, confrontare mesi comparabili, correlare consumo e ore di lavoro. Se poi aggiungerà misure più fini, l'analisi migliorerà: il punto è partire sapendo cosa ancora non vedi bene." },
+   { "h": "Dato disponibile e dato affidabile", "d": "Una bolletta dà un totale robusto ma non la distribuzione interna; una lettura manuale può essere preziosa ma richiede verifiche di coerenza. Un sistema solido non usa i dati alla cieca: sa da dove arrivano, quanto sono completi, quali limiti hanno, come li integra. Questo atteggiamento è già parte della maturità." }
+  ]
+ },
+ {
+  "id": "50001_m04_s004",
+  "layout": "punti",
+  "kicker": "Analisi energetica · 6.3 · 3",
+  "titolo": "Gli usi energetici significativi: i fuochi principali",
+  "intro": "La domanda cambia natura: non più solo dove l'energia viene usata, ma quali usi meritano attenzione prioritaria. La norma chiede di identificare, sulla base dell'analisi, gli usi energetici significativi. Questo impedisce di trattare ogni consumo allo stesso modo: alcune aree hanno impatto dominante, altre incidenza marginale, altre un peso medio ma un potenziale di miglioramento molto alto.",
+  "punti": [
+   { "h": "Identificarli, senza una formula unica imposta", "d": "La norma dice di identificarli ma non impone un algoritmo. Nella pratica l'organizzazione definisce criteri coerenti con la propria realtà, chiari e applicati in modo consistente: quantità di energia assorbita, peso sul totale, margine di miglioramento, criticità operativa, grado di controllo. Non è un requisito testuale, ma un modo sensato di tradurre in metodo la richiesta." },
+   { "h": "Riconoscere ciò che governa la prestazione", "d": "In un sito con forni, celle, aria compressa, illuminazione e uffici, l'illuminazione pesa poco ma genera molti reclami, quindi appare visibile. L'identificazione rimette ordine: non nega che tutti gli usi esistano, ma riconosce che alcuni governano la prestazione molto più di altri. Non significa trascurare le piccole efficienze, ma non lasciare che sostituiscano il lavoro sui grandi assorbimenti." },
+   { "h": "Tracciabilità del ragionamento", "d": "Se chiedi perché un uso è significativo, l'organizzazione dovrebbe mostrarti dati, criteri e confronto con gli altri usi. Se la risposta è «perché lo sappiamo tutti», sei davanti a una percezione diffusa, non a un'analisi — e le percezioni, da sole, sono fragili." },
+   { "h": "La granularità giusta", "d": "Talvolta l'uso significativo è un'intera area (il trattamento termico), altre volte conviene scendere di un livello (forno continuo, forno discontinuo, recupero termico), perché prestazioni e opportunità non sono le stesse. Il dettaglio deve bastare a guidare decisioni vere: troppo aggregato nasconde differenze, troppo frammentato disperde l'attenzione." }
+  ]
+ },
+ {
+  "id": "50001_m04_s005",
+  "layout": "split",
+  "kicker": "Analisi energetica · 6.3 · 4",
+  "titolo": "Per ogni uso significativo: variabili e prestazione corrente",
+  "lead": "Identificati gli usi significativi, comincia il livello più utile. La norma chiede che, per ciascuno, l'organizzazione determini le variabili pertinenti, determini la prestazione energetica corrente e individui le persone che sotto il suo controllo lo influenzano. Le variabili pertinenti (che sentirai chiamare anche variabili rilevanti) sono i fattori che spiegano perché il consumo o la prestazione cambiano e che, se ignorati, rendono ingiusti i confronti nel tempo.",
+  "punti": [
+   { "h": "Le variabili che spostano il risultato", "d": "Per un forno, quantità prodotta o temperatura di processo. Per una centrale frigorifera, temperatura esterna, carico del magazzino, aperture delle porte, mix di prodotti. Per la climatizzazione uffici, occupazione, stagionalità, orari, set point. Confrontare periodi senza tenerne conto fa leggere come miglioramento ciò che è solo cambiamento di contesto, o viceversa." },
+   { "h": "La prestazione energetica corrente", "d": "Una fotografia credibile di come quell'uso funziona oggi. Non basta il consumo assoluto: serve il rapporto tra energia usata e servizio reso. La norma qui non prescrive ancora quale indicatore usare (arriverà nel 6.4); ti chiede di capire la condizione attuale del singolo uso, altrimenti non avrai base per valutare opportunità e miglioramento." },
+   { "h": "Un esempio: la verniciatura", "d": "Il reparto essiccazione è uso significativo. Il solo gas mensile è utile ma incompleto; collegandolo a ore, numero di lotti, temperature richieste e fermi intermedi vedi la prestazione corrente. Scopri magari che il consumo cresce nei giorni con lotti piccoli e avviamenti frequenti — non perché il forno sia inefficiente, ma perché il profilo operativo lo penalizza. Cambia il tipo di opportunità che emergerà." },
+   { "h": "Il punto giusto sta nel mezzo", "d": "Alcuni elencano variabili ovvie senza verificare se influenzano davvero; altri pretendono modelli troppo sofisticati e si bloccano. Identifica le variabili con effetto reale e documentabile, con precisione coerente con dimensioni, complessità e dati disponibili. Non serve statistica ornamentale: serve spiegare bene il comportamento energetico." }
+  ]
+ },
+ {
+  "id": "50001_m04_s006",
+  "layout": "cards",
+  "kicker": "Analisi energetica · 6.3 · 5",
+  "titolo": "Chi influenza, come stimare il futuro, quando aggiornare",
+  "intro": "Il punto 6.3 collega a ogni uso significativo altri tre elementi, spesso sottovalutati ma rivelatori della maturità del sistema. Portano l'analisi fuori dai fogli di calcolo e dentro i processi reali: l'energia non si consuma da sola.",
+  "cards": [
+   { "h": "Le persone che spostano i consumi", "d": "L'organizzazione deve riconoscere chi, sotto il suo controllo, sposta il comportamento di quell'uso. Nell'aria compressa: il manutentore che gestisce perdite e pressioni, il responsabile che tollera usi impropri, l'operatore che lascia linee attive, il tecnico che imposta la logica dei compressori. Operano sotto controllo anche senza avere l'energia nel titolo del ruolo." },
+   { "h": "La stima dei fabbisogni futuri", "d": "Serve una previsione utile alla pianificazione, non arbitraria. Installando una linea di confezionamento, un'analisi matura non vede solo il motore elettrico, ma l'effetto su freddo, ore dei compressori, lavaggi, varchi e turni: previene baseline che dopo pochi mesi non rappresentano più la realtà." },
+   { "h": "L'aggiornamento nel tempo", "d": "L'analisi non resta valida per sempre: va aggiornata a intervalli definiti e quando cambiano asset, configurazioni o processi energivori. Se installi un forno, converti un combustibile o automatizzi una linea, usi significativi e variabili possono cambiare. Tenerla ferma è come guidare con una mappa vecchia." },
+   { "h": "Metodi, criteri e risultati documentati", "d": "La norma chiede di conservare come informazioni documentate i metodi e i criteri usati e i risultati ottenuti. Non è burocrazia: è rendere il ragionamento leggibile, ripetibile e verificabile. Un sistema solido mostra non solo le conclusioni, ma come ci è arrivato." }
+  ]
+ },
+ {
+  "id": "50001_m04_s007",
+  "layout": "split",
+  "kicker": "Analisi energetica · 6.3 · 6",
+  "titolo": "Dagli usi significativi alle opportunità di miglioramento",
+  "lead": "La norma non si ferma alla comprensione: chiede di riconoscere le occasioni di miglioramento e di ordinarle per importanza. È il ponte tra analisi e azione. Attenzione a una distinzione che fa chiarezza: un'opportunità non è ancora un obiettivo, né un piano d'azione. È una possibilità riconosciuta, fondata sui dati; diventa obiettivo quando l'organizzazione la assume, piano quando le assegna risorse, responsabilità, tempi e verifica.",
+  "punti": [
+   { "h": "Tecniche e organizzative", "d": "Tecniche: recupero di calore, regolazione bruciatori, sostituzione motori, riduzione perdite d'aria compressa, ottimizzazione degli sbrinamenti, revisione dei set point. Organizzative: pianificazione dei lotti, riduzione dei tempi di attesa a caldo, spegnimenti fuori turno, manutenzione preventiva mirata, controllo delle porte nei magazzini refrigerati. L'opportunità nasce dal comportamento reale, non da una lista copiata da un catalogo." },
+   { "h": "Prima capire, poi scegliere la tecnologia", "d": "Con forni che consumano nei giorni di molte ripartenze e piccoli lotti, un approccio superficiale propone subito di sostituire i bruciatori; uno maturo vede tre opportunità distinte: pianificare i lotti per ridurre avviamenti, rivedere le logiche di standby, e solo dopo valutare interventi tecnici. La tecnologia resta importante, ma non viene scelta prima di aver compreso il problema." },
+   { "h": "L'aria compressa notturna", "d": "Potenza elevata anche di notte, produzione ferma: la prima idea è comprare un compressore nuovo. Ma leggendo i dati con calma emergono prima ricerca sistematica delle perdite, revisione della pressione di rete, eliminazione degli usi impropri, logica di spegnimento automatico. L'opportunità tecnologica non scompare, ma perde il primo posto perché il problema nasce dalla gestione." },
+   { "h": "Non solo dove si consuma di più", "d": "Le opportunità emergono anche dove il consumo è meno imponente ma il controllo è scarso, o dove piccole modifiche operative danno benefici rapidi e stabili. La scelta intelligente bilancia impatto, controllabilità e fattibilità. Qui sei ancora nel 6.3, nella pianificazione: le opportunità vanno cercate con rigore, senza pretendere di aver già dimostrato il miglioramento." }
+  ]
+ },
+ {
+  "id": "50001_m04_s008",
+  "layout": "numeri",
+  "kicker": "Analisi energetica · 6.3 · 7",
+  "titolo": "La gerarchia delle priorità: dove agire per primo",
+  "intro": "Le risorse, il tempo e l'attenzione manageriale sono limitati: la norma chiede non solo di individuare opportunità, ma di dar loro priorità. Non detta però una graduatoria universale né impone i criteri: i cinque fattori seguenti non sono un requisito testuale, ma il modo con cui molte organizzazioni mature traducono in metodo la richiesta di prioritizzare. Un avvertimento: non confondere priorità con popolarità interna — un'opportunità visibile o gradita a un reparto, ma di peso marginale, non merita il primo posto.",
+  "numeri": [
+   { "n": "1", "h": "Peso energetico dell'uso coinvolto", "d": "Intervenire su un uso significativo tende ad avere più effetto sul risultato complessivo. È il primo filtro, ma da solo non basta: guardare solo il consumo totale coinvolto farebbe sembrare imbattibile la sostituzione di un vecchio forno, che però richiede studio e capitale maggiore." },
+   { "n": "2", "h": "Potenziale di miglioramento", "d": "Quanto la situazione attuale appare distante da una conduzione migliore. Un'area molto energivora ma quasi immutabile può richiedere studio lungo e investimenti elevati; un'altra meno energivora ma mal gestita può offrire miglioramenti immediati e consolidabili." },
+   { "n": "3", "h": "Grado di controllo", "d": "Un'opportunità è più praticabile se l'organizzazione può governarne davvero le leve. La riduzione delle perdite di aria compressa agisce su un uso significativo, richiede investimento moderato ed è sotto pieno controllo operativo: spesso merita la precedenza proprio perché impatto e controllo convergono." },
+   { "n": "4", "h": "Fattibilità tecnica e organizzativa", "d": "Quanto l'intervento è realizzabile con le competenze, gli impianti e l'organizzazione esistenti. Un'idea brillante ma poco fattibile in concreto scivola indietro rispetto a una meno spettacolare ma realizzabile in tempi certi." },
+   { "n": "5", "h": "Tempi, costi e impatti sul processo", "d": "Il ritorno economico conta, ma non può essere l'unico filtro. Un'opportunità con rientro più lungo può essere prioritaria se agisce sul principale uso significativo; una razionalizzazione degli spegnimenti degli uffici, a investimento minimo, può procedere ma non al centro della scena. Gerarchia è l'ordine più coerente con il profilo energetico reale, non l'idea più brillante in astratto." }
+  ]
+ },
+ {
+  "id": "50001_m04_s009",
+  "layout": "numeri",
+  "kicker": "Analisi energetica · 6.3 · 8",
+  "titolo": "Le trappole più comuni quando assegni le priorità",
+  "intro": "La fase delle priorità sembra intuitiva, ed è proprio qui che molte organizzazioni perdono lucidità. Cinque trappole ricorrenti indeboliscono la scelta e, con essa, la credibilità del processo decisionale.",
+  "numeri": [
+   { "n": "1", "h": "L'innamoramento per le azioni facili", "d": "Si scelgono iniziative piccole, rapide e comunicabili, rimandando i nodi veri. Nulla di male nei miglioramenti semplici: il problema è quando diventano un alibi per non affrontare gli usi significativi. Cambiare l'illuminazione mentre il reparto forni resta senza analisi seria migliora qualcosa, ma non governa la prestazione dove conta." },
+   { "n": "2", "h": "Scambiare un'anomalia per un'opportunità strutturale", "d": "Un picco dovuto a una settimana di ripartenze straordinarie, se non contestualizzato, può generare un progetto complesso su un fenomeno episodico. L'analisi energetica obbliga a guardare trend, variabili e condizioni operative, non il singolo episodio isolato." },
+   { "n": "3", "h": "Separare la priorità dal controllo reale", "d": "Idee interessanti sulla carta ma dipendenti da fattori poco governabili o da decisioni industriali lontane. Se finiscono in cima senza valutazione realistica, il sistema si riempie di promesse e si svuota di risultati: una priorità matura non è solo importante, è anche governabile." },
+   { "n": "4", "h": "Non ascoltare chi influenza gli usi", "d": "Hai identificato chi incide sugli usi significativi: se poi nella scelta non lo ascolti, perdi conoscenza operativa. Il manutentore spiega perché una proposta semplice è instabile, il caporeparto mostra che lo spreco nasce da una logica produttiva, il conduttore segnala set point incompatibili con la qualità richiesta." },
+   { "n": "5", "h": "L'uso improprio del criterio economico", "d": "Il ritorno economico conta, ma non può essere l'unico filtro. Un'opportunità con rientro più lungo può essere prioritaria se agisce sul principale uso significativo; un intervento con rientro rapido può essere secondario se riguarda un'area marginale. Il sistema maturo non ignora il denaro, ma non gli lascia decidere tutta la gerarchia." }
+  ]
+ },
+ {
+  "id": "50001_m04_s010",
+  "layout": "flusso",
+  "kicker": "Analisi energetica · 6.3 · 9",
+  "titolo": "La catena logica del 6.3, e il ponte alla misura",
+  "intro": "Puoi vedere il punto 6.3 come una catena logica continua: se manca anche un solo anello, la catena si indebolisce. Il valore non è solo tecnico, ma logico e gestionale: rende leggibile il collegamento tra conoscenza, decisione e miglioramento. E resta un'avvertenza: un'analisi eccellente ma chiusa nel cassetto del responsabile tecnico produce meno valore di una buona analisi condivisa.",
+  "passi": [
+   { "h": "Analisi con dati", "d": "L'organizzazione costruisce l'analisi energetica con misurazioni e altri dati, riconosce i tipi di energia, legge usi e consumi passati e correnti. È la fotografia ragionata da cui parte tutto." },
+   { "h": "Usi significativi e variabili", "d": "Identifica gli usi energetici significativi, chiarisce le variabili rilevanti di ciascuno, determina la prestazione corrente e individua chi ne influenza i risultati. L'uso smette di essere una voce di consumo e diventa un oggetto gestibile." },
+   { "h": "Stima e aggiornamento", "d": "Stima l'evoluzione futura dei fabbisogni e aggiorna l'analisi quando il contesto cambia. Mantiene viva la lettura invece di lavorare su una fotografia superata." },
+   { "h": "Opportunità in ordine di priorità", "d": "Da questa base fa emergere le opportunità e le mette in ordine. Non un catalogo generico di efficienza, ma il prodotto di una lettura costruita sul sito reale." },
+   { "h": "Comunicare e preparare la misura", "d": "I risultati arrivano, tradotti, a chi influenza gli usi: il capoturno degli avviamenti, il manutentore, il buyer dei capitolati. Resta però la domanda: se realizzi un'opportunità, come dimostri che la prestazione è migliorata davvero? Serve il cruscotto — gli indicatori." }
+  ]
+ },
+ {
+  "id": "50001_m04_s011",
+  "layout": "punti",
+  "kicker": "Indicatori · 6.4 · 1",
+  "titolo": "Perché gli indicatori di prestazione contano davvero",
+  "intro": "Dopo aver chiarito dove intervenire, manca lo strumento che rende credibile il miglioramento. La norma chiede di determinare EnPI appropriati per misurare e monitorare la prestazione energetica, e capaci di dimostrare che il miglioramento c'è stato. Un conto è dire «abbiamo fatto un intervento»; un altro è mostrare con una misura coerente che la prestazione è andata nella direzione giusta.",
+  "punti": [
+   { "h": "Un dato non è un indicatore", "d": "Il totale annuo di elettricità è un dato, la spesa in bolletta è un dato, le ore di marcia sono un dato. Un indicatore è una misura scelta perché aiuta a leggere la prestazione, collegando energia e attività in modo significativo. Troppo grossolano non distingue gli effetti reali; troppo sofisticato rispetto ai dati disponibili rende il sistema fragile e poco usabile." },
+   { "h": "Prestazione, non solo consumi", "d": "L'indicatore non serve a monitorare i consumi, ma la prestazione. I consumi possono crescere perché aumenta la produzione, e questo da solo non è peggioramento; possono calare per meno attività, e non è miglioramento. L'EnPI giusto separa il comportamento energetico dal semplice volume di lavoro." },
+   { "h": "Energia in relazione al servizio reso", "d": "In un sito che produce imballaggi, il totale mensile di kWh dice poco se i volumi oscillano molto. Un indicatore come energia per tonnellata prodotta, costruito bene e letto con cautela, dice molto di più — non perché sia magico, ma perché mette l'energia in relazione al servizio reso." },
+   { "h": "Non un solo EnPI, e leggibile", "d": "La norma non impone un solo indicatore: realtà con usi diversi possono richiederne di distinti (forno, refrigerazione, aria compressa). E un buon EnPI traduce la complessità tecnica in un'informazione leggibile per decidere: se è incomprensibile a chi deve usarlo resta in un report, se è troppo banale non guida alcuna scelta." }
+  ]
+ },
+ {
+  "id": "50001_m04_s012",
+  "layout": "numeri",
+  "kicker": "Indicatori · 6.4 · 2",
+  "titolo": "Che cosa rende appropriato un EnPI",
+  "intro": "Appropriato non vuol dire elegante né matematicamente sofisticato: vuol dire adatto allo scopo di misurare e monitorare la prestazione energetica. L'indicatore deve stare bene addosso al processo che descrive. Quattro criteri lo rendono davvero appropriato — e quattro domande finali ti dicono se regge.",
+  "numeri": [
+   { "n": "1", "h": "Legame con l'uso da governare", "d": "Se l'uso significativo è il forno di essiccazione, un indicatore sulla sola spesa elettrica di stabilimento dice pochissimo. Energia termica per lotto trattato, o energia per unità di prodotto conforme, entra vicino alla prestazione reale di quel processo." },
+   { "n": "2", "h": "Sensibilità al cambiamento", "d": "Un indicatore appropriato si muove quando la prestazione cambia davvero. Se resta quasi immobile mentre l'impianto migliora o peggiora, non ti aiuta a leggere nulla." },
+   { "n": "3", "h": "Comprensibilità operativa", "d": "Chi conduce il processo deve poter capire che cosa l'indicatore racconta e come le sue decisioni lo influenzano. Un EnPI che nessuno sa leggere non guida comportamenti." },
+   { "n": "4", "h": "Sostenibilità nel tempo", "d": "Molti indicatori brillanti in progetto falliscono perché richiedono dati che l'organizzazione non raccoglie con regolarità. Deve poggiare su dati disponibili con continuità ragionevole, altrimenti è una promessa metodologica, non uno strumento gestionale. Le quattro domande: è collegato all'uso che conta, reagisce ai cambiamenti reali, si basa su dati ottenibili in modo affidabile, è comprensibile a chi lo usa?" }
+  ]
+ },
+ {
+  "id": "50001_m04_s013",
+  "layout": "split",
+  "kicker": "Indicatori · 6.4 · 3",
+  "titolo": "Variabili pertinenti e scelta dell'indicatore",
+  "lead": "Il 6.4 aggiunge un passaggio che separa i sistemi robusti da quelli solo ordinati in apparenza: se l'organizzazione dispone di dati che mostrano un'influenza significativa delle variabili pertinenti sulla prestazione, deve considerarli per stabilire gli EnPI appropriati. Qui ritrovi il legame diretto con gli usi significativi: prima hai individuato i fattori che spiegano il comportamento, ora verifichi se cambiano il modo in cui costruisci l'indicatore.",
+  "punti": [
+   { "h": "Evitare confronti ingiusti", "d": "Se ignori le variabili rilevanti rischi di attribuire a un miglioramento tecnico ciò che dipende da condizioni più favorevoli, o di penalizzare un impianto che ha lavorato bene in un contesto gravoso. Se un'estate è molto più calda e la temperatura esterna incide sulla centrale frigorifera, il solo consumo assoluto non dice se la prestazione è peggiorata." },
+   { "h": "Un caso: i surgelati", "d": "Il reparto freddo è uso significativo; l'organizzazione vorrebbe usare come EnPI il consumo mensile della refrigerazione, ma i dati mostrano che la prestazione cambia con volume stoccato e aperture dei varchi. Ignorarli renderebbe l'indicatore troppo debole: meglio metterlo in relazione al volume medio gestito, o affiancare un indicatore specifico. Nessuna formula imposta dall'alto; ciò che non è concesso è fingere che le variabili influenti non esistano." },
+   { "h": "La falsa oggettività dei numeri", "d": "Un EnPI sembra preciso solo perché ha molte cifre, ma può essere mal costruito. Energia per pezzo, dove i pezzi hanno masse e lavorazioni molto diverse, oscilla più per il mix produttivo che per la prestazione. A volte basta cambiare il denominatore, a volte servono classi omogenee, a volte mantenere più indicatori con funzioni precise." },
+   { "h": "Sobrietà, non complessità", "d": "Vale anche il contrario: se non hai dati che dimostrino un'influenza significativa, non sei obbligato a inventarla. Alcune aziende complicano gli EnPI con fattori raffinati che non migliorano la lettura. Un buon sistema resta sobrio: tiene conto di ciò che incide, lascia fuori ciò che aggiunge rumore. La maturità non sta nella complessità, sta nella pertinenza." }
+  ]
+ },
+ {
+  "id": "50001_m04_s014",
+  "layout": "punti",
+  "kicker": "Indicatori · 6.4 · 4",
+  "titolo": "Metodo documentato, aggiornamenti e confronto con l'EnB",
+  "intro": "Il 6.4 aggiunge una richiesta concreta: il metodo usato per determinare e aggiornare gli indicatori va mantenuto come informazione documentata, e il valore dell'EnPI va riesaminato e confrontato, quando appropriato, con il rispettivo EnB. La norma protegge due qualità: la tracciabilità del ragionamento e la continuità della lettura nel tempo.",
+  "punti": [
+   { "h": "Documentare il metodo, non moduli inutili", "d": "Significa rendere leggibile come sei arrivato all'indicatore: quali dati usi, con quale frequenza, per quale perimetro, con quali esclusioni, con quale formula, e in quali casi lo aggiorni. In una lavanderia che usa energia per kg trattato, se il metodo non specifica come si contano rilavorati, sanificazioni, lotti di prova e fermi, lo stesso indicatore cambia significato a seconda di chi lo calcola." },
+   { "h": "Tre ragioni per la tracciabilità", "d": "Assicura coerenza nel tempo (se cambia la persona, il sistema non riparte da zero); consente di verificare la solidità dell'indicatore (un valore strano si risale al metodo); evita aggiustamenti opportunistici (senza metodo chiaro un indicatore può essere riscritto ogni volta che il risultato non piace)." },
+   { "h": "Aggiornare con disciplina", "d": "La norma non congela l'EnPI: un nuovo impianto, una diversa segmentazione, dati più affidabili o una migliore comprensione delle variabili possono renderlo opportuno. Ma aggiornare non è inseguire ogni oscillazione: si modifica l'indicatore quando il cambiamento migliora davvero la capacità di leggere la prestazione, con ragioni chiare e tracciate." },
+   { "h": "EnPI ed EnB come coppia", "d": "Un valore isolato dell'indicatore dice qualcosa, ma non dice se stai migliorando rispetto a un riferimento. Sapere che il forno consuma meno rispetto alla baseline, a parità di condizioni o con adeguata normalizzazione, ti fa affermare che la prestazione è migliorata. Anche i valori degli EnPI vanno conservati come informazioni documentate, per ricostruirne la storia." }
+  ]
+ },
+ {
+  "id": "50001_m04_s015",
+  "layout": "confronto",
+  "kicker": "Indicatori · 6.4 · 5",
+  "titolo": "EnPI efficaci, deboli e fuorvianti",
+  "intro": "Alcuni esempi mostrano la differenza tra un indicatore utile e uno solo apparentemente ordinato. La regola mentale: un indicatore debole ti mostra solo quanta energia hai consumato; uno efficace ti aiuta a capire come stai performando; uno fuorviante ti fa credere di misurare la prestazione mentre misura soprattutto volume, clima o mix produttivo.",
+  "a": {
+   "h": "Efficaci",
+   "sub": "Avvicinano la misura al servizio reso",
+   "punti": [
+    { "d": "Reparto presse: non il consumo totale di stabilimento (mescola presse, ausiliari, uffici), ma energia per kg stampato o per ora in una famiglia omogenea, se i dati sono affidabili e il mix è compreso." },
+    { "d": "Aria compressa: al consumo totale dei compressori (utile come allarme) affianchi energia per normal metro cubo erogato, o potenza a vuoto nelle ore senza domanda — così isoli dove si annida l'inefficienza." },
+    { "d": "In un sito complesso, un cruscotto essenziale: un EnPI per i forni, uno per il freddo, uno per l'aria compressa, più un indicatore generale di sito. Ogni uso significativo mantiene leggibilità senza perdere il quadro." }
+   ]
+  },
+  "b": {
+   "h": "Deboli o fuorvianti",
+   "sub": "Misurano volume, superficie o clima",
+   "punti": [
+    { "d": "Deposito refrigerato con EnPI energia per metro quadrato: semplice sulla carta, ma la superficie non spiega il lavoro termico. Cambiano volume stoccato, rotazione, aperture e temperatura esterna, e l'indicatore resta quasi cieco." },
+    { "d": "Linea di lavaggio con un modello che combina energia, portata, temperatura, durata, umidità e rilavorazioni: raffinato ma richiede dati che metà delle settimane mancano. Teoricamente brillante, praticamente inutilizzabile." },
+    { "d": "Un indicatore molto diffuso non è automaticamente buono: energia per pezzo è fuorviante se i pezzi hanno masse, cicli o qualità termiche molto diverse. L'appropriatezza nasce dall'analisi e dalla conoscenza del processo, non da un'abitudine lessicale." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m04_s016",
+  "layout": "evidenza",
+  "kicker": "Consumo di riferimento · 6.5 · 1",
+  "eyebrow": "Il punto 6.5",
+  "titolo": "Il consumo di riferimento non è «l'anno scorso»",
+  "testo": "Rispetto a quale base giudichi il valore di un EnPI? La risposta è nel consumo di riferimento, che troverai chiamato anche EnB. Se l'indicatore ti dice come misuri la prestazione, il consumo di riferimento ti dice con quale base storica o metodologica lo confronti: senza questa base il numero dell'indicatore resta sospeso, con questa base acquista direzione e significato. La norma chiede di stabilire uno o più EnB usando le informazioni ricavate dall'analisi energetica e scegliendo un arco temporale davvero rappresentativo. In questa frase ci sono tre messaggi. Primo: il riferimento non si sceglie a caso, nasce dalla comprensione di usi, consumi, variabili e prestazione corrente. Secondo: può essercene più di uno, perché in realtà complesse usi diversi possono richiedere baseline diverse. Terzo: il periodo deve essere sensato, non il mese più comodo. Qui va sciolto l'equivoco più diffuso: il consumo di riferimento non è semplicemente il consumo dell'anno scorso. Può coincidere con esso, ma solo se quel periodo è realmente adatto. Se hai avuto fermate straordinarie, picchi anomali, clima fuori scala o un mix molto diverso, usarlo come baseline distorce tutto. La norma non premia la scelta più favorevole, premia la più sensata: il riferimento deve permettere confronti credibili, non autocelebrazioni numeriche. E ricorda che EnPI ed EnB non si scelgono separatamente: sono una coppia coerente, stesso perimetro, stessa disciplina di confronto."
+ },
+ {
+  "id": "50001_m04_s017",
+  "layout": "punti",
+  "kicker": "Consumo di riferimento · 6.5 · 2",
+  "titolo": "Scegliere un periodo adeguato per la baseline",
+  "intro": "Un periodo di tempo adeguato è una scelta meno banale di quanto sembri: la baseline deve rappresentare una condizione significativa dell'organizzazione, non un frammento casuale della sua storia. Prima di fissarla, alcune domande la mettono alla prova; se non reggono, nasce debole.",
+  "punti": [
+   { "h": "Rappresentatività e stagionalità", "d": "Il periodo descrive un funzionamento normale o almeno sufficientemente rappresentativo? Include le stagionalità rilevanti? Riflette il processo reale senza essere dominato da eventi straordinari? Usare solo i mesi invernali per la refrigerazione, perché i dati sono più ordinati e il consumo più basso, è fragile: il freddo risponde a stagione, aperture, volumi e mix." },
+   { "h": "Ampio ma omogeneo", "d": "L'errore opposto è un arco troppo lungo, convinti che più dati equivalgano a più rappresentatività. Se dentro quel periodo sono avvenuti cambiamenti importanti di impianti, layout, criteri o mix, un riferimento troppo esteso mescola mondi diversi. La baseline deve essere abbastanza ampia da rappresentare, abbastanza omogenea da restare confrontabile: serve giudizio, non automatismi." },
+   { "h": "Stesso perimetro dell'indicatore", "d": "Il periodo può essere ben scelto, ma se il perimetro della baseline non coincide con quello dell'EnPI il confronto perde consistenza. Un indicatore sui forni di un reparto confrontato con un consumo di riferimento costruito sull'intero stabilimento mette in relazione due oggetti diversi. La baseline solida parla la stessa lingua: stesso processo, stesso uso significativo, stessi confini, stessa logica di acquisizione." },
+   { "h": "Qualità dei dati e più EnB", "d": "Se il periodo è concettualmente buono ma i dati sono lacunosi o raccolti con metodi cambiati a metà, va trattato con cautela: non fingere una precisione che i dati non sostengono. E poiché forni, refrigerazione e aria compressa hanno dinamiche diverse, è plausibile che il periodo adeguato non sia identico per tutti: è uno dei motivi per cui la norma ammette uno o più EnB." }
+  ]
+ },
+ {
+  "id": "50001_m04_s018",
+  "layout": "split",
+  "kicker": "Consumo di riferimento · 6.5 · 3",
+  "titolo": "Normalizzazione e aggiustamenti: quando sono ammessi",
+  "lead": "Quando i dati mostrano che certe variabili incidono in modo importante sulla prestazione, l'organizzazione deve normalizzare i valori degli EnPI e dei corrispondenti EnB. La norma riconosce una realtà evidente: confrontare periodi diversi in modo grezzo a volte è ingiusto, perché il contesto operativo non è lo stesso. La normalizzazione rende il confronto più corretto — non serve a migliorare artificialmente i risultati, ma a togliere l'effetto dei fattori che non vuoi confondere con la prestazione.",
+  "punti": [
+   { "h": "Solo le variabili che incidono", "d": "Temperatura esterna per freddo e climatizzazione, volume prodotto per un processo continuo, ore di esercizio per una linea discontinua, mix produttivo, occupazione, umidità. Non tutte le informazioni disponibili devono entrare nel modello: solo quelle che, sulla base dei dati, influenzano significativamente la prestazione." },
+   { "h": "Un esempio equo nei due sensi", "d": "Un magazzino confronta due anni: nel secondo le estati sono state molto più calde. Guardando il solo consumo assoluto concluderesti che la prestazione è peggiorata; se la temperatura incide molto, la normalizzazione è necessaria per un confronto equo. Vale al contrario: in un anno favorevole, senza normalizzare attribuiresti all'intervento un beneficio che dipende in parte dal contesto." },
+   { "h": "Semplice o strutturata, mai un trucco", "d": "La normalizzazione può essere un aggiustamento semplice o una procedura più complessa: la parola chiave non è complessità, è adeguatezza. Ma c'è una linea da non superare: l'aggiustamento è una regola definita e giustificata prima, o resa trasparente e coerente coi dati. Se ogni volta che l'EnPI peggiora si introduce una nuova correzione favorevole, la baseline non normalizza — protegge il numero." },
+   { "h": "Sobrietà anche qui", "d": "Se non possiedi dati che mostrino un effetto importante delle variabili, non complicare il sistema per sembrare più evoluto: modelli ornamentali pieni di fattori inutili aggiungono rumore. Un buon sistema tiene conto di ciò che incide davvero e lascia fuori il resto — la stessa disciplina degli indicatori." }
+  ]
+ },
+ {
+  "id": "50001_m04_s019",
+  "layout": "numeri",
+  "kicker": "Consumo di riferimento · 6.5 · 4",
+  "titolo": "Quando il consumo di riferimento va rivisto",
+  "intro": "Trattare la baseline come una reliquia immobile è un errore. Il 6.5 è chiaro: l'EnB deve essere rivisto in circostanze precise. Non un fallimento del sistema, ma un segno di realismo e controllo. La revisione va governata con trasparenza: aggiornarla troppo spesso fa perdere la visione di lungo periodo, lasciarla invariata nonostante cambiamenti sostanziali toglie correttezza al confronto.",
+  "numeri": [
+   { "n": "1", "h": "L'EnPI non riflette più la prestazione", "d": "Un reparto che produceva articoli omogenei usava energia per pezzo; col tempo il mix cambia radicalmente e l'indicatore si muove più per la composizione produttiva che per la prestazione. Non basta continuare a confrontare con la vecchia baseline: serve riesaminare l'impianto metodologico e, probabilmente, il relativo EnB." },
+   { "n": "2", "h": "Cambiano fattori statici importanti", "d": "I fattori statici sono caratteristiche stabili che influenzano la prestazione ma non variano come le condizioni operative: superficie di un edificio, layout, capacità installata, tecnologia principale, prodotto dominante. Se una nuova linea ad alta capacità entra in servizio o si raddoppia la volumetria refrigerata, la vecchia baseline confronta configurazioni fisiche diverse come se fossero la stessa cosa." },
+   { "n": "3", "h": "Lo prevede un metodo predeterminato", "d": "L'organizzazione può stabilire in anticipo quando e come rivedere la baseline: riesami periodici in presenza di soglie di cambiamento, modifiche impiantistiche rilevanti o miglioramenti che hanno trasformato il processo. È un segnale di maturità: non aspetti che il dato diventi incomodo, definisci prima le regole del gioco, senza inventare il criterio dopo per inseguire il risultato desiderato." }
+  ]
+ },
+ {
+  "id": "50001_m04_s020",
+  "layout": "punti",
+  "kicker": "Consumo di riferimento · 6.5 · 5",
+  "titolo": "Verificare il 6.5 e preparare il piano di misura",
+  "intro": "Sai ora che il consumo di riferimento non è un anno preso a caso, ma una base costruita dall'analisi energetica, collegata agli EnPI e sostenuta da dati coerenti. Per capire se un'organizzazione ha davvero il controllo di questo punto, quattro domande concrete — e la conservazione documentata di valori delle variabili influenti e storia delle revisioni.",
+  "punti": [
+   { "h": "Analisi, EnPI ed EnB si parlano?", "d": "Esiste un legame chiaro tra analisi energetica, indicatori e consumo di riferimento? Se i tre elementi sembrano nati in momenti diversi senza parlarsi, il sistema è probabilmente fragile: sono una coppia coerente, non oggetti indipendenti." },
+   { "h": "Il periodo è giustificato?", "d": "Il periodo della baseline è spiegato e motivato, oppure è semplicemente il più comodo? Una scelta rappresentativa regge le contestazioni; una scelta opportunistica produce numeri gradevoli ma poca verità." },
+   { "h": "Le variabili sono considerate?", "d": "Quelle che incidono davvero sono state considerate, o il confronto è lasciato a valori grezzi che mescolano prestazione e contesto? Con un EnPI coerente, un EnB rappresentativo e una normalizzazione legata alle variabili influenti, un nuovo recupero di calore si può dimostrare anche con produzione e clima diversi." },
+   { "h": "Le revisioni sono tracciabili?", "d": "Se la baseline è cambiata, sai perché e con quali dati? Il messaggio generale del modulo: l'SGE non ti chiede di indovinare se stai migliorando, ti chiede di costruire le condizioni per dimostrarlo. E questo richiede metodo, coerenza e dati affidabili — cioè un piano di misura, il punto successivo." }
+  ]
+ },
+ {
+  "id": "50001_m04_s021",
+  "layout": "split",
+  "kicker": "Raccolta dei dati · 6.6 · 1",
+  "titolo": "Dalla misura occasionale al piano di raccolta dei dati",
+  "lead": "Entri nell'infrastruttura che alimenta tutto il motore. Il 6.6 chiede che le caratteristiche chiave delle attività operative — quelle che spostano la prestazione — siano riconosciute, misurate, seguite nel tempo e lette con cadenze stabilite, e che l'organizzazione attui un vero piano di raccolta dei dati energetici, proporzionato a dimensione, complessità, risorse e strumenti effettivamente presenti. Non una rete perfetta e identica per tutti: un piano proporzionato, ma reale.",
+  "punti": [
+   { "h": "Avere dati non è avere una raccolta governata", "d": "Molte organizzazioni possiedono bollette, letture occasionali, report di produzione, appunti di manutenzione: materiale utile, ma non ancora un piano. Un piano esiste quando sai quali dati servono, perché, chi li raccoglie, con quale frequenza, con quale strumento, dove sono conservati e come vengono analizzati. Senza, il sistema dipende dalla buona volontà dei singoli." },
+   { "h": "Caratteristiche chiave, non tutto", "d": "La norma non chiede di misurare tutto ciò che esiste, ma di identificare ciò che influenza davvero la prestazione: il legame diretto con usi significativi e variabili rilevanti. Per la refrigerazione: energia, temperatura, occupazione delle celle, aperture dei varchi, set point, ore di sbrinamento. Per il trattamento termico: energia, profilo di lotti, tempi di permanenza, temperature, attese a caldo." },
+   { "h": "Misurare ciò che serve, non ciò che è facile", "d": "Un'azienda di salse con cottura, freddo e aria compressa, che lavorava con bollette e letture sporadiche, spiegava gli scostamenti solo per ipotesi. Con un piano rileva regolarmente gas delle caldaie, elettricità dei frigoriferi, ore dei compressori, quantità prodotta, turni, temperature esterne, set point. Non misura l'universo: misura ciò che serve per i propri usi significativi." },
+   { "h": "Attuare, non solo scrivere", "d": "Il 6.6 usa una parola da non sottovalutare: attuare. I dati previsti devono davvero essere raccolti e conservati e i ruoli devono sapere come farlo. Molti sistemi sembrano forti sulla carta e si indeboliscono qui, quando le letture saltano, le frequenze non vengono rispettate o i dati non sono confrontabili nel tempo. Senza questa catena, diventano fragili analisi, EnPI ed EnB." }
+  ]
+ },
+ {
+  "id": "50001_m04_s022",
+  "layout": "flusso",
+  "kicker": "Raccolta dei dati · 6.6 · 2",
+  "titolo": "Le sei domande di un piano di raccolta dei dati",
+  "intro": "La norma non propone un modello unico, ma indica con chiarezza la funzione del piano: chiarire quali informazioni servono per seguire le caratteristiche chiave, e con quale modo, ritmo e disciplina vengono acquisite e conservate. Un buon piano risponde a sei domande; quando una risposta manca, il piano perde consistenza.",
+  "passi": [
+   { "h": "Che cosa misuro", "d": "La tentazione è raccogliere ciò che è già facile, invece di ciò che serve. Un sistema maturo parte dagli usi significativi, dagli EnPI e dalle variabili pertinenti, poi ricava i dati indispensabili: per il freddo energia assorbita, temperatura esterna, volume medio stoccato; per l'aria compressa energia, ore, pressione di rete, consumi fuori turno." },
+   { "h": "Perché lo misuro / Come lo misuro", "d": "Ogni dato ha uno scopo. E non è la stessa cosa leggere un contatore automatico, stimare da bolletta, importare da un sistema di supervisione o trascrivere a mano: il metodo influisce su qualità, tempestività e rischio di errore. Il piano deve dichiararlo, senza fingere che fonti molto diverse abbiano la stessa robustezza." },
+   { "h": "Ogni quanto lo misuro", "d": "La frequenza non può essere casuale. Troppo bassa perde derive, anomalie e relazioni con le variabili; troppo alta appesantisce e genera dati che nessuno analizza. Dipende da quanto velocemente cambia il fenomeno: un consumo mensile va bene per il quadro di sito, ma per un uso significativo instabile può essere troppo tardivo." },
+   { "h": "Chi lo misura", "d": "Un piano credibile dice da chi, e chi controlla completezza e coerenza. Chi raccoglie non sempre è chi usa il dato: il manutentore legge un contatore, il caporeparto valida un dato di produzione, il responsabile energia integra per l'analisi. Quando i ruoli sono impliciti, i vuoti diventano inevitabili." },
+   { "h": "Dove salvo il dato", "d": "I dati vanno custoditi in modo ordinato: rintracciabili, leggibili, confrontabili nel tempo. Un dato perso in una mail o in un quaderno personale non sostiene un sistema. Molti migliorano con soluzioni elementari ma stabili: un archivio unico, regole chiare di nominazione, controlli periodici di completezza." }
+  ]
+ },
+ {
+  "id": "50001_m04_s023",
+  "layout": "numeri",
+  "kicker": "Raccolta dei dati · 6.6 · 3",
+  "titolo": "I dati minimi che il piano deve includere",
+  "intro": "Il 6.6 indica quali dati devono essere raccolti o acquisiti mediante misurazione, quando appropriato, e conservati come informazioni documentate. Cinque categorie che non possono mancare — perché è così che la raccolta dei dati sostiene tutto il sistema.",
+  "numeri": [
+   { "n": "1", "h": "Variabili pertinenti degli usi significativi", "d": "Se una variabile influenza in modo importante la prestazione, entra nel radar del piano: temperatura esterna per la refrigerazione, massa trattata o profilo termico per un forno, ore di occupazione per la ventilazione, volume processato per il lavaggio. Senza, gli EnPI si leggono in modo superficiale e l'EnB non regge confronti seri." },
+   { "n": "2", "h": "Consumo degli usi significativi e dell'organizzazione", "d": "Servono sia la visione di dettaglio, sia quella complessiva. Non basta il totale di sito per governare i singoli usi, ma non basta nemmeno conoscere solo i singoli usi perdendo il quadro generale. La doppia lettura collega ciò che succede nei reparti al risultato energetico dell'organizzazione." },
+   { "n": "3", "h": "Criteri operativi degli usi significativi", "d": "Spesso trascurato, invece potentissimo. Set point, finestre orarie, logiche di avviamento, pressioni nominali, temperature di processo, condizioni di standby aiutano a capire se l'uso funziona nelle condizioni attese. Se l'aria compressa consuma troppo, sapere che la pressione è stata alzata in modo stabile cambia l'interpretazione." },
+   { "n": "4", "h": "Fattori statici, se pertinenti", "d": "Caratteristiche meno mobili ma capaci di influenzare la prestazione: capacità installata, dimensione degli spazi, tecnologia principale, assetto impiantistico, layout. Non cambiano ogni giorno, ma quando cambiano possono richiedere la revisione dell'EnB o la rilettura degli indicatori. Conservarli mantiene memoria del contesto." },
+   { "n": "5", "h": "Dati previsti dai piani d'azione", "d": "Se l'organizzazione decide un'azione di miglioramento, il piano di raccolta deve supportarne il monitoraggio, altrimenti l'azione resta scollegata dalla capacità di dimostrarne l'effetto. Per ridurre le perdite d'aria compressa: ore a vuoto, pressioni, consumi fuori produzione. Per la refrigerazione: sbrinamenti, aperture porte, andamento dei carichi." }
+  ]
+ },
+ {
+  "id": "50001_m04_s024",
+  "layout": "punti",
+  "kicker": "Raccolta dei dati · 6.6 · 4",
+  "titolo": "Contatori, frequenze, accuratezza e ripetibilità",
+  "intro": "Con quali strumenti e con quale qualità raccogli i dati? Il 6.6 richiede che le attrezzature usate per misurare le caratteristiche chiave forniscano dati accurati e ripetibili. Un dato può esistere, ma se non è abbastanza accurato o ripetibile il suo valore per il sistema si riduce moltissimo.",
+  "punti": [
+   { "h": "Accuratezza e ripetibilità, adeguate allo scopo", "d": "Accuratezza: la misura è abbastanza vicina alla realtà per l'uso che ne fai. Ripetibilità: a parità di condizioni si comporta in modo coerente nel tempo. Non serve metrologia esasperata: un contatore grossolano può bastare per il totale di sito ed essere insufficiente per un uso significativo con margini modesti ma importanti." },
+   { "h": "Punti di misura dove servono", "d": "Un sistema poco maturo misura solo all'ingresso e distribuisce il consumo per intuizione; uno robusto mette i punti dove i dati servono davvero. Non sensori ovunque: i punti che rendono leggibili usi significativi, variabili influenti ed effetti dei piani d'azione. Il criterio non è la quantità di strumenti, è la loro utilità." },
+   { "h": "Frequenza coerente con il fenomeno", "d": "Un contatore eccellente letto troppo di rado non riconosce una deriva; un flusso continuo non produce valore se nessuno lo interpreta. Per un compressore con sprechi fuori turno una lettura mensile è troppo lenta; per un piccolo ufficio la mensilità basta. In verniciatura, un punto dedicato al forno con letture ravvicinate ha rivelato la permanenza a caldo nelle pause — non la quantità di tecnologia, ma la coerenza tra punto, frequenza e domanda gestionale." },
+   { "h": "Dimostrare l'affidabilità", "d": "La norma chiede di conservare informazioni documentate su misurazione, monitoraggio e mezzi usati per stabilire accuratezza e ripetibilità. Non basta fidarti genericamente degli strumenti: devi poter spiegare come sai che il dato è affidabile — verifiche periodiche, confronti di coerenza, manutenzioni, controlli incrociati con la bolletta. Il punto è la dimostrabilità del ragionamento." }
+  ]
+ },
+ {
+  "id": "50001_m04_s025",
+  "layout": "cards",
+  "kicker": "Raccolta dei dati · 6.6 · 5",
+  "titolo": "Riesame e aggiornamento del piano di misura",
+  "intro": "Il piano di raccolta dei dati non è statico: va riesaminato a intervalli definiti e, quando appropriato, aggiornato. Come l'analisi va aggiornata quando cambiano impianti o processi, così il piano deve seguire l'evoluzione dell'organizzazione, senza diventare né rigido né caotico. Quattro situazioni tipiche rendono ragionevole un aggiornamento.",
+  "cards": [
+   { "h": "Cambiano gli usi significativi", "d": "Se una nuova linea modifica il profilo dei consumi, alcuni dati prima secondari possono diventare centrali. Il riesame chiede se i dati previsti sono davvero utili, se la frequenza è adeguata, se i ruoli funzionano, se i punti sono ben collocati, se ci sono lacune: non verifichi solo che il piano esista, ma che continui a servire il suo scopo." },
+   { "h": "Cambiano EnPI o consumo di riferimento", "d": "Se l'organizzazione raffina il modo in cui misura la prestazione, il piano dovrà procurare i dati coerenti col nuovo approccio. La raccolta dei dati e il linguaggio della misura restano allineati, altrimenti l'indicatore aggiornato lavora su dati vecchi." },
+   { "h": "Emergono problemi di qualità del dato", "d": "Letture saltate, strumenti poco affidabili, dati troppo aggregati per supportare le decisioni. In una logistica del freddo il piano mensile non distingueva il peso delle aperture dei varchi: si introduce la registrazione delle aperture giornaliere e un punto di misura dedicato. Non smentisce il piano, lo fa crescere." },
+   { "h": "Partono nuovi piani d'azione", "d": "Spesso richiedono misure aggiuntive per seguire l'effetto dell'intervento. L'aggiornamento però non deve diventare improvvisazione permanente: se il piano cambia ogni mese senza criterio, si perde confrontabilità. Riesame periodico e aggiornamento solo con ragioni solide, spiegabili e documentate — il piano più utile, non il più ricco." }
+  ]
+ },
+ {
+  "id": "50001_m04_s026",
+  "layout": "timeline",
+  "kicker": "In verifica · 1",
+  "titolo": "La spina dorsale di ogni verifica: la catena continua",
+  "intro": "Guarda l'intero motore come un insieme unico: presi insieme, questi requisiti diventano la spina dorsale di ogni verifica seria. La domanda guida è sempre la stessa: esiste una catena logica continua tra ciò che si consuma, ciò che si considera significativo, come si misura la prestazione, la base con cui la si confronta e i dati che la sostengono? Segui gli anelli e cerca la coerenza tra l'uno e il successivo.",
+  "tappe": [
+   { "t": "01", "h": "Consumo → usi significativi", "d": "Coerenza tra analisi energetica e priorità: se gli usi significativi dichiarati non corrispondono ai grandi assorbimenti o alle aree realmente governabili, qualcosa non torna. L'analisi deve essere selettiva, non solo descrittiva." },
+   { "t": "02", "h": "Usi significativi → EnPI", "d": "Se un uso è detto prioritario ma l'indicatore lo misura male o quasi per niente, il sistema si contraddice. Un classico: usare il consumo totale di sito per giudicare il miglioramento di un singolo processo energivoro." },
+   { "t": "03", "h": "EnPI → consumo di riferimento", "d": "Se l'indicatore parla una lingua e la baseline un'altra, il miglioramento non è dimostrabile con credibilità. Stesso perimetro, stessa disciplina di confronto: l'EnPI misura, l'EnB dà il riferimento per interpretarlo." },
+   { "t": "04", "h": "Tutto → raccolta dei dati", "d": "Se mancano proprio i dati necessari a sostenere le letture dichiarate, l'edificio perde appoggio. Un EnPI raffinato su un freddo non misurato separatamente, con temperatura da fonte instabile e volume non registrato, sembra buono ma poggia su basi troppo fragili. Meglio strumenti semplici ben allineati che sofisticazione apparente." },
+   { "t": "05", "h": "Un motore mantenuto", "d": "Un motore sano è anche mantenuto: l'analisi aggiornata quando cambiano impianti, gli EnPI riesaminati quando non descrivono più la realtà, l'EnB rivisto nei casi previsti, il piano dati adattato alle nuove esigenze. L'immobilità metodologica, in un sistema dinamico, è quasi sempre un segnale di debolezza. Dove il motore funziona, i reparti sanno spiegare perché si misura." }
+  ]
+ },
+ {
+  "id": "50001_m04_s027",
+  "layout": "tabella",
+  "kicker": "In verifica · 2",
+  "titolo": "Errori ricorrenti e domande chiave del motore",
+  "intro": "Dopo ciò che rende forte il blocco, ecco gli errori ricorrenti che lo indeboliscono, con le domande che li smascherano. Un criterio di lettura semplice: più il sistema è maturo, meno dipende da spiegazioni improvvisate — le scelte sono leggibili nei documenti, confermate dai dati e comprese dalle persone; più è debole, più dipende da interpretazioni ex post e giustificazioni costruite quando emerge una domanda critica.",
+  "cols": ["Errore", "Come si manifesta", "Domanda che lo smaschera"],
+  "righe": [
+   ["Analisi descrittiva ma non selettiva", "Molti dati su usi e consumi, ma gli usi significativi non emergono o sono intuitivi", "«Perché questo uso è significativo?» — c'è un criterio o solo una percezione?"],
+   ["Rottura usi significativi ↔ EnPI", "Indicatori scelti per comodità del dato, non perché leggono la prestazione (totale di sito per un singolo processo)", "«Perché questo EnPI è appropriato?» — quale legame con uso e variabili?"],
+   ["Baseline debole o mai rivista", "EnB troppo favorevole, anomalo o non aggiornato dopo cambi di impianti, mix o fattori statici", "«Perché la baseline è su questo periodo?» — scelta fondata o opportunistica?"],
+   ["Piano dati che non sostiene", "Letture saltate, variabili influenti non raccolte, frequenze rade, responsabilità incerte, strumenti poco affidabili", "«Come vengono raccolti i dati che alimentano tutto questo?» — frequenze, ruoli, controlli?"]
+  ]
+ },
+ {
+  "id": "50001_m04_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 4",
+  "modNum": "4",
+  "titolo": "Come riconosci un motore del SGE che funziona davvero",
+  "punti": [
+   { "h": "Dall'analisi agli usi significativi", "d": "Tutto parte dall'analisi energetica: non un archivio di consumi, ma una lettura ragionata di tipi di energia, usi, andamenti passati e correnti. Da lì gli usi energetici significativi, con le loro variabili rilevanti, la prestazione corrente, le persone che li influenzano e la stima futura. Su questa base le opportunità e la loro gerarchia, per concentrare l'attenzione dove serve." },
+   { "h": "Indicatori e consumo di riferimento", "d": "Gli EnPI non sono numeri qualsiasi: devono monitorare la prestazione e dimostrare il miglioramento, essere appropriati, sostenibili e sensibili alle condizioni che contano, con metodo tracciabile. Il consumo di riferimento è la base con cui li interpreti: non coincide automaticamente con l'anno precedente, si costruisce con criterio, ammette normalizzazione fondata sui dati e va rivisto quando non rappresenta più la realtà." },
+   { "h": "La raccolta dei dati", "d": "È il supporto invisibile di tutto: senza, analisi, indicatori e baseline restano concetti eleganti ma poco dimostrabili. Il piano dice quali dati servono, come, con quale frequenza, da chi e dove sono conservati; include variabili, consumi degli usi significativi e dell'organizzazione, criteri operativi, fattori statici e dati dei piani d'azione; poggia su misure accurate e ripetibili; viene riesaminato quando la realtà cambia." },
+   { "h": "Una sola immagine: la catena", "d": "L'analisi ti dice dove guardare, gli usi significativi dove concentrarti, gli EnPI come leggere il miglioramento, l'EnB rispetto a quale base giudicarlo, la raccolta dei dati se tutto poggia su informazioni affidabili. Quando un anello è debole, la catena intera perde forza. È la chiave del checkpoint: non definizioni isolate, ma i collegamenti tra i requisiti." }
+  ],
+  "prossimo": {
+   "modulo": "5",
+   "titolo": "Il supporto dell'SGE: competenze, consapevolezza, comunicazione, informazioni documentate",
+   "testo": "Hai costruito il motore, ma un motore non gira bene se mancano competenze, consapevolezza, comunicazione, informazioni documentate e risorse adeguate. Entrerai nel supporto del sistema: ciò che rende il miglioramento una capacità organizzativa diffusa, non affidata a pochi specialisti."
+  }
+ }
+]
