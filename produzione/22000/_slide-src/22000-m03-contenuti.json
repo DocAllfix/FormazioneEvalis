@@ -1,0 +1,402 @@
+[
+ {
+  "id": "22000_m03_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 22000 — Sicurezza alimentare",
+  "kicker": "Modulo 3",
+  "eyebrow": "Prima dei documenti, la realtà",
+  "titolo": "Contesto, leadership e pianificazione",
+  "testo": "Molte verifiche prendono forma qui: non parti dai moduli né dalle registrazioni, ma dal contesto, dalle decisioni della direzione e dal modo in cui l'organizzazione pianifica. La sicurezza alimentare non vive in un reparto isolato — vive nelle scelte commerciali, nei vincoli normativi, nelle attese dei clienti, nei limiti delle risorse. Il nodo da anticipare: quando qui si parla di rischi e opportunità NON si parla ancora dell'analisi dei pericoli del prodotto, ma dei fattori che aiutano o ostacolano prestazioni ed efficacia del sistema. Tenere separate queste due famiglie ti renderà molto più solido.",
+  "agenda": [
+   "Contesto e parti interessate rilevanti",
+   "Campo di applicazione: confini precisi",
+   "L'SGSA come sistema di processi",
+   "Leadership, politica, ruoli e gruppo sicurezza alimentare",
+   "Rischi e opportunità organizzativi, obiettivi, modifiche",
+   "Verificare contesto e leadership nella pratica"
+  ]
+ },
+ {
+  "id": "22000_m03_s002",
+  "layout": "punti",
+  "kicker": "Contesto · 4.1",
+  "titolo": "Capire l'organizzazione prima dei documenti",
+  "intro": "Non una premessa elegante scritta una volta: la fotografia viva dei fattori esterni e interni che contano per le finalità dell'azienda e per la sua capacità di ottenere i risultati attesi dell'SGSA. Il criterio è determinare ciò che è pertinente — collegato, influente, capace di cambiare l'efficacia del sistema.",
+  "punti": [
+   { "h": "Pertinente, non tutto", "d": "Non raccogliere tutto ciò che esiste intorno all'impresa: determinare ciò che è collegato e influente. Un nuovo software di tracciabilità rafforza il sistema; l'aumento del turnover in produzione lo rende più fragile. Entrambi fanno parte del contesto perché entrambi influenzano i risultati — favorevoli o critici." },
+   { "h": "Non è fermo", "d": "Il contesto va riesaminato e aggiornato: un mercato cambia, una legge evolve, un impianto invecchia, una competenza si perde. Se il sistema non segue questi movimenti, comincia a descrivere un'azienda che non esiste più — le conserve vegetali con stagionalità delle colture, nuovo responsabile manutenzione e nuova linea di riempimento." },
+   { "h": "Deve orientare il sistema", "d": "Ciò che l'azienda racconta sul contesto deve riflettersi in obiettivi, priorità, responsabilità e investimenti. Se dichiara che il mercato richiede reattività ma non copre i ruoli chiave, c'è una frattura; se afferma che la sicurezza è centrale ma ignora l'obsolescenza degli impianti, c'è una seconda frattura." },
+   { "h": "Profondità, non elenco", "d": "Dire «esistono fattori economici, normativi e tecnologici» non basta: quali fattori specifici incidono su quella realtà? Per il laboratorio senza glutine è la pressione sui claim; per la logistica refrigerata la continuità energetica; per la mensa la variabilità dei volumi. La domanda in verifica: quali cambiamenti recenti hanno inciso sul sistema, e come sono diventati azioni?" }
+  ]
+ },
+ {
+  "id": "22000_m03_s003",
+  "layout": "cards",
+  "kicker": "Contesto · 4.1",
+  "titolo": "Fattori esterni e interni che cambiano il sistema",
+  "intro": "Più famiglie di condizioni, senza trasformarle in checklist rigida: normativi, tecnologici, competitivi, culturali, economici, conoscenze interne e risultati raggiunti. Il punto non è recitare categorie, ma capire quali di queste condizioni possono spostare davvero l'efficacia dell'SGSA — nessuna coincide ancora con un pericolo del prodotto.",
+  "cards": [
+   { "h": "Sicurezza informatica", "d": "Se l'azienda gestisce lotti, allergeni, ricette, temperature o rintracciabilità via software, un blocco o un accesso non controllato mette in difficoltà il sistema senza toccare il prodotto — la logistica che perde per ore la visibilità digitale di spedizioni e temperature." },
+   { "h": "Frode alimentare", "d": "Non ancora l'analisi operativa dettagliata: riconoscere se esistono condizioni che rendono la filiera più esposta — ingredienti costosi, disponibilità instabile, fornitori poco trasparenti, mercati volatili." },
+   { "h": "Difesa alimentare", "d": "Contaminazione intenzionale: se il sito ha accessi vulnerabili, zone poco presidiate o passaggi non controllati, questa fragilità entra nel contesto e influenza la robustezza del sistema." },
+   { "h": "Conoscenza e clima", "d": "Bassa rotazione e memoria tecnica sono una base diversa da impianti obsoleti e risultati altalenanti. E il cambiamento climatico (A1:2024): rilevante se lo è per quella attività — ondate di calore e stress idrico sugli ortaggi pronti, caldo estremo su mezzi e tempi della logistica refrigerata." }
+  ]
+ },
+ {
+  "id": "22000_m03_s004",
+  "layout": "punti",
+  "kicker": "Parti interessate · 4.2",
+  "titolo": "Chi conta davvero per l'SGSA",
+  "intro": "Non un elenco infinito: i soggetti che hanno requisiti pertinenti e possono incidere sulla capacità di fornire con regolarità prodotti e servizi conformi. Non tutti quelli che ruotano intorno all'azienda hanno lo stesso peso — distinguere il rilevante dal solo vicino.",
+  "punti": [
+   { "h": "Autorità", "d": "Esprimono requisiti legislativi e regolamentari applicabili. Ma non basta dire che esistono obblighi: un'organizzazione matura sa quali autorità sono rilevanti, quali aspettative operative ne derivano (etichettatura, controlli ufficiali, gestione non conformità, comunicazioni in caso di rischio) e come si riflettono nei processi." },
+   { "h": "Clienti della GDO", "d": "Non solo una richiesta commerciale: spesso requisiti aggiuntivi per la sicurezza — capitolati, specifiche, soglie di allerta più severe, tempi stretti di notifica, formati di etichetta. Non sostituiscono la legge, si sommano: ignorarli disallinea l'SGSA rispetto a impegni accettati." },
+   { "h": "Consumatori", "d": "Non firmano contratti, ma le loro aspettative rilevanti contano: chiarezza delle informazioni, affidabilità, gestione degli allergeni, assenza di contaminazioni, coerenza tra promesso e consegnato. Spesso proprio l'attenzione alle segnalazioni rivela se il sistema coglie ciò che è rilevante." },
+   { "h": "Priorità, non solo elenco", "d": "Identificate, riesaminate e aggiornate insieme ai loro requisiti. Riconoscere troppe parti senza priorità è quasi dannoso quanto ignorarne alcune: se tutto è rilevante allo stesso modo, nulla orienta le decisioni. La domanda: sa dire non solo chi conta, ma quali requisiti concreti derivano da ciascun soggetto?" }
+  ]
+ },
+ {
+  "id": "22000_m03_s005",
+  "layout": "punti",
+  "kicker": "Campo di applicazione · 4.3",
+  "titolo": "I confini non possono essere vaghi",
+  "intro": "Non un titolo elegante sul manuale: la dichiarazione dei confini e dell'applicabilità dell'SGSA — che cosa rientra, dove, per quali attività e con quale estensione. Deve comprendere attività, processi, prodotti o servizi che possono influenzare la sicurezza alimentare dei prodotti finali.",
+  "punti": [
+   { "h": "Niente perimetri comodi", "d": "Non puoi escludere proprio le parti che incidono sulla sicurezza: se un'attività influenza il prodotto finale, va considerata. «Produzione alimentare del sito principale» dice pochissimo — quali linee? Include lo stoccaggio? Il confezionamento conto terzi? Le spedizioni refrigerate interne? La manutenzione e la gestione etichette?" },
+   { "h": "Da generico a preciso", "d": "«Produzione di alimenti nel sito di città» è troppo ampio e povero. «Ricevimento, stoccaggio refrigerato, preparazione, confezionamento ed etichettatura di piatti pronti a base vegetale e cerealicola, con rilascio e spedizioni organizzate dal sito» rende visibili prodotto, processi e luogo — non interminabile, ma preciso." },
+   { "h": "Le esclusioni pericolose", "d": "Alcune organizzazioni escludono attività «esterne» che influenzano la sicurezza del prodotto finale: se il magazzino esterno è gestito da un partner ma il controllo delle condizioni resta essenziale, quella relazione trova spazio nel perimetro, almeno per la parte che incide. Idem per etichettatura, stoccaggio o trasporto esternalizzati governati o critici." },
+   { "h": "Coerente col contesto", "d": "Il perimetro si determina considerando contesto e requisiti delle parti interessate: se il contesto mostra forte dipendenza dalla logistica refrigerata, il campo non può ignorarla. Tre domande a cui rispondere: che cosa fa l'organizzazione (prodotti/servizi)? Come (processi)? Dove (siti)? Se una risposta resta nebulosa, il sistema parte zoppo." }
+  ]
+ },
+ {
+  "id": "22000_m03_s006",
+  "layout": "punti",
+  "kicker": "Campo di applicazione · 4.3",
+  "titolo": "Prodotti, processi e siti: un perimetro credibile",
+  "intro": "Scomporlo in tre domande operative evita ambiguità e rende il sistema leggibile anche a chi arriva da fuori. Una prova pratica: leggendo il campo, una persona esterna con competenza di settore riesce a immaginare il flusso reale del business coperto? Se sì, sei vicino a un buon livello.",
+  "punti": [
+   { "h": "Quali prodotti o servizi", "d": "«Alimenti» o «preparazioni alimentari» è quasi sempre insufficiente: distinguere tra refrigerati, surgelati, secchi, per il consumo diretto, semilavorati per altre imprese, o servizi di logistica. Non il dettaglio di ogni codice articolo, ma il tipo di output coperto — prodotti diversi, requisiti e clienti diversi." },
+   { "h": "Quali processi", "d": "Non solo la trasformazione principale: tutti i passaggi che possono influenzare la sicurezza del prodotto finale — ricevimento, stoccaggio, preparazione, miscelazione, cottura, raffreddamento, confezionamento, etichettatura, rilascio, spedizione, resi e rilavorazioni. Se quel processo può cambiare l'esito, il campo deve chiarire se lo comprende." },
+   { "h": "Quali siti", "d": "Non «stabilimenti aziendali»: quali siti sono inclusi e quali no. Depositi, cucine satellite, laboratori interni, centri logistici che incidono sul prodotto vanno collocati chiaramente — soprattutto con crescita per acquisizioni, secondo stabilimento o strutture esterne a governance condivisa." },
+   { "h": "Né romanzo né formula eterna", "d": "L'impresa che produce salse nel sito principale ma usa un magazzino esterno e un secondo sito per il confezionamento stagionale: se cita solo la produzione principale, lascia in ombra due punti influenti. Un perimetro preciso aiuta a pianificare verifiche, obiettivi e risorse — e va aggiornato con nuovi canali, prodotti o siti." }
+  ]
+ },
+ {
+  "id": "22000_m03_s007",
+  "layout": "confronto",
+  "kicker": "Campo di applicazione · 4.3",
+  "titolo": "Errori classici e formulazioni robuste",
+  "intro": "Il campo di applicazione è uno dei segnali più rapidi della maturità del sistema. Precisione non significa rigidità burocratica: significa chiarezza operativa, coerenza con il contesto e trasparenza verso le parti interessate. Va mantenuto come informazione documentata — scritto, aggiornato, reperibile.",
+  "a": {
+   "h": "I quattro errori",
+   "sub": "Segnali di debolezza",
+   "punti": [
+    { "d": "Genericità: «attività alimentari», «produzione aziendale» sembrano inclusivi ma non definiscono nulla. Incompletezza: cita il prodotto principale ma non i processi influenti, o dimentica un deposito decisivo." },
+    { "d": "Scollegatura dalla realtà: il perimetro descrive l'azienda di due anni fa, mentre oggi esistono nuovi prodotti, clienti o siti." },
+    { "d": "Comodità difensiva: si escludono aree scomode pur sapendo che hanno effetti sul prodotto finale — il difetto più serio. La linea stagionale in un capannone adiacente con allergeni diversi e personale stagionale non è irrilevante per la temporaneità." }
+   ]
+  },
+  "b": {
+   "h": "La formulazione robusta",
+   "sub": "Leggibile e coerente",
+   "punti": [
+    { "d": "«Ricevimento, stoccaggio, preparazione, cottura, raffreddamento, confezionamento, etichettatura, rilascio e spedizione di zuppe fresche refrigerate e basi vegetali cotte, nel sito di provincia, con inclusione del deposito refrigerato gestito dall'organizzazione.»" },
+    { "d": "Per i servizi non imitare un produttore: la logistica refrigerata per terzi descrive ricevimento, stoccaggio a temperatura controllata, preparazione ordini e distribuzione — anche questo è un SGSA, se il perimetro riflette il business reale." },
+    { "d": "La domanda di prova: se domani avvenisse un problema, il campo mi aiuterebbe a capire se quell'attività era dentro il sistema? Se la risposta è incerta, il perimetro non sta svolgendo il suo compito." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m03_s008",
+  "layout": "punti",
+  "kicker": "SGSA · 4.4",
+  "titolo": "Un sistema di processi che funziona insieme",
+  "intro": "Non una raccolta di documenti separati: costruire l'SGSA, farlo vivere nelle attività, conservarne la tenuta e farlo crescere. Quattro parole che cambiano il modo di leggere tutta la norma — e un cuore, i legami tra processi.",
+  "punti": [
+   { "h": "Costruire e vivere", "d": "Un sistema nasce scegliendo processi coerenti con contesto, requisiti e perimetro — somiglia all'organizzazione reale, non a un manuale generico. E vive solo quando orienta il lavoro quotidiano: se la procedura etichette è impeccabile ma in reparto il cambio formato si basa su memoria e abitudine, quel processo non sta vivendo." },
+   { "h": "Tenuta e crescita", "d": "Anche un sistema nato bene perde forza: cambiano prodotti, persone, clienti, tecnologie. Se non viene seguito e riallineato, descrive un'azienda che non esiste più. E crescere non significa produrre più carte: imparare da reclami, dati, deviazioni, risultati — se riceve informazioni e non cambia mai nulla, la promessa di miglioramento resta vuota." },
+   { "h": "I legami tra processi", "d": "Approvvigionamento, ricevimento, stoccaggio, produzione, etichettatura, rilascio, manutenzione, formazione, fornitori e comunicazione non funzionano in isole: se acquisti cambia fornitore senza allineare specifiche, produzione eredita il problema; se gli allergeni cambiano e non raggiungono chi fa le etichette, il rischio cresce anche con i documenti aggiornati." },
+   { "h": "Il nuovo vasetto come sistema", "d": "Un nuovo vasetto ed etichetta per la GDO, visto come fatto isolato, riguarda solo il confezionamento; visto come sistema, coinvolge acquisti (materiale corretto), sviluppo (informazioni), produzione (cambi formato), qualità (coerenza), logistica (lotti distinti), formazione (i turni). L'efficacia nasce dalla rete, non dal singolo modulo compilato bene." }
+  ]
+ },
+ {
+  "id": "22000_m03_s009",
+  "layout": "numeri",
+  "kicker": "Leadership · 5.1",
+  "titolo": "Quando la direzione guida davvero",
+  "intro": "L'alta direzione sta guidando l'SGSA, o il sistema vive ai margini? La norma parla di leadership e impegno, ma il senso vero emerge solo tradotto in comportamenti osservabili — e le persone osservano molto più i comportamenti che le dichiarazioni.",
+  "numeri": [
+   { "n": "1", "h": "Allineamento strategico", "d": "Politica e obiettivi coerenti con la rotta strategica: se l'azienda vuole crescere in un nuovo canale o accelerare le consegne, il sistema dev'essere pensato per governare quelle scelte, non inseguirle dopo. Sicurezza e strategia non viaggiano separate." },
+   { "n": "2", "h": "Integrazione nei processi", "d": "Le esigenze dell'SGSA non restano chiuse nell'ufficio qualità: entrano in acquisti, pianificazione, sviluppo, manutenzione, etichettatura, spedizione, personale. Se una decisione commerciale cambia volumi o complessità delle etichette, deve produrre effetti su competenze, tempi, responsabilità e controlli." },
+   { "n": "3", "h": "Disponibilità di risorse", "d": "Dichiarare che la sicurezza è importante è facile; tradurlo in persone adeguate, tempo, investimenti, strumenti affidabili e competenze presidiate lo è molto meno. Se aumentano prodotti e clienti ma le risorse restano ferme, il messaggio implicito è sfavorevole al sistema." },
+   { "n": "4", "h": "Comunicazione", "d": "Rendere evidente, nelle priorità e nelle decisioni, che la conformità non è negoziabile — non affiggere un testo all'ingresso. Se il messaggio quotidiano diventa «produrre comunque e sistemare dopo», le persone lo capiscono subito e l'SGSA perde forza dall'interno. Una segnalazione scomoda ascoltata seriamente costruisce fiducia; minimizzata, la distrugge." }
+  ]
+ },
+ {
+  "id": "22000_m03_s010",
+  "layout": "punti",
+  "kicker": "Leadership · 5.1",
+  "titolo": "Sostenere le persone e tenere vivo il sistema",
+  "intro": "La direzione non deve limitarsi ad avviare il sistema: deve verificarne regolarmente la capacità di produrre i risultati attesi e conservarne l'efficacia. Questo separa un SGSA semplicemente presente da uno realmente governato.",
+  "punti": [
+   { "h": "Guida e sostegno, non controllo totale", "d": "La leadership non consiste nel controllare tutto personalmente, ma nel dare guida e sostegno perché ciascuno contribuisca. Se le persone non hanno priorità chiare, non capiscono il senso delle regole o temono conseguenze quando segnalano, l'SGSA si svuota. L'operatore col dubbio sull'etichetta poco prima del rilascio: fermarsi e verificare diventa il comportamento atteso — nasce dalla leadership, non dal documento." },
+   { "h": "Promuovere il miglioramento continuo", "d": "Non un invito astratto al progresso: creare le condizioni perché reclami, quasi-incidenti, deviazioni, risultati dei controlli, modifiche e opportunità diventino apprendimento. Una direzione poco presente reagisce all'urgenza del giorno; una matura usa le informazioni per capire che cosa cambiare, rafforzare, semplificare." },
+   { "h": "Leadership diffusa", "d": "La direzione sostiene gli altri ruoli gestionali perché mostrino leadership nelle proprie aree: la sicurezza non può dipendere da una sola figura tecnica — produzione, manutenzione, acquisti, logistica, sviluppo e personale esercitano la loro parte di guida. È ciò che distingue un sistema condiviso da uno sulle spalle di una funzione." },
+   { "h": "Il picco estivo delle etichette", "d": "Errori di etichettatura in aumento nelle settimane di picco: una direzione distante chiede «più attenzione»; una impegnata convoca le funzioni, guarda i carichi di lavoro, verifica il dialogo tra pianificazione e stampa, controlla la copertura dei turni, decide come misurare l'efficacia delle azioni. Il confronto guida: ciò che la direzione dichiara si ritrova in risorse, comportamenti dei responsabili e reazioni ai problemi?" }
+  ]
+ },
+ {
+  "id": "22000_m03_s011",
+  "layout": "punti",
+  "kicker": "Politica · 5.2",
+  "titolo": "L'impegno diventa una rotta chiara",
+  "intro": "Come l'impegno della direzione prende forma stabile: una dichiarazione che orienta il sistema. Non uno slogan da appendere all'ingresso — una scelta con contenuto, coerenza e utilità concreta. Se è vaga, tutto ciò che viene dopo rischia di diventare decorativo.",
+  "punti": [
+   { "h": "Appropriata al contesto", "d": "Non esiste una politica valida in modo indifferenziato per tutti: produttore di piatti pronti, trasportatore refrigerato e cucina centralizzata hanno vincoli e clienti diversi. Se il contesto segnala pressioni sui tempi, alta rotazione o logistica delicata, la politica deve rifletterli con chiarezza — parlare la lingua del business reale." },
+   { "h": "Il criterio delle priorità", "d": "Cruciale per chi verifica: la politica diventa il criterio con cui l'organizzazione sceglie le priorità e controlla nel tempo se gli obiettivi restano coerenti con quella direzione. Se dichiara attenzione agli allergeni e alla tempestività, dovresti ritrovarli in obiettivi, processi, competenze. Quando il ponte manca, resta una pagina elegante." },
+   { "h": "Il test del nome coperto", "d": "Se togli il nome dell'azienda, il testo potrebbe appartenere a chiunque, o racconta quella specifica realtà? Se vale per qualsiasi organizzazione, è troppo generico; se lascia intuire attività, priorità e livello di impegno, sta svolgendo il proprio compito — e dà coerenza tra livelli diversi (acquisti, capo turno, etichettatura riconoscono un orientamento comune)." },
+   { "h": "Chiara, non poetica né rigida", "d": "Non un testo poetico, ma nemmeno una raccolta di formule impersonali: chiara, comprensibile e abbastanza concreta da guidare il sistema. Leggendo la politica dovresti farti un'idea di che cosa l'organizzazione considera non negoziabile." }
+  ]
+ },
+ {
+  "id": "22000_m03_s012",
+  "layout": "punti",
+  "kicker": "Politica · 5.2",
+  "titolo": "Gli impegni che devono emergere davvero",
+  "intro": "La politica non deve limitarsi a dichiarare buone intenzioni: include impegni precisi, utili a governare l'SGSA. Non cercare frasi altisonanti — cerca completezza e coerenza. Una politica semplice ma sostanziosa vale più di una lunga e astratta.",
+  "punti": [
+   { "h": "Soddisfare i requisiti applicabili", "d": "Legislativi e regolamentari, ma anche quelli concordati con il cliente: molte organizzazioni pensano alla conformità solo in chiave normativa, mentre il sistema deve presidiare anche gli impegni accettati verso il mercato quando sono pertinenti alla sicurezza." },
+   { "h": "Comunicazione interna ed esterna", "d": "Non un'aggiunta secondaria: le informazioni importanti devono muoversi nel momento giusto verso le persone giuste — dentro (acquisti, produzione, etichettatura, logistica) e verso l'esterno (clienti, fornitori, autorità). Se la politica lo ignora, descrive la sicurezza come un fatto chiuso in un reparto." },
+   { "h": "Miglioramento continuo", "d": "Non inseguire novità per principio: usare dati, risultati, problemi, cambiamenti e apprendimenti per rafforzare l'efficacia. L'organizzazione non difende solo l'esistente — se un flusso di comunicazione è lento o una tecnologia migliora la rintracciabilità, prende posizione e agisce." },
+   { "h": "Competenze come tenuta", "d": "La politica affronta anche le competenze relative alla sicurezza: se la direzione riconosce che il sistema dipende dalle persone, ne rende visibile l'importanza — chi opera, decide o controlla deve avere capacità adeguate. Una politica matura fa capire che la formazione non è un costo accessorio, ma una condizione di tenuta del sistema." }
+  ]
+ },
+ {
+  "id": "22000_m03_s013",
+  "layout": "punti",
+  "kicker": "Politica · 5.2",
+  "titolo": "Disponibile, compresa e applicata",
+  "intro": "Una politica ben scritta, da sola, non basta: mantenuta come informazione documentata, resa disponibile in modo controllato, portata a conoscenza delle persone, trasformata in comportamento — e, quando appropriato, accessibile alle parti interessate rilevanti. Reperibile, riconoscibile e usata davvero.",
+  "punti": [
+   { "h": "Disponibilità documentata", "d": "Esistere in forma approvata, aggiornata e facilmente reperibile: non dipendere dalla memoria di una persona né da una bozza vecchia che circola informalmente. Con più turni, più siti o alta rotazione pesa ancora di più — se la versione valida non è chiara, ciascuno si riferisce a interpretazioni diverse." },
+   { "h": "Comprensione, non sola diffusione", "d": "Conoscere una politica non è averla vista una volta: comprenderla significa collegarla al proprio ruolo. L'addetto al confezionamento riconosce che implica per i controlli in linea; l'acquisti la legge su specifiche e fornitori; il capo turno vi ritrova tempestività e conformità. Se ricevi solo frasi ripetute senza sostanza, il testo è diffuso ma non è diventato sistema." },
+   { "h": "Il documento che non basta", "d": "L'azienda con personale di contesti linguistici diversi che invia la politica solo ai responsabili via email e la espone in un corridoio: in produzione molti non la interpretano, e a un cambio ricetta nasce confusione. Il problema non è la mancanza del documento, ma la mancata traduzione in comprensione operativa — brevi confronti nei reparti, inserimento dei nuovi assunti, richiami quando cambia qualcosa." },
+   { "h": "Accessibile all'esterno", "d": "Quando appropriato, disponibile alle parti interessate rilevanti: non pubblicarla ovunque per abitudine, ma poterla condividere con chi ha senso — un cliente GDO che vuole capire l'impostazione del fornitore. Una politica efficace esce dal foglio e diventa linguaggio comune e criterio di decisione." }
+  ]
+ },
+ {
+  "id": "22000_m03_s014",
+  "layout": "punti",
+  "kicker": "Ruoli e autorità · 5.3",
+  "titolo": "Il sistema deve sapere chi fa cosa",
+  "intro": "Per capire se un SGSA regge sotto pressione, guarda chi decide che cosa, con quale autorità, lungo quale catena di segnalazione. Non un organigramma elegante: chiarezza operativa — quando emerge un problema serio, nessuno deve chiedersi chi debba intervenire o chi abbia titolo per far partire un'azione.",
+  "punti": [
+   { "h": "Presidio della conformità e riporto", "d": "Un assetto chiaro per tenere sotto controllo l'aderenza dell'SGSA ai requisiti — senza concentrare tutto su una persona, ma evitando che il presidio si disperda tra funzioni che vedono solo il proprio pezzo. E le prestazioni devono salire all'alta direzione in modo ordinato, leggibile e tempestivo: notizie parziali o in ritardo impediscono di sostenere o correggere." },
+   { "h": "Gruppo sicurezza alimentare e azioni", "d": "La nomina del gruppo e di chi lo coordina: la sicurezza non si affida all'improvvisazione di una figura isolata. E quando emerge una deviazione, un errore di etichettatura o un'anomalia di temperatura, qualcuno deve poter attivare l'azione e registrarla — se il potere non è chiaro, il tempo si perde in telefonate e scarichi di responsabilità." },
+   { "h": "Ruoli in azione", "d": "La bobina etichette che non corrisponde alla referenza in avvio: se è chiaro chi blocca il rilascio, chi valuta l'impatto, chi avvia la verifica e chi registra, la segnalazione segue un percorso noto e l'azione parte senza esitazioni. La deviazione di temperatura nel deposito esterno nel tardo pomeriggio: se il personale sa subito chi contattare, il sistema reagisce; se le responsabilità sono teoriche, il problema rimbalza e le ore passano." },
+   { "h": "La cultura della segnalazione", "d": "Chiunque lavori deve sapere di dover far emergere i problemi che toccano il sistema, indirizzandoli alle persone individuate: la sicurezza entra nella vita quotidiana, non riguarda solo i responsabili. Ma diventa reale solo se è chiaro a chi si segnala, con quali canali e che cosa succede dopo. In verifica: chiedi che cosa farebbero davanti a un problema serio, chi coinvolgerebbero, chi può autorizzare una decisione urgente." }
+  ]
+ },
+ {
+  "id": "22000_m03_s015",
+  "layout": "punti",
+  "kicker": "Gruppo sicurezza alimentare · 5.3",
+  "titolo": "Competenze, coordinamento e presidio",
+  "intro": "L'alta direzione lo nomina e individua chi lo coordina. La sicurezza non si governa come somma di decisioni isolate: richiede competenze diverse, confronto tra funzioni e capacità di aggiornare l'SGSA quando cambiano prodotti, processi, clienti o risorse. Non un nome in organigramma: un meccanismo di coordinamento essenziale.",
+  "punti": [
+   { "h": "Quattro responsabilità del coordinatore", "d": "Costruire (definizione del sistema e delle sue basi), mettere in pratica (presenza reale nei processi), tenere sotto controllo (tenuta nel tempo), aggiornare (reagire ai cambiamenti invece di lasciare il sistema fermo su una fotografia passata)." },
+   { "h": "Organizzare il lavoro del gruppo", "d": "Spesso il punto che distingue un gruppo utile da uno nominale: portare al tavolo le informazioni giuste, far partecipare le funzioni pertinenti, collegare i temi, dare continuità alle decisioni. Senza questo presidio, il gruppo si riunisce solo nell'urgenza, perdendo la capacità di prevenire e aggiornare." },
+   { "h": "Competenza e ponte con la direzione", "d": "I componenti devono avere competenze adeguate — non basta rappresentare formalmente una funzione: serve capire processi, impatti e interazioni (gli effetti di una nuova materia prima su etichettatura, pulizia, logistica, formazione). E il coordinatore porta all'alta direzione informazioni chiare su efficacia e idoneità: il gruppo interpreta i fatti, la direzione riceve una visione leggibile su cui decidere." },
+   { "h": "Pertinenza, non numerosità", "d": "Un gruppo efficace non è necessariamente numeroso: conta la pertinenza delle competenze rispetto al perimetro. Con forte impatto della logistica refrigerata, lasciare fuori chi governa spedizioni e depositi è un errore. Il segnale di maturità: sa raccogliere le segnalazioni dai reparti, trasformarle in analisi e azioni, distinguere il problema locale dalla debolezza di sistema." }
+  ]
+ },
+ {
+  "id": "22000_m03_s016",
+  "layout": "punti",
+  "kicker": "Pianificazione · 6.1",
+  "titolo": "Rischi e opportunità senza confondersi",
+  "intro": "Ciò che hai capito su contesto, parti interessate e campo di applicazione si traduce in decisioni su rischi e opportunità: eventi, condizioni e cambiamenti che possono far funzionare meglio o peggio il sistema. Non stai ancora parlando dell'analisi dei pericoli del prodotto — sono rischi e opportunità organizzativi.",
+  "punti": [
+   { "h": "A che cosa si riferiscono", "d": "Che cosa, nella realtà dell'impresa, può ostacolare o rafforzare la capacità del sistema di mantenere sicurezza, conformità e affidabilità? Perdita di una competenza chiave, crescita più rapida della capacità di governo, dipendenza da un unico fornitore critico, una tecnologia che migliora la rintracciabilità, materie prime rese instabili dal clima." },
+   { "h": "Il nuovo cliente GDO", "d": "Volumi in aumento, lotti più frequenti, finestre di consegna più strette, gestione documentale più rapida: non descrive ancora un pericolo del prodotto — descrive un cambiamento organizzativo che mette sotto pressione pianificazione, etichettatura, competenze, logistica e comunicazione. Riconoscerlo prepara il sistema prima che i problemi si manifestino." },
+   { "h": "Rischio e opportunità insieme", "d": "La piattaforma digitale per seguire i lotti in tempo reale è un'opportunità (rintracciabilità più veloce e affidabile), ma anche un rischio se il personale non è formato o la dipendenza informatica non è presidiata. Lo stesso col clima: estati calde mettono sotto pressione approvvigionamenti, ma spingono a una selezione più robusta dei fornitori." },
+   { "h": "Domande pratiche, non matrice astratta", "d": "Un'organizzazione matura non compila una matrice una volta l'anno: parte dal contesto e si chiede che cosa potrebbe impedire al sistema di mantenere i risultati, che cosa aiuterebbe a migliorare, quali cambiamenti stanno modificando le priorità. Così smetti di cercare solo problemi tecnici e inizi a vedere la struttura che li rende più o meno probabili." }
+  ]
+ },
+ {
+  "id": "22000_m03_s017",
+  "layout": "confronto",
+  "kicker": "Pianificazione · 6.1",
+  "titolo": "L'equivoco classico",
+  "intro": "Molte organizzazioni inciampano qui: sentono la parola rischio e pensano subito al pericolo alimentare. Nel punto 6.1 la norma parla d'altro. La distinzione non è teorica: se la perdi, costruisci analisi sbagliate e azioni scollegate — e indebolisci perfino la gestione dei pericoli, perché non riconosci i fattori organizzativi che possono peggiorarla.",
+  "a": {
+   "h": "Rischio organizzativo",
+   "sub": "La capacità del sistema di funzionare",
+   "punti": [
+    { "d": "Perdita di personale esperto in etichettatura, apertura di un sito ancora poco maturo, dipendenza da un software di rintracciabilità mal protetto, pressione commerciale che aumenta i cambi formato, variabilità di una materia prima legata al clima." },
+    { "d": "Il turno notturno per nuovi volumi: personale meno esperto = rischio organizzativo, perché può ridurre la tenuta dell'SGSA se formazione, supervisione e ruoli non sono adeguati." },
+    { "d": "Il test: «insufficiente copertura del turno», «integrazione debole di un nuovo software», «dipendenza da un unico fornitore critico» = stai leggendo il sistema nella chiave corretta." }
+   ]
+  },
+  "b": {
+   "h": "Pericolo alimentare",
+   "sub": "Il danno legato all'alimento",
+   "punti": [
+    { "d": "Contaminazione crociata da allergeni, cottura insufficiente, presenza di corpi estranei, contaminazione microbiologica: valuti un possibile danno legato al prodotto e al processo." },
+    { "d": "Nel turno notturno, il pericolo sarebbe un controllo incompleto del cambio ricetta con allergene non dichiarato. Il rischio organizzativo non coincide col pericolo, ma può aumentare la probabilità che venga gestito male." },
+    { "d": "Il test: «presenza di salmonella nel prodotto», «residuo di detergente» = sei già nei pericoli alimentari, che si governano col processo specifico previsto più avanti. La domanda forte: quali eventi organizzativi potrebbero impedire all'SGSA i risultati attesi?" }
+   ]
+  }
+ },
+ {
+  "id": "22000_m03_s018",
+  "layout": "punti",
+  "kicker": "Pianificazione · 6.1",
+  "titolo": "Dall'analisi all'azione: risposte proporzionate",
+  "intro": "Identificare rischi e opportunità serve a poco senza azioni. Tre domande essenziali: che cosa faccio, dove lo inserisco nel sistema, come capisco se ha funzionato. Le azioni devono essere commisurate all'impatto sui requisiti di sicurezza, sulla conformità e sui requisiti delle parti interessate — il numero di azioni non è un indice di qualità.",
+  "punti": [
+   { "h": "Proporzionalità", "d": "Non tutti i rischi meritano la stessa intensità: una criticità che può compromettere le etichette per un cliente rilevante richiede un presidio diverso da una piccola inefficienza amministrativa. Un'opportunità che migliora rintracciabilità o tempestività di richiamo può meritare priorità elevata." },
+   { "h": "Le logiche di trattamento", "d": "Per i rischi: evitarli, rimuovere la fonte, modificarne probabilità o conseguenze, condividerli, o accettarli con decisione informata. Se il magazzino esterno non è affidabile, cambi fornitore (rimuovi la fonte); se una dipendenza logistica non è eliminabile, la condividi con accordi e monitoraggi. L'accettazione non è indifferenza: è valutare l'esposizione e decidere come presidiarla." },
+   { "h": "Integrate nei processi vivi", "d": "Il produttore di conserve dipendente da un unico stoccaggio refrigerato esterno: qualifica più robusta del fornitore, piano di continuità, criteri di monitoraggio, responsabilità interna di riesame — reali solo se integrate in acquisti, logistica e controllo del servizio, non in una tabella isolata. L'indizio di maturità è il collegamento." },
+   { "h": "Il controllo di ritorno", "d": "Un rischio raramente resta identico: la pianificazione prevede anche quando l'azione verrà riesaminata, con quali indicatori e chi ne risponde. Se qualifichi meglio un magazzino, il piano non finisce con la firma: stabilisci quando verificare che le prestazioni siano migliorate — senza controllo di ritorno, consideri risolto un rischio solo spostato o attenuato." }
+  ]
+ },
+ {
+  "id": "22000_m03_s019",
+  "layout": "punti",
+  "kicker": "Pianificazione · 6.1",
+  "titolo": "Opportunità: non solo evitare danni",
+  "intro": "Molte organizzazioni vedono solo il lato difensivo. La norma mette le opportunità sullo stesso piano: un SGSA efficace non serve solo a limitare effetti indesiderati, ma ad accrescere quelli desiderati. Un'opportunità non è un desiderio generico: una possibilità concreta e attuabile che rende il sistema più efficace.",
+  "punti": [
+   { "h": "Da nuove prassi, prodotti, tecnologie", "d": "Se l'azienda gestisce ancora informazioni critiche in modo frammentato, un sistema digitale ben progettato migliora tempestività, completezza dei dati e capacità di risposta — non perché moderno in sé. Con forte rotazione e differenze linguistiche, un addestramento più visuale e strutturato non è solo difesa: aumenta l'affidabilità." },
+   { "h": "Il clima come opportunità", "d": "Gli ortaggi pronti con qualità variabile in estati calde: l'organizzazione può solo reagire ai problemi, oppure cogliere l'occasione — rafforzare la qualifica dei fornitori, controlli in ingresso più mirati, finestre di approvvigionamento ridefinite, migliore comunicazione con la logistica. Nel secondo caso il sistema non subisce il contesto: si adatta e cresce." },
+   { "h": "La pressione che diventa miglioramento", "d": "Il cliente GDO che chiede comunicazioni più rapide e informazioni più leggibili sembra solo più pressione. In parte lo è. Ma può migliorare processi già deboli — revisione delle etichette, flusso di approvazione, chiarezza dei contatti di emergenza — con un beneficio che rafforza l'SGSA nel complesso, non solo per quel cliente." },
+   { "h": "Sempre con la capacità di attuarla", "d": "Non ogni cambiamento positivo in apparenza è un'opportunità: una nuova tecnologia o linea introdotta senza risorse, competenze e governo può diventare fonte di instabilità. La norma non invita a inseguire ogni novità — invita a riconoscere possibilità desiderabili e realistiche. Le imprese mature sanno spiegare non solo che cosa temono, ma che cosa stanno valorizzando." }
+  ]
+ },
+ {
+  "id": "22000_m03_s020",
+  "layout": "punti",
+  "kicker": "Pianificazione · 6.1",
+  "titolo": "Verificare: approccio reale o formale?",
+  "intro": "Come capisci, nella pratica, se l'organizzazione affronta davvero i rischi e opportunità oppure li tratta come adempimento? La risposta sta nella coerenza tra ciò che dichiara e ciò che osservi in processi, decisioni e priorità. Non un modello unico: che il ragionamento esista, sia pertinente e produca azioni integrate.",
+  "punti": [
+   { "h": "Da dove derivano", "d": "Se il collegamento con contesto, parti interessate e campo è chiaro, sei su una buona strada. Un elenco standard identico per ogni azienda, senza legame con siti, prodotti, clienti reali, è un segnale di debolezza: chi dipende dalla catena del freddo dovrebbe mostrare attenzione a continuità energetica, logistica e presidio delle temperature." },
+   { "h": "Le azioni", "d": "Per ogni rischio rilevante: che cosa ha deciso di fare, chi è responsabile, dove l'azione entra nei processi, come ne seguirà l'efficacia? Le evidenze diventano concrete — procedure aggiornate, criteri di qualifica rivisti, formazione pianificata, nuovi monitoraggi. Un registro con colonne compilate ma nessuna traccia nei processi non funziona." },
+   { "h": "Il riesame", "d": "I rischi vengono aggiornati quando il contesto cambia davvero — nuovo magazzino esterno, cambio di cliente principale, stagioni più instabili? Se il documento resta immobile mentre la realtà cambia, manca la pianificazione dinamica. Il segnale di maturità: rivedono rischi e opportunità in tempi ravvicinati, senza aspettare la scadenza formale." },
+   { "h": "Il proprietario del rischio", "d": "Un rischio ben identificato ma senza un proprietario chiaro resta sospeso: tutti lo riconoscono, nessuno lo governa. La domanda rivelatrice: chi segue questo rischio, e come sa se le azioni stanno funzionando? Se rimanda a una figura precisa con criteri di verifica, il sistema è più solido. Non valuti se abbia eliminato ogni incertezza, ma se abbia ragionato in modo pertinente e sappia imparare dai risultati." }
+  ]
+ },
+ {
+  "id": "22000_m03_s021",
+  "layout": "punti",
+  "kicker": "Obiettivi · 6.2",
+  "titolo": "Dalle intenzioni alle mete verificabili",
+  "intro": "La pianificazione trasforma la direzione del sistema in obiettivi chiari, nelle funzioni e ai livelli pertinenti. Questo impedisce due errori opposti: un solo obiettivo generico lontano dal lavoro reale, o micro-obiettivi scollegati senza rotta comune. La logica sta nel mezzo: pochi obiettivi significativi, dove contano, leggibili.",
+  "punti": [
+   { "h": "Coerenti con la politica", "d": "Un obiettivo utile non è una speranza: una meta che orienta azioni e consente di capire se il sistema migliora, regge o perde efficacia. Se la politica dichiara attenzione alla conformità delle informazioni e alla comunicazione, dovresti ritrovarli negli obiettivi. Politica e obiettivi in direzioni diverse = frattura seria." },
+   { "h": "Misurabili, se fattibile", "d": "Non tutto si misura con la stessa facilità, ma quasi tutto si rende osservabile: ridurre gli errori di etichettatura, migliorare i tempi di chiusura delle segnalazioni, aumentare la tempestività delle comunicazioni, ridurre le deviazioni del freddo. Evita formule vuote come «migliorare la sicurezza alimentare» senza dire come capirai se stai migliorando." },
+   { "h": "In conto ai requisiti applicabili", "d": "Legge, regolamenti e accordi col cliente pertinenti alla sicurezza: un obiettivo non può essere elegante ma irrilevante. Deve stare dove il sistema rischia di perdere conformità o guadagnare affidabilità — se il cliente GDO chiede tempi rapidi per comunicare una deviazione, un obiettivo sulla tempestività è sensato." },
+   { "h": "Quattro verbi, documentati", "d": "Monitorare (seguire l'andamento), verificare (controllare se il risultato è reale), comunicare (far sapere alle persone interessate), mantenere aggiornato (evitare che resti fermo mentre l'organizzazione cambia). E gli obiettivi vanno mantenuti come informazione documentata — scritti, chiari, disponibili: non accordi verbali tra poche persone." }
+  ]
+ },
+ {
+  "id": "22000_m03_s022",
+  "layout": "numeri",
+  "kicker": "Obiettivi · 6.2",
+  "titolo": "Come raggiungerli: il ponte con l'attuazione",
+  "intro": "Un obiettivo, da solo, rassicura sulla carta ma non cambia nulla. Il punto 6.2 chiede di pianificare come raggiungerlo: impedire che gli obiettivi restino desideri ben scritti. La domanda silenziosa in verifica: vedo il ponte tra obiettivo e attuazione, o solo il cartello della meta?",
+  "numeri": [
+   { "n": "1", "h": "Che cosa sarà fatto", "d": "«Ridurre gli errori di etichettatura» non è «maggiore attenzione»: revisione del flusso di approvazione, controllo rafforzato prima dell'avvio, istruzioni aggiornate per i cambi formato, addestramento mirato, doppia verifica sulle referenze con allergeni. Azioni leggibili, o l'obiettivo perde forza." },
+   { "n": "2", "h": "Quali risorse", "d": "Molti obiettivi falliscono non perché sbagliati, ma perché nessuno ha verificato tempo, competenze, strumenti e capacità organizzativa. Un obiettivo sulla tempestività della rintracciabilità richiede software affidabile, formazione, tempo per testare, coperture nei ruoli. Senza risorse, la meta è pressione sterile sulle persone." },
+   { "n": "3", "h": "Chi è responsabile", "d": "Non l'unico esecutore, ma il ruolo che possiede il presidio del risultato e ne segue l'avanzamento. Negli obiettivi trasversali (acquisti, produzione, etichettatura, logistica) la responsabilità deve restare chiara — altrimenti tutti contribuiscono in teoria e nessuno risponde in pratica." },
+   { "n": "4", "h": "Entro quando", "d": "Senza scadenza il sistema rinvia, accumula intenzioni, perde priorità. Una scadenza credibile coordina le funzioni e verifica l'avanzamento — tempi irrealistici producono solo simulazioni di avanzamento." },
+   { "n": "5", "h": "Come si valutano i risultati", "d": "La domanda più importante, pensata in anticipo: la riduzione degli scarti? Le anomalie intercettate prima del rilascio? La stabilità durante i picchi? Nelle zuppe fresche verso la GDO — tarature più frequenti, tempi di carico rivisti, verifica col trasportatore — i risultati si valutano dalle registrazioni di temperatura e dalle segnalazioni del cliente." }
+  ]
+ },
+ {
+  "id": "22000_m03_s023",
+  "layout": "punti",
+  "kicker": "Modifiche · 6.3",
+  "titolo": "Cambiare senza spezzare il sistema",
+  "intro": "Ogni sistema vive in mezzo ai cambiamenti — persone, processi, clienti, tecnologie, fornitori, siti. Quando l'organizzazione riconosce la necessità di cambiare l'SGSA, compresi i cambiamenti del personale, deve farlo e comunicarlo in modo pianificato. La norma non dice di evitare il cambiamento: dice di governarlo.",
+  "punti": [
+   { "h": "La finalità della modifica", "d": "Devi sempre poter rispondere: perché stiamo cambiando? Sembra ovvio ma non lo è — nuova linea per capacità, sostituzione di un responsabile, nuovo software per la tracciabilità, revisione di un flusso per ridurre errori. Se la finalità non è chiara, le persone eseguono attività senza capire quale problema risolvono." },
+   { "h": "Le conseguenze potenziali", "d": "Un cambiamento raramente colpisce un solo punto: una nuova referenza con allergeni non presenti prima tocca pulizia, stoccaggio, etichettatura, formazione, approvazione fornitori, comunicazione. Spostare personale esperto tra turni modifica competenze disponibili, supervisione, tenuta dei controlli. Vedere il sistema come rete, non come compartimenti." },
+   { "h": "La continua integrità", "d": "L'organizzazione può cambiare, ma il sistema non deve lacerarsi: durante e dopo la modifica restano chiari criteri di controllo, responsabilità, comunicazioni e condizioni minime per operare in sicurezza. Se la modifica produce vuoti di presidio, istruzioni superate o responsabilità sospese, l'integrità è compromessa anche con buone intenzioni." },
+   { "h": "Risorse e riallocazione di autorità", "d": "Molte modifiche falliscono perché non si prevedono tempo, competenze, supporti e copertura: la modifica parte ma è retta da scorciatoie e adattamenti informali. E ogni modifica importante cambia il disegno delle decisioni — un nuovo capo reparto, un deposito esterno, un'attività digitalizzata richiedono nuove autorità: se non è chiarito, nascono zone grigie dove i problemi restano senza padrone. In verifica, guarda come ha gestito i cambiamenti recenti." }
+  ]
+ },
+ {
+  "id": "22000_m03_s024",
+  "layout": "punti",
+  "kicker": "Verifica pratica · 1",
+  "titolo": "Il contesto è vivo o decorativo?",
+  "intro": "Passi da ciò che la norma richiede al modo in cui lo leggi. La prima domanda non è se esista un documento: l'organizzazione conosce davvero le condizioni che influenzano l'efficacia dell'SGSA, o le ha descritte in modo decorativo? Un contesto credibile lascia tracce nelle decisioni; uno fittizio vive solo in una tabella.",
+  "punti": [
+   { "h": "Pertinenza", "d": "Ciò che l'azienda riconosce come rilevante deve avere un legame visibile col business: se la logistica refrigerata non cita continuità energetica, tenuta dei mezzi, pressioni sui tempi o dipendenza dai sistemi digitali, qualcosa non torna. Quando i fattori sono specifici, coerenti e spiegati con esempi reali, il sistema acquista credibilità." },
+   { "h": "Aggiornamento", "d": "Chiedi quali cambiamenti recenti hanno inciso di più: una risposta solida parla di nuovi clienti, nuove linee, turnover, problemi di approvvigionamento, cambi tecnologici, eventi climatici — e spiega che cosa l'organizzazione ha fatto dopo averli riconosciuti. Un documento identico da tempo, scollegato dagli eventi, è stato trattato come formalità." },
+   { "h": "Coerenza col resto", "d": "Un fattore rilevante dovrebbe riflettersi in obiettivi, risorse, competenze, priorità operative, responsabilità o azioni su rischi e opportunità. Se dichiara che la forte crescita dei volumi è importante ma il sistema si comporta come se nulla fosse cambiato, quell'analisi non sta orientando l'SGSA." },
+   { "h": "Le domande giuste", "d": "Non «quali fattori avete identificato», ma «quali eventi dell'ultimo periodo hanno messo più sotto pressione il sistema» e «quali cambiamenti potrebbero incidere nei prossimi mesi». Se le risposte arrivano facili, con collegamenti e azioni, il contesto è vivo; se emergono esitazioni o contraddizioni, hai un'area da approfondire. Non conta la lunghezza: una pagina ben pensata vale più di molte generiche." }
+  ]
+ },
+ {
+  "id": "22000_m03_s025",
+  "layout": "punti",
+  "kicker": "Verifica pratica · 2",
+  "titolo": "Parti interessate e campo: coerenza, non formule",
+  "intro": "Due snodi che mostrano la qualità reale del contesto: parti interessate e campo di applicazione, letti insieme, dicono se l'organizzazione ha capito chi conta e dove il sistema inizia e finisce. È facile dichiarare principi generali, molto più difficile tradurli in confini chiari e requisiti pertinenti.",
+  "punti": [
+   { "h": "Rilevanza delle parti", "d": "Ha individuato soggetti che incidono davvero sulla capacità di fornire alimenti conformi, o un elenco esteso e confuso dove tutti pesano uguale? Il punto non è citare autorità, GDO e consumatori in automatico, ma spiegare quali requisiti concreti derivano da ciascuno — obblighi di etichettatura, tempi di notifica, aspettative sugli allergeni." },
+   { "h": "Che cosa è cambiato di recente", "d": "Se entra un cliente con richieste più severe, se aumentano le segnalazioni dei consumatori, se nuove condizioni rendono più stringenti le aspettative, l'organizzazione dovrebbe saperlo descrivere e collegare a decisioni del sistema. Quando il legame manca, le parti interessate sono state identificate solo a metà." },
+   { "h": "Il campo quasi chirurgico", "d": "Devi capire quali prodotti, processi e siti sono inclusi. Se produce zuppe refrigerate, gestisce un deposito esterno e organizza le spedizioni, dovresti capire se tutto è compreso e con quale estensione. Gli errori classici: omissione di processi influenti (etichettatura, stoccaggio esterno, logistica), mancata inclusione di un sito stagionale, genericità che nasconde dove cercare evidenze." },
+   { "h": "La verifica precisa", "d": "I dessert freschi che nei picchi usano un laboratorio vicino e un magazzino esterno: se il campo cita solo la produzione principale, lascia fuori attività influenti — chi le governa, come sono presidiate, perché non compaiono nel perimetro? La domanda doppia: sa dire chi conta davvero e descrivere con precisione che cosa il sistema copre?" }
+  ]
+ },
+ {
+  "id": "22000_m03_s026",
+  "layout": "punti",
+  "kicker": "Verifica pratica · 3",
+  "titolo": "Leadership: decisioni, risorse, coerenza",
+  "intro": "La leadership non si valuta dalle intenzioni dichiarate, ma dalle scelte che restano visibili nel sistema. La domanda: l'alta direzione sta guidando davvero l'SGSA, o ne parla soltanto quando serve? Cerchi tracce di orientamento strategico, integrazione nei processi, risorse, comunicazione chiara e sostegno alle persone.",
+  "punti": [
+   { "h": "Allineamento con la strategia", "d": "Se l'azienda punta a nuovi mercati, clienti GDO, volumi più alti o prodotti più complessi, la leadership dovrebbe aver tradotto quelle scelte in decisioni per il sistema — politica, obiettivi, priorità di investimento, modifiche pianificate. Se la strategia corre veloce e il sistema resta fermo, la direzione insegue la sicurezza in ritardo." },
+   { "h": "Integrazione nei processi", "d": "Acquisti, produzione, manutenzione, sviluppo, logistica e personale lavorano tenendo conto dei requisiti? Una leadership presente non confina il presidio in un ufficio tecnico. Chiedere a un responsabile acquisti come gestisce una modifica critica del fornitore verifica anche se la leadership ha integrato l'SGSA nel business." },
+   { "h": "Le risorse, il segnale più rivelatore", "d": "Dichiara priorità coerenti ma poi fornisce personale, tempo, competenze e strumenti adeguati, o pretende risultati senza condizioni minime? Si vede nei momenti di crescita: se un nuovo cliente porta complessità su etichette e tempi, una leadership reale adegua controlli, formazione e coperture; una verbale chiede solo di fare più in fretta." },
+   { "h": "La comunicazione e il confronto", "d": "Le persone percepiscono davvero l'importanza di conformità, segnalazione e requisiti? Se la direzione dice che la sicurezza viene prima ma premia solo la velocità di uscita dei lotti, il messaggio reale è un altro, e le persone lo capiscono. Il metodo: confrontare ciò che la direzione dice con ciò che le funzioni vivono — scarti forti tra vertice e operatività sono una frattura da approfondire." }
+  ]
+ },
+ {
+  "id": "22000_m03_s027",
+  "layout": "punti",
+  "kicker": "Verifica pratica · 4",
+  "titolo": "Ruoli chiari e gruppo attivo",
+  "intro": "Per capire se la leadership è presente, vedi come l'impegno si distribuisce nei ruoli, nelle autorità e nel gruppo sicurezza alimentare. Se le responsabilità sono assegnate, comunicate e comprese, il sistema reagisce con chiarezza; se i confini sono incerti, anche una buona politica resta senza gambe operative.",
+  "punti": [
+   { "h": "Chiarezza dei ruoli", "d": "Non l'organigramma: le persone sanno spiegare che cosa compete a loro nelle situazioni critiche — chi può avviare un'azione quando emerge un problema, chi la documenta, chi riferisce alla direzione, chi presidia la conformità? Se le risposte cambiano da persona a persona, la distribuzione è poco compresa anche se formalmente assegnata." },
+   { "h": "Responsabilità e autorità insieme", "d": "Una responsabilità senza autorità sufficiente è un incarico impossibile: se il responsabile di turno vede un dubbio sull'etichetta ma non può fermare il rilascio o attivare la verifica, il sistema perde tempestività. Verifichi sempre la coppia, non solo il primo termine." },
+   { "h": "Il gruppo davvero attivo", "d": "Esiste come luogo di coordinamento o è una casella compilata? Tre segnali: competenza adeguata ai processi del campo, capacità di organizzare il lavoro (non rituale), collegamento reale con la direzione a cui arrivano informazioni chiare su efficacia e idoneità. Se si riunisce raramente e non produce effetti osservabili, la presenza formale serve a poco." },
+   { "h": "La cultura della segnalazione", "d": "Tutte le persone devono sapere a chi segnalare i problemi: sul campo, le sanno davvero chi contattare, si sentono autorizzate, ricevono risposte tempestive — o temono che segnalare sia letto come intralcio? La verifica con domande semplici: se domani emergesse un problema serio, chi avvia l'azione immediata, come la documentate, chi decide l'escalation, che cosa riferite alla direzione? Le risposte, più dei documenti, mostrano la comprensione reale." }
+  ]
+ },
+ {
+  "id": "22000_m03_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 3",
+  "modNum": "3",
+  "titolo": "La base del sistema prima dei dettagli",
+  "punti": [
+   { "h": "Il filo conduttore", "d": "Capire se l'SGSA poggia sulla realtà dell'organizzazione, o su formule corrette ma disancorate dal lavoro quotidiano. Un modo di ragionare che rende più solide anche le verifiche successive." },
+   { "h": "Contesto e parti interessate", "d": "Non descrivere tutto ciò che circonda l'azienda, ma ciò che è pertinente alla capacità del sistema di raggiungere i risultati — un contesto credibile orienta, uno fittizio decora. E distinguere le parti rilevanti e i loro requisiti pertinenti: sapere chi conta e che cosa ne deriva." },
+   { "h": "Campo di applicazione", "d": "La parola chiave è precisione: prodotti e servizi, processi, siti, attività che influenzano la sicurezza del prodotto finale. Senza confini leggibili non saprai dove cercare responsabilità, evidenze e controlli." },
+   { "h": "Leadership che diventa struttura", "d": "L'alta direzione rende visibili impegno, integrazione nei processi, risorse, comunicazione coerente e sostegno alle persone — e questo non resta astratto: diventa politica, obiettivi coerenti, ruoli chiari, autorità definite, gruppo sicurezza alimentare attivo." },
+   { "h": "Il nodo rischi/pericoli", "d": "Nel 6.1 guardi gli eventi e le condizioni che influenzano prestazioni ed efficacia del sistema; più avanti guarderai i pericoli legati all'alimento e al processo. Separare i due piani ti rende più preciso nell'analisi e nella verifica. Poi obiettivi leggibili con un piano (azioni, risorse, responsabilità, tempi, criteri) e modifiche governate." },
+   { "h": "La domanda finale", "d": "Ciò che l'organizzazione dichiara su contesto, parti interessate, campo, politica, gruppo, rischi/opportunità, obiettivi e modifiche si ritrova davvero nelle decisioni quotidiane? Se sì, fondamenta credibili; se no, i documenti da soli non bastano. Prossimo passo: il Supporto." }
+  ],
+  "prossimo": {
+   "modulo": "4",
+   "titolo": "Supporto",
+   "testo": "Come competenze, consapevolezza, comunicazione e informazioni documentate tengono in piedi ciò che qui hai imparato a leggere dall'alto."
+  }
+ }
+]
