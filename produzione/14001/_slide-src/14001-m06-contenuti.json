@@ -1,0 +1,427 @@
+[
+ {
+  "id": "14001_m06_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 14001 — Sistema di gestione ambientale",
+  "kicker": "Modulo 06",
+  "eyebrow": "Attività operative — il punto 8.1",
+  "titolo": "Controllo operativo e ciclo di vita",
+  "testo": "Il luogo in cui la pianificazione smette di essere promessa e diventa comportamento organizzato, ripetibile e verificabile. La domanda del modulo: come eviti che gli impatti ambientali siano governati dall'abitudine, dalla buona volontà o dall'urgenza del momento? E ancora: se domani cambiassero turno, fornitore o materiale, il processo continuerebbe a proteggere l'ambiente nello stesso modo?",
+  "agenda": [
+   "Criteri operativi, controlli tecnici e gestionali",
+   "Gestire le modifiche e documentare quanto basta",
+   "Ciclo di vita: progettazione, acquisti, valle",
+   "Processi esternalizzati e appaltatori",
+   "Rassegna per matrici: rifiuti, scarichi, emissioni, suolo",
+   "Verificare sul campo: sopralluogo e triangolazione"
+  ]
+ },
+ {
+  "id": "14001_m06_s002",
+  "layout": "punti",
+  "kicker": "Controllo operativo · 1",
+  "titolo": "Dal requisito al lavoro quotidiano",
+  "intro": "Non basta sapere quali impatti contano: devi governare le attività che li generano. Stabilire, attuare, tenere sotto controllo e mantenere i processi necessari a soddisfare i requisiti e realizzare le azioni decise. La differenza è tra intenzione e controllo: «dobbiamo stare attenti agli sversamenti» contro area dedicata, vasca libera, kit disponibile, checklist e personale formato.",
+  "punti": [
+   { "h": "Non solo il reparto produttivo", "d": "Riguarda ogni processo necessario agli esiti attesi: manutenzione, logistica, magazzino chimici, laboratorio, pulizie, approvvigionamento, gestione rifiuti, pianificazione delle fermate. Non tutti con la stessa profondità, ma tutti da valutare." },
+   { "h": "Gli impatti nascono lungo il flusso", "d": "In un'azienda di detergenti contano ricevimento materie prime, lavaggio serbatoi, etichettatura, resi, carico camion — non solo la miscelazione. Molti sistemi si indeboliscono qui: pensano per reparti, mentre gli impatti nascono lungo il flusso." },
+   { "h": "Criteri e controlli insieme", "d": "Criterio senza controllo è una regola senza meccanismo; controllo senza criterio sono attività sparse senza base. «Il deposito deve restare ordinato» è vago; contenitori chiusi, etichettati, compatibili, separati e su superficie idonea è un criterio — ispezioni e responsabilità sono il controllo." },
+   { "h": "Il test della persona", "d": "Non chiederti se esistono procedure, ma se le attività che contano sono governate con criteri chiari e presidi coerenti. Se una lavorazione dipende dalla memoria di un operatore esperto il sistema è fragile; se resta stabile quando cambia la persona, il controllo funziona." }
+  ]
+ },
+ {
+  "id": "14001_m06_s003",
+  "layout": "punti",
+  "kicker": "Controllo operativo · 2",
+  "titolo": "Criteri: quando una regola guida davvero",
+  "intro": "Condizioni chiare che rendono il processo governabile. Non una raccomandazione generica né uno slogan prudenziale: deve dire cosa fare, quando, con quale limite, in quale area, con quale responsabilità e con quale reazione se qualcosa esce dai binari. Più il processo è sensibile, meno spazio resta all'interpretazione personale.",
+  "punti": [
+   { "h": "La prova delle due persone", "d": "Due persone diverse, con la stessa formazione, farebbero la stessa cosa? Se no, non hai un criterio, hai un auspicio. «I fanghi vanno stoccati correttamente» non basta: contenitore chiuso, area protetta, percorso dedicato, blocco del trasferimento in caso di anomalia." },
+   { "h": "Molte forme possibili", "d": "Limiti di processo, sequenze, condizioni, autorizzazioni interne, controlli, frequenze, competenze, strumenti, modalità di segregazione, stati accettabili. Non tutti uguali: proporzionati al rischio e comprensibili per chi lavora." },
+   { "h": "Vivono nel posto di lavoro", "d": "Non solo in un documento: negli strumenti, nella segnaletica, nel layout, nella formazione. Se serve sempre un bacino mobile ma è lontano, danneggiato o usato come appoggio, il criterio esiste sulla carta ma non opera nella realtà." },
+   { "h": "Definire meglio, non scrivere di più", "d": "Un'azienda di adesivi aveva una procedura ordinata sul travaso ma non diceva quando sostituire le guarnizioni: ogni reparto decideva a esperienza, con micro perdite, odori e più rifiuti. Un criterio visivo semplice più verifiche programmate ha stabilizzato il processo." }
+  ]
+ },
+ {
+  "id": "14001_m06_s004",
+  "layout": "confronto",
+  "kicker": "Controllo operativo · 3",
+  "titolo": "Controlli tecnici e gestionali",
+  "intro": "Quasi mai uno dei due basta da solo: quando il sistema funziona, li trovi combinati. La nota della norma richiama anche la gerarchia dei controlli: è più robusto eliminare una sorgente che governarla con istruzioni, più efficace sostituire una sostanza problematica che ricordare di usarla con prudenza. Cerca il controllo più affidabile, non il più semplice da scrivere.",
+  "a": {
+   "h": "Controlli tecnici",
+   "sub": "Agiscono sul fisico",
+   "punti": [
+    { "d": "Pavimentazione idonea, vasca di contenimento, sensore di livello, chiusura automatica, ventilazione, sistema di intercettazione." },
+    { "d": "Rendono l'errore meno probabile: coperchi automatici sulle vasche e tempi di apertura ridotti battono cartelli e firme di presa visione." },
+    { "d": "Se mancano, affidi troppo alla sola attenzione umana, che richiede vigilanza continua." }
+   ]
+  },
+  "b": {
+   "h": "Controlli gestionali",
+   "sub": "Agiscono sull'organizzazione",
+   "punti": [
+    { "d": "Procedura di ricevimento, verifica dei contenitori in ingresso, accessi limitati, formazione, registrazione delle ispezioni, segnalazione delle anomalie." },
+    { "d": "Senza cornice gestionale il presidio tecnico degrada: un'aspirazione va accompagnata da divieto dell'aria compressa, manutenzione filtri, criterio di riconoscimento del guasto." },
+    { "d": "Se mancano, gli elementi tecnici possono essere aggirati, trascurati o usati male." }
+   ]
+  }
+ },
+ {
+  "id": "14001_m06_s005",
+  "layout": "confronto",
+  "kicker": "Controllo operativo · 4",
+  "titolo": "Gestire le modifiche",
+  "intro": "Un processo ben controllato oggi può diventare fragile domani. La norma chiede di tenere sotto controllo le modifiche pianificate e di riesaminare gli effetti dei cambiamenti involontari, attivando azioni per attenuare gli impatti negativi. Non basta progettare un processo stabile: devi proteggerlo quando qualcosa cambia.",
+  "a": {
+   "h": "Modifiche pianificate",
+   "sub": "Le decidi tu",
+   "punti": [
+    { "d": "Nuova linea, sostituzione detergente, più stoccaggio, nuovo percorso carrelli, fase affidata a un appaltatore, software che governa dosaggi." },
+    { "d": "Vantaggio: puoi valutarle prima dell'esercizio — quali aspetti cambiano, quali criteri rivedere, chi formare, quali verifiche rafforzare all'avvio." },
+    { "d": "Un detergente più economico ma incompatibile col trattamento genera schiume e scarichi instabili: mancava il controllo della modifica, non la buona intenzione." }
+   ]
+  },
+  "b": {
+   "h": "Cambiamenti involontari",
+   "sub": "Più insidiosi",
+   "punti": [
+    { "d": "Rottura, guasto, errore di settaggio, materiale diverso dall'atteso, manutenzione incompleta, perdita improvvisa di una competenza chiave." },
+    { "d": "Un guasto al ventilatore dell'abbattimento: quali effetti negativi, quali azioni ora? Ridurre, fermare, manutenzione urgente, informare, intensificare i controlli." },
+    { "d": "Un'organizzazione reattiva minimizza o nasconde; una robusta ferma, valuta, contiene, corregge e impara. Il cambiamento non si subisce: si governa." }
+   ]
+  }
+ },
+ {
+  "id": "14001_m06_s006",
+  "layout": "punti",
+  "kicker": "Controllo operativo · 5",
+  "titolo": "Documentare quanto basta",
+  "intro": "La tentazione è documentare tutto. La norma è più equilibrata: documentazione sufficiente a dare ragionevole fiducia che il lavoro sia svolto secondo quanto pianificato. Non il massimo possibile, non il minimo per cavarsela, ma il livello che rende il processo affidabile. Ti protegge da due errori opposti.",
+  "punti": [
+   { "h": "I due eccessi", "d": "L'eccesso di carta appesantisce il lavoro e viene presto ignorato; la fiducia ingenua nella sola esperienza funziona finché restano le stesse persone e non ci sono deviazioni. La documentazione utile aiuta a ripetere bene, trasferire competenze, prevenire errori, ricostruire." },
+   { "h": "Proporzionata alla criticità", "d": "Istruzioni, criteri di accettazione, schede di ispezione, piani di manutenzione, moduli pre-avvio, registrazioni, autorizzazioni interne, evidenze di formazione. Un'attività semplice può bastare con una breve istruzione visibile; un processo critico richiede più struttura." },
+   { "h": "Non dimostra da sola", "d": "Le informazioni mostrano che l'organizzazione ha definito un modo di lavorare. La fiducia vera nasce quando documento, impianto, comportamento e risultato si confermano a vicenda: un'istruzione che prevede contenitori chiusi, con coperchi aperti in area, racconta un'intenzione non mantenuta." },
+   { "h": "La domanda guida", "d": "Se domani entrasse una persona nuova, o cambiasse il contesto, la documentazione disponibile basterebbe a far eseguire il processo come previsto? Se sì, sei vicino al livello giusto. Se no, o c'è troppo poco o c'è troppo rumore." }
+  ]
+ },
+ {
+  "id": "14001_m06_s007",
+  "layout": "punti",
+  "kicker": "Ciclo di vita · 1",
+  "titolo": "Vedere oltre il cancello",
+  "intro": "Il punto 8.1 chiede di operare con una prospettiva del ciclo di vita: non uno studio completo per ogni prodotto, ma guardare le fasi prima e dopo l'attività interna per capire dove i requisiti devono essere considerati, controllati o almeno influenzati. Senza questo passaggio rischi di spostare il problema lungo la catena invece di ridurlo.",
+  "punti": [
+   { "h": "La miopia da evitare", "d": "Un'azienda di dispenser può ottimizzare energia, scarti e rifiuti internamente. Ma se il prodotto ha materiali difficili da separare, parti incollate, imballi eccessivi e ricambi introvabili, l'impatto complessivo resta pesante." },
+   { "h": "Una gradazione di leve", "d": "Non controllo totale di ciò che sta fuori: potere diretto su progettazione e materiali, potere negoziale su acquisti e specifiche, capacità di informare su uso e fine vita. La maturità sta nel capire la gradazione, non nel dire «fuori dal nostro cancello non ci riguarda»." },
+   { "h": "Conseguenze operative", "d": "Non chiederti solo come l'organizzazione evita un impatto oggi, ma se le sue scelte ne generano di evitabili domani: un imballo monouso inutile aumenta i rifiuti del cliente, un prodotto che consuma troppa acqua in uso sposta il carico fuori sito." },
+   { "h": "Gli ambiti richiamati", "d": "Progettazione e sviluppo, approvvigionamento, comunicazione ai fornitori esterni, e la valutazione dell'opportunità di dare indicazioni sugli impatti significativi di trasporto, consegna, uso, fine vita e destinazione finale." }
+  ]
+ },
+ {
+  "id": "14001_m06_s008",
+  "layout": "punti",
+  "kicker": "Ciclo di vita · 2",
+  "titolo": "Progettazione: l'ambiente si decide prima",
+  "intro": "Spesso la leva più potente. All'origine si indirizzano materiali, quantità di materia, durata attesa, manutenibilità, riparabilità, trasporto, imballo, consumi in uso, fine vita. La norma chiede, quando appropriato, che i requisiti ambientali siano affrontati nella progettazione tenendo conto delle fasi del ciclo di vita. La parola chiave è affrontati.",
+  "punti": [
+   { "h": "Un criterio vero, non una citazione", "d": "Quando si definisce o modifica un prodotto, qualcuno deve chiedere in modo strutturato quali aspetti nascono da materiali, fabbricazione, confezionamento, trasporto, uso e fine vita, e come renderli visibili in specifiche, disegni, prove e approvazioni." },
+   { "h": "Il caso del contenitore", "d": "Un multistrato molto resistente risolveva i reclami ma era difficile da riciclare. Inserendo il requisito ambientale in progettazione, il team ha valutato un monomateriale con spessore e geometria rinforzata: funzione mantenuta, recupero più semplice." },
+   { "h": "Vale anche per i servizi", "d": "Un nuovo protocollo di pulizia per macchine utensili progettato con prodotti meno problematici, dosaggi controllati e raccolta dei residui riduce rischi operativi, migliora i rifiuti e semplifica il presidio sugli scarichi." },
+   { "h": "Rendere visibili i compromessi", "d": "Non inseguire un unico indicatore: ridurre il peso può peggiorare la durabilità, un materiale riciclabile può richiedere più protezione nel trasporto. Decidere consapevolmente, non automaticamente. Molte prestazioni si costruiscono prima della produzione." }
+  ]
+ },
+ {
+  "id": "14001_m06_s009",
+  "layout": "punti",
+  "kicker": "Ciclo di vita · 3",
+  "titolo": "Approvvigionamento: i requisiti negli acquisti",
+  "intro": "Se la progettazione decide molto, gli acquisti consolidano o vanificano quelle decisioni. La norma chiede di determinare, quando appropriato, i propri requisiti ambientali per l'approvvigionamento di prodotti e servizi. Molte organizzazioni hanno processi interni ordinati ma ricevono materiali e servizi che introducono criticità evitabili.",
+  "punti": [
+   { "h": "Oltre qualità e prezzo", "d": "Composizione di una sostanza, tipo di imballaggio, contenitori riutilizzabili, compatibilità con un trattamento interno, modalità di consegna, tracciabilità, gestione dei residui, capacità di intervenire senza rilasci." },
+   { "h": "L'acquisto non è neutro", "d": "Un detergente molto efficace ma aggressivo per il proprio depuratore rispondeva alla scheda tecnica ma mancava del requisito di compatibilità col trattamento. Introdotto nella specifica, il problema è rientrato: l'acquisto può proteggere o destabilizzare il controllo." },
+   { "h": "Anche i servizi", "d": "Manutenzione di un filtro, lavaggio cisterne, trasporto interno, pulizia, raccolta rifiuti: stai acquistando attività con impatti diretti. L'appaltatore deve sapere dove operare, quali sostanze usare, come segregare, chi avvisare, quali registrazioni lasciare." },
+   { "h": "Comunicare il requisito", "d": "Un requisito non comunicato non orienta il comportamento esterno. Cerca coerenza tra capitolati, ordini, schede tecniche, istruzioni di accesso e controlli in accettazione: se i documenti dicono cose diverse, il fornitore riceve segnali confusi." }
+  ]
+ },
+ {
+  "id": "14001_m06_s010",
+  "layout": "cards",
+  "kicker": "Ciclo di vita · 4",
+  "titolo": "Quando l'impatto continua dopo la consegna",
+  "intro": "La norma chiede di valutare se, nelle fasi successive, esistano impatti significativi che rendono opportune istruzioni o indicazioni verso chi riceve, trasporta, utilizza o gestisce ciò che offri. La parola è valutare: se la risposta è sì, il silenzio non è neutro — diventa mancanza di controllo. La leva principale non è il comando, ma l'informazione pertinente.",
+  "cards": [
+   { "h": "Trasporto e consegna", "d": "A volte l'impatto non nasce dal prodotto ma dal modo in cui viaggia: contenitori in posizione controllata, protezioni contro urti e perdite. Non comunicarlo lungo la catena aumenta rilasci, danni all'imballo, rifiuti e gestione impropria delle emergenze." },
+   { "h": "Uso", "d": "Una miscela che richiede diluizione o risciacquo: valuta se l'uso improprio possa generare scarichi problematici. Le istruzioni d'uso decidono buona parte del carico ambientale nella vita del prodotto." },
+   { "h": "Fine vita", "d": "Un filtro contaminato dopo l'uso: il cliente deve sapere come rimuoverlo, contenere i residui, destinarlo. Una scheda di fine vita semplice — rimozione, contenimento, gestione — estende il controllo oltre il cancello senza pretendere il controllo totale sul cliente." }
+  ]
+ },
+ {
+  "id": "14001_m06_s011",
+  "layout": "confronto",
+  "kicker": "Esternalizzati · 1",
+  "titolo": "Fuori dal reparto non è fuori controllo",
+  "intro": "Il rischio più comune è mentale: pensare che un'attività affidata all'esterno esca anche dal sistema. Se è rilevante per i risultati attesi, non può diventare una zona grigia. In entrambi i casi il processo non sparisce: cambia solo il modo in cui lo presidi. Un sistema maturo evita sia il «controlliamo tutto» senza mezzi, sia «il fornitore è autonomo» come alibi.",
+  "a": {
+   "h": "Controllo",
+   "sub": "Definisci come si fa",
+   "punti": [
+    { "d": "Criteri, istruzioni, verifiche e condizioni operative abbastanza stretti su come l'attività deve essere svolta." },
+    { "d": "Un appaltatore che pulisce aree interne vicino a pozzetti e liquidi: livello alto, perché avviene nel tuo sito, con rischi immediati su scarichi, rifiuti e suolo." },
+    { "d": "Sul lavaggio serbatoi: prodotti ammessi, contenimento residui, raccolta acque, divieto di scarico improprio, deposito temporaneo, verifiche finali." }
+   ]
+  },
+  "b": {
+   "h": "Influenza",
+   "sub": "Orienti il risultato",
+   "punti": [
+    { "d": "Non governi ogni gesto, ma orienti con requisiti chiari, specifiche, qualificazione, comunicazioni e verifiche sul servizio reso." },
+    { "d": "Un trasporto o un trattamento lontano dal sito: scelta del fornitore, requisiti comunicati, documenti richiesti, regole di presa in carico, riesame delle prestazioni." },
+    { "d": "I processi esternalizzati non richiedono frasi forti. Richiedono confini chiari." }
+   ]
+  }
+ },
+ {
+  "id": "14001_m06_s012",
+  "layout": "numeri",
+  "kicker": "Esternalizzati · 2",
+  "titolo": "Quanto controllo serve davvero",
+  "intro": "La norma non consegna una tabella pronta. Quattro domande affidabili aiutano a costruire un presidio proporzionato: più le risposte indicano criticità, velocità e scarsa osservabilità, più il presidio deve essere forte. Il criterio non è il prezzo: è la rilevanza del processo per gli esiti ambientali.",
+  "numeri": [
+   { "n": "1", "h": "Quale impatto, quanto rapido", "d": "Se il fornitore sbaglia, quale impatto ambientale può prodursi e con quale velocità? Una pulizia tecnica vicino a scarichi può contare più di una fornitura molto più cara ma quasi neutra." },
+   { "n": "2", "h": "Quanto margine per accorgersene", "d": "Prima che il danno si estenda, hai modo di rilevarlo? Poca osservabilità impone presidi più forti a monte." },
+   { "n": "3", "h": "Dentro o lontano dal sito", "d": "Il servizio si svolge in tua presenza o con visibilità ridotta? Non ha senso controllare con la stessa intensità il noleggio di un distributore d'acqua e la manutenzione di un depuratore." },
+   { "n": "4", "h": "Mezzi tecnici o comportamenti", "d": "Il risultato dipende da tecnica, da persone o da entrambi? A rischio alto il presidio combina qualifica, requisiti scritti, istruzioni, controlli in ingresso, osservazioni, riesami e gestione delle anomalie." }
+  ]
+ },
+ {
+  "id": "14001_m06_s013",
+  "layout": "punti",
+  "kicker": "Esternalizzati · 3",
+  "titolo": "Appaltatori in sito",
+  "intro": "Il rapporto più rivelatore: non basta un buon contratto, devi trasformare i requisiti in condizioni operative visibili e applicabili nel momento in cui il lavoro si svolge. Se l'interfaccia è debole, anche un fornitore capace genera rifiuti non segregati, scarichi impropri o sversamenti, solo perché nessuno ha tradotto le regole del sito.",
+  "punti": [
+   { "h": "Il presidio inizia prima dell'ingresso", "d": "Dove può lavorare, quali sostanze introdurre, quali aree sono sensibili, quali residui raccogliere, dove non scaricare nulla, quali contenitori usare, chi avvisare, quando fermarsi. Se arrivano solo a voce e in fretta, dipende dalla memoria di chi accompagna." },
+   { "h": "Il caso della manutenzione", "d": "Su una linea di abbattimento: contenere i materiali rimossi, evitare dispersioni all'apertura, contenitori idonei, nessun deposito nell'area, ripristino corretto, riavvio nei parametri. Presidiare solo tempo di fermata e qualità del ricambio è coordinare a metà." },
+   { "h": "Le pulizie tecniche", "d": "Vicino a caditoie e stoccaggi, ciò che finisce a terra può migrare verso la rete sbagliata. Un presidio robusto definisce prodotti ammessi, vieta certi scarichi, impone la raccolta dei contaminati, controlla la chiusura, verifica l'area a fine attività." },
+   { "h": "L'appaltatore legge la cultura", "d": "In pochi minuti capisce se le regole sono vive o decorative. Pozzetti scoperti, contenitori aperti e personale interno che deroga lo portano ad adattarsi verso il basso; percorsi chiari, materiali pronti e reazioni immediate gli dicono che il presidio è reale." }
+  ]
+ },
+ {
+  "id": "14001_m06_s014",
+  "layout": "punti",
+  "kicker": "Esternalizzati · 4",
+  "titolo": "Verificare il servizio, non la promessa",
+  "intro": "Una tentazione sottile: fidarsi del contratto più del processo. Un capitolato ben scritto è necessario ma non dimostra che il presidio funzioni. Parti sempre da una domanda: dove si vede, nel lavoro reale, l'effetto dei requisiti dati al fornitore? Se non trovi risposta concreta, il controllo rischia di essere nominale.",
+  "punti": [
+   { "h": "Cercare l'effetto osservabile", "d": "Se hai dato regole sui rifiuti, dovresti vedere contenitori corretti, etichette comprensibili, nessuna miscelazione, area finale in ordine. Se il requisito riguarda le emissioni: tempi di apertura contenuti, collegamenti ripristinati, abbattimento riavviato correttamente." },
+   { "h": "I passaggi di consegna", "d": "Ogni interfaccia interno-esterno è ad alta probabilità di perdita di controllo. Chi autorizza l'inizio, chi verifica lo stato dell'area, chi controlla materiali e residui, chi decide il fermo? Senza chiarezza il rischio non si distribuisce: si moltiplica." },
+   { "h": "Le deviazioni costanti", "d": "Un ritiro di residui con documentazione in ordine, ma il tubo appoggiato su area sporca, raccordi non verificati, tappi a terra, assorbenti lontani. Nessun grande incidente, ma una sequenza di condizioni favorevoli all'errore: da trattare come segnali, non ignorare." },
+   { "h": "Domande concrete al fornitore", "d": "«Conosce la procedura?» produce un sì automatico. «Cosa farebbe se notasse una perdita vicino a un pozzetto?» o «dove metterebbe un panno contaminato?» apre uno spazio reale. I fornitori non si valutano da una sala riunioni." }
+  ]
+ },
+ {
+  "id": "14001_m06_s015",
+  "layout": "punti",
+  "kicker": "Matrici · 1",
+  "titolo": "Leggere il reparto per matrici",
+  "intro": "Il percorso inverso: partire dalle matrici ambientali e chiederti quali attività, criteri e controlli le presidiano. Non un capitolo separato dalla norma, ma un modo concreto di applicare il punto 8.1 quando entri in reparto. Il filo resta lo stesso: dove nasce il potenziale impatto, quali criteri lo governano, se i controlli reggono ordinario, variazioni e anomalie.",
+  "punti": [
+   { "h": "Le matrici ricorrenti", "d": "Rifiuti, scarichi, emissioni, rumore, suolo e sostanze. Ognuna ha caratteristiche proprie, ma lo schema evita due errori: guardare solo la fine della catena (il contenitore, il punto di emissione) o disperdersi in dettagli scollegati." },
+   { "h": "Vedere le connessioni", "d": "In una linea di lavaggio, guardare solo gli scarichi fa perdere il rischio di miscelazione dei residui; solo i rifiuti nasconde che una pulizia sbagliata aumenta i carichi sulla rete; solo le emissioni non mostra che il rumore spinge a lasciare aperti i pannelli." },
+   { "h": "Un vantaggio didattico", "d": "Le persone riconoscono meglio i propri punti critici: un addetto non pensa «requisito del sistema», ma sa che un contenitore aperto crea odori ed evaporazione. Il tuo compito è tradurre queste evidenze in un quadro coerente." },
+   { "h": "Non trasformarle in silos", "d": "I rifiuti toccano sostanze e suolo; gli scarichi si collegano a detergenti e lavaggi; le emissioni dipendono da manutenzione e aperture. Le matrici sono una lente utile, ma non devono farti perdere il processo reale che le collega." }
+  ]
+ },
+ {
+  "id": "14001_m06_s016",
+  "layout": "punti",
+  "kicker": "Matrici · 2",
+  "titolo": "Rifiuti: il controllo inizia dove nascono",
+  "intro": "Molte organizzazioni mostrano subito registri, aree dedicate e contenitori etichettati. Utili, ma non bastano: il presidio inizia dove il residuo nasce, cambia stato o viene preso in mano la prima volta. Se quel passaggio è confuso, tutta la gestione successiva diventa una rincorsa. Segui il flusso all'origine, non partire dal deposito finale.",
+  "punti": [
+   { "h": "Le domande all'origine", "d": "Dove si generano, chi li riconosce, come sono separati, con quali contenitori e regole di chiusura, chi controlla compatibilità e pulizia dell'area, cosa succede con un materiale non identificabile. Il controllo è forte quando la segregazione è semplice, visibile e sostenuta dal layout." },
+   { "h": "Ridurre l'ambiguità prima", "d": "In un'officina con oli, solventi e assorbenti: contenitori lontani, etichette illeggibili, coperchi che non chiudono generano deviazioni quotidiane. Meglio portare i contenitori corretti al punto di generazione, chiarire l'uso visivamente, imporre la chiusura." },
+   { "h": "I passaggi intermedi", "d": "Il trasferimento interno è sottovalutato: un fusto corretto in reparto diventa critico se il carrello non è idoneo, il tappo è lasco, il percorso attraversa aree non protette. I materiali di manutenzioni straordinarie finiscono facilmente in contenitori di comodo." },
+   { "h": "Il deposito conferma, non presidia", "d": "In una verniciatura il deposito era in ordine, ma vicino alle cabine si accumulavano panni sporchi e filtri in sacchi non chiusi «solo fino al giro serale». Proprio quelle ore mostravano il livello reale. La soluzione: contenitori a bordo linea, frequenze coerenti, verifica del preposto." }
+  ]
+ },
+ {
+  "id": "14001_m06_s017",
+  "layout": "punti",
+  "kicker": "Matrici · 3",
+  "titolo": "Scarichi: il percorso, non il campione",
+  "intro": "La matrice inganna, perché sembra concentrarsi nel pozzetto finale e nel dato di laboratorio. In realtà il controllo si costruisce prima: segui il percorso dell'acqua e dei liquidi — da dove arrivano, cosa trascinano, quali reti attraversano, cosa cambia in avviamento, fermata, lavaggio, manutenzione o anomalia.",
+  "punti": [
+   { "h": "Le domande chiave", "d": "Quali attività possono inviare liquidi alla rete? Esistono separazioni chiare? Le persone sanno cosa non deve mai finire in uno scarico? I prodotti di pulizia sono compatibili col trattamento? I percorsi sono riconoscibili a chi non lavora sempre lì?" },
+   { "h": "I lavaggi", "d": "In regime ordinario tutto sembra stabile; poi un cambio prodotto o una sanificazione straordinaria cambia il carico senza che nessuno abbia rivisto criteri e controlli. Gli scarichi si controllano nelle scelte di prodotto, nei dosaggi, nelle sequenze, nei divieti chiari." },
+   { "h": "Il layout parla", "d": "Pozzetti non identificati, reti promiscue, tubazioni difficili da seguire, valvole senza destinazione chiara, travasi vicini a caditoie. Un buon controllo rende visibile il percorso corretto dei liquidi e rende scomodo, o impossibile, quello scorretto." },
+   { "h": "Il caso del reparto alimentare", "d": "Lavaggi di attrezzature mobili vicino a due reti diverse: nei picchi si usava l'area più vicina senza verificare la destinazione. Non malafede, ma layout ambiguo. Correzione: segnaletica, delimitazione fisica, istruzione semplice, verifica del preposto nei momenti di punta." }
+  ]
+ },
+ {
+  "id": "14001_m06_s018",
+  "layout": "confronto",
+  "kicker": "Matrici · 4",
+  "titolo": "Emissioni e rumore",
+  "intro": "Spesso gestiti da funzioni diverse, hanno molti punti in comune: dipendono da stabilità dell'impianto, manutenzione, regolazione, chiusure fisiche, tempi di apertura e scelte fatte nei momenti di fretta. Leggerli insieme ti aiuta a capire se il processo è sotto controllo o funziona grazie ad adattamenti continui delle persone.",
+  "a": {
+   "h": "Emissioni",
+   "sub": "Non solo il camino",
+   "punti": [
+    { "d": "Molte criticità nascono prima: aperture non necessarie, coperchi alzati, guarnizioni usurate, filtri saturi, aspirazioni sbilanciate, travasi improvvisati." },
+    { "d": "Un ottimo abbattimento convive con emissioni diffuse per dettagli operativi ripetuti ogni giorno." },
+    { "d": "Le domande: dove si formano vapori, polveri o fumi? Quando il contenimento viene meno? Chi se ne accorge per primo?" }
+   ]
+  },
+  "b": {
+   "h": "Rumore",
+   "sub": "Indizio di deviazione",
+   "punti": [
+    { "d": "Peggiora perché l'impianto si deteriora, una carenatura resta aperta per comodità, una manutenzione è rimandata, un supporto vibra." },
+    { "d": "Non solo una matrice da misurare: quando cresce induce comportamenti compensativi che peggiorano altre matrici — porte e pannelli lasciati aperti." },
+    { "d": "In falegnameria, portelli aperti per liberare intasamenti riducevano l'aspirazione e aumentavano polveri e rumore: mancava un criterio per riconoscere l'intasamento." }
+   ]
+  }
+ },
+ {
+  "id": "14001_m06_s019",
+  "layout": "punti",
+  "kicker": "Matrici · 5",
+  "titolo": "Suolo e sostanze: prevenire prima",
+  "intro": "Il suolo resta spesso invisibile finché il problema non è già accaduto: il controllo dev'essere fortemente preventivo. Non basarti sull'assenza di incidenti dichiarati: osserva come si gestiscono le sostanze nel lavoro ordinario, nella movimentazione, nello stoccaggio, nel travaso, nella manutenzione e nelle attività temporanee.",
+  "punti": [
+   { "h": "Le domande sulle sostanze", "d": "Non solo le più pericolose: detergenti, oli, additivi, reagenti, acque contaminate, materiali impregnati. Dove è tenuta, in quale contenitore, su quale superficie, con quali protezioni secondarie, cosa succede se una valvola perde o il travaso si interrompe." },
+   { "h": "Le piccole abitudini", "d": "Molte perdite non nascono da grandi rotture: tappi chiusi male, pallet deformati, contenitori di fortuna, tubazioni trascinate, materiali appoggiati «per pochi minuti». Un buon controllo rende questi comportamenti difficili, non semplicemente sconsigliati." },
+   { "h": "Le attività temporanee", "d": "Manutenzione, lavaggio straordinario, svuotamento, sostituzione serbatoio: proprio perché rare, sono preparate peggio, ed è lì che il suolo è più esposto. Maturità = vasche mobili disponibili, assorbenti vicini, percorso stabilito, pulizia finale controllata." },
+   { "h": "Le perdite piccole come segnale", "d": "In un impianto di dosaggio il problema non erano i grandi sversamenti, ma le gocce dalle lance lasciate a terra: sporco cronico e degrado dell'area. Correzione: supporti dedicati, vaschetta di sgocciolamento, pulizia immediata, verifica visiva finale." }
+  ]
+ },
+ {
+  "id": "14001_m06_s020",
+  "layout": "flusso",
+  "kicker": "Matrici · 6",
+  "titolo": "Una deviazione, molte matrici",
+  "intro": "Nel lavoro reale una sola deviazione genera effetti a catena su più matrici: per questo il controllo operativo va verificato sul campo, non con documenti specialistici separati. Una guarnizione invecchiata su una linea di travaso solventi mostra bene la propagazione — un solo difetto iniziale, almeno quattro matrici coinvolte.",
+  "passi": [
+   { "h": "Il difetto iniziale", "d": "Il raccordo non chiude bene e compare una piccola perdita. Se il presidio è debole, non resta un fatto isolato: comincia a propagarsi immediatamente lungo il processo." },
+   { "h": "Rifiuti ed emissioni", "d": "Parte del liquido finisce su assorbenti che diventano rifiuti; una quota evapora e contribuisce alle emissioni diffuse. Due matrici già coinvolte da un unico guasto." },
+   { "h": "Suolo e scarichi", "d": "Una parte raggiunge la superficie e può interessare il suolo se il contenimento è carente; se la pulizia si fa con acqua o modalità scorrette, il problema si estende verso gli scarichi." },
+   { "h": "Cercare la causa comune", "d": "Non fermarti all'etichetta dell'anomalia: chiediti quali altre matrici tocca e quale attività l'ha resa possibile. «Contenitore aperto» porta a un richiamo; ritiri radi, layout scomodo e chiusure non funzionali portano a correggere il processo e ridurre più impatti insieme." }
+  ]
+ },
+ {
+  "id": "14001_m06_s021",
+  "layout": "numeri",
+  "kicker": "Sopralluogo · 1",
+  "titolo": "Dalle matrici alle priorità",
+  "intro": "In reparto non puoi guardare tutto con la stessa intensità. La scelta migliore non dipende da ciò che è più vistoso, ma dai punti in cui una sola deviazione può propagarsi. Tre domande per impostare il percorso — e una regola: non iniziare da dove il sistema appare migliore, ma da dove una deviazione potrebbe restare invisibile troppo a lungo.",
+  "numeri": [
+   { "n": "1", "h": "Dove nascono residui e sostanze", "d": "I punti di generazione, non il deposito finale. Un contenitore perfetto a fine percorso non compensa una segregazione confusa a bordo linea." },
+   { "n": "2", "h": "Dove il processo cambia stato", "d": "Travaso, lavaggio, cambio lotto, manutenzione, raccolta. Più fattori devono allinearsi contemporaneamente, più è facile che emerga una debolezza." },
+   { "n": "3", "h": "Dove incontri l'esterno", "d": "Appaltatori, trasportatori, processi esternalizzati, fornitori. Ogni interfaccia è un possibile punto di perdita di controllo — e i luoghi che nessuno mostra volentieri sono i più preziosi." }
+  ]
+ },
+ {
+  "id": "14001_m06_s022",
+  "layout": "punti",
+  "kicker": "Sopralluogo · 2",
+  "titolo": "Dal dichiarato al visibile",
+  "intro": "Il sopralluogo trasforma un sistema dichiarato in un sistema osservabile. Non svaluta i documenti: li usa per ciò che sono, una promessa organizzativa. La domanda decisiva è se quella promessa prende forma in comportamenti, assetti, controlli e reazioni coerenti. Il documento prepara la verifica, ma il sopralluogo decide la qualità del giudizio.",
+  "punti": [
+   { "h": "Vedere il processo sotto pressione", "d": "In reparto vedi insieme persone, impianto, materiali, spazi, tempi e adattamenti della routine: come funziona quando il turno corre, quando manca qualcosa, quando un fornitore aspetta. Poiché il punto 8.1 vive nell'esecuzione, la differenza è enorme." },
+   { "h": "Confronto continuo criterio-realtà", "d": "Non una passeggiata descrittiva: se la procedura dice contenitori chiusi, guardi se restano chiusi anche nei punti di generazione; se dice assorbenti disponibili, verifichi se sono vicini al rischio, integri e usabili." },
+   { "h": "Ripetibile, non eroico", "d": "Se il controllo dipende da una persona esperta che ricorda tutto, lo noti subito. Se materiali, attrezzature, segnaletica, spazi e responsabilità sostengono l'esecuzione anche con turni diversi, il sistema è molto più maturo." },
+   { "h": "Aree vive, non presentabili", "d": "Vedere ordine non basta: alcune aree sono perfette quando qualcuno le osserva. Cerca la mano sporca del processo, non la sua fotografia pulita. La domanda: se domani cambiasse turno, materiale o fornitore, quest'area lavorerebbe bene nello stesso modo?" }
+  ]
+ },
+ {
+  "id": "14001_m06_s023",
+  "layout": "flusso",
+  "kicker": "Sopralluogo · 3",
+  "titolo": "Seguire flussi e interfacce",
+  "intro": "Non basta entrare e guardarsi intorno: costruisci un percorso che segua i flussi veri — materiali, residui, informazioni, persone e attività esterne. Il controllo operativo diventa una sequenza osservabile, ed emergono le interfacce, i punti in cui il sistema perde più facilmente coerenza. Quando segui i flussi, le non coerenze si vedono quasi da sole.",
+  "passi": [
+   { "h": "Ciò che entra", "d": "Materie prime, prodotti ausiliari, imballi, documenti di accompagnamento, modalità di ricevimento, regole applicate ai fornitori. Qui si vede se i requisiti ambientali sono entrati negli acquisti." },
+   { "h": "Ciò che si trasforma", "d": "Uso, stoccaggio, travasi, lavaggi, manutenzione, raccolta residui, reazioni alle anomalie. Non saltare le zone di mezzo: il carrello, il contenitore intermedio in attesa, la zona tecnica dietro l'impianto." },
+   { "h": "Le interfacce", "d": "Il punto in cui un appaltatore prende in carico l'area o il personale interno riprende il controllo. Segui l'intero ciclo: accesso, briefing, prodotti usati, protezione dei pozzetti, gestione dei contaminati, controllo finale, registrazione anomalie." },
+   { "h": "Ciò che esce", "d": "Rifiuti, scarichi, emissioni, imballi restituiti, prodotti spediti e informazioni che accompagnano il cliente. Osserva anche il ritmo: i flussi rapidi e intermittenti meritano più attenzione, perché sotto pressione aumentano le scorciatoie." }
+  ]
+ },
+ {
+  "id": "14001_m06_s024",
+  "layout": "punti",
+  "kicker": "Sopralluogo · 4",
+  "titolo": "Le domande giuste alle persone",
+  "intro": "La qualità delle domande conta più della quantità. «Conosce la procedura?» produce un sì. «Cosa fa quando il contenitore è pieno, quando un raccordo perde, quando trova un residuo non identificato?» mostra il controllo nella forma più vera: le persone raccontano il sistema come lo praticano, non come lo ricordano.",
+  "punti": [
+   { "h": "Partire dall'azione", "d": "Mostrami dove metti questo residuo. Fammi vedere cosa controlli prima di iniziare. Chi chiami se noti una perdita. Cosa fai se la vasca di contenimento è occupata. Domande concrete che trasformano la risposta in un comportamento osservabile." },
+   { "h": "Il tono fa la differenza", "d": "Se sembri in cerca di colpe, ottieni risposte difensive. Se vuoi capire il processo, un operatore esperto ti mostra dove il lavoro si inceppa, dove il layout complica la segregazione, dove una pulizia rapida rischia di finire verso gli scarichi." },
+   { "h": "Confrontare ruoli diversi", "d": "L'operatore racconta cosa fa, il preposto cosa controlla, il manutentore dove compaiono le anomalie ricorrenti, l'appaltatore come interpreta le regole. Se le versioni si confermano, è un segnale forte; se divergono, hai una zona da esplorare." },
+   { "h": "Ascoltare le formule ricorrenti", "d": "«Di solito facciamo così», «dipende da chi c'è», «quando il deposito è pieno lo teniamo un attimo qui»: non sono automaticamente non conformità, ma indicano variabilità. E quando tocca sostanze, rifiuti o scarichi, il controllo può essere più fragile di quanto appare." }
+  ]
+ },
+ {
+  "id": "14001_m06_s025",
+  "layout": "numeri",
+  "kicker": "Sopralluogo · 5",
+  "titolo": "Segnali deboli e deviazioni normalizzate",
+  "intro": "I sistemi deboli raramente iniziano con un grande evento: iniziano con piccole deviazioni tollerate, ripetute e infine considerate normali. Nessuno di questi elementi va letto da solo: il significato cresce quando compaiono insieme o si ripetono. Non parlano di ordine, parlano di affidabilità.",
+  "numeri": [
+   { "n": "1", "h": "Coperchi e contenitori", "d": "Aperti per comodità, temporanei che restano tali per settimane. Non un difetto estetico: evaporazione, odori, emissioni diffuse, sgocciolamento, confusione nel conferimento." },
+   { "n": "2", "h": "Materiali fuori posto", "d": "Vasche di contenimento usate come appoggio, assorbenti mancanti o lontani, pallet danneggiati mantenuti in uso, pozzetti coperti da materiali." },
+   { "n": "3", "h": "Il divario origine-deposito", "d": "Rifiuti ben separati nel deposito ma confusi vicino al punto di generazione. Il sistema corregge a valle ciò che non governa a monte." },
+   { "n": "4", "h": "Le frasi che accompagnano", "d": "«Lo facciamo sempre così», «non è mai successo nulla», «tanto poi passa il giro serale». Mostrano una distanza normalizzata tra criterio atteso e pratica." },
+   { "n": "5", "h": "Area mostrata vs area vissuta", "d": "Deposito impeccabile, ma dietro le macchine sacchi non chiusi e filtri a terra: il sistema funziona dove sa di essere osservato." },
+   { "n": "6", "h": "La ricorrenza", "d": "Un coperchio aperto una volta è distrazione; dieci in luoghi diversi raccontano un criterio poco praticabile o un preposto che non presidia. Raccogli il fatto, il contesto e la reazione." }
+  ]
+ },
+ {
+  "id": "14001_m06_s026",
+  "layout": "punti",
+  "kicker": "Sopralluogo · 6",
+  "titolo": "I momenti non ordinari",
+  "intro": "Non fermarti alla routine stabile: i processi mostrano la loro qualità quando cambiano ritmo o configurazione. Avvio, fermata, cambio prodotto, lavaggio straordinario, manutenzione, interventi di appaltatori. Coerente col punto 8.1, che chiede attenzione alle modifiche pianificate e al riesame dei cambiamenti involontari.",
+  "punti": [
+   { "h": "Dove il rischio cresce", "d": "In un impianto di abbattimento la marcia ordinaria appare stabile per settimane; il momento critico è l'apertura per cambiare filtranti — contenimento residui, deposito temporaneo, protezione del suolo, riavvio corretto. Osservando solo l'esercizio, perdi proprio quel momento." },
+   { "h": "Ricostruire, non per forza assistere", "d": "Spesso basta ricostruire il passaggio con le persone, osservare le attrezzature pronte, leggere le tracce dell'ultima esecuzione e verificare se la logica di controllo resta coerente. Chiedi di descrivere l'ultima attività non ordinaria." },
+   { "h": "Le manutenzioni raccontano", "d": "Una perdita riparata in fretta, un ricambio non equivalente, una tubazione mobile temporanea, un contenitore sostitutivo dell'ultimo momento. Comuni, e per questo pericolosi: serve chiaro chi autorizza, quali cautele, cosa verificare prima del riavvio." },
+   { "h": "Informazioni prima del cambiamento", "d": "Se cambia un materiale, un turno, un fornitore, le persone ricevono criteri aggiornati o si arrangiano con l'esperienza precedente? Quando il cambiamento corre più veloce delle istruzioni, il sistema perde affidabilità." }
+  ]
+ },
+ {
+  "id": "14001_m06_s027",
+  "layout": "punti",
+  "kicker": "Triangolare le evidenze",
+  "titolo": "Verso un giudizio solido sul controllo",
+  "intro": "Trasforma ciò che hai raccolto in un giudizio: metti in relazione ciò che hai visto, ciò che le persone fanno e dicono, e ciò che la documentazione rende disponibile. Nessuna fonte basta da sola. Quando convergono hai un quadro affidabile; quando divergono, il compito non è scegliere la più comoda, ma capire perché non combaciano.",
+  "punti": [
+   { "h": "Che cosa dice ogni fonte", "d": "La documentazione dice come l'organizzazione intende governare; il sopralluogo se il presidio è visibile nel lavoro reale; le registrazioni se il comportamento è ripetuto nel tempo; le interviste se le persone comprendono il processo o lo eseguono per imitazione." },
+   { "h": "Documentazione incompleta, non falsa", "d": "Un deposito rifiuti ottimo con registrazioni puntuali, ma nei punti di generazione residui in contenitori di fortuna nei cambi turno. La valutazione non si ferma al deposito finale: chiede se il controllo è efficace là dove il residuo nasce." },
+   { "h": "Sui processi esternalizzati", "d": "Un capitolato ottimo e qualifiche formalmente corrette, ma interfacce deboli: appaltatore che conosce poco le regole, area non verificata a fine lavoro, anomalie minori senza traccia. Il documento descrive un'intenzione, il campo la sua attuazione incompleta." },
+   { "h": "Sul ciclo di vita", "d": "Se l'organizzazione dichiara requisiti ambientali negli acquisti, nelle informazioni a valle o nel fine vita, cercane le tracce operative: specifiche, istruzioni ai fornitori, indicazioni al cliente, imballi di ritorno. Senza riflessi concreti, la prospettiva resta nominale." },
+   { "h": "Episodio isolato o debolezza sistemica", "d": "Guarda ricorrenza, contesto, facilità di errore e qualità della reazione. Problemi simili in aree diverse, considerati normali, senza apprendimento, non sono più un caso sporadico: è un controllo che non regge con continuità." },
+   { "h": "Dal sintomo alla causa", "d": "Qui entra il giudizio professionale: non elencare dettagli, ricostruisci il meccanismo. Perché il contenitore resta aperto? Perché i fornitori ricevono istruzioni ma non le applicano in modo uniforme? La domanda che riassume il 8.1: le informazioni documentate bastano a dare fiducia nell'esecuzione?" }
+  ]
+ },
+ {
+  "id": "14001_m06_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 06",
+  "modNum": "06",
+  "titolo": "Ciò che conta va governato nel lavoro reale",
+  "punti": [
+   { "h": "Il cuore del controllo operativo", "d": "Il sistema diventa credibile quando definisce criteri di processo chiari, mette in campo controlli tecnici e gestionali coerenti, governa le modifiche e mantiene documentazione sufficiente a dare fiducia nell'esecuzione. Processi pensati bene e resi difficili da sbagliare." },
+   { "h": "Criteri e controlli", "d": "Un criterio è buono quando riduce l'ambiguità, sostiene le persone e rende più difficile sbagliare. La gerarchia dei controlli spinge a cercare il presidio più affidabile, non quello più semplice da scrivere." },
+   { "h": "La prospettiva del ciclo di vita", "d": "Non un capitolo separato: è il modo con cui il controllo si allunga oltre l'attività interna. Progettazione, approvvigionamento, comunicazione ai fornitori e informazioni su trasporto, uso e fine vita, dove hai leva o influenza." },
+   { "h": "Esternalizzati e appaltatori", "d": "Fuori dal reparto non è fuori controllo: confini chiari, presidio proporzionato alla rilevanza ambientale, requisiti che arrivano fino al punto di lavoro. Il fornitore capisce ciò che conta da quello che controlli davvero, non da quello che scrivi." },
+   { "h": "La lettura per matrici", "d": "Rifiuti, scarichi, emissioni, rumore, suolo e sostanze: una lente utile, purché non diventi silos. Una sola deviazione genera effetti a catena, quindi cerca il meccanismo comune, non il sintomo isolato." },
+   { "h": "La verifica sul campo", "d": "Il sopralluogo che segue flussi e interfacce, le domande ancorate all'azione, i segnali deboli, i momenti non ordinari e la triangolazione: solo il campo conferma che ciò che è pianificato viene eseguito come previsto." }
+  ],
+  "prossimo": {
+   "modulo": "07",
+   "titolo": "Emergenze ambientali e valutazione della conformità",
+   "testo": "Dalla gestione ordinaria alla preparazione agli eventi e alla verifica del rispetto degli obblighi."
+  }
+ }
+]
