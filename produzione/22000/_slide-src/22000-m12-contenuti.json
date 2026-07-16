@@ -1,0 +1,406 @@
+[
+ {
+  "id": "22000_m12_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 22000 — Sicurezza alimentare",
+  "kicker": "Modulo 12",
+  "eyebrow": "Il modulo finale",
+  "titolo": "Casi completi, simulazione d'esame e certificazione",
+  "testo": "Sei arrivato al tratto finale del corso, quello in cui tutto prende forma concreta. Fin qui hai costruito pezzo dopo pezzo il lessico, il metodo e il ragionamento professionale; adesso li metti insieme in situazioni realistiche, dove i requisiti smettono di essere voci isolate e diventano decisioni. Il cuore della lezione sono due casi completi molto diversi: uno stabilimento di trasformazione con un controllo termico classificato come CCP, e una piattaforma logistica dove il rischio non nasce dalla cottura ma dalla catena del freddo, dai flussi e dalla rintracciabilità. Vedrai come cambia lo sguardo del professionista quando cambia il processo, pur restando stabile il metodo. Dopo i casi metteremo a confronto le risultanze, affronteremo una simulazione d'esame commentata e chiuderemo con lo schema di certificazione e il mantenimento della competenza nel tempo.",
+  "agenda": [
+   "Caso completo I: stabilimento con CCP termico",
+   "Caso completo II: piattaforma logistica e catena del freddo",
+   "Discussione: pesare risultanze molto diverse",
+   "Correzione, azione correttiva, prodotto coinvolto",
+   "Simulazione d'esame commentata",
+   "Schema di certificazione e mantenimento"
+  ]
+ },
+ {
+  "id": "22000_m12_s002",
+  "layout": "split",
+  "kicker": "Caso completo I",
+  "titolo": "Profilo dello stabilimento e obiettivo",
+  "lead": "Immagina uno stabilimento che produce zuppe fresche, vellutate vegetali e sughi refrigerati pronti al consumo. Prodotto a vita commerciale breve, mantenuto a temperatura controllata, senza ulteriori trattamenti prima del consumo: un dettaglio che alza il peso dei controlli interni e riduce il margine d'errore accettabile. Il cuore del processo è un trattamento termico dopo la miscelazione, identificato come CCP.",
+  "punti": [
+   { "h": "Il nodo decisivo è termico", "d": "Non ti basterà guardare il termometro: dovrai capire come è stato validato il trattamento, come viene monitorato, come si reagisce a una deviazione e come si protegge il prodotto dopo il passaggio critico." },
+   { "h": "Il metro è composito", "d": "ISO 22000, informazioni documentate interne, requisiti legali e impegni verso il cliente sulla conservazione refrigerata. Se una procedura interna promette un controllo più stringente della legge, quel controllo diventa parte del criterio." },
+   { "h": "Il contesto e la pressione", "d": "Circa sessanta addetti, due turni, laboratorio microbiologico esternalizzato. Emerge una pressione commerciale ad aumentare volumi senza allungare i tempi: non prova nulla, ma segnala una possibile tensione tra produttività e sicurezza." },
+   { "h": "Un percorso logico, non una checklist rigida", "d": "Prima capire il processo reale, poi confrontarlo con quello descritto, poi mettere sotto pressione i passaggi ad alta rilevanza: chi ferma la linea, come si isola il lotto coinvolto, quanto è rapida la rintracciabilità." }
+  ]
+ },
+ {
+  "id": "22000_m12_s003",
+  "layout": "definizione",
+  "kicker": "Caso completo I",
+  "eyebrow": "Analisi dei pericoli e CCP",
+  "titolo": "Perché il trattamento termico è un CCP",
+  "definizione": "Il CCP è la fase con un limite critico misurabile che separa l'accettabilità dalla non accettabilità del prodotto: se il limite non è rispettato, il lotto interessato deve essere trattato come potenzialmente non sicuro.",
+  "punti": [
+   "L'analisi individua come significativi soprattutto pericoli biologici legati a materie prime vegetali e ingredienti proteici, oltre a corpi estranei metallici e rischio allergeni nei cambi formato.",
+   "Le misure si distribuiscono su tre livelli: PRP (igiene, sanificazione, infestanti, fornitori), OPRP (gestione allergeni nel cambio ricetta, tempo massimo prima del trattamento) e il CCP termico.",
+   "Tre parole da non confondere: la validazione dimostra prima che la misura è capace del risultato; il monitoraggio dice durante se si resta nei parametri; la verifica conferma dopo che l'insieme funziona.",
+   "Una carta ordinata non basta: chiediti se il sensore è affidabile, se il punto di misura è rappresentativo, se l'operatore sa cosa fare all'allarme e se il prodotto a valle resta protetto da ricontaminazioni."
+  ]
+ },
+ {
+  "id": "22000_m12_s004",
+  "layout": "punti",
+  "kicker": "Caso completo I",
+  "titolo": "Ingresso in reparto e prime evidenze",
+  "intro": "La tentazione è puntare subito al CCP, ma sarebbe un errore metodologico: prima orientarti, osservare il ritmo reale, ascoltare come l'organizzazione racconta il processo. Il responsabile qualità segnala cambi ricetta ravvicinati, spesso momenti in cui emergono fragilità su allergeni, pulizie e rilascio della linea.",
+  "punti": [
+   { "h": "Un'evidenza favorevole ma parziale", "d": "Buona separazione tra aree sporche e pulite, indumenti coerenti, lavamani riforniti. Ma un ambiente pulito non dimostra da solo l'efficacia della gestione igienica: va collegato a registrazioni, frequenze e responsabilità." },
+   { "h": "Consapevolezza sì, padronanza incerta", "d": "L'operatore spiega bene perché la fase è critica, ma non sa dire fino in fondo come fu gestito un fermo del mese precedente. Una possibile distanza tra conoscenza teorica del punto critico e padronanza operativa della risposta." },
+   { "h": "La storia recente più del presente", "d": "Il tracciato del giorno è pulito, ma alcuni fogli della settimana mostrano correzioni manuali poco leggibili e un breve calo di temperatura annotato come rientrato. Nessuno dei due conclude nulla da solo, ma entrambi meritano approfondimento." },
+   { "h": "Autorità di riavvio troppo fluida", "d": "Chi autorizza il riavvio dopo un allarme termico dipende dal turno: a volte il capolinea, a volte qualità, a volte il manutentore. Quando le autorità cambiano senza regole limpide, il rischio di reazioni incoerenti aumenta." }
+  ]
+ },
+ {
+  "id": "22000_m12_s005",
+  "layout": "confronto",
+  "kicker": "Caso completo I",
+  "titolo": "Deviazione del limite critico: due piani",
+  "intro": "La registrazione del turno serale mostra una discesa sotto il limite critico per pochi minuti, seguita da un rapido rientro. L'organizzazione non ha ignorato l'accaduto: ha aperto un evento, identificato il periodo e segregato il prodotto. Ma la scheda mescola azioni di natura diversa, e la distinzione è decisiva.",
+  "a": {
+   "h": "Correzione e gestione del prodotto",
+   "sub": "Eliminare l'effetto immediato",
+   "punti": [
+    { "d": "Ripristino del parametro sul processo, blocco e segregazione del lotto, eventuale rilavorazione controllata con rintracciabilità mantenuta: tutto necessario e coerente con la logica della sicurezza alimentare." },
+    { "d": "Ma la segregazione fisica non era robusta — etichette temporanee scritte a mano, leggibili ma facilmente removibili — e questo indebolisce la certezza operativa in un momento critico." }
+   ]
+  },
+  "b": {
+   "h": "Azione correttiva",
+   "sub": "Rimuovere la causa",
+   "punti": [
+    { "d": "Inizia quando si analizza perché la pompa si è comportata così, si modifica il piano di manutenzione e si impedisce la ricorrenza. La pompa aveva già dato segnali di instabilità nei giorni precedenti." },
+    { "d": "Molti sistemi si fermano al primo passo e si illudono di aver chiuso il problema: in realtà hanno solo spento il sintomo. Qui proprio questo passaggio appariva debole." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m12_s006",
+  "layout": "punti",
+  "kicker": "Caso completo I",
+  "titolo": "Competenza, manutenzione, documenti, verifica",
+  "intro": "Dopo l'episodio del limite critico, verifica la tenuta complessiva del sistema. Un evento ben gestito può convivere con un impianto organizzativo fragile: la differenza la capisci guardando connessioni, non singole registrazioni.",
+  "punti": [
+   { "h": "Competenza: descrivere o decidere", "d": "Piani formativi presenti, ma due capi turno rispondono in modo diverso su chi autorizza lo sblocco del prodotto dopo una deviazione. Ruolo, responsabilità e autorità non sono stati interiorizzati con la stessa chiarezza da tutti." },
+   { "h": "Manutenzione: l'impatto sottovalutato", "d": "Attività ordinarie pianificate, ma dopo una sostituzione notturna di guarnizione sul circuito termico la verifica prima del riavvio è descritta troppo sinteticamente. Non un difetto certo sul prodotto, ma un governo documentale debole di una situazione potenzialmente critica." },
+   { "h": "Documenti: le versioni parallele", "d": "Procedure disponibili e coerenti, ma in reparto copie con annotazioni a penna non trasferite nell'ufficiale. Una sequenza di riavvio semplificata omette l'obbligo di consultare qualità oltre una soglia di tempo: documento valido da una parte, pratica semplificata dall'altra." },
+   { "h": "Verifica: dati senza prevenzione", "d": "Controlli microbiologici, campionamenti e riesami ci sono, ma l'analisi non sempre diventa decisione preventiva. Un aumento delle micro fermate della linea termica era visibile da settimane e nessuno lo aveva collegato come segnale anticipatore di rischio." }
+  ]
+ },
+ {
+  "id": "22000_m12_s007",
+  "layout": "cards",
+  "kicker": "Caso completo I",
+  "titolo": "Risultanze e giudizio complessivo",
+  "intro": "Ora trasformi le evidenze in risultanze chiare, fondate e proporzionate. Ignorare i punti forti renderebbe il rapporto sbilanciato e poco credibile: la sicurezza nasce dall'interazione tra misure di controllo, persone, informazioni e decisioni, e un CCP ben progettato non salva da solo un sistema poco governato.",
+  "cards": [
+   { "h": "I punti forti", "d": "Processo ben definito, buona igiene visibile, registrazioni del CCP generalmente complete, scelta prudente di bloccare il lotto, validazione iniziale del trattamento, rintracciabilità laboriosa ma efficace. Un SGSA vivo, non ornamentale." },
+   { "h": "Deviazione al CCP — non conformità", "d": "Correzione e segregazione eseguite, ma analisi della causa e prevenzione della ricorrenza non dimostrate con robustezza; la pompa era instabile già prima. NC ben sostenuta perché nasce da una carenza nel controllo delle cause." },
+   { "h": "Ruoli e autorità — non conformità", "d": "Risposte divergenti sul potere di sbloccare prodotto o riavviare la linea. Quando decisioni con impatto sulla sicurezza dipendono da interpretazioni del turno, il sistema non garantisce coerenza sufficiente." },
+   { "h": "Documenti e dati — rilievi minori", "d": "Istruzioni semplificate non allineate (ambiguità operativa, ma riallineabile) e uso non predittivo dei dati di verifica: a seconda della consistenza delle evidenze, risultanza meno severa oppure opportunità di miglioramento." }
+  ]
+ },
+ {
+  "id": "22000_m12_s008",
+  "layout": "split",
+  "kicker": "Caso completo II",
+  "titolo": "Piattaforma logistica, nuova logica di rischio",
+  "lead": "Cambia completamente l'ambiente, ma il metodo resta. Una piattaforma riceve, immagazzina e distribuisce refrigerati e surgelati per ristorazione collettiva e distribuzione. Qui non c'è cottura né una fase che distrugge il pericolo: il ragionamento si sposta dalla riduzione del pericolo al mantenimento delle condizioni che ne impediscono crescita, contaminazione o perdita di controllo.",
+  "punti": [
+   { "h": "Dove si gioca la sicurezza", "d": "Catena del freddo, tempi di attraversamento, integrità degli imballi, separazione dei flussi, gestione dei resi, comunicazione con fornitori e clienti, capacità di rintracciare rapidamente lotti e destinazioni." },
+   { "h": "PRP e OPRP, non un CCP", "d": "PRP su pulizia, pest control, formazione e manutenzione celle; OPRP su temperature in ricevimento e picking, finestra massima fuori cella, segregazione del prodotto danneggiato. Il peso ricade su misure che mantengono il processo controllato." },
+   { "h": "Crescita e cambiamento", "d": "Circa novemila referenze, crescita rapida nell'ultimo anno, nuovo software di magazzino. Quando aumentano referenze, flussi e operatori, una procedura che sembrava sufficiente può non reggere più." },
+   { "h": "I flussi speciali raccontano la maturità", "d": "Tutti gestiscono il percorso pulito della merce regolare. La qualità vera emerge nel governo di resi, campioni, prodotti trattenuti e merce non accettata, senza perdere tracciabilità e controllo." }
+  ]
+ },
+ {
+  "id": "22000_m12_s009",
+  "layout": "punti",
+  "kicker": "Caso completo II",
+  "titolo": "Ricevimento, celle e preparazione ordini",
+  "intro": "Il ritmo è diverso da uno stabilimento di trasformazione: tempi stretti, mezzi che si susseguono, un ordine apparente che nasconde complessità. Scegli bene dove fermarti. Il ricevimento è il primo punto in cui l'organizzazione può accettare o respingere una criticità.",
+  "punti": [
+   { "h": "L'eccezione in ricevimento", "d": "Controllo documenti, sigillo, integrità e temperatura a campione, ben costruito sulla carta. Ma se parte del carico è non conforme e parte accettabile, la decisione dipende dall'esperienza del turno e dal rapporto col fornitore: criteri poco standardizzati." },
+   { "h": "Le porte aperte nel picking", "d": "Durante il picking del mattino le porte si aprono di frequente e alcune baie sono sature; i pallet in attesa sostano oltre il previsto. Non un parametro che crolla di colpo, ma una somma di piccole esposizioni che può erodere la catena del freddo." },
+   { "h": "Il tempo fuori cella misurato male", "d": "Esiste una finestra massima e report del gestionale, ma il conteggio parte dall'assegnazione informatica dell'ordine, non dal prelievo reale. Il monitoraggio potrebbe non descrivere il fenomeno con sufficiente fedeltà." },
+   { "h": "Resi e segregazione", "d": "Casse identificate ma separazione fisica migliorabile; l'addetto distingue bene danno estetico e danno che espone il prodotto, ma chi autorizza il reinserimento non è del tutto uniforme. La segregazione dovrebbe essere visibile, univoca e governata." }
+  ]
+ },
+ {
+  "id": "22000_m12_s010",
+  "layout": "cards",
+  "kicker": "Caso completo II",
+  "titolo": "Mettere sotto pressione il sistema",
+  "intro": "Dopo il flusso normale, chiedi di simulare tre situazioni non ordinarie: la vera maturità di una piattaforma emerge quando qualcosa esce dal binario. La rintracciabilità, ricorda, non è solo capacità teorica di ricostruire il percorso, ma di farlo in fretta, con certezza e senza dipendere dall'operatore giusto presente in quel momento.",
+  "cards": [
+   { "h": "Il reso", "d": "Gastronomia refrigerata tornata per sospetta interruzione del freddo: rientro registrato, prodotto identificato, lotto bloccato. Ma la valutazione iniziale si è basata su aspetto e tempo, senza un criterio univoco condiviso tra logistica e qualità." },
+   { "h": "La rintracciabilità", "d": "Un lotto di formaggio fresco di tre giorni prima: il sistema recupera in fretta entrata, baia, lotto fornitore e spedizioni. Ma collegare rilocazioni interne e colli residui richiede più persone e un foglio parallelo del notturno. Regge, ma non è lineare." },
+   { "h": "Il blackout", "d": "Piano con generatori, priorità alle celle, reperibilità; il gruppo di continuità ha funzionato. Ma come si verifica l'impatto sui prodotti fuori cella durante l'interruzione resta vago. Le emergenze si giudicano dalla chiarezza delle regole, non dalla buona volontà." }
+  ]
+ },
+ {
+  "id": "22000_m12_s011",
+  "layout": "punti",
+  "kicker": "Caso completo II",
+  "titolo": "Tempo reale, freddo e prodotto dubbio",
+  "intro": "Nel secondo caso le evidenze più importanti non urlano, si accumulano: una serie di piccoli scostamenti, ciascuno apparentemente gestibile, che insieme mostrano se il processo regge davvero.",
+  "punti": [
+   { "h": "Il controllo termico reale", "d": "Celle e mezzi monitorati, ma il tempo effettivo di permanenza fuori cella non coincide sempre con quello registrato. Se il conteggio parte dall'assegnazione e non dal prelievo, il dato è rassicurante senza essere preciso: una debolezza del controllo." },
+   { "h": "I criteri decisionali", "d": "Addetti capaci di distinguere collo integro e danneggiato, ma nelle situazioni miste la decisione si sposta troppo sull'esperienza del turno. L'esperienza aiuta, ma non sostituisce la regola: devi capire, anche a posteriori, perché un lotto è stato accettato o respinto." },
+   { "h": "La segregazione del dubbio", "d": "Area dedicata e identificazione presenti, ma separazione non sempre netta nei picchi. Non hai visto un rilascio improprio: puoi però sostenere che il controllo dei prodotti potenzialmente non sicuri non è ancora robusto in ogni situazione operativa." },
+   { "h": "I trasportatori esterni", "d": "Usarli è normale, ma la responsabilità del risultato non si esternalizza. Buona reattività quotidiana, poco uso strutturato dei dati: i problemi vengono risolti quando accadono, non sempre trasformati in prevenzione." }
+  ]
+ },
+ {
+  "id": "22000_m12_s012",
+  "layout": "split",
+  "kicker": "Caso completo II",
+  "titolo": "Software, responsabilità, processi esterni",
+  "lead": "La domanda non è più se la piattaforma lavori tanto — quello è evidente — ma se il sistema governi la complessità che ha creato. La crescita rapida e il nuovo software sono due indizi da prendere sul serio: il cambiamento non è un difetto, ma una condizione ad alto rischio organizzativo.",
+  "punti": [
+   { "h": "Il software e l'integrità del dato", "d": "Traccia entrate, uscite, ubicazioni e tempi, riducendo l'affidamento alla memoria individuale. Ma alcuni passaggi urgenti del notturno vivono ancora su supporti paralleli: un dato a metà tra gestionale e appunti rende la ricostruzione lenta, e in un richiamo il tempo conta." },
+   { "h": "Le responsabilità", "d": "Chi decide il destino di un reso dubbio, chi autorizza il reinserimento di un collo con danno esterno non penetrante? Capoturno, responsabile operativo e qualità danno sfumature diverse. Tutti ragionevoli, ma il punto non è la buona volontà: è la coerenza." },
+   { "h": "I processi affidati all'esterno", "d": "Manutenzione celle, trasporti e sanificazioni straordinarie possono essere esternalizzati; ciò che non si esternalizza è la responsabilità del risultato. Un vettore con ritardi ripetuti viene richiamato, ma non sempre inserito in un'analisi di tendenza." },
+   { "h": "Dal dato all'apprendimento", "d": "Dopo una settimana calda i tempi di apertura porta aumentano: il dato esiste e viene osservato, ma nessuno lo collega a un possibile aumento delle soste in area intermedia. Manca la traduzione del dato in decisione preventiva." }
+  ]
+ },
+ {
+  "id": "22000_m12_s013",
+  "layout": "cards",
+  "kicker": "Caso completo II",
+  "titolo": "Risultanze del magazzino",
+  "intro": "Distingui ciò che funziona da ciò che non regge ancora abbastanza. Stai osservando un sistema reale, cresciuto velocemente, con protezioni importanti ma non ancora uniformi in tutti i passaggi sensibili. Ricorda: il peso delle risultanze segue il processo, non le tue abitudini mentali.",
+  "cards": [
+   { "h": "I punti forti", "d": "Personale che conosce i flussi, ricevimento organizzato, celle presidiate, area dei prodotti dubbi, base informatica utile, rintracciabilità comunque ricostruibile, emergenze con generatori e regole definite. Non un'organizzazione improvvisata." },
+   { "h": "Monitoraggio del tempo fuori cella", "d": "Il conteggio parte da un momento informatico che non coincide col prelievo effettivo; se il parametro non rappresenta il processo, il controllo perde efficacia. Rilievo sostenibile perché tocca il cuore del monitoraggio operativo." },
+   { "h": "Prodotti dubbi", "d": "Identificazione presente e consapevolezza discreta, ma segregazione fisica non sempre robusta nei picchi e criteri decisionali non uniformi per resi e danni. Separazione, autorità decisionale e regole condivise non sono ancora solide insieme." },
+   { "h": "Rintracciabilità non lineare", "d": "Risale a origine e destinazioni principali, ma con passaggi manuali e supporti paralleli in situazioni notturne. Non puoi dire che manchi: puoi dire che non è ancora abbastanza rapida e lineare per la massima efficacia in una situazione critica." }
+  ]
+ },
+ {
+  "id": "22000_m12_s014",
+  "layout": "evidenza",
+  "kicker": "Caso completo II",
+  "eyebrow": "La lezione della logistica",
+  "titolo": "La sicurezza non si conserva per inerzia, ma per disciplina dei minuti",
+  "testo": "In una piattaforma logistica alimentare non c'è una cottura che abbatte il pericolo: la sicurezza si mantiene attraverso disciplina dei minuti, dei passaggi e delle decisioni. È un controllo meno appariscente del CCP termico, ma non meno importante. Molti professionisti alle prime esperienze cercano nella logistica un equivalente del trattamento termico — un punto spettacolare, una soglia netta, un allarme evidente — e quando non lo trovano sottovalutano il contesto. È un errore: qui il rischio nasce dalla somma di attese brevi, aperture ripetute, criteri decisionali elastici, passaggi manuali e flussi speciali trattati come eccezioni di routine. Presi uno per volta questi segnali sembrano piccoli; presi insieme descrivono la maturità reale del sistema. E vale una seconda lezione: un'organizzazione può avere personale capace e tecnologie moderne, ma restare vulnerabile se non uniforma il modo di decidere. Quando la risposta cambia in base al turno, alla pressione o alla persona presente, la tenuta diventa meno prevedibile — e la prevedibilità, in sicurezza alimentare, è un valore enorme."
+ },
+ {
+  "id": "22000_m12_s015",
+  "layout": "confronto",
+  "kicker": "Discussione risultanze",
+  "titolo": "Pesare evidenze molto diverse",
+  "intro": "Confronta risultanze nate da processi diversi senza perdere coerenza di metodo. La logica resta costante — capire dove si gioca la sicurezza, verificare se il monitoraggio descrive il reale, osservare cosa accade nella deviazione, distinguere reazione e prevenzione, verificare la coerenza sotto pressione — ma il peso delle evidenze cambia con il processo. Ed entrambe le evidenze diventano forti quando osservazione, intervista e storia convergono.",
+  "a": {
+   "h": "Caso I — un centro di gravità netto",
+   "sub": "Il CCP termico",
+   "punti": [
+    { "d": "Le domande decisive ruotano intorno a validazione, monitoraggio, deviazione del limite critico, segregazione e azione correttiva. Le evidenze hanno natura più netta: o il parametro resta entro il limite, o no." },
+    { "d": "Il rilievo sulla deviazione cresceva proprio perché registro, intervista e storia manutentiva raccontavano la stessa fragilità." }
+   ]
+  },
+  "b": {
+   "h": "Caso II — una rete distribuita",
+   "sub": "Catena del freddo e flussi",
+   "punti": [
+    { "d": "Non un solo punto spettacolare, ma controlli diffusi: tempi di esposizione, criteri di accettazione, segregazione dei dubbi, rintracciabilità, processi esterni. Le evidenze sono cumulative." },
+    { "d": "La debolezza sul tempo fuori cella diventava credibile perché dato informatico, osservazione operativa e racconto degli operatori andavano nella stessa direzione." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m12_s016",
+  "layout": "tabella",
+  "kicker": "Discussione risultanze",
+  "titolo": "Conformità, non conformità, miglioramento",
+  "intro": "La competenza più difficile è la proporzione: vedere un problema non basta, devi dargli il nome giusto. Se sbagli il peso, il giudizio perde credibilità. Non classificare mai in base alla simpatia per l'organizzazione: la proporzione nasce dai fatti, non dal clima.",
+  "cols": ["Esito", "Quando si usa — dai due casi"],
+  "righe": [
+   ["Conformità", "Un requisito soddisfatto con evidenze oggettive. Nel caso I la validazione del trattamento e le registrazioni del CCP; nel caso II la rintracciabilità nei passaggi principali e l'area dedicata ai dubbi. Dirlo quando le prove lo mostrano è importante quanto rilevare ciò che non funziona."],
+   ["Non conformità", "Un requisito non soddisfatto, e va dimostrato. Nel caso I l'azione correttiva incompleta dopo la deviazione (non bastava bloccare il lotto); nel caso II il monitoraggio del tempo fuori cella non aderente al fenomeno reale."],
+   ["Spunto di miglioramento", "Nessun requisito mancato, ma una fragilità o tendenza da rafforzare. L'uso non pienamente predittivo dei dati sulle micro fermate, se il quadro complessivo non mostra un impatto concreto sul controllo."],
+   ["Il confine mobile", "Lo stesso fatto cambia peso col contesto: un'etichetta a mano su prodotto trattenuto resta debolezza se eccezionale e dentro una segregazione robusta, sostiene una NC se si ripete e genera ambiguità di stato."]
+  ]
+ },
+ {
+  "id": "22000_m12_s017",
+  "layout": "flusso",
+  "kicker": "Discussione risultanze",
+  "titolo": "Correzione, causa e prodotto: tre frasi",
+  "intro": "La distinzione tra correzione, azione correttiva e gestione del prodotto genera confusione nei casi reali. Per diventare solido, racconta ogni evento in tre frasi separate: se una manca, hai già capito dove il sistema si è fermato. Ricorda anche che non sempre una carenza di processo coincide con un danno dimostrato sul prodotto.",
+  "passi": [
+   { "h": "Che cosa è stato fatto subito", "d": "Il ripristino del parametro, la messa in sicurezza dell'area: la correzione sul processo. Elimina l'effetto immediato, ma da sola non chiude il problema." },
+   { "h": "Che cosa è stato deciso sul prodotto", "d": "Blocco, segregazione, eventuale rilavorazione controllata del lotto coinvolto: la gestione del prodotto potenzialmente non sicuro. Prudente e necessaria, ma ancora non è azione correttiva." },
+   { "h": "Che cosa è stato cambiato per evitare il ritorno", "d": "L'analisi della causa, la modifica del piano di manutenzione o dei criteri di accettazione: l'azione correttiva vera. Il rilievo, quando serve, deve colpire ciò che manca, non ciò che è stato fatto bene." }
+  ]
+ },
+ {
+  "id": "22000_m12_s018",
+  "layout": "punti",
+  "kicker": "Discussione risultanze",
+  "titolo": "Comunicarle con chiarezza e utilità",
+  "intro": "Hai fatto quasi tutto il lavoro difficile: compreso il processo, raccolto evidenze, pesato le deviazioni. Ma una risultanza ben fondata può perdere efficacia se espressa male. Quattro regole la rendono chiara, utile e difendibile.",
+  "punti": [
+   { "h": "Fatti osservati, non impressioni", "d": "Non «la produzione appare disordinata», ma «le interviste hanno mostrato risposte divergenti sull'autorità di sblocco del prodotto». La prima è vaga e attaccabile; la seconda concreta, verificabile e legata a un effetto sul sistema." },
+   { "h": "Collega il fatto al requisito", "d": "Mostra chiaramente perché l'evidenza conta: una segregazione debole riduce la robustezza del controllo dei prodotti potenzialmente non sicuri; una causa non analizzata non garantisce la prevenzione della ricorrenza. Così non appare una preferenza personale, ma un giudizio motivato." },
+   { "h": "Proporzione nel tono", "d": "Non drammatizzare per ottenere attenzione, non ammorbidire per cercare consenso. Riconoscere apertamente ciò che funziona rafforza le criticità e riduce la difensiva dell'interlocutore." },
+   { "h": "La chiusura verbale", "d": "Che cosa hai osservato, perché conta, quale rischio di sistema evidenzia. «Passaggi manuali nelle urgenze notturne, che rallentano la rintracciabilità, con rischio di risposta meno rapida in un richiamo»: sobrio ma completo." }
+  ]
+ },
+ {
+  "id": "22000_m12_s019",
+  "layout": "numeri",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Come leggere bene le domande",
+  "intro": "L'obiettivo non è indovinare risposte, ma riconoscere che cosa la domanda sta davvero misurando. Chi sbaglia spesso non ignora il contenuto: legge in fretta, si aggrappa a una parola familiare e sceglie l'opzione che suona bene. Tratta ogni domanda come un piccolo caso.",
+  "numeri": [
+   { "n": "1", "h": "Identifica il tipo", "d": "Riconoscimento di un concetto, comprensione di una distinzione, o applicazione a uno scenario. Questo passaggio riduce molto gli errori impulsivi." },
+   { "n": "2", "h": "Trova le parole chiave", "d": "Monitoraggio, validazione, verifica, correzione, azione correttiva, rintracciabilità, prodotto potenzialmente non sicuro: fanno da bussola e segnalano quando una risposta ignora un pezzo centrale." },
+   { "n": "3", "h": "Diffida del comodo ma incompleto", "d": "Il distrattore migliore non è assurdo, è quasi giusto. «Basta ripristinare il parametro e riprendere» suona sensato, ma non considera il prodotto e non affronta la causa." },
+   { "n": "4", "h": "Reggerebbe spiegata a voce?", "d": "Se per difenderla devi aggiungere pezzi che la frase non contiene, probabilmente non è la migliore. La risposta giusta regge con ciò che dice." },
+   { "n": "5", "h": "Fedele al corso, non alle abitudini", "d": "Chi ha già esperienza sbaglia più facilmente perché risponde come lavora la propria organizzazione, non col metodo spiegato qui. La simulazione serve anche a correggere questo riflesso." }
+  ]
+ },
+ {
+  "id": "22000_m12_s020",
+  "layout": "tabella",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Riconoscimento e comprensione senza tranelli",
+  "intro": "Alcune domande tipiche, commentate come in un allenamento serio. Nota che le migliori non chiedono dettagli nascosti: chiedono di riconoscere la logica che il corso ha ripetuto più volte. Interiorizza le coppie chiave — CCP contro OPRP, correzione contro azione correttiva, dato disponibile contro dato pertinente — e molte opzioni sbagliate cadono da sole.",
+  "cols": ["Domanda", "Risposta fondata e perché"],
+  "righe": [
+   ["Che cosa rende il CCP diverso da un OPRP?", "Possiede un limite critico che separa accettabilità e non accettabilità. Non l'automazione, non la funzione che lo gestisce, non il sensore in continuo."],
+   ["Quale caso è correzione e non ancora azione correttiva?", "Bloccare il lotto e ripristinare il parametro dopo la deviazione: elimini l'effetto e gestisci il prodotto, ma non hai ancora affrontato la causa."],
+   ["Perché un tempo fuori cella misurato dal momento sbagliato è grave?", "Perché il dato può non rappresentare il fenomeno reale da controllare. Il monitoraggio vale se descrive la realtà operativa."],
+   ["Cosa rende fragile una rintracciabilità con appunti paralleli e due esperti del notturno?", "Diventa più lenta e meno lineare nelle situazioni critiche. Il problema non è il supporto manuale in sé, ma l'affidabilità della ricostruzione in tempi utili."],
+   ["Un'istruzione semplificata non allineata alla procedura: come leggerla?", "Non è un problema estetico se può generare decisioni operative diverse da quelle previste: è una questione di coerenza del sistema."]
+  ]
+ },
+ {
+  "id": "22000_m12_s021",
+  "layout": "punti",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Applicazione: il caso del controllo termico",
+  "intro": "Alziamo il livello con scenari brevi sul primo caso, da trattare come domande di applicazione. Frena l'impulso: un dettaglio come «la deviazione è durata poco» è importante, ma non chiude il ragionamento. Dopo ogni scenario chiediti qual è il fatto decisivo, quale requisito è toccato, quale opzione contiene il ragionamento completo.",
+  "punti": [
+   { "h": "Deviazione breve del CCP", "d": "La risposta solida gestisce subito il prodotto come potenzialmente non sicuro, apre l'evento e valuta anche la causa. Le altre confondono rientro del parametro con chiusura del rischio, riducono tutto a una correzione tecnica o rinviano all'esito microbiologico." },
+   { "h": "Segregazione e rilavorazione", "d": "La segregazione e la rilavorazione riguardano la gestione del prodotto, non esauriscono da sole l'azione correttiva. Bloccare e rilavorare bene mostra prudenza operativa, ma l'azione resta incompleta finché non affronta la causa." },
+   { "h": "Autorità di sblocco divergenti", "d": "Due capi turno descrivono diversamente chi autorizza lo sblocco: la lettura fondata riconosce una debolezza su ruoli e autorità, senza affermare un danno non dimostrato. Rigore senza enfasi, prudenza senza esitazione." }
+  ]
+ },
+ {
+  "id": "22000_m12_s022",
+  "layout": "cards",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Applicazione: il caso logistico",
+  "intro": "Nel magazzino i distrattori sono più insidiosi, perché il problema non nasce da un singolo scarto evidente ma da controlli distribuiti e decisioni che sembrano tutte ragionevoli. Usa sempre una prova mentale: quale opzione resta vera anche spiegata con calma, passo per passo?",
+  "cards": [
+   { "h": "Tempo fuori cella dal momento sbagliato", "d": "La conclusione solida è che il monitoraggio può non rappresentare con fedeltà il fenomeno reale. Non demonizzare il software né concludere subito che il prodotto sia non sicuro: riconosci una debolezza del monitoraggio." },
+   { "h": "Reso integro esternamente", "d": "Va mantenuto segregato e deciso con criteri chiari e responsabilità definite. L'integrità esterna non consente il reinserimento immediato; la segregazione, da sola, non decide il destino del prodotto." },
+   { "h": "Rintracciabilità con appunti paralleli", "d": "Presente, ma non ancora abbastanza lineare e rapida nelle situazioni critiche. «Assente» sarebbe troppo severo, «perfetta» troppo indulgente: scegli la formulazione proporzionata." },
+   { "h": "Attesa non segnalata come deviazione", "d": "La normalizzazione dell'attesa può indebolire il controllo operativo. Se il sistema smette di vedere il ritardo breve, smette anche di governarlo." }
+  ]
+ },
+ {
+  "id": "22000_m12_s023",
+  "layout": "numeri",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Smontare i distrattori più insidiosi",
+  "intro": "Saper demolire i distrattori è una competenza decisiva: nelle prove ben scritte la risposta sbagliata non è ridicola, è solo meno completa, troppo assoluta, o fondata su un pezzo vero usato nel modo sbagliato. Una tecnica utile: riscrivi mentalmente l'opzione in modo più semplice, perché il linguaggio tecnico spesso nasconde la fragilità.",
+  "numeri": [
+   { "n": "1", "h": "Elegante ma logicamente corto", "d": "«Il sensore in continuo garantisce il controllo del CCP»: vero a metà, omette reazione all'allarme, gestione del prodotto, affidabilità della misura. Chiediti che cosa manca." },
+   { "n": "2", "h": "L'assoluto", "d": "Sempre, mai, automaticamente, soltanto. «Ogni collo fuori cella è automaticamente non sicuro» è una semplificazione eccessiva che tradisce il metodo." },
+   { "n": "3", "h": "Lo spostamento sul controllo finale", "d": "«Aspettiamo il laboratorio, poi decidiamo» sembra prudenza, in realtà è un rinvio. Il metodo impone la gestione immediata del prodotto potenzialmente non sicuro." },
+   { "n": "4", "h": "La simpatia per la buona volontà", "d": "Personale esperto e impegnato non cancella la necessità di ruoli chiari, criteri coerenti e monitoraggi pertinenti. «Chi lavora è bravo e saprà cavarsela» è un distrattore." },
+   { "n": "5", "h": "Evento scambiato per sistema", "d": "Una correzione ben fatta non prova l'azione correttiva completa; un'area separata non prova un controllo del dubbio sufficiente. Riporta la frase ai suoi confini: vero, ma non abbastanza." }
+  ]
+ },
+ {
+  "id": "22000_m12_s024",
+  "layout": "split",
+  "kicker": "Simulazione d'esame",
+  "titolo": "Prepararsi e gestire la prova",
+  "lead": "Molti ripassano tutto nello stesso modo: è un errore, perché non tutte le parti hanno lo stesso peso mentale. Una certificazione seria non cerca la recita di formule, ma segnali di comprensione stabile. Conviene lavorare su tre strati e gestire la prova con metodo.",
+  "punti": [
+   { "h": "I tre strati", "d": "Il lessico essenziale, riconosciuto in pochi secondi (conformità, correzione, azione correttiva, monitoraggio, verifica, validazione, PRP, OPRP, CCP); il ragionamento, cioè le relazioni tra processo, prodotto, causa e monitoraggio; l'applicazione, leggere una situazione breve e scegliere l'opzione completa." },
+   { "h": "Il ciclo di ripasso", "d": "Ripassa i concetti con parole tue finché li spieghi ad alta voce, ricostruisci i casi senza guardare il testo, poi inventa una tua simulazione: per costruire una buona domanda devi aver capito davvero il contenuto." },
+   { "h": "La gestione del tempo", "d": "Lettura lenta della domanda, lettura delle opzioni eliminando subito le deboli, verifica se la scelta reggerebbe spiegata a voce. Se una domanda ti blocca, scegli la più fondata, segnala il dubbio e prosegui." },
+   { "h": "La gestione della tensione", "d": "Non si elimina, si governa. Se una domanda sembra ambigua, torna ai pilastri: evidenze, criteri, proporzione, gestione del prodotto, causa, prevenzione della ricorrenza. Questo ti riporta al centro." }
+  ]
+ },
+ {
+  "id": "22000_m12_s025",
+  "layout": "flusso",
+  "kicker": "Schema di certificazione",
+  "titolo": "Leggere il percorso nel suo insieme",
+  "intro": "Dopo il corso non c'è solo una prova, ma un percorso da capire con lucidità. La norma parla della certificazione dei sistemi di gestione delle organizzazioni, non del titolo personale: il percorso personale va letto come buona pratica di qualificazione, valutazione e mantenimento della competenza. Immagina un ponte con tre campate.",
+  "passi": [
+   { "h": "L'accesso", "d": "I prerequisiti del percorso: partecipazione completa al corso, superamento dei checkpoint, tracciabilità dell'apprendimento. Non un dettaglio amministrativo, ma la garanzia che chi si presenta alla prova abbia davvero fatto il cammino." },
+   { "h": "La valutazione", "d": "L'esame finale, il momento in cui l'apprendimento viene messo alla prova in modo strutturato. I casi completi e la simulazione sono la palestra che rende sensato questo passaggio." },
+   { "h": "Il tempo", "d": "Anche una buona prova perde valore senza aggiornamento, pratica riflessiva e mantenimento della competenza. È questo terzo pezzo, spesso trascurato, a rendere la certificazione credibile agli occhi del mercato." }
+  ]
+ },
+ {
+  "id": "22000_m12_s026",
+  "layout": "punti",
+  "kicker": "Schema di certificazione",
+  "titolo": "Esame finale, esito e criteri di lettura",
+  "intro": "Ragiona per principi generali: i dettagli dipendono dallo schema, ma la logica di fondo resta stabile. Una prova credibile valuta la qualità del tuo giudizio, non solo la sicurezza apparente — una risposta esitante ma ben ragionata vale spesso più di una rapida e mal fondata.",
+  "punti": [
+   { "h": "Riconoscimento dei concetti", "d": "Distinguere monitoraggio da verifica, correzione da azione correttiva. Se non lo fai, il linguaggio professionale resta fragile e molte domande, che nascono proprio dalle differenze, diventano trappole." },
+   { "h": "Comprensione delle relazioni", "d": "Capire perché una deviazione del CCP mette subito al centro il prodotto, mentre una debolezza del monitoraggio logistico indebolisce il controllo di processo anche senza provare da sola un danno già avvenuto." },
+   { "h": "Applicazione", "d": "Prendere un caso breve e dare la lettura più fondata, proporzionata e utile. È esattamente la traiettoria seguita da tutto il corso." },
+   { "h": "Leggere l'esito con maturità", "d": "Superare significa aver dimostrato una soglia adeguata, non essere al capolinea. Un esito non favorevole non è una sentenza sulla tua identità: indica passaggi non ancora stabili, una direzione di lavoro anziché un'etichetta." }
+  ]
+ },
+ {
+  "id": "22000_m12_s027",
+  "layout": "cards",
+  "kicker": "Schema di certificazione",
+  "titolo": "Mantenimento e crescita professionale",
+  "intro": "La parte più adulta del percorso, quella che distingue un risultato iniziale da una vera traiettoria. Il mantenimento non è un'aggiunta burocratica: è la condizione di credibilità nel tempo, perché una competenza che non si aggiorna lentamente si consuma. Protegge non solo il titolo, ma il tuo giudizio.",
+  "cards": [
+   { "h": "Aggiornamento", "d": "Continuare a frequentare contenuti, casi e confronti che tengono vivo il lessico e il metodo. Non serve studiare tutto ogni settimana: serve non interrompere il filo." },
+   { "h": "Esperienza riflessa", "d": "Non accumulare incarichi, ma rileggerli: che cosa hai visto, dove hai esitato, in quale situazione hai confuso una debolezza con una non conformità. Uno dei veri acceleratori di maturità." },
+   { "h": "Il confronto", "d": "Parlare con colleghi esperti, leggere casi commentati, discutere risultanze ti impedisce di trasformare il tuo stile personale in misura universale." },
+   { "h": "Disciplina documentale personale", "d": "Tenere traccia di attività, aggiornamenti e aree che stai rinforzando serve prima di tutto a te, perché rende visibile il tuo sviluppo. Dopo ogni incarico, annota tre cose: cosa ti ha convinto, cosa ti ha lasciato dubbio, cosa studierai." }
+  ]
+ },
+ {
+  "id": "22000_m12_s028",
+  "layout": "numeri",
+  "kicker": "Riepilogo finale",
+  "titolo": "La mappa essenziale che resta",
+  "intro": "Il corso è stato ricco, persino denso. Adesso serve una mappa semplice, non per ridurre tutto, ma per trattenere ciò che davvero ti servirà quando resti tu con il tuo giudizio. Se volessi una sola frase: capire il processo, raccogliere evidenze pertinenti, confrontarle con criteri chiari, pesare le risultanze con proporzione, comunicarle con precisione e continuare a migliorare.",
+  "numeri": [
+   { "n": "1", "h": "Comincia dal processo reale", "d": "Capire come l'organizzazione funziona, dove passa il prodotto, quali decisioni contano davvero." },
+   { "n": "2", "h": "Evidenze pertinenti e verificabili", "d": "Non vedere molte cose, ma vedere quelle giuste e saperle collegare a un criterio." },
+   { "n": "3", "h": "La proporzione del giudizio", "d": "Conformità, NC e miglioramento dipendono dal requisito toccato, dalle prove e dall'effetto sul controllo." },
+   { "n": "4", "h": "Sintomo, effetto, causa", "d": "Rientrare nei parametri corregge il processo, ma non chiude ancora il problema." },
+   { "n": "5", "h": "I dati devono rappresentare la realtà", "d": "Sensore, gestionale o registrazione valgono solo se misurano il fenomeno giusto." },
+   { "n": "6", "h": "Ruoli e autorità nei momenti anomali", "d": "La maturità emerge nella deviazione, nel reso, nella fermata, nel dubbio, nell'emergenza." },
+   { "n": "7", "h": "Competenza è ordine mentale", "d": "Le risposte migliori non erano le più tecniche in apparenza, ma le più complete e fedeli ai fatti." },
+   { "n": "8", "h": "Il valore del tempo", "d": "La certificazione ha senso solo se si appoggia su aggiornamento, pratica riflessiva e mantenimento." }
+  ]
+ },
+ {
+  "id": "22000_m12_s029",
+  "layout": "chiusura",
+  "kicker": "Chiusura del corso",
+  "modNum": "12",
+  "titolo": "Il tuo piano verso l'esame e oltre",
+  "punti": [
+   { "h": "Ripassa per logiche, non per capitoli", "d": "Riprendi i casi completi e chiediti, senza guardare le slide, quali erano i fatti decisivi e quali risultanze erano sostenibili. Ricostruire il ragionamento con parole tue vale più di rileggere in modo passivo." },
+   { "h": "Allenati a distinguere", "d": "Processo e prodotto. Correzione e azione correttiva. Dato disponibile e dato pertinente. Severità impropria e indulgenza impropria. Queste coppie sono la vera palestra dell'esame e della professione." },
+   { "h": "Pensa già al dopo", "d": "La certificazione non sarà un trofeo immobile, ma l'inizio di una responsabilità. Immagina fin da ora come manterrai viva la competenza: aggiornamento, confronto, riesame dei casi, attenzione al tuo modo di formulare giudizi." },
+   { "h": "Il piano dei prossimi giorni", "d": "Ripassa il lessico finché le distinzioni diventano naturali; rifai la simulazione spiegando a voce perché le risposte sbagliate erano sbagliate; scegli un caso e presentalo a un collega — contesto, evidenze, risultanze, lezione operativa." },
+   { "h": "Una fiducia concreta", "d": "Non devi sapere tutto in modo perfetto per affrontare bene la prova: devi sapere pensare con metodo. Se resti fedele ai fatti, colleghi le evidenze ai criteri, eviti conclusioni facili e mantieni la proporzione, hai già con te l'essenziale." },
+   { "h": "Il traguardo", "d": "Dalla terminologia iniziale alla capacità di leggere contesti complessi senza perdere la bussola: questo è il percorso che hai compiuto. Porta con te metodo, rigore, chiarezza e disponibilità a migliorare. Buon ripasso, buona prova e buon lavoro." }
+  ]
+ }
+]
