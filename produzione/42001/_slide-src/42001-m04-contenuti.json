@@ -1,0 +1,402 @@
+[
+ {
+  "id": "42001_m04_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 42001 — Sistemi di gestione dell'IA",
+  "kicker": "Modulo 4",
+  "eyebrow": "Ciò che regge tutto il resto",
+  "titolo": "Contesto, leadership e pianificazione",
+  "testo": "Prima dei controlli, delle verifiche e delle misure viene sempre una domanda semplice: in quale contesto stai agendo, con quali responsabilità, verso quali persone, con quali obiettivi. Se resta vaga, il sistema si riempie di parole corrette ma perde direzione; se è chiaro, anche le scelte successive diventano leggibili e difendibili. Vedrai sei snodi centrali: il contesto (fattori esterni e interni che aiutano o ostacolano i risultati attesi dell'SGIA); le parti interessate (soggetti con requisiti pertinenti o impattati); il campo di applicazione (il perimetro reale); poi leadership e politica, perché la norma chiede una direzione visibile e integrata nei processi di business; ruoli, responsabilità e autorità; e infine obiettivi e pianificazione delle modifiche. Un filo unisce tutto: non si definisce la politica senza aver letto il contesto, non si fissano obiettivi senza capire le parti interessate, non si assegnano ruoli senza chiarire il perimetro. Il sistema di IA non vive da solo: vive dentro un'organizzazione, una filiera, una cultura, un mercato, regole e aspettative.",
+  "agenda": [
+   "Il contesto: ruolo, fattori esterni e interni",
+   "Le parti interessate e i requisiti pertinenti",
+   "Il campo di applicazione e l'SGIA come sistema vivo",
+   "Leadership e politica per l'IA",
+   "Ruoli, responsabilità, autorità",
+   "Obiettivi, modifiche e verifica sul campo"
+  ]
+ },
+ {
+  "id": "42001_m04_s002",
+  "layout": "punti",
+  "kicker": "Contesto · 1",
+  "titolo": "Il ruolo concreto rispetto ai sistemi di IA",
+  "intro": "Il contesto qui è operativo: serve a capire che cosa può influenzare la capacità di ottenere i risultati attesi dell'SGIA. La norma porta subito a un punto concreto: perché l'organizzazione sviluppa, fornisce o utilizza i propri sistemi, e quale ruolo assume. Quando qualcuno dice solo «usiamo l'IA», non hai ancora capito quasi nulla.",
+  "punti": [
+   { "h": "I ruoli non si escludono", "d": "Fornitore (mette a disposizione), produttore (sviluppo, progettazione, test, governance), utilizzatore (adotta per le proprie attività), partner (integra o fornisce dati), in relazione con autorità. Spesso convivono, e la sovrapposizione rende il contesto più delicato." },
+   { "h": "Chiedi il dettaglio", "d": "Per fare che cosa, in quale parte del ciclo di vita, con quali dipendenze, verso quali soggetti, con quale grado di controllo. Anche l'applicabilità dei requisiti cambia col ruolo: chi progetta ha più potere sulle scelte, chi acquista confezionato conserva responsabilità su uso, dati, istruzioni, monitoraggio." },
+   { "h": "Ruolo e soggetti impattati non si confondono", "d": "Se un sistema produce effetti su lavoratori o utenti, è essenziale per il contesto, ma non cambia automaticamente il ruolo dell'organizzazione: pesa soprattutto nella lettura dei soggetti impattati. Piani collegati, ma distinti." },
+   { "h": "La mappa dei ruoli, vera non sofisticata", "d": "Se si dichiara «solo utilizzatrice» ma parametrizza il modello, definisce i casi d'uso e governa la messa in esercizio, il ruolo effettivo è più ampio. Capire il ruolo significa capire dove nascono rischi, dove stanno le opportunità, dove vanno prese le decisioni." }
+  ]
+ },
+ {
+  "id": "42001_m04_s003",
+  "layout": "cards",
+  "kicker": "Contesto · 2",
+  "titolo": "I fattori esterni",
+  "intro": "Guarda ciò che circonda l'organizzazione: non notizie di sfondo, ma pressioni, vincoli e spinte che possono orientare decisioni, priorità e limiti operativi — quelli che possono cambiare la capacità dell'SGIA di arrivare ai risultati attesi.",
+  "cards": [
+   { "h": "Regole e obblighi", "d": "Non basta sapere che esiste una legge: capire se l'organizzazione ha compreso quali obblighi la riguardano, in quali contesti giuridici opera, per quali casi d'uso concreti. Un sistema innocuo in un reparto può essere sensibile in un altro." },
+   { "h": "Orientamenti delle autorità", "d": "Non solo testi normativi formali, ma linee guida, decisioni, chiarimenti, prese di posizione. Spesso trascurato: molte organizzazioni cercano solo la regola scritta e ignorano che la prassi delle autorità incide sulle scelte operative." },
+   { "h": "Incentivi e conseguenze", "d": "Perché l'organizzazione usa quell'IA, che vantaggio attende, cosa rischia se fallisce o viene contestata. Se l'incentivo dominante è accelerare, alcune cautele sembreranno ostacoli; se l'errore ha effetti seri, il presidio dovrà essere più robusto." },
+   { "h": "Cultura e pressione competitiva", "d": "Due usi tecnicamente simili sono accolti diversamente secondo il dominio — ordinare ticket interni non è come orientare l'accesso a un servizio esterno. E il mercato può spingere ad adottare troppo in fretta per non restare indietro: cerca un ragionamento aggiornato, non un elenco statico." }
+  ]
+ },
+ {
+  "id": "42001_m04_s004",
+  "layout": "split",
+  "kicker": "Contesto · 3",
+  "titolo": "I fattori interni e la domanda sul clima",
+  "lead": "Dopo aver guardato fuori, guarda dentro: come l'organizzazione decide davvero, distribuisce il potere, assegna priorità, collega i sistemi di IA ai propri scopi reali. Non caselle dell'organigramma, ma vincoli operativi, assetti decisionali, accordi presi, capacità di tradurre regole in comportamento. Il punto è se l'SGIA è costruito sulla realtà o su una versione idealizzata.",
+  "punti": [
+   { "h": "Che cosa comprende", "d": "Contesto organizzativo, governance, obiettivi, politiche e procedure, obblighi contrattuali, scopo atteso dei sistemi. Un'organizzazione centralizzata con controllo documentale maturo ha un profilo diverso da una distribuita con sedi autonome e regole disomogenee — nessuna giusta in assoluto." },
+   { "h": "Se i dati non reggono la promessa", "d": "Un'impresa logistica che usa l'IA per priorità di carico e itinerari: qualità dei dati storici, autonomia dei dispatcher, pressione sui tempi, impegni coi clienti chiave. Se non letti, il sistema prometterà un governo che l'organizzazione non riesce a sostenere." },
+   { "h": "La domanda sul cambiamento climatico", "d": "Da prendere sul serio senza slogan: non se il tema è importante in astratto, ma se — in quel contesto — il clima incide su risorse, continuità, aspettative, scelte tecnologiche tali da influenzare i risultati attesi. La valutazione va fatta comunque, e motivata." },
+   { "h": "Rilevanza variabile", "d": "Chi addestra modelli intensivi e gestisce capacità di calcolo elevate può dover considerare energia, efficienza, aspettative di clienti sensibili; chi usa un servizio esterno già pronto può avere rilevanza bassa — ma deve saper spiegare perché. Risposte diverse, entrambe motivate." }
+  ]
+ },
+ {
+  "id": "42001_m04_s005",
+  "layout": "tabella",
+  "kicker": "Contesto · 4",
+  "titolo": "Leggere davvero il contesto: una matrice",
+  "intro": "Comprendere il contesto non è compilare una pagina e dimenticarla, ma creare una base per decisioni e priorità. Tre passaggi: identificare il ruolo, distinguere fattori esterni e interni, collegarli a scelte concrete. Se manca il terzo, hai una fotografia, non governo. Una matrice — non un requisito, ma uno strumento utile — rende il contesto motore di azioni.",
+  "cols": ["Ruolo", "Fattore rilevante", "Effetto possibile", "Decisione conseguente"],
+  "righe": [
+   ["Fornitore di piattaforma di supporto", "Orientamento dell'autorità di settore (esterno)", "Rischio di interpretazioni difformi tra sedi", "Introdurre criteri comuni e chiarire responsabilità"],
+   ["Utilizzatore multi-sede", "Assenza di governance centrale dei dati (interno)", "Decisioni incoerenti tra unità diverse", "Definire una funzione o un raccordo sui dati"],
+   ["Segnali di maturità", "Il contesto è specifico ai casi d'uso, aggiornato, e i responsabili parlano la stessa lingua", "Collegamento visibile con politica, obiettivi, campo di applicazione", "Se il contesto dice che il sistema impatta persone esterne, politica e obiettivi devono rifletterlo"],
+   ["La data di scadenza", "Nuovo fornitore, nuovo strumento, cliente che cambia richieste, riorganizzazione", "La lettura precedente diventa parziale", "Definire quando rileggerlo: una cadenza minima più eventi che impongono revisione"]
+  ]
+ },
+ {
+  "id": "42001_m04_s006",
+  "layout": "split",
+  "kicker": "Parti interessate · 1",
+  "titolo": "Chi conta davvero per il sistema",
+  "lead": "Dopo il contesto: chi sono le parti interessate rilevanti, quali requisiti pertinenti portano, quali saranno presidiati dall'SGIA. Uno dei passaggi più rivelatori: molte organizzazioni sanno nominare clienti e autorità, molte meno riconoscono tutti i soggetti che influenzano il sistema o ne sono toccati. La parola chiave è «rilevanti» — non una lista infinita di chiunque abbia un'opinione.",
+  "punti": [
+   { "h": "Chi rientra", "d": "Alta direzione, responsabili di funzione, personale che sviluppa o usa il sistema, clienti, partner, integratori, fornitori di dati, autorità, e categorie di persone impattate anche senza rapporto contrattuale diretto." },
+   { "h": "Chi è impattato non coincide con chi compra", "d": "Il cliente può essere un'impresa, ma gli effetti ricadono su lavoratori, utenti finali, candidati, pazienti, cittadini. Se restano fuori dalla mappa, il sistema perde profondità proprio dove dovrebbe essere più attento." },
+   { "h": "Tre domande", "d": "Chi può influenzare in modo reale il governo del sistema? Chi può essere toccato dai suoi esiti? Quali di questi soggetti portano requisiti o aspettative che incidono sui risultati attesi? Quando l'organizzazione risponde bene, la mappa diventa strumento di governo." },
+   { "h": "L'errore comune", "d": "Vedere bene chi influenza (siede ai tavoli) e male chi subisce (non siede). Se un sistema classifica o supporta decisioni su persone, quelle categorie devono entrare almeno come riferimento ragionato — non per soddisfare ogni desiderio, ma per non falsare la lettura." }
+  ]
+ },
+ {
+  "id": "42001_m04_s007",
+  "layout": "cards",
+  "kicker": "Parti interessate · 2",
+  "titolo": "I requisiti pertinenti: obblighi, attese, confini",
+  "intro": "Identificare le parti è metà del lavoro; l'altra metà è capire quali loro requisiti sono pertinenti. Il rischio è doppio: ridurre tutto ai soli obblighi di legge, o allargare a desideri vaghi e preferenze senza peso. La norma chiede il punto giusto — rilevanti per il sistema, il contesto e i risultati attesi. E la pertinenza non è eterna: cambia col caso d'uso, la giurisdizione, il mercato.",
+  "cards": [
+   { "h": "Obblighi chiari", "d": "Da leggi e regolazioni applicabili, o da obblighi contrattuali: l'organizzazione li deve presidiare. La base non discutibile." },
+   { "h": "Attese forti e ricorrenti", "d": "Pur senza forma di obbligo formale, possono influenzare conformità, reputazione, continuità o capacità di raggiungere gli obiettivi. Se un'organizzazione usa l'IA per priorità di assistenza, i clienti attendono non solo velocità ma coerenza di trattamento." },
+   { "h": "Richieste occasionali", "d": "Possono essere ascoltate ma non necessariamente portate nell'SGIA. Un visitatore che chiede un colore diverso per l'interfaccia del totem non è un requisito pertinente del sistema." },
+   { "h": "Ascoltare funzioni diverse", "d": "Il legale vede certi requisiti, le operations altri, il commerciale altri, e chi usa il sistema capisce prima di tutti dove nascono attriti e usi devianti. Mettere insieme le prospettive evita che il sistema diventi cieco su aspetti essenziali." }
+  ]
+ },
+ {
+  "id": "42001_m04_s008",
+  "layout": "confronto",
+  "kicker": "Parti interessate · 3",
+  "titolo": "Vedere anche chi non siede al tavolo",
+  "intro": "Una delle prove più serie di maturità: l'organizzazione sa vedere anche chi non è nella stanza. Nei sistemi di IA gli effetti raggiungono persone che non hanno firmato un contratto, non partecipano al progetto, magari non sanno che un sistema influenza il loro percorso. La regola pratica: dove c'è effetto prevedibile, lì c'è una possibile parte interessata.",
+  "a": {
+   "h": "Chi governa il sistema",
+   "sub": "Ai tavoli decisionali",
+   "punti": [
+    { "d": "Committente, fornitore tecnologico, direzione, funzioni interne. Sono i più facili da riconoscere e i più ascoltati, perché siedono dove si decide." },
+    { "d": "Se l'analisi si ferma qui, il sistema di gestione sarà formalmente ordinato ma sostanzialmente miope — attento al perimetro contrattuale, cieco sull'ambiente sociale." }
+   ]
+  },
+  "b": {
+   "h": "Chi subisce gli effetti",
+   "sub": "Le aspettative sociali",
+   "punti": [
+    { "d": "Studenti e famiglie di una piattaforma educativa; lavoratori di uno strumento sul personale. Le attese pertinenti non riguardano solo l'accuratezza, ma come i risultati vengono usati, chi li vede, quali effetti pratici producono." },
+    { "d": "Aspettative sociali non significa inseguire ogni dibattito, ma riconoscere preoccupazioni collettive, persistenti e ragionevoli che influenzano l'accettabilità dell'uso. Considerarle presto fa emergere prima frizioni e usi impropri: non solo prudenza, buona gestione." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m04_s009",
+  "layout": "flusso",
+  "kicker": "Parti interessate · 4",
+  "titolo": "Quali requisiti entrano davvero nell'SGIA",
+  "intro": "Il punto non si ferma a identificare parti e requisiti: chiede di stabilire quali verranno gestiti attraverso l'SGIA. Evita due errori — che il sistema assorba tutto, o che sia un involucro simbolico che lascia fuori proprio i requisiti che dovrebbero orientarlo. Il criterio è la pertinenza operativa.",
+  "passi": [
+   { "h": "Il requisito ha bisogno di essere tradotto?", "d": "Entra nell'SGIA quando deve diventare processi, responsabilità, controlli, monitoraggi, comunicazioni o obiettivi del sistema. Tre domande: cambia come il sistema va usato o tenuto sotto controllo? Richiede ruoli, decisioni, risorse, tracciabilità? Influenza obiettivi o campo di applicazione?" },
+   { "h": "Se sì, entra; se è già presidiato altrove, resta collegato", "d": "Un requisito ben gestito da altri sistemi può restare collegato ma non replicato. «Collegato» non significa dimenticato: l'organizzazione deve sapere dove è presidiato e come l'SGIA si coordina con quel presidio." },
+   { "h": "Documenta la logica", "d": "Quando la selezione non è esplicita, ogni funzione fa ipotesi proprie: il legale pensa lo monitori il sistema, le operations lo credono contrattuale, il management presume ci pensi il fornitore — e nessuno lo presidia. Non serve un apparato pesante, serve chiarezza." },
+   { "h": "Anche il tema climatico", "d": "Se un committente o un investitore esprime esigenze climatiche pertinenti rispetto a come il sistema è costruito o impiegato, l'organizzazione decide se e come quel requisito entra nell'SGIA. Conta il collegamento col contesto e coi risultati attesi." }
+  ]
+ },
+ {
+  "id": "42001_m04_s010",
+  "layout": "punti",
+  "kicker": "Campo di applicazione · 1",
+  "titolo": "Fissare confini chiari per un sistema credibile",
+  "intro": "Quando dici «SGIA di questa organizzazione», di che cosa stai parlando davvero? La risposta è nel campo di applicazione. La norma chiede di definire il perimetro reale su due basi che non puoi saltare: il contesto (fattori interni ed esterni) e i requisiti pertinenti delle parti interessate. E deve essere reso disponibile in forma documentata — non vivere in un accordo implicito tra funzioni.",
+  "punti": [
+   { "h": "Che cosa deve chiarire", "d": "Quali attività rientrano rispetto ai requisiti applicabili, quali sistemi di IA (o insiemi omogenei) sono inclusi, quali elementi restano fuori e per quali ragioni." },
+   { "h": "Due errori opposti", "d": "Un perimetro troppo esteso, disegnato per apparire ambizioso, copre aree che l'organizzazione non governa davvero; uno troppo ristretto, per comodità, esclude i sistemi più rilevanti. «Non ci è comodo» o «è gestito dal fornitore» non sono spiegazioni." },
+   { "h": "Non solo software, ma governo", "d": "Includere un sistema significa includere il modo in cui l'organizzazione lo governa: leadership, pianificazione, ruoli, monitoraggi, supporto, interfacce. Per questo la qualità del campo di applicazione anticipa già la qualità del sistema di gestione." },
+   { "h": "Un test di realtà", "d": "Prendi un sistema incluso e chiediti se l'organizzazione sa descriverne scopo, responsabilità, requisiti pertinenti e collegamento con politica e obiettivi. Se sì, il perimetro è probabilmente serio; se no, è stato inserito prima di essere pronto a governarlo." }
+  ]
+ },
+ {
+  "id": "42001_m04_s011",
+  "layout": "cards",
+  "kicker": "Campo di applicazione · 2",
+  "titolo": "Inclusioni, esclusioni, confini difendibili",
+  "intro": "Il perimetro è solo dichiarato o davvero difendibile? Nasce da scelte motivate e coerenti con contesto e parti interessate, non da «tutti i sistemi digitali innovativi». Escludere non è vietato; escludere senza logica chiara è un problema. Il perimetro non è solo tecnologico: se includi un sistema, includi anche le attività organizzative per governarlo.",
+  "cards": [
+   { "h": "Il test dell'inclusione", "d": "Preso un sistema incluso, riesci a descrivere chi lo governa, in quali processi entra, con quali criteri, quali requisiti lo riguardano? Se no, forse è stato inserito troppo presto o in modo superficiale." },
+   { "h": "Il test dell'esclusione", "d": "Un modello di laboratorio può restare fuori se davvero confinato alla sperimentazione, senza impatto sui processi e senza uso operativo. Ma regge solo se il confine tra sperimentazione e uso reale è netto e compreso — se viene già consultato per decidere, l'esclusione è fragile." },
+   { "h": "Le esclusioni più deboli", "d": "«Troppo piccolo», «fornitore esterno quindi non ci riguarda», «uso informale», «pilota che però influenza già decisioni». Nessuna basta: la domanda non è quanto è grande o se è interno, ma se rientra nelle attività che l'organizzazione deve governare." },
+   { "h": "Il vantaggio di un buon perimetro", "d": "Riduce le zone grigie: le persone sanno a quali sistemi si applicano politica, obiettivi e controlli; i fornitori sanno dove iniziano le interfacce; la leadership decide risorse con precisione. E se trovi un sistema importante non menzionato, hai una domanda forte." }
+  ]
+ },
+ {
+  "id": "42001_m04_s012",
+  "layout": "evidenza",
+  "kicker": "Campo di applicazione · 3",
+  "eyebrow": "Processi collegati, non scatole separate",
+  "titolo": "L'SGIA deve funzionare come un tutto",
+  "testo": "Definire il campo di applicazione è necessario ma non basta: l'organizzazione deve costruire il proprio SGIA, metterlo in pratica, mantenerlo attivo, farlo evolvere e descriverlo in forma documentata. Il cuore, però, è un'altra idea: il sistema comprende i processi coinvolti e i legami tra quei processi. Non adempimenti isolati, ma un insieme che funziona come un tutto. Un SGIA maturo si riconosce dalla facilità con cui segui i collegamenti: dal contesto arrivi alle scelte di perimetro, da queste alla politica, dalla politica agli obiettivi, dagli obiettivi a ruoli, azioni e verifiche; e quando compare una modifica, capisci come si riflette sugli altri elementi. Se ogni pezzo sembra scritto da una funzione diversa senza dialogo, la conformità può apparire in superficie, ma il sistema non reggerà. Fermati anche sui verbi: mettere in pratica significa che non resta sulla carta; mantenere significa che ciò che è stato deciso continua a funzionare dopo la fase iniziale; far evolvere significa apprendere da problemi e cambiamenti; documentare significa renderlo comprensibile e verificabile. Nessuno è ornamentale. L'errore frequente è immaginare l'SGIA come struttura laterale, affidata a un piccolo gruppo, separata dai processi reali: lì i legami si spezzano subito. La norma vuole il contrario — un sistema inserito nella vita organizzativa, non appoggiato accanto ad essa. Quando i processi sono collegati, le decisioni diventano più leggibili e i cambiamenti più governabili."
+ },
+ {
+  "id": "42001_m04_s013",
+  "layout": "numeri",
+  "kicker": "Campo di applicazione · 4",
+  "titolo": "Quando il perimetro regge davvero",
+  "intro": "Il campo di applicazione è chiaro e documentato, ma regge quando lo confronti con le attività quotidiane? Cerca segnali concreti che distinguono un SGIA operante da una struttura solo dichiarata. Molte fragilità emergono da frasi innocue: «lo usa solo il team pilota», «questa parte la segue il fornitore», «la direzione ha approvato, ma poi non entra».",
+  "numeri": [
+   { "n": "1", "h": "Tracciabilità logica", "d": "Preso un sistema nel perimetro, risali dallo scopo alle parti interessate, dai requisiti alla politica, dalla politica a obiettivi e processi. Se la catena si interrompe, il sistema esiste solo in parte." },
+   { "n": "2", "h": "Coerenza documentale-operativa", "d": "Se il documento dice che il perimetro comprende i sistemi del supporto clienti, ma i responsabili trattano alcuni strumenti come «aiuti personali» fuori da ogni presidio, spesso non è un problema terminologico: è un perimetro non compreso allo stesso modo da tutti." },
+   { "n": "3", "h": "Gestione delle interfacce", "d": "I sistemi dipendono da dati, piattaforme, fornitori, decisioni umane. Deve essere chiaro chi valuta gli aggiornamenti, chi osserva gli effetti nell'uso, come le informazioni tornano nel sistema. Se nessuno risponde, il perimetro è probabilmente solo nominale." },
+   { "n": "4", "h": "Assorbire il cambiamento", "d": "Se il fornitore modifica una funzione, se si estende un caso d'uso, se entrano nuove aspettative, il perimetro resta chiaro o si crea confusione? Segui un fatto recente: se è avvenuto nella realtà ma non compare nel sistema, il perimetro non sta reggendo." }
+  ]
+ },
+ {
+  "id": "42001_m04_s014",
+  "layout": "punti",
+  "kicker": "Leadership · 1",
+  "titolo": "Il sistema funziona se la direzione lo guida",
+  "intro": "La norma chiede all'alta direzione di mostrare con fatti di guidare e sostenere l'SGIA. Non si accontenta di una firma: chiede prova di direzione reale, visibile nelle scelte, nelle priorità, nelle risorse, nei messaggi alle persone. Le persone capiscono in fretta se un tema è davvero prioritario o soltanto dichiarato.",
+  "punti": [
+   { "h": "Politica e obiettivi coerenti con la strategia", "d": "La politica non può essere separata dalla traiettoria dell'impresa, né gli obiettivi andare in una direzione e il business in un'altra. Se si punta su velocità e scala, la leadership deve spiegare come convivano con una gestione efficace dell'IA." },
+   { "h": "Visibile senza tecnicismi", "d": "L'alta direzione non progetta modelli né parametri: deve rendere evidente che il sistema conta, che i requisiti applicabili contano, che i risultati attesi non sono facoltativi. La norma le attribuisce la responsabilità del tono organizzativo." },
+   { "h": "Cultura, non solo procedure", "d": "Promuovere e incarnare una cultura orientata a un uso responsabile è una manifestazione di leadership: la direzione governa anche con l'esempio, con ciò che premia, con ciò che tollera, con ciò che chiede quando emergono problemi." },
+   { "h": "Il contrario della leadership forte", "d": "Se la direzione approva ma non conosce i sistemi nel perimetro, non collega politica e obiettivi, non mette risorse e non pretende visibilità sulle prestazioni, la leadership è debole anche col linguaggio più impeccabile. «Arrangiatevi, riferitemi se c'è un incidente» non è governo." }
+  ]
+ },
+ {
+  "id": "42001_m04_s015",
+  "layout": "cards",
+  "kicker": "Leadership · 2",
+  "titolo": "Leadership in pratica",
+  "intro": "Le manifestazioni operative: assicurare l'integrazione dei requisiti dell'SGIA nei processi di business, rendere disponibili le risorse, comunicare l'importanza di una gestione efficace dell'IA. Qui la norma scende molto vicino alla realtà quotidiana.",
+  "cards": [
+   { "h": "Integrazione nei processi", "d": "Il contrario della gestione laterale: ciò che il sistema richiede va incorporato nei flussi con cui si sviluppa, acquisisce, usa, controlla o modifica un sistema di IA. Se un nuovo strumento entra allo sportello, i criteri devono entrare nel processo di adozione, non arrivare a valle come correzione." },
+   { "h": "Le risorse, test di sincerità", "d": "Molte dichiarazioni cadono qui. Non solo budget: tempo, persone competenti, coordinamento tra funzioni, tempi per riesami, capacità di intervenire sugli scostamenti. Se il sistema è importante, deve trovare posto nell'agenda e nelle scelte di allocazione." },
+   { "h": "La comunicazione", "d": "Rendere esplicito il messaggio organizzativo: chi usa un sistema in un processo critico deve sapere che esistono aspettative precise sul modo corretto di usarlo, segnalarne problemi, rispettarne i limiti. Una leadership silenziosa lascia spazio a pratiche divergenti." },
+   { "h": "Quando entra davvero", "d": "In una rete di ambulatori, l'adozione coinvolge operations, qualità, responsabili di sede e chi presidia i requisiti, con tempo per formazione e messaggi chiari. Se invece il software viene distribuito e la governance arriva mesi dopo, la leadership è mancata proprio dove la norma la voleva visibile." }
+  ]
+ },
+ {
+  "id": "42001_m04_s016",
+  "layout": "punti",
+  "kicker": "Leadership · 3",
+  "titolo": "Risultati attesi, persone, miglioramento",
+  "intro": "La leadership non si esaurisce nell'avvio. La norma chiede anche di assicurare che l'SGIA consegua i risultati attesi, di indirizzare e supportare le persone, di promuovere il miglioramento continuo, di supportare altri ruoli nel dimostrare leadership. Non un vertice che firma e scompare, ma uno che orienta, sostiene, verifica e abilita.",
+  "punti": [
+   { "h": "Assicurare i risultati attesi", "d": "Non promettere che ogni sistema funzioni sempre, ma governare il sistema di gestione perché produca gli esiti per cui è nato — coerenza delle decisioni, chiarezza delle responsabilità, presidio dei requisiti, apprendimento dagli scostamenti. Diventano credibili quando qualcuno li chiede, li osserva e reagisce." },
+   { "h": "Indirizzare e supportare le persone", "d": "Le organizzazioni usano l'IA attraverso persone reali, con competenze e pressioni diverse. Devono sapere cosa ci si aspetta, avere spazio per segnalare problemi, ricevere supporto, non restare sole davanti al conflitto tra velocità e corretto governo." },
+   { "h": "Il miglioramento continuo", "d": "Non inseguire novità per principio, ma usare ciò che si apprende per rafforzare il sistema. Una leadership matura tratta errori e criticità come occasioni per capire dove correggere; una immatura li tratta come eccezioni da gestire in silenzio — e il sistema si irrigidisce." },
+   { "h": "La leadership diffusa", "d": "Supportare altri ruoli nel dimostrare leadership evita di concentrare tutto al vertice: chi deve applicare la politica o gestire una modifica ha bisogno non solo dell'incarico formale, ma di supporto visibile — criteri comuni, tempo per verificare, canali di riporto." }
+  ]
+ },
+ {
+  "id": "42001_m04_s017",
+  "layout": "numeri",
+  "kicker": "Politica · 1",
+  "titolo": "La politica per l'IA: una direzione dichiarata",
+  "intro": "Non un testo ornamentale da caricare in intranet, ma la dichiarazione con cui l'alta direzione rende esplicita la rotta e offre la base da cui far discendere gli obiettivi. Quando sembra intercambiabile con quella di chiunque altro, di solito sta guidando poco. Quattro contenuti essenziali.",
+  "numeri": [
+   { "n": "1", "h": "Adatta alle finalità", "d": "Deve assomigliare davvero all'organizzazione, al suo contesto e al campo di applicazione. La politica di una piattaforma che vende IA a clienti esterni non è quella di un ente che usa l'IA solo internamente: linguaggio, accenti e priorità riflettono ruoli e scopi reali." },
+   { "n": "2", "h": "Base per gli obiettivi", "d": "Gli obiettivi non nascono da intuizioni isolate ma da una direzione dichiarata: se la politica insiste su gestione efficace, requisiti e miglioramento, gli obiettivi traducono questi temi in risultati osservabili. Senza legame, la politica resta ideale e gli obiettivi meri adempimenti." },
+   { "n": "3", "h": "Impegno verso i requisiti applicabili", "d": "Trasforma vincoli, obblighi e attese in un impegno assunto dalla direzione. Quando è esplicito, il sistema può chiedere coerenza a funzioni, risorse e decisioni; quando manca, il rispetto dei requisiti diventa affare solo tecnico o legale." },
+   { "n": "4", "h": "Impegno al miglioramento continuo", "d": "Non descrive un assetto perfetto e immobile, dichiara che il sistema deve evolvere. In un ambiente dove cambiano casi d'uso, fornitori e aspettative, senza questa apertura la politica diventa presto un testo superato dalla pratica." }
+  ]
+ },
+ {
+  "id": "42001_m04_s018",
+  "layout": "split",
+  "kicker": "Politica · 2",
+  "titolo": "Documentata, comunicata, collegata",
+  "lead": "Una buona politica non basta se nessuno la conosce o resta isolata. La norma aggiunge: deve esistere come informazione documentata, collegarsi ad altre politiche quando serve, essere comunicata internamente e resa accessibile alle parti interessate rilevanti quando opportuno. Deve esistere in modo stabile, dialogare col sistema, circolare tra le persone, poter essere condivisa con criterio.",
+  "punti": [
+   { "h": "Forma documentata", "d": "Stabilizza il messaggio: una politica solo orale cambia da una funzione all'altra, si accorcia, scompare. Documentata, può essere richiamata, aggiornata, confrontata con obiettivi. Non obbliga a testi lunghi — spesso testi brevi e precisi funzionano meglio, perché si ricordano e si usano." },
+   { "h": "Collegata alle altre politiche", "d": "Non agganci artificiali, ma coerenza: se esistono politiche su qualità, sicurezza, dati, etica, la politica per l'IA non deve contraddirle né vivere separata. Evita sovrapposizioni e messaggi che spingono le persone in direzioni diverse." },
+   { "h": "Comunicata, non solo approvata", "d": "«Approvata» non equivale a «comunicata»: chi la conosce, in quali termini, con quale effetto sul lavoro? Chi sviluppa, usa o governa deve capire quali impegni la direzione ha assunto. Momenti di presentazione, richiami nell'adozione, formazione — non solo un file in un repository." },
+   { "h": "Accessibile all'esterno quando serve", "d": "Non diffondere tutto indiscriminatamente, ma valutare quando clienti, partner o autorità debbano capire con quale approccio l'organizzazione governa i propri sistemi. In certi contesti diventa strumento di trasparenza e allineamento reciproco." }
+  ]
+ },
+ {
+  "id": "42001_m04_s019",
+  "layout": "definizione",
+  "kicker": "Ruoli e autorità · 1",
+  "eyebrow": "Chi fa che cosa, con quale potere",
+  "titolo": "Ruolo, responsabilità, autorità",
+  "definizione": "La norma chiede che, per i ruoli rilevanti nel sistema, responsabilità e poteri decisionali siano attribuiti con chiarezza e compresi. Ruolo = la posizione riconosciuta nel sistema. Responsabilità = ciò che quella posizione deve presidiare o far accadere. Autorità = il potere legittimo di decidere, richiedere azioni, approvare, fermare, riportare al livello superiore.",
+  "punti": [
+   "Lo squilibrio da evitare: responsabilità senza autorità crea figure esposte ma deboli; autorità senza responsabilità chiare crea arbitrarietà o confusione.",
+   "La parola «rilevanti» è decisiva: non tutti i ruoli con lo stesso dettaglio, ma quelli che incidono davvero sul sistema. In una realtà piccola pochi, in una ampia direzione, funzioni, conformità, referenti tecnici, coordinatori.",
+   "Verifica che l'autorità esista nei fatti: chi ha responsabilità può davvero fermare un rilascio, chiedere chiarimenti, portare un tema al vertice? Molti sistemi crollano non per mancanza di documenti, ma di leve reali in capo a chi dovrebbe governarli."
+  ]
+ },
+ {
+  "id": "42001_m04_s020",
+  "layout": "confronto",
+  "kicker": "Ruoli e autorità · 2",
+  "titolo": "Le due attribuzioni chiave",
+  "intro": "La norma non chiede solo ruoli chiari in generale: assegna all'alta direzione responsabilità e autorità per due compiti precisi. Sono il minimo vitale del governo. La prima protegge la struttura del sistema, la seconda assicura che la direzione riceva visibilità su come funziona davvero.",
+  "a": {
+   "h": "Assicurare la conformità",
+   "sub": "Protegge la struttura",
+   "punti": [
+    { "d": "Non che una sola persona faccia tutto, ma che esista un ruolo (o combinazione definita) con il mandato di presidiare la coerenza dell'insieme: campo di applicazione aggiornato, politica coerente, obiettivi seguiti, responsabilità assegnate, modifiche pianificate." },
+    { "d": "Senza questo presidio il sistema si frammenta: ogni funzione cura il proprio pezzo, ma nessuno garantisce l'integrità complessiva. E chi assicura la conformità non può restare senza autorità o cooperazione." }
+   ]
+  },
+  "b": {
+   "h": "Riferire alla direzione",
+   "sub": "Assicura la visibilità",
+   "punti": [
+    { "d": "Non solo risultati tecnici dei singoli sistemi, ma andamento del sistema di gestione: cosa funziona, cosa no, dove emergono scostamenti, quali decisioni servono. Se il riporto è povero o troppo tecnico, la leadership si indebolisce." },
+    { "d": "La domanda chiave: chi riferisce ha accesso alle informazioni e il potere di far emergere problemi scomodi? Un buon ruolo di riporto non è un passacarte, è un punto di raccordo che rende leggibile il sistema. Se il riporto arriva solo con l'incidente, il vertice non governa." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m04_s021",
+  "layout": "split",
+  "kicker": "Obiettivi e modifiche · 1",
+  "titolo": "Obiettivi per l'IA: dalla direzione ai risultati",
+  "lead": "Il sistema deve mostrare dove vuole arrivare. Gli obiettivi vanno stabiliti a funzioni e livelli pertinenti — non solo in alto come affermazione generale, ma dove il lavoro viene svolto e le decisioni incidono. Trasformano la leadership in risultati attesi controllabili: senza obiettivi la politica resta dichiarata, con obiettivi ben costruiti diventa impegno operativo.",
+  "punti": [
+   { "h": "Coerenti con la politica", "d": "Non una relazione formale: se la politica afferma impegno verso requisiti e miglioramento, gli obiettivi devono tradurre quelle priorità. Una politica sulla gestione efficace e obiettivi solo sulla velocità di rilascio inviano messaggi contraddittori." },
+   { "h": "Misurabili, se praticabile", "d": "Non ridurre tutto a un numero, ma quando è ragionevole l'obiettivo deve poter essere osservato in modo non arbitrario — tempi, frequenze di riesame, copertura, completamento di azioni. Altrove criteri qualitativi strutturati: l'importante è capire se sta avanzando." },
+   { "h": "Dentro il contesto reale", "d": "Definiti con parti interessate, obblighi e campo di applicazione: se il quadro cambia, anche gli obiettivi potrebbero doverlo. La qualità non dipende solo da come è scritto, ma da quanto è collegato al contesto." },
+   { "h": "Monitorati, comunicati, aggiornati, documentati", "d": "Seguiti nel tempo, non dimenticati dopo l'approvazione; compresi da chi contribuisce; rivedibili se cambiano priorità o requisiti; esistenti in forma stabile e verificabile. «Migliorare la gestione dell'IA» suona bene ma non guida nulla." }
+  ]
+ },
+ {
+  "id": "42001_m04_s022",
+  "layout": "timeline",
+  "kicker": "Obiettivi e modifiche · 2",
+  "titolo": "Pianificare il raggiungimento degli obiettivi",
+  "intro": "Avere obiettivi chiari non basta: la norma chiede di pianificare come raggiungerli. È qui che il sistema passa dalle dichiarazioni alla gestione. Per ogni obiettivo, una piccola architettura di governo — cinque elementi senza i quali anche un obiettivo ben scritto resta immobile.",
+  "tappe": [
+   { "t": "01", "h": "Che cosa verrà fatto", "d": "La traduzione in azioni: riesami periodici, istruzioni comuni, chiarimento delle responsabilità, verifiche sulle eccezioni, allineamento coi fornitori. Finché non sono esplicitate, l'obiettivo non ha gambe." },
+   { "t": "02", "h": "Quali risorse", "d": "Smaschera la retorica: persone, competenze, tempo organizzativo, strumenti — ma anche accesso alle informazioni e coordinamento. Un obiettivo senza risorse è un auspicio elegante, non una pianificazione." },
+   { "t": "03", "h": "Chi è responsabile", "d": "La responsabilità deve stare dove c'è la possibilità concreta di orientare azioni e riferire. Gli obiettivi falliscono spesso non perché sbagliati, ma perché nessuno possiede il mandato per portarli avanti." },
+   { "t": "04", "h": "Entro quando", "d": "Senza scadenza o cadenza di verifica, il sistema perde tensione. Ma il tempo dev'essere credibile: date arbitrarie producono rinvii o chiusure apparenti. Distinguere urgenza e fattibilità." },
+   { "t": "05", "h": "Come valutare i risultati", "d": "Chiude il cerchio: indicatori, criteri qualitativi, riesami, confronto atteso-realizzato. Non basta sapere cosa fare, devi sapere come capirai se ha funzionato." }
+  ]
+ },
+ {
+  "id": "42001_m04_s023",
+  "layout": "confronto",
+  "kicker": "Obiettivi e modifiche · 3",
+  "titolo": "Obiettivi utili o decorativi",
+  "intro": "Guarda gli obiettivi come insieme, a funzioni e livelli pertinenti: non solo un obiettivo centrale nobile ma distante. Il tema non è moltiplicare documenti, ma distribuire il governo dove conta. Una distinzione utile: un obiettivo misura ciò che si vuole ottenere; un'attività è una cosa che si fa. «Formare il personale» è un'azione, non un obiettivo.",
+  "a": {
+   "h": "Obiettivi utili",
+   "sub": "Quattro qualità",
+   "punti": [
+    { "d": "Coerenza verticale (gli obiettivi di funzione discendono dai generali), pertinenza (riguardano aree con un ruolo nel campo di applicazione), leggibilità (chi lavora capisce cosa si vuole), governabilità (azioni, risorse e responsabilità che lo rendono realistico)." },
+    { "d": "Un test: da quale elemento della politica deriva? chi lo usa per decidere? come si capisce se produce l'effetto voluto? Se le risposte arrivano con naturalezza, l'obiettivo è vivo — e sa essere aggiornato quando il contesto cambia." }
+   ]
+  },
+  "b": {
+   "h": "Obiettivi decorativi",
+   "sub": "Poco utili",
+   "punti": [
+    { "d": "Vaghi, universali, sempre condivisibili e perciò inutili; o così tecnici da perdere il legame con politica e leadership; o numericamente ambiziosi ma privi di base organizzativa. Problema comune: non aiutano a decidere meglio." },
+    { "d": "Se ti mostrano un elenco di attività spacciate per obiettivi, manca ancora maturità. E se servono lunghe interpretazioni per spiegarli, probabilmente sono stati scritti più per il documento che per il sistema." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m04_s024",
+  "layout": "numeri",
+  "kicker": "Obiettivi e modifiche · 4",
+  "titolo": "Cambiare il sistema senza perdere controllo",
+  "intro": "Breve nella formulazione, impegnativo nelle conseguenze: se l'organizzazione riconosce il bisogno di cambiare l'SGIA, il cambiamento va preparato e governato con ordine, non improvvisato. C'è modifica quando la struttura o il funzionamento non sono più adeguati alla realtà — nuovi sistemi, uscite, cambio di ruolo, nuove aspettative, politica o obiettivi rivisti. Quattro attenzioni.",
+  "numeri": [
+   { "n": "1", "h": "Perché e cosa tocca", "d": "Capire perché la modifica è necessaria e quali parti del sistema tocca. Se un fornitore aggiorna un servizio e cambia il modo in cui il personale lo usa, la novità può toccare responsabilità, istruzioni, obiettivi, riesami, perfino il perimetro: non è «solo tecnica»." },
+   { "n": "2", "h": "Chi decide e chi è coinvolto", "d": "Chiarire chi deve decidere, chi coinvolgere, chi informare. La pianificazione serve a evitare le rotture silenziose in cui un aggiornamento passa come fatto puramente tecnico." },
+   { "n": "3", "h": "Cosa aggiornare", "d": "Valutare quali documenti, obiettivi, comunicazioni o assetti di responsabilità vanno aggiornati. Chi estende un sistema interno a clienti esterni amplia parti interessate e aspettative, cambia ruolo: politica e obiettivi potrebbero non bastare più." },
+   { "n": "4", "h": "Come verificare la tenuta", "d": "Stabilire come verificare, dopo la modifica, che il sistema resti coerente ed efficace. Chi pianifica le modifiche tratta l'SGIA come un sistema vivo, non un fascicolo da archiviare — è il luogo in cui la pressione del business incontra la qualità del sistema." }
+  ]
+ },
+ {
+  "id": "42001_m04_s025",
+  "layout": "split",
+  "kicker": "Verifica sul campo · 1",
+  "titolo": "Contesto e leadership: coerenza, non frasi corrette",
+  "lead": "Nella verifica il rischio maggiore è lasciarsi convincere da formulazioni ordinate ma scollegate. Non ti basta ascoltare parole giuste: cerca coerenza tra ciò che l'organizzazione dice di essere, ciò che include nel perimetro, ciò che la politica dichiara e ciò che gli obiettivi rendono operativo. Segui il filo del sistema. La domanda che accompagna tutte le altre: come si vede questa affermazione nella gestione quotidiana?",
+  "punti": [
+   { "h": "Il racconto complessivo", "d": "Sa spiegare perché usa, sviluppa o fornisce certi sistemi? Descrive il proprio ruolo e lo collega al contesto? Se sì, hai una base; se trovi frasi generiche uguali per qualsiasi impresa, il sistema è stato costruito per adempimento, non per governo." },
+   { "h": "Triangolazione", "d": "Non fermarti a un documento o a un'intervista: confronta il documento sul contesto con i responsabili operativi, il campo di applicazione coi sistemi in uso, la politica con obiettivi e messaggi percepiti, i ruoli con le decisioni prese. Quando i piani si allineano, la tenuta cresce." },
+   { "h": "La reazione alle domande", "d": "Un sistema vivo viene raccontato con naturalezza da più funzioni, con esempi e priorità; un sistema di facciata si rifugia nel documento come se fosse la realtà. Non cerchi una frase sbagliata, ma la mancanza di allineamento." },
+   { "h": "Equilibrio, non perfezione teorica", "d": "Cerchi un sistema comprensibile, governato e coerente con dimensione e ruolo. Una piccola può avere un assetto semplice ma solido, una grande molta carta e poca chiarezza. La maturità non si misura in quantità di documenti, ma nel collegare scelte, responsabilità e risultati." }
+  ]
+ },
+ {
+  "id": "42001_m04_s026",
+  "layout": "punti",
+  "kicker": "Verifica sul campo · 2",
+  "titolo": "Contesto, parti interessate, campo di applicazione",
+  "intro": "Muoviti da fuori verso dentro: prima come l'organizzazione descrive ambiente e ruolo, poi chi considera rilevante, infine come tutto si traduce nel perimetro. Questo ordine ti impedisce di valutare il campo di applicazione come documento isolato — deve nascere da una lettura del contesto, non da una scelta di comodo.",
+  "punti": [
+   { "h": "Sul contesto", "d": "Quali fattori esterni e interni influenzano oggi i risultati attesi, come il ruolo incide sulle decisioni, come è stata valutata la rilevanza del clima. Non un elenco elegante, ma un ragionamento attuale, specifico e collegato ai sistemi realmente usati." },
+   { "h": "Sulle parti interessate", "d": "Evita mappe troppo corte (solo clienti e autorità, dimenticando soggetti impattati, personale, partner) o troppo lunghe (chiunque, senza pertinenza). La domanda chiave: quali requisiti di queste parti vengono gestiti dall'SGIA, e perché?" },
+   { "h": "Sul campo di applicazione", "d": "Quali sistemi inclusi, quali attività governate, quali esclusioni e su quale base. Se un sistema ha effetti rilevanti, la sua esclusione merita un approfondimento — non perché sia sbagliata, ma perché va motivata con logica comprensibile." },
+   { "h": "Segnali ricorrenti", "d": "«È solo sperimentale», «lo gestisce il fornitore», «è usato in modo informale» spesso nascondono aree non presidiate. E osserva la coerenza tra funzioni: direzione e responsabili operativi descrivono il perimetro nello stesso modo?" }
+  ]
+ },
+ {
+  "id": "42001_m04_s027",
+  "layout": "punti",
+  "kicker": "Verifica sul campo · 3",
+  "titolo": "Leadership, politica, ruoli, obiettivi, modifiche",
+  "intro": "La domanda di fondo è una: l'alta direzione ha trasformato il tema IA in un indirizzo concreto, o si è limitata ad approvare documenti? Osservi cinque punti collegati. E un accorgimento finale che vale molto: non cercare una sola evidenza eroica, ma convergenza — quando politica, ruoli, obiettivi, riporti e modifiche si confermano a vicenda, il quadro diventa solido.",
+  "punti": [
+   { "h": "Politica e integrazione", "d": "La politica è specifica o potrebbe appartenere a chiunque? Fa da quadro per gli obiettivi? Le persone la conoscono per la parte che le riguarda? E dove si vede che i requisiti dell'SGIA entrano nei processi di business, o il presidio arriva solo dopo?" },
+   { "h": "Ruoli e autorità", "d": "I ruoli rilevanti sono assegnati e compresi. Chi assicura la conformità ha leva reale. Chi riferisce alla direzione riceve informazioni sufficienti e può far emergere criticità scomode. Se non funziona, il sistema perde struttura al centro." },
+   { "h": "Obiettivi", "d": "Coerenti con la politica, monitorati, comunicati, aggiornati, con una pianificazione credibile: il sistema ha una direzione concreta. Obiettivi generici, mai riesaminati, o attività spacciate per obiettivi: la leadership è ancora distante dall'azione." },
+   { "h": "Modifiche", "d": "Il test della tenuta nel tempo: quali cambiamenti recenti, come riconosciuti, chi li ha governati, cosa è stato aggiornato. Se una società estende un sistema a nuove sedi ma documenti e responsabilità restano quelli di prima, il sistema non ha seguito il cambiamento." }
+  ]
+ },
+ {
+  "id": "42001_m04_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 4",
+  "modNum": "4",
+  "titolo": "Dalla direzione al motore: rischio e impatto",
+  "punti": [
+   { "h": "Il contesto non è uno sfondo", "d": "È il quadro delle condizioni esterne e interne che aiuta o ostacola i risultati attesi: ruolo rispetto ai sistemi, regole applicabili, pressioni del mercato, sensibilità sociali, governance interna, obblighi contrattuali e — quando il ragionamento lo giustifica — il clima." },
+   { "h": "Parti interessate e perimetro", "d": "Distinguere chi influenza e chi subisce; selezionare i requisiti pertinenti e decidere quali entrano nell'SGIA; tracciare un campo di applicazione documentato e difendibile, che include anche il modo in cui l'organizzazione governa i sistemi." },
+   { "h": "Leadership e politica", "d": "Una direzione visibile, integrata nei processi, con risorse e messaggi chiari; una politica specifica, coerente e utilizzabile; ruoli con responsabilità e autorità reali, e le due attribuzioni chiave — conformità e riporto delle prestazioni." },
+   { "h": "Obiettivi e modifiche", "d": "Obiettivi coerenti, misurabili se praticabile, pianificati e distribuiti ai livelli pertinenti; e modifiche governate con ordine, perché nessun sistema resta fermo. Verifica sempre cercando coerenza tra i piani, non frasi corrette." }
+  ],
+  "prossimo": {
+   "modulo": "5",
+   "titolo": "Il motore del sistema: rischio e impatto",
+   "testo": "Rischio e impatto non si valutano nel vuoto, ma in un contesto specifico, con parti interessate reali e obiettivi dichiarati — proprio ciò che hai costruito qui."
+  }
+ }
+]
