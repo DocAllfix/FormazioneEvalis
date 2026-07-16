@@ -1,0 +1,413 @@
+[
+ {
+  "id": "42001_m03_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 42001 — Sistemi di gestione dell'IA",
+  "kicker": "Modulo 3",
+  "eyebrow": "Struttura, concetti, termini",
+  "titolo": "Di cosa parla la norma, e di cosa no",
+  "testo": "Metti ordine nei concetti di base che ti serviranno per tutto il resto del corso: senza, i requisiti sembrano un elenco di adempimenti; con, ogni richiesta trova il suo posto. Una distinzione potente: la norma non nasce per governare un singolo algoritmo isolato, ma per organizzare un modo responsabile di sviluppare, fornire o usare soluzioni che includono un sistema di IA. Sposta l'attenzione dal solo prodotto all'insieme di decisioni, processi, responsabilità e controlli. Vedrai scopo e campo di applicazione, i termini chiave — sistema di IA, sistema di gestione dell'IA, parti interessate — che sembrano intuitivi ma generano equivoci, poi i ruoli (chi produce, fornisce, usa, è toccato dagli effetti), la struttura armonizzata, il rapporto tra corpo e appendici, e la logica del ciclo di vita. Chiuderemo con ISO/IEC 27001 e la protezione dei dati. Ascolta con un obiettivo: non memorizzare formule, capire le relazioni — chi fa cosa, su chi ricade la responsabilità, dove finisce il prodotto e comincia il sistema di gestione.",
+  "agenda": [
+   "Scopo e campo di applicazione: chi rientra",
+   "I termini chiave: sistema di IA, SGIA, parti interessate",
+   "I ruoli: produttore, fornitore, utilizzatore, soggetti",
+   "Struttura armonizzata, corpo e appendici",
+   "La logica dell'SGIA: governare il ciclo di vita",
+   "Dialogo con ISO/IEC 27001 e protezione dati"
+  ]
+ },
+ {
+  "id": "42001_m03_s002",
+  "layout": "split",
+  "kicker": "Scopo e campo · 1",
+  "titolo": "Requisiti e guida per una gestione responsabile",
+  "lead": "Lo scopo della norma ha una doppia natura: da un lato stabilisce requisiti — elementi che il sistema deve presidiare; dall'altro offre guida per costruire, attuare, mantenere e migliorare nel tempo. Sta nel mezzo tra due errori: non è un manuale che spiega come progettare un modello, né una dichiarazione di principi troppo generica. Aiuta a gestire in modo responsabile prodotti o servizi che si avvalgono dell'IA, mentre l'organizzazione persegue i propri obiettivi e rispetta requisiti, obblighi e aspettative delle parti interessate.",
+  "punti": [
+   { "h": "Organizzazione", "d": "Non solo imprese tecnologiche: realtà pubbliche e private, grandi e piccole, centralizzate o distribuite. Il baricentro non è il possesso della tecnologia, ma il governo del suo impiego nel contesto." },
+   { "h": "Responsabile", "d": "Non basta che qualcosa funzioni in senso tecnico: deve funzionare dentro un quadro di decisioni consapevoli, controlli adeguati e responsabilità riconoscibili." },
+   { "h": "Obiettivi", "d": "Governare l'uso dell'IA mentre si inseguono i propri risultati, senza perdere di vista rischi, effetti, obblighi. Non chiedere solo se il sistema è accurato: rispetto a quale obiettivo, con quali confini, quale supervisione, quale capacità di correggere la rotta." },
+   { "h": "Sviluppare, fornire o utilizzare", "d": "La norma non impone di sviluppare i propri sistemi: vale per chi vende un servizio predittivo, per la banca che compra una soluzione anti-frode, per l'ente che usa uno smistamento automatico. La domanda è se l'organizzazione governa quel risultato in modo responsabile e dimostrabile." }
+  ]
+ },
+ {
+  "id": "42001_m03_s003",
+  "layout": "cards",
+  "kicker": "Scopo e campo · 2",
+  "titolo": "Il campo di applicazione: chi rientra davvero",
+  "intro": "Il perimetro è più ampio di quanto molti immaginano: comprende organizzazioni molto diverse, purché mettano a disposizione oppure impieghino prodotti o servizi in cui opera un sistema di IA. La parola decisiva non è «crea», è «governa il loro impiego nel proprio contesto». Smonta l'equivoco che riguardi solo chi scrive codice.",
+  "cards": [
+   { "h": "La start-up piccola", "d": "Vende trascrizione e sintesi delle riunioni: piccola, ma rientra pienamente. Le dimensioni riducono complessità, non pertinenza." },
+   { "h": "Chi usa soluzioni di terzi", "d": "Il gruppo industriale che adotta la manutenzione predittiva, il comune che classifica richieste dei cittadini: non costruiscono il modello, ma affidano una parte del proprio processo a un sistema di IA. Il perimetro abbraccia anche chi seleziona, integra, configura, supervisiona." },
+   { "h": "Il perimetro va definito", "d": "Il sistema può coprire solo una parte di una realtà più ampia — una divisione, una linea di servizio. Ma il confine deve riflettere responsabilità, processi e relazioni effettive: se quella unità dipende da decisioni centrali su dati o contratti, quelle interdipendenze non scompaiono." },
+   { "h": "Né troppo largo né troppo stretto", "d": "Un campo troppo largo rende il sistema ingestibile; uno troppo ristretto lo rende poco credibile perché lascia fuori i nodi dove si decide davvero. Chiediti se il perimetro dichiarato coincide con quello operativo delle decisioni che contano." }
+  ]
+ },
+ {
+  "id": "42001_m03_s004",
+  "layout": "definizione",
+  "kicker": "Termini chiave · 1",
+  "eyebrow": "Il primo termine",
+  "titolo": "Che cosa intendere per sistema di IA",
+  "definizione": "Sistema di IA: l'elemento tecnico, o l'insieme coordinato di elementi, che realizza funzioni di intelligenza artificiale dentro un prodotto o un servizio. Non genericamente qualsiasi software moderno — e non coincide sempre con l'intero prodotto: una piattaforma di assistenza è il prodotto, il sistema di IA è ciò che al suo interno classifica, suggerisce, riassume, indirizza. (Per concetti e terminologia la norma richiama ISO/IEC 22989:2023.)",
+  "punti": [
+   "Non coincide col solo modello matematico: l'esito dipende da dati in ingresso, pretrattamento, soglie decisionali, interfaccia, supervisione, registrazione. Non trattare l'IA come un'entità magica separata dal contesto.",
+   "Distinguerlo dal servizio ti fa porre domande migliori: in una valutazione di finanziamenti, il sistema genera un punteggio? blocca pratiche? o produce solo un'indicazione riesaminata da una persona?",
+   "Serve capire dove si colloca nella catena del servizio: dove entra, quali dati usa, quali output, chi può modificarne le soglie, quando è previsto l'intervento umano. Solo così il concetto diventa verificabile."
+  ]
+ },
+ {
+  "id": "42001_m03_s005",
+  "layout": "confronto",
+  "kicker": "Termini chiave · 2",
+  "titolo": "Sistema di IA o sistema di gestione dell'IA",
+  "intro": "Due piani spesso confusi, entrambi necessari ma non sostituibili. I problemi seri nascono spesso nei passaggi di governo, non solo nelle prestazioni del motore: un modello può restare stabile e produrre effetti non desiderati perché è cambiato il contesto d'uso, i dati in ingresso o la soglia con cui il personale decide.",
+  "a": {
+   "h": "Sistema di IA",
+   "sub": "L'oggetto tecnico",
+   "punti": [
+    { "d": "Contribuisce a generare un risultato — una previsione, una classificazione. Un ottimo modello anti-frode individua schemi anomali con rapidità." },
+    { "d": "Ma da solo non è un sistema di gestione: se l'organizzazione non sa spiegare chi approva gli obiettivi, come valuta i rischi, come gestisce cambiamenti e non conformità, ti sta mostrando un componente tecnico, non un governo completo." }
+   ]
+  },
+  "b": {
+   "h": "Sistema di gestione dell'IA",
+   "sub": "L'assetto organizzativo",
+   "punti": [
+    { "d": "Il modo strutturato con cui l'organizzazione orienta, coordina e controlla ciò che sviluppa, fornisce o usa: politiche, obiettivi, processi, responsabilità, verifiche, miglioramento — non un singolo documento, e collegati tra loro." },
+    { "d": "Sull'anti-frode: orientamenti del vertice, obiettivi di tempestività, approvazione dei cambiamenti, competenze di chi legge gli alert, monitoraggio, registrazioni, azioni correttive, riesame. Senza, l'organizzazione possiede tecnologia, non un sistema governato." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m03_s006",
+  "layout": "punti",
+  "kicker": "Termini chiave · 3",
+  "titolo": "Chi sono le parti interessate",
+  "intro": "Il termine sembra semplice, ma allarga moltissimo il campo visivo. La norma considera parte interessata una persona o organizzazione che può influenzare una decisione, esserne influenzata, oppure percepirsi come influenzata. Nell'IA è potente, perché i sistemi entrano in processi che incidono su utenti, lavoratori, pazienti, cittadini, autorità, comunità.",
+  "punti": [
+   { "h": "Può influenzare", "d": "Il fornitore che propone certe configurazioni, il cliente che impone tempi stretti, l'autorità che stabilisce un vincolo, il vertice che sceglie una priorità strategica." },
+   { "h": "Può essere influenzata", "d": "I soggetti su cui il sistema produce effetti: un candidato escluso da una preselezione automatica, un paziente classificato con priorità bassa, un cittadino la cui richiesta viene smistata male, un dipendente valutato da uno strumento predittivo." },
+   { "h": "Può percepirsi influenzata", "d": "Più sottile ma non meno rilevante: una comunità che teme decisioni automatizzate opache, un'associazione che ritiene possibili effetti discriminatori. Anche se l'effetto non è ancora dimostrato, l'aspettativa conta nel modo in cui l'organizzazione legge il contesto." },
+   { "h": "Non un elemento decorativo", "d": "Lo scopo della norma richiama obblighi e aspettative delle parti interessate: sono un criterio con cui l'organizzazione costruisce il sistema. Vale ancora di più nell'IA, dove la distanza tra chi imposta il sistema e chi ne subisce gli effetti può essere molto ampia." }
+  ]
+ },
+ {
+  "id": "42001_m03_s007",
+  "layout": "numeri",
+  "kicker": "Termini chiave · 4",
+  "titolo": "Parti rilevanti: da elenco a mappa",
+  "intro": "Non tutte le persone toccate in senso largo hanno lo stesso peso. Diventano rilevanti quelle che possono influenzare concretamente come il sistema va progettato e governato, o subirne effetti così significativi da richiedere attenzione. Tre domande trasformano un elenco generico in una mappa decisionale — e la rilevanza cambia con il contesto d'uso, non si copia da un progetto all'altro.",
+  "numeri": [
+   { "n": "1", "h": "Può cambiare il sistema?", "d": "Questa parte interessata può cambiare decisioni, risorse, priorità o vincoli del sistema? Se sì, la rilevanza tende a salire — è chi orienta davvero il governo." },
+   { "n": "2", "h": "Può subirne effetti?", "d": "Può subire effetti importanti dai risultati del sistema? In un ospedale i pazienti sono rilevanti per gli effetti su tempi e priorità; un visitatore occasionale del sito no." },
+   { "n": "3", "h": "Esistono obblighi?", "d": "Aspettative, impegni o obblighi che legano l'organizzazione a quel soggetto? Se sì, non può essere trattato come periferico — e questo ti aiuta a leggere se il campo di applicazione va allargato o raccordato con altri processi." }
+  ]
+ },
+ {
+  "id": "42001_m03_s008",
+  "layout": "punti",
+  "kicker": "Termini chiave · 5",
+  "titolo": "Organizzazione e perimetro reale",
+  "intro": "Nella norma «organizzazione» è più largo dell'uso quotidiano: una persona singola, un'impresa, un ente, un'autorità, una fondazione, un partenariato. Il punto non è la veste giuridica, ma l'esistenza di funzioni, responsabilità, autorità e relazioni orientate a obiettivi. Definire l'organizzazione non è una formalità iniziale: è il modo in cui dai consistenza al campo di applicazione.",
+  "punti": [
+   { "h": "Piccolo non è fuori campo", "d": "Non servono grandi dimensioni: serve che esistano scelte, ruoli e relazioni da governare. Uno studio professionale che analizza bozze contrattuali con l'IA ha comunque ruoli, obiettivi, obblighi verso clienti — sistema di gestione proporzionato, non assente." },
+   { "h": "Il perimetro non immaginario", "d": "Quando il sistema copre solo una parte, «organizzazione» va riferito a quel perimetro delimitato — che deve però disporre davvero di responsabilità, autorità e processi. La funzione marketing europea che avvia il sistema deve poter dimostrare chi decide gli obiettivi e approva i cambiamenti." },
+   { "h": "Perimetro comodo, perimetro fragile", "d": "Se tutto dipende da unità centrali esterne al confine dichiarato, sulla carta sembra chiaro ma lascia fuori i punti dove si decide. Un perimetro artificiale spezza i nessi di responsabilità e fa sembrare governato ciò che dipende da altri." },
+   { "h": "Legame con le parti interessate", "d": "Se il perimetro taglia fuori unità che ricevono reclami, gestiscono assistenza o approvano contratti, taglia fuori anche relazioni essenziali con parti interessate rilevanti — e il sistema riconosce peggio obblighi, aspettative e impatti." }
+  ]
+ },
+ {
+  "id": "42001_m03_s009",
+  "layout": "confronto",
+  "kicker": "Termini chiave · 6",
+  "titolo": "Alta direzione e organo di governo",
+  "intro": "Quando un sistema è credibile, sai rispondere: chi orienta le scelte e chi ne risponde. Due riferimenti vicini, ma non sinonimi automatici. La domanda da fare è sempre la stessa: chi decide, chi controlla, chi risponde. E delegare non significa sparire.",
+  "a": {
+   "h": "Alta direzione",
+   "sub": "Guida al livello più alto",
+   "punti": [
+    { "d": "Le persone che, al livello più alto pertinente, guidano e tengono sotto controllo l'organizzazione compresa nel perimetro. Assegna priorità, approva risorse, orienta i processi, segue l'andamento quotidiano." },
+    { "d": "Se il sistema copre solo una parte, «alta direzione» è il vertice di quella parte — corretto solo se dispone davvero di autorità e relazioni coerenti col sistema dichiarato." }
+   ]
+  },
+  "b": {
+   "h": "Organo di governo",
+   "sub": "Responsabilità complessiva",
+   "punti": [
+    { "d": "Il livello a cui fa capo la responsabilità complessiva per prestazioni e conformità. In molte realtà coincide con la direzione operativa, senza un organo distinto: non cercare per forza consigli o comitati, leggi la catena delle responsabilità." },
+    { "d": "Anche delegando la gestione quotidiana a una funzione tecnica, il vertice resta necessario per approvare orientamenti, ricevere il monitoraggio, decidere interventi rilevanti. Un sistema maturo non vive di affidamenti impliciti, ma di ruoli leggibili." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m03_s010",
+  "layout": "cards",
+  "kicker": "I ruoli · 1",
+  "titolo": "Prima mappa dei ruoli rispetto all'IA",
+  "intro": "Distinguere i ruoli evita di attribuire responsabilità in modo confuso. Non sono sempre separati: a volte coincidono, a volte si sovrappongono, a volte cambiano col punto di osservazione. Davanti a un sistema, chiedere «chi lo possiede» è spesso insufficiente — chiedi chi lo sviluppa, configura, rende disponibile, decide come usarlo, controlla gli output, gestisce gli effetti.",
+  "cards": [
+   { "h": "Produttore", "d": "Crea o fa creare il sistema, o ne governa in modo sostanziale la realizzazione. Sviluppa il modello internamente, o coordina fornitori mantenendo le scelte decisive su obiettivi, prestazioni attese, criteri di rilascio, limiti d'uso." },
+   { "h": "Fornitore", "d": "Lo mette a disposizione come prodotto o servizio. A volte coincide con chi lo ha creato, a volte prende in carico un prodotto altrui e lo eroga con proprie modalità di assistenza, configurazione, aggiornamento." },
+   { "h": "Utilizzatore", "d": "Lo impiega dentro i propri processi decisionali od operativi, e ne assume gli effetti verso l'esterno. È il punto in cui la tecnologia diventa prassi." },
+   { "h": "Soggetti interessati", "d": "Coloro che possono influenzare il sistema, esserne influenzati o percepirsi tali. Non un contorno dei ruoli tecnici, ma parte della mappa: clienti, lavoratori, funzioni che gestiscono reclami possono subire effetti concreti." }
+  ]
+ },
+ {
+  "id": "42001_m03_s011",
+  "layout": "punti",
+  "kicker": "I ruoli · 2",
+  "titolo": "Produttore: non basta «lo abbiamo fatto noi»",
+  "intro": "Il soggetto che progetta il sistema o ne governa in modo sostanziale la realizzazione. Creare davvero non coincide sempre con scrivere ogni riga di codice: «lo abbiamo fatto noi» è spesso troppo povero — devi capire che cosa significa «fatto» e quali decisioni comprende.",
+  "punti": [
+   { "h": "Chi decide la forma sostanziale", "d": "Non coincide per forza con chi possiede l'infrastruttura o gestisce il contratto: coincide con chi decide quali dati usare, quali esiti generare, quali soglie separano i casi, quali verifiche prima del rilascio. Anche appoggiando parte dell'addestramento a un partner, resta produttore chi governa le decisioni che danno identità al sistema." },
+   { "h": "Le domande che lo rivelano", "d": "Chi può cambiare davvero il sistema, non solo usarlo? Chi decide se una nuova versione entra in esercizio? Chi stabilisce se un uso è ammesso? Chi valuta se un errore richiede una correzione strutturale?" },
+   { "h": "Responsabilità sulla struttura", "d": "Ha una responsabilità forte su struttura, presupposti di funzionamento, documentazione di base e vincoli d'impiego che dovrebbero accompagnare il sistema. Se questi elementi sono opachi o instabili, l'intera catena parte male." },
+   { "h": "Ma non controlla tutto dopo", "d": "Un motore costruito con cura dà risultati diversi secondo come viene configurato, alimentato e interpretato. La lettura dei ruoli non serve a distribuire colpe in fretta, ma a capire i punti di governo." }
+  ]
+ },
+ {
+  "id": "42001_m03_s012",
+  "layout": "cards",
+  "kicker": "I ruoli · 3",
+  "titolo": "Fornitore: chi governa il servizio nel tempo",
+  "intro": "Rende disponibile il sistema, o il servizio che lo incorpora, a un'organizzazione o a un mercato. Il rapporto quotidiano dell'utilizzatore è spesso con il fornitore, non con chi ha progettato il motore. Per capire come un sistema vive nel tempo, guarda chi lo consegna, mantiene, aggiorna, e ne raccoglie i problemi. Quattro domande lo mettono a fuoco.",
+  "cards": [
+   { "h": "Chi stipula il servizio", "d": "Non un passaggio puramente commerciale: definisce livelli di servizio, credenziali, attivazione dei clienti. Il modello di base può venire da un soggetto tecnico specializzato, ma il servizio è commercializzato e integrato da chi lo mette a disposizione." },
+   { "h": "Chi comunica cambiamenti e limiti", "d": "Se un aggiornamento cambia il comportamento, se una funzionalità viene ritirata, chi usa il servizio si aspetta risposte dal fornitore. Traduce la complessità tecnica in condizioni operative comprensibili." },
+   { "h": "Chi riceve supporto e reclami", "d": "Il rivenditore che installa i connettori, imposta il flusso dei dati, forma gli utenti, gestisce il primo livello: se qualcosa non funziona, l'utilizzatore lo vive come problema del fornitore, non del laboratorio che ha creato l'algoritmo." },
+   { "h": "Chi accompagna nel tempo", "d": "Influisce sul governo operativo — canali di attivazione, profili di accesso, istruzioni, escalation, gestione incidenti — anche senza aver progettato ogni componente. Se questa traduzione è scarsa, diventa un rischio di governo: chi usa non capisce quando fidarsi, dubitare, fermarsi." }
+  ]
+ },
+ {
+  "id": "42001_m03_s013",
+  "layout": "split",
+  "kicker": "I ruoli · 4",
+  "titolo": "Utilizzatore: dove l'IA diventa prassi",
+  "lead": "L'organizzazione che impiega il sistema dentro le proprie attività, affidandogli una funzione che incide su come il servizio viene erogato o la decisione preparata. Il punto non è il titolo giuridico del possesso, ma l'uso effettivo nel processo. È il luogo dove il sistema incontra il contesto reale — e comprare una soluzione non basta: devi sempre chiederti come viene usata.",
+  "punti": [
+   { "h": "Usare o subire passivamente", "d": "L'utilizzatore maturo non riceve solo un output: lo inserisce in un processo governato con confini di fiducia, criteri di revisione, ruoli di supervisione, condizioni di blocco, canali di correzione. Senza, il sistema diventa fonte di decisioni opache, anche se costruito bene." },
+   { "h": "Il punto delle decisioni concrete", "d": "Decide dove inserire il sistema, quanto peso dare agli output, quali controlli umani mantenere, chi interviene nel dubbio, come trattare gli errori. Se il personale non sa quando scostarsi e i casi eccezionali non hanno percorso, è un problema di uso organizzativo." },
+   { "h": "Non sempre l'anello debole", "d": "Può avere grande potere di configurazione e scelta: selezionare il fornitore, imporre verifiche, delimitare gli impieghi, interrompere il servizio. In altri casi ha margini ridotti, ma resta il soggetto che risponde dell'integrazione nel proprio processo." },
+   { "h": "La domanda giusta", "d": "Non «chi lo usa», ma come lo usa, con quali poteri, con quali limiti, verso quali parti interessate. È qui che si vede se il sistema è davvero governato o solo adottato." }
+  ]
+ },
+ {
+  "id": "42001_m03_s014",
+  "layout": "split",
+  "kicker": "I ruoli · 5",
+  "titolo": "Ruoli che si sovrappongono: più cappelli",
+  "lead": "Nella realtà i ruoli spesso si sovrappongono. Una stessa organizzazione può sviluppare un sistema per uso interno (produttore e utilizzatore), poi trasformarlo in servizio per altri (anche fornitore), e dipendere a sua volta da fornitori specializzati. Non un'eccezione rara, ma comune. Il punto non è incasellare con rigidità: è vedere quale cappello è in gioco in ciascuna decisione.",
+  "punti": [
+   { "h": "Il caso logistica", "d": "Sviluppa un motore per i propri hub (produttore + utilizzatore); dopo un anno lo offre come servizio (anche fornitore); per alcuni moduli compra componenti esterni. Parlare genericamente «dell'azienda che ha l'IA» non aiuta più: devi capire quale funzione esercita in quel passaggio." },
+   { "h": "I due errori opposti", "d": "Attribuire tutto al reparto tecnico, come se ogni decisione fosse di chi sviluppa; o attribuire tutto a chi usa il sistema, ignorando le scelte di progettazione ed erogazione. Quando i ruoli si sovrappongono, la chiarezza nasce da una mappa, non da un'etichetta unica." },
+   { "h": "La mappa che basta", "d": "Chi definisce il sistema, chi lo rende disponibile, chi ne decide l'uso, chi ne controlla gli effetti, chi gestisce i cambiamenti, chi dialoga con le parti interessate. Se manca, l'organizzazione nasconde le responsabilità dietro la propria complessità." },
+   { "h": "Governare, non semplificare", "d": "La complessità non si risolve semplificando troppo: si governa rendendo esplicito chi fa che cosa, per quale ambito, con quale potere decisionale. È il modo più utile per trasformare una struttura intricata in un sistema leggibile." }
+  ]
+ },
+ {
+  "id": "42001_m03_s015",
+  "layout": "split",
+  "kicker": "I ruoli · 6",
+  "titolo": "I ruoli contano se guardi chi riceve gli effetti",
+  "lead": "La mappa resta incompleta se non rimetti al centro i soggetti interessati. Un sistema può essere progettato con cura, erogato con efficienza e usato con ordine, ma se nessuno guarda chi viene toccato dai suoi effetti, il quadro è insufficiente. I soggetti interessati sono il motivo per cui la distinzione dei ruoli diventa utile: sapere chi crea, fornisce e usa serve a capire chi deve vedere, ascoltare e gestire gli impatti.",
+  "punti": [
+   { "h": "La catena si allarga subito", "d": "Un servizio di selezione: produttore (chi costruisce il motore), fornitore (la piattaforma), utilizzatore (l'azienda che apre la posizione). Ma i soggetti interessati sono i candidati, l'HR, i manager, i rappresentanti dei lavoratori, il legale, associazioni che temono effetti discriminatori." },
+   { "h": "Cambia la lettura dei ruoli", "d": "Il produttore dovrebbe chiarire limiti e usi previsti; il fornitore le condizioni di servizio e le modifiche; l'utilizzatore come integrare, quando intervenire, come raccogliere segnali. Nessun ruolo esiste nel vuoto: esiste rispetto a chi può essere influenzato." },
+   { "h": "Effetti che toccano opportunità", "d": "Un'università che smista ammissioni: se genera ritardi o segnala in modo incoerente, il problema non si esaurisce tra cliente e fornitore. Tocca la fiducia nel processo e incide su opportunità molto rilevanti per chi partecipa." },
+   { "h": "Non etichette decorative", "d": "I ruoli aiutano a chiarire chi fa che cosa; questa chiarezza serve per governare impatti, aspettative e responsabilità verso soggetti concreti. Se togli questo sfondo, la griglia diventa astratta; se lo rimetti al centro, torna viva e utile." }
+  ]
+ },
+ {
+  "id": "42001_m03_s016",
+  "layout": "definizione",
+  "kicker": "Leggere la norma · 1",
+  "eyebrow": "Una mappa comune",
+  "titolo": "La struttura armonizzata",
+  "definizione": "Struttura armonizzata: molte norme di sistemi di gestione sono costruite secondo un'architettura ricorrente. Non dicono la stessa cosa, ma organizzano i temi secondo un percorso riconoscibile — perimetro, termini, contesto, leadership, pianificazione, supporto, attività operative, valutazione delle prestazioni, miglioramento. La forma non è un dettaglio editoriale: è già una guida al ragionamento.",
+  "punti": [
+   "Il vantaggio: non parti ogni volta da zero. Impari a riconoscere una sequenza di domande che tornano, e a leggere l'IA dentro un quadro organizzativo invece che come richieste sparse o testo tutto tecnico.",
+   "Ti aiuta a distinguere il corpo dalle appendici: il corpo contiene la linea portante; ogni appendice svolge una funzione di supporto. Prima ti serve l'ossatura, poi il supporto.",
+   "Interiorizzarla trasforma la lettura in una sequenza di domande ordinate: non cerchi frasi isolate, cerchi nessi. Così capisci se un'organizzazione governa davvero il proprio sistema o mostra documenti slegati."
+  ]
+ },
+ {
+  "id": "42001_m03_s017",
+  "layout": "punti",
+  "kicker": "Leggere la norma · 2",
+  "titolo": "Il corpo della norma: l'ossatura",
+  "intro": "Se la struttura armonizzata è la mappa, il corpo della norma è la strada principale: la sequenza logica con cui il sistema di gestione prende forma. Regola semplice: prima individua la funzione di ogni blocco, poi scendi nel dettaglio. Il contesto non è separato dalla leadership, la leadership dalla pianificazione, le attività operative dalla valutazione e dal miglioramento. Questa continuità è la vera ossatura.",
+  "punti": [
+   { "h": "Dove cercare la logica", "d": "Il luogo delle responsabilità, dei processi e delle evidenze organizzative. Quando un'organizzazione dichiara di gestire bene i propri sistemi di IA, è qui che capisci se esiste un impianto coerente." },
+   { "h": "Trasformalo in domande", "d": "Qual è il campo di applicazione, chi guida il sistema, quali obiettivi orientano l'uso, quali risorse e competenze, come si svolgono le attività lungo il ciclo di vita, come si controllano risultati, non conformità e miglioramento. Smetti di vederla come blocco unico." },
+   { "h": "Il caso energia", "d": "Un sistema che prevede guasti: potresti concentrarti su dati e soglie, ma il corpo obbliga a chiedere prima perché è stato introdotto, con quale perimetro, responsabilità del vertice, processi di supporto, verifiche. Solo dopo ha senso discutere le misure specifiche." },
+   { "h": "Viene sempre prima", "d": "Se il corpo della norma non trova corrispondenza nella realtà, nessun materiale di supporto può compensare quella mancanza. Non è la parte teorica: è la parte che ti dice come tenere insieme tutte le altre." }
+  ]
+ },
+ {
+  "id": "42001_m03_s018",
+  "layout": "split",
+  "kicker": "Leggere la norma · 3",
+  "titolo": "L'appendice come supporto, nel verso giusto",
+  "lead": "Un'appendice sembra spesso il punto più pratico — esempi, elenchi, materiali pronti. L'utilità è reale, ma va gestita: non svolge la stessa funzione del corpo. Aiuta a interpretare, contestualizzare o applicare, ma non sostituisce la logica del sistema. Regola sicura: prima capisci l'ossatura, poi usa l'appendice per darle profondità.",
+  "punti": [
+   { "h": "Il caso dichiarazione di applicabilità", "d": "L'organizzazione può non aver bisogno di tutti i controlli dell'appendice A, o può aggiungerne. Il suo uso non è meccanico: non copiare un elenco e chiudere il lavoro, ma selezionare, giustificare, documentare e integrare. Supporta il ragionamento, non lo rimpiazza." },
+   { "h": "L'utilità dipende dal collegamento", "d": "Una società di trasporto che legge un'appendice come lista universale adotta misure eleganti ma poco pertinenti. Se parte dal corpo — obiettivi, ruoli, rischi, attività — l'appendice diventa uno strumento potente per rendere più robusto un sistema già pensato." },
+   { "h": "La disciplina mentale", "d": "Davanti a un'indicazione in appendice, chiediti sempre a quale parte del corpo si collega: sta aiutando a definire un obiettivo, a rendere leggibile un controllo, a offrire un criterio di selezione? La domanda ti impedisce di usarla come repertorio isolato." },
+   { "h": "Ponte, non requisito", "d": "È preziosa come ponte tra il requisito e la pratica; pericolosa quando la scambi per il requisito stesso o per una scorciatoia pronta all'uso." }
+  ]
+ },
+ {
+  "id": "42001_m03_s019",
+  "layout": "confronto",
+  "kicker": "Leggere la norma · 4",
+  "titolo": "Corpo e appendici A-D: livelli distinti",
+  "intro": "Corpo principale e appendici lavorano insieme, ma non fanno lo stesso mestiere. La relazione corretta non è concorrenza, ma gerarchia funzionale: prima la logica del sistema, poi le appendici per darle concretezza. Se tieni fermo questo criterio, eviti molte confusioni tipiche di chi applica la norma per la prima volta.",
+  "a": {
+   "h": "Il corpo",
+   "sub": "Che cosa governare",
+   "punti": [
+    { "d": "Risponde alla domanda «che cosa deve essere governato e con quale logica»: verifica se esistono perimetro, leadership, pianificazione, supporto, attività operative, monitoraggio, miglioramento. La spina dorsale." },
+    { "d": "Se la struttura non c'è, le appendici non possono crearla dal nulla. Per questo il corpo viene sempre prima, anche quando le appendici sembrano più ricche di esempi." }
+   ]
+  },
+  "b": {
+   "h": "Le appendici",
+   "sub": "Come sostenerlo",
+   "punti": [
+    { "d": "Rispondono a «come puoi leggere, articolare o sostenere quel governo»: strumenti, criteri, materiali di supporto. L'appendice A è richiamata coi controlli e la dichiarazione di applicabilità." },
+    { "d": "L'esistenza di un elenco di controlli non libera dal ragionare su contesto, rischi, ruoli e obiettivi: è proprio quel ragionamento a dire quali controlli servono. B, C, D si leggono nello stesso spirito — supporti collegati all'ossatura." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m03_s020",
+  "layout": "flusso",
+  "kicker": "Leggere la norma · 5",
+  "titolo": "Metodo di lettura in tre passaggi",
+  "intro": "Un metodo pratico, utile sia quando studi la norma sia quando osservi un'organizzazione. Ti impedisce di perderti nei dettagli troppo presto e, insieme, di restare in una lettura astratta che non atterra mai nella pratica. Ti abitua a leggere la norma come sistema, non come deposito di frasi isolate.",
+  "passi": [
+   { "h": "Ricostruisci l'ossatura", "d": "Leggi il corpo come una sequenza di responsabilità, obiettivi, processi e verifiche. Per un gruppo editoriale che suggerisce titoli e categorie: quale parte rientra nel campo, chi guida, quali obiettivi, come si controllano risultati e anomalie." },
+   { "h": "Trasformala in domande operative", "d": "Rendi osservabile il sistema: chi approva una modifica, chi può fermare un rilascio, chi valuta reclami o errori, chi conserva le informazioni documentate, chi controlla che l'uso resti coerente con gli obiettivi." },
+   { "h": "Usa ogni appendice per rafforzare", "d": "Non per sostituire: se un'appendice offre un elenco o un supporto interpretativo, sai già dove collocarlo — lo agganci a una scelta del sistema. La dichiarazione di applicabilità si lega alla valutazione dei rischi e alle decisioni sui controlli necessari." }
+  ]
+ },
+ {
+  "id": "42001_m03_s021",
+  "layout": "evidenza",
+  "kicker": "Logica dell'SGIA · 1",
+  "eyebrow": "Non il prodotto, il ciclo di vita",
+  "titolo": "Governare ciò che accade prima, durante e dopo",
+  "testo": "Un sistema di gestione serio non si accontenta di fotografare un prodotto finito: governa ciò che accade prima, durante e dopo l'uso del sistema di IA. È la differenza che separa un approccio tecnico isolato da una gestione organizzativa matura. Se guardi solo l'output finale, vedi un risultato; se guardi il ciclo di vita, vedi le decisioni che lo hanno reso possibile. Un output corretto oggi non garantisce da solo un uso responsabile domani. Conviene pensare al ciclo di vita come a una sequenza di scelte organizzative — dall'obiettivo iniziale alla progettazione o selezione, alla messa in esercizio, all'uso quotidiano, ai cambiamenti, alla gestione dei problemi, fino alla dismissione. In ogni passaggio il punto non è solo se il motore funziona, ma se l'organizzazione sa spiegare chi decide, con quali criteri, con quali informazioni documentate e con quale capacità di correggere la rotta. Questa prospettiva ti salva da una trappola: un sistema può mostrare un buon risultato medio ed essere governato male — nessuno verifica l'impatto delle modifiche, le responsabilità sono opache, i problemi si correggono solo in emergenza. Il prodotto, da lontano, sembra funzionare; il sistema di gestione, da vicino, è fragile. Quando un'organizzazione adotta questa logica, smette di parlare dell'IA come soluzione magica: dice «il processo è sotto controllo, le prestazioni sono monitorate, le modifiche sono gestite, i problemi producono apprendimento»."
+ },
+ {
+  "id": "42001_m03_s022",
+  "layout": "timeline",
+  "kicker": "Logica dell'SGIA · 2",
+  "titolo": "Il ciclo di vita come catena di decisioni",
+  "intro": "La norma, in questo punto, non dà una lista rigida di fasi tecniche. Ma puoi leggere il ciclo di vita come una catena di decisioni organizzative che accompagna il sistema dall'ingresso all'eventuale uscita. Ti impedisce di ridurre tutto a «sviluppo e uso», dimenticando i passaggi intermedi dove nascono i problemi più seri.",
+  "tappe": [
+   { "t": "01", "h": "Scopo", "d": "Perché l'organizzazione lo introduce, quale problema affronta. Un sistema adottato solo perché disponibile parte già con un difetto di governo." },
+   { "t": "02", "h": "Scelta o progettazione", "d": "Non solo chi produce, ma come si valuta l'adeguatezza al contesto: categorie di servizio, flussi interni, criteri di revisione, capacità di gestire reclami." },
+   { "t": "03", "h": "Integrazione", "d": "Il sistema incontra persone, tempi, procedure, vincoli. Qui molte soluzioni solide mostrano fragilità: ruoli poco chiari, interfaccia che induce letture affrettate, nessuna regola per i casi dubbi." },
+   { "t": "04", "h": "Uso continuativo", "d": "Effetti ripetuti: servono monitoraggio, misurazione, registrazioni. È il momento in cui il sistema rivela la sua realtà operativa, non più la promessa iniziale." },
+   { "t": "05", "h": "Cambiamento", "d": "Cambiano dati, fornitori, priorità, volumi, aspettative. Una soglia buona in fase pilota può diventare eccessiva dopo l'estensione. Se il cambiamento non è governato, il ciclo si rompe proprio mentre il sistema sembra consolidato." },
+   { "t": "06", "h": "Uscita", "d": "A volte va sospeso, sostituito, ridimensionato o confinato. Rinunciare a un impiego non più adeguato è un segno di maturità: l'organizzazione riconosce quando il contesto è cambiato più del sistema." }
+  ]
+ },
+ {
+  "id": "42001_m03_s023",
+  "layout": "tabella",
+  "kicker": "Logica dell'SGIA · 3",
+  "titolo": "Prestazioni, monitoraggio, misurazione",
+  "intro": "Come capisci se il sistema va nella direzione giusta. Nell'IA le prestazioni non riguardano solo l'output, ma anche il sistema di gestione che lo governa. E attenzione a non inseguire solo ciò che è facile da contare: alcuni segnali emergono prima nelle eccezioni, nei reclami qualificati, nelle osservazioni del personale. Non scambiare il facile da misurare con il più importante da capire.",
+  "cols": ["Concetto", "Significato", "Esempio"],
+  "righe": [
+   ["Prestazioni", "Risultati misurabili — del sistema di IA nel processo e del suo governo.", "Il sistema classifica bene i casi, ma nessuno registra le eccezioni né riesamina gli scostamenti: l'output racconta solo una parte."],
+   ["Monitoraggio", "Osservazione continuativa dello stato di sistema, processo o attività, anche con segnali qualitativi.", "Un aumento dei reclami; la percezione diffusa che il sistema sia meno affidabile; quanti casi vanno a revisione umana."],
+   ["Misurazione", "Assegnare un valore o un dato a un aspetto preciso.", "Il numero di reclami su un certo tipo di caso; il tasso di correzione manuale dopo un aggiornamento."],
+   ["Il collegamento agli obiettivi", "Misurare senza sapere a quale obiettivo si riferisce il dato produce rumore.", "Se osservi solo il tempo medio di risposta, i ticket complessi possono essere classificati peggio e attendere troppo, invisibili nella media."]
+  ]
+ },
+ {
+  "id": "42001_m03_s024",
+  "layout": "punti",
+  "kicker": "Logica dell'SGIA · 4",
+  "titolo": "Non conformità, azione correttiva, miglioramento",
+  "intro": "Davanti a uno scostamento serio, la domanda utile non è da chi sia partito l'errore, ma quale requisito è rimasto insoddisfatto, cosa lo ha permesso, come impedire che ricompaia. La non conformità è un requisito non soddisfatto; l'azione correttiva rimuove la causa; il miglioramento continuo fa crescere le prestazioni nel tempo. Nell'IA la causa raramente è un solo elemento.",
+  "punti": [
+   { "h": "Sintomo o causa", "d": "Se ti fermi al sintomo, correggi l'episodio e speri che basti; se cerchi la causa, cominci a governare. Candidati con esperienze non standard classificati male: viene dai dati? dalle soglie? da categorie troppo rigide? dalla mancata revisione? dalla formazione? Solo dopo l'analisi il sistema migliora." },
+   { "h": "Quattro rischi ricorrenti", "d": "Il rattoppo veloce (risolve l'urgenza, non la causa); la ricerca del colpevole unico (semplifica troppo); la correzione non documentata (nessuna traccia utile); l'idea che migliorare sia sempre «più tecnologia» — a volte è una soglia diversa, una regola di revisione, una competenza." },
+   { "h": "Causa spesso distribuita", "d": "Un ente con pratiche urgenti lasciate indietro: chiedere solo un aggiornamento al fornitore perde metà della causa, se la definizione di «urgenza» era ambigua già a monte. L'azione correttiva dovrà toccare sia il servizio tecnico sia il processo organizzativo." },
+   { "h": "Migliorare non è cambiare tutto", "d": "Il miglioramento continuo non va confuso con il cambiamento continuo: un sistema migliora quando i cambiamenti sono guidati da evidenze, obiettivi e apprendimento, non introdotti per impulso o moda." }
+  ]
+ },
+ {
+  "id": "42001_m03_s025",
+  "layout": "timeline",
+  "kicker": "Logica dell'SGIA · 5",
+  "titolo": "Caso integrato: un servizio di IA logistico",
+  "intro": "Una media società di logistica introduce un sistema per prevedere picchi di consegna, suggerire turni e riassegnare veicoli tra hub. Con la lente dell'SGIA non vedi solo il motore predittivo, ma una sequenza di decisioni presidiate: non si governa un prodotto una volta per tutte, ma un rapporto continuo tra obiettivi, processi, persone, dati, cambiamenti e miglioramento.",
+  "tappe": [
+   { "t": "01", "h": "Scopo chiaro", "d": "Non «vogliamo una soluzione intelligente», ma «sostenere il servizio in periodi variabili mantenendo decisioni leggibili e interventi umani nei casi non tipici»." },
+   { "t": "02", "h": "Selezione e configurazione", "d": "Scelta del fornitore, integrazione dei dati, hub nel perimetro iniziale, chi può modificare i parametri. Compaiono ruoli, responsabilità, informazioni documentate." },
+   { "t": "03", "h": "Integrazione", "d": "I responsabili di hub ricevono i suggerimenti ma conservano il potere di scostarsi per eventi locali. L'intervento umano è previsto, non tollerato a fatica." },
+   { "t": "04", "h": "Monitoraggio", "d": "Non solo i ritardi medi: quanti suggerimenti vengono modificati, in quali hub, perché. Scoperta preziosa: due sedi periferiche correggono spesso perché certe variabili locali non erano state considerate." },
+   { "t": "05", "h": "Cambiamento e non conformità", "d": "Crescono le consegne serali: rivedono le regole prima che il sistema peggiori. In un'area urbana le riassegnazioni allungano i tempi: la causa è nei dati non aggiornati dopo una riorganizzazione dei depositi, non solo nel motore." },
+   { "t": "06", "h": "Scelta prudente", "d": "Decidono di non estendere il sistema a un servizio espresso delicato finché non ci sono più evidenze. Non tutto ciò che funziona in un contesto va replicato ovunque." }
+  ]
+ },
+ {
+  "id": "42001_m03_s026",
+  "layout": "confronto",
+  "kicker": "Dialogo con altri sistemi · 1",
+  "titolo": "Come dialoga con ISO/IEC 27001:2022",
+  "intro": "Molte organizzazioni non partono da zero: hanno già pratiche sulla sicurezza delle informazioni. Le due norme non sono identiche né una sostituisce l'altra, ma possono dialogare in modo ordinato — a patto di mantenere chiaro il diverso centro di gravità. Le domande non sono doppioni, sono complementari.",
+  "a": {
+   "h": "ISO/IEC 27001:2022",
+   "sub": "Sicurezza delle informazioni",
+   "punti": [
+    { "d": "Guarda in primo luogo alla gestione della sicurezza — preservazione di riservatezza, integrità e disponibilità. Un sistema di IA vive di dati, configurazioni, output, registrazioni: se non protetti, l'intero governo diventa fragile." },
+    { "d": "Un dato alterato sposta un risultato, un accesso non controllato compromette il servizio, un'interruzione blocca un processo. Non un tema esterno all'IA: una condizione di affidabilità del contesto in cui opera." }
+   ]
+  },
+  "b": {
+   "h": "ISO/IEC 42001",
+   "sub": "Governo dell'IA nel contesto",
+   "punti": [
+    { "d": "Guarda al governo dei sistemi di IA come parte di prodotti, servizi e processi: obiettivi, ruoli, uso degli output, monitoraggio degli scostamenti, azioni correttive." },
+    { "d": "Il dialogo evita le mezze maturità: controlli solidi su accessi e integrità, ma governo debole di come il sistema è scelto e monitorato; oppure buona consapevolezza degli impatti, ma protezione debole dei dati. Punti di integrazione: perimetro, ruoli, informazioni documentate, logica dei controlli." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m03_s027",
+  "layout": "punti",
+  "kicker": "Dialogo con altri sistemi · 2",
+  "titolo": "IA e protezione dei dati: gli impatti sulle persone",
+  "intro": "Qui la norma non è un catalogo di obblighi privacy, ma introduce concetti che rendono il raccordo quasi inevitabile quando il sistema usa dati personali o incide in modo significativo su individui e gruppi. Protezione dei dati e sicurezza delle informazioni non sono la stessa cosa, anche se dialogano spesso.",
+  "punti": [
+   { "h": "La valutazione d'impatto", "d": "Un processo formale, con documentazione, con cui l'organizzazione individua gli effetti che l'uso del sistema può produrre su persone, gruppi e società, li pesa e decide come affrontarli. Sposta lo sguardo dagli aspetti tecnici agli effetti sulle persone." },
+   { "h": "La qualità dei dati", "d": "I dati devono essere adeguati alle esigenze riconosciute nel caso concreto: non tanti dati in astratto, ma pertinenti allo scopo. Incontra subito domande da protezione dei dati — cosa usi, perché, quanto è pertinente e aggiornato, quale effetto su chi viene valutato." },
+   { "h": "Una lente specifica", "d": "Un sistema può essere ben difeso da accessi impropri e poco governato rispetto agli effetti sugli individui; o viceversa. Il raccordo aggiunge attenzione agli impatti per le persone e alla pertinenza del trattamento nel contesto d'uso." },
+   { "h": "Far dialogare i soggetti giusti", "d": "Chi governa l'IA deve parlare con chi presidia dati, reclami, supporto, conformità. Se i dati storici di un sistema che suggerisce percorsi riflettono scelte sbilanciate, il sistema le replica: qualità dei dati e valutazione d'impatto aiutano a capire se gli effetti sulle persone sono coerenti e difendibili." }
+  ]
+ },
+ {
+  "id": "42001_m03_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 3",
+  "modNum": "3",
+  "titolo": "Dai concetti a contesto, leadership, pianificazione",
+  "punti": [
+   { "h": "Scopo e campo", "d": "La norma non è riservata a chi sviluppa tecnologia: riguarda chi sviluppa, fornisce o usa soluzioni con IA. Il baricentro è il governo dell'impiego nel contesto, con un perimetro che deve riflettere responsabilità e relazioni effettive." },
+   { "h": "I termini e i ruoli", "d": "Il sistema di IA (oggetto tecnico) distinto dal sistema di gestione (assetto organizzativo); le parti interessate al centro; produttore, fornitore, utilizzatore e soggetti interessati, spesso sovrapposti — conta vedere quale cappello è in gioco." },
+   { "h": "Leggere la norma", "d": "La struttura armonizzata come mappa comune; il corpo come ossatura che viene sempre prima; le appendici come supporto collegato, mai come scorciatoia. Metodo: ossatura, domande operative, poi le appendici." },
+   { "h": "La logica dell'SGIA", "d": "Governare il ciclo di vita, non solo il prodotto: catena di decisioni, prestazioni-monitoraggio-misurazione, non conformità e miglioramento. E il dialogo ordinato con ISO/IEC 27001 e la protezione dei dati, senza confondere i centri di gravità." }
+  ],
+  "prossimo": {
+   "modulo": "4",
+   "titolo": "Contesto, leadership e pianificazione",
+   "testo": "Entrare nei primi requisiti operativi: capire il contesto, esercitare la leadership e pianificare rischi, opportunità e obiettivi del sistema."
+  }
+ }
+]
