@@ -1,0 +1,400 @@
+[
+ {
+  "id": "14001_m09_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 14001 — Sistema di gestione ambientale",
+  "kicker": "Modulo 09",
+  "eyebrow": "Miglioramento e non conformità",
+  "titolo": "Il momento della verità del sistema",
+  "testo": "Il momento in cui l'organizzazione dimostra se sa imparare dai propri errori. Devi leggere non solo l'errore, ma la qualità della reazione: l'azienda spegne l'incendio o cerca la causa? Guardi sempre due livelli — l'evento e il sistema — evitando di minimizzare perché il danno appare piccolo e di drammatizzare senza capire gravità ed estensione. Un'organizzazione matura non è quella che non sbaglia mai: è quella che sa reagire, capire e cambiare.",
+  "agenda": [
+   "Non conformità: reazione, causa, azione correttiva, efficacia",
+   "Miglioramento continuo e prestazione reale",
+   "Rassegna delle non conformità tipiche, area per area",
+   "Non conformità vs violazione: gerarchia e conseguenze",
+   "Il rapporto ambientale per la direzione",
+   "Sintesi: dal problema al sistema che governa"
+  ]
+ },
+ {
+  "id": "14001_m09_s002",
+  "layout": "punti",
+  "kicker": "Non conformità · 1",
+  "titolo": "Che cosa conta davvero come NC",
+  "intro": "Rispetto a che cosa qualcosa non è conforme? La non conformità nasce sempre dal confronto tra realtà osservata e requisito applicabile — norma, procedura, istruzione, obbligo definito. Senza requisito hai al massimo un'anomalia; con requisito chiaro ed evidenza verificabile hai le basi per parlarne.",
+  "punti": [
+   { "h": "Non coincide con l'incidente", "d": "Un controllo previsto ma non eseguito, un monitoraggio senza registrazione, una competenza non dimostrabile, una manutenzione rinviata senza valutazione, un'emergenza provata solo sulla carta, un obiettivo mai tradotto in azioni: emerge spesso prima, nei presidi che non funzionano." },
+   { "h": "Non serve lo sversamento", "d": "L'ispezione settimanale delle aree di stoccaggio prevista dalla procedura, con registro non compilato per settimane: l'area appare ordinata, nessuna perdita — ma il requisito non è rispettato. Il presidio esiste, il suo governo non è affidabile." },
+   { "h": "L'errore umano non esaurisce l'analisi", "d": "Se un operatore miscela un rifiuto nel contenitore sbagliato, correggi subito — ma chiediti se la segnaletica era chiara, la formazione adeguata, i contenitori distinti, il turno coperto. Il sistema esiste per ridurre la dipendenza dalla memoria individuale." },
+   { "h": "Tre passaggi di disciplina", "d": "Nomina il requisito preciso, descrivi il fatto con parole osservabili, valuta la distanza e chiediti se il problema è locale o più ampio. Un contenitore provvisorio non identificato nei picchi può rivelare una routine lasciata in zona grigia, non un gesto isolato." }
+  ]
+ },
+ {
+  "id": "14001_m09_s003",
+  "layout": "punti",
+  "kicker": "Non conformità · 2",
+  "titolo": "Contenere, correggere, mitigare",
+  "intro": "La prima domanda non è chi ha sbagliato, ma cosa fare subito per riprendere il controllo. Il punto 10.2 richiede reazione concreta e tempestiva: contenere il problema, correggerlo per quanto possibile, affrontarne le conseguenze. In ambiente gli effetti negativi possono ampliarsi se la reazione è lenta.",
+  "punti": [
+   { "h": "Prima il controllo, poi le cause", "d": "Perdita da un contenitore: fermi la perdita o isoli l'area, recuperi il materiale, metti in sicurezza, verifichi l'estensione, gestisci i residui. Se inverti l'ordine, fai un'analisi elegante mentre il problema cresce." },
+   { "h": "Mitigare non è annullare", "d": "A volte il danno non è più annullabile: mitigare significa ridurne gli effetti, limitarne la propagazione, proteggere ciò che può ancora esserlo. Su un fusto danneggiato che raggiunge la griglia meteorica: bloccare, contenere, verificare il percorso, gestire i contaminati — non aprire una scheda e aspettare il comitato." },
+   { "h": "Correggere non è sistemare il modulo", "d": "Su un monitoraggio saltato: la compilazione retroattiva del calendario non basta. Il presidio è rimasto sotto controllo? Serve un controllo straordinario? Correggere significa riportare sotto governo il processo e limitare gli effetti." },
+   { "h": "Rapidità, non fretta", "d": "Spostare un contenitore che perde in zona meno visibile è occultamento, non controllo; un cartello al posto di una segregazione è un palliativo. La rapidità è una risposta pronta ma pensata; la fretta produce gesti disordinati che spostano il problema senza ridurlo." }
+  ]
+ },
+ {
+  "id": "14001_m09_s004",
+  "layout": "flusso",
+  "kicker": "Non conformità · 3",
+  "titolo": "Dalla correzione alla causa",
+  "intro": "Il sistema non migliora se il meccanismo che ha generato la non conformità resta intatto. Tre mosse diverse, da separare bene — e attenzione alla corsa alla causa unica: molte NC nascono da combinazioni di fattori. Distingui causa immediata (il come vicino) e causa di sistema (il perché organizzativo).",
+  "passi": [
+   { "h": "Riesaminare", "d": "Ricostruire con precisione il contesto: cosa è successo, quando, in quale fase, con quali condizioni, persone e presidi attivi o assenti. Le domande verificabili: cosa avrebbe dovuto impedire l'evento, perché non l'ha impedito, cosa ha reso possibile la deviazione." },
+   { "h": "Determinare la causa", "d": "Oltre il racconto: «disattenzione dell'operatore» nomina il sintomo sociale, non l'origine. Il controllo sulle vasche saltato per tre settimane: responsabile cambiato di turno, sostituto mai incaricato, registro inaccessibile, nessun monitoraggio della completezza. Una catena di affidamenti informali." },
+   { "h": "Cercare situazioni simili", "d": "Impedire che lo stesso difetto resti nascosto altrove: forse anche le verifiche sulle vasche di emergenza e sui kit dipendono da sostituzioni non formalizzate. In quel momento smetti di gestire un episodio e inizi a prevenire una famiglia di non conformità." }
+  ]
+ },
+ {
+  "id": "14001_m09_s005",
+  "layout": "punti",
+  "kicker": "Non conformità · 4",
+  "titolo": "Azione correttiva proporzionata",
+  "intro": "Due errori opposti: la risposta cosmetica che non cambia nulla, e quella sproporzionata che consuma energie senza migliorare il controllo. Il criterio della norma: adeguata alla significatività degli effetti, compreso l'impatto ambientale. Adeguata non significa uguale per tutti: coerente con rischio, conseguenze e probabilità di ripetizione.",
+  "punti": [
+   { "h": "La significatività cambia la taglia", "d": "Un'etichetta scolorita su un contenitore ben segregato: ripristino, verifica estesa, materiale migliore. Rifiuti incompatibili promiscui con personale incerto sulle regole: revisione del layout, istruzioni visive, addestramento, verifica di comprensione, controlli successivi." },
+   { "h": "Conta anche il potenziale", "d": "La severità non dipende solo da ciò che è successo: un controllo omesso sulle valvole di intercettazione può non aver generato eventi, ma il potenziale di danno resta alto e l'azione deve rifletterlo. Un errore formale in un processo ben presidiato richiede meno." },
+   { "h": "Coerenza tra diagnosi e rimedio", "d": "Tre domande: riduce la probabilità di ricorrenza? Tiene conto dell'effetto ambientale possibile? È proporzionata alla causa? Se la causa è una procedura ambigua, la sola formazione non basta; se è una risorsa tecnica inaffidabile, la procedura riscritta non basta." },
+   { "h": "Locale o di sistema", "d": "Problema locale a basso potenziale: risposta mirata e rapida. Problema diffuso, ricorrente o su un presidio critico: la risposta sale di livello — sistema, ruoli, controlli, risorse. Su un abbattimento gestito a chiamata: manutenzione preventiva, soglie, responsabilità, ricambi, verifica di efficacia." }
+  ]
+ },
+ {
+  "id": "14001_m09_s006",
+  "layout": "punti",
+  "kicker": "Non conformità · 5",
+  "titolo": "Chiudere davvero il ciclo",
+  "intro": "Una NC non è chiusa quando qualcuno scrive «chiusa» su un modulo: è chiusa quando l'azione è attuata, le conseguenze gestite, la causa affrontata e l'efficacia verificata con evidenze credibili. Attuare è relativamente semplice; dimostrare che ha funzionato nel tempo richiede disciplina.",
+  "punti": [
+   { "h": "Riesaminare l'efficacia", "d": "Tornare sul problema dopo un periodo congruo, con fatti alla mano. Registrazioni complete ma compilate tutte a fine turno, senza osservazione reale: l'azione ha spostato il problema dalla mancanza di registrazione alla registrazione apparente." },
+   { "h": "Indicatori concreti di cambiamento", "d": "Persone che sanno cosa fare, registrazioni coerenti con l'operatività, presidi disponibili e funzionanti, meno errori simili nel tempo, migliore capacità di intercettare i problemi prima che producano effetti ambientali." },
+   { "h": "Se serve, cambiare il sistema", "d": "L'azione correttiva non vive ai margini: se un problema rivela una debolezza strutturale, il sistema deve cambiare — procedura, ruoli, controlli, criteri di pianificazione, competenze, risorse. Altrimenti le NC cambiano faccia ma hanno la stessa radice." },
+   { "h": "Il dossier leggibile", "d": "La traccia deve ricostruire deviazione, risposta, analisi, decisioni, esecuzione e riscontri di efficacia, senza salti logici. Non lungo per forza: chiaro e coerente. Kit riposizionati che restano disponibili, tempi più rapidi e personale che spiega la nuova disposizione = efficacia credibile." }
+  ]
+ },
+ {
+  "id": "14001_m09_s007",
+  "layout": "punti",
+  "kicker": "Miglioramento · 1",
+  "titolo": "Non basta cambiare, devi migliorare",
+  "intro": "Il punto 10.1 chiede di migliorare con continuità il sistema per far crescere la prestazione ambientale. Cambiare non è automaticamente migliorare: aggiungere un documento o comprare una tecnologia non basta. Il miglioramento esiste quando il sistema diventa più idoneo, più adeguato e più efficace nel produrre gli esiti attesi.",
+  "punti": [
+   { "h": "Dal fare all'ottenere", "d": "Un nuovo modulo per i controlli idrici è un cambiamento; è miglioramento se grazie a quel controllo si identificano perdite prima invisibili e si interviene più rapidamente. Se produce solo più carta e nessuna decisione diversa, la prestazione non è migliorata." },
+   { "h": "L'investimento che non cambia le abitudini", "d": "Un nuovo sistema di dosaggio presentato come salto di qualità; dopo poche settimane gli operatori tornano al manuale perché il parametro rallenta la produzione. Senza rivedere assetto e metodo, l'organizzazione ha cambiato tecnologia, non migliorato la prestazione." },
+   { "h": "Anche incrementale e silenzioso", "d": "Meno errori di segregazione, controlli più affidabili, piccoli sversamenti prevenuti, uno spreco idrico ricorrente eliminato: passi che, sommati, cambiano la qualità del sistema. Il progresso spettacolare ogni mese non è il criterio." },
+   { "h": "Il legame azione-risultato", "d": "L'organizzazione sa mostrare il legame tra le azioni che dichiara e il miglioramento della prestazione? Se manca, il rischio di retorica è alto; se è chiaro, anche interventi semplici hanno grande valore." }
+  ]
+ },
+ {
+  "id": "14001_m09_s008",
+  "layout": "numeri",
+  "kicker": "Miglioramento · 2",
+  "titolo": "Dove nascono le opportunità",
+  "intro": "Il miglioramento continuo non nasce dall'ispirazione del lunedì mattina: nasce da informazioni e capacità di leggere segnali. Le opportunità stanno già dentro ciò che il sistema osserva, misura, discute e corregge. Quattro sorgenti principali — e un criterio di selezione: non ogni idea dal campo è automaticamente buona.",
+  "numeri": [
+   { "n": "1", "h": "Il monitoraggio", "d": "Consumi, scarti, anomalie ricorrenti, deviazioni dagli obiettivi. Assorbimenti elevati nelle ore notturne senza alcun incidente: perdite da verificare, gestione degli ausiliari da ridefinire — un'occasione, non un problema da correggere." },
+   { "n": "2", "h": "Le non conformità", "d": "Anche piccole, segnalano punti deboli ripetibili. Conferimenti errati corretti ogni volta ma sempre ripresentati: l'opportunità non è richiamare il personale, ma ridisegnare punti di raccolta, contenitori e istruzioni visive." },
+   { "n": "3", "h": "Il riesame di direzione", "d": "Quando i dati smettono di essere numeri isolati e diventano decisioni. Un'analisi della causa ben fatta apre spesso opportunità più ampie del singolo caso, come ripensare l'intero presidio di emergenza." },
+   { "n": "4", "h": "L'esperienza operativa", "d": "Chi lavora nei processi conosce sprechi e vulnerabilità meglio di chi sta lontano dal campo. Ma un sistema maturo mette alla prova le proposte: quali dati le sostengono, quali effetti generano, come sarà verificato il risultato." }
+  ]
+ },
+ {
+  "id": "14001_m09_s009",
+  "layout": "punti",
+  "kicker": "Miglioramento · 3",
+  "titolo": "I segnali del miglioramento reale",
+  "intro": "La domanda che separa il sistema convincente dal sistema scenografico: come capisci se la prestazione sta davvero migliorando? Iniziative, riunioni, piani e registrazioni sono utili ma non sufficienti: serve un effetto riconoscibile sui risultati ambientali. Quattro domande: situazione iniziale, azione fatta, cambiamento osservabile, cosa esclude una fluttuazione casuale.",
+  "punti": [
+   { "h": "Tre segnali di base", "d": "Un confronto credibile nel tempo (base di partenza e andamento leggibile); coerenza tra azione e risultato (misura sulle perdite → minori dispersioni o rilevazione più tempestiva); assenza di effetti collaterali non considerati." },
+   { "h": "Il vantaggio dichiarato non basta", "d": "Un detergente «più ambientale» che richiede lavaggi più lunghi e più acqua calda: se il sistema non osserva l'effetto e continua a celebrare la sostituzione, manca un pezzo essenziale. Migliorare significa vedere l'intero quadro." },
+   { "h": "Esito e tenuta del processo", "d": "I segnali di esito raccontano il risultato finale; quelli di tenuta se il sistema lavora in modo più affidabile — controlli regolari, tempi più rapidi, meno variabilità tra turni. Il beneficio pieno richiede tempo, la robustezza può vedersi prima." },
+   { "h": "Le persone che sanno spiegare", "d": "Se chi opera sa dirti cosa è cambiato, perché, con quali effetti e nuove abitudini, il sistema ha interiorizzato il progresso. Se il miglioramento vive solo nelle slide della direzione, la sostanza potrebbe essere debole." }
+  ]
+ },
+ {
+  "id": "14001_m09_s010",
+  "layout": "numeri",
+  "kicker": "Miglioramento · 4",
+  "titolo": "Il sistema che impara",
+  "intro": "Non conformità e miglioramento continuo non coincidono, ma si alimentano: gestire bene una NC genera apprendimento; coltivare il miglioramento riduce le ricorrenze. Due organizzazioni con lo stesso numero di anomalie possono avere maturità completamente diversa: una archivia in fretta, l'altra usa ogni episodio per confrontare, cercare cause comuni, aggiornare. Quattro idee guida.",
+  "numeri": [
+   { "n": "1", "h": "La correzione non basta", "d": "La correzione immediata è necessaria ma insufficiente: gli sversamenti puliti e «chiusi» ogni volta sono solo gestione reattiva, finché nessuno guarda turno, contenitori e area poco ergonomica." },
+   { "n": "2", "h": "La causa con metodo", "d": "Senza rifugiarsi in spiegazioni comode. Modificati accessori, posizioni, addestramento e controllo di inizio turno, gli sversamenti cessano: una serie di problemi diventa miglioramento della prestazione." },
+   { "n": "3", "h": "Proporzione", "d": "L'azione correttiva adeguata alla significatività degli effetti e del possibile impatto ambientale — né cosmetica né sproporzionata." },
+   { "n": "4", "h": "I risultati, non i documenti", "d": "Il miglioramento continuo si riconosce dai risultati, non dall'abbondanza di carte. La domanda: cosa rivela questo caso del nostro modo di lavorare, non solo come chiuderlo." }
+  ]
+ },
+ {
+  "id": "14001_m09_s011",
+  "layout": "punti",
+  "kicker": "Rassegna · 1",
+  "titolo": "Dove il sistema inciampa più spesso",
+  "intro": "Dalla logica generale ai casi ricorrenti: non un catalogo meccanico, ma una mappa mentale per riconoscere segnali deboli e collegare fatti dispersi. Le non conformità tipiche raramente si presentano isolate: una debolezza in alto produce effetti a cascata più in basso. Guarda il sistema come una catena, non come una pila di moduli.",
+  "punti": [
+   { "h": "Non farsi sedurre dalla forma", "d": "Procedure ordinate, indicatori colorati, registri precisi: utile, ma la domanda vera è se ciò che il sistema dichiara si traduce in decisioni, comportamenti e risultati. Se la risposta è incerta, la NC è una distanza strutturale tra rappresentazione e pratica." },
+   { "h": "Le attività ai margini", "d": "Matrice completa e piano obiettivi ben costruito; ma aree esterne gestite da logistica non coinvolta, contenitori temporanei spostati senza aggiornare le istruzioni, piccoli sversamenti corretti localmente senza entrare nei riesami. Alcune attività reali vivono fuori dal sistema." },
+   { "h": "Tre domande guida", "d": "Dove nasce il difetto — nel governo o nell'esecuzione? Cosa rende possibile la ripetizione — metodo, risorse o responsabilità sfumate? Esisteva un segnale precedente che il sistema poteva cogliere? Evitano di trattare ogni episodio come storia separata." },
+   { "h": "Proporzione nel giudizio", "d": "Non tutte le NC tipiche pesano uguale: un'istruzione non aggiornata in area poco critica va trattata; una responsabilità ambientale importante affidata senza sostituzione formalizzata è già una spia di rischio sistemico. Distinguere con lucidità, non drammatizzare." }
+  ]
+ },
+ {
+  "id": "14001_m09_s012",
+  "layout": "punti",
+  "kicker": "Rassegna · 2",
+  "titolo": "Contesto e leadership: difetti dall'alto",
+  "intro": "Quando le debolezze nascono nel contesto o nella leadership, gli effetti compaiono altrove, anche mesi dopo. La NC tipica qui non è la mancanza di una frase elegante nella politica: è la difficoltà a capire dove il sistema deve arrivare, cosa governare davvero e chi decide quando l'ambiente entra in tensione con tempi e costi.",
+  "punti": [
+   { "h": "Il perimetro parziale", "d": "Deposito esterno, area carico-scarico, officina, magazzino temporaneo rifiuti: se il sistema guarda solo le linee principali, le zone di supporto diventano terra di nessuno — etichettature deboli, controlli irregolari, gestione informale. Il sintomo è operativo, la causa è la lettura parziale del contesto." },
+   { "h": "Leadership delegata senza governo", "d": "Un responsabile ambiente preparato con tutto il presidio sulle spalle: capi reparto non coinvolti, manutenzione e logistica «fuori tema», direzione che interviene solo ai problemi. Documenti ben tenuti, scarsa capacità di reazione diffusa: il sistema dipende da poche persone." },
+   { "h": "La politica come manifesto", "d": "Impegni generali sul muro, ma investimenti che slittano, anomalie minori tollerate, obiettivi senza risorse. La NC non nasce da una dichiarazione sbagliata: nasce dal fatto che gli impegni non guidano le scelte. La leadership si vede nelle priorità concrete." },
+   { "h": "L'indizio delle interviste", "d": "«Chi decide su questo tema ambientale critico?» Se uno indica la direzione, un altro il responsabile ambiente e un terzo la manutenzione, i confini di ruolo sono confusi. E la confusione entra nelle attività, rallenta le azioni correttive, indebolisce il controllo." }
+  ]
+ },
+ {
+  "id": "14001_m09_s013",
+  "layout": "punti",
+  "kicker": "Rassegna · 3",
+  "titolo": "Pianificazione: priorità fuori fuoco",
+  "intro": "La pianificazione è dove il sistema decide che cosa conta. Le NC tipiche non appaiono come errori evidenti, ma come pianificazioni formalmente complete e sostanzialmente fuori fuoco: attenzione a ciò che si sa descrivere bene, trascurando ciò che pesa sulla prestazione.",
+  "punti": [
+   { "h": "La fotografia statica", "d": "L'elenco degli aspetti esiste ma non segue i cambiamenti: nuova sostanza, layout diverso, lavorazione aggiunta, e la valutazione resta identica. Il sistema sembra stabile perché non guarda. La NC operativa collegata alla modifica ha la causa nella pianificazione ferma." },
+   { "h": "Il reparto nato in fretta", "d": "Una finitura con detergenti più aggressivi parte per esigenze commerciali; la valutazione riflette il processo precedente, assorbenti invariati, istruzioni generiche, contenitori dove c'è spazio. La miscelazione impropria è l'ultimo anello, non la causa." },
+   { "h": "Rischi e opportunità come esercizio formale", "d": "Riunioni fatte, moduli compilati, ma le domande decisive deboli: cosa può compromettere il controllo, dove una deviazione piccola produce effetti grandi, quali cambiamenti meritano presidi diversi. Senza queste domande, le azioni saranno generiche." },
+   { "h": "Priorità comode, non reali", "d": "Si dichiara importante ridurre gli sprechi, ma gli obiettivi scelti sono quelli più facili da misurare o raccontare — un indicatore già sotto controllo, mentre le aree con errori ripetuti restano senza obiettivo. Test: il responsabile di reparto sa quali temi sono critici nella sua area?" }
+  ]
+ },
+ {
+  "id": "14001_m09_s014",
+  "layout": "numeri",
+  "kicker": "Rassegna · 4",
+  "titolo": "Obiettivi: quando il piano non guida",
+  "intro": "Il problema raramente è l'assenza di un piano: il piano esiste ma non guida le azioni. Obiettivi ben formulati, tabelle ordinate, ma senza base di partenza credibile, responsabile effettivo, risorse coerenti o criterio per capire se il risultato è arrivato. Il criterio finale: l'obiettivo modifica davvero le routine del lavoro?",
+  "numeri": [
+   { "n": "1", "h": "L'obiettivo dichiarativo", "d": "«Ridurre i rifiuti, migliorare l'efficienza»: intenzioni condivisibili, ma senza chi-cosa-quando-con che mezzi-con quale misura non hai un programma, hai una speranza. La differenza sta nella qualità del progetto, non nella bontà dell'intenzione." },
+   { "n": "2", "h": "La responsabilità nominale", "d": "Sul foglio c'è un nome, ma senza tempo, autorità o leve. Obiettivi affidati a figure tecniche senza coinvolgere produzione, manutenzione e acquisti vivono ai margini: se procedono è per eroismo individuale, se si bloccano nessuno li sblocca." },
+   { "n": "3", "h": "Il calendario fittizio", "d": "Scadenze formali che nessuno verifica: le date passano, le attività slittano, il sistema si abitua al ritardo. Un buon programma prevede punti di controllo lungo il percorso: non aspetta l'ultimo mese per scoprire di essere fuori rotta — sui piccoli sversamenti, controllare andamento e cause già nei primi periodi." }
+  ]
+ },
+ {
+  "id": "14001_m09_s015",
+  "layout": "punti",
+  "kicker": "Rassegna · 5",
+  "titolo": "Supporto: competenze e documenti che non aiutano",
+  "intro": "La famiglia dei sistemi che sembrano sostenuti da risorse, competenze e documenti, ma lasciano troppo alla memoria individuale e all'abitudine. In ambiente basta un passaggio incerto per trasformare un piccolo errore in un evento con effetti concreti.",
+  "punti": [
+   { "h": "La competenza solo formale", "d": "Registro completo, firme e date a posto; ma le persone sanno ripetere la regola, non applicarla in situazioni variabili. «Come si isola una perdita vicino alla griglia esterna?» — uno pensa agli assorbenti, uno alla chiamata, uno non sa dov'è la saracinesca. Preparazione attestata, capacità incoerente." },
+   { "h": "La consapevolezza generica", "d": "Le persone sanno che l'ambiente è importante, ma non perché il loro compito lo sia: slogan, non relazioni causa-effetto. Comportamenti ordinati ma fragili appena cambia il contesto. La consapevolezza vera: spiegare il senso del controllo, non il nome della procedura." },
+   { "h": "Documenti in due forme opposte", "d": "Vecchi, difficili da reperire o incoerenti con la pratica; oppure abbondanti ma ridondanti, dispersivi, lontani dal linguaggio operativo. Istruzioni che non riflettono i contenitori mobili introdotti mesi prima: gli addetti si regolano con accordi verbali tra turni." },
+   { "h": "La comunicazione tra funzioni", "d": "Le informazioni ambientali chiuse nel circuito specialistico arrivano tardi a chi deve agire: se manutenzione, logistica, produzione e acquisti non ricevono indicazioni chiare e tempestive, il supporto si spezza nei punti di passaggio — dove si annidano molte NC." }
+  ]
+ },
+ {
+  "id": "14001_m09_s016",
+  "layout": "punti",
+  "kicker": "Rassegna · 6",
+  "titolo": "Operatività: controlli fragili nella pratica",
+  "intro": "L'area dove molte NC diventano visibili — ma non sempre è lì che nascono. La domanda chiave: le attività con impatto ambientale sono governate da presidi chiari, coerenti e stabili anche quando le condizioni cambiano?",
+  "punti": [
+   { "h": "Controlli troppo astratti", "d": "«L'area va mantenuta ordinata, i materiali segregati, le anomalie gestite tempestivamente»: corretto ma generico. Quando l'area si affolla, arrivano fornitori o cambia il turno, ciascuno interpreta. Il controllo non era progettato per la variabilità normale del processo." },
+   { "h": "Le attività affidate all'esterno", "d": "Appalti e fornitori considerati presenze temporanee: istruzioni non comprese, non adattate, non verificate sul campo. Contenitori in zone improprie, assorbenti spostati, pulizie con logiche non coerenti: la NC è il controllo insufficiente sull'esternalizzato, non solo l'errore del fornitore." },
+   { "h": "La manutenzione dei presidi", "d": "Separatori, contenimenti, aspirazioni, vasche, allarmi trattati a chiamata, senza priorità, prove di funzionalità o verifica dopo l'intervento. La fiducia implicita — «c'è, quindi funziona» — è una NC tipica: la valvola di intercettazione mai provata risulta dura proprio nell'anomalia." },
+   { "h": "Le condizioni temporanee", "d": "Lavori straordinari, spostamenti interni, aree provvisorie, picchi stagionali: molti sistemi funzionano nella routine e si indeboliscono fuori dal tracciato standard. Proprio quelle situazioni richiedono più attenzione, non meno." }
+  ]
+ },
+ {
+  "id": "14001_m09_s017",
+  "layout": "confronto",
+  "kicker": "Rassegna · 7",
+  "titolo": "Emergenze e cambiamenti",
+  "intro": "Due momenti in cui la qualità reale del sistema emerge con chiarezza: quando succede qualcosa di anomalo e quando cambiano le condizioni operative. Finché tutto è stabile anche un sistema mediocre sembra decoroso; quando la routine si rompe, capisci se i presidi erano vivi o dichiarati.",
+  "a": {
+   "h": "Emergenze",
+   "sub": "Preparazione apparente",
+   "punti": [
+    { "d": "Piano generico, uguale per eventi diversi: le persone sanno di dover avvisare qualcuno, ma non chi contiene, chi isola, chi verifica il percorso verso l'esterno." },
+    { "d": "Prova svolta in aula, senza simulazione sul posto: al primo urto il materiale è in un armadio distante e il verbale precedente diceva «esito pienamente positivo» — preparazione apparente e verifica poco realistica." },
+    { "d": "Dopo l'evento si pulisce e si riparte, senza aggiornare istruzioni, mezzi, responsabilità o competenze: la causa resta pronta a riapparire." }
+   ]
+  },
+  "b": {
+   "h": "Cambiamenti",
+   "sub": "Non accompagnati",
+   "punti": [
+    { "d": "Cambia un prodotto, un turno, un fornitore, un layout, e le istruzioni descrivono il mondo di ieri. Il cambiamento non deve essere straordinario per creare rischio." },
+    { "d": "La tubazione flessibile temporanea comoda e funzionante: nessuno aggiorna controlli, contenimenti e percorsi. La perdita modesta ma ricorrente nello stesso punto è una NC da cambiamento non governato." },
+    { "d": "Le prove sono credibili e variate, o ripetono sempre lo stesso copione comodo? Se sono rituali generano sicurezza apparente; se realistiche, costruiscono capacità." }
+   ]
+  }
+ },
+ {
+  "id": "14001_m09_s018",
+  "layout": "punti",
+  "kicker": "Rassegna · 8",
+  "titolo": "Prestazioni: dati raccolti, non governati",
+  "intro": "Molte organizzazioni investono nella raccolta di dati, eppure proprio qui nascono NC tipiche: il sistema misura senza capire, registra senza confrontare, osserva senza decidere. Il dato esiste ma non diventa governo.",
+  "punti": [
+   { "h": "Misurare il facile, non l'utile", "d": "Serie ordinate di numeri, ma i punti dove nascono le deviazioni restano senza lettura: sversamenti trattati come episodi locali mai analizzati in tendenza, consumi letti solo come totale mensile senza collegarli alle anomalie." },
+   { "h": "Confronto debole nel tempo", "d": "Un valore nei limiti non viene discusso anche se la tendenza è sfavorevole; un miglioramento occasionale viene celebrato senza verificare se dipenda da un'azione o da una fase produttiva diversa. Il problema è il metodo con cui si attribuisce significato." },
+   { "h": "Piccole approssimazioni stabili", "d": "Letture in ritardo, copiate da fonti secondarie, ricostruite a posteriori: non servono grandi irregolarità perché il monitoraggio perda forza come evidenza — e con lui la verifica di efficacia delle azioni correttive." },
+   { "h": "La domanda dopo il numero", "d": "Un dato diventa utile quando genera una domanda pertinente: perché questo reparto consuma più acqua nei cambi formato? Perché gli errori crescono nei turni serali? Un sistema maturo, davanti a una lieve crescita dei rifiuti contaminati, va a vedere; uno debole registra e archivia." }
+  ]
+ },
+ {
+  "id": "14001_m09_s019",
+  "layout": "punti",
+  "kicker": "Rassegna · 9",
+  "titolo": "Verifiche e direzione: quando non fanno governare",
+  "intro": "Gli ultimi due snodi dovrebbero dare senso a tutto il resto: lì le informazioni diventano giudizio, priorità e decisione. Se sono deboli, il sistema raccoglie evidenze ma non le trasforma in azione correttiva e miglioramento.",
+  "punti": [
+   { "h": "Verifiche come rituale di copertura", "d": "Piano rispettato, verbali archiviati, ma campo stretto, domande ripetitive, rilievi sul facile. Le incertezze sui contenitori temporanei nelle fermate impianto non emergono mai: il sistema aveva guardato, ma non aveva visto." },
+   { "h": "Rilievi ripetuti senza apprendimento", "d": "Lo stesso tema torna con parole diverse, anno dopo anno: cambia reparto, turno, evento, la radice resta. Trattare ogni episodio come locale, senza cercare la causa comune, fa crollare il valore delle verifiche." },
+   { "h": "Il rapporto piatto", "d": "Tre episodi simili di collocazione errata, due ritardi manutentivi, aree temporanee poco governate: elencati come fatti separati sono dettagli; collegati come fragilità nella gestione del non standard diventano una priorità leggibile. Il valore è la storia del sistema, non la raccolta di notizie." },
+   { "h": "La direzione che prende atto", "d": "Se la direzione riceve ma non orienta risorse, priorità e verifiche successive, il sistema ascolta se stesso senza cambiare. E quando non cambia, le non conformità ritornano." }
+  ]
+ },
+ {
+  "id": "14001_m09_s020",
+  "layout": "confronto",
+  "kicker": "NC e violazioni · 1",
+  "titolo": "Stessa scena, peso diverso",
+  "intro": "Una distinzione che cambia linguaggio, priorità e conseguenze. Non sono sinonimi, anche se possono nascere dallo stesso fatto: il rapporto deve nominare i problemi per quello che sono, senza confondere un difetto gestionale con un illecito, e senza attenuare una violazione dietro formule morbide.",
+  "a": {
+   "h": "Non conformità del sistema",
+   "sub": "Requisito del sistema non soddisfatto",
+   "punti": [
+    { "d": "Requisito interno, organizzativo, procedurale, o derivante da obblighi che l'organizzazione ha identificato come applicabili." },
+    { "d": "Un cartellino interno incompleto con tracciabilità comunque ricostruibile e nessuna inosservanza legale: si corregge, si capisce la causa, si calibra l'azione — con linguaggio preciso." },
+    { "d": "Non banalizzarla perché non è violazione: molti eventi seri sono preceduti da controlli non eseguiti, responsabilità confuse, presidi non verificati." }
+   ]
+  },
+  "b": {
+   "h": "Violazione",
+   "sub": "Vincolo legale o autorizzativo",
+   "punti": [
+    { "d": "Uno scarico oltre un limite autorizzato, una condizione operativa in contrasto con prescrizioni cogenti: conseguenze esterne, responsabilità specifiche, urgenza elevata." },
+    { "d": "Chiama in causa il sistema su un piano più profondo: non ha prevenuto, intercettato o gestito un requisito non facoltativo." },
+    { "d": "Il caso intermedio: controlli mancanti su assorbenti e barriere di un deposito che presidia un rischio verso l'esterno — NC di sistema, ma gravità pratica alta perché indebolisce la prevenzione di una futura violazione." }
+   ]
+  }
+ },
+ {
+  "id": "14001_m09_s021",
+  "layout": "punti",
+  "kicker": "NC e violazioni · 2",
+  "titolo": "La gerarchia dei requisiti",
+  "intro": "Davanti a un fatto: quale requisito è in gioco, quale il suo livello di cogenza, quali conseguenze può generare. Questa sequenza protegge da due errori: chiamare violazione una NC del sistema, o declassare a difetto interno ciò che tocca un vincolo legale. Cambia gravità, rapidità della reazione e responsabilità.",
+  "punti": [
+   { "h": "La scala", "d": "In basso il requisito interno che governa meglio il processo; più in alto quello che previene effetti ambientali significativi; al vertice l'obbligo legale o autorizzativo, che l'organizzazione non sceglie ma deve rispettare. Piani di giudizio diversi, da nominare con precisione." },
+   { "h": "Parti dall'evidenza, non dall'etichetta", "d": "Cosa hai visto, cosa puoi dimostrare, quale requisito preciso si collega. Solo dopo decidi se è NC, violazione o entrambe. «Violazione» prematura indebolisce il rapporto; evitarla per timore del conflitto, con requisito chiaro ed evidenza solida, è ugualmente scorretto." },
+   { "h": "Il livello condiziona la risposta", "d": "Un difetto di registrazione richiede correzione pronta e analisi della causa; una possibile violazione richiede anche gestione immediata del rischio verso l'esterno, coinvolgimento diretto della direzione, attenzione alla comunicazione." },
+   { "h": "Il nesso requisito-presidio-effetto", "d": "Firma mancante ma prova funzionale dimostrabile con altre evidenze = un terreno; prova non eseguita per mesi su un presidio essenziale verso l'esterno = lettura molto più severa, anche prima di accertare una violazione. Non guardare solo la carta." }
+  ]
+ },
+ {
+  "id": "14001_m09_s022",
+  "layout": "cards",
+  "kicker": "NC e violazioni · 3",
+  "titolo": "Quando il problema sale di livello",
+  "intro": "Se il requisito cambia livello, cambiano le conseguenze — e non solo il rischio sanzionatorio: una frattura più ampia tra controllo atteso e controllo reale. Leggi le conseguenze su tre piani. E nel rapporto: non descrivere solo l'evento, spiega cosa cambia in conseguenze, priorità e bisogno di governo.",
+  "cards": [
+   { "h": "Piano operativo", "d": "Cambia l'urgenza: una NC interna può consentire gestione programmata se il rischio resta sotto controllo; una violazione (o una situazione che la rende probabile) richiede reazione rapida e visibile — sicurezza, contenimento, perimetro del problema. In ambiente il tempo pesa." },
+   { "h": "Piano gestionale", "d": "Il tema non resta al responsabile ambiente: diventa questione di governo — risorse, supervisione, competenze, priorità. Serve una catena decisionale netta: chi valuta, chi autorizza, chi segue la correzione, chi verifica, chi previene la ripetizione altrove." },
+   { "h": "Piano esterno", "d": "Prescrizioni, interlocuzioni con autorità, impegni verso terzi, reputazione, conseguenze economiche indirette. Il problema non è più solo domestico: il rapporto deve rendere evidente il livello, senza toni allarmistici ma senza attenuazioni." }
+  ]
+ },
+ {
+  "id": "14001_m09_s023",
+  "layout": "flusso",
+  "kicker": "NC e violazioni · 4",
+  "titolo": "Uno stesso fatto, due piani di giudizio",
+  "intro": "Spesso un solo episodio va letto su due piani: la NC del sistema (il requisito organizzativo che non ha funzionato) e la violazione dell'obbligo. Se non li separi, il rapporto è confuso; se li separi troppo, perdi il nesso causale. L'equilibrio: una sola storia con due letture coerenti.",
+  "passi": [
+   { "h": "L'evidenza oggettiva", "d": "Che cosa è accaduto o che cosa hai osservato: il superamento rispetto a un vincolo applicabile, l'area temporanea gestita fuori dalle modalità previste. Descrivi con rigore, senza interpretazioni premature." },
+   { "h": "Il requisito di sistema", "d": "Controlli preventivi rinviati, manutenzione critica fuori tempo, anomalie precedenti trattate come fatti minori: la non conformità come meccanismo che ha contribuito a rendere possibile l'esito." },
+   { "h": "Il requisito legale", "d": "Se gli elementi lo consentono, collega lo stesso fatto al vincolo applicabile e quindi alla violazione. Se il perimetro legale è controverso, descrivi il fatto, indica il requisito di sistema certo e segnala il possibile rilievo da approfondire nelle sedi competenti: prudenza, non vaghezza." },
+   { "h": "Il nesso tra i piani", "d": "Il sistema non ha prevenuto, intercettato o gestito un requisito cogente come avrebbe dovuto. Mostrare entrambi i significati evita due reazioni sbagliate: difendersi sul piano legale senza correggere il sistema, o chiudere la NC come se fosse solo procedurale." }
+  ]
+ },
+ {
+  "id": "14001_m09_s024",
+  "layout": "punti",
+  "kicker": "Il rapporto · 1",
+  "titolo": "Perché vale davvero",
+  "intro": "Non un atto amministrativo da archiviare: il punto in cui il sistema restituisce alla direzione una lettura leggibile, onesta e utile. La domanda severa: aiuta davvero a governare? Un documento può essere completo, ordinato, elegante — e non aiutare affatto.",
+  "punti": [
+   { "h": "Organizzare il senso", "d": "Sversamenti, ritardi manutentivi, aree temporanee incerte, azioni chiuse senza verifica convincente: presentati come episodi isolati sono dettagli; mostrati come convergenza su una stessa fragilità (il governo del non standard) diventano una priorità leggibile." },
+   { "h": "Tendenze, non fotografie", "d": "La direzione non sostiene un miglioramento reale con una fotografia statica: servono tendenze, cause ricorrenti, efficacia delle azioni, segnali di avanzamento e aree dove il miglioramento dichiarato non ha ancora prodotto effetti solidi." },
+   { "h": "Protegge il dialogo interno", "d": "Con una lettura chiara, i responsabili discutono su basi comuni: meno guerra delle impressioni, meno tentazione di minimizzare, attenzione spostata dai sintomi alle priorità. Molte decisioni ambientali richiedono allineamento tra funzioni, non solo competenza tecnica." },
+   { "h": "Rende visibile rischi-risorse", "d": "Se una fragilità continua a emergere e le risorse restano invariate, la direzione deve vedere quella tensione in modo esplicito — non per giustificarsi, ma per decidere. È ciò che distingue un sistema vivo da uno ornamentale." }
+  ]
+ },
+ {
+  "id": "14001_m09_s025",
+  "layout": "numeri",
+  "kicker": "Il rapporto · 2",
+  "titolo": "Le quattro funzioni del rapporto utile",
+  "intro": "Per aiutare a decidere, un rapporto deve fare quattro cose molto bene. Se ne manca una, diventa archivio elegante; se ci sono tutte, anche un documento non lunghissimo diventa leva di governo. Riempire pagine non equivale a chiarire — spesso è l'opposto.",
+  "numeri": [
+   { "n": "1", "h": "Selezionare", "d": "Non ogni dettaglio con la stessa attenzione: i fatti che rivelano tendenza, ripetizione, impatto potenziale, inefficacia delle azioni, fragilità di processo. Episodi diversi legati ai controlli temporanei mal gestiti: far emergere il tema comune." },
+   { "n": "2", "h": "Collegare", "d": "La NC alla causa probabile, la causa alle aree dove può ripresentarsi, le azioni agli esiti, gli indicatori alle scelte. «Indicatore migliorato, osservazioni residue» vs «progresso parziale, non consolidato perché non uniforme tra aree e turni»." },
+   { "n": "3", "h": "Pesare", "d": "Locale vs sistemico, episodico vs ricorrente, minore vs esposto a conseguenze ampie. Tre piccoli errori di registrazione non pesano come un'anomalia che rivela un presidio critico non verificato. Dare gerarchia, non drammatizzare." },
+   { "n": "4", "h": "Orientare", "d": "Lasciare una direzione di marcia: cosa richiede intervento immediato, cosa monitoraggio rafforzato, dove l'azione già attuata non sta funzionando. Il rapporto non chiude la conversazione: la apre nel modo giusto." }
+  ]
+ },
+ {
+  "id": "14001_m09_s026",
+  "layout": "cards",
+  "kicker": "Il rapporto · 3",
+  "titolo": "Dal rapporto alle scelte",
+  "intro": "Il valore più alto arriva quando il rapporto diventa motore di decisioni: qui la direzione mostra se considera il sistema parte del governo o adempimento da presidiare a distanza. Le decisioni che un buon rapporto sostiene riguardano quasi sempre quattro campi.",
+  "cards": [
+   { "h": "Risorse", "d": "Mostrare la relazione tra fragilità osservata e presidio disponibile: NC nelle attività temporanee con materiale lontano, segnaletica incompleta e personale che cambia non sono solo comportamento — sono dotazione, organizzazione, accessibilità." },
+   { "h": "Priorità", "d": "Evitare la dispersione: se ricorrenze diverse hanno una causa comune che incide su più processi, la direzione può scegliere con coraggio dove concentrare attenzione. I piccoli segnali diffusi, insieme, raccontano una fragilità seria." },
+   { "h": "Responsabilità", "d": "Rendere visibile dove il governo si interrompe: chi doveva presidiare, verificare, intervenire, dove la catena si è indebolita. Non caccia al colpevole: qualità dell'assegnazione, della sostituzione, del coordinamento." },
+   { "h": "Modifiche al sistema", "d": "Se le azioni hanno funzionato solo in parte, o episodi diversi nascono dalla stessa debolezza: aggiornare procedure, ridefinire controlli, cambiare pianificazione. Sul non standard: istruzioni dedicate, controlli pre-avvio, presidi riposizionati, addestramento aggiornato — non solo «più attenzione»." }
+  ]
+ },
+ {
+  "id": "14001_m09_s027",
+  "layout": "numeri",
+  "kicker": "Il rapporto · 4",
+  "titolo": "I difetti tipici: molto testo, poco governo",
+  "intro": "Per riconoscere un buon rapporto, aiuta sapere come si presenta uno debole. I difetti tornano con regolarità sorprendente e producono lo stesso effetto: molta attività di raccolta, poca capacità di governo.",
+  "numeri": [
+   { "n": "1", "h": "Accumulo senza gerarchia", "d": "Tutto sullo stesso piano: episodio occasionale, dato stabile, NC ricorrente, area di miglioramento. Quando tutto è importante allo stesso modo, nulla diventa priorità." },
+   { "n": "2", "h": "Linguaggio anestetico", "d": "«Criticità da monitorare» dove serve una NC netta, «lieve scostamento» dove la ricorrenza mostra debolezza di sistema. La prudenza è un valore; l'ambiguità no." },
+   { "n": "3", "h": "Mancanza di nessi", "d": "Fatti, indicatori, verifiche e azioni come blocchi separati: consumi migliorati ma più rilievi sui residui e manutenzioni in ritardo — senza collegamento, la direzione legge solo la riduzione e conclude che va tutto bene." },
+   { "n": "4", "h": "Ottimismo automatico", "d": "Azioni «chiuse» perché formalmente completate, senza mostrare se hanno ridotto la ricorrenza. Senza verifica di efficacia, la chiusura è solo amministrativa." },
+   { "n": "5", "h": "Pessimismo indistinto", "d": "Problemi accumulati senza gravità, cause e possibilità di soluzione: una direzione sommersa reagisce con stanchezza, rinvio o scetticismo. Il buon rapporto mantiene equilibrio e mostra anche ciò che funziona." },
+   { "n": "6", "h": "Assenza di futuro", "d": "Chiude sul passato senza dire cosa richiede attenzione nei mesi successivi: una fotografia, non una traiettoria. Governare significa scegliere il passo successivo." }
+  ]
+ },
+ {
+  "id": "14001_m09_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 09",
+  "modNum": "09",
+  "titolo": "Dal problema al sistema che sa governare",
+  "punti": [
+   { "h": "La sequenza logica", "d": "Quale requisito è coinvolto; poi la qualità della reazione — contenere, correggere, mitigare; poi causa, ricorrenza altrove, azione proporzionata e verifica di efficacia nel tempo. Il cuore di un sistema che apprende." },
+   { "h": "Il miglioramento continuo", "d": "Non coincide col cambiamento: il sistema deve servire meglio il suo scopo e produrre risultati più affidabili. I segnali: problemi che diminuiscono, presidi che tengono, persone consapevoli, dati credibili, decisioni che nascono da ciò che si è imparato." },
+   { "h": "Le non conformità tipiche", "d": "Molti difetti nascono in alto — contesto e leadership poco concreti — e scendono in pianificazione, supporto, operatività e valutazione. I sistemi fragili non mancano di carte: mancano di collegamento tra dichiarato e fatto, fuori dalla routine." },
+   { "h": "NC e violazione", "d": "Non ogni difetto è violazione, ma ogni violazione racconta qualcosa sulla tenuta del sistema. Giudizio preciso, proporzionato, fondato sulle evidenze: nominare bene i fatti è già parte della loro corretta gestione." },
+   { "h": "Il rapporto che governa", "d": "Collega i fatti, pesa la significatività, mostra cause e ricorrenze, chiarisce dove l'azione non è efficace e aiuta a scegliere risorse, priorità, responsabilità e modifiche: trasforma le informazioni in governo." },
+   { "h": "Cinque domande da portare via", "d": "Qual è il requisito coinvolto? Cosa è stato fatto subito? Qual è la causa più credibile? L'azione è proporzionata alla significatività? Il rapporto dà una priorità chiara o solo un elenco? Poi: Verificare l'SGA I, programma e preparazione." }
+  ],
+  "prossimo": {
+   "modulo": "10",
+   "titolo": "Verificare l'SGA I: programma e preparazione",
+   "testo": "Da ciò che il sistema deve saper fare, a come prepari una verifica capace di leggerlo con metodo e profondità."
+  }
+ }
+]
