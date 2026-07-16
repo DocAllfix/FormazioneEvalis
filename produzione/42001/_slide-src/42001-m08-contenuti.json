@@ -1,0 +1,390 @@
+[
+ {
+  "id": "42001_m08_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 42001 — Sistemi di gestione dell'IA",
+  "kicker": "Modulo 8",
+  "eyebrow": "Se il sistema funziona, dimostralo",
+  "titolo": "La valutazione delle prestazioni del SGIA",
+  "testo": "Fin qui hai costruito il sistema, lo hai pianificato, lo hai reso operativo; adesso devi capire se funziona davvero, con quali risultati e dove sta perdendo forza. È qui che il punto 9 della norma diventa decisivo, perché trasforma intenzioni e procedure in evidenze, giudizi e decisioni di governo. C'è un punto importante per chi lavora con l'IA: non puoi limitarti a controllare il sistema di gestione in astratto, devi osservare i modelli quando sono in esercizio, perché le prestazioni cambiano, i dati si spostano, gli incidenti insegnano. Ascolta con una domanda fissa in mente: se domani dovessi dimostrare che il tuo SGIA funziona, quali fatti potresti portare sul tavolo? E una distinzione ti accompagnerà tutto il modulo: valutare le prestazioni non è misurare l'output tecnico di un modello, è giudicare l'efficacia complessiva con cui processi, controlli, responsabilità e decisioni sostengono un uso governato dell'IA.",
+  "agenda": [
+   "Punto 9.1: cosa monitorare, con quali metodi e tempi",
+   "Prestazioni ed efficacia: due giudizi da non confondere",
+   "Punto 9.2: l'audit interno come strumento di conoscenza",
+   "Punto 9.3: il riesame di direzione come momento di governo",
+   "Oltre il sistema: deriva, prestazioni operative, incidenti",
+   "Verificare l'intero capitolo nove con metodo"
+  ]
+ },
+ {
+  "id": "42001_m08_s002",
+  "layout": "split",
+  "kicker": "Monitoraggio e misura · 1",
+  "titolo": "Che cosa monitorare e misurare davvero",
+  "lead": "La prima domanda del punto 9.1 non è quale cruscotto usare, ma cosa devi monitorare e cosa misurare perché il giudizio sulle prestazioni sia fondato. Monitoraggio e misurazione non coincidono: il primo è l'osservazione continua o periodica di un fenomeno, la seconda richiede una regola precisa, un metodo definito e un risultato leggibile in modo coerente nel tempo. Se le confondi, raccogli segnali sparsi senza trasformarli in evidenza utilizzabile.",
+  "punti": [
+   { "h": "Determinare gli oggetti di osservazione", "d": "Ogni scelta comunica che cosa l'organizzazione considera importante. Se monitori solo la disponibilità tecnica, dici che la continuità conta più della qualità delle decisioni; se misuri solo i reclami, guardi un effetto tardivo e parziale." },
+   { "h": "Coprire tre livelli", "d": "Un buon SGIA sceglie oggetti che coprano il funzionamento dei processi di gestione, il comportamento dei sistemi di IA in esercizio e gli effetti organizzativi delle decisioni prese. Non tutto diventa misurazione formale, ma tutto può essere un segnale utile." },
+   { "h": "Gli indicatori nascono da un bisogno decisionale", "d": "Un indicatore scelto perché facile da estrarre vale poco; uno che aiuta a capire se un rischio sta crescendo vale molto. Tre domande: quale decisione potrei prendere grazie a questo dato, quale rischio rende visibile, quale comportamento potrebbe distorcere se lo inseguissero ciecamente?" },
+   { "h": "Necessario significa pertinente", "d": "Un set troppo ampio stanca, costa e non viene più letto; uno troppo povero abbellisce la realtà e nasconde le deviazioni. Distingui ciò che vuoi vedere presto (aumento di correzioni ed eccezioni) da ciò che confermi dopo (reclami fondati, riesami, ritardi): osservi solo il risultato finale e reagisci tardi." }
+  ]
+ },
+ {
+  "id": "42001_m08_s003",
+  "layout": "punti",
+  "kicker": "Monitoraggio e misura · 2",
+  "titolo": "Metodi validi e tempi giusti",
+  "intro": "La norma chiede di determinare i metodi per monitoraggio, misurazione, analisi e valutazione in modo da ottenere risultati validi. La parola chiave è validi: devi poter spiegare perché il metodo produce informazioni affidabili, comparabili e utili al giudizio. Un dato debole può essere peggiore di nessun dato, perché dà una falsa impressione di controllo.",
+  "punti": [
+   { "h": "Definire il metodo con attenzione", "d": "Serve chiarezza su fonte, regola di calcolo, responsabilità, frequenza, strumenti e condizioni di lettura. Se misuri il tasso di revisione umana, chiarisci cosa conta come revisione, quando la registri, chi la valida e su quale universo di casi: altrimenti lo stesso indicatore cambia significato da un reparto all'altro." },
+   { "h": "La cadenza segue il ritmo del rischio", "d": "La norma chiede anche quando eseguire monitoraggio e misurazione e quando analizzare e valutare. Molte organizzazioni raccolgono dati con regolarità ma li interpretano troppo tardi. Analizzare ogni giorno un indicatore che cambia lentamente genera rumore; misurare ogni settimana e valutare ogni sei mesi, in un processo variabile, è inutile." },
+   { "h": "Valido e anche sostenibile", "d": "Alcuni metodi sono formalmente corretti ma troppo costosi o lenti per durare: se il monitoraggio richiede ogni volta l'analisi artigianale di centinaia di casi, verrà abbandonato. Meglio misure poche ma robuste, che vivano nel tempo senza dipendere dall'eroismo di pochi." },
+   { "h": "La prova della ripetibilità", "d": "Prendi un indicatore e chiediti se due persone diverse, dagli stessi dati e dalla stessa definizione, arriverebbero allo stesso risultato. Se la risposta è incerta, il metodo va ancora chiarito. E tieni distinti monitoraggio, analisi e valutazione: prima raccogli il segnale, poi lo elabori, poi gli attribuisci un significato rispetto a obiettivi, rischi e requisiti." }
+  ]
+ },
+ {
+  "id": "42001_m08_s004",
+  "layout": "punti",
+  "kicker": "Monitoraggio e misura · 3",
+  "titolo": "Informazioni documentate: dal dato grezzo all'evidenza utile",
+  "intro": "Finché i risultati restano nella testa delle persone, il SGIA non sta imparando. La norma richiede informazioni documentate come evidenza dei risultati: monitoraggio e misurazione devono lasciare tracce leggibili, recuperabili e chiare da sostenere analisi, confronto e decisioni. Non si tratta solo di archiviare file, ma di costruire memoria organizzativa.",
+  "punti": [
+   { "h": "Abbondanza non è qualità", "d": "Report lunghi, esportazioni grezze, schermate, fogli paralleli e note locali sembrano coprire tutto, ma manca l'essenziale: una catena chiara che colleghi dato, fonte, regola di lettura e decisione possibile. L'informazione utile non è la più voluminosa, è quella che rende il risultato verificabile e interpretabile." },
+   { "h": "Conservare non è valutare", "d": "Puoi avere un report impeccabile e non aver capito nulla del suo significato. Una struttura semplice per ogni informazione rilevante: che cosa misuri, con quale fonte, in quale periodo, con quale regola, quale andamento emerge, quale attenzione richiede." },
+   { "h": "Livelli che si parlano", "d": "Alcune informazioni restano sintetiche per la direzione, altre più dettagliate per analisi tecniche e indagini su incidenti. Se la direzione vede solo un semaforo verde ma nessuno risale ai motivi, perdi trasparenza; se hai solo dettagli minuti senza sintesi, perdi governabilità." },
+   { "h": "Il test dei sei mesi", "d": "Se tra sei mesi una persona nuova leggesse quelle tracce, capirebbe non solo che cosa è accaduto, ma anche perché l'organizzazione ha giudicato rilevante quel risultato? Se la risposta è no, la documentazione è ancora troppo fragile. Le informazioni non decorano il sistema, lo rendono dimostrabile e governabile." }
+  ]
+ },
+ {
+  "id": "42001_m08_s005",
+  "layout": "confronto",
+  "kicker": "Monitoraggio e misura · 4",
+  "titolo": "Prestazioni ed efficacia: due giudizi da non confondere",
+  "intro": "Il punto 9.1 non chiede solo di raccogliere risultati: chiede di arrivare a un giudizio sulle prestazioni del SGIA e sulla sua efficacia. Le due idee sono vicine ma non coincidono, e confonderle porta fuori strada. Un insieme di prestazioni accettabili non garantisce efficacia; qualche scostamento operativo non significa inefficacia, se il sistema individua il problema, lo analizza e reagisce con tempi adeguati.",
+  "a": {
+   "h": "Le prestazioni",
+   "sub": "Il materiale del giudizio",
+   "punti": [
+    { "d": "L'andamento osservabile del sistema: risultati dei processi, trend, scostamenti, tempi, errori, incidenti, conformità, reazioni ai problemi. Sono il materiale del giudizio, non il giudizio finale." },
+    { "d": "Puoi avere procedure rispettate, report puntuali e pochi reclami, e scoprire che le modifiche importanti non vengono valutate bene, che i ruoli decisionali sono opachi o che i segnali di degrado arrivano tardi alla direzione." }
+   ]
+  },
+  "b": {
+   "h": "L'efficacia",
+   "sub": "La domanda impegnativa",
+   "punti": [
+    { "d": "Questo sistema sta davvero ottenendo il risultato per cui esiste? Sta governando l'uso dell'IA in modo coerente con obiettivi, rischi e requisiti? Se un indicatore migliora, chiediti quale meccanismo del sistema di gestione abbia contribuito." },
+    { "d": "Serve una lettura a più livelli: che cosa sta succedendo, perché sta succedendo, che cosa implica per la capacità del SGIA di governare l'IA. Il terzo livello è quello che manca nei sistemi immaturi, che si fermano al cruscotto e non arrivano al giudizio." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m08_s006",
+  "layout": "tabella",
+  "kicker": "Monitoraggio e misura · 5",
+  "titolo": "Indicatori utili, indicatori ingannevoli, soglie",
+  "intro": "Un indicatore non è buono perché esiste o perché appare elegante in un cruscotto: è buono se rende visibile qualcosa di importante, orienta una decisione sensata e non spinge i comportamenti nella direzione sbagliata. Le soglie di attenzione danno criteri coerenti per decidere quando approfondire, ma valgono solo se generano un comportamento definito. Un indicatore molto amato dal management diventa pericoloso quando tutti lo inseguono.",
+  "cols": ["Aspetto", "Indicatore utile", "Indicatore ingannevole"],
+  "righe": [
+   ["Significato", "Rende visibile un rischio, un esito o una decisione", "Facile da raccogliere ma povero di significato, o così aggregato da nascondere i problemi"],
+   ["Esempio tipico", "Correzioni manuali per categoria lette insieme a reclami e qualità dei dati", "Numero totale di decisioni automatizzate: se cresce, non sai se il sistema lavora meglio o interviene solo su più casi semplici"],
+   ["Effetto sui comportamenti", "Affiancato da misure di equilibrio che mostrano gli effetti collaterali", "Premia risultati apparenti: si impara a migliorare il numero senza migliorare il processo"],
+   ["La soglia di attenzione", "Un trend o una combinazione di segnali che fa scattare analisi, controllo rafforzato, escalation", "Un semaforo cieco che nessuno sa come leggere e che non genera nessuna azione definita"]
+  ]
+ },
+ {
+  "id": "42001_m08_s007",
+  "layout": "flusso",
+  "kicker": "Monitoraggio e misura · 6",
+  "titolo": "Dal cruscotto alla decisione: un esempio integrato",
+  "intro": "Un'organizzazione usa un'IA per classificare richieste di rimborso. Costruisce il monitoraggio partendo dai rischi: qualità dei dati in ingresso, stabilità delle classificazioni, correzioni manuali, reclami riesaminati, rispetto delle attività del SGIA. Il monitoraggio non vale per la quantità di dati prodotti, ma per la qualità delle decisioni che rende possibili.",
+  "passi": [
+   { "h": "Il dato positivo evidente", "d": "Dopo alcune settimane le richieste gestite aumentano e il tempo medio si riduce. A prima vista sembra ottimo, e un sistema immaturo si fermerebbe qui, rassicurato dall'indicatore favorevole." },
+   { "h": "Confrontare i segnali", "d": "Le correzioni manuali crescono in due categorie e i reclami, pur contenuti, si concentrano negli stessi casi. L'organizzazione non nega il problema dietro un indicatore favorevole: scopre che una modifica nei dati di provenienza ha reso meno affidabili alcune classificazioni." },
+   { "h": "Reagire con azioni mirate", "d": "Attiva una valutazione mirata, rafforza il controllo umano sulle categorie interessate, aggiorna la regola di monitoraggio, assegna un'azione al team competente e porta il tema ai livelli decisionali giusti: non è solo tecnico, riguarda l'efficacia dei controlli." },
+   { "h": "Verificare l'effetto", "d": "Nel mese successivo controlla se le correzioni diminuiscono proprio nelle categorie critiche, se la qualità dei dati migliora, se i reclami cambiano distribuzione. Senza un controllo sull'effetto delle azioni, il sistema reagisce ma non apprende — e la storia completa resta leggibile per audit interno e riesame." }
+  ]
+ },
+ {
+  "id": "42001_m08_s008",
+  "layout": "split",
+  "kicker": "Audit interno · 1",
+  "titolo": "Perché serve l'audit interno del SGIA",
+  "lead": "L'audit interno produce informazioni affidabili su due domande: il sistema rispetta davvero sia i requisiti della norma sia le regole che l'organizzazione si è data, e nel lavoro quotidiano continua a funzionare in modo solido? Molte organizzazioni lo vivono come un esame o una caccia all'errore: è una lettura povera. Se progettato bene, è uno strumento di conoscenza, che mostra se ciò che il SGIA dichiara corrisponde a ciò che avviene.",
+  "punti": [
+   { "h": "Rispetta i criteri applicabili", "d": "Il confronto riguarda la norma e i requisiti interni: procedure, criteri, regole decisionali e modalità operative che l'organizzazione ha definito per sé. È la domanda sulla conformità sostanziale, non solo formale." },
+   { "h": "Regge nel tempo ed è efficace", "d": "Un SGIA può essere formalmente ordinato e poco incisivo, se i controlli non intercettano i problemi, se i ruoli restano nominali o se le azioni correttive non cambiano nulla. È la domanda sull'efficacia." },
+   { "h": "A intervalli pianificati", "d": "Pianificati non vuol dire rigidi in modo cieco: pensati prima, con una logica che dia prevedibilità e lasci spazio a rischio, cambiamenti e risultati precedenti. Se aspetti che i problemi esplodano, l'audit arriva tardi; se verifichi sempre le stesse cose, diventa meccanico." },
+   { "h": "Gli scarti tra carta e pratica", "d": "Aiuta a vedere le zone in cui il sistema appare ordinato ma non è robusto: registrazioni complete e procedure ben scritte, ma nelle urgenze il personale aggira il flusso; indicatori positivi che nessuno rilegge quando cambia il contesto. Il valore non sta nella quantità di rilievi, ma nella qualità delle informazioni per i responsabili." }
+  ]
+ },
+ {
+  "id": "42001_m08_s009",
+  "layout": "cards",
+  "kicker": "Audit interno · 2",
+  "titolo": "Il programma: frequenze, priorità, metodo",
+  "intro": "Il programma di audit interno è una struttura di governo, non un elenco di date: definisce ritmo, approccio, responsabilità, pianificazione e modalità di reporting. Un piano debole genera verifiche casuali, un programma robusto crea continuità, confrontabilità e apprendimento. Deve nascere da una lettura del sistema, non dall'abitudine.",
+  "cards": [
+   { "h": "Frequenza guidata dal rischio", "d": "Assegnare a tutte le aree lo stesso ritmo è comodo ma raramente intelligente. La cadenza segue rischio, criticità e storia recente: un processo che ha generato eccezioni frequenti merita più attenzione di uno stabile e maturo. Le priorità devono seguire i segnali." },
+   { "h": "Metodi coerenti con l'obiettivo", "d": "Un programma maturo non usa sempre lo stesso approccio: alcune verifiche richiedono più interviste, altre più esame di registrazioni, altre osservazione o campionamenti. Se vuoi capire se una procedura esiste basta l'evidenza documentale; se è davvero applicata, devi seguire il flusso reale del lavoro." },
+   { "h": "Responsabilità chiare", "d": "Il programma chiarisce chi pianifica, chi coordina, chi esegue e chi riceve i risultati. Quando i confini sono vaghi, nessuno sa chi decide le priorità, chi conferma il campo di applicazione, chi segue i ritardi, chi verifica la chiusura delle azioni." },
+   { "h": "Un programma vivo", "d": "Nasce da rischi aggiornati, risultati del monitoraggio ed esiti precedenti, e prevede una revisione intermedia per spostare le priorità se i segnali cambiano. Il reporting non è il pezzo finale da sbrigare: se i risultati arrivano tardi o a destinatari sbagliati, l'audit perde metà del suo valore." }
+  ]
+ },
+ {
+  "id": "42001_m08_s010",
+  "layout": "numeri",
+  "kicker": "Audit interno · 3",
+  "titolo": "Obiettivi, criteri, campo e imparzialità",
+  "intro": "Per rendere credibile ogni verifica devi chiarire alcuni elementi prima di iniziare. Senza questa base, l'audit rischia di allargarsi senza controllo, fermarsi alla superficie o produrre conclusioni discutibili. Un audit ben definito è anche più efficiente: interviste mirate, campioni coerenti, rapporto finale senza generalizzazioni.",
+  "numeri": [
+   { "n": "1", "h": "L'obiettivo", "d": "Risponde al perché della verifica: capire se la gestione delle modifiche è conforme, se i controlli sui dati sono attuati, se il trattamento delle eccezioni è efficace. Ogni audit nasce da uno scopo esplicito, non da una formula generica." },
+   { "n": "2", "h": "I criteri", "d": "Il metro del confronto: requisiti della norma e requisiti interni — procedure, regole di approvazione, controlli, responsabilità. Vanno dichiarati prima, perché il giudizio deve poggiare su riferimenti noti, non su aspettative improvvisate durante la verifica." },
+   { "n": "3", "h": "Il campo di applicazione", "d": "Delimita dove guarderai e dove no: processi, unità, periodi, tecnologie, interfacce. Se verifichi le modifiche su un sistema specifico non puoi estendere il giudizio a tutto il SGIA; se osservi un trimestre, non puoi parlare con leggerezza dell'intero anno." },
+   { "n": "4", "h": "Obiettività e imparzialità", "d": "Le persone scelte e l'organizzazione della verifica devono proteggerle. Chi verifica non dovrebbe giudicare il proprio lavoro senza salvaguardie: chi gestisce ogni giorno le eccezioni può affiancare come supporto tecnico, lasciando il giudizio a una figura diversa. E i risultati vanno riportati ai responsabili pertinenti." }
+  ]
+ },
+ {
+  "id": "42001_m08_s011",
+  "layout": "punti",
+  "kicker": "Audit interno · 4",
+  "titolo": "Dai risultati alla decisione: rendere utile l'audit",
+  "intro": "Il valore vero della verifica emerge nel modo in cui i risultati vengono restituiti. Il punto 9.2 richiede che siano riportati ai responsabili pertinenti: devi trasformare osservazioni, conferme e scostamenti in informazione chiara, tempestiva e orientata all'azione. C'è una differenza decisiva tra fare una verifica e generare governo.",
+  "punti": [
+   { "h": "Tre livelli da separare", "d": "Fattuale: che cosa hai visto, in quali evidenze, rispetto a quali criteri. Valutativo: il fatto è coerente o no con i requisiti applicabili. Gestionale: quali conseguenze può avere sull'efficacia del SGIA. Molte relazioni si fermano al primo livello e perciò restano deboli." },
+   { "h": "Dal fatto alla debolezza di sistema", "d": "Se una valutazione è stata registrata solo dopo il rilascio per urgenza, riportare il solo fatto è una nota amministrativa; collegarlo al criterio mostra che il controllo preventivo è stato indebolito; collegarlo alle conseguenze mostra che sotto pressione il processo non regge come dichiarato." },
+   { "h": "Adattare la comunicazione", "d": "I responsabili non sono tutti uguali: alcuni hanno bisogno del dettaglio operativo per correggere una prassi, altri di una sintesi più alta per valutare priorità e risorse. Non duplicare documenti, ma rendere la stessa informazione utilizzabile da ruoli diversi, con tono professionale, preciso e sobrio." },
+   { "h": "Distinguere l'urgente dall'ordinario", "d": "Capire se hai davanti una correzione immediata, un segnale di tendenza o un'opportunità di rafforzamento: senza questa distinzione, tutto appare urgente o niente lo è davvero. Il valore non si misura dal numero di rilievi, ma dalla capacità di orientare decisioni fondate." }
+  ]
+ },
+ {
+  "id": "42001_m08_s012",
+  "layout": "cards",
+  "kicker": "Audit interno · 5",
+  "titolo": "Tracce, programma e maturità della verifica",
+  "intro": "La norma richiede informazioni documentate sia sull'attuazione dei programmi sia sui risultati degli audit. Non è un dettaglio burocratico: è il modo con cui l'organizzazione dimostra che la verifica esiste davvero, è stata pianificata con una logica riconoscibile e produce esiti recuperabili. Non fermarti a chiedere se un report esiste: segui una catena.",
+  "cards": [
+   { "h": "La catena da seguire", "d": "Programmazione (quali aree, con quale frequenza e motivazione), pianificazione del singolo audit (obiettivo, criteri, campo, responsabilità, tempi), esecuzione (evidenze, persone, elementi osservati), risultati riportati e comunicati. Se un anello manca, il processo perde forza." },
+   { "h": "Il segnale di un sistema maturo", "d": "Mostra continuità tra rischi, risultati precedenti e scelte del programma; coerenza tra obiettivi e metodi; tempi di reporting rapidi da permettere reazioni utili; responsabili che ricevono risultati comprensibili e li usano." },
+   { "h": "Il segnale di un sistema superficiale", "d": "Report standardizzati, sempre gli stessi percorsi, priorità che non cambiano quando il contesto cambia, verifiche scollegate dal resto del punto 9. Se ogni anno le verifiche toccano gli stessi temi e trovano gli stessi problemi, il programma si è irrigidito." },
+   { "h": "Il test di ricostruzione", "d": "Prendi un audit recente e ricostruiscine la storia: perché programmato, quale rischio lo ha giustificato, cosa è stato osservato, a chi riferito, cosa è cambiato dopo. Se la storia è ricostruibile con facilità il processo è robusto; se devi colmare vuoti con ricordi individuali, dipende troppo dalle persone." }
+  ]
+ },
+ {
+  "id": "42001_m08_s013",
+  "layout": "definizione",
+  "kicker": "Riesame di direzione · 1",
+  "eyebrow": "Il passaggio più alto del punto 9",
+  "titolo": "Idoneo, adeguato, efficace",
+  "definizione": "Nel riesame di direzione l'alta direzione non guarda un singolo processo né un solo indicatore: guarda il sistema nel suo insieme e si chiede se resta idoneo, adeguato ed efficace. Idoneo significa adatto allo scopo e al contesto; adeguato significa abbastanza strutturato rispetto ai bisogni reali; efficace significa capace di produrre i risultati attesi. Se distingui bene questi tre piani, il riesame smette di sembrare una riunione rituale e diventa uno strumento di governo.",
+  "punti": [
+   "Avviene a intervalli pianificati: non meccanici, ma collocati in un ritmo noto che garantisca continuità e preparazione. Fatto solo quando scoppia un problema arriva tardi ed è difensivo; fatto sempre allo stesso modo diventa prevedibile e poco utile.",
+   "La preparazione ne decide la qualità: una sintesi leggibile distribuita prima, con andamenti principali e opzioni già istruite, così il tempo insieme si spende per decidere e non per leggere. Conta chi siede al tavolo — chi conosce l'operatività reale e chi ha autorità sulle risorse.",
+   "Il verbale è la memoria che permette, al riesame successivo, di verificare se le decisioni hanno prodotto effetto: registra non solo che cosa è stato deciso, ma entro quando, con quale responsabile e con quale criterio di verifica."
+  ]
+ },
+ {
+  "id": "42001_m08_s014",
+  "layout": "numeri",
+  "kicker": "Riesame di direzione · 2",
+  "titolo": "Che cosa deve entrare, parte prima",
+  "intro": "Per una riunione direzionale utile, l'alta direzione deve avere sul tavolo ingressi adeguati. Le prime tre famiglie sono strettamente collegate e raccontano una cosa semplice ma decisiva: il sistema non può essere riesaminato come se vivesse fuori dal tempo.",
+  "numeri": [
+   { "n": "1", "h": "Lo stato delle azioni precedenti", "d": "Evita uno dei vizi più comuni: decidere sempre di nuovo senza verificare che fine hanno fatto le decisioni passate. Se era stato chiesto un rafforzamento di un controllo, ora si deve sapere se è stato attuato, con quali risultati e ostacoli. Altrimenti il riesame riparte da zero." },
+   { "n": "2", "h": "I cambiamenti interni ed esterni", "d": "Riorganizzazioni, turnover di figure chiave, nuovi strumenti; nuove richieste dei clienti, mutamenti del mercato, aspettative sociali più alte sull'uso governato dell'IA. Nessun singolo fatto sembra drammatico, ma insieme incidono sulla tenuta del sistema. La rilevanza va giudicata, non recitata." },
+   { "n": "3", "h": "Le aspettative delle parti interessate", "d": "Il sistema vive dentro relazioni: un cliente può chiedere maggiore trasparenza, un'area interna tempi di revisione più rapidi, un partner requisiti diversi sulla qualità del dato. Quando le aspettative cambiano, spesso cambiano anche le priorità del monitoraggio, e gli indicatori di ieri potrebbero non bastare più." }
+  ]
+ },
+ {
+  "id": "42001_m08_s015",
+  "layout": "cards",
+  "kicker": "Riesame di direzione · 3",
+  "titolo": "Che cosa deve entrare, parte seconda",
+  "intro": "Il secondo gruppo di ingressi mette insieme tutto ciò che hai visto nel modulo: è il punto in cui i segnali raccolti smettono di essere compartimenti separati e diventano lettura complessiva. Il compito del riesame è trasformare dati dispersi in giudizio strategico.",
+  "cards": [
+   { "h": "Non conformità e azioni correttive", "d": "Non interessa solo il conteggio, ma l'andamento e la capacità di insegnare. Poche non conformità possono essere positive o un campanello se si è smesso di vedere i problemi; molte azioni chiuse nei tempi vanno lette per capire se hanno eliminato le cause o solo spento sintomi ricorrenti." },
+   { "h": "Monitoraggio e misurazione", "d": "L'alta direzione deve vedere più di un cruscotto: quali indicatori migliorano, quali si deteriorano, dove i segnali raccontano storie discordanti. Se il tempo medio migliora ma crescono correzioni manuali e reclami, guardare solo la velocità porta a un giudizio troppo favorevole." },
+   { "h": "I risultati di audit", "d": "Mostrano se le regole vengono applicate come dichiarato e restano efficaci. Letti insieme al monitoraggio diventano preziosi: se gli indicatori segnalano stabilità ma l'audit rileva debolezze nei controlli chiave, c'è motivo per approfondire." },
+   { "h": "Le opportunità di miglioramento", "d": "Impediscono al riesame di ridursi a un tribunale dei problemi: rendere più tempestiva l'analisi, segmentare meglio alcuni indicatori, semplificare una catena autorizzativa, chiarire responsabilità che generano ritardi. Cogliere possibilità di rafforzamento prima che diventino necessità urgenti." }
+  ]
+ },
+ {
+  "id": "42001_m08_s016",
+  "layout": "split",
+  "kicker": "Riesame di direzione · 4",
+  "titolo": "Che cosa deve uscire dal riesame",
+  "lead": "Il riesame ha senso solo se produce conseguenze riconoscibili. La norma chiede che emergano scelte sul miglioramento continuo e, quando serve, interventi di modifica sul sistema. Non è completo quando finisce la discussione: è completo quando da quella discussione emergono indirizzi, priorità e decisioni che possono cambiare davvero il funzionamento del sistema. Dalle informazioni si arriva a un giudizio, e dal giudizio a decisioni.",
+  "punti": [
+   { "h": "Decisioni collegate ai segnali", "d": "Se il flusso si interrompe al giudizio hai una riunione interessante ma un governo debole; se arriva alle decisioni senza collegamenti con gli ingressi, hai decisioni arbitrarie. Un buon riesame mostra perché una modifica è necessaria e come risponde ai segnali raccolti." },
+   { "h": "Molti aspetti possibili", "d": "Rafforzamento di controlli, revisione di metodi di monitoraggio, aggiornamento di responsabilità, chiarimento di criteri decisionali, riallocazione di risorse, modifica di cadenze, priorità a certe azioni correttive. La norma non fornisce un catalogo chiuso, ma chiede miglioramento continuo ed eventuali modifiche del SGIA." },
+   { "h": "Da commentare a governare", "d": "Davanti a più correzioni manuali, debolezze nelle modifiche urgenti e azioni correttive che si ripetono, un esito debole scrive «si raccomanda maggiore attenzione»; un esito forte rivede il processo di autorizzazione, intensifica la lettura di alcuni indicatori, assegna un responsabile e verifica l'efficacia entro una data." },
+   { "h": "Decisioni con pesi diversi", "d": "In un riesame maturo le decisioni non sono tutte dello stesso peso: alcune immediate, altre strutturali, altre di sola osservazione rafforzata. La direzione sa dare priorità. Le informazioni documentate conservano la logica del giudizio e il punto di partenza per il riesame successivo." }
+  ]
+ },
+ {
+  "id": "42001_m08_s017",
+  "layout": "evidenza",
+  "kicker": "Modelli in esercizio · 1",
+  "eyebrow": "Oltre il sistema di gestione",
+  "titolo": "Un sistema può essere conforme e sostanzialmente cieco",
+  "testo": "Se vuoi valutare bene le prestazioni di un SGIA che governa sistemi di IA, non puoi fermarti a procedure, report e riunioni: devi capire che cosa succede ai modelli quando sono in esercizio. La norma non entra nel dettaglio tecnico della deriva, ma il buon lavoro di audit interno e riesame richiede che l'organizzazione sappia osservare segnali operativi rilevanti e portarli dentro il proprio governo. Qui una distinzione è essenziale: osservare i modelli in esercizio non significa che l'auditor debba comportarsi come uno sviluppatore o uno scienziato dei dati. Il suo compito non è rifare gli algoritmi né validare formule, ma chiedere come l'organizzazione controlla nel tempo le prestazioni operative, come riconosce segnali di deterioramento e come li trasforma in decisioni, correzioni o escalation. È una prospettiva di governo, non di progettazione. Perché è così importante? Perché un sistema di IA può comportarsi bene al rilascio e peggiorare dopo, senza che il problema sia visibile nei documenti: possono cambiare i dati in ingresso, il mix dei casi, i comportamenti degli utenti o il significato pratico delle categorie trattate. Se il SGIA non ha un monitoraggio capace di intercettare questi movimenti, il rischio è avere un sistema formalmente conforme ma sostanzialmente cieco. Quando analizzi il capitolo nove, domandati: il SGIA riceve dai sistemi in esercizio segnali abbastanza ricchi per capire se sta ancora governando ciò che crede di governare?"
+ },
+ {
+  "id": "42001_m08_s018",
+  "layout": "punti",
+  "kicker": "Modelli in esercizio · 2",
+  "titolo": "Deriva dei modelli: come la riconosci e la governi",
+  "intro": "Quando un modello entra in esercizio, in un certo senso comincia una fase più delicata: col tempo cambiano i dati in ingresso, le condizioni operative o il significato stesso delle situazioni da trattare. La domanda utile non è se l'organizzazione conosca una definizione sofisticata di deriva, ma quali segnali usa per capire che il comportamento sta cambiando, e che cosa fa quando superano una soglia.",
+  "punti": [
+   { "h": "Due modi di pensarla", "d": "Il primo riguarda il materiale che entra: se cambiano distribuzione, completezza, qualità o composizione dei dati, il modello incontra casi diversi da quelli su cui funzionava. Il secondo riguarda la relazione tra dati e risultato atteso: anche con dati simili, può cambiare il contesto decisionale e quindi ciò che conta come buona prestazione." },
+   { "h": "Indicatori che rendono visibili i cambiamenti", "d": "Se un modello per i rimborsi continua a classificare rapidamente ma cresce una categoria mista di richieste, guardando solo il volume non vedi il problema; guardando il tasso di correzione per categoria e la qualità dei dati in ingresso, emerge chiaramente. Ti servono misure che rendano visibili i cambiamenti, non solo il normale funzionamento." },
+   { "h": "L'auditor chiede governo, non matematica", "d": "Non chiede di dimostrare il dettaglio del degrado, ma se esistono monitoraggio coerente, responsabilità chiare, frequenze adeguate e criteri per decidere quando approfondire, e se i risultati arrivano ai livelli giusti. Se i segnali restano confinati in un team tecnico, il SGIA non li sta davvero governando." },
+   { "h": "La maturità sta nel mezzo", "d": "Trattare ogni variazione come un incidente o, al contrario, normalizzare tutto sono entrambi errori. Piccoli scostamenti possono essere fisiologici; scostamenti persistenti, concentrati o accompagnati da altri segnali meritano attenzione. La soglia superata non significa fuori controllo: significa che serve analisi, confronto e decisione." }
+  ]
+ },
+ {
+  "id": "42001_m08_s019",
+  "layout": "punti",
+  "kicker": "Modelli in esercizio · 3",
+  "titolo": "Prestazioni operative reali: oltre il numero medio",
+  "intro": "Il secondo grande tema riguarda le prestazioni operative reali, e il rischio principale è lasciarsi rassicurare dai numeri medi. Un valore aggregato può sembrare buono e nascondere debolezze su categorie specifiche, momenti di carico, tipi di utenti o passaggi del processo. Chiedi non solo se esistono indicatori, ma come vengono segmentati e interpretati.",
+  "punti": [
+   { "h": "Si vedono nelle interazioni", "d": "Un modello può produrre suggerimenti rapidi e coerenti ma richiedere moltissime correzioni nei casi delicati; funzionare bene nelle ore ordinarie e peggiorare sotto carico; essere accettato da un reparto e aggirato da un altro. Osserva correzioni, rilavorazioni, tempi anomali, reclami, abbandono del sistema, differenze per tipologia." },
+   { "h": "Velocità e adozione non bastano", "d": "Un assistente con ottimo tempo medio e uso crescente: ma gli esperti riscrivono spesso le risposte nei casi sensibili, mentre i nuovi assunti le usano quasi senza modifiche. Devi capire in quali contesti il supporto è affidabile, dove genera dipendenza eccessiva, dove produce sfiducia." },
+   { "h": "Prestazione tecnica e prestazione di processo", "d": "Un modello può mantenere accuratezza stabile ma peggiorare il processo se introduce passaggi aggiuntivi, aumenta le eccezioni o rallenta le decisioni ambigue. Collega sempre gli indicatori di sistema con indicatori di processo: casi corretti, tempo di revisione umana, reclami fondati, categorie in cui si concentra il riesame." },
+   { "h": "La fiducia che crolla in silenzio", "d": "Se nelle categorie sensibili i responsabili bypassano il suggerimento e costruiscono canali paralleli informali, formalmente il sistema è ancora in uso, sostanzialmente la fiducia sta crollando. Se il SGIA non intercetta questo comportamento, il monitoraggio è troppo povero e il capitolo nove resta incompleto." }
+  ]
+ },
+ {
+  "id": "42001_m08_s020",
+  "layout": "numeri",
+  "kicker": "Modelli in esercizio · 4",
+  "titolo": "Incidenti, quasi incidenti e segnali deboli",
+  "intro": "Qui la maturità di un SGIA si vede in modo netto: un sistema immaturo aspetta l'evento grave e reagisce, uno solido raccoglie anche episodi minori, deviazioni ripetute, anomalie non ancora dannose e percezioni degli utenti, perché i problemi importanti annunciano la loro presenza molto prima di esplodere. Se il monitoraggio raccoglie solo ciò che è già evidente, la valutazione arriva tardi.",
+  "numeri": [
+   { "n": "1", "h": "L'incidente", "d": "Un evento che ha prodotto un effetto indesiderato rilevante nel funzionamento del sistema o nel processo che supporta. Non serve nasconderlo: serve usarlo per rimettere in discussione soglie, indicatori, criteri d'uso e perfino alcune ipotesi di partenza." },
+   { "n": "2", "h": "Il quasi incidente", "d": "Un evento che avrebbe potuto produrre quell'effetto ma è stato intercettato in tempo o ha avuto conseguenze limitate per circostanze favorevoli. Una risposta scorretta corretta dall'operatore prima dell'invio merita attenzione, soprattutto se casi simili iniziano a ripetersi." },
+   { "n": "3", "h": "I segnali deboli", "d": "Piccoli indizi, singolarmente poco impressionanti, che insieme indicano una tendenza: correzioni concentrate in certe categorie, operatori che evitano il sistema, reclami interni che cambiano tono. Le domande giuste: come vengono raccolti, chi li legge, come si distinguono i casi isolati dalle tendenze, che cosa cambia dopo l'analisi." }
+  ]
+ },
+ {
+  "id": "42001_m08_s021",
+  "layout": "numeri",
+  "kicker": "Modelli in esercizio · 5",
+  "titolo": "Che cosa chiede l'auditor sui modelli in esercizio",
+  "intro": "Trasformare segnali, incidenti e prestazioni in domande di verifica utili. L'auditor non si sostituisce ai tecnici: cerca di capire se l'organizzazione ha costruito un governo credibile dei fenomeni che cambiano nel tempo. Osservare i modelli in esercizio significa verificare se esiste una catena viva tra fatto operativo, giudizio e risposta organizzativa.",
+  "numeri": [
+   { "n": "1", "h": "Le responsabilità", "d": "Chi osserva gli indicatori operativi, chi decide se un aumento delle correzioni è fisiologico, chi può imporre un controllo umano rafforzato, chi porta il tema in alto quando è sistemico. Se nessuno risponde con chiarezza, il monitoraggio esiste nei dati ma non nella governance." },
+   { "n": "2", "h": "Il ritmo", "d": "Con quale frequenza vengono letti i segnali, quando la misurazione è analizzata, in quanto tempo un evento anomalo arriva a chi deve valutarlo. Molte organizzazioni raccolgono dati ogni giorno ma li discutono quando il problema è già abitudine: la cadenza segue il ritmo del rischio reale?" },
+   { "n": "3", "h": "Il senso dei segnali e l'escalation", "d": "Gli indicatori aiutano a decidere o erano solo facili da estrarre? Come si interpretano gli scostamenti e con quali informazioni di contesto? E quando un segnale passa da fatto tecnico a tema di sistema — quale soglia, quale combinazione, quale persistenza fa scattare un approfondimento strutturato?" },
+   { "n": "4", "h": "Il feedback umano", "d": "Gli utenti hanno un modo semplice per segnalare quando il sistema diventa poco utile o fuorviante, e quelle segnalazioni entrano nel monitoraggio o restano lamentele? La domanda più importante: quando il sistema manda segnali scomodi, l'organizzazione li ascolta o li minimizza? Cerca evidenze di decisioni prese, non opinioni." }
+  ]
+ },
+ {
+  "id": "42001_m08_s022",
+  "layout": "flusso",
+  "kicker": "Modelli in esercizio · 6",
+  "titolo": "Dove cercare le evidenze",
+  "intro": "Le risposte delle interviste sono utili, ma da sole non bastano: per capire se l'organizzazione governa i sistemi in esercizio devi ricostruire una catena di tracce coerenti. L'evidenza non è un singolo file, è l'allineamento tra più tracce.",
+  "passi": [
+   { "h": "I registri operativi", "d": "Dati su correzioni manuali, eccezioni, casi riesaminati, blocchi di processo, segnalazioni degli utenti, tempi anomali. Non cerchi solo quantità, ma pattern, concentrazioni, ripetizioni e deviazioni rispetto a ciò che l'organizzazione dichiara come normale." },
+   { "h": "Ticket e segnalazioni interne", "d": "Raccontano il linguaggio del lavoro reale. Un report direzionale può dire che il sistema è stabile; una sequenza di ticket può mostrare che gli operatori aggirano alcune risposte, che certi casi vengono rilavorati spesso, che la qualità percepita è peggiorata in un'area." },
+   { "h": "Le revisioni delle modifiche", "d": "Se un sistema è stato aggiornato, limitato o riconfigurato, devi capire perché. Le organizzazioni mature collegano le modifiche a segnali dal monitoraggio, incidenti o analisi; quelle meno mature presentano aggiornamenti continui senza logica leggibile — correzione reattiva senza apprendimento." },
+   { "h": "Le informazioni che legano dati e decisioni", "d": "Una sintesi mensile che mostri aumento delle correzioni, analisi per categoria, scelta di rafforzare i controlli e verifica dell'effetto. Quando trovi questa continuità il capitolo nove prende corpo; quando trovi solo cruscotti da una parte e decisioni dall'altra, senza ponte logico, il governo appare debole." }
+  ]
+ },
+ {
+  "id": "42001_m08_s023",
+  "layout": "timeline",
+  "kicker": "Modelli in esercizio · 7",
+  "titolo": "Caso integrato: dal degrado silenzioso alla decisione",
+  "intro": "Un'organizzazione usa l'IA per smistare richieste di manutenzione da sedi distribuite. I primi mesi vanno bene e la direzione si sente rassicurata dagli indicatori aggregati. Poi, con gradualità, alcune sedi adottano un nuovo canale con descrizioni più brevi e crescono i casi ibridi. Il dato aggregato sembra ancora buono, ma sul campo accade altro. In un sistema poco maturo tutto resterebbe frammentato; in uno solido, il capitolo nove è vivo.",
+  "tappe": [
+   { "t": "01", "h": "Segmentare gli indicatori", "d": "Il team nota che le correzioni aumentano soprattutto nelle richieste dal nuovo canale e che i casi ibridi creano confusione. Non liquida tutto con «il volume è cresciuto, è normale avere più eccezioni»." },
+   { "t": "02", "h": "Analisi strutturata", "d": "Controlla i ticket interni, ascolta alcuni operatori, confronta i dati con le modifiche recenti del flusso. Emergono due cause probabili: peggioramento della qualità descrittiva dei dati in ingresso e casi non ben coperti dalle logiche iniziali." },
+   { "t": "03", "h": "Documentare e rafforzare", "d": "Documenta il fenomeno in modo leggibile e rafforza temporaneamente la revisione umana su quelle categorie. Senza ticket, registrazioni e analisi, tutto sarebbe rimasto affidato alla memoria dei singoli." },
+   { "t": "04", "h": "Aggiornare il monitoraggio e riportare", "d": "Aggiunge una vista specifica sui casi ibridi e porta il tema nel flusso di reporting ai responsabili pertinenti: non è più solo un fastidio operativo. I risultati operativi entrano nel sistema di gestione." },
+   { "t": "05", "h": "Valutare modifiche stabili", "d": "Valuta se servono modifiche stabili al processo o al campo d'uso. Il fenomeno può orientare un audit interno mirato e diventare materia del riesame di direzione, se tocca l'idoneità o l'efficacia complessiva del SGIA." }
+  ]
+ },
+ {
+  "id": "42001_m08_s024",
+  "layout": "split",
+  "kicker": "In verifica · 1",
+  "titolo": "Come impostare la verifica del capitolo nove",
+  "lead": "La chiave è semplice da dire e più difficile da praticare: non controllare pezzi isolati, segui una catena che parte da ciò che l'organizzazione osserva, passa per come lo interpreta e arriva alle decisioni che prende. Imposta la verifica con una domanda guida: come fa questa organizzazione a sapere se il suo SGIA funziona, e che cosa cambia quando scopre che qualcosa non va?",
+  "punti": [
+   { "h": "Una logica unica", "d": "Nel 9.1 guardi se esiste una scelta ragionata di cosa monitorare, metodi credibili, tempi definiti, risultati davvero analizzati. Nel 9.2 se l'audit è pianificato, imparziale, tracciabile e utile. Nel 9.3 se il riesame usa ingressi adeguati e produce decisioni riconoscibili. Osservare, giudicare, decidere." },
+   { "h": "La traccia inversa", "d": "Molti sistemi partono dai verbali e cercano di dimostrare che dietro c'è sostanza. Parti invece da un fatto — un aumento delle correzioni manuali — e chiedi: è nei risultati del monitoraggio? Come viene misurato? Chi lo analizza? Ha generato una verifica? È arrivato al riesame? Ha prodotto una decisione motivata?" },
+   { "h": "Il tempo che cede", "d": "Il sistema registra eventi ma li legge tardi; produce audit ma i risultati arrivano quando le decisioni dovevano già essere prese; fa il riesame ma senza verificare le azioni decise prima. Le attività esistono, ma è il loro aggancio nel tempo a cedere." },
+   { "h": "Esistenza contro efficacia", "d": "Può esistere un indicatore poco utile, un programma di audit che non cambia mai, un riesame che produce formule generiche. Se i medesimi problemi ricorrono da mesi, gli indicatori non si rileggono e le decisioni non hanno seguito, la conformità formale non basta a sostenere un giudizio favorevole." }
+  ]
+ },
+ {
+  "id": "42001_m08_s025",
+  "layout": "numeri",
+  "kicker": "In verifica · 2",
+  "titolo": "Verificare il punto 9.1: domande ed evidenze",
+  "intro": "Evita una lettura meccanica del cruscotto: molti dati non significano un buon sistema di valutazione. Ricostruisci cinque passaggi logici, e ricorda la domanda finale del 9.1 — l'organizzazione valuta le prestazioni e l'efficacia del SGIA. Se i dati parlano solo della macchina e mai del governo, manca un pezzo essenziale.",
+  "numeri": [
+   { "n": "1", "h": "Che cosa è stato scelto", "d": "L'organizzazione sa spiegare perché osserva certi fenomeni e non altri? Gli indicatori sono collegati a rischi, obiettivi o decisioni reali, oppure sono un insieme eterogeneo di numeri facili da produrre? Un sistema immaturo mostra molti dati ma non sa dire che cosa rendano visibile." },
+   { "n": "2", "h": "Con quali metodi", "d": "Come viene calcolato un indicatore, da quale fonte, con quali regole di inclusione, chi lo aggiorna, come si garantisce coerenza nel tempo. Se la stessa misura cambia significato da un mese all'altro il risultato non è valido; se dipende da estrazioni manuali improvvisate, la fiducia scende." },
+   { "n": "3", "h": "Con quale cadenza", "d": "La frequenza segue il ritmo del rischio: dati letti troppo tardi sono poco utili, dati letti troppo spesso senza criterio generano rumore. La norma chiede di determinare quando eseguire monitoraggio e misurazione e quando analizzare e valutare." },
+   { "n": "4", "h": "Analisi, valutazione e tracce", "d": "Molti raccolgono dati, pochi li trasformano in giudizio: cerca la prova che i risultati siano confrontati con soglie, trend, eventi di contesto, esiti precedenti. E servono informazioni documentate leggibili con periodo, fonte, regola e risultato — non solo esportazioni grezze e presentazioni decorative." }
+  ]
+ },
+ {
+  "id": "42001_m08_s026",
+  "layout": "punti",
+  "kicker": "In verifica · 3",
+  "titolo": "Verificare il punto 9.2: programma e audit interno",
+  "intro": "Nel 9.1 osservavi come l'organizzazione misura se stessa; qui osservi come verifica se il proprio sistema resta conforme ed efficace. Conviene distinguere tre livelli: il programma, il singolo audit e l'uso dei risultati.",
+  "punti": [
+   { "h": "Il programma", "d": "La domanda vera non è se esista un calendario, ma se la pianificazione segue una logica legata a rischi, rilevanza dei processi e risultati passati. Un programma vivo si adatta ai segnali del monitoraggio e alle aree fragili; uno rigido controlla sempre le stesse cose nello stesso modo e perde capacità di apprendere." },
+   { "h": "Il singolo audit", "d": "Obiettivi chiari, criteri esplicitati, campo di applicazione definito: «si è verificato il sistema in modo generale» serve poco. E l'imparzialità va resa credibile nella pratica: le persone hanno competenza e sufficiente distanza dal lavoro valutato, con salvaguardie ragionevoli contro il rischio di giudicare se stessi." },
+   { "h": "I metodi e i risultati", "d": "Le verifiche usano interviste, campioni, esame di registrazioni e osservazione coerenti con l'obiettivo, o si limitano a controllare se i documenti esistono? Se il tema è l'efficacia di un controllo, la sola presenza di una procedura non basta. E i risultati vanno riportati ai responsabili pertinenti, con tempi e chiarezza adeguati." },
+   { "h": "Conformità apparente, efficacia debole", "d": "Un programma formalmente completo può ripetere da tempo le stesse osservazioni minori, senza analisi delle cause né variazioni: il meccanismo esiste ma non orienta il governo. Servono infine evidenze dell'attuazione del programma e dei risultati: senza tracciabilità, il punto 9.2 perde gran parte del suo valore." }
+  ]
+ },
+ {
+  "id": "42001_m08_s027",
+  "layout": "confronto",
+  "kicker": "In verifica · 4",
+  "titolo": "Verificare il 9.3 e chiudere il giudizio",
+  "intro": "Nel punto 9.3 non stai più guardando strumenti di controllo: stai guardando la qualità del governo. La verifica richiede attenzione ai nessi, non solo alla presenza di un verbale. Controlli ritmo, ingressi, trattamento delle azioni pregresse, livello della discussione e risultati. Per chiudere il giudizio sul capitolo nove non serve una somma meccanica: serve una lettura d'insieme.",
+  "a": {
+   "h": "Il riesame povero",
+   "sub": "Un rito che consuma tempo",
+   "punti": [
+    { "d": "Compare solo quando c'è un problema o si avvicina una verifica esterna; prende atto dei dati senza interpretarli; ricomincia senza memoria delle azioni precedenti. Davanti a correzioni crescenti e ritardi nelle approvazioni urgenti, registra il fenomeno e invita a «prestare attenzione»." },
+    { "d": "I risultati si limitano a formule generiche. Ingressi incompleti rendono parziale il giudizio della direzione: manca lo stato delle azioni precedenti, o i cambiamenti di contesto, o le informazioni sulle prestazioni." }
+   ]
+  },
+  "b": {
+   "h": "Il riesame maturo",
+   "sub": "Un momento di governo",
+   "punti": [
+    { "d": "Avviene a intervalli pianificati, con ingressi adeguati per giudicare idoneità, adeguatezza ed efficacia; riesamina con serietà le decisioni passate; collega indicatori, esiti di audit, incidenti, reclami e cambiamenti del contesto in giudizi e priorità coerenti." },
+    { "d": "Decide di rivedere il flusso di approvazione, intensificare per un periodo il monitoraggio di una categoria e verificare l'efficacia alla riunione successiva. Se la catena osserva-giudica-decidi è continua con sufficiente coerenza, il capitolo nove regge." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m08_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 8",
+  "modNum": "8",
+  "titolo": "Un sistema vale per come osserva e per ciò che decide",
+  "punti": [
+   { "h": "Monitoraggio, misura, evidenza", "d": "Il monitoraggio segue fenomeni rilevanti nel tempo, la misurazione richiede metodi definiti e risultati leggibili con coerenza. Gli indicatori servono solo se rendono visibili rischi, prestazioni e opportunità di decisione; senza informazioni documentate affidabili non c'è memoria organizzativa né base per il giudizio." },
+   { "h": "Prestazioni ed efficacia non coincidono", "d": "Un sistema può mostrare numeri rassicuranti ed essere poco efficace nel governare ciò che cambia. Leggi i risultati sempre nel contesto. L'audit interno è uno strumento di conoscenza, non un rito: il suo valore dipende da programma ragionato, imparzialità, criteri chiari e reporting utile ai responsabili." },
+   { "h": "Il riesame e i modelli in esercizio", "d": "Il riesame di direzione funziona se riceve ingressi completi, legge davvero le prestazioni e restituisce decisioni chiare su idoneità, adeguatezza ed efficacia. E deriva, prestazioni operative, incidenti, quasi incidenti e segnali deboli devono alimentare il sistema di gestione: l'auditor vuole capire come l'organizzazione riconosce i cambiamenti e li porta dentro il governo." },
+   { "h": "Seguire una catena unica", "d": "Che cosa l'organizzazione osserva, come lo misura e analizza, come lo verifica con audit interno, come lo porta al riesame e quali decisioni prende. Se la catena è continua, il capitolo nove è vivo; se è interrotta, il sistema perde capacità di apprendere. Tutto ciò che hai misurato ora dovrà produrre cambiamento reale." }
+  ],
+  "prossimo": {
+   "modulo": "9",
+   "titolo": "Miglioramento e non conformità",
+   "testo": "I segnali raccolti qui si trasformano in correzioni, azioni correttive e rafforzamento del sistema: dal giudizio passerai all'intervento, perché tutto ciò che hai misurato, verificato e riesaminato dovrà produrre cambiamento reale."
+  }
+ }
+]
