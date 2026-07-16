@@ -1,0 +1,400 @@
+[
+ {
+  "id": "14001_m08_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 14001 — Sistema di gestione ambientale",
+  "kicker": "Modulo 08",
+  "eyebrow": "Valutazione delle prestazioni — capitolo nove",
+  "titolo": "Leggere le prestazioni ambientali",
+  "testo": "Il momento della verifica dei risultati: il sistema smette di sembrare ordinato sulla carta e mostra se produce prestazioni coerenti con gli impegni. Il comportamento più comune nei sistemi immaturi: misurare molto, capire poco, decidere tardi. E una distinzione che accompagna tutto il modulo: prestazione ambientale ed efficacia del sistema non sono la stessa cosa, anche se si influenzano a vicenda.",
+  "agenda": [
+   "Monitoraggio e misurazione: cosa osservare e come",
+   "Taratura, verifica e qualità dei dati",
+   "Indicatori e cruscotti: dai numeri ai segnali",
+   "L'audit interno del sistema",
+   "Il riesame di direzione: input e decisioni",
+   "Esercizi sui dati e verifica del capitolo nove"
+  ]
+ },
+ {
+  "id": "14001_m08_s002",
+  "layout": "punti",
+  "kicker": "Monitoraggio · 1",
+  "titolo": "Che cosa monitorare e misurare davvero",
+  "intro": "La tentazione è misurare tutto: sembra prudenza, spesso è confusione organizzata. Il punto è selezionare ciò che è necessario per capire prestazioni ambientali ed efficacia del sistema. In verifica, una delle prime domande utili: come avete deciso che cosa osservare con continuità, e perché proprio quello?",
+  "punti": [
+   { "h": "Partire da ciò che muove il rischio", "d": "Aspetti significativi, obiettivi, obblighi di compliance, controlli operativi critici, incidenti e quasi incidenti, reclami, verifiche precedenti. Molta acqua e scarico autorizzato: volumi, parametri, limiti, anomalie, tendenza dei consumi." },
+   { "h": "Tre livelli di dati", "d": "Contesto operativo (consumi, ore, quantità prodotte, fermate); dati ambientali diretti (emissioni, scarichi, rifiuti, odori, rumore); dati di governo (obiettivi, azioni correttive, compliance, reclami). Se ne manca uno, l'immagine si deforma." },
+   { "h": "Il pezzo marginale del quadro", "d": "Una azienda di detergenti che registra solo i formulari dei rifiuti: mancano consumo d'acqua per lotto, perdite al travaso, anomalie di stoccaggio, controlli sullo scarico. La scelta non copre i temi ambientali più sensibili." },
+   { "h": "Misurare l'importante, non il facile", "d": "Conteggio perfetto dei fogli stampati, ma nessun controllo sulle perdite di aria compressa che gonfiano i consumi. I dati disponibili sembrano automaticamente utili — non è così: si scelgono a partire dalle decisioni da prendere." }
+  ]
+ },
+ {
+  "id": "14001_m08_s003",
+  "layout": "flusso",
+  "kicker": "Monitoraggio · 2",
+  "titolo": "Metodi, tempi e criteri",
+  "intro": "Stabilire che cosa osservare è solo il primo passo: devi chiarire il metodo, il momento e il criterio con cui leggerai il risultato. Un dato senza metodo è fragile, senza tempo di raccolta è casuale, senza criterio di valutazione resta muto. Quattro passaggi distinti — se salti l'ultimo, resti nel regno delle tabelle.",
+  "passi": [
+   { "h": "Monitoraggio", "d": "Osservazione continua o periodica di un fenomeno, anche tramite segnali indiretti. La frequenza va adattata alla criticità e alla velocità del fenomeno: sversamenti controllati al semestre = troppo tardi; analisi giornaliere su un parametro stabile = spreco." },
+   { "h": "Misurazione", "d": "Attribuire un valore con uno strumento o una procedura definita: metodo di prelievo, chi legge, con quale frequenza, dove registra, cosa fa con un valore anomalo." },
+   { "h": "Analisi", "d": "Trasformare dati grezzi in informazioni leggibili: confronti, andamenti, normalizzazioni. Il consumo mensile di combustibile dice poco senza il confronto con ore di esercizio o volumi; analizzato solo a fine anno, perde la reazione allo scostamento." },
+   { "h": "Valutazione", "d": "Un giudizio rispetto a criteri stabiliti: non solo il limite autorizzativo, ma soglie interne prudenti, intervalli normali, valori di attenzione che anticipano la manutenzione. «Valore da tenere sotto controllo» senza soglia né azione lascia spazio all'improvvisazione." }
+  ]
+ },
+ {
+  "id": "14001_m08_s004",
+  "layout": "punti",
+  "kicker": "Monitoraggio · 3",
+  "titolo": "Taratura e verifica: fidarsi con criterio",
+  "intro": "Puoi progettare un ottimo monitoraggio, ma se gli strumenti non sono affidabili il risultato si deforma. La taratura non è un tecnicismo da laboratorio, è un presidio di credibilità: se un numero guiderà una decisione ambientale o dimostrerà un obbligo, devi avere ragioni solide per fidarti di come nasce.",
+  "punti": [
+   { "h": "Taratura ≠ verifica", "d": "La taratura mette in relazione lo strumento con un riferimento riconosciuto, per conoscerne lo scostamento; la verifica controlla se è idoneo all'uso previsto. La scelta dipende dal tipo di dato, dalla criticità e dal rischio che un errore alteri decisioni o compliance." },
+   { "h": "Il criterio è l'effetto dell'errore", "d": "Non tutta l'attrezzatura è sofisticata, ma una sonda di livello, un contatore, un registratore di temperatura o una bilancia rifiuti incidono su scelte e indicatori. Se una lettura sbagliata può nascondere un superamento o una perdita, quello strumento merita governo." },
+   { "h": "Segnali concreti", "d": "Strumento ben gestito: identificazione chiara, stato noto, scadenze visibili, registrazioni, criteri per l'uso in anomalia. Mal gestito: senza etichetta, date incerte, nessuna prova di controllo, operatori che rispondono in modo diverso sulla sua affidabilità." },
+   { "h": "Il fuori tolleranza e il lato umano", "d": "Se un misuratore risulta fuori tolleranza, il sistema si chiede quali dati recenti siano stati influenzati e rianalizza le decisioni? E chi esegue la lettura sa stabilizzare la misura, registrarla, riconoscere un valore implausibile? Qualità dello strumento e dell'uso stanno insieme." }
+  ]
+ },
+ {
+  "id": "14001_m08_s005",
+  "layout": "numeri",
+  "kicker": "Monitoraggio · 4",
+  "titolo": "Qualità dei dati ambientali",
+  "intro": "La qualità dei dati è la fiducia che puoi accordare a ciò che il sistema racconta di sé. Il numero da solo non basta: conta da dove viene, come è raccolto, se è completo, confrontabile, tempestivo e ricostruibile. Cinque domande semplici — e la validazione: il sistema deve abituarsi a dubitare in modo professionale.",
+  "numeri": [
+   { "n": "1", "h": "Pertinente?", "d": "Collegato a un aspetto significativo, a un obiettivo, a un obbligo di compliance o a un controllo critico." },
+   { "n": "2", "h": "Accurato abbastanza?", "d": "Non serve la stessa precisione per tutto, ma quella adeguata alla decisione che il dato deve sostenere." },
+   { "n": "3", "h": "Completo?", "d": "Una serie spezzata, con buchi non spiegati, rende difficile leggere gli andamenti. Contatori difficili da leggere e settimane mancanti indeboliscono il grafico finale." },
+   { "n": "4", "h": "Tempestivo?", "d": "Se arriva quando il problema si è consolidato, il sistema perde capacità di reazione. E la comparabilità: cambi di perimetro, metodo o unità vanno dichiarati." },
+   { "n": "5", "h": "Tracciabile?", "d": "Chiunque, con tempo ragionevole, dovrebbe poter capire come è stato prodotto. Se il consumo raddoppia senza variazioni produttive, qualcuno deve accorgersene." }
+  ]
+ },
+ {
+  "id": "14001_m08_s006",
+  "layout": "cards",
+  "kicker": "Monitoraggio · 5",
+  "titolo": "Dai dati alle decisioni",
+  "intro": "Tre elementi completano il punto nove uno, legati fra loro: se non valuti periodicamente il rispetto degli obblighi, i dati restano incompleti; se non comunichi a chi deve agire, i numeri non producono cambiamento; se non lasci tracce affidabili, il sistema non dimostra ciò che afferma.",
+  "cards": [
+   { "h": "Valutazione della compliance", "d": "Non il possesso di autorizzazioni e scadenziari: verificare con frequenza definita se stai rispettando gli obblighi, con quale evidenza, e cosa fai sugli scostamenti. Rapporti analitici senza confronto con margini interni né sintesi sullo stato = documenti, non valutazione." },
+   { "h": "Comunicazione delle prestazioni", "d": "Le informazioni pertinenti a chi può decidere, intervenire o rispondere. Un indicatore che peggiora confinato nel file del responsabile, reclami per odori mai portati al reparto, un obbligo di comunicazione senza presidio: la comunicazione non ha funzionato." },
+   { "h": "Informazioni documentate", "d": "La memoria verificabile del processo: registrazioni leggibili, datate, riconducibili alla fonte, coerenti coi metodi, recuperabili. Una schermata senza data, un file sovrascritto senza storico o un modulo firmato in blocco rendono debole l'evidenza — e prudente il giudizio." }
+  ]
+ },
+ {
+  "id": "14001_m08_s007",
+  "layout": "numeri",
+  "kicker": "Indicatori · 1",
+  "titolo": "Da dati sparsi a segnali utili",
+  "intro": "Un dato grezzo dice quanto è accaduto; un indicatore aiuta a capire se è alto o basso, stabile o in peggioramento, e se richiede una decisione. L'indicatore è una lente: non sostituisce il dato, lo rende interpretabile. Cinque qualità — se ne manca una, l'indicatore perde molto valore.",
+  "numeri": [
+   { "n": "1", "h": "Pertinente", "d": "Misura qualcosa che conta davvero: collegato agli aspetti significativi, agli obiettivi e agli obblighi, non al foglio elettronico disponibile." },
+   { "n": "2", "h": "Comprensibile", "d": "Chi lo riceve sa che cosa sta guardando. Un grafico complesso ma incapace di orientare una decisione serve a impressionare, non a gestire." },
+   { "n": "3", "h": "Confrontabile", "d": "Permette di riconoscere tendenze nel tempo. Il consumo d'acqua collegato a volume produttivo, tipo di prodotto e stagionalità diventa leggibile." },
+   { "n": "4", "h": "Stabile nel metodo", "d": "Non cambia significato ogni volta che lo calcoli. Un cruscotto non è una somma di dati: è una selezione ragionata di segnali che fanno emergere priorità." },
+   { "n": "5", "h": "Azionabile", "d": "Suggerisce dove intervenire se peggiora. E deve far emergere anche problemi: se tutti gli indicatori sono costantemente verdi, il verificatore esperto diventa prudente." }
+  ]
+ },
+ {
+  "id": "14001_m08_s008",
+  "layout": "flusso",
+  "kicker": "Indicatori · 2",
+  "titolo": "Costruire un indicatore credibile",
+  "intro": "Ogni indicatore nasce da una domanda di gestione: se la domanda è chiara, la progettazione è coerente; se è vaga, anche il risultato lo sarà. Prima scegli il fenomeno che vuoi capire, poi costruisci l'indicatore adatto — mai il contrario. E meglio pochi indicatori ben costruiti che molti mediocri.",
+  "passi": [
+   { "h": "Il fenomeno", "d": "Che cosa vuoi capire: efficienza idrica, rifiuti pericolosi, stabilità di uno scarico, frequenza di sversamenti, tempi di chiusura delle azioni correttive." },
+   { "h": "Numeratore e base", "d": "Il dato principale e, spesso, un denominatore: tonnellate, ore di esercizio, lotti. Un consumo totale cresce con la produzione; rapportato a un'attività confrontabile legge l'efficienza." },
+   { "h": "Soglie e criteri", "d": "Un obiettivo, una media storica, un massimo interno, un margine prudenziale su un obbligo. Senza soglia, l'indicatore viene guardato senza produrre effetti; con criteri impliciti e variabili, perde coerenza." },
+   { "h": "Proprietario e reazione", "d": "Qualcuno raccoglie, valida, commenta e propone azioni, con accesso alle leve operative. In verifica: chi usa davvero questo indicatore, e che decisioni ha prodotto negli ultimi mesi? Se la risposta è debole, il problema non è nel grafico." }
+  ]
+ },
+ {
+  "id": "14001_m08_s009",
+  "layout": "numeri",
+  "kicker": "Indicatori · 3",
+  "titolo": "Lettura critica: evitare conclusioni facili",
+  "intro": "Un indicatore ben costruito non ti esonera dal pensare. Il rischio: scambiare un numero favorevole per un miglioramento reale, o un peggioramento per sfortuna senza indagare. Quattro trappole — e la domanda giusta non è «sta migliorando?», ma «rispetto a che cosa, in quali condizioni, con quale qualità del dato, con quali effetti sugli altri aspetti?»",
+  "numeri": [
+   { "n": "1", "h": "Cambio di perimetro", "d": "Reparti diversi rispetto all'anno precedente rendono il confronto diretto fuorviante. I cambi di base vanno segnalati, non nascosti nel risultato più comodo." },
+   { "n": "2", "h": "Cambio del mix produttivo", "d": "Più efficienti perché si producono articoli meno energivori? Il consumo idrico migliora per cicli più brevi, una linea ferma e lavorazioni spostate a un terzista: un risultato, non ancora una causa." },
+   { "n": "3", "h": "Stagionalità", "d": "Alcuni consumi cambiano fisiologicamente per clima, calendario o picchi di domanda. Senza questo contesto accanto al grafico, la lettura è semplicistica." },
+   { "n": "4", "h": "Evento straordinario", "d": "Fermi impianto, manutenzioni importanti, perdite accidentali, forniture temporanee. E leggi gli indicatori come sistema: meno rifiuti pericolosi ma più assorbenti e anomalie non è un miglioramento lineare." }
+  ]
+ },
+ {
+  "id": "14001_m08_s010",
+  "layout": "punti",
+  "kicker": "Indicatori · 4",
+  "titolo": "Cruscotti: leggere insieme più segnali",
+  "intro": "L'obiettivo non è impressionare con molti grafici, ma dare un quadro sintetico, coerente e orientato all'azione: distinguere ciò che richiede intervento immediato, ciò che merita analisi e ciò che conferma la stabilità. Un indicatore vale per le decisioni che rende possibili, non per il fatto di essere stato calcolato.",
+  "punti": [
+   { "h": "Pochi segnali che raccontano insieme", "d": "Consumo energetico su volume, consumo idrico per linea, tasso di scarto, anomalie impiantistiche con possibile impatto, esito sintetico della compliance, reclami, azioni correttive aperte: prestazione, controllo operativo e capacità di risposta." },
+   { "h": "La forza è nei collegamenti", "d": "Più acqua e più scarti sulla stessa linea: forse non una perdita ma una deriva di processo. Reclami stabili ma anomalie crescenti sugli abbattimenti: interrogarsi prima che il problema diventi visibile all'esterno." },
+   { "h": "Semafori con criterio", "d": "Tre stati (buono/attenzione/critico) funzionano solo con un criterio chiaro. Un reclamo isolato ma grave conta più di molti lievi; una singola anomalia su un impianto critico più di un modesto scostamento di efficienza. Servono commenti brevi ma intelligenti, non colori muti." },
+   { "h": "Il test del racconto", "d": "Chiedi di raccontare gli ultimi mesi partendo dal cruscotto: quali indicatori hanno richiesto azioni, quali approfondimenti, quali cambiamenti di contesto. Se il documento esiste solo per la riunione periodica, è rappresentazione, non gestione." }
+  ]
+ },
+ {
+  "id": "14001_m08_s011",
+  "layout": "confronto",
+  "kicker": "Indicatori · 5",
+  "titolo": "Segnali anticipatori e pulizia del cruscotto",
+  "intro": "Molti sistemi sono ricchi di dati ma poveri di capacità previsionale: raccolgono ciò che è già successo, quasi mai ciò che avvisa prima. Contro la ridondanza, una domanda: se questo indicatore peggiora, chi decide cosa fare e con quale leva? Se nessuno sa rispondere, il segnale è decorativo.",
+  "a": {
+   "h": "Indicatori di risultato",
+   "sub": "Il danno già comparso",
+   "punti": [
+    { "d": "Reclami ricevuti, superamenti registrati, rifiuti prodotti, non conformità emerse: mostrano ciò che il sistema ha generato." },
+    { "d": "Un mese senza reclami sembra rassicurante, ma se crescono le anomalie tecniche il sistema dovrebbe allertarsi prima che il vicinato protesti." },
+    { "d": "Guardare solo la conformità fa accorgere tardi delle derive operative che ancora non hanno prodotto una violazione." }
+   ]
+  },
+  "b": {
+   "h": "Segnali anticipatori",
+   "sub": "La possibilità di intervenire",
+   "punti": [
+    { "d": "Ritardi nelle manutenzioni critiche, anomalie ricorrenti di processo, fuori controllo interni, addestramento non completato, scostamenti iniziali da valori stabili." },
+    { "d": "Frequenza delle anomalie sulla captazione, fermate non pianificate, tempo tra segnalazione e intervento: molto più utili dei soli reclami per odori." },
+    { "d": "Un cruscotto robusto combina prestazione, controllo operativo e capacità di risposta — con cadenze adatte alla velocità di ogni fenomeno." }
+   ]
+  }
+ },
+ {
+  "id": "14001_m08_s012",
+  "layout": "punti",
+  "kicker": "Audit interno · 1",
+  "titolo": "Il senso dell'audit interno",
+  "intro": "Serve a capire se il sistema è conforme ai requisiti che l'organizzazione si è data e a quelli della norma, ed è efficacemente attuato e mantenuto. Doppia finalità decisiva: non basta che il sistema sia ben scritto, deve funzionare nel tempo, nelle attività reali. Ridurlo a verifica documentale rapida è una lettura povera.",
+  "punti": [
+   { "h": "Due domande guida", "d": "Ciò che era previsto viene rispettato? E il sistema ottiene attuazione coerente e tenuta nel tempo? Un reparto può avere moduli corretti e insieme pratiche incoerenti, manutenzioni saltate, dati non letti: l'audit deve intercettare la distanza tra carta e realtà." },
+   { "h": "Struttura presente, tenuta assente", "d": "Procedure per stoccaggio, sversamenti, scarichi e rifiuti tutte presenti; ma kit di emergenza incompleti, neoassunti che non conoscono la segregazione, anomalie sui contatori registrate ma non analizzate. Non manca struttura: manca tenuta operativa." },
+   { "h": "Intervalli pianificati, non rituali", "d": "Non la stessa data per abitudine: una cadenza ragionata, collegata a rischi, cambiamenti, risultati precedenti e bisogno di informazioni affidabili prima che i problemi diventino cronici." },
+   { "h": "Produrre conoscenza nuova", "d": "Se le stesse osservazioni si ripetono per anni senza conseguenze, se i rapporti sono vaghi, se tutto risulta sempre rassicurante nonostante segnali contrari nei dati, il processo protegge il sistema invece di metterlo alla prova. E un sistema protetto dalle proprie verifiche diventa cieco." }
+  ]
+ },
+ {
+  "id": "14001_m08_s013",
+  "layout": "punti",
+  "kicker": "Audit interno · 2",
+  "titolo": "Il programma: frequenze e priorità",
+  "intro": "Servono uno o più programmi con frequenza, metodi, responsabilità, pianificazione e reporting. La parola programma sposta l'attenzione dal singolo evento a un disegno complessivo: non basta decidere di verificare qualcosa, serve una logica di copertura del sistema nel tempo. Distribuire gli audit in modo giustificato, non uniforme.",
+  "punti": [
+   { "h": "Tre fattori per il programma", "d": "L'importanza ambientale dei processi, i cambiamenti che influenzano l'organizzazione, i risultati degli audit precedenti. Un processo critico, modificato e con debolezze pregresse non può avere la stessa frequenza di un'area stabile e secondaria." },
+   { "h": "L'esempio della verniciatura", "d": "Emissioni convogliate, chimici, rifiuti pericolosi, reclami possibili e impianto di abbattimento appena modificato meritano più presidio del magazzino imballi senza problemi né cambiamenti. Un calendario identico per tutti = pianificazione debole." },
+   { "h": "Metodo e responsabilità", "d": "Interviste, registrazioni, osservazione, campionamento, riscontro sui dati: se il metodo resta implicito, il risultato dipende dalla persona di quel giorno. E ruoli visibili: chi pianifica, chi approva, chi conduce, chi riceve, chi segue le azioni." },
+   { "h": "Capacità di adattarsi", "d": "Un incidente, un reclamo significativo, un processo modificato o dubbi dalla compliance possono richiedere l'aggiornamento del piano. E collega il programma ai dati: se gli indicatori peggiorano dove il piano non guarda, hai una disconnessione importante." }
+  ]
+ },
+ {
+  "id": "14001_m08_s014",
+  "layout": "cards",
+  "kicker": "Audit interno · 3",
+  "titolo": "Obiettivi, criteri e campo di ogni audit",
+  "intro": "Per ciascun audit vanno definiti tre elementi — il presidio fondamentale contro la vaghezza. Senza obiettivo la verifica si disperde, senza criteri il giudizio è opinabile, senza campo il lavoro si allarga senza controllo o lascia fuori proprio ciò che era più importante. E devono essere coerenti con le risorse disponibili.",
+  "cards": [
+   { "h": "L'obiettivo", "d": "Perché quella verifica viene svolta: la tenuta di un processo critico, l'attuazione di modifiche recenti, la gestione di un obbligo, l'efficacia di una parte del sistema. Non «controllare il reparto»: abbastanza preciso da orientare domande, campionamenti e conclusioni." },
+   { "h": "I criteri", "d": "Il metro di confronto: i requisiti che l'organizzazione si è data e quelli della norma applicabili al campo, più procedure, istruzioni e requisiti autorizzativi assunti come obbligatori. Noti prima, non inventati strada facendo." },
+   { "h": "Il campo di applicazione", "d": "Sedi, reparti, processi, periodi, attività, flussi. Troppo ampio = superficiale; troppo stretto = collegamenti persi. Un audit sullo scarico può dover includere trattamento, campionamento, manutenzione, anomalie, competenze e dati di monitoraggio." }
+  ]
+ },
+ {
+  "id": "14001_m08_s015",
+  "layout": "punti",
+  "kicker": "Audit interno · 4",
+  "titolo": "Obiettività e imparzialità",
+  "intro": "Gli auditor vanno selezionati e gli audit condotti in modo da assicurare obiettività e imparzialità. Una verifica interna nasce in un ambiente dove relazioni, abitudini e interessi possono influenzare il giudizio: se non governi questo rischio, il processo resta formalmente corretto ma sostanzialmente addomesticato.",
+  "punti": [
+   { "h": "Le due qualità", "d": "Obiettività: conclusioni che dipendono da evidenze e criteri, non da simpatie, fretta o protezione di qualcuno. Imparzialità: chi verifica non giudica il proprio lavoro come se fosse neutrale. Nelle organizzazioni piccole le separazioni perfette non sempre esistono, ma i conflitti evidenti si riconoscono e si gestiscono." },
+   { "h": "Il rischio di autoreferenzialità", "d": "Il responsabile ambiente che ha scritto le procedure, tiene i rapporti coi laboratori e segue le non conformità, se verifica da solo ogni anno i processi che ha progettato, difficilmente ha la distanza critica. Non serve supporre cattiva fede: il ruolo la rende difficile." },
+   { "h": "Anche il metodo conta", "d": "Una persona formalmente indipendente perde imparzialità se le domande sono guidate, il campionamento evita le aree difficili, le spiegazioni sono accettate senza riscontro o i rilievi vengono ammorbiditi. L'obiettività è una qualità del metodo, non solo della persona." },
+   { "h": "Il linguaggio e il livello giusto", "d": "Risultanze vaghe e caute possono indicare imparzialità sacrificata alla quiete interna; ma solo rilievi severi non è più obiettivo — l'imparzialità richiede precisione, non aggressività. E i risultati vanno riportati al pertinente livello direzionale: riduce insabbiamenti e minimizzazioni." }
+  ]
+ },
+ {
+  "id": "14001_m08_s016",
+  "layout": "punti",
+  "kicker": "Audit interno · 5",
+  "titolo": "Tracce, rapporti e uso dei risultati",
+  "intro": "Vanno rese disponibili informazioni documentate su programma, evidenza di attuazione e risultati: il sistema deve poter mostrare non solo l'intenzione di verificare, ma l'esecuzione e le conclusioni. La documentazione non serve solo a dimostrare conformità: serve a far parlare il processo nel tempo.",
+  "punti": [
+   { "h": "Tre livelli di evidenza", "d": "Il programma (copertura, priorità, logica), la prova di attuazione (piani, registrazioni, ricalendarizzazioni motivate, verificatori, tracce di esecuzione), i risultati (rapporti, risultanze, conclusioni e invio ai livelli direzionali pertinenti)." },
+   { "h": "Conformità apparente", "d": "Quattro audit dichiarati, programma e rapporti presenti; ma due verifiche spostate di mesi senza motivo tracciato, criteri generici, risultanze che non distinguono fatti e valutazioni, nessuna prova dell'invio alla direzione. Formalmente esiste, sostanzialmente il controllo è debole." },
+   { "h": "La qualità del rapporto", "d": "Chiaro su cosa è stato verificato, rispetto a quali criteri, con quali evidenze e conclusioni. «Situazione da migliorare» o «area da monitorare» senza criteri e fatti danno alla direzione una sensazione vaga, non un'informazione governabile." },
+   { "h": "Coerenza con i segnali", "d": "I risultati confermano o smentiscono dati ambientali, reclami, anomalie e compliance? Indicatori in peggioramento e azioni lente con rapporti sempre rassicuranti = il processo non sta vedendo abbastanza. Coerenza tra segnali operativi e risultanze = sistema credibile." }
+  ]
+ },
+ {
+  "id": "14001_m08_s017",
+  "layout": "cards",
+  "kicker": "Riesame di direzione · 1",
+  "titolo": "Il momento in cui il sistema viene governato",
+  "intro": "A intervalli pianificati, per assicurare la continua idoneità, adeguatezza ed efficacia del sistema. Non una riunione qualunque: il momento in cui il sistema viene giudicato nella sua tenuta complessiva. L'errore prevedibile: trasformarlo in una presentazione rapida di dati — il momento esiste, il governo no.",
+  "cards": [
+   { "h": "Idoneità", "d": "Il sistema resta pertinente rispetto alla natura dell'organizzazione, ai suoi aspetti ambientali e al contesto in cui opera. Un sistema formalmente ordinato può non essere più adatto ai cambiamenti recenti." },
+   { "h": "Adeguatezza", "d": "Il sistema ha mezzi, struttura e profondità sufficienti. Può essere adatto sulla carta ma povero di risorse, e quindi incapace di raggiungere gli obiettivi." },
+   { "h": "Efficacia", "d": "Il sistema sta producendo ciò che deve produrre, oppure funziona solo in superficie. Il riesame mette in relazione risultati, cambiamenti, criticità e scelte future: un punto di sintesi e orientamento, non un archivio parlato." }
+  ]
+ },
+ {
+  "id": "14001_m08_s018",
+  "layout": "punti",
+  "kicker": "Riesame di direzione · 2",
+  "titolo": "Gli input, prima parte",
+  "intro": "I primi input impediscono alla direzione di guardare il sistema come se ogni anno ricominciasse da zero. Se i verbali parlano solo di indicatori finali e ignorano azioni pregresse, cambiamenti, parti interessate, aspetti, rischi e opportunità, il riesame è incompleto.",
+  "punti": [
+   { "h": "Lo stato delle azioni precedenti", "d": "Che fine hanno fatto decisioni e impegni dei riesami precedenti? Protegge da un difetto diffuso: decidere, verbalizzare e perdere la traccia. Con questo collegamento il riesame diventa una catena decisionale coerente, non riunioni scollegate." },
+   { "h": "I cambiamenti", "d": "Fattori esterni e interni pertinenti, esigenze e aspettative delle parti interessate (obblighi di compliance inclusi), cambiamenti negli aspetti significativi e nei rischi e opportunità. Il quadro è rimasto lo stesso, o richiede adattamenti del sistema?" },
+   { "h": "Le parti interessate", "d": "Non solo clienti o autorità: vicini, lavoratori, proprietà, comunità, appaltatori. L'aumento dei reclami per rumore non è solo un dato operativo: segnala attese esterne più sensibili, che meritano attenzione strategica." },
+   { "h": "Il grado di realizzazione degli obiettivi", "d": "Non solo raggiunto/non raggiunto: l'obiettivo era ben costruito, le risorse sufficienti, i tempi realistici, quali ostacoli? Un obiettivo mancato può dipendere da controllo carente, contesto cambiato o pianificazione debole — senza questa lettura si punisce il sintomo." }
+  ]
+ },
+ {
+  "id": "14001_m08_s019",
+  "layout": "punti",
+  "kicker": "Riesame di direzione · 3",
+  "titolo": "Gli input, seconda parte",
+  "intro": "La seconda parte mostra come il sistema sta andando nella pratica: informazioni sulle prestazioni ambientali, con gli andamenti. La parola andamenti è fondamentale: non fotografie isolate ma tendenze leggibili. Un singolo mese buono può nascondere una deriva; un episodio critico si capisce nella serie storica.",
+  "punti": [
+   { "h": "Non conformità e azioni correttive", "d": "Lette insieme: non solo quante, ma se le cause sono analizzate, le chiusure tempestive, i temi ricorrenti. Un sistema può sembrare sotto controllo per le poche NC formali ed essere lento e fragile nella rimozione delle cause." },
+   { "h": "Monitoraggio e compliance", "d": "Consumi, emissioni, scarichi, rifiuti, anomalie, soglie e segnali anticipatori sintetizzati per cogliere scostamenti e priorità — non tabelle estese senza commento. E sullo stato di compliance: non un generico «tutto sotto controllo», ma dubbi aperti, scostamenti, prescrizioni sensibili." },
+   { "h": "Risultati di audit e risorse", "d": "Debolezze, aree scoperte, ritardi devono arrivare comprensibili. Se i rapporti sono sempre rassicuranti mentre altri indicatori mostrano problemi, il riesame deve interrogarsi sulla qualità delle verifiche. E l'adeguatezza delle risorse: se un obiettivo manca per carenza di mezzi, la direzione deve vederlo." },
+   { "h": "Comunicazioni e opportunità", "d": "Reclami e segnali rilevanti dalle parti interessate non sono rumore di fondo. E le opportunità di miglioramento continuo: non solo problemi da correggere. Un sistema maturo non aspetta la crisi per cambiare." }
+  ]
+ },
+ {
+  "id": "14001_m08_s020",
+  "layout": "punti",
+  "kicker": "Riesame di direzione · 4",
+  "titolo": "Che cosa deve uscire davvero",
+  "intro": "Il riesame non può finire con una presa d'atto: deve produrre orientamento. Conclusioni sulla continua idoneità, adeguatezza ed efficacia; decisioni su miglioramento continuo e modifiche al sistema, risorse incluse; azioni sugli obiettivi mancati; integrazione con altri processi; implicazioni strategiche.",
+  "punti": [
+   { "h": "Conclusioni argomentate", "d": "Non una formula standard ripetuta ogni anno, ma il risultato di una lettura che mette insieme dati, cambiamenti, audit, compliance, reclami, risorse e obiettivi. Se il verbale dice che tutto è adeguato ma gli input raccontano altro, la conclusione perde valore." },
+   { "h": "Decisioni su modifiche e risorse", "d": "Se gli input evidenziano lacune di competenze, attrezzature, tempo o personale, la direzione deve prendere posizione. Altrimenti il sistema si accorge dei propri limiti ma non riceve ciò che serve per superarli." },
+   { "h": "Azioni sugli obiettivi mancati", "d": "Correggere il piano, assegnare risorse, rivedere il metodo, cambiare responsabilità, approfondire le cause o ridefinire l'obiettivo se costruito male. L'inerzia su questo punto è il segnale più chiaro di un riesame debole." },
+   { "h": "Integrazione e strategia", "d": "Il tema ambientale entra in manutenzione, acquisti, progettazione, logistica, investimenti e fornitori. E le implicazioni strategiche: investire in tecnologie meno impattanti, rivedere il posizionamento, rinunciare a processi troppo critici. Dopo il riesame: che cosa è cambiato in modo chiaro?" }
+  ]
+ },
+ {
+  "id": "14001_m08_s021",
+  "layout": "confronto",
+  "kicker": "Riesame di direzione · 5",
+  "titolo": "Evidenze e segnali di sostanza",
+  "intro": "Le informazioni documentate devono mostrare che il momento è esistito e che cosa ha prodotto. Quattro tracce leggibili: il materiale in ingresso, la registrazione di ciò che è stato discusso, le conclusioni sul sistema, le decisioni con chiarezza sufficiente al seguito. Il formato conta meno di completezza, coerenza e tracciabilità.",
+  "a": {
+   "h": "Riesame sostanziale",
+   "sub": "Prova di governo",
+   "punti": [
+    { "d": "Connessioni tra dati e decisioni: i reclami collegati a una sorgente, i rifiuti letti col nuovo mix, i ritardi manutentivi riconosciuti come rischio." },
+    { "d": "Da lì decisioni: revisione del piano manutentivo, investimento su schermature, obiettivo aggiornato con responsabilità definite." },
+    { "d": "Ogni decisione collegata a un motivo emerso dagli input: «rafforzare il monitoraggio dello scarico perché il trend di variabilità è peggiorato»." }
+   ]
+  },
+  "b": {
+   "h": "Riesame formale",
+   "sub": "Riunione verbalizzata",
+   "punti": [
+    { "d": "«Idoneo, adeguato ed efficace» senza decisioni sui reclami, sulle manutenzioni o sull'obiettivo mancato: c'è la riunione, manca il governo." },
+    { "d": "Conclusioni identiche ogni anno nonostante cambiamenti visibili; decisioni come «monitorare meglio» o «sensibilizzare», senza responsabilità né direzione." },
+    { "d": "Materiale ricco ma verbale poverissimo: la riunione ha consumato informazioni senza trasformarle in governo." }
+   ]
+  }
+ },
+ {
+  "id": "14001_m08_s022",
+  "layout": "punti",
+  "kicker": "Esercizio · 1",
+  "titolo": "Acqua, scarico e falsi segnali di tranquillità",
+  "intro": "Un'azienda lava componenti metallici: consumo idrico, scarico industriale, rischio di perdita dai ricircoli. Nel trimestre la produzione è quasi stabile, ma l'indicatore passa da sei a quasi otto metri cubi per tonnellata. Il laboratorio conferma lo scarico nei limiti. «Siamo tranquilli, la compliance è rispettata»: una frase che mescola due piani e fa perdere il problema.",
+  "punti": [
+   { "h": "Prestazione ≠ sola conformità", "d": "Lo scarico nei limiti dice qualcosa di importante, ma non esaurisce il giudizio: l'aumento dell'acqua per tonnellata è un peggioramento della prestazione. Un verificatore attento cerca cause tecniche, perdite, cambi di processo, differenze nei turni." },
+   { "h": "La rottura tra dato e valutazione", "d": "Sette settimane di flusso notturno anomalo a impianto fermo, una valvola sospetta con ordine di manutenzione aperto, integrazioni manuali fuori norma — e nessuno collega questi eventi all'indicatore idrico nel report mensile." },
+   { "h": "La formulazione utile", "d": "Non «il consumo è aumentato», ma: il sistema ha monitoraggio di base e misurazione coerente, però la lettura dei risultati è debole, perché non collega gli scostamenti alle anomalie note e non trasforma il trend in decisioni tempestive." },
+   { "h": "La regola dell'esercizio", "d": "Quando i limiti sono rispettati ma il trend peggiora, non archiviare il segnale. Ti rassicurerebbero: soglia interna di attenzione, commento mensile che collega acqua e flusso notturno, verifica rapida della valvola, informazione al livello direzionale corretto." }
+  ]
+ },
+ {
+  "id": "14001_m08_s023",
+  "layout": "punti",
+  "kicker": "Esercizio · 2",
+  "titolo": "Energia, mix produttivo e miglioramenti apparenti",
+  "intro": "Un'azienda di articoli plastici stampati: il consumo totale di energia scende del dieci per cento nel semestre. In molte riunioni basterebbe a generare soddisfazione. Ma la produzione è scesa più del consumo: l'energia per tonnellata è aumentata. Un miglioramento assoluto non coincide sempre con un miglioramento di efficienza.",
+  "punti": [
+   { "h": "Il quadro dietro il numero", "d": "Scarti d'avviamento della nuova linea in crescita, perdite ripetute nell'aria compressa, turni brevi e frammentati meno efficienti del regime stabile. Senza l'indicatore normalizzato, l'organizzazione avrebbe letto un miglioramento apparente." },
+   { "h": "Le connessioni tra matrici", "d": "Le perdite di aria compressa non incidono solo sull'energia: attivano il compressore di riserva, che di notte genera rumore — e un reclamo del vicinato. Un cruscotto letto per compartimenti separati perde questa relazione." },
+   { "h": "I segnali anticipatori mancati", "d": "Tempi di avviamento, ore anomale dei compressori, ritardi nelle riparazioni: seguiti con attenzione, avrebbero previsto il peggioramento prima del consolidarsi del trend. Il problema è stato letto quando il dato finale era già deteriorato." },
+   { "h": "La domanda che vale oro", "d": "Chi ha commentato il miglioramento totale aveva accesso al dato specifico e alle informazioni operative? Se sì ma la lettura è rimasta superficiale, il problema è culturale; se no, è nel flusso informativo. Al riesame deve arrivare un quadro misto, non una buona notizia isolata." }
+  ]
+ },
+ {
+  "id": "14001_m08_s024",
+  "layout": "punti",
+  "kicker": "Esercizio · 3",
+  "titolo": "Compliance e comfort ingannevole",
+  "intro": "Un trattamento superficiale con autorizzazioni, deposito chimico e rifiuti pericolosi. Valutazione della compliance annuale, sintesi rassicurante: nessun superamento, nessuna sanzione, nessuna contestazione. Molti si fermerebbero qui. Ma lo stato di compliance non coincide con l'assenza di eventi negativi palesi.",
+  "punti": [
+   { "h": "I fatti sotto la superficie", "d": "Etichette incomplete su contenitori temporanei, una vasca di contenimento parzialmente ostruita, una manutenzione sull'abbattimento rinviata più volte, tre azioni correttive aperte da mesi. Nessuno prova una violazione; insieme raccontano un sistema che potrebbe non conoscere il proprio stato." },
+   { "h": "Conoscenza aggiornata, non lettura tardiva", "d": "Mantenere conoscenza e comprensione dello stato di compliance significa non aspettare l'evento esterno. Se durante l'anno cambiano impianti, fornitori e sostanze, una singola valutazione annuale può essere insufficiente." },
+   { "h": "La formulazione matura", "d": "Non «non conforme» (salto troppo rapido), ma: la capacità di mantenere una conoscenza aggiornata appare indebolita dalla bassa integrazione tra segnali operativi, azioni correttive e momento formale di valutazione. Descrive dove si rompe il processo." },
+   { "h": "Il silenzio non è prova", "d": "Quando non arrivano contestazioni per molto tempo, il silenzio viene letto come robustezza. A volte è vero; a volte è solo assenza di emersione. La domanda giusta: quali segnali interni usi per capire, con continuità, se gli obblighi sono soddisfatti?" }
+  ]
+ },
+ {
+  "id": "14001_m08_s025",
+  "layout": "punti",
+  "kicker": "Esercizio · 4",
+  "titolo": "Dal cruscotto al giudizio sul sistema",
+  "intro": "Una media azienda alimentare: acqua per unità migliorata, energia totale in lieve calo, rifiuti speciali in aumento, un picco di reclami per odori in autunno, due rilievi di audit sui ritardi manutentivi del depuratore, un obiettivo raggiunto e uno mancato. Leggi i numeri come un sistema, non come somma di caselle.",
+  "punti": [
+   { "h": "Interrogare anche il dato favorevole", "d": "L'acqua migliora: il metodo di calcolo è stabile, il mix confrontabile, l'efficienza reale o una diversa saturazione? L'energia scende poco: con produzione cresciuta è interessante, con produzione ferma la notizia è meno brillante." },
+   { "h": "La pista forte", "d": "I reclami per odori si concentrano nel periodo in cui gli interventi sul depuratore sono slittati: non una prova assoluta di causalità, ma abbastanza per dire che il sistema aveva segnali anticipatori e non li ha trasformati in azione con sufficiente rapidità." },
+   { "h": "L'obiettivo mancato", "d": "«Il mercato ha chiesto lotti più piccoli» è plausibile, ma non basta: il mix era visibile in corso d'anno? Gli indicatori lo mostravano? Sono state tentate azioni? L'obiettivo era costruito con ipotesi realistiche? Da qui nasce un riesame utile." },
+   { "h": "Il giudizio equilibrato", "d": "Il sistema raccoglie dati pertinenti, usa indicatori utili e ha verifiche capaci di trovare criticità; ma l'integrazione tempestiva dei segnali resta discontinua. Un sistema maturo convive con luci e ombre: il valore del capitolo nove è renderle leggibili e governabili, non semplificarle in un voto unico." }
+  ]
+ },
+ {
+  "id": "14001_m08_s026",
+  "layout": "punti",
+  "kicker": "Verificare il cap. 9 · 1",
+  "titolo": "Dal dato alla sua affidabilità",
+  "intro": "La strategia più efficace: seguire il percorso del dato fino alla decisione. Parti da un aspetto significativo o da un obbligo sensibile e ricostruisci la catena — fonte, metodo, frequenza, criterio, indicatore, analisi, comunicazione, reazione. Eviti di fermarti ai moduli e di perdere tempo su numeri che il sistema non usa.",
+  "punti": [
+   { "h": "Le prime tre domande", "d": "Che cosa monitorate e perché proprio questo (collegamento ad aspetti, obiettivi, rischi); come viene eseguita la misurazione (attrezzature, chi, frequenza); rispetto a che cosa giudicate il risultato (soglie, storici, obiettivi, limiti interni)." },
+   { "h": "La credibilità del dato", "d": "Come si mantiene l'affidabilità degli strumenti, taratura o verifica quando appropriato, e cosa accade se una lettura appare implausibile: un sistema maturo non archivia il valore anomalo senza domande." },
+   { "h": "Risalire alla sorgente", "d": "Dati di base completi, tempestivi, confrontabili, tracciabili? Trascrizioni a mano con buchi, correzioni non spiegate, criteri di produzione cambiati nel tempo: molti sistemi appaiono ordinati finché non torni alla sorgente del numero." },
+   { "h": "Le quattro prove", "d": "Ciò che viene misurato è pertinente; il dato è difendibile; il risultato è interpretato contro criteri chiari; da quella lettura nasce un effetto gestionale. «Li guardiamo periodicamente» è un segnale debole; riunioni, commenti, azioni, escalation sono credibili." }
+  ]
+ },
+ {
+  "id": "14001_m08_s027",
+  "layout": "punti",
+  "kicker": "Verificare il cap. 9 · 2",
+  "titolo": "Verifiche interne e governo della direzione",
+  "intro": "I due snodi che trasformano le informazioni in controllo e governo. Logica semplice: il processo è pianificato con criterio? Come viene svolto? Che cosa produce davvero? Questa sequenza impedisce di confondere l'esistenza di documenti con l'efficacia del sistema.",
+  "punti": [
+   { "h": "Programma e singolo audit", "d": "Frequenze e priorità legate a importanza ambientale, cambiamenti e risultati precedenti — non distribuzione uniforme. Sul singolo audit: obiettivo, criteri e campo definiti, e obiettività protetta (chi pianifica, verifica, giudica e chiude sulle proprie aree merita approfondimento)." },
+   { "h": "Rapporti e coerenza", "d": "L'evidenza deve permettere di ricostruire cosa è stato esaminato, con quali criteri, evidenze e conclusioni. E confronta con indicatori, reclami, anomalie e compliance: dati instabili con audit sempre sereni = qualcosa non torna." },
+   { "h": "Gli input e gli output del riesame", "d": "Azioni precedenti, cambiamenti, aspetti, rischi, obiettivi, prestazioni, trend NC/AC, compliance, audit, risorse, reclami, opportunità: se metà manca, il riesame perde spessore. E in uscita: conclusioni, decisioni, modifiche, azioni sui mancati, integrazione, strategia." },
+   { "h": "La prova finale", "d": "Prendi una criticità emersa da dati, reclami o audit e seguila fino alla direzione: è arrivata al riesame, è stata compresa, ha generato una decisione, ha ricevuto risorse? Se la catena si interrompe, hai trovato dove il capitolo nove perde forza." }
+  ]
+ },
+ {
+  "id": "14001_m08_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 08",
+  "modNum": "08",
+  "titolo": "Dai numeri al governo del sistema",
+  "punti": [
+   { "h": "Monitoraggio e misurazione", "d": "Scegliere che cosa osservare, con quali metodi, tempi e criteri. Taratura e verifica come condizioni per fidarsi del dato; qualità delle informazioni — pertinenti, complete, tracciabili, tempestive — come base di tutto il resto." },
+   { "h": "Gli indicatori", "d": "Distinguere il numero grezzo dal segnale gestionale: un buon indicatore nasce da una domanda vera, è confrontabile e orienta decisioni. Diffidare dei miglioramenti apparenti, dei confronti senza contesto e dei cruscotti pieni ma muti." },
+   { "h": "L'audit interno", "d": "Non conferma che i documenti esistono: capisce se il sistema è conforme ed efficacemente attuato e mantenuto. Programma ragionato, obiettivi-criteri-campo definiti, obiettività protetta, rapporti che producono conoscenza utile, non rassicurazione." },
+   { "h": "Il riesame di direzione", "d": "Il momento in cui l'alta direzione giudica idoneità, adeguatezza ed efficacia: input completi, decisioni concrete su risorse, obiettivi mancati, integrazione e strategia. Qui il sistema smette di essere solo tecnica e torna governo." },
+   { "h": "La lezione degli esercizi", "d": "Un indicatore non si legge mai da solo; un limite rispettato non esaurisce il giudizio; l'assenza di sanzioni non garantisce comprensione dello stato. Reclami, manutenzioni, trend e obiettivi acquistano significato pieno solo collegati tra loro." },
+   { "h": "Verso il checkpoint", "d": "Segui il percorso del dato fino alla decisione, verifica la coerenza tra segnali e risultanze, cerca l'effetto delle informazioni sul governo. Poi: miglioramento e non conformità tipiche del sistema di gestione ambientale." }
+  ],
+  "prossimo": {
+   "modulo": "09",
+   "titolo": "Miglioramento e non conformità",
+   "testo": "Dal capitolo nove al ciclo che corregge le cause e fa crescere il sistema."
+  }
+ }
+]
