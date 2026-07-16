@@ -1,0 +1,320 @@
+[
+ {
+  "id": "37001_m01_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 37001 — Prevenzione della corruzione",
+  "kicker": "Modulo 1",
+  "eyebrow": "La bussola prima dei requisiti",
+  "titolo": "Perché il sistema, il rischio e i suoi limiti",
+  "testo": "In questo primo modulo non entri ancora nei requisiti punto per punto: prima ti serve una bussola chiara. Per lavorare bene come professionista della verifica devi capire il perché del sistema, il problema che prova a contenere, il quadro normativo che lo circonda e anche i suoi limiti dichiarati. La parola chiave non è solo corruzione, ma prevenzione: la norma non fa promesse assolute né sostituisce magistratura e controlli pubblici, aiuta un'organizzazione a impostare politiche, responsabilità, processi e controlli proporzionati al rischio. Il cambio di postura richiesto è leggere prima i segnali, le esposizioni e le debolezze del contesto, invece di inseguire solo l'illecito già esploso. E una regola di maturità del corso: qui non si celebra la certificazione come talismano, né si demonizza la norma come carta inutile.",
+  "agenda": [
+   "Obiettivi, lessico iniziale e mappa del viaggio",
+   "Forme, meccanismi e costi della corruzione",
+   "Il panorama: convenzioni, leggi, modelli organizzativi",
+   "Che cosa la certificazione dimostra e che cosa no",
+   "Lo schema Auditor e Lead Auditor 37001",
+   "Il metodo di lavoro e il riuso della ISO 19011"
+  ]
+ },
+ {
+  "id": "37001_m01_s002",
+  "layout": "numeri",
+  "kicker": "Obiettivi pratici",
+  "titolo": "Che cosa saprai fare dopo il modulo",
+  "intro": "Alla fine non ti chiederò di ricordare formule astratte, ma di saper compiere alcune operazioni mentali molto concrete, che userai in ogni fase del corso.",
+  "numeri": [
+   { "n": "1", "h": "Vedere le forme della corruzione", "d": "Non solo denaro consegnato di nascosto: diretta o indiretta, economica o non economica, nel pubblico, nel privato e nel no profit, a favore o contro l'organizzazione stessa." },
+   { "n": "2", "h": "Guardare il sistema come insieme vivo", "d": "Politiche, ruoli, processi, controlli, informazioni, monitoraggio e miglioramento che dialogano; non una collezione di carte eleganti con risultati fragili." },
+   { "n": "3", "h": "Leggere il contesto", "d": "Due organizzazioni con lo stesso fatturato hanno esposizioni diverse: ragiona per attività, luoghi, relazioni e parti interessate, non solo per dimensione." },
+   { "n": "4", "h": "Spiegare cosa autorizza la certificazione", "d": "Non «non avrà mai casi di corruzione», ma «ha adottato un sistema strutturato, orientato a prevenire, scoprire e affrontare il rischio»." },
+   { "n": "5", "h": "Collocare le fonti", "d": "La norma non sostituisce la legge, non esaurisce la compliance, non annulla altri modelli organizzativi, ma può integrarsi con essi." },
+   { "n": "6", "h": "Distinguere partecipare e condurre", "d": "Lo schema Auditor e Lead Auditor come progressione di competenze; molte aspettative sbagliate nascono dal confondere i due ruoli." }
+  ]
+ },
+ {
+  "id": "37001_m01_s003",
+  "layout": "definizione",
+  "kicker": "Vocabolario iniziale",
+  "eyebrow": "Cinque parole, usate con precisione",
+  "titolo": "Che cosa intendi quando dici corruzione",
+  "definizione": "Corruzione: offrire, promettere, dare, accettare o sollecitare un vantaggio indebito, di valore economico o non economico, in modo diretto o tramite altri, in violazione delle regole applicabili, per spingere qualcuno a compiere o tralasciare atti dei propri compiti.",
+  "punti": [
+   "Non riguarda solo chi dà, ma anche chi riceve, chiede o si fa promettere il vantaggio; e la relazione può essere diretta oppure mediata da una parte terza.",
+   "Organizzazione: enti pubblici, imprese private, no profit e parti di enti più ampi — evita modelli mentali troppo stretti, il bisogno di governare il rischio resta ovunque.",
+   "Sistema di gestione: non un singolo controllo isolato, ma elementi collegati; una procedura sugli omaggi che nessuno conosce non è un sistema che funziona.",
+   "Requisito: un'esigenza esplicita e obbligatoria; chiediti sempre qual è il riferimento concreto — legge, regola interna, impegno deliberato, criterio definito.",
+   "Rischio: legato all'incertezza rispetto agli obiettivi; non guardi solo i fatti accaduti, ma dove e perché potrebbero verificarsi eventi che espongono l'organizzazione."
+  ]
+ },
+ {
+  "id": "37001_m01_s004",
+  "layout": "cards",
+  "kicker": "Le forme",
+  "titolo": "Oltre la tangente da film",
+  "intro": "La scena estrema — una busta di denaro, un accordo segreto — esiste, ma se ti fermi lì capisci poco del rischio reale. Ti serve una mappa più ampia: la corruzione può essere attiva o passiva, diretta o indiretta, a vantaggio dell'organizzazione oppure contro di essa.",
+  "cards": [
+   { "h": "A favore o contro l'organizzazione", "d": "Quella posta in essere per conto dell'ente (che rischia di diventarne agente) è diversa da quella rivolta all'ente per alterarne le decisioni (che ne è bersaglio). Misure simili, ma non coincidenti." },
+   { "h": "L'interposizione", "d": "Molte situazioni passano per un agente, un consulente, un partner, un subappaltatore, una fondazione. Una visione limitata ai dipendenti interni è quasi sempre insufficiente." },
+   { "h": "Il vantaggio non economico", "d": "Un fornitore favorito perché vicino a un familiare, una selezione che restituisce un favore, la promessa di un incarico futuro per una decisione compiacente oggi. Il denaro può non apparire, la logica di scambio resta." },
+   { "h": "Non solo le grandi organizzazioni", "d": "In una piccola realtà la concentrazione di poteri aggira i controlli; in una struttura informale la fiducia personale confonde; nel no profit la pressione a raccogliere fondi indebolisce le verifiche." }
+  ]
+ },
+ {
+  "id": "37001_m01_s005",
+  "layout": "punti",
+  "kicker": "I meccanismi",
+  "titolo": "Come nasce il rischio, dentro processi normali",
+  "intro": "Raramente tutto comincia con una proposta esplicita e brutale. Più spesso il rischio cresce dentro piccole deviazioni tollerate, relazioni opache, controlli deboli e pressioni non dichiarate. Alcuni ingredienti ricorrenti rendono il terreno fertile.",
+  "punti": [
+   { "h": "Discrezionalità non bilanciata", "d": "Chi sceglie il fornitore, autorizza eccezioni, approva pagamenti e giustifica da solo le proprie decisioni. Il problema non è che qualcuno decida, ma che decida senza contrappesi credibili." },
+   { "h": "L'urgenza", "d": "«Bisogna chiudere oggi, poi sistemiamo la carta.» Quando l'obiettivo immediato schiaccia le regole, il sistema manda un messaggio implicito: il risultato conta più del modo in cui lo raggiungi." },
+   { "h": "La normalizzazione della deviazione", "d": "Una piccola eccezione giustificata come caso speciale si ripete, diventa abitudine e scompare dal radar morale. Nessun passo sembra clamoroso, ma la somma costruisce un ambiente vulnerabile." },
+   { "h": "L'intermediazione opaca", "d": "Quando il contributo di un intermediario non è ben definito, la remunerazione è sproporzionata o la scelta è avvenuta senza verifiche, il rischio sale. Non demonizzare gli intermediari: l'opacità della relazione è già un fattore di esposizione." }
+  ]
+ },
+ {
+  "id": "37001_m01_s006",
+  "layout": "numeri",
+  "kicker": "Costi per l'organizzazione",
+  "titolo": "Denaro, reputazione, tempo, fiducia",
+  "intro": "Molti pensano subito alla sanzione economica o al danno d'immagine, ma il conto reale è più ampio, più lungo nel tempo e più corrosivo. Se vuoi capire il valore della prevenzione, devi vedere bene questa catena di effetti.",
+  "numeri": [
+   { "n": "1", "h": "Diretto", "d": "Perdite, spese legali, indagini interne, progetti sospesi, rapporti interrotti, sanzioni. Spesso arrivano quando il danno è già avanzato." },
+   { "n": "2", "h": "Operativo", "d": "Le persone chiave assorbite da verifiche, ricostruzioni e gestione della crisi; progetti che rallentano, decisioni prudenti fino alla paralisi, a volte per mesi." },
+   { "n": "3", "h": "Reputazionale", "d": "La reputazione è un capitale di fiducia che sostiene rinnovi, collaborazioni, credito, assunzioni. Si erode in fretta e si ricostruisce molto più lentamente." },
+   { "n": "4", "h": "Il clima interno", "d": "Se contano risultati e relazioni più dell'integrità, i corretti si demotivano e gli opportunisti imparano che la deviazione conviene. La cultura cambia in silenzio." },
+   { "n": "5", "h": "La qualità delle decisioni", "d": "Un fornitore che vince per relazione indebita dà un servizio peggiore; una promozione per scambio di favori carica l'organizzazione di leadership debole. Un danno anche manageriale e strategico." }
+  ]
+ },
+ {
+  "id": "37001_m01_s007",
+  "layout": "cards",
+  "kicker": "Costi per la società",
+  "titolo": "Concorrenza, servizi, fiducia, sviluppo",
+  "intro": "Il fenomeno supera il singolo ente e tocca la società nel suo insieme. Questo passaggio ti aiuta a non ridurre la ISO 37001 a un tema aziendale interno: la prevenzione ha anche una dimensione civica, economica e istituzionale.",
+  "cards": [
+   { "h": "Concorrenza alterata", "d": "Se gara, fornitura o autorizzazione sono influenzate da vantaggi indebiti, non vince il migliore ma il più vicino al circuito sbagliato. Penalizza chi investe in qualità, innovazione e correttezza." },
+   { "h": "Costo e qualità peggiori", "d": "Una decisione deviata può alzare il prezzo e abbassare la qualità: materiali peggiori, manutenzione carente, opere meno sicure. Il danno può arrivare fino alla salute e alla sicurezza." },
+   { "h": "Fiducia nelle istituzioni", "d": "Se le decisioni sembrano dipendere da favori e scambi opachi, nasce l'idea tossica che per ottenere un risultato serva sempre una scorciatoia. La legalità appare ingenua, la trasparenza una facciata." },
+   { "h": "Sviluppo frenato", "d": "Ambienti ad alta opacità attraggono meno investimenti buoni, meno talenti, meno collaborazione di qualità. Con l'incertezza crescono prudenza, costi di controllo e sfiducia reciproca." }
+  ]
+ },
+ {
+  "id": "37001_m01_s008",
+  "layout": "split",
+  "kicker": "Panorama internazionale",
+  "titolo": "Perché il tema supera i confini nazionali",
+  "lead": "Quando un fenomeno altera mercati, istituzioni e relazioni economiche oltre i confini di un Paese, la risposta non può restare soltanto locale. Imprese, intermediari, transazioni e filiere attraversano territori diversi: se ogni sistema reagisse da solo, resterebbero troppi varchi.",
+  "punti": [
+   { "h": "Le convenzioni", "d": "La convenzione OCSE sulla corruzione di pubblici ufficiali stranieri e la convenzione ONU contro la corruzione, più ampia. Non i dettagli giuridici, ma il messaggio comune: il fenomeno è sistemico e richiede cooperazione." },
+   { "h": "Il rischio si muove lungo la catena", "d": "Chi opera su più mercati, usa distributori o gestisce rapporti con soggetti pubblici non può ragionare con una visione domestica; un comportamento lontano dalla sede centrale può comunque esporre l'organizzazione." },
+   { "h": "Il ruolo delle norme volontarie", "d": "La ISO 37001 non nasce nel vuoto: offre un linguaggio organizzativo comune per tradurre il problema in politiche, responsabilità e controlli, senza sostituire convenzioni e leggi." },
+   { "h": "La domanda professionale", "d": "Se un'organizzazione dice «le nostre regole interne sono sempre bastate», la domanda non è se le regole esistono, ma se sono coerenti con la complessità dei contesti e dei rischi che affronta davvero." }
+  ]
+ },
+ {
+  "id": "37001_m01_s009",
+  "layout": "punti",
+  "kicker": "Piano nazionale",
+  "titolo": "Leggi, responsabilità degli enti, modelli",
+  "intro": "La legge resta il riferimento obbligatorio, ma la sola esistenza di divieti e sanzioni non basta a governare il rischio dentro le organizzazioni. La ISO 37001 si colloca proprio in questo spazio operativo, tra un dovere generale e un assetto concreto di prevenzione.",
+  "punti": [
+   { "h": "Chiedersi prima, non dopo", "d": "Un'organizzazione matura non aspetta la contestazione: quali processi sono esposti, quali deleghe chiarire, quali conflitti gestire, come tracciare decisioni e pagamenti, come formare chi opera nelle aree sensibili." },
+   { "h": "I modelli organizzativi", "d": "Una famiglia di strumenti per dare ordine, responsabilità e controllo ai processi. La ISO 37001 non li cancella: offre una struttura mirata sul rischio corruttivo, usabile da sola oppure integrata in architetture più ampie." },
+   { "h": "Integrazione intelligente", "d": "Chi ha già un sistema qualità maturo non deve costruire un mondo parallelo che duplichi tutto, ma inserire requisiti e controlli specifici nei processi esistenti, proprio dove il rischio lo richiede." },
+   { "h": "Oltre il contratto di lavoro", "d": "Il rischio arriva anche da soci in affari che rappresentano l'ente o ne influenzano le decisioni. I modelli efficaci guardano filiera, partner, intermediari, joint venture e consulenti, non solo i dipendenti." }
+  ]
+ },
+ {
+  "id": "37001_m01_s010",
+  "layout": "confronto",
+  "kicker": "Ruolo e campo di applicazione",
+  "titolo": "Dove comincia e dove finisce la norma",
+  "intro": "La ISO 37001 definisce requisiti per costruire, far vivere ed evolvere un sistema di prevenzione della corruzione, adottabile da solo o integrato in un sistema più ampio. Due delimitazioni, apparentemente opposte, ne tengono insieme la forza.",
+  "a": {
+   "h": "Un fuoco preciso",
+   "sub": "Solo il fenomeno corruttivo",
+   "punti": [
+    { "d": "Il bersaglio è la corruzione, non l'intero universo della compliance. Un sistema conforme non copre automaticamente ogni reato economico né sostituisce l'intero controllo interno." },
+    { "d": "Questa precisione è una forza: protegge da equivoci diffusi e dà al sistema un centro chiaro, invece di promesse generiche su tutta la moralità dell'organizzazione." }
+   ]
+  },
+  "b": {
+   "h": "Un campo ampio",
+   "sub": "Ogni tipo di organizzazione",
+   "punti": [
+    { "d": "Pubblico, privato e no profit; piccolo ente locale o gruppo internazionale. Il disegno è generale, ma le soluzioni devono essere proporzionate al contesto concreto." },
+    { "d": "La proporzionalità dipende da dimensioni, luoghi, settori, intermediari, rapporti con soggetti pubblici. Non esiste una copia standard valida per tutti, e la norma non promette l'azzeramento del rischio." }
+   ]
+  }
+ },
+ {
+  "id": "37001_m01_s011",
+  "layout": "punti",
+  "kicker": "L'ecosistema",
+  "titolo": "La 37001 tra sistemi di gestione e governance",
+  "intro": "Raramente incontrerai organizzazioni costruite da zero intorno a una sola norma. Più spesso troverai pezzi già presenti, livelli di maturità diversi e controlli nati per esigenze differenti, da leggere come insieme coerente.",
+  "punti": [
+   { "h": "Vivere da sola o integrata", "d": "Se l'organizzazione ha già processi e informazioni ben gestite, il presidio si innesta lì invece di creare un doppione; se l'assetto è frammentato, la norma è l'occasione per mettere ordine dove c'erano regole sparse." },
+   { "h": "Una parte della compliance, non tutta", "d": "Si può essere ordinati su qualità o ambiente e fragili su agenti, soci in affari o conflitti di interessi. Non confondere l'esistenza di altri sistemi con un presidio robusto contro la corruzione." },
+   { "h": "La governance e il tono", "d": "Quando il vertice tratta il tema come obbligo formale, i controlli diventano rituali; quando lo collega a decisioni, deleghe e incentivi, il sistema acquista credibilità." },
+   { "h": "Integrare non è annacquare", "d": "Rischi alti non si nascondono dietro «abbiamo già molti sistemi»; una realtà semplice non deve imitare soluzioni gigantesche. Il criterio è la coerenza tra rischi, controlli e capacità di farli vivere." }
+  ]
+ },
+ {
+  "id": "37001_m01_s012",
+  "layout": "cards",
+  "kicker": "Le motivazioni",
+  "titolo": "Perché le organizzazioni la adottano",
+  "intro": "Perché adottarla, se la legge esiste già e altri controlli sono magari presenti? Le motivazioni non sono tutte uguali — alcune difensive, altre strategiche, altre reputazionali — e non tutte producono gli stessi risultati. Non giudicare dal motivo dichiarato, ma dalle decisioni coerenti che ha generato.",
+  "cards": [
+   { "h": "Ridurre esposizioni poco governate", "d": "Con intermediari, gare, donazioni, soci in affari e autorizzazioni esterne, le regole informali non bastano. La norma traduce una preoccupazione diffusa in un sistema leggibile." },
+   { "h": "Fiducia delle parti interessate", "d": "Mostrare un presidio riconoscibile rafforza la fiducia di clienti, partner e finanziatori. Ma non è comprare reputazione con un timbro: se il sistema è vuoto, la reputazione promessa diventa rischio aggravato." },
+   { "h": "Chiarezza interna", "d": "Costringe a definire chi autorizza cosa, come si gestiscono omaggi e ospitalità, come si selezionano consulenti, cosa accade a un sospetto. Riduce la dipendenza da persone considerate intoccabili." },
+   { "h": "Una spinta culturale", "d": "Alcuni vertici capiscono che l'integrità va resa visibile in deleghe, formazione e verifiche. La norma non crea la cultura, ma fornisce un'intelaiatura che la sostiene e la rende meno dipendente dagli umori del momento." }
+  ]
+ },
+ {
+  "id": "37001_m01_s013",
+  "layout": "punti",
+  "kicker": "La certificazione · 1",
+  "titolo": "Che cosa rende visibile in modo serio",
+  "intro": "Il rischio più comune è attribuire alla certificazione poteri che non ha, oppure svalutarla come semplice carta. Una postura matura evita entrambi gli errori. Ecco ciò che puoi affermare con serietà.",
+  "punti": [
+   { "h": "Esiste un sistema", "d": "Non una raccolta casuale di documenti, ma politiche, responsabilità, processi, controlli e attività di miglioramento che l'organizzazione dichiara e mette in funzione." },
+   { "h": "È stato valutato su criteri riconoscibili", "d": "La conformità riguarda il sistema e il suo funzionamento entro il campo di applicazione dichiarato, non la moralità universale dell'organizzazione; e il giudizio è fondato su evidenze, non su promesse." },
+   { "h": "Segnala maturità organizzativa", "d": "L'organizzazione ha preso sul serio il rischio, lo ha trasformato in scelte e si è sottoposta a valutazione indipendente. Per un cliente, un partner o un investitore ha un valore concreto." },
+   { "h": "Ripetibilità", "d": "Un sistema costruito bene non dipende dalla memoria di una persona esperta; regole, responsabilità e controlli diventano più stabili, meno esposti agli sbalzi di turnover, urgenze e cambi di leadership." }
+  ]
+ },
+ {
+  "id": "37001_m01_s014",
+  "layout": "evidenza",
+  "kicker": "La certificazione · 2",
+  "eyebrow": "Onestà intellettuale",
+  "titolo": "Non prova il passato, non promette il futuro",
+  "testo": "Per parlare bene di certificazione devi saper pronunciare anche le frasi che qualcuno preferirebbe evitare. La più importante: una certificazione non è prova che in passato non ci siano stati fatti corruttivi, né promessa che in futuro non accadranno. La norma nasce con questa sobrietà — mira a ridurre il rischio e a migliorare la capacità di prevenire, individuare e gestire il fenomeno, non a cancellare la libertà di deviare o la creatività con cui certi comportamenti si nascondono. Non garantisce immunità legale: davanti a un fatto illecito, autorità e parti interessate guarderanno comportamenti, responsabilità ed effettività dei controlli, e un certificato non trasforma un evento grave in qualcosa di irrilevante. Non dimostra che tutte le persone siano integre né che ogni decisione sia stata corretta: certifica qualcosa sul sistema, non la coscienza individuale di ciascuno. Non garantisce la perfezione perpetua, perché le organizzazioni cambiano e un sistema adeguato ieri può diventare parziale oggi. E non sostituisce la leadership: un vertice può esibire un certificato e poi premiare risultati opachi, svuotando la sostanza. Questa onestà non indebolisce la certificazione: la rende più credibile, perché uno strumento vale di più quando sai esattamente che cosa può fare e che cosa no."
+ },
+ {
+  "id": "37001_m01_s015",
+  "layout": "punti",
+  "kicker": "Il perimetro",
+  "titolo": "Leggere bene campo di applicazione e confini",
+  "intro": "Una lente decisiva: la certificazione ha sempre un campo di applicazione, un confine dichiarato entro cui il sistema è stato progettato e valutato. Non è un dettaglio amministrativo, ma la chiave per capire che cosa stai davvero guardando.",
+  "punti": [
+   { "h": "Due errori opposti", "d": "Attribuire una copertura che non possiede (l'intero gruppo, tutte le controllate, ogni attività), oppure svalutarla per un problema in un'area che non rientrava nel campo dichiarato. Nessuno dei due è professionale." },
+   { "h": "Governo diretto, indiretto, esposizione", "d": "Un'organizzazione non può fingere di governare ciò che non controlla: deve chiarire fino a dove arriva la sua influenza, come valuta i partner, quali impegni richiede e cosa fa quando emergono segnali critici." },
+   { "h": "La domanda rivelatrice", "d": "Il perimetro scelto è coerente con il rischio reale, o appare costruito per tenere fuori proprio le aree più sensibili — sviluppo commerciale, procurement strategico, rapporti con intermediari?" },
+   { "h": "Tre lenti insieme", "d": "La certificazione va letta con tre domande: che cosa dimostra, che cosa non garantisce, dove si applica davvero. Tenerle unite ti protegge da entusiasmi ingenui e da cinismi superficiali." }
+  ]
+ },
+ {
+  "id": "37001_m01_s016",
+  "layout": "split",
+  "kicker": "Lo schema competenze",
+  "titolo": "Certificare il sistema o certificare la persona",
+  "lead": "Qui cambia l'oggetto del giudizio: non si valuta più il sistema di un'organizzazione, ma la preparazione professionale di chi opera nelle verifiche. Un'organizzazione certificata ha comunque bisogno di professionisti preparati, e una persona può formarsi seriamente senza che ciò renda maturo qualsiasi sistema.",
+  "punti": [
+   { "h": "Il profilo auditor", "d": "Sa contribuire con competenza alle verifiche, leggere i criteri, raccogliere evidenze pertinenti, comprendere il contesto specifico della prevenzione della corruzione e formulare osservazioni fondate." },
+   { "h": "Il profilo lead auditor", "d": "Aggiunge la capacità di guidare il gruppo, pianificare il lavoro, governare tempi e relazioni, prendere decisioni metodologiche e tenere insieme il quadro senza perdere i dettagli rilevanti." },
+   { "h": "Ruolo, non solo prestigio", "d": "Partecipare bene non coincide con condurre bene: puoi essere abile nell'intervistare o nel collegare evidenze e rischi senza essere ancora pronto a reggere la responsabilità complessiva di una verifica." },
+   { "h": "Onestà sul proprio livello", "d": "Chi frequenta un corso e si sente subito pronto a guidare verifiche complesse compie una scorciatoia mentale pericolosa. La professionalità cresce per studio, metodo, esercizio e confronto con casi concreti." }
+  ]
+ },
+ {
+  "id": "37001_m01_s017",
+  "layout": "punti",
+  "kicker": "Il profilo auditor",
+  "titolo": "Contributo tecnico e qualità dell'osservazione",
+  "intro": "Non il detective improvvisato né il controllore burocratico: sei lì per contribuire a un giudizio fondato su criteri, evidenze e comprensione del contesto. Il tuo valore non dipende dal numero di domande o dalla severità del tono, ma dalla qualità dell'osservazione.",
+  "punti": [
+   { "h": "Prepararsi", "d": "Capire prima il tipo di organizzazione, le attività più esposte, le parti terze, la logica dei processi. Senza preparazione si fanno domande generiche o si inseguono dettagli appariscenti, perdendo i nodi veri del rischio." },
+   { "h": "Osservare con metodo", "d": "Ascoltare senza farsi incantare da risposte fluenti, leggere le informazioni documentate senza scambiarle per prova di efficacia, riconoscere incoerenze tra prassi dichiarata e pratica reale." },
+   { "h": "Neutralità del linguaggio", "d": "Quando rilevi una debolezza, non drammatizzare né minimizzare: descrivi il fatto, il criterio pertinente e la ragione dello scostamento. In ambito corruzione il lessico diventa subito accusatorio, e serve ancora più precisione." },
+   { "h": "Relazione e limiti", "d": "Mantenere cortesia e fermezza con interlocutori difensivi o troppo disponibili, senza confondere la qualità della relazione con quella dell'evidenza. E riconoscere i propri limiti quando la situazione li supera." }
+  ]
+ },
+ {
+  "id": "37001_m01_s018",
+  "layout": "cards",
+  "kicker": "Il profilo lead auditor",
+  "titolo": "La regia della verifica",
+  "intro": "Quando la responsabilità si estende a tutto il processo, il profilo cambia prospettiva: non parli solo per ultimo nella riunione finale, diventi il punto di coerenza dell'intera verifica.",
+  "cards": [
+   { "h": "Pianificazione", "d": "Capire dove il rischio merita più attenzione, come distribuire le attività, quali processi vedere in profondità, senza farsi guidare dalla comodità logistica. Alcune aree ordinate in superficie sono in realtà molto esposte." },
+   { "h": "Gestione del gruppo", "d": "Non basta assegnare compiti: far circolare le informazioni essenziali, verificare che i criteri siano letti allo stesso modo, ricondurre a un giudizio coerente le differenze di interpretazione." },
+   { "h": "Relazione col vertice", "d": "Impostare il lavoro senza promesse improprie, gestire richieste e resistenze durante la verifica, presentare i risultati con equilibrio spiegando quali limiti di perimetro o profondità sono rilevanti." },
+   { "h": "Imparzialità e sintesi", "d": "Accorgersi per primo di pressioni commerciali o relazionali e reagire; e distinguere ciò che conta per il giudizio da ciò che è marginale. Una verifica ben guidata costruisce il quadro più affidabile, non raccoglie più materiale." }
+  ]
+ },
+ {
+  "id": "37001_m01_s019",
+  "layout": "confronto",
+  "kicker": "Formazione ed esperienza",
+  "titolo": "Le lenti e il loro uso sul campo",
+  "intro": "Mettiamo ordine nelle aspettative: un corso serio può fare molto, ma non tutto. La postura giusta è ambiziosa ma umile — impari molto, ma sai che la padronanza si costruisce passo dopo passo.",
+  "a": {
+   "h": "Che cosa un corso può dare",
+   "sub": "Le lenti",
+   "punti": [
+    { "d": "Struttura mentale, lessico corretto, comprensione del ruolo della norma, metodo di osservazione e criteri per interpretare la certificazione. Ti allena a collegare rischi, controlli e comportamento organizzativo." },
+    { "d": "Ti fa imparare prima gli errori tipici: non scambiare una procedura elegante per un controllo efficace, non confondere assenza di scandali con basso rischio, non leggere i soci in affari come sfondo irrilevante." }
+   ]
+  },
+  "b": {
+   "h": "Che cosa richiede il campo",
+   "sub": "L'uso delle lenti",
+   "punti": [
+    { "d": "Alcune abilità si sviluppano solo con tempi stretti, interlocutori difficili, documentazione incompleta o informazioni contraddittorie. La teoria dà le lenti, l'esperienza insegna a usarle mentre il terreno si muove." },
+    { "d": "Anche il linguaggio conta: «ho frequentato un corso» non equivale a «sono pronto a guidare da solo», e «conosco la norma» non equivale a «so leggere bene un'organizzazione reale»." }
+   ]
+  }
+ },
+ {
+  "id": "37001_m01_s020",
+  "layout": "tabella",
+  "kicker": "Riuso dalla ISO 19011",
+  "titolo": "Non riparti da zero",
+  "intro": "Entrando nella ISO 37001 non abbandoni ciò che sai sul metodo della verifica. Se hai familiarità con la ISO 19011 possiedi una base preziosa: il metodo resta stabile, cambia il contenuto specifico da osservare e la sensibilità richiesta.",
+  "cols": ["Dalla ISO 19011", "Nel contesto della 37001"],
+  "righe": [
+   ["I principi", "Integrità, presentazione imparziale, dovuta cura, riservatezza, indipendenza, approccio basato sull'evidenza. Qui diventano ancora più delicati, perché è alto il rischio di farsi trascinare da impressioni morali o sospetti non provati."],
+   ["La catena del ragionamento", "Il collegamento tra criteri, evidenze, risultanze e conclusioni resta fondamentale. Devi sempre spiegare rispetto a quale criterio ragioni e quali evidenze sostengono la lettura: ogni parola mal sostenuta diventa fragile."],
+   ["La pianificazione", "Pensare per obiettivi, portata, tempi, responsabilità, campionamento e competenze del gruppo. Lo applichi a processi particolari: omaggi, ospitalità, parti terze, autorizzazioni, spese, consulenze, conflitti di interessi."],
+   ["Le interviste", "Domande aperte, ascolto, richiesta di esempi, verifica delle coerenze. Aggiungi sensibilità alle zone grigie e alle risposte formalmente corrette ma sostanzialmente evasive, comuni quando il tema tocca vantaggi indebiti."]
+  ]
+ },
+ {
+  "id": "37001_m01_s021",
+  "layout": "flusso",
+  "kicker": "Il metodo del corso",
+  "titolo": "Come lavorerai da qui in avanti",
+  "intro": "Fissa bene il metodo, il tuo vero acceleratore: non accumulerai parole, costruirai una postura professionale. E per ogni descrizione organizzativa allena tre domande — quale rischio si governa, quale controllo risponde, come capisco se funziona davvero.",
+  "passi": [
+   { "h": "Chiarisci il problema", "d": "Quale rischio l'organizzazione deve governare. È il passo che toglie la norma dal piano astratto e la porta dentro processi veri, con leve, fragilità e segnali osservabili." },
+   { "h": "Identifica perimetro e attività esposte", "d": "Dove il rischio si concentra davvero: sviluppo commerciale, parti terze, autorizzazioni, spese, donazioni, conflitti di interessi." },
+   { "h": "Osserva le scelte organizzative", "d": "Quali controlli e decisioni sono stati adottati per rispondere a quel rischio, oltre le dichiarazioni di principio scritte in una policy." },
+   { "h": "Verifica se sono vive", "d": "Quelle scelte sono solo dichiarate o effettivamente presenti nei processi quotidiani? Confronta regola scritta, attuazione pratica e cultura, e leggi lo scarto tra i tre piani." }
+  ]
+ },
+ {
+  "id": "37001_m01_s022",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 1",
+  "modNum": "1",
+  "titolo": "La bussola che porti nel modulo",
+  "punti": [
+   { "h": "Vedere bene il problema", "d": "La corruzione non è solo la tangente in contanti: diretta o indiretta, economica o non economica, interna o mediata da parti esterne, a favore oppure contro l'organizzazione." },
+   { "h": "Come nasce il rischio", "d": "Dentro discrezionalità non bilanciata, urgenze che divorano le regole, eccezioni normalizzate e intermediazioni opache. Il fenomeno cresce spesso dentro processi apparentemente normali." },
+   { "h": "I costi, dentro e fuori", "d": "Denaro, reputazione, tempo manageriale, qualità delle decisioni, clima interno; e fuori — mercati distorti, servizi peggiori, istituzioni meno credibili, sviluppo frenato." },
+   { "h": "Il panorama e il ruolo della norma", "d": "Convenzioni, leggi e modelli organizzativi; la ISO 37001 come struttura specializzata e integrabile, che si applica solo alla corruzione — e proprio questa delimitazione le dà forza." },
+   { "h": "La certificazione, letta con onestà", "d": "Rende visibile un sistema valutato entro un perimetro, con giudizio su evidenze; non garantisce purezza assoluta, immunità legale o bontà automatica di ogni comportamento individuale." },
+   { "h": "Il tuo percorso e il metodo", "d": "Distingui contribuire e condurre; riusi principi e disciplina dalla ISO 19011, aggiungendo sensibilità a parti terze, conflitti e cultura. Il modulo ti ha dato una bussola, non ancora tutta la carta." }
+  ],
+  "prossimo": {
+   "modulo": "2",
+   "titolo": "La norma 37001: struttura, concetti, termini",
+   "testo": "Agganciare la mappa costruita oggi all'architettura della norma, in modo preciso e ordinato per il resto del percorso."
+  }
+ }
+]
