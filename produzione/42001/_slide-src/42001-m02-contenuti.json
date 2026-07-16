@@ -1,0 +1,397 @@
+[
+ {
+  "id": "42001_m02_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 42001 — Sistemi di gestione dell'IA",
+  "kicker": "Modulo 2",
+  "eyebrow": "Capire l'IA senza mitizzarla",
+  "titolo": "Il livello tecnico che ti serve davvero",
+  "testo": "Non devi diventare sviluppatore, matematico o data scientist: ti serve molto meno, ma bene. Un lessico chiaro, qualche immagine mentale corretta, e la capacità di distinguere ciò che è normale da ciò che merita una domanda in più. Se capisci come nasce un sistema di IA, come usa i dati, come cambia nel tempo e dove tende a sbagliare, poni domande pertinenti anche senza aprire un quaderno di formule. Partiamo da una distinzione: non tutto il software che sembra intelligente usa davvero apprendimento automatico. Poi entrerai nel ciclo di vita — addestramento, validazione, prova — e nelle cinque proprietà guida: accuratezza, robustezza, equità, spiegabilità, supervisione umana, lette come domande pratiche, non come slogan. Infine guarderai dove l'IA sbaglia (bias, deriva, usi impropri) e la filiera: uno sviluppa, un altro integra, un altro usa, e spesso nessuno possiede l'intera catena.",
+  "agenda": [
+   "Dal software tradizionale all'apprendimento automatico",
+   "Dati, modello e ciclo di vita",
+   "Le cinque proprietà che contano",
+   "Dove l'IA sbaglia: bias, deriva, usi impropri",
+   "La filiera: sviluppatore, fornitore, utilizzatore",
+   "Il lessico minimo per leggerla"
+  ]
+ },
+ {
+  "id": "42001_m02_s002",
+  "layout": "confronto",
+  "kicker": "Fondamenta · 1",
+  "titolo": "Software tradizionale o apprendimento automatico",
+  "intro": "Per capire l'IA con i piedi per terra, parti da ciò che già conosci. La differenza è semplice da dire e importantissima da verificare: cambia il tipo di problema che devi cercare e le domande da porre. La domanda utile: dove si trova la fonte principale del comportamento del sistema?",
+  "a": {
+   "h": "Software tradizionale",
+   "sub": "Regole scritte a monte",
+   "punti": [
+    { "d": "Una persona stabilisce le regole, il programma le applica; per cambiare il comportamento cambi il codice. Se il ritardo supera una soglia, applica la formula. Se la regola è sbagliata, correggi la regola; se manca un caso, aggiungi un caso." },
+    { "d": "Il problema tipico è una regola sbagliata o incompleta. Chiedi soprattutto quali regole sono state codificate." }
+   ]
+  },
+  "b": {
+   "h": "Apprendimento automatico",
+   "sub": "Comportamento appreso dai dati",
+   "punti": [
+    { "d": "Invece di scrivere ogni regola, fornisci esempi e il sistema costruisce un modello che coglie regolarità ricorrenti. Non una lista trasparente di regole umane, ma un meccanismo statistico che ha imparato dal passato." },
+    { "d": "Il problema può stare nei dati, nell'obiettivo scelto, nell'addestramento, o nel fatto che il contesto reale non assomiglia più a quello da cui il sistema ha imparato. Non basta chiedere se funziona: devi capire come ha appreso a funzionare." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m02_s003",
+  "layout": "punti",
+  "kicker": "Fondamenta · 2",
+  "titolo": "Un sistema di IA non è solo il modello",
+  "intro": "Il modello è il cuore che trasforma i dati in una previsione, ma fermarsi lì è vedere un solo pezzo. Un sistema di IA è un insieme socio-tecnico: obiettivo d'uso, dati, modello, codice, interfacce, infrastruttura, persone che supervisionano, controlli e processi organizzativi. Se manca un elemento, il sistema può diventare fragile anche col modello migliore.",
+  "punti": [
+   { "h": "Le criticità nascono attorno", "d": "Dati caricati male, soglie impostate male, personale non formato, uso fuori scopo, assenza di escalation: ognuno può creare danni anche se l'algoritmo, preso da solo, è ben costruito. Un selezionatore che tratta il punteggio come verità assoluta è un problema di sistema d'uso, non di modello." },
+   { "h": "La prima domanda sensata", "d": "Non «quale algoritmo», ma per quale compito, con quali dati, dentro quale processo, con quali utenti, con quali limiti e con quale supervisione. Le risposte più utili arrivano proprio qui." },
+   { "h": "Ragiona per catena", "d": "Molti sistemi sono assemblati da componenti diversi — modello da un fornitore, dati da un'altra piattaforma, interfaccia interna, infrastruttura esterna. Ogni componente introduce ipotesi e limiti; un'anomalia finale può avere origine molto lontana dal punto in cui diventa visibile." },
+   { "h": "L'immagine del navigatore", "d": "L'algoritmo del percorso è centrale, ma il risultato dipende anche da mappe aggiornate, segnale, preferenze impostate e capacità del guidatore di capire quando seguire o non seguire il suggerimento." }
+  ]
+ },
+ {
+  "id": "42001_m02_s004",
+  "layout": "confronto",
+  "kicker": "Fondamenta · 3",
+  "titolo": "Che cosa fa l'IA, e quando non serve",
+  "intro": "L'IA è utile quando il compito richiede riconoscere pattern complessi, stimare da esempi, ordinare, generare o segnalare anomalie difficili da descrivere con poche regole. Ma a volte viene scelta per moda, non per necessità. Traduci sempre «usiamo l'IA» in un verbo concreto — classificare, prevedere, raccomandare, generare, rilevare — e chiediti se serve davvero un modello appreso.",
+  "a": {
+   "h": "Quando aggiunge valore",
+   "sub": "Segnali deboli e variabili",
+   "punti": [
+    { "d": "Controllo qualità visivo con difetti che cambiano forma; previsione della domanda che combina stagionalità, promozioni, meteo, storico. Il comportamento migliore non è facile da scrivere riga per riga in anticipo." },
+    { "d": "Prevedere quali ordini rischiano ritardi combinando traffico, capacità dei vettori, meteo, storico: il sistema deve combinare molti segnali deboli e variabili nel tempo." }
+   ]
+  },
+  "b": {
+   "h": "Quando basta una regola",
+   "sub": "Complessità gratuita",
+   "punti": [
+    { "d": "Processo stabile, poche regole, esiti descrivibili, errori costosi: una soluzione tradizionale è più semplice da controllare, spiegare e mantenere. Mettere un modello dove basta una regola non è innovazione." },
+    { "d": "Un sistema può supportare una decisione ed essere inadatto a prenderla da solo: segnalare fatture anomale aiuta l'addetto; bloccare pagamenti senza revisione è un'altra cosa. Valuta la proporzione tra capacità dello strumento e peso della decisione." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m02_s005",
+  "layout": "flusso",
+  "kicker": "Fondamenta · 4",
+  "titolo": "Il sistema di IA come percorso nel tempo",
+  "intro": "L'IA non è un oggetto fermo: è un percorso che va compreso lungo il suo ciclo di vita. Molti problemi non esistono all'inizio e compaiono dopo. Non guardare la fotografia del collaudo — ragiona come osservando un film.",
+  "passi": [
+   { "h": "L'obiettivo iniziale", "d": "Quale problema, per chi, con quale beneficio e quali limiti. Un sistema che aiuta a classificare pratiche non è la stessa cosa di uno che decide l'esito in autonomia." },
+   { "h": "Costruzione e prova", "d": "Scelta dei dati, addestramento, verifiche in ambiente controllato. Se tutto sembra promettente, il sistema entra in uso — ma è lì che iniziano le domande nuove." },
+   { "h": "L'uso reale", "d": "Gli operatori seguono i suggerimenti o li ignorano? Alcune categorie vengono instradate male? I dati in ingresso restano simili o stanno cambiando? Il monitoraggio è il modo con cui ti accorgi che il mondo si è mosso." },
+   { "h": "Aggiornamento o ritiro", "d": "Alcuni sistemi mutano dopo il rilascio: chi autorizza il cambiamento, come si verifica, con quali limiti. E il ritiro fa parte del ciclo: non un fallimento, ma una decisione di governo quando la soluzione non è più affidabile o pertinente." }
+  ]
+ },
+ {
+  "id": "42001_m02_s006",
+  "layout": "definizione",
+  "kicker": "Dati e modello · 1",
+  "eyebrow": "I due mattoni da capire per primi",
+  "titolo": "Che cosa sono davvero dati e modello",
+  "definizione": "I dati sono le tracce del mondo che il sistema usa per imparare o operare: una rappresentazione sempre parziale, con lacune. Il modello è il meccanismo che le trasforma in un risultato utile — una stima, una categoria, una priorità: una funzione appresa che condensa regolarità osservate in molti esempi, non una formula scritta a mano.",
+  "punti": [
+   "Questa relazione non è mai neutra: se le tracce sono distorte o incomplete, il modello apprende regolarità sbagliate o fragili. «Prestazioni straordinarie» → la domanda è sempre anche: su quali dati?",
+   "Un modello per stimare i ritardi addestrato quasi solo su tratte urbane può apparire convincente in generale e restare debole proprio dove l'azienda sta crescendo. Non un dettaglio tecnico, ma il centro del problema.",
+   "Distingui dati per imparare e dati d'uso: se in produzione arrivano informazioni diverse da quelle viste in addestramento, il comportamento degrada. Un modello addestrato su descrizioni lunghe va in crisi su messaggi brevissimi.",
+   "Ricostruisci la catena: quali dati rappresentano il fenomeno, quanto i dati di costruzione sono allineati a quelli d'uso, chi controlla che restino coerenti nel tempo."
+  ]
+ },
+ {
+  "id": "42001_m02_s007",
+  "layout": "cards",
+  "kicker": "Dati e modello · 2",
+  "titolo": "Addestramento, validazione e prova",
+  "intro": "Tre parole vicine, non sinonimi. Da questa separazione dipende una parte importante della credibilità tecnica: se usi gli stessi dati per costruire e per dichiarare eccellente il modello, misuri quanto ricorda ciò che ha già visto, non quanto saprà comportarsi su casi nuovi.",
+  "cards": [
+   { "h": "Addestramento", "d": "Il modello osserva esempi passati e adatta i propri parametri per ridurre l'errore rispetto all'obiettivo. Molte immagini già classificate, o casi con caratteristiche e risultato osservato. In questa fase il modello «studia»." },
+   { "h": "Validazione", "d": "Serve a decidere sul processo di costruzione: confrontare varianti, regolare impostazioni, capire quando fermarsi. Se il modello migliora sui dati già visti ma peggiora in validazione, sta imparando troppo il passato specifico e poco il fenomeno generale." },
+   { "h": "Prova", "d": "Idealmente resta fuori dalle scelte fino alla fine, per una stima più onesta sul comportamento coi casi nuovi. Se arriva solo dopo molti aggiustamenti guidati dal risultato, la sua credibilità si indebolisce." },
+   { "h": "Il rischio leakage", "d": "Fuga di informazione: dati che dovrebbero restare separati si contaminano — lo stesso cliente in gruppi diversi con casi quasi identici, o una variabile che contiene già la risposta. Il modello appare più intelligente di quanto sia." }
+  ]
+ },
+ {
+  "id": "42001_m02_s008",
+  "layout": "punti",
+  "kicker": "Dati e modello · 3",
+  "titolo": "Che cosa succede durante l'addestramento",
+  "intro": "L'idea di fondo è semplice: il sistema confronta le proprie risposte con quelle attese e modifica i parametri per ridurre l'errore, ripetendo molte volte. Prova, sbaglia, corregge, riprova — ma non «capisce» il significato come una persona: trova segnali statisticamente utili per quello specifico compito.",
+  "punti": [
+   { "h": "Molte decisioni umane", "d": "Quali variabili includere, quale obiettivo ottimizzare, quanto punire un tipo di errore, quando fermarsi, quale architettura. «Il modello ha deciso da solo» è una semplificazione fuorviante: dietro ci sono scelte di progetto che delimitano ciò che può imparare." },
+   { "h": "Il sovradattamento (overfitting)", "d": "Il modello impara troppo bene i dettagli specifici — rumori, eccezioni non generalizzabili. Come uno studente che memorizza le soluzioni di ieri senza capire la materia: sul passato eccellente, sul nuovo inciampa. Per questo la validazione è così importante." },
+   { "h": "Imparare la cosa sbagliata", "d": "Se le foto dei pezzi difettosi hanno tutte una luce diversa, il modello può imparare a riconoscere la luce, non il difetto: preciso in addestramento, peggiora di colpo in produzione con illuminazione normale." },
+   { "h": "Complessità non è qualità", "d": "Un modello complesso cattura pattern fini ma rischia più fragilità; uno più semplice è meno performante in laboratorio ma più stabile. Non una regola universale: una scelta coerente con scopo, dati e rischio accettabile." }
+  ]
+ },
+ {
+  "id": "42001_m02_s009",
+  "layout": "split",
+  "kicker": "Dati e modello · 4",
+  "titolo": "Validare e provare bene",
+  "lead": "Validare e provare bene non è solo calcolare un numero finale: è chiedersi se i dati usati per la verifica rappresentano davvero il mondo in cui il sistema verrà impiegato. Con una risposta superficiale ottieni risultati brillanti e scopri troppo tardi che il sistema funziona solo in condizioni favorevoli.",
+  "punti": [
+   { "h": "Qualità dei dati", "d": "Dati completi, coerenti, pertinenti, aggiornati aiutano a stimare il comportamento reale; duplicati, mal etichettati o vecchi alterano la percezione. Un test finale con quasi solo tratte brevi non misura il mondo reale, ma una sua porzione comoda." },
+   { "h": "Rappresentatività", "d": "I dati di validazione e prova dovrebbero assomigliare alle situazioni reali — varietà dei casi, differenze geografiche, stagionalità, canali. Se il sistema sarà usato in più sedi ma è stato verificato quasi solo su una, la fiducia è più debole di quanto sembri." },
+   { "h": "Il bias", "d": "Una distorsione sistematica, non un errore casuale: un'inclinazione ripetuta che nasce da dati, etichette, scelte di progetto o uso. Se un reclamo è stato classificato non urgente per abitudine, il modello riproduce quell'abitudine con grande coerenza." },
+   { "h": "Serve giudizio", "d": "Chiediti se il confronto finale premia la capacità di generalizzare o la fortuna di vedere casi semplici; se alcuni gruppi sono trattati peggio e se le differenze sono spiegabili. Il passato non è sempre un buon maestro." }
+  ]
+ },
+ {
+  "id": "42001_m02_s010",
+  "layout": "timeline",
+  "kicker": "Dati e modello · 5",
+  "titolo": "Il ciclo di vita in pratica",
+  "intro": "Seguendo un progetto reale dall'inizio alla fine. Ogni fase lascia tracce, decisioni, responsabilità e possibili criticità — e prepara le domande della successiva. È così che distingui un progetto ben governato da uno lasciato crescere per inerzia.",
+  "tappe": [
+   { "t": "01", "h": "Scopo", "d": "Quale problema, per chi, con quale beneficio e limiti. Se lo scopo è vago, tutto il resto diventa ambiguo." },
+   { "t": "02", "h": "Dati", "d": "Quali fonti, quanto pertinenti, quali lacune, come pulite. Qui, molto prima dell'algoritmo, nascono qualità, distorsioni e difficoltà di spiegabilità." },
+   { "t": "03", "h": "Modello", "d": "Addestramento, validazione per confrontare alternative, prova finale su casi separati. Ma un buon risultato iniziale non chiude il ciclo." },
+   { "t": "04", "h": "Rilascio", "d": "Dove funziona bene e meno bene, quali casi deviare a una persona, come non creare fiducia eccessiva." },
+   { "t": "05", "h": "Monitoraggio", "d": "I dati reali possono differire, gli utenti usano lo strumento in modi inattesi, gli indicatori peggiorano. Il monitoraggio non è un lusso." },
+   { "t": "06", "h": "Aggiornamento o ritiro", "d": "Ritoccare soglie, raccogliere nuovi dati e riaddestrare, o sospendere se i rischi superano i benefici. Anche il ritiro è governo, non fallimento." }
+  ]
+ },
+ {
+  "id": "42001_m02_s011",
+  "layout": "split",
+  "kicker": "Proprietà · 1",
+  "titolo": "Accuratezza: utile, ma legata allo scopo",
+  "lead": "Sembra la parola più intuitiva, e proprio per questo inganna: se non la leghi allo scopo d'uso, diventa un numero affascinante e poco utile. «Accurato» rispetto a che cosa, su quali dati, in quali condizioni, con quali conseguenze degli errori? E non tutti gli errori pesano allo stesso modo.",
+  "punti": [
+   { "h": "Il tipo di errore conta", "d": "In alcuni contesti è più grave segnalare troppi casi come critici; in altri perderne anche pochi. Un falso allarme crea lavoro extra; un caso urgente non rilevato produce ritardi, danni contrattuali, insoddisfazione forte." },
+   { "h": "La media nasconde", "d": "Se un'organizzazione mostra un solo indicatore finale, semplifica troppo. Un modello «corretto quasi sempre» può funzionare bene sulle tratte ordinarie e peggiorare proprio sulle rotte nuove, quelle strategicamente più importanti." },
+   { "h": "Prova non è utilità", "d": "L'accuratezza in prova non coincide con l'utilità in uso: un modello discreto può stare in un processo poco adatto, con soglia scelta male o operatori che non sanno quando ignorare il suggerimento." },
+   { "h": "Trasforma in domande", "d": "Qual era l'obiettivo operativo, quale errore era tollerabile, su quali insiemi è stato misurato, i casi difficili erano rappresentati, l'uso reale assomiglia alla valutazione? E migliora davvero il processo precedente, o cambia solo il tipo di errore?" }
+  ]
+ },
+ {
+  "id": "42001_m02_s012",
+  "layout": "punti",
+  "kicker": "Proprietà · 2",
+  "titolo": "Robustezza: reggere alle variazioni reali",
+  "intro": "Se l'accuratezza dice quanto spesso il sistema arriva vicino al risultato, la robustezza dice se quel risultato resta stabile quando il mondo smette di essere perfetto. I sistemi raramente operano in condizioni ordinate come in laboratorio: cambiano dati, utenti, canali, abitudini linguistiche.",
+  "punti": [
+   { "h": "Non infallibile, ragionevole", "d": "Un sistema robusto continua a comportarsi in modo ragionevole con variazioni plausibili, rumore, input incompleti. Se basta una differenza minima per farlo peggiorare nettamente, sei davanti a una fragilità che diventa critica appena entra in uso." },
+   { "h": "Le condizioni reali d'uso", "d": "Addestrato su testi ben scritti, in produzione riceve messaggi da telefono con abbreviazioni ed errori. O il controllo visivo che regge con luce costante e sballa con una lieve variazione. Chiediti se è buono nelle condizioni in cui verrà davvero usato." },
+   { "h": "Degradare in modo controllato", "d": "Con campi non compilati o sensori sporchi, un sistema maturo segnala incertezza, chiede intervento o limita l'uso del risultato; uno immaturo continua a produrre risposte sicure su basi deboli — un rischio nascosto." },
+   { "h": "Legame con la fiducia", "d": "Se alterna risultati molto buoni a comportamenti imprevedibili, le persone lo ignorano o lo usano solo quando conferma le loro aspettative. Un sistema stabile, anche non perfetto, è spesso più utile di uno brillante sulla carta ma capriccioso." }
+  ]
+ },
+ {
+  "id": "42001_m02_s013",
+  "layout": "cards",
+  "kicker": "Proprietà · 3",
+  "titolo": "Equità: niente squilibri sistematici",
+  "intro": "Non cerchi una perfezione morale astratta, ma una cosa concreta: se il sistema tratta casi simili in modo coerente, o produce svantaggi sistematici per alcune categorie, sedi, prodotti. Gli squilibri raramente sono errori vistosi — si nascondono in una regolarità che sembra normale.",
+  "cards": [
+   { "h": "Peggio su un sottoinsieme", "d": "Un sistema accurato nel complesso può funzionare peggio su un sottoinsieme rilevante. Se lavora bene sul linguaggio standard e peggiora su testi più semplici o frammentati, colpisce gruppi specifici senza dichiararlo." },
+   { "h": "Automatizza il passato", "d": "Se lo storico rifletteva disuguaglianze o priorità discutibili, il modello le apprende e riproduce con efficienza. L'IA non inventa un'ingiustizia nuova: spesso rende stabile o amplifica una distorsione che esisteva già, ma restava dispersa." },
+   { "h": "I proxy", "d": "Indicatori indiretti apparentemente neutri — codice di area, tipo di contratto, orario, canale — che diventano scorciatoie statistiche e penalizzano sempre gli stessi profili. Chiediti se questi effetti siano stati cercati, capiti e governati." },
+   { "h": "Modello e processo", "d": "Non trattare tutti allo stesso modo, ma verificare se le differenze sono giustificate dallo scopo. Un punteggio neutro può essere usato con soglie diverse tra reparti: lo squilibrio nasce nel sistema complessivo, non solo nell'algoritmo. Guarda dove riesce peggio, e chi colpisce." }
+  ]
+ },
+ {
+  "id": "42001_m02_s014",
+  "layout": "punti",
+  "kicker": "Proprietà · 4",
+  "titolo": "Spiegabilità: capire abbastanza per governare",
+  "intro": "La norma richiama trasparenza e spiegabilità come caratteristica specifica dell'IA. Ma il punto non è rendere ogni modello leggibile in ogni dettaglio: spiegabilità significa poter capire abbastanza da usare il sistema con senso, valutarne i limiti, giustificare le decisioni e riconoscere quando non fidarsi troppo.",
+  "punti": [
+   { "h": "Non tutta la matematica", "d": "Conta sapere quale compito svolge, quali dati usa, quali fattori pesano di più, in quali condizioni tende a sbagliare, quali controlli scattano quando l'esito è dubbio. Se mancano, l'IA è opaca operativamente, non solo tecnicamente." },
+   { "h": "Spiegazioni per pubblici diversi", "d": "Il team tecnico deve capire come migliorare, il responsabile se è adatto allo scopo, l'utente come interpretare il suggerimento, la direzione i limiti e i rischi. Più realistico parlare di spiegazioni diverse, adatte alle decisioni di ciascun ruolo." },
+   { "h": "Legame con gli errori", "d": "Quando il sistema sbaglia, l'organizzazione deve poter indagare il motivo — dati, modello, soglia o uso. Un certo grado di spiegabilità serve lungo tutto il ciclo di vita, perché rende possibile apprendere dagli incidenti." },
+   { "h": "Attento all'illusione", "d": "Una spiegazione troppo semplice crea un'illusione di comprensione: «guarda soprattutto alcune variabili» è utile, ma non basta per concludere che il comportamento sia giusto, stabile o equo. La spiegabilità completa l'analisi delle prestazioni, non la sostituisce." }
+  ]
+ },
+ {
+  "id": "42001_m02_s015",
+  "layout": "numeri",
+  "kicker": "Proprietà · 5",
+  "titolo": "Supervisione umana: reale, non simbolica",
+  "intro": "Se il sistema è accurato, robusto, equilibrato e spiegabile, basta? No. La supervisione non è la presenza di una persona accanto allo schermo: è la capacità concreta di comprendere il contesto, contestare un risultato, deviare il processo, assumersi la responsabilità di una scelta diversa. «È solo di supporto» da sola non prova nulla — serve che quattro condizioni siano davvero presenti.",
+  "numeri": [
+   { "n": "1", "h": "Capire il sistema", "d": "La persona deve capire che cosa fa il sistema e con quali limiti. Senza questo, il supporto si trasforma di fatto in decisione automatica." },
+   { "n": "2", "h": "Riconoscere il dubbio", "d": "Deve avere segnali sufficienti per riconoscere un esito dubbio. Un semaforo rosso senza fattori né documentazione rende l'intervento una firma meccanica." },
+   { "n": "3", "h": "Poter intervenire", "d": "Deve poter agire senza ostacoli irragionevoli: chi gestisce centinaia di casi al giorno e riceve solo il punteggio confermerà quasi sempre, non per convinzione ma perché il processo rende difficile fare altro." },
+   { "n": "4", "h": "Intervento legittimo", "d": "L'organizzazione deve considerare legittimo discostarsi, non punire implicitamente chi lo fa. E le decisioni divergenti vanno analizzate come apprendimento, non trattate come intralcio — soprattutto quando il sistema apprende o viene aggiornato." }
+  ]
+ },
+ {
+  "id": "42001_m02_s016",
+  "layout": "split",
+  "kicker": "Proprietà · 6",
+  "titolo": "Le proprietà insieme: equilibrio e compromessi",
+  "lead": "Cinque parole guida, ma non caselle indipendenti: funzionano come un sistema di equilibrio. Migliorare una può aiutare le altre o creare tensioni da governare. Il problema nasce solo quando le tensioni non vengono rese visibili. La domanda utile non è «il sistema è buono», ma: per lo scopo dichiarato, le proprietà rilevanti sono state definite, pesate e governate in modo coerente?",
+  "punti": [
+   { "h": "Le tensioni tipiche", "d": "Un modello complesso può aumentare l'accuratezza ma ridurre la spiegabilità; soglie prudenti riducono i casi critici persi ma aumentano i falsi allarmi; più supervisione protegge i casi delicati ma rallenta un processo nato per accelerare." },
+   { "h": "Il peso dipende dallo scopo", "d": "In un sistema a basso impatto può bastare privilegiare efficienza e stabilità; in uno che orienta decisioni forti su persone o servizi critici, molto più valore a robustezza, equità, spiegabilità e supervisione, anche a costo di meno automazione." },
+   { "h": "Sul sistema intero", "d": "Un algoritmo spiegabile con un'interfaccia che nasconde le informazioni; un modello robusto con una fonte dati rumorosa; una supervisione formale svuotata dai tempi. Guardare solo il motore porta a valutazioni troppo ottimistiche." },
+   { "h": "Leggere le metriche", "d": "Un valore medio può nascondere forti differenze tra gruppi; un buon risultato iniziale non dice nulla sulla robustezza nel tempo; tre fattori visibili non bastano per decisioni delicate. La metrica va sempre letta alla luce del contesto operativo." }
+  ]
+ },
+ {
+  "id": "42001_m02_s017",
+  "layout": "numeri",
+  "kicker": "Proprietà · 7",
+  "titolo": "Dal lessico alle domande pratiche",
+  "intro": "Trasforma le cinque parole in lenti di osservazione. Cinque domande che, con poche informazioni, ti fanno vedere rapidamente dove un progetto è solido e dove nasconde criticità — senza entrare nella matematica profonda né farti catturare dalle promesse commerciali.",
+  "numeri": [
+   { "n": "1", "h": "L'obiettivo", "d": "Che decisione o attività supporta, e quanto pesa nel processo reale. Se il compito orienta interventi critici, pagamenti o accesso a servizi, il livello di attenzione si alza. Ordina già tutte le altre domande." },
+   { "n": "2", "h": "I dati", "d": "Da dove arrivano, quanto rappresentano il contesto, quanto restano coerenti nel tempo. Dati di prova troppo comodi svuotano l'accuratezza; storici distorti rendono l'equità sospetta." },
+   { "n": "3", "h": "Il comportamento nell'incertezza", "d": "Sa segnalare che il caso è dubbio, limitarsi, deviare a una persona? O produce sempre una risposta sicura anche con input scarsi? Collega robustezza, spiegabilità e supervisione in un punto." },
+   { "n": "4", "h": "Gli errori", "d": "Quali sono considerati più gravi, e come vengono osservati nel tempo. Chi conosce il proprio sistema sa dire dove e come fallisce, non solo quanto funziona." },
+   { "n": "5", "h": "Il ruolo umano", "d": "Chi può contestare il risultato, con quali informazioni, in quali tempi, con quali effetti. Se la risposta è vaga, la supervisione è nominale — l'uso quotidiano crea automatismi forti." }
+  ]
+ },
+ {
+  "id": "42001_m02_s018",
+  "layout": "cards",
+  "kicker": "Dove sbaglia · 1",
+  "titolo": "Bias nei dati: come una distorsione si stabilizza",
+  "intro": "Il primo terreno da esplorare sono i dati, perché portano dentro il passato da cui il sistema apprende. Se quel passato è incompleto, sbilanciato o segnato da abitudini discutibili, il modello trasforma la distorsione in comportamento regolare. Il bias non si corregge solo con più dati.",
+  "cards": [
+   { "h": "Da molti punti della catena", "d": "Dati raccolti solo in certi contesti, etichette con criteri incoerenti, variabili apparentemente neutre, o ciò che manca — categorie poco rappresentate. Il modello non impara il fenomeno intero, impara una sua versione inclinata." },
+   { "h": "Il bias storico che si fissa", "d": "Se alcuni clienti hanno avuto risposta lenta perché descrivevano male il guasto o chiamavano fuori orario, e queste decisioni diventano etichette, il modello impara che quel tipo di messaggio «vale meno». Il bias storico entra e si stabilizza." },
+   { "h": "Rappresentazione parziale", "d": "Addestrato su ticket di sedi grandi con descrizioni dettagliate, poi esteso a sedi piccole con messaggi brevi: le prestazioni peggiorano. Non un'intenzione scorretta, ma il mondo reale più ampio dei dati usati." },
+   { "h": "Dove si concentrano gli errori", "d": "Non conta solo quanti errori, ma dove si concentrano e chi colpiscono. Un modello che sottostima i casi periferici perché lo storico ne conteneva pochi, chiusi tardi per carenza di squadra locale, ha appreso quella distorsione come normalità." }
+  ]
+ },
+ {
+  "id": "42001_m02_s019",
+  "layout": "punti",
+  "kicker": "Dove sbaglia · 2",
+  "titolo": "Deriva dei modelli: il mondo cambia",
+  "intro": "Un sistema può nascere bene e peggiorare senza che nessuno tocchi il modello, perché il contesto operativo cambia — clienti, prodotti, testi, canali, abitudini. Quando il presente si allontana dal passato su cui il sistema è stato costruito, parliamo di deriva. Uno dei rischi più tipici del ciclo di vita.",
+  "punti": [
+   { "h": "Forme diverse", "d": "A volte cambiano i dati in ingresso pur restando uguale il compito — messaggi più brevi, immagini di qualità diversa. Altre volte cambia la relazione tra segnali e risultato: ciò che indicava urgenza oggi non la indica più. Il modello continua come se il mondo fosse fermo." },
+   { "h": "Deterioramento graduale", "d": "Raramente un guasto netto: piccoli segnali, qualche eccezione in più, operatori che si fidano meno, aumento delle correzioni manuali, proteste da una sede. Con indicatori troppo generali non te ne accorgi subito — il monitoraggio non è burocrazia." },
+   { "h": "Diagnosi, non solo reazione", "d": "Non sempre la soluzione è riaddestrare: a volte è una sorgente dati mal configurata, un cambio di processo che altera le etichette, una soglia diventata inadatta. Aggiornare senza capire il degrado può peggiorare la situazione." },
+   { "h": "I segnali concreti", "d": "Crescono le correzioni manuali, alcune sedi si lamentano di più, certi gruppi di casi peggiorano senza motivo, gli utenti usano scorciatoie per aggirare il sistema. È il processo che ti dice che il presente non assomiglia più al passato." }
+  ]
+ },
+ {
+  "id": "42001_m02_s020",
+  "layout": "cards",
+  "kicker": "Dove sbaglia · 3",
+  "titolo": "Usi impropri: non il modello, ma come lo usi",
+  "intro": "Molte criticità emergono perché uno strumento viene usato oltre lo scopo per cui era pensato, validato o compreso. Un modello tecnicamente decoroso diventa rischioso se l'organizzazione gli attribuisce un ruolo eccessivo, lo sposta in un contesto nuovo o lo trasforma da supporto a sostituto del giudizio.",
+  "cards": [
+   { "h": "Estensione silenziosa dello scopo", "d": "Nato per ordinare o segnalare, viene trattato come strumento decisionale: prima suggerisce, poi le persone smettono di controllare, e il suggerimento diventa decisione di fatto senza riprogettare soglie e responsabilità. Graduale, quindi spesso non percepito." },
+   { "h": "Trasferimento a contesto nuovo", "d": "Applicato altrove perché ha funzionato bene una volta: ma se cambiano linguaggio, dati, rischi o priorità, perde affidabilità in fretta. Un buon supporto in un reparto può essere un cattivo consigliere in un altro." },
+   { "h": "Fiducia nella forma", "d": "Punteggi, classifiche e testi fluidi trasmettono un'impressione di precisione superiore al reale — evidente nei sistemi generativi. Un testo ben scritto sembra competente anche con omissioni: se confondi scorrevolezza e affidabilità, superi la soglia in cui la supervisione è efficace." },
+   { "h": "Eccessiva semplificazione", "d": "Un punteggio non sostituisce la conoscenza situazionale — un cliente in fermo attività, un sito già segnalato due volte, un'anomalia minore che anticipa un guasto. Appoggiarsi solo alla macchina fa perdere il sapere contestuale che dà qualità al processo." }
+  ]
+ },
+ {
+  "id": "42001_m02_s021",
+  "layout": "punti",
+  "kicker": "Dove sbaglia · 4",
+  "titolo": "Errori silenziosi: i segnali deboli",
+  "intro": "Molti errori dell'IA non sono incidenti spettacolari: arrivano piano, quasi senza rumore. Il sistema continua a produrre risultati plausibili e indicatori accettabili, mentre sotto la superficie accumula distorsioni, correzioni e sfiducia. I problemi più pericolosi sono quelli che diventano abitudine.",
+  "punti": [
+   { "h": "Assorbiti dalle persone", "d": "Un operatore corregge un ticket, un collega riscrive una risposta troppo generica, un responsabile introduce eccezioni locali. Tutto sembra reggere, ma il processo sta compensando il modello — e questa compensazione nasconde il difetto invece di risolverlo." },
+   { "h": "Scorciatoie operative", "d": "Se le persone imparano che per farsi ascoltare conviene usare certe parole o un certo canale, l'IA smette di leggere la realtà e legge comportamenti adattati alla macchina. Il processo si piega al sistema invece di usarlo come supporto." },
+   { "h": "La combinazione racconta", "d": "Reclami concentrati, aumento delle eccezioni, differenze tra sedi, operatori che «aiuta solo in certe condizioni», responsabili che usano i risultati ma non si fidano. Nessun indizio prova da solo, ma insieme dicono che qualcosa non torna." },
+   { "h": "Anche il silenzio inganna", "d": "A volte gli utenti smettono di correggere non perché il sistema sia migliorato, ma perché non hanno più tempo: non è progresso, è rassegnazione operativa. Un'organizzazione matura guarda quanto lavoro umano serve per correggere, e dove si concentra." }
+  ]
+ },
+ {
+  "id": "42001_m02_s022",
+  "layout": "flusso",
+  "kicker": "Dove sbaglia · 5",
+  "titolo": "Dal sintomo alla causa reale",
+  "intro": "Davanti a un caso anomalo, la tentazione è accusare subito il modello. Ma un risultato sbagliato è solo il punto finale di una catena più lunga. Un buon caso anomalo non va chiuso in fretta: va usato come finestra sul sistema, perché cambia anche il tipo di azione utile.",
+  "passi": [
+   { "h": "Non fermarti al singolo esito", "d": "Un cliente importante riceve risposta tardiva perché la pratica era «ordinaria». Il modello ha sbagliato? Forse il testo era brevissimo, la sede usa descrizioni diverse, l'interfaccia non mostrava l'incertezza, l'operatore aveva troppi casi in coda." },
+   { "h": "Risali la catena", "d": "Dati in ingresso, qualità delle etichette, soglie, interfaccia, istruzioni agli utenti, aggiornamenti non compresi, supervisione debole, uso fuori scopo. Se il problema è una sorgente dati instabile, riaddestrare serve a poco." },
+   { "h": "Usa l'anomalia come finestra", "d": "Chi l'ha notata per primo, in quale punto è diventata visibile, quali dati c'erano, cosa ha fatto la persona, condizioni normali o degradate, segnali simili in passato. Ogni domanda sposta dal singolo errore alla qualità del ciclo di vita." },
+   { "h": "Evita i due errori opposti", "d": "Accusare il modello di tutto anche quando il difetto nasce attorno; o assolvere il sistema come «solo errore umano». I problemi più istruttivi stanno nell'interazione tra tecnologia, dati e processo." }
+  ]
+ },
+ {
+  "id": "42001_m02_s023",
+  "layout": "evidenza",
+  "kicker": "La filiera · 1",
+  "eyebrow": "Una catena, non un soggetto unico",
+  "titolo": "Nessuno controlla tutto, ciascuno controlla qualcosa",
+  "testo": "Un sistema di IA raramente nasce, viene gestito e usato da un solo soggetto. Più spesso esiste una catena: chi sviluppa un modello, chi lo rende disponibile come prodotto o servizio, chi lo integra in un processo, chi lo configura, chi lo usa ogni giorno e chi ne subisce gli effetti. La prima cosa da capire è che distribuzione dei ruoli non significa scomparsa delle responsabilità: ogni attore controlla un pezzo diverso del rischio. Se nessuno chiarisce i confini, il problema tipico è il rimpallo — lo sviluppatore dice che il modello funziona se usato come previsto, il fornitore che la piattaforma è corretta ma l'integrazione non dipende da lui, l'utilizzatore che si è fidato di quanto acquistato. Intanto il sistema reale continua a produrre decisioni e conseguenze. Conviene pensare alla filiera come a una staffetta: chi sviluppa passa capacità e limiti, chi fornisce li trasferisce dentro condizioni di servizio e aggiornamenti, chi integra li inserisce in un contesto concreto, chi utilizza li trasforma in azione quotidiana. Ogni passaggio aggiunge valore, ma può aggiungere fragilità. E le responsabilità non si leggono solo nel contratto: si leggono osservando chi decide davvero — chi sceglie i dati d'esercizio, chi imposta le soglie, chi approva gli aggiornamenti, chi può fermare il sistema. La filiera non spezza la responsabilità: la distribuisce."
+ },
+ {
+  "id": "42001_m02_s024",
+  "layout": "split",
+  "kicker": "La filiera · 2",
+  "titolo": "Sviluppatore e fornitore",
+  "lead": "I primi due anelli, a volte coincidenti. Lo sviluppatore costruisce o adatta il modello e ne governa l'evoluzione; il fornitore lo rende disponibile come prodotto o servizio, gestisce rilascio, supporto, aggiornamenti, documentazione. I limiti possono nascere già in sviluppo ma diventare visibili solo quando il servizio arriva a un utilizzatore concreto. Non consegnano solo funzionalità: consegnano ipotesi, limiti, aggiornamenti e condizioni d'uso.",
+  "punti": [
+   { "h": "Lo sviluppatore", "d": "Non solo un algoritmo: un compito che il modello è pensato per svolgere, assunzioni sui dati, condizioni di prestazione, limiti noti, un modo di aggiornare nel tempo. Se restano impliciti, l'anello successivo parte già svantaggiato." },
+   { "h": "Il fornitore", "d": "Dovrebbe rendere comprensibili cosa il sistema fa bene e meno bene, quali dati si aspetta, quali usi sono previsti, come gestisce gli aggiornamenti, quali dipendenze da componenti terze, quali segnali portano a un uso prudente." },
+   { "h": "Gli aggiornamenti", "d": "Se il fornitore cambia il modello sottostante, l'utilizzatore deve poter capire che cosa cambia per il proprio contesto. Serve chiarezza su una domanda semplice: il comportamento può cambiare, e come ce ne accorgiamo?" },
+   { "h": "Dire dove NON usarlo", "d": "Un segnale di maturità: in quali condizioni i dati sono troppo poveri, in quali contesti il modello è poco verificato, quali output richiedono sempre controllo umano. Non ammissioni di debolezza, ma parte della qualità della fornitura." }
+  ]
+ },
+ {
+  "id": "42001_m02_s025",
+  "layout": "split",
+  "kicker": "La filiera · 3",
+  "titolo": "Integratore e utilizzatore",
+  "lead": "«Se la tecnologia è esterna, la responsabilità è del fornitore»: regge solo in parte. Appena il sistema entra in un processo concreto, integratore e utilizzatore prendono decisioni che incidono sul rischio reale — dati locali, soglie, chi vede il risultato, quando l'operatore può correggere, formazione. Scelte che non si scaricano all'esterno: adottare un sistema di IA non significa affittare anche il giudizio.",
+  "punti": [
+   { "h": "L'integratore", "d": "Traduce il servizio generico in soluzione operativa: collega fonti dati, costruisce flussi, imposta regole, disegna interfacce. Un modello buono diventa poco utile con un'interfaccia opaca; un servizio robusto si indebolisce con dati incompleti; una supervisione prevista si svuota se intervenire è troppo costoso." },
+   { "h": "L'utilizzatore", "d": "Decide perché il sistema viene introdotto, per quale scopo, con quale fiducia e limiti. Usare un modello di supporto come quasi-decisione, o estenderlo a nuovi casi senza verifiche, è una scelta propria — la responsabilità non sparisce perché il motore è stato acquistato fuori." },
+   { "h": "La formazione resta in casa", "d": "Se gli operatori non capiscono limiti e quando discostarsi, la supervisione è fragile. Può essere supportata dall'esterno, ma resa viva dall'organizzazione: lì si decide se il suggerimento sarà letto con giudizio o seguito per inerzia." },
+   { "h": "Il monitoraggio del contesto", "d": "Il fornitore non vede giorno per giorno come cambiano clienti, prodotti, canali. Deriva e usi impropri emergono a questo livello. Maturità è non nascondersi dietro la provenienza esterna: sapere quali decisioni ha preso in proprio e quali casi tiene fuori dall'automazione." }
+  ]
+ },
+ {
+  "id": "42001_m02_s026",
+  "layout": "cards",
+  "kicker": "La filiera · 4",
+  "titolo": "Confini, dipendenze, passaggi di responsabilità",
+  "intro": "Come capire, in concreto, chi risponde di che cosa quando i ruoli si intrecciano. Non una formula unica, ma leggere confini operativi, dipendenze e punti di passaggio: lì si concentrano molti rischi. Regola pratica: cerca il punto in cui una decisione cambia mano — lì spesso trovi anche il rischio.",
+  "cards": [
+   { "h": "I dati", "d": "Chi li produce, prepara, carica, ne controlla la qualità e vede quando cambiano. Se poco chiaro, il sistema degrada senza che nessuno si senta responsabile: il motore è stabile, il servizio era buono, ma la sorgente locale ha iniziato a inviare informazioni più povere." },
+   { "h": "Gli aggiornamenti", "d": "Chi decide il rilascio, valuta l'impatto, comunica agli utenti, osserva se aumentano correzioni o differenze tra sedi. Se passa come fatto puramente tecnico, il sistema muta comportamento senza che il contesto sia pronto." },
+   { "h": "Incidenti e anomalie", "d": "Chi può segnalarle, a chi arrivano, chi le analizza, chi ha l'autorità di rallentare o fermare il sistema. Senza un punto di raccolta e decisione, piccoli errori diventano problemi persistenti dispersi in conversazioni informali." },
+   { "h": "I contratti non bastano", "d": "Utili per definire servizi, supporto ed escalation, ma non sostituiscono la comprensione del sistema reale. Se nessuno sa leggere la catena dei passaggi, anche un buon assetto formale resta sulla carta." }
+  ]
+ },
+ {
+  "id": "42001_m02_s027",
+  "layout": "tabella",
+  "kicker": "Lessico minimo",
+  "titolo": "Le parole per leggere l'IA",
+  "intro": "L'obiettivo non è ricordare definizioni da manuale, ma riconoscere i concetti giusti in una riunione o in una descrizione di sistema. In una frase: l'IA è un sistema che apprende da dati, agisce dentro un ciclo di vita, manifesta proprietà da governare, sbaglia in modi riconoscibili e opera dentro una filiera di ruoli.",
+  "cols": ["Termine", "Che cosa ti ricorda"],
+  "righe": [
+   ["Dati e modello", "I dati rappresentano il fenomeno in modo parziale; il modello li trasforma in classificazione, stima, raccomandazione. Non guardare mai solo il modello: chiediti quali dati lo hanno costruito e lo alimentano."],
+   ["Apprendimento automatico", "Distingue chi segue regole scritte da chi costruisce il comportamento dagli esempi. Nell'IA cerchi anche addestramento, dati usati, validazione, prova, condizioni d'impiego."],
+   ["Addestramento / validazione / prova", "Imparare dal passato; confrontare alternative e verificare se il miglioramento è reale; misurare in modo onesto sui casi tenuti fuori. Se si confondono, la prestazione apparente supera quella reale."],
+   ["Le cinque proprietà", "Accuratezza (vicino allo scopo), robustezza (regge alle variazioni), equità (per chi funziona), spiegabilità (capire per governare), supervisione umana (controllo effettivo). Lenti, non slogan."],
+   ["Bias / deriva / usi impropri", "Distorsione ereditata; peggioramento quando il mondo cambia; strumento spinto oltre il campo di validità. Riconoscerli in un caso concreto è metà del lavoro concettuale."],
+   ["Ciclo di vita e filiera", "Il sistema non è fermo: nasce, si costruisce, si monitora, si aggiorna, si ritira. E più soggetti partecipano al risultato: sviluppatore, fornitore, integratore, utilizzatore."]
+  ]
+ },
+ {
+  "id": "42001_m02_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 2",
+  "modNum": "2",
+  "titolo": "Ciò che ti porti via, e il passo successivo",
+  "punti": [
+   { "h": "IA non è software qualsiasi", "d": "Dal software a regole ai sistemi che apprendono dagli esempi; e un sistema di IA non coincide mai con il solo modello — comprende dati, persone, processo, interfacce, limiti d'uso e controlli, dentro un ciclo di vita." },
+   { "h": "Dati, modello, tre insiemi", "d": "I dati sono una rappresentazione parziale del mondo; il modello la trasforma. Addestramento, validazione e prova non sono sinonimi: se i confini si sfumano, una buona prestazione apparente racconta meno di quanto prometta." },
+   { "h": "Cinque proprietà come domande", "d": "Accuratezza, robustezza, equità, spiegabilità, supervisione umana: raggiunge lo scopo, regge alle variazioni, tratta casi simili in modo coerente, si lascia capire, e una persona ha davvero margine per intervenire." },
+   { "h": "Dove sbaglia, e la filiera", "d": "Bias, deriva, usi impropri, segnali deboli, errori composti lungo la catena. E la filiera ricorda che il sistema reale è il risultato di più mani: nessuno controlla tutto, ciascuno controlla qualcosa di decisivo." }
+  ],
+  "prossimo": {
+   "modulo": "3",
+   "titolo": "La norma ISO/IEC 42001: struttura e concetti",
+   "testo": "Agganciare il lessico costruito oggi all'architettura della norma, in modo preciso e ordinato per il resto del percorso."
+  }
+ }
+]
