@@ -1,0 +1,397 @@
+[
+ {
+  "id": "37001_m08_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 37001 — Prevenzione della corruzione",
+  "kicker": "Modulo 8",
+  "eyebrow": "Chi controlla il controllore",
+  "titolo": "La valutazione delle prestazioni",
+  "testo": "In questo modulo cambi prospettiva: non stai più progettando il sistema, ma verificando se funziona davvero. Il punto 9 ti porta dentro quattro movimenti collegati — monitoraggio e misurazione, audit interno, riesame di direzione, riesame della funzione di conformità — più un quinto sguardo, utile per te come auditor: come valuti la qualità di questi meccanismi. La parola chiave è prestazione: non significa solo fare attività, ma capire se le attività producono prevenzione, se i controlli sono applicati, se i rischi restano governati e se i segnali deboli vengono colti in tempo. Qui cadono molte organizzazioni: raccolgono numeri ma non li trasformano in giudizi utili, oppure misurano ciò che è facile e non ciò che è rilevante. E la ISO 37001 non ha un solo binario di controllo, ne ha almeno due che devono parlarsi senza confondersi. Non fermarti mai alla presenza di un documento o di una riunione: cerca coerenza tra dati, verifiche, decisioni e vigilanza.",
+  "agenda": [
+   "Monitoraggio e misurazione: indicatori che contano",
+   "L'audit interno: verifica indipendente",
+   "Il riesame di direzione e l'organo direttivo",
+   "La funzione di conformità: vigilanza continua",
+   "Come verificare il capitolo nove sul campo",
+   "Triangolare le fonti e trovare le incoerenze"
+  ]
+ },
+ {
+  "id": "37001_m08_s002",
+  "layout": "punti",
+  "kicker": "Monitoraggio · 1",
+  "titolo": "Scegliere indicatori che contano",
+  "intro": "Nel punto 9.1 la prima scelta non riguarda il software o il cruscotto, ma l'oggetto vero della tua attenzione. La parola utile è rilevanza: non tutto ciò che puoi contare ti aiuta a governare il rischio. Devi selezionare ciò che illumina i punti sensibili.",
+  "punti": [
+   { "h": "Tre piani insieme", "d": "Un indicatore robusto guarda l'applicazione dei controlli, il comportamento del rischio nel tempo, e la capacità del sistema di reagire a un'anomalia. Un solo piano mostra un frammento; i tre insieme danno un quadro credibile." },
+   { "h": "Volume non è efficacia", "d": "Sapere che molte persone hanno seguito la formazione descrive un'attività svolta. Sapere che dopo diminuiscono le richieste improprie o migliorano i fascicoli dei partner ti porta più vicino all'effetto reale." },
+   { "h": "Le segnalazioni vanno lette con prudenza", "d": "Poche segnalazioni non significano sistema sano — possono dire paura, sfiducia o canali poco noti. Molte non significano sistema malato — possono dire che il canale è credibile e viene usato." },
+   { "h": "Sobrietà", "d": "Parti dai rischi più esposti e dai controlli che dovrebbero contenerli. Pochi indicatori ben costruiti valgono più di un pannello pieno di numeri che nessuno sa leggere: se chi riceve i dati non capisce dove intervenire, hai prodotto rumore, non conoscenza." }
+  ]
+ },
+ {
+  "id": "37001_m08_s003",
+  "layout": "cards",
+  "kicker": "Monitoraggio · 2",
+  "titolo": "Metodi validi, non numeri belli e inutili",
+  "intro": "La trappola più comune: indicatori ordinati in apparenza, ma alimentati con procedure deboli. La parola cruciale è affidabile — un risultato vale quando nasce da fonti chiare, regole stabili, perimetri comprensibili e controlli minimi sulla qualità dell'informazione.",
+  "cards": [
+   { "h": "Definizione stabile", "d": "«Numero di terze parti verificate»: se non stabilisci cosa significhi «verificate», il dato si svuota. Basta un controllo anagrafico, o servono reputazione, proprietà, conflitti, ragione economica? Se ogni funzione usa una definizione diversa, i numeri non si confrontano." },
+   { "h": "Qualità delle fonti", "d": "«Zero eccezioni sugli omaggi» — poi scopri che l'indicatore considera solo le richieste dal portale ufficiale, mentre le autorizzazioni urgenti viaggiano via mail e non entrano nel conteggio. Il numero non è inventato, è incompleto. Da dove viene il dato, chi lo alimenta, con quali regole?" },
+   { "h": "Le quattro domande", "d": "Definizione (significato preciso e stabile), perimetro (quali sedi, processi, partner sono inclusi), frequenza (un dato troppo tardivo perde capacità preventiva), verificabilità (chi legge deve poter risalire alle evidenze di base)." },
+   { "h": "Analisi onesta", "d": "Se sommi fenomeni diversi senza distinguerli — segnalazioni generiche, richieste di chiarimento e denunce circostanziate — alteri la lettura. Un buon metodo non elimina il giudizio, lo costringe a essere onesto, rendendo visibile cosa stai davvero confrontando. E i risultati devono lasciare tracce rintracciabili." }
+  ]
+ },
+ {
+  "id": "37001_m08_s004",
+  "layout": "punti",
+  "kicker": "Monitoraggio · 3",
+  "titolo": "Quando misurare e quando valutare",
+  "intro": "Il punto 9.1 chiede di chiarire con quale scansione raccogliere i dati e in quale momento leggerli e giudicarli. Le due cose non coincidono: puoi acquisire un'informazione oggi e farne una lettura utile troppo tardi. Un sistema maturo vive di cadenze ragionate, non di fotografie casuali.",
+  "punti": [
+   { "h": "Raccolta e giudizio sono diversi", "d": "Una segnalazione su un pagamento sospetto chiede reazione rapida — non ha senso aspettare la riunione trimestrale; il tasso di completamento delle verifiche sui partner può essere letto con ritmo mensile o trimestrale. Allinea il ritmo del dato al ritmo del rischio." },
+   { "h": "Tre fattori", "d": "Il peso del processo osservato (più è esposto, più il monitoraggio sta vicino all'operatività), la velocità con cui il rischio diventa danno, la capacità di reagire. La periodicità sensata non è la più fitta: è quella che consente azione utile." },
+   { "h": "Un momento esplicito di analisi", "d": "La norma separa la misurazione dall'analisi e valutazione: serve un passaggio in cui qualcuno legge l'informazione, la confronta con storia e attese, poi decide se il sistema regge. Se non è assegnato e calendarizzato, potresti avere un portale pieno e un sistema cieco." },
+   { "h": "Il giudizio che arriva tardi", "d": "Una società raccoglie ogni mese dati su omaggi e consulenze, ma legge le tendenze solo a fine anno, a contratti rinnovati e budget chiuso. Nel frattempo nessuno nota che in tre aree le spese di ospitalità sono cresciute più delle vendite. Esiste la raccolta, ma il giudizio arriva tardi per prevenire." }
+  ]
+ },
+ {
+  "id": "37001_m08_s005",
+  "layout": "split",
+  "kicker": "Monitoraggio · 4",
+  "titolo": "Dai dati al giudizio",
+  "lead": "Il punto 9.1 non si ferma alla raccolta: pretende che l'organizzazione interpreti le informazioni per capire come sta andando il presidio e quanto il sistema sia davvero efficace. La parola decisiva è valutazione. Tre domande allenano la lettura: il dato mostra che il controllo è applicato? il rischio residuo resta accettabile? quando emerge un problema, il sistema reagisce in modo credibile e tempestivo?",
+  "punti": [
+   { "h": "Leggere i numeri insieme ai fatti", "d": "Un aumento delle segnalazioni può indicare peggioramento del clima o maggiore fiducia nel canale; una riduzione delle deroghe migliore disciplina o registrazione incompleta. La lettura seria nasce dall'incrocio di più fonti — trend, eccezioni, esiti di controllo, indagini, audit, contesto." },
+   { "h": "Tendenze, non istantanee", "d": "Un mese isolato dipende da fattori contingenti; una sequenza che si ripete racconta come si muove davvero il sistema. La valutazione cerca andamenti, scarti e ricorrenze, non il numero perfetto." },
+   { "h": "Sintomo e causa", "d": "Tempi lunghi di chiusura delle segnalazioni possono dipendere da risorse insufficienti, criteri poco chiari o eccesso di centralizzazione. Se ti fermi al sintomo, correggi in modo cosmetico; se indaghi la causa, migliori il sistema." },
+   { "h": "Il linguaggio delle valutazioni", "d": "Se trovi solo «andamento soddisfacente» o «nessuna criticità significativa» senza spiegazioni ed evidenze, la fase di giudizio è debole. Un sistema maturo sa dire dove sta migliorando, dove regge e dove perde tenuta." }
+  ]
+ },
+ {
+  "id": "37001_m08_s006",
+  "layout": "cards",
+  "kicker": "Monitoraggio · 5",
+  "titolo": "Le prove del 9.1: tracciabili e utili",
+  "intro": "Il punto 9.1 si chiude con una richiesta concreta: i risultati e le valutazioni devono lasciare tracce disponibili e verificabili. Monitoraggio, misurazione, analisi e giudizio non possono restare impressioni sparse: la traccia rende leggibile il percorso dal dato al giudizio, e dal giudizio alle decisioni.",
+  "cards": [
+   { "h": "Le forme possibili", "d": "Dashboard periodici, registri di controllo, estrazioni da sistemi, verbali di analisi, schede di follow-up delle anomalie. Nessun formato unico, ma comprensibili, coerenti e collegabili al metodo dichiarato: se un report mostra una tendenza, devi capire da dove arrivino i numeri." },
+   { "h": "Completezza", "d": "Vedi sia il risultato, sia almeno il suo fondamento essenziale. Una tabella con tre righe (formazione, segnalazioni, due diligence) senza perimetro, criteri e responsabile dell'analisi non consente di ricostruire il ragionamento." },
+   { "h": "Coerenza nel tempo", "d": "Gli indicatori non cambiano significato a ogni ciclo. Confrontare periodi con definizioni diverse produce miglioramenti apparenti o allarmi finti." },
+   { "h": "Utilità decisionale", "d": "Dai documenti capisci se qualcuno ha tratto conclusioni e assunto decisioni. Dieci cartelle piene non valgono più di un report ben costruito: la domanda non è quante pagine esistono, ma se dal risultato puoi risalire ai dati e alle valutazioni che lo sostengono." }
+  ]
+ },
+ {
+  "id": "37001_m08_s007",
+  "layout": "confronto",
+  "kicker": "Audit interno · 1",
+  "titolo": "Verifica di conformità ed efficacia",
+  "intro": "Non puoi fermarti all'autolettura: serve una verifica strutturata, periodica e indipendente. La norma la chiede a intervalli programmati, su due aspetti che un buon audit tiene insieme. Se lavori solo sul primo, certifichi un sistema elegante ma cieco; solo sul secondo, trascuri incoerenze che indeboliranno il presidio.",
+  "a": {
+   "h": "Conformità",
+   "sub": "Stiamo rispettando ciò che abbiamo dichiarato?",
+   "punti": [
+    { "d": "Il sistema è conforme ai requisiti che l'organizzazione si è data e ai requisiti della norma? Politiche, ruoli, modelli approvativi ordinati sulla carta." },
+    { "d": "Ma le procedure eccellenti possono convivere con eccezioni che si moltiplicano, registri non aggiornati e controlli chiave saltati nelle urgenze." }
+   ]
+  },
+  "b": {
+   "h": "Efficacia",
+   "sub": "Il sistema previene, intercetta e gestisce il rischio?",
+   "punti": [
+    { "d": "L'attuazione e il mantenimento funzionano davvero nella vita quotidiana? Su un processo consulenti con procedura corretta, campioni reali possono mostrare incarichi partiti prima dell'approvazione e prove deboli della prestazione." },
+    { "d": "Senza audit interno questa differenza tra disegno e attuazione potrebbe restare invisibile per mesi. E «intervalli programmati» significa verifica organizzata e mantenuta, non reazione a un incidente." }
+   ]
+  }
+ },
+ {
+  "id": "37001_m08_s008",
+  "layout": "cards",
+  "kicker": "Audit interno · 2",
+  "titolo": "Il programma: frequenza, priorità, rischio",
+  "intro": "Il punto 9.2 chiede uno o più programmi di audit interno: non un semplice calendario, ma un disegno con frequenza, metodo, responsabilità e reporting. In un sistema anticorruzione la copertura utile nasce dalla priorità, non dall'uguaglianza meccanica.",
+  "cards": [
+   { "h": "Il peso dei processi", "d": "Non tutte le aree meritano la stessa intensità. Se il profilo dell'anno mostra espansione verso clienti pubblici, nuovi intermediari e molte eccezioni sulle consulenze, il programma deve investire di più proprio lì; un processo HR stabile può avere frequenza diversa." },
+   { "h": "La memoria dei rilievi", "d": "Se un'area ha già mostrato non conformità, ritardi nelle correzioni, controlli aggirati, sarebbe ingenuo tornare tardi come se nulla fosse. Le criticità emerse diventano un criterio per intensificare il ritorno e capire se il sistema ha davvero imparato." },
+   { "h": "Frequenza e profondità", "d": "Non sono la stessa cosa: un'area critica può richiedere verifiche più ravvicinate o interventi mirati su punti specifici, o entrambi. Anche i metodi cambiano — esame documentale, interviste, test su transazioni, osservazione diretta." },
+   { "h": "Il test per l'auditor", "d": "Confronta il programma con la mappa dei rischi e con i rilievi precedenti: le aree più esposte ricevono davvero più attenzione? I cambiamenti organizzativi e geografici sono considerati? Un piano uniforme, scollegato dal rischio e dalla memoria, è un forte indizio di debolezza." }
+  ]
+ },
+ {
+  "id": "37001_m08_s009",
+  "layout": "numeri",
+  "kicker": "Audit interno · 3",
+  "titolo": "Obiettivo, criterio, campo di applicazione",
+  "intro": "Per ciascun audit la norma chiede di definirli in anticipo, per evitare due rischi: la verifica vaga che entra ovunque e non conclude, e quella improvvisata che cambia metro durante il lavoro. La definizione iniziale non è burocrazia, è qualità del giudizio.",
+  "numeri": [
+   { "n": "1", "h": "L'obiettivo", "d": "A che cosa serve la verifica? Valutare l'attuazione dei controlli sulle terze parti, la conformità del processo omaggi, l'efficacia delle azioni correttive dopo una criticità. Se mescola conformità, efficacia e qualità documentale senza ordine, il rapporto diventa un contenitore confuso." },
+   { "n": "2", "h": "Il criterio", "d": "Rispetto a cosa confronterai le evidenze: requisiti della norma, regole interne, procedure, politiche. Se non è specificato quali controlli userai come riferimento, il confronto diventa soggettivo." },
+   { "n": "3", "h": "Il campo di applicazione", "d": "Dove guarderai: quali processi, sedi, periodi, transazioni, ruoli. Se copre solo i nuovi incarichi e non i rinnovi, potresti lasciare fuori proprio la zona in cui si concentrano le deroghe. E i risultati vanno riferiti ai dirigenti, alla conformità, all'alta direzione e, se opportuno, al governo." }
+  ]
+ },
+ {
+  "id": "37001_m08_s010",
+  "layout": "punti",
+  "kicker": "Audit interno · 4",
+  "titolo": "Verifiche proporzionate al rischio",
+  "intro": "L'audit interno deve essere ragionevole, proporzionato e commisurato al rischio. La misura del controllo segue il rischio, non la comodità organizzativa — e il focus non è il nome dello strumento (audit classico o altre procedure), ma la sua capacità di testare il presidio.",
+  "punti": [
+   { "h": "I punti sensibili espliciti", "d": "Devono poter essere verificati casi di corruzione o sospetta corruzione, violazioni della politica, mancato rispetto dei requisiti da parte dei soci in affari, debolezze e possibilità di miglioramento del sistema. Non solo la conformità documentale ordinaria." },
+   { "h": "Intensità commisurata", "d": "Una segnalazione su pagamenti anomali a un consulente richiede una verifica su incarico, giustificazione economica, processo autorizzativo, prestazioni effettive, rapporti con funzionari. Applicare a questo lo stesso test leggero degli acquisti ordinari significa trattare in modo uniforme situazioni che uniformi non sono." },
+   { "h": "Proporzionalità anche al contrario", "d": "Non ha senso mobilitare un apparato pesantissimo su un processo a basso rischio, stabile e già verificato di recente. L'eccesso di controllo consuma risorse e affatica il sistema." },
+   { "h": "La domanda giusta", "d": "Non «esistono verifiche?», ma: la loro intensità ha una logica leggibile, collegata al contesto, alla storia delle criticità e all'impatto della deviazione? Da qui nasce anche il tema dell'oggettività di chi le conduce." }
+  ]
+ },
+ {
+  "id": "37001_m08_s011",
+  "layout": "split",
+  "kicker": "Audit interno · 5",
+  "titolo": "Oggettività reale, non apparente",
+  "lead": "Senza oggettività il processo perde valore. Il criterio di fondo è semplice: chi controlla non deve giudicare ciò che ha progettato, gestito o approvato in prima persona. La norma ammette diverse soluzioni — funzione indipendente, persona incaricata, personale di un'area diversa, parte terza, gruppo misto — ma il risultato da ottenere è un giudizio credibile.",
+  "punti": [
+   { "h": "Il caso della funzione di conformità", "d": "Può svolgere audit interno, ma non quando il campo comprende la valutazione del sistema di cui è responsabile. La competenza tecnica da sola non basta: se presidia il sistema ogni giorno, è troppo interna per valutarne in autonomia l'efficacia complessiva. Il problema non è la buona fede, è la vicinanza al lavoro." },
+   { "h": "La «propria sfera di lavoro»", "d": "Non coincide solo con l'organigramma: include processi che supervisioni, controlli che approvi, flussi che disegni, eccezioni che autorizzi. Letto in modo troppo stretto, crea indipendenze solo apparenti." },
+   { "h": "I conflitti indiretti", "d": "Un responsabile acquisti che non firma la pratica ma ha definito i criteri; un legale che non approva le consulenze ma ha costruito il modello contrattuale. Senza contrappesi, l'imparzialità si assottiglia — non serve malizia, ciascuno tende a difendere il proprio impianto." },
+   { "h": "Il rischio dell'assuefazione", "d": "Sempre gli stessi verificatori interni, competenti ma troppo radicati: col tempo anticipano le risposte, evitano i conflitti, normalizzano eccezioni. La domanda finale: chi verifica ha abbastanza distanza per formulare un giudizio credibile?" }
+  ]
+ },
+ {
+  "id": "37001_m08_s012",
+  "layout": "punti",
+  "kicker": "Riesame di direzione · 1",
+  "titolo": "Il momento in cui la leadership decide",
+  "intro": "Non guardi più solo il processo di controllo, ma come la leadership usa le informazioni per governare. Il riesame di direzione è un momento pianificato in cui l'alta direzione valuta se il sistema resti idoneo, adeguato ed efficace. Non una riunione ornamentale: un atto di governo.",
+  "punti": [
+   { "h": "Distinguere i ruoli", "d": "L'alta direzione riesamina e decide; l'organo direttivo vigila sul modo in cui l'alta direzione lo sta conducendo. Chi gestisce guarda il sistema e lo corregge; chi governa verifica se quella gestione è seria e sufficiente. Più linee di controllo che si parlano, senza sovrapporsi del tutto." },
+   { "h": "Prendere atto e decidere", "d": "Non solo osservare i numeri, ma capire cosa è cambiato, leggere i risultati e decidere se servono correzioni, risorse, priorità diverse o modifiche ai controlli. La differenza tra amministrare informazioni e governare un presidio si vede qui." },
+   { "h": "A intervalli pianificati", "d": "Non affidato all'umore del momento o alla comparsa di un problema grave. Il sistema deve avere appuntamenti precisi in cui la leadership si assume la responsabilità di guardarlo nel suo insieme — non conversazioni sporadiche o scambi informali." },
+   { "h": "L'organo direttivo con più fonti", "d": "Riceve informazioni dall'alta direzione, dalla funzione di conformità e, se necessario, da altre fonti, così da non dipendere da un racconto unico. Non gestisce l'operatività, ma deve capire se chi la gestisce stia facendo il proprio lavoro." }
+  ]
+ },
+ {
+  "id": "37001_m08_s013",
+  "layout": "punti",
+  "kicker": "Riesame di direzione · 2",
+  "titolo": "Memoria, contesto e parti interessate",
+  "intro": "Che cosa è stato portato sul tavolo? La norma pretende alcuni input precisi, perché senza una base informativa minima il giudizio della leadership rischia di essere arbitrario. E il collegamento con i rischi reali è tutto: molti riesami scivolano nella genericità.",
+  "punti": [
+   { "h": "Lo stato delle azioni precedenti", "d": "Prova decisiva di serietà: se a ogni riesame si prendono decisioni e poi nessuno verifica che fine abbiano fatto, il processo perde continuità. Un sistema matura quando ricorda le promesse che fa a sé stesso — le azioni sono partite, completate, hanno prodotto l'effetto?" },
+   { "h": "I cambiamenti interni ed esterni", "d": "Non puoi giudicare l'efficacia di oggi con la fotografia di ieri. Se l'organizzazione entra nelle gare pubbliche e usa agenti in nuovi paesi, la leadership deve chiedersi se i controlli disegnati per il vecchio modello restino adeguati." },
+   { "h": "Le aspettative delle parti interessate", "d": "Richieste nuove da clienti pubblici, aspettative più stringenti del consiglio, maggiori esigenze di trasparenza da partner e personale, o anche maggiore disponibilità interna a segnalare — tutto modifica il modo di leggere la prestazione." },
+   { "h": "Collegare, non elencare", "d": "Un buon riesame non dice solo che il contesto è mutato: dice in che modo il mutamento tocca il sistema, quali controlli sono più esposti, dove serve un rafforzamento. Se trovi una rassegna generica dell'anno senza nesso col sistema, l'input è debole anche se la riunione è avvenuta." }
+  ]
+ },
+ {
+  "id": "37001_m08_s014",
+  "layout": "cards",
+  "kicker": "Riesame di direzione · 3",
+  "titolo": "La prestazione: trend, indagini, rischi",
+  "intro": "Il blocco di input più denso. L'alta direzione deve leggere la prestazione tenendo insieme sintomi, cause, risposte e prospettive — non informazioni episodiche o decorative.",
+  "cards": [
+   { "h": "Non conformità e correzioni", "d": "Non basta contarle: si concentrano in alcune aree? ritornano sugli stessi temi? le correzioni hanno rimosso le cause? Un sistema può chiudere rapidamente i rilievi ed essere debole perché gli stessi problemi ricompaiono poco dopo." },
+   { "h": "Monitoraggio ed esiti di audit", "d": "Indicatori, andamenti, eccezioni, tempi di chiusura, e i rilievi dell'audit interno che trasformano la percezione in un giudizio più indipendente. Se il riesame li ignora o li addolcisce troppo, la leadership rinuncia a uno specchio importante." },
+   { "h": "Rapporti e investigazioni", "d": "Qui il sistema mostra maturità etica, non solo procedurale. Un'indagine che non conferma corruzione ma rivela autorizzazioni tardive e controlli poco incisivi va usata per chiedersi se il presidio abbia una debolezza strutturale, non solo per archiviare il caso." },
+   { "h": "Rischi e miglioramento", "d": "Il riesame non è solo retrospettivo: i rischi prioritari sono ancora gli stessi o il contesto li ha spostati? le azioni hanno ridotto l'esposizione o solo aumentato il volume documentale? E devono emergere opportunità di miglioramento come sviluppo logico di ciò che è stato osservato." }
+  ]
+ },
+ {
+  "id": "37001_m08_s015",
+  "layout": "punti",
+  "kicker": "Riesame di direzione · 4",
+  "titolo": "Che cosa deve uscire dal riesame",
+  "intro": "La norma vuole che dal riesame escano scelte chiare, rivolte al miglioramento del sistema e alle eventuali correzioni del suo assetto. La leadership non è chiamata solo a osservare: è chiamata a decidere che cosa mantenere, rafforzare e cambiare.",
+  "punti": [
+   { "h": "Decisioni riconoscibili", "d": "Scelte leggibili, non formule vaghe: rivedere i criteri di approvazione delle consulenze, aumentare la frequenza di monitoraggio, aggiornare la due diligence, rafforzare la formazione in aree specifiche. «Mantenere attenzione» o «proseguire il presidio» mancano dell'effetto di governo." },
+   { "h": "Non ogni riesame rivoluziona", "d": "A volte la conclusione ragionevole è che l'impianto regga e servano solo aggiustamenti mirati. Anche questa è una decisione, purché motivata: devi capire perché la leadership ritiene il sistema adeguato e su quali elementi. Conta la qualità del ragionamento, non la quantità di cambiamenti." },
+   { "h": "Tracciabilità", "d": "Le decisioni devono lasciare impronte verificabili — un verbale, un piano di azione con responsabili e tempi, un registro di follow-up. Non basta l'affermazione generica che il riesame si è tenuto e il sistema è stato ritenuto efficace." },
+   { "h": "La sintesi all'organo direttivo", "d": "I risultati vanno sintetizzati e portati al livello di governo, per mantenere vivo il canale di vigilanza. Non solo rassicurazioni generiche: quali criticità sono state riconosciute, quali scelte assunte, quali modifiche ritenute necessarie. Né troppo breve né troppo tecnica." }
+  ]
+ },
+ {
+  "id": "37001_m08_s016",
+  "layout": "tabella",
+  "kicker": "Riesame di direzione · 5",
+  "titolo": "Segni di vita e difetti ricorrenti",
+  "intro": "Come lo valuti durante una verifica: non basta un verbale ordinato, devi capire se il riesame ha messo in relazione dati, criticità, contesto e decisioni. E non pretendere modelli identici: un'impresa piccola avrà un riesame più snello, una complessa materiali più articolati. Conta la funzione, non l'estetica.",
+  "cols": ["Segno di vita", "Difetto ricorrente"],
+  "righe": [
+   ["Legame tra input e azioni: crescita delle eccezioni o rilievi ripetuti producono conseguenze coerenti — più controllo, modifica di una regola, revisione di un processo.", "Un elenco di criticità seguito da conclusioni rassicuranti ma prive di effetti: il processo appare più rituale che direttivo."],
+   ["Onestà del tono: il riesame registra difficoltà, tensioni, ritardi. I sistemi reali vivono attriti — aprono mercati, cambiano persone, imparano.", "Documenti che raccontano un sistema costantemente eccellente, senza mai una deviazione o una scelta da correggere: il sospetto è legittimo."],
+   ["Profondità: seleziona ciò che conta, spiega perché e ne trae conseguenze. Non la lunghezza del verbale, ma la capacità di mostrare ragionamento.", "Input trattati come caselle da spuntare — azioni precedenti sì, contesto sì, audit sì — ma ogni voce in due righe, senza nessi né priorità."],
+   ["L'organo direttivo riceve un quadro leggibile, in tempo, con contributo autonomo della funzione di conformità.", "Compendio troppo sintetico per una vera vigilanza, o troppo tardivo, o basato solo sui dati presentati dall'alta direzione."]
+  ]
+ },
+ {
+  "id": "37001_m08_s017",
+  "layout": "definizione",
+  "kicker": "Funzione di conformità · 1",
+  "eyebrow": "Il secondo binario di vigilanza",
+  "titolo": "Un presidio continuo e distinto",
+  "definizione": "Mentre il riesame di direzione avviene a intervalli pianificati ed è un atto decisionale di leadership, la funzione di conformità deve valutare in modo continuativo se il sistema resta adeguato ai rischi e se è attuato in modo efficace. Non una replica dello stesso processo: un presidio che veglia con maggiore prossimità e riferisce sia alla direzione sia al livello di governo.",
+  "punti": [
+   "Se confondi i due binari, ritieni sufficiente un solo flusso informativo. La logica del capitolo 9 è più raffinata: la direzione decide, l'organo direttivo vigila, la funzione osserva in continuità — così il sistema non resta cieco tra un riesame e l'altro.",
+   "«Continuativo» non vuol dire riunione permanente: significa attenzione sistematica sui segnali — risultati del monitoraggio, segnalazioni, esiti di indagini e audit, andamento delle azioni correttive — confrontati col profilo di rischio corrente.",
+   "Non guarda solo la conformità formale: deve interrogarsi sull'adeguatezza rispetto ai rischi reali, cogliendo presto i segnali deboli perché vive più vicino ai flussi operativi.",
+   "Se la funzione esiste solo come titolo, senza informazioni, autonomia o canali di reporting, il riesame continuo diventa una formula vuota: chiediti se vede abbastanza, se collega ciò che vede e se riferisce in modo utile."
+  ]
+ },
+ {
+  "id": "37001_m08_s018",
+  "layout": "confronto",
+  "kicker": "Funzione di conformità · 2",
+  "titolo": "Adeguatezza ed efficacia",
+  "intro": "Il cuore del riesame continuo sta in due domande permanenti che sembrano quasi la stessa cosa, ma non lo sono. Separarle è utilissimo, perché permette di capire dove nasce una debolezza: nel progetto, nell'esecuzione, o in entrambi.",
+  "a": {
+   "h": "Adeguatezza",
+   "sub": "La bontà del disegno",
+   "punti": [
+    { "d": "Controlli, processi, ruoli e flussi sono commisurati ai rischi attuali — non a quelli immaginati tempo fa? Se l'impresa ha ampliato l'uso di intermediari o è entrata in nuove geografie, il sistema precedente potrebbe non bastare più." },
+    { "d": "Puoi avere un presidio formalmente ben attuato, ma non più adeguato. Un controllo può essere scritto bene e risultare debole per il contesto reale: non considerare adeguato tutto ciò che è stato approvato formalmente." }
+   ]
+  },
+  "b": {
+   "h": "Efficacia",
+   "sub": "Come il disegno prende vita",
+   "punti": [
+    { "d": "I controlli previsti vengono applicati? Le approvazioni avvengono quando servono? Le verifiche sui partner sono complete, le azioni correttive chiuse e ancora efficaci? Un sistema può essere adeguato in teoria e inefficace in pratica." },
+    { "d": "E non considerare efficace tutto ciò che produce pochi rilievi: possono dipendere da campionamenti modesti, scarsa propensione a segnalare o letture troppo benevole. Diffida dei segnali troppo perfetti." }
+   ]
+  }
+ },
+ {
+  "id": "37001_m08_s019",
+  "layout": "split",
+  "kicker": "Funzione di conformità · 3",
+  "titolo": "Report periodici e ad hoc",
+  "lead": "La vigilanza continua produce valore solo se arriva a chi deve usarla. La norma richiede un doppio ritmo — rapporti a intervalli pianificati e comunicazioni ad hoc — verso l'alta direzione e l'organo direttivo (o la commissione competente). Evita due errori: aspettare sempre il momento periodico anche per un segnale urgente, o vivere solo nell'emergenza senza una lettura ordinata.",
+  "punti": [
+   { "h": "Il doppio binario di destinatari", "d": "La direzione riceve informazioni per governare e decidere, l'organo direttivo per esercitare supervisione. Se la funzione parla solo con la direzione, il governo perde un punto di vista autonomo; solo con l'organo direttivo, manca il collegamento operativo." },
+   { "h": "Giudizi, non cronache", "d": "Non basta dire quante sessioni formative o quanti fascicoli: serve un giudizio sullo stato del sistema, sostenuto da evidenze, che comprenda ciò che investigazioni e audit hanno messo in luce. La funzione non è un ufficio di statistiche, è un presidio che formula valutazioni." },
+   { "h": "Le comunicazioni ad hoc", "d": "Presunta corruzione, violazione rilevante, anomalia grave su un socio in affari o debolezza sistemica non possono aspettare la cadenza ordinaria. La tempestività è parte del requisito: il sistema non può restare muto proprio quando il rischio accelera." },
+   { "h": "La qualità della sintesi", "d": "Troppo tecnica disorienta l'organo direttivo, troppo leggera impedisce di agire. Distinguere il dato dal giudizio, il fatto dall'ipotesi, la criticità confermata dal segnale da approfondire. E i report devono circolare, arrivare in tempo e generare effetti, non restare documenti isolati." }
+  ]
+ },
+ {
+  "id": "37001_m08_s020",
+  "layout": "punti",
+  "kicker": "Funzione di conformità · 4",
+  "titolo": "Supporti esterni sì, delega del giudizio no",
+  "intro": "L'organizzazione può farsi assistere da un soggetto esterno nel riesame della funzione di conformità. La parola decisiva è assistere: non significa sostituire. Il contributo può aiutare a raccogliere, leggere e approfondire, ma il presidio non può ridursi a inoltrare relazioni scritte da altri.",
+  "punti": [
+   { "h": "Il canale resta interno", "d": "Le osservazioni del supporto devono arrivare alla funzione di conformità e, quando serve, all'organo direttivo. Il canale informativo resta sotto governo interno, e la funzione deve ricevere, comprendere e rielaborare il contributo." },
+   { "h": "Nessun apprendimento delegato", "d": "Se il sapere critico rimane fuori dall'organizzazione, il sistema si indebolisce anche con assistenza qualificata. Affidare analisi a una parte terza non garantisce da solo indipendenza e qualità: la responsabilità del giudizio resta interna." },
+   { "h": "Le domande rivelatrici", "d": "Perché è stato coinvolto, su quali temi, cosa ha prodotto, come le osservazioni sono state recepite e come sono entrate nei report ai vertici. Se il supporto appare come una scatola nera che emette conclusioni non rielaborate, il requisito è coperto solo in superficie." },
+   { "h": "Il rischio dello schermo", "d": "A volte il supporto esterno viene usato per dire ciò che internamente nessuno vuole assumersi la responsabilità di dire, quasi per prenderne distanza. Un sistema maturo fa il contrario: usa il contributo per vedere meglio e poi parla con voce propria." }
+  ]
+ },
+ {
+  "id": "37001_m08_s021",
+  "layout": "evidenza",
+  "kicker": "Verificare il capitolo nove",
+  "eyebrow": "Non cercare adempimenti, cerca governo",
+  "titolo": "Stai valutando i meccanismi con cui l'organizzazione dice di osservare sé stessa",
+  "testo": "Qui non controlli un controllo operativo qualsiasi: osservi chi controlla il controllore. Con un approccio puramente documentale vedrai molte cose e ne capirai poche. La prima regola è non verificare i punti in isolamento: il capitolo nove è un'architettura, non una somma di pezzi. Il monitoraggio produce dati, l'audit interno verifiche indipendenti, il riesame di direzione decisioni di leadership, la funzione di conformità una vigilanza continua che alimenta direzione e organo direttivo. Se un anello è debole, gli altri restano presenti ma il sistema perde profondità. Cerca la catena della conoscenza: da dove nasce il segnale, dove viene registrato, chi lo interpreta, chi lo riceve, che decisione produce, chi controlla che sia stata attuata. Quando la catena è leggibile, il capitolo nove è vivo; quando si spezza, trovi un sistema decorativo — dati accurati ma senza uso nel riesame, buoni audit i cui risultati non raggiungono la funzione, report che non portano mai a modifiche. Usa una doppia lente: la completezza del requisito e l'effetto reale, cioè se le informazioni cambiano priorità, controlli, risorse, frequenze. Se la prima è positiva e la seconda no, non sei davanti a un sistema maturo, ma a uno che sa rappresentarsi bene. E diffida del troppo liscio: un presidio sano mostra anche attriti, rilievi, correzioni e cambi di rotta."
+ },
+ {
+  "id": "37001_m08_s022",
+  "layout": "numeri",
+  "kicker": "Verifica · 9.1",
+  "titolo": "Dati pertinenti, metodi, giudizi utili",
+  "intro": "La domanda non è se esista qualche indicatore, ma se monitoraggio e misurazione siano stati progettati per capire la prestazione e l'efficacia. Cinque test: se uno manca o è debole, il punto 9.1 perde forza. Non premiare la quantità di dati, ma la loro utilità e capacità di orientare decisioni.",
+  "numeri": [
+   { "n": "1", "h": "Pertinenza", "d": "Gli indicatori guardano processi e controlli davvero esposti, o solo attività facili da contare? Un cruscotto con presenze alla formazione e procedure aggiornate è povero se il rischio sta in intermediari, consulenze e omaggi in contesti sensibili." },
+   { "n": "2", "h": "Metodi", "d": "Come nasce il dato, chi lo alimenta, con quale definizione e fonti? «Verifica preliminare» che in una funzione è controllo completo e in un'altra anagrafico minimale unisce fenomeni diversi e inganna." },
+   { "n": "3", "h": "Tempo", "d": "Quando viene misurato e quando effettivamente analizzato? Scoprire le eccezioni solo nel riepilogo annuale è guardare lo specchietto retrovisore. Serve una temporalità coerente col rischio." },
+   { "n": "4", "h": "Qualità del giudizio", "d": "Non basta vedere tabelle: serve analisi e valutazione, con chi interpreta, come lo collega al contesto e quali conclusioni trae. «Andamento regolare» senza spiegazioni è una fase di valutazione debole." },
+   { "n": "5", "h": "Evidenze", "d": "Le informazioni documentate permettono di vedere il risultato e risalire alla base. Se un giudizio positivo sulle terze parti si regge solo su un foglio riassuntivo privo di fondamento verificabile, la prova è debole." }
+  ]
+ },
+ {
+  "id": "37001_m08_s023",
+  "layout": "cards",
+  "kicker": "Verifica · 9.2",
+  "titolo": "Copertura del rischio, obiettività, reporting",
+  "intro": "La domanda chiave non è se il calendario sia pieno, ma se l'audit interno sia stato costruito per dire la verità sul sistema. Controlla programma, priorità di rischio, obiettivi/criteri/perimetro dei singoli interventi, proporzionalità, obiettività e destinazione dei risultati.",
+  "cards": [
+   { "h": "Programma e priorità", "d": "Pianificato, mantenuto, leggibile — e soprattutto che rifletta il peso dei processi e ciò che le verifiche precedenti hanno mostrato. Confronta col la mappa dei rischi: se tutto è distribuito in modo identico, il programma è comodo, non strategico." },
+   { "h": "Obiettivi e perimetro", "d": "Ogni intervento ha obiettivi, criteri e campo chiari? Un obiettivo troppo ampio disperde, un criterio indefinito rende soggettivo il giudizio, un perimetro opaco lascia fuori la zona più delicata — se l'area critica è il rinnovo di consulenti e copri solo i nuovi incarichi, hai una lacuna mascherata." },
+   { "h": "Proporzionalità", "d": "Verifiche ragionevoli e commisurate al rischio: più incisive dove l'esposizione è alta, dove esistono segnalazioni, violazioni della politica o debolezze sistemiche. Lo stesso campionamento e gli stessi test su ogni tema distribuiscono controllo senza governare il rischio." },
+   { "h": "Obiettività e reporting", "d": "Chi esegue è abbastanza distante? Ha responsabilità operative o ha progettato i controlli esaminati? La funzione di conformità non è automaticamente il soggetto giusto per valutare il sistema di cui è responsabile. E i risultati raggiungono dirigenti, conformità, alta direzione e, se opportuno, l'organo direttivo?" }
+  ]
+ },
+ {
+  "id": "37001_m08_s024",
+  "layout": "punti",
+  "kicker": "Verifica · 9.3",
+  "titolo": "La leadership decide, l'organo direttivo vigila",
+  "intro": "Qui osservi se la leadership governa davvero il sistema e se l'organo direttivo esercita una vigilanza credibile su come lo attua. Un buon riesame senza supervisione resta autoreferenziale; una supervisione senza vero riesame si riduce a rituale informativo.",
+  "punti": [
+   { "h": "Input adeguati", "d": "Cerca lo stato delle azioni precedenti, i cambiamenti interni ed esterni, le aspettative delle parti interessate, e un quadro attendibile della prestazione — rilievi, monitoraggio, esiti di audit, segnalazioni, investigazioni, rischi affrontati, tenuta delle misure. Se compaiono in modo sbrigativo, il riesame è povero." },
+   { "h": "Discussione, non elenco", "d": "Un verbale può elencare tutte le voci corrette e raccontare un confronto quasi inesistente. Cerca tracce di domande, valutazioni, richieste di chiarimento, riconoscimento di criticità: la leadership che riesamina bene non riceve solo dati, li mette alla prova." },
+   { "h": "Output riconoscibili", "d": "Deve produrre decisioni: rafforzare un controllo, modificare una procedura, aumentare la frequenza, destinare risorse. Se escono solo «mantenere l'attenzione» o «proseguire il presidio», stai vedendo un processo formale, non direttivo." },
+   { "h": "Il rapporto con l'organo direttivo", "d": "Il compendio arriva in tempo, con un livello di sintesi che consenta vigilanza, e l'organo direttivo riceve anche informazioni dalla funzione di conformità, per non dipendere solo dal racconto dell'alta direzione. Chi vigila deve avere abbastanza visibilità." }
+  ]
+ },
+ {
+  "id": "37001_m08_s025",
+  "layout": "numeri",
+  "kicker": "Verifica · 9.4",
+  "titolo": "La vigilanza continua della conformità",
+  "intro": "Valuti un presidio che deve osservare il sistema in continuità, senza sostituire il riesame di direzione né coincidere con l'audit interno. Cinque verifiche pratiche, e due difetti speculari: una funzione molto operativa ma incapace di sintetizzare il quadro, o una che produce report regolari ma poveri e sempre rassicuranti.",
+  "numeri": [
+   { "n": "1", "h": "Accesso ai segnali", "d": "Vede risultati del monitoraggio, esiti di audit, segnalazioni, investigazioni, stato delle correzioni, cambiamenti del rischio? Con informazioni frammentarie o tardive, il riesame continuo non è serio." },
+   { "n": "2", "h": "Adeguatezza ed efficacia", "d": "Sa dire se il problema nasce da un sistema non più adatto ai rischi o da una cattiva attuazione? Parole generiche senza questa distinzione riducono il valore del presidio." },
+   { "n": "3", "h": "Cadenza del reporting", "d": "Rapporti a intervalli pianificati, leggibili, con giudizi e non solo statistiche, che raggiungono sia l'alta direzione sia l'organo direttivo." },
+   { "n": "4", "h": "Tempestività ad hoc", "d": "Se emerge una criticità importante, aspetta il prossimo rapporto o attiva subito i destinatari corretti?" },
+   { "n": "5", "h": "L'uso dei supporti esterni", "d": "Possono assistere, ma il giudizio e la responsabilità di portarlo ai livelli di governo restano interni. E osserva la qualità della voce: distingue fatti, ipotesi e giudizi, rappresenta problemi scomodi, si assume le conclusioni?" }
+  ]
+ },
+ {
+  "id": "37001_m08_s026",
+  "layout": "flusso",
+  "kicker": "Lettura integrata",
+  "titolo": "Triangolare le fonti, trovare le incoerenze",
+  "intro": "Il lavoro più utile: confrontare le fonti e vedere se raccontano la stessa storia. La tecnica è la triangolazione — parti da un'area rilevante (terze parti, consulenze, omaggi, pagamenti urgenti) e leggi il capitolo nove come un circuito con quattro domande. Se una risposta è no, sai già dove scavare.",
+  "passi": [
+   { "h": "Il sistema vede", "d": "Cosa dice il monitoraggio e la misurazione su quell'area? Dati sempre positivi e invariabili, o pochissime segnalazioni sempre lette come buona notizia, sono un segnale d'allarme." },
+   { "h": "Il sistema verifica", "d": "L'audit interno ha visto la stessa area, con quali esiti? Se decide ma non verifica bene, il problema è nella qualità dell'audit o del monitoraggio." },
+   { "h": "Il sistema decide", "d": "Cosa è entrato nel riesame di direzione? Se il monitoraggio segnala eccezioni crescenti, l'audit rileva fascicoli incompleti, la conformità richiama l'area, ma il riesame chiude con un giudizio generico — il sistema vede il problema, ma la leadership non lo trasforma in correzione." },
+   { "h": "Il sistema vigila in continuità", "d": "La funzione di conformità mantiene attenzione tra un riesame e l'altro, e lascia tracce documentate? La domanda più elegante: chi ha la possibilità di contraddire chi? In un sistema maturo esistono canali diversi che si correggono a vicenda — la vera risposta a «chi controlla il controllore»." }
+  ]
+ },
+ {
+  "id": "37001_m08_s027",
+  "layout": "numeri",
+  "kicker": "Sintesi operativa",
+  "titolo": "Le sei domande da portare in verifica",
+  "intro": "Il capitolo nove è ricco ma segue una logica lineare. Usa questa mappa sul campo: in apertura osserva come l'organizzazione descrive segnali e priorità, nelle interviste chiedi chi legge, riceve, decide e segue le azioni, nei documenti cerca la continuità tra un passaggio e l'altro.",
+  "numeri": [
+   { "n": "1", "h": "Che cosa osserva davvero?", "d": "Punto 9.1: indicatori pertinenti ai rischi e ai controlli chiave, non solo attività facili da contare." },
+   { "n": "2", "h": "Come lo osserva?", "d": "Metodi, fonti, cadenze, interpretazione e prove disponibili. Dati eleganti ma scollegati dalle decisioni significano osservare poco o male." },
+   { "n": "3", "h": "Chi verifica in modo indipendente?", "d": "Punto 9.2: programma, copertura delle aree a rischio, memoria dei rilievi, proporzionalità e obiettività di chi svolge la verifica." },
+   { "n": "4", "h": "Chi decide?", "d": "Punto 9.3: il riesame di direzione trasforma input in decisioni, modifiche e miglioramento continuo, e un compendio raggiunge l'organo direttivo." },
+   { "n": "5", "h": "Chi vigila in continuità?", "d": "Punto 9.4: la funzione di conformità mantiene attenzione costante su adeguatezza ed efficacia e riferisce con cadenza pianificata e ad hoc." },
+   { "n": "6", "h": "Che cosa cambia davvero?", "d": "La domanda che separa la conformità apparente dal governo reale: il sistema corregge controlli, aggiorna priorità, destina risorse — oppure produce solo report, verbali e rassicurazioni?" }
+  ]
+ },
+ {
+  "id": "37001_m08_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 8",
+  "modNum": "8",
+  "titolo": "Un sistema che controlla i propri controlli",
+  "punti": [
+   { "h": "Monitoraggio e misurazione", "d": "Scegliere segnali pertinenti, raccoglierli con metodi credibili, leggerli con cadenza sensata e trasformarli in una valutazione seria della tenuta del presidio — distinguendo l'attività dall'efficacia." },
+   { "h": "L'audit interno", "d": "Una verifica più indipendente, proporzionata al rischio, capace di coprire le aree che contano, con obiettività protetta: chi verifica non giudica il proprio lavoro." },
+   { "h": "Riesame di direzione e organo direttivo", "d": "La leadership prende decisioni riconoscibili e tracciabili; l'organo direttivo vigila su come l'alta direzione conduce il sistema, con più fonti e non un racconto unico." },
+   { "h": "La funzione di conformità", "d": "Un presidio continuo con rapporti periodici e ad hoc, che distingue adeguatezza ed efficacia, così che il sistema non resti muto tra un riesame e l'altro." },
+   { "h": "Chi controlla il controllore", "d": "Non fermarti alla presenza di un documento o di una riunione: triangola le fonti, riconosci le incoerenze che rivelano un controllo apparente, valuta se il sistema sa vedersi con onestà." },
+   { "h": "Verso il miglioramento", "d": "Quando monitoraggio, audit, riesame e conformità fanno emergere deviazioni, il passo successivo è migliorare in modo strutturato — e quando quel miglioramento non è gestito bene, si vedono le non conformità tipiche dell'SGPC." }
+  ],
+  "prossimo": {
+   "modulo": "9",
+   "titolo": "Miglioramento e le non conformità tipiche dell'SGPC",
+   "testo": "Come il sistema chiude il cerchio: non conformità, azioni correttive e miglioramento continuo, e le fragilità ricorrenti che un auditor riconosce sul campo."
+  }
+ }
+]
