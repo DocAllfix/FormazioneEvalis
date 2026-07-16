@@ -1,0 +1,393 @@
+[
+ {
+  "id": "42001_m07_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 42001 — Sistemi di gestione dell'IA",
+  "kicker": "Modulo 7",
+  "eyebrow": "La parte più operativa del sistema",
+  "titolo": "I controlli dell'Appendice A e la guida B",
+  "testo": "Fin qui hai costruito il quadro generale: contesto, leadership, pianificazione, supporto e attività operative. Adesso ti concentri su ciò che rende governabile l'uso reale dei sistemi di IA. La norma non si ferma ai principi: offre una raccolta strutturata di riferimenti che traducono obiettivi, rischi e responsabilità in scelte verificabili. È nell'Appendice A, mentre l'Appendice B accompagna l'interpretazione e l'attuazione. La distinzione è semplice ma decisiva: l'Appendice A ti dice quali aree di controllo considerare, la guida B ti aiuta a capire come prendono forma nella pratica. In questo modulo seguirai una mappa: dalla logica complessiva dei controlli e dalla dichiarazione di applicabilità, alle politiche e alla governance interna, poi alle risorse, al ciclo di vita, ai dati, alle informazioni verso le parti interessate, all'uso responsabile, ai fornitori e alle terze parti. I controlli non funzionano a compartimenti separati: un controllo su una politica influenza i ruoli, un controllo sui ruoli la qualità delle decisioni, un controllo sulle risorse il funzionamento e il monitoraggio. Questa mappa è preziosa anche per l'auditor: evita di trattare i controlli come una lista da spuntare. La norma consente adattamento e scelta motivata, ma non improvvisazione.",
+  "agenda": [
+   "La logica dei controlli e la dichiarazione di applicabilità",
+   "Politiche per l'IA e governance interna",
+   "Le risorse: dati, strumenti, sistemi, competenze",
+   "Il ciclo di vita, dal requisito al monitoraggio",
+   "I dati: acquisizione, qualità, provenienza",
+   "Parti interessate, uso responsabile, fornitori e terze parti"
+  ]
+ },
+ {
+  "id": "42001_m07_s002",
+  "layout": "confronto",
+  "kicker": "Logica dei controlli · 1",
+  "titolo": "Appendice A e guida B: come lavorano insieme",
+  "intro": "Le due parti stanno insieme, ma non fanno lo stesso mestiere. Se confondi i piani applichi formule standard dove serve giudizio; se li separi troppo, ottieni belle intenzioni prive di presidio. I controlli non sono un catalogo da copiare: sono misure che mantengono o modificano il rischio, quindi vanno collegate a casi d'uso, processi, responsabilità e modalità operative reali. Vanno sempre usate insieme.",
+  "a": {
+   "h": "Appendice A",
+   "sub": "La mappa dei presidi",
+   "punti": [
+    { "d": "Raccoglie obiettivi di controllo e controlli di riferimento: ti ricorda le aree da presidiare. Due organizzazioni possono richiamare controlli simili — su ruoli, dati, monitoraggio, informazioni alle persone — pur avendo rischi di peso molto diverso." },
+    { "d": "Non basta trovare il titolo di un controllo e segnare «presente»: devi capire se è rilevante, come viene attuato, chi lo gestisce, con quali evidenze e con quali limiti." }
+   ]
+  },
+  "b": {
+   "h": "Guida B",
+   "sub": "La bussola interpretativa",
+   "punti": [
+    { "d": "Accompagna l'implementazione: ti spinge a domandarti come un controllo si traduca in una politica, una decisione autorizzativa, un criterio di qualità, una verifica, un'attività di monitoraggio o una comunicazione. Aiuta a contestualizzare ed evitare una governance uguale per situazioni diverse." },
+    { "d": "Individua l'area pertinente, chiediti quale rischio o obiettivo la rende importante, cerca la forma concreta del presidio, verifica proporzione e aggiornamento: il controllo è forte per il rischio reale o solo simbolico?" }
+   ]
+  }
+ },
+ {
+  "id": "42001_m07_s003",
+  "layout": "flusso",
+  "kicker": "Logica dei controlli · 2",
+  "titolo": "Dai rischi ai controlli: la dichiarazione di applicabilità",
+  "intro": "È il punto in cui la teoria smette di essere astratta: l'organizzazione rende visibile quali controlli considera necessari, quali esclude e con quale giustificazione. Non tutte avranno bisogno di tutti i controlli dell'Appendice A, e alcune ne introdurranno di aggiuntivi, ma questa libertà non è mai priva di motivazione. Se costruita bene, la dichiarazione permette di seguire una catena leggibile e verificabile.",
+  "passi": [
+   { "h": "Contesto e casi d'uso", "d": "L'organizzazione definisce il proprio contesto e i casi d'uso dell'IA. È la base che rende comprensibile ogni scelta successiva: senza di essa, i controlli sembrano tanti e scollegati." },
+   { "h": "Rischi e opportunità", "d": "Identifica rischi e opportunità. Tutti i rischi identificati devono essere documentati, e con essi le misure adottate per affrontarli: i controlli si scelgono perché rispondono a un'analisi, non per gusto." },
+   { "h": "Selezione e motivazione", "d": "Seleziona o adatta i controlli pertinenti e motiva esclusioni e aggiunte. Una buona dichiarazione non dice solo «applicabile» o «non applicabile»: dice anche perché, appoggiandosi a un'analisi comprensibile e non a una formula standard." },
+   { "h": "Collegamento a evidenze", "d": "Collega ogni scelta a responsabilità, processi ed evidenze. Se un rischio è identificato ma non vedi controlli adeguati, o un controllo è dichiarato applicabile ma nessuno sa chi lo attua, approfondisci: la dichiarazione rende tracciabile la governance, non la sostituisce." }
+  ]
+ },
+ {
+  "id": "42001_m07_s004",
+  "layout": "punti",
+  "kicker": "Politiche e governance · 1",
+  "titolo": "Politiche per l'IA: dalla direzione ai comportamenti",
+  "intro": "La domanda giusta non è se esista un testo firmato dall'alta direzione, ma se quella politica orienta davvero comportamenti e decisioni. La norma la definisce come indirizzi e orientamenti espressi formalmente dalla direzione: non un messaggio pubblicitario né una dichiarazione etica astratta, ma una scelta di direzione che guida obiettivi, responsabilità, priorità e criteri di gestione. Nel contesto dell'IA dovrebbe chiarire almeno quattro aspetti.",
+  "punti": [
+   { "h": "I quattro contenuti essenziali", "d": "Quale ruolo hanno i sistemi di IA negli obiettivi organizzativi; quale idea di uso responsabile si intende perseguire; come vengono considerati rischi, obblighi applicabili e aspettative delle parti interessate; chi fa cosa quando il sistema viene sviluppato, fornito o utilizzato. Se manca un elemento, la politica resta decorativa." },
+   { "h": "Coerente con obiettivi e rischio", "d": "Se un'azienda dichiara di usare l'IA per efficienza e qualità ma non assegna responsabilità, non investe in competenze e non fissa limiti d'uso, la politica è disallineata dalla pratica. È uno dei segnali che un auditor coglie quasi subito." },
+   { "h": "Non copiare una politica standard", "d": "Deve parlare il linguaggio dell'organizzazione e dei suoi casi d'uso. Una piccola software house che integra modelli esterni non ha le stesse priorità di un ente pubblico che usa l'IA in procedure amministrative: quali sistemi rientrano, quali decisioni richiedono approvazione, come si gestiscono cambiamenti e segnalazioni." },
+   { "h": "La manutenzione la rende credibile", "d": "Una politica invecchia in fretta: cambiano casi d'uso, strumenti, obblighi e aspettative. La storia delle revisioni è un segnale di vitalità: se è stata aggiornata dopo un nuovo sistema, un incidente o un cambiamento organizzativo, accompagna la vita dell'organizzazione; se è identica da anni, probabilmente non orienta più." }
+  ]
+ },
+ {
+  "id": "42001_m07_s005",
+  "layout": "split",
+  "kicker": "Politiche e governance · 2",
+  "titolo": "Governance interna: ruoli, responsabilità, autorità",
+  "lead": "Una politica chiara apre la strada, ma da sola non governa nulla. Per trasformare gli orientamenti in azione servono ruoli, responsabilità e autorità comprensibili. Molti sistemi sembrano ordinati finché non arriva una situazione concreta: appena compare un incidente o un dubbio su dati e modelli, tutti scoprono che nessuno sa davvero chi decide. Nell'IA la chiarezza dei ruoli è ancora più importante, perché le decisioni si distribuiscono tra funzioni diverse.",
+  "punti": [
+   { "h": "Non basta la responsabilità generica", "d": "Serve capire chi ha potere decisionale, chi approva, chi consulta, chi informa e chi fa escalation. In un sistema di scoring su rimborsi anomali, se nessuno ha l'autorità chiara per sospenderlo quando emergono distorsioni, tutti vedranno il problema ma nessuno lo fermerà in tempo." },
+   { "h": "Organo di governo e alta direzione", "d": "Non tutte hanno strutture complesse, ma qualcuno deve essere responsabile di prestazioni e conformità e qualcuno deve assicurare risorse e indirizzo coerenti. Nelle realtà piccole più ruoli convivono; nelle grandi la difficoltà è la frammentazione: molti nomi, poca responsabilità effettiva." },
+   { "h": "Il test dell'incidente", "d": "Se domani accade un incidente su un sistema di IA, l'organizzazione sa chi va avvisato, chi valuta l'impatto, chi autorizza le azioni immediate e chi comunica verso l'esterno? Se la risposta è vaga, la governance non è matura. Attenzione anche ai conflitti di ruolo, senza contrappesi diventano autoreferenzialità." },
+   { "h": "Da ruoli nominali a responsabilità osservabili", "d": "Non basta nominare un referente IA: devi vedere che cosa approva, quali informazioni riceve, che decisioni può prendere e quali evidenze lascia. Le migliori prove non sono matrici o mansionari, ma verbali di approvazione, registri di modifica, criteri di escalation e decisioni motivate." }
+  ]
+ },
+ {
+  "id": "42001_m07_s006",
+  "layout": "punti",
+  "kicker": "Politiche e governance · 3",
+  "titolo": "Allineamento: governance, obiettivi e parti interessate",
+  "intro": "Definire ruoli e responsabilità è necessario ma non sufficiente. La governance funziona davvero solo quando è allineata agli obiettivi, ai processi esistenti e alle aspettative delle parti interessate. Questo evita un errore comune: creare una micro struttura dedicata all'IA che lavora in parallelo al resto, mentre prodotto, operations, legale, acquisti e assistenza si muovono con logiche separate.",
+  "punti": [
+   { "h": "L'IA entra nei processi ordinari", "d": "Se c'è pianificazione strategica, l'IA vi compare con obiettivi chiari; se esiste un processo di rischio, l'IA ne fa parte; se ci sono regole per modifiche e rilasci, i sistemi di IA le seguono; se si gestiscono incidenti, anche quelli legati a dati, modelli o decisioni assistite." },
+   { "h": "Equilibrio tra innovazione e controllo", "d": "Senza equilibrio si oscilla tra due estremi: bloccare tutto per timore, rallentando iniziative valide, o lasciar partire soluzioni non presidiate sperando che i problemi emergano tardi. I controlli, letti con la guida B, invitano a regole proporzionate al caso d'uso e al rischio." },
+   { "h": "Cerca i collegamenti", "d": "La politica è richiamata negli obiettivi? Gli obiettivi influenzano le approvazioni? Le approvazioni sono collegate ai rischi? I rischi guidano risorse e monitoraggio? Le segnalazioni dei clienti ritornano nel riesame? Se trovi collegamenti la governance è viva; se trovi compartimenti stagni, è fragile." },
+   { "h": "Anche la comunicazione interna", "d": "Le persone devono sapere non solo chi è responsabile, ma quando coinvolgere altri, quali criteri seguire e quali limiti rispettare. Il salto di maturità avviene quando la governance dell'IA smette di essere questione del solo team tecnico e diventa tema di direzione e coordinamento." }
+  ]
+ },
+ {
+  "id": "42001_m07_s007",
+  "layout": "cards",
+  "kicker": "Politiche e governance · 4",
+  "titolo": "Un esempio completo: la governance di Nova Servizi",
+  "intro": "Nova Servizi offre una piattaforma per gestire richieste di assistenza tecnica e introduce un'IA che suggerisce priorità, categorie e risposte agli operatori. La direzione approva una politica che collega l'IA a tre obiettivi — ridurre i tempi di presa in carico, mantenere qualità, garantire uso responsabile. Ma la differenza emerge nella governance: non un referente unico, un piccolo assetto decisionale che rende osservabili responsabilità e autorità.",
+  "cards": [
+   { "h": "I proprietari delle decisioni", "d": "Il responsabile del servizio clienti è proprietario del processo e approva l'uso nel flusso operativo; il responsabile tecnico gestisce integrazione, test e monitoraggio; legale e conformità valutano obblighi, informazioni e segnalazioni; gli acquisti presidiano il rapporto col provider del modello." },
+   { "h": "Reagire in modo coordinato", "d": "Se dopo un aggiornamento del fornitore il sistema propone risposte errate, il team tecnico apre l'analisi, il responsabile di processo limita il suggerimento automatico, il legale valuta impatti da comunicare, un comitato decide se sospendere funzionalità, gli operatori ricevono istruzioni chiare. Non la perfezione, la capacità di reagire." },
+   { "h": "Le evidenze coerenti", "d": "Politica approvata e diffusa, ruoli formalizzati, criteri di approvazione dei cambiamenti, verbali del comitato, registri degli incidenti, piano di formazione, contratti col fornitore, riesami periodici delle prestazioni. Se raccontano la stessa storia la governance è credibile; se ognuno racconta una versione diversa, è un segnale debole." },
+   { "h": "Calibrare le aspettative", "d": "L'esempio non impone a tutti di creare un comitato: in una realtà piccola possono bastare meno persone. Il principio resta identico: decisioni con proprietari riconoscibili, flussi di escalation e prove di esercizio. Non cerchi una forma unica, cerchi una governance capace di guidare il comportamento reale." }
+  ]
+ },
+ {
+  "id": "42001_m07_s008",
+  "layout": "numeri",
+  "kicker": "Risorse · 1",
+  "titolo": "Risorse per i sistemi di IA: che cosa governare",
+  "intro": "Un sistema di gestione può avere intenti ottimi, ma senza risorse adeguate non realizza ciò che promette. Nell'IA la parola risorse va letta in senso ampio: tutto ciò che rende possibile sviluppare, fornire, utilizzare, monitorare e migliorare un sistema in modo affidabile. Non basta che una risorsa esista: deve essere sufficiente rispetto ai rischi e agli obiettivi, e disponibile quando serve, non solo in fase di progetto. Cinque famiglie.",
+  "numeri": [
+   { "n": "1", "h": "I dati", "d": "Alimentano sviluppo, configurazione, test, esercizio e monitoraggio. Sono il carburante di ogni fase: senza dati adeguati alla finalità, tutto il resto si indebolisce." },
+   { "n": "2", "h": "Gli strumenti", "d": "Ambienti software, componenti, piattaforme e servizi di supporto. Se una piattaforma è avanzata ma nessuno la governa con i dati e le verifiche giuste, lo strumento da solo non basta." },
+   { "n": "3", "h": "I sistemi", "d": "Infrastrutture, integrazioni, basi informative e meccanismi di controllo operativo. Il comportamento reale dipende spesso dall'intero contesto, non dal solo modello." },
+   { "n": "4", "h": "Le competenze", "d": "Senza le quali gli altri elementi restano inutilizzati o usati male. Un sistema che incide su decisioni rilevanti richiede competenze più robuste di uno a basso impatto." },
+   { "n": "5", "h": "Il tempo organizzativo", "d": "La capacità reale di presidiare verifica, riesame, gestione delle anomalie e aggiornamento della documentazione. Spesso il progetto viene finanziato ma la gestione ordinaria no: la risorsa manca proprio nel funzionamento quotidiano." }
+  ]
+ },
+ {
+  "id": "42001_m07_s009",
+  "layout": "split",
+  "kicker": "Risorse · 2",
+  "titolo": "Dati, strumenti e sistemi: risorse da rendere tracciabili",
+  "lead": "Quando un'organizzazione dice di avere le risorse necessarie, la domanda è inevitabile: quali sono esattamente e come vengono tenute sotto controllo? Qui entra la tracciabilità, non come mania documentale ma come condizione per governare. Se non sai quali dati alimentano il sistema, quali strumenti lo supportano e quali sistemi lo ospitano, diventa difficile capire responsabilità, limiti, effetti di un cambiamento e impatti di un incidente.",
+  "punti": [
+   { "h": "I dati come risorsa strategica", "d": "Non basta «usiamo dati interni» o «dati del cliente»: serve sapere da dove provengono, a quali finalità sono associati, come vengono preparati, con quale qualità minima e con quali vincoli d'uso." },
+   { "h": "Gli strumenti da identificare", "d": "Motori di sviluppo, librerie, servizi di annotazione, piattaforme di test, strumenti di osservabilità, interfacce applicative, servizi esterni di inferenza. Se non sono identificati con chiarezza, ogni problema diventa più difficile da ricostruire." },
+   { "h": "Il sistema è più del modello", "d": "Il comportamento effettivo dipende dall'intero contesto: basi informative collegate, filtri, logiche di instradamento, controlli di accesso, sistemi che registrano gli eventi, applicazioni che presentano gli output. Con tracciabilità debole, di fronte a risultati incoerenti nessuno sa se il difetto nasce dal modello del fornitore, dai dati o dalla configurazione." },
+   { "h": "Documentare significa mantenere l'utile", "d": "Non scrivere qualunque cosa in un repository, ma tenere informazioni utili, controllate e accessibili: quale servizio esterno si usa, chi lo ha approvato, quali limiti sono noti, quali cambiamenti valutare, chi riceve le comunicazioni del fornitore. Chi governa bene sa raccontare le proprie risorse con precisione e semplicità." }
+  ]
+ },
+ {
+  "id": "42001_m07_s010",
+  "layout": "punti",
+  "kicker": "Risorse · 3",
+  "titolo": "Competenze e documentazione: governare le risorse umane",
+  "intro": "La competenza non coincide con il possesso di nozioni né con l'aver seguito un corso: conta la capacità dimostrata di applicare conoscenze e abilità nel ruolo assegnato, prendendo decisioni coerenti e gestendo bene situazioni ordinarie e critiche. Lo spostamento è decisivo, perché porta l'attenzione dal sapere astratto al comportamento osservabile. E le competenze da presidiare non sono tutte dello stesso tipo.",
+  "punti": [
+   { "h": "Tecniche, operative, decisionali", "d": "Alcune sono tecniche (configurazione, test, monitoraggio, analisi degli errori), altre operative (uso corretto degli output, gestione delle eccezioni, escalation), altre decisionali (valutazione dei rischi, approvazione dei cambiamenti, lettura delle prestazioni). La prima domanda non è chi sa di IA, ma quali competenze servono per ogni ruolo." },
+   { "h": "La mappa non si ferma all'IT", "d": "Include chi approva, chi usa, chi controlla, chi comunica e chi gestisce incidenti. Se il team tecnico configura bene ma i responsabili di processo non sanno leggere i limiti delle prove e approvano il rilascio come se il sistema fosse affidabile ovunque, manca la competenza decisionale, altrettanto necessaria." },
+   { "h": "Verificare l'efficacia dopo la formazione", "d": "Dopo la formazione iniziale, conviene verificare che le persone abbiano compreso limiti, casi di eccezione e criteri di escalation, con affiancamento, riesame di casi reali, osservazione o brevi prove. Se un operatore tratta l'output come un verdetto automatico, non si risolve con un altro attestato: si corregge il comportamento." },
+   { "h": "Cerca la prova nel comportamento", "d": "Un elenco di corsi frequentati è un'evidenza parziale. Competenze collegate a ruoli, limiti d'uso chiariti, esempi di gestione corretta delle eccezioni e aggiornamenti dopo incidenti o cambiamenti rendono il presidio credibile: rendono osservabile che chi opera sul sistema sa farlo con responsabilità." }
+  ]
+ },
+ {
+  "id": "42001_m07_s011",
+  "layout": "split",
+  "kicker": "Risorse · 4",
+  "titolo": "Informazioni documentate: trasformare le risorse in governo reale",
+  "lead": "Le risorse non coincidono con il possesso di tecnologia o con persone motivate. Per governarle serve renderle leggibili attraverso informazioni documentate utili, aggiornate e controllate. Non conta solo il formato, ma la capacità di spiegare come una risorsa viene usata, da chi, con quali limiti ed evidenze. Nell'IA questo pesa molto, perché dati, strumenti, sistemi e competenze cambiano rapidamente: se il cambiamento non lascia traccia, la governance perde continuità.",
+  "punti": [
+   { "h": "Una rete minima ma robusta", "d": "Descrizione del caso d'uso, perimetro del sistema, fonti dei dati, strumenti impiegati, criteri di approvazione, ruoli, competenze attese, istruzioni d'uso, modalità di monitoraggio, gestione delle anomalie, rapporti coi fornitori. Se una risorsa è critica per un obiettivo o un rischio rilevante, devi poterla spiegare con chiarezza." },
+   { "h": "Mostra come il controllo vive nel tempo", "d": "Una matrice delle responsabilità coerente con le approvazioni reali, un registro delle modifiche collegato ai test, un piano di formazione collegato ai ruoli confermano il funzionamento. File isolati e senza relazione tra loro rischiano di esistere solo come traccia formale." },
+   { "h": "Governato o dipendente dalla memoria", "d": "Chi mantiene inventario dei componenti, dati che alimentano il modello, criteri di priorità, casi di correzione e incidenti con le azioni adottate capisce cosa è successo e chi ha deciso. Chi affida quasi tutto all'esperienza di pochi specialisti scopre vuoti improvvisi appena cambiano ruolo o fornitore." },
+   { "h": "Documentare non è congelare", "d": "Le informazioni devono seguire il ciclo di vita: vanno aggiornate quando cambiano dati, configurazioni, responsabilità o limiti d'uso. Conviene definire chi aggiorna cosa, quando e con quale approvazione: un presidio semplice che evita incoerenze poi difficili da spiegare." }
+  ]
+ },
+ {
+  "id": "42001_m07_s012",
+  "layout": "timeline",
+  "kicker": "Ciclo di vita · 1",
+  "titolo": "Il ciclo di vita dei sistemi di IA: una vista continua",
+  "intro": "La norma richiama il ciclo di vita senza imporre un unico modello: ogni organizzazione combina schemi adatti ai propri casi d'uso, purché governi rischi, cambiamenti e prestazioni in modo coerente. Ma proprio la varietà rende pericolosa una visione frammentata: se ogni fase viene trattata da sola, il sistema appare ordinato e resta fragile. Conviene leggerlo come una catena continua di punti di controllo collegati.",
+  "tappe": [
+   { "t": "01", "h": "Requisiti", "d": "Il momento più decisivo e spesso meno visibile: che cosa il sistema deve fare, con quali limiti e con quale senso organizzativo. Una scelta debole qui produce problemi in ogni fase successiva." },
+   { "t": "02", "h": "Progettazione", "d": "Dà forma ai requisiti: architettura del flusso, componenti, integrazioni, punti di controllo, supervisione. Una progettazione poco chiara rende superficiale la validazione." },
+   { "t": "03", "h": "Verifica e validazione", "d": "Il sistema è costruito come previsto ed è adatto all'uso reale? Prepara il rilascio, ma può riattivarsi ogni volta che cambiano dati, modelli o condizioni." },
+   { "t": "04", "h": "Rilascio", "d": "Non un semplice atto tecnico, una decisione di governo: qualcuno dichiara, su evidenze, che il sistema è pronto, con limiti chiari e responsabilità assegnate. Un rilascio affrettato complica il funzionamento." },
+   { "t": "05", "h": "Funzionamento", "d": "Il sistema incontra utenti, dati vivi, pressioni operative. È dove emergono deviazioni, usi imprevisti e piccoli errori ripetuti, e dove molti controlli mostrano valore o debolezza." },
+   { "t": "06", "h": "Monitoraggio", "d": "Un monitoraggio povero impedisce di imparare. È la cerniera che riporta ai requisiti, alla progettazione o al rilascio: chi governa bene usa ciò che osserva per correggere la rotta." }
+  ]
+ },
+ {
+  "id": "42001_m07_s013",
+  "layout": "punti",
+  "kicker": "Ciclo di vita · 2",
+  "titolo": "Requisiti e progettazione: decidere bene prima di costruire",
+  "intro": "Molti team partono dallo strumento o dal modello disponibile: comprensibile, ma tra gli errori più costosi. Il punto decisivo arriva prima: chiarire i requisiti e tradurli in una progettazione coerente. Prima di costruire conviene decidere almeno cinque cose: l'obiettivo reale del caso d'uso, le decisioni che il sistema influenzerà, i limiti accettabili, chi manterrà la supervisione umana, quali dati, strumenti e competenze serviranno.",
+  "punti": [
+   { "h": "Il requisito orienta tutto il resto", "d": "Se l'obiettivo è solo smistare più in fretta, il progetto segue una logica; se è anche evitare errori nelle priorità dei casi urgenti, cambiano requisiti, dati, criteri di prova, limiti e supervisione. Il requisito non è una frase generica, è ciò che orienta tutto il resto." },
+   { "h": "Non solo funzionalità", "d": "Una buona raccolta guarda anche ad aspettative delle parti interessate, rischi prevedibili, qualità attesa dei dati, interfacce con altri sistemi, necessità di spiegare gli output, gestione delle eccezioni, responsabilità decisionali e condizioni di sospensione. Se non emergono all'inizio, tornano dopo come problemi più costosi." },
+   { "h": "Progettare l'intero sistema", "d": "Progettazione in senso ampio: architettura del flusso, componenti, integrazione, regole di accesso, punti di controllo, supervisione, criteri di valutazione — non solo il modello. Con componenti esterni contano anche limiti contrattuali, comunicazioni del fornitore, dipendenze e possibilità di sostituzione." },
+   { "h": "Il rovesciamento da riconoscere", "d": "Se la progettazione è matura, ogni scelta tecnica risale a un requisito comprensibile. Se il sistema nasce attorno a uno strumento già disponibile, spesso il requisito viene riscritto dopo per giustificare la soluzione: un segnale debole, perché produce controlli poco convincenti. La progettazione è dove l'uso responsabile diventa struttura." }
+  ]
+ },
+ {
+  "id": "42001_m07_s014",
+  "layout": "confronto",
+  "kicker": "Ciclo di vita · 3",
+  "titolo": "Verifica e validazione: provare il sistema nel modo giusto",
+  "intro": "Due idee vicine ma non coincidenti, che rispondono a domande diverse. Puoi avere un sistema verificato con cura e comunque inadatto al contesto, oppure un caso d'uso ben compreso ma una realizzazione incoerente: entrambe generano rischio. Nell'IA la distinzione conta ancora di più, perché i risultati possono apparire convincenti anche quando sono fragili.",
+  "a": {
+   "h": "La verifica",
+   "sub": "Costruito come previsto?",
+   "punti": [
+    { "d": "Controlla la correttezza rispetto al progetto: le regole di integrazione sono corrette, il modello carica i dati attesi, gli output vengono registrati, le autorizzazioni di accesso sono coerenti. Utile e necessaria, ma non basta." },
+    { "d": "Un sistema può mostrare buone prestazioni su dati di prova ordinati e poi degradare appena incontra casi ambigui, dati incompleti o comportamenti non visti." }
+   ]
+  },
+  "b": {
+   "h": "La validazione",
+   "sub": "Adatto all'uso reale?",
+   "punti": [
+    { "d": "Guarda l'adeguatezza rispetto all'uso: le categorie sono utili ai tecnici, i casi urgenti intercettati con affidabilità, i suggerimenti comprensibili, gli operatori sanno correggerli, il sistema resta adeguato quando le richieste cambiano. Non riguarda solo il modello, ma l'intero processo." },
+    { "d": "Anche la supervisione umana va provata sul campo: l'interfaccia la rende possibile, il tempo operativo la consente, la persona sa quando deve intervenire. Un segnale di maturità è la revisione indipendente o il confronto tra ruoli diversi." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m07_s015",
+  "layout": "split",
+  "kicker": "Ciclo di vita · 4",
+  "titolo": "Rilascio e modifiche: entrare in esercizio senza perdere il controllo",
+  "lead": "Superare verifica e validazione non significa che il lavoro sia finito: puoi valutare il passaggio più delicato, il rilascio nell'operatività reale. Un sistema che funziona bene in ambiente controllato incontra finalmente utenti, dati vivi, integrazioni complete, vincoli di tempo e pressioni. Il rilascio non è un atto tecnico, è una decisione di governo: qualcuno dichiara, su evidenze, che il sistema è pronto, con limiti chiari e responsabilità assegnate.",
+  "punti": [
+   { "h": "Cosa controllare prima del rilascio", "d": "Che requisiti e criteri di accettazione siano soddisfatti o le deviazioni residue comprese; che gli utenti sappiano usare il sistema, interpretarne gli output e gestire le eccezioni; che esistano canali per segnalazioni, incidenti e correzioni; che le informazioni documentate siano aggiornate." },
+   { "h": "I servizi esterni sono parte del rilascio", "d": "Un rilascio è debole se nessuno ha chiarito come ricevere avvisi dal fornitore, come gestire un cambiamento improvviso del servizio, chi autorizza la sospensione e quali messaggi dare agli operatori in caso di comportamento anomalo. Il rapporto con i fornitori è continuità di governo." },
+   { "h": "Modifiche ordinarie e rilevanti", "d": "Il cambiamento non arriva solo da un aggiornamento interno, ma da dati, configurazioni, ambiente, prompt, integrazioni esterne. Le modifiche ordinarie seguono un percorso snello, le rilevanti richiedono nuova valutazione, approvazione ed eventuali prove: non irrigidire tutto, ma evitare che cambiamenti minori alterino comportamento e rischi." },
+   { "h": "Saper fermarsi è maturità", "d": "Cerca registri di modifica, criteri di autorizzazione, verbali di rilascio, istruzioni aggiornate, comunicazioni agli utenti, piani di ritorno alla configurazione precedente e casi in cui un rilascio sia stato rinviato o condizionato. Quando un'organizzazione sa fermarsi, i controlli contano più della fretta." }
+  ]
+ },
+ {
+  "id": "42001_m07_s016",
+  "layout": "numeri",
+  "kicker": "Ciclo di vita · 5",
+  "titolo": "Funzionamento operativo: supervisione, limiti, eccezioni",
+  "intro": "Quando il sistema entra in uso quotidiano diventa parte del lavoro reale. Non basta che produca output: devi capire come vengono usati, da chi, con quale fiducia e con quali possibilità di correzione. La supervisione è la parola chiave, non perché ogni risultato vada riesaminato, ma perché l'organizzazione deve sapere dove il controllo umano resta necessario. Governare il funzionamento vuol dire rendere esplicite almeno quattro cose.",
+  "numeri": [
+   { "n": "1", "h": "I limiti noti", "d": "Quali sono i limiti del sistema. Se le istruzioni sono vaghe, molti iniziano a trattare l'output come già corretto e gli errori ripetuti passano come normali eccezioni operative senza essere segnalati." },
+   { "n": "2", "h": "Quando confermare o correggere", "d": "Quando l'utente deve confermare, correggere o ignorare il risultato. Anche l'interfaccia conta: se l'utente non capisce da dove arriva un suggerimento o non ha modo semplice di segnalare un problema, la supervisione umana resta teorica." },
+   { "n": "3", "h": "Come gestire le anomalie", "d": "Come si gestiscono anomalie, reclami e quasi incidenti. Un presidio molto utile sono le deroghe: renderle visibili, non vietarle. Se le eccezioni crescono settimana dopo settimana, il sistema, le istruzioni o i dati non rappresentano più bene la realtà." },
+   { "n": "4", "h": "Chi riceve e decide", "d": "Chi riceve queste informazioni e come le usa per decidere. Il funzionamento quotidiano è anche dove si manifestano i rapporti coi fornitori: un ritardo di servizio o un cambiamento della piattaforma esterna produce effetti immediati, e chi governa bene ha canali per rilevarli e reagire." }
+  ]
+ },
+ {
+  "id": "42001_m07_s017",
+  "layout": "numeri",
+  "kicker": "Ciclo di vita · 6",
+  "titolo": "Monitoraggio continuo: restare adatti nel tempo",
+  "intro": "Un sistema di IA non resta affidabile per inerzia: anche con requisiti, prove e rilascio ben gestiti, il contesto continua a muoversi. Il monitoraggio è il presidio che permette di capire se il sistema resta coerente con il suo scopo. La norma collega le prestazioni sia ai risultati ottenuti con i sistemi di IA sia ai risultati del sistema di gestione. Conviene monitorare almeno tre famiglie di segnali.",
+  "numeri": [
+   { "n": "1", "h": "La qualità dell'output nel tempo", "d": "Errori, correzioni, tempi, esiti: misure dirette che osservano il comportamento del sistema. Se le correzioni manuali aumentano in un segmento specifico e nessuno lo osserva, il problema può estendersi e compromettere il servizio." },
+   { "n": "2", "h": "L'uso che le persone ne fanno", "d": "Misure indirette che osservano segnali organizzativi: aumento dei reclami, maggior ricorso alle deroghe, diminuzione della fiducia degli operatori, crescita delle segnalazioni al supporto interno. Spesso rivelano per prime che qualcosa non funziona più come previsto." },
+   { "n": "3", "h": "Gli eventi di cambiamento o rischio", "d": "Segnali che indicano cambiamento o rischio crescente. La domanda forte: quando il sistema peggiora, come se ne accorge l'organizzazione? Un monitoraggio serio non registra soltanto, trasforma i segnali in decisioni — formazione, nuova prova, revisione del caso d'uso, intervento sul fornitore, sospensione." }
+  ]
+ },
+ {
+  "id": "42001_m07_s018",
+  "layout": "split",
+  "kicker": "Dati · 1",
+  "titolo": "Acquisizione, fonti e perimetro d'uso",
+  "lead": "I dati non sono solo un input tecnico: influenzano progettazione, risultati, spiegazioni possibili, rischi e qualità del controllo. Il primo passo non è accumulare il più possibile, ma capire quali dati servono davvero, da dove arrivano e a quali condizioni possono essere usati. L'acquisizione non è un atto neutro: ogni fonte porta con sé vantaggi, limiti e responsabilità, e la disponibilità non equivale a idoneità.",
+  "punti": [
+   { "h": "Ogni fonte richiede domande diverse", "d": "Dati interni, ricevuti da clienti, ottenuti da fornitori, da sensori, annotati manualmente, da terze parti. Chi è il proprietario operativo? Con quale finalità sono stati raccolti? Il contenuto è coerente col caso d'uso attuale? Esistono vincoli, lacune, errori sistematici o periodi poco rappresentati?" },
+   { "h": "Disponibilità non è idoneità", "d": "Usare dati storici del servizio clienti sembra ottimo, ma i criteri di classificazione erano stabili? Gli operatori hanno trattato allo stesso modo casi simili? Alcune categorie sono state usate troppo o troppo poco? Ci sono periodi in cui le pratiche sono cambiate?" },
+   { "h": "Il perimetro d'uso parte dalla finalità", "d": "Un set nato per misurare volumi di servizio può non essere adatto a guidare decisioni operative più fini. Devi sapere perché stai prendendo quei dati e quale ruolo avranno. Una fonte può essere adatta per esplorare il problema e troppo debole per sostenere un rilascio operativo." },
+   { "h": "Le fonti esterne comode", "d": "Un archivio già preparato fa risparmiare tempo, ma se è stato raccolto in un settore diverso, con lessico o pratiche lontane, introduce fin dall'inizio un disallineamento difficile da correggere. Il controllo non è rifiutarla sempre, ma valutarla con criterio e documentare perché la ritieni adatta o solo parzialmente utile." }
+  ]
+ },
+ {
+  "id": "42001_m07_s019",
+  "layout": "definizione",
+  "kicker": "Dati · 2",
+  "eyebrow": "Non perfezione astratta",
+  "titolo": "La qualità dei dati è adeguatezza al contesto",
+  "definizione": "La norma legge la qualità dei dati come la caratteristica per cui i dati soddisfano i requisiti attesi dall'organizzazione in uno specifico contesto. Il punto decisivo è il riferimento al contesto: non esistono dati perfetti in assoluto, esistono dati più o meno adeguati a uno scopo concreto. La qualità non si misura in astratto, ma rispetto alla decisione che il sistema dovrà supportare.",
+  "punti": [
+   "Ti protegge da due errori opposti: pretendere una perfezione irrealistica che blocca tutto, o accontentarti di dati disponibili ma inadeguati solo perché numerosi. Cambia lo scopo, cambia la qualità attesa: coerenza delle etichette e rappresentatività per una classificazione, completezza e struttura per la ricerca documentale.",
+   "La qualità dipende anche da come i dati vengono selezionati, combinati e letti: un campione sbilanciato, una finestra temporale poco rappresentativa o un'etichettatura senza criteri riduce la qualità anche partendo da fonti buone. Molti dati non compensano dati mal definiti: a volte ne amplificano i difetti.",
+   "Un'organizzazione matura dichiara i limiti residui — alcuni segmenti sono rappresentati peggio e richiedono supervisione più stretta. In verifica: come è stato stabilito che i dati fossero adeguati, chi ha deciso i criteri, sono stati esaminati casi mancanti e incoerenze? Se le risposte sono generiche, la qualità è stata presunta."
+  ]
+ },
+ {
+  "id": "42001_m07_s020",
+  "layout": "punti",
+  "kicker": "Dati · 3",
+  "titolo": "Provenienza e preparazione: trasformare senza perdere controllo",
+  "intro": "Se l'acquisizione dice da dove arrivano i dati, la provenienza aiuta a capire il loro percorso e la preparazione mostra come li hai trasformati prima dell'uso. Nei sistemi di IA i dati raramente entrano così come sono raccolti: vengono selezionati, ripuliti, normalizzati, arricchiti, etichettati, aggregati o esclusi. Ogni scelta può migliorare il risultato, ma può anche alterare il significato originario e introdurre distorsioni. Non sono dettagli tecnici minori: sono governo del rischio.",
+  "punti": [
+   { "h": "Ricostruire la provenienza", "d": "Sapere che un dato viene da un archivio interno non basta: quali passaggi lo hanno portato nel sistema, quali versioni o estrazioni, quali filtri, chi ha autorizzato il riutilizzo. Con dati da fornitori o terze parti, evita di fidarti ciecamente: capisci tracciabilità disponibile, limiti noti, modalità di aggiornamento e conseguenze dei cambiamenti." },
+   { "h": "La preparazione interpreta, non solo pulisce", "d": "Eliminare campi ridondanti, correggere errori, uniformare categorie e scartare casi incompleti sembra ragionevole; ma se nessuno documenta le regole adottate e i loro effetti, sarà difficile capire perché certe tipologie risultino sottorappresentate o mal classificate. Ogni interpretazione può spostare il comportamento del sistema." },
+   { "h": "Etichettatura e fusione di fonti", "d": "Quando persone diverse assegnano etichette senza criteri definiti, il set appare ordinato ma resta incoerente nel profondo. Lo stesso rischio emerge combinando fonti diverse, perché categorie apparentemente equivalenti possono nascondere pratiche operative differenti." },
+   { "h": "Tracciabilità per ridurre i tempi di analisi", "d": "Quando il sistema mostra comportamenti inattesi, poter risalire alle trasformazioni riduce drasticamente tempi e costi. Senza, ogni problema diventa una ricerca faticosa tra file, script e memorie parziali; con tracciabilità, si capisce presto se il difetto nasce dalla fonte, dalla preparazione o dall'uso." }
+  ]
+ },
+ {
+  "id": "42001_m07_s021",
+  "layout": "cards",
+  "kicker": "Dati · 4",
+  "titolo": "Dati documentati: regole, responsabilità e prove",
+  "intro": "Il passaggio che rende tutto governabile nel tempo: documentare decisioni, regole e responsabilità sui dati in modo utile, chiaro e aggiornato. Non per riempire cartelle, ma per evitare che scelte rilevanti restino nella memoria di poche persone, esposte a cambi di ruolo e urgenze. Quando i dati sostengono un sistema di IA, la memoria orale non basta più: serve una base visibile, controllata e collegata al resto del sistema di gestione.",
+  "cards": [
+   { "h": "Cinque elementi da ricostruire", "d": "Quali dati vengono usati, da dove arrivano, con quali criteri sono stati accettati, come sono stati preparati, chi è responsabile delle decisioni più importanti. Se una fonte viene esclusa perché poco rappresentativa o un campo rimosso perché introduce rumore, deve restare una traccia comprensibile." },
+   { "h": "Regole per il presente e il futuro", "d": "Documentare non descrive solo il passato: chi approva una nuova fonte, chi decide se un cambiamento nella preparazione richiede nuove prove, chi controlla che i criteri di qualità restino adeguati, chi aggiorna le informazioni quando cambia una categoria o una dipendenza esterna." },
+   { "h": "Le evidenze che mostrano coerenza", "d": "Un registro delle fonti che coincide con ciò che il team usa davvero, criteri di qualità che compaiono anche nelle prove, decisioni di esclusione motivate e richiamate nelle revisioni. File scollegati, versioni incerte o spiegazioni affidate alla memoria indicano un presidio debole." },
+   { "h": "Un proprietario per ogni insieme di dati", "d": "Non un proprietario formale mai coinvolto, ma una persona o funzione che risponde davvero della fonte: sa come nasce, ne conosce i limiti, approva i riutilizzi, viene consultata quando qualcosa cambia. Quando esiste, le domande sui dati trovano risposte rapide; quando manca, ogni chiarimento costa giorni." }
+  ]
+ },
+ {
+  "id": "42001_m07_s022",
+  "layout": "evidenza",
+  "kicker": "Parti interessate · 1",
+  "eyebrow": "Dire ciò che conta davvero",
+  "titolo": "La trasparenza utile non è quella che dice tutto",
+  "testo": "Trasparenza non vuol dire sommergere persone e clienti con spiegazioni infinite, note tecniche o formule prudenti scritte per proteggersi. Vuol dire fornire informazioni pertinenti, comprensibili e tempestive a chi può essere influenzato dal sistema di IA, da una sua decisione assistita o da un suo malfunzionamento. È quella che permette alle persone di capire il ruolo del sistema, i suoi limiti pratici e i canali disponibili quando qualcosa non torna. Va sempre collegata al contesto: non serve la stessa comunicazione per un suggeritore interno usato da specialisti e per un servizio che interagisce con clienti o cittadini. Ma una regola resta stabile: se il sistema incide sull'esperienza, sulle aspettative o sulle scelte di qualcuno, l'organizzazione dovrebbe poter spiegare quale funzione svolge il sistema, quanto è automatizzato il processo, dove interviene la supervisione umana e come ottenere chiarimenti o segnalare problemi. Un'altra trappola è trattare la trasparenza come un testo unico uguale per tutti: le parti interessate sono diverse e diversi sono i loro bisogni. Un cliente vuole capire cosa aspettarsi, un utente interno ha bisogno di istruzioni operative, un partner chiede chiarimenti su interfacce e limiti di responsabilità. La trasparenza efficace è proporzionata e mirata, e riduce errori d'uso, aspettative irrealistiche e reclami inutili: in questo senso è già un controllo, perché orienta il comportamento di chi sta intorno al sistema."
+ },
+ {
+  "id": "42001_m07_s023",
+  "layout": "cards",
+  "kicker": "Parti interessate · 2",
+  "titolo": "Segnalazioni efficaci: canali, ascolto, presa in carico",
+  "intro": "Non basta dire qualcosa: devi permettere che qualcosa ti venga detto. Un sistema di IA può generare errori, effetti inattesi o dubbi che, raccolti presto, aiutano a correggere la rotta prima che il problema cresca. Una segnalazione utile nasce quando tre condizioni stanno insieme: la persona sa dove rivolgersi, capisce che cosa può segnalare, ha ragionevoli motivi per credere che qualcuno prenderà in carico il messaggio. Se ne manca una, il canale resta simbolico.",
+  "cards": [
+   { "h": "Non solo dai clienti", "d": "Le segnalazioni arrivano anche da operatori interni, supervisori, partner, fornitori, reparti che usano l'output indirettamente. L'utente finale vede l'effetto percepito, l'operatore gli errori ricorrenti, il partner le incongruenze nei flussi, il fornitore i limiti o i cambiamenti del servizio." },
+   { "h": "Canali distinti, instradamento chiaro", "d": "Conviene distinguere canali pubblici, interni e di coordinamento con soggetti esterni. Non servono macchine complesse, serve chiarezza di instradamento e responsabilità di risposta: se le fonti non convergono in un processo leggibile, l'organizzazione raccoglie frammenti senza capire il quadro." },
+   { "h": "La qualità della risposta", "d": "Un canale vale se chi segnala riceve almeno una conferma, se il caso è classificato con criteri comprensibili e se si distingue tra richiesta di chiarimento, anomalia ripetuta, quasi incidente e incidente vero. Non deve essere perfetto al primo colpo, ma gestito da persone che sanno quando alzare l'attenzione." },
+   { "h": "Sensori distribuiti sul campo", "d": "Segnali di maturità: canali visibili e accessibili, istruzioni su cosa segnalare, casi registrati in modo coerente e richiamati nelle correzioni. Moduli poco usati, caselle senza presidio o raccolte informali indicano un controllo fragile. Chi segnala offre un'occasione di governo, non un fastidio operativo." }
+  ]
+ },
+ {
+  "id": "42001_m07_s024",
+  "layout": "flusso",
+  "kicker": "Parti interessate · 3",
+  "titolo": "Comunicazione degli incidenti: reagire presto e spiegare bene",
+  "intro": "Con le anomalie puoi correggere in modo locale e imparare con calma; con un incidente, tempo e chiarezza diventano decisivi. Un incidente può riguardare output errati con effetti rilevanti, un cambiamento inatteso del comportamento, una comunicazione fuorviante, una dipendenza esterna che altera il servizio, un problema nei dati. Non serve una formula rigida, ma la capacità di riconoscere il fatto, valutarne l'impatto, attivare i ruoli e comunicare in modo proporzionato.",
+  "passi": [
+   { "h": "Riconoscere e contenere", "d": "La prima distinzione è tra contenimento e spiegazione. Nel contenimento rientrano le azioni immediate: sospendere una funzione, limitare l'uso, correggere una configurazione, bloccare una fonte di dati, avvisare gli operatori di trattare manualmente certi casi." },
+   { "h": "Avvisare il personale operativo", "d": "Chi lavora in prima linea deve sapere come gestire i casi nell'immediato. Se l'organizzazione si concentra solo sul contenimento tecnico ma lascia utenti e operatori nel dubbio, il danno si prolunga anche dopo la correzione." },
+   { "h": "Valutare la comunicazione esterna", "d": "Quali clienti o utenti informare e con quale livello di dettaglio. Comunicare troppo presto senza aver capito genera messaggi confusi; comunicare troppo tardi erode la fiducia. La maturità sta nell'equilibrio, e con i fornitori serve sapere chi avvisa chi, con quali tempi e con quale autorità." },
+   { "h": "Registrare e provare la risposta", "d": "Registrare l'accaduto e avviare l'analisi delle cause. Un accorgimento che distingue le organizzazioni pronte è la prova periodica: un'esercitazione fa emergere numeri non aggiornati, responsabilità solo teoriche e tempi troppo lunghi. Una procedura mai provata ha un'efficacia semplicemente sconosciuta." }
+  ]
+ },
+ {
+  "id": "42001_m07_s025",
+  "layout": "punti",
+  "kicker": "Uso responsabile · 1",
+  "titolo": "Regole d'uso che cambiano i comportamenti",
+  "intro": "L'uso responsabile non è uno slogan da inserire nella politica: è il modo in cui le persone, giorno dopo giorno, usano il sistema entro limiti comprensibili, con attenzione ai rischi e disponibilità a fermarsi quando qualcosa non torna. Significa trasformare un principio generale in regole operative, comportamenti attesi e controlli osservabili. Se manca questa traduzione, l'organizzazione dichiara grandi intenzioni e produce pratiche deboli.",
+  "punti": [
+   { "h": "Si riconosce da scelte concrete", "d": "Le persone sanno per quali scopi il sistema è ammesso, quali dati non inserire, quando un output va controllato o scartato, che un suggerimento non equivale a una decisione giusta, come segnalare comportamenti inattesi e chi coinvolgere. Queste conoscenze vanno proporzionate al ruolo." },
+   { "h": "Dalla regola vaga alla regola utile", "d": "Se l'unica regola è «usarlo con buon senso», un generatore per bozze commerciali è esposto a errori prevedibili: dati non appropriati nei prompt, testi non verificati, eccessiva fiducia in contenuti solo plausibili. Chiarire che serve a produrre una bozza, che il testo va verificato e che alcune categorie restano a una persona esperta cambia il comportamento." },
+   { "h": "Anche le piccole abitudini quotidiane", "d": "Copiare sempre il suggerimento senza leggerlo, ignorare anomalie perché «di solito funziona», riutilizzare un output in un contesto diverso, saltare le verifiche per fretta. Non nascono da cattiva volontà, ma da istruzioni vaghe e fiducia mal calibrata: i controlli efficaci rendono facile il comportamento giusto e visibile quello rischioso." },
+   { "h": "La chiave è la proporzione", "d": "Riconosci l'uso responsabile quando istruzioni, formazione, interfacce, criteri di escalation e comportamenti raccontano la stessa storia. Troppe regole astratte non adattate al lavoro reale producono disallineamento e aggiramenti: regole chiare, casi d'uso definiti, supervisione dove serve, libertà dove è ragionevole." }
+  ]
+ },
+ {
+  "id": "42001_m07_s026",
+  "layout": "split",
+  "kicker": "Uso responsabile · 2",
+  "titolo": "Fornitori e terze parti: governare ciò che non controlli direttamente",
+  "lead": "Quando il sistema dipende da fornitori o terze parti, il governo diventa più delicato: una parte rilevante delle risorse, dei cambiamenti e dei limiti vive fuori dal perimetro diretto. Spesso l'organizzazione acquista un modello, usa una piattaforma esterna, integra dati di altri o affida attività specialistiche a partner. Se questo ecosistema non è governato, il rischio è semplice: dipendenze molto forti e visibilità troppo bassa su ciò che può cambiare.",
+  "punti": [
+   { "h": "Da chi dipendi e per quali elementi critici", "d": "Modello, infrastruttura, dati, annotazione, monitoraggio, supporto applicativo. E poi la comprensione dei limiti: che cosa sai davvero sul servizio, quali cambiamenti il fornitore può introdurre, come vengono comunicati, quali responsabilità restano comunque in capo alla tua organizzazione." },
+   { "h": "Il difetto esterno, il controllo interno", "d": "Se un servizio esterno di trascrizione aggiorna il motore e peggiora su alcuni accenti, ma non hai definito chi riceve gli avvisi, chi verifica gli impatti, chi può sospendere la funzione e come informare gli operatori, il problema si riversa sul servizio. In apparenza il difetto è esterno, in realtà mancava il governo della dipendenza." },
+   { "h": "Non si ferma al contratto iniziale", "d": "Una buona gestione continua lungo il ciclo di vita: selezione, valutazione, integrazione, monitoraggio, gestione delle modifiche, incidenti, riesame delle prestazioni ed eventuale uscita o sostituzione. Il fornitore comunica in anticipo gli aggiornamenti rilevanti? Esistono criteri per valutarli e prove aggiuntive quando cambia un servizio?" },
+   { "h": "Delegare non trasferisce la responsabilità", "d": "Delegare una componente non trasferisce automaticamente ad altri la responsabilità del risultato nel tuo contesto d'uso: resti responsabile di come la integri, la usi e proteggi clienti, utenti e processi dai suoi limiti. Questa consapevolezza distingue un rapporto maturo da una semplice dipendenza tecnologica." }
+  ]
+ },
+ {
+  "id": "42001_m07_s027",
+  "layout": "tabella",
+  "kicker": "Uso responsabile · 3",
+  "titolo": "Responsabilità condivise lungo il servizio",
+  "intro": "Quando il servizio coinvolge clienti, fornitori e terze parti in modo stabile, decisioni, informazioni ed effetti si distribuiscono su più confini. Il rischio tipico è il rimpallo: il fornitore accusa il cliente, il cliente dice di aver usato correttamente il servizio, chi integra afferma di aver solo messo a disposizione uno strumento. Servono quattro responsabilità esplicite, altrimenti i controlli si perdono proprio nei passaggi di confine.",
+  "cols": ["Responsabilità da presidiare", "Cliente / struttura", "Chi integra il sistema", "Fornitore del motore"],
+  "righe": [
+   ["Per quali scopi il sistema può essere usato", "Usa i suggerimenti entro gli scopi definiti", "Definisce e comunica gli usi ammessi e i limiti", "Dichiara le finalità per cui il servizio è adatto"],
+   ["Controllo dei dati inseriti o trasmessi", "Sa quali dati inserire e con quali cautele", "Fissa criteri di qualità e validazione dei dati", "Rende noti requisiti e limiti sui dati in ingresso"],
+   ["Limiti, segnalazioni e incidenti", "Segnala anomalie con i canali previsti", "Analizza il caso, informa i clienti, coinvolge il motore", "Offre canali per comunicare limiti e supportare le verifiche"],
+   ["Comunicazione di cambiamenti e sospensioni", "Riceve e applica le comunicazioni ricevute", "Valuta l'impatto e informa i soggetti interessati", "Comunica in anticipo cambiamenti e restrizioni del servizio"]
+  ]
+ },
+ {
+  "id": "42001_m07_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 7",
+  "modNum": "7",
+  "titolo": "Leggere i controlli come un sistema vivo",
+  "punti": [
+   { "h": "I controlli sono una rete", "d": "Politiche, ruoli, risorse, ciclo di vita, dati, informazioni alle parti, uso responsabile, fornitori e terze parti si sostengono a vicenda: se un nodo è debole, la rete regge peggio anche dove sembrava robusta. La guida B trasforma i titoli dei controlli in domande di attuazione, responsabilità ed evidenze." },
+   { "h": "Dalla direzione al ciclo di vita", "d": "Tutto comincia da politiche chiare e da una governance che assegna ruoli, autorità e allineamento; poi le risorse — dati, strumenti, sistemi, competenze, informazioni documentate, da descrivere e riesaminare; poi il ciclo di vita, dai requisiti al monitoraggio, perché il controllo non vive in un solo momento." },
+   { "h": "Dati e parti interessate", "d": "I dati come risorsa decisiva: acquisizione, qualità, provenienza, preparazione e documentazione possono rafforzare o indebolire tutto. Verso le parti interessate, trasparenza significa dire bene ciò che conta; le segnalazioni sono sensori preziosi e la comunicazione degli incidenti misura la maturità quando le cose vanno male." },
+   { "h": "Cerca sempre dove lascia traccia", "d": "L'uso responsabile e i rapporti coi fornitori ricordano che delegare o condividere non elimina il governo: la responsabilità cambia forma, non scompare. Quando trovi un controllo dichiarato, chiediti dove lascia traccia — nei ruoli, nelle istruzioni, nelle decisioni, nei riesami. Se non lascia traccia, è più debole di quanto sembri." }
+  ],
+  "prossimo": {
+   "modulo": "8",
+   "titolo": "La valutazione delle prestazioni del SGIA",
+   "testo": "Hai visto i controlli come una rete viva; ora il sistema dovrà mostrare non solo di esistere, ma di funzionare nel tempo, attraverso monitoraggio, misurazione, audit interni e riesame di direzione."
+  }
+ }
+]
