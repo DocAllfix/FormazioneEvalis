@@ -1,0 +1,314 @@
+[
+ {
+  "id": "42001_m01_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 42001 — Sistemi di gestione dell'IA",
+  "kicker": "Modulo 1",
+  "eyebrow": "La bussola prima della tecnica",
+  "titolo": "Perché governare l'IA, e perché adesso",
+  "testo": "Sempre più organizzazioni usano intelligenza artificiale in attività quotidiane, decisive, spesso invisibili a chi guarda da fuori. Il tuo ruolo si allarga: non basta vedere se un processo esiste, devi capire se regge quando dentro opera un sistema che apprende, classifica, suggerisce o decide. Il punto non è inseguire la novità, ma verificare se l'organizzazione governa davvero ciò che mette in produzione, compra da terzi e usa per orientare decisioni. Il corso parte dal contesto, non dagli algoritmi: prima capisci perché serve governo, poi quanto basta di tecnica per verificare con giudizio. La norma che fa da filo, ISO/IEC 42001:2023, colloca l'IA dentro la gestione ordinaria — politica, obiettivi, ruoli, processi, rischi, controlli, monitoraggio, miglioramento — perché il fuoco non è la magia del modello, ma la qualità della governance che lo circonda. E un'idea chiave: l'IA promette molto, ma non porta benefici in automatico. Il mestiere maturo tiene insieme le due facce, valore e rischio.",
+  "agenda": [
+   "Dove l'IA entra davvero nelle organizzazioni",
+   "Benefici, rischi specifici e incidenti realistici",
+   "Perché serve un sistema di gestione, non controlli sparsi",
+   "Il quadro europeo, l'AI Act e la norma certificabile",
+   "Lo schema Auditor e Lead Auditor 42001",
+   "Che cosa riusi da ISO 19011"
+  ]
+ },
+ {
+  "id": "42001_m01_s002",
+  "layout": "numeri",
+  "kicker": "Obiettivi",
+  "titolo": "Che cosa porterai via dal modulo",
+  "intro": "Non avrai solo sentito parlare di una nuova norma: avrai costruito una griglia per leggere l'IA dentro un'organizzazione. Quattro risultati concreti, da tenere come traguardo mentre ascolti.",
+  "numeri": [
+   { "n": "1", "h": "Vedere l'IA come fenomeno organizzativo", "d": "Non un oggetto misterioso, ma insieme di processi, decisioni, dati, ruoli e conseguenze verificabili. Un comune che smista richieste e un produttore con visione artificiale sembrano lontani, ma entrambi devono definire obiettivi, impatti, rischi, fornitori, competenze e monitoraggio." },
+   { "n": "2", "h": "Usare il linguaggio con precisione", "d": "Organizzazione, parte interessata, rischio, requisito, conformità, controllo, prestazioni, miglioramento continuo. Concetti generali e proprio per questo potenti: leggono casi molto diversi con una struttura comune." },
+   { "n": "3", "h": "Distinguere opportunità e rischi", "d": "Senza i due errori opposti: l'entusiasmo ingenuo che vede solo velocità e risparmio, e il rifiuto difensivo che considera ogni applicazione troppo opaca. Riconoscere il valore quando c'è, ma chiedere prove, regole e responsabilità coerenti." },
+   { "n": "4", "h": "Capire perché una norma di sistema cambia il gioco", "d": "Strumenti eccellenti, esperti bravi e qualche controllo isolato non bastano senza una cornice comune. Un buon modello non sostituisce un buon governo: spesso lo rende ancora più necessario." }
+  ]
+ },
+ {
+  "id": "42001_m01_s003",
+  "layout": "flusso",
+  "kicker": "La mappa",
+  "titolo": "Il filo logico del modulo",
+  "intro": "Il modulo ha un ordine intenzionale. Non partiamo dalla conformità né dalla tecnica pura, ma dal lavoro reale delle organizzazioni: se parti dalle clausole senza i casi d'uso, memorizzi etichette; se parti dalla tecnologia, perdi ciò che rende verificabile un sistema — scopo, confini, responsabilità, criteri, evidenze, riesame.",
+  "passi": [
+   { "h": "Dove entra l'IA", "d": "Non solo strumenti appariscenti, ma processi operativi, commerciali, amministrativi e decisionali. E che cosa promette, che cosa può rompere." },
+   { "h": "Perché serve un sistema", "d": "Non controlli sparsi ma una cornice coerente, con le tre parole-bussola: fiducia, trasparenza, responsabilità." },
+   { "h": "Il quadro europeo", "d": "Il contesto regolatorio e il ruolo di ISO/IEC 42001:2023 come norma certificabile, distinta dall'AI Act." },
+   { "h": "Il profilo professionale", "d": "Come si struttura il percorso, quali competenze entrano in gioco, che cosa riusi da ISO 19011. Ogni blocco risponde a una domanda: se le tieni vive, le informazioni si incastrano invece di accumularsi." }
+  ]
+ },
+ {
+  "id": "42001_m01_s004",
+  "layout": "cards",
+  "kicker": "Habitat reale",
+  "titolo": "Dove l'IA entra davvero",
+  "intro": "L'IA entra spesso in modo silenzioso, dentro attività ordinarie e flussi esistenti. Non cercare solo il progetto speciale annunciato dal direttore: cerca i processi dove un sistema classifica, suggerisce, prioritizza, rileva anomalie, genera contenuti o supporta decisioni. Non è un reparto, è una capacità che si infiltra nei processi.",
+  "cards": [
+   { "h": "Nei processi quotidiani", "d": "Commerciale (probabilità d'acquisto, segmentazione), assistenza (smistamento, riassunti, bozze), amministrazione (lettura fatture, incoerenze), produzione (ispezione immagini, manutenzione), HR (preselezioni), logistica (previsione domanda e ritardi)." },
+   { "h": "Spesso invisibile e di terzi", "d": "Un'impresa può dire «no, nessun progetto di IA» in buona fede e usare più servizi con funzioni di IA acquistati da fornitori: priorità automatiche, segmentazione di pubblici, trascrizione, rilevazione anomalie. Il cuore non è il software, è l'effetto sul processo." },
+   { "h": "Cambia la distribuzione del giudizio", "d": "Spesso l'IA non sostituisce una persona: un operatore valida o corregge un suggerimento, un medico riceve una priorità proposta. Può aumentare coerenza, ma spostare la responsabilità in modo confuso — se tutti si fidano, l'errore passa; se nessuno si fida, il beneficio svanisce." },
+   { "h": "Non solo generazione di testo", "d": "Gli strumenti conversazionali hanno reso il fenomeno visibile, ma l'universo è più ampio: classificazione immagini, previsione andamenti, rilevazione deviazioni, ottimizzazione. Regola pratica: guarda i processi, non la vetrina tecnologica." }
+  ]
+ },
+ {
+  "id": "42001_m01_s005",
+  "layout": "numeri",
+  "kicker": "Il valore promesso",
+  "titolo": "Perché le organizzazioni investono",
+  "intro": "Per verificare bene un sistema devi capire perché qualcuno lo ha voluto. Le organizzazioni che durano non introducono l'IA per moda, ma per benefici concreti. Se non capisci la promessa di valore, guardi solo le difese e non comprendi le pressioni che spingono all'adozione.",
+  "numeri": [
+   { "n": "1", "h": "Velocità e scalabilità", "d": "Attività lente o ripetitive eseguite in tempi ridotti — smistare documenti, riassumere testi, estrarre campi. E reggere la crescita dei volumi senza moltiplicare in modo lineare persone e tempi." },
+   { "n": "2", "h": "Coerenza", "d": "Riduce l'oscillazione delle decisioni tra operatori, turni, sedi. Un motore di priorità rende il trattamento più uniforme, meno dipendente dalla fortuna di incontrare un operatore esperto o stanco." },
+   { "n": "3", "h": "Capacità di analisi", "d": "Fa emergere pattern invisibili a occhio nudo — correlazioni inattese, indicatori di guasto, fattori che anticipano ritardi. Il salto da una lettura retrospettiva a una più proattiva." },
+   { "n": "4", "h": "Nuovi servizi", "d": "Non solo migliorare un processo, ma abilitare offerte prima impraticabili: manutenzione predittiva, un canale di risposta più continuo ai cittadini. Ma ogni beneficio porta con sé una domanda di governo: più velocità propaga anche gli errori, più coerenza può irrigidire." }
+  ]
+ },
+ {
+  "id": "42001_m01_s006",
+  "layout": "cards",
+  "kicker": "Il rovescio",
+  "titolo": "Rischi specifici: dove l'IA è fragile",
+  "intro": "Non basta dire che ogni tecnologia porta rischi. Alcune proprietà dell'IA — capacità di apprendere, minore spiegabilità, dipendenza dai dati — possono giustificare salvaguardie particolari. La parola chiave è specificità: non un allarme generico, ma una lettura precisa di ciò che cambia.",
+  "cards": [
+   { "h": "Opacità", "d": "Il sistema produce un esito utile ma senza spiegazione comprensibile. Se l'operatore non capisce perché suggerisce una priorità, fatica a correggerlo; se il cliente riceve un esito penalizzante senza spiegazioni, la contestazione diventa crisi. Una vulnerabilità organizzativa, non solo tecnica." },
+   { "h": "Qualità dei dati", "d": "Dati incompleti, distorti o vecchi degradano il risultato. Spesso non come guasto evidente, ma come lenta deriva: il sistema continua a funzionare ma perde aderenza alla realtà, e l'organizzazione decide fidandosi di una fotografia vecchia del mondo." },
+   { "h": "Cambiamento nel tempo", "d": "Sistemi che apprendono o si aggiornano modificano le prestazioni: ciò che era adeguato ieri può non esserlo domani. Non basta chiedere come il sistema è stato approvato all'inizio — devi capire come viene sorvegliato dopo." },
+   { "h": "Delega cieca", "d": "Le persone si affidano troppo (il suggerimento come verità) o lo ignorano del tutto (svuotando l'investimento). Se il ruolo umano non è chiaro, la formazione è povera e l'escalation è confusa, l'interazione uomo-sistema diventa fonte di errore." }
+  ]
+ },
+ {
+  "id": "42001_m01_s007",
+  "layout": "timeline",
+  "kicker": "Incidenti realistici",
+  "titolo": "Quando un vantaggio diventa problema",
+  "intro": "Gli incidenti aiutano più delle definizioni. Tre storie realistiche: in tutte un'introduzione rapida, un beneficio iniziale visibile, una debolezza di governo che emerge. Cerca non il singolo errore spettacolare, ma la catena di cause organizzative che lo rende possibile — e i segnali deboli che maturano prima dell'esplosione.",
+  "tappe": [
+   { "t": "01", "h": "Candidature ordinate", "d": "Selezione più rapida, poi profili forti scartati: il sistema ha appreso pattern storici sbilanciati. Mancavano verifica periodica, revisione dei dati e responsabilità su chi contesta gli esiti anomali." },
+   { "t": "02", "h": "Priorità di intervento", "d": "Meno code, poi i siti periferici in ritardo: il sistema privilegia impianti ricchi di dati. Dati non omogenei, nessun controllo sugli effetti distributivi, fiducia eccessiva negli indicatori aggregati." },
+   { "t": "03", "h": "Assistente conversazionale", "d": "Adozione velocissima, poi un quasi-incidente: dati confidenziali inseriti nel prompt. Regole vaghe, formazione superficiale, confini d'uso mai chiariti. Il controllo è arrivato dopo l'entusiasmo, non prima." }
+  ]
+ },
+ {
+  "id": "42001_m01_s008",
+  "layout": "definizione",
+  "kicker": "Il cuore",
+  "eyebrow": "Non barriere isolate, un circuito",
+  "titolo": "Perché serve un sistema di gestione",
+  "definizione": "Un sistema di gestione è un insieme di elementi collegati per definire politica, obiettivi e processi necessari a conseguire risultati. Applicato all'IA non basta un buon strumento o un responsabile motivato: serve che l'organizzazione chiarisca perché usa l'IA, entro quali confini e responsabilità, con quali rischi, come controlla e migliora nel tempo.",
+  "punti": [
+   "I problemi non nascono da un solo punto: coinvolgono obiettivi, processi, dati, persone, fornitori, ruoli, monitoraggio. Iniziative isolate, magari brillanti ma scollegate, producono difese fragili.",
+   "La norma insiste sul contesto: esigenze, obiettivi e aspettative delle parti interessate cambiano l'attuazione. Un ospedale, un produttore e un comune non copiano la stessa soluzione, ma condividono la stessa disciplina di fondo.",
+   "Non è questione di apparati enormi: anche un'organizzazione piccola può avere processi essenziali, responsabilità chiare, controlli adeguati e riesami periodici. La questione è essere proporzionati e consapevoli.",
+   "Finché parli di strumenti resti in superficie; quando parli di sistema vedi le interdipendenze. Come un'orchestra: modelli, dati, persone e fornitori devono suonare insieme, o il rumore sembra musica solo per poco."
+  ]
+ },
+ {
+  "id": "42001_m01_s009",
+  "layout": "split",
+  "kicker": "La bussola",
+  "titolo": "Fiducia, trasparenza, responsabilità",
+  "lead": "Molte discussioni si bloccano sulla parola «fiducia». Qui la rendiamo concreta: non entusiasmo per la tecnologia, ma poter contare, con ragionevole sicurezza, sul fatto che l'organizzazione usi i sistemi in modo responsabile e attento agli effetti. La fiducia è un esito organizzativo, nasce da pratiche osservabili — e non sono temi di sola immagine, hanno effetti operativi fortissimi.",
+  "punti": [
+   { "h": "Fiducia", "d": "Un esito, non uno slogan. Un team che non si fida di uno strumento lo aggira o corregge tutto a mano; uno che si fida troppo lo segue anche quando dovrebbe fermarsi. Nasce da sicurezza, correttezza, qualità dei dati e dei sistemi lungo il ciclo di vita." },
+   { "h": "Trasparenza", "d": "Non spiegare la matematica a chiunque, ma dare a ciascun ruolo comprensione sufficiente: chi usa sa cosa fa e quali limiti ha; chi governa sa dove si applica e quando revisionarlo; chi ne subisce gli effetti riceve comunicazioni comprensibili." },
+   { "h": "Responsabilità", "d": "Nessuna terra di nessuno: qualcuno risponde del perché il sistema è usato, del come è mantenuto, del controllo degli impatti, delle competenze, della relazione col fornitore. Non concentrare tutto in una figura, ma evitare che al primo problema il tema sia sempre «di un altro ufficio»." },
+   { "h": "Domande operative", "d": "Perché dovrei fidarmi di questo uso? Chi capisce abbastanza da governarlo? Chi risponde delle sue scelte ed effetti? Non domande filosofiche, ma domande che orientano la ricerca di evidenze." }
+  ]
+ },
+ {
+  "id": "42001_m01_s010",
+  "layout": "evidenza",
+  "kicker": "Innovazione e controllo",
+  "eyebrow": "Un falso bivio",
+  "titolo": "Governare senza frenare",
+  "testo": "L'obiezione più frequente è che formalizzare troppo rallenti l'innovazione. Ma è un falso bivio — da una parte libertà creativa, dall'altra controllo soffocante. Nella pratica matura, le organizzazioni che innovano meglio sono proprio quelle che chiariscono scopo, confini, responsabilità e criteri di monitoraggio: non perché amino la burocrazia, ma perché sanno che l'assenza di metodo produce corse veloci all'inizio e frenate brusche ai primi problemi seri. ISO/IEC 42001:2023 non è un freno alla sperimentazione, ma una struttura che consente di usare l'IA in modo responsabile, collocandola nei processi e nell'assetto di governo — non in un angolo separato gestito solo da specialisti. L'equilibrio si gioca su proporzione e continuità: non lo stesso presidio cieco per ogni caso d'uso, e non una valutazione una tantum ma una pratica che accompagna il ciclo di vita, perché dati, fornitori e comportamento del sistema cambiano. C'è anche un effetto culturale: quando la struttura è chiara, team tecnici e di business collaborano meglio, e il sistema di gestione diventa una traduzione organizzativa che trasforma questioni tecniche in responsabilità, decisioni e controlli comprensibili."
+ },
+ {
+  "id": "42001_m01_s011",
+  "layout": "punti",
+  "kicker": "Il quadro europeo",
+  "titolo": "Dove si colloca il governo dell'IA",
+  "intro": "La governance non vive nel vuoto. In Europa l'IA è osservata anche come tema di responsabilità, tutela delle persone e affidabilità dei servizi. Quando valuti un'organizzazione, non guardi l'uso dell'IA come episodio isolato: lo collochi in un ambiente di regole, aspettative, contratti e pressioni reputazionali.",
+  "punti": [
+   { "h": "Piani diversi che si sommano", "d": "Leggi e regolamenti (obblighi), norme tecniche (struttura volontaria e utile), regole settoriali, impegni contrattuali, politiche interne, richieste dei clienti. Se le leggi dicono il minimo dovuto, il sistema di gestione trasforma quel quadro in pratica governabile." },
+   { "h": "Vicino alle decisioni reali", "d": "Non solo laboratori avanzati: aziende che classificano candidature, banche che filtrano richieste, ospedali che supportano priorità, enti che smistano pratiche. Più l'IA si avvicina a decisioni che incidono sulla vita, più il contesto conta." },
+   { "h": "Non solo il prodotto", "d": "L'attenzione europea guarda anche il processo, la responsabilità, la qualità dei dati, la chiarezza verso le parti interessate, la capacità di dimostrare controllo nel tempo. Dialoga bene con l'idea di sistema di gestione." },
+   { "h": "Una governance trasversale", "d": "Nessuna organizzazione seria risolve il tema con un solo documento o referente: legale, sicurezza delle informazioni, qualità, operations, HR, acquisti e direzione devono parlarsi. L'IA è innovazione governata, non sperimentazione lasciata a sé stessa." }
+  ]
+ },
+ {
+  "id": "42001_m01_s012",
+  "layout": "confronto",
+  "kicker": "Due mestieri diversi",
+  "titolo": "L'AI Act e la norma: non confonderli",
+  "intro": "L'AI Act rende visibile un approccio basato sul rischio: non tutti gli usi si guardano allo stesso modo, l'attenzione cresce con gli effetti possibili — un principio che già conosci nei sistemi di gestione. Ma serve una distinzione fondamentale, perché confonderli porta a due errori: pensare che la certificazione basti sul piano legale, o che il regolatorio renda inutile il sistema.",
+  "a": {
+   "h": "AI Act",
+   "sub": "Quadro regolatorio",
+   "punti": [
+    { "d": "Parte del quadro giuridico europeo: definisce un contesto di attese e obblighi. Da professionista lo leggi come segnale forte che l'Europa vuole usi più consapevoli, tracciabili e proporzionati — non un elenco da recitare." },
+    { "d": "Un promemoria metodologico: quando l'uso si avvicina a decisioni sensibili, aspettati maggiori esigenze di governo, più prove di controllo, più trasparenza. E non cancella protezione dati, regole di settore, sicurezza delle informazioni." }
+   ]
+  },
+  "b": {
+   "h": "ISO/IEC 42001:2023",
+   "sub": "Norma tecnica certificabile",
+   "punti": [
+    { "d": "Offre una struttura organizzativa per creare, attuare, mantenere e migliorare un sistema di gestione dell'IA. Non fa lo stesso mestiere del regolatorio: le due cose si completano." },
+    { "d": "I temi ricorrenti — qualità dei dati, chiarezza d'uso, controllo umano, gestione del rischio, documentazione, sorveglianza nel tempo — dialogano bene con la logica di un sistema ben costruito. Vale anche per chi usa servizi di terzi, non solo per i grandi sviluppatori." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m01_s013",
+  "layout": "punti",
+  "kicker": "Norma certificabile",
+  "titolo": "Che cosa la certificazione dice, e non dice",
+  "intro": "ISO/IEC 42001:2023 stabilisce che cosa deve avere un sistema di gestione dell'IA per stare in piedi: come lo costruisci, lo fai funzionare, lo tieni vivo e lo perfezioni, calato nella realtà di ciascuna organizzazione. Certificabile significa che un soggetto indipendente può valutarne la conformità ai requisiti. Da proteggere da due equivoci opposti.",
+  "punti": [
+   { "h": "Non promette output perfetti", "d": "Nessun sistema complesso offre infallibilità assoluta. La certificazione non dice che ogni esito sarà corretto: dice che esiste un sistema di gestione riconoscibile, con responsabilità, controlli e cicli di riesame." },
+   { "h": "Non è inutile", "d": "L'equivoco opposto. Se ben condotta, comunica maturità organizzativa in mercati dove la fiducia conta. Applicabile a qualsiasi organizzazione che fornisca o utilizzi prodotti o servizi con IA, indipendentemente da dimensione e natura — anche chi usa soluzioni acquistate." },
+   { "h": "Dalle intenzioni alle evidenze", "d": "Costringe a passare dal linguaggio delle intenzioni a quello delle prove: non premia la narrativa, premia la consistenza. Dire di avere attenzione alla trasparenza è facile; dimostrare processi, ruoli, criteri e riesami è un'altra cosa." },
+   { "h": "Non sostituisce la responsabilità", "d": "Davanti a un caso concreto, l'organizzazione non può rifugiarsi dietro il certificato: deve spiegare il proprio processo. La certificazione non spegne le domande, le rende più esigenti. È prova di maturità, non una bacchetta magica." }
+  ]
+ },
+ {
+  "id": "42001_m01_s014",
+  "layout": "split",
+  "kicker": "Integrazione",
+  "titolo": "Una norma che si integra",
+  "lead": "La norma nasce in una struttura armonizzata, pensata per allinearsi con altre norme di sistemi di gestione: contesto e leadership, pianificazione e supporto, attività operative, valutazione delle prestazioni e miglioramento. L'organizzazione non deve trattare l'IA come un mondo separato: può inserirla in una grammatica già familiare.",
+  "punti": [
+   { "h": "Perché conta", "d": "Le questioni dell'IA si incrociano subito con qualità, sicurezza delle informazioni, protezione dei dati, continuità operativa. Se ogni area costruisse un sistema chiuso, l'organizzazione diventerebbe un arcipelago di regole che non si parlano." },
+   { "h": "Aggiungere ciò che è specifico", "d": "Un produttore con sistemi già maturi su sicurezza e qualità non crea un'isola nuova: usa la struttura comune e aggiunge ciò che è proprio dell'IA — dipendenza dai dati, opacità possibile, monitoraggio delle prestazioni, rapporto con fornitori specializzati." },
+   { "h": "Un vantaggio per chi verifica", "d": "Con una struttura integrata capisci meglio flussi e responsabilità, vedi dove un rischio nato nell'IA diventa rischio di qualità o di servizio, e dove un controllo esistente copre già parte del bisogno — evitando ridondanze." },
+   { "h": "Integrare non è annacquare", "d": "Se l'organizzazione rinomina processi esistenti senza interrogarsi sulle caratteristiche proprie dei sistemi intelligenti, la compatibilità diventa facciata. Il valore nasce quando il linguaggio comune viene arricchito con domande nuove." }
+  ]
+ },
+ {
+  "id": "42001_m01_s015",
+  "layout": "punti",
+  "kicker": "Il profilo · 1",
+  "titolo": "Dalla norma allo schema professionale",
+  "intro": "Lo schema Auditor e Lead Auditor 42001 non è un requisito della norma: descrive come, nella pratica, si costruisce e si riconosce la competenza di chi valuta un sistema di gestione dell'IA in modo credibile e difendibile. La competenza cresce per livelli.",
+  "punti": [
+   { "h": "Consapevolezza", "d": "Capire perché l'IA cambia il quadro organizzativo, quali rischi e opportunità introduce, perché serve una governance strutturata. La base da cui parte tutto." },
+   { "h": "Lettura dei requisiti", "d": "Collegare i requisiti della norma a processi, ruoli ed evidenze. Un commentatore descrive; un professionista collega requisiti, contesto, criteri, evidenze e conclusioni." },
+   { "h": "Conduzione della verifica", "d": "Pianificazione, interviste, analisi delle informazioni documentate, formulazione delle risultanze. Serve alfabetizzazione tecnica sufficiente, ma soprattutto metodo, domande giuste, sensibilità agli impatti." },
+   { "h": "Non diventare sviluppatore", "d": "Il compito non è sostituire i tecnici, ma capire quanto basta per valutare se l'organizzazione governa bene ciò che sviluppa, acquista o usa. Chi si lascia trascinare nel dettaglio tecnico perde di vista il sistema." }
+  ]
+ },
+ {
+  "id": "42001_m01_s016",
+  "layout": "numeri",
+  "kicker": "Il profilo · 2",
+  "titolo": "Le competenze che rendono credibili",
+  "intro": "La competenza non è un blocco unico, è un equilibrio tra parti diverse. Scomporla aiuta a capire il mestiere e a riconoscere dove sei forte e dove devi crescere.",
+  "numeri": [
+   { "n": "1", "h": "La logica dei sistemi di gestione", "d": "Senza questa base insegui dettagli tecnici senza vedere il disegno. Leggere politica, obiettivi, ruoli, rischi, controlli, monitoraggio e miglioramento come elementi collegati, non caselle separate." },
+   { "n": "2", "h": "Il contesto dell'organizzazione", "d": "Strumenti simili, esigenze di governo diverse: ottimizzare turni interni non è come orientare decisioni su clienti o cittadini. Senza questa sensibilità applichi etichette corrette ma perdi il significato dei controlli." },
+   { "n": "3", "h": "Alfabetizzazione tecnica sufficiente", "d": "Dipendenza e qualità dei dati, limiti di spiegabilità, cambiamento nel tempo, ruolo del fornitore, supervisione umana. Non per fare l'ingegnere, ma per non farti sedurre dal gergo né respingere la tecnica come materia altrui." },
+   { "n": "4", "h": "Capacità relazionale", "d": "Tradurre tra direzione, legale, qualità, sicurezza, HR, data team, fornitore. Quando il tecnico è specialistico, riporti al rischio e alla responsabilità; quando il manager è vago, chiedi esempi, processi e prove." },
+   { "n": "5", "h": "Disciplina personale", "d": "Sobrietà professionale: niente entusiasmo automatico, niente rifiuto ideologico, niente fascinazione per il lessico. Curiosità per il caso, prudenza sul fornitore, ordine per collegare ogni osservazione a un criterio e un'evidenza." }
+  ]
+ },
+ {
+  "id": "42001_m01_s017",
+  "layout": "cards",
+  "kicker": "Il profilo · 3",
+  "titolo": "Che cosa cambia da lead auditor",
+  "intro": "Il passaggio a lead auditor non è solo anzianità: cambia il baricentro del lavoro. Non essere il più tecnico della stanza, ma il più affidabile nella conduzione del processo complessivo — vedere il sistema, il gruppo, il contesto e il tempo.",
+  "cards": [
+   { "h": "Pianificazione", "d": "Stabilire come distribuire tempi, aree, priorità e profondità. Cruciale nell'IA, dove i processi si intrecciano: un tema nato in area tecnica ha effetti in operations, legale, servizio clienti. Con pianificazione superficiale si raccolgono frammenti senza ricomporli." },
+   { "h": "Conduzione del gruppo", "d": "Allineare linguaggio, criteri e soglia di attenzione, così che uno non guardi solo i documenti, un altro solo la tecnica. Costruire convergenza, trasformare osservazioni sparse in un quadro coerente distinguendo sintomi, cause e impatto sistemico." },
+   { "h": "Chiusura", "d": "Formulare risultanze comprensibili, fondate e proporzionate. Parole confuse o drammatiche generano difese inutili; parole troppo morbide banalizzano problemi seri. Mantenere la precisione e spiegare il nesso con il requisito." },
+   { "h": "Indipendenza del giudizio", "d": "Più il tema è nuovo e mediaticamente carico, più crescono le pressioni sottili: dimostrazioni che impressionano, committenti che desiderano rassicurazione, gruppi trascinati dalle personalità forti. Proteggere il metodo — è da qui che dipende la credibilità." }
+  ]
+ },
+ {
+  "id": "42001_m01_s018",
+  "layout": "flusso",
+  "kicker": "Il profilo · 4",
+  "titolo": "Come si costruisce la competenza nel tempo",
+  "intro": "Diventare credibili non è rapido né romantico. La competenza nasce mettendo insieme studio serio, pratica osservata, esperienza sul campo, confronto e revisione critica. Un corso dà struttura, linguaggio e direzione; la maturità arriva quando trasformi quella base in giudizio stabile.",
+  "passi": [
+   { "h": "Fondamenta pulite", "d": "Capire bene come si collegano politica, obiettivi, ruoli, processi, rischi, controlli, informazioni documentate, monitoraggio e miglioramento — così ogni caso nuovo trova il suo posto invece di sembrarti eccezionale." },
+   { "h": "L'occhio sul contesto", "d": "La stessa tecnologia pesa diversamente secondo l'uso: riassumere verbali non è orientare priorità sanitarie. Chiediti sempre dove entra il sistema, chi può esserne influenzato, quanto seria può diventare una deviazione." },
+   { "h": "Tecnica quanto basta, poi osservare", "d": "Riconoscere i nodi che contano — dati inadeguati, limiti di spiegazione, cambiamenti, correzioni non registrate. E osservare professionisti solidi: come aprono un'intervista, come fanno emergere una risposta vaga senza ostilità." },
+   { "h": "Pratica riflessiva e confronto", "d": "Dopo ogni esperienza: che cosa ho capito, dove mi sono fatto guidare dal fornitore, quale segnale ho visto tardi. Discutere casi con altri distingue una preferenza personale da un vero problema di sistema. Aggiornamento disciplinato, non inseguendo ogni novità." }
+  ]
+ },
+ {
+  "id": "42001_m01_s019",
+  "layout": "tabella",
+  "kicker": "Riuso · 1",
+  "titolo": "Che cosa riusi da ISO 19011",
+  "intro": "Entrando nell'IA non butti via il mestiere: molto del metodo che rende seria una verifica resta valido, e il riferimento centrale è ISO 19011. Non ripetere in modo cieco, ma portare un metodo robusto su un oggetto con caratteristiche particolari.",
+  "cols": ["Da ISO 19011", "Nel contesto dell'IA"],
+  "righe": [
+   ["Il modo di pensare la verifica", "Parti da obiettivi, campo e criteri; pianifichi sul contesto; conduci interviste, esamini documenti, raccogli evidenze pertinenti. Ogni conclusione ricondotta a un requisito e a un'evidenza osservabile."],
+   ["I principi di comportamento", "Integrità, imparzialità, dovuta diligenza, riservatezza, approccio basato sulle evidenze. In un campo pieno di entusiasmo e timori, un metodo sobrio ti protegge da narrazioni troppo facili."],
+   ["Le tecniche operative", "Preparazione interviste, analisi processi, lettura critica documenti, campionamento ragionato, riunioni di apertura e chiusura, risultanze, follow-up. Continui a chiedere chi fa cosa, con quali criteri e registrazioni."],
+   ["Il criterio dichiarato prima", "Va dichiarato prima e non inventato durante: essenziale nell'IA, dove è alto il rischio di lasciarsi sedurre da discussioni tecniche laterali. Resti su processi, responsabilità, controlli, competenze."]
+  ]
+ },
+ {
+  "id": "42001_m01_s020",
+  "layout": "confronto",
+  "kicker": "Riuso · 2",
+  "titolo": "Stesso metodo, domande nuove",
+  "intro": "Il cuore del corso: non reinventare il mestiere, ma affinare l'osservazione quando il sistema dipende da dati, può essere opaco, può cambiare comportamento e spesso coinvolge fornitori esterni. Da una parte il metodo robusto, dall'altra le domande specifiche.",
+  "a": {
+   "h": "Il metodo che riusi",
+   "sub": "Il telaio resistente",
+   "punti": [
+    { "d": "Obiettivi, ruoli, procedure, registrazioni, monitoraggio. Se il metodo è debole, l'argomento nuovo ti confonde; se è solido, l'argomento nuovo amplia la tua capacità professionale. Il tuo mestiere non viene sostituito, viene messo alla prova." },
+    { "d": "Definisci i criteri, intervisti front line e responsabili, controlli i documenti, osservi un campione, confronti il dichiarato con l'accaduto, verifichi evidenze di monitoraggio e riesame. La struttura del giudizio resta familiare." }
+   ]
+  },
+  "b": {
+   "h": "Le domande nuove",
+   "sub": "La lente aggiuntiva",
+   "punti": [
+    { "d": "Da dove arrivano i dati e come se ne controlla qualità e aggiornamento; chi può accettare, correggere o bloccare un esito e con quali criteri; come si monitorano le prestazioni nel tempo; come si governa il rapporto con fornitori e partner." },
+    { "d": "E il cambiamento: che cosa accade quando cambiano dati, uso o servizio del fornitore. Il controllo iniziale basta ancora? Gli scostamenti vengono letti presto o solo quando il problema è esploso? L'attenzione al tempo evita di confondere una buona partenza con una governance matura." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m01_s021",
+  "layout": "flusso",
+  "kicker": "La routine",
+  "titolo": "Dalle domande alle evidenze",
+  "intro": "Ti serve una routine mentale semplice e stabile. Quando entri in un caso con IA, non partire dalla fascinazione tecnica né dal sospetto: parti dal processo. La qualità del lavoro non dipende dal numero di parole tecniche, ma dalla capacità di mantenere ordine mentre l'organizzazione ti mostra complessità.",
+  "passi": [
+   { "h": "Parti dal processo", "d": "Quale obiettivo supporta il sistema, quali decisioni orienta, chi lo usa davvero, quali parti interessate possono subirne gli effetti. Ti tiene saldo su scopo, contesto e responsabilità." },
+   { "h": "Collega al sistema di gestione", "d": "Dove tocca politica, obiettivi, ruoli, competenze, informazioni documentate, monitoraggio, miglioramento. Un sistema può apparire efficace sul piano operativo e restare debole sul piano organizzativo: devi vedere entrambe le dimensioni." },
+   { "h": "Traduci in evidenze", "d": "Non ti fermi alle dichiarazioni: interviste coerenti, registrazioni leggibili, criteri di controllo, esempi d'uso reale, gestione delle anomalie, riesami. «Che cosa potrei osservare per capire se ciò che l'organizzazione afferma è messo in pratica?»." },
+   { "h": "Aggiungi la sensibilità IA", "d": "Comprensione dei dati e dei limiti, di quando accettare o correggere un suggerimento, di come cambiano le prestazioni, del rapporto coi fornitori. Se chi usa non sa quando dubitare e chi presidia non sa monitorare, la fragilità è già visibile." }
+  ]
+ },
+ {
+  "id": "42001_m01_s022",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 1",
+  "modNum": "1",
+  "titolo": "Dal governo dell'IA alla tecnica quanto basta",
+  "punti": [
+   { "h": "Dove vive l'IA", "d": "Non solo nei progetti visibili, ma in processi quotidiani, distribuiti tra funzioni e talvolta incorporati in servizi di terzi. Guarda i processi, non la vetrina tecnologica." },
+   { "h": "Valore e rischi insieme", "d": "Velocità, coerenza, analisi, nuovi servizi da un lato; opacità, qualità dei dati, cambiamento nel tempo, delega cieca dall'altro. Gli incidenti maturano come segnali deboli, quando l'adozione corre più della governance." },
+   { "h": "Serve un sistema, non controlli sparsi", "d": "Perché opportunità e problemi attraversano obiettivi, processi, dati, persone, fornitori e decisioni. E la triade che lo rende credibile: fiducia come esito, trasparenza come comprensione sufficiente, responsabilità come chiarezza su chi decide e risponde." },
+   { "h": "Il metodo e il profilo", "d": "ISO/IEC 42001:2023 come norma certificabile e integrabile, distinta dall'AI Act; il percorso Auditor/Lead Auditor; e ISO 19011 come telaio su cui montare le domande nuove dell'IA." }
+  ],
+  "prossimo": {
+   "modulo": "2",
+   "titolo": "Capire l'IA quanto basta per verificarla",
+   "testo": "Il livello tecnico essenziale: dati, modelli, limiti e ciclo di vita, senza farsi sedurre dal gergo né intimidire dalla complessità."
+  }
+ }
+]
