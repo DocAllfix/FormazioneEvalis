@@ -1,0 +1,388 @@
+[
+ {
+  "id": "42001_m06_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO/IEC 42001 — Sistemi di gestione dell'IA",
+  "kicker": "Modulo 6",
+  "eyebrow": "Ciò che rende il sistema praticabile",
+  "titolo": "Supporto e attività operative",
+  "testo": "Fin qui hai visto direzione, politica, ruoli, rischi e obiettivi. Adesso sposti l'attenzione su ciò che permette a quelle decisioni di funzionare nella realtà: risorse adeguate, persone capaci, messaggi chiari, informazioni documentate affidabili e processi tenuti sotto controllo. È un passaggio decisivo, perché molte organizzazioni falliscono non quando formulano le intenzioni, ma quando provano a tradurle in lavoro ordinario. Per te, che valuti la conformità, il valore è concreto: quando un'organizzazione afferma di usare l'IA in modo governato, devi capire se dispone davvero di mezzi, persone e regole operative coerenti con l'ambizione dichiarata. La credibilità nasce dall'allineamento tra intenti e mezzi: non basta un bel documento di politica se poi i team lavorano senza dati adatti o senza tracciabilità delle modifiche. Userai spesso un criterio molto utile: ogni volta che senti una dichiarazione generale, cerca la sua traduzione operativa. Se senti «abbiamo personale preparato», chiediti per quali attività e con quali prove; se senti «comunichiamo bene», chiediti che cosa, quando, con chi e come; se senti «abbiamo tutto documentato», chiediti se quelle informazioni sono davvero identificate, aggiornate e disponibili quando servono.",
+  "agenda": [
+   "Le risorse: dati, persone competenti, infrastruttura di calcolo",
+   "La competenza di chi influenza le prestazioni dell'IA",
+   "La consapevolezza: politica, contributo, conseguenze",
+   "La comunicazione interna ed esterna",
+   "Le informazioni documentate: memoria e prova",
+   "La pianificazione e i controlli operativi del ciclo di vita"
+  ]
+ },
+ {
+  "id": "42001_m06_s002",
+  "layout": "split",
+  "kicker": "Risorse · 1",
+  "titolo": "Dal principio generale alla verifica concreta",
+  "lead": "Quando senti parlare di risorse, la tentazione è pensare subito al budget: è un pezzo della storia, ma non basta. Il punto 7.1 chiede all'organizzazione di individuare e rendere realmente fruibili i mezzi perché il sistema di gestione dell'IA possa nascere, funzionare nel quotidiano, restare efficace e migliorare con continuità. Tre domande separano l'intenzione dal sistema credibile: quali risorse servono, come è stata presa la decisione, se sono state davvero rese disponibili.",
+  "punti": [
+   { "h": "Determinare, non solo comprare", "d": "Non significa autorizzare spese, ma capire in modo ragionato quali mezzi servono davvero. Si può acquistare capacità di calcolo costosa e dimenticare il tempo delle persone che validano i dati o gestiscono i reclami: la disponibilità apparente nasconde una carenza sostanziale." },
+   { "h": "Fornire significa fruibilità effettiva", "d": "Una risorsa esiste davvero solo se è accessibile, utilizzabile e coerente col bisogno. Un ambiente di test usabile solo in finestre strette, persone competenti sempre assegnate ad altro, dati abbondanti ma non pertinenti: conta la fruibilità reale, non la disponibilità sulla carta." },
+   { "h": "Anche per il miglioramento", "d": "La norma lega le risorse non solo al funzionamento corrente, ma al miglioramento continuo: margine per correggere difetti, affrontare cambiamenti, analizzare incidenti, apprendere dalle deviazioni. Se ogni risorsa è al minimo assoluto, il sistema sopravvive ma fatica a migliorare." },
+   { "h": "Coerenza con contesto e complessità", "d": "Una piccola realtà con un solo sistema interno ha bisogni diversi da chi sviluppa più soluzioni per clienti esterni. La norma non impone un catalogo rigido: chiede di riconoscere se la determinazione delle risorse è coerente con contesto, obiettivi e livello di complessità." }
+  ]
+ },
+ {
+  "id": "42001_m06_s003",
+  "layout": "numeri",
+  "kicker": "Risorse · 2",
+  "titolo": "Le risorse che contano davvero",
+  "intro": "Per valutare bene il punto 7.1, scomponi la parola risorse in elementi osservabili. Nella pratica tre famiglie tornano quasi sempre: dati, persone, infrastruttura di calcolo. Se uno solo di questi tre elementi è debole, l'intero sistema tende a diventare fragile. I dati alimentano il sistema, le persone interpretano e correggono, l'infrastruttura rende possibile e tracciabile il funzionamento: investire su un solo piano crea squilibri.",
+  "numeri": [
+   { "n": "1", "h": "I dati", "d": "Non guardi solo la quantità, ma pertinenza rispetto allo scopo, qualità, provenienza, disponibilità nel tempo e possibilità di aggiornarli. Grandi volumi storici non bastano se non rappresentano il fenomeno attuale, se non sono accessibili ai soggetti giusti o se manca chi corregge errori e lacune." },
+   { "n": "2", "h": "Le persone", "d": "Figure che sappiano progettare, configurare, usare, sorvegliare e, quando serve, contestare il comportamento del sistema; capaci di tradurre esigenze in criteri di controllo, valutare anomalie e decidere quando sospendere, modificare o limitare un uso. Un sistema molto automatizzato non elimina il giudizio umano, spesso lo rende più importante." },
+   { "n": "3", "h": "L'infrastruttura di calcolo", "d": "Capacità elaborativa, ambienti di sviluppo e test, strumenti di monitoraggio, accessi, continuità operativa, a volte acceleratori. Non una recensione tecnica: se il sistema si blocca nei momenti critici, se gli ambienti non sono separati o se mancano log per ricostruire gli eventi, la risorsa non è adeguata." }
+  ]
+ },
+ {
+  "id": "42001_m06_s004",
+  "layout": "punti",
+  "kicker": "Risorse · 3",
+  "titolo": "Come si determinano: obiettivi, rischi e cambiamenti",
+  "intro": "Capire quali risorse servono non è un esercizio astratto. L'organizzazione dovrebbe partire da ciò che vuole ottenere, dai processi da governare e dalle azioni già definite per rischi e opportunità. Se manca questo collegamento, la pianificazione resta elegante ma sterile. Il percorso logico è: prima obiettivi e requisiti, poi processi, ruoli e controlli, solo dopo le risorse che li rendono possibili.",
+  "punti": [
+   { "h": "Non partire dal magazzino", "d": "Se l'ordine si capovolge, l'organizzazione parte da ciò che possiede già invece di chiedersi ciò che serve davvero. Un assistente per le offerte commerciali non richiede solo modello e piattaforma, ma dati affidabili, persone che definiscano i limiti d'uso, revisione umana dei testi, regole sui prompt e infrastruttura adeguata." },
+   { "h": "Il cambiamento ridefinisce il fabbisogno", "d": "Le risorse non si determinano una volta per tutte. Ogni modifica di contesto, volume, tipo di dati, requisiti o finalità può cambiare il profilo di bisogno. «Stessa architettura da tempo» non significa tema stabile: possono essere cambiati utenti, carichi, casi d'uso e criticità delle decisioni supportate." },
+   { "h": "Assegnazione iniziale non è sufficienza continua", "d": "Un progetto può ricevere molte attenzioni all'avvio e poi perdere supporto nell'esercizio ordinario. Mantenere significa continuità di presidio e capacità di reazione; migliorare significa riservare risorse per imparare dagli errori e dalle esigenze emerse dopo l'implementazione." },
+   { "h": "Segnali di una determinazione matura", "d": "Collegamenti espliciti tra obiettivi e mezzi assegnati, riesami periodici del fabbisogno, escalation quando emergono colli di bottiglia, decisioni motivate su priorità e limiti. Non serve un modello sofisticato ovunque, ma deve vedersi che la scelta non è casuale e che qualcuno ne risponde." }
+  ]
+ },
+ {
+  "id": "42001_m06_s005",
+  "layout": "cards",
+  "kicker": "Risorse · 4",
+  "titolo": "Che cosa rende credibile la disponibilità",
+  "intro": "Non ti basta ascoltare frasi rassicuranti: devi capire se le risorse dichiarate esistono, sono accessibili e sostengono il funzionamento previsto. Combina interviste, osservazione e informazioni documentate senza fermarti a una sola fonte. Attenzione a una distinzione: risorsa disponibile non significa solo risorsa esistente. Più il processo è critico, più la prova della disponibilità deve essere concreta.",
+  "cards": [
+   { "h": "Parti dai processi rilevanti", "d": "Per un sistema che prende in carico reclami o classifica casi ad alta priorità, chiediti quali risorse servono nella quotidianità: persone dedicate, ambienti separati per prova e rilascio, dati aggiornati, tempi di supervisione, capacità nelle fasce di picco." },
+   { "h": "Le evidenze utili", "d": "Piani di assegnazione del personale, autorizzazioni di spesa, contratti di servizio, inventari di ambienti, calendari di riesame, report di performance, richieste di incremento capacità, analisi di incidenti. Nessuna da sola dimostra tutto: è la loro coerenza a raccontare se il tema è governato." },
+   { "h": "Esistente non è disponibile", "d": "Un server potente ma condiviso con molti usi può non esserlo quando serve; una persona formalmente competente ma sovraccarica non fornisce il presidio; un archivio ricco ma pieno di campi mancanti non è una base affidabile. Chiedi sempre come viene usata la risorsa, con quali vincoli e risultati." },
+   { "h": "Riconoscere i propri limiti", "d": "Le realtà mature non sostengono di avere tutto sotto controllo: mostrano come individuano i gap, decidono priorità e reagiscono quando una risorsa diventa insufficiente. Se ogni risposta è perfetta ma generica, resta prudente; se emergono limiti noti e azioni definite, vedi un sistema più vivo." }
+  ]
+ },
+ {
+  "id": "42001_m06_s006",
+  "layout": "split",
+  "kicker": "Competenza · 1",
+  "titolo": "Chi influenza le prestazioni dell'IA",
+  "lead": "Il punto 7.2 porta a una domanda concreta: quali competenze servono alle persone che svolgono attività sotto il controllo dell'organizzazione e che influenzano le prestazioni dell'IA? La formulazione è importante perché allarga lo sguardo oltre il team tecnico. Non contano solo gli sviluppatori: contano tutte le persone che, con il proprio lavoro, incidono su come il sistema viene progettato, configurato, utilizzato, sorvegliato o corretto.",
+  "punti": [
+   { "h": "Un perimetro più ampio del previsto", "d": "Chi seleziona o prepara i dati, chi definisce le regole d'uso, chi approva il rilascio, chi interpreta gli output, chi gestisce eccezioni, chi valuta reclami, chi decide modifiche di priorità. Se una di queste figure opera con conoscenze insufficienti, le prestazioni possono degradare anche senza un errore di programmazione." },
+   { "h": "Stabilire le competenze necessarie", "d": "Non basta «cerchiamo persone brave»: serve tradurre il bisogno in conoscenze, esperienza e abilità applicabili. Per un data engineer riguarderà strutture dei dati e qualità; per un responsabile operativo limiti del sistema e criteri di escalation; per chi decide, implicazioni di un uso non corretto e limiti interpretativi degli output." },
+   { "h": "Sotto il controllo dell'organizzazione", "d": "Include non solo il personale diretto, ma anche chi opera per suo conto in modo rilevante. Conta l'effetto sul sistema, non la forma contrattuale: se un'attività esterna influisce sulle prestazioni, l'organizzazione deve aver chiarito quali competenze richiede e come ne ottiene garanzia ragionevole." },
+   { "h": "Proporzionalità, non onniscienza", "d": "Non trasformare ogni ruolo in specialista di tutto, ma evitare il vuoto critico: ogni funzione rilevante deve avere il livello di comprensione adeguato al proprio impatto. La persona deve risultare adatta al compito per preparazione pertinente, addestramento mirato o esperienza concreta." }
+  ]
+ },
+ {
+  "id": "42001_m06_s007",
+  "layout": "flusso",
+  "kicker": "Competenza · 2",
+  "titolo": "Assicurare la competenza: istruzione, formazione, esperienza",
+  "intro": "Dopo aver definito quali competenze servono, l'organizzazione deve assicurarsi che le persone siano davvero competenti. La norma indica tre basi di affidabilità — istruzione, formazione ed esperienza appropriate — e non un unico percorso valido per tutti. Il cuore della verifica non è il curriculum perfetto, ma se il livello di preparazione è adeguato alle attività svolte.",
+  "passi": [
+   { "h": "Valutare l'adeguatezza al ruolo", "d": "Una persona con titoli eccellenti ma senza familiarità col contesto operativo può essere meno efficace di chi ha esperienza specifica e supporto mirato. L'esperienza da sola può non bastare quando cambia la tecnologia o la criticità delle decisioni. L'adeguatezza si valuta sempre in relazione al ruolo concreto." },
+   { "h": "Colmare le lacune con azioni coerenti", "d": "Quando applicabile, l'organizzazione deve agire e verificare se l'azione ha funzionato: formazione, affiancamento, riallocazione di persone presenti, assunzione o incarico a contratto. Di fronte a operatori che non sanno quando contestare un output, formazione su casi reali e revisione delle istruzioni valgono più di un incontro generale firmato da tutti." },
+   { "h": "Verificare l'efficacia, non gli attestati", "d": "La presenza a un corso non coincide con la capacità di svolgere il lavoro. Cerca segnali solidi: prove pratiche, supervisione iniziale, riesame di errori ricorrenti, riduzione delle escalation improprie, coerenza delle risposte nelle interviste. Distinguere iniziative cosmetiche da interventi sostanziali." }
+  ]
+ },
+ {
+  "id": "42001_m06_s008",
+  "layout": "punti",
+  "kicker": "Competenza · 3",
+  "titolo": "Provare la competenza con informazioni documentate",
+  "intro": "La norma non si ferma all'intenzione: chiede che siano disponibili informazioni documentate appropriate come evidenza. La documentazione non serve a collezionare carte, ma a rendere verificabile che l'organizzazione abbia chiarito i fabbisogni, valutato le persone, colmato le lacune e mantenuto traccia delle decisioni. La prova deve sostenere la fiducia nel processo.",
+  "punti": [
+   { "h": "«Appropriata» è la parola centrale", "d": "Non esiste un fascicolo ideale valido per tutti: in alcuni contesti bastano profili di ruolo chiari, registri di formazione, evidenze di esperienza e conferme di affiancamento; in altri servono prove pratiche, autorizzazioni a operare e riesami periodici. Conta il nesso tra ruolo, competenza richiesta e competenza disponibile." },
+   { "h": "Il registro del corso non basta", "d": "Un elenco di partecipanti a un corso introduttivo mostra solo partecipazione. Se alcuni addetti continuano a trattare come affidabili output che andrebbero verificati, quel registro non prova la competenza: servono altre evidenze o riscontri operativi coerenti che mostrino l'effettiva capacità." },
+   { "h": "Leggibile, non pesante", "d": "Una realtà matura mantiene descrizioni sintetiche delle competenze richieste, traccia le attività formative, registra affiancamenti, documenta l'abilitazione a operare e conserva esiti di riesame quando emergono errori. Non è un sistema pesante, è un sistema in cui segui il filo: bisogno, azione, evidenza, conferma." },
+   { "h": "Aggiornata e collegata ai processi", "d": "Come chiede il punto 7.5, le informazioni devono essere aggiornate, identificabili e disponibili. Le persone abilitate corrispondono a chi opera davvero? Quando una persona cambia attività, la documentazione viene aggiornata? Una matrice perfetta ma non usata nelle decisioni è solo scenografia." }
+  ]
+ },
+ {
+  "id": "42001_m06_s009",
+  "layout": "numeri",
+  "kicker": "Consapevolezza · 1",
+  "titolo": "Capire il proprio ruolo e le conseguenze",
+  "intro": "La competenza risponde a «sai fare questo lavoro?». La consapevolezza risponde a una domanda diversa: capisci perché conta, quale contributo dai e che cosa succede se ti discosti dai requisiti? Il punto 7.3 ricorda che il sistema regge anche sulla comprensione del contesto e delle conseguenze, non solo sull'abilità tecnica. La norma chiede di coprire tre elementi.",
+  "numeri": [
+   { "n": "1", "h": "La politica di IA", "d": "Non recitarla a memoria, ma coglierne il senso pratico e la direzione generale. Se la politica chiede usi coerenti con responsabilità e controlli, chi opera deve riconoscere che scorciatoie, eccezioni non autorizzate o modifiche non tracciate non sono comodità operative: sono deviazioni dal sistema." },
+   { "n": "2", "h": "Il proprio contributo", "d": "Sapere in che modo il proprio comportamento rafforza o indebolisce il funzionamento, inclusi i benefici del miglioramento delle prestazioni. Chi etichetta dati contribuisce alla qualità degli input, chi usa l'output alla correttezza dell'applicazione, chi revisiona anomalie all'apprendimento. Aumenta la responsabilità, diminuisce la tentazione della scatola nera." },
+   { "n": "3", "h": "Le conseguenze della non conformità", "d": "Comprendere che cosa comporta ignorare i criteri stabiliti: decisioni meno affidabili, aumento degli errori, perdita di tracciabilità, reclami, tempi di correzione più lunghi, esposizione a impatti non previsti, indebolimento della fiducia. La consapevolezza è efficace quando collega regola e conseguenza, non quando ripete una formula." }
+  ]
+ },
+ {
+  "id": "42001_m06_s010",
+  "layout": "tabella",
+  "kicker": "Consapevolezza · 2",
+  "titolo": "Chi sviluppa, chi usa, chi decide: allineare i profili",
+  "intro": "Ricomponi il quadro intorno a tre gruppi che ricorrono nei sistemi di IA. Non sono etichette perfette per ogni organizzazione, ma aiutano a capire se competenza e consapevolezza sono distribuite in modo coerente. Non cerchi simmetria assoluta: verifichi che ogni gruppo riceva la preparazione e il messaggio adeguati al proprio impatto. La maturità arriva quando i tre gruppi sono allineati rispetto ai rispettivi doveri.",
+  "cols": ["Gruppo", "Competenza richiesta", "Consapevolezza chiave", "Rischio se manca"],
+  "righe": [
+   ["Chi sviluppa o configura", "Lavorare con dati, parametri, ambienti e controlli senza perdere finalità e limiti", "Legame tra scelte tecniche e prestazioni complessive del sistema", "Vede solo l'algoritmo e non il contesto d'uso: il presidio resta incompleto"],
+   ["Chi usa il sistema", "Usare lo strumento correttamente, riconoscere anomalie, sapere quando fermarsi ed escalare", "Il proprio contributo e i rischi di un uso meccanico", "Affidamento cieco all'output: compromette il sistema anche se il modello è ben progettato"],
+   ["Chi decide", "Comprendere implicazioni, requisiti, limiti e conseguenze delle decisioni organizzative", "Molte deviazioni nascono da pressioni di tempo, costi o prestazioni", "Approva cambiamenti senza capire il fabbisogno di dati e controlli: il problema si sposta di livello"],
+   ["Come leggerlo in verifica", "Confronta formazione svolta e responsabilità effettive; ascolta il lessico nelle interviste", "Segui un caso di modifica o incidente e osserva la reazione dei tre gruppi", "Un elenco di corsi svolti dice molto meno di come i gruppi hanno reagito a un problema reale"]
+  ]
+ },
+ {
+  "id": "42001_m06_s011",
+  "layout": "split",
+  "kicker": "Comunicazione · 1",
+  "titolo": "Il ponte tra regole, persone e azioni",
+  "lead": "Se le risorse rendono possibile il lavoro e le persone sanno cosa fare, serve comunque un modo chiaro per far circolare decisioni, istruzioni, limiti, cambiamenti e segnalazioni. Il punto 7.4 chiede un assetto chiaro dei messaggi interni e verso l'esterno rilevanti per il sistema. La richiesta è pratica: chiarire che cosa si comunica, quando, con chi e come. Sembra ovvio, ma è uno dei punti in cui nascono più facilmente incoerenze.",
+  "punti": [
+   { "h": "Il lavoro quotidiano guida i flussi", "d": "Se cambia una regola d'uso, chi deve saperlo subito? Gli utenti finali, ma forse anche assistenza, chi controlla anomalie, chi approva eccezioni, chi riceve reclami. Se emergono limiti nei dati, il messaggio non può restare nel team tecnico: deve raggiungere chi decide e chi valuta l'affidabilità degli output." },
+   { "h": "Interna ed esterna", "d": "Internamente, flussi che tengano allineati sviluppo, uso, supervisione e decisione. Esternamente, secondo il contesto, verso clienti, fornitori, partner, soggetti incaricati di attività esterne o altre parti interessate. Non comunicare tutto a tutti, ma le cose giuste, al momento giusto, ai destinatari giusti." },
+   { "h": "Adattare il contenuto ai ruoli", "d": "Chi sviluppa ha bisogno di informazioni diverse rispetto a chi usa; chi decide di messaggi più sintetici ma chiari sulle implicazioni. Una comunicazione matura non tratta tutti allo stesso modo: adatta il contenuto senza perdere coerenza. Se questo manca, aumentano fraintendimenti, ritardi e azioni non allineate." },
+   { "h": "Non solo in emergenza", "d": "La comunicazione diffonde politica, aspettative, cambiamenti pianificati, esiti di riesame, limiti di utilizzo e indicazioni operative: sostiene sia la stabilità sia il miglioramento. Se l'organizzazione comunica solo quando qualcosa va storto, il sistema resta reattivo ma non davvero governato." }
+  ]
+ },
+ {
+  "id": "42001_m06_s012",
+  "layout": "cards",
+  "kicker": "Comunicazione · 2",
+  "titolo": "Sotto verifica: segnali di maturità e trappole",
+  "intro": "Il punto non è contare mail, riunioni o avvisi, ma capire se i flussi informativi sostengono davvero il sistema. Ti chiedi se l'organizzazione comunica ciò che serve, quando serve, a chi serve e con un mezzo che renda il messaggio comprensibile e utilizzabile. Ascolta anche il lessico: le persone sanno da chi ricevono istruzioni rilevanti e a chi segnalano problemi, o tutto dipende dall'abitudine personale?",
+  "cards": [
+   { "h": "Chiarezza dei destinatari", "d": "Le organizzazioni solide distinguono chi deve ricevere informazioni operative, chi decisioni, chi alert, chi aggiornamenti di contesto. Non confondono un messaggio informativo con un'istruzione esecutiva né mandano lo stesso testo indistinto a tutti sperando che ognuno ne ricavi ciò che serve." },
+   { "h": "I tempi", "d": "Una comunicazione può essere corretta ma arrivare troppo tardi. Se una modifica viene spiegata dopo il rilascio, la finestra di errore è già aperta; se una criticità nei dati viene discussa al riesame mensile senza cautele intanto, il sistema resta esposto. Chiedi come si gestiscono le comunicazioni urgenti." },
+   { "h": "Il canale non è neutro", "d": "Una regola permanente dispersa in una chat temporanea è fragile; un alert urgente nascosto in un verbale che pochi leggono è inefficace; una comunicazione esterna delicata affidata a un operatore non preparato genera equivoci. Il canale condiziona disponibilità, comprensione e tracciabilità." },
+   { "h": "La trappola della sovracomunicazione", "d": "Troppi messaggi poco prioritizzati ottengono lo stesso effetto del silenzio: le persone smettono di distinguere il critico dall'ordinario. La maturità non coincide con il volume, ma con la selezione intelligente e la chiarezza del messaggio." }
+  ]
+ },
+ {
+  "id": "42001_m06_s013",
+  "layout": "definizione",
+  "kicker": "Informazioni documentate · 1",
+  "eyebrow": "Ciò che il sistema deve ricordare",
+  "titolo": "Non carta d'archivio, ma memoria operativa",
+  "definizione": "Il sistema di gestione dell'IA deve comprendere sia le informazioni documentate richieste dalla norma, sia quelle che l'organizzazione considera necessarie per rendere efficace il proprio sistema. La documentazione utile è quella che permette alle persone di operare con coerenza, di ricostruire scelte e modifiche e di dimostrare che il sistema non vive solo nella testa di pochi.",
+  "punti": [
+   "L'ampiezza cambia molto da un'organizzazione all'altra: dipende da dimensione, natura delle attività, processi, prodotti o servizi, numero e intreccio delle interazioni e competenza delle persone. Più il contesto è articolato, più cresce il bisogno di rendere espliciti i passaggi.",
+   "Il criterio di verifica non è quanta documentazione esiste, ma se è proporzionata e utile: una realtà piccola può reggere con un insieme snello, una grande multisito ha bisogno di un impianto più strutturato.",
+   "Quando l'organizzazione decide quali informazioni sono necessarie, sta facendo una scelta di governo: dice quali passaggi non vuole lasciare all'improvvisazione. È spesso lì che riconosci la maturità reale del sistema."
+  ]
+ },
+ {
+  "id": "42001_m06_s014",
+  "layout": "flusso",
+  "kicker": "Informazioni documentate · 2",
+  "titolo": "Creare e aggiornare documenti utili e affidabili",
+  "intro": "Quando si crea o aggiorna un'informazione documentata, la norma chiede di assicurarne un'identificazione e descrizione appropriate, un formato e supporto appropriati, e un riesame con approvazione adeguati rispetto a idoneità e adeguatezza del contenuto. Non tutti i documenti hanno lo stesso peso: le organizzazioni mature modulano il grado di formalizzazione senza perdere il controllo.",
+  "passi": [
+   { "h": "Identificazione e descrizione", "d": "Un documento deve essere distinguibile con chiarezza: titolo, data, chi lo ha emesso o un riferimento equivalente. Il punto non è riempire un'intestazione, ma capire subito quale documento hai davanti, a quale momento si riferisce e chi ne risponde. Senza questa chiarezza, persone diverse usano contenuti diversi pensando di seguire la stessa regola." },
+   { "h": "Formato e supporto adatti all'uso", "d": "Un'istruzione per operatori di prima linea deve essere rapida da consultare; una regola tecnica per chi sviluppa può richiedere più dettaglio. Anche il supporto conta: un documento digitale perde efficacia se viene stampato e non aggiornato, mentre la carta può avere senso dove l'accesso elettronico è limitato." },
+   { "h": "Riesame e approvazione", "d": "Prima che un documento entri in uso o venga aggiornato, qualcuno deve verificarne adeguatezza e idoneità. Non un iter pesantissimo per ogni modifica, ma evitare che criteri e regole operative cambino in modo informale, senza valutazione dell'impatto. Nei sistemi di IA il costo dell'ambiguità supera spesso quello del controllo." }
+  ]
+ },
+ {
+  "id": "42001_m06_s015",
+  "layout": "cards",
+  "kicker": "Informazioni documentate · 3",
+  "titolo": "Controllare: disponibilità, protezione, versioni",
+  "intro": "Creati e aggiornati, i documenti non vanno lasciati a se stessi. La norma richiede un governo continuo: reperibili e utilizzabili dove e quando servono, ma anche custoditi con protezione adeguata. Vedi subito la tensione: se proteggi troppo, le persone non trovano ciò che serve; se apri troppo, rischi accessi non appropriati o modifiche non autorizzate. La maturità sta nel bilanciare accessibilità e protezione.",
+  "cards": [
+   { "h": "Le attività di governo", "d": "Distribuzione, accesso, recupero e utilizzo; archiviazione e preservazione con mantenimento della leggibilità; controllo delle modifiche e delle versioni; conservazione e disposizione successiva. Aspetti operativi che fanno la differenza nella vita del sistema." },
+   { "h": "Il disordine ingovernabile", "d": "Istruzioni, criteri e report salvati in cartelle diverse, con nomi incoerenti, accessi poco chiari e copie locali sparse: alcuni lavoreranno con documenti vecchi, altri con bozze non approvate, altri andranno a memoria. Anche persone competenti sbagliano per semplice disordine informativo." },
+   { "h": "L'ordine leggibile", "d": "Distinguere documenti in uso, archivi storici e registrazioni di prova; ognuno vede solo ciò che serve al proprio ruolo; le modifiche seguono un percorso definito; le versioni precedenti restano recuperabili senza confondere l'operatività. Non serve tecnologia straordinaria, serve metodo." },
+   { "h": "Le informazioni di origine esterna", "d": "Specifiche di fornitori, istruzioni di componenti, requisiti contrattuali, documenti sui dati di terzi, condizioni d'uso degli strumenti. Se rilevanti per pianificazione e funzionamento, vanno identificate e controllate, altrimenti il sistema dipende da riferimenti esterni che cambiano senza che nessuno lo sappia." }
+  ]
+ },
+ {
+  "id": "42001_m06_s016",
+  "layout": "punti",
+  "kicker": "Informazioni documentate · 4",
+  "titolo": "Documentare i sistemi di IA per governarli",
+  "intro": "Porta la stessa logica dentro i sistemi di IA con una domanda pratica: quale documentazione aiuta davvero a capirli, usarli, modificarli e sorvegliarli senza perdere controllo? La norma non consegna un fascicolo standard, ma chiede ciò che è necessario all'efficacia. In verifica torna sempre alla funzione: le persone la consultano? La riconoscono come riferimento valido? È allineata alle pratiche reali?",
+  "punti": [
+   { "h": "I nuclei essenziali", "d": "Lo scopo del sistema e il processo in cui è usato, i dati rilevanti (provenienza, uso, limiti), le regole operative, i limiti di utilizzo, i ruoli coinvolti, le modalità di supervisione e le condizioni che richiedono intervento umano. Se lo scopo non è chiaro, tutto il resto diventa ambiguo." },
+   { "h": "Anche ciò che il sistema non deve fare", "d": "Documentare i contesti in cui l'output non può essere base automatica di decisione riduce il rischio di espansione informale dell'uso. Molti problemi nascono quando uno strumento nato per un compito delimitato viene riusato altrove senza aggiornare criteri, controlli e istruzioni." },
+   { "h": "Tracciabilità delle modifiche rilevanti", "d": "Quando cambiano dati, logiche d'uso, criteri di rilascio, responsabilità o soglie di intervento, la documentazione dovrebbe permettere di ricostruire che cosa è stato modificato, perché, da chi e con quali approvazioni. È essenziale per la verifica e per imparare dagli esiti." },
+   { "h": "Livelli differenziati, non una vetrina", "d": "Alcuni documenti servono a chi sviluppa e mantiene, altri a chi usa, altri a chi decide e controlla: la coerenza tra i livelli conta più della quantità. Attenzione al rischio opposto: una documentazione elegante ma poco usabile resta una dichiarazione, non uno strumento di governo." }
+  ]
+ },
+ {
+  "id": "42001_m06_s017",
+  "layout": "split",
+  "kicker": "Attività operative · 1",
+  "titolo": "Pianificazione operativa: dai requisiti ai processi sotto controllo",
+  "lead": "Con il punto 8.1 entri nel modo in cui risorse, persone, comunicazione e documentazione si traducono in azione quotidiana. La norma chiede di predisporre, far funzionare e governare nel tempo i processi che servono a rispettare i requisiti e a mettere in pratica le azioni già decise. Pianificare non significa solo costruire un calendario: significa stabilire in anticipo come un processo dovrà funzionare, con quali criteri, responsabilità e controlli.",
+  "punti": [
+   { "h": "Stabilire i criteri, attuare il controllo", "d": "La norma individua due movimenti: stabilire i criteri per i processi e attuare il controllo in conformità a quei criteri. Un processo non è sotto controllo perché qualcuno dice di seguirlo, ma quando esistono criteri comprensibili e l'esecuzione viene davvero governata rispetto a essi." },
+   { "h": "Che cosa sono i criteri, nella pratica", "d": "Qualità minima dei dati, condizioni per il rilascio, soglie di revisione umana, autorizzazioni per una modifica, gestione delle eccezioni, tempi di monitoraggio, responsabilità di escalation, condizioni di arresto dell'uso. La norma non impone un catalogo rigido, ma chiede di vedere se i processi essenziali sono governati da regole adeguate." },
+   { "h": "Una rete di processi, non uno solo", "d": "Il punto 8.1 parla dei processi necessari. Non cercare una procedura unica che prometta di coprire tutto: cerca una rete coerente lungo il ciclo di vita — sviluppo o configurazione, messa in esercizio, utilizzo, monitoraggio, gestione delle deviazioni, modifica, coinvolgimento di esterni." },
+   { "h": "Collegato alle azioni già decise", "d": "Se l'organizzazione ha individuato rischi o definito trattamenti e priorità, i processi operativi devono incorporarli. Altrimenti il sistema vive su due piani separati: uno in cui si analizzano i rischi, un altro in cui si lavora come sempre. Questo scollamento è uno dei difetti più comuni e più seri." }
+  ]
+ },
+ {
+  "id": "42001_m06_s018",
+  "layout": "punti",
+  "kicker": "Attività operative · 2",
+  "titolo": "Controlli operativi: governare il ciclo di vita e verificarne l'efficacia",
+  "intro": "Il punto 8.1 richiede anche di attuare i controlli, coerenti con il trattamento dei rischi, collegati al funzionamento del sistema: presidiare progettazione, configurazione, rilascio, uso e sorveglianza lungo le fasi operative. Un controllo può agire prima, durante o dopo un'attività: prevenire un errore, rilevarlo, limitarne gli effetti o imporre condizioni per procedere. La varietà, nei sistemi di IA, conta molto.",
+  "punti": [
+   { "h": "Coerenti, pertinenti, integrati", "d": "I controlli devono essere coerenti con i rischi già valutati, pertinenti al modo in cui il sistema funziona davvero e integrati nei processi del ciclo di vita. Un controllo bellissimo ma scollegato dall'uso reale non protegge nulla. I controlli dell'Appendice A, con la guida B, li vedrai nel modulo successivo." },
+   { "h": "Il rischio trattato entra nel processo", "d": "Se tra i rischi c'è che un aggiornamento peggiori le prestazioni in aree poco rappresentate, un controllo coerente prevede validazioni prima del rilascio, confronto con dati di riferimento, approvazione da un ruolo competente e monitoraggio intensificato nelle prime settimane." },
+   { "h": "L'efficacia va monitorata", "d": "Se i risultati attesi non vengono raggiunti, vanno considerate azioni correttive. Non ti fermi all'esistenza del controllo: chiedi se funziona. Un'organizzazione matura sa spiegare come ne osserva gli effetti e cosa fa quando il presidio non raggiunge il risultato previsto." },
+   { "h": "Le illusioni da smascherare", "d": "Un controllo documentato ma mai testato, una revisione umana diventata puramente formale per carico di lavoro, un monitoraggio che produce report ma non decisioni. Segui la catena completa: rischio individuato, controllo definito, applicazione concreta, monitoraggio, eventuale azione correttiva." }
+  ]
+ },
+ {
+  "id": "42001_m06_s019",
+  "layout": "confronto",
+  "kicker": "Attività operative · 3",
+  "titolo": "Eseguire come pianificato: prove e gestione delle modifiche",
+  "intro": "Il punto 8.1 chiede informazioni documentate nella misura necessaria a dare fiducia che il lavoro abbia seguito il percorso previsto: non descrivono solo il sistema, mostrano che ha funzionato come atteso. E chiede di governare i cambiamenti, distinguendo due realtà diverse. Se un processo prevede validazioni prima del rilascio o revisioni umane per certe eccezioni, dovresti poterne trovare traccia.",
+  "a": {
+   "h": "Le modifiche pianificate",
+   "sub": "Si possono preparare",
+   "punti": [
+    { "d": "Possono riguardare dati, modelli, soglie, interfacce, regole d'uso, ruoli, strumenti o integrazioni. Tenerle sotto controllo significa valutarle prima, approvarle in modo proporzionato, comunicarle ai destinatari giusti e osservarne gli effetti dopo l'introduzione." },
+    { "d": "Se questo percorso manca, ogni cambiamento apre una zona di incertezza non governata. Le prove dell'esecuzione — risultati del controllo, data di approvazione, responsabilità assegnata — rendono il processo credibile invece di un informale «aggiornamento fatto»." }
+   ]
+  },
+  "b": {
+   "h": "I cambiamenti involontari",
+   "sub": "Richiedono lettura e reazione",
+   "punti": [
+    { "d": "Degradazioni progressive delle prestazioni, effetti imprevisti di un aggiornamento, variazioni nella qualità dei dati, comportamenti degli utenti che deviano dalle istruzioni, interazioni inattese con sistemi esterni. Il punto non è colpevolizzare, ma riconoscere il cambiamento e mitigarne gli effetti." },
+    { "d": "Se cambia il formato di un flusso dati e alcune categorie vengono lette in modo errato, un sistema fragile se ne accorge tardi; uno maturo identifica l'anomalia, sospende l'automatismo dove serve, attiva mitigazioni e riesamina la modifica che l'ha generato." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m06_s020",
+  "layout": "evidenza",
+  "kicker": "Attività operative · 4",
+  "eyebrow": "Attività affidate all'esterno",
+  "titolo": "L'esecuzione può essere esterna, la responsabilità di governo resta interna",
+  "testo": "Il punto 8.1 richiede di assicurare che i processi, i prodotti o i servizi pertinenti al sistema e svolti da soggetti esterni siano tenuti sotto controllo. È un principio essenziale nell'IA, dove componenti, dati, piattaforme, sviluppo, manutenzione o supporto possono dipendere in misura rilevante da terzi. Un'organizzazione non può considerarsi al riparo solo perché una parte del lavoro è in mano a un fornitore: se quell'attività influenza il sistema, deve esistere un modo per controllarla in coerenza con i requisiti, con i rischi individuati e con i criteri operativi. In verifica evita una lettura troppo formale: un contratto firmato è utile ma non basta. Chiedi come l'organizzazione qualifica i soggetti esterni rilevanti, come ne definisce i requisiti, come riceve informazioni sui cambiamenti, come valuta le prestazioni e come reagisce quando qualcosa non funziona. Con gli strumenti standardizzati accessibili via integrazione il rischio può addirittura aumentare, perché logiche e aggiornamenti non sono nelle proprie mani: diventa ancora più importante presidiare limiti d'uso, monitoraggio degli effetti e gestione dei cambiamenti comunicati dal fornitore. Le organizzazioni immature si limitano a dire «lo gestisce il fornitore», e in quel momento il sistema perde presa sulla realtà."
+ },
+ {
+  "id": "42001_m06_s021",
+  "layout": "split",
+  "kicker": "Leggere il ciclo di vita · 1",
+  "titolo": "Dal flusso reale ai controlli",
+  "lead": "Cambia metodo: invece di osservare i requisiti uno per uno, segui un caso reale dall'inizio alla fine. È il modo migliore per capire se la pianificazione operativa esiste davvero o resta una dichiarazione elegante. Scegli un caso rappresentativo — non quello perfetto preparato per la visita, ma un flusso che conti: un rilascio, un aggiornamento, un uso quotidiano con revisione umana, la gestione di un'anomalia.",
+  "punti": [
+   { "h": "Segui il processo passo dopo passo", "d": "Chiedi che cosa deve accadere, chi interviene, quale criterio si applica, quale prova resta, che cosa succede se qualcosa devia. Se il processo è stato pensato bene, chi lo esegue spiega con chiarezza il proprio tratto, le risposte tra funzioni si incastrano e le informazioni documentate corrispondono a ciò che osservi." },
+   { "h": "Il caso opposto", "d": "Un diagramma ordinato, ma quando chiedi l'applicazione reale iniziano le fratture: chi sviluppa non sa chi approva, chi usa non è stato informato delle ultime modifiche, il controllo prima del rilascio è stato fatto in modo informale, le registrazioni sono sparse. Il problema non è un singolo errore, è l'assenza di cucitura tra pianificazione e operatività." },
+   { "h": "Vedi il sistema come processo, non come tecnologia", "d": "Osserva ingresso dei dati, regole d'uso, controlli in corso d'opera, decisioni umane, gestione delle modifiche, comunicazione delle eccezioni, apprendimento dagli scostamenti. Un buon campione di processo mette subito in relazione supporto e operativo, e vale più di molte dichiarazioni generiche." },
+   { "h": "Non fermarti al primo sì", "d": "Se dicono che un controllo esiste, chiedi come si applica; se una modifica è approvata, da chi e con quale evidenza; se gli utenti sono informati, quando e con quale canale. La domanda finale: questo flusso funzionerebbe anche domani, con persone diverse e sotto pressione, o regge solo perché oggi c'è il collega giusto?" }
+  ]
+ },
+ {
+  "id": "42001_m06_s022",
+  "layout": "numeri",
+  "kicker": "Leggere il ciclo di vita · 2",
+  "titolo": "Red flag operative: quando la pianificazione non regge",
+  "intro": "Alcuni segnali meritano attenzione immediata. Non sono prove definitive, ma indizi affidabili: una singola anomalia può avere spiegazioni ragionevoli, più segnali coerenti raccontano un problema sistemico. Spesso una non conformità seria si annuncia prima con piccoli strappi che con grandi incidenti. Considerali come piste da seguire.",
+  "numeri": [
+   { "n": "1", "h": "Vaghezza dei criteri", "d": "Alla domanda su come si decide un rilascio, una revisione umana o un'escalation, risposte come «dipende, lo valutiamo caso per caso» segnalano che il processo non è stato stabilito con chiarezza. La flessibilità non deve sostituire i criteri, altrimenti il controllo è personale, non organizzativo." },
+   { "n": "2", "h": "Dipendenza da poche persone", "d": "Un referente brillante che conosce tutto è un valore ma può nascondere una fragilità: se il sistema regge perché una persona ricorda, interpreta e corregge per tutti, la pianificazione non è incorporata nei processi. Il giorno in cui non c'è, emergono vuoti di comunicazione, competenza e governo." },
+   { "n": "3", "h": "Modifiche senza tracce", "d": "Se si cambiano spesso dati, parametri, regole o integrazioni ma restano poche tracce chiare, non puoi più capire che cosa ha prodotto un certo effetto. E se non sai ricostruire il cambiamento, non sai neppure mitigarne bene le conseguenze." },
+   { "n": "4", "h": "Revisione umana apparente", "d": "Molti processi sembrano presidiati perché prevedono un passaggio umano. Ma se le persone confermano quasi sempre in modo automatico, con poco tempo e senza criteri chiari, il controllo esiste solo in superficie. Comune nei sistemi che crescono in fretta e scaricano sugli utenti un presidio non più esercitabile." },
+   { "n": "5", "h": "Documenti scollegati dal lavoro", "d": "Procedure ordinate ma comportamenti diversi, o persone che seguono indicazioni ricevute a voce perché il documento ufficiale non è aggiornato. E l'assenza di reazione quando i risultati attesi non arrivano: se si vedono scostamenti ripetuti ma si lavora come prima, i controlli producono solo rumore di fondo." }
+  ]
+ },
+ {
+  "id": "42001_m06_s023",
+  "layout": "punti",
+  "kicker": "In verifica · 1",
+  "titolo": "Costruire una traccia che tenga insieme tutto",
+  "intro": "La difficoltà non è capire i singoli temi, ormai a fuoco, ma non perderne i collegamenti. Se esamini risorse, competenza, comunicazione, informazioni documentate e pianificazione come isole separate, rischi di vedere frammenti corretti senza capire se il sistema funziona. Serve una traccia di lavoro che tenga insieme i pezzi, con una postura che apra i processi invece di chiuderli.",
+  "punti": [
+   { "h": "I processi come spina dorsale", "d": "Invece di partire da tutti i documenti, inizia dai processi che contano di più. Lungo di essi guardi quali risorse servono, quali competenze entrano in gioco, quali messaggi devono circolare, quali informazioni documentate sostengono il lavoro e quali controlli rendono l'esecuzione conforme al pianificato." },
+   { "h": "Triangolare sempre le fonti", "d": "Nessun elemento da solo basta: un documento può essere corretto ma poco usato, un'intervista sincera ma incompleta, un'osservazione può fotografare un momento favorevole. Quando documento, intervista e pratica convergono, il giudizio diventa molto più solido." },
+   { "h": "Sequenza e campionamento", "d": "Parti da ciò che l'organizzazione dichiara di fare, poi da ciò che le persone dicono di fare, infine da ciò che accade davvero. Scegli campioni sensati: una modifica recente, un'attività ad alta frequenza, un processo con più passaggi umani, un'attività esterna, un caso in cui il controllo ha mostrato limiti." },
+   { "h": "Guardare le interdipendenze", "d": "Una lacuna di risorse può spiegare un controllo non eseguito; un problema di comunicazione un uso scorretto; documenti obsoleti comportamenti divergenti; competenza inadeguata la debolezza di una revisione umana. Prevedi sempre un punto finale di ricomposizione: quale storia raccontano insieme le evidenze?" }
+  ]
+ },
+ {
+  "id": "42001_m06_s024",
+  "layout": "punti",
+  "kicker": "In verifica · 2",
+  "titolo": "Risorse, competenza e consapevolezza senza fermarsi alla superficie",
+  "intro": "Usa una domanda guida unica: l'organizzazione ha davvero messo le persone nelle condizioni di contribuire al sistema nel modo atteso? Dentro ci sono mezzi disponibili, ruoli preparati e comprensione del perché certe regole esistono. Se uno dei tre elementi manca, il sistema inizia a dipendere dall'improvvisazione. Non cercare persone perfette, ma coerenza tra ruolo, preparazione, supporto e comprensione.",
+  "punti": [
+   { "h": "Risorse: fabbisogno contro disponibilità reale", "d": "Se un processo richiede revisione di eccezioni, presidio dei dati o gestione delle modifiche, chiedi quante persone lo seguono, con quali tempi e strumenti, e confronta con carichi e risultati. Spesso la carenza emerge non da ciò che manca sulla carta, ma da ciò che non si riesce più a fare con regolarità." },
+   { "h": "Competenza: parti dal ruolo, non dagli attestati", "d": "Chiediti quale competenza richiede davvero ciascun ruolo e verifica se istruzione, formazione ed esperienza sono coerenti. Le interviste contestuali sono un segnale forte: invece di «hai fatto formazione?», chiedi di raccontare un caso. Una persona competente ti mostra di capire il lavoro, non ripete la procedura." },
+   { "h": "Consapevolezza: capire il senso delle regole", "d": "Le persone conoscono la politica in modo pratico? Sanno spiegare il proprio contributo e le implicazioni della non conformità? La prova arriva dal linguaggio spontaneo: chi è consapevole collega la regola alla conseguenza, chi non lo è parla di istruzioni come abitudini da eseguire." },
+   { "h": "Verificare l'allineamento", "d": "Se l'organizzazione forma bene ma non assegna tempo, la competenza non si traduce in pratica; se dà mezzi ma non spiega il senso dei controlli, le persone cercano scorciatoie; se comunica aspettative elevate ma non sostiene chi lavora, crescono errori e soluzioni informali." }
+  ]
+ },
+ {
+  "id": "42001_m06_s025",
+  "layout": "split",
+  "kicker": "In verifica · 3",
+  "titolo": "Comunicazione e informazioni documentate come leve operative",
+  "lead": "A prima vista sembrano temi formali, ma verificati bene diventano una finestra potente sul funzionamento reale. È qui che vedi se l'organizzazione trasforma decisioni e criteri in messaggi comprensibili, accessibili e stabili nel tempo. Se questo passaggio non regge, anche risorse adeguate e persone competenti finiscono per lavorare in modo disallineato. Chiedi come sostengono un evento reale, un cambiamento reale, una decisione reale.",
+  "punti": [
+   { "h": "Comunicazione: cerca l'effetto sull'azione", "d": "Scegli eventi significativi — una modifica recente, una limitazione temporanea, una segnalazione di output inattendibile — e ricostruisci il flusso: chi è stato avvisato, quando, con quale mezzo, con quale effetto sul lavoro. Una comunicazione può esistere e restare inefficace: un messaggio tecnico non compreso, un urgente affidato a un verbale che arriva tardi." },
+   { "h": "Il caso dello scarto formale", "d": "Il team tecnico manda una nota ai responsabili su classificazioni troppo severe, ma gli utenti non ricevono istruzioni chiare e continuano come prima. Quando emergono i reclami, l'azienda sostiene di avere comunicato: formalmente vero, operativamente no. La verifica deve cogliere proprio questo scarto." },
+   { "h": "Informazioni documentate: evita la verifica da scaffale", "d": "Non quanti documenti esistono, ma se sono identificati, aggiornati, disponibili, protetti e allineati alla pratica. Un test semplice: chiedi a una persona di mostrarti l'istruzione che usa davvero. Se ci mette molto, apre una copia locale non controllata o dice che la versione ufficiale non è aggiornata, hai un segnale." },
+   { "h": "Governare le due dimensioni insieme", "d": "Una modifica ben documentata ma comunicata male non cambia il comportamento; una comunicazione efficace che non lascia traccia rende difficile la ricostruzione. Se il sistema è usato più ampiamente di quanto i documenti descrivano, l'organizzazione opera già fuori dal proprio perimetro documentato." }
+  ]
+ },
+ {
+  "id": "42001_m06_s026",
+  "layout": "timeline",
+  "kicker": "In verifica · 4",
+  "titolo": "Pianificazione e controlli operativi lungo il lavoro reale",
+  "intro": "La domanda fondamentale è diretta: i processi necessari sono pianificati, attuati e tenuti sotto controllo in modo coerente con i requisiti e con le azioni già definite? Non basta una mappa di processo. Prendi un processo rilevante e scomponilo in quattro passaggi, che ti portano nel cuore del punto 8.1 senza disperdere l'attenzione. La gestione delle modifiche è spesso il banco di prova più rivelatore.",
+  "tappe": [
+   { "t": "01", "h": "I criteri", "d": "Abbastanza chiari da orientare le persone e pertinenti da riflettere rischio e uso reale: quando l'output può essere usato direttamente, quando serve revisione umana, chi approva cambiamenti, quali limiti d'uso, che cosa fa scattare un'escalation. Se sono vaghi o solo impliciti, il processo non è sotto controllo in senso forte." },
+   { "t": "02", "h": "I controlli", "d": "La verifica migliore nasce dalla concretezza: quali controlli operano prima, durante e dopo l'attività, come si collegano ai rischi che l'organizzazione ha deciso di trattare, come vengono monitorati. Un controllo è credibile quando vedi come funziona, da chi è svolto, con quale frequenza e con quale effetto." },
+   { "t": "03", "h": "Le prove di esecuzione", "d": "Quali informazioni documentate mostrano che il processo è stato eseguito come pianificato. Trovi il controllo preliminare registrato, il via libera di un ruolo appropriato, il monitoraggio iniziale, una decisione correttiva quando le deviazioni hanno superato la soglia? Allora la catena è leggibile." },
+   { "t": "04", "h": "Modifiche e attività esterne", "d": "Per le modifiche pianificate: valutazione preventiva, approvazione proporzionata, comunicazione, osservazione degli effetti. Per quelle involontarie: rilevazione, riesame, mitigazione. E se un soggetto esterno fornisce dati o servizi pertinenti, il controllo non si ferma al contratto: aspettative, informazioni sui cambiamenti, valutazione del servizio." }
+  ]
+ },
+ {
+  "id": "42001_m06_s027",
+  "layout": "confronto",
+  "kicker": "In verifica · 5",
+  "titolo": "Dalle evidenze al giudizio: sintomi, cause e tenuta del sistema",
+  "intro": "Trasformare ciò che hai visto in un giudizio chiaro, utile e fondato è il momento più delicato. Un bravo auditor non si distingue perché trova più errori, ma perché sa leggere il sistema, separare i sintomi dalle cause e formulare conclusioni proporzionate. Il primo passaggio è ricomporre la storia: ogni evidenza da sola dice qualcosa, insieme possono dire molto di più.",
+  "a": {
+   "h": "Risalire dal sintomo alla causa",
+   "sub": "Ricomporre la storia",
+   "punti": [
+    { "d": "Un controllo non eseguito sembra una distrazione locale; se scopri anche carenza di risorse, istruzioni non aggiornate e comunicazione incompleta, hai un difetto di sistema che attraversa più punti. Chiediti sempre che cosa spiega che cosa: la registrazione mancante è il problema o il segno di un processo poco governato?" },
+    { "d": "Conta la proporzionalità: valuta impatto, estensione, ripetitività e capacità dell'organizzazione di riconoscere e gestire il problema. Una lacuna di consapevolezza in un ruolo periferico pesa meno della stessa in chi decide o approva cambiamenti critici. La proporzionalità ti mantiene giusto, e quindi credibile." }
+   ]
+  },
+  "b": {
+   "h": "Giudicare la tenuta, non la tecnologia",
+   "sub": "Formulazione finale",
+   "punti": [
+    { "d": "Verificare supporto e operativo non significa giudicare se la tecnologia è brillante, ma se il sistema sostiene un uso controllato, leggibile e migliorabile. Conta anche come l'organizzazione reagisce: un limite già noto e accompagnato da azioni mostra apprendimento; negazione o spiegazioni contraddittorie indicano tenuta più debole." },
+    { "d": "Nella formulazione cerca chiarezza: descrivi il fatto osservato, collegalo al requisito pertinente, spiega perché indebolisce il sistema. Evita formule nebulose e giudizi sulle persone: valuti processi, controlli, evidenze e coerenza organizzativa. È questo a rendere il lavoro forte e difendibile." }
+   ]
+  }
+ },
+ {
+  "id": "42001_m06_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 6",
+  "modNum": "6",
+  "titolo": "Una catena, non un elenco: verso i controlli dell'Appendice A",
+  "punti": [
+   { "h": "Gli appoggi concreti del sistema", "d": "Le risorse rendono possibile il lavoro, la competenza rende le persone capaci di svolgerlo, la consapevolezza dà senso alle regole e collega comportamento e conseguenze, la comunicazione fa circolare ciò che serve, le informazioni documentate danno stabilità e memoria, la pianificazione traduce tutto in processi e controlli operativi." },
+   { "h": "Va letto come una catena", "d": "Se si indebolisce un anello, presto si vedono effetti sugli altri: risorse insufficienti portano a controlli incompleti, competenza inadeguata a decisioni deboli, consapevolezza carente a scorciatoie, comunicazione confusa a ritardi, documenti obsoleti a divergenze, pianificazione poco chiara all'improvvisazione." },
+   { "h": "La verifica segue i processi reali", "d": "Non procede per capitoli isolati: parti da processi reali e segui il flusso delle attività. Lì osservi se il supporto sostiene l'operatività, se i criteri guidano i comportamenti, se i controlli sono efficaci, se le modifiche e le attività esterne sono governate. Così distingui un sistema vivo da uno solo dichiarato." },
+   { "h": "Dalla formula all'evidenza", "d": "Non fermarti mai alla dichiarazione più rassicurante: cerca la traduzione operativa. Un buon sistema non promette ordine, lo rende osservabile. Nel prossimo modulo entrerai nei controlli dell'Appendice A, con la guida B: presidi di riferimento da interpretare con criterio, senza perdere il legame con rischi, processi e contesto." }
+  ],
+  "prossimo": {
+   "modulo": "7",
+   "titolo": "I controlli dell'Appendice A e la guida B",
+   "testo": "Hai chiarito la struttura che rende possibile governare il sistema; ora entrerai nei presidi di riferimento più specifici, da richiamare e interpretare con criterio, sempre legati a rischi, processi e contesto organizzativo."
+  }
+ }
+]
