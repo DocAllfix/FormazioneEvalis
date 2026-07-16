@@ -1,0 +1,417 @@
+[
+ {
+  "id": "22000_m09_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 22000 — Sicurezza alimentare",
+  "kicker": "Modulo 9",
+  "eyebrow": "Dove il sistema migliora, o cede",
+  "titolo": "Miglioramento e non conformità tipiche dell'SGSA",
+  "testo": "La norma dedica il punto 10 al miglioramento, ma dietro c'è una domanda concreta: quando qualcosa va storto, l'organizzazione reagisce bene o si limita a spegnere l'incendio del giorno? È qui che una non conformità smette di essere un rilievo e diventa un test di maturità. Se l'evento viene contenuto, capito, corretto e usato per rinforzare il sistema, l'SGSA cresce; se viene archiviato in fretta senza risalire alla causa, il problema torna, spesso più costoso. La linea guida di tutto il modulo: il punto non è trovare un colpevole, ma far lavorare il sistema meglio di prima.",
+  "agenda": [
+   "10.1 — reagire, correggere, cercare la causa",
+   "Azione correttiva proporzionata ed evidenze",
+   "10.2/10.3 — miglioramento continuo e aggiornamento",
+   "Non conformità tipiche: PRP, CCP, tracciabilità, verifiche",
+   "NC di sistema vs allerta alimentare: la gerarchia",
+   "Il rapporto utile: leva per decidere"
+  ]
+ },
+ {
+  "id": "22000_m09_s002",
+  "layout": "flusso",
+  "kicker": "10.1 — La prima reazione",
+  "titolo": "Reagire con un ordine mentale preciso",
+  "intro": "Quando emerge una non conformità, la prima aspettativa è reagire — ma reagire non è solo prendere atto: è intervenire in modo utile, con un ordine mentale. Per quanto applicabile, tenere sotto controllo, correggere, affrontare le conseguenze. Passaggi collegati, non identici: se li confondi, pensi che basti sistemare il difetto visibile mentre l'impatto resta aperto.",
+  "passi": [
+   { "h": "Tenere sotto controllo", "d": "Con l'etichetta allergeni errata non basta stampare quella giusta domani: prima bloccare il prodotto, separarlo, impedire spedizioni, capire dove è già uscito, valutare l'effetto sul consumatore e sul cliente. Il controllo deve avere ampiezza proporzionata al rischio — altri lotti, turni, linee, la stessa attrezzatura usata altrove?" },
+   { "h": "Correggere", "d": "Rimette a posto il sintomo immediato — reimpostare la sonda usata male è correzione. Ma la correzione non cerca ancora la causa: evita che il processo continui fuori controllo e che il prodotto prosegua senza valutazione. Solo dopo, o in parallelo, si corregge l'errore materiale." },
+   { "h": "Affrontare le conseguenze", "d": "Non riguarda solo il prodotto: cliente, produzione, magazzino, comunicazione interna, credibilità del sistema. Il segnale peggiore è la risposta rituale — un modulo con «errore operatore» o «disattenzione» e nessuna evidenza delle prime ore: non è controllo, è una narrazione difensiva. Una gestione robusta lascia tracce: prodotto identificato, azioni eseguite, ruoli attivati, decisioni motivate." }
+  ]
+ },
+ {
+  "id": "22000_m09_s003",
+  "layout": "punti",
+  "kicker": "10.1 — La causa",
+  "titolo": "Dalla correzione alla causa",
+  "intro": "Dopo la reazione, un salto di qualità: capire se intervenire sulle radici, per impedire il ritorno. Un evento può dipendere da più fattori concomitanti, non da una spiegazione comoda. La sequenza: riesamini la NC con calma, determini le cause, ti chiedi se quella debolezza sia presente in processi o situazioni simili.",
+  "punti": [
+   { "h": "Allargare l'orizzonte", "d": "Se un modulo è compilato male in una linea, il tema non è solo quella linea: la stessa istruzione ambigua in altri reparti, la stessa prassi in più turni, un difetto nel modo in cui il sistema comunica, forma, controlla o verifica. La terza domanda — casi simili altrove — è decisiva." },
+   { "h": "Il meccanismo, non il colpevole vicino", "d": "La temperatura in accettazione oltre il limite ma il lotto entra: «l'operatore non ha seguito la procedura» è l'inizio, non la fine. Non la conosceva? Era scritta male? I tempi di scarico rendevano improbabile il rispetto? Il turno ha dato priorità alla produzione? Il sistema permetteva di chiudere senza una seconda verifica? Episodi simili erano già comparsi senza essere letti?" },
+   { "h": "La causa dichiarata troppo presto", "d": "«Mancata attenzione», «errore umano», poi subito formazione: ma la formazione da sola è universale solo sulla carta. Se il problema era un'interfaccia software poco chiara, un'etichetta illeggibile, una procedura per un flusso diverso o una responsabilità di troppe persone, ripetere l'addestramento non tocca la causa — produce l'illusione del controllo." },
+   { "h": "La finestra sui problemi più ampi", "d": "Il detergente non alimentare accanto ai prodotti approvati: non basta rimuoverlo e richiamare il reparto. Il criterio di segregazione è chiaro in tutto il sito? I nuovi addetti lo conoscono? I fornitori terzi hanno le stesse istruzioni? Il magazzino usa codifiche distinguibili? Ogni NC può diventare una finestra su problemi più ampi — capire la causa è la condizione minima per scegliere un'azione sensata." }
+  ]
+ },
+ {
+  "id": "22000_m09_s004",
+  "layout": "confronto",
+  "kicker": "10.1 — Proporzionalità",
+  "titolo": "Azione correttiva: nella misura giusta",
+  "intro": "«Necessaria» non significa abbondante, scenografica o rassicurante: significa adatta al problema, alla causa, agli effetti e alla probabilità di ripetizione — commisurata all'impatto della NC. Un'organizzazione matura non reagisce sempre allo stesso modo: dosa la risposta con giudizio. La proporzionalità non è indulgente, è precisa.",
+  "a": {
+   "h": "Registro firmato in ritardo",
+   "sub": "Impatto contenuto",
+   "punti": [
+    { "d": "La pulizia è stata eseguita e verificata in altro modo: l'azione correttiva si concentra sul flusso di registrazione, sulla chiarezza delle responsabilità, sul momento in cui il controllo viene documentato." },
+    { "d": "Trattarlo con l'intensità di una crisi sarebbe eccessivo; ridurlo a nulla farebbe perdere disciplina. La misura giusta sta nella proporzione." }
+   ]
+  },
+  "b": {
+   "h": "Allergene con utensili non segregati",
+   "sub": "Impatto serio",
+   "punti": [
+    { "d": "La verifica di cambio produzione è risultata inefficace: rivedere istruzioni, attrezzature, formazione, verifiche operative, forse la classificazione delle misure coinvolte." },
+    { "d": "La tentazione della risposta unica — «richiamo al personale e retraining» — a volte è giusta, spesso solo comoda. Gli errori di codice lotto risolti con richiami verbali tornano dopo una settimana: la causa vera erano etichette in cassette quasi identiche e stampante senza blocco del formato sbagliato. L'azione sensata riprogetta la separazione, introduce un controllo di compatibilità — l'evento non solo corretto, ma reso meno probabile. E quando serve, si modifica l'SGSA stesso." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m09_s005",
+  "layout": "split",
+  "kicker": "10.1 — Evidenze",
+  "titolo": "Tracciare natura, azioni, risultati",
+  "lead": "Conservare informazioni documentate sulla natura della NC, sulle azioni intraprese e sui risultati di ogni azione correttiva. Non solo dimostrare che qualcosa è stato fatto: rendere ricostruibile l'intera storia — che cosa è accaduto, che cosa hai deciso, che cosa hai eseguito, come sai che ha funzionato. Le registrazioni migliori permettono a chi non era presente di ricostruire il caso senza indovinare.",
+  "punti": [
+   { "h": "La natura", "d": "Non «errore in produzione» o «anomalia documentale»: il fatto, il contesto, il processo coinvolto, il possibile effetto, l'estensione. «Lotto bloccato» non basta — dove si è verificata l'anomalia, quale misura era prevista, chi l'ha rilevata, quali prodotti o attività sono coinvolti." },
+   { "h": "Ogni azione intrapresa", "d": "Leggibile la sequenza: contenimento, correzione, gestione delle conseguenze, analisi della causa, ricerca di casi simili, decisioni, responsabilità, tempi. Non romanzi — un ragionamento verificabile: se dichiara di aver rivalutato altri processi esposti, dev'essere possibile vedere come; se ha aggiornato una procedura, quale e quando." },
+   { "h": "I risultati (la parte più debole)", "d": "Molti registrano bene l'evento, discretamente l'azione, quasi mai l'esito. Se hai cambiato una procedura di sanificazione, come dimostri che il controllo è più affidabile? Se hai modificato la gestione dei codici, quali evidenze mostrano che gli errori si sono ridotti? Senza questa chiusura, l'azione resta una promessa." },
+   { "h": "Rivela il pensiero organizzativo", "d": "Se tutte le NC sono descritte con le stesse parole, tutte le cause sono «disattenzione», tutte le azioni «formazione», tutti gli esiti «chiuso», stai guardando un processo che probabilmente non impara. Una buona tracciatura mostra varietà, proporzionalità, collegamenti col sistema, capacità di verifica dell'efficacia." }
+  ]
+ },
+ {
+  "id": "22000_m09_s006",
+  "layout": "definizione",
+  "kicker": "10.2 — Miglioramento continuo",
+  "eyebrow": "Idoneità, adeguatezza, efficacia",
+  "titolo": "Non solo chiudere problemi, ma crescere",
+  "definizione": "L'SGSA deve migliorare in modo continuo nella sua idoneità (resta adatto allo scopo), adeguatezza (architettura coerente con il contesto reale) ed efficacia (produce i risultati attesi, non solo esiste sulla carta). Non un auspicio morale: una richiesta sulla qualità concreta del sistema nel tempo.",
+  "punti": [
+   "La responsabilità è dell'alta direzione: impedisce di confinare il tema al gruppo sicurezza alimentare. Se dipende solo dalla buona volontà di chi presidia ogni giorno, prima o poi si blocca contro limiti di priorità, risorse e tempi.",
+   "Le sorgenti sono già prodotte dal sistema: comunicazione, riesame di direzione, audit interno, esiti delle verifiche, validazione delle misure di controllo, azioni correttive, aggiornamento del sistema. Il miglioramento non nasce da ispirazione — nasce da segnali, dati, confronti che qualcuno usa davvero.",
+   "Chiudere problemi non equivale a migliorare: se ogni mese risolvi gli stessi tipi di deviazione, lavori molto ma non migliori abbastanza. Migliorare significa ridurre la vulnerabilità del sistema — non solo gestirne gli inciampi. Aumento delle rilavorazioni, scostamenti minori, sanificazioni da ripetere, fornitori con informazioni incomplete: nessuno drammatico da solo, insieme un SGSA che perde efficacia.",
+   "I sistemi che invecchiano bene trasformano i ritorni dal campo in decisioni strutturate; quelli che invecchiano male accumulano segnali senza integrarli — la direzione vede indicatori, il reparto vede problemi operativi, il gruppo vede deviazioni tecniche, e nessuno compone il quadro."
+  ]
+ },
+ {
+  "id": "22000_m09_s007",
+  "layout": "evidenza",
+  "kicker": "10.2/10.3 — Un avvertimento",
+  "eyebrow": "La calma apparente e insidiosa",
+  "titolo": "Il sistema che invecchia male: resta uguale mentre tutto cambia",
+  "testo": "Un SGSA può sembrare ordinato, completo e persino elegante, e invecchiare male: resta formalmente stabile mentre il contesto operativo cambia intorno a lui. Nuovi prodotti, ingredienti, fornitori, layout, attrezzature, richieste dei clienti — tutto si muove, ma l'impianto di analisi e controllo resta quello di ieri. A quel punto l'ordine documentale non è una garanzia, può diventare un alibi. I sintomi sono riconoscibili: l'analisi dei pericoli non viene rivista da tempo ma i processi sì, le procedure si aggiornano solo quando qualcuno le contesta, le verifiche confermano ciò che è già noto, il riesame è corretto nella forma ma non porta decisioni, le non conformità si ripetono con variazioni minime. Un sistema stabile non è immobile: è capace di mantenere il controllo mentre cambia in modo governato. Quando senti «il sistema funziona perché non è cambiato molto», accendi una spia."
+ },
+ {
+  "id": "22000_m09_s008",
+  "layout": "punti",
+  "kicker": "10.3 — Aggiornamento",
+  "titolo": "Valutare a intervalli pianificati",
+  "intro": "Rende operativo ciò che il miglioramento continuo lascerebbe troppo generale. L'alta direzione assicura che l'SGSA sia costantemente aggiornato; il gruppo sicurezza alimentare lo valuta a intervalli pianificati. Due idee forti: l'aggiornamento non può essere solo reattivo, e la valutazione deve avere una cadenza pensata, non dipendere dall'umore del momento.",
+  "punti": [
+   { "h": "Il cuore tecnico, non solo i documenti", "d": "Il gruppo valuta se rivedere il ragionamento sui pericoli, l'assetto delle misure con cui vengono governati e i PRP già definiti. L'aggiornamento tocca insieme il ragionamento di base, l'assetto dei controlli e le condizioni operative — non solo i documenti generali." },
+   { "h": "L'esempio del raffreddamento nuovo", "d": "La cucina centralizzata che introduce un ciclo di raffreddamento rapido: non basta registrare che c'è una nuova attrezzatura. L'analisi dei pericoli precedente copre ancora il processo? Tempi e temperature restano appropriati? Il piano va modificato? I PRP di pulizia, manutenzione, formazione e flusso restano adeguati? Questo è aggiornamento; il resto è cronaca delle modifiche fatte altrove." },
+   { "h": "Le fonti", "d": "Comunicazione interna ed esterna, altre informazioni su idoneità/adeguatezza/efficacia, risultati rielaborati delle verifiche, output del riesame di direzione. Una segnalazione del cliente, un cambiamento di una materia prima, un reparto che segnala difficoltà ricorrenti, un manutentore che nota un punto debole — l'aggiornamento non nasce in isolamento tecnico." },
+   { "h": "Usare i segnali deboli", "d": "I sistemi meno maturi aggiornano quasi sempre solo dopo uno shock — un reclamo grave, una contestazione, una pressione del cliente. I più maturi colgono una serie di piccoli scostamenti prima che producano un evento maggiore. Valutare a intervalli pianificati non significa riunioni rituali: porsi domande sostanziali con evidenze e decidere, lasciando una traccia chiara del ragionamento anche quando la risposta è «no»." }
+  ]
+ },
+ {
+  "id": "22000_m09_s009",
+  "layout": "numeri",
+  "kicker": "10.3 — Documentare",
+  "titolo": "Dal cambiamento alla decisione di direzione",
+  "intro": "L'aggiornamento va documentato e torna nel riesame di direzione come elemento da esaminare — chiude un circuito importante: non resta materia tecnica per specialisti, diventa visibile alla direzione che lo usa per decidere. Il rischio frequente: documentare il cambiamento ma non il perché. Una buona documentazione racconta quattro cose.",
+  "numeri": [
+   { "n": "1", "h": "Il segnale che ha reso necessario il riesame", "d": "Quale segnale o insieme di segnali. Senza questo, dopo qualche mese nessuno ricorda se la modifica nasceva da una NC, un trend di verifiche, una segnalazione interna, un cambio di processo o una decisione della direzione — la memoria organizzativa si indebolisce." },
+   { "n": "2", "h": "Quali parti dell'SGSA rivalutate", "d": "Analisi dei pericoli, piano di controllo, PRP, responsabilità operative: rendere leggibile che cosa è stato rimesso sotto esame." },
+   { "n": "3", "h": "Quali decisioni prese e attuate", "d": "L'aumento di reclami per saldatura debole + manutenzione disomogenea delle termosaldatrici + difficoltà nei cambi formato: rivedere le istruzioni di settaggio, uniformare la manutenzione preventiva, rafforzare il controllo di avvio linea, formare i capi turno sul nuovo criterio." },
+   { "n": "4", "h": "Quali evidenze mostrano che ha senso", "d": "Nel riesame di direzione l'aggiornamento diventa un input chiaro: risorse necessarie, priorità tecniche, verifica dei risultati nei mesi successivi. Così il cambiamento non resta episodico, entra nel governo del sistema. Il sistema decorativo aggiorna documenti; quello vivo usa l'aggiornamento per informare la direzione e riallineare le scelte — da fuori sembrano simili, ma il filo logico rivela la differenza." }
+  ]
+ },
+ {
+  "id": "22000_m09_s010",
+  "layout": "punti",
+  "kicker": "Ponte",
+  "titolo": "Dalla singola anomalia ai difetti ricorrenti",
+  "intro": "Ricomponiamo il quadro. Il punto 10 parte dalla non conformità — un fatto che rompe l'atteso — e chiede una catena: controllo, correzione, conseguenze; poi causa, casi simili, azione correttiva appropriata, verifica di efficacia; infine, quando serve, modifica dell'SGSA e vita con miglioramento continuo e aggiornamento. Un sistema maturo non sopporta gli errori: li usa per diventare più robusto.",
+  "punti": [
+   { "h": "Ogni anello conta", "d": "Se manca la gestione delle conseguenze, il rischio resta scoperto; se manca l'analisi della causa, l'azione correttiva si svuota; se manca la verifica di efficacia, la chiusura è solo amministrativa; se manca l'aggiornamento, l'apprendimento non si sedimenta; se manca il miglioramento continuo, il sistema si stabilizza in una forma che diventa vecchia." },
+   { "h": "Le NC più interessanti", "d": "Spesso non le eclatanti, ma le ricorrenti — piccole ma ripetute, che cambiano faccia mantenendo la stessa logica. Un'etichetta sbagliata oggi, una codifica ambigua domani, una tracciabilità incompleta dopo: eventi diversi, magari legati alla stessa debolezza nei flussi informativi." },
+   { "h": "Non sempre cattiva volontà", "d": "Spesso crescita non accompagnata, cambiamenti non assorbiti, risorse non riallineate, responsabilità poco chiare, o la familiarità con il rischio che normalizza segnali deboli. Non attenua la gravità, ma aiuta a leggerli: vedere non solo il difetto, ma il meccanismo organizzativo che lo rende probabile." },
+   { "h": "Rilievo isolato vs pattern", "d": "Un rilievo isolato può essere corretto; un pattern ricorrente chiede una diagnosi più ampia. Da qui la parte concreta: PRP trascurati, classificazioni deboli, tracciabilità zoppa, verifiche sterili, riesami formali — manifestazioni diverse di una domanda: l'SGSA governa il processo o lo rincorre?" }
+  ]
+ },
+ {
+  "id": "22000_m09_s011",
+  "layout": "split",
+  "kicker": "Ricorrenza · PRP · 1",
+  "titolo": "Il problema che sembra minore e regge tutto",
+  "lead": "La prima ricorrenza: i PRP trascurati — condizioni di base che dovrebbero sostenere l'operatività ogni giorno, ma che col tempo diventano invisibili proprio perché quotidiane. E quando diventano invisibili, il sistema smette di presidiare ciò che dà per scontato. Molte NC apparentemente isolate nascono da PRP deboli, trascurati o non riallineati alla realtà.",
+  "punti": [
+   { "h": "Si consumano lentamente", "d": "Raramente crollano di colpo: la pulizia resta pianificata ma cambia la pressione dei tempi e la qualità dell'esecuzione; la manutenzione resta prevista ma si allungano i rinvii; il controllo infestanti resta contrattualizzato ma i rilievi diventano rumore. Il sistema è ancora scritto, ma non più robusto." },
+   { "h": "I carrelli nel corridoio", "d": "Puliti e sporchi nello stesso corridoio in orari diversi: funziona finché il personale è stabile e i volumi contenuti. Poi nuovi addetti, più produzione, orari compressi — nessuno aggiorna i criteri di separazione. Alla contaminazione crociata, la tentazione è l'errore del giorno; la causa reale è un PRP di gestione flussi diventato insufficiente rispetto al nuovo contesto." },
+   { "h": "«Abbiamo sempre fatto così»", "d": "Quando compare, fermati: potresti essere davanti a una prassi consolidata che il sistema non ha più riesaminato. Se l'organizzazione non usa i segnali dal campo per chiedersi se i PRP sono ancora adeguati, invecchia male proprio nelle fondamenta — non perché manchi il documento, ma perché manca l'ascolto." },
+   { "h": "L'effetto ottico", "d": "I PRP trascurati non producono subito un evento netto: piccole deviazioni, tolleranze, adattamenti — percepiti come minori rispetto a un CCP. Eppure sono il terreno su cui si accumulano vulnerabilità che poi si trasferiscono altrove. La domanda utile: ciò che oggi è gestito grazie all'attenzione individuale dovrebbe invece essere garantito dal sistema?" }
+  ]
+ },
+ {
+  "id": "22000_m09_s012",
+  "layout": "cards",
+  "kicker": "Ricorrenza · PRP · 2",
+  "titolo": "Quando la carta sembra in ordine",
+  "intro": "Andare oltre «esiste una procedura»: quasi sempre esiste. Il problema è se regge ancora il processo reale, se viene applicata come previsto, se produce condizioni coerenti con la sicurezza — questo separa un controllo formale da uno sostanziale.",
+  "cards": [
+   { "h": "Manutenzione", "d": "Piano presente, attività registrate, fornitore regolare. Ma sul campo: protezioni danneggiate, guarnizioni usurate, microfermi, perdite «fisiologiche», provvisori che durano settimane. Il PRP certifica che qualche intervento avviene, non che previene il deterioramento." },
+   { "h": "Pulizia e sanificazione", "d": "Istruzioni, schede, frequenze, firme quotidiane. Poi negli orari di punta i tempi di cambio linea si riducono, alcune superfici sono difficili da raggiungere, la verifica pre-operativa è un'occhiata rapida. Manca l'aderenza tra metodo scritto e operatività." },
+   { "h": "Igiene del personale", "d": "Cartelli esposti, regole note, addestramento registrato. Ma il ricambio è aumentato, i tempi di inserimento accorciati, alcune prescrizioni adattate localmente, i preposti intervengono solo sui casi vistosi: il sistema non presidia più il comportamento quotidiano, lo insegue." },
+   { "h": "Flussi di materiali", "d": "Nuove referenze e più rilavorazioni, ma aree e percorsi restano gli stessi, le codifiche visive si moltiplicano fino a confondere. È cambiata la complessità e il PRP organizzativo non è stato adattato — alla miscelazione errata, un controllo di base lasciato invecchiare." }
+  ]
+ },
+ {
+  "id": "22000_m09_s013",
+  "layout": "confronto",
+  "kicker": "Ricorrenza · CCP · 1",
+  "titolo": "Quando le misure sono mal classificate",
+  "intro": "Sistemi che usano le etichette in modo poco coerente: qualcosa è CCP per prudenza apparente, qualcosa resta OPRP per comodità, e a volte nessuno sa spiegare perché. Non è un problema terminologico: il sistema distribuisce male attenzione, risorse e priorità. La domanda metodologica: se la misura fallisce, il sistema sa cosa succede, come se ne accorge, con quale urgenza reagire?",
+  "a": {
+   "h": "Classificazione per abitudine",
+   "sub": "Statica",
+   "punti": [
+    { "d": "Una misura è sempre stata CCP, quindi continua a esserlo anche se il processo è cambiato; o un controllo è rimasto OPRP perché così fu impostato anni prima, benché oggi il contesto lo renda più sensibile." },
+    { "d": "Accade quando il sistema non riesamina con rigore come valuta i pericoli e costruisce i controlli: un assetto formalmente coerente col passato, non col presente." }
+   ]
+  },
+  "b": {
+   "h": "Classificazione difensiva",
+   "sub": "Gonfiata o svuotata",
+   "punti": [
+    { "d": "Aumentare i CCP pensando che più controlli critici = più robustezza: ma se tutto è critico, nulla lo è — il personale si abitua a un'attenzione nominalmente massima non sostenibile, e i controlli perdono significato. Altre organizzazioni riducono i punti sensibili per semplificare, trattando con leggerezza controlli che richiederebbero più rigore." },
+    { "d": "Nei cambi prodotto con allergeni: sequenza, pulizia, verifica, rilascio esistono, ma il criterio con cui si decide se il rischio residuo è sotto controllo è poco chiaro — a volte gestione ordinaria, a volte altissima sensibilità. Se le categorie non hanno un ragionamento solido, le persone le applicano in modo variabile, e l'azione correttiva corregge la registrazione senza riesaminare la logica: la causa resta intatta." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m09_s014",
+  "layout": "punti",
+  "kicker": "Ricorrenza · CCP · 2",
+  "titolo": "Come la confusione diventa routine",
+  "intro": "La prima conseguenza di una classificazione debole non è sempre un incidente: più spesso una routine confusa. Le persone eseguono attività che sembrano importanti, senza criteri chiari per capire quando il controllo funziona, quando vacilla, quando fermarsi. Da fuori il sistema appare diligente; da vicino manca la nitidezza decisionale che rende affidabile un punto sensibile.",
+  "punti": [
+   { "h": "La variabilità tra turni", "d": "Un controllo «critico» con parametri compresi diversamente: un operatore registra con zelo, un altro per consuetudine, un preposto tratta uno scostamento come accettabile, un altro come deviazione seria. Tutti credono di lavorare dentro il sistema, ma ciascuno ne applica una versione diversa — segnale forte di classificazione non solida." },
+   { "h": "Le verifiche a posteriori come alibi", "d": "Quando un controllo dovrebbe prevenire o bloccare un rischio al momento giusto, non puoi affidarti solo a verifiche successive per sentirti al sicuro. Il sito accumula controlli finali, ricontrolli, firme aggiuntive, ma non chiarisce il punto in cui la decisione va presa davvero — complessità che cresce senza migliorare il controllo." },
+   { "h": "La burocrazia invece della guida", "d": "Se il personale percepisce la classificazione come poco comprensibile, la usa come burocrazia: si compila perché bisogna, si interviene quando qualcuno contesta, non quando il dato lo richiederebbe. Il sistema non orienta più il comportamento, lo insegue — e il miglioramento continuo diventa faticoso perché i dati non riflettono decisioni coerenti." },
+   { "h": "L'azione correttiva progettuale", "d": "Il rilascio linea allergeni che dipende dall'occhio del turno (uno una verifica visiva rapida, un altro un riscontro ulteriore, un terzo la pressione dei tempi): alla contaminazione, la NC di sistema è più ampia dell'evento. L'azione utile raramente è un nuovo richiamo — riesaminare la logica del controllo, chiarire i criteri decisionali, rendere leggibile l'escalation, semplificare dove la complessità genera solo rumore." }
+  ]
+ },
+ {
+  "id": "22000_m09_s015",
+  "layout": "split",
+  "kicker": "Ricorrenza · Tracciabilità · 1",
+  "titolo": "Sai quasi tutto, ma non in tempo",
+  "lead": "Una delle NC più rivelatrici: la tracciabilità zoppa. Non assente — zoppa. Formalmente presente, con codici, registrazioni e procedure, ma incapace di ricostruire in modo rapido, completo e affidabile il percorso di materiali, semilavorati, rilavorazioni, confezioni o prodotti quando serve davvero. Il primo equivoco: pensare che la tracciabilità coincida con l'esistenza del lotto. Il lotto è solo un pezzo della storia.",
+  "punti": [
+   { "h": "Collegare tutta la catena", "d": "Deve permettere di collegare entrate, trasformazioni, mescolamenti, scarti reintrodotti, cambi formato, confezionamento, stoccaggio, uscita. Se un passaggio è opaco, il sistema regge nei giorni tranquilli ma cede quando serve una ricostruzione precisa — e non è solo documentale: riguarda la capacità di decidere in tempo." },
+   { "h": "Il lotto ricostruibile solo in parte", "d": "Le salse con materie prime codificate e lotti in uscita corretti, ma piccole rilavorazioni interne non sempre registrate con disciplina: alla contestazione su un ingrediente, l'azienda delimita solo in parte, perché alcuni passaggi dipendevano da appunti di turno o consuetudini verbali. Non del tutto assente, ma troppo fragile per una decisione rapida." },
+   { "h": "La lentezza che equivale a non sapere", "d": "Il sistema ricostruisce il percorso, ma troppo lentamente: in una situazione sensibile, sapere dopo molte ore ciò che dovevi sapere prima equivale spesso a non saperlo abbastanza. Non chiedere solo se i dati esistono — se sono integrati, leggibili e accessibili in tempi utili. Un archivio disperso tra moduli, fogli, gestionale e memoria produce comunque una risposta scadente." },
+   { "h": "La fiducia nel sapere informale", "d": "Racconta due cose: processi cresciuti in complessità senza aggiornamento del sistema, e fiducia eccessiva nella conoscenza informale delle persone esperte. Finché ci sono loro, il percorso si ricostruisce; quando cambiano turno o l'evento coinvolge più reparti, il sapere tacito non basta — e emergono i vuoti. Una NC di tracciabilità non è un errore di registrazione: la causa sta nei flussi informativi, nelle responsabilità, nelle rilavorazioni." }
+  ]
+ },
+ {
+  "id": "22000_m09_s016",
+  "layout": "cards",
+  "kicker": "Ricorrenza · Tracciabilità · 2",
+  "titolo": "Dove la tracciabilità cede davvero",
+  "intro": "Guarda i punti in cui il processo perde linearità: è lì che la tracciabilità zoppa si rivela — non perché manchi un codice, ma perché il filo logico tra un passaggio e l'altro diventa discontinuo. Una buona azione correttiva non stringe solo dove il problema è emerso: rivede il disegno del percorso informativo.",
+  "cards": [
+   { "h": "Rilavorazioni", "d": "Sembrano semplici perché restano nel sito, in pratica sono tra le più insidiose: un semilavorato rientra, miscelato in quantità «piccola», registrazione dipendente dal turno. Se il sistema non definisce identità, quantità, destinazione e collegamento al lotto finale, il percorso diventa opaco." },
+   { "h": "Sfusi e travasi", "d": "Ogni travaso rompe la linearità dell'identificazione e obbliga a ricostruirla: contenitori secondari non identificati coerentemente, collegamento col lotto madre affidato alla memoria, tempi di permanenza nelle aree intermedie non tracciati — invisibile per mesi, finché non serve delimitare un rischio." },
+   { "h": "Confezionamento", "d": "Lotti corretti associati in modo imperfetto a imballo, etichette o formati per clienti diversi — delicato quando la linea cambia spesso referenza e le etichette sono simili. Se sai cosa è stato prodotto ma non con quale configurazione confezionato, la tracciabilità è incompleta." },
+   { "h": "Tempo di risposta", "d": "Molte prove di richiamo sono costruite in condizioni troppo favorevoli: personale avvisato, dati preparati, un solo passaggio. Il test riesce e tutti si rassicurano. Nella realtà l'evento coinvolge più reparti, una rilavorazione, una spedizione partita — chiediti se la prova è scomoda, non scolastica." }
+  ]
+ },
+ {
+  "id": "22000_m09_s017",
+  "layout": "numeri",
+  "kicker": "Ricorrenza · Verifiche",
+  "titolo": "Quando il sistema misura, ma non impara",
+  "intro": "Una NC che emerge come clima del sistema: hai verifiche, controlli, indicatori, registrazioni, ma gli stessi problemi tornano o cambiano forma senza cambiare sostanza. Verifiche sterili — non perché manchino attività, ma perché il loro risultato non si traduce in miglioramento né in un aggiornamento utile. Se il sistema verifica molto ma cambia poco, non è necessariamente maturo: potrebbe essere solo molto attivo nel registrare.",
+  "numeri": [
+   { "n": "1", "h": "Ripetizione senza conseguenze", "d": "Una stessa famiglia di rilievi compare più volte, con parole diverse, e la risposta resta locale: si corregge il caso, si richiama il reparto, si pianifica un addestramento. A distanza di mesi riappare in area o turno diversi. Un sistema in apprendimento si chiederebbe qual è la causa comune — se non lo fa, accumula informazioni senza decisioni." },
+   { "n": "2", "h": "Analisi debole", "d": "I dati esistono ma sono letti in modo descrittivo, non interpretativo: deviazioni minori su pulizia, segregazione ed etichette chiuse ognuna da sola, nessuno osserva il pattern. Così si perde un problema trasversale — supervisione, carico di lavoro, cambi di personale, istruzioni incomplete. La misura da sola non produce apprendimento: serve una lettura che colleghi i punti." },
+   { "n": "3", "h": "Il rituale prima della visita", "d": "Quando il reparto percepisce che le verifiche servono a produrre evidenze, non a migliorare, le vive come rito: si prepara alla visita, sistema le anomalie visibili, poi torna alle abitudini. Il sistema non misura la realtà ordinaria — una realtà temporaneamente pettinata. L'azione utile raramente aumenta il numero di verifiche: cambia come vengono lette, aggregate e riportate, distinguendo il rilievo locale dal pattern sistemico." }
+  ]
+ },
+ {
+  "id": "22000_m09_s018",
+  "layout": "punti",
+  "kicker": "Ricorrenza · Riesami",
+  "titolo": "Il sistema conferma se stesso invece di correggersi",
+  "intro": "Le verifiche sterili hanno un corrispettivo: riesami formali e aggiornamenti deboli. L'organizzazione raccoglie dati, discute risultati, produce verbali, ma alla fine conferma quasi sempre l'impostazione esistente. Non perché non faccia riunioni: le usa per stabilizzare ciò che già pensa, non per correggere la propria lettura della realtà.",
+  "punti": [
+   { "h": "I segni del riesame formale", "d": "Contenuti ordinati, dati presenti, ordine del giorno toccato, ma conclusioni generiche — «sistema adeguato», azioni poche o ripetitive, problemi emergenti descritti come episodi isolati, NC chiuse considerate prova di tenuta, aggiornamenti più sulla forma dei documenti che sulla logica dei controlli. In apparenza tutto sotto governo, in sostanza manca il coraggio di rimettere mano a ciò che non regge." },
+   { "h": "La domanda non posta", "d": "Deviazioni minori ma frequenti su cambi linea, verifiche pre-operative e segregazione compaiono come note sparse; poiché nessuna ha prodotto un evento grave, «il sistema è efficace con qualche attenzione». Questa formula evita la domanda utile: esiste una causa comune — la crescita della complessità senza adeguato aggiornamento? Se non viene posta, l'aggiornamento resta debole e il rischio matura." },
+   { "h": "La gestione delle modifiche a metà", "d": "Si registra che sono cambiati un fornitore, una ricetta, un layout, un software, ma non sempre si collega alla necessità di rivalutare analisi dei pericoli, piano, OPRP e PRP. L'aggiornamento avviene a metà — il cambiamento riconosciuto ma non assorbito. Poi il sistema sembra sorpreso da un rischio che aveva già annunciato il proprio arrivo." },
+   { "h": "La qualità delle decisioni", "d": "Se le decisioni del riesame non hanno responsabilità chiare, tempi, priorità e criteri di efficacia, il riesame funziona come fotografia, non come leva. Il punto non è chiedere riesami più lunghi, ma più trasformativi: portare in superficie ciò che il quotidiano normalizza. Un'organizzazione può apparire molto disciplinata e insieme molto poco adattiva — i documenti si muovono, ma il sistema non cambia." }
+  ]
+ },
+ {
+  "id": "22000_m09_s019",
+  "layout": "split",
+  "kicker": "Metodo",
+  "titolo": "Dal rilievo isolato alla diagnosi di sistema",
+  "lead": "PRP trascurati, misure mal classificate, tracciabilità zoppa, verifiche sterili, riesami formali: prese una per una sembrano categorie diverse, ma spesso sono manifestazioni di pochi meccanismi ricorrenti — complessità non assorbita, ruoli poco chiari, priorità che schiacciano i controlli di base, fiducia nell'esperienza delle persone, uso debole dei risultati, aggiornamento tardivo. Vedere questi fili comuni rende il giudizio molto più utile.",
+  "punti": [
+   { "h": "Evitare la lettura atomizzata", "d": "Se tratti ogni rilievo come un pianeta a sé, produci un catalogo ordinato ma poco incisivo. L'SGSA vive di catene causali: la domanda non è solo «che cosa è successo qui», ma «che cosa rende plausibile che questo genere di fatto accada qui, e magari altrove»." },
+   { "h": "Evitare la moralizzazione", "d": "È facile scivolare verso giudizi sulle persone — «reparto poco attento», «capo turno debole». A volte c'è anche questo, ma se ti fermi lì raramente arrivi alla causa che conta: quale configurazione del sistema rende probabile il comportamento? Istruzioni troppo complesse, carico incompatibile col metodo scritto, controllo affidato a memoria, escalation poco chiara, verifiche che non influenzano le decisioni." },
+   { "h": "Guardare i tempi", "d": "Un sistema in difficoltà spesso non fallisce nel contenuto, ma nella velocità con cui apprende: le stesse NC riemergono, i segnali deboli restano irrisolti troppo a lungo, i cambiamenti del contesto arrivano prima dell'aggiornamento, la direzione prende atto ma non rialloca priorità in fretta. Una capacità di adattamento ridotta." },
+   { "h": "Rilievo = fatto, pattern = vulnerabilità", "d": "Un rilievo isolato descrive un fatto; un pattern ricorrente descrive una vulnerabilità che, se non affrontata, genera nuove NC con nomi diversi. Segregazione incompleta + rilavorazione poco tracciata + cambio etichetta frettoloso + verifica pre-operativa rapida: chiudere con quattro azioni locali, o riconoscere l'aumento di complessità senza adeguamento di flussi, responsabilità e regole. La risposta cambia livello: non spegnere quattro incendi, correggere la struttura che li rende probabili." }
+  ]
+ },
+ {
+  "id": "22000_m09_s020",
+  "layout": "confronto",
+  "kicker": "Gerarchia · 1",
+  "titolo": "NC di sistema e allerta alimentare",
+  "intro": "Una distinzione fondamentale: una non conformità di sistema non coincide automaticamente con un'allerta alimentare. Possono essere collegate, non sono sinonimi. Confonderle porta a due errori opposti — sottovalutare problemi strutturali perché non hanno ancora generato emergenza, o trattare ogni deviazione come una crisi di prodotto. La gerarchia corretta non le mette in concorrenza: le ordina.",
+  "a": {
+   "h": "Non conformità di sistema",
+   "sub": "Valore prognostico",
+   "punti": [
+    { "d": "Riguarda il funzionamento dell'insieme: progettazione dei controlli, verifiche, tracciabilità, gestione delle modifiche, PRP, ruoli, efficacia dell'azione correttiva, aggiornamento. Alcune non producono un pericolo immediato sul prodotto già immesso, ma aumentano la probabilità che il sistema perda il controllo nel tempo." },
+    { "d": "Una tracciabilità lenta: forse nessun prodotto non sicuro ora, ma se domani emergesse un problema, la capacità di delimitare sarebbe compromessa. Merita priorità alta anche senza allerta in corso — se la leggi solo in base all'effetto immediato, la minimizzi proprio quando dovresti intervenire." }
+   ]
+  },
+  "b": {
+   "h": "Allerta alimentare",
+   "sub": "L'urgenza al centro",
+   "punti": [
+    { "d": "Una situazione in cui la gestione dell'urgenza prende il centro: proteggere rapidamente consumatori, clienti, prodotto, reputazione. La prima domanda non è se il sistema fosse ben progettato, ma che cosa fare adesso per contenere, delimitare, comunicare e decidere." },
+    { "d": "Il rischio è usare la logica sbagliata nel momento sbagliato: discutere troppo presto la struttura rallenta le decisioni urgenti; chiudere il caso senza affrontare la causa perde l'occasione di rafforzare il sistema. Prima la protezione immediata, poi la lettura sistemica che rende l'evento meno probabile — le organizzazioni meno mature oscillano tra minimizzazione e drammatizzazione." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m09_s021",
+  "layout": "flusso",
+  "kicker": "Gerarchia · 2",
+  "titolo": "Prima proteggi, poi capisci",
+  "intro": "Quando emerge un problema serio, la qualità della gestione dipende dall'ordine con cui l'organizzazione pensa e agisce. Due deformazioni da evitare: l'urgenza teatrale (molta attività visibile, poca chiarezza sulle decisioni) e la calma amministrativa (si apre un modulo, si raccolgono firme, ma il contenimento arriva tardi). La maturità distingue il tempo del controllo immediato dal tempo dell'analisi, e documenta entrambi.",
+  "passi": [
+   { "h": "Primo tempo: proteggere subito", "d": "Se c'è un rischio attuale per prodotto, cliente o consumatore: contenere, fermare, separare, identificare, verificare l'estensione, decidere chi deve sapere. Non stai ancora cercando la causa completa — impedisci che il danno cresca. La partita spedita con etichettatura dubbia: se apri una discussione lunga sulle responsabilità senza bloccare le spedizioni residue, usi il tempo peggiore nel modo peggiore." },
+   { "h": "Secondo tempo: trasformare in apprendimento", "d": "Controllata la situazione, quale causa ha reso possibile l'accaduto, esistono NC simili altrove, quale azione correttiva è appropriata, serve un aggiornamento del sistema? Se questa parte non arriva, l'organizzazione se la cava nell'emergenza ma resta esposta a recidive. La buona gestione dell'urgenza è necessaria, non sufficiente." },
+   { "h": "Il criterio: gravità, reversibilità, velocità", "d": "L'urgenza non dipende solo dalla gravità teorica, ma dalla reversibilità e dalla velocità di propagazione. Una registrazione ambientale mancante può essere una NC seria di sistema senza lo stesso tempo di risposta di un prodotto uscito con allergeni dubbi; una debolezza di tracciabilità può sembrare meno drammatica ma diventare critica se rallenta la delimitazione di un problema in corso. Non solo «quanto è grave», ma «quanto rapidamente può peggiorare e quanto margine resta»." }
+  ]
+ },
+ {
+  "id": "22000_m09_s022",
+  "layout": "cards",
+  "kicker": "Gerarchia · 3",
+  "titolo": "Quattro scenari tipici",
+  "intro": "Urgenza e profondità della causa non viaggiano sempre insieme. Un buon giudizio non classifica i fatti in base all'emozione: li ordina secondo due domande — che cosa devo proteggere adesso? Che cosa devo correggere perché il rischio non si riproduca? Gli errori più costosi nascono dalla risposta unidimensionale.",
+  "cards": [
+   { "h": "Alta urgenza, causa poco chiara", "d": "Una segnalazione fa sospettare un errore di etichettatura con allergene non dichiarato: non sai ancora se isolato o falla più ampia, ma la priorità è bloccare, rintracciare, verificare la distribuzione, proteggere chi potrebbe essere esposto. La lettura sistemica viene dopo, non prima della protezione." },
+   { "h": "Bassa urgenza, alta fragilità", "d": "Prove di tracciabilità che riescono solo con forte intervento manuale, tempi lunghi, ricostruzioni affidate agli esperti: nessuna allerta in corso. Ma alla prima crisi reale quella lentezza compromette le decisioni — il rischio è sottovalutare perché non ha ancora prodotto un evento visibile. Priorità forte, senza sirene." },
+   { "h": "Entrambe (il più impegnativo)", "d": "Un corpo estraneo in prodotto già distribuito, mentre l'indagine mostra manutenzione debole, controlli superficiali e segnalazioni archiviate senza analisi. Due piani in parallelo: gestire l'urgenza e riconoscere una vulnerabilità strutturale. Solo il primo chiude l'emergenza ma lascia intatta la probabilità di ritorno." },
+   { "h": "Urgenza e impatto contenuti", "d": "Una registrazione in ritardo, con attività svolta e verificabile: esiste una NC, non va banalizzata, ma la risposta è una correzione puntuale, una verifica delle responsabilità, una piccola azione sul flusso. Trattarla come una crisi sarebbe eccessivo, ridurla a nulla farebbe perdere disciplina — la maturità sta nella proporzione." }
+  ]
+ },
+ {
+  "id": "22000_m09_s023",
+  "layout": "numeri",
+  "kicker": "Verifica · Maturità",
+  "titolo": "Segnali di governo reale",
+  "intro": "Quando valuti come un'organizzazione ha gestito una situazione critica, la domanda non è se il caso sia chiuso — quasi tutti risultano chiusi sulla carta. È se il percorso dimostra governo reale o solo ricostruzione retrospettiva. La maturità non sta nel non avere problemi: sta nel modo in cui li ordini, contieni, capisci e trasformi in apprendimento.",
+  "numeri": [
+   { "n": "1", "h": "Il contenimento", "d": "Tempestivo, proporzionato, leggibile: chi ha deciso cosa, quando, su quale base, con quale estensione. Se il prodotto è stato identificato in modo incerto, se le aree cambiano a seconda di chi racconta, se le decisioni appaiono improvvisate, la gestione dell'urgenza è più debole di quanto il verbale suggerisca." },
+   { "n": "2", "h": "L'analisi successiva", "d": "Governato il presente, è tornata sul caso con lucidità? Ha cercato la causa o si è fermata al primo colpevole? Ha verificato NC simili in altri reparti, turni, linee? Ha distinto correzione da azione correttiva? Se restano senza risposta, ha tamponato bene ma imparato poco — e senza apprendimento il miglioramento continuo resta una formula vuota." },
+   { "n": "3", "h": "L'aggiornamento del sistema", "d": "Il più rivelatore: il caso ha portato a rivedere procedure, criteri, responsabilità, flussi, analisi dei pericoli, piano, OPRP, PRP? La spedizione con allergeni gestita bene (prodotto identificato, lotti delimitati, clienti contattati), ma causa «distrazione del magazzino», azione «richiamo al personale», e nessuno rivede generazione, stampa, segregazione e rilascio delle etichette: reazione immediata buona, risposta sistemica debole. E diffida di «caso isolato», «errore umano», «evento eccezionale» senza analisi — spesso fermano il ragionamento prima della causa vera." }
+  ]
+ },
+ {
+  "id": "22000_m09_s024",
+  "layout": "confronto",
+  "kicker": "Il rapporto · 1",
+  "titolo": "Non cronaca neutra, ma leva per decidere",
+  "intro": "Il rapporto non è il contenitore finale di ciò che hai capito: è lo strumento che trasforma osservazioni, NC, priorità e cause in decisioni organizzative. Se è debole, anche una buona lettura perde forza; se è costruito bene, diventa una leva per direzione e gruppo sicurezza alimentare. Non serve a impressionare — a orientare azioni, risorse, responsabilità, tempi. La domanda: aiuta qualcuno a decidere meglio, o dimostra solo di essere stato scritto?",
+  "a": {
+   "h": "Rapporto corretto",
+   "sub": "Formalmente impeccabile",
+   "punti": [
+    { "d": "Riporta il rilievo, indica l'evidenza, chiude il punto. «La tracciabilità ha richiesto molto tempo», «le verifiche ripetono rilievi simili»: veri, ma poco incisivi." },
+    { "d": "Mescola nello stesso tono un ritardo documentale, una debolezza di tracciabilità e una gestione confusa degli allergeni: costringe chi legge a fare da sé il lavoro di gerarchia che tu avresti dovuto facilitare." }
+   ]
+  },
+  "b": {
+   "h": "Rapporto utile",
+   "sub": "Collega alla tenuta del sistema",
+   "punti": [
+    { "d": "Un passo in più, senza inventare né fare consulenza: «questa lentezza può compromettere la capacità di delimitare un problema reale», «il sistema potrebbe non usare bene i risultati per il miglioramento continuo». Più episodi di codifica errata mostrati come pattern — cambi frequenti, segregazione debole, responsabilità poco nitide, verifiche non uniformi tra turni." },
+    { "d": "Rende visibile la gerarchia (non drammatizzare, segnalare ciò che ha impatto più ampio, rapido o persistente) e parla a pubblici diversi: la direzione ha bisogno di priorità, impatti, risorse; il gruppo di collegamenti tecnici, cause probabili, necessità di riesame e aggiornamenti. Un ponte tra il dettaglio osservato e il governo del sistema." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m09_s025",
+  "layout": "flusso",
+  "kicker": "Il rapporto · 2",
+  "titolo": "Fatto, significato, priorità",
+  "intro": "Un rapporto utile ha un'architettura mentale chiara in tre livelli. Se salti il fatto diventi vago; se salti il significato resti descrittivo; se salti la priorità lasci chi legge senza orientamento. La qualità sta nel tenerli insieme con sobrietà, precisione e coerenza — e nel tono: fermo ma leggibile, che non umilia, non teatralizza, non nasconde.",
+  "passi": [
+   { "h": "Il fatto", "d": "Osservabile e verificabile, senza formule nebbiose né giudizi morali nascosti. «Tracciabilità scarsa» serve poco; «durante la ricostruzione di un lotto il sito ha richiesto molte ore, ha dovuto integrare fonti non allineate e non ha potuto collegare con immediatezza alcune rilavorazioni» dice molto di più. «PRP deboli» è generico; «in più turni pratiche diverse di segregazione utensili, non intercettate dalle verifiche di reparto» è concreto." },
+   { "h": "Il significato per l'SGSA", "d": "Perché quel fatto non è solo un episodio, senza trasformarti in consulente: la tracciabilità lenta → difficoltà a delimitare in tempi utili un problema di prodotto; le verifiche ripetitive senza esiti → debolezza del circuito di miglioramento continuo; la classificazione incerta → assenza di criteri stabili tra turni. Non dici come risolvere: rendi visibile perché il rilievo merita attenzione." },
+   { "h": "La priorità", "d": "Dove molti rapporti diventano piatti — tutto esposto con lo stesso peso. Non solo la gravità, ma la probabilità di ripetersi, la capacità di diffondersi, l'effetto sulla capacità di proteggere e reagire. Due rilievi: una registrazione incompleta (controllo comunque verificabile) e prove di tracciabilità lente e manuali — entrambi veri, ma il secondo ha portata sistemica più ampia, anche senza allerta quel giorno. Ogni rilievo deve poter essere seguito fino all'azione correttiva, alla verifica di efficacia e, se serve, all'aggiornamento." }
+  ]
+ },
+ {
+  "id": "22000_m09_s026",
+  "layout": "confronto",
+  "kicker": "Il rapporto · 3",
+  "titolo": "Che cosa serve a chi deve decidere",
+  "intro": "Direzione e gruppo sicurezza alimentare non leggono con lo stesso sguardo, ma hanno bisogno della stessa qualità di fondo: capire che cosa conta, perché, e che cosa accadrebbe se il sistema non reagisse. Il rapporto utile non consegna rilievi, ma una mappa ragionata delle decisioni da sostenere. I migliori permettono alla direzione di vedere il sistema abbastanza da vicino da decidere, ma non così da perdersi nei dettagli.",
+  "a": {
+   "h": "La direzione cerca",
+   "sub": "Decisioni da sostenere",
+   "punti": [
+    { "d": "Impatto, estensione, ricorrenza, bisogno di risorse: sta guardando un episodio locale, una vulnerabilità più larga, un tema che richiede investimenti, un segnale da presidiare prima che diventi crisi?" },
+    { "d": "Su manutenzione disomogenea + controlli pre-operativi deboli + microfermi ricorrenti in una linea critica: non solo «esistono queste deviazioni», ma che la combinazione può incidere sulla stabilità del processo e che, senza una decisione manageriale, le future azioni correttive resteranno palliative. E il costo della non decisione: rinviare equivale a mantenere una fragilità attiva." }
+   ]
+  },
+  "b": {
+   "h": "Il gruppo cerca",
+   "sub": "Il punto dell'SGSA da riesaminare",
+   "punti": [
+    { "d": "Connessioni tecniche e implicazioni: la causa probabile rimanda a un PRP da riesaminare, a una classificazione da rivedere, a una verifica inefficace, a un flusso da ricostruire, a un aggiornamento non più rinviabile?" },
+    { "d": "Per servire entrambi serve contesto: non «la NC è ricorrente», ma dove e come ricorre; non «esiste una debolezza di tracciabilità», ma se riguarda rilavorazioni, tempi, identificazione intermedia, collegamento tra materiali o dipendenza dalla conoscenza informale; non «l'azione precedente non è stata efficace», ma in che modo il ritorno del problema lo dimostra. Così il documento diventa base per il miglioramento continuo." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m09_s027",
+  "layout": "numeri",
+  "kicker": "Il rapporto · 4",
+  "titolo": "Risultanze che muovono, senza prescrivere",
+  "intro": "Un equilibrio delicato: il rapporto deve essere abbastanza chiaro da muovere il sistema, ma non trasformarsi in un progetto scritto al posto dell'organizzazione. Gestito bene, aumenta la credibilità; gestito male, produce due effetti opposti — un testo timido che nessuno usa, o uno invasivo percepito come prescrittivo e quindi respinto. Tre livelli di scrittura, e alcune scorciatoie da evitare.",
+  "numeri": [
+   { "n": "1", "h": "Descrittivo", "d": "Fissa il fatto, ancorato a evidenze osservate, non a preferenze personali. La base senza cui il resto si confonde: niente aggettivi che sostituiscono le evidenze, niente giudizi morali nascosti." },
+   { "n": "2", "h": "Interpretativo", "d": "Collega il fatto alla tenuta del sistema, senza progettare la risposta: prove di tracciabilità lente e manuali «possono ridurre la capacità di delimitare rapidamente l'estensione di un evento»; la ripetizione in reparti diversi «suggerisce una causa non ancora rimossa e un'azione correttiva precedente non efficace». Non progetti la soluzione, rendi difficile ignorare la necessità di una risposta migliore." },
+   { "n": "3", "h": "Orientativo", "d": "Segnala quale tipo di riesame sembra necessario senza prescriverne il dettaglio: «la situazione rende opportuno rivalutare il flusso di identificazione e rilascio delle etichette», «i fatti richiedono una verifica dell'efficacia delle azioni già adottate». Compatibile con il ruolo. Ed evita scorciatoie: parole assolute senza evidenze, cause dichiarate troppo presto, giudizi sulle persone che mascherano debolezze del sistema, e un linguaggio così attenuato da neutralizzare il rilievo — «generalmente adeguato con alcune opportunità» vs «gli elementi osservati suggeriscono una ridotta capacità di tradurre verifiche e cambiamenti in aggiornamenti efficaci»." }
+  ]
+ },
+ {
+  "id": "22000_m09_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 9",
+  "modNum": "9",
+  "titolo": "Dal problema al sistema che sa migliorare",
+  "punti": [
+   { "h": "La NC come prova di maturità", "d": "Non un fastidio da archiviare: reagire, controllare, correggere, affrontare le conseguenze, poi cercare la causa, scegliere un'azione appropriata, verificarne l'efficacia e, se serve, aggiornare. Se manca un passaggio, il problema sembra chiuso e resta vivo sotto la superficie." },
+   { "h": "Migliorare è ridurre la vulnerabilità", "d": "Non l'accumulo di controlli o la chiusura rapida dei casi: riduce la vulnerabilità nel tempo. Il sistema migliora quando impara — e impara solo se trasforma ciò che accade in scelte più robuste, non in registrazioni più numerose." },
+   { "h": "Le ricorrenze da riconoscere", "d": "PRP trascurati, misure mal classificate, tracciabilità zoppa, verifiche sterili, riesami formali: non una lista da memorizzare, ma schemi che rivelano se l'organizzazione governa il sistema o lo subisce. Il rilievo isolato descrive un fatto, il pattern una vulnerabilità." },
+   { "h": "La gerarchia NC / allerta", "d": "Una NC di sistema non coincide con un'allerta: prima la protezione immediata quando serve, poi la lettura sistemica che rende l'evento meno probabile. Due domande — che cosa proteggo adesso, che cosa correggo perché non si ripeta — e la proporzione tra urgenza, reversibilità e velocità." },
+   { "h": "Il rapporto utile", "d": "Fatto, significato, priorità: non cronaca neutra, ma leva per decidere. Parla a direzione e gruppo sicurezza alimentare senza confondere i piani, gerarchizza senza drammatizzare, ed è abbastanza incisivo da muovere il sistema senza sostituirsi a chi deve decidere." },
+   { "h": "Verso la verifica del sistema", "d": "Al checkpoint non pensare a domande astratte: pensa a come ragiona un professionista davanti a un SGSA reale — che cosa guarda per primo, dove cerca i legami, come distingue una registrazione da una vera evidenza di governo. Il prossimo passo: verificare il sistema, programma e preparazione." }
+  ],
+  "prossimo": {
+   "modulo": "10",
+   "titolo": "Verificare il sistema I: programma e preparazione",
+   "testo": "Dalla lettura delle non conformità alla costruzione di una verifica: come si pianifica, si prepara e si imposta un audit del sistema alimentare."
+  }
+ }
+]
