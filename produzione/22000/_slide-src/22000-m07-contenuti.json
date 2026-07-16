@@ -1,0 +1,399 @@
+[
+ {
+  "id": "22000_m07_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 22000 — Sicurezza alimentare",
+  "kicker": "Modulo 7",
+  "eyebrow": "Dove i dati diventano decisioni",
+  "titolo": "Operativo 3: monitoraggio, verifica e non conformità",
+  "testo": "La parte in cui il sistema resta vivo, affidabile e capace di proteggere il prodotto quando qualcosa cambia. Una catena logica dal punto 8.6 al 8.9: prima aggiorni le informazioni di base, poi rendi credibili monitoraggio e misurazione, poi usi la verifica per capire se PRP e piano funzionano davvero, infine affronti la non conformità, valuti il rilascio e — se necessario — attivi ritiro o richiamo. Se un anello si indebolisce, il rischio non resta teorico: entra nei lotti, nelle consegne, nella fiducia del mercato. Tutto parte da un dato, ma quel dato conta solo se l'intera catena funziona.",
+  "agenda": [
+   "8.6 — aggiornare le informazioni preliminari",
+   "8.7 — monitoraggio e misurazione affidabili",
+   "8.8 — la verifica di PRP e piano",
+   "8.9 — non conformità, correzioni, azioni correttive",
+   "8.9.4 — prodotto potenzialmente non sicuro e rilascio",
+   "8.9.5 — ritiro, richiamo e apprendimento"
+  ]
+ },
+ {
+  "id": "22000_m07_s002",
+  "layout": "punti",
+  "kicker": "Aggiornamento · 8.6",
+  "titolo": "Aggiornare prima che il rischio cambi volto",
+  "intro": "Predisposto il piano, inizia la parte più esigente: mantenerlo coerente con la realtà. Se serve, rivedere le informazioni su cui si è basata l'analisi e allineare piano e PRP. La parola chiave è serve: non riscrivere per abitudine, ma verificare se il contesto è cambiato abbastanza da modificare le fondamenta del controllo. Il ponte fra cambiamento reale e controllo aggiornato.",
+  "punti": [
+   { "h": "Quasi tutto può richiedere rilettura", "d": "Caratteristiche di ciò che entra nella ricetta e tocca l'alimento (materie prime, materiali a contatto), definizione del prodotto finito, utilizzo previsto, flusso reale del processo, descrizione delle fasi, ambiente. Le insalate con un fornitore di lattuga alternativo (provenienza, stagionalità, microbiologia attese diverse): se non aggiorni le basi, il sistema ragiona sul fornitore di ieri." },
+   { "h": "Uso previsto che cambia", "d": "Un sugo venduto al dettaglio per consumo domestico che apre il canale ospedaliero: il prodotto sembra lo stesso, ma cambia l'uso previsto e il profilo di vulnerabilità del consumatore — non puoi fingere che l'analisi resti identica." },
+   { "h": "Il cambiamento apparentemente minore", "d": "Una nuova confezionatrice, lo spostamento dell'area di rilavorazione, un flusso del personale diverso, un turno notturno in alta stagione, un nuovo stoccaggio temporaneo: possono creare tempi di attesa diversi, punti nuovi di contaminazione crociata, difficoltà di pulizia. Se il diagramma non rappresenta più la realtà, la valutazione perde affidabilità." },
+   { "h": "Attivarsi ai segnali, non dopo l'incidente", "d": "Un reclamo ricorrente, un risultato analitico anomalo, una modifica tecnica, un nuovo materiale di confezionamento, una diversa destinazione: campanelli che chiedono «le informazioni su cui si basa il piano sono ancora attuali?». Il nuovo addensante col comportamento termico diverso rende il raffreddamento più lento — il monitoraggio, pur ben eseguito, controllerebbe un processo diverso da quello presupposto. E aggiornare le basi può richiedere di rivedere anche PRP e piano." }
+  ]
+ },
+ {
+  "id": "22000_m07_s003",
+  "layout": "punti",
+  "kicker": "Monitoraggio e misurazione · 8.7",
+  "titolo": "Quando il dato vale davvero",
+  "intro": "Un sistema affidabile si aggiorna, ma i dati devono anche essere credibili. Dimostrare con fatti e registrazioni che metodi e attrezzature per monitoraggio e misurazione sono idonei rispetto ai controlli che discendono da PRP e piano. La norma lega in modo stretto l'affidabilità del dato alla sicurezza del prodotto.",
+  "punti": [
+   { "h": "Idonei allo scopo", "d": "Non basta che uno strumento esista e mostri un numero: adatto allo scopo, coerente con la precisione richiesta, utilizzabile in reparto, proporzionato alla decisione che dipende dal dato. Per una fase termica non uno strumento con incertezza troppo ampia rispetto al limite; per il pH non una sonda sporca, lenta o instabile; per il peso netto una bilancia adeguata al campo di misura." },
+   { "h": "Monitoraggio e misurazione", "d": "Il monitoraggio è l'osservazione o misurazione pianificata per capire se il processo resta sotto controllo; la misurazione è l'atto con cui attribuisci un valore. Puoi avere monitoraggio basato su misurazione (temperatura ogni ora) o su osservazione (controllo visivo di una pulizia o di un setaccio) — in entrambi i casi la norma pretende affidabilità." },
+   { "h": "Il dato falso decide sul lotto", "d": "Nei piatti pronti, la sonda portatile non adatta o usata senza attendere la stabilizzazione dà un valore rassicurante ma falso: il problema non è solo lo strumento, è la decisione — un dato errato fa passare un prodotto da trattenere o blocca inutilmente un conforme. E conta anche l'ambiente: bilancia su banco instabile, misuratore fuori temperatura, sensore esposto a urti o umidità producono risultati inattendibili." },
+   { "h": "Taratura non è magia", "d": "Confronta lo strumento con un riferimento affidabile per capire come si comporta e, se serve, regolarlo — ma resta affidabile solo se mantenuto, identificato, protetto e usato correttamente. In una cella con oscillazioni rapide, un termometro lento non è rotto, ma non è adatto allo scopo decisionale: perderebbe deviazioni brevi ma importanti. Il punto 8.7 chiede un intero sistema di controllo del dato." }
+  ]
+ },
+ {
+  "id": "22000_m07_s004",
+  "layout": "punti",
+  "kicker": "Monitoraggio e misurazione · 8.7",
+  "titolo": "Taratura, verifica e stato degli strumenti",
+  "intro": "Le attrezzature vanno tarate o verificate a intervalli stabiliti prima dell'uso, regolate quando serve, identificate per conoscere lo stato, salvaguardate da regolazioni improprie, protette da danni. Sembra un elenco tecnico: è una disciplina quotidiana fatta di scelte pratiche. Non vuole solo un certificato in archivio, ma un sistema che mantiene credibile il dato ogni giorno.",
+  "punti": [
+   { "h": "Taratura e verifica", "d": "La taratura confronta con un riferimento affidabile per sapere se misura correttamente nel campo che interessa, con eventuale regolazione; la verifica è un controllo intermedio più semplice che conferma risultati accettabili per l'uso previsto. Non tutti i dispositivi richiedono lo stesso trattamento, ma tutti una logica definita — dimostrare che il metodo scelto è adatto al rischio e al tipo di misura." },
+   { "h": "Intervalli specificati", "d": "La periodicità non nasce da abitudine vaga: tiene conto di uso, criticità della misura, robustezza dello strumento, condizioni ambientali, storia delle derive. Uno strumento che lavora ogni giorno in area umida e subisce urti ha esigenze diverse da uno usato raramente in laboratorio." },
+   { "h": "Stato di taratura, regolazioni, danni", "d": "Se hai tre termometri uguali e uno è scaduto, devi riconoscerlo subito — etichette leggibili, codici univoci, registro aggiornato. E protezione da regolazioni improprie: se una bilancia si azzera senza controllo o un sensore si riparametrizza da chiunque, il dato è vulnerabile. Uno strumento caduto, una sonda piegata, un connettore ossidato non sono problemi estetici: alterano la misura e la decisione." },
+   { "h": "Registrazioni e cultura d'uso", "d": "Conservare i risultati di taratura e verifica non per collezionare carte, ma per dimostrare che ogni misura critica poggia su strumenti sotto controllo — se domani emerge un dubbio su una serie di lotti, sono la base per capire cosa era affidabile. E la disciplina non resta in laboratorio: l'operatore che riconosce un'etichetta scaduta, isola una sonda danneggiata e segnala una lettura sospetta protegge più di un registro perfetto in archivio." }
+  ]
+ },
+ {
+  "id": "22000_m07_s005",
+  "layout": "punti",
+  "kicker": "Monitoraggio e misurazione · 8.7",
+  "titolo": "Quando lo strumento fallisce: guardare indietro",
+  "intro": "Il punto 8.7 diventa impegnativo con un problema. Se scopri che uno strumento o le condizioni di processo non rispettano più i requisiti, riesamini l'affidabilità dei risultati ottenuti in precedenza, e adotti azioni sul dispositivo, sull'ambiente e su qualunque prodotto toccato dalla deviazione. Un sistema maturo non protegge solo il presente: protegge dalla falsa sicurezza prodotta da misure sbagliate.",
+  "punti": [
+   { "h": "La domanda retrospettiva", "d": "Il sensore della cella che dopo un urto legge due gradi meno del reale, non notato per giorni perché il display appare normale: non hai solo un sensore da sostituire, ma da chiederti se le temperature dei giorni precedenti descrivevano davvero il processo. Individua il periodo di dubbio, i lotti passati in quella cella, le verifiche alternative, il rischio per il prodotto." },
+   { "h": "A volte è l'ambiente", "d": "Non lo strumento in senso stretto: una bilancia su postazione instabile dopo lo spostamento del reparto, un misuratore in condensa che ne altera il funzionamento. Il dispositivo può risultare sotto controllo, ma il risultato reale non affidabile — guardare al sistema completo: dispositivo, metodo, ambiente, prodotto." },
+   { "h": "Azione appropriata", "d": "Dipende dal caso: sostituire lo strumento, ripristinare le condizioni ambientali, eseguire una nuova taratura, bloccare i lotti in magazzino, aumentare i controlli, rivalutare il rilascio, avviare la gestione del prodotto potenzialmente non sicuro. Il punto 8.7 conduce direttamente a decisioni sul prodotto (8.9): la qualità metrologica non è un capitolo isolato." },
+   { "h": "Il periodo dubbio e la manutenzione", "d": "Le soluzioni di riferimento scadute rendono il misuratore apparentemente conforme ma la conferma inaffidabile: da quando il sistema è dubbio? Hai risultati analitici di conferma, dati coerenti, reclami, resi? Serve una valutazione tecnica documentata. Il criterio pratico: non partire dall'ultimo giorno noto, ma dal momento più remoto in cui puoi ancora dimostrare credibilità del dato. E uno strumento riparato o urtato non torna in servizio senza verifica adeguata." }
+  ]
+ },
+ {
+  "id": "22000_m07_s006",
+  "layout": "punti",
+  "kicker": "Monitoraggio e misurazione · 8.7",
+  "titolo": "Il dato digitale conta quanto il sensore",
+  "intro": "Molte decisioni dipendono ormai da dati raccolti, elaborati o trasferiti in forma digitale. Il software usato per monitoraggio e misurazione va validato prima dell'uso (dall'organizzazione, dal fornitore o da una terza parte), le attività documentate, il software aggiornato tempestivamente, e ogni modifica — inclusa la configurazione — autorizzata, documentata e validata prima dell'attuazione.",
+  "punti": [
+   { "h": "L'errore invisibile", "d": "Un sistema che registra le temperature ma associa la lettura alla cella sbagliata dà un dato ingannevole; un programma che genera allarmi oltre una soglia mal configurata dopo un aggiornamento non avvisa quando serve. Non visibile a occhio nudo, ma l'effetto sulla sicurezza può essere serio quanto uno strumento non tarato." },
+   { "h": "Validare in pratica", "d": "Raccogliere evidenza che, nelle condizioni previste, il programma produce il risultato corretto per lo scopo — non certificare l'informatica in astratto. Se un applicativo trasferisce le letture dai datalogger al report, devi essere certo che importi i dati giusti, senza arrotondamenti impropri, buchi temporali, scambi di unità, perdita di registrazioni." },
+   { "h": "Gli aggiornamenti non sono innocui", "d": "Ogni modifica può alterare il comportamento: una nuova versione cambia come i dati sono visualizzati, esportati, archiviati o confrontati con le soglie. Se non autorizzi e validi la modifica prima dell'uso, chiedi al processo di fidarsi di un sistema che nessuno ha controllato. La documentazione serve a ricostruire lo stato del sistema digitale in un periodo dubbio." },
+   { "h": "La catena e gli accessi", "d": "Dalla misura alla decisione la catena è lunga: un sensore rileva, un dispositivo trasmette, un software elabora, un report presenta, una persona interpreta — un solo anello debole inganna. Segui un dato reale dall'origine alla schermata, verificando che non si perda, non cambi unità, non venga arrotondato o associato al lotto sbagliato. E gli accessi: se molti modificano soglie e parametri senza tracciabilità, l'affidabilità è fragile — un sistema maturo sa chi può cambiare cosa." }
+  ]
+ },
+ {
+  "id": "22000_m07_s007",
+  "layout": "punti",
+  "kicker": "Verifica · 8.8",
+  "titolo": "La verifica conferma che il sistema funziona",
+  "intro": "Un dato corretto non basta a dire che il sistema è efficace. La verifica riferita a PRP e piano va stabilita, attuata e mantenuta, pianificandola con scopo, metodi, frequenze e responsabilità. Non può essere improvvisata, saltuaria o lasciata alla buona volontà del singolo: va progettata come parte del sistema.",
+  "punti": [
+   { "h": "Monitoraggio vs verifica", "d": "Il monitoraggio ti dice, durante l'operatività, se un parametro resta entro il previsto; la verifica ti dice se l'intero meccanismo di controllo funziona come dovrebbe. Per questo la verifica usa strumenti diversi: riesame di registrazioni, osservazioni sul campo, controlli documentali, campionamenti, analisi, confronti coi requisiti, lettura dei trend, conferme dell'efficacia." },
+   { "h": "Segue il processo o lo governa", "d": "Nel confezionamento di affettati, il monitoraggio quotidiano controlla temperature, integrità del sigillo, frequenza di sanificazione; la verifica riesamina le registrazioni, osserva in modo indipendente come la pulizia avviene, campiona superfici critiche, conferma che il personale applichi le istruzioni. Il monitoraggio segue il processo mentre accade; la verifica guarda se il sistema che lo governa è attuato ed efficace." },
+   { "h": "L'indipendenza", "d": "Chi svolge una verifica non deve essere responsabile del monitoraggio di quella stessa attività: se controlli da solo il tuo controllo, il rischio di cecità operativa aumenta — non per disonestà, ma perché l'abitudine rende meno sensibili. Una persona diversa porta uno sguardo più fresco e critico. Non burocrazia parallela: una distanza utile a confermare l'efficacia reale." },
+   { "h": "Due domande di realtà", "d": "Stiamo facendo ciò che diciamo di fare (attuazione)? E ciò che facciamo ottiene il risultato atteso (efficacia)? Un programma di pulizia applicato con costanza ma con risultati microbiologici sfavorevoli è attuato ma non efficace. La verifica evita che il sistema si accontenti della conformità apparente — e guarda anche la qualità della risposta alle deviazioni: prodotto identificato bene, causa cercata, processo rientrato con evidenza." }
+  ]
+ },
+ {
+  "id": "22000_m07_s008",
+  "layout": "numeri",
+  "kicker": "Verifica · 8.8",
+  "titolo": "Che cosa deve confermare la verifica",
+  "intro": "La verifica non è un controllo generico: deve confermare aspetti precisi. Cinque conferme che si sostengono a vicenda — se le informazioni preliminari non sono aggiornate, una verifica ben eseguita rischia di confermare l'efficacia di un controllo pensato per un processo che non esiste più. Una buona verifica dà un giudizio d'insieme, non un elenco di controlli isolati.",
+  "numeri": [
+   { "n": "1", "h": "PRP attuati ed efficaci", "d": "Le condizioni di base (pulizia, igiene, ingressi, contaminazione crociata, fornitori, manutenzione) davvero in funzione ogni giorno; e l'efficacia — non basta il piano di pulizia firmato, deve lasciare ambiente e attrezzature in condizioni coerenti con la sicurezza." },
+   { "n": "2", "h": "Piano attuato ed efficace", "d": "Attuato: monitoraggi, limiti o criteri, responsabilità e registrazioni realmente applicati. Efficace: le misure mantengono davvero il pericolo entro i livelli voluti." },
+   { "n": "3", "h": "Livelli di pericolo accettabili", "d": "Porta dentro campioni ambientali e di prodotto quando previsti. Se un campione di prodotto finito mostra una carica non coerente col livello accettabile, non puoi ignorarlo perché il monitoraggio era regolare: il lotto va trattato come potenzialmente non sicuro." },
+   { "n": "4", "h": "Input dell'analisi aggiornati", "d": "Riporta la verifica verso il punto 8.6: se cambiano ingredienti, uso previsto, processo o ambiente, la verifica accerta che le novità siano state assorbite. Non controlla solo se fai bene ciò che avevi deciso, ma se stai ancora ragionando sulle basi corrette." },
+   { "n": "5", "h": "Le altre azioni determinate", "d": "Controlli rafforzati in alta stagione, attività dopo un reclamo importante, campionamenti straordinari dopo una modifica: se li hai decisi, la verifica dice se funzionano. Più importante di quanto sembri — apre la porta a tutto ciò che l'organizzazione ha ritenuto necessario per il proprio contesto, non solo ai requisiti minimi." }
+  ]
+ },
+ {
+  "id": "22000_m07_s009",
+  "layout": "punti",
+  "kicker": "Verifica · 8.8",
+  "titolo": "Programmare metodi, frequenze, responsabilità",
+  "intro": "Dire che la verifica è importante è facile; costruirla bene molto più difficile. Scegliere metodi, frequenze e responsabilità coerenti con rischio e complessità: una verifica ben progettata non controlla tutto sempre — controlla ciò che conta, nel momento giusto, con il metodo adatto. Evita il rischio più comune: scambiare un sistema registrato per un sistema efficace.",
+  "punti": [
+   { "h": "Metodi complementari", "d": "Il riesame delle registrazioni mostra vuoti, correzioni sospette, tendenze anomale, risposte tardive; l'osservazione sul campo mostra se le istruzioni sono applicate o se la prassi diverge; il campionamento conferma che prodotto o ambiente riflettano l'efficacia; i controlli documentali verificano coerenza e aggiornamento delle basi." },
+   { "h": "Frequenze ragionate", "d": "Un'attività ad alta criticità e alta probabilità di fallimento richiede verifiche ravvicinate; una stabile, con lunga storia positiva e basso impatto, meno spesso. Non alleggerire o appesantire: dare intensità dove serve — l'area di affettatura ad alta esposizione ambientale merita verifiche frequenti, un'area secondaria no." },
+   { "h": "Responsabilità nitide e indipendenza", "d": "Chi verifica deve sapere cosa osservare, con quali criteri, con quale autorità segnalare; chi riceve i risultati deve saperli valutare e quali decisioni attivare. E la persona che verifica non coincide con quella che monitora: un capo produzione può monitorare le temperature di linea, ma la verifica va svolta da qualità, gruppo SA o altra funzione — spezza l'autoreferenzialità." },
+   { "h": "Esiti trasmessi e storia recente", "d": "Gli esiti vanno conservati e trasmessi a chi può intervenire su processo, risorse, formazione, decisioni sul prodotto — chiusi in un archivio non diventano apprendimento. E per frequenze sensate guarda anche la storia recente: un'area con reclami, derive, manutenzioni frequenti o risultati instabili merita verifica più intensa, anche se sulla carta sembrava secondaria." }
+  ]
+ },
+ {
+  "id": "22000_m07_s010",
+  "layout": "punti",
+  "kicker": "Verifica · 8.8",
+  "titolo": "Analizzare i risultati: dai segnali alla decisione",
+  "intro": "La verifica non si ferma all'esecuzione: il gruppo sicurezza alimentare analizza i risultati, e questa lettura alimenta la valutazione delle prestazioni dell'SGSA. Una singola verifica dice se un elemento funziona oggi; l'analisi dice se il sistema regge nel tempo, se compaiono segnali ricorrenti, se ci sono aree che peggiorano. Vedere il disegno, non solo i punti isolati.",
+  "punti": [
+   { "h": "La lettura congiunta", "d": "Piccoli rilievi ripetuti sulla compilazione dei controlli di pulizia; anomalie ambientali sporadiche in una stessa area; temperature che non superano i limiti ma si avvicinano lentamente. Presi uno per uno sembrano gestibili; analizzati insieme, raccontano una possibile perdita di robustezza del processo." },
+   { "h": "Le domande del gruppo", "d": "Le verifiche confermano coerentemente che i PRP sono efficaci? Il piano ha tenuta stabile o dipende dalla bravura di singoli operatori? Ci sono deviazioni ricorrenti in reparti, turni, prodotti o stagioni? Le modifiche recenti hanno migliorato o peggiorato? I risultati suggeriscono di aggiornare gli input dell'analisi dei pericoli?" },
+   { "h": "Non aspettare l'evento grave", "d": "La gastronomia fredda con monitoraggi regolari ma verifiche che mostrano tre elementi ricorrenti — qualche ritardo nel raffreddamento, difficoltà di sanificazione nelle zone posteriori di una nuova attrezzatura, aumento dei reclami per durata inferiore: nessuno da solo dimostra un prodotto non sicuro, ma la lettura congiunta segnala che il controllo non è più confortevole. L'organizzazione matura rivaluta e rafforza." },
+   { "h": "La verifica apre, non chiude", "d": "Se i risultati confermano efficacia, consolidi; se mostrano segnali deboli, correggi la rotta prima del danno; se emergono scostamenti veri, entri in non conformità, correzione, azione correttiva, valutazione del prodotto. L'analisi aiuta a distinguere l'evento isolato dal problema sistemico — una famiglia di piccoli segnali distribuiti nel tempo indica che il sistema perde margine, senza farsi rassicurare troppo presto dai singoli dati buoni." }
+  ]
+ },
+ {
+  "id": "22000_m07_s011",
+  "layout": "punti",
+  "kicker": "Verifica · 8.8",
+  "titolo": "Quando la verifica tocca il prodotto",
+  "intro": "Una situazione delicata: la verifica usa campioni di prodotto finale o prelevati dal processo. Se mostrano una non conformità rispetto al livello accettabile del pericolo, il quadro cambia subito — non commenti una debolezza documentale, gestisci un segnale sul prodotto reale. Trattare il lotto come potenzialmente pericoloso e applicare azioni correttive, non solo osservazioni.",
+  "punti": [
+   { "h": "Il campione anomalo non è un caso isolato", "d": "In molte aziende si dà più peso al monitoraggio di linea che alla verifica: «se in produzione tutto era nei limiti, il campione sarà un caso». La norma porta su un terreno prudente — se la verifica contraddice la sicurezza attesa, non scarti il risultato solo perché arriva dopo. Le creme con monitoraggi regolari ma un campione microbiologico incompatibile: almeno per quel lotto, i controlli non hanno dato il risultato atteso." },
+   { "h": "Comunicazione interna decisiva", "d": "I risultati vanno conservati e comunicati, perché possono innescare decisioni rapide su blocco, valutazione, rilascio. Se il laboratorio vede il problema ma la produzione continua a spedire, il sistema fallisce nel punto più importante: trasformare l'informazione in azione." },
+   { "h": "Il monitoraggio non è bastato", "d": "La verifica non sostituisce il monitoraggio, ma può rivelare che il monitoraggio, pur eseguito, non è stato sufficiente a intercettare il rischio: un piano di sanificazione applicato con regolarità, ma un campione ambientale che mostra un'efficacia reale inferiore. Non smentisce la necessità del monitoraggio — dice che le misure, nel loro insieme, vanno rivalutate." },
+   { "h": "Quale popolazione è coinvolta", "d": "Non ragioni solo sul lotto analizzato: quale popolazione di prodotto è realmente coinvolta — stesso turno, ingrediente, linea, finestra temporale? La rintracciabilità diventa la chiave per delimitare con rigore: più precisa, più isoli il rischio senza estendere il blocco; meno precisa, più la prudenza costringe ad allargare il perimetro. Il punto 8.8 ti consegna al punto 8.9." }
+  ]
+ },
+ {
+  "id": "22000_m07_s012",
+  "layout": "punti",
+  "kicker": "Non conformità · 8.9.1",
+  "titolo": "Chi valuta il dato e chi fa partire l'azione",
+  "intro": "Entrando nel punto 8.9, la prima domanda non è cosa fare sul prodotto, ma chi decide e con quale autorevolezza tecnica. Le informazioni dal monitoraggio di OPRP e CCP devono essere valutate da persone designate, competenti e con l'autorità di avviare correzioni e azioni correttive. Sembra un dettaglio organizzativo: è una protezione essenziale.",
+  "punti": [
+   { "h": "Registrare non è governare", "d": "Registrare = annotare che qualcosa non è andato come previsto; governare = capire l'impatto su processo e prodotto, isolare, attivare le persone giuste, riportare il controllo. Chi non ha competenza sufficiente rischia due errori opposti: minimizzare un segnale serio, o reagire in modo eccessivo e disordinato bloccando tutto senza criterio." },
+   { "h": "Designate, non improvvisate", "d": "Non basta che qualcuno si faccia avanti al bisogno: le responsabilità stabilite prima, così il sistema sa già chi valuta il dato, chi autorizza il fermo, chi attiva la correzione, chi apre l'analisi della causa. Vale ancora di più nei turni serali, nei fine settimana, con più reparti — se l'autorità resta implicita, la decisione rallenta proprio quando dovrebbe accelerare." },
+   { "h": "Competenza decisionale, non solo tecnica", "d": "Non solo tecnica sul parametro misurato, ma sul nesso tra parametro, pericolo e prodotto: leggere una temperatura è una cosa, capire cosa comporta per la sicurezza di quello specifico alimento con quell'uso previsto è un'altra. Il gruppo sicurezza alimentare, o le figure designate, ha qui un ruolo centrale. Nel raffreddamento superato in una vasca, in un sistema maturo il dato è esaminato subito da chi può decidere correzione, segregazione e analisi." },
+   { "h": "Due tempi", "d": "La norma collega fin dall'inizio correzioni e azioni correttive: il presente (fermare l'effetto, isolare, proteggere il prodotto) e il futuro (capire la causa, impedire il ritorno). Nella salamoia col pH fuori criterio: la correzione blocca il lotto e ripristina il parametro; l'azione correttiva capisce perché il dosaggio è diventato instabile. Se manca il primo tempo, il rischio arriva al lotto; se manca il secondo, il problema torna." }
+  ]
+ },
+ {
+  "id": "22000_m07_s013",
+  "layout": "punti",
+  "kicker": "Non conformità · 8.9.2",
+  "titolo": "Correzioni, identificazione, controllo immediato",
+  "intro": "La prima risposta è la correzione: gestisce il problema presente, non cerca ancora la causa profonda. Quando non sono rispettati i limiti critici dei CCP o i criteri d'azione degli OPRP, il prodotto collegato va riconosciuto con precisione e tenuto sotto governo rispetto all'uso e all'eventuale rilascio. Tre verbi decisivi: delimitare, trattenere, decidere.",
+  "punti": [
+   { "h": "Delimitare e trattenere", "d": "Delimitare: non «produzione del mattino» o «linea due», ma collegare la deviazione a lotti, tempi, materie prime, ordini, confezioni, posizioni di magazzino — più accurata, più efficace la correzione. Trattenere: impedire che il prodotto segua il flusso ordinario (segregazione fisica, blocco informatico, etichettatura) — non la forma, ma la capacità reale di evitare un rilascio inconsapevole." },
+   { "h": "Un metodo documentato", "d": "Stabilire, mantenere e aggiornare informazioni documentate con un metodo per identificare, valutare e correggere i prodotti interessati, e per riesaminare le correzioni. Non un modulo in più: ciò che permette a persone diverse, in turni diversi, di reagire con coerenza. Nelle zuppe con raffreddamento oltre il criterio OPRP: fermare la linea successiva, trattenere le vaschette della finestra, segnalare il lotto, verificare l'abbattitore — mettere prodotto e processo in condizione controllata." },
+   { "h": "Il riesame delle correzioni", "d": "Fare una correzione non basta, va valutata l'adeguatezza: se hai trattenuto solo il lotto finale ma il parametro era instabile già nel precedente, la correzione era troppo stretta; se hai bloccato intere giornate ma la deviazione era confinata a una piccola finestra tracciata, hai reagito in eccesso. Il riesame migliora la precisione della risposta." },
+   { "h": "Correggere il prodotto ≠ il processo", "d": "Correggi il processo ripristinando un parametro, sostituendo uno strumento, regolando una macchina; e correggi la gestione del prodotto trattenendolo, reindirizzandolo, sottoponendolo a controlli. Confonderli porta all'errore classico: pensare che, siccome il processo è tornato nei parametri, anche il prodotto già interessato sia a posto. Non è così — il prodotto conserva la sua storia, e va valutata." }
+  ]
+ },
+ {
+  "id": "22000_m07_s014",
+  "layout": "confronto",
+  "kicker": "Non conformità · 8.9.2",
+  "titolo": "CCP e OPRP: decisioni diverse",
+  "intro": "Una distinzione fondamentale, decisiva per il prodotto: la deviazione di un limite critico e quella di un criterio d'azione non hanno la stessa lettura. Non è burocrazia — riflette la diversa funzione delle misure. Ma tutte le deviazioni vanno prese sul serio, e le registrazioni devono descrivere natura della non conformità, causa del fallimento e conseguenze risultanti.",
+  "a": {
+   "h": "Limite critico (CCP)",
+   "sub": "Posizione prudente immediata",
+   "punti": [
+    { "d": "Il prodotto collegato entra subito nel perimetro dei prodotti potenzialmente pericolosi: il superamento segnala che una barriera essenziale non ha retto come previsto. Nella fase termica di piatti cotti che non raggiunge il valore minimo, non c'è spazio per interpretazioni rilassate — il lotto entra nel percorso dei prodotti da trattenere e valutare." },
+    { "d": "Potrai decidere più avanti la disposizione, ma intanto lo stato del prodotto è quello: potenzialmente non sicuro." }
+   ]
+  },
+  "b": {
+   "h": "Criterio d'azione (OPRP)",
+   "sub": "Valutazione strutturata",
+   "punti": [
+    { "d": "Non porta automaticamente alla stessa conclusione: stimare le conseguenze sulla sicurezza, capire la causa, individuare il prodotto toccato, poi gestirlo con prudenza. Nel controllo di integrità di un filtro non conforme: quali conseguenze sul pericolo, da quanto tempo la condizione esiste, quale prodotto è coinvolto?" },
+    { "d": "La domanda centrale: che cosa cambia concretamente nella sicurezza? Il criterio non rispettato ha ridotto l'efficacia della misura? Esistono altre misure combinate che possono aver compensato? Uscire sia dalla superficialità sia dalla risposta meccanica. Nella salamoia col pH fuori criterio per ore, una registrazione utile spiega quando è iniziata la deriva, quale prodotto è transitato, quale lotto di soluzione, quale anomalia — così, dopo, decidi con rigore." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m07_s015",
+  "layout": "punti",
+  "kicker": "Azione correttiva · 8.9.3",
+  "titolo": "Dalla causa alla prevenzione del ritorno",
+  "intro": "L'azione correttiva ha un obiettivo più profondo della correzione: eliminare la causa, evitare che si ripeta, riportare il processo sotto controllo in modo stabile. Interrogarsi sulla necessità ogni volta che un limite critico CCP o un criterio d'azione OPRP non è rispettato — non ogni episodio produce lo stesso livello di indagine, ma nessuna deviazione si archivia senza valutare se serva un intervento strutturale.",
+  "punti": [
+   { "h": "Non solo il singolo superamento", "d": "L'azione correttiva può essere innescata anche da segnali ripetuti, tendenze, reclami coerenti o rilievi esterni. Riesaminare non conformità segnalate dal cliente, reclami, esiti di ispezioni regolamentari — e gli andamenti dei dati che mostrano un progressivo indebolimento del controllo, anche prima del superamento netto. Il sistema non aspetta sempre il guasto manifesto: può muoversi davanti a un'erosione progressiva." },
+   { "h": "Determinare la causa", "d": "Le salse senza superamenti netti ma con valori sempre più vicini al limite e reclami per durata più corta: insieme segnalano una possibile perdita di controllo. L'azione correttiva non è ricordare agli operatori di fare attenzione — indagare la causa: carico eccessivo dell'abbattitore, manutenzione insufficiente, disposizione errata delle teglie, sensore in posizione sfavorevole, tempi di attesa da un nuovo layout." },
+   { "h": "Gli input esterni", "d": "Reclami del cliente e rapporti di ispezione non sono fastidi paralleli: input legittimi per l'azione correttiva, possono mostrare debolezze che il monitoraggio interno non aveva reso evidenti. Se più clienti segnalano imballi gonfi o alterazioni precoci sullo stesso prodotto, non liquidarlo come variabilità normale — chiediti cosa il processo non sta intercettando." },
+   { "h": "Analisi onesta e ritorno sotto controllo", "d": "Dare la colpa all'«errore umano» sembra rapido, ma dietro trovi spesso istruzioni ambigue, formazione insufficiente, carichi irrealistici, interfacce poco chiare, manutenzione carente, responsabilità confuse. Se non vai oltre la superficie, non correggi nulla. E riportare sotto controllo = dimostrare con evidenze coerenti che il problema è superato: se il sensore era montato male dopo la pulizia, la vera azione non è sostituirlo ma modificare il supporto, chiarire l'istruzione, verificare a inizio turno." }
+  ]
+ },
+ {
+  "id": "22000_m07_s016",
+  "layout": "punti",
+  "kicker": "Azione correttiva · 8.9.3",
+  "titolo": "Chiudere davvero: efficacia e controllo ritrovato",
+  "intro": "Una non conformità è chiusa solo quando dimostri due cose insieme: il processo è rientrato sotto controllo, e l'azione correttiva è efficace, riduce davvero la probabilità di ricaduta. Le azioni correttive vanno documentate e la loro efficacia verificata — obbliga a uscire dalla logica del «problema risolto per oggi». Un ripristino temporaneo non basta.",
+  "punti": [
+   { "h": "L'efficacia si vede nella stabilità nel tempo", "d": "Il metal detector che scarta in modo intermittente: la correzione ferma la linea, chiama la manutenzione, ripete i test, trattiene il prodotto. Ma se dopo tre giorni il problema torna, non hai chiuso nulla — forse un componente sostituito senza capire l'origine, un programma di manutenzione inadeguato, un ambiente che crea interferenze. L'efficacia si misura nella stabilità del risultato." },
+   { "h": "Anche per gli eventi organizzativi", "d": "Frequenti dimenticanze nella registrazione di un OPRP: la risposta superficiale «richiama il personale all'attenzione»; quella vera ripensa la sequenza di lavoro, riduce passaggi ridondanti, chiarisce l'istruzione, rafforza la formazione del turno nuovo, rende più leggibile il supporto. Se la conformità torna stabile, è efficacia; se dopo una settimana ricompaiono i vuoti, hai spostato il problema." },
+   { "h": "Controllo reale, non solo compilazione", "d": "Un'azione efficace migliora il controllo del processo, non solo la compilazione: se produce documenti più ordinati ma non riduce le deviazioni sostanziali, curi il sintomo e non la vulnerabilità. Forte la tentazione di «sistemare la carta» quando il reparto è sotto pressione — la documentazione richiesta deve lasciare traccia di evento, causa, azione, esito e conferma di efficacia." },
+   { "h": "Processo e prodotto tornano a intrecciarsi", "d": "Nei cotti affettati con derive di temperatura in mantenimento caldo: correzione (isola e ripristina), causa (sonda incoerente dopo la pulizia), azione (riprogettazione del supporto, istruzione fotografica, verifica a inizio turno, riesame dei dati). Se le registrazioni tornano stabili, hai evidenza di efficacia; se oscillano, riapri. Anche a processo recuperato, resta da decidere il destino del prodotto già interessato — il punto 8.9 cambia prospettiva verso i prodotti potenzialmente non sicuri." }
+  ]
+ },
+ {
+  "id": "22000_m07_s017",
+  "layout": "punti",
+  "kicker": "Prodotto non sicuro · 8.9.4.1",
+  "titolo": "Regola generale e blocco della filiera",
+  "intro": "Il passaggio più sensibile: prendere misure efficaci per impedire che un prodotto con dubbio serio di sicurezza prosegua verso distribuzione, utilizzo o consumo, salvo dimostrare con basi tecniche solide una delle condizioni ammesse. Il principio: se non provi che il rischio è rientrato o resta entro i livelli accettabili, il prodotto non avanza. Il cuore prudenziale del punto.",
+  "punti": [
+   { "h": "Niente zona grigia", "d": "Non ti si chiede di avere intuizioni rassicuranti: trattenere il prodotto sotto controllo finché non è valutato e non ne sia decisa la disposizione. O è chiaramente sotto controllo, oppure il sistema sta già fallendo. Nelle vellutate con un dubbio sulla tenuta del raffreddamento per un lotto in magazzino: non hai la prova che sia pericoloso, ma nemmeno il contrario — trattenerlo, non spedirlo dicendo «probabilmente andrà bene»." },
+   { "h": "Le condizioni per il rilascio", "d": "La norma non è rigida in modo cieco: rilascio o gestione diversa se dimostri con evidenze che il pericolo è stato ridotto, verrà ridotto prima che il prodotto prosegua, o il prodotto rientra comunque nei livelli accettabili nonostante la deviazione. La decisione non dipende da ottimismo o urgenza commerciale: da evidenze tecniche coerenti col tipo di pericolo e di non conformità." },
+   { "h": "Controllo continuo fino alla disposizione", "d": "Trattenere non è spostare pedane in un angolo: sapere dove sono, in quale quantità, con quale stato informatico o fisico, con quale divieto d'uso, sotto quale autorizzazione possano essere movimentate. Se il blocco non è robusto, il rischio di rilascio involontario resta alto." },
+   { "h": "Dalla sensazione alla dimostrazione", "d": "Se un prodotto uscito dalla disponibilità è poi riconosciuto pericoloso, avvisare le parti interessate e avviare ritiro o richiamo: un dubbio mal gestito in reparto può diventare una decisione pubblica sul mercato. La domanda da portare sempre: puoi davvero spiegare perché lo tieni fermo, perché lo rilasci, perché lo destini altrove? Se la risposta è vaga, non hai raggiunto il rigore richiesto — il prodotto resta fermo finché le evidenze non parlano." }
+  ]
+ },
+ {
+  "id": "22000_m07_s018",
+  "layout": "confronto",
+  "kicker": "Valutazione rilascio · 8.9.4.2",
+  "titolo": "Il rilascio, lotto per lotto",
+  "intro": "Trattenuto il prodotto, può essere rilasciato? Logica rigorosa: ogni lotto coinvolto va esaminato singolarmente — non si decide per categorie generiche né si trasferisce la conclusione da un lotto all'altro. La parola chiave è evidenza: non basta dire che la deviazione è stata breve, il reparto è ben gestito, non ci sono reclami o il prodotto ha buon aspetto.",
+  "a": {
+   "h": "Da un CCP",
+   "sub": "Nessuna scorciatoia",
+   "punti": [
+    { "d": "Se il prodotto è interessato dal non rispetto dei limiti critici ai CCP, non può essere liberato direttamente: deve entrare nel percorso previsto per i prodotti da gestire come potenzialmente non sicuri." },
+    { "d": "Un punto molto fermo: il superamento del limite critico in un CCP non consente scorciatoie verso il rilascio diretto." }
+   ]
+  },
+  "b": {
+   "h": "Da un OPRP",
+   "sub": "Solo con dimostrazione tecnica",
+   "punti": [
+    { "d": "Il rilascio come prodotto sicuro è possibile solo con dimostrazione sufficiente. Tre strade: prove indipendenti dal normale monitoraggio che la misura ha funzionato; dimostrare che l'effetto complessivo delle misure ha comunque garantito la prestazione; risultati di campionamento, analisi o verifiche che confermano la conformità ai livelli accettabili." },
+    { "d": "Nel filtro OPRP non conforme per un intervallo limitato: non «in genere il filtro funziona bene», ma controlli successivi, altre misure di processo, verifiche o analisi mirate che confermino l'assenza del pericolo. Senza evidenza, il rilascio è un atto di fede. E la registrazione della valutazione dimostra non solo che hai deciso, ma perché — impedisce sia il blocco automatico di tutto sia il rilascio facile per pressione commerciale." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m07_s019",
+  "layout": "punti",
+  "kicker": "Disposizione · 8.9.4.3",
+  "titolo": "Che fare del prodotto non rilasciabile",
+  "intro": "Chiusa la valutazione con esito negativo, tre disposizioni possibili: rilavorare o ulteriore lavorazione (dentro o fuori l'organizzazione) per ridurre il pericolo ai livelli accettabili; destinare ad altro utilizzo, purché non crei problemi alla sicurezza della filiera; distruggere o smaltire come rifiuti. Il criterio non è economico, ma di sicurezza — con autorità di approvazione documentata.",
+  "punti": [
+   { "h": "Rilavorazione, non automatica", "d": "La soluzione più intuitiva, ma non sempre possibile né sicura: serve una base tecnica per ritenere che l'ulteriore processo riduca davvero il pericolo ai livelli accettabili, altrimenti è solo un modo elegante di rinviare il problema. La salsa cotta con fase termica insufficiente può essere rilavorata se esiste un processo successivo validato; se ha già subìto trasformazioni che non tollerano una nuova lavorazione sicura, insistere sarebbe improprio." },
+   { "h": "Altro utilizzo: più prudenza", "d": "Consentito solo se non incide sulla sicurezza della filiera: non puoi cambiare etichetta a un prodotto dubbio e considerarlo risolto — devi essere certo che il nuovo impiego sia compatibile con la gestione del rischio. Proprio per questa difficoltà, l'altro utilizzo è una soluzione meno frequente di quanto si immagini." },
+   { "h": "Distruzione o smaltimento", "d": "La conclusione necessaria quando le altre strade non offrono garanzie: la scelta più dura sul piano economico, ma talvolta l'unica coerente con la sicurezza. Nelle creme vegetali con un lotto non rilasciabile: la rilavorazione possibile solo per una parte, l'altro utilizzo senza garanzie — decisione mista: una quota ulteriormente lavorata secondo procedura valida, la restante smaltita." },
+   { "h": "Autorità chiara contro le pressioni", "d": "Le disposizioni, compresa l'identificazione di chi ha autorità di approvazione, vanno documentate: non basta sapere che esistono tre opzioni, devi sapere chi le autorizza e con quali basi. Il lotto refrigerato con dubbio microbiologico — magazzino che vuole spazio, produzione che vuole liberare area, commerciale che teme il ritardo: se l'autorità decisionale non è chiara, il rischio di compromesso improprio cresce moltissimo." }
+  ]
+ },
+ {
+  "id": "22000_m07_s020",
+  "layout": "punti",
+  "kicker": "Ritiro e richiamo · 8.9.5",
+  "titolo": "Quando il problema esce dal perimetro",
+  "intro": "Finché il prodotto resta sotto controllo, la gestione è difficile ma contenuta. Quando il prodotto potenzialmente pericoloso è già in distribuzione, il sistema deve attivare rapidamente ritiro e, se necessario, richiamo sui lotti individuati, con persone competenti e l'autorità di avviare ed eseguire — la velocità dipende da competenza e autorità già assegnate, non improvvisate il giorno dell'emergenza.",
+  "punti": [
+   { "h": "Ritiro e richiamo", "d": "Ritiro: il prodotto tolto dalla distribuzione prima di arrivare al consumatore; richiamo: quando serve coinvolgere anche il consumatore finale. L'essenziale non è la sfumatura terminologica, ma togliere rapidamente dalla filiera i lotti e informare chi deve sapere — con informazioni documentate per notifica, gestione dei prodotti ritirati e delle giacenze, sequenza delle azioni." },
+   { "h": "Bloccare e ricostruire", "d": "L'azienda che scopre dopo la spedizione un lotto interessato: la prima esigenza non è compilare un rapporto perfetto, ma bloccare le giacenze interne, ricostruire dove sono andati i lotti, informare i clienti, decidere se comunicare fino al consumatore, controllare il prodotto che rientra. Se mancano nominativi, recapiti, sequenze o criteri di attivazione, ogni ora persa aumenta l'esposizione." },
+   { "h": "Il rientro non è la fine", "d": "I prodotti ritirati/richiamati e quelli ancora a magazzino restano segregati e sotto presidio finché non trattati secondo le disposizioni per i non conformi. Evita l'errore frequente di considerare il ritiro concluso al rientro in stabilimento: quello è solo il ritorno del problema dentro il tuo perimetro — poi devi ancora decidere se valutare, rilavorare, destinare altrove o distruggere." },
+   { "h": "Apprendimento strategico", "d": "Registrare causa, portata ed esito del ritiro/richiamo, con inoltro all'alta direzione per il riesame: non solo una crisi operativa, ma fonte di apprendimento — cosa è successo, quanto prodotto coinvolto, quanto efficace l'intervento, cosa il sistema deve cambiare. E la procedura è utile solo se governa il rientro fisico, la segregazione, la riconciliazione delle quantità e la proibizione di rimettere in circolazione senza autorizzazione — un piano va anche messo alla prova." }
+  ]
+ },
+ {
+  "id": "22000_m07_s021",
+  "layout": "numeri",
+  "kicker": "Ritiro e richiamo · 8.9.5",
+  "titolo": "Provarli prima della crisi vera",
+  "intro": "Verificare attuazione ed efficacia di ritiro e richiamo con tecniche appropriate — prove simulate, esercitazioni — e conservarne le registrazioni. Un piano non testato sembra robusto finché resta sulla carta: il giorno in cui serve scopri se lotti, contatti, ruoli, blocco delle giacenze e comunicazione funzionano. Una simulazione ben fatta non è teatro: è un controllo di realtà su tutta la catena decisionale.",
+  "numeri": [
+   { "n": "1", "h": "Identificare il perimetro", "d": "Partire da un rischio ipotizzato (errore di etichettatura su un allergene rilevato dopo l'uscita di parte del lotto) e verificare la rapidità con cui identifichi il perimetro dei lotti coinvolti." },
+   { "n": "2", "h": "Interno vs spedito", "d": "Distinguere il prodotto ancora a magazzino da quello già spedito. Se in due ore identifichi i lotti ma non sai dire quali quantità siano presso ciascun cliente, la rintracciabilità è solo parzialmente efficace." },
+   { "n": "3", "h": "Contatti e gestione del rientro", "d": "La completezza dei contatti da attivare e la gestione del prodotto che rientra o è bloccato dal cliente. I primi test rivelano problemi: anagrafica non aggiornata, codice lotto leggibile in produzione ma non nei documenti di spedizione, area di segregazione non chiara — preziosi se emergono in prova, non durante un evento reale." },
+   { "n": "4", "h": "Il tempo utile", "d": "Tempestivo non è decorativo: la velocità deve essere coerente con il rischio. Non fermarti a verificare se sei arrivato a una lista clienti — quanto ci hai messo, quali passaggi hanno rallentato, dove si sono create attese. Spesso il collo di bottiglia è organizzativo: tutti i dati esistono, ma nessuno sa chi autorizzi il messaggio iniziale." },
+   { "n": "5", "h": "La comprensione delle persone", "d": "Testare non solo il documento, ma la comprensione: chi presidia il magazzino sa cosa significa mettere sotto controllo un lotto? Chi gestisce il cliente distingue un blocco interno da un richiamo che coinvolge il consumatore? Il valore non è dichiarare la prova eseguita, ma analizzare gli scarti tra previsto e reale — la verifica del ritiro serve a scoprire dove sei debole, non a rassicurarti." }
+  ]
+ },
+ {
+  "id": "22000_m07_s022",
+  "layout": "punti",
+  "kicker": "Ritiro e richiamo · 8.9.5",
+  "titolo": "Dopo: causa, portata, risultato, apprendimento",
+  "intro": "Concluso un ritiro, la tentazione è tirare il fiato. La norma chiede un passo ulteriore: mantenere una traccia chiara di causa, estensione reale ed esito, e portarla all'alta direzione per il riesame. Impedisce di trattare l'evento come un incidente isolato: va trasformato in conoscenza organizzativa.",
+  "punti": [
+   { "h": "La causa", "d": "«Ritirato perché non conforme» è troppo poco: risalire al motivo che ha reso necessario il ritiro — deviazione di processo non intercettata, errore di etichettatura, lettura di monitoraggio interpretata male, problema di taratura, verifica analitica arrivata dopo la spedizione. La qualità di questa analisi determina il tipo di azione correttiva." },
+   { "h": "L'estensione", "d": "Non basta il numero del lotto principale: quanto il problema si è allargato — un turno o più, una linea o più, un ingrediente, un periodo più lungo? La rintracciabilità aiuta a delimitare, ma serve giudizio tecnico. Sottostimare lascia prodotto esposto sul mercato; sovrastimare può essere necessario senza dati affidabili, ma mostra una debolezza del sistema." },
+   { "h": "Il risultato", "d": "Quanta merce individuata, bloccata internamente, recuperata dalla distribuzione, rimasta non recuperabile? In quanto tempo le comunicazioni? I clienti hanno risposto come previsto? Le insalate con perimetro iniziale troppo stretto (una rilavorazione non collegata bene ai lotti finiti) e clienti avvisati in ritardo (riferimenti su sistemi diversi): il ritiro può riuscire, ma le lezioni sono chiare — rafforzare la rilavorazione, centralizzare i contatti." },
+   { "h": "Il riesame percorre tutta la catena", "d": "Un ritiro non è solo un problema di reparto: può richiedere risorse, investimenti, cambiamenti di processo, revisione delle responsabilità, aggiornamento software, formazione, revisione dei criteri con i fornitori. Se la direzione non vede causa, portata e risultato, considera l'evento un episodio sfortunato, non un segnale strutturale. E un ritiro ben analizzato può rivelare che il problema è nato molto prima — un'informazione preliminare non aggiornata, una misura inaffidabile, una verifica debole, una NC gestita solo con correzione." }
+  ]
+ },
+ {
+  "id": "22000_m07_s023",
+  "layout": "flusso",
+  "kicker": "La catena · 8.6-8.9",
+  "titolo": "Leggere insieme i quattro punti",
+  "intro": "Uniti in una sola catena mentale: 8.6 aggiorna ciò su cui si basa il controllo; 8.7 rende affidabili monitoraggio e misurazione; 8.8 usa la verifica per confermare attuazione ed efficacia; 8.9 trasforma dati e risultati in decisioni su processo e prodotto. Descrivono il percorso con cui si decide se un lotto avanza, va trattenuto, o richiede ritiro. La forza sta nel collegamento.",
+  "passi": [
+   { "h": "Le prime due domande di realtà", "d": "Le informazioni preliminari sono ancora vere? Se materie prime, prodotto, uso, diagrammi e ambiente non corrispondono più, potresti monitorare bene un processo cambiato. E i dati sono affidabili? Taratura, verifica, tutela da danni e regolazioni improprie, validazione del software, controllo dell'ambiente: se il dato non è credibile, nessuna decisione sarà solida." },
+   { "h": "Efficacia e decisione", "d": "I PRP e il piano funzionano davvero o generano solo registrazioni? La verifica lo conferma da un'angolazione diversa dal monitoraggio, e può rivelare una NC di prodotto non intercettata. Poi la domanda più impegnativa: cosa fai a una deviazione o un segnale debole — correzione, azione correttiva, valutazione del lotto, decisione sul rilascio, gestione del potenzialmente non sicuro." },
+   { "h": "L'esempio che attraversa tutto", "d": "Il nuovo acidificante da fornitore alternativo: senza aggiornare le basi, ragioni sul fornitore precedente; col misuratore di pH in deriva non intercettata, il monitoraggio dà letture rassicuranti ma sbagliate; se la verifica controlla firme e non l'andamento reale, il sistema appare conforme — poi arrivano reclami o una verifica analitica con livelli incompatibili. Quattro domande guida: controlliamo il processo reale? Possiamo fidarci del dato? Abbiamo conferme indipendenti di efficacia? La decisione sul prodotto è coerente con le evidenze? Se una vacilla, le altre diventano meno robuste." }
+  ]
+ },
+ {
+  "id": "22000_m07_s024",
+  "layout": "numeri",
+  "kicker": "Caso completo · 1",
+  "titolo": "Dal monitoraggio anomalo alla decisione",
+  "intro": "Una linea di zuppe refrigerate: nel turno pomeridiano il monitoraggio di un OPRP segnala che il tempo di raffreddamento di una vasca ha superato il criterio d'azione. Nessuna conclusione ancora sul prodotto, ma il sistema chiede di muoversi in ordine corretto. L'errore tipico: correggere il parametro, ripartire, e concludere che il lotto precedente è «probabilmente sicuro» — confonde il recupero del processo con la valutazione del prodotto.",
+  "numeri": [
+   { "n": "1", "h": "Il dato è affidabile?", "d": "Controlli stato dello strumento, identificazione, ultima taratura o verifica, metodo di lettura, condizioni ambientali. Se la sonda era danneggiata o fuori stato, l'attenzione si allarga subito alla validità delle misurazioni precedenti." },
+   { "n": "2", "h": "Delimitare i prodotti", "d": "Quali lotti sono transitati nella finestra, quali quantità ancora in linea, quali in magazzino, se esistono rilavorazioni collegate. Qui la rintracciabilità diventa operativa, non teorica." },
+   { "n": "3", "h": "Correzione immediata", "d": "Il prodotto identificato e trattenuto, il flusso normale interrotto per quella finestra, l'abbattitore controllato e riportato sotto controllo. Ripristinare il processo non decide ancora il destino del lotto: evita solo che il problema prosegua." },
+   { "n": "4", "h": "Valutare le conseguenze", "d": "Essendo un OPRP: quanto è stato lungo lo scostamento? Quale prodotto era nella vasca? Il profilo di rischio rende il raffreddamento sensibile? Esistono altre misure che possano aver compensato? E le evidenze aggiuntive — campionamenti, analisi, riesame di altri dati: se dimostrano che il prodotto resta entro i livelli accettabili, il rilascio è giustificabile; altrimenti il lotto segue una disposizione." },
+   { "n": "5", "h": "Azione correttiva", "d": "Perché il raffreddamento è andato fuori criterio? Abbattitore sovraccarico, sequenza cambiata, manutenzione insufficiente, disposizione errata dei contenitori, attesa eccessiva, lettura tardiva. Finché non individui la causa, il problema può tornare al turno successivo. La decisione sul lotto dipende dall'allineamento di più fattori — se uno manca, diventa fragile." }
+  ]
+ },
+ {
+  "id": "22000_m07_s025",
+  "layout": "punti",
+  "kicker": "Caso completo · 2",
+  "titolo": "Quando la verifica smentisce la tranquillità",
+  "intro": "Gastronomia fredda pronta al consumo: per settimane il monitoraggio appare ordinato — temperature registrate, sanificazioni eseguite, controlli di linea senza superamenti, strumenti sotto controllo. Poi una verifica programmata su campioni di prodotto finito mostra una non conformità rispetto al livello accettabile. Cambia tutto: la verifica non è un dettaglio arrivato tardi, è un risultato che entra nella gestione del prodotto.",
+  "punti": [
+   { "h": "L'effetto sul lotto", "d": "I lotti collegati al campione vanno trattati come potenzialmente non sicuri: bloccare ciò che è sotto controllo, ricostruire quali produzioni sono coinvolte, verificare se parte è già spedita, attivare la gestione coerente col perimetro reale. Non fermarti alla singola confezione: quale popolazione rappresenta — stesso turno, linea, ingrediente, finestra, rilavorazione? La rintracciabilità è la differenza tra intervento mirato e reazione confusa." },
+   { "h": "L'effetto sul sistema di controllo", "d": "Se il monitoraggio appariva regolare ma la verifica mostra prodotto fuori dai livelli, capire perché il sistema non ha visto prima: debolezza nei PRP (sanificazione, contaminazione crociata), un punto non ben rappresentato nei diagrammi, una misurazione formalmente corretta ma poco rappresentativa del rischio, o un monitoraggio disciplinato ma su parametri non sufficienti a intercettare quel pericolo." },
+   { "h": "L'effetto sull'azione correttiva", "d": "Non basta trattenere il lotto: analizzare la causa riesaminando trend, reclami, risultati ambientali, osservazioni, cambiamenti recenti. Scavando emerge una nuova attrezzatura con zone di difficile pulizia introdotta mesi prima; i diagrammi aggiornati sommariamente, la descrizione dell'ambiente non aveva assorbito la novità. Un esempio perfetto di catena: informazione aggiornata male, verifica che scopre l'effetto, NC di prodotto, decisione sul lotto, azione sull'attrezzatura e sul metodo di pulizia." },
+   { "h": "Interno o già uscito", "d": "Valutare se il problema è rimasto interno o ha oltrepassato il perimetro: se parte del lotto è uscita ed è ritenuto pericoloso, avviare ritiro o richiamo — tempo e chiarezza fanno la differenza. L'errore tipico sarebbe squalificare il campione «perché il monitoraggio giornaliero non mostrava nulla»: se la verifica dice che il livello non è accettabile, non può essere ignorato perché scomodo. Un sistema è robusto quando sa riconoscere i problemi, delimitarli e trasformarli in decisioni corrette." }
+  ]
+ },
+ {
+  "id": "22000_m07_s026",
+  "layout": "cards",
+  "kicker": "Errori tipici",
+  "titolo": "Ciò che spezza la catena dato→decisione",
+  "intro": "Gli errori non nascono tutti insieme: si sommano piccoli difetti, ciascuno gestibile, finché una NC di prodotto li rende visibili. Le fragilità vere sono quasi sempre sistemiche — una tramoggia installata senza aggiornare il diagramma, la zona cieca non intercettata dal monitoraggio, la verifica ambientale che arriva tardi, un lotto già uscito: non un colpevole, una catena indebolita in più punti.",
+  "cards": [
+   { "h": "Basi vecchie, dato non verificato", "d": "Informazioni preliminari invecchiate (ingrediente, layout, uso cambiati ma diagrammi identici): monitori un processo che non esiste più. E fidarsi del numero senza verificare lo strumento — taratura scaduta, sonda danneggiata, metodo scorretto, software mal configurato: il dato non guida, inganna." },
+   { "h": "Confondere monitoraggio e verifica", "d": "Se chiedi alla verifica il lavoro del monitoraggio, arriva tardi; se al monitoraggio quello della verifica, non vedi le debolezze di fondo. E reagire alla NC solo con correzioni immediate senza cercare causa ed efficacia: il problema torna." },
+   { "h": "Processo recuperato ≠ prodotto assolto", "d": "Un parametro rientrato dice che il presente è migliorato, non cosa sia successo al lotto passato nella deviazione. E rilasciare sull'intuizione o la pressione: «probabilmente è sicuro», «il cliente lo aspetta» non sono evidenze — senza dimostrazione tecnica, il prodotto resta sotto controllo." },
+   { "h": "Segregazione, autorità, comunicazione", "d": "Segregazione debole (lotto su un foglio, area non distinta, pedane spostabili): rientra per confusione operativa. Autorità ambigua: tutti vedono il problema, nessuno sa chi blocca. Risultati non comunicati bene, e un richiamo archiviato senza riesame lascia intatte le condizioni che lo hanno generato." }
+  ]
+ },
+ {
+  "id": "22000_m07_s027",
+  "layout": "punti",
+  "kicker": "Sul campo",
+  "titolo": "Seguire una evidenza fino al prodotto",
+  "intro": "Per capire se la catena 8.6-8.9 è governata, il metodo più utile è seguirne un pezzo fino in fondo. Parti da una evidenza concreta — una temperatura, un pH, un'osservazione su un OPRP, un esito ambientale — e chiediti da dove nasce, come viene letta, chi la valuta, quale effetto produce sul prodotto. La parola importante non è il ruolo: è il metodo. Cerchi continuità.",
+  "punti": [
+   { "h": "Le prime domande", "d": "Il parametro è ancora coerente col processo reale e le basi aggiornate? Se il processo è cambiato ma il controllo è rimasto identico, hai già un segnale. Il dato è affidabile — stato strumento, taratura, metodo, software, ambiente? Il risultato arriva nel tempo utile a decidere? Chi lo valuta ha competenza e autorità? Se una deviazione resta in sospeso finché torna il responsabile, il sistema non è robusto." },
+   { "h": "Il prodotto durante la valutazione", "d": "Che cosa succede al prodotto interessato mentre la valutazione è in corso — identificato, bloccato, sotto controllo reale, o in una zona ambigua? E se è una NC, la risposta si ferma alla correzione o prosegue verso la causa e la verifica di efficacia? La verifica successiva usa i risultati per leggere il sistema d'insieme?" },
+   { "h": "I collegamenti che emergono", "d": "Parti da un superamento del criterio d'azione su una linea refrigerata: il lotto è stato trattenuto correttamente, bene; poi noti che la verifica intermedia dello strumento era eseguita da una persona non formata sul metodo; approfondendo, il cambio di formato di un mese prima aveva modificato i tempi reali, ma il diagramma non era aggiornato. La deviazione di oggi è il punto visibile di una catena incompleta." },
+   { "h": "Continuità vs pezzi scollegati", "d": "Un sistema maturo spiega perché controlla proprio quel parametro, come garantisce l'affidabilità della misura, come usa la verifica per confermare efficacia, come traduce un segnale in decisione prudente. Uno immaturo mostra pezzi corretti ma non collegati: registrazioni pulite ma poca capacità di spiegare il nesso dato-rischio, blocchi di lotto con criteri incerti di delimitazione, azioni correttive con poca verifica di efficacia. Non accontentarti che una procedura esista: chiediti se collega le informazioni giuste alle decisioni giuste." }
+  ]
+ },
+ {
+  "id": "22000_m07_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 7",
+  "modNum": "7",
+  "titolo": "Dal dato alla decisione sul lotto",
+  "punti": [
+   { "h": "Aggiornamento e dato affidabile", "d": "Ingredienti, prodotto, uso previsto, flusso e ambiente non restano fermi mentre la realtà cambia (8.6). E il dato vale solo se nasce da metodi adeguati, strumenti sotto controllo, taratura coerente, software validato — quando strumento o ambiente sono non conformi, guardi indietro e valuti la validità delle misure già usate (8.7)." },
+   { "h": "La verifica", "d": "Distinguere il controllo in tempo reale dalla conferma dell'efficacia: dice se ciò che è attuato funziona, se i livelli restano accettabili, se gli input dell'analisi sono aggiornati. Quando un campione mostra una NC rispetto al livello accettabile, il lotto va trattato come potenzialmente non sicuro (8.8)." },
+   { "h": "Correzione e azione correttiva", "d": "La correzione mette in sicurezza il presente identificando il prodotto; l'azione correttiva cerca la causa, previene il ritorno, dimostra l'efficacia. Una deviazione su CCP e una su OPRP non hanno la stessa lettura immediata, ma entrambe richiedono rigore (8.9.1-8.9.3)." },
+   { "h": "Prodotto potenzialmente non sicuro", "d": "Il rilascio è possibile solo quando l'evidenza tecnica lo sostiene; altrimenti il prodotto va a ulteriore lavorazione, altro uso compatibile o distruzione. Se è già uscito, entrano ritiro e richiamo con persone competenti, ruoli chiari e prove anche simulate (8.9.4-8.9.5)." },
+   { "h": "Il filo rosso", "d": "Dal dato alla decisione sul lotto nessun salto logico: coerenza fra realtà del processo, affidabilità della misura, profondità della verifica e controllo del prodotto. Se regge, protegge il consumatore; se si interrompe, una piccola deviazione diventa una crisi." },
+   { "h": "Verso la valutazione delle prestazioni", "d": "Al checkpoint ragiona sulla catena, non sui termini isolati. Tutte le verifiche, i trend, le azioni correttive e gli esiti di ritiro diventano materiale per il passo successivo — lettura d'insieme, indicatori utili e decisioni di miglioramento." }
+  ],
+  "prossimo": {
+   "modulo": "8",
+   "titolo": "Valutazione delle prestazioni dell'SGSA",
+   "testo": "Come trasformare verifiche, trend, azioni correttive ed esiti in una lettura d'insieme, indicatori e decisioni di miglioramento."
+  }
+ }
+]
