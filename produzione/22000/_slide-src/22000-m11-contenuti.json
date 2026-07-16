@@ -1,0 +1,391 @@
+[
+ {
+  "id": "22000_m11_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 22000 — Sicurezza alimentare",
+  "kicker": "Modulo 11",
+  "eyebrow": "Dalla preparazione alla conduzione",
+  "titolo": "Verificare il sistema II: conduzione sul campo",
+  "testo": "Fin qui hai costruito criteri, metodo, domande e attenzione alle evidenze; adesso porti tutto dentro lo stabilimento, dove l'SGSA smette di essere carta e diventa persone, locali, tempi e decisioni. Il punto non è sorprendere qualcuno in errore, ma capire se i processi producono alimenti sicuri in modo controllato e ripetibile. La logica che tiene insieme tutto è una sola: non osservi ambienti, persone e registrazioni come pezzi separati, cerchi connessioni — il diagramma rispetto al reparto, la segregazione reale rispetto alla planimetria, la registrazione rispetto a ciò che hai visto fare. Quando queste connessioni reggono il sistema appare credibile; quando non reggono nascono domande utili, talvolta non conformità. Da qui in avanti pensi come un professionista in movimento, non come un lettore di procedure seduto a un tavolo.",
+  "agenda": [
+   "Il giro di stabilimento: pulito e sporco, igiene, comportamenti",
+   "Seguire il flusso del prodotto, dalla ricezione alla spedizione",
+   "Il campionamento dichiarato e difendibile",
+   "Le interviste: operatori, qualità, manutenzione",
+   "La prova di rintracciabilità in diretta",
+   "Scrivere le risultanze e chiudere la giornata"
+  ]
+ },
+ {
+  "id": "22000_m11_s002",
+  "layout": "split",
+  "kicker": "Il giro di stabilimento",
+  "titolo": "Il sopralluogo come lettura del sistema",
+  "lead": "Quando entri in reparto il primo compito non è giudicare, ma orientarti. Il giro serve a trasformare uno spazio produttivo, spesso complesso e rumoroso, in una sequenza comprensibile di processi, passaggi, controlli e comportamenti. La norma fonda l'SGSA su approccio per processi, comunicazione e controllo dei pericoli: il sopralluogo è uno dei momenti in cui capisci se quei processi interagiscono davvero come dichiarato.",
+  "punti": [
+   { "h": "Chiarisci il percorso con l'accompagnatore", "d": "Non per farti guidare dove è comodo, ma per capire quale logica segue la visita. Un percorso costruito sul flusso del prodotto aiuta la comprensione; uno pensato solo per mostrare le zone più ordinate può nascondere i punti critici." },
+   { "h": "Costruisci una mappa mentale semplice", "d": "Dove entrano materiali, persone e utensili; dove avvengono trasformazioni; dove si creano separazioni tra sporco e pulito; dove sostano i prodotti in attesa; dove escono i lotti finiti. Non deve essere perfetta, deve dirti cosa osservare mentre cammini." },
+   { "h": "Prima il film, poi i fotogrammi", "d": "L'errore frequente è lasciarsi catturare troppo presto dal dettaglio: una guarnizione usurata, un carrello non pulito, e ti fermi dieci minuti. All'inizio ti serve soprattutto la visione d'insieme." },
+   { "h": "È già un test di coerenza", "d": "Se il diagramma mostrato in apertura era lineare ma sul campo compaiono rientri, depositi intermedi, rilavorazioni o passaggi non citati, non hai una risultanza, ma certamente un punto da approfondire." }
+  ]
+ },
+ {
+  "id": "22000_m11_s003",
+  "layout": "cards",
+  "kicker": "Percorso pulito e sporco",
+  "titolo": "Leggere gli incroci reali, non l'estetica",
+  "intro": "In ambito alimentare questa lettura non riguarda il pavimento pulito o la parete ben mantenuta, ma gli incroci possibili tra persone, materiali, utensili, scarti, imballi e prodotto: il modo in cui una contaminazione può trovare una strada. Non guardare solo le aree, guarda le traiettorie. La separazione deve essere reale, non solo dichiarata.",
+  "cards": [
+   { "h": "Gli accessi", "d": "Come entrano gli operatori nelle aree sensibili, dove cambiano calzature, dove sanificano le mani. Non solo se questi passaggi esistono: se il flusso li rende inevitabili oppure aggirabili. Una barriera che tutti bypassano in due secondi non è robusta." },
+   { "h": "Materiali e oggetti", "d": "Pallet, cartoni esterni, attrezzi manutentivi, casse di materia prima, resi interni, campioni di laboratorio. Spesso gli incroci nascono qui, non sulle linee principali: un pallet esterno vicino al confezionamento, un attrezzo tecnico appoggiato in zona di lavorazione." },
+   { "h": "Il movimento del personale", "d": "Operatori, manutentori, capireparto, addetti alle pulizie attraversano aree diverse nella stessa ora. Se la separazione dipende solo dalla buona volontà individuale, sei davanti a un sistema fragile." },
+   { "h": "Le aree di attesa", "d": "Talvolta il problema non è il tragitto, ma la sosta: materiale sporco fermo vicino a prodotto esposto, utensili da sanificare in zona intermedia. Il rischio nasce spesso dal temporaneo che diventa abituale." }
+  ]
+ },
+ {
+  "id": "22000_m11_s004",
+  "layout": "punti",
+  "kicker": "Osservazione igienica",
+  "titolo": "Vedere ciò che può trasferirsi al prodotto",
+  "intro": "Dopo i percorsi, lo sguardo si stringe sul dettaglio. La domanda guida è semplice: che cosa, in questo ambiente, può trasferirsi al prodotto o compromettere il controllo. Non cerchi la perfezione estetica: un reparto ordinato può avere punti deboli, uno visivamente impegnativo può mantenere controlli robusti dove conta.",
+  "punti": [
+   { "h": "Superfici, contatti e zone morte", "d": "Residui visibili nei punti di accumulo, guarnizioni e piani compatibili con la lavorazione, dove l'acqua ristagna, dove si forma condensa, dove il flusso d'aria sposta polvere. Ciò che resta fermo troppo a lungo è spesso un messaggio." },
+   { "h": "La distinzione degli oggetti", "d": "Utensili identificati per area o uso, contenitori del prodotto separati da quelli per scarti, prodotti chimici solo dove dovrebbero essere. Serve a ridurre la probabilità che qualcosa passi nel punto sbagliato al momento sbagliato." },
+   { "h": "Episodio o schema", "d": "Un residuo appena caduto durante un cambio già in gestione è un episodio; la stessa logica ripetuta in più punti, o non riconosciuta da nessuno, è uno schema. Le risultanze solide nascono più facilmente dagli schemi." },
+   { "h": "Note concrete, non giudizi", "d": "Meglio «alle dieci e venti, in confezionamento, condensa sopra il nastro della linea due» che «igiene carente». La prima frase conserva un fatto verificabile; la seconda è già un giudizio, e spesso troppo generico." }
+  ]
+ },
+ {
+  "id": "22000_m11_s005",
+  "layout": "cards",
+  "kicker": "Comportamenti",
+  "titolo": "Il sistema si vede in ciò che le persone fanno",
+  "intro": "Le procedure possono essere scritte bene e le registrazioni complete, ma se i comportamenti quotidiani non sostengono quel disegno il controllo reale si indebolisce. In uno stabilimento alimentare vedere un comportamento vale spesso quanto leggere molte istruzioni. Non osservare con atteggiamento poliziesco: resta presente, discreto e concentrato.",
+  "cards": [
+   { "h": "I gesti semplici", "d": "Come gli operatori entrano in area, indossano e mantengono l'abbigliamento, gestiscono guanti, utensili e piccole interruzioni. I gesti piccoli rivelano se il controllo è interiorizzato o solo esibito." },
+   { "h": "Le transizioni", "d": "Un addetto che lascia il confezionamento e rientra dal varco più vicino, senza che nessuno lo consideri un problema. Non osservi solo il singolo: vedi una norma implicita del reparto, ciò che il gruppo considera accettabile." },
+   { "h": "I ruoli non produttivi", "d": "Manutenzione, qualità, magazzino, pulizie, visitatori interni: spesso i flussi problematici nascono da chi attraversa molte aree e non appartiene stabilmente a una sola zona." },
+   { "h": "La reazione all'anomalia", "d": "Se cade un utensile, se si rompe un imballo, se il prodotto attende: non serve la risposta perfetta da manuale, serve vedere se ne esiste una coerente e pronta. E le evidenze positive vanno annotate quanto i rilievi." }
+  ]
+ },
+ {
+  "id": "22000_m11_s006",
+  "layout": "evidenza",
+  "kicker": "Campionamento nel sopralluogo",
+  "eyebrow": "Vedere bene invece di vedere tutto",
+  "titolo": "Il campionamento non è un ripiego, è il modo corretto di lavorare",
+  "testo": "In una giornata lo stabilimento ti mostra sempre più cose di quante tu possa osservare con la stessa profondità: campionare bene significa scegliere dove fermarti perché quel punto può dirti qualcosa di significativo sul controllo del processo. La selezione inizia già nel giro iniziale — un incrocio anomalo, una linea molto manuale, un cambio produzione che mette alla prova la segregazione — e deve poter essere spiegata in due frasi chiare, così da rendere trasparente il metodo e proteggere te e l'organizzazione da impressioni di arbitrarietà. Due errori la indeboliscono: campionare solo ciò che è facile da mostrare, cioè linee ferme, archivi già pronti e operatori selezionati; oppure cambiare oggetto ogni cinque minuti senza chiudere nulla, finendo con molte impressioni e poche evidenze complete. Meglio seguire un filo abbastanza a lungo da capire il passaggio. Campionare non significa superficialità: significa profondità selettiva. Vedi meno cose, ma le vedi meglio, le colleghi ai criteri e ne conservi traccia."
+ },
+ {
+  "id": "22000_m11_s007",
+  "layout": "punti",
+  "kicker": "Dalle osservazioni alle note",
+  "titolo": "Conservare fatti verificabili",
+  "intro": "Il sopralluogo produce valore solo se ciò che hai visto resta utilizzabile: tra reparti, rumore e transizioni veloci la memoria da sola non basta. Devi trasformare l'osservazione in fatti scritti abbastanza precisi da permetterti, più tardi, di collegarli a una domanda, a una registrazione, a un criterio e a una valutazione.",
+  "punti": [
+   { "h": "Annota il fatto, non il giudizio", "d": "Meglio «alle undici e cinque, area preparazione, contenitore semilavorato senza stato visibile» che «gestione materiali insufficiente». La prima nota conserva un'evidenza, la seconda anticipa una conclusione ancora prematura." },
+   { "h": "Quattro elementi", "d": "Il fatto osservato, il luogo preciso, il momento almeno orientativo, il collegamento possibile con il processo in corso. Se aggiungi chi ti ha spiegato o quale documento hai visto, la robustezza aumenta ancora." },
+   { "h": "Le risultanze deboli nascono da note deboli", "d": "Ci si ricorda che c'era un carrello fuori posto, ma non quale, né dove, né in quale fase; una registrazione incompleta, ma non il codice del modulo o il lotto. A fine giornata questi ricordi sfumano." },
+   { "h": "Lessico descrittivo", "d": "Presenza di residui, etichetta non leggibile, stato non indicato, passaggio attraverso varco non previsto. Le parole forti — sporco, grave, rischioso — solo dopo aver descritto i fatti e chiarito il criterio." }
+  ]
+ },
+ {
+  "id": "22000_m11_s008",
+  "layout": "split",
+  "kicker": "Il flusso del prodotto",
+  "titolo": "Seguire un filo da non perdere",
+  "lead": "Dopo il giro, il metodo cambia leggermente: non guardi più l'insieme in ampiezza, scegli un filo preciso e lo accompagni attraverso passaggi successivi, verificando se ciò che entra, si trasforma, si identifica, si controlla e infine esce mantiene coerenza. È uno dei modi più efficaci per capire se l'SGSA vive davvero nei processi.",
+  "punti": [
+   { "h": "La scelta non è casuale", "d": "Dichiara il campionamento e scegli una famiglia, un lotto o una produzione che tocchi passaggi significativi: ingredienti sensibili, una fase termica, un cambio formato, allergeni, un tratto di attesa. Più il percorso contiene punti interessanti, più il campione ti parla." },
+   { "h": "Parti dalla domanda più concreta", "d": "Cosa sto seguendo, in questo momento, e in quale stato si trova. Questo ti obbliga a cercare identificazione, lotto, fase del processo e i criteri con cui l'organizzazione distingue materia prima, semilavorato e finito." },
+   { "h": "Verifica il diagramma di flusso", "d": "La norma lo definisce rappresentazione sistematica della sequenza e delle interazioni tra fasi. Per te significa una cosa concreta: il percorso raccontato coincide con quello che vedi, oppure compaiono deviazioni non dichiarate?" },
+   { "h": "Fermati nei nodi giusti", "d": "Non correre accanto al prodotto: sosta in ingresso, cambio di stato, controllo rilevante, attesa, rilascio, uscita. In ciascun nodo poche domande buone e osservazione dei collegamenti." }
+  ]
+ },
+ {
+  "id": "22000_m11_s009",
+  "layout": "punti",
+  "kicker": "Ricezione e avvio",
+  "titolo": "Come nasce la coerenza del lotto",
+  "intro": "La prima domanda utile è come entra il materiale nel sistema. La ricezione non è un semplice punto logistico: è il momento in cui materie prime, ingredienti e imballi passano da fuori a dentro e assumono uno stato che dovrebbe restare leggibile lungo il processo. Osservala come origine del filo, non come area separata.",
+  "punti": [
+   { "h": "Identificazione e stato", "d": "Il materiale è riconoscibile, il lotto è chiaro, lo stato — in attesa, accettato, trattenuto — è visibile e compreso, i materiali simili sono distinguibili. Se lo stato non è leggibile all'ingresso, difficilmente lo sarà più avanti." },
+   { "h": "Il passaggio all'avvio di processo", "d": "Come la materia viene prelevata, pesata, dosata; chi controlla la corrispondenza con la produzione; come si evita che due lotti simili si confondano. Qui le informazioni cambiano supporto, mano e contesto." },
+   { "h": "La gestione delle attese", "d": "Materie parzialmente utilizzate, semilavorati tra due fasi, ingredienti preparati in anticipo devono mantenere stato, protezione e leggibilità. Contenitori anonimi e tempi non chiari fanno perdere trasparenza al flusso." },
+   { "h": "Quantità e documentazione", "d": "Non devi rifare i conti dell'azienda, ma verificare se ciò che vedi ha senso rispetto a produzione in corso, lotti presenti e materiali aperti. Incongruenze grossolane, se nessuno le nota, meritano attenzione." }
+  ]
+ },
+ {
+  "id": "22000_m11_s010",
+  "layout": "cards",
+  "kicker": "Fino alla spedizione",
+  "titolo": "Il flusso resta leggibile fino all'uscita",
+  "intro": "Nell'ultima parte del percorso la trasformazione si consolida e il lotto prende forma finale. Verifichi se l'identità del prodotto resta leggibile fino all'uscita, se i passaggi di stato sono chiari e se confezionamento, stoccaggio e spedizione mantengono la coerenza osservata a monte. È un punto decisivo: il finito è ciò che l'organizzazione mette davvero a disposizione del cliente.",
+  "cards": [
+   { "h": "Confezionamento", "d": "Il prodotto corrisponde alla produzione dichiarata, gli imballi sono quelli previsti, lo stato è chiaro prima del confezionamento. Con più referenze simili osserva le separazioni fisiche e visive, dove nascono gli errori di confusione durante cambi e ripartenze." },
+   { "h": "Stoccaggio e rilascio", "d": "Come si distingue il materiale pronto alla spedizione da quello in attesa di decisione, chi autorizza il passaggio di stato, come sono trattati pallet incompleti, resi e unità trattenute. Qui sicurezza, tracciabilità e gestione NC si incontrano." },
+   { "h": "Il magazzino e la rintracciabilità", "d": "Il lotto seguito è rintracciabile fisicamente, le unità sono identificabili, le ubicazioni hanno senso. Non serve verificare tutto il magazzino, serve che il campione scelto non si perda proprio nell'ultimo tratto." },
+   { "h": "La spedizione", "d": "Il prodotto caricato corrisponde allo stato autorizzato, le condizioni di conservazione sono appropriate, il lotto è ancora riconoscibile, i documenti riflettono il materiale osservato. Discrepanze qui riguardano l'affidabilità dell'intero percorso." }
+  ]
+ },
+ {
+  "id": "22000_m11_s011",
+  "layout": "numeri",
+  "kicker": "Campionamento dichiarato",
+  "titolo": "Tre criteri per un filo difendibile",
+  "intro": "Dopo aver seguito il prodotto fino all'uscita, conviene rendere esplicito il campionamento: dire quale lotto, quale famiglia, quali passaggi e quali registrazioni intendi seguire toglie spazio all'arbitrarietà e costruisce un terreno comune. Il campionamento dichiarato disciplina anche te, perché ti impedisce di inseguire ogni segnale senza chiudere mai un filo. Funziona bene quando rispetta tre criteri semplici.",
+  "numeri": [
+   { "n": "1", "h": "Rappresentativo", "d": "Di un percorso reale, non di una situazione costruita solo per farti vedere la parte migliore. Se il campione si rivela poco significativo puoi adattarlo, dicendo però perché cambi e quale nuova logica segui." },
+   { "n": "2", "h": "Tocca i nodi sensibili", "d": "Passaggi in cui identificazione, stato, segregazione o decisione possono cambiare. Sono i punti in cui il sistema rivela la sua tenuta effettiva, più delle linee ferme e già pronte." },
+   { "n": "3", "h": "Gestibile nel tempo disponibile", "d": "Un campione troppo ampio produce solo osservazioni superficiali: se perdi profondità, perdi valore. Meglio vedere meno cose ma con più profondità e prepararle a interviste e rintracciabilità sensate." }
+  ]
+ },
+ {
+  "id": "22000_m11_s012",
+  "layout": "split",
+  "kicker": "I nodi di controllo",
+  "titolo": "Seguire decisioni e stati del lotto",
+  "lead": "Presidiare i nodi non significa vedere che il prodotto passa. Devi capire chi decide, su quale base, come quella decisione diventa visibile e in che modo il lotto cambia stato senza perdere identità. Sono i momenti in cui il sistema smette di essere una descrizione e diventa una sequenza di scelte concrete.",
+  "punti": [
+   { "h": "Che cos'è un nodo di controllo", "d": "Qualsiasi passaggio in cui il prodotto viene accettato o trattenuto, una materia resa disponibile, un semilavorato che attende, una linea che riparte dopo una fermata, un lotto rilasciato o trattenuto. La domanda resta: come si vede, qui, lo stato corretto." },
+   { "h": "Tre fonti che si parlano", "d": "La realtà fisica (materiale e luogo), la spiegazione di chi opera in quel momento, le informazioni documentate che sostengono lo stato. Quando concordano il controllo è credibile; quando si contraddicono nasce un approfondimento utile." },
+   { "h": "La qualità della transizione", "d": "Quando un materiale cambia area, mano, supporto o responsabilità, è lì che si generano gli smarrimenti informativi. Un pallet leggibile in ricezione può diventare poco chiaro in preparazione." },
+   { "h": "Segui il gesto, non solo il prodotto", "d": "Chi applica l'etichetta di stato, chi conferma una registrazione, chi separa il conforme dal trattenuto, chi chiude un'attesa e apre la fase successiva. Ogni sistema robusto rende questi gesti prevedibili." }
+  ]
+ },
+ {
+  "id": "22000_m11_s013",
+  "layout": "punti",
+  "kicker": "Quando il flusso si spezza",
+  "titolo": "Approfondire senza perdere metodo",
+  "intro": "Anche in organizzazioni ordinate compaiono fermate, scarti, attese, rilavorazioni e ripartenze improvvise. Questi momenti non sono un fastidio che intralcia la visita: molto spesso sono i punti in cui vedi meglio la robustezza del sistema. Il compito è approfondirli senza farti trascinare nel caos operativo.",
+  "punti": [
+   { "h": "Non perdere l'oggetto del campionamento", "d": "Se stavi seguendo un lotto, continua a chiederti cosa gli accade adesso: dove viene collocato, con quale stato, chi decide il passo successivo, come si evita confusione con altro materiale. Il filo del lotto resta la tua ancora." },
+   { "h": "Distingui evento e gestione dell'evento", "d": "Una fermata da sola non dice nulla di conclusivo: ti parla molto di più il modo in cui viene gestita — il prodotto protetto, lo stato leggibile, l'area messa in sicurezza, le registrazioni coerenti col fatto reale." },
+   { "h": "Scegli un punto e chiudilo", "d": "Se l'anomalia è una rilavorazione, seguila fino a capire da dove nasce, dove va, come viene identificata e chi ne autorizza il rientro. Ti protegge da due errori speculari: banalizzare e ingigantire." },
+   { "h": "Ascolta, ma chiedi evidenze", "d": "Nei momenti di deviazione il personale spiega molto. Ascolta, e continua a chiedere: dove si vede, chi lo ha deciso, come è stato identificato, cosa succede ora a questo materiale. Le domande corte aiutano più dei lunghi confronti teorici." }
+  ]
+ },
+ {
+  "id": "22000_m11_s014",
+  "layout": "split",
+  "kicker": "Le interviste",
+  "titolo": "Far parlare il lavoro reale",
+  "lead": "Le interviste non servono a riempire vuoti teorici, ma a dare voce al lavoro che hai già osservato. Se interroghi le persone su temi astratti ottieni risposte generiche; se parti da ciò che sta accadendo, il dialogo diventa concreto, verificabile e rispettoso del tempo di chi lavora. Non esamini la memoria di qualcuno: cerchi di capire se il sistema è compreso e applicato.",
+  "punti": [
+   { "h": "L'osservazione precede la domanda", "d": "Hai visto un cambio prodotto, un'attesa, una decisione di rilascio, una fermata. Adesso chiedi a chi opera come riconosce lo stato corretto, cosa controlla, cosa fa se qualcosa non torna. La persona spiega il proprio lavoro, non uno scenario da aula." },
+   { "h": "Quattro caratteristiche", "d": "Sono brevi, partono da fatti visibili, usano parole del lavoro quotidiano e restano aperte per far emergere il ragionamento. «Mi fai vedere come capisci se questo lotto può passare» è più utile di «conosci la procedura»." },
+   { "h": "Conta il tono", "d": "Se arrivi come se cercassi il colpevole, irrigidisci tutti; se arrivi con chiarezza e rispetto, spesso le persone parlano bene. Puoi essere molto rigoroso e insieme molto civile." },
+   { "h": "La triangolazione", "d": "Le interviste valgono molto ma non bastano mai da sole: colleghi sempre ciò che una persona dice con ciò che hai visto e con le informazioni documentate. Se un addetto afferma qualcosa, poi ne vedi almeno un caso concreto." }
+  ]
+ },
+ {
+  "id": "22000_m11_s015",
+  "layout": "punti",
+  "kicker": "Operatori di linea",
+  "titolo": "Domande brevi su compiti veri",
+  "intro": "Con un operatore incontri il punto in cui il sistema tocca la materia. Il valore sta nella concretezza: capire se chi lavora riconosce il prodotto corretto, lo stato corretto, il controllo da fare e la reazione attesa. Le domande devono essere corte, vicine al gesto e legate a ciò che sta accadendo.",
+  "punti": [
+   { "h": "Parti dal più semplice", "d": "«Che cosa stai facendo adesso» apre molto: capisci come la persona definisce il compito e quali segnali usa. Poi ancora la conversazione a un oggetto visibile — come capisci che questo materiale è quello giusto, dove vedi lo stato del lotto." },
+   { "h": "La gestione delle anomalie", "d": "Parti da casi piccoli e realistici: se l'etichetta non fosse leggibile, cosa faresti; se il contenitore restasse più del previsto; se notassi un materiale diverso, chi chiameresti per primo. Un sistema maturo rende naturali queste risposte." },
+   { "h": "Il linguaggio spontaneo", "d": "Parole chiare per distinguere conforme, in attesa, scarto, rilavorazione, fermo, cambio indicano un processo interiorizzato. Espressioni vaghe o continui richiami a «qualcuno che sa» sono un possibile punto debole." },
+   { "h": "Non è una scorciatoia", "d": "Non usare l'operatore per dimostrare se la formazione funziona: l'obiettivo è capire se sa riconoscere ciò che conta e reagire. «Mostrami come fai» cambia del tutto la qualità della risposta rispetto a «sai dirmi la procedura»." }
+  ]
+ },
+ {
+  "id": "22000_m11_s016",
+  "layout": "cards",
+  "kicker": "Qualità",
+  "titolo": "Leggere stati, decisioni e registrazioni",
+  "intro": "Con il referente qualità il punto di osservazione cambia: non più il gesto ripetuto della linea, ma il modo in cui l'organizzazione rende leggibili gli stati, governa le decisioni e conserva tracce coerenti. Entra subito con il campione che hai seguito, non con domande generali sulla gestione del sito.",
+  "cards": [
+   { "h": "Rendere visibile lo stato", "d": "Come si rende visibile lo stato del materiale, chi può modificarlo, dove resta la traccia della decisione. Se la risposta resta astratta, riportala subito al lotto in esame." },
+   { "h": "Il dubbio e il trattenuto", "d": "Cosa accade se un prodotto è in dubbio, come si distingue il trattenuto dal disponibile, come vengono gestite le discrepanze tra area produttiva e registrazioni. La visibilità dello stato deve reggere anche sul campo." },
+   { "h": "Criterio e diffusione", "d": "Su una rilavorazione o un'attesa emergono due livelli: la logica con cui si decide, e come quella decisione arriva alle persone giuste. Talvolta il criterio è sensato ma la comunicazione è debole, altre volte accade il contrario." },
+   { "h": "Preparare la rintracciabilità", "d": "Qualità conosce spesso i punti in cui il filo del lotto si ricostruisce meglio e quelli in cui il sistema fatica. Usa questa conoscenza per progettare una prova seria e proporzionata, non per farti guidare al percorso comodo." }
+  ]
+ },
+ {
+  "id": "22000_m11_s017",
+  "layout": "punti",
+  "kicker": "Manutenzione",
+  "titolo": "Quando la tecnica entra nel processo",
+  "intro": "La terza famiglia di interviste è spesso sottovalutata, eppure tocca un punto cruciale: cosa succede quando la tecnica interrompe la routine e costringe l'organizzazione a proteggere il prodotto mentre ripara, regola o rimette in marcia. Anche qui parti da fatti osservati, non da domande generali sulla manutenzione.",
+  "punti": [
+   { "h": "Il confine tecnica–prodotto", "d": "Quando intervenite su una macchina in produzione, come proteggete il materiale coinvolto; dove appoggiate utensili e componenti smontati; chi decide se il prodotto vicino può proseguire o va trattenuto; come si comunica la fine dell'intervento." },
+   { "h": "Gli interventi piccoli", "d": "Stringere un supporto, sostituire una guarnizione, regolare un sensore, applicare una soluzione temporanea. Proprio perché frequenti, questi interventi rivelano bene la cultura operativa: un'organizzazione matura protegge il prodotto anche nei micro eventi." },
+   { "h": "La conoscenza dei punti sensibili", "d": "Non serve una lezione di ingegneria: interessa se chi interviene distingue zone a contatto e non, sa quando serve comunicare subito a produzione o qualità, sa quando una ripartenza rapida non basta perché serve prima valutare il materiale esposto." },
+   { "h": "La triangolazione tra funzioni", "d": "Se manutenzione afferma che ogni intervento con impatto viene segnalato e gestito, cerca conferme: nelle parole degli operatori, nelle decisioni di qualità e nel modo in cui le aree vengono lasciate dopo l'intervento." }
+  ]
+ },
+ {
+  "id": "22000_m11_s018",
+  "layout": "definizione",
+  "kicker": "Rintracciabilità in diretta",
+  "eyebrow": "Obiettivo e tono della prova",
+  "titolo": "Ricostruire il percorso di un oggetto",
+  "definizione": "La norma la presenta come la possibilità di ricostruire, lungo i passaggi di produzione, lavorazione e distribuzione, il percorso di un oggetto: il suo impiego, i suoi spostamenti e il luogo in cui si trova o si è trovato.",
+  "punti": [
+   "Sul campo significa verificare se l'organizzazione ricostruisce il filo di un prodotto in modo credibile, usando fatti, collegamenti e informazioni documentate, non soltanto spiegazioni generiche.",
+   "Conta il tono: se la imposti come esame di memoria ottieni agitazione e difesa; se la presenti come verifica del sistema ottieni più facilmente collaborazione, e spesso evidenze migliori.",
+   "Scegli la direzione in base al campione seguito: dal prodotto finito alle origini, oppure da una materia prima alle destinazioni. Nessuna delle due è in assoluto migliore.",
+   "Rispetta la proporzione: la prova deve essere abbastanza sfidante da testare il sistema, ma abbastanza contenuta da concludersi in modo leggibile. Osserva non solo il risultato, ma il modo in cui ci si arriva."
+  ]
+ },
+ {
+  "id": "22000_m11_s019",
+  "layout": "numeri",
+  "kicker": "Progettare la prova",
+  "titolo": "Oggetto, verso e perimetro",
+  "intro": "La qualità di una prova di rintracciabilità dipende molto dalla scelta iniziale: un oggetto poco chiaro, un perimetro troppo ampio o una direzione incoerente la rendono confusa. Se scegli bene, anche un esercizio semplice può dirti moltissimo sull'affidabilità del sistema. La parola chiave è proporzione.",
+  "numeri": [
+   { "n": "1", "h": "L'oggetto", "d": "Concreto e identificabile: un pallet di finito, una cassa di semilavorato, un lotto di materia prima, un ingrediente sensibile. Evita oggetti astratti come una referenza generica o una settimana di produzioni. Più è preciso, più la prova resta governabile." },
+   { "n": "2", "h": "Il verso", "d": "Dal finito all'origine quando vuoi capire se il prodotto conserva memoria dei propri ingredienti e passaggi; dall'origine alle destinazioni quando il tema è una materia critica o un allergene. La direzione giusta dialoga col campionamento precedente." },
+   { "n": "3", "h": "Il perimetro", "d": "Definisci fin dove vuoi arrivare e sii disciplinato. Se la prova regge bene potrai estenderla; se non regge, il perimetro iniziale sarà già sufficiente a mostrare il punto debole. Non allargarlo o restringerlo in modo opportunistico durante la prova." }
+  ]
+ },
+ {
+  "id": "22000_m11_s020",
+  "layout": "flusso",
+  "kicker": "Condurre la prova",
+  "titolo": "Passo dopo passo, mostrando il filo",
+  "intro": "La regola pratica più utile: chiedi di mostrarti il percorso, non di riassumertelo. Le spiegazioni verbali orientano, ma il cuore della prova sta nei collegamenti visibili tra prodotto, lotto, ubicazione, registrazioni e passaggi. Quando il filo viene solo raccontato resta fragile; quando viene mostrato diventa verificabile.",
+  "passi": [
+   { "h": "Parti dal primo collegamento certo", "d": "Da un pallet di finito, il lotto, la data o la registrazione di confezionamento; da una materia prima, la sua identificazione in ingresso. Non correre al punto finale: ogni anello deve reggere prima che tu passi al successivo." },
+   { "h": "Usa domande molto concrete", "d": "Dove si vede questo collegamento, chi usa questa informazione nel lavoro ordinario, come si passa da questo documento al passaggio successivo. Il materiale fisico è ancora riconoscibile, le ubicazioni e le quantità hanno senso." },
+   { "h": "Osserva chi conduce la ricostruzione", "d": "Si orienta con metodo oppure salta da una fonte all'altra sperando di trovare qualcosa. Un sistema maturo coinvolge più funzioni ma il passaggio tra loro resta logico; uno debole dipende ogni volta da una memoria diversa." },
+   { "h": "Fermati dove il filo si spezza", "d": "Non riempire il vuoto con interpretazioni generose: fermati dove il collegamento smette di essere chiaro, chiedi se esiste un'altra evidenza, e se non emerge annota il punto con precisione per le future risultanze." }
+  ]
+ },
+ {
+  "id": "22000_m11_s021",
+  "layout": "confronto",
+  "kicker": "Chiudere la prova",
+  "titolo": "Distinguere esitazioni e rotture",
+  "intro": "Chiudi la prova con una valutazione lucida: non misuri l'ansia delle persone né premi chi trova tutto in pochi secondi. Capisci se il sistema consente di ricostruire il percorso del lotto in modo affidabile, coerente e verificabile. Valuta quattro dimensioni insieme: identificazione dell'oggetto, continuità dei collegamenti, coerenza con la realtà fisica, condivisibilità tra ruoli diversi.",
+  "a": {
+   "h": "Esitazione recuperabile",
+   "sub": "Un rallentamento, non una falla",
+   "punti": [
+    { "d": "Serve cercare una registrazione in un archivio poco intuitivo, oppure coinvolgere un secondo collega per recuperare un passaggio non usato tutti i giorni." },
+    { "d": "Ma il collegamento emerge, resta coerente con il prodotto fisico ed è sostenuto da informazioni documentate credibili: sei davanti a un processo migliorabile nella fruibilità, non a una falla dimostrata." }
+   ]
+  },
+  "b": {
+   "h": "Rottura significativa",
+   "sub": "Un limite reale del sistema",
+   "punti": [
+    { "d": "Un passaggio non è dimostrabile, due fonti si contraddicono, lo stato del materiale non coincide con la ricostruzione, oppure la localizzazione del lotto resta incerta." },
+    { "d": "Non registri un piccolo impaccio, ma un limite reale della capacità di rintracciabilità. Premi la qualità del collegamento, non i secondi impiegati a trovarlo." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m11_s022",
+  "layout": "flusso",
+  "kicker": "Scrivere le risultanze",
+  "titolo": "Dal fatto al criterio, in tre passaggi",
+  "intro": "Qui molte conduzioni buone si indeboliscono, perché osservazioni raccolte con cura diventano frasi vaghe, troppo dure o povere di collegamento con i criteri. Scrivere una risultanza alimentare è semplice da dire e difficile da fare bene: la struttura più affidabile procede sempre in tre passaggi ordinati.",
+  "passi": [
+   { "h": "Il fatto", "d": "Cosa hai visto, dove, in quale contesto, su quale lotto e passaggio. «Durante il campionamento del mattino, in confezionamento, erano presenti sul banco etichette residue della referenza precedente con allergene, mentre era in corso una referenza senza allergene.»" },
+   { "h": "Il criterio", "d": "La procedura interna, il metodo dichiarato o il requisito usato come metro. «Al cambio prodotto il materiale residuo deve essere rimosso e la linea verificata prima della ripartenza»: non hai visto solo un banco disordinato, ma un fatto incoerente con un controllo dichiarato." },
+   { "h": "Il significato", "d": "Perché il fatto indebolisce il controllo, senza attribuire effetti non dimostrati. «La permanenza di etichette della referenza precedente mantiene un potenziale di confusione informativa nel punto finale di identificazione del prodotto»: misurato, ma dice cosa conta." }
+  ]
+ },
+ {
+  "id": "22000_m11_s023",
+  "layout": "confronto",
+  "kicker": "Esempi a confronto",
+  "titolo": "Risultanze deboli e risultanze solide",
+  "intro": "Il modo migliore per imparare questa scrittura è mettere accanto una formulazione debole e una solida sullo stesso fatto. Il criterio non è la severità del tono, ma la capacità di rendere visibile il legame tra osservazione, requisito e significato operativo. Attento anche all'errore opposto: scrivere troppo, nascondendo il rilievo sotto strati di parole.",
+  "a": {
+   "h": "Formulazione debole",
+   "sub": "Un'etichetta senza fatti",
+   "punti": [
+    { "d": "«Identificazione dei semilavorati insufficiente»: corta, ma non dice dove, quando, su quale oggetto, rispetto a quale criterio." },
+    { "d": "«Il personale non rispetta le regole igieniche», «sistema di rintracciabilità non efficace»: giudizi generici, quasi morali, che sostituiscono il fatto con un'etichetta emotiva." }
+   ]
+  },
+  "b": {
+   "h": "Formulazione solida",
+   "sub": "Fatto, criterio, significato",
+   "punti": [
+    { "d": "«In area preparazione, un contenitore in attesa alla linea tre era privo di lotto e stato, mentre la procedura ne prevede la riconoscibilità durante le soste intermedie.»" },
+    { "d": "«L'assenza di stato visibile rende meno robusta la distinzione tra materiale disponibile e materiale da valutare»: non più aggressiva, solo molto più utilizzabile." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m11_s024",
+  "layout": "tabella",
+  "kicker": "Il lessico giusto",
+  "titolo": "Processo e prodotto, tenuti distinti",
+  "intro": "Una distinzione che aiuta a scrivere meglio: separare ciò che riguarda il controllo del processo da ciò che riguarda lo stato del prodotto. Sono collegati ma non identici, e se li confondi il rapporto diventa poco leggibile. Non superare il tuo perimetro: se non hai evidenze per qualificare il prodotto come non conforme, non farlo per intuizione.",
+  "cols": ["Piano", "Che cosa descrivi, e come"],
+  "righe": [
+   ["Processo", "Una debolezza nel modo in cui il sistema controlla, identifica, decide o protegge. Un'area di attesa con stati non visibili è anzitutto perdita di chiarezza nella gestione, non prova che quel prodotto sia già non sicuro."],
+   ["Prodotto", "Lo stato attribuito a un lotto: materiale trattenuto, unità in attesa di decisione, prodotto coinvolto da una deviazione. L'attenzione si sposta sulla riconoscibilità e sulla separazione reale del materiale."],
+   ["Lo stesso episodio", "Un cambio formato con imballi residui è anzitutto risultanza di processo; se poi parte del lotto in uscita è stata trattenuta e identificata a parte, annoti anche la correzione sul prodotto. Due piani distinti nello stesso fatto."],
+   ["Il vocabolario", "Correzione, azione correttiva, trattenuto, rilasciato, disponibile, in attesa di decisione. Se manca la base per dire «non conforme», scrivi che lo stato non era chiaramente distinguibile: prudenza che rende professionale il giudizio."]
+  ]
+ },
+ {
+  "id": "22000_m11_s025",
+  "layout": "punti",
+  "kicker": "Dare peso alle evidenze",
+  "titolo": "Una risultanza o più risultanze",
+  "intro": "Alla sintesi, una scelta difficile: quante risultanze scrivere e con quale peso. Se frammenti troppo produci un elenco di sintomi minori che nessuno legge come problema di sistema; se accorpi troppo costruisci un rilievo enorme e confuso. La soluzione sta nel capire se le osservazioni appartengono davvero allo stesso tema di controllo. Non fare matematica del difetto: racconta bene il sistema.",
+  "punti": [
+   { "h": "Stessa fragilità, una risultanza", "d": "Se più fatti diversi mostrano la stessa fragilità di fondo, nello stesso ambito operativo, valutali come un'unica risultanza sostenuta da evidenze multiple. Un varco anomalo, un contenitore senza stato e un pallet esterno vicino parlano della tenuta della separazione." },
+   { "h": "Meccanismi diversi, risultanze distinte", "d": "Una prova di rintracciabilità che non collega semilavorato e materia prima, e un intervento manutentivo con utensili appoggiati male, sono entrambi seri ma appartengono a meccanismi diversi. Accorparli toglierebbe chiarezza a entrambi." },
+   { "h": "La proporzione", "d": "Non tutti i fatti meritano una risultanza autonoma: alcuni restano note di lavoro o osservazioni verbali. La soglia si decide per rilevanza rispetto ai criteri e consistenza dell'evidenza, non per simpatia." },
+   { "h": "La ripetizione dà peso", "d": "Se lo stesso schema compare in sopralluogo, interviste e registrazioni, non hai un fotogramma casuale ma un modello operativo consolidato, e la risultanza guadagna profondità. Le evidenze favorevoli aiutano a calibrare il giudizio." }
+  ]
+ },
+ {
+  "id": "22000_m11_s026",
+  "layout": "cards",
+  "kicker": "La chiusura sul campo",
+  "titolo": "Dire le risultanze senza creare sorprese",
+  "intro": "In riunione finale il compito non è stupire con effetti teatrali, ma chiudere la giornata in modo ordinato, trasparente e professionale. Le persone devono riconoscere il filo del lavoro, capire da quali evidenze nascono le risultanze e distinguere ciò che hai osservato da ciò che resta fuori dal campione. Una buona chiusura non addolcisce i fatti né li trasforma in una sentenza opaca.",
+  "cards": [
+   { "h": "La preparazione", "d": "Comincia prima di entrare in sala: note, confronto con i colleghi, verifica di coerenza. Ogni risultanza raccontabile in poche frasi — cosa hai osservato, in quale contesto, rispetto a quale criterio, perché è rilevante." },
+   { "h": "Niente sorprese vere", "d": "Il tema deve essere già stato segnalato o discusso durante la giornata, salvo casi eccezionali dell'ultimo momento. Non è buonismo, è correttezza metodologica: la chiusura consolida, non tende trappole." },
+   { "h": "Parti dal metodo", "d": "Ricorda in sintesi il giro di stabilimento, il flusso con campionamento dichiarato, le interviste mirate e la prova di rintracciabilità. Poi entra nei singoli temi, dal più al meno significativo, senza mescolare fatti eterogenei." },
+   { "h": "Il tono e le categorie", "d": "Resta fermo e misurato: ascolti chiarimenti fattuali nuovi, non arretri dai fatti davanti a interpretazioni difensive. E distingui risultanza, osservazione di miglioramento e nota positiva, altrimenti il messaggio si confonde." }
+  ]
+ },
+ {
+  "id": "22000_m11_s027",
+  "layout": "punti",
+  "kicker": "Dal tavolo al rapporto",
+  "titolo": "Scrivere perché il lettore capisca il sito",
+  "intro": "Dopo la chiusura verbale resta il lavoro che dà memoria stabile alla visita: il rapporto. Il tuo lettore non ha camminato con te, non ha visto i varchi né seguito il lotto scelto. Deve capire percorso, campionamento e risultanze senza immaginare troppo. Un buon rapporto non è solo corretto: è leggibile.",
+  "punti": [
+   { "h": "Chiarisci perimetro e metodo", "d": "Quale parte del sito hai visto, quale flusso hai seguito, quale campionamento hai dichiarato, quali funzioni hai intervistato, quale prova hai condotto. Serve a dare contesto alle conclusioni, non a riempire pagine." },
+   { "h": "Una sintesi fedele", "d": "Cita le buone pratiche rilevanti e descrivi le debolezze con precisione. Evita due estremi: il rapporto asettico, che sembra scritto da chi non ha visto nulla di vivo, e quello narrativo troppo ampio, che racconta la giornata minuto per minuto e perde il lettore." },
+   { "h": "Risultanze nitide e separate", "d": "Ogni risultanza leggibile anche da sola: fatti osservati, criterio usato, significato operativo. Evidenze multiple sullo stesso tema richiamate in modo ordinato; temi diversi mantenuti separati, così chi legge capisce quante questioni reali sono emerse." },
+   { "h": "Proporzione e tono", "d": "Equilibrio tra descrizione e conclusione, perché il lettore passi dai fatti al giudizio senza salti. Linguaggio professionale, preciso e diretto, che non umilia e non fa morale, ancorato ai fatti anche quando descrive una debolezza importante." }
+  ]
+ },
+ {
+  "id": "22000_m11_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 11",
+  "modNum": "11",
+  "titolo": "Sette fili tenuti insieme",
+  "punti": [
+   { "h": "Il giro di stabilimento", "d": "Sei entrato non come visitatore, ma come professionista che legge processi, percorsi, stati e comportamenti: la separazione tra pulito e sporco, l'igiene come possibilità di trasferimento al prodotto, il sistema che appare in ciò che le persone fanno quando il lavoro scorre." },
+   { "h": "Il flusso del prodotto", "d": "Un campionamento dichiarato e difendibile, dalla ricezione alla spedizione, presidiando i nodi in cui il lotto cambia stato, mano, supporto o decisione. Vedere bene vale più di vedere tanto." },
+   { "h": "Le interviste", "d": "Con gli operatori hai fatto parlare il gesto quotidiano, con qualità hai letto stati, decisioni e registrazioni, con manutenzione hai visto come il processo viene protetto quando la tecnica disturba la routine." },
+   { "h": "La rintracciabilità in diretta", "d": "Non una dimostrazione mnemonica, ma la capacità di ricostruire storia, movimento e ubicazione di un oggetto: scegliere oggetto, verso e perimetro, chiedere di mostrare il filo, distinguere un'esitazione da una rottura." },
+   { "h": "Le risultanze e il rapporto", "d": "Fatti precisi, criterio chiaro, significato misurato; distinguere processo e prodotto; dare il giusto peso senza frammentare né confondere; scrivere perché il lettore capisca il sito anche senza esserci stato." },
+   { "h": "Né fretta né paura di concludere", "d": "Prima osservi, colleghi, verifichi e fai domande buone; poi scrivi ciò che i fatti sostengono, senza teatro e senza timidezza. In ambito alimentare questa disciplina protegge il prodotto e rende affidabile il tuo ruolo." }
+  ],
+  "prossimo": {
+   "modulo": "12",
+   "titolo": "Casi completi, simulazione d'esame e certificazione",
+   "testo": "Mettere insieme tutto: scenari completi in cui stabilimento, flusso del prodotto, interviste, rintracciabilità, campionamento, risultanze e rapporto si intrecciano come nella pratica reale."
+  }
+ }
+]
