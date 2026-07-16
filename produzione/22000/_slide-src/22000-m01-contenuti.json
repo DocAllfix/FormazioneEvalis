@@ -1,0 +1,300 @@
+[
+ {
+  "id": "22000_m01_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 22000 — Sicurezza alimentare",
+  "kicker": "Modulo 1",
+  "eyebrow": "La mappa prima dei requisiti",
+  "titolo": "La sicurezza si gioca lungo tutta la catena",
+  "testo": "Non parti da definizioni isolate ma da una mappa professionale: dove si colloca la ISO 22000, perché esiste, e che cosa cambia quando leggi un'organizzazione lungo l'intera filiera alimentare. Tre scene istruttive: il sugo perfetto con l'etichetta allergeni incompleta, la ricetta corretta ma il trasporto che rompe la catena del freddo, il deposito impeccabile con il fornitore di spezie che non ha governato una contaminazione. Il consumatore incontra un rischio reale anche se un singolo anello ha lavorato bene: parleremo di collegamenti, interfacce e passaggi decisivi, non di attività isolate.",
+  "agenda": [
+   "Obiettivi e metodo di ascolto del modulo",
+   "La filiera alimentare e la comunicazione tra gli anelli",
+   "Panorama europeo, autocontrollo, schemi privati e GFSI",
+   "Storia della norma e logica sistema di gestione + HACCP",
+   "Il percorso verso Auditor e Lead Auditor 22000",
+   "Che cosa riusi dalla ISO 19011"
+  ]
+ },
+ {
+  "id": "22000_m01_s002",
+  "layout": "punti",
+  "kicker": "Obiettivi",
+  "titolo": "Che cosa porterai via da questo modulo",
+  "intro": "Alla fine dovrai saper spiegare che cosa si intende per sicurezza alimentare e perché la filiera è il suo vero spazio di governo; riconoscere i grandi blocchi del panorama — quadro legislativo, autocontrollo, schemi privati collegati a GFSI, contributo della ISO 22000 — e iniziare a capire il percorso verso il ruolo di lead auditor.",
+  "punti": [
+   { "h": "Terreno, non ancora tecniche", "d": "Qui non impari a fare verifiche complete: costruisci il terreno su cui quel lavoro sarà possibile. Chi impara troppo presto le sole tecniche le usa senza capire il contesto — come leggere un termometro senza capire la cottura, la logistica refrigerata o un cambio ricetta con allergeni." },
+   { "h": "Due profili a confronto", "d": "Il primo memorizza definizioni e sigle senza collegarle; il secondo vede la relazione tra politica, pericoli, processi, fornitori e consumatore finale. Davanti allo stesso caso, il primo nota una mancanza documentale; il secondo capisce se quella mancanza apre un varco reale al rischio." },
+   { "h": "Il linguaggio giusto", "d": "Sicurezza non è qualità percepita; pericolo non è automaticamente rischio; certificazione non coincide con legge; schema privato non sostituisce un obbligo cogente; sistema di gestione non significa soltanto documenti. Quando il linguaggio è impreciso, il ragionamento si deforma." },
+   { "h": "Fondazione, non introduzione debole", "d": "Il produttore di basi per pizza che vuole entrare in una nuova catena: con nozioni sparse guardi qualche documento; con questa base ti chiedi quale punto della filiera occupa, quali obblighi cogenti si applicano, cosa chiedono i clienti, come prende forma l'autocontrollo e quale ruolo può avere la ISO 22000." }
+  ]
+ },
+ {
+  "id": "22000_m01_s003",
+  "layout": "punti",
+  "kicker": "Metodo",
+  "titolo": "Leggere il sistema, non solo i singoli requisiti",
+  "intro": "Per ogni concetto, tre domande: a quale punto della filiera si riferisce; quale rischio, pericolo o esigenza di controllo sta governando; quale evidenza pratica potrebbe mostrarti che è gestito bene o male. Con queste tre domande la teoria diventa mestiere.",
+  "punti": [
+   { "h": "Sistema e operazione, due piani", "d": "Il sistema: politica, obiettivi, ruoli, processi, comunicazione, risorse, verifica, miglioramento. L'operazione: ricevimento merci, pulizie, temperature, segregazione allergeni, manutenzione, rintracciabilità, emergenze. La ISO 22000 li fa dialogare: se li confondi vedi tutto come carta o tutto come reparto." },
+   { "h": "Il punto professionale", "d": "Nel produttore di zuppe fresche non basta guardare temperature o procedure: devi capire se il sistema sostiene l'operazione e se l'operazione restituisce dati al sistema. Se gli acquisti cambiano fornitore senza informare chi gestisce gli allergeni, il problema nasce dove i due livelli smettono di parlarsi." },
+   { "h": "Due lenti, più le relazioni", "d": "Chi arriva dal tecnico vede solo pericoli di prodotto; chi arriva dal gestionale solo processi e documenti: entrambe le prospettive da sole sono parziali. E ascolta in termini di relazioni — organizzazione e contesto, produttore e fornitore, legge, cliente e schema: molte criticità stanno tra due funzioni che non si parlano abbastanza." },
+   { "h": "Il test di metodo", "d": "Registrazioni di temperatura perfette, ma sensore non verificato da tempo e operatori che non sanno reagire a una deviazione: l'evidenza documentale non basta a dimostrare il controllo — mancano competenza applicata, affidabilità dello strumento e capacità di reazione. È la lettura integrata che il modulo costruisce." }
+  ]
+ },
+ {
+  "id": "22000_m01_s004",
+  "layout": "definizione",
+  "kicker": "Sicurezza alimentare",
+  "eyebrow": "La definizione sostanziale",
+  "titolo": "Che cosa significa davvero",
+  "definizione": "Un alimento è sicuro quando, usato come previsto, non provoca effetti nocivi per la salute del consumatore.",
+  "punti": [
+   "Tre elementi decisivi: l'attenzione al consumatore (non al solo stabilimento), l'uso previsto (come verrà davvero conservato, preparato e consumato), il collegamento con i pericoli che possono arrivare al prodotto lungo percorsi diversi.",
+   "Sicurezza ≠ qualità percepita: il biscotto eccellente può essere non sicuro per un allergene non dichiarato; il piatto poco invitante può restare sanitariamente sicuro. E non coincide con disponibilità o accesso economico al cibo.",
+   "La crema dessert con l'errore nel cambio film: etichetta che non segnala la nocciola. Per i più il prodotto è normale; per la persona allergica il danno è immediato — l'estetica commerciale non protegge nessuno se l'informazione critica manca.",
+   "I pericoli possono comparire in qualsiasi fase: materia prima, attrezzatura, servizio esterno, materiale a contatto, trasporto, comunicazione interna, modifica non governata. La prevenzione è disciplina invisibile: scelte corrette ripetute nel tempo, da soggetti diversi — come mostra la catena di insalate pronte tradita dal freddo non mantenuto in distribuzione."
+  ]
+ },
+ {
+  "id": "22000_m01_s005",
+  "layout": "punti",
+  "kicker": "Filiera · 1",
+  "titolo": "Una catena di passaggi e responsabilità",
+  "intro": "La filiera è una sequenza di passaggi collegati: produzione primaria, trasformazione, confezionamento, immagazzinaggio, trasporto, distribuzione, vendita, ristorazione — e attività meno visibili ma decisive come pulizia, sanificazione, imballaggi, manutenzione, laboratori esterni. I pericoli non rispettano i confini organizzativi: seguono le interfacce.",
+  "punti": [
+   { "h": "Influire senza toccare l'alimento", "d": "Il produttore di imballaggi può introdurre problemi con materiali o specifiche mal gestiti; il trasportatore può compromettere un prodotto perfetto se non governa tempi e temperature; l'impresa di sanificazione può indebolire il sistema con prodotti non idonei o interventi non comunicati. Non attori periferici: parti del sistema." },
+   { "h": "Lo yogurt alla frutta", "d": "Il vasetto a scaffale dipende da latte, frutta, fermenti, igiene dell'ambiente, chiusura, freddo, etichettatura, pulizia delle linee, logistica e rotazione nel punto vendita. Se un solo passaggio cede, il consumatore eredita la fragilità: la bontà locale di un anello non garantisce l'affidabilità globale." },
+   { "h": "Interfacce, non colpe", "d": "Dove si scambiano informazioni? Chi comunica un cambio ricetta, chi verifica che il fornitore abbia capito le specifiche, chi segnala l'anomalia di temperatura, chi decide su un reclamo rivelatore? Molti problemi non nascono da assenza di controlli, ma da passaggi mal connessi tra un soggetto e l'altro." },
+   { "h": "Anche il flusso dei dati", "d": "Scheda tecnica aggiornata in ritardo, modifica di ricetta non comunicata, certificato di analisi letto superficialmente, istruzione di trasporto non recepita: una catena ben progettata ma male informata resta vulnerabile. E il risultato dubbio del laboratorio che arriva tardi mostra che la responsabilità è condivisa — non indistinta: ognuno ha il suo ruolo, il risultato dipende dall'insieme." }
+  ]
+ },
+ {
+  "id": "22000_m01_s006",
+  "layout": "punti",
+  "kicker": "Filiera · 2",
+  "titolo": "La filiera regge solo se comunica bene",
+  "intro": "Una filiera non è una successione di attività: è una rete di decisioni che devono parlarsi. Senza scambio efficace di informazioni i controlli si spezzano nei punti di passaggio — non per mancanza di competenza tecnica, ma perché un dato corretto non arriva alla persona giusta, nel momento giusto, con la chiarezza giusta.",
+  "punti": [
+   { "h": "Il crollo del collegamento", "d": "Il produttore di piatti pronti cambia fornitore di salsa: la nuova composizione contiene un allergene, ma la comunicazione non raggiunge chi aggiorna etichette e schede. La linea lavora bene, temperature e pesi in ordine — eppure un allergene presente non viene dichiarato. Non crolla l'operazione: crolla la connessione tra acquisti, sviluppo, produzione e informazione al cliente." },
+   { "h": "Ogni interfaccia ha due contenuti", "d": "Il trasportatore deve sapere della gestione termica; il fornitore deve capire le caratteristiche essenziali; il laboratorio deve restituire risultati in tempi utili; il cliente professionale deve ricevere informazioni coerenti. Contenuto tecnico + contenuto comunicativo: se ne manca uno, il controllo si indebolisce. La comunicazione non è un tema morbido: è condizione di efficacia." },
+   { "h": "I maturi comunicano il cambiamento", "d": "I sistemi maturi comunicano bene soprattutto quando cambia qualcosa: materia prima, specifica, attrezzatura, turno, fornitore, non conformità, reclamo, emergenza. Le organizzazioni deboli trattano il cambiamento come dettaglio locale — così una variazione piccola diventa un problema grande." },
+   { "h": "Il magazzino e la mensa", "d": "Prodotti spostati per esigenze di spazio senza condividerlo col turno successivo: referenze delicate vicino a un'area meno stabile, nessuna regola infranta in modo vistoso, protezione indebolita da un difetto di allineamento. E il menu senza glutine aggiornato che non raggiunge chi prepara i vassoi: il sistema fallisce dove doveva proteggere la persona più esposta. Un modulo compilato non dimostra che l'informazione sia stata compresa, usata, tradotta in comportamento." }
+  ]
+ },
+ {
+  "id": "22000_m01_s007",
+  "layout": "punti",
+  "kicker": "Filiera · 3",
+  "titolo": "Quando un punto debole diventa un rischio per tutti",
+  "intro": "Il caso: panini confezionati refrigerati per distributori automatici — fornitori diversi, confezionamento rapido, shelf life breve, logistica puntuale. Il sito appare ben organizzato: celle funzionanti, personale formato, linea pulita, documenti aggiornati. Ma il sistema nasconde un punto debole a monte.",
+  "punti": [
+   { "h": "La debolezza informativa", "d": "Il fornitore di salsa modifica la ricetta per problemi di approvvigionamento: tracce di un allergene prima assente. La variazione è registrata internamente, ma la comunicazione al cliente è incompleta e il cambio non viene intercettato: l'etichetta resta quella precedente. Il prodotto esce corretto sotto molti aspetti, ma informativamente è già non sicuro." },
+   { "h": "L'effetto a catena", "d": "Il distributore conserva bene, il punto vendita espone correttamente, il consumatore non ha segnali. Puntare il dito sull'ultimo soggetto visibile sarebbe troppo semplice: l'origine sta nell'interfaccia tra fornitore, acquisti, sviluppo, etichettatura e rilascio — un difetto sistemico distribuito. Nessuno può correggere ciò che non sa." },
+   { "h": "Tre insegnamenti", "d": "La sicurezza può cedere anche in organizzazioni apparentemente ordinate; la conformità locale di un singolo passaggio non garantisce il risultato finale; il controllo efficace nasce dal governo di aggiornamenti, interfacce e dipendenze reciproche — chiediti sempre dove sono i passaggi sensibili quando cambiano ingredienti o fornitori." },
+   { "h": "Correzione o apprendimento", "d": "L'autocontrollo chiuso nei confini aziendali non basta: servono verifiche su ciò che arriva dall'esterno, aspettative chiare, canali di ritorno. Se il cambio ricetta si scopre solo perché un addetto curioso confronta due schede tecniche, il sistema fragile corregge l'etichetta e riparte; quello maturo chiede perché l'informazione non è stata vista prima, chi doveva riceverla, perché il meccanismo non ha funzionato. Cerca la struttura che rende l'errore possibile, non solo l'errore evidente." }
+  ]
+ },
+ {
+  "id": "22000_m01_s008",
+  "layout": "tabella",
+  "kicker": "Panorama europeo",
+  "titolo": "Le regole di sfondo da conoscere",
+  "intro": "Il quadro non è composto da una sola norma: i regolamenti europei costituiscono il perimetro cogente — il pavimento minimo sotto cui non si può scendere — mentre sistemi di gestione, standard volontari, richieste del cliente e schemi di certificazione si muovono sopra. La certificazione non sostituisce la legge: aiuta a governarla in modo sistematico. E quando parli di conformità chiediti sempre: conformità a che cosa — obbligo legale, procedura interna, requisito del cliente o schema?",
+  "cols": ["Riferimento", "Che cosa copre"],
+  "righe": [
+   ["Regolamento 178/2002", "Il grande riferimento generale: principi della legislazione alimentare e responsabilità degli operatori"],
+   ["Regolamento 852/2004", "L'igiene dei prodotti alimentari, in modo molto ampio"],
+   ["Regolamento 853/2004", "Prescrizioni specifiche per gli alimenti di origine animale"],
+   ["Regolamento 2073/2005", "I criteri microbiologici applicabili ai prodotti"]
+  ]
+ },
+ {
+  "id": "22000_m01_s009",
+  "layout": "punti",
+  "kicker": "Autocontrollo",
+  "titolo": "Il cuore operativo della prevenzione",
+  "intro": "Autocontrollo: la capacità dell'organizzazione di governare i propri processi per prevenire, rilevare e gestire condizioni che potrebbero compromettere la sicurezza del prodotto. Non un gesto occasionale, non una raccolta di carte: attività, decisioni, responsabilità e verifiche che vivono nel lavoro quotidiano.",
+  "punti": [
+   { "h": "Quando funziona, quando illude", "d": "Funziona: le persone sanno quali condizioni mantenere, come reagire a un'anomalia, quando fermare un rilascio, chi avvisare, come segregare un prodotto dubbio. Funziona male: falsa tranquillità — registrazioni che non guidano decisioni, procedure che non governano comportamenti, anomalie corrette localmente senza capire la causa." },
+   { "h": "Il primo filtro reale", "d": "Nell'azienda di insalate pronte, un ricevimento maturo verifica elementi pertinenti, comunica le criticità, aggiorna le valutazioni quando cambiano i fornitori, collega i reclami ai punti del processo. Se diventa routine frettolosa dei colli, il sistema perde il suo primo filtro." },
+   { "h": "Cultura e cornice gestionale", "d": "Autocontrollo significa non aspettare che il problema venga scoperto dall'esterno: un pericolo intercettato prima del rilascio è un costo gestibile, uno scoperto dal consumatore è un danno sanitario e reputazionale. La ISO 22000 non lo sostituisce: gli dà una cornice che collega controllo operativo, leadership, comunicazione, risorse e miglioramento — e regge anche quando l'organizzazione cresce." },
+   { "h": "Le decisioni vive e le segnalazioni", "d": "Credibile solo se si vede nelle decisioni: blocco tempestivo del lotto dubbio, scheda tecnica aggiornata rapidamente, materia prima rifiutata anche sotto pressione sui tempi. E guarda come vengono trattate le segnalazioni interne: dove chi avvisa riceve ascolto e non penalizzazioni, il sistema è più vivo; dove prevale il timore di rallentare la produzione, i piccoli segnali restano nascosti finché diventano eventi seri." }
+  ]
+ },
+ {
+  "id": "22000_m01_s010",
+  "layout": "punti",
+  "kicker": "Schemi privati e GFSI",
+  "titolo": "Il posto della ISO 22000 nel mercato",
+  "intro": "Gli schemi privati nascono da esigenze di mercato, fiducia tra clienti e fornitori, comparabilità tra organizzazioni. GFSI è il punto di riferimento per il riconoscimento e il confronto tra schemi di sicurezza alimentare diffusi a livello internazionale — per chi lavora con la grande distribuzione conta moltissimo.",
+  "punti": [
+   { "h": "Aggiungere, non sostituire", "d": "Uno schema privato non sostituisce la legge: aggiunge aspettative di mercato e modalità di valutazione più strutturate. Il cliente che richiede uno schema riconosciuto non cancella gli obblighi cogenti — vuole, oltre alla base legale, un quadro verificabile di governo del sistema." },
+   { "h": "Un riferimento di sistema", "d": "La ISO 22000 è il riferimento internazionale di sistema di gestione per la sicurezza alimentare, applicabile a organizzazioni molto diverse lungo la filiera. La sua forza: unire visione di sistema, approccio per processi, comunicazione e controllo dei pericoli — non un elenco di pratiche igieniche, non una struttura documentale." },
+   { "h": "Riferimento e fondazione", "d": "Incontrerai schemi che usano la ISO 22000 come base, integrandola con elementi settoriali: la norma è insieme riferimento diretto e fondazione per costruzioni più ampie. Studiarla bene significa capire il linguaggio strutturale di una parte importante del settore alimentare certificato." },
+   { "h": "L'esempio del packaging", "d": "L'azienda di imballaggi per alimenti che vuole crescere su mercati esigenti: requisiti cogenti rispettati, procedure discrete, ma il cliente internazionale chiede un impianto gestionale riconoscibile. La ISO 22000 porta ordine stabile tra processi, comunicazione con i clienti, controllo dei fornitori e gestione delle modifiche: non elimina il lavoro tecnico, lo rende governabile e dimostrabile." }
+  ]
+ },
+ {
+  "id": "22000_m01_s011",
+  "layout": "punti",
+  "kicker": "Il ruolo della norma",
+  "titolo": "Una grammatica condivisa per la filiera",
+  "intro": "La ISO 22000 non crea nuovi obblighi di legge né sostituisce le responsabilità operative: offre una struttura di gestione coerente per governare in modo stabile ciò che incide sulla sicurezza alimentare — collega elementi che nelle aziende vivono separati.",
+  "punti": [
+   { "h": "Tre livelli distinti", "d": "Primo: il rispetto dei requisiti cogenti applicabili al contesto reale. Secondo: l'autocontrollo, il presidio concreto di processi, anomalie, dati e decisioni. Terzo: la capacità di dare continuità, direzione e coerenza nel tempo — è qui che la norma diventa preziosa, come impianto che tiene insieme politica, processi, comunicazione, risorse, verifica e miglioramento." },
+   { "h": "Ampiezza del campo", "d": "Organizzazioni direttamente o indirettamente coinvolte: non solo chi trasforma alimenti, ma chi immagazzina, trasporta, confeziona, pulisce, fornisce attrezzature o materiali a contatto. Quando la catena si allarga, serve un linguaggio comune per soggetti diversi che contribuiscono allo stesso risultato." },
+   { "h": "Stabilizzare i collegamenti", "d": "Il produttore di ingredienti disidratati e chi li usa per pasti pronti refrigerati: entrambi conformi alla propria base, ma criteri interni diversi e comunicazioni frammentate su specifiche, conservazione e allergeni. Il rischio nasce dalla mancanza di una cornice comune che obblighi a governare interfacce, responsabilità e aggiornamenti." },
+   { "h": "Logica sistemica e integrazione", "d": "Guarda a organizzazione, contesto, parti interessate, posizione in filiera, processi acquistati all'esterno, gestione delle modifiche: il controllo dei pericoli non dipende dalla buona volontà dei più esperti — il sistema regge anche quando cambiano turni, fornitori, mercati. E come sistema di gestione dialoga meglio con le altre norme gestionali: convivenza ordinata, non corpo estraneo rispetto al management." }
+  ]
+ },
+ {
+  "id": "22000_m01_s012",
+  "layout": "flusso",
+  "kicker": "Orientarsi",
+  "titolo": "Le domande nell'ordine giusto",
+  "intro": "Distinguere ciò che un'organizzazione deve fare da ciò che sceglie di fare per certi mercati: la legge definisce il perimetro cogente, il cliente aggiunge aspettative contrattuali, gli schemi GFSI introducono valutazioni riconosciute, la ISO 22000 offre il quadro di gestione. GFSI e ISO 22000 non sono concorrenti in senso semplice: la domanda corretta è di che cosa ha bisogno questa organizzazione, nel suo punto della filiera, per governare la sicurezza e rispondere al mercato.",
+  "passi": [
+   { "h": "Prima gli obblighi, poi la pratica", "d": "Quali obblighi cogenti valgono per l'organizzazione? Poi osserva come l'autocontrollo prende forma nella pratica quotidiana — l'azienda di salse che vende a marchi propri, ristorazione ed estero non può vivere ogni richiesta come caso isolato: serve una struttura interna stabile." },
+   { "h": "Poi il mercato", "d": "Quali richieste specifiche arrivano da clienti o schemi? Il produttore di spezie con ingredienti da paesi diversi ha rischi su approvvigionamento, contaminazioni crociate e catene commerciali lunghe: senza regia interna, la sola pressione del cliente produce risposte frammentarie." },
+   { "h": "Infine il sistema che collega", "d": "Il sistema adottato — compresa la ISO 22000 quando presente — riesce davvero a collegare tutte le dimensioni? Quest'ordine mentale protegge da due errori opposti: ridurre tutto a burocrazia o a tecnica di reparto. E per ogni evidenza risali all'origine della pretesa: una procedura può derivare da legge, scelta interna, cliente o schema — saperlo distinguere è competenza vera." }
+  ]
+ },
+ {
+  "id": "22000_m01_s013",
+  "layout": "timeline",
+  "kicker": "Storia della norma",
+  "titolo": "Dal 2005 a oggi: una storia essenziale",
+  "intro": "La forma attuale non è casuale: la storia racconta l'avvicinamento tra il controllo dei pericoli secondo HACCP e il governo dell'organizzazione come sistema. Non una successione di etichette cronologiche, ma una risposta organizzata a bisogni reali che cambiano — chi pensa a un aggravio documentale perde il punto.",
+  "tappe": [
+   { "t": "2005", "h": "Nasce la ISO 22000", "d": "Primo riferimento internazionale per i sistemi di gestione della sicurezza alimentare, pensato per organizzazioni in punti molto diversi della filiera: la vocazione originaria è costruire un linguaggio comune per catene complesse, non guardare solo il sito produttivo." },
+   { "t": "2018", "h": "La seconda edizione", "d": "Sostituisce quella del 2005 e viene rivista nella disposizione dei punti: più leggibile per chi ragiona con l'architettura comune delle norme di sistema — dall'organizzazione e il suo scenario, per direzione, pianificazione, supporto e funzionamento, fino a valutazione delle prestazioni e miglioramento. L'integrazione tra gestione e HACCP diventa esplicita." },
+   { "t": "2024", "h": "L'aggiornamento A1", "d": "Il cambiamento climatico entra nella lettura del contesto e nella pianificazione delle risposte: il contesto non è statico. L'operatore logistico refrigerato in aree con eventi climatici più intensi deve considerare continuità operativa, vulnerabilità dei trasporti e comunicazioni — la stabilità del sistema dipende anche dal governo di mutamenti più ampi del singolo reparto." }
+  ]
+ },
+ {
+  "id": "22000_m01_s014",
+  "layout": "punti",
+  "kicker": "La logica della norma",
+  "titolo": "Sistema di gestione e HACCP insieme",
+  "intro": "La forza vera: non ti costringe a scegliere tra visione gestionale e controllo dei pericoli. Da un lato contesto, leadership, pianificazione, risorse, comunicazione, verifica e miglioramento; dall'altro la logica HACCP che presidia i pericoli nei processi operativi. Un'unica architettura con due piani che si alimentano a vicenda.",
+  "punti": [
+   { "h": "Tre idee di fondo", "d": "L'approccio per processi: osservare attività e interazioni, non funzioni isolate. Il ciclo Plan Do Check Act: pianificazione, attuazione, controllo, miglioramento. Il risk based thinking su due livelli: rischi e opportunità organizzativi per il sistema nel suo insieme; a livello operativo, la logica del rischio incorporata nell'analisi dei pericoli secondo HACCP." },
+   { "h": "Il doppio livello in pratica", "d": "L'azienda di dessert freschi: sul piano operativo pericoli biologici, chimici e fisici, misure di controllo, PRP, distinzione OPRP/CCP quando pertinente. Sul piano organizzativo: dipendenza da un singolo fornitore, perdita di competenze chiave, modifiche impiantistiche non governate, comunicazioni inefficaci. Se consideri un solo livello, il sistema resta zoppo." },
+   { "h": "PDCA che non è carta", "d": "Pianificare: obiettivi, contesto, responsabilità, risorse, rischi e opportunità. Fare: attuare processi e misure. Verificare: monitorare, misurare, analizzare dati. Agire: migliorare, correggere, aggiornare. Nel catering ospedaliero, tempi, temperature e allergeni sono vitali — ma senza ruoli chiari, comunicazione cucina-reparti e formazione sulle nuove attrezzature, la robustezza crolla in fretta." },
+   { "h": "Collegare prova e regia", "d": "Una temperatura registrata è utile ma non basta senza tarature, competenze, riesami delle anomalie e gestione delle modifiche; una politica ben formulata non vale se non diventa processi controllati sul campo. La norma allena a collegare prova operativa e regia gestionale — il collegamento che un professionista della verifica deve riconoscere con precisione." }
+  ]
+ },
+ {
+  "id": "22000_m01_s015",
+  "layout": "cards",
+  "kicker": "Gli elementi dell'SGSA",
+  "titolo": "Quattro componenti, un solo meccanismo",
+  "intro": "L'introduzione della norma richiama quattro componenti chiave generalmente riconosciute. Il punto non è memorizzare l'elenco: il valore nasce dall'integrazione — se uno è forte ma gli altri deboli, la protezione complessiva si abbassa (nei sughi refrigerati con cambi di formato, se un solo elemento cede il sistema perde affidabilità).",
+  "cards": [
+   { "h": "Comunicazione interattiva", "d": "Fa circolare lungo la filiera le informazioni essenziali su specifiche, pericoli, modifiche, anomalie e condizioni d'uso: il cambio ricetta con allergeni deve raggiungere acquisti, produzione, etichettatura, magazzino e clienti. Se arrivano tardi o deformate, i controlli tecnici non bastano." },
+   { "h": "Gestione del sistema", "d": "Il telaio che tiene insieme politica, obiettivi, ruoli, responsabilità, risorse e miglioramento: valutazione dei cambiamenti e riesame delle prestazioni. Senza base gestionale, i controlli tecnici si indeboliscono nel tempo." },
+   { "h": "PRP", "d": "La base ambientale e organizzativa che rende possibile un'attività igienicamente controllata: pulizia, manutenzione, organizzazione dei flussi, condizioni del personale, idoneità dell'ambiente." },
+   { "h": "Principi HACCP", "d": "Concentrano l'attenzione sui pericoli significativi e sulle misure di controllo. La norma non tratta HACCP come un'isola: lo colloca in un sistema che lo prepara, lo sostiene e lo aggiorna — molte debolezze nascono dal contesto che non sostiene le decisioni, non dall'analisi teorica." }
+  ]
+ },
+ {
+  "id": "22000_m01_s016",
+  "layout": "punti",
+  "kicker": "Percorso professionale · 1",
+  "titolo": "Verso Auditor e Lead Auditor 22000",
+  "intro": "Studiare la ISO 22000 è una cosa; costruire competenza come auditor è più ampio: trasformare conoscenze in capacità di leggere un'organizzazione, raccogliere evidenze pertinenti, formulare giudizi fondati e comunicare conclusioni utili. È la differenza tra sapere e saper usare bene ciò che si sa.",
+  "punti": [
+   { "h": "Tre strati di competenza", "d": "Il contesto alimentare: sicurezza, filiera, autocontrollo, legge e schemi di mercato compresi quelli che dialogano con GFSI. Il sistema di gestione: processi, responsabilità, comunicazioni, pianificazione, verifica. Il mestiere della verifica: ascolto, osservazione, interviste, valutazione delle evidenze, chiarezza nel rapporto. Crescono insieme, o la competenza non prende forma." },
+   { "h": "Il titolo non fa la competenza", "d": "Due persone, stesso corso: una memorizza termini e fatica a collegarli; l'altra si allena a vedere nessi tra pericoli, processi, ruoli, fornitori, reclami e risultati. Dopo qualche esperienza sul campo la distanza è enorme: uno resta alle formule, l'altro sviluppa giudizio professionale." },
+   { "h": "Auditor e lead: un salto di responsabilità", "d": "L'auditor contribuisce in modo affidabile a raccolta e valutazione delle evidenze; il lead auditor aggiunge guida, coordinamento e tenuta complessiva del processo — persone, tempi, obiettivi, coerenza dei criteri, comunicazione finale. Non un livello di prestigio: cambia il baricentro — non osservi solo bene, fai osservare bene l'intero gruppo." },
+   { "h": "Perimetro e adattabilità", "d": "Accettare un incarico fuori portata tecnica compromette il giudizio: la crescita richiede onestà professionale e consapevolezza dei limiti — chiediti che cosa ti manca, non solo che cosa sai. E il telaio mentale deve adattarsi: l'impresa artigianale, il centro logistico, il produttore di ingredienti e la ristorazione collettiva chiedono competenza in modi diversi." }
+  ]
+ },
+ {
+  "id": "22000_m01_s017",
+  "layout": "numeri",
+  "kicker": "Percorso professionale · 2",
+  "titolo": "Le competenze di un profilo credibile",
+  "intro": "Non basta conoscere il testo della norma o ripetere la logica HACCP: un professionista affidabile integra competenze tecniche, gestionali e relazionali, e mantiene lucidità quando le evidenze sono incomplete, contraddittorie o distribuite tra funzioni diverse.",
+  "numeri": [
+   { "n": "1", "h": "Contenuto", "d": "Capire che cosa protegge la sicurezza in punti diversi della catena: imballaggi, trasporto refrigerato, trasformazione, ristorazione collettiva hanno processi diversi ma tutti incidono sul risultato — leggi ruolo reale, interfacce e processi acquistati dall'esterno." },
+   { "n": "2", "h": "Osservazione", "d": "Non se il documento esiste, ma se viene usato, compreso, aggiornato, tradotto in comportamento: la procedura allergeni scritta bene con il cambio utensili approssimativo in reparto non si giudica dalla carta — e il personale bravo senza regia stabile resta vulnerabile." },
+   { "n": "3", "h": "Comunicazione", "d": "Domande chiare, ascolto senza suggerire risposte, conclusioni che aiutino a capire il problema reale. Nello stabilimento di snack, solo collegando osservazione e interviste emerge che i cambi di specifica arrivano alle funzioni con ritardi diversi: non una dimenticanza, un punto debole di coordinamento." },
+   { "n": "4", "h": "Giudizio", "d": "Distinguere essenziale da secondario, evidenza da supposizione, ciò che richiede approfondimento dal rumore. Cresce col tempo: sostenere le conclusioni con fatti pertinenti e verificabili, senza irrigidirsi né cedere alla pressione del contesto." },
+   { "n": "5", "h": "Apprendimento continuo", "d": "Processi, mercati, catene di fornitura e aspettative cambiano: restare competenti significa continuare a studiare, confrontarsi con casi diversi e riconoscere i propri margini di crescita." }
+  ]
+ },
+ {
+  "id": "22000_m01_s018",
+  "layout": "punti",
+  "kicker": "Percorso professionale · 3",
+  "titolo": "Che cosa cambia quando guidi il gruppo",
+  "intro": "Contribuire bene a una verifica è diverso dal guidarla: il lead auditor assume una responsabilità di regia — obiettivi, criteri, tempi, persone, flusso delle evidenze, coerenza del giudizio, qualità della comunicazione finale. Non osservi solo il sistema verificato: fai funzionare il sistema del lavoro di verifica.",
+  "punti": [
+   { "h": "Ricomporre le letture", "d": "Uno osserva il ricevimento, un altro la produzione, un terzo i documenti: il valore nasce dal ricomporre queste letture in una conclusione coerente. Nel produttore di pasti surgelati — magazzino buono, cambi ricetta comunicati male, laboratorio esterno con tempi non compatibili — chi guida capisce se descrivono un tema comune: il governo delle interfacce e dei tempi decisionali." },
+   { "h": "Proteggere il giudizio", "d": "Mantenere la verifica sui criteri dichiarati e impedire che scivoli in opinioni personali, preferenze di stile o approfondimenti scollegati dal rischio reale: proteggere la qualità del giudizio anche dalle derive del proprio team — valorizzare i colleghi e ricondurre le osservazioni a un linguaggio preciso, fondato, proporzionato." },
+   { "h": "Gestire il clima", "d": "La verifica tocca temi sensibili: rilascio lotti, reclami, allergeni, prodotti potenzialmente non sicuri, prestazioni dei fornitori. Se il clima si irrigidisce, il flusso di informazioni si impoverisce: fermezza e rispetto insieme — né ammorbidire il giudizio per piacere, né trasformare la verifica in confronto sterile." },
+   { "h": "Non un'etichetta", "d": "Serve esperienza nell'osservare casi diversi, ascoltare colleghi, confrontare evidenze e gestire situazioni complesse senza perdere il filo logico. Un salto di responsabilità, non un avanzamento formale — con una forte base metodologica che collegherai alla ISO 19011." }
+  ]
+ },
+ {
+  "id": "22000_m01_s019",
+  "layout": "punti",
+  "kicker": "Il valore del corso",
+  "titolo": "Che cosa può fare davvero per il tuo percorso",
+  "intro": "Aspettative alte ma realistiche: il corso dà linguaggio corretto, struttura mentale, metodo di lettura, casi e una base per capire la ISO 22000 nel suo contesto. Non può sostituire esperienza, confronto con casi reali e maturazione del giudizio. Questa chiarezza protegge da due rischi: sopravvalutare il certificato o sottovalutare la preparazione ben fatta.",
+  "punti": [
+   { "h": "Una mappa affidabile", "d": "Capire come si collegano sicurezza alimentare, filiera, autocontrollo, quadro legale, GFSI, ISO 22000 e metodo di verifica. Senza mappa anche una persona brillante legge i casi in modo frammentato; con la mappa vedi le relazioni giuste — pericoli e processi, sistema e operatività, mercato e obblighi." },
+   { "h": "Dall'impressione al giudizio", "d": "Nel sito di basi per gelato, chi non ha struttura si ferma all'ordine degli ambienti e alla documentazione apparente; chi ha allenato il ragionamento chiede come si gestiscono i cambi fornitore, come circolano le specifiche, come si aggiornano gli allergeni, come i risultati di verifica alimentano i riesami." },
+   { "h": "Domande migliori, non risposte automatiche", "d": "Il corso allena a distinguere il centrale dall'accessorio e abitua a un linguaggio preciso — che nella verifica è una forma di responsabilità. La ISO 22000 non è un corpo di frasi da ricordare: è una logica da applicare a organizzazioni diverse." },
+   { "h": "Energia cognitiva risparmiata", "d": "Nei moduli successivi e nei casi pratici non dovrai ricostruire il quadro da zero: ti concentrerai su differenze tra contesti, punti critici, evidenze significative. Il modo giusto di vivere il corso: ascolta per comprendere, collega ogni concetto a un caso, chiediti quale evidenza lo confermerebbe o smentirebbe." }
+  ]
+ },
+ {
+  "id": "22000_m01_s020",
+  "layout": "punti",
+  "kicker": "ISO 19011 · 1",
+  "titolo": "Che cosa riusi nel contesto 22000",
+  "intro": "Nel mondo della ISO 22000 non riparti da zero: riusi una base metodologica fondamentale. La verifica resta un processo sistematico, indipendente e documentato, fondato su criteri dichiarati, evidenze pertinenti e conclusioni sostenibili. Cambiano contesto tecnico, pericoli e organizzazioni — l'ossatura del metodo resta riconoscibile.",
+  "punti": [
+   { "h": "Trasferire, non reinventare", "d": "Preparazione della verifica, definizione del campo, comprensione dei criteri, conduzione delle interviste, valutazione delle informazioni documentate, imparzialità e chiarezza di linguaggio: tutto ha nella ISO 19011 una base robusta. Nel contesto alimentare aggiungi la sensibilità verso filiera, autocontrollo, interfacce esterne, pericoli di prodotto e rapporto sistema-HACCP." },
+   { "h": "Metodo innestato sul contenuto", "d": "Due professionisti con buona tecnica generale: chi non ha interiorizzato la logica della sicurezza alimentare legge peggio le evidenze di chi collega il metodo a specifiche ingredienti, cambi ricetta, servizi esternalizzati, materiali a contatto, rintracciabilità. Non un trucco speciale: competenza di metodo innestata sul contenuto settoriale giusto." },
+   { "h": "Principi e competenza", "d": "La 19011 offre anche i principi di comportamento professionale: integrità, obiettività, cura nel fondare le conclusioni, gestione del rischio della verifica, consapevolezza dei limiti. Nel settore alimentare pesano di più: una valutazione superficiale può non cogliere criticità con impatto reale sul consumatore." },
+   { "h": "Il deposito refrigerato", "d": "La lettura solo documentale si ferma a registrazioni e procedure; il riuso intelligente della 19011 nel contesto 22000 guarda la coerenza tra criteri e pratica, segue il flusso dei prodotti, osserva la gestione delle deviazioni, verifica la comunicazione tra magazzino, qualità e trasporto. Nel corso la 19011 sarà bussola trasversale, non tema superato." }
+  ]
+ },
+ {
+  "id": "22000_m01_s021",
+  "layout": "punti",
+  "kicker": "ISO 19011 · 2",
+  "titolo": "Il metodo del corso: allenare lo sguardo",
+  "intro": "Serve un metodo di studio attivo: collegare ogni concetto a un processo reale, a un possibile punto debole, a un'evidenza osservabile. La bussola 19011 — criteri, evidenze, contesto, giudizio fondato — applicata alla realtà specifica della sicurezza alimentare.",
+  "punti": [
+   { "h": "Affermazione vs prova", "d": "«Governiamo bene gli allergeni»: quali informazioni documentate lo mostrano, quali comportamenti lo confermano, quali decisioni lo rendono credibile quando cambia una ricetta? «La comunicazione interna funziona»: dove si vede — passaggi di consegna, aggiornamenti di etichetta, rapidità con cui una modifica raggiunge i reparti?" },
+   { "h": "Profondità delle domande", "d": "Una domanda debole raccoglie risposte generiche; una ben costruita apre il sistema. Non «il fornitore è qualificato?», ma: come viene gestito un cambio di specifica, chi viene informato, come si evita che un aggiornamento resti fermo in acquisti o in qualità. Non cerchi rassicurazione: cerchi il funzionamento reale." },
+   { "h": "Leggere le interfacce", "d": "La spezia nuova dal fornitore abituale: scheda tecnica archiviata senza riesame, parametri allergeni invariati in produzione, etichetta vecchia. Solo i documenti = ordine; solo la linea = stabilità apparente. Il metodo giusto individua la debolezza nell'interfaccia tra ricezione dell'informazione, valutazione tecnica e attuazione operativa." },
+   { "h": "Domande professionali e giudizio sospeso", "d": "Traduci ogni tema in una domanda: contesto — cosa può influire sulla sicurezza; comunicazione — chi deve sapere cosa quando cambia un elemento critico; competenza — le persone sanno applicare ciò che è deciso; verifica — si controlla la presenza di registrazioni o il funzionamento reale? E sospendi la fretta: un documento mancante non è già il problema compreso, un reparto ordinato non è già il controllo confermato." }
+  ]
+ },
+ {
+  "id": "22000_m01_s022",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 1",
+  "modNum": "1",
+  "titolo": "La base che sostiene tutto il percorso",
+  "punti": [
+   { "h": "Sicurezza e filiera", "d": "La sicurezza alimentare come protezione reale del consumatore, legata all'uso previsto e ai pericoli lungo l'intera catena; la filiera non come sfondo, ma come il luogo dove responsabilità, informazioni e controlli si trasmettono oppure si interrompono." },
+   { "h": "Il panorama ordinato", "d": "Il livello cogente dei regolamenti europei, l'autocontrollo come governo interno, gli schemi privati richiesti dal mercato, GFSI come riferimento di riconoscimento — e la ISO 22000 che non è legge né raccolta di pratiche tecniche: dà struttura gestionale a ciò che protegge la sicurezza." },
+   { "h": "Storia e logica", "d": "Dal 2005 al 2018 fino all'A1 del 2024: una crescita sempre più sistemica. La forza è l'integrazione tra sistema di gestione e HACCP — processi, leadership, risorse e comunicazione da una parte; pericoli, misure di controllo e PRP dall'altra. Due livelli che si sostengono." },
+   { "h": "Il tuo posto nel percorso", "d": "Crescere come auditor e poi lead auditor non è conoscere la norma: è trasformare conoscenza in osservazione, analisi, domande pertinenti e lettura delle interfacce. Con la ISO 19011 come base metodologica che continuerai a riusare: criteri, evidenze, conclusioni fondate, integrità e imparzialità." },
+   { "h": "Il checkpoint", "d": "Niente trabocchetti: riconoscere la differenza tra obbligo legale e schema di mercato, spiegare perché l'autocontrollo non coincide con la documentazione, individuare in un mini caso il punto dove una comunicazione difettosa indebolisce la sicurezza. Se hai ascoltato cercando relazioni, non avrai difficoltà." },
+   { "h": "L'ultimo ripasso", "d": "Sapresti spiegare con parole semplici la sicurezza alimentare? Collocare un'organizzazione nella filiera e intuire le interfacce che contano? Distinguere legge, autocontrollo, GFSI e ISO 22000? Ragionare cercando prove, non formule? Se sì, la base è solida." }
+  ],
+  "prossimo": {
+   "modulo": "2",
+   "titolo": "La norma 22000: struttura, concetti, termini",
+   "testo": "Dalla mappa generale all'architettura interna della norma, con il lessico per leggere requisiti, processi ed evidenze con precisione."
+  }
+ }
+]
