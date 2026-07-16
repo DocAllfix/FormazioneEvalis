@@ -1,0 +1,393 @@
+[
+ {
+  "id": "22000_m02_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 22000 — Sicurezza alimentare",
+  "kicker": "Modulo 2",
+  "eyebrow": "Il vocabolario che regge la norma",
+  "titolo": "Struttura, concetti, termini",
+  "testo": "Non un dizionario da ripetere a memoria, ma una mappa di collegamenti: se una parola viene compresa male, anche le decisioni operative prendono una direzione sbagliata. Il criterio di ascolto: non cercare solo definizioni brevi, cerca il confine tra concetti vicini — è lì che, durante una verifica, nascono gli errori più frequenti (confondere un pericolo con il rischio, trattare come prodotto finale un ingrediente, usare PRP, OPRP e CCP come etichette intercambiabili). Ogni termine collegato a casi concreti: impianto, magazzino, trasporto, confezionamento, ristorazione.",
+  "agenda": [
+   "Scopo e campo di applicazione della norma",
+   "Pericolo, catena alimentare, prodotto finale",
+   "PRP, OPRP e CCP: tre linee di difesa",
+   "Limite critico, monitoraggio, correzione, azione correttiva",
+   "Rintracciabilità, ritiro e richiamo",
+   "Il doppio PDCA: sistema e operatività"
+  ]
+ },
+ {
+  "id": "22000_m02_s002",
+  "layout": "numeri",
+  "kicker": "Scopo della norma",
+  "titolo": "Che cosa rende possibile a un'organizzazione",
+  "intro": "Non solo controllo tecnico del prodotto: la norma descrive un sistema di gestione capace di guidare, far funzionare, mantenere e aggiornare attività che portano a prodotti e servizi sicuri rispetto all'uso previsto. Nota l'ampiezza: non solo prodotto, anche servizio — trasporto, stoccaggio, pulizia, catering.",
+  "numeri": [
+   { "n": "1", "h": "Conformità alle regole", "d": "Dimostrare di saper rispettare gli obblighi legislativi e regolamentari: non un adempimento formale, ma tradurre le regole in processi, controlli, responsabilità e prove di funzionamento." },
+   { "n": "2", "h": "Requisiti del cliente", "d": "Valutare, capire e soddisfare requisiti concordati con il mercato: il produttore di salse per la ristorazione governa anche criteri aggiuntivi su allergeni, temperatura, trasporto, integrità del sigillo." },
+   { "n": "3", "h": "Comunicare nella filiera", "d": "Trasmettere informazioni corrette, in tempi utili, a chi sta prima e a chi sta dopo. Il deposito che scopre una rottura del freddo ma non avvisa produttore e distributore possiede un fatto critico e lascia la filiera cieca." },
+   { "n": "4", "h": "Allineare dichiarato e fatto", "d": "L'impegno della direzione non resta uno slogan al muro: si riflette in ruoli, priorità e decisioni. Se si sacrificano sistematicamente pulizia, etichette o freddo per accelerare le consegne, il sistema non sostiene l'impegno dichiarato — e questa affidabilità dev'essere mostrabile alle parti interessate." },
+   { "n": "5", "h": "Dare evidenza, non solo certificarsi", "d": "La norma consente certificazione da organismo esterno oppure valutazione/dichiarazione dell'organizzazione stessa: il valore non nasce dal certificato in sé, ma dalla capacità del sistema di tenere sotto controllo ciò che conta — utile già prima di qualsiasi certificazione." }
+  ]
+ },
+ {
+  "id": "22000_m02_s003",
+  "layout": "punti",
+  "kicker": "Campo di applicazione",
+  "titolo": "Chi può rientrare davvero",
+  "intro": "Requisiti pensati per realtà di qualunque dimensione e complessità, purché coinvolte in modo diretto oppure indiretto nella catena alimentare. Il passaggio decisivo è proprio indiretto: la sicurezza può essere influenzata anche da chi non tocca il prodotto finito. La norma guarda all'influenza sulla sicurezza, non al prestigio del settore o alla dimensione.",
+  "punti": [
+   { "h": "Un perimetro molto esteso", "d": "Produzione primaria (agricoltori, raccoglitori, pescatori), mangimi, produttori di ingredienti e di alimenti, dettaglio, ristorazione e catering, trasporto, immagazzinaggio e distribuzione — ma anche pulizia e sanificazione, attrezzature, detergenti e disinfettanti, imballaggi e materiali a contatto." },
+   { "h": "Stesso impianto, pericoli diversi", "d": "La struttura della norma è generale, ma il modo in cui i pericoli si manifestano dipende dal segmento: chi affetta salumi e chi produce cartoni per alimenti condividono l'impianto di sistema, non gli stessi pericoli né le stesse misure di controllo." },
+   { "h": "Materiali e servizi che incidono", "d": "Il produttore di vaschette e film non coltiva lattuga né riempie buste, ma il suo materiale entra in contatto con l'alimento: se cede sostanze o viene contaminato, l'effetto arriva al consumatore. L'operatore logistico di dessert freschi non trasforma, ma preserva le condizioni di sicurezza nel tempo." },
+   { "h": "Piccoli e risorse esterne", "d": "Anche organizzazioni piccole o meno sviluppate possono adottarla e usare elementi costruiti all'esterno, purché li facciano propri e li governino davvero. Risorse interne o esterne (laboratorio, pest control) sono ammesse: esternalizzare una parte non trasferisce la responsabilità complessiva." }
+  ]
+ },
+ {
+  "id": "22000_m02_s004",
+  "layout": "definizione",
+  "kicker": "Il termine fondante",
+  "eyebrow": "Pericolo per la sicurezza alimentare",
+  "titolo": "Il punto di partenza",
+  "definizione": "Un agente biologico, chimico o fisico presente nell'alimento, capace di causare potenzialmente un effetto nocivo per la salute. La parola decisiva è potenzialmente: non serve che il danno sia già avvenuto.",
+  "punti": [
+   "Tre grandi gruppi: biologici (microrganismi patogeni che si sviluppano o sopravvivono); chimici (residui, contaminanti, allergeni non gestiti); fisici (vetro, metallo, plastica dura). La norma include espressamente anche allergeni e sostanze radiologiche.",
+   "Pericolo ≠ rischio: il pericolo è ciò che può causare l'effetto nocivo; il rischio è la combinazione tra probabilità e gravità in relazione all'esposizione. Il frammento di vetro nella salsa è il pericolo; il giudizio su quanto sia probabile e grave è il rischio.",
+   "Tre esempi: biologico — un patogeno che cresce in un dessert fresco a temperatura gestita male; chimico — un residuo di detergente non risciacquato; fisico — una rondella staccatasi durante la manutenzione. Non conta il nome della categoria, ma che quel fattore possa compromettere la salute.",
+   "Il criterio pratico: quando leggi la parola pericolo, chiediti sempre due cose — che cosa è, e in quale punto può entrare, sopravvivere o aumentare. Un pericolo può essere in una materia prima, comparire in lavorazione, entrare dall'ambiente o essere trasferito da materiali e servizi."
+  ]
+ },
+ {
+  "id": "22000_m02_s005",
+  "layout": "punti",
+  "kicker": "Dove nasce il pericolo",
+  "titolo": "Alimento, mangime, materiali e servizi",
+  "intro": "Se ti fermi al solo prodotto che esce dalla linea, rischi di vedere troppo tardi ciò che conta. I pericoli pertinenti dipendono anche dal contesto in cui l'alimento viene prodotto, conservato, trasportato o messo a contatto con altri materiali.",
+  "punti": [
+   { "h": "La filiera lunga dei mangimi", "d": "Rilevanti i pericoli dentro o sulla superficie del mangime che, passando attraverso l'animale destinato alla produzione alimentare, arrivano all'alimento consumato dall'uomo. Un problema può nascere molto prima del prodotto che il consumatore vede: la norma abitua a ragionare in retrospettiva e in prospettiva insieme." },
+   { "h": "Materiali e servizi che trasferiscono", "d": "Per chi non gestisce direttamente alimenti — imballaggi, prodotti per la pulizia — i pericoli pertinenti sono quelli trasferibili all'alimento in modo diretto o indiretto, attraverso l'uso previsto. La vaschetta inadatta rilascia sostanze; il sanificante con caratteristiche non garantite lascia residui incompatibili." },
+   { "h": "Il destinatario può cambiare", "d": "Per l'alimento per animali non destinati alla produzione alimentare, i pericoli sono quelli dannosi per la specie a cui il prodotto è destinato: la logica della norma non cambia, cambia il destinatario della protezione sanitaria." },
+   { "h": "La contaminazione e l'ambiente", "d": "Contaminazione: introduzione o presenza di un contaminante, compreso un pericolo, in un prodotto o nell'ambiente di lavoro. L'ambiente non è uno sfondo — una zona di confezionamento umida con flussi sporco-pulito mal gestiti, o un deposito che custodisce insieme alimenti e sostanze chimiche, diventa esso stesso veicolo del pericolo." }
+  ]
+ },
+ {
+  "id": "22000_m02_s006",
+  "layout": "punti",
+  "kicker": "Catena alimentare",
+  "titolo": "Una sequenza, non un punto isolato",
+  "intro": "Non una fila lineare di aziende: una successione di passaggi che accompagna alimento e ingredienti dalla produzione primaria fino al consumo — produrre, trasformare, conservare, trasferire, distribuire. Non un singolo punto da controllare, ma una continuità di passaggi.",
+  "punti": [
+   { "h": "Più di ingredienti e stabilimenti", "d": "Comprende mangimi e alimenti per animali, materiali pensati per toccare l'alimento, e i fornitori di servizi: trasporti, pulizie, manutenzioni, stoccaggi, attrezzature. La busta di insalata non comincia nel reparto ortofrutta: campo, lavorazione, magazzino, trasporto refrigerato — più film plastico, detergenti, sanificazione, manutentore, gestore del frigorifero." },
+   { "h": "La trappola del confine fisico", "d": "Se ogni organizzazione guarda solo il proprio confine, la sicurezza si spezza in pezzi scollegati: ognuno controlla una parte, nessuno presidia le interfacce. Ed è lì che nascono i problemi — informazioni incomplete, specifiche poco chiare, trasporti non comunicati, allergeni gestiti in modo incoerente." },
+   { "h": "Una chiave di lettura", "d": "Per chi valuta, la catena alimentare non è solo una definizione: aiuta a capire chi influenza chi, quali informazioni devono viaggiare, dove si trasferiscono i pericoli e dove si perdono le condizioni di controllo. Il gelato con inclusioni, vaschette, celle, trasporto e distributori: il problema emerge fuori dallo stabilimento ma ricade sul prodotto." },
+   { "h": "Non governi ciò che non condividi", "d": "La composta per la mensa scolastica: agricoltori, trasporto, trasformazione, coperchi, pulizia, deposito, cucina. Se una sola informazione critica si perde — condizioni dopo l'apertura, destinazione del lotto — il problema non resta fermo dove è nato. Da qui l'insistenza della norma sulla comunicazione tra parti interessate." }
+  ]
+ },
+ {
+  "id": "22000_m02_s007",
+  "layout": "punti",
+  "kicker": "Prodotto finale",
+  "titolo": "Dipende da dove ti fermi",
+  "intro": "Il prodotto che non subisce ulteriori lavorazioni da parte dell'organizzazione che lo fornisce. Fermati su quelle parole: finale non è una qualità assoluta del prodotto, è una qualità relativa al confine operativo di chi lo gestisce.",
+  "punti": [
+   { "h": "Finale per uno, materia prima per l'altro", "d": "Il molino produce farina: per lui è prodotto finale, per il biscottificio è ingrediente in ingresso. Il macello consegna carne refrigerata: prodotto finale per il macello, materia prima per il laboratorio di piatti pronti. La definizione non parla dell'ultimo anello del mercato, ma dell'ultimo punto interno all'organizzazione." },
+   { "h": "Perché la precisione conta", "d": "Molte valutazioni di sicurezza si ancorano al prodotto finale dell'organizzazione considerata: se sbagli quel confine, sbagli il punto in cui giudichi l'efficacia delle misure e la conformità del risultato." },
+   { "h": "Il legame con l'uso previsto", "d": "Il prodotto finale dev'essere sicuro rispetto a come sarà usato dal destinatario: chiarezza su destinazione, conservazione, trattamenti attesi e informazioni che lo accompagnano. Per il produttore di basi surgelate da cuocere, il prodotto finale è la base — le informazioni sull'uso successivo diventano presidio essenziale." },
+   { "h": "Zone grigie da evitare", "d": "Ogni anello deve sapere qual è il proprio prodotto finale e quali requisiti gli sono associati: senza chiarezza nascono zone grigie — chi garantisce una certa informazione, chi esegue un controllo, chi dichiara una condizione. Non basta chiedere se il prodotto è sicuro in astratto: per chi è finale, in quale stato, con quale uso previsto?" }
+  ]
+ },
+ {
+  "id": "22000_m02_s008",
+  "layout": "punti",
+  "kicker": "Un triangolo logico",
+  "titolo": "Un solo prodotto, più prospettive",
+  "intro": "Pericolo, catena alimentare e prodotto finale non camminano mai separati. Il mix di spezie destinato sia al retail sia ai produttori di piatti pronti: apparentemente lo stesso prodotto, ma il punto di osservazione cambia molte cose.",
+  "punti": [
+   { "h": "Il prodotto cambia ruolo", "d": "Per chi miscela e confeziona, il vasetto al dettaglio e il sacco industriale sono entrambi prodotto finale (escono senza ulteriori lavorazioni interne). Ma nella catena, il sacco ricevuto dal produttore di piatti pronti diventa ingrediente in ingresso: il prodotto cambia ruolo quando cambia il confine dell'organizzazione." },
+   { "h": "Il pericolo viaggia col prodotto", "d": "Le spezie possono portare pericoli biologici, chimici o fisici secondo origine, trattamento e gestione. Un corpo estraneo riguarda il consumatore del vasetto ma anche il produttore industriale; una contaminazione crociata su un allergene viaggia lungo due rami della catena. Il pericolo non si esaurisce nel cancello: viaggia col prodotto, oppure viene prevenuto prima." },
+   { "h": "Il ponte del livello accettabile", "d": "Non ragioni solo in termini vaghi di bene o male, ma in termini di soglia tra accettabile e non accettabile nel prodotto finale: è il ponte verso le misure di controllo. Per capire se una misura è adatta devi sapere quale pericolo governi, in quale punto della catena sei e quale prodotto finale esce dal tuo campo." },
+   { "h": "Stesso sito, ragionamenti diversi", "d": "Chi tosta arachidi e le vende come snack e come ingrediente: l'allergene è intrinseco, da comunicare e gestire. Ma se nello stesso sito si lavorano altri semi, una contaminazione indesiderata diventa pericolo per prodotti che non dovrebbero contenerla — guardi flussi, pulizie, cambi formato, etichette e destinazione. Stesso stabilimento, ragionamenti diversi secondo prodotto e destinatario." }
+  ]
+ },
+ {
+  "id": "22000_m02_s009",
+  "layout": "punti",
+  "kicker": "Misure di controllo",
+  "titolo": "Tre linee di difesa, una logica sola",
+  "intro": "Se i pericoli nascono in punti diversi e riguardano prodotti finali diversi, non tutte le difese possono essere uguali. Prima di tutto la misura di controllo: un'azione o attività essenziale per prevenire un pericolo significativo o ridurlo fino a un livello accettabile. Il focus è la funzione, non la forma.",
+  "punti": [
+   { "h": "PRP — la base", "d": "Condizioni e attività di base necessarie per mantenere la sicurezza nell'organizzazione e lungo la filiera: il terreno stabile su cui tutto il resto può funzionare. Senza questa base, i controlli più mirati lavorano in un ambiente instabile." },
+   { "h": "OPRP — il presidio operativo", "d": "Misura o combinazione di misure per prevenire o ridurre un pericolo significativo a un livello accettabile, quando il controllo efficace si basa su criteri d'azione e su osservazioni o misurazioni. Presidia situazioni operative significative, senza ragionare attraverso il limite critico del CCP." },
+   { "h": "CCP — il punto critico", "d": "Punto del processo dove si applica una misura di controllo e dove un limite critico definito, con la misurazione, consente di attivare correzioni. La separazione tra accettabile e non accettabile è legata a una soglia misurabile." },
+   { "h": "La conseguenza pratica", "d": "Il confine non si decide per abitudine, ma per ruolo della misura nel controllo del pericolo. Un PRP trattato come CCP diventa inutilmente rigido; un CCP trattato come PRP diventa pericolosamente debole; un OPRP non riconosciuto resta in una terra di nessuno, dove tutti pensano che ci pensi qualcun altro." }
+  ]
+ },
+ {
+  "id": "22000_m02_s010",
+  "layout": "punti",
+  "kicker": "PRP",
+  "titolo": "La base che rende credibili gli altri controlli",
+  "intro": "Il rischio comune è immaginarli come pratiche generiche di igiene, uno sfondo amministrativo. La norma assegna loro un ruolo concreto: condizioni e attività di base necessarie per mantenere la sicurezza. Base non significa secondario: significa fondativo — se è fragile, anche i controlli più mirati diventano instabili.",
+  "punti": [
+   { "h": "Non un pacchetto universale", "d": "I PRP necessari dipendono dal segmento della filiera e dal tipo di organizzazione: caseificio, magazzino refrigerato, produttore di imballaggi, gastronomia e trasportatore hanno basi comuni ma bisogni diversi. La norma richiama buone pratiche agricole, veterinarie, di lavorazione, igieniche, produttive, distributive e commerciali." },
+   { "h": "Gli aspetti tipici", "d": "Spesso: igiene del personale, pulizia e sanificazione, manutenzione, layout, flussi, controllo infestanti, gestione dei fornitori pertinenti, condizioni ambientali, formazione coerente. Ma la configurazione concreta dipende dall'organizzazione — l'operatore logistico modella i PRP su deposito, movimentazione, integrità dei mezzi e disciplina del freddo." },
+   { "h": "Elementi costruiti all'esterno", "d": "Anche realtà ridotte possono attuare elementi elaborati fuori — schemi, istruzioni, supporti specialistici — purché li integrino davvero e non li lascino come carta estranea. Il piccolo laboratorio che porziona prodotti da forno si appoggia a un consulente per pulizia, vestizione, accettazione materiali e manutenzione." },
+   { "h": "Efficaci solo se vissuti", "d": "Se il personale non li conosce, le frequenze non vengono rispettate e nessuno verifica l'applicazione, quei PRP esistono solo sulla carta. Un PRP efficace non è un documento ben scritto: è una condizione stabile che fa funzionare il processo giorno dopo giorno — in audit si coglie nell'aderenza tra regole, ambiente osservato e comportamenti reali." }
+  ]
+ },
+ {
+  "id": "22000_m02_s011",
+  "layout": "punti",
+  "kicker": "OPRP",
+  "titolo": "Il presidio operativo che non è solo base",
+  "intro": "Quando una misura esce dallo sfondo generale e diventa presidio mirato: una misura (o combinazione) che tiene sotto governo un pericolo significativo, impedendone la comparsa o abbassandone l'effetto fino al livello accettabile. Sembra vicino a un CCP — la differenza sta nel modo in cui il controllo resta efficace.",
+  "punti": [
+   { "h": "Criterio d'azione, non limite critico", "d": "Nell'OPRP il riferimento non è il limite critico del CCP, ma il criterio d'azione — una specifica osservabile o misurabile — insieme a misurazioni od osservazioni. Quando è soddisfatto, il presidio opera in modo accettabile; quando non lo è, sai che il controllo non lavora come dovrebbe. Non è vago affatto: ha criteri, osservazioni, misurazioni, reazioni." },
+   { "h": "La posizione intermedia", "d": "Il PRP crea l'ambiente affidabile e diffuso; l'OPRP presidia un punto operativo preciso legato a un pericolo già riconosciuto; il CCP presidia una fase con soglia misurabile che separa nettamente. L'OPRP non è né buona pratica generica né limite critico." },
+   { "h": "Il setaccio e il cambio allergeni", "d": "Il setaccio con maglia definita, controllato con frequenze e verifiche di integrità: OPRP se il presidio si fonda sul corretto funzionamento della barriera e su criteri osservabili (integrità, assenza di rotture). Il cambio linea tra ricette con e senza latte: OPRP quando si basa su pulizia corretta, assenza di residui, segregazione dei materiali e conferma dell'etichetta prima dell'avvio." },
+   { "h": "Né residuale né gonfiato a CCP", "d": "Molti lo trattano come categoria residuale, il cestino di ciò che non si vuole chiamare PRP né CCP: così si monitora male e si reagisce tardi. L'errore opposto è trasformarli tutti in CCP, con soglie formali che non aggiungono controllo. La domanda: questa misura controlla un pericolo significativo in modo specifico e quotidiano, con criteri d'azione e osservazioni? Se sì, è OPRP." }
+  ]
+ },
+ {
+  "id": "22000_m02_s012",
+  "layout": "punti",
+  "kicker": "CCP",
+  "titolo": "Il punto dove la soglia conta davvero",
+  "intro": "La parte più nota, ma anche la più spesso semplificata male. Una fase del processo dove si applica una misura di controllo per governare un pericolo significativo, bloccandolo o abbassandolo fino a un livello accettabile. La svolta arriva subito dopo: nel CCP esiste un limite critico definito, e la misurazione consente correzioni.",
+  "punti": [
+   { "h": "La soglia netta", "d": "Non ti basta dire che il controllo appare adeguato: devi misurare un valore e confrontarlo con un limite critico stabilito. Se rispetta la soglia, il punto è sotto controllo; se la supera o non la raggiunge, entri nella non accettabilità e devi reagire. Quando il limite non è rispettato, i prodotti interessati vanno considerati potenzialmente non sicuri." },
+   { "h": "La cottura come esempio", "d": "Una fase di cottura pensata per ridurre un pericolo biologico: CCP quando il controllo dipende dal raggiungimento di una combinazione definita di tempo e temperatura. Se la temperatura interna non arriva al minimo, non è una semplice anomalia organizzativa: è una perdita del controllo su un punto critico." },
+   { "h": "Fase, non attrezzatura", "d": "La norma parla di fase del processo, non di macchinario: il punto critico può coincidere con un'apparecchiatura, ma il vero oggetto è il tratto di processo in cui applichi la misura. Se confondi fase e macchina, perdi di vista il pericolo che stai governando." },
+   { "h": "Non un titolo onorifico", "d": "Non tutto ciò che è importante diventa CCP: un controllo importantissimo resta OPRP se la sua efficacia si governa con criteri d'azione. Chiamare CCP una fase impegna a misurarla con continuità, responsabilità chiare e tempi di reazione compatibili. Se manca il legame tra misura, limite critico e misurazione, probabilmente non sei in un CCP, anche se il pericolo è serio." }
+  ]
+ },
+ {
+  "id": "22000_m02_s013",
+  "layout": "cards",
+  "kicker": "Lo stesso processo",
+  "titolo": "Come convivono PRP, OPRP e CCP",
+  "intro": "Le tre linee viste nello stesso scenario: un'azienda di zuppe fresche refrigerate — riceve, lava, taglia, miscela, cuoce, riempie, raffredda, etichetta, spedisce. Non sono concorrenti, non si dispongono in ordine di nobiltà: ognuna risponde a una funzione diversa e le altre due si sostengono a vicenda.",
+  "cards": [
+   { "h": "PRP: stabilizza l'ambiente", "d": "Igiene del personale, pulizia delle aree, manutenzione, flussi ordinati, protezione da infestanti, buone pratiche di stoccaggio, materiali a contatto corretti, formazione coerente. Se le fondamenta cedono, l'intero processo si indebolisce ovunque." },
+   { "h": "OPRP: presidia il pericolo", "d": "Il controllo sull'etichettatura allergeni (sedano presente in alcune ricette): controllo strutturato del cambio bobina, corrispondenza tra ricetta ed etichetta, verifica visiva. Presidia un pericolo significativo con criteri d'azione e osservazioni pianificate, senza reggersi su un limite critico." },
+   { "h": "CCP: governa la fase critica", "d": "La cottura: se il pericolo biologico è tenuto sotto controllo dal raggiungimento di una combinazione tempo/temperatura, hai un limite critico misurabile. Se il valore non viene raggiunto, il prodotto entra subito nell'area dei potenzialmente non sicuri." },
+   { "h": "Che cosa succede se ne manca uno", "d": "Senza PRP il processo diventa instabile, pieno di piccole deviazioni; senza un OPRP necessario un pericolo significativo resta affidato a controlli troppo generici; senza un CCP dove serve, si perde il punto di separazione netto tra accettabile e non accettabile." }
+  ]
+ },
+ {
+  "id": "22000_m02_s014",
+  "layout": "punti",
+  "kicker": "Errori di classificazione",
+  "titolo": "Quando le sigle confondono invece di chiarire",
+  "intro": "I problemi non nascono solo dall'assenza di controlli: nascono spesso da controlli presenti, ma messi nella categoria sbagliata o gestiti con una logica incoerente. PRP, OPRP e CCP servono a chiarire la logica del presidio, non a decorare il piano.",
+  "punti": [
+   { "h": "Il PRP sottovalutato / il CCP moltiplicato", "d": "Trattare il PRP come controllo generico poco rilevante porta a gestioni superficiali delle basi, mentre ci si concentra sui punti appariscenti. L'errore opposto: promuovere quasi ogni controllo importante a CCP, con sistemi pesanti pieni di soglie formali che non aiutano a governare il processo." },
+   { "h": "L'OPRP come cestino", "d": "Molti lo trattano come categoria residuale, il posto dove finiscono i controlli indecisi: così le responsabilità perdono chiarezza e le reazioni tempestività. Nel confezionamento di prodotti da forno con sesamo, il controllo ricetta-etichetta-materiale descritto ma non classificato viene fatto in modo discontinuo, e la reazione dipende dalla sensibilità del capoturno." },
+   { "h": "La categoria decisa per abitudine", "d": "Decidere in base all'abitudine del settore anziché al ruolo della misura: esempi simili si gestiscono diversamente perché cambiano processo, prodotto, pericolo, tecnologia. Diffida delle formule rapide — «si fa sempre così», «questo è sempre un CCP»: rassicurano ma non spiegano." },
+   { "h": "La reazione trascurata / il personale non formato", "d": "Si descrive bene la misura ma si trascura la reazione al fallimento: senza criteri d'azione non sai quando l'OPRP è fuori controllo, senza limite critico non sai dove passa il confine. E se il personale è formato male, l'operatore esegue un OPRP come abitudine di reparto o tratta un CCP come formalità documentale — il significato non è arrivato al livello operativo." }
+  ]
+ },
+ {
+  "id": "22000_m02_s015",
+  "layout": "definizione",
+  "kicker": "La frontiera del CCP",
+  "eyebrow": "Limite critico",
+  "titolo": "La linea tra accettabile e non accettabile",
+  "definizione": "Un parametro misurabile che segna il punto oltre il quale il controllo non può più essere considerato accettabile. Da una parte il controllo è accettabile, dall'altra non lo è più.",
+  "punti": [
+   "Appartiene alla logica del CCP: non ogni controllo ha un limite critico. Negli OPRP trovi invece il criterio d'azione, con funzione diversa. Confonderli porta a costruire soglie inutili dove basterebbero criteri operativi, o a lasciare indeterminato un punto che richiede una separazione rigorosa.",
+   "Deve essere qualcosa di misurabile: temperatura, tempo, livello, concentrazione. Non conta la grandezza in sé, ma la possibilità di usarla come linea di confine. La crema refrigerata deve raggiungere il valore stabilito mantenuto per un tempo definito — non basta «molto calda» o «abbastanza calda».",
+   "Il numero collegato alla sorte del prodotto: quando il limite viene superato o non rispettato, i prodotti coinvolti vanno trattati come potenzialmente non sicuri. Non un dato da archiviare: una soglia che guida decisioni immediate su processo e prodotto.",
+   "Due errori speculari: formule non misurabili («cottura sufficiente», «raffreddamento rapido») sono parole rassicuranti, non un limite critico; oppure valori numerici che il processo reale non riesce a osservare con continuità — rigorosi sulla carta, teorici nella pratica. Un vero limite critico sta dove il processo è osservabile e l'informazione arriva in tempo per correggere."
+  ]
+ },
+ {
+  "id": "22000_m02_s016",
+  "layout": "punti",
+  "kicker": "Monitoraggio",
+  "titolo": "Vedere il controllo mentre il processo è vivo",
+  "intro": "Come l'organizzazione si accorge della condizione reale del processo: una sequenza pianificata di osservazioni o misurazioni per valutare se sta funzionando come previsto. La parola chiave non è solo misurare, ma osservare o misurare in modo pianificato, durante l'attività.",
+  "punti": [
+   { "h": "L'aspetto temporale", "d": "Avviene mentre il processo è in corso e dà informazioni per agire entro un tempo definito: non guardi il passato (verifica a posteriori) né dimostri prima che il controllo può funzionare (validazione) — tieni gli occhi sul presente operativo, abbastanza presto da intervenire se qualcosa devia." },
+   { "h": "Diverso per CCP e OPRP", "d": "Nel CCP il monitoraggio rileva il parametro collegato al limite critico (la temperatura al cuore, il tempo): lo scopo non è collezionare numeri, ma sapere se il limite è rispettato. Nell'OPRP guarda i criteri d'azione — la corretta esecuzione del cambio linea, l'esito delle verifiche visive, la corrispondenza prodotto-etichetta." },
+   { "h": "Non è la presenza di strumenti", "d": "Un termometro sulla linea, da solo, non è monitoraggio; una check list appesa al muro, da sola, non lo è. Diventa monitoraggio solo con una sequenza pianificata, responsabilità chiare e un uso reale dell'informazione. E monitorare troppo tardi — quando il lotto è già uscito — ne riduce moltissimo l'utilità." },
+   { "h": "Tre indizi, tre tempi distinti", "d": "Si riconosce da tre segni: l'organizzazione sa che cosa osserva e perché, sa interpretare il risultato (rispetto a limite critico o criterio d'azione), sa che cosa fare se il controllo si perde. E la norma distingue: validazione prima (mostra che il controllo può dare il risultato), monitoraggio durante (guida l'azione), verifica dopo (conferma che i requisiti sono soddisfatti)." }
+  ]
+ },
+ {
+  "id": "22000_m02_s017",
+  "layout": "punti",
+  "kicker": "Correzione",
+  "titolo": "La risposta immediata quando qualcosa non va",
+  "intro": "Quando il monitoraggio mostra una non conformità, la prima parola è correzione: un'azione per eliminare una non conformità rilevata. Agisce sull'effetto che hai davanti, qui e ora — non chiede ancora di spiegare perché il problema sia nato.",
+  "punti": [
+   { "h": "L'urgenza prima della causa", "d": "Molti saltano subito alla ricerca della causa e trascurano l'urgenza operativa. Se un CCP esce dal limite critico o un OPRP non soddisfa il criterio d'azione, la prima domanda non è perché è successo, ma: che cosa devo fare adesso per ristabilire il controllo e impedire che un prodotto potenzialmente non sicuro prosegua?" },
+   { "h": "Il destino del prodotto", "d": "La correzione comprende anche la gestione di prodotti potenzialmente non sicuri: se la cottura non raggiunge il valore, può includere blocco del lotto, segregazione fisica, eventuale rilavorazione. Se l'etichettatura allergeni è errata: fermo della spedizione, rietichettatura o, se non possibile, destinazione alternativa o scarto." },
+   { "h": "Forme diverse, un solo criterio", "d": "Può significare rilavorare, proseguire con una lavorazione aggiuntiva, o eliminare la conseguenza avversa (etichettatura specifica, smaltimento per altro impiego). Il criterio non è la soluzione più comoda: è l'azione che elimina la non conformità rilevata e protegge il prodotto finale da un esito non accettabile." },
+   { "h": "Vive nel presente operativo", "d": "Le zuppe con cottura sotto il minimo: fermi la linea, trattieni le vaschette, impedisci l'uscita, valuti un nuovo trattamento valido, fino allo scarto se non recuperabile. In questo momento non hai ancora risolto la causa: hai contenuto l'effetto e protetto il flusso. Da sola, però, non basta a evitare che il problema si ripresenti." }
+  ]
+ },
+ {
+  "id": "22000_m02_s018",
+  "layout": "punti",
+  "kicker": "Azione correttiva",
+  "titolo": "Togliere la causa, non solo il sintomo",
+  "intro": "Se la correzione interviene sull'effetto immediato, l'azione correttiva lavora più in profondità: rimuove la causa di una non conformità per ridurne il ritorno. Due chiarimenti della norma: lo stesso evento può nascere da cause diverse, e l'azione correttiva richiede sempre un esame delle cause.",
+  "punti": [
+   { "h": "Livelli diversi, non alternative", "d": "La correzione è immediata e concreta (fermare, segregare, rilavorare, rietichettare, scartare); l'azione correttiva chiede che cosa nel sistema, nel processo o nelle condizioni operative ha permesso la deviazione. Se confondi i piani, dichiari risolto un problema solo perché hai gestito bene il lotto — hai curato il sintomo." },
+   { "h": "Le molte origini possibili", "d": "La cottura insufficiente: sensore mal controllato, errore nell'impostazione del ciclo, massa di prodotto superiore al previsto, formazione incompleta, istruzioni poco chiare, o una combinazione. Finché non analizzi la causa, o le cause, il sistema resta esposto alla ricorrenza. Il cambiamento dev'essere orientato alla causa identificata, non al semplice ripristino." },
+   { "h": "L'apprendimento visibile", "d": "Un'organizzazione matura non racconta solo di aver reagito prontamente: mostra di aver imparato qualcosa dalla non conformità, e questo passa dall'azione correttiva. Se il problema si ripete in forme simili, la correzione esiste ma l'intervento sulle cause non è stato efficace o compreso." },
+   { "h": "Non innamorarsi della prima spiegazione", "d": "«È stato un errore umano» chiude in fretta il caso ma spesso non spiega nulla: chiediti perché quella persona abbia potuto sbagliare così, con quelle condizioni e istruzioni — magari il punto debole è nel turno, nella chiarezza del processo, nella disposizione dei materiali. La correzione spegne l'incendio locale; l'azione correttiva modifica il contesto che lo ha reso possibile." }
+  ]
+ },
+ {
+  "id": "22000_m02_s019",
+  "layout": "flusso",
+  "kicker": "Caso completo",
+  "titolo": "Dalla soglia fuori controllo alla prevenzione",
+  "intro": "I quattro concetti dentro un unico scenario: sughi refrigerati pronti al consumo, con una fase di trattamento termico identificata come CCP per un pericolo biologico significativo. Limite critico, monitoraggio, correzione e azione correttiva non sono parole separate: formano una catena logica — se manca un passaggio, il sistema perde forza.",
+  "passi": [
+   { "h": "Limite critico e monitoraggio", "d": "Il confine misurabile: un valore di temperatura mantenuto per un tempo definito. Durante la produzione l'operatore rileva i valori con una sequenza pianificata — non per abitudine, ma per sapere mentre il processo è vivo se il CCP funziona. In un turno il valore mostra che il trattamento non ha raggiunto il minimo: il limite non è rispettato." },
+   { "h": "Correzione", "d": "L'azienda ferma il rilascio, identifica e separa le vaschette interessate, blocca la produzione, valuta se il prodotto possa subire un nuovo trattamento adeguato oppure una gestione differente. Due cose insieme: elimina la non conformità sul processo e gestisce il prodotto potenzialmente non sicuro. Ma protegge il lotto, non ancora il futuro." },
+   { "h": "Azione correttiva (e il secondo livello)", "d": "Analizza la causa: sensore non affidabile dopo una manutenzione incompleta, o programma richiamato in modo errato al cambio ricetta. Interviene sui fattori — ripristina la misura, rivede l'avvio del ciclo, rafforza istruzioni e responsabilità. Nello stesso sito, la verifica del confezionamento allergeni è un OPRP: senza limite critico ma con criterio d'azione, la struttura della risposta resta coerente anche se cambia la logica del controllo." }
+  ]
+ },
+ {
+  "id": "22000_m02_s020",
+  "layout": "punti",
+  "kicker": "Rintracciabilità · 1",
+  "titolo": "Seguire storia, movimento e ubicazione",
+  "intro": "Ciò che rende la reazione concreta e selettiva: la possibilità di ricostruire percorso, utilizzo, spostamenti e collocazione di ciò che consideri lungo passaggi definiti di produzione, lavorazione e distribuzione. Non solo dove il prodotto è adesso: da dove viene, che cosa gli è accaduto, dove è passato.",
+  "punti": [
+   { "h": "Oltre il prodotto finito", "d": "Il movimento può riferirsi all'origine dei materiali, alla storia della lavorazione o alla distribuzione. E l'oggetto non è per forza un prodotto finito: può essere un materiale, una singola unità, un'attrezzatura, un servizio. Una capacità organizzativa di collegare informazioni lungo passaggi specifici, non una lista di codici sul magazzino." },
+   { "h": "Lavora in entrambe le direzioni", "d": "Nei dessert in vaschetta: se emerge un problema su un ingrediente, devi capire quali lotti di prodotto finale lo hanno usato, in quali giorni, su quali linee, verso quali clienti. Se il problema nasce su un lotto finito già distribuito, risali alle materie prime, ai turni, alla lavorazione, ai movimenti." },
+   { "h": "Il lotto come perimetro", "d": "Una quantità definita di prodotto ottenuta in condizioni sostanzialmente uguali: aiuta a delimitare l'indagine ed evitare reazioni troppo ampie o troppo vaghe. Non blocchi inutilmente la produzione del mese, ma non perdi pezzi del percorso reale: precisione per proteggere, proporzionalità per evitare misure cieche." },
+   { "h": "Prova di capacità, non documenti", "d": "Non solo un tema documentale: è la prova che l'organizzazione sa collegare prodotto, processo e destinazione in modo credibile. L'operatore logistico con la rottura del freddo deve sapere quali pallet, da quanto, in quale area, verso quali destinatari. Senza questa capacità, anche una buona correzione diventa approssimativa." }
+  ]
+ },
+ {
+  "id": "22000_m02_s021",
+  "layout": "numeri",
+  "kicker": "Rintracciabilità · 2",
+  "titolo": "Lotti, collegamenti e confini dell'indagine",
+  "intro": "La definizione è ampia, ma diventa utile solo quando l'organizzazione sa collegare in modo credibile materiali in ingresso, lavorazioni, lotti e destinazioni. Il punto non è accumulare registrazioni: è costruire nessi affidabili, per rispondere a una domanda semplice e difficile insieme — questo prodotto da dove viene e dove è andato?",
+  "numeri": [
+   { "n": "1", "h": "Precisione", "d": "I collegamenti devono essere chiari e non ambigui. Nell'hummus refrigerato con ceci da più fornitori, olio, sale, succo di limone e vaschette di lotti differenti su più turni: se un lotto di succo mostra un problema, capire in quali produzioni è entrato, su quali linee, verso quali clienti." },
+   { "n": "2", "h": "Completezza", "d": "Non basta sapere da chi è arrivata una materia prima: devi sapere anche dove è stata usata. L'oggetto può essere un materiale, un'unità, un'attrezzatura, perfino un servizio — un difetto sulle vaschette, un'anomalia su una cella in un intervallo, un trasporto di pallet lungo una tratta critica." },
+   { "n": "3", "h": "Tempestività", "d": "Se per ricostruire il percorso servono troppe ore, il sistema perde gran parte del valore protettivo. Molti moduli, codici e software non bastano se non si ricostruisce rapidamente una storia credibile: nel gelato, sapere quali linee hanno usato il film sospetto, quali pallet a quale distributore, quali giacenze ancora in cella — o si è costretti a decisioni più larghe, costose e meno efficaci." }
+  ]
+ },
+ {
+  "id": "22000_m02_s022",
+  "layout": "confronto",
+  "kicker": "Risposta al mercato",
+  "titolo": "Ritiro e richiamo",
+  "intro": "Nel linguaggio comune sono quasi sinonimi; nella pratica conviene distinguerli con chiarezza. La differenza non sta nella gravità astratta del problema, ma nel punto della catena in cui il prodotto si trova quando l'organizzazione prende atto dell'evento. La rintracciabilità è il motore di entrambi.",
+  "a": {
+   "h": "Ritiro",
+   "sub": "Il prodotto è ancora nella filiera",
+   "punti": [
+    { "d": "L'azione con cui un prodotto viene tolto dal circuito distributivo prima che arrivi al consumatore, o mentre è ancora sotto controllo della filiera commerciale." },
+    { "d": "Lo yogurt con etichetta allergeni errata ancora nel magazzino centrale del distributore: blocco della merce, identificazione dei lotti, recupero delle unità, gestione controllata del prodotto." },
+    { "d": "L'operatore logistico con rottura del freddo su un lotto ancora nei suoi magazzini o presso depositi intermedi: si gestisce come ritiro dal circuito." }
+   ]
+  },
+  "b": {
+   "h": "Richiamo",
+   "sub": "Il prodotto ha raggiunto il consumatore",
+   "punti": [
+    { "d": "L'azione con cui il prodotto deve essere recuperato o segnalato anche al consumatore, perché parte delle unità è già arrivata sul mercato finale." },
+    { "d": "Se parte delle confezioni di yogurt è già stata venduta o esposta, la risposta diventa richiamo: l'informazione deve arrivare all'utilizzatore finale in modo chiaro e rapido." },
+    { "d": "Una gestione matura tiene insieme quattro cose: identificazione accurata di lotti e destinazioni, decisione rapida sull'ampiezza, comunicazione coerente ai soggetti interessati, trattamento del prodotto rientrato o bloccato. Se un lotto non è ricostruibile o i destinatari non sono rintracciabili, la capacità dichiarata non è affidabile." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m02_s023",
+  "layout": "punti",
+  "kicker": "Doppio PDCA · 1",
+  "titolo": "Due cicli che lavorano insieme",
+  "intro": "Una chiave di lettura più ampia, per non ridurre la ISO 22000 a definizioni isolate. Nei punti iniziali della norma il termine non è sviluppato in dettaglio: qui lo usiamo come lettura professionale dell'architettura. PDCA = pianificare, fare, controllare, agire — ma nella 22000 conviene immaginare due cicli intrecciati.",
+  "punti": [
+   { "h": "I due cerchi", "d": "Il primo è il ciclo del sistema di gestione nel suo insieme; il secondo è il ciclo operativo con cui si pianificano, attuano, controllano e aggiornano le attività che governano pericoli e misure di controllo. Nei piatti pronti refrigerati: in alto orientamento, responsabilità, risorse, obiettivi; vicino al processo pericoli, PRP, OPRP, CCP, monitoraggi, correzioni." },
+   { "h": "Il rischio della lettura ridotta al solo HACCP", "d": "Se guardi solo il piano dei controlli sul prodotto, perdi la struttura di governo che li rende stabili — chi assicura competenza, risorse, ruoli, comunicazione e coerenza con la politica? Se guardi solo il sistema in alto, con procedure eleganti ma senza il ciclo operativo dei pericoli, la sicurezza resta generica." },
+   { "h": "Sistema o operatività fragile", "d": "Il piccolo produttore di salse con obiettivi curati, responsabilità e riunioni periodiche mostra governo del sistema; ma se i controlli allergeni sono mal progettati o il monitoraggio è discontinuo, il PDCA operativo è debole. Viceversa, controlli ben pensati senza una direzione che fornisce risorse e promuove miglioramento: è il PDCA di sistema a essere fragile." },
+   { "h": "L'aggiornamento come ponte", "d": "La norma parla di aggiornamento come attività immediata o pianificata per applicare le informazioni più recenti: riguarda come i due cicli si adattano quando cambia qualcosa — ingrediente, fornitore, tecnologia, ricetta, uso, requisito del cliente. Se il cambiamento tocca solo il piano operativo ma il sistema non lo recepisce, o viceversa, si crea una frattura." }
+  ]
+ },
+ {
+  "id": "22000_m02_s024",
+  "layout": "punti",
+  "kicker": "Doppio PDCA · 2",
+  "titolo": "Il PDCA del sistema: la regia coerente",
+  "intro": "Il cerchio più ampio: la regia complessiva con cui l'organizzazione governa la sicurezza nel tempo. L'oggetto non è il singolo limite critico, ma il sistema come insieme di ruoli, responsabilità, obiettivi, processi, risorse, comunicazioni e miglioramento — le condizioni perché i controlli operativi funzionino in modo stabile.",
+  "punti": [
+   { "h": "Pianificare", "d": "Chiarire dove andare e come governare la sicurezza: orientamenti chiari, obiettivi coerenti, responsabilità assegnate, requisiti da soddisfare, risorse adeguate, con chi comunicare lungo la catena e come restare allineati alla politica. Non una cottura o un'etichetta: il telaio che rende quei controlli possibili." },
+   { "h": "Fare", "d": "L'attuazione quotidiana della regia: responsabilità vive, competenza disponibile, comunicazioni funzionanti, informazioni documentate mantenute, processi sostenuti con risorse. Se la direzione dichiara la sicurezza una priorità ma non garantisce tempo, personale o chiarezza decisionale, il PDCA si spezza già nell'attuazione." },
+   { "h": "Controllare", "d": "La prestazione complessiva: non il singolo evento, ma la tenuta del sistema — indicatori, esiti delle verifiche interne, andamento delle non conformità, efficacia delle azioni correttive, coerenza tra politica, obiettivi e risultati. Un controllo meno puntuale sul prodotto e più ampio sulla capacità di reggere nel tempo." },
+   { "h": "Agire", "d": "Miglioramento e aggiornamento della regia: se emergono lacune, cambiano i processi o un evento rivela fragilità, il cerchio non si chiude con una presa d'atto — si traduce in decisioni e adattamenti. Il distributore con più depositi e trasportatori: se la regia non pianifica e corregge abbastanza, il personale diligente lavora in una cornice instabile. Contesto, leadership e pianificazione appartengono a questo cerchio." }
+  ]
+ },
+ {
+  "id": "22000_m02_s025",
+  "layout": "punti",
+  "kicker": "Doppio PDCA · 3",
+  "titolo": "Il PDCA operativo: dal pericolo al controllo",
+  "intro": "Il cerchio più vicino al prodotto: come l'organizzazione pianifica e governa concretamente il controllo dei pericoli. Qui ritrovi tutto ciò che hai studiato, ma in una logica dinamica — non definizioni ferme, un ciclo che pianifica i controlli, li attua sul processo, osserva e reagisce con correzioni, azioni correttive e aggiornamenti.",
+  "punti": [
+   { "h": "Pianificare", "d": "Comprendere che cosa controllare e con quali misure: ragionare sui pericoli pertinenti, sul loro significato, sul prodotto finale, sul punto della catena e sulle misure più adatte. È qui che si decide la logica di PRP, OPRP e CCP: se è debole, il ciclo trascina errori — controlli eccessivi dove non servono, deboli dove servirebbero." },
+   { "h": "Fare", "d": "L'attuazione nel processo reale: i PRP creano condizioni di base affidabili, gli OPRP presidiano pericoli significativi con criteri d'azione e osservazioni, i CCP funzionano con limiti critici e misurazioni capaci di sostenere correzioni immediate. Il sistema operativo smette di essere teoria: diventa comportamento, attrezzatura, decisione, competenza." },
+   { "h": "Controllare", "d": "Il monitoraggio e le attività che confermano se i controlli funzionano: il monitoraggio informa durante l'attività, le altre conferme aiutano dopo o su un orizzonte più ampio. Il controllo non serve a riempire registrazioni, ma a sostenere decisioni: se un limite critico non è rispettato, il ciclo deve accorgersene in tempo." },
+   { "h": "Agire", "d": "Reazione e apprendimento: correzione sul problema rilevato e sul prodotto, azione correttiva sulla causa per impedire la ricorrenza — più l'aggiornamento, quando un cambio di ricetta, fornitore o tecnologia modifica il quadro dei pericoli. Ma il ciclo operativo non vive da solo: senza risorse, responsabilità, competenza e comunicazione, i controlli si indeboliscono." }
+  ]
+ },
+ {
+  "id": "22000_m02_s026",
+  "layout": "punti",
+  "kicker": "Doppio PDCA · 4",
+  "titolo": "Quando i due cicli si parlano, e quando si separano",
+  "intro": "Il valore del doppio PDCA sta nel coordinamento. Il sistema dà direzione, risorse, ruoli, obiettivi e miglioramento; l'operativo trasforma quella direzione in controlli concreti. Quando si parlano, l'organizzazione mantiene coerenza anche mentre cambia; quando si separano, appare ordinata sulla carta ma perde tenuta.",
+  "punti": [
+   { "h": "La nuova ricetta con frutta a guscio", "d": "Sul piano del sistema: valutazione dei requisiti, comunicazione, responsabilità aggiornate, risorse. Sul piano operativo: revisione di flussi, segregazioni, etichette, controlli al cambio prodotto, gestione allergeni. Se il sistema approva ma l'operativo non si aggiorna, il prodotto entra dentro controlli pensati per la situazione precedente." },
+   { "h": "L'aggiornamento come ponte", "d": "Un'attività, immediata o pianificata, per far entrare nelle pratiche le informazioni più recenti: non conservare solo ciò che era stato stabilito, ma assorbire le novità e tradurle sia nella regia sia nei controlli. L'operatore logistico che aggiunge i surgelati: se aggiorna solo contratti e organigrammi ma non il presidio operativo, il doppio PDCA si rompe." },
+   { "h": "Il detergente riformulato", "d": "Il fornitore cambia formulazione o istruzioni: sul piano del sistema ricevere, valutare, comunicare; sul piano operativo capire se cambiano tempi di risciacquo, modalità, addestramento, punti esposti a residui. Se una delle due letture manca, il cambiamento resta parziale e il rischio aumenta." },
+   { "h": "I segnali di disallineamento", "d": "La direzione parla di priorità ma il personale non ha istruzioni aggiornate; i controlli di linea sono ben descritti ma nessuno sa chi decide le modifiche; le non conformità si correggono sul momento ma le cause tornano perché il sistema non assorbe ciò che l'operatività impara. Quando i due cerchi sono allineati, tutte le parole del modulo si tengono insieme in modo naturale." }
+  ]
+ },
+ {
+  "id": "22000_m02_s027",
+  "layout": "punti",
+  "kicker": "Sintesi",
+  "titolo": "La mappa mentale da portare con te",
+  "intro": "Non ripetere le definizioni una per una: ricostruire la logica che le tiene insieme. Sette idee che, ripassate mentalmente, ti lasciano in testa una mappa e non un dizionario sparso — serve proprio a orientarti quando il caso reale è più complesso delle definizioni.",
+  "punti": [
+   { "h": "1 · Campo di applicazione ampio", "d": "Non solo chi trasforma alimenti: organizzazioni coinvolte in modo diretto o indiretto nella catena — materiali, servizi, trasporto, stoccaggio, supporti che possono incidere sulla sicurezza." },
+   { "h": "2 · Il pericolo al centro", "d": "Ciò che nell'alimento, o nel contesto che lo influenza, può causare un effetto nocivo. Non confonderlo con il rischio, e leggilo nel punto giusto della catena — prodotto, materiale a contatto, mangime, ambiente, servizio." },
+   { "h": "3 · Prodotto finale relativo", "d": "Non una categoria assoluta: è finale rispetto all'organizzazione che lo fornisce. Lo stesso oggetto è prodotto finale per uno e materia prima per il successivo — distribuisce responsabilità." },
+   { "h": "4 · La triade delle misure", "d": "PRP = base; OPRP = presidio operativo mirato con criteri d'azione; CCP = punto con limite critico e soglia netta. Le sigle servono solo se restano collegate al ruolo reale della misura." },
+   { "h": "5 · La reazione alla deviazione", "d": "Il limite critico traccia il confine nel CCP; il monitoraggio osserva durante l'attività; la correzione elimina la non conformità e gestisce il prodotto; l'azione correttiva rimuove la causa. Se manca un passaggio, il sistema vede tardi o impara poco." },
+   { "h": "6 · La rintracciabilità", "d": "Seguire storia, movimento e ubicazione di ciò che conta: rende possibili risposte selettive, sia nel circuito distributivo (ritiro) sia verso il consumatore (richiamo). Più è chiara e tempestiva, meno si agisce alla cieca." },
+   { "h": "7 · Il doppio PDCA", "d": "Un cerchio governa il sistema, un altro l'operatività dei controlli. Allineati = sistema coerente; separati = incoerenze tra ciò che la direzione dichiara e ciò che il processo riesce davvero a fare." }
+  ]
+ },
+ {
+  "id": "22000_m02_s028",
+  "layout": "chiusura",
+  "kicker": "Chiusura · Modulo 2",
+  "modNum": "2",
+  "titolo": "Usare questa base nel checkpoint e nel seguito",
+  "punti": [
+   { "h": "Più di termini e definizioni", "d": "Hai costruito il lessico con cui leggerai tutta la ISO 22000: se è solido, i requisiti successivi non appariranno come blocchi separati, ma come risposte organizzate a una domanda di fondo — come fa un'organizzazione, in un punto preciso della catena, a fornire prodotti e servizi sicuri in modo stabile e dimostrabile?" },
+   { "h": "Ripassa come una catena di relazioni", "d": "Parti da chi rientra nel campo di applicazione; passa a che cosa proteggere (il prodotto finale rispetto all'uso previsto); chiediti quali pericoli possono essere presenti o trasferiti lungo la catena; solo dopo entra nelle misure di controllo e nella loro differenza." },
+   { "h": "PRP, OPRP, CCP", "d": "PRP come base, OPRP come presidio operativo specifico con criteri d'azione, CCP come punto del processo con limite critico. Da lì prosegui con monitoraggio, correzione, azione correttiva e rintracciabilità: se il percorso mentale segue quest'ordine, le domande del checkpoint diventano facili da ricollocare." },
+   { "h": "Il confine tra concetti vicini", "d": "Il checkpoint non premia la memoria meccanica: verifica se sai distinguere pericolo da rischio, correzione da azione correttiva, OPRP da CCP, prodotto finale da ingrediente — e se sai collocare ogni termine dentro un processo reale." },
+   { "h": "La reazione come sequenza", "d": "Limite critico, monitoraggio, correzione, azione correttiva formano una catena logica: prima definisci il confine, poi osservi dove si colloca il processo, poi reagisci subito all'evento, infine lavori sulla causa per evitare il ritorno." },
+   { "h": "Il doppio PDCA come lente", "d": "Tieni i due cerchi come immagine mentale — regia del sistema e governo operativo. È la chiave che rende ordinata la lettura dei moduli successivi, a partire dal prossimo: contesto, leadership e pianificazione." }
+  ],
+  "prossimo": {
+   "modulo": "3",
+   "titolo": "Contesto, leadership e pianificazione",
+   "testo": "Dal vocabolario ai primi requisiti del sistema: il cerchio ampio del PDCA che prepara il terreno ai controlli operativi."
+  }
+ }
+]
