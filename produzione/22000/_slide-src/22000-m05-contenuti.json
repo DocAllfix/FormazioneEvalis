@@ -1,0 +1,399 @@
+[
+ {
+  "id": "22000_m05_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 22000 — Sicurezza alimentare",
+  "kicker": "Modulo 5",
+  "eyebrow": "Dove le parole incontrano i fatti",
+  "titolo": "Operativo 1: PRP, rintracciabilità ed emergenze",
+  "testo": "La parte più concreta: ciò che accade davvero in stabilimento, turno dopo turno. La norma non ti chiede di ammirare la documentazione, ma di capire se l'operatività produce alimenti sicuri in modo governato — ogni requisito va ascoltato con le orecchie del campo. E i quattro fili si sostengono a vicenda: un layout debole complica le pulizie, pulizie incoerenti aumentano il rischio di contaminazione, una rintracciabilità fragile rallenta il ritiro, un piano di emergenza vago amplifica il danno. La pompa dell'acqua che cala nel pomeriggio e i lotti non registrati: in una scena, pianificazione, PRP, emergenze e rintracciabilità.",
+  "agenda": [
+   "Primo filo: pianificazione e controllo dei processi operativi",
+   "Secondo filo: i PRP, fondamenta igieniche del sistema",
+   "Terzo filo: la rintracciabilità, fino al ritiro credibile",
+   "Quarto filo: le emergenze, reagire senza improvvisare",
+   "La lente del giro stabilimento",
+   "Osservare una prova di rintracciabilità"
+  ]
+ },
+ {
+  "id": "22000_m05_s002",
+  "layout": "punti",
+  "kicker": "Pianificazione operativa · 8.1",
+  "titolo": "Dai criteri al fatto compiuto",
+  "intro": "Quando un processo è sotto controllo lo percepisci subito: le persone sanno cosa fare, i criteri sono chiari, le registrazioni hanno un senso, le deviazioni non passano inosservate. L'organizzazione deve pianificare, attuare, controllare, mantenere e aggiornare i processi necessari a ottenere prodotti sicuri — una richiesta di governo concreto, non amministrativo.",
+  "punti": [
+   { "h": "Criteri, controlli, evidenze", "d": "Stabilire criteri (condizioni attese, limiti, modalità, responsabilità, risultati): senza, il processo si regge sulle abitudini, fragili quando il personale cambia. Controllare in base a quei criteri: se trovi controlli che non discendono da criteri dichiarati, l'organizzazione misura molto ma governa poco. E le informazioni documentate danno fiducia che il processo sia stato eseguito come pianificato — collegano un'attività reale a un criterio reale, non un foglio pieno di firme." },
+   { "h": "Modifiche pianificate e non", "d": "Cambiare detergente, riorganizzare un flusso, spostare uno stoccaggio, esternalizzare una lavorazione: non entra in produzione come dettaglio logistico, va capito prima. E anche i cambiamenti non voluti vanno riesaminati — un guasto, una rottura di barriera tra aree, una sostituzione urgente con personale meno formato: guardare alle conseguenze e ridurre gli effetti negativi." },
+   { "h": "Esternalizzare non trasferisce il rischio", "d": "Se un deposito esterno gestisce il prodotto finito, un trasportatore controlla il freddo, un terzista svolge una fase, l'organizzazione tiene comunque il processo sotto controllo: requisiti definiti, approvazione dei fornitori di servizio, verifica delle prestazioni. I documenti dicono che i mezzi sono idonei, ma nei picchi il carico attende troppo in banchina — formalmente esterna, operativamente il rischio resta dentro il perimetro." },
+   { "h": "La modifica utile che apre un varco", "d": "Una nuova etichettatrice più veloce a fine linea crea più accumulo di prodotto in attesa tra confezionamento e pallettizzazione: se nessuno rivaluta tempi di attesa, spazi e segregazione dei lotti, una modifica utile alla produttività genera una vulnerabilità inattesa. La premessa di tutto: il sistema sa trasformare le intenzioni in processi eseguiti e governati?" }
+  ]
+ },
+ {
+  "id": "22000_m05_s003",
+  "layout": "punti",
+  "kicker": "PRP · 8.2",
+  "titolo": "Le fondamenta che rendono credibile il controllo",
+  "intro": "Non un allegato secondario: le condizioni di base che permettono al resto di funzionare. Se le fondamenta sono deboli, il piano di controllo dei pericoli dovrà faticare per compensare difetti strutturali — e spesso non ci riuscirà. Stabilire, attuare, mantenere e aggiornare i PRP per prevenire o ridurre contaminanti nei prodotti, nella lavorazione e nell'ambiente.",
+  "punti": [
+   { "h": "L'ambiente conta", "d": "La sicurezza non nasce solo nel punto in cui misuri un parametro, ma dal contesto che rende quell'attività pulita, ordinata, separata e governabile. La parola chiave è ambiente: il PRP protegge il contesto in cui il processo vive." },
+   { "h": "Quattro criteri di adeguatezza", "d": "Adeguati all'organizzazione e al contesto; alle dimensioni del sito, al tipo di attività, alla natura dei prodotti; validi per tutto il sistema o mirati a un prodotto/processo; approvati consapevolmente dal gruppo sicurezza alimentare. Non esiste un pacchetto universale — chi porziona formaggi, chi fa biscotti secchi e chi prepara pasti refrigerati hanno bisogni diversi." },
+   { "h": "Non solo abitudine interna", "d": "Nella scelta vanno identificati i requisiti di legge, regolamentari e concordati con il cliente: i PRP nascono dall'incrocio tra legge, settore, prodotto, clienti e rischi reali. Un sito che lavora bene secondo la propria storia ma non ha tradotto in regole un nuovo requisito cliente su materiali o segregazione: non manca la buona volontà, manca la trasformazione del contesto in regole di base." },
+   { "h": "Adeguati fino a che punto?", "d": "La nuova linea di ingredienti in polvere lasciando invariati percorsi di pulizia, flussi d'aria e stoccaggi: sulla carta i PRP esistono, nella realtà non sono più adeguati. Il reparto ampliato senza ripensare spogliatoi e lavamani: le regole di igiene restano ma il contesto le rende più difficili. La domanda: adeguati a cosa, e fino a che punto?" }
+  ]
+ },
+ {
+  "id": "22000_m05_s004",
+  "layout": "punti",
+  "kicker": "PRP · Edifici e spazi",
+  "titolo": "Quando il rischio nasce dalla geometria",
+  "intro": "Prima ancora di guardare una procedura, guarda come il sito è costruito e come le persone si muovono. Muri, corridoi, porte, spogliatoi, percorsi e aree di appoggio non sono neutri: possono aiutare il controllo o ostacolarlo ogni giorno. Un buon layout non elimina il bisogno di disciplina, ma riduce le occasioni in cui la disciplina deve lottare contro lo spazio.",
+  "punti": [
+   { "h": "Il flusso e le sue eccezioni", "d": "Il layout favorisce un flusso pulito, o costringe a continue eccezioni? Se dal ricevimento alla lavorazione il materiale attraversa un'area di prodotto finito, il rischio è nel tragitto; se gli operatori escono dagli spogliatoi puliti ma attraversano una zona sporca, l'igiene si indebolisce prima di cominciare. Salumi e formaggi in vaschetta: nelle ore di picco i pallet in attesa accanto alla linea — formalmente il processo esiste, operativamente il layout produce promiscuità." },
+   { "h": "Le aree per il personale", "d": "Sembra periferico, è centrale: spogliatoi insufficienti, lavabi mal posizionati, percorsi confusi tra abiti civili e indumenti da lavoro, servizi lontani trasformano la disciplina igienica in fatica quotidiana. Quando una regola è scomoda, nel tempo perde efficacia — non «esiste una regola?», ma «è praticabile senza eroismi?»." },
+   { "h": "Superfici con criterio funzionale", "d": "Pavimenti lesionati, giunzioni difficili da pulire, ristagni, porte che non chiudono, finestre non protette, flussi d'aria imprevedibili: non solo difetti edilizi, ma punti dove sporco, umidità e contaminazione trovano casa. Alterna campo lungo (segui i percorsi) e dettaglio (fermati dove il layout costringe a eccezioni)." },
+   { "h": "Le domande temporali", "d": "Com'è il flusso a inizio turno? A fine turno? Quando arrivano due camion insieme? Dove va il materiale in attesa? Le criticità emergono nella saturazione, non nelle condizioni ideali — il corridoio del personale usato nei picchi per appoggiare imballi vuoti: nessuno con cattiva intenzione, ma i flussi cambiano, le pulizie rallentano, le traiettorie diventano più sporche. Se le persone hanno inventato scorciatoie non previste, il sistema progettato non coincide con quello reale." }
+  ]
+ },
+ {
+  "id": "22000_m05_s005",
+  "layout": "punti",
+  "kicker": "PRP · Utilities",
+  "titolo": "Aria, acqua, energia: i PRP che non si vedono",
+  "intro": "Molte condizioni decisive non hanno un volto spettacolare: non fanno rumore, spesso non si notano, ma quando falliscono cambiano subito il livello di rischio. La disponibilità affidabile di acqua, aria di processo, energia e servizi di supporto entra in silenzio nella qualità igienica del processo.",
+  "punti": [
+   { "h": "L'acqua come barriera", "d": "In molti siti è ingrediente, mezzo di lavaggio, veicolo di risciacquo, strumento di pulizia: se la qualità non è adeguata all'uso, il rischio nasce dal sistema che sta sotto l'operatore. Non basta sapere che è disponibile — dove viene usata, con quali controlli, con quali separazioni tra reti, con quali evidenze di adeguatezza? Nelle verdure lavate, l'acqua di processo è parte della barriera di sicurezza." },
+   { "h": "L'aria e l'energia", "d": "L'aria: pulizia dell'ambiente, asciugatura, riduzione di condensa, protezione di aree sensibili — flussi mal direzionati, polveri, condense sopra le linee favoriscono contaminazioni. L'energia: un'interruzione cambia subito il quadro — celle che salgono, nastri fermi, lavaggi incompleti, sistemi che non registrano. Se il sito dipende da refrigerazione continua, la continuità energetica è una condizione di sicurezza, non solo un tema manutentivo." },
+   { "h": "La causa dietro il sintomo", "d": "Le creme refrigerate con condensa sopra il riempimento: il reparto pulisce più spesso, ma la causa è un equilibrio instabile tra umidità, temperatura e ventilazione peggiorato dal cambio stagionale. Se guardi solo le registrazioni di pulizia perdi il quadro — il PRP debole non è la sanificazione, è il servizio ambientale che la rende insufficiente." },
+   { "h": "Conoscere le dipendenze", "d": "Quali processi si fermano senza acqua? Quali peggiorano senza refrigerazione? Quali diventano incontrollabili senza aria compressa? Dove esistono soluzioni tampone e dove il sito entra subito in vulnerabilità? Nei prodotti da forno il fermo elettrico blocca anche etichettatura e registrazioni di lotto: il rischio non è termico, colpisce la rintracciabilità. Molte emergenze nascono dal cedimento di questi servizi invisibili." }
+  ]
+ },
+ {
+  "id": "22000_m05_s006",
+  "layout": "punti",
+  "kicker": "PRP · Rifiuti e infestanti",
+  "titolo": "Difendere il perimetro del processo",
+  "intro": "Il rischio non nasce solo dove manipoli il prodotto, ma anche in ciò che il processo scarta, espelle, accumula o trascura ai margini. Controllo dei parassiti, smaltimento dei rifiuti, gestione delle acque reflue e servizi di supporto: proteggere il confine attivo tra processo e ambiente.",
+  "punti": [
+   { "h": "Rifiuti governati", "d": "Contenitori inadeguati, aree di raccolta troppo vicine al prodotto, percorsi di uscita incrociati coi materiali puliti, tempi di rimozione lunghi: il rifiuto smette di essere scarto governato e diventa presenza attiva — odori, percolazioni, attrazione di insetti, contatti indesiderati. Osserva dove stanno i rifiuti quando il reparto è davvero operativo, non dove dovrebbero stare." },
+   { "h": "Reflui", "d": "Scarichi lenti, sifoni asciutti, ristagni, riflussi, pendenze insufficienti, canaline difficili da pulire trasformano il pavimento in fonte permanente di rischio — ancora più sensibile nei prodotti umidi. Acqua stagnante vicino a passaggi o linee non è solo un difetto di housekeeping: è una possibile rottura del PRP ambientale." },
+   { "h": "Governo degli infestanti", "d": "Trappole ed esche sono una parte minima: prima chiediti cosa rende il sito interessante — fessure, accessi, erba alta, ristagni esterni, porte aperte, reti danneggiate, accumuli, residui. Il produttore di farine con buon contratto esterno ma bancali rotti fuori, erbe non tagliate, porta socchiusa per comodità: il PRP non fallisce per mancanza di documenti, ma perché il sito alimenta le cause che il fornitore dovrebbe solo intercettare." },
+   { "h": "Doppia lettura e dimensione temporale", "d": "Valuta il programma (responsabilità, frequenze, evidenze, azioni) e il contesto fisico che lo rende credibile. E i rischi cambiano nel tempo: un sito in ordine durante una visita annunciata può perdere tenuta la sera, nei fine settimana, nei cambi di stagione — la zona esterna per i resi tenuta più aperta d'estate diventa un richiamo per insetti che rende inefficaci le barriere." }
+  ]
+ },
+ {
+  "id": "22000_m05_s007",
+  "layout": "confronto",
+  "kicker": "PRP · Attrezzature",
+  "titolo": "Il PRP dentro la linea",
+  "intro": "Vicino a una linea cambia domanda: non solo se la macchina funziona, ma se consente di lavorare in modo pulito, ispezionabile e manutenibile. Una linea può produrre bene dal punto di vista tecnico e male dal punto di vista igienico. E la contaminazione incrociata è dove layout, attrezzature, persone e procedure si intrecciano.",
+  "a": {
+   "h": "Idoneità e manutenzione",
+   "sub": "La macchina lavorabile",
+   "punti": [
+    { "d": "Materiali compatibili, superfici integre, smontabilità realistica, tenuta delle guarnizioni, spazi sufficienti: se per pulire bene bisogna smontare mezza linea e fermarla troppo, quella pulizia diventerà parziale. La dosatrice con la parte retrostante irraggiungibile — pulizia formalmente corretta ma attrezzatura non accessibile: PRP strutturalmente debole." },
+    { "d": "La manutenzione incide direttamente sulla sicurezza: perdite d'olio, protezioni allentate, ripari lasciati aperti. La qualità visiva racconta più di un elenco di manutenzioni chiuse — fascette provvisorie, cartoni come spessori, nastro adesivo, riparazioni temporanee protratte." }
+   ]
+  },
+  "b": {
+   "h": "Contaminazione incrociata",
+   "sub": "La barriera che regge nel reale",
+   "punti": [
+    { "d": "Microrganismi, allergeni, corpi estranei, chimici, contatti crudo/pronto: misure fisiche, temporali, procedurali o combinate. La barriera scelta è coerente col rischio e sostenibile? La separazione temporale tra allergeni e non-allergeni diventa fragile se il piano cambia continuamente per esigenze commerciali; la separazione fisica costa di più ma è più semplice da controllare — nessuna è automaticamente giusta." },
+    { "d": "Osserva i punti di contatto: utensili condivisi, tubi a terra, carrelli da aree sporche a pulite, guanti fuori contesto, pezzi smontati in zone non protette. Nei dessert, i convogliatori smontati sempre sullo stesso banco usato nei picchi anche per imballi: non basta correggere il gesto, serve ripensare il PRP." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m05_s008",
+  "layout": "punti",
+  "kicker": "PRP · Catena del materiale",
+  "titolo": "Fornitori, ingressi e flussi logistici",
+  "intro": "La sicurezza non comincia all'avvio della linea, ma quando un materiale viene scelto, approvato, ricevuto, stoccato e movimentato dentro e fuori. L'organizzazione governa tutto il viaggio del materiale, non solo la fase in cui lo trasforma — segui il materiale come una storia: da dove arriva, con quali garanzie, dove sosta, chi lo tocca, come esce.",
+  "punti": [
+   { "h": "Fornitori e ricezione", "d": "Un fornitore non è adeguato perché consegna da anni o costa poco: criteri di approvazione, requisiti rilevanti noti, verifica nel tempo — con presidio proporzionato al rischio (un ingrediente ad alto rischio non come un imballaggio secondario). E la ricezione: non «la merce è arrivata?», ma «l'ingresso è controllato coerentemente col rischio?» — pollo refrigerato, spezie secche e vaschette non dovrebbero ricevere la stessa attenzione." },
+   { "h": "Stoccaggio in movimento", "d": "Non gestire solo in base allo spazio: separazione, rotazione, protezione, identificazione, condizioni ambientali coerenti. Un magazzino ordinato può essere fragile se i pallet stanno troppo vicini alle pareti, l'aria non circola, i lotti si confondono, le aree sono usate opportunisticamente nei picchi. Guardalo come processo, non come fotografia immobile." },
+   { "h": "Spedizione e trasporto", "d": "Anche questi sono PRP: il trasporto può introdurre contaminazioni, errori di temperatura, promiscuità tra carichi incompatibili, perdita di controllo sui lotti — se un prodotto sicuro lascia lo stabilimento in condizioni non governate, il sistema si rompe all'ultimo miglio. Le baie protette? I tempi di attesa compatibili? Gli operatori controllano davvero o firmano un passaggio formale?" },
+   { "h": "La manipolazione interna", "d": "Muletti, transpallet, contenitori riutilizzabili, travasi, attese temporanee raccontano molto: spesso le contaminazioni o le confusioni di lotto nascono qui, non in linea. Il lotto in attesa di verifica parcheggiato nella stessa corsia del prodotto rilasciato: nessun danno visibile ancora, ma il PRP logistico è già indebolito." }
+  ]
+ },
+ {
+  "id": "22000_m05_s009",
+  "layout": "punti",
+  "kicker": "PRP · La disciplina del quotidiano",
+  "titolo": "Pulizie, igiene personale, informazioni di prodotto",
+  "intro": "Temi che tutti dichiarano importanti, ma che solo poche organizzazioni trasformano in routine solide. Proprio perché sembrano ovvi, meritano uno sguardo più esigente — nel quotidiano capisci se la disciplina è viva, non nei moduli perfetti.",
+  "punti": [
+   { "h": "Pulizie eseguibili", "d": "Un programma vale quando definisce cosa, con quale frequenza, con quali modalità, prodotti, responsabilità e verifiche — ma deve essere compatibile con la realtà della linea: se i fermi sono irrealistici, le superfici poco accessibili, il personale cambia spesso o i chimici sono mal gestiti, perde forza. Chiediti sempre: la pulizia descritta è davvero eseguibile nel contesto che vedi?" },
+   { "h": "Disinfezione con criterio", "d": "Non una parola magica da usare sempre: coerente con rischio, prodotto, ambiente e metodo. Due errori opposti — la sottovalutazione (trattare aree sensibili come bastasse rimuovere lo sporco visibile) e l'automatismo (disinfettare senza criterio, creando residui o falsa sicurezza). Un sito maturo sa spiegarti perché pulisce così, dove disinfetta, con quali evidenze e limiti." },
+   { "h": "Igiene personale praticabile", "d": "Mani, abbigliamento, comportamenti, accessi, gestione delle malattie, movimenti tra aree: barriere operative, non dettagli di costume. Rendere il comportamento corretto la scelta più semplice — se il lavabo è lontano, mancano materiali o i percorsi sono scomodi, il PRP si indebolisce. I guanti da cambiare dopo materiali non alimentari, ma con l'approvvigionamento fuori dal percorso comodo: durante il picco qualcuno rinvia — la distanza tra regola e organizzazione pratica." },
+   { "h": "Informazioni di prodotto", "d": "La sicurezza non finisce quando il prodotto esce: etichettatura, conservazione, istruzioni d'uso, allergeni da dichiarare fanno parte della protezione fino all'utilizzo finale. Errori da revisione incompleta delle etichette, cambi frettolosi di ricetta, traduzioni non governate: leggi il PRP anche come coerenza comunicativa — ciò che il prodotto è deve corrispondere a ciò che il consumatore vede e capisce." }
+  ]
+ },
+ {
+  "id": "22000_m05_s010",
+  "layout": "numeri",
+  "kicker": "PRP · Renderli credibili",
+  "titolo": "Scelta, documentazione, monitoraggio, aggiornamento",
+  "intro": "I PRP non valgono perché esiste una lista, ma se l'organizzazione sa spiegare perché li ha scelti, come li ha impostati, come li controlla e quando li aggiorna. Le informazioni documentate precisano scelta, definizione, monitoraggio applicabile e verifica — quattro domande forti da portare sul campo.",
+  "numeri": [
+   { "n": "1", "h": "Perché proprio questi?", "d": "L'adeguatezza al contesto: tipo di attività, natura dei prodotti, dimensioni, requisiti applicabili, impegni con i clienti. Se i PRP sembrano copiati da un altro settore, troppo generici o scollegati dai rischi reali, il sistema perde credibilità." },
+   { "n": "2", "h": "Come tradotti in pratica?", "d": "Un PRP ben definito non si limita al titolo: campo di applicazione, criteri, responsabilità, modalità, condizioni attese. Non basta dire che esiste un controllo infestanti — quali aree copre, chi osserva i segnali, quali azioni seguono un rilievo, come si evita il ritorno." },
+   { "n": "3", "h": "Come è monitorato?", "d": "Non tutti si monitorano allo stesso modo, ma tutti devono avere un presidio coerente — controlli diretti, registrazioni, ispezioni periodiche. Il punto non è accumulare dati, ma accorgersi per tempo che il PRP perde efficacia. Il buon programma pulizie senza verifica delle aree difficili dopo smontaggio: moduli completi, ma i segnali deboli si accumulano." },
+   { "n": "4", "h": "Come è verificata l'efficacia?", "d": "Monitorare non coincide con verificare: il monitoraggio segue l'esecuzione, la verifica prova che ciò che fai funziona. Un sito può controllare puntualmente ma verificare poco; o verificare i PRP critici e trascurare quelli «ovvi» (spogliatoi, rifiuti). Serve equilibrio." },
+   { "n": "5", "h": "E l'aggiornamento", "d": "Mantenere e aggiornare, non solo creare: cambi di layout, prodotti, personale, fornitori, volumi, attrezzature riaprono la domanda sull'adeguatezza. I siti maturi non aspettano il problema — leggono segnali, reclami, deviazioni ricorrenti. E l'approvazione del gruppo sicurezza alimentare ricorda che i PRP sono governo integrato dei rischi, non patrimonio della sola manutenzione." }
+  ]
+ },
+ {
+  "id": "22000_m05_s011",
+  "layout": "punti",
+  "kicker": "Riferimenti di settore · 1",
+  "titolo": "Come i PRP diventano operativi",
+  "intro": "Le regole di base non vivono nel vuoto, ma dentro un settore concreto. Quando l'organizzazione sceglie i PRP deve identificare i requisiti legislativi, regolamentari e concordati con il cliente; poi conviene considerare riferimenti tecnici pertinenti — la ISO/TS 22002-1 quando applicabile, norme, codici di pratica e linee guida coerenti con l'attività. Distinguere l'obbligo minimo dal modo professionale di renderlo solido.",
+  "punti": [
+   { "h": "La parola pertinente", "d": "Un riferimento è utile quando traduce i rischi tipici del settore in aspettative operative più leggibili; inutile o fuorviante quando è preso come una lista standard da copiare senza filtro. Alimenti secchi, prodotto refrigerato, materie prime crude, pronti al consumo: tutti parlano di PRP, ma la profondità richiesta su acqua, aria, flussi, pulizie e segregazioni cambia molto." },
+   { "h": "Due errori speculari", "d": "L'eccesso di genericità (procedure eleganti ma troppo vaghe per guidare il lavoro) e l'eccesso opposto (prescrizioni dettagliate ma prese da un settore diverso, che appesantiscono senza aumentare il controllo). La norma non impone di accumulare documenti esterni per fare bella figura: chiede che i requisiti applicabili siano riconosciuti e tradotti nei PRP." },
+   { "h": "Snack secchi vs piatti refrigerati", "d": "Gli snack secchi: attenzione su polveri, infestanti, protezione degli imballi, punti nascosti delle linee. I piatti pronti refrigerati: tempi di esposizione, continuità della refrigerazione, separazione crudo/cotto, igiene ambientale nelle aree sensibili. Se i due siti adottassero lo stesso livello di dettaglio sugli stessi temi, uno dei due sistemi sarebbe fuori fuoco." },
+   { "h": "Aiuta a partire, non assolve dal pensare", "d": "I riferimenti aiutano a capire il rigore atteso, non sostituiscono il giudizio: se il sito ha introdotto una tecnologia diversa, una rilavorazione complessa o un processo esterno, devi comunque valutare se i PRP coprono la situazione reale. Chi è partito da prodotti a temperatura ambiente e ha aggiunto una linea refrigerata senza ritarare layout e utilities: il riferimento di partenza non basta più, va riletto." }
+  ]
+ },
+ {
+  "id": "22000_m05_s012",
+  "layout": "punti",
+  "kicker": "Riferimenti di settore · 2",
+  "titolo": "Con criterio, non come copia automatica",
+  "intro": "Quando un'organizzazione dichiara di aver considerato riferimenti tecnici, la domanda giusta non è quale documento usa, ma come lo usa. La logica non è mai documentocentrica: legge, aspettative del cliente, natura del prodotto, processo e contesto devono convergere in un set di PRP coerente.",
+  "punti": [
+   { "h": "L'ultimo passaggio decisivo", "d": "Il modo sano: prima chiarisci il perimetro reale dell'attività, poi leggi i temi di settore che la toccano, infine traduci i punti rilevanti in regole, criteri, controlli e responsabilità interne. Se manca l'ultimo passaggio, il documento resta un oggetto esterno al sistema." },
+   { "h": "La parte scoperta della catena", "d": "L'azienda che confeziona in atmosfera protetta con layout, pulizie e flussi interni ben definiti, ma un deposito esterno governato solo con un contratto logistico generico: in apparenza ha considerato il settore, in realtà ha lasciato scoperta una parte della catena. Il riferimento aiuta solo se tradotto in criteri per il fornitore, verifiche sullo stoccaggio, gestione temperature, chiarezza sui lotti." },
+   { "h": "L'uso fotografico", "d": "Preparare una matrice iniziale, dimostrare di aver letto i capitoli, poi non aggiornarla più: ma i PRP vanno mantenuti e aggiornati. Se introduci nuovi ingredienti allergenici, non basta dire che il programma allergeni esiste già — devi rivedere come il riferimento impatta su stoccaggi, sequenze, pulizie, rilavorazioni e formazione." },
+   { "h": "Conformità apparente vs adeguatezza", "d": "Un sito può mostrare procedure formalmente allineate ma poco praticabili: un programma di sanificazione dettagliato con frequenze corrette, ma fermate di linea troppo brevi, personale notturno insufficiente e manutenzione che apre continuamente zone difficili — non è davvero integrato. Fai domande di traduzione, non di presenza: quali requisiti avete ritenuto rilevanti, dove si vedono in reparto, cosa avete escluso e perché?" }
+  ]
+ },
+ {
+  "id": "22000_m05_s013",
+  "layout": "confronto",
+  "kicker": "Riferimenti di settore · 3",
+  "titolo": "Evidenze utili e segnali deboli",
+  "intro": "I riferimenti diventano utili solo quando si trasformano in evidenze leggibili: cerca il filo che collega la scelta alla realtà operativa. Le evidenze più convincenti hanno forma semplice — un criterio definito, una responsabilità chiara, una registrazione coerente, un comportamento osservabile, un riesame motivato. Non un apparato monumentale: coerenza.",
+  "a": {
+   "h": "Evidenze utili",
+   "sub": "Il riferimento ha inciso",
+   "punti": [
+    { "d": "Ogni tema importante lascia un'impronta concreta: requisiti costruttivi, percorsi separati, gestione utilities, criteri di pulizia, controlli infestanti, modalità di ricezione, stoccaggi segregati, punti di osservazione nei giri. Il sito di prodotti secchi con il richiamo di settore nelle aspirazioni, nei percorsi del materiale, nella prevenzione degli accumuli: documentazione più snella, ma sistema più credibile." },
+    { "d": "Le interfacce: dove i riferimenti hanno inciso, anche manutenzione, logistica, acquisti e produzione sanno spiegarti perché certe regole esistono. Se resta confinato alla qualità, le altre funzioni lo vivono come linguaggio esterno — la differenza si sente subito nelle risposte." }
+   ]
+  },
+  "b": {
+   "h": "Segnali deboli",
+   "sub": "Allineamento di facciata",
+   "punti": [
+    { "d": "La copiatura lessicale: procedure con terminologia impeccabile ma non coerenti con layout, turni o attrezzature presenti. L'uniformità innaturale: tutti i PRP con lo stesso dettaglio e frequenza, come se il sito non distinguesse aree più e meno sensibili." },
+    { "d": "L'assenza di riesame: il riferimento considerato all'avvio ma mai aggiornato dopo cambi di prodotto, ampliamenti o reclami. I dessert ad alto contenuto d'acqua che dichiarano attese di settore per le aree sensibili, ma con condensa ricorrente e un programma pulizie identico tra cottura e zona finale: il riferimento non ha modificato il rigore dove serviva — il sistema ha capito cosa dire, non cosa fare." }
+   ]
+  }
+ },
+ {
+  "id": "22000_m05_s014",
+  "layout": "punti",
+  "kicker": "Rintracciabilità · 1",
+  "titolo": "La memoria operativa che collega entrata e uscita",
+  "intro": "Quando la pressione sale, la rintracciabilità smette di essere un tema amministrativo e diventa un test di lucidità del sistema. L'organizzazione deve distinguere senza ambiguità i materiali ricevuti e seguire il prodotto finito fino al primo tratto della distribuzione — un passo indietro (fornitore e lotto di origine) e un passo avanti (verso chi è distribuito).",
+  "punti": [
+   { "h": "La parte più delicata: il processo interno", "d": "Tra i due estremi c'è il processo interno, dove i lotti si trasformano, si mescolano, si spezzano, si rilavorano e cambiano identità. Non basta un buon archivio in entrata e uscita: serve una genealogia affidabile. La salsa con due lotti di pomodoro, uno di sale e uno di basilico, tre batch suddivisi in vasetti distinti — se emerge un dubbio sul basilico, in quali batch è entrato, quali lotti finiti ne derivano, verso quali clienti?" },
+   { "h": "Univoco", "d": "Identificare in modo univoco significa evitare ambiguità: etichette poco leggibili, lotti riportati diversamente tra documenti, registrazioni manuali incomplete, trasferimenti interni non tracciati, contenitori temporanei senza identificazione, rilavorazioni annotate in modo sommario creano zone d'ombra. In tempi normali sembrano difetti sopportabili; in una crisi diventano moltiplicatori di confusione." },
+   { "h": "Efficacia, non tecnologia", "d": "La norma non dice quale software usare: il requisito è l'efficacia. Una piccola realtà con registrazioni essenziali che ricostruisce con precisione può essere robusta; un sito molto digitalizzato che genera stampe eleganti ma non sa ricucire un passaggio manuale di rilavorazione ha robustezza solo apparente." },
+   { "h": "Tre livelli e i requisiti applicabili", "d": "L'identità del materiale in entrata; il legame tra ingredienti, intermedi e prodotto finale; la destinazione del lotto finito nella prima fase distributiva. Se uno è debole, l'intero sistema perde capacità di risposta. E i requisiti legislativi, regolamentari e del cliente sulla rintracciabilità possono chiedere dettagli, tempi e granularità differenti: costruire sul proprio contesto, non su una media indistinta." }
+  ]
+ },
+ {
+  "id": "22000_m05_s015",
+  "layout": "punti",
+  "kicker": "Rintracciabilità · 2",
+  "titolo": "Genealogia dei lotti",
+  "intro": "Per capire se la rintracciabilità è solida, guarda come si costruisce la genealogia dei lotti: il rapporto tra lotti di materiali ricevuti, ingredienti e prodotti intermedi, da una parte, e prodotti finali dall'altra. Non un vezzo da gestionale: la mappa che permette di circoscrivere un problema, ridurre l'impatto e decidere in fretta.",
+  "punti": [
+   { "h": "Circoscrivere il perimetro", "d": "Le minestre refrigerate con verdure da due fornitori, brodo del giorno prima, spezie prepesate, più batch e un recupero di non conforme reinserito: se emerge un'anomalia sulle spezie, non solo «è stato usato il lotto?», ma in quali batch, in quale quantità, con quali rilavorazioni, in quali lotti finali distribuiti. Senza questa ricostruzione, si estende inutilmente il perimetro della crisi." },
+   { "h": "Le condizioni concrete", "d": "Lotti identificati coerentemente in ingresso; trasferimenti interni che lasciano traccia; batch collegati ai materiali effettivamente usati, non a quelli genericamente disponibili; frazioni residue e cambi lotto gestiti con attenzione; prodotto finale che eredita una storia ricostruibile." },
+   { "h": "I punti di discontinuità", "d": "Le difficoltà nascono qui: un contenitore temporaneo senza etichetta, un rabbocco senza registrazione immediata, un passaggio manuale tra preparazione e confezionamento, un cambio turno in cui l'informazione resta orale. Segui un lotto in entrambe le direzioni — alcuni sistemi sono forti nella direzione ascendente e deboli in quella discendente, o viceversa. Entrambe le debolezze sono critiche." },
+   { "h": "Test di plausibilità e consapevolezza", "d": "Il racconto dei lotti deve essere coerente col flusso reale: se i tempi non tornano, i volumi sembrano incompatibili, o una linea risulta aver usato due lotti nello stesso intervallo senza traccia del cambio, è una perdita di affidabilità. E chi compila deve capire che protegge la capacità di risposta futura, non che chiude un modulo — altrimenti le registrazioni si fanno approssimative proprio nella fretta, nei momenti più critici." }
+  ]
+ },
+ {
+  "id": "22000_m05_s016",
+  "layout": "punti",
+  "kicker": "Rintracciabilità · 3",
+  "titolo": "Rilavorazione e prova di massa",
+  "intro": "Finché il processo è lineare, molti sistemi sembrano funzionare. Le difficoltà vere emergono con la rilavorazione e la prova di massa. La norma cita espressamente la rilavorazione di materiali o prodotti; e nella verifica indica come attesa appropriata la riconciliazione delle quantità di prodotto finale con quelle degli ingredienti. La rintracciabilità deve reggere quando il materiale rientra e quando fai i conti.",
+  "punti": [
+   { "h": "La rilavorazione complica la genealogia", "d": "Ogni volta che un semilavorato rientra nel flusso, se il sistema non registra cosa è stato rilavorato, in quale quantità, in quale nuovo batch e con quali limiti, il collegamento origine-destinazione si indebolisce. I biscotti che recuperano prodotto spezzato entro una soglia: da quale lotto proveniva, quando reinserito, in quale prodotto finale? Un contenitore generico etichettato solo «recupero linea» rende la rintracciabilità un mosaico incompleto." },
+   { "h": "La prova di massa", "d": "Non richiede precisione al grammo — esistono perdite fisiologiche, scarti, evaporazioni, residui tecnici — ma chiede un bilancio plausibile e spiegabile. Se da un quantitativo di ingredienti emergono volumi di prodotto finito incompatibili e il sistema non giustifica gli scostamenti, la rintracciabilità perde credibilità: i lotti non devono solo essere nominati bene, devono tornare nei numeri." },
+   { "h": "Quando i nomi tornano ma i numeri no", "d": "Le creme spalmabili: un lotto di nocciole usato in due batch, ma le quantità di prodotto finito attribuite richiederebbero molto più ingrediente di quello ricevuto, con spiegazioni vaghe tra residui, differenze di confezionamento e correzioni manuali. Non una semplice approssimazione contabile: la catena logica dei lotti non regge al controllo quantitativo." },
+   { "h": "Usarla con equilibrio", "d": "Prima chiarisci quali perdite sono normali, quali scarti sono registrati, come si trattano le rese e i residui; poi verifichi la coerenza. Un sito maturo spiega gli scostamenti previsti con evidenze; uno fragile oscilla tra numeri troppo perfetti (poco credibili) e troppo disordinati (inutili). Se rilavorazione e prova di massa sono solide, in caso di sospetto il perimetro si restringe; se deboli, ogni indagine si allarga e il ritiro diventa più oneroso." }
+  ]
+ },
+ {
+  "id": "22000_m05_s017",
+  "layout": "punti",
+  "kicker": "Rintracciabilità · 4",
+  "titolo": "Registrazioni, conservazione, test periodici",
+  "intro": "Una rintracciabilità affidabile non si regge sulla memoria delle persone: informazioni documentate mantenute per un tempo coerente con la vita del prodotto, e prove periodiche che ne confermino l'efficacia. Conservare senza testare produce archivi passivi; testare senza conservare abbastanza rende impossibile ricostruire i fatti quando serve.",
+  "punti": [
+   { "h": "Tempo di conservazione", "d": "Se un prodotto può restare sul mercato per un certo periodo, la sua storia deve restare disponibile almeno per quel tempo — a volte più a lungo per prudenza o esigenze cliente. Ma il punto vero: le registrazioni recuperabili e leggibili quando servono, non solo formalmente conservate. Archivi sparsi, gestionali non allineati, scansioni fatte male, registrazioni manuali difficili da interpretare indeboliscono il sistema più di quanto sembri." },
+   { "h": "La lacuna che non emerge nel caso comodo", "d": "Lo yogurt che conserva bene accettazione latte, schede batch, lotti di confezionamento e spedizioni, ma tiene le rilavorazioni in un quaderno separato di reparto, non sempre digitalizzato: una prova recente sembrava funzionare, ma solo perché il caso scelto non coinvolgeva rilavorazioni. Non basta il volume dei documenti — conta integrità, leggibilità, reperibilità, connessione." },
+   { "h": "Il test che mette sotto pressione", "d": "La norma non chiede fiducia teorica: verificare e provare. Un test ben progettato mette sotto pressione il percorso dei lotti, non conferma ciò che tutti sanno — più istruttivo un prodotto con cambio lotto in turno, una rilavorazione o una spedizione frazionata su più clienti che un caso lineare. Osserva come viene eseguita: quanto tempo, da quante fonti, quanto dipende da una sola figura esperta, i dati si confermano tra loro?" },
+   { "h": "La prova serve a migliorare", "d": "Non solo a trovare difetti: se emerge che un passaggio manuale è troppo lento, la nomenclatura dei lotti crea ambiguità o certe registrazioni non sono immediatamente disponibili, l'organizzazione ha l'occasione di rafforzare il sistema prima della crisi vera. La rintracciabilità vive in due dimensioni: nel tempo (registrazioni conservate) e nella realtà (prove periodiche)." }
+  ]
+ },
+ {
+  "id": "22000_m05_s018",
+  "layout": "numeri",
+  "kicker": "Rintracciabilità · 5",
+  "titolo": "Valutare una prova pratica",
+  "intro": "Se domani emergesse un rischio su un ingrediente o un lotto finito, l'organizzazione saprebbe agire in modo rapido, preciso e credibile? Non limitarti a verificare se il sistema arriva a un risultato: valuta come ci arriva e con quale affidabilità. La rintracciabilità è il presupposto per gestire un prodotto potenzialmente non sicuro e, se necessario, avviare un ritiro con perimetro giustificato.",
+  "numeri": [
+   { "n": "1", "h": "Tempo", "d": "La tempestività è implicita nella funzione: se la ricostruzione richiede ore di ricerche improvvisate, telefonate e correzioni manuali, il sistema potrebbe essere troppo lento per sostenere decisioni urgenti." },
+   { "n": "2", "h": "Completezza", "d": "Coprire identificazione del lotto, legame coi materiali usati, prodotti intermedi, rilavorazioni se applicabili, destinazione nella prima fase distributiva. «Sappiamo da dove veniva, ma non con precisione dove è andato» non è rintracciabilità completa." },
+   { "n": "3", "h": "Plausibilità", "d": "Informazioni coerenti con volumi, tempi di produzione e flusso reale: se i numeri non tornano, la sequenza contraddice l'ordine di lavorazione o compaiono lotti impossibili da collocare cronologicamente, il sistema non è affidabile." },
+   { "n": "4", "h": "Autonomia del sistema", "d": "Una prova robusta non dipende da una sola persona storica che ricostruisce a memoria — deve funzionare come processo. Le emergenze non scelgono il giorno comodo né la presenza degli esperti: se regge solo grazie a un individuo chiave, la capacità di risposta è più fragile di quanto sembri." },
+   { "n": "5", "h": "Utilità per il ritiro", "d": "Il criterio più importante: saprebbe bloccare le giacenze, informare i primi destinatari, circoscrivere i lotti, dare basi alle decisioni? Il sito che identifica batch e clienti ma non separa con sicurezza i vasetti spediti direttamente da quelli passati per il deposito esterno: capacità presente, ma non abbastanza robusta — il ritiro partirebbe più ampio. Il debriefing rivela se la prova è apprendimento o rito." }
+  ]
+ },
+ {
+  "id": "22000_m05_s019",
+  "layout": "punti",
+  "kicker": "Emergenze · 1",
+  "titolo": "Riconoscere gli scenari che contano",
+  "intro": "Quando tutto procede come previsto, molti sistemi sembrano solidi: le emergenze rivelano quanto quel controllo sia robusto. L'alta direzione assicura procedure per reagire a situazioni di emergenza o incidenti che possono avere impatto sulla sicurezza, coerenti con la posizione dell'organizzazione nella filiera, con informazioni documentate. La logica: non improvvisare quando il tempo si accorcia.",
+  "punti": [
+   { "h": "Emergenza ≠ ogni deviazione", "d": "Se salta una registrazione, sei davanti a una non conformità da gestire. Se manca l'acqua, la refrigerazione si interrompe, un incendio blocca un reparto, un incidente ambientale contamina l'area o un'allerta colpisce una materia prima critica, il sistema entra in una condizione diversa: l'evento minaccia la capacità complessiva di produrre o mantenere prodotto sicuro." },
+   { "h": "La parola pertinente", "d": "Non un catalogo infinito di disastri teorici: guardare al ruolo nella filiera e capire quali eventi potrebbero davvero compromettere la sicurezza. Prodotti refrigerati → interruzione della catena del freddo; forte dipendenza dall'acqua di processo → perdita di approvvigionamento o qualità; molti fornitori esterni → incidente su materia prima critica o trasporto." },
+   { "h": "Uno scenario ben scelto", "d": "È plausibile, rilevante per il prodotto, e mette sotto pressione decisioni reali. Il calo improvviso della qualità dell'acqua di lavaggio nelle insalate pronte: non basta continuare con più attenzione — servono decisioni immediate su blocco, segregazione dei lotti, comunicazione interna, estensione temporale del problema, conseguenze sul prodotto già trattato. Una struttura decisionale anticipata, non un esercizio narrativo." },
+   { "h": "Prevenzione e responsabilità", "d": "Le emergenze non sostituiscono i PRP, ne rivelano la tenuta: buone utilities, rintracciabilità efficace, flussi chiari e responsabilità definite rendono la risposta più rapida; un sistema già fragile in condizioni normali amplifica ogni debolezza. E la garanzia è dell'alta direzione — non perché scriva ogni istruzione, ma perché servono risorse, priorità, ruoli chiari e coordinamento: senza quel sostegno, le procedure restano sulla carta." }
+  ]
+ },
+ {
+  "id": "22000_m05_s020",
+  "layout": "punti",
+  "kicker": "Emergenze · 2",
+  "titolo": "Rispondere: decisioni, comunicazioni, contenimento",
+  "intro": "Una volta che l'evento si verifica, la qualità della risposta dipende dalla chiarezza con cui il sistema sa muoversi. L'organizzazione risponde assicurando tre cose nette: identificazione dei requisiti applicabili, comunicazione interna e comunicazione esterna — più azioni per ridurre le conseguenze, proporzionate alla gravità. Il cuore non è la velocità fine a sé stessa, ma la velocità con direzione.",
+  "punti": [
+   { "h": "Il quadro di obblighi", "d": "Alcuni incidenti impongono notifiche, valutazioni aggiuntive o rapporti con soggetti esterni: la risposta non può essere improvvisata. Il sito deve sapere chi valuta il contesto, chi raccoglie i fatti, chi decide il blocco, chi apre il flusso informativo, chi tiene i contatti esterni — senza questa architettura, nelle prime ore si perde tempo prezioso." },
+   { "h": "Comunicazione interna", "d": "Non basta che il responsabile qualità capisca: produzione, logistica, magazzino, manutenzione, acquisti e direzione devono ricevere informazioni coerenti, nello stesso momento utile, con la stessa interpretazione. Se un reparto ferma la linea mentre un altro movimenta materiale coinvolto, l'incidente si allarga. Comunicazioni interne efficaci: brevi, univoche, collegate ad azioni concrete." },
+   { "h": "Comunicazione esterna", "d": "Fornitori, clienti, autorità appropriate, media: l'incidente può propagarsi fuori dai confini rapidamente. Il problema non è solo dire qualcosa, ma dire la cosa giusta, al soggetto giusto, nel momento giusto — un'informazione tardiva o confusa peggiora la gestione tecnica e reputazionale." },
+   { "h": "Proporzione", "d": "La cella che ha lavorato fuori condizione per un guasto prolungato: bloccare i lotti coinvolti, ricostruire la permanenza in cella, verificare le spedizioni, informare le funzioni, preparare la comunicazione ai clienti — e se il prodotto è già uscito, rintracciabilità e ritiro entrano nel cuore della gestione. Non tutte le emergenze richiedono lo stesso livello: un sistema maturo gradua le azioni senza minimizzare né drammatizzare. Le migliori procedure non prevedono tutto: chiariscono ruoli, criteri decisionali, canali e priorità." }
+  ]
+ },
+ {
+  "id": "22000_m05_s021",
+  "layout": "flusso",
+  "kicker": "Emergenze · 3",
+  "titolo": "Metterle alla prova e aggiornarle davvero",
+  "intro": "Una procedura di emergenza non vale finché resta solo scritta. Dove pratico, le procedure vanno sottoposte a prova periodicamente; dopo un incidente reale o una prova, le informazioni documentate vanno riesaminate e aggiornate. La preparazione è un ciclo vivo, non un fascicolo da archiviare: la procedura prepara, la prova espone, il riesame capisce, l'aggiornamento rafforza.",
+  "passi": [
+   { "h": "La prova espone", "d": "Verificare se ruoli, tempi, decisioni e comunicazioni funzionano quando la pressione sale — non una simulazione teatrale, ma una prova che faccia emergere dove il sistema rallenta o dipende troppo da una persona. L'interruzione notturna di corrente nelle zuppe refrigerate: il turnista sa fermare la linea ma non quando coinvolgere la direzione, il magazzino conosce i lotti ma non distingue gli esposti al calo di freddo, la bozza di comunicazione al cliente non è aggiornata — nessuna lacuna drammatica da sola, ma insieme rallentano la risposta." },
+   { "h": "Il riesame capisce", "d": "Una prova ben fatta non termina con «è andato tutto bene», ma con un riesame: cosa ha funzionato, quali tempi troppo lunghi, quali informazioni mancavano, quali ruoli poco chiari, quali moduli inutilmente complessi. Senza analisi, la prova resta una formalità; con analisi concreta, il sistema matura." },
+   { "h": "L'aggiornamento rafforza", "d": "Non solo correggere un nome o un numero: ridefinire i criteri di escalation, semplificare le liste di distribuzione, chiarire i poteri decisionali del turno, modificare la segregazione dei prodotti, integrare rintracciabilità e gestione emergenze — colpire le cause della difficoltà, non i sintomi. Le domande: quando l'ultima prova pertinente ai vostri rischi, quale scenario e perché, cosa è emerso, quali cambiamenti dopo? Se rispondono solo con data e verbale, hai poco; se mostrano apprendimenti e responsabilità riassegnate, il sistema usa le emergenze per diventare più robusto." }
+  ]
+ },
+ {
+  "id": "22000_m05_s022",
+  "layout": "cards",
+  "kicker": "Emergenze · 4",
+  "titolo": "Scenari realistici e maturità del sistema",
+  "intro": "La maturità si vede quando immagini un evento realistico e capisci subito se i collegamenti essenziali reggerebbero. Quattro scenari tipici, molto diversi. In tutti, quattro segnali: chiarezza del comando (chi decide?), qualità dell'informazione (dati completi o frammentati?), proporzione della risposta, apprendimento (dopo l'evento si aggiornano le regole?).",
+  "cards": [
+   { "h": "Servizio essenziale interrotto", "d": "La refrigerazione di una cella si blocca per ore: il sito identifica i lotti coinvolti? Distingue il prodotto esposto da quello no? Ha criteri per fermare, segregare, valutare? Comunica coerentemente tra produzione, magazzino e qualità? Se una risposta vacilla, la gestione diventa incerta." },
+   { "h": "Problema su materia prima", "d": "Un fornitore avvisa che un ingrediente consegnato può presentare un pericolo: la forza dipende dalla rintracciabilità — dove è entrato, in quali batch, con quali rilavorazioni, dove sono finiti i prodotti. Il ritiro deve poter partire con perimetro giustificato, senza allargarsi per mancanza di informazioni." },
+   { "h": "Errore di etichettatura", "d": "Allergene non dichiarato correttamente: la crisi non nasce da un guasto ma da un errore informativo con conseguenze serie. Bloccare le giacenze, verificare le spedizioni, attivare la rintracciabilità, preparare comunicazioni esterne. Se l'azienda lo tratta come difettosità grafica, non ha capito il rischio." },
+   { "h": "Ambiente di processo degradato", "d": "Qualità dell'acqua dubbia, condensa in area sensibile, sospetto di contaminazione dopo un incidente: PRP, valutazione tecnica, blocco e ripartenza controllata insieme. Non basta pulire e ricominciare — da quando il problema è attivo, quali lotti interessati, quale verifica consente di riaprire in sicurezza, come documentare la decisione." }
+  ]
+ },
+ {
+  "id": "22000_m05_s023",
+  "layout": "punti",
+  "kicker": "Giro stabilimento · 1",
+  "titolo": "Prepararti a vedere prima di chiedere",
+  "intro": "Verificare PRP e rintracciabilità durante il giro non è fare una passeggiata tra reparti: è usare il movimento nel sito come strumento di lettura del sistema reale. Prima di fare domande, decidi cosa vuoi vedere, in quale ordine e con quali ipotesi iniziali — questa preparazione cambia moltissimo la qualità della verifica.",
+  "punti": [
+   { "h": "Partire dal flusso", "d": "Da dove entrano i materiali, come si ricevono, dove sostano, come si trasformano, dove passano persone e attrezzature, dove si accumulano attese, dove escono rifiuti, dove esce il prodotto finito. Se segui il flusso, i PRP si mostrano quasi da soli; se ti muovi per reparti isolati, perdi i collegamenti." },
+   { "h": "Entrare con un'idea di rischio", "d": "Prima del giro: quali prodotti più sensibili, dove reclami o deviazioni ricorrenti, quali attività esterne che incidono, quali cambi di layout/manutenzioni/picchi/nuovi materiali in corso. Per gli alimenti refrigerati cerchi ricevimento, percorsi del crudo, tempi di attesa, celle, carico; per i secchi polveri, accumuli, tenuta dei magazzini, infestanti — domande mirate al contesto, non curiosità generica." },
+   { "h": "Il sito in condizioni ordinarie", "d": "Se la visita passa solo per aree preparate in anticipo, la lettura è più debole: osserva anche i punti meno presentabili ma rivelatori — retro linee, aree di attesa, lavaggio utensili, uscite rifiuti, magazzini secondari, locali tecnici, baie di carico, corridoi dei muletti. Nelle salse, il reparto principale ordinato ma una zona laterale con scatole aperte vicino a scarti e a un passaggio in uscita racconta il rigore reale." },
+   { "h": "Dosare osservazione e intervista", "d": "All'inizio conviene vedere; le domande arrivano dopo, quando hai raccolto indizi visivi — se chiedi troppo presto ti fai guidare dalle spiegazioni invece che dai fatti. «Perché questo lavabo non è rifornito?», «come gestite questo incrocio di percorsi?», «chi pulisce dietro la linea?»: domande che nascono da ciò che hai visto hanno molto più valore. Il giro non colleziona difetti sparsi — capisce se il sistema regge come insieme." }
+  ]
+ },
+ {
+  "id": "22000_m05_s024",
+  "layout": "punti",
+  "kicker": "Giro stabilimento · 2",
+  "titolo": "Leggere i PRP sul campo",
+  "intro": "Il compito non è solo notare ciò che non va, ma capire se è un episodio locale, una deviazione momentanea o il sintomo di un PRP impostato male. Un pavimento bagnato può essere un evento appena accaduto o il segnale costante di drenaggi deboli; una porta aperta un passaggio contingente o un layout che spinge a scorciatoie. Osserva dettaglio e contesto insieme.",
+  "punti": [
+   { "h": "La ricorrenza rivela", "d": "Pavimenti lesionati, giunzioni sporche, condensa, ristagni, passaggi promiscui, aree di accumulo improvvisate, strumenti in zone non dedicate: ognuno, da solo, dice qualcosa, ma è la ricorrenza a dirti se il PRP è debole. Più indizi nella stessa direzione = probabilità alta di problema strutturale. E leggi ogni difetto in termini di praticabilità: la regola esiste, ma il sito la rende eseguibile?" },
+   { "h": "Il comportamento spontaneo", "d": "Non cercare solo gli errori individuali, ma le abitudini che il contesto incoraggia: se più operatori appoggiano oggetti nello stesso punto improprio, forse manca un'area dedicata; se tutti tengono una porta socchiusa, forse il flusso è scomodo; se le pulizie sono buone dove l'accesso è facile e scarse nelle zone difficili, forse tempi o attrezzatura non bastano. Risali dalla deviazione alla causa di sistema." },
+   { "h": "Rifiuti e infestanti nel sistema", "d": "I contenitori svuotati regolarmente ma l'area di raccolta vicina alla baia di ricevimento, il percorso che attraversa un tratto per imballi puliti, la porta spesso aperta: al singolo contenitore diresti che lavorano bene; guardando il sistema, il PRP su rifiuti e flussi ha un punto debole. E per gli infestanti cerca inviti e opportunità — fessure, erba alta, residui esterni, reti danneggiate — non l'infestante: il controllo è credibile quando il sito riduce le condizioni che li favoriscono." },
+   { "h": "Il tempo e le note concrete", "d": "Molti segnali cambiano nel corso della giornata: una zona pulita a inizio turno accumula residui e condensa con la pressione — osserva la stessa area in momenti diversi, o informati su come si presenta nei picchi. Un PRP che regge solo nella prima mezz'ora dice poco. E annota fatti collocati nel tempo e nello spazio («canalina con ristagno in zona di passaggio a metà turno»), non impressioni generiche («igiene migliorabile») difficili da difendere in risultanze." }
+  ]
+ },
+ {
+  "id": "22000_m05_s025",
+  "layout": "punti",
+  "kicker": "Giro stabilimento · 3",
+  "titolo": "Dentro la linea",
+  "intro": "Vicino alle linee, i PRP non si valutano per presenza di regole, ma per qualità dell'esecuzione reale. Quattro aree che, osservate insieme, dicono se la disciplina quotidiana è davvero incorporata: pulizie, manutenzione, comportamento del personale, misure contro la contaminazione incrociata.",
+  "punti": [
+   { "h": "Pulizie nei punti critici", "d": "Non l'apparenza generale: retro delle macchine, giunzioni, ruote, parti smontabili, intercapedini, sotto nastri e tramogge. «Dove sarebbe più difficile pulire bene?» — poi vai a vedere lì. Residui ricorrenti o zone trascurate: probabilmente non il singolo operatore, ma tempo insufficiente, attrezzatura poco accessibile, sequenza mal progettata, verifica superficiale." },
+   { "h": "Manutenzione governata", "d": "Riparazioni provvisorie che durano troppo, guarnizioni usurate, coperture danneggiate, perdite, vibrazioni, sensori sporchi, protezioni mancanti: ogni intervento non governato può diventare sorgente di contaminazione o ostacolo alle pulizie. Chiedi come si decide se una riparazione temporanea è accettabile e per quanto — se nessuno risponde, la provvisorietà diventa permanente." },
+   { "h": "Le persone e le abitudini diffuse", "d": "L'igiene si vede nei gesti semplici: lavaggio mani, cambi guanti, passaggi tra aree, uso indumenti, reazione a una deviazione notata. Non osservare solo la conformità ideale, ma quanto il sistema aiuta o ostacola il comportamento corretto — materiale che manca, lavaggio scomodo, percorsi poco intuitivi. Cerca le abitudini diffuse, non l'errore isolato." },
+   { "h": "Contaminazione incrociata nei picchi", "d": "Utensili condivisi tra aree incompatibili, carrelli da sporco a pulito, contenitori temporanei non identificati, sequenze gestite con troppa elasticità, allergeni poco segregati: segnali che non fanno rumore ma incidono molto. Gli utensili che al cambio ricetta restano su un carrello usato anche per materiali non alimentari «solo nei momenti di fretta»: la barriera non è abbastanza robusta nei picchi. Domande aderenti al gesto: come sapete che la macchina è pronta dopo la sanificazione? Cosa fate se un utensile cade?" }
+  ]
+ },
+ {
+  "id": "22000_m05_s026",
+  "layout": "punti",
+  "kicker": "Prova pratica · 1",
+  "titolo": "Impostarla senza sconti",
+  "intro": "La prova pratica è l'occasione di vedere se il sistema sa trasformare registrazioni sparse in una decisione affidabile. Ma devi impostarla bene: una simulazione troppo semplice conferma solo che il sito sa raccontare il caso più comodo; una scelta con criterio rivela la robustezza vera. Onesta ma sfidante.",
+  "punti": [
+   { "h": "Il punto di partenza", "d": "Da un lotto finito risalendo all'indietro (misura la genealogia interna), o da un ingrediente andando avanti verso prodotti e destinatari (misura l'estensione di un problema dall'origine). Entrambe utili — alternarle nel tempo è molto efficace, perché alcuni sistemi sono forti in una direzione e deboli nell'altra." },
+   { "h": "Il caso che mette sotto pressione", "d": "Meglio un prodotto con più ingredienti, un cambio lotto in turno, una spedizione frazionata, una possibile rilavorazione, un passaggio a deposito esterno. Peggio un lotto lineare, un solo batch, senza complicazioni e ancora fresco nella memoria di tutti. E dichiara con chiarezza l'obiettivo — «tutti i lotti finiti che contengono l'ingrediente della consegna X, con quantità e primi destinatari»: più è chiaro, più è leggibile la qualità della risposta." },
+   { "h": "Metodo prima del risultato", "d": "Chi prende in mano la ricostruzione? Da quali registrazioni parte, in che ordine? Quanto dipende da una persona storica? Quanto il sistema sostiene la ricerca con dati accessibili? Se la prova si basa soprattutto su memoria o scorciatoie verbali, hai già un segnale: la rintracciabilità deve vivere nelle informazioni disponibili, non solo nell'esperienza di chi conosce il reparto." },
+   { "h": "Le discontinuità e la prova di massa", "d": "Verifica cosa accade quando il materiale cambia contenitore, passa da preparazione a confezionamento, entra una rilavorazione, resta in attesa, va a un deposito esterno — è qui che i sistemi apparentemente ordinati perdono precisione. Le creme spalmabili che ricostruiscono i batch ma si fermano su un non conforme per peso rilavorato nel turno dopo (modulo separato, collegamento non immediato): non fallisce del tutto, ma mostra il punto debole nella parte sensibile. E se appropriato, chiedi la prova di massa: coerenza, non perfezione." }
+  ]
+ },
+ {
+  "id": "22000_m05_s027",
+  "layout": "numeri",
+  "kicker": "Prova pratica · 2",
+  "titolo": "Quando sostiene davvero un ritiro",
+  "intro": "Trasformare ciò che hai osservato in un giudizio equilibrato: una rintracciabilità può sembrare ordinata e risultare poco utile quando bisogna decidere in fretta. Cinque criteri concreti — e un collegamento prezioso coi PRP: lotti poco leggibili, contenitori temporanei non identificati o trasferimenti poco tracciati non sono solo un problema di rintracciabilità, ma segnali di debolezza nei processi di base.",
+  "numeri": [
+   { "n": "1", "h": "Completezza", "d": "Il sito ha ricostruito ingresso del materiale, genealogia interna, passaggi critici (rilavorazione, deposito esterno) e prima destinazione del finito? Se manca un pezzo, la risposta è parziale." },
+   { "n": "2", "h": "Precisione", "d": "Sa dire esattamente quali lotti sono coinvolti e quali no, o si rifugia in un blocco molto ampio per prudenza? Una certa prudenza è comprensibile, ma quando l'estensione è dovuta a dati incompleti, la rintracciabilità non sta facendo il suo lavoro." },
+   { "n": "3", "h": "Tempo", "d": "Non basta arrivare alla conclusione: arrivarci con tempestività compatibile con una crisi reale. Troppe telefonate, verifiche incrociate manuali o correzioni successive segnalano un sistema che potrebbe non reggere l'urgenza." },
+   { "n": "4", "h": "Autonomia", "d": "Si regge su registrazioni accessibili e ruoli chiari, o dipende da una o due persone? Un sistema che vive solo nella testa di chi lo conosce da anni è vulnerabile proprio quando quelle persone mancano." },
+   { "n": "5", "h": "Utilità per il ritiro", "d": "Il più importante: saprebbe bloccare le giacenze, informare i primi destinatari corretti, circoscrivere i lotti, dare basi alle decisioni? Le salse che ricostruiscono batch e clienti ma non separano con sicurezza i vasetti spediti direttamente da quelli passati per il deposito esterno: il ritiro partirebbe più ampio e lento — capacità presente, non abbastanza robusta. Nel debriefing: dove si è perso più tempo, quale registrazione ha creato dubbio, cosa cambiereste?" }
+  ]
+ },
+ {
+  "id": "22000_m05_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 5",
+  "modNum": "5",
+  "titolo": "Dalle fondamenta operative al controllo dei pericoli",
+  "punti": [
+   { "h": "Pianificazione e PRP", "d": "Dalla capacità di trasformare criteri e intenzioni in attività governate, alle fondamenta igieniche del sistema: layout, utilities, rifiuti, pulizie, attrezzature, persone, fornitori, stoccaggi, trasporti e infestanti mostrano quanto la sicurezza nasca dal quotidiano, non solo dai punti più visibili." },
+   { "h": "Riferimenti di settore", "d": "Un livello di maturità: leggere i riferimenti tecnici come strumenti per rendere i PRP davvero pertinenti al prodotto e al processo reale — aiutano a capire il rigore atteso, non sostituiscono il giudizio professionale." },
+   { "h": "Rintracciabilità come memoria", "d": "Non solo un passo indietro e un passo avanti: genealogia dei lotti, rilavorazione, prova di massa, tempi di conservazione, test periodici. Una rintracciabilità credibile non serve a compilare archivi, ma a permettere decisioni rapide, sostenere un ritiro e limitare l'estensione del danno." },
+   { "h": "Emergenze", "d": "La preparazione non è possedere un piano generico, ma riconoscere scenari pertinenti, definire ruoli, comunicazioni e criteri decisionali, mettere periodicamente alla prova le procedure e aggiornarle dopo test o incidenti. Un sistema maturo non aspetta l'evento per capire chi fa cosa." },
+   { "h": "Giro e prova pratica", "d": "Dove il giudizio conta di più: osservare seguendo i flussi, distinguere un dettaglio isolato da un problema strutturale, valutare se una prova è solo ordinata o davvero utile alla crisi. La parte operativa vive nella coerenza tra ciò che si dichiara, si rende possibile e si fa quando il tempo stringe." },
+   { "h": "Verso il controllo dei pericoli", "d": "Dalle fondamenta e dalla memoria del sistema alla logica con cui i pericoli vengono analizzati, classificati e tenuti sotto controllo con la struttura HACCP. Al checkpoint ti servirà ripensare a flussi, lotti, barriere operative e al modo in cui un sito reagisce quando qualcosa si rompe." }
+  ],
+  "prossimo": {
+   "modulo": "6",
+   "titolo": "Operativo 2: analisi dei pericoli e piano HACCP",
+   "testo": "Come queste basi operative sostengono il cuore del controllo dei pericoli: dall'analisi alle misure di controllo, ai CCP e agli OPRP."
+  }
+ }
+]
