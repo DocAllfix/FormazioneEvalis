@@ -1,0 +1,421 @@
+[
+ {
+  "id": "39001_m07_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 39001 — Sicurezza del traffico stradale",
+  "kicker": "Modulo 7 — indagine sugli eventi",
+  "eyebrow": "Cercare il colpevole non è capire le cause",
+  "titolo": "L'indagine sugli incidenti stradali",
+  "testo": "Entri nel punto 9.2, dedicato all'indagine degli eventi stradali. Un sistema serio non si misura solo quando tutto fila bene: si misura da come raccoglie lezioni utili nei momenti critici. Se un'organizzazione è coinvolta in un evento che provoca, o avrebbe potuto provocare, esiti gravissimi, non può limitarsi a registrare il fatto e ripartire: deve capire cosa è successo, perché, che cosa poteva controllare o influenzare, e quale cambiamento deve nascere. Quando osservi come conduce un'indagine, guardi il suo modo di apprendere, e se la sicurezza è trattata come adempimento o come responsabilità reale verso persone reali. Un furgone urta un motociclista in uscita da un deposito: se ti fermi a «il conducente non ha visto», hai chiuso il caso senza imparare nulla; se chiedi com'era organizzata l'uscita, quali istruzioni c'erano, che visibilità offriva il cancello, che tempi di consegna erano imposti, inizi a vedere il sistema. Dopo un evento serio tutta l'organizzazione tende a proteggersi, e una buona indagine diventa uno spazio di lucidità. Tieni una domanda sullo sfondo: dopo un evento, l'organizzazione cambia perché ha capito qualcosa, oppure dice di aver capito e continua come prima?",
+  "agenda": [
+   "Perché si indaga: dal fatto alla lezione, tempestività, metodo",
+   "Il processo: fonti, sequenza, fattori contribuenti, interviste",
+   "Oltre la colpa del conducente: organizzazione, percorso, veicolo",
+   "I quasi incidenti: i segnali senza danno finale",
+   "Dalle indagini alle azioni e alla verifica critica"
+  ]
+ },
+ {
+  "id": "39001_m07_s002",
+  "layout": "split",
+  "kicker": "Perché si indaga · 1",
+  "titolo": "Dal fatto alla lezione: il senso del punto 9.2",
+  "lead": "Dedicare un requisito autonomo all'indagine è una scelta di priorità: gli eventi stradali non sono eccezioni da archiviare, sono segnali di realtà che il sistema deve saper leggere. Il punto 9.2 non si accontenta di annotare il sinistro: chiede di registrare, indagare e analizzare. Registrare dice che un fatto è accaduto; indagare lo ricostruisce; analizzare lo trasforma in conoscenza per decidere meglio.",
+  "punti": [
+   { "h": "L'ultimo anello di una catena", "d": "Negli incidenti l'esito visibile è solo l'ultimo anello: l'urto non inizia nel momento dell'impatto, ma molto prima, dentro scelte, condizioni e controlli combinati nel tempo. Se non cerchi quella catena, ti resta in mano solo la superficie del problema." },
+   { "h": "Dove l'organizzazione aveva margine", "d": "La norma orienta verso i fattori sottostanti che l'organizzazione può controllare o influenzare. Se un autista perde il controllo su fondo bagnato, la pioggia non dipende da lei; ma turni, pressione sui tempi, manutenzione degli pneumatici, formazione sulle condizioni avverse e scelta del percorso possono dipendere eccome." },
+   { "h": "Comprensione orientata all'azione", "d": "Il requisito non cerca una narrazione completa per curiosità: collega le indagini alla necessità di azioni correttive e a opportunità di prevenzione. L'indagine non è un capitolo separato dal miglioramento — è l'innesco del miglioramento." },
+   { "h": "Il rischio di assolversi troppo presto", "d": "Tre urti chiusi con la formula «distrazione del conducente». Guardando meglio: i corrieri ricevono variazioni di priorità durante il tragitto, rispondono al vivavoce mentre guidano, hanno finestre troppo strette nelle ore congestionate. La distrazione non sparisce, ma smette di essere la spiegazione finale: diventa un effetto atteso di un'organizzazione mal disegnata." }
+  ]
+ },
+ {
+  "id": "39001_m07_s003",
+  "layout": "evidenza",
+  "kicker": "Perché si indaga · 2",
+  "eyebrow": "Tempestività, memoria, prove",
+  "titolo": "Perché agire subito",
+  "testo": "Il punto 9.2 chiede che le indagini siano svolte in modo tempestivo. Sembra ovvio, ma è una delle richieste più difficili da rispettare bene: dopo un evento, nelle prime ore tutto spinge in direzioni diverse — emergenza, persone da assistere, clienti, mezzi da recuperare, assicurazioni. In mezzo a questo vortice l'indagine slitta, e quando slitta si impoverisce in modo irreversibile. La ragione è semplice: le prove si degradano, le tracce cambiano, i ricordi si ricostruiscono, le persone si influenzano a vicenda. Ogni giorno aumenta la probabilità di avere una storia coerente, ma meno vera. Chi guida ricorda meglio la sequenza se ascoltato presto, con calma e senza pressione accusatoria; il mezzo parla di più se osservato prima di essere spostato o riparato; e parlano i documenti vivi del momento — il programma giornaliero, le modifiche dell'ultimo minuto, i messaggi operativi, gli orari effettivi di partenza, le pause davvero fatte. C'è anche un secondo motivo: un'indagine avviata presto comunica che l'evento conta, e questo influisce sulla disponibilità delle persone a collaborare. Se chi guida percepisce che l'obiettivo è capire e non colpire, parlerà con precisione; se percepisce caccia al colpevole, si chiuderà. Naturalmente essere tempestivi non significa essere precipitosi: una buona indagine parte presto ma non inventa conclusioni veloci — prima raccoglie i fatti essenziali, poi organizza gli approfondimenti, infine formula un'analisi credibile. Velocità e superficialità non sono la stessa cosa: la prima protegge la prova, la seconda la rovina."
+ },
+ {
+  "id": "39001_m07_s004",
+  "layout": "flusso",
+  "kicker": "Il processo · 1",
+  "titolo": "Avvio dell'indagine: fermare il caos e raccogliere i fatti",
+  "intro": "Quando un evento è appena accaduto, il primo rischio non è solo il danno: è perdere ordine mentale. Una buona indagine inizia con una regia semplice. La norma non impone un modello unico di apertura, ma il suo obiettivo richiede un modo riconoscibile di partire: se ogni volta si improvvisa, la qualità dipende dal singolo, non dal sistema.",
+  "passi": [
+   { "h": "Mettere in sicurezza e proteggere le informazioni", "d": "Prima si mette in sicurezza ciò che va messo in sicurezza, poi si proteggono le informazioni utili — foto, rilievi, dati del mezzo prima che venga spostato. Chiarire chi coordina le prime raccolte, chi conserva le evidenze, chi contatta i coinvolti evita che informazioni utili si disperdano in telefoni e ricordi." },
+   { "h": "Le domande essenziali", "d": "Che cosa è successo, dove, quando, chi era coinvolto, quali conseguenze, quali elementi materiali sono disponibili subito e quali potrebbero scomparire rapidamente. Sembra elementare, ma è qui che molte organizzazioni inciampano: raccolgono solo i dati assicurativi, o lasciano che l'operativo scriva un rapporto già orientato a difendere il proprio reparto." },
+   { "h": "Distinguere ciò che sai da ciò che pensi", "d": "«Il conducente correva» è un'ipotesi, a meno di elementi affidabili; «il mezzo ha urtato il cordolo sul lato destro, lasciando un segno visibile» è un fatto osservabile. Questa disciplina del linguaggio impedisce alle conclusioni di infiltrarsi prima dei dati." },
+   { "h": "Il clima iniziale", "d": "Le persone coinvolte sono spesso spaventate o sulla difensiva. Se il primo approccio è accusatorio, la qualità delle informazioni cala; se il messaggio è «adesso capiamo bene che cosa è successo», aumentano precisione e collaborazione. Questo non elimina la responsabilità individuale: evita di saltare alla fine prima di aver percorso il tragitto." }
+  ]
+ },
+ {
+  "id": "39001_m07_s005",
+  "layout": "cards",
+  "kicker": "Il processo · 2",
+  "titolo": "Fonti di dati affidabili: vedere l'evento da più lati",
+  "intro": "Una buona indagine non vive di una sola voce: vive dell'incrocio tra fonti diverse, ciascuna con punti di forza e limiti. Negli eventi stradali la prima versione disponibile è spesso parziale, emotiva o incompleta. Il valore non sta nell'accumulare carta, ma nel collegare fonti che si controllano a vicenda.",
+  "cards": [
+   { "h": "I limiti di ogni singola voce", "d": "Solo chi era alla guida: vedi il fatto dall'interno ma perdi il contesto. Solo il responsabile operativo: una lettura che giustifica le scelte fatte. Solo i documenti: il lavoro come doveva essere, non com'è stato. La qualità nasce dal confronto." },
+   { "h": "Le molte fonti utili", "d": "Testimonianze dei coinvolti e degli osservatori, dati del veicolo, fotografie, segni materiali, pianificazione, turni, pause, formazione, manutenzione, comunicazioni. E elementi più discreti ma decisivi: la pressione commerciale del giorno, una sostituzione improvvisa, una modifica del percorso, un ritardo accumulato prima." },
+   { "h": "Nessuna va scartata in automatico", "d": "Una testimonianza imprecisa può suggerire una pista corretta; un documento perfetto può raccontare un processo ideale mai realizzato; una fotografia oggettiva può inquadrare solo un dettaglio. L'organizzazione sa triangolare racconto, dato materiale e contesto? O chiude appena trova una spiegazione comoda?" },
+   { "h": "Le discrepanze come punto di partenza", "d": "Se il turno ufficiale mostra orari regolari ma le comunicazioni del mattino raccontano continue urgenze, non scegliere subito la versione che ti piace: capisci perché il lavoro reale si è allontanato da quello previsto. Un segnale di maturità è dichiarare le incertezze residue." }
+  ]
+ },
+ {
+  "id": "39001_m07_s006",
+  "layout": "split",
+  "kicker": "Il processo · 3",
+  "titolo": "Ricostruire la sequenza: prima, durante e dopo",
+  "lead": "Rimettere l'evento in ordine temporale sembra un'operazione narrativa, ma è una tecnica analitica potentissima. Molte cause apparenti cambiano significato quando le rimetti nella giusta sequenza: un fatto che sembra origine può essere solo una conseguenza intermedia. La cronologia non è un abbellimento del rapporto: è la spina dorsale dell'indagine.",
+  "punti": [
+   { "h": "Il prima", "d": "Le condizioni preparatorie: pianificazione, carico di lavoro, stato del mezzo, condizioni note del percorso, consegne ricevute, cambi di programma, esperienza del conducente, qualità delle informazioni fornitegli. Se manca il prima, quasi sempre mancano le vere leve di miglioramento." },
+   { "h": "Il durante", "d": "La dinamica: percezione del rischio, manovre, velocità adeguata o meno al contesto, visibilità, interazioni con altri utenti, funzionamento del veicolo, margini di recupero. È l'istante che cattura l'attenzione, ma da solo racconta poco." },
+   { "h": "Il dopo", "d": "Reazioni e conseguenze immediate: gestione dell'emergenza, comunicazione interna, recupero del mezzo, conservazione delle prove. Se manca il dopo, sfuggono problemi di gestione che aggravano gli effetti o compromettono l'apprendimento." },
+   { "h": "Uno strumento di controllo logico", "d": "La sequenza verifica la coerenza delle fonti: se un testimone dice «forte ritardo» ma i dati mostrano una sosta non prevista poco prima, hai un elemento da esplorare. Una sequenza troppo netta con pochi dati è sospetta quanto una confusa con molti dati: distingui fatti confermati, probabili e punti ancora incerti." }
+  ]
+ },
+ {
+  "id": "39001_m07_s007",
+  "layout": "definizione",
+  "kicker": "Il processo · 4",
+  "eyebrow": "Il cuore dell'indagine",
+  "titolo": "Dai fatti ai fattori contribuenti",
+  "definizione": "I fatti descrivono ciò che è accaduto; i fattori contribuenti spiegano perché l'evento ha trovato spazio per accadere. Molte organizzazioni si fermano ai fatti immediati e credono di aver capito: hanno solo descritto la scena finale. Contributo non significa colpa: un fattore contribuente aumenta la probabilità dell'evento, ne facilita l'innesco o ne peggiora gli effetti — controllabile del tutto, in parte, o solo influenzabile.",
+  "punti": [
+   "Pensa a livelli diversi: uno vicino alla dinamica (le condizioni immediate), uno intermedio (decisioni operative, regole, organizzazione), uno più profondo (cultura, priorità, risorse). Un furgone tampona in coda: il fatto è il mancato arresto in tempo. Ma il conducente recuperava un ritardo da programmazione stretta, il veicolo era diverso dal solito, le pause compresse e le istruzioni arrivavano durante la marcia: un sistema di pressioni che ha ridotto i margini.",
+   "L'errore frequente è scegliere un unico fattore finale, vicino alla persona. «Disattenzione» nomina una modalità dell'errore, non le sue radici: devi chiederti da che cosa è stata favorita — fatica, distrazioni operative, percorso non familiare, tempi irrealistici, manutenzione incompleta. L'elenco può essere lungo, ma non casuale: i fattori vanno sostenuti dai dati e collegati alla sequenza.",
+   "La prova per capire se li hai formulati bene: da quel fattore può nascere una decisione concreta? «Fretta» resta vago; «programma compresso nell'ultima parte del turno» inizia a vedersi. «Scarsa attenzione» resta sulla persona; «mezzo sostitutivo poco familiare assegnato senza margine» apre già una pista di miglioramento."
+  ]
+ },
+ {
+  "id": "39001_m07_s008",
+  "layout": "confronto",
+  "kicker": "Il processo · 5",
+  "titolo": "Interviste utili: domande che aprono, domande che chiudono",
+  "intro": "L'intervista è uno degli strumenti più potenti e più delicati. Potente, perché fa emergere dettagli che nessun modulo contiene. Delicata, perché basta il tono sbagliato per perdere informazioni preziose. Se la persona sente che l'obiettivo è assegnare colpe in fretta, si difende; se sente che è capire bene sequenza e contesto, parla con precisione. Non è buonismo, è metodo.",
+  "a": {
+   "h": "Domande che chiudono",
+   "sub": "Portano a giustificarsi, non a ricordare",
+   "punti": [
+    { "d": "«Perché non hai frenato?», «perché non eri attento?»: chiudono subito il campo. A un autista che urta un ostacolo in retromarcia, «hai fatto la manovra troppo in fretta» ottiene quasi certamente una risposta difensiva e perde il contesto — la visuale, il rumore nell'abitacolo, la pressione per liberare l'area." },
+    { "d": "Il linguaggio del corpo conta: se interrompi spesso, completi le frasi al posto dell'altro o approvi solo quando senti ciò che ti aspettavi, stai guidando il racconto. E se ogni indagine termina con un richiamo al conducente, i racconti successivi diventeranno più reticenti e meno sinceri." }
+   ]
+  },
+  "b": {
+   "h": "Domande che aprono",
+   "sub": "Ricostruiscono senza suggerire la risposta",
+   "punti": [
+    { "d": "«Che cosa stavi facendo poco prima? Quale itinerario avevi ricevuto? Che cosa hai visto? Che cosa ti ha sorpreso?». Con «mi spieghi la manovra dalla tua posizione» emergono visuale, presenza o assenza di un aiuto a terra, pressione temporale. Separa le interviste quando ci sono più coinvolti: i ricordi si contaminano con facilità." },
+    { "d": "Intervistare bene rispetta la persona anche quando l'evento è stato pesante: questo non ammorbidisce l'analisi, la rende più affidabile. E ciò che emerge va confrontato con dati oggettivi: l'intervista migliore non sostituisce le altre evidenze, le completa." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m07_s009",
+  "layout": "cards",
+  "kicker": "Il processo · 6",
+  "titolo": "Analizzare schemi e ricorrenze",
+  "intro": "Una singola indagine serve a capire un episodio; una serie di indagini confrontabili serve a capire il sistema. Gli incidenti raramente sono tutti diversi in modo assoluto: cambiano le circostanze immediate, ma spesso ripetono vulnerabilità di fondo — stessi orari critici, stesse pressioni, stessi punti del percorso, stesse carenze di coordinamento.",
+  "cards": [
+   { "h": "Dal caso al modello operativo", "d": "In sei mesi: urti in retromarcia, tamponamenti, una caduta di motociclo, un investimento evitato per poco. Ogni evento sembra diverso, ma le indagini mostrano un filo comune: finestre strette, agende modificate tardi, aree di sosta improvvisate, mezzi assegnati senza continuità. Non una collezione di errori individuali, ma un modello che erode i margini." },
+   { "h": "Una base dati coerente", "d": "Gli eventi vanno descritti con categorie abbastanza stabili da consentire confronti. Bastano poche voci mantenute nel tempo: tipo di attività, fase della missione, tipo di manovra, luogo per famiglia di contesto, fascia oraria, mezzo, presenza di variazioni dell'ultimo minuto, meteo o carico. Non serve un software: serve la disciplina di usare le stesse voci." },
+   { "h": "Un ritmo di lettura", "d": "Una revisione trimestrale, anche breve, con una sola domanda in testa: che cosa si sta ripetendo? Quando questo appuntamento esiste, le ricorrenze emergono presto e le decisioni arrivano prima del danno. Un'ora ogni tre mesi di lettura d'insieme insegna spesso più di rapporti dettagliati su ogni singolo caso mai confrontati." },
+   { "h": "Prendere sul serio i segnali deboli", "d": "Un piccolo urto ripetuto nello stesso tipo di manovra può anticipare un evento ben più grave; un quasi investimento all'uscita del deposito può anticipare un investimento reale. Un sistema forte non aspetta il disastro per convincersi che esiste un problema: riconosce i pattern prima, e agisce sui fattori intermedi che preparano gli esiti peggiori." }
+  ]
+ },
+ {
+  "id": "39001_m07_s010",
+  "layout": "split",
+  "kicker": "Il processo · 7",
+  "titolo": "Chiudere bene l'indagine: risultati e decisioni",
+  "lead": "Un'indagine è utile solo se si chiude bene: non solo scrivere un rapporto finale, ma trasformare ciò che hai capito in risultati chiari, documentati e utilizzabili. Il punto 9.2 lega l'indagine a tre esiti pratici — comprendere i fattori governabili o influenzabili, individuare la necessità di azioni correttive, riconoscere opportunità di prevenzione. Se uno manca, il lavoro resta incompleto.",
+  "punti": [
+   { "h": "Quattro elementi di una buona chiusura", "d": "Una sintesi fedele dei fatti accertati e della sequenza; l'esplicitazione dei fattori contribuenti con nessi logici comprensibili; la traduzione di quei fattori in decisioni operative; la conservazione delle informazioni in modo recuperabile, riesaminabile e confrontabile con casi futuri. Senza quest'ultimo, l'organizzazione perde memoria e ricomincia da zero." },
+   { "h": "Descrivere o migliorare", "d": "Una collisione in svolta urbana con itinerario modificato poco prima, zona poco familiare, mezzo con angoli ciechi marcati, tempo residuo stretto. Chiusura debole: «maggiore attenzione del conducente». Chiusura forte: revisione delle regole sui cambi di percorso in corsa, criteri di assegnazione dei mezzi più coerenti, verifica delle tempistiche commerciali, riesame dei punti urbani problematici." },
+   { "h": "Decisioni proporzionate ai fattori", "d": "Se il fattore è organizzativo, un semplice richiamo al conducente è insufficiente; se riguarda un'interazione tra persona, mezzo e contesto, intervenire su uno solo dei tre è troppo poco. La qualità di un'indagine si vede anche dalla qualità della risposta che genera." },
+   { "h": "Sempre una traccia utile", "d": "Non ogni analisi produrrà un grande progetto, ma ogni indagine seria deve lasciare una traccia — una correzione locale, una verifica aggiuntiva, una modifica di istruzioni, un riesame di percorso, una scelta di monitoraggio mirato. Ciò che non si accetta, in un sistema maturo, è che tutto finisca con una spiegazione generica e nessuna conseguenza." }
+  ]
+ },
+ {
+  "id": "39001_m07_s011",
+  "layout": "split",
+  "kicker": "Oltre la persona · 1",
+  "titolo": "Oltre la colpa del conducente",
+  "lead": "Un punto delicato ma decisivo: la differenza tra responsabilità individuale e spiegazione utile. Quando un evento coinvolge chi guida, il racconto più rapido punta lì, perché il gesto dell'ultimo istante cattura l'attenzione. Ma il gesto finale arriva dentro un contesto. Se chiudi con «errore del conducente» puoi avere ragione in parte, ma quasi sempre perdi ciò che serve per evitare la ripetizione.",
+  "punti": [
+   { "h": "La persona nel quadro, non il quadro intero", "d": "La norma orienta verso i fattori che l'organizzazione può controllare o influenzare: ti costringe a guardare attorno al comportamento, non solo dentro. Un furgone urta un ciclomotore in svolta a destra: «non ha controllato lo specchio» può essere vero, ma il percorso era abituale o assegnato all'ultimo? Il mezzo aveva visibilità adeguata? Il turno era già saturo?" },
+   { "h": "Perché è comodo fermarsi", "d": "Attribuire tutto al singolo rassicura il sistema, perché evita di mettere in discussione pianificazione, mezzi, priorità e leadership. È psicologicamente comodo ma tecnicamente povero, e genera un effetto collaterale: le persone iniziano a difendersi più che a collaborare, e i racconti successivi diventano più reticenti." },
+   { "h": "Due piani da non confondere", "d": "Giudizio disciplinare, quando serve, e analisi causale, che serve sempre: sono diversi. Un'organizzazione può dover valutare responsabilità personali, ma l'indagine non può esaurirsi lì. Se si esaurisce lì, rinuncia a capire come il sistema prepara gli errori, li amplifica o non li intercetta." },
+   { "h": "Il lessico che rivela la profondità", "d": "I rapporti seri non si esauriscono in «disattenzione, imprudenza, manovra errata». Parlano anche di turni, istruzioni, assegnazione dei mezzi, caratteristiche del percorso, comunicazioni durante la marcia, vincoli commerciali. Due urti in retromarcia attribuiti a «scarsa attenzione» diventano un sistema che espone ripetutamente le persone a condizioni instabili." }
+  ]
+ },
+ {
+  "id": "39001_m07_s012",
+  "layout": "cards",
+  "kicker": "Oltre la persona · 2",
+  "titolo": "Fattori organizzativi: pressioni, turni, regole, coordinamento",
+  "intro": "Per capire davvero perché un evento si è verificato, entra nell'organizzazione del lavoro quotidiano: è lì che nascono condizioni invisibili ma potentissime, che restringono i margini molto prima della guida. Derivano da decisioni su tempi, risorse, ruoli, priorità e coordinamento — spesso normali abitudini considerate inevitabili, e tra gli elementi più controllabili dall'organizzazione.",
+  "cards": [
+   { "h": "Turni, pause, comunicazioni, priorità", "d": "Un turno formalmente regolare diventa critico con attese improduttive, ripianificazioni continue e tratti finali compressi. Le pause possono ridursi per recuperare ritardi. Le consegne durante la marcia spostano l'attenzione. E se il messaggio implicito è «arrivare comunque», il sistema parla alle persone prima ancora della formazione." },
+   { "h": "La distrazione come punto d'arrivo", "d": "Un tamponamento a bassa velocità sembra banale. L'analisi profonda mostra che quella mattina il piano visite era stato modificato tre volte, il tecnico aveva cambiato veicolo per un guasto e cercava materiale in un abitacolo non familiare, e il coordinatore lo aveva contattato due volte per anticipare l'arrivo. La distrazione diventa il punto d'arrivo di pressioni precise." },
+   { "h": "Le incoerenze delle regole", "d": "Le organizzazioni scrivono istruzioni prudenti ma premiano l'opposto: dichiarano che «la sicurezza viene prima», ma misurano i responsabili quasi solo sulla puntualità; vietano comunicazioni in movimento, ma affidano gli aggiornamenti urgenti a telefonate nel momento più affollato. Queste incoerenze emergono ascoltando le persone, non nei documenti." },
+   { "h": "Cercare la fragilità normale", "d": "Non solo violazioni evidenti: pratiche abituali che funzionano finché tutto va bene. Un sistema debole non produce eventi ogni giorno — li produce quando le sue debolezze si allineano. Se i ritardi nascono da programmazione irrealistica, non risolvi con un richiamo: ridisegni come distribuisci il lavoro." }
+  ]
+ },
+ {
+  "id": "39001_m07_s013",
+  "layout": "split",
+  "kicker": "Oltre la persona · 3",
+  "titolo": "Fattori del percorso: strada reale, accessi critici, contesto",
+  "lead": "Il percorso non è uno sfondo neutro: è una parte attiva della dinamica. Un'indagine utile osserva come l'ambiente abbia preparato, facilitato o aggravato l'episodio. Non per attribuire la colpa alla strada, ma per capire come la strada interagisce con missione, tempi, veicolo e persona.",
+  "punti": [
+   { "h": "Fattori stabili e variabili", "d": "Stabili: geometria, larghezza, curvatura, visibilità, presenza di utenti vulnerabili, accessi stretti, uscite cieche, aree di manovra limitate. Variabili: traffico, cantieri, sosta irregolare, meteo, orari di punta, luce, abbagliamento, fondo deteriorato. Molti casi diventano leggibili solo guardandoli nel loro contesto spaziale reale." },
+   { "h": "Non solo come ha manovrato", "d": "Un autista urta un pedone in uscita da una via stretta. Solo il gesto: «retromarcia non controllata». Il percorso: l'accesso impone sempre una manovra complessa, in un orario di forte presenza pedonale, con la sosta laterale che restringe lo spazio. Il problema non è solo la manovra: è perché quel servizio si svolge così, in quell'orario, con quel mezzo, senza supporti." },
+   { "h": "La familiarità", "d": "Un percorso abituale permette di anticipare alcuni rischi; uno assegnato all'ultimo chiede decisioni più rapide in un contesto meno conosciuto. Conta molto nelle svolte complesse, negli accessi industriali, nelle rotatorie strette, nelle aree miste con pedoni e biciclette. Chiediti sempre: ambiente noto o relativamente nuovo?" },
+   { "h": "I punti critici ricorrenti", "d": "Depositi, cancelli, rampe, banchine, cortili, accessi a cantieri: luoghi dove la routine abbassa la soglia di attenzione mentre la complessità resta alta. Un rapporto utile confronta il lavoro prescritto con quello reale — una deviazione per evitare traffico, un accesso temporaneamente modificato — e descrive luoghi reali, non categorie astratte." }
+  ]
+ },
+ {
+  "id": "39001_m07_s014",
+  "layout": "cards",
+  "kicker": "Oltre la persona · 4",
+  "titolo": "Fattori del veicolo: idoneità, stato, familiarità",
+  "intro": "Il veicolo entra spesso nei rapporti solo come oggetto coinvolto, ma una buona indagine lo tratta come fonte di informazione. Non basta sapere quale mezzo era presente: devi capire se fosse idoneo alla missione, in condizioni adeguate e usato da una persona sufficientemente familiare con le sue caratteristiche. Il punto non è cercare sempre un guasto.",
+  "cards": [
+   { "h": "L'idoneità", "d": "Dimensioni, visibilità, risposta in manovra, capacità di carico, compatibilità col percorso. Un veicolo efficiente può essere poco adatto a un certo tipo di consegna: un furgone alto e lungo per fermate in vie strette. Se ci sono mezzi più adatti ma non assegnati con criterio, il problema è organizzativo e tecnico insieme." },
+   { "h": "Lo stato", "d": "Pneumatici usurati, specchi fuori assetto, luci non efficienti, sensori malfunzionanti, dispositivi disattivati: possono non essere la causa unica, ma riducono il margine di recupero. E proprio il margine di recupero fa spesso la differenza tra episodio lieve e conseguenza grave." },
+   { "h": "La familiarità d'uso", "d": "Mezzi simili possono avere punti ciechi, ingombri, risposta in frenata e comandi diversi. Un conducente spostato all'ultimo su un veicolo non abituale gestisce incertezze piccole ma numerose; dentro una giornata già compressa, l'effetto combinato può essere importante." },
+   { "h": "La gestione del carico", "d": "Un carico mal distribuito o instabile cambia comportamento del mezzo, spazi di arresto, equilibrio in curva, visuale posteriore. Non serve attendere il ribaltamento: anche una frenata improvvisa o un assetto alterato offrono segnali. Un sistema maturo sa che disponibilità di un veicolo non coincide con la sua adeguatezza." }
+  ]
+ },
+ {
+  "id": "39001_m07_s015",
+  "layout": "numeri",
+  "kicker": "Oltre la persona · 5",
+  "titolo": "Mettere insieme i fattori: il quadro completo",
+  "intro": "Hai i pezzi sul tavolo: comportamento, scelte organizzative, percorso, veicolo. Il salto di qualità sta nel non analizzarli come compartimenti separati. Negli eventi reali si combinano e producono una finestra di vulnerabilità. Una collisione lieve ma potenzialmente grave in una rotatoria: «il conducente non ha valutato bene l'ingresso» — oppure quattro linee che convergono.",
+  "numeri": [
+   { "n": "1", "h": "L'organizzazione", "d": "Il giro di consegne era stato modificato a metà mattina per inserire una fermata urgente. Una pressione che si è riversata su tutto il resto della sequenza." },
+   { "n": "2", "h": "Il percorso", "d": "La rotatoria scelta come deviazione era nota per visibilità parziale e traffico intenso in quella fascia oraria. Non uno sfondo, ma un elemento attivo della dinamica." },
+   { "n": "3", "h": "Il veicolo e la persona", "d": "Quel giorno il conducente usava un mezzo sostitutivo con angoli ciechi più marcati, mentre stava recuperando un ritardo già accumulato. Nessun elemento, da solo, obbligava al sinistro; insieme hanno ridotto i margini fino a rendere l'errore molto più probabile." },
+   { "n": "4", "h": "L'equilibrio da tenere", "d": "Le conclusioni riflettono una convergenza sostenuta da dati, o una singola etichetta messa alla fine? Attenzione anche al rischio opposto: rapporti così ampi da dissolvere il ruolo della persona. La guida resta parte dell'analisi, letta dentro il contesto, non al posto del contesto. Non semplificare troppo, non disperdere tutto." }
+  ]
+ },
+ {
+  "id": "39001_m07_s016",
+  "layout": "split",
+  "kicker": "Quasi incidenti · 1",
+  "titolo": "Il valore dei segnali senza danno finale",
+  "lead": "Un terreno ancora più prezioso: i quasi incidenti mostrano lo stesso meccanismo degli eventi seri, ma spesso a costo umano minore — ti offrono apprendimento anticipato. Molte organizzazioni li sottovalutano proprio perché nessuno si è fatto male: è un errore costoso. La norma include anche altri eventi incidentali che hanno il potenziale di provocare morte o lesioni gravi.",
+  "punti": [
+   { "h": "Non un episodio andato bene per caso", "d": "È un evento in cui la barriera finale ha retto all'ultimo momento, o l'esito grave non si è concretizzato per poco. Un autista sfiora un motociclista nascosto dalla sosta irregolare vicino al cancello: nessun urto, ma hai appena visto una combinazione pericolosa tra visuale, sosta, accesso, procedura di uscita e vulnerabilità dell'utente debole." },
+   { "h": "Tre vantaggi", "d": "La frequenza: accadono più spesso dei sinistri gravi, quindi offrono un patrimonio più ricco. La vicinanza causale: condividono con gli eventi seri gli stessi fattori contribuenti, con esito meno pesante. La rapidità di azione: senza un danno importante, spesso l'organizzazione può intervenire con minori resistenze difensive." },
+   { "h": "Non si vedono da soli", "d": "Devono essere raccontati, riconosciuti e raccolti. Se il sistema non li cerca, restano dispersi nei commenti informali, nei messaggi tra colleghi, nella memoria di chi li ha vissuti — e il sistema si impoverisce. Sono spesso il luogo dove emergono i rischi di routine." },
+   { "h": "L'assenza di danno non è assenza di rischio", "d": "Diverse frenate brusche vicino a un attraversamento all'uscita di un capannone: nessuno si fa male. Quando qualcuno mette insieme i fatti, emerge che la visibilità è ostacolata da materiali accatastati e che gli orari di flusso pedonale coincidono con le partenze. A volte il quasi incidente è più istruttivo del sinistro, perché lascia più spazio all'analisi senza il rumore emotivo del danno." }
+  ]
+ },
+ {
+  "id": "39001_m07_s017",
+  "layout": "cards",
+  "kicker": "Quasi incidenti · 2",
+  "titolo": "Farli emergere: segnalazioni credibili e clima di fiducia",
+  "intro": "Riconoscerne il valore è il primo passo; il secondo, più impegnativo, è farli emergere davvero. Le persone segnalano ciò che percepiscono come utile e sicuro da segnalare: se raccontare comporta imbarazzo, colpevolizzazione o perdita di tempo senza esito, le segnalazioni si prosciugano — e il sistema si convince che i problemi non esistano.",
+  "cards": [
+   { "h": "Canali semplici, vicini, seri", "d": "Semplice: poche barriere iniziali, niente troppi passaggi o linguaggio burocratico. Vicino al lavoro reale: descrivere il contesto concreto, non solo categorie astratte. Riconosciuto come serio: la segnalazione produce ascolto, chiarimenti, un follow-up visibile. Senza questo ritorno, la motivazione cala." },
+   { "h": "Emersione e analisi separate", "d": "All'inizio hai bisogno di raccogliere l'episodio con sufficiente apertura; solo dopo lo approfondisci e lo confronti. Se pretendi subito un rapporto perfetto, con spiegazioni complete e linguaggio impeccabile, scoraggerai proprio le informazioni che ti servono di più. Favorire le segnalazioni non significa rinunciare al rigore." },
+   { "h": "Le parole dei responsabili", "d": "Se un capo commenta spesso che certi episodi sono «sciocchezze, sfortuna, distrazioni inevitabili», disinnesca la raccolta. Se tratta le segnalazioni come occasioni per capire il lavoro reale, le persone iniziano a vedere i quasi incidenti non come figuracce da nascondere, ma come dati utili." },
+   { "h": "Non dipendere dagli eroi", "d": "Le segnalazioni esistono perché il processo le merita, o solo quando qualcuno è particolarmente scrupoloso? Un tecnico su scooter segnala di aver evitato una caduta su una rampa bagnata dopo una chiamata urgente: il valore non sta solo nella rampa, ma nell'intreccio tra fondo, urgenza, comunicazioni e aspettative temporali." }
+  ]
+ },
+ {
+  "id": "39001_m07_s018",
+  "layout": "confronto",
+  "kicker": "Quasi incidenti · 3",
+  "titolo": "Leggerli: frequenza e gravità potenziale",
+  "intro": "Un nuovo rischio: trattarli tutti come episodi minori e indistinti. I quasi incidenti non sono tutti uguali — alcuni frequenti ma a bassa gravità potenziale, altri rari ma capaci di conseguenze molto serie. Una lettura matura tiene insieme entrambe le dimensioni: quanto spesso accade, e quanto pesante sarebbe stato l'esito.",
+  "a": {
+   "h": "Descrivere la dinamica sfiorata",
+   "sub": "Per non banalizzare",
+   "punti": [
+    { "d": "Che cosa stava per succedere davvero? Quale barriera ha evitato il danno? Quanto stretto era il margine? Chi o che cosa sarebbe stato coinvolto? Una frenata brusca può essere solo una manovra, oppure il mancato investimento di un pedone; una retromarcia interrotta, solo una correzione o il quasi schiacciamento di un collega. La differenza sta nella qualità della descrizione." },
+    { "d": "Se guardi solo la frequenza, insegui eventi fastidiosi ma meno critici; se guardi solo la gravità potenziale, perdi pattern di routine che logorano il sistema ogni giorno. Servono entrambe le sensibilità." }
+   ]
+  },
+  "b": {
+   "h": "Cercare ricorrenze e valore predittivo",
+   "sub": "Da episodi isolati a segnali di sistema",
+   "punti": [
+    { "d": "Stesso cancello, stessa fascia oraria, stesso tipo di manovra, stesso veicolo, stessa pressione. Più segnalazioni di utenti vulnerabili visti all'ultimo momento in svolta a destra non chiedono «più attenzione»: chiedono se ci siano percorsi ad alta esposizione, mezzi con visibilità sfavorevole, finestre troppo strette, istruzioni insufficienti sui punti critici." },
+    { "d": "Alcuni quasi incidenti assomigliano a eventi gravi già noti: sono avvisi anticipati. Frenate improvvise in arrivo a un deposito con visibilità ridotta e biciclette frequenti: gravità potenziale alta anche se il danno è stato nullo. Il sistema forte agisce sul rischio prima dell'impatto; quello debole aspetta la conferma dolorosa. E collega le segnalazioni alle indagini con danno." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m07_s019",
+  "layout": "punti",
+  "kicker": "Quasi incidenti · 4",
+  "titolo": "Dalla lettura alla prevenzione: agire prima del danno",
+  "intro": "Il vero valore dei quasi incidenti si misura in ciò che fanno succedere dopo, non nella sola raccolta. Se le segnalazioni vengono archiviate ma non trasformate in decisioni, il sistema manda un messaggio pericoloso: vedere il rischio serve a poco. Quando da un episodio senza danno nasce un cambiamento visibile, l'organizzazione dimostra di saper imparare in anticipo.",
+  "punti": [
+   { "h": "Forme diverse di prevenzione", "d": "Talvolta una correzione locale e immediata — liberare una visuale ostruita, cambiare un punto di sosta, spostare un orario, regolare una procedura di uscita. Altre volte scelte più profonde — ripensare un percorso, ridefinire i tempi di servizio, cambiare criteri di assegnazione dei mezzi. Il principio: usare il segnale debole per intervenire sui fattori contribuenti prima che si combinino." },
+   { "h": "Velocità ragionevole", "d": "Non aspettare mesi per confermare ciò che più segnalazioni mostrano già con chiarezza. La tempestività non vale solo per l'indagine dopo un sinistro: vale anche per la capacità di prendere sul serio i segnali che lo precedono. Ogni ritardo inutile espone l'organizzazione alla ripetizione." },
+   { "h": "Proporzionalità", "d": "Non tutti i quasi incidenti richiedono una revisione complessiva, ma quelli ad alta gravità potenziale o fortemente ricorrenti meritano attenzione prioritaria. Un'organizzazione matura sa graduare: «questo episodio richiede una correzione locale, quest'altro apre una domanda più ampia sul nostro modo di operare»." },
+   { "h": "Il circuito virtuoso", "d": "Quando le persone vedono che le loro segnalazioni producono cambiamenti concreti, aumentano fiducia e qualità delle informazioni. Più segnali emergono, più l'organizzazione impara; più impara, più dimostra che segnalare è utile. In audit: i quasi incidenti restano racconti o diventano leve? Cercalo nelle decisioni, nelle modifiche, nella tracciabilità tra segnalazione e intervento." }
+  ]
+ },
+ {
+  "id": "39001_m07_s020",
+  "layout": "split",
+  "kicker": "Dall'analisi al cambiamento · 1",
+  "titolo": "Dall'indagine alle azioni",
+  "lead": "Il passaggio che decide se tutto il lavoro produce miglioramento. Un'indagine, da sola, non cambia la realtà: la cambia solo quando viene tradotta in decisioni coerenti con ciò che ha fatto emergere. La norma collega esplicitamente le indagini alla necessità di azioni correttive e a opportunità di prevenzione: il rapporto non può fermarsi alla comprensione, deve aprire una risposta proporzionata.",
+  "punti": [
+   { "h": "Colpire il punto giusto", "d": "Ogni azione dovrebbe colpire il punto del sistema che ha favorito l'evento, o ha impedito di intercettarlo prima. Se il problema erano tempi di missione irrealistici, non basta ricordare di guidare con prudenza; se era un cancello con visuale pessima, la sola formazione non basta; se era l'assegnazione disordinata dei mezzi, un cartello motivazionale non serve. Le azioni efficaci parlano la lingua delle cause." },
+   { "h": "Intervenire sui fattori intermedi", "d": "Quella quasi collisione all'uscita del deposito: risposta debole «più attenzione agli autisti»; robusta — liberare stabilmente la visuale, ridefinire la sosta, introdurre una modalità di uscita più sicura nelle fasce critiche, riesaminare orari e percorso iniziale. I fattori intermedi non coincidono col danno finale, ma lo rendono più o meno probabile: modificarli riduce eventi anche diversi tra loro." },
+   { "h": "La qualità della formulazione", "d": "«Sensibilizzare il personale, aumentare l'attenzione, richiamare alla prudenza» raramente bastano. Le decisioni devono indicare che cosa cambia, dove, chi lo rende operativo e come si capirà se ha funzionato. Una buona azione nasce dalla domanda: quale modifica concreta riduce questo specifico contributo al rischio?" },
+   { "h": "Parlare a più livelli", "d": "Le risposte migliori combinano livelli diversi: una revisione di pianificazione insieme a un intervento su un accesso fisico; una regola sulle comunicazioni con criteri migliori di assegnazione dei mezzi. Quando le azioni parlano a più livelli, il sistema mostra maturità; quando parlano sempre e solo alla persona alla guida, l'analisi è stata più povera di quanto sembri." }
+  ]
+ },
+ {
+  "id": "39001_m07_s021",
+  "layout": "numeri",
+  "kicker": "Dall'analisi al cambiamento · 2",
+  "titolo": "Priorità, responsabilità e tempi",
+  "intro": "Trasformare le conclusioni in decisioni praticabili, con priorità chiare, responsabilità assegnate e tempi credibili. Molte organizzazioni producono analisi buone, ma poi aprono azioni vaghe, troppe insieme, o senza un vero proprietario. La domanda guida: quale modifica riduce davvero la probabilità che questo stesso meccanismo si ripresenti?",
+  "numeri": [
+   { "n": "1", "h": "Tre criteri di priorità", "d": "La rilevanza del fattore (quanto ha pesato nella catena), il controllo o l'influenza che l'organizzazione possiede, e l'urgenza (quanto rischio resta aperto se la decisione viene rinviata). Questa triade evita due errori opposti: grandi progetti lenti su aspetti secondari, o micro-misure facili su aspetti centrali." },
+   { "n": "2", "h": "Poche, per poterle seguire", "d": "Quando dopo un evento si aprono molte iniziative scollegate, la responsabilità si diluisce e il sistema perde fuoco. Molto meglio tre decisioni coerenti e presidiate che dieci impegni generici destinati a scivolare fuori priorità." },
+   { "n": "3", "h": "Responsabilità con tre caratteristiche", "d": "«Si provvederà» non è una decisione, è una formula. «Il responsabile della logistica rivedrà entro una certa data le uscite del deposito, insieme al preposto operativo» è già molto meglio. Una responsabilità efficace ha un titolare riconoscibile, un oggetto concreto e un tempo di attuazione plausibile." },
+   { "n": "4", "h": "Immediato e strutturale insieme", "d": "Le decisioni migliori sono combinate: una parte immediata riduce il rischio residuo (supporto a terra in certe fasce), un'altra affronta la radice (revisione degli orari di accesso o diversa assegnazione dei mezzi). E prevedi già chi osserverà l'effetto e dopo quanto tempo: la decisione nasce orientata ai risultati, non alla sola esecuzione." }
+  ]
+ },
+ {
+  "id": "39001_m07_s022",
+  "layout": "split",
+  "kicker": "Dall'analisi al cambiamento · 3",
+  "titolo": "Verificare l'efficacia: non basta chiudere le azioni",
+  "lead": "Aprire un'azione è importante, completarla amministrativamente utile, ma nessuna delle due basta. Il punto decisivo: quella decisione ha davvero modificato il sistema nel punto giusto? Devi passare dalla logica del compito eseguito a quella del rischio ridotto. Molte organizzazioni confondono la chiusura formale con l'efficacia reale — e le stesse condizioni ritornano.",
+  "punti": [
+   { "h": "Tornare ai fattori contribuenti", "d": "Ogni azione nasce per cambiare qualcosa di preciso. Se il problema era la visibilità in uscita, osserva se la visuale è migliorata e il comportamento si è stabilizzato; se era la compressione dei tempi, se la pianificazione è diventata più realistica, non solo se è stata diffusa una nuova istruzione; se era un mezzo poco adatto, se l'assegnazione è cambiata nella pratica, non sulla carta." },
+   { "h": "Attuazione contro efficacia", "d": "La verifica di attuazione chiede se la misura sia stata realizzata; quella di efficacia se abbia cambiato il profilo di rischio. In una rimessa con quasi incidenti in uscita, installare uno specchio e ridefinire la sosta sono azioni attuate; capire se i mezzi escono con più margine, se i conducenti segnalano meno criticità e se gli episodi sfiorati calano è efficacia." },
+   { "h": "Più punti di osservazione, senza prove impossibili", "d": "Non basta il riscontro di chi ha chiuso l'attività: ascolta chi guida, osserva il luogo, confronta segnalazioni prima e dopo. Ma non pretendere formule secche: sugli eventi rari l'efficacia si valuta mettendo insieme più elementi coerenti — meno ricorrenze, racconti più stabili, maggiore aderenza alla nuova pianificazione." },
+   { "h": "La tenuta nel tempo", "d": "Alcune azioni mostrano limiti solo dopo un primo periodo: una misura utile può perdere forza se non mantenuta o se le pressioni tornano. La liberazione di un'area di manovra funziona all'inizio, poi materiali e veicoli tornano a occupare lo spazio. La verifica non è un gesto unico: è un piccolo riesame della realtà, fatto tornando ai fattori che avevano reso possibile l'evento." }
+  ]
+ },
+ {
+  "id": "39001_m07_s023",
+  "layout": "cards",
+  "kicker": "Dall'analisi al cambiamento · 4",
+  "titolo": "Conservare e usare le lezioni: memoria organizzativa",
+  "intro": "Resta un'ultima responsabilità: non perdere ciò che è stato imparato. Il punto 9.2 richiede che i risultati siano documentati e conservati. Non è burocrazia accessoria: è il modo con cui il sistema costruisce memoria, rende confrontabili gli eventi e porta le lezioni dove si prendono decisioni più ampie. Senza memoria, ogni episodio resta isolato.",
+  "cards": [
+   { "h": "Che cosa rendere recuperabile", "d": "Non riempire archivi di testo indistinto: che cosa è accaduto, quale sequenza, quali fattori contribuenti, quali azioni avviate, chi ne è responsabile, come e quando ne verrà verificata l'efficacia. Quando questi elementi sono chiari, il caso smette di essere una pratica chiusa e diventa una lezione riutilizzabile." },
+   { "h": "Diffondere apprendimento", "d": "Un quasi investimento all'uscita di un cancello, dovuto a visuale ridotta e sosta laterale. Se il caso resta disperso in cartelle difficili, altri siti non impareranno nulla. Se la lezione è formulata con precisione, sarà possibile confrontare accessi analoghi e prevenire altrove lo stesso meccanismo prima del danno." },
+   { "h": "Il collegamento col riesame di direzione", "d": "Le indagini devono entrare tra le informazioni che aiutano a capire se il sistema migliora. Se più eventi mostrano che la programmazione comprime sistematicamente i tempi, la risposta non può restare in singoli richiami locali: deve arrivare a chi definisce criteri, risorse e priorità." },
+   { "h": "Selettiva, leggibile, viva", "d": "Mette in evidenza ciò che conta, fa capire rapidamente il nesso tra evento e decisione, e viene usata per confrontare nuovi casi. Aiuta una sintesi netta della lezione: «accessi con visuale limitata e uscite in orario di punta richiedono regole di sosta e controllo specifici». Se l'apprendimento resta a chi ha vissuto l'episodio, la memoria è fragile." }
+  ]
+ },
+ {
+  "id": "39001_m07_s024",
+  "layout": "punti",
+  "kicker": "Verificare le indagini · 1",
+  "titolo": "Che cosa rende buona un'indagine",
+  "intro": "Cambi posizione mentale: come riconoscere se una specifica indagine è di qualità? Una procedura ben scritta può convivere con analisi deboli, mentre un sistema essenziale può produrre conclusioni robuste. Valuta la sostanza del lavoro, non la sua confezione. Cinque qualità: tempestività, completezza mirata, coerenza logica, orientamento all'azione, tracciabilità.",
+  "punti": [
+   { "h": "Il ragionamento controllabile", "d": "Due rapporti su eventi simili. Nel primo: poche righe, una causa generica, nessun riferimento al contesto, una misura standard. Nel secondo: sequenza, fonti usate, elementi organizzativi, caratteristiche del percorso, valutazione del mezzo, distinzione tra fatti certi e probabili, decisioni collegate e verifica prevista. Sai subito quale produce apprendimento." },
+   { "h": "La precisione del linguaggio", "d": "«Distrazione, imprudenza, errore di valutazione» sono etichette che chiudono la spiegazione invece di aprirla. Un'indagine migliore specifica in quali condizioni il margine si è ridotto, quali pressioni erano presenti, che cosa il conducente doveva gestire, quale elemento del percorso o del veicolo ha inciso. Più il linguaggio è preciso, più la risposta è mirata." },
+   { "h": "Dichiarare i limiti", "d": "Un'analisi professionale non finge certezza assoluta con dati incompleti: dice che cosa è certo, altamente probabile e cosa resta ipotesi. Questo non indebolisce il rapporto, lo rende affidabile. La qualità sta nell'equilibrio tra decisione e prudenza, non nell'apparenza di sicurezza totale." },
+   { "h": "L'indicatore che smaschera", "d": "Se cambi il tipo di evento ma ritrovi sempre lo stesso testo finale, la stessa causa standard e la stessa azione generica, il processo non legge i casi nella loro specificità: applica un modello comodo. La regola pratica: leggendo il documento, riusciresti a comprendere come l'evento è diventato possibile e quale cambiamento è stato deciso? Se no, c'è un problema di qualità." }
+  ]
+ },
+ {
+  "id": "39001_m07_s025",
+  "layout": "numeri",
+  "kicker": "Verificare le indagini · 2",
+  "titolo": "Difetti ricorrenti: sembra completa ma non insegna nulla",
+  "intro": "I difetti più pericolosi sono i subdoli: rapporti apparentemente ordinati ma privi di potere di apprendimento. Producono tre conseguenze: meno fiducia nelle indagini, azioni ripetitive, fattori contribuenti lasciati intatti.",
+  "numeri": [
+   { "n": "1", "h": "Chiusura prematura sulla persona", "d": "Fermarsi a «errore del conducente». Il problema non è che il comportamento sia irrilevante, ma usarlo come risposta finale invece che come punto di partenza: l'indagine smette di cercare fattori organizzativi, del percorso e del veicolo, e il rapporto resta breve, rassicurante e quasi inutile." },
+   { "n": "2", "h": "Genericità delle cause", "d": "«Distrazione, fretta, imprudenza» descrivono la scena ma raramente spiegano il meccanismo. Se un documento usa sempre le stesse etichette per casi diversi, non sta analizzando: classifica in modo superficiale. E da categorie così povere nasceranno azioni altrettanto povere." },
+   { "n": "3", "h": "Confusione tra fatti e interpretazioni", "d": "Un rapporto fragile presenta ipotesi come dati accertati, o mescola testimonianze, deduzioni e giudizi senza distinguerli. Questo rende impossibile controllare il ragionamento: se non sai quali elementi siano certi e quali no, non puoi valutare bene nemmeno la qualità delle conclusioni." },
+   { "n": "4", "h": "Una sola fonte dominante", "d": "Tutto si regge sulla dichiarazione del conducente, o del responsabile operativo, o del solo documento interno — come se il lavoro reale coincidesse sempre con quello prescritto. Ogni fonte è utile, ma nessuna basta da sola: senza confronto tra più elementi, la spiegazione resta fragile o sbilanciata." },
+   { "n": "5", "h": "Perdita del contesto temporale", "d": "Senza ricostruire prima, durante e dopo, i nessi causali si deformano: un evento sembra nato da una manovra improvvisa, mentre era preparato da ritardi, cambi di itinerario, familiarità ridotta o comunicazioni intrusive. Senza sequenza, tutto tende a collassare sull'ultimo secondo." },
+   { "n": "6", "h": "Nessun collegamento, o abbondanza senza direzione", "d": "Ogni episodio trattato come nuovo di zecca: dieci segnali deboli sulla stessa uscita critica, e ci si stupisce all'undicesimo evento. Oppure molti dettagli irrilevanti che trascurano i pochi che spiegano il caso: la mole non aumenta la comprensione, la nasconde. Così i difetti metodologici diventano difetti di governo." }
+  ]
+ },
+ {
+  "id": "39001_m07_s026",
+  "layout": "tabella",
+  "kicker": "Verificare le indagini · 3",
+  "titolo": "Come verificare: le domande giuste",
+  "intro": "Davanti a un caso concreto, il modo migliore per valutarne la qualità è porre domande semplici ma profonde. Non riscrivere l'indagine al posto dell'organizzazione: capire se il processo è credibile, completo quanto basta e orientato all'apprendimento reale. Una sequenza di verifiche che mette alla prova la solidità del ragionamento.",
+  "cols": [
+   "La domanda",
+   "Che cosa cerchi",
+   "L'indizio di debolezza"
+  ],
+  "righe": [
+   [
+    "Quando è stato avviato il lavoro?",
+    "Che l'indagine parta abbastanza presto da proteggere prove e ricordi",
+    "Parte tardi senza una ragione forte: prove perse, ricordi già ricostruiti"
+   ],
+   [
+    "Su quali fonti si basa?",
+    "Testimonianze, dati operativi, osservazioni sul luogo, mezzo, pianificazione, comunicazioni",
+    "Una sola versione dei fatti, elevata a spiegazione completa"
+   ],
+   [
+    "Distingue prima, durante e dopo?",
+    "Una sequenza che rende controllabile il ragionamento",
+    "Spiegazioni plausibili finché non vengono ordinate nel tempo"
+   ],
+   [
+    "Quale perimetro?",
+    "Non solo la persona alla guida, ma anche organizzazione, percorso e veicolo",
+    "Se un livello manca sempre, il processo ha un punto cieco"
+   ],
+   [
+    "Le azioni corrispondono ai fattori?",
+    "Decisioni collegate ai fattori trovati, non standard indipendenti dal caso",
+    "Sempre «richiamo e formazione generica», anche per problemi di accesso o mezzi"
+   ],
+   [
+    "Perché la si ritiene adeguata?",
+    "Risposte precise, collegate ai dati e ai fattori; confronto con il lavoro reale",
+    "Formule automatiche: il sistema si protegge più che interrogarsi"
+   ]
+  ]
+ },
+ {
+  "id": "39001_m07_s027",
+  "layout": "cards",
+  "kicker": "Verificare le indagini · 4",
+  "titolo": "Verificare il seguito: attuazione e tenuta nel tempo",
+  "intro": "L'ultima verifica non riguarda come l'indagine è stata scritta, ma che cosa è successo dopo. Un sistema può produrre analisi buone e fallire, se non porta a termine le decisioni, non ne controlla gli effetti o non integra le lezioni. La qualità si misura anche nelle conseguenze visibili, mantenute nel tempo e rilette alla luce dei nuovi eventi.",
+  "cards": [
+   { "h": "L'attuazione", "d": "Le azioni sono state davvero realizzate? Sembra banale, ma trovi decisioni formalmente aperte e poi dimenticate, misure avviate solo in parte, altre introdotte per poche settimane e abbandonate quando la pressione ritorna. Se l'attuazione è fragile, il messaggio è: impariamo solo finché l'episodio è fresco." },
+   { "h": "La tenuta del mantenimento", "d": "Una misura efficace oggi può svuotarsi domani se nessuno la difende. Dopo un quasi investimento si libera la visuale del cancello e si ridefinisce la sosta; se dopo due mesi l'area torna a riempirsi, la lezione è stata solo temporanea. Verificare il seguito significa guardare la tenuta, non solo l'avvio." },
+   { "h": "Il ritorno degli eventi", "d": "Non serve che si ripeta lo stesso sinistro identico: basta osservare se tornano segnali della stessa famiglia. Quando ricompaiono, la domanda non è «che cosa è successo oggi», ma «che cosa non ha funzionato nella risposta precedente». Se i quasi incidenti simili tornano, la misura non parlava ai fattori contribuenti." },
+   { "h": "Controlli di routine che sostengono", "d": "Se l'uscita è gestita meglio solo grazie alla buona volontà di un preposto, il miglioramento è fragile; con verifiche periodiche, responsabilità chiare e attenzione della linea, la misura dura. Un segnale finale: l'organizzazione sa spiegare che cosa ha imparato e che cosa fa oggi diversamente?" }
+  ]
+ },
+ {
+  "id": "39001_m07_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi — Modulo 7",
+  "modNum": "7",
+  "titolo": "Un sistema che impara dagli eventi critici",
+  "punti": [
+   { "h": "Il senso del requisito e il processo", "d": "Un evento utile al sistema non è solo qualcosa che è accaduto: è qualcosa da cui imparare in modo tempestivo, documentato e orientato al cambiamento. Registrare fotografa il fatto, l'indagine lo trasforma in conoscenza. Il cuore analitico è il processo: raccolta dei dati, fonti diverse, ricostruzione della sequenza (prima, durante, dopo), interviste che aprono, e la ricerca dei fattori contribuenti controllabili o influenzabili. Se salta qui, tutto il resto si indebolisce." },
+   { "h": "Oltre la persona e il valore dei quasi incidenti", "d": "Fermarsi alla colpa del conducente è comodo ma sterile: l'apprendimento nasce guardando anche organizzazione, percorso e veicolo, e mettendoli in relazione. E il patrimonio informativo più ricco non coincide sempre col danno già avvenuto: i quasi incidenti mostrano gli stessi meccanismi causali dei casi gravi, con esito fortunatamente minore. Raccolti bene, analizzati con intelligenza e usati per agire prima del danno, fanno crescere enormemente la capacità preventiva." },
+   { "h": "Dalle azioni alla memoria, e la catena da tenere", "d": "Dalle indagini alle azioni, e dalle azioni alla verifica della loro efficacia: non basta completare compiti, bisogna ridurre davvero i fattori intermedi. Senza memoria organizzativa, ogni caso resta isolato. La catena da tenere in mente: l'organizzazione avvia l'indagine in tempo, usa fonti diverse, distingue fatti da interpretazioni, ricostruisce la sequenza, cerca fattori governabili, collega le conclusioni a decisioni, verifica l'efficacia, conserva e usa le lezioni. Quando la catena si spezza, la probabilità di ripetizione resta alta." }
+  ],
+  "prossimo": {
+   "modulo": "8",
+   "titolo": "La valutazione delle prestazioni RTS",
+   "testo": "Passerai dall'apprendere dai singoli eventi al leggere con metodo la prestazione complessiva: come monitoraggio, misurazione, analisi e valutazione tengono insieme risultati, tendenze e capacità del sistema di migliorare nel tempo."
+  }
+ }
+]
