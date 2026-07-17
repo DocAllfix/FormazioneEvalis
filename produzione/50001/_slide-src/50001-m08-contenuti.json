@@ -1,0 +1,376 @@
+[
+ {
+  "id": "50001_m08_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 50001 — Sistemi di gestione dell'energia",
+  "kicker": "Modulo 8",
+  "eyebrow": "La prova dei fatti",
+  "titolo": "La valutazione delle prestazioni dell'SGE",
+  "testo": "Entri nella parte che rende tutto credibile: capire se ciò che avevi promesso sta davvero accadendo. Il capitolo 9 di ISO 50001 è il momento della prova dei fatti — non basta avere buone intenzioni, documenti ordinati o riunioni ben condotte: devi mostrare che il sistema produce risultati, che li leggi con metodo, e che reagisci quando i dati segnalano deviazioni importanti. Lavorerai su cinque passaggi collegati: monitoraggio e misurazione (dati in decisioni affidabili), valutazione della conformità (rispetto dei requisiti a intervalli programmati), audit interno (se l'SGE migliora, resta coerente ed è mantenuto), riesame di direzione (i risultati diventano priorità, risorse e correzioni) e infine esercizi di lettura dati. È la chiusura naturale del ciclo PDCA: se la pianificazione risponde a «dove vuoi arrivare», questo modulo risponde a «stai davvero andando lì?». Il taglio è operativo: non memorizzerai formule, ma imparerai a porti domande — cosa monitorare davvero, quando un dato è affidabile, quando uno scostamento merita un'indagine.",
+  "agenda": [
+   "9.1 Monitoraggio, misurazione, analisi e valutazione della conformità",
+   "9.2 Audit interno: programma, obiettività, risultati alla direzione",
+   "9.3 Riesame di direzione: input, output, decisioni",
+   "Esercizi di lettura dati: trend, scostamenti, allarmi, priorità",
+   "Verificare il capitolo 9 come auditor"
+  ]
+ },
+ {
+  "id": "50001_m08_s002",
+  "layout": "split",
+  "kicker": "9.1 Monitoraggio e conformità · 1",
+  "titolo": "Decidere che cosa osservare e come farlo",
+  "lead": "La norma ti chiede prima di tutto di scegliere con chiarezza che cosa tenere sotto osservazione. Sembra ovvio, ma è delicato: se monitori troppo poco perdi i segnali importanti, se monitori troppo raccogli una massa di dati che confonde. Il 9.1 non ti dice solo di misurare: ti chiede di stabilire i metodi, decidere i momenti in cui raccogli i dati e quando quei risultati verranno analizzati e valutati.",
+  "punti": [
+   { "h": "Cosa, con quale metodo, con quale frequenza, in quale sede", "d": "Non basta «misuriamo i consumi»: devi spiegare cosa osservi, con quale strumento, con quale frequenza, e dove trasformi il dato in giudizio. Vale sia per la prestazione energetica (consumi, usi, andamenti degli indicatori, scarto atteso-effettivo) sia per l'SGE come sistema (processi, responsabilità, mantenimento, capacità di sostenere il miglioramento)." },
+   { "h": "Due trappole da evitare", "d": "Un'azienda può avere dati energetici dettagliati e gestirli in modo discontinuo; oppure procedure ordinate e riunioni puntuali, ma indicatori scelti male e decisioni deboli. In uno stabilimento con forni elettrici, monitorare solo l'energia mensile totale del sito è troppo aggregato: se peggiora, non sai se la causa è un forno, un turno aggiunto, un rifasamento assente o una perdita." },
+   { "h": "Risultati validi, non solo precisi", "d": "La norma chiede di determinare ciò che serve per ottenere risultati validi. Un risultato valido non è solo tecnicamente preciso: è interpretabile in modo coerente, collegabile a un processo, capace di permettere un'azione. Se una lettura arriva con ritardi casuali, se il perimetro cambia senza essere registrato o se i valori non sono comparabili, il dato può essere corretto ma gestionalmente poco utile." },
+   { "h": "Una sola catena", "d": "Monitoraggio, misurazione, analisi e valutazione sono quattro verbi, ma una sola catena: prima osservi, poi rilevi in modo strutturato, poi interpreti, infine giudichi. Se salti un passaggio, il sistema si indebolisce. Leggilo come una domanda continua: quale dato mi serve davvero, quando diventa informazione, quando l'informazione diventa decisione." }
+  ]
+ },
+ {
+  "id": "50001_m08_s003",
+  "layout": "numeri",
+  "kicker": "9.1 Monitoraggio e conformità · 2",
+  "titolo": "Caratteristiche chiave: piani d'azione verso gli obiettivi",
+  "intro": "La prima famiglia di informazioni riguarda l'efficacia dei piani d'azione nel portarti verso obiettivi e traguardi. Il cambio di sguardo è cruciale: non verificare solo se le attività sono state eseguite, ma se producono l'effetto energetico atteso. Eseguire un'azione non significa migliorare la prestazione: un piano può essere completato nei tempi e nel budget e restare quasi neutro. Quattro domande per ogni piano.",
+  "numeri": [
+   { "n": "1", "h": "Qual era il risultato energetico atteso?", "d": "Non «installare scambiatore entro giugno» (che dice solo se il lavoro è chiuso), ma il risparmio atteso. Ti protegge da due illusioni: quella della compliance interna (tutto è a posto perché tutti hanno fatto ciò che era scritto) e quella dell'azione visibile (un componente installato vale più di ciò che va provato coi dati)." },
+   { "n": "2", "h": "Con quali dati lo misurerai?", "d": "Un edificio che ottimizza orari, sostituisce pompe e forma addetti può avere ordini chiusi, verbali e rapporti perfetti, ma un miglioramento minimo nel confronto atteso-effettivo. Serve una valutazione onesta dell'efficacia: forse le pompe erano già poco energivore, o la formazione non ha cambiato i comportamenti." },
+   { "n": "3", "h": "In quale periodo lo valuterai?", "d": "Il periodo di confronto va definito insieme al piano. Se nessuno è incaricato di leggere gli esiti, il dato resta orfano; se il responsabile c'è ma i dati arrivano tardi, la valutazione arriva tardi; se i dati arrivano ma l'obiettivo era ambiguo, il giudizio resta debole. Pianificazione e valutazione stanno unite." },
+   { "n": "4", "h": "Quale soglia rende l'azione efficace?", "d": "Quale valore ti fa dire efficace, parzialmente efficace o inefficace. Quando un'organizzazione racconta i piani solo in termini di attività svolte, sta misurando l'impegno più del miglioramento. Monitorare l'avanzamento è utile, ma non confonderlo con la prova che il piano funziona: il 9.1 chiede proprio questo salto di maturità." }
+  ]
+ },
+ {
+  "id": "50001_m08_s004",
+  "layout": "cards",
+  "kicker": "9.1 Monitoraggio e conformità · 3",
+  "titolo": "Indicatori, aree rilevanti e confronto atteso-effettivo",
+  "intro": "La norma richiama altre tre caratteristiche chiave da includere sempre. Insieme aiutano a non guardare il consumo come un numero isolato, ma in rapporto a ciò che l'organizzazione fa, alle condizioni e alle aspettative. In un'azienda alimentare, il consumo mensile resta vicino alla media, ma l'EnPI per tonnellata peggiora: i tre elementi insieme svelano la causa.",
+  "cards": [
+   { "h": "Gli EnPI", "d": "Un indicatore utile rende visibile la relazione tra energia e attività, non solo il volume assoluto: consumo termico per metro quadrato in verniciatura, energia per kg in lavanderia, consumo per unità mantenuta a temperatura in un deposito refrigerato." },
+   { "h": "Il funzionamento delle aree rilevanti", "d": "Non basta quanto consumano in totale: devi capire se lavorano come previsto. Un compressore che cicla troppo, un forno a vuoto per tempi lunghi, una centrale frigorifera con condensazione sfavorevole sono situazioni che il dato aggregato del sito nasconde." },
+   { "h": "Consumo effettivo vs atteso", "d": "Non solo quanto hai consumato, ma quanto ti aspettavi date certe condizioni e quanto te ne sei allontanato. È spesso il luogo in cui emerge il problema: l'indicatore segnala il peggioramento, l'osservazione del funzionamento lo localizza (un tunnel con molte ripartenze), il confronto lo quantifica (l'eccesso nei fine settimana)." },
+   { "h": "Scostamenti significativi → indagare", "d": "Quando trovi scostamenti significativi, devi indagare e reagire, non solo registrarli. «Significativo» non vuol dire enorme: può esserlo perché ricorrente, perché tocca un processo critico, perché allontana un obiettivo. E vai mantenuta traccia sia dell'indagine sia della reazione, per dimostrare che il sistema sa anche intervenire." }
+  ]
+ },
+ {
+  "id": "50001_m08_s005",
+  "layout": "punti",
+  "kicker": "9.1 Monitoraggio e conformità · 4",
+  "titolo": "Metodi e tempi: come ottenere risultati validi",
+  "intro": "Molti sistemi fragili non cadono per mancanza di dati, ma per dati raccolti male, letti tardi o interpretati senza criterio. Il 9.1 chiede di definire i metodi per monitoraggio, misurazione, analisi e valutazione, nella misura applicabile, così da ottenere risultati validi.",
+  "punti": [
+   { "h": "Coerente con la decisione", "d": "Un metodo valido è coerente con la decisione da prendere. Per l'effetto di una regolazione giornaliera, un dato mensile aggregato è troppo lento; per l'andamento stagionale di un edificio, una lettura occasionale è troppo povera. La frequenza dev'essere proporzionata al fenomeno che vuoi governare." },
+   { "h": "Livelli di misura in relazione", "d": "Un solo misuratore sul combustibile dice quanto entra nel sistema, ma non quale utenza peggiora; tre misure sulle utenze senza un bilancio a monte dicono molto sui reparti ma poco sulle perdite complessive. Un metodo sensato mette in relazione i livelli e chiarisce chi legge cosa." },
+   { "h": "Quando misurare, quando valutare", "d": "La norma distingue quando eseguire monitoraggio e misurazione da quando analizzare e valutare. Puoi raccogliere ogni giorno e analizzare ogni settimana. L'importante è non lasciare che il dato si accumuli senza una cadenza di lettura: un sistema che misura sempre ma valuta raramente è un cruscotto acceso che nessuno guarda." },
+   { "h": "Una disciplina del dato", "d": "Segnali di un dato fragile: letture mancanti, cambi di unità non spiegati, perimetri spostati, mesi non confrontabili, correzioni manuali senza criterio. In un centro logistico dove la manutenzione legge i contatori il lunedì, il responsabile elabora il venerdì e il direttore vede a fine mese, una porta guasta per dieci giorni fa lavorare la centrale oltre l'atteso: il sistema ha misurato, ma valutato troppo tardi." }
+  ]
+ },
+ {
+  "id": "50001_m08_s006",
+  "layout": "split",
+  "kicker": "9.1 Monitoraggio e conformità · 5",
+  "titolo": "Valutare prestazione energetica ed efficacia dell'SGE",
+  "lead": "La norma non chiede solo di raccogliere e ordinare dati, ma di valutare la prestazione energetica e l'efficacia dell'SGE. Sono due giudizi distinti: la prestazione dice come sta andando l'energia, l'efficacia dice se il sistema riesce a governarla in modo coerente con quanto pianificato. Puoi avere un miglioramento apparente dovuto a un calo produttivo senza che il sistema sia più efficace; o un sistema che lavora bene ma sconta condizioni esterne sfavorevoli.",
+  "punti": [
+   { "h": "Il ponte: EnPI contro EnB", "d": "La chiave per leggere il miglioramento è confrontare i valori degli EnPI con i corrispondenti EnB. Senza un riferimento, ogni numero rischia di essere interpretato in modo arbitrario; con un riferimento coerente, puoi dire se il sistema sta spostando la prestazione nella direzione attesa. Una linea di essiccazione con volume, turni e qualità cambiati, letta col solo consumo totale, porterebbe a conclusioni affrettate." },
+   { "h": "L'efficacia: fa ciò che promette?", "d": "Individua le aree prioritarie, tiene sotto controllo gli obiettivi, fa emergere gli scostamenti, attiva reazioni proporzionate, mantiene dati e decisioni collegati. Se una funzione manca, puoi avere misure corrette e un sistema gestionalmente debole." },
+   { "h": "Prestazione buona, sistema fragile", "d": "In un'azienda di stampaggio l'EnPI migliora per due trimestri, ma il miglioramento deriva da meno ore di setup e una domanda più regolare; nello stesso periodo la manutenzione predittiva non è stata eseguita, i dati di una pressa mancano per settimane, le azioni correttive restano aperte troppo a lungo. La prestazione appare migliore, l'efficacia mostra fragilità." },
+   { "h": "L'SGE si misura nelle difficoltà", "d": "Vale anche al contrario: in un periodo difficile per mix o clima gravoso, il sistema dimostra efficacia se individua presto gli scostamenti, li analizza bene e reagisce con decisioni sensate. L'SGE non si misura solo quando tutto va bene, ma soprattutto nella capacità di leggere bene quando le cose si complicano." }
+  ]
+ },
+ {
+  "id": "50001_m08_s007",
+  "layout": "punti",
+  "kicker": "9.1 Monitoraggio e conformità · 6",
+  "titolo": "Valutazione della conformità: rispettare ciò che si deve",
+  "intro": "Con il 9.1.2 il focus cambia: non più solo se l'energia è gestita meglio, ma se l'organizzazione rispetta, a intervalli programmati, i requisiti legislativi e gli altri requisiti pertinenti a efficienza, uso, consumo e SGE. Un sistema può apparire ben organizzato e migliorare su alcuni indicatori, ma restare esposto se trascura obblighi esterni o impegni assunti.",
+  "punti": [
+   { "h": "Identificare ≠ verificare", "d": "L'elenco dei requisiti è il punto di partenza, la valutazione è il controllo periodico del loro effettivo rispetto. Due domande spesso confuse: «quali requisiti mi riguardano» (identificazione) e «li sto rispettando» (verifica). Il 9.1.2 si concentra sulla seconda, con una periodicità programmata, non una verifica occasionale solo quando qualcuno se ne ricorda." },
+   { "h": "Il problema è l'assenza di ritmo", "d": "Un sito con impianti termici tiene un registro dei requisiti, ma per mesi non verifica se i controlli sono eseguiti nei tempi, se le registrazioni sono complete, se i limiti contrattuali sono rispettati. All'apparenza tutto a posto; alla verifica emergono ritardi, registrazioni incomplete, un requisito non monitorato. Il problema non è solo l'errore finale, è l'assenza di un ritmo di controllo." },
+   { "h": "Documentare esiti e azioni", "d": "La norma chiede di mantenere informazioni documentate sui risultati e su ogni azione intrapresa. Se il sistema conclude che la conformità c'è, devi mostrare su quali evidenze; se trova una mancanza, devi seguire la traccia dell'azione. La valutazione produce due valori: ti protegge sul rispetto dei requisiti e ti dice se l'SGE intercetta per tempo i rischi di mancato rispetto." },
+   { "h": "Presidiare ciò che avvicina o allontana", "d": "Non solo cercare non conformità legali, ma presidiare i segnali: una procedura di gestione dei registri incompleta, un cambio di responsabilità senza passaggio consegne, un requisito contrattuale non tradotto in controlli interni. Chi gestisce bene costruisce una cadenza semplice ma robusta e non aspetta l'evento critico per scoprire il problema." }
+  ]
+ },
+ {
+  "id": "50001_m08_s008",
+  "layout": "numeri",
+  "kicker": "9.2 Audit interno · 1",
+  "titolo": "Perché l'audit interno serve davvero all'SGE",
+  "intro": "Molte organizzazioni lo trattano come una formalità, mentre è uno strumento di governo. Il monitoraggio osserva andamenti, indicatori, scostamenti; l'audit interno verifica in modo pianificato se il sistema, nel suo insieme, sta facendo ciò che deve, e con efficacia — guarda il modo in cui i numeri vengono generati, controllati, interpretati e tradotti in azioni. La norma chiede audit a intervalli pianificati per accertare tre aspetti.",
+  "numeri": [
+   { "n": "1", "h": "Se l'SGE migliora la prestazione energetica", "d": "Non solo se i numeri finali scendono, ma se il sistema produce davvero il miglioramento atteso. Un indicatore in peggioramento può dipendere da una causa tecnica, ma anche da un piano non seguito, responsabilità incerte, dati letti in ritardo, una modifica di processo non assorbita." },
+   { "n": "2", "h": "Se resta coerente con le proprie regole", "d": "Con la politica energetica, con obiettivi e traguardi, e con quanto richiede la norma. L'audit non è una caccia al dettaglio isolato: è una verifica sulla capacità complessiva del sistema di produrre controllo e miglioramento, e porta alla luce connessioni che il monitoraggio quotidiano non vede." },
+   { "n": "3", "h": "Se è realizzato e mantenuto con efficacia", "d": "In un'azienda di estrusione, il consumo di reparto peggiora: produzione parla di nuova ricetta, manutenzione di usura delle resistenze. L'audit rivela anche che il piano di formazione sull'avvio non era completato, le istruzioni aggiornate non erano arrivate a tutti i turni, gli scostamenti non erano stati discussi. Il problema energetico non è solo tecnico, è di sistema — l'audit mostra se l'SGE è vivo o funziona per inerzia." }
+  ]
+ },
+ {
+  "id": "50001_m08_s009",
+  "layout": "split",
+  "kicker": "9.2 Audit interno · 2",
+  "titolo": "Programma di audit: frequenze, priorità, campo",
+  "lead": "La norma chiede di costruire e tenere vivo uno o più programmi di audit, non di fissare qualche visita in calendario. Un programma include frequenza, metodi, responsabilità, esigenze di pianificazione e rapporti, e tiene conto dell'importanza dei processi coinvolti e dei risultati degli audit precedenti. Questa frase, da sola, dice come evitare due errori: trattare tutte le aree allo stesso modo, e ripetere ogni anno lo stesso schema.",
+  "punti": [
+   { "h": "Strutturato, ma sa adattarsi", "d": "In un'organizzazione con centrale termica, reparto produttivo ad alto consumo e uffici a impatto minore, distribuire il tempo in modo uniforme spreca attenzione dove il rischio è basso. Se l'anno scorso il reparto produttivo ha mostrato scostamenti ripetuti e chiusura lenta delle azioni, prevedi frequenza o profondità maggiore su quell'area." },
+   { "h": "I metodi vanno pensati prima", "d": "Non esiste un solo modo di verificare: analisi documentale, osservazione sul campo, interviste, campionamenti mirati, lettura dei trend. La norma non impone un copione unico, ma ti chiede di pensare in anticipo a come la verifica produrrà informazioni affidabili." },
+   { "h": "Criteri e campo di applicazione", "d": "I criteri sono il metro con cui confronti le evidenze (requisiti della norma, politica, obiettivi, procedure interne); il campo delimita dove guardi, quali processi e siti includi. Definirli prima evita una causa comune di verifiche deboli: partire in modo generico e cercare il criterio lungo il percorso." },
+   { "h": "Uno scopo leggibile per ogni audit", "d": "Su una linea di confezionamento, senza criteri il gruppo raccoglie osservazioni sparse e poco confrontabili; se stabilisce prima che controllerà coerenza con politica, obiettivi di linea, indicatori, metodo di raccolta dati, gestione degli scostamenti e azioni, il giudizio è molto più solido. Un buon programma genera domande migliori, e domande migliori portano evidenze più utili." }
+  ]
+ },
+ {
+  "id": "50001_m08_s010",
+  "layout": "punti",
+  "kicker": "9.2 Audit interno · 3",
+  "titolo": "Obiettività, imparzialità e risultati alla direzione",
+  "intro": "Il 9.2 chiede di presidiare la qualità del processo: la scelta di chi conduce le verifiche, la protezione dell'obiettività e imparzialità, la capacità di far arrivare i risultati al livello direzionale giusto. Sembrano aspetti organizzativi, ma determinano la credibilità dell'intero audit interno.",
+  "punti": [
+   { "h": "Chi verifica, senza distorsioni", "d": "Il giudizio non deve essere distorto da interessi diretti, abitudini di reparto, simpatie o pressioni gerarchiche. Non vuol dire per forza figure esterne, ma creare condizioni di libertà di giudizio. Se una persona valuta processi che gestisce ogni giorno, i punti ciechi crescono; se è coinvolta negli obiettivi del reparto verificato, può minimizzare i problemi anche senza volerlo." },
+   { "h": "Indipendenza relativa nelle piccole realtà", "d": "In un'azienda con un solo energy manager, si fa verificare la gestione dati al responsabile manutenzione e il controllo sulla manutenzione energetica a una figura qualità formata sui criteri del sistema. Nessuno è perfettamente esterno, ma il disegno riduce i conflitti più evidenti e aumenta la qualità del giudizio." },
+   { "h": "I risultati arrivano alla direzione", "d": "Se restano tra team di verifica e reparto interessato, il sistema perde capacità di correzione. La direzione deve ricevere un quadro leggibile: cosa funziona, dove sono le debolezze, quali rischi per prestazione, conformità ed efficacia, quali interventi servono. Non inondare di dettagli, ma consegnare priorità decidibili." },
+   { "h": "Azioni appropriate e prova documentata", "d": "Un audit utile non finisce col rapporto: innesca azioni proporzionate ai risultati, tracciabili e seguite nel tempo. Se un problema è ricorrente non basta «raccomandare attenzione»; se una causa è sistemica non basta correggere il sintomo locale. E la norma chiede informazioni documentate come prova dell'attuazione del programma e dei risultati, per rendere l'audit parte visibile della governance." }
+  ]
+ },
+ {
+  "id": "50001_m08_s011",
+  "layout": "punti",
+  "kicker": "9.2 Audit interno · 4",
+  "titolo": "Dalle evidenze al giudizio: cosa cerca la verifica interna",
+  "intro": "La norma affida all'audit tre domande di fondo, da tenere sempre unite: se l'SGE migliora la prestazione, se rispetta le proprie regole (politica, obiettivi, requisiti della norma), se è realizzato e mantenuto con efficacia. Separandole, rischi giudizi parziali; collegandole, il quadro diventa leggibile. Una domanda guida: quello che osservo dimostra controllo, oppure abitudine?",
+  "punti": [
+   { "h": "Il miglioramento che regge al contesto", "d": "Non cercare solo un numero in discesa: un calo può dipendere da meno produzione, clima favorevole, fermate non pianificate. Guardi insieme dati, contesto operativo e decisioni prese. Il miglioramento che interessa al sistema è quello che regge al confronto con le condizioni reali di esercizio." },
+   { "h": "La conformità con un metro composto", "d": "Contano le regole interne dell'SGE, la politica, gli obiettivi e i requisiti della norma. Un reparto può avere consumi stabili ed essere debole sul piano della conformità interna: usa un indicatore corretto ma non aggiorna le analisi degli scostamenti secondo la cadenza prevista, o tiene riunioni regolari senza collegarle ai piani approvati." },
+   { "h": "Il sistema vive davvero?", "d": "La domanda più rivelatrice. Un processo progettato bene può essersi sfilacciato: responsabilità cambiate, dati in ritardo, azioni accumulate, priorità operative che schiacciano la disciplina. In un sito di imballaggi, EnPI corretti ma valori anomali del weekend non indagati, piano perdite avviato ma con attività in ritardo, confronto atteso-effettivo discusso solo a fine trimestre: elementi buoni, ma reazione non abbastanza pronta." },
+   { "h": "Interviste ed evidenze come tracce", "d": "Se chiedi «cosa fate?» ottieni descrizioni di attività; se chiedi «come capite che sta funzionando?», vedi il sistema in profondità. E le evidenze documentate non sono carta da esibire, ma tracce del pensiero gestionale: un verbale utile non dice solo che la riunione si è tenuta, mostra quali dati sono stati letti, quali scostamenti discussi, quali decisioni prese." }
+  ]
+ },
+ {
+  "id": "50001_m08_s012",
+  "layout": "cards",
+  "kicker": "9.2 Audit interno · 5",
+  "titolo": "Chiudere il ciclo: risultati, azioni e memoria utile",
+  "intro": "Una verifica produce valore solo quando i risultati vengono capiti, riportati bene e trasformati in azioni appropriate. È il momento che decide se il lavoro avrà conseguenze utili o resterà un rapporto archiviato.",
+  "cards": [
+   { "h": "Il riporto che fa decidere", "d": "Non un documento lungo sperando che qualcuno lo legga, ma le evidenze in un quadro comprensibile: dove il sistema funziona, dove è debole, quali conseguenze. «Le analisi degli scostamenti sono discontinue» sembra un ritardo amministrativo; «l'organizzazione perde capacità di intercettare in tempo gli eccessi» diventa una decisione di governo." },
+   { "h": "Azioni proporzionate", "d": "La norma non offre una ricetta unica: una mancanza episodica può bastare una correzione rapida ben seguita, un difetto di metodo richiede qualcosa di più profondo, un problema di responsabilità o flussi informativi impone di agire sul sistema, non sul sintomo. Una buona verifica misura anche la qualità della reazione organizzativa." },
+   { "h": "Quattro basi per ogni azione", "d": "Coerente con la causa probabile, con un responsabile chiaro, con una tempistica realistica, con una verifica successiva dell'effetto ottenuto. Senza queste quattro basi, l'azione resta una buona intenzione." },
+   { "h": "La memoria organizzativa", "d": "Le informazioni documentate costruiscono continuità: tornando sullo stesso tema, ricostruire cosa era pianificato, cosa svolto, quali esiti, cosa fatto. Un'azienda cartaria che due anni di fila fatica sull'essiccazione, ma non conserva il ragionamento del primo anno, ricomincia quasi da capo. È memoria al servizio del miglioramento, non burocrazia." }
+  ]
+ },
+ {
+  "id": "50001_m08_s013",
+  "layout": "definizione",
+  "kicker": "9.3 Riesame di direzione · 1",
+  "eyebrow": "Il tavolo dove i dati diventano scelte",
+  "titolo": "Riesame di direzione: un atto di governo",
+  "definizione": "Il 9.3 chiede all'alta direzione di riesaminare l'SGE a intervalli pianificati, per assicurarne continua idoneità, adeguatezza ed efficacia, e mantenerlo allineato agli indirizzi strategici. Idoneità: il sistema è ancora adatto al contesto. Adeguatezza: ha mezzi, priorità e perimetro coerenti con ciò che deve governare. Efficacia: produce i risultati attesi, o sa riconoscere quando non li produce. Allineamento strategico: l'energia non vive in una stanza separata dal business.",
+  "punti": [
+   "In un riesame solo formale si portano molte slide, si commentano numeri già noti, si conferma quasi tutto senza una vera decisione. In uno vero, la direzione usa gli input per decidere cosa tenere, cosa cambiare, dove investire attenzione e risorse.",
+   "Un'azienda avvia una nuova linea con profilo di carico diverso, il costo dell'energia diventa volatile, operatori esperti sono spostati. Guardare il solo consumo annuale perde il punto: il tema è se l'SGE, costruito su un contesto precedente, è ancora adatto — forse gli EnPI vanno rivisti, i piani cambiano priorità, la formazione si sposta. Il riesame guarda avanti, non solo indietro.",
+   "Non sostituisce il monitoraggio ordinario né le riunioni operative: lavora a un livello più alto, legge andamenti, effetti delle azioni, cambiamenti di contesto. Il reparto governa la prestazione giornaliera, il responsabile energia coordina, l'alta direzione decide l'orientamento, rimuove ostacoli, assegna priorità e risorse."
+  ]
+ },
+ {
+  "id": "50001_m08_s014",
+  "layout": "cards",
+  "kicker": "9.3 Riesame di direzione · 2",
+  "titolo": "Da dove parte il riesame",
+  "intro": "La prima regola è non ripartire da zero ogni volta. Il 9.3 chiede di guardare anzitutto lo stato delle azioni dei precedenti riesami, poi i cambiamenti di contesto con i rischi e le opportunità associati. Ogni cambiamento rilevante deve generare una domanda di gestione: cosa rivedere, cosa rafforzare, cosa non è più adatto.",
+  "cards": [
+   { "h": "Stato delle azioni pregresse", "d": "Se la direzione aveva deciso un intervento, deve verificare cosa è successo davvero: completata, efficace, in ritardo per ragioni comprensibili, o persa nel flusso operativo? Se le decisioni di un anno fa non lasciano traccia, il riesame diventa un rituale senza memoria — e questo misura la credibilità del riesame stesso." },
+   { "h": "Cambiamenti esterni", "d": "Mutamenti del mercato, nuovi vincoli contrattuali, variazioni dei prezzi dell'energia, nuove tecnologie, pressioni dei clienti, aspettative delle parti interessate. Ognuno può modificare il modo in cui il sistema deve leggere e governare la prestazione." },
+   { "h": "Cambiamenti interni", "d": "Investimenti, nuove linee, riorganizzazioni, cambio di responsabilità, spostamento di competenze, mix produttivo. Aumentare la produzione serale è sensato, ma cambia profili di carico, uso degli ausiliari, disponibilità del personale esperto: se il riesame non lo porta sul tavolo, il sistema resta tarato su condizioni che non esistono più." },
+   { "h": "Rischi e opportunità", "d": "Un rischio è tutto ciò che può indebolire la capacità dell'SGE di mantenere o migliorare la prestazione; un'opportunità, ciò che può rafforzarla. Una nuova linea è un rischio se manca esperienza di conduzione efficiente, ma un'opportunità se permette maggiore controllo e migliori indicatori. Il riesame legge questi doppi effetti." }
+  ]
+ },
+ {
+  "id": "50001_m08_s015",
+  "layout": "punti",
+  "kicker": "9.3 Riesame di direzione · 3",
+  "titolo": "Le informazioni di prestazione da leggere davvero",
+  "intro": "Il riesame deve leggere con attenzione le informazioni sulle prestazioni dell'SGE. La norma indica insiemi di dati che si completano a vicenda: se manca un punto, il riesame perde profondità. Il valore sta nel trasformare informazioni sparse in una storia coerente — dove miglioriamo, dove teniamo a fatica, dove i problemi diventano più forti del sistema.",
+  "punti": [
+   { "h": "Non conformità e azioni correttive", "d": "Raccontano dove il sistema ha mostrato rotture o debolezze evidenti, e come ha reagito. Potresti avere ottimi dati di consumo ma una chiusura molto lenta delle azioni: la direzione deciderebbe in modo incompleto guardando un solo lato." },
+   { "h": "Monitoraggio, audit e conformità", "d": "I risultati del monitoraggio mostrano l'andamento dei fenomeni; gli audit aggiungono uno sguardo strutturato su efficacia e conformità; la valutazione della conformità dice se il rispetto dei requisiti è sotto controllo. In una linea di trattamento termico, il consumo si stabilizza, ma gli audit segnalano registrazioni irregolari di notte, la conformità un controllo in ritardo, e due azioni non verificate nell'efficacia: sistema che migliora ma ancora vulnerabile." },
+   { "h": "Opportunità di miglioramento e competenza", "d": "Spostano la conversazione dal passato al futuro. La norma cita espressamente le opportunità legate alla competenza: molti problemi non nascono da cattiva volontà, ma da capacità non ancora adeguate. Se alcuni reparti non interpretano bene gli EnPI o presidiano poco le responsabilità di misura, la competenza diventa una decisione strategica, non un semplice corso." },
+   { "h": "La politica energetica", "d": "Portarla nel riesame non è leggerla come una formula immutabile, ma chiedersi se è ancora coerente con contesto, priorità strategiche e maturità del sistema. Una politica può restare formalmente valida e insieme aver bisogno di essere aggiornata per diventare davvero orientante." }
+  ]
+ },
+ {
+  "id": "50001_m08_s016",
+  "layout": "numeri",
+  "kicker": "9.3 Riesame di direzione · 4",
+  "titolo": "Input energetici: obiettivi, EnPI e stato dei piani",
+  "intro": "Il 9.3 richiede input chiaramente energetici, il cuore operativo del confronto. Tre elementi che si richiamano a vicenda: gli obiettivi dicono dove volevi arrivare, gli EnPI cosa sta accadendo davvero, lo stato dei piani se stai facendo, in modo tempestivo, ciò che avevi deciso per colmare la distanza.",
+  "numeri": [
+   { "n": "1", "h": "Avvicinamento a obiettivi e traguardi", "d": "Non basta «raggiunto» o «non raggiunto»: con quale avanzamento, in quali condizioni, con quali differenze tra aree o periodi. Un obiettivo quasi raggiunto ma instabile richiede decisioni diverse da uno mancato di poco ma con cause note; uno raggiunto per condizioni eccezionalmente favorevoli non racconta la stessa storia di uno raggiunto per un miglioramento strutturale." },
+   { "n": "2", "h": "Andamento della prestazione e EnPI", "d": "Gli EnPI permettono di leggere la realtà con più precisione del solo consumo totale, ma non vanno presentati come numeri isolati: serve contesto. Il confronto con l'EnB è coerente? Ci sono stati cambiamenti operativi rilevanti? Il miglioramento è stabile, episodico o ancora fragile? Due mesi migliori incoraggiano, ma non bastano a dichiarare consolidato un progresso." },
+   { "n": "3", "h": "Stato dei piani d'azione", "d": "Collega le intenzioni alle capacità esecutive. Un piano in ritardo non è sempre un fallimento, ma diventa un segnale se riguarda azioni critiche, si ripete, o non è accompagnato da una rivalutazione onesta delle priorità. E un piano completato non equivale a un piano efficace: la direzione deve distinguere avanzamento delle attività e risultato prodotto. Il riesame non certifica passivamente: decide come interpretare e usare i risultati." }
+  ]
+ },
+ {
+  "id": "50001_m08_s017",
+  "layout": "cards",
+  "kicker": "9.3 Riesame di direzione · 5",
+  "titolo": "Output del riesame: decisioni che orientano il sistema",
+  "intro": "Il riesame ha senso solo se produce decisioni. La direzione deve esprimersi sulle possibilità di miglioramento continuo e su tutte le modifiche necessarie, non limitarsi a commentare i dati. Gli output non sono solo tecnici: sono organizzativi, toccano ruoli, linguaggio, priorità e capacità di esecuzione. E vanno conservati come traccia documentata, per verificare nel ciclo successivo cosa è stato deciso.",
+  "cards": [
+   { "h": "Prestazione, politica, EnPI ed EnB", "d": "Opportunità di migliorare la prestazione (non solo nuovi investimenti: anche gestione operativa, controllo scostamenti, integrazione tra reparti); pertinenza o aggiornamento della politica; revisione di EnPI ed EnB quando contesto, processi o mix cambiano — lasciare indicatori vecchi in un contesto nuovo genera letture fuorvianti." },
+   { "h": "Obiettivi, traguardi e piani", "d": "L'output più visibile: confermare il percorso, correggerlo, rafforzarlo o ripensarlo. Importante il passaggio sulle azioni quando gli obiettivi non vengono centrati: non basta prendere atto del mancato risultato, devi decidere come reagire — un segnale di maturità gestionale forte." },
+   { "h": "Un caso: la centrale frigorifera", "d": "Obiettivo non raggiunto, miglioramento parziale non stabile, uso discontinuo delle procedure di settaggio, personale che lamenta poca chiarezza sui parametri. Le leve: confermare l'obiettivo rivedendo il piano, assegnare risorse a formazione mirata, affinare l'EnPI, inserire il tema nelle routine, rafforzare la comunicazione interna." },
+   { "h": "Risorse, integrazione, competenze", "d": "Distribuzione delle risorse, migliore integrazione dell'energia nelle attività ordinarie, rafforzamento di competenze, consapevolezza e comunicazione. Il riesame non dice solo se il sistema va bene: stabilisce come deve evolvere. Senza la traccia documentata degli esiti, perde continuità." }
+  ]
+ },
+ {
+  "id": "50001_m08_s018",
+  "layout": "evidenza",
+  "kicker": "Leggere i dati · 1",
+  "eyebrow": "Esercizio guidato",
+  "titolo": "Leggere un trend senza farti ingannare dal volume totale",
+  "testo": "Il rischio più comune è guardare il volume totale di energia e trarre conclusioni troppo rapide. Immagina un sito che produce componenti metallici in tre reparti: taglio, trattamento termico, finitura. Negli ultimi quattro mesi il consumo totale scende in modo graduale, e qualcuno in direzione potrebbe dire che i piani stanno funzionando. Ma il responsabile energia guarda meglio: confronta il consumo totale con i volumi produttivi e scopre che il trattamento termico ha lavorato meno giorni del previsto; poi osserva l'EnPI del reparto finitura, energia per pezzo conforme, e vede che quell'indicatore invece peggiora. Ecco la prima lezione: un trend aggregato può raccontare una direzione apparente e nascondere un problema locale. Se ti fermi al totale, attribuisci al sistema un miglioramento che deriva da minore attività; se entri nel rapporto tra energia e risultato operativo, il quadro cambia. Il consumo totale scende, sì, ma il sistema non migliora in modo uniforme: un reparto assorbe meno solo perché lavora meno, un altro usa peggio l'energia rispetto al suo output. Un trend non va letto mai da solo: va collocato in una sequenza di domande — cosa si muove, rispetto a quale attività, in quali reparti, con quale stabilità, con quali cause. Smetti così di usarli come fotografia e inizi a usarli come strumento di diagnosi. E se il mese dopo il totale risalisse, non diresti che il sistema è peggiorato: il trend va interpretato, non applaudito o condannato."
+ },
+ {
+  "id": "50001_m08_s019",
+  "layout": "numeri",
+  "kicker": "Leggere i dati · 2",
+  "titolo": "Quando uno scostamento diventa significativo",
+  "intro": "Una centrale aria compressa molto rilevante mostra, da tre settimane, un consumo notturno più alto del previsto. L'aumento notte per notte non sembra enorme, e il capo turno lo considera rumore normale. Ma il responsabile energia confronta effettivo e atteso nelle stesse condizioni e nota che lo scostamento si ripete; e l'EnPI del reparto servito non migliora nonostante un piano recente di ricerca perdite. Non è più «il dato è clamoroso?», ma «è significativo?». Sì, per tre ragioni.",
+  "numeri": [
+   { "n": "1", "h": "La ripetizione", "d": "Uno scostamento modesto ma ricorrente vale spesso più di un picco isolato. Non aspettare che diventi enorme per ritenerlo importante: nel governo dell'energia, molti problemi seri cominciano come deviazioni modeste ma persistenti. Riconoscerle presto è il vero segno di maturità." },
+   { "n": "2", "h": "Il legame con un sistema importante", "d": "Se la centrale pesa molto sui consumi del sito, anche deviazioni moderate hanno impatto serio nel tempo. «Significativo» non si definisce solo con una soglia numerica rigida: contano contesto, ripetizione e peso del processo coinvolto." },
+   { "n": "3", "h": "La contraddizione con i piani", "d": "Se avevi deciso interventi di miglioramento e non vedi l'effetto atteso, c'è un segnale da indagare. Indagare non è cercare un colpevole rapido: il responsabile verifica i profili orari, parla con manutenzione e produzione, e scopre una causa mista — una linea spostata rimasta collegata di notte, più il trafilamento di una valvola. La reazione va tracciata: correzione, ripristino, verifica del profilo, aggiornamento delle responsabilità sulle modifiche di layout." }
+  ]
+ },
+ {
+  "id": "50001_m08_s020",
+  "layout": "flusso",
+  "kicker": "Leggere i dati · 3",
+  "titolo": "Distinguere un allarme reale da un falso segnale",
+  "intro": "Un SGE maturo non reagisce né troppo poco né troppo presto: reagisce bene. Un magazzino refrigerato mostra da un mese un peggioramento netto dell'EnPI per tonnellata movimentata, e il dashboard segnala un allarme. Prima di credere all'allarme, verifica almeno quattro cose — la regola: prima interpreta la qualità del dato, poi il fenomeno.",
+  "passi": [
+   { "h": "Il perimetro è rimasto lo stesso?", "d": "Il responsabile scopre che a inizio mese al quadro monitorato sono stati collegati anche i nuovi punti di ricarica dei mezzi elettrici interni. Una quota del peggioramento deriva da carichi aggiuntivi entrati nel perimetro, non dalla centrale frigorifera." },
+   { "h": "I dati di attività sono completi?", "d": "Il volume movimentato è stato registrato con una settimana di ritardo su parte delle spedizioni, per un problema nel flusso tra logistica e amministrazione: il denominatore è incompleto. Un'altra quota del peggioramento è solo apparente." },
+   { "h": "Ci sono cambiamenti operativi non registrati?", "d": "Verifica se qualcosa rende il confronto poco pulito. Se l'organizzazione avesse reagito senza questi controlli, avrebbe aperto un'indagine tecnica sulla refrigerazione partendo da una base debole." },
+   { "h": "La frequenza di lettura è adatta?", "d": "Corretti questi elementi, l'indicatore resta comunque leggermente peggiore: l'allarme non scompare, cambia di qualità — da confuso diventa segnale utile, e ora si passa a un'indagine tecnica vera. Un falso segnale non è tempo perso: rivela una debolezza del monitoraggio (perimetro cambiato senza evidenza, dato logistico incompleto) che, corretta, produce un miglioramento reale." }
+  ]
+ },
+ {
+  "id": "50001_m08_s021",
+  "layout": "numeri",
+  "kicker": "Leggere i dati · 4",
+  "titolo": "Priorità quando gli scostamenti non si chiudono",
+  "intro": "Quasi mai un sito ha un solo problema alla volta, e il rischio è inseguire l'ultimo allarme trascurando ciò che pesa di più. Un impianto ha tre aree rilevanti: aria compressa (consumo notturno alto), refrigerazione (EnPI leggermente peggiore ma con forte variabilità), forni (consumo stabile ma piano d'azione fermo da settimane). La priorità nasce dall'incrocio di tre criteri, e una domanda utile: se oggi non intervenissi, quale segnale ha più probabilità di costarmi di più tra un mese?",
+  "numeri": [
+   { "n": "1", "h": "Impatto", "d": "Quanto pesa il fenomeno sulla prestazione. L'aria compressa pesa molto sui consumi del sito: è candidata alla prima priorità. Non stai classificando solo consumi, stai leggendo la capacità dell'SGE di reagire." },
+   { "n": "2", "h": "Persistenza", "d": "Da quanto tempo il segnale si ripete o resta aperto. Lo scostamento dell'aria compressa si ripete ogni notte, ed è già abbastanza leggibile: prima priorità. La refrigerazione pesa anch'essa, ma il segnale è meno pulito e va prima chiarito (le aperture serali delle baie non erano state corrette nell'atteso)." },
+   { "n": "3", "h": "Governabilità", "d": "Esiste già un'azione disponibile o navighi nel buio? Il piano fermo sui forni è un segnale di efficacia debole del sistema, anche se il numero non è ancora peggiorato: la causa era banale ma seria — nessuno aveva liberato ore tecniche per la messa a punto. La priorità giusta non è la più vistosa, ma quella che unisce peso, continuità e possibilità concreta di agire." }
+  ]
+ },
+ {
+  "id": "50001_m08_s022",
+  "layout": "confronto",
+  "kicker": "Leggere i dati · 5",
+  "titolo": "Confrontare reparti simili senza falso paragone",
+  "intro": "Pensare che due reparti simili debbano avere prestazioni simili è una delle fonti più comuni di conclusioni affrettate. Due linee di confezionamento dello stesso stabilimento, macchine della stessa famiglia, volumi comparabili: la beta consuma più energia per unità dell'alfa. La formula: prima rendi comparabili i dati, poi confronta le prestazioni, infine cerca le cause.",
+  "a": {
+   "h": "La reazione affrettata",
+   "sub": "«La beta è meno efficiente»",
+   "punti": [
+    { "d": "Attribuire subito il divario alla prestazione, senza chiedersi se stai confrontando condizioni equivalenti. Ti espone a due errori speculari: dichiarare inefficiente un reparto che lavora in condizioni più difficili, o assolvere un reparto davvero meno controllato solo perché il paragone era sporco." },
+    { "d": "Reparti simili non sono automaticamente confrontabili: differenza non è difetto. Il criterio che uso è davvero adatto a questo confronto?" }
+   ]
+  },
+  "b": {
+   "h": "Il confronto ripulito",
+   "sub": "Tre fattori che alterano il paragone",
+   "punti": [
+    { "d": "Mix operativo: la beta gestisce lotti più piccoli e cambi formato più frequenti, con più attese, scarti di avvio, cicli accessori. Stabilità del carico: l'alfa lavora con sequenze più stabili e meno arresti brevi. Perimetro: sulla beta ricadono servizi condivisi non ancora separati nella misura." },
+    { "d": "Ripulito il perimetro e separati i lotti anomali, il divario si riduce molto ma resta una differenza costante nei riavvii: sul campo emerge che la beta usa parametri di stand-by troppo cautelativi. Prima ripulisci il paragone, poi trovi il fenomeno vero." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m08_s023",
+  "layout": "split",
+  "kicker": "Leggere i dati · 6",
+  "titolo": "Quando i dati sembrano buoni ma il sistema resta esposto",
+  "lead": "Una trappola frequente: pensare che dati energetici apparentemente buoni bastino a dire che il sistema funziona. Il capitolo 9 chiede una lettura più completa — prestazione, controllo del sistema, valutazione della conformità insieme. Un sito del terziario: consumo totale calato, EnPI per metro quadro migliorato, grafici rassicuranti. La direzione potrebbe considerare chiuso il tema.",
+  "punti": [
+   { "h": "Tre elementi meno confortanti", "d": "Alcuni registri di controllo collegati a requisiti applicabili non risultano verificati con la periodicità prevista; due azioni correttive aperte non sono state chiuse con verifica di efficacia; il calo dei consumi coincide in parte con un minor utilizzo di alcune aree dell'edificio." },
+   { "h": "Domande più esigenti", "d": "Il miglioramento dipende da una gestione più efficace o da un diverso livello di utilizzo degli spazi? La valutazione della conformità presidia davvero i requisiti o ha perso regolarità? Le azioni correttive vengono seguite fino a verificarne l'effetto? Un buon dato non cancella una debolezza del sistema: al massimo la nasconde per un po'." },
+   { "h": "Il sistema affaticato, non crollato", "d": "Separati i consumi delle aree meno usate, il miglioramento reale esiste ma è più piccolo. Chi seguiva alcuni controlli è stato spostato, il passaggio di responsabilità gestito male; le azioni correttive dipendono da una riorganizzazione che ha rallentato le approvazioni. Non serve attendere un incidente: ci sono già elementi per capire che il presidio non è solido come appare." },
+   { "h": "Il giudizio equilibrato", "d": "Le organizzazioni immature usano il buon dato come scusa per non guardare il resto; le mature fanno il contrario. Puoi dire: la prestazione mostra segnali positivi, ma l'efficacia dell'SGE richiede attenzione su responsabilità, regolarità dei controlli e completamento delle azioni. Un sistema è credibile quando buoni risultati e buoni controlli si sostengono a vicenda." }
+  ]
+ },
+ {
+  "id": "50001_m08_s024",
+  "layout": "flusso",
+  "kicker": "Leggere i dati · 7",
+  "titolo": "Dal quadro dei dati alle decisioni del riesame",
+  "intro": "L'ultimo esercizio: trasformare dati, verifiche e scostamenti in decisioni sensate da portare al riesame. Un'azienda con quattro informazioni del trimestre — EnPI di essiccazione migliorato ma irregolare, ritardi nella lettura settimanale degli scostamenti in due reparti, un controllo di conformità svolto in ritardo poi recuperato, un piano chiave fermo perché il personale è stato assorbito da una fermata urgente. Portati in modo disordinato darebbero una discussione dispersiva; organizzati, un quadro decidibile.",
+  "passi": [
+   { "h": "Ordina il quadro", "d": "Miglioramento presente ma non stabile; capacità di leggere gli scostamenti indebolita in due reparti; conformità senza violazione persistente ma presidio non robusto; un piano fermo non per scelta, ma per mancanza temporanea di risorse tecniche." },
+   { "h": "Fai emergere le decisioni sensate", "d": "Proteggere tempo e competenze per chiudere il piano critico; rafforzare il ritmo di lettura degli scostamenti redistribuendo responsabilità o semplificando il flusso dati; riesaminare il metodo con cui si presidiano i controlli di conformità. Una decisione meno matura: celebrare l'EnPI e rinviare il resto." },
+   { "h": "Nessuna decisione da un solo elemento", "d": "Ogni decisione sensata nasce dalla combinazione di più evidenze: il dato energetico da solo non basta, il rilievo della verifica interna da solo non basta, il controllo in ritardo da solo non basta. È l'intreccio a rendere la decisione robusta." },
+   { "h": "La domanda della direzione", "d": "Se fossi alla direzione, cosa vorrei capire in dieci minuti per decidere bene? Dove stiamo migliorando davvero, dove stiamo rallentando, quali cause sono già chiare, quali risorse o modifiche servono adesso. Se prepari così il materiale, il riesame diventa un momento di governo, non una rassegna di grafici." }
+  ]
+ },
+ {
+  "id": "50001_m08_s025",
+  "layout": "timeline",
+  "kicker": "Verificare il capitolo 9 · 1",
+  "titolo": "La traccia mentale per leggere le evidenze giuste",
+  "intro": "Assumi il punto di vista del verificatore: il capitolo 9 non è una somma di attività separate, ma una catena logica che deve guidarti. Quando uno di questi passaggi non regge, l'intero assetto perde forza. Non cercare carta, cerca coerenza; non cercare presenza, cerca funzionamento. La domanda guida unica: i risultati mostrano un sistema che capisce, reagisce e decide, oppure che registra, archivia e spera?",
+  "tappe": [
+   { "t": "01", "h": "Dati affidabili (9.1)", "d": "L'organizzazione ha deciso con chiarezza cosa monitorare e misurare? I metodi e i tempi rendono i risultati validi e utili? Un EnPI definito deve essere collegato a un dato disponibile, a un momento di analisi e a una reazione possibile. Se trovi contatori ma non lettura periodica, il filo si interrompe." },
+   { "t": "02", "h": "Rispetto dei requisiti (9.1.2)", "d": "Cambia l'oggetto ma non il metodo: cerca un controllo programmato del rispetto dei requisiti e tracce leggibili di esiti e azioni. L'errore comune è fermarsi all'elenco dei requisiti — ma stai verificando la valutazione della conformità, non l'identificazione." },
+   { "t": "03", "h": "Verifica interna (9.2)", "d": "L'audit produce informazioni utili su miglioramento, conformità ai criteri, mantenimento efficace? Il programma può essere ben scritto e poco vissuto: cerca coerenza tra importanza dei processi, risultati precedenti, criteri, esiti e riporto. Verifiche tutte uguali nonostante cambiamenti rilevanti sono un indizio di scarsa maturità." },
+   { "t": "04", "h": "Decisione direzionale (9.3)", "d": "Sali di livello: l'alta direzione riceve e usa input adeguati per giudicare idoneità, adeguatezza, efficacia e allineamento? Cerca tracce degli input e poi gli output — decisioni su miglioramento, modifiche, risorse, integrazione, competenze." },
+   { "t": "05", "h": "La catena, non le singole evidenze", "d": "In un sito trovi buoni grafici, lista requisiti aggiornata, programma di audit approvato, verbale ordinato. Ma i grafici non vengono letti con regolarità, la conformità è in ritardo, gli audit non hanno toccato l'area più critica dell'anno prima, il riesame non ha deciso sul piano fermo. Ogni evidenza isolata sembrava discreta; la catena è debole." }
+  ]
+ },
+ {
+  "id": "50001_m08_s026",
+  "layout": "punti",
+  "kicker": "Verificare il capitolo 9 · 2",
+  "titolo": "Domande di intervista che fanno emergere il sistema vero",
+  "intro": "La qualità delle domande fa metà del risultato. Domande troppo chiuse producono risposte difensive, troppo generiche racconti poco verificabili. Tre movimenti: chiedi come fanno, chiedi di mostrarti un caso concreto, collega il caso a una decisione o conseguenza. Un segnale: quando un'organizzazione parla molto di strumenti e poco di reazioni, spesso il punto debole è lì.",
+  "punti": [
+   { "h": "Sul 9.1", "d": "«Quali informazioni considerate davvero decisive per capire se la prestazione va nella direzione attesa?» obbliga a selezionare, non a mostrare dashboard. E la più forte: «Mi mostri un caso recente in cui il monitoraggio ha portato a un'indagine e a una reazione concreta.» Se rispondono con un esempio tracciabile, il sistema vive; se restano su generalità, hai un segnale da seguire." },
+   { "h": "Sulla conformità", "d": "«Come dimostrate che i requisiti applicabili non sono solo identificati, ma verificati periodicamente nel loro rispetto?» evita la trappola di ricevere solo l'elenco. Poi chiedi di vedere l'ultimo esito di verifica e l'azione avviata dopo un risultato non pienamente soddisfacente: non cerchi la perfezione, cerchi il presidio." },
+   { "h": "Sull'audit interno", "d": "«Come decidete frequenza, priorità e campo, e come i risultati precedenti modificano il programma?» mette alla prova la maturità: se cambia in funzione dei processi importanti e delle criticità emerse, è una logica viva; se resta identico per abitudine, è rituale. E: «mi racconta un esito recente che ha cambiato una decisione o un comportamento?»" },
+   { "h": "Sul riesame", "d": "«Quali informazioni arrivano all'alta direzione per giudicare se il sistema resta idoneo, adeguato ed efficace?» collega input e decisioni; «quali decisioni concrete sono uscite dall'ultimo riesame e come vengono seguite?» verifica la capacità di governo. Le domande giuste spostano la conversazione dal dichiarato al dimostrato." }
+  ]
+ },
+ {
+  "id": "50001_m08_s027",
+  "layout": "tabella",
+  "kicker": "Verificare il capitolo 9 · 3",
+  "titolo": "Distinguere il sintomo locale dal problema di sistema",
+  "intro": "L'abilità più delicata: distinguere un difetto circoscritto da una debolezza sistemica. Da qui dipende la qualità del giudizio e delle azioni. Tre indizi di sistemicità: la ricorrenza (la stessa debolezza in momenti o reparti diversi), la connessione tra livelli (un problema nato nel monitoraggio riappare nella verifica e non si scioglie nel riesame), l'assenza di apprendimento (segnali simili senza correzioni di metodo).",
+  "cols": ["Area", "Episodio isolato", "Problema di sistema"],
+  "righe": [
+   ["Monitoraggio", "Un singolo dato mancante", "Più dati mancanti in aree sensibili + letture tardive + scostamenti non indagati"],
+   ["Conformità", "Un controllo svolto in ritardo per contingenza", "Più ritardi + responsabilità confuse + assenza di follow-up"],
+   ["Audit interno", "Una verifica meno profonda del previsto", "Programma ripetitivo, poco sensibile alle criticità, scollegato dalle decisioni"],
+   ["Riesame di direzione", "Una decisione rinviata comprensibile", "Un riesame che commenta molto e decide poco: perdita di efficacia direzionale"]
+  ]
+ },
+ {
+  "id": "50001_m08_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 8",
+  "modNum": "8",
+  "titolo": "Leggere bene, verificare bene, migliorare meglio",
+  "punti": [
+   { "h": "La catena del capitolo 9", "d": "Rendere credibile l'SGE attraverso fatti letti bene, verifiche ben costruite e decisioni direzionali che non restino sulla carta. Dal monitoraggio (scegliere i numeri davvero utili, non tanti numeri) alla valutazione della conformità (un controllo periodico, non un elenco), all'audit interno (capire se il sistema migliora, resta coerente, è mantenuto), fino al riesame, dove tutto diventa decisioni su priorità, risorse, competenze e modifiche." },
+   { "h": "Gli esercizi resi concreti", "d": "Non farsi ingannare dal consumo totale quando l'attività cambia; riconoscere uno scostamento significativo anche se non è clamoroso; distinguere un allarme reale da un falso segnale generato da perimetri sporchi o dati incompleti; dare priorità per impatto, persistenza e governabilità; confrontare reparti solo dopo averli resi comparabili; portare le evidenze al riesame in forma decidibile." },
+   { "h": "Una catena di apprendimento", "d": "Il capitolo 9 funziona quando l'organizzazione non si limita a osservare, ma sa capire, reagire e decidere: è il discrimine tra un sistema ordinato e uno efficace. Le attività non vivono separate — dati migliori rendono migliori le verifiche, verifiche migliori rendono più affidabili le decisioni, decisioni migliori migliorano dati, priorità e controlli. Prima leggi bene, poi giudichi bene, e solo allora puoi migliorare davvero." }
+  ],
+  "prossimo": {
+   "modulo": "9",
+   "titolo": "Il miglioramento e le non conformità tipiche dell'SGE",
+   "testo": "Un aggancio perfetto, perché ora sai già da dove nascono molte debolezze: dati letti male, scostamenti lasciati aperti, verifiche poco incisive, riesami che non decidono abbastanza. Vedrai come queste fragilità si trasformano in non conformità e, soprattutto, come gestirle in modo utile al miglioramento continuo."
+  }
+ }
+]
