@@ -1,0 +1,409 @@
+[
+ {
+  "id": "39001_m02_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 39001 — Sicurezza del traffico stradale",
+  "kicker": "Modulo 2 — struttura e lessico",
+  "eyebrow": "Nelle norme di gestione le parole non decorano: delimitano",
+  "titolo": "La norma 39001: struttura, concetti, termini RTS",
+  "testo": "Dopo l'inquadramento iniziale entri nel lessico che regge tutto il sistema. È un passaggio decisivo: le parole servono a delimitare il campo, a chiarire le responsabilità e a rendere confrontabili decisioni diverse. Se confondi i termini, confondi anche le priorità e i dati da raccogliere. Qui farai il vocabolario minimo della sicurezza del traffico stradale, l'RTS. Una cautela ti accompagna: alcune parole sono definite dalla norma, altre le useremo come etichette professionali utili a interpretarla — quando succede te lo dirò, così distinguerai il testo normativo dalla buona pratica di lettura. E un criterio guida tutto il modulo: la norma non parla solo a chi gestisce trasporti professionali, ma a qualunque organizzazione interagisca con il sistema del traffico stradale e possa influenzarne, almeno in parte, i risultati. Pensa a un'azienda di servizi senza camion: tecnici in giro ogni giorno, visitatori, parcheggi interni, corrieri in appalto, orari che spingono alla fretta. Interagisce comunque con il traffico stradale e può influenzarne la sicurezza.",
+  "agenda": [
+   "Scopo e campo di applicazione: a chi parla la norma e cosa non pretende",
+   "I termini fondanti: sicurezza RTS, incidente stradale, quasi incidente",
+   "Esposizione, esito finale ed esito intermedio",
+   "Il perimetro: utente della strada, rete stradale, veicolo",
+   "Rapporto con ISO 45001, struttura armonizzata e ciclo PDCA"
+  ]
+ },
+ {
+  "id": "39001_m02_s002",
+  "layout": "split",
+  "kicker": "Scopo e campo · 1",
+  "titolo": "Lo scopo: ridurre morti e lesioni gravi",
+  "lead": "La norma definisce requisiti per organizzare la gestione della sicurezza del traffico stradale, affinché un'organizzazione inserita — in modo diretto o indiretto — nel sistema stradale possa contribuire a diminuire i casi di morte e di lesione grave legati all'incidente stradale, nei limiti di ciò che riesce davvero a governare o a orientare. La parola decisiva non è possesso del rischio, ma influenza reale sul rischio.",
+  "punti": [
+   { "h": "Due errori da evitare", "d": "Il primo: credere che riguardi solo chi trasporta persone o merci come attività principale. Il secondo: immaginare che pretenda un controllo totale su tutto ciò che avviene sulla strada. Il baricentro è l'interazione concreta con il sistema stradale e la capacità di incidere sui fattori rilevanti." },
+   { "h": "Dove agisce l'influenza", "d": "Un'impresa che invia tecnici organizza orari, sceglie mezzi, definisce priorità e ritmi: anche senza camion modifica le condizioni in cui le persone guidano, sostano, attraversano e manovrano. Un ente che regola gli accessi a una scuola, la visibilità di un attraversamento e i flussi di punta incide su fattori che fanno la differenza." },
+   { "h": "Non promette l'impossibile", "d": "La norma non dice che l'organizzazione possa eliminare qualunque evento sulla rete stradale. Dice che deve costruire un sistema capace di agire con metodo dove esiste leva decisionale. Un'impostazione adulta: distingui ciò che osservi, ciò che puoi controllare e ciò che puoi almeno influenzare." },
+   { "h": "Non vive in un mondo separato", "d": "A questo si collegano politica, obiettivi e piani d'azione: l'intenzione va trasformata in scelte coerenti, verificabili e sostenute da informazioni affidabili. La norma richiama anche il rispetto dei requisiti legali e degli altri impegni assunti — regole esterne, rapporti con fornitori e appaltatori, decisioni di direzione." }
+  ]
+ },
+ {
+  "id": "39001_m02_s003",
+  "layout": "punti",
+  "kicker": "Scopo e campo · 2",
+  "titolo": "Campo di applicazione, limiti ed esclusioni",
+  "intro": "Dopo lo scopo, il perimetro. Un'organizzazione può adottare la norma per migliorare la prestazione di RTS, per dare forma a un sistema coerente, per restare fedele alla politica che si è data e per mostrare la propria conformità: miglioramento sostanziale e assetto di gestione che regga nel tempo.",
+  "punti": [
+   { "h": "Applicabile a qualunque organizzazione", "d": "Senza distinzione di settore, dimensione o tipologia: non solo vettori, flotte, gestori di infrastrutture o amministrazioni, ma anche scuole, ospedali, aziende di servizi, centri logistici, università, punti vendita, enti pubblici. Il criterio non è l'etichetta dell'impresa, ma il suo rapporto reale con il traffico stradale." },
+   { "h": "Che cosa la norma NON fa", "d": "Non detta come progettare nel dettaglio un semaforo, un'automobile, una strada o un servizio di trasporto: non è una raccolta di specifiche tecniche. Se produci veicoli o costruisci infrastrutture avrai comunque bisogno di requisiti tecnici specifici — la norma non li sostituisce." },
+   { "h": "Nessuna architettura unica", "d": "Non pretende la stessa struttura documentale o lo stesso schema interno per tutti. Ti protegge da una lettura scolastica della conformità: un piccolo ente e una grande impresa multisito possono avere forme diverse, purché il sistema sia credibile, coerente e capace di funzionare. Conta la sostanza del governo." },
+   { "h": "Responsabilità condivisa", "d": "La norma riconosce il ruolo dell'organizzazione, ma non annulla i doveri di chi usa la strada: chi guida, attraversa o circola a piedi resta tenuto a rispettare le regole. Il sistema favorisce condizioni più sicure, senza l'idea irrealistica di sostituire ogni responsabilità individuale." },
+   { "h": "Esclusioni motivate, non scorciatoie", "d": "Un requisito può non essere pertinente, ma l'esclusione va spiegata e documentata con la motivazione, e non può svuotare il sistema. Una società di consulenza con poche auto non potrebbe cancellare rientri serali, manutenzione o quasi incidente; un'università non potrebbe dire irrilevanti i flussi di accesso." }
+  ]
+ },
+ {
+  "id": "39001_m02_s004",
+  "layout": "definizione",
+  "kicker": "Termini fondanti · 1",
+  "eyebrow": "Il nucleo lessicale di tutta la norma",
+  "titolo": "Che cosa significa sicurezza del traffico stradale",
+  "definizione": "La norma la presenta come l'insieme delle condizioni e dei fattori legati agli incidenti stradali e agli altri eventi incidentali che incidono, oppure possono incidere, sulla perdita della vita e sulle lesioni gravi subite dagli utenti della strada. Non è una sensazione generica di tranquillità né l'idea vaga di guida prudente: ti chiede di guardare condizioni e fattori, cioè ciò che esiste nel sistema, interagisce, prepara gli eventi e può essere modificato.",
+  "punti": [
+   "La parola decisiva è «possono». La norma non si limita a ciò che ha già prodotto un danno visibile: si interessa anche alle condizioni capaci di trasformarsi in esiti gravi se non vengono intercettate. Se attendi il danno più pesante per riconoscere un problema, stai guardando il sistema troppo tardi.",
+   "Il richiamo agli utenti della strada allarga il campo: non è la protezione del solo conducente professionale o del veicolo aziendale, ma l'effetto del sistema sulle persone che si trovano sulla strada, in ruoli e vulnerabilità diverse. Il baricentro si sposta dal mezzo alla persona esposta.",
+   "L'effetto pratico: se la sicurezza dipende da condizioni e fattori, il miglioramento non nasce da una sola leva. Un campus può ridurre molto il rischio non con una misura spettacolare, ma combinando limiti interni coerenti, percorsi pedonali separati, illuminazione adeguata e gestione ordinata delle soste brevi."
+  ]
+ },
+ {
+  "id": "39001_m02_s005",
+  "layout": "numeri",
+  "kicker": "Termini fondanti · 2",
+  "titolo": "Incidente stradale: i tre elementi da trattenere",
+  "intro": "La norma definisce l'incidente stradale come una collisione o un altro impatto su una strada, capace di causare morte, infortunio o danno. Una nota richiama poi la morte da traffico stradale: esiste una definizione internazionale largamente accettata che considera la morte avvenuta entro un certo tempo come risultato diretto dell'incidente, ma i Paesi possono usare criteri propri. Il punto non è il tecnicismo statistico: le convenzioni di misura cambiano, l'obiettivo sostanziale no.",
+  "numeri": [
+   { "n": "1", "h": "Non solo collisione", "d": "La definizione apre anche alla formula «altro impatto», evitando una lettura troppo stretta: non servono due veicoli che si scontrano. Può esserci un urto contro un ostacolo, una perdita di controllo con impatto su un manufatto, un investimento di pedone, una caduta che coinvolge il veicolo in movimento." },
+   { "n": "2", "h": "Il luogo: la strada", "d": "L'evento è collocato dentro il sistema del traffico stradale. Non ogni infortunio che coinvolge un mezzo è automaticamente un incidente stradale: se un addetto si ferisce riparando un veicolo in officina, l'evento può essere gravissimo ma non rientra in questa definizione. Se il danno nasce da un impatto sulla strada, sei nel perimetro RTS." },
+   { "n": "3", "h": "Le conseguenze", "d": "Comprende morte, infortunio o danno. Ma nella logica complessiva l'attenzione di lungo periodo è orientata a morti e lesioni gravi: un furgone che urta un palo in manovra lenta è un incidente stradale; lo stesso furgone che investe un ciclista appartiene alla stessa famiglia definitoria, ma con esito incomparabilmente più grave. È il secondo tipo che il sistema deve ridurre." }
+  ]
+ },
+ {
+  "id": "39001_m02_s006",
+  "layout": "cards",
+  "kicker": "Termini fondanti · 3",
+  "titolo": "Evento incidentale e quasi incidente",
+  "intro": "Se ti fermi al solo incidente stradale, perdi una parte essenziale del quadro. La norma introduce l'evento incidentale di traffico stradale: un evento che nasce perché qualcosa nel sistema non ha funzionato come avrebbe dovuto, oppure perché sono intervenuti fattori esterni capaci di alterare l'equilibrio della circolazione. Il sistema manda segnali anche prima del danno più evidente.",
+  "cards": [
+   { "h": "La famiglia degli eventi", "d": "Vi rientrano gli incidenti stradali veri e propri e gli episodi sfiorati — il quasi incidente, leggibile come mancato infortunio o mancato impatto. Il sistema ha già mostrato una debolezza reale: la differenza dipende spesso da pochi istanti o da una coincidenza favorevole, e su quella una gestione seria non costruisce la propria tranquillità." },
+   { "h": "Da dove nasce il problema", "d": "La norma richiama le componenti che possono contribuire: il comportamento di un utente della strada, il malfunzionamento di un veicolo, le condizioni della strada, oppure fattori esterni inattesi. Un elenco sintetico ma prezioso: la vulnerabilità può emergere da molti punti." },
+   { "h": "Più istruttivo di un incidente lieve", "d": "L'incidente lieve si chiude con un danno modesto e una spiegazione superficiale; il quasi incidente costringe a riconoscere che il sistema ha sfiorato un esito ben più grave. Un bus che frena in tempo per un ciclista sbucato dietro una sosta irregolare: visuale coperta, segnaletica poco chiara, percorsi promiscui." },
+   { "h": "Serve una cultura coerente", "d": "Se le persone pensano che segnalare un quasi incidente significhi attirarsi una colpa, smetteranno di raccontare gli episodi più utili. Se vedono che l'organizzazione usa quelle informazioni per correggere, la qualità del sistema cresce. E la ripetizione del segnale dice che non è sfortuna isolata." }
+  ]
+ },
+ {
+  "id": "39001_m02_s007",
+  "layout": "split",
+  "kicker": "Termini fondanti · 4",
+  "titolo": "Morte, lesioni gravi ed esito finale",
+  "lead": "La norma definisce la morte come perdita della vita umana quale conseguenza diretta di un incidente stradale, e le lesioni gravi come lesioni che producono effetti di lungo termine sulla salute, oppure danni gravi al corpo o alle sue funzioni, sempre derivanti da un incidente stradale. I Paesi possono usare criteri statistici o medico-legali non identici, ma il senso resta limpido: l'attenzione è agli esiti che trasformano profondamente la vita delle persone.",
+  "punti": [
+   { "h": "Una chiave didattica, non una definizione", "d": "Nel corso useremo «esito finale» per riferirci a questo piano ultimo di risultato. Segnalo il punto metodologico con precisione: l'espressione è una chiave di lettura professionale utile; la base normativa è nel riferimento costante a morte e lesioni gravi come bersaglio principale della prevenzione di lungo periodo." },
+   { "h": "Non tutti gli indicatori pesano uguale", "d": "In un sistema puoi misurare moltissime cose: alcuni indicatori descrivono attività svolte, altri mostrano condizioni del sistema, altri raccontano ciò che è accaduto alle persone. L'esito finale appartiene a quest'ultimo livello — il risultato da non perdere mai di vista, anche lavorando su indicatori più vicini all'operatività." },
+   { "h": "Buoni indicatori di servizio non bastano", "d": "Una società di navette per un polo ospedaliero può vantare puntualità, bassi consumi, manutenzioni eseguite e utenti soddisfatti. Ma se una configurazione di accessi, orari e attraversamenti espone pedoni fragili a un rischio elevato, il sistema non è ben governato solo perché gli indicatori di servizio sono buoni." },
+   { "h": "L'errore di priorità più comune", "d": "Lasciarsi guidare da ciò che è facile misurare o immediatamente costoso: danno al veicolo, ritardo, fermo mezzo, premio assicurativo. Aspetti legittimi, che non devono oscurare il criterio più alto. La domanda decisiva è sempre: ciò che stai facendo riduce davvero probabilità e gravità degli esiti peggiori per le persone?" }
+  ]
+ },
+ {
+  "id": "39001_m02_s008",
+  "layout": "cards",
+  "kicker": "Fattori e informazione · 1",
+  "titolo": "Prestazione di RTS, fattori misurabili, migliore informazione",
+  "intro": "Il ponte dalla teoria alla gestione. La norma non si accontenta di intenzioni lodevoli: vuole che tu possa osservare effetti, tendenze e cambiamenti riconoscibili. Senza misurazione, la gestione resta soprattutto dichiarazione.",
+  "cards": [
+   { "h": "Prestazione di RTS", "d": "I risultati misurabili del contributo che il management dell'organizzazione porta alla sicurezza del traffico stradale. Un messaggio netto: contano effetti osservabili, non dichiarazioni generiche." },
+   { "h": "Fattore prestazionale di RTS", "d": "Un elemento concreto, osservabile e misurabile che partecipa alla sicurezza stradale, sul quale l'organizzazione può agire e che le permette di capire come le proprie scelte influenzano il sistema. Non devi inseguire tutto: individua ciò che conta, è leggibile nel tempo e cade nella tua area di influenza." },
+   { "h": "Seguire l'andamento nel tempo", "d": "Un dato isolato dice poco; una tendenza coerente racconta se il sistema migliora o peggiora. In un deposito contano manutenzione, segnaletica interna, retromarce, coerenza dei turni, separazione dei percorsi, raccolta dei quasi incidente; in un ente urbano illuminazione, tempi di correzione, protezione degli attraversamenti." },
+   { "h": "Migliore informazione disponibile", "d": "L'informazione di cui l'organizzazione dispone, letta con consapevolezza dei limiti dei dati, dei modelli e delle divergenze tra esperti. Definizione onesta: le decisioni raramente nascono da conoscenze perfette. La qualità sta nell'usare bene ciò che hai, dichiarando i limiti senza usarli come alibi per non decidere." }
+  ]
+ },
+ {
+  "id": "39001_m02_s009",
+  "layout": "evidenza",
+  "kicker": "Fattori e informazione · 2",
+  "eyebrow": "Un termine di pratica professionale, non una definizione della norma",
+  "titolo": "Esposizione: quanto entri davvero in contatto con il rischio",
+  "testo": "Arriviamo a un concetto decisivo per leggere bene i dati. Segnalo il punto metodologico: l'estratto terminologico che stiamo lavorando non definisce l'esposizione in modo autonomo, ma la logica della norma la rende indispensabile. Per esposizione intendiamo il livello di contatto dell'organizzazione con il sistema del traffico stradale, e quindi con le condizioni che possono generare danno: più persone, mezzi, spostamenti, attraversamenti, accessi, orari critici e interazioni hai, maggiore sarà l'esposizione a parità di altre condizioni. Perché è così importante? Perché i numeri grezzi possono ingannarti. Due organizzazioni possono registrare lo stesso numero di incidenti in un anno con esposizioni molto diverse: se una muove pochi veicoli e l'altra moltissimi, leggere gli eventi senza considerare l'esposizione porta a conclusioni sbagliate — la prima potrebbe avere un sistema più fragile a parità di episodi. Serve anche a capire l'andamento nel tempo della stessa organizzazione: se un'azienda aumenta fortemente gli interventi e amplia le fasce orarie, incidenti stabili possono indicare un progresso, non un'immobilità. Naturalmente non è un alibi: serve a comprendere, non a giustificare. E ti obbliga a guardare il sistema in modo dinamico — non solo che cosa è successo, ma quanto spesso, in quali condizioni e con quale intensità l'organizzazione entra in situazioni potenzialmente critiche."
+ },
+ {
+  "id": "39001_m02_s010",
+  "layout": "flusso",
+  "kicker": "Fattori e informazione · 3",
+  "titolo": "Esito intermedio ed esito finale: la catena",
+  "intro": "Ti manca una distinzione pratica ma decisiva. L'esito finale coincide con ciò che il sistema vuole evitare in ultima istanza: morte e lesioni gravi degli utenti della strada. L'esito intermedio riguarda risultati più vicini ai fattori che preparano quegli esiti: segnali misurabili che non sono ancora il danno peggiore, ma dicono se il sistema si sta muovendo nella direzione giusta. Entrambe sono chiavi di lettura professionali.",
+  "passi": [
+   { "h": "Attività e controlli organizzativi", "d": "Alla base della catena stanno le scelte dell'organizzazione: pianificazione, regole, manutenzione, criteri per i fornitori, assetto degli accessi. È il livello su cui hai maggiore leva diretta e da cui tutto il resto discende." },
+   { "h": "Condizioni e comportamenti osservabili", "d": "Subito dopo trovi ciò che si vede sul campo: velocità interne, uso effettivo delle protezioni, qualità della manutenzione eseguita, separazione tra percorsi pedonali e veicolari, gestione della stanchezza, prontezza nel correggere difetti di segnaletica." },
+   { "h": "Gli eventi", "d": "Più avanti compaiono il quasi incidente e l'incidente stradale. Sono già segnali di sistema, non semplici episodi: raccontano che le difese hanno iniziato a cedere, anche quando il danno è stato evitato per poco." },
+   { "h": "L'esito finale", "d": "All'ultimo anello il danno gravissimo alla persona. Se misuri solo qui, impari troppo tardi. Due depositi senza morti né lesioni gravi non sono equivalenti: nel primo crescono i quasi incidente in retromarcia, slittano le manutenzioni, i turni sono tesi; nel secondo i quasi incidente calano e le anomalie si correggono. Gli esiti intermedi raccontano storie opposte." }
+  ]
+ },
+ {
+  "id": "39001_m02_s011",
+  "layout": "punti",
+  "kicker": "Fattori e informazione · 4",
+  "titolo": "Leggere i dati con l'esposizione",
+  "intro": "Quando un'organizzazione conta soltanto quanti incidenti sono avvenuti, rischia una fotografia deformata. Il dato assoluto dice qualcosa, ma non dice tutto: se non lo rapporti all'esposizione, puoi premiare situazioni fragili o sottovalutare miglioramenti reali. Non stai facendo statistica per il gusto di farla: stai dando ai numeri il contesto senza cui mentono.",
+  "punti": [
+   { "h": "Stesso numero, contesti opposti", "d": "Due imprese di manutenzione: la prima invia pochi tecnici su tratte brevi in orari regolari, la seconda lavora su un territorio vasto con molte urgenze, percorrenze lunghe e rientri serali. Stesso numero di eventi non significa stessa prestazione. Non assolve nessuno, ma ti obbliga a interpretare meglio." },
+   { "h": "Che cosa osservare", "d": "Quantità di spostamenti, tipologia dei percorsi, finestre orarie, densità delle interazioni con altri utenti, presenza di aree miste tra pedoni e veicoli, frequenza delle consegne, uso di mezzi propri o affidati a terzi. E non solo la marcia su lunghe distanze: accessi, parcheggi, aree di manovra, attraversamenti, navette interne, viabilità condivisa." },
+   { "h": "Pochi chilometri, alta esposizione", "d": "Un'organizzazione può percorrere pochi chilometri e avere esposizione elevata in ingresso e uscita dallo stabilimento: se i cambi turno concentrano molte persone in pochi minuti, se i mezzi pesanti incrociano pedoni, se la visibilità è scarsa, il rischio cresce anche senza grandi percorrenze." },
+   { "h": "Non è uniforme, e non è un alibi", "d": "Ci sono giorni, fasce, stagioni, meteo e categorie di utenti che espongono più di altri: una scuola ha finestre brevissime ma densissime, l'assistenza domiciliare un'esposizione diffusa, la manifattura picchi su carico e cambi turno. E «siamo più esposti» non giustifica turni eccessivi o manutenzioni rinviate: se l'esposizione cresce, deve crescere l'attenzione." }
+  ]
+ },
+ {
+  "id": "39001_m02_s012",
+  "layout": "cards",
+  "kicker": "Fattori e informazione · 5",
+  "titolo": "L'esito intermedio come strumento di prevenzione",
+  "intro": "Se l'esito finale è ciò che vuoi evitare a ogni costo, l'esito intermedio è ciò che ti avvisa prima che il sistema fallisca. Non è un dettaglio terminologico: è una scelta di metodo. Chi guarda solo morte e lesioni gravi arriva sempre tardi, perché osserva il sistema quando il prezzo umano è già altissimo.",
+  "cards": [
+   { "h": "Che cos'è, in concreto", "d": "Non una semplice attività svolta né un indicatore scelto a caso, ma un risultato collegato ai fattori che preparano l'evento e che l'organizzazione può influenzare: riduzione dei quasi incidente in retromarcia, migliore separazione tra pedoni e veicoli, meno manovre in aree cieche, rapidità nel correggere difetti di segnaletica o illuminazione." },
+   { "h": "L'illusione del silenzio statistico", "d": "Alcune organizzazioni non registrano eventi gravissimi per lunghi periodi e si convincono che tutto funzioni. Poi scopri accessi confusi, parcheggi improvvisati, mezzi poco mantenuti, pressioni sui tempi, quasi incidente mai analizzati. L'assenza di esito finale negativo non dimostra controllo: dimostra che il sistema non ha ancora pagato il suo conto peggiore." },
+   { "h": "Il legame con il rischio reale", "d": "Un esito intermedio è utile solo se ha un legame chiaro con il rischio. Se misuri qualunque cosa perché è facile misurarla, ti riempi di dati ma non migliori la sicurezza. Chiediti sempre: questo indicatore mi avvicina ai fattori che portano a un incidente grave, o mi distrae con numeri comodi ma irrilevanti?" },
+   { "h": "Non serve la perfezione", "d": "Anche qui torna la migliore informazione disponibile: segnalazioni operative, osservazioni sul campo, feedback dei conducenti, controlli interni, registrazioni di manutenzione, rilievi sugli accessi, cronologia dei quasi incidente. Raccolti con criterio e confrontati nel tempo, sostengono esiti intermedi molto robusti." }
+  ]
+ },
+ {
+  "id": "39001_m02_s013",
+  "layout": "timeline",
+  "kicker": "Fattori e informazione · 6",
+  "titolo": "Dall'esposizione all'esito finale: un caso pratico",
+  "intro": "Un'azienda che distribuisce attrezzature sanitarie in più province: furgoni propri, autisti dedicati, tecnici con auto aziendali e un piazzale condiviso con fornitori, corrieri esterni e visitatori. Nessun elemento, da solo, spiega la sicurezza del sistema. Insieme costruiscono un quadro istruttivo.",
+  "tappe": [
+   { "t": "01", "h": "L'esposizione", "d": "Ogni giorno molte tratte, spesso in orari di punta. I tecnici ricevono richieste urgenti e cambiano percorso all'ultimo minuto. Nel piazzale convivono furgoni in retromarcia, pedoni diretti agli uffici, corrieri e auto private. In certe fasce l'esposizione cresce nettamente: traffico, pressione sul tempo e interazioni aumentano insieme." },
+   { "t": "02", "h": "Gli esiti intermedi", "d": "Nell'ultimo trimestre nessun evento gravissimo, ma segnali chiari: crescono i quasi incidente in ingresso al piazzale, soprattutto con pedoni vicini alle manovre; alcuni conducenti segnalano illuminazione insufficiente al mattino presto; due manutenzioni preventive vengono rinviate; i tecnici riferiscono percorsi sempre più compressi." },
+   { "t": "03", "h": "La lettura matura", "d": "Se ti limitassi a dire «non abbiamo avuto lesioni gravi», perderesti il segnale essenziale. La combinazione tra esposizione elevata, quasi incidente in aumento, pressioni sugli orari e manutenzioni differite indica una vulnerabilità crescente. Non aspetti l'evento massimo: lavori sui fattori influenzabili." },
+   { "t": "04", "h": "Le correzioni possibili", "d": "Ridisegnare i flussi nel piazzale separando pedoni e mezzi; rivedere gli orari di uscita più congestionati; ripristinare la regolarità delle manutenzioni; inserire criteri più realistici nella pianificazione degli appuntamenti; migliorare illuminazione e visibilità agli accessi; chiedere ai fornitori regole compatibili con la sicurezza del sito." },
+   { "t": "05", "h": "Due sviluppi alternativi", "d": "Nel primo la direzione considera i quasi incidente semplici episodi e rimanda: dopo mesi un furgone in retromarcia urta un visitatore e produce una lesione grave — l'esito finale rende visibile ciò che gli esiti intermedi avevano già annunciato. Nel secondo corregge accessi, orari, manutenzione e flussi: i quasi incidente calano, e l'assenza di evento grave non è più fortuna, è il risultato di scelte migliori." }
+  ]
+ },
+ {
+  "id": "39001_m02_s014",
+  "layout": "numeri",
+  "kicker": "Fattori e informazione · 7",
+  "titolo": "Sintesi: le tre letture superficiali da evitare",
+  "intro": "Il lessico costruito funziona solo se lo distingui bene. Sicurezza RTS: condizioni e fattori che incidono su morte e lesioni gravi. Incidente stradale: l'evento di impatto sulla strada. Quasi incidente: l'evento sfiorato che rivela una debolezza. Poi le tre parole per leggere i dati: esposizione, esito intermedio, esito finale. Se le confondi, finisci in letture povere o fuorvianti.",
+  "numeri": [
+   { "n": "1", "h": "«Non è successo nulla, quindi va bene»", "d": "Un sistema può essere pieno di segnali di allarme, quasi incidente, anomalie operative e pressioni organizzative, pur senza avere ancora prodotto un esito finale gravissimo. In quel caso la calma apparente può essere solo una tregua." },
+   { "n": "2", "h": "«Un aumento di eventi minori = tutto crolla»", "d": "L'opposto, e serve equilibrio. Se un'organizzazione aumenta molto l'esposizione, cambia territorio, amplia servizi, apre nuovi accessi o gestisce flussi più complessi, il confronto dei numeri assoluti può ingannare. Chiediti sempre in quale contesto operativo stai leggendo quei dati." },
+   { "n": "3", "h": "«Tutti gli indicatori sono equivalenti»", "d": "Non lo sono: alcuni raccontano volume di attività, altri efficienza di processo, altri sono davvero vicini ai fattori di sicurezza. Un ente fieristico può vantare viabilità scorrevole e accessi rapidi, ma se crescono i quasi incidente tra veicoli e pedoni e l'utente più vulnerabile non è protetto, la lettura cambia completamente." }
+  ]
+ },
+ {
+  "id": "39001_m02_s015",
+  "layout": "split",
+  "kicker": "Il perimetro · 1",
+  "titolo": "Utente della strada: chi è davvero al centro",
+  "lead": "La norma adotta una definizione molto ampia e proprio per questo molto utile: utente della strada è qualsiasi persona sulla strada. Sembra semplice, ma sposta l'attenzione da una categoria ristretta di conducenti a tutte le persone che si trovano nello spazio stradale e possono essere coinvolte dagli eventi.",
+  "punti": [
+   { "h": "Chi rientra nella definizione", "d": "Guidatori, passeggeri, pedoni, ciclisti, motociclisti, persone che attraversano o attendono un mezzo, addetti che operano vicino alla carreggiata, visitatori che raggiungono un sito, fornitori che accedono a un piazzale. Non stai pensando solo alla sicurezza dei tuoi autisti, ma a chiunque subisca conseguenze dalle interazioni che generi o influenzi." },
+   { "h": "Contro la visione troppo interna", "d": "Una società di servizi con pochi veicoli può credersi poco rilevante. Ma se ogni giorno centinaia di persone entrano in sede, attraversano un accesso poco protetto e condividono spazi con mezzi in manovra, l'utente esposto non è solo il personale viaggiante: sono i visitatori, i lavoratori a piedi, i corrieri, chi esce dal parcheggio su una strada trafficata." },
+   { "h": "Vulnerabilità diverse", "d": "Quando valuti accessi, segnaletica, velocità interne, orari e percorsi, chiediti quale utente è presente e con quale vulnerabilità. Un bambino all'uscita da scuola, un ciclista nel traffico, un addetto che spinge un carrello, un anziano dal passo lento, un conducente di mezzo pesante con angoli ciechi: il sistema li mette in relazione, ma non li rende equivalenti." },
+   { "h": "Il baricentro resta la persona", "d": "L'obiettivo non è proteggere soltanto il patrimonio aziendale o l'efficienza del servizio: un danno a un pedone esterno, a un visitatore o a un fornitore non è periferico, è pienamente dentro il significato del sistema. Cambia anche il linguaggio delle priorità: non progetti il flusso per far passare prima i veicoli, ma per proteggere le persone." }
+  ]
+ },
+ {
+  "id": "39001_m02_s016",
+  "layout": "cards",
+  "kicker": "Il perimetro · 2",
+  "titolo": "Strada e rete stradale: lo spazio del sistema",
+  "intro": "La norma definisce la strada come la superficie usata da veicoli e persone per i loro spostamenti, includendo anche le aree vicine che partecipano concretamente a quegli spostamenti. Non solo la carreggiata in senso stretto: anche varchi, rampe, corsie di accesso, punti di attesa, aree di attraversamento e spazi adiacenti dove persone e mezzi si incrociano.",
+  "cards": [
+   { "h": "La sicurezza non inizia al cancello", "d": "Molte organizzazioni pensano che oltre il cancello ci sia solo viabilità privata, quindi un problema diverso. La norma ti porta a osservare dove avvengono davvero gli spostamenti: se in uno spazio si muovono persone e veicoli, quello spazio merita attenzione anche se non assomiglia alla strada pubblica." },
+   { "h": "Il sistema di rete stradale", "d": "Il complesso delle strade presenti in una certa area — nel corso, semplicemente rete stradale. Ti obbliga a uscire dalla logica del punto singolo: un accesso ordinato può collegarsi a una rete esterna confusa; una sede con percorsi interni lineari può trovarsi vicino a un incrocio critico o a una fermata molto frequentata." },
+   { "h": "Dove i sistemi si incrociano", "d": "La definizione ricomprende i punti in cui la viabilità incontra il traffico su rotaia: attraversamenti ferroviari, tratte tramviarie inserite nella circolazione urbana. Dove più sistemi condividono lo stesso spazio di movimento, la complessità cresce. Un magazzino vicino a una linea tranviaria non può guardare solo il piazzale interno." },
+   { "h": "Confine rigido o influenza reale?", "d": "Non conta solo stabilire cosa è dentro e cosa è fuori, ma dove l'organizzazione interagisce realmente e dove può esercitare un'influenza sensata: diretta quando ridisegni un accesso, indiretta negli orari di consegna, negli slot dei fornitori o nel segnalare a terzi una criticità ricorrente." }
+  ]
+ },
+ {
+  "id": "39001_m02_s017",
+  "layout": "cards",
+  "kicker": "Il perimetro · 3",
+  "titolo": "Veicolo e sistema di traffico stradale: una relazione",
+  "intro": "La norma definisce il sistema di traffico stradale come l'insieme formato da strada, veicoli, sistema di emergenza sanitario, utenti della strada e loro interazioni. Ti impedisce di ridurre la sicurezza a un solo componente: non basta guardare il conducente, il veicolo o l'infrastruttura. Il risultato nasce dalla loro relazione concreta.",
+  "cards": [
+   { "h": "Il veicolo non è solo meccanica", "d": "È un elemento che entra in relazione con persone, regole, spazi, condizioni ambientali e tempi operativi. Peso, visibilità disponibile, raggio di sterzata, velocità compatibile col contesto, frequenza d'uso, manutenzione, equipaggiamenti: tutto modifica il modo in cui interagisce con la strada e con l'utente." },
+   { "h": "Profili di interazione diversi", "d": "Un'auto aziendale, un furgone di consegna e un mezzo pesante per raccolta sono tutti veicoli, ma non generano lo stesso profilo: cambiano dimensioni, angoli ciechi, spazi di arresto, facilità di manovra, impatto potenziale su pedoni e ciclisti." },
+   { "h": "Perché c'è l'emergenza sanitaria", "d": "La sicurezza non dipende solo dalla prevenzione dell'evento, ma anche dalla capacità del sistema di rispondere quando accade: tempi di soccorso, accessibilità dei luoghi, possibilità di intervento rapido, qualità del coordinamento influiscono sugli esiti. La norma guarda a un sistema vivo, non a pezzi scollegati." },
+   { "h": "Il rischio nasce dall'interazione", "d": "Un deposito con mezzi efficienti ma percorsi pedonali non separati, segnaletica discontinua e visuale limitata: se guardassi solo la manutenzione ti diresti soddisfatto. Navette moderne, ma orari che spingono a fermate rapide dove attraversano molti pedoni: il veicolo, da solo, non spiega il livello di sicurezza." }
+  ]
+ },
+ {
+  "id": "39001_m02_s018",
+  "layout": "split",
+  "kicker": "Il perimetro · 4",
+  "titolo": "Confini, influenza e responsabilità condivisa",
+  "lead": "Dove finisce davvero la responsabilità organizzativa? Il confine formale conta, ma non basta. Nella logica della norma devi guardare soprattutto ai punti in cui l'organizzazione interagisce con il sistema stradale e ai fattori che può controllare o influenzare in modo ragionevole.",
+  "punti": [
+   { "h": "Oltre ciò che possiedi", "d": "Contano i tuoi veicoli, accessi, viabilità interna, dipendenti. Ma anche i corrieri in appalto che entrano nel sito, i visitatori che usano i parcheggi, i fornitori che manovrano, i tecnici esterni che operano sui tuoi orari, i clienti che raggiungono i tuoi ingressi. Se le tue scelte modificano il rischio per queste persone, sei dentro il perimetro di influenza." },
+   { "h": "La responsabilità condivisa", "d": "L'organizzazione non sostituisce i doveri individuali: un autista esterno deve comunque rispettare la legge, un pedone usare attenzione. Però può creare condizioni più sicure o meno sicure: slot irrealistici di carico, accessi confusi, scarsa illuminazione, percorsi non separati, orari che concentrano troppi flussi — oppure il contrario." },
+   { "h": "Anche senza trasportare merci", "d": "Una società di consulenza con normali auto aziendali decide agende, tempi di appuntamento, rientri serali, rotte preferite, disponibilità dei mezzi e manutenzioni. Se comprimi troppo gli orari incentivi fretta e distrazione; se non governi il parco auto aumenti vulnerabilità tecniche; se ignori i quasi incidente segnalati, perdi informazioni preziose." },
+   { "h": "Le esternalizzazioni", "d": "Quando un'attività è affidata a terzi, il soggetto esterno resta distinto, ma il rischio non scompare per magia. Se scelte contrattuali, tempi imposti, gestione degli accessi o criteri di coordinamento incidono sul sistema stradale, c'è un terreno di influenza da riconoscere. Non tutto è sotto controllo, ma molto può essere governato almeno in parte." }
+  ]
+ },
+ {
+  "id": "39001_m02_s019",
+  "layout": "confronto",
+  "kicker": "Rapporto con ISO 45001 · 1",
+  "titolo": "Logiche comuni, baricentri diversi",
+  "intro": "Il confronto più utile è con la ISO 45001: entrambe parlano di prevenzione, organizzazione, obiettivi, monitoraggio e miglioramento. Le affinità sono forti — entrambe chiedono di passare da reazioni episodiche a un sistema governato, ed entrambe non si fermano al danno già avvenuto. Ma non confondere ciò che è simile nella struttura con ciò che è identico nel contenuto.",
+  "a": {
+   "h": "ISO 45001",
+   "sub": "Salute e sicurezza dei lavoratori",
+   "punti": [
+    { "d": "Guarda alla salute e sicurezza dei lavoratori e di altre persone nel contesto delle attività di lavoro. Non ti fermi all'infortunio avvenuto: guardi pericoli, condizioni operative, controlli, segnalazioni, dati e tendenze." },
+    { "d": "Il fuoco naturale cade sui lavoratori, pur senza escludere altri soggetti coinvolti. Un tecnico che si ferisce in officina durante una riparazione resta dentro la salute e sicurezza sul lavoro, ma non dentro la definizione di incidente stradale." }
+   ]
+  },
+  "b": {
+   "h": "ISO 39001",
+   "sub": "Sicurezza del traffico stradale",
+   "punti": [
+    { "d": "Guarda alle condizioni e ai fattori che incidono su morte e lesioni gravi degli utenti della strada. Logica vicina — esposizione, quasi incidente, esito intermedio, esito finale, fattori prestazionali — ma il campo si intreccia spesso senza coincidere sempre." },
+    { "d": "Il riferimento si allarga agli utenti della strada in senso ampio: pedoni, ciclisti, visitatori, terzi, clienti, fornitori, cittadini. Un ospedale gestisce col 45001 movimentazione pazienti e rischio biologico; col 39001 accessi di ambulanze, attraversamenti, viabilità interna. Stessa organizzazione, fuochi diversi." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m02_s020",
+  "layout": "cards",
+  "kicker": "Rapporto con ISO 45001 · 2",
+  "titolo": "Sinergie pratiche: integrare senza confondere",
+  "intro": "Molte organizzazioni non hanno bisogno di due mondi separati che non si parlano, ma di processi coerenti capaci di dialogare senza perdere il proprio focus. La parola giusta è sinergia, non fusione indistinta: usare ciò che è comune per lavorare meglio, mantenendo chiaro ciò che resta specifico dell'RTS.",
+  "cards": [
+   { "h": "I terreni che dialogano", "d": "Politica, obiettivi, competenze, comunicazione interna, segnalazioni, monitoraggio, azioni correttive, riesame e miglioramento sono naturalmente integrabili. Chi ha già un sistema ISO 45001 avrà processi utili per raccogliere informazioni, assegnare responsabilità e indagare eventi: la 39001 può innestarsi, evitando duplicazioni." },
+   { "h": "Un esempio di integrazione sensata", "d": "Un'azienda di manutenzione reti può usare un unico processo per raccogliere segnalazioni di situazioni pericolose, includendo sia rischi di lavoro sul campo sia quasi incidente stradali; un solo metodo per le azioni correttive, ma con criteri di analisi diversi secondo il problema." },
+   { "h": "Dove serve attenzione", "d": "Quando la somiglianza di struttura ti illude che basti cambiare un titolo. Aggiungere qualche riferimento a guida e veicoli in un sistema 45001 non lo rende coerente con la 39001: mancherebbero gli utenti della strada esterni, l'esposizione, il quasi incidente stradale, la distinzione esito intermedio/finale, il perimetro di accessi e rete." },
+   { "h": "Il vantaggio culturale", "d": "Quando i due sistemi dialogano bene, le persone smettono di vedere la sicurezza stradale come qualcosa che comincia fuori dal lavoro: turni, pianificazione, manutenzione, accessi e carichi di tempo sono scelte organizzative che incidono su entrambi. Il confine tra dentro e fuori diventa meno ingenuo." }
+  ]
+ },
+ {
+  "id": "39001_m02_s021",
+  "layout": "punti",
+  "kicker": "Rapporto con ISO 45001 · 3",
+  "titolo": "Usare processi comuni senza perdere il fuoco",
+  "intro": "La sinergia è utile davvero solo quando ti semplifica il lavoro senza confondere le priorità. Puoi usare processi comuni, strumenti comuni e riunioni comuni, ma devi continuare a porre domande specifiche sulla sicurezza del traffico stradale. Se il processo è unico ma le domande restano generiche, l'integrazione esiste sulla carta e si dissolve nella pratica.",
+  "punti": [
+   { "h": "La raccolta delle informazioni", "d": "Un solo canale per segnalare eventi, anomalie e condizioni pericolose. Dentro quel canale, però, devono trovare posto il quasi incidente, l'incidente stradale, le criticità agli accessi, i problemi di visibilità, le pressioni sugli orari e le interazioni con l'utente esterno. Se queste voci mancano, il sistema vedrà solo ciò che accade dentro i confini abituali." },
+   { "h": "La gestione delle competenze", "d": "Quando formi chi guida, pianifica spostamenti, coordina fornitori o gestisce viabilità interna, puoi collegare salute e sicurezza del lavoro e sicurezza stradale in un unico disegno. Non ha senso separare rigidamente ciò che nella giornata reale si intreccia: il preposto che organizza turni e il responsabile che decide i flussi ai cancelli agiscono su entrambe." },
+   { "h": "Il monitoraggio", "d": "Un solo processo di riesame, una sola modalità di seguire azioni correttive, un solo metodo per assegnare responsabilità. Ma l'efficacia dipende dal contenuto: se nel riesame parli di infortuni in generale senza osservare esposizione, esito intermedio, esito finale e segnalazioni stradali, la parte RTS resterà invisibile. Non basta che il contenitore sia comune." },
+   { "h": "Non appiattire il linguaggio", "d": "Se in un verbale scrivi solo «evento» o «criticità» senza distinguere il contesto stradale, perdi precisione. Incidente stradale, quasi incidente, esposizione, esito finale, esito intermedio e utente della strada non sono dettagli lessicali: sono lenti diverse che impediscono di leggere tutto con lo stesso filtro." }
+  ]
+ },
+ {
+  "id": "39001_m02_s022",
+  "layout": "numeri",
+  "kicker": "Rapporto con ISO 45001 · 4",
+  "titolo": "Le trappole dell'integrazione",
+  "intro": "Quando due norme condividono la logica del sistema di gestione, la tentazione più forte è dire: abbiamo già tutto, basta rinominare qualche procedura. È qui che iniziano i problemi. La somiglianza di architettura diventa un'illusione di completezza: credi di aver integrato, ma hai solo nascosto ciò che era specifico dentro categorie troppo generiche.",
+  "numeri": [
+   { "n": "1", "h": "La sicurezza stradale ridotta a «trasferte»", "d": "Se parli solo di missioni, auto aziendali e regole di guida, perdi una parte del perimetro: restano fuori gli accessi ai siti, i visitatori, i fornitori, le aree di manovra, i pedoni interni, i mezzi di terzi e l'utente della strada esterno toccato dalle scelte organizzative. Il sistema sembra ordinato, ma guarda un pezzo troppo piccolo della realtà." },
+   { "n": "2", "h": "Confondere le unità di misura", "d": "In un sistema 45001 leggi molti dati attraverso la popolazione dei lavoratori esposti. Nella 39001 devi allargare agli utenti della strada in senso pieno: se continui a misurare tutto solo in relazione ai dipendenti, non vedi bene pedoni esterni, ciclisti, visitatori o fornitori. Non è solo un errore statistico: è un errore di impostazione." },
+   { "n": "3", "h": "Indicatori comodi ma poveri", "d": "Monitorare soltanto danni materiali ai mezzi, consumi di carburante o sinistri denunciati all'assicurazione. Dati utili, ma da soli non raccontano il cuore della sicurezza stradale: se non li colleghi a esposizione, quasi incidente, condizioni operative ed esito intermedio, governi soprattutto il costo economico, non il rischio umano." },
+   { "n": "4", "h": "La trappola linguistica", "d": "Meno appariscente, molto concreta. Se usi sempre parole ombrello — incidente, criticità, rischio — senza precisare il contesto, le persone smettono di vedere le differenze che contano. Un urto in retromarcia nel piazzale, una caduta in magazzino e una frenata davanti a una scuola non attivano le stesse domande: hanno cause, esposizioni e utenti diversi." }
+  ]
+ },
+ {
+  "id": "39001_m02_s023",
+  "layout": "split",
+  "kicker": "Struttura e PDCA · 1",
+  "titolo": "Una mappa didattica per orientarti tra le norme",
+  "lead": "Una precisazione importante. Nei punti iniziali della norma che hai studiato trovi scopo, campo di applicazione e termini: non una descrizione completa dell'architettura. Inoltre la norma chiarisce che non intende imporre un'identica struttura dei sistemi di gestione né della documentazione. Quindi qui non ti presento un fatto normativo: ti propongo una mappa didattica, utile nella pratica, per orientarti tra norme che spesso dialogano.",
+  "punti": [
+   { "h": "In che senso «struttura armonizzata»", "d": "Nel corso userò l'espressione come chiave di lettura comparativa, non come formula da attribuire ai primi punti della ISO 39001. È una mappa che aiuta a riconoscere domande ricorrenti: qual è il contesto in cui l'organizzazione opera, quale direzione viene data dall'alto, come si pianifica, con quali risorse si lavora, come si controlla ciò che accade, come si migliora nel tempo." },
+   { "h": "Perché serve già adesso", "d": "Perché le definizioni, da sole, rischiano di restare parole ferme. Se lasci l'esposizione come concetto isolato, capisci che riguarda il contatto con il rischio; se la metti dentro una mappa di gestione, capisci anche che dovrà influenzare come leggerai il contesto, fisserai priorità, sceglierai indicatori e verificherai risultati." },
+   { "h": "Due errori opposti che evita", "d": "Il primo: studiare la norma come un elenco di parole da memorizzare. Il secondo: immaginare che basti un vocabolario corretto per avere già un sistema efficace. Tra le parole e i risultati c'è sempre un lavoro organizzativo di collegamento: chi decide, con quali informazioni, su quali processi, con quali controlli e con quale capacità di correggere." },
+   { "h": "La stessa bussola per percorsi diversi", "d": "Una mappa comune facilita il dialogo con altre norme, come la ISO 45001, senza confondere i baricentri. Non stai dicendo che siano identiche: stai costruendo un orientamento mentale che permette di confrontarle con lucidità. Il paesaggio cambia, le domande specifiche cambiano, ma sai come orientarti." }
+  ]
+ },
+ {
+  "id": "39001_m02_s024",
+  "layout": "numeri",
+  "kicker": "Struttura e PDCA · 2",
+  "titolo": "Il ciclo PDCA: quattro domande che tengono vivo il sistema",
+  "intro": "Se la struttura armonizzata è la mappa, il PDCA è il modo con cui la metti in movimento. Ti impedisce sia l'immobilità dei piani perfetti che non cambiano nulla, sia l'attivismo confuso delle azioni sparse senza criterio: collega pensiero, azione, controllo e correzione. La forza del ciclo sta nella continuità — ogni verifica aggiorna la pianificazione, ogni correzione modifica l'attuazione futura.",
+  "numeri": [
+   { "n": "1", "h": "Che cosa devo capire prima di agire?", "d": "Nella pianificazione entra la comprensione del sistema: con quali strade, reti, veicoli, utenti e condizioni operative l'organizzazione interagisce. Leggi l'esposizione, riconosci i punti dove i quasi incidente si ripetono, distingui gli esiti intermedi dai segnali irrilevanti, tieni visibile l'esito finale. Se questa lettura è superficiale, il resto nasce già indebolito." },
+   { "n": "2", "h": "Che cosa devo fare in concreto?", "d": "L'attuazione trasforma l'analisi in pratica: regole di accesso, gestione degli orari, manutenzione dei mezzi, criteri per i fornitori, indicazioni ai conducenti, organizzazione dei percorsi, separazione tra pedoni e veicoli, modalità di segnalazione dei quasi incidente. Il sistema prende forma quando queste scelte si vedono nella vita quotidiana." },
+   { "n": "3", "h": "Come capisco se sta funzionando?", "d": "La verifica è spesso la più trascurata, ma distingue una gestione viva da una formale. Non significa solo contare gli eventi accaduti: significa confrontare i risultati con ciò che volevi ottenere, leggere le tendenze, ascoltare segnalazioni, usare la migliore informazione disponibile e capire se i fattori influenzabili migliorano o peggiorano." },
+   { "n": "4", "h": "Come trasformo ciò che ho imparato?", "d": "Migliorare non è reagire all'ultimo problema comparso: è capire che cosa il sistema ti sta insegnando e modificare la causa più plausibile della debolezza. A volte la correzione è tecnica — un attraversamento più leggibile, una visuale liberata, un'illuminazione rinforzata; altre volte organizzativa — orari meno compressi, turni sostenibili, criteri più realistici." }
+  ]
+ },
+ {
+  "id": "39001_m02_s025",
+  "layout": "flusso",
+  "kicker": "Struttura e PDCA · 3",
+  "titolo": "Pianificare e attuare: dal vocabolario alle scelte",
+  "intro": "Le due mosse che trasformano il lessico del modulo in decisioni vere. Finché parli di esposizione, esito intermedio o utente della strada solo in astratto, hai capito i concetti ma non hai ancora costruito un sistema. Il passaggio avviene quando quelle parole iniziano a guidare priorità, risorse e comportamenti osservabili.",
+  "passi": [
+   { "h": "Leggere il campo di gioco", "d": "Capire dove l'organizzazione incontra la strada, con quali mezzi, in quali orari, attraverso quali accessi, con quali utenti presenti e con quali pressioni operative. Dove l'esposizione è più alta, quali eventi si ripetono, quali quasi incidente raccontano vulnerabilità, quali esiti intermedi meritano continuità. Senza questa lettura, la pianificazione è elegante ma poco utile." },
+   { "h": "Scegliere che cosa vuoi ottenere", "d": "Il riferimento ultimo resta l'esito finale, la riduzione di morti e lesioni gravi. Ma per governare il sistema devi tradurlo in obiettivi più vicini ai fattori influenzabili: accessi critici, manovre in retromarcia, tempi di percorrenza, manutenzioni, segnalazioni degli autisti, regole per i fornitori, protezione dei pedoni interni. Il collegamento col rischio reale deve essere chiaro." },
+   { "h": "Attuare davvero", "d": "Assegnare responsabilità, chiarire regole, mettere a disposizione risorse, costruire percorsi informativi e controllare che le decisioni entrino nel lavoro quotidiano. Se pianifichi una migliore separazione tra mezzi e pedoni ma non modifichi viabilità, segnaletica, orari e comportamenti, l'attuazione non c'è stata: c'è stata solo una buona intenzione." },
+   { "h": "Includere i terzi", "d": "Attuare bene significa spesso coinvolgere chi non appartiene direttamente all'organizzazione. Se corrieri esterni, clienti, visitatori o appaltatori entrano nei tuoi spazi o sono influenzati dai tuoi orari, devi rendere il sistema leggibile anche per loro: segnaletica, istruzioni d'accesso, coordinamento, finestre di ingresso e percorsi dedicati sono parte dell'attuazione." }
+  ]
+ },
+ {
+  "id": "39001_m02_s026",
+  "layout": "flusso",
+  "kicker": "Struttura e PDCA · 4",
+  "titolo": "Verificare e migliorare: dai segnali alle correzioni",
+  "intro": "Le due fasi che distinguono un sistema vivo da uno solo dichiarato. Verificare non è un controllo formale di adempimenti: è un confronto onesto tra ciò che il sistema prometteva di ottenere e ciò che sta realmente producendo nei punti che contano.",
+  "passi": [
+   { "h": "Più del conteggio dei sinistri", "d": "L'incidente stradale resta un dato importante, ma se aspetti solo quello leggi il sistema troppo tardi. Una verifica matura osserva anche quasi incidente, livelli di esposizione, anomalie ricorrenti, qualità delle manovre, tempi di correzione delle criticità, manutenzioni rinviate, problemi di accesso e segnalazioni degli utenti." },
+   { "h": "Come leggi i dati", "d": "Qui la migliore informazione disponibile torna centrale. Non sempre avrai numeri perfetti: potresti avere osservazioni dei capi turno, segnalazioni dei conducenti, rilevazioni sugli accessi, cronologia di eventi sfiorati, lamentele dei visitatori, controlli sulle aree di carico. Raccolte con criterio e confrontate nel tempo, sostengono una verifica robusta." },
+   { "h": "Migliorare non è reagire d'istinto", "d": "Prima devi capire che cosa il sistema ti sta dicendo. Se aumenta un certo tipo di quasi incidente, la risposta non è automaticamente «più formazione per tutti»: potrebbe servire una diversa viabilità, un cambio di orario, una manutenzione trascurata, un controllo migliore dei terzi. Migliorare bene significa modificare la causa più plausibile, non distribuire rimedi generici." },
+   { "h": "Il ciclo che riparte", "d": "Un campus introduce nuove regole di accesso e crede di aver risolto. La verifica mostra incidenti con danni bassi ma quasi incidente in crescita all'uscita delle classi, soprattutto con la pioggia: il sistema non è stabile dove l'esposizione è più alta. Il miglioramento non ribadisce le regole, ridisegna flussi e presidi. Se funziona, le verifiche successive lo mostreranno; se no, il ciclo riparte." }
+  ]
+ },
+ {
+  "id": "39001_m02_s027",
+  "layout": "tabella",
+  "kicker": "Sintesi · 1",
+  "titolo": "Termini chiave e logica del sistema",
+  "intro": "Il percorso del modulo in una vista sola. Se dovessi portare con te una sola immagine: la norma ti invita a passare dall'evento isolato al sistema di relazioni che lo prepara. Finché guardi solo ciò che è già accaduto, insegui i problemi; quando leggi esposizione, quasi incidente, esito intermedio, esito finale, utente della strada e fattori influenzabili, inizi a prevenirli.",
+  "cols": [
+   "Tratto del modulo",
+   "Il punto chiave",
+   "Attenzione"
+  ],
+  "righe": [
+   [
+    "Lo scopo",
+    "Aiuta un'organizzazione che interagisce con il traffico stradale a ridurre morti e lesioni gravi, lavorando sui fattori che può controllare o influenzare davvero",
+    "Non solo imprese di trasporto: conta il rapporto reale con la strada, via mezzi, accessi, orari, flussi e decisioni"
+   ],
+   [
+    "Campo e limiti",
+    "Norma generale, applicabile a contesti molto diversi",
+    "Non sostituisce i requisiti tecnici di prodotto o servizio, e non pretende un modello unico di struttura o documentazione: conta il funzionamento"
+   ],
+   [
+    "Il lessico fondamentale",
+    "Sicurezza RTS = condizioni e fattori su morte e lesioni gravi; incidente stradale = impatto sulla strada; quasi incidente = segnale prima del danno peggiore; esposizione, esito intermedio ed esito finale per leggere i dati",
+    "Esposizione ed esiti sono chiavi di lettura del corso, non definizioni autonome della norma"
+   ],
+   [
+    "Il perimetro",
+    "Utente della strada = qualsiasi persona sulla strada; la rete comprende spazi e interazioni di accessi, attraversamenti, soste e manovre; il veicolo entra in relazione con persone, tempi, visibilità e capacità di soccorso",
+    "La lettura sistemica è una delle acquisizioni più importanti: il veicolo non è un pezzo isolato"
+   ],
+   [
+    "Il confronto con ISO 45001",
+    "Logiche simili — metodo, responsabilità, monitoraggio, miglioramento — ma baricentri diversi: la 39001 guarda agli utenti della strada, la 45001 alla salute e sicurezza nel lavoro",
+    "La sinergia è utile quando chiarisce meglio la realtà, non quando appiattisce tutto in categorie troppo generiche"
+   ],
+   [
+    "Mappa didattica e PDCA",
+    "Due chiavi professionali: una mappa comune ai sistemi di gestione per orientarti, e il ciclo capire → fare → verificare → migliorare, dove il lessico diventa criterio operativo",
+    "La mappa non è ricavata dai primi punti della norma: è un supporto didattico dichiarato"
+   ]
+  ]
+ },
+ {
+  "id": "39001_m02_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi — Modulo 2",
+  "modNum": "2",
+  "titolo": "Che cosa tenere fermo per il checkpoint",
+  "punti": [
+   { "h": "Scopo, campo e definizioni", "d": "La norma organizza la gestione dell'RTS perché un'organizzazione inserita nel sistema stradale contribuisca a ridurre morti e lesioni gravi, nei limiti di ciò che governa o orienta: conta l'influenza reale, non il possesso del rischio. Si applica a qualunque organizzazione, non detta specifiche tecniche, non impone un'architettura unica e ammette esclusioni solo se motivate e non svuotanti." },
+   { "h": "Il vocabolario dei fattori", "d": "Sicurezza RTS come condizioni e fattori; incidente stradale come impatto sulla strada; quasi incidente come segnale prezioso. E le tre lenti per leggere i dati: esposizione (quanto contatto hai col rischio), esito intermedio (i segnali che ti fanno correggere prima), esito finale (morte e lesioni gravi). Ricorda quali sono definite dalla norma e quali sono chiavi del corso." },
+   { "h": "Perimetro, ISO 45001 e PDCA", "d": "Utente della strada è qualsiasi persona sulla strada; la rete stradale include accessi e aree adiacenti; il veicolo conta per la sua relazione con spazi, persone e tempi. Con la ISO 45001 le logiche si somigliano ma i baricentri differiscono: integra i processi, conserva i criteri specifici. E il PDCA tiene vivo il sistema, con la verifica che è la fase più trascurata e più decisiva." }
+  ],
+  "prossimo": {
+   "modulo": "3",
+   "titolo": "Contesto, leadership e pianificazione",
+   "testo": "Le parole studiate qui torneranno operative: serviranno per leggere il contesto corretto, capire che cosa deve guidare la direzione e impostare una pianificazione non astratta, ma radicata nelle interazioni reali dell'organizzazione con la strada. Porta con te il lessico, ma soprattutto il modo di guardare: sistema invece di episodio, relazioni invece di compartimenti, segnali prima del danno massimo."
+  }
+ }
+]
