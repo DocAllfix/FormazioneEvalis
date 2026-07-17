@@ -1,0 +1,387 @@
+[
+ {
+  "id": "39001_m11_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 11",
+  "eyebrow": "Verificare il sistema RTS II · conduzione sul campo",
+  "titolo": "Portare la verifica sul terreno reale",
+  "sottotitolo": "Trasformare fatti dispersi in un giudizio credibile",
+  "testo": "La conduzione efficace alterna ampiezza e profondità: prima allarghi lo sguardo, poi stringi. Tre domande guida: il fatto è pertinente ai criteri? È verificabile o solo un'impressione? È isolato o si ripete?",
+  "agenda": [
+   "Il sopralluogo: piazzale, veicoli, dispositivi, officina",
+   "Le interviste: conducenti, pianificatori, flotta",
+   "Dati e telemetria, campionamento dei viaggi",
+   "Velocità, soste e riposi nel contesto",
+   "Il fascicolo di incidente come lente sul sistema",
+   "Risultanze, riunione di chiusura e rapporto"
+  ]
+ },
+ {
+  "id": "39001_m11_s002",
+  "layout": "flusso",
+  "kicker": "Il sopralluogo",
+  "titolo": "Il sopralluogo parte dal piazzale",
+  "intro": "È il punto in cui le intenzioni dichiarate incontrano la realtà del tempo e della fretta. Se rovesci la sequenza, l'organizzazione ti costruisce un racconto ordinato prima che tu abbia visto la situazione reale.",
+  "passi": [
+   { "h": "Osserva senza interrompere", "d": "Una lettura d'insieme: come entrano ed escono i mezzi, dove passano i pedoni, dove si concentrano le manovre." },
+   { "h": "Ricognizione dei punti critici", "d": "Cerca segnali di controllo operativo, non dettagli estetici: separazioni, comportamenti coerenti, zone laterali." },
+   { "h": "Solo dopo, le domande", "d": "Guarda il piazzale in un momento di attività vera, per vedere se la procedura resta viva sotto stress." }
+  ]
+ },
+ {
+  "id": "39001_m11_s003",
+  "layout": "cards",
+  "kicker": "I veicoli",
+  "titolo": "Dalla scelta del campione ai dettagli che contano",
+  "cards": [
+   { "h": "In partenza", "d": "Racconta il controllo prima del viaggio: dispositivi di visibilità, specchi, luci, dotazioni dichiarate come standard." },
+   { "h": "Appena rientrato", "d": "Racconta la gestione reale dell'uso quotidiano: danni recenti noti, registrati, corretti o solo tollerati." },
+   { "h": "Fermo per manutenzione", "d": "Mostra come si trattano i difetti: un mezzo pulito prova solo che quel giorno si presenta bene." }
+  ]
+ },
+ {
+  "id": "39001_m11_s004",
+  "layout": "confronto",
+  "kicker": "Dispositivi di bordo",
+  "titolo": "Presenza non è efficacia",
+  "intro": "Non ti interessa solo sapere se uno strumento esiste, ma se viene usato, è affidabile, è compreso da chi guida e produce decisioni migliori.",
+  "a": {
+   "h": "Presenza",
+   "sub": "L'inventario",
+   "punti": [
+    { "d": "GPS installato, checklist firmata, telecamera a bordo, avvisi ADAS: lo strumento c'è." },
+    { "d": "Ma un dispositivo ignorato, disattivato o mal orientato racconta un sistema che ha comprato, non integrato." }
+   ]
+  },
+  "b": {
+   "h": "Efficacia",
+   "sub": "L'uso reale",
+   "punti": [
+    { "d": "Osserva l'interazione concreta della persona con lo strumento all'inizio del turno o prima di una manovra." },
+    { "d": "Triangola: vedi il dispositivo, chiedi chi lo usa, quando è consultato, che cosa succede se non funziona." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m11_s005",
+  "layout": "punti",
+  "kicker": "Officina e manutenzione",
+  "titolo": "La gestione dei difetti rivela la serietà del sistema",
+  "intro": "Non valuti l'abilità meccanica in astratto: cerchi un processo affidabile per intercettare i difetti, distinguerne la gravità e garantire tracciabilità.",
+  "punti": [
+   { "h": "L'ordine logico", "d": "Spazi separati per mezzi in attesa, sospesi, pronti: capisci al volo quali sono fermi, perché e chi ha deciso la priorità." },
+   { "h": "I difetti che diventano normali", "d": "Riparazioni provvisorie protratte per settimane rivelano la soglia di tolleranza: «il lavoro parte comunque, poi si vedrà»." },
+   { "h": "Officina contro operatività", "d": "Chi vince tra sicurezza e pressione del servizio? «Troviamogli un altro mezzo» dice l'opposto di «parta così e poi lo sistemiamo»." },
+   { "h": "Il ritorno delle informazioni", "d": "I guasti ricorrenti vengono analizzati? Danni simili su mezzi diversi segnalano forse un problema sistemico." }
+  ]
+ },
+ {
+  "id": "39001_m11_s006",
+  "layout": "split",
+  "kicker": "Dal sopralluogo alle evidenze",
+  "titolo": "Trasformare le impressioni in evidenze utilizzabili",
+  "lead": "La memoria seleziona, semplifica e a volte drammatizza. Descrivi il fatto, non la conclusione: «gestione debole delle partenze» è già un giudizio; il fatto osservato apre invece una pista.",
+  "punti": [
+   { "h": "Descrivi il fatto", "d": "Concreto: tre mezzi usciti in rapida sequenza mentre due pedoni attraversavano la stessa area." },
+   { "h": "Collega al contesto", "d": "In quale processo, con quale interazione, con quale possibile effetto sul rischio." },
+   { "h": "Dove e quando", "d": "Un momento definito e un luogo preciso: così la nota resta ricostruibile." },
+   { "h": "Che cosa verificare", "d": "La pista per le interviste: chi coordina quel momento, se esistono istruzioni o registrazioni." }
+  ]
+ },
+ {
+  "id": "39001_m11_s007",
+  "layout": "evidenza",
+  "kicker": "Le interviste",
+  "eyebrow": "Metodo e postura professionale",
+  "titolo": "Chiedi esempi recenti, non opinioni astratte.",
+  "testo": "Non sei lì per mettere in difficoltà l'interlocutore né per ricevere una presentazione preparata: sei lì per raccogliere evidenze verificabili, con rispetto e metodo. Alterna domande aperte, che fanno emergere il processo reale, e domande di verifica, che precisano fatto, tempo e responsabilità. Quando qualcuno dice «gestiamo bene le anomalie», la domanda utile è: qual è l'ultima che hai gestito, e che cosa avete fatto?"
+ },
+ {
+  "id": "39001_m11_s008",
+  "layout": "cards",
+  "kicker": "I conducenti",
+  "titolo": "Intervistare senza fermarsi alle risposte comode",
+  "cards": [
+   { "h": "Il controllo iniziale", "d": "Parti dalla sequenza concreta della giornata: «raccontami l'ultima partenza un po' complicata che hai gestito»." },
+   { "h": "La gestione delle anomalie", "d": "Come reagisce l'organizzazione a ritardi, guasti, cambi di destinazione: «ci si arrangia» è un segnale diverso da supporti disponibili." },
+   { "h": "La pressione sui tempi", "d": "Se la giornata slitta, il conducente recupera in marcia o il sistema rivede il giro?" },
+   { "h": "La libertà di dire no", "d": "«Ti è mai successo di fermare un viaggio? Come ha reagito l'azienda?»: qui la verità emerge più che in ogni procedura scritta." }
+  ]
+ },
+ {
+  "id": "39001_m11_s009",
+  "layout": "cards",
+  "kicker": "I pianificatori",
+  "titolo": "Capire il rischio a monte del viaggio",
+  "cards": [
+   { "h": "Il viaggio tipico e l'eccezione", "d": "«Come nasce un viaggio e come cambia quando qualcosa va storto?»: confronta la normalità con la pressione." },
+   { "h": "Il margine temporale", "d": "Non solo velocità: finestre di carico, attese ai clienti, istruzioni nuove a mezzo già in viaggio." },
+   { "h": "Le informazioni di ritorno", "d": "Quasi incidenti, ritardi ricorrenti e dati entrano nelle scelte future, o la pianificazione ripete schemi ereditati?" },
+   { "h": "Cliente contro sicurezza", "d": "Esistono criteri chiari di priorità o prevale il criterio implicito del cliente che urla di più?" }
+  ]
+ },
+ {
+  "id": "39001_m11_s010",
+  "layout": "confronto",
+  "kicker": "Il responsabile flotta",
+  "titolo": "Il ponte tra campo e sistema",
+  "intro": "Qui verifichi se i segnali sparsi vengono visti, capiti e trattati in modo strutturato. Porta sul tavolo un caso concreto emerso prima e osserva la reazione.",
+  "a": {
+   "h": "Responsabile maturo",
+   "sub": "Parla di sistema",
+   "punti": [
+    { "d": "Spiega come conosce il problema, che cosa ha già fatto, quali dati ha guardato, quali limiti incontra." },
+    { "d": "Davanti a danni ricorrenti esamina area, turni, visibilità, missione, esperienza, stato dei mezzi." }
+   ]
+  },
+  "b": {
+   "h": "Responsabile debole",
+   "sub": "Difende l'immagine",
+   "punti": [
+    { "d": "Personalizza tutto: attribuisce gli eventi a qualche conducente distratto o a casi sfortunati." },
+    { "d": "Ogni funzione lavora per conto proprio: una frattura di sistema in un rischio che è sempre multifattoriale." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m11_s011",
+  "layout": "cards",
+  "kicker": "Incrociare le interviste",
+  "titolo": "Distinguere scarti utili e scarti apparenti",
+  "cards": [
+   { "h": "Convergenze", "d": "Dove le versioni coincidono ti mostrano i meccanismi stabili del sistema." },
+   { "h": "Divergenze", "d": "Non sempre qualcuno mente: spesso il sistema è vissuto da angolazioni e scale di osservazione diverse. Trasforma lo scarto in domanda verificabile." },
+   { "h": "Silenzi", "d": "Aspetti che nessuno presidia fino in fondo; occhio anche alle parole coerenti che nascondono gesti concreti diversi." }
+  ]
+ },
+ {
+  "id": "39001_m11_s012",
+  "layout": "numeri",
+  "kicker": "Chiudere le interviste",
+  "titolo": "Trasformare le conversazioni in piste verificabili",
+  "intro": "Non lasciare le interviste come racconti interessanti: pochi gesti professionali le rendono spendibili nelle verifiche successive.",
+  "numeri": [
+   { "n": "01", "h": "Il riepilogo breve", "d": "Restituisci in modo neutro ciò che hai capito: dai spazio a correzioni e ottieni tre o quattro punti chiari." },
+   { "n": "02", "h": "La traccia concreta", "d": "Se il racconto cita una decisione, chiedi come resta visibile: il sistema lascia impronte verificabili?" },
+   { "n": "03", "h": "Fatto, percezione, interpretazione", "d": "Accompagna ogni affermazione verso un terreno verificabile, senza smentire nessuno." }
+  ]
+ },
+ {
+  "id": "39001_m11_s013",
+  "layout": "evidenza",
+  "kicker": "Dati e telemetria",
+  "eyebrow": "Leggere i numeri senza perdere il lavoro reale",
+  "titolo": "Un dato non parla mai da solo.",
+  "testo": "I numeri sembrano promettere oggettività immediata, ma ti chiedono la stessa prudenza del sopralluogo. Devi capire da dove arriva il dato, come è raccolto, con quale scopo e con quale collegamento alle decisioni. Usa il criterio della miglior informazione disponibile: meglio un dato parziale letto bene e integrato con altre evidenze, che una massa di registrazioni usate in modo impressionistico."
+ },
+ {
+  "id": "39001_m11_s014",
+  "layout": "punti",
+  "kicker": "Campionamento dei viaggi",
+  "titolo": "Scegliere pochi casi che raccontino molto",
+  "intro": "Guardare tutto sembra prudente, ma quasi mai è intelligente. Un buon campione non cerca solo l'anomalia: cerca il funzionamento reale in situazioni diverse.",
+  "punti": [
+   { "h": "Rappresentatività pratica", "d": "Urbano ed extraurbano, picco e ordinario, mezzi e conducenti diversi: tocca le zone dove il rischio si manifesta in modi diversi." },
+   { "h": "Pertinenza alle piste", "d": "Il campione nasce dalle domande aperte sul campo: i giri sotto pressione, le partenze affollate, le famiglie di mezzi con danni." },
+   { "h": "Equilibrio critici-ordinari", "d": "Mescola: un viaggio del flusso medio, uno critico, uno con variazione in corso d'opera. E mantieni tu la regia del campione." }
+  ]
+ },
+ {
+  "id": "39001_m11_s015",
+  "layout": "split",
+  "kicker": "La velocità",
+  "titolo": "Leggere scostamenti, contesto e ricorrenze",
+  "lead": "Il dato più seducente e più facile da leggere male. Da solo porta a conclusioni sbrigative; collegato alle altre evidenze diventa potente.",
+  "punti": [
+   { "h": "Episodio o pattern", "d": "Un picco occasionale non racconta il sistema; la ricorrenza sposta la domanda dalla colpa al governo del rischio." },
+   { "h": "Dove si concentrano", "d": "Scostamenti addensati sugli stessi clienti, rientri o finestre orarie diventano un segnale organizzativo." },
+   { "h": "Confronto tra conducenti", "d": "Uno solo che si discosta è tema individuale; molti sullo stesso viaggio sono un messaggio operativo del sistema." },
+   { "h": "L'uso dei dati", "d": "Se servono solo a richiamare il caso peggiore, perdono valore; servono a capire dove la guida diventa fragile." }
+  ]
+ },
+ {
+  "id": "39001_m11_s016",
+  "layout": "confronto",
+  "kicker": "Pause, soste e riposi",
+  "titolo": "Quando il tempo rivela la qualità della pianificazione",
+  "intro": "Non guardi solo quanto dura un viaggio, ma come il tempo è distribuito. Un piccolo ritardo iniziale può propagarsi lungo tutto il giro.",
+  "a": {
+   "h": "Sosta operativa",
+   "sub": "Non è recupero",
+   "punti": [
+    { "d": "Carico, scarico, ricerca del cliente, attesa a un accesso congestionato: spesso una fase molto intensa." },
+    { "d": "Se il sistema legge ogni fermata come recupero, si dà una rappresentazione troppo ottimistica della giornata." }
+   ]
+  },
+  "b": {
+   "h": "Pausa di recupero",
+   "sub": "Va resa praticabile",
+   "punti": [
+    { "d": "Non basta che esista nel programma: conta se il sistema la rende praticabile e protetta." },
+    { "d": "Difendere tempi realistici, anche a costo di rivedere un giro, mostra un livello diverso di maturità." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m11_s017",
+  "layout": "numeri",
+  "kicker": "Triangolare",
+  "titolo": "Far parlare insieme i tre strati di evidenza",
+  "intro": "Usa ogni fonte per mettere alla prova le altre due. Se i tre piani convergono, il segnale si rafforza; se uno resta muto, è un'informazione, non un fallimento.",
+  "numeri": [
+   { "n": "01", "h": "Il sopralluogo", "d": "Spazi, mezzi, dispositivi, officina: che cosa il campo mostra davvero." },
+   { "n": "02", "h": "Le interviste", "d": "Come le persone descrivono lavoro, problemi e decisioni, con margini e pressioni." },
+   { "n": "03", "h": "Dati e telemetria", "d": "Andamenti, sequenze e ricorrenze: la prova nel tempo di ciò che è stato raccontato." }
+  ]
+ },
+ {
+  "id": "39001_m11_s018",
+  "layout": "timeline",
+  "kicker": "Il fascicolo di incidente",
+  "titolo": "Mettere ordine prima delle ipotesi",
+  "intro": "Prima costruisci la cronologia essenziale: toglie potere alle impressioni. Un ritardo accumulato ore prima può pesare più della manovra finale che appare come causa immediata.",
+  "tappe": [
+   { "t": "01", "h": "Partenza", "d": "Con quale ritardo rispetto al piano, con quale mezzo e missione prevista." },
+   { "t": "02", "h": "Le soste", "d": "Difficoltà di accesso e soste aggiuntive che consumano il margine." },
+   { "t": "03", "h": "Cambio itinerario", "d": "Destinazioni intermedie modificate, comunicate a viaggio già iniziato." },
+   { "t": "04", "h": "L'urto", "d": "La manovra di uscita dall'area di scarico: il gesto finale, non tutta la storia." },
+   { "t": "05", "h": "La segnalazione", "d": "Chi è stato informato per primo e che cosa è stato deciso subito dopo." }
+  ]
+ },
+ {
+  "id": "39001_m11_s019",
+  "layout": "cards",
+  "kicker": "Ricostruire la sequenza",
+  "titolo": "Separare fatti certi, inferenze e ipotesi",
+  "cards": [
+   { "h": "Fatti certi", "d": "Ciò che puoi sostenere con orari, immagini, note e tracciato: partenza in ritardo, urto sul lato posteriore destro, segnalazione." },
+   { "h": "Inferenze ragionevoli", "d": "Ponti logici fondati su evidenze coerenti: spazio stretto → manovra ad alta attenzione; ritardo accumulato → pressione percepita." },
+   { "h": "Ipotesi da verificare", "d": "Familiarità limitata col punto, comunicazione tardiva, mezzo poco adatto: utili, ma tali finché non trovi riscontri." }
+  ]
+ },
+ {
+  "id": "39001_m11_s020",
+  "layout": "flusso",
+  "kicker": "Cause governabili",
+  "titolo": "Dall'evento ai tre livelli di causa",
+  "intro": "Chiediti quali elementi erano governabili dall'organizzazione. È su questo che una verifica RTS produce il valore più alto — senza forzare sempre una lettura sistemica.",
+  "passi": [
+   { "h": "Causa immediata", "d": "Il gesto o la condizione che ha prodotto materialmente il danno: la manovra di uscita che urta l'ostacolo." },
+   { "h": "Fattori contributivi", "d": "Spazio ridotto, visibilità complessa, ritardo accumulato, informazione operativa incompleta." },
+   { "h": "Condizioni di sistema", "d": "Pianificazione, uso dei dati storici, scelta dei mezzi, ritorno delle segnalazioni: perché eventi simili non sono diventati criterio." }
+  ]
+ },
+ {
+  "id": "39001_m11_s021",
+  "layout": "confronto",
+  "kicker": "Concludere il fascicolo",
+  "titolo": "Correzione e apprendimento non coincidono",
+  "intro": "Un incidente vale quando smette di essere cronaca e diventa evidenza leggibile. Distingui la debolezza locale da quella trasversale.",
+  "a": {
+   "h": "Correzione",
+   "sub": "Vicina all'episodio",
+   "punti": [
+    { "d": "Riparare il danno, richiamare l'attenzione, aggiornare la pratica amministrativa." },
+    { "d": "Utile, ma resta ferma al singolo caso: il fascicolo si consuma in fretta." }
+   ]
+  },
+  "b": {
+   "h": "Apprendimento",
+   "sub": "Cambia il sistema",
+   "punti": [
+    { "d": "Che cosa cambierà nel modo di pianificare, assegnare, segnalare e monitorare situazioni simili." },
+    { "d": "Classificare il punto come critico, rivedere il sequenziamento, associare mezzi più adatti." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m11_s022",
+  "layout": "definizione",
+  "kicker": "Le risultanze",
+  "eyebrow": "Il giudizio professionale tracciabile",
+  "titolo": "Che cos'è una risultanza forte",
+  "definizione": "Non quella che suona severa, ma quella che collega in modo chiaro criterio, fatto, contesto e significato operativo. Una piccola catena logica: prima il tema o il criterio, poi l'evidenza concreta, infine perché conta per il sistema, senza esagerare e senza prescrivere la soluzione.",
+  "punti": [
+   { "h": "Non vive di aggettivi", "d": "«Situazione preoccupante» espone alla contestazione; una frase asciutta e ben costruita anticipa la domanda «che cosa hai visto?»." },
+   { "h": "Non impone la soluzione", "d": "Chiarisci il problema e il suo nesso col sistema; non progettare tu il dispositivo o il software, salvo che il criterio lo richieda." }
+  ]
+ },
+ {
+  "id": "39001_m11_s023",
+  "layout": "tabella",
+  "kicker": "Esempi a confronto · interviste",
+  "titolo": "La stessa evidenza, scritta debole o forte",
+  "cols": ["Formula debole", "Formula più forte"],
+  "righe": [
+   ["I pianificatori modificano spesso i percorsi creando pressione.", "Da interviste a conducenti e pianificatori emergono variazioni comunicate a viaggio iniziato su alcuni giri urbani; il campionamento mostra riduzione dei margini nelle fasi successive."],
+   ["I conducenti non si sentono tutelati quando segnalano.", "Alcuni conducenti riferiscono esitazione a fermare la partenza per anomalie minori; in un caso recente il mezzo è stato sostituito prima di partire: pratica non ancora uniforme."],
+   ["Il pianificatore non considera abbastanza la sicurezza.", "In alcuni giri campionati non emerge evidenza di margini assorbenti rispetto a ritardi già noti, con compressione delle attività nella seconda parte della giornata."]
+  ]
+ },
+ {
+  "id": "39001_m11_s024",
+  "layout": "tabella",
+  "kicker": "Esempi a confronto · dati",
+  "titolo": "Il numero non basta da solo a sostenere il giudizio",
+  "cols": ["Formula debole", "Formula più forte"],
+  "righe": [
+   ["I dati telemetrici evidenziano eccessi di velocità diffusi.", "Su alcuni giri urbani si osservano scostamenti ricorrenti in tratti successivi a consegne in ritardo; tempi e interviste indicano compressione progressiva della giornata."],
+   ["I tempi di pausa non sono adeguati.", "Nei viaggi campionati le interruzioni più lunghe sono associate ad attese presso clienti o a operazioni di consegna, con ridotti margini di recupero pianificato."],
+   ["La pianificazione viene disattesa frequentemente.", "In alcuni casi il percorso realizzato si discosta dal piano a viaggio iniziato; non emerge però registrazione uniforme di tali variazioni come apprendimento."]
+  ]
+ },
+ {
+  "id": "39001_m11_s025",
+  "layout": "cards",
+  "kicker": "Calibrare il rilievo",
+  "titolo": "Tono, perimetro e peso delle risultanze",
+  "cards": [
+   { "h": "Il tono", "d": "Fermo ma non teatrale: evita «sistema fallimentare» salvo evidenze schiaccianti. La forza nasce dalla precisione, non dall'aggettivo." },
+   { "h": "Il perimetro", "d": "Se hai visto alcuni viaggi, scrivi «alcuni viaggi campionati»; non attribuire alla flotta ciò che riguarda una famiglia di mezzi." },
+   { "h": "Il peso", "d": "Qualunque schema di classificazione, il primo compito resta scrivere bene il fatto: se la base è vaga, anche il peso è discutibile." }
+  ]
+ },
+ {
+  "id": "39001_m11_s026",
+  "layout": "flusso",
+  "kicker": "La riunione di chiusura",
+  "titolo": "Restituire senza sorprese inutili",
+  "intro": "Se una criticità significativa compare per la prima volta in chiusura, la conduzione non ha gestito bene i passaggi intermedi. La parola chiave è assenza di sorprese.",
+  "passi": [
+   { "h": "Richiama il perimetro", "d": "Luoghi visti, persone ascoltate, dati letti e logica del campionamento: toglie il tono del verdetto improvviso." },
+   { "h": "Riepiloga equilibrato", "d": "Gli elementi che descrivono il sistema, non solo le debolezze: anche i punti forti, con evidenze." },
+   { "h": "Presenta le risultanze", "d": "Dalle più rilevanti, spiegando le evidenze; ripeti a voce gli impegni con nome e orizzonte temporale." }
+  ]
+ },
+ {
+  "id": "39001_m11_s027",
+  "layout": "split",
+  "kicker": "Il rapporto finale",
+  "titolo": "Dal taccuino a un documento chiaro e difendibile",
+  "lead": "Un lettore assente al sopralluogo, alle interviste e ai dati deve poter seguire il ragionamento senza salti. Non conta la quantità di pagine, ma chiarezza, tracciabilità e proporzione.",
+  "punti": [
+   { "h": "Onesto sui limiti", "d": "Se il campionamento ha riguardato alcuni giri, scrivilo; se la telemetria copriva parte della flotta, scrivilo. L'onestà rende credibili." },
+   { "h": "Risultanze per temi", "d": "Piazzale, difetti del mezzo, sostenibilità della pianificazione, uso dei dati: raggruppare aiuta il lettore e verifica che parli del sistema." },
+   { "h": "La catena visibile", "d": "Perimetro, attività, fonti, sintesi, risultanze, conclusione: la stessa logica usata sul campo." },
+   { "h": "Non un romanzo", "d": "Non riportare tutto ciò che hai ascoltato: seleziona ciò che spiega davvero le conclusioni, anche per le parti positive." }
+  ]
+ },
+ {
+  "id": "39001_m11_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 11",
+  "modNum": "11",
+  "titolo": "Sintesi operativa e ponte al modulo successivo",
+  "punti": [
+   { "h": "Nessuna fonte basta da sola", "d": "Vedere, ascoltare, misurare e scrivere: ogni pezzo deve controllare gli altri. È la triangolazione a rendere credibile la verifica." },
+   { "h": "Linguaggio forte ≠ evidenza forte", "d": "La forza nasce dalla precisione dei fatti, non dagli aggettivi: perimetro chiaro, tono sobrio, peso calibrato." },
+   { "h": "Contano i collegamenti", "d": "Un buon giudizio non nasce per accumulo di dettagli, ma per qualità dei nessi tra scene, parole e dati." },
+   { "h": "L'incidente come lente", "d": "Il fascicolo separa fatti, inferenze e ipotesi e mostra se il sistema apprende o si limita a riparare." }
+  ],
+  "prossimo": {
+   "modulo": "12",
+   "titolo": "Casi completi, simulazione d'esame e certificazione",
+   "testo": "Non più singoli passaggi del metodo, ma casi completi: rifare con calma la catena sopralluogo-interviste-campionamento-risultanze-rapporto."
+  }
+ }
+]
