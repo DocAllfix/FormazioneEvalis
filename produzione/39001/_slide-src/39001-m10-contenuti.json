@@ -1,0 +1,380 @@
+[
+ {
+  "id": "39001_m10_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 10",
+  "eyebrow": "Verificare il sistema RTS I · programma e preparazione",
+  "titolo": "Preparare una verifica RTS che abbia valore",
+  "sottotitolo": "Dal metodo dell'audit al rischio reale delle strade",
+  "testo": "Non guardi solo documenti o solo strada: guardi il collegamento tra decisioni organizzative e conseguenze potenziali sul traffico. Decidere prima dove guardare, quando guardare e con quali competenze.",
+  "agenda": [
+   "Richiami ISO 19011:2026 in chiave RTS",
+   "Il programma di audit come scelta strategica",
+   "Stagionalità, percorsi e siti multipli",
+   "Competenze del gruppo ed esperto tecnico",
+   "Preparazione operativa: dati, flotta, documenti",
+   "Checklist per clausola e audit combinati 45001"
+  ]
+ },
+ {
+  "id": "39001_m10_s002",
+  "layout": "definizione",
+  "kicker": "Criteri ed evidenze",
+  "eyebrow": "Letti con gli occhi della sicurezza stradale",
+  "titolo": "L'evidenza forte è una triangolazione",
+  "definizione": "I criteri sono il riferimento con cui confronti i fatti; le evidenze sono informazioni verificabili e pertinenti a quei criteri. In RTS il metro è quasi sempre composito, e allora anche l'evidenza lo è: un documento, una dichiarazione e un dato operativo che parlano tra loro.",
+  "punti": [
+   { "h": "Criterio composito", "d": "ISO 39001, procedure interne, obblighi legali, istruzioni sui viaggi, impegni con i committenti." },
+   { "h": "Sufficienti e adeguate", "d": "Le evidenze devono sostenere conclusioni credibili, non riempire pagine: scegli ciò che illumina il sistema." }
+  ]
+ },
+ {
+  "id": "39001_m10_s003",
+  "layout": "split",
+  "kicker": "Postura professionale",
+  "titolo": "Indipendenza, obiettività e miglior informazione disponibile",
+  "lead": "Il contesto del trasporto può sedurre il giudizio: dati, dashboard, racconti convincenti. Proprio per questo l'audit deve restare ancorato al fatto giusto.",
+  "punti": [
+   { "h": "Indipendenza", "d": "Libertà da pressioni e automatismi: né fiducia preventiva verso la sede virtuosa, né accanimento su quella colpita." },
+   { "h": "Obiettività", "d": "La conclusione nasce dal confronto tra criteri ed evidenze, non dall'autorità di chi parla meglio." },
+   { "h": "Miglior informazione", "d": "Usa l'informazione migliore che hai, riconoscendone i limiti: raramente avrai un'immagine perfetta." },
+   { "h": "Triangolazione", "d": "Documenti, osservazione, colloqui, dati: nessun singolo episodio definisce da solo la maturità del sistema." }
+  ]
+ },
+ {
+  "id": "39001_m10_s004",
+  "layout": "confronto",
+  "kicker": "Il ruolo della checklist",
+  "titolo": "La checklist: guida intelligente, non gabbia",
+  "intro": "Un audit può essere interno, esterno o combinato, ma il metodo resta lo stesso: obiettivi chiari, criteri dichiarati, campo definito. E la checklist va usata per il suo ruolo giusto.",
+  "a": {
+   "h": "Guida intelligente",
+   "sub": "Punto di partenza",
+   "punti": [
+    { "d": "Ricorda i passaggi essenziali e mantiene tracciabilità tra criteri ed evidenze." },
+    { "d": "Dalla registrazione firmata passa a: come si classifica, chi analizza le cause, se le azioni reggono nel tempo." }
+   ]
+  },
+  "b": {
+   "h": "Gabbia da spuntare",
+   "sub": "Modulo rigido",
+   "punti": [
+    { "d": "Trasformata in caselle da barrare, non pensa al posto tuo e non garantisce completezza." },
+    { "d": "Fa perdere ciò che in RTS conta di più: seguire il filo del rischio reale." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m10_s005",
+  "layout": "evidenza",
+  "kicker": "Programma di audit",
+  "eyebrow": "Non calendario piatto, ma scelta strategica",
+  "titolo": "Il programma decide dove vale davvero la pena investire il tempo di verifica.",
+  "testo": "Un calendario uniforme, con la stessa durata per ogni sito, genera una falsa idea di equilibrio: tratta come equivalenti realtà che non lo sono. Parti da domande severe: dove l'organizzazione influenza di più la sicurezza, dove i dati mostrano fragilità, dove ci sono stati cambiamenti recenti, dove i dati sono più deboli. Stabile nei criteri, mobile nelle priorità."
+ },
+ {
+  "id": "39001_m10_s006",
+  "layout": "timeline",
+  "kicker": "Stagionalità",
+  "titolo": "Il fattore che cambia esposizione e qualità delle evidenze",
+  "intro": "Il periodo dell'anno modifica intensità del servizio, utenza, condizioni ambientali e perfino qualità dei dati. Programmare bene significa scegliere con intenzione il momento di osservazione.",
+  "tappe": [
+   { "t": "01", "h": "Preparazione al picco", "d": "Osservi se la pianificazione è adeguata prima che la pressione operativa salga davvero." },
+   { "t": "02", "h": "Durante il picco", "d": "Vedi se il sistema regge sotto stress: partenze concitate, mezzi noleggiati, orari allungati." },
+   { "t": "03", "h": "Dopo il picco", "d": "Valuti se l'organizzazione apprende dagli eventi e chiude le azioni, o solo archivia." }
+  ]
+ },
+ {
+  "id": "39001_m10_s007",
+  "layout": "cards",
+  "kicker": "Tipologie di percorso",
+  "titolo": "Stessa organizzazione, ma rischi molto diversi",
+  "cards": [
+   { "h": "Urbano denso", "d": "Fermate frequenti, attraversamenti, biciclette e soste irregolari: gestione manovre a bassa velocità, utenti vulnerabili, quasi incidenti." },
+   { "h": "Extraurbano veloce", "d": "Percorrenze lunghe e ripetitive: affaticamento, pianificazione pause, monitoraggio velocità, manutenzione preventiva, eventi notturni." },
+   { "h": "Accessi e piazzali", "d": "Aree di carico, varchi e percorsi interni: è lì che si concentrano manovre, interferenze e bassa percezione del rischio." }
+  ]
+ },
+ {
+  "id": "39001_m10_s008",
+  "layout": "tabella",
+  "kicker": "Sedi multiple",
+  "titolo": "Scegliere i campioni che contano davvero",
+  "cols": ["Sede", "Che cosa rivela"],
+  "righe": [
+   ["Centro direzionale", "Governo del sistema: obiettivi, indicatori, dati di incidentalità, decisioni e riesame."],
+   ["Deposito urbano", "All'alba, briefing e controlli pre partenza: se le regole diventano pratica quotidiana."],
+   ["Officina", "Collegamento tra manutenzione e disponibilità reale dei mezzi."],
+   ["Sede distaccata collinare", "Nel periodo significativo: adattamenti locali e tenuta in condizioni meteo variabili."]
+  ]
+ },
+ {
+  "id": "39001_m10_s009",
+  "layout": "confronto",
+  "kicker": "Competenze del gruppo",
+  "titolo": "Perché il metodo da solo non basta",
+  "intro": "La composizione giusta nasce dall'equilibrio tra due piani. Se manca il primo, avrai un tecnico che verifica male; se manca il secondo, una verifica corretta ma povera di domande.",
+  "a": {
+   "h": "Capacità di verifica",
+   "sub": "Il metodo",
+   "punti": [
+    { "d": "Pianificare, raccogliere evidenze, intervistare, campionare, valutare e riferire con chiarezza." },
+    { "d": "Mantenere indipendenza, tracciabilità e giudizio ancorato ai criteri." }
+   ]
+  },
+  "b": {
+   "h": "Capacità di dominio",
+   "sub": "Il trasporto",
+   "punti": [
+    { "d": "Leggere una flotta, capire la logica di assegnazione dei viaggi, cogliere il senso della telemetria." },
+    { "d": "Comprendere come manutenzione, formazione e supervisione si intrecciano nella prestazione RTS." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m10_s010",
+  "layout": "split",
+  "kicker": "L'esperto tecnico",
+  "titolo": "Quando serve e come usarlo senza perdere il metodo",
+  "lead": "L'esperto entra quando la qualità del giudizio dipende da una competenza specialistica senza la quale il gruppo rischierebbe di interpretare male fatti rilevanti. Ma non sostituisce il verificatore.",
+  "punti": [
+   { "h": "Fornisce lettura tecnica", "d": "Chiarisce aspetti specialistici, aiuta a formulare domande e a interpretare dati o soluzioni operative." },
+   { "h": "Non emette il giudizio", "d": "La responsabilità della verifica resta al gruppo e a chi lo guida." },
+   { "h": "Non è una stampella", "d": "Non usarlo in modo permanente rinunciando a far crescere le competenze del gruppo." },
+   { "h": "Libero da conflitti", "d": "Se ha progettato o difende il sistema oggetto di verifica, il rischio di parzialità aumenta." }
+  ]
+ },
+ {
+  "id": "39001_m10_s011",
+  "layout": "numeri",
+  "kicker": "Comporre il gruppo",
+  "titolo": "Copertura delle competenze su tre livelli di bisogno",
+  "intro": "Se uno di questi livelli manca, la verifica perde profondità. Se ne mancano due, rischia di diventare solo una conversazione educata.",
+  "numeri": [
+   { "n": "01", "h": "Il metodo di verifica", "d": "Pianificare, campionare, valutare e riferire con rigore, indipendenza e tracciabilità." },
+   { "n": "02", "h": "Il trasporto e i processi", "d": "Conoscere viaggi, flotta, briefing, manutenzione e assegnazione dei mezzi." },
+   { "n": "03", "h": "La lettura dei dati", "d": "Interpretare telemetria, dati di incidentalità e registrazioni di manutenzione, con i loro limiti." }
+  ]
+ },
+ {
+  "id": "39001_m10_s012",
+  "layout": "flusso",
+  "kicker": "Preparazione operativa",
+  "titolo": "Che cosa raccogliere prima di andare sul campo",
+  "intro": "Non chiedere tutto: chiedi ciò che ti fa capire come l'organizzazione governa il rischio. Parti dai fatti, li colleghi alle attività reali, poi li confronti con la struttura documentata.",
+  "passi": [
+   { "h": "Dati di incidentalità", "d": "Eventi e altri segnali utili a leggere l'esposizione: dove il sistema parla più forte." },
+   { "h": "Flotta e viaggi", "d": "Mezzi, servizi, percorsi, orari e sedi: il paesaggio operativo reale." },
+   { "h": "Documenti chiave", "d": "Come il sistema è progettato e governato, non ogni allegato esistente." },
+   { "h": "Cambiamenti recenti", "d": "Spesso sono proprio i cambiamenti a rendere il sistema più vulnerabile." }
+  ]
+ },
+ {
+  "id": "39001_m10_s013",
+  "layout": "punti",
+  "kicker": "Dati di incidentalità",
+  "titolo": "Leggere gli eventi senza fermarsi al conteggio",
+  "intro": "Il numero totale dice poco. Ti serve capire severità, contesto, ripetizione, qualità della classificazione e capacità di imparare.",
+  "punti": [
+   { "h": "Severità e frequenza", "d": "Molti urti lievi e pochi eventi gravi non coincidono: la massa dei lievi può coprire il rischio più severo." },
+   { "h": "Il contesto", "d": "Dove, quando, con quale mezzo, in quale fase del viaggio e con quali utenti coinvolti." },
+   { "h": "Gli altri eventi", "d": "Quasi incidenti e segnalazioni parlano prima del danno: molte frenate d'emergenza sugli stessi tratti non sono tranquillità." },
+   { "h": "Qualità del dato", "d": "Chi classifica, con quali criteri e se sono coerenti tra sedi: numeri ordinati possono nascondere disomogeneità." },
+   { "h": "Che cosa dopo", "d": "Sono state riviste rotte, briefing, controlli? Qui vedi se l'organizzazione archivia oppure apprende." }
+  ]
+ },
+ {
+  "id": "39001_m10_s014",
+  "layout": "cards",
+  "kicker": "Flotta e viaggi",
+  "titolo": "Collegare mezzi, percorsi e uso reale",
+  "cards": [
+   { "h": "Segmentare i mezzi", "d": "Non un inventario: età, dotazioni, ADAS, visibilità e storia manutentiva cambiano l'esposizione anche nella stessa categoria." },
+   { "h": "L'uso reale", "d": "Non basta sapere che un furgone è di una sede: centro storico, servizio notturno o retromarcia in spazi ristretti cambiano le domande." },
+   { "h": "Famiglie di percorso", "d": "Urbano denso, extraurbano veloce, linee scolastiche, tratte notturne, punti critici stagionali: scegli campioni che parlino." },
+   { "h": "Eccezioni e variabilità", "d": "Mezzi sostitutivi, noleggi, deviazioni, rotazione: il rischio cresce quando il sistema esce dalla routine." }
+  ]
+ },
+ {
+  "id": "39001_m10_s015",
+  "layout": "split",
+  "kicker": "I documenti utili",
+  "titolo": "Chiedere poco ma chiedere bene",
+  "lead": "I documenti non sostituiscono l'osservazione: la preparano. Leggili con una domanda severa: mi aiutano a capire come l'organizzazione passa da intenzione a controllo operativo?",
+  "punti": [
+   { "h": "L'ossatura", "d": "Politica e obiettivi, ruoli e responsabilità: direzione, linguaggio e chi decide, monitora, analizza." },
+   { "h": "I processi chiave", "d": "Pianificazione viaggi, manutenzione, formazione, gestione eventi e informazioni documentate." },
+   { "h": "I risultati", "d": "Indicatori, riesami, esiti di verifiche e stato delle azioni: mostrano se il sistema si osserva davvero." },
+   { "h": "Le attività esterne", "d": "Come sceglie i fornitori rilevanti e come il rischio governato fuori torna nel flusso decisionale." }
+  ]
+ },
+ {
+  "id": "39001_m10_s016",
+  "layout": "numeri",
+  "kicker": "Priorità e campionamento",
+  "titolo": "Quattro criteri per scegliere prima della visita",
+  "intro": "Senza scelta, porti sul campo troppe domande e poco fuoco. Questi criteri distinguono l'urgenza apparente dall'importanza reale.",
+  "numeri": [
+   { "n": "01", "h": "Severità potenziale", "d": "Anche un evento raro, se può avere conseguenze gravi, merita attenzione." },
+   { "n": "02", "h": "Ricorrenza", "d": "Ciò che si ripete, anche lieve, indica un controllo debole o un apprendimento incompleto." },
+   { "n": "03", "h": "Cambiamento recente", "d": "I cambiamenti destabilizzano ruoli, abitudini e dati." },
+   { "n": "04", "h": "Opacità informativa", "d": "Una zona poco chiara o incoerente tra sedi merita verifica approfondita." }
+  ]
+ },
+ {
+  "id": "39001_m10_s017",
+  "layout": "cards",
+  "kicker": "Interviste e osservazioni",
+  "titolo": "Vedere il sistema mentre lavora",
+  "cards": [
+   { "h": "Le finestre temporali", "d": "Molte evidenze emergono quando il lavoro accade: sii presente all'assegnazione dei mezzi, al fine turno, non solo a metà mattina." },
+   { "h": "Lungo il processo", "d": "Scegli gli interlocutori per posizione nel processo, non solo per ruolo: coordinatori, pianificatori, conducenti, manutenzione." },
+   { "h": "Osservazione mirata", "d": "Non «sopralluogo in deposito», ma partenze, accessi, manovre, rientri, flussi pedonali: obiettivi chiari." },
+   { "h": "Colloqui riservati", "d": "Concorda momenti liberi con il personale operativo: davanti al coordinatore le risposte diventano più prudenti." }
+  ]
+ },
+ {
+  "id": "39001_m10_s018",
+  "layout": "evidenza",
+  "kicker": "Entrare bene nella verifica",
+  "eyebrow": "Ipotesi di lavoro, non conclusioni anticipate",
+  "titolo": "Preparazione forte, mente aperta.",
+  "testo": "Una buona preparazione produce ipotesi, non giudizi già scritti. Traduci ciò che hai raccolto in poche domande guida e, per ognuna, cerca sia evidenze di conferma sia evidenze di smentita: è la difesa dal pregiudizio di conferma, più frequente proprio nelle verifiche preparate con cura. Solo le evidenze raccolte decideranno quale lettura è corretta."
+ },
+ {
+  "id": "39001_m10_s019",
+  "layout": "flusso",
+  "kicker": "Checklist per clausola · 1",
+  "titolo": "Contesto, leadership e pianificazione: le fondamenta",
+  "intro": "Se qui trovi debolezza, spesso la vedrai anche nei processi operativi e nei risultati. Tre domande tengono insieme tutto: che cosa l'organizzazione sa di sé, che cosa decide, come verifica gli effetti.",
+  "passi": [
+   { "h": "Contesto", "d": "Coerenza tra attività reali, siti, percorsi, servizi e ambito dichiarato: una lettura viva dei fattori che contano." },
+   { "h": "Leadership", "d": "L'alta direzione orienta davvero o dà un assenso formale? Documenti e decisioni, ma anche comportamenti osservabili." },
+   { "h": "Pianificazione", "d": "Collegamenti tra eventi, dati, obiettivi, azioni e responsabilità: come si scelgono i fattori da monitorare." }
+  ]
+ },
+ {
+  "id": "39001_m10_s020",
+  "layout": "cards",
+  "kicker": "Checklist per clausola · 2",
+  "titolo": "Supporto e funzionamento operativo: la prova dei fatti",
+  "cards": [
+   { "h": "Risorse", "d": "Mezzi, tempi, persone e strumenti proporzionati ai rischi reali, non una semplice dichiarazione di adeguatezza." },
+   { "h": "Competenze", "d": "Corrispondenza tra ruoli e capacità operative: chi pianifica capisce i vincoli, chi legge la telemetria la trasforma in azioni." },
+   { "h": "Comunicazione", "d": "Briefing chiari e ritorni rapidi sugli eventi; nessun segnale contraddittorio tra sicurezza e produzione." },
+   { "h": "Informazioni documentate", "d": "Aggiornate, reperibili e utili al lavoro reale: una procedura superata vale poco anche se approvata." }
+  ]
+ },
+ {
+  "id": "39001_m10_s021",
+  "layout": "tabella",
+  "kicker": "Checklist per clausola · 3",
+  "titolo": "Prestazioni, indagine degli eventi e miglioramento",
+  "cols": ["Punto", "Evidenze attese"],
+  "righe": [
+   ["9.1 Monitoraggio", "Indicatori pertinenti ai rischi, letti con la giusta frequenza, che distinguono urbano, extraurbano, manovre, notturno, mezzi."],
+   ["9.2 Indagine eventi", "Criteri di classificazione, analisi non superficiali, distinzione tra fatto immediato e causa organizzativa, azioni tracciate."],
+   ["9.4 Riesame direzione", "L'alta direzione riceve informazioni utili, le discute e decide: fatti, scelte e risorse collegati, non solo formule."],
+   ["10.1-10.2 Miglioramento", "Correzioni, azioni sulle cause e verifica di efficacia; un miglioramento che non dipende solo dal danno già avvenuto."]
+  ]
+ },
+ {
+  "id": "39001_m10_s022",
+  "layout": "evidenza",
+  "kicker": "La pista di verifica",
+  "eyebrow": "Far parlare le evidenze",
+  "titolo": "Le clausole non sono scaffali: sono passaggi di una stessa storia.",
+  "testo": "Prendi un tema reale — consegne serali urbane con quasi incidenti in aumento — e seguilo lungo tutto il sistema: come è riconosciuto nel contesto, assunto dalla leadership, entrato nella pianificazione, presidiato da risorse e competenze, gestito operativamente, monitorato e trasformato in miglioramento. Se la pista è continua, il sistema è vivo. Se si spezza, un'interruzione è spesso più rivelatrice di un documento mancante."
+ },
+ {
+  "id": "39001_m10_s023",
+  "layout": "confronto",
+  "kicker": "Checklist adattata",
+  "titolo": "Un nucleo comune, varianti mirate",
+  "intro": "Una checklist identica per ogni sede appiattisce i rischi; reinventarla ogni volta perde confrontabilità. Il buon equilibrio: poche domande stabili, piste specifiche per il contesto.",
+  "a": {
+   "h": "Nucleo comune",
+   "sub": "Ciò che resta stabile",
+   "punti": [
+    { "d": "Politica, obiettivi, ruoli, analisi dei dati, modalità di indagine, stato delle azioni correttive." },
+    { "d": "Governo delle competenze e controllo delle informazioni documentate: leggibili in tutte le sedi." }
+   ]
+  },
+  "b": {
+   "h": "Varianti mirate",
+   "sub": "Domande sensate",
+   "punti": [
+    { "d": "Deposito urbano: spazi, visibilità, accessi, briefing brevi, quasi incidenti a bassa velocità." },
+    { "d": "Base extraurbana: turni, affaticamento, anomalie tecniche nei viaggi lunghi, eventi lontano dalla sede." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m10_s024",
+  "layout": "punti",
+  "kicker": "La checklist sul campo",
+  "titolo": "Seguire le evidenze senza irrigidirsi",
+  "intro": "Se resti incollato all'ordine, perdi i nessi; se la abbandoni, perdi tracciabilità. Il lavoro maturo sta nel mezzo: la checklist diventa una rete, non una linea.",
+  "punti": [
+   { "h": "Ogni domanda è una porta", "d": "La apri, verifichi; se trovi coerenza la richiudi con una nota, se trovi contraddizione segui la pista." },
+   { "h": "Evidenze convergenti", "d": "Quando una risposta appare forte, chiediti quali altre fonti la sostengono: una dichiarazione sola resta debole." },
+   { "h": "Ripriorizza sul rischio", "d": "Se un'osservazione in piazzale rivela una criticità inattesa, riduci un'intervista meno decisiva e approfondisci." },
+   { "h": "Appunti collegati", "d": "Registra sempre il legame tra evidenza, criterio e possibile impatto, non solo il fatto isolato." }
+  ]
+ },
+ {
+  "id": "39001_m10_s025",
+  "layout": "split",
+  "kicker": "Audit combinati · ISO 45001",
+  "titolo": "Perché hanno senso e dove fare attenzione",
+  "lead": "Molti processi sono trasversali e molte evidenze condivise. La convenienza, però, non deve farti perdere la specificità delle due lenti.",
+  "punti": [
+   { "h": "Processi trasversali", "d": "Leadership, competenze, comunicazione, gestione eventi e riesame: un'unica regia riduce duplicazioni." },
+   { "h": "Evidenze condivise", "d": "Un briefing o un piazzale toccano sia la sicurezza dei lavoratori sia quella del traffico stradale." },
+   { "h": "Due lenti distinte", "d": "RTS guarda morte e lesioni gravi nel traffico; 45001 i pericoli per chi lavora. Si incontrano, non coincidono." },
+   { "h": "Il rischio effetto ombra", "d": "Non lasciare che il sistema più consolidato oscuri il focus specifico dell'altro." }
+  ]
+ },
+ {
+  "id": "39001_m10_s026",
+  "layout": "flusso",
+  "kicker": "Progettare il combinato",
+  "titolo": "Campo, competenze, tempi e campioni",
+  "intro": "La regia deve essere più chiara del normale: dichiara con precisione dove unire e dove distinguere.",
+  "passi": [
+   { "h": "Definire il campo", "d": "Che cosa sarà davvero combinato (apertura, leadership, eventi) e che cosa resta dedicato." },
+   { "h": "Equilibrio competenze", "d": "Un team forte su un sistema e debole sull'altro non riesce: qui servono più competenze, non meno." },
+   { "h": "Gestione del tempo", "d": "Combinare non è comprimere: parti comuni insieme, parti specifiche con spazio sufficiente." },
+   { "h": "Campioni a doppio uso", "d": "Affaticamento, piazzali, manutenzione parlano a entrambi; non forzare sempre il doppio uso." }
+  ]
+ },
+ {
+  "id": "39001_m10_s027",
+  "layout": "cards",
+  "kicker": "Errori tipici del combinato",
+  "titolo": "Come mantenere risultanze chiare",
+  "cards": [
+   { "h": "Fondere i criteri", "d": "Una stessa evidenza citata come prova generale, senza chiarire a quale norma risponde e con quale logica." },
+   { "h": "Risultanze generiche", "d": "«La gestione appare adeguata» dice poco: rendi visibile fatto, criterio e perché riguarda RTS, 45001 o entrambe." },
+   { "h": "Un linguaggio assorbe l'altro", "d": "I pedoni nei piazzali sono rischio per i lavoratori e fattore di collisione: esplicita il doppio impatto." }
+  ]
+ },
+ {
+  "id": "39001_m10_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 10",
+  "modNum": "10",
+  "titolo": "Sintesi del modulo e aggancio al prossimo passaggio",
+  "punti": [
+   { "h": "Programma di audit", "d": "Non calendario piatto ma scelta strategica su stagionalità, percorsi, siti e momenti operativi." },
+   { "h": "Preparazione dai dati", "d": "Chiedere poco ma bene: eventi, flotta, viaggi, documenti essenziali e cambiamenti recenti." },
+   { "h": "Uso intelligente della checklist", "d": "Per clausola ma per piste continue, adattata ai contesti, flessibile davanti alle evidenze reali." },
+   { "h": "Combinato, non indistinto", "d": "Con ISO 45001 unisci il metodo senza confondere i criteri: la precisione è un servizio alla sicurezza." }
+  ],
+  "prossimo": {
+   "modulo": "11",
+   "titolo": "Verificare il sistema RTS II: conduzione",
+   "testo": "Dal programma e dalla preparazione al campo: interviste, osservazione, gestione del tempo, raccolta evidenze e risultanze."
+  }
+ }
+]
