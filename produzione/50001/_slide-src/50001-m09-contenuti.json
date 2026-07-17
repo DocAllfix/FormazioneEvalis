@@ -1,0 +1,393 @@
+[
+ {
+  "id": "50001_m09_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 50001 — Sistemi di gestione dell'energia",
+  "kicker": "Modulo 9",
+  "eyebrow": "Dove il sistema mostra se sa imparare",
+  "titolo": "Il miglioramento e le non conformità tipiche dell'SGE",
+  "testo": "Entri nel punto in cui il sistema mostra se sa imparare davvero: il miglioramento. Lavorerai su due idee vicine ma non identiche — la gestione della non conformità con la relativa azione correttiva, e il miglioramento continuo, che riguarda sia il sistema sia la prestazione energetica. La norma è pratica: reagire quando emerge uno scostamento, capirne la causa, intervenire in modo proporzionato, verificare se l'intervento ha funzionato. Molte organizzazioni si fermano al primo sollievo: se non affronti la causa, lo stesso problema torna, o ricompare altrove con un nome diverso. Tieni ferma fin da subito una distinzione decisiva: correggere non è sempre fare un'azione correttiva. Correggere rimette a posto l'effetto visibile; l'azione correttiva mira a impedire il ritorno del problema, eliminandone la causa. Poi vedrai le non conformità tipiche del settore e come i problemi energetici diventano governabili solo quando arrivano alla direzione sotto forma di numeri leggibili e decisioni possibili.",
+  "agenda": [
+   "10.1 Non conformità e azione correttiva: causa, azione, efficacia",
+   "10.2 Il miglioramento continuo: sistema e prestazione, due binari",
+   "Le non conformità tipiche dell'SGE e le loro radici comuni",
+   "Il rapporto per la direzione: prima i numeri che fanno decidere",
+   "Ripasso: le distinzioni che cambiano il giudizio"
+  ]
+ },
+ {
+  "id": "50001_m09_s002",
+  "layout": "flusso",
+  "kicker": "10.1 Non conformità · 1",
+  "titolo": "Il primo movimento: reagire, controllare, correggere",
+  "intro": "Quando emerge una non conformità, il primo errore da evitare è la paralisi. Il 10.1 ti porta subito sull'azione, ma reagire non significa agitarsi: significa fare ciò che serve per controllare la situazione, correggerla per quanto applicabile e affrontarne le conseguenze. Questa sequenza mette ordine nelle priorità — e non confonde la velocità con la profondità.",
+  "passi": [
+   { "h": "Controllare", "d": "Impedisci che il problema continui a produrre effetti. Un impianto termico regolato male dopo una manutenzione tiene la mandata più alta del necessario per settimane: il consumo anomalo è nascosto dal dato aggregato di stabilimento. Controllare significa prima di tutto riportare il settaggio entro i limiti definiti." },
+   { "h": "Correggere", "d": "Rimetti il processo in condizione operativa: ripristinare il corretto funzionamento del sistema di regolazione. Ma attenzione a non dichiarare chiuso il caso qui: si sostituisce un sensore, si rifà una taratura, e la parte più importante non è ancora iniziata." },
+   { "h": "Affrontare le conseguenze", "d": "Nel mondo energia le conseguenze spesso non sono visibili nello stesso giorno: stima l'energia sprecata, capisci se ci sono stati impatti su altri indicatori, valuta se decisioni prese su dati alterati vadano riviste. La pertinenza conta: un dato errato che non ha influenzato decisioni ha conseguenze limitate; se ha guidato acquisti o traguardi, la valutazione dev'essere più ampia." },
+   { "h": "Contenimento e apprendimento", "d": "Se il reparto utilities perde i dati di vapore per un errore, il team blocca il report automatico e attiva una raccolta alternativa: buona reazione. Ma la maturità vera si vedrà dopo, quando cercherà di capire perché l'interruzione non era stata intercettata e se un difetto simile può colpire altri vettori. Prima il controllo, poi la correzione, poi le conseguenze." }
+  ]
+ },
+ {
+  "id": "50001_m09_s003",
+  "layout": "punti",
+  "kicker": "10.1 Non conformità · 2",
+  "titolo": "Dalla superficie alla causa: riesame e ricerca estesa",
+  "intro": "Dopo il contenimento, molte organizzazioni si accontentano della prima risposta plausibile. Il 10.1 va più in profondità: riesaminare la non conformità, determinare la causa o le cause, e verificare se esistono o potrebbero verificarsi situazioni simili altrove. Non basta capire cosa è andato storto lì: devi chiederti dove altro può accadere la stessa cosa.",
+  "punti": [
+   { "h": "Raramente una causa unica", "d": "Più spesso una combinazione: responsabilità poco chiare, dati non verificati, istruzioni incomplete, priorità operative che scavalcano quelle energetiche, sistemi informativi fragili. «L'operatore ha sbagliato» è una scorciatoia, non una spiegazione: l'errore può essere l'ultimo anello visibile di un problema di addestramento, di processo, di carico di lavoro, di controlli assenti." },
+   { "h": "Un riesame serio ha più livelli", "d": "Gli EnPI dell'aria compressa sono inutilizzabili da mesi: un'indagine superficiale dice «misuratore guasto». Il riesame rivela che era stato spostato durante una modifica, la mappa dei punti non era aggiornata, un collegamento provvisorio era rimasto definitivo, il software non generava allarmi di plausibilità, e nessuno confrontava più il dato coi consumi dei compressori. La causa vera non è una sola." },
+   { "h": "Dal caso singolo alla vulnerabilità sistemica", "d": "Il terzo passaggio, spesso dimenticato: esistono o possono emergere non conformità simili? Se hai trovato una lacuna sul contatore aria compressa, lo stesso rischio può esserci su freddo, vapore, acqua calda; se un aggiornamento impiantistico non entra nel ciclo di revisione energetica, avrai lo stesso vuoto ogni volta che si installa una macchina o si cambia un orario." },
+   { "h": "Un ragionamento tracciabile", "d": "L'approccio difensivo chiude il caso; quello maturo lo usa per testare il sistema — come scoprire una crepa in un muro portante: non stucchi il punto visibile, verifichi se il movimento è più ampio. Se un verificatore ti chiede come hai determinato la causa, mostra quali fatti hai riesaminato, quali ipotesi hai escluso, come hai controllato il rischio di casi simili." }
+  ]
+ },
+ {
+  "id": "50001_m09_s004",
+  "layout": "punti",
+  "kicker": "10.1 Non conformità · 3",
+  "titolo": "Attuare le azioni e verificarne l'efficacia",
+  "intro": "Dopo il riesame, tre verbi concreti: attuare, riesaminare l'efficacia, modificare l'SGE se necessario. È il tratto che separa un'indagine interessante da un miglioramento reale. La risposta deve avere un peso coerente con gli effetti prodotti o possibili: né minima per inerzia, né eccessiva per paura.",
+  "punti": [
+   { "h": "Robusta quanto serve", "d": "Più la non conformità ha alterato decisioni, prestazioni o affidabilità, più l'azione dev'essere robusta. Un dato secondario mancato per poche ore: basta un ripristino con controllo mirato. Un SEU monitorato con un EnPI inadatto per mesi, con miglioramenti dichiarati inesistenti: serve rivedere i metodi di calcolo, chiarire responsabilità, aggiornare il piano dati, validare di nuovo i report." },
+   { "h": "Mirata, non pesante", "d": "Introdurre una linea ad alta velocità senza aggiornare l'EnB fa confrontare mesi non più comparabili: l'azione appropriata non è rifare il grafico, ma inserire un controllo formale nel change management, definire chi valuta l'impatto energetico di ogni modifica, addestrare le funzioni. Il rischio opposto — un pacchetto di azioni ampio e punitivo — genera fatica senza efficacia: la migliore non è la più pesante, è la più mirata." },
+   { "h": "Efficacia: un'apprendimento, non una firma", "d": "Due livelli di prova: l'attuazione (l'azione è stata realizzata come previsto) e la sostanza (l'effetto atteso si osserva davvero nel tempo). Sostituire un misuratore e configurare un allarme dimostra attuazione; verificare dopo mesi che i buchi non si ripresentino e gli scostamenti siano intercettati dimostra efficacia. La differenza è enorme, e in verifica si nota subito." },
+   { "h": "Modificare l'SGE, se serve", "d": "Se il problema ha rivelato una debolezza strutturale, va rivisto un processo, una responsabilità, un'informazione documentata, un criterio, il collegamento tra funzione tecnica e team energia. Questo trasforma il singolo caso in miglioramento del sistema; se manca, l'organizzazione continuerà a spegnere incendi nello stesso edificio." }
+  ]
+ },
+ {
+  "id": "50001_m09_s005",
+  "layout": "confronto",
+  "kicker": "10.1 Non conformità · 4",
+  "titolo": "Che cosa deve restare tracciato",
+  "intro": "Il 10.1 richiede di mantenere memoria documentata di tre cose: che tipo di problema è emerso, quali passi sono stati compiuti, quali esiti hanno prodotto le azioni. Non serve accumulare carta, ma rendere verificabile il ragionamento. Stesso caso — un nuovo forno entrato in esercizio senza attivare il riesame dei riferimenti — gestito in due modi opposti.",
+  "a": {
+   "h": "Chiusura debole",
+   "sub": "Non dimostra controllo",
+   "punti": [
+    { "d": "La scheda registra: «problema chiuso, responsabile informato, documento rivisto, caso risolto». Manca quasi tutto: non sai l'effetto sul monitoraggio, non sai perché l'aggiornamento non sia avvenuto, non sai quali azioni impediscano il ritorno, non sai come sia stata verificata l'efficacia." },
+    { "d": "Natura vaga («anomalia dati»), azioni come elenco («sensore sostituito, formazione eseguita»), e quasi nulla sugli esiti. Una chiusura così non difende l'organizzazione: sembra risolta ma resta pronta a riapparire." }
+   ]
+  },
+  "b": {
+   "h": "Chiusura forte",
+   "sub": "Evidenza di apprendimento",
+   "punti": [
+    { "d": "Descrive che il nuovo forno ha modificato il profilo di consumo senza attivare il riesame; individua la causa nell'assenza di un collegamento formale tra approvazione dell'investimento e valutazione degli impatti; ogni azione collegata al problema che rimuove (flusso autorizzativo rivisto, controllo obbligatorio, EnB ed EnPI aggiornati, formazione)." },
+    { "d": "Documenta i risultati: nuova revisione energetica emessa, dati coerenti nei mesi successivi, nessuna ricorrenza su due modifiche successive. E la cronologia — quando è emerso, contenuto, trovata la causa, riesaminata l'efficacia — rende il caso leggibile. La documentazione non dev'essere lunga, dev'essere intelligibile." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m09_s006",
+  "layout": "split",
+  "kicker": "10.2 Miglioramento continuo · 1",
+  "titolo": "Due binari inseparabili: sistema e prestazione",
+  "lead": "Il miglioramento continuo non è solo la somma di tante azioni correttive. La norma chiede che l'organizzazione renda l'SGE via via più adatto, coerente ed efficace, e in parallelo mostri nel tempo un avanzamento della prestazione energetica. Doppia aspettativa da tenere sempre insieme: la qualità del sistema deve crescere, e devono emergere segnali credibili di miglior uso o consumo dell'energia.",
+  "punti": [
+   { "h": "Idoneità, adeguatezza, efficacia", "d": "Idoneità: adatto allo scopo, ai processi, ai consumi, ai SEU. Adeguatezza: coerente con la realtà attuale — un sistema idoneo in passato non lo è più se cambiano volumi, impianti, turni, competenze, rischi. Efficacia: capacità di produrre gli esiti attesi. Se non orienta le decisioni, non regge le modifiche, non intercetta le derive, non è efficace, per quanto impeccabile sia la documentazione." },
+   { "h": "«Dimostrare» è decisivo", "d": "Non basta migliorare il sistema in astratto: serve dimostrare il miglioramento continuo della prestazione, con indicatori, riferimenti, dati pertinenti e interpretazioni coerenti. L'SGE non è valutato solo per essere ordinato, ma per accompagnare risultati energetici migliori nel tempo." },
+   { "h": "I due binari si sostengono", "d": "Un centro logistico può migliorare moltissimo la gestione documentale (miglioramento del sistema), ma se i dati restano incompleti e le opportunità sulla refrigerazione senza seguito, non c'è ancora un quadro maturo. Vale il contrario: un inverno mite abbassa i consumi senza che il sistema sia migliore — se non leggi le variabili pertinenti, scambi un effetto esterno per un successo." },
+   { "h": "Due domande parallele", "d": "Il modo in cui l'organizzazione gestisce energia oggi è più solido, coerente e capace di apprendere di prima? I dati mostrano davvero una prestazione migliore, tenendo conto del contesto e delle variabili rilevanti? Se è sì a una sola, il lavoro è a metà; se è sì a entrambe, l'SGE sta maturando davvero." }
+  ]
+ },
+ {
+  "id": "50001_m09_s007",
+  "layout": "definizione",
+  "kicker": "10.2 Miglioramento continuo · 2",
+  "eyebrow": "«Continuo» non significa «senza pause»",
+  "titolo": "Che cosa significa davvero miglioramento continuo",
+  "definizione": "I miglioramenti si manifestano nel tempo, anche con intervalli, secondo un ritmo che l'organizzazione determina alla luce del proprio contesto e delle circostanze rilevanti. Il chiarimento evita due errori opposti: pretendere una crescita lineare e ininterrotta, e usare «continuo» come scusa per non mostrare mai risultati.",
+  "punti": [
+   "Con grandi forni, alcuni interventi richiedono investimenti, fermate, tempi di acquisto: irrealistico attendersi un salto ogni settimana, ma altrettanto debole rimandare a «prima o poi». In certi periodi il progresso è nella qualità del dato o nel controllo operativo, in altri in risultati più marcati. Conta la direzione nel tempo, non la frenesia del breve periodo.",
+   "Dimostrare il miglioramento nell'intero campo di applicazione non significa che tutti gli EnPI migliorino contemporaneamente: puoi avere indicatori che migliorano, altri stabili, altri che peggiorano temporaneamente per ragioni note e governate. Un sito che aggiunge mezzi elettrici vede peggiorare l'indicatore carica batterie, ma spiega il cambiamento e dimostra comunque il miglioramento del perimetro.",
+   "Chi definisce la prestazione e il modo di dimostrarne il miglioramento è l'organizzazione: libertà, non arbitrio. Il righello va costruito con serietà, coerente con processi, SEU, dati e variabili. Miglioramento continuo significa soprattutto continuità di governo: osservare, interpretare, decidere, correggere, aggiornare i riferimenti."
+  ]
+ },
+ {
+  "id": "50001_m09_s008",
+  "layout": "confronto",
+  "kicker": "10.2 Miglioramento continuo · 3",
+  "titolo": "Migliorare il sistema non è uguale a migliorare la prestazione",
+  "intro": "Credere che ogni miglioramento del sistema coincida con un miglioramento della prestazione sarebbe comodo, ma è falso. Distinguere i due piani rende le valutazioni più oneste e utili. Il criterio: i miglioramenti del sistema sono gli strumenti, i miglioramenti della prestazione sono gli esiti energetici osservabili. Servono entrambi, ma non vanno fusi in un'unica frase ottimistica.",
+  "a": {
+   "h": "Miglioramento del sistema",
+   "sub": "Gli strumenti",
+   "punti": [
+    { "d": "Un piano dati coerente con gli SEU, ruoli più chiari, migliore gestione delle modifiche, controlli sulle informazioni documentate, riesami più utili, coinvolgimento delle funzioni operative. Segnali che l'SGE diventa più adatto ed efficace — ma nessuno, da solo, prova che la prestazione sia già migliorata." },
+    { "d": "Prova che l'organizzazione si è messa nelle condizioni migliori per governarla. Sostituire l'illuminazione e vedere calare i consumi, senza integrare l'azione nel ciclo dell'SGE, dà un risultato tecnico positivo, non necessariamente un sistema migliore." }
+   ]
+  },
+  "b": {
+   "h": "Miglioramento della prestazione",
+   "sub": "Gli esiti osservabili",
+   "punti": [
+    { "d": "Servono confronti credibili nel tempo, EnPI ed EnB costruiti con criterio, variabili pertinenti considerate. Se dopo un intervento sui compressori l'EnPI normalizzato scende in modo stabile a parità di condizioni, hai un segnale forte; se osservi solo un calo del totale in un mese di bassa attività, è un effetto del calendario." },
+    { "d": "In una lavanderia, allineare la raccolta dati di vapore e produzione è miglioramento del sistema; dopo mesi, correggere gli sprechi nei tempi di standby dei generatori e ridurre stabilmente il consumo per unità di servizio è miglioramento della prestazione. Collegate, ma non nello stesso momento." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m09_s009",
+  "layout": "cards",
+  "kicker": "10.2 Miglioramento continuo · 4",
+  "titolo": "Quando i numeri confondono",
+  "intro": "La prestazione non vive in laboratorio: vive in organizzazioni che crescono, cambiano mix, subiscono clima e usura. La dimostrazione non può ridursi a una lettura ingenua del consumo totale. Tre casi non sono eccezioni marginali, sono la vita reale dell'energia — e la lezione: diffida sia del trionfalismo su un numero solo, sia del pessimismo che vede fallimento in ogni salita del totale.",
+  "cards": [
+   { "h": "Il consumo cresce, la prestazione migliora", "d": "L'organizzazione aumenta produzione, turni o linee: il totale cresce. Ma se l'energia per unità di prodotto (o per il fattore più pertinente) migliora in modo misurabile, c'è un avanzamento reale. Passando da produzione media a piena saturazione, l'energia complessiva sale quasi certamente, mentre resa, dispersione e regolazione possono migliorare la prestazione." },
+   { "h": "L'impianto invecchia", "d": "La strumentazione può mostrare la riduzione attesa della prestazione dovuta all'invecchiamento; una gestione rigorosa di pulizie, controllo carica, regolazione e tempi può rallentare la curva di declino. Anche questo è miglioramento: non sempre il traguardo realistico è invertire una tendenza fisica — a volte il merito è contenere il peggioramento oltre quanto atteso." },
+   { "h": "I contesti con molte variabili", "d": "Un caseificio con effetti stagionali forti, o una struttura terziaria sensibile al clima: confrontare periodi grezzi senza normalizzazione porta quasi sempre a conclusioni fuorvianti. Il consumo può crescere per prodotti, ore di apertura, temperatura o carico di base. Chiediti se la prestazione è definita in modo sensato, se gli EnPI sono collegati ai processi rilevanti, se l'interpretazione considera le variabili che davvero spostano il risultato." }
+  ]
+ },
+ {
+  "id": "50001_m09_s010",
+  "layout": "numeri",
+  "kicker": "10.2 Miglioramento continuo · 5",
+  "titolo": "Come dimostri, in pratica, il miglioramento",
+  "intro": "Cosa rende credibile, agli occhi della direzione e di chi verifica, l'affermazione che l'organizzazione sta migliorando? Una versione debole suona «abbiamo consumato meno gas dell'anno scorso»; una robusta racconta un percorso in sei passaggi. Nessuno è sofisticato: ognuno risponde a una domanda che chiunque farebbe comunque — la differenza è che l'organizzazione matura le risposte le prepara prima, dentro il proprio metodo.",
+  "numeri": [
+   { "n": "1", "h": "Il perimetro", "d": "Il dato riguarda la sola centrale termica, con un contatore dedicato rimasto invariato nei due periodi. Senza continuità minima del monitoraggio, ogni racconto resta fragile." },
+   { "n": "2", "h": "Il righello", "d": "L'indicatore è l'energia termica per tonnellata di prodotto trattato, scelto perché la produzione è la variabile che spiega la maggior parte del fabbisogno: un EnPI collegato al processo, non comodo da estrarre." },
+   { "n": "3", "h": "Il riferimento", "d": "L'anno base era operativamente stabile e il confronto è stato corretto per la severità delle stagioni: un EnB che tiene conto dei cambiamenti rilevanti di attività, carico o contesto." },
+   { "n": "4", "h": "Le azioni", "d": "Nel periodo sono state riviste le sequenze di avviamento e la manutenzione dei bruciatori, con date documentate. Il miglioramento è il rapporto tra ciò che l'organizzazione ha fatto e ciò che è cambiato." },
+   { "n": "5", "h": "L'esito", "d": "L'indicatore è sceso proprio nei mesi successivi agli interventi, e la riduzione persiste da più periodi comparabili. Una sequenza leggibile nel tempo, non un episodio isolato." },
+   { "n": "6", "h": "I limiti", "d": "Due settimane di dati sono stimate per un guasto all'acquisizione, e la stima è dichiarata. Una dimostrazione credibile non nasconde ciò che non è migliorato: lo spiega. Questo trasmette governo del sistema, non marketing interno." }
+  ]
+ },
+ {
+  "id": "50001_m09_s011",
+  "layout": "evidenza",
+  "kicker": "Non conformità tipiche · 1",
+  "eyebrow": "Leggere i difetti come segnali del sistema",
+  "titolo": "Il difetto tecnico è sintomo di una fragilità più ampia",
+  "testo": "Nella pratica, le non conformità di un SGE raramente nascono da un requisito isolato: quasi sempre mostrano una catena di scelte deboli, dati fragili e responsabilità poco presidiate. Devi imparare a leggere il difetto tecnico come sintomo di una fragilità organizzativa più ampia: non solo «che cosa manca», ma perché manca proprio lì e quali altre aree possono soffrirne. I casi ricorrenti seguono schemi stabili: riferimenti energetici non aggiornati quando il contesto cambia; EnPI eleganti sulla carta ma scollegati dagli SEU; dati che si interrompono o restano senza controlli di plausibilità. Attorno a questi tre nuclei compaiono altre debolezze: analisi non riviste, competenze poco presidiate, documenti che non permettono di rifare il metodo, controlli operativi che ignorano i principali usi, riesami che sommano aggettivi. E non sono indipendenti: un EnB non aggiornato altera gli EnPI, un piano dati fragile rende invisibili gli scostamenti. Usa quindi la rassegna come una mappa, non come un archivio: la domanda non è solo «quale clausola è toccata», ma «che cosa ci racconta questo difetto sul modo in cui l'organizzazione governa l'energia». Evita anche il collezionismo delle formule: la diagnosi vera nasce quando ricostruisci il percorso del problema e identifichi la causa più probabile, non quando classifichi. Solo allora la non conformità diventa leva di miglioramento, invece che etichetta amministrativa."
+ },
+ {
+  "id": "50001_m09_s012",
+  "layout": "split",
+  "kicker": "Non conformità tipiche · 2",
+  "titolo": "Quando l'EnB resta fermo e il contesto cambia",
+  "lead": "Uno dei rilievi più frequenti (punto 6.5 e riflessi successivi): l'EnB rimasto fermo mentre l'organizzazione cambiava. È insidioso perché i grafici sembrano ordinati. Il problema non è l'assenza di un riferimento, ma la sua perdita di significato: quando entrano nuovi carichi, escono usi, cambiano volumi, turni o perimetro, quel riferimento smette di parlare della realtà attuale, e molte organizzazioni lo mantengono per inerzia.",
+  "punti": [
+   { "h": "Spesso un ponte formale mancante", "d": "Non sempre negligenza: manca il collegamento tra gestione delle modifiche e revisione energetica. L'ufficio tecnico approva la modifica, la produzione la mette in servizio, il team energia la scopre mesi dopo, quando i numeri sembrano strani. Una nuova vasca riscaldata fa salire il gas, ma il report confronta ancora con l'EnB dell'anno prima." },
+   { "h": "Tre segnali per riconoscerla", "d": "Un cambiamento rilevante dell'attività o del campo di applicazione; l'assenza di una valutazione formale dell'impatto su EnB ed EnPI; decisioni prese usando confronti ormai deboli. Se i tre si allineano, il caso è solido: non serve drammatizzarlo, basta mostrare che il metodo di confronto non garantisce più una lettura affidabile." },
+   { "h": "Non ogni cambiamento obbliga l'aggiornamento", "d": "Devi chiederti se il cambiamento sia pertinente e significativo rispetto al modo in cui misuri la prestazione: richiede giudizio, non automatismi, ma proprio per questo dev'essere esplicito. Ogni modifica che possa alterare il confronto dovrebbe attivare una domanda obbligata: l'EnB è ancora rappresentativo? Se sì, perché; se no, come lo aggiorniamo e da quando." },
+   { "h": "Il rischio opposto", "d": "Alcune organizzazioni cambiano l'EnB appena vedono un peggioramento, quasi per ripulire il grafico. Sarebbe l'errore speculare: il riferimento non si aggiusta per fare bella figura, si aggiorna quando il contesto rende il vecchio confronto non più affidabile. Serve un criterio stabile, non una reazione cosmetica ai numeri scomodi." }
+  ]
+ },
+ {
+  "id": "50001_m09_s013",
+  "layout": "split",
+  "kicker": "Non conformità tipiche · 3",
+  "titolo": "EnPI scollegati dagli SEU: il righello misura altro",
+  "lead": "Se l'EnB è il riferimento, l'EnPI è il righello. Una non conformità tipica (punto 6.4 e logica del 6.3): indicatori formalmente presenti ma scollegati dagli SEU. Costruire un indicatore facile è semplice, costruirne uno utile è impegnativo. Molte organizzazioni scelgono EnPI comodi da estrarre, ma deboli nel rappresentare gli usi significativi: il sistema continua a produrre numeri, ma smette di guidare.",
+  "punti": [
+   { "h": "Troppo aggregato", "d": "Un sito usa solo il consumo totale mensile per tonnellata, anche se i SEU hanno dinamiche diverse: il dato complessivo maschera inefficienze — un reparto migliora, un altro peggiora, e il totale sembra stabile; o il totale peggiora mentre il problema è concentrato in un sottosistema che nessuno vede più." },
+   { "h": "Troppo lontano dal processo", "d": "Si misura il consumo elettrico di stabilimento per giorno lavorato, mentre il vero uso significativo è il freddo di processo, dipendente da carichi, temperature e fasce. In un'azienda alimentare con SEU refrigerazione, aria compressa e cottura, il report usa il consumo totale per kg venduto: facile da capire, ma cambia per mix, ausiliari e stagionalità, mentre il freddo peggiora inosservato." },
+   { "h": "Troppo sofisticato", "d": "Formule complesse capite da una sola persona: quando quel tecnico cambia ruolo, il sistema conserva il file ma perde il significato. Doppio rischio: l'indicatore non è più verificabile, e le funzioni operative non lo usano perché appare opaco. Un buon EnPI non è banale, ma dev'essere spiegabile, replicabile e legato a decisioni concrete." },
+   { "h": "La frattura analisi-reporting", "d": "L'analisi individua alcuni SEU come prioritari, ma il cruscotto ne racconta altri, magari solo perché i dati sono più comodi. Il sistema sa nominare le priorità, ma non sa misurarle. La buona pratica non è avere moltissimi indicatori, ma pochi giusti, comprensibili e legati agli usi che contano." }
+  ]
+ },
+ {
+  "id": "50001_m09_s014",
+  "layout": "punti",
+  "kicker": "Non conformità tipiche · 4",
+  "titolo": "Dati interrotti, buchi di misura e monitoraggio fragile",
+  "intro": "Una delle famiglie più frequenti e sottovalutate (punto 6.6, riflessi sul 9.1). I dati sono la materia prima del governo: quando la raccolta si interrompe, la frequenza cambia senza controllo o nessuno verifica la plausibilità, l'SGE continua a produrre report ma smette di produrre conoscenza affidabile.",
+  "punti": [
+   { "h": "Il buco di misura", "d": "Un contatore si ferma, una comunicazione cade, un file non viene alimentato per settimane. Se l'interruzione è dichiarata, circoscritta e gestita con un metodo temporaneo chiaro, il danno resta controllato; se passa inosservata o viene riempita con stime opache senza traccia, il report mantiene aspetto regolare ma la sua credibilità è compromessa." },
+   { "h": "La deriva silenziosa", "d": "I dati arrivano, ma nessuno si accorge che sono poco plausibili: un misuratore piatto per giorni, un contatore termico che si dimezza senza cambi di produzione, un software che ripete il dato del giorno prima. Tutto sembra popolato da numeri, e il difetto sfugge: il sistema confonde presenza del dato con qualità del dato, spesso per l'assenza di semplici controlli incrociati." },
+   { "h": "Tre domande sul campo", "d": "Quali dati servono davvero per analisi, monitoraggio e valutazione; come vengono raccolti e con quale frequenza; cosa succede quando il dato manca, arriva tardi o è inattendibile. Se l'organizzazione non sa rispondere, o risponde in modo diverso a seconda della persona, il segnale è forte. In un magazzino, un EnPI del freddo costruito per due mesi su una media storica mai formalizzata rende impossibile distinguere processo e debolezza del dato." },
+   { "h": "Il minimo indispensabile", "d": "Non servono grandi software, serve chiarezza: quali dati sono critici, chi li controlla, quale allarme scatta se mancano, come si gestisce una stima e quanto a lungo è accettabile, come si comunica il limite nelle analisi. Attenzione anche alle fonti esterne (meteo, fattori statici, ore di esercizio): se usate all'ultimo momento senza responsabilità, la normalizzazione si appoggia a numeri non verificati." }
+  ]
+ },
+ {
+  "id": "50001_m09_s015",
+  "layout": "split",
+  "kicker": "Non conformità tipiche · 5",
+  "titolo": "Analisi energetica ferma: l'SGE perde memoria del presente",
+  "lead": "Collegata al punto 6.3: l'analisi energetica esiste, ma vive come fotografia del passato. Fatta bene all'avvio, non viene aggiornata quando cambiano dati, usi, priorità e opportunità. Meno appariscente di un contatore guasto — la forma documentale resta intatta — ma i suoi effetti sono profondi: se l'analisi invecchia, invecchiano con lei SEU, EnPI, EnB e decisioni operative.",
+  "punti": [
+   { "h": "Quattro movimenti di aggiornamento", "d": "La norma chiarisce che aggiornare l'analisi comprende almeno: aggiornare dati e informazioni, riesaminare uso e consumo, rivalutare gli SEU, rivedere le opportunità. Non tutto deve cambiare insieme, ma il processo deve restare vivo." },
+   { "h": "Una memoria congelata", "d": "L'organizzazione mantiene un'analisi ordinata mentre il sito cambia: attrezzature che degradano, nuovi carichi, turni e profili diversi. Eppure le opportunità restano quelle di tre anni prima, gli SEU non si muovono. In una lavanderia spostatasi verso cicli a bassa temperatura, con nuovo recupero termico, l'analisi racconta ancora il sito di prima e ignora una forte dispersione sulla rete di condensa." },
+   { "h": "Aggiornamento apparente", "d": "L'errore speculare: aggiornare come ricopiatura di dati recenti, senza vero ragionamento — cambiare qualche numero, spostare una tabella, confermare il resto. Non cerchi una data recente, cerchi un processo che mostri apprendimento: i dati nuovi hanno spostato almeno alcune domande, priorità o valutazioni?" },
+   { "h": "La causa concreta", "d": "Spesso nessuno possiede il collegamento tra esercizio degli impianti, monitoraggio e revisione dell'analisi. Il team energia aspetta input dalle funzioni tecniche, che pensano basti gestire l'impianto; la direzione presume che dietro i report ci sia un riesame serio. Senza un presidio chiaro, l'analisi diventa un oggetto annuale, non uno strumento di governo." }
+  ]
+ },
+ {
+  "id": "50001_m09_s016",
+  "layout": "punti",
+  "kicker": "Non conformità tipiche · 6",
+  "titolo": "Competenza fragile e documenti che non reggono il passaggio di mano",
+  "intro": "Molte non conformità apparentemente tecniche nascono da due fragilità umane (punti 7.2 e 7.5): competenza non presidiata e informazioni documentate insufficienti. Un SGE può avere misuratori e indicatori sensati, ma se le persone che influenzano la prestazione non hanno competenze adeguate, o il metodo resta nella testa di un solo tecnico, funziona finché ci sono le persone giuste, poi si indebolisce.",
+  "punti": [
+   { "h": "La dipendenza dal singolo esperto", "d": "Un energy manager o un analista capace costruisce fogli, regole di normalizzazione, controlli. Poi cambia mansione o esce: emergono formule non spiegate, criteri conosciuti solo oralmente. Il sistema non perde solo comodità, perde ripetibilità e controllo." },
+   { "h": "La competenza operativa", "d": "Se chi regola i set point, gestisce i fermo impianto, valida i dati o autorizza modifiche non comprende l'effetto energetico delle proprie scelte, molte deviazioni nascono lì. Non tutti specialisti, ma ciascuno deve conoscere ciò che, nel proprio ruolo, incide. Altrimenti il problema è strutturale: il processo dipende dalla fortuna di avere persone esperte e disponibili." },
+   { "h": "Documenti che non permettono di rifare", "d": "Un buon presidio non è accumulo di file: significa che la documentazione permette a una persona competente di rifare il processo, capire il criterio, verificare i passaggi, riconoscere i limiti del dato. Se un metodo di calcolo EnPI non spiega quali dati usare, come trattare gli scarti, come gestire i fermi, il nuovo responsabile può introdurre un errore che altera il confronto senza che nessuno se ne accorga." },
+   { "h": "Il segnale rivelatore", "d": "Quando chiedi come viene calcolato un indicatore e ricevi risposte diverse da persone diverse, o senti «lo sa solo lui», il rischio è già maturo: l'organizzazione non sta governando la conoscenza, la sta custodendo in modo precario. La buona pratica: mappa le attività che influenzano il sistema, collega le competenze, verifica che i documenti descrivano passaggi, criteri e responsabilità. Il sistema deve sopravvivere ai passaggi di mano." }
+  ]
+ },
+ {
+  "id": "50001_m09_s017",
+  "layout": "split",
+  "kicker": "Non conformità tipiche · 7",
+  "titolo": "Controllo operativo e acquisti: le priorità non scendono a terra",
+  "lead": "Il banco di prova più concreto (punti 8.1 e 8.3): l'organizzazione descrive bene i propri usi rilevanti, ma non li traduce in regole operative stabili né in criteri di approvvigionamento coerenti. Il sistema resta brillante nelle slide e debole nel funzionamento quotidiano.",
+  "punti": [
+   { "h": "Significatività solo nominale", "d": "Un SEU è dichiarato significativo, ma non esistono criteri chiari su come farlo funzionare, mantenerlo o presidiarne i parametri; o i criteri esistono ma nessuno li usa. Per compressori, centrali, forni, dovresti vedere set point ragionati, limiti, logiche di avvio/arresto, attenzioni manutentive, responsabilità coerenti. Se non li vedi, la significatività è nominale." },
+   { "h": "L'aria compressa senza criteri stabili", "d": "L'aria compressa è dichiarata SEU primario, ma non ci sono criteri per la pressione di rete, per le fasce dei compressori di backup, per il monitoraggio perdite dopo la manutenzione. Ogni turno adotta soluzioni proprie, il responsabile riceve consumi altalenanti: non un semplice problema di prestazione, ma il mancato allineamento tra importanza dichiarata e controllo reale." },
+   { "h": "L'energia arriva tardi negli acquisti", "d": "L'approvvigionamento è un'opportunità per influenzare la prestazione, ma molte organizzazioni lasciano che gli acquisti lavorino su costo iniziale, tempi e disponibilità. L'energia entra troppo tardi, o come formula generica. Un nuovo impianto con capitolato senza dati energetici né criteri di confronto entra in servizio consumando più delle attese, e nessuno sa se era inevitabile o un'occasione mancata." },
+   { "h": "Far scendere a terra le priorità", "d": "Parti dagli usi significativi e dalle opportunità dichiarate, poi chiediti dove, nel quotidiano e negli acquisti, diventano criteri concreti. Se il collegamento non c'è, o c'è solo in teoria, il caso è forte. Pochi punti chiari e davvero usati: quali parametri governano gli usi, chi li presidia, cosa si chiede ai fornitori, come si documenta la decisione." }
+  ]
+ },
+ {
+  "id": "50001_m09_s018",
+  "layout": "punti",
+  "kicker": "Non conformità tipiche · 8",
+  "titolo": "Valutazione debole e riesame che osserva senza decidere",
+  "intro": "Quando analisi, indicatori, dati e controlli sono fragili, i punti 9.1 e 9.3 dovrebbero accorgersene. Eppure una non conformità comune nasce proprio lì: l'organizzazione monitora, analizza e riesamina, ma non in modo sufficiente a produrre decisioni solide. Guarda il quadro senza governarlo.",
+  "punti": [
+   { "h": "Valutazione troppo descrittiva", "d": "Report con tabelle, frecce e commenti generici, magari molte pagine, ma manca l'interpretazione: quali EnPI sono affidabili e quali no, dove il dato è incompleto, quali scostamenti meritano reazione, quali risultati sono dovuti ad azioni interne e quali a variabili esterne. Senza questa lettura, il monitoraggio è un flusso che nessuno trasforma in priorità." },
+   { "h": "I limiti del dato ignorati", "d": "Prima di concludere andrebbero considerate accuratezza, incertezza di misura e coerenza della contabilità energetica; invece molte organizzazioni parlano dei risultati come se tutti i numeri avessero la stessa robustezza. Un indicatore su misure stimate trattato come uno su dati completi, un confronto tra periodi disomogenei presentato come tendenza certa: manca la gerarchia del significato." },
+   { "h": "Il riesame come consuntivo", "d": "Trattato come riunione di consuntivo, non come sede di scelta: si presentano dati, si confermano obiettivi, si annotano buone intenzioni, ma si prende pochissima decisione verificabile. Non emerge quali criticità richiedano risorse, quali EnPI rivedere, quali modifiche servano. Un rito periodico, non un motore di miglioramento." },
+   { "h": "Il legame informazione-decisione", "d": "Come la riconosci: se un report mostra un problema noto da tempo ma il riesame non produce azioni, responsabilità e tempi, il ciclo non si chiude; se la direzione riceve solo sintesi rassicuranti, l'SGE la protegge dal problema invece di metterla in condizione di decidere. Un buon report non racconta tutto: racconta ciò che serve per decidere, dichiara i limiti, separa i segnali forti dagli incerti." }
+  ]
+ },
+ {
+  "id": "50001_m09_s019",
+  "layout": "numeri",
+  "kicker": "Non conformità tipiche · 9",
+  "titolo": "Dalla casistica alle radici comuni",
+  "intro": "Il rischio è uscire con una lista di casi senza una visione. Quasi tutti i difetti ricorrenti nascono da quattro fragilità di fondo: tenendole a mente, smetti di vedere i rilievi come episodi separati e li leggi come manifestazioni di un disegno unico. La domanda guida per graduare il peso: questo problema è locale e contenuto, oppure compromette il modo in cui il sistema legge se stesso?",
+  "numeri": [
+   { "n": "1", "h": "Cambiamento scollegato dal sistema", "d": "La perdita di collegamento tra cambiamento operativo e aggiornamento del sistema. Una modifica impiantistica non intercettata porta a un EnB debole, che rende poco credibili gli EnPI: il ciclo comincia qui." },
+   { "n": "2", "h": "Debolezza del righello", "d": "Riferimenti e indicatori poco rappresentativi. Indicatori poco credibili riducono l'utilità del monitoraggio, e un monitoraggio debole impoverisce il riesame." },
+   { "n": "3", "h": "Fragilità del dato", "d": "Rende incerta ogni conclusione. Se trovi dati mancanti, la causa vera può non essere il guasto di misura, ma che nessuna modifica software viene valutata per l'impatto sulla raccolta, o che nessuno controlla la plausibilità prima di consolidare." },
+   { "n": "4", "h": "Direzione senza informazioni pronte", "d": "La scarsa capacità di ricevere informazioni già pronte per decidere. Un riesame povero non attiva risorse né azione correttiva seria, e il ciclo ricomincia. Presentare il filo che unisce i casi, invece di un elenco frammentato, rende più probabile un'azione correttiva utile, perché sposta la risposta dal sintomo alla struttura." }
+  ]
+ },
+ {
+  "id": "50001_m09_s020",
+  "layout": "split",
+  "kicker": "Il rapporto per la direzione · 1",
+  "titolo": "Prima i numeri che fanno decidere",
+  "lead": "Molti difetti non nascono perché manchino i dati, ma perché arrivano alla direzione in una forma che non consente decisioni tempestive e fondate. Il rapporto direzionale non è un allegato elegante: è uno snodo operativo del miglioramento. Se è confuso, indulgente o troppo descrittivo, la direzione vede i problemi tardi, male, o senza capire quale scelta sia richiesta.",
+  "punti": [
+   { "h": "Dai fatti alle decisioni", "d": "Il rapporto utile non sommerge di pagine e non tranquillizza con aggettivi: mostra pochi numeri pertinenti, chiarisce la loro affidabilità, evidenzia le variazioni che contano, collega ogni scostamento a un'ipotesi di causa, a una priorità e a una scelta possibile. In energia un dato può sembrare buono o cattivo secondo riferimento, variabile e aggregazione: se il rapporto non esplicita queste chiavi, costringe la direzione a intuire." },
+   { "h": "Rassicurante invece che utile", "d": "In una riunione, un fascicolo di molte pagine con commenti come «andamento soddisfacente, situazione sotto controllo»: la direzione annuisce e chiude senza decisioni. Un mese dopo emerge che il principale SEU aveva perso efficienza, nascosto in un allegato poco chiaro. Un report maturo avrebbe aperto dicendo che l'indicatore del sottosistema critico si deteriora da tre periodi, che il dato è affidabile, che serve una verifica e una scelta sulle risorse." },
+   { "h": "Anche le buone notizie con disciplina", "d": "«Il sistema sta migliorando» non basta: dove, con quali indicatori, rispetto a quale riferimento, con quali limiti. Solo così la direzione distingue il successo reale dall'effetto di un contesto favorevole — un clima mite, un mix diverso, un carico ridotto." },
+   { "h": "I numeri prima degli aggettivi", "d": "Gli aggettivi tendono a chiudere la discussione: «stabile», «migliorato» già interpretano il fatto. Mostrando prima il numero giusto, il confronto corretto e il grado di affidabilità, permetti alla direzione di ragionare con lucidità. Non spogliare il rapporto di giudizio: fonda il giudizio su basi leggibili." }
+  ]
+ },
+ {
+  "id": "50001_m09_s021",
+  "layout": "punti",
+  "kicker": "Il rapporto per la direzione · 2",
+  "titolo": "Pochi numeri giusti: il cruscotto che aiuta davvero",
+  "intro": "Il problema non è quasi mai la scarsità di dati, ma l'abbondanza mal governata: troppi indicatori con lo stesso peso apparente, e chi decide perde il filo. Parti da una domanda severa: quali numeri cambierebbero davvero una decisione, se peggiorassero domani? Taglia fuori molti dati piacevoli ma poco utili.",
+  "punti": [
+   { "h": "Tre qualità dei numeri direzionali", "d": "Pertinenza (parlano degli SEU o dei punti dove la prestazione si gioca), confrontabilità (leggibili nel tempo contro un EnB sensato), azionabilità (se vanno nella direzione sbagliata, suggeriscono subito dove guardare e chi coinvolgere). Se manca anche una sola qualità, l'indicatore resta interessante ma smette di essere direzionale." },
+   { "h": "Pochi non significa uno solo", "d": "Per paura della complessità si comprime tutto in un unico numero aggregato, pulito e rassicurante, che nasconde fenomeni diversi: se il freddo peggiora mentre i forni migliorano, il totale sembra fermo e la direzione riceve una falsa stabilità. Pochi significa il minimo numero capace di distinguere i fenomeni che contano." },
+   { "h": "Il cruscotto come conversazione breve", "d": "Prima il numero che conta, poi il confronto corretto, poi se il dato è robusto o fragile, infine lo scostamento collegato a un'ipotesi di causa e a una scelta. Se un indicatore non può essere raccontato così, forse non è pronto per stare davanti alla direzione. Un consumo totale stabile può nascondere il freddo normalizzato che peggiora da tre periodi mentre il resto compensa." },
+   { "h": "Un filtro intelligente, non un archivio", "d": "Il cruscotto deve far emergere ciò che orienta risorse, tempi e responsabilità; il resto può restare disponibile, ma non in primo piano. Aiuta una gerarchia semplice — indicatori da seguire, da confermare, da intervenire — non come vezzo grafico, ma per concentrare attenzione senza perdersi nel rumore." }
+  ]
+ },
+ {
+  "id": "50001_m09_s022",
+  "layout": "numeri",
+  "kicker": "Il rapporto per la direzione · 3",
+  "titolo": "Dire la qualità del dato senza bloccare le decisioni",
+  "intro": "Un rapporto maturo mostra anche quanto puoi fidarti dei numeri. Dichiarare i limiti non indebolisce il rapporto: lo rende più forte, perché evita che la direzione scambi per certezza ciò che è solo indicazione, e insieme evita l'errore opposto di fermarsi ogni volta che il dato non è perfetto. L'obiettivo non è informazione impeccabile, ma trasparenza sul grado di affidabilità con cui decidi. Tre dimensioni, dette con semplicità.",
+  "numeri": [
+   { "n": "1", "h": "Completezza", "d": "I dati necessari ci sono tutti? Dire che un EnPI è basato in parte su ricostruzione, perché un contatore è rimasto fuori servizio per alcuni giorni, non indebolisce il report: lo qualifica. Dice che il team conosce il problema, ne delimita l'effetto e sa quanto peso attribuire alla conclusione." },
+   { "n": "2", "h": "Confrontabilità", "d": "Periodo e riferimento sono davvero omogenei? Se l'indicatore del vapore migliora ma c'è stato un cambio mix e una quota è stimata, il messaggio corretto non è annacquato, è raffinato: il segnale è positivo, ma va confermato nel periodo successivo, quando il dato sarà pienamente confrontabile. La direzione non rinuncia a decidere, decide con la giusta prudenza." },
+   { "n": "3", "h": "Affidabilità", "d": "Misure e stime sono coerenti col livello di precisione richiesto per quella decisione? Un report povero nasconde il limite negli allegati, o lo ingigantisce fino a sospendere ogni giudizio: entrambe impediscono il governo. La regola pratica: a ogni numero importante, «quanto ci fidiamo di questo confronto?» — se alta, decisione netta; se media, prudente ma non assente; se bassa, il primo intervento è migliorare il dato." }
+  ]
+ },
+ {
+  "id": "50001_m09_s023",
+  "layout": "flusso",
+  "kicker": "Il rapporto per la direzione · 4",
+  "titolo": "Dal numero alla scelta: rendere il rapporto decidibile",
+  "intro": "Finché il rapporto descrive uno scostamento, la direzione resta spettatrice. Il salto avviene quando il report collega quel numero a una scelta concreta. Molti sistemi si fermano un passo prima dell'utilità: mostrano che qualcosa è migliorato o peggiorato, ma non dicono quale decisione serva. Una piccola catena logica trasforma il numero in azione.",
+  "passi": [
+   { "h": "Presenta lo scostamento rilevante", "d": "Un indicatore della refrigerazione peggiora in modo stabile per tre periodi comparabili. Il report debole scrive «andamento da monitorare» e si ferma." },
+   { "h": "Indica il confronto corretto", "d": "Segnala che il dato è affidabile e il confronto è pulito, così eviti letture impulsive. Se invece sospetti un problema di misura, lo distingui con onestà: non fingere certezza." },
+   { "h": "Proponi la spiegazione più probabile", "d": "Distinguendo tra causa già verificata e causa ancora ipotetica: il fenomeno è collegato a una possibile deriva dei cicli di sbrinamento. Se la causa è incerta, la richiesta cambia — non un investimento sul processo, ma priorità alta sul ripristino del dato." },
+   { "h": "Porta la scelta richiesta", "d": "Con un responsabile e un tempo atteso: autorizzare una verifica tecnica entro il mese, con eventuale intervento sui parametri e successiva verifica di efficacia. E lega sempre l'azione correttiva a un risultato osservabile: non «azione completata», ma quale non conformità impediva, quale causa affrontava, come misurerai se ha funzionato. Un numero utile è uno scostamento che sa dire perché conta, quanto è credibile e quale scelta richiede." }
+  ]
+ },
+ {
+  "id": "50001_m09_s024",
+  "layout": "cards",
+  "kicker": "Il rapporto per la direzione · 5",
+  "titolo": "Il riesame che decide: trasformare la riunione in governo",
+  "intro": "Quando il rapporto è costruito bene, il riesame cambia natura: non più una riunione dove si ascoltano risultati e si chiude con formule prudenti, ma il luogo dove la direzione esercita il governo dell'SGE. Il riesame utile non è il più lungo, è quello che distingue chiaramente tra informazione, interpretazione e scelta.",
+  "cards": [
+   { "h": "Un ritmo netto", "d": "Si apre con pochi numeri già filtrati, non un fascicolo intero. Chiarisce subito dove la prestazione mostra miglioramenti credibili, dove il dato è incerto, dove sono emerse criticità. Poi dedica il tempo maggiore non alla lettura delle tabelle, ma alle decisioni: se l'incontro consuma quasi tutto il tempo per spiegare il report, il materiale non era abbastanza sintetico." },
+   { "h": "Problemi nel linguaggio delle scelte", "d": "La direzione non deve ricevere solo problemi tecnici, ma formulati come impatto, urgenza e opzioni. Se un indicatore peggiora, la domanda non è solo cosa succede, ma cosa comporta non intervenire, quale approfondimento serve, quali risorse. Così l'energia entra nel perimetro normale della gestione, accanto a qualità, produzione, manutenzione, investimenti." },
+   { "h": "Anche i successi con disciplina", "d": "Un miglioramento non deve diventare autocelebrazione: la direzione deve sapere se è stabile, da quali azioni deriva, come estenderlo. Un successo sul sistema frigorifero da revisione set point e manutenzione diventa miglioramento del sistema quando ci si chiede se il metodo sia trasferibile ad altri impianti e se le competenze siano diffuse." },
+   { "h": "Tre tracce del riesame forte", "d": "Una decisione presa, non solo discussa; un responsabile chiaramente associato a quella decisione; un momento futuro in cui verificarne l'efficacia. Se manca una di queste tre tracce, il ciclo del miglioramento resta incompleto." }
+  ]
+ },
+ {
+  "id": "50001_m09_s025",
+  "layout": "tabella",
+  "kicker": "Ripasso · 1",
+  "titolo": "Le distinzioni che cambiano il giudizio",
+  "intro": "Cinque distinzioni fanno la differenza nel giudizio professionale: impediscono di scambiare una correzione per una soluzione, un miglioramento di facciata per uno reale, un numero elegante per uno utile. Rileggile con un esempio unico — un reparto con consumi peggiori: correggere è sostituire il misuratore, l'azione correttiva è capire perché il guasto non è stato intercettato.",
+  "cols": ["Distinzione", "Il lato debole / comodo", "Il lato robusto"],
+  "righe": [
+   ["Correzione vs azione correttiva", "Rimette a posto l'effetto visibile e chiude presto il caso", "Elimina la causa che ha permesso al problema di nascere o ripetersi"],
+   ["Sistema vs prestazione", "Il sistema più idoneo, adeguato, efficace (gli strumenti)", "L'energia usata meglio secondo il righello definito (gli esiti)"],
+   ["Dato disponibile vs affidabile", "Un dato presente, trattato come utile per definizione", "Completo, confrontabile, solido abbastanza per la decisione che gli attribuisci"],
+   ["Indicatore comodo vs pertinente", "Facile da estrarre, ma slegato dagli SEU e dalle variabili", "Legato agli usi significativi e alle variabili che muovono il processo"],
+   ["Descrivere vs decidere", "Un report che informa ma non porta a una scelta", "Numeri + qualità del dato + ipotesi di causa + richiesta decisionale"]
+  ]
+ },
+ {
+  "id": "50001_m09_s026",
+  "layout": "numeri",
+  "kicker": "Ripasso · 2",
+  "titolo": "Come ragioni davanti ai casi tipici",
+  "intro": "Davanti a un caso reale la difficoltà non è ricordare una definizione, ma scegliere la domanda giusta nel momento giusto. Un allenamento mentale: osservi il fatto, identifichi il rischio di lettura sbagliata, cerchi la domanda che riporta il caso al cuore del sistema.",
+  "numeri": [
+   { "n": "1", "h": "Consumo totale in calo", "d": "Lettura ingenua: caso chiuso, miglioramento continuo. Domanda matura: rispetto a quale riferimento, quali variabili pertinenti sono cambiate, quali EnPI dei principali SEU confermano il segnale? Se le risposte sono deboli, è una buona notizia possibile, non ancora difendibile." },
+   { "n": "2", "h": "Indicatore peggiora dopo una nuova linea", "d": "Lettura frettolosa: inefficienza del reparto. Domanda giusta: l'EnB è ancora rappresentativo, o il contesto è cambiato al punto da richiederne l'aggiornamento? Una non conformità sul riferimento può imitare un peggioramento energetico." },
+   { "n": "3", "h": "«Problema risolto, sensore sostituito»", "d": "Non solo se il dato è tornato: perché è nato, come è stato scoperto così tardi, se esistono punti simili esposti, quale azione correttiva impedisce il ritorno. Sposti l'attenzione dal sintomo alla causa e dalla riparazione all'apprendimento." },
+   { "n": "4", "h": "Analisi «aggiornata» ma opportunità identiche", "d": "La forma inganna. L'aggiornamento ha cambiato davvero la comprensione di consumi, SEU e priorità? Se i dati recenti non hanno spostato nessuna valutazione, l'analisi è stata rinfrescata, non riesaminata." },
+   { "n": "5", "h": "Report ordinati, nessuna decisione", "d": "Il rischio è incolpare la direzione; spesso la causa è nel modo in cui il sistema presenta i temi. Il report distingue numeri robusti e fragili, collega gli scostamenti a ipotesi di causa, formula una scelta richiesta? Se manca questo ponte, la direzione vede ma non governa." },
+   { "n": "6", "h": "EnPI che gli operatori non usano", "d": "Gli indicatori esistono, ma i responsabili di reparto li percepiscono come numeri lontani. La lettura utile chiede se siano davvero pertinenti agli SEU e traducibili in decisioni operative: un indicatore che nessuno sa usare può essere matematicamente corretto e manageralmente inutile." }
+  ]
+ },
+ {
+  "id": "50001_m09_s027",
+  "layout": "timeline",
+  "kicker": "Ripasso · 3",
+  "titolo": "La griglia mentale da portare con te",
+  "intro": "Sul campo o al checkpoint non ti servirà ricordare pagine, ma un ordine di domande: se l'ordine è giusto, anche i casi complessi diventano leggibili. Un percorso interno che fai ogni volta che vedi un dato, uno scostamento o una non conformità — mette insieme tutto il modulo senza essere una formula da recitare.",
+  "tappe": [
+   { "t": "01", "h": "Che cosa è successo davvero?", "d": "Separa il fatto dall'interpretazione: un indicatore peggiorato, un dato che manca, un riferimento non aggiornato. Vedi il fatto nudo, senza riempirlo troppo presto di spiegazioni, per non accettare subito la lettura più comoda offerta dall'organizzazione." },
+   { "t": "02", "h": "Il confronto è credibile?", "d": "Entrano EnB, EnPI, dati completi, variabili pertinenti, qualità della misura. Molti errori nascono qui: si interpreta un numero senza aver verificato che righello e riferimento siano ancora sensati. Se la base è debole, la priorità non è spiegare il risultato, è ripristinare la possibilità di leggerlo." },
+   { "t": "03", "h": "Sintomo o causa?", "d": "Un misuratore guasto è il fatto visibile, non la causa profonda; un'analisi vecchia è il sintomo di un ponte assente tra modifiche e revisione. Questa domanda porta subito alla qualità dell'azione correttiva: finché non capisci la causa, produci solo correzioni." },
+   { "t": "04", "h": "Isolato o si ripete altrove?", "d": "Distingue l'approccio difensivo da quello maturo. Se un problema sui dati nasce da una logica software fragile, forse tocca più punti di misura; se un EnPI è scollegato da un SEU, forse lo stesso difetto esiste in altri sottosistemi. Qui alleni lo sguardo sistemico." },
+   { "t": "05", "h": "Quale decisione, e come verifico?", "d": "Il fatto chiede correzione immediata, azione correttiva, revisione del metodo, approfondimento, risorse o osservazione rinforzata? Porta al rapporto utile alla direzione. E chiudi il cerchio: se non sai come controllerai l'esito — quale segnale cambierà, in quale periodo, con quale affidabilità — la chiusura resterà solo amministrativa." }
+  ]
+ },
+ {
+  "id": "50001_m09_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 9",
+  "modNum": "9",
+  "titolo": "Riconoscere gli scostamenti, imparare dai problemi",
+  "punti": [
+   { "h": "Il miglioramento è un lavoro concreto", "d": "Non una formula da mettere in chiusura di un documento: lettura onesta dei fatti, ricerca della causa, scelta di un'azione correttiva proporzionata, verifica della sua efficacia nel tempo. E cammina su due binari inseparabili — l'SGE deve diventare più idoneo, adeguato ed efficace, e l'organizzazione deve dimostrare una prestazione migliore con numeri credibili e confronti sensati." },
+   { "h": "La casistica ricorrente", "d": "Quanto è insidioso un EnB non aggiustato quando il contesto cambia, quanto sono fuorvianti EnPI scollegati dagli SEU, quanto danno producono dati interrotti. E le altre fragilità: analisi ferme, competenze non presidiate, documenti che non reggono il passaggio di mano, controlli operativi deboli, acquisti non coerenti, riesami che osservano ma non decidono. Il filo comune: la maggior parte delle non conformità nasce quando il sistema perde collegamento tra cambiamento reale, qualità del dato e capacità decisionale." },
+   { "h": "La griglia da portare via", "d": "Che cosa è successo davvero, il confronto è credibile, sintomo o causa, isolato o ripetibile, quale decisione richiede, come verifico l'efficacia. Non una formula da recitare, ma un modo per non perdere il filo tra problema locale e miglioramento continuo. E il rapporto per la direzione: pochi numeri pertinenti, qualificati dalla loro affidabilità, collegati a scelte concrete." }
+  ],
+  "prossimo": {
+   "modulo": "10",
+   "titolo": "Le tecniche di verifica dell'SGE energia",
+   "testo": "Entrerai nella parte più operativa della verifica: come trasformare il quadro dei requisiti in un lavoro ordinato, credibile e utile. La parola chiave sarà una sola — dati: evidenze energetiche prima dei racconti, criteri, confini e periodi del giudizio, e il programma di audit come regia annuale di un SGE."
+  }
+ }
+]
