@@ -1,0 +1,384 @@
+[
+ {
+  "id": "39001_m09_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 09",
+  "eyebrow": "Miglioramento · non conformità · azioni correttive",
+  "titolo": "Miglioramento e non conformità tipiche del sistema RTS",
+  "sottotitolo": "Dalla reazione a un fatto indesiderato all'apprendimento del sistema",
+  "testo": "Un sistema può apparire ordinato a lungo, finché nulla lo costringe a mostrare come reagisce davvero. Qui vedi lo scostamento, lo contieni, ne comprendi la causa, decidi che cosa cambiare e verifichi se il cambiamento funziona.",
+  "titolo_footer": "Miglioramento e non conformità tipiche del sistema RTS",
+  "agenda": [
+   "Non conformità e azioni correttive (punto 10.1)",
+   "Miglioramento continuo come capacità stabile",
+   "Le non conformità tipiche del sistema RTS",
+   "Non conformità di sistema o violazione del codice",
+   "Il rapporto che serve davvero alla direzione",
+   "Tre domande guida: che cosa, quale effetto, quanto ampio"
+  ]
+ },
+ {
+  "id": "39001_m09_s002",
+  "layout": "flusso",
+  "kicker": "Punto 10.1 · La reazione",
+  "titolo": "Reagire alla non conformità: controllare, correggere, gestire le conseguenze",
+  "intro": "Quando emerge una non conformità, la prima aspettativa non è l'analisi raffinata ma la reazione corretta. Il punto 10.1 chiede di rispondere allo scostamento e, se possibile, di controllarlo, correggerlo e fronteggiarne le conseguenze.",
+  "passi": [
+   { "h": "Controllare", "d": "Impedire che il problema continui a produrre effetti: fermare l'effetto in corso e mettere in sicurezza il processo." },
+   { "h": "Correggere", "d": "Ripristinare la conformità dove è possibile, agendo sul dato o sul processo che si è scostato." },
+   { "h": "Gestire le conseguenze", "d": "Prendere atto di ciò che il problema ha già generato e ridurre, per quanto si può, il danno residuo." }
+  ]
+ },
+ {
+  "id": "39001_m09_s003",
+  "layout": "cards",
+  "kicker": "Punto 10.1 · La causa reale",
+  "titolo": "Dalla descrizione del problema alla causa reale",
+  "cards": [
+   { "h": "La stessa causa dovunque", "d": "Le stesse cause tornano in casi molto diversi, come se tutto dipendesse sempre dalla disattenzione del personale." },
+   { "h": "Assenza di evidenze", "d": "Si leggono ipotesi generiche, ma non si capisce da quali fatti discendano." },
+   { "h": "Nessuna estensione", "d": "Il ragionamento non tocca altri siti, reparti o appaltatori che potrebbero avere lo stesso punto debole." },
+   { "h": "Sempre l'ultimo anello", "d": "La causa individuata coincide quasi sempre con l'ultimo anello operativo, mai con pianificazione, controllo o leadership." }
+  ]
+ },
+ {
+  "id": "39001_m09_s004",
+  "layout": "split",
+  "kicker": "Punto 10.1 · Efficacia",
+  "titolo": "Attuare l'azione correttiva e verificarne l'efficacia",
+  "lead": "Una causa compresa bene non risolve nulla, se non diventa cambiamento reale. La domanda che fa emergere la maturità del sistema è una sola: quale evidenza vi fa dire che l'azione ha funzionato?",
+  "punti": [
+   { "h": "Decidere non basta", "d": "Aver scelto un'azione non è ancora agire sul problema." },
+   { "h": "Eseguire non basta", "d": "Aver eseguito un incontro o una procedura misura un'attività, non un risultato." },
+   { "h": "Servono evidenze successive", "d": "Il problema smette di ripresentarsi, il controllo diventa più affidabile, il rischio è meglio governato." },
+   { "h": "A volte tocchi l'architettura", "d": "Cambiare responsabilità, flussi, criteri o controlli, non solo ripetere regole esistenti." }
+  ]
+ },
+ {
+  "id": "39001_m09_s005",
+  "layout": "definizione",
+  "kicker": "Punto 10.1 · Informazioni documentate",
+  "eyebrow": "La memoria che rende verificabile l'apprendimento",
+  "titolo": "Informazioni documentate",
+  "definizione": "Evidenze conservate che mostrano che aspetto aveva il problema, come l'organizzazione si è mossa una volta scoperto e che cosa hanno prodotto gli interventi correttivi. Non un obbligo amministrativo, ma il modo con cui il sistema difende la propria memoria.",
+  "punti": [
+   { "h": "La natura del problema", "d": "Che cosa è accaduto, in quale processo, con quale evidenza e quale effetto sul controllo del rischio, non formule vaghe." },
+   { "h": "Il filo del dopo", "d": "Reazione iniziale, analisi della causa, azione correttiva, verifica dell'efficacia: chiudere con «situazione risolta» perde quasi tutto il valore." }
+  ]
+ },
+ {
+  "id": "39001_m09_s006",
+  "layout": "evidenza",
+  "kicker": "Miglioramento continuo",
+  "eyebrow": "Non somma di iniziative, ma capacità stabile",
+  "titolo": "Migliorare non è avere più cose: è avere un sistema più centrato, più leggibile e più utile.",
+  "testo": "Il punto 10.2 chiede di far evolvere senza interruzioni il sistema RTS perché sia più adatto al proprio scopo, più proporzionato al contesto reale e più capace di produrre risultati affidabili. Non confondere il movimento con il progresso: documenti, campagne e riunioni possono crescere senza che il sistema migliori davvero."
+ },
+ {
+  "id": "39001_m09_s007",
+  "layout": "tabella",
+  "kicker": "Le leve del miglioramento",
+  "titolo": "Le sorgenti di apprendimento richiamate dalla norma",
+  "cols": ["Leva", "Come alimenta il miglioramento"],
+  "righe": [
+   ["Politica RTS", "Se chiarisce impegni e priorità, orienta dove concentrare attenzione e risorse."],
+   ["Obiettivi e risultati", "Danno direzione; se poco utili o distanti dal rischio, migliorare vuol dire rivederli."],
+   ["Verifiche", "Fanno emergere temi ricorrenti e aree fragili, non solo rilievi da chiudere in fretta."],
+   ["Eventi monitorati", "Quasi incidenti, segnalazioni ed esiti dei controlli orientano decisioni concrete."],
+   ["Azioni correttive", "Trasformano gli apprendimenti in modifiche; lette insieme, convergono su cambiamenti più profondi."],
+   ["Iniziative preventive", "Agiscono prima del danno, sui segnali deboli e sulle debolezze latenti."],
+   ["Riesame della direzione", "Il luogo in cui politica, obiettivi, risultati, verifiche ed eventi si incontrano e diventano scelte."]
+  ]
+ },
+ {
+  "id": "39001_m09_s008",
+  "layout": "confronto",
+  "kicker": "Riconoscere il miglioramento",
+  "titolo": "Come riconosci un sistema che migliora davvero",
+  "a": {
+   "h": "Un sistema che migliora",
+   "sub": "Segnali positivi",
+   "punti": [
+    { "d": "Si pone domande utili: dove altro può accadere, che cosa ci sfugge nei dati, quali controlli non funzionano." },
+    { "d": "Tracciabilità delle decisioni: dai risultati nascono fattori ridefiniti, criteri più pertinenti, responsabilità chiarite." },
+    { "d": "Evidenze profonde che uniscono problema, causa, azione correttiva e verifica di efficacia." }
+   ]
+  },
+  "b": {
+   "h": "Un sistema fermo",
+   "sub": "Segnali negativi",
+   "punti": [
+    { "d": "Riflesso difensivo: ogni scostamento è subito episodio isolato, errore individuale, circostanza eccezionale." },
+    { "d": "Separazione tra analisi e azione: si discutono casi e si chiudono verbali, ma l'operativo resta identico." },
+    { "d": "Casi chiusi in fretta, con formule ripetitive e scarsa prova dei risultati." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m09_s009",
+  "layout": "cards",
+  "kicker": "NC tipiche · 1",
+  "titolo": "Quando i fattori sono scelti male",
+  "cards": [
+   { "h": "Lontani dal contesto", "d": "Fattori standardizzati che ignorano manovre frequenti, utenti vulnerabili, consegne in aree congestionate e pressioni sui tempi." },
+   { "h": "Formulati in modo vago", "d": "Espressioni troppo ampie come «sicurezza di guida» o «attenzione del personale», che non orientano monitoraggio e decisioni." },
+   { "h": "Facili ma poco significativi", "d": "Fattori comodi da misurare, ma che non intercettano il rischio reale." },
+   { "h": "Storici, mai aggiornati", "d": "Fattori mantenuti nel tempo anche quando il contesto operativo è cambiato." }
+  ]
+ },
+ {
+  "id": "39001_m09_s010",
+  "layout": "split",
+  "kicker": "NC tipiche · 2",
+  "titolo": "Dati di esposizione assenti: il sistema parla ma non misura il contesto",
+  "lead": "Rispetto a che cosa stai leggendo i risultati? Percorrenze, ore di guida, viaggi, tipi di tratta e di mezzo, quota affidata ai terzi: senza una base di esposizione, confrontare e dare priorità diventa fragile.",
+  "punti": [
+   { "h": "Priorità per percezione", "d": "Le priorità nascono da impressioni o da eventi eclatanti, non da una base misurata." },
+   { "h": "Confronti senza contesto", "d": "Si confrontano sedi o periodi senza tenere conto delle differenze di attività." },
+   { "h": "Numeri assoluti", "d": "L'organizzazione mostra numeri, ma fatica a spiegare la popolazione esposta." },
+   { "h": "Appaltatori invisibili", "d": "I terzi non compaiono nella base dati, come se il rischio esistesse solo dove il personale è diretto." }
+  ]
+ },
+ {
+  "id": "39001_m09_s011",
+  "layout": "punti",
+  "kicker": "NC tipiche · 3",
+  "titolo": "Indagini superficiali: quando il sistema spiega troppo in fretta",
+  "intro": "Un sistema può registrare molti eventi e imparare pochissimo da ciascuno. Da fuori tutto sembra in ordine — c'è il modulo, la chiusura, il responsabile — ma la conoscenza utile non si produce.",
+  "punti": [
+   { "h": "Spiegazione sulla persona", "d": "Formule immediate come distrazione o errore dell'operatore, senza approfondimento sul contesto." },
+   { "h": "Povertà delle evidenze", "d": "Mancano ricostruzione del fatto, sequenza, fonti, confronto tra versioni, dati operativi." },
+   { "h": "Nessuna estensione", "d": "Nessuno si chiede dove altro la stessa debolezza sia presente, né se esistano eventi simili." },
+   { "h": "Chiusura prevedibile", "d": "Quasi ogni caso termina con richiamo, formazione ripetuta o circolare interna." }
+  ]
+ },
+ {
+  "id": "39001_m09_s012",
+  "layout": "flusso",
+  "kicker": "Indagine robusta",
+  "titolo": "Che cosa rende robusta un'indagine",
+  "intro": "Un'indagine robusta non è necessariamente lunga: segue un filo logico chiaro. Quando manca uno di questi passaggi, il rischio di superficialità cresce molto.",
+  "passi": [
+   { "h": "Ricostruzione del fatto", "d": "Che cosa è accaduto, in quale fase, con quali soggetti e condizioni operative." },
+   { "h": "Pluralità delle fonti", "d": "Testimonianze, registrazioni, dati, controlli, istruzioni: più convergono, più la conclusione regge." },
+   { "h": "Contesto", "d": "Tempi, obiettivi, controllo dei preposti e tratta che rendevano il fatto più probabile." },
+   { "h": "Ricerca di similarità", "d": "Non conformità simili già esistenti o possibili altrove: qui nasce l'apprendimento di sistema." }
+  ]
+ },
+ {
+  "id": "39001_m09_s013",
+  "layout": "cards",
+  "kicker": "NC tipiche · 4",
+  "titolo": "Appaltatori fuori controllo: il rischio che cresce ai margini del sistema",
+  "cards": [
+   { "h": "Qualifica troppo formale", "d": "Si raccolgono documenti generici, ma non si verificano gli aspetti decisivi per il proprio contesto." },
+   { "h": "Ingresso in operatività", "d": "Mezzi, conducenti o subfornitori impiegati senza controlli coerenti con quanto previsto internamente." },
+   { "h": "Monitoraggio nel tempo", "d": "Firmato il contratto, il sistema presume che la conformità resti stabile per sempre." },
+   { "h": "Dati non integrati", "d": "Eventi, quasi incidenti ed esposizione degli appaltatori non entrano nella lettura complessiva." }
+  ]
+ },
+ {
+  "id": "39001_m09_s014",
+  "layout": "timeline",
+  "kicker": "Controllo appaltatori",
+  "titolo": "Il controllo sugli appaltatori lungo tutto il ciclo",
+  "intro": "Non un singolo adempimento, ma un ciclo completo: se guardi un punto solo, rischi di perdere il quadro.",
+  "tappe": [
+   { "t": "01", "h": "Ingresso", "d": "Criteri coerenti con il servizio affidato: mezzo, esperienza, accesso ai siti, documenti operativi." },
+   { "t": "02", "h": "Abilitazione", "d": "Molte non conformità nascono qui: l'urgenza apre deroghe continue e la deroga diventa prassi." },
+   { "t": "03", "h": "Monitoraggio", "d": "Eventi, quasi incidenti, reclami e scostamenti raccolti in modo strutturato, non solo quando esplodono." },
+   { "t": "04", "h": "Uso dei risultati", "d": "I dati incidono su rivalutazioni, qualifiche e riesami: altrimenti il monitoraggio resta decorativo." }
+  ]
+ },
+ {
+  "id": "39001_m09_s015",
+  "layout": "flusso",
+  "kicker": "La catena delle debolezze",
+  "titolo": "Quando le non conformità tipiche si concatenano e si rafforzano",
+  "intro": "Raramente si presentano isolate: ogni anello rende più fragile il successivo. La lettura utile non è solo puntuale, ma sistemica.",
+  "passi": [
+   { "h": "Fattori scelti male", "d": "Il sistema guarda nella direzione sbagliata fin dall'origine." },
+   { "h": "Dati mancanti", "d": "Raccoglie i dati meno utili, o trascura quelli che servirebbero." },
+   { "h": "Indagine deformata", "d": "L'evento è letto con una lente distorta, priva di riferimenti pertinenti." },
+   { "h": "Terzi invisibili", "d": "Gli appaltatori restano fuori sguardo, perché il sistema non li ha mai previsti." }
+  ]
+ },
+ {
+  "id": "39001_m09_s016",
+  "layout": "tabella",
+  "kicker": "Caso integrato",
+  "titolo": "Leggere un sistema debole dietro eventi apparentemente diversi",
+  "cols": ["Dimensione", "Che cosa emerge nel caso della distribuzione farmaceutica"],
+  "righe": [
+   ["Fattori scelti", "Monitorati velocità e cinture, ma gli eventi si concentrano in cortili stretti, soste brevi, manovre con pedoni."],
+   ["Dati di esposizione", "Numeri assoluti dai depositi, senza consegne, durate o quota terzi: il confronto tra siti è fragile."],
+   ["Indagini", "Quasi sempre «distrazione del conducente»: nessuna analisi su percorsi, mezzi, tempi, segnalazioni pregresse."],
+   ["Appaltatori", "Vettori esterni in servizio rapido nei picchi; i loro quasi incidenti non confluiscono nella stessa analisi."]
+  ]
+ },
+ {
+  "id": "39001_m09_s017",
+  "layout": "punti",
+  "kicker": "Formulare i rilievi",
+  "titolo": "Come formulare rilievi chiari sulle non conformità tipiche",
+  "intro": "Un rilievo efficace non è né vago né enfatico: descrive il fatto, lo collega al criterio, mostra l'effetto e rende leggibile perché la debolezza merita attenzione.",
+  "punti": [
+   { "h": "Evita le etichette", "d": "«Fattori non adeguati», «dati insufficienti» sono etichette, non risultanze." },
+   { "h": "Ancora alle evidenze", "d": "Mostra la distanza tra fattori monitorati, eventi ricorrenti e spiegazioni fornite." },
+   { "h": "Distingui fatto e inferenza", "d": "Il fatto è ciò che hai osservato; l'inferenza è il significato per il sistema. Collegati, non confusi." },
+   { "h": "Calibra il livello", "d": "Un caso isolato ben spiegato non pesa come una ricorrenza sostenuta da più evidenze convergenti." }
+  ]
+ },
+ {
+  "id": "39001_m09_s018",
+  "layout": "evidenza",
+  "kicker": "Chiudere la rassegna",
+  "eyebrow": "La lezione delle non conformità tipiche",
+  "titolo": "Il sistema fallisce quando smette di vedere bene.",
+  "testo": "Vede male se guarda fattori poco pertinenti. Vede poco se manca una base di esposizione adeguata. Capisce male se indaga in superficie. E vede solo una parte del quadro se lascia fuori attività esternalizzate ma rilevanti. Davanti a ogni non conformità tipica chiediti: che cosa impedisce al sistema di conoscere il rischio, di governarlo, di imparare?"
+ },
+ {
+  "id": "39001_m09_s019",
+  "layout": "confronto",
+  "kicker": "Due piani distinti",
+  "titolo": "Non conformità di sistema e violazione del codice",
+  "intro": "Possono comparire insieme, ma restano piani diversi. Se li sovrapponi, rischi di giudicare male sia il sistema sia l'evento concreto.",
+  "a": {
+   "h": "Non conformità di sistema",
+   "sub": "Il governo organizzativo",
+   "punti": [
+    { "d": "Scostamento rispetto ai requisiti del sistema RTS: fattori, processi, controlli, dati, ruoli, miglioramento." },
+    { "d": "Può esistere senza alcuna violazione del codice osservabile: dati assenti, fattori poco pertinenti, indagini deboli." }
+   ]
+  },
+  "b": {
+   "h": "Violazione del codice",
+   "sub": "Il fatto stradale",
+   "punti": [
+    { "d": "Comportamento o situazione rispetto alle regole della circolazione." },
+    { "d": "Non basta a dimostrare la non conformità di sistema: serve mostrare controlli assenti o inefficaci." }
+   ]
+  }
+ },
+ {
+  "id": "39001_m09_s020",
+  "layout": "cards",
+  "kicker": "Errori da evitare",
+  "titolo": "Dove i due piani si toccano e quali errori evitare nel rapporto",
+  "cards": [
+   { "h": "Automatismo accusatorio", "d": "«C'è un fatto stradale, quindi il sistema è non conforme.» Serve invece evidenza sul governo: controlli mancanti, analisi assenti, azioni inefficaci." },
+   { "h": "Automatismo difensivo", "d": "«Non ci sono violazioni, quindi il sistema va bene.» Ma può mostrare non conformità nei fattori, nei dati, negli appaltatori." },
+   { "h": "Evidenze insufficienti", "d": "Quando non puoi né confermare né escludere il legame: descrivi il fatto, dichiara il limite del campione, segnala l'approfondimento." }
+  ]
+ },
+ {
+  "id": "39001_m09_s021",
+  "layout": "numeri",
+  "kicker": "Casi borderline",
+  "titolo": "Quando episodio stradale e sistema si toccano solo in parte",
+  "intro": "Casi di confine: un fatto esiste, ma il legame con il sistema non è immediato; oppure il sistema è debole, ma l'episodio sembra modesto.",
+  "numeri": [
+   { "n": "01", "h": "Episodio singolo visibile", "d": "Fatto grave, ma con criteri e controlli attivi la non conformità di sistema non è automatica." },
+   { "n": "02", "h": "Nessun evento vistoso", "d": "Senza sanzioni, ma dati disomogenei e indagini stereotipate: la NC è già sostenuta." },
+   { "n": "03", "h": "Comportamento, ma reazione buona", "d": "Il sistema contiene, ricostruisce, estende, individua la causa e modifica i criteri." },
+   { "n": "04", "h": "Ricorrenza debole", "d": "Segnali piccoli tutti nella stessa direzione che, letti insieme, indicano un problema di governo." }
+  ]
+ },
+ {
+  "id": "39001_m09_s022",
+  "layout": "flusso",
+  "kicker": "Il ponte di evidenze",
+  "titolo": "Costruire il ponte tra episodio stradale e sistema RTS",
+  "intro": "Il collegamento non si presume, si dimostra. Con alcune verifiche successive fai vedere perché quel fatto parla del sistema, e non solo dell'episodio.",
+  "passi": [
+   { "h": "Il fatto", "d": "Che cosa è accaduto, in quale contesto e con quali informazioni." },
+   { "h": "Ricorrenza", "d": "Esistono eventi analoghi, segnali deboli, quasi incidenti simili?" },
+   { "h": "Controlli", "d": "I criteri e i monitoraggi esistevano e funzionavano davvero, o solo sulla carta?" },
+   { "h": "Risposta precedente", "d": "Casi simili passati: azione correttiva reale o solo correzioni immediate?" },
+   { "h": "Estensione", "d": "Dove altro la stessa debolezza può comparire: causa locale o sistemica?" }
+  ]
+ },
+ {
+  "id": "39001_m09_s023",
+  "layout": "cards",
+  "kicker": "Tre risposte distinte",
+  "titolo": "Un fatto stradale, tre risposte da non sovrapporre",
+  "cards": [
+   { "h": "Operativo immediato", "d": "Contenimento, messa in sicurezza, verifica dei mezzi, sospensione temporanea, controllo su una tratta critica. Il qui e ora." },
+   { "h": "Individuale o contrattuale", "d": "Conseguenze gestionali, disciplinari o contrattuali verso una persona o un appaltatore. Necessario, ma non esaurisce il sistema." },
+   { "h": "Sistema RTS", "d": "Controlli mancanti, dati non usati, criteri sbagliati: qui nasce l'azione correttiva vera, orientata a evitare la ripetizione." }
+  ]
+ },
+ {
+  "id": "39001_m09_s024",
+  "layout": "split",
+  "kicker": "Il rapporto alla direzione",
+  "titolo": "Il rapporto che serve alla direzione: non cronaca ma governo",
+  "lead": "Alla direzione serve un rapporto che aiuti a decidere, non un resoconto. Uno strumento che mostra dove il sistema perde tenuta e con quale urgenza intervenire.",
+  "punti": [
+   { "h": "Pattern e connessioni", "d": "Va oltre il singolo episodio: mostra pattern, connessioni ed effetti sul governo del rischio." },
+   { "h": "Proporzione e gerarchia", "d": "Distingue locale da diffuso, correzione immediata da revisione, sintomo da causa strutturale." },
+   { "h": "Effetto sul governo", "d": "Trasforma un difetto tecnico in un problema di governo: perché quel tema merita attenzione." },
+   { "h": "Il punto decisionale", "d": "Illumina fatto, effetto, credibilità della causa e area da modificare, senza dover suggerire ogni soluzione." }
+  ]
+ },
+ {
+  "id": "39001_m09_s025",
+  "layout": "numeri",
+  "kicker": "Contenuti del rapporto",
+  "titolo": "Che cosa deve contenere un rapporto davvero utile",
+  "numeri": [
+   { "n": "01", "h": "Fatto o pattern", "d": "Dove si colloca, quali evidenze lo sostengono, se è episodio o tendenza." },
+   { "n": "02", "h": "Il criterio", "d": "Il riferimento usato: requisito, procedura interna o metodo dichiarato." },
+   { "n": "03", "h": "Effetto reale o potenziale", "d": "Che cosa produce: priorità distorte, confronti fragili, zone cieche." },
+   { "n": "04", "h": "Direzione della causa", "d": "Dove il sistema sembra perdere tenuta, per spostarsi dal sintomo al meccanismo." },
+   { "n": "05", "h": "Estensione possibile", "d": "Se la debolezza è locale o suscettibile di comparire altrove." },
+   { "n": "06", "h": "Qualità della risposta", "d": "Se le azioni passate hanno toccato la causa o solo corretto in apparenza." }
+  ]
+ },
+ {
+  "id": "39001_m09_s026",
+  "layout": "punti",
+  "kicker": "Scrivere per decidere",
+  "titolo": "Scrivere per decidere: tono, peso e chiarezza del rapporto",
+  "intro": "Anche con contenuti solidi, il rapporto può fallire per come è scritto. Rigore nei fatti, chiarezza nelle connessioni, sobrietà nel giudizio.",
+  "punti": [
+   { "h": "Distingui fatto e interpretazione", "d": "Il fatto è ciò che hai verificato; l'interpretazione è il suo significato. Collegati ma separati." },
+   { "h": "Evita il linguaggio assoluto", "d": "Parla di debolezza diffusa o controllo non sufficientemente affidabile, salvo evidenze nette. Precisione, non timidezza." },
+   { "h": "Fai pesare con l'effetto", "d": "«Grave» spiega poco: mostra come una scelta poco pertinente orienti male monitoraggio e priorità." },
+   { "h": "Favorisci l'azione correttiva", "d": "Illumina il meccanismo che non ha funzionato, invece di accusare soltanto." }
+  ]
+ },
+ {
+  "id": "39001_m09_s027",
+  "layout": "tabella",
+  "kicker": "Dal rapporto alle decisioni",
+  "titolo": "Come la direzione usa davvero il rapporto",
+  "cols": ["Uso", "Che cosa consente alla direzione"],
+  "righe": [
+   ["Priorità", "Distinguere ciò che va corretto subito da ciò che richiede un intervento di sistema più ampio."],
+   ["Risorse", "Capire quando serve tempo, competenze o integrazione di dati, non un semplice richiamo."],
+   ["Responsabilità", "Individuare chi guida l'azione e chi ne verifica l'efficacia, con presidio trasversale se le cause sono distribuite."],
+   ["Riesame", "Far confluire le risultanze nella lettura strategica: obiettivi, criteri e priorità del periodo successivo."],
+   ["Verifica successiva", "Definire quali evidenze mostreranno che l'azione correttiva ha davvero funzionato."]
+  ]
+ },
+ {
+  "id": "39001_m09_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 09",
+  "modNum": "09",
+  "titolo": "Che cosa porti con te nel checkpoint e nel prossimo modulo",
+  "punti": [
+   { "h": "Reagire e imparare", "d": "Contieni, comprendi la causa, attua un'azione proporzionata, verifica l'efficacia e, se serve, modifica il sistema." },
+   { "h": "Correzione ≠ azione correttiva", "d": "La prima rimette sotto controllo il problema; la seconda elimina la causa per evitare la ripetizione." },
+   { "h": "La griglia delle NC tipiche", "d": "Fattori scelti male, dati assenti, indagini superficiali, appaltatori fuori controllo: un sistema che vede male." },
+   { "h": "Due piani, un ponte di evidenze", "d": "Non basta il fatto stradale, né la sua assenza: collega i piani solo quando le evidenze reggono." }
+  ],
+  "prossimo": {
+   "modulo": "10",
+   "titolo": "Verificare il sistema RTS: programma e preparazione",
+   "testo": "Dopo aver capito non conformità, cause, azione correttiva e miglioramento, imposti la verifica che deve farli emergere sul campo."
+  }
+ }
+]
