@@ -1,0 +1,389 @@
+[
+ {
+  "id": "50001_m06_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 50001 — Sistemi di gestione dell'energia",
+  "kicker": "Modulo 6",
+  "eyebrow": "Dalla cornice alla vita dell'impianto",
+  "titolo": "Le attività operative: controllo, progettazione, approvvigionamento",
+  "testo": "Da qui passi dalla cornice alla vita quotidiana dell'impianto: è dove la prestazione energetica smette di essere una promessa elegante e diventa routine, impostazione, scelta tecnica, verifica sul campo. Lavorerai su tre assi che nella pratica si toccano continuamente: il controllo operativo delle attività collegate agli usi energetici significativi (8.1), la progettazione che considera l'effetto energetico lungo la vita attesa (8.2), e l'approvvigionamento (8.3), che rende esplicita una domanda scomoda — quando compri beni, servizi o energia, stai valutando anche il loro peso sulla prestazione? Per te che ti prepari al ruolo di auditor, qui impari a seguire il filo che parte da una decisione gestionale e finisce in un comportamento tecnico osservabile — fino al set point, alla frequenza di manutenzione, alla specifica inviata al fornitore. Il modulo non è una raccolta di temi vicini, è una catena: se la progettazione ignora l'energia, l'approvvigionamento comprerà male, il controllo operativo lavorerà in salita e neppure una buona pianificazione reggerà a lungo.",
+  "agenda": [
+   "8.1 Controllo operativo: criteri, comunicazione, manutenzione, modifiche",
+   "8.2 Progettazione: la prestazione lungo la vita attesa",
+   "8.3 Approvvigionamento: beni, servizi ed energia come leva",
+   "Verificare l'operativo: dal criterio scritto al bordo macchina",
+   "Casi pratici, deviazioni e la catena di evidenza"
+  ]
+ },
+ {
+  "id": "50001_m06_s002",
+  "layout": "split",
+  "kicker": "Controllo operativo · 8.1 · 1",
+  "titolo": "Che cosa devi tenere sotto controllo, davvero",
+  "lead": "La prima tentazione è immaginare un controllo steso uniformemente su tutto il sito. La logica è invece molto più selettiva, e proprio per questo più utile. La norma ti porta verso i processi legati agli SEU e verso quelli che servono a rispettare i requisiti e a mettere a terra la pianificazione energetica. Non devi presidiare ogni gesto con la stessa intensità: devi presidiare bene ciò che può spostare davvero la prestazione.",
+  "punti": [
+   { "h": "La parola chiave è «significativo»", "d": "Devi chiederti quali processi, se lasciati senza criteri, potrebbero portare a uno scostamento significativo dalla prestazione attesa. Un ventilatore accessorio acceso mezz'ora in più è irrilevante; una batteria di compressori stabilmente a pressione eccessiva può compromettere il risultato energetico dell'intero periodo. L'attenzione principale non è il piccolo scaldacqua dell'ufficio, ma centrale termica, aria compressa, grande frigo." },
+   { "h": "Leggere il processo come una catena", "d": "C'è una decisione iniziale (ridurre i consumi del freddo), un'azione prevista (cambiare le logiche di sbrinamento, ridurre i tempi porta aperta), e il processo reale (chi lavora, cosa imposta, quali allarmi vede, come interviene, quale manutenzione protegge il risultato). Se un anello manca, il controllo si indebolisce." },
+   { "h": "Pianificare, attuare, tenere sotto controllo", "d": "Pianificare significa tradurre l'intenzione in modalità operative; attuare, farle vivere nei turni e nelle responsabilità reali; tenere sotto controllo, capire rapidamente se il processo esce dai limiti attesi e reagire in tempo. Se l'intenzione resta nel piano e non entra nei processi quotidiani, nessuno agirà in modo coerente." },
+   { "h": "L'errore speculare", "d": "Alcune organizzazioni mettono sotto regola tutto, e così non mettono davvero sotto controllo quasi nulla: molte istruzioni, molte firme, poca priorità. Un buon sistema distingue: dove una deriva di esercizio può costare energia, soldi e stabilità di processo servono criteri robusti; dove l'effetto è minimo basta un governo più leggero. Da auditor, questa selettività è un segnale di maturità." }
+  ]
+ },
+ {
+  "id": "50001_m06_s003",
+  "layout": "definizione",
+  "kicker": "Controllo operativo · 8.1 · 2",
+  "eyebrow": "Il controllo diventa concreto",
+  "titolo": "Che cos'è un criterio operativo",
+  "definizione": "I criteri operativi sono condizioni di esercizio, limiti, regole di conduzione, logiche di regolazione e modalità di intervento che rendono governabile un uso significativo dell'energia. Un obiettivo indica la direzione; il criterio operativo spiega come il processo deve comportarsi ogni giorno per non allontanarsi da quel risultato.",
+  "punti": [
+   "Non slogan: «usare l'energia con attenzione» sta in una politica, non basta come criterio. Un criterio utile è «la pressione della rete aria compressa resta in una fascia definita, con allarmi attivi e ricerca perdite programmata», oppure «il forno parte solo in prossimità della campagna produttiva, non con largo anticipo per abitudine».",
+   "La norma richiama anche il buon funzionamento e la cura nel tempo: non solo set point e orari, ma pulizia degli scambiatori, verifica delle tenute, taratura delle sonde, stato dei filtri, allineamento dei bruciatori. In molte realtà la perdita di efficienza non nasce da una grande decisione sbagliata, ma da tanti piccoli degradi lasciati sedimentare.",
+   "La qualità di un criterio non dipende solo dalla correttezza tecnica, ma dall'applicabilità: uno troppo sofisticato, che nessuno comprende o riesce a rispettare, vale quasi quanto un criterio assente. I criteri maturi, poi, aiutano a riconoscere presto quando il processo scivola fuori controllo: allarmi, soglie leggibili, verifiche rapide a inizio turno."
+  ]
+ },
+ {
+  "id": "50001_m06_s004",
+  "layout": "split",
+  "kicker": "Controllo operativo · 8.1 · 3",
+  "titolo": "Comunicare i criteri a chi può fare la differenza",
+  "lead": "Un criterio non produce effetto solo perché è scritto bene: lo produce quando arriva alle persone pertinenti e queste possono usarlo nelle attività reali. La norma chiede che i criteri siano comunicati a chi opera sotto il controllo dell'organizzazione — non solo personale diretto, ma appaltatori, servizi esterni, manutenzione, chi programma le linee, chi gestisce l'edificio. Se la prestazione dipende da un loro comportamento, non puoi lasciarli fuori dal circuito.",
+  "punti": [
+   { "h": "Comunicare non è caricare un file", "d": "Molte organizzazioni pensano di aver comunicato perché hanno messo una procedura in un portale o fatto una riunione mesi prima. Il controllo operativo si alimenta di messaggi comprensibili, accessibili e coerenti col lavoro quotidiano. Se un manutentore esterno non sa che la regolazione a giri fissi è ammessa solo in emergenza, per lui il criterio di fatto non esiste." },
+   { "h": "Rendere praticabile ciò che si dice", "d": "In un trattamento superficiale, il criterio prevede portate legate al funzionamento delle vasche e sezioni ferme fuori produzione. Ma il turno avvia tutto a inizio giornata per evitare reclami sull'aria, perché nessuno ha spiegato i livelli minimi ammessi né reso visibile lo stato corretto sul supervisore. Risultato: procedura conforme in archivio, pratica energivora sul campo." },
+   { "h": "Cercare tracce di comprensione", "d": "Da auditor non ti fermi a chiedere se la comunicazione è avvenuta: intervisti operatori e manutentori con domande semplici. Quali parametri guardi a inizio turno? Quando puoi mettere in manuale questa utenza? Cosa fai se la temperatura sale oltre il limite? Ogni risposta ti dice se il criterio è stato trasferito davvero." },
+   { "h": "Anticipare l'obiezione operativa", "d": "In una linea di confezionamento si concorda l'arresto durante le attese lunghe, ma il turno serale non lo applica per timore di riavvii lenti. La comunicazione qui non è solo incompleta: non ha affrontato l'obiezione reale. Una comunicazione efficace anticipa le resistenze e chiarisce quando la regola si applica, chi decide le eccezioni, come si gestiscono — senza scaricare in basso decisioni che spettano al responsabile impianto." }
+  ]
+ },
+ {
+  "id": "50001_m06_s005",
+  "layout": "punti",
+  "kicker": "Controllo operativo · 8.1 · 4",
+  "titolo": "Attuare il controllo: esercizio e manutenzione insieme",
+  "intro": "Attuare non significa solo rispettare una procedura di esercizio. L'organizzazione deve far funzionare i processi in coerenza con i criteri, e questo comprende sia il modo in cui gli impianti operano sia come vengono mantenuti. La manutenzione qui non è un accessorio: è parte piena del controllo operativo. Se la tratti come un mondo separato, prima o poi la prestazione si stacca da quella attesa.",
+  "punti": [
+   { "h": "Il degrado diventa energia", "d": "Un gruppo frigorifero può avere una logica ottima, ma con scambiatori sporchi, carica scorretta, sonde che leggono male o ventilatori degradati il consumo specifico sale comunque. Lo stesso per bruciatori fuori taratura, reti d'aria piene di perdite, scaricatori di vapore guasti, giranti usurate, filtri intasati: il processo continua, ma non funziona più come dovrebbe rispetto all'energia." },
+   { "h": "Evento sporadico o deriva strutturale", "d": "In una cartiera il criterio dell'aria compressa (pressione contenuta, alternanza automatica, ricerca perdite) è corretto sul documento, ma i tecnici hanno alzato stabilmente la pressione per evitare chiamate e rimandano da mesi la campagna perdite. Un guasto ripristinato in fretta lascia il sistema sotto controllo; un workaround che diventa normalità svuota il criterio." },
+   { "h": "Manutenzione mirata, non sterminata", "d": "Non serve che sia infinita, serve che sia mirata ai fattori che alterano in modo rilevante il comportamento energetico: per la combustione taratura, pulizia, perdite, aria comburente; per una rete idronica bilanciamento, tenuta, isolamento, scambio; per un edificio serrande, sonde, valvole, filtri, logiche orarie. La domanda: se questa attività viene trascurata, l'energia devia in modo significativo?" },
+   { "h": "Finestre, priorità, responsabilità", "d": "La manutenzione energeticamente rilevante ha bisogno di spazio protetto. Se il sito programma tutto in funzione dell'urgenza produttiva del giorno, gli interventi che proteggono l'efficienza vengono continuamente spostati e appaiono minori, finché il consumo non sale abbastanza da diventare un problema economico. Attuare non è irrigidire il processo, ma renderlo affidabile e compatibile con le esigenze reali." }
+  ]
+ },
+ {
+  "id": "50001_m06_s006",
+  "layout": "punti",
+  "kicker": "Controllo operativo · 8.1 · 5",
+  "titolo": "Le informazioni documentate che danno fiducia",
+  "intro": "Quali tracce ti permettono di credere, con ragionevole sicurezza, che il processo sia stato svolto come previsto? La norma è sobria: raccogliere informazioni documentate nella misura necessaria. L'espressione evita due estremi — il vuoto (nessuna evidenza affidabile) e l'iperproduzione documentale (assorbe tempo ma non aumenta la padronanza).",
+  "punti": [
+   { "h": "La misura dipende dal rischio", "d": "Dipende da rischio energetico, complessità tecnica, grado di automazione e possibilità di verificare in altro modo. Se un parametro critico è registrato in continuo e storicizzato, forse non serve una check list manuale quotidiana; se una regolazione dipende da un controllo visivo periodico, una registrazione essenziale diventa decisiva. L'obiettivo: poter dire che una deviazione significativa non sarebbe passata inosservata." },
+   { "h": "Dal criterio all'evidenza", "d": "Parti da un criterio — «il compressore lavora entro una banda di pressione» — e chiedi quali segnali documentati lo dimostrano: una tendenza storica, un registro allarmi, un report di deviazioni, una nota di manutenzione che spiega il ripristino quando la banda non è rispettata. Questo percorso distingue la mera presenza documentale dalla credibilità del controllo." },
+   { "h": "Qualità, non quantità", "d": "La registrazione deve essere leggibile, tempestiva, coerente e collegabile al processo giusto. Un rapporto che dice solo «intervento eseguito» aiuta pochissimo; molto più utile una nota con causa, componente, parametro ripristinato ed eventuale impatto. Un allarme ripetuto e chiuso ogni volta senza analisi racconta una storia diversa da un allarme raro ma indagato bene." },
+   { "h": "Servono anche all'organizzazione", "d": "Le tracce scelte bene non servono solo a chi verifica: diventano materiale per capire dove il processo perde tenuta, dove la manutenzione arriva tardi, dove i criteri sono poco realistici. In una linea di essiccazione, lo storico delle partenze con una nota quando un avvio anticipato è stato necessario rende visibile la differenza tra eccezione governata e cattiva abitudine." }
+  ]
+ },
+ {
+  "id": "50001_m06_s007",
+  "layout": "cards",
+  "kicker": "Controllo operativo · 8.1 · 6",
+  "titolo": "Modifiche e attività esterne",
+  "intro": "In azienda quasi nulla resta uguale a lungo. Il controllo operativo deve includere le modifiche pianificate, riesaminare i cambiamenti involontari e mitigarne gli effetti negativi: molte derive nascono da cambiamenti introdotti senza rilettura delle conseguenze.",
+  "cards": [
+   { "h": "Modifiche pianificate", "d": "Spostare parte della produzione su un turno notturno è sensato sul piano commerciale, ma cambia orari di avviamento, profilo del freddo, illuminazione, sequenza dei lavaggi, presidio manutentivo. Controllare le modifiche significa chiedersi prima cosa aggiornare affinché la prestazione non si deteriori." },
+   { "h": "Cambiamenti involontari", "d": "I più insidiosi, spesso soluzioni temporanee: un sensore escluso per non fermare la linea, una valvola lasciata in manuale, un noleggio urgente meno efficiente. Se non vengono riesaminati e compensati, il sistema perde controllo in silenzio. Allena lo sguardo sulle eccezioni che diventano permanenti." },
+   { "h": "SEU affidati all'esterno", "d": "Anche gli SEU gestiti da terzi restano sotto controllo: l'esternalizzazione non li fa uscire dal perimetro energetico. Se un contractor conduce la centrale termica senza criteri chiari, il consumo devia anche con un contratto perfetto. Controlli non solo il contratto, ma la sostanza: istruzioni, livelli di servizio, registrazioni, escalation." },
+   { "h": "Il temporaneo che diventa stabile", "d": "In un impianto chimico un pompaggio guasto è sostituito da un'unità a noleggio: la produzione riparte, l'emergenza sembra risolta. Ma la pompa provvisoria lavora sempre ad alta velocità. Senza rivalutazione dell'effetto energetico e misure di contenimento, il temporaneo diventa una fonte stabile di scostamento." }
+  ]
+ },
+ {
+  "id": "50001_m06_s008",
+  "layout": "evidenza",
+  "kicker": "Progettazione · 8.2 · 1",
+  "eyebrow": "Il punto 8.2",
+  "titolo": "Decidere presto pesa per anni",
+  "testo": "Il punto 8.2 ti chiede di portare la prestazione energetica dentro le scelte con cui nascono o cambiano impianti, edifici, sistemi e processi che usano energia, soprattutto quando il loro effetto può farsi sentire in modo importante per tutta la durata prevista di esercizio. Il messaggio è semplice e fortissimo: se aspetti l'avviamento per pensare all'energia, hai già perso gran parte del margine. Le decisioni prese in progettazione vincolano per anni consumi, flessibilità, facilità di regolazione e costi di manutenzione. Un'azienda che rinnova la centrale di pompaggio guardando solo il prezzo d'acquisto può scegliere pompe sovradimensionate con regolazione semplificata; una che considera la prestazione lungo la vita attesa ragionerà su profilo reale dei carichi, variazione di velocità, perdite di carico del circuito, logica di sequenza tra macchine, misure disponibili, accessibilità per la manutenzione. Qui la parola chiave non è soltanto efficienza, è anche controllabilità: un impianto teoricamente efficiente ma difficile da regolare, misurare o mantenere degrada molto più di quanto prometta sulla carta. Per questo la norma mette vicine opportunità di miglioramento e controllo operativo: non basta scegliere una tecnologia che consumi meno in condizioni ideali, devi chiederti se potrà essere governata bene nella vita reale del sito. In verifica non cercherai solo calcoli o dichiarazioni commerciali, ma tracce del ragionamento: quali alternative sono state considerate, come è stato letto l'impatto energetico, se sono state previste condizioni che facilitano conduzione e manutenzione. Progettare bene significa evitare di costruire oggi il problema operativo di domani."
+ },
+ {
+  "id": "50001_m06_s009",
+  "layout": "cards",
+  "kicker": "Progettazione · 8.2 · 2",
+  "titolo": "Vita attesa: non conta solo quanto spendi oggi",
+  "intro": "Quando la norma parla di vita operativa attesa, ti invita a cambiare orizzonte: non quanto costa acquistare oggi, ma come quella scelta si comporterà lungo gli anni in servizio. La miopia temporale è una delle cause principali di decisioni energeticamente deboli. Nella pratica conviene leggere la progettazione con tre lenti insieme; se una manca, il risultato è fragile.",
+  "cards": [
+   { "h": "Il fabbisogno lungo il ciclo di vita", "d": "Per motori, pompe e compressori ad alto utilizzo, il costo dell'energia consumata nella vita utile supera di molte volte il prezzo d'acquisto: una differenza di rendimento apparentemente piccola, moltiplicata per anni, vale più dell'intero risparmio dell'offerta più economica. Chi valuta solo la spesa iniziale ottimizza la parte minore del costo totale — e conta anche la distribuzione: tubazioni, coibentazioni, punti di misura." },
+   { "h": "La controllabilità operativa", "d": "La vita attesa non riguarda solo i kWh in condizioni ideali, ma la capacità di restare efficiente con usura, cambi turno, prodotti diversi e stagioni. Domande utili: come viene regolata a carico parziale, quali grandezze puoi leggere, quanto è semplice accorgerti di una deriva. Un nuovo reparto con UTA performanti ma senza sonde affidabili, accesso ai filtri e fasce orarie esprime solo in parte il potenziale." },
+   { "h": "La mantenibilità e la flessibilità", "d": "Senza manutenzione accessibile e sensata anche un buon progetto perde qualità. E la vita operativa non è statica: un impianto attraversa revisioni, ampliamenti, aggiornamenti. Una progettazione lungimirante lascia spazio ad aggiungere misure, modificare logiche, sostituire componenti senza rifare tutto — anche questa flessibilità è prestazione energetica futura, perché consente al sito di migliorare invece di restare prigioniero delle scelte iniziali." }
+  ]
+ },
+ {
+  "id": "50001_m06_s010",
+  "layout": "split",
+  "kicker": "Progettazione · 8.2 · 3",
+  "titolo": "Dal ragionamento di progetto alle specifiche da comprare",
+  "lead": "Il punto più interessante della progettazione, spesso, non è l'idea tecnica in sé, ma la sua traduzione in decisioni vincolanti. La norma chiarisce che, quando ha senso, ciò che emerge dalla valutazione energetica deve entrare nelle specifiche tecniche, nella progettazione di dettaglio e nel modo in cui l'organizzazione acquista. L'analisi non può restare in una presentazione: deve diventare requisito tecnico, criterio di scelta, richiesta al fornitore, elemento reale dell'ordine.",
+  "punti": [
+   { "h": "Altrimenti si dissolve", "d": "Se acquistando un gruppo frigorifero emerge che contano resa a carico parziale, sonde affidabili, dialogo con la supervisione, pulizia agevole degli scambiatori e soglie stagionali, ma questi elementi restano in un confronto informale, il fornitore consegnerà una macchina formalmente idonea ma poco coerente col bisogno reale. Riversati nelle specifiche, diventano parte del progetto e dell'approvvigionamento." },
+   { "h": "Ricco di segnali in verifica", "d": "Puoi cercare capitolati, richieste di offerta, matrici di valutazione, verbali di riesame tecnico, note di calcolo, criteri di selezione del fornitore che mostrano come le considerazioni energetiche siano entrate nel processo decisionale. Non serve un dossier monumentale: serve coerenza tra analisi, specifica e scelta finale." },
+   { "h": "Tenere traccia delle attività di progetto", "d": "L'8.2 chiede di mantenere traccia documentata delle attività di progettazione collegate alla prestazione energetica. Non è burocrazia: serve a dimostrare che l'energia è stata considerata davvero e a facilitare il riesame futuro. Se tra un anno il risultato non arriva, quelle informazioni dicono se il problema nasce da una scelta progettuale, una modifica, una regolazione sbagliata o una gestione incoerente." },
+   { "h": "Cambia la natura del confronto", "d": "Quando le valutazioni energetiche non entrano nelle specifiche, chi compra confronta solo ciò che è facile vedere — prezzo, tempi, prestazioni minime. Quando entrano davvero, il confronto si avvicina al comportamento futuro dell'impianto, non alla sua apparenza iniziale. E questo porta naturalmente al tema successivo: come l'organizzazione compra senza perdere di vista la prestazione." }
+  ]
+ },
+ {
+  "id": "50001_m06_s011",
+  "layout": "split",
+  "kicker": "Approvvigionamento · 8.3 · 1",
+  "titolo": "Comprare bene significa anche consumare meglio",
+  "lead": "Nel sistema energia l'approvvigionamento non è un tema amministrativo secondario: è una leva tecnica e gestionale che può sostenere la prestazione energetica, oppure svuotarla lentamente. Quando l'acquisto riguarda beni, apparecchiature o prestazioni energivore che possono pesare in modo rilevante, l'8.3 chiede criteri di valutazione riferiti al comportamento lungo gli anni di utilizzo previsti.",
+  "punti": [
+   { "h": "Non solo oggi, non solo il prezzo", "d": "Non basta chiederti se una soluzione funziona oggi o costa meno all'ingresso: come si comporterà nel tempo, quanto consumerà, quanto resterà regolabile, quanto sarà compatibile coi criteri operativi, quanta manutenzione richiederà per restare vicina alla prestazione attesa. Correggere dopo l'avviamento costa molto più che scegliere bene prima." },
+   { "h": "Due mondi che devono parlarsi", "d": "Molte organizzazioni separano troppo il mondo tecnico da quello acquisti: l'ufficio energia ragiona su consumi e obiettivi, chi compra guarda prezzo, consegna e continuità. Se i due flussi non si parlano, si scelgono beni formalmente idonei ma energeticamente deboli, come un ventilatore rigido con assorbimento elevato a carico parziale." },
+   { "h": "L'energia come criterio che sposta le scelte", "d": "In verifica superi il piano puramente documentale: ti interessa se l'organizzazione ha reso l'energia un criterio vero, qualcosa che sposta l'esito. Buon segnale: acquisti in cui il prezzo non è l'unico fattore e la valutazione tecnica contiene elementi coerenti con la prestazione attesa. Segnale debole: una procedura che cita l'energia in modo generico, senza traccia di come entri nella selezione concreta." },
+   { "h": "Un anello del controllo operativo", "d": "Chi prepara le richieste di offerta sa quali acquisti pesano sull'energia? Chi approva conosce i criteri applicabili? Chi riceve verifica la coerenza con le specifiche? Non compri solo un oggetto o un servizio: compri un futuro comportamento energetico, che dovrà convivere con i tuoi processi, le impostazioni in campo, la manutenzione e gli obiettivi. La prestazione non può comparire alla fine, come nota accessoria." }
+  ]
+ },
+ {
+  "id": "50001_m06_s012",
+  "layout": "numeri",
+  "kicker": "Approvvigionamento · 8.3 · 2",
+  "titolo": "Criteri di acquisto: valutare lungo la vita attesa",
+  "intro": "La norma chiede di sapere in base a cosa confronterai le alternative, prima di ricevere le offerte. Senza criteri chiari, il confronto si riduce a prezzo, tempi e caratteristiche minime; con criteri ben costruiti, distingui davvero tra soluzioni che sembrano equivalenti ma non lo sono. Non complicare ogni acquisto: porta più profondità dove l'impatto può essere significativo. Tre tipi di criterio, e un errore da evitare.",
+  "numeri": [
+   { "n": "1", "h": "Prestazionali", "d": "Guardano al comportamento energetico atteso dell'oggetto o del servizio nel contesto operativo reale: profili di carico del sito, fermo macchina prevedibili, rendimento nel campo effettivo di funzionamento. Sostituendo due pompe, valutare il solo dato di portata le fa sembrare equivalenti; il rendimento nel campo reale fa emergere subito le differenze." },
+   { "n": "2", "h": "Di controllabilità", "d": "Verificano se la soluzione potrà essere regolata e integrata bene: possibilità di modulazione, interazione col sistema di controllo, leggibilità dei parametri, disponibilità di misure utili al monitoraggio. Spesso il punto debole non è la macchina scelta, ma la sua incapacità di restare efficiente in condizioni operative normali." },
+   { "n": "3", "h": "Di mantenibilità", "d": "Considerano quanto sarà semplice evitare derive con una manutenzione ordinaria ben fatta: accessibilità dei componenti critici, facilità di pulizia e taratura. Tutti e tre i tipi possono essere pertinenti; se ne manca uno, il quadro resta incompleto e la scelta rischia di scivolare in esercizio." },
+   { "n": "4", "h": "L'errore da riconoscere", "d": "Confrontare dati dichiarati non omogenei, presi in condizioni diverse o non pertinenti al profilo reale del sito: sembra di avere un criterio, ma si costruisce solo un'apparenza di razionalità. Un approccio robusto chiede dati comparabili e domande coerenti con l'uso previsto. Qui stai scegliendo prima, non controllando dopo." }
+  ]
+ },
+ {
+  "id": "50001_m06_s013",
+  "layout": "punti",
+  "kicker": "Approvvigionamento · 8.3 · 3",
+  "titolo": "Informare i fornitori: l'energia nella conversazione d'acquisto",
+  "intro": "Un criterio interno conta davvero solo quando raggiunge chi deve rispondere con un'offerta, un servizio o una soluzione. Quando acquisti beni, apparecchiature o servizi energivori che incidono sui tuoi SEU, la norma chiede di rendere esplicito ai fornitori che la prestazione energetica pesa tra gli elementi di decisione. Richiesta pratica, ma spesso trascurata.",
+  "punti": [
+   { "h": "Se non è visibile, non guida", "d": "Molte organizzazioni ragionano internamente di efficienza e poi inviano richieste d'offerta dove la priorità non appare, o appare ambigua. Il fornitore risponde su ciò che percepisce come importante — costo, tempi, caratteristiche minime. Informare non significa formule solenni: rendere chiaro che la prestazione incide, così dati, soluzioni e modalità di servizio dovranno essere coerenti." },
+   { "h": "Cambia il dialogo sui servizi", "d": "Un servizio esterno di conduzione della centrale termica: se il contratto parla solo di continuità e tempi di intervento, il fornitore si concentra su disponibilità e guasti. Se l'organizzazione dichiara che la prestazione è un fattore di scelta, diventano rilevanti la qualità delle regolazioni, la gestione degli orari, il controllo dei parametri, l'uso dei dati storici, la prevenzione degli sprechi." },
+   { "h": "Prove che il messaggio sia chiaro", "d": "In verifica non ti fermi a chiedere se il fornitore è stato genericamente sensibilizzato: cerchi una richiesta di offerta che richiama esplicitamente il peso dell'energia, una griglia che le assegna spazio, verbali in cui il tema è discusso. E chiedi al buyer come lo spiega ai fornitori, al manutentore esterno quali parametri sa di dover rispettare." },
+   { "h": "Informare non basta se poi non conta", "d": "Un fornitore può ricevere richieste energetiche ben scritte e scoprire che la scelta cade comunque sulla proposta più economica, senza analisi del comportamento nel tempo: la comunicazione è formale, non credibile, e i fornitori imparano in fretta cosa conta davvero. Quando invece l'energia entra apertamente, tendono a proporre soluzioni più aderenti al contesto e a segnalare aspetti non considerati." }
+  ]
+ },
+ {
+  "id": "50001_m06_s014",
+  "layout": "split",
+  "kicker": "Approvvigionamento · 8.3 · 4",
+  "titolo": "Specifiche per attrezzature e servizi: chiedere bene",
+  "lead": "Dire che l'energia conta è importante, ma spesso non basta. L'organizzazione deve anche definire e comunicare specifiche che aiutino a garantire il comportamento energetico atteso di ciò che acquista, attrezzature o servizi. Una specifica ben costruita evita equivoci, rende confrontabili le offerte e protegge da acquisti che sembrano corretti ma si rivelano deboli in esercizio. È il ponte tra progettazione e approvvigionamento.",
+  "punti": [
+   { "h": "Dalla portata al comportamento reale", "d": "Se la richiesta per un gruppo di ventilazione dice solo «garantire una certa portata», il fornitore può scegliere soluzioni poco efficienti nel campo reale. Se la specifica include comportamento nelle diverse condizioni, regolazione modulante, compatibilità con la supervisione, accessibilità ai filtri, leggibilità dei parametri e requisiti di manutenzione, il livello della proposta cambia." },
+   { "h": "Vale anche per i servizi", "d": "In un contratto di gestione impianti, una descrizione vaga non sostiene la prestazione. Più utili richieste mirate: controlli periodici su parametri chiave, gestione degli orari, verifica delle sonde, registrazione e analisi degli allarmi, manutenzione su elementi che incidono sull'efficienza, escalation quando i consumi si discostano. Non compri ore di presenza, ma un contributo operativo coerente con gli obiettivi." },
+   { "h": "La specifica è sempre situata", "d": "Una trappola: copiare specifiche standard senza adattarle al sito. Una richiesta può sembrare completa e restare poco utile se ignora il profilo reale di utilizzo, il sistema esistente, i criteri operativi in vigore e le condizioni di manutenzione. Una buona specifica parla della soluzione, ma anche dell'ambiente in cui dovrà vivere." },
+   { "h": "Da riparazione a controllo operativo", "d": "Affidando la manutenzione dei gruppi frigoriferi, un capitolato che chiede solo visite periodiche e reperibilità dà un servizio corretto ma poco incisivo. Se chiede anche controllo del surriscaldamento, pulizia degli scambiatori, verifica sonde, analisi allarmi, regolazioni stagionali e report sui fattori di deriva, il servizio diventa uno strumento di controllo operativo, non solo di riparazione." }
+  ]
+ },
+ {
+  "id": "50001_m06_s015",
+  "layout": "punti",
+  "kicker": "Approvvigionamento · 8.3 · 5",
+  "titolo": "Acquisto di energia: non soltanto prezzo",
+  "intro": "L'8.3 richiama esplicitamente anche l'acquisto di energia: la prestazione non dipende solo da quanto consumi, ma da come l'energia viene acquistata, resa disponibile, misurata e gestita. La norma non impone una strategia commerciale unica; chiede di definire e comunicare, dove ha senso, specifiche utili anche per l'acquisto di energia — la chiave è «dove applicabile».",
+  "punti": [
+   { "h": "Chiarire cosa è rilevante", "d": "L'organizzazione dovrebbe chiarire quali caratteristiche della fornitura sono rilevanti per il controllo operativo: un sito con grandi carichi elettrici modulabili ha interesse ai profili di prelievo, alla qualità e tempestività dei dati di misura, a modalità coerenti con la gestione dei picchi; chi acquista gas per processi termici ha bisogno di dati affidabili per collegare consumi, produzione e prestazione." },
+   { "h": "Una condizione, non una voce passiva", "d": "L'acquisto di energia può sostenere o ostacolare la capacità di capire, governare e migliorare i consumi. Un centro logistico refrigerato con forti assorbimenti legati a sbrinamenti e clima, se acquista energia senza curare la leggibilità dei dati e l'allineamento del contratto alle logiche di utilizzo, farà più fatica a leggere gli scostamenti e a gestire i periodi critici." },
+   { "h": "Equilibrio in verifica", "d": "Non trasformare il requisito in un giudizio sul talento negoziale dell'ufficio acquisti, né pretendere modelli avanzati dove non sarebbero proporzionati. Verifica se l'organizzazione ha riflettuto su quali aspetti della fornitura contano: la disponibilità dei dati è coerente col monitoraggio, le condizioni contrattuali supportano la gestione dei carichi rilevanti, le richieste al fornitore sono state rese esplicite." },
+   { "h": "Deve dialogare col sistema", "d": "Se i dati arrivano tardi, aggregati male o poco distintivi, il sistema fatica a imparare; se arrivano leggibili e coerenti coi bisogni del sito, diventano uno strumento operativo. L'approvvigionamento di energia, quando rilevante, deve dialogare col sistema di gestione, non vivere in un angolo separato: la maturità si vede nella capacità di collegare acquisti, dati, conduzione e prestazione reale." }
+  ]
+ },
+ {
+  "id": "50001_m06_s016",
+  "layout": "cards",
+  "kicker": "Approvvigionamento · 8.3 · 6",
+  "titolo": "Dall'ordine al risultato: fornitori e servizi esterni",
+  "intro": "L'approvvigionamento non è solo il momento in cui scegli: è quando decidi quali condizioni esterne entreranno nel sistema per anni. Si collega a progettazione (cosa vuoi ottenere) e controllo operativo (se ciò che hai acquistato si comporta come previsto). Se uno dei tre anelli è debole, l'insieme perde tenuta.",
+  "cards": [
+   { "h": "Il contratto richiama ciò che conta", "d": "Un service con criteri sensati definiti dal sito, ma un contratto senza responsabilità sui parametri energetici né aspettative sulle derive, lascia l'organizzazione a lamentare consumi senza strumenti per pretendere coerenza. Se invece richiama ciò che conta e rende leggibili le attese, il fornitore entra con un ruolo chiaro." },
+   { "h": "Unire i puntini in verifica", "d": "Non verificare gli acquisti come processo isolato: un servizio acquistato contribuisce a mantenere sotto controllo ciò che è definito importante? Un'attrezzatura «efficiente» ha anche le caratteristiche per essere regolata, monitorata e mantenuta? I dati del venditore di energia aiutano a leggere la prestazione reale?" },
+   { "h": "Alzare il livello della filiera", "d": "Le organizzazioni più solide non usano l'approvvigionamento solo per difendersi: rendendo esplicito che l'energia è un criterio, spingono i fornitori a portare soluzioni più trasparenti e coerenti col funzionamento reale, estendendo l'effetto del sistema oltre i confini interni." },
+   { "h": "Riesaminare nel tempo, con conseguenze", "d": "Le persone e le priorità del fornitore cambiano negli anni. Le organizzazioni mature riesaminano come opera rispetto alle attese, e l'esito produce conseguenze: richiamo, piano di rientro, revisione del rapporto. Se la valutazione resta un rito senza effetti, il criterio energetico vale solo in gara e poi si spegne." }
+  ]
+ },
+ {
+  "id": "50001_m06_s017",
+  "layout": "flusso",
+  "kicker": "In verifica · 1",
+  "titolo": "Seguire il filo dal criterio scritto al campo",
+  "intro": "Come capisci se il controllo operativo esiste davvero, e non solo nei documenti? Un metodo utile segue un filo logico in quattro passaggi. Ti protegge da due errori: fermarti al documento (scambiare la procedura per il controllo) e andare in campo senza traccia (giudicare impressioni isolate invece di confrontare evidenze con criteri).",
+  "passi": [
+   { "h": "Individua il criterio dichiarato", "d": "Parti da ciò che l'organizzazione ha deciso di presidiare. Per la rete aria compressa: la pressione resta entro una banda stabilita e le perdite sono gestite con priorità. Il criterio scritto esiste — è il punto di partenza, non l'arrivo." },
+   { "h": "Cerca dove è stato tradotto", "d": "Dove il criterio diventa istruzioni, parametri, logiche di regolazione o responsabilità operative: una soglia impostata sul supervisore, allarmi coerenti, il personale che sa chi interviene quando la pressione sale, una registrazione delle campagne perdite o delle anomalie corrette." },
+   { "h": "Osserva la realtà tecnica", "d": "Macchina, impianto, supervisione, registrazioni e pratiche quotidiane. La pressione reale è compatibile? Gli allarmi sono attivi? I tecnici confermano la logica? Le registrazioni mostrano attenzione al problema?" },
+   { "h": "Confronta con l'atteso", "d": "Solo ora puoi dire se il controllo appare credibile. Se trovi una banda teorica mai impostata, allarmi disattivati e operatori che lavorano sempre con margini elevati «per stare tranquilli», c'è una distanza significativa tra criterio e pratica. Scegli pochi snodi rilevanti — gli SEU principali — e segui poche catene fino in campo: più tengono, più il sistema è maturo." }
+  ]
+ },
+ {
+  "id": "50001_m06_s018",
+  "layout": "punti",
+  "kicker": "In verifica · 2",
+  "titolo": "Dal documento al bordo macchina: osservazioni e domande",
+  "intro": "La verifica dell'operativo non si risolve con una sola fonte: metti insieme documenti, dati storici, schermate impianto, osservazioni in campo e conversazioni. È l'incrocio a darti fiducia — se tutte raccontano la stessa storia, il controllo è probabilmente reale; se divergono, c'è qualcosa da capire.",
+  "punti": [
+   { "h": "Domande semplici e concrete", "d": "Non «conoscete la procedura?», ma: quali parametri guardi a inizio turno, quando intervieni su questa regolazione, cosa fai se il valore esce dal limite, chi decide il ritorno alla condizione normale, quali segnali ti fanno pensare che il sistema consumi troppo. Costringono la risposta a uscire dalla teoria e a toccare la pratica." },
+   { "h": "Osservare cercando indizi coerenti", "d": "Guardare un impianto non è fare il tecnico di dettaglio su tutto: è cercare indizi coerenti col criterio. Se una centrale frigorifera «modula in funzione del carico», cerchi segnali di modulazione; se il fermo fuori orario è importante, guardi orologi, calendari, storico partenze, bypass manuali; se la manutenzione previene derive, cerchi pulizia, accessibilità, stato dei componenti chiave." },
+   { "h": "Documenti: pertinenza, non quantità", "d": "Un trend storico può valere più di dieci moduli firmati; un allarme ripetuto senza azione correttiva dice più di una procedura impeccabile; un ordine di lavoro che spiega guasto e parametro ripristinato vale più di un rapporto generico. Il tuo compito è trasformare frammenti sparsi in una storia coerente, con attenzione ma anche misura — non perfezione assoluta, robustezza sugli aspetti che contano." },
+   { "h": "Due mosse pratiche", "d": "Davanti a una buona dichiarazione, inseguine subito la forma concreta: il parametro, la schermata, la registrazione, il comportamento che la rende visibile. Davanti a una debolezza, risali alla condizione di sistema che l'ha resa possibile — una comunicazione incompleta, una taratura mancata, una responsabilità poco chiara. Così la verifica smette di essere un inventario di dettagli e diventa lettura del meccanismo." }
+  ]
+ },
+ {
+  "id": "50001_m06_s019",
+  "layout": "confronto",
+  "kicker": "In verifica · 3",
+  "titolo": "Caso pratico: aria compressa, dove il criterio si vede subito",
+  "intro": "La rete aria compressa rende visibili molte connessioni tra criterio scritto, impostazione tecnica, comportamento e manutenzione. È uno dei vettori più costosi: della potenza elettrica assorbita solo una piccola parte arriva al punto d'uso come energia utile, il resto si disperde in calore — ogni uso evitabile pesa più di quanto sembri. Stesso scenario, due esiti opposti.",
+  "a": {
+   "h": "Controllo credibile",
+   "sub": "Il criterio arriva al campo",
+   "punti": [
+    { "d": "Soglie di pressione coerenti col documento, alternanza dei compressori attiva, allarmi gestiti, interventi recenti sulle perdite, personale allineato. La pressione reale resta vicina a quella dichiarata, senza margini eccessivi." },
+    { "d": "Sugli usi impropri, segni concreti: ugelli efficienti dove il soffiaggio è necessario, riduttori di pressione locali sulle utenze che non richiedono la pressione di rete, qualche uso storico eliminato e raccontato come esempio. L'organizzazione li ha mappati e ha valutato alternative per i casi energivori." }
+   ]
+  },
+  "b": {
+   "h": "Distanza tra scritto e pratica",
+   "sub": "Il criterio è stato svuotato",
+   "punti": [
+    { "d": "Documento corretto, ma pressione impostata più alta «per evitare lamentele», alternanza disattivata dopo un guasto e mai ripristinata, tecnici che compensano con regolazioni manuali, perdite accettate come fisiologiche e campagne di ricerca assenti o vecchie." },
+    { "d": "L'aria è trattata come gratuita: nessuno ha mai quantificato nulla, pistole di soffiaggio per pulire postazioni, getti liberi per raffreddare, lance aperte per allontanare sfridi. Il problema non è solo tecnico: tocca governo delle modifiche, comunicazione dei criteri, priorità della manutenzione e, talvolta, l'approvvigionamento." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m06_s020",
+  "layout": "split",
+  "kicker": "In verifica · 4",
+  "titolo": "Caso pratico: edificio e centrale termica, la deriva silenziosa",
+  "lead": "Se l'aria compressa mostra problemi evidenti, gli edifici insegnano un'altra lezione: la deriva è spesso silenziosa. Nessuno sente un soffio, nessuna macchina si ferma, il comfort resta accettabile, eppure il consumo cresce lentamente fino a diventare normale. Serve uno sguardo disciplinato su un complesso con centrale termica, gruppi frigoriferi e unità di trattamento aria.",
+  "punti": [
+   { "h": "Partire dal supervisore", "d": "Controlli calendari, fasce orarie, settaggi stagionali, storico allarmi, comandi manuali attivi. Le fasce sono corrette nei documenti, ma il supervisore mostra partenze anticipate e spegnimenti tardivi introdotti mesi prima per evitare reclami, oppure zone in forzatura manuale permanente. Già questo dice che il controllo è stato indebolito." },
+   { "h": "Le persone e il campo", "d": "Se alla richiesta di comfort la risposta tipica è «alziamo un po' tutto per stare tranquilli», c'è un meccanismo che compensa il disagio locale con spreco diffuso. E in campo: filtri, serrande, valvole, sonde. Sonde coperte, mal posizionate o mai verificate rendono debole il parametro reale che guida il sistema, per quanto buono sia il criterio teorico." },
+   { "h": "Eccezione governata o degrado normalizzato", "d": "Una sala riunioni usata eccezionalmente fuori orario giustifica una deroga; un intero piano climatizzato ogni sera per abitudine mostra un controllo che non tiene. Un filtro sporco il giorno prima dell'intervento programmato non è come filtri costantemente trascurati con registrazioni vaghe. Proporzionare il giudizio evita sia il formalismo sia l'impressionismo." },
+   { "h": "Il momento e il confronto coi consumi", "d": "Un impianto racconta storie diverse d'estate, d'inverno e nelle mezze stagioni: se la visita cade in carico moderato, guarda gli storici e verifica se le logiche stagionali sono state commutate alle date previste. E confronta consumi e occupazione: un consumo notturno che resta alto in un edificio dichiarato spento fuori orario contraddice il criterio più di qualunque colloquio." }
+  ]
+ },
+ {
+  "id": "50001_m06_s021",
+  "layout": "numeri",
+  "kicker": "In verifica · 5",
+  "titolo": "Deviazioni, deroghe e criteri da aggiornare",
+  "intro": "Non ogni scostamento racconta la stessa storia. La qualità del tuo giudizio dipende dal distinguere tre casi senza confonderli, riportando sempre ciò che osservi al peso energetico reale del processo: una forzatura su un SEU principale conta più di un valore diverso in un'utenza marginale.",
+  "numeri": [
+   { "n": "1", "h": "Deroga governata", "d": "Un parametro esce dal valore atteso per poche ore, o la temperatura di mandata è aumentata durante un'ondata di freddo: se il cambiamento è riconosciuto, autorizzato, limitato nel tempo e poi riportato alla condizione normale, il controllo resta credibile. Quattro elementi la rendono buona: chi ha deciso, per quale motivo, con quale durata prevista, con quali verifiche o mitigazioni." },
+   { "n": "2", "h": "Deriva strutturale", "d": "Un bypass attivo da mesi, un set point alzato stabilmente senza rilettura tecnica: il criterio scritto dice una cosa, il processo ne fa un'altra. In estate un gruppo frigorifero viene spinto più in basso per compensare un problema distributivo lontano; nessuno risolve la causa, l'azione non si chiude e il nuovo valore resta per la stagione. Una misura tampone è diventata modalità ordinaria." },
+   { "n": "3", "h": "Criterio rimasto vecchio", "d": "L'organizzazione ha cambiato uso di un'area, orari di occupazione o profilo produttivo, ma non ha aggiornato i criteri operativi: il campo sembra fuori controllo, in realtà è la regola a non rappresentare più il contesto. Un sistema maturo non pretende che nulla cambi mai: distingue ciò che è temporaneo, ciò che richiede correzione e ciò che richiede aggiornamento dei criteri." }
+  ]
+ },
+ {
+  "id": "50001_m06_s022",
+  "layout": "flusso",
+  "kicker": "In verifica · 6",
+  "titolo": "Dallo scostamento alla causa reale",
+  "intro": "Quando trovi un parametro diverso da quello atteso, fermarti al sintomo è un errore. Il valore della verifica cresce quando risali alla causa che mantiene lo scostamento: il parametro ti mostra dove guardare, la causa ti dice cosa sta cedendo. Non fermarti alla prima spiegazione comoda — un caso di freddo industriale mostra la discesa.",
+  "passi": [
+   { "h": "Il sintomo", "d": "L'organizzazione dichiara un criterio sulla temperatura di evaporazione, ma trovi valori più spinti verso il basso. Facile da vedere; da solo, non spiega nulla." },
+   { "h": "La prima risposta", "d": "«Altrimenti una cella critica non tiene la temperatura.» Se ti fermassi qui, vedresti solo un tecnico prudente. Continui: perché quella cella è critica?" },
+   { "h": "La causa combinata", "d": "Le guarnizioni delle porte sono usurate, i tempi di apertura si sono allungati, il traffico interno è cambiato. Abbassare il set point ha nascosto una combinazione di degrado manutentivo e cambiamento operativo — non un tecnico prudente, ma un sistema che compensa inefficienze con più consumo." },
+   { "h": "Anche progettazione e acquisto", "d": "Un ventilatore sempre in alto non perché il criterio sia sbagliato, ma perché la selezione iniziale non era coerente col profilo reale; una pompa che oscilla perché la logica di regolazione non si adatta alla variabilità. Progettazione, approvvigionamento, controllo e manutenzione non sono compartimenti, ma cause possibili dello stesso risultato. Spingiti abbastanza da capire se la risposta è superficiale o sostanziale, senza trasformare la visita in un'indagine infinita." }
+  ]
+ },
+ {
+  "id": "50001_m06_s023",
+  "layout": "numeri",
+  "kicker": "In verifica · 7",
+  "titolo": "Terzisti e servizi esterni: il criterio deve arrivare anche lì",
+  "intro": "Il controllo operativo viene messo alla prova proprio dove la distanza tra chi decide e chi esegue è maggiore. Se un SEU è gestito da un manutentore esterno o da un service, la domanda non è solo cosa prevede il contratto, ma se i criteri sono arrivati fino a quelle persone, se sono compresi, applicabili e tradotti in parametri. Una catena in quattro anelli: se uno manca, il controllo si indebolisce.",
+  "numeri": [
+   { "n": "1", "h": "Quali aspettative sono state affidate", "d": "Cerchi quali aspettative energetiche l'organizzazione ha affidato al terzo. In un grande edificio con climatizzazione esterna: orari, temperature di riferimento, gestione delle deroghe, priorità di manutenzione. Sul piano formale sembra tutto sotto controllo." },
+   { "n": "2", "h": "Come sono state comunicate", "d": "Verifichi come le aspettative sono state comunicate. Parlando col tecnico del service scopri che le richieste degli utenti vengono gestite alzando o abbassando set point generali, perché è la soluzione più rapida, e che alcune forzature manuali restano attive per settimane: il criterio esiste ma non è governato nella pratica esterna." },
+   { "n": "3", "h": "Gli strumenti per applicarle", "d": "Osservi se il terzo dispone di accessi, informazioni, limiti di intervento, escalation. Autonomia tecnica non è libertà non governata: un fornitore esperto propone soluzioni, ma non dovrebbe modificare stabilmente parametri energeticamente rilevanti senza perimetro chiaro, tracciabilità e riesame delle conseguenze." },
+   { "n": "4", "h": "Come l'organizzazione sorveglia", "d": "Controlli come il committente sorveglia ciò che il terzo fa davvero. Un segnale semplice: chiedi al terzo quali parametri considera critici per la prestazione del sito. Se la risposta è precisa e coerente coi criteri, buon indizio; se si limita a «tenere tutto acceso, non fermare nulla, intervenire quando chiamano», la logica energetica è debole. L'esterno non esce mai dal perimetro quando incide sugli usi rilevanti." }
+  ]
+ },
+ {
+  "id": "50001_m06_s024",
+  "layout": "tabella",
+  "kicker": "In verifica · 8",
+  "titolo": "La catena di evidenza che rende credibile il controllo",
+  "intro": "Una sola regola pratica: non fidarti mai di una sola traccia. La prova migliore nasce quando quattro elementi si sostengono a vicenda; quando uno manca, il controllo perde consistenza. La catena ti protegge da due estremi — l'impressionismo (un colloquio brillante, un impianto pulito) e il formalismo (una procedura ben scritta e qualche firma). Su un forno di processo, uno degli SEU principali:",
+  "cols": ["Anello", "Che cos'è", "Dove lo trovi (esempio forno)"],
+  "righe": [
+   ["Criterio", "Ciò che l'organizzazione ha deciso di presidiare", "Il preriscaldo inizia solo a ridosso dell'avvio; nei cambi programma la temperatura segue profili definiti"],
+   ["Parametro", "La traduzione in valore, logica, allarme, condizione osservabile", "Orari di partenza e profili impostati nel controllo, allarmi per anticipo o permanenza inutile ad alta temperatura"],
+   ["Registrazione", "La traccia di come il processo è seguito o corretto", "Storici del forno, report di turno, segnalazioni quando il preriscaldo parte troppo presto"],
+   ["Persona", "Chi applica, conosce e spiega in modo coerente", "Il capoturno spiega perché il profilo è quello, quando può derogare, chi autorizza una variazione"]
+  ]
+ },
+ {
+  "id": "50001_m06_s025",
+  "layout": "confronto",
+  "kicker": "In verifica · 9",
+  "titolo": "Segnali forti e segnali deboli della robustezza operativa",
+  "intro": "Un sistema reale mostra quasi sempre luci e ombre: il tuo compito non è cercare la perfezione, ma capire se il controllo è abbastanza robusto da mantenere la prestazione vicina all'attesa anche quando il contesto cambia, le persone si alternano o compare un'anomalia. Nessun indizio, preso da solo, decide il giudizio; ma quando si sommano, raccontano la struttura. E la robustezza non coincide con la complessità: un piccolo sito con pochi strumenti ben allineati può governare meglio di un grande sito pieno di software.",
+  "a": {
+   "h": "Segnali forti",
+   "sub": "Coerenza stabile",
+   "punti": [
+    { "d": "Criteri chiari sui principali SEU, parametri impostati coerenti, personale che sa spiegare cosa controlla e perché, manutenzione mirata ai punti che contano, registrazioni essenziali ma utili, deviazioni riconosciute e trattate senza nasconderle." },
+    { "d": "Soprattutto, la reazione agli scostamenti è visibile: il sistema mostra come si accorge di un problema, chi interviene, come decide la correzione, come evita che la deviazione si normalizzi. Anche con qualche problema aperto, l'organizzazione appare capace di governarlo." }
+   ]
+  },
+  "b": {
+   "h": "Segnali deboli",
+   "sub": "Dipendenza dalle circostanze",
+   "punti": [
+    { "d": "Criteri vaghi o obsoleti, regolazioni modificate senza traccia, allarmi disattivati, bypass lasciati attivi, service esterni poco allineati, manutenzione descritta in modo generico, persone che rispondono in modo molto diverso sullo stesso tema." },
+    { "d": "Robustezza parziale: buoni documenti sui gruppi frigoriferi, ma sonde non verificate da tempo, un circuito in manuale dopo un guasto, registrazioni che non spiegano gli effetti delle tarature, un service che ragiona solo per continuità di marcia. Regge in condizioni favorevoli e cede al primo cambiamento importante." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m06_s026",
+  "layout": "timeline",
+  "kicker": "Percorso completo",
+  "titolo": "Dalla scelta tecnica al risultato osservabile",
+  "intro": "È nelle storie complete che il sistema si vede davvero. Un'azienda alimentare rinnova l'impianto di refrigerazione di processo: segui la catena dal bisogno iniziale alla prestazione osservata. Il messaggio più importante del modulo: ciò che vedi a bordo macchina è spesso il risultato finale di decisioni molto precedenti.",
+  "tappe": [
+   { "t": "01", "h": "Il bisogno e la progettazione", "d": "I vecchi gruppi sono instabili e consumano troppo. La progettazione non guarda solo alla potenza installata, ma al profilo reale dei carichi, alla vita attesa, alla regolazione a carico parziale, alla pulizia degli scambiatori, alla leggibilità dei parametri, all'accessibilità per la manutenzione." },
+   { "t": "02", "h": "Le specifiche di acquisto", "d": "Le considerazioni entrano nelle specifiche: il fornitore è informato che la prestazione pesa nella valutazione; le richieste includono comportamento ai carichi tipici, integrazione con la supervisione, qualità delle sonde, logiche di allarme, report. L'approvvigionamento compra condizioni di governabilità futura, non solo una macchina." },
+   { "t": "03", "h": "Il controllo operativo", "d": "Installato l'impianto, l'organizzazione definisce criteri chiari — temperature obiettivo, logiche stagionali, sbrinamento, limiti alle forzature, verifiche sonde, frequenze di manutenzione — e li comunica a tecnici interni, service esterno e responsabili di reparto." },
+   { "t": "04", "h": "La verifica di un filo completo", "d": "Segui un solo criterio (la temperatura dell'acqua refrigerata segue una banda stagionale): trovi il parametro nel supervisore con soglie e allarmi, variazioni manuali tracciate; le registrazioni mostrano trend, pulizia scambiatori, note su due deviazioni estive e azioni; le persone spiegano la logica; in campo scambiatori accessibili, nessun bypass permanente. Il sistema appare coerente." },
+   { "t": "05", "h": "Cambia un solo anello", "d": "Se le specifiche erano vaghe e il fornitore ha installato sonde poco affidabili, i parametri diventano instabili, i tecnici compensano abbassando i set point, la manutenzione corregge effetti e non cause. Stesso impianto, storia completamente diversa: leggere bene l'operativo significa leggere l'intera catena che ha prodotto quell'assetto." }
+  ]
+ },
+ {
+  "id": "50001_m06_s027",
+  "layout": "numeri",
+  "kicker": "Sintesi · Modulo 6",
+  "titolo": "I principi da portare con te",
+  "intro": "Cinque principi pratici chiudono il modulo. Un esempio finale li tiene insieme: se un sito dichiara di voler contenere i consumi della centrale termica, non ti accontenti della procedura — cerchi il set point reale, guardi chi lo modifica, verifichi gli storici, osservi la manutenzione, capisci come sono gestite le deroghe, ti chiedi se scelta tecnica iniziale e service esterno sostengono davvero l'obiettivo.",
+  "numeri": [
+   { "n": "1", "h": "Scelte operative leggibili", "d": "La prestazione energetica non si difende con intenzioni generali, ma con criteri operativi che incidono davvero sul modo in cui impianti, attrezzature e processi lavorano ogni giorno. Se restano frasi astratte, il sistema parla bene ma governa poco." },
+   { "n": "2", "h": "La manutenzione non è separata", "d": "È una leva diretta della prestazione: ogni sonda non verificata, perdita tollerata, scambiatore sporco, bypass attivo trasforma un buon criterio in un risultato debole. In verifica, tieni sempre insieme esercizio e manutenzione." },
+   { "n": "3", "h": "La progettazione pesa per anni", "d": "Se non consideri vita operativa attesa, controllabilità e mantenibilità, rischi di comprare o costruire problemi ben confezionati. Una soluzione efficiente solo sulla carta perde valore appena entra nella vita reale del sito." },
+   { "n": "4", "h": "Comprare bene, consumare meglio", "d": "Prodotti, attrezzature, servizi ed energia non entrano come elementi neutri, ma come condizioni che sostengono o compromettono la prestazione. Informa i fornitori, costruisci specifiche pertinenti, valuta lungo la vita attesa, non solo sul prezzo iniziale." },
+   { "n": "5", "h": "Mai una sola traccia", "d": "Segui sempre la catena che unisce criterio, parametro, registrazione e persona. Quando i quattro si confermano, il controllo è credibile; quando si contraddicono o uno manca, il sistema merita un esame più attento. Un sistema solido non elimina ogni eccezione: le rende riconoscibili, temporanee, valutate e governate." }
+  ]
+ },
+ {
+  "id": "50001_m06_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 6",
+  "modNum": "6",
+  "titolo": "Dal governo delle condizioni al comportamento misurato",
+  "punti": [
+   { "h": "La traiettoria costruita", "d": "Sei partito dal controllo dei processi collegati agli usi più rilevanti: i criteri operativi evitano scostamenti significativi solo quando sono comunicati alle persone giuste, tradotti in parametri osservabili e sostenuti da una manutenzione coerente. Poi la progettazione, dove molte prestazioni future si decidono prima dell'avviamento, e l'approvvigionamento, dove comprare significa già influenzare il comportamento energetico di domani." },
+   { "h": "Il cuore della lettura professionale", "d": "Seguire il filo dal criterio scritto al parametro impostato a bordo macchina, fino alla registrazione e alla persona che opera. Questa capacità distingue un sistema vivo, che governa scostamenti e cambiamenti, da un sistema apparente, che accumula buone intenzioni ma lascia il campo andare per inerzia. Ogni valore che osservi su una macchina racconta una storia: una buona progettazione e criteri chiari, oppure decisioni non trasferite e deroghe diventate abitudine." },
+   { "h": "La consegna per il checkpoint", "d": "Le domande ti chiederanno di riconoscere collegamenti, non di ripetere formule: le differenze tra criterio e parametro, tra deviazione temporanea e deriva strutturale, tra scelta tecnica iniziale e risultato operativo finale. Quando entri in un sito, chiediti sempre dove finisce la decisione scritta e dove comincia la realtà tecnica: se impari a seguire quel confine, vedrai molto meglio sia le conformità sia le debolezze, e saprai spiegare perché contano." }
+  ],
+  "prossimo": {
+   "modulo": "7",
+   "titolo": "La prestazione energetica in pratica: dal governo delle condizioni al comportamento misurato",
+   "testo": "Porterai questa lettura ancora più vicino ai risultati concreti: come le scelte operative, progettuali e di approvvigionamento si riflettono nella prestazione osservata, negli indicatori e nel miglioramento reale. Passerai dal governo delle condizioni al comportamento misurato del sistema."
+  }
+ }
+]
