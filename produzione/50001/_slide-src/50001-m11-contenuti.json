@@ -1,0 +1,376 @@
+[
+ {
+  "id": "50001_m11_s001",
+  "layout": "apertura",
+  "corsoLabel": "ISO 50001 — Sistemi di gestione dell'energia",
+  "kicker": "Modulo 11",
+  "eyebrow": "Il giudizio incontra impianti, persone e numeri reali",
+  "titolo": "La conduzione della verifica sul campo",
+  "testo": "Entri nella parte più concreta della conduzione, dove il giudizio professionale incontra impianti, persone e numeri reali. Fin qui hai costruito il quadro logico della verifica; adesso lo applichi in movimento, dentro un sopralluogo che deve essere ordinato, credibile e utile. La norma insiste su un principio semplice: servono dati e fatti, raccolti e valutati in modo sistematico. Non basta leggere procedure o ascoltare spiegazioni convincenti — devi vedere come l'energia viene usata davvero, come viene misurata, come viene controllata, e come le informazioni tornano nelle decisioni. Una distinzione utile: stai verificando un sistema di gestione dell'energia, non svolgendo un audit energetico completo. Le due attività si toccano, ma non coincidono — osservi come l'organizzazione governa prestazione, monitoraggio, analisi e miglioramento, senza rifare da zero l'analisi tecnica del sito. Questo però non ti autorizza a restare in superficie: se l'SGE dichiara attenzione agli usi significativi, il tuo sopralluogo deve arrivare proprio lì.",
+  "agenda": [
+   "Il sopralluogo: centrale termica, aria compressa, linee, uffici",
+   "Leggere i dati sul posto: contatori, monitoraggio, cruscotti",
+   "Le interviste: energy manager, manutenzione, acquisti, operatori",
+   "Il campionamento di piani di misura e registrazioni",
+   "Scrivere risultanze, condurre la chiusura, redigere il rapporto"
+  ]
+ },
+ {
+  "id": "50001_m11_s002",
+  "layout": "numeri",
+  "kicker": "Il sopralluogo energetico · 1",
+  "titolo": "Che cosa cerchi davvero durante il sopralluogo",
+  "intro": "La prima tentazione è guardare tutto: comprensibile, ma pericolosa, perché lo sguardo disperso produce osservazioni interessanti e poche evidenze utili. Parti da una domanda guida: dove si gioca davvero la prestazione energetica di questa organizzazione, e come l'SGE lo governa nel quotidiano? Durante il giro cerchi segni concreti su tre piani — e un errore da evitare: credere che basti trovare uno spreco evidente. Lo spreco visibile è solo l'inizio; ciò che conta è se il sistema lo vede, lo misura, lo interpreta, lo tratta.",
+  "numeri": [
+   { "n": "1", "h": "Fisico", "d": "Attrezzature, impianti, linee, regolazioni, perdite, spegnimenti, avviamenti, isolamento, modalità di funzionamento. Organizza mentalmente il sito in fonti, conversione, distribuzione e usi finali: da dove entra l'energia, come viene trasformata, come arriva ai reparti, dove viene consumata." },
+   { "n": "2", "h": "Informativo", "d": "Misure, contatori, registrazioni, allarmi, trend, indicatori: tutti i dati che dimostrano se il controllo esiste davvero. Un misuratore locale scollegato, valori su un quadro che non coincidono col cruscotto presentato in apertura: sono piste per interviste e campionamento documentale." },
+   { "n": "3", "h": "Gestionale", "d": "Ruoli, decisioni, manutenzione, priorità operative, competenza, capacità di reagire quando un consumo si discosta dall'atteso. Distingui l'anomalia tecnica (una perdita d'aria) dall'anomalia di sistema (una perdita che nessuno misura, segnala o segue). Non cerchi il colpevole del guasto, ma se l'organizzazione ha un modo affidabile per accorgersene e reagire." }
+  ]
+ },
+ {
+  "id": "50001_m11_s003",
+  "layout": "split",
+  "kicker": "Il sopralluogo energetico · 2",
+  "titolo": "Centrale termica: dove la gestione diventa visibile",
+  "lead": "Qui l'energia entra, si trasforma e spesso alimenta una quota rilevante dei consumi, perciò i segnali utili sono numerosi e leggibili. Non ti serve un'esplorazione da progettista, ma una lettura ordinata che colleghi stato dell'impianto, esercizio, dati disponibili e presidio dell'SGE. La prestazione può peggiorare senza interrompere il processo: un SGE maturo deve accorgersene anche quando la continuità non è minacciata.",
+  "punti": [
+   { "h": "Assetto coerente col fabbisogno", "d": "Quante caldaie lavorano, come si alternano, con quale logica modulano, se l'assetto è ragionevole rispetto a stagione e produzione. Tutte le unità sempre in servizio, anche a carichi bassi, non è automaticamente un difetto, ma un punto da approfondire." },
+   { "h": "Qualità della regolazione", "d": "Temperature di mandata e ritorno, orari, set point, curve, by-pass aperti stabilmente, valvole, isolamento delle tubazioni. Un impianto datato può essere ben governato; uno recente può essere lasciato a regolazioni grossolane che annullano i benefici attesi." },
+   { "h": "La misura", "d": "Il combustibile è misurato solo all'ingresso o la centrale ha misura dedicata? Il calore utile è contabilizzato o si va a stima? Ore di funzionamento e allarmi sono storicizzati? In una lavanderia, un recupero termico dichiarato «ben controllato» ma in allarme da settimane, senza che la produzione se ne accorga perché il servizio è garantito dalla caldaia, è un passaggio tipico." },
+   { "h": "Manutenzione come segnale indiretto", "d": "Targhe illeggibili, strumenti fuori taratura, perdite visibili, isolamento danneggiato, locali usati come deposito non sono da soli una non conformità, ma raccontano il livello di attenzione. Se l'azienda dichiara un piano strutturato e tu trovi anomalie elementari ignorate da mesi, la distanza tra discorso e pratica diventa significativa. Negli appunti separa osservazione, possibile causa e possibile impatto." }
+  ]
+ },
+ {
+  "id": "50001_m11_s004",
+  "layout": "punti",
+  "kicker": "Il sopralluogo energetico · 3",
+  "titolo": "Aria compressa: il sistema che spreca in silenzio",
+  "intro": "Uno dei costi nascosti più ostinati. Energia preziosa e versatile, e proprio per questo usata con leggerezza, anche quando non serve o quando il sistema perde efficienza. Terreno ideale per verificare se l'organizzazione lavora con dati e fatti o con abitudini consolidate.",
+  "punti": [
+   { "h": "L'architettura del sistema", "d": "Quanti compressori, come sono gestiti, quale fa base e quale segue i picchi, se c'è essiccazione, se il serbatoio è adeguato, come sono distribuite le linee. Non un rilievo progettuale, ma capire se chi gestisce conosce il proprio profilo di domanda e se l'esercizio è coerente." },
+   { "h": "La pressione", "d": "Spesso set point storicamente elevati, mantenuti per prudenza o abitudine, senza verifica di quanto la produzione richieda: una pressione più alta del necessario aumenta i consumi e amplifica le perdite. Se ci sono manometri in punti diversi, confronta i valori — grandi scarti tra sala compressori e utenze sono una pista." },
+   { "h": "Le perdite e gli usi impropri", "d": "Non sempre udibili: ascolta nelle pause, osserva giunti, valvole, prese rapide, spurghi. Un conto è dire che le perdite esistono ovunque, un altro avere un processo stabile per ridurle e monitorarle. E gli usi impropri — pistole di soffiaggio per pulizia personale, raffreddamenti improvvisati, macchine alimentate fuori turno — pesano più di quanto il management immagini, e sono perfetti per le interviste agli operatori." },
+   { "h": "Il compressore acceso «per prudenza»", "d": "In una fabbrica di plastica, il nuovo compressore a velocità variabile «ha migliorato molto i consumi», ma un vecchio compressore è acceso in parallelo anche con produzione ridotta, perché alcune utenze lamentavano cali di pressione. Non giudichi la scelta in astratto: verifichi se il sistema ha analizzato la causa, misurato l'effetto sui consumi, valutato alternative. E il recupero di calore, se dichiarato ma spento da mesi, è un campanello d'allarme sulla capacità di mantenere i miglioramenti." }
+  ]
+ },
+ {
+  "id": "50001_m11_s005",
+  "layout": "split",
+  "kicker": "Il sopralluogo energetico · 4",
+  "titolo": "Linee e reparti: l'energia segue il ritmo della produzione",
+  "lead": "Qui l'energia diventa movimento, temperatura, tempi di ciclo, attese, scarti, avviamenti, fermate. È il luogo in cui la prestazione si intreccia più chiaramente con le decisioni operative. Una verifica ben condotta non guarda il singolo macchinario, ma la relazione tra produzione reale, condizioni di esercizio e governo dei consumi.",
+  "punti": [
+   { "h": "Cosa succede quando il prodotto non avanza", "d": "Una linea in assetto coerente rende leggibili i consumi; una con microfermate, scarti o lunghe attese nasconde spreco anche se l'impianto è efficiente. Chiediti sempre: forni che restano in temperatura, motori a vuoto, aspirazioni sempre attive, nastri e pompe accesi durante soste non produttive." },
+   { "h": "Avviamenti e cambi formato", "d": "Molte organizzazioni misurano bene il regime ma trascurano le fasi transitorie, che in alcuni reparti pesano moltissimo. Se una linea cambia articolo più volte al giorno o richiede lunghi preriscaldi, questo dovrebbe apparire nell'analisi energetica. Non servono modelli sofisticati, ma i principali driver di consumo vanno conosciuti e gestiti." },
+   { "h": "Coerenza tra documentazione e pratica", "d": "Procedure di spegnimento fuori turno ben scritte, ma sistemi ausiliari lasciati attivi perché la ripartenza del mattino è più comoda: la discrepanza non riguarda solo il costo, ma la capacità dell'SGE di tradurre le intenzioni in pratica. In verniciatura, ventilatori modulati e recupero termico, ma portata elevata anche a produzione dimezzata perché gli operatori temono difetti estetici: il bilanciamento qualità-energia non è stato stabilizzato." },
+   { "h": "La cultura visibile", "d": "Indicatori esposti, operatori che conoscono i segnali principali di anomalia, macchine con stati e allarmi comprensibili, spegnimenti semplici o aggirati con pratiche informali: il comportamento delle persone è la cartina di tornasole del sistema. Non inseguire tutti i reparti con la stessa profondità: segui il rischio energetico, la significatività e gli indizi. Un campionamento intelligente vale più di una visita frettolosa a tutto il sito." }
+  ]
+ },
+ {
+  "id": "50001_m11_s006",
+  "layout": "cards",
+  "kicker": "Il sopralluogo energetico · 5",
+  "titolo": "Uffici e servizi generali: il banco della disciplina quotidiana",
+  "intro": "Consumi che, presi uno per uno, sembrano modesti rispetto a una centrale o a una linea, e per questo molte organizzazioni li lasciano in secondo piano. Eppure questa parte è rivelatrice: qui vedi se la gestione dell'energia è diffusa o confinata ai grandi impianti. Evita il tono moralistico: non rimproveri la scrivania col monitor acceso, verifichi se le condizioni organizzative rendono facile il comportamento corretto.",
+  "cards": [
+   { "h": "Illuminazione", "d": "Locali illuminati senza persone, lampade accese vicino a vetrate in pieno giorno, orari non coerenti con l'occupazione, sensori esclusi per evitare fastidi. Nessun segnale da solo dimostra una carenza, ma tutti vanno letti insieme ai dati di consumo e alle scelte organizzative." },
+   { "h": "Climatizzazione", "d": "Orari allineati all'uso reale, set point ragionevoli, aree con temperature palesemente diverse, bocchette ostruite, finestre aperte con impianti in funzione. Mostrano quanto il sistema traduca obiettivi in comfort governato e non in spreco mascherato da comodità." },
+   { "h": "Apparecchiature diffuse", "d": "Sale server improvvisate, stampanti e schermi sempre attivi, frigoriferi, caricabatterie fuori orario. In un sito terziario pesano molto; in uno industriale valgono come indicatore culturale: se nessuno presidia i consumi facili da vedere, difficile credere che i nascosti siano governati meglio." },
+   { "h": "Il test delle decisioni", "d": "Una società dichiara di aver «sensibilizzato il personale», ma le sale riunioni sono fredde e illuminate anche vuote, gli orari rigidi e i sensori di presenza disattivati dopo lamentele. La domanda: il sistema misura l'effetto delle proprie decisioni e corregge ciò che non funziona, o si limita a lanciare campagne? Un SGE maturo costruisce regole, automatismi, monitoraggi, feedback." }
+  ]
+ },
+ {
+  "id": "50001_m11_s007",
+  "layout": "flusso",
+  "kicker": "Il sopralluogo energetico · 6",
+  "titolo": "Vedere, chiedere, collegare",
+  "intro": "Aree diverse richiedono occhi diversi, ma il metodo di conduzione resta uno solo: vedere con ordine, chiedere con criterio, collegare ogni elemento a ciò che il sistema dovrebbe sapere e gestire. Funziona bene una triangolazione — osservazione diretta, dati sul posto, interviste mirate — perché quando i tre piani convergono la fiducia aumenta, e quando divergono nasce una pista preziosa.",
+  "passi": [
+   { "h": "Vedere", "d": "Osservazione diretta con appunti disciplinati: distingui sempre ciò che hai visto, ciò che ti è stato detto e ciò che devi ancora verificare. «Valvola di bypass aperta stabilmente, quadro con temperatura elevata, operatore riferisce assetto da settimane, da verificare log» batte «impianto mal gestito, spreco certo» — le parole premature sono nemiche delle risultanze robuste." },
+   { "h": "Chiedere", "d": "Domande che nascono da ciò che vedi. In un sito alimentare senti una perdita, il contatore mostra assorbimenti alti anche a pranzo, l'operatore dice che di notte una macchina resta in pressione per la ripartenza: convergenza parziale ma sufficiente per approfondire. Il caso opposto — cruscotto rassicurante ma allarmi esclusi e valori incoerenti sul quadro — è la frattura tra rappresentazione e realtà." },
+   { "h": "Dosare il tempo", "d": "Non farti assorbire da un'unica anomalia solo perché è vistosa: la conduzione richiede profondità selettiva. Annota il punto interessante e programma il ritorno documentale o l'intervista, senza lasciare scoperti altri usi significativi. E non usare il sopralluogo per fare consulenza estesa: valuti se l'SGE consente di comprendere, monitorare e migliorare, non ridisegni gli impianti." },
+   { "h": "Collegare, costruendo la mappa", "d": "Illuminazione tradizionale in un magazzino non è di per sé una carenza; lo diventa se l'organizzazione dichiara la zona rilevante, misura i consumi, ha obiettivi e da anni non analizza alternative. Il punto non è la tecnologia vecchia, è la qualità del processo decisionale. Chiudi il giro con la mappa delle domande successive: chi spiega le deviazioni, dove sono i contatori decisivi, quali registrazioni campionare." }
+  ]
+ },
+ {
+  "id": "50001_m11_s008",
+  "layout": "punti",
+  "kicker": "Leggere i dati sul posto · 1",
+  "titolo": "Leggere i contatori: il primo livello dei dati affidabili",
+  "intro": "I contatori sono il primo livello dei dati sul posto, e spesso dicono più di molte presentazioni. Leggerne uno non è copiare un numero: è capire identità, collocazione, unità di misura, periodo e relazione con il processo servito.",
+  "punti": [
+   { "h": "Che cosa sto leggendo esattamente?", "d": "Un generale elettrico, un sottomisuratore di reparto, il totalizzatore di una caldaia, un misuratore di gas, una contabilizzazione di calore, un contatore temporaneo. Se salti questo passaggio, rischi di confrontare valori non omogenei o di attribuire consumi all'area sbagliata." },
+   { "h": "Leggibilità e affidabilità apparente", "d": "Display chiaro, etichetta univoca, misura aggiornata, accesso senza manovre improprie, assenza di segni di guasto o scollegamento. Non certifichi lo strumento, ma verifichi se l'organizzazione ha una base minima credibile per governare la prestazione." },
+   { "h": "È usato o esiste soltanto?", "d": "La domanda più utile: chi legge il dato, con quale frequenza, dove finisce la registrazione, chi analizza gli scostamenti, cosa accade davanti a un'anomalia. Un contatore non usato è una potenzialità, non ancora un presidio. In una lavanderia, un misuratore di vapore fermo da mesi mentre il report usa una stima storica: la decisione gestionale poggia su una base fragile." },
+   { "h": "Il contesto temporale", "d": "Un valore istantaneo dice poco da solo: un assorbimento elevato è normale in avviamento, anomalo a linea ferma, coerente in piena produzione. Collega il numero a stato dell'impianto, turno, stagione, lotto. E quando annoti una lettura, scrivi sempre dove eri e in quale condizione operativa — un numero contestualizzato sostiene una domanda forte o una risultanza ben fondata." }
+  ]
+ },
+ {
+  "id": "50001_m11_s009",
+  "layout": "punti",
+  "kicker": "Leggere i dati sul posto · 2",
+  "titolo": "Sistemi di monitoraggio: quando il dato diventa informazione",
+  "intro": "Dai contatori fisici al mondo digitale. Qui non cerchi solo più numeri, ma la capacità di trasformare misure sparse in informazione utile. Un sistema vale non perché raccoglie molto, ma perché raccoglie ciò che serve, con continuità, qualità e leggibilità. Un buon test: chiedi di vedere un'anomalia reale gestita col sistema — un picco, un fermo, una deriva, un allarme — per capire se lo strumento è vivo o ornamentale.",
+  "punti": [
+   { "h": "Copertura", "d": "Gli usi significativi hanno misure dedicate o restano assorbiti in grandi totali poco interpretabili? Le grandezze sono coerenti con l'impianto (energia, portata, temperatura, ore, pressione, produzione)? Se il sistema misura solo ciò che è facile, hai molti dati e poca capacità di analisi." },
+   { "h": "Frequenza e storicizzazione", "d": "Un valore mensile basta per utenze stabili, non per processi variabili o cicli complessi. Come vengono raccolti i dati, ogni quanto, dove sono conservati, per quanto restano consultabili? Senza storicizzazione e tracciabilità, i fatti evaporano in impressioni." },
+   { "h": "Il collegamento dato-contesto", "d": "Un buon sistema legge i consumi insieme ad alcune variabili pertinenti (orari, turni, produzione, stagioni). Se tutto è presentato come totale secco, l'organizzazione fatica a distinguere un peggioramento reale da una variazione normale. In un trattamento termico, una piattaforma con bei grafici ma confronti «a colpo d'occhio», raramente rapportati ai volumi: non manca la tecnologia, manca l'uso analitico." },
+   { "h": "Chi accede e la coerenza col campo", "d": "Se il monitoraggio è visibile solo a una persona competente ma il resto dell'organizzazione non riceve segnali tempestivi, il presidio è fragile; un sistema semplice ma condiviso, con responsabilità e allarmi gestiti, sostiene meglio il miglioramento. E controlla la coerenza minima: una linea «spenta» nel monitoraggio ma in marcia sul posto, o un allarme storico ignorato da settimane, è una frattura da capire." }
+  ]
+ },
+ {
+  "id": "50001_m11_s010",
+  "layout": "evidenza",
+  "kicker": "Leggere i dati sul posto · 3",
+  "eyebrow": "Cruscotti energetici",
+  "titolo": "Leggere le sintesi senza farti ingannare dalla grafica",
+  "testo": "Sul posto incontri spesso cruscotti sintetici e schermate colorate. Sono molto utili, perché condensano grandi quantità di dati e mostrano rapidamente deviazioni, trend e priorità, ma possono anche ingannare se la grafica elegante nasconde indicatori deboli, confronti impropri o una lettura superficiale. Il tuo compito è capire se aiuta davvero a governare la prestazione. Primo controllo, il contenuto: cosa mostra esattamente — consumi assoluti, valori specifici, confronto con obiettivi e periodi, allarmi, commenti alle deviazioni? Uno che espone solo totali mensili dice meno di uno che collega i consumi a unità significative. Secondo, la leggibilità per chi lo usa: rende visibili le informazioni necessarie a manutenzione, produzione e direzione, non solo all'esperto di energia; se è comprensibile solo a chi l'ha costruito, il monitoraggio resta isolato. Terzo, la qualità del confronto: le frecce verdi o rosse rispetto al periodo precedente non bastano — se cambiano produzione, clima, orari o assetto, il confronto semplice è fuorviante, e le differenze più evidenti vanno interpretate con le variabili pertinenti e, quando serve, la normalizzazione. Il vero test di vitalità: chiedi un esempio concreto di decisione presa grazie al cruscotto. Se sa raccontarti il prima, il dato, l'azione e l'esito, probabilmente serve davvero; se ricevi solo una descrizione estetica delle schermate, dovrai scavare più a fondo."
+ },
+ {
+  "id": "50001_m11_s011",
+  "layout": "split",
+  "kicker": "Le interviste · 1",
+  "titolo": "Energy manager: dove i dati diventano decisioni",
+  "lead": "L'intervista a chi tiene insieme il quadro serve a capire se i dati raccolti sul posto diventano lettura dei consumi, priorità operative e azioni coerenti. Non un esame teorico: verifichi se la persona sa spiegarti, con esempi concreti, come l'organizzazione governa la prestazione. Parti da domande larghe e poi stringi; se la risposta resta generica, ancora la conversazione a un impianto appena visto o a un dato del cruscotto.",
+  "punti": [
+   { "h": "La qualità dei collegamenti", "d": "Tra analisi energetica e realtà impiantistica, tra misure disponibili e decisioni, tra obiettivi dichiarati e responsabilità operative. Non deve conoscere a memoria ogni display, ma sapere dove sono le misure decisive, quali variabili influenzano i risultati e cosa succede davanti a una deviazione importante." },
+   { "h": "Il test dell'episodio recente", "d": "Chiedi di raccontarti un caso, non un principio: un aumento del consumo notturno, una deriva in centrale termica, un reparto con valori peggiori del previsto. Una storia con tempi, dati, confronto, azioni e verifica dell'esito indica un sistema vivo; solo «stiamo monitorando» o «ci stiamo lavorando» segnala una maturità più bassa di quanto la documentazione lasci credere." },
+   { "h": "Priorità e proprietà delle informazioni", "d": "Chiedi quali tre scostamenti meriterebbero attenzione immediata e perché: se la risposta segue peso energetico, rischio e disponibilità di dati, la funzione è matura; se cambia in base a chi protesta di più, il sistema fatica a trasformare l'informazione in decisione. E chi raccoglie i valori, chi li pulisce, chi decide se una differenza è normale: un sistema robusto ha passaggi chiari, non dipende solo dalla buona volontà di una persona." },
+   { "h": "I limiti dichiarati", "d": "Se l'energy manager sa dirti dove i dati sono deboli, quali misure mancano, quali ipotesi usa in modo provvisorio, parli con una funzione consapevole. Diffida delle rappresentazioni troppo lisce, in cui ogni uso sembra noto al dettaglio: nei siti reali esistono sempre zone più mature e meno mature, e la trasparenza su questo vale molto. Le interviste non mettono sotto pressione: verificano la credibilità del sistema, tornando ai fatti se percepisci difesa." }
+  ]
+ },
+ {
+  "id": "50001_m11_s012",
+  "layout": "punti",
+  "kicker": "Le interviste · 2",
+  "titolo": "Manutenzione: dove l'efficienza si conserva o si perde",
+  "intro": "La prestazione non peggiora solo per scelte strategiche sbagliate: peggiora spesso per deriva lenta, regolazioni dimenticate, strumenti inaffidabili, perdite mai chiuse, scambi sporcati, sonde fuori servizio. La manutenzione vede tutto questo prima di chiunque altro, o dovrebbe.",
+  "punti": [
+   { "h": "Quali anomalie incidono sui consumi", "d": "Non chiedere subito le procedure: quali impianti danno più problemi, quali segnali fanno sospettare un peggioramento, quanto rapidamente intervengono, e se distinguono fermo produttivo da perdita di efficienza senza fermo. Questa distinzione è decisiva: un impianto può produrre e intanto consumare più del necessario per settimane." },
+   { "h": "Gli strumenti di misura", "d": "La manutenzione sa quali contatori si bloccano, quali sonde leggono male, quali segnali vengono esclusi e restano fuori troppo a lungo. Se tratta le misure energetiche come secondarie rispetto ai segnali di processo, il sistema rischia di perdere proprio la base fattuale su cui decidere." },
+   { "h": "L'anomalia intercettata prima del guasto", "d": "Chiedi un esempio: un compressore che aumenta il tempo a vuoto, una pompa sempre più lontana dal punto atteso, un frigorifero che mantiene il servizio con assorbimenti crescenti. In un sito chimico, un recuperatore escluso dopo un problema di affidabilità e mai più riaperto: continuità trovata, ma un'opportunità energetica persa senza riesame strutturato. Se la manutenzione sa raccontare come registra e comunica questi casi, hai un indizio di presidio reale." },
+   { "h": "Il lessico e la pianificazione", "d": "«Tanto l'impianto funziona» o «la produzione non si è lamentata» segnalano una cultura dove domina solo la disponibilità; quando la manutenzione parla spontaneamente di consumi anomali, ore inutili, perdite sistematiche, l'energia è entrata nelle routine. Esistono attività preventive con effetto riconosciuto sulla prestazione, tracciate e prioritarie, o spostate perché non bloccano subito? Triangola sempre con ciò che hai visto in campo." }
+  ]
+ },
+ {
+  "id": "50001_m11_s013",
+  "layout": "cards",
+  "kicker": "Le interviste · 3",
+  "titolo": "Acquisti: la prestazione futura nasce dalle scelte di oggi",
+  "intro": "Una funzione a volte considerata lontana dall'energia, ma che decide moltissimo: un motore scelto male, un compressore comprato solo sul prezzo, una macchina inserita senza attenzione ai consumi fissano per anni una prestazione mediocre. La domanda non è se gli acquisti conoscano ogni dettaglio tecnico, ma se esista un criterio riconoscibile che consideri anche la prestazione energetica.",
+  "cards": [
+   { "h": "Partire da casi concreti", "d": "Chiedi l'ultimo acquisto rilevante in un uso significativo: come sono stati definiti i requisiti, quali dati hanno richiesto al fornitore, come è stata verificata la coerenza tra promesso e installato. Ventilatori scelti tra «tre offerte, la più economica», senza dati su assorbimenti e carico parziale: l'energia non è entrata nella decisione." },
+   { "h": "Non solo macchine, anche servizi", "d": "Un contratto per aria compressa, facility, conduzione centrale termica o manutenzione può contenere o ignorare aspettative sui consumi. Esistono requisiti prestazionali, modalità di verifica, obblighi di registrazione, criteri per segnalare anomalie? Qui si vede come le richieste ai fornitori traducono obiettivi interni in condizioni operative." },
+   { "h": "Le urgenze e le eccezioni", "d": "In una sostituzione urgente non pretendi una valutazione estesa, ma verifichi se esistono criteri minimi pronti (classi di efficienza, dati standard, un passaggio rapido con manutenzione ed energy manager). L'importante non è che l'energia vinca sempre, ma che non scompaia dal ragionamento, e che le deroghe siano tracciate." },
+   { "h": "Il ritorno delle informazioni", "d": "Dopo un acquisto significativo, qualcuno verifica i risultati attesi? I dati tornano agli acquisti, o la funzione chiude l'ordine e perde visibilità? Senza apprendimento, le stesse decisioni deboli si ripetono. E se ogni reparto compra in autonomia con criteri diversi, la prestazione dipende troppo dalle singole persone." }
+  ]
+ },
+ {
+  "id": "50001_m11_s014",
+  "layout": "punti",
+  "kicker": "Le interviste · 4",
+  "titolo": "Operatori: la prova di realtà del sistema",
+  "intro": "Qui il sistema smette di parlare per procedure e cruscotti e mostra come l'energia viene vissuta nel gesto quotidiano: l'intervista più delicata e più rivelatrice, perché mette a confronto regole dichiarate e prassi effettive. Condotta bene dà informazioni preziose; condotta male produce solo imbarazzo e risposte difensive. Mantieni sempre un tono rispettoso: non è un interrogatorio, e nemmeno una scorciatoia per confermare accuse contro il management.",
+  "punti": [
+   { "h": "Partire dal lavoro reale", "d": "Non domande scolastiche: cosa succede all'avvio, nelle pause, nei cambi lotto, a fine turno, quando una macchina si ferma o compare un allarme, quando il comfort non è adeguato. Le persone raccontano meglio le scelte se parlano di situazioni concrete, non di slogan energetici." },
+   { "h": "Osservare mentre ascolti", "d": "Se un operatore dice che una linea viene spenta nelle attese lunghe, guarda se i segnali di macchina lo confermano. In confezionamento, la procedura prevede spegnimenti oltre un certo tempo di fermo, ma spesso lasciano tutto attivo perché la ripartenza è più rapida e il capo turno preferisce evitare ritardi: una tensione concreta tra energia e produttività. Il punto: l'organizzazione la conosce, la misura, la governa, o la lascia risolvere informalmente in linea?" },
+   { "h": "La consapevolezza minima", "d": "Sanno riconoscere una perdita, un assorbimento anomalo, una temperatura eccessiva? Sanno a chi segnalarlo e ricevono un riscontro? Non serve che tutti leggano grafici avanzati, ma i segnali importanti devono essere riconoscibili e il canale di reazione chiaro. E imparano meglio ciò che vedono utile: «ho capito l'importanza di chiudere quella valvola perché ho visto il consumo cambiare sul monitor» è apprendimento concreto." },
+   { "h": "Tre scenari possibili", "d": "Coerenza (ciò che il sistema dichiara viene capito e praticato), distanza parziale (le regole esistono ma sono aggirate o adattate in alcuni contesti), frattura (il linguaggio della direzione e quello del campo sembrano due organizzazioni diverse). Spesso le persone descrivono adattamenti intelligenti a problemi reali — sensori che disturbano, spegnimenti troppo lenti, allarmi frequenti ma poco utili: ascoltando bene capisci il comportamento e intravedi le debolezze che lo hanno generato." }
+  ]
+ },
+ {
+  "id": "50001_m11_s015",
+  "layout": "punti",
+  "kicker": "Il campionamento · 1",
+  "titolo": "Scegliere bene che cosa controllare davvero",
+  "intro": "Hai osservazioni, dati locali, schermate, interviste e molte piste. Il rischio è voler verificare tutto: rassicurante, ma irrealistico. Il campionamento ti fa selezionare piani di misura e registrazioni in modo ragionato — non a caso e non solo ciò che è comodo mostrare: dove il rischio è più alto, dove l'uso è significativo, dove i dati guidano decisioni, dove hai già visto incoerenze. Non una fase separata, ma la prosecuzione ordinata di ciò che hai raccolto.",
+  "punti": [
+   { "h": "Una gerarchia mentale", "d": "Prima gli usi più rilevanti, poi i processi decisionali basati su misure critiche, poi le aree con segnali di debolezza (strumenti inattivi, allarmi ignorati, stime al posto di misure, differenze tra turni o reparti simili). Ti aiuta a resistere alla tentazione di farti guidare dall'archivio più ordinato invece che dall'importanza: registrazioni perfette per l'illuminazione uffici e lacune proprio nei forni, che sono il vero centro del consumo." },
+   { "h": "La variabilità e il tempo", "d": "Un impianto stabile richiede un campione limitato ma ben scelto; un processo che cambia spesso prodotto, turno, stagione deve coglierne almeno alcune differenze. E allarga lo sguardo a periodi diversi: un piano impeccabile nell'ultimo mese, magari appena ripulito per la verifica, va letto anche altrove, soprattutto con forte stagionalità o miglioramenti recenti raccontati." },
+   { "h": "Il campione negativo", "d": "Cerca anche dove ti aspetti difficoltà. Se un responsabile ti indica spontaneamente le aree più ordinate, ascolta, ma chiedi anche un uso significativo meno rassicurante — con dati incompleti, modifiche recenti o forte dipendenza dai turni. Allarga la credibilità della verifica, mostrando che il campione non è costruito solo sulle vetrine migliori." },
+   { "h": "Adattivo e motivato", "d": "Parti con un insieme ragionevole, ma allarga se emergono stime non dichiarate, buchi nelle serie, registrazioni retrocompilate, scarti non spiegati: non è zelo, è una risposta proporzionata alla perdita di fiducia nella base informativa. E annota sempre il motivo di ogni scelta (uso significativo, anomalia osservata, variabilità elevata): renderà visibile che il campionamento è ragionato, non arbitrario." }
+  ]
+ },
+ {
+  "id": "50001_m11_s016",
+  "layout": "punti",
+  "kicker": "Il campionamento · 2",
+  "titolo": "Campionare i piani di misura: l'architettura prima dei numeri",
+  "intro": "Prima di leggere molte registrazioni, capisci se l'architettura di misura sta in piedi. Il piano di misura è la logica con cui l'organizzazione ha deciso quali dati servono, dove raccoglierli, con quale frequenza, a chi attribuirli e come usarli. Se è debole, anche molte registrazioni producono l'illusione del controllo.",
+  "punti": [
+   { "h": "Copre gli usi significativi?", "d": "Non mappe perfette di ogni utenza secondaria, ma una corrispondenza ragionevole tra ciò che pesa e ciò che è misurato con continuità. Se la centrale termica è decisiva ma letta solo con dati generali di sito, mentre utenze minori sono misurate nel dettaglio, la priorità del sistema è fuori fuoco." },
+   { "h": "Finalità e frequenza", "d": "Perché quella misura esiste — fatturazione, controllo operativo, analisi, confronto con obiettivi, individuazione anomalie? Se nessuno sa quale decisione sostiene, il piano è cresciuto per stratificazione, non per progetto. E la frequenza va proporzionata alla velocità con cui il fenomeno cambia: una refrigerazione con derive rapide richiede un presidio diverso da un servizio generale stabile." },
+   { "h": "Variabili pertinenti e responsabilità", "d": "Se i consumi dipendono da produzione, orari, condizioni esterne, il piano dovrebbe raccogliere anche queste informazioni, almeno nelle aree chiave, altrimenti i confronti diventano fragili. E chi assicura che la misura venga raccolta, chi controlla la plausibilità, chi interviene se uno strumento si blocca? Un piano senza ruoli chiari funziona finché tutto va bene e cede proprio quando servirebbe." },
+   { "h": "Seguire il filo, e l'aggiornamento", "d": "Prendi un uso visto in campo (l'aria compressa) e segui la misura dal campo all'uso gestionale: dove nasce il dato, dove è registrato, chi lo controlla, in quale report compare, che decisione genera. Se il filo si spezza a metà, hai una debolezza reale. E il piano viene rivalutato quando il sito cambia (nuova linea, nuovo turno, modifica di processo), o resta uguale per inerzia mentre la realtà si è spostata?" }
+  ]
+ },
+ {
+  "id": "50001_m11_s017",
+  "layout": "numeri",
+  "kicker": "Il campionamento · 3",
+  "titolo": "Campionare le registrazioni: continuità, plausibilità, tracce",
+  "intro": "Il tuo compito non è ammirare tabelle ordinate, ma capire se i dati sono continui, plausibili, tracciabili e abbastanza affidabili da sostenere decisioni. Una registrazione può essere formalmente completa e poco credibile, oppure imperfetta ma onesta — trasparente sui limiti e gestita con criterio. Questa differenza è fondamentale.",
+  "numeri": [
+   { "n": "1", "h": "Continuità", "d": "Buchi, giorni mancanti, settimane replicate con lo stesso valore, passaggi improvvisi da misura a stima. Le discontinuità non sono automaticamente una non conformità — strumenti e sistemi hanno problemi — ma devono essere riconosciute, spiegate, gestite. Il vero segnale di debolezza non è il buco, è il buco invisibile: il dato mancante trattato come normale." },
+   { "n": "2", "h": "Plausibilità", "d": "I valori hanno senso rispetto a impianti, turni, produzione, stagioni? Consumi notturni identici ai diurni in un reparto che dovrebbe rallentare, o una centrale termica con andamenti piatti tra periodi climatici diversi, meritano approfondimento. La plausibilità si valuta sempre collegando il numero al contesto operativo — e con un controllo incrociato: se il dato è stabile ma in campo l'impianto era fermo a lungo, qualcosa non torna." },
+   { "n": "3", "h": "Tracce delle anomalie", "d": "Davanti a un picco, una caduta, un valore nullo: qualcuno lo ha visto, commentato, corretto, avviato una verifica? Un sistema maturo non produce dati perfetti, produce dati letti e usati. In un sito tessile, due settimane col valore identico perché l'acquisizione era ferma e i numeri sono stati ricopiati: verifica se la stima è stata dichiarata, l'evento corretto, e se decisioni rilevanti sono state prese su quella base. Non fermarti alle registrazioni energetiche pure: campiona anche produzione e ore, perché a volte la debolezza sta nel denominatore." }
+  ]
+ },
+ {
+  "id": "50001_m11_s018",
+  "layout": "split",
+  "kicker": "Il campionamento · 4",
+  "titolo": "Campionamento integrato: unire piani, registrazioni, campo, interviste",
+  "lead": "Il campionamento migliore non è mai solo documentale: funziona quando mette in relazione quattro cose — ciò che il piano prevede, ciò che le registrazioni mostrano, ciò che il sopralluogo rivela, ciò che le interviste spiegano. Se una resta isolata, il rischio di conclusioni frettolose aumenta; se le colleghi, la fiducia cresce e le risultanze diventano solide.",
+  "punti": [
+   { "h": "La catena coerente", "d": "Il piano dice che l'aria compressa è monitorata; le registrazioni mostrano un aumento nelle ore non produttive; in campo hai visto una macchina in pressione e alcune perdite; l'intervista conferma che la ricerca perdite è stata rinviata più volte. Non un indizio sparso, ma una catena fatta di dati, osservazioni e spiegazioni." },
+   { "h": "Il campo riporta alla realtà", "d": "Il caso opposto: piano ben costruito, registrazioni formalmente complete, ma un contatore chiave spento da settimane e gli operatori che non sanno chi dovrebbe segnalarlo. L'integrazione ti protegge dall'errore comune di credere ai documenti più di quanto meritino solo perché ordinati." },
+   { "h": "Quando fermarti e quando allargare", "d": "Se i livelli si confermano, un campione ben scelto basta; se trovi contraddizioni importanti, allarghi in modo mirato — non tutto, ma abbastanza da capire se è episodio isolato o debolezza diffusa. In una ceramica, variazioni forti tra turni simili senza anomalie ai bruciatori, poi gli operatori rivelano che il turno notturno prolunga il mantenimento termico «per prudenza»: prima di concludere, amplia a più giornate e verifica se la pratica è nota alla direzione." },
+   { "h": "Sobrietà e linguaggio delle prove", "d": "Se una debolezza emerge da un solo dato ambiguo, prudenza; se emerge da più fonti convergenti, puoi scrivere con più chiarezza. Annota come le evidenze si sostengono a vicenda: «misura prevista non disponibile, registrazione stimata non dichiarata, osservazione coerente con incremento notturno, intervista conferma rinvio». Il campionamento costruisce fiducia ragionevole, non certezza assoluta: devi spiegare perché il campione è adeguato al rischio." }
+  ]
+ },
+ {
+  "id": "50001_m11_s019",
+  "layout": "definizione",
+  "kicker": "Scrivere le risultanze · 1",
+  "eyebrow": "Dai fatti osservati a un testo che regge",
+  "titolo": "Che cos'è una buona risultanza energetica",
+  "definizione": "Deve fare una cosa semplice e difficile: dire con chiarezza che cosa hai trovato, rispetto a quale aspettativa o criterio lo leggi, e perché il punto conta. La prima regola: separare osservazione (i fatti), valutazione (perché sono rilevanti per il sistema) e suggerimento (se compare, prudente e non sostitutivo delle scelte dell'organizzazione).",
+  "punti": [
+   "Specifico senza essere prolisso: «l'energia non è monitorata adeguatamente» dice poco; «il consumo della sala compressori è riportato nel cruscotto mediante stima da tre settimane, per indisponibilità del contatore locale, senza segnalazione formale né riesame dell'impatto» dice molto di più — il lettore capisce fatto, contesto e possibile debolezza.",
+   "Tono calibrato: niente aggettivi emotivi come «grave» o «assurdo». Se i fatti sono ben descritti, parleranno da soli. E scrivi sui processi e sulle responsabilità visibili, non sui caratteri individuali: «non sono emerse evidenze di criteri condivisi per lo spegnimento fuori turno in quell'area» è più utile di «il personale non è attento».",
+   "Tracciabilità: ogni risultanza deve poter essere ricondotta ai tuoi appunti, alle registrazioni viste, alle interviste, alle osservazioni. Se dovrai difenderla, non potrai basarti sulla memoria impressionistica. Tre domande di controllo: ho scritto cosa ho visto davvero, ho spiegato perché riguarda l'SGE, ho evitato di trasformarla in una consulenza travestita?"
+  ]
+ },
+ {
+  "id": "50001_m11_s020",
+  "layout": "confronto",
+  "kicker": "Scrivere le risultanze · 2",
+  "titolo": "Dalla frase vaga alla risultanza utile",
+  "intro": "Il modo migliore per imparare è confrontare testi deboli e robusti — non per cercare la formula perfetta, ma per allenare l'occhio a tre qualità: aderenza ai fatti, collegamento al sistema, utilità per l'azione. Un elemento comune ai testi forti: nessuno propone direttamente la soluzione. Il compito della risultanza è descrivere la debolezza o la buona pratica, non progettare l'intervento.",
+  "a": {
+   "h": "Frase vaga",
+   "sub": "Poco utile, spesso ingiusta",
+   "punti": [
+    { "d": "«La centrale termica non è gestita in modo efficiente»: troppo ampia, non spiega cosa hai visto, suona come un giudizio tecnico assoluto. «Il personale spreca energia negli uffici»: sposta il fuoco sulle persone senza descrivere le condizioni che rendono lo spreco possibile." },
+    { "d": "«I dati energetici non sono affidabili»: severa ma inutile se non sostenuta. Aprono la porta a discussioni infinite su «quanto» ed «efficiente», perché mancano il dove, il come lo sai, il senso in cui il sistema ha fallito." }
+   ]
+  },
+  "b": {
+   "h": "Risultanza utile",
+   "sub": "Campo, dati, interviste che convergono",
+   "punti": [
+    { "d": "«In centrale termica è stato osservato un by-pass aperto stabilmente tra mandata e ritorno in condizioni ordinarie; non emergono evidenze di monitoraggio dell'effetto sul consumo né di analisi recente della regolazione.» Il lettore sa dove guardare, cosa manca e perché riguarda il sistema." },
+    { "d": "«Per il consumo elettrico della sala compressori, il cruscotto riporta valori continui anche in un periodo in cui il contatore era fuori servizio; non emergono evidenze di marcatura delle stime né di valutazione dell'impatto sulle analisi.» Non drammatizza, ma fa capire perché la fiducia nel dato si riduce — e rende più facile classificare il rilievo." }
+   ]
+  }
+ },
+ {
+  "id": "50001_m11_s021",
+  "layout": "numeri",
+  "kicker": "Scrivere le risultanze · 3",
+  "titolo": "Risultanze proporzionate: il fatto e il livello del rilievo",
+  "intro": "Molti testi si indeboliscono non perché manchino i fatti, ma perché il livello del rilievo viene deciso troppo in fretta o in modo incoerente. Non tutto ciò che appare migliorabile è una non conformità, e non tutto ciò che è tecnicamente discutibile riguarda il sistema. Tre domande orientano la proporzione, evitando sia l'eccesso di severità sia quello di indulgenza.",
+  "numeri": [
+   { "n": "1", "h": "Contraddice un requisito o è solo perfezionabile?", "d": "Un locale con luci accese senza persone, visto una volta, è un segnale leggero; la stessa situazione in più aree, con sensori disattivati da tempo e nessuno che governa gli orari, diventa una debolezza del controllo operativo. Il fatto non cambia, cambia il peso che il contesto gli dà." },
+   { "n": "2", "h": "Episodico o debolezza stabile?", "d": "Un by-pass aperto può essere una scelta temporanea giustificata; se resta aperto stabilmente, nessuno monitora l'effetto e non emerge analisi recente, acquista un peso diverso. Distingui sempre la carenza tecnica (una perdita d'aria) dalla carenza di sistema (rete con perdite diffuse, campagne rinviate, consumi notturni alti, nessuna valutazione sistematica)." },
+   { "n": "3", "h": "Quale effetto sulla capacità di governare?", "d": "Non farti guidare dall'entità apparente dello spreco: un compressore rumoroso attira l'attenzione, ma una stima non dichiarata che alimenta per mesi il cruscotto della direzione è più critica, perché indebolisce la fiducia nei dati su cui si decide. La proporzione nasce dall'intreccio tra fatti osservati, qualità delle prove e ruolo del tema nel funzionamento dell'SGE." }
+  ]
+ },
+ {
+  "id": "50001_m11_s022",
+  "layout": "tabella",
+  "kicker": "Scrivere le risultanze · 4",
+  "titolo": "Tre versioni della stessa risultanza",
+  "intro": "Prendi la stessa situazione e raccontala in tre modi: debole (troppo generico), robusto (fatti collegati al sistema), eccessivo (oltre le evidenze). Le versioni robuste non sono più dure, sono più precise — e proprio per questo più autorevoli: chi legge capisce che non è un'opinione generica né una condanna preventiva, ma una situazione verificata, discutibile sul merito e non sul tono.",
+  "cols": ["Caso", "Debole", "Eccessiva"],
+  "righe": [
+   ["Aria compressa", "«Il sito non controlla bene i consumi di aria compressa» — vuota: non dice dove, perché, come lo sai", "«La rete è inefficiente e richiede urgente sostituzione completa» — supera ruolo e prove: hai mostrato una debolezza di controllo, non che tutta la rete vada rifatta"],
+   ["Uffici", "«Il personale spreca energia negli uffici» — fragile e ingiusta: attribuisce colpa senza descrivere le condizioni", "«L'SGE è inefficace negli uffici» — salto troppo ampio: hai evidenze su un segmento, non per giudicare l'intero sistema"],
+   ["Centrale termica", "«La centrale termica non lavora in modo ottimale» — vaghezza pura", "«La conduzione è tecnicamente scorretta e produce gravi sprechi» — oltre il compito: non certifichi la conduzione, verifichi se il sistema conosce, misura e rivaluta gli assetti"],
+   ["La versione robusta", "Fatto definito + evidenze convergenti (campo, dati, interviste) + perché riguarda il sistema", "Test: so indicare il fatto, la fonte che lo sostiene, il motivo per cui riguarda l'SGE? Se manca uno dei tre, rinforza"]
+  ]
+ },
+ {
+  "id": "50001_m11_s023",
+  "layout": "numeri",
+  "kicker": "Scrivere le risultanze · 5",
+  "titolo": "Dalla bozza personale alla risultanza pronta",
+  "intro": "Tra gli appunti di campo e le risultanze da presentare c'è un passaggio intermedio decisivo: ripulire la bozza dalle impressioni, dalle scorciatoie e dai giudizi impliciti che ti servivano per orientarti ma non devono entrare nel testo finale. Gli appunti rapidi («perdita forte linea nord», «operatori non spengono», «contatore fermo») vanno benissimo per ricordare dove tornare, ma vanno completati. Ricostruisci ogni rilievo con quattro elementi.",
+  "numeri": [
+   { "n": "1", "h": "Il fatto osservato", "d": "Cosa hai visto esattamente, in quale area, in quale condizione operativa. Da «celle frigorifere, porte aperte, consumo alto notte» a «nelle celle di spedizione, frequenti mantenimenti delle porte aperte durante la preparazione ordini»." },
+   { "n": "2", "h": "La verifica di supporto", "d": "Dati, registrazioni o interviste coerenti: «le registrazioni elettriche mostrano consumi notturni superiori all'atteso rispetto ai volumi movimentati». Separa ciò che sai da ciò che sospetti: un set point prudente che intuisci legato a timori di qualità entra come fatto solo se confermato da interviste e dati coerenti." },
+   { "n": "3", "h": "Il punto del processo che appare debole", "d": "Monitoraggio, analisi, responsabilità, controllo operativo: «non sono emerse responsabilità chiare per il riesame degli orari di movimentazione e delle logiche di chiusura». Controlla il tono dell'oralità futura: potresti leggere questa frase davanti ai responsabili dell'area senza doverla subito ammorbidire?" },
+   { "n": "4", "h": "Il significato per la prestazione", "d": "Perché il tema riguarda la prestazione o la capacità dell'SGE di governarla. Questa fase serve anche a selezionare: non tutto ciò che hai annotato diventa una risultanza formale — alcuni elementi restano piste, altri si chiudono con chiarimenti, altri confluiscono in un commento positivo. Arrivare alla chiusura con testi già maturi riduce le sorprese e abbassa la conflittualità." }
+  ]
+ },
+ {
+  "id": "50001_m11_s024",
+  "layout": "punti",
+  "kicker": "Chiusura e rapporto · 1",
+  "titolo": "La riunione di chiusura: confermare i fatti senza negoziare la realtà",
+  "intro": "Concentra in poco tempo tutto il lavoro svolto: presenti le risultanze, ne chiarisci il significato, verifichi che non esistano fraintendimenti fattuali rilevanti. Condotta bene, resta ordinata e utile; condotta male, anche una verifica solida finisce in difese e confusione. Serve un metodo semplice, fermo e rispettoso.",
+  "punti": [
+   { "h": "Niente effetto sorpresa", "d": "Le aree sensibili dovrebbero essere già emerse durante la giornata, almeno nei loro elementi essenziali. Non anticipare ogni dettaglio, ma non arrivare in chiusura con un rilievo importante mai accennato a chi poteva fornire chiarimenti. Una chiusura professionale non serve a colpire, ma a chiudere il quadro con correttezza." },
+   { "h": "Ricorda perimetro e metodo", "d": "All'inizio ricorda brevemente quali aree hai visitato, quali dati esaminato, quali interviste condotto, come hai impostato il campionamento. Non per difenderti in anticipo, ma per dare contesto: l'organizzazione capisce da dove nascono le conclusioni e su quale base." },
+   { "h": "Sempre la stessa sequenza", "d": "Prima il fatto osservato, poi le evidenze convergenti, infine perché riguarda il sistema e non solo un episodio tecnico. Abbassa la temperatura della discussione. «I vostri dati non sono affidabili» prepara una difesa; «il cruscotto ha riportato valori continui anche durante il fermo del contatore, senza marcatura delle stime» descrive un fatto, non lancia un'accusa." },
+   { "h": "Ascoltare quanto esporre", "d": "Può emergere un'informazione nuova che modifica il quadro, o una spiegazione che chiarisce un'apparente anomalia senza cambiarne il cuore. Sii aperto, ma non confondere l'ascolto con la trattativa sul merito dei fatti: la riunione finale non negozia la realtà, verifica se è stata compresa correttamente. E parla dei processi, non delle persone." }
+  ]
+ },
+ {
+  "id": "50001_m11_s025",
+  "layout": "cards",
+  "kicker": "Chiusura e rapporto · 2",
+  "titolo": "Gestire obiezioni e nuovi elementi",
+  "intro": "Prima o poi qualcuno contesta una risultanza, minimizza un fatto o presenta un'informazione nuova. È normale, fa parte del lavoro. La conduzione solida si vede qui: come mantieni equilibrio, distingui opinioni da fatti, decidi se il quadro va rivisto. La prima mossa: rallenta. Non rispondere per difesa, chiedi di precisare cosa viene contestato — il fatto, l'interpretazione, il campione, o il peso.",
+  "cards": [
+   { "h": "L'obiezione sul fatto", "d": "Se esiste una prova concreta che lo corregge — una registrazione non vista, una misura ferma solo perché in altra schermata — il tuo dovere è riconsiderare con onestà. Correggere alla luce di un fatto nuovo non ti indebolisce: ti rafforza, perché dimostra che il giudizio non è rigido ma fondato." },
+   { "h": "L'obiezione sull'interpretazione", "d": "«È vero che la campagna perdite è stata rinviata, ma per noi non è importante»: il fatto non cambia, cambia solo il giudizio che l'organizzazione vorrebbe attribuirgli. Ascolta, chiedi dati a supporto, poi decidi se il nuovo contesto modifica davvero il peso. Se non lo modifica, è giusto mantenere la risultanza." },
+   { "h": "Le spiegazioni tardive", "d": "«Il by-pass era aperto per una prova temporanea»: può essere vero, ma la domanda non è solo se sia vero — è se la temporaneità fosse tracciata e leggibile nel sistema. Senza registrazione o evidenza di riesame, il chiarimento riduce la severità tecnica, ma non elimina la debolezza gestionale." },
+   { "h": "Fermezza cortese e tracciabilità", "d": "Non trasformare la chiusura in un contraddittorio senza fine: se emergono elementi sostanziali, sospendi il giudizio su un punto o riporta nel rapporto che la classificazione tiene conto di un chiarimento tardivo. E annota bene ciò che cambia: quale elemento nuovo, da chi, come ha inciso — evita che correzioni legittime diventino indecisioni incomprensibili." }
+  ]
+ },
+ {
+  "id": "50001_m11_s026",
+  "layout": "numeri",
+  "kicker": "Chiusura e rapporto · 3",
+  "titolo": "Il rapporto finale: struttura, tracce, utilità",
+  "intro": "Dopo la chiusura orale, il documento che resterà. Non un deposito di appunti né una versione allungata della riunione: restituisce il percorso con chiarezza, proporzione e tracciabilità. Chi lo legge, giorni dopo, deve capire cosa è stato esaminato, come sono nate le conclusioni, quali risultanze richiedono attenzione. Tre qualità — e spazio anche per le conformità ben supportate, per renderlo equilibrato e utile.",
+  "numeri": [
+   { "n": "1", "h": "Leggibilità", "d": "Il lettore si orienta tra campo di applicazione del lavoro, aree visitate, dati esaminati, interviste, campionamento, risultanze. Non serve scrivere molto per sembrare completo: serve una logica che accompagni. Funziona partire dal perimetro e dal metodo, passare alle evidenze principali, arrivare a conclusioni e rilievi." },
+   { "n": "2", "h": "Tracciabilità", "d": "Ogni risultanza ricondotta a evidenze chiare: non ogni nota di campo, ma il rapporto deve far capire da dove nasce il giudizio. Una debolezza nel monitoraggio dell'aria compressa dovrebbe lasciar vedere che deriva da osservazioni del sopralluogo, da registrazioni con andamenti coerenti e da interviste che confermano il rinvio delle azioni. E la coerenza terminologica col linguaggio della chiusura." },
+   { "n": "3", "h": "Misura", "d": "Non riempire di dettagli irrilevanti, mettere a fuoco ciò che conta per la prestazione e per la capacità dell'SGE di governarla. Evita due eccessi: il testo troppo breve, che riduce tutto a frasi generiche, e quello troppo tecnico, che sembra una diagnosi specialistica. Su una stima non dichiarata: non la storia completa del software né «dati non affidabili», ma che una misura chiave non era disponibile, i valori non erano marcati come stima, e questo riduceva la trasparenza del monitoraggio su un uso significativo." }
+  ]
+ },
+ {
+  "id": "50001_m11_s027",
+  "layout": "timeline",
+  "kicker": "Sintesi · 1",
+  "titolo": "La catena completa, dalla visita al documento",
+  "intro": "La conduzione sul campo non è fatta di pezzi indipendenti: è un flusso ordinato in cui ogni fase prepara la successiva. Se tieni insieme questa catena, lavori con sicurezza; se la spezzi, ogni fase perde qualità. Il messaggio: non basta notare uno spreco, leggere una curva o ascoltare una spiegazione plausibile — devi collegare tutto dentro una sola logica, leggibile anche per chi non era con te sul campo.",
+  "tappe": [
+   { "t": "01", "h": "Il sopralluogo", "d": "Osservi dove l'energia entra, si trasforma, si distribuisce e viene usata. Centrale termica, aria compressa, linee e uffici mostrano facce diverse dello stesso sistema. Non cerchi solo sprechi evidenti, ma coerenza tra assetto, comportamento e governo del consumo: dove l'SGE dovrebbe vedere bene la realtà." },
+   { "t": "02", "h": "La lettura dei dati", "d": "Contatori, monitoraggio e cruscotti dicono se la realtà osservata è misurata, storicizzata e leggibile. Non conta la quantità di numeri, ma la loro utilità: un contatore non usato vale poco, un cruscotto elegante ma non governante è solo una vetrina." },
+   { "t": "03", "h": "Le interviste", "d": "Energy manager, manutenzione, acquisti e operatori: verifichi se i dati diventano decisioni, se l'efficienza è mantenuta, se l'energia entra negli acquisti, se il comportamento in campo è coerente. Ancorate ai fatti, trasformano numeri e osservazioni in comprensione del funzionamento reale." },
+   { "t": "04", "h": "Il campionamento", "d": "Non puoi controllare tutto, né sarebbe utile: scegli seguendo significatività, rischio, variabilità e indizi. Campionare bene significa controllare abbastanza per giudizi solidi, e adattare il perimetro quando trovi contraddizioni, stime non dichiarate o registrazioni fragili." },
+   { "t": "05", "h": "Risultanze, chiusura, rapporto", "d": "I fatti diventano testo chiaro, specifico e proporzionato — che descrive, non accusa né fa consulenza. La chiusura presenta senza sorprese, ascolta i chiarimenti, distingue fatti nuovi da opinioni. Il rapporto lascia traccia leggibile. Ogni fase prepara la successiva: il sopralluogo orienta i dati, i dati le interviste, le interviste il campionamento, il campionamento le risultanze." }
+  ]
+ },
+ {
+  "id": "50001_m11_s028",
+  "layout": "chiusura",
+  "kicker": "Sintesi · Modulo 11",
+  "modNum": "11",
+  "titolo": "Collegare tutto dentro una sola logica",
+  "punti": [
+   { "h": "Ogni passaggio sostiene il successivo", "d": "La conduzione sul campo funziona solo così: il sopralluogo ti orienta verso gli usi che contano; i dati dicono se quei punti sono davvero sotto controllo; le interviste chiariscono chi legge gli scostamenti e chi reagisce; il campionamento seleziona ciò che merita verifica più profonda; le risultanze trasformano le evidenze in testo credibile; il rapporto lascia una traccia chiara e utile del percorso." },
+   { "h": "Il metodo, non le impressioni", "d": "Non basta notare uno spreco, leggere una curva, ascoltare una spiegazione plausibile: devi collegare sopralluogo, dati, interviste, campionamento, risultanze e rapporto dentro una sola logica. Quando questa logica regge, il tuo giudizio è leggibile anche per chi non era con te; quando manca, il lavoro si riduce a impressioni sparse. E ricorda la postura: verifichi un sistema di gestione, non rifai l'analisi tecnica del sito, ma non resti in superficie dove si giocano gli usi significativi." },
+   { "h": "Le parole che reggono", "d": "Separa sempre osservazione, valutazione e suggerimento; scrivi specifico ma sobrio; parla dei processi, non delle persone; rendi ogni risultanza tracciabile fino ai tuoi appunti. Il test da portare via: so indicare il fatto osservato, la fonte che lo sostiene, il motivo per cui riguarda il sistema? Se manca uno dei tre, il testo va rinforzato — è ciò che distingue una risultanza robusta da una battaglia sulle parole." }
+  ],
+  "prossimo": {
+   "modulo": "12",
+   "titolo": "Casi completi e simulazione della verifica",
+   "testo": "Metterai tutto alla prova in casi completi e in simulazione: un percorso di verifica dall'inizio alla fine, con dati reali da leggere, interviste da condurre, evidenze da collegare e risultanze da scrivere. È il banco su cui il metodo diventa capacità professionale consolidata."
+  }
+ }
+]
