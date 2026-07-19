@@ -117,6 +117,22 @@ def render_mock(wav: Path, sid: str, out: Path) -> None:
         mux_with_id(raw, wav, sid, out)
 
 
+def drive_wav(base_dir: Path, clips_dir: Path, sid: str) -> Path:
+    """Wav che GUIDA il labiale: attenuato di MUSETALK_DRIVE_DB (ricetta congelata: -12dB,
+    verdetto utente da p0-audio.html — meno over-articulation). Il mux usa SEMPRE il wav
+    originale a voce piena: questo file esiste solo per l'inference."""
+    db = float(os.environ.get("MUSETALK_DRIVE_DB", "-12"))
+    src = wav_path(base_dir, sid)
+    if db == 0:
+        return src
+    out = clips_dir / "_drive" / f"{sid}.wav"
+    if not out.exists():
+        out.parent.mkdir(parents=True, exist_ok=True)
+        subprocess.run([FFMPEG, "-v", "error", "-y", "-i", str(src),
+                        "-af", f"volume={db}dB", "-c:a", "pcm_s16le", str(out)], check=True)
+    return out
+
+
 def render_musetalk_batch(ids: list[str], base_pingpong: Path, base_dir: Path, clips_dir: Path, batch: int) -> None:
     """Render REALE: un'unica invocazione MuseTalk per tutte le clip dello shard
     (i modelli si caricano una volta; l'avatar si prepara una volta: preparation=True
@@ -128,7 +144,8 @@ def render_musetalk_batch(ids: list[str], base_pingpong: Path, base_dir: Path, c
             "preparation": not prepared,
             "bbox_shift": int(os.environ.get("MUSETALK_BBOX_SHIFT", "-7")),
             "video_path": str(base_pingpong.resolve()),
-            "audio_clips": {sid: str(wav_path(base_dir, sid).resolve()) for sid in ids},
+            # inference guidata dal wav ATTENUATO (-12dB); il mux resta a voce piena
+            "audio_clips": {sid: str(drive_wav(base_dir, clips_dir, sid).resolve()) for sid in ids},
         }
     }
     cfg_file = clips_dir / "_musetalk-config.yaml"
@@ -246,6 +263,9 @@ def main() -> None:
                             deflicker=os.environ.get("NAT_DEFLICKER", "0") == "1",
                             sharpen=float(os.environ.get("NAT_SHARPEN", "0")))
                 raw.unlink()
+                dw = clips_dir / "_drive" / f"{sid}.wav"  # wav-guida -12dB: solo per l'inference
+                if dw.exists():
+                    dw.unlink()
 
             problems = validate(sid, out, audio_map[sid]["duration"])
             if problems:
