@@ -84,9 +84,9 @@ python /workspace/toolkit/patch-musetalk.py || { echo "PATCH FALLITA"; exit 1; }
 echo "== [4] sanity import + crop di produzione"
 python -c "import torch,mmcv,cv2,numpy,transformers; assert torch.cuda.is_available(), 'CUDA giu'; print('stack ok:', torch.__version__)" || { echo "SANITY IMPORT FALLITA: ambiente rotto (mmcv/cv2/torch) — STOP prima del render"; exit 1; }
 # crop di produzione: base ALT, trim dei fade (face-detect crasha sui frame senza volto),
-# quadrato 1080 -> 540 (identico a schermo nella bolla 332px, ~2x piu' veloce end-to-end)
-D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 /workspace/asset/base-alt.mp4)
-T=$(echo "$D" | awk '{printf "%.2f", $1-0.8}')
-ffmpeg -v error -y -ss 0.4 -t "$T" -i /workspace/asset/base-alt.mp4 -vf "crop=1080:1080:420:0,scale=540:540,fps=25" -an -c:v libx264 -crf 18 -preset fast /workspace/asset/base-produzione.mp4
+# quadrato 1080 -> 540 (identico a schermo nella bolla 332px, ~2x piu' veloce end-to-end).
+# RICETTA V1 (verdetto A/B 19/07): base CORTA 20s — labiale piu' ancorato dello standard p0
+# E prep pod ~2-3 min invece di 14 (1.000 frame invece di 9.022).
+ffmpeg -v error -y -ss 0.4 -t 20 -i /workspace/asset/base-alt.mp4 -vf "crop=1080:1080:420:0,scale=540:540,fps=25" -an -c:v libx264 -crf 18 -preset fast /workspace/asset/base-produzione.mp4
 
 echo "OK — pod pronto. Avvio render: bash /workspace/toolkit/pod-render.sh <corso> <gpu-idx> <processi>"

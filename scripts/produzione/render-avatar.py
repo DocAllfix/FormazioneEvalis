@@ -262,13 +262,24 @@ def main() -> None:
                 raw = clips_dir / f"{sid}.raw.mp4"
                 if not raw.exists():
                     raise RuntimeError("output MuseTalk mancante")
-                # NATURALIZZA: gate-silenzi NITIDO (frame base reale dove l'audio e' muto) +
-                # mux audio + tag + NVENC. NIENTE deflicker/sharpen di default (sfocano la bocca,
-                # bocciati dall'utente): la nitidezza viene dalla bbox fissa + GFPGAN al render.
-                pingpong = Path(args.base).with_name(Path(args.base).stem + "-pingpong.mp4")
-                naturalizza(raw, pingpong, wav, sid, out,
-                            deflicker=os.environ.get("NAT_DEFLICKER", "0") == "1",
-                            sharpen=float(os.environ.get("NAT_SHARPEN", "0")))
+                if os.environ.get("POST_MODE", "v1") == "v1":
+                    # RICETTA V1 (verdetto utente 19/07, test A/B): video x264 di MuseTalk
+                    # COPIATO senza ri-encode, voce piena, NIENTE gate-silenzi, clamp -t
+                    # alla durata esatta dell'audio. Piu' veloce E fedele allo standard p0.
+                    dur = probe_duration(wav)
+                    subprocess.run(
+                        [FFMPEG, "-v", "error", "-y", "-i", str(raw), "-i", str(wav),
+                         "-map", "0:v:0", "-map", "1:a:0", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k",
+                         "-metadata", f"comment={sid}", "-movflags", "+faststart",
+                         "-t", f"{dur:.3f}", "-shortest", str(out)],
+                        check=True,
+                    )
+                else:
+                    # legacy: naturalizza (gate-silenzi + NVENC) — BOCCIATA dal test A/B
+                    pingpong = Path(args.base).with_name(Path(args.base).stem + "-pingpong.mp4")
+                    naturalizza(raw, pingpong, wav, sid, out,
+                                deflicker=os.environ.get("NAT_DEFLICKER", "0") == "1",
+                                sharpen=float(os.environ.get("NAT_SHARPEN", "0")))
                 raw.unlink()
                 dw = clips_dir / "_drive" / f"{sid}.wav"  # wav-guida -12dB: solo per l'inference
                 if dw.exists():
