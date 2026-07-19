@@ -148,7 +148,10 @@ def render_musetalk_batch(ids: list[str], base_pingpong: Path, base_dir: Path, c
             "audio_clips": {sid: str(drive_wav(base_dir, clips_dir, sid).resolve()) for sid in ids},
         }
     }
-    cfg_file = clips_dir / "_musetalk-config.yaml"
+    # nome UNICO per processo: 2+ processi sullo stesso corso condividono clips_dir e
+    # all'avvio si sovrascriverebbero la config a vicenda (race di pochi secondi:
+    # nessuna clip sbagliata — i gate fermerebbero tutto — ma uno shard fallirebbe)
+    cfg_file = clips_dir / f"_musetalk-config-{os.getpid()}.yaml"
     lines = []
     for aid, a in cfg.items():
         lines += [f"{aid}:", f"  preparation: {a['preparation']}", f"  bbox_shift: {a['bbox_shift']}",
