@@ -96,7 +96,9 @@ def naturalizza(clip: Path, base_pingpong: Path, wav: Path, sid: str, out: Path,
     fc = filtri + (f";[g]{','.join(post)}[v]" if post else "")
     vmap = "[v]" if post else "[g]"
     encoders = []
-    if _nvenc_disponibile():
+    # NAT_FORCE_X264=1: salta NVENC e usa x264 crf18 (lo stesso encode dello standard p0
+    # approvato dall'utente — NVENC cq20 e' leggermente piu' morbido)
+    if os.environ.get("NAT_FORCE_X264", "0") != "1" and _nvenc_disponibile():
         encoders.append(["-c:v", "h264_nvenc", "-preset", "p5", "-cq", "20"])
     encoders.append(["-c:v", "libx264", "-crf", "18", "-preset", "fast"])  # fallback sempre
     ultimo = None
