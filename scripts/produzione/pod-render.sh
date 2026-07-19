@@ -62,15 +62,30 @@ if [ "$NPROC" -gt 1 ]; then
   [ "$N" -eq 0 ] && { echo "solo 1 clip, gia' fatta in prep"; exit 0; }
 fi
 
-# split in NPROC fette e lancia
+# split in NPROC fette e lancia — OGNI PROCESSO CON LA SUA COPIA AVATAR (hardlink prep):
+# i processi paralleli sullo stesso avatar condividono results/.../avatars/<id>/tmp/ e
+# temp.mp4 -> si corrompono a vicenda (scoperto al pilota 2026-07-19). Base+pingpong+dir
+# avatar clonati per-processo: la prep (latents/imgs/mask) e' riusata via hardlink, 0 disco.
+AV="$MUSETALK_DIR/results/v15/avatars"
+BSTEM=$(basename "$BASE" .mp4)
 split -n l/"$NPROC" -d /workspace/pending.txt /workspace/shard-
 pids=()
+i=0
 for f in /workspace/shard-*; do
   ids=$(paste -sd, "$f")
   [ -z "$ids" ] && continue
-  ( python /workspace/toolkit/render-avatar.py "$CORSO" --only "$ids" --base "$BASE" --batch 20 --purge-local \
+  if [ "$i" -eq 0 ]; then
+    PBASE="$BASE"    # il primo processo usa l'avatar master (gia' preparato)
+  else
+    PBASE="$(dirname "$BASE")/$BSTEM-w$i.mp4"
+    cp -n "$BASE" "$PBASE"
+    cp -n "$(dirname "$BASE")/$BSTEM-pingpong.mp4" "$(dirname "$BASE")/$BSTEM-w$i-pingpong.mp4"
+    [ -d "$AV/evalis_$BSTEM-w$i-pingpong" ] || cp -al "$AV/evalis_$BSTEM-pingpong" "$AV/evalis_$BSTEM-w$i-pingpong"
+  fi
+  ( python /workspace/toolkit/render-avatar.py "$CORSO" --only "$ids" --base "$PBASE" --batch 20 --purge-local \
       > "/workspace/render-$(basename $f).log" 2>&1 ) &
   pids+=($!)
+  i=$((i+1))
 done
 rc=0; for p in "${pids[@]}"; do wait "$p" || rc=1; done
 echo "== $CORSO render finito (rc=$rc). Clip su $R2/avatar-clips/$CORSO/"
