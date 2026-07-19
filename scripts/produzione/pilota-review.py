@@ -6,7 +6,7 @@ vista a scala reale della bolla del player (332px) + vista grande + tabella esit
 Uso:  python scripts/produzione/pilota-review.py
 Output: produzione/_campione/avatar-pilota/pilota-avatar.html (+ clip .mp4 accanto)
 """
-import json, os, subprocess, sys
+import hashlib, json, os, subprocess, sys
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -26,11 +26,6 @@ CLIPS = [  # (corso, id) — stesse del pod-pilota.sh
 OUT = Path("produzione/_campione/avatar-pilota")
 OUT.mkdir(parents=True, exist_ok=True)
 
-def probe_dur(p: Path) -> float:
-    r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
-                        "-of", "csv=p=0", str(p)], capture_output=True, text=True, check=True)
-    return round(float(r.stdout.strip()), 2)
-
 righe = []
 for corso, sid in CLIPS:
     am = json.load(open(f"produzione/{corso}/audio-map.json", encoding="utf-8"))
@@ -43,11 +38,16 @@ for corso, sid in CLIPS:
     okj = subprocess.run([RCLONE, "cat", f"r2:{BUCKET}/avatar-clips/{corso}/{sid}.mp4.ok"],
                          env=ENV, capture_output=True, text=True)
     ok_meta = json.loads(okj.stdout) if okj.returncode == 0 and okj.stdout.strip() else {}
-    reale = probe_dur(mp4)
+    # verifica di identita': sha256 del file scaricato == sha nel .ok (scritto DOPO il gate
+    # durata sul pod). Se combacia, il file locale e' bit-per-bit quello validato e la
+    # durata del .ok e' quella misurata al gate (ffprobe non serve in locale).
+    sha_loc = hashlib.sha256(mp4.read_bytes()).hexdigest()
+    reale = ok_meta.get("duration", 0.0)
     delta = reale - attesa
-    esito = "PASS" if abs(delta) <= TOL else "FAIL"
+    ok_sha = sha_loc == ok_meta.get("sha256")
+    esito = "PASS" if ok_sha and abs(delta) <= TOL else "FAIL"
     righe.append((sid, corso, attesa, reale, delta, esito, ok_meta.get("duration")))
-    print(f"{esito}  {sid}: attesa {attesa}s · reale {reale}s · delta {delta:+.2f}s")
+    print(f"{esito}  {sid}: attesa {attesa}s · validata {reale}s · delta {delta:+.2f}s · sha {'OK' if ok_sha else 'DIVERSO!'}")
 
 rows = "".join(
     f"<tr class='{e.lower()}'><td>{s}</td><td>{c}</td><td>{a:.1f}s</td><td>{r:.1f}s</td>"
