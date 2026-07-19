@@ -29,3 +29,14 @@
   al pre-flight: prep rate < 6 fr/s nei primi 2 min -> destroy + sostituto).
 - Immagine Docker: host datacenter (rel>=0.995) scaricano senza throttle (boot 3 min);
   host amatoriali si impiantano sul pull di Docker Hub (visti 3 casi > 15 min).
+
+## PROFILO HOST VINCENTE (misurato 19/07, machine 10914: prep 10.3 fr/s = 8x il peggiore)
+CPU Threadripper PRO 5995WX (64c fisici, 18 effettivi) · PCIe 17.5 GB/s · NVMe 1371 MB/s
+· verified · rel 0.996 · UE (Norvegia). CPU workstation/server = il vero discriminante.
+
+## QUERY FLOTTA DEFINITIVA (search offers)
+  gpu_name=RTX_4090 num_gpus=1 verified=true reliability2>=0.995
+  cpu_cores>=32 cpu_cores_effective>=14 pcie_bw>=12 disk_bw>=800
+  inet_down>=800 disk_space>=80 rentable=true  (ordina per dph)
+Host già noti buoni: machine 10914 (Threadripper, questa) e la macchina del pilota mattina.
+Pre-flight resta obbligatorio: boot<=8min, prep-rate>=6 fr/s nei primi 2 min, altrimenti destroy+sostituto.
