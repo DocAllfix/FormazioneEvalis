@@ -21,3 +21,11 @@
 ## Host noti
 - BUONI: macchina di 43965881 (19/07 mattina: pull veloce, 1688Mbps reali, zero problemi)
 - LENTI/INSTABILI (19/07): offerte 41130302/41130310 (stessa macchina), 41267735 (offline durante il boot)
+
+## AGGIUNTA 19/07 sera (lezione host A/B)
+- La CPU conta quanto la GPU: prep landmark e blending/encode sono CPU-bound.
+  Host 35283316 (CPU debole): prep 2.5 fr/s vs 10 fr/s del host di mattina = 4x piu' lento.
+- FILTRO AGGIUNTIVO flotta: cpu_cores_effective >= 16 e cpu_ghz >= 3.0 (o benchmark
+  al pre-flight: prep rate < 6 fr/s nei primi 2 min -> destroy + sostituto).
+- Immagine Docker: host datacenter (rel>=0.995) scaricano senza throttle (boot 3 min);
+  host amatoriali si impiantano sul pull di Docker Hub (visti 3 casi > 15 min).
