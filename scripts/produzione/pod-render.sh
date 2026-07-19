@@ -19,7 +19,9 @@ export RCLONE_CONFIG_R2_TYPE=s3 RCLONE_CONFIG_R2_PROVIDER=Cloudflare \
 R2="r2:${R2_BUCKET}"
 export PRODUZIONE_ROOT=/workspace/produzione MUSETALK_DIR=/workspace/MuseTalk \
        R2_AUDIO_REMOTE="$R2/audio-master" R2_REMOTE="$R2" \
-       MUSETALK_BBOX_SHIFT=-7 MUSETALK_EXTRA_MARGIN=8 MUSETALK_PARSING_MODE=jaw MUSETALK_FIXED_BBOX=0
+       MUSETALK_BBOX_SHIFT=-7 MUSETALK_EXTRA_MARGIN=8 MUSETALK_PARSING_MODE=jaw MUSETALK_FIXED_BBOX=0 \
+       MUSETALK_DRIVE_DB=-12 POST_MODE=v1 FFMPEG=/usr/bin/ffmpeg FFPROBE=/usr/bin/ffprobe
+export PATH=/workspace/bin:$PATH   # ffmpeg di sistema (libx264) davanti a quello di conda
 
 mkdir -p /workspace/produzione/"$CORSO"
 rclone copyto "$R2/audio-master/$CORSO/audio-map.json" /workspace/produzione/"$CORSO"/audio-map.json 2>/dev/null \

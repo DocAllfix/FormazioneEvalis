@@ -31,6 +31,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # console Windows cp1252
@@ -301,10 +302,10 @@ def main() -> None:
                 if args.purge_local:
                     out.unlink()  # il .ok locale resta: è il marcatore di idempotenza
             ok += 1
-            print(f"✓ {sid}: PASS ({ok_data['duration']}s)")
+            print(f"✓ {sid}: PASS ({ok_data['duration']}s) t={int(time.time())}")
         except Exception as e:  # job atomico: un errore = una clip, non ferma lo shard
             failed += 1
-            print(f"✗ {sid}: FAILED — {e}")
+            print(f"✗ {sid}: FAILED — {e} t={int(time.time())}")
             for f in (out, clips_dir / f"{sid}.mp4.ok"):
                 if f.exists():
                     f.unlink()
