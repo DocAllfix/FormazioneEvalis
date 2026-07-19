@@ -162,7 +162,11 @@ def render_musetalk_batch(ids: list[str], base_pingpong: Path, base_dir: Path, c
              "--parsing_mode", os.environ.get("MUSETALK_PARSING_MODE", "jaw"),
              "--left_cheek_width", os.environ.get("MUSETALK_CHEEK", "90"),
              "--right_cheek_width", os.environ.get("MUSETALK_CHEEK", "90"),
-             "--fps", "25"]
+             "--fps", "25",
+             # i default di realtime_inference puntano ai pesi v1.0 (models/musetalk/):
+             # i nostri sono v1.5 — path espliciti OBBLIGATORI (lezione smoke 2026-07-14)
+             "--unet_model_path", os.environ.get("MUSETALK_UNET", "./models/musetalkV15/unet.pth"),
+             "--unet_config", os.environ.get("MUSETALK_UNET_CFG", "./models/musetalkV15/musetalk.json")]
     # stdin=DEVNULL: se l'avatar esiste MuseTalk chiede "re-create? (y/n)" via input() e
     # senza tty va in EOFError. Con l'avatar prep-una-volta questo non capita, ma blindiamo.
     subprocess.run(

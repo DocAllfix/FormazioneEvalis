@@ -77,6 +77,11 @@ def naturalizza(clip: Path, base_pingpong: Path, wav: Path, sid: str, out: Path,
     """Default = SOLO gate-silenzi (nitido): l'utente ha bocciato deflicker/sharpen (sfocano
     la bocca). deflicker/sharpen restano opzionali via parametro per casi specifici."""
     wins = silenzi(wav, rms_db, min_ms)
+    # durata ESATTA dell'audio: l'output viene clampato con -t (l'overlay col base ping-pong
+    # allunga il video oltre il main nonostante -shortest — visto sul pilota: +2.05s → gate FAIL)
+    probe = subprocess.run([FFPROBE, "-v", "error", "-show_entries", "format=duration",
+                            "-of", "csv=p=0", str(wav)], capture_output=True, text=True, check=True)
+    dur_audio = float(probe.stdout.strip())
     vf = []
     filtri = f"[0:v][1:v]overlay=enable='{'+'.join(f'between(t,{a:.3f},{b:.3f})' for a,b in wins)}'[g]" if wins \
         else "[0:v]null[g]"
@@ -100,7 +105,8 @@ def naturalizza(clip: Path, base_pingpong: Path, wav: Path, sid: str, out: Path,
             [FFMPEG, "-v", "error", "-y", "-i", str(clip), "-i", str(base_pingpong), "-i", str(wav),
              "-filter_complex", fc, "-map", vmap, "-map", "2:a:0",
              *venc, "-c:a", "aac", "-b:a", "128k",
-             "-metadata", f"comment={sid}", "-movflags", "+faststart", "-shortest", str(out)],
+             "-metadata", f"comment={sid}", "-movflags", "+faststart",
+             "-t", f"{dur_audio:.3f}", "-shortest", str(out)],
             capture_output=True, text=True)
         if r.returncode == 0:
             return

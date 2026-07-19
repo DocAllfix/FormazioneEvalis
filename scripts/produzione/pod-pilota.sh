@@ -35,12 +35,21 @@ CLIPS=(
   "agg14001:agg14001_m01_s001" # aggiornamento, apertura
   "50001:50001_m03_s012"      # la PIU' LUNGA del catalogo (389.4s) — stress pingpong
 )
+# TEMPI PRECISI: ogni fase marcata in /workspace/tempi.log (epoch;fase;dettaglio) —
+# servono a calibrare il preventivo del batch su numeri REALI, non stimati.
+TL=/workspace/tempi.log
+t(){ echo "$(date +%s);$1;$2" >> "$TL"; }
+t PILOTA_START ""
 for pair in "${CLIPS[@]}"; do
   corso="${pair%%:*}"; sid="${pair##*:}"
   mkdir -p "/workspace/produzione/$corso"
   [ -s "/workspace/produzione/$corso/audio-map.json" ] || \
     rclone copyto "$R2/audio-master/$corso/audio-map.json" "/workspace/produzione/$corso/audio-map.json"
   echo "== PILOTA $sid =="
+  t CLIP_START "$sid"
   python /workspace/toolkit/render-avatar.py "$corso" --only "$sid" --base "$BASE" --batch 20
+  t CLIP_END "$sid"
 done
-echo "PILOTA COMPLETO — clip + .ok su $R2/avatar-clips/<corso>/"
+t PILOTA_END ""
+rclone copyto "$TL" "$R2/avatar-clips/_pilota-tempi.log" || true
+echo "PILOTA COMPLETO — clip + .ok su $R2/avatar-clips/<corso>/ · tempi in _pilota-tempi.log"
