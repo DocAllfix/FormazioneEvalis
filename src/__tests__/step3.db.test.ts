@@ -152,4 +152,51 @@ describe("Step 3 — integrazione DB", () => {
     expect(r2.completed).toBe(false);
     expect(await isSlideCompleted(enr.id, s.id)).toBe(false);
   });
+
+  it("tempo minimo irrigidito a 0,95: 90% della clip NON completa, 95% completa", async () => {
+    // Slide di esempio: audioSeconds=40 → soglia 0,90=36s, soglia 0,95=38s.
+    const { courseId } = await ingestCourse(sampleCourse());
+    createdCourseIds.push(courseId);
+    const res = await auth.api.signUpEmail({ body: { name: "Ratio", email: `evalis-ratio+${RUN}@example.test`, password: PW } });
+    const uid = res.user.id;
+    createdUserIds.push(uid);
+    const orgId = (await firstMembershipOrgId(uid))!;
+    const [enr] = await db
+      .insert(enrollment)
+      .values({ organizationId: orgId, userId: uid, courseId, source: "manual", status: "active" })
+      .returning({ id: enrollment.id });
+
+    const slides = await db
+      .select({ id: slide.id, audioSeconds: slide.audioSeconds })
+      .from(slide)
+      .innerJoin(lesson, eq(lesson.id, slide.lessonId))
+      .innerJoin(module, eq(module.id, lesson.moduleId))
+      .where(eq(module.courseId, courseId))
+      .orderBy(asc(slide.position));
+
+    // Fruisce onestamente `watch` secondi, poi dichiara la clip finita con un gap ampio
+    // (>MAX_GAP): l'intervallo finale NON viene accreditato → tempo effettivo = `watch`,
+    // ma audioCompleted=true (la clip ha raggiunto la fine).
+    async function watchThenEnd(slideId: string, watch: number, audioSeconds: number) {
+      let t = Date.now();
+      let pos = 0;
+      await recordHeartbeat({ enrollmentId: enr.id, slideId, position: 0, focus: true, playing: true, nowMs: t });
+      while (pos < watch) {
+        const step = Math.min(12, watch - pos);
+        pos += step;
+        t += step * 1000;
+        await recordHeartbeat({ enrollmentId: enr.id, slideId, position: pos, focus: true, playing: true, nowMs: t });
+      }
+      await recordHeartbeat({ enrollmentId: enr.id, slideId, position: audioSeconds, focus: true, playing: true, audioCompleted: true, nowMs: t + 60000 });
+    }
+
+    // 36s = 90% della clip: sotto la nuova soglia 0,95 (=38s) → NON completa
+    // (con la vecchia soglia 0,90 si sarebbe completata: 36 ≥ 36).
+    await watchThenEnd(slides[0].id, 36, slides[0].audioSeconds);
+    expect(await isSlideCompleted(enr.id, slides[0].id)).toBe(false);
+
+    // 38s = 95% della clip: raggiunge la soglia irrigidita → completa.
+    await watchThenEnd(slides[1].id, 38, slides[1].audioSeconds);
+    expect(await isSlideCompleted(enr.id, slides[1].id)).toBe(true);
+  });
 });

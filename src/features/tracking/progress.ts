@@ -17,9 +17,9 @@ export const CREDIT_TOLERANCE_SECONDS = 3; // scarto ammesso tra tempo reale e a
 export const MAX_GAP_MS = 30_000; // oltre questo, l'intervallo non viene accreditato
 // Tempo minimo di fruizione (vincolo Accordo Stato-Regioni): la slide si completa solo
 // se la clip è stata vista fino in fondo (audioCompleted, no-seek) E il tempo EFFETTIVO
-// accreditato lato server copre ≥ 90% della durata. L'accredito è sempre wall-time reale
+// accreditato lato server copre ≥ 95% della durata. L'accredito è sempre wall-time reale
 // (non la posizione dichiarata): impossibile da falsificare istantaneamente.
-export const MIN_WATCH_RATIO = 0.9;
+export const MIN_WATCH_RATIO = 0.95;
 
 /** Quanti secondi accreditare tra due heartbeat consecutivi (LOGICA PURA, testabile). */
 export function creditableSeconds(p: {
