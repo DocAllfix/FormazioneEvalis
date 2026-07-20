@@ -47,7 +47,7 @@ function footer(label, dark) {
   return `<div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid ${dark ? C.onDarkLine : C.line}; padding-top:22px;"><div style="display:flex; flex-direction:column; line-height:1; gap:5px;"><div style="font-family:${F.grot}; font-weight:700; font-size:16px; letter-spacing:-.02em; color:${ac};">evalis</div><div style="font-family:${F.mono}; font-size:8px; letter-spacing:.34em; color:${C.taupe2};">ACADEMY</div></div><span style="font-family:${F.mono}; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:${C.taupe2};">${esc(label)}</span></div>`;
 }
 function shell(inner, bg, label) {
-  return `<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;background:#E7DECD;"><section data-screen-label="${esc(label)}" style="width:1280px; min-height:720px; background:${bg}; font-family:${F.sans}; display:flex; flex-direction:column; padding:58px 80px;">${inner}</section></body></html>`;
+  return `<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;background:#E7DECD;"><section data-screen-label="${esc(label)}" style="box-sizing:border-box; width:1280px; min-height:720px; background:${bg}; font-family:${F.sans}; display:flex; flex-direction:column; padding:58px 80px;">${inner}</section></body></html>`;
 }
 const mid = (inner) => `<div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:40px 0;">${inner}</div>`;
 

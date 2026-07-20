@@ -39,7 +39,9 @@ export function SlideHtml({
 <style>
   html,body{margin:0;padding:0;background:${bg};overflow:hidden;}
   #stage{width:${TOTAL_W}px;transform-origin:top left;}
-  #stage > section{margin-left:${GUTTER}px;width:${SLIDE_W}px!important;overflow:hidden;}
+  /* border-box: la slide e' larga ${SLIDE_W}px TOTALI (padding incluso) e non sborda dal
+     canvas. Senza, width+padding la porterebbe a ~1440px e il bordo destro verrebbe tagliato. */
+  #stage > section{margin-left:${GUTTER}px;width:${SLIDE_W}px!important;box-sizing:border-box!important;overflow:hidden;}
   /* durante la misura: tutto ad altezza naturale per leggere l'altezza reale */
   #stage.measuring > section, #stage.measuring > section *{height:auto!important;min-height:0!important;}
 </style></head>

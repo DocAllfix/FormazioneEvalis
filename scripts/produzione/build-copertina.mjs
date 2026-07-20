@@ -51,7 +51,7 @@ function spec(C, n, l) {
 
 function shell(inner, C) {
   return `<!DOCTYPE html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;background:#E7DECD;"><section data-screen-label="cover" style="position:relative; overflow:hidden; width:1280px; min-height:720px; background:${C.dark}; font-family:${F.sans}; display:flex; flex-direction:column; padding:60px 80px;">
+<body style="margin:0;background:#E7DECD;"><section data-screen-label="cover" style="box-sizing:border-box; position:relative; overflow:hidden; width:1280px; min-height:720px; background:${C.dark}; font-family:${F.sans}; display:flex; flex-direction:column; padding:60px 80px;">
 <div style="position:absolute; top:-160px; right:-120px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle, ${C.glow} 0%, rgba(0,0,0,0) 70%); pointer-events:none;"></div>
 ${inner}</section></body></html>`;
 }
