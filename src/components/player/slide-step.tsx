@@ -81,8 +81,13 @@ export function SlideStep({
 
   const htmlBlock = htmlBlockOf(slide.blocks);
   // colore di sfondo della slide → tinge il gutter così l'avatar è integrato nel
-  // campo-colore della slide (non un riquadro "in hover").
-  const slideBg = htmlBlock?.html.match(/background:\s*(#[0-9a-fA-F]{3,8})/)?.[1] ?? "#F4F3EF";
+  // campo-colore della slide (estensione della slide, non una striscia diversa).
+  // Prende il background della <section> (la slide vera): l'HTML importato ha un
+  // <body> con un suo background che NON è quello della slide → mai usare il primo match.
+  const slideBg =
+    htmlBlock?.html.match(/<section[^>]*background:\s*(#[0-9a-fA-F]{3,8})/)?.[1] ??
+    htmlBlock?.html.match(/background:\s*(#[0-9a-fA-F]{3,8})/)?.[1] ??
+    "#F4F3EF";
 
   // FIT-TO-SCREEN: la slide è scalata per stare INTERA nell'area disponibile
   // (come una vera presentazione), così non viene mai tagliata né va in scroll.
@@ -108,9 +113,10 @@ export function SlideStep({
   // Avatar nel GUTTER sinistro: piccolo, piatto, sullo stesso sfondo della slide →
   // sembra parte della slide. Autoplay, niente controlli (si vede solo il relatore).
   const avatarOverlay = slide.hasClip ? (
-    <div className="absolute left-[1.5%] top-[4.5%] z-10 w-[20%]">
-      <div className="overflow-hidden rounded-lg">
-        <video ref={player.videoRef} autoPlay playsInline className="pointer-events-none aspect-video w-full" />
+    <div className="absolute left-[2%] top-[5%] z-10 w-[15%]">
+      <div className="overflow-hidden rounded-xl shadow-md">
+        {/* la clip è quadrata (540×540): aspect-square = nessuna banda nera */}
+        <video ref={player.videoRef} autoPlay playsInline className="pointer-events-none aspect-square w-full object-cover" />
       </div>
     </div>
   ) : null;
