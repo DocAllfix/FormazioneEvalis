@@ -53,11 +53,20 @@ function provisionalHtml(slide) {
 </section>`;
 }
 
+// SOLO la <section> (come il corso demo): l'HTML importato è un documento intero con
+// <body> che ha un suo background — se lo salviamo com'è, il player prende quel background
+// (es. #E7DECD) e tinge il gutter di un colore diverso dalla slide. Estraendo la section,
+// il primo (e unico) background è quello vero della slide.
+function sectionOnly(full, id) {
+  const m = full.match(/<section\b[\s\S]*<\/section>/i);
+  if (!m) throw new Error(`nessuna <section> in ${id}.html`);
+  return m[0];
+}
 function htmlFor(slide) {
   if (!slidesDir) return provisionalHtml(slide);
   const f = path.join(slidesDir, `${slide.id}.html`);
   if (!fs.existsSync(f)) throw new Error(`slide HTML definitiva mancante: ${f}`);
-  return fs.readFileSync(f, "utf8");
+  return sectionOnly(fs.readFileSync(f, "utf8"), slide.id);
 }
 
 // banca copioni [{q, opzioni[], corretta}] -> formato canonico piattaforma
