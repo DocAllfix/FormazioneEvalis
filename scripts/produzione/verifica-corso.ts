@@ -51,7 +51,7 @@ for (const m of mods) {
       if (!skipStream && s.avatarClipUid) {
         try {
           const st = await getClipStatus(s.avatarClipUid);
-          if (!st.readyToStream) errors.push(`${m.title} slide "${s.title}": clip ${s.avatarClipUid} NON readyToStream`);
+          if (!st.ready) errors.push(`${m.title} slide "${s.title}": clip ${s.avatarClipUid} NON readyToStream`);
           else if (Math.abs((st.duration ?? 0) - s.audioSeconds) > 1)
             errors.push(`${m.title} slide "${s.title}": durata Stream ${st.duration}s ≠ DB ${s.audioSeconds}s`);
         } catch (e) {
