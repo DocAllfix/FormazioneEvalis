@@ -115,7 +115,7 @@ export function SlideStep({
   // Avatar nel GUTTER sinistro: piccolo, piatto, sullo stesso sfondo della slide →
   // sembra parte della slide. Autoplay, niente controlli (si vede solo il relatore).
   const avatarOverlay = slide.hasClip ? (
-    <div className="absolute left-[2%] top-[5%] z-10 w-[11%]">
+    <div className="absolute left-[2%] top-[5%] z-10 w-[9%]">
       <div className="overflow-hidden rounded-xl shadow-md">
         {/* la clip è quadrata (540×540): aspect-square = nessuna banda nera */}
         <video ref={player.videoRef} autoPlay playsInline className="pointer-events-none aspect-square w-full object-cover" />
@@ -124,7 +124,7 @@ export function SlideStep({
   ) : null;
 
   const statusBar = (
-    <div className="shrink-0 px-4 pb-2 pt-1">
+    <div className="shrink-0 px-4 pb-1 pt-0.5">
       {player.completed ? (
         <p className="inline-flex items-center gap-1.5 text-sm font-medium text-success">
           <Check className="h-4 w-4" /> Unità completata
@@ -161,8 +161,8 @@ export function SlideStep({
   if (htmlBlock) {
     return (
       <div className="flex h-full flex-col">
-        <p className="shrink-0 px-4 pt-3 text-xs uppercase tracking-wider text-primary">{label}</p>
-        <div ref={areaRef} className="flex min-h-0 flex-1 items-center justify-center px-4 py-2">
+        <p className="shrink-0 px-4 pt-1 text-xs uppercase tracking-wider text-primary">{label}</p>
+        <div ref={areaRef} className="flex min-h-0 flex-1 items-center justify-center px-2 py-1">
           <div className="relative" style={{ width: boxW || "100%", aspectRatio: String(ratio) }}>
             <div
               className="absolute inset-0 overflow-hidden rounded-2xl border border-border shadow-sm"
