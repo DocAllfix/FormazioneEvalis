@@ -108,7 +108,13 @@ export function SlideStep({
     measure();
     return () => ro.disconnect();
   }, [htmlBlock]);
-  const boxW = area.w && area.h ? Math.floor(Math.min(area.w, area.h * ratio)) : 0;
+  // La slide non deve MAI riempire tutta la larghezza dello schermo (effetto "troppo
+  // ingrandita"): la limitiamo a una frazione della larghezza disponibile, centrata, con
+  // margine attorno — come la reference (slide4-check). Le slide "alte" (ratio piccolo)
+  // restano comunque limitate dall'altezza, quindi non cambiano. Alza/abbassa
+  // SLIDE_MAX_W_FRAC per avere la slide piu' grande / piu' piccola.
+  const SLIDE_MAX_W_FRAC = 0.62;
+  const boxW = area.w && area.h ? Math.floor(Math.min(area.w * SLIDE_MAX_W_FRAC, area.h * ratio)) : 0;
 
   // Avatar nel GUTTER sinistro: piccolo, piatto, sullo stesso sfondo della slide →
   // sembra parte della slide. Autoplay, niente controlli (si vede solo il relatore).
