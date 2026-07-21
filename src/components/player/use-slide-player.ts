@@ -166,13 +166,31 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
     return () => clearInterval(id);
   }, [slide.hasClip, slide.id, slide.audioSeconds, dispatch]);
 
-  // presenza (anti-AFK / cambio tab)
+  // presenza (anti-AFK / cambio scheda / minimizza / altra finestra).
+  // BLOCCA il video appena non sei ATTIVAMENTE sul corso: cambio scheda o minimizzazione
+  // (Page Visibility API: document.hidden) E anche clic su un'altra finestra col browser
+  // ancora visibile (window blur, con document.hasFocus a distinguere il focus della finestra).
+  // Al ritorno riprende da dov'era (se la clip non e' finita). Cosi' l'avatar non parla mai in
+  // background. Lo stato "presente" alimenta anche il focus dell'heartbeat -> il server non
+  // accredita tempo quando non sei attivo (doppia sicurezza: pausa + niente credito).
   useEffect(() => {
-    const onVis = () =>
-      dispatch({ type: "visibility", visible: document.visibilityState === "visible" });
-    document.addEventListener("visibilitychange", onVis);
-    return () => document.removeEventListener("visibilitychange", onVis);
-  }, [dispatch]);
+    const sync = () => {
+      const active = document.visibilityState === "visible" && document.hasFocus();
+      dispatch({ type: "visibility", visible: active });
+      const video = videoRef.current;
+      if (!video || !slide.hasClip) return;
+      if (!active) video.pause();
+      else if (!video.ended) void video.play().catch(() => {});
+    };
+    document.addEventListener("visibilitychange", sync);
+    window.addEventListener("blur", sync);
+    window.addEventListener("focus", sync);
+    return () => {
+      document.removeEventListener("visibilitychange", sync);
+      window.removeEventListener("blur", sync);
+      window.removeEventListener("focus", sync);
+    };
+  }, [dispatch, slide.hasClip]);
 
   // heartbeat periodico (fetch) finché la slide non è completata + beacon su uscita.
   // A completamento server (`completed`) si ferma: niente heartbeat/DB write inutili.
