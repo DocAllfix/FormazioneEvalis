@@ -101,6 +101,19 @@ describe("creditableSeconds (server)", () => {
     expect(creditableSeconds({ ...base, prevTsMs: null, prevPosition: null, nowMs: 12000, position: 12 })).toBe(0);
     expect(creditableSeconds({ ...base, nowMs: 40000, position: 40 })).toBe(0);
   });
+  it("accredita a cavallo di un cambio scheda: basta il focus a UN estremo (anti-stallo)", () => {
+    // ripresa: prima nascosta (prevFocus=false), ora visibile, avanzamento reale dopo il ritorno
+    expect(creditableSeconds({ ...base, prevFocus: false, prevTsMs: 5000, prevPosition: 5, nowMs: 9000, position: 9 })).toBe(4);
+    // nascondimento: prima visibile, ora nascosta, ma i secondi guardati fino all'istante del cambio contano
+    expect(creditableSeconds({ ...base, focus: false, prevTsMs: 5000, prevPosition: 5, nowMs: 9000, position: 9 })).toBe(4);
+  });
+  it("NON accredita se la scheda è nascosta a ENTRAMBI gli estremi", () => {
+    expect(creditableSeconds({ ...base, focus: false, prevFocus: false, prevTsMs: 5000, prevPosition: 5, nowMs: 9000, position: 9 })).toBe(0);
+  });
+  it("accredita il contenuto scorso, mai più del tempo reale (buffering parziale)", () => {
+    // 5s reali ma solo 2s di video effettivamente scorsi (buffering) → accredita 2, non 5
+    expect(creditableSeconds({ ...base, prevTsMs: 5000, prevPosition: 5, nowMs: 10000, position: 7 })).toBe(2);
+  });
 });
 
 describe("quiz", () => {

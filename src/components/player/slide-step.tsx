@@ -133,7 +133,7 @@ export function SlideStep({
         <div className="flex items-center gap-3">
           <span className="shrink-0 text-xs text-muted-foreground">
             {player.recovering
-              ? "Recupero dei secondi di visione mancanti…"
+              ? "Ci siamo quasi…"
               : player.visible
                 ? "Tempo minimo di fruizione"
                 : "In pausa: torna su questa scheda"}
@@ -141,6 +141,15 @@ export function SlideStep({
           <div className="h-2 flex-1 overflow-hidden rounded-full bg-secondary">
             <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${minProgress}%` }} />
           </div>
+          {player.recovering && (
+            <button
+              type="button"
+              onClick={player.replay}
+              className="shrink-0 rounded-md border border-border px-2 py-0.5 text-xs text-muted-foreground hover:bg-secondary"
+            >
+              Rivedi ultimi 30s
+            </button>
+          )}
           <span className="shrink-0 text-xs tabular-nums text-muted-foreground">
             {fmt(player.displaySeconds)} / {fmt(slide.audioSeconds)}
           </span>

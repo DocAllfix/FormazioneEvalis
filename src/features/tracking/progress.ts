@@ -21,7 +21,20 @@ export const MAX_GAP_MS = 30_000; // oltre questo, l'intervallo non viene accred
 // (non la posizione dichiarata): impossibile da falsificare istantaneamente.
 export const MIN_WATCH_RATIO = 0.95;
 
-/** Quanti secondi accreditare tra due heartbeat consecutivi (LOGICA PURA, testabile). */
+/** Quanti secondi accreditare tra due heartbeat consecutivi (LOGICA PURA, testabile).
+ * Accredita il CONTENUTO del video effettivamente scorso (avanzamento posizione), MAI più
+ * del tempo reale trascorso. Regole (anti-frode E anti-stallo, la seconda è prioritaria: un
+ * utente che guarda davvero non deve MAI restare bloccato):
+ *  - basta il focus a UN estremo dell'intervallo: col video messo in pausa a scheda nascosta
+ *    la posizione avanza SOLO mentre guardi, quindi un avanzamento è visione reale anche a
+ *    cavallo di un cambio scheda; se il focus manca a ENTRAMBI gli estremi → niente credito;
+ *  - in play (o intervallo finale a clip conclusa);
+ *  - niente gap/AFK oltre maxGap;
+ *  - pos ≤ 0 (fermo/buffering/salto indietro) → 0: nessun contenuto nuovo (il buffering non
+ *    fa danno, semplicemente non accredita finché il video non riparte);
+ *  - credito = min(avanzamento, tempo reale): non si può consumare più video dei secondi
+ *    realmente passati (blocca la velocità x2); i salti in avanti sono già impediti dallo
+ *    snap-back client e comunque qui verrebbero limitati al tempo reale. */
 export function creditableSeconds(p: {
   prevTsMs: number | null;
   prevFocus: boolean | null;
@@ -34,15 +47,14 @@ export function creditableSeconds(p: {
   maxGapMs?: number;
 }): number {
   if (p.prevTsMs === null || p.prevPosition === null) return 0; // primo heartbeat
-  if (!p.focus || !p.prevFocus) return 0; // deve essere visibile (prima e ora)
-  // deve essere in play; UNICA eccezione: l'intervallo finale a clip conclusa
-  // (audioCompleted) si accredita perché il video ERA in play fino alla fine.
-  if (!p.playing && !p.audioCompleted) return 0;
+  if (!p.focus && !p.prevFocus) return 0; // scheda nascosta a entrambi gli estremi
+  if (!p.playing && !p.audioCompleted) return 0; // in play, o intervallo finale a clip conclusa
   const wall = (p.nowMs - p.prevTsMs) / 1000;
   const pos = p.position - p.prevPosition;
   if (wall <= 0 || p.nowMs - p.prevTsMs > (p.maxGapMs ?? MAX_GAP_MS)) return 0; // gap/AFK
-  if (Math.abs(pos - wall) > CREDIT_TOLERANCE_SECONDS) return 0; // salto avanti/indietro o pausa
-  return Math.round(wall);
+  if (pos <= 0) return 0; // fermo, buffering o salto indietro: nessun contenuto nuovo
+  if (pos > wall + CREDIT_TOLERANCE_SECONDS) return 0; // salto in avanti / velocità x2: non credito
+  return Math.min(Math.round(pos), Math.round(wall)); // contenuto scorso, cap sul tempo reale
 }
 
 export async function recordHeartbeat(params: {
