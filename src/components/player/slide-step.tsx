@@ -136,7 +136,11 @@ export function SlideStep({
       ) : (
         <div className="flex items-center gap-3">
           <span className="shrink-0 text-xs text-muted-foreground">
-            {player.visible ? "Tempo minimo di fruizione" : "In pausa: torna su questa scheda"}
+            {player.recovering
+              ? "Recupero dei secondi di visione mancanti…"
+              : player.visible
+                ? "Tempo minimo di fruizione"
+                : "In pausa: torna su questa scheda"}
           </span>
           <div className="h-2 flex-1 overflow-hidden rounded-full bg-secondary">
             <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${minProgress}%` }} />

@@ -15,6 +15,11 @@ import {
   type SlideGateState,
 } from "@/features/player/controller";
 
+// Soglia tempo minimo usata SOLO dalla rete di sicurezza client (quanti secondi far
+// recuperare). Deve combaciare con MIN_WATCH_RATIO del server (features/tracking/progress.ts).
+// La verità sul completamento resta comunque il server.
+const MIN_WATCH_RATIO_CLIENT = 0.95;
+
 interface SlideArg {
   id: string;
   hasClip: boolean;
@@ -166,30 +171,23 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
     return () => clearInterval(id);
   }, [slide.hasClip, slide.id, slide.audioSeconds, dispatch]);
 
-  // presenza (anti-AFK / cambio scheda / minimizza / altra finestra).
-  // BLOCCA il video appena non sei ATTIVAMENTE sul corso: cambio scheda o minimizzazione
-  // (Page Visibility API: document.hidden) E anche clic su un'altra finestra col browser
-  // ancora visibile (window blur, con document.hasFocus a distinguere il focus della finestra).
-  // Al ritorno riprende da dov'era (se la clip non e' finita). Cosi' l'avatar non parla mai in
-  // background. Lo stato "presente" alimenta anche il focus dell'heartbeat -> il server non
-  // accredita tempo quando non sei attivo (doppia sicurezza: pausa + niente credito).
+  // presenza — cambio scheda / minimizzazione (Page Visibility API).
+  // Quando la scheda NON è in primo piano METTE IN PAUSA il video: così la posizione avanza
+  // SOLO mentre guardi davvero, e il gate smette di accreditare (visible=false + video in
+  // pausa => il timer si ferma INSIEME al video). Al ritorno riprende da dov'era.
+  // Conseguenza chiave (anti-stallo): il video non può arrivare alla fine senza aver maturato
+  // il tempo → il caso "video finito ma timer indietro" per cambio scheda non può più accadere.
   useEffect(() => {
-    const sync = () => {
-      const active = document.visibilityState === "visible" && document.hasFocus();
-      dispatch({ type: "visibility", visible: active });
-      const video = videoRef.current;
-      if (!video || !slide.hasClip) return;
-      if (!active) video.pause();
-      else if (!video.ended) void video.play().catch(() => {});
+    const onVis = () => {
+      const visible = document.visibilityState === "visible";
+      dispatch({ type: "visibility", visible });
+      const v = videoRef.current;
+      if (!v || !slide.hasClip) return;
+      if (!visible) v.pause();
+      else if (!v.ended) void v.play().catch(() => {});
     };
-    document.addEventListener("visibilitychange", sync);
-    window.addEventListener("blur", sync);
-    window.addEventListener("focus", sync);
-    return () => {
-      document.removeEventListener("visibilitychange", sync);
-      window.removeEventListener("blur", sync);
-      window.removeEventListener("focus", sync);
-    };
+    document.addEventListener("visibilitychange", onVis);
+    return () => document.removeEventListener("visibilitychange", onVis);
   }, [dispatch, slide.hasClip]);
 
   // heartbeat periodico (fetch) finché la slide non è completata + beacon su uscita.
@@ -214,9 +212,35 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
     if (snapshot.audioCompleted && !completed) void sendHeartbeat(false);
   }, [snapshot.audioCompleted, completed, sendHeartbeat]);
 
+  // RETE DI SICUREZZA anti-stallo (solo modalità VIDEO). La pausa su cambio scheda elimina la
+  // causa principale, ma nell'istante esatto del cambio (o per buffering su rete lenta) possono
+  // sfuggire pochi secondi: il video finirebbe con il tempo effettivo appena sotto la soglia e
+  // resterebbe bloccato PER SEMPRE. Qui, se la clip è ferma sulla fine ma il server non ha
+  // ancora completato, si RIGUARDA solo la coda mancante (riavvolgendo di quanto manca) finché
+  // la soglia non è raggiunta. Non sblocca nulla: accredita solo visione reale in più (il minimo
+  // lato server resta identico). Deadlock matematicamente impossibile.
+  useEffect(() => {
+    if (!slide.hasClip || completed || !snapshot.audioCompleted) return;
+    const v = videoRef.current;
+    if (!v || !v.ended) return; // agisce solo a clip FERMA sulla fine, mai durante il replay
+    const dur = v.duration && isFinite(v.duration) ? v.duration : slide.audioSeconds;
+    const required = Math.max(3, Math.floor(dur * MIN_WATCH_RATIO_CLIENT));
+    const missing = required - serverEffectiveSeconds;
+    if (missing <= 0) return; // basta: il server completerà al prossimo heartbeat
+    const target = Math.max(0, dur - (missing + 8)); // riguarda solo la coda mancante (+8s margine)
+    try {
+      v.currentTime = target;
+    } catch {
+      /* seek non disponibile: riparte comunque da dov'è */
+    }
+    void v.play().catch(() => {});
+  }, [slide.hasClip, slide.audioSeconds, completed, snapshot.audioCompleted, serverEffectiveSeconds]);
+
   return {
     videoRef,
     visible: snapshot.visible,
+    // in recupero: audio finito ma il server non ha ancora completato (si sta riguardando la coda)
+    recovering: snapshot.audioCompleted && !completed,
     serverEffectiveSeconds,
     // valore mostrato: client (fluido, ogni secondo) ma mai oltre il minimo
     displaySeconds: Math.min(slide.audioSeconds, Math.max(serverEffectiveSeconds, snapshot.effectiveSeconds)),
