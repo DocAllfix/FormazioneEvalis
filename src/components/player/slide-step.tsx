@@ -115,7 +115,7 @@ export function SlideStep({
   // Avatar nel GUTTER sinistro: piccolo, piatto, sullo stesso sfondo della slide →
   // sembra parte della slide. Autoplay, niente controlli (si vede solo il relatore).
   const avatarOverlay = slide.hasClip ? (
-    <div className="absolute left-[2%] top-[5%] z-10 w-[9%]">
+    <div className="absolute left-[2%] top-[5%] z-10 w-[7%]">
       <div className="overflow-hidden rounded-xl shadow-md">
         {/* la clip è quadrata (540×540): aspect-square = nessuna banda nera */}
         <video ref={player.videoRef} autoPlay playsInline className="pointer-events-none aspect-square w-full object-cover" />
