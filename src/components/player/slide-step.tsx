@@ -108,18 +108,14 @@ export function SlideStep({
     measure();
     return () => ro.disconnect();
   }, [htmlBlock]);
-  // La slide non deve MAI riempire tutta la larghezza dello schermo (effetto "troppo
-  // ingrandita"): la limitiamo a una frazione della larghezza disponibile, centrata, con
-  // margine attorno — come la reference (slide4-check). Le slide "alte" (ratio piccolo)
-  // restano comunque limitate dall'altezza, quindi non cambiano. Alza/abbassa
-  // SLIDE_MAX_W_FRAC per avere la slide piu' grande / piu' piccola.
-  const SLIDE_MAX_W_FRAC = 0.62;
-  const boxW = area.w && area.h ? Math.floor(Math.min(area.w * SLIDE_MAX_W_FRAC, area.h * ratio)) : 0;
+  // La slide è ampia: riempie l'area disponibile (fit-to-height), così è grande e l'avatar,
+  // piccolo in proporzione, si nota di meno.
+  const boxW = area.w && area.h ? Math.floor(Math.min(area.w, area.h * ratio)) : 0;
 
   // Avatar nel GUTTER sinistro: piccolo, piatto, sullo stesso sfondo della slide →
   // sembra parte della slide. Autoplay, niente controlli (si vede solo il relatore).
   const avatarOverlay = slide.hasClip ? (
-    <div className="absolute left-[2%] top-[5%] z-10 w-[15%]">
+    <div className="absolute left-[2%] top-[5%] z-10 w-[11%]">
       <div className="overflow-hidden rounded-xl shadow-md">
         {/* la clip è quadrata (540×540): aspect-square = nessuna banda nera */}
         <video ref={player.videoRef} autoPlay playsInline className="pointer-events-none aspect-square w-full object-cover" />
