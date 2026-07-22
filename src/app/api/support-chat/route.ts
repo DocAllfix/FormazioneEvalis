@@ -6,6 +6,7 @@ import { streamText } from "ai";
 import { chatModel, azureConfigured } from "@/lib/ai/azure";
 import { getCurrentSession } from "@/lib/auth/server";
 import { buildSupportChat, type ChatMessage } from "@/features/support/chatbot/chat";
+import { checkLimit, tooManyRequests } from "@/lib/security/rate-limit";
 
 // runtime "nodejs" è il default in Next 16 (e incompatibile con cacheComponents) → non dichiarato.
 export const maxDuration = 30;
@@ -15,6 +16,9 @@ export async function POST(req: Request) {
 
   const session = await getCurrentSession();
   if (!session) return new Response("unauthorized", { status: 401 });
+
+  // C-1: ogni messaggio = 1 embedding + 1 completion Azure (costo). Cap per utente/minuto.
+  if (!(await checkLimit(`chat:${session.user.id}`, 20, 60_000))) return tooManyRequests(60_000);
 
   let body: { messages?: ChatMessage[] };
   try {

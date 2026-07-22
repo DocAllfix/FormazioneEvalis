@@ -176,6 +176,13 @@
       "when": 1783000200000,
       "tag": "0024_stripe_processed_event",
       "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1783000300000,
+      "tag": "0025_rate_limit",
+      "breakpoints": true
     }
   ]
 }
