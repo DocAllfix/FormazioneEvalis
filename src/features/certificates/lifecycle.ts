@@ -10,7 +10,7 @@ import { buildCertificatePdf } from "./pdf";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
 import { uploadCertificatePdf, signedCertificateUrl } from "@/lib/supabase/storage";
 import { sendCertificateIssuedEmail } from "@/lib/email/resend";
-import { requirePlatformAdmin, requireSession, isPlatformStaffEmail } from "@/features/auth/guards";
+import { requirePlatformAdmin, requireSession, isPlatformAdmin } from "@/features/auth/guards";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
 
 function makeCertificateNumber(date: Date, verifyUuid: string): string {
@@ -234,7 +234,9 @@ export async function getCertificateDownloadUrl(certificateId: string): Promise<
   const ctx = await requireSession();
   // staff vede tutti (valvola), altrimenti scope al proprio userId: in entrambi i casi
   // la lettura è gated dalla RLS, e il controllo ownership/staff sotto resta la barriera.
-  const staff = isPlatformStaffEmail(ctx.user.email);
+  // L-1 (audit go-live): stessa nozione di staff di approve/revoke (platformRole OR allowlist),
+  // così un admin via platformRole non-allowlist può scaricare quello che può approvare.
+  const staff = isPlatformAdmin(ctx.user as { email: string; platformRole?: string | null });
   const tenantCtx: TenantCtx = staff ? { platformAdmin: true } : { userId: ctx.user.id };
   const [cert] = await withTenant(tenantCtx, async (tx) =>
     tx

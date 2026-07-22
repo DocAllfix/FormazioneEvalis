@@ -14,7 +14,7 @@ import { nextCookies } from "better-auth/next-js";
 import { db } from "@/lib/db";
 import { env } from "@/lib/env";
 import { authDatabaseHooks } from "@/features/auth/hooks";
-import { sendPasswordResetEmail, sendVerificationEmail } from "@/lib/email/resend";
+import { sendPasswordResetEmail, sendVerificationEmail, sendOrgInvitationEmail } from "@/lib/email/resend";
 
 // Dominio radice per i sottodomini multi-tenant.
 // In dev (`localhost`) NON attiviamo i cookie cross-subdomain: la condivisione del
@@ -62,12 +62,11 @@ export const auth = betterAuth({
   databaseHooks: authDatabaseHooks,
   plugins: [
     organization({
-      // Invio invito: per ora log in dev (link di accettazione). TODO: invio via Brevo.
+      // L-2 (audit go-live): invio reale via Resend (in dev senza dominio verificato il link
+      // viene comunque loggato dall'helper, così il flusso resta testabile end-to-end).
       async sendInvitationEmail(data) {
         const link = `${env.NEXT_PUBLIC_APP_URL}/accept-invitation/${data.id}`;
-        console.info(
-          `[invito] org="${data.organization.name}" → ${data.email}\n  invitationId=${data.id}\n  link=${link}`,
-        );
+        await sendOrgInvitationEmail({ to: data.email, orgName: data.organization.name, url: link });
       },
     }),
     nextCookies(), // sempre per ultimo

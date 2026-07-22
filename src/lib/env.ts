@@ -47,12 +47,35 @@ const schema = z.object({
   CLOUDFLARE_STREAM_CUSTOMER_CODE: z.string().optional(), // customer-<code>.cloudflarestream.com
   BREVO_API_KEY: z.string().optional(),
   RESEND_API_KEY: z.string().optional(),
+  RESEND_FROM: z.string().optional(), // mittente del dominio verificato (es. "Evalis <no-reply@...>")
   // staff piattaforma autorizzato ad approvare/revocare certificati (CSV di email)
   PLATFORM_STAFF_EMAILS: z.string().optional(),
   SENTRY_DSN: z.string().optional(),
 });
 
-const parsed = schema.safeParse(process.env);
+// A-4 (audit go-live): in PRODUZIONE alcuni segreti NON possono mancare, altrimenti il player
+// degrada IN SILENZIO — `getSignedClipUrl` senza le chiavi Cloudflare ritorna il video demo
+// pubblico (TEST_HLS_MANIFEST): il discente vedrebbe un contenuto sbagliato e il tracking
+// girerebbe su quello. Meglio far fallire il deploy fast. (Stripe/Resend/Sentry si aggiungono
+// qui quando confermati impostati in Vercel — vedi PRE-LAUNCH; oggi richiediamo il gruppo
+// Cloudflare Stream, già configurato e funzionante in produzione.)
+const prodRequiredSchema = schema.superRefine((val, ctx) => {
+  if (process.env.NODE_ENV !== "production") return;
+  const requiredInProd = [
+    "CLOUDFLARE_ACCOUNT_ID",
+    "CLOUDFLARE_STREAM_API_TOKEN",
+    "CLOUDFLARE_STREAM_SIGNING_KEY",
+    "CLOUDFLARE_STREAM_SIGNING_KEY_ID",
+    "CLOUDFLARE_STREAM_CUSTOMER_CODE",
+  ] as const;
+  for (const key of requiredInProd) {
+    if (!val[key]) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, path: [key], message: `${key} è obbligatoria in produzione` });
+    }
+  }
+});
+
+const parsed = prodRequiredSchema.safeParse(process.env);
 
 if (!parsed.success) {
   const issues = parsed.error.issues

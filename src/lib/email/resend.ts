@@ -70,3 +70,14 @@ export async function sendVerificationEmail(data: { to: string; url: string }): 
       `<p>Conferma il tuo indirizzo email aprendo questo link: <a href="${data.url}">${data.url}</a></p>`,
   });
 }
+
+export async function sendOrgInvitationEmail(data: { to: string; orgName: string; url: string }): Promise<{ sent: boolean }> {
+  logAuthLinkInDev("invito-org", data.to, data.url);
+  return sendAuthEmail({
+    to: data.to,
+    subject: `Invito a ${data.orgName} — Formazione Evalis`,
+    html:
+      `<p>Sei stato invitato a unirti a <strong>${data.orgName}</strong> su Formazione Evalis.</p>` +
+      `<p>Accetta l'invito aprendo questo link: <a href="${data.url}">${data.url}</a></p>`,
+  });
+}
