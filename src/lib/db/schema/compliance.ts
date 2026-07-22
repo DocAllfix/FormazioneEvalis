@@ -76,7 +76,12 @@ export const heartbeat = pgTable(
     focus: boolean("focus").notNull(),
     ts: timestamp("ts", { withTimezone: true }).notNull().defaultNow(),
   },
-  (t) => [index("heartbeat_enrollment_idx").on(t.enrollmentId)],
+  (t) => [
+    index("heartbeat_enrollment_idx").on(t.enrollmentId),
+    // A-5 (audit go-live): regge la query "latest" di recordHeartbeat
+    // (WHERE enrollment_id=? AND slide_id=? ORDER BY ts DESC LIMIT 1). Vedi migration 0022.
+    index("heartbeat_latest_idx").on(t.enrollmentId, t.slideId, t.ts.desc()),
+  ],
 );
 
 // --- Certificati (gate revisione umana) ---
