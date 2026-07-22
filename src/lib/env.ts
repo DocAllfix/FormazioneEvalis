@@ -51,6 +51,9 @@ const schema = z.object({
   // staff piattaforma autorizzato ad approvare/revocare certificati (CSV di email)
   PLATFORM_STAFF_EMAILS: z.string().optional(),
   SENTRY_DSN: z.string().optional(),
+  // token segreto per l'anteprima-staff (C.2): permette l'accesso via ?token= all'automazione
+  // Playwright oltre al login admin. Solo lettura del contenuto slide.
+  PREVIEW_TOKEN: z.string().optional(),
 });
 
 // A-4 (audit go-live): in PRODUZIONE alcuni segreti NON possono mancare, altrimenti il player
