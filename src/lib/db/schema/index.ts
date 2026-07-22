@@ -6,3 +6,4 @@ export * from "./support";
 export * from "./community";
 export * from "./knowledge";
 export * from "./onboarding";
+export * from "./billing";

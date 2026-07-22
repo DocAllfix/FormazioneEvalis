@@ -10,6 +10,7 @@ import { requireSession } from "@/features/auth/guards";
 import {
   assertEnrollmentOwnedBy,
   assertAttemptOwnedBy,
+  assertQuizInCourseOf,
   loadOwnedEnrollment,
   AccessDeniedError,
 } from "@/features/access/ownership";
@@ -26,7 +27,9 @@ export async function getMyCourse(enrollmentId: string) {
 
 export async function startMyQuiz(enrollmentId: string, quizId: string) {
   const { user } = await requireSession();
-  await assertEnrollmentOwnedBy(enrollmentId, user.id);
+  // ownership dell'iscrizione + vincolo quiz∈corso (M-9): impedisce di estrarre la banca
+  // domande di un altro corso passando un quizId arbitrario.
+  await assertQuizInCourseOf(quizId, enrollmentId, user.id);
   return startQuiz(enrollmentId, quizId, { userId: user.id });
 }
 

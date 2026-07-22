@@ -169,6 +169,13 @@
       "when": 1783000100000,
       "tag": "0023_revoke_activity_log_writes",
       "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1783000200000,
+      "tag": "0024_stripe_processed_event",
+      "breakpoints": true
     }
   ]
 }

@@ -4,7 +4,7 @@
 // La proprietà è sempre ancorata all'enrollment (enrollment.userId).
 
 import { eq } from "drizzle-orm";
-import { enrollment, quizAttempt } from "@/lib/db/schema";
+import { enrollment, quizAttempt, quiz } from "@/lib/db/schema";
 import { withTenant } from "@/lib/db/tenant";
 
 export class AccessDeniedError extends Error {
@@ -35,6 +35,24 @@ export async function loadOwnedEnrollment(enrollmentId: string, userId: string) 
 
 export async function assertEnrollmentOwnedBy(enrollmentId: string, userId: string): Promise<void> {
   await loadOwnedEnrollment(enrollmentId, userId);
+}
+
+/** M-9 (audit go-live): il quiz DEVE appartenere al corso dell'iscrizione (oltre che
+ * l'iscrizione all'utente). Senza, un discente potrebbe far estrarre le domande della banca
+ * di un ALTRO corso passando un quizId arbitrario (info disclosure cross-corso). */
+export async function assertQuizInCourseOf(
+  quizId: string,
+  enrollmentId: string,
+  userId: string,
+): Promise<void> {
+  const enr = await loadOwnedEnrollment(enrollmentId, userId);
+  const [qz] = await withTenant({ userId }, async (tx) =>
+    tx.select({ courseId: quiz.courseId }).from(quiz).where(eq(quiz.id, quizId)).limit(1),
+  );
+  if (!qz) throw new AccessDeniedError("Quiz inesistente.");
+  if (qz.courseId !== enr.courseId) {
+    throw new AccessDeniedError("Quiz non appartenente al corso dell'iscrizione.");
+  }
 }
 
 /** Verifica che il tentativo quiz appartenga a un enrollment di `userId`. */

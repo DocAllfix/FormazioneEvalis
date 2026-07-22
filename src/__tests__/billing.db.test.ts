@@ -5,7 +5,7 @@
 import { describe, it, expect, afterAll } from "vitest";
 import { sql, and, eq, inArray } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { organization, enrollment, course, activityLog } from "@/lib/db/schema";
+import { organization, enrollment, course, activityLog, stripeProcessedEvent } from "@/lib/db/schema";
 import { provisionCoursePurchase, applySubscriptionState, revokeOrgSubscription } from "@/features/billing/provisioning";
 import { getSeatLimit } from "@/features/billing/seats";
 import { ensureStripeCustomer } from "@/features/billing/customers";
@@ -142,4 +142,25 @@ describe("Modulo 2 — provisioning billing", () => {
       expect(session.url?.startsWith("https://")).toBe(true);
     }
   }, 30000);
+
+  it("C-2: il claim dell'evento Stripe è idempotente e rilasciabile per il retry", async () => {
+    const eventId = `evt_test_${RUN}`;
+    const claim = () =>
+      db
+        .insert(stripeProcessedEvent)
+        .values({ eventId })
+        .onConflictDoNothing()
+        .returning({ eventId: stripeProcessedEvent.eventId });
+
+    // primo arrivo: reclamato → l'handler processa
+    expect(await claim()).toHaveLength(1);
+    // re-invio di Stripe: già presente → si salta (niente doppio provisioning)
+    expect(await claim()).toHaveLength(0);
+
+    // se l'handler fallisce il claim viene RILASCIATO: il retry di Stripe deve poter riprocessare
+    await db.delete(stripeProcessedEvent).where(eq(stripeProcessedEvent.eventId, eventId));
+    expect(await claim()).toHaveLength(1);
+
+    await db.delete(stripeProcessedEvent).where(eq(stripeProcessedEvent.eventId, eventId));
+  });
 });

@@ -13,6 +13,7 @@ import { startQuiz } from "@/features/quiz/engine";
 import {
   assertEnrollmentOwnedBy,
   assertAttemptOwnedBy,
+  assertQuizInCourseOf,
   loadOwnedEnrollment,
   AccessDeniedError,
 } from "@/features/access/ownership";
@@ -78,5 +79,18 @@ describe("Sicurezza — prima barriera (ownership cross-tenant)", () => {
 
     await expect(assertAttemptOwnedBy(started.attemptId, ua)).rejects.toBeInstanceOf(AccessDeniedError);
     await expect(assertAttemptOwnedBy(started.attemptId, ub)).resolves.toBeUndefined();
+
+    // M-9: il quiz deve appartenere al corso DELL'ISCRIZIONE. Con un'iscrizione legittima
+    // ma un quizId di un ALTRO corso, l'estrazione della banca domande deve essere negata.
+    const other = await ingestCourse({ ...sampleCourse(), title: `Corso di prova — altro ${RUN}` });
+    createdCourseIds.push(other.courseId);
+    const [otherFin] = await db
+      .select({ id: quiz.id })
+      .from(quiz)
+      .where(and(eq(quiz.courseId, other.courseId), eq(quiz.type, "final")))
+      .limit(1);
+    await expect(assertQuizInCourseOf(otherFin.id, ea.id, ua)).rejects.toBeInstanceOf(AccessDeniedError);
+    // il quiz del proprio corso passa
+    await expect(assertQuizInCourseOf(fin.id, ea.id, ua)).resolves.toBeUndefined();
   });
 });
