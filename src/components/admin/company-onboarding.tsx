@@ -18,7 +18,7 @@ function slugify(s: string): string {
     .slice(0, 40);
 }
 
-const ROOT = process.env.NEXT_PUBLIC_ROOT_DOMAIN ?? "evalisformazione.it";
+const ROOT = process.env.NEXT_PUBLIC_ROOT_DOMAIN ?? "evalisacademy.it";
 
 export function CompanyOnboarding({ userName }: { userName?: string | null }) {
   const router = useRouter();

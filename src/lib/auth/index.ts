@@ -28,7 +28,11 @@ export const auth = betterAuth({
   database: drizzleAdapter(db, { provider: "pg" }),
   secret: env.BETTER_AUTH_SECRET,
   baseURL: env.BETTER_AUTH_URL,
-  trustedOrigins: [env.NEXT_PUBLIC_APP_URL],
+  // In prod fidiamo anche i sottodomini-azienda (multi-tenant wildcard): il login da
+  // `azienda.<root>` è un'origine diversa dall'apex e verrebbe altrimenti rifiutato.
+  trustedOrigins: isLocalhost
+    ? [env.NEXT_PUBLIC_APP_URL]
+    : [env.NEXT_PUBLIC_APP_URL, `https://*.${rootHost}`],
   user: {
     additionalFields: {
       // Ruolo di piattaforma: leggibile in sessione, NON impostabile dall'utente (sicurezza).

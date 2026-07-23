@@ -6,7 +6,7 @@ import { getOrgOverview } from "@/features/admin/queries";
 
 export const metadata = { title: "Panoramica azienda — Evalis" };
 
-const ROOT = (process.env.NEXT_PUBLIC_ROOT_DOMAIN ?? "evalisformazione.it").split(":")[0];
+const ROOT = (process.env.NEXT_PUBLIC_ROOT_DOMAIN ?? "evalisacademy.it").split(":")[0];
 
 export default async function AdminOverviewPage() {
   const o = await getOrgOverview();
