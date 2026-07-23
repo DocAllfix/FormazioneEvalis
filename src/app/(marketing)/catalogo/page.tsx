@@ -1,4 +1,5 @@
 import Catalogo from "@/components/pages/Catalogo";
+import { listAuditorVetrina } from "@/features/catalog/vetrina";
 
 export const metadata = {
   title: "Catalogo corsi — Evalis",
@@ -6,8 +7,10 @@ export const metadata = {
     "Esplora i corsi professionali: Auditor ISO, mestieri e professioni, settore bancario. Preparazione online, esame e certificato verificabile.",
 };
 
-// Catalogo PUBBLICO (pre-login): vetrina marketing statica, SENZA prezzi né acquisto.
+// Catalogo PUBBLICO (pre-login): vetrina marketing, SENZA prezzi né acquisto.
+// I corsi Auditor ISO arrivano dal DB (pubblicati); le altre aree restano statiche.
 // Il catalogo con prezzi/dettagli/acquisto vive esclusivamente nell'area post-login.
-export default function Page() {
-  return <Catalogo />;
+export default async function Page() {
+  const auditorCourses = await listAuditorVetrina();
+  return <Catalogo auditorCourses={auditorCourses} />;
 }

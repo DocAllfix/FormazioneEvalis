@@ -6,6 +6,7 @@ import {
   Search,
   ChevronRight,
   ClipboardCheck,
+  Clock,
   QrCode,
   BookOpen,
 } from "lucide-react";
@@ -20,17 +21,9 @@ const areas = [
   { id: "bancario", label: "Settore bancario" },
 ];
 
-const allCerts = [
-  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 19011", badge: "Propedeutico", line: "Corso propedeutico sull'auditing dei Sistemi di Gestione, richiesto per le altre certificazioni ISO" },
-  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 9001", badge: "ISO 9001", line: "Auditor per i Sistemi di Gestione della Qualità" },
-  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 14001", badge: "ISO 14001", line: "Auditor per i Sistemi di Gestione dell'Ambiente" },
-  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 45001", badge: "ISO 45001", line: "Auditor per i Sistemi di Gestione della Sicurezza e Salute sul lavoro" },
-  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 27001", badge: "ISO 27001", line: "Auditor per i Sistemi di Gestione della Sicurezza delle Informazioni" },
-  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 22000", badge: "ISO 22000", line: "Auditor per i Sistemi di Gestione della Sicurezza Alimentare" },
-  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 50001", badge: "ISO 50001", line: "Auditor per i Sistemi di Gestione dell'Energia" },
-  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 37001", badge: "ISO 37001", line: "Auditor per i Sistemi di Gestione Anti-Corruzione" },
-  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 39001", badge: "ISO 39001", line: "Auditor per i Sistemi di Gestione della Sicurezza Stradale" },
-  { area: "auditor", areaLabel: "Auditor ISO", name: "ISO 42001", badge: "ISO 42001", line: "Auditor per i Sistemi di Gestione dell'Intelligenza Artificiale" },
+// I corsi Auditor ISO arrivano dal DB (prop `auditorCourses`); qui restano solo
+// le aree non ancora a catalogo (vetrina statica, senza link di dettaglio).
+const staticCerts = [
   { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Elettricista specializzato", badge: "Professionale", line: "Competenze per interventi elettrici specialistici" },
   { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Idraulico", badge: "Professionale", line: "Competenze per impianti idraulici e sanitari" },
   { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Muratore", badge: "Professionale", line: "Competenze per lavori murari e costruzioni" },
@@ -43,12 +36,26 @@ const allCerts = [
 ];
 
 function CertCard({ card, index }) {
-  return (
-    <ScrollReveal delay={Math.min(index * 0.04, 0.24)}>
-      <div
-        className="group flex flex-col bg-white border border-[#EAE4DB] rounded-2xl p-6 text-left hover:-translate-y-[3px] hover:border-primary transition-all duration-200 hover:shadow-[0_12px_32px_rgba(26,18,9,0.12)] h-full"
-        style={{ minHeight: "180px" }}
-      >
+  const body = (
+    <>
+      {/* anteprima immagine SOLO per i corsi reali (dal DB): 16:10 come il catalogo post-login */}
+      {card.slug ? (
+        <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-[#F5EFE6] to-[#EAD9C5]">
+          {card.imageUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={card.imageUrl}
+              alt=""
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="font-heading text-2xl text-[#C03E08]/50">{card.badge}</span>
+            </div>
+          )}
+        </div>
+      ) : null}
+      <div className="flex flex-col flex-1 p-6">
         <div className="flex items-start justify-between mb-4">
           <span className="inline-block text-[11px] font-medium px-3 py-1 rounded-full bg-[#FEF0EB] text-[#C03E08]">
             {card.badge}
@@ -61,10 +68,16 @@ function CertCard({ card, index }) {
         <h3 className="font-heading text-lg text-near-black group-hover:text-primary transition-colors duration-200">
           {card.name}
         </h3>
-        <p className="mt-2 text-sm text-[#5C5347] leading-relaxed flex-1">
+        <p className="mt-2 text-sm text-[#5C5347] leading-relaxed flex-1 line-clamp-3">
           {card.line}
         </p>
         <div className="mt-5 pt-4 border-t border-[#EAE4DB] flex items-center gap-4 text-xs text-[#766E66]">
+          {card.hours ? (
+            <span className="inline-flex items-center gap-1.5">
+              <Clock className="h-3.5 w-3.5 text-primary" />
+              {card.hours} ore
+            </span>
+          ) : null}
           <span className="inline-flex items-center gap-1.5">
             <ClipboardCheck className="h-3.5 w-3.5 text-primary" />
             Esame online
@@ -75,13 +88,53 @@ function CertCard({ card, index }) {
           </span>
         </div>
       </div>
+    </>
+  );
+
+  const shellClass =
+    "group flex flex-col bg-white border border-[#EAE4DB] rounded-2xl overflow-hidden text-left hover:-translate-y-[3px] hover:border-primary transition-all duration-200 hover:shadow-[0_12px_32px_rgba(26,18,9,0.12)] h-full";
+
+  return (
+    <ScrollReveal delay={Math.min(index * 0.04, 0.24)}>
+      {card.slug ? (
+        <Link href={`/catalogo/${card.slug}`} className={shellClass}>
+          {body}
+        </Link>
+      ) : (
+        <div className={shellClass} style={{ minHeight: "180px" }}>
+          {body}
+        </div>
+      )}
     </ScrollReveal>
   );
 }
 
-export default function Catalogo() {
+// Badge di card dal corso DB: propedeutico / aggiornamento / sigla ISO.
+function badgeFor(course) {
+  if (course.slug.includes("19011")) return "Propedeutico";
+  if (course.slug.startsWith("aggiornamento")) return "Aggiornamento";
+  const m = course.slug.match(/\d{4,5}/);
+  return m ? `ISO ${m[0]}` : "Corso";
+}
+
+/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
+export default function Catalogo({ auditorCourses = [] }) {
   const [activeArea, setActiveArea] = useState("all");
   const [query, setQuery] = useState("");
+
+  const allCerts = useMemo(() => {
+    const dbCards = auditorCourses.map((c) => ({
+      area: "auditor",
+      areaLabel: "Auditor ISO",
+      name: c.title.split("—")[0].trim(),
+      badge: badgeFor(c),
+      line: c.description,
+      slug: c.slug,
+      imageUrl: c.imageUrl,
+      hours: c.durationHours,
+    }));
+    return [...dbCards, ...staticCerts];
+  }, [auditorCourses]);
 
   const filtered = useMemo(() => {
     return allCerts.filter((cert) => {
@@ -93,7 +146,7 @@ export default function Catalogo() {
         cert.line.toLowerCase().includes(q);
       return areaMatch && queryMatch;
     });
-  }, [activeArea, query]);
+  }, [allCerts, activeArea, query]);
 
   return (
     <div className="min-h-screen bg-background flex flex-col">

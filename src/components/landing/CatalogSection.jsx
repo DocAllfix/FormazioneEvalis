@@ -47,7 +47,7 @@ const areas = [
 function CertCard({ card, large = false }) {
   return (
     <Link
-      href="/catalogo"
+      href={card.slug ? `/catalogo/${card.slug}` : "/catalogo"}
       className={`group flex flex-col bg-white border border-[#EAE4DB] rounded-2xl p-6 text-left hover:-translate-y-[3px] hover:border-primary transition-all duration-200 hover:shadow-[0_12px_32px_rgba(26,18,9,0.12)] h-full ${
         large ? "lg:col-span-2" : ""
       }`}
@@ -93,10 +93,27 @@ function CertCard({ card, large = false }) {
   );
 }
 
-export default function CatalogSection() {
+// Badge di card dal corso DB: propedeutico / aggiornamento / sigla ISO (come in Catalogo.jsx).
+function badgeFor(course) {
+  if (course.slug.includes("19011")) return "Propedeutico";
+  if (course.slug.startsWith("aggiornamento")) return "Aggiornamento";
+  const m = course.slug.match(/\d{4,5}/);
+  return m ? `ISO ${m[0]}` : "Corso";
+}
+
+/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
+export default function CatalogSection({ auditorCourses = [] }) {
   const [activeArea, setActiveArea] = useState("auditor");
   const current = areas.find((a) => a.id === activeArea);
-  const cards = current.cards;
+  // area auditor: corsi reali dal DB quando disponibili (fallback alla lista statica)
+  const dbAuditorCards = auditorCourses.map((c) => ({
+    name: c.title.split("—")[0].trim(),
+    badge: badgeFor(c),
+    line: c.description,
+    slug: c.slug,
+  }));
+  const cards =
+    activeArea === "auditor" && dbAuditorCards.length > 0 ? dbAuditorCards : current.cards;
 
   return (
     <section
