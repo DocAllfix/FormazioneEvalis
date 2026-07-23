@@ -9,6 +9,19 @@ import { extractSubdomain, isReservedSubdomain } from "@/lib/reserved-subdomains
 const ROOT_DOMAIN = process.env.NEXT_PUBLIC_ROOT_DOMAIN ?? "localhost:3000";
 
 export function proxy(req: NextRequest) {
+  const host = req.headers.get("host") ?? "";
+  const rootHost = ROOT_DOMAIN.split(":")[0];
+
+  // Canonicalizzazione: l'URL tecnico *.vercel.app NON deve essere pubblicamente navigabile
+  // (brand + niente contenuto duplicato in SEO). In produzione rimanda al dominio ufficiale,
+  // stesso path, con redirect permanente. In dev (rootHost=localhost) non scatta mai.
+  if (host.endsWith(".vercel.app") && !rootHost.includes("localhost")) {
+    const url = new URL(req.url);
+    url.protocol = "https:";
+    url.host = rootHost;
+    return NextResponse.redirect(url, 308);
+  }
+
   const sub = extractSubdomain(req.headers.get("host"), ROOT_DOMAIN);
   const requestHeaders = new Headers(req.headers);
 
