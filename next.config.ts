@@ -14,6 +14,23 @@ const nextConfig: NextConfig = {
   experimental: {
     staleTimes: { dynamic: 30, static: 180 },
   },
+  // Header di sicurezza (sicuri, no-CSP: la CSP richiede uno step dedicato per non rompere
+  // script inline Next / Cloudflare Stream / Sentry). Coprono clickjacking, MIME-sniffing,
+  // leak del referrer e API del browser non usate.
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), browsing-topics=()" },
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
+        ],
+      },
+    ];
+  },
 };
 
 // Bundle analyzer: attivo solo con ANALYZE=true (no-op nelle build normali).
