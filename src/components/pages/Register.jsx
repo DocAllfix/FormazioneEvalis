@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { signUp } from "@/lib/auth/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,6 +16,7 @@ export default function Register() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false); // signup ok → mostra "controlla la tua email"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,15 +26,44 @@ export default function Register() {
       return;
     }
     setLoading(true);
-    const { error } = await signUp.email({ name, email, password });
+    // callbackURL: dove better-auth reindirizza DOPO il click sul link di verifica.
+    // /dashboard → il guard onboarding lo porta al bivio (/onboarding) al primo accesso.
+    const { error } = await signUp.email({ name, email, password, callbackURL: "/dashboard" });
     setLoading(false);
     if (error) {
       setError(error.message || "Registrazione non riuscita");
       return;
     }
-    router.push("/dashboard");
-    router.refresh();
+    // Con la verifica email attiva il signup NON crea sessione: non mandare l'utente al
+    // dashboard (rimbalzerebbe al login "bentornato" senza spiegazioni). Mostra la conferma.
+    setSent(true);
   };
+
+  if (sent) {
+    return (
+      <AuthLayout
+        icon={Mail}
+        title="Controlla la tua email"
+        subtitle="Ti abbiamo inviato un link di conferma"
+        footer={
+          <>
+            Hai già confermato?{" "}
+            <Link href="/login" className="text-primary font-medium hover:underline">
+              Accedi
+            </Link>
+          </>
+        }
+      >
+        <div className="space-y-3 text-sm text-muted-foreground">
+          <p>
+            Abbiamo inviato un&apos;email di conferma a <strong className="text-near-black">{email}</strong>.
+            Apri il link contenuto per attivare l&apos;account e accedere.
+          </p>
+          <p>Non la trovi? Controlla nella cartella spam.</p>
+        </div>
+      </AuthLayout>
+    );
+  }
 
   return (
     <AuthLayout

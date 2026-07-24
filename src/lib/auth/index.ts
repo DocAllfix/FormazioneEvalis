@@ -50,7 +50,9 @@ export const auth = betterAuth({
     },
   },
   emailVerification: {
-    // Callback pronta: usata quando requireEmailVerification passerà a true.
+    // Dopo il click sul link di conferma l'utente viene loggato in automatico (niente
+    // secondo login) e reindirizzato al callbackURL del signUp (/dashboard → guard → onboarding).
+    autoSignInAfterVerification: true,
     async sendVerificationEmail({ user, url }) {
       await sendVerificationEmail({ to: user.email, url });
     },
