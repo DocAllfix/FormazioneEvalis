@@ -20,7 +20,10 @@ const footerColumns = [
   },
   {
     title: "Contatti",
-    links: [{ label: "info@evalis.it", href: "mailto:info@evalis.it" }],
+    links: [
+      { label: "evaliscert@libero.it", href: "mailto:evaliscert@libero.it" },
+      { label: "081 3992324", href: "tel:+390813992324" },
+    ],
   },
 ];
 
@@ -64,8 +67,10 @@ export default function SiteFooter() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-[#3D2E1E] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#9C9388]">
-          <span>P.IVA 00000000000 · Sede legale: [da inserire]</span>
-          <span>© {new Date().getFullYear()} Formazione Evalis</span>
+          <span>
+            Evalis S.R.L. · Via Sandro Botticelli 25, 81031 Aversa (CE) · P.IVA/C.F. 04868330616 · REA CE-361943
+          </span>
+          <span>© {new Date().getFullYear()} Evalis Academy</span>
         </div>
       </div>
     </footer>

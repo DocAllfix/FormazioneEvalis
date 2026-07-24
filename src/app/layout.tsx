@@ -3,6 +3,7 @@ import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
 import { JsonLd } from "@/components/seo/json-ld";
+import { CookieBanner } from "@/components/legal/cookie-banner";
 
 const APP_URL = (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -48,6 +49,7 @@ export default function RootLayout({
         <body>
           <JsonLd data={orgLd} />
           {children}
+          <CookieBanner />
         </body>
       </html>
     </ViewTransitions>
