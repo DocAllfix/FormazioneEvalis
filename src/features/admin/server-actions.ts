@@ -12,7 +12,7 @@ import { requireSession } from "@/features/auth/guards";
 import { createCompanyOrg } from "@/features/auth/orgs";
 import { isValidSlug } from "@/lib/reserved-subdomains";
 import { appendActivity } from "@/features/audit/log";
-import { inviteMember, acceptInvitation } from "@/features/auth/invitations";
+import { inviteMember, acceptInvitation, verifyInvitedAccount } from "@/features/auth/invitations";
 import { enrollMemberInCourse } from "@/features/courses/assign";
 import { requireCompanyContext } from "@/features/admin/context";
 
@@ -63,6 +63,12 @@ export async function inviteMemberAction(email: string, role: "admin" | "member"
 /** Accetta un invito (utente loggato → membro azienda; org dedotta dall'invito). */
 export async function acceptInvitationAction(invitationId: string) {
   return acceptInvitation(invitationId);
+}
+
+/** Marca verificato l'account appena creato via invito (l'id invito prova il possesso email).
+ *  Non richiede sessione: l'utente invitato non è ancora loggato. Gate = validità dell'invito. */
+export async function verifyInvitedAccountAction(invitationId: string): Promise<void> {
+  await verifyInvitedAccount(invitationId);
 }
 
 /** Assegna un corso a un dipendente dell'azienda amministrata (enrollment b2b_seat). */
