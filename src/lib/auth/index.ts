@@ -70,7 +70,14 @@ export const auth = betterAuth({
       // L-2 (audit go-live): invio reale via Resend (in dev senza dominio verificato il link
       // viene comunque loggato dall'helper, così il flusso resta testabile end-to-end).
       async sendInvitationEmail(data) {
-        const link = `${env.NEXT_PUBLIC_APP_URL}/accept-invitation/${data.id}`;
+        // Il dipendente invitato atterra sul SOTTODOMINIO brandizzato dell'azienda (prod);
+        // in dev/localhost resta l'apex (i sottodomini su localhost sono inaffidabili).
+        const slug = data.organization.slug;
+        const base =
+          slug && !isLocalhost
+            ? `https://${slug}.${rootHost}`
+            : env.NEXT_PUBLIC_APP_URL.replace(/\/$/, "");
+        const link = `${base}/accept-invitation/${data.id}`;
         await sendOrgInvitationEmail({ to: data.email, orgName: data.organization.name, url: link });
       },
     }),

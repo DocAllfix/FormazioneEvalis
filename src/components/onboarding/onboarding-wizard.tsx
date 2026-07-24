@@ -25,7 +25,19 @@ import {
   completeOnboardingAction,
   skipOnboardingAction,
 } from "@/features/onboarding/server-actions";
+import { createMyCompany } from "@/features/admin/server-actions";
 import type { OnboardingPersona } from "@/lib/db/schema/onboarding";
+
+// slug → sottodominio (stessa logica di company-onboarding): minuscole, no accenti, [a-z0-9-].
+function slugify(s: string): string {
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 40);
+}
 
 const GOALS = [
   { id: "auditor_iso", label: "Auditor ISO", desc: "Schemi 9001, 14001, 45001…", icon: ShieldCheck },
@@ -92,6 +104,16 @@ export function OnboardingWizard({
   const [iso19011, setIso19011] = useState<boolean | null>(initialIso19011);
   const [pending, startTransition] = useTransition();
 
+  // BIVIO azienda/privato — solo per i self-signup B2C (gli invitati e gli admin azienda hanno
+  // già il loro contesto). null = scelta non ancora fatta → mostra la schermata del bivio.
+  const [choice, setChoice] = useState<null | "privato" | "azienda">(null);
+  const [coName, setCoName] = useState(""); // nome azienda del bivio (companyName è già un prop)
+  const [companySlug, setCompanySlug] = useState("");
+  const [slugTouched, setSlugTouched] = useState(false);
+  const [companyError, setCompanyError] = useState("");
+  const ROOT = (process.env.NEXT_PUBLIC_ROOT_DOMAIN ?? "").split(":")[0];
+  const effectiveSlug = slugTouched ? companySlug : slugify(coName);
+
   // Gli step dipendono dall'area scelta (b2c + auditor_iso → compare lo step 19011).
   const steps = useMemo(() => stepsFor(persona, companyName, goal), [persona, companyName, goal]);
   const [step, setStep] = useState(Math.min(initialStep, steps.length - 1));
@@ -115,6 +137,27 @@ export function OnboardingWizard({
     startTransition(async () => {
       await completeOnboardingAction();
       go(destinationFor(persona));
+    });
+  }
+
+  // Ramo AZIENDA del bivio: crea lo spazio azienda (nome + sottodominio), chiude l'onboarding e
+  // porta l'admin sul SOTTODOMINIO /admin (in dev resta su /admin apex). Riusa createMyCompany
+  // (unicità slug, org type=company, setActiveOrganization). Da lì potrà invitare e assegnare.
+  function submitCompany(e: React.FormEvent) {
+    e.preventDefault();
+    setCompanyError("");
+    startTransition(async () => {
+      try {
+        const res = await createMyCompany({ name: coName.trim(), slug: effectiveSlug });
+        await completeOnboardingAction();
+        if (ROOT && !ROOT.includes("localhost")) {
+          window.location.assign(`https://${res.slug}.${ROOT}/admin`);
+        } else {
+          router.push("/admin");
+        }
+      } catch (err) {
+        setCompanyError(err instanceof Error ? err.message : "Errore nella creazione dello spazio azienda.");
+      }
     });
   }
 
@@ -150,6 +193,125 @@ export function OnboardingWizard({
   }
 
   const Icon = current.icon;
+
+  // --- BIVIO (solo self-signup B2C): scegli tipo account prima del wizard ---
+  if (persona === "b2c" && choice === null) {
+    return (
+      <div className="w-full max-w-lg">
+        <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+          <div className="flex flex-col items-center text-center">
+            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+              <GraduationCap className="h-7 w-7" />
+            </span>
+            <h1 className="mt-5 font-heading text-2xl text-near-black">Come vuoi usare Evalis Academy?</h1>
+            <p className="mt-2 max-w-sm text-muted-foreground">Scegli come iniziare.</p>
+          </div>
+          <div className="mt-6 grid gap-3">
+            <button
+              type="button"
+              onClick={() => setChoice("privato")}
+              className="flex items-center gap-3 rounded-xl border border-border p-4 text-left transition hover:bg-secondary"
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-near-black">
+                <GraduationCap className="h-5 w-5" />
+              </span>
+              <span className="flex-1">
+                <span className="block font-medium text-near-black">Per me</span>
+                <span className="block text-sm text-muted-foreground">Preparati e ottieni la certificazione a titolo personale.</span>
+              </span>
+              <ArrowRight className="h-5 w-5 text-muted-foreground" />
+            </button>
+            <button
+              type="button"
+              onClick={() => setChoice("azienda")}
+              className="flex items-center gap-3 rounded-xl border border-border p-4 text-left transition hover:bg-secondary"
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary text-near-black">
+                <Building2 className="h-5 w-5" />
+              </span>
+              <span className="flex-1">
+                <span className="block font-medium text-near-black">Per la mia azienda</span>
+                <span className="block text-sm text-muted-foreground">Crea lo spazio azienda, invita i dipendenti e assegna i corsi.</span>
+              </span>
+              <ArrowRight className="h-5 w-5 text-muted-foreground" />
+            </button>
+          </div>
+          <div className="mt-8">
+            <button type="button" onClick={skip} disabled={pending} className="text-sm text-muted-foreground hover:text-near-black">
+              Salta
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // --- Ramo AZIENDA: crea lo spazio azienda (nome + sottodominio) ---
+  if (persona === "b2c" && choice === "azienda") {
+    return (
+      <div className="w-full max-w-lg">
+        <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+          <button
+            type="button"
+            onClick={() => setChoice(null)}
+            disabled={pending}
+            className="mb-4 text-sm text-muted-foreground hover:text-near-black"
+          >
+            ← Indietro
+          </button>
+          <div className="flex flex-col items-center text-center">
+            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+              <Building2 className="h-7 w-7" />
+            </span>
+            <h1 className="mt-5 font-heading text-2xl text-near-black">Crea lo spazio azienda</h1>
+            <p className="mt-2 max-w-sm text-muted-foreground">
+              Gestisci dipendenti, posti e assegnazioni dei corsi da un pannello dedicato, sul tuo indirizzo.
+            </p>
+          </div>
+
+          {companyError ? (
+            <div className="mt-4 rounded-lg bg-destructive/10 px-4 py-3 text-sm text-destructive">{companyError}</div>
+          ) : null}
+
+          <form onSubmit={submitCompany} className="mt-6 space-y-4">
+            <div>
+              <label htmlFor="ob-company-name" className="text-sm font-medium text-near-black">Nome azienda</label>
+              <input
+                id="ob-company-name"
+                value={coName}
+                onChange={(e) => setCoName(e.target.value)}
+                placeholder="Acme S.r.l."
+                required
+                className="mt-1.5 w-full rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none ring-primary/30 focus:ring-2"
+              />
+            </div>
+            <div>
+              <label htmlFor="ob-company-slug" className="text-sm font-medium text-near-black">Sottodominio</label>
+              <div className="mt-1.5 flex items-center rounded-lg border border-border bg-background pr-3 focus-within:ring-2 focus-within:ring-primary/30">
+                <input
+                  id="ob-company-slug"
+                  value={effectiveSlug}
+                  onChange={(e) => {
+                    setSlugTouched(true);
+                    setCompanySlug(slugify(e.target.value));
+                  }}
+                  placeholder="acme"
+                  required
+                  className="w-full rounded-lg bg-transparent px-3 py-2 text-sm outline-none"
+                />
+                <span className="shrink-0 text-sm text-muted-foreground">.{ROOT || "evalisacademy.it"}</span>
+              </div>
+              <p className="mt-1 text-xs text-muted-foreground">L&apos;indirizzo dedicato dell&apos;azienda. Solo lettere minuscole, numeri e trattini.</p>
+            </div>
+            <Button type="submit" disabled={pending || !coName.trim() || !effectiveSlug} className="w-full">
+              {pending ? "Creazione…" : "Crea spazio azienda"}
+              <ArrowRight className="ml-1.5 h-4 w-4" />
+            </Button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full max-w-lg">
