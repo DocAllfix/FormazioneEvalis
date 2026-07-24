@@ -1,5 +1,5 @@
 // Endpoint USA-E-GETTA per verificare che Sentry riceva gli errori. RIMUOVERE dopo il test.
-// Apri /api/_sentry-test una volta, poi controlla Sentry → Issues.
+// Apri /api/sentry-test una volta, poi controlla Sentry → Issues.
 import * as Sentry from "@sentry/nextjs";
 import { NextResponse } from "next/server";
 
