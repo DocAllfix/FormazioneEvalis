@@ -53,6 +53,10 @@ export function buildTour(pageId: string, steps: DriveStep[], extra?: Partial<Co
   const onDestroyStarted: DriverHook = (element, step, opts) => {
     markTourDone(pageId);
     extra?.onDestroyStarted?.(element, step, opts);
+    // driver.js: se `onDestroyStarted` è definito, la chiusura NON avviene da sola → va
+    // completata qui. Senza questa riga il pulsante "Fatto" (e overlay/ESC) non chiudono il
+    // tour: si chiudeva solo con la X (che ha il suo onCloseClick → destroy).
+    opts.driver.destroy();
   };
   return createDriver({ ...BASE_CONFIG, ...extra, steps, onDestroyStarted });
 }
