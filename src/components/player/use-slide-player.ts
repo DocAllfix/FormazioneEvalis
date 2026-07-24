@@ -155,6 +155,13 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
   useEffect(() => {
     if (slide.hasClip) return;
     dispatch({ type: "play" }); // la lettura "parte" subito
+    // heartbeat baseline (come la modalità video): senza un estremo iniziale, l'avanzamento
+    // della lettura non viene MAI accreditato (il primo heartbeat sarebbe anche l'ultimo → 0s)
+    // e la slide statica resta bloccata. Con il baseline, i secondi letti a schermo si contano.
+    if (!baselineRef.current) {
+      baselineRef.current = true;
+      void sendHeartbeat(false);
+    }
     const id = setInterval(() => {
       const s = stateRef.current;
       if (s.audioCompleted) return; // lettura completata: stop accredito (no ballooning)
@@ -164,7 +171,7 @@ export function useSlidePlayer({ enrollmentId, slide, manifestUrl, heartbeatUrl 
       if (nextPos >= slide.audioSeconds) dispatch({ type: "ended" });
     }, 1000);
     return () => clearInterval(id);
-  }, [slide.hasClip, slide.id, slide.audioSeconds, dispatch]);
+  }, [slide.hasClip, slide.id, slide.audioSeconds, dispatch, sendHeartbeat]);
 
   // presenza — cambio scheda / minimizzazione (Page Visibility API).
   // A scheda NASCOSTA: prima manda un heartbeat che CREDITA fin qui (focus e play ancora
