@@ -41,9 +41,10 @@ export const auth = betterAuth({
   },
   emailAndPassword: {
     enabled: true,
-    // Verifica email cablata ma NON imposta: si attiverà (true) al lancio, quando
-    // ci sarà un dominio Resend verificato per consegnare i link a indirizzi arbitrari.
-    requireEmailVerification: false,
+    // ATTIVA (24/07): dominio Resend verificato → i link di conferma arrivano a indirizzi
+    // arbitrari. Chiude il buco della allowlist PLATFORM_STAFF_EMAILS: per usare un'email
+    // staff bisogna provarne il possesso. Account pre-esistenti già "grandfathered" verificati.
+    requireEmailVerification: true,
     async sendResetPassword({ user, url }) {
       await sendPasswordResetEmail({ to: user.email, url });
     },
