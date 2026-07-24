@@ -104,8 +104,11 @@ export function OnboardingWizard({
   const canAdvance = (!isGoalStep || !!goal) && (!isIsoStep || iso19011 !== null);
 
   function go(to: string) {
+    // Solo push: un router.refresh() qui ri-eseguirebbe la pagina /onboarding CORRENTE che,
+    // essendo l'onboarding ora "completed", fa redirect("/dashboard") → due navigazioni in
+    // conflitto col push → schermata bloccata (si sbloccava solo ricaricando). La destinazione
+    // è in un route-group diverso, quindi si rende comunque fresca senza bisogno di refresh.
     router.push(to);
-    router.refresh();
   }
 
   function finish() {
