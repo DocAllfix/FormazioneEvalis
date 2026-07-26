@@ -1,5 +1,5 @@
 import Catalogo from "@/components/pages/Catalogo";
-import { listAuditorVetrina } from "@/features/catalog/vetrina";
+import { listAuditorVetrina, listAiVetrina } from "@/features/catalog/vetrina";
 
 export const metadata = {
   title: "Catalogo corsi — Evalis",
@@ -11,6 +11,6 @@ export const metadata = {
 // I corsi Auditor ISO arrivano dal DB (pubblicati); le altre aree restano statiche.
 // Il catalogo con prezzi/dettagli/acquisto vive esclusivamente nell'area post-login.
 export default async function Page() {
-  const auditorCourses = await listAuditorVetrina();
-  return <Catalogo auditorCourses={auditorCourses} />;
+  const [auditorCourses, aiCourses] = await Promise.all([listAuditorVetrina(), listAiVetrina()]);
+  return <Catalogo auditorCourses={auditorCourses} aiCourses={aiCourses} />;
 }

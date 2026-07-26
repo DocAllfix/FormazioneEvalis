@@ -16,8 +16,8 @@ import FAQSection from "@/components/landing/FAQSection";
 import FinalCTA from "@/components/landing/FinalCTA";
 import SiteFooter from "@/components/landing/SiteFooter";
 
-/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
-export default function Home({ auditorCourses = [] }) {
+/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, aiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
+export default function Home({ auditorCourses = [], aiCourses = [] }) {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <a href="#main-content" className="skip-link">
@@ -28,7 +28,7 @@ export default function Home({ auditorCourses = [] }) {
         <BentoHero />
         <StatsSection />
         <ISOStrip />
-        <CatalogSection auditorCourses={auditorCourses} />
+        <CatalogSection auditorCourses={auditorCourses} aiCourses={aiCourses} />
         <ForWhoSection />
         <HowItWorksSection />
         <VerifySection />

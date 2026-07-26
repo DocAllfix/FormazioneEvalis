@@ -13,6 +13,7 @@ import type { AdminCourse } from "@/features/courses/admin-catalog";
 
 const CATEGORIES = [
   { value: "auditor", label: "Auditor ISO" },
+  { value: "ai", label: "Intelligenza Artificiale" },
   { value: "mestieri", label: "Mestieri" },
   { value: "bancario", label: "Bancario" },
   { value: "sicurezza", label: "Sicurezza" },

@@ -17,6 +17,7 @@ import ScrollReveal from "@/components/landing/ScrollReveal";
 const areas = [
   { id: "all", label: "Tutte" },
   { id: "auditor", label: "Auditor ISO" },
+  { id: "ai", label: "Intelligenza Artificiale" },
   { id: "mestieri", label: "Mestieri e professioni" },
   { id: "bancario", label: "Settore bancario" },
 ];
@@ -117,8 +118,8 @@ function badgeFor(course) {
   return m ? `ISO ${m[0]}` : "Corso";
 }
 
-/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
-export default function Catalogo({ auditorCourses = [] }) {
+/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, aiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
+export default function Catalogo({ auditorCourses = [], aiCourses = [] }) {
   const [activeArea, setActiveArea] = useState("all");
   const [query, setQuery] = useState("");
 
@@ -133,8 +134,18 @@ export default function Catalogo({ auditorCourses = [] }) {
       imageUrl: c.imageUrl,
       hours: c.durationHours,
     }));
-    return [...dbCards, ...staticCerts];
-  }, [auditorCourses]);
+    const aiCards = aiCourses.map((c) => ({
+      area: "ai",
+      areaLabel: "Intelligenza Artificiale",
+      name: c.title.split("—")[0].trim(),
+      badge: c.slug.includes("operativo") ? "Base" : "Avanzato",
+      line: c.description,
+      slug: c.slug,
+      imageUrl: c.imageUrl,
+      hours: c.durationHours,
+    }));
+    return [...dbCards, ...aiCards, ...staticCerts];
+  }, [auditorCourses, aiCourses]);
 
   const filtered = useMemo(() => {
     return allCerts.filter((cert) => {

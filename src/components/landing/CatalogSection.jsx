@@ -22,6 +22,14 @@ const areas = [
     ],
   },
   {
+    id: "ai",
+    label: "Intelligenza Artificiale",
+    cards: [
+      { name: "Claude AI Operativo", badge: "Base", line: "Usare l'intelligenza artificiale nel lavoro professionale quotidiano: prompt, analisi di documenti, casi d'uso e confini di responsabilità" },
+      { name: "Claude AI Avanzato", badge: "Avanzato", line: "Automazioni via API, workflow agentici e MCP, sviluppo assistito e governance dell'AI con la ISO 42001" },
+    ],
+  },
+  {
     id: "mestieri",
     label: "Mestieri e professioni",
     cards: [
@@ -101,19 +109,29 @@ function badgeFor(course) {
   return m ? `ISO ${m[0]}` : "Corso";
 }
 
-/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
-export default function CatalogSection({ auditorCourses = [] }) {
+/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, aiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
+export default function CatalogSection({ auditorCourses = [], aiCourses = [] }) {
   const [activeArea, setActiveArea] = useState("auditor");
   const current = areas.find((a) => a.id === activeArea);
-  // area auditor: corsi reali dal DB quando disponibili (fallback alla lista statica)
+  // aree auditor/ai: corsi reali dal DB quando disponibili (fallback alla lista statica)
   const dbAuditorCards = auditorCourses.map((c) => ({
     name: c.title.split("—")[0].trim(),
     badge: badgeFor(c),
     line: c.description,
     slug: c.slug,
   }));
+  const dbAiCards = aiCourses.map((c) => ({
+    name: c.title.split("—")[0].trim(),
+    badge: c.slug.includes("operativo") ? "Base" : "Avanzato",
+    line: c.description,
+    slug: c.slug,
+  }));
   const cards =
-    activeArea === "auditor" && dbAuditorCards.length > 0 ? dbAuditorCards : current.cards;
+    activeArea === "auditor" && dbAuditorCards.length > 0
+      ? dbAuditorCards
+      : activeArea === "ai" && dbAiCards.length > 0
+        ? dbAiCards
+        : current.cards;
 
   return (
     <section

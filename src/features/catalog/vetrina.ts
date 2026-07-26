@@ -35,3 +35,18 @@ export async function listAuditorVetrina(): Promise<VetrinaCourse[]> {
       imageUrl: c.imageUrl,
     }));
 }
+
+// Vetrina corsi Intelligenza Artificiale (Claude AI): operativo (base) prima, avanzato dopo.
+export async function listAiVetrina(): Promise<VetrinaCourse[]> {
+  const all = await listPublishedCourses();
+  return all
+    .filter((c) => c.category === "ai" && !!c.slug)
+    .sort((a, b) => (a.slug!.includes("operativo") ? 0 : 1) - (b.slug!.includes("operativo") ? 0 : 1))
+    .map((c) => ({
+      slug: c.slug as string,
+      title: c.title,
+      description: c.description ?? "",
+      durationHours: c.durationHours,
+      imageUrl: c.imageUrl,
+    }));
+}
