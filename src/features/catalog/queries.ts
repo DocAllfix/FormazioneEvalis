@@ -63,7 +63,7 @@ export const listPublishedCourses = unstable_cache(_listPublishedCourses, ["cata
   tags: ["catalog"],
 });
 
-export type CourseProgramModule = { title: string; lessons: string[] };
+export type CourseProgramModule = { title: string; summary?: string; lessons: string[] };
 export type CourseExam = {
   passThreshold: number;
   questionsToDraw: number;
@@ -147,10 +147,16 @@ async function _getPublicCourse(courseId: string): Promise<PublicCourse | null> 
   const sl = slRows[0];
   const finalQuiz = finalQuizRows[0];
 
-  const program: CourseProgramModule[] = mods.map((m) => ({
-    title: m.title,
-    lessons: less.filter((l) => l.moduleId === m.id).map((l) => l.title),
-  }));
+  // Programma: se il corso ha un programma autorato in details, usalo (titolo + sintesi);
+  // altrimenti quello generico derivato dai moduli DB (titolo + elenco lezioni).
+  const authored = c.details?.program;
+  const program: CourseProgramModule[] =
+    authored && authored.length > 0
+      ? authored.map((p) => ({ title: p.title, summary: p.summary, lessons: [] }))
+      : mods.map((m) => ({
+          title: m.title,
+          lessons: less.filter((l) => l.moduleId === m.id).map((l) => l.title),
+        }));
 
   return {
     id: c.id,

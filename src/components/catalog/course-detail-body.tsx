@@ -110,6 +110,9 @@ export function CourseDetailBody({ c, aside }: { c: PublicCourse; aside: React.R
                 {c.program.map((m, i) => (
                   <div key={i} className="rounded-2xl border border-border bg-card p-5">
                     <p className="font-medium text-near-black">{m.title}</p>
+                    {m.summary ? (
+                      <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{m.summary}</p>
+                    ) : null}
                     {m.lessons.length > 0 ? (
                       <ul className="mt-2.5 flex flex-col gap-1.5">
                         {m.lessons.map((l, j) => (

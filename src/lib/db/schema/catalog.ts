@@ -73,6 +73,7 @@ export const course = pgTable(
       level?: string;
       language?: string;
       certInfo?: string;
+      program?: { title: string; summary: string }[];
     }>(),
     // URL pubblico immagine corso (bucket Supabase "course-images"); null = grafica per categoria.
     imageUrl: text("image_url"),
