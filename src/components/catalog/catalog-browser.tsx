@@ -5,7 +5,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { Clock, Search } from "lucide-react";
+import { Check, Clock, Search } from "lucide-react";
 import type { CatalogCourse } from "@/features/catalog/queries";
 import { categoryVisual } from "./category-visual";
 
@@ -23,16 +23,18 @@ function hoursLabel(c: CatalogCourse): string {
   return c.requiredMinutes >= 60 ? `~${Math.round(c.requiredMinutes / 60)} ore` : `~${c.requiredMinutes} min`;
 }
 
-function priceLabel(c: CatalogCourse): string {
-  if (c.priceCents == null) return "Su richiesta";
-  return new Intl.NumberFormat("it-IT", {
-    style: "currency",
-    currency: (c.currency ?? "eur").toUpperCase(),
-  }).format(c.priceCents / 100);
+export function euro(cents: number, currency = "eur"): string {
+  return new Intl.NumberFormat("it-IT", { style: "currency", currency: currency.toUpperCase() }).format(cents / 100);
 }
 
-function Card({ c }: { c: CatalogCourse }) {
+/** Doppio listino attivo? (prezzo lancio con listino barrato) */
+function hasLaunchPrice(c: Pick<CatalogCourse, "priceCents" | "listPriceCents">): boolean {
+  return c.priceCents != null && c.listPriceCents != null && c.listPriceCents > c.priceCents;
+}
+
+function Card({ c, enrolled }: { c: CatalogCourse; enrolled: boolean }) {
   const v = categoryVisual(c.category);
+  const launch = hasLaunchPrice(c);
   return (
     <Link
       href={`/corsi/${c.id}`}
@@ -50,6 +52,11 @@ function Card({ c }: { c: CatalogCourse }) {
         <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-medium text-near-black shadow-sm backdrop-blur">
           {v.label}
         </span>
+        {launch && !enrolled ? (
+          <span className="absolute right-3 top-3 rounded-full bg-primary px-2.5 py-1 text-[11px] font-semibold text-white shadow-sm">
+            Prezzo lancio
+          </span>
+        ) : null}
       </div>
       <div className="flex flex-1 flex-col p-5">
         <h3 className="font-heading text-lg leading-snug text-near-black transition-colors group-hover:text-primary">
@@ -62,16 +69,38 @@ function Card({ c }: { c: CatalogCourse }) {
           <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
             <Clock className="h-3.5 w-3.5 text-primary" /> {hoursLabel(c)}
           </span>
-          <span className="font-heading text-lg text-near-black">{priceLabel(c)}</span>
+          {enrolled ? (
+            <span className="inline-flex items-center gap-1 rounded-full bg-success/10 px-2.5 py-1 text-xs font-medium text-success">
+              <Check className="h-3.5 w-3.5" /> Già tuo
+            </span>
+          ) : c.priceCents == null ? (
+            <span className="font-heading text-lg text-near-black">Su richiesta</span>
+          ) : (
+            <span className="text-right">
+              {launch ? (
+                <span className="mr-2 text-sm text-muted-foreground line-through">{euro(c.listPriceCents!, c.currency ?? "eur")}</span>
+              ) : null}
+              <span className="font-heading text-lg text-near-black">{euro(c.priceCents, c.currency ?? "eur")}</span>
+              <span className="ml-1 text-[11px] text-muted-foreground">+ IVA</span>
+            </span>
+          )}
         </div>
       </div>
     </Link>
   );
 }
 
-export function CatalogBrowser({ courses }: { courses: CatalogCourse[] }) {
+export function CatalogBrowser({
+  courses,
+  enrolledIds,
+}: {
+  courses: CatalogCourse[];
+  /** Id corsi già dell'utente (chip "Già tuo"). Server-computed nella page, MAI in cache globale. */
+  enrolledIds?: string[];
+}) {
   const [activeArea, setActiveArea] = useState("all");
   const [query, setQuery] = useState("");
+  const enrolled = useMemo(() => new Set(enrolledIds ?? []), [enrolledIds]);
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim();
@@ -115,7 +144,7 @@ export function CatalogBrowser({ courses }: { courses: CatalogCourse[] }) {
       {filtered.length > 0 ? (
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((c) => (
-            <Card key={c.id} c={c} />
+            <Card key={c.id} c={c} enrolled={enrolled.has(c.id)} />
           ))}
         </div>
       ) : courses.length === 0 ? (

@@ -4,7 +4,7 @@
 import { and, asc, count, eq, isNull } from "drizzle-orm";
 import { unstable_cache } from "next/cache";
 import { db } from "@/lib/db";
-import { course, enrollment, lesson, module as courseModule, quiz, slide } from "@/lib/db/schema";
+import { bundle, bundleCourse, course, enrollment, lesson, module as courseModule, quiz, slide } from "@/lib/db/schema";
 import type { CourseDetails } from "@/features/courses/course-details";
 import { withTenant } from "@/lib/db/tenant";
 
@@ -17,6 +17,8 @@ export type CatalogCourse = {
   requiredMinutes: number;
   category: string | null;
   priceCents: number | null;
+  // Prezzo di LISTINO (barrato): mostrato solo se maggiore di priceCents (doppio listino).
+  listPriceCents: number | null;
   currency: string | null;
   imageUrl: string | null;
   purchasable: boolean;
@@ -34,6 +36,7 @@ async function _listPublishedCourses(): Promise<CatalogCourse[]> {
       requiredMinutes: course.requiredMinutes,
       category: course.category,
       priceCents: course.priceCents,
+      listPriceCents: course.listPriceCents,
       currency: course.currency,
       imageUrl: course.imageUrl,
       stripePriceId: course.stripePriceId,
@@ -51,6 +54,7 @@ async function _listPublishedCourses(): Promise<CatalogCourse[]> {
     requiredMinutes: r.requiredMinutes,
     category: r.category,
     priceCents: r.priceCents,
+    listPriceCents: r.listPriceCents,
     currency: r.currency,
     imageUrl: r.imageUrl,
     purchasable: !!r.stripePriceId,
@@ -95,6 +99,7 @@ async function _getPublicCourse(courseId: string): Promise<PublicCourse | null> 
       requiredMinutes: course.requiredMinutes,
       category: course.category,
       priceCents: course.priceCents,
+      listPriceCents: course.listPriceCents,
       currency: course.currency,
       imageUrl: course.imageUrl,
       details: course.details,
@@ -167,6 +172,7 @@ async function _getPublicCourse(courseId: string): Promise<PublicCourse | null> 
     requiredMinutes: c.requiredMinutes,
     category: c.category,
     priceCents: c.priceCents,
+    listPriceCents: c.listPriceCents,
     currency: c.currency,
     imageUrl: c.imageUrl,
     details: c.details ?? null,
@@ -195,6 +201,87 @@ export async function getPublicCourseBySlug(slug: string): Promise<PublicCourse 
     .where(and(eq(course.slug, slug), eq(course.status, "published"), isNull(course.organizationId)))
     .limit(1);
   return c ? getPublicCourse(c.id) : null;
+}
+
+// --- Bundle (pacchetti in vetrina) ---
+
+export type CatalogBundleCourse = {
+  id: string;
+  title: string;
+  priceCents: number | null;
+  role: "included" | "eligible";
+};
+export type CatalogBundle = {
+  id: string;
+  slug: string;
+  title: string;
+  description: string | null;
+  kind: "fixed" | "pick_one";
+  priceCents: number | null;
+  currency: string | null;
+  courses: CatalogBundleCourse[];
+};
+
+/** Pacchetti attivi con i corsi (e i loro prezzi CORRENTI: il "barrato" del bundle è la
+ * somma dei prezzi correnti dei singoli — resta vero in ogni periodo, lancio o listino). */
+async function _listActiveBundles(): Promise<CatalogBundle[]> {
+  const rows = await db
+    .select({
+      id: bundle.id,
+      slug: bundle.slug,
+      title: bundle.title,
+      description: bundle.description,
+      kind: bundle.kind,
+      priceCents: bundle.priceCents,
+      currency: bundle.currency,
+      position: bundle.position,
+    })
+    .from(bundle)
+    .where(eq(bundle.active, true))
+    .orderBy(asc(bundle.position));
+  if (rows.length === 0) return [];
+
+  const links = await db
+    .select({
+      bundleId: bundleCourse.bundleId,
+      role: bundleCourse.role,
+      courseId: course.id,
+      title: course.title,
+      priceCents: course.priceCents,
+    })
+    .from(bundleCourse)
+    .innerJoin(course, eq(course.id, bundleCourse.courseId))
+    .where(eq(course.status, "published"));
+
+  return rows.map((b) => ({
+    id: b.id,
+    slug: b.slug,
+    title: b.title,
+    description: b.description,
+    kind: b.kind,
+    priceCents: b.priceCents,
+    currency: b.currency,
+    courses: links
+      .filter((l) => l.bundleId === b.id)
+      .map((l) => ({ id: l.courseId, title: l.title, priceCents: l.priceCents, role: l.role })),
+  }));
+}
+
+/** Pacchetti attivi cachati (dati GLOBALI). Revalida ogni 60s. */
+export const listActiveBundles = unstable_cache(_listActiveBundles, ["catalog:bundles"], {
+  revalidate: 60,
+  tags: ["catalog"],
+});
+
+/** Id dei corsi a cui l'utente è già iscritto (attivi). Per-utente: MAI dentro le cache globali. */
+export async function getMyEnrolledCourseIds(userId: string): Promise<string[]> {
+  const rows = await withTenant({ userId }, async (tx) =>
+    tx
+      .select({ courseId: enrollment.courseId })
+      .from(enrollment)
+      .where(and(eq(enrollment.userId, userId), eq(enrollment.status, "active"))),
+  );
+  return rows.map((r) => r.courseId);
 }
 
 /** L'iscrizione attiva dell'utente a un corso, se esiste (per lo stato CTA). */

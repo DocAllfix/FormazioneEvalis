@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { Award, BookOpen, CheckCircle2, GraduationCap } from "lucide-react";
 import { getMyCertificates, getMyEnrollments } from "@/features/learner/queries";
 import { CourseCard } from "@/components/app/course-card";
+import { PurchaseBanner } from "@/components/app/purchase-banner";
 import { StatCard } from "@/components/app/stat-card";
 import { BlurFade } from "@/components/ui/blur-fade";
 
@@ -19,6 +21,10 @@ export default async function DashboardPage() {
 
   return (
     <div className="flex flex-col gap-6">
+      {/* Banner post-checkout (?purchase=…): useSearchParams richiede Suspense in una page server */}
+      <Suspense fallback={null}>
+        <PurchaseBanner />
+      </Suspense>
       <div>
         <h1 className="font-heading text-2xl text-near-black md:text-3xl">
           I miei percorsi
