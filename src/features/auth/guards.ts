@@ -67,6 +67,23 @@ export function isPlatformStaffEmail(email: string): boolean {
 }
 
 /**
+ * REVISORI del player (solo controllo interno): utenti a cui il server sblocca "Avanti"
+ * senza attendere tempo minimo/audio, per scorrere i corsi e testarli. NON tocca la
+ * persistenza né l'audit-log (nessun completamento finto): agisce SOLO sul flag di ritorno
+ * dell'heartbeat. Allowlist per user.id: costante (garantisce il funzionamento anche senza
+ * env in prod) + env `PLAYER_REVIEWER_USER_IDS` (CSV) estendibile. Nessun effetto sugli altri.
+ */
+const REVIEWER_USER_IDS = ["UDehVYvTyFwHEBmVH1rWQwvLU5yjEF40"]; // dilonardoa28 (controllo interno)
+export function isPlayerReviewerId(userId?: string | null): boolean {
+  if (!userId) return false;
+  const env = (process.env.PLAYER_REVIEWER_USER_IDS ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return REVIEWER_USER_IDS.includes(userId) || env.includes(userId);
+}
+
+/**
  * Admin di PIATTAFORMA (Evalis): canonico = campo `user.platformRole === 'admin'`;
  * la allowlist email resta come BOOTSTRAP (primi admin / fallback). Check puro, no throw.
  */

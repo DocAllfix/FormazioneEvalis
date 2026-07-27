@@ -9,6 +9,7 @@ import { slide, slideProgress, lesson, module as courseModule } from "@/lib/db/s
 import { heartbeat } from "@/lib/db/schema";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
+import { isPlayerReviewerId } from "@/features/auth/guards";
 
 // Executor: db globale OPPURE una transazione (per ereditare le GUC di tenant da withTenant).
 type DbOrTx = typeof db | Parameters<Parameters<typeof db.transaction>[0]>[0];
@@ -143,7 +144,12 @@ export async function recordHeartbeat(params: {
       await tx.insert(slideProgress).values({ enrollmentId, slideId, ...setValues });
     }
 
-    return { effectiveSeconds, audioCompleted, completed };
+    // Revisori interni (allowlist per user.id, verificata lato server): "Avanti" sbloccato
+    // per scorrere/testare i corsi. Override SOLO del flag di ritorno — la persistenza e
+    // l'audit-log sopra usano il `completed` reale, quindi nessun completamento finto e
+    // nessun effetto per gli utenti veri (per loro isPlayerReviewerId è sempre false).
+    const completedForClient = completed || isPlayerReviewerId(params.ctx?.userId);
+    return { effectiveSeconds, audioCompleted, completed: completedForClient };
   });
 }
 
