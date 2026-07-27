@@ -31,9 +31,16 @@ export default function TerminiPage() {
 
       <H2>3. Prezzi e pagamenti</H2>
       <P>
-        I prezzi dei corsi sono indicati sulla piattaforma e si intendono comprensivi di IVA ove applicabile. I pagamenti sono
-        elaborati tramite il fornitore <strong>Stripe</strong>; Evalis non tratta direttamente i dati completi delle carte di pagamento.
+        I prezzi dei corsi e dei pacchetti sono indicati sulla piattaforma in <strong>Euro (€)</strong> e si intendono{" "}
+        <strong>IVA esclusa</strong>: l&apos;IVA di legge è calcolata ed evidenziata in modo trasparente al momento del pagamento,
+        prima della conferma dell&apos;ordine. I pagamenti sono elaborati tramite il fornitore <strong>Stripe</strong> (carte
+        accettate: Visa, Mastercard, American Express); Evalis non tratta direttamente i dati completi delle carte di pagamento.
         L&apos;accesso al corso è attivato a seguito della conferma del pagamento.
+      </P>
+      <P>
+        Eventuali <strong>prezzi promozionali o &quot;di lancio&quot;</strong> sono offerte a tempo limitato: il prezzo applicato è
+        sempre quello indicato al momento dell&apos;acquisto. Gli sconti riservati alle aziende (per iscrizioni multiple allo stesso
+        corso) sono applicati automaticamente al pagamento e non sono cumulabili con altre promozioni.
       </P>
 
       <H2>4. Erogazione e requisiti tecnici</H2>
@@ -53,35 +60,61 @@ export default function TerminiPage() {
         <a className="text-primary" href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>. La presente clausola non si applica ai contratti B2B.
       </P>
 
-      <H2>6. Condizioni per le aziende (B2B)</H2>
+      <H2>6. Rimborsi</H2>
+      <UL>
+        <li>
+          <strong>Rimborso integrale entro 14 giorni</strong> dall&apos;acquisto se il corso <strong>non è mai stato avviato</strong>{" "}
+          (nessuna lezione iniziata), in conformità al diritto di recesso di cui alla sezione 5.
+        </li>
+        <li>
+          Una volta <strong>iniziata la fruizione</strong> del corso, il rimborso non è dovuto (art. 59, comma 1, lett. o) del
+          Codice del Consumo, previo consenso espresso all&apos;esecuzione anticipata prestato all&apos;acquisto).
+        </li>
+        <li>
+          <strong>Come richiederlo</strong>: inviare una email a{" "}
+          <a className="text-primary" href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a> dall&apos;indirizzo associato
+          all&apos;account, indicando il corso acquistato e la data dell&apos;ordine.
+        </li>
+        <li>
+          Il rimborso è riaccreditato sullo <strong>stesso metodo di pagamento</strong> utilizzato per l&apos;acquisto, entro{" "}
+          <strong>14 giorni</strong> dall&apos;accettazione della richiesta, tramite il circuito Stripe.
+        </li>
+        <li>
+          In caso di malfunzionamento tecnico imputabile alla piattaforma che impedisca in modo persistente la fruizione, l&apos;utente
+          può contattare l&apos;assistenza: se il problema non è risolvibile, Evalis valuta il rimborso anche a fruizione iniziata.
+        </li>
+      </UL>
+
+      <H2>7. Condizioni per le aziende (B2B)</H2>
       <UL>
         <li>L&apos;azienda acquista un numero di posti (seat) e assegna i corsi ai propri dipendenti tramite l&apos;area dedicata.</li>
+        <li>In alternativa l&apos;azienda può acquistare singoli corsi o pacchetti per i propri iscritti; gli sconti per iscrizioni multiple allo stesso corso sono applicati automaticamente al pagamento.</li>
         <li>L&apos;azienda è titolare del trattamento dei dati dei propri dipendenti; Evalis agisce come responsabile (v. Privacy Policy).</li>
         <li>L&apos;azienda garantisce di aver informato i propri dipendenti e di disporre delle basi giuridiche per l&apos;assegnazione dei corsi.</li>
       </UL>
 
-      <H2>7. Proprietà intellettuale</H2>
+      <H2>8. Proprietà intellettuale</H2>
       <P>
         Tutti i contenuti dei corsi (video, slide, testi, quiz, marchi) sono di proprietà di Evalis o dei rispettivi titolari e
         sono protetti dalla normativa sul diritto d&apos;autore. All&apos;utente è concessa una licenza personale, non esclusiva e
         non trasferibile per la sola fruizione. È vietata la riproduzione, distribuzione o comunicazione a terzi senza autorizzazione.
       </P>
 
-      <H2>8. Limitazione di responsabilità</H2>
+      <H2>9. Limitazione di responsabilità</H2>
       <P>
         Evalis si impegna a garantire la continuità del servizio, senza tuttavia poter escludere interruzioni dovute a manutenzione
         o cause di forza maggiore. Evalis non risponde di danni derivanti da un uso improprio della piattaforma o dal mancato rispetto
         dei presenti Termini da parte dell&apos;utente.
       </P>
 
-      <H2>9. Legge applicabile e foro competente</H2>
+      <H2>10. Legge applicabile e foro competente</H2>
       <P>
         I presenti Termini sono regolati dalla legge italiana. Per i contratti con i consumatori è competente in via esclusiva il
         foro del luogo di residenza o domicilio del consumatore, se ubicato in Italia. Per i contratti B2B è competente in via
         esclusiva il foro di Napoli Nord.
       </P>
 
-      <H2>10. Contatti</H2>
+      <H2>11. Contatti</H2>
       <P>
         Per qualsiasi comunicazione: {COMPANY.email} · PEC {COMPANY.pec} · tel. {COMPANY.phone}.
       </P>

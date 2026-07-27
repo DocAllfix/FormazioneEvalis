@@ -17,7 +17,7 @@ export const COMPANY = {
   phone2: "+39 349 755 2716",
   site: "evalisacademy.it",
   parentSite: "evaliscert.it",
-  lastUpdated: "24 luglio 2026",
+  lastUpdated: "27 luglio 2026",
 } as const;
 
 // Sub-processor / responsabili esterni del trattamento (stack reale della piattaforma).
