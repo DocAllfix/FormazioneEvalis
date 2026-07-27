@@ -1,11 +1,14 @@
 "use client";
 
-// Abbonamento a posti (B2B): acquista posti (Stripe Checkout) e gestisci l'abbonamento
-// (Customer Portal). Nessun importo/logica di pagamento qui: tutto su Stripe.
+// Fatturazione (B2B). Modello: i POSTI NON si vendono — l'azienda invita liberamente i
+// propri dipendenti e paga i CORSI che acquista per loro (con sconto automatico dal 2°
+// iscritto allo stesso corso). Qui: stato dipendenti, come funziona la spesa, ricevute
+// e metodo di pagamento tramite il portale Stripe.
 
 import { useState } from "react";
-import { CreditCard, Loader2, Plus } from "lucide-react";
-import { buySeatsAction, openBillingPortalAction } from "@/features/billing/server-actions";
+import { ArrowRight, BadgePercent, CreditCard, Loader2, Users } from "lucide-react";
+import Link from "next/link";
+import { openBillingPortalAction } from "@/features/billing/server-actions";
 
 export function BillingPanel({
   seatsUsed,
@@ -16,32 +19,18 @@ export function BillingPanel({
   seatLimit: number;
   subscriptionStatus: string | null;
 }) {
-  const [seats, setSeats] = useState(5);
-  const [loading, setLoading] = useState<"" | "buy" | "portal">("");
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const hasSubscription = seatLimit > 1;
-
-  async function buy() {
-    setLoading("buy");
-    setError("");
-    try {
-      const url = await buySeatsAction(seats);
-      window.location.href = url;
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Errore nell'avvio dell'acquisto.");
-      setLoading("");
-    }
-  }
 
   async function portal() {
-    setLoading("portal");
+    setLoading(true);
     setError("");
     try {
       const url = await openBillingPortalAction();
       window.location.href = url;
     } catch (e) {
       setError(e instanceof Error ? e.message : "Errore nell'apertura del portale.");
-      setLoading("");
+      setLoading(false);
     }
   }
 
@@ -53,70 +42,62 @@ export function BillingPanel({
 
       <div className="rounded-2xl border border-border bg-card p-6">
         <div className="flex items-baseline justify-between">
-          <p className="text-sm font-medium text-near-black">Posti</p>
-          <p className="tabular-nums text-sm text-muted-foreground">
-            <span className="text-2xl font-semibold text-near-black">{seatsUsed}</span> / {seatLimit}
+          <p className="inline-flex items-center gap-2 text-sm font-medium text-near-black">
+            <Users className="h-4 w-4 text-primary" /> Dipendenti nel tuo spazio
           </p>
-        </div>
-        <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-secondary">
-          <div
-            className="h-full rounded-full bg-primary transition-all"
-            style={{ width: `${seatLimit > 0 ? Math.min(100, (seatsUsed / seatLimit) * 100) : 0}%` }}
-          />
+          <p className="text-2xl font-semibold tabular-nums text-near-black">{seatsUsed}</p>
         </div>
         <p className="mt-2 text-xs text-muted-foreground">
-          {hasSubscription
-            ? subscriptionStatus
-              ? `Abbonamento: ${subscriptionStatus}.`
-              : "Abbonamento attivo."
-            : "Nessun abbonamento attivo: acquista i posti per invitare i dipendenti."}
+          Puoi invitare i tuoi dipendenti liberamente: l&apos;accesso alla piattaforma non si paga
+          {seatLimit > 0 ? ` (limite tecnico attuale: ${seatLimit} persone, ampliabile su richiesta)` : ""}.
+          {subscriptionStatus ? ` Abbonamento storico: ${subscriptionStatus}.` : ""}
         </p>
       </div>
 
       <div className="rounded-2xl border border-border bg-card p-6">
-        <p className="text-sm font-medium text-near-black">Acquista posti</p>
-        <p className="mt-1 text-xs text-muted-foreground">
-          Ogni posto consente di assegnare i corsi a un dipendente. Potrai modificare la quantità in
-          ogni momento dal portale.
-        </p>
-        <div className="mt-4 flex flex-wrap items-center gap-3">
-          <input
-            type="number"
-            min={1}
-            value={seats}
-            onChange={(e) => setSeats(Math.max(1, Number(e.target.value) || 1))}
-            className="w-24 rounded-lg border border-border bg-background px-3 py-2 text-sm tabular-nums outline-none ring-primary/30 focus:ring-2"
-            aria-label="Numero posti"
-          />
-          <button
-            onClick={buy}
-            disabled={loading === "buy"}
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2 text-sm font-medium text-white transition hover:brightness-110 disabled:opacity-60"
-          >
-            {loading === "buy" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Plus className="h-4 w-4" />}
-            Acquista posti
-          </button>
-        </div>
+        <p className="text-sm font-medium text-near-black">Come funziona la spesa</p>
+        <ul className="mt-3 flex flex-col gap-2.5 text-sm text-foreground/80">
+          <li className="flex items-start gap-2">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+            Paghi solo i <strong>corsi</strong> che acquisti per i tuoi dipendenti: nessun canone,
+            nessun costo per l&apos;accesso.
+          </li>
+          <li className="flex items-start gap-2">
+            <BadgePercent className="mt-0.5 h-4 w-4 shrink-0 text-success" />
+            <span>
+              <strong>Sconto automatico</strong>: −20% dal secondo iscritto allo stesso corso, −30% dal
+              quinto. Applicato da solo al pagamento, senza codici.
+            </span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+            Acquisti dalla pagina <strong>Persone</strong>, scegliendo il corso accanto al dipendente.
+          </li>
+        </ul>
+        <Link
+          href="/admin/persone"
+          className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition hover:brightness-110"
+        >
+          Vai a Persone <ArrowRight className="h-4 w-4" />
+        </Link>
       </div>
 
-      {hasSubscription ? (
-        <div className="flex items-center justify-between rounded-2xl border border-border bg-card p-6">
-          <div>
-            <p className="text-sm font-medium text-near-black">Gestisci abbonamento</p>
-            <p className="mt-1 text-xs text-muted-foreground">
-              Cambia il numero di posti, aggiorna il metodo di pagamento o disdici dal portale Stripe.
-            </p>
-          </div>
-          <button
-            onClick={portal}
-            disabled={loading === "portal"}
-            className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium text-near-black transition hover:bg-secondary disabled:opacity-60"
-          >
-            {loading === "portal" ? <Loader2 className="h-4 w-4 animate-spin" /> : <CreditCard className="h-4 w-4" />}
-            Apri portale
-          </button>
+      <div className="flex items-center justify-between rounded-2xl border border-border bg-card p-6">
+        <div>
+          <p className="text-sm font-medium text-near-black">Ricevute e metodo di pagamento</p>
+          <p className="mt-1 text-xs text-muted-foreground">
+            Scarica le ricevute degli acquisti e aggiorna i dati di fatturazione dal portale sicuro Stripe.
+          </p>
         </div>
-      ) : null}
+        <button
+          onClick={portal}
+          disabled={loading}
+          className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-medium text-near-black transition hover:bg-secondary disabled:opacity-60"
+        >
+          {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <CreditCard className="h-4 w-4" />}
+          Apri portale
+        </button>
+      </div>
     </div>
   );
 }

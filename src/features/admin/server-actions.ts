@@ -8,8 +8,9 @@ import { eq } from "drizzle-orm";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { organization } from "@/lib/db/schema";
-import { requireSession } from "@/features/auth/guards";
+import { requireSession, requirePlatformAdmin } from "@/features/auth/guards";
 import { createCompanyOrg } from "@/features/auth/orgs";
+import { DEFAULT_COMPANY_SEATS } from "@/features/billing/seats";
 import { isValidSlug } from "@/lib/reserved-subdomains";
 import { appendActivity } from "@/features/audit/log";
 import { inviteMember, acceptInvitation, verifyInvitedAccount } from "@/features/auth/invitations";
@@ -31,8 +32,10 @@ export async function createMyCompany(input: { name: string; slug: string }) {
     .limit(1);
   if (exists) throw new Error("Sottodominio già in uso, scegline un altro.");
 
-  // seatLimit 1 = solo l'owner finché non si comprano posti (poi org.seats dal webhook)
-  const orgId = await createCompanyOrg({ name, slug, seatLimit: 1, ownerUserId: user.id });
+  // I posti NON si vendono (modello: si pagano i corsi, non l'accesso): l'azienda può
+  // invitare liberamente i propri dipendenti. Il limite resta solo come guardia tecnica
+  // contro inviti massivi anomali; si alza a richiesta.
+  const orgId = await createCompanyOrg({ name, slug, seatLimit: DEFAULT_COMPANY_SEATS, ownerUserId: user.id });
   await auth.api
     .setActiveOrganization({ body: { organizationId: orgId }, headers: await headers() })
     .catch(() => {});
@@ -72,7 +75,13 @@ export async function verifyInvitedAccountAction(invitationId: string): Promise<
 }
 
 /** Assegna un corso a un dipendente dell'azienda amministrata (enrollment b2b_seat). */
+/** Assegnazione DIRETTA di un corso a un dipendente, SENZA pagamento.
+ * Riservata allo STAFF di piattaforma: serve per gli ordini incassati fuori dalla
+ * piattaforma (bonifico, fattura, accordi quadro). L'admin dell'azienda NON può usarla —
+ * per i suoi dipendenti acquista il corso dal catalogo (con lo sconto azienda), altrimenti
+ * potrebbe distribuire gratuitamente l'intero catalogo. */
 export async function assignCourseAction(memberUserId: string, courseId: string) {
   const { org } = await requireCompanyContext();
+  await requirePlatformAdmin();
   return enrollMemberInCourse({ orgId: org.id, memberUserId, courseId });
 }

@@ -4,7 +4,7 @@
 
 import { and, count, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { course, enrollment, organization } from "@/lib/db/schema";
+import { course, enrollment, member, organization } from "@/lib/db/schema";
 import { getStripe } from "@/lib/stripe/client";
 import { requireActiveOrg, requireRole } from "@/features/auth/guards";
 import { parseOrgMetadata } from "@/features/auth/org-metadata";
@@ -49,8 +49,10 @@ export async function courseCompanyDiscountPercent(orgId: string, courseId: stri
 }
 
 /** B2C: acquisto one-off di un corso → enrollment (via webhook).
- * Sconto azienda applicato AUTOMATICAMENTE (−20% dal 2° iscritto, −30% dal 5°). */
-export async function createCoursePurchaseCheckout(courseId: string): Promise<string> {
+ * Sconto azienda applicato AUTOMATICAMENTE (−20% dal 2° iscritto, −30% dal 5°).
+ * `beneficiaryUserId`: l'azienda può comprare PER un proprio dipendente (l'iscrizione va
+ * a lui). Consentito solo a owner/admin dell'org e solo verso membri della stessa org. */
+export async function createCoursePurchaseCheckout(courseId: string, beneficiaryUserId?: string): Promise<string> {
   const { user, orgId } = await requireActiveOrg();
   const [c] = await db
     .select({ stripePriceId: course.stripePriceId })
@@ -59,6 +61,19 @@ export async function createCoursePurchaseCheckout(courseId: string): Promise<st
     .limit(1);
   if (!c) throw new Error("Corso inesistente.");
   if (!c.stripePriceId) throw new Error("Corso non acquistabile singolarmente (prezzo non configurato).");
+
+  // acquisto per un dipendente: serve il ruolo e la membership del destinatario
+  let destinatarioId = user.id;
+  if (beneficiaryUserId && beneficiaryUserId !== user.id) {
+    await requireRole("owner", "admin");
+    const [m] = await db
+      .select({ id: member.id })
+      .from(member)
+      .where(and(eq(member.userId, beneficiaryUserId), eq(member.organizationId, orgId)))
+      .limit(1);
+    if (!m) throw new Error("Il destinatario non è un membro della tua organizzazione.");
+    destinatarioId = beneficiaryUserId;
+  }
 
   const percent = await courseCompanyDiscountPercent(orgId, courseId);
   const customerId = await ensureStripeCustomer(orgId);
@@ -69,9 +84,10 @@ export async function createCoursePurchaseCheckout(courseId: string): Promise<st
     // `discounts` è mutuamente esclusivo con allow_promotion_codes (che non usiamo)
     ...(percent !== 0 ? { discounts: [{ coupon: COMPANY_COUPONS[percent] }] } : {}),
     ...TAX_PARAMS,
-    metadata: { kind: "course_purchase", userId: user.id, courseId, orgId },
-    success_url: `${appUrl()}/dashboard?purchase=success`,
-    cancel_url: `${appUrl()}/dashboard?purchase=cancel`,
+    // userId = destinatario dell'iscrizione (se stesso, o il dipendente per cui si compra)
+    metadata: { kind: "course_purchase", userId: destinatarioId, courseId, orgId },
+    success_url: `${appUrl()}${destinatarioId === user.id ? "/dashboard?purchase=success" : "/admin/persone?purchase=success"}`,
+    cancel_url: `${appUrl()}${destinatarioId === user.id ? "/dashboard?purchase=cancel" : "/admin/persone?purchase=cancel"}`,
   });
   if (!session.url) throw new Error("URL checkout non disponibile.");
   return session.url;

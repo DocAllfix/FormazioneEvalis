@@ -7,6 +7,10 @@ import { db } from "@/lib/db";
 import { member, organization } from "@/lib/db/schema";
 import { parseOrgMetadata } from "@/features/auth/org-metadata";
 
+/** Posti assegnati a una nuova azienda. I posti NON sono un prodotto (si pagano i CORSI):
+ * questo è solo un tetto tecnico agli inviti, generoso e alzabile a richiesta. */
+export const DEFAULT_COMPANY_SEATS = 200;
+
 export async function countMembers(orgId: string): Promise<number> {
   const [row] = await db
     .select({ value: count() })

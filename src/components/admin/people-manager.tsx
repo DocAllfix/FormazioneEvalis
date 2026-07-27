@@ -1,12 +1,14 @@
 "use client";
 
 // Gestione persone (B2B): invita dipendenti (gate posti), vedi inviti in attesa,
-// assegna corsi e monitora assegnati/certificati. Consuma le Server Action admin.
+// acquista corsi PER i dipendenti (checkout Stripe con sconto azienda) e monitora
+// assegnati/certificati. I posti non si comprano: si pagano i corsi.
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { BadgeCheck, Loader2, Mail, UserPlus } from "lucide-react";
-import { inviteMemberAction, assignCourseAction } from "@/features/admin/server-actions";
+import { inviteMemberAction } from "@/features/admin/server-actions";
+import { buyCourseForMemberAction } from "@/features/billing/server-actions";
 
 type Member = {
   userId: string;
@@ -50,16 +52,17 @@ export function PeopleManager({
     }
   }
 
-  async function assign(userId: string, courseId: string) {
+  /** Acquisto del corso PER il dipendente: apre il checkout Stripe (sconto azienda
+   * applicato in automatico). L'iscrizione arriva al dipendente dopo il pagamento. */
+  async function buyFor(userId: string, courseId: string) {
     if (!courseId) return;
     setBusyRow(userId);
     setError("");
     try {
-      await assignCourseAction(userId, courseId);
-      router.refresh();
+      const url = await buyCourseForMemberAction(courseId, userId);
+      window.location.href = url;
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Assegnazione non riuscita.");
-    } finally {
+      setError(err instanceof Error ? err.message : "Acquisto non riuscito.");
       setBusyRow(null);
     }
   }
@@ -135,7 +138,7 @@ export function PeopleManager({
               <th className="px-4 py-3 font-medium">Ruolo</th>
               <th className="px-4 py-3 text-center font-medium">Corsi</th>
               <th className="px-4 py-3 text-center font-medium">Certificati</th>
-              <th className="px-4 py-3 text-right font-medium">Assegna corso</th>
+              <th className="px-4 py-3 text-right font-medium">Acquista corso</th>
             </tr>
           </thead>
           <tbody>
@@ -169,14 +172,14 @@ export function PeopleManager({
                       defaultValue=""
                       disabled={busyRow === m.userId || courses.length === 0}
                       onChange={(e) => {
-                        assign(m.userId, e.target.value);
+                        buyFor(m.userId, e.target.value);
                         e.target.value = "";
                       }}
                       className="min-h-9 rounded-lg border border-border bg-background px-2 py-2 text-xs outline-none ring-primary/30 focus:ring-2 disabled:opacity-50"
-                      aria-label={`Assegna corso a ${m.name || m.email}`}
+                      aria-label={`Acquista un corso per ${m.name || m.email}`}
                     >
                       <option value="" disabled>
-                        Assegna corso…
+                        Acquista corso per…
                       </option>
                       {courses.map((c) => (
                         <option key={c.id} value={c.id}>
