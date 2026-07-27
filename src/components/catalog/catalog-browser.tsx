@@ -24,7 +24,13 @@ function hoursLabel(c: CatalogCourse): string {
 }
 
 export function euro(cents: number, currency = "eur"): string {
-  return new Intl.NumberFormat("it-IT", { style: "currency", currency: currency.toUpperCase() }).format(cents / 100);
+  // useGrouping esplicito: il default italiano ("min2") NON separa le migliaia sotto le
+  // cinque cifre, quindi un pacchetto da 3990 € uscirebbe "3990,00 €" invece di "3.990,00 €".
+  return new Intl.NumberFormat("it-IT", {
+    style: "currency",
+    currency: currency.toUpperCase(),
+    useGrouping: true,
+  }).format(cents / 100);
 }
 
 /** Doppio listino attivo? (prezzo lancio con listino barrato) */

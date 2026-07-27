@@ -16,7 +16,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 }
 
 function euro(cents: number, currency: string | null): string {
-  return new Intl.NumberFormat("it-IT", { style: "currency", currency: (currency ?? "eur").toUpperCase() }).format(cents / 100);
+  // useGrouping esplicito: il default italiano non separa le migliaia sotto le 5 cifre
+  return new Intl.NumberFormat("it-IT", {
+    style: "currency",
+    currency: (currency ?? "eur").toUpperCase(),
+    useGrouping: true,
+  }).format(cents / 100);
 }
 
 export default async function CourseDetailPage({ params }: { params: Promise<{ id: string }> }) {
