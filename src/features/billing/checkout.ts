@@ -17,7 +17,8 @@ const appUrl = () => process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 // IVA (Stripe Tax): i Price sono tax-exclusive ("+ IVA"), Stripe calcola e aggiunge
 // l'imposta al checkout. `customer_update` è OBBLIGATORIO col customer esistente:
 // senza, i customer creati prima (senza indirizzo) fanno fallire sessions.create.
-const TAX_PARAMS = {
+// Esportato: l'E2E (scripts/produzione/_e2e-listino.ts) riusa ESATTAMENTE questi parametri.
+export const TAX_PARAMS = {
   automatic_tax: { enabled: true },
   billing_address_collection: "required",
   tax_id_collection: { enabled: true },
