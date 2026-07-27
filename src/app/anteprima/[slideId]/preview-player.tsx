@@ -5,20 +5,26 @@
 // Attributi per Playwright: data-preview-ready (montato), il <video data-preview-clip> per
 // verificare la riproduzione (currentTime>0), data-has-clip per distinguere le slide statiche.
 
-import { useEffect, useRef, useState } from "react";
-import { SlideHtml, SAFE_RATIO } from "@/components/player/slide-html";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { SlideHtml, SAFE_RATIO, TOTAL_W } from "@/components/player/slide-html";
 
 export function PreviewPlayer({
   html,
   clipUrl,
   slideId,
+  ratio: storedRatio,
 }: {
   html: string;
   clipUrl: string | null;
   slideId: string;
+  /** Ratio per-slide salvato nel blocco (dal server); assente → ratio di sicurezza. */
+  ratio?: number;
 }) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [ratio, setRatio] = useState(SAFE_RATIO);
+  const [ratio, setRatio] = useState(storedRatio && storedRatio > 0 ? storedRatio : SAFE_RATIO);
+  const onRatio = useCallback((r: number) => {
+    if (r > 0) setRatio((prev) => (Math.abs(prev - r) > 0.005 ? r : prev));
+  }, []);
 
   // sfondo della slide (dalla <section>) per tingere il gutter dell'avatar
   const slideBg =
@@ -60,7 +66,7 @@ export function PreviewPlayer({
     >
       <div style={{ position: "relative", width: 1280, aspectRatio: String(ratio) }}>
         <div style={{ position: "absolute", inset: 0, overflow: "hidden", borderRadius: 16, background: slideBg }}>
-          <SlideHtml html={html} bg={slideBg} onRatio={setRatio} />
+          <SlideHtml html={html} bg={slideBg} ratio={ratio} scale={1280 / TOTAL_W} onRatio={onRatio} />
         </div>
         {clipUrl && (
           <div style={{ position: "absolute", left: "2%", top: "5%", width: "7%", zIndex: 10 }}>

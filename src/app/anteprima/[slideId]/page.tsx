@@ -35,8 +35,9 @@ export default async function AnteprimaPage({
   if (!s) notFound();
 
   const clipUrl = s.avatarClipUid ? await getSignedClipUrl(s.avatarClipUid) : null;
-  const blocks = (s.blocks ?? []) as { type?: string; html?: string }[];
-  const html = blocks.find((b) => b?.type === "html")?.html ?? "";
+  const blocks = (s.blocks ?? []) as { type?: string; html?: string; ratio?: number }[];
+  const htmlBlock = blocks.find((b) => b?.type === "html");
+  const html = htmlBlock?.html ?? "";
 
-  return <PreviewPlayer html={html} clipUrl={clipUrl} slideId={s.id} />;
+  return <PreviewPlayer html={html} clipUrl={clipUrl} slideId={s.id} ratio={htmlBlock?.ratio} />;
 }

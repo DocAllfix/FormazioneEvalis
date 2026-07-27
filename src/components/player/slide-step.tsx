@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
 import { BlockRenderer } from "./block-renderer";
-import { SlideHtml, SAFE_RATIO } from "./slide-html";
+import { SlideHtml, SAFE_RATIO, TOTAL_W } from "./slide-html";
 import { useSlidePlayer } from "./use-slide-player";
 import { getMyClipUrlAction } from "@/features/learner/server-actions";
 
@@ -95,12 +95,15 @@ export function SlideStep({
   const areaRef = useRef<HTMLDivElement | null>(null);
   const [area, setArea] = useState({ w: 0, h: 0 });
   // Ratio INIZIALE = quello salvato in fase di build per QUESTA slide (proporzione esatta,
-  // niente transitorio) oppure, se assente, il ratio di sicurezza (box alto → mai un taglio,
-  // al più un margine sotto per l'istante di caricamento font). SlideHtml poi conferma/affina
-  // il valore via postMessage. Non parte mai da DEFAULT (720), che tagliava le slide alte.
+  // conosciuta PRIMA di renderizzare) oppure, se assente, il ratio di sicurezza (box alto →
+  // mai un taglio). La misura di verifica dell'iframe (onRatio) può solo AFFINARE il valore;
+  // la guardia sotto ignora differenze trascurabili per evitare oscillazioni.
   const initialRatio = htmlBlock?.ratio && htmlBlock.ratio > 0 ? htmlBlock.ratio : SAFE_RATIO;
   const [ratio, setRatio] = useState(initialRatio);
   useEffect(() => setRatio(initialRatio), [slide.id, initialRatio]);
+  const onRatio = useCallback((r: number) => {
+    if (r > 0) setRatio((prev) => (Math.abs(prev - r) > 0.005 ? r : prev));
+  }, []);
   useEffect(() => {
     const el = areaRef.current;
     if (!el) return;
@@ -173,7 +176,15 @@ export function SlideStep({
               className="absolute inset-0 overflow-hidden rounded-2xl border border-border shadow-sm"
               style={{ backgroundColor: slideBg }}
             >
-              <SlideHtml html={htmlBlock.html} bg={slideBg} onRatio={setRatio} />
+              {/* Zoom-out fatto QUI dal genitore: il canvas (TOTAL_W × H) è scalato alla
+                  larghezza del box → sempre mostrato INTERO, a ogni resize/fullscreen. */}
+              <SlideHtml
+                html={htmlBlock.html}
+                bg={slideBg}
+                ratio={ratio}
+                scale={boxW ? boxW / TOTAL_W : 0}
+                onRatio={onRatio}
+              />
             </div>
             {avatarOverlay}
           </div>

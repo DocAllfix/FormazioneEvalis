@@ -34,11 +34,12 @@ for (const r of rows) {
   if (i < 0) { skipped++; continue; }
   const sec = (blocks[i].html ?? "").match(/<section[\s\S]*<\/section>/);
   if (!sec) { skipped++; continue; }
+  // misura NATURALE: figli intatti, stessa semantica della rete di sicurezza nel player
+  // (slide-html.tsx): scrollHeight della section così com'è renderizzata coi font veri.
   const nat = await page.evaluate((h) => {
     const host = document.getElementById("host")!; host.innerHTML = h;
     const s = host.querySelector("section")!;
-    s.querySelectorAll("*").forEach((e) => { (e as HTMLElement).style.height = "auto"; (e as HTMLElement).style.minHeight = "0"; });
-    s.style.height = "auto"; s.style.minHeight = "0";
+    s.style.height = "auto";
     const n = Math.ceil(s.scrollHeight); host.innerHTML = ""; return n;
   }, sec[0]);
   const H = Math.max(BASE_H, nat + 6) + MARGINE;
