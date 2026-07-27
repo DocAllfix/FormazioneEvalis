@@ -5,6 +5,7 @@ import { describe, it, expect } from "vitest";
 import type Stripe from "stripe";
 import { planFromEvent } from "../features/billing/events";
 import { resolveBundleCourseIds, type BundleLink } from "../features/billing/bundles";
+import { companyDiscountPercent, COMPANY_COUPONS } from "../features/billing/discounts";
 
 const ev = (type: string, object: unknown) => ({ type, data: { object } }) as unknown as Stripe.Event;
 
@@ -110,5 +111,25 @@ describe("resolveBundleCourseIds", () => {
   it("pick_one con scelta non eligible (o included spacciato per scelta) → errore", () => {
     expect(() => resolveBundleCourseIds({ kind: "pick_one" }, links, "estraneo")).toThrow(/non valido/);
     expect(() => resolveBundleCourseIds({ kind: "pick_one" }, links, "c-base")).toThrow(/non valido/);
+  });
+});
+
+describe("companyDiscountPercent (sconto azienda automatico)", () => {
+  it("org personale → mai sconto, anche con acquisti precedenti", () => {
+    expect(companyDiscountPercent({ isCompanyOrg: false, priorCoursePurchases: 0 })).toBe(0);
+    expect(companyDiscountPercent({ isCompanyOrg: false, priorCoursePurchases: 10 })).toBe(0);
+  });
+
+  it("azienda: 1° iscritto pieno, dal 2° −20%, dal 5° −30%", () => {
+    expect(companyDiscountPercent({ isCompanyOrg: true, priorCoursePurchases: 0 })).toBe(0); // 1° iscritto
+    expect(companyDiscountPercent({ isCompanyOrg: true, priorCoursePurchases: 1 })).toBe(20); // 2°
+    expect(companyDiscountPercent({ isCompanyOrg: true, priorCoursePurchases: 3 })).toBe(20); // 4°
+    expect(companyDiscountPercent({ isCompanyOrg: true, priorCoursePurchases: 4 })).toBe(30); // 5°
+    expect(companyDiscountPercent({ isCompanyOrg: true, priorCoursePurchases: 9 })).toBe(30); // 10°
+  });
+
+  it("le % mappano su coupon Stripe con ID fisso", () => {
+    expect(COMPANY_COUPONS[20]).toBe("azienda-20");
+    expect(COMPANY_COUPONS[30]).toBe("azienda-30");
   });
 });

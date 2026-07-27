@@ -2,16 +2,53 @@
 // usa per il redirect. Protette dai guard esistenti. Nessuna logica di pagamento qui:
 // il pagamento vive su Stripe, la verità di stato arriva dal webhook.
 
-import { eq } from "drizzle-orm";
+import { and, count, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { course } from "@/lib/db/schema";
+import { course, enrollment, organization } from "@/lib/db/schema";
 import { getStripe } from "@/lib/stripe/client";
 import { requireActiveOrg, requireRole } from "@/features/auth/guards";
+import { parseOrgMetadata } from "@/features/auth/org-metadata";
 import { ensureStripeCustomer } from "./customers";
+import { loadBundleWithCourses, resolveBundleCourseIds } from "./bundles";
+import { COMPANY_COUPONS, companyDiscountPercent } from "./discounts";
 
 const appUrl = () => process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
-/** B2C: acquisto one-off di un corso → enrollment (via webhook). */
+// IVA (Stripe Tax): i Price sono tax-exclusive ("+ IVA"), Stripe calcola e aggiunge
+// l'imposta al checkout. `customer_update` è OBBLIGATORIO col customer esistente:
+// senza, i customer creati prima (senza indirizzo) fanno fallire sessions.create.
+const TAX_PARAMS = {
+  automatic_tax: { enabled: true },
+  billing_address_collection: "required",
+  tax_id_collection: { enabled: true },
+  customer_update: { address: "auto", name: "auto" },
+} as const;
+
+/** % sconto azienda per l'acquisto di un corso da parte dell'org attiva (0 | 20 | 30). */
+export async function courseCompanyDiscountPercent(orgId: string, courseId: string): Promise<0 | 20 | 30> {
+  const [org] = await db
+    .select({ metadata: organization.metadata })
+    .from(organization)
+    .where(eq(organization.id, orgId))
+    .limit(1);
+  const isCompanyOrg = parseOrgMetadata(org?.metadata)?.type === "company";
+  if (!isCompanyOrg) return 0; // org personale B2C: mai sconto azienda (query sotto evitata)
+  const [prior] = await db
+    .select({ n: count() })
+    .from(enrollment)
+    .where(
+      and(
+        eq(enrollment.organizationId, orgId),
+        eq(enrollment.courseId, courseId),
+        eq(enrollment.source, "b2c_purchase"),
+        eq(enrollment.status, "active"),
+      ),
+    );
+  return companyDiscountPercent({ isCompanyOrg, priorCoursePurchases: prior?.n ?? 0 });
+}
+
+/** B2C: acquisto one-off di un corso → enrollment (via webhook).
+ * Sconto azienda applicato AUTOMATICAMENTE (−20% dal 2° iscritto, −30% dal 5°). */
 export async function createCoursePurchaseCheckout(courseId: string): Promise<string> {
   const { user, orgId } = await requireActiveOrg();
   const [c] = await db
@@ -22,12 +59,46 @@ export async function createCoursePurchaseCheckout(courseId: string): Promise<st
   if (!c) throw new Error("Corso inesistente.");
   if (!c.stripePriceId) throw new Error("Corso non acquistabile singolarmente (prezzo non configurato).");
 
+  const percent = await courseCompanyDiscountPercent(orgId, courseId);
   const customerId = await ensureStripeCustomer(orgId);
   const session = await getStripe().checkout.sessions.create({
     mode: "payment",
     customer: customerId,
     line_items: [{ price: c.stripePriceId, quantity: 1 }],
+    // `discounts` è mutuamente esclusivo con allow_promotion_codes (che non usiamo)
+    ...(percent !== 0 ? { discounts: [{ coupon: COMPANY_COUPONS[percent] }] } : {}),
+    ...TAX_PARAMS,
     metadata: { kind: "course_purchase", userId: user.id, courseId, orgId },
+    success_url: `${appUrl()}/dashboard?purchase=success`,
+    cancel_url: `${appUrl()}/dashboard?purchase=cancel`,
+  });
+  if (!session.url) throw new Error("URL checkout non disponibile.");
+  return session.url;
+}
+
+/** B2C: acquisto one-off di un PACCHETTO → N enrollment (via webhook). Il prezzo è quello
+ * del bundle (un solo line_item); per i pick_one `chosenCourseId` è il corso a scelta,
+ * validato qui (fail-fast) e riverificato dal provisioning. Nessuno sconto azienda. */
+export async function createBundlePurchaseCheckout(bundleId: string, chosenCourseId?: string): Promise<string> {
+  const { user, orgId } = await requireActiveOrg();
+  const { bundle: b, links } = await loadBundleWithCourses(bundleId);
+  if (!b.active) throw new Error("Pacchetto non disponibile.");
+  if (!b.stripePriceId) throw new Error("Pacchetto non acquistabile (prezzo non configurato).");
+  resolveBundleCourseIds(b, links, chosenCourseId); // valida la composizione prima di toccare Stripe
+
+  const customerId = await ensureStripeCustomer(orgId);
+  const session = await getStripe().checkout.sessions.create({
+    mode: "payment",
+    customer: customerId,
+    line_items: [{ price: b.stripePriceId, quantity: 1 }],
+    ...TAX_PARAMS,
+    metadata: {
+      kind: "bundle_purchase",
+      userId: user.id,
+      bundleId,
+      ...(chosenCourseId ? { chosenCourseId } : {}),
+      orgId,
+    },
     success_url: `${appUrl()}/dashboard?purchase=success`,
     cancel_url: `${appUrl()}/dashboard?purchase=cancel`,
   });
