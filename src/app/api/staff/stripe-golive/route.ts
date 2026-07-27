@@ -169,7 +169,20 @@ export async function POST(req: Request) {
           esito.iva = s.total_details?.amount_tax ?? 0;
           esito.totale = s.amount_total;
           esito.ivaAttesa22 = Math.round(((s.amount_subtotal ?? 0) - (s.total_details?.amount_discount ?? 0)) * 0.22);
-          esito.taxStatus = s.automatic_tax?.status ?? null;
+          esito.taxStatus = s.automatic_tax?.status ?? null; // "requires_location_inputs" = normale:
+          // Checkout calcola l'IVA quando il cliente inserisce l'indirizzo. Per avere la PROVA
+          // del calcolo qui, si interroga direttamente Stripe Tax con un indirizzo italiano.
+          const calc = await stripe.tax.calculations.create({
+            currency: "eur",
+            line_items: [{ amount: 10000, reference: "verifica", tax_behavior: "exclusive", tax_code: "txcd_10103001" }],
+            customer_details: {
+              address: { line1: "Via Roma 1", postal_code: "20100", city: "Milano", country: "IT" },
+              address_source: "billing",
+            },
+          });
+          esito.calcoloIVA_imponibile = calc.amount_total - calc.tax_amount_exclusive;
+          esito.calcoloIVA_imposta = calc.tax_amount_exclusive;
+          esito.calcoloIVA_aliquota = calc.tax_breakdown?.[0]?.tax_rate_details?.percentage_decimal ?? null;
           await stripe.checkout.sessions.expire(sess.id).catch(() => {});
         } finally {
           await stripe.customers.del(cust.id).catch(() => {});
