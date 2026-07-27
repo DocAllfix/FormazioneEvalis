@@ -11,6 +11,9 @@
 //  { action: "seed", tipo, slug }            → seed di UNA voce (corso|bundle) del listino
 //  { action: "verify", tipo, slug, fase }    → verifica di UNA voce (corso|bundle|coupons)
 
+import { eq } from "drizzle-orm";
+import { db } from "@/lib/db";
+import { course } from "@/lib/db/schema";
 import { getStripe } from "@/lib/stripe/client";
 import {
   ensureCoupons,
@@ -136,6 +139,48 @@ export async function POST(req: Request) {
 
       case "coupons":
         return json({ mode, esito: await ensureCoupons(stripe) });
+
+      case "probe-taxcode": {
+        // VERIFICA FISCALE: con quale codice imposta viene tassato un corso reale?
+        // Se il Product non ha tax_code, Stripe usa il default dell'account: va confermato
+        // che porti al 22% italiano, altrimenti l'IVA non verrebbe addebitata al cliente
+        // (e l'azienda dovrebbe scorporarla dall'incasso).
+        const settings = await stripe.tax.settings.retrieve();
+        const defaultCode = settings.defaults?.tax_code ?? null;
+        const [c] = await db
+          .select({ title: course.title, stripeProductId: course.stripeProductId })
+          .from(course)
+          .where(eq(course.slug, String(body.slug ?? "aggiornamento-lead-auditor-iso-14001-2026")))
+          .limit(1);
+        const prod = c?.stripeProductId ? await stripe.products.retrieve(c.stripeProductId) : null;
+        const codiceEffettivo = prod?.tax_code ?? defaultCode;
+        const calc = await stripe.tax.calculations.create({
+          currency: "eur",
+          line_items: [
+            {
+              amount: 17900,
+              reference: "verifica-corso",
+              tax_behavior: "exclusive",
+              ...(typeof codiceEffettivo === "string" ? { tax_code: codiceEffettivo } : {}),
+            },
+          ],
+          customer_details: {
+            address: { line1: "Via Roma 1", postal_code: "20100", city: "Milano", country: "IT" },
+            address_source: "billing",
+          },
+        });
+        return json({
+          mode,
+          corso: c?.title,
+          taxCodeDefaultAccount: defaultCode,
+          taxCodeProdotto: prod?.tax_code ?? null,
+          taxCodeApplicato: typeof codiceEffettivo === "string" ? codiceEffettivo : String(codiceEffettivo),
+          imponibile: 17900,
+          ivaCalcolata: calc.tax_amount_exclusive,
+          aliquota: calc.tax_breakdown?.[0]?.tax_rate_details?.percentage_decimal ?? null,
+          totaleClientePagherebbe: calc.amount_total,
+        });
+      }
 
       case "probe-checkout": {
         // Prova a COSTO ZERO della catena live (nessun pagamento): product+price+customer
