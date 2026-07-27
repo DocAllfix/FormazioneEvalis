@@ -41,7 +41,7 @@ export async function POST(req: Request) {
 
   const key = process.env.STRIPE_SECRET_KEY ?? "";
   const mode = key.startsWith("sk_live_") ? "live" : key.startsWith("sk_test_") ? "test" : "assente";
-  let body: { action?: string; tipo?: string; slug?: string; fase?: string };
+  let body: { action?: string; tipo?: string; slug?: string; fase?: string; ricrea?: boolean };
   try {
     body = await req.json();
   } catch {
@@ -81,7 +81,11 @@ export async function POST(req: Request) {
       case "webhook": {
         const hooks = await stripe.webhookEndpoints.list({ limit: 20 });
         const existing = hooks.data.find((h) => h.url === WEBHOOK_URL);
-        if (existing) {
+        // `ricrea: true` → elimina e ricrea identico: unico modo per riottenere il secret
+        // (Stripe lo mostra solo alla creazione). Sicuro finché non c'è traffico reale.
+        if (existing && body.ricrea === true) {
+          await stripe.webhookEndpoints.del(existing.id);
+        } else if (existing) {
           return json({
             mode,
             esistente: true,
