@@ -119,7 +119,8 @@ export async function POST(req: Request) {
           await stripe.tax.registrations.create({
             country: "IT",
             active_from: "now",
-            country_options: { it: { type: "standard" } },
+            // sede in Italia → regime domestico standard (non OSS/small seller)
+            country_options: { it: { type: "standard", standard: { place_of_supply_scheme: "standard" } } },
           });
           out.registrazioneIT = "creata (standard)";
         } else {
