@@ -18,6 +18,14 @@ export const BASE_H = 720;
 export const GUTTER = 380;
 export const TOTAL_W = SLIDE_W + GUTTER;
 export const DEFAULT_RATIO = TOTAL_W / BASE_H;
+// Altezza massima prudenziale di una slide (px) e ratio di sicurezza corrispondente.
+// Usato come valore INIZIALE del ratio nel player finché non arriva la misura reale:
+// partire da qui (box "alto") non taglia mai il contenuto — al più lascia un margine
+// sotto per un istante. Partire invece da DEFAULT (720, il più corto) tagliava le slide
+// più alte durante il transitorio di caricamento font. Deve restare ≥ dell'altezza reale
+// della slide più alta prodotta (verificato dallo sweep; max osservato ~1053px).
+export const MAX_SLIDE_H = 1200;
+export const SAFE_RATIO = TOTAL_W / MAX_SLIDE_H;
 /** % della larghezza occupata dal gutter (per dimensionare l'avatar nel parent). */
 export const GUTTER_PCT = (GUTTER / TOTAL_W) * 100;
 

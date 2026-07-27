@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
 import { BlockRenderer } from "./block-renderer";
-import { SlideHtml, DEFAULT_RATIO } from "./slide-html";
+import { SlideHtml, SAFE_RATIO } from "./slide-html";
 import { useSlidePlayer } from "./use-slide-player";
 import { getMyClipUrlAction } from "@/features/learner/server-actions";
 
@@ -16,7 +16,7 @@ type Slide = {
   completed: boolean;
 };
 
-type HtmlBlock = { type: "html"; html: string };
+type HtmlBlock = { type: "html"; html: string; ratio?: number };
 function htmlBlockOf(blocks: unknown): HtmlBlock | null {
   if (!Array.isArray(blocks)) return null;
   const b = blocks.find((x) => x && typeof x === "object" && (x as { type?: string }).type === "html");
@@ -94,8 +94,13 @@ export function SlideStep({
   // `ratio` arriva da SlideHtml (altezza adattiva per-slide).
   const areaRef = useRef<HTMLDivElement | null>(null);
   const [area, setArea] = useState({ w: 0, h: 0 });
-  const [ratio, setRatio] = useState(DEFAULT_RATIO);
-  useEffect(() => setRatio(DEFAULT_RATIO), [slide.id]);
+  // Ratio INIZIALE = quello salvato in fase di build per QUESTA slide (proporzione esatta,
+  // niente transitorio) oppure, se assente, il ratio di sicurezza (box alto → mai un taglio,
+  // al più un margine sotto per l'istante di caricamento font). SlideHtml poi conferma/affina
+  // il valore via postMessage. Non parte mai da DEFAULT (720), che tagliava le slide alte.
+  const initialRatio = htmlBlock?.ratio && htmlBlock.ratio > 0 ? htmlBlock.ratio : SAFE_RATIO;
+  const [ratio, setRatio] = useState(initialRatio);
+  useEffect(() => setRatio(initialRatio), [slide.id, initialRatio]);
   useEffect(() => {
     const el = areaRef.current;
     if (!el) return;
