@@ -33,6 +33,9 @@ const createdCourseIds: string[] = [];
 async function signUp(name: string, em: string) {
   const res = await auth.api.signUpEmail({ body: { name, email: em, password: PW } });
   createdUserIds.push(res.user.id);
+  // requireEmailVerification (C-3): l'utente di test va marcato verificato (equivale al
+  // click sul link), altrimenti i signin successivi falliscono con "Email not verified".
+  await db.update(user).set({ emailVerified: true }).where(eq(user.id, res.user.id));
   return res.user.id;
 }
 
@@ -58,7 +61,8 @@ afterAll(async () => {
 
 describe("Step 2 — integrazione DB", () => {
   it("§1 B2C self-signup → org personale (owner) + org attiva in sessione", async () => {
-    const uid = await signUp("B2C", email("b2c"));
+    const em = email("b2c");
+    const uid = await signUp("B2C", em);
 
     const mems = await db.select().from(member).where(eq(member.userId, uid));
     expect(mems.length).toBe(1);
@@ -68,6 +72,8 @@ describe("Step 2 — integrazione DB", () => {
     expect(org.slug).toBe(`u-${uid}`);
     expect(parseOrgMetadata(org.metadata)?.type).toBe("personal");
 
+    // con la verifica email obbligatoria il signup NON crea la sessione: serve il login
+    await auth.api.signInEmail({ body: { email: em, password: PW } });
     // sessione singola (1 sola sessione attiva)
     const sess = await db.select().from(session).where(eq(session.userId, uid));
     expect(sess.length).toBe(1);
