@@ -137,6 +137,48 @@ export async function POST(req: Request) {
       case "coupons":
         return json({ mode, esito: await ensureCoupons(stripe) });
 
+      case "probe-checkout": {
+        // Prova a COSTO ZERO della catena live (nessun pagamento): product+price+customer
+        // usa-e-getta, sessione con gli stessi parametri del checkout reale (Stripe Tax +
+        // coupon azienda), lettura dei totali calcolati, poi pulizia. Serve a verificare
+        // che con la chiave LIVE l'IVA venga davvero calcolata prima di seedare il listino.
+        const prod = await stripe.products.create({ name: "VERIFICA go-live (da ignorare)" });
+        const price = await stripe.prices.create({ product: prod.id, currency: "eur", unit_amount: 10000, tax_behavior: "exclusive" });
+        const cust = await stripe.customers.create({
+          email: "verifica-golive@evalisacademy.it",
+          address: { line1: "Via Roma 1", postal_code: "20100", city: "Milano", country: "IT" },
+        });
+        const esito: Record<string, unknown> = {};
+        try {
+          const sess = await stripe.checkout.sessions.create({
+            mode: "payment",
+            customer: cust.id,
+            line_items: [{ price: price.id, quantity: 1 }],
+            discounts: [{ coupon: "azienda-20" }],
+            automatic_tax: { enabled: true },
+            billing_address_collection: "required",
+            tax_id_collection: { enabled: true },
+            customer_update: { address: "auto", name: "auto" },
+            success_url: "https://evalisacademy.it/dashboard?purchase=success",
+            cancel_url: "https://evalisacademy.it/dashboard?purchase=cancel",
+          });
+          const s = await stripe.checkout.sessions.retrieve(sess.id, { expand: ["total_details"] });
+          esito.sessioneCreata = !!s.url;
+          esito.imponibile = s.amount_subtotal;
+          esito.scontoAzienda = s.total_details?.amount_discount ?? 0;
+          esito.iva = s.total_details?.amount_tax ?? 0;
+          esito.totale = s.amount_total;
+          esito.ivaAttesa22 = Math.round(((s.amount_subtotal ?? 0) - (s.total_details?.amount_discount ?? 0)) * 0.22);
+          esito.taxStatus = s.automatic_tax?.status ?? null;
+          await stripe.checkout.sessions.expire(sess.id).catch(() => {});
+        } finally {
+          await stripe.customers.del(cust.id).catch(() => {});
+          await stripe.prices.update(price.id, { active: false }).catch(() => {});
+          await stripe.products.update(prod.id, { active: false }).catch(() => {});
+        }
+        return json({ mode, ...esito });
+      }
+
       case "seed": {
         if (!body.slug || !body.tipo) return json({ errore: "servono tipo e slug" }, 400);
         const esito =
