@@ -5,8 +5,8 @@
 import { describe, it, expect, afterAll } from "vitest";
 import { sql, and, eq, inArray } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { organization, enrollment, course, activityLog, stripeProcessedEvent } from "@/lib/db/schema";
-import { provisionCoursePurchase, applySubscriptionState, revokeOrgSubscription } from "@/features/billing/provisioning";
+import { organization, enrollment, course, activityLog, stripeProcessedEvent, bundle, bundleCourse } from "@/lib/db/schema";
+import { provisionCoursePurchase, provisionBundlePurchase, applySubscriptionState, revokeOrgSubscription } from "@/features/billing/provisioning";
 import { getSeatLimit } from "@/features/billing/seats";
 import { ensureStripeCustomer } from "@/features/billing/customers";
 import { isStripeConfigured, getStripe } from "@/lib/stripe/client";
@@ -16,6 +16,7 @@ const courseIds: string[] = [];
 const orgRowIds: string[] = [];
 const auditOrgIds: string[] = [];
 const customerIds: string[] = [];
+const bundleIds: string[] = [];
 
 afterAll(async () => {
   for (const c of customerIds) {
@@ -31,6 +32,7 @@ afterAll(async () => {
       await tx.delete(activityLog).where(inArray(activityLog.organizationId, auditOrgIds));
     });
   }
+  if (bundleIds.length) await db.delete(bundle).where(inArray(bundle.id, bundleIds)); // cascade bundle_course
   if (courseIds.length) await db.delete(course).where(inArray(course.id, courseIds)); // cascade enrollment
   if (orgRowIds.length) await db.delete(organization).where(inArray(organization.id, orgRowIds));
 });
@@ -82,6 +84,74 @@ describe("Modulo 2 — provisioning billing", () => {
       .from(activityLog)
       .where(and(eq(activityLog.organizationId, orgId), eq(activityLog.verb, "purchased")));
     expect(audit.length).toBe(1);
+  });
+
+  it("B2C bundle fixed: esplosione in N enrollment + UN audit; replay idempotente", async () => {
+    const c1 = await makeCourse();
+    const c2 = await makeCourse();
+    const c3 = await makeCourse();
+    const [b] = await db
+      .insert(bundle)
+      .values({ slug: `t2-bundle-${RUN}`, title: "Bundle test", kind: "fixed", active: true })
+      .returning({ id: bundle.id });
+    bundleIds.push(b.id);
+    await db.insert(bundleCourse).values([
+      { bundleId: b.id, courseId: c1, role: "included" },
+      { bundleId: b.id, courseId: c2, role: "included" },
+      { bundleId: b.id, courseId: c3, role: "included" },
+    ]);
+    const orgId = `t2-${RUN}-bun`;
+    auditOrgIds.push(orgId);
+    const userId = `u-${RUN}-bun`;
+
+    const r1 = await provisionBundlePurchase({ userId, bundleId: b.id, orgId });
+    expect(r1.enrolledCourseIds.sort()).toEqual([c1, c2, c3].sort());
+
+    // replay del webhook → 0 nuovi enrollment, nessun audit doppio
+    const r2 = await provisionBundlePurchase({ userId, bundleId: b.id, orgId });
+    expect(r2.enrolledCourseIds).toEqual([]);
+
+    const rows = await db
+      .select({ source: enrollment.source })
+      .from(enrollment)
+      .where(and(eq(enrollment.userId, userId), inArray(enrollment.courseId, [c1, c2, c3])));
+    expect(rows.length).toBe(3);
+    expect(rows.every((r) => r.source === "b2c_purchase")).toBe(true);
+
+    const audit = await db
+      .select({ object: activityLog.object })
+      .from(activityLog)
+      .where(and(eq(activityLog.organizationId, orgId), eq(activityLog.verb, "purchased")));
+    expect(audit.length).toBe(1);
+    expect(audit[0].object).toBe(`bundle:${b.id}`);
+  });
+
+  it("B2C bundle: possesso parziale → solo i corsi mancanti; pick_one col corso scelto", async () => {
+    const base = await makeCourse();
+    const la1 = await makeCourse();
+    const la2 = await makeCourse();
+    const [b] = await db
+      .insert(bundle)
+      .values({ slug: `t2-pick-${RUN}`, title: "Pick test", kind: "pick_one", active: true })
+      .returning({ id: bundle.id });
+    bundleIds.push(b.id);
+    await db.insert(bundleCourse).values([
+      { bundleId: b.id, courseId: base, role: "included" },
+      { bundleId: b.id, courseId: la1, role: "eligible" },
+      { bundleId: b.id, courseId: la2, role: "eligible" },
+    ]);
+    const orgId = `t2-${RUN}-pick`;
+    auditOrgIds.push(orgId);
+    const userId = `u-${RUN}-pick`;
+
+    // l'utente possiede GIÀ il corso base (comprato singolo in precedenza)
+    await provisionCoursePurchase({ userId, courseId: base, orgId });
+
+    const r = await provisionBundlePurchase({ userId, bundleId: b.id, chosenCourseId: la2, orgId });
+    expect(r.enrolledCourseIds).toEqual([la2]); // solo il mancante; il base resta con l'enrollment originale
+
+    // scelta non eligible → errore (il webhook farebbe release+retry)
+    await expect(provisionBundlePurchase({ userId, bundleId: b.id, chosenCourseId: base, orgId })).rejects.toThrow();
   });
 
   it("B2B: subscription updated → org.seats aggiornati (+ getSeatLimit)", async () => {

@@ -19,6 +19,7 @@ import { getStripe } from "@/lib/stripe/client";
 import { planFromEvent } from "@/features/billing/events";
 import {
   provisionCoursePurchase,
+  provisionBundlePurchase,
   applySubscriptionState,
   revokeOrgSubscription,
 } from "@/features/billing/provisioning";
@@ -55,6 +56,12 @@ export async function POST(req: Request) {
       case "course_purchase":
         // `enrolled:false` = iscrizione già presente: successo idempotente, non un errore.
         await provisionCoursePurchase(plan);
+        break;
+
+      case "bundle_purchase":
+        // Esplode il pacchetto in N enrollment (solo i corsi mancanti; replay = 0 nuovi).
+        // Bundle inesistente/composizione invalida → throw → release() + 500 (retry Stripe).
+        await provisionBundlePurchase(plan);
         break;
 
       case "subscription_upsert": {

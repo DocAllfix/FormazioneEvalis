@@ -81,6 +81,12 @@ export const course = pgTable(
     stripePriceId: text("stripe_price_id"),
     // Prezzo denormalizzato per la VETRINA (display); il checkout usa stripePriceId.
     priceCents: integer("price_cents"),
+    // Prezzo di LISTINO (solo display, barrato): mostrato accanto a priceCents quando
+    // maggiore (doppio listino "ufficiale/lancio"). null o uguale = nessun barrato.
+    listPriceCents: integer("list_price_cents"),
+    // Product Stripe persistito: i cambi prezzo creano un Price nuovo sullo STESSO Product
+    // (prima setCoursePrice creava un Product a ogni modifica).
+    stripeProductId: text("stripe_product_id"),
     currency: text("currency").default("eur"),
     // Prerequisito INFORMATIVO (advisory, NON blocca): i corsi ISO puntano al corso ISO 19011.
     // NULL = nessun avviso (19011 stesso + tutti i corsi professionali). Self-FK, ON DELETE SET NULL.
@@ -92,6 +98,47 @@ export const course = pgTable(
     updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [index("course_org_idx").on(t.organizationId)],
+);
+
+// --- Bundle (pacchetti commerciali: N corsi venduti insieme a prezzo proprio) ---
+// "fixed": composizione chiusa (i corsi con role "included").
+// "pick_one": corsi base "included" + UN corso a scelta dell'utente tra gli "eligible"
+// (es. Pacchetto Ingresso: 19011 + un Lead Auditor a scelta). Prezzo fisso in ogni caso.
+export const bundleKind = pgEnum("bundle_kind", ["fixed", "pick_one"]);
+export const bundleCourseRole = pgEnum("bundle_course_role", ["included", "eligible"]);
+
+export const bundle = pgTable("bundle", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  slug: text("slug").notNull().unique(),
+  title: text("title").notNull(),
+  description: text("description"),
+  kind: bundleKind("kind").notNull().default("fixed"),
+  stripeProductId: text("stripe_product_id"),
+  stripePriceId: text("stripe_price_id"),
+  // Prezzo ATTIVO incassato (display + checkout via stripePriceId) e listino barrato
+  // (qui serve allo script di fine-lancio: in UI il barrato bundle è la somma dei
+  // prezzi correnti dei corsi inclusi, sempre vera in entrambi i periodi).
+  priceCents: integer("price_cents"),
+  listPriceCents: integer("list_price_cents"),
+  currency: text("currency").default("eur"),
+  active: boolean("active").notNull().default(false),
+  position: integer("position").notNull().default(0),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const bundleCourse = pgTable(
+  "bundle_course",
+  {
+    bundleId: uuid("bundle_id")
+      .notNull()
+      .references(() => bundle.id, { onDelete: "cascade" }),
+    courseId: uuid("course_id")
+      .notNull()
+      .references(() => course.id, { onDelete: "cascade" }),
+    role: bundleCourseRole("role").notNull().default("included"),
+  },
+  (t) => [unique("bundle_course_uq").on(t.bundleId, t.courseId), index("bundle_course_bundle_idx").on(t.bundleId)],
 );
 
 // --- Module ---

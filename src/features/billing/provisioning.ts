@@ -6,6 +6,7 @@ import { db } from "@/lib/db";
 import { organization, enrollment } from "@/lib/db/schema";
 import { appendActivity } from "@/features/audit/log";
 import { withTenant } from "@/lib/db/tenant";
+import { loadBundleWithCourses, resolveBundleCourseIds } from "./bundles";
 
 type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
 type DbOrTx = typeof db | Tx;
@@ -42,6 +43,41 @@ export async function provisionCoursePurchase(params: {
       });
     }
     return { enrolled: inserted.length > 0 };
+  });
+}
+
+/** B2C: acquisto BUNDLE → N enrollment (solo i corsi mancanti) + UN audit. Idempotente:
+ * un replay del webhook trova tutte le enrollment esistenti → 0 nuove, nessun audit doppio.
+ * La composizione si risolve DAL DB (bundle_course + eventuale corso a scelta), mai dai metadata. */
+export async function provisionBundlePurchase(params: {
+  userId: string;
+  bundleId: string;
+  chosenCourseId?: string;
+  orgId: string;
+}): Promise<{ enrolledCourseIds: string[] }> {
+  const { userId, bundleId, chosenCourseId, orgId } = params;
+  const { bundle: b, links } = await loadBundleWithCourses(bundleId);
+  const courseIds = resolveBundleCourseIds(b, links, chosenCourseId);
+  return withTenant({ orgId }, async (tx) => {
+    const enrolledCourseIds: string[] = [];
+    for (const courseId of courseIds) {
+      const inserted = await tx
+        .insert(enrollment)
+        .values({ organizationId: orgId, userId, courseId, source: "b2c_purchase", status: "active" })
+        .onConflictDoNothing({ target: [enrollment.userId, enrollment.courseId] })
+        .returning({ id: enrollment.id });
+      if (inserted.length > 0) enrolledCourseIds.push(courseId);
+    }
+    if (enrolledCourseIds.length > 0) {
+      await appendActivity(tx, {
+        organizationId: orgId,
+        userId,
+        verb: "purchased",
+        object: `bundle:${bundleId}`,
+        payload: { bundleId, courseIds, enrolledCourseIds },
+      });
+    }
+    return { enrolledCourseIds };
   });
 }
 

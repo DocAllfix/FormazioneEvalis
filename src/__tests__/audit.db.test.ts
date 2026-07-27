@@ -116,6 +116,10 @@ describe("Modulo 6 — audit append-only", () => {
     const orgId = (await firstMembershipOrgId(uid))!;
     createdOrgIds.push(orgId);
 
+    // requireEmailVerification (C-3) bloccherebbe il signin dell'utente di test:
+    // lo marchiamo verificato direttamente (equivale al click sul link di verifica).
+    await db.update(user).set({ emailVerified: true }).where(eq(user.id, uid));
+
     // login esplicito: ora l'org personale esiste → genera logged-in (+ revoca della sessione di signup)
     await auth.api.signInEmail({ body: { email, password: PW } });
 

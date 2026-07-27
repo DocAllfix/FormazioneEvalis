@@ -4,6 +4,7 @@ import type Stripe from "stripe";
 
 export type BillingAction =
   | { action: "course_purchase"; userId: string; courseId: string; orgId: string }
+  | { action: "bundle_purchase"; userId: string; bundleId: string; chosenCourseId?: string; orgId: string }
   | { action: "subscription_upsert"; stripeCustomerId: string; subscriptionId: string; quantity: number; status: string; plan: string | null }
   | { action: "subscription_revoke"; stripeCustomerId: string }
   | { action: "ignore" };
@@ -19,6 +20,15 @@ export function planFromEvent(event: Stripe.Event): BillingAction {
       const m = s.metadata;
       if (s.mode === "payment" && m?.kind === "course_purchase" && m.userId && m.courseId && m.orgId) {
         return { action: "course_purchase", userId: m.userId, courseId: m.courseId, orgId: m.orgId };
+      }
+      if (s.mode === "payment" && m?.kind === "bundle_purchase" && m.userId && m.bundleId && m.orgId) {
+        return {
+          action: "bundle_purchase",
+          userId: m.userId,
+          bundleId: m.bundleId,
+          chosenCourseId: m.chosenCourseId || undefined,
+          orgId: m.orgId,
+        };
       }
       return { action: "ignore" };
     }
