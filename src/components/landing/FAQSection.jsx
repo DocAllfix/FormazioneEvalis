@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import ScrollReveal from "./ScrollReveal";
+import { JsonLd } from "@/components/seo/json-ld";
 
 const faqs = [
   {
@@ -18,7 +19,7 @@ const faqs = [
   },
   {
     q: "Per le aziende",
-    a: "L'azienda acquista i posti per i corsi necessari, assegna i percorsi ai propri professionisti o tecnici e monitora stato di preparazione e corso da un pannello dedicato. La reportistica è scaricabile per le verifiche di committenti e enti.",
+    a: "L'azienda invita liberamente i propri professionisti e acquista per loro i corsi necessari, con sconto automatico dal secondo iscritto allo stesso percorso. Da un pannello dedicato assegna i percorsi e monitora stato di preparazione ed esiti. La reportistica è scaricabile per le verifiche di committenti e enti.",
   },
   {
     q: "Quali professioni sono certificabili?",
@@ -26,9 +27,22 @@ const faqs = [
   },
 ];
 
+// Le stesse domande dichiarate anche come dati strutturati: così le risposte sono leggibili
+// da Google e dai motori di risposta AI a prescindere dall'interfaccia a fisarmonica.
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function FAQSection() {
   return (
     <section className="w-full py-20 md:py-24 bg-white">
+      <JsonLd data={faqLd} />
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <ScrollReveal className="lg:col-span-4">

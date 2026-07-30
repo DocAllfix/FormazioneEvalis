@@ -4,6 +4,7 @@ import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
 import { JsonLd } from "@/components/seo/json-ld";
 import { CookieBanner } from "@/components/legal/cookie-banner";
+import { COMPANY } from "@/lib/legal/company";
 
 const APP_URL = (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -32,12 +33,43 @@ export const metadata: Metadata = {
   openGraph: { siteName: "Evalis", locale: "it_IT", type: "website" },
 };
 
+// Entità dell'organizzazione per Knowledge Graph e motori di risposta AI: oltre a nome e
+// descrizione servono logo, dati legali e recapiti, altrimenti il soggetto resta una pagina
+// web anonima invece di un ente riconoscibile e citabile.
 const orgLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Evalis",
+  "@type": "EducationalOrganization",
+  "@id": `${APP_URL}/#organization`,
+  name: "Evalis Academy",
+  legalName: COMPANY.legalName,
+  alternateName: COMPANY.brand,
   url: APP_URL,
-  description: "Piattaforma di certificazione delle competenze professionali.",
+  logo: { "@type": "ImageObject", url: `${APP_URL}/brand/monogram.png` },
+  image: `${APP_URL}/brand/monogram.png`,
+  description:
+    "Piattaforma di formazione e certificazione delle competenze professionali: percorsi Auditor e Lead Auditor ISO, mestieri e professioni, competenze digitali e intelligenza artificiale.",
+  vatID: COMPANY.vat,
+  taxID: COMPANY.vat,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Via Sandro Botticelli 25",
+    postalCode: "81031",
+    addressLocality: "Aversa",
+    addressRegion: "CE",
+    addressCountry: "IT",
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: COMPANY.email,
+      telephone: COMPANY.phone,
+      areaServed: "IT",
+      availableLanguage: ["it"],
+    },
+  ],
+  sameAs: [`https://${COMPANY.parentSite}`],
+  parentOrganization: { "@type": "Organization", name: COMPANY.legalName, url: `https://${COMPANY.parentSite}` },
 };
 
 export default function RootLayout({

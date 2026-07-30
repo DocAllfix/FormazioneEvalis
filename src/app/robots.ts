@@ -12,7 +12,8 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "*", allow: "/", disallow: PRIVATE },
       { userAgent: ["GPTBot", "ClaudeBot", "PerplexityBot", "Google-Extended", "OAI-SearchBot"], allow: "/", disallow: PRIVATE },
     ],
+    // niente direttiva `host`: è un residuo storico (Yandex), ignorata da Google e dagli
+    // AI-crawler; il dominio canonico è già dichiarato dai canonical delle pagine.
     sitemap: `${APP}/sitemap.xml`,
-    host: APP,
   };
 }

@@ -28,10 +28,14 @@ const AccordionTrigger = React.forwardRef(({ className, children, ...props }, re
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
+// forceMount: il testo delle risposte resta SEMPRE nel markup e viene solo nascosto via
+// CSS quando la voce è chiusa. Senza, Radix smonta il contenuto e le risposte non aperte
+// non esistono per i crawler classici e per i motori di risposta AI, che non cliccano nulla.
 const AccordionContent = React.forwardRef(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    forceMount
+    className="overflow-hidden text-sm data-[state=closed]:hidden data-[state=open]:animate-accordion-down"
     {...props}>
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </AccordionPrimitive.Content>

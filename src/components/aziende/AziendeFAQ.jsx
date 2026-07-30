@@ -1,6 +1,7 @@
 import React from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ScrollReveal from "@/components/landing/ScrollReveal";
+import { JsonLd } from "@/components/seo/json-ld";
 
 const faqs = [
   { q: "Come si aggiungono le persone da certificare?", a: "Dalla console puoi aggiungere ogni persona tramite email o importazione. Ogni persona riceve le credenziali di accesso e può iniziare il percorso assegnato." },
@@ -9,9 +10,22 @@ const faqs = [
   { q: "I certificati come si verificano?", a: "Ogni certificato riporta un QR e un codice univoco. Chiunque (datori di lavoro, committenti, enti) può verificarne autenticità e dati sulla pagina pubblica evalis.it/verifica, senza account e in qualsiasi momento." },
 ];
 
+// Domande dichiarate anche come dati strutturati (vedi FAQSection della home): le risposte
+// restano leggibili da Google e dai motori di risposta AI a prescindere dall'accordion.
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function AziendeFAQ() {
   return (
     <section className="w-full py-20 md:py-24 bg-white">
+      <JsonLd data={faqLd} />
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <ScrollReveal className="lg:col-span-4">
