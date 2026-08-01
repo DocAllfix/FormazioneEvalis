@@ -1,0 +1,1446 @@
+[
+ {
+  "id": "fadeen02_m06_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 06",
+  "titolo": "Il calore di processo decide le priorità",
+  "corsoLabel": "ESG Manager · UNI/PdR 109.1",
+  "eyebrow": "Modulo 06",
+  "sottotitolo": "Gas oltre il 62% dell’energia finale, forni circa il 70% dei consumi di gas, fumi a 850 °C: in quest’area anche piccoli scostamenti di rendimento spostano molto l’economia del piano.",
+  "agenda": [
+   "Dal dato misurato alla stima credibile",
+   "L’architettura del percorso tecnico",
+   "Quattro voci, un terzo del piano",
+   "Aria stechiometrica ed eccesso d’aria",
+   "L’ossigeno in eccesso erode il rendimento"
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s002",
+  "layout": "cards",
+  "kicker": "Obiettivo operativo",
+  "titolo": "Dal dato misurato alla stima credibile",
+  "intro": "L’esito atteso è un metodo operativo: partire da pochi dati misurati, stimare un risparmio tecnico credibile e solo dopo tradurlo in valore economico, senza confondere riduzione del fabbisogno e recupero.",
+  "cards": [
+   {
+    "h": "Lettura combustione reale",
+    "d": "Ossigeno e fumi come leve unite"
+   },
+   {
+    "h": "Bilancio del forno",
+    "d": "Separare camino, pareti, aperture, masse"
+   },
+   {
+    "h": "Recupero sui fumi",
+    "d": "Stimare il preriscaldo senza benefici lineari"
+   },
+   {
+    "h": "Rete vapore reale",
+    "d": "Tabelle utili, perdite continue, leve rapide"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s003",
+  "layout": "timeline",
+  "kicker": "Struttura del modulo",
+  "titolo": "L’architettura del percorso tecnico",
+  "intro": "Il modulo segue una sequenza precisa: fondamenti, rendimento, forni, recuperi, vapore, freddo e integrazione. La logica resta una sola: riconoscere il fenomeno dominante e scegliere la leva corretta.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Fondamenti combustione",
+    "d": "Stechiometria, eccesso d’aria, prodotti"
+   },
+   {
+    "t": "02",
+    "h": "Rendimento generatori",
+    "d": "Ossigeno e fumi diventano perdita camino"
+   },
+   {
+    "t": "03",
+    "h": "Forni industriali",
+    "d": "Bilancio termico e recuperi sui fumi"
+   },
+   {
+    "t": "04",
+    "h": "Vapore e rete",
+    "d": "Entalpie, scaricatori, condensa, flash"
+   },
+   {
+    "t": "05",
+    "h": "Freddo e integrazione",
+    "d": "Temperature guida, free cooling, gerarchie"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s004",
+  "layout": "numeri",
+  "kicker": "Mandato di verifica",
+  "titolo": "Quattro voci, un terzo del piano",
+  "intro": "Qui non si ricalcola un totale astratto: si verifica se quattro interventi reggono al calcolo, perché insieme valgono 86.212 euro l’anno e quasi un terzo del piano aggiornato.",
+  "numeri": [
+   {
+    "n": "62.696 €/anno",
+    "h": "Recupero termico fumi forni",
+    "d": "Recupero termico fumi forni"
+   },
+   {
+    "n": "11.942 €/anno",
+    "h": "Recupero condensato di caldaia",
+    "d": "Recupero condensato di caldaia"
+   },
+   {
+    "n": "5.971 €/anno",
+    "h": "Isolamenti e revisione scaricatori",
+    "d": "Isolamenti e revisione scaricatori"
+   },
+   {
+    "n": "5.603 €/anno",
+    "h": "Ripristino condensazione flottante chiller",
+    "d": "Ripristino condensazione flottante chiller"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s005",
+  "layout": "definizione",
+  "kicker": "Fondamenti di combustione",
+  "titolo": "Aria stechiometrica ed eccesso d’aria",
+  "eyebrow": "Fondamenti di combustione",
+  "definizione": "Quantità teorica minima per bruciare tutto il combustibile senza ossigeno residuo.",
+  "punti": []
+ },
+ {
+  "id": "fadeen02_m06_s006",
+  "layout": "tabella",
+  "kicker": "Costo dell’eccesso d’aria",
+  "titolo": "L’ossigeno in eccesso erode il rendimento",
+  "cols": [
+   "Ossigeno residuo",
+   "Rendimento combustione"
+  ],
+  "righe": [
+   [
+    "2%",
+    "63,7%"
+   ],
+   [
+    "3%",
+    "62,1%"
+   ],
+   [
+    "5%",
+    "58,3%"
+   ],
+   [
+    "8%",
+    "circa 50%"
+   ],
+   [
+    "12%",
+    "31,7%"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s007",
+  "layout": "confronto",
+  "kicker": "Analisi dei fumi",
+  "titolo": "Come leggere il ritratto dei fumi",
+  "intro": "L’analizzatore restituisce più di un numero: alcune grandezze parlano soprattutto di efficienza, altre fissano limiti di sicurezza combustiva e conformità ambientale.",
+  "a": {
+   "h": "Efficienza energetica",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Ossigeno residuo misura l’eccesso d’aria"
+    },
+    {
+     "d": "CO2 conferma la coerenza della lettura"
+    },
+    {
+     "d": "Temperatura fumi quantifica energia sensibile dispersa"
+    }
+   ]
+  },
+  "b": {
+   "h": "Sicurezza e limiti",
+   "sub": "",
+   "punti": [
+    {
+     "d": "CO segnala combustione incompleta e instabilità"
+    },
+    {
+     "d": "NOx fissa il compromesso emissivo"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m06_s008",
+  "layout": "flusso",
+  "kicker": "Rilievo in campo",
+  "titolo": "Misura utile solo a regime reale",
+  "intro": "Una buona analisi descrive la condizione abituale del generatore, non un istante comodo da misurare. Punto di prelievo, regime, stabilità dei valori e assenza di aria falsa cambiano l’esito.",
+  "passi": [
+   {
+    "h": "Prelievo corretto",
+    "d": "Dopo l’ultimo scambio, prima delle diluizioni"
+   },
+   {
+    "h": "Carico rappresentativo",
+    "d": "A regime, nella potenza abituale"
+   },
+   {
+    "h": "Valori stabili",
+    "d": "Attendere l’assestamento reale dei segnali"
+   },
+   {
+    "h": "Più condizioni",
+    "d": "Rilevare pieno, medio e ridotto"
+   },
+   {
+    "h": "Tenuta verificata",
+    "d": "Escludere aria falsa verso la sonda"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s009",
+  "layout": "split",
+  "kicker": "Idee guida",
+  "titolo": "Quattro idee per leggere la combustione",
+  "lead": "Prima del calcolo conviene fissare quattro regole. Su un forno a 850 °C, un punto di ossigeno può valere quasi due punti di rendimento; su un generatore a 200 °C circa mezzo punto.",
+  "punti": [
+   {
+    "h": "Ossigeno residuo",
+    "d": "Indica subito l’eccesso d’aria reale"
+   },
+   {
+    "h": "Temperatura fumi",
+    "d": "Mostra perdita al camino e recuperabilità"
+   },
+   {
+    "h": "Monossido di carbonio",
+    "d": "Segna il confine della combustione sicura"
+   },
+   {
+    "h": "Ossidi di azoto",
+    "d": "Limitano l’ottimo solo energetico"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s010",
+  "layout": "cards",
+  "kicker": "Combustione",
+  "titolo": "Temperatura e ossigeno diventano rendimento",
+  "intro": "Due misure di campo bastano per stimare la perdita al camino. Il rendimento di combustione è il complemento di quella perdita: indicatore essenziale, ma distinto dal rendimento complessivo della macchina.",
+  "cards": [
+   {
+    "h": "Dati utili",
+    "d": "Temperatura fumi e ossigeno residuo misurati sul campo"
+   },
+   {
+    "h": "Perdita al camino",
+    "d": "Cresce con fumi più caldi e più eccesso d'aria"
+   },
+   {
+    "h": "Generatore in ordine",
+    "d": "Circa 200 °C e O2 poco sopra 3%: 91,8%"
+   },
+   {
+    "h": "Forno di cementazione",
+    "d": "850 °C, O2 5%: 58,3%; con 3%: 62,1%"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s011",
+  "layout": "confronto",
+  "kicker": "Priorità",
+  "titolo": "Prima verticale, poi orizzontale",
+  "intro": "Il diagramma di combustione trasforma due misure in una priorità d'intervento. Collocato il punto reale, puoi capire se conviene agire prima sulla regolazione dell'aria o sul recupero termico dei fumi.",
+  "a": {
+   "h": "Movimento verticale",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Riduce l'eccesso d'aria a temperatura fumi quasi costante"
+    },
+    {
+     "d": "Su Metaltermica: da 5% a 3% O2, circa +3,8 punti"
+    },
+    {
+     "d": "Richiede sonde, taratura, controllo rapporto aria-gas"
+    },
+    {
+     "d": "Riduce la portata fumi del recuperatore futuro"
+    }
+   ]
+  },
+  "b": {
+   "h": "Movimento orizzontale",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Abbassa la temperatura fumi a O2 quasi costante"
+    },
+    {
+     "d": "Implica scambio termico prima del camino"
+    },
+    {
+     "d": "Richiede spazi, materiali, tiraggio, fermata programmata"
+    },
+    {
+     "d": "Più valore potenziale, ma investimento maggiore"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m06_s012",
+  "layout": "evidenza",
+  "kicker": "Rendimento complessivo",
+  "titolo": "Quattro perdite oltre il camino",
+  "eyebrow": "Rendimento complessivo",
+  "testo": "L'analizzatore fotografa soprattutto il camino. Per valutare davvero il generatore devi aggiungere almeno quattro famiglie di perdite, ognuna con peso diverso secondo tipo di macchina, carico e modalità di esercizio.",
+  "dark": true
+ },
+ {
+  "id": "fadeen02_m06_s013",
+  "layout": "cards",
+  "kicker": "Caso Metaltermica",
+  "titolo": "Una macchina già ben condotta",
+  "intro": "Una verifica professionale può concludersi senza nuove opere. Sul generatore di vapore di Metaltermica, misure e dati di periodo convergono su un quadro coerente: macchina ben regolata, rendimento buono, potenziale da cercare altrove.",
+  "cards": [
+   {
+    "h": "Consumo annuo",
+    "d": "Circa 236 mila Sm3, poco oltre 2,264 GWh introdotti"
+   },
+   {
+    "h": "Misure di campo",
+    "d": "Fumi 198 °C, ossigeno residuo vicino al 3,2%"
+   },
+   {
+    "h": "Rendimento di combustione",
+    "d": "Valore coerente: circa 91,8%"
+   },
+   {
+    "h": "Lettura finale",
+    "d": "Complessivo circa 88%: nessun revamping pesante giustificato"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s014",
+  "layout": "cards",
+  "kicker": "Valorizzazione",
+  "titolo": "Quanto vale correggere l'eccesso d'aria",
+  "intro": "Sui forni di cementazione conta il combustibile evitato a parità di calore utile, non i soli punti di rendimento. Su Metaltermica l'intervento è competitivo, ma va validato contro un vincolo decisivo: l'atmosfera di trattamento.",
+  "cards": [
+   {
+    "h": "Base attuale",
+    "d": "850 °C e O2 5%: rendimento 58,29%"
+   },
+   {
+    "h": "Dopo taratura",
+    "d": "O2 al 3%: rendimento 62,10%"
+   },
+   {
+    "h": "Effetto sul gas",
+    "d": "A parità di calore utile, oltre 6% in meno"
+   },
+   {
+    "h": "Valore annuo",
+    "d": "485.803 kWh, 50.636 Sm3, 25.622 €/anno"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s015",
+  "layout": "tabella",
+  "kicker": "Cambio di metro",
+  "titolo": "Forno e caldaia non si leggono uguale",
+  "cols": [
+   "Aspetto",
+   "Caldaia",
+   "Forno di trattamento"
+  ],
+  "righe": [
+   [
+    "Obiettivo fisico",
+    "Scambiare calore a un fluido",
+    "Mantenere camera uniforme ad alta temperatura"
+   ],
+   [
+    "Temperatura fumi",
+    "Può scendere vicino ai limiti dei materiali",
+    "Resta vincolata dal processo metallurgico"
+   ],
+   [
+    "Pareti e mantello",
+    "Perdite spesso marginali",
+    "Dispersioni strutturalmente più rilevanti"
+   ],
+   [
+    "Voci tipiche",
+    "Poche masse non produttive",
+    "Contano supporti, aperture, atmosfera di processo"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s016",
+  "layout": "numeri",
+  "kicker": "Bilancio termico",
+  "titolo": "Cento parti di energia nel forno",
+  "intro": "Il bilancio termico ordina le destinazioni dell'energia in ingresso. Nel caso dei forni di cementazione conferma che il camino è dominante, ma mostra anche quanta quota resti fuori da un intervento solo sui fumi.",
+  "numeri": [
+   {
+    "n": "41,7",
+    "h": "Al camino",
+    "d": "Al camino"
+   },
+   {
+    "n": "9,0",
+    "h": "Pareti e mantello",
+    "d": "Pareti e mantello"
+   },
+   {
+    "n": "6,0",
+    "h": "Aperture e infiltrazioni",
+    "d": "Aperture e infiltrazioni"
+   },
+   {
+    "n": "8,3",
+    "h": "Masse di supporto",
+    "d": "Masse di supporto"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s017",
+  "layout": "cards",
+  "kicker": "Termografia",
+  "titolo": "Le perdite di parete diventano visibili",
+  "intro": "La termografia rende osservabile la dispersione di parete quasi direttamente. Con superficie, temperatura del mantello e ambiente puoi stimare il flusso perso, purché la lettura sia accompagnata da ipotesi coerenti sulle condizioni reali.",
+  "cards": [
+   {
+    "h": "Segnale fisico",
+    "d": "Più caldo il mantello, più alta la dispersione"
+   },
+   {
+    "h": "Soglie indicative",
+    "d": "40 buono; 60 accettabile; 80 sospetto; 120 rischio"
+   },
+   {
+    "h": "Ordine di grandezza",
+    "d": "45 m² a 80 °C: circa 37,8 kW dispersi"
+   },
+   {
+    "h": "Effetto del ripristino",
+    "d": "A 50 °C la perdita si riduce oltre metà"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s018",
+  "layout": "split",
+  "kicker": "Conduzione operativa",
+  "titolo": "Aperture e supporti pesano sul ciclo",
+  "lead": "Aperture e supporti dipendono più dalla conduzione del forno che dall'impianto. Per questo possono migliorare con disciplina operativa, attrezzature più adatte e riduzione dei tempi improduttivi, spesso senza grandi opere sul circuito fumi.",
+  "punti": [
+   {
+    "h": "Aperture",
+    "d": "Ogni minuto porta aperta costa energia quasi proporzionalmente"
+   },
+   {
+    "h": "Leve operative",
+    "d": "Lotto pronto, tenute, sovrapressione, portelli intermedi"
+   },
+   {
+    "h": "Masse di supporto",
+    "d": "Cestelli e telai assorbono calore senza valore diretto"
+   },
+   {
+    "h": "Ordine di grandezza",
+    "d": "250 kg fino a 850 °C: quasi 29 kWh utili"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s019",
+  "layout": "numeri",
+  "kicker": "Caso Metaltermica",
+  "titolo": "Il peso economico delle perdite dei forni",
+  "intro": "Monetizzare il bilancio termico cambia la priorità: i forni concentrano perdite molto rilevanti, pesano sulla spesa del sito e vanno seguiti con indicatori interni. Ma valore delle perdite e risparmio ottenibile non coincidono.",
+  "numeri": [
+   {
+    "n": "5,15 GWh/anno",
+    "h": "perdite complessive dei forni",
+    "d": "perdite complessive dei forni"
+   },
+   {
+    "n": "271 k€/anno",
+    "h": "valore economico delle perdite",
+    "d": "valore economico delle perdite"
+   },
+   {
+    "n": "1230 kWh/t",
+    "h": "energia specifica per tonnellata cementata",
+    "d": "energia specifica per tonnellata cementata"
+   },
+   {
+    "n": "Quasi 25%",
+    "h": "peso dei forni sulla spesa energetica",
+    "d": "peso dei forni sulla spesa energetica"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s020",
+  "layout": "tabella",
+  "kicker": "Recupero termico",
+  "titolo": "Le tre destinazioni del calore recuperato",
+  "cols": [
+   "Destinazione",
+   "Punto di forza",
+   "Vincolo tipico"
+  ],
+  "righe": [
+   [
+    "Aria comburente",
+    "Ritorno diretto nello stesso forno",
+    "Richiede compatibilità di recuperatore e bruciatori"
+   ],
+   [
+    "Acqua calda o vapore",
+    "Uso flessibile per altre utenze",
+    "Serve domanda stabile, vicina e contemporanea"
+   ],
+   [
+    "Preriscaldo del carico",
+    "Alta efficacia teorica",
+    "Retrofit spesso difficile su impianti esistenti"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s021",
+  "layout": "flusso",
+  "kicker": "Metodo di calcolo",
+  "titolo": "Tre passaggi per stimare il beneficio",
+  "intro": "Il preriscaldo dell’aria comburente si valuta con una sequenza chiusa: prima la portata reale, poi il calore assorbito, infine la riduzione di combustibile. Saltare un passaggio rende il risultato fragile o sovrastimato.",
+  "passi": [
+   {
+    "h": "Portata comburente reale",
+    "d": "Aria stechiometrica moltiplicata per il lambda operativo"
+   },
+   {
+    "h": "Calore assorbito dall’aria",
+    "d": "Portata, calore specifico e salto termico utile"
+   },
+   {
+    "h": "Risparmio di combustibile",
+    "d": "q diviso uno più q, non q"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s022",
+  "layout": "confronto",
+  "kicker": "Verifica dell’ipotesi",
+  "titolo": "Perché il 15% iniziale si riduce",
+  "intro": "Il recupero sui fumi resta molto interessante, ma il numero corretto nasce solo dopo avere corretto l’eccesso d’aria. La differenza sta nella portata da preriscaldare e nella retroazione interna del sistema.",
+  "a": {
+   "h": "Senza correzione aria",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Portata aria: 12,47 Nm³/Nm³ gas"
+    },
+    {
+     "d": "Calore recuperato: 6,16 MJ/Nm³"
+    },
+    {
+     "d": "q = 0,178"
+    },
+    {
+     "d": "Risparmio: circa 15,1%"
+    }
+   ]
+  },
+  "b": {
+   "h": "Dopo ottimizzazione combustione",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Portata aria: 11,14 Nm³/Nm³ gas"
+    },
+    {
+     "d": "Calore recuperato: 5,50 MJ/Nm³"
+    },
+    {
+     "d": "q = 0,159"
+    },
+    {
+     "d": "Risparmio: circa 13,74%"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m06_s023",
+  "layout": "cards",
+  "kicker": "Fattibilità tecnica",
+  "titolo": "Quattro verifiche prima di approvare il recupero",
+  "intro": "Un buon conto energetico non basta. Sui forni ad alta temperatura il recupero va validato rispetto a componenti, emissioni, circuito fumi e temperatura finale, altrimenti il progetto rischia di essere irrealizzabile o instabile.",
+  "cards": [
+   {
+    "h": "Bruciatori e linea aria",
+    "d": "Materiali e componenti lavorano a temperature più severe"
+   },
+   {
+    "h": "NOx e autorizzazioni",
+    "d": "Aria più calda può aumentare la formazione di ossidi"
+   },
+   {
+    "h": "Tiraggio e circuito fumi",
+    "d": "Lo scambiatore aggiunge perdita di carico"
+   },
+   {
+    "h": "Temperatura finale dei fumi",
+    "d": "Serve un margine sicuro contro condense indesiderate"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s024",
+  "layout": "cards",
+  "kicker": "Tecnologie disponibili",
+  "titolo": "Tre famiglie per recuperare dai fumi",
+  "intro": "L’obiettivo è unico, ma la tecnologia cambia molto per temperatura raggiungibile, complessità e adattabilità al retrofit. Nei forni esistenti la scelta più razionale non coincide sempre con quella teoricamente più spinta.",
+  "cards": [
+   {
+    "h": "Recuperatore continuo",
+    "d": "Scambio diretto fumi-aria, soluzione più praticabile in retrofit"
+   },
+   {
+    "h": "Rigeneratore alternato",
+    "d": "Preriscaldo più alto, ma impianto più complesso e costoso"
+   },
+   {
+    "h": "Bruciatore autorecuperativo",
+    "d": "Recupero integrato, sensato con sostituzione dei bruciatori"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s025",
+  "layout": "evidenza",
+  "kicker": "Valore economico aggiornato",
+  "titolo": "Il recupero vale meno, il pacchetto vale di più",
+  "eyebrow": "Valore economico aggiornato",
+  "testo": "Dopo l’ottimizzazione aria-gas, il recupero va ricalcolato su una base già ridotta. Il valore del singolo intervento scende, ma la lettura corretta del pacchetto combinato migliora priorità, coerenza tecnica e ritorno economico complessivo.",
+  "dark": true
+ },
+ {
+  "id": "fadeen02_m06_s026",
+  "layout": "tabella",
+  "kicker": "Vapore saturo",
+  "titolo": "Le quattro chiavi delle tabelle del vapore",
+  "cols": [
+   "Grandezza",
+   "Che cosa descrive",
+   "Con la pressione"
+  ],
+  "righe": [
+   [
+    "Temperatura di saturazione",
+    "Equilibrio tra acqua e vapore",
+    "Aumenta"
+   ],
+   [
+    "Entalpia del liquido saturo",
+    "Energia dell’acqua alla saturazione",
+    "Aumenta"
+   ],
+   [
+    "Calore latente",
+    "Energia per evaporare a pari pressione",
+    "Diminuisce"
+   ],
+   [
+    "Entalpia del vapore saturo",
+    "Somma di parte sensibile e latente",
+    "Cresce poco"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s027",
+  "layout": "confronto",
+  "kicker": "Pressione di esercizio",
+  "titolo": "Benefici immediati, verifiche indispensabili",
+  "intro": "Abbassare la pressione può ridurre varie perdite, ma non si decide solo in centrale. La verifica deve coinvolgere rete, utenze di processo e scaricatori, perché un vantaggio energetico può creare un costo industriale maggiore.",
+  "a": {
+   "h": "Benefici attesi",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Dispersioni minori per temperatura più bassa"
+    },
+    {
+     "d": "Fughe ridotte da tenute e scaricatori"
+    },
+    {
+     "d": "Meno vapore flash sul condensato"
+    },
+    {
+     "d": "Lieve miglioramento della generazione"
+    }
+   ]
+  },
+  "b": {
+   "h": "Cautele operative",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Velocità più alta nelle tubazioni"
+    },
+    {
+     "d": "Minor potenza agli scambiatori"
+    },
+    {
+     "d": "Possibili allungamenti dei tempi ciclo"
+    },
+    {
+     "d": "Scaricatori da verificare nel nuovo campo"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m06_s028",
+  "layout": "numeri",
+  "kicker": "Rete vapore",
+  "titolo": "Quattro perdite tra centrale e utenze",
+  "intro": "Anche con una buona centrale, tra generatore e utenze si accumulano perdite poco appariscenti ma molto costose. Quattro voci ricorrono quasi sempre e, sommate, possono valere una quota energetica importante.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Tubazioni senza isolamento efficace",
+    "d": "Tubazioni senza isolamento efficace"
+   },
+   {
+    "n": "2",
+    "h": "Scaricatori difettosi con vapore vivo",
+    "d": "Scaricatori difettosi con vapore vivo"
+   },
+   {
+    "n": "3",
+    "h": "Condensa calda non recuperata",
+    "d": "Condensa calda non recuperata"
+   },
+   {
+    "n": "4",
+    "h": "Vapore di flash sfiatato",
+    "d": "Vapore di flash sfiatato"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s029",
+  "layout": "flusso",
+  "kicker": "Fenomeno fisico",
+  "titolo": "Il flash nasce dal salto di pressione",
+  "intro": "Il pennacchio allo scarico del condensato non è un fenomeno vago: nasce dalla caduta di pressione. Con le entalpie del liquido e il calore latente ne calcoli subito la quota.",
+  "passi": [
+   {
+    "h": "Condensato in pressione",
+    "d": "Alta entalpia del liquido saturo"
+   },
+   {
+    "h": "Scarico a pressione inferiore",
+    "d": "Parte dell'energia non resta liquida"
+   },
+   {
+    "h": "Rievaporazione istantanea",
+    "d": "Da 8 bar a atmosfera: oltre 13%"
+   },
+   {
+    "h": "Esito impiantistico",
+    "d": "Sfiato, serbatoio di flash o recupero termico"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s030",
+  "layout": "split",
+  "kicker": "Caso Metaltermica",
+  "titolo": "Metaltermica: centrale buona, rete critica",
+  "lead": "Nel caso Metaltermica i conti sulla generazione sono coerenti e rassicuranti. La criticità emerge altrove: nessun ritorno di condensa, quindi più reintegro freddo, più combustibile e più oneri di trattamento.",
+  "punti": [
+   {
+    "h": "Generazione",
+    "d": "Rendimento circa 88%; non è il collo di bottiglia"
+   },
+   {
+    "h": "Pressione e produzione",
+    "d": "Circa 8 bar assoluti e 3.004 tonnellate annue"
+   },
+   {
+    "h": "Dato decisivo",
+    "d": "Condensato di ritorno assente"
+   },
+   {
+    "h": "Effetto sistemico",
+    "d": "Più reintegro freddo, più chimica, più spurghi"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s031",
+  "layout": "confronto",
+  "kicker": "Scaricatori di condensa",
+  "titolo": "Due guasti, uno davvero subdolo",
+  "intro": "Lo scaricatore è invisibile quando funziona bene, ma pesa molto quando fallisce. La distinzione decisiva è tra guasto in chiusura, subito percepito, e guasto in apertura, spesso tollerato per lunghissimo tempo.",
+  "a": {
+   "h": "Guasto in chiusura",
+   "sub": "",
+   "punti": [
+    {
+     "d": "La condensa ristagna nell'utenza"
+    },
+    {
+     "d": "La potenza termica cala"
+    },
+    {
+     "d": "Il reparto se ne accorge presto"
+    },
+    {
+     "d": "La manutenzione viene attivata"
+    }
+   ]
+  },
+  "b": {
+   "h": "Guasto in apertura",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Passa vapore vivo continuo"
+    },
+    {
+     "d": "Il processo appare anche regolare"
+    },
+    {
+     "d": "Nessuna segnalazione spontanea"
+    },
+    {
+     "d": "Il costo corre per mesi o anni"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m06_s032",
+  "layout": "cards",
+  "kicker": "Diagnosi in campo",
+  "titolo": "Tre segnali per trovare gli scaricatori",
+  "intro": "La diagnosi affidabile non nasce da un solo indizio. In campo conviene combinare segnali acustici, termici e visivi, così da ridurre gli errori senza smontare l'impianto né fermare la produzione.",
+  "cards": [
+   {
+    "h": "Ultrasuoni",
+    "d": "Segnale continuo: sospetto passaggio di vapore vivo"
+   },
+   {
+    "h": "Termografia",
+    "d": "Linea a valle troppo calda troppo a lungo"
+   },
+   {
+    "h": "Osservazione visiva",
+    "d": "Pennacchio stabile: indizio, non verdetto"
+   },
+   {
+    "h": "Metodo corretto",
+    "d": "Conta la convergenza di più segnali"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s033",
+  "layout": "numeri",
+  "kicker": "Recupero condensa",
+  "titolo": "Recuperare condensa cambia il bilancio",
+  "intro": "Il beneficio del recupero condensa si misura confrontando l'entalpia dell'acqua fredda di reintegro con quella della condensa calda di ritorno. Anche quote parziali di rientro tagliano in modo sensibile il gas.",
+  "numeri": [
+   {
+    "n": "60%",
+    "h": "Recupero già energeticamente significativo",
+    "d": "Recupero già energeticamente significativo"
+   },
+   {
+    "n": "85%",
+    "h": "Obiettivo realistico per Metaltermica",
+    "d": "Obiettivo realistico per Metaltermica"
+   },
+   {
+    "n": "9,87%",
+    "h": "Riduzione del combustibile del generatore",
+    "d": "Riduzione del combustibile del generatore"
+   },
+   {
+    "n": "23.000 Smc/anno",
+    "h": "Gas risparmiato, circa 11.786 euro annui",
+    "d": "Gas risparmiato, circa 11.786 euro annui"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s034",
+  "layout": "tabella",
+  "kicker": "Isolamenti di rete",
+  "titolo": "Coibentare la rete vale subito",
+  "cols": [
+   "Elemento",
+   "Condizione",
+   "Ordine di grandezza"
+  ],
+  "righe": [
+   [
+    "Tubo DN50",
+    "Nudo",
+    "circa 450 W/m"
+   ],
+   [
+    "Tubo DN50",
+    "Isolato 40 mm",
+    "circa 90 W/m"
+   ],
+   [
+    "Valvola DN50",
+    "Scoperta",
+    "circa 1,5 m di tubo"
+   ],
+   [
+    "Flangia",
+    "Scoperta",
+    "circa 0,5 m di tubo"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s035",
+  "layout": "evidenza",
+  "kicker": "Rettifica finale",
+  "titolo": "La verifica di campo alza il beneficio",
+  "eyebrow": "Rettifica finale",
+  "testo": "Con censimento degli scaricatori e termografia della rete, la stima preliminare viene corretta in modo sostanziale. Il totale cresce, ma cresce soprattutto l'affidabilità della diagnosi e la credibilità dell'intervento proposto.",
+  "dark": true
+ },
+ {
+  "id": "fadeen02_m06_s036",
+  "layout": "split",
+  "kicker": "Ciclo frigorifero",
+  "titolo": "Evaporazione e condensazione guidano i consumi",
+  "lead": "Nel freddo industriale quasi tutto dipende dal salto tra evaporazione e condensazione. Ridurlo significa far lavorare meno il compressore, quindi tagliare i consumi senza cambiare la funzione richiesta dal processo.",
+  "punti": [
+   {
+    "h": "Evaporazione più alta",
+    "d": "Fluido meno freddo, lavoro del compressore più basso"
+   },
+   {
+    "h": "Condensazione più bassa",
+    "d": "Pressione di testa minore, efficienza più alta"
+   },
+   {
+    "h": "Leve operative",
+    "d": "Quasi ogni intervento agisce su una di queste due temperature"
+   },
+   {
+    "h": "Scambiatori puliti",
+    "d": "Pochi gradi persi valgono molti punti di efficienza"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s037",
+  "layout": "timeline",
+  "kicker": "Refrigerazione",
+  "titolo": "Temperatura di condensazione e consumo relativo",
+  "intro": "La curva serve a ordinare le priorità: abbassare la condensazione riduce molto il lavoro del compressore, ma il vantaggio teorico va sempre filtrato attraverso limiti macchina, carico reale e condizioni del sito.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "50 °C",
+    "d": "Condizione penalizzata; sporco, caldo esterno, regolazione sfavorevole"
+   },
+   {
+    "t": "02",
+    "h": "45 °C",
+    "d": "Riferimento tipico a condensazione fissa"
+   },
+   {
+    "t": "03",
+    "h": "40 °C",
+    "d": "Calo di consumo già evidente"
+   },
+   {
+    "t": "04",
+    "h": "35 °C",
+    "d": "Miglioramento marcato, se stabile"
+   },
+   {
+    "t": "05",
+    "h": "30 °C",
+    "d": "Prestazione teorica brillante, non sempre sostenibile"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s038",
+  "layout": "definizione",
+  "kicker": "Strategia",
+  "titolo": "Condensazione flottante: abbassare la testa quando si può",
+  "eyebrow": "Strategia",
+  "definizione": "Pressione di testa variabile entro un minimo sicuro, governata soprattutto dai ventilatori del condensatore; il limite pratico dipende anche dal tipo di valvola di espansione.",
+  "punti": []
+ },
+ {
+  "id": "fadeen02_m06_s039",
+  "layout": "cards",
+  "kicker": "Clima",
+  "titolo": "Free cooling: il valore dipende dal ritorno",
+  "intro": "Non conta solo la mandata: più alta è la temperatura utile del processo, più ore climatiche diventano sfruttabili. Per questo i circuiti a 20-30 °C sono molto più promettenti dei circuiti molto freddi.",
+  "cards": [
+   {
+    "h": "Totale",
+    "d": "L'aria esterna copre quasi tutto il carico"
+   },
+   {
+    "h": "Parziale",
+    "d": "Gli scambiatori aiutano, i compressori integrano"
+   },
+   {
+    "h": "Assente",
+    "d": "Nessun vantaggio termico, gruppo in esercizio ordinario"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s040",
+  "layout": "tabella",
+  "kicker": "Quantificazione",
+  "titolo": "Due interventi, una stima prudente",
+  "cols": [
+   "Intervento",
+   "Base",
+   "Riduzione",
+   "Risparmio annuo"
+  ],
+  "righe": [
+   [
+    "Ripristino condensazione flottante",
+    "890.500 kWh",
+    "3,6%",
+    "32.112 kWh | 5.603 €"
+   ],
+   [
+    "Valvola elettronica dopo ripristino",
+    "858.388 kWh",
+    "8,0%",
+    "68.671 kWh | 11.983 €"
+   ],
+   [
+    "Effetto complessivo",
+    "—",
+    "11,3%",
+    "100.783 kWh | 17.586 €"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s041",
+  "layout": "cards",
+  "kicker": "Interazioni",
+  "titolo": "Quattro modi in cui i recuperi competono",
+  "intro": "L'errore tipico è attribuire due volte lo stesso valore energetico. La competizione può nascere dalla sorgente, dall'utenza, dalla portata o dal fabbisogno residuo generato da interventi precedenti.",
+  "cards": [
+   {
+    "h": "Sorgente condivisa",
+    "d": "Due progetti rivendicano lo stesso flusso caldo"
+   },
+   {
+    "h": "Utenza unica",
+    "d": "Due sorgenti coprono lo stesso carico utile"
+   },
+   {
+    "h": "Portata modificata",
+    "d": "Il primo intervento cambia la base del secondo"
+   },
+   {
+    "h": "Fabbisogno ridotto",
+    "d": "Cala la convenienza di progetti di produzione"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s042",
+  "layout": "timeline",
+  "kicker": "Priorità",
+  "titolo": "La gerarchia professionale dei recuperi termici",
+  "intro": "Prima si tolgono le perdite evitabili, poi si migliora la conversione. Solo dopo ha senso assegnare il calore recuperabile agli usi più coerenti con la sua temperatura, lasciando la produzione integrata per ultima.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "1. Ridurre il fabbisogno",
+    "d": "Isolamenti, tenute, aperture, tempi ciclo"
+   },
+   {
+    "t": "02",
+    "h": "2. Migliorare la conversione",
+    "d": "Eccesso d'aria, scambiatori, bruciatori, flottante"
+   },
+   {
+    "t": "03",
+    "h": "3. Recuperare alta temperatura",
+    "d": "Restituire calore nobile a usi nobili"
+   },
+   {
+    "t": "04",
+    "h": "4. Usare il residuo tiepido",
+    "d": "Acqua, reparto, servizi, processi meno esigenti"
+   },
+   {
+    "t": "05",
+    "h": "5. Valutare produzione integrata",
+    "d": "Solo sul fabbisogno termico residuo"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s043",
+  "layout": "confronto",
+  "kicker": "Caso Metaltermica",
+  "titolo": "Linea di lavaggio: scegliere la sorgente migliore",
+  "intro": "Il lavaggio chiede circa 250.000 kWh utili continui. Entrambe le sorgenti potrebbero coprirli, ma non hanno lo stesso costo, la stessa logistica né lo stesso valore alternativo per lo stabilimento.",
+  "a": {
+   "h": "Recupero dai compressori",
+   "sub": "",
+   "punti": [
+    {
+     "d": "60-85 °C già adeguati al servizio"
+    },
+    {
+     "d": "Utenza vicina, trasporto corto"
+    },
+    {
+     "d": "Investimento relativamente leggero"
+    },
+    {
+     "d": "Nessun uso alternativo migliore"
+    }
+   ]
+  },
+  "b": {
+   "h": "Caldaia a recupero sui fumi",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Potenziale grande ma non necessario"
+    },
+    {
+     "d": "Collegamento più lungo e complesso"
+    },
+    {
+     "d": "Investimento ben più alto"
+    },
+    {
+     "d": "Sorgente più pregiata per aria comburente"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m06_s044",
+  "layout": "punti",
+  "kicker": "Metodo",
+  "titolo": "Le quattro regole per comporre i risparmi",
+  "intro": "Un piano termico regge solo se ogni intervento viene ricalcolato sulla base corretta. Le percentuali non si sommano automaticamente, le portate cambiano, le utenze si contendono e i progetti vanno chiusi con un controllo finale.",
+  "punti": [
+   {
+    "h": "Serie sulla stessa utenza",
+    "d": "Si moltiplicano i complementi, non le percentuali"
+   },
+   {
+    "h": "Portate modificate",
+    "d": "Ogni intervento cambia il recupero possibile a valle"
+   },
+   {
+    "h": "Una sola utenza",
+    "d": "Due sorgenti si confrontano, non si duplicano"
+   },
+   {
+    "h": "Produzione integrata",
+    "d": "Va dimensionata sul fabbisogno termico residuo"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s045",
+  "layout": "definizione",
+  "kicker": "Principio",
+  "titolo": "Cogenerazione: conta il calore davvero usato",
+  "eyebrow": "Principio",
+  "definizione": "Confrontare il sistema separato con quello in sito: la cogenerazione ha senso solo se riduce energia primaria grazie a un uso continuo e contemporaneo del calore recuperato.",
+  "punti": []
+ },
+ {
+  "id": "fadeen02_m06_s046",
+  "layout": "numeri",
+  "kicker": "Filtro economico",
+  "titolo": "Il numero che decide la convenienza",
+  "intro": "La cogenerazione si valuta confrontando elettricità acquistata e autoprodotta al netto del calore recuperato. Qui il rapporto elettricità-gas è circa 3,3 a 1; sotto soglie intorno a 2,5 a 1 la convenienza si assottiglia rapidamente.",
+  "numeri": [
+   {
+    "n": "0,132 €/kWh",
+    "h": "Gas necessario per 1 kWh elettrico",
+    "d": "Gas necessario per 1 kWh elettrico"
+   },
+   {
+    "n": "0,067 €/kWh",
+    "h": "Valore del calore utile recuperato",
+    "d": "Valore del calore utile recuperato"
+   },
+   {
+    "n": "0,064 €/kWh",
+    "h": "Costo netto dell'elettricità autoprodotta",
+    "d": "Costo netto dell'elettricità autoprodotta"
+   },
+   {
+    "n": "0,11 €/kWh",
+    "h": "Vantaggio rispetto all'acquisto marginale",
+    "d": "Vantaggio rispetto all'acquisto marginale"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s047",
+  "layout": "confronto",
+  "kicker": "Dimensionamento",
+  "titolo": "La taglia nasce dal calore utile",
+  "intro": "Il rischio vero non è un motore inefficiente, ma un motore troppo grande per il calore davvero utilizzabile. La base corretta è il fabbisogno termico continuo e contemporaneo, meglio ancora se già depurato dagli altri recuperi selezionati.",
+  "a": {
+   "h": "Errore tipico",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Seguire il carico elettrico medio"
+    },
+    {
+     "d": "Macchina grande, oltre 1.200 kW termici"
+    },
+    {
+     "d": "Calore continuo utile molto più basso"
+    },
+    {
+     "d": "Eccesso da dissipare, valore distrutto"
+    }
+   ]
+  },
+  "b": {
+   "h": "Criterio corretto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Partire dal carico termico della linea"
+    },
+    {
+     "d": "Prima stima: circa 260 kW elettrici"
+    },
+    {
+     "d": "Dopo altri recuperi: circa 250 kW termici"
+    },
+    {
+     "d": "Taglia conveniente: poco oltre 220 kW elettrici"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m06_s048",
+  "layout": "tabella",
+  "kicker": "Logica di portafoglio",
+  "titolo": "I recuperi ridimensionano, non penalizzano",
+  "cols": [
+   "Scenario",
+   "Taglia elettrica",
+   "Produzione annua",
+   "Beneficio netto"
+  ],
+  "righe": [
+   [
+    "Prima dei recuperi",
+    "260 kW",
+    "1.560 MWh",
+    "148 k€/a"
+   ],
+   [
+    "Dopo i recuperi",
+    "200 kW",
+    "1.200 MWh",
+    "114 k€/a"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s049",
+  "layout": "cards",
+  "kicker": "Perimetro di progetto",
+  "titolo": "Il perimetro reale del progetto CAR",
+  "intro": "Un cogeneratore industriale non è solo una macchina. È un progetto che deve reggere su fondamentali energetici solidi e su un perimetro tecnico, autorizzativo, fiscale e ambientale che spesso determina tempi e qualità dell'avviamento.",
+  "cards": [
+   {
+    "h": "Qualifica CAR",
+    "d": "Risparmio annuo di energia primaria da dimostrare"
+   },
+   {
+    "h": "Benefici dedicati",
+    "d": "Utili, ma non base del caso"
+   },
+   {
+    "h": "Autorizzazioni e rete",
+    "d": "Iter, connessione, tempi spesso lunghi"
+   },
+   {
+    "h": "Fiscalità e ambiente",
+    "d": "Officina elettrica, misure, emissioni, adeguamenti"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s050",
+  "layout": "tabella",
+  "kicker": "Verifica tecnica",
+  "titolo": "Quattro verifiche, quattro esiti diversi",
+  "cols": [
+   "Intervento",
+   "Stima iniziale",
+   "Verifica",
+   "Lettura"
+  ],
+  "righe": [
+   [
+    "Recupero fumi forni",
+    "62.696 €/a",
+    "53.909 €/a",
+    "Scende dopo ottimizzazione aria"
+   ],
+   [
+    "Condensato caldaia",
+    "11.942 €/a",
+    "11.786 €/a",
+    "Stima sostanzialmente confermata"
+   ],
+   [
+    "Isolamenti e scaricatori",
+    "5.971 €/a",
+    "10.080 €/a",
+    "Sale con rilievi dedicati"
+   ],
+   [
+    "Condensazione flottante",
+    "5.603 €/a",
+    "5.603 €/a",
+    "Misura diretta, nessuna sorpresa"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s051",
+  "layout": "cards",
+  "kicker": "Valore emerso",
+  "titolo": "Due scoperte che cambiano il piano",
+  "intro": "Il calcolo approfondito non corregge soltanto il piano esistente: fa emergere nuove misure con ritorni rapidi. La più forte, l'ottimizzazione dell'eccesso d'aria, cambia anche la gerarchia delle priorità del pacchetto termico.",
+  "cards": [
+   {
+    "h": "Eccesso d'aria forni",
+    "d": "25,6 k€/a, 35 k€, ritorno circa 16 mesi"
+   },
+   {
+    "h": "Valvola elettronica chiller",
+    "d": "12,0 k€/a, 22 k€, ritorno sotto 2 anni"
+   },
+   {
+    "h": "Effetto combinato",
+    "d": "37,6 k€/a, 57 k€, payback circa 1,5 anni"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s052",
+  "layout": "evidenza",
+  "kicker": "Portafoglio termico",
+  "titolo": "Sei interventi, quattro logiche decisionali",
+  "eyebrow": "Portafoglio termico",
+  "testo": "Il piano termico aggiornato va letto come portafoglio. Non tutte le misure hanno lo stesso ruolo: alcune sono immediate, altre prioritarie per rapporto costo-beneficio, altre richiedono presidio gestionale, una è il progetto strategico di maggiore taglia.",
+  "dark": true
+ },
+ {
+  "id": "fadeen02_m06_s053",
+  "layout": "numeri",
+  "kicker": "Impatto sul sito",
+  "titolo": "Il piano complessivo diventa più forte",
+  "intro": "Il portafoglio cresce di scala senza perdere qualità: l'investimento sale da circa 601 a 658 mila euro, meno del beneficio, e il tempo di ritorno complessivo si accorcia leggermente anche includendo il recupero fumi.",
+  "numeri": [
+   {
+    "n": "17",
+    "h": "Interventi totali, da 15 dopo la revisione",
+    "d": "Interventi totali, da 15 dopo la revisione"
+   },
+   {
+    "n": "304,7 k€/a",
+    "h": "Risparmio annuo complessivo, circa +12%",
+    "d": "Risparmio annuo complessivo, circa +12%"
+   },
+   {
+    "n": "16,2%",
+    "h": "Riduzione della spesa energetica annua",
+    "d": "Riduzione della spesa energetica annua"
+   },
+   {
+    "n": "17,3%",
+    "h": "Riduzione dell'energia finale consumata",
+    "d": "Riduzione dell'energia finale consumata"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m06_s054",
+  "layout": "cards",
+  "kicker": "Prossimo perimetro",
+  "titolo": "Tre opportunità da maturare separatamente",
+  "intro": "Una diagnosi matura distingue le misure già approvabili dalle opportunità ancora da far crescere. Così il piano resta credibile oggi e, nello stesso tempo, prepara un'agenda tecnica concreta per la fase successiva.",
+  "cards": [
+   {
+    "h": "Cogenerazione",
+    "d": "Serve due diligence tecnico-finanziaria e autorizzativa"
+   },
+   {
+    "h": "Free cooling di processo",
+    "d": "Mancano dati orari, carico e schema"
+   },
+   {
+    "h": "Masse di supporto forni",
+    "d": "Decisione condivisa con produzione e attrezzaggio"
+   },
+   {
+    "h": "Regola di governance",
+    "d": "Opportunità separate dalle misure già contabilizzate"
+   }
+  ]
+ }
+]

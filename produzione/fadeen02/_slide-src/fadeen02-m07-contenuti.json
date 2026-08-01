@@ -1,0 +1,1395 @@
+[
+ {
+  "id": "fadeen02_m07_s001",
+  "layout": "apertura",
+  "kicker": "Passaggio di fase",
+  "titolo": "Il profilo di carico sposta il focus",
+  "corsoLabel": "ESG Manager · UNI/PdR 109.1",
+  "eyebrow": "Passaggio di fase",
+  "sottotitolo": "Dopo l’efficienza cambiano le leve: autoprodurre una quota elettrica e acquistare meglio il resto. Per farlo non basta il consumo annuo: serve leggere profilo di carico, picchi, fermate e contemporaneità.",
+  "agenda": [
+   "Sei competenze per decidere bene",
+   "La sequenza corretta del lavoro",
+   "Efficienza prima, fotovoltaico dopo",
+   "Profilo di carico: il dato decisivo",
+   "Nel feriale il fotovoltaico vale di più"
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s002",
+  "layout": "numeri",
+  "kicker": "Competenze chiave",
+  "titolo": "Sei competenze per decidere bene",
+  "intro": "Questa parte del modulo costruisce competenze operative, non nozioni isolate. L’obiettivo è sostenere decisioni credibili davanti alla direzione, coerenti con i dati reali del sito e con la logica economica dell’investimento.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Profilo orario e curva di durata",
+    "d": "Profilo orario e curva di durata"
+   },
+   {
+    "n": "2",
+    "h": "Producibilità fotovoltaica reale",
+    "d": "Producibilità fotovoltaica reale"
+   },
+   {
+    "n": "3",
+    "h": "Taglia guidata dall’autoconsumo",
+    "d": "Taglia guidata dall’autoconsumo"
+   },
+   {
+    "n": "4",
+    "h": "Lettura economica di base",
+    "d": "Lettura economica di base"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s003",
+  "layout": "flusso",
+  "kicker": "Metodo di lavoro",
+  "titolo": "La sequenza corretta del lavoro",
+  "intro": "Il percorso segue l’ordine corretto di lavoro su un sito reale: prima si legge il bisogno nel tempo, poi si stima la tecnologia, quindi si dimensiona, si valuta e infine si contrattualizza.",
+  "passi": [
+   {
+    "h": "Leggere il sito",
+    "d": "Profilo orario, feriali, fermate, curva di durata"
+   },
+   {
+    "h": "Stimare il fotovoltaico",
+    "d": "Radiazione, perdite, potenza reale, spazio installabile"
+   },
+   {
+    "h": "Dimensionare la taglia",
+    "d": "Domanda e produzione nello stesso istante"
+   },
+   {
+    "h": "Tradurre in economia",
+    "d": "Costo prodotto, autoconsumo, immissione"
+   },
+   {
+    "h": "Scegliere la configurazione",
+    "d": "Autoconsumo fisico o condivisione"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s004",
+  "layout": "confronto",
+  "kicker": "Regola di progetto",
+  "titolo": "Efficienza prima, fotovoltaico dopo",
+  "intro": "L’efficienza cambia il problema fotovoltaico: abbassa prelievi, carico medio e carico di fermata. Se produci prima di avere misurato il nuovo profilo, rischi di acquistare una taglia calibrata sul passato.",
+  "a": {
+   "h": "Sequenza corretta",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Riduci i consumi"
+    },
+    {
+     "d": "Misuri il nuovo profilo"
+    },
+    {
+     "d": "Ritari la quota da coprire"
+    },
+    {
+     "d": "Dimensioni su un bisogno reale"
+    }
+   ]
+  },
+  "b": {
+   "h": "Ordine sbagliato",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Dimensioni sui consumi storici"
+    },
+    {
+     "d": "Ignori il calo del carico diurno"
+    },
+    {
+     "d": "Sovrastimi l’autoconsumo possibile"
+    },
+    {
+     "d": "Porti più energia in rete"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m07_s005",
+  "layout": "definizione",
+  "kicker": "Dato decisivo",
+  "titolo": "Profilo di carico: il dato decisivo",
+  "eyebrow": "Dato decisivo",
+  "definizione": "Serie oraria, o più fine, dei prelievi del sito lungo un anno completo: rende visibili minimi, picchi, fermate, continuità del carico e contemporaneità con la produzione.",
+  "punti": []
+ },
+ {
+  "id": "fadeen02_m07_s006",
+  "layout": "evidenza",
+  "kicker": "Caso favorevole",
+  "titolo": "Nel feriale il fotovoltaico vale di più",
+  "eyebrow": "Caso favorevole",
+  "testo": "Nel giorno feriale con carico alto e continuo, la produzione solare resta sotto la domanda del sito. È il caso economicamente migliore, perché quasi ogni chilowattora prodotto sostituisce direttamente un prelievo di rete.",
+  "dark": true
+ },
+ {
+  "id": "fadeen02_m07_s007",
+  "layout": "cards",
+  "kicker": "Limite della taglia",
+  "titolo": "La fermata fissa il limite economico",
+  "intro": "Quando il sito è fermo, il carico scende ma il fotovoltaico continua a produrre nelle ore migliori. È qui che emerge il limite economico della taglia: l’eccedenza vale meno dell’autoconsumo.",
+  "cards": [
+   {
+    "h": "Carico residuo basso",
+    "d": "Restano attivi solo servizi permanenti"
+   },
+   {
+    "h": "Due valori diversi",
+    "d": "Autoconsumo alto, immissione molto meno"
+   },
+   {
+    "h": "Rendimento marginale decrescente",
+    "d": "Ogni chilowatt aggiunto eccede più facilmente"
+   },
+   {
+    "h": "Fermate estive decisive",
+    "d": "Coincidono con la massima producibilità"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s008",
+  "layout": "tabella",
+  "kicker": "Seconda lettura",
+  "titolo": "Che cosa rivela la curva di durata",
+  "cols": [
+   "Lettura",
+   "Che cosa mostra",
+   "A che cosa serve"
+  ],
+  "righe": [
+   [
+    "Picco assoluto",
+    "Quanto in alto arriva il sito",
+    "Verifica potenza disponibile e robustezza"
+   ],
+   [
+    "Ore sopra soglia",
+    "Quanto durano i carichi rari",
+    "Valuta potenza impegnata e peak shaving"
+   ],
+   [
+    "Gradino intermedio",
+    "Scarto fra processo e base",
+    "Separa carico produttivo e permanente"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s009",
+  "layout": "punti",
+  "kicker": "Scheda mentale minima",
+  "titolo": "Le quattro letture minime del profilo",
+  "intro": "Da ogni profilo devi estrarre quattro informazioni minime. Insieme guidano taglia, valore dell’autoconsumo, opportunità di accumulo, lettura dei picchi e valutazione della potenza impegnata.",
+  "punti": [
+   {
+    "h": "Carico minimo diurno",
+    "d": "Primo limite pratico all’autoconsumo istantaneo"
+   },
+   {
+    "h": "Contemporaneità",
+    "d": "Produzione utile nello stesso istante della domanda"
+   },
+   {
+    "h": "Picchi e durata",
+    "d": "Soglie superate, concentrazione, ricorrenza"
+   },
+   {
+    "h": "Carico permanente",
+    "d": "Fondo sempre acceso, tra spreco e cuscinetto"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s010",
+  "layout": "split",
+  "kicker": "Producibilità",
+  "titolo": "I tre fattori della produzione attesa",
+  "lead": "Dal lato della domanda passi al lato dell'offerta: il dato climatico generico va trasformato nella producibilità specifica dell'impianto reale, coerente con geometria, orientamento, inclinazione e vincoli della copertura.",
+  "punti": [
+   {
+    "h": "Potenza installata",
+    "d": "La taglia nominale espressa in kWp"
+   },
+   {
+    "h": "Irraggiamento utile",
+    "d": "Energia annua sul piano dei moduli"
+   },
+   {
+    "h": "Rapporto di prestazione",
+    "d": "Corregge le perdite del sistema reale"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s011",
+  "layout": "cards",
+  "kicker": "Prestazioni reali",
+  "titolo": "Le perdite che compongono il rapporto di prestazione",
+  "intro": "Una stima credibile apre il rapporto di prestazione e ne esplicita le perdite. In un impianto reale gli scostamenti non si sommano grossolanamente: si moltiplicano lungo tutta la catena energetica.",
+  "cards": [
+   {
+    "h": "Temperatura di cella",
+    "d": "La voce più pesante su coperture estive"
+   },
+   {
+    "h": "Disaccoppiamento moduli",
+    "d": "Tolleranze, invecchiamento, condizioni non uniformi"
+   },
+   {
+    "h": "Cavi e collegamenti",
+    "d": "Lunghezze, sezioni e giunzioni fanno differenza"
+   },
+   {
+    "h": "Conversione e campo",
+    "d": "Inverter, sporcamento e ombreggiamenti residui"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s012",
+  "layout": "confronto",
+  "kicker": "Taglia corretta",
+  "titolo": "Targa di laboratorio e potenza in esercizio",
+  "intro": "La potenza nominale serve a confrontare moduli in condizioni standard. Il dimensionamento corretto invece confronta il carico reale del sito con il profilo di produzione reale.",
+  "a": {
+   "h": "Potenza nominale",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Misurata in condizioni di prova standard"
+    },
+    {
+     "d": "Cella a 25 °C, scenario convenzionale"
+    },
+    {
+     "d": "Dato utile per confronto di laboratorio"
+    },
+    {
+     "d": "Non descrive il tetto industriale reale"
+    }
+   ]
+  },
+  "b": {
+   "h": "Potenza effettiva",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Dipende da temperatura e irraggiamento reali"
+    },
+    {
+     "d": "600 kWp possono valere circa 480 kW estivi"
+    },
+    {
+     "d": "In primavera si può salire verso 520 kW"
+    },
+    {
+     "d": "Va comunicata bene alla direzione"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m07_s013",
+  "layout": "numeri",
+  "kicker": "Superficie utile",
+  "titolo": "Dal tetto visibile al tetto installabile",
+  "intro": "La copertura percepita dal committente non coincide con quella realmente disponibile. Sicurezza, ombre, accessi e impianti esistenti riducono in modo sostanziale la superficie su cui puoi davvero progettare.",
+  "numeri": [
+   {
+    "n": "8.500 m²",
+    "h": "Copertura complessiva percepita",
+    "d": "Copertura complessiva percepita"
+   },
+   {
+    "n": "5.500 m²",
+    "h": "Superficie realmente utilizzabile",
+    "d": "Superficie realmente utilizzabile"
+   },
+   {
+    "n": "130 Wp/m²",
+    "h": "Densità prudente su tetto piano a filari",
+    "d": "Densità prudente su tetto piano a filari"
+   },
+   {
+    "n": "4.615 m²",
+    "h": "Spazio richiesto da 600 kWp",
+    "d": "Spazio richiesto da 600 kWp"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s014",
+  "layout": "timeline",
+  "kicker": "Vita utile",
+  "titolo": "Il valore si misura lungo venticinque anni",
+  "intro": "L'impianto va giudicato sul ciclo di vita, non sul primo esercizio. La produzione cala lentamente nel tempo e alcuni componenti, come l'inverter, richiedono una sostituzione prima dei moduli.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Anno 1",
+    "d": "Produzione attesa circa 810.000 kWh"
+   },
+   {
+    "t": "02",
+    "h": "Ogni anno",
+    "d": "Degrado prudente intorno allo 0,5%"
+   },
+   {
+    "t": "03",
+    "h": "Anno 12",
+    "d": "Sostituzione inverter da prevedere nel business case"
+   },
+   {
+    "t": "04",
+    "h": "25 anni",
+    "d": "Produzione cumulata oltre 19 milioni di kWh"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s015",
+  "layout": "split",
+  "kicker": "Redditività",
+  "titolo": "L'autoconsumo si calcola sulla contemporaneità",
+  "lead": "La quota di autoconsumo è il rapporto fra energia autoconsumata ed energia prodotta, ma conta solo se letta ora per ora. È questa variabile che separa i kWh più redditizi da quelli meno valorizzati.",
+  "punti": [
+   {
+    "h": "Turni produttivi",
+    "d": "Più attività diurna, più carico contemporaneo"
+   },
+   {
+    "h": "Weekend e fermate",
+    "d": "Le soste aumentano il rischio di eccedenza"
+   },
+   {
+    "h": "Carico permanente",
+    "d": "Aiuta, ma raramente sostiene taglie elevate"
+   },
+   {
+    "h": "Taglia dell'impianto",
+    "d": "Oltre una soglia cresce l'energia meno valorizzata"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s016",
+  "layout": "tabella",
+  "kicker": "Dimensionamento",
+  "titolo": "Cresce la produzione, cala la qualità economica",
+  "cols": [
+   "Taglia",
+   "Produzione annua",
+   "Quota autoconsumata",
+   "Lettura"
+  ],
+  "righe": [
+   [
+    "300 kWp",
+    "405.000 kWh",
+    "97%",
+    "Quasi tutta l'energia resta nel sito"
+   ],
+   [
+    "600 kWp",
+    "810.000 kWh",
+    "86,4%",
+    "Ancora forte equilibrio economico"
+   ],
+   [
+    "900 kWp",
+    "In aumento",
+    "In calo evidente",
+    "La parte marginale vale meno"
+   ],
+   [
+    "1.200 kWp",
+    "Ancora in aumento",
+    "Ulteriore discesa",
+    "Immissione sempre più rilevante"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s017",
+  "layout": "flusso",
+  "kicker": "Metodo decisionale",
+  "titolo": "L'ultimo blocco decide dove fermarsi",
+  "intro": "L'analisi marginale non giudica l'impianto come un tutto indistinto. Valuta il rendimento del blocco che stai per aggiungere e lo confronta con la soglia economica dichiarata dall'impresa.",
+  "passi": [
+   {
+    "h": "Primo blocco",
+    "d": "300 kWp: ritorno molto rapido"
+   },
+   {
+    "h": "Secondo blocco",
+    "d": "Da 300 a 600 kWp: ancora accettabile"
+   },
+   {
+    "h": "Blocchi successivi",
+    "d": "Autoconsumo più basso, ritorno marginale più lungo"
+   },
+   {
+    "h": "Regola finale",
+    "d": "Ti fermi quando l'ultimo blocco supera la soglia"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s018",
+  "layout": "evidenza",
+  "kicker": "Scelta finale",
+  "titolo": "Per questo sito la taglia corretta è 600 kWp",
+  "eyebrow": "Scelta finale",
+  "testo": "La soluzione si stabilizza a 600 kWp perché tiene insieme profilo di carico, producibilità realistica, superficie disponibile e criterio marginale. È una scelta guidata dal sito, non dalla massima saturazione del tetto.",
+  "dark": true
+ },
+ {
+  "id": "fadeen02_m07_s019",
+  "layout": "evidenza",
+  "kicker": "Dimensionamento",
+  "titolo": "Tre famiglie di errori nel dimensionamento",
+  "eyebrow": "Dimensionamento",
+  "testo": "Le proposte deboli tendono a sbagliare sempre negli stessi punti: partenza dal dato sbagliato, ordine errato delle decisioni, indicatori letti male. Correggerli evita impianti troppo grandi, troppo piccoli o economicamente ingannevoli.",
+  "dark": true
+ },
+ {
+  "id": "fadeen02_m07_s020",
+  "layout": "flusso",
+  "kicker": "Economia",
+  "titolo": "Dall'investimento al prezzo per chilowattora",
+  "intro": "Per parlare con la direzione, l'investimento va tradotto in un prezzo unitario. Il calcolo spalma tutti i costi della vita utile sulla produzione cumulata attesa, già corretta per il degrado dei moduli.",
+  "passi": [
+   {
+    "h": "Costi da sommare",
+    "d": "Investimento, O&M, sostituzione inverter"
+   },
+   {
+    "h": "Orizzonte di analisi",
+    "d": "Venticinque anni di vita utile"
+   },
+   {
+    "h": "Energia da usare",
+    "d": "Produzione cumulata corretta per degrado"
+   },
+   {
+    "h": "Risultato unitario",
+    "d": "710 mila euro su oltre 19 GWh = 0,0373 €/kWh"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s021",
+  "layout": "confronto",
+  "kicker": "Valorizzazione",
+  "titolo": "Autoconsumo e immissione hanno valori diversi",
+  "intro": "Lo stesso chilowattora fotovoltaico può valere molto o poco a seconda del suo percorso economico. La redditività dipende quindi dalla quota trattenuta dal sito, non dalla sola produzione annua.",
+  "a": {
+   "h": "Autoconsumo",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Sostituisce un acquisto completo dalla rete"
+    },
+    {
+     "d": "Evita anche le componenti variabili"
+    },
+    {
+     "d": "Valore: circa 0,1745 €/kWh"
+    },
+    {
+     "d": "Conta più della produzione totale"
+    }
+   ]
+  },
+  "b": {
+   "h": "Immissione",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Cede energia al mercato"
+    },
+    {
+     "d": "Vale come commodity elettrica"
+    },
+    {
+     "d": "Valore prudenziale: circa 0,09 €/kWh"
+    },
+    {
+     "d": "Se cresce, la resa economica scende"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m07_s022",
+  "layout": "tabella",
+  "kicker": "Primo anno",
+  "titolo": "La fotografia economica del primo anno",
+  "cols": [
+   "Voce",
+   "Quantità",
+   "Effetto economico"
+  ],
+  "righe": [
+   [
+    "Energia autoconsumata",
+    "699.840 kWh",
+    "oltre 122 mila euro"
+   ],
+   [
+    "Energia immessa",
+    "110.160 kWh",
+    "quasi 10 mila euro"
+   ],
+   [
+    "Esercizio e manutenzione",
+    "-",
+    "circa 7.200 euro"
+   ],
+   [
+    "Beneficio netto",
+    "-",
+    "circa 124.836 euro"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s023",
+  "layout": "split",
+  "kicker": "Realizzazione",
+  "titolo": "Quattro formule, quattro ripartizioni del valore",
+  "lead": "La forma di realizzazione decide come si distribuiscono capitale, proprietà, rischio di producibilità e beneficio finale. Nelle formule dirette, una garanzia iniziale ben scritta allinea impresa e fornitore.",
+  "punti": [
+   {
+    "h": "Acquisto diretto",
+    "d": "Capitale e beneficio restano in azienda"
+   },
+   {
+    "h": "Chiavi in mano garantito",
+    "d": "Proprietà interna, rischio producibilità più presidiato"
+   },
+   {
+    "h": "Noleggio operativo",
+    "d": "Nessun esborso iniziale, valore parzialmente ceduto"
+   },
+   {
+    "h": "Operatore terzo",
+    "d": "Energia scontata, ma non tutto il margine resta"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s024",
+  "layout": "numeri",
+  "kicker": "Sintesi",
+  "titolo": "I quattro numeri che orientano la decisione",
+  "intro": "In riunione servono pochi numeri, ma coerenti fra loro. Questi quattro spiegano prezzo dell'energia autoprodotta, beneficio annuo, velocità di rientro e quota reale del fabbisogno coperta.",
+  "numeri": [
+   {
+    "n": "0,0373 €/kWh",
+    "h": "Costo vita utile dell'energia prodotta",
+    "d": "Costo vita utile dell'energia prodotta"
+   },
+   {
+    "n": "124,8 mila €",
+    "h": "Beneficio netto del primo anno",
+    "d": "Beneficio netto del primo anno"
+   },
+   {
+    "n": "< 4 anni",
+    "h": "Tempo di ritorno semplice",
+    "d": "Tempo di ritorno semplice"
+   },
+   {
+    "n": "11,8%",
+    "h": "Copertura realistica del prelievo residuo",
+    "d": "Copertura realistica del prelievo residuo"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s025",
+  "layout": "definizione",
+  "kicker": "Configurazioni",
+  "titolo": "Autoconsumo fisico: il valore nasce a monte",
+  "eyebrow": "Configurazioni",
+  "definizione": "Produzione e consumo condividono lo stesso punto di connessione: l'energia usata subito evita l'intero costo marginale del chilowattora di rete.",
+  "punti": []
+ },
+ {
+  "id": "fadeen02_m07_s026",
+  "layout": "cards",
+  "kicker": "Condivisione",
+  "titolo": "Tre configurazioni quando il sito non basta",
+  "intro": "Sono configurazioni utili quando produzione e consumo non coincidono nello stesso punto di connessione. Ma la loro economia è diversa: il chilowattora condiviso vale più della vendita semplice e meno dell'autoconsumo fisico.",
+  "cards": [
+   {
+    "h": "Autoconsumo individuale a distanza",
+    "d": "Stesso soggetto, punti diversi nel perimetro ammesso"
+   },
+   {
+    "h": "Autoconsumo collettivo",
+    "d": "Più utenze nello stesso edificio o contesto comune"
+   },
+   {
+    "h": "Comunità energetica rinnovabile",
+    "d": "Soggetti autonomi condividono energia entro un perimetro"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s027",
+  "layout": "flusso",
+  "kicker": "CER",
+  "titolo": "Nella CER il valore nasce dalla contemporaneità",
+  "intro": "La comunità energetica funziona solo se organizzazione, perimetro di rete e profili orari stanno insieme. Il beneficio non nasce dalla somma dei totali annui, ma dalla quota condivisa nello stesso momento.",
+  "passi": [
+   {
+    "h": "Struttura",
+    "d": "Soggetto giuridico con governance e adesione volontaria"
+   },
+   {
+    "h": "Perimetro",
+    "d": "Contano rete rilevante e punti di connessione"
+   },
+   {
+    "h": "Regola economica",
+    "d": "Energia condivisa = min tra immissioni e prelievi"
+   },
+   {
+    "h": "Esito pratico",
+    "d": "Molta produzione senza carico simultaneo rende meno"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s028",
+  "layout": "cards",
+  "kicker": "Gerarchia economica",
+  "titolo": "Il chilowattora vale in tre modi",
+  "intro": "La strategia parte da una gerarchia semplice: stesso chilowattora, valore diverso secondo dove finisce. Prima dietro il contatore, poi in condivisione, solo alla fine come semplice immissione.",
+  "cards": [
+   {
+    "h": "Autoconsumo fisico",
+    "d": "Prelievo evitato per intero, valore unitario massimo"
+   },
+   {
+    "h": "Energia condivisa",
+    "d": "Incentivo sulla quota condivisa, rete ancora nel mezzo"
+   },
+   {
+    "h": "Immissione semplice",
+    "d": "Solo valore di mercato, remunerazione più bassa"
+   },
+   {
+    "h": "Regola pratica",
+    "d": "Satura il sito, poi condividi, infine immetti"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s029",
+  "layout": "evidenza",
+  "kicker": "Scelta di configurazione",
+  "titolo": "Qui conviene restare dietro il contatore",
+  "eyebrow": "Scelta di configurazione",
+  "testo": "Su questo sito l'analisi converge senza ambiguità: l'impianto va installato sulla copertura dello stabilimento, massimizzando l'autoconsumo fisico e lasciando in rete una eccedenza troppo piccola per giustificare strutture più complesse.",
+  "dark": true
+ },
+ {
+  "id": "fadeen02_m07_s030",
+  "layout": "tabella",
+  "kicker": "Funzioni dell'accumulo",
+  "titolo": "Quattro logiche, quattro metriche di accumulo",
+  "cols": [
+   "Funzione",
+   "Obiettivo",
+   "Grandezza chiave"
+  ],
+  "righe": [
+   [
+    "Arbitraggio autoconsumo",
+    "Trasformare eccedenza in autoconsumo",
+    "Energia in eccesso nel singolo giorno"
+   ],
+   [
+    "Taglio picchi",
+    "Ridurre potenza impegnata",
+    "kW da tagliare e durata evento"
+   ],
+   [
+    "Arbitraggio tariffario",
+    "Spostare prelievi tra ore diverse",
+    "Differenziale prezzo e cicli utili"
+   ],
+   [
+    "Continuità servizio",
+    "Evitare fermi e scarti",
+    "Costo operativo del disservizio"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s031",
+  "layout": "flusso",
+  "kicker": "Arbitraggio con batteria",
+  "titolo": "Il conto reale dell'arbitraggio con batteria",
+  "intro": "L'attrattiva iniziale è evidente, ma il conto corretto passa da quattro filtri: quanta eccedenza la batteria intercetta davvero, quanta energia perde nel ciclo e quale ricavo da immissione sostituisce.",
+  "passi": [
+   {
+    "h": "Eccedenza teorica",
+    "d": "110.160 kWh annui senza accumulo"
+   },
+   {
+    "h": "Quota catturabile",
+    "d": "Circa 85.000 kWh, limitati da weekend e capacità"
+   },
+   {
+    "h": "Energia resa al sito",
+    "d": "Con rendimento 90%, circa 76.500 kWh utili"
+   },
+   {
+    "h": "Beneficio netto",
+    "d": "Autoconsumo creato meno ricavo di immissione perso"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s032",
+  "layout": "split",
+  "kicker": "Peak shaving",
+  "titolo": "Nei picchi contano i chilowatt, non i chilowattora",
+  "lead": "Nel peak shaving il punto non è accumulare molta energia, ma liberare il sito da poche ore critiche che fissano un costo fisso per dodici mesi. Per questo conta prima la potenza.",
+  "punti": [
+   {
+    "h": "Leva economica",
+    "d": "77 ore oltre 1.150 kW possono pesare un anno"
+   },
+   {
+    "h": "Taglio mirato",
+    "d": "Ridurre 150 kW vale circa 7.200 euro annui"
+   },
+   {
+    "h": "Energia richiesta",
+    "d": "Eventi di 20 minuti richiedono poche decine di kWh"
+   },
+   {
+    "h": "Criterio di taglia",
+    "d": "Prima la potenza erogabile, poi la capacità"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s033",
+  "layout": "numeri",
+  "kicker": "Verdetto economico",
+  "titolo": "Il responso economico dell'accumulo è no",
+  "intro": "Quando sommi le due funzioni energetiche sensate nel caso studiato, il beneficio annuo cresce ma resta troppo piccolo rispetto all'investimento. La decisione professionale corretta diventa quindi negativa.",
+  "numeri": [
+   {
+    "n": "5.699 €",
+    "h": "Arbitraggio annuo sull'autoconsumo",
+    "d": "Arbitraggio annuo sull'autoconsumo"
+   },
+   {
+    "n": "7.200 €",
+    "h": "Risparmio annuo dal taglio picchi",
+    "d": "Risparmio annuo dal taglio picchi"
+   },
+   {
+    "n": "12.899 €",
+    "h": "Beneficio annuo lordo complessivo",
+    "d": "Beneficio annuo lordo complessivo"
+   },
+   {
+    "n": "15,5 anni",
+    "h": "Payback semplice su circa 200.000 euro",
+    "d": "Payback semplice su circa 200.000 euro"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s034",
+  "layout": "cards",
+  "kicker": "Flessibilità di processo",
+  "titolo": "Quattro flessibilità già dentro il processo",
+  "intro": "Se la batteria non si ripaga, la flessibilità non scompare. Spesso è già presente nel processo industriale e può essere resa utile con interventi organizzativi o tecnici molto più leggeri.",
+  "cards": [
+   {
+    "h": "Cicli energivori",
+    "d": "Spostare lavorazioni quando qualità e logistica lo consentono"
+   },
+   {
+    "h": "Accumulo termico",
+    "d": "Calore o freddo costano meno dell'elettrochimico"
+   },
+   {
+    "h": "Avviamenti sfalsati",
+    "d": "Evitare coincidenze di motori, compressori e linee"
+   },
+   {
+    "h": "Carichi differibili",
+    "d": "Distacco breve oltre soglia senza danno produttivo"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s035",
+  "layout": "timeline",
+  "kicker": "Mercato elettrico",
+  "titolo": "Il prezzo elettrico nasce da mercati in sequenza",
+  "intro": "Per leggere una fornitura devi prima sapere come si forma il prezzo all'ingrosso: mercati diversi si susseguono nel tempo e, nelle ore decisive, il prezzo finale è spesso guidato dalla tecnologia marginale.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Mercati a termine",
+    "d": "Coperture mesi o anni prima, base dei prezzi fissi"
+   },
+   {
+    "t": "02",
+    "h": "Mercato del giorno prima",
+    "d": "Scambio principale con offerte orarie per il giorno successivo"
+   },
+   {
+    "t": "03",
+    "h": "Mercati infragiornalieri",
+    "d": "Aggiustano le posizioni man mano che le previsioni migliorano"
+   },
+   {
+    "t": "04",
+    "h": "Dispacciamento e marginalità",
+    "d": "L'ultima tecnologia accettata fa prezzo, spesso il gas"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s036",
+  "layout": "confronto",
+  "kicker": "Offerte di fornitura",
+  "titolo": "Dove si negozia davvero il prezzo",
+  "intro": "Una proposta di fornitura mescola voci di natura diversa. Il confronto serio non guarda il totale in fattura, ma separa ciò che dipende dal mercato o dalla regolazione da ciò che remunera davvero il fornitore.",
+  "a": {
+   "h": "Leve competitive",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Spread del fornitore"
+    },
+    {
+     "d": "Struttura contrattuale del dispacciamento"
+    },
+    {
+     "d": "Scelta tra fisso e indicizzato"
+    },
+    {
+     "d": "Confronto su base comune"
+    }
+   ]
+  },
+  "b": {
+   "h": "Voci poco negoziabili",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Prezzo energia legato al mercato"
+    },
+    {
+     "d": "Perdite di rete regolate"
+    },
+    {
+     "d": "Totale influenzato dalla data di quotazione"
+    },
+    {
+     "d": "Alcune componenti sono quasi passanti"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m07_s037",
+  "layout": "confronto",
+  "kicker": "Rischio prezzo",
+  "titolo": "Fisso e indicizzato allocano rischi diversi",
+  "intro": "La scelta non oppone prudenza e convenienza: decide se trattenere volatilità in impresa o pagarne il trasferimento al fornitore, in funzione di margini, listini e tenuta finanziaria.",
+  "a": {
+   "h": "Prezzo fisso",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Prezzo bloccato per la durata"
+    },
+    {
+     "d": "Include premio per il rischio"
+    },
+    {
+     "d": "Utile con margini molto sensibili"
+    },
+    {
+     "d": "Ha senso se un picco non reggibile"
+    }
+   ]
+  },
+  "b": {
+   "h": "Prezzo indicizzato",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Indice di mercato più spread fisso"
+    },
+    {
+     "d": "Nessun premio per la certezza"
+    },
+    {
+     "d": "Mediamente più leggero sul lungo periodo"
+    },
+    {
+     "d": "Richiede assorbire mesi molto sfavorevoli"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m07_s038",
+  "layout": "numeri",
+  "kicker": "Approccio",
+  "titolo": "La gara funziona se il confronto è costruito",
+  "intro": "Il valore non nasce dall'invio di una bolletta a qualche fornitore. Nasce da una procedura uguale per tutti, con dati completi, concorrenza vera e quotazioni raccolte nello stesso mercato.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Fascicolo tecnico completo del profilo",
+    "d": "Fascicolo tecnico completo del profilo"
+   },
+   {
+    "n": "2",
+    "h": "Una sola formula per tutti",
+    "d": "Una sola formula per tutti"
+   },
+   {
+    "n": "3",
+    "h": "Quattro-sei operatori in gara",
+    "d": "Quattro-sei operatori in gara"
+   },
+   {
+    "n": "4",
+    "h": "Raccolta offerte in poche ore",
+    "d": "Raccolta offerte in poche ore"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s039",
+  "layout": "evidenza",
+  "kicker": "Contratto",
+  "titolo": "Il costo reale emerge nelle clausole",
+  "eyebrow": "Contratto",
+  "testo": "Uno spread competitivo non basta. Penali, garanzie, dilazioni e flessibilità contrattuale possono erodere il risultato economico o ridurre la libertà futura dell'impresa più di qualche decimale di prezzo.",
+  "dark": true
+ },
+ {
+  "id": "fadeen02_m07_s040",
+  "layout": "tabella",
+  "kicker": "Gas naturale",
+  "titolo": "Nel gas la leva negoziale pesa di più",
+  "cols": [
+   "Aspetto",
+   "Elettricità",
+   "Gas"
+  ],
+  "righe": [
+   [
+    "Quota negoziabile",
+    "Circa due terzi",
+    "Oltre quattro quinti"
+   ],
+   [
+    "Effetto della gara",
+    "Agisce su base più stretta",
+    "Agisce su base più ampia"
+   ],
+   [
+    "Esempio del caso",
+    "—",
+    "0,01 €/Smc vale circa 9.500 €/anno"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s041",
+  "layout": "cards",
+  "kicker": "Indicizzazione",
+  "titolo": "Quattro domande prima di firmare",
+  "intro": "Un prezzo iniziale attraente non basta. Conta come la formula si aggiorna, con quale indice, con quale ritardo e con quale libertà residua lasciata al fornitore.",
+  "cards": [
+   {
+    "h": "Indice",
+    "d": "Quale quotazione e quale mercato"
+   },
+   {
+    "h": "Rilevazione",
+    "d": "Media del mese, consegna o trimestre"
+   },
+   {
+    "h": "Fissazione",
+    "d": "Prezzo noto prima, durante o dopo"
+   },
+   {
+    "h": "Spread",
+    "d": "Deve restare fisso e invariabile"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s042",
+  "layout": "confronto",
+  "kicker": "Lungo termine",
+  "titolo": "PPA fisico e finanziario rispondono a bisogni diversi",
+  "intro": "Un contratto pluriennale non sostituisce la normale fornitura: stabilizza una quota del fabbisogno e sostiene ricavi prevedibili per il produttore. Va dimensionato su volumi prudenti, non sull'intero fabbisogno incerto.",
+  "a": {
+   "h": "PPA fisico",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Consegna tramite rete e intermediazione"
+    },
+    {
+     "d": "Gestisce profilo e differenze produzione-consumo"
+    },
+    {
+     "d": "Tracciabilità utile per sostenibilità e reporting"
+    }
+   ]
+  },
+  "b": {
+   "h": "PPA finanziario",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Nessuna consegna dedicata operativa"
+    },
+    {
+     "d": "Si regola la differenza col mercato"
+    },
+    {
+     "d": "Stabilizza economicamente una quota"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m07_s043",
+  "layout": "definizione",
+  "kicker": "Reporting ambientale",
+  "titolo": "La garanzia di origine non cambia il prelievo",
+  "eyebrow": "Reporting ambientale",
+  "definizione": "Certifica che 1 MWh è stato prodotto da fonte rinnovabile e abilita una rendicontazione contrattuale delle emissioni indirette.",
+  "punti": []
+ },
+ {
+  "id": "fadeen02_m07_s044",
+  "layout": "punti",
+  "kicker": "Caso Metaltermica",
+  "titolo": "Sul gas il valore nasce dal presidio",
+  "intro": "Per Metaltermica le leve immediate sono contrattuali e di controllo. Non richiedono capex, ma metodo: migliorano lo spread, verificano l'applicazione della formula e leggono correttamente gli effetti fiscali.",
+  "punti": [
+   {
+    "h": "Gara",
+    "d": "0,01 €/Smc in meno, circa 9.500 €/anno"
+   },
+   {
+    "h": "Formula",
+    "d": "Controllo trimestrale autonomo dell'indicizzazione"
+   },
+   {
+    "h": "Fisco",
+    "d": "Verifica aliquote e soglie dei consumi"
+   },
+   {
+    "h": "Pluriennale",
+    "d": "Per ora opzione da monitorare, non piano"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s045",
+  "layout": "flusso",
+  "kicker": "Visione di insieme",
+  "titolo": "Il fabbisogno diventa un portafoglio da governare",
+  "intro": "Dopo efficienza e fotovoltaico non esiste più una sola bolletta. Esistono quote con costi, orizzonti e rischi diversi, da gestire come un portafoglio coerente con la politica industriale.",
+  "passi": [
+   {
+    "h": "Autoproduzione autoconsumata",
+    "d": "Prezzo molto basso, quasi immunizzato dal mercato"
+   },
+   {
+    "h": "Quota a prezzo fissato",
+    "d": "Costo prevedibile per l'orizzonte coperto"
+   },
+   {
+    "h": "Quota indicizzata",
+    "d": "Esposta alla volatilità, senza premio assicurativo"
+   },
+   {
+    "h": "Energia immessa",
+    "d": "Volume marginale, valorizzazione meno ricca dell'autoconsumo"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s046",
+  "layout": "evidenza",
+  "kicker": "Approvvigionamento",
+  "titolo": "Copertura progressiva media il rischio di timing",
+  "eyebrow": "Approvvigionamento",
+  "testo": "La copertura progressiva non promette il prezzo migliore. Distribuisce invece la decisione nel tempo, trasforma una scelta secca in procedura e riduce il rischio di aver fissato tutto nel giorno peggiore.",
+  "dark": true
+ },
+ {
+  "id": "fadeen02_m07_s047",
+  "layout": "timeline",
+  "kicker": "Governance",
+  "titolo": "Il calendario che disciplina le decisioni",
+  "intro": "La strategia funziona solo quando entra nello scadenzario aziendale. Date ricorrenti, responsabilità e dati pronti contano più dell'intuizione, perché evitano ritardi, rinnovi subiti e gare preparate male.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Gennaio",
+    "d": "Consuntivo, baseline, indicatori, riesame direzionale"
+   },
+   {
+    "t": "02",
+    "h": "Fine trimestre",
+    "d": "Verifica quota da fissare secondo procedura"
+   },
+   {
+    "t": "03",
+    "h": "Primavera–giugno",
+    "d": "Nomina energia e fascicolo di gara aggiornato"
+   },
+   {
+    "t": "04",
+    "h": "Settembre–ottobre",
+    "d": "Gara in tempo utile rispetto alle scadenze"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s048",
+  "layout": "numeri",
+  "kicker": "Errori ricorrenti",
+  "titolo": "Quattro convinzioni che erodono valore",
+  "intro": "Gli errori più costosi nascono spesso da idee intuitive ma fuorvianti. Riconoscerle in anticipo evita esposizioni inconsapevoli, premi inutili e deleghe strategiche mascherate da buon senso operativo.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Aspettare il ribasso è indicizzato non dichiarato",
+    "d": "Aspettare il ribasso è indicizzato non dichiarato"
+   },
+   {
+    "n": "2",
+    "h": "Fisso significa prevedibilità, non sicurezza universale",
+    "d": "Fisso significa prevedibilità, non sicurezza universale"
+   },
+   {
+    "n": "3",
+    "h": "Elettricità fissa e gas indicizzato non diversificano davvero",
+    "d": "Elettricità fissa e gas indicizzato non diversificano davvero"
+   },
+   {
+    "n": "4",
+    "h": "Il fornitore informa, non sostituisce la regola aziendale",
+    "d": "Il fornitore informa, non sostituisce la regola aziendale"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s049",
+  "layout": "tabella",
+  "kicker": "Esito della fase",
+  "titolo": "Tre azioni, un beneficio annuo integrato",
+  "cols": [
+   "Azione",
+   "Invest.",
+   "Beneficio annuo",
+   "Ruolo"
+  ],
+  "righe": [
+   [
+    "FV 600 kWp in autoconsumo",
+    "480 mila €",
+    "124,8 mila €",
+    "Quota stabile a basso costo"
+   ],
+   [
+    "Gara fornitura elettrica",
+    "0 €",
+    "18,3 mila €",
+    "Riduzione spread sul residuo"
+   ],
+   [
+    "Gara fornitura gas",
+    "0 €",
+    "9,5 mila €",
+    "Formula chiara e controllo"
+   ],
+   [
+    "Totale fase",
+    "480 mila €",
+    "152,6 mila €",
+    "Tecnica e mercato insieme"
+   ]
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s050",
+  "layout": "cards",
+  "kicker": "Quadro complessivo",
+  "titolo": "Questa fase pesa circa un terzo",
+  "intro": "Letta sull'intero piano, questa fase non sostituisce l'efficienza: la completa. Il risultato finale resta molto forte per ritorno semplice, riduzione della spesa e peso specifico del blocco produzione-approvvigionamento.",
+  "cards": [
+   {
+    "h": "Diagnosi iniziale",
+    "d": "12 interventi, 251,1 mila €/anno"
+   },
+   {
+    "h": "Usi elettrici e termici",
+    "d": "5 interventi, 53,6 mila €/anno"
+   },
+   {
+    "h": "Produzione e approvvigionamento",
+    "d": "3 azioni, 152,6 mila €/anno"
+   },
+   {
+    "h": "Totale piano",
+    "d": "20 interventi, 457,3 mila €/anno, payback circa 2,5 anni"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s051",
+  "layout": "confronto",
+  "kicker": "Stato finale",
+  "titolo": "Stabilimento prima e dopo il piano",
+  "intro": "A piano completato il sito va letto come sistema trasformato. Prelievo dalla rete, consumo finale e autoproduzione non coincidono, e separarli evita di confondere efficienza con semplice cambio della fonte di approvvigionamento.",
+  "a": {
+   "h": "Prima",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Prelievo elettrico: 6,85 GWh/anno"
+    },
+    {
+     "d": "Gas naturale: 1,18 milioni Smc"
+    },
+    {
+     "d": "Consumo finale: 65,42 TJ"
+    },
+    {
+     "d": "Autoproduzione elettrica: zero"
+    }
+   ]
+  },
+  "b": {
+   "h": "Dopo",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Prelievo elettrico: 5,217 GWh/anno"
+    },
+    {
+     "d": "Gas naturale: 0,95 milioni Smc"
+    },
+    {
+     "d": "Consumo finale: 54,11 TJ"
+    },
+    {
+     "d": "Autoconsumo da FV: 699.840 kWh/anno"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadeen02_m07_s052",
+  "layout": "cards",
+  "kicker": "Portafoglio futuro",
+  "titolo": "Opzioni aperte con criteri di riapertura",
+  "intro": "Una funzione energia matura non chiude solo ciò che approva oggi. Mantiene anche un portafoglio di decisioni future, indicando con precisione quali condizioni tecniche ed economiche ne giustificano la riapertura.",
+  "cards": [
+   {
+    "h": "Cogenerazione 200 kWe",
+    "d": "Potenziale alto, serve analisi completa tecnica e autorizzativa"
+   },
+   {
+    "h": "Accumulo elettrochimico",
+    "d": "Riapribile con costi minori o servizi remunerati"
+   },
+   {
+    "h": "Free cooling di processo",
+    "d": "Servono dati orari e analisi climatica fine"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s053",
+  "layout": "flusso",
+  "kicker": "Filiera di lavoro",
+  "titolo": "Ogni fase abilita la successiva",
+  "intro": "Il percorso non è una sequenza di lezioni indipendenti. Ogni fase produce un output specifico e crea le condizioni operative, economiche e analitiche che rendono possibile il passaggio successivo.",
+  "passi": [
+   {
+    "h": "Mandato",
+    "d": "Ruoli, obblighi, accesso ai dati e ai contratti"
+   },
+   {
+    "h": "Linguaggio economico",
+    "d": "Bilancio, costi marginali, prime azioni immediate"
+   },
+   {
+    "h": "Misura e diagnosi",
+    "d": "Baseline, indicatori, modello energetico, interventi"
+   },
+   {
+    "h": "Approfondimenti",
+    "d": "Usi elettrici e termici aprono produzione e approvvigionamento"
+   }
+  ]
+ },
+ {
+  "id": "fadeen02_m07_s054",
+  "layout": "split",
+  "kicker": "Chiusura del modulo",
+  "titolo": "I dodici capisaldi prima della verifica",
+  "lead": "Questi punti sintetizzano il metodo: fissano ciò che deve restare stabile nella verifica finale e preparano il passaggio dalla bontà tecnica delle scelte alla loro successiva valutazione finanziaria.",
+  "punti": [
+   {
+    "h": "Carico e durata",
+    "d": "Feriali, fermate e curva di durata guidano il fotovoltaico"
+   },
+   {
+    "h": "Producibilità reale",
+    "d": "Perdite, vincoli e potenza effettiva cambiano la taglia"
+   },
+   {
+    "h": "Autoconsumo prima",
+    "d": "Analisi marginale, valore del kWh, accumulo per funzioni"
+   },
+   {
+    "h": "Mercato e portafoglio",
+    "d": "Spread confrontabili, vettori correlati, copertura progressiva coerente"
+   }
+  ]
+ }
+]
