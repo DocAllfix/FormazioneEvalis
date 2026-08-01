@@ -4770,5 +4770,371 @@
         }
       ]
     }
+  },
+  "esameFinale": {
+    "estrazione": 20,
+    "soglia": 0.75,
+    "banca": [
+      {
+        "q": "Una impresa manifatturiera riceve dal cliente principale una nuova soglia ESG da soddisfare entro sei mesi. La direzione ti chiede da dove partire. Qual è la scelta più coerente con il modulo?",
+        "opzioni": [
+          "Raccogliere le richieste già ricevute, stimare il fatturato esposto e solo dopo definire priorità e strumenti",
+          "Scrivere un bilancio di sostenibilità completo per mostrare impegno",
+          "Aprire subito la piattaforma del cliente e lavorare solo sulle domande con più punteggio",
+          "Calcolare per prima cosa tutte le emissioni dell'impresa e rimandare il resto"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m01"
+      },
+      {
+        "q": "Il commerciale vuole inserire in un questionario la frase controlliamo tutti i fornitori sui diritti del lavoro, ma tu non trovi evidenze sufficienti. Qual è il primo passo corretto?",
+        "opzioni": [
+          "Segnalare subito il caso alla direzione senza altre verifiche",
+          "Chiedere il dato o il documento che supporta quella frase",
+          "Togliere la frase e chiudere il questionario senza confronto",
+          "Accettare la frase se aiuta a mantenere il cliente"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m01"
+      },
+      {
+        "q": "Un responsabile dice abbiamo già certificazioni di sistema su ambiente e sicurezza, quindi possiamo dichiarare che il nostro report è conforme a uno standard di rendicontazione. Che cosa comporta davvero questa situazione?",
+        "opzioni": [
+          "Le certificazioni di sistema obbligano a usare una piattaforma di rating",
+          "Le certificazioni di sistema sostituiscono lo standard di rendicontazione se i dati sono ordinati",
+          "Le certificazioni di sistema aiutano a gestire processi e prove, ma non bastano da sole per dichiarare conformità di un report",
+          "Le certificazioni di sistema valgono solo per il marketing e non servono alla raccolta dati"
+        ],
+        "corretta": 2,
+        "tipo": "applicazione",
+        "modulo": "m01"
+      },
+      {
+        "q": "Una società verifica se rientra nella rendicontazione societaria di sostenibilità. Nel primo esercizio supera due parametri su tre. Nel secondo esercizio ne supera solo uno. Qual è la lettura corretta del perimetro?",
+        "opzioni": [
+          "Rientra subito, perché basta avere superato due parametri su tre almeno una volta",
+          "Rientra solo se supera il parametro dei dipendenti, anche se gli altri due non sono superati",
+          "Non rientra mai, perché il perimetro si legge solo guardando ai ricavi",
+          "Non rientra ancora, perché la logica richiede il superamento di almeno due parametri su tre per due esercizi consecutivi"
+        ],
+        "corretta": 3,
+        "tipo": "applicazione",
+        "modulo": "m02"
+      },
+      {
+        "q": "In una PMI il consiglio nomina un responsabile operativo per la sostenibilità e gli affida raccolta dati e preparazione delle analisi. Dopo la nomina gli amministratori smettono di ricevere aggiornamenti e non discutono più il tema. Qual è il problema principale di questo assetto?",
+        "opzioni": [
+          "La delega ha spostato l'esecuzione, ma l'organo amministrativo resta responsabile delle decisioni e del presidio",
+          "La nomina è nulla, perché la sostenibilità non può mai essere affidata a un responsabile operativo",
+          "L'assetto è corretto, perché con la delega la responsabilità passa interamente al responsabile nominato",
+          "Il problema è solo formale, perché basta inserire il tema in una presentazione annuale"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m02"
+      },
+      {
+        "q": "Durante la valutazione di doppia materialità un gruppo di lavoro assegna i punteggi ai temi. Visto che i temi risultati materiali sono più del previsto, decide dopo la valutazione di alzare la soglia di rilevanza. Perché questo passaggio è metodologicamente debole?",
+        "opzioni": [
+          "Perché la soglia conta solo per la materialità finanziaria e non per quella di impatto",
+          "Perché la soglia deve essere fissata prima di conoscere i punteggi finali, altrimenti sembra adattata al risultato voluto",
+          "Perché la soglia può essere cambiata solo dagli stakeholder esterni e non dal gruppo di lavoro",
+          "Perché la soglia deve coincidere con il numero dei temi richiesti dai clienti principali"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m02"
+      },
+      {
+        "q": "Un'impresa ha ridotto poco le proprie emissioni, ma compra crediti di compensazione e vuole lanciare una campagna dicendo che il suo servizio è climaticamente neutro. Qual è la scelta più corretta secondo il modulo?",
+        "opzioni": [
+          "Usare la formula di neutralità solo nei materiali commerciali e non nel sito aziendale",
+          "Usare la formula di neutralità se la direzione approva il messaggio e conserva i contratti dei crediti",
+          "Evitare la formula di neutralità e comunicare separatamente le riduzioni effettive e gli eventuali strumenti residuali",
+          "Usare la formula di neutralità se i crediti coprono tutte le emissioni dell'anno"
+        ],
+        "corretta": 2,
+        "tipo": "applicazione",
+        "modulo": "m03"
+      },
+      {
+        "q": "Nel primo esercizio del piano una PMI prevede tre uscite. Adeguamento del monitoraggio imposto dall'autorizzazione. Invio dei dati richiesti per restare fornitore di un cliente chiave. Impianto fotovoltaico per ridurre costi ed emissioni. Quale abbinamento è corretto?",
+        "opzioni": [
+          "Accesso al mercato, investimento di prestazione, conformità",
+          "Investimento di prestazione, conformità, accesso al mercato",
+          "Conformità, conformità, investimento di prestazione",
+          "Conformità, accesso al mercato, investimento di prestazione"
+        ],
+        "corretta": 3,
+        "tipo": "applicazione",
+        "modulo": "m03"
+      },
+      {
+        "q": "Una PMI chiede al presidio ESG di scrivere da solo tutte le azioni del piano e di inviarle alle funzioni a documento quasi chiuso. Quale impostazione sarebbe più coerente con il modulo?",
+        "opzioni": [
+          "Le funzioni propongono le azioni, il presidio ESG le ricompone in un insieme coerente e l'organo amministrativo approva",
+          "Il presidio ESG decide le azioni, le funzioni ne verificano solo la forma e l'organo amministrativo prende atto",
+          "Le funzioni approvano le azioni separatamente e l'organo amministrativo non interviene sul piano",
+          "Il consulente esterno definisce il piano finale e le funzioni ricevono soltanto il calendario esecutivo"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m03"
+      },
+      {
+        "q": "Una PMI vuole far circolare subito una bozza del bilancio e inizia a scrivere i capitoli prima di aver chiuso raccolta e controlli dei dati. Qual è la scelta più corretta",
+        "opzioni": [
+          "Pubblicare una versione narrativa e aggiungere i dati nel ciclo successivo",
+          "Fermare la scrittura e completare prima perimetro raccolta controlli e chiusura dei dati",
+          "Continuare a scrivere usando i numeri attesi e correggere alla fine solo le tabelle",
+          "Chiedere a ogni funzione di riempire il proprio capitolo così il testo guiderà la raccolta"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m04"
+      },
+      {
+        "q": "Al primo incontro con il soggetto incaricato della verifica l'impresa porta solo il documento finale e promette di recuperare il resto dopo. Quale scelta riduce davvero tempi e richieste successive",
+        "opzioni": [
+          "Inviare solo le metriche numeriche perché il resto si può chiarire se richiesto",
+          "Aspettare le prime domande del verificatore e raccogliere i documenti in base ai rilievi",
+          "Consegnare fin da subito un fascicolo di supporto ordinato con materialità perimetro schede metriche fonti e approvazioni",
+          "Limitarsi a mostrare i file principali e spiegare a voce i passaggi mancanti"
+        ],
+        "corretta": 2,
+        "tipo": "applicazione",
+        "modulo": "m04"
+      },
+      {
+        "q": "Tre mesi dopo la pubblicazione un responsabile corregge alcuni dati nel repertorio senza lasciare traccia del valore precedente. La banca chiede di ricostruire il numero pubblicato. Che cosa avrebbe dovuto fare l'impresa",
+        "opzioni": [
+          "Sostituire il dato nel documento pubblicato e cancellare i file precedenti per evitare confusione",
+          "Tenere memoria solo nelle mail fra colleghi perché la spiegazione informale è sufficiente",
+          "Aggiornare i file correnti senza storicizzare così tutti usano l'ultima versione",
+          "Versionare la modifica conservando valore precedente motivo data autore e copia del repertorio congelato usato per la pubblicazione"
+        ],
+        "corretta": 3,
+        "tipo": "applicazione",
+        "modulo": "m04"
+      },
+      {
+        "q": "A fine anno una fonderia smette di classificare sabbie esauste e scorie come rifiuto e le cede come sottoprodotto a un cementificio. Nel report interno il totale dei rifiuti cala molto, ma i flussi fisici in uscita dal sito restano quasi gli stessi. Quale lettura è corretta?",
+        "opzioni": [
+          "Il calo dei rifiuti va interpretato con cautela perché cambia la qualifica giuridica, non per forza il flusso fisico",
+          "Il cambiamento dimostra che il sito è salito al livello della prevenzione nella gerarchia dei rifiuti",
+          "Da quel momento l'uscita di quei materiali non incide più su costi e rischi operativi",
+          "La prestazione ambientale dei materiali è migliorata nello stesso momento in cui è calato il totale dei rifiuti"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m05"
+      },
+      {
+        "q": "Una società presenta al consiglio un inventario climatico con i totali di ambito uno, due e tre, ma non indica quali società del gruppo sono incluse né il criterio usato per scegliere il perimetro. Qual è il problema principale di questa omissione?",
+        "opzioni": [
+          "Le emissioni dirette devono essere spostate nell'ambito tre",
+          "Il totale perde confrontabilità perché non sai di chi stai contando le emissioni",
+          "Il dato dell'ambito due diventa automaticamente calcolato con il metodo market based",
+          "L obiettivo climatico di breve termine non può più essere espresso"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m05"
+      },
+      {
+        "q": "Una fonderia scopre che la quota maggiore della sua impronta climatica arriva dai beni acquistati, in particolare dalla carica metallica. Deve decidere dove mettere la prima leva di riduzione. Quale scelta è più coerente con il modulo?",
+        "opzioni": [
+          "Aspettare dati perfetti su ogni categoria dell'ambito tre prima di intervenire",
+          "Usare crediti esterni per compensare fin da subito la parte più grande dell'inventario",
+          "Rivedere gli acquisti aumentando la quota di rottame e coinvolgendo i fornitori",
+          "Limitare il piano ai consumi energetici del sito perché sono sotto controllo diretto"
+        ],
+        "corretta": 2,
+        "tipo": "applicazione",
+        "modulo": "m05"
+      },
+      {
+        "q": "Un'impresa individua un rischio serio presso un fornitore strategico che ha molto più potere commerciale e non risponde alle richieste. Qual è la scelta più coerente con il modulo?",
+        "opzioni": [
+          "Limitarsi a conservare le richieste inviate come prova sufficiente",
+          "Dichiararsi senza responsabilità perché il fornitore è autonomo",
+          "Interrompere subito il rapporto senza altri passaggi",
+          "Usare le leve disponibili e cercarne di nuove anche con altri soggetti rilevanti"
+        ],
+        "corretta": 3,
+        "tipo": "applicazione",
+        "modulo": "m06"
+      },
+      {
+        "q": "Una manifattura vuole migliorare l'equità di genere. La direzione propone come unico obiettivo aumentare la quota femminile totale assumendo soprattutto negli uffici, dove è più semplice inserire nuove persone. Qual è il limite principale di questa scelta?",
+        "opzioni": [
+          "Può far crescere il numero complessivo senza correggere la segregazione nei ruoli dove il gruppo è quasi assente",
+          "Impedisce di confrontare uomini e donne nella stessa mansione",
+          "Obbliga l'impresa ad avviare subito una certificazione esterna",
+          "Rende inutilizzabili i dati del personale già presenti in azienda"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m06"
+      },
+      {
+        "q": "In uno stabilimento il premio dei capi reparto dipende dall'azzeramento degli infortuni registrati. Quale effetto distorsivo è più coerente con il modulo?",
+        "opzioni": [
+          "Maggiore confrontabilità tra reparti",
+          "Spinta a ridurre o riclassificare le registrazioni invece di risolvere le cause",
+          "Eliminazione del bisogno di indicatori anticipatori",
+          "Aumento automatico delle segnalazioni dei quasi infortuni"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m06"
+      },
+      {
+        "q": "Un'impresa vuole acquistare imballaggi con una quota minima di materia seconda. Vuole evitare che il requisito venga aggirato con uno sconto economico. Dove conviene inserirlo?",
+        "opzioni": [
+          "In un questionario generale inviato a tutti i fornitori",
+          "In una presentazione commerciale del buyer",
+          "Nella specifica tecnica della fornitura",
+          "Tra i criteri premianti con un punteggio limitato"
+        ],
+        "corretta": 2,
+        "tipo": "applicazione",
+        "modulo": "m07"
+      },
+      {
+        "q": "Un cliente chiede dati utilizzabili sul profilo ambientale di uno specifico componente che acquista. L'impresa possiede già certificazioni di sistema. Quale scelta è più coerente?",
+        "opzioni": [
+          "Inviare solo il certificato del sistema qualità perché prova che l'organizzazione è affidabile",
+          "Rispondere che le certificazioni di sistema coprono automaticamente ogni prodotto",
+          "Sostituire i dati richiesti con il codice etico aziendale",
+          "Cercare una certificazione o dichiarazione di prodotto che fornisca dati sul componente"
+        ],
+        "corretta": 3,
+        "tipo": "applicazione",
+        "modulo": "m07"
+      },
+      {
+        "q": "Dopo una verifica presso un fornitore, il fornitore invia la nuova procedura e le prove della formazione. Il buyer vuole capire se l'azione correttiva funziona davvero. Che cosa deve fare?",
+        "opzioni": [
+          "Verificare dopo un periodo che nel lavoro ordinario il nuovo controllo venga applicato e impedisca il ripetersi del problema",
+          "Chiudere subito il rilievo perché la documentazione è completa",
+          "Chiedere solo una dichiarazione firmata del responsabile del fornitore",
+          "Trasformare automaticamente il rilievo in osservazione"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m07"
+      },
+      {
+        "q": "Un'azienda ha calcolato le emissioni residue del trasporto di un prodotto e ha acquistato crediti di compensazione. Vuole aggiornare la scheda prodotto. Quale testo è il più difendibile?",
+        "opzioni": [
+          "Questo prodotto è a emissioni zero",
+          "Nel 2024 abbiamo acquistato crediti di compensazione per le emissioni residue del trasporto del prodotto",
+          "Questo prodotto è a impatto climatico neutro grazie alla compensazione",
+          "Questo prodotto non ha effetti sul clima"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m08"
+      },
+      {
+        "q": "Dopo una formazione, in stabilimento le segnalazioni di quasi incidente passano da zero a quarantasette in un anno. La direzione chiede se la situazione sia peggiorata. Qual è la lettura più corretta?",
+        "opzioni": [
+          "Sì, perché la formazione crea allarmismo",
+          "Sì, perché più segnalazioni significano automaticamente più pericoli reali",
+          "No, può indicare che le persone segnalano di più e ritengono utile farlo",
+          "No, perché i quasi incidenti non hanno valore come indicatore"
+        ],
+        "corretta": 2,
+        "tipo": "applicazione",
+        "modulo": "m08"
+      },
+      {
+        "q": "Durante una crisi locale sullo stabilimento il direttore commerciale vuole rispondere ai clienti e il responsabile di stabilimento vuole parlare con la stampa locale con parole proprie. Quale scelta è più coerente con il metodo del corso?",
+        "opzioni": [
+          "Lasciare che ogni funzione risponda direttamente al proprio interlocutore per essere più rapidi",
+          "Aspettare il quadro completo prima di far parlare chiunque",
+          "Far uscire due messaggi diversi così ogni pubblico riceve il tono più adatto",
+          "Nominare un solo portavoce e usare gli stessi fatti verificati, adattando la forma al destinatario"
+        ],
+        "corretta": 3,
+        "tipo": "applicazione",
+        "modulo": "m08"
+      },
+      {
+        "q": "Un'impresa adotta un modello 231 standard, nomina un organismo monocratico e poi non aggiorna piu nulla. Dopo un reato commesso da un dirigente vuole sostenere che il solo documento la protegge. Che cosa e piu probabile?",
+        "opzioni": [
+          "Sara difficile dimostrare l'effettiva attuazione del presidio prima del fatto",
+          "La presenza del modello basta se e stato approvato dal consiglio",
+          "La protezione dipende solo dall'esistenza del canale di segnalazione",
+          "La nomina dell'organismo rende irrilevante l'aderenza ai processi reali"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m09"
+      },
+      {
+        "q": "Una banca propone un finanziamento legato alla sostenibilita e chiede di scegliere un indicatore contrattuale. Quale scelta e piu prudente per l'impresa?",
+        "opzioni": [
+          "L'andamento del prezzo dell'energia sul mercato",
+          "Il consumo energetico per unita di prodotto gia misurato ogni mese e legato a interventi deliberati",
+          "La reputazione ambientale percepita dai clienti a fine anno",
+          "Le emissioni medie dei fornitori principali raccolte con questionari"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m09"
+      },
+      {
+        "q": "Una impresa con un solo sito, pochi responsabili del dato e un perimetro stabile vuole comprare una piattaforma ESG perche la demo mostra cruscotti molto efficaci. Qual e la decisione piu solida?",
+        "opzioni": [
+          "Introdurre da subito inserimenti mensili manuali per tutte le funzioni cosi il sistema sara piu completo",
+          "Comprare la piattaforma subito perche i dati ESG nascono soprattutto al suo interno",
+          "Verificare prima se il foglio di calcolo regge ancora il processo e valutare la piattaforma sulla tracciabilita dei dati",
+          "Scegliere la piattaforma con i grafici piu chiari per ridurre il bisogno di controlli"
+        ],
+        "corretta": 2,
+        "tipo": "applicazione",
+        "modulo": "m09"
+      },
+      {
+        "q": "Un inventario di emissioni di ambito uno e due è già avviato da sei settimane. Il destinatario chiede di aggiungere anche la catena dei fornitori senza spostare la data finale. Qual è la risposta professionale più corretta.",
+        "opzioni": [
+          "Stimare in modo rapido la parte mancante e inserirla senza segnalarlo",
+          "Accettare subito e provare a inserire tutto nel lavoro già avviato",
+          "Rifiutare senza proporre alternative perché la richiesta è fuori tema",
+          "Proporre una variante con nuovo perimetro, tempi e dati necessari, lasciando invariata la consegna iniziale se non viene approvata"
+        ],
+        "corretta": 3,
+        "tipo": "applicazione",
+        "modulo": "m10"
+      },
+      {
+        "q": "Una piccola impresa metalmeccanica vuole pubblicare il suo primo documento volontario con risorse limitate. Vuole evitare un testo pieno di frasi generiche ma poco credibile. Quale scelta iniziale aumenta di più la solidità del lavoro.",
+        "opzioni": [
+          "Adottare uno standard esistente e dichiararlo fin dall'inizio",
+          "Usare molte immagini per rendere il documento più leggibile",
+          "Promettere un obiettivo lontano anche se le leve non sono ancora chiare",
+          "Scrivere prima i messaggi reputazionali e cercare i dati dopo"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "modulo": "m10"
+      },
+      {
+        "q": "Un importatore teme che il meccanismo del carbonio alle frontiere lo riguardi e pensa di avviare subito un progetto complesso. Qual è il primo passo proporzionato indicato dal modulo.",
+        "opzioni": [
+          "Chiedere subito a tutti i fornitori esteri dati dettagliati sulle emissioni",
+          "Verificare se le merci importate nell'ultimo esercizio rientrano davvero nell'ambito applicativo",
+          "Confrontare solo i prezzi di acquisto e ignorare gli aspetti documentali",
+          "Preparare un bilancio di sostenibilità completo per tutta l'azienda"
+        ],
+        "corretta": 1,
+        "tipo": "applicazione",
+        "modulo": "m10"
+      }
+    ]
   }
 }
