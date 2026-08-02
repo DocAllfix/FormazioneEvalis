@@ -16,7 +16,10 @@ CORSI = ["fadesg02", "fadeen02"]
 ATTESE = 540
 TOTALE_SHARD = 8
 GIRO = 300
-STALLO_MIN = 45
+# MuseTalk elabora l'INTERO lotto del worker in una sola invocazione e il caricamento su R2
+# avviene solo alla fine: il conteggio resta piatto per ~2,5 h e poi salta di colpo.
+# Sotto le 3 ore un conteggio fermo NON e' un guasto.
+STALLO_MIN = 190
 BLACKLIST = {33069, 34031}
 
 env = dict(os.environ)
