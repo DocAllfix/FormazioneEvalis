@@ -4,6 +4,14 @@ import json, glob, sys, re
 sys.stdout.reconfigure(encoding="utf-8")
 
 CORSO = sys.argv[1] if len(sys.argv) > 1 else "fadesg02"
+# Etichetta mostrata nell'intestazione delle slide di apertura. ERA SCRITTA A MANO e, riusando
+# lo script sul secondo corso, ha marchiato 11 slide Energy come "ESG Manager" (02/08/2026).
+ETICHETTA = {
+    "fadesg02": "ESG Manager · UNI/PdR 109.1",
+    "fadeen02": "Energy Manager · UNI CEI 11339",
+}
+if CORSO not in ETICHETTA:
+    raise SystemExit(f"Etichetta di corso mancante per {CORSO}: aggiungerla a ETICHETTA prima di convertire.")
 TITOLI = {}  # mNN -> titolo modulo, dallo skeleton
 for r in open(f"produzione/{CORSO}/struttura.md", encoding="utf-8"):
     m = re.match(r"\|\s*M(\d+)\s*\|([^|]+)\|", r)
@@ -34,7 +42,7 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
         lead = (x.get("lead") or x.get("intro") or "").strip()
         p = [hd(v) for v in voci(x, "punti", "passi", "cards", "voci")]
         if l == "apertura":
-            base |= {"corsoLabel": "ESG Manager · UNI/PdR 109.1", "eyebrow": x.get("kicker", ""),
+            base |= {"corsoLabel": ETICHETTA[CORSO], "eyebrow": x.get("kicker", ""),
                      "sottotitolo": lead, "agenda": [v["h"] or v["d"] for v in p][:5] or
                      [s.get("titolo","") for s in dati[1:6]]}
         elif l == "chiusura":

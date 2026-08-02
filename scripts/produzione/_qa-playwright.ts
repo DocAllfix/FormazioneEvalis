@@ -30,6 +30,8 @@ const COURSES: Record<string, string> = {
   agg14001: "c7cd558a-5e53-471b-8cf1-aa81520b6d00",
   fadai01: "22649068-a9cc-4d05-8494-5e181a803b3e",
   fadai02: "ea0b7664-bfe8-4b90-99b7-863c7c627b4b",
+  fadesg02: "b3568ab6-b6da-4024-bd50-58618b45720b",
+  fadeen02: "7f7ea6ce-328b-45c8-a962-81c5c57dd05c",
 };
 
 async function slidesOf(courseId: string) {

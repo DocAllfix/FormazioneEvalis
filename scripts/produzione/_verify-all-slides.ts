@@ -14,6 +14,22 @@ const rows = await db.select({ id: slide.id, title: slide.title, blocks: slide.b
 const browser = await chromium.launch();
 const page = await (await browser.newContext({ viewport: { width: 1800, height: 2400 } })).newPage();
 await page.setContent(`<!doctype html><link href="${FONTS}" rel=stylesheet><style>body{margin:0}#h{width:${TOTAL_W}px}#h>section{margin-left:380px;width:1280px!important;box-sizing:border-box!important;overflow:hidden}</style><body><div id="h"></div></body>`, { waitUntil: "networkidle" });
+// I font DEVONO essere realmente applicati prima di misurare: `document.fonts.ready` da solo
+// mente (a documento vuoto nessuna faccia e' richiesta, quindi risolve subito) e si finisce per
+// misurare col carattere di RIPIEGO, che e' piu' largo e gonfia l'altezza. Verificato il
+// 03/08/2026: stessa slide 758px col ripiego, 732px coi font veri. Il player usa quelli veri.
+await page.evaluate(async () => {
+  await Promise.all([
+    document.fonts.load('700 48px "Space Grotesk"'),
+    document.fonts.load('600 32px "Space Grotesk"'),
+    document.fonts.load('400 18px "IBM Plex Sans"'),
+    document.fonts.load('600 18px "IBM Plex Sans"'),
+    document.fonts.load('700 18px "IBM Plex Sans"'),
+    document.fonts.load('400 13px "IBM Plex Mono"'),
+    document.fonts.load('500 13px "IBM Plex Mono"'),
+  ]);
+  await document.fonts.ready;
+});
 await page.evaluate(() => document.fonts.ready);
 await page.waitForTimeout(300);
 
