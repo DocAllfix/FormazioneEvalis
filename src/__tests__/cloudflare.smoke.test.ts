@@ -5,7 +5,9 @@
 import { describe, it, expect } from "vitest";
 import { uploadClipFromUrl, getSignedClipUrl, deleteClip, isStreamConfigured } from "@/lib/cloudflare/stream";
 
-const SAMPLE = "https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4";
+// campione da 10 secondi: quello di download.blender.org e' sparito (404, verificato 02/08/2026)
+// e faceva fallire lo smoke; questo pesa pochi secondi di quota Stream invece di 10 minuti.
+const SAMPLE = "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4";
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 async function videoState(uid: string): Promise<string | undefined> {
