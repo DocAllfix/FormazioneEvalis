@@ -121,7 +121,16 @@ while True:
         log(f"ESG {fatte['fadesg02']}/540 · ENERGY {fatte['fadeen02']}/540 · {pct:.1f}% · "
             f"pod vivi {vivi}/{len(mappa)}" + (f" · ATTENZIONE fermo da {fermo:.0f} min" if fermo > STALLO_MIN else ""))
         if tot >= ATTESE * len(CORSI):
-            log("RENDER COMPLETO: 1080/1080 clip su R2"); break
+            log("RENDER COMPLETO: 1080/1080 clip su R2")
+            # si spengono i pod SUBITO: ogni minuto in piu' e' denaro bruciato a vuoto
+            for shard, iid in mappa.items():
+                r = subprocess.run(["vastai", "destroy", "instance", str(iid)],
+                                   input="y" + chr(10), capture_output=True, text=True, timeout=180)
+                log(f"shard {shard}: istanza {iid} distrutta (rc={r.returncode})")
+            rimaste = istanze()
+            log(f"istanze ancora attive dopo la pulizia: "
+                f"{list(rimaste) if rimaste else 'verifica non riuscita — CONTROLLARE A MANO'}")
+            break
     except Exception as e:
         log(f"giro fallito ({str(e)[:120]}) — si riprova")
     time.sleep(GIRO)
