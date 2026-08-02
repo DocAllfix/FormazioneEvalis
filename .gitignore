@@ -76,3 +76,7 @@ produzione/_staging/
 !.env.produzione.example
 # spellcheck: dizionario Hunspell (scaricabile, non versionare i .dic/.aff pesanti)
 scripts/produzione/dict/
+
+# bytecode Python degli script di produzione
+__pycache__/
+*.pyc

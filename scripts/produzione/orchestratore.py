@@ -117,9 +117,10 @@ def init_copioni(corso: str) -> None:
     m_leg = re.search(r"([\d.]+)\s*(?:min(?:uti)?)\s+legali", md, re.I)
     if m_leg:
         legali = int(m_leg.group(1).replace(".", ""))  # "1.440" = millesep, non decimale
+    m_tit = re.search(r"^#\s+(.+)$", md, re.M)  # titolo dall'header dello skeleton (no hardcode ISO)
     base = {
         "corso": corso,
-        "titolo": f"Auditor ISO {corso}",
+        "titolo": m_tit.group(1).strip() if m_tit else corso,
         "budget": {
             "paroleAlSecondoProvvisorio": PAROLE_AL_SECONDO,
             "minutiLegali": legali,
@@ -157,7 +158,9 @@ def salva_stato(corso: str, mod: str, st: dict) -> None:
 
 # ---------------------------------------------------------------- pacchetto
 def genera_pacchetto(corso: str, mod: str) -> str:
-    r = subprocess.run(["node", "scripts/produzione/gen-pacchetto.mjs", corso, mod],
+    # corsi a fonte HTML (Claude): _fonte/ presente → usa la variante; ISO → norma-PDF
+    script = "gen-pacchetto-html.mjs" if (PROD / corso / "_fonte").exists() else "gen-pacchetto.mjs"
+    r = subprocess.run(["node", f"scripts/produzione/{script}", corso, mod],
                        cwd=REPO, capture_output=True, text=True, encoding="utf-8")
     if r.returncode != 0:
         raise RuntimeError(f"gen-pacchetto {mod}: {r.stderr.strip() or r.stdout.strip()}")
@@ -277,8 +280,9 @@ class Modello:
         self.effort = env.get("AZURE_OPENAI_REASONING_EFFORT", "")
         self.usage = usage
 
+    # 64k: i reasoning token contano nel limite — 32k troncava blocchi lunghi (14001 m11/m12)
     async def chiama(self, messaggi: list[dict], response_format: dict,
-                     max_tokens: int = 32000) -> dict:
+                     max_tokens: int = 64000) -> dict:
         kw = dict(model=self.deployment, messages=messaggi,
                   response_format=response_format, max_completion_tokens=max_tokens)
         if self.effort:
@@ -319,9 +323,10 @@ async def genera_blocchi(mdl: Modello, corso: str, mod: str, pacchetto: str,
             f"Scrivi ORA il blocco {blocco_n} di {n_blocchi}: le slide da {ids[0]} a {ids[-1]} "
             f"(tutte, nessuna esclusa), seguendo lo skeleton e riprendendo il filo dalle slide "
             f"già scritte, senza ripeterne i contenuti.\n\n"
-            f"LUNGHEZZA (taratura 2026-07-09: i primi draft uscivano CORTI del sei per cento e "
-            f"il gate E6 li respinge): scrivi PIENO — ogni slide tra 630 e 660 parole; una slide "
-            f"sotto 600 è un errore. Riempi con sostanza (esempi sviluppati, casi concreti, "
+            f"LUNGHEZZA (ritaratura 2026-07-25: i draft dei corsi IA uscivano CORTI del cinque-otto "
+            f"per cento e il gate E6 li respinge, portando il corso sotto il monte-ore legale): "
+            f"scrivi PIENO — ogni slide tra 660 e 690 parole; una slide sotto 640 è un errore. "
+            f"Punta al pieno. Riempi con sostanza (esempi sviluppati, casi concreti, "
             f"passaggi spiegati fino in fondo), mai con giri di parole.\n\n"
             f"SLIDE GIÀ SCRITTE DEI BLOCCHI PRECEDENTI (per continuità e anti-ripetizione):\n{precedenti}"
         )
@@ -361,9 +366,9 @@ async def correggi(mdl: Modello, pacchetto: str, bozza: dict, report: str, origi
           f"{NOTA_CANALE}\n\nIl tuo modulo ha violazioni segnalate da {origine}. Correggi SOLO "
           f"le slide e le domande coinvolte, mantenendo le regole del pacchetto. "
           f"Come correggere, per tipo di errore:\n"
-          f"- E6 modulo CORTO: scegli le quattro o cinque slide più corte e ESPANDILE con "
+          f"- E6 modulo CORTO: scegli le SEI o SETTE slide più corte e ESPANDILE con "
           f"contenuto sostanziale nuovo (un esempio concreto sviluppato, un passaggio spiegato "
-          f"fino in fondo) portando ciascuna verso le seicentocinquanta parole — mai riempitivo, "
+          f"fino in fondo) portando ciascuna verso le seicentosettanta parole — mai riempitivo, "
           f"mai ripetere cose già dette altrove nel modulo.\n"
           f"- E5 o E8 (verbatim/fotocopia): riscrivi COMPLETAMENTE la frase segnalata con "
           f"struttura e parole diverse, mantenendo il significato.\n"

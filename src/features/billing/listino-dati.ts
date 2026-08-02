@@ -30,6 +30,8 @@ const S = {
   agg14001: "aggiornamento-lead-auditor-iso-14001-2026",
   fadai01: "corso-claude-ai-operativo-fad-ai-01-base-16h",
   fadai02: "corso-claude-ai-avanzato-fad-ai-02-avanzato-24h",
+  fadesg02: "esg-manager-uni-pdr-109-1",
+  fadeen02: "energy-manager-esperto-in-gestione-dell-energia",
 } as const;
 
 export const CORSI: CorsoListino[] = [
@@ -46,6 +48,9 @@ export const CORSI: CorsoListino[] = [
   { slug: S.agg14001, attivoCents: 17900, listinoCents: 17900 }, // aggiornamento 8h: prezzo unico
   { slug: S.fadai01, attivoCents: 39000, listinoCents: 49000 },
   { slug: S.fadai02, attivoCents: 59000, listinoCents: 79000 },
+  // percorsi manageriali 40h (approvati 02/08): stesso prezzo per entrambi
+  { slug: S.fadesg02, attivoCents: 35000, listinoCents: 45000 },
+  { slug: S.fadeen02, attivoCents: 35000, listinoCents: 45000 },
 ];
 
 const LEAD_AUDITOR = [S.s9001, S.s14001, S.s45001, S.s22000, S.s50001, S.s39001, S.s37001, S.s27001, S.s42001];

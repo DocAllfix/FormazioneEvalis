@@ -23,6 +23,7 @@
 // AVVISI (non bloccanti):
 //   W1  frase oltre 35 parole (prosodia faticosa; la ricetta la spezza comunque a 213 char)
 //   W2  frase lunga (>15 parole) senza virgole (respiro assente)
+//   W7  gerundio/imperativo + pronome enclitico (-ndoti, chiediti…): trappola TTS marcello
 //
 // Uso: node scripts/produzione/lint-copioni.mjs <corso> [--modulo mNN]
 
@@ -217,6 +218,14 @@ for (const s of copioni.slides) {
   // W4 — "disciplina" come verbo: trappola di prosodia TTS (FABBRICA-MODULO §2.7).
   for (const m of s.testo.matchAll(/\bdisciplina (?:l'|il |la |le |gli |i |lo |un |una )/gi))
     warn(s.id, "W4", `"disciplina" probabilmente usato come verbo (trappola prosodia): "${m[0]}…" — preferire stabilisce/definisce/richiede`);
+
+  // W7 — gerundio + pronome enclitico ("chiedendoti", "impegnandosi", "applicandola"):
+  // il TTS marcello sbaglia la sillabazione (verdetto ISO 2026-07). Sciogliere:
+  // "chiedendoti" -> "mentre ti chiedi", "chiediti" -> "chiedi a te stesso".
+  for (const m of s.testo.matchAll(/\b\w*ndo(?:ti|si|ci|vi|gli|mi|lo|la|li|le|ne)\b/gi))
+    warn(s.id, "W7", `gerundio+enclitico "${m[0]}" (trappola prosodia TTS) — sciogliere in forma esplicita`);
+  for (const m of s.testo.matchAll(/\b(?:chiediti|domandati|impegnati|assicurati|ricordati|fermati|concentrati)\b/gi))
+    warn(s.id, "W7", `imperativo+enclitico "${m[0]}" — preferire forma sciolta (es. "chiedi a te stesso")`);
 
   // W1/W2 — stile frasi
   for (const fr of t.split(/(?<=[.!?])\s+/)) {

@@ -18,6 +18,7 @@ const areas = [
   { id: "all", label: "Tutte" },
   { id: "auditor", label: "Auditor ISO" },
   { id: "ai", label: "Intelligenza Artificiale" },
+  { id: "manageriale", label: "Energia e sostenibilità" },
   { id: "mestieri", label: "Mestieri e professioni" },
   { id: "bancario", label: "Settore bancario" },
 ];
@@ -118,8 +119,8 @@ function badgeFor(course) {
   return m ? `ISO ${m[0]}` : "Corso";
 }
 
-/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, aiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
-export default function Catalogo({ auditorCourses = [], aiCourses = [] }) {
+/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, aiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, managerialiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
+export default function Catalogo({ auditorCourses = [], aiCourses = [], managerialiCourses = [] }) {
   const [activeArea, setActiveArea] = useState("all");
   const [query, setQuery] = useState("");
 
@@ -144,8 +145,18 @@ export default function Catalogo({ auditorCourses = [], aiCourses = [] }) {
       imageUrl: c.imageUrl,
       hours: c.durationHours,
     }));
-    return [...dbCards, ...aiCards, ...staticCerts];
-  }, [auditorCourses, aiCourses]);
+    const managerialiCards = managerialiCourses.map((c) => ({
+      area: "manageriale",
+      areaLabel: "Energia e sostenibilità",
+      name: c.title.split("—")[0].trim(),
+      badge: "Manageriale",
+      line: c.description,
+      slug: c.slug,
+      imageUrl: c.imageUrl,
+      hours: c.durationHours,
+    }));
+    return [...dbCards, ...aiCards, ...managerialiCards, ...staticCerts];
+  }, [auditorCourses, aiCourses, managerialiCourses]);
 
   const filtered = useMemo(() => {
     return allCerts.filter((cert) => {

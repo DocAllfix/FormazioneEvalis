@@ -30,6 +30,14 @@ const areas = [
     ],
   },
   {
+    id: "manageriale",
+    label: "Energia e sostenibilità",
+    cards: [
+      { name: "ESG Manager", badge: "UNI/PdR 109.1", line: "Presidiare la sostenibilità in azienda: rischi ambientali, sociali e di governance, doppia rilevanza, rendicontazione e catena di fornitura" },
+      { name: "Energy Manager", badge: "EGE", line: "Governare l'energia in azienda: misura e indicatori, diagnosi energetica, usi finali, rinnovabili e valutazione economica degli interventi" },
+    ],
+  },
+  {
     id: "mestieri",
     label: "Mestieri e professioni",
     cards: [
@@ -109,8 +117,8 @@ function badgeFor(course) {
   return m ? `ISO ${m[0]}` : "Corso";
 }
 
-/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, aiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
-export default function CatalogSection({ auditorCourses = [], aiCourses = [] }) {
+/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, aiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, managerialiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
+export default function CatalogSection({ auditorCourses = [], aiCourses = [], managerialiCourses = [] }) {
   const [activeArea, setActiveArea] = useState("auditor");
   const current = areas.find((a) => a.id === activeArea);
   // aree auditor/ai: corsi reali dal DB quando disponibili (fallback alla lista statica)
@@ -126,8 +134,16 @@ export default function CatalogSection({ auditorCourses = [], aiCourses = [] }) 
     line: c.description,
     slug: c.slug,
   }));
+  const dbManagerialiCards = managerialiCourses.map((c) => ({
+    name: c.title.split("—")[0].trim(),
+    badge: c.slug.startsWith("esg") ? "UNI/PdR 109.1" : "EGE",
+    line: c.description,
+    slug: c.slug,
+  }));
   const cards =
-    activeArea === "auditor" && dbAuditorCards.length > 0
+    activeArea === "manageriale" && dbManagerialiCards.length > 0
+      ? dbManagerialiCards
+      : activeArea === "auditor" && dbAuditorCards.length > 0
       ? dbAuditorCards
       : activeArea === "ai" && dbAiCards.length > 0
         ? dbAiCards

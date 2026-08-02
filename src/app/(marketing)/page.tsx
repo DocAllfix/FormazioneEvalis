@@ -1,5 +1,5 @@
 import Home from "@/components/pages/Home";
-import { listAuditorVetrina, listAiVetrina } from "@/features/catalog/vetrina";
+import { listAuditorVetrina, listAiVetrina, listManagerialiVetrina } from "@/features/catalog/vetrina";
 
 export const metadata = {
   title: "Evalis — Certifica le tue competenze professionali",
@@ -8,6 +8,10 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const [auditorCourses, aiCourses] = await Promise.all([listAuditorVetrina(), listAiVetrina()]);
-  return <Home auditorCourses={auditorCourses} aiCourses={aiCourses} />;
+  const [auditorCourses, aiCourses, managerialiCourses] = await Promise.all([
+    listAuditorVetrina(),
+    listAiVetrina(),
+    listManagerialiVetrina(),
+  ]);
+  return <Home auditorCourses={auditorCourses} aiCourses={aiCourses} managerialiCourses={managerialiCourses} />;
 }

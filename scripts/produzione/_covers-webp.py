@@ -17,6 +17,8 @@ MAP = {
     "50001cover.png": "50001",
     "fadai01cover.png": "fadai01",  # Claude AI Operativo (tema ambra)
     "fadai02cover.png": "fadai02",  # Claude AI Avanzato (tema navy)
+    "esgmanagercover.png": "fadesg02",  # ESG Manager (petrolio, come le sue slide navy)
+    "energymanagercover.png": "fadeen02",  # Energy Manager (arancio, come le sue slide ambra)
 }
 
 os.makedirs("public/covers", exist_ok=True)

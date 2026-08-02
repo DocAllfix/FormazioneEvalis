@@ -1,0 +1,11 @@
+import "dotenv/config";
+import { eq, asc } from "drizzle-orm";
+import { db } from "@/lib/db";
+import { course } from "@/lib/db/schema";
+const pub = await db.select({ t: course.title }).from(course).where(eq(course.status, "published")).orderBy(asc(course.title));
+const arch = await db.select({ t: course.title }).from(course).where(eq(course.status, "archived")).orderBy(asc(course.title));
+console.log(`PUBBLICATI (reali): ${pub.length}`);
+pub.forEach((c,i)=>console.log(`  ${i+1}. ${c.t}`));
+console.log(`\nARCHIVIATI (demo/test): ${arch.length}`);
+arch.forEach(c=>console.log(`  - ${c.t}`));
+process.exit(0);
