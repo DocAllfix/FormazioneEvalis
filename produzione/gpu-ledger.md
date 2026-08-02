@@ -45,10 +45,14 @@
 
 **PILOTA M1: 56,3 min di corso in 32,2 min GPU (1,75× medio, ~2,0× a regime) · 257 blocchi QA · 1,2% retry · 0,4% FLAGGED · proiezione: corso 19011 ≈ $3,50, catalogo ≈ $45-50.**
 
+| 2026-07-25 | 45836080 | PILOTA avatar corsi CLAUDE (fadai01 ambra + fadai02 navy): 4 clip (2 aperture + 2 più lunghe), fase parallela 2 proc/1 GPU per misurare throughput | RTX 4090 · Norvegia (4,3 GHz, PCIe 23,6) | $0,3830 | ~30 min | ~$0,19 | ✅ 4/4 clip, durate == audio, prep landmark ~13 fr/s. **PARALLELO 2 proc = 1,85× realtime aggregato** (prep base one-shot 0,37×). Proiezione catalogo 546 clip/2549 min audio ≈ **23 h-GPU su 1 pod** → flotta N pod sharded. Distrutto dopo il download. Lezione: `vastai destroy` chiede conferma [y/N] (pipe `echo y`); MAI `--explain` (stampa l'API key). |
+
 | 2026-07-03 | 43686062 | MATRICE PRONUNCIA auditor (3 grafie × 2 riferimenti × 3 take; fonemi CMUDict + ref v2 con frase densa) | RTX 4090 · Olanda | $0,3578 | ~40 min | ~$0,24 | ✅ 18/18 clip; 2 rilanci per bug MIEI nel bootstrap snellito (unzip per rclone, build-essential/CC=gcc per triton — lezioni GIÀ note, ricopiarle sempre) — distrutto. VERDETTO ASCOLTO: ref v2 risolve l'accento (àuditor giusto con grafia attuale e AUditor); fonemi CMUDict SCARTATI (legge le cifre: "auditzeror"); il difetto "il auditor" era un refuso del MIO template (articolo sbagliato davanti a vocale) |
 | 2026-07-03 | 43698052 | PRONUNCIA round 2: copione vero 2 min (pipeline produzione, ref v2) × 2 grafie (àuditor / AUditor) | RTX 4090 · Estonia | $0,3704 | ~25 min | ~$0,15 | ✅ 2 wav (101,8s in 53s e 103,2s in 40s ≈ 2,2× medio); bootstrap filato al primo colpo con lo script corretto — distrutto. **VERDETTO CLIENTE: AUditor+ref v2 quasi perfetto (1 sbavatura), àuditor+v2 sbaglia spesso → STANDARD CONGELATO (respell AUditor, manifest v2 ufficiale sha 81b5c649…)** |
 | 2026-07-03 | 43699481 | RIGENERAZIONE M1 (13 slide) con lo standard nuovo: ref v2 + AUditor, QA loop integrale | RTX 4090 · Estonia | $0,3704 | ~40 min | ~$0,25 | ✅ **run PERFETTA: 57,0 min audio in 29,2 min GPU (1,95×) · 257 blocchi · 0 retry · 0 FLAGGED · sim_min 0,858** · continuità: volume 2,6%, tono 4,6% — distrutto |
 | 2026-07-03 | 43705399 | Fix E5 anti-verbatim: 6 slide M1 riformulate (10 sequenze verbatim dalla norma trovate dal linter v2) | RTX 4090 · Romania | $0,3496 | ~30 min | ~$0,18 | ✅ 6/6 a ~2×, 0 retry, 0 FLAGGED; audio-map fusa (13 voci) — distrutto |
+
+| 2026-08-01/02 | 46547479 + 46549039/43/44/46/49/50/62 | **NOTTE AVATAR corsi nuovi**: 1080 clip (ESG 540 + Energy 540, 5.020 min di video) su 8×4090 sharded (md5(id)%8), 2 processi per GPU | 8× RTX 4090 · ES/NO/US/CL | $0,3667-$0,4650 (media $0,41) | ~5,5 h | **$17,59** | ✅ 1080/1080, integrità 100% (durate entro 0,5s dall'audio, sha a campione OK). **Ritmo reale 2,24× realtime per pod** (stima 1,85×) → flotta ~18×. Zero pod morti, zero sostituzioni. Flotta spenta in automatico dalla guardia a lavoro finito. |
 
 ## Dati misurati (2026-07-02, riferimento per dimensionare il burst TTS del blitz)
 
@@ -79,3 +83,17 @@ di lanciarne N).
 8. `vastai create` con "success: false" ma istanza esistente = istanza creata FERMA
    (`intended_status: stopped`): controllare intended_status e fare `vastai start`. Al blitz:
    il controllo create→verify→start va nello script di orchestrazione, mai a mano.
+
+9. **Il caricamento su R2 avviene a LOTTI, non per clip**: render-avatar.py invoca MuseTalk una
+   volta per l'intero lotto del worker (~35 clip) e sposta/valida/carica solo quando quella
+   invocazione ritorna. Il conteggio su R2 resta piatto ~2,5 h e poi salta: un contatore fermo
+   sotto le 3 ore NON è un guasto (falso allarme del 02/08). Rovescio della medaglia: un pod che
+   muore a metà lotto perde fino a 2,5 h — per questo serve il ciclo di sicurezza sul pod.
+10. `pod-render.sh` può uscire dichiarando il corso finito quando i suoi processi muoiono a metà
+   (visto sullo shard 0: "ESG-FINITO" dopo 5 min su 68 slide). Senza un ciclo che ripete finché
+   non restano pendenti, il corso resta bucato in silenzio.
+11. Le variabili di shard vanno scritte in `/workspace/r2.env`, non solo esportate nella shell
+   di `onstart`: qualsiasi processo lanciato dopo (ciclo di sicurezza, ripartenze) le rilegge da lì,
+   e senza di esse ogni pod lavorerebbe su TUTTO il corso.
+12. `vastai show instances` può mostrare come "running" un'istanza già distrutta: la verifica
+   post-pulizia va rifatta dopo qualche secondo prima di concludere che qualcosa è rimasto acceso.
