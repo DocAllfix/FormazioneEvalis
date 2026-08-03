@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import EcoVadisBadge from "./EcoVadisBadge";
 
 const footerColumns = [
   {
@@ -66,7 +67,12 @@ export default function SiteFooter() {
           ))}
         </div>
 
-        <div className="mt-12 pt-6 border-t border-[#3D2E1E] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#9C9388]">
+        {/* credenziale, non argomentazione: sta accanto ai dati legali, in sordina */}
+        <div className="mt-10 pt-8 border-t border-[#3D2E1E]">
+          <EcoVadisBadge size="sm" variant="scuro" />
+        </div>
+
+        <div className="mt-8 pt-6 border-t border-[#3D2E1E] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#9C9388]">
           <span>
             Evalis S.R.L. · Via Sandro Botticelli 25, 81031 Aversa (CE) · P.IVA/C.F. 04868330616 · REA CE-361943
           </span>

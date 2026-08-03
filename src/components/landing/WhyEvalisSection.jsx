@@ -2,19 +2,24 @@ import React from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { QrCode, Search, ShieldCheck, ClipboardCheck, BarChart3 } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import EcoVadisBadge from "./EcoVadisBadge";
 
 export default function WhyEvalisSection() {
   return (
     <section className="w-full py-20 md:py-24 bg-white">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
         <ScrollReveal>
-          <div className="max-w-2xl text-left mb-12">
-            <span className="text-[11px] uppercase tracking-[0.16em] text-primary font-medium">
-              Perché Formazione Evalis
-            </span>
-            <h2 className="mt-3.5 font-heading text-4xl md:text-5xl lg:text-[56px] text-near-black leading-[1.1]">
-              Un certificato che vale perché si può verificare
-            </h2>
+          {/* il badge affianca il titolo: e' la prova esterna che sostiene le promesse qui sotto */}
+          <div className="mb-12 flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
+            <div className="max-w-2xl text-left">
+              <span className="text-[11px] uppercase tracking-[0.16em] text-primary font-medium">
+                Perché Formazione Evalis
+              </span>
+              <h2 className="mt-3.5 font-heading text-4xl md:text-5xl lg:text-[56px] text-near-black leading-[1.1]">
+                Un certificato che vale perché si può verificare
+              </h2>
+            </div>
+            <EcoVadisBadge size="md" className="lg:flex-shrink-0 lg:pt-2" />
           </div>
         </ScrollReveal>
 

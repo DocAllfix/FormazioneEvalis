@@ -1,6 +1,7 @@
 import React from "react";
 import { Flag, Database, UserCheck, ShieldCheck } from "lucide-react";
 import ScrollReveal from "@/components/landing/ScrollReveal";
+import EcoVadisBadge from "@/components/landing/EcoVadisBadge";
 
 const badges = [
   { icon: Flag, title: "Data residency UE", text: "I dati sono ospitati in infrastrutture europee." },
@@ -17,8 +18,15 @@ export default function SecuritySection() {
           <span className="text-[11px] uppercase tracking-[0.16em] text-primary font-medium">Sicurezza & conformità</span>
           <h2 className="mt-3.5 font-heading text-4xl md:text-5xl text-near-black leading-[1.1]">Costruito per contesti regolamentati.</h2>
         </ScrollReveal>
+        <ScrollReveal delay={0.05}>
+          {/* qui il badge conta davvero: e' quello che un ufficio acquisti cerca nei
+              questionari fornitori, accanto alle altre garanzie di conformita' */}
+          <div className="mt-10 bg-white border border-[#E8E0D5] rounded-xl px-6 py-5">
+            <EcoVadisBadge size="lg" />
+          </div>
+        </ScrollReveal>
         <ScrollReveal delay={0.1}>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {badges.map((b) => (
               <div key={b.title} className="bg-white border border-[#E8E0D5] rounded-xl p-5 hover:border-primary hover:-translate-y-[3px] transition-all duration-200">
                 <b.icon className="h-[22px] w-[22px] text-primary" />
