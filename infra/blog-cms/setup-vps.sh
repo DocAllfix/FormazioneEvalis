@@ -57,7 +57,12 @@ systemctl restart fail2ban
 if [ -s /root/.ssh/authorized_keys ]; then
   sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
   sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin prohibit-password/' /etc/ssh/sshd_config
-  systemctl reload ssh
+  # su Ubuntu 24.04 SSH e' avviato dal socket, non come servizio: `reload ssh` fallisce e con
+  # set -e porterebbe via tutto il resto della preparazione
+  systemctl reload ssh 2>/dev/null \
+    || systemctl reload sshd 2>/dev/null \
+    || systemctl restart ssh.socket 2>/dev/null \
+    || echo "[setup] nota: SSH non ricaricato, la modifica vale al prossimo riavvio" >&2
   echo "[setup] SSH: accesso con password disattivato (solo chiave)"
 else
   echo "[setup] ATTENZIONE: nessuna chiave in /root/.ssh/authorized_keys — password lasciata attiva" >&2
