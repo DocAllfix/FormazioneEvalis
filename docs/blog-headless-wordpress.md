@@ -82,6 +82,14 @@ che il redattore salva come URL assoluti.
 | `backup.sh` / `restore-test.sh` | Backup cifrati off-site, e il ripristino provato davvero |
 | `LEGGIMI.md` | La procedura passo per passo |
 
+E gli strumenti di verifica, in `scripts/produzione/`:
+
+| Comando | Cosa prova |
+|---|---|
+| `_verifica-blog.ts --sito … --cms …` | I controlli della sezione 7. Esce 1 se qualcosa e' rosso |
+| `_verifica-consenso.mjs <url>` | Che GA4 non parta senza consenso (sezione 9-bis) |
+| `_scatti-blog.mjs <cartella> [url]` | Scatti desktop e telefono, scorrimento orizzontale, immagini rotte |
+
 ### Il server
 
 **CX23** (2 vCPU, 4 GB, 40 GB NVMe, €5,49 + €0,50 IPv4). CAX11 (ARM) andrebbe ugualmente bene:
@@ -424,9 +432,21 @@ Fa cinque cose:
 | `sanitize.ts` | Lista bianca stretta sull'HTML dell'editor |
 | `seo.ts` | Riscrittura degli URL e canonical forzato |
 | `data.ts` | Formattazione date. **Senza dipendenze**: lo importano anche i componenti client |
-| `fonte.ts` | Raccordo tra pagine e fonte, col ripiego sulla fonte precedente |
+| `fonte.ts` | Raccordo tra le pagine e il CMS: l'unico punto da cambiare se la fonte cambia |
+| `rimossi.ts` | Gli slug eliminati che devono rispondere 410 |
 | `verifica.ts` | I controlli automatici |
 | `tipi.ts` | Le forme dei dati |
+
+Fuori da `features/blog/`, ma parte dello stesso impianto:
+
+| File | Responsabilita' |
+|---|---|
+| `src/proxy.ts` | I 410 sui vecchi URL (una pagina Next puo' rispondere 404, non 410) |
+| `src/app/(marketing)/blog/` | Le rotte: elenco, articolo, pagina autore |
+| `src/components/pages/Blog.jsx`, `BlogPost.jsx`, `AutoreBlog.jsx` | La presentazione |
+| `src/components/blog/SchedaArticolo.jsx` | La scheda usata da elenco e pagine autore |
+| `src/app/api/blog/` | `revalidate`, `preview`, `preview/esci` |
+| `src/app/api/cron/verifica-blog/` | Il giro quotidiano |
 
 ### Variabili d'ambiente — le uniche da cambiare per un altro sito
 
@@ -480,6 +500,8 @@ verificherebbe niente.
 | `articoli` | canonical assente o su altro dominio · riferimento a `cms.` · title o description mancanti · doppio schema `Article` · articolo che dà 404 |
 | `peso-immagini` | un'immagine supera i 400 KB |
 | `autori` | un articolo cita un autore la cui pagina non esiste |
+| `vecchi-url` | un URL rimosso risponde 404 (o 200) invece di 410 |
+| `conflitto-rimossi` | un articolo **pubblicato** ha uno slug nell'elenco dei rimossi, e quindi e' coperto da un 410 |
 | `guardia-conteggio` | gli articoli online sono **meno** dell'ultimo giro |
 
 Girano in tre momenti: dopo ogni pubblicazione (dentro `after()`, così WordPress non aspetta),
@@ -708,6 +730,91 @@ webhook             risponde e rigenera; senza token 404
 
 ---
 
+## 9-quater. Il lavoro di tutti i giorni
+
+Questa parte non serve a chi costruisce: serve a chi **usa** il blog, ed e' la prima cosa che
+l'agente dovra' spiegare al proprio consulente.
+
+### Come si pubblica
+
+1. Si scrive in WordPress come sempre: titolo, contenuto, categoria, immagine in evidenza.
+2. **Anteprima** mostra la bozza **col design del sito vero**, non col tema di WordPress.
+3. **Pubblica** → il sito si aggiorna da solo in decine di secondi.
+
+Cose che il consulente deve sapere, e che non sono ovvie:
+
+- **Il permalink di WordPress non e' l'indirizzo pubblico.** L'articolo vive su
+  `<dominio>/blog/<slug>`, non su `cms.<dominio>/<slug>`. Il mu-plugin corregge i link nella
+  dashboard, ma se copia un URL da qualche altra parte deve ricordarselo.
+- **Rinominare un articolo gia' pubblicato e' sicuro**: il vecchio indirizzo risponde 301 verso
+  il nuovo, in automatico. Ma va fatto con parsimonia comunque.
+- **Ricaricare subito dopo aver pubblicato mostra ancora la versione vecchia** (trappola 11).
+  Non e' un guasto: basta ricaricare di nuovo.
+- **Le immagini vanno preparate prima di caricarle.** Il controllo automatico diventa rosso
+  sopra i **400 KB**, e non e' pignoleria: la copertina di prova era un PNG da 1,5 MB, che dal
+  telefono e' un'attesa vera e un fattore di posizionamento. Formato consigliato: **WebP,
+  1200x675, sotto i 150 KB**. Ridurla dopo, quando gli articoli sono cento, e' un lavoro.
+- **Il campo «Ruolo mostrato sul sito»** sta in fondo al profilo utente: compare sotto il nome
+  nella pagina autore. La biografia e' il campo «Informazioni biografiche» di WordPress.
+
+### Gli utenti
+
+| Ruolo | Chi | Puo' |
+|---|---|---|
+| **Amministratore** | l'utente tecnico | tutto, compresa l'Application Password che legge le bozze |
+| **Editor** | il consulente SEO | scrivere, pubblicare e modificare gli articoli di tutti; **non** installare plugin, cambiare impostazioni o creare utenti |
+
+Crearne uno:
+
+```bash
+wp user create <nome> <email-vera> --role=editor --display_name="..."
+```
+
+> L'email dev'essere quella **vera** della persona: e' l'unico canale per il recupero password.
+> Un indirizzo di comodo funziona finche' nessuno perde la password.
+
+### Verificare che Google stia indicizzando
+
+Search Console e' gia' verificata sul dominio. Nell'ordine, dal piu' immediato al piu' lento:
+
+**1. Il singolo articolo, subito** — *Controllo URL* in alto: si incolla
+`https://<dominio>/blog/<slug>` e si legge la risposta.
+
+| Cosa dice | Significato |
+|---|---|
+| «L'URL e' su Google» | indicizzato |
+| «L'URL non e' su Google» + *Richiedi indicizzazione* | non ancora visto: si chiede, e ci mette da ore a giorni |
+| «Pagina alternativa con tag canonical appropriato» | ⚠️ **allarme**: Google preferisce un altro URL. Se il canonical indicato non e' il nostro dominio, qualcosa nella riscrittura si e' rotto |
+| «Esclusa da tag noindex» | ⚠️ **allarme**: un `noindex` e' finito sul sito pubblico |
+
+Su un articolo indicizzato conviene sempre premere **Testa URL pubblicato → Visualizza pagina
+sottoposta a scansione**: li' si vede l'HTML che Google ha davvero ricevuto. E' il modo per
+accorgersi che il canonical o lo schema sono sbagliati **prima** che se ne vedano gli effetti.
+
+**2. La sitemap** — *Indicizzazione → Sitemap*. Va inviata una volta:
+`https://<dominio>/sitemap.xml`. Dopo, lo stato dice quanti URL sono stati letti. Se il numero
+non cresce quando pubblicate, la sitemap non si sta aggiornando.
+
+**3. Le pagine, dopo qualche giorno** — *Indicizzazione → Pagine*. Le due voci che contano:
+- **«Rilevata, ma non indicizzata»**: Google la conosce e non l'ha voluta. Di solito e'
+  contenuto giudicato debole.
+- **«Pagina duplicata, Google ha scelto un canonical diverso»**: e' il guasto piu' pericoloso
+  di tutto questo impianto. Se compare, si guarda subito quale URL ha scelto.
+
+**4. I vecchi URL rimossi** — dopo il cutover devono sparire. In *Pagine* compaiono sotto
+**«Non trovata (404)»** o **«Pagina rimossa a causa di una richiesta legale/410»**: e' normale
+e voluto, e nel giro di qualche settimana escono dall'elenco. Non vanno «risolti».
+
+**5. Il traffico** — *Prestazioni → Pagine*, filtro `/blog/`. Qui non si guarda prima di
+**quattro-sei settimane**: prima non c'e' abbastanza segnale, e leggere numeri troppo presto
+porta a cambiare cose che non andavano cambiate.
+
+> ⚠️ Il controllo che nessuno pensa a fare: cercare `site:cms.<dominio>` su Google. Deve dare
+> **zero risultati**. Se ne da', il CMS e' finito nell'indice e ogni articolo esiste in due
+> copie — il danno che tutto l'impianto serve a evitare. Vale la pena rifarlo ogni tanto.
+
+---
+
 ## 10. Rifarlo su un altro sito
 
 1. **DNS** — record **A** `cms.<dominio>` → IP della VPS. Niente wildcard.
@@ -754,6 +861,7 @@ Dove trovarle:
 | Token webhook e anteprima | `/opt/blog-cms/.env` sulla VPS, e nelle variabili d'ambiente di Vercel |
 | Passphrase dei backup | `/root/.blog-backup-pass` — **da copiare anche altrove**: persa la passphrase, i backup sono rumore |
 | Accesso alla Storage Box | chiave in `/root/.ssh/id_ed25519`, sotto-account autorizzato |
+| Credenziali del consulente SEO | stesso file, righe `SEO_UTENTE` / `SEO_PASSWORD` |
 | Accesso SSH alla VPS | chiave `claude-desktop` caricata su Hetzner |
 
 Per il secondo sito i segreti si **generano nuovi** (`installa.sh` lo fa da solo). Non riusare
