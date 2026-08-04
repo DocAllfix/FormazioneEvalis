@@ -21,6 +21,29 @@ di lasciare il sito scoperto.**
 
 ## Passi
 
+### 0. Il server, quando sarà disponibile
+
+CAX11 e CX23 sono spesso esauriti. Le finestre di disponibilità durano secondi: trovarne una,
+avvisare qualcuno e aspettare che apra il pannello significa perderla ogni volta. Perciò lo
+script **guarda e prende**:
+
+```bash
+# solo per vedere com'è messa adesso, senza creare nulla
+HCLOUD_TOKEN=... python infra/blog-cms/attendi-e-crea-server.py --tipi cx23,cax11 --secco
+
+# in attesa: quando si apre, crea il server già dietro il firewall e con la chiave SSH dentro
+HCLOUD_TOKEN=... python infra/blog-cms/attendi-e-crea-server.py \
+  --tipi cx23,cax11 --luoghi fsn1,nbg1,hel1 --nome cms-evalis \
+  --chiave-pubblica ~/.ssh/id_ed25519.pub --ip-ssh 79.22.153.23
+```
+
+Chiave SSH e firewall si preparano **prima** di mettersi in attesa: creare il server e
+proteggerlo dopo lascerebbe una finestra con la porta 22 aperta al mondo, ed è esattamente il
+minuto in cui i bot bussano.
+
+Il token Hetzner serve con permessi **Read & Write** (deve creare il server). Non viene mai
+stampato né scritto nei log.
+
 ### 1. DNS (pannello Vercel)
 
 Record **A**: `cms.evalisacademy.it` → IP della VPS.
@@ -93,17 +116,56 @@ npx tsx scripts/produzione/_verifica-blog.ts \
 
 Esce con codice 1 se anche un solo controllo è rosso.
 
-### 7. Backup
+### 7. Backup — cifrati, off-site, e verificati
 
-- Snapshot Hetzner automatici (protegge dal guasto della macchina)
-- Dump del database su storage esterno (protegge da un articolo cancellato per sbaglio — cosa
-  che lo snapshot **non** fa):
+`backup.sh` e `restore-test.sh` sono la stessa coppia di WhistleBlower (`deploy/backup.sh`,
+`deploy/restore-test.sh`), adattata: qui il remoto è una **Storage Box**, che parla SSH
+nativamente e non ha bisogno di rclone.
+
+**Cosa salva:** dump di *tutti* gli schemi MariaDB (il secondo sito è coperto senza toccare
+nulla), `wp-content` di ogni sito — le immagini sono l'unica cosa che non si può riscaricare da
+nessuna parte — e il `.env` con i due token. Tutto GPG simmetrico: il dump contiene gli account
+WordPress e i sali di `wp-config`, e finisce su una macchina che non è la nostra.
 
 ```bash
-# crontab -e
-0 3 * * * cd /opt/blog-cms && docker compose exec -T db \
-  mariadb-dump -u root -p"$DB_ROOT_PASSWORD" --all-databases | gzip > /backup/wp-$(date +\%F).sql.gz
+# passphrase, FUORI dallo stack
+openssl rand -base64 48 > /root/.blog-backup-pass && chmod 600 /root/.blog-backup-pass
+# ⚠️ copiarla anche altrove: persa la passphrase, i backup sono rumore
+
+# accesso alla Storage Box (la chiave della VPS, senza password)
+ssh-keygen -t ed25519 -f /root/.ssh/id_ed25519 -N ''
+cat /root/.ssh/id_ed25519.pub | ssh -p23 uXXXXXX@uXXXXXX.your-storagebox.de \
+  "mkdir -p .ssh && cat >> .ssh/authorized_keys && chmod 700 .ssh && chmod 600 .ssh/authorized_keys"
+
+chmod +x backup.sh restore-test.sh
 ```
+
+```cron
+# crontab -e (root)
+20 3 * * *  cd /opt/blog-cms && BACKUP_PASSPHRASE_FILE=/root/.blog-backup-pass \
+            STORAGE_BOX=uXXXXXX@uXXXXXX.your-storagebox.de \
+            ./backup.sh >> /var/log/blog-backup.log 2>&1
+0  4 * * 1  cd /opt/blog-cms && BACKUP_PASSPHRASE_FILE=/root/.blog-backup-pass \
+            ./restore-test.sh >> /var/log/blog-restore-test.log 2>&1
+```
+
+**Perché il test di ripristino.** Un backup non verificato non è un backup: è un file che *speri*
+si apra. Ogni lunedì `restore-test.sh` decifra davvero, ripristina il dump in un MariaDB
+effimero e conta gli articoli. Controlla anche l'**età** del backup più recente: se supera le 36
+ore vuol dire che il cron notturno è morto — il guasto peggiore, perché non fa rumore.
+
+**Rotazione:** 30 giorni sulla VPS, 90 sulla Storage Box. La copia off-site si fa **senza
+`--delete`**: con `--delete`, una cartella locale svuotata (disco pieno, script rotto, macchina
+compromessa) cancellerebbe anche le copie remote, e il backup morirebbe nel momento esatto in
+cui serve.
+
+**Snapshot Hetzner: non servono.** Proteggono la macchina, ma la macchina è tre file in questo
+repository: si rifà in un quarto d'ora. Quello che non si rifà sono gli articoli e le immagini,
+e di quelli si occupa `backup.sh`. Risparmiati €1,20/mese.
+
+**Limite dichiarato:** se la VPS muore del tutto, non arriva nessuna mail — è morto anche chi
+doveva mandarla. Te ne accorgi dal test settimanale che non arriva più. Se vuoi una vera
+sentinella esterna, si aggiunge un monitor di terze parti: dimmelo e lo metto.
 
 ---
 
