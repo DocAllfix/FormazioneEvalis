@@ -24,6 +24,7 @@ services:
       - caddy-config:/config
     depends_on:
       - wp-evalis
+    networks: [rete-evalis]
 
   db:
     image: mariadb:11
@@ -37,6 +38,9 @@ services:
       - db-data:/var/lib/mysql
       # ogni sito ha il SUO schema: il secondo blog aggiunge un file qui, non tocca il primo
       - ./db-init:/docker-entrypoint-initdb.d:ro
+    # il database sta su TUTTE le reti dei siti: e' l'unico servizio condiviso, e i permessi
+    # per schema fanno il resto
+    networks: [rete-evalis]
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 10s
@@ -70,6 +74,17 @@ services:
       - wp-evalis-data:/var/www/html
       # i nostri innesti: caricati sempre, non disattivabili per sbaglio dalla dashboard
       - ./mu-plugins:/var/www/html/wp-content/mu-plugins:ro
+    networks: [rete-evalis]
+
+# UNA RETE PER SITO. Con una rete sola, un WordPress compromesso vedrebbe l'altro WordPress e
+# potrebbe bussare alla sua porta 80 dall'interno, dove non c'e' ne' Caddy ne' password. Con
+# reti separate quel percorso non esiste proprio: restano raggiungibili solo il database (che
+# gli serve, e dove i permessi sono per schema) e Caddy.
+#
+# Il secondo sito aggiunge `rete-bilancio` qui sotto, e la mette anche su `db` e su `caddy`.
+networks:
+  rete-evalis:
+    driver: bridge
 
 volumes:
   caddy-data:

@@ -119,15 +119,263 @@ Utente e hash arrivano dall'ambiente: nel repository non c'è nulla in chiaro.
 
 ### Due siti sulla stessa macchina
 
-Previsto dal primo giorno, e **non è un problema di posizionamento**: Google indicizza URL, non
-server, e questi due WordPress non finiscono in nessun indice. Per aggiungere il secondo:
+**Il secondo blog va sullo STESSO server.** Non e' un ripiego: e' come e' stato progettato dal
+primo giorno — schemi separati, servizi parametrici, una rete e un blocco Caddy per host.
 
-1. `db-init/01-schemi.sql` → decommentare lo schema **con un utente suo** (non riusare
-   `wpuser`: con un utente solo, un WordPress compromesso riscrive anche il database dell'altro)
-2. `docker-compose.yml` → copiare il servizio `wp-evalis` cambiando nome, `WORDPRESS_DB_NAME` e volume
-3. `Caddyfile` → copiare il blocco host cambiando dominio e `reverse_proxy`
+#### Perche' NON crea problemi di posizionamento — verificato, non assunto
 
-Sul lato Next.js **non c'è nulla da riscrivere**: il modulo è guidato dalle variabili d'ambiente.
+Perche' ci sia un problema serve un meccanismo. Sono stati provati uno per uno il 04/08/2026.
+
+**1. I siti indicizzati non stanno su questo server.**
+
+```
+evalisacademy.it        -> 216.198.79.1     (Vercel)
+www.evalisacademy.it    -> 216.198.79.65    (Vercel)
+cms.evalisacademy.it    -> 178.105.44.157   (questo server)
+```
+
+L'IP condiviso e' solo quello dei CMS, che in nessun indice ci entrano. Il "vicinato cattivo"
+riguarda IP pieni di siti spam: qui ci sono due WordPress chiusi e non indicizzati.
+
+**2. I CMS non sono indicizzabili, su tre strati:** header `X-Robots-Tag: noindex, nofollow,
+noarchive, nosnippet` su ogni risposta, `blog_public = 0`, sitemap di Yoast a 404.
+
+> Il `robots.txt` del CMS **permette** la scansione, ed e' voluto. Se la bloccasse, Google non
+> potrebbe *leggere* il `noindex`, e un URL bloccato da robots.txt puo' comunque comparire nei
+> risultati come link nudo. Permettere la scansione e rispondere `noindex` e' l'unico modo per
+> garantire che sparisca. E' la trappola in cui cadono quasi tutti.
+
+**3. Nessuna richiesta puo' raggiungere il sito sbagliato.** Provato:
+
+| Prova | Risultato |
+|---|---|
+| `https://178.105.44.157/` | nessuna risposta — Caddy non ha certificati per un IP |
+| `http://178.105.44.157/` | 308 verso `https://178.105.44.157/`, che poi non risponde. **Non e' un doppione del blog** |
+| `Host: sito-a-caso.it` su HTTP | 308 verso `https://sito-a-caso.it/` — rimanda a *quel* dominio, mai al nostro |
+| `Host: cms.bilanciotool.it` su HTTPS, prima che esista | connessione rifiutata: nessun certificato, niente servito |
+
+Caddy risponde **solo** all'host esatto per cui ha un certificato.
+
+**4. I contenuti non possono mescolarsi:** database separati, utenti di database separati,
+volumi separati. Il frontend legge solo il proprio `BLOG_CMS_URL`.
+
+**5. Nelle pagine pubblicate non resta traccia del CMS:** zero occorrenze del suo nome nel
+sorgente, canonical forzato, immagini servite dal dominio pubblico attraverso la cache di
+Vercel. Il crawler non vede mai il CMS, nemmeno per un'immagine.
+
+#### I rischi che restano davvero
+
+Esistono, ma **sono editoriali e varrebbero identici anche con due server separati**:
+
+- **Contenuti troppo simili tra i due blog.** Se lo stesso consulente scrive per entrambi su
+  temi vicini, con impianto e frasi simili, e' duplicazione e cannibalizzazione. Si previene con
+  una regola editoriale scritta, non con l'hardware.
+- **Link incrociati tra i due siti.** Linkare bilanciotool dagli articoli di Evalis "per passare
+  autorita'" crea uno schema riconoscibile. Se i due si citano, deve esserci una ragione
+  redazionale vera.
+
+E una dipendenza tecnica da conoscere: le immagini degli articoli passano da questo server. Con
+la cache di Vercel davanti, un CMS spento per qualche minuto non si vede; ma un guasto lungo
+degraderebbe **entrambi** i blog insieme, e la velocita' di caricamento e' un fattore di
+posizionamento. Se un giorno la dipendenza dara' fastidio, si copiano le immagini su un oggetto
+storage (R2) e il CMS esce dal percorso dei visitatori.
+
+#### Isolamento tra i due WordPress
+
+**Una rete Docker per sito.** Con una rete sola, un WordPress compromesso vedrebbe l'altro
+WordPress e potrebbe bussare alla sua porta 80 **dall'interno**, dove non c'e' ne' Caddy ne'
+password. Con reti separate quel percorso non esiste.
+
+Provato con un esperimento: un finto secondo sito su una rete propria e' irraggiungibile da
+`wp-evalis`, mentre il database resta raggiungibile.
+
+```
+rete-evalis     : caddy, db, wp-evalis
+rete-bilancio   : caddy, db, wp-bilanciotool
+                  wp-evalis <-X-> wp-bilanciotool
+```
+
+Il database e' l'unico servizio condiviso, e li' la barriera sono i **permessi per schema**:
+ogni sito ha il suo utente, che sul database dell'altro non ha alcun diritto.
+
+Cosa resta condiviso, e non si puo' eliminare senza due macchine: il **kernel** (una fuga dal
+container li prende entrambi) e **Caddy** (un Caddyfile rotto li spegne entrambi — validare con
+`docker compose exec caddy caddy validate --config /etc/caddy/Caddyfile` prima di ricaricare).
+
+#### Margine misurato
+
+Il 04/08/2026, con un solo sito attivo:
+
+```
+RAM      3819 MB totali -> 245 MB usati dallo stack, 2997 disponibili
+         caddy 11 MB - wordpress 114 MB - mariadb 119 MB
+Disco    38 GB -> 6,1 usati, 30 liberi
+Carico   praticamente fermo
+```
+
+Un secondo WordPress aggiunge circa 115 MB. **Ci sta ampiamente**, non serve cambiare taglio.
+
+#### La procedura, concreta
+
+Server: `ssh root@178.105.44.157` - stack in `/opt/blog-cms`
+
+**1. DNS** — record **A** `cms.bilanciotool.it` -> `178.105.44.157`. Nessun wildcard.
+
+**2. Lo schema del database.**
+
+> ATTENZIONE — TRAPPOLA. `db-init/` viene eseguito da MariaDB **solo quando la cartella dati e'
+> vuota**, cioe' al primissimo avvio. Su un database che esiste gia' quei file sono ignorati:
+> modificarli e riavviare **non fa niente**, e sembra che sia andato tutto bene. Lo schema del
+> secondo sito va creato a mano.
+
+```bash
+cd /opt/blog-cms
+DB_ROOT=$(grep '^DB_ROOT_PASSWORD=' .env | cut -d= -f2-)
+NUOVA_PW=$(openssl rand -hex 24)
+
+docker compose exec -T db mariadb -uroot -p"$DB_ROOT" <<SQL
+CREATE DATABASE IF NOT EXISTS wp_bilanciotool
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci;
+CREATE USER IF NOT EXISTS 'wpuser_bilancio'@'%' IDENTIFIED BY '$NUOVA_PW';
+GRANT ALL PRIVILEGES ON wp_bilanciotool.* TO 'wpuser_bilancio'@'%';
+FLUSH PRIVILEGES;
+SQL
+
+echo "DB_PASSWORD_BILANCIO=$NUOVA_PW" >> .env
+```
+
+**Un utente suo, non `wpuser`.** Con un utente solo, un WordPress compromesso legge e riscrive
+anche il database dell'altro sito. Aggiornare anche il commento in `db-init/01-schemi.sql`,
+cosi' una macchina rifatta da zero nasce gia' giusta.
+
+**3. Il servizio.** In `docker-compose.yml`, copiare il blocco `wp-evalis`:
+
+```yaml
+  wp-bilanciotool:
+    image: wordpress:6-php8.3-apache
+    restart: unless-stopped
+    depends_on:
+      db: { condition: service_healthy }
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wp_bilanciotool          # <- diverso
+      WORDPRESS_DB_USER: wpuser_bilancio          # <- diverso
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD_BILANCIO}
+      WORDPRESS_TABLE_PREFIX: wp_
+      WORDPRESS_CONFIG_EXTRA: |
+        define('EVALIS_SITO_PUBBLICO', '${SITO_PUBBLICO_BILANCIO}');
+        define('EVALIS_REVALIDATE_TOKEN', '${BLOG_WEBHOOK_TOKEN_BILANCIO}');
+        define('EVALIS_PREVIEW_TOKEN', '${BLOG_PREVIEW_TOKEN_BILANCIO}');
+        if (isset($$_SERVER['HTTP_X_FORWARDED_PROTO']) && $$_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+          $$_SERVER['HTTPS'] = 'on';
+        }
+        define('DISALLOW_FILE_EDIT', true);
+        define('WP_AUTO_UPDATE_CORE', 'minor');
+    volumes:
+      - wp-bilanciotool-data:/var/www/html         # <- volume suo
+      - ./mu-plugins:/var/www/html/wp-content/mu-plugins:ro   # <- LO STESSO
+    networks: [rete-bilancio]                      # <- rete sua
+```
+
+E aggiungere `rete-bilancio:` sotto `networks:`, `wp-bilanciotool-data:` sotto `volumes:`, e
+`rete-bilancio` all'elenco delle reti di **`db`** e di **`caddy`**.
+
+**Il mu-plugin e' lo stesso file, montato in entrambi.** Non va duplicato: le tre costanti
+(`EVALIS_SITO_PUBBLICO`, i due token) arrivano da `WORDPRESS_CONFIG_EXTRA`, quindi lo stesso
+codice serve due siti diversi e una correzione vale per tutti e due.
+
+> ATTENZIONE — non rinominare lo spazio dei nomi REST `evalis/v1`. Sembrerebbe piu' pulito
+> chiamarlo `bilanciotool/v1`, ma `src/features/blog/wp.ts` chiama `/evalis/v1/slug-precedente`
+> e l'indirizzo non e' configurabile: cambiandolo, i redirect 301 sugli slug rinominati
+> smetterebbero di funzionare **in silenzio** — nessun errore, solo 404 su URL indicizzati. Se
+> un giorno lo si vuole neutro, va reso parametrico da entrambi i lati insieme.
+
+**4. Il blocco Caddy.** Copiare il blocco host cambiando dominio, credenziali e `reverse_proxy`:
+
+```
+cms.bilanciotool.it {
+    header {
+        X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "SAMEORIGIN"
+        Referrer-Policy "strict-origin-when-cross-origin"
+        -Server
+    }
+    @amministrazione path /wp-admin* /wp-login.php
+    basic_auth @amministrazione {
+        {$ADMIN_UTENTE_BILANCIO} {$ADMIN_HASH_BILANCIO}
+    }
+    respond /xmlrpc.php 403
+    @vietati path /wp-config.php /.env /debug.log /readme.html /license.txt
+    respond @vietati 403
+    reverse_proxy wp-bilanciotool:80
+    encode zstd gzip
+}
+```
+
+```bash
+PW=$(openssl rand -base64 18 | tr -d '/+=' | cut -c1-20)
+HASH=$(docker run --rm caddy:2-alpine caddy hash-password --plaintext "$PW")
+printf 'ADMIN_UTENTE_BILANCIO=bilancio\nADMIN_HASH_BILANCIO=%s\n' "$HASH" >> .env
+echo "password dashboard bilanciotool: $PW"   # annotarla: nel .env resta solo l'hash
+```
+
+Le due variabili vanno passate al servizio `caddy` nel compose, accanto a
+`ADMIN_UTENTE`/`ADMIN_HASH`. Il certificato TLS Caddy se lo prende da solo, purche' il DNS punti
+gia' qui.
+
+**Prima di ricaricare Caddy, validare** — un errore di sintassi spegne entrambi i siti:
+
+```bash
+docker compose exec caddy caddy validate --config /etc/caddy/Caddyfile
+```
+
+**5. I token del secondo sito.** Nuovi, mai riusati: due siti che condividono un token sono un
+sito solo dal punto di vista di chi attacca.
+
+```bash
+printf 'SITO_PUBBLICO_BILANCIO=https://bilanciotool.it\n' >> .env
+printf 'BLOG_WEBHOOK_TOKEN_BILANCIO=%s\n' "$(openssl rand -hex 32)" >> .env
+printf 'BLOG_PREVIEW_TOKEN_BILANCIO=%s\n' "$(openssl rand -hex 32)" >> .env
+docker compose up -d
+```
+
+**6. I backup coprono il secondo sito solo a meta'.** Il dump usa `--all-databases`, quindi
+`wp_bilanciotool` c'e' dal primo giro. Ma `wp-content` viene salvato **per servizio**: senza
+aggiungere la variabile al cron si salverebbero gli articoli del secondo sito e **non le sue
+immagini** — e lo si scoprirebbe il giorno del ripristino.
+
+```
+# in /etc/cron.d/blog-cms, aggiungere SITI= alla riga del backup:
+20 3 * * * root cd /opt/blog-cms && SITI="wp-evalis wp-bilanciotool" \
+   BACKUP_PASSPHRASE_FILE=/root/.blog-backup-pass \
+   STORAGE_BOX=u635762-sub5@u635762.your-storagebox.de ./backup.sh >> /var/log/blog-backup.log 2>&1
+```
+
+E in `restore-test.sh` la query di sanita' cita `wp_evalis.wp_posts`: va estesa al secondo
+schema, altrimenti il test resterebbe verde anche con il backup del secondo sito rotto.
+
+**7. Verifica** — le stesse condizioni, sul nuovo host:
+
+```bash
+curl -I https://cms.bilanciotool.it | grep -i x-robots-tag                             # noindex
+curl -o /dev/null -w '%{http_code}\n' https://cms.bilanciotool.it/wp-admin             # 401
+curl -o /dev/null -w '%{http_code}\n' https://cms.bilanciotool.it/sitemap_index.xml    # 404
+curl -o /dev/null -w '%{http_code}\n' https://cms.bilanciotool.it/xmlrpc.php           # 403
+```
+
+E la prova di isolamento, che vale la pena rifare dopo aver aggiunto il servizio:
+
+```bash
+docker exec blog-cms-wp-evalis-1 sh -c 'timeout 4 bash -c "</dev/tcp/wp-bilanciotool/80"' \
+  && echo "MALE: si vedono" || echo "bene: isolati"
+```
+
+**8. WordPress** — installazione e configurazione identiche alla sezione 5, ricordando di
+spegnere la sitemap di Yoast **anche dall'opzione**, non solo col filtro.
+
+Sul lato Next.js dell'altro progetto **non c'e' nulla da riscrivere**: si copia
+`src/features/blog/`, si impostano le variabili d'ambiente e funziona.
 
 ---
 
