@@ -150,17 +150,11 @@ add_filter('rank_math/sitemap/enable_caching', '__return_false');
 // XML-RPC non serve a un CMS headless (Caddy lo blocca gia': questo e' lo strato di dentro)
 add_filter('xmlrpc_enabled', '__return_false');
 
-// niente elenco degli utenti a chi passa di li': non regaliamo i nomi di accesso
-add_filter('rest_endpoints', function ($rotte) {
-    if (isset($rotte['/wp/v2/users']) && !is_user_logged_in()) {
-        // l'elenco resta leggibile solo per gli autori CON articoli pubblicati, che e'
-        // esattamente cio' che serve alle pagine autore del sito
-        foreach ($rotte['/wp/v2/users'] as $i => $rotta) {
-            $rotte['/wp/v2/users'][$i]['args']['has_published_posts']['default'] = true;
-        }
-    }
-    return $rotte;
-});
+// NB: l'elenco utenti NON va filtrato a mano. WordPress, a chi non ha fatto accesso, mostra
+// gia' soltanto gli autori con articoli pubblicati — cioe' esattamente quello che serve alle
+// pagine autore del sito. Un filtro su `rest_endpoints` qui dentro assumeva una struttura che
+// WordPress non ha (dentro l'elenco delle rotte ci sono anche voci di testo, non solo array) e
+// mandava in errore fatale TUTTA la REST API: niente articoli, niente compilazioni.
 
 /* ---------------------------------------------------------------------------------------
  * 5. IL RUOLO DELL'AUTORE
