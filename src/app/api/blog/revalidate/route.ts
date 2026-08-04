@@ -12,6 +12,9 @@
 // installato nella Fase 2).
 
 import { revalidatePath, revalidateTag } from "next/cache";
+import { after } from "next/server";
+import { verificaBlog, riepilogo } from "@/features/blog/verifica";
+import { inviaAllarmeBlog } from "@/lib/email/resend";
 
 export const dynamic = "force-dynamic";
 
@@ -43,6 +46,26 @@ export async function POST(req: Request) {
     revalidatePath(`/blog/${slug}`);
     aggiornati.push(`/blog/${slug}`);
   }
+
+  // I controlli girano DOPO aver risposto: WordPress non deve restare in attesa che qualcuno
+  // apra le pagine. Se una pubblicazione ha rotto qualcosa, parte la mail entro pochi secondi
+  // dalla pubblicazione stessa — quando c'e' ancora qualcuno davanti allo schermo.
+  after(async () => {
+    try {
+      const sito = (process.env.NEXT_PUBLIC_APP_URL ?? "").replace(/\/+$/, "");
+      if (!sito) return;
+      const esiti = await verificaBlog({
+        sito,
+        cms: process.env.BLOG_CMS_URL?.replace(/\/+$/, ""),
+        massimoArticoli: 5,
+      });
+      const { ok, righe } = riepilogo(esiti);
+      if (!ok) await inviaAllarmeBlog(righe);
+    } catch {
+      // il controllo che non riesce a girare non deve far fallire la pubblicazione: il giro
+      // quotidiano ripassa comunque
+    }
+  });
 
   return Response.json({ ok: true, aggiornati, quando: new Date().toISOString() });
 }

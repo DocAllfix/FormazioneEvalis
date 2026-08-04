@@ -83,7 +83,17 @@ export async function elencoArticoli(limite = 100): Promise<Articolo[]> {
   const post = await chiamata<PostWP[]>(
     `/wp/v2/posts?_embed&status=publish&per_page=${limite}&orderby=date&order=desc`,
   );
-  return (post ?? []).map((p) => mappaPost(p, contesto()));
+  const articoli = (post ?? []).map((p) => mappaPost(p, contesto()));
+
+  // Un CMS che risponde "va tutto bene, zero articoli" e' il modo silenzioso di pubblicare un
+  // blog vuoto: la compilazione andrebbe a buon fine e la sezione sparirebbe dall'indice senza
+  // che nessuno se ne accorga. Meglio fermarsi. (BLOG_CONSENTI_VUOTO=1 per il primo giorno.)
+  if (articoli.length === 0 && process.env.BLOG_CONSENTI_VUOTO !== "1") {
+    throw new Error(
+      "Il CMS non riporta nessun articolo pubblicato. Se e' voluto, BLOG_CONSENTI_VUOTO=1.",
+    );
+  }
+  return articoli;
 }
 
 /** Solo gli slug: serve a `generateStaticParams` senza scaricare il corpo di ogni articolo. */

@@ -64,6 +64,8 @@ const schema = z.object({
   // resta separato da quello del webhook, che non lascia mai il server
   BLOG_PREVIEW_TOKEN: z.string().optional(),
   BLOG_WEBHOOK_TOKEN: z.string().optional(),
+  // impostato da Vercel: autentica i cron. Senza, la rotta del giro quotidiano risponde 404.
+  CRON_SECRET: z.string().optional(),
 });
 
 // A-4 (audit go-live): in PRODUZIONE alcuni segreti NON possono mancare, altrimenti il player

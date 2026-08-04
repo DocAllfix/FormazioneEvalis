@@ -102,3 +102,30 @@ export async function sendOrgInvitationEmail(data: { to: string; orgName: string
     }),
   });
 }
+
+/**
+ * Allarme dai controlli automatici del blog. Va allo staff di piattaforma
+ * (PLATFORM_STAFF_EMAILS): un controllo che fallisce senza avvisare nessuno non protegge da
+ * niente. Best-effort come gli altri invii: senza chiave, no-op.
+ */
+export async function inviaAllarmeBlog(righe: string[]): Promise<{ sent: boolean }> {
+  const destinatari = (process.env.PLATFORM_STAFF_EMAILS ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  if (destinatari.length === 0) return { sent: false };
+
+  const rosse = righe.filter((r) => r.startsWith("ROSSO"));
+  return sendAuthEmail({
+    to: destinatari[0],
+    subject: `Blog: ${rosse.length} controll${rosse.length === 1 ? "o" : "i"} ross${rosse.length === 1 ? "o" : "i"}`,
+    html: renderEmail({
+      previewText: "Un controllo automatico del blog e' rosso.",
+      heading: "Controlli del blog",
+      body: [
+        "Il giro quotidiano ha trovato qualcosa fuori posto. Le righe qui sotto sono l'esito completo.",
+        `<pre style="white-space:pre-wrap;font-family:ui-monospace,monospace;font-size:13px">${esc(righe.join("\n"))}</pre>`,
+      ],
+    }),
+  });
+}
