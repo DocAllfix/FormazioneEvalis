@@ -104,12 +104,14 @@ class Hetzner:
         ]
         return self._chiama("/firewalls", "POST", {"name": nome, "rules": regole})["firewall"]["id"]
 
-    def crea_server(self, nome, tipo, immagine, datacenter, id_chiavi, id_firewall) -> dict:
+    def crea_server(self, nome, tipo, immagine, luogo, id_chiavi, id_firewall) -> dict:
+        # `location`, non `datacenter`: dal 16/12/2025 Hetzner ha dismesso il secondo e
+        # risponde 422 a chi lo usa ancora.
         corpo = {
             "name": nome,
             "server_type": tipo,
             "image": immagine,
-            "datacenter": datacenter,
+            "location": luogo,
             "ssh_keys": id_chiavi,
             "firewalls": [{"firewall": id_firewall}] if id_firewall else [],
             # IPv4 necessario: Vercel non garantisce di saper uscire verso un'origine
@@ -121,14 +123,19 @@ class Hetzner:
 
 
 def disponibili(dc: list, id_tipo: int, luoghi: list) -> list:
-    """I datacenter, tra quelli voluti, dove quel tipo si puo' creare ADESSO."""
+    """I LUOGHI, tra quelli voluti, dove quel tipo si puo' creare ADESSO.
+
+    La disponibilita' si legge ancora per datacenter, ma la creazione vuole il luogo: sono due
+    piani diversi della stessa API, ed e' la confusione che ci e' costata la prima finestra."""
     fuori = []
     for d in dc:
         if id_tipo not in (d.get("server_types") or {}).get("available", []):
             continue
-        if luoghi and d["location"]["name"] not in luoghi:
+        luogo = d["location"]["name"]
+        if luoghi and luogo not in luoghi:
             continue
-        fuori.append(d["name"])
+        if luogo not in fuori:
+            fuori.append(luogo)
     return fuori
 
 
