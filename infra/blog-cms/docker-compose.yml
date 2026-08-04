@@ -1,0 +1,74 @@
+# WordPress headless per Evalis Academy. Gira su una VPS Hetzner (CAX11 ARM va bene: qui
+# WordPress serve JSON a Next.js, non pagine a migliaia di visitatori).
+#
+# ⚠️ PREDISPOSTO PER IL SECONDO SITO. Aggiungere bilanciotool significa: copiare il blocco
+# `wp-evalis` cambiando nome, database e volume, aggiungere lo schema in `db-init/`, e
+# aggiungere un blocco host nel Caddyfile. NIENTE di questo file va riprogettato.
+# Gli schemi sono separati fin da ora proprio per questo: un database condiviso costringerebbe
+# a una migrazione il giorno in cui si aggiunge il secondo sito.
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data       # certificati TLS: perderli significa rifare tutti i rilasci
+      - caddy-config:/config
+    depends_on:
+      - wp-evalis
+
+  db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?serve DB_ROOT_PASSWORD}
+      MARIADB_DATABASE: wp_evalis
+      MARIADB_USER: wpuser   # fisso: db-init/01-schemi.sql concede i permessi a questo nome
+      MARIADB_PASSWORD: ${DB_PASSWORD:?serve DB_PASSWORD}
+    volumes:
+      - db-data:/var/lib/mysql
+      # ogni sito ha il SUO schema: il secondo blog aggiunge un file qui, non tocca il primo
+      - ./db-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  wp-evalis:
+    image: wordpress:6-php8.3-apache
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wp_evalis
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      WORDPRESS_TABLE_PREFIX: wp_
+      # il frontend a cui questo CMS parla: lo legge il mu-plugin per il webhook e l'anteprima
+      WORDPRESS_CONFIG_EXTRA: |
+        define('EVALIS_SITO_PUBBLICO', '${SITO_PUBBLICO:?serve SITO_PUBBLICO}');
+        define('EVALIS_REVALIDATE_TOKEN', '${BLOG_WEBHOOK_TOKEN:?serve BLOG_WEBHOOK_TOKEN}');
+        define('EVALIS_PREVIEW_TOKEN', '${BLOG_PREVIEW_TOKEN:?serve BLOG_PREVIEW_TOKEN}');
+        /* dietro Caddy: senza questo WordPress genera URL in http e i redirect si avvitano */
+        if (isset($$_SERVER['HTTP_X_FORWARDED_PROTO']) && $$_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+          $$_SERVER['HTTPS'] = 'on';
+        }
+        define('DISALLOW_FILE_EDIT', true);   /* niente editor di temi/plugin dalla dashboard */
+        define('WP_AUTO_UPDATE_CORE', 'minor');
+    volumes:
+      - wp-evalis-data:/var/www/html
+      # i nostri innesti: caricati sempre, non disattivabili per sbaglio dalla dashboard
+      - ./mu-plugins:/var/www/html/wp-content/mu-plugins:ro
+
+volumes:
+  caddy-data:
+  caddy-config:
+  db-data:
+  wp-evalis-data:

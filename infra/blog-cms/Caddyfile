@@ -1,0 +1,51 @@
+# Caddy davanti a WordPress. TLS automatico (Let's Encrypt), niente configurazione a mano.
+#
+# ⚠️ IL BLOCCO PIU' IMPORTANTE E' `X-Robots-Tag: noindex`. Senza, Google indicizza il CMS e si
+# ritrova DUE copie di ogni articolo: la nostra e quella del sottodominio. Sceglierebbe una
+# delle due, spesso non la nostra, e il lavoro sul dominio principale andrebbe sprecato.
+# E' il primo dei due strati: il secondo e' l'impostazione dentro WordPress.
+
+cms.evalisacademy.it {
+	# ogni risposta, senza eccezioni: anche le immagini e i JSON
+	header {
+		X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+
+	# La dashboard e il login sono raggiungibili solo dagli indirizzi indicati: chi scrive gli
+	# articoli e chi amministra. Tutto il resto del mondo vede 403.
+	# ⚠️ SOSTITUIRE gli indirizzi qui sotto prima di avviare (vedi LEGGIMI.md).
+	@amministrazione {
+		path /wp-admin* /wp-login.php
+		not remote_ip 203.0.113.10 203.0.113.11
+	}
+	respond @amministrazione 403
+
+	# XML-RPC non serve a un CMS headless ed e' il bersaglio piu' battuto di WordPress
+	respond /xmlrpc.php 403
+
+	# nessuno deve poter leggere la configurazione o i file di log
+	@vietati path /wp-config.php /.env /debug.log /readme.html /license.txt
+	respond @vietati 403
+
+	reverse_proxy wp-evalis:80
+
+	encode zstd gzip
+	log {
+		output file /data/access.log {
+			roll_size 20MiB
+			roll_keep 5
+		}
+	}
+}
+
+# --- SECONDO SITO ---------------------------------------------------------------------------
+# Quando arrivera' bilanciotool, si copia il blocco qui sopra cambiando host e `reverse_proxy`:
+#
+# cms.bilanciotool.it {
+# 	header { X-Robots-Tag "noindex, nofollow, noarchive, nosnippet" ... }
+# 	reverse_proxy wp-bilanciotool:80
+# }

@@ -133,9 +133,9 @@ export async function articoliCorrelati(slug: string, categoria: string, quanti 
 
 /** Un autore per slug, con la biografia. `null` se non esiste. */
 export async function autorePerSlug(slug: string): Promise<Autore | null> {
-  const utenti = await chiamata<
-    Array<{ slug?: string; name?: string; description?: string; avatar_urls?: Record<string, string> }>
-  >(`/wp/v2/users?slug=${encodeURIComponent(slug)}`);
+  const utenti = await chiamata<NonNullable<NonNullable<PostWP["_embedded"]>["author"]>>(
+    `/wp/v2/users?slug=${encodeURIComponent(slug)}`,
+  );
   const u = utenti?.[0];
   if (!u?.name) return null;
   // riuso della stessa mappatura degli articoli: un solo posto dove decodificare le entita'

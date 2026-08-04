@@ -42,9 +42,11 @@ export function tempoDiLettura(html: string | undefined): string {
 export function autoreDaPost(post: PostWP): Autore | undefined {
   const a = post._embedded?.author?.[0];
   if (!a?.name) return undefined;
+  const ruolo = a.meta?.evalis_ruolo;
   return {
     slug: a.slug ?? "",
     nome: decodificaEntita(a.name),
+    ruolo: ruolo ? decodificaEntita(ruolo) : undefined,
     bio: a.description ? decodificaEntita(a.description) : undefined,
     avatar: a.avatar_urls?.["96"],
   };
