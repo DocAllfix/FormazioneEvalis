@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import EcoVadisBadge from "./EcoVadisBadge";
+import { PreferenzeCookie } from "@/components/legal/preferenze-cookie";
 
 const footerColumns = [
   {
@@ -62,6 +63,13 @@ export default function SiteFooter() {
                     </a>
                   </li>
                 ))}
+                {/* il consenso dev'essere revocabile con la stessa facilita' con cui e' stato
+                    dato: senza questo link, la scelta resterebbe congelata per sempre */}
+                {col.title === "Legale" ? (
+                  <li>
+                    <PreferenzeCookie className="text-sm text-[#9C9388] hover:text-white transition-colors duration-150" />
+                  </li>
+                ) : null}
               </ul>
             </div>
           ))}

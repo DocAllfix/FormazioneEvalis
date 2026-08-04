@@ -4,6 +4,7 @@ import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
 import { JsonLd } from "@/components/seo/json-ld";
 import { CookieBanner } from "@/components/legal/cookie-banner";
+import { Analytics } from "@/components/legal/analytics";
 import { COMPANY } from "@/lib/legal/company";
 
 const APP_URL = (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
@@ -78,10 +79,34 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="it" className={`${dmSans.variable} ${dmSerif.variable}`}>
+        <head>
+          {/* Consent Mode v2 — DEVE stare qui, prima di qualunque altro script.
+              I quattro parametri partono NEGATI: se un giorno qualcuno aggiungesse uno
+              strumento di Google senza accorgersi del banner, si troverebbe comunque davanti
+              un consenso negato invece che concesso per distrazione.
+              Dal 15/06/2026 e' il consenso trasmesso da qui l'unica fonte di verita' per GA4. */}
+          <script
+            id="consent-mode-default"
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('consent', 'default', {
+                  analytics_storage: 'denied',
+                  ad_storage: 'denied',
+                  ad_user_data: 'denied',
+                  ad_personalization: 'denied',
+                  wait_for_update: 500
+                });
+              `,
+            }}
+          />
+        </head>
         <body>
           <JsonLd data={orgLd} />
           {children}
           <CookieBanner />
+          <Analytics />
         </body>
       </html>
     </ViewTransitions>
