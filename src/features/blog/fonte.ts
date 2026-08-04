@@ -11,7 +11,7 @@
 // e il ramo Markdown di BlogPost) va eliminato nella Fase 8, insieme ai vecchi URL.
 
 import { blogConfigurato, sitoPubblico } from "./config";
-import type { Articolo, SeoArticolo } from "./tipi";
+import type { Articolo, Autore, SeoArticolo } from "./tipi";
 import * as wp from "./wp";
 import { allArticles, getArticleBySlug } from "@/lib/blogArticles";
 
@@ -100,4 +100,31 @@ export async function articoloBlog(
   if (!trovato) return null;
   const correlati = await wp.articoliCorrelati(slug, trovato.articolo.category);
   return { ...trovato, correlati };
+}
+
+/**
+ * Un autore con i suoi articoli. `null` anche quando il CMS non c'e' ancora: la fonte
+ * precedente ha solo il NOME di chi ha scritto, non una persona con una pagina propria — ed e'
+ * per questo che la pagina articolo collega l'autore solo quando esiste davvero.
+ */
+export async function autoreBlog(slug: string): Promise<{ autore: Autore; articoli: Articolo[] } | null> {
+  if (!blogConfigurato()) return null;
+  const autore = await wp.autorePerSlug(slug);
+  if (!autore) return null;
+  return { autore, articoli: await wp.articoliDiAutore(slug) };
+}
+
+/**
+ * Un URL vecchio a cui corrisponde un articolo rinominato: restituisce lo slug attuale, cosi'
+ * la pagina puo' rispondere 301 invece di 404. Null quando non c'e' nulla da recuperare.
+ */
+export async function slugSostitutivo(slug: string): Promise<string | null> {
+  if (!blogConfigurato()) return null;
+  return wp.slugCorrente(slug);
+}
+
+/** Gli slug degli autori che hanno pubblicato. Vuoto finche' il CMS non c'e'. */
+export async function slugAutoriBlog(): Promise<string[]> {
+  if (!blogConfigurato()) return [];
+  return wp.slugAutori();
 }

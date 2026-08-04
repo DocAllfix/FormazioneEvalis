@@ -125,9 +125,18 @@ export default function BlogPost({ article, related }) {
                 {article.title}
               </h1>
               <div className="mt-5 flex items-center gap-2 text-sm text-[#766E66]">
-                <span className="text-near-black font-medium">
-                  {article.author}
-                </span>
+                {article.autore?.slug ? (
+                  <Link
+                    href={`/blog/autore/${article.autore.slug}`}
+                    className="text-near-black font-medium hover:text-primary transition-colors duration-150"
+                  >
+                    {article.author}
+                  </Link>
+                ) : (
+                  <span className="text-near-black font-medium">
+                    {article.author}
+                  </span>
+                )}
                 <span>·</span>
                 <time dateTime={article.date}>{dataItaliana(article.date)}</time>
                 <span>·</span>
@@ -172,6 +181,38 @@ export default function BlogPost({ article, related }) {
                 </ReactMarkdown>
               )}
             </ScrollReveal>
+
+            {/* Chi ha scritto. Non e' decorazione: e' il segnale che dice a chi legge — e a
+                Google — che dietro l'articolo c'e' una persona con una competenza verificabile. */}
+            {article.autore?.slug ? (
+              <div className="mt-12 pt-8 border-t border-[#EAE4DB] flex items-start gap-4">
+                {article.autore.avatar ? (
+                  <img
+                    src={article.autore.avatar}
+                    alt={article.autore.nome}
+                    width={56}
+                    height={56}
+                    className="w-14 h-14 rounded-full object-cover border border-[#EAE4DB] flex-shrink-0"
+                  />
+                ) : null}
+                <div className="min-w-0">
+                  <Link
+                    href={`/blog/autore/${article.autore.slug}`}
+                    className="font-heading text-lg text-near-black hover:text-primary transition-colors duration-150"
+                  >
+                    {article.autore.nome}
+                  </Link>
+                  {article.autore.ruolo ? (
+                    <p className="text-xs text-[#766E66] mt-0.5">{article.autore.ruolo}</p>
+                  ) : null}
+                  {article.autore.bio ? (
+                    <p className="mt-2 text-sm text-[#5C5347] leading-relaxed">
+                      {article.autore.bio}
+                    </p>
+                  ) : null}
+                </div>
+              </div>
+            ) : null}
 
             <div className="mt-12 pt-8 border-t border-[#EAE4DB]">
               <Link

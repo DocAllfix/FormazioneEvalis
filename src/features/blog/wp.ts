@@ -30,7 +30,8 @@ type Opzioni = {
 function base(): string {
   const cms = cmsUrl();
   if (!cms) throw new Error("BLOG_CMS_URL non configurato: il blog headless non e' agganciato.");
-  return `${cms}/wp-json/wp/v2`;
+  // la radice di TUTTE le API di WordPress: sotto ci stanno sia `wp/v2` sia le rotte nostre
+  return `${cms}/wp-json`;
 }
 
 async function chiamata<T>(percorso: string, opts: Opzioni = {}): Promise<T> {
@@ -80,7 +81,7 @@ function contesto() {
 /** Tutti gli articoli pubblicati, dal piu' recente. */
 export async function elencoArticoli(limite = 100): Promise<Articolo[]> {
   const post = await chiamata<PostWP[]>(
-    `/posts?_embed&status=publish&per_page=${limite}&orderby=date&order=desc`,
+    `/wp/v2/posts?_embed&status=publish&per_page=${limite}&orderby=date&order=desc`,
   );
   return (post ?? []).map((p) => mappaPost(p, contesto()));
 }
@@ -88,7 +89,7 @@ export async function elencoArticoli(limite = 100): Promise<Articolo[]> {
 /** Solo gli slug: serve a `generateStaticParams` senza scaricare il corpo di ogni articolo. */
 export async function slugArticoli(): Promise<string[]> {
   const post = await chiamata<Array<{ slug: string }>>(
-    "/posts?status=publish&per_page=100&_fields=slug",
+    "/wp/v2/posts?status=publish&per_page=100&_fields=slug",
   );
   return (post ?? []).map((p) => p.slug).filter(Boolean);
 }
@@ -100,7 +101,7 @@ export async function articoloPerSlug(
 ): Promise<{ articolo: Articolo; seo: SeoArticolo } | null> {
   const stato = opts.bozza ? "publish,draft,pending,future,private" : "publish";
   const post = await chiamata<PostWP[]>(
-    `/posts?_embed&status=${stato}&slug=${encodeURIComponent(slug)}`,
+    `/wp/v2/posts?_embed&status=${stato}&slug=${encodeURIComponent(slug)}`,
     opts,
   );
   const p = post?.[0];
@@ -124,7 +125,7 @@ export async function articoliCorrelati(slug: string, categoria: string, quanti 
 export async function autorePerSlug(slug: string): Promise<Autore | null> {
   const utenti = await chiamata<
     Array<{ slug?: string; name?: string; description?: string; avatar_urls?: Record<string, string> }>
-  >(`/users?slug=${encodeURIComponent(slug)}`);
+  >(`/wp/v2/users?slug=${encodeURIComponent(slug)}`);
   const u = utenti?.[0];
   if (!u?.name) return null;
   // riuso della stessa mappatura degli articoli: un solo posto dove decodificare le entita'
@@ -134,9 +135,29 @@ export async function autorePerSlug(slug: string): Promise<Autore | null> {
 /** Gli slug di tutti gli autori che hanno almeno un articolo pubblicato. */
 export async function slugAutori(): Promise<string[]> {
   const utenti = await chiamata<Array<{ slug?: string }>>(
-    "/users?per_page=100&who=authors&has_published_posts=true&_fields=slug",
+    "/wp/v2/users?per_page=100&who=authors&has_published_posts=true&_fields=slug",
   );
   return (utenti ?? []).map((u) => u.slug).filter((s): s is string => Boolean(s));
+}
+
+/**
+ * Se `slug` e' un indirizzo VECCHIO, restituisce quello attuale; altrimenti null.
+ *
+ * Serve al caso piu' insidioso del blog: il redattore rinomina un articolo gia' indicizzato e
+ * il vecchio URL — quello che sta in Google, nei link e nei preferiti — diventa 404. WordPress
+ * conserva gli slug precedenti (`_wp_old_slug`), ma non li espone: la rotta qui sotto arriva
+ * dal mu-plugin installato nella Fase 2. Se manca, questa funzione tace e il 404 resta un 404.
+ */
+export async function slugCorrente(vecchio: string): Promise<string | null> {
+  try {
+    const r = await chiamata<{ slug?: string } | null>(
+      `/evalis/v1/slug-precedente?slug=${encodeURIComponent(vecchio)}`,
+    );
+    return r?.slug && r.slug !== vecchio ? r.slug : null;
+  } catch {
+    // il CMS non risponde o il mu-plugin non c'e': meglio un 404 che un errore in faccia
+    return null;
+  }
 }
 
 /** Gli articoli di un autore. */

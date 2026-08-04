@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { listPublishedCourses } from "@/features/catalog/queries";
-import { elencoBlog } from "@/features/blog/fonte";
+import { elencoBlog, slugAutoriBlog } from "@/features/blog/fonte";
 
 const APP = (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -14,6 +14,7 @@ function quando(iso?: string): Date | undefined {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const courses = await listPublishedCourses().catch(() => []);
   const articoli = await elencoBlog();
+  const autori = await slugAutoriBlog();
   const oggi = new Date();
 
   // NB: /pricing NON è ancora una pagina reale (prezzi in arrivo) → fuori dalla sitemap
@@ -45,5 +46,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...coursePages, ...blogPages];
+  // Le pagine autore reggono l'E-E-A-T della sezione: vanno indicizzate come gli articoli.
+  const autorePages: MetadataRoute.Sitemap = autori.map((s) => ({
+    url: `${APP}/blog/autore/${s}`,
+    lastModified: oggi,
+    changeFrequency: "monthly",
+    priority: 0.4,
+  }));
+
+  return [...staticPages, ...coursePages, ...blogPages, ...autorePages];
 }

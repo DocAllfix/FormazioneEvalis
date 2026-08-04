@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import Link from "next/link";
+import { draftMode } from "next/headers";
+import { notFound, permanentRedirect } from "next/navigation";
 import BlogPost from "@/components/pages/BlogPost";
 import { JsonLd } from "@/components/seo/json-ld";
-import { articoloBlog, slugBlog } from "@/features/blog/fonte";
+import { articoloBlog, slugBlog, slugSostitutivo } from "@/features/blog/fonte";
 import { soloGiorno } from "@/features/blog/data";
 import { soloTesto } from "@/features/blog/sanitize";
 
@@ -18,9 +20,15 @@ export const dynamicParams = true;
  * dominio pubblico: Yoast lo genererebbe puntato al CMS e ci deindicizzerebbe. */
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const trovato = await articoloBlog(slug);
+  const { isEnabled: bozza } = await draftMode();
+  const trovato = await articoloBlog(slug, { bozza });
   if (!trovato) return { title: "Articolo — Evalis" };
   const { articolo: a, seo } = trovato;
+
+  // una bozza non deve MAI finire in un indice, nemmeno se qualcuno condivide l'URL
+  if (bozza) {
+    return { title: `[BOZZA] ${a.title}`, robots: { index: false, follow: false } };
+  }
 
   const titolo = seo.title ?? `${a.title} — Evalis`;
   const descrizione = seo.description ?? a.excerpt;
@@ -56,8 +64,15 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const trovato = await articoloBlog(slug);
-  if (!trovato) notFound();
+  const { isEnabled: bozza } = await draftMode();
+  const trovato = await articoloBlog(slug, { bozza });
+  if (!trovato) {
+    // prima di dire 404: il redattore potrebbe aver rinominato l'articolo. Se lo slug e' solo
+    // vecchio, si risponde 301 verso quello nuovo e non si perde nulla di quanto indicizzato.
+    const nuovo = await slugSostitutivo(slug);
+    if (nuovo) permanentRedirect(`/blog/${nuovo}`);
+    notFound();
+  }
   const { articolo: a, correlati } = trovato;
 
   const ld = {
@@ -79,7 +94,18 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <>
-      <JsonLd data={ld} />
+      {/* Lo schema Article NON va emesso per una bozza: descriverebbe a Google una pagina
+          che non esiste ancora. */}
+      {bozza ? (
+        <div className="fixed bottom-0 inset-x-0 z-50 bg-near-black text-white text-sm px-4 py-3 flex flex-wrap items-center justify-center gap-3">
+          <span>Stai vedendo una <strong>bozza</strong>, non l&apos;articolo pubblicato.</span>
+          <Link href="/api/blog/preview/esci" className="underline hover:no-underline">
+            Esci dall&apos;anteprima
+          </Link>
+        </div>
+      ) : (
+        <JsonLd data={ld} />
+      )}
       <BlogPost article={a} related={correlati} />
     </>
   );

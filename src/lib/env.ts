@@ -54,6 +54,16 @@ const schema = z.object({
   // token segreto per l'anteprima-staff (C.2): permette l'accesso via ?token= all'automazione
   // Playwright oltre al login admin. Solo lettura del contenuto slide.
   PREVIEW_TOKEN: z.string().optional(),
+  // Blog headless: WordPress vive su un sottodominio chiuso e il pubblico vede solo il dominio
+  // principale. Nessuno dei due e' scritto nel codice, cosi' lo stesso modulo serve un secondo
+  // sito cambiando solo queste variabili.
+  BLOG_CMS_URL: z.string().optional(),
+  BLOG_CMS_USER: z.string().optional(),
+  BLOG_CMS_APP_PASSWORD: z.string().optional(), // Application Password di WordPress
+  // segreto per l'anteprima delle bozze: finisce negli URL (cronologia, referrer), quindi
+  // resta separato da quello del webhook, che non lascia mai il server
+  BLOG_PREVIEW_TOKEN: z.string().optional(),
+  BLOG_WEBHOOK_TOKEN: z.string().optional(),
 });
 
 // A-4 (audit go-live): in PRODUZIONE alcuni segreti NON possono mancare, altrimenti il player
