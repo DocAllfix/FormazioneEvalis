@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import DashboardMockup from "./DashboardMockup";
+import EcoVadisBadge from "./EcoVadisBadge";
 
 export default function BentoHero() {
   return (
@@ -22,7 +23,12 @@ export default function BentoHero() {
 
             
 
-            <h1 className="mt-6 font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-[88px] leading-[1.05] tracking-tight text-near-black">
+            {/* prima cosa che si vede entrando: la medaglia, dentro una card che stacca dal fondo */}
+            <div className="inline-flex max-w-full items-center rounded-2xl border border-[#EAE4DB] bg-white/90 backdrop-blur-[6px] pl-2.5 pr-3.5 py-2.5 sm:pl-3 sm:pr-5 sm:py-3 shadow-[0_6px_24px_rgba(26,18,9,0.08)]">
+              <EcoVadisBadge size="lg" />
+            </div>
+
+            <h1 className="mt-5 sm:mt-7 font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-[88px] leading-[1.05] tracking-tight text-near-black">
               Certifica le tue competenze.
             </h1>
 
@@ -45,6 +51,7 @@ export default function BentoHero() {
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
+
           </div>
 
           <div className="lg:col-span-5">

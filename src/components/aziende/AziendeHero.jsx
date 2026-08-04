@@ -15,13 +15,13 @@ export default function AziendeHero() {
   return (
     <section className="relative min-h-[88vh] flex items-center dot-grid bg-background pt-28 pb-16">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 w-full">
-        <div className="grid lg:grid-cols-[55%_45%] gap-12 lg:gap-10 items-center">
+        <div className="grid min-w-0 lg:grid-cols-[55%_45%] gap-12 lg:gap-10 items-center">
           <ScrollReveal>
             <span className="text-[11px] uppercase tracking-[0.16em] text-primary font-medium">Per le aziende</span>
-            <h1 className="mt-4 font-heading text-[52px] md:text-[68px] lg:text-[80px] leading-[1.05] text-near-black">
+            <h1 className="mt-4 font-heading text-[34px] sm:text-[44px] md:text-[68px] lg:text-[80px] leading-[1.08] md:leading-[1.05] text-near-black text-balance">
               Certifica le competenze del tuo team, in modo verificabile.
             </h1>
-            <p className="mt-6 text-[18px] text-[#7A7068] leading-relaxed max-w-[480px]">
+            <p className="mt-6 text-[17px] sm:text-[18px] text-[#7A7068] leading-relaxed max-w-full sm:max-w-[480px]">
               Assegni i percorsi, monitori la preparazione e ottieni certificati verificabili, tutto da un'unica console aziendale.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
