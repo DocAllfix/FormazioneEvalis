@@ -90,6 +90,5 @@ export function mappaPost(post: PostWP, opts: { cms: string; pubblico: string })
       ) || "",
     // la sanificazione va per ULTIMA: agisce sull'HTML gia' riscritto, cosi' nulla le sfugge
     content: sanificaHtml(contenutoRiscritto),
-    formato: "html",
   };
 }

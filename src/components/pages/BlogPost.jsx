@@ -1,68 +1,16 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 import { ArrowRight, ArrowLeft, ChevronRight, Clock } from "lucide-react";
 import SiteHeader from "@/components/landing/SiteHeader";
 import SiteFooter from "@/components/landing/SiteFooter";
 import ScrollReveal from "@/components/landing/ScrollReveal";
 import { dataItaliana } from "@/features/blog/data";
 
-const mdComponents = {
-  h2: ({ node, ...props }) => (
-    <h2
-      className="font-heading text-2xl md:text-3xl text-near-black mt-10 mb-4"
-      {...props}
-    />
-  ),
-  h3: ({ node, ...props }) => (
-    <h3
-      className="font-heading text-xl md:text-2xl text-near-black mt-8 mb-3"
-      {...props}
-    />
-  ),
-  p: ({ node, ...props }) => (
-    <p
-      className="text-base md:text-lg text-[#5C5347] leading-relaxed mb-5"
-      {...props}
-    />
-  ),
-  img: ({ node, ...props }) => (
-    <img
-      className="w-full rounded-xl my-8 border border-[#EAE4DB]"
-      {...props}
-    />
-  ),
-  ul: ({ node, ...props }) => (
-    <ul
-      className="list-disc list-inside space-y-2 text-base text-[#5C5347] leading-relaxed mb-5"
-      {...props}
-    />
-  ),
-  ol: ({ node, ...props }) => (
-    <ol
-      className="list-decimal list-inside space-y-2 text-base text-[#5C5347] leading-relaxed mb-5"
-      {...props}
-    />
-  ),
-  blockquote: ({ node, ...props }) => (
-    <blockquote
-      className="border-l-4 border-primary pl-5 italic text-[#5C5347] my-6 text-base md:text-lg"
-      {...props}
-    />
-  ),
-  strong: ({ node, ...props }) => (
-    <strong className="font-medium text-near-black" {...props} />
-  ),
-  a: ({ node, ...props }) => (
-    <a className="text-primary underline hover:no-underline" {...props} />
-  ),
-};
-
 /**
  * L'articolo e i correlati arrivano dalla pagina server: il componente non conosce la fonte.
- * `article.content` e' Markdown (fonte precedente) oppure HTML GIA' SANIFICATO da
- * `src/features/blog/sanitize.ts` — mai HTML grezzo del CMS.
+ * `article.content` e' HTML GIA' SANIFICATO da `src/features/blog/sanitize.ts` — mai HTML
+ * grezzo del CMS.
  */
 export default function BlogPost({ article, related }) {
   const correlati = related ?? [];
@@ -168,18 +116,9 @@ export default function BlogPost({ article, related }) {
         <section className="w-full py-12 md:py-16 bg-background">
           <div className="max-w-3xl mx-auto px-6 md:px-10">
             <ScrollReveal delay={0.15}>
-              {article.formato === "html" ? (
-                // gia' sanificato lato server: la lista bianca di sanitize.ts ha tolto script,
-                // gestori di eventi e schemi pericolosi prima che l'HTML arrivasse qui
-                <div
-                  className="articolo-blog"
-                  dangerouslySetInnerHTML={{ __html: article.content }}
-                />
-              ) : (
-                <ReactMarkdown components={mdComponents}>
-                  {article.content}
-                </ReactMarkdown>
-              )}
+              {/* gia' sanificato lato server: la lista bianca di sanitize.ts ha tolto script,
+                  gestori di eventi e schemi pericolosi prima che l'HTML arrivasse qui */}
+              <div className="articolo-blog" dangerouslySetInnerHTML={{ __html: article.content }} />
             </ScrollReveal>
 
             {/* Chi ha scritto. Non e' decorazione: e' il segnale che dice a chi legge — e a

@@ -9,6 +9,8 @@
 // Legge le pagine COME LE VEDE UN VISITATORE (HTTP sul sito pubblicato), non i dati interni:
 // un controllo che guarda le stesse strutture che genera la pagina non verifica niente.
 
+import { SLUG_RIMOSSI } from "./rimossi";
+
 export type Esito = {
   nome: string;
   ok: boolean;
@@ -118,10 +120,38 @@ export async function verificaBlog(opts: Opzioni): Promise<Esito[]> {
   }
 
   const urlArticoli = urlArticoliDaSitemap(sitemap.testo, sito);
+
+  // Un articolo pubblicato con uno slug che sta nell'elenco dei rimossi verrebbe COPERTO dal
+  // 410, e nessuno se ne accorgerebbe: la pagina esiste, la sitemap la elenca, ma chi la apre
+  // legge "rimosso". Il conflitto si scopre qui invece che dopo settimane.
+  const coperti = urlArticoli
+    .map((u) => u.replace(`${sito}/blog/`, "").replace(/\/$/, ""))
+    .filter((slug) => SLUG_RIMOSSI.includes(slug));
+  aggiungi(
+    "conflitto-rimossi",
+    coperti.length === 0,
+    coperti.length === 0
+      ? "nessun articolo pubblicato e' coperto da un 410"
+      : `questi articoli sono pubblicati MA rispondono 410: ${coperti.join(", ")} — togliere lo slug da rimossi.ts`,
+  );
   aggiungi(
     "conteggio",
     urlArticoli.length > 0,
     `${urlArticoli.length} articoli in sitemap${urlArticoli.length === 0 ? " — un blog vuoto non si pubblica" : ""}`,
+  );
+
+  // --- i vecchi URL devono rispondere 410, mai 404 ---------------------------------------
+  const sbagliati: string[] = [];
+  for (const slug of SLUG_RIMOSSI) {
+    const r = await prendi(`${sito}/blog/${slug}`);
+    if (r?.stato !== 410) sbagliati.push(`${slug} -> ${r?.stato ?? "nessuna risposta"}`);
+  }
+  aggiungi(
+    "vecchi-url",
+    sbagliati.length === 0,
+    sbagliati.length === 0
+      ? `${SLUG_RIMOSSI.length} vecchi URL rispondono 410 (non 404: Google li toglie subito)`
+      : sbagliati.join("; "),
   );
 
   // --- il CMS non deve essere indicizzabile ---------------------------------------------

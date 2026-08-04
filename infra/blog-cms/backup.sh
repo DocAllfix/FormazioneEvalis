@@ -90,19 +90,33 @@ find "$BACKUP_DIR" -mindepth 1 -maxdepth 1 -type d -mtime +"$RETENTION_DAYS" -ex
 # Copia off-site. Il backup NON deve vivere solo sulla macchina che protegge: uno snapshot
 # della VPS non serve a niente se e' la VPS ad essere sparita.
 if [ -n "${STORAGE_BOX:-}" ]; then
-  # la Storage Box parla SSH sulla porta 23: niente rclone, basta rsync
-  ssh -p 23 "$STORAGE_BOX" "mkdir -p $STORAGE_PATH" 2>/dev/null || true
+  # ⚠️ La Storage Box NON e' una shell normale: sulla porta 23 gira un ambiente ristretto che
+  # conosce ls, mkdir, rm, stat — ma non `find`. Percio' la potatura si decide QUI e si
+  # spediscono la' solo le cancellazioni, una per una.
+  ssh -p 23 "$STORAGE_BOX" "mkdir $STORAGE_PATH" 2>/dev/null || true
 
-  # ⚠️ NIENTE --delete. Con --delete, una cartella locale svuotata (disco pieno, errore mio,
+  # NIENTE --delete. Con --delete, una cartella locale svuotata (disco pieno, errore mio,
   # macchina compromessa) cancellerebbe anche le copie off-site: il backup morirebbe proprio
-  # nel momento in cui serve. Si copia soltanto, e la potatura e' un comando a parte.
+  # nel momento in cui serve. Si copia soltanto.
   rsync -a -e 'ssh -p 23' "$DEST" "$STORAGE_BOX:$STORAGE_PATH/"
   echo "[backup] copia off-site su $STORAGE_BOX:$STORAGE_PATH/$STAMP ok"
 
-  # potatura off-site: piu' lunga di quella locale, ed esplicita
-  ssh -p 23 "$STORAGE_BOX" \
-    "find $STORAGE_PATH -mindepth 1 -maxdepth 1 -type d -mtime +${OFFSITE_RETENTION_DAYS:-90} -exec rm -rf {} +" \
-    2>/dev/null || echo "[backup] nota: potatura off-site non eseguita" >&2
+  # Potatura: i nomi delle cartelle SONO le date (2026-08-04-031500), quindi l'eta' si legge
+  # dal nome. E' anche piu' solido che fidarsi della data di modifica remota, che una copia
+  # puo' aggiornare.
+  LIMITE=$(date -d "-${OFFSITE_RETENTION_DAYS:-90} days" +%Y-%m-%d 2>/dev/null || echo "")
+  if [ -n "$LIMITE" ]; then
+    for vecchia in $(ssh -p 23 "$STORAGE_BOX" "ls $STORAGE_PATH" 2>/dev/null | tr -d '\r'); do
+      case "$vecchia" in
+        [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*)
+          if [ "${vecchia%%-[0-9][0-9][0-9][0-9][0-9][0-9]}" \< "$LIMITE" ]; then
+            ssh -p 23 "$STORAGE_BOX" "rm -rf $STORAGE_PATH/$vecchia" 2>/dev/null \
+              && echo "[backup] potata la copia off-site $vecchia"
+          fi
+          ;;
+      esac
+    done
+  fi
 else
   echo "[backup] ATTENZIONE: STORAGE_BOX non configurata — il backup e' SOLO locale" >&2
 fi

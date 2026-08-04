@@ -81,7 +81,6 @@ describe("client REST del CMS", () => {
     expect(a.content).toContain(`${PUB}/blog/x`);
     expect(a.content).not.toContain("cms.evalisacademy.it");
     expect(a.content).not.toContain("script");
-    expect(a.formato).toBe("html");
     expect(a.date).toMatch(/^2026-07-01T/);
   });
 

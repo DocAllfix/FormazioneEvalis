@@ -25,11 +25,6 @@ export type Articolo = {
   readTime: string;
   image: string;
   content: string;
-  /**
-   * WordPress da' HTML, la fonte precedente dava Markdown. Il campo esiste solo per il periodo
-   * di convivenza delle due fonti: sparisce con la Fase 8, insieme al Markdown.
-   */
-  formato?: "html" | "markdown";
 };
 
 /** Metadati SEO ricavati da Yoast, con gli URL GIA' riportati sul dominio pubblico. */

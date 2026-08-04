@@ -5,12 +5,27 @@
 
 import { NextResponse, type NextRequest } from "next/server";
 import { extractSubdomain, isReservedSubdomain } from "@/lib/reserved-subdomains";
+import { eRimosso } from "@/features/blog/rimossi";
 
 const ROOT_DOMAIN = process.env.NEXT_PUBLIC_ROOT_DOMAIN ?? "localhost:3000";
 
 export function proxy(req: NextRequest) {
   const host = req.headers.get("host") ?? "";
   const rootHost = ROOT_DOMAIN.split(":")[0];
+
+  // Vecchi articoli eliminati col passaggio a WordPress: 410, non 404. Il 404 li lascerebbe
+  // nell'indice per mesi; il 410 dice a Google che sono rimossi e basta. Sta qui e non nella
+  // pagina perche' una pagina Next puo' rispondere 404, non 410.
+  if (eRimosso(new URL(req.url).pathname)) {
+    return new NextResponse(
+      "<!doctype html><html lang=\"it\"><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex\">" +
+        "<title>Articolo rimosso — Evalis Academy</title></head><body>" +
+        "<h1>Questo articolo non è più disponibile</h1>" +
+        "<p>È stato rimosso. Trovi gli approfondimenti aggiornati sul <a href=\"/blog\">blog</a>.</p>" +
+        "</body></html>",
+      { status: 410, headers: { "content-type": "text/html; charset=utf-8" } },
+    );
+  }
 
   // Canonicalizzazione: l'URL tecnico *.vercel.app NON deve essere pubblicamente navigabile
   // (brand + niente contenuto duplicato in SEO). In produzione rimanda al dominio ufficiale,

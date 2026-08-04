@@ -5,6 +5,7 @@
 
 import { describe, it, expect, afterEach, vi } from "vitest";
 import { verificaBlog, riepilogo, canonicalDi, quantiSchemiArticolo, urlArticoliDaSitemap } from "../features/blog/verifica";
+import { SLUG_RIMOSSI } from "../features/blog/rimossi";
 
 const SITO = "https://evalisacademy.it";
 const CMS = "https://cms.evalisacademy.it";
@@ -53,6 +54,8 @@ function sitoFinto(pagine: Record<string, Pagina>) {
     [`${CMS}/wp-sitemap.xml`]: { stato: 404 },
     [`${CMS}/sitemap_index.xml`]: { stato: 404 },
   };
+  // i vecchi articoli eliminati rispondono 410: e' lo stato corretto dopo il passaggio
+  for (const slug of SLUG_RIMOSSI) base[`${SITO}/blog/${slug}`] = { stato: 410 };
   const tutte = { ...base, ...pagine };
 
   vi.stubGlobal(
@@ -179,6 +182,29 @@ describe("sabotaggi: ognuno DEVE far fallire il controllo", () => {
     });
     expect(e?.ok).toBe(false);
     expect(e?.dettaglio).toMatch(/vuoto/i);
+  });
+
+  it("un vecchio articolo torna 404 invece di 410: resterebbe mesi nell'indice", async () => {
+    const e = await esitoDi("vecchi-url", { [`${SITO}/blog/${SLUG_RIMOSSI[0]}`]: { stato: 404 } });
+    expect(e?.ok).toBe(false);
+    expect(e?.dettaglio).toContain("404");
+  });
+
+  it("un vecchio articolo torna a rispondere 200: e' rivissuto senza che nessuno lo sappia", async () => {
+    const e = await esitoDi("vecchi-url", {
+      [`${SITO}/blog/${SLUG_RIMOSSI[0]}`]: { corpo: paginaArticolo() },
+    });
+    expect(e?.ok).toBe(false);
+  });
+
+  it("un articolo pubblicato viene COPERTO da un 410", async () => {
+    const conflitto = `<?xml version="1.0"?><urlset>
+      <url><loc>${SITO}/blog/uno</loc></url>
+      <url><loc>${SITO}/blog/${SLUG_RIMOSSI[0]}</loc></url>
+    </urlset>`;
+    const e = await esitoDi("conflitto-rimossi", { [`${SITO}/sitemap.xml`]: { corpo: conflitto } });
+    expect(e?.ok).toBe(false);
+    expect(e?.dettaglio).toContain(SLUG_RIMOSSI[0]);
   });
 
   it("la sitemap non risponde: si ferma subito invece di dire che va tutto bene", async () => {

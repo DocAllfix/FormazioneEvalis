@@ -164,14 +164,21 @@ add_filter('xmlrpc_enabled', '__return_false');
  * Si compila nel profilo utente e il sito lo legge dalla REST.
  * ------------------------------------------------------------------------------------- */
 
-add_action('init', function () {
-    register_meta('user', 'evalis_ruolo', array(
-        'type'         => 'string',
-        'single'       => true,
-        'show_in_rest' => true,
-        'auth_callback' => function () {
-            return current_user_can('edit_users');
+// `register_meta` + show_in_rest NON basta per gli utenti: il campo `meta` non compare nella
+// risposta pubblica, e il ruolo arrivava vuoto al sito. `register_rest_field` lo mette a
+// livello principale ed e' esplicito su come si legge.
+add_action('rest_api_init', function () {
+    register_rest_field('user', 'evalis_ruolo', array(
+        'get_callback' => function ($utente) {
+            return (string) get_user_meta($utente['id'], 'evalis_ruolo', true);
         },
+        'schema' => array(
+            'description' => 'Ruolo mostrato sotto il nome nella pagina autore',
+            'type'        => 'string',
+            // 'embed' e' indispensabile: l'autore dentro ?_embed viaggia in quel contesto, e
+            // senza il campo arriverebbe al sito sempre vuoto pur essendoci nel database.
+            'context'     => array('embed', 'view', 'edit'),
+        ),
     ));
 });
 
