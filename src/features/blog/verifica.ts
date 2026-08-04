@@ -22,6 +22,8 @@ type Opzioni = {
   cms?: string;
   /** Quanti articoli aprire davvero. 0 = tutti. */
   massimoArticoli?: number;
+  /** Soglia di peso per una singola immagine, in KB. Oltre, e' rosso. */
+  massimoImmagineKb?: number;
 };
 
 const TIMEOUT_MS = 15_000;
@@ -71,6 +73,19 @@ export function quantiSchemiArticolo(html: string): number {
     if (/"@type"\s*:\s*"(Article|BlogPosting|NewsArticle)"/.test(b[1])) n++;
   }
   return n;
+}
+
+/** Gli indirizzi delle immagini caricate dal CMS che una pagina usa. */
+export function immaginiDellaPagina(html: string, sito: string): string[] {
+  const pubblico = senzaBarra(sito);
+  const src = [...html.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)].map((m) => m[1]);
+  return [
+    ...new Set(
+      src
+        .filter((u) => u.includes("/wp-content/uploads/"))
+        .map((u) => (u.startsWith("http") ? u : `${pubblico}${u}`)),
+    ),
+  ];
 }
 
 /** I link alle pagine autore presenti nella pagina. */
@@ -133,6 +148,7 @@ export async function verificaBlog(opts: Opzioni): Promise<Esito[]> {
   // --- ogni articolo, uno per uno --------------------------------------------------------
   const daControllare = opts.massimoArticoli ? urlArticoli.slice(0, opts.massimoArticoli) : urlArticoli;
   const pagineAutore = new Set<string>();
+  const immagini = new Set<string>();
   const problemi: string[] = [];
 
   for (const url of daControllare) {
@@ -158,6 +174,7 @@ export async function verificaBlog(opts: Opzioni): Promise<Esito[]> {
     if (schemi !== 1) problemi.push(`${url}: ${schemi} schemi Article (atteso 1)`);
 
     for (const a of autoriCitati(html, sito)) pagineAutore.add(a);
+    for (const i of immaginiDellaPagina(html, sito)) immagini.add(i);
   }
 
   aggiungi(
@@ -166,6 +183,29 @@ export async function verificaBlog(opts: Opzioni): Promise<Esito[]> {
     problemi.length === 0
       ? `${daControllare.length} articoli senza difetti`
       : problemi.slice(0, 20).join("; ") + (problemi.length > 20 ? ` … e altri ${problemi.length - 20}` : ""),
+  );
+
+  // --- peso delle immagini ---------------------------------------------------------------
+  // Chi scrive carica l'immagine che ha, e spesso e' un PNG da un megabyte e mezzo. Nessuno se
+  // ne accorge guardando la pagina da ufficio: se ne accorge chi legge da telefono, e il
+  // caricamento lento e' un fattore di posizionamento. Si misura con una HEAD, non scaricando.
+  const soglia = (opts.massimoImmagineKb ?? 400) * 1024;
+  const pesanti: string[] = [];
+  for (const u of immagini) {
+    try {
+      const r = await fetch(u, { method: "HEAD", signal: AbortSignal.timeout(TIMEOUT_MS), cache: "no-store" });
+      const byte = Number(r.headers.get("content-length") ?? 0);
+      if (byte > soglia) pesanti.push(`${u} → ${Math.round(byte / 1024)} KB`);
+    } catch {
+      pesanti.push(`${u} → non raggiungibile`);
+    }
+  }
+  aggiungi(
+    "peso-immagini",
+    pesanti.length === 0,
+    pesanti.length === 0
+      ? `${immagini.size} immagini, tutte sotto ${opts.massimoImmagineKb ?? 400} KB`
+      : pesanti.join("; "),
   );
 
   // --- nessun collegamento morto verso una pagina autore ---------------------------------

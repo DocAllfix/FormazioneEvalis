@@ -226,7 +226,8 @@ export default function BlogPost({ article, related }) {
           </div>
         </section>
 
-        {/* Related */}
+        {/* Related — senza correlati resterebbe una fascia vuota sotto l'articolo */}
+        {correlati.length > 0 ? (
         <section className="w-full pb-20 md:pb-24 bg-cream-dark">
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
             <ScrollReveal>
@@ -270,6 +271,7 @@ export default function BlogPost({ article, related }) {
             </div>
           </div>
         </section>
+        ) : null}
       </main>
       <SiteFooter />
     </div>

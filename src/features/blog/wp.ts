@@ -142,10 +142,16 @@ export async function autorePerSlug(slug: string): Promise<Autore | null> {
   return autoreDaPost({ id: 0, slug: "", _embedded: { author: [u] } } as PostWP) ?? null;
 }
 
-/** Gli slug di tutti gli autori che hanno almeno un articolo pubblicato. */
+/**
+ * Gli slug di tutti gli autori che hanno almeno un articolo pubblicato.
+ *
+ * NIENTE `who=authors`: da WordPress 5.9 quel parametro pretende l'autenticazione e a chi
+ * legge da fuori risponde 401 — cioe' farebbe fallire ogni compilazione. `has_published_posts`
+ * fa la stessa selezione ed e' pubblico, che e' anche il motivo per cui l'hanno introdotto.
+ */
 export async function slugAutori(): Promise<string[]> {
   const utenti = await chiamata<Array<{ slug?: string }>>(
-    "/wp/v2/users?per_page=100&who=authors&has_published_posts=true&_fields=slug",
+    "/wp/v2/users?per_page=100&has_published_posts=true&_fields=slug",
   );
   return (utenti ?? []).map((u) => u.slug).filter((s): s is string => Boolean(s));
 }

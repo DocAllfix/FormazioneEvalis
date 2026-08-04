@@ -104,7 +104,8 @@ export default function Blog({ articoli }) {
         </section>
         ) : null}
 
-        {/* Grid */}
+        {/* Grid — con un articolo solo questa sezione sarebbe un titolo sopra il vuoto */}
+        {articles.length > 0 ? (
         <section className="w-full pb-20 md:pb-24 bg-background">
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
             <ScrollReveal>
@@ -119,6 +120,7 @@ export default function Blog({ articoli }) {
             </div>
           </div>
         </section>
+        ) : null}
 
         {/* Newsletter */}
         <section className="w-full py-16 md:py-20 bg-cream-dark">

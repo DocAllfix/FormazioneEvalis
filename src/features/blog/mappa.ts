@@ -42,13 +42,18 @@ export function tempoDiLettura(html: string | undefined): string {
 export function autoreDaPost(post: PostWP): Autore | undefined {
   const a = post._embedded?.author?.[0];
   if (!a?.name) return undefined;
-  const ruolo = a.meta?.evalis_ruolo;
+  const ruolo = a.evalis_ruolo;
+  // L'immagine dell'autore si accetta SOLO se la ospitiamo noi. WordPress propone Gravatar,
+  // che farebbe contattare un server di terze parti dal browser di ogni visitatore: un dato
+  // (l'indirizzo IP di chi legge) ceduto a qualcuno che la nostra informativa non nomina, e
+  // per giunta per mostrare quasi sempre una sagoma grigia predefinita.
+  const avatar = a.avatar_urls?.["96"];
   return {
     slug: a.slug ?? "",
     nome: decodificaEntita(a.name),
     ruolo: ruolo ? decodificaEntita(ruolo) : undefined,
     bio: a.description ? decodificaEntita(a.description) : undefined,
-    avatar: a.avatar_urls?.["96"],
+    avatar: avatar && !/gravatar\.com|\.wp\.com/i.test(avatar) ? avatar : undefined,
   };
 }
 

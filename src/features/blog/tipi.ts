@@ -61,8 +61,9 @@ export type PostWP = {
       name?: string;
       description?: string;
       avatar_urls?: Record<string, string>;
-      /** `evalis_ruolo`: WordPress non ha un campo "ruolo", lo aggiunge il nostro mu-plugin. */
-      meta?: { evalis_ruolo?: string } & Record<string, unknown>;
+      /** WordPress non ha un campo "ruolo": lo aggiunge il nostro mu-plugin, a livello
+       * principale (dentro `meta` il controller degli utenti non lo espone al pubblico). */
+      evalis_ruolo?: string;
     }>;
     "wp:featuredmedia"?: Array<{ source_url?: string; alt_text?: string }>;
     "wp:term"?: Array<Array<{ taxonomy?: string; name?: string; slug?: string }>>;
