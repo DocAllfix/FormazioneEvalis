@@ -14,6 +14,22 @@ const nextConfig: NextConfig = {
   experimental: {
     staleTimes: { dynamic: 30, static: 180 },
   },
+  // Le immagini degli articoli restano ospitate dal CMS: senza questa autorizzazione Next
+  // rifiuta di servirle. L'host arriva da BLOG_CMS_URL — nessun dominio scritto qui dentro,
+  // cosi' un secondo sito con un altro CMS non richiede di toccare questo file.
+  images: {
+    remotePatterns: (() => {
+      const cms = process.env.BLOG_CMS_URL;
+      if (!cms) return [];
+      try {
+        const u = new URL(cms);
+        const protocollo = u.protocol === "http:" ? ("http" as const) : ("https" as const);
+        return [{ protocol: protocollo, hostname: u.hostname }];
+      } catch {
+        return [];
+      }
+    })(),
+  },
   // Header di sicurezza (sicuri, no-CSP: la CSP richiede uno step dedicato per non rompere
   // script inline Next / Cloudflare Stream / Sentry). Coprono clickjacking, MIME-sniffing,
   // leak del referrer e API del browser non usate.

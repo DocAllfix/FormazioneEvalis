@@ -181,3 +181,120 @@
     animation: none;
   }
 }
+
+/* Corpo degli articoli del blog quando arriva come HTML dal CMS.
+   Ricalca ESATTAMENTE le classi che `mdComponents` in BlogPost.jsx applica al Markdown: il
+   passaggio a WordPress non deve cambiare di un pixel l'aspetto di un articolo.
+   I tag ammessi sono quelli della lista bianca in src/features/blog/sanitize.ts. */
+.articolo-blog h2 {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: var(--color-near-black, #1A1209);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .articolo-blog h2 { font-size: 1.875rem; }
+  .articolo-blog h3 { font-size: 1.5rem; }
+  .articolo-blog p, .articolo-blog blockquote { font-size: 1.125rem; }
+}
+.articolo-blog h3 {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  color: var(--color-near-black, #1A1209);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.articolo-blog h4 {
+  font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.125rem;
+  color: var(--color-near-black, #1A1209);
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.articolo-blog p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #5C5347;
+  margin-bottom: 1.25rem;
+}
+.articolo-blog img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin: 2rem 0;
+  border: 1px solid #EAE4DB;
+}
+.articolo-blog figure { margin: 2rem 0; }
+.articolo-blog figcaption {
+  font-size: 0.8125rem;
+  color: #766E66;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.articolo-blog ul, .articolo-blog ol {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #5C5347;
+  margin-bottom: 1.25rem;
+  padding-left: 1.25rem;
+}
+.articolo-blog ul { list-style: disc; }
+.articolo-blog ol { list-style: decimal; }
+.articolo-blog li { margin-bottom: 0.5rem; }
+.articolo-blog blockquote {
+  border-left: 4px solid var(--color-primary, #EA580C);
+  padding-left: 1.25rem;
+  font-style: italic;
+  color: #5C5347;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+}
+.articolo-blog strong, .articolo-blog b {
+  font-weight: 500;
+  color: var(--color-near-black, #1A1209);
+}
+.articolo-blog a {
+  color: var(--color-primary, #EA580C);
+  text-decoration: underline;
+}
+.articolo-blog a:hover { text-decoration: none; }
+.articolo-blog hr {
+  border: 0;
+  border-top: 1px solid #EAE4DB;
+  margin: 2.5rem 0;
+}
+.articolo-blog table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9375rem;
+  color: #5C5347;
+}
+.articolo-blog th, .articolo-blog td {
+  border: 1px solid #EAE4DB;
+  padding: 0.625rem 0.875rem;
+  text-align: left;
+}
+.articolo-blog th {
+  background: #F5EFE6;
+  color: var(--color-near-black, #1A1209);
+  font-weight: 500;
+}
+/* le tabelle larghe scorrono da sole invece di allargare la pagina sul telefono */
+.articolo-blog > table { display: block; overflow-x: auto; }
+.articolo-blog pre {
+  background: #F5EFE6;
+  border: 1px solid #EAE4DB;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+}
+.articolo-blog code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+}

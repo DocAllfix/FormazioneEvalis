@@ -5,7 +5,7 @@ import { ArrowRight, ChevronRight, Clock } from "lucide-react";
 import SiteHeader from "@/components/landing/SiteHeader";
 import SiteFooter from "@/components/landing/SiteFooter";
 import ScrollReveal from "@/components/landing/ScrollReveal";
-import { featured, articles } from "@/lib/blogArticles";
+import { dataItaliana } from "@/features/blog/data";
 
 function ArticleCard({ article, index }) {
   return (
@@ -35,7 +35,7 @@ function ArticleCard({ article, index }) {
           </p>
           <div className="mt-5 pt-4 border-t border-[#EAE4DB] flex items-center justify-between">
             <div className="flex items-center gap-2 text-xs text-[#766E66]">
-              <span>{article.date}</span>
+              <time dateTime={article.date}>{dataItaliana(article.date)}</time>
               <span>·</span>
               <span className="inline-flex items-center gap-1">
                 <Clock className="h-3 w-3" />
@@ -52,7 +52,16 @@ function ArticleCard({ article, index }) {
   );
 }
 
-export default function Blog() {
+/**
+ * Gli articoli arrivano dalla pagina server (`articoli`, dal piu' recente): il componente non
+ * conosce piu' la fonte, cosi' il passaggio a WordPress non lo tocca.
+ * Il primo articolo e' quello in evidenza.
+ */
+export default function Blog({ articoli }) {
+  const elenco = articoli ?? [];
+  const featured = elenco[0];
+  const articles = elenco.slice(1);
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SiteHeader />
@@ -90,6 +99,7 @@ export default function Blog() {
         </section>
 
         {/* Featured */}
+        {featured ? (
         <section className="w-full py-8 md:py-12 bg-background">
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
             <ScrollReveal>
@@ -125,7 +135,7 @@ export default function Blog() {
                     <div className="flex items-center gap-2 text-xs text-[#766E66]">
                       <span>{featured.author}</span>
                       <span>·</span>
-                      <span>{featured.date}</span>
+                      <time dateTime={featured.date}>{dataItaliana(featured.date)}</time>
                       <span>·</span>
                       <span className="inline-flex items-center gap-1">
                         <Clock className="h-3 w-3" />
@@ -141,6 +151,7 @@ export default function Blog() {
             </ScrollReveal>
           </div>
         </section>
+        ) : null}
 
         {/* Grid */}
         <section className="w-full pb-20 md:pb-24 bg-background">

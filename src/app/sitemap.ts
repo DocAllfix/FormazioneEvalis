@@ -1,23 +1,19 @@
 import type { MetadataRoute } from "next";
 import { listPublishedCourses } from "@/features/catalog/queries";
-import { allArticles } from "@/lib/blogArticles";
+import { elencoBlog } from "@/features/blog/fonte";
 
 const APP = (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
-/** "12 Giu 2026" → Date, per il lastmod degli articoli. */
-function dataArticolo(data?: string): Date | undefined {
-  const mesi: Record<string, number> = {
-    gen: 0, feb: 1, mar: 2, apr: 3, mag: 4, giu: 5, lug: 6, ago: 7, set: 8, ott: 9, nov: 10, dic: 11,
-  };
-  const m = data?.match(/(\d{1,2})\s+([A-Za-z]{3})[a-z]*\s+(\d{4})/);
-  if (!m) return undefined;
-  const mese = mesi[m[2].toLowerCase()];
-  return mese === undefined ? undefined : new Date(Number(m[3]), mese, Number(m[1]));
+/** Data ISO → Date per il lastmod. Vuota o illeggibile → si usa oggi. */
+function quando(iso?: string): Date | undefined {
+  if (!iso) return undefined;
+  const d = new Date(iso);
+  return Number.isNaN(d.getTime()) ? undefined : d;
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const courses = await listPublishedCourses().catch(() => []);
-  const articoli = allArticles as { slug: string; date?: string }[];
+  const articoli = await elencoBlog();
   const oggi = new Date();
 
   // NB: /pricing NON è ancora una pagina reale (prezzi in arrivo) → fuori dalla sitemap
@@ -40,9 +36,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     }));
 
+  // lastmod = data di ULTIMA MODIFICA quando c'e': e' il segnale che dice al crawler
+  // "questo articolo e' stato aggiornato, ricontrollalo"
   const blogPages: MetadataRoute.Sitemap = articoli.map((a) => ({
     url: `${APP}/blog/${a.slug}`,
-    lastModified: dataArticolo(a.date) ?? oggi,
+    lastModified: quando(a.dateModified) ?? quando(a.date) ?? oggi,
     changeFrequency: "monthly",
     priority: 0.6,
   }));

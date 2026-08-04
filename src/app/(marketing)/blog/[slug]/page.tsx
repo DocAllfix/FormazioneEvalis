@@ -1,88 +1,86 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import BlogPost from "@/components/pages/BlogPost";
 import { JsonLd } from "@/components/seo/json-ld";
-import { allArticles, getArticleBySlug } from "@/lib/blogArticles";
+import { articoloBlog, slugBlog } from "@/features/blog/fonte";
+import { soloGiorno } from "@/features/blog/data";
+import { soloTesto } from "@/features/blog/sanitize";
 
 const APP = (process.env.NEXT_PUBLIC_APP_URL ?? "https://evalisacademy.it").replace(/\/$/, "");
 
-type Articolo = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  author: string;
-  date: string;
-  readTime: string;
-  image: string;
-};
+/**
+ * Un articolo pubblicato dopo l'ultima compilazione deve funzionare subito, non dare 404:
+ * la pagina si genera alla prima richiesta e poi resta in cache (Fase 6).
+ */
+export const dynamicParams = true;
 
-/** "12 Giu 2026" → ISO 8601, per datePublished dello schema Article. */
-function dataIso(data: string): string | undefined {
-  const mesi: Record<string, string> = {
-    gen: "01", feb: "02", mar: "03", apr: "04", mag: "05", giu: "06",
-    lug: "07", ago: "08", set: "09", ott: "10", nov: "11", dic: "12",
-  };
-  const m = data?.match(/(\d{1,2})\s+([A-Za-z]{3})[a-z]*\s+(\d{4})/);
-  if (!m) return undefined;
-  const mese = mesi[m[2].toLowerCase()];
-  return mese ? `${m[3]}-${mese}-${m[1].padStart(2, "0")}` : undefined;
-}
-
-/** Ogni articolo ha i PROPRI metadata (title, description, canonical, OG con la sua
- * immagine): senza, ricerca e condivisioni mostrerebbero sempre la scheda del blog. */
+/** Ogni articolo ha i PROPRI metadata. Il canonical arriva da `seo.ts`, che lo forza sul
+ * dominio pubblico: Yoast lo genererebbe puntato al CMS e ci deindicizzerebbe. */
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const a = getArticleBySlug(slug) as Articolo | undefined;
-  if (!a) return { title: "Articolo — Evalis" };
-  const url = `${APP}/blog/${a.slug}`;
-  const immagine = a.image?.startsWith("http") ? a.image : `${APP}${a.image ?? ""}`;
+  const trovato = await articoloBlog(slug);
+  if (!trovato) return { title: "Articolo — Evalis" };
+  const { articolo: a, seo } = trovato;
+
+  const titolo = seo.title ?? `${a.title} — Evalis`;
+  const descrizione = seo.description ?? a.excerpt;
+  const immagine = seo.ogImage ?? (a.image?.startsWith("http") ? a.image : `${APP}${a.image ?? ""}`);
+
   return {
-    title: `${a.title} — Evalis`,
-    description: a.excerpt,
-    alternates: { canonical: url },
+    title: titolo,
+    description: descrizione,
+    alternates: { canonical: seo.canonical },
     openGraph: {
       type: "article",
-      title: a.title,
-      description: a.excerpt,
-      url,
-      images: a.image ? [{ url: immagine }] : undefined,
-      publishedTime: dataIso(a.date),
+      title: seo.ogTitle ?? a.title,
+      description: seo.ogDescription ?? descrizione,
+      url: seo.canonical,
+      images: immagine ? [{ url: immagine }] : undefined,
+      publishedTime: a.date || undefined,
+      modifiedTime: a.dateModified,
       authors: a.author ? [a.author] : undefined,
     },
     twitter: {
       card: "summary_large_image",
-      title: a.title,
-      description: a.excerpt,
-      images: a.image ? [immagine] : undefined,
+      title: seo.ogTitle ?? a.title,
+      description: seo.ogDescription ?? descrizione,
+      images: immagine ? [immagine] : undefined,
     },
   };
 }
 
-export function generateStaticParams() {
-  return (allArticles as Articolo[]).map((a) => ({ slug: a.slug }));
+export async function generateStaticParams() {
+  const slug = await slugBlog();
+  return slug.map((s) => ({ slug: s }));
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const a = getArticleBySlug(slug) as Articolo | undefined;
-  const ld = a
-    ? {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: a.title,
-        description: a.excerpt,
-        image: a.image ? `${APP}${a.image}` : undefined,
-        datePublished: dataIso(a.date),
-        articleSection: a.category,
-        author: { "@type": "Person", name: a.author },
-        publisher: { "@type": "Organization", name: "Evalis Academy", url: APP },
-        mainEntityOfPage: `${APP}/blog/${a.slug}`,
-      }
-    : null;
+  const trovato = await articoloBlog(slug);
+  if (!trovato) notFound();
+  const { articolo: a, correlati } = trovato;
+
+  const ld = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: a.title,
+    description: a.excerpt || soloTesto(a.content).slice(0, 200),
+    image: a.image ? (a.image.startsWith("http") ? a.image : `${APP}${a.image}`) : undefined,
+    datePublished: soloGiorno(a.date),
+    dateModified: soloGiorno(a.dateModified) ?? soloGiorno(a.date),
+    articleSection: a.category,
+    // l'autore punta alla sua pagina quando esiste: e' il collegamento che regge l'E-E-A-T
+    author: a.autore?.slug
+      ? { "@type": "Person", name: a.autore.nome, url: `${APP}/blog/autore/${a.autore.slug}` }
+      : { "@type": "Person", name: a.author },
+    publisher: { "@type": "Organization", name: "Evalis Academy", url: APP },
+    mainEntityOfPage: `${APP}/blog/${a.slug}`,
+  };
+
   return (
     <>
-      {ld ? <JsonLd data={ld} /> : null}
-      <BlogPost />
+      <JsonLd data={ld} />
+      <BlogPost article={a} related={correlati} />
     </>
   );
 }

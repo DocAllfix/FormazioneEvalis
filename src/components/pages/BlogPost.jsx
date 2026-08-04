@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import { ArrowRight, ArrowLeft, ChevronRight, Clock } from "lucide-react";
 import SiteHeader from "@/components/landing/SiteHeader";
 import SiteFooter from "@/components/landing/SiteFooter";
 import ScrollReveal from "@/components/landing/ScrollReveal";
-import { getArticleBySlug, allArticles } from "@/lib/blogArticles";
+import { dataItaliana } from "@/features/blog/data";
 
 const mdComponents = {
   h2: ({ node, ...props }) => (
@@ -60,9 +59,13 @@ const mdComponents = {
   ),
 };
 
-export default function BlogPost() {
-  const { slug } = useParams();
-  const article = getArticleBySlug(slug);
+/**
+ * L'articolo e i correlati arrivano dalla pagina server: il componente non conosce la fonte.
+ * `article.content` e' Markdown (fonte precedente) oppure HTML GIA' SANIFICATO da
+ * `src/features/blog/sanitize.ts` — mai HTML grezzo del CMS.
+ */
+export default function BlogPost({ article, related }) {
+  const correlati = related ?? [];
 
   if (!article) {
     return (
@@ -83,8 +86,6 @@ export default function BlogPost() {
       </div>
     );
   }
-
-  const related = allArticles.filter((a) => a.slug !== slug).slice(0, 3);
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -128,7 +129,7 @@ export default function BlogPost() {
                   {article.author}
                 </span>
                 <span>·</span>
-                <span>{article.date}</span>
+                <time dateTime={article.date}>{dataItaliana(article.date)}</time>
                 <span>·</span>
                 <span className="inline-flex items-center gap-1">
                   <Clock className="h-3.5 w-3.5" />
@@ -158,9 +159,18 @@ export default function BlogPost() {
         <section className="w-full py-12 md:py-16 bg-background">
           <div className="max-w-3xl mx-auto px-6 md:px-10">
             <ScrollReveal delay={0.15}>
-              <ReactMarkdown components={mdComponents}>
-                {article.content}
-              </ReactMarkdown>
+              {article.formato === "html" ? (
+                // gia' sanificato lato server: la lista bianca di sanitize.ts ha tolto script,
+                // gestori di eventi e schemi pericolosi prima che l'HTML arrivasse qui
+                <div
+                  className="articolo-blog"
+                  dangerouslySetInnerHTML={{ __html: article.content }}
+                />
+              ) : (
+                <ReactMarkdown components={mdComponents}>
+                  {article.content}
+                </ReactMarkdown>
+              )}
             </ScrollReveal>
 
             <div className="mt-12 pt-8 border-t border-[#EAE4DB]">
@@ -184,7 +194,7 @@ export default function BlogPost() {
               </h2>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {related.map((rel, i) => (
+              {correlati.map((rel, i) => (
                 <ScrollReveal key={rel.slug} delay={i * 0.08}>
                   <Link
                     href={`/blog/${rel.slug}`}
@@ -205,9 +215,9 @@ export default function BlogPost() {
                         {rel.title}
                       </h3>
                       <div className="mt-auto pt-5 flex items-center justify-between">
-                        <span className="text-xs text-[#766E66]">
-                          {rel.date}
-                        </span>
+                        <time className="text-xs text-[#766E66]" dateTime={rel.date}>
+                          {dataItaliana(rel.date)}
+                        </time>
                         <span className="flex items-center justify-center w-7 h-7 rounded-full bg-[#F5EFE6] text-[#766E66] group-hover:bg-primary group-hover:text-white transition-all duration-200 flex-shrink-0">
                           <ArrowRight className="h-3.5 w-3.5" />
                         </span>
