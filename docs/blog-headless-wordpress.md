@@ -583,6 +583,76 @@ server`. Lo schema del repository è: **pagina server che legge, componente clie
 
 ---
 
+## 9-bis. Consenso e Google Analytics
+
+Serve anche all'altro progetto, ed e' la parte dove si sbaglia con piu' facilita' perche'
+"funziona" anche quando e' fatta male.
+
+### Il vincolo
+
+In Italia il Garante sanziona chi carica strumenti di misurazione **prima** del consenso.
+Non basta caricare `gtag` e dirgli di non tracciare: quella e' comunque una connessione a
+Google, con l'indirizzo IP del visitatore, prima che abbia scelto.
+
+La differenza tra «GA4 configurato per non tracciare» e «GA4 mai scaricato» non e' formale:
+solo la seconda regge davanti a un'ispezione, perche' e' verificabile aprendo gli strumenti di
+rete del browser.
+
+### Com'e' fatto
+
+| File | Ruolo |
+|---|---|
+| `src/features/consenso/stato.ts` | Lo stato: leggi, salva, revoca, e comunica a Google |
+| `src/components/legal/cookie-banner.tsx` | Il banner Accetta / Rifiuta / Personalizza |
+| `src/components/legal/analytics.tsx` | GA4, montato SOLO dopo un consenso esplicito |
+| `src/components/legal/preferenze-cookie.tsx` | Il link che riapre il banner |
+| `src/app/layout.tsx` | Consent Mode v2 nel `<head>`, tutto negato di partenza |
+| `src/app/(marketing)/cookie/page.tsx` | L'informativa |
+
+**Consent Mode v2 sta nel `<head>`, prima di ogni altro script**, coi quattro parametri
+(`analytics_storage`, `ad_storage`, `ad_user_data`, `ad_personalization`) a `denied`. Non e'
+ridondante rispetto al banner: se un giorno qualcuno aggiungesse uno strumento di Google senza
+accorgersi del consenso, lo troverebbe comunque negato invece che concesso per distrazione.
+
+Pubblicita' e personalizzazione restano negate **anche dopo l'accettazione**: non ne facciamo,
+e dichiararlo nel codice e' piu' solido che dichiararlo solo nell'informativa.
+
+### Le tre regole che si vedono guardando i bottoni
+
+1. **"Rifiuta" accanto ad "Accetta"**, stessa dimensione, stesso peso visivo. Un rifiuto piu'
+   faticoso dell'accettazione e' esattamente cio' che viene contestato.
+2. **Nessuna casella pre-spuntata**: si parte da tutto negato.
+3. **Revocabile**: un link nel footer riapre il banner. Un consenso che non si puo' ritirare
+   non e' un consenso.
+
+`VERSIONE_INFORMATIVA` in `stato.ts` va **alzata** quando l'informativa cambia in modo
+sostanziale: il banner ricompare a tutti, perche' e' cambiato cio' che si accettava.
+
+### La verifica
+
+`node scripts/produzione/_verifica-consenso.mjs <url>` guarda le **richieste di rete** che
+partono davvero dal browser, non lo stato interno del componente:
+
+- senza scelta: banner presente, **zero** richieste verso Google, Consent Mode tutto negato
+- dopo il rifiuto: **zero** richieste, e la scelta sopravvive al ricaricamento
+- dopo l'accettazione: GA4 caricato, statistiche concesse, **pubblicita' ancora negata**
+- dal footer: il banner si riapre e il consenso torna negato
+
+14 controlli. Vanno rifatti su ogni sito: la configurazione e' per dominio.
+
+### Cosa serve dal cliente
+
+- **ID di misurazione GA4** (`G-XXXXXXXXXX`) nella variabile `NEXT_PUBLIC_GA4_ID`. Senza,
+  il componente non fa nulla e il sito gira identico: **si puo' distribuire prima di averlo**.
+- **Approvazione dell'informativa**: e' un documento legale, lo pubblica il cliente.
+- Collegare la proprieta' GA4 a **Search Console** — non e' tecnico ma serve al SEO, che
+  altrimenti guarda due pannelli scollegati.
+
+**Nota onesta sui numeri:** una quota di visitatori rifiutera', quindi GA4 sottostima il
+traffico reale. Il dato completo resta **Search Console**, che non richiede consenso.
+
+---
+
 ## 10. Rifarlo su un altro sito
 
 1. **DNS** — record **A** `cms.<dominio>` → IP della VPS. Niente wildcard.
@@ -601,8 +671,9 @@ server`. Lo schema del repository è: **pagina server che legge, componente clie
 
 ## 11. Cosa NON è stato fatto, e perché
 
-- **GA4 e banner di consenso** — richiede di riscrivere la cookie policy (documento legale, da
-  far approvare) e di trasformare il banner da avviso a consenso vero. Rimandato.
+- **GA4 acceso** — il meccanismo del consenso e' costruito e verificato (sezione 9-bis), ma
+  manca l'ID di misurazione e l'approvazione dell'informativa. Senza ID il componente non fa
+  nulla: il codice e' distribuibile cosi' com'e'.
 - **`next/image` per le immagini degli articoli** — si usa `<img loading="lazy">`. Esce dalla
   quota di ottimizzazione di Vercel ma perde WebP automatico e ridimensionamento. Con copertine
   già in WebP sotto i 100 KB la differenza è piccola; se il blog crescerà molto, è la prima cosa
