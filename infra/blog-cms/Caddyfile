@@ -15,14 +15,20 @@ cms.evalisacademy.it {
 		-Server
 	}
 
-	# La dashboard e il login sono raggiungibili solo dagli indirizzi indicati: chi scrive gli
-	# articoli e chi amministra. Tutto il resto del mondo vede 403.
-	# ⚠️ SOSTITUIRE gli indirizzi qui sotto prima di avviare (vedi LEGGIMI.md).
-	@amministrazione {
-		path /wp-admin* /wp-login.php
-		not remote_ip 203.0.113.10 203.0.113.11
+	# La dashboard e il login chiedono una password PRIMA di WordPress. Serve perche' il
+	# tentativo automatico su /wp-login.php e' il rumore di fondo di internet: cosi' i bot
+	# sbattono su Caddy e non arrivano nemmeno a provare le password di WordPress.
+	#
+	# Non un filtro per indirizzo IP: le connessioni italiane di casa e ufficio cambiano
+	# indirizzo da sole, e chi ci lavora si troverebbe chiuso fuori dal proprio pannello senza
+	# capire perche'. Una password funziona da qualsiasi rete.
+	#
+	# Utente e hash arrivano dall'ambiente (li genera installa.sh): in chiaro qui dentro
+	# finirebbero in un repository.
+	@amministrazione path /wp-admin* /wp-login.php
+	basic_auth @amministrazione {
+		{$ADMIN_UTENTE} {$ADMIN_HASH}
 	}
-	respond @amministrazione 403
 
 	# XML-RPC non serve a un CMS headless ed e' il bersaglio piu' battuto di WordPress
 	respond /xmlrpc.php 403

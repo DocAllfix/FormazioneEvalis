@@ -11,6 +11,10 @@ services:
   caddy:
     image: caddy:2-alpine
     restart: unless-stopped
+    environment:
+      # la password davanti a /wp-admin: la genera installa.sh, qui dentro non c'e' in chiaro
+      ADMIN_UTENTE: ${ADMIN_UTENTE:?serve ADMIN_UTENTE}
+      ADMIN_HASH: ${ADMIN_HASH:?serve ADMIN_HASH}
     ports:
       - "80:80"
       - "443:443"

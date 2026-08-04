@@ -2,8 +2,7 @@
 # Avvio dello stack del CMS. Da lanciare in /opt/blog-cms DOPO setup-vps.sh e dopo aver
 # copiato i file (docker-compose.yml, Caddyfile, db-init/, mu-plugins/, backup.sh, ...).
 #
-#   DOMINIO_CMS=cms.evalisacademy.it SITO_PUBBLICO=https://evalisacademy.it \
-#   IP_SEO=1.2.3.4 ./installa.sh
+#   DOMINIO_CMS=cms.evalisacademy.it SITO_PUBBLICO=https://evalisacademy.it ./installa.sh
 #
 # Idempotente: se .env esiste gia', i segreti NON vengono rigenerati — rigenerarli
 # scollegherebbe il CMS dal sito (i token non combacerebbero piu') e nessuno capirebbe perche'
@@ -20,14 +19,27 @@ if [ -f .env ]; then
   echo "[installa] .env gia' presente: i segreti restano quelli. Non si rigenerano MAI."
 else
   echo "[installa] genero i segreti…"
+  # password della dashboard: leggibile a voce e da riscrivere a mano, quindi niente simboli
+  ADMIN_PASSWORD=$(openssl rand -base64 18 | tr -d '/+=' | cut -c1-20)
+  # l'hash lo calcola Caddy stesso, in un container usa-e-getta: cosi' non serve che il
+  # servizio sia gia' in piedi (e non lo puo' essere, gli manca proprio questo valore)
+  ADMIN_HASH=$(docker run --rm caddy:2-alpine caddy hash-password --plaintext "$ADMIN_PASSWORD")
+
   cat > .env <<ENV
 DB_ROOT_PASSWORD=$(openssl rand -hex 24)
 DB_PASSWORD=$(openssl rand -hex 24)
 SITO_PUBBLICO=$SITO_PUBBLICO
 BLOG_WEBHOOK_TOKEN=$(openssl rand -hex 32)
 BLOG_PREVIEW_TOKEN=$(openssl rand -hex 32)
+ADMIN_UTENTE=${ADMIN_UTENTE:-evalis}
+ADMIN_HASH=$ADMIN_HASH
 ENV
   chmod 600 .env
+
+  # in chiaro sta solo qui, letto da root: il .env conserva l'hash, non la password
+  printf 'utente: %s\npassword: %s\n' "${ADMIN_UTENTE:-evalis}" "$ADMIN_PASSWORD" > credenziali-dashboard.txt
+  chmod 600 credenziali-dashboard.txt
+  echo "[installa] password della dashboard scritta in credenziali-dashboard.txt"
 fi
 
 # --- 2. il dominio nel Caddyfile -------------------------------------------------------
@@ -36,16 +48,6 @@ fi
 if ! grep -q "^$DOMINIO_CMS {" Caddyfile; then
   sed -i "s/^cms\.evalisacademy\.it {/$DOMINIO_CMS {/" Caddyfile
   echo "[installa] Caddyfile puntato su $DOMINIO_CMS"
-fi
-
-# --- 3. chi entra in /wp-admin ---------------------------------------------------------
-if [ -n "${IP_SEO:-}" ]; then
-  sed -i "s|not remote_ip 203\.0\.113\.10 203\.0\.113\.11|not remote_ip $IP_SEO|" Caddyfile
-  echo "[installa] /wp-admin aperto a: $IP_SEO"
-else
-  echo "[installa] ATTENZIONE: IP_SEO non indicato — nel Caddyfile restano gli IP di esempio" >&2
-  echo "           e /wp-admin risponde 403 A CHIUNQUE, te compreso. Correggilo prima di" >&2
-  echo "           installare WordPress, oppure passa a una password HTTP." >&2
 fi
 
 chmod +x backup.sh restore-test.sh 2>/dev/null || true
@@ -103,6 +105,9 @@ echo "  BLOG_CMS_URL=https://$DOMINIO_CMS"
 echo "  BLOG_PREVIEW_TOKEN=$(grep '^BLOG_PREVIEW_TOKEN=' .env | cut -d= -f2-)"
 echo "  BLOG_WEBHOOK_TOKEN=$(grep '^BLOG_WEBHOOK_TOKEN=' .env | cut -d= -f2-)"
 echo "  BLOG_CMS_USER / BLOG_CMS_APP_PASSWORD → dopo aver creato l'Application Password in WordPress"
+echo
+echo "Per entrare (il browser chiedera' prima questa, poi quella di WordPress):"
+cat credenziali-dashboard.txt 2>/dev/null || echo "  (vedi credenziali-dashboard.txt)"
 echo
 echo "Poi: https://$DOMINIO_CMS/wp-admin/install.php"
 

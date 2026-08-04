@@ -1,7 +1,7 @@
 # CMS del blog — messa in opera sulla VPS
 
-I file di questa cartella sono **pronti**. Non sono ancora stati applicati: mancano l'IP della
-VPS e l'IP fisso da cui lavora il consulente SEO.
+I file di questa cartella sono **pronti**. Non sono ancora stati applicati: manca la VPS, che
+si crea da sola appena Hetzner libera un `cx23` (vedi passo 0).
 
 Il sito Next.js funziona già senza tutto questo: finché `BLOG_CMS_URL` non è impostata su
 Vercel, il blog continua a servire i sette articoli attuali. **Nessuna fretta e nessun rischio
@@ -13,9 +13,10 @@ di lasciare il sito scoperto.**
 
 | | |
 |---|---|
-| VPS Hetzner | CAX11 (ARM, 2 vCPU / 4 GB, ~6 €/mese) — Ubuntu 24.04 |
-| IP della VPS | per il record DNS |
-| IP fisso del SEO | per aprire `/wp-admin` solo a lui. Se ha IP dinamico, si passa a una password HTTP davanti alla dashboard |
+| VPS Hetzner | CX23 (2 vCPU / 4 GB / 40 GB NVMe, €5,49 + €0,50 IPv4) — Ubuntu 24.04 |
+| IP della VPS | per il record DNS. Lo stampa `attendi-e-crea-server.py` quando crea |
+| Storage Box | username `uXXXXXX` e host, con **SSH abilitato**, per i backup |
+| (niente altro) | la dashboard e' protetta da utente e password, generati dall'installazione |
 
 ---
 
@@ -64,7 +65,6 @@ mkdir -p /opt/blog-cms && cd /opt/blog-cms
 cp .env.example .env && nano .env      # riempire: password e i due token
 openssl rand -hex 32                   # per ciascun token
 
-nano Caddyfile                         # ⚠️ SOSTITUIRE gli IP di esempio 203.0.113.x
 docker compose up -d
 ```
 
@@ -88,6 +88,10 @@ Installazione guidata, poi:
   all'header di Caddy)
 - **Plugin**: Yoast SEO. La sua sitemap è già disattivata dal mu-plugin, ma controllare che
   `/sitemap_index.xml` risponda 404
+- **Accesso alla dashboard**: prima di WordPress il browser chiede una password (utente e
+  password stanno in `credenziali-dashboard.txt` sulla VPS, generate dall'installazione). Serve
+  perche' il tentativo automatico su `/wp-login.php` e' il rumore di fondo di internet: i bot
+  sbattono su Caddy e non arrivano nemmeno a provare le password di WordPress.
 - **Utenti**: il SEO è **Editor**, non amministratore. Un utente per ciascun autore, con
   **biografia** compilata e il campo **«Ruolo mostrato sul sito»** (lo aggiunge il mu-plugin,
   in fondo al profilo)
@@ -132,8 +136,7 @@ WordPress e i sali di `wp-config`, e finisce su una macchina che non è la nostr
 openssl rand -base64 48 > /root/.blog-backup-pass && chmod 600 /root/.blog-backup-pass
 # ⚠️ copiarla anche altrove: persa la passphrase, i backup sono rumore
 
-# accesso alla Storage Box (la chiave della VPS, senza password)
-ssh-keygen -t ed25519 -f /root/.ssh/id_ed25519 -N ''
+# accesso alla Storage Box (la chiave l'ha gia' creata setup-vps.sh)
 cat /root/.ssh/id_ed25519.pub | ssh -p23 uXXXXXX@uXXXXXX.your-storagebox.de \
   "mkdir -p .ssh && cat >> .ssh/authorized_keys && chmod 700 .ssh && chmod 600 .ssh/authorized_keys"
 
