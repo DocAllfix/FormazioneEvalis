@@ -14,9 +14,24 @@ const nextConfig: NextConfig = {
   experimental: {
     staleTimes: { dynamic: 30, static: 180 },
   },
-  // Le immagini degli articoli restano ospitate dal CMS: senza questa autorizzazione Next
-  // rifiuta di servirle. L'host arriva da BLOG_CMS_URL — nessun dominio scritto qui dentro,
-  // cosi' un secondo sito con un altro CMS non richiede di toccare questo file.
+  // Le immagini degli articoli stanno sul CMS, ma il visitatore NON deve mai chiederle a lui.
+  //
+  // `seo.ts` riscrive ogni URL del CMS sul dominio pubblico, immagini comprese: senza questa
+  // regola quegli indirizzi non esisterebbero e le foto degli articoli sarebbero riquadri
+  // vuoti. Con la regola, /wp-content/uploads/… e' un indirizzo VERO del nostro dominio, che
+  // Vercel serve prendendo il file dal CMS e mettendolo in cache sulla sua rete.
+  //
+  // Due conseguenze, entrambe volute: il nome del CMS non compare da nessuna parte nel codice
+  // sorgente della pagina, e un CMS spento per qualche minuto non rompe le immagini agli
+  // utenti, perche' la copia in cache resta.
+  async rewrites() {
+    const cms = process.env.BLOG_CMS_URL?.replace(/\/+$/, "");
+    if (!cms) return [];
+    return [{ source: "/wp-content/uploads/:percorso*", destination: `${cms}/wp-content/uploads/:percorso*` }];
+  },
+  // Serve comunque a next/image, se un giorno le immagini passeranno dall'ottimizzatore.
+  // L'host arriva da BLOG_CMS_URL: nessun dominio scritto qui dentro, cosi' un secondo sito
+  // con un altro CMS non richiede di toccare questo file.
   images: {
     remotePatterns: (() => {
       const cms = process.env.BLOG_CMS_URL;

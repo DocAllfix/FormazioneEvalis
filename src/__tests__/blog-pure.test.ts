@@ -57,6 +57,16 @@ describe("riscrittura URL sul dominio pubblico", () => {
     expect(seo.canonical).not.toContain("cms.");
   });
 
+  it("le immagini escono sul dominio pubblico: /wp-content/uploads e' servito da noi", () => {
+    // la regola di riscrittura in next.config.ts fa di questo indirizzo un URL vero, che
+    // Vercel serve prendendo il file dal CMS e tenendolo in cache. Se un giorno quella regola
+    // sparisse, questi indirizzi darebbero 404 e gli articoli mostrerebbero riquadri vuoti.
+    const a = mappaPost(postFinto, { cms: CMS, pubblico: PUB });
+    expect(a.image).toBe(`${PUB}/wp-content/uploads/cover.jpg`);
+    expect(a.content).toContain(`${PUB}/wp-content/uploads/foto.jpg`);
+    expect(a.content).not.toContain("cms.");
+  });
+
   it("anche l'immagine social esce sul dominio pubblico", () => {
     const seo = seoDaYoast(postFinto.yoast_head_json, { slug: postFinto.slug, cms: CMS, pubblico: PUB });
     expect(seo.ogImage).toBe(`${PUB}/wp-content/uploads/og.jpg`);
