@@ -9,12 +9,12 @@
 // opacita zero — lo scatto sembrerebbe vuoto per un difetto della misura, non della pagina.
 import { chromium, devices } from "playwright";
 
-const BASE = "http://localhost:3210";
+const BASE = process.argv[3] ?? "http://localhost:3210";
 const OUT = process.argv[2];
 const pagine = [
   ["elenco", "/blog"],
   ["articolo", "/blog/guida-esame-iso-9001"],
-  ["autore", "/blog/autore/redazione"],
+  ["autore", "/blog/autore/bruno-santini"],
 ];
 
 const b = await chromium.launch();

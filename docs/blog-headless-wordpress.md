@@ -7,10 +7,9 @@ Non è il riassunto di un piano: è il resoconto di **cosa è finito online e co
 trappole trovate strada facendo — che sono la parte di più valore, perché nessuna di esse era
 prevedibile leggendo la documentazione.
 
-**Stato al 04/08/2026:** infrastruttura in piedi e verificata, un articolo di prova pubblicato
-e collaudato. **Non ancora in produzione**: le variabili su Vercel sono sull'ambiente *anteprima*,
-il blog pubblico serve ancora i sette articoli precedenti. Il passaggio finale (Fase 8) resta da
-fare.
+**Stato al 04/08/2026: IN PRODUZIONE.** Il blog di `evalisacademy.it` e' servito da WordPress
+headless. I sette articoli precedenti sono stati rimossi e i loro URL rispondono 410. GA4 e'
+attivo dietro consenso esplicito. Tutta la batteria di verifiche gira verde sul dominio vero.
 
 ---
 
@@ -573,11 +572,25 @@ occupa il webhook; per una prova locale va svuotata.
 — ma **non `find`**. La potatura off-site si decide dalla VPS (i nomi delle cartelle sono le
 date) e si spediscono là solo le cancellazioni.
 
-**10. `ScrollReveal` rivela al passaggio nel viewport.** Uno scatto a pagina intera non lo
+**10. Yoast tiene il titolo calcolato in una tabella sua.** Modificare `_yoast_wpseo_title`
+con una query diretta al database aggiorna il postmeta ma **non** cio' che la REST restituisce:
+`yoast_head_json` viene da `wp_yoast_indexable`, che si ricostruisce solo al salvataggio del
+post. Il sintomo e' pessimo — il CMS mostra il titolo giusto in dashboard e ne serve un altro
+all'API, e sembra un problema di cache del sito. Rimedio: `wp post update <id> --post_status=publish`,
+che fa scattare `save_post` (e con lui anche il nostro webhook).
+
+**11. La pubblicazione non e' istantanea al secondo.** Dopo l'invalidazione, la PRIMA richiesta
+serve ancora la copia vecchia mentre la pagina si ricostruisce dietro (`stale-while-revalidate`).
+Chi pubblica e ricarica subito vede il contenuto di prima e pensa che il webhook non funzioni:
+funziona, ma la sostituzione si vede dalla richiesta successiva. Nella pratica: decine di
+secondi, non ore. Per verificarlo senza aspettare basta aggiungere una query qualsiasi
+(`?x=1`), che aggira la copia in cache del bordo di rete.
+
+**12. `ScrollReveal` rivela al passaggio nel viewport.** Uno scatto a pagina intera non lo
 attiva: metà pagina resta a opacità zero e sembra vuota. È un artefatto della misura, non un
 difetto — `_scatti-blog.mjs` scorre la pagina prima di scattare.
 
-**11. `ScrollReveal` non ha `"use client"`.** Funziona perché finora lo usavano solo componenti
+**13. `ScrollReveal` non ha `"use client"`.** Funziona perché finora lo usavano solo componenti
 client. Da un componente server la compilazione fallisce con `useReducedMotion() from the
 server`. Lo schema del repository è: **pagina server che legge, componente client che mostra**.
 
@@ -653,6 +666,48 @@ traffico reale. Il dato completo resta **Search Console**, che non richiede cons
 
 ---
 
+## 9-ter. Il cutover, com'e' andato
+
+**I vecchi URL rispondono 410, non 404.** Erano indicizzati: un 404 dice a Google "non lo trovo
+adesso" e li lascia nell'indice per mesi mentre il crawler ripassa; il **410** dice "rimosso" e
+li toglie in fretta. Per contenuto eliminato e senza sostituto e' il trattamento corretto.
+
+Non c'era nulla da preservare con un 301: l'export Search Console (tre mesi, 04/08/2026) dava
+**zero clic e 8 impressioni** sull'intera sezione `/blog`. Reindirizzare tutti a `/blog` sarebbe
+stato un rimando fasullo verso una pagina che non risponde alla domanda di chi arrivava.
+
+Il 410 sta nel **proxy** (`src/proxy.ts`) e non nella pagina, perche' una pagina Next puo'
+rispondere 404, non 410. L'elenco e' in `src/features/blog/rimossi.ts`.
+
+> ATTENZIONE. Uno slug che esisteva prima e che esiste ancora nel CMS **non va messo in
+> elenco**: il 410 coprirebbe l'articolo vero, e nessuno se ne accorgerebbe — la pagina esiste,
+> la sitemap la elenca, ma chi la apre legge "rimosso". Per questo `verifica.ts` confronta
+> l'elenco dei rimossi con la sitemap e diventa rosso al primo conflitto.
+
+**Verifiche in produzione, 04/08/2026** — `evalisacademy.it`:
+
+```
+sitemap             nessun URL del CMS
+conflitto-rimossi   nessun articolo pubblicato coperto da un 410
+conteggio           1 articolo in sitemap
+vecchi-url          6 vecchi URL rispondono 410
+cms-noindex         noindex, nofollow, noarchive, nosnippet
+cms-sitemap         /wp-sitemap.xml e /sitemap_index.xml -> 404
+articoli            1 articolo senza difetti
+peso-immagini       tutte sotto 400 KB
+autori              1 pagina autore raggiungibile
+
+sicurezza           <script> iniettato rimosso - onclick rimosso - 0 riferimenti a cms.
+SEO                 canonical sul dominio pubblico - 1 solo schema Article
+                    autore collegato alla sua pagina
+consenso            14 controlli verdi (sezione 9-bis)
+visivo              desktop e telefono, nessuno scorrimento orizzontale,
+                    nessuna immagine rotta
+webhook             risponde e rigenera; senza token 404
+```
+
+---
+
 ## 10. Rifarlo su un altro sito
 
 1. **DNS** — record **A** `cms.<dominio>` → IP della VPS. Niente wildcard.
@@ -671,15 +726,16 @@ traffico reale. Il dato completo resta **Search Console**, che non richiede cons
 
 ## 11. Cosa NON è stato fatto, e perché
 
-- **GA4 acceso** — il meccanismo del consenso e' costruito e verificato (sezione 9-bis), ma
-  manca l'ID di misurazione e l'approvazione dell'informativa. Senza ID il componente non fa
-  nulla: il codice e' distribuibile cosi' com'e'.
+- **Eventi GA4 di dettaglio** — GA4 e' attivo dietro consenso e raccoglie le pagine viste.
+  Gli eventi specifici del blog (lettura completata, clic verso il catalogo) non sono ancora
+  configurati.
 - **`next/image` per le immagini degli articoli** — si usa `<img loading="lazy">`. Esce dalla
   quota di ottimizzazione di Vercel ma perde WebP automatico e ridimensionamento. Con copertine
   già in WebP sotto i 100 KB la differenza è piccola; se il blog crescerà molto, è la prima cosa
   da rivalutare.
-- **Cutover in produzione** — le variabili sono sull'ambiente *anteprima*. Il blog pubblico
-  serve ancora `src/lib/blogArticles.js`.
+- **Biografie degli autori** — l'unico autore ha nome e slug, ma ruolo e biografia sono vuoti
+  (la pagina li tratta come facoltativi). Vanno compilati nel profilo utente WordPress: sono
+  affermazioni su persone reali e non si inventano.
 - **Una sentinella esterna sui backup** — vedi il limite dichiarato in sezione 8.
 
 ---
