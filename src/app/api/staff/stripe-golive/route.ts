@@ -134,6 +134,59 @@ export async function POST(req: Request) {
         });
       }
 
+      // Il prezzo per posto degli acquisti aziendali vive in una variabile d'ambiente, e un
+      // prezzo di un ALTRO account (quello di prova) su live semplicemente non esiste: il
+      // checkout aziendale fallirebbe. Non si puo' verificare leggendo la variabile — gli id
+      // dei prezzi non dicono a quale account appartengono — si verifica chiedendolo a Stripe.
+      case "prezzo-posti": {
+        const id = process.env.STRIPE_SEAT_PRICE_ID;
+        if (!id) return json({ mode, esito: "ROSSO", motivo: "STRIPE_SEAT_PRICE_ID non impostato" }, 422);
+
+        try {
+          const prezzo = await stripe.prices.retrieve(id, { expand: ["product"] });
+          const prodotto = prezzo.product as { name?: string; active?: boolean };
+          return json({
+            mode,
+            esito: prezzo.active ? "VERDE" : "ROSSO",
+            motivo: prezzo.active ? "il prezzo esiste su questo account ed e' attivo" : "il prezzo esiste ma e' DISATTIVATO",
+            prezzo: {
+              id: prezzo.id,
+              importo: (prezzo.unit_amount ?? 0) / 100,
+              valuta: prezzo.currency,
+              ricorrenza: prezzo.recurring ? `${prezzo.recurring.interval_count} ${prezzo.recurring.interval}` : "una tantum",
+              comportamentoIva: prezzo.tax_behavior,
+              prodotto: prodotto?.name ?? null,
+            },
+          });
+        } catch (e) {
+          // "No such price" = appartiene a un altro account. E' il caso che cerchiamo.
+          const prezziVivi = await stripe.prices
+            .list({ active: true, limit: 20, expand: ["data.product"] })
+            .then((r) =>
+              r.data
+                .filter((p) => p.recurring)
+                .map((p) => ({
+                  id: p.id,
+                  importo: (p.unit_amount ?? 0) / 100,
+                  ricorrenza: `${p.recurring?.interval_count} ${p.recurring?.interval}`,
+                  prodotto: (p.product as { name?: string })?.name ?? null,
+                })),
+            )
+            .catch(() => []);
+          return json(
+            {
+              mode,
+              esito: "ROSSO",
+              motivo: `il prezzo configurato NON esiste su questo account: ${(e as Error).message}`,
+              idConfigurato: id,
+              prezziRicorrentiDisponibili: prezziVivi,
+              cosaFare: "impostare STRIPE_SEAT_PRICE_ID su uno degli id qui sopra, oppure crearne uno nuovo",
+            },
+            422,
+          );
+        }
+      }
+
       case "webhook": {
         const hooks = await stripe.webhookEndpoints.list({ limit: 20 });
         const existing = hooks.data.find((h) => h.url === WEBHOOK_URL);
