@@ -1,6 +1,6 @@
 // Configurazione del blog headless. TUTTO da variabili d'ambiente, niente domini scritti nel
 // codice: e' cio' che permettera' di riusare questo stesso modulo per un secondo sito
-// (bilanciotool) cambiando solo la configurazione, senza toccare una riga.
+// cambiando solo la configurazione, senza toccare una riga.
 //
 // CMS_URL      = dove vive WordPress (es. https://cms.evalisacademy.it) — MAI mostrato ai visitatori
 // SITO_PUBBLICO = il dominio che il pubblico vede (es. https://evalisacademy.it)
