@@ -200,17 +200,6 @@ describe("Modulo 2 — provisioning billing", () => {
     customerIds.push(customerId);
     expect(customerId.startsWith("cus_")).toBe(true);
 
-    const seatPrice = process.env.STRIPE_SEAT_PRICE_ID;
-    if (seatPrice) {
-      const session = await getStripe().checkout.sessions.create({
-        mode: "subscription",
-        customer: customerId,
-        line_items: [{ price: seatPrice, quantity: 2 }],
-        success_url: "http://localhost:3000/ok",
-        cancel_url: "http://localhost:3000/cancel",
-      });
-      expect(session.url?.startsWith("https://")).toBe(true);
-    }
   }, 30000);
 
   it("C-2: il claim dell'evento Stripe è idempotente e rilasciabile per il retry", async () => {

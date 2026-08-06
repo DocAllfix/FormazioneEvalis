@@ -6,7 +6,6 @@
 import {
   createCoursePurchaseCheckout,
   createBundlePurchaseCheckout,
-  createSeatSubscriptionCheckout,
   createBillingPortalSession,
 } from "@/features/billing/checkout";
 
@@ -25,11 +24,6 @@ export async function buyCourseForMemberAction(courseId: string, memberUserId: s
  * `chosenCourseId` = corso a scelta per i bundle pick_one. */
 export async function buyBundleAction(bundleId: string, chosenCourseId?: string): Promise<string> {
   return createBundlePurchaseCheckout(bundleId, chosenCourseId);
-}
-
-/** B2B: avvia il checkout dell'abbonamento a posti (quantity = posti) → URL Stripe. */
-export async function buySeatsAction(seats: number): Promise<string> {
-  return createSeatSubscriptionCheckout(seats);
 }
 
 /** B2B: apre il Customer Portal Stripe (gestione posti/cancellazione) → URL. */

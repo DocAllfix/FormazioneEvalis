@@ -123,28 +123,17 @@ export async function createBundlePurchaseCheckout(bundleId: string, chosenCours
   return session.url;
 }
 
-/** B2B: abbonamento a posti (quantity = seats) → org.seats (via webhook). */
-export async function createSeatSubscriptionCheckout(seats: number): Promise<string> {
-  if (!Number.isInteger(seats) || seats < 1) throw new Error("Numero posti non valido.");
-  const { orgId } = await requireRole("owner", "admin");
-  const priceId = process.env.STRIPE_SEAT_PRICE_ID;
-  if (!priceId) throw new Error("STRIPE_SEAT_PRICE_ID non impostato.");
+// NB: qui c'era `createSeatSubscriptionCheckout`, un abbonamento mensile per posto nato col
+// modulo 2. Il modello commerciale e' poi diventato un altro — corsi e pacchetti a prezzo
+// pieno con i coupon azienda (-20% dal 2° iscritto, -30% dal 5°), che e' quello in vendita —
+// e quella funzione e' rimasta irraggiungibile per mesi, puntata a un prezzo del vecchio
+// account di prova che sul live non esiste nemmeno.
+//
+// Rimossa il 06/08/2026. Non perche' desse fastidio, ma perche' SEMBRAVA pronta: e' il tipo
+// di codice che qualcuno ricollega tra sei mesi credendo sia la strada per il B2B, e ci si
+// ritrova con due modelli di vendita in piedi contemporaneamente.
 
-  const customerId = await ensureStripeCustomer(orgId);
-  const session = await getStripe().checkout.sessions.create({
-    mode: "subscription",
-    customer: customerId,
-    line_items: [{ price: priceId, quantity: seats }],
-    metadata: { kind: "seat_subscription", orgId },
-    subscription_data: { metadata: { orgId } },
-    success_url: `${appUrl()}/admin/billing?sub=success`,
-    cancel_url: `${appUrl()}/admin/billing?sub=cancel`,
-  });
-  if (!session.url) throw new Error("URL checkout non disponibile.");
-  return session.url;
-}
-
-/** B2B: Customer Portal (cambio posti / cancellazione gestiti da Stripe). */
+/** B2B: Customer Portal Stripe — l'azienda vede fatture e metodi di pagamento. */
 export async function createBillingPortalSession(): Promise<string> {
   const { orgId } = await requireRole("owner", "admin");
   const customerId = await ensureStripeCustomer(orgId);
