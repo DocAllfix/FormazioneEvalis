@@ -44,7 +44,7 @@ export async function POST(req: Request) {
 
   const key = process.env.STRIPE_SECRET_KEY ?? "";
   const mode = key.startsWith("sk_live_") ? "live" : key.startsWith("sk_test_") ? "test" : "assente";
-  let body: { action?: string; tipo?: string; slug?: string; fase?: string; ricrea?: boolean };
+  let body: { action?: string; tipo?: string; slug?: string; fase?: string; ricrea?: boolean; giorni?: number };
   try {
     body = await req.json();
   } catch {
@@ -78,6 +78,59 @@ export async function POST(req: Request) {
           webhooks: hooks.data.map((h) => ({ id: h.id, url: h.url, status: h.status, eventi: h.enabled_events.length })),
           couponsOk: coup.pass,
           couponsDettagli: coup.dettagli,
+        });
+      }
+
+      // Sola lettura: cos'e' successo davvero sull'account. Serve quando arriva una fattura
+      // Stripe e non si capisce da dove venga — la domanda "abbiamo incassato qualcosa?" va
+      // risposta coi movimenti, non con le impressioni.
+      case "movimenti": {
+        const giorni = Number(body.giorni ?? 45);
+        const da = Math.floor(Date.now() / 1000) - giorni * 86400;
+        const [pagamenti, sessioni, saldo, calcoli, account] = await Promise.all([
+          stripe.paymentIntents.list({ limit: 20, created: { gte: da } }),
+          stripe.checkout.sessions.list({ limit: 20, created: { gte: da } }),
+          stripe.balance.retrieve(),
+          // le voci addebitate sul saldo: e' li' che compaiono le commissioni di Stripe Tax
+          stripe.balanceTransactions.list({ limit: 20, created: { gte: da } }),
+          stripe.accounts.retrieve(),
+        ]);
+        return json({
+          mode,
+          finestra: `ultimi ${giorni} giorni`,
+          // "Verifica il tuo account" nella guida di Stripe: se questi non sono entrambi veri,
+          // l'incasso funziona ma i soldi restano fermi e nessuno lo dice esplicitamente
+          account: {
+            incassiAbilitati: account.charges_enabled,
+            bonificiAbilitati: account.payouts_enabled,
+            documentiMancanti: account.requirements?.currently_due ?? [],
+            inScadenza: account.requirements?.eventually_due ?? [],
+            scadenza: account.requirements?.current_deadline
+              ? new Date(account.requirements.current_deadline * 1000).toISOString().slice(0, 10)
+              : null,
+          },
+          pagamenti: pagamenti.data.map((p) => ({
+            id: p.id,
+            stato: p.status,
+            importo: p.amount / 100,
+            valuta: p.currency,
+            quando: new Date(p.created * 1000).toISOString().slice(0, 16),
+          })),
+          sessioniCheckout: sessioni.data.map((s) => ({
+            id: s.id,
+            stato: s.status,
+            pagamento: s.payment_status,
+            importo: (s.amount_total ?? 0) / 100,
+            quando: new Date(s.created * 1000).toISOString().slice(0, 16),
+          })),
+          saldo: saldo.available.map((a) => ({ importo: a.amount / 100, valuta: a.currency })),
+          movimentiSaldo: calcoli.data.map((t) => ({
+            tipo: t.type,
+            descrizione: t.description,
+            importo: t.amount / 100,
+            valuta: t.currency,
+            quando: new Date(t.created * 1000).toISOString().slice(0, 16),
+          })),
         });
       }
 
