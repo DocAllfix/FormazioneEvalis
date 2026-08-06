@@ -10,6 +10,8 @@
 //  { action: "coupons" }                     → coupon sconto azienda (idempotenti)
 //  { action: "seed", tipo, slug }            → seed di UNA voce (corso|bundle) del listino
 //  { action: "verify", tipo, slug, fase }    → verifica di UNA voce (corso|bundle|coupons)
+//  { action: "movimenti", giorni? }          → SOLA LETTURA: pagamenti, sessioni, saldo e stato di verifica
+//  { action: "prezzo-posti" }                → SOLA LETTURA: il prezzo per posto esiste su QUESTO account?
 
 import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
