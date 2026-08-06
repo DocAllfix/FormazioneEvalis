@@ -12,6 +12,8 @@
 //  { action: "verify", tipo, slug, fase }    → verifica di UNA voce (corso|bundle|coupons)
 //  { action: "movimenti", giorni? }          → SOLA LETTURA: pagamenti, sessioni, saldo e stato di verifica
 //  { action: "prezzo-posti" }                → SOLA LETTURA: il prezzo per posto esiste su QUESTO account?
+//  { action: "corso-prova" }                 → TEMPORANEA: crea prodotto+prezzo €10 e il corso in draft
+//  { action: "corso-prova-stato", stato }    → TEMPORANEA: published (per l'acquisto) | archived (subito dopo)
 
 import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
@@ -46,7 +48,7 @@ export async function POST(req: Request) {
 
   const key = process.env.STRIPE_SECRET_KEY ?? "";
   const mode = key.startsWith("sk_live_") ? "live" : key.startsWith("sk_test_") ? "test" : "assente";
-  let body: { action?: string; tipo?: string; slug?: string; fase?: string; ricrea?: boolean; giorni?: number };
+  let body: { action?: string; tipo?: string; slug?: string; fase?: string; ricrea?: boolean; giorni?: number; stato?: string };
   try {
     body = await req.json();
   } catch {
@@ -187,6 +189,81 @@ export async function POST(req: Request) {
             422,
           );
         }
+      }
+
+      // PROVA DI PAGAMENTO — temporanea, da rimuovere insieme al corso di prova.
+      //
+      // Sull'account live nessun pagamento si e' mai completato: il percorso
+      // "Stripe -> checkout.session.completed -> firma -> iscrizione creata" non ha mai girato
+      // in produzione. Se il segreto del webhook fosse sbagliato, il primo cliente vero
+      // pagherebbe e non riceverebbe nulla. Questa azione crea il minimo per provarlo.
+      //
+      // Nasce in `draft`: invisibile in catalogo, nelle pagine pubbliche e in sitemap (tutte
+      // filtrano su `published`), ma gia' acquistabile — il checkout controlla solo che il
+      // corso esista e abbia un prezzo. Si pubblica per i pochi minuti dell'acquisto.
+      case "corso-prova": {
+        const SLUG = "prova-pagamento-interna";
+        const [gia] = await db.select().from(course).where(eq(course.slug, SLUG)).limit(1);
+        if (gia) {
+          return json({ mode, gia: true, id: gia.id, stato: gia.status, prezzo: (gia.priceCents ?? 0) / 100 });
+        }
+
+        const prodotto = await stripe.products.create({
+          name: "Prova pagamento interna — NON IN VENDITA",
+          description: "Voce tecnica per verificare il percorso di pagamento. Da archiviare subito dopo.",
+          tax_code: "txcd_20060058", // stesso codice IVA dei corsi veri: la prova dev'essere fedele
+        });
+        const prezzo = await stripe.prices.create({
+          product: prodotto.id,
+          unit_amount: 1000,
+          currency: "eur",
+          tax_behavior: "exclusive",
+        });
+
+        const [creato] = await db
+          .insert(course)
+          .values({
+            title: "Prova pagamento interna — NON IN VENDITA",
+            description: "Voce tecnica per verificare il percorso di pagamento in produzione.",
+            slug: SLUG,
+            requiredMinutes: 0,
+            priceCents: 1000,
+            currency: "eur",
+            stripeProductId: prodotto.id,
+            stripePriceId: prezzo.id,
+            status: "draft",
+          })
+          .returning();
+
+        return json({
+          mode,
+          creato: true,
+          corsoId: creato.id,
+          slug: SLUG,
+          stato: creato.status,
+          stripeProductId: prodotto.id,
+          stripePriceId: prezzo.id,
+          nota: "in draft: invisibile ovunque. Pubblicare con { action: 'corso-prova-stato', stato: 'published' } solo per il tempo dell'acquisto.",
+        });
+      }
+
+      // Pubblica o archivia il corso di prova. Archiviato sparisce da catalogo, pagine
+      // pubbliche e sitemap all'istante, ma resta nel database: cosi' l'iscrizione e la riga
+      // del registro (append-only, catena hash) continuano a puntare a qualcosa che esiste.
+      case "corso-prova-stato": {
+        const stato = body.stato === "published" ? "published" : "archived";
+        const [agg] = await db
+          .update(course)
+          .set({ status: stato, updatedAt: new Date() })
+          .where(eq(course.slug, "prova-pagamento-interna"))
+          .returning();
+        if (!agg) return json({ mode, errore: "corso di prova non trovato" }, 404);
+        if (stato === "archived" && agg.stripePriceId) {
+          // disattivato anche su Stripe: un prezzo attivo di un prodotto ritirato e' un
+          // acquisto che qualcuno potrebbe ancora completare con un vecchio link di checkout
+          await stripe.prices.update(agg.stripePriceId, { active: false }).catch(() => {});
+        }
+        return json({ mode, id: agg.id, stato: agg.status });
       }
 
       case "webhook": {
