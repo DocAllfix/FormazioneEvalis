@@ -35,7 +35,7 @@ HCLOUD_TOKEN=... python infra/blog-cms/attendi-e-crea-server.py --tipi cx23,cax1
 # in attesa: quando si apre, crea il server già dietro il firewall e con la chiave SSH dentro
 HCLOUD_TOKEN=... python infra/blog-cms/attendi-e-crea-server.py \
   --tipi cx23,cax11 --luoghi fsn1,nbg1,hel1 --nome cms-evalis \
-  --chiave-pubblica ~/.ssh/id_ed25519.pub --ip-ssh 79.22.153.23
+  --chiave-pubblica ~/.ssh/id_ed25519.pub --ip-ssh <IP-AMMINISTRAZIONE>
 ```
 
 Chiave SSH e firewall si preparano **prima** di mettersi in attesa: creare il server e

@@ -138,7 +138,7 @@ Perche' ci sia un problema serve un meccanismo. Sono stati provati uno per uno i
 ```
 evalisacademy.it        -> 216.198.79.1     (Vercel)
 www.evalisacademy.it    -> 216.198.79.65    (Vercel)
-cms.evalisacademy.it    -> 178.105.44.157   (questo server)
+cms.evalisacademy.it    -> <IP-DELLA-VPS>   (questo server)
 ```
 
 L'IP condiviso e' solo quello dei CMS, che in nessun indice ci entrano. Il "vicinato cattivo"
@@ -156,8 +156,8 @@ noarchive, nosnippet` su ogni risposta, `blog_public = 0`, sitemap di Yoast a 40
 
 | Prova | Risultato |
 |---|---|
-| `https://178.105.44.157/` | nessuna risposta — Caddy non ha certificati per un IP |
-| `http://178.105.44.157/` | 308 verso `https://178.105.44.157/`, che poi non risponde. **Non e' un doppione del blog** |
+| `https://<IP-DELLA-VPS>/` | nessuna risposta — Caddy non ha certificati per un IP |
+| `http://<IP-DELLA-VPS>/` | 308 verso `https://<IP-DELLA-VPS>/`, che poi non risponde. **Non e' un doppione del blog** |
 | `Host: sito-a-caso.it` su HTTP | 308 verso `https://sito-a-caso.it/` — rimanda a *quel* dominio, mai al nostro |
 | `Host: cms.bilanciotool.it` su HTTPS, prima che esista | connessione rifiutata: nessun certificato, niente servito |
 
@@ -224,9 +224,9 @@ Un secondo WordPress aggiunge circa 115 MB. **Ci sta ampiamente**, non serve cam
 
 #### La procedura, concreta
 
-Server: `ssh root@178.105.44.157` - stack in `/opt/blog-cms`
+Server: `ssh root@<IP-DELLA-VPS>` - stack in `/opt/blog-cms`
 
-**1. DNS** — record **A** `cms.bilanciotool.it` -> `178.105.44.157`. Nessun wildcard.
+**1. DNS** — record **A** `cms.bilanciotool.it` -> `<IP-DELLA-VPS>`. Nessun wildcard.
 
 **2. Lo schema del database.**
 
@@ -356,7 +356,7 @@ immagini** — e lo si scoprirebbe il giorno del ripristino.
 # in /etc/cron.d/blog-cms, aggiungere SITI= alla riga del backup:
 20 3 * * * root cd /opt/blog-cms && SITI="wp-evalis wp-bilanciotool" \
    BACKUP_PASSPHRASE_FILE=/root/.blog-backup-pass \
-   STORAGE_BOX=u635762-sub5@u635762.your-storagebox.de ./backup.sh >> /var/log/blog-backup.log 2>&1
+   STORAGE_BOX=uXXXXXX-subN@uXXXXXX.your-storagebox.de ./backup.sh >> /var/log/blog-backup.log 2>&1
 ```
 
 E in `restore-test.sh` la query di sanita' cita `wp_evalis.wp_posts`: va estesa al secondo
