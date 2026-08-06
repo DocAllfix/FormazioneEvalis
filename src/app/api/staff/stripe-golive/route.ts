@@ -1,7 +1,16 @@
-// GO-LIVE Stripe (route di MANUTENZIONE one-shot, da RIMUOVERE dopo il lancio):
-// gira su Vercel dove vive la chiave Stripe LIVE (sensibile: non leggibile dalla CLI),
-// così l'intero setup si esegue senza mai estrarre la chiave. Accesso: header
-// x-golive-token === PREVIEW_TOKEN (stesso segreto della /anteprima staff); 404 altrimenti.
+// MANUTENZIONE Stripe. Gira su Vercel, dove vive la chiave LIVE (che non e' leggibile dalla
+// riga di comando): cosi' le operazioni sull'account si eseguono senza mai estrarre la chiave.
+//
+// TRE SERRATURE, perche' questa rotta sa creare prodotti e cambiare impostazioni fiscali
+// sull'account che incassa:
+//
+//   1. SPENTA DI DEFAULT. Senza STRIPE_ADMIN_ENABLED=1 risponde 404 a chiunque, token
+//      corretto compreso. In produzione resta spenta e si accende solo per il tempo dell'uso.
+//   2. TOKEN DEDICATO (STRIPE_ADMIN_TOKEN), non piu' PREVIEW_TOKEN condiviso con l'anteprima
+//      delle slide: un segreto per un solo scopo, cosi' comprometterne uno non apre l'altro.
+//   3. CONFRONTO A TEMPO COSTANTE, per non far trapelare il segreto un carattere alla volta.
+//
+// Risponde 404 e non 401: a chi bussa non diciamo nemmeno che questa rotta esiste.
 //
 // Azioni (POST, body JSON):
 //  { action: "status" }                      → modalità chiave, stato Stripe Tax, webhook esistenti, coupon
@@ -14,6 +23,7 @@
 //  { action: "prezzo-posti" }                → SOLA LETTURA: il prezzo per posto esiste su QUESTO account?
 
 import { eq } from "drizzle-orm";
+import { segretoValido } from "@/lib/segreti";
 import { db } from "@/lib/db";
 import { course } from "@/lib/db/schema";
 import { getStripe } from "@/lib/stripe/client";
@@ -41,8 +51,12 @@ function json(data: unknown, status = 200) {
 }
 
 export async function POST(req: Request) {
-  const token = process.env.PREVIEW_TOKEN;
-  if (!token || req.headers.get("x-golive-token") !== token) return new Response(null, { status: 404 });
+  // serratura 1: spenta se non esplicitamente accesa
+  if (process.env.STRIPE_ADMIN_ENABLED !== "1") return new Response(null, { status: 404 });
+  // serrature 2 e 3: token suo, confrontato a tempo costante
+  if (!segretoValido(process.env.STRIPE_ADMIN_TOKEN, req.headers.get("x-golive-token"))) {
+    return new Response(null, { status: 404 });
+  }
 
   const key = process.env.STRIPE_SECRET_KEY ?? "";
   const mode = key.startsWith("sk_live_") ? "live" : key.startsWith("sk_test_") ? "test" : "assente";

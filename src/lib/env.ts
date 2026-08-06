@@ -65,6 +65,11 @@ const schema = z.object({
   BLOG_WEBHOOK_TOKEN: z.string().optional(),
   // impostato da Vercel: autentica i cron. Senza, la rotta del giro quotidiano risponde 404.
   CRON_SECRET: z.string().optional(),
+  // Manutenzione Stripe: segreto SUO, non piu' PREVIEW_TOKEN condiviso con l'anteprima slide.
+  // La rotta e' spenta finche' STRIPE_ADMIN_ENABLED non vale "1": in produzione resta spenta e
+  // si accende solo per il tempo dell'operazione.
+  STRIPE_ADMIN_TOKEN: z.string().optional(),
+  STRIPE_ADMIN_ENABLED: z.string().optional(),
 });
 
 // A-4 (audit go-live): in PRODUZIONE alcuni segreti NON possono mancare, altrimenti il player

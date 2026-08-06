@@ -10,13 +10,13 @@
 
 import { verificaBlog, riepilogo } from "@/features/blog/verifica";
 import { inviaAllarmeBlog } from "@/lib/email/resend";
+import { bearerValido } from "@/lib/segreti";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 export async function GET(req: Request) {
-  const segreto = process.env.CRON_SECRET;
-  if (!segreto || req.headers.get("authorization") !== `Bearer ${segreto}`) {
+  if (!bearerValido(process.env.CRON_SECRET, req.headers.get("authorization"))) {
     return new Response(null, { status: 404 });
   }
 

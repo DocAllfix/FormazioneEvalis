@@ -7,6 +7,7 @@ import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { slide } from "@/lib/db/schema";
 import { getSignedClipUrl } from "@/lib/cloudflare/stream";
+import { segretoValido } from "@/lib/segreti";
 import { getCurrentSession } from "@/lib/auth/server";
 import { isPlatformAdmin } from "@/features/auth/guards";
 import { PreviewPlayer } from "./preview-player";
@@ -14,8 +15,9 @@ import { PreviewPlayer } from "./preview-player";
 export const dynamic = "force-dynamic";
 
 async function authorized(token: string | undefined): Promise<boolean> {
-  const secret = process.env.PREVIEW_TOKEN;
-  if (secret && token && token === secret) return true;
+  // confronto a tempo costante: un `===` su stringhe si ferma al primo carattere diverso e
+  // lascia trapelare il segreto un carattere alla volta a chi misura i tempi di risposta
+  if (segretoValido(process.env.PREVIEW_TOKEN, token)) return true;
   const ctx = await getCurrentSession();
   return !!ctx && isPlatformAdmin(ctx.user as { email: string; platformRole?: string | null });
 }

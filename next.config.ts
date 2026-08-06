@@ -45,10 +45,45 @@ const nextConfig: NextConfig = {
       }
     })(),
   },
-  // Header di sicurezza (sicuri, no-CSP: la CSP richiede uno step dedicato per non rompere
-  // script inline Next / Cloudflare Stream / Sentry). Coprono clickjacking, MIME-sniffing,
-  // leak del referrer e API del browser non usate.
+  // Header di sicurezza. Coprono clickjacking, MIME-sniffing, leak del referrer e API del
+  // browser non usate.
   async headers() {
+    // Content-Security-Policy — in SOLA SEGNALAZIONE per ora.
+    //
+    // Perche' non subito bloccante: una CSP scritta a occhio rompe cose che si scoprono in
+    // produzione, e la prima a saltare sarebbe il player video — cioe' il prodotto. In
+    // report-only il browser SEGNALA le violazioni senza bloccarle: si guardano quelle vere,
+    // si stringe la direttiva sui dati, e solo dopo si passa a bloccante.
+    //
+    // `unsafe-inline` sugli script e' la ragione per cui non e' ancora bloccante: Next inietta
+    // script inline per l'idratazione, e toglierli richiede i nonce su tutta l'applicazione.
+    // Dichiararlo qui e' piu' onesto che far finta che la CSP sia gia' completa.
+    const csp = [
+      "default-src 'self'",
+      // googletagmanager: GA4, caricato SOLO dopo il consenso (vedi src/features/consenso)
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' data: https://fonts.gstatic.com",
+      // le immagini degli articoli passano dal nostro dominio (riscrittura in questo file)
+      "img-src 'self' data: blob: https:",
+      // videodelivery/cloudflarestream: le clip firmate del player
+      "media-src 'self' blob: https://*.cloudflarestream.com https://videodelivery.net",
+      "frame-src 'self' https://*.cloudflarestream.com https://checkout.stripe.com",
+      [
+        "connect-src 'self'",
+        "https://*.cloudflarestream.com https://videodelivery.net",
+        "https://*.supabase.co",
+        "https://*.ingest.sentry.io https://*.ingest.de.sentry.io",
+        "https://www.googletagmanager.com https://*.google-analytics.com",
+      ].join(" "),
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self' https://checkout.stripe.com",
+      // nessuno deve poterci incorniciare: e' il clickjacking, con la direttiva moderna
+      "frame-ancestors 'none'",
+      "upgrade-insecure-requests",
+    ].join("; ");
+
     return [
       {
         source: "/:path*",
@@ -58,6 +93,7 @@ const nextConfig: NextConfig = {
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), browsing-topics=()" },
           { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
+          { key: "Content-Security-Policy-Report-Only", value: csp },
         ],
       },
     ];

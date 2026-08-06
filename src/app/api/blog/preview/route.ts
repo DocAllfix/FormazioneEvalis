@@ -9,6 +9,7 @@
 
 import { draftMode } from "next/headers";
 import { redirect } from "next/navigation";
+import { segretoValido } from "@/lib/segreti";
 
 export const dynamic = "force-dynamic";
 
@@ -16,10 +17,9 @@ export const dynamic = "force-dynamic";
 const SLUG_VALIDO = /^[a-z0-9][a-z0-9-]{0,199}$/;
 
 export async function GET(req: Request) {
-  const token = process.env.BLOG_PREVIEW_TOKEN;
   const url = new URL(req.url);
 
-  if (!token || url.searchParams.get("token") !== token) {
+  if (!segretoValido(process.env.BLOG_PREVIEW_TOKEN, url.searchParams.get("token"))) {
     return new Response(null, { status: 404 });
   }
 

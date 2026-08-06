@@ -15,14 +15,14 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { after } from "next/server";
 import { verificaBlog, riepilogo } from "@/features/blog/verifica";
 import { inviaAllarmeBlog } from "@/lib/email/resend";
+import { segretoValido } from "@/lib/segreti";
 
 export const dynamic = "force-dynamic";
 
 const SLUG_VALIDO = /^[a-z0-9][a-z0-9-]{0,199}$/;
 
 export async function POST(req: Request) {
-  const token = process.env.BLOG_WEBHOOK_TOKEN;
-  if (!token || req.headers.get("x-blog-token") !== token) {
+  if (!segretoValido(process.env.BLOG_WEBHOOK_TOKEN, req.headers.get("x-blog-token"))) {
     return new Response(null, { status: 404 });
   }
 
