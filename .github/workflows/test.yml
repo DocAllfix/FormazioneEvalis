@@ -56,6 +56,10 @@ jobs:
       CLOUDFLARE_STREAM_SIGNING_KEY: ci-segnaposto
       CLOUDFLARE_STREAM_SIGNING_KEY_ID: ci-segnaposto
       CLOUDFLARE_STREAM_CUSTOMER_CODE: ci-segnaposto
+      # Le pagine del blog interrogano il CMS a build-time e, senza, il build si ferma per
+      # scelta (meglio fallire che pubblicare un blog vuoto). Qui puntiamo al CMS reale in sola
+      # LETTURA: nessuna credenziale, quindi la CI vede solo ciò che è già pubblico.
+      BLOG_CMS_URL: https://cms.evalisacademy.it
 
     steps:
       - uses: actions/checkout@v4
