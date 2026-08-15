@@ -48,6 +48,9 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
     await db.update(course).set({ imageUrl: url }).where(eq(course.id, id));
     return Response.json({ imageUrl: url });
   } catch (e) {
-    return new Response(e instanceof Error ? e.message : "errore", { status: 500 });
+    // Il messaggio grezzo puo' rivelare dettagli interni (storage, DB): resta nei log del
+    // server, al client va una risposta generica. La route e' comunque gated admin.
+    console.error("[staff/courses/image] upload fallito", e);
+    return new Response("errore durante il caricamento", { status: 500 });
   }
 }
