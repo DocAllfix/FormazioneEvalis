@@ -47,6 +47,15 @@ jobs:
       BETTER_AUTH_URL: http://localhost:3000
       NEXT_PUBLIC_APP_URL: http://localhost:3000
       NEXT_PUBLIC_ROOT_DOMAIN: localhost:3000
+      # `next build` gira con NODE_ENV=production, quindi env.ts pretende le chiavi che in
+      # produzione sono obbligatorie. Qui sono SEGNAPOSTO senza alcun valore reale: i test non
+      # contattano Cloudflare (le slide di prova hanno avatar_clip_uid NULL e il player degrada
+      # al manifest HLS di prova). Servono solo a superare la validazione all'avvio.
+      CLOUDFLARE_ACCOUNT_ID: ci-segnaposto
+      CLOUDFLARE_STREAM_API_TOKEN: ci-segnaposto
+      CLOUDFLARE_STREAM_SIGNING_KEY: ci-segnaposto
+      CLOUDFLARE_STREAM_SIGNING_KEY_ID: ci-segnaposto
+      CLOUDFLARE_STREAM_CUSTOMER_CODE: ci-segnaposto
 
     steps:
       - uses: actions/checkout@v4
