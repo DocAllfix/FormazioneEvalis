@@ -77,8 +77,12 @@ jobs:
       - name: Applica le migrazioni sul DB effimero
         run: npm run db:migrate
 
-      - name: Suite unit (esclusi i test che richiedono un DB popolato)
-        run: npx vitest run --exclude '**/*.db.test.ts'
+      # Esclusi anche gli `*.smoke.test.ts`: contattano SERVIZI ESTERNI veri (Cloudflare Stream,
+      # Azure OpenAI). In locale si auto-saltano perché le chiavi mancano, ma qui i segnaposto
+      # li farebbero partire davvero contro endpoint inesistenti. Restano da eseguire a mano,
+      # con credenziali reali, quando si vuole verificare l'integrazione.
+      - name: Suite unit (esclusi i test su DB popolato e gli smoke su servizi esterni)
+        run: npx vitest run --exclude '**/*.db.test.ts' --exclude '**/*.smoke.test.ts'
 
       - name: Compila l'applicazione
         run: npm run build
