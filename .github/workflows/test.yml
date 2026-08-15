@@ -24,7 +24,10 @@ jobs:
 
     services:
       postgres:
-        image: postgres:16
+        # pgvector, non postgres liscio: la migration 0018 fa `CREATE EXTENSION vector`
+        # (ricerca semantica del chatbot). Supabase la offre preinstallata, l'immagine
+        # ufficiale postgres no, e senza estensione le migrazioni si fermano lì.
+        image: pgvector/pgvector:pg16
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
