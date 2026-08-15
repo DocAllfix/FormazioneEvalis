@@ -1,0 +1,95 @@
+name: Test
+
+# Rete di sicurezza automatica: a ogni push/PR gira la suite unit + i test end-to-end nel
+# browser. Prima di questo workflow gli e2e si lanciavano solo a mano, con tutti i problemi
+# dell'ambiente locale (dev server zombie, cache .next, rate limit già consumato).
+#
+# Il DB è un Postgres EFFIMERO del runner: i test non toccano mai il database di sviluppo o di
+# produzione. Le migrazioni lo portano allo schema corrente prima di avviare l'app.
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: evalis_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      # Postgres diretto (niente pgbouncer nel runner): DATABASE_URL = DIRECT_URL.
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/evalis_test
+      DIRECT_URL: postgresql://postgres:postgres@localhost:5432/evalis_test
+      BETTER_AUTH_SECRET: chiave-di-test-solo-per-la-ci-32-caratteri
+      BETTER_AUTH_URL: http://localhost:3000
+      NEXT_PUBLIC_APP_URL: http://localhost:3000
+      NEXT_PUBLIC_ROOT_DOMAIN: localhost:3000
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Installa le dipendenze
+        run: npm ci
+
+      - name: Applica le migrazioni sul DB effimero
+        run: npm run db:migrate
+
+      - name: Suite unit (esclusi i test che richiedono un DB popolato)
+        run: npx vitest run --exclude '**/*.db.test.ts'
+
+      - name: Compila l'applicazione
+        run: npm run build
+
+      - name: Installa il browser di Playwright
+        run: npx playwright install --with-deps chromium
+
+      # `next start` serve la build appena compilata: niente compilazione on-demand, quindi
+      # nessuno dei cold-start che in locale falsavano i tempi dei test.
+      - name: Avvia l'app e attendi che risponda
+        run: |
+          npm run start &
+          for i in $(seq 1 60); do
+            if curl -sf -o /dev/null http://localhost:3000/; then
+              echo "app pronta dopo $((i*2))s"; exit 0
+            fi
+            sleep 2
+          done
+          echo "l'app non ha risposto entro 120s"; exit 1
+
+      - name: Test end-to-end (browser reale)
+        run: npx playwright test --reporter=line
+
+      - name: Conserva i referti in caso di rosso
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            test-results/
+            playwright-report/
+          retention-days: 7

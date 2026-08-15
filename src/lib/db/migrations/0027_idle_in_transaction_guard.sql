@@ -9,5 +9,14 @@
 -- Va sul RUOLO (non nel codice): il pooler scarta il parametro passato dall'app, ma eredita
 -- la configurazione impostata sul ruolo. app_rls = produzione; postgres = ambiente attuale.
 
-ALTER ROLE app_rls SET idle_in_transaction_session_timeout = '30s';
-ALTER ROLE postgres SET idle_in_transaction_session_timeout = '30s';
+-- Applicata solo ai ruoli ESISTENTI: in CI (Postgres effimero) `app_rls` non c'è, e un
+-- ALTER ROLE su un ruolo assente farebbe fallire l'intera migrazione.
+DO $$
+DECLARE r text;
+BEGIN
+  FOREACH r IN ARRAY ARRAY['app_rls', 'postgres'] LOOP
+    IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = r) THEN
+      EXECUTE format('ALTER ROLE %I SET idle_in_transaction_session_timeout = %L', r, '30s');
+    END IF;
+  END LOOP;
+END $$;
