@@ -37,8 +37,20 @@ export const auth = betterAuth({
   // solo in modalità produzione e piuttosto stretto sulle registrazioni. In CI l'intera suite
   // e2e arriva da un IP unico e lo supera. L'opzione viene passata SOLO se l'env esiste: in
   // produzione non è impostata, quindi valgono i default della libreria e nulla cambia.
+  // Le regole di default sono PER PERCORSO (`getDefaultSpecialRules`: /sign-in e /sign-up →
+  // max 3 ogni 10s) e hanno la precedenza sul `max` globale: per la CI vanno sovrascritte con
+  // `customRules`, altrimenti la suite si blocca alla quarta registrazione.
   ...(process.env.AUTH_RATE_LIMIT_MAX
-    ? { rateLimit: { window: 60, max: Number(process.env.AUTH_RATE_LIMIT_MAX) } }
+    ? {
+        rateLimit: {
+          window: 60,
+          max: Number(process.env.AUTH_RATE_LIMIT_MAX),
+          customRules: {
+            "/sign-up/email": { window: 60, max: Number(process.env.AUTH_RATE_LIMIT_MAX) },
+            "/sign-in/email": { window: 60, max: Number(process.env.AUTH_RATE_LIMIT_MAX) },
+          },
+        },
+      }
     : {}),
   user: {
     additionalFields: {
