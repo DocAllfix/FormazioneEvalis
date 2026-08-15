@@ -60,6 +60,11 @@ jobs:
       # scelta (meglio fallire che pubblicare un blog vuoto). Qui puntiamo al CMS reale in sola
       # LETTURA: nessuna credenziale, quindi la CI vede solo ciò che è già pubblico.
       BLOG_CMS_URL: https://cms.evalisacademy.it
+      # Tutta la suite arriva da un IP solo: alziamo le soglie anti-abuso invece di spegnerle.
+      # In produzione queste env non esistono e valgono i default (10 accessi/5min, 5 reg./ora).
+      RATE_LIMIT_SIGNIN: "1000"
+      RATE_LIMIT_SIGNUP: "1000"
+      RATE_LIMIT_RESET: "1000"
 
     steps:
       - uses: actions/checkout@v4

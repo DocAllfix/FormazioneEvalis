@@ -14,6 +14,15 @@ export const GET = handler.GET;
 
 const MIN = 60_000;
 
+// Soglie: i valori di PRODUZIONE sono i default qui sotto e restano invariati se le env non
+// sono impostate. Si alzano solo dove serve — in CI l'intera suite e2e arriva da un IP unico e
+// consumerebbe il budget a metà — senza dover disattivare il controllo (un interruttore
+// "spegni il rate limit" sarebbe una scorciatoia pericolosa da dimenticare accesa).
+function soglia(nome: string, predefinito: number): number {
+  const v = Number(process.env[nome]);
+  return Number.isFinite(v) && v > 0 ? v : predefinito;
+}
+
 export async function POST(req: Request) {
   const path = new URL(req.url).pathname;
   const ip = getClientIp(req);
@@ -22,13 +31,13 @@ export async function POST(req: Request) {
   let windowMs = 5 * MIN;
   if (path.includes("/sign-in")) {
     windowMs = 5 * MIN;
-    ok = await checkLimit(`auth:signin:${ip}`, 10, windowMs); // 10 tentativi / 5 min
+    ok = await checkLimit(`auth:signin:${ip}`, soglia("RATE_LIMIT_SIGNIN", 10), windowMs); // 10 tentativi / 5 min
   } else if (path.includes("/sign-up")) {
     windowMs = 60 * MIN;
-    ok = await checkLimit(`auth:signup:${ip}`, 5, windowMs); // 5 registrazioni / ora
+    ok = await checkLimit(`auth:signup:${ip}`, soglia("RATE_LIMIT_SIGNUP", 5), windowMs); // 5 registrazioni / ora
   } else if (path.includes("/forget-password") || path.includes("/request-password-reset") || path.includes("/reset-password")) {
     windowMs = 60 * MIN;
-    ok = await checkLimit(`auth:reset:${ip}`, 5, windowMs); // 5 reset / ora
+    ok = await checkLimit(`auth:reset:${ip}`, soglia("RATE_LIMIT_RESET", 5), windowMs); // 5 reset / ora
   }
   if (!ok) return tooManyRequests(windowMs);
 
