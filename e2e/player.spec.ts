@@ -29,18 +29,25 @@ test("player: corso assegnato → apri il player → la slide è visibile", asyn
   expect(consoleErrors, `console errors: ${consoleErrors.join(" | ")}`).toEqual([]);
 });
 
-test("player: enrollment di un altro utente → niente accesso (IDOR)", async ({ page }) => {
-  test.setTimeout(120_000);
+test("player: enrollment di un altro utente → niente accesso (IDOR)", async ({ page, browser }) => {
+  test.setTimeout(150_000);
 
   // Utente A: crea il proprio corso e ne ottiene l'enrollment.
   const { email: emailA } = await registraVerificaLogin(page, "E2E Player A");
   const { enrollmentId: enrollmentA } = await seminaCorsoEIscrivi(emailA);
 
-  // Utente B (nuovo contesto pulito): tenta di aprire il corso di A cambiando l'id nell'URL.
-  await page.context().clearCookies();
-  await registraVerificaLogin(page, "E2E Player B");
-  await page.goto(`/corso/${enrollmentA}`, { waitUntil: "domcontentloaded" });
-
-  // Non deve vedere il contenuto di A: la pagina non mostra la slide del suo corso.
-  await expect(page.getByText("Prima slide E2E")).toHaveCount(0);
+  // Utente B in un CONTESTO BROWSER NUOVO: `clearCookies()` non azzera localStorage né lo
+  // stato di sessione residuo, e la seconda registrazione ne risentiva. Un contesto pulito
+  // è l'equivalente di un altro browser: nessuna contaminazione da A.
+  const contestoB = await browser.newContext();
+  const paginaB = await contestoB.newPage();
+  try {
+    await registraVerificaLogin(paginaB, "E2E Player B");
+    // B tenta di aprire il corso di A cambiando l'id nell'URL.
+    await paginaB.goto(`/corso/${enrollmentA}`, { waitUntil: "domcontentloaded" });
+    // Non deve vedere il contenuto di A.
+    await expect(paginaB.getByText("Prima slide E2E")).toHaveCount(0);
+  } finally {
+    await contestoB.close();
+  }
 });
