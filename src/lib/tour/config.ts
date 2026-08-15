@@ -6,10 +6,8 @@
 import { driver as createDriver, type Config, type Driver, type DriveStep, type DriverHook } from "driver.js";
 
 const TOUR_PREFIX = "evalis-tour:";
-const BANNER_PREFIX = "evalis-banner:";
 
 export const tourStorageKey = (pageId: string) => `${TOUR_PREFIX}${pageId}`;
-export const bannerStorageKey = (pageId: string) => `${BANNER_PREFIX}${pageId}`;
 
 export function isTourDone(pageId: string): boolean {
   if (typeof window === "undefined") return false;
@@ -22,14 +20,6 @@ export function markTourDone(pageId: string): void {
 export function resetTour(pageId: string): void {
   if (typeof window === "undefined") return;
   window.localStorage.removeItem(tourStorageKey(pageId));
-}
-export function isBannerSeen(pageId: string): boolean {
-  if (typeof window === "undefined") return false;
-  return window.localStorage.getItem(bannerStorageKey(pageId)) === "1";
-}
-export function markBannerSeen(pageId: string): void {
-  if (typeof window === "undefined") return;
-  window.localStorage.setItem(bannerStorageKey(pageId), "1");
 }
 
 const BASE_CONFIG: Partial<Config> = {

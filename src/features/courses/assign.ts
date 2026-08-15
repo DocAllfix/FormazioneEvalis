@@ -5,15 +5,8 @@
 import { and, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { course, enrollment, member } from "@/lib/db/schema";
-import { requireRole, requireActiveOrg } from "@/features/auth/guards";
 import { appendActivity } from "@/features/audit/log";
 import { withTenant } from "@/lib/db/tenant";
-
-/** Server Action: l'admin/owner dell'org attiva assegna un corso a un dipendente. */
-export async function assignCourse(memberUserId: string, courseId: string) {
-  const { orgId } = await requireRole("owner", "admin");
-  return enrollMemberInCourse({ orgId, memberUserId, courseId });
-}
 
 /**
  * Logica di assegnazione (senza guard, testabile): valida membership + corso e crea
@@ -65,15 +58,6 @@ export async function enrollMemberInCourse(params: {
   });
 
   return { ok: true as const, orgId, userId: memberUserId, courseId };
-}
-
-/** Lista membri dell'org attiva (superficie per la dashboard admin). Progress: slice tracking. */
-export async function listOrgMembers() {
-  const { orgId } = await requireActiveOrg();
-  return db
-    .select({ userId: member.userId, role: member.role })
-    .from(member)
-    .where(eq(member.organizationId, orgId));
 }
 
 /** Seed: corso globale di test (per dev/test). */

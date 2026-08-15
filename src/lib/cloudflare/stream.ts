@@ -43,10 +43,6 @@ export async function getSignedClipUrl(clipUid: string | null, ttlSeconds = 7200
   return `https://customer-${code}.cloudflarestream.com/${token}/manifest/video.m3u8`;
 }
 
-// Alias storici usati dal contratto player.
-export const getClipStreamUrl = getSignedClipUrl;
-export const getLessonStreamUrl = getSignedClipUrl;
-
 /** Carica una clip su Stream da URL pubblico (signed). Ritorna lo `uid`. */
 export async function uploadClipFromUrl(url: string): Promise<string> {
   const acct = process.env.CLOUDFLARE_ACCOUNT_ID;

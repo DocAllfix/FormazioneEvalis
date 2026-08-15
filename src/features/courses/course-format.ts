@@ -68,9 +68,6 @@ export const courseInputSchema = z.object({
   finalExam: quizInputSchema.optional(),
 });
 
-export type SlideBlock = z.infer<typeof slideBlockSchema>;
 export type SlideInput = z.infer<typeof slideInputSchema>;
-export type QuestionInput = z.infer<typeof questionInputSchema>;
 export type QuizInput = z.infer<typeof quizInputSchema>;
-export type LessonInput = z.infer<typeof lessonInputSchema>;
 export type CourseInput = z.infer<typeof courseInputSchema>;

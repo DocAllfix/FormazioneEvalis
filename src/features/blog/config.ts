@@ -32,8 +32,3 @@ export function credenzialiCms(): string | null {
   if (!u || !p) return null;
   return "Basic " + Buffer.from(`${u}:${p}`).toString("base64");
 }
-
-/** Il blog e' agganciato a un CMS? Finche' e' falso, il sito continua con la fonte precedente. */
-export function blogConfigurato(): boolean {
-  return cmsUrl().length > 0;
-}

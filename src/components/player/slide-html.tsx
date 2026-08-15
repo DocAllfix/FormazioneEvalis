@@ -23,7 +23,6 @@ export const SLIDE_W = 1280;
 export const BASE_H = 720;
 export const GUTTER = 380;
 export const TOTAL_W = SLIDE_W + GUTTER;
-export const DEFAULT_RATIO = TOTAL_W / BASE_H;
 // Altezza massima prudenziale di una slide (px) e ratio di sicurezza corrispondente.
 // SAFE_RATIO è il ratio INIZIALE quando una slide non ha il ratio salvato nel blocco:
 // box "alto" → mai un taglio, al più un margine sotto finché la misura non arriva.
