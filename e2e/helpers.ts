@@ -140,6 +140,9 @@ export async function seminaCorsoEIscrivi(email: string): Promise<{ enrollmentId
 
 /** Login via UI. Presuppone utente già esistente e verificato. */
 export async function login(page: Page, email: string, password = PASSWORD_TEST): Promise<void> {
+  // In CI tutta la suite arriva da un solo IP: i limiti anti-abuso (10 accessi/5min,
+  // 5 registrazioni/ora) si esaurirebbero a metà. Azzeriamo appena prima di consumarne uno.
+  await resetRateLimitAuth();
   await page.goto("/login");
   await fillStabile(page.getByLabel("Email"), email);
   await fillStabile(page.getByLabel("Password", { exact: true }), password);
