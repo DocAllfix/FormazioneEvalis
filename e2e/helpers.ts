@@ -93,6 +93,51 @@ async function fillStabile(campo: Locator, value: string): Promise<void> {
   }).toPass({ timeout: 10_000 });
 }
 
+/**
+ * Semina un corso minimo (1 modulo → 1 lezione → 2 slide) e iscrive l'utente, restituendo
+ * l'enrollmentId per aprire /corso/[enrollmentId].
+ *
+ * Passa dal DB e non dall'UI perché l'authoring è area staff: qui interessa esercitare il
+ * PLAYER. Struttura conforme a `courseInputSchema` (src/features/courses/course-format.ts).
+ * `avatarClipUid: null` → il player usa il manifest HLS di prova (nessuna dipendenza Cloudflare).
+ */
+export async function seminaCorsoEIscrivi(email: string): Promise<{ enrollmentId: string; courseId: string }> {
+  if (!DB) throw new Error("DATABASE_URL mancante: il seed del player richiede il DB dev (.env).");
+  const sql = postgres(DB, { prepare: false, max: 1 });
+  try {
+    const [u] = await sql`SELECT id FROM "user" WHERE email = ${email} LIMIT 1`;
+    if (!u) throw new Error(`Utente ${email} inesistente: registrarlo prima del seed.`);
+    const [m] = await sql`SELECT organization_id FROM member WHERE user_id = ${u.id} LIMIT 1`;
+    if (!m) throw new Error("L'utente non ha organizzazioni: attendere la creazione dell'org personale.");
+
+    const titolo = `Corso E2E ${Date.now()}`;
+    const [c] = await sql`
+      INSERT INTO course (title, description, status, required_minutes)
+      VALUES (${titolo}, 'Corso creato dai test e2e', 'published', 1)
+      RETURNING id`;
+    const [mod] = await sql`
+      INSERT INTO module (course_id, title, position) VALUES (${c.id}, 'Modulo E2E', 1) RETURNING id`;
+    const [les] = await sql`
+      INSERT INTO lesson (module_id, title, activity_type, position, min_required_seconds)
+      VALUES (${mod.id}, 'Lezione E2E', 'video', 1, 1) RETURNING id`;
+    for (const [i, titoloSlide] of ["Prima slide E2E", "Seconda slide E2E"].entries()) {
+      await sql`
+        INSERT INTO slide (lesson_id, title, blocks, position, audio_seconds, avatar_clip_uid)
+        VALUES (${les.id}, ${titoloSlide},
+                ${sql.json([{ type: "heading", text: titoloSlide }, { type: "paragraph", text: "Contenuto di prova." }])},
+                ${i + 1}, 1, NULL)`;
+    }
+    const [enr] = await sql`
+      INSERT INTO enrollment (organization_id, user_id, course_id, source, status)
+      VALUES (${m.organization_id}, ${u.id}, ${c.id}, 'manual', 'active')
+      ON CONFLICT (user_id, course_id) DO UPDATE SET status = 'active'
+      RETURNING id`;
+    return { enrollmentId: enr.id as string, courseId: c.id as string };
+  } finally {
+    await sql.end();
+  }
+}
+
 /** Login via UI. Presuppone utente già esistente e verificato. */
 export async function login(page: Page, email: string, password = PASSWORD_TEST): Promise<void> {
   await page.goto("/login");
