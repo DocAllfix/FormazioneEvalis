@@ -1,34 +1,18 @@
-import { test, expect, type ConsoleMessage } from "@playwright/test";
+import { test, expect } from "@playwright/test";
+import { registraVerificaLogin, tracciaErroriConsole } from "./helpers";
 
 // E2E assistenza (Fase 2A): registrazione discente → apertura ticket → risposta → lista.
 // Raccoglie gli errori di console (devtools): la suite fallisce se la pagina ne emette.
 
 const stamp = Date.now();
-const email = `e2e-tic+${stamp}@evalis.test`;
-const password = "Password123!";
-const name = "E2E Ticket";
-
-function trackConsole(messages: string[]) {
-  return (msg: ConsoleMessage) => {
-    if (msg.type() === "error") messages.push(msg.text());
-  };
-}
 
 test("assistenza: registra → apri ticket → rispondi → lista", async ({ page }) => {
   test.setTimeout(120_000); // assorbe i cold-compile delle route in dev
   const consoleErrors: string[] = [];
-  page.on("console", trackConsole(consoleErrors));
+  page.on("console", tracciaErroriConsole(consoleErrors));
 
-  // --- Registrazione ---
-  await page.goto("/registrati");
-  await page.getByLabel("Nome e cognome").fill(name);
-  await page.getByLabel("Email").fill(email);
-  await page.getByLabel("Password", { exact: true }).fill(password);
-  await page.getByLabel("Conferma password").fill(password);
-  const signupResp = page.waitForResponse((r) => r.url().includes("/api/auth/sign-up/email"));
-  await page.getByRole("button", { name: "Crea account" }).click();
-  await signupResp;
-  await page.waitForURL((url) => !url.pathname.includes("/registrati"), { timeout: 20_000 });
+  // Registrazione con verifica email → utente autenticato sulla dashboard.
+  await registraVerificaLogin(page, "E2E Ticket");
 
   // --- Assistenza: empty-state ---
   await page.goto("/assistenza");

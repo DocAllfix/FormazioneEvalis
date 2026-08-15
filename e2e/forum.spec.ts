@@ -1,37 +1,21 @@
-import { test, expect, type ConsoleMessage } from "@playwright/test";
+import { test, expect } from "@playwright/test";
+import { registraVerificaLogin, tracciaErroriConsole } from "./helpers";
 
 // E2E forum (Fase 2C): registrazione → nuovo thread → risposta → lista.
 // Cattura gli errori di console (devtools): fallisce se la pagina ne emette.
 
 const stamp = Date.now();
-const email = `e2e-forum+${stamp}@evalis.test`;
-const password = "Password123!";
-const name = "E2E Forum";
-
-function trackConsole(messages: string[]) {
-  return (msg: ConsoleMessage) => {
-    if (msg.type() === "error") messages.push(msg.text());
-  };
-}
 
 test("forum: registra → nuovo thread → rispondi → lista", async ({ page }) => {
   test.setTimeout(120_000);
   const consoleErrors: string[] = [];
-  page.on("console", trackConsole(consoleErrors));
+  page.on("console", tracciaErroriConsole(consoleErrors));
 
-  // --- Registrazione ---
-  await page.goto("/registrati");
-  await page.getByLabel("Nome e cognome").fill(name);
-  await page.getByLabel("Email").fill(email);
-  await page.getByLabel("Password", { exact: true }).fill(password);
-  await page.getByLabel("Conferma password").fill(password);
-  const signupResp = page.waitForResponse((r) => r.url().includes("/api/auth/sign-up/email"));
-  await page.getByRole("button", { name: "Crea account" }).click();
-  await signupResp;
-  await page.waitForURL((url) => !url.pathname.includes("/registrati"), { timeout: 20_000 });
+  // Registrazione con verifica email → utente autenticato sulla dashboard.
+  await registraVerificaLogin(page, "E2E Forum");
 
   // --- Forum ---
-  await page.goto("/forum");
+  await page.goto("/forum", { waitUntil: "domcontentloaded" });
   await expect(page.getByRole("heading", { name: "Forum" })).toBeVisible();
 
   // --- Nuovo thread ---
@@ -52,7 +36,7 @@ test("forum: registra → nuovo thread → rispondi → lista", async ({ page })
   await expect(page.getByText("Dalla sezione Certificati con il QR")).toBeVisible();
 
   // --- Lista: il thread compare ---
-  await page.goto("/forum");
+  await page.goto("/forum", { waitUntil: "domcontentloaded" });
   await expect(page.getByText(title)).toBeVisible();
 
   expect(consoleErrors, `console errors: ${consoleErrors.join(" | ")}`).toEqual([]);

@@ -1,17 +1,5 @@
-import { test, expect, type ConsoleMessage } from "@playwright/test";
-
-// Utente unico per ogni run (evita conflitti di email).
-const stamp = Date.now();
-const email = `e2e+${stamp}@evalis.test`;
-const password = "Password123!";
-const name = "E2E Tester";
-
-// Raccoglie errori di console (devtools) per ogni pagina.
-function trackConsole(messages: string[]) {
-  return (msg: ConsoleMessage) => {
-    if (msg.type() === "error") messages.push(msg.text());
-  };
-}
+import { test, expect } from "@playwright/test";
+import { registraVerificaLogin, tracciaErroriConsole } from "./helpers";
 
 test("landing pubblica carica", async ({ page }) => {
   await page.goto("/");
@@ -25,22 +13,10 @@ test("gating: /dashboard da sloggato redirige a /login", async ({ page }) => {
 
 test("registrazione → dashboard → certificati → profilo → logout", async ({ page }) => {
   const consoleErrors: string[] = [];
-  page.on("console", trackConsole(consoleErrors));
+  page.on("console", tracciaErroriConsole(consoleErrors));
 
-  // --- Registrazione (better-auth) ---
-  await page.goto("/registrati");
-  await page.getByLabel("Nome e cognome").fill(name);
-  await page.getByLabel("Email").fill(email);
-  await page.getByLabel("Password", { exact: true }).fill(password);
-  await page.getByLabel("Conferma password").fill(password);
-  const signupResp = page.waitForResponse((r) =>
-    r.url().includes("/api/auth/sign-up/email"),
-  );
-  await page.getByRole("button", { name: "Crea account" }).click();
-  await signupResp; // sign-up completato (cookie sessione impostato)
-  await page.waitForURL((url) => !url.pathname.includes("/registrati"), {
-    timeout: 20_000,
-  }); // redirect client (router.push) avvenuto
+  // Registrazione (con verifica email obbligatoria) → utente verificato → login.
+  const { email } = await registraVerificaLogin(page);
 
   // --- Dashboard (gated, empty-state reale) ---
   await page.goto("/dashboard");
@@ -56,7 +32,8 @@ test("registrazione → dashboard → certificati → profilo → logout", async
   await page.getByLabel("Menu account").click();
   await page.getByRole("menuitem", { name: "Profilo" }).click();
   await expect(page).toHaveURL(/\/profilo/);
-  await expect(page.getByText(email)).toBeVisible();
+  // l'email compare anche nel footer sidebar: scopiamo al valore del campo profilo (text-near-black)
+  await expect(page.locator("span.text-near-black", { hasText: email })).toBeVisible();
   await expect(page.getByText("Sessione singola attiva")).toBeVisible();
 
   // --- Logout ---

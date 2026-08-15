@@ -105,7 +105,7 @@ export function SidebarShell({
           <SidebarMenuItem>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuButton size="lg" className="data-[state=open]:bg-sidebar-accent">
+                <SidebarMenuButton size="lg" aria-label="Menu account" className="data-[state=open]:bg-sidebar-accent">
                   <Avatar className="h-8 w-8 rounded-lg">
                     <AvatarFallback className="rounded-lg bg-primary/10 text-xs font-medium text-primary">
                       {initials}
