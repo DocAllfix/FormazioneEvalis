@@ -53,8 +53,14 @@ jobs:
           node-version: 22
           cache: npm
 
+      # `npm ci` esige che package.json e lockfile combacino ESATTAMENTE, ma il lockfile è
+      # generato su Windows e npm vi omette alcuni binari opzionali di altre piattaforme
+      # (@emnapi/*, esbuild-linux, ...). Su un runner Linux `npm ci` fallirebbe per quelli,
+      # senza che ci sia nulla di rotto. `npm install` parte comunque dal lockfile e integra
+      # le varianti mancanti. Rigenerare il lockfile su Windows peggiora le cose (pota le
+      # voci Linux), quindi la soluzione sta qui, non nel repository.
       - name: Installa le dipendenze
-        run: npm ci
+        run: npm install --no-audit --no-fund
 
       - name: Applica le migrazioni sul DB effimero
         run: npm run db:migrate
