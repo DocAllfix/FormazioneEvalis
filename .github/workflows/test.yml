@@ -65,6 +65,10 @@ jobs:
       RATE_LIMIT_SIGNIN: "1000"
       RATE_LIMIT_SIGNUP: "1000"
       RATE_LIMIT_RESET: "1000"
+      # Anche better-auth ha il SUO limitatore (default stretti sulle registrazioni), attivo in
+      # modalità produzione — ed è quello che bloccava la suite. In produzione questa env non
+      # esiste e l'opzione non viene nemmeno passata alla libreria.
+      AUTH_RATE_LIMIT_MAX: "100000"
 
     steps:
       - uses: actions/checkout@v4

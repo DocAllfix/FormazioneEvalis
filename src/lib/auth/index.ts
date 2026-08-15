@@ -33,6 +33,13 @@ export const auth = betterAuth({
   trustedOrigins: isLocalhost
     ? [env.NEXT_PUBLIC_APP_URL]
     : [env.NEXT_PUBLIC_APP_URL, `https://*.${rootHost}`],
+  // better-auth ha un rate limiter PROPRIO (oltre al nostro in /api/auth/[...all]), attivo da
+  // solo in modalità produzione e piuttosto stretto sulle registrazioni. In CI l'intera suite
+  // e2e arriva da un IP unico e lo supera. L'opzione viene passata SOLO se l'env esiste: in
+  // produzione non è impostata, quindi valgono i default della libreria e nulla cambia.
+  ...(process.env.AUTH_RATE_LIMIT_MAX
+    ? { rateLimit: { window: 60, max: Number(process.env.AUTH_RATE_LIMIT_MAX) } }
+    : {}),
   user: {
     additionalFields: {
       // Ruolo di piattaforma: leggibile in sessione, NON impostabile dall'utente (sicurezza).
