@@ -44,7 +44,6 @@ const schema = z.object({
   CLOUDFLARE_STREAM_SIGNING_KEY: z.string().optional(), // PEM privata (base64)
   CLOUDFLARE_STREAM_SIGNING_KEY_ID: z.string().optional(), // kid della signing key
   CLOUDFLARE_STREAM_CUSTOMER_CODE: z.string().optional(), // customer-<code>.cloudflarestream.com
-  BREVO_API_KEY: z.string().optional(),
   RESEND_API_KEY: z.string().optional(),
   RESEND_FROM: z.string().optional(), // mittente del dominio verificato (es. "Evalis <no-reply@...>")
   // staff piattaforma autorizzato ad approvare/revocare certificati (CSV di email)
