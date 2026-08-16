@@ -14,9 +14,9 @@
 
 import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { stripeProcessedEvent } from "@/lib/db/schema";
+import { stripeProcessedEvent, paymentEvent } from "@/lib/db/schema";
 import { getStripe } from "@/lib/stripe/client";
-import { planFromEvent } from "@/features/billing/events";
+import { planFromEvent, datiPagamentoDaEvento } from "@/features/billing/events";
 import {
   provisionCoursePurchase,
   provisionBundlePurchase,
@@ -49,6 +49,17 @@ export async function POST(req: Request) {
   // il claim non deve MAI impedire un retry legittimo di Stripe
   const release = () =>
     db.delete(stripeProcessedEvent).where(eq(stripeProcessedEvent.eventId, event.id));
+
+  // (4) REGISTRO FINANZIARIO (append-only): annota importo, valuta e riferimenti Stripe di
+  // OGNI evento che arriva, compresi quelli che il provisioning ignora (rimborsi, insoluti).
+  // BEST-EFFORT di proposito: se la scrittura fallisce si prosegue comunque col provisioning —
+  // un guasto al registro non deve lasciare senza corso chi ha già pagato. La fonte di verità
+  // del denaro resta Stripe, quindi un buco qui è recuperabile; un corso non erogato no.
+  try {
+    await db.insert(paymentEvent).values({ ...datiPagamentoDaEvento(event), payload: event }).onConflictDoNothing();
+  } catch (e) {
+    console.error(`[ledger] annotazione fallita per ${event.id} (il provisioning prosegue)`, e);
+  }
 
   const plan = planFromEvent(event);
   try {

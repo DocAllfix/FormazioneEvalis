@@ -5,7 +5,7 @@
 import { describe, it, expect, afterAll } from "vitest";
 import { sql, and, eq, inArray } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { organization, enrollment, course, activityLog, stripeProcessedEvent, bundle, bundleCourse } from "@/lib/db/schema";
+import { organization, enrollment, course, activityLog, stripeProcessedEvent, bundle, bundleCourse, paymentEvent } from "@/lib/db/schema";
 import { provisionCoursePurchase, provisionBundlePurchase, applySubscriptionState, revokeOrgSubscription } from "@/features/billing/provisioning";
 import { haGiaIlCorso } from "@/features/billing/checkout";
 import { getSeatLimit } from "@/features/billing/seats";
@@ -222,6 +222,53 @@ describe("Modulo 2 — provisioning billing", () => {
     expect(await claim()).toHaveLength(1);
 
     await db.delete(stripeProcessedEvent).where(eq(stripeProcessedEvent.eventId, eventId));
+  });
+
+  // Registro finanziario: deve accettare solo INSERT. Se un domani qualcuno togliesse il
+  // trigger, questo test lo intercetta — è il requisito di compliance, non un dettaglio.
+  it("payment_event è append-only: UPDATE e DELETE vengono rifiutati dal DB", async () => {
+    const evId = `evt_ledger_${RUN}`;
+    await db.insert(paymentEvent).values({
+      stripeEventId: evId,
+      type: "checkout.session.completed",
+      livemode: false,
+      amountTotal: 1220,
+      currency: "eur",
+      occurredAt: new Date(),
+      payload: { prova: true },
+    });
+
+    // Drizzle avvolge l'errore Postgres ("payment_event is append-only") in un proprio
+    // "Failed query": si verifica quindi il RIFIUTO, e soprattutto che il dato non cambi.
+    await expect(
+      db.update(paymentEvent).set({ amountTotal: 1 }).where(eq(paymentEvent.stripeEventId, evId)),
+    ).rejects.toThrow();
+
+    await expect(
+      db.delete(paymentEvent).where(eq(paymentEvent.stripeEventId, evId)),
+    ).rejects.toThrow();
+
+    // la riga è ancora lì, con l'importo originale: né modificata né cancellata
+    const dopo = await db.select().from(paymentEvent).where(eq(paymentEvent.stripeEventId, evId));
+    expect(dopo).toHaveLength(1);
+    expect(dopo[0].amountTotal).toBe(1220);
+
+    // un evento re-inviato da Stripe non deve creare una seconda riga
+    await db.insert(paymentEvent).values({
+      stripeEventId: evId,
+      type: "checkout.session.completed",
+      livemode: false,
+      occurredAt: new Date(),
+      payload: {},
+    }).onConflictDoNothing();
+    const righe = await db.select().from(paymentEvent).where(eq(paymentEvent.stripeEventId, evId));
+    expect(righe).toHaveLength(1);
+
+    // pulizia: possibile SOLO con la valvola di manutenzione (come per activity_log)
+    await db.transaction(async (tx) => {
+      await tx.execute(sql`SET LOCAL app.audit_maintenance = 'on'`);
+      await tx.delete(paymentEvent).where(eq(paymentEvent.stripeEventId, evId));
+    });
   });
 
   // Guardia anti-doppio-addebito: il vincolo unique è su (user_id, course_id) e il webhook

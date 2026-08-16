@@ -3,7 +3,7 @@
 
 import { describe, it, expect } from "vitest";
 import type Stripe from "stripe";
-import { planFromEvent } from "../features/billing/events";
+import { planFromEvent, datiPagamentoDaEvento } from "../features/billing/events";
 import { resolveBundleCourseIds, type BundleLink } from "../features/billing/bundles";
 import { companyDiscountPercent, COMPANY_COUPONS } from "../features/billing/discounts";
 import { chiaveIdempotenza } from "../features/billing/idempotenza";
@@ -132,6 +132,65 @@ describe("companyDiscountPercent (sconto azienda automatico)", () => {
   it("le % mappano su coupon Stripe con ID fisso", () => {
     expect(COMPANY_COUPONS[20]).toBe("azienda-20");
     expect(COMPANY_COUPONS[30]).toBe("azienda-30");
+  });
+});
+
+describe("datiPagamentoDaEvento (registro finanziario)", () => {
+  const evt = (type: string, object: unknown, extra: Record<string, unknown> = {}) =>
+    ({ id: "evt_1", type, created: 1_760_000_000, livemode: true, data: { object }, ...extra }) as unknown as Stripe.Event;
+
+  it("checkout completato → importo, valuta, sessione, intent, org e utente", () => {
+    const d = datiPagamentoDaEvento(
+      evt("checkout.session.completed", {
+        id: "cs_123",
+        customer: "cus_1",
+        payment_intent: "pi_9",
+        amount_total: 1220,
+        currency: "eur",
+        metadata: { orgId: "o1", userId: "u1" },
+      }),
+    );
+    expect(d).toMatchObject({
+      stripeEventId: "evt_1",
+      type: "checkout.session.completed",
+      livemode: true,
+      stripeCustomerId: "cus_1",
+      checkoutSessionId: "cs_123",
+      paymentIntentId: "pi_9",
+      organizationId: "o1",
+      userId: "u1",
+      amountTotal: 1220,
+      currency: "eur",
+    });
+    // `occurredAt` viene da event.created, non dall'ora in cui scriviamo
+    expect(d.occurredAt.getTime()).toBe(1_760_000_000_000);
+  });
+
+  it("customer espanso a oggetto → si prende l'id", () => {
+    const d = datiPagamentoDaEvento(evt("checkout.session.completed", { id: "cs_1", customer: { id: "cus_X" } }));
+    expect(d.stripeCustomerId).toBe("cus_X");
+  });
+
+  // Deve accogliere anche gli eventi che il provisioning ignora: sono proprio quelli che
+  // oggi sparivano senza lasciare traccia.
+  it("rimborso → importo da `amount`, nessuna sessione di checkout", () => {
+    const d = datiPagamentoDaEvento(
+      evt("charge.refunded", { id: "ch_1", payment_intent: "pi_7", amount: 500, currency: "eur" }),
+    );
+    expect(d).toMatchObject({ type: "charge.refunded", amountTotal: 500, paymentIntentId: "pi_7", checkoutSessionId: null });
+  });
+
+  it("evento con oggetto povero → nessun campo inventato, niente eccezioni", () => {
+    const d = datiPagamentoDaEvento(evt("payment_intent.payment_failed", { id: "pi_5" }));
+    expect(d.paymentIntentId).toBe("pi_5");
+    expect(d.amountTotal).toBeNull();
+    expect(d.organizationId).toBeNull();
+    expect(d.currency).toBeNull();
+  });
+
+  it("livemode false (modalità test) viene registrato come tale", () => {
+    const d = datiPagamentoDaEvento(evt("checkout.session.completed", { id: "cs_1" }, { livemode: false }));
+    expect(d.livemode).toBe(false);
   });
 });
 
