@@ -7,16 +7,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Building2, Loader2 } from "lucide-react";
 import { createMyCompany } from "@/features/admin/server-actions";
-
-function slugify(s: string): string {
-  return s
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "") // toglie i segni diacritici (à→a)
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 40);
-}
+import { slugifyAzienda as slugify } from "@/lib/reserved-subdomains";
 
 const ROOT = process.env.NEXT_PUBLIC_ROOT_DOMAIN ?? "evalisacademy.it";
 

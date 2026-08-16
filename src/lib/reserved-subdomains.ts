@@ -11,6 +11,26 @@ export function isReservedSubdomain(sub: string): boolean {
   return RESERVED_SUBDOMAINS.has(sub);
 }
 
+/**
+ * Nome azienda → slug proponibile come sottodominio (à→a, spazi→trattini, taglio a 40).
+ * Era duplicata identica in `company-onboarding.tsx` e `onboarding-wizard.tsx`.
+ *
+ * NB: la classe dei diacritici usa gli stessi caratteri combinanti dell'originale
+ * (U+0300–U+036F, verificati code point per code point): copia esatta, non riscrittura.
+ *
+ * Da non confondere con `slugify` in `features/courses/slug.ts`: quella è per gli slug dei
+ * CORSI (taglio a 80, fallback "corso") ed è volutamente un'altra funzione.
+ */
+export function slugifyAzienda(s: string): string {
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "") // toglie i segni diacritici (à→a)
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 40);
+}
+
 /** Slug valido per sottodominio: lowercase, 2–63 char [a-z0-9-], non riservato, no trattini ai bordi. */
 export function isValidSlug(slug: string): boolean {
   if (!/^[a-z0-9-]{2,63}$/.test(slug)) return false;

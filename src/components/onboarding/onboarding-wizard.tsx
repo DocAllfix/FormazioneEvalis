@@ -27,17 +27,8 @@ import {
 } from "@/features/onboarding/server-actions";
 import { createMyCompany } from "@/features/admin/server-actions";
 import type { OnboardingPersona } from "@/lib/db/schema/onboarding";
-
-// slug → sottodominio (stessa logica di company-onboarding): minuscole, no accenti, [a-z0-9-].
-function slugify(s: string): string {
-  return s
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .slice(0, 40);
-}
+// slug → sottodominio: la stessa funzione usata da company-onboarding, ora condivisa.
+import { slugifyAzienda as slugify } from "@/lib/reserved-subdomains";
 
 const GOALS = [
   { id: "auditor_iso", label: "Auditor ISO", desc: "Schemi 9001, 14001, 45001…", icon: ShieldCheck },
