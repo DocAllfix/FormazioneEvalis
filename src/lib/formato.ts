@@ -16,6 +16,25 @@ export function dataBreve(d: Date | null): string {
 }
 
 /**
+ * Centesimi → prezzo in valuta, formato italiano. Era duplicata in
+ * `components/catalog/catalog-browser.tsx` e `(app)/corsi/[id]/page.tsx`.
+ *
+ * `useGrouping` esplicito: il default italiano ("min2") NON separa le migliaia sotto le cinque
+ * cifre, quindi un pacchetto da 3990 € uscirebbe "3990,00 €" invece di "3.990,00 €".
+ *
+ * La firma accetta `null` di proposito: la copia della pagina corso lo gestiva
+ * (`currency ?? "eur"`) mentre quella del catalogo sarebbe andata in errore. Tenendo la
+ * variante TOLLERANTE nessuno dei due chiamanti cambia comportamento.
+ */
+export function euro(cents: number, currency: string | null = "eur"): string {
+  return new Intl.NumberFormat("it-IT", {
+    style: "currency",
+    currency: (currency ?? "eur").toUpperCase(),
+    useGrouping: true,
+  }).format(cents / 100);
+}
+
+/**
  * Secondi → "mm:ss" con zero iniziale. Era duplicata identica in `player/quiz-step.tsx` e
  * `player/slide-step.tsx` (entrambe chiamate `fmt`).
  *

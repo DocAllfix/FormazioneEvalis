@@ -7,6 +7,7 @@ import { courseCompanyDiscountPercent } from "@/features/billing/checkout";
 import { firstMembershipOrgId } from "@/features/auth/guards";
 import { iso19011Advisory } from "@/features/prerequisites/advisory";
 import { CourseDetailBody, hoursLabel } from "@/components/catalog/course-detail-body";
+import { euro } from "@/lib/formato";
 import { BuyButton } from "@/components/catalog/buy-button";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
@@ -15,14 +16,6 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return { title: c ? `${c.title} — Evalis` : "Corso — Evalis" };
 }
 
-function euro(cents: number, currency: string | null): string {
-  // useGrouping esplicito: il default italiano non separa le migliaia sotto le 5 cifre
-  return new Intl.NumberFormat("it-IT", {
-    style: "currency",
-    currency: (currency ?? "eur").toUpperCase(),
-    useGrouping: true,
-  }).format(cents / 100);
-}
 
 export default async function CourseDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

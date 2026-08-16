@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Check, Clock, Search } from "lucide-react";
 import type { CatalogCourse } from "@/features/catalog/queries";
 import { categoryVisual } from "./category-visual";
+import { euro } from "@/lib/formato";
 
 const AREAS = [
   { id: "all", label: "Tutti" },
@@ -23,15 +24,12 @@ function hoursLabel(c: CatalogCourse): string {
   return c.requiredMinutes >= 60 ? `~${Math.round(c.requiredMinutes / 60)} ore` : `~${c.requiredMinutes} min`;
 }
 
-export function euro(cents: number, currency = "eur"): string {
-  // useGrouping esplicito: il default italiano ("min2") NON separa le migliaia sotto le
-  // cinque cifre, quindi un pacchetto da 3990 € uscirebbe "3990,00 €" invece di "3.990,00 €".
-  return new Intl.NumberFormat("it-IT", {
-    style: "currency",
-    currency: currency.toUpperCase(),
-    useGrouping: true,
-  }).format(cents / 100);
-}
+// `euro` vive ora in `@/lib/formato` (era duplicata con la pagina corso). La ri-esportiamo da
+// qui perché `bundle-strip` e `bundle-pick-dialog` la importano da questo modulo: così quegli
+// import restano validi e nulla cambia per chi la usava.
+// NB: serve anche l'import in cima al file — questo componente la usa al proprio interno, e
+// `export { … } from` ri-esporta soltanto, senza portarla nello scope locale.
+export { euro };
 
 /** Doppio listino attivo? (prezzo lancio con listino barrato) */
 function hasLaunchPrice(c: Pick<CatalogCourse, "priceCents" | "listPriceCents">): boolean {
