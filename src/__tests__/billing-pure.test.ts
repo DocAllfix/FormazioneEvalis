@@ -6,6 +6,7 @@ import type Stripe from "stripe";
 import { planFromEvent } from "../features/billing/events";
 import { resolveBundleCourseIds, type BundleLink } from "../features/billing/bundles";
 import { companyDiscountPercent, COMPANY_COUPONS } from "../features/billing/discounts";
+import { chiaveIdempotenza } from "../features/billing/idempotenza";
 
 const ev = (type: string, object: unknown) => ({ type, data: { object } }) as unknown as Stripe.Event;
 
@@ -131,5 +132,39 @@ describe("companyDiscountPercent (sconto azienda automatico)", () => {
   it("le % mappano su coupon Stripe con ID fisso", () => {
     expect(COMPANY_COUPONS[20]).toBe("azienda-20");
     expect(COMPANY_COUPONS[30]).toBe("azienda-30");
+  });
+});
+
+describe("chiaveIdempotenza", () => {
+  const T = 1_760_000_000_000; // istante fisso: la chiave dipende dall'ora
+
+  it("stessi fattori nella stessa ora → stessa chiave (il retry riusa la sessione)", () => {
+    expect(chiaveIdempotenza(["corso", "u1", "c1", 0], T)).toBe(
+      chiaveIdempotenza(["corso", "u1", "c1", 0], T),
+    );
+  });
+
+  // IL CASO CRITICO: se lo sconto cambia la chiave DEVE cambiare, altrimenti Stripe
+  // riconsegnerebbe per 24h la sessione vecchia — cioè il PREZZO VECCHIO.
+  it("sconto diverso → chiave diversa (niente prezzo stale)", () => {
+    const a = chiaveIdempotenza(["corso", "u1", "c1", 0], T);
+    const b = chiaveIdempotenza(["corso", "u1", "c1", 20], T);
+    const c = chiaveIdempotenza(["corso", "u1", "c1", 30], T);
+    expect(new Set([a, b, c]).size).toBe(3);
+  });
+
+  it("destinatario, corso e corso-a-scelta diversi → chiavi diverse", () => {
+    const base = chiaveIdempotenza(["corso", "u1", "c1", 0], T);
+    expect(chiaveIdempotenza(["corso", "u2", "c1", 0], T)).not.toBe(base);
+    expect(chiaveIdempotenza(["corso", "u1", "c2", 0], T)).not.toBe(base);
+    expect(chiaveIdempotenza(["pacchetto", "u1", "b1", "-"], T)).not.toBe(
+      chiaveIdempotenza(["pacchetto", "u1", "b1", "scelto"], T),
+    );
+  });
+
+  it("ora successiva → chiave diversa (una sessione abbandonata non resta incollata)", () => {
+    expect(chiaveIdempotenza(["corso", "u1", "c1", 0], T)).not.toBe(
+      chiaveIdempotenza(["corso", "u1", "c1", 0], T + 3_600_000),
+    );
   });
 });

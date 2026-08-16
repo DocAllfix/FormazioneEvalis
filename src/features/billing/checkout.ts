@@ -11,6 +11,7 @@ import { parseOrgMetadata } from "@/features/auth/org-metadata";
 import { ensureStripeCustomer } from "./customers";
 import { loadBundleWithCourses, resolveBundleCourseIds } from "./bundles";
 import { COMPANY_COUPONS, companyDiscountPercent } from "./discounts";
+import { chiaveIdempotenza } from "./idempotenza";
 
 const appUrl = () => process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
@@ -117,6 +118,9 @@ export async function createCoursePurchaseCheckout(courseId: string, beneficiary
     metadata: { kind: "course_purchase", userId: destinatarioId, courseId, orgId },
     success_url: `${appUrl()}${destinatarioId === user.id ? "/dashboard?purchase=success" : "/admin/persone?purchase=success"}`,
     cancel_url: `${appUrl()}${destinatarioId === user.id ? "/dashboard?purchase=cancel" : "/admin/persone?purchase=cancel"}`,
+  }, {
+    // include lo SCONTO: senza, un cambio di percentuale restituirebbe la sessione vecchia
+    idempotencyKey: chiaveIdempotenza(["corso", destinatarioId, courseId, percent]),
   });
   if (!session.url) throw new Error("URL checkout non disponibile.");
   return session.url;
@@ -158,6 +162,9 @@ export async function createBundlePurchaseCheckout(bundleId: string, chosenCours
     },
     success_url: `${appUrl()}/dashboard?purchase=success`,
     cancel_url: `${appUrl()}/dashboard?purchase=cancel`,
+  }, {
+    // il corso a scelta cambia la composizione del pacchetto → deve entrare nella chiave
+    idempotencyKey: chiaveIdempotenza(["pacchetto", user.id, bundleId, chosenCourseId ?? "-"]),
   });
   if (!session.url) throw new Error("URL checkout non disponibile.");
   return session.url;
