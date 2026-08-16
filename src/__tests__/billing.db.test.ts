@@ -7,6 +7,7 @@ import { sql, and, eq, inArray } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { organization, enrollment, course, activityLog, stripeProcessedEvent, bundle, bundleCourse } from "@/lib/db/schema";
 import { provisionCoursePurchase, provisionBundlePurchase, applySubscriptionState, revokeOrgSubscription } from "@/features/billing/provisioning";
+import { haGiaIlCorso } from "@/features/billing/checkout";
 import { getSeatLimit } from "@/features/billing/seats";
 import { ensureStripeCustomer } from "@/features/billing/customers";
 import { isStripeConfigured, getStripe } from "@/lib/stripe/client";
@@ -221,5 +222,34 @@ describe("Modulo 2 — provisioning billing", () => {
     expect(await claim()).toHaveLength(1);
 
     await db.delete(stripeProcessedEvent).where(eq(stripeProcessedEvent.eventId, eventId));
+  });
+
+  // Guardia anti-doppio-addebito: il vincolo unique è su (user_id, course_id) e il webhook
+  // inserisce con onConflictDoNothing su quella coppia. Quindi QUALSIASI riga esistente rende
+  // l'acquisto inutile: si pagherebbe senza ricevere l'iscrizione.
+  it("guardia: blocca chi possiede già il corso, in qualunque stato; non blocca gli altri", async () => {
+    const courseId = await makeCourse();
+    const orgId = `t2-${RUN}-guard`;
+    auditOrgIds.push(orgId);
+    const utente = `u-${RUN}-guard`;
+    const altro = `u-${RUN}-altro`;
+
+    // nessuna iscrizione → l'acquisto deve poter partire
+    expect(await haGiaIlCorso(utente, courseId)).toBe(false);
+
+    // iscrizione attiva → blocca
+    await provisionCoursePurchase({ userId: utente, courseId, orgId });
+    expect(await haGiaIlCorso(utente, courseId)).toBe(true);
+
+    // un ALTRO utente non deve essere bloccato dall'iscrizione altrui
+    expect(await haGiaIlCorso(altro, courseId)).toBe(false);
+
+    // CASO SOTTILE: iscrizione REVOCATA → blocca lo stesso. Pagare non creerebbe nulla
+    // (onConflictDoNothing sulla coppia), quindi sarebbe un addebito a vuoto.
+    await db
+      .update(enrollment)
+      .set({ status: "revoked" })
+      .where(and(eq(enrollment.userId, utente), eq(enrollment.courseId, courseId)));
+    expect(await haGiaIlCorso(utente, courseId)).toBe(true);
   });
 });

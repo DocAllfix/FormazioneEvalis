@@ -2,7 +2,7 @@
 // usa per il redirect. Protette dai guard esistenti. Nessuna logica di pagamento qui:
 // il pagamento vive su Stripe, la verità di stato arriva dal webhook.
 
-import { and, count, eq } from "drizzle-orm";
+import { and, count, eq, inArray } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { course, enrollment, member, organization } from "@/lib/db/schema";
 import { getStripe } from "@/lib/stripe/client";
@@ -24,6 +24,24 @@ export const TAX_PARAMS = {
   tax_id_collection: { enabled: true },
   customer_update: { address: "auto", name: "auto" },
 } as const;
+
+/**
+ * Il destinatario ha GIÀ questo corso? Guardia anti-doppio-addebito.
+ *
+ * Perché QUALSIASI stato e QUALSIASI origine, non solo le iscrizioni attive: il vincolo di
+ * unicità è su `(user_id, course_id)` e il webhook inserisce con `onConflictDoNothing` su
+ * quella coppia. Se una riga esiste — anche revocata, anche arrivata da un posto azienda —
+ * un nuovo acquisto NON produce alcuna iscrizione: Stripe incasserebbe e l'utente non
+ * riceverebbe nulla. Meglio rifiutare prima di toccare Stripe.
+ */
+export async function haGiaIlCorso(userId: string, courseId: string): Promise<boolean> {
+  const [e] = await db
+    .select({ id: enrollment.id })
+    .from(enrollment)
+    .where(and(eq(enrollment.userId, userId), eq(enrollment.courseId, courseId)))
+    .limit(1);
+  return Boolean(e);
+}
 
 /** % sconto azienda per l'acquisto di un corso da parte dell'org attiva (0 | 20 | 30). */
 export async function courseCompanyDiscountPercent(orgId: string, courseId: string): Promise<0 | 20 | 30> {
@@ -75,6 +93,17 @@ export async function createCoursePurchaseCheckout(courseId: string, beneficiary
     destinatarioId = beneficiaryUserId;
   }
 
+  // GUARDIA anti-doppio-addebito: si controlla il DESTINATARIO (non chi paga) e si esce PRIMA
+  // di creare la sessione Stripe. Senza, chi possiede già il corso poteva pagarlo una seconda
+  // volta e non ricevere nulla (il webhook non crea l'iscrizione: esiste già).
+  if (await haGiaIlCorso(destinatarioId, courseId)) {
+    throw new Error(
+      destinatarioId === user.id
+        ? "Hai già questo corso: lo trovi tra i tuoi percorsi."
+        : "Questa persona ha già accesso al corso.",
+    );
+  }
+
   const percent = await courseCompanyDiscountPercent(orgId, courseId);
   const customerId = await ensureStripeCustomer(orgId);
   const session = await getStripe().checkout.sessions.create({
@@ -101,7 +130,18 @@ export async function createBundlePurchaseCheckout(bundleId: string, chosenCours
   const { bundle: b, links } = await loadBundleWithCourses(bundleId);
   if (!b.active) throw new Error("Pacchetto non disponibile.");
   if (!b.stripePriceId) throw new Error("Pacchetto non acquistabile (prezzo non configurato).");
-  resolveBundleCourseIds(b, links, chosenCourseId); // valida la composizione prima di toccare Stripe
+  const courseIds = resolveBundleCourseIds(b, links, chosenCourseId); // valida la composizione prima di toccare Stripe
+
+  // GUARDIA anti-doppio-addebito, versione pacchetto: si rifiuta SOLO se l'utente possiede già
+  // TUTTI i corsi inclusi (in quel caso pagherebbe per zero iscrizioni nuove). Se gliene manca
+  // anche uno solo l'acquisto è legittimo e prosegue: il provisioning gli darà i mancanti.
+  const [gia] = await db
+    .select({ n: count() })
+    .from(enrollment)
+    .where(and(eq(enrollment.userId, user.id), inArray(enrollment.courseId, courseIds)));
+  if ((gia?.n ?? 0) >= courseIds.length) {
+    throw new Error("Hai già tutti i corsi di questo pacchetto: li trovi tra i tuoi percorsi.");
+  }
 
   const customerId = await ensureStripeCustomer(orgId);
   const session = await getStripe().checkout.sessions.create({

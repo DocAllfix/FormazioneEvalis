@@ -12,6 +12,9 @@ test("gating: /dashboard da sloggato redirige a /login", async ({ page }) => {
 });
 
 test("registrazione → dashboard → certificati → profilo → logout", async ({ page }) => {
+  // Percorso lungo (registrazione + verifica + login + onboarding + 4 pagine): col default di
+  // 45s non ci sta quando il DB risponde più lentamente. Stesso budget degli altri test lunghi.
+  test.setTimeout(120_000);
   const consoleErrors: string[] = [];
   page.on("console", tracciaErroriConsole(consoleErrors));
 
