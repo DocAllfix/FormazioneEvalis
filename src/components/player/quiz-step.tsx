@@ -3,15 +3,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Check, ClipboardCheck, Clock, Loader2, RotateCcw, X } from "lucide-react";
 import { startMyQuizAction, submitMyQuizAction } from "@/features/learner/server-actions";
+import { mmss as fmt } from "@/lib/formato";
 
 type Question = { id: string; text: string; options: { id: string; text: string }[] };
 type Result = { score: number; passed: boolean; over: boolean };
-
-function fmt(sec: number) {
-  const m = Math.floor(sec / 60).toString().padStart(2, "0");
-  const s = Math.floor(sec % 60).toString().padStart(2, "0");
-  return `${m}:${s}`;
-}
 
 export function QuizStep({
   enrollmentId,

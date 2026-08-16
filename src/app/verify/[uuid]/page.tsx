@@ -1,12 +1,9 @@
 import Link from "next/link";
 import { ShieldAlert, ShieldCheck, ShieldX } from "lucide-react";
 import { getCertificateByVerifyUuid } from "@/features/certificates/lifecycle";
+import { dataBreve as fmtDate } from "@/lib/formato";
 
 export const metadata = { title: "Verifica certificato — Evalis" };
-
-function fmtDate(d: Date | null) {
-  return d ? new Date(d).toLocaleDateString("it-IT") : "—";
-}
 
 const statusNote: Record<string, string> = {
   ready_for_review: "Il certificato è in revisione e non è ancora stato emesso.",

@@ -3,6 +3,7 @@ import { Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { getMyCertificates } from "@/features/learner/queries";
 import { CertificateDownloadButton } from "@/components/app/certificate-download-button";
+import { dataBreve as formatDate } from "@/lib/formato";
 
 export const metadata = { title: "Certificati — Evalis" };
 
@@ -11,10 +12,6 @@ const statusInfo: Record<string, { text: string; cls: string }> = {
   issued: { text: "Emesso", cls: "bg-success/10 text-success" },
   revoked: { text: "Revocato", cls: "bg-danger/10 text-danger" },
 };
-
-function formatDate(d: Date | null) {
-  return d ? new Date(d).toLocaleDateString("it-IT") : "—";
-}
 
 export default async function CertificatiPage() {
   const certs = await getMyCertificates();

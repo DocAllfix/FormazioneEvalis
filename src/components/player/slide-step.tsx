@@ -6,6 +6,7 @@ import { BlockRenderer } from "./block-renderer";
 import { SlideHtml, SAFE_RATIO, TOTAL_W } from "./slide-html";
 import { useSlidePlayer } from "./use-slide-player";
 import { getMyClipUrlAction } from "@/features/learner/server-actions";
+import { mmss as fmt } from "@/lib/formato";
 
 type Slide = {
   id: string;
@@ -21,12 +22,6 @@ function htmlBlockOf(blocks: unknown): HtmlBlock | null {
   if (!Array.isArray(blocks)) return null;
   const b = blocks.find((x) => x && typeof x === "object" && (x as { type?: string }).type === "html");
   return (b as HtmlBlock) ?? null;
-}
-
-function fmt(sec: number) {
-  const m = Math.floor(sec / 60).toString().padStart(2, "0");
-  const s = Math.floor(sec % 60).toString().padStart(2, "0");
-  return `${m}:${s}`;
 }
 
 export function SlideStep({
