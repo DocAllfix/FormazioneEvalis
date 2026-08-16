@@ -39,11 +39,22 @@ import {
 export const dynamic = "force-dynamic";
 
 const WEBHOOK_URL = "https://evalisacademy.it/api/webhooks/stripe";
+// I primi quattro guidano il PROVISIONING (creano iscrizioni, aggiornano abbonamenti).
+// Gli ultimi tre non cambiano nulla di ciò che l'utente riceve: servono al REGISTRO
+// finanziario (`payment_event`), perché rimborsi, contestazioni e insoluti sono movimenti che
+// devono lasciare traccia da noi e non solo su Stripe.
+//
+// ⚠️ Questa lista vale alla CREAZIONE dell'endpoint. Su un endpoint già esistente gli eventi
+// vanno aggiunti dalla dashboard Stripe (Developers → Webhooks → Update details): questa rotta
+// non li aggiorna di proposito, per non dover riaprire un endpoint amministrativo in produzione.
 const WEBHOOK_EVENTS = [
   "checkout.session.completed",
   "customer.subscription.created",
   "customer.subscription.updated",
   "customer.subscription.deleted",
+  "charge.refunded",
+  "charge.dispute.created",
+  "payment_intent.payment_failed",
 ] as const;
 
 function json(data: unknown, status = 200) {
