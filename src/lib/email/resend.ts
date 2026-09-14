@@ -129,3 +129,20 @@ export async function inviaAllarmeBlog(righe: string[]): Promise<{ sent: boolean
     }),
   });
 }
+
+/**
+ * Invio generico per le notifiche dell'assistenza. A differenza delle altre, `to` può
+ * contenere PIÙ indirizzi: gli amministratori possono essere più di uno e devono ricevere
+ * tutti, non solo il primo. Best-effort come le altre: senza chiave, no-op silenzioso.
+ */
+export async function inviaEmailAssistenza(m: {
+  to: string[];
+  subject: string;
+  html: string;
+}): Promise<{ sent: boolean }> {
+  const key = process.env.RESEND_API_KEY;
+  if (!key || m.to.length === 0) return { sent: false };
+  const from = process.env.RESEND_FROM ?? "Evalis Academy <onboarding@resend.dev>";
+  await new Resend(key).emails.send({ from, to: m.to, subject: m.subject, html: m.html });
+  return { sent: true };
+}

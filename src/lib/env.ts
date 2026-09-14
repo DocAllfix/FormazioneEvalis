@@ -48,6 +48,8 @@ const schema = z.object({
   RESEND_FROM: z.string().optional(), // mittente del dominio verificato (es. "Evalis <no-reply@...>")
   // staff piattaforma autorizzato ad approvare/revocare certificati (CSV di email)
   PLATFORM_STAFF_EMAILS: z.string().optional(),
+  /** Chi riceve le email dei ticket (CSV). Se manca, nessuna notifica parte. */
+  ASSISTENZA_NOTIFICHE_A: z.string().optional(),
   SENTRY_DSN: z.string().optional(),
   // token segreto per l'anteprima-staff (C.2): permette l'accesso via ?token= all'automazione
   // Playwright oltre al login admin. Solo lettura del contenuto slide.

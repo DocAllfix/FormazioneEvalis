@@ -170,3 +170,29 @@ export async function listStaffQueue(): Promise<StaffTicketRow[]> {
       .orderBy(desc(ticket.updatedAt)),
   ) as Promise<StaffTicketRow[]>;
 }
+
+/**
+ * I dati minimi per mandare una notifica su un ticket: oggetto e proprietario.
+ * Passa da `withTenant` come tutto il resto, quindi la RLS decide se il ticket è visibile:
+ * sotto il ctx di un discente si vedono solo i propri, sotto quello staff tutti.
+ * Restituisce null se non visibile — chi chiama non manda niente e non fallisce.
+ */
+export async function datiPerNotifica(
+  ticketId: string,
+  ctx: TenantCtx,
+): Promise<{ oggetto: string; proprietarioId: string; proprietarioNome: string; proprietarioEmail: string } | null> {
+  return withTenant(ctx, async (tx) => {
+    const [r] = await tx
+      .select({
+        oggetto: ticket.subject,
+        proprietarioId: ticket.userId,
+        proprietarioNome: user.name,
+        proprietarioEmail: user.email,
+      })
+      .from(ticket)
+      .innerJoin(user, eq(user.id, ticket.userId))
+      .where(eq(ticket.id, ticketId))
+      .limit(1);
+    return r ?? null;
+  });
+}
