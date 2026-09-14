@@ -34,26 +34,43 @@ function dipendenze(): Dipendenze {
   };
 }
 
+/**
+ * ⚠️ Rete di sicurezza attorno a TUTTA la notifica, non solo all'invio.
+ * `avvisa*` non rilancia mai, ma prima bisogna LEGGERE i dati del ticket dal database: se
+ * quella lettura fallisse, la risposta dell'utente andrebbe in errore pur essendo già
+ * salvata. Il ticket è scritto: da qui in poi nulla può far fallire l'azione.
+ */
+async function senzaRompere(f: () => Promise<unknown>): Promise<void> {
+  try {
+    await f();
+  } catch (e) {
+    console.error("[assistenza] notifica non riuscita:", e instanceof Error ? e.message : e);
+  }
+}
+
 // --- Discente ---
 
 export async function createMyTicketAction(subject: string, body: string) {
   const { user, orgId } = await requireActiveOrg();
   const t = await createTicket({ userId: user.id, orgId, subject, body });
-  await avvisaNuovoTicket(dipendenze(), {
-    ticketId: t.id,
-    oggetto: subject,
-    messaggio: body,
-    autoreNome: user.name ?? user.email,
-    autoreEmail: user.email,
-  });
+  await senzaRompere(() =>
+    avvisaNuovoTicket(dipendenze(), {
+      ticketId: t.id,
+      oggetto: subject,
+      messaggio: body,
+      autoreNome: user.name ?? user.email,
+      autoreEmail: user.email,
+    }),
+  );
   return t;
 }
 
 export async function replyMyTicketAction(ticketId: string, body: string) {
   const { user } = await requireSession();
   const r = await addMessage({ ticketId, authorId: user.id, body, ctx: { userId: user.id } });
-  const dati = await datiPerNotifica(ticketId, { userId: user.id });
-  if (dati) {
+  await senzaRompere(async () => {
+    const dati = await datiPerNotifica(ticketId, { userId: user.id });
+    if (!dati) return;
     await avvisaRispostaUtente(dipendenze(), {
       ticketId,
       oggetto: dati.oggetto,
@@ -61,7 +78,7 @@ export async function replyMyTicketAction(ticketId: string, body: string) {
       autoreNome: user.name ?? user.email,
       autoreEmail: user.email,
     });
-  }
+  });
   return r;
 }
 
@@ -75,8 +92,9 @@ export async function closeMyTicketAction(ticketId: string) {
 export async function staffReplyTicketAction(ticketId: string, body: string) {
   const ctx = await requirePlatformAdmin();
   const r = await addMessage({ ticketId, authorId: ctx.user.id, body, ctx: { platformAdmin: true } });
-  const dati = await datiPerNotifica(ticketId, { platformAdmin: true });
-  if (dati) {
+  await senzaRompere(async () => {
+    const dati = await datiPerNotifica(ticketId, { platformAdmin: true });
+    if (!dati) return;
     await avvisaRispostaStaff(dipendenze(), {
       ticketId,
       oggetto: dati.oggetto,
@@ -86,7 +104,7 @@ export async function staffReplyTicketAction(ticketId: string, body: string) {
       proprietarioNome: dati.proprietarioNome,
       proprietarioEmail: dati.proprietarioEmail,
     });
-  }
+  });
   return r;
 }
 
