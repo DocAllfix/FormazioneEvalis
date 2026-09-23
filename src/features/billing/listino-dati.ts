@@ -27,7 +27,9 @@ const S = {
   s37001: "auditor-iso-37001",
   s27001: "auditor-iso-27001",
   s42001: "auditor-iso-42001",
+  s9001v26: "auditor-lead-auditor-iso-9001-2026-sistemi-di-gestione-per-la-qualita",
   agg14001: "aggiornamento-lead-auditor-iso-14001-2026",
+  agg9001: "aggiornamento-iso-9001-2026-dalla-2015-alla-2026",
   fadai01: "corso-claude-ai-operativo-fad-ai-01-base-16h",
   fadai02: "corso-claude-ai-avanzato-fad-ai-02-avanzato-24h",
   fadesg02: "esg-manager-uni-pdr-109-1",
@@ -46,6 +48,11 @@ export const CORSI: CorsoListino[] = [
   { slug: S.s27001, attivoCents: 64900, listinoCents: 79900 },
   { slug: S.s42001, attivoCents: 74900, listinoCents: 89900 },
   { slug: S.agg14001, attivoCents: 17900, listinoCents: 17900 }, // aggiornamento 8h: prezzo unico
+  // ISO 9001:2026 (sesta edizione). Stesso prezzo della 2015, che resta in catalogo e
+  // acquistabile. NON ancora su Stripe e non ancora nei bundle: entrambe le cose sono
+  // una decisione commerciale, da fare insieme alla pubblicazione dei due corsi.
+  { slug: S.s9001v26, attivoCents: 49900, listinoCents: 64900 },
+  { slug: S.agg9001, attivoCents: 17900, listinoCents: 17900 }, // aggiornamento 8h: prezzo unico
   { slug: S.fadai01, attivoCents: 39000, listinoCents: 49000 },
   { slug: S.fadai02, attivoCents: 59000, listinoCents: 79000 },
   // percorsi manageriali 40h (approvati 02/08): stesso prezzo per entrambi

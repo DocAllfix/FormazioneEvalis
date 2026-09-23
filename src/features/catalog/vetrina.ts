@@ -22,11 +22,20 @@ function rank(slug: string): number {
   return i === -1 ? 50 : i + 1;
 }
 
+// Quando la stessa norma è in catalogo in due edizioni, la più recente va mostrata per prima
+// (l'edizione precedente resta acquistabile, ma non è quella che si consiglia a chi arriva).
+function edizione(slug: string): number {
+  const m = slug.match(/20\d\d/);
+  return m ? Number(m[0]) : 0;
+}
+
 export async function listAuditorVetrina(): Promise<VetrinaCourse[]> {
   const all = await listPublishedCourses();
   return all
     .filter((c) => c.category === "auditor" && !!c.slug)
-    .sort((a, b) => rank(a.slug as string) - rank(b.slug as string))
+    .sort((a, b) =>
+      rank(a.slug as string) - rank(b.slug as string) ||
+      edizione(b.slug as string) - edizione(a.slug as string))
     .map((c) => ({
       slug: c.slug as string,
       title: c.title,
