@@ -60,7 +60,10 @@ export const CORSI: CorsoListino[] = [
   { slug: S.fadeen02, attivoCents: 35000, listinoCents: 45000 },
 ];
 
-const LEAD_AUDITOR = [S.s9001, S.s14001, S.s45001, S.s22000, S.s50001, S.s39001, S.s37001, S.s27001, S.s42001];
+// Nei pacchetti entra l'EDIZIONE CORRENTE di ogni norma: dalla 9001 è la 2026. La 2015 resta
+// in catalogo e acquistabile da sola, ma non è quella che si consiglia a chi compra oggi.
+// I pacchetti già venduti non cambiano: il provisioning crea le iscrizioni all'acquisto.
+const LEAD_AUDITOR = [S.s9001v26, S.s14001, S.s45001, S.s22000, S.s50001, S.s39001, S.s37001, S.s27001, S.s42001];
 
 export const BUNDLES: BundleListino[] = [
   {
@@ -76,11 +79,11 @@ export const BUNDLES: BundleListino[] = [
   {
     slug: "qualita",
     title: "Pacchetto Qualità",
-    description: "Il percorso completo per l'auditor dei sistemi di gestione: 19011, 9001, 14001 e 45001.",
+    description: "Il percorso completo per l'auditor dei sistemi di gestione: 19011, 9001:2026, 14001 e 45001.",
     kind: "fixed",
     attivoCents: 144000,
     listinoCents: 179000,
-    included: [S.s19011, S.s9001, S.s14001, S.s45001],
+    included: [S.s19011, S.s9001v26, S.s14001, S.s45001],
   },
   {
     slug: "infosec",
@@ -94,7 +97,7 @@ export const BUNDLES: BundleListino[] = [
   {
     slug: "master-auditor",
     title: "Master Auditor Evalis",
-    description: "Tutti i 10 percorsi Auditor e Lead Auditor della piattaforma.",
+    description: "Tutti i 10 percorsi Auditor e Lead Auditor della piattaforma, nell'edizione corrente di ogni norma.",
     kind: "fixed",
     attivoCents: 399000,
     listinoCents: 499000,
