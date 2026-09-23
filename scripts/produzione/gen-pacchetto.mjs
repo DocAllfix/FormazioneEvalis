@@ -30,8 +30,11 @@ const argomenti = blocco.split("\n").slice(1).join("\n").split("## ")[0].trim();
 
 // ---- norma: capitoli coperti (dal campo "Copre"); i moduli metodologici (senza §)
 // ricevono l'indice + il capitolo 9 (audit interno) come ancoraggio
-const normaFile = readdirSync("testonorme").find((f) => f.endsWith(".txt")
-  && new RegExp(`^ISO${corso}(\\D|$)`).test(f.replace(/\s+/g, "")));
+// prima il nome ESATTO ISO<corso>.txt, poi la regola larga (più edizioni della stessa norma
+// in testonorme: il corso 9001 deve pescare ISO9001.txt, non ISO9001v26.txt)
+const fileNorme = readdirSync("testonorme").filter((f) => f.endsWith(".txt"));
+const normaFile = fileNorme.find((f) => f.replace(/\s+/g, "") === `ISO${corso}.txt`)
+  ?? fileNorme.find((f) => new RegExp(`^ISO${corso}(\\D|$)`).test(f.replace(/\s+/g, "")));
 if (!normaFile) { console.error("testo norma non trovato"); process.exit(1); }
 let txt;
 try { txt = readFileSync(`testonorme/${normaFile}`, "utf8"); }
@@ -137,7 +140,12 @@ sono un difetto bloccante (gate E11).
 ${sezione}
 `;
 
+// Materiale di confronto del modulo, se il corso ne ha (corsi di AGGIORNAMENTO: il testo
+// dell'edizione precedente accanto a quella nuova, così il confronto è verificato e non ricordato).
+const confrontoPath = `produzione/${corso}/_confronto/${mod}.md`;
+const confronto = existsSync(confrontoPath) ? readFileSync(confrontoPath, "utf8") : "";
+
 mkdirSync(`produzione/${corso}/_pacchetti`, { recursive: true });
 const outPath = `produzione/${corso}/_pacchetti/${mod}.md`;
-writeFileSync(outPath, out, "utf8");
+writeFileSync(outPath, out + (confronto ? `\n${confronto}\n` : ""), "utf8");
 console.log(`${outPath}: ${out.length} caratteri · sezione norma ${sezione.length} char · capitoli [${capitoliCoperti.join(",") || "intro"}]`);

@@ -86,13 +86,19 @@ async def main() -> None:
     async def uno(mod: str):
         f = dest / f"{a.corso}-{mod}-contenuti.json"
         slides = [s for s in cop["slides"] if s["id"].split("_")[1] == mod]
-        if f.exists() and len(json.loads(f.read_text(encoding="utf-8"))) == len(slides):
+        esistenti = {d["id"]: d for d in json.loads(f.read_text(encoding="utf-8"))} if f.exists() else {}
+        if len(esistenti) == len(slides):
             print(f"  [{mod}] già fatto"); return
+        # ripresa per SLIDE, non solo per modulo: un corso su nuova edizione parte con i
+        # blocchi già pronti delle slide rimaste identiche e fa generare solo le altre.
+        mancanti = [s for s in slides if s["id"] not in esistenti]
         async with sem:
             mdl = O.Modello(client, env, {"input": 0, "output": 0, "chiamate": 0})
-            dati = await genera_modulo(mdl, a.corso, mod, slides)
-            f.write_text(json.dumps(dati, ensure_ascii=False, indent=1), encoding="utf-8")
-            print(f"  [{mod}] SCRITTO {len(dati)} slide")
+            dati = await genera_modulo(mdl, a.corso, mod, mancanti)
+            esistenti.update({d["id"]: d for d in dati})
+            ordinati = [esistenti[s["id"]] for s in slides if s["id"] in esistenti]
+            f.write_text(json.dumps(ordinati, ensure_ascii=False, indent=1), encoding="utf-8")
+            print(f"  [{mod}] SCRITTO {len(ordinati)} slide ({len(dati)} nuove)")
 
     await asyncio.gather(*(uno(m) for m in moduli))
     print("FATTO")

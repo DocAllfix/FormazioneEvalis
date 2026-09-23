@@ -1,0 +1,736 @@
+[
+ {
+  "id": "9001v26_m06_s001",
+  "layout": "timeline",
+  "kicker": "Modulo 6",
+  "titolo": "Dal requisito al fornitore",
+  "tappe": [
+   {
+    "h": "Controllo operativo",
+    "d": "Pianificare processi, criteri, risorse, controlli"
+   },
+   {
+    "h": "Requisiti del cliente",
+    "d": "Comunicazione, definizione e riesame prima dell’impegno"
+   },
+   {
+    "h": "Progettazione e sviluppo",
+    "d": "Dagli input agli output, con verifiche"
+   },
+   {
+    "h": "Fornitori esterni",
+    "d": "Controlli applicati e informazioni da trasmettere"
+   }
+  ],
+  "intro": "Questo modulo apre la prima metà del capitolo operativo: dal requisito del cliente alla progettazione e ai fornitori. È il punto in cui il sistema esce dai documenti e si misura con ordini, prodotti, servizi e risultati."
+ },
+ {
+  "id": "9001v26_m06_s002",
+  "layout": "cards",
+  "kicker": "Punto 8.1",
+  "titolo": "La regia del controllo operativo",
+  "cards": [
+   {
+    "h": "Requisiti del risultato",
+    "d": "Che cosa prodotto o servizio deve possedere"
+   },
+   {
+    "h": "Criteri distinti",
+    "d": "Regole del processo, condizioni di accettazione"
+   },
+   {
+    "h": "Controllo in esecuzione",
+    "d": "Applicare davvero i criteri stabiliti"
+   },
+   {
+    "h": "Risorse adeguate",
+    "d": "Persone, materiali, strumenti per la conformità"
+   }
+  ],
+  "intro": "La norma chiede di pianificare, attuare e tenere sotto controllo i processi necessari. Qui la pianificazione generale diventa governo quotidiano del lavoro, mentre accade, non solo correzione a posteriori."
+ },
+ {
+  "id": "9001v26_m06_s003",
+  "layout": "confronto",
+  "kicker": "Misura necessaria",
+  "titolo": "Due scopi della memoria operativa",
+  "lead": "Documenti e registrazioni non servono a riempire archivi. Servono a rendere verificabile il lavoro: mostrare che i processi sono stati eseguiti come previsto e che i risultati rispettano i requisiti applicabili.",
+  "a": {
+   "h": "Guardare il processo",
+   "punti": [
+    {
+     "d": "Dare fiducia sull’esecuzione prevista"
+    },
+    {
+     "d": "Registrazioni utili all’organizzazione"
+    },
+    {
+     "d": "Memoria di come il lavoro è avvenuto"
+    }
+   ]
+  },
+  "b": {
+   "h": "Dimostrare il risultato",
+   "punti": [
+    {
+     "d": "Evidenza di conformità ai requisiti"
+    },
+    {
+     "d": "Documenti utili verso cliente o verificatore"
+    },
+    {
+     "d": "Memoria di ciò che è stato ottenuto"
+    }
+   ]
+  },
+  "intro": "Documenti e registrazioni non servono a riempire archivi. Servono a rendere verificabile il lavoro: mostrare che i processi sono stati eseguiti come previsto e che i risultati rispettano i requisiti applicabili."
+ },
+ {
+  "id": "9001v26_m06_s004",
+  "layout": "split",
+  "kicker": "Cambiamento operativo",
+  "titolo": "Due modi diversi di cambiare",
+  "lead": "Nelle attività operative il cambiamento è continuo. La norma distingue tra modifica decisa e modifica subita: nel primo caso si prepara, nel secondo si riesamina l’impatto e si riducono gli effetti negativi.",
+  "punti": [
+   {
+    "h": "Modifica pianificata",
+    "d": "Valutare conseguenze, autorizzare, informare, tenere sotto controllo"
+   },
+   {
+    "h": "Modifica involontaria",
+    "d": "Riesaminare impatti e ridurre effetti negativi"
+   },
+   {
+    "h": "Ponte ai fornitori",
+    "d": "Esternalizzare non trasferisce la responsabilità"
+   }
+  ]
+ },
+ {
+  "id": "9001v26_m06_s005",
+  "layout": "tabella",
+  "kicker": "Relazione con il cliente",
+  "titolo": "I canali della comunicazione con il cliente",
+  "righe": [
+   [
+    "Offerta",
+    "Informazioni su prodotti, servizi, condizioni"
+   ],
+   [
+    "Accordo",
+    "Richieste, contratti, ordini, modifiche"
+   ],
+   [
+    "Ritorno",
+    "Feedback del cliente e reclami"
+   ],
+   [
+    "Tutele",
+    "Proprietà del cliente, emergenze pertinenti"
+   ]
+  ],
+  "cols": [
+   "Canale",
+   "Comprende"
+  ],
+  "intro": "La norma apre dai canali di contatto, non dai documenti tecnici. Ogni requisito nasce da una relazione: prima di definire il prodotto, l’organizzazione deve sapere come parla, ascolta e risponde al cliente."
+ },
+ {
+  "id": "9001v26_m06_s006",
+  "layout": "numeri",
+  "kicker": "Requisiti",
+  "titolo": "Da relazione a requisito misurabile",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Cliente: esigenze richieste per prodotto o servizio",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Prescrizioni: leggi, regolamenti, obblighi applicabili",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Scelte proprie: requisiti aggiunti da chi fornisce",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Promesse sostenibili: dichiarare solo ciò che si può mantenere",
+    "d": ""
+   }
+  ],
+  "intro": "Determinare i requisiti significa trasformare il rapporto con il cliente in un metro preciso. Il prodotto è ben definito solo se unisce richieste del cliente, obblighi applicabili e garanzie che l’organizzazione decide di offrire."
+ },
+ {
+  "id": "9001v26_m06_s007",
+  "layout": "punti",
+  "kicker": "Prima dell’impegno",
+  "titolo": "Riesame prima di dire sì",
+  "punti": [
+   {
+    "h": "Cliente e post-consegna",
+    "d": "Requisiti espliciti, consegna, attività successive"
+   },
+   {
+    "h": "Uso previsto o atteso",
+    "d": "Necessità implicite quando l’uso è noto"
+   },
+   {
+    "h": "Requisiti propri e obblighi",
+    "d": "Specifiche interne, leggi, regolamenti"
+   },
+   {
+    "h": "Coerenza dell’impegno",
+    "d": "Contratto o ordine diverso da quanto discusso"
+   }
+  ],
+  "intro": "Prima di dire sì, l’organizzazione deve fermarsi e verificare la propria capacità reale. Il riesame previene impegni presi con leggerezza e intercetta differenze tra ciò che si è discusso e ciò che viene ordinato."
+ },
+ {
+  "id": "9001v26_m06_s008",
+  "layout": "cards",
+  "kicker": "I requisiti · casi particolari",
+  "titolo": "Risolvere le differenze e confermare",
+  "intro": "Tre indicazioni per i casi meno lineari. Lo spirito comune: far coincidere ciò che il cliente crede di aver chiesto con ciò che l'organizzazione crede di dover fare.",
+  "cards": [
+   {
+    "h": "Risolvere le differenze",
+    "d": "Non ignorarle né scegliere in silenzio: tornare dal cliente e arrivare a una versione condivisa."
+   },
+   {
+    "h": "Confermare i requisiti non scritti",
+    "d": "Un ordine a voce va rimandato in conferma prima di accettarlo: il malinteso emerge subito."
+   },
+   {
+    "h": "Le vendite di massa",
+    "d": "Dove un riesame per ogni ordine è impraticabile: riesaminare bene le informazioni di prodotto pubblicate."
+   }
+  ]
+ },
+ {
+  "id": "9001v26_m06_s009",
+  "layout": "evidenza",
+  "kicker": "Informazioni documentate",
+  "titolo": "La prova che il riesame esiste",
+  "punti": [
+   {
+    "h": "Esito del riesame",
+    "d": "Conservare il risultato della verifica svolta"
+   },
+   {
+    "h": "Requisiti emersi o cambiati",
+    "d": "Registrare ogni novità che incide sulla fornitura"
+   },
+   {
+    "h": "Traccia proporzionata",
+    "d": "Più densa con rischio alto, leggera se ripetitivo"
+   }
+  ],
+  "testo": "Il riesame vale solo se lascia evidenza. La norma chiede una traccia proporzionata: sufficiente a dimostrare che la verifica è avvenuta e a fissare i requisiti nuovi o modificati che guideranno il lavoro."
+ },
+ {
+  "id": "9001v26_m06_s010",
+  "layout": "flusso",
+  "kicker": "Gestione delle variazioni",
+  "titolo": "La modifica deve viaggiare",
+  "passi": [
+   {
+    "h": "Il requisito cambia",
+    "d": "Cliente, legge o organizzazione introducono una variazione"
+   },
+   {
+    "h": "Si aggiorna la base",
+    "d": "Specifiche, ordini e documenti pertinenti"
+   },
+   {
+    "h": "Si avvisano i soggetti coinvolti",
+    "d": "Produzione, controllo, consegna, fornitori, cliente"
+   },
+   {
+    "h": "Si evita l’errore operativo",
+    "d": "Il lavoro non segue più la vecchia versione"
+   }
+  ],
+  "intro": "Quando i requisiti cambiano, il rischio non è il cambiamento in sé ma la sua dispersione. La norma protegge il processo imponendo documenti aggiornati e comunicazione mirata a chi deve agire."
+ },
+ {
+  "id": "9001v26_m06_s011",
+  "layout": "confronto",
+  "kicker": "Campo di applicazione",
+  "titolo": "Quando la progettazione non è escludibile",
+  "lead": "La progettazione serve a rendere affidabile ciò che sarà poi fornito. Può procedere per cicli e revisioni, ma la prima verifica dell’auditor resta una: l’esclusione dichiarata corrisponde davvero alla realtà operativa?",
+  "a": {
+   "h": "Esclusione legittima",
+   "punti": [
+    {
+     "d": "Progetto ricevuto completo dall’esterno"
+    },
+    {
+     "d": "L’azienda realizza senza definire caratteristiche"
+    },
+    {
+     "d": "Nessuna scelta tecnica propria sul prodotto"
+    }
+   ]
+  },
+  "b": {
+   "h": "Progettazione presente",
+   "punti": [
+    {
+     "d": "Si concepiscono soluzioni da zero"
+    },
+    {
+     "d": "Si adatta lo standard al cliente"
+    },
+    {
+     "d": "Si definiscono caratteristiche o prestazioni"
+    }
+   ]
+  },
+  "intro": "La progettazione serve a rendere affidabile ciò che sarà poi fornito. Può procedere per cicli e revisioni, ma la prima verifica dell’auditor resta una: l’esclusione dichiarata corrisponde davvero alla realtà operativa?"
+ },
+ {
+  "id": "9001v26_m06_s012",
+  "layout": "punti",
+  "kicker": "Progettazione · pianificare",
+  "titolo": "Fasi, riesami e prove",
+  "intro": "La disciplina comincia dalla pianificazione. Riesame, verifica e validazione hanno finalità differenti, ma possono essere separati o combinati, come è più adatto.",
+  "punti": [
+   {
+    "h": "Natura, durata, complessità",
+    "d": "Un invito alla proporzione: un adattamento semplice non è un prodotto nuovo."
+   },
+   {
+    "h": "Fasi e riesami",
+    "d": "Spezzare il lavoro in tappe, con soste per valutare se si va nella direzione giusta."
+   },
+   {
+    "h": "Verifica e validazione",
+    "d": "L'output corrisponde all'input? E funziona davvero nell'uso reale?"
+   }
+  ]
+ },
+ {
+  "id": "9001v26_m06_s013",
+  "layout": "cards",
+  "kicker": "Pianificazione",
+  "titolo": "Ruoli, risorse e interfacce del progetto",
+  "cards": [
+   {
+    "h": "Ruoli",
+    "d": "Responsabilità e autorità definite dall’inizio"
+   },
+   {
+    "h": "Risorse",
+    "d": "Tempo, competenze, strumenti, specialisti esterni"
+   },
+   {
+    "h": "Interfacce",
+    "d": "Passaggi di consegne governati tra funzioni"
+   },
+   {
+    "h": "Coinvolgimento",
+    "d": "Parti interessate, attese di controllo, evidenze"
+   }
+  ],
+  "intro": "Dopo fasi e prove, la pianificazione deve chiarire chi decide, con quali mezzi, come dialogano le funzioni e quale coinvolgimento si attende chi osserva o approva il progetto."
+ },
+ {
+  "id": "9001v26_m06_s014",
+  "layout": "tabella",
+  "kicker": "Input",
+  "titolo": "Le fonti da cui nasce il progetto",
+  "righe": [
+   [
+    "Funzione e prestazioni",
+    "Scopo del prodotto e livelli attesi"
+   ],
+   [
+    "Progetti simili",
+    "Esperienze riusate ed errori da non ripetere"
+   ],
+   [
+    "Leggi e regolamenti",
+    "Vincoli obbligatori fin dall’inizio"
+   ],
+   [
+    "Norme e codici scelti",
+    "Impegni volontari resi vincolanti"
+   ],
+   [
+    "Conseguenze del guasto",
+    "Gravità dell’uso e rischi associati"
+   ]
+  ],
+  "cols": [
+   "Fonte",
+   "Che cosa porta nel progetto"
+  ],
+  "intro": "Gli input sono la materia prima della progettazione: devono essere adeguati, completi e non ambigui. Possono anche evolvere per cicli, ma il progetto parte sempre da requisiti essenziali chiaramente determinati."
+ },
+ {
+  "id": "9001v26_m06_s015",
+  "layout": "numeri",
+  "kicker": "Controlli",
+  "titolo": "Tre domande guidano il controllo progettuale",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Riesame: stiamo andando verso i requisiti",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Verifica: output coerente con gli input",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Validazione: funziona nell’uso previsto",
+    "d": ""
+   }
+  ],
+  "intro": "I controlli servono solo se il traguardo è definito e i problemi portano ad azioni. Le attività possono anche sovrapporsi, purché trovino risposta tre domande diverse e complementari."
+ },
+ {
+  "id": "9001v26_m06_s016",
+  "layout": "confronto",
+  "kicker": "Progettazione · verifica e validazione",
+  "titolo": "Due domande diverse",
+  "intro": "Si somigliano, ma indicano controlli profondamente diversi. Si può superare la verifica e fallire la validazione: la prima protegge dagli errori di esecuzione, la seconda dagli errori di concezione.",
+  "a": {
+   "h": "Verifica",
+   "sub": "Ho costruito bene?",
+   "punti": [
+    {
+     "d": "Ho fatto le cose nel modo giusto rispetto a ciò che avevo stabilito?"
+    },
+    {
+     "d": "Guarda indietro, verso l'input; si fa quasi sempre in azienda."
+    }
+   ]
+  },
+  "b": {
+   "h": "Validazione",
+   "sub": "Ho costruito la cosa giusta?",
+   "punti": [
+    {
+     "d": "Ho fatto la cosa giusta rispetto al bisogno reale?"
+    },
+    {
+     "d": "Guarda avanti, verso l'uso; ha bisogno del mondo esterno."
+    }
+   ]
+  }
+ },
+ {
+  "id": "9001v26_m06_s017",
+  "layout": "cards",
+  "kicker": "Output",
+  "titolo": "Che cosa rende valido un output",
+  "cards": [
+   {
+    "h": "Coerenza",
+    "d": "Risponde ai requisiti di input"
+   },
+   {
+    "h": "Usabilità",
+    "d": "Serve davvero alle fasi successive"
+   },
+   {
+    "h": "Controllabilità",
+    "d": "Definisce misure e criteri di accettazione"
+   },
+   {
+    "h": "Sicurezza d’uso",
+    "d": "Evidenzia caratteristiche e informazioni critiche"
+   }
+  ],
+  "intro": "Disegni, specifiche e istruzioni valgono solo se chiudono il cerchio con gli input e guidano senza ambiguità produzione, erogazione, controlli e uso sicuro del prodotto o del servizio."
+ },
+ {
+  "id": "9001v26_m06_s018",
+  "layout": "timeline",
+  "kicker": "Modifiche",
+  "titolo": "Ogni modifica va riconosciuta e governata",
+  "tappe": [
+   {
+    "h": "Determinare",
+    "d": "Definire la modifica e registrarla chiaramente"
+   },
+   {
+    "h": "Riesaminare",
+    "d": "Valutare effetti a catena e rischi"
+   },
+   {
+    "h": "Controllare",
+    "d": "Autorizzare, applicare, governare il cambiamento"
+   },
+   {
+    "h": "Tracciare",
+    "d": "Conservare modifica, riesami, approvazioni, riferimenti"
+   }
+  ],
+  "intro": "Nel progetto le modifiche sono normali, non eccezioni. La norma chiede un metodo che le identifichi, ne valuti gli impatti prima dell’attuazione e ne conservi una storia completa e rintracciabile."
+ },
+ {
+  "id": "9001v26_m06_s019",
+  "layout": "evidenza",
+  "kicker": "Forniture esterne",
+  "titolo": "La responsabilità resta interna",
+  "punti": [
+   {
+    "h": "Componenti incorporati",
+    "d": "Entrano fisicamente nel prodotto finale"
+   },
+   {
+    "h": "Fornitura al cliente",
+    "d": "Il fornitore opera per conto dell’organizzazione"
+   },
+   {
+    "h": "Processi esternalizzati",
+    "d": "Una parte del sistema si svolge fuori"
+   }
+  ],
+  "testo": "Processi, prodotti e servizi acquistati o affidati all’esterno entrano direttamente nel risultato finale. Per questo i controlli sui fornitori non trasferiscono la responsabilità: la rendono gestibile."
+ },
+ {
+  "id": "9001v26_m06_s020",
+  "layout": "flusso",
+  "kicker": "Valutazione fornitori",
+  "titolo": "Il ciclo di governo del fornitore",
+  "passi": [
+   {
+    "h": "Valutare",
+    "d": "Capacità iniziale rispetto a qualità richiesta"
+   },
+   {
+    "h": "Selezionare",
+    "d": "Scelta fondata su criteri, non abitudine"
+   },
+   {
+    "h": "Sorvegliare",
+    "d": "Prestazioni monitorate nel tempo"
+   },
+   {
+    "h": "Rivalutare",
+    "d": "Giudizio aggiornato e azioni documentate"
+   }
+  ],
+  "intro": "Il rapporto di fornitura non si esaurisce nella scelta iniziale. La norma chiede un ciclo continuo basato su un solo metro: capacità di fornire processi, prodotti e servizi conformi ai requisiti."
+ },
+ {
+  "id": "9001v26_m06_s021",
+  "layout": "confronto",
+  "kicker": "I fornitori · quanto controllo",
+  "titolo": "Tipo ed estensione",
+  "intro": "Sarebbe assurdo trattare allo stesso modo una vite e il componente più delicato. Un'organizzazione che controlla tutti allo stesso modo segnala che manca una valutazione del rischio. E i processi esterni restano nel sistema.",
+  "a": {
+   "h": "Controllare il fornitore",
+   "sub": "Chi lavora",
+   "punti": [
+    {
+     "d": "Visitarlo, valutare il suo modo di lavorare."
+    },
+    {
+     "d": "Chiedere prova della sua organizzazione."
+    }
+   ]
+  },
+  "b": {
+   "h": "Controllare gli output",
+   "sub": "Ciò che ricevi",
+   "punti": [
+    {
+     "d": "Ispezionare la merce all'arrivo."
+    },
+    {
+     "d": "Provarla, misurarla."
+    }
+   ]
+  }
+ },
+ {
+  "id": "9001v26_m06_s022",
+  "layout": "split",
+  "kicker": "I fornitori · dosare il controllo",
+  "titolo": "Impatto ed efficacia",
+  "lead": "Due voti per ogni fornitore: quanto pesa sul tuo prodotto, quanto è affidabile il suo modo di lavorare. Chi pesa molto ed è poco affidabile merita la massima attenzione; chi pesa poco ed è affidabile può restare sullo sfondo.",
+  "punti": [
+   {
+    "h": "L'impatto potenziale",
+    "d": "Quanto ciò che entra pesa sulla capacità di rispettare cliente e legge con costanza."
+   },
+   {
+    "h": "L'efficacia dei suoi controlli",
+    "d": "Se il fornitore si controlla bene da solo, puoi appoggiarti in parte e alleggerire il tuo."
+   }
+  ]
+ },
+ {
+  "id": "9001v26_m06_s023",
+  "layout": "split",
+  "kicker": "Comunicazione",
+  "titolo": "Requisiti adeguati prima dell’invio",
+  "lead": "Molti errori con i fornitori nascono da richieste ambigue o incomplete. Prima di trasmettere i requisiti, l’organizzazione deve verificarli dal punto di vista di chi dovrà eseguirli.",
+  "punti": [
+   {
+    "h": "Che cosa fornire",
+    "d": "Processi, prodotti e servizi richiesti"
+   },
+   {
+    "h": "Che cosa approvare",
+    "d": "Prodotti, metodi, processi, dotazioni, rilascio"
+   },
+   {
+    "h": "Chi può operare",
+    "d": "Competenze e qualifiche necessarie"
+   }
+  ]
+ },
+ {
+  "id": "9001v26_m06_s024",
+  "layout": "tabella",
+  "kicker": "Fornitori esterni",
+  "titolo": "Tre comunicazioni per la relazione continua",
+  "righe": [
+   [
+    "Interazioni nella rete",
+    "Chi parla con chi, tempi e canali",
+    "Evita blocchi al primo imprevisto"
+   ],
+   [
+    "Controllo delle prestazioni",
+    "Indicatori osservati e criteri di misura",
+    "Trasparenza su come sarà valutato"
+   ],
+   [
+    "Verifiche e validazioni sul posto",
+    "Visite dell'organizzazione o dei clienti",
+    "La fiducia può estendersi fino ai siti operativi"
+   ]
+  ],
+  "cols": [
+   "Voce",
+   "Che cosa chiarire",
+   "Perché conta"
+  ],
+  "intro": "Dopo requisiti, approvazioni e competenze, la norma chiede di rendere esplicito come si governa il rapporto operativo con il fornitore lungo tutta la fornitura."
+ },
+ {
+  "id": "9001v26_m06_s025",
+  "layout": "split",
+  "kicker": "Seguire un ordine reale · 1",
+  "titolo": "Dal cliente al contratto",
+  "lead": "Non inseguire i paragrafi: segui il flusso del lavoro, e lascia che siano i punti della norma a farsi incontro. Le organizzazioni deboli rispondono a parole; le solide ti mostrano un'evidenza. Tu lavori solo con le evidenze.",
+  "punti": [
+   {
+    "h": "La comunicazione col cliente",
+    "d": "L'offerta, le richieste, le modifiche discusse: c'è memoria di ciò che il cliente voleva?"
+   },
+   {
+    "h": "Il riesame dei requisiti",
+    "d": "Prima di firmare, l'azienda ha valutato di essere in grado?"
+   },
+   {
+    "h": "Le differenze risolte",
+    "d": "Tra trattativa e contratto firmato, cosa è cambiato e come è stato chiarito?"
+   },
+   {
+    "h": "I requisiti confermati",
+    "d": "Se il cliente non li aveva scritti, come sono stati confermati prima di accettarli?"
+   }
+  ]
+ },
+ {
+  "id": "9001v26_m06_s026",
+  "layout": "split",
+  "kicker": "Seguire un ordine reale · 2",
+  "titolo": "Dentro la progettazione",
+  "lead": "Il filo non si spezza: i requisiti nati dal contratto diventano gli input della progettazione. Non ti perdere nella mole dei documenti — scegli un filo e seguilo fino in fondo: la profondità conta più dell'ampiezza.",
+  "punti": [
+   {
+    "h": "Gli input",
+    "d": "Erano completi e senza contraddizioni, o il progetto è partito su basi incerte?"
+   },
+   {
+    "h": "I controlli",
+    "d": "Riesami, verifica, e soprattutto validazione: è stato provato nell'uso reale?"
+   },
+   {
+    "h": "Gli output",
+    "d": "Il viaggio a ritroso: ogni caratteristica si aggancia a un input di partenza?"
+   },
+   {
+    "h": "Le modifiche",
+    "d": "Chi l'ha proposta, chi ne ha valutato le conseguenze, dove sta scritto?"
+   }
+  ]
+ },
+ {
+  "id": "9001v26_m06_s027",
+  "layout": "split",
+  "kicker": "Seguire un ordine reale · 3",
+  "titolo": "Fino al fornitore",
+  "lead": "L'ultimo tratto, dove il lavoro esce dalle mura ed è più facile smarrire la responsabilità. Guarda il tono con cui l'azienda ne parla: se tratta i fornitori come parte del proprio sistema, è un buon segno.",
+  "punti": [
+   {
+    "h": "Quali parti nascono fuori",
+    "d": "In quale dei tre casi rientra ciascuna: dove si concentra il rischio esterno."
+   },
+   {
+    "h": "Come sono stati scelti",
+    "d": "La valutazione e selezione: diffida se l'unica risposta è il prezzo."
+   },
+   {
+    "h": "Tipo ed estensione del controllo",
+    "d": "Proporzionati all'impatto del componente e all'efficacia dei controlli del fornitore?"
+   },
+   {
+    "h": "Le informazioni comunicate",
+    "d": "L'ordine e la specifica erano adeguati, chiari, completi?"
+   }
+  ]
+ },
+ {
+  "id": "9001v26_m06_s028",
+  "layout": "chiusura",
+  "kicker": "Riepilogo · Modulo 06",
+  "modNum": "06",
+  "titolo": "Controllo e dimostrabilità",
+  "punti": [
+   {
+    "h": "Pianificare e controllare",
+    "d": "Requisiti, criteri, risorse, controllo; e la memoria del processo."
+   },
+   {
+    "h": "I requisiti del cliente",
+    "d": "Comunicazione, determinazione, riesame prima di dire sì, tracce e modifiche."
+   },
+   {
+    "h": "La progettazione",
+    "d": "Pianificazione, input, controlli, output, modifiche: disciplina, non ispirazione."
+   },
+   {
+    "h": "Verifica e validazione",
+    "d": "Ho costruito bene, e ho costruito la cosa giusta?"
+   },
+   {
+    "h": "I fornitori",
+    "d": "Tre casi, quattro momenti, controllo proporzionato: la responsabilità non si delega."
+   },
+   {
+    "h": "Seguire il filo",
+    "d": "Un solo ordine, dal cliente al fornitore, attraversa l'intero modulo."
+   }
+  ],
+  "prossimo": {
+   "modulo": "07",
+   "titolo": "Produzione, rilascio e non conformità",
+   "testo": "La seconda metà delle attività operative: produrre, consegnare e trattare ciò che non è conforme."
+  }
+ }
+]

@@ -12,9 +12,9 @@ from pathlib import Path
 
 REPO = Path(r"c:/Users/user/FormazioneEvalis(working name)")
 SP = Path(sys.argv[1]).parent
-CORSI = ["fadesg02", "fadeen02"]
-ATTESE = 540
-TOTALE_SHARD = 8
+CORSI = os.environ.get("GUARDIA_CORSI","fadesg02,fadeen02").split(",")
+ATTESE = int(os.environ.get("GUARDIA_ATTESE","540"))
+TOTALE_SHARD = int(os.environ.get("GUARDIA_SHARD","8"))
 GIRO = 300
 # MuseTalk elabora l'INTERO lotto del worker in una sola invocazione e il caricamento su R2
 # avviene solo alla fine: il conteggio resta piatto per ~2,5 h e poi salta di colpo.
@@ -98,7 +98,7 @@ while True:
         tot = sum(fatte.values())
         if tot > prec:
             ultimo_progresso = time.time(); prec = tot
-        pct = tot / (ATTESE * len(CORSI)) * 100
+        pct = tot / ATTESE * 100
         inst = istanze()
         vivi = 0
         if inst is None:
@@ -121,10 +121,10 @@ while True:
                     mappa[shard] = nuova
                     Path(sys.argv[1]).write_text(json.dumps(mappa, indent=1), encoding="utf-8")
         fermo = (time.time() - ultimo_progresso) / 60
-        log(f"ESG {fatte['fadesg02']}/540 · ENERGY {fatte['fadeen02']}/540 · {pct:.1f}% · "
+        log(" · ".join(f"{c} {fatte[c]}" for c in CORSI) + f" · {pct:.1f}% · "
             f"pod vivi {vivi}/{len(mappa)}" + (f" · ATTENZIONE fermo da {fermo:.0f} min" if fermo > STALLO_MIN else ""))
-        if tot >= ATTESE * len(CORSI):
-            log("RENDER COMPLETO: 1080/1080 clip su R2")
+        if tot >= ATTESE:
+            log(f"RENDER COMPLETO: {tot}/{ATTESE} clip su R2")
             # si spengono i pod SUBITO: ogni minuto in piu' e' denaro bruciato a vuoto
             for shard, iid in mappa.items():
                 r = subprocess.run(["vastai", "destroy", "instance", str(iid)],

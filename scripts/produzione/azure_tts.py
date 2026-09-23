@@ -448,10 +448,17 @@ def main() -> None:
     if copioni is None:
         sys.exit(f"manca produzione/{a.corso}/copioni.json")
     glossario = leggi_json(PROD / a.corso / "glossario-tts.json", {"map": {}})
+    # Corsi su NUOVA EDIZIONE: le slide rimaste identiche riusano la clip (e quindi l'audio)
+    # già prodotta per l'edizione precedente. Elencate qui, non si sintetizzano né si verificano.
+    riuso = set(leggi_json(PROD / a.corso / "riuso-clip.json", {}).get("slide", []))
     per_mod: dict[str, list[dict]] = {}
     for s in copioni["slides"]:
+        if s["id"] in riuso:
+            continue
         m = re.search(r"_(m\d\d)_", s["id"])
         per_mod.setdefault(m.group(1), []).append(s)
+    if riuso:
+        print(f"riuso clip esistenti: {len(riuso)} slide escluse dalla sintesi")
     moduli = [a.modulo] if a.modulo else sorted(per_mod)
     for m in moduli:
         if m not in per_mod:

@@ -1,0 +1,10 @@
+import "dotenv/config";
+import { db } from "@/lib/db";
+import { course, slide } from "@/lib/db/schema";
+import { sql } from "drizzle-orm";
+const c = await db.select({ id: course.id, titolo: course.title, slug: course.slug, min: course.requiredMinutes }).from(course);
+console.log("corsi nel DB:", c.length);
+for (const x of c.slice(0, 20)) console.log(" -", x.slug ?? x.titolo, "·", x.min, "min");
+const n = await db.select({ n: sql<number>`count(*)` }).from(slide);
+console.log("slide totali:", n[0].n);
+process.exit(0);

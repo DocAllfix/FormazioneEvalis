@@ -104,12 +104,22 @@ def main() -> None:
 
         model = WhisperModel(args.model, device="cuda", compute_type="float16")
 
+    # RIUSO fra edizioni: le slide rimaste identiche non hanno un wav proprio, usano quello
+    # del corso di origine (stesso file, già passato da questo stesso gate a suo tempo).
+    riuso = read_json(base / "riuso-clip.json", fallback={})
+    audio_map = {k: v for k, v in audio_map.items() if not k.startswith("_")}  # "_meta" non è una slide
+    wav_di = {}
+    for sid in audio_map:
+        vecchio = riuso.get("origine", {}).get(sid)
+        wav_di[sid] = ((ROOT / riuso["corsoOrigine"] / "audio" / f"{vecchio}.wav")
+                       if vecchio else (base / "audio" / f"{sid}.wav"))
+
     audio_section = report.get("audio", {})
     flagged = 0
     for sid in audio_map:
         if only and sid not in only:
             continue
-        wav = base / "audio" / f"{sid}.wav"
+        wav = wav_di[sid]
         if not wav.exists():
             sys.exit(f"ERRORE: {sid} in audio-map ma wav mancante: {wav}")
 

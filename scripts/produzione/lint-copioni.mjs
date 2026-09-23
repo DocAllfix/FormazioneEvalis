@@ -112,9 +112,14 @@ const canon = (t) => {
 };
 let normaShingles = null;
 // match ESATTO ISO<corso> seguito da non-cifra: "9001" NON deve pescare ISO19011-2026.txt
-const normaFile = existsSync("testonorme")
-  ? readdirSync("testonorme").find((f) => f.endsWith(".txt") && new RegExp(`^ISO${corso}(\\D|$)`).test(f.replace(/\s+/g, "")))
-  : null;
+// prima il nome ESATTO ISO<corso>.txt, poi la regola larga: con più edizioni della stessa
+// norma in testonorme (ISO9001.txt, ISO9001v26.txt) il corso 9001 deve pescare la SUA.
+const fileNorme = existsSync("testonorme")
+  ? readdirSync("testonorme").filter((f) => f.endsWith(".txt")) : [];
+const senzaSpazi = (f) => f.replace(/\s+/g, "");
+const normaFile = fileNorme.find((f) => senzaSpazi(f) === `ISO${corso}.txt`)
+  ?? fileNorme.find((f) => new RegExp(`^ISO${corso}(\\D|$)`).test(senzaSpazi(f)))
+  ?? null;
 if (normaFile) {
   const parole = canon(readFileSync(`testonorme/${normaFile}`, "utf8"));
   normaShingles = new Set();
@@ -277,9 +282,13 @@ if (minutiPerModulo) {
 
 // E8 — anti-fotocopia cross-corso (n-grammi >=10 parole vs copioni degli ALTRI corsi)
 const NGRAM_XCORSO = 10;
+// esclusioni dichiarate dal corso (produzione/<corso>/lint.json → {"e8Escludi": ["9001"]}):
+// serve ai corsi su NUOVA EDIZIONE della stessa norma, che riusano per scelta le parti
+// invariate del corso sull'edizione precedente — lì la sovrapposizione è voluta e verificata.
+const e8Escludi = new Set(readJson(`${d.base}/lint.json`, {}).e8Escludi || []);
 const altriCorsi = existsSync("produzione")
   ? readdirSync("produzione").filter((d) => /^\d+$/.test(d) && d !== corso
-      && existsSync(`produzione/${d}/copioni.json`))
+      && !e8Escludi.has(d) && existsSync(`produzione/${d}/copioni.json`))
   : [];
 if (altriCorsi.length) {
   const mieShingles = new Map(); // shingle -> id slide (per il messaggio d'errore)
