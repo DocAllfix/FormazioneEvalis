@@ -26,7 +26,9 @@ for (const corso of corsi) {
   const riuso = leggi(path.join(dir, "riuso-clip.json"));
   const gate = leggi(path.join("produzione", "_staging", "slide-gates", corso, "report.json"))?.slide ?? {};
   const ctx = leggi(path.join("produzione", "_staging", "slide-gates", corso, "contestualita.json"))?.slide ?? {};
-  const pw = leggi(path.join("produzione", "_qa-playwright", `${corso}.json`)) ?? {};
+  // passata Playwright: gli esiti arrivano indicizzati per clip (e per titolo, per le statiche),
+  // perché in banca dati la slide ha un UUID e non l'ID canonico dei copioni.
+  const pw = leggi(path.join("produzione", "_qa-playwright", `${corso}.json`)) ?? { perUid: {}, perTitolo: {} };
   const qaAudio = leggi(path.join(dir, "qa-report.json"))?.audio ?? {};
   const rispQuiz = leggi(path.join("produzione", "_staging", "slide-gates", corso, "risposte-quiz.json"));
   const manifest = leggi(path.join(dir, "manifest.json"));
@@ -59,7 +61,7 @@ for (const corso of corsi) {
   for (const r of righe) if (r.clip) perUid.set(r.clip, r);
   const perTitolo = new Map<string, (typeof righe)[number]>();
   for (const r of righe) perTitolo.set((r.titolo ?? "").trim().toLowerCase(), r);
-  const perSlide = copioni.slides.map((s: any) => {
+  const perSlide = (copioni.slides as any[]).map((s: any) => {
     const uid = clipMap[s.id]?.uid;
     const db1 = (uid ? perUid.get(uid) : undefined) ?? perTitolo.get((s.titolo ?? "").trim().toLowerCase());
     const a = audioMap[s.id];
@@ -82,7 +84,8 @@ for (const corso of corsi) {
       gateImpaginazione: gate[s.id]?.esito ?? "—",
       altezzaPx: gate[s.id]?.height ?? null,
       contestualita: ctx[s.id]?.verdetto ?? "—",
-      playwright: pw[s.id] ?? "—",
+      playwright: (uid ? pw.perUid?.[uid] : undefined)
+        ?? pw.perTitolo?.[(s.titolo ?? "").trim().toLowerCase()] ?? "—",
     };
   });
 
@@ -127,7 +130,8 @@ for (const corso of corsi) {
     senzaClip: senzaClip.length, senzaAudio: senzaAudio.length, fuoriDb: fuoriDb.length,
     gateFail: perSlide.filter((x) => x.gateImpaginazione === "FAIL").length,
     contestualitaFail: perSlide.filter((x) => x.contestualita === "FAIL").length,
-    playwrightFail: perSlide.filter((x) => x.playwright === "FAIL").length,
+    playwrightFail: perSlide.filter((x) => String(x.playwright).startsWith("FAIL")).length,
+    playwrightVerificate: perSlide.filter((x) => x.playwright !== "—").length,
     qaAudioFlagged: perSlide.filter((x) => x.qaAudio === "FLAGGED").length,
     qaAudioVerificate: perSlide.filter((x) => x.qaAudio !== "—").length,
     quiz: banche,
@@ -159,6 +163,7 @@ Generato il ${new Date().toISOString().slice(0, 16).replace("T", " ")}.
 | Slide senza audio | ${riepilogo.senzaAudio} |
 | Fallimenti impaginazione | ${riepilogo.gateFail} |
 | Fallimenti contestualità | ${riepilogo.contestualitaFail} |
+| Slide provate in piattaforma (Playwright) | ${riepilogo.playwrightVerificate} |
 | Fallimenti apertura in piattaforma | ${riepilogo.playwrightFail} |
 | Clip audio passate al QA silenzi+volume | ${riepilogo.qaAudioVerificate} |
 | Clip audio segnalate dal QA | ${riepilogo.qaAudioFlagged} |
