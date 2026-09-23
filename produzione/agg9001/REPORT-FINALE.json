@@ -3,65 +3,66 @@
   "corso": "agg9001",
   "titolo": "Corso Aggiornamento Lead Auditor ISO 9001:2026 (8h)",
   "slide": 109,
-  "slideInPiattaforma": 0,
+  "slideInPiattaforma": 109,
   "audioTotale": 30868.060000000005,
   "monteOreLegale": 28800,
   "margine": "7.2%",
   "clipNuove": 109,
   "clipRiusate": 0,
-  "senzaClip": 109,
+  "senzaClip": 0,
   "senzaAudio": 0,
   "fuoriDb": 0,
   "gateFail": 0,
   "contestualitaFail": 0,
   "playwrightFail": 0,
+  "playwrightVerificate": 109,
   "qaAudioFlagged": 0,
   "qaAudioVerificate": 109,
   "quiz": [
    {
-    "id": "checkpoint m01",
+    "id": "Checkpoint Modulo 1",
     "tipo": "checkpoint",
     "banca": 12,
     "estrazione": 5,
     "soglia": 80
    },
    {
-    "id": "checkpoint m02",
+    "id": "Checkpoint Modulo 2",
     "tipo": "checkpoint",
     "banca": 12,
     "estrazione": 5,
     "soglia": 80
    },
    {
-    "id": "checkpoint m03",
+    "id": "Checkpoint Modulo 3",
     "tipo": "checkpoint",
     "banca": 10,
     "estrazione": 5,
     "soglia": 80
    },
    {
-    "id": "checkpoint m04",
+    "id": "Checkpoint Modulo 4",
     "tipo": "checkpoint",
     "banca": 12,
     "estrazione": 5,
     "soglia": 80
    },
    {
-    "id": "checkpoint m05",
+    "id": "Checkpoint Modulo 5",
     "tipo": "checkpoint",
     "banca": 12,
     "estrazione": 5,
     "soglia": 80
    },
    {
-    "id": "checkpoint m06",
+    "id": "Checkpoint Modulo 6",
     "tipo": "checkpoint",
     "banca": 10,
     "estrazione": 5,
     "soglia": 80
    },
    {
-    "id": "esame finale",
+    "id": "Esame finale",
     "tipo": "final",
     "banca": 30,
     "estrazione": 20,
@@ -83,13 +84,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "688c696b4591afba1c7f474c66aab60d",
+   "clipDurata": 241,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s002",
@@ -100,13 +101,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "5b9b2b59008447545650126bb873d508",
+   "clipDurata": 255,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s003",
@@ -117,13 +118,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "e104133bb48e5fbd4825843879ff4f7e",
+   "clipDurata": 243,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s004",
@@ -134,13 +135,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "ab351e15659963bf74c4f11039839e00",
+   "clipDurata": 252,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s005",
@@ -151,13 +152,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "fafa9077246ad61e7219b954fecc0bd3",
+   "clipDurata": 241,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s006",
@@ -168,13 +169,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "117d1afdb027c816ae6a7533bf6cc964",
+   "clipDurata": 239,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s007",
@@ -185,13 +186,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "c6d48f302b0d456b925919327feef78b",
+   "clipDurata": 244,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s008",
@@ -202,13 +203,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "e82d7e4c60e6fb117027022c3bdc67ea",
+   "clipDurata": 225,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s009",
@@ -219,13 +220,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "1a3b91b7a1f1ec3f33b8cfa45d19fc23",
+   "clipDurata": 223,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s010",
@@ -236,13 +237,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "a595db6f0137fecadd49887cfc3f12a4",
+   "clipDurata": 241,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s011",
@@ -253,13 +254,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "41bba05c7737543119650ff15db65526",
+   "clipDurata": 320,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s012",
@@ -270,13 +271,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "41671f3050b03e968cc66ede3b86784e",
+   "clipDurata": 334,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s013",
@@ -287,13 +288,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "71d8c4eaab0d086843b5b7e5ac68ca1b",
+   "clipDurata": 288,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s014",
@@ -304,13 +305,13 @@
    "qaAudio": "PASS",
    "lufs": -20.2,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "05647e272602c209a5debf1804ded09b",
+   "clipDurata": 284,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s015",
@@ -321,13 +322,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "8455f59b09c8f6b389b1c438bdad4319",
+   "clipDurata": 302,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m01_s016",
@@ -338,13 +339,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "408586fe384e81f8169335b6b8aa6a88",
+   "clipDurata": 253,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s001",
@@ -355,13 +356,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "d62569639a7e5db4b66334f37fbb603e",
+   "clipDurata": 225,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s002",
@@ -372,13 +373,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "bbd9baa1df68e3001021226eadfe440c",
+   "clipDurata": 246,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s003",
@@ -389,13 +390,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "106bb2a4b620b7d14e24ca9caff83806",
+   "clipDurata": 258,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s004",
@@ -406,13 +407,13 @@
    "qaAudio": "PASS",
    "lufs": -20.2,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "cdabd4435f15e018f11f8712e9488d94",
+   "clipDurata": 247,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s005",
@@ -423,13 +424,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "bcb0b80dd7912c5b8eb11d4f9a0acb47",
+   "clipDurata": 255,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s006",
@@ -440,13 +441,13 @@
    "qaAudio": "PASS",
    "lufs": -20.6,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "3e4563b272807e128ab877ce1f54aca0",
+   "clipDurata": 251,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s007",
@@ -457,13 +458,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "9d4da8e1e972370be3a584b9905548e5",
+   "clipDurata": 242,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s008",
@@ -474,13 +475,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "f35b6d175f5ed9a4840f7f536b158e4b",
+   "clipDurata": 261,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s009",
@@ -491,13 +492,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "8381bdb8dc1b2e84db2da04cd05a77c3",
+   "clipDurata": 250,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s010",
@@ -508,13 +509,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "04cd895e3ac57a2020a943fc574f5ef4",
+   "clipDurata": 253,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s011",
@@ -525,13 +526,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "73ea3fc9579275a554c06be80a3e3a58",
+   "clipDurata": 311,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s012",
@@ -542,13 +543,13 @@
    "qaAudio": "PASS",
    "lufs": -20.6,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "c10f0935d6bc892c71ebd20e712b45f9",
+   "clipDurata": 307,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s013",
@@ -559,13 +560,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "abc02471bdf8e4eb5b2a8956d6b24799",
+   "clipDurata": 298,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s014",
@@ -576,13 +577,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "3fa42af978671babaeb302604ec2f0a1",
+   "clipDurata": 331,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s015",
@@ -593,13 +594,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "dbc6457e8d9c3b1670c30f9a695be4f8",
+   "clipDurata": 277,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s016",
@@ -610,13 +611,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "d21240a984a82b6a4b43a494e03cbeb7",
+   "clipDurata": 294,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s017",
@@ -627,13 +628,13 @@
    "qaAudio": "PASS",
    "lufs": -20.6,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "4fae1116cb0ea6539c9f50e981caa64a",
+   "clipDurata": 301,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s018",
@@ -644,13 +645,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "5f48529e920e474857e3558c77b7eb1b",
+   "clipDurata": 301,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m02_s019",
@@ -661,13 +662,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "61c13e3a18828b435be1a04bcf23cab7",
+   "clipDurata": 275,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s001",
@@ -678,13 +679,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "6149459b6da13faaa4c949197054be08",
+   "clipDurata": 285,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s002",
@@ -695,13 +696,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "b462e356fa4218453aa9d81c6b5af0cf",
+   "clipDurata": 313,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s003",
@@ -712,13 +713,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "29ee2a3c0b739fae0deeedb8a1d2d3a1",
+   "clipDurata": 327,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s004",
@@ -729,13 +730,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "697b71214b3bb709881cc10c21f6bf39",
+   "clipDurata": 316,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s005",
@@ -746,13 +747,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "c820986f66590c5d2f3281cd0516c473",
+   "clipDurata": 300,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s006",
@@ -763,13 +764,13 @@
    "qaAudio": "PASS",
    "lufs": -20.2,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "7a888ca1f6ecbf68a724b3701e8c2d48",
+   "clipDurata": 329,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s007",
@@ -780,13 +781,13 @@
    "qaAudio": "PASS",
    "lufs": -20.2,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "b6480d82ff85be594c704957cef7c969",
+   "clipDurata": 306,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s008",
@@ -797,13 +798,13 @@
    "qaAudio": "PASS",
    "lufs": -20.2,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "f1dd1ac2ef746b992c43556f3fbada68",
+   "clipDurata": 242,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s009",
@@ -814,13 +815,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "a2125bd9b1f96190f0d5d8edffc5d414",
+   "clipDurata": 245,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s010",
@@ -831,13 +832,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "1a0dce6e3c61b827556b247cba462b98",
+   "clipDurata": 283,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s011",
@@ -848,13 +849,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "96f53732b0c91149e8d501ce3908c71b",
+   "clipDurata": 311,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s012",
@@ -865,13 +866,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "77ece73548b22123942f307081bf65df",
+   "clipDurata": 282,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s013",
@@ -882,13 +883,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "ed2328471a30dac688f84f40d7bf1296",
+   "clipDurata": 287,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s014",
@@ -899,13 +900,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "236c5cdc680ef6aa5d880abac8aec0d7",
+   "clipDurata": 275,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s015",
@@ -916,13 +917,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "66f5870401b782a07d108ca5e5c7baa7",
+   "clipDurata": 297,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s016",
@@ -933,13 +934,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "26a7c58e449565afaec751fbd7e0cff9",
+   "clipDurata": 303,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s017",
@@ -950,13 +951,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "a41b6f8a88fe0c1e9b47348aeb3c7bfd",
+   "clipDurata": 289,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s018",
@@ -967,13 +968,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "9b30142979933a449c4343ade8eab709",
+   "clipDurata": 285,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m03_s019",
@@ -984,13 +985,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "063e0921d27348669e78403ab6f23f55",
+   "clipDurata": 309,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s001",
@@ -1001,13 +1002,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "738925f0416f5c8c08b7354bc44d149b",
+   "clipDurata": 268,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s002",
@@ -1018,13 +1019,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "6734b51059c179442b90a49531790b41",
+   "clipDurata": 269,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s003",
@@ -1035,13 +1036,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "95ed0769a4d20ee1ef8d75a59ff5fb53",
+   "clipDurata": 284,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s004",
@@ -1052,13 +1053,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "073776256d668abefc53d771a781aa01",
+   "clipDurata": 282,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s005",
@@ -1069,13 +1070,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "e9e60562b0ed316ca32c1414b01c6b18",
+   "clipDurata": 286,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s006",
@@ -1086,13 +1087,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "d84fd28a7145d672bb5e58cd532d84dd",
+   "clipDurata": 286,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s007",
@@ -1103,13 +1104,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "18ddef0182abeca9f580b2bd0fe18b0f",
+   "clipDurata": 278,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s008",
@@ -1120,13 +1121,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "62ec0c9ca5b23f5553dd8951afeac267",
+   "clipDurata": 269,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s009",
@@ -1137,13 +1138,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "79aa39560de253f84f4529db25de33fd",
+   "clipDurata": 287,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s010",
@@ -1154,13 +1155,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "5602941ba8cb62c6eeed4efe8d39ca09",
+   "clipDurata": 276,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s011",
@@ -1171,13 +1172,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "2c12d474290de3259ef3f65e2266b30c",
+   "clipDurata": 308,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s012",
@@ -1188,13 +1189,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "6639bfb3a661d5cabaf93aa46f87e435",
+   "clipDurata": 328,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s013",
@@ -1205,13 +1206,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "8b764370582200e4044b1721bf5961e3",
+   "clipDurata": 307,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s014",
@@ -1222,13 +1223,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "3253e28d3033d8e20e35c48730bd7c05",
+   "clipDurata": 306,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s015",
@@ -1239,13 +1240,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "467f2218b5b56a40ea91de6a42431be6",
+   "clipDurata": 322,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s016",
@@ -1256,13 +1257,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "29ccb1e75bfa93657bf09ac89c27b502",
+   "clipDurata": 338,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s017",
@@ -1273,13 +1274,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "da725aec978948113e9549045db7cdd8",
+   "clipDurata": 291,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s018",
@@ -1290,13 +1291,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "df95405010b452ed3ece8765d209752a",
+   "clipDurata": 305,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m04_s019",
@@ -1307,13 +1308,13 @@
    "qaAudio": "PASS",
    "lufs": -20.6,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "e3679f92bdbaca44acea6512b00c1165",
+   "clipDurata": 280,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s001",
@@ -1324,13 +1325,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "a00b9d7375ddb343b1594ec9db2e312a",
+   "clipDurata": 264,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s002",
@@ -1341,13 +1342,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "5ff0e4f8e407d63ca80c36b92bdb8d00",
+   "clipDurata": 277,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s003",
@@ -1358,13 +1359,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "77c0849d1d7215c63dd4886be48ac1ee",
+   "clipDurata": 265,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s004",
@@ -1375,13 +1376,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "f3a86c83f7460c2af24ebeeff01932ee",
+   "clipDurata": 265,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s005",
@@ -1392,13 +1393,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "6739f93d62242eeb5c643d0be4ab33fc",
+   "clipDurata": 266,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s006",
@@ -1409,13 +1410,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "14a91117517b5a2ac026d2a1f5685125",
+   "clipDurata": 270,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s007",
@@ -1426,13 +1427,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "7e9579f9dfc29045897be18a8311bff6",
+   "clipDurata": 265,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s008",
@@ -1443,13 +1444,13 @@
    "qaAudio": "PASS",
    "lufs": -20.6,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "0ed7f6525f905c45d161ecfc6f0334c1",
+   "clipDurata": 252,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s009",
@@ -1460,13 +1461,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "e1595ea51f97c91546c1f035f9d7011d",
+   "clipDurata": 254,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s010",
@@ -1477,13 +1478,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "300bdf30e2ee63e9da13178d74aaa44f",
+   "clipDurata": 259,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s011",
@@ -1494,13 +1495,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "31a8dcedf3ae738e67fdc78f862280ad",
+   "clipDurata": 309,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s012",
@@ -1511,13 +1512,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "3fa0e90237290f27bbab5169c27079b4",
+   "clipDurata": 289,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s013",
@@ -1528,13 +1529,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "8a5f6da90c6450cc39cc38f49fa26afe",
+   "clipDurata": 295,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s014",
@@ -1545,13 +1546,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "aba7be22c3b4d953c626efe582dcefb2",
+   "clipDurata": 277,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s015",
@@ -1562,13 +1563,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "a18a82b886cd4a375573035b43870bc1",
+   "clipDurata": 267,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s016",
@@ -1579,13 +1580,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "a5526407889103015ace751cf608cd41",
+   "clipDurata": 375,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s017",
@@ -1596,13 +1597,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "d8e6b5018a0d95bf86f45b10fa94e8fa",
+   "clipDurata": 279,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s018",
@@ -1613,13 +1614,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "da884d564465452d156b4dd207e0786d",
+   "clipDurata": 281,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m05_s019",
@@ -1630,13 +1631,13 @@
    "qaAudio": "PASS",
    "lufs": -20.7,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "860f40964aed9d9794a3b5d37c75f6c7",
+   "clipDurata": 270,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s001",
@@ -1647,13 +1648,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "37d1e0ad161444322b70322b1ae7561f",
+   "clipDurata": 280,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s002",
@@ -1664,13 +1665,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "d43102ffb56ad82ac17a5c4d8cd1ff8f",
+   "clipDurata": 317,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s003",
@@ -1681,13 +1682,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "42bc58c00ee77f8f60919bcb599efae3",
+   "clipDurata": 313,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s004",
@@ -1698,13 +1699,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "f71d492df51cbf031363789642a1c8d6",
+   "clipDurata": 300,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s005",
@@ -1715,13 +1716,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "bbfca13712314dd7c188551b8ea0a4ae",
+   "clipDurata": 285,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s006",
@@ -1732,13 +1733,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "12d3e55abcd2ba443c8a893bf4ccbdae",
+   "clipDurata": 284,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s007",
@@ -1749,13 +1750,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "ce92f25d867a70336257168037f5dc22",
+   "clipDurata": 292,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s008",
@@ -1766,13 +1767,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "3b202840dc24650364ca2e4955c2ee07",
+   "clipDurata": 294,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s009",
@@ -1783,13 +1784,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "bb06fb44eb4ee70345b50ab2a37919b2",
+   "clipDurata": 293,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s010",
@@ -1800,13 +1801,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "5070b1bc7051c55049f3df7016ede302",
+   "clipDurata": 277,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s011",
@@ -1817,13 +1818,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "74bedd2e47031e67160e7c732fc769a7",
+   "clipDurata": 308,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s012",
@@ -1834,13 +1835,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "2d44a8037ec2df5068a6747c244674bc",
+   "clipDurata": 331,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s013",
@@ -1851,13 +1852,13 @@
    "qaAudio": "PASS",
    "lufs": -20.5,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "a03660063f697298cd53ea6fbde4ff3f",
+   "clipDurata": 328,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s014",
@@ -1868,13 +1869,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "148dc9a55fd858ab05765e777e4ce39f",
+   "clipDurata": 319,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s015",
@@ -1885,13 +1886,13 @@
    "qaAudio": "PASS",
    "lufs": -20.3,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "223799a0913b16657593bb40e7a8a030",
+   "clipDurata": 322,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "WARN",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s016",
@@ -1902,13 +1903,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "0125e3c6e739e5e610d8f7aad71f9417",
+   "clipDurata": 284,
+   "inPiattaforma": true,
    "gateImpaginazione": "PASS",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   },
   {
    "id": "agg9001_m06_s017",
@@ -1919,13 +1920,13 @@
    "qaAudio": "PASS",
    "lufs": -20.4,
    "origineAudio": "nuovo",
-   "clipUid": null,
-   "clipDurata": null,
-   "inPiattaforma": false,
+   "clipUid": "7ddf9493f516533c4434f4d439cf4362",
+   "clipDurata": 282,
+   "inPiattaforma": true,
    "gateImpaginazione": "WARN",
    "altezzaPx": 720,
    "contestualita": "PASS",
-   "playwright": "—"
+   "playwright": "PASS"
   }
  ]
 }

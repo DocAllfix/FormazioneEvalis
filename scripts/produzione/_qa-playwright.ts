@@ -11,7 +11,7 @@ import path from "node:path";
 import { chromium, type Browser } from "@playwright/test";
 import { eq, asc } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { module as moduleT, lesson, slide } from "@/lib/db/schema";
+import { course, module as moduleT, lesson, slide } from "@/lib/db/schema";
 
 const BASE = (process.env.NEXT_PUBLIC_APP_URL ?? "").replace(/\/$/, "");
 const TOKEN = process.env.PREVIEW_TOKEN ?? "";
@@ -36,12 +36,12 @@ const COURSES: Record<string, string> = {
 
 async function slidesOf(courseId: string) {
   const mods = await db.select().from(moduleT).where(eq(moduleT.courseId, courseId)).orderBy(asc(moduleT.position));
-  const out: { id: string; title: string; hasClip: boolean }[] = [];
+  const out: { id: string; title: string; hasClip: boolean; clipUid: string | null }[] = [];
   for (const m of mods) {
     const lessons = await db.select().from(lesson).where(eq(lesson.moduleId, m.id)).orderBy(asc(lesson.position));
     for (const l of lessons) {
       const ss = await db.select().from(slide).where(eq(slide.lessonId, l.id)).orderBy(asc(slide.position));
-      for (const s of ss) out.push({ id: s.id, title: s.title, hasClip: !!s.avatarClipUid });
+      for (const s of ss) out.push({ id: s.id, title: s.title, hasClip: !!s.avatarClipUid, clipUid: s.avatarClipUid });
     }
   }
   return out;
@@ -104,13 +104,20 @@ const targets = onlyCourse ? [onlyCourse] : Object.keys(COURSES);
 const globalFails: string[] = [];
 
 for (const corso of targets) {
-  const courseId = COURSES[corso];
-  if (!courseId) { console.log(`skip ${corso} (courseId sconosciuto)`); continue; }
+  // gli UUID qui sopra valgono per un solo database: se il corso non c'è (corso nuovo, oppure
+  // stiamo girando sull'altro database) lo si risolve dallo slug, che invece è stabile.
+  let courseId = COURSES[corso];
+  if (!courseId) {
+    const slug = process.env[`SLUG_${corso}`];
+    const trovato = slug ? await db.select({ id: course.id }).from(course).where(eq(course.slug, slug)) : [];
+    courseId = trovato[0]?.id ?? "";
+  }
+  if (!courseId) { console.log(`skip ${corso} (courseId sconosciuto: imposta SLUG_${corso} in .env)`); continue; }
   const dir = path.join(OUT, corso);
   fs.mkdirSync(dir, { recursive: true });
   const slides = await slidesOf(courseId);
   console.log(`\n=== ${corso}: ${slides.length} slide ===`);
-  const results: { i: number; id: string; ok: boolean; reason: string; file: string; hasClip: boolean }[] = [];
+  const results: { i: number; id: string; ok: boolean; reason: string; file: string; hasClip: boolean; clipUid: string | null; titolo: string }[] = [];
   let idx = 0;
   async function worker() {
     while (idx < slides.length) {
@@ -118,7 +125,7 @@ for (const corso of targets) {
       const s = slides[i];
       const file = path.join(dir, `${String(i).padStart(3, "0")}.png`);
       const r = await checkSlide(browser, s, file);
-      results.push({ i, id: s.id, ok: r.ok, reason: r.reason, file: `${corso}/${String(i).padStart(3, "0")}.png`, hasClip: s.hasClip });
+      results.push({ i, id: s.id, ok: r.ok, reason: r.reason, file: `${corso}/${String(i).padStart(3, "0")}.png`, hasClip: s.hasClip, clipUid: s.clipUid, titolo: s.title });
       if (!r.ok) { globalFails.push(`${corso}#${i} ${s.id}: ${r.reason}`); process.stdout.write("X"); }
       else process.stdout.write(".");
     }
@@ -138,6 +145,17 @@ for (const corso of targets) {
     `figcaption{font-size:11px;color:#aaa}.fail img{border-color:#e11}.fail figcaption{color:#f66}</style>` +
     `<h2>QA ${corso} — ${results.length} slide, FAIL ${fails.length}</h2><div class=grid>${cells}</div>`);
   console.log(`contact sheet -> ${OUT}/${corso}.html`);
+
+  // esito per slide, in una forma che il report finale sa riagganciare agli ID canonici:
+  // in banca dati la slide ha un UUID, il ponte è la clip (o, per le statiche, il titolo).
+  const perUid: Record<string, string> = {};
+  const perTitolo: Record<string, string> = {};
+  for (const r of results) {
+    const esito = r.ok ? "PASS" : `FAIL: ${r.reason}`;
+    if (r.clipUid) perUid[r.clipUid] = esito;
+    perTitolo[r.titolo.trim().toLowerCase()] = esito;
+  }
+  fs.writeFileSync(path.join(OUT, `${corso}.json`), JSON.stringify({ perUid, perTitolo }, null, 1), "utf8");
 }
 
 await browser.close();

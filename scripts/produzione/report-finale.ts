@@ -103,7 +103,7 @@ for (const corso of corsi) {
   const banche = [] as { id: string; tipo: string; banca: number; estrazione: number; soglia: number }[];
   for (const q of quizDb) {
     const n = await db.select({ id: quizQuestion.id }).from(quizQuestion).where(eq(quizQuestion.quizId, q.id));
-    banche.push({ id: q.id, tipo: String(q.tipo), banca: n.length, estrazione: q.estrazione, soglia: q.soglia });
+    banche.push({ id: q.titoloQuiz, tipo: String(q.tipo), banca: n.length, estrazione: q.estrazione, soglia: q.soglia });
   }
   // finché il corso non è in piattaforma le banche si leggono dal manifest, così il report
   // dice comunque quante domande ci sono, quante se ne estraggono e con che soglia.
