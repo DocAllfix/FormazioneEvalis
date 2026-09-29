@@ -5,6 +5,7 @@
 // a ricaricare, senza polling. Dismissibile; ripulisce l'URL alla chiusura.
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { CheckCircle2, Info, X } from "lucide-react";
 
@@ -28,7 +29,8 @@ export function PurchaseBanner() {
           <span>
             <strong>Acquisto completato!</strong>{" "}Stiamo attivando il tuo percorso: comparirà qui tra i tuoi
             corsi entro pochi istanti (l&apos;attivazione arriva dalla conferma del pagamento — se non lo vedi,
-            ricarica la pagina).
+            ricarica la pagina). La ricevuta la trovi nel tuo{" "}
+            <Link href="/profilo#acquisti" className="font-medium text-primary hover:underline">profilo</Link>.
           </span>
         </p>
         <button onClick={close} aria-label="Chiudi" className="shrink-0 text-muted-foreground transition hover:text-near-black">
