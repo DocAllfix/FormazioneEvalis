@@ -9,6 +9,7 @@ import { Check, Clock, Search } from "lucide-react";
 import type { CatalogCourse } from "@/features/catalog/queries";
 import { categoryVisual } from "./category-visual";
 import { euro } from "@/lib/formato";
+import { PrezzoCorso, hasLaunchPrice } from "./prezzo-corso";
 
 const AREAS = [
   { id: "all", label: "Tutti" },
@@ -27,14 +28,9 @@ function hoursLabel(c: CatalogCourse): string {
 // `euro` vive ora in `@/lib/formato` (era duplicata con la pagina corso). La ri-esportiamo da
 // qui perché `bundle-strip` e `bundle-pick-dialog` la importano da questo modulo: così quegli
 // import restano validi e nulla cambia per chi la usava.
-// NB: serve anche l'import in cima al file — questo componente la usa al proprio interno, e
-// `export { … } from` ri-esporta soltanto, senza portarla nello scope locale.
+// NB: la ri-esportazione ha bisogno dell'import in cima al file: `export { euro }` senza `from`
+// esporta un nome che deve già stare nello scope locale.
 export { euro };
-
-/** Doppio listino attivo? (prezzo lancio con listino barrato) */
-function hasLaunchPrice(c: Pick<CatalogCourse, "priceCents" | "listPriceCents">): boolean {
-  return c.priceCents != null && c.listPriceCents != null && c.listPriceCents > c.priceCents;
-}
 
 function Card({ c, enrolled }: { c: CatalogCourse; enrolled: boolean }) {
   const v = categoryVisual(c.category);
@@ -77,16 +73,8 @@ function Card({ c, enrolled }: { c: CatalogCourse; enrolled: boolean }) {
             <span className="inline-flex items-center gap-1 rounded-full bg-success/10 px-2.5 py-1 text-xs font-medium text-success">
               <Check className="h-3.5 w-3.5" /> Già tuo
             </span>
-          ) : c.priceCents == null ? (
-            <span className="font-heading text-lg text-near-black">Su richiesta</span>
           ) : (
-            <span className="text-right">
-              {launch ? (
-                <span className="mr-2 text-sm text-muted-foreground line-through">{euro(c.listPriceCents!, c.currency ?? "eur")}</span>
-              ) : null}
-              <span className="font-heading text-lg text-near-black">{euro(c.priceCents, c.currency ?? "eur")}</span>
-              <span className="ml-1 text-[11px] text-muted-foreground">+ IVA</span>
-            </span>
+            <PrezzoCorso c={c} size="sm" />
           )}
         </div>
       </div>

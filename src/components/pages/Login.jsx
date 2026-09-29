@@ -8,8 +8,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { LogIn, Mail, Lock, Loader2 } from "lucide-react";
 import AuthLayout from "@/components/AuthLayout";
+import { registratiPer } from "@/lib/next-sicuro";
 
-export default function Login() {
+/** @param {{ next?: string | null }} props — percorso interno GIÀ validato dalla pagina server */
+export default function Login({ next = null }) {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,10 +28,8 @@ export default function Login() {
       setError(error.message || "Email o password non validi");
       return;
     }
-    // Rispetta ?next= (solo path interni: evita open-redirect verso domini esterni).
-    const raw = new URLSearchParams(window.location.search).get("next");
-    const next = raw && raw.startsWith("/") && !raw.startsWith("//") ? raw : "/dashboard";
-    router.push(next);
+    // ?next= arriva già validato dalla pagina (solo percorsi interni, niente open-redirect).
+    router.push(next ?? "/dashboard");
     router.refresh();
   };
 
@@ -41,7 +41,7 @@ export default function Login() {
       footer={
         <>
           Non hai un account?{" "}
-          <Link href="/registrati" className="text-primary font-medium hover:underline">
+          <Link href={next ? registratiPer(next) : "/registrati"} className="text-primary font-medium hover:underline">
             Registrati
           </Link>
         </>

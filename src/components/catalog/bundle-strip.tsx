@@ -5,11 +5,17 @@
 // stanno in una riga di card compatte ad altezza uniforme. Il "valore separato" barrato è
 // la SOMMA DEI PREZZI CORRENTI dei corsi inclusi, quindi resta veritiero sia in periodo di
 // lancio sia a listino pieno.
+//
+// `pubblico`: la stessa vetrina in landing e nel catalogo pubblico. Chi non è loggato non può
+// comprare, quindi il pulsante porta alla registrazione e, a registrazione conclusa, a QUESTO
+// pacchetto nell'area riservata (ancora `pacchetto-<slug>`), dove l'acquisto è quello vero.
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { ArrowRight, Loader2 } from "lucide-react";
 import type { CatalogBundle } from "@/features/catalog/queries";
 import { buyBundleAction } from "@/features/billing/server-actions";
+import { registratiPer } from "@/lib/next-sicuro";
 import { euro } from "./catalog-browser";
 import { BundlePickDialog } from "./bundle-pick-dialog";
 
@@ -145,14 +151,28 @@ function Azione({
   );
 }
 
+/** Versione pubblica di Azione: stesso aspetto, ma porta alla registrazione e poi a questo pacchetto. */
+function AzionePubblica({ b, className = "" }: { b: CatalogBundle; className?: string }) {
+  if (b.priceCents == null) return null;
+  return (
+    <Link
+      href={registratiPer(`/corsi#pacchetto-${b.slug}`)}
+      className={`inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white transition-[filter,opacity] duration-200 ease-out hover:brightness-110 ${className}`}
+    >
+      {b.kind === "pick_one" ? "Scegli e acquista" : "Acquista"}
+      <ArrowRight className="h-4 w-4" />
+    </Link>
+  );
+}
+
 /** Pacchetto in evidenza: fascia larga, elenco corsi in linea, prezzo e azione a destra. */
-function Fascia({ b, enrolled }: { b: CatalogBundle; enrolled: Set<string> }) {
+function Fascia({ b, enrolled, pubblico }: { b: CatalogBundle; enrolled: Set<string>; pubblico?: boolean }) {
   const stato = statoDi(b, enrolled);
   const { loading, error, pickOpen, setPickOpen, acquista } = useAcquisto(b);
   const inclusi = b.courses.filter((c) => c.role === "included");
 
   return (
-    <div className="rounded-2xl border border-border bg-[#FAF8F5] p-6 md:p-7">
+    <div id={`pacchetto-${b.slug}`} className="scroll-mt-24 rounded-2xl border border-border bg-[#FAF8F5] p-6 md:p-7">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
         <div className="min-w-0 lg:max-w-[62ch]">
           <p className="text-xs font-medium uppercase tracking-wider text-primary">Il percorso completo</p>
@@ -170,7 +190,7 @@ function Fascia({ b, enrolled }: { b: CatalogBundle; enrolled: Set<string> }) {
 
         <div className="flex shrink-0 flex-col items-start gap-3 border-t border-border pt-5 lg:items-end lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
           <Prezzo b={b} stato={stato} grande />
-          <Azione b={b} stato={stato} loading={loading} onClick={acquista} />
+          {pubblico ? <AzionePubblica b={b} /> : <Azione b={b} stato={stato} loading={loading} onClick={acquista} />}
         </div>
       </div>
       {error ? <p className="mt-3 text-sm text-destructive">{error}</p> : null}
@@ -182,7 +202,7 @@ function Fascia({ b, enrolled }: { b: CatalogBundle; enrolled: Set<string> }) {
 }
 
 /** Pacchetto in griglia: compatto, footer allineato in fondo (altezze uniformi per riga). */
-function Card({ b, enrolled }: { b: CatalogBundle; enrolled: Set<string> }) {
+function Card({ b, enrolled, pubblico }: { b: CatalogBundle; enrolled: Set<string>; pubblico?: boolean }) {
   const stato = statoDi(b, enrolled);
   const { loading, error, pickOpen, setPickOpen, acquista } = useAcquisto(b);
   const inclusi = b.courses.filter((c) => c.role === "included");
@@ -190,7 +210,7 @@ function Card({ b, enrolled }: { b: CatalogBundle; enrolled: Set<string> }) {
   const resto = inclusi.length - mostrati.length;
 
   return (
-    <div className="flex flex-col rounded-2xl border border-border bg-card p-5 transition-shadow duration-200 ease-out hover:shadow-[0_12px_32px_rgba(26,18,9,0.08)]">
+    <div id={`pacchetto-${b.slug}`} className="flex scroll-mt-24 flex-col rounded-2xl border border-border bg-card p-5 transition-shadow duration-200 ease-out hover:shadow-[0_12px_32px_rgba(26,18,9,0.08)]">
       <h3 className="font-heading text-lg leading-snug text-near-black">{b.title}</h3>
       <ul className="mt-3 flex flex-col gap-1 text-sm text-foreground/75">
         {mostrati.map((c) => (
@@ -208,7 +228,11 @@ function Card({ b, enrolled }: { b: CatalogBundle; enrolled: Set<string> }) {
       </div>
       <div className="mt-auto flex flex-col gap-3 pt-5">
         <Prezzo b={b} stato={stato} />
-        <Azione b={b} stato={stato} loading={loading} onClick={acquista} className="w-full" />
+        {pubblico ? (
+          <AzionePubblica b={b} className="w-full" />
+        ) : (
+          <Azione b={b} stato={stato} loading={loading} onClick={acquista} className="w-full" />
+        )}
       </div>
       {error ? <p className="mt-2 text-sm text-destructive">{error}</p> : null}
       {b.kind === "pick_one" ? (
@@ -218,7 +242,16 @@ function Card({ b, enrolled }: { b: CatalogBundle; enrolled: Set<string> }) {
   );
 }
 
-export function BundleStrip({ bundles, enrolledIds }: { bundles: CatalogBundle[]; enrolledIds?: string[] }) {
+export function BundleStrip({
+  bundles,
+  enrolledIds,
+  pubblico,
+}: {
+  bundles: CatalogBundle[];
+  enrolledIds?: string[];
+  /** Landing e catalogo pubblico: il pulsante porta alla registrazione invece di comprare. */
+  pubblico?: boolean;
+}) {
   const enrolled = useMemo(() => new Set(enrolledIds ?? []), [enrolledIds]);
   // in evidenza il pacchetto di valore più alto; gli altri conservano l'ordine di catalogo
   const { evidenza, altri } = useMemo(() => {
@@ -239,11 +272,11 @@ export function BundleStrip({ bundles, enrolledIds }: { bundles: CatalogBundle[]
           Combina più percorsi in un unico acquisto e paghi meno.
         </p>
       </div>
-      <Fascia b={evidenza} enrolled={enrolled} />
+      <Fascia b={evidenza} enrolled={enrolled} pubblico={pubblico} />
       {altri.length > 0 ? (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {altri.map((b) => (
-            <Card key={b.id} b={b} enrolled={enrolled} />
+            <Card key={b.id} b={b} enrolled={enrolled} pubblico={pubblico} />
           ))}
         </div>
       ) : null}

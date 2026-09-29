@@ -3,6 +3,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ClipboardCheck, QrCode } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import { PrezzoCorso, hasLaunchPrice } from "@/components/catalog/prezzo-corso";
+import { ScadenzaLancio } from "@/components/catalog/scadenza-lancio";
+import { registratiPer } from "@/lib/next-sicuro";
 
 const areas = [
   {
@@ -60,11 +63,13 @@ const areas = [
   },
 ];
 
+// La card intera porta alla scheda (link "esteso" sul titolo, che copre la card con ::after);
+// il prezzo è un pulsante a sé verso la registrazione, sopra quel link. Così non c'è un link
+// dentro un altro link, che non è valido.
 function CertCard({ card, large = false }) {
   return (
-    <Link
-      href={card.slug ? `/catalogo/${card.slug}` : "/catalogo"}
-      className={`group flex flex-col bg-white border border-[#EAE4DB] rounded-2xl p-6 text-left hover:-translate-y-[3px] hover:border-primary transition-all duration-200 hover:shadow-[0_12px_32px_rgba(26,18,9,0.12)] h-full ${
+    <div
+      className={`group relative flex flex-col bg-white border border-[#EAE4DB] rounded-2xl p-6 text-left hover:-translate-y-[3px] hover:border-primary transition-all duration-200 hover:shadow-[0_12px_32px_rgba(26,18,9,0.12)] h-full ${
         large ? "lg:col-span-2" : ""
       }`}
       style={!large ? { minHeight: "140px" } : undefined}
@@ -82,7 +87,9 @@ function CertCard({ card, large = false }) {
           large ? "text-2xl" : "text-lg"
         }`}
       >
-        {card.name}
+        <Link href={card.slug ? `/catalogo/${card.slug}` : "/catalogo"} className="after:absolute after:inset-0 after:rounded-2xl">
+          {card.name}
+        </Link>
       </h3>
       {large ? (
         <>
@@ -105,9 +112,28 @@ function CertCard({ card, large = false }) {
           {card.line}
         </p>
       )}
+      {card.priceCents != null ? <PrezzoAcquista card={card} /> : null}
+    </div>
+  );
+}
+
+// Prezzo cliccabile: registrazione, e poi dritti alla scheda di QUESTO corso col suo "Acquista".
+function PrezzoAcquista({ card }) {
+  return (
+    <Link
+      href={registratiPer(`/corsi/${card.id}`)}
+      className="relative z-10 mt-5 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-xl border border-[#EAE4DB] bg-[#FBF8F4] px-4 py-3 transition-colors duration-200 hover:border-primary hover:bg-[#FEF0EB]"
+    >
+      <PrezzoCorso c={card} size="sm" />
+      <span className="inline-flex items-center gap-1 text-sm font-medium text-primary">
+        Acquista <ArrowRight className="h-3.5 w-3.5" />
+      </span>
     </Link>
   );
 }
+
+// campi prezzo dal corso DB (VetrinaCourse): servono a mostrare il prezzo e a tornare al corso
+const prezzoDi = (c) => ({ id: c.id, priceCents: c.priceCents, listPriceCents: c.listPriceCents, currency: c.currency });
 
 // Badge di card dal corso DB: propedeutico / aggiornamento / sigla ISO (come in Catalogo.jsx).
 function badgeFor(course) {
@@ -117,28 +143,33 @@ function badgeFor(course) {
   return m ? `ISO ${m[0]}` : "Corso";
 }
 
-/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, aiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, managerialiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
+/** @param {{ auditorCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], aiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], managerialiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[] }} props */
 export default function CatalogSection({ auditorCourses = [], aiCourses = [], managerialiCourses = [] }) {
   const [activeArea, setActiveArea] = useState("auditor");
   const current = areas.find((a) => a.id === activeArea);
+  // la scadenza si mostra solo se c'è davvero almeno un corso a prezzo di lancio
+  const inLancio = [...auditorCourses, ...aiCourses, ...managerialiCourses].some(hasLaunchPrice);
   // aree auditor/ai: corsi reali dal DB quando disponibili (fallback alla lista statica)
   const dbAuditorCards = auditorCourses.map((c) => ({
     name: c.title.split("—")[0].trim(),
     badge: badgeFor(c),
     line: c.description,
     slug: c.slug,
+    ...prezzoDi(c),
   }));
   const dbAiCards = aiCourses.map((c) => ({
     name: c.title.split("—")[0].trim(),
     badge: c.slug.includes("operativo") ? "Base" : "Avanzato",
     line: c.description,
     slug: c.slug,
+    ...prezzoDi(c),
   }));
   const dbManagerialiCards = managerialiCourses.map((c) => ({
     name: c.title.split("—")[0].trim(),
     badge: c.slug.startsWith("esg") ? "UNI/PdR 109.1" : "EGE",
     line: c.description,
     slug: c.slug,
+    ...prezzoDi(c),
   }));
   const cards =
     activeArea === "manageriale" && dbManagerialiCards.length > 0
@@ -163,6 +194,9 @@ export default function CatalogSection({ auditorCourses = [], aiCourses = [], ma
             <h2 className="mt-3.5 font-heading text-4xl md:text-5xl lg:text-[56px] text-near-black leading-[1.1]">
               Cosa puoi certificare
             </h2>
+            {inLancio ? (
+              <ScadenzaLancio className="mt-5 rounded-full bg-[#FEF0EB] px-3.5 py-1.5 text-sm font-medium text-[#C03E08]" />
+            ) : null}
           </div>
         </ScrollReveal>
 

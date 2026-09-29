@@ -1,16 +1,36 @@
 // Vetrina marketing (landing + /catalogo): corsi auditor pubblicati dal DB, ordinati
 // come il percorso reale — propedeutico 19011 → percorsi ISO → aggiornamenti in coda.
 // Riusa la cache di listPublishedCourses (revalidate 60s).
+// Porta anche il prezzo: chi arriva dalla landing deve vederlo prima di registrarsi, come
+// nell'area riservata. `id` serve a riportarlo alla scheda del corso dopo la registrazione.
 
-import { listPublishedCourses } from "./queries";
+import { listPublishedCourses, type CatalogCourse } from "./queries";
 
 export type VetrinaCourse = {
+  id: string;
   slug: string;
   title: string;
   description: string;
   durationHours: number | null;
   imageUrl: string | null;
+  priceCents: number | null;
+  listPriceCents: number | null;
+  currency: string | null;
 };
+
+function vetrina(c: CatalogCourse): VetrinaCourse {
+  return {
+    id: c.id,
+    slug: c.slug as string,
+    title: c.title,
+    description: c.description ?? "",
+    durationHours: c.durationHours,
+    imageUrl: c.imageUrl,
+    priceCents: c.priceCents,
+    listPriceCents: c.listPriceCents,
+    currency: c.currency,
+  };
+}
 
 const ORDINE_ISO = ["9001", "14001", "45001", "27001", "22000", "50001", "37001", "39001", "42001"];
 
@@ -36,13 +56,7 @@ export async function listAuditorVetrina(): Promise<VetrinaCourse[]> {
     .sort((a, b) =>
       rank(a.slug as string) - rank(b.slug as string) ||
       edizione(b.slug as string) - edizione(a.slug as string))
-    .map((c) => ({
-      slug: c.slug as string,
-      title: c.title,
-      description: c.description ?? "",
-      durationHours: c.durationHours,
-      imageUrl: c.imageUrl,
-    }));
+    .map(vetrina);
 }
 
 // Vetrina corsi Intelligenza Artificiale (Claude AI): operativo (base) prima, avanzato dopo.
@@ -51,13 +65,7 @@ export async function listAiVetrina(): Promise<VetrinaCourse[]> {
   return all
     .filter((c) => c.category === "ai" && !!c.slug)
     .sort((a, b) => (a.slug!.includes("operativo") ? 0 : 1) - (b.slug!.includes("operativo") ? 0 : 1))
-    .map((c) => ({
-      slug: c.slug as string,
-      title: c.title,
-      description: c.description ?? "",
-      durationHours: c.durationHours,
-      imageUrl: c.imageUrl,
-    }));
+    .map(vetrina);
 }
 
 // Vetrina percorsi manageriali 40h (ESG Manager, Energy Manager): non sono corsi auditor,
@@ -67,11 +75,5 @@ export async function listManagerialiVetrina(): Promise<VetrinaCourse[]> {
   return all
     .filter((c) => c.category === "manageriale" && !!c.slug)
     .sort((a, b) => (a.slug!.startsWith("esg") ? 0 : 1) - (b.slug!.startsWith("esg") ? 0 : 1))
-    .map((c) => ({
-      slug: c.slug as string,
-      title: c.title,
-      description: c.description ?? "",
-      durationHours: c.durationHours,
-      imageUrl: c.imageUrl,
-    }));
+    .map(vetrina);
 }

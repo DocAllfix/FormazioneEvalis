@@ -13,6 +13,10 @@ import {
 import SiteHeader from "@/components/landing/SiteHeader";
 import SiteFooter from "@/components/landing/SiteFooter";
 import ScrollReveal from "@/components/landing/ScrollReveal";
+import { PrezzoCorso, hasLaunchPrice } from "@/components/catalog/prezzo-corso";
+import { BundleStrip } from "@/components/catalog/bundle-strip";
+import { ScadenzaLancio } from "@/components/catalog/scadenza-lancio";
+import { registratiPer } from "@/lib/next-sicuro";
 
 const areas = [
   { id: "all", label: "Tutte" },
@@ -55,6 +59,11 @@ function CertCard({ card, index }) {
               <span className="font-heading text-2xl text-[#C03E08]/50">{card.badge}</span>
             </div>
           )}
+          {hasLaunchPrice(card) ? (
+            <span className="absolute right-3 top-3 rounded-full bg-primary px-2.5 py-1 text-[11px] font-semibold text-white shadow-sm">
+              Prezzo lancio
+            </span>
+          ) : null}
         </div>
       ) : null}
       <div className="flex flex-col flex-1 p-6">
@@ -68,7 +77,14 @@ function CertCard({ card, index }) {
         </div>
         <p className="text-xs text-[#766E66] mb-1">{card.areaLabel}</p>
         <h3 className="font-heading text-lg text-near-black group-hover:text-primary transition-colors duration-200">
-          {card.name}
+          {card.slug ? (
+            // link "esteso": copre tutta la card, così resta cliccabile per intero come prima
+            <Link href={`/catalogo/${card.slug}`} className="after:absolute after:inset-0 after:rounded-2xl">
+              {card.name}
+            </Link>
+          ) : (
+            card.name
+          )}
         </h3>
         <p className="mt-2 text-sm text-[#5C5347] leading-relaxed flex-1 line-clamp-3">
           {card.line}
@@ -89,27 +105,36 @@ function CertCard({ card, index }) {
             Certificato QR
           </span>
         </div>
+        {card.priceCents != null ? (
+          // prezzo cliccabile, sopra il link esteso: registrazione e poi dritti a questo corso
+          <Link
+            href={registratiPer(`/corsi/${card.id}`)}
+            className="relative z-10 mt-4 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-xl border border-[#EAE4DB] bg-[#FBF8F4] px-4 py-3 transition-colors duration-200 hover:border-primary hover:bg-[#FEF0EB]"
+          >
+            <PrezzoCorso c={card} size="sm" />
+            <span className="inline-flex items-center gap-1 text-sm font-medium text-primary">
+              Acquista <ArrowRight className="h-3.5 w-3.5" />
+            </span>
+          </Link>
+        ) : null}
       </div>
     </>
   );
 
   const shellClass =
-    "group flex flex-col bg-white border border-[#EAE4DB] rounded-2xl overflow-hidden text-left hover:-translate-y-[3px] hover:border-primary transition-all duration-200 hover:shadow-[0_12px_32px_rgba(26,18,9,0.12)] h-full";
+    "group relative flex flex-col bg-white border border-[#EAE4DB] rounded-2xl overflow-hidden text-left hover:-translate-y-[3px] hover:border-primary transition-all duration-200 hover:shadow-[0_12px_32px_rgba(26,18,9,0.12)] h-full";
 
   return (
     <ScrollReveal delay={Math.min(index * 0.04, 0.24)}>
-      {card.slug ? (
-        <Link href={`/catalogo/${card.slug}`} className={shellClass}>
-          {body}
-        </Link>
-      ) : (
-        <div className={shellClass} style={{ minHeight: "180px" }}>
-          {body}
-        </div>
-      )}
+      <div className={shellClass} style={card.slug ? undefined : { minHeight: "180px" }}>
+        {body}
+      </div>
     </ScrollReveal>
   );
 }
+
+// campi prezzo dal corso DB (VetrinaCourse): servono a mostrare il prezzo e a tornare al corso
+const prezzoDi = (c) => ({ id: c.id, priceCents: c.priceCents, listPriceCents: c.listPriceCents, currency: c.currency });
 
 // Badge di card dal corso DB: propedeutico / aggiornamento / sigla ISO.
 function badgeFor(course) {
@@ -119,10 +144,12 @@ function badgeFor(course) {
   return m ? `ISO ${m[0]}` : "Corso";
 }
 
-/** @param {{ auditorCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, aiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}>, managerialiCourses?: Array<{slug: string, title: string, description: string, durationHours: number|null, imageUrl: string|null}> }} props */
-export default function Catalogo({ auditorCourses = [], aiCourses = [], managerialiCourses = [] }) {
+/** @param {{ auditorCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], aiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], managerialiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], bundles?: import("@/features/catalog/queries").CatalogBundle[] }} props */
+export default function Catalogo({ auditorCourses = [], aiCourses = [], managerialiCourses = [], bundles = [] }) {
   const [activeArea, setActiveArea] = useState("all");
   const [query, setQuery] = useState("");
+  // la scadenza si mostra solo se c'è davvero almeno un corso a prezzo di lancio
+  const inLancio = [...auditorCourses, ...aiCourses, ...managerialiCourses].some(hasLaunchPrice);
 
   const allCerts = useMemo(() => {
     const dbCards = auditorCourses.map((c) => ({
@@ -134,6 +161,7 @@ export default function Catalogo({ auditorCourses = [], aiCourses = [], manageri
       slug: c.slug,
       imageUrl: c.imageUrl,
       hours: c.durationHours,
+      ...prezzoDi(c),
     }));
     const aiCards = aiCourses.map((c) => ({
       area: "ai",
@@ -144,6 +172,7 @@ export default function Catalogo({ auditorCourses = [], aiCourses = [], manageri
       slug: c.slug,
       imageUrl: c.imageUrl,
       hours: c.durationHours,
+      ...prezzoDi(c),
     }));
     const managerialiCards = managerialiCourses.map((c) => ({
       area: "manageriale",
@@ -154,6 +183,7 @@ export default function Catalogo({ auditorCourses = [], aiCourses = [], manageri
       slug: c.slug,
       imageUrl: c.imageUrl,
       hours: c.durationHours,
+      ...prezzoDi(c),
     }));
     return [...dbCards, ...aiCards, ...managerialiCards, ...staticCerts];
   }, [auditorCourses, aiCourses, managerialiCourses]);
@@ -203,6 +233,9 @@ export default function Catalogo({ auditorCourses = [], aiCourses = [], manageri
                 Preparazione online, esame e certificato verificabile con QR e
                 codice univoco.
               </p>
+              {inLancio ? (
+                <ScadenzaLancio className="mt-5 rounded-full bg-[#FEF0EB] px-3.5 py-1.5 text-sm font-medium text-[#C03E08]" />
+              ) : null}
             </ScrollReveal>
           </div>
         </section>
@@ -243,6 +276,11 @@ export default function Catalogo({ auditorCourses = [], aiCourses = [], manageri
         {/* Results */}
         <section className="w-full py-12 md:py-16 bg-background">
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+            {bundles.length > 0 ? (
+              <div className="mb-12">
+                <BundleStrip bundles={bundles} pubblico />
+              </div>
+            ) : null}
             <div className="flex items-center justify-between mb-6">
               <p className="text-sm text-[#766E66]">
                 {filtered.length}{" "}

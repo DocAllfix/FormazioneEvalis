@@ -9,6 +9,7 @@ import { iso19011Advisory } from "@/features/prerequisites/advisory";
 import { CourseDetailBody, hoursLabel } from "@/components/catalog/course-detail-body";
 import { euro } from "@/lib/formato";
 import { BuyButton } from "@/components/catalog/buy-button";
+import { PrezzoCorso } from "@/components/catalog/prezzo-corso";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -35,27 +36,12 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
     })(),
   ]);
   const d = c.details ?? {};
-  const launch = c.priceCents != null && c.listPriceCents != null && c.listPriceCents > c.priceCents;
   // pacchetti che includono questo corso (per i pick_one: anche come corso a scelta)
   const inBundles = bundles.filter((b) => b.courses.some((bc) => bc.id === c.id));
 
   const aside = (
     <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-      {c.priceCents == null ? (
-        <p className="font-heading text-3xl text-near-black">Su richiesta</p>
-      ) : (
-        <div>
-          {launch ? (
-            <p className="text-sm">
-              <span className="text-muted-foreground line-through">{euro(c.listPriceCents!, c.currency)}</span>
-              <span className="ml-2 rounded-full bg-primary px-2 py-0.5 text-[11px] font-semibold text-white">Prezzo lancio</span>
-            </p>
-          ) : null}
-          <p className="font-heading text-3xl text-near-black">
-            {euro(c.priceCents, c.currency)} <span className="text-sm font-normal text-muted-foreground">+ IVA</span>
-          </p>
-        </div>
-      )}
+      <PrezzoCorso c={c} size="lg" />
       {discountPct !== 0 && !enrollment ? (
         <p className="mt-2 inline-flex items-center gap-1.5 rounded-lg bg-success/10 px-3 py-2 text-sm font-medium text-success">
           <BadgePercent className="h-4 w-4" /> Sconto azienda −{discountPct}% applicato al pagamento

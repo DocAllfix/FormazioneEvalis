@@ -86,7 +86,7 @@ export async function preImpostaConsensoCookie(page: Page): Promise<void> {
  * resetta i campi compilati troppo presto (Nome/Email si svuotavano, Password no). `toPass`
  * ricompila e verifica finché il valore regge, cioè finché l'idratazione è completata.
  */
-async function fillStabile(campo: Locator, value: string): Promise<void> {
+export async function fillStabile(campo: Locator, value: string): Promise<void> {
   await expect(async () => {
     await campo.fill(value);
     await expect(campo).toHaveValue(value, { timeout: 1000 });
@@ -138,12 +138,12 @@ export async function seminaCorsoEIscrivi(email: string): Promise<{ enrollmentId
   }
 }
 
-/** Login via UI. Presuppone utente già esistente e verificato. */
-export async function login(page: Page, email: string, password = PASSWORD_TEST): Promise<void> {
+/** Login via UI. Presuppone utente già esistente e verificato. `next`: dove tornare dopo l'accesso. */
+export async function login(page: Page, email: string, password = PASSWORD_TEST, next?: string): Promise<void> {
   // In CI tutta la suite arriva da un solo IP: i limiti anti-abuso (10 accessi/5min,
   // 5 registrazioni/ora) si esaurirebbero a metà. Azzeriamo appena prima di consumarne uno.
   await resetRateLimitAuth();
-  await page.goto("/login");
+  await page.goto(next ? `/login?next=${encodeURIComponent(next)}` : "/login");
   await fillStabile(page.getByLabel("Email"), email);
   await fillStabile(page.getByLabel("Password", { exact: true }), password);
   await page.getByRole("button", { name: "Accedi" }).click();

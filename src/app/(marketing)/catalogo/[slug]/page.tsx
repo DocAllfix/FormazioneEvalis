@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BadgeCheck, ChevronRight, Clock, Layers, LogIn, Signal } from "lucide-react";
+import { BadgeCheck, ChevronRight, Clock, Layers, LogIn, ShoppingCart, Signal } from "lucide-react";
 import SiteHeader from "@/components/landing/SiteHeader";
 import SiteFooter from "@/components/landing/SiteFooter";
 import { getPublicCourseBySlug } from "@/features/catalog/queries";
 import { CourseDetailBody, hoursLabel } from "@/components/catalog/course-detail-body";
 import { JsonLd } from "@/components/seo/json-ld";
+import { PrezzoCorso } from "@/components/catalog/prezzo-corso";
+import { registratiPer } from "@/lib/next-sicuro";
 
 const APP = (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -23,7 +25,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-// Pagina PUBBLICA teaser (SEO): scheda corso SENZA prezzo né acquisto; CTA al login.
+// Pagina PUBBLICA (SEO): scheda corso con il PREZZO, come nell'area riservata. Il pulsante
+// porta alla registrazione e, a registrazione conclusa, alla scheda riservata di QUESTO corso,
+// dove c'è il pulsante d'acquisto vero (con l'avviso sul prerequisito 19011).
 export default async function CourseTeaserPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const c = await getPublicCourseBySlug(slug);
@@ -32,14 +36,30 @@ export default async function CourseTeaserPage({ params }: { params: Promise<{ s
 
   const aside = (
     <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-      <p className="font-heading text-lg text-near-black">Certificazione professionale</p>
-      <p className="mt-1 text-sm text-muted-foreground">Accedi per iscriverti al corso e sostenere l&apos;esame.</p>
-      <Link
-        href={`/login?next=${encodeURIComponent(`/corsi/${c.id}`)}`}
-        className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white transition hover:brightness-110"
-      >
-        <LogIn className="h-4 w-4" /> Accedi per iscriverti
-      </Link>
+      <PrezzoCorso c={c} size="lg" />
+      {c.purchasable ? (
+        <>
+          <Link
+            href={registratiPer(`/corsi/${c.id}`)}
+            className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white transition hover:brightness-110"
+          >
+            <ShoppingCart className="h-4 w-4" /> Acquista il corso
+          </Link>
+          <p className="mt-2 text-center text-xs text-muted-foreground">
+            Ti registri in un minuto e torni qui.{" "}
+            <Link href={`/login?next=${encodeURIComponent(`/corsi/${c.id}`)}`} className="text-primary hover:underline">
+              Hai già un account?
+            </Link>
+          </p>
+        </>
+      ) : (
+        <Link
+          href={`/login?next=${encodeURIComponent(`/corsi/${c.id}`)}`}
+          className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white transition hover:brightness-110"
+        >
+          <LogIn className="h-4 w-4" /> Accedi per iscriverti
+        </Link>
+      )}
       <ul className="mt-6 flex flex-col gap-3 border-t border-border pt-5 text-sm">
         <li className="flex items-center gap-2.5 text-foreground/80"><Clock className="h-4 w-4 text-primary" /> {hoursLabel(c)} di formazione</li>
         <li className="flex items-center gap-2.5 text-foreground/80"><Layers className="h-4 w-4 text-primary" /> {c.modules} moduli · {c.lessons} lezioni</li>

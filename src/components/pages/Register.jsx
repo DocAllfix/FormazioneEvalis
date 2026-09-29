@@ -8,7 +8,10 @@ import { Label } from "@/components/ui/label";
 import { UserPlus, User, Mail, Lock, Loader2 } from "lucide-react";
 import AuthLayout from "@/components/AuthLayout";
 
-export default function Register() {
+/** @param {{ next?: string | null }} props — percorso interno GIÀ validato dalla pagina server */
+export default function Register({ next = null }) {
+  // link "Accedi": chi ha già un account non deve perdere la destinazione
+  const loginHref = next ? `/login?next=${encodeURIComponent(next)}` : "/login";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,8 +29,12 @@ export default function Register() {
     }
     setLoading(true);
     // callbackURL: dove better-auth reindirizza DOPO il click sul link di verifica.
-    // /dashboard → il guard onboarding lo porta al bivio (/onboarding) al primo accesso.
-    const { error } = await signUp.email({ name, email, password, callbackURL: "/dashboard" });
+    // Senza destinazione: /dashboard → il guard onboarding lo porta al bivio al primo accesso.
+    // Con destinazione (es. il corso di cui ha cliccato il prezzo): dritto all'onboarding con
+    // `next`, perché un utente nuovo lo deve comunque fare, e il guard dell'area riservata
+    // intercetterebbe /corsi/<id> perdendo la destinazione. Alla fine del wizard torna lì.
+    const callbackURL = next ? `/onboarding?next=${encodeURIComponent(next)}` : "/dashboard";
+    const { error } = await signUp.email({ name, email, password, callbackURL });
     setLoading(false);
     if (error) {
       setError(error.message || "Registrazione non riuscita");
@@ -47,7 +54,7 @@ export default function Register() {
         footer={
           <>
             Hai già confermato?{" "}
-            <Link href="/login" className="text-primary font-medium hover:underline">
+            <Link href={loginHref} className="text-primary font-medium hover:underline">
               Accedi
             </Link>
           </>
@@ -58,6 +65,9 @@ export default function Register() {
             Abbiamo inviato un&apos;email di conferma a <strong className="text-near-black">{email}</strong>.
             Apri il link contenuto per attivare l&apos;account e accedere.
           </p>
+          {next ? (
+            <p>Dal link tornerai direttamente a ciò che avevi scelto, pronto per l&apos;acquisto.</p>
+          ) : null}
           <p>Non la trovi? Controlla nella cartella spam.</p>
         </div>
       </AuthLayout>
@@ -72,7 +82,7 @@ export default function Register() {
       footer={
         <>
           Hai già un account?{" "}
-          <Link href="/login" className="text-primary font-medium hover:underline">
+          <Link href={loginHref} className="text-primary font-medium hover:underline">
             Accedi
           </Link>
         </>

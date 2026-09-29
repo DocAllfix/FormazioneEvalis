@@ -83,12 +83,16 @@ export function OnboardingWizard({
   initialGoal,
   initialStep,
   initialIso19011,
+  destinazione,
 }: {
   persona: OnboardingPersona;
   companyName?: string;
   initialGoal: string | null;
   initialStep: number;
   initialIso19011: boolean | null;
+  /** Percorso interno già validato: dove tornare a fine wizard (es. il corso di cui l'utente
+   * ha cliccato il prezzo in landing). Vale sia per "fine" sia per "salta". */
+  destinazione?: string;
 }) {
   const router = useRouter();
   const [goal, setGoal] = useState<string | null>(initialGoal);
@@ -127,7 +131,7 @@ export function OnboardingWizard({
   function finish() {
     startTransition(async () => {
       await completeOnboardingAction();
-      go(destinationFor(persona));
+      go(destinazione ?? destinationFor(persona));
     });
   }
 
@@ -155,7 +159,7 @@ export function OnboardingWizard({
   function skip() {
     startTransition(async () => {
       await skipOnboardingAction();
-      go("/dashboard");
+      go(destinazione ?? "/dashboard");
     });
   }
 
