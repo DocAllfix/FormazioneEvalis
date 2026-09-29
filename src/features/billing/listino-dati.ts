@@ -4,6 +4,13 @@
 // Regola bundle (approvata dal cliente): stessa % di sconto dei bundle ufficiali,
 // ricalcolata sui prezzi di lancio (−10/−22/−17/−27/−30%).
 
+// FINE DEL PREZZO DI LANCIO: un solo valore, che guida sia la scadenza mostrata in pagina sia
+// la guardia di _fine-lancio.ts. Deve essere VERA: a questa data i prezzi salgono davvero al
+// listino (switch manuale, la mattina dopo). Un conto alla rovescia che si rimette a zero senza
+// che il prezzo cambi è una pratica sempre ingannevole (Codice del Consumo, art. 23 lett. g).
+// +01:00 perché l'ora legale finisce il 25/10/2026.
+export const FINE_LANCIO = "2026-10-31T23:59:59+01:00";
+
 export type CorsoListino = { slug: string; attivoCents: number; listinoCents: number };
 export type BundleListino = {
   slug: string;
