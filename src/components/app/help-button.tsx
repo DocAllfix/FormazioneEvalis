@@ -3,6 +3,11 @@
 // "?" globale (AppHeader): rilancia il tour della pagina corrente. Render condizionale:
 // se la pagina non ha un tour registrato, il bottone non appare. Inoltre, al PRIMO accesso
 // a una pagina con tour, lo avvia in automatico una volta (guard localStorage).
+//
+// Eccezione: se si arriva su un punto preciso della pagina (ancora nell'URL, es. il pacchetto
+// cliccato in landing, /corsi#pacchetto-qualita) il tour NON parte da solo: coprirebbe proprio
+// quello che l'utente è venuto a comprare. Non viene segnato come visto, quindi comparirà alla
+// visita successiva; e il "?" resta disponibile.
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -18,6 +23,7 @@ export function HelpButton() {
   useEffect(() => {
     if (!entry) return;
     if (isTourDone(entry.pageId)) return;
+    if (window.location.hash) return; // arrivato su un punto preciso: niente tour sopra
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
       markTourDone(entry.pageId);
       return;
