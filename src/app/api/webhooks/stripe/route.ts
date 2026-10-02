@@ -23,6 +23,7 @@ import {
   applySubscriptionState,
   revokeOrgSubscription,
 } from "@/features/billing/provisioning";
+import { inviaNotificaVendita } from "@/features/billing/notifica-vendita";
 
 export async function POST(req: Request) {
   const secret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -111,6 +112,15 @@ export async function POST(req: Request) {
     await release();
     console.error("[stripe webhook] handler error", e);
     return new Response("errore handler", { status: 500 });
+  }
+
+  // (5) NOTIFICA DI VENDITA al committente, coi dati per la fattura. DOPO il provisioning, così
+  // parte una volta sola (un retry di Stripe trova il claim e si ferma prima); best-effort, perché
+  // una mail non partita non deve far rifare l'attivazione. Solo live e solo dopo NOTIFICHE_DAL.
+  try {
+    await inviaNotificaVendita(event);
+  } catch (e) {
+    console.error(`[vendite] notifica non inviata per ${event.id}`, e);
   }
   return new Response("ok", { status: 200 });
 }

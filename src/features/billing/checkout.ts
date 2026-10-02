@@ -2,6 +2,7 @@
 // usa per il redirect. Protette dai guard esistenti. Nessuna logica di pagamento qui:
 // il pagamento vive su Stripe, la verità di stato arriva dal webhook.
 
+import type Stripe from "stripe";
 import { and, count, eq, inArray } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { course, enrollment, member, organization } from "@/lib/db/schema";
@@ -25,6 +26,22 @@ export const TAX_PARAMS = {
   tax_id_collection: { enabled: true },
   customer_update: { address: "auto", name: "auto" },
 } as const;
+
+// Dati per la fattura elettronica che Stripe non chiede da solo: codice fiscale (fattura a un
+// privato) e codice destinatario SDI o PEC (fattura a un'azienda). FACOLTATIVI di proposito:
+// Stripe non sa renderli obbligatori solo per i privati o solo per le aziende, e un campo
+// obbligatorio in più fa perdere acquisti. Arrivano nella sessione (`custom_fields`) e la
+// notifica di vendita li riporta al committente (notifica-vendita.ts).
+export const CAMPI_FATTURA: { custom_fields: Stripe.Checkout.SessionCreateParams.CustomField[] } = {
+  custom_fields: [
+    { key: "codicefiscale", label: { type: "custom", custom: "Codice fiscale (per la fattura)" }, type: "text", optional: true, text: { maximum_length: 16 } },
+    { key: "sdipec", label: { type: "custom", custom: "Codice SDI o PEC (per la fattura)" }, type: "text", optional: true, text: { maximum_length: 100 } },
+  ],
+};
+// Va nella chiave di idempotenza: per un'ora dopo il rilascio, chi aveva aperto il checkout
+// prima riceverebbe da Stripe un errore (stessa chiave, parametri diversi). Se cambiano i
+// campi, cambia questo valore.
+const VERSIONE_CAMPI = "fatt1";
 
 /**
  * Il destinatario ha GIÀ questo corso? Guardia anti-doppio-addebito.
@@ -114,13 +131,14 @@ export async function createCoursePurchaseCheckout(courseId: string, beneficiary
     // `discounts` è mutuamente esclusivo con allow_promotion_codes (che non usiamo)
     ...(percent !== 0 ? { discounts: [{ coupon: COMPANY_COUPONS[percent] }] } : {}),
     ...TAX_PARAMS,
+    ...CAMPI_FATTURA,
     // userId = destinatario dell'iscrizione (se stesso, o il dipendente per cui si compra)
     metadata: { kind: "course_purchase", userId: destinatarioId, courseId, orgId },
     success_url: `${appUrl()}${destinatarioId === user.id ? "/dashboard?purchase=success" : "/admin/persone?purchase=success"}`,
     cancel_url: `${appUrl()}${destinatarioId === user.id ? "/dashboard?purchase=cancel" : "/admin/persone?purchase=cancel"}`,
   }, {
     // include lo SCONTO: senza, un cambio di percentuale restituirebbe la sessione vecchia
-    idempotencyKey: chiaveIdempotenza(["corso", destinatarioId, courseId, percent]),
+    idempotencyKey: chiaveIdempotenza(["corso", destinatarioId, courseId, percent, VERSIONE_CAMPI]),
   });
   if (!session.url) throw new Error("URL checkout non disponibile.");
   return session.url;
@@ -153,6 +171,7 @@ export async function createBundlePurchaseCheckout(bundleId: string, chosenCours
     customer: customerId,
     line_items: [{ price: b.stripePriceId, quantity: 1 }],
     ...TAX_PARAMS,
+    ...CAMPI_FATTURA,
     metadata: {
       kind: "bundle_purchase",
       userId: user.id,
@@ -164,7 +183,7 @@ export async function createBundlePurchaseCheckout(bundleId: string, chosenCours
     cancel_url: `${appUrl()}/dashboard?purchase=cancel`,
   }, {
     // il corso a scelta cambia la composizione del pacchetto → deve entrare nella chiave
-    idempotencyKey: chiaveIdempotenza(["pacchetto", user.id, bundleId, chosenCourseId ?? "-"]),
+    idempotencyKey: chiaveIdempotenza(["pacchetto", user.id, bundleId, chosenCourseId ?? "-", VERSIONE_CAMPI]),
   });
   if (!session.url) throw new Error("URL checkout non disponibile.");
   return session.url;
