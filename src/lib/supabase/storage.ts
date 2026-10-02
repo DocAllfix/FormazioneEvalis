@@ -44,6 +44,27 @@ export async function signedCertificateUrl(path: string, ttlSeconds = 300): Prom
   return data.signedUrl;
 }
 
+/**
+ * Link di caricamento firmato per il certificato ACCREDITATO: il browser dello staff carica il
+ * PDF direttamente su Storage (niente limiti di dimensione delle server action né di Vercel).
+ * Il percorso lo decide sempre il server; il link vale 2 ore e non sovrascrive file esistenti.
+ */
+export async function linkCaricamentoCertificato(path: string): Promise<string> {
+  const c = storageClient();
+  await ensureBucket(c);
+  const { data, error } = await c.storage.from(BUCKET).createSignedUploadUrl(path);
+  if (error) throw error;
+  return data.signedUrl;
+}
+
+/** Bytes di un PDF del bucket certificati (null se il file non c'è). */
+export async function leggiCertificatoPdf(path: string): Promise<Uint8Array | null> {
+  const c = storageClient();
+  const { data, error } = await c.storage.from(BUCKET).download(path);
+  if (error || !data) return null;
+  return new Uint8Array(await data.arrayBuffer());
+}
+
 export async function deleteCertificatePdf(path: string): Promise<void> {
   const c = storageClient();
   await c.storage.from(BUCKET).remove([path]);

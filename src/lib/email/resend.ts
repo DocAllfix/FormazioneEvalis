@@ -131,6 +131,30 @@ export async function inviaAllarmeBlog(righe: string[]): Promise<{ sent: boolean
 }
 
 /**
+ * Invio con ALLEGATI (certificati in PDF). Best-effort come le altre: senza chiave, no-op.
+ * Resend accetta fino a 40 MB per messaggio; i certificati caricati sono limitati a 20 MB.
+ */
+export async function inviaEmailConAllegati(m: {
+  to: string;
+  subject: string;
+  html: string;
+  allegati: { nome: string; contenuto: Uint8Array }[];
+}): Promise<{ sent: boolean }> {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) return { sent: false };
+  const from = process.env.RESEND_FROM ?? "Evalis Academy <onboarding@resend.dev>";
+  const { error } = await new Resend(key).emails.send({
+    from,
+    to: m.to,
+    subject: m.subject,
+    html: m.html,
+    attachments: m.allegati.map((a) => ({ filename: a.nome, content: Buffer.from(a.contenuto) })),
+  });
+  if (error) throw new Error(`Resend: ${error.message}`);
+  return { sent: true };
+}
+
+/**
  * Invio generico per le notifiche dell'assistenza. A differenza delle altre, `to` può
  * contenere PIÙ indirizzi: gli amministratori possono essere più di uno e devono ricevere
  * tutti, non solo il primo. Best-effort come le altre: senza chiave, no-op silenzioso.

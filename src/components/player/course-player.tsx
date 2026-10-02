@@ -16,6 +16,7 @@ import {
 import { SlideStep } from "./slide-step";
 import { QuizStep } from "./quiz-step";
 import { requestMyCertificateAction } from "@/features/learner/server-actions";
+import { NOTA_PROVVISORIO } from "@/features/certificates/testi";
 
 type Slide = {
   id: string;
@@ -92,6 +93,8 @@ export function CoursePlayer({
     return i === -1 ? Math.max(0, steps.length - 1) : i;
   });
   const [courseDone, setCourseDone] = useState(false);
+  // certificato provvisorio nato a fine esame (null = requisiti non ancora tutti soddisfatti)
+  const [certId, setCertId] = useState<string | null>(null);
 
   // Indice nascosto di default (corso a tutto schermo) + fullscreen reale.
   const rootRef = useRef<HTMLDivElement | null>(null);
@@ -118,7 +121,8 @@ export function CoursePlayer({
       markDone(st.key);
       if (st.kind === "quiz" && st.quiz.type === "final") {
         // esame superato → predisposizione certificato (server: solo se a norma)
-        await requestMyCertificateAction(enrollmentId).catch(() => {});
+        const rec = await requestMyCertificateAction(enrollmentId).catch(() => null);
+        setCertId(rec?.id ?? null);
         setCourseDone(true);
       }
     },
@@ -177,14 +181,40 @@ export function CoursePlayer({
                   <Award className="h-8 w-8" />
                 </span>
                 <h1 className="mt-5 font-heading text-3xl text-near-black">Corso completato</h1>
-                <p className="mt-2 max-w-sm text-muted-foreground">
-                  Hai superato l&apos;esame finale. Il certificato è ora in revisione: lo riceverai
-                  dopo l&apos;approvazione dello staff.
-                </p>
-                <div className="mt-6 flex gap-3">
+                {certId ? (
+                  <>
+                    <p className="mt-2 max-w-md text-muted-foreground">
+                      Hai superato l&apos;esame finale. Il tuo certificato provvisorio è pronto e te
+                      l&apos;abbiamo inviato anche via email.
+                    </p>
+                    <p className="mt-3 max-w-md rounded-lg bg-primary/5 px-4 py-3 text-sm text-foreground/80">
+                      {NOTA_PROVVISORIO}
+                    </p>
+                  </>
+                ) : (
+                  <p className="mt-2 max-w-md text-muted-foreground">
+                    Hai superato l&apos;esame finale. Il certificato compare nella pagina Certificati appena
+                    risultano soddisfatti tutti i requisiti del corso, compreso il tempo minimo di fruizione.
+                  </p>
+                )}
+                <div className="mt-6 flex flex-wrap justify-center gap-3">
+                  {certId ? (
+                    <a
+                      href={`/api/certificato/${certId}`}
+                      target="_blank"
+                      rel="noopener"
+                      className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:brightness-110"
+                    >
+                      Scarica il certificato provvisorio
+                    </a>
+                  ) : null}
                   <Link
                     href="/certificati"
-                    className="inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:brightness-110"
+                    className={
+                      certId
+                        ? "inline-flex items-center rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-near-black transition hover:bg-secondary"
+                        : "inline-flex items-center rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:brightness-110"
+                    }
                   >
                     Vai ai certificati
                   </Link>

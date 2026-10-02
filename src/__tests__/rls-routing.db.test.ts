@@ -4,7 +4,13 @@
 // Prova: (a) la pipeline discente+staff funziona con il ctx corretto; (b) il cross-tenant è
 // NEGATO davvero (un altro utente non vede/usa l'enrollment altrui).
 
-import { describe, it, expect, afterAll } from "vitest";
+import { describe, it, expect, afterAll, vi } from "vitest";
+
+// le mail del certificato provvisorio non partono durante i test
+vi.mock("@/lib/email/resend", async (orig) => ({
+  ...(await orig<typeof import("@/lib/email/resend")>()),
+  inviaEmailConAllegati: vi.fn(async () => ({ sent: true })),
+}));
 import { and, asc, eq, inArray, sql } from "drizzle-orm";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
@@ -17,8 +23,8 @@ import { sampleCourse } from "@/features/courses/seed";
 import { recordHeartbeat } from "@/features/tracking/progress";
 import { startQuiz, submitQuiz } from "@/features/quiz/engine";
 import { getCourseForPlayer } from "@/features/courses/get-course-for-player";
-import { ensureCertificateRecord, approveCertificateById, getCertificateByVerifyUuid } from "@/features/certificates/lifecycle";
-import { isStorageConfigured, deleteCertificatePdf } from "@/lib/supabase/storage";
+import { ensureCertificateRecord, getCertificatoPerChiave, certificatoPerDownload } from "@/features/certificates/lifecycle";
+import { deleteCertificatePdf } from "@/lib/supabase/storage";
 
 const FORCED = process.env.RLS_FORCE_ROLE === "app_rls";
 const RUN = Date.now();
@@ -97,7 +103,7 @@ describe.skipIf(!FORCED)("RLS routing end-to-end (ruolo app_rls forzato)", () =>
     await expect(getCourseForPlayer(eA.id, { userId: B.uid })).rejects.toThrow();
   }, 60000);
 
-  it("pipeline discente + emissione staff + verifica pubblica sotto RLS", async () => {
+  it("pipeline discente + certificato provvisorio + verifica pubblica sotto RLS", async () => {
     const { courseId } = await ingestCourse(sampleCourse());
     courseIds.push(courseId);
     const C = await mkLearner("C");
@@ -111,17 +117,19 @@ describe.skipIf(!FORCED)("RLS routing end-to-end (ruolo app_rls forzato)", () =>
     const rec = await ensureCertificateRecord(eC.id, { userId: C.uid });
     expect(rec?.status).toBe("ready_for_review");
 
-    if (!isStorageConfigured()) return;
+    expect(rec?.number).toMatch(/^EVALIS-/);
 
-    // emissione staff (valvola platformAdmin)
-    const approved = await approveCertificateById(rec!.id, C.uid, { platformAdmin: true });
-    expect(approved.status).toBe("issued");
-    const [cc] = await db.select({ verifyUuid: certificate.verifyUuid, pdfPath: certificate.pdfPath }).from(certificate).where(eq(certificate.id, rec!.id));
-    if (cc.pdfPath) uploadedPaths.push(cc.pdfPath);
+    // il provvisorio: lo scarica il proprietario (sotto RLS), non un altro utente
+    const D = await mkLearner("D");
+    expect((await certificatoPerDownload(rec!.id, { userId: C.uid, staff: false }))?.tipo).toBe("provvisorio");
+    expect(await certificatoPerDownload(rec!.id, { userId: D.uid, staff: false })).toBeNull();
 
-    // verifica pubblica (funzione SECURITY DEFINER) → valida
-    const v = await getCertificateByVerifyUuid(cc.verifyUuid);
-    expect(v?.valid).toBe(true);
-    expect(v?.learnerName).toBe("C");
+    // verifica pubblica (funzione SECURITY DEFINER), per QR e per numero
+    const [cc] = await db.select({ verifyUuid: certificate.verifyUuid }).from(certificate).where(eq(certificate.id, rec!.id));
+    for (const chiave of [cc.verifyUuid, rec!.number!]) {
+      const v = await getCertificatoPerChiave(chiave);
+      expect(v?.provvisorio).toBe(true);
+      expect(v?.learnerName).toBe("C");
+    }
   }, 90000);
 });

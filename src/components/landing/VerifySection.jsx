@@ -38,7 +38,7 @@ export default function VerifySection() {
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
                 aria-label="Codice del certificato"
-                placeholder="Es. EV-2026-9001-0142"
+                placeholder="Es. EVALIS-2026-1A2B3C4D"
                 className="flex-1 h-12 bg-white border border-[#EAE4DB] rounded-lg px-4 text-base text-near-black placeholder:text-[#766E66] focus:border-primary focus:outline-none transition-colors"
               />
               <button
@@ -76,8 +76,7 @@ function VerifyResultPreview() {
         <ResultRow label="Titolare" value="Marco Rossi" />
         <ResultRow label="Certificazione" value="ISO 9001 Qualità" />
         <ResultRow label="Emesso il" value="15/03/2026" />
-        <ResultRow label="Scadenza" value="15/03/2029" />
-        <ResultRow label="Codice" value="EV-2026-9001-0142" mono />
+        <ResultRow label="Numero" value="EVALIS-2026-1A2B3C4D" mono />
       </div>
     </div>
   );

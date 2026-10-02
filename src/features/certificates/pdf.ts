@@ -3,6 +3,7 @@
 
 import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
 import QRCode from "qrcode";
+import { RIGA_PROVVISORIO_1, RIGA_PROVVISORIO_2 } from "./testi";
 
 export interface CertificateData {
   learnerName: string;
@@ -10,6 +11,9 @@ export interface CertificateData {
   issuedAt: Date;
   number: string;
   verifyUrl: string;
+  /** Attestato PROVVISORIO di fine corso: lo dice nel titolo e in una fascia, e `issuedAt` è la
+   * data di completamento. Il certificato vero è l'accreditato caricato dallo staff. */
+  provvisorio?: boolean;
 }
 
 export async function buildCertificatePdf(d: CertificateData): Promise<Uint8Array> {
@@ -35,13 +39,20 @@ export async function buildCertificatePdf(d: CertificateData): Promise<Uint8Arra
     borderWidth: 2,
   });
 
-  center("ATTESTATO DI COMPLETAMENTO", height - 110, 26, bold);
+  center(d.provvisorio ? "ATTESTATO DI COMPLETAMENTO PROVVISORIO" : "ATTESTATO DI COMPLETAMENTO", height - 110, d.provvisorio ? 22 : 26, bold);
   center("Si certifica che", height - 170, 14);
   center(d.learnerName, height - 215, 30, bold);
   center("ha completato con successo il corso", height - 260, 14);
   center(d.courseTitle, height - 300, 20, bold);
-  center(`Data di emissione: ${d.issuedAt.toLocaleDateString("it-IT")}`, height - 345, 12);
+  center(`${d.provvisorio ? "Data di completamento" : "Data di emissione"}: ${d.issuedAt.toLocaleDateString("it-IT", { timeZone: "Europe/Rome" })}`, height - 345, 12);
   center(`Numero attestato: ${d.number}`, height - 365, 12);
+
+  if (d.provvisorio) {
+    // fascia: deve essere impossibile scambiarlo per il certificato accreditato
+    page.drawRectangle({ x: 60, y: 180, width: width - 120, height: 44, color: rgb(1, 0.95, 0.88), borderColor: rgb(0.92, 0.35, 0.05), borderWidth: 1 });
+    center(RIGA_PROVVISORIO_1, 205, 11, bold);
+    center(RIGA_PROVVISORIO_2, 189, 10);
+  }
 
   // QR verso la pagina di verifica pubblica
   const qrDataUrl = await QRCode.toDataURL(d.verifyUrl, { margin: 1, width: 140 });
