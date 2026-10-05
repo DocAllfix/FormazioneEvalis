@@ -36,7 +36,29 @@ const ICONE = {
       ${ingranaggio(150, 150, 104, 10, C.arancio)}
       ${frecciaCircolare(252, 252, 80)}`,
   },
+  // bilancia in equilibrio + coccarda: la certificazione della parità di genere (UNI/PdR 125)
+  parita: {
+    centro: [170, 190], scala: 1.62,
+    disegna: () => `
+      ${bilancia(150, 150, 120)}
+      ${coccarda(262, 248, 62)}`,
+  },
 };
+
+function bilancia(cx, cy, r) {
+  const t = C.arancio, sp = r * 0.11;
+  const piatto = (x) => `
+    <line x1="${x}" y1="${cy - r * 0.62}" x2="${x - r * 0.30}" y2="${cy + r * 0.12}" stroke="${C.arancioScuro}" stroke-width="${sp * 0.38}" stroke-linecap="round"/>
+    <line x1="${x}" y1="${cy - r * 0.62}" x2="${x + r * 0.30}" y2="${cy + r * 0.12}" stroke="${C.arancioScuro}" stroke-width="${sp * 0.38}" stroke-linecap="round"/>
+    <path d="M${x - r * 0.40},${cy + r * 0.12} A${r * 0.40},${r * 0.26} 0 0 0 ${x + r * 0.40},${cy + r * 0.12} Z" fill="${C.arancioCaldo}"/>`;
+  return `<g filter="url(#rilievo)">
+    <rect x="${cx - sp / 2}" y="${cy - r * 0.70}" width="${sp}" height="${r * 1.55}" rx="${sp / 2}" fill="${t}"/>
+    <path d="M${cx - r * 0.42},${cy + r * 0.98} L${cx + r * 0.42},${cy + r * 0.98} L${cx + r * 0.24},${cy + r * 0.78} L${cx - r * 0.24},${cy + r * 0.78} Z" fill="${C.arancioScuro}"/>
+    <rect x="${cx - r * 0.86}" y="${cy - r * 0.68}" width="${r * 1.72}" height="${sp * 0.9}" rx="${sp * 0.45}" fill="${t}"/>
+    <circle cx="${cx}" cy="${cy - r * 0.66}" r="${sp * 0.95}" fill="${C.arancioCaldo}" stroke="${t}" stroke-width="${sp * 0.3}"/>
+    ${piatto(cx - r * 0.78)}${piatto(cx + r * 0.78)}
+  </g>`;
+}
 
 function ingranaggio(cx, cy, r, denti, tinta) {
   const rTesta = r, rPiede = r * 0.80, rForo = r * 0.40;
@@ -141,6 +163,7 @@ function svg(icona, posa) {
 const CORSI = {
   "9001v26": ICONE.qualita,
   agg9001: ICONE.aggiornamento,
+  fadpdr125: ICONE.parita,
 };
 
 const DISCO = { x: 790, y: 478 };

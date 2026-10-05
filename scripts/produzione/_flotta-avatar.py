@@ -10,6 +10,7 @@ Uso:
   python _flotta-avatar.py <corso> --pilota <id-slide> --dir <cartella>      1 pod, una clip
   python _flotta-avatar.py <corso> --pod N --shard N --dir <cartella>        flotta, N pod
   python _flotta-avatar.py <corso> --pod N --shard N --dir <cartella> --prova  solo offerte
+  python _flotta-avatar.py <corso> --shard N --solo-shard K --dir <cartella>  1 pod sullo shard K
 """
 import argparse, json, os, subprocess, sys, time
 from pathlib import Path
@@ -23,7 +24,7 @@ QUERY = ("gpu_name=RTX_4090 num_gpus=1 verified=true reliability2>=0.995 cpu_cor
 ap = argparse.ArgumentParser()
 ap.add_argument("corso"); ap.add_argument("--pilota"); ap.add_argument("--pod", type=int, default=1)
 ap.add_argument("--shard", type=int, default=1); ap.add_argument("--dir", required=True)
-ap.add_argument("--prova", action="store_true"); ap.add_argument("--max-prezzo", type=float, default=0.60)
+ap.add_argument("--prova", action="store_true"); ap.add_argument("--solo-shard", type=int); ap.add_argument("--max-prezzo", type=float, default=0.60)
 a = ap.parse_args()
 out = Path(a.dir); out.mkdir(parents=True, exist_ok=True)
 
@@ -98,14 +99,14 @@ for o in offerte:
     if o["machine_id"] in viste or o["machine_id"] in blacklist or o["dph_total"] > a.max_prezzo:
         continue
     viste.add(o["machine_id"]); scelte.append(o)
-n = 1 if a.pilota else a.pod
+n = 1 if a.pilota or a.solo_shard is not None else a.pod
 print(f"offerte valide: {len(scelte)} (servono {n}) · prezzi {[round(o['dph_total'],3) for o in scelte[:n]]}")
 if a.prova or len(scelte) < n:
     sys.exit(0 if a.prova else "offerte insufficienti")
 
 mappa = {}
 for i, o in enumerate(scelte[:n]):
-    shard = 0 if a.pilota else i
+    shard = 0 if a.pilota else (a.solo_shard if a.solo_shard is not None else i)
     f = onstart(shard, 1 if a.pilota else a.shard)
     r = vast("create", "instance", str(o["id"]), "--image", IMMAGINE, "--disk", "90", "--onstart", str(f), "--raw")
     try:
