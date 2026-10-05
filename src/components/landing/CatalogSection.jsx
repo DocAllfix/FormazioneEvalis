@@ -166,7 +166,7 @@ export default function CatalogSection({ auditorCourses = [], aiCourses = [], ma
   }));
   const dbManagerialiCards = managerialiCourses.map((c) => ({
     name: c.title.split("—")[0].trim(),
-    badge: c.slug.startsWith("esg") ? "UNI/PdR 109.1" : "EGE",
+    badge: c.slug.startsWith("esg") ? "UNI/PdR 109.1" : c.slug.startsWith("parita") ? "UNI/PdR 125" : "EGE",
     line: c.description,
     slug: c.slug,
     ...prezzoDi(c),

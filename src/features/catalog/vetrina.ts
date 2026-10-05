@@ -68,12 +68,13 @@ export async function listAiVetrina(): Promise<VetrinaCourse[]> {
     .map(vetrina);
 }
 
-// Vetrina percorsi manageriali 40h (ESG Manager, Energy Manager): non sono corsi auditor,
-// hanno una loro area nel catalogo. Ordine: ESG prima, Energy dopo (come da listino).
+// Vetrina percorsi manageriali (ESG Manager, Energy Manager, Parità di genere): non sono corsi
+// auditor, hanno una loro area nel catalogo. Ordine: ESG, Energy, poi gli altri (come da listino).
+const ordineManageriale = (slug: string) => (slug.startsWith("esg") ? 0 : slug.startsWith("energy") ? 1 : 2);
 export async function listManagerialiVetrina(): Promise<VetrinaCourse[]> {
   const all = await listPublishedCourses();
   return all
     .filter((c) => c.category === "manageriale" && !!c.slug)
-    .sort((a, b) => (a.slug!.startsWith("esg") ? 0 : 1) - (b.slug!.startsWith("esg") ? 0 : 1))
+    .sort((a, b) => ordineManageriale(a.slug!) - ordineManageriale(b.slug!))
     .map(vetrina);
 }
