@@ -8,6 +8,8 @@ import { bundle, bundleCourse, course, enrollment, lesson, module as courseModul
 import type { CourseDetails } from "@/features/courses/course-details";
 import { withTenant } from "@/lib/db/tenant";
 
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
 export type CatalogCourse = {
   id: string;
   slug: string | null;
@@ -89,6 +91,9 @@ export type PublicCourse = CatalogCourse & {
 
 /** Dettaglio pubblico di un corso pubblicato + conteggi struttura. Null se inesistente. */
 async function _getPublicCourse(courseId: string): Promise<PublicCourse | null> {
+  // l'id arriva dall'URL (/corsi/[id]): uno slug o altro testo farebbe fallire il cast a uuid
+  // in Postgres (errore 500); dev'essere "non trovato" come un id inesistente.
+  if (!UUID_RE.test(courseId)) return null;
   const [c] = await db
     .select({
       id: course.id,

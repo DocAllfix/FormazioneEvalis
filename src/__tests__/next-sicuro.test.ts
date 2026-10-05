@@ -5,7 +5,7 @@
 import { describe, it, expect } from "vitest";
 import { pathInterno, registratiPer } from "../lib/next-sicuro";
 import { hasLaunchPrice } from "../components/catalog/prezzo-corso";
-import { FINE_LANCIO } from "../features/billing/listino-dati";
+import { fineLancio } from "../features/billing/listino-dati";
 
 describe("pathInterno — accetta i percorsi interni", () => {
   it.each([
@@ -57,11 +57,15 @@ describe("hasLaunchPrice", () => {
   });
 });
 
-describe("FINE_LANCIO", () => {
-  it("è una data valida: 31 ottobre 2026, fine giornata a Roma", () => {
-    const t = Date.parse(FINE_LANCIO);
-    expect(Number.isNaN(t)).toBe(false);
-    // 23:59:59 ora di Roma (CET, +01:00) = 22:59:59 UTC
-    expect(new Date(t).toISOString()).toBe("2026-10-31T22:59:59.000Z");
+describe("fineLancio", () => {
+  const iso = (t: number) => new Date(t).toISOString();
+  it("rinnova l'offerta all'ultimo giorno del mese in corso, 23:59:59 ora di Roma", () => {
+    // ottobre: il 31 l'ora legale è già finita (CET, +01:00)
+    expect(iso(fineLancio(Date.parse("2026-10-05T12:00:00Z")))).toBe("2026-10-31T22:59:59.000Z");
+    // passata la scadenza riparte sul mese dopo: novembre ha 30 giorni
+    expect(iso(fineLancio(Date.parse("2026-10-31T23:00:00Z")))).toBe("2026-11-30T22:59:59.000Z");
+    expect(iso(fineLancio(Date.parse("2027-02-10T08:00:00Z")))).toBe("2027-02-28T22:59:59.000Z");
+    // marzo: a fine mese è ora legale (CEST, +02:00)
+    expect(iso(fineLancio(Date.parse("2027-03-15T08:00:00Z")))).toBe("2027-03-31T21:59:59.000Z");
   });
 });

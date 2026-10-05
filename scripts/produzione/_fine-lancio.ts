@@ -8,7 +8,7 @@
 //   --prod      agisce sul database di PRODUZIONE (PROD_DATABASE_URL)
 //   --live-ok   guardia: obbligatoria quando la chiave Stripe è LIVE
 //   --prova     elenca che cosa cambierebbe, senza toccare né Stripe né il database
-//   --anticipa  consente lo switch prima di FINE_LANCIO
+//   --anticipa  obbligatorio: il lancio si rinnova ogni mese (fineLancio), chiuderlo è una scelta esplicita
 //   --confirm   obbligatorio per scrivere
 //
 // ⚠️ PERCHÉ --prod CONTA: senza, il client db legge DATABASE_URL, che in locale è il database di
@@ -34,7 +34,7 @@ const { eq } = await import("drizzle-orm");
 const { db } = await import("@/lib/db");
 const { course, bundle } = await import("@/lib/db/schema");
 const { getStripe } = await import("@/lib/stripe/client");
-const { CORSI, BUNDLES, FINE_LANCIO } = await import("./_listino-dati");
+const { CORSI, BUNDLES, fineLancio } = await import("./_listino-dati");
 
 const key = process.env.STRIPE_SECRET_KEY ?? "";
 const mode = key.startsWith("sk_live_") ? "LIVE" : "TEST";
@@ -54,8 +54,10 @@ if (!prova) {
     console.error("Chiave LIVE senza --prod: aggiornerei il database di SVILUPPO lasciando la produzione su prezzi disattivati. Fermo.");
     process.exit(1);
   }
-  if (Date.now() < Date.parse(FINE_LANCIO) && !args.includes("--anticipa")) {
-    console.error(`Il prezzo di lancio scade il ${FINE_LANCIO}: prima di allora serve --anticipa.`);
+  // il lancio è a rotazione mensile (listino-dati.ts): la scadenza è sempre nel futuro, quindi
+  // chiudere davvero il lancio richiede SEMPRE la scelta esplicita --anticipa
+  if (Date.now() < fineLancio() && !args.includes("--anticipa")) {
+    console.error(`Il prezzo di lancio si rinnova a fine mese (${new Date(fineLancio()).toISOString()}): per chiuderlo davvero serve --anticipa.`);
     process.exit(1);
   }
 }

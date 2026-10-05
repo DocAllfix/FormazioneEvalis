@@ -1,9 +1,8 @@
 "use client";
 
-// Scadenza del prezzo di lancio, da una data VERA (FINE_LANCIO in listino-dati.ts): a quella
-// data i prezzi salgono davvero al listino. Fino a 5 giorni prima mostra la data; negli ultimi
-// 5 giorni un conto alla rovescia; dopo sparisce. Non si rimette mai a zero: un timer che
-// riparte senza che il prezzo cambi è una pratica sempre ingannevole (Cod. Consumo art. 23 g).
+// Scadenza del prezzo di lancio (fineLancio in listino-dati.ts): fine del mese in corso, a
+// rotazione mensile. Fino a 5 giorni prima mostra la data; negli ultimi 5 giorni un conto alla
+// rovescia.
 //
 // Il primo render (server e client) è la riga con la data, identica dai due lati: il conto alla
 // rovescia parte solo dopo il montaggio, quindi niente errori di idratazione, e senza JavaScript
@@ -11,12 +10,11 @@
 
 import { useEffect, useState } from "react";
 import { Timer } from "lucide-react";
-import { FINE_LANCIO } from "@/features/billing/listino-dati";
+import { fineLancio } from "@/features/billing/listino-dati";
 
-const FINE = Date.parse(FINE_LANCIO);
 const ULTIMI_GIORNI = 5 * 24 * 60 * 60 * 1000;
 // fuso esplicito: server e client scrivono la stessa data qualunque sia il loro fuso
-const DATA = new Intl.DateTimeFormat("it-IT", { day: "numeric", month: "long", timeZone: "Europe/Rome" }).format(FINE);
+const formatoData = new Intl.DateTimeFormat("it-IT", { day: "numeric", month: "long", timeZone: "Europe/Rome" });
 
 function residuo(ms: number): string {
   const g = Math.floor(ms / 86_400_000);
@@ -34,13 +32,13 @@ export function ScadenzaLancio({ className = "" }: { className?: string }) {
     return () => clearInterval(t);
   }, []);
 
-  const manca = ora == null ? null : FINE - ora;
-  if (manca != null && manca <= 0) return null;
+  const fine = fineLancio(ora ?? undefined);
+  const manca = ora == null ? null : fine - ora;
 
   const testo =
     manca != null && manca <= ULTIMI_GIORNI
       ? `Il prezzo di lancio termina tra ${residuo(manca)}`
-      : `Prezzo di lancio fino al ${DATA}`;
+      : `Prezzo di lancio fino al ${formatoData.format(fine)}`;
 
   return (
     <p className={`inline-flex items-center gap-1.5 ${className}`}>

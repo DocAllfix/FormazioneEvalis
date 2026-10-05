@@ -4,12 +4,28 @@
 // Regola bundle (approvata dal cliente): stessa % di sconto dei bundle ufficiali,
 // ricalcolata sui prezzi di lancio (−10/−22/−17/−27/−30%).
 
-// FINE DEL PREZZO DI LANCIO: un solo valore, che guida sia la scadenza mostrata in pagina sia
-// la guardia di _fine-lancio.ts. Deve essere VERA: a questa data i prezzi salgono davvero al
-// listino (switch manuale, la mattina dopo). Un conto alla rovescia che si rimette a zero senza
-// che il prezzo cambi è una pratica sempre ingannevole (Codice del Consumo, art. 23 lett. g).
-// +01:00 perché l'ora legale finisce il 25/10/2026.
-export const FINE_LANCIO = "2026-10-31T23:59:59+01:00";
+// FINE DEL PREZZO DI LANCIO: A ROTAZIONE MENSILE (scelta commerciale dell'utente, 05/10/2026).
+// L'offerta vale fino all'ultimo giorno del mese in corso alle 23:59:59 ora di Roma, poi riparte
+// sul mese successivo: i prezzi NON salgono. La stessa funzione guida la scadenza in pagina e la
+// guardia di _fine-lancio.ts (che quindi gira solo con --anticipa, se un giorno si decide di
+// chiudere davvero il lancio).
+export function fineLancio(ora: number = Date.now()): number {
+  const parti = (t: number) => {
+    const p = Object.fromEntries(
+      new Intl.DateTimeFormat("en-US", {
+        timeZone: "Europe/Rome", hourCycle: "h23",
+        year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric",
+      }).formatToParts(t).map((x) => [x.type, Number(x.value)]),
+    );
+    return p as Record<string, number>;
+  };
+  const { year, month } = parti(ora);
+  // ultimo secondo del mese come se Roma fosse UTC, poi si toglie lo scarto reale di Roma in quell'istante
+  const comeUtc = Date.UTC(year, month, 1) - 1000;
+  const r = parti(comeUtc);
+  const scarto = Date.UTC(r.year, r.month - 1, r.day, r.hour, r.minute, r.second) - comeUtc;
+  return comeUtc - scarto;
+}
 
 export type CorsoListino = { slug: string; attivoCents: number; listinoCents: number };
 export type BundleListino = {
