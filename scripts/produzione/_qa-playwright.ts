@@ -32,6 +32,7 @@ const COURSES: Record<string, string> = {
   fadai02: "ea0b7664-bfe8-4b90-99b7-863c7c627b4b",
   fadesg02: "b3568ab6-b6da-4024-bd50-58618b45720b",
   fadeen02: "7f7ea6ce-328b-45c8-a962-81c5c57dd05c",
+  fadpdr125: "ebd7649c-a40f-4ead-9db1-9ebd87fa0032",
 };
 
 async function slidesOf(courseId: string) {

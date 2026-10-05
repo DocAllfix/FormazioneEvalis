@@ -41,6 +41,7 @@ const S = {
   fadai02: "corso-claude-ai-avanzato-fad-ai-02-avanzato-24h",
   fadesg02: "esg-manager-uni-pdr-109-1",
   fadeen02: "energy-manager-esperto-in-gestione-dell-energia",
+  fadpdr125: "parita-di-genere-uni-pdr-125-2022",
 } as const;
 
 export const CORSI: CorsoListino[] = [
@@ -65,6 +66,8 @@ export const CORSI: CorsoListino[] = [
   // percorsi manageriali 40h (approvati 02/08): stesso prezzo per entrambi
   { slug: S.fadesg02, attivoCents: 35000, listinoCents: 45000 },
   { slug: S.fadeen02, attivoCents: 35000, listinoCents: 45000 },
+  // parità di genere UNI/PdR 125 (8h, 05/10): 300 € con 549 € barrato
+  { slug: S.fadpdr125, attivoCents: 30000, listinoCents: 54900 },
 ];
 
 // Nei pacchetti entra l'EDIZIONE CORRENTE di ogni norma: dalla 9001 è la 2026. La 2015 resta
