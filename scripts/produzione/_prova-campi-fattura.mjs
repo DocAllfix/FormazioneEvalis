@@ -15,9 +15,10 @@ const OUT = "produzione/_qa-playwright/_landing";
 
 // stessi parametri di src/features/billing/checkout.ts (TAX_PARAMS + CAMPI_FATTURA)
 const CAMPI = [
-  { key: "codicefiscale", label: { type: "custom", custom: "Codice fiscale (per la fattura)" }, type: "text", optional: true, text: { maximum_length: 16 } },
-  { key: "sdipec", label: { type: "custom", custom: "Codice SDI o PEC (per la fattura)" }, type: "text", optional: true, text: { maximum_length: 100 } },
+  { key: "sdipec", label: { type: "custom", custom: "Codice SDI o PEC (privati: 0000000)" }, type: "text", optional: false, text: { minimum_length: 6, maximum_length: 100 } },
+  { key: "codicefiscale", label: { type: "custom", custom: "Codice fiscale (solo se vuoi la fattura)" }, type: "text", optional: true, text: { maximum_length: 16 } },
 ];
+const NOTA = { submit: { message: "Codice SDI o PEC: le aziende indicano il proprio codice destinatario o la PEC. I privati che non li hanno, o che non hanno bisogno della fattura, scrivono 0000000 (sette zeri). Il codice fiscale serve solo ai privati che vogliono la fattura." } };
 const cliente = await stripe.customers.create({ email: `fattura+${Date.now()}@evalis.test`, name: "Prova Fattura" });
 const s = await stripe.checkout.sessions.create({
   mode: "payment",
@@ -28,6 +29,7 @@ const s = await stripe.checkout.sessions.create({
   tax_id_collection: { enabled: true },
   customer_update: { address: "auto", name: "auto" },
   custom_fields: CAMPI,
+  custom_text: NOTA,
   locale: "it",
   metadata: { kind: "course_purchase", userId: "prova", courseId: "prova", orgId: "prova" },
   success_url: "https://example.com/ok",
@@ -44,8 +46,7 @@ console.log(`OK  pagina aperta, screenshot in ${OUT}/checkout-campi-fattura.png`
 
 // compilazione e pagamento con la carta di prova
 try {
-  await p.locator("#codicefiscale, [name=codicefiscale]").first().fill("RSSMRA80A01H501U");
-  await p.locator("#sdipec, [name=sdipec]").first().fill("M5UXCR1");
+  await p.locator("#sdipec, [name=sdipec]").first().fill("0000000"); // privato: sette zeri, niente CF
   await p.locator("[data-testid=card-accordion-item]").click(); // i campi carta compaiono dopo la scelta
   await p.locator("#cardNumber").waitFor({ timeout: 30000 });
   const card = p.locator("#cardNumber");

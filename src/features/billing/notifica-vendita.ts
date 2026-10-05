@@ -112,7 +112,7 @@ export function mailVendita(d: DatiVendita, prodotto: string): { subject: string
         riga("Nome", d.nome),
         riga("Partita IVA", d.partiteIva.join(", ") || null),
         riga("Codice fiscale", d.codiceFiscale),
-        riga("Codice SDI o PEC", d.sdiPec),
+        riga("Codice SDI o PEC", d.sdiPec === "0000000" ? "0000000 (privato, nessun codice destinatario)" : d.sdiPec),
         riga("Indirizzo", d.indirizzo),
         riga("Email", d.email),
         riga("Telefono", d.telefono),

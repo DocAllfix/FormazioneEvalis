@@ -115,8 +115,30 @@ describe("mailVendita", () => {
 });
 
 describe("CAMPI_FATTURA", () => {
-  it("due campi, entrambi facoltativi, con le chiavi che la notifica legge", () => {
-    expect(CAMPI_FATTURA.custom_fields.map((c) => [c.key, c.optional])).toEqual([["codicefiscale", true], ["sdipec", true]]);
-    for (const c of CAMPI_FATTURA.custom_fields) expect(c.label.custom.length).toBeLessThanOrEqual(50); // limite Stripe
+  it("SDI/PEC obbligatorio (almeno 6 caratteri), codice fiscale facoltativo", () => {
+    expect(CAMPI_FATTURA.custom_fields.map((c) => [c.key, c.optional, c.text?.minimum_length])).toEqual([
+      ["sdipec", false, 6],
+      ["codicefiscale", true, undefined],
+    ]);
+  });
+
+  it("dice ai privati di scrivere 0000000 (sette zeri), nell'etichetta e sopra il pulsante", () => {
+    expect(CAMPI_FATTURA.custom_fields[0].label.custom).toContain("0000000");
+    const nota = (CAMPI_FATTURA.custom_text.submit as { message: string }).message;
+    expect(nota).toContain("0000000");
+    expect(nota.length).toBeLessThanOrEqual(1200); // limite Stripe
+    expect("0000000".length).toBeGreaterThanOrEqual(CAMPI_FATTURA.custom_fields[0].text!.minimum_length!);
+  });
+
+  it("etichette entro il limite di Stripe (50 caratteri)", () => {
+    for (const c of CAMPI_FATTURA.custom_fields) expect(c.label.custom.length).toBeLessThanOrEqual(50);
+  });
+});
+
+describe("mailVendita con 0000000", () => {
+  it("lo spiega al committente: privato senza codice destinatario", () => {
+    const s = sessione({ custom_fields: [{ key: "sdipec", text: { value: "0000000" } }] });
+    const { html } = mailVendita(datiVendita(s as unknown as Stripe.Checkout.Session, DOPO), "Corso");
+    expect(html).toContain("0000000 (privato, nessun codice destinatario)");
   });
 });

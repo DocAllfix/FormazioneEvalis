@@ -27,21 +27,33 @@ export const TAX_PARAMS = {
   customer_update: { address: "auto", name: "auto" },
 } as const;
 
-// Dati per la fattura elettronica che Stripe non chiede da solo: codice fiscale (fattura a un
-// privato) e codice destinatario SDI o PEC (fattura a un'azienda). FACOLTATIVI di proposito:
-// Stripe non sa renderli obbligatori solo per i privati o solo per le aziende, e un campo
-// obbligatorio in più fa perdere acquisti. Arrivano nella sessione (`custom_fields`) e la
-// notifica di vendita li riporta al committente (notifica-vendita.ts).
-export const CAMPI_FATTURA: { custom_fields: Stripe.Checkout.SessionCreateParams.CustomField[] } = {
+// Dati per la fattura elettronica che Stripe non chiede da solo. Arrivano nella sessione
+// (`custom_fields`) e la notifica di vendita li riporta al committente (notifica-vendita.ts).
+//  - Codice destinatario SDI o PEC: OBBLIGATORIO per tutti (scelta dell'utente, 05/10/2026), così
+//    il committente ha sempre un recapito. Il privato che non ce l'ha, o non vuole la fattura,
+//    scrive 0000000 (sette zeri: il codice SDI convenzionale "nessun codice"). Almeno 6
+//    caratteri: una PEC o un codice SDI non sono mai più corti, e un "0" non passa.
+//  - Codice fiscale: facoltativo, serve a chi vuole la fattura come privato.
+// La spiegazione sta nell'etichetta (max 50 caratteri per Stripe) e sopra il pulsante Paga.
+export const CAMPI_FATTURA: {
+  custom_fields: Stripe.Checkout.SessionCreateParams.CustomField[];
+  custom_text: Stripe.Checkout.SessionCreateParams.CustomText;
+} = {
   custom_fields: [
-    { key: "codicefiscale", label: { type: "custom", custom: "Codice fiscale (per la fattura)" }, type: "text", optional: true, text: { maximum_length: 16 } },
-    { key: "sdipec", label: { type: "custom", custom: "Codice SDI o PEC (per la fattura)" }, type: "text", optional: true, text: { maximum_length: 100 } },
+    { key: "sdipec", label: { type: "custom", custom: "Codice SDI o PEC (privati: 0000000)" }, type: "text", optional: false, text: { minimum_length: 6, maximum_length: 100 } },
+    { key: "codicefiscale", label: { type: "custom", custom: "Codice fiscale (solo se vuoi la fattura)" }, type: "text", optional: true, text: { maximum_length: 16 } },
   ],
+  custom_text: {
+    submit: {
+      message:
+        "Codice SDI o PEC: le aziende indicano il proprio codice destinatario o la PEC. I privati che non li hanno, o che non hanno bisogno della fattura, scrivono 0000000 (sette zeri). Il codice fiscale serve solo ai privati che vogliono la fattura.",
+    },
+  },
 };
 // Va nella chiave di idempotenza: per un'ora dopo il rilascio, chi aveva aperto il checkout
 // prima riceverebbe da Stripe un errore (stessa chiave, parametri diversi). Se cambiano i
 // campi, cambia questo valore.
-const VERSIONE_CAMPI = "fatt1";
+const VERSIONE_CAMPI = "fatt2";
 
 /**
  * Il destinatario ha GIÀ questo corso? Guardia anti-doppio-addebito.
