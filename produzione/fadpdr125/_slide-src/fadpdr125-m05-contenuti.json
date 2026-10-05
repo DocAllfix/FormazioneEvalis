@@ -1,0 +1,562 @@
+[
+  {
+    "id": "fadpdr125_m05_s001",
+    "layout": "tabella",
+    "kicker": "Calcolo",
+    "titolo": "Somma ponderata delle sei aree",
+    "cols": [
+      "Area",
+      "Peso",
+      "Massimo sul totale"
+    ],
+    "righe": [
+      [
+        "Cultura e strategia",
+        "15",
+        "15 punti"
+      ],
+      [
+        "Governance",
+        "15",
+        "15 punti"
+      ],
+      [
+        "Processi HR",
+        "10",
+        "10 punti"
+      ],
+      [
+        "Crescita e inclusione",
+        "20",
+        "20 punti"
+      ],
+      [
+        "Equità remunerativa",
+        "20",
+        "20 punti"
+      ],
+      [
+        "Genitorialità e conciliazione",
+        "20",
+        "20 punti"
+      ]
+    ]
+  },
+  {
+    "id": "fadpdr125_m05_s002",
+    "layout": "confronto",
+    "kicker": "Soglia",
+    "titolo": "Il 60% vale sul totale",
+    "intro": "La soglia di certificabilità si legge sul totale ponderato. Un'area a zero può essere compensata matematicamente, ma resta un segnale di fragilità organizzativa e di verifica.",
+    "a": {
+      "h": "Scorciatoie da evitare",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Serve 60 in ogni area"
+        },
+        {
+          "d": "Giudizio errato su risultati validi"
+        },
+        {
+          "d": "Basta il totale, il resto non conta"
+        }
+      ]
+    },
+    "b": {
+      "h": "Criterio corretto",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Conta la somma dei sei contributi"
+        },
+        {
+          "d": "Un'area a zero non è neutra"
+        },
+        {
+          "d": "Esempio: totale 65 con equità a zero"
+        },
+        {
+          "d": "La soglia guida, il sistema decide"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpdr125_m05_s003",
+    "layout": "confronto",
+    "kicker": "Errore tecnico",
+    "titolo": "La media altera il modello",
+    "intro": "La media semplice crea un numero diverso dal modello richiesto, perché tratta come equivalenti aree da 10, 15 e 20 punti. Con Tifata la differenza è già visibile.",
+    "a": {
+      "h": "Media semplice",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Assume sei aree da un sesto"
+        },
+        {
+          "d": "Tifata restituisce 54,17 punti"
+        },
+        {
+          "d": "Sopravvaluta se pesano le aree deboli"
+        }
+      ]
+    },
+    "b": {
+      "h": "Somma ponderata",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Usa punti area, pesi e prodotti"
+        },
+        {
+          "d": "Tifata restituisce 53 punti"
+        },
+        {
+          "d": "Unica sintesi coerente col modello"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpdr125_m05_s004",
+    "layout": "numeri",
+    "kicker": "Caso Tifata",
+    "titolo": "Prima rilevazione: profilo uniforme, non maturo",
+    "intro": "Alla prima rilevazione Tifata non è lontana dalla soglia, ma il dato decisivo è il profilo: pratiche presenti in tutte le aree, nessuna voragine, nessun vero punto di forza strutturale.",
+    "numeri": [
+      {
+        "n": "53",
+        "h": "Punteggio alla prima rilevazione",
+        "d": ""
+      },
+      {
+        "n": "60",
+        "h": "Soglia minima per la certificazione",
+        "d": ""
+      },
+      {
+        "n": "7",
+        "h": "Punti mancanti alla soglia",
+        "d": ""
+      },
+      {
+        "n": "15/31",
+        "h": "Indicatori applicabili accesi",
+        "d": ""
+      }
+    ]
+  },
+  {
+    "id": "fadpdr125_m05_s005",
+    "layout": "cards",
+    "kicker": "Priorità",
+    "titolo": "Quanto sposta ogni indicatore",
+    "intro": "Tradurre ogni indicatore in punti sul totale rende il piano molto più selettivo. I dieci indicatori più pesanti valgono 54 punti; Tifata ne presidia oggi 29.",
+    "cards": [
+      {
+        "h": "8 punti",
+        "d": "Gap retributivo a parità di livello"
+      },
+      {
+        "h": "7 punti",
+        "d": "Policy oltre CCNL su genitorialità e conciliazione"
+      },
+      {
+        "h": "6 punti",
+        "d": "Promozioni donne e accesso al variabile"
+      },
+      {
+        "h": "Tempi di attivazione",
+        "d": "Quantitativi lenti, qualitativi più rapidi"
+      }
+    ]
+  },
+  {
+    "id": "fadpdr125_m05_s006",
+    "layout": "cards",
+    "kicker": "Limiti del numero",
+    "titolo": "Il punteggio non basta da solo",
+    "intro": "Il punteggio finale rassicura, ma non basta. Per capire se l'organizzazione è davvero pronta devi verificare assetto gestionale, attendibilità delle evidenze e capacità di reggere nel tempo.",
+    "cards": [
+      {
+        "h": "Sistema",
+        "d": "Politica, obiettivi, ruoli, monitoraggio, riesame"
+      },
+      {
+        "h": "Veridicità",
+        "d": "Dati, criteri, fonti ed evidenze coerenti"
+      },
+      {
+        "h": "Tenuta",
+        "d": "KPI annuali, rivalutazione biennale, piani di miglioramento"
+      }
+    ]
+  },
+  {
+    "id": "fadpdr125_m05_s007",
+    "layout": "split",
+    "kicker": "Equità remunerativa",
+    "titolo": "Che cosa entra nel confronto",
+    "lead": "Qui pesano 20 punti distribuiti su soli tre indicatori. Il confronto riguarda il total reward comparabile, con esclusioni metodologiche precise e una regola chiara per il part time.",
+    "punti": [
+      {
+        "h": "Entra",
+        "d": "Fisso, accessori, bonus, premialità, benefit"
+      },
+      {
+        "h": "Esce",
+        "d": "Straordinari, indennità, rimborsi, prestazioni diverse"
+      },
+      {
+        "h": "Indicatore 1",
+        "d": "Delta sotto 10% a parità di livello o ruolo"
+      },
+      {
+        "h": "Part time",
+        "d": "Full time equivalente o criterio orario uniforme"
+      }
+    ]
+  },
+  {
+    "id": "fadpdr125_m05_s008",
+    "layout": "confronto",
+    "kicker": "Lettura corretta",
+    "titolo": "Divario grezzo e divario comparabile",
+    "intro": "Nel dibattito pubblico i due numeri spesso si confondono. Nel modello, invece, il divario grezzo e quello a parità di livello servono a domande diverse e vanno letti insieme.",
+    "a": {
+      "h": "Divario grezzo",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Media retributiva uomini contro donne"
+        },
+        {
+          "d": "Tifata: 13,5% complessivo"
+        },
+        {
+          "d": "Legge la composizione della popolazione"
+        },
+        {
+          "d": "Utile per trasparenza retributiva"
+        }
+      ]
+    },
+    "b": {
+      "h": "Divario a parità",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Confronto dentro livelli o ruoli comparabili"
+        },
+        {
+          "d": "Decide il primo indicatore dell'area"
+        },
+        {
+          "d": "Isola la regola retributiva"
+        },
+        {
+          "d": "Evita correzioni sul problema sbagliato"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpdr125_m05_s009",
+    "layout": "tabella",
+    "kicker": "Caso Tifata",
+    "titolo": "Il calcolo per livello cambia il giudizio",
+    "cols": [
+      "Livello",
+      "Uomini",
+      "Donne",
+      "Delta"
+    ],
+    "righe": [
+      [
+        "Dirigenti",
+        "2",
+        "0",
+        "n.d."
+      ],
+      [
+        "Quadri e 1°",
+        "6",
+        "2",
+        "6%"
+      ],
+      [
+        "3° livello",
+        "9",
+        "13",
+        "7%"
+      ],
+      [
+        "4° livello",
+        "22",
+        "6",
+        "5%"
+      ],
+      [
+        "5° livello",
+        "16",
+        "10",
+        "3%"
+      ]
+    ]
+  },
+  {
+    "id": "fadpdr125_m05_s010",
+    "layout": "flusso",
+    "kicker": "FAQ operative",
+    "titolo": "Quattro regole che rendono fragile l'indicatore",
+    "intro": "La lettura corretta della tabella retributiva passa da quattro regole semplici ma severe. In gruppi piccoli basta poco per perdere l'intero punteggio, quindi serve margine reale e dato molto disaggregato.",
+    "passi": [
+      {
+        "h": "Soglia",
+        "d": "Delta sotto 10% in ogni livello comparabile"
+      },
+      {
+        "h": "Livello peggiore",
+        "d": "Un solo superamento spegne tutti gli 8 punti"
+      },
+      {
+        "h": "Livelli esclusi",
+        "d": "Fuori dal calcolo i livelli con un solo genere"
+      },
+      {
+        "h": "Dato corretto",
+        "d": "Vietate medie di medie, servono dati disaggregati"
+      }
+    ]
+  },
+  {
+    "id": "fadpdr125_m05_s011",
+    "layout": "confronto",
+    "kicker": "Area retributiva",
+    "titolo": "Promozioni e variabile richiedono vera parità di accesso",
+    "intro": "Dopo il primo indicatore, il controllo si sposta dall'entità della differenza alla comparabilità delle opportunità. Due indicatori da sei punti ciascuno possono spostare l'esito più di quanto spesso l'organizzazione immagini.",
+    "a": {
+      "h": "Promozioni",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Conta la quota promossi per genere"
+        },
+        {
+          "d": "Confronto distinto per livelli funzionali"
+        },
+        {
+          "d": "Zero promozioni non accende l'indicatore"
+        },
+        {
+          "d": "Impatto massimo: 6 punti"
+        }
+      ]
+    },
+    "b": {
+      "h": "Remunerazione variabile",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Conta l'accesso, non l'importo"
+        },
+        {
+          "d": "Quote donne e uomini da confrontare"
+        },
+        {
+          "d": "Criteri noti a lavoratrici e lavoratori"
+        },
+        {
+          "d": "Impatto massimo: 6 punti"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpdr125_m05_s012",
+    "layout": "confronto",
+    "kicker": "Trasparenza retributiva",
+    "titolo": "Certificazione e legge non misurano la stessa cosa",
+    "intro": "I due piani si parlano, ma hanno logiche, soglie e conseguenze diverse. Un differenziale accettabile nel sistema volontario può comunque attivare obblighi di giustificazione o correzione sul piano legale.",
+    "a": {
+      "h": "Sistema di certificazione",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Modello volontario di punteggio"
+        },
+        {
+          "d": "Soglia: sotto 10% per livello"
+        },
+        {
+          "d": "Un superamento azzera gli 8 punti"
+        },
+        {
+          "d": "Focus su livello, mansione o ruolo"
+        }
+      ]
+    },
+    "b": {
+      "h": "Trasparenza di legge",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Obbligo normativo, non punteggio"
+        },
+        {
+          "d": "Allerta da 5% nella categoria omogenea"
+        },
+        {
+          "d": "Serve giustificazione oggettiva o correzione"
+        },
+        {
+          "d": "Può attivare valutazione congiunta"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpdr125_m05_s013",
+    "layout": "cards",
+    "kicker": "Verifiche interne",
+    "titolo": "Le verifiche interne si reggono su quattro prove",
+    "intro": "Il sistema funziona solo se controlla insieme attuazione degli indirizzi e rispetto delle procedure. La verifica interna deve essere strutturata, pianificata e fondata su evidenze oggettive, non su impressioni.",
+    "cards": [
+      {
+        "h": "Indipendenza",
+        "d": "Nessuno verifica attività di cui è responsabile"
+      },
+      {
+        "h": "Competenza",
+        "d": "Criteri scritti, evidenze conservate, nomina formale"
+      },
+      {
+        "h": "Equilibrio",
+        "d": "Team bilanciato anche nel genere, non solo nel ruolo"
+      },
+      {
+        "h": "Evidenze",
+        "d": "Vanno lette insieme quantità e pratica quotidiana"
+      }
+    ]
+  },
+  {
+    "id": "fadpdr125_m05_s014",
+    "layout": "evidenza",
+    "kicker": "Non conformità",
+    "titolo": "La non conformità include anche segnali e KPI",
+    "eyebrow": "",
+    "testo": "Qui il perimetro è più ampio del solito. Non contano solo errori procedurali, ma ogni scarto documentato tra impegno dichiarato, risultati attesi e realtà vissuta nell'organizzazione.",
+    "dark": true
+  },
+  {
+    "id": "fadpdr125_m05_s015",
+    "layout": "timeline",
+    "kicker": "Riesame di direzione",
+    "titolo": "Il riesame annuale trasforma dati in decisioni",
+    "intro": "Dopo monitoraggi e verifiche serve un momento di governo vero. Il riesame programmato dell'alta direzione collega punteggi, piano strategico, risorse e cambiamenti normativi alle decisioni operative successive.",
+    "tappe": [
+      {
+        "t": "01",
+        "h": "Input minimi",
+        "d": "Punteggio, obiettivi, audit, non conformità, segnalazioni, novità normative"
+      },
+      {
+        "t": "02",
+        "h": "Partecipanti",
+        "d": "Alta direzione, comitato guida, funzioni responsabili"
+      },
+      {
+        "t": "03",
+        "h": "Esiti attesi",
+        "d": "Politica, obiettivi, risorse, responsabilità, monitoraggi, formazione"
+      },
+      {
+        "t": "04",
+        "h": "Calendario utile",
+        "d": "Meglio circa un mese prima della verifica esterna"
+      }
+    ]
+  },
+  {
+    "id": "fadpdr125_m05_s016",
+    "layout": "split",
+    "kicker": "Certificazione",
+    "titolo": "Perimetro coerente e organismo pronto alla verifica",
+    "lead": "Avvicinarsi alla certificazione significa definire bene che cosa entra nello scopo e preparare un dossier coerente. Le esclusioni arbitrarie non semplificano il sistema: lo rendono semplicemente non ammissibile.",
+    "punti": [
+      {
+        "h": "Perimetro",
+        "d": "Singola entità o gruppo con controllo centralizzato"
+      },
+      {
+        "h": "Esclusioni",
+        "d": "No a funzioni escluse dentro la stessa entità"
+      },
+      {
+        "h": "Organismo",
+        "d": "Accreditato e dotato di sistema coerente con la prassi"
+      },
+      {
+        "h": "Dossier",
+        "d": "Sedi, processi, leggi, rischi, contenziosi, check list"
+      }
+    ]
+  },
+  {
+    "id": "fadpdr125_m05_s017",
+    "layout": "numeri",
+    "kicker": "Tempi di audit",
+    "titolo": "Durata dell'audit e ciclo della certificazione",
+    "intro": "Il tempo di verifica non dipende dagli addetti totali, ma dagli addetti equivalenti calcolati con pesi diversi. Da qui discendono sia la durata dell'audit sia la lettura corretta del ciclo triennale.",
+    "numeri": [
+      {
+        "n": "100%",
+        "h": "Direzione, HR, formazione, legale, comunicazione e presidio sistema",
+        "d": ""
+      },
+      {
+        "n": "10%",
+        "h": "Produzione e altri uffici contati in modo ridotto",
+        "d": ""
+      },
+      {
+        "n": "16,7",
+        "h": "Addetti equivalenti Tifata su 86 persone reali",
+        "d": ""
+      },
+      {
+        "n": "3 anni",
+        "h": "Stage 1, stage 2, due sorveglianze, poi rinnovo",
+        "d": ""
+      }
+    ]
+  },
+  {
+    "id": "fadpdr125_m05_s018",
+    "layout": "cards",
+    "kicker": "Mantenimento",
+    "titolo": "Tre orologi tengono vivo il certificato",
+    "intro": "Il certificato non vive di inerzia amministrativa. Va governato su tre ritmi distinti che scorrono insieme: sorveglianza annuale, rivalutazione biennale dei KPI e rinnovo triennale della certificazione.",
+    "cards": [
+      {
+        "h": "Annuale",
+        "d": "Sorveglianza esterna, monitoraggio KPI, revisione periodica"
+      },
+      {
+        "h": "Biennale",
+        "d": "Rivalutare miglioramenti o piani di mitigazione sui gap"
+      },
+      {
+        "h": "Triennale",
+        "d": "Rinnovo completo prima della scadenza del certificato"
+      },
+      {
+        "h": "Focus audit",
+        "d": "Chiusura rilievi, aree critiche presidiate, validità continua"
+      }
+    ]
+  }
+]

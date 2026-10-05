@@ -9,6 +9,7 @@ CORSO = sys.argv[1] if len(sys.argv) > 1 else "fadesg02"
 ETICHETTA = {
     "fadesg02": "ESG Manager · UNI/PdR 109.1",
     "fadeen02": "Energy Manager · UNI CEI 11339",
+    "fadpdr125": "Parità di genere · UNI/PdR 125:2022",
 }
 if CORSO not in ETICHETTA:
     raise SystemExit(f"Etichetta di corso mancante per {CORSO}: aggiungerla a ETICHETTA prima di convertire.")
@@ -47,8 +48,11 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
                      [s.get("titolo","") for s in dati[1:6]]}
         elif l == "chiusura":
             base |= {"modNum": mod[1:], "punti": p[:4],
-                     "prossimo": f"Modulo {int(mod[1:])+1:02d} — {TITOLI.get(f'm{int(mod[1:])+1:02d}','')}"
-                                 if int(mod[1:]) < 10 else "Esame finale"}
+                     # build-slide vuole {modulo, titolo}: con una stringa la slide mostrava
+                     # "Prossimo → Modulo —" vuoto (ESG ed Energy, scoperto il 05/10/2026).
+                     # Ultimo modulo (dallo skeleton, non fisso a 10): niente riquadro.
+                     "prossimo": {"modulo": f"{int(mod[1:])+1:02d}", "titolo": TITOLI[f"m{int(mod[1:])+1:02d}"]}
+                                 if f"m{int(mod[1:])+1:02d}" in TITOLI else None}
         elif l == "confronto":
             col = x.get("colonne") or []
             def lato(c, fallback_h):
@@ -70,6 +74,10 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
                     out_n.append({"n": str(v.get("n") or j), "h": (v.get("h") or v.get("eti") or "").strip(),
                                   "d": (v.get("d") or v.get("eti") or "").strip()})
             if not out_n: out_n = [{"n": str(j), "h": v["h"], "d": v["d"]} for j, v in enumerate(p[:4], 1)]
+            # una sola frase dal generatore = solo titolo: con h == d la slide la mostrerebbe due
+            # volte (titolo in grassetto + stessa riga in grigio). Difetto visto su ESG/Energy.
+            for v in out_n:
+                if v["d"] == v["h"]: v["d"] = ""
             base |= {"intro": lead, "numeri": out_n}
         elif l == "flusso":
             base |= {"intro": lead, "passi": p[:5]}
@@ -84,10 +92,11 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
             if not cols and righe: cols = [f"Colonna {i+1}" for i in range(len(righe[0]))]
             base |= {"cols": cols[:4], "righe": [r[:4] for r in righe[:6]]}
         elif l == "definizione":
-            base |= {"eyebrow": x.get("kicker", ""), "definizione": (x.get("spiegazione") or x.get("termine") or lead),
+            # niente eyebrow uguale al kicker: in testa alla slide la parola comparirebbe due volte
+            base |= {"eyebrow": "", "definizione": (x.get("spiegazione") or x.get("termine") or lead),
                      "punti": p[:4]}
         elif l == "evidenza":
-            base |= {"eyebrow": x.get("kicker", ""), "testo": lead, "dark": True}
+            base |= {"eyebrow": "", "testo": lead, "dark": True}
         elif l == "split":
             base |= {"lead": lead, "punti": p[:4]}
         else:
