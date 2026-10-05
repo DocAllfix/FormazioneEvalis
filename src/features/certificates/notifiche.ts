@@ -7,6 +7,7 @@
 import { renderEmail, esc } from "@/lib/email/layout";
 import { DESTINATARI_INTERNI } from "@/features/billing/notifica-vendita";
 import { NOTA_PROVVISORIO, GIORNI_ACCREDITATO } from "./testi";
+import { dataNascitaLeggibile } from "./anagrafica";
 
 /**
  * Il committente riceve le mail SOLO dalla produzione vera: in locale, nei test e nelle Preview
@@ -27,6 +28,10 @@ export type DatiCertificato = {
   verifyUrl: string;
   /** punteggio dell'esame finale superato (0-100), se c'è */
   punteggio: number | null;
+  /** dati per l'accreditato, chiesti prima dell'esame finale (null se mancano) */
+  codiceFiscale: string | null;
+  dataNascita: string | null; // "AAAA-MM-GG"
+  luogoNascita: string | null;
 };
 
 const data = (d: Date) => d.toLocaleDateString("it-IT", { timeZone: "Europe/Rome", day: "2-digit", month: "long", year: "numeric" });
@@ -67,6 +72,9 @@ export function mailProvvisorioCommittente(d: DatiCertificato, base: string): { 
         `<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:15px;line-height:1.5;">${[
           riga("Nome", d.learnerName),
           riga("Email", d.learnerEmail),
+          riga("Codice fiscale", d.codiceFiscale ?? "non indicato"),
+          riga("Data di nascita", d.dataNascita ? dataNascitaLeggibile(d.dataNascita) : "non indicata"),
+          riga("Luogo di nascita", d.luogoNascita ?? "non indicato"),
           riga("Corso", d.courseTitle),
           riga("Monte ore", ore(d.requiredMinutes)),
           riga("Completato il", data(d.completatoIl)),

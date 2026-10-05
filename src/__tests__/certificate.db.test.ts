@@ -21,6 +21,7 @@ import {
   preparaCaricamentoById, confermaCaricamentoById,
 } from "@/features/certificates/lifecycle";
 import { EMAIL_VENDITE } from "@/features/billing/notifica-vendita";
+import { salvaAnagrafica, leggiAnagrafica, anagraficaBloccata } from "@/features/certificates/anagrafica";
 import { isStorageConfigured, deleteCertificatePdf } from "@/lib/supabase/storage";
 import { verifyChain } from "@/features/audit/log";
 
@@ -134,6 +135,13 @@ describe("Certificati — provvisorio, accreditato caricato, verifica", () => {
 
     await completeEnrollment(enr.id, courseId);
 
+    // dati per il certificato: validati, salvati, modificabili finché non c'è un certificato
+    await expect(salvaAnagrafica(uid, { codiceFiscale: "RSSMRA80A01H501X", dataNascita: "1980-01-01", luogoNascita: "Roma" })).rejects.toThrow(/codice fiscale/);
+    await salvaAnagrafica(uid, { codiceFiscale: "rssmra80a01h501u", dataNascita: "1980-01-01", luogoNascita: "Milano" });
+    await salvaAnagrafica(uid, { codiceFiscale: "RSSMRA80A01H501U", dataNascita: "1980-01-01", luogoNascita: "Roma" });
+    expect(await leggiAnagrafica(uid)).toEqual({ codiceFiscale: "RSSMRA80A01H501U", dataNascita: "1980-01-01", luogoNascita: "Roma" });
+    expect(await anagraficaBloccata(uid)).toBe(false);
+
     // ora: provvisorio con numero, idempotente, UNA sola mail (all'utente, col PDF provvisorio)
     const rec1 = await ensureCertificateRecord(enr.id);
     const rec2 = await ensureCertificateRecord(enr.id);
@@ -147,6 +155,11 @@ describe("Certificati — provvisorio, accreditato caricato, verifica", () => {
     expect(inviate.some((m) => m.to === EMAIL_VENDITE)).toBe(false);
     expect(inviate[0].allegati[0].nome).toBe(`Certificato-provvisorio-${number}.pdf`);
     expect(intestazione(inviate[0].allegati[0].contenuto)).toBe("%PDF-");
+
+    // ora che il certificato esiste, i dati sono bloccati: il committente li ha già ricevuti
+    expect(await anagraficaBloccata(uid)).toBe(true);
+    await expect(salvaAnagrafica(uid, { codiceFiscale: "RSSMRA80A01H501U", dataNascita: "1980-01-01", luogoNascita: "Napoli" })).rejects.toThrow(/assistenza/);
+    expect((await leggiAnagrafica(uid))?.luogoNascita).toBe("Roma");
 
     const requested = await db
       .select({ id: activityLog.id })

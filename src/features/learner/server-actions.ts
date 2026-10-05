@@ -4,6 +4,8 @@
 // Wrapper sottili su funzioni gate-ate (sessione + ownership applicate dentro).
 
 import { getCertificateDownloadUrl } from "@/features/certificates/lifecycle";
+import { leggiAnagrafica, anagraficaBloccata, salvaAnagrafica } from "@/features/certificates/anagrafica";
+import { requireSession } from "@/features/auth/guards";
 import {
   getMyClipUrl,
   startMyQuiz,
@@ -40,4 +42,27 @@ export async function submitMyQuizAction(
 /** A esame finale superato: predispone il certificato (ready_for_review) se a norma. */
 export async function requestMyCertificateAction(enrollmentId: string) {
   return requestMyCertificate(enrollmentId);
+}
+
+/** I miei dati per il certificato (codice fiscale, data e luogo di nascita) e se sono bloccati. */
+export async function leggiMiaAnagraficaAction() {
+  const { user } = await requireSession();
+  const [dati, bloccata] = await Promise.all([leggiAnagrafica(user.id), anagraficaBloccata(user.id)]);
+  return { dati, bloccata };
+}
+
+/** Salva i miei dati per il certificato. Restituisce l'errore invece di lanciarlo: in produzione
+ * Next nasconde i messaggi delle eccezioni, e qui l'utente deve leggere cosa correggere. */
+export async function salvaMiaAnagraficaAction(input: {
+  codiceFiscale: string;
+  dataNascita: string;
+  luogoNascita: string;
+}): Promise<{ ok: true } | { ok: false; errore: string }> {
+  const { user } = await requireSession();
+  try {
+    await salvaAnagrafica(user.id, input);
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, errore: e instanceof Error ? e.message : "Salvataggio non riuscito." };
+  }
 }

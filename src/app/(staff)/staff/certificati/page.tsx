@@ -28,6 +28,9 @@ export default async function StaffCertificatiPage({
     courseTitle: c.courseTitle,
     completatoLabel: giorno(c.createdAt),
     accreditatoLabel: giorno(c.issuedAt),
+    anagrafica: c.codiceFiscale && c.dataNascita && c.luogoNascita
+      ? `CF ${c.codiceFiscale} · nato/a a ${c.luogoNascita} il ${c.dataNascita.split("-").reverse().join("/")}`
+      : "Dati per il certificato mancanti",
   }));
 
   return (

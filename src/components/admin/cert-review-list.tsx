@@ -23,6 +23,7 @@ export type StaffCert = {
   courseTitle: string;
   completatoLabel: string;
   accreditatoLabel: string;
+  anagrafica: string;
 };
 
 const MAX_MB = 20;
@@ -157,6 +158,7 @@ export function CertReviewList({ items, q, stato }: { items: StaffCert[]; q: str
                     <td className="px-4 py-3">
                       <div className="font-medium text-near-black">{c.learnerName}</div>
                       <div className="text-xs text-muted-foreground">{c.learnerEmail}</div>
+                      <div className="mt-0.5 font-mono text-[11px] text-muted-foreground">{c.anagrafica}</div>
                     </td>
                     <td className="px-4 py-3 text-foreground/80">
                       {c.courseTitle}

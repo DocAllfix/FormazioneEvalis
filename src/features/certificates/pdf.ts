@@ -14,6 +14,8 @@ export interface CertificateData {
   /** Attestato PROVVISORIO di fine corso: lo dice nel titolo e in una fascia, e `issuedAt` è la
    * data di completamento. Il certificato vero è l'accreditato caricato dallo staff. */
   provvisorio?: boolean;
+  /** "nato/a a Roma il 1 gennaio 1980", sotto il nome (se i dati ci sono) */
+  nascita?: string;
 }
 
 export async function buildCertificatePdf(d: CertificateData): Promise<Uint8Array> {
@@ -42,6 +44,7 @@ export async function buildCertificatePdf(d: CertificateData): Promise<Uint8Arra
   center(d.provvisorio ? "ATTESTATO DI COMPLETAMENTO PROVVISORIO" : "ATTESTATO DI COMPLETAMENTO", height - 110, d.provvisorio ? 22 : 26, bold);
   center("Si certifica che", height - 170, 14);
   center(d.learnerName, height - 215, 30, bold);
+  if (d.nascita) center(d.nascita, height - 238, 11);
   center("ha completato con successo il corso", height - 260, 14);
   center(d.courseTitle, height - 300, 20, bold);
   center(`${d.provvisorio ? "Data di completamento" : "Data di emissione"}: ${d.issuedAt.toLocaleDateString("it-IT", { timeZone: "Europe/Rome" })}`, height - 345, 12);

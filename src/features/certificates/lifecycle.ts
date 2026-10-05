@@ -12,7 +12,8 @@
 import { randomUUID } from "node:crypto";
 import { and, desc, eq, ilike, isNull, or, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { certificate, enrollment, course, user, quiz, quizAttempt } from "@/lib/db/schema";
+import { certificate, enrollment, course, user, quiz, quizAttempt, anagraficaCertificato } from "@/lib/db/schema";
+import { dataNascitaLeggibile } from "./anagrafica";
 import { isReadyForCertificate } from "./readiness";
 import { buildCertificatePdf } from "./pdf";
 import {
@@ -118,11 +119,15 @@ async function datiCertificato(certificateId: string, ctx: TenantCtx): Promise<D
         courseTitle: course.title,
         courseId: course.id,
         requiredMinutes: course.requiredMinutes,
+        codiceFiscale: anagraficaCertificato.codiceFiscale,
+        dataNascita: anagraficaCertificato.dataNascita,
+        luogoNascita: anagraficaCertificato.luogoNascita,
       })
       .from(certificate)
       .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
       .innerJoin(user, eq(user.id, enrollment.userId))
       .innerJoin(course, eq(course.id, enrollment.courseId))
+      .leftJoin(anagraficaCertificato, eq(anagraficaCertificato.userId, enrollment.userId))
       .where(eq(certificate.id, certificateId))
       .limit(1);
     if (!r) return null;
@@ -148,6 +153,9 @@ async function datiCertificato(certificateId: string, ctx: TenantCtx): Promise<D
       number,
       verifyUrl: verifyUrlFor(r.verifyUuid),
       punteggio: esame?.punteggio ?? null,
+      codiceFiscale: r.codiceFiscale,
+      dataNascita: r.dataNascita,
+      luogoNascita: r.luogoNascita,
     };
   });
 }
@@ -160,6 +168,7 @@ function pdfProvvisorio(d: DatiCertificato): Promise<Uint8Array> {
     number: d.number,
     verifyUrl: d.verifyUrl,
     provvisorio: true,
+    ...(d.luogoNascita && d.dataNascita ? { nascita: `nato/a a ${d.luogoNascita} il ${dataNascitaLeggibile(d.dataNascita)}` } : {}),
   });
 }
 
@@ -227,11 +236,15 @@ export async function listCertificatiStaff(filtro: { q?: string; stato?: StatoFi
         courseTitle: course.title,
         createdAt: certificate.createdAt,
         issuedAt: certificate.issuedAt,
+        codiceFiscale: anagraficaCertificato.codiceFiscale,
+        dataNascita: anagraficaCertificato.dataNascita,
+        luogoNascita: anagraficaCertificato.luogoNascita,
       })
       .from(certificate)
       .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
       .innerJoin(user, eq(user.id, enrollment.userId))
       .innerJoin(course, eq(course.id, enrollment.courseId))
+      .leftJoin(anagraficaCertificato, eq(anagraficaCertificato.userId, enrollment.userId))
       .where(condizioni.length ? and(...condizioni) : undefined)
       .orderBy(desc(certificate.createdAt))
       .limit(200),

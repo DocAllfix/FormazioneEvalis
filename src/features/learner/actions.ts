@@ -5,7 +5,7 @@
 
 import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { slide, lesson, module as courseModule } from "@/lib/db/schema";
+import { slide, lesson, module as courseModule, quiz } from "@/lib/db/schema";
 import { requireSession } from "@/features/auth/guards";
 import {
   assertEnrollmentOwnedBy,
@@ -18,6 +18,10 @@ import { getCourseForPlayer } from "@/features/courses/get-course-for-player";
 import { getSignedClipUrl } from "@/lib/cloudflare/stream";
 import { startQuiz, submitQuiz } from "@/features/quiz/engine";
 import { ensureCertificateRecord } from "@/features/certificates/lifecycle";
+import { leggiAnagrafica } from "@/features/certificates/anagrafica";
+
+/** Messaggio riconosciuto dal player: mostra il modulo dei dati per il certificato. */
+export const SERVONO_DATI_CERTIFICATO = "Prima dell'esame finale inserisci i dati per il certificato.";
 
 export async function getMyCourse(enrollmentId: string) {
   const { user } = await requireSession();
@@ -30,6 +34,10 @@ export async function startMyQuiz(enrollmentId: string, quizId: string) {
   // ownership dell'iscrizione + vincolo quiz∈corso (M-9): impedisce di estrarre la banca
   // domande di un altro corso passando un quizId arbitrario.
   await assertQuizInCourseOf(quizId, enrollmentId, user.id);
+  // l'esame FINALE parte solo con i dati per il certificato accreditato (CF, data e luogo di
+  // nascita): così a fine corso il committente li riceve già. Controllo lato server.
+  const [q] = await db.select({ type: quiz.type }).from(quiz).where(eq(quiz.id, quizId)).limit(1);
+  if (q?.type === "final" && !(await leggiAnagrafica(user.id))) throw new Error(SERVONO_DATI_CERTIFICATO);
   return startQuiz(enrollmentId, quizId, { userId: user.id });
 }
 

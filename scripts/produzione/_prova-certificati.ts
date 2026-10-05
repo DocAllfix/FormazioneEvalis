@@ -104,6 +104,20 @@ for (let i = 0; i < 20 && !(await P.getByRole("button", { name: "Inizia l'esame"
   if (await avanti.isEnabled().catch(() => false)) await avanti.click(); else break;
   await P.waitForTimeout(400);
 }
+// prima dell'esame: il modulo dei dati per il certificato (obbligatorio)
+await P.getByLabel("Codice fiscale").waitFor({ timeout: 60000 });
+(await P.getByRole("button", { name: "Inizia l'esame" }).isVisible()) ? ko("esame avviabile senza dati") : ok("esame bloccato finché mancano i dati per il certificato");
+await scatta(P, "00-dati-prima-esame");
+await P.getByLabel("Codice fiscale").fill("RSSMRA80A01H501X"); // sbagliato apposta
+await P.getByLabel("Data di nascita").fill("1980-01-01");
+await P.getByLabel("Luogo di nascita").fill("Roma");
+await P.getByRole("button", { name: "Salva e continua" }).click();
+await P.getByText("Il codice fiscale non è valido").waitFor({ timeout: 120000 });
+ok("codice fiscale sbagliato: rifiutato con messaggio chiaro");
+await P.getByLabel("Codice fiscale").fill("rssmra80a01h501u");
+await P.getByRole("button", { name: "Salva e continua" }).click();
+await P.getByRole("button", { name: "Inizia l'esame" }).waitFor({ timeout: 120000 });
+ok("dati salvati: l'esame si può iniziare");
 await P.getByRole("button", { name: "Inizia l'esame" }).click();
 await P.locator("li:has(input[type=radio])").first().waitFor({ timeout: 30000 });
 for (const li of await P.locator("li:has(input[type=radio])").all()) {
@@ -128,10 +142,21 @@ const pdfBytes = await pdf.body();
 pdf.headers()["content-type"] === "application/pdf" && pdfBytes.subarray(0, 5).toString() === "%PDF-" ? ok("download del provvisorio: PDF") : ko(`download provvisorio: ${pdf.status()}`);
 writeFileSync(`${OUT}/certificato-provvisorio.pdf`, pdfBytes);
 
+// i dati arrivano nel provvisorio
+const { PDFDocument: Lettore } = await import("pdf-lib");
+await Lettore.load(pdfBytes); // PDF valido
+const [ana] = await sql`SELECT codice_fiscale, luogo_nascita FROM anagrafica_certificato WHERE user_id = ${studente.id}`;
+ana?.codice_fiscale === "RSSMRA80A01H501U" && ana?.luogo_nascita === "Roma" ? ok("dati per il certificato salvati (CF in maiuscolo)") : ko("dati per il certificato non salvati");
+
 // --- 2. pagina Certificati ---
 await senzaOnboarding(P, `${BASE}/certificati`);
 (await P.getByText("Provvisorio", { exact: true }).isVisible()) ? ok("Certificati: stato Provvisorio") : ko("Certificati: stato sbagliato");
 await scatta(P, "02-certificati-provvisorio");
+
+// profilo: i dati ci sono e ora sono bloccati
+await P.goto(`${BASE}/profilo#dati-certificato`, { waitUntil: "networkidle" });
+(await P.getByText("già stati usati per il tuo certificato").isVisible()) ? ok("Profilo: dati bloccati dopo il certificato") : ko("Profilo: dati non bloccati");
+await scatta(P, "02b-profilo-dati");
 
 // --- 3. verifica: per numero e dalla landing ---
 const anonimo = await (await b.newContext({ locale: "it-IT" })).newPage();
@@ -149,7 +174,8 @@ rotta.status() === 200 ? ok("codice inesistente: 200 'non trovato' (non più 500
 // --- 4. staff: cerca per numero e carica l'accreditato ---
 const S = staff.page;
 await senzaOnboarding(S, `${BASE}/staff/certificati?q=${cert.number}`);
-await S.getByText(cert.number).waitFor({ timeout: 60000 });
+await S.getByText(cert.number).first().waitFor({ timeout: 60000 });
+(await S.getByText("CF RSSMRA80A01H501U").isVisible()) ? ok("console staff: codice fiscale e nascita visibili") : ko("console staff: dati mancanti");
 await scatta(S, "04-staff-ricerca");
 const doc = await PDFDocument.create();
 const pg = doc.addPage([842, 595]);

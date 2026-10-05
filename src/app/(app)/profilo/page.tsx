@@ -3,6 +3,8 @@ import { Receipt, ShieldCheck } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { getCurrentSession } from "@/lib/auth/server";
 import { listMyPurchases } from "@/features/billing/acquisti";
+import { leggiAnagrafica, anagraficaBloccata } from "@/features/certificates/anagrafica";
+import { DatiCertificatoForm } from "@/components/app/dati-certificato-form";
 import { dataBreve, euro } from "@/lib/formato";
 
 export const metadata = { title: "Profilo — Evalis" };
@@ -11,7 +13,12 @@ export default async function ProfiloPage({ searchParams }: { searchParams: Prom
   const ctx = await getCurrentSession();
   if (!ctx) return null; // il layout (app) ha già gate-ato la sessione
   const { user } = ctx;
-  const [acquisti, { ricevuta }] = await Promise.all([listMyPurchases(user.id), searchParams]);
+  const [acquisti, { ricevuta }, anagrafica, bloccata] = await Promise.all([
+    listMyPurchases(user.id),
+    searchParams,
+    leggiAnagrafica(user.id),
+    anagraficaBloccata(user.id),
+  ]);
 
   return (
     <div className="max-w-2xl">
@@ -32,6 +39,17 @@ export default async function ProfiloPage({ searchParams }: { searchParams: Prom
           </p>
         </div>
       </div>
+
+      <section id="dati-certificato" aria-labelledby="dati-certificato-titolo" className="mt-10 scroll-mt-24">
+        <h2 id="dati-certificato-titolo" className="font-heading text-xl text-near-black">Dati per il certificato</h2>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Servono per il certificato accreditato e vengono chiesti prima dell&apos;esame finale. Non compaiono
+          nella verifica pubblica.
+        </p>
+        <Card className="mt-4 p-5">
+          <DatiCertificatoForm iniziali={anagrafica} bloccata={bloccata} />
+        </Card>
+      </section>
 
       <section id="acquisti" aria-labelledby="acquisti-titolo" className="mt-10 scroll-mt-24">
         <h2 id="acquisti-titolo" className="font-heading text-xl text-near-black">I miei acquisti</h2>

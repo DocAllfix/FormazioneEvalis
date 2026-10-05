@@ -2,7 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Check, ClipboardCheck, Clock, Loader2, RotateCcw, X } from "lucide-react";
-import { startMyQuizAction, submitMyQuizAction } from "@/features/learner/server-actions";
+import { startMyQuizAction, submitMyQuizAction, leggiMiaAnagraficaAction } from "@/features/learner/server-actions";
+import { DatiCertificatoForm } from "@/components/app/dati-certificato-form";
 import { mmss as fmt } from "@/lib/formato";
 
 type Question = { id: string; text: string; options: { id: string; text: string }[] };
@@ -32,6 +33,14 @@ export function QuizStep({
   );
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  // esame finale: servono prima i dati per il certificato (null = in verifica)
+  const [haDati, setHaDati] = useState<boolean | null>(isExam ? null : true);
+  useEffect(() => {
+    if (!isExam) return;
+    leggiMiaAnagraficaAction()
+      .then((r) => setHaDati(!!r.dati))
+      .catch(() => setHaDati(true)); // in dubbio si lascia provare: il server ricontrolla comunque
+  }, [isExam]);
   const fired = useRef(quiz.passed);
 
   useEffect(() => {
@@ -123,17 +132,28 @@ export function QuizStep({
           </span>
           <p className="mt-4 text-sm text-muted-foreground">
             {isExam
-              ? "Esame finale: rispondi alle domande entro il tempo. Al superamento il certificato va in revisione."
+              ? "Esame finale: rispondi alle domande entro il tempo. Al superamento ricevi subito il certificato provvisorio."
               : "Checkpoint: supera il quiz per proseguire. Domande a estrazione casuale."}
           </p>
-          <button
-            onClick={start}
-            disabled={loading}
-            className="mt-5 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-white transition hover:brightness-110 disabled:opacity-60"
-          >
-            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-            {isExam ? "Inizia l'esame" : "Inizia il quiz"}
-          </button>
+          {haDati === false ? (
+            <div className="mt-5 border-t border-border pt-5">
+              <p className="mb-4 text-left text-sm text-near-black">
+                <strong>Prima dell&apos;esame, i dati per il certificato.</strong> Servono per il certificato
+                accreditato: codice fiscale, data e luogo di nascita. Li inserisci una volta sola e puoi
+                correggerli dal Profilo fino al rilascio del certificato.
+              </p>
+              <DatiCertificatoForm iniziali={null} bloccata={false} pulsante="Salva e continua" onSalvato={() => setHaDati(true)} />
+            </div>
+          ) : (
+            <button
+              onClick={start}
+              disabled={loading || haDati === null}
+              className="mt-5 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-white transition hover:brightness-110 disabled:opacity-60"
+            >
+              {loading || haDati === null ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
+              {isExam ? "Inizia l'esame" : "Inizia il quiz"}
+            </button>
+          )}
         </div>
       )}
 

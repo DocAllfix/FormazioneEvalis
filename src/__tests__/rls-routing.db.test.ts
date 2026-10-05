@@ -25,6 +25,7 @@ import { startQuiz, submitQuiz } from "@/features/quiz/engine";
 import { getCourseForPlayer } from "@/features/courses/get-course-for-player";
 import { ensureCertificateRecord, getCertificatoPerChiave, certificatoPerDownload } from "@/features/certificates/lifecycle";
 import { deleteCertificatePdf } from "@/lib/supabase/storage";
+import { salvaAnagrafica, leggiAnagrafica } from "@/features/certificates/anagrafica";
 
 const FORCED = process.env.RLS_FORCE_ROLE === "app_rls";
 const RUN = Date.now();
@@ -121,6 +122,12 @@ describe.skipIf(!FORCED)("RLS routing end-to-end (ruolo app_rls forzato)", () =>
 
     // il provvisorio: lo scarica il proprietario (sotto RLS), non un altro utente
     const D = await mkLearner("D");
+
+    // dati per il certificato sotto RLS: ognuno vede solo i propri, lo staff tutti
+    await salvaAnagrafica(D.uid, { codiceFiscale: "RSSMRA80A01H501U", dataNascita: "1980-01-01", luogoNascita: "Roma" });
+    expect((await leggiAnagrafica(D.uid))?.luogoNascita).toBe("Roma");
+    expect(await leggiAnagrafica(D.uid, { userId: C.uid })).toBeNull();
+    expect((await leggiAnagrafica(D.uid, { platformAdmin: true }))?.luogoNascita).toBe("Roma");
     expect((await certificatoPerDownload(rec!.id, { userId: C.uid, staff: false }))?.tipo).toBe("provvisorio");
     expect(await certificatoPerDownload(rec!.id, { userId: D.uid, staff: false })).toBeNull();
 
