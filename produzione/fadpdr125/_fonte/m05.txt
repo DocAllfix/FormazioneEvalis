@@ -1,0 +1,667 @@
+## SEZIONE 15 — B1 · IL PUNTEGGIO PONDERATO
+
+### SCHERMATA 1 — La formula
+B1 · Punto 5.1
+Come si calcola il punteggio
+La prassi enuncia la regola in una riga: ogni singolo indicatore è associato a un punteggio, il cui raggiungimento o meno viene ponderato per il peso dell’area di appartenenza. Le FAQ la rendono esplicita con l’esempio delle micro-organizzazioni.
+1. per ogni area: punti area = somma dei punti degli indicatori soddisfatti (da 0 a 100)
+2. per ogni area: contributo = peso dell’area × punti area / 100
+3. punteggio = somma dei sei contributi (da 0 a 100)
+4. certificabile se punteggio ≥ 60 (fasce 3 e 4)
+Area
+Peso
+Punti massimi
+Contributo massimo
+Cultura e strategia
+15%
+100
+15,0
+Governance
+15%
+100
+15,0
+Processi HR
+10%
+100
+10,0
+Opportunità di crescita e inclusione
+20%
+100
+20,0
+Equità remunerativa per genere
+20%
+100
+20,0
+Tutela della genitorialità e conciliazione
+20%
+100
+20,0
+Totale
+100%
+100,0
+Il punteggio è una somma di prodotti, non una media.
+Ogni area contribuisce al massimo con il proprio peso: Processi HR non può portare più di 10 punti, Equità fino a 20.
+La soglia è uno «score minimo di sintesi complessivo del 60%». Per le fasce 3 e 4, dove il massimo è 100, significa 60 punti.
+Una parola sul «modello dinamico» La prassi dice che il modello di calcolo è dinamico: l’algoritmo si aggiorna ogni anno con una nuova media sulla base dei dati dell’anno precedente per ogni categoria ATECO. Riguarda i valori di confronto degli indicatori di settore, non i pesi né i punti.
+Fonte UNI/PdR 125:2022, punto 5.1; FAQ UNI-Accredia 2026, § 1 «KPI quantitativi».
+
+### SCHERMATA 2 — La soglia non è per area
+B1 · Primo errore
+Il 60% si misura sul totale, non su ogni area
+Si sente dire «Serve il 60% in ogni area.»
+Che cosa dicono le fonti La soglia è sul punteggio complessivo ponderato. La prassi parla di «score minimo di sintesi complessivo del 60%» e non fissa alcun minimo per la singola area.
+Un esempio costruito apposta. Un’organizzazione di fascia 3 ha acceso tutti gli indicatori delle tre aree qualitative, è a metà strada nella crescita e non ha raggiunto nessuno dei tre indicatori di equità remunerativa.
+Area
+Peso
+Punti area
+Contributo
+Cultura e strategia
+15%
+100
+15,0
+Governance
+15%
+100
+15,0
+Processi HR
+10%
+100
+10,0
+Opportunità di crescita e inclusione
+20%
+45
+9,0
+Equità remunerativa per genere
+20%
+0
+0,0
+Tutela della genitorialità e conciliazione
+20%
+80
+16,0
+Punteggio
+65,0
+Esito 65,0 punti: sopra la soglia, con un’area a zero. Per il calcolo è certificabile.
+Che cosa l’esempio non autorizza Il punteggio è una condizione necessaria, non l’unica. L’auditor verifica anche i requisiti sistemici del punto 6: un’organizzazione che ignora l’equità salariale ha con ogni probabilità un piano strategico privo di obiettivi su quel tema, e questo è un rilievo sul sistema che i punti non compensano. Inoltre l’area a zero resta visibile nella rivalutazione biennale, dove va dimostrato il miglioramento.
+Fonte UNI/PdR 125:2022, punto 5.1 e Appendice A «Modalità di svolgimento dell’audit». Esempio numerico del corso.
+
+### SCHERMATA 3 — La media semplice è sbagliata
+B1 · Secondo errore
+La media delle sei aree dà un altro numero
+Si sente dire «Il punteggio è la media delle sei aree.»
+Che cosa dicono le fonti Le aree pesano 15, 15, 10, 20, 20 e 20. La media semplice tratta tutte le aree come se pesassero un sesto: dà un numero diverso, e sbagliato.
+Con i punti di area di Tifata alla prima rilevazione:
+punti di area 60 · 60 · 60 · 45 · 40 · 60
+media semplice (60 + 60 + 60 + 45 + 40 + 60) / 6 = 325 / 6 = 54,17 ← errato
+somma ponderata 9,0 + 9,0 + 6,0 + 9,0 + 8,0 + 12,0 = 53,0 ← corretto
+differenza 54,17 − 53,0 = 1,17 punti
+La media semplice sopravvaluta Tifata perché dà alle aree deboli, che sono quelle da 20%, lo stesso peso delle aree forti da 10 e 15%. Il verso dell’errore non è fisso: se le aree deboli fossero quelle leggere, la media sottovaluterebbe.
+Dove si annida
+Nei fogli di calcolo costruiti con la funzione MEDIA sulla colonna delle percentuali di area, e nei cruscotti che mostrano «avanzamento medio».
+Come si evita
+Una colonna per i punti di area, una per il peso, una per il prodotto. In fondo una somma. Mai una media.
+Fonte UNI/PdR 125:2022, punto 5.1. Dati del caso.
+
+### SCHERMATA 4 — Il punteggio di Tifata alla prima rilevazione
+B1 · Caso
+Prima rilevazione: 53,0
+Area
+Indicatori accesi
+Punti area
+Peso
+Contributo
+Cultura e strategia
+2, 3, 5, 6 su 7
+60
+15%
+9,0
+Governance
+2, 3, 5 su 5
+60
+15%
+9,0
+Processi HR
+1, 4, 5 su 6
+60
+10%
+6,0
+Opportunità di crescita e inclusione
+2, 6 su 5
+45
+20%
+9,0
+Equità remunerativa per genere
+1 su 3
+40
+20%
+8,0
+Tutela della genitorialità e conciliazione
+2, 3 su 5
+60
+20%
+12,0
+Punteggio
+100%
+53,0
+Cultura e strategia 60 su 100
+Governance 60 su 100
+Processi HR 60 su 100
+Opportunità di crescita e inclusione 45 su 100
+Equità remunerativa per genere 40 su 100
+Tutela della genitorialità e conciliazione 60 su 100
+53,0
+punti su 100. La soglia è 60: mancano 7,0 punti . Alla prima rilevazione Tifata non è certificabile.
+Indicatori accesi: 15 su 31 applicabili.
+Nessuna area è sotto il 40%, nessuna sopra il 60%: un profilo piatto, tipico di un’organizzazione che ha buone pratiche sparse e nessun sistema.
+I sette punti che mancano non vanno cercati «un po’ ovunque». La sezione E mostra come sceglierli.
+Fonte UNI/PdR 125:2022, prospetti 3-8. Stato degli indicatori: dati del caso, rilevazione di ottobre 2026.
+
+### SCHERMATA 5 — Quanto vale ogni indicatore
+B1 · Lo strumento per decidere
+Il valore di un indicatore sul punteggio finale
+Moltiplicando i punti di ogni indicatore per il peso della sua area si ottiene quanto quell’indicatore, da solo, sposta il punteggio. Sono i dieci più pesanti fra quelli applicabili alla fascia 3, con lo stato di Tifata.
+Area
+N.
+Indicatore
+Punti area
+Sul totale
+Tifata
+Equità remunerativa per genere
+1
+Differenza retributiva a parità di livello e di competenze
+40
+8,00
+SÌ
+Tutela della genitorialità e conciliazione
+2
+Policy oltre il CCNL per maternità, paternità e conciliazione
+35
+7,00
+SÌ
+Equità remunerativa per genere
+2
+Promozioni delle donne su base annua
+30
+6,00
+NO
+Equità remunerativa per genere
+3
+Donne con remunerazione variabile
+30
+6,00
+NO
+Opportunità di crescita e inclusione
+2
+Quota di donne sull’organico rispetto al settore
+25
+5,00
+SÌ
+Opportunità di crescita e inclusione
+4
+Quota di donne dirigenti rispetto al settore
+25
+5,00
+NO
+Tutela della genitorialità e conciliazione
+3
+Mantenimento dei benefit e valorizzazione della genitorialità
+25
+5,00
+SÌ
+Opportunità di crescita e inclusione
+5
+Quota di donne responsabili di unità organizzative
+20
+4,00
+NO
+Opportunità di crescita e inclusione
+6
+Quota di donne nella prima linea di riporto al vertice
+20
+4,00
+SÌ
+Tutela della genitorialità e conciliazione
+1
+Servizi dedicati al rientro dopo maternità o paternità
+20
+4,00
+NO
+i dieci indicatori più pesanti valgono insieme 54,0 punti su 100
+Tifata ne ha accesi 5, per 29,0 punti
+Sono tutti nelle tre aree da 20%. Sette su dieci sono quantitativi: dipendono da numeri che cambiano in anni, non in mesi.
+I più pesanti fra i qualitativi sono le policy di genitorialità oltre il contratto collettivo (7,0) e il mantenimento dei benefit (5,0): decisioni aziendali che non richiedono di cambiare la composizione dell’organico.
+Subito dopo, fuori dalla tabella, vengono presidio di governance e processi per la non inclusività: 3,75 punti ciascuno.
+Uso corretto La tabella serve a ordinare le priorità, non a scegliere gli indicatori «convenienti» ignorando gli altri. Un piano che trascura un tema perché rende pochi punti viola il punto 6.3.2, dove i temi sono sei per tutti.
+Fonte UNI/PdR 125:2022, prospetti 3-8. Elaborazione del corso; stato degli indicatori: dati del caso.
+
+### SCHERMATA 6 — Che cosa il punteggio non dice
+B1 · Limiti del numero
+Tre cose che il punteggio da solo non garantisce
+Che il sistema esista
+La documentazione di audit deve registrare requisiti sistemici (politica, obiettivi, piano, monitoraggio) e requisiti operativi (indicatori). Sessanta punti senza un piano attuato non bastano.
+Che il numero sia vero
+La valutazione degli indicatori comprende i dati statistici raccolti, accompagnati da evidenze documentate. Un indicatore dichiarato acceso senza evidenza viene spento dall’auditor.
+Che duri
+La certificazione è rilasciata al momento della rilevazione, se il punteggio minimo c’è. Poi i KPI si monitorano ogni anno e si rivalutano ogni due: sui gap rilevati vanno attuati piani di mitigazione e miglioramento.
+Organizzazione
+Soglia
+Riferimento
+Fascia 1 · micro
+≥ 21: le FAQ arrotondano così il 60% di 35,25, che è 21,15
+FAQ, valore espresso
+Fascia 2 · piccola
+60% del massimo ottenibile con gli indicatori necessari (50,5 → 30,3)
+Calcolo del corso con il metodo delle FAQ
+Fasce 3 e 4
+≥ 60 su 100
+Prassi, punto 5.1
+Più ragioni sociali
+Ogni ragione sociale deve raggiungere il proprio 60%
+FAQ
+Gruppi e multisito Nelle certificazioni che comprendono più entità giuridiche ognuna deve raggiungere singolarmente il punteggio minimo perché la capogruppo possa essere certificata. Una società del gruppo sotto soglia non viene compensata dalle altre.
+Fonte UNI/PdR 125:2022, punto 5.1 e Appendice A; FAQ UNI-Accredia 2026, § 1 e § 4.
+
+## SEZIONE 16 — B2 · EQUITÀ REMUNERATIVA
+
+### SCHERMATA 1 — Che cosa si confronta
+B2 · Punto 5.6
+Tre indicatori, una definizione larga di retribuzione
+L’area vale 20 punti su 100 e ha tre soli indicatori. È l’area dove un errore di metodo costa di più: un solo indicatore sbagliato sposta fino a otto punti.
+Che cosa entra nel confronto
+Che cosa resta fuori
+Retribuzione complessiva corrisposta: parte fissa, componenti accessorie, premialità di risultato, bonus, ogni altro beneficio (definizione 3.25)
+Corresponsioni legate a maggiori o diverse prestazioni: straordinario, indennità, rimborsi vari (nota all’indicatore 1)
+Benefit e welfare, nella logica di total reward dichiarata dall’area
+Persone e livelli in cui è presente un solo genere
+Indicatore 1 · 40 punti
+Differenza retributiva per medesimo livello di inquadramento e a parità di competenze. Raggiunto se il delta è inferiore al 10% a parità di mansione o ruolo.
+Indicatore 2 · 30 punti
+Promozioni: quota di donne promosse sul totale donne pari alla quota di uomini promossi sul totale uomini, per livelli funzionali.
+Indicatore 3 · 30 punti
+Remunerazione variabile: quota di donne con variabile pari alla quota di uomini con variabile. Criteri resi noti a lavoratrici e lavoratori.
+Il part-time Per confrontare retribuzioni annue fra persone con orari diversi occorre riportarle a tempo pieno, o confrontare retribuzioni orarie. In Tifata dodici part-time su quattordici sono donne: senza questo passaggio il divario risulterebbe gonfiato dall’orario, non dalla paga. La prassi non detta la tecnica; il metodo scelto va scritto e applicato in modo uniforme.
+Fonte UNI/PdR 125:2022, punti 3.25 e 5.6, prospetto 7. Nota sul part-time: indicazione metodologica del corso.
+
+### SCHERMATA 2 — Divario grezzo e divario a parità di livello
+B2 · L’errore di metodo
+La differenza fra le medie generali non è l’indicatore
+Si sente dire «Il divario retributivo è la differenza fra la paga media degli uomini e quella delle donne.»
+Che cosa dicono le fonti L’indicatore di equità confronta le retribuzioni a parità di mansione e livello. La differenza fra le medie generali misura un’altra cosa: quanto diversamente uomini e donne sono distribuiti fra i livelli.
+In Tifata, con le retribuzioni riportate a tempo pieno:
+monte retributivo uomini 1.658.600 € / 55 = 30.156 € di media
+monte retributivo donne 809.006 € / 31 = 26.097 € di media
+divario grezzo (30.156 − 26.097) / 30.156 = 13,5%
+Il 13,5% supera il 10%. Chi si fermasse qui spegnerebbe l’indicatore 1 e perderebbe otto punti. Ma l’indicatore non chiede questo numero.
+Che cosa dice il divario grezzo
+Che gli uomini sono più presenti nei livelli alti: i due dirigenti sono uomini, e sei quadri su otto. È un problema di carriera, e lo misura l’area Opportunità di crescita.
+Che cosa dice il divario a parità di livello
+Se un uomo e una donna nello stesso livello ricevono retribuzioni diverse. È il problema di equità retributiva in senso stretto, e lo misura l’indicatore 1.
+I due numeri servono entrambi Il divario grezzo è quello che il D.Lgs. 96/2026 definisce divario retributivo di genere: differenza fra le medie, in percentuale della media maschile. Un’impresa tenuta alla comunicazione dovrà calcolare anche quello. Nel sistema per la parità i due numeri vanno tenuti in due caselle distinte.
+Fonte UNI/PdR 125:2022, prospetto 7, indicatore 1; FAQ UNI-Accredia 2026, § 2. Dati del caso.
+
+### SCHERMATA 3 — Il calcolo per livello
+B2 · Caso
+Tifata, livello per livello
+Livello
+Uomini
+Retribuzione media uomini
+Donne
+Retribuzione media donne
+Differenza
+Dirigenti
+2
+95.000 €
+0
+—
+non considerato
+Quadri e 1° livello
+6
+46.000 €
+2
+43.240 €
+6,0%
+3° livello
+9
+29.400 €
+13
+27.342 €
+7,0%
+4° livello
+22
+25.600 €
+6
+24.320 €
+5,0%
+5° livello
+16
+22.800 €
+10
+22.116 €
+3,0%
+Totale
+55
+30.156 €
+31
+26.097 €
+grezzo 13,5%
+3° livello: (29.400 − 27.342) / 29.400 = 2.058 / 29.400 = 7,0%
+La differenza più alta è al 3° livello: 7,0%. Tutti i livelli in cui sono presenti entrambi i generi stanno sotto il 10%.
+Il livello dei dirigenti ha solo uomini: non si considera nella valutazione.
+Indicatore 1 raggiunto : 40 punti dell’area, 8,0 sul totale.
+Perché il totale è peggiore di ogni riga Nessun livello supera il 7,0%, eppure il divario grezzo è 13,5%. Non è un errore di calcolo: le donne sono concentrate nei livelli 3° e 5°, gli uomini nel 4° e nelle posizioni di vertice. La composizione pesa più delle differenze dentro i livelli.
+Livello e mansione L’indicatore parla di «medesimo livello» nella descrizione e di «parità di mansione/ruolo» nella modalità di misurazione. Dove un livello contrattuale raccoglie mansioni molto diverse, il confronto per solo livello può nascondere o inventare differenze. È il motivo per cui il tema «equità salariale» chiede un mansionario aziendale.
+Fonte UNI/PdR 125:2022, prospetto 7 e punto 6.3.2.3; FAQ UNI-Accredia 2026, § 2. Retribuzioni del caso, riportate a tempo pieno ed esclusi straordinari, indennità e rimborsi.
+
+### SCHERMATA 4 — Le regole delle FAQ
+B2 · Indicatore 1
+Quattro regole che decidono l’esito
+Soglia. L’indicatore si ritiene soddisfatto quando il delta fra retribuzione media maschile e femminile a parità di mansione o ruolo è inferiore al 10%.
+Un solo livello basta a spegnerlo. Se il gap è superiore al 10% anche in un solo livello, il punteggio è zero.
+Livelli con un solo genere. Non si considerano: si valutano solo i livelli in cui sono presenti entrambi i generi.
+Niente medie di medie. È da escludersi qualsiasi media di media; è auspicabile il ricorso a dati il più possibile disaggregati.
+La seconda regola è la più severa e cambia il modo di leggere la tabella di Tifata. Non conta la media delle quattro differenze, conta la peggiore.
+Scenario
+Differenze per livello
+Esito indicatore 1
+Punti sul totale
+Tifata oggi
+6,0% · 7,0% · 5,0% · 3,0%
+SÌ
+8,0
+Una sola assunzione fra i quadri, con retribuzione sopra i minimi contrattuali, porta quel livello all’11%
+11,0% · 7,0% · 5,0% · 3,0%
+NO
+0,0
+Tutte le differenze ridotte sotto il 5%
+sotto 5,0% in ogni livello
+SÌ
+8,0
+Fragilità Otto punti dipendono dal livello peggiore. In Tifata i quadri uomini sono sei e le donne due: basta una variazione su una persona per spostare la media del livello. L’obiettivo del piano, portare ogni livello sotto il 5%, serve anche a mettere distanza dalla soglia.
+«Decrescente negli anni successivi» Il prospetto aggiunge che il delta deve essere, «come per ogni indicatore», decrescente negli anni successivi. Alla rivalutazione biennale non basta essere ancora sotto il 10%: va mostrato l’andamento.
+Fonte UNI/PdR 125:2022, prospetto 7; FAQ UNI-Accredia 2026, § 2 «Area Equità remunerativa per genere». Scenari del corso.
+
+### SCHERMATA 5 — Promozioni e variabile
+B2 · Indicatori 2 e 3
+Due uguaglianze difficili
+Gli altri due indicatori non hanno una soglia di tolleranza: chiedono che due percentuali siano pari.
+Indicatore 2 · promozioni nell’ultimo anno, per livelli funzionali
+Livelli 3°, 4° e 5° uomini 3 / 47 = 6,4% donne 1 / 29 = 3,4%
+Quadri e 1° livello uomini 1 / 6 = 16,7% donne 0 / 2 = 0,0%
+→ quote non pari in nessuno dei due gruppi: non raggiunto
+Indicatore 3 · remunerazione variabile
+uomini con variabile 20 / 55 = 36,4%
+donne con variabile 6 / 31 = 19,4% → non pari: non raggiunto
+Per le promozioni la prassi chiede di considerare i diversi livelli funzionali e non il valore assoluto; le FAQ aggiungono che il dato va valutato solo in maniera disaggregata. Per questo il confronto è fatto per gruppi di livelli e non sul totale aziendale, che sarebbe 4 uomini su 55 e 1 donna su 31. Se nel periodo non ci sono state promozioni né di donne né di uomini, l’indicatore non è soddisfatto.
+Per il variabile: con 31 donne, la quota maschile del 36,4% corrisponde a 11,3 persone. Servirebbero almeno 12 donne con variabile; oggi sono 6.
+In Tifata il premio variabile è previsto per responsabili, commerciali e capiturno, ruoli in prevalenza maschili. Il nodo è il perimetro del sistema premiante, non l’importo.
+area Equità remunerativa, Tifata: solo indicatore 1 → 40 punti ; 20% × 40 = 8,0
+Che cosa mette il piano Criteri scritti e resi noti per il variabile, ed estensione del premio a ruoli oggi esclusi. Sono azioni che richiedono un ciclo di bilancio e spesso un confronto sindacale: nel caso, alla seconda rilevazione l’area sarà ancora a 40.
+Fonte UNI/PdR 125:2022, prospetto 7, indicatori 2 e 3; FAQ UNI-Accredia 2026, § 2. Dati del caso.
+
+### SCHERMATA 6 — Il raccordo con la trasparenza retributiva
+B2 · D.Lgs. 96/2026
+Due soglie diverse per due scopi diversi
+Indicatore 1 della prassi
+D.Lgs. 96/2026
+Natura
+Indicatore di un sistema volontario
+Obbligo di legge
+Che cosa si confronta
+Retribuzione media di uomini e donne a parità di livello, mansione o ruolo
+Livelli retributivi medi per sesso dentro ciascuna categoria di lavoratori che svolgono lo stesso lavoro o un lavoro di pari valore
+Soglia
+Inferiore al 10% in ogni livello
+Almeno 5% in una categoria fa scattare la richiesta di giustificazione o correzione
+Conseguenza
+Punti assegnati o non assegnati
+Se non giustificato e non corretto entro sei mesi: valutazione congiunta delle retribuzioni con i rappresentanti dei lavoratori
+A chi si applica
+A chi sceglie di certificarsi
+Obbligo di comunicazione da 100 dipendenti; diritto di informazione individuale per tutti
+Il 3° livello di Tifata ha una differenza del 7,0%. Per la prassi è sotto soglia e l’indicatore è acceso. Se Tifata avesse cento dipendenti e quel livello coincidesse con una categoria del decreto, la stessa differenza sarebbe sopra il 5%: andrebbe giustificata con criteri oggettivi e neutri, oppure corretta.
+Che cosa Tifata deve già fare
+Con 86 dipendenti non comunica il divario. Deve però rispondere entro due mesi alla lavoratrice che chiede i livelli retributivi medi per sesso della propria categoria. I dati dell’indicatore 1 sono la base per rispondere.
+Che cosa conviene fare
+Usare una sola classificazione dei ruoli per entrambi gli scopi, e fissare nel piano una soglia interna del 5%. È la scelta fatta nel caso pratico della Parte 1.
+Assenza dichiarata Soglie e termini del decreto sono riportati da sintesi professionali, non dal testo in Gazzetta. La coincidenza fra «livello» della prassi e «categoria» del decreto non è stabilita da nessuna fonte consultata: è una valutazione da fare caso per caso.
+Fonte UNI/PdR 125:2022, prospetto 7; D.Lgs. 96/2026, artt. 3, 4, 7, 9 e 10, attraverso Gianni & Origoni (3.6.2026) e CNDCEC. Dati del caso.
+
+## SEZIONE 17 — C1 · AUDIT INTERNO E RIESAME
+
+### SCHERMATA 1 — Gli audit interni
+C1 · Punto 6.4.5
+Il sistema di verifica interno
+L’organizzazione deve pianificare, attuare e documentare un sistema di audit interni indirizzati alla verifica della reale ed efficace applicazione della politica e delle direttive aziendali sulla parità di genere, e del rispetto delle istruzioni e procedure definite.
+Requisito
+Che cosa dice il punto 6.4.5
+Metodo
+Gli audit sono attuati secondo le modalità definite dalla UNI EN ISO 19011.
+Indipendenza
+Team indipendenti rispetto alle attività verificate.
+Competenza
+Sulla base di requisiti definiti dal sistema: per esempio corso ISO 19011, esperienza minima in azienda, formazione sulla prassi e sul sistema di gestione aziendale.
+Equilibrio
+Team bilanciati in termini di genere.
+Pianificazione
+Audit pianificati, comunicati, finalizzati a raccogliere evidenze oggettive della conformità.
+Esiti
+Le deviazioni vanno segnalate e gestite secondo le regole che la prassi richiama al punto 6.4.5.1; in pratica confluiscono nella gestione delle situazioni non conformi del punto 6.4.6.
+Che cosa verifica
+Due cose: il rispetto dei requisiti del sistema (punto 6) e lo stato degli indicatori (punto 5). Un audit interno che ricalcola il punteggio senza guardare politica, piano e temi è incompleto.
+Chi lo può fare in una media impresa
+Almeno due persone, di genere diverso, nessuna delle quali verifica il proprio lavoro. Tifata usa l’auditor interno del sistema qualità insieme a un’auditor esterna con competenza sulla prassi.
+I requisiti di competenza li scrive l’organizzazione La prassi dà esempi, non un elenco chiuso. Ma chiede che i requisiti siano «definiti dal sistema»: vanno scritti in una procedura, e per ogni auditor deve esistere l’evidenza che li possiede.
+Fonte UNI/PdR 125:2022, punto 6.4.5.
+
+### SCHERMATA 2 — Le evidenze
+C1 · Punto 6.4.5.1
+Evidenze quantitative ed evidenze qualitative
+L’audit deve raccogliere evidenze oggettive che dimostrino lo stato di conformità di quanto attuato. La prassi le divide in due famiglie e ne dà un elenco di esempi, che è anche una buona lista di controllo per preparare l’audit di terza parte.
+Quantitative · misurabili oggettivamente
+Report di monitoraggio dei KPI
+Budget dedicato alle iniziative sulla parità di genere
+Report di monitoraggio delle situazioni non conformi
+Piani formativi su parità di genere e sistema di gestione
+Check list di riferimento correttamente compilate e utilizzate
+Eventuale contenzioso sulla tematica
+Qualitative · valutabili su criteri condivisi
+Politiche aggiornate
+Piano strategico aggiornato
+Comunicazione interna ed esterna
+Coinvolgimento delle parti interessate: associazioni, enti pubblici, università, rappresentanze
+Attività di diffusione interna della cultura della parità di genere
+Eventuale partecipazione a iniziative esterne
+Fra le evidenze quantitative compare l’eventuale contenzioso. L’Appendice A chiede all’organismo di registrare le cause giudiziarie riferite a episodi di violazione dei diritti di genere in cui l’organizzazione è eventualmente coinvolta, e l’analisi degli episodi o delle minacce di violazione con le contromisure adottate.
+La check list La definizione 3.5 la descrive come la lista dei requisiti della prassi che occorre controllare e spuntare per verificare che le attività pianificate siano state eseguite correttamente. Costruirla sui punti 6.1-6.4 e sui prospetti 3-8 è il primo compito del gruppo di audit interno.
+Fonte UNI/PdR 125:2022, punti 3.5 e 6.4.5.1; Appendice A «Modalità di svolgimento dell’audit».
+
+### SCHERMATA 3 — Le situazioni non conformi
+C1 · Punto 6.4.6
+Che cosa è una non conformità in questo sistema
+Il perimetro è più largo di quello a cui è abituato chi viene dalla qualità. La prassi chiede una modalità di raccolta, gestione e documentazione delle situazioni non conformi che comprenda:
+Deviazioni dai requisiti
+Requisiti della prassi non rispettati, violazioni delle politiche: per esempio una selezione condotta fuori procedura.
+KPI non in linea
+Un indicatore che non raggiunge il valore atteso o che peggiora è esso stesso una situazione non conforme, da registrare e trattare.
+Segnalazioni e reclami
+Segnalazioni interne, reclami sui temi di parità, esiti dei meccanismi di whistle-blowing.
+Incidenti
+Incidenti o segnalazioni di violenze o sopraffazioni.
+Per ciascuna va data evidenza delle azioni attuate per risolvere le cause degli accadimenti. Quando la situazione è non conforme ai KPI devono attivarsi i meccanismi di comunicazione, dentro l’organizzazione o all’esterno, e azioni per rimuovere le cause.
+Situazione in Tifata
+Trattamento
+Azione sulle cause
+Annuncio pubblicato senza fascia retributiva
+Correzione dell’annuncio
+Modello di annuncio obbligatorio; controllo dell’ufficio personale prima della pubblicazione
+Indicatore sui responsabili fermo a 3 su 12 dopo un anno
+Registrazione come KPI non in linea
+Verifica del percorso di sviluppo; due candidature femminili per ogni posizione che si libera
+Segnalazione di commenti sessisti in un turno
+Presa in carico nei tempi dichiarati, tutela di chi segnala
+Formazione al capoturno; analisi nella revisione periodica
+Il registro vuoto Un registro delle situazioni non conformi senza alcuna voce, in un’organizzazione con indicatori spenti, non dimostra che tutto va bene: dimostra che il punto 6.4.6 non è applicato.
+Fonte UNI/PdR 125:2022, punto 6.4.6. Esempi del caso.
+
+### SCHERMATA 4 — La revisione periodica
+C1 · Punti 6.4.7 e 6.4.8
+Revisione periodica e miglioramento
+È ciò che nelle norme ISO si chiama riesame di direzione. L’organizzazione deve pianificare, attuare e mantenere registrazione di una revisione periodica del sistema da parte dell’alta direzione.
+Voce
+Requisito
+Chi
+L’alta direzione, con il coinvolgimento del comitato guida e delle funzioni responsabili dei temi individuati nel piano.
+Ogni quanto
+Con frequenza almeno annuale.
+Elementi in ingresso
+I risultati delle attività del punto 6; la continua congruità del piano strategico; la necessità di aggiornamenti e modifiche, anche per cambiamenti normativi significativi; le ulteriori esigenze formative.
+Effetti sulla politica
+La politica va riconfermata o aggiornata in questa sede (punto 6.1).
+Esiti
+Possono essere identificati obiettivi ulteriori, specifici, misurabili, raggiungibili, realistici e definiti temporalmente, da integrare nel piano strategico o in altri documenti.
+Che cosa portare al tavolo
+Punteggio ricalcolato con il confronto sull’anno prima, stato degli obiettivi del piano, esiti dell’audit interno, registro delle situazioni non conformi, segnalazioni, esito dell’indagine, novità normative.
+Novità normative del 2026
+Il D.Lgs. 96/2026 è un «cambiamento normativo significativo» nel senso del punto 6.4.7. La revisione periodica di quest’anno deve dire come il sistema ne tiene conto, e l’elenco dei requisiti normativi del punto 6.4.2 va aggiornato.
+Dove mettere la revisione in calendario Monitoraggio dei KPI ogni anno, revisione almeno annuale, rivalutazione dei KPI ogni due anni, sorveglianza dell’organismo ogni anno. Fissare la revisione periodica un mese prima della sorveglianza fa arrivare all’audit con i dati freschi e le decisioni prese.
+Fonte UNI/PdR 125:2022, punti 6.1, 6.4.2, 6.4.7 e 6.4.8; FAQ UNI-Accredia 2026, § 2.
+
+### SCHERMATA 5 — Il calendario di Tifata verso l’audit
+C1 · Caso
+Dal piano all’audit di certificazione
+Il comitato guida ha disposto le attività del sistema su un asse che va da gennaio 2027 a febbraio 2028. Le finestre si sovrappongono: le azioni correttive nate dall’audit interno sono ancora aperte quando la direzione fa la revisione periodica, e alcune lo saranno ancora allo stage 1. Allo stage 2 devono essere chiuse o pianificate.
+Stage 2 · febbraio 2028
+Attuazione delle azioni del piano strategico
+2ª rilevazione
+Azioni correttive
+Audit interno
+Revisione periodica
+gen 2027
+apr
+lug
+ott
+gen 2028
+Piano approvato
+16 marzo 2027
+Stage 1
+Asse in mesi da gennaio 2027. Calendario del caso: le date sono un’ipotesi di lavoro, non un requisito.
+Seconda rilevazione degli indicatori chiusa a ottobre 2027, dopo due mesi di raccolta dei dati: dà i numeri che l’audit interno verificherà.
+Audit interno a novembre, con gruppo bilanciato per genere e indipendente.
+Revisione periodica a dicembre: prende atto dell’audit, decide sulle azioni, riconferma la politica.
+Stage 1 a gennaio 2028, stage 2 a febbraio.
+Una data che attraversa il calendario Il 16 marzo 2027 cade nel terzo mese di questo asse: è il termine dei cinque anni della prassi. Tifata arriverà all’audit dopo quella data, con regole che alla data del corso non sono note. Il comitato guida ha messo a verbale il rischio e la verifica trimestrale delle comunicazioni di UNI e Accredia.
+Fonte UNI/PdR 125:2022, Premessa e punti 6.4.3-6.4.7. Calendario del caso.
+
+## SEZIONE 18 — C2 · L'ITER DI CERTIFICAZIONE
+
+### SCHERMATA 1 — Le regole di certificazione
+C2 · Appendice A
+Le regole che l’organismo deve seguire
+L’Appendice A definisce gli elementi necessari a un organismo di certificazione per valutare la conformità alla prassi. Chi prepara un’azienda deve conoscerle, perché dicono che cosa l’auditor è obbligato a guardare e a registrare.
+Voce
+Regola
+Norma di accreditamento
+UNI CEI EN ISO/IEC 17021-1.
+Chi può chiedere la certificazione
+Qualunque organizzazione, di qualsiasi dimensione e forma giuridica, pubblica o privata.
+A chi è rilasciata
+A un’entità giuridica o, con una struttura centralizzata di controllo, a un gruppo di società. Tutti i siti, le attività e i processi sono compresi.
+Esclusioni
+Non ammesse per processi o funzioni. In un gruppo si possono escludere singole entità giuridiche. Si può limitare a una sola nazione.
+Requisito per l’organismo
+Oltre a quanto chiede la ISO/IEC 17021-1, deve avere a sua volta un sistema di gestione conforme alla prassi.
+Documenti IAF
+Si applicano tutti quelli relativi ai sistemi di gestione; per i tempi di audit lo IAF MD 5.
+Scopo del certificato
+Formulato come per la ISO 9001, con menzione delle «Misure per garantire la parità di genere nel contesto lavorativo».
+La documentazione di audit deve riportare, fra l’altro: il perimetro con gli indirizzi delle sedi; la mappatura dei processi e l’elenco delle leggi applicabili in materia di parità; l’analisi degli episodi o delle minacce di violazione e le contromisure; le cause giudiziarie eventualmente in corso; le check list con il grado di applicazione dei requisiti.
+Casi particolari Le FAQ ammettono la certificazione dei contratti di rete iscritti nel registro delle imprese e quella dei consorzi con attività esterna dotati di personalità giuridica, compresi i consorzi stabili.
+Fonte UNI/PdR 125:2022, Appendice A, prospetto A.1; FAQ UNI-Accredia 2026, § 0.
+
+### SCHERMATA 2 — Il gruppo di audit
+C2 · Appendice A
+Chi arriva in azienda
+Le competenze si valutano sul gruppo nel suo insieme, auditor ed eventuali esperti tecnici. Devono essere presenti due profili; l’organismo può aggiungere altri esperti quando servono a completare le competenze.
+Auditor di sistema
+Almeno un componente qualificato per le valutazioni di sistemi di gestione per la qualità ai sensi della ISO 9001, con conoscenza approfondita e documentata della prassi e della linea guida UNI ISO 30415 su diversità e inclusione.
+Competenza giuslavoristica
+Un avvocato giuslavorista o un consulente del lavoro, iscritti da almeno cinque anni al relativo albo; oppure altro professionista con esperienza significativa, consolidata e documentata nel settore specifico e conoscenza della normativa applicabile.
+Il tempo degli esperti (tecnici e avvocati) può essere conteggiato al 50% ai fini della durata dell’audit.
+L’esperto deve essere presente quando si valutano gli indicatori: per le FAQ, almeno nelle fasi di valutazione di tutti i KPI, anche in collegamento sincrono da remoto.
+L’esperto tecnico deve dimostrare esperienza lavorativa in materia di parità di genere: consigliera o consigliere di parità, manager HR in organizzazioni che attuano politiche di parità, professionista della formazione o consulenza sul tema. Le attività di audit non sono equiparabili all’esperienza lavorativa diretta.
+Gli audit da remoto sono ammessi solo in modalità sincrona.
+Che cosa aspettarsi in audit Le FAQ 2026 chiedono all’organismo di dedicare tempo a interviste a uomini e donne, manager e non manager, a tutti i livelli, per verificare il grado di informazione e consapevolezza sulla politica, sul sistema e sulle azioni in essere. E di fare un sopralluogo, o almeno un tour virtuale, dove sono stati creati servizi dedicati.
+Per i consulenti del lavoro L’Appendice A indica il consulente del lavoro, iscritto da almeno cinque anni, come una delle figure che possono coprire la competenza giuslavoristica nel gruppo di verifica. È un ruolo incompatibile con la consulenza prestata alla stessa azienda: l’imparzialità è un principio della ISO/IEC 17021-1.
+Fonte UNI/PdR 125:2022, Appendice A «Criteri di competenza del Gruppo di verifica»; FAQ UNI-Accredia 2026, § 4.
+
+### SCHERMATA 3 — I tempi di audit
+C2 · IAF MD 5
+Quanto dura l’audit: non si contano tutti gli addetti
+La durata si calcola con il documento IAF MD 5, tabella dei sistemi di gestione per la qualità a bassa complessità. Il dato di ingresso è il numero di addetti equivalenti, e le FAQ fissano un metodo specifico per questo schema, perché il sistema riguarda soprattutto i processi di governance e del personale.
+Si contano al 100% gli addetti di: direzione, amministrazione del personale e HR, formazione, sistema di gestione per la parità di genere, legale, comunicazione.
+Si aggiunge il 10% degli addetti degli altri uffici e della produzione.
+Con il totale si entra nella tabella dello IAF MD 5 e si legge la durata.
+Tifata: addetti negli uffici contati per intero 9
+altri addetti 86 − 9 = 77
+addetti equivalenti 9 + 10% × 77 = 9 + 7,7 = 16,7
+Tifata entra in tabella con 16,7 addetti equivalenti, non con 86. È il motivo per cui un audit su questa prassi dura meno di un audit qualità sulla stessa azienda.
+In prima certificazione non è consentito scendere sotto la soglia minima della tabella: una giornata e mezza.
+Negli altri casi le riduzioni applicate devono essere giustificate come richiede il documento IAF.
+Sono esclusi dal calcolo i consulenti e i collaboratori occasionali e non continuativi.
+Per un sistema integrato con altri si applica lo IAF MD 11, e la durata va giustificata in base al grado di integrazione.
+Assenza dichiarata Il corso non riporta le giornate della tabella IAF MD 5: il documento va consultato nella revisione vigente. L’unico valore citato, la soglia di una giornata e mezza, è quello scritto nelle FAQ.
+Fonte UNI/PdR 125:2022, Appendice A «Tempi di audit»; FAQ UNI-Accredia 2026, § 4. Dati del caso.
+
+### SCHERMATA 4 — Il ciclo triennale
+C2 · ISO/IEC 17021-1
+Dallo stage 1 alla scadenza
+Il ciclo è quello di ogni certificazione di sistema di gestione: audit iniziale in due fasi, decisione, due sorveglianze, rinnovo prima della scadenza. A questo la prassi aggiunge un proprio orologio, la rivalutazione dei KPI ogni due anni.
+Scadenza · mese 36
+Validità del certificato · 36 mesi
+Stage 1 e 2
+1ª sorveglianza · entro 12 mesi
+2ª sorveglianza
+Chiusura non conformità maggiori · 6 mesi
+Rivalutazione KPI
+Audit di rinnovo
+−3
+0
+6
+12
+18
+24
+30
+Decisione di certificazione
+Due anni
+Asse in mesi dalla decisione di certificazione. Le finestre indicano entro quando un’attività deve avvenire, non quanto dura.
+Stage 1 : verifica della documentazione e della preparazione; stage 2 : verifica dell’attuazione e dell’efficacia, con la valutazione degli indicatori.
+Se le azioni su una non conformità maggiore non sono verificate entro sei mesi dall’ultimo giorno dello stage 2, lo stage 2 va ripetuto.
+La prima sorveglianza cade entro dodici mesi dalla data della decisione; poi almeno una per anno solare, salvo l’anno del rinnovo.
+L’audit di rinnovo va pianificato in tempo perché la decisione arrivi prima della scadenza.
+Fonte UNI CEI EN ISO/IEC 17021-1:2015, punto 9 (ciclo di certificazione), citata nella struttura senza riscontro puntuale dei singoli sottopunti; FAQ UNI-Accredia 2026, § 2.
+
+### SCHERMATA 5 — Tre orologi
+C2 · La certificazione nel tempo
+Il certificato non si ottiene una volta per tutte
+Si sente dire «Il certificato si ottiene una volta.»
+Che cosa dicono le fonti Dura tre anni, con sorveglianze annuali. Per le gare e per l’esonero conta che sia valido alla data richiesta.
+La prassi, al punto 5.1, scrive che la certificazione viene rivalutata e rinnovata ogni due anni. La ISO/IEC 17021-1 prevede un ciclo di tre. Le FAQ sciolgono la contraddizione con una frase che conviene imparare a memoria: «Il rinnovo della certificazione avviene ogni 3 anni; la rivalutazione dell’andamento dei KPI avviene ogni 2 anni; la sorveglianza da parte dell’OdC avviene ogni anno».
+Ogni anno
+La sorveglianza da parte dell’organismo di certificazione. All’interno: monitoraggio dei KPI e revisione periodica.
+Ogni due anni
+La rivalutazione dell’andamento dei KPI : va data evidenza del miglioramento o dei piani di mitigazione attivati sui gap.
+Ogni tre anni
+Il rinnovo della certificazione, con un audit completo prima della scadenza.
+Sul miglioramento biennale le FAQ sono realistiche: potrebbero non verificarsi miglioramenti sensibili per taluni indicatori. Ciò che non può mancare è l’evidenza del lavoro fatto sui gap.
+Che cosa guarda la sorveglianza
+Fonte
+L’efficace chiusura dei rilievi emersi dagli audit precedenti
+FAQ, § 4
+Gli indicatori nelle aree con potenziale criticità
+FAQ, § 4
+Gli indicatori con finestra temporale: formazione nell’ultimo biennio, indagine nell’ultimo anno
+Prospetto 3
+L’aggiornamento dei dati di confronto ISTAT
+FAQ, § 1 e § 5
+L’indicatore che si spegne da solo Un’indagine sulla percezione fatta sedici mesi prima della sorveglianza non è più «nell’ultimo anno». Tre punti sul totale se ne vanno senza che nessuno abbia fatto nulla di sbagliato, tranne dimenticare una scadenza.
+Fonte UNI/PdR 125:2022, punto 5.1 e prospetto 3; FAQ UNI-Accredia 2026, § 1, § 2 e § 4.
