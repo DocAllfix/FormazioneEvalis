@@ -18,6 +18,8 @@ import { inviaEmailAssistenza } from "@/lib/email/resend";
 import { renderEmail, esc } from "@/lib/email/layout";
 
 export const EMAIL_VENDITE = "evaliscert@libero.it";
+/** Chi riceve le notifiche interne (vendite, corsi completati): il committente e, in copia, lo staff. */
+export const DESTINATARI_INTERNI = [EMAIL_VENDITE, "dilonardoa28@gmail.com"];
 /** Prima di questo istante nessuna notifica: è il momento in cui la funzione è stata introdotta. */
 export const NOTIFICHE_DAL = new Date("2026-10-02T05:44:00Z");
 
@@ -145,5 +147,5 @@ export async function inviaNotificaVendita(event: Stripe.Event): Promise<{ sent:
   if (!deveNotificare(event)) return { sent: false };
   const s = event.data.object as Stripe.Checkout.Session;
   const { subject, html } = mailVendita(datiVendita(s, event.created), await nomeProdotto(s));
-  return inviaEmailAssistenza({ to: [EMAIL_VENDITE], subject, html });
+  return inviaEmailAssistenza({ to: DESTINATARI_INTERNI, subject, html });
 }

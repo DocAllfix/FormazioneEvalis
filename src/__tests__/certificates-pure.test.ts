@@ -60,7 +60,7 @@ describe("certificato provvisorio e mail", () => {
   });
 
   it("il committente riceve SOLO dalla produzione vera", () => {
-    expect(destinatarioCommittente({ VERCEL_ENV: "production" })).toBe("evaliscert@libero.it");
+    expect(destinatarioCommittente({ VERCEL_ENV: "production" })).toEqual(["evaliscert@libero.it", "dilonardoa28@gmail.com"]);
     expect(destinatarioCommittente({ VERCEL_ENV: "preview" })).toBeNull();
     expect(destinatarioCommittente({})).toBeNull();
   });

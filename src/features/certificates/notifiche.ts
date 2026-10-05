@@ -5,7 +5,7 @@
 // Tutti i valori dell'utente passano da esc().
 
 import { renderEmail, esc } from "@/lib/email/layout";
-import { EMAIL_VENDITE } from "@/features/billing/notifica-vendita";
+import { DESTINATARI_INTERNI } from "@/features/billing/notifica-vendita";
 import { NOTA_PROVVISORIO, GIORNI_ACCREDITATO } from "./testi";
 
 /**
@@ -13,8 +13,8 @@ import { NOTA_PROVVISORIO, GIORNI_ACCREDITATO } from "./testi";
  * la sua casella non deve mai ricevere prove (regola dell'utente). Fuori dalla produzione → null,
  * e chi chiama scrive nel log invece di inviare.
  */
-export function destinatarioCommittente(env: Record<string, string | undefined> = process.env): string | null {
-  return env.VERCEL_ENV === "production" ? EMAIL_VENDITE : null;
+export function destinatarioCommittente(env: Record<string, string | undefined> = process.env): string[] | null {
+  return env.VERCEL_ENV === "production" ? DESTINATARI_INTERNI : null;
 }
 
 export type DatiCertificato = {

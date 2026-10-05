@@ -135,7 +135,7 @@ export async function inviaAllarmeBlog(righe: string[]): Promise<{ sent: boolean
  * Resend accetta fino a 40 MB per messaggio; i certificati caricati sono limitati a 20 MB.
  */
 export async function inviaEmailConAllegati(m: {
-  to: string;
+  to: string | string[];
   subject: string;
   html: string;
   allegati: { nome: string; contenuto: Uint8Array }[];
