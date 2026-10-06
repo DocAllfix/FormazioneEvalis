@@ -72,11 +72,25 @@ export async function ensureCertificateRecord(
     const [existing] = await tx.select(cols).from(certificate).where(eq(certificate.enrollmentId, enrollmentId)).limit(1);
     if (existing) return { cert: existing, nuovo: false };
 
+    // i dati del titolare si FISSANO qui (sotto il lucchetto dell'anagrafica): da ora il
+    // certificato non dipende più dal profilo, che l'utente può modificare
+    const [chi] = await tx
+      .select({
+        learnerName: user.name,
+        codiceFiscale: anagraficaCertificato.codiceFiscale,
+        dataNascita: anagraficaCertificato.dataNascita,
+        luogoNascita: anagraficaCertificato.luogoNascita,
+      })
+      .from(user)
+      .leftJoin(anagraficaCertificato, eq(anagraficaCertificato.userId, user.id))
+      .where(eq(user.id, titolare.userId))
+      .limit(1);
+
     // numero e QR nascono qui: provvisorio e accreditato li condividono
     const verifyUuid = randomUUID();
     const inserted = await tx
       .insert(certificate)
-      .values({ enrollmentId, status: "ready_for_review", verifyUuid, number: makeCertificateNumber(new Date(), verifyUuid) })
+      .values({ enrollmentId, status: "ready_for_review", verifyUuid, number: makeCertificateNumber(new Date(), verifyUuid), ...chi })
       .onConflictDoNothing({ target: certificate.enrollmentId })
       .returning(cols);
     if (inserted.length === 0) {
@@ -124,14 +138,15 @@ async function datiCertificato(certificateId: string, ctx: TenantCtx): Promise<D
         createdAt: certificate.createdAt,
         enrollmentId: certificate.enrollmentId,
         ownerId: enrollment.userId,
-        learnerName: user.name,
+        // i dati fissati sul certificato; dal profilo solo se il certificato non li ha
+        learnerName: sql<string>`coalesce(${certificate.learnerName}, ${user.name})`,
         learnerEmail: user.email,
         courseTitle: course.title,
         courseId: course.id,
         requiredMinutes: course.requiredMinutes,
-        codiceFiscale: anagraficaCertificato.codiceFiscale,
-        dataNascita: anagraficaCertificato.dataNascita,
-        luogoNascita: anagraficaCertificato.luogoNascita,
+        codiceFiscale: sql<string | null>`coalesce(${certificate.codiceFiscale}, ${anagraficaCertificato.codiceFiscale})`,
+        dataNascita: sql<string | null>`coalesce(${certificate.dataNascita}, ${anagraficaCertificato.dataNascita})::text`,
+        luogoNascita: sql<string | null>`coalesce(${certificate.luogoNascita}, ${anagraficaCertificato.luogoNascita})`,
       })
       .from(certificate)
       .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
@@ -232,7 +247,7 @@ export async function listCertificatiStaff(filtro: { q?: string; stato?: StatoFi
   await requirePlatformAdmin();
   const q = filtro.q?.trim().slice(0, 100);
   const condizioni = [
-    q ? or(ilike(user.name, `%${q}%`), ilike(user.email, `%${q}%`), ilike(certificate.number, `%${q}%`)) : undefined,
+    q ? or(ilike(user.name, `%${q}%`), ilike(certificate.learnerName, `%${q}%`), ilike(user.email, `%${q}%`), ilike(certificate.number, `%${q}%`)) : undefined,
     filtro.stato && filtro.stato !== "tutti" ? eq(certificate.status, STATO_DB[filtro.stato]) : undefined,
   ].filter(Boolean);
   return withTenant({ platformAdmin: true }, async (tx) =>
@@ -241,14 +256,14 @@ export async function listCertificatiStaff(filtro: { q?: string; stato?: StatoFi
         id: certificate.id,
         status: certificate.status,
         number: certificate.number,
-        learnerName: user.name,
+        learnerName: sql<string>`coalesce(${certificate.learnerName}, ${user.name})`,
         learnerEmail: user.email,
         courseTitle: course.title,
         createdAt: certificate.createdAt,
         issuedAt: certificate.issuedAt,
-        codiceFiscale: anagraficaCertificato.codiceFiscale,
-        dataNascita: anagraficaCertificato.dataNascita,
-        luogoNascita: anagraficaCertificato.luogoNascita,
+        codiceFiscale: sql<string | null>`coalesce(${certificate.codiceFiscale}, ${anagraficaCertificato.codiceFiscale})`,
+        dataNascita: sql<string | null>`coalesce(${certificate.dataNascita}, ${anagraficaCertificato.dataNascita})::text`,
+        luogoNascita: sql<string | null>`coalesce(${certificate.luogoNascita}, ${anagraficaCertificato.luogoNascita})`,
       })
       .from(certificate)
       .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))

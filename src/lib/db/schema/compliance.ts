@@ -11,6 +11,7 @@
 
 import {
   pgTable,
+  date,
   pgEnum,
   text,
   integer,
@@ -99,6 +100,13 @@ export const certificate = pgTable(
     verifyUuid: uuid("verify_uuid").notNull().defaultRandom().unique(),
     // percorso del PDF su Supabase Storage (valorizzato all'emissione)
     pdfPath: text("pdf_path"),
+    // dati del titolare FISSATI alla nascita del certificato (migrazione 0033): da qui non
+    // cambiano più, anche se l'utente modifica il profilo. Vuoti solo sui certificati senza
+    // dati salvati, che ripiegano sul profilo.
+    learnerName: text("learner_name"),
+    codiceFiscale: text("codice_fiscale"),
+    dataNascita: date("data_nascita", { mode: "string" }),
+    luogoNascita: text("luogo_nascita"),
     // chi ha approvato (user.id) — mai automatico
     approvedBy: text("approved_by"),
     approvedAt: timestamp("approved_at", { withTimezone: true }),
