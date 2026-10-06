@@ -1,9 +1,42 @@
 // Generazione del PDF attestato con pdf-lib + QR (qrcode). Nessuna rete → testabile.
-// Layout programmatico (niente headless browser): A4 orizzontale, font standard.
+// Layout programmatico (niente headless browser): A4 orizzontale, font Noto Sans incorporato
+// (nomi e luoghi con Ł, ș, cirillico…); se il font non si carica, Helvetica standard.
 
-import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
+import { PDFDocument, StandardFonts, rgb, type PDFFont } from "pdf-lib";
+import fontkit from "@pdf-lib/fontkit";
 import QRCode from "qrcode";
 import { RIGA_PROVVISORIO_1, RIGA_PROVVISORIO_2 } from "./testi";
+import { NOTO_SANS_REGULAR, NOTO_SANS_BOLD } from "./font-certificato";
+
+// lettere senza scomposizione Unicode, per il ripiego su Helvetica
+const SENZA_ACCENTO: Record<string, string> = { Ł: "L", ł: "l", Đ: "D", đ: "d", Ħ: "H", ħ: "h", ı: "i" };
+
+/** Il testo con i soli caratteri che il font sa disegnare: gli altri perdono l'accento
+ *  (ș → s) o diventano "?". Un carattere mancante non deve mai far fallire il PDF. */
+function scrivibile(testo: string, f: PDFFont): string {
+  const ok = new Set(f.getCharacterSet());
+  const ha = (s: string) => Array.from(s).every((c) => ok.has(c.codePointAt(0)!));
+  return Array.from(testo)
+    .map((c) => {
+      if (ha(c)) return c;
+      const base = SENZA_ACCENTO[c] ?? c.normalize("NFD").replace(/\p{M}/gu, "");
+      return base && ha(base) ? base : "?";
+    })
+    .join("");
+}
+
+async function caricaFont(doc: PDFDocument): Promise<[PDFFont, PDFFont]> {
+  try {
+    doc.registerFontkit(fontkit);
+    return [
+      await doc.embedFont(Buffer.from(NOTO_SANS_REGULAR, "base64")),
+      await doc.embedFont(Buffer.from(NOTO_SANS_BOLD, "base64")),
+    ];
+  } catch (e) {
+    console.error("[certificati] font Noto non caricato, ripiego su Helvetica", e);
+    return [await doc.embedFont(StandardFonts.Helvetica), await doc.embedFont(StandardFonts.HelveticaBold)];
+  }
+}
 
 export interface CertificateData {
   learnerName: string;
@@ -22,12 +55,12 @@ export async function buildCertificatePdf(d: CertificateData): Promise<Uint8Arra
   const doc = await PDFDocument.create();
   const page = doc.addPage([842, 595]); // A4 orizzontale (punti)
   const { width, height } = page.getSize();
-  const font = await doc.embedFont(StandardFonts.Helvetica);
-  const bold = await doc.embedFont(StandardFonts.HelveticaBold);
+  const [font, bold] = await caricaFont(doc);
   const ink = rgb(0.1, 0.1, 0.1);
   const accent = rgb(0.2, 0.3, 0.5);
 
-  const center = (text: string, y: number, size: number, f = font) => {
+  const center = (testo: string, y: number, size: number, f = font) => {
+    const text = scrivibile(testo, f);
     const w = f.widthOfTextAtSize(text, size);
     page.drawText(text, { x: (width - w) / 2, y, size, font: f, color: ink });
   };
@@ -62,8 +95,8 @@ export async function buildCertificatePdf(d: CertificateData): Promise<Uint8Arra
   const qrPng = await doc.embedPng(qrDataUrl);
   const qrDim = 110;
   page.drawImage(qrPng, { x: width - qrDim - 60, y: 55, width: qrDim, height: qrDim });
-  page.drawText("Verifica l'autenticità:", { x: 60, y: 110, size: 9, font, color: ink });
-  page.drawText(d.verifyUrl, { x: 60, y: 95, size: 9, font, color: accent });
+  page.drawText(scrivibile("Verifica l'autenticità:", font), { x: 60, y: 110, size: 9, font, color: ink });
+  page.drawText(scrivibile(d.verifyUrl, font), { x: 60, y: 95, size: 9, font, color: accent });
 
   return doc.save();
 }
