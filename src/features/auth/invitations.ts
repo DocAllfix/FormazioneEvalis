@@ -8,7 +8,7 @@ import { eq } from "drizzle-orm";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { invitation, organization, user } from "@/lib/db/schema";
-import { requireActiveOrg } from "@/features/auth/guards";
+import { isPlatformStaffEmail, requireActiveOrg } from "@/features/auth/guards";
 import { assertSeatAvailable } from "@/features/billing/seats";
 import { ErroreUtente } from "@/lib/esito";
 
@@ -42,6 +42,11 @@ export async function verifyInvitedAccount(invitationId: string): Promise<void> 
     .limit(1);
   if (!inv || inv.status !== "pending" || inv.expiresAt < new Date()) {
     throw new ErroreUtente("Invito non valido o scaduto.");
+  }
+  // L'id dell'invito lo conosce anche chi invita: non basta a provare il possesso di un'email
+  // dello staff (darebbe i poteri di piattaforma). Quelle passano dalla verifica via email.
+  if (isPlatformStaffEmail(inv.email)) {
+    throw new ErroreUtente("Per questo indirizzo conferma l'email dal link che ti abbiamo inviato.");
   }
   await db.update(user).set({ emailVerified: true }).where(eq(user.email, inv.email));
 }
