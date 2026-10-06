@@ -51,8 +51,14 @@ export function QuizStep({
     }
   }, [quiz.passed, onPassed]);
 
+  // un tentativo si consegna una volta sola: il clic su "Invia" e l'invio automatico allo
+  // scadere del tempo possono partire nello stesso istante
+  const inviato = useRef<string | null>(null);
+
   const submit = useCallback(
     async (currentAttempt: string, currentAnswers: Record<string, string>) => {
+      if (inviato.current === currentAttempt) return;
+      inviato.current = currentAttempt;
       setLoading(true);
       setError("");
       try {
@@ -68,6 +74,7 @@ export function QuizStep({
           onPassed();
         }
       } catch (e) {
+        inviato.current = null; // si può riprovare (se era arrivato, il server risponde "già inviato")
         setError(e instanceof Error ? e.message : "Errore nell'invio.");
       } finally {
         setLoading(false);

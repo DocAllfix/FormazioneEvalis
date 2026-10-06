@@ -2,7 +2,7 @@
 // dalla banca, applica il limite di tempo sull'intero quiz, la soglia, il cooldown.
 // Le risposte corrette non lasciano mai il server.
 
-import { and, eq, inArray } from "drizzle-orm";
+import { and, eq, inArray, isNull } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { quiz, quizQuestion, quizAttempt } from "@/lib/db/schema";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
@@ -111,7 +111,9 @@ export async function submitQuiz(
   ctx: TenantCtx = {},
 ) {
   return withTenant(ctx, async (tx) => {
-    const [att] = await tx.select().from(quizAttempt).where(eq(quizAttempt.id, attemptId)).limit(1);
+    // FOR UPDATE: una seconda consegna simultanea dello stesso tentativo aspetta questa e poi
+    // trova submittedAt già pieno, invece di essere valutata anche lei
+    const [att] = await tx.select().from(quizAttempt).where(eq(quizAttempt.id, attemptId)).limit(1).for("update");
     if (!att) throw new Error("Tentativo inesistente.");
     if (att.submittedAt) throw new ErroreUtente("Tentativo già inviato.");
     if (!att.quizId || !att.startedAt) throw new Error("Tentativo non valido.");
@@ -135,10 +137,12 @@ export async function submitQuiz(
     const lockedUntil = passed ? null : new Date(now.getTime() + qz.cooldownSeconds * 1000);
 
     // update tentativo + audit (già nell'unica tx → atomici)
-    await tx
+    const aggiornati = await tx
       .update(quizAttempt)
       .set({ score: graded.score, passed, submittedAt: now, lockedUntil, detail: { drawnIds, answers, over } })
-      .where(eq(quizAttempt.id, attemptId));
+      .where(and(eq(quizAttempt.id, attemptId), isNull(quizAttempt.submittedAt)))
+      .returning({ id: quizAttempt.id });
+    if (aggiornati.length !== 1) throw new ErroreUtente("Tentativo già inviato.");
     const { organizationId, userId } = await auditContextFromEnrollment(tx, att.enrollmentId);
     await appendActivity(tx, {
       organizationId,
