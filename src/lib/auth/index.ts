@@ -93,6 +93,10 @@ export const auth = betterAuth({
   databaseHooks: authDatabaseHooks,
   plugins: [
     organization({
+      // L'app non ha una funzione per eliminare le aziende, e l'endpoint di better-auth resta spento:
+      // eliminare l'organizzazione cancellerebbe a cascata i ticket dei dipendenti e le risposte
+      // dello staff. Se un giorno servirà chiudere un'azienda, è un'operazione dello staff.
+      disableOrganizationDeletion: true,
       // Lo slug diventa il sottodominio nel link delle mail di invito: le stesse regole del modulo
       // dell'app (isValidSlug) valgono anche per chi crea o rinomina un'azienda chiamando
       // direttamente le API di better-auth. Lo slug si controlla solo quando cambia: gli spazi
