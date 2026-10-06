@@ -1,32 +1,23 @@
 // databaseHooks di better-auth: glue applicativo su creazione utente/sessione.
-// - user.create.after: crea l'org personale SOLO per i self-signup (gli invitati
-//   entrano nella company org via accettazione invito → niente org personale).
-// - session.create.before: imposta l'org attiva di default (prima membership).
+// - user.create.after: crea SEMPRE l'org personale, anche per chi ha un invito in sospeso
+//   (prima la saltava: chi poi non accettava, o aveva l'invito scaduto, restava senza spazio).
+// - session.create.before: imposta l'org attiva di default (spazio-predefinito.ts: azienda
+//   se ne è membro, altrimenti lo spazio personale).
 //   La Fase 2.5 aggiungerà session.create.after per la sessione singola.
 // - La Fase 2.4 (middleware) potrà sovrascrivere l'org attiva in base al sottodominio.
 
 import type { BetterAuthOptions } from "better-auth";
 import { and, eq, ne } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { invitation, member, session as sessionTable } from "@/lib/db/schema";
+import { member, session as sessionTable } from "@/lib/db/schema";
 import { appendActivity } from "@/features/audit/log";
 import { createPersonalOrg } from "./orgs";
-
-/** Esiste un invito pendente per questa email? (se sì → utente B2B, niente org personale) */
-export async function hasPendingInvitation(email: string): Promise<boolean> {
-  const rows = await db
-    .select({ id: invitation.id })
-    .from(invitation)
-    .where(and(eq(invitation.email, email), eq(invitation.status, "pending")))
-    .limit(1);
-  return rows.length > 0;
-}
+import { spazioPredefinito } from "./spazio-predefinito";
 
 export const authDatabaseHooks = {
   user: {
     create: {
       after: async (user) => {
-        if (await hasPendingInvitation(user.email)) return; // invitato → no org personale
         await createPersonalOrg(user.id);
       },
     },
@@ -34,13 +25,9 @@ export const authDatabaseHooks = {
   session: {
     create: {
       before: async (session) => {
-        const rows = await db
-          .select({ orgId: member.organizationId })
-          .from(member)
-          .where(eq(member.userId, session.userId))
-          .limit(1);
-        if (rows[0]) {
-          return { data: { ...session, activeOrganizationId: rows[0].orgId } };
+        const orgId = await spazioPredefinito(session.userId);
+        if (orgId) {
+          return { data: { ...session, activeOrganizationId: orgId } };
         }
         return undefined;
       },

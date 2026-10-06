@@ -77,6 +77,9 @@ export const auth = betterAuth({
     // Dopo il click sul link di conferma l'utente viene loggato in automatico (niente
     // secondo login) e reindirizzato al callbackURL del signUp (/dashboard → guard → onboarding).
     autoSignInAfterVerification: true,
+    // Il link di conferma vale un'ora. Chi lo perde o lo apre tardi non resta chiuso fuori:
+    // provando ad accedere (con la password giusta) ne riceve subito uno nuovo.
+    sendOnSignIn: true,
     async sendVerificationEmail({ user, url }) {
       await sendVerificationEmail({ to: user.email, url });
     },
@@ -93,6 +96,9 @@ export const auth = betterAuth({
   databaseHooks: authDatabaseHooks,
   plugins: [
     organization({
+      // Un invito si accetta solo con l'email confermata dal link mandato alla casella:
+      // l'id dell'invito lo conosce anche chi invita e non prova nulla.
+      requireEmailVerificationOnInvitation: true,
       // L'app non ha una funzione per eliminare le aziende, e l'endpoint di better-auth resta spento:
       // eliminare l'organizzazione cancellerebbe a cascata i ticket dei dipendenti e le risposte
       // dello staff. Se un giorno servirà chiudere un'azienda, è un'operazione dello staff.

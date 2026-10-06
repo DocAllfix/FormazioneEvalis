@@ -25,7 +25,11 @@ export default function Login({ next = null }) {
     const { error } = await signIn.email({ email, password });
     setLoading(false);
     if (error) {
-      setError(error.message || "Email o password non validi");
+      setError(
+        error.code === "EMAIL_NOT_VERIFIED"
+          ? "Il tuo indirizzo email non è ancora confermato. Ti abbiamo appena inviato un nuovo link di conferma: aprilo e poi accedi."
+          : error.message || "Email o password non validi",
+      );
       return;
     }
     // ?next= arriva già validato dalla pagina (solo percorsi interni, niente open-redirect).

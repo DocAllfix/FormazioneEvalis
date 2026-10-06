@@ -8,17 +8,20 @@ import { isValidSlug } from "@/lib/reserved-subdomains";
 import { serializeOrgMetadata } from "./org-metadata";
 
 /** Org personale del B2C: 1 membro owner, seatLimit 1, slug non-sottodominio `u-<id>`. */
-export async function createPersonalOrg(userId: string): Promise<string> {
+export async function createPersonalOrg(
+  userId: string,
+  exec: typeof db | Parameters<Parameters<typeof db.transaction>[0]>[0] = db,
+): Promise<string> {
   const orgId = crypto.randomUUID();
   const now = new Date();
-  await db.insert(organization).values({
+  await exec.insert(organization).values({
     id: orgId,
     name: "Spazio personale",
     slug: `u-${userId}`,
     createdAt: now,
     metadata: serializeOrgMetadata({ type: "personal", seatLimit: 1 }),
   });
-  await db.insert(member).values({
+  await exec.insert(member).values({
     id: crypto.randomUUID(),
     organizationId: orgId,
     userId,

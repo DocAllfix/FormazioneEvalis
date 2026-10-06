@@ -1,14 +1,14 @@
 "use client";
 
-// Iscrizione via INVITO (dipendente B2B non ancora registrato). Il link d'invito prova il possesso
-// dell'email → niente verifica email separata, niente password temporanee. Un'unica schermata:
-// crea account → verifica (via id invito) → accedi → diventa membro → entra sul sottodominio.
+// Iscrizione via INVITO (dipendente B2B non ancora registrato). L'id dell'invito lo conosce
+// anche chi invita, quindi NON prova il possesso dell'email: l'account si conferma con il link
+// mandato alla casella, come ogni altro. Dal link si torna a questa pagina, già dentro, e si
+// accetta l'invito. La schermata è la stessa che l'email abbia già un account oppure no.
 
 import { useState } from "react";
-import { Building2, Loader2 } from "lucide-react";
-import { signUp, signIn } from "@/lib/auth/client";
-import { verifyInvitedAccountAction, acceptInvitationAction } from "@/features/admin/server-actions";
-import { esegui } from "@/lib/esito";
+import Link from "next/link";
+import { Building2, Loader2, Mail } from "lucide-react";
+import { signUp } from "@/lib/auth/client";
 
 export function InvitedJoin({
   invitationId,
@@ -23,6 +23,9 @@ export function InvitedJoin({
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [sent, setSent] = useState(false);
+  const ritorno = `/accept-invitation/${invitationId}`;
+  const loginHref = `/login?next=${encodeURIComponent(ritorno)}`;
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -32,22 +35,38 @@ export function InvitedJoin({
       return;
     }
     setLoading(true);
-    try {
-      // 1) crea l'account (l'hook salta l'org personale perché esiste un invito pending)
-      await signUp.email({ email, password, name });
-      // 2) verifica l'account: l'id dell'invito prova il possesso dell'email
-      await esegui(verifyInvitedAccountAction(invitationId));
-      // 3) accedi (ora verificato → sessione, cookie condiviso su .dominio)
-      const { error: siErr } = await signIn.email({ email, password });
-      if (siErr) throw new Error(siErr.message || "Accesso non riuscito.");
-      // 4) diventa membro dell'azienda
-      await esegui(acceptInvitationAction(invitationId));
-      // 5) entra: siamo già sul sottodominio dell'azienda
-      window.location.assign("/dashboard");
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Impossibile completare l'iscrizione.");
-      setLoading(false);
+    // callbackURL: dopo il clic sul link di conferma si torna qui, già dentro, per accettare
+    const { error: suErr } = await signUp.email({ email, password, name, callbackURL: ritorno });
+    setLoading(false);
+    if (suErr) {
+      setError(suErr.message || "Impossibile completare l'iscrizione.");
+      return;
     }
+    setSent(true);
+  }
+
+  if (sent) {
+    return (
+      <div className="w-full max-w-md rounded-2xl border border-border bg-card p-8 text-center shadow-sm">
+        <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+          <Mail className="h-6 w-6" />
+        </span>
+        <h1 className="mt-5 font-heading text-2xl text-near-black">Controlla la tua email</h1>
+        <div className="mt-2 space-y-3 text-sm text-muted-foreground">
+          <p>
+            Abbiamo inviato un link di conferma a <strong className="text-near-black">{email}</strong>.
+            Aprilo per attivare l&apos;account: tornerai qui per unirti a {orgName}.
+          </p>
+          <p>Non la trovi? Controlla nella cartella spam.</p>
+          <p>
+            Hai già un account?{" "}
+            <Link href={loginHref} className="font-medium text-primary hover:underline">
+              Accedi
+            </Link>
+          </p>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -108,6 +127,12 @@ export function InvitedJoin({
           Crea accesso e unisciti
         </button>
       </form>
+      <p className="mt-4 text-center text-sm text-muted-foreground">
+        Hai già un account?{" "}
+        <Link href={loginHref} className="font-medium text-primary hover:underline">
+          Accedi
+        </Link>
+      </p>
     </div>
   );
 }

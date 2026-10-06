@@ -8,6 +8,7 @@ import { db } from "@/lib/db";
 import { member } from "@/lib/db/schema";
 import { getCurrentSession } from "@/lib/auth/server";
 import { ErroreUtente } from "@/lib/esito";
+import { assicuraSpazio, spazioPredefinito } from "./spazio-predefinito";
 
 export async function requireSession() {
   const ctx = await getCurrentSession();
@@ -15,22 +16,18 @@ export async function requireSession() {
   return ctx;
 }
 
-/** Prima organizzazione di cui l'utente è membro (fallback per l'org attiva). */
+/** Lo spazio in cui lavora l'utente quando la sessione non ne indica uno (spazio-predefinito.ts). */
 export async function firstMembershipOrgId(userId: string): Promise<string | null> {
-  const [m] = await db
-    .select({ orgId: member.organizationId })
-    .from(member)
-    .where(eq(member.userId, userId))
-    .limit(1);
-  return m?.orgId ?? null;
+  return spazioPredefinito(userId);
 }
 
 export async function requireActiveOrg() {
   const ctx = await requireSession();
   // Risoluzione lazy: better-auth può creare la sessione prima dell'org personale
   // (hook user.create.after), quindi activeOrganizationId può essere null al primo accesso.
-  const orgId = ctx.session.activeOrganizationId ?? (await firstMembershipOrgId(ctx.user.id));
-  if (!orgId) throw new Error("Nessuna organizzazione attiva.");
+  // Chi non ha nessuno spazio (registrato quando un invito in sospeso lo faceva saltare) ne
+  // riceve uno personale qui, invece di un errore.
+  const orgId = ctx.session.activeOrganizationId ?? (await assicuraSpazio(ctx.user.id));
   return { ...ctx, orgId };
 }
 

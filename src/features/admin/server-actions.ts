@@ -13,11 +13,11 @@ import { createCompanyOrg } from "@/features/auth/orgs";
 import { DEFAULT_COMPANY_SEATS } from "@/features/billing/seats";
 import { isValidSlug } from "@/lib/reserved-subdomains";
 import { appendActivity } from "@/features/audit/log";
-import { inviteMember, acceptInvitation, verifyInvitedAccount } from "@/features/auth/invitations";
+import { inviteMember, acceptInvitation } from "@/features/auth/invitations";
 import { enrollMemberInCourse } from "@/features/courses/assign";
 import { requireCompanyContext } from "@/features/admin/context";
 import { ErroreUtente } from "@/lib/esito";
-import { conEsito, type Esito } from "@/lib/esito";
+import { conEsito } from "@/lib/esito";
 
 /** Self-serve: l'utente crea il proprio spazio azienda e ne diventa owner. */
 export async function createMyCompany(input: { name: string; slug: string }) {
@@ -74,12 +74,6 @@ export async function inviteMemberAction(email: string, role: "admin" | "member"
 /** Accetta un invito (utente loggato → membro azienda; org dedotta dall'invito). */
 export async function acceptInvitationAction(invitationId: string) {
   return conEsito(() => acceptInvitation(invitationId));
-}
-
-/** Marca verificato l'account appena creato via invito (l'id invito prova il possesso email).
- *  Non richiede sessione: l'utente invitato non è ancora loggato. Gate = validità dell'invito. */
-export async function verifyInvitedAccountAction(invitationId: string): Promise<Esito<void>> {
-  return conEsito(() => verifyInvitedAccount(invitationId));
 }
 
 /** Assegna un corso a un dipendente dell'azienda amministrata (enrollment b2b_seat). */

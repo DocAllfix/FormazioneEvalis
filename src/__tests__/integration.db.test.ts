@@ -81,7 +81,7 @@ describe("Step 2 — integrazione DB", () => {
     expect(await firstMembershipOrgId(uid)).toBe(org.id);
   });
 
-  it("§1 utente invitato → NESSUNA org personale", async () => {
+  it("§1 utente invitato → ha comunque la sua org personale (non resta mai senza spazio)", async () => {
     const ownerId = await signUp("Owner", email("owner"));
     const coId = await createCompanyOrg({ name: "ACME", slug: `acme-${RUN}`, seatLimit: 5, ownerUserId: ownerId });
     createdOrgIds.push(coId);
@@ -100,7 +100,8 @@ describe("Step 2 — integrazione DB", () => {
 
     const inviteeId = await signUp("Invitee", inviteeEmail);
     const imems = await db.select().from(member).where(eq(member.userId, inviteeId));
-    expect(imems.length).toBe(0);
+    expect(imems.length).toBe(1);
+    expect(imems[0].role).toBe("owner");
   });
 
   it("§1 vincolo posti: company seatLimit=1 con solo owner → posto esaurito", async () => {
