@@ -5,6 +5,14 @@
 // state spostate qui INVARIATE, per non cambiare di una virgola ciò che l'utente vede.
 
 /**
+ * Ora "HH:MM" nel fuso di Roma, uguale sul server e nel browser (il server gira in UTC).
+ * Usata per dire allo studente da quando può ritentare un quiz non superato.
+ */
+export function oraRoma(d: Date): string {
+  return new Intl.DateTimeFormat("it-IT", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Rome" }).format(new Date(d));
+}
+
+/**
  * Data breve italiana, con trattino lungo quando manca. Era duplicata identica in
  * `(app)/certificati/page.tsx` (`formatDate`) e `verify/[uuid]/page.tsx` (`fmtDate`).
  *

@@ -12,6 +12,7 @@ import {
   submitMyQuiz,
   requestMyCertificate,
 } from "@/features/learner/actions";
+import { QuizNonDisponibile } from "@/features/quiz/engine";
 
 /** URL firmato (TTL breve) del PDF certificato: solo proprietario o staff. */
 export async function downloadMyCertificate(certificateId: string): Promise<string> {
@@ -28,7 +29,14 @@ export async function getMyClipUrlAction(
 
 /** Avvia un quiz: estrae le domande (senza risposte) + limite di tempo. */
 export async function startMyQuizAction(enrollmentId: string, quizId: string) {
-  return startMyQuiz(enrollmentId, quizId);
+  try {
+    return { ok: true as const, ...(await startMyQuiz(enrollmentId, quizId)) };
+  } catch (e) {
+    // blocco previsto (attesa, tentativi esauriti): si restituisce il messaggio, che in produzione
+    // un'eccezione perderebbe. Ogni altro errore resta un'eccezione come prima.
+    if (e instanceof QuizNonDisponibile) return { ok: false as const, errore: e.message };
+    throw e;
+  }
 }
 
 /** Invia le risposte: correzione/soglia/tempo lato server. */

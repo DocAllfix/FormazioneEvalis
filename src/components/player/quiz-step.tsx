@@ -4,10 +4,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Check, ClipboardCheck, Clock, Loader2, RotateCcw, X } from "lucide-react";
 import { startMyQuizAction, submitMyQuizAction, leggiMiaAnagraficaAction } from "@/features/learner/server-actions";
 import { DatiCertificatoForm } from "@/components/app/dati-certificato-form";
-import { mmss as fmt } from "@/lib/formato";
+import { mmss as fmt, oraRoma } from "@/lib/formato";
 
 type Question = { id: string; text: string; options: { id: string; text: string }[] };
-type Result = { score: number; passed: boolean; over: boolean };
+type Result = { score: number; passed: boolean; over: boolean; lockedUntil?: Date | null };
 
 export function QuizStep({
   enrollmentId,
@@ -98,6 +98,10 @@ export function QuizStep({
     setError("");
     try {
       const data = await startMyQuizAction(enrollmentId, quiz.id);
+      if (!data.ok) {
+        setError(data.errore);
+        return;
+      }
       setAttemptId(data.attemptId);
       setQuestions(data.questions as Question[]);
       setAnswers({});
@@ -223,6 +227,11 @@ export function QuizStep({
           <p className="mt-1 text-sm text-muted-foreground">
             Punteggio: <span className="tabular-nums">{result.score}%</span>
           </p>
+          {!result.passed && result.lockedUntil && new Date(result.lockedUntil) > new Date() && (
+            <p className="mt-2 text-sm text-near-black">
+              Potrai riprovare dalle {oraRoma(result.lockedUntil)}.
+            </p>
+          )}
           {!result.passed && (
             <button
               onClick={start}

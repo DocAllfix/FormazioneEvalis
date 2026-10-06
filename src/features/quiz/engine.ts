@@ -7,6 +7,14 @@ import { db } from "@/lib/db";
 import { quiz, quizQuestion, quizAttempt } from "@/lib/db/schema";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
+import { oraRoma } from "@/lib/formato";
+
+/**
+ * Blocco PREVISTO dalle regole del quiz (attesa dopo un tentativo non superato, tentativi
+ * esauriti). Il messaggio è per lo studente: la server action lo restituisce come valore,
+ * perché in produzione Next sostituisce il messaggio delle eccezioni con uno generico.
+ */
+export class QuizNonDisponibile extends Error {}
 
 // Executor: db globale OPPURE una transazione (per ereditare le GUC di tenant da withTenant).
 type DbOrTx = typeof db | Parameters<Parameters<typeof db.transaction>[0]>[0];
@@ -52,10 +60,16 @@ export async function startQuiz(enrollmentId: string, quizId: string, ctx: Tenan
       .where(and(eq(quizAttempt.enrollmentId, enrollmentId), eq(quizAttempt.quizId, quizId)));
     const now = new Date();
     if (qz.maxAttempts != null && attempts.length >= qz.maxAttempts) {
-      throw new Error("Numero massimo di tentativi raggiunto.");
+      throw new QuizNonDisponibile("Hai esaurito i tentativi disponibili per questo quiz.");
     }
-    if (attempts.some((a) => a.lockedUntil && a.lockedUntil > now)) {
-      throw new Error("Quiz in cooldown: riprova più tardi.");
+    const attesa = attempts
+      .map((a) => a.lockedUntil)
+      .filter((d): d is Date => !!d && d > now)
+      .sort((a, b) => b.getTime() - a.getTime())[0];
+    if (attesa) {
+      throw new QuizNonDisponibile(
+        `Il tentativo precedente non è stato superato: potrai riprovare dalle ${oraRoma(attesa)}.`,
+      );
     }
 
     const bank = await tx
@@ -133,7 +147,7 @@ export async function submitQuiz(
       payload: { score: graded.score, over },
     });
 
-    return { score: graded.score, passed, over };
+    return { score: graded.score, passed, over, lockedUntil };
   });
 }
 
