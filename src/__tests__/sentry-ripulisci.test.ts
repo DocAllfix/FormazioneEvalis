@@ -28,6 +28,29 @@ describe("ripulisciPerSentry", () => {
     expect(ripulisciPerSentry(structuredClone(evento))).toEqual(evento);
   });
 
+  it("non modifica l'evento sul posto e non si rompe su proprietà in sola lettura (errore Sentry 06/10)", () => {
+    const interno = {};
+    Object.defineProperty(interno, "$", { get: () => "/reimposta-password?token=SEGRETO7", enumerable: true });
+    const congelato = Object.freeze({ url: "/accept-invitation/inv_SEGRETO8" });
+    class Span {
+      description = "GET /x?token=SEGRETO9";
+    }
+    const span = new Span();
+    const evento = { request: { url: "/reimposta-password?token=SEGRETO1" }, interno, congelato, span };
+    let fuori: typeof evento | undefined;
+    expect(() => {
+      fuori = ripulisciPerSentry(evento);
+    }).not.toThrow();
+    const testo = JSON.stringify({ r: fuori!.request, i: fuori!.interno, c: fuori!.congelato });
+    expect(testo).not.toContain("SEGRETO1");
+    expect(testo).not.toContain("SEGRETO7");
+    expect(testo).not.toContain("SEGRETO8");
+    // l'originale resta intatto
+    expect(evento.request.url).toContain("SEGRETO1");
+    // gli oggetti non semplici (istanze di classi Sentry) restano gli stessi
+    expect(fuori!.span).toBe(span);
+  });
+
   it("ripulisce la query string anche in forma di coppie o di oggetto", () => {
     const coppie = JSON.stringify(ripulisciPerSentry({ request: { query_string: [["token", "SEGRETO5"], ["x", "1"]] } }));
     const oggetto = JSON.stringify(ripulisciPerSentry({ request: { query_string: { token: "SEGRETO6", x: "1" } } }));
