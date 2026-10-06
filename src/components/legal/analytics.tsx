@@ -12,6 +12,8 @@
 import Script from "next/script";
 import { useEffect, useState } from "react";
 import { EVENTO_CONSENSO, leggiConsenso, type Consenso } from "@/features/consenso/stato";
+import { usePathname } from "next/navigation";
+import { paginaConCredenziali } from "@/lib/url-sicuro";
 
 const ID = process.env.NEXT_PUBLIC_GA4_ID;
 
@@ -29,7 +31,10 @@ export function Analytics() {
     return () => window.removeEventListener(EVENTO_CONSENSO, suCambio);
   }, []);
 
-  if (!ID || !attivo) return null;
+  const pathname = usePathname();
+  // Le pagine con credenziali nell'indirizzo (reset password, invito) non caricano GA: il token
+  // finirebbe nei dati di Analytics. Sono le uniche pagine con credenziali nell'indirizzo.
+  if (!ID || !attivo || paginaConCredenziali(pathname ?? "")) return null;
 
   return (
     <>
