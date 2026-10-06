@@ -5,7 +5,7 @@
 // corso non è soggetto ad avviso (corsi professionali + il 19011 stesso).
 
 import { and, eq, ne } from "drizzle-orm";
-import { course, enrollment, userOnboarding } from "@/lib/db/schema";
+import { certificate, course, enrollment, userOnboarding } from "@/lib/db/schema";
 import { withTenant } from "@/lib/db/tenant";
 import { isReadyForCertificate } from "@/features/certificates/readiness";
 
@@ -45,11 +45,22 @@ export async function iso19011Advisory(userId: string, courseId: string): Promis
       .where(and(eq(enrollment.userId, userId), eq(enrollment.courseId, c.prereq), ne(enrollment.status, "revoked")))
       .limit(1);
 
+    // un certificato della 19011 già ottenuto (non revocato) vale da solo: non si ricalcolano
+    // i requisiti, che nel tempo possono cambiare
+    const [cert] = enr
+      ? await tx
+          .select({ id: certificate.id })
+          .from(certificate)
+          .where(and(eq(certificate.enrollmentId, enr.id), ne(certificate.status, "revoked")))
+          .limit(1)
+      : [];
+
     return {
       prereqId: c.prereq,
       prereqTitle: pre?.title ?? "ISO 19011",
       declared: ob?.declared === true,
       prereqEnrollmentId: enr?.id ?? null,
+      certificato: !!cert,
     };
   });
 
@@ -57,9 +68,9 @@ export async function iso19011Advisory(userId: string, courseId: string): Promis
 
   // Completato in piattaforma? (solo se ha un enrollment nel corso 19011). isReadyForCertificate
   // apre il proprio tenant-tx col ctx dell'utente.
-  const completed = base.prereqEnrollmentId
-    ? (await isReadyForCertificate(base.prereqEnrollmentId, { userId })).ready
-    : false;
+  const completed =
+    base.certificato ||
+    (base.prereqEnrollmentId ? (await isReadyForCertificate(base.prereqEnrollmentId, { userId })).ready : false);
 
   const has19011 = base.declared || completed;
   return {

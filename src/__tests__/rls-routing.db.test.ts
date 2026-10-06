@@ -82,11 +82,14 @@ async function completeAs(enrollmentId: string, courseId: string, userId: string
       await recordHeartbeat({ enrollmentId, slideId: s.id, position: pos, focus: true, playing: true, audioCompleted: pos >= s.audioSeconds, nowMs: t, ctx });
     }
   }
-  const [fin] = await db.select({ id: quiz.id }).from(quiz).where(and(eq(quiz.courseId, courseId), eq(quiz.type, "final"))).limit(1);
-  const started = await startQuiz(enrollmentId, fin.id, ctx);
-  const qs = await db.select({ id: quizQuestion.id, correct: quizQuestion.correctOptionId }).from(quizQuestion).where(eq(quizQuestion.quizId, fin.id));
-  const map = new Map(qs.map((q) => [q.id, q.correct]));
-  await submitQuiz(started.attemptId, started.questions.map((q) => ({ questionId: q.id, optionId: map.get(q.id) as string })), ctx);
+  // quiz intermedi e poi esame finale: servono tutti per il certificato
+  const tutti = await db.select({ id: quiz.id, type: quiz.type }).from(quiz).where(eq(quiz.courseId, courseId));
+  for (const q of [...tutti.filter((x) => x.type === "checkpoint"), ...tutti.filter((x) => x.type === "final")]) {
+    const started = await startQuiz(enrollmentId, q.id, ctx);
+    const qs = await db.select({ id: quizQuestion.id, correct: quizQuestion.correctOptionId }).from(quizQuestion).where(eq(quizQuestion.quizId, q.id));
+    const map = new Map(qs.map((x) => [x.id, x.correct]));
+    await submitQuiz(started.attemptId, started.questions.map((x) => ({ questionId: x.id, optionId: map.get(x.id) as string })), ctx);
+  }
 }
 
 describe.skipIf(!FORCED)("RLS routing end-to-end (ruolo app_rls forzato)", () => {

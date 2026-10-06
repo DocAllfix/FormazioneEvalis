@@ -53,11 +53,18 @@ export async function ensureCertificateRecord(
   enrollmentId: string,
   ctx: TenantCtx = {},
 ): Promise<{ id: string; status: string; number: string | null } | null> {
+  const cols = { id: certificate.id, status: certificate.status, number: certificate.number };
+  // Un certificato che ESISTE GIÀ non si ricontrolla mai: è stato concesso con le regole del
+  // suo momento (per esempio con quiz intermedi esonerati) e una regola nuova non lo tocca.
+  const [gia] = await withTenant(ctx, (tx) =>
+    tx.select(cols).from(certificate).where(eq(certificate.enrollmentId, enrollmentId)).limit(1),
+  );
+  if (gia) return gia;
+
   const readiness = await isReadyForCertificate(enrollmentId, ctx);
   if (!readiness.ready) return null;
 
   const esito = await withTenant(ctx, async (tx) => {
-    const cols = { id: certificate.id, status: certificate.status, number: certificate.number };
     const [existing] = await tx.select(cols).from(certificate).where(eq(certificate.enrollmentId, enrollmentId)).limit(1);
     if (existing) return { cert: existing, nuovo: false };
 

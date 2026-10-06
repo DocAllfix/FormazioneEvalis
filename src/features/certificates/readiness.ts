@@ -6,6 +6,7 @@ import { course, enrollment, slide, lesson, module as courseModule, slideProgres
 import { courseEffectiveSeconds } from "@/features/tracking/progress";
 import { isQuizPassed } from "@/features/quiz/engine";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
+import { statoPercorso } from "@/features/courses/completamento";
 
 export const COMPLETION_TIME_RATIO = 0.9; // tempo effettivo ≥ 90% del monte ore
 
@@ -59,6 +60,11 @@ export async function isReadyForCertificate(
     if (effective < Math.floor(requiredSeconds * COMPLETION_TIME_RATIO)) {
       reasons.push("Tempo di fruizione insufficiente.");
     }
+
+    // quiz intermedi: tutti superati, tranne quelli esonerati dalla regola non retroattiva del
+    // 06/10 — stesso calcolo del player (completamento.ts), così non possono divergere
+    const { checkpointMancanti } = await statoPercorso(tx, enrollmentId, courseId);
+    if (checkpointMancanti.length > 0) reasons.push("Quiz intermedi non superati.");
 
     // esame finale superato
     const [finalQuiz] = await tx
