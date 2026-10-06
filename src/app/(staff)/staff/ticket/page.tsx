@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Inbox } from "lucide-react";
 import { PageHeader } from "@/components/admin/page-header";
 import { ReindexKbButton } from "@/components/admin/reindex-kb-button";
+import { requirePlatformAdmin } from "@/features/auth/guards";
 import { listStaffQueue, type TicketStatus } from "@/features/support/lifecycle";
 
 export const metadata = { title: "Ticket — Evalis Staff" };
@@ -13,6 +14,8 @@ const statusInfo: Record<TicketStatus, { text: string; cls: string }> = {
 };
 
 export default async function StaffTicketPage() {
+  // Il redirect del layout non è una barriera: la pagina viene eseguita comunque.
+  await requirePlatformAdmin();
   const queue = await listStaffQueue();
 
   return (
