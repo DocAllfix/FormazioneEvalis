@@ -7,8 +7,11 @@ import { and, count, eq, inArray } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { course, enrollment, member, organization } from "@/lib/db/schema";
 import { getStripe } from "@/lib/stripe/client";
-import { requireActiveOrg, requireRole } from "@/features/auth/guards";
+import { requireRole, requireSession } from "@/features/auth/guards";
 import { parseOrgMetadata } from "@/features/auth/org-metadata";
+import { spazioPersonale } from "@/features/auth/spazio-predefinito";
+import { getCompanyAdminOrg } from "@/features/admin/context";
+import { inVendita } from "@/features/catalog/vendibile";
 import { ensureStripeCustomer } from "./customers";
 import { loadBundleWithCourses, resolveBundleCourseIds } from "./bundles";
 import { COMPANY_COUPONS, companyDiscountPercent } from "./discounts";
@@ -97,24 +100,40 @@ export async function courseCompanyDiscountPercent(orgId: string, courseId: stri
   return companyDiscountPercent({ isCompanyOrg, priorCoursePurchases: prior?.n ?? 0 });
 }
 
+/**
+ * A nome di chi si compra. NON dipende dallo spazio della sessione:
+ *  - titolare o amministratore di un'azienda → l'azienda (suo cliente Stripe, sconto aziendale);
+ *  - chiunque altro, compreso il dipendente semplice e l'ex dipendente → il proprio spazio
+ *    personale: cliente Stripe suo, prezzo pieno. Così i dati di fatturazione dell'azienda non
+ *    possono essere sovrascritti da un dipendente e lo sconto resta a chi compra per l'azienda.
+ */
+export async function spazioAcquisti(userId: string): Promise<string> {
+  return (await getCompanyAdminOrg(userId))?.id ?? (await spazioPersonale(userId));
+}
+
 /** B2C: acquisto one-off di un corso → enrollment (via webhook).
  * Sconto azienda applicato AUTOMATICAMENTE (−20% dal 2° iscritto, −30% dal 5°).
  * `beneficiaryUserId`: l'azienda può comprare PER un proprio dipendente (l'iscrizione va
  * a lui). Consentito solo a owner/admin dell'org e solo verso membri della stessa org. */
 export async function createCoursePurchaseCheckout(courseId: string, beneficiaryUserId?: string): Promise<string> {
-  const { user, orgId } = await requireActiveOrg();
+  const { user } = await requireSession();
   const [c] = await db
-    .select({ stripePriceId: course.stripePriceId })
+    .select({ stripePriceId: course.stripePriceId, status: course.status, organizationId: course.organizationId })
     .from(course)
     .where(eq(course.id, courseId))
     .limit(1);
   if (!c) throw new Error("Corso inesistente.");
+  if (!inVendita(c)) throw new ErroreUtente("Questo corso non è disponibile per l'acquisto.");
   if (!c.stripePriceId) throw new Error("Corso non acquistabile singolarmente (prezzo non configurato).");
 
-  // acquisto per un dipendente: serve il ruolo e la membership del destinatario
+  // acquisto per un dipendente: serve essere titolare/amministratore dell'azienda e che il
+  // destinatario ne sia membro
   let destinatarioId = user.id;
+  let orgId: string;
   if (beneficiaryUserId && beneficiaryUserId !== user.id) {
-    await requireRole("owner", "admin");
+    const azienda = await getCompanyAdminOrg(user.id);
+    if (!azienda) throw new ErroreUtente("Solo il titolare o un amministratore dell'azienda può acquistare per un dipendente.");
+    orgId = azienda.id;
     const [m] = await db
       .select({ id: member.id })
       .from(member)
@@ -122,6 +141,8 @@ export async function createCoursePurchaseCheckout(courseId: string, beneficiary
       .limit(1);
     if (!m) throw new ErroreUtente("Il destinatario non è un membro della tua organizzazione.");
     destinatarioId = beneficiaryUserId;
+  } else {
+    orgId = await spazioAcquisti(user.id);
   }
 
   // GUARDIA anti-doppio-addebito: si controlla il DESTINATARIO (non chi paga) e si esce PRIMA
@@ -161,11 +182,23 @@ export async function createCoursePurchaseCheckout(courseId: string, beneficiary
  * del bundle (un solo line_item); per i pick_one `chosenCourseId` è il corso a scelta,
  * validato qui (fail-fast) e riverificato dal provisioning. Nessuno sconto azienda. */
 export async function createBundlePurchaseCheckout(bundleId: string, chosenCourseId?: string): Promise<string> {
-  const { user, orgId } = await requireActiveOrg();
+  const { user } = await requireSession();
+  const orgId = await spazioAcquisti(user.id);
   const { bundle: b, links } = await loadBundleWithCourses(bundleId);
   if (!b.active) throw new ErroreUtente("Pacchetto non disponibile.");
   if (!b.stripePriceId) throw new Error("Pacchetto non acquistabile (prezzo non configurato).");
   const courseIds = resolveBundleCourseIds(b, links, chosenCourseId); // valida la composizione prima di toccare Stripe
+
+  // Tutti i corsi che il pacchetto consegnerebbe devono essere in vendita: se uno è stato
+  // ritirato il pacchetto non si vende (nessuno paga per un corso che non può ricevere). Il
+  // controllo sta SOLO qui: la consegna dopo il pagamento non rifiuta mai.
+  const stati = await db
+    .select({ status: course.status, organizationId: course.organizationId })
+    .from(course)
+    .where(inArray(course.id, courseIds));
+  if (stati.length !== courseIds.length || !stati.every(inVendita)) {
+    throw new ErroreUtente("Pacchetto non disponibile: uno dei corsi non è più in vendita.");
+  }
 
   // GUARDIA anti-doppio-addebito, versione pacchetto: si rifiuta SOLO se l'utente possiede già
   // TUTTI i corsi inclusi (in quel caso pagherebbe per zero iscrizioni nuove). Se gliene manca

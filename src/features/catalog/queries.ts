@@ -7,6 +7,7 @@ import { db } from "@/lib/db";
 import { bundle, bundleCourse, course, enrollment, lesson, module as courseModule, quiz, slide } from "@/lib/db/schema";
 import type { CourseDetails } from "@/features/courses/course-details";
 import { withTenant } from "@/lib/db/tenant";
+import { inVendita } from "./vendibile";
 
 export const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -253,12 +254,22 @@ async function _listActiveBundles(): Promise<CatalogBundle[]> {
       courseId: course.id,
       title: course.title,
       priceCents: course.priceCents,
+      status: course.status,
+      organizationId: course.organizationId,
     })
     .from(bundleCourse)
-    .innerJoin(course, eq(course.id, bundleCourse.courseId))
-    .where(eq(course.status, "published"));
+    .innerJoin(course, eq(course.id, bundleCourse.courseId));
 
-  return rows.map((b) => ({
+  // Un pacchetto con un corso INCLUSO ritirato dalla vendita non si mostra e non si vende
+  // (il checkout lo rifiuta comunque); i corsi a scelta ritirati spariscono dalla scelta, e un
+  // pacchetto a scelta senza più alternative non si mostra.
+  const vendibile = (b: (typeof rows)[number]) => {
+    const suoi = links.filter((l) => l.bundleId === b.id);
+    if (suoi.some((l) => l.role === "included" && !inVendita(l))) return false;
+    return b.kind !== "pick_one" || suoi.some((l) => l.role === "eligible" && inVendita(l));
+  };
+
+  return rows.filter(vendibile).map((b) => ({
     id: b.id,
     slug: b.slug,
     title: b.title,
@@ -267,7 +278,7 @@ async function _listActiveBundles(): Promise<CatalogBundle[]> {
     priceCents: b.priceCents,
     currency: b.currency,
     courses: links
-      .filter((l) => l.bundleId === b.id)
+      .filter((l) => l.bundleId === b.id && inVendita(l))
       .map((l) => ({ id: l.courseId, title: l.title, priceCents: l.priceCents, role: l.role })),
   }));
 }

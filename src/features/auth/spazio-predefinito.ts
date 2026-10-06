@@ -30,13 +30,27 @@ export async function spazioPredefinito(userId: string, exec: NonNullable<Exec> 
   return scelta?.orgId ?? null;
 }
 
-/** Lo spazio predefinito dell'utente; se non ne ha nessuno, crea quello personale. */
-export async function assicuraSpazio(userId: string): Promise<string> {
-  const esistente = await spazioPredefinito(userId);
+async function personaleEsistente(userId: string, exec: NonNullable<Exec>): Promise<string | null> {
+  const righe = await exec
+    .select({ orgId: member.organizationId, metadata: organization.metadata })
+    .from(member)
+    .innerJoin(organization, eq(organization.id, member.organizationId))
+    .where(eq(member.userId, userId));
+  return righe.find((r) => parseOrgMetadata(r.metadata)?.type === "personal")?.orgId ?? null;
+}
+
+/** Lo spazio PERSONALE dell'utente (quello degli acquisti da privato); se manca lo crea. */
+export async function spazioPersonale(userId: string): Promise<string> {
+  const esistente = await personaleEsistente(userId, db);
   if (esistente) return esistente;
   return db.transaction(async (tx) => {
     // due richieste insieme dello stesso utente: la seconda aspetta e trova lo spazio già creato
     await tx.execute(sql`SELECT pg_advisory_xact_lock(hashtext(${"spazio:" + userId}))`);
-    return (await spazioPredefinito(userId, tx)) ?? (await createPersonalOrg(userId, tx));
+    return (await personaleEsistente(userId, tx)) ?? (await createPersonalOrg(userId, tx));
   });
+}
+
+/** Lo spazio predefinito dell'utente; se non ne ha nessuno, crea quello personale. */
+export async function assicuraSpazio(userId: string): Promise<string> {
+  return (await spazioPredefinito(userId)) ?? (await spazioPersonale(userId));
 }

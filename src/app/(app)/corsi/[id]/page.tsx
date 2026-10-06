@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, BadgeCheck, BadgePercent, Clock, Layers, Signal 
 import { getCurrentSession } from "@/lib/auth/server";
 import { getPublicCourse, getMyEnrollmentForCourse, listActiveBundles } from "@/features/catalog/queries";
 import { courseCompanyDiscountPercent } from "@/features/billing/checkout";
-import { firstMembershipOrgId } from "@/features/auth/guards";
+import { getCompanyAdminOrg } from "@/features/admin/context";
 import { iso19011Advisory } from "@/features/prerequisites/advisory";
 import { CourseDetailBody, hoursLabel } from "@/components/catalog/course-detail-body";
 import { euro } from "@/lib/formato";
@@ -30,9 +30,10 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
     listActiveBundles(),
     (async (): Promise<0 | 20 | 30> => {
       if (!ctx) return 0;
-      // stesso fallback lazy di requireActiveOrg: la sessione può precedere l'org
-      const orgId = ctx.session.activeOrganizationId ?? (await firstMembershipOrgId(ctx.user.id));
-      return orgId ? courseCompanyDiscountPercent(orgId, c.id) : 0;
+      // stessa regola del checkout (spazioAcquisti): lo sconto aziendale vale solo per chi
+      // compra per l'azienda, cioè titolare e amministratori
+      const azienda = await getCompanyAdminOrg(ctx.user.id);
+      return azienda ? courseCompanyDiscountPercent(azienda.id, c.id) : 0;
     })(),
   ]);
   const d = c.details ?? {};

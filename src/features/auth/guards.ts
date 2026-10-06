@@ -25,9 +25,13 @@ export async function requireActiveOrg() {
   const ctx = await requireSession();
   // Risoluzione lazy: better-auth può creare la sessione prima dell'org personale
   // (hook user.create.after), quindi activeOrganizationId può essere null al primo accesso.
+  // Lo spazio della sessione vale solo finché l'utente ne è membro: chi è stato rimosso da
+  // un'azienda ha la sessione ancora puntata lì (fino a 7 giorni) ma non agisce più a suo nome.
   // Chi non ha nessuno spazio (registrato quando un invito in sospeso lo faceva saltare) ne
   // riceve uno personale qui, invece di un errore.
-  const orgId = ctx.session.activeOrganizationId ?? (await assicuraSpazio(ctx.user.id));
+  const attivo = ctx.session.activeOrganizationId;
+  const orgId =
+    attivo && (await getMemberRole(ctx.user.id, attivo)) ? attivo : await assicuraSpazio(ctx.user.id);
   return { ...ctx, orgId };
 }
 
