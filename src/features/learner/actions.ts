@@ -6,7 +6,7 @@
 import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { slide, lesson, module as courseModule, quiz } from "@/lib/db/schema";
-import { requireSession } from "@/features/auth/guards";
+import { requireSession, isPlayerReviewerId } from "@/features/auth/guards";
 import {
   assertEnrollmentOwnedBy,
   assertAttemptOwnedBy,
@@ -16,7 +16,9 @@ import {
 } from "@/features/access/ownership";
 import { getCourseForPlayer } from "@/features/courses/get-course-for-player";
 import { getSignedClipUrl } from "@/lib/cloudflare/stream";
-import { startQuiz, submitQuiz } from "@/features/quiz/engine";
+import { startQuiz, submitQuiz, QuizNonDisponibile } from "@/features/quiz/engine";
+import { statoPercorso } from "@/features/courses/completamento";
+import { withTenant } from "@/lib/db/tenant";
 import { ensureCertificateRecord } from "@/features/certificates/lifecycle";
 import { leggiAnagrafica } from "@/features/certificates/anagrafica";
 
@@ -36,7 +38,21 @@ export async function startMyQuiz(enrollmentId: string, quizId: string) {
   await assertQuizInCourseOf(quizId, enrollmentId, user.id);
   // l'esame FINALE parte solo con i dati per il certificato accreditato (CF, data e luogo di
   // nascita): così a fine corso il committente li riceve già. Controllo lato server.
-  const [q] = await db.select({ type: quiz.type }).from(quiz).where(eq(quiz.id, quizId)).limit(1);
+  const [q] = await db.select({ type: quiz.type, courseId: quiz.courseId }).from(quiz).where(eq(quiz.id, quizId)).limit(1);
+  // L'esame FINALE si apre solo a percorso completato: tutte le slide e i quiz intermedi
+  // (superati, o esonerati dalla regola non retroattiva), come nel player. Senza, chi chiama il
+  // server a mano faceva l'esame il primo giorno e leggeva le domande senza studiare.
+  // Esenti: chi l'esame l'ha già iniziato una volta (niente di retroattivo) e i revisori interni.
+  if (q?.type === "final" && !isPlayerReviewerId(user.id)) {
+    const stato = await withTenant({ userId: user.id }, (tx) => statoPercorso(tx, enrollmentId, q.courseId));
+    if (!stato.esameGiaIniziato && (stato.slideMancanti > 0 || stato.checkpointMancanti.length > 0)) {
+      const manca = [
+        stato.slideMancanti > 0 ? `${stato.slideMancanti} unità da completare` : null,
+        stato.checkpointMancanti.length > 0 ? `i quiz intermedi da superare (${stato.checkpointMancanti.join(", ")})` : null,
+      ].filter(Boolean);
+      throw new QuizNonDisponibile(`L'esame finale si apre a percorso completato. Ti mancano: ${manca.join(" e ")}.`);
+    }
+  }
   if (q?.type === "final" && !(await leggiAnagrafica(user.id))) throw new Error(SERVONO_DATI_CERTIFICATO);
   return startQuiz(enrollmentId, quizId, { userId: user.id });
 }
