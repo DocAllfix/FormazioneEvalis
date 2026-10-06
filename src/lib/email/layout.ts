@@ -25,6 +25,13 @@ export function esc(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
+/** Indirizzo da mettere in un attributo href: neutralizza solo i caratteri che ne farebbero
+ *  uscire il valore (`"` `<` `>`). La `&` resta com'è, così gli indirizzi veri con parametri
+ *  (verifica email, reset password) restano identici byte per byte. */
+function escUrl(u: string): string {
+  return u.replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
 export type EmailButton = { label: string; url: string };
 
 export function renderEmail(opts: {
@@ -45,13 +52,13 @@ export function renderEmail(opts: {
   const button = opts.button
     ? `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 24px;">
          <tr><td style="border-radius:10px;background:${C.primary};">
-           <a href="${opts.button.url}" style="display:inline-block;padding:13px 28px;font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:10px;">${esc(opts.button.label)}</a>
+           <a href="${escUrl(opts.button.url)}" style="display:inline-block;padding:13px 28px;font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:10px;">${esc(opts.button.label)}</a>
          </td></tr>
        </table>`
     : "";
 
   const fallbackLink = opts.button
-    ? `<p style="margin:0 0 16px;font-size:13px;line-height:1.6;color:${C.muted};">Se il pulsante non funziona, copia e incolla questo indirizzo nel browser:<br><a href="${opts.button.url}" style="color:${C.primary};word-break:break-all;">${opts.button.url}</a></p>`
+    ? `<p style="margin:0 0 16px;font-size:13px;line-height:1.6;color:${C.muted};">Se il pulsante non funziona, copia e incolla questo indirizzo nel browser:<br><a href="${escUrl(opts.button.url)}" style="color:${C.primary};word-break:break-all;">${escUrl(opts.button.url)}</a></p>`
     : "";
 
   return `<!doctype html>

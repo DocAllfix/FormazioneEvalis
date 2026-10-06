@@ -11,6 +11,8 @@ import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { organization } from "better-auth/plugins";
 import { nextCookies } from "better-auth/next-js";
+import { APIError } from "better-auth/api";
+import { isValidSlug } from "@/lib/reserved-subdomains";
 import { db } from "@/lib/db";
 import { env } from "@/lib/env";
 import { authDatabaseHooks } from "@/features/auth/hooks";
@@ -91,14 +93,32 @@ export const auth = betterAuth({
   databaseHooks: authDatabaseHooks,
   plugins: [
     organization({
+      // Lo slug diventa il sottodominio nel link delle mail di invito: le stesse regole del modulo
+      // dell'app (isValidSlug) valgono anche per chi crea o rinomina un'azienda chiamando
+      // direttamente le API di better-auth. Lo slug si controlla solo quando cambia: gli spazi
+      // personali (`u-<id>`, creati dall'app senza passare di qui) restano rinominabili.
+      organizationHooks: {
+        async beforeCreateOrganization({ organization }) {
+          if (typeof organization.slug !== "string" || !isValidSlug(organization.slug)) {
+            throw new APIError("BAD_REQUEST", { message: "Slug non valido o riservato." });
+          }
+        },
+        async beforeUpdateOrganization({ organization }) {
+          if (typeof organization.slug === "string" && !isValidSlug(organization.slug)) {
+            throw new APIError("BAD_REQUEST", { message: "Slug non valido o riservato." });
+          }
+        },
+      },
       // L-2 (audit go-live): invio reale via Resend (in dev senza dominio verificato il link
       // viene comunque loggato dall'helper, così il flusso resta testabile end-to-end).
       async sendInvitationEmail(data) {
         // Il dipendente invitato atterra sul SOTTODOMINIO brandizzato dell'azienda (prod);
         // in dev/localhost resta l'apex (i sottodomini su localhost sono inaffidabili).
+        // Seconda barriera: uno slug non valido (es. azienda creata prima del controllo qui sopra)
+        // non entra mai nell'indirizzo del link.
         const slug = data.organization.slug;
         const base =
-          slug && !isLocalhost
+          slug && !isLocalhost && isValidSlug(slug)
             ? `https://${slug}.${rootHost}`
             : env.NEXT_PUBLIC_APP_URL.replace(/\/$/, "");
         const link = `${base}/accept-invitation/${data.id}`;
