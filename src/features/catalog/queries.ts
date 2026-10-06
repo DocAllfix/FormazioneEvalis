@@ -8,7 +8,7 @@ import { bundle, bundleCourse, course, enrollment, lesson, module as courseModul
 import type { CourseDetails } from "@/features/courses/course-details";
 import { withTenant } from "@/lib/db/tenant";
 
-const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+export const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 export type CatalogCourse = {
   id: string;
