@@ -2,11 +2,12 @@
 // strutturato (slide ordinate + URL clip + progress per-slide), i quiz e lo stato timer
 // (tempo effettivo + monte ore). Nessuna logica di compliance nella UI.
 
-import { and, asc, eq } from "drizzle-orm";
-import { course, enrollment, module as courseModule, lesson, slide, slideProgress, quiz } from "@/lib/db/schema";
+import { and, asc, eq, min } from "drizzle-orm";
+import { course, enrollment, module as courseModule, lesson, slide, slideProgress, quiz, quizAttempt } from "@/lib/db/schema";
 import { courseEffectiveSeconds } from "@/features/tracking/progress";
 import { isQuizPassed } from "@/features/quiz/engine";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
+import { checkpointNonRetroattivo } from "@/features/courses/checkpoint-esonero";
 
 export async function getCourseForPlayer(enrollmentId: string, ctx: TenantCtx) {
   return withTenant(ctx, async (tx) => {
@@ -68,9 +69,32 @@ export async function getCourseForPlayer(enrollmentId: string, ctx: TenantCtx) {
     .orderBy(asc(quiz.position));
   // `passed` per quiz: serve alla UI per resume + gating dei checkpoint.
   // Sequenziale (NON Promise.all): le query condividono l'unica connessione della tx.
-  const quizzes: ((typeof quizRows)[number] & { passed: boolean })[] = [];
+  const quizzes: ((typeof quizRows)[number] & { passed: boolean; esonerato: boolean })[] = [];
+  // checkpoint non retroattivi (checkpoint-esonero.ts): indice lezione numerato come fa il player
+  // (lezioni consecutive nell'ordine delle slide), più l'inizio dell'esame finale
+  let indice = -1;
+  let ultimaLezione: string | null = null;
+  const slideCompletate = rows.map((r) => {
+    if (r.lessonId !== ultimaLezione) {
+      indice++;
+      ultimaLezione = r.lessonId;
+    }
+    return { indiceLezione: indice, completedAt: r.completedAt };
+  });
+  const finale = quizRows.find((q) => q.type === "final");
+  const [inizioEsame] = finale
+    ? await tx
+        .select({ il: min(quizAttempt.startedAt) })
+        .from(quizAttempt)
+        .where(and(eq(quizAttempt.enrollmentId, enrollmentId), eq(quizAttempt.quizId, finale.id)))
+    : [];
   for (const q of quizRows) {
-    quizzes.push({ ...q, passed: await isQuizPassed(enrollmentId, q.id, tx) });
+    const passed = await isQuizPassed(enrollmentId, q.id, tx);
+    const esonerato =
+      q.type === "checkpoint" &&
+      !passed &&
+      checkpointNonRetroattivo(q.position, slideCompletate, inizioEsame?.il ? new Date(inizioEsame.il) : null);
+    quizzes.push({ ...q, passed, esonerato });
   }
 
   const effectiveSeconds = await courseEffectiveSeconds(enrollmentId, courseId, tx);

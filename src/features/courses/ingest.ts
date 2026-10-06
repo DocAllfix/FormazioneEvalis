@@ -47,6 +47,9 @@ export async function ingestCourse(input: unknown): Promise<{ courseId: string }
       .returning({ id: course.id });
     const courseId = c.id;
 
+    // posizione del checkpoint = indice della lezione nel CORSO (come la legge il player),
+    // non dentro il modulo: con un modulo = una lezione erano tutti 0 (fix 06/10/2026)
+    let lezioneNelCorso = 0;
     for (const [mi, m] of pkg.modules.entries()) {
       const [mod] = await tx
         .insert(courseModule)
@@ -72,8 +75,9 @@ export async function ingestCourse(input: unknown): Promise<{ courseId: string }
         }
 
         if (l.checkpointQuiz) {
-          await insertQuiz(tx, courseId, "checkpoint", li, l.checkpointQuiz);
+          await insertQuiz(tx, courseId, "checkpoint", lezioneNelCorso, l.checkpointQuiz);
         }
+        lezioneNelCorso++;
       }
     }
 
