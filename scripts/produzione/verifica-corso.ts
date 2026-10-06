@@ -7,6 +7,8 @@
 //   C1e ogni modulo ha il checkpoint (quiz per lesson) e banca >= questionsToDraw
 //   C1f esame finale presente, banca >= questionsToDraw, ogni domanda con >=2 opzioni
 //       e correctOptionId valido (per checkpoint ed esame)
+//   C1g il percorso che il PLAYER costruisce contiene ogni checkpoint e l'esame finale (ultimo),
+//       con soglie, tempi e banche sensati (src/features/courses/integrita.ts)
 //
 // Uso: npx tsx scripts/produzione/verifica-corso.ts <slug-o-courseId> [--skip-stream]
 //      --skip-stream: salta C1b/C1c (niente API Cloudflare, per giri rapidi in dev)
@@ -16,6 +18,8 @@ import { eq, asc } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { course, module as moduleT, lesson, slide, quiz, quizQuestion } from "@/lib/db/schema";
 import { getClipStatus } from "@/lib/cloudflare/stream";
+import { problemiSequenzaPlayer } from "@/features/courses/integrita";
+import { caricaStrutturaCorso } from "./_struttura-corso";
 
 const arg = process.argv[2];
 const skipStream = process.argv.includes("--skip-stream");
@@ -80,6 +84,9 @@ for (const q of quizzes) {
       errors.push(`quiz "${q.title}" domanda "${String(d.text).slice(0, 40)}": correctOptionId non tra le opzioni`);
   }
 }
+
+// C1g: quello che lo studente vedrà davvero (stessa funzione del player)
+for (const p of problemiSequenzaPlayer(await caricaStrutturaCorso(db, c.id))) errors.push(`percorso player: ${p}`);
 
 const okMonteOre = totSeconds >= (c.requiredMinutes ?? 0) * 60;
 if (!okMonteOre) errors.push(`monte-ore: ${totSeconds}s < requiredMinutes ${c.requiredMinutes}×60`);
