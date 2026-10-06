@@ -14,12 +14,28 @@ const SYSTEM_BASE =
 
 const RELEVANCE_THRESHOLD = 0.4;
 
-export async function buildSupportChat(messages: ChatMessage[]): Promise<{
+// Ad Azure arriva solo una finestra limitata della conversazione: la cronologia la manda il
+// browser, e senza limiti una sola domanda poteva valere circa un milione di token (costo).
+const MAX_MESSAGGI = 20;
+const MAX_CARATTERI = 4000;
+
+function finestra(messages: ChatMessage[]): ChatMessage[] {
+  const ultimi = messages
+    .filter((m) => m.role === "user" || m.role === "assistant")
+    .slice(-MAX_MESSAGGI)
+    .map((m) => ({ role: m.role, content: m.content.slice(0, MAX_CARATTERI) }));
+  // la finestra comincia sempre con una domanda dell'utente
+  while (ultimi.length > 1 && ultimi[0].role !== "user") ultimi.shift();
+  return ultimi;
+}
+
+export async function buildSupportChat(input: ChatMessage[]): Promise<{
   system: string;
   history: ChatMessage[];
   hitCount: number;
   topSimilarity: number;
 }> {
+  const messages = finestra(input);
   const lastUser = [...messages].reverse().find((m) => m.role === "user")?.content ?? "";
   // Graceful degradation: se il retrieval fallisce (es. propagazione deployment embeddings),
   // si procede SENZA contesto → il modello risponde col fallback "apri un ticket". Mai 500.
@@ -36,8 +52,6 @@ export async function buildSupportChat(messages: ChatMessage[]): Promise<{
     ? relevant.map((h, i) => `[${i + 1}] ${h.title}\n${h.content}`).join("\n\n")
     : "(nessun contenuto pertinente trovato nel knowledge base)";
   const system = `${SYSTEM_BASE}\n\nCONTEXT:\n${context}`;
-  const history = messages
-    .filter((m) => m.role === "user" || m.role === "assistant")
-    .map((m) => ({ role: m.role, content: m.content }));
+  const history = messages;
   return { system, history, hitCount: relevant.length, topSimilarity: hits[0]?.similarity ?? 0 };
 }

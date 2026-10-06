@@ -169,6 +169,7 @@ export function SupportChatWidget({ enabled }: { enabled: boolean }) {
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
+                maxLength={4000}
                 placeholder="Scrivi un messaggio…"
                 className="flex-1 rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none transition focus:border-primary"
               />
