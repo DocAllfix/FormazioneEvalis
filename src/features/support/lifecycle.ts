@@ -3,11 +3,20 @@
 // staff { platformAdmin:true } (vede tutti). Eventi nella catena audit dell'org dell'attore.
 // La proprietà è imposta dalla RLS: un discente non può leggere/scrivere ticket altrui.
 
-import { desc, eq, ne } from "drizzle-orm";
+import { and, desc, eq, ne, sql, type SQL } from "drizzle-orm";
 import { ticket, ticketMessage, user } from "@/lib/db/schema";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
 import { appendActivity } from "@/features/audit/log";
 import { ErroreUtente } from "@/lib/esito";
+
+// Proprietà del ticket controllata ANCHE qui, non solo dalla RLS: se un giorno la connessione
+// usasse un ruolo che salta la RLS, un discente non vedrebbe comunque i ticket altrui.
+// Staff → tutti; discente → solo i propri; contesto senza identità → nessuno.
+function condizioneTicket(ticketId: string, ctx: TenantCtx): SQL {
+  if (ctx.platformAdmin) return eq(ticket.id, ticketId);
+  if (ctx.userId) return and(eq(ticket.id, ticketId), eq(ticket.userId, ctx.userId))!;
+  return sql`false`;
+}
 
 export type TicketStatus = "open" | "pending" | "closed";
 
@@ -81,7 +90,7 @@ export async function getTicket(ticketId: string, ctx: TenantCtx): Promise<Ticke
         organizationId: ticket.organizationId,
       })
       .from(ticket)
-      .where(eq(ticket.id, ticketId))
+      .where(condizioneTicket(ticketId, ctx))
       .limit(1);
     if (!t) return null;
     const messages = await tx
@@ -107,7 +116,7 @@ export async function addMessage(params: {
     const [t] = await tx
       .select({ id: ticket.id, organizationId: ticket.organizationId, userId: ticket.userId })
       .from(ticket)
-      .where(eq(ticket.id, ticketId))
+      .where(condizioneTicket(ticketId, ctx))
       .limit(1);
     if (!t) throw new Error("Ticket inesistente.");
     await tx.insert(ticketMessage).values({ ticketId, authorId, body: body.trim() });
@@ -134,7 +143,7 @@ export async function setTicketStatus(params: {
     const [t] = await tx
       .select({ id: ticket.id, organizationId: ticket.organizationId, userId: ticket.userId })
       .from(ticket)
-      .where(eq(ticket.id, ticketId))
+      .where(condizioneTicket(ticketId, ctx))
       .limit(1);
     if (!t) throw new Error("Ticket inesistente.");
     await tx.update(ticket).set({ status, updatedAt: new Date() }).where(eq(ticket.id, ticketId));
@@ -192,7 +201,7 @@ export async function datiPerNotifica(
       })
       .from(ticket)
       .innerJoin(user, eq(user.id, ticket.userId))
-      .where(eq(ticket.id, ticketId))
+      .where(condizioneTicket(ticketId, ctx))
       .limit(1);
     return r ?? null;
   });
