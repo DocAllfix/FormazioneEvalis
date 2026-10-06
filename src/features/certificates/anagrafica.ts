@@ -71,16 +71,26 @@ export async function leggiAnagrafica(userId: string, ctx: TenantCtx = { userId 
   });
 }
 
+type Tx = Parameters<Parameters<typeof withTenant>[1]>[0];
+
+async function haCertificato(tx: Tx, userId: string): Promise<boolean> {
+  const [r] = await tx
+    .select({ n: sql<number>`count(*)::int` })
+    .from(certificate)
+    .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
+    .where(eq(enrollment.userId, userId));
+  return (r?.n ?? 0) > 0;
+}
+
+/** Lucchetto per utente, condiviso fra il salvataggio dell'anagrafica e la nascita del
+ *  certificato (lifecycle.ts): i due passi non possono incrociarsi. Dura fino a fine transazione. */
+export function lucchettoAnagrafica(userId: string) {
+  return sql`SELECT pg_advisory_xact_lock(hashtext(${"anagrafica:" + userId}))`;
+}
+
 /** I dati sono bloccati se l'utente ha già un certificato (qualunque stato). */
 export async function anagraficaBloccata(userId: string, ctx: TenantCtx = { userId }): Promise<boolean> {
-  return withTenant(ctx, async (tx) => {
-    const [r] = await tx
-      .select({ n: sql<number>`count(*)::int` })
-      .from(certificate)
-      .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))
-      .where(eq(enrollment.userId, userId));
-    return (r?.n ?? 0) > 0;
-  });
+  return withTenant(ctx, (tx) => haCertificato(tx, userId));
 }
 
 /** Salva (o aggiorna) i dati dell'utente. Rifiuta dati non validi o già usati per un certificato. */
@@ -90,10 +100,13 @@ export async function salvaAnagrafica(
 ): Promise<Anagrafica> {
   const v = validaAnagrafica(input);
   if (!v.ok) throw new Error(v.errore);
-  if (await anagraficaBloccata(userId)) {
-    throw new Error("Questi dati sono già stati usati per il tuo certificato: per correggerli scrivi all'assistenza.");
-  }
+  // controllo e salvataggio nella STESSA transazione, sotto il lucchetto: un salvataggio mandato
+  // mentre nasce il certificato aspetta, e poi trova i dati già bloccati
   await withTenant({ userId }, async (tx) => {
+    await tx.execute(lucchettoAnagrafica(userId));
+    if (await haCertificato(tx, userId)) {
+      throw new Error("Questi dati sono già stati usati per il tuo certificato: per correggerli scrivi all'assistenza.");
+    }
     await tx
       .insert(anagraficaCertificato)
       .values({ userId, ...v.dati })

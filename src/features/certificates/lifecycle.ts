@@ -13,7 +13,7 @@ import { randomUUID } from "node:crypto";
 import { and, desc, eq, ilike, isNull, or, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { certificate, enrollment, course, user, quiz, quizAttempt, anagraficaCertificato } from "@/lib/db/schema";
-import { dataNascitaLeggibile } from "./anagrafica";
+import { dataNascitaLeggibile, lucchettoAnagrafica } from "./anagrafica";
 import { isReadyForCertificate } from "./readiness";
 import { buildCertificatePdf } from "./pdf";
 import {
@@ -65,6 +65,10 @@ export async function ensureCertificateRecord(
   if (!readiness.ready) return null;
 
   const esito = await withTenant(ctx, async (tx) => {
+    // stesso lucchetto del salvataggio dell'anagrafica: mentre il certificato nasce i dati del
+    // titolare non possono cambiare (e viceversa)
+    const titolare = await auditContextFromEnrollment(tx, enrollmentId);
+    await tx.execute(lucchettoAnagrafica(titolare.userId));
     const [existing] = await tx.select(cols).from(certificate).where(eq(certificate.enrollmentId, enrollmentId)).limit(1);
     if (existing) return { cert: existing, nuovo: false };
 
@@ -79,10 +83,9 @@ export async function ensureCertificateRecord(
       const [c] = await tx.select(cols).from(certificate).where(eq(certificate.enrollmentId, enrollmentId)).limit(1);
       return { cert: c, nuovo: false };
     }
-    const { organizationId, userId } = await auditContextFromEnrollment(tx, enrollmentId);
     await appendActivity(tx, {
-      organizationId,
-      userId,
+      organizationId: titolare.organizationId,
+      userId: titolare.userId,
       verb: "certificate-requested",
       object: `certificate:${inserted[0].id}`,
     });

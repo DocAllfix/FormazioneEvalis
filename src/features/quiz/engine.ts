@@ -2,7 +2,7 @@
 // dalla banca, applica il limite di tempo sull'intero quiz, la soglia, il cooldown.
 // Le risposte corrette non lasciano mai il server.
 
-import { and, eq, inArray, isNull } from "drizzle-orm";
+import { and, eq, gt, inArray, isNull, ne, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { quiz, quizQuestion, quizAttempt } from "@/lib/db/schema";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
@@ -50,8 +50,15 @@ function shuffleTake<T>(arr: T[], n: number): T[] {
 
 // --- Operazioni ---
 
+/** Un solo passaggio alla volta per (iscrizione, quiz): avvio e consegna si mettono in fila,
+ *  così il controllo dell'attesa non può essere scavalcato da due richieste simultanee. */
+function lucchettoQuiz(enrollmentId: string, quizId: string) {
+  return sql`SELECT pg_advisory_xact_lock(hashtext(${`quiz:${enrollmentId}:${quizId}`}))`;
+}
+
 export async function startQuiz(enrollmentId: string, quizId: string, ctx: TenantCtx = {}) {
   return withTenant(ctx, async (tx) => {
+    await tx.execute(lucchettoQuiz(enrollmentId, quizId));
     const [qz] = await tx.select().from(quiz).where(eq(quiz.id, quizId)).limit(1);
     if (!qz) throw new Error("Quiz inesistente.");
 
@@ -121,7 +128,29 @@ export async function submitQuiz(
     const [qz] = await tx.select().from(quiz).where(eq(quiz.id, att.quizId)).limit(1);
     if (!qz) throw new Error("Quiz inesistente.");
 
+    // L'attesa dopo una bocciatura vale anche per i tentativi aperti PRIMA della bocciatura
+    // (due schede): finché un altro tentativo dello stesso quiz è in attesa, questo non si
+    // consegna. Resta aperto: si consegna ad attesa finita, o se ne avvia uno nuovo.
+    // Aprire un tentativo non viene mai bloccato da qui: chi ricarica la pagina non resta fermo.
+    await tx.execute(lucchettoQuiz(att.enrollmentId, att.quizId));
     const now = new Date();
+    const [inAttesa] = await tx
+      .select({ fino: quizAttempt.lockedUntil })
+      .from(quizAttempt)
+      .where(
+        and(
+          eq(quizAttempt.enrollmentId, att.enrollmentId),
+          eq(quizAttempt.quizId, att.quizId),
+          ne(quizAttempt.id, attemptId),
+          gt(quizAttempt.lockedUntil, now),
+        ),
+      )
+      .orderBy(sql`${quizAttempt.lockedUntil} desc`)
+      .limit(1);
+    if (inAttesa?.fino) {
+      throw new ErroreUtente(`Il tentativo precedente non è stato superato: potrai riprovare dalle ${oraRoma(inAttesa.fino)}.`);
+    }
+
     const over = isOverTimeLimit(att.startedAt.getTime(), now.getTime(), qz.timeLimitSeconds);
 
     const drawnIds = (att.detail as { drawnIds?: string[] } | null)?.drawnIds ?? [];
