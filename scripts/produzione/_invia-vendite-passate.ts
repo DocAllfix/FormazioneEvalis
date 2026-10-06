@@ -27,7 +27,9 @@ for (const id of ids) {
     from payment_event p
     left join course c on c.id::text = p.payload->'data'->'object'->'metadata'->>'courseId'
     left join bundle b on b.id::text = p.payload->'data'->'object'->'metadata'->>'bundleId'
-    where p.id = ${id} and p.type = 'checkout.session.completed' and p.livemode`;
+    where p.id = ${id} and p.livemode
+      and (p.type = 'checkout.session.async_payment_succeeded'
+        or (p.type = 'checkout.session.completed' and p.payload->'data'->'object'->>'payment_status' in ('paid', 'no_payment_required')))`;
   if (!r) { console.log(`KO  ${id}: non è un acquisto live`); continue; }
   const { subject, html } = mailVendita(datiVendita(r.s, Number(r.created)), r.titolo ?? "Corso");
   console.log(`${args.includes("--invia") ? "INVIO" : "PROVA"} a ${a}: ${subject}`);

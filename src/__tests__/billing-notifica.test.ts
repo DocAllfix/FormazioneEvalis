@@ -61,6 +61,16 @@ describe("deveNotificare", () => {
     expect(deveNotificare(ev({ livemode: false }))).toBe(false);
   });
 
+  it("checkout completato ma non ancora incassato → no; a incasso avvenuto → sì (audit C1)", () => {
+    expect(deveNotificare(ev({ object: sessione({ payment_status: "unpaid" }) }))).toBe(false);
+    expect(deveNotificare(ev({ type: "checkout.session.async_payment_succeeded" }))).toBe(true);
+    expect(deveNotificare(ev({ type: "checkout.session.async_payment_failed", object: sessione({ payment_status: "unpaid" }) }))).toBe(false);
+  });
+
+  it("coupon al 100%: nessun pagamento richiesto, ma è una vendita → sì", () => {
+    expect(deveNotificare(ev({ object: sessione({ payment_status: "no_payment_required", amount_total: 0 }) }))).toBe(true);
+  });
+
   it("eventi che non sono un acquisto completato → mai", () => {
     expect(deveNotificare(ev({ type: "charge.refunded" }))).toBe(false);
     expect(deveNotificare(ev({ object: sessione({ metadata: {} }) }))).toBe(false);

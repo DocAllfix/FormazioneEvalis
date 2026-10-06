@@ -25,7 +25,7 @@ async function seminaAcquisto(email: string, intent: string): Promise<string> {
                                  amount_total, currency, occurred_at, payload)
       VALUES (${evento}, 'checkout.session.completed', false, ${u.id}, ${m.organization_id}, ${intent},
               21838, 'eur', now(),
-              ${sql.json({ data: { object: { metadata: { kind: "course_purchase", courseId: c.id, userId: u.id, orgId: m.organization_id } } } })})
+              ${sql.json({ data: { object: { payment_status: "paid", metadata: { kind: "course_purchase", courseId: c.id, userId: u.id, orgId: m.organization_id } } } })})
       RETURNING id`;
     return r.id as string;
   } finally {

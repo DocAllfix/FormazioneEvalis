@@ -49,6 +49,9 @@ const WEBHOOK_URL = "https://evalisacademy.it/api/webhooks/stripe";
 // non li aggiorna di proposito, per non dover riaprire un endpoint amministrativo in produzione.
 const WEBHOOK_EVENTS = [
   "checkout.session.completed",
+  // esito dei pagamenti a conferma ritardata: l'accesso al corso si dà solo a incasso avvenuto
+  "checkout.session.async_payment_succeeded",
+  "checkout.session.async_payment_failed",
   "customer.subscription.created",
   "customer.subscription.updated",
   "customer.subscription.deleted",

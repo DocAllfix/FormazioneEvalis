@@ -15,6 +15,7 @@ describe("planFromEvent", () => {
     const p = planFromEvent(
       ev("checkout.session.completed", {
         mode: "payment",
+        payment_status: "paid",
         metadata: { kind: "course_purchase", userId: "u1", courseId: "c1", orgId: "o1" },
       }),
     );
@@ -62,6 +63,7 @@ describe("planFromEvent", () => {
     const conScelta = planFromEvent(
       ev("checkout.session.completed", {
         mode: "payment",
+        payment_status: "paid",
         metadata: { kind: "bundle_purchase", userId: "u1", bundleId: "b1", chosenCourseId: "c9", orgId: "o1" },
       }),
     );
@@ -70,6 +72,7 @@ describe("planFromEvent", () => {
     const senzaScelta = planFromEvent(
       ev("checkout.session.completed", {
         mode: "payment",
+        payment_status: "paid",
         metadata: { kind: "bundle_purchase", userId: "u1", bundleId: "b1", orgId: "o1" },
       }),
     );
@@ -81,6 +84,43 @@ describe("planFromEvent", () => {
       ev("checkout.session.completed", { mode: "payment", metadata: { kind: "bundle_purchase", userId: "u1", orgId: "o1" } }),
     );
     expect(p.action).toBe("ignore");
+  });
+});
+
+describe("planFromEvent — l'accesso si dà solo a pagamento incassato (audit C1)", () => {
+  const corso = (payment_status: string | undefined) => ({
+    mode: "payment",
+    payment_status,
+    metadata: { kind: "course_purchase", userId: "u1", courseId: "c1", orgId: "o1" },
+  });
+  const acquisto = { action: "course_purchase", userId: "u1", courseId: "c1", orgId: "o1" };
+
+  it("checkout completato ma NON ancora incassato (metodi a conferma ritardata) → nessun accesso", () => {
+    expect(planFromEvent(ev("checkout.session.completed", corso("unpaid"))).action).toBe("ignore");
+    expect(planFromEvent(ev("checkout.session.completed", corso(undefined))).action).toBe("ignore");
+  });
+
+  it("checkout completato e pagato → accesso", () => {
+    expect(planFromEvent(ev("checkout.session.completed", corso("paid")))).toEqual(acquisto);
+  });
+
+  it("coupon al 100% (nessun pagamento richiesto) → accesso", () => {
+    expect(planFromEvent(ev("checkout.session.completed", corso("no_payment_required")))).toEqual(acquisto);
+  });
+
+  it("pagamento ritardato poi riuscito → accesso; fallito → nessun accesso", () => {
+    expect(planFromEvent(ev("checkout.session.async_payment_succeeded", corso("paid")))).toEqual(acquisto);
+    expect(planFromEvent(ev("checkout.session.async_payment_failed", corso("unpaid"))).action).toBe("ignore");
+  });
+
+  it("vale anche per i pacchetti", () => {
+    const pacchetto = (payment_status: string) => ({
+      mode: "payment",
+      payment_status,
+      metadata: { kind: "bundle_purchase", userId: "u1", bundleId: "b1", orgId: "o1" },
+    });
+    expect(planFromEvent(ev("checkout.session.completed", pacchetto("unpaid"))).action).toBe("ignore");
+    expect(planFromEvent(ev("checkout.session.async_payment_succeeded", pacchetto("paid"))).action).toBe("bundle_purchase");
   });
 });
 

@@ -5,7 +5,9 @@
 // ⚠️ SICUREZZA — questa condizione è l'UNICA barriera. La RLS su payment_event lascia leggere
 // all'app ogni riga (policy app_rls_legge, migrazione 0029), quindi chi vede cosa lo decide
 // `condizioneMio`, usata IDENTICA dall'elenco e dalla rotta della ricevuta. Un pagamento è "mio" se:
-//   1. è un acquisto completato (checkout.session.completed);
+//   1. è un acquisto INCASSATO: checkout completato e pagato (o gratuito per un coupon al 100%),
+//      oppure pagamento a conferma ritardata poi riuscito. Un checkout completato ma non ancora
+//      incassato non è un acquisto (stessa regola di sessioneIncassata in events.ts);
 //   2. è stato fatto per me: user_id = io (per un corso è il destinatario, per un pacchetto chi compra);
 //   3. l'ho pagato io: sono owner o admin dell'organizzazione a cui è intestato il pagamento.
 // Il punto 3 impedisce a un dipendente di vedere la ricevuta di un corso che l'AZIENDA ha pagato
@@ -17,7 +19,10 @@ import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import { withTenant } from "@/lib/db/tenant";
 import { bundle, course, paymentEvent } from "@/lib/db/schema";
 
-const ACQUISTO = "checkout.session.completed";
+const ACQUISTO = sql`(
+  (${paymentEvent.type} = 'checkout.session.completed'
+     and ${paymentEvent.payload}->'data'->'object'->>'payment_status' in ('paid', 'no_payment_required'))
+  or ${paymentEvent.type} = 'checkout.session.async_payment_succeeded')`;
 const RIMBORSO = "charge.refunded";
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -33,7 +38,7 @@ export type Acquisto = {
 
 function condizioneMio(userId: string) {
   return and(
-    eq(paymentEvent.type, ACQUISTO),
+    ACQUISTO,
     eq(paymentEvent.userId, userId),
     sql`exists (select 1 from "member" m
                 where m.user_id = ${userId}

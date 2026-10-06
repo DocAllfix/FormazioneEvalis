@@ -78,10 +78,25 @@ export function datiPagamentoDaEvento(event: Stripe.Event): DatiPagamento {
   };
 }
 
+/**
+ * La sessione di checkout di un evento, SOLO se il denaro è incassato. Con i metodi a conferma
+ * ritardata (Satispay, MB WAY, bonifici…) "checkout completato" arriva con `unpaid` e l'esito
+ * vero arriva dopo: riuscito (`async_payment_succeeded`) o fallito. Il corso e la mail di vendita
+ * partono solo a incasso avvenuto; un coupon al 100% (`no_payment_required`) vale come incassato.
+ */
+export function sessioneIncassata(event: Stripe.Event): Stripe.Checkout.Session | null {
+  if (event.type === "checkout.session.async_payment_succeeded") return event.data.object as Stripe.Checkout.Session;
+  if (event.type !== "checkout.session.completed") return null;
+  const s = event.data.object as Stripe.Checkout.Session;
+  return s.payment_status === "paid" || s.payment_status === "no_payment_required" ? s : null;
+}
+
 export function planFromEvent(event: Stripe.Event): BillingAction {
   switch (event.type) {
-    case "checkout.session.completed": {
-      const s = event.data.object as Stripe.Checkout.Session;
+    case "checkout.session.completed":
+    case "checkout.session.async_payment_succeeded": {
+      const s = sessioneIncassata(event);
+      if (!s) return { action: "ignore" }; // non ancora incassato: si aspetta l'esito
       const m = s.metadata;
       if (s.mode === "payment" && m?.kind === "course_purchase" && m.userId && m.courseId && m.orgId) {
         return { action: "course_purchase", userId: m.userId, courseId: m.courseId, orgId: m.orgId };

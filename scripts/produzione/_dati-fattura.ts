@@ -6,7 +6,10 @@ import postgres from "postgres";
 const sql = postgres(process.env.PROD_DATABASE_URL!, { prepare: false, max: 1, connect_timeout: 10 });
 const righe = await sql`
   select occurred_at, amount_total, payload->'data'->'object' as s
-  from payment_event where type = 'checkout.session.completed' and livemode order by occurred_at`;
+  from payment_event p where livemode
+    and (p.type = 'checkout.session.async_payment_succeeded'
+         or (p.type = 'checkout.session.completed' and p.payload->'data'->'object'->>'payment_status' in ('paid', 'no_payment_required')))
+  order by occurred_at`;
 console.log(`acquisti live: ${righe.length}\n`);
 const si = (v: unknown) => (v ? "sì" : "NO");
 for (const { occurred_at, amount_total, s } of righe) {

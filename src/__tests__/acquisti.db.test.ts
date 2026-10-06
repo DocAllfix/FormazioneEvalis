@@ -20,7 +20,7 @@ const ev = (n: string) => `evt_acq_${n}_${RUN}`;
 let corsoId = "";
 const ledger: Record<string, string> = {}; // nome → id riga
 
-function riga(nome: string, v: { type: string; userId: string | null; orgId: string | null; intent: string; importo?: number; meta?: Record<string, string> }) {
+function riga(nome: string, v: { type: string; userId: string | null; orgId: string | null; intent: string; importo?: number; meta?: Record<string, string>; stato?: string }) {
   return {
     stripeEventId: ev(nome),
     type: v.type,
@@ -31,7 +31,7 @@ function riga(nome: string, v: { type: string; userId: string | null; orgId: str
     amountTotal: v.importo ?? 21838,
     currency: "eur",
     occurredAt: new Date(),
-    payload: { data: { object: { metadata: v.meta ?? {} } } },
+    payload: { data: { object: { payment_status: v.stato ?? "paid", metadata: v.meta ?? {} } } },
   };
 }
 
@@ -62,14 +62,25 @@ beforeAll(async () => {
     riga("rimborso", { type: "charge.refunded", userId: null, orgId: null, intent: `pi_a_${RUN}` }),
     // un evento che NON è un acquisto, anche se porta l'utente A: non va mostrato
     riga("fallito", { type: "payment_intent.payment_failed", userId: A, orgId: orgA, intent: `pi_x_${RUN}` }),
+    // B paga con un metodo a conferma ritardata: prima "completato ma non incassato", poi "riuscito"
+    riga("attesa", { type: "checkout.session.completed", userId: B, orgId: orgB, intent: `pi_b_${RUN}`, meta: corsoPer(B, orgB), stato: "unpaid" }),
   ]).returning({ id: paymentEvent.id, ev: paymentEvent.stripeEventId });
   for (const r of righe) ledger[r.ev.replace(`evt_acq_`, "").replace(`_${RUN}`, "")] = r.id;
 });
 
+async function incassoRitardatoDiB() {
+  const corsoPer = { kind: "course_purchase", courseId: corsoId, userId: B, orgId: orgB };
+  const [r] = await db
+    .insert(paymentEvent)
+    .values(riga("riuscito", { type: "checkout.session.async_payment_succeeded", userId: B, orgId: orgB, intent: `pi_b_${RUN}`, meta: corsoPer }))
+    .returning({ id: paymentEvent.id });
+  return r.id;
+}
+
 afterAll(async () => {
   await db.transaction(async (tx) => {
     await tx.execute(sql`SET LOCAL app.audit_maintenance = 'on'`); // il registro è append-only
-    await tx.delete(paymentEvent).where(inArray(paymentEvent.stripeEventId, ["a", "m", "o", "rimborso", "fallito"].map(ev)));
+    await tx.delete(paymentEvent).where(inArray(paymentEvent.stripeEventId, ["a", "m", "o", "rimborso", "fallito", "attesa", "riuscito"].map(ev)));
   });
   await db.delete(member).where(inArray(member.organizationId, [orgA, orgB, orgC]));
   await db.delete(organization).where(inArray(organization.id, [orgA, orgB, orgC]));
@@ -87,8 +98,11 @@ describe("I miei acquisti — chi vede cosa", () => {
     expect(lista[0].rimborsato).toBe(true);
   });
 
-  it("un altro privato non vede niente", async () => {
+  it("un checkout completato ma non incassato non è un acquisto; lo diventa a incasso avvenuto, una volta sola", async () => {
     expect(await listMyPurchases(B)).toEqual([]);
+    expect(await paymentIntentDiMioAcquisto(B, ledger.attesa)).toBeNull();
+    const riuscito = await incassoRitardatoDiB();
+    expect((await listMyPurchases(B)).map((x) => x.id)).toEqual([riuscito]);
   });
 
   it("il dipendente NON vede il corso che l'azienda ha pagato per lui", async () => {

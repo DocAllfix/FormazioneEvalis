@@ -16,6 +16,7 @@ import { db } from "@/lib/db";
 import { bundle, course } from "@/lib/db/schema";
 import { inviaEmailAssistenza } from "@/lib/email/resend";
 import { renderEmail, esc } from "@/lib/email/layout";
+import { sessioneIncassata } from "./events";
 
 export const EMAIL_VENDITE = "evaliscert@libero.it";
 /** Chi riceve le notifiche interne (vendite, corsi completati): il committente e, in copia, lo staff. */
@@ -23,11 +24,13 @@ export const DESTINATARI_INTERNI = [EMAIL_VENDITE, "dilonardoa28@gmail.com"];
 /** Prima di questo istante nessuna notifica: è il momento in cui la funzione è stata introdotta. */
 export const NOTIFICHE_DAL = new Date("2026-10-02T05:44:00Z");
 
-/** Le tre condizioni insieme: live, acquisto nostro, avvenuto dopo NOTIFICHE_DAL. */
+/** Le condizioni insieme: live, acquisto nostro INCASSATO, avvenuto dopo NOTIFICHE_DAL. */
 export function deveNotificare(event: Stripe.Event): boolean {
-  if (!event.livemode || event.type !== "checkout.session.completed") return false;
+  if (!event.livemode) return false;
+  const s = sessioneIncassata(event);
+  if (!s) return false;
   if (event.created * 1000 < NOTIFICHE_DAL.getTime()) return false;
-  const kind = (event.data.object as Stripe.Checkout.Session).metadata?.kind;
+  const kind = s.metadata?.kind;
   return kind === "course_purchase" || kind === "bundle_purchase";
 }
 
@@ -62,7 +65,7 @@ export function datiVendita(s: Stripe.Checkout.Session, created: number): DatiVe
   const sconto = s.total_details?.amount_discount ?? 0;
   return {
     quando: new Date(created * 1000),
-    pagato: s.payment_status === "paid",
+    pagato: s.payment_status === "paid" || s.payment_status === "no_payment_required",
     valuta: (s.currency ?? "eur").toUpperCase(),
     imponibileCents: s.amount_subtotal == null ? null : s.amount_subtotal - sconto,
     scontoCents: sconto,
