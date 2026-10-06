@@ -18,6 +18,7 @@ import { buyBundleAction } from "@/features/billing/server-actions";
 import { registratiPer } from "@/lib/next-sicuro";
 import { euro } from "./catalog-browser";
 import { BundlePickDialog } from "./bundle-pick-dialog";
+import { esegui } from "@/lib/esito";
 
 /** Titolo corso in forma breve per gli elenchi dei pacchetti: cade la coda descrittiva
  * dopo il trattino lungo e cadono i prefissi di ruolo ("Auditor", "Auditor/Lead Auditor",
@@ -115,7 +116,7 @@ function useAcquisto(b: CatalogBundle) {
     setLoading(true);
     setError("");
     try {
-      const url = await buyBundleAction(b.id);
+      const url = await esegui(buyBundleAction(b.id));
       window.location.href = url;
     } catch (e) {
       setError(e instanceof Error ? e.message : "Impossibile avviare l'acquisto.");

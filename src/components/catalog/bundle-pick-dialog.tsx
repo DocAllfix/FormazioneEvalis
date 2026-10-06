@@ -10,6 +10,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "
 import type { CatalogBundle } from "@/features/catalog/queries";
 import { buyBundleAction } from "@/features/billing/server-actions";
 import { euro } from "./catalog-browser";
+import { esegui } from "@/lib/esito";
 
 export function BundlePickDialog({
   bundle,
@@ -38,7 +39,7 @@ export function BundlePickDialog({
     setLoading(true);
     setError("");
     try {
-      const url = await buyBundleAction(bundle.id, chosen);
+      const url = await esegui(buyBundleAction(bundle.id, chosen));
       window.location.href = url;
     } catch (e) {
       setError(e instanceof Error ? e.message : "Impossibile avviare l'acquisto.");

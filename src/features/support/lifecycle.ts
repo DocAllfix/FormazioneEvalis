@@ -7,6 +7,7 @@ import { desc, eq, ne } from "drizzle-orm";
 import { ticket, ticketMessage, user } from "@/lib/db/schema";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
 import { appendActivity } from "@/features/audit/log";
+import { ErroreUtente } from "@/lib/esito";
 
 export type TicketStatus = "open" | "pending" | "closed";
 
@@ -38,7 +39,7 @@ export async function createTicket(params: {
   body: string;
 }): Promise<{ id: string }> {
   const { userId, orgId, subject, body } = params;
-  if (!subject.trim() || !body.trim()) throw new Error("Oggetto e messaggio sono obbligatori.");
+  if (!subject.trim() || !body.trim()) throw new ErroreUtente("Oggetto e messaggio sono obbligatori.");
   return withTenant({ userId }, async (tx) => {
     const [t] = await tx
       .insert(ticket)
@@ -101,7 +102,7 @@ export async function addMessage(params: {
   ctx: TenantCtx;
 }): Promise<{ ok: true }> {
   const { ticketId, authorId, body, ctx } = params;
-  if (!body.trim()) throw new Error("Il messaggio non può essere vuoto.");
+  if (!body.trim()) throw new ErroreUtente("Il messaggio non può essere vuoto.");
   return withTenant(ctx, async (tx) => {
     const [t] = await tx
       .select({ id: ticket.id, organizationId: ticket.organizationId, userId: ticket.userId })

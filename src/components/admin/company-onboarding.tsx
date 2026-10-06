@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { Building2, Loader2 } from "lucide-react";
 import { createMyCompany } from "@/features/admin/server-actions";
 import { slugifyAzienda as slugify } from "@/lib/reserved-subdomains";
+import { esegui } from "@/lib/esito";
 
 const ROOT = process.env.NEXT_PUBLIC_ROOT_DOMAIN ?? "evalisacademy.it";
 
@@ -26,7 +27,7 @@ export function CompanyOnboarding({ userName }: { userName?: string | null }) {
     setError("");
     setLoading(true);
     try {
-      await createMyCompany({ name: name.trim(), slug: effectiveSlug });
+      await esegui(createMyCompany({ name: name.trim(), slug: effectiveSlug }));
       router.refresh();
       router.push("/admin");
     } catch (err) {

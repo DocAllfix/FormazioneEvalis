@@ -8,6 +8,7 @@ import { and, desc, eq, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { category, thread, post, postReport, moderationLog, user } from "@/lib/db/schema";
 import { appendActivity } from "@/features/audit/log";
+import { ErroreUtente } from "@/lib/esito";
 
 export type ForumCategory = { id: string; slug: string; name: string; description: string | null };
 export type ForumThreadRow = {
@@ -112,7 +113,7 @@ export async function createThread(params: {
   body: string;
 }): Promise<{ id: string }> {
   const { authorId, orgId, categoryId, title, body } = params;
-  if (!title.trim() || !body.trim()) throw new Error("Titolo e messaggio sono obbligatori.");
+  if (!title.trim() || !body.trim()) throw new ErroreUtente("Titolo e messaggio sono obbligatori.");
   return db.transaction(async (tx) => {
     const [th] = await tx
       .insert(thread)
@@ -138,11 +139,11 @@ export async function replyToThread(params: {
   body: string;
 }): Promise<{ ok: true }> {
   const { authorId, orgId, threadId, body } = params;
-  if (!body.trim()) throw new Error("Il messaggio non può essere vuoto.");
+  if (!body.trim()) throw new ErroreUtente("Il messaggio non può essere vuoto.");
   return db.transaction(async (tx) => {
     const [th] = await tx.select({ id: thread.id, locked: thread.locked }).from(thread).where(eq(thread.id, threadId)).limit(1);
     if (!th) throw new Error("Discussione inesistente.");
-    if (th.locked) throw new Error("Discussione bloccata: non è possibile rispondere.");
+    if (th.locked) throw new ErroreUtente("Discussione bloccata: non è possibile rispondere.");
     await tx.insert(post).values({ threadId, authorId, body: body.trim() });
     await tx.update(thread).set({ lastPostAt: new Date() }).where(eq(thread.id, threadId));
     await appendActivity(tx, {
@@ -158,7 +159,7 @@ export async function replyToThread(params: {
 /** Modifica un post: SOLO se di proprietà dell'autore. */
 export async function editOwnPost(params: { postId: string; authorId: string; body: string }): Promise<{ ok: true }> {
   const { postId, authorId, body } = params;
-  if (!body.trim()) throw new Error("Il messaggio non può essere vuoto.");
+  if (!body.trim()) throw new ErroreUtente("Il messaggio non può essere vuoto.");
   const [p] = await db.select({ authorId: post.authorId }).from(post).where(eq(post.id, postId)).limit(1);
   if (!p) throw new Error("Messaggio inesistente.");
   if (p.authorId !== authorId) throw new Error("Permesso negato: non è il tuo messaggio.");
@@ -179,7 +180,7 @@ export async function deleteOwnPost(params: { postId: string; authorId: string }
 /** Segnala un post alla moderazione. */
 export async function reportPost(params: { postId: string; reporterId: string; reason: string }): Promise<{ ok: true }> {
   const { postId, reporterId, reason } = params;
-  if (!reason.trim()) throw new Error("Indica un motivo per la segnalazione.");
+  if (!reason.trim()) throw new ErroreUtente("Indica un motivo per la segnalazione.");
   await db.insert(postReport).values({ postId, reporterId, reason: reason.trim() });
   return { ok: true as const };
 }

@@ -13,6 +13,7 @@ import {
   requestMyCertificate,
 } from "@/features/learner/actions";
 import { QuizNonDisponibile } from "@/features/quiz/engine";
+import { conEsito } from "@/lib/esito";
 
 /** URL firmato (TTL breve) del PDF certificato: solo proprietario o staff. */
 export async function downloadMyCertificate(certificateId: string): Promise<string> {
@@ -44,7 +45,7 @@ export async function submitMyQuizAction(
   attemptId: string,
   answers: { questionId: string; optionId: string }[],
 ) {
-  return submitMyQuiz(attemptId, answers);
+  return conEsito(() => submitMyQuiz(attemptId, answers));
 }
 
 /** A esame finale superato: predispone il certificato (ready_for_review) se a norma. */

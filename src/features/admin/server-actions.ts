@@ -16,21 +16,27 @@ import { appendActivity } from "@/features/audit/log";
 import { inviteMember, acceptInvitation, verifyInvitedAccount } from "@/features/auth/invitations";
 import { enrollMemberInCourse } from "@/features/courses/assign";
 import { requireCompanyContext } from "@/features/admin/context";
+import { ErroreUtente } from "@/lib/esito";
+import { conEsito, type Esito } from "@/lib/esito";
 
 /** Self-serve: l'utente crea il proprio spazio azienda e ne diventa owner. */
 export async function createMyCompany(input: { name: string; slug: string }) {
+  return conEsito(() => creaAzienda(input));
+}
+
+async function creaAzienda(input: { name: string; slug: string }) {
   const { user } = await requireSession();
   const name = input.name?.trim();
   const slug = input.slug?.trim().toLowerCase();
-  if (!name) throw new Error("Nome azienda obbligatorio.");
-  if (!isValidSlug(slug)) throw new Error("Sottodominio non valido o riservato.");
+  if (!name) throw new ErroreUtente("Nome azienda obbligatorio.");
+  if (!isValidSlug(slug)) throw new ErroreUtente("Sottodominio non valido o riservato.");
 
   const [exists] = await db
     .select({ id: organization.id })
     .from(organization)
     .where(eq(organization.slug, slug))
     .limit(1);
-  if (exists) throw new Error("Sottodominio già in uso, scegline un altro.");
+  if (exists) throw new ErroreUtente("Sottodominio già in uso, scegline un altro.");
 
   // I posti NON si vendono (modello: si pagano i corsi, non l'accesso): l'azienda può
   // invitare liberamente i propri dipendenti. Il limite resta solo come guardia tecnica
@@ -59,19 +65,21 @@ export async function createMyCompany(input: { name: string; slug: string }) {
 
 /** Invita un dipendente nell'azienda amministrata (gate posti). */
 export async function inviteMemberAction(email: string, role: "admin" | "member" = "member") {
-  const { org } = await requireCompanyContext();
-  return inviteMember(email, role, org.id);
+  return conEsito(async () => {
+    const { org } = await requireCompanyContext();
+    return inviteMember(email, role, org.id);
+  });
 }
 
 /** Accetta un invito (utente loggato → membro azienda; org dedotta dall'invito). */
 export async function acceptInvitationAction(invitationId: string) {
-  return acceptInvitation(invitationId);
+  return conEsito(() => acceptInvitation(invitationId));
 }
 
 /** Marca verificato l'account appena creato via invito (l'id invito prova il possesso email).
  *  Non richiede sessione: l'utente invitato non è ancora loggato. Gate = validità dell'invito. */
-export async function verifyInvitedAccountAction(invitationId: string): Promise<void> {
-  await verifyInvitedAccount(invitationId);
+export async function verifyInvitedAccountAction(invitationId: string): Promise<Esito<void>> {
+  return conEsito(() => verifyInvitedAccount(invitationId));
 }
 
 /** Assegna un corso a un dipendente dell'azienda amministrata (enrollment b2b_seat). */

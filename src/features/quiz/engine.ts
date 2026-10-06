@@ -8,6 +8,7 @@ import { quiz, quizQuestion, quizAttempt } from "@/lib/db/schema";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
 import { oraRoma } from "@/lib/formato";
+import { ErroreUtente } from "@/lib/esito";
 
 /**
  * Blocco PREVISTO dalle regole del quiz (attesa dopo un tentativo non superato, tentativi
@@ -112,7 +113,7 @@ export async function submitQuiz(
   return withTenant(ctx, async (tx) => {
     const [att] = await tx.select().from(quizAttempt).where(eq(quizAttempt.id, attemptId)).limit(1);
     if (!att) throw new Error("Tentativo inesistente.");
-    if (att.submittedAt) throw new Error("Tentativo già inviato.");
+    if (att.submittedAt) throw new ErroreUtente("Tentativo già inviato.");
     if (!att.quizId || !att.startedAt) throw new Error("Tentativo non valido.");
 
     const [qz] = await tx.select().from(quiz).where(eq(quiz.id, att.quizId)).limit(1);

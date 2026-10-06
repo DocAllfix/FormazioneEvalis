@@ -5,6 +5,7 @@ import { Check, ClipboardCheck, Clock, Loader2, RotateCcw, X } from "lucide-reac
 import { startMyQuizAction, submitMyQuizAction, leggiMiaAnagraficaAction } from "@/features/learner/server-actions";
 import { DatiCertificatoForm } from "@/components/app/dati-certificato-form";
 import { mmss as fmt, oraRoma } from "@/lib/formato";
+import { esegui } from "@/lib/esito";
 
 type Question = { id: string; text: string; options: { id: string; text: string }[] };
 type Result = { score: number; passed: boolean; over: boolean; lockedUntil?: Date | null };
@@ -59,7 +60,7 @@ export function QuizStep({
           questionId,
           optionId,
         }));
-        const r = await submitMyQuizAction(currentAttempt, ans);
+        const r = await esegui(submitMyQuizAction(currentAttempt, ans));
         setResult(r);
         setPhase("result");
         if (r.passed && !fired.current) {

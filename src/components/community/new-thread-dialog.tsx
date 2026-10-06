@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { createThreadAction } from "@/features/community/server-actions";
+import { esegui } from "@/lib/esito";
 
 export function NewThreadDialog({ categories }: { categories: { id: string; name: string }[] }) {
   const router = useRouter();
@@ -31,7 +32,7 @@ export function NewThreadDialog({ categories }: { categories: { id: string; name
     setBusy(true);
     setError("");
     try {
-      const { id } = await createThreadAction(categoryId, title, body);
+      const { id } = await esegui(createThreadAction(categoryId, title, body));
       setOpen(false);
       setTitle("");
       setBody("");

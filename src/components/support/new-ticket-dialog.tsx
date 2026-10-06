@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { createMyTicketAction } from "@/features/support/server-actions";
+import { esegui } from "@/lib/esito";
 
 export function NewTicketDialog() {
   const router = useRouter();
@@ -30,7 +31,7 @@ export function NewTicketDialog() {
     setBusy(true);
     setError("");
     try {
-      const { id } = await createMyTicketAction(subject, body);
+      const { id } = await esegui(createMyTicketAction(subject, body));
       setOpen(false);
       setSubject("");
       setBody("");

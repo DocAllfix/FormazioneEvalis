@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Bot, LifeBuoy, Loader2, MessageCircle, Send, X } from "lucide-react";
 import { createMyTicketAction } from "@/features/support/server-actions";
+import { esegui } from "@/lib/esito";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -79,7 +80,7 @@ export function SupportChatWidget({ enabled }: { enabled: boolean }) {
         .map((m) => `${m.role === "user" ? "Discente" : "Assistente"}: ${m.content}`)
         .join("\n\n");
       const subject = firstUser.length > 80 ? `${firstUser.slice(0, 77)}…` : firstUser;
-      const { id } = await createMyTicketAction(subject, `Trascrizione chat:\n\n${transcript}`);
+      const { id } = await esegui(createMyTicketAction(subject, `Trascrizione chat:\n\n${transcript}`));
       setOpen(false);
       router.push(`/assistenza/${id}`);
     } catch (e) {

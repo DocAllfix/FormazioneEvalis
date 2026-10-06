@@ -11,6 +11,7 @@ import { Loader2, ShoppingCart, ShieldAlert, ArrowRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { buyCourseAction } from "@/features/billing/server-actions";
 import { acknowledgeIso19011AdvisoryAction } from "@/features/prerequisites/server-actions";
+import { esegui } from "@/lib/esito";
 
 type Advisory = { shouldAdvise: boolean; prerequisiteCourseId?: string; prerequisiteTitle?: string };
 
@@ -23,7 +24,7 @@ export function BuyButton({ courseId, advisory }: { courseId: string; advisory?:
     setLoading(true);
     setError("");
     try {
-      const url = await buyCourseAction(courseId);
+      const url = await esegui(buyCourseAction(courseId));
       window.location.href = url;
     } catch (e) {
       setError(e instanceof Error ? e.message : "Impossibile avviare l'acquisto.");

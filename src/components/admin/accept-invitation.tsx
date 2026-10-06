@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Building2, Loader2 } from "lucide-react";
 import { acceptInvitationAction } from "@/features/admin/server-actions";
+import { esegui } from "@/lib/esito";
 
 export function AcceptInvitation({
   invitationId,
@@ -22,7 +23,7 @@ export function AcceptInvitation({
     setLoading(true);
     setError("");
     try {
-      await acceptInvitationAction(invitationId);
+      await esegui(acceptInvitationAction(invitationId));
       router.push("/dashboard");
       router.refresh();
     } catch (e) {

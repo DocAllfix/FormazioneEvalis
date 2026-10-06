@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Building2, Loader2 } from "lucide-react";
 import { signUp, signIn } from "@/lib/auth/client";
 import { verifyInvitedAccountAction, acceptInvitationAction } from "@/features/admin/server-actions";
+import { esegui } from "@/lib/esito";
 
 export function InvitedJoin({
   invitationId,
@@ -35,12 +36,12 @@ export function InvitedJoin({
       // 1) crea l'account (l'hook salta l'org personale perché esiste un invito pending)
       await signUp.email({ email, password, name });
       // 2) verifica l'account: l'id dell'invito prova il possesso dell'email
-      await verifyInvitedAccountAction(invitationId);
+      await esegui(verifyInvitedAccountAction(invitationId));
       // 3) accedi (ora verificato → sessione, cookie condiviso su .dominio)
       const { error: siErr } = await signIn.email({ email, password });
       if (siErr) throw new Error(siErr.message || "Accesso non riuscito.");
       // 4) diventa membro dell'azienda
-      await acceptInvitationAction(invitationId);
+      await esegui(acceptInvitationAction(invitationId));
       // 5) entra: siamo già sul sottodominio dell'azienda
       window.location.assign("/dashboard");
     } catch (err) {

@@ -15,32 +15,43 @@ import {
   setThreadLocked,
   resolveReport,
 } from "@/features/community/lifecycle";
+import { conEsito } from "@/lib/esito";
 
 // --- Discente ---
 
 export async function createThreadAction(categoryId: string, title: string, body: string) {
-  const { user, orgId } = await requireActiveOrg();
-  return createThread({ authorId: user.id, orgId, categoryId, title, body });
+  return conEsito(async () => {
+    const { user, orgId } = await requireActiveOrg();
+    return createThread({ authorId: user.id, orgId, categoryId, title, body });
+  });
 }
 
 export async function replyThreadAction(threadId: string, body: string) {
-  const { user, orgId } = await requireActiveOrg();
-  return replyToThread({ authorId: user.id, orgId, threadId, body });
+  return conEsito(async () => {
+    const { user, orgId } = await requireActiveOrg();
+    return replyToThread({ authorId: user.id, orgId, threadId, body });
+  });
 }
 
 export async function editPostAction(postId: string, body: string) {
-  const { user } = await requireSession();
-  return editOwnPost({ postId, authorId: user.id, body });
+  return conEsito(async () => {
+    const { user } = await requireSession();
+    return editOwnPost({ postId, authorId: user.id, body });
+  });
 }
 
 export async function deletePostAction(postId: string) {
-  const { user } = await requireSession();
-  return deleteOwnPost({ postId, authorId: user.id });
+  return conEsito(async () => {
+    const { user } = await requireSession();
+    return deleteOwnPost({ postId, authorId: user.id });
+  });
 }
 
 export async function reportPostAction(postId: string, reason: string) {
-  const { user } = await requireSession();
-  return reportPost({ postId, reporterId: user.id, reason });
+  return conEsito(async () => {
+    const { user } = await requireSession();
+    return reportPost({ postId, reporterId: user.id, reason });
+  });
 }
 
 // --- Moderazione staff ---

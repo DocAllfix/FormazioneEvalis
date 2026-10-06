@@ -10,6 +10,7 @@ import { db } from "@/lib/db";
 import { invitation, organization, user } from "@/lib/db/schema";
 import { requireActiveOrg } from "@/features/auth/guards";
 import { assertSeatAvailable } from "@/features/billing/seats";
+import { ErroreUtente } from "@/lib/esito";
 
 /** Info pubbliche dell'invito (l'id UUID è il segreto: chi ce l'ha ha ricevuto l'email). */
 export async function getInvitationInfo(
@@ -40,7 +41,7 @@ export async function verifyInvitedAccount(invitationId: string): Promise<void> 
     .where(eq(invitation.id, invitationId))
     .limit(1);
   if (!inv || inv.status !== "pending" || inv.expiresAt < new Date()) {
-    throw new Error("Invito non valido o scaduto.");
+    throw new ErroreUtente("Invito non valido o scaduto.");
   }
   await db.update(user).set({ emailVerified: true }).where(eq(user.email, inv.email));
 }
@@ -69,7 +70,7 @@ export async function acceptInvitation(invitationId: string) {
     .from(invitation)
     .where(eq(invitation.id, invitationId))
     .limit(1);
-  if (!inv) throw new Error("Invito non trovato.");
+  if (!inv) throw new ErroreUtente("Invito non trovato.");
   await assertSeatAvailable(inv.orgId); // il posto si consuma all'accettazione
   return auth.api.acceptInvitation({
     body: { invitationId },

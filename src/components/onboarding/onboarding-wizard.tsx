@@ -29,6 +29,7 @@ import { createMyCompany } from "@/features/admin/server-actions";
 import type { OnboardingPersona } from "@/lib/db/schema/onboarding";
 // slug → sottodominio: la stessa funzione usata da company-onboarding, ora condivisa.
 import { slugifyAzienda as slugify } from "@/lib/reserved-subdomains";
+import { esegui } from "@/lib/esito";
 
 const GOALS = [
   { id: "auditor_iso", label: "Auditor ISO", desc: "Schemi 9001, 14001, 45001…", icon: ShieldCheck },
@@ -143,7 +144,7 @@ export function OnboardingWizard({
     setCompanyError("");
     startTransition(async () => {
       try {
-        const res = await createMyCompany({ name: coName.trim(), slug: effectiveSlug });
+        const res = await esegui(createMyCompany({ name: coName.trim(), slug: effectiveSlug }));
         await completeOnboardingAction();
         if (ROOT && !ROOT.includes("localhost")) {
           window.location.assign(`https://${res.slug}.${ROOT}/admin`);

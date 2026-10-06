@@ -13,6 +13,7 @@ import { ensureStripeCustomer } from "./customers";
 import { loadBundleWithCourses, resolveBundleCourseIds } from "./bundles";
 import { COMPANY_COUPONS, companyDiscountPercent } from "./discounts";
 import { chiaveIdempotenza } from "./idempotenza";
+import { ErroreUtente } from "@/lib/esito";
 
 const appUrl = () => process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
@@ -119,7 +120,7 @@ export async function createCoursePurchaseCheckout(courseId: string, beneficiary
       .from(member)
       .where(and(eq(member.userId, beneficiaryUserId), eq(member.organizationId, orgId)))
       .limit(1);
-    if (!m) throw new Error("Il destinatario non è un membro della tua organizzazione.");
+    if (!m) throw new ErroreUtente("Il destinatario non è un membro della tua organizzazione.");
     destinatarioId = beneficiaryUserId;
   }
 
@@ -127,7 +128,7 @@ export async function createCoursePurchaseCheckout(courseId: string, beneficiary
   // di creare la sessione Stripe. Senza, chi possiede già il corso poteva pagarlo una seconda
   // volta e non ricevere nulla (il webhook non crea l'iscrizione: esiste già).
   if (await haGiaIlCorso(destinatarioId, courseId)) {
-    throw new Error(
+    throw new ErroreUtente(
       destinatarioId === user.id
         ? "Hai già questo corso: lo trovi tra i tuoi percorsi."
         : "Questa persona ha già accesso al corso.",
@@ -162,7 +163,7 @@ export async function createCoursePurchaseCheckout(courseId: string, beneficiary
 export async function createBundlePurchaseCheckout(bundleId: string, chosenCourseId?: string): Promise<string> {
   const { user, orgId } = await requireActiveOrg();
   const { bundle: b, links } = await loadBundleWithCourses(bundleId);
-  if (!b.active) throw new Error("Pacchetto non disponibile.");
+  if (!b.active) throw new ErroreUtente("Pacchetto non disponibile.");
   if (!b.stripePriceId) throw new Error("Pacchetto non acquistabile (prezzo non configurato).");
   const courseIds = resolveBundleCourseIds(b, links, chosenCourseId); // valida la composizione prima di toccare Stripe
 
@@ -174,7 +175,7 @@ export async function createBundlePurchaseCheckout(bundleId: string, chosenCours
     .from(enrollment)
     .where(and(eq(enrollment.userId, user.id), inArray(enrollment.courseId, courseIds)));
   if ((gia?.n ?? 0) >= courseIds.length) {
-    throw new Error("Hai già tutti i corsi di questo pacchetto: li trovi tra i tuoi percorsi.");
+    throw new ErroreUtente("Hai già tutti i corsi di questo pacchetto: li trovi tra i tuoi percorsi.");
   }
 
   const customerId = await ensureStripeCustomer(orgId);

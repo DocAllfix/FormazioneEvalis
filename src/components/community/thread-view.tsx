@@ -20,6 +20,7 @@ import {
   staffSetThreadLockedAction,
 } from "@/features/community/server-actions";
 import type { ForumThreadDetail, ForumPostView } from "@/features/community/lifecycle";
+import { esegui } from "@/lib/esito";
 
 export function ThreadView({
   thread,
@@ -50,7 +51,7 @@ export function ThreadView({
     setBusy(true);
     setError("");
     try {
-      await replyThreadAction(thread.id, body);
+      await esegui(replyThreadAction(thread.id, body));
       setBody("");
       router.refresh();
     } catch (e) {
@@ -167,7 +168,7 @@ function PostCard({
             <Button
               onClick={() =>
                 run(async () => {
-                  await editPostAction(post.id, draft);
+                  await esegui(editPostAction(post.id, draft));
                   setEditing(false);
                 })
               }
@@ -192,7 +193,7 @@ function PostCard({
                 <Pencil className="h-3.5 w-3.5" /> Modifica
               </button>
               <button
-                onClick={() => run(() => deletePostAction(post.id))}
+                onClick={() => run(() => esegui(deletePostAction(post.id)))}
                 disabled={busy}
                 className="inline-flex items-center gap-1 text-destructive hover:underline"
               >
@@ -203,7 +204,7 @@ function PostCard({
             <button
               onClick={() => {
                 const reason = window.prompt("Motivo della segnalazione?")?.trim();
-                if (reason) run(() => reportPostAction(post.id, reason));
+                if (reason) run(() => esegui(reportPostAction(post.id, reason)));
               }}
               disabled={busy}
               className="inline-flex items-center gap-1 text-muted-foreground hover:text-destructive"

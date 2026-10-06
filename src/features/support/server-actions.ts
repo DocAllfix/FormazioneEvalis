@@ -24,6 +24,7 @@ import {
 } from "@/features/support/notifiche";
 import { inviaEmailAssistenza } from "@/lib/email/resend";
 import { renderEmail } from "@/lib/email/layout";
+import { conEsito } from "@/lib/esito";
 
 function dipendenze(): Dipendenze {
   return {
@@ -51,6 +52,10 @@ async function senzaRompere(f: () => Promise<unknown>): Promise<void> {
 // --- Discente ---
 
 export async function createMyTicketAction(subject: string, body: string) {
+  return conEsito(() => _createMyTicketAction(subject, body));
+}
+
+async function _createMyTicketAction(subject: string, body: string) {
   const { user, orgId } = await requireActiveOrg();
   const t = await createTicket({ userId: user.id, orgId, subject, body });
   await senzaRompere(() =>
@@ -66,6 +71,10 @@ export async function createMyTicketAction(subject: string, body: string) {
 }
 
 export async function replyMyTicketAction(ticketId: string, body: string) {
+  return conEsito(() => _replyMyTicketAction(ticketId, body));
+}
+
+async function _replyMyTicketAction(ticketId: string, body: string) {
   const { user } = await requireSession();
   const r = await addMessage({ ticketId, authorId: user.id, body, ctx: { userId: user.id } });
   await senzaRompere(async () => {
@@ -83,6 +92,10 @@ export async function replyMyTicketAction(ticketId: string, body: string) {
 }
 
 export async function closeMyTicketAction(ticketId: string) {
+  return conEsito(() => _closeMyTicketAction(ticketId));
+}
+
+async function _closeMyTicketAction(ticketId: string) {
   const { user } = await requireSession();
   return setTicketStatus({ ticketId, status: "closed", ctx: { userId: user.id } });
 }

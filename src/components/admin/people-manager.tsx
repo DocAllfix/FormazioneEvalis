@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { BadgeCheck, Loader2, Mail, UserPlus } from "lucide-react";
 import { inviteMemberAction } from "@/features/admin/server-actions";
 import { buyCourseForMemberAction } from "@/features/billing/server-actions";
+import { esegui } from "@/lib/esito";
 
 type Member = {
   userId: string;
@@ -42,7 +43,7 @@ export function PeopleManager({
     setInviting(true);
     setError("");
     try {
-      await inviteMemberAction(email.trim(), role);
+      await esegui(inviteMemberAction(email.trim(), role));
       setEmail("");
       router.refresh();
     } catch (err) {
@@ -59,7 +60,7 @@ export function PeopleManager({
     setBusyRow(userId);
     setError("");
     try {
-      const url = await buyCourseForMemberAction(courseId, userId);
+      const url = await esegui(buyCourseForMemberAction(courseId, userId));
       window.location.href = url;
     } catch (err) {
       setError(err instanceof Error ? err.message : "Acquisto non riuscito.");

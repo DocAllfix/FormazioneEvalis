@@ -15,6 +15,7 @@ import {
   staffSetTicketStatusAction,
 } from "@/features/support/server-actions";
 import type { TicketDetail, TicketStatus } from "@/features/support/lifecycle";
+import { esegui } from "@/lib/esito";
 
 const statusInfo: Record<TicketStatus, { text: string; cls: string }> = {
   open: { text: "Aperto", cls: "bg-warning/10 text-warning" },
@@ -47,7 +48,7 @@ export function TicketThread({
     setError("");
     try {
       if (role === "staff") await staffReplyTicketAction(ticket.id, body);
-      else await replyMyTicketAction(ticket.id, body);
+      else await esegui(replyMyTicketAction(ticket.id, body));
       setBody("");
       router.refresh();
     } catch (err) {
@@ -62,7 +63,7 @@ export function TicketThread({
     setError("");
     try {
       if (role === "staff") await staffSetTicketStatusAction(ticket.id, "closed");
-      else await closeMyTicketAction(ticket.id);
+      else await esegui(closeMyTicketAction(ticket.id));
       router.refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Errore nella chiusura.");

@@ -6,6 +6,7 @@ import { count, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { member, organization } from "@/lib/db/schema";
 import { parseOrgMetadata } from "@/features/auth/org-metadata";
+import { ErroreUtente } from "@/lib/esito";
 
 /** Posti assegnati a una nuova azienda. I posti NON sono un prodotto (si pagano i CORSI):
  * questo è solo un tetto tecnico agli inviti, generoso e alzabile a richiesta. */
@@ -34,6 +35,6 @@ export async function getSeatLimit(orgId: string): Promise<number> {
 export async function assertSeatAvailable(orgId: string): Promise<void> {
   const [used, limit] = await Promise.all([countMembers(orgId), getSeatLimit(orgId)]);
   if (used >= limit) {
-    throw new Error(`Posti esauriti (${used}/${limit}) per l'organizzazione ${orgId}.`);
+    throw new ErroreUtente(`Posti esauriti (${used}/${limit}): per aggiungere persone contatta l'assistenza.`);
   }
 }

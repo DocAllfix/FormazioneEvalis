@@ -7,10 +7,11 @@ import { and, eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { member } from "@/lib/db/schema";
 import { getCurrentSession } from "@/lib/auth/server";
+import { ErroreUtente } from "@/lib/esito";
 
 export async function requireSession() {
   const ctx = await getCurrentSession();
-  if (!ctx) throw new Error("Non autenticato.");
+  if (!ctx) throw new ErroreUtente("Non autenticato.");
   return ctx;
 }
 
