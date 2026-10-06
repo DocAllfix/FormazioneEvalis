@@ -64,6 +64,9 @@ export const auth = betterAuth({
     // arbitrari. Chiude il buco della allowlist PLATFORM_STAFF_EMAILS: per usare un'email
     // staff bisogna provarne il possesso. Account pre-esistenti già "grandfathered" verificati.
     requireEmailVerification: true,
+    // Dopo un reset della password tutte le sessioni dell'utente vengono chiuse: chi era entrato
+    // nell'account (cookie rubato, account condiviso) ne resta fuori.
+    revokeSessionsOnPasswordReset: true,
     async sendResetPassword({ user, url }) {
       await sendPasswordResetEmail({ to: user.email, url });
     },

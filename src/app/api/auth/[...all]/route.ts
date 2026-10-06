@@ -7,6 +7,7 @@
 import { toNextJsHandler } from "better-auth/next-js";
 import { auth } from "@/lib/auth";
 import { checkLimit, getClientIp, tooManyRequests } from "@/lib/security/rate-limit";
+import { pathInterno } from "@/lib/next-sicuro";
 
 const handler = toNextJsHandler(auth);
 
@@ -40,6 +41,18 @@ export async function POST(req: Request) {
     ok = await checkLimit(`auth:reset:${ip}`, soglia("RATE_LIMIT_RESET", 5), windowMs); // 5 reset / ora
   }
   if (!ok) return tooManyRequests(windowMs);
+
+  // Il token di reset deve arrivare solo alla NOSTRA pagina. better-auth accetta come destinazione
+  // qualunque origine fidata, compresi i sottodomini `*.root` (che servono al login aziendale): chi
+  // chiede il reset potrebbe così far atterrare il token su un sottodominio che non controlliamo.
+  // Il nostro modulo manda sempre un percorso interno; qualunque altra cosa viene rifiutata.
+  if (path.endsWith("/request-password-reset")) {
+    const corpo = (await req.clone().json().catch(() => null)) as { redirectTo?: unknown } | null;
+    const dest = corpo?.redirectTo;
+    if (dest !== undefined && (typeof dest !== "string" || pathInterno(dest, "") === "")) {
+      return new Response("destinazione non valida", { status: 400 });
+    }
+  }
 
   return handler.POST(req);
 }
