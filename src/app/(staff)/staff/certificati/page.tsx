@@ -1,3 +1,6 @@
+import { redirect } from "next/navigation";
+import { getCurrentSession } from "@/lib/auth/server";
+import { isPlatformAdmin } from "@/features/auth/guards";
 import { PageHeader } from "@/components/admin/page-header";
 import { CertReviewList, type StaffCert } from "@/components/admin/cert-review-list";
 import { listCertificatiStaff, type StatoFiltro } from "@/features/certificates/lifecycle";
@@ -18,6 +21,18 @@ export default async function StaffCertificatiPage({
   const sp = await searchParams;
   const q = (sp.q ?? "").slice(0, 100);
   const stato = STATI.includes(sp.stato as StatoFiltro) ? (sp.stato as StatoFiltro) : "tutti";
+
+  // La mail al committente porta qui con ?q=<numero>. Il redirect del layout non impedisce che
+  // la pagina venga eseguita e non conosce l'indirizzo richiesto: chi non è collegato va al login
+  // e dopo l'accesso torna a QUESTA ricerca, invece di vedere un errore. La barriera vera resta
+  // requirePlatformAdmin dentro listCertificatiStaff.
+  const ctx = await getCurrentSession();
+  if (!ctx) {
+    const query = new URLSearchParams({ ...(q ? { q } : {}), ...(stato !== "tutti" ? { stato } : {}) }).toString();
+    redirect(`/login?next=${encodeURIComponent(`/staff/certificati${query ? `?${query}` : ""}`)}`);
+  }
+  if (!isPlatformAdmin(ctx.user as { email: string; platformRole?: string | null })) redirect("/dashboard");
+
   const righe = await listCertificatiStaff({ q, stato });
   const items: StaffCert[] = righe.map((c) => ({
     id: c.id,
