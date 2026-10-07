@@ -46,6 +46,12 @@ export function proxy(req: NextRequest) {
     requestHeaders.delete("x-org-slug"); // dominio principale (B2C/marketing)
   }
 
+  // Indirizzo richiesto (percorso + ricerca): serve ai layout, che da soli non lo conoscono, per
+  // riportare l'utente dov'era dopo il login. Sempre impostato qui: un valore mandato dal
+  // visitatore viene sovrascritto.
+  const { pathname, search } = new URL(req.url);
+  requestHeaders.set("x-percorso", pathname + search);
+
   return NextResponse.next({ request: { headers: requestHeaders } });
 }
 
