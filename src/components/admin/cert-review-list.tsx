@@ -48,19 +48,11 @@ export function CertReviewList({ items, q, stato }: { items: StaffCert[]; q: str
   const [ok, setOk] = useState("");
   const fileRef = useRef<HTMLInputElement>(null);
   const target = useRef<StaffCert | null>(null);
-  const numeroAttestato = useRef<string>("");
 
   function scegliFile(c: StaffCert) {
-    if (c.status === "issued" && !window.confirm(`Il certificato ${c.number} è già accreditato. Vuoi sostituire il file? L'utente riceverà la nuova versione via email.`)) return;
-    // il numero stampato sull'attestato dell'ente: è quello che chi riceve l'attestato cercherà
-    // sulla pagina di verifica
-    const n = window.prompt(
-      "Numero dell'attestato accreditato, come compare sul PDF (es. C013562026).\nChi verifica il certificato sul sito cercherà questo numero.",
-      c.accreditatoNumero ?? "",
-    );
-    if (n === null) return;
-    if (!n.trim() && !c.accreditatoNumero) return setError("Serve il numero dell'attestato accreditato.");
-    numeroAttestato.current = n.trim();
+    // La scelta del file si apre SUBITO al clic: il browser la consente solo come risposta
+    // diretta a un clic, e una finestra di conferma o di inserimento prima (che tiene fermo
+    // l'utente qualche secondo) la farebbe bloccare in silenzio. Conferma e numero vengono dopo.
     target.current = c;
     fileRef.current?.click();
   }
@@ -70,8 +62,26 @@ export function CertReviewList({ items, q, stato }: { items: StaffCert[]; q: str
     if (!c) return;
     setError("");
     setOk("");
-    if (file.type !== "application/pdf" && !file.name.toLowerCase().endsWith(".pdf")) return setError("Serve un file PDF.");
-    if (file.size > MAX_MB * 1024 * 1024) return setError(`Il file supera ${MAX_MB} MB.`);
+    const annulla = (messaggio = "") => {
+      target.current = null;
+      if (fileRef.current) fileRef.current.value = "";
+      if (messaggio) setError(messaggio);
+    };
+    if (file.type !== "application/pdf" && !file.name.toLowerCase().endsWith(".pdf")) return annulla("Serve un file PDF.");
+    if (file.size > MAX_MB * 1024 * 1024) return annulla(`Il file supera ${MAX_MB} MB.`);
+    if (c.status === "issued" && !window.confirm(`Il certificato ${c.accreditatoNumero ?? c.number} è già accreditato. Vuoi sostituire il file con «${file.name}»? L'utente riceverà la nuova versione via email.`)) return annulla();
+    // il numero stampato sull'attestato dell'ente: è quello che chi riceve l'attestato cercherà
+    // sulla pagina di verifica
+    const n = window.prompt(
+      `File scelto: ${file.name}
+
+Numero dell'attestato accreditato, come compare sul PDF (es. C013562026).
+Chi verifica il certificato sul sito cercherà questo numero.`,
+      c.accreditatoNumero ?? "",
+    );
+    if (n === null) return annulla();
+    if (!n.trim() && !c.accreditatoNumero) return annulla("Serve il numero dell'attestato accreditato: riprova e scrivilo.");
+    const numero = n.trim();
     setBusy(c.id);
     try {
       const { url, path } = await preparaCaricamentoAction(c.id);
@@ -80,7 +90,7 @@ export function CertReviewList({ items, q, stato }: { items: StaffCert[]; q: str
       form.append("", file);
       const put = await fetch(url, { method: "PUT", body: form, headers: { "x-upsert": "false" } });
       if (!put.ok) throw new Error("Caricamento del file non riuscito: riprova.");
-      const emesso = await esegui(confermaCaricamentoAction(c.id, path, c.status === "issued", numeroAttestato.current));
+      const emesso = await esegui(confermaCaricamentoAction(c.id, path, c.status === "issued", numero));
       setOk(`Certificato ${emesso.number} caricato: l'utente lo trova nella sua area privata e lo riceve via email.`);
       router.refresh();
     } catch (e) {

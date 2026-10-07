@@ -19,7 +19,11 @@ export default async function AppLayout({
   const ctx = await getCurrentSession();
   if (!ctx) redirect("/login");
 
-  const nav = await getNavContext({ id: ctx.user.id, email: ctx.user.email });
+  const nav = await getNavContext({
+    id: ctx.user.id,
+    email: ctx.user.email,
+    platformRole: (ctx.user as { platformRole?: string | null }).platformRole,
+  });
 
   // Gate onboarding: i discenti al primo accesso vanno al wizard finché non lo completano/saltano.
   // Lo staff di piattaforma è esente (niente rumore per l'uso interno).

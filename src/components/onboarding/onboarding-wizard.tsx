@@ -122,11 +122,13 @@ export function OnboardingWizard({
   const canAdvance = (!isGoalStep || !!goal) && (!isIsoStep || iso19011 !== null);
 
   function go(to: string) {
-    // Solo push: un router.refresh() qui ri-eseguirebbe la pagina /onboarding CORRENTE che,
-    // essendo l'onboarding ora "completed", fa redirect("/dashboard") → due navigazioni in
-    // conflitto col push → schermata bloccata (si sbloccava solo ricaricando). La destinazione
-    // è in un route-group diverso, quindi si rende comunque fresca senza bisogno di refresh.
-    router.push(to);
+    // Caricamento VERO della destinazione, non router.push: il browser tiene in memoria per 30
+    // secondi le pagine già visitate (staleTimes in next.config.ts), e subito dopo il login ha
+    // memorizzato "la dashboard rimanda all'onboarding". Con push, chi conclude o salta entro
+    // 30 secondi riceveva quella risposta vecchia e restava bloccato qui (visto il 07/10).
+    // Un router.refresh() non va bene: ri-eseguirebbe questa pagina, che rimanda altrove, in
+    // conflitto con la navigazione.
+    window.location.assign(to);
   }
 
   function finish() {

@@ -6,7 +6,7 @@ import { and, eq, inArray } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { member, organization } from "@/lib/db/schema";
 import { parseOrgMetadata } from "@/features/auth/org-metadata";
-import { isPlatformStaffEmail, requireSession } from "@/features/auth/guards";
+import { isPlatformAdmin, requireSession } from "@/features/auth/guards";
 
 export type CompanyOrg = { id: string; name: string; slug: string; seatLimit: number };
 
@@ -33,9 +33,12 @@ export async function getCompanyAdminOrg(userId: string): Promise<CompanyOrg | n
 }
 
 /** Flag di navigazione per la shell discente (link condizionali area azienda/staff). */
-export async function getNavContext(user: { id: string; email: string }) {
+export async function getNavContext(user: { id: string; email: string; platformRole?: string | null }) {
   const companyOrg = await getCompanyAdminOrg(user.id);
-  return { isStaff: isPlatformStaffEmail(user.email), companyOrg };
+  // staff = ruolo di piattaforma OPPURE lista di email iniziale, come in isPlatformAdmin: chi ha
+  // solo il ruolo (es. l'account del committente) deve vedere "Area staff" ed essere esente
+  // dall'onboarding dei discenti
+  return { isStaff: isPlatformAdmin(user), companyOrg };
 }
 
 /**
