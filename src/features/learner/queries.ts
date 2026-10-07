@@ -1,7 +1,7 @@
 // Letture per la dashboard discente (Server Components). Sottili, gated da sessione,
 // riusano gli helper esistenti (courseEffectiveSeconds). Nessuna logica di compliance qui.
 
-import { and, count, desc, eq, isNotNull } from "drizzle-orm";
+import { and, count, desc, eq, isNotNull, sql } from "drizzle-orm";
 import {
   enrollment,
   course,
@@ -116,7 +116,8 @@ export async function getMyCertificates(): Promise<MyCertificate[]> {
       .select({
         id: certificate.id,
         status: certificate.status,
-        number: certificate.number,
+        // dall'accreditamento l'utente vede il numero dell'attestato, se l'ente ne ha dato uno
+        number: sql<string | null>`coalesce(${certificate.accreditatoNumero}, ${certificate.number})`,
         issuedAt: certificate.issuedAt,
         courseTitle: course.title,
       })

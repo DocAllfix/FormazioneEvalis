@@ -38,6 +38,7 @@ export default async function StaffCertificatiPage({
     id: c.id,
     status: c.status,
     number: c.number,
+    accreditatoNumero: c.accreditatoNumero,
     learnerName: c.learnerName,
     learnerEmail: c.learnerEmail,
     courseTitle: c.courseTitle,

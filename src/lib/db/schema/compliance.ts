@@ -103,6 +103,10 @@ export const certificate = pgTable(
     // dati del titolare FISSATI alla nascita del certificato (migrazione 0033): da qui non
     // cambiano più, anche se l'utente modifica il profilo. Vuoti solo sui certificati senza
     // dati salvati, che ripiegano sul profilo.
+    // numero dell'attestato ACCREDITATO, dato dall'ente che lo emette (migrazione 0034): è quello
+    // stampato sul PDF caricato dallo staff, e la verifica pubblica lo riconosce. Il `number`
+    // qui sopra resta il numero EVALIS nato col provvisorio.
+    accreditatoNumero: text("accreditato_numero").unique(),
     learnerName: text("learner_name"),
     codiceFiscale: text("codice_fiscale"),
     dataNascita: date("data_nascita", { mode: "string" }),

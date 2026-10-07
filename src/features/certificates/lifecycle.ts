@@ -10,7 +10,7 @@
 // esserlo, e il certificato vero resta subordinato alla revisione umana.
 
 import { randomUUID } from "node:crypto";
-import { and, desc, eq, ilike, isNull, or, sql } from "drizzle-orm";
+import { and, desc, eq, ilike, isNull, ne, or, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { certificate, enrollment, course, user, quiz, quizAttempt, anagraficaCertificato } from "@/lib/db/schema";
 import { dataNascitaLeggibile, lucchettoAnagrafica } from "./anagrafica";
@@ -29,6 +29,7 @@ import { signedCertificateUrl, linkCaricamentoCertificato, leggiCertificatoPdf, 
 import { inviaEmailConAllegati } from "@/lib/email/resend";
 import { requirePlatformAdmin, requireSession, isPlatformAdmin } from "@/features/auth/guards";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
+import { ErroreUtente } from "@/lib/esito";
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 /** Dimensione massima del certificato accreditato caricato. */
@@ -122,6 +123,7 @@ type DatiCompleti = DatiCertificato & {
   pdfPath: string | null;
   enrollmentId: string;
   ownerId: string;
+  accreditatoNumero: string | null;
 };
 
 /** Tutto ciò che serve a PDF, mail e controlli di un certificato. null se non visibile/inesistente. */
@@ -135,6 +137,7 @@ async function datiCertificato(certificateId: string, ctx: TenantCtx): Promise<D
         number: certificate.number,
         verifyUuid: certificate.verifyUuid,
         pdfPath: certificate.pdfPath,
+        accreditatoNumero: certificate.accreditatoNumero,
         createdAt: certificate.createdAt,
         enrollmentId: certificate.enrollmentId,
         ownerId: enrollment.userId,
@@ -168,6 +171,7 @@ async function datiCertificato(certificateId: string, ctx: TenantCtx): Promise<D
       status: r.status,
       verifyUuid: r.verifyUuid,
       pdfPath: r.pdfPath,
+      accreditatoNumero: r.accreditatoNumero,
       enrollmentId: r.enrollmentId,
       ownerId: r.ownerId,
       learnerName: r.learnerName,
@@ -247,7 +251,7 @@ export async function listCertificatiStaff(filtro: { q?: string; stato?: StatoFi
   await requirePlatformAdmin();
   const q = filtro.q?.trim().slice(0, 100);
   const condizioni = [
-    q ? or(ilike(user.name, `%${q}%`), ilike(certificate.learnerName, `%${q}%`), ilike(user.email, `%${q}%`), ilike(certificate.number, `%${q}%`)) : undefined,
+    q ? or(ilike(user.name, `%${q}%`), ilike(certificate.learnerName, `%${q}%`), ilike(user.email, `%${q}%`), ilike(certificate.number, `%${q}%`), ilike(certificate.accreditatoNumero, `%${q}%`)) : undefined,
     filtro.stato && filtro.stato !== "tutti" ? eq(certificate.status, STATO_DB[filtro.stato]) : undefined,
   ].filter(Boolean);
   return withTenant({ platformAdmin: true }, async (tx) =>
@@ -256,6 +260,7 @@ export async function listCertificatiStaff(filtro: { q?: string; stato?: StatoFi
         id: certificate.id,
         status: certificate.status,
         number: certificate.number,
+        accreditatoNumero: certificate.accreditatoNumero,
         learnerName: sql<string>`coalesce(${certificate.learnerName}, ${user.name})`,
         learnerEmail: user.email,
         courseTitle: course.title,
@@ -290,15 +295,26 @@ export async function preparaCaricamentoById(certificateId: string, ctx: TenantC
 }
 
 /**
+ * Il numero dell'attestato accreditato come si salva e si cerca: senza spazi, in maiuscolo.
+ * Lettere, cifre e i separatori usati nei numeri di certificato; da 3 a 40 caratteri.
+ */
+export function normalizzaNumeroAccreditato(raw: string): string | null {
+  const n = raw.replace(/\s/g, "").toUpperCase();
+  return /^[A-Z0-9][A-Z0-9/._-]{2,39}$/.test(n) ? n : null;
+}
+
+/**
  * Secondo passo: il file è su Storage. Si controlla TUTTO prima di emettere — percorso del
  * certificato giusto, file presente, PDF vero, dimensione — poi stato `issued`, audit e mail.
  * Su un certificato già accreditato serve `sostituisci` (file sbagliato da correggere).
+ * `numeroAccreditato`: il numero stampato sull'attestato dell'ente; la verifica pubblica lo
+ * riconosce. Deve essere unico. In una sostituzione, se manca, resta quello di prima.
  */
 export async function confermaCaricamentoById(
   certificateId: string,
   path: string,
   reviewerUserId: string,
-  opts: { sostituisci?: boolean } = {},
+  opts: { sostituisci?: boolean; numeroAccreditato?: string } = {},
   ctx: TenantCtx = { platformAdmin: true },
 ) {
   const d = await datiCertificato(certificateId, ctx);
@@ -306,6 +322,35 @@ export async function confermaCaricamentoById(
   if (d.status === "revoked") throw new Error("Certificato revocato: non si può caricare.");
   if (d.status === "issued" && !opts.sostituisci) throw new Error("Il certificato è già accreditato: conferma la sostituzione.");
   if (!percorsoValido(d.verifyUuid, path)) throw new Error("File non riconosciuto per questo certificato.");
+
+  // numero dell'attestato: valido e non già usato (né come numero accreditato né come numero
+  // EVALIS) da un ALTRO certificato. Se non va, il file appena caricato si butta.
+  let accreditatoNumero = d.accreditatoNumero;
+  if (opts.numeroAccreditato !== undefined && opts.numeroAccreditato.trim() !== "") {
+    const n = normalizzaNumeroAccreditato(opts.numeroAccreditato);
+    const occupato =
+      n &&
+      (
+        await withTenant(ctx, (tx) =>
+          tx
+            .select({ id: certificate.id })
+            .from(certificate)
+            .where(and(ne(certificate.id, certificateId), or(eq(certificate.accreditatoNumero, n), eq(certificate.number, n))))
+            .limit(1),
+        )
+      ).length > 0;
+    if (!n || occupato) {
+      await deleteCertificatePdf(path).catch(() => {});
+      throw new ErroreUtente(
+        n
+          ? `Il numero ${n} è già usato per un altro certificato: controlla il numero stampato sull'attestato.`
+          : "Numero dell'attestato non valido: scrivilo come compare sul PDF (lettere, cifre, trattini o barre; da 3 a 40 caratteri).",
+      );
+    }
+    accreditatoNumero = n;
+  }
+  // il numero che l'utente vede dall'accreditamento in poi: quello dell'attestato, se c'è
+  const numeroMostrato = accreditatoNumero ?? d.number;
 
   const bytes = await leggiCertificatoPdf(path);
   if (!bytes) throw new Error("Il file non risulta caricato: riprova.");
@@ -323,6 +368,7 @@ export async function confermaCaricamentoById(
       .set({
         status: "issued",
         number: d.number,
+        accreditatoNumero,
         pdfPath: path,
         approvedBy: reviewerUserId,
         approvedAt: now,
@@ -336,19 +382,19 @@ export async function confermaCaricamentoById(
       userId,
       verb: sostituzione ? "certificate-replaced" : "certificate-issued",
       object: `certificate:${certificateId}`,
-      payload: { number: d.number, file: path },
+      payload: { number: d.number, ...(accreditatoNumero ? { accreditato: accreditatoNumero } : {}), file: path },
     });
   });
 
   // mail best-effort: il certificato è già emesso e scaricabile dall'area privata
-  const mail = mailAccreditatoUtente(d, baseUrl(), sostituzione);
+  const mail = mailAccreditatoUtente({ ...d, number: numeroMostrato }, baseUrl(), sostituzione);
   await inviaEmailConAllegati({
     to: d.learnerEmail,
     ...mail,
-    allegati: [{ nome: nomeFileCertificato(d.number, false), contenuto: bytes }],
-  }).catch((e) => console.error(`[certificati] mail accreditato non inviata (${d.number})`, e));
+    allegati: [{ nome: nomeFileCertificato(numeroMostrato, false), contenuto: bytes }],
+  }).catch((e) => console.error(`[certificati] mail accreditato non inviata (${numeroMostrato})`, e));
 
-  return { id: certificateId, status: "issued" as const, number: d.number, sostituito: sostituzione };
+  return { id: certificateId, status: "issued" as const, number: numeroMostrato, sostituito: sostituzione };
 }
 
 /** Server Action: link di caricamento (solo staff piattaforma). */
@@ -358,9 +404,9 @@ export async function preparaCaricamento(certificateId: string) {
 }
 
 /** Server Action: conferma del caricamento ed emissione (solo staff piattaforma). */
-export async function confermaCaricamento(certificateId: string, path: string, sostituisci: boolean) {
+export async function confermaCaricamento(certificateId: string, path: string, sostituisci: boolean, numeroAccreditato?: string) {
   const ctx = await requirePlatformAdmin();
-  return confermaCaricamentoById(certificateId, path, ctx.user.id, { sostituisci });
+  return confermaCaricamentoById(certificateId, path, ctx.user.id, { sostituisci, numeroAccreditato });
 }
 
 /** Logica di revoca (testabile, senza guard). */

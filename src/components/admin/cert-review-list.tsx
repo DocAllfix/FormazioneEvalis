@@ -7,6 +7,7 @@
 
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { esegui } from "@/lib/esito";
 import { FileDown, Loader2, Search, ShieldX, Upload } from "lucide-react";
 import {
   preparaCaricamentoAction,
@@ -18,6 +19,7 @@ export type StaffCert = {
   id: string;
   status: string;
   number: string | null;
+  accreditatoNumero: string | null;
   learnerName: string;
   learnerEmail: string;
   courseTitle: string;
@@ -46,9 +48,19 @@ export function CertReviewList({ items, q, stato }: { items: StaffCert[]; q: str
   const [ok, setOk] = useState("");
   const fileRef = useRef<HTMLInputElement>(null);
   const target = useRef<StaffCert | null>(null);
+  const numeroAttestato = useRef<string>("");
 
   function scegliFile(c: StaffCert) {
     if (c.status === "issued" && !window.confirm(`Il certificato ${c.number} è già accreditato. Vuoi sostituire il file? L'utente riceverà la nuova versione via email.`)) return;
+    // il numero stampato sull'attestato dell'ente: è quello che chi riceve l'attestato cercherà
+    // sulla pagina di verifica
+    const n = window.prompt(
+      "Numero dell'attestato accreditato, come compare sul PDF (es. C013562026).\nChi verifica il certificato sul sito cercherà questo numero.",
+      c.accreditatoNumero ?? "",
+    );
+    if (n === null) return;
+    if (!n.trim() && !c.accreditatoNumero) return setError("Serve il numero dell'attestato accreditato.");
+    numeroAttestato.current = n.trim();
     target.current = c;
     fileRef.current?.click();
   }
@@ -68,8 +80,8 @@ export function CertReviewList({ items, q, stato }: { items: StaffCert[]; q: str
       form.append("", file);
       const put = await fetch(url, { method: "PUT", body: form, headers: { "x-upsert": "false" } });
       if (!put.ok) throw new Error("Caricamento del file non riuscito: riprova.");
-      await confermaCaricamentoAction(c.id, path, c.status === "issued");
-      setOk(`Certificato ${c.number} caricato: l'utente lo trova nella sua area privata e lo riceve via email.`);
+      const emesso = await esegui(confermaCaricamentoAction(c.id, path, c.status === "issued", numeroAttestato.current));
+      setOk(`Certificato ${emesso.number} caricato: l'utente lo trova nella sua area privata e lo riceve via email.`);
       router.refresh();
     } catch (e) {
       setError(e instanceof Error ? e.message : "Errore nel caricamento.");
@@ -164,7 +176,10 @@ export function CertReviewList({ items, q, stato }: { items: StaffCert[]; q: str
                       {c.courseTitle}
                       <div className="text-xs text-muted-foreground">Completato il {c.completatoLabel}</div>
                     </td>
-                    <td className="px-4 py-3 font-mono text-xs text-primary">{c.number ?? "—"}</td>
+                    <td className="px-4 py-3 font-mono text-xs text-primary">
+                      {c.accreditatoNumero ?? c.number ?? "—"}
+                      {c.accreditatoNumero ? <div className="text-[11px] text-muted-foreground">{c.number}</div> : null}
+                    </td>
                     <td className="px-4 py-3">
                       <span className={`whitespace-nowrap rounded-full px-2.5 py-1 text-[11px] font-medium ${s.cls}`}>{s.text}</span>
                       {c.accreditatoLabel ? <div className="mt-1 text-xs text-muted-foreground">dal {c.accreditatoLabel}</div> : null}
