@@ -46,7 +46,9 @@ export async function withRetry<T>(fn: () => Promise<T>, tries = 7): Promise<T> 
     } catch (e) {
       lastErr = e;
       const msg = e instanceof Error ? e.message : String(e);
-      const transient = /Unknown model|rate limit|429|temporar|timeout|ECONN|ETIMEDOUT|fetch failed|50[234]/i.test(msg);
+      // "deployment … does not exist" (DeploymentNotFound): stesso fenomeno di propagazione col
+      // messaggio che Azure usa oggi, visto sui deployment Global appena creati (09/10/2026)
+      const transient = /Unknown model|does not exist|DeploymentNotFound|rate limit|429|temporar|timeout|ECONN|ETIMEDOUT|fetch failed|50[234]/i.test(msg);
       if (!transient || i === tries - 1) throw e;
       const backoff = 250 * 2 ** i + Math.floor(Math.random() * 250); // jitter
       await new Promise((r) => setTimeout(r, backoff));
