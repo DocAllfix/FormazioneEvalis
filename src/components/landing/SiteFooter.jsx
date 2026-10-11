@@ -91,7 +91,7 @@ export default function SiteFooter() {
               href="https://www.axialoop.com/it"
               target="_blank"
               rel="noopener"
-              aria-label="Sito di Axialoop, che ha sviluppato Evalis Academy"
+              aria-label="powered by Axialoop: sito di Axialoop, che ha sviluppato Evalis Academy (si apre in una nuova scheda)"
               className="inline-flex min-h-6 items-center gap-1.5 text-[#9C9388] transition-colors hover:text-[#F3EEE5]"
             >
               {/* footer scuro: il contorno scuro del logo si perderebbe, quindi sta su un quadratino crema */}
