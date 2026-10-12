@@ -36,7 +36,9 @@ REGOLE
 1. VARIETÀ: usa layout diversi. "punti" non più di un terzo delle slide del blocco.
    Alterna cards, numeri, confronto, flusso, definizione, split, evidenza, timeline, tabella
    e, quando il parlato porta dati o strutture, i grafici e i diagrammi (regola 6).
-2. DENSITÀ BASSA: al massimo 4 voci per elenco; ogni voce 3-14 parole. Lead 20-45 parole.
+2. DENSITÀ BASSA: di norma al massimo 4 voci per elenco; ogni voce 3-14 parole. Lead 20-45 parole.
+   ECCEZIONE VINCOLANTE: se il parlato CONTA gli elementi (sei definizioni, sette temi, dieci punti),
+   la slide li riporta TUTTI, fino a 8, con voci brevi, e il titolo usa lo stesso numero.
    Titolo 4-12 parole. Mai muri di testo: la slide deve restare leggibile a colpo d'occhio.
 3. Italiano professionale, niente emoji, niente simboli decorativi, niente punti esclamativi.
 4. Il titolo dice la cosa, non la annuncia ("Le quattro condizioni della tassonomia",

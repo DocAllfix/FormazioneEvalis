@@ -1,0 +1,1057 @@
+[
+ {
+  "id": "fadpas24000_m07_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 7",
+  "titolo": "Sicurezza nel sistema sociale certificabile",
+  "corsoLabel": "Sistema di gestione sociale · PAS 24000:2022",
+  "eyebrow": "Modulo 7",
+  "sottotitolo": "Venti elementi guidano il modulo: nove in A.6, quattro in A.7, sette in 8.2. Leggerai requisiti, confini tra legge e PAS, attuazione nei luoghi reali ed evidenze credibili per l’audit.",
+  "agenda": [
+   "La sicurezza entra nel ciclo di sistema",
+   "Legge, ISO 45001 e PAS 24000 a confronto",
+   "Condizioni sicure, salubri e pulite ovunque",
+   "La mappa dei luoghi da presidiare",
+   "Controllo diretto o influenza: leve diverse"
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s002",
+  "layout": "ciclo",
+  "kicker": "Annex A.6 · Requisito 1",
+  "titolo": "La sicurezza entra nel ciclo di sistema",
+  "intro": "Il requisito non chiede un fascicolo aggiuntivo: chiede che salute e sicurezza seguano la stessa regia di politica, obiettivi, controlli e miglioramento già usata per il sistema sociale.",
+  "ciclo": true,
+  "centro": "Sicurezza nel sistema sociale",
+  "nodi": [
+   {
+    "h": "Plan",
+    "d": "Politica sociale, rischi e obiettivi comprendono la sicurezza"
+   },
+   {
+    "h": "Do",
+    "d": "Formazione, DPI, controlli operativi, emergenze"
+   },
+   {
+    "h": "Check",
+    "d": "Indicatori di infortunio, audit interni, riesame"
+   },
+   {
+    "h": "Act",
+    "d": "Analisi degli incidenti, azioni correttive, miglioramento"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s003",
+  "layout": "tabella",
+  "kicker": "Quadro di riferimento",
+  "titolo": "Legge, ISO 45001 e PAS 24000 a confronto",
+  "cols": [
+   "Tema",
+   "D.Lgs. 81/2008",
+   "ISO 45001",
+   "PAS 24000"
+  ],
+  "righe": [
+   [
+    "Funzione",
+    "Obblighi, ruoli, sanzioni",
+    "Sistema volontario certificabile",
+    "Minimi sociali di sicurezza"
+   ],
+   [
+    "Rischi",
+    "Valutazione e misure",
+    "Metodo sistemico e miglioramento",
+    "Rischi nel sistema sociale"
+   ],
+   [
+    "Luoghi",
+    "Luoghi di lavoro governati",
+    "Perimetro gestito dall’organizzazione",
+    "Alloggi, mense, navette, servizi"
+   ],
+   [
+    "Eventi ed emergenze",
+    "Comunicazioni, piano, addetti",
+    "Indagine, preparazione, risposta",
+    "Registro scritto, prove annuali, inclusione alloggi"
+   ]
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s004",
+  "layout": "cards",
+  "kicker": "Annex A.6 · Requisito 2",
+  "titolo": "Condizioni sicure, salubri e pulite ovunque",
+  "intro": "La formulazione è breve, ma l’effetto è ampio: il requisito chiede condizioni adeguate non solo nei reparti, ma anche nelle strutture e nei servizi che l’organizzazione fornisce o impone ai lavoratori.",
+  "cards": [
+   {
+    "h": "Sicuro",
+    "d": "Pericoli sotto controllo, misure adeguate, emergenze presidiate"
+   },
+   {
+    "h": "Salubre",
+    "d": "Microclima, aria, igiene, acqua, affollamento, esposizioni"
+   },
+   {
+    "h": "Pulito",
+    "d": "Ordine, funzionalità quotidiana, rispetto della persona"
+   },
+   {
+    "h": "Perimetro",
+    "d": "Reparti, servizi, trasporti, alloggi forniti o imposti"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s005",
+  "layout": "organigramma",
+  "kicker": "Caso Agroconserve",
+  "titolo": "La mappa dei luoghi da presidiare",
+  "intro": "Per attuare davvero il requisito serve un censimento concreto: seguire i lavoratori nei luoghi dove stanno per decisione dell’organizzazione. La mappa diventa allegato vivo dell’analisi dei rischi.",
+  "radice": {
+   "h": "Dove stanno i lavoratori",
+   "d": "276 persone in campagna, più 28 addetti di facchinaggio e pulizie"
+  },
+  "rami": [
+   {
+    "h": "Luoghi di lavoro",
+    "d": "Gestiti dall’azienda",
+    "voci": [
+     "Linee pelati, passate e legumi",
+     "Piazzale di conferimento",
+     "Magazzini",
+     "Uffici e laboratorio"
+    ]
+   },
+   {
+    "h": "Strutture di servizio",
+    "d": "Fornite dall’azienda",
+    "voci": [
+     "Spogliatoi e docce",
+     "Mensa e aree di pausa",
+     "Servizi igienici",
+     "Punti acqua"
+    ]
+   },
+   {
+    "h": "Trasporto",
+    "d": "Fornito dall’azienda",
+    "voci": [
+     "Navetta per gli stagionali",
+     "2 linee",
+     "Fermate definite",
+     "Orari collegati ai turni"
+    ]
+   },
+   {
+    "h": "Alloggio",
+    "d": "Proposto da un’agenzia",
+    "voci": [
+     "Foresteria convenzionata",
+     "24 stagionali ospitati",
+     "Gestore esterno"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s006",
+  "layout": "split",
+  "kicker": "Attuazione",
+  "titolo": "Controllo diretto o influenza: leve diverse",
+  "lead": "Non tutti i luoghi dipendono dall’organizzazione allo stesso modo. Distinguere controllo diretto e influenza aiuta a scegliere strumenti realistici, documentare le leve disponibili e leggere meglio ciò che un sopralluogo sociale deve verificare.",
+  "punti": [
+   {
+    "h": "In sito, gestione aziendale",
+    "d": "Valutazione rischi, pulizie, manutenzione, azioni correttive"
+   },
+   {
+    "h": "In sito, attività di terzi",
+    "d": "Coordinamento, interferenze, emergenze comuni, verifica DPI"
+   },
+   {
+    "h": "Fuori sito, servizio fornito",
+    "d": "Requisiti del servizio, controlli a bordo, fermate sicure"
+   },
+   {
+    "h": "Fuori sito, gestore terzo",
+    "d": "Leva contrattuale, sopralluoghi congiunti, richieste documentali, interviste"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s007",
+  "layout": "piramide",
+  "kicker": "Buona prassi ISO 45001",
+  "titolo": "La gerarchia dei controlli",
+  "intro": "Non tutte le misure proteggono allo stesso modo. Dalla base al vertice cresce la dipendenza dal comportamento umano: per questo procedure, formazione e DPI non possono sostituire interventi alla fonte.",
+  "livelli": [
+   {
+    "h": "DPI",
+    "d": "Ultima barriera: protegge solo chi lo indossa bene"
+   },
+   {
+    "h": "Misure organizzative",
+    "d": "Procedure, turni, pause, formazione, segnaletica"
+   },
+   {
+    "h": "Misure tecniche",
+    "d": "Ripari, aspirazioni, ombreggiamenti, percorsi separati"
+   },
+   {
+    "h": "Sostituire",
+    "d": "Processi, sostanze o attrezzature meno pericolosi"
+   },
+   {
+    "h": "Eliminare il pericolo",
+    "d": "La misura più efficace: il rischio non esiste più"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s008",
+  "layout": "matrice",
+  "kicker": "Caso Agroconserve",
+  "titolo": "I rischi di campagna in Agroconserve",
+  "intro": "Con più persone, ritmi e mezzi, il profilo di rischio cambia rapidamente. L’aggiornamento condiviso con RLS e capiturno porta in primo piano sette famiglie, con priorità massima allo stress da calore.",
+  "assi": {
+   "x": "Probabilità",
+   "y": "Gravità"
+  },
+  "punti": [
+   {
+    "id": "S1",
+    "l": "Scivolamenti nei reparti",
+    "p": 4,
+    "g": 2
+   },
+   {
+    "id": "S2",
+    "l": "Tagli e schiacciamenti alle mani",
+    "p": 3,
+    "g": 3
+   },
+   {
+    "id": "S3",
+    "l": "Stress da calore",
+    "p": 3,
+    "g": 4
+   },
+   {
+    "id": "S4",
+    "l": "Investimento da carrelli e mezzi",
+    "p": 2,
+    "g": 5
+   },
+   {
+    "id": "S5",
+    "l": "Ustioni da vapore e liquidi caldi",
+    "p": 2,
+    "g": 4
+   },
+   {
+    "id": "S6",
+    "l": "Sovraccarico da movimentazione manuale",
+    "p": 3,
+    "g": 2
+   },
+   {
+    "id": "S7",
+    "l": "Incidente durante il trasporto in navetta",
+    "p": 1,
+    "g": 5
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s009",
+  "layout": "confronto",
+  "kicker": "Annex A.6 · Requisiti 3 e 4",
+  "titolo": "Formare prima, formare in modo valido",
+  "intro": "La logica cambia: non contano prima le ore, ma il momento e la sostanza. La formazione vale solo se precede il rischio, viene compresa davvero, non costa al lavoratore e il tempo è retribuito.",
+  "a": {
+   "h": "Quando formare",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Prima dell’esposizione al rischio"
+    },
+    {
+     "d": "Nuovi assunti, stagionali e somministrati"
+    },
+    {
+     "d": "A cambio mansione o reparto"
+    },
+    {
+     "d": "Con nuovi rischi, attrezzature o sostanze"
+    }
+   ]
+  },
+  "b": {
+   "h": "Quando è valida",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Lingua e strumenti davvero compresi"
+    },
+    {
+     "d": "Nessun costo diretto o indiretto"
+    },
+    {
+     "d": "Sempre in orario retribuito"
+    },
+    {
+     "d": "Capito verificato sul campo, non firmato"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpas24000_m07_s010",
+  "layout": "timeline",
+  "kicker": "A.6 · requisiti 3-4",
+  "titolo": "Sei momenti di formazione operativa",
+  "intro": "Agroconserve scandisce la formazione in sei momenti, con tutele uguali per assunti diretti e somministrati. Il punto critico resta l'ingresso via agenzia: nessun tesserino si attiva se la formazione non è registrata.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Pre-ingresso",
+    "d": "Scheda rischi e regole nella lingua più vicina"
+   },
+   {
+    "t": "02",
+    "h": "Primo giorno",
+    "d": "Formazione per gruppi linguistici, ore retribuite"
+   },
+   {
+    "t": "03",
+    "h": "Sul posto",
+    "d": "Osservazione, prova guidata, correzioni prima dell'autonomia"
+   },
+   {
+    "t": "04",
+    "h": "Prima settimana",
+    "d": "Verifica pratica con domande e pittogrammi"
+   },
+   {
+    "t": "05",
+    "h": "Cambio mansione",
+    "d": "Nuovo addestramento prima della nuova esposizione"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s011",
+  "layout": "tabella",
+  "kicker": "A.6 · requisiti 5-6",
+  "titolo": "Registro scritto, cause e correzioni",
+  "cols": [
+   "Campo",
+   "Uso nell'analisi"
+  ],
+  "righe": [
+   [
+    "Data, ora, luogo preciso",
+    "Ricostruire il contesto"
+   ],
+   [
+    "Persona e datore di lavoro",
+    "Vedere dove si concentrano i problemi"
+   ],
+   [
+    "Evento e conseguenze",
+    "Distinguere danno, quasi evento, malore"
+   ],
+   [
+    "Prime misure e testimoni",
+    "Fissare fatti e risposta immediata"
+   ],
+   [
+    "Avvio analisi e chiusura",
+    "Evitare registri senza seguito"
+   ]
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s012",
+  "layout": "piramide",
+  "kicker": "Registro degli eventi",
+  "titolo": "Quando il registro sottostima il rischio",
+  "intro": "Nel caso Agroconserve la base del registro è poco credibile: pochi mancati infortuni, nessuna raccolta sistematica delle condizioni pericolose. Quando sotto gli eventi con danno c'è quasi vuoto, di solito il problema è la segnalazione.",
+  "livelli": [
+   {
+    "h": "Infortuni gravi",
+    "d": "0 nell'ultimo anno"
+   },
+   {
+    "h": "Infortuni con assenza",
+    "d": "7 nell'ultimo anno, 5 in campagna"
+   },
+   {
+    "h": "Medicazioni",
+    "d": "19 annotate dal primo soccorso"
+   },
+   {
+    "h": "Mancati infortuni",
+    "d": "3 segnalati, troppo pochi"
+   },
+   {
+    "h": "Condizioni pericolose",
+    "d": "Non registrate prima del progetto"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s013",
+  "layout": "flusso",
+  "kicker": "Azione correttiva",
+  "titolo": "Dall'evento alle cause vere",
+  "intro": "La richiesta non è raccontare l'evento, ma capire che cosa lo ha reso possibile. Il passaggio decisivo è uscire dalla formula disattenzione del lavoratore e intervenire sulle cause che il sistema può correggere.",
+  "passi": [
+   {
+    "h": "Segnalare",
+    "d": "Canale aperto, senza timore di ritorsioni"
+   },
+   {
+    "h": "Mettere in sicurezza",
+    "d": "Soccorso, isolamento area, stop se necessario"
+   },
+   {
+    "h": "Registrare presto",
+    "d": "Meglio entro il turno, prima che svaniscano i dettagli"
+   },
+   {
+    "h": "Analizzare",
+    "d": "Ambiente, organizzazione, competenza, regole"
+   },
+   {
+    "h": "Correggere",
+    "d": "Azioni sulle cause, non solo richiami"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s014",
+  "layout": "ciclo",
+  "kicker": "A.6 · requisito 7",
+  "titolo": "Il ciclo completo dei DPI",
+  "intro": "Il requisito 7 valuta l'intero governo dei DPI: scelta coerente con i rischi residui, gratuità piena, istruzione, controllo dell'uso, mantenimento e sostituzione senza costi per chi lavora.",
+  "ciclo": true,
+  "centro": "DPI adeguati e gratuiti",
+  "nodi": [
+   {
+    "h": "Scegliere",
+    "d": "In base ai rischi residui, con taglie e modelli per tutti"
+   },
+   {
+    "h": "Consegnare",
+    "d": "Gratis, prima dell'esposizione, con registrazione"
+   },
+   {
+    "h": "Istruire",
+    "d": "Come si indossa, quando serve, che cosa non protegge"
+   },
+   {
+    "h": "Controllare l'uso",
+    "d": "Osservazioni dei capiturno, senza eccezioni"
+   },
+   {
+    "h": "Mantenere",
+    "d": "Pulizia, custodia, verifica dello stato"
+   },
+   {
+    "h": "Sostituire",
+    "d": "Appena usurati o danneggiati, sempre senza costi"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s015",
+  "layout": "tabella",
+  "kicker": "DPI per mansione",
+  "titolo": "DPI per mansione, responsabilità chiare",
+  "cols": [
+   "Mansione",
+   "Rischi residui",
+   "DPI tipici",
+   "Fornitura"
+  ],
+  "righe": [
+   [
+    "Cernita e linee",
+    "Tagli, scivolamenti, rumore",
+    "Guanti antitaglio, calzature, otoprotettori",
+    "Azienda"
+   ],
+   [
+    "Pastorizzazione",
+    "Calore, vapore, ustioni",
+    "Guanti termici, grembiuli, visiere",
+    "Azienda"
+   ],
+   [
+    "Piazzale",
+    "Investimento, sole, calore",
+    "Alta visibilità, calzature, copricapo",
+    "Azienda"
+   ],
+   [
+    "Magazzino e carrelli",
+    "Urti, caduta carichi",
+    "Alta visibilità, guanti, calzature",
+    "Azienda"
+   ],
+   [
+    "Pulizie e sanificazione",
+    "Prodotti chimici, schizzi",
+    "Guanti, occhiali, stivali",
+    "Impresa appaltatrice"
+   ]
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s016",
+  "layout": "numeri",
+  "kicker": "Caso reparto cernita",
+  "titolo": "Guanti alla cernita: leggere il rifiuto",
+  "intro": "Il rifiuto del DPI è il punto in cui si vede la maturità del sistema. Qui il problema non era solo disciplina: entravano in gioco taglia, comfort operativo e istruzioni non davvero comprese.",
+  "numeri": [
+   {
+    "n": "1 su 5",
+    "h": "Alla cernita lavora senza guanti antitaglio",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Taglie iniziali disponibili, entrambe grandi",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Modelli più leggeri provati con il reparto",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Taglie testate sulla mansione reale",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s017",
+  "layout": "evidenza",
+  "kicker": "A.6 · requisiti 8-9",
+  "titolo": "Primo soccorso, acqua e servizi",
+  "eyebrow": "",
+  "testo": "Questi requisiti sembrano basilari, ma misurano se la tutela funziona davvero nel turno reale. Primo soccorso, accesso alle cure, acqua gratuita e servizi igienici vanno verificati dal punto di vista di chi lavora.",
+  "dark": true
+ },
+ {
+  "id": "fadpas24000_m07_s018",
+  "layout": "barre",
+  "kicker": "Picco di campagna",
+  "titolo": "Picco di campagna, risorse da ridimensionare",
+  "intro": "Con 276 lavoratori diretti, 28 addetti esterni presenti in sito, 63 stagionali stranieri di 14 nazionalità e 24 persone in foresteria, il dimensionamento va fatto sul turno più affollato.",
+  "unita": "n.",
+  "serie": [
+   "Rilevato",
+   "Obiettivo"
+  ],
+  "voci": [
+   {
+    "l": "Addetti al primo soccorso per turno",
+    "v": [
+     2,
+     4
+    ]
+   },
+   {
+    "l": "Cassette di primo soccorso",
+    "v": [
+     4,
+     7
+    ]
+   },
+   {
+    "l": "Punti di acqua potabile",
+    "v": [
+     5,
+     9
+    ]
+   },
+   {
+    "l": "Servizi igienici disponibili",
+    "v": [
+     14,
+     20
+    ]
+   },
+   {
+    "l": "Posti con armadietto",
+    "v": [
+     210,
+     276
+    ]
+   }
+  ],
+  "fonte": "Caso studio Agroconserve Matesina – dati illustrativi"
+ },
+ {
+  "id": "fadpas24000_m07_s019",
+  "layout": "split",
+  "kicker": "Caso A.6",
+  "titolo": "Dal soccorso rapido al segnale organizzativo",
+  "lead": "Il primo soccorso funziona, ma l’evento non si chiude lì. Registro, analisi delle cause e misure correttive trasformano un malore individuale in un indicatore utile per il sistema.",
+  "punti": [
+   {
+    "h": "Gestione del soccorso",
+    "d": "Intervento in tre minuti, ombra, acqua, soccorsi attivati"
+   },
+   {
+    "h": "Registrazione formale dell’evento",
+    "d": "Evento registrato e comunicato anche all’agenzia"
+   },
+   {
+    "h": "Ricerca delle cause",
+    "d": "Pausa saltata e punto acqua troppo lontano"
+   },
+   {
+    "h": "Riesame del rischio",
+    "d": "Pausa non comprimibile, secondo punto acqua, scheda multilingue"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s020",
+  "layout": "cards",
+  "kicker": "A.7 · requisito 1",
+  "titolo": "Vie di fuga sicure: quattro condizioni assolute",
+  "intro": "Segnalazione, percorsi sgombri, accessibilità e assenza di blocchi non sono dettagli edilizi. Sono le condizioni minime perché un’uscita di emergenza resti davvero utilizzabile quando serve.",
+  "cards": [
+   {
+    "h": "Segnalazione davvero visibile",
+    "d": "Pittogrammi chiari, planimetrie corrette, allarmi subito identificabili"
+   },
+   {
+    "h": "Percorsi sempre sgombri",
+    "d": "Niente pallet, bidoni, carrelli o depositi temporanei"
+   },
+   {
+    "h": "Accessibilità per chiunque",
+    "d": "Porte apribili, luce d’emergenza, tragitto praticabile"
+   },
+   {
+    "h": "Uscite mai bloccate",
+    "d": "Mai lucchetti, catene o chiusure dall’interno"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s021",
+  "layout": "confronto",
+  "kicker": "A.7 · requisito 2",
+  "titolo": "Controlli antincendio: specialisti e turno",
+  "intro": "La conformità non vive solo nei rapporti del manutentore. Il requisito chiede funzionalità continua, quindi ai controlli periodici vanno affiancate verifiche interne semplici, frequenti e registrate.",
+  "a": {
+   "h": "Controlli specialistici periodici",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Tecnici qualificati, periodicità definite"
+    },
+    {
+     "d": "Estintori, idranti, allarmi, illuminazione"
+    },
+    {
+     "d": "Dispositivi di apertura delle porte"
+    },
+    {
+     "d": "Necessari ma non sufficienti"
+    }
+   ]
+  },
+  "b": {
+   "h": "Controlli interni quotidiani",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Presenza, visibilità e accessibilità"
+    },
+    {
+     "d": "Porte apribili con un gesto"
+    },
+    {
+     "d": "Pulsanti, lampade, planimetrie coerenti"
+    },
+    {
+     "d": "Lista breve assegnata ai capiturno"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpas24000_m07_s022",
+  "layout": "flusso",
+  "kicker": "A.7 · requisito 3",
+  "titolo": "Monitorare edifici e impianti nel tempo",
+  "intro": "Il requisito non chiede una fotografia del passato, ma un processo stabile. Conta che edifici e impianti restino sotto controllo mentre cambiano usi, carichi, persone e assetto produttivo.",
+  "passi": [
+   {
+    "h": "Censire gli elementi",
+    "d": "Capannoni, tettoie, impianti, alloggi collegati"
+   },
+   {
+    "h": "Ordinare i documenti",
+    "d": "Progetti, collaudi, conformità, manutenzioni, verifiche"
+   },
+   {
+    "h": "Valutare tecnicamente dove serve",
+    "d": "Modifiche, carichi, crepe, infiltrazioni, deformazioni"
+   },
+   {
+    "h": "Monitorare nel tempo",
+    "d": "Ispezioni programmate, registrazioni, criteri di attenzione"
+   },
+   {
+    "h": "Attivare azioni correttive",
+    "d": "Limitare l’uso, mettere in sicurezza, approfondire"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s023",
+  "layout": "cards",
+  "kicker": "Caso Agroconserve",
+  "titolo": "Il piano unico di monitoraggio",
+  "intro": "Agroconserve riunisce in un solo documento controlli prima dispersi. Il vantaggio non è aggiungere verifiche, ma rendere leggibile il presidio per direzione, auditor e responsabili operativi.",
+  "cards": [
+   {
+    "h": "Capannone storico aggiornato",
+    "d": "Relazione tecnica abilitata più ispezioni visive annuali"
+   },
+   {
+    "h": "Tettoie del piazzale",
+    "d": "Controllo pre-campagna su fissaggi, corrosione, deformazioni"
+   },
+   {
+    "h": "Scaffalature di magazzino",
+    "d": "Urti e anomalie quotidiane, più verifiche specialistiche"
+   },
+   {
+    "h": "Soppalco legato all’uso",
+    "d": "Ogni cambio d’uso richiede verifica preventiva del carico"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s024",
+  "layout": "split",
+  "kicker": "A.7 · requisito 4",
+  "titolo": "Quando la foresteria entra nel perimetro",
+  "lead": "Separare l’alloggio da reparti e magazzini è il punto di partenza. Il nodo vero è capire quando una sistemazione può dirsi fornita o imposta dentro la relazione di lavoro.",
+  "punti": [
+   {
+    "h": "Gestione diretta dell’alloggio",
+    "d": "Rientra pienamente nei requisiti su edifici ed emergenze"
+   },
+   {
+    "h": "Obbligo percepito dai lavoratori",
+    "d": "Conta la sostanza, non solo la forma contrattuale"
+   },
+   {
+    "h": "Relazione di reclutamento attiva",
+    "d": "Foresteria per ventiquattro stagionali, percepita obbligatoria da due ospiti"
+   },
+   {
+    "h": "Scelta prudente di sistema",
+    "d": "Trattata come alloggio fornito, pur senza gestione diretta"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s025",
+  "layout": "ciclo",
+  "kicker": "Punto 8.2",
+  "titolo": "8.2: il ciclo della risposta",
+  "intro": "La preparazione alle emergenze non riguarda solo l’incendio e non si esaurisce in un piano. Le prime lettere del punto 8.2 mostrano un ciclo operativo centrato su persone, prova e apprendimento.",
+  "ciclo": true,
+  "centro": "Preparazione e risposta",
+  "nodi": [
+   {
+    "h": "Pianificare la risposta",
+    "d": "Scenari, ruoli, allarme, soccorsi, appello"
+   },
+   {
+    "h": "Formare le persone",
+    "d": "Addetti preparati, istruzioni essenziali per tutti"
+   },
+   {
+    "h": "Provare ogni anno",
+    "d": "Esercitazioni credibili, non una recita formale"
+   },
+   {
+    "h": "Valutare e rivedere",
+    "d": "Dopo prove ed eventi, il piano impara"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s026",
+  "layout": "tabella",
+  "kicker": "Punto 8.2",
+  "titolo": "8.2: attuazione pratica ed evidenze",
+  "cols": [
+   "Lettera",
+   "Attuazione",
+   "Evidenze chiave"
+  ],
+  "righe": [
+   [
+    "a",
+    "Piano per scenari reali",
+    "Piano aggiornato, planimetrie, addetti per turno"
+   ],
+   [
+    "b",
+    "Due livelli: addetti e tutti",
+    "Interviste credibili oltre ai registri"
+   ],
+   [
+    "c",
+    "Esercitazioni annuali verbalizzate",
+    "Data, turno, tempi, appello, criticità"
+   ],
+   [
+    "d",
+    "Riunione dopo prova o evento",
+    "Azioni, responsabilità, revisione del piano"
+   ]
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s027",
+  "layout": "ciclo",
+  "kicker": "Punto 8.2 · lettere e-f-g",
+  "titolo": "Chi deve sapere che cosa",
+  "intro": "Nei primi minuti contano riconoscimento del segnale, esodo e appello. Ma la sequenza regge solo se le informazioni essenziali arrivano a tutte le persone coinvolte, non solo ai dipendenti.",
+  "ciclo": false,
+  "centro": "Piano di emergenza",
+  "nodi": [
+   {
+    "h": "Lavoratori",
+    "d": "Segnale, uscita vicina, raccolta, compiti attesi"
+   },
+   {
+    "h": "Appaltatori",
+    "d": "Stesse regole condivise nel coordinamento"
+   },
+   {
+    "h": "Visitatori e autisti",
+    "d": "Scheda all’ingresso, pittogrammi, accompagnatore"
+   },
+   {
+    "h": "Servizi di emergenza",
+    "d": "Accessi, planimetrie, sostanze presenti, referente"
+   },
+   {
+    "h": "Autorità competenti",
+    "d": "Contatti aggiornati e comunicazioni dovute"
+   },
+   {
+    "h": "Comunità locale",
+    "d": "Informata sui rischi che la toccano"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s028",
+  "layout": "numeri",
+  "kicker": "Caso Agroconserve",
+  "titolo": "La prova utile è quella più gravosa",
+  "intro": "La prima evacuazione svolta in campagna vale come vero banco di prova perché osserva il sistema nella condizione più difficile, quando il sito è pieno, il tempo produttivo pesa e la leadership deve scegliere davvero.",
+  "numeri": [
+   {
+    "n": "172",
+    "h": "persone presenti",
+    "d": ""
+   },
+   {
+    "n": "4 min",
+    "h": "obiettivo al punto di raccolta",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "dimensioni da misurare",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s029",
+  "layout": "tabella",
+  "kicker": "Lettura della prova",
+  "titolo": "Le debolezze emergono nei passaggi critici",
+  "cols": [
+   "Area o passaggio",
+   "Debolezza emersa",
+   "Che cosa rivela"
+  ],
+  "righe": [
+   [
+    "Cernita",
+    "Esitazione dopo la sirena",
+    "Segnale non collegato subito all'azione"
+   ],
+   [
+    "Spogliatoi e mensa",
+    "Allarme percepito male",
+    "Debolezza tecnica e comunicativa"
+   ],
+   [
+    "Piazzale di conferimento",
+    "Autisti fermi, mezzi in manovra",
+    "Interferenza tra viabilità ed esodo"
+   ],
+   [
+    "Appello",
+    "Elenchi incompleti al primo tentativo",
+    "La perdita più critica del sistema"
+   ]
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s030",
+  "layout": "evidenza",
+  "kicker": "Miglioramento continuo",
+  "titolo": "Dal dato alla correzione verificata",
+  "eyebrow": "",
+  "testo": "La prova conta solo se apre un ciclo completo: valutazione rapida, correzioni mirate, revisione del piano e nuova verifica. È così che la sicurezza entra davvero nel cruscotto sociale con indicatori osservabili.",
+  "dark": true
+ },
+ {
+  "id": "fadpas24000_m07_s031",
+  "layout": "flusso",
+  "kicker": "Sintesi A.6",
+  "titolo": "A.6 come percorso coerente di verifica",
+  "intro": "A.6 si legge meglio come una sequenza unica: dal governo del sistema ai luoghi, dalla formazione alla capacità di registrare, analizzare e correggere gli eventi che il lavoro produce ogni giorno.",
+  "passi": [
+   {
+    "h": "Sicurezza nel governo",
+    "d": "Politica, rischi, obiettivi, audit, riesame"
+   },
+   {
+    "h": "Luoghi tutti visibili",
+    "d": "Mappa, sopralluoghi, osservazione diretta"
+   },
+   {
+    "h": "Formazione prima della mansione",
+    "d": "Date coerenti con ingressi e cambi"
+   },
+   {
+    "h": "Comprensibile e retribuita",
+    "d": "Lingua adatta, gratuità, verifica nelle interviste"
+   },
+   {
+    "h": "Incidenti che insegnano",
+    "d": "Registro ampio, cause vere, azioni verificate"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s032",
+  "layout": "organigramma",
+  "kicker": "Sintesi A.7 e 8.2",
+  "titolo": "A.7 e 8.2: edificio e risposta",
+  "intro": "Qui la verifica unisce spazio fisico e comportamento organizzativo: uscite e allarmi devono funzionare, gli edifici vanno monitorati, gli alloggi restano nel perimetro e il piano di emergenza deve essere realmente attuabile.",
+  "radice": {
+   "h": "Protezione fisica e reazione organizzata",
+   "d": "A.7 presidia luoghi e impianti; 8.2 prepara la risposta"
+  },
+  "rami": [
+   {
+    "h": "Vie di fuga e allarmi",
+    "d": "Percorsi sgombri, attrezzature accessibili, persone orientate",
+    "voci": []
+   },
+   {
+    "h": "Prove e ispezioni",
+    "d": "Registri specialistici più controlli interni di turno",
+    "voci": []
+   },
+   {
+    "h": "Edifici e impianti",
+    "d": "Monitoraggio leggibile, verifiche assegnate, azioni correttive",
+    "voci": []
+   },
+   {
+    "h": "Alloggi collegati al lavoro",
+    "d": "Mappe, contratti, sopralluoghi, interviste",
+    "voci": []
+   },
+   {
+    "h": "Punto 8.2",
+    "d": "Piano di risposta e sette elementi da presidiare",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s033",
+  "layout": "punti",
+  "kicker": "Autoverifica",
+  "titolo": "Quattro idee che devi saper spiegare",
+  "intro": "L'autoverifica utile non chiede memoria perfetta: chiede la capacità di tradurre i requisiti in spiegazioni chiare, collegando sistema sociale, norme, perimetro reale e prove sostanziali di efficacia.",
+  "punti": [
+   {
+    "h": "Sicurezza integrata",
+    "d": "Stessa politica, rischi, obiettivi, controlli e riesame"
+   },
+   {
+    "h": "PAS, legge e ISO",
+    "d": "D.Lgs. 81 e ISO restano riferimenti distinti"
+   },
+   {
+    "h": "Perimetro reale",
+    "d": "Conta tutto il lavoro reale, non solo reparti e macchine"
+   },
+   {
+    "h": "Prove sostanziali",
+    "d": "Formazione e incidenti valgono se reggono a verifiche"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m07_s034",
+  "layout": "chiusura",
+  "kicker": "Verso il checkpoint",
+  "titolo": "Che cosa portare via dall'unità",
+  "modNum": "07",
+  "punti": [
+   {
+    "h": "Non dare la conformità per acquisita",
+    "d": "ISO 45001 aiuta, ma la PAS amplia perimetro e verifica"
+   },
+   {
+    "h": "Leggi il sistema nella condizione più gravosa",
+    "d": "Campagna, turni lunghi e nuovi ingressi mostrano la tenuta"
+   },
+   {
+    "h": "Dai valore ai segnali deboli",
+    "d": "Mancati infortuni, cause profonde, DPI e servizi quotidiani"
+   },
+   {
+    "h": "Una prova vale se genera miglioramento",
+    "d": "Valutazione, azioni correttive, revisione del piano, nuova verifica"
+   }
+  ],
+  "prossimo": {
+   "modulo": "08",
+   "titolo": "Rapporti di lavoro, retribuzione, orario, reclami ed etica del business"
+  }
+ }
+]

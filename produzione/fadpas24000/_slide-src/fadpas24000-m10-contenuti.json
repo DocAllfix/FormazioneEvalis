@@ -1,0 +1,1066 @@
+[
+ {
+  "id": "fadpas24000_m10_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 10",
+  "titolo": "Verificare, correggere, prepararsi alla certificazione",
+  "corsoLabel": "Sistema di gestione sociale · PAS 24000:2022",
+  "eyebrow": "Modulo 10",
+  "sottotitolo": "Il sistema entra nella fase più matura: non basta che sia ben progettato, deve dimostrare conformità ed efficacia nella vita quotidiana, con verifiche pianificate, imparziali e utili a chi decide e assegna risorse.",
+  "agenda": [
+   "Audit interno 9.2",
+   "Conformità ed efficacia",
+   "Verifiche pianificate",
+   "Perimetro reale dei controlli",
+   "Esiti che muovono azioni"
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s002",
+  "layout": "ciclo",
+  "kicker": "Metodo di audit",
+  "titolo": "I principi che rendono credibile la verifica",
+  "intro": "La PAS 24000 rinvia alla ISO 19011: la fiducia nell'audit nasce dai principi che guidano il giudizio, non dai moduli. Nel sociale, riservatezza ed evidenza pesano più che altrove.",
+  "ciclo": false,
+  "centro": "Audit credibile",
+  "nodi": [
+   {
+    "h": "Integrità",
+    "d": "Onestà, responsabilità, disciplina professionale"
+   },
+   {
+    "h": "Presentazione imparziale",
+    "d": "Vero, accurato, proporzionato ai fatti"
+   },
+   {
+    "h": "Professionalità",
+    "d": "Competenza, attenzione, giudizio nel valutare"
+   },
+   {
+    "h": "Riservatezza",
+    "d": "Proteggere informazioni, identità, vulnerabilità"
+   },
+   {
+    "h": "Indipendenza",
+    "d": "Nessuno verifica il proprio lavoro"
+   },
+   {
+    "h": "Basato sull'evidenza",
+    "d": "Conclusioni rintracciabili, coerenti, verificabili"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s003",
+  "layout": "ciclo",
+  "kicker": "Punto 9.2 e 10.2",
+  "titolo": "Il ciclo completo della verifica interna",
+  "intro": "Il lavoro non finisce con il rapporto. L'audit produce miglioramento solo se agli esiti seguono correzioni, azioni correttive e una verifica finale dell'efficacia reale di ciò che è stato deciso.",
+  "ciclo": true,
+  "centro": "Audit interno",
+  "nodi": [
+   {
+    "h": "Programmare",
+    "d": "Frequenza, metodi, responsabilità, priorità"
+   },
+   {
+    "h": "Preparare",
+    "d": "Obiettivi, criteri, ambito, campione"
+   },
+   {
+    "h": "Condurre",
+    "d": "Documenti, osservazione, interviste, dati"
+   },
+   {
+    "h": "Riferire",
+    "d": "Rilievi chiari, fondati, utili"
+   },
+   {
+    "h": "Correggere",
+    "d": "Controllare il fatto, agire sulle cause"
+   },
+   {
+    "h": "Verificare",
+    "d": "Controllare se le azioni funzionano"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s004",
+  "layout": "matrice",
+  "kicker": "Programma di audit",
+  "titolo": "Le priorità si giustificano con il rischio",
+  "intro": "Nel primo ciclo mancano i risultati di audit precedenti: per motivare dove andare più a fondo, Agroconserve rilegge i processi con una matrice probabilità per gravità e rende esplicito il criterio di priorità.",
+  "assi": {
+   "x": "Probabilità di scostamento",
+   "y": "Gravità per i lavoratori"
+  },
+  "punti": [
+   {
+    "id": "P1",
+    "l": "Orario e straordinari in campagna",
+    "p": 4,
+    "g": 3
+   },
+   {
+    "id": "P2",
+    "l": "Agenzie e reclutamento",
+    "p": 2,
+    "g": 5
+   },
+   {
+    "id": "P3",
+    "l": "Conferenti e filiera agricola",
+    "p": 3,
+    "g": 5
+   },
+   {
+    "id": "P4",
+    "l": "Salute, sicurezza, emergenze",
+    "p": 3,
+    "g": 4
+   },
+   {
+    "id": "P5",
+    "l": "Appalti interni: facchinaggio e pulizie",
+    "p": 3,
+    "g": 4
+   },
+   {
+    "id": "P6",
+    "l": "Formazione e comunicazione multilingue",
+    "p": 4,
+    "g": 3
+   },
+   {
+    "id": "P7",
+    "l": "Reclami e tutela di chi segnala",
+    "p": 2,
+    "g": 4
+   },
+   {
+    "id": "P8",
+    "l": "Paghe e prospetti paga",
+    "p": 3,
+    "g": 2
+   },
+   {
+    "id": "P9",
+    "l": "Documenti, obiettivi, riesame",
+    "p": 2,
+    "g": 2
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s005",
+  "layout": "timeline",
+  "kicker": "Pianificazione annuale",
+  "titolo": "Le verifiche seguono i processi quando sono vivi",
+  "intro": "Comprimere tutto in pochi giorni produce solo carta. In un'organizzazione stagionale, il programma funziona se distribuisce le verifiche lungo l'anno e incontra i rischi mentre sono realmente attivi.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Mese 8",
+    "d": "Audit di sistema e verifica in campo in campagna"
+   },
+   {
+    "t": "02",
+    "h": "Mesi 9-10",
+    "d": "Follow-up delle azioni correttive emerse"
+   },
+   {
+    "t": "03",
+    "h": "Fuori campagna",
+    "d": "Acquisti, filiera, risorse umane, edifici"
+   },
+   {
+    "t": "04",
+    "h": "Pre-campagna",
+    "d": "Contratti, agenzie, formazione, preparazione operativa"
+   },
+   {
+    "t": "05",
+    "h": "Nuova campagna",
+    "d": "Nuova verifica in campo sul rischio reale"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s006",
+  "layout": "ciclo",
+  "kicker": "Lavoro sul campo",
+  "titolo": "La triangolazione trasforma indizi in evidenze",
+  "intro": "Nel sociale nessuna fonte basta da sola. Un fatto diventa credibile quando almeno due fonti indipendenti convergono, oppure quando una contraddizione viene approfondita fino a chiarire che cosa sta accadendo davvero.",
+  "ciclo": false,
+  "centro": "Evidenza affidabile",
+  "nodi": [
+   {
+    "h": "Documenti",
+    "d": "Procedure, contratti, paghe, registri"
+   },
+   {
+    "h": "Osservazione",
+    "d": "Reparti, servizi, bacheche, navetta"
+   },
+   {
+    "h": "Interviste ai lavoratori",
+    "d": "Riservate, a campione, in lingua compresa"
+   },
+   {
+    "h": "Interviste ai capi",
+    "d": "Decisioni su turni e operatività"
+   },
+   {
+    "h": "Rappresentanti",
+    "d": "Ricorrenze e nodi poco visibili"
+   },
+   {
+    "h": "Dati e indicatori",
+    "d": "Presenze, reclami, infortuni, scostamenti"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s007",
+  "layout": "cards",
+  "kicker": "Interviste riservate",
+  "titolo": "Il campione giusto determina ciò che emerge",
+  "intro": "Le interviste sono lo strumento più forte e più fragile dell'audit sociale. Funzionano solo se il campione è scelto dagli auditor, copre le categorie esposte e tutela davvero chi parla.",
+  "cards": [
+   {
+    "h": "Campione indipendente",
+    "d": "Scelto dagli auditor, non dai capi"
+   },
+   {
+    "h": "Copertura del perimetro",
+    "d": "Reparti, turni, contratti, nazionalità, soggetti esposti"
+   },
+   {
+    "h": "Contesto protetto",
+    "d": "Spazio riservato e lingua realmente compresa"
+   },
+   {
+    "h": "Tutela della fonte",
+    "d": "Orario retribuito, anonimato, non ritorsione"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s008",
+  "layout": "split",
+  "kicker": "Prove forti di audit",
+  "titolo": "Seguire il lavoro tra registrazioni e luoghi",
+  "lead": "Dopo documenti e interviste, due verifiche diventano decisive: il confronto tra presenze e paghe e il sopralluogo nei luoghi gestiti o influenzati dall'organizzazione. Insieme mostrano se il sistema racconta la realtà.",
+  "punti": [
+   {
+    "h": "Presenze contro paghe",
+    "d": "Timbrature, turni, straordinari, prospetto paga, bonifico, conferma del lavoratore"
+   },
+   {
+    "h": "Sopralluogo nei luoghi",
+    "d": "Reparti, magazzini, spogliatoi, mensa, bacheche, acqua, pause, vie di fuga"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s009",
+  "layout": "piramide",
+  "kicker": "Scrivere i rilievi",
+  "titolo": "Classificare gli esiti senza attenuare i fatti",
+  "intro": "La PAS 24000 definisce la non conformità ma non impone classi. Nella pratica, i criteri vanno dichiarati in procedura e applicati con coerenza, separando sempre requisito, evidenza e scostamento.",
+  "livelli": [
+   {
+    "h": "Non conformità maggiore",
+    "d": "Requisito assente, sistematico o con rischio grave"
+   },
+   {
+    "h": "Non conformità minore",
+    "d": "Scostamento isolato o parziale da correggere"
+   },
+   {
+    "h": "Osservazione o raccomandazione",
+    "d": "Punto debole o miglioramento, non mancato requisito"
+   },
+   {
+    "h": "Conformità e punti di forza",
+    "d": "L'audit descrive anche ciò che funziona"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s010",
+  "layout": "barre",
+  "kicker": "Caso Agroconserve · audit interno mese 8",
+  "titolo": "La mappa reale dei dieci rilievi",
+  "intro": "Dieci rilievi non indicano un sistema fallito: indicano un audit che ha guardato dove il sistema è più esposto. Il punto critico non è l'impianto formale, ma l'attuazione concreta nei luoghi e nei perimetri reali.",
+  "unita": "rilievi",
+  "voci": [
+   {
+    "l": "Supporto e consapevolezza",
+    "v": 2
+   },
+   {
+    "l": "Controllo operativo e fornitori",
+    "v": 1
+   },
+   {
+    "l": "Diritti fondamentali",
+    "v": 1
+   },
+   {
+    "l": "Emergenze ed edifici",
+    "v": 1
+   },
+   {
+    "l": "Rapporti di lavoro e orario",
+    "v": 2
+   },
+   {
+    "l": "Reclami e miglioramento",
+    "v": 2
+   },
+   {
+    "l": "Monitoraggio e indicatori",
+    "v": 1
+   }
+  ],
+  "fonte": "Caso studio Agroconserve Matesina – dati illustrativi"
+ },
+ {
+  "id": "fadpas24000_m10_s011",
+  "layout": "organigramma",
+  "kicker": "Audit interno · reporting",
+  "titolo": "Che cosa rende utile un rapporto di audit",
+  "intro": "Il rapporto è il ponte tra verifica e azione. Per essere leggibile e utile deve mostrare con chiarezza che cosa è stato coperto, come è stato campionato, quali rilievi emergono e perché meritano una decisione.",
+  "radice": {
+   "h": "Rapporto di audit utile",
+   "d": "Chiaro, proporzionato, azionabile"
+  },
+  "rami": [
+   {
+    "h": "Perimetro trasparente",
+    "d": "Dice dove l'audit arriva",
+    "voci": [
+     "Obiettivi e criteri",
+     "Ambito e periodo",
+     "Luoghi e turni coperti"
+    ]
+   },
+   {
+    "h": "Campione tracciabile",
+    "d": "Rende leggibile il metodo",
+    "voci": [
+     "Categorie coinvolte",
+     "Settimane e documenti scelti",
+     "Mediatori indipendenti, se usati"
+    ]
+   },
+   {
+    "h": "Equilibrio del giudizio",
+    "d": "Descrive il sistema reale",
+    "voci": [
+     "Rilievi fondati",
+     "Punti di forza",
+     "Pratiche da consolidare"
+    ]
+   },
+   {
+    "h": "Scrittura che apre decisioni",
+    "d": "Ogni rilievo sostiene l'azione",
+    "voci": [
+     "Requisito richiamato",
+     "Evidenza precisa",
+     "Scostamento comprensibile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s012",
+  "layout": "confronto",
+  "kicker": "PAS 24000 · punto 9.3",
+  "titolo": "Gli input e gli output del riesame",
+  "intro": "Il riesame annuale vale se tiene insieme le due metà del governo: informazioni affidabili in ingresso e decisioni esplicite in uscita. Dati senza decisioni frustrano; decisioni senza dati restano intuizioni.",
+  "a": {
+   "h": "Input da considerare",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Stato delle azioni precedenti"
+    },
+    {
+     "d": "Cambiamenti, requisiti, rischi e opportunità"
+    },
+    {
+     "d": "Performance sociale, audit, conformità legale"
+    },
+    {
+     "d": "Risorse, comunicazioni, opportunità di miglioramento"
+    }
+   ]
+  },
+  "b": {
+   "h": "Output da produrre",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Giudizio su idoneità, adeguatezza, efficacia"
+    },
+    {
+     "d": "Decisioni e priorità di miglioramento"
+    },
+    {
+     "d": "Risorse, competenze, strumenti necessari"
+    },
+    {
+     "d": "Azioni e cambiamenti del sistema"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpas24000_m10_s013",
+  "layout": "flusso",
+  "kicker": "Riesame della direzione · metodo",
+  "titolo": "Il riesame utile segue una sequenza precisa",
+  "intro": "La riunione funziona solo se nasce da una preparazione ordinata e da un confronto reale con i rappresentanti dei lavoratori. In sala, i dati vanno subito collegati a impatti, responsabilità, risorse e tempi.",
+  "passi": [
+   {
+    "h": "Preparare gli input",
+    "d": "Dati, tendenze, questioni aperte"
+   },
+   {
+    "h": "Condividere prima",
+    "d": "Rappresentanti leggono e integrano"
+   },
+   {
+    "h": "Chiarire il fatto",
+    "d": "Scostamento, contesto, perimetro"
+   },
+   {
+    "h": "Leggere tendenza e impatto",
+    "d": "Che cosa dice sul sistema"
+   },
+   {
+    "h": "Decidere l'azione",
+    "d": "Chi, risorse, scadenze, verifica"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s014",
+  "layout": "numeri",
+  "kicker": "Caso Agroconserve · mese 9",
+  "titolo": "Quattro numeri che sostengono il giudizio",
+  "intro": "Nel riesame bastano pochi dati ben letti per esprimere un giudizio credibile: sistema idoneo, adeguato dopo la correzione del perimetro, efficace ma con riserve su orario, infortuni e parità.",
+  "numeri": [
+   {
+    "n": "10",
+    "h": "rilievi interni; 7 chiusi, 3 in corso",
+    "d": ""
+   },
+   {
+    "n": "23",
+    "h": "reclami dal mese 5; media chiusura 26 giorni",
+    "d": ""
+   },
+   {
+    "n": "5/9",
+    "h": "indicatori in linea; 4 ancora deboli",
+    "d": ""
+   },
+   {
+    "n": "8",
+    "h": "decisioni formalizzate con responsabile e risorse",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s015",
+  "layout": "evidenza",
+  "kicker": "PAS 24000 · punto 10.2",
+  "titolo": "Incidenti reclami e non conformità nello stesso processo",
+  "eyebrow": "",
+  "testo": "La norma unifica eventi diversi perché, per chi lavora, conta che il problema venga preso in carico, compreso e corretto in modo credibile. Servono regole stabili, non risposte improvvisate caso per caso.",
+  "dark": true
+ },
+ {
+  "id": "fadpas24000_m10_s016",
+  "layout": "flusso",
+  "kicker": "Gestione degli eventi · applicazione pratica",
+  "titolo": "Dall'evento alla chiusura in sei passaggi",
+  "intro": "Il processo è leggibile quando ogni evento entra nel registro, riceve una risposta proporzionata e lascia tracce verificabili. La chiusura vera non coincide con la sola correzione del fatto osservato.",
+  "passi": [
+   {
+    "h": "Segnalare",
+    "d": "L'evento entra nel registro"
+   },
+   {
+    "h": "Reagire",
+    "d": "Correzione e tutela immediata"
+   },
+   {
+    "h": "Indagare",
+    "d": "Cause, circostanze, eventi simili"
+   },
+   {
+    "h": "Riesaminare i rischi",
+    "d": "Che cosa la pianificazione non vedeva"
+   },
+   {
+    "h": "Decidere l'azione correttiva",
+    "d": "Responsabile, tempi, risorse, criterio"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s017",
+  "layout": "tabella",
+  "kicker": "Caso Agroconserve · reclamo sulla navetta",
+  "titolo": "Il caso navetta letto fino alla causa",
+  "cols": [
+   "Fase",
+   "Evidenza",
+   "Esito"
+  ],
+  "righe": [
+   [
+    "Segnalazione",
+    "Due reclami in una settimana",
+    "Linea due troppo tarda"
+   ],
+   [
+    "Accessibilità",
+    "Una segnalazione in lingua straniera",
+    "Canale usato anche da esterni"
+   ],
+   [
+    "Correzione",
+    "Corsa aggiuntiva entro 48 ore",
+    "Disagio immediato ridotto"
+   ],
+   [
+    "Indagine",
+    "Rappresentante, due stagionali, mediatore",
+    "Cambiamento non valutato sui servizi"
+   ],
+   [
+    "Verifica e riesame",
+    "Linea uno controllata; rischio aggiornato",
+    "Difetto puntuale, presidio esteso"
+   ]
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s018",
+  "layout": "confronto",
+  "kicker": "Punto 10.2 · distinzione chiave",
+  "titolo": "Correzione e azione correttiva non coincidono",
+  "intro": "Molti errori nascono qui: scambiare il ripristino del fatto per una soluzione stabile, oppure aprire piani eccessivi per eventi isolati. La logica corretta unisce immediatezza, analisi delle cause e proporzionalità.",
+  "a": {
+   "h": "Correzione",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Interviene sul fatto osservato"
+    },
+    {
+     "d": "Contiene l'effetto immediato"
+    },
+    {
+     "d": "Esempi: pallet spostati, turni ripianificati"
+    },
+    {
+     "d": "Da sola non evita il ritorno"
+    }
+   ]
+  },
+  "b": {
+   "h": "Azione correttiva",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Interviene su causa o meccanismo"
+    },
+    {
+     "d": "Riduce la probabilità di ripetizione"
+    },
+    {
+     "d": "Esempi: aree segnate, allarmi estesi"
+    },
+    {
+     "d": "Va proporzionata a impatto e ricorrenza"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpas24000_m10_s019",
+  "layout": "organigramma",
+  "kicker": "Analisi delle cause",
+  "titolo": "Ishikawa per ricorrenze, cinque perché per eventi",
+  "intro": "La PAS 24000 non impone il metodo: queste due tecniche aiutano soprattutto a evitare la scorciatoia più comune, fermarsi al sintomo o alla persona invece di vedere il problema come effetto di un sistema.",
+  "radice": {
+   "h": "Effetto",
+   "d": "Dodici persone oltre la soglia oraria"
+  },
+  "rami": [
+   {
+    "h": "Persone",
+    "d": "Coperture fragili nei ruoli critici",
+    "voci": [
+     "Pochi sostituti per mansioni critiche",
+     "Straordinario sugli stessi profili",
+     "Assenze scoperte nei picchi"
+    ]
+   },
+   {
+    "h": "Metodi",
+    "d": "Regole deboli sui turni",
+    "voci": [
+     "Pianificazione troppo corta",
+     "Straordinario autorizzato informalmente",
+     "Soglia di blocco non usata"
+    ]
+   },
+   {
+    "h": "Strumenti",
+    "d": "Dati poco leggibili in tempo",
+    "voci": [
+     "Presenze senza totale progressivo",
+     "Fermi linea che allungano le giornate"
+    ]
+   },
+   {
+    "h": "Organizzazione",
+    "d": "Assetto tarato sulla media",
+    "voci": [
+     "Organico calcolato sui valori medi",
+     "Nessun responsabile esplicito della soglia"
+    ]
+   },
+   {
+    "h": "Fattori esterni",
+    "d": "Pressioni dal contesto operativo",
+    "voci": [
+     "Conferimenti concentrati",
+     "Sostituzioni agenzie in ritardo",
+     "Ondate di calore"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s020",
+  "layout": "cards",
+  "kicker": "Azioni correttive",
+  "titolo": "Ogni azione deve colpire una causa",
+  "intro": "Il piano è credibile solo se collega ogni misura a un perché emerso dall'analisi, assegna responsabilità e tempi, e definisce subito come sarà provata l'efficacia nella campagna successiva.",
+  "cards": [
+   {
+    "h": "Piano robusto",
+    "d": "Azione, responsabile, scadenza, risorse, criterio di efficacia"
+   },
+   {
+    "h": "Correzione immediata",
+    "d": "Turni riprogrammati e riposi ai due manutentori"
+   },
+   {
+    "h": "Azioni sulle cause",
+    "d": "Allarme esteso, rischio riscritto, sostituti, manutenzione preventiva"
+   },
+   {
+    "h": "Prova vera",
+    "d": "Prossima campagna: nessun superamento in nessuna categoria"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s021",
+  "layout": "ciclo",
+  "kicker": "Punto 10.1",
+  "titolo": "Il miglioramento nasce dalle evidenze del sistema",
+  "intro": "Nel punto 10.1 il miglioramento non è un progetto separato: prende forma quando le informazioni che il sistema genera vengono raccolte, lette e trasformate in decisioni operative.",
+  "ciclo": false,
+  "centro": "Miglioramento continuo",
+  "nodi": [
+   {
+    "h": "Audit",
+    "d": "Rilievi, osservazioni, punti di forza"
+   },
+   {
+    "h": "Reclami",
+    "d": "Che cosa non funziona per le persone"
+   },
+   {
+    "h": "Indicatori",
+    "d": "Tendenze, obiettivi, difetti di perimetro"
+   },
+   {
+    "h": "Proposte dei lavoratori",
+    "d": "Criticità e soluzioni viste sul campo"
+   },
+   {
+    "h": "Riesame della direzione",
+    "d": "Priorità, risorse, decisioni"
+   },
+   {
+    "h": "Cambiamenti",
+    "d": "Contesto, clienti, filiera, campagna"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s022",
+  "layout": "numeri",
+  "kicker": "Gap analysis",
+  "titolo": "Dieci mesi dopo, la maturità è visibile",
+  "intro": "La stessa scala iniziale viene ripetuta senza sconti: il sistema mostra ora una base omogenea, leadership a cinque e miglioramento fermo a quattro, quindi buono ma ancora da irrobustire.",
+  "numeri": [
+   {
+    "n": "0",
+    "h": "aree finali sotto il livello quattro",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "leadership: il sociale entra nel governo",
+    "d": ""
+   },
+   {
+    "n": "2 a 4",
+    "h": "contesto, pianificazione, operatività, valutazione",
+    "d": ""
+   },
+   {
+    "n": "3 a 4",
+    "h": "supporto più stabile e meglio governato",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s023",
+  "layout": "timeline",
+  "kicker": "Percorso di certificazione",
+  "titolo": "Dalla domanda allo Stage 2",
+  "intro": "Nella PAS 24000 il percorso conta perché costringe a dichiarare il perimetro reale del lavoro: persone, siti, turni, appalti, servizi collegati, filiera e periodi di punta.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Scelta dell'organismo",
+    "d": "Accreditato PAS 24000 e accettato dai clienti"
+   },
+   {
+    "t": "02",
+    "h": "Domanda di certificazione",
+    "d": "Siti, turni, addetti, appalti, filiera, picchi"
+   },
+   {
+    "t": "03",
+    "h": "Stage 1",
+    "d": "Prontezza del sistema e perimetro dichiarato"
+   },
+   {
+    "t": "04",
+    "h": "Stage 2",
+    "d": "Attuazione, efficacia, campo, interviste, triangolazione"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s024",
+  "layout": "cards",
+  "kicker": "Esiti e delibera",
+  "titolo": "Il peso diverso di maggiore, minore, osservazione",
+  "intro": "Dopo la verifica esterna non bastano promesse: ogni rilievo richiede correzione, analisi della causa e azione correttiva, dentro un processo accreditato con tempi, verifiche e conseguenze definite.",
+  "cards": [
+   {
+    "h": "Non conformità maggiore",
+    "d": "Nessun certificato finché resta aperta"
+   },
+   {
+    "h": "Non conformità minore",
+    "d": "Piano strutturato ora, verifica completa poi"
+   },
+   {
+    "h": "Osservazioni",
+    "d": "Ignorarle oggi prepara rilievi più severi"
+   },
+   {
+    "h": "Delibera",
+    "d": "Decide un organo separato dal team"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s025",
+  "layout": "confronto",
+  "kicker": "Durata delle verifiche",
+  "titolo": "Il calcolo nasce da due driver",
+  "intro": "La durata dell'audit deriva dall'incrocio tra persone comprese nel campo di applicazione e rischio del settore; poi l'organismo applica le regole IAF MD 5 e, se serve, IAF MD 11.",
+  "a": {
+   "h": "Addetti nel campo",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Conta tutto il perimetro reale"
+    },
+    {
+     "d": "Stagionali, somministrati, appalti interni pertinenti"
+    },
+    {
+     "d": "Novantasei stabili non bastano oltre trecento"
+    }
+   ]
+  },
+  "b": {
+   "h": "Rischio di settore",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Tre o più elementi materiali: alto"
+    },
+    {
+     "d": "Due elementi materiali: medio"
+    },
+    {
+     "d": "Uno o nessuno: basso"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpas24000_m10_s026",
+  "layout": "evidenza",
+  "kicker": "Gruppo di audit",
+  "titolo": "Le competenze che rendono credibile l'audit",
+  "eyebrow": "",
+  "testo": "L'accreditamento da solo non basta: un audit sociale regge quando il gruppo sa leggere documenti, persone e contesto operativo, con esperienza di settore, stagionalità, appalti interni e ambienti multilingue.",
+  "dark": true
+ },
+ {
+  "id": "fadpas24000_m10_s027",
+  "layout": "tabella",
+  "kicker": "Caso Agroconserve",
+  "titolo": "Stage 1: sistema leggibile, tenuta da provare",
+  "cols": [
+   "Area di attenzione",
+   "Segnale per la Fase 2"
+  ],
+  "righe": [
+   [
+    "Programma di audit",
+    "Terzo turno non considerato con sufficiente chiarezza"
+   ],
+   [
+    "Azioni correttive",
+    "Tre rilievi della verifica interna ancora in corso"
+   ],
+   [
+    "Riesame e comunicazione",
+    "Esiti non dimostrati agli stagionali usciti"
+   ]
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s028",
+  "layout": "barre",
+  "kicker": "Confronto esiti",
+  "titolo": "La severità interna protegge lo Stage 2",
+  "intro": "Il divario tra mese otto e mese dieci è positivo solo perché le correzioni hanno chiuso i problemi più critici, incluso il difetto di perimetro sugli appalti interni che avrebbe potuto bloccare il certificato.",
+  "unita": "rilievi",
+  "serie": [
+   "Audit interno (M8)",
+   "Stage 2 (M10)"
+  ],
+  "voci": [
+   {
+    "l": "Non conformità maggiori",
+    "v": [
+     1,
+     0
+    ]
+   },
+   {
+    "l": "Non conformità minori",
+    "v": [
+     4,
+     2
+    ]
+   },
+   {
+    "l": "Osservazioni",
+    "v": [
+     5,
+     3
+    ]
+   }
+  ],
+  "fonte": "Caso studio Agroconserve Matesina – dati illustrativi"
+ },
+ {
+  "id": "fadpas24000_m10_s029",
+  "layout": "cards",
+  "kicker": "Esito di certificazione",
+  "titolo": "Due minori, tre osservazioni, certificato raggiungibile",
+  "intro": "La seconda fase conferma un sistema credibile ma ancora giovane: l'organismo trova lacune di copertura sul terzo turno e nella verifica di efficacia, mentre riconosce come gestiti i superamenti orari già intercettati internamente.",
+  "cards": [
+   {
+    "h": "Punto 9.2",
+    "d": "Il terzo turno non era stato visto sul campo"
+   },
+   {
+    "h": "Punto 10.2",
+    "d": "Due azioni chiuse senza prova di efficacia"
+   },
+   {
+    "h": "Tre osservazioni",
+    "d": "Autovalutazioni, mancati infortuni, comprensione della busta paga"
+   },
+   {
+    "h": "Segnale positivo",
+    "d": "Nessun nuovo rilievo sui due superamenti orari"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s030",
+  "layout": "tabella",
+  "kicker": "Bilancio al mese dieci",
+  "titolo": "Sistema certificabile, obiettivi ancora aperti",
+  "cols": [
+   "Indicatore",
+   "Rilevato",
+   "Obiettivo",
+   "Lettura"
+  ],
+  "righe": [
+   [
+    "Conferenti con codice firmato",
+    "100%",
+    "100%",
+    "Target raggiunto"
+   ],
+   [
+    "Formazione in lingua compresa",
+    "100%",
+    "100%",
+    "Target raggiunto"
+   ],
+   [
+    "Donne in ruoli di responsabilità",
+    "26%",
+    "30%",
+    "In crescita"
+   ],
+   [
+    "Indice di frequenza infortuni",
+    "24",
+    "20",
+    "In calo, non a target"
+   ],
+   [
+    "Straordinario medio settimanale",
+    "6 h",
+    "6 h",
+    "Media allineata"
+   ],
+   [
+    "Lavoratori oltre 60 ore",
+    "2",
+    "0",
+    "Migliorato, non risolto"
+   ]
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s031",
+  "layout": "ciclo",
+  "kicker": "Ripasso finale",
+  "titolo": "Dieci unità in una logica progressiva",
+  "intro": "Il corso non somma adempimenti isolati: mostra una sequenza che parte dal perimetro, porta il sistema nel governo reale, lo rende operativo sul campo e chiude il ciclo con verifica, decisioni e certificazione.",
+  "ciclo": false,
+  "centro": "Dieci mesi di costruzione",
+  "nodi": [
+   {
+    "h": "1-2 Impostazione",
+    "d": "Quadro di riferimento, gap analysis, contesto e campo"
+   },
+   {
+    "h": "3-4 Governo e pianificazione",
+    "d": "Leadership, ruoli, rischi, opportunità e obiettivi"
+   },
+   {
+    "h": "5-6 Supporto e diritti",
+    "d": "Competenze, lingue comprese, diritti fondamentali del lavoro"
+   },
+   {
+    "h": "7-8 Condizioni operative",
+    "d": "Sicurezza, edifici, emergenze, orari, paghe e reclami"
+   },
+   {
+    "h": "9-10 Controllo e chiusura",
+    "d": "Filiera, indicatori, audit, riesame, correzioni e certificazione"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s032",
+  "layout": "evidenza",
+  "kicker": "Frequenze e formule",
+  "titolo": "Le cadenze che devi saper governare",
+  "eyebrow": "",
+  "testo": "Gli errori più comuni nascono da automatismi sbagliati: alcune attività sono annuali, l'audit interno no. A queste frequenze si affiancano frasi da saper spiegare con precisione a direzione, auditor e clienti.",
+  "dark": true
+ },
+ {
+  "id": "fadpas24000_m10_s033",
+  "layout": "flusso",
+  "kicker": "Errori ricorrenti",
+  "titolo": "Tre snodi in cui il sistema perde credibilità",
+  "intro": "I problemi più dannosi non nascono solo dai requisiti mancati, ma da pratiche metodologiche deboli: audit da scrivania, riesami senza decisioni e azioni correttive chiuse prima di dimostrare che il problema non si ripresenta.",
+  "passi": [
+   {
+    "h": "Audit interno",
+    "d": "No solo documenti; servono campo, indipendenza, tutela delle fonti"
+   },
+   {
+    "h": "Riesame direzione",
+    "d": "No verbali vuoti; servono dati, decisioni, responsabili, tempi"
+   },
+   {
+    "h": "Azioni correttive",
+    "d": "No correzioni superficiali; cause vere ed efficacia verificata"
+   }
+  ]
+ },
+ {
+  "id": "fadpas24000_m10_s034",
+  "layout": "chiusura",
+  "kicker": "Da portare nel lavoro",
+  "titolo": "Dieci regole, un metodo consulenziale solido",
+  "modNum": "10",
+  "punti": [
+   {
+    "h": "Partenza corretta",
+    "d": "Obiettivo cliente e perimetro reale, senza esclusi"
+   },
+   {
+    "h": "Governo credibile",
+    "d": "Leadership e partecipazione devono lavorare insieme"
+   },
+   {
+    "h": "Controlli ad alta sensibilità",
+    "d": "Orari, paghe, reclami, filiera, tutela di chi segnala"
+   },
+   {
+    "h": "Ciclo chiuso",
+    "d": "Audit, riesame, cause, azioni, efficacia documentata"
+   }
+  ],
+  "prossimo": null
+ }
+]

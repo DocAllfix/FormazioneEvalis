@@ -113,6 +113,9 @@ def tabella_da(x):
 
 GRAFICI = ("barre", "ciambella", "linee", "matrice", "gantt", "piramide", "ciclo", "organigramma")
 ripieghi = 0
+# Limiti degli elenchi: alzati il 13/10/2026 (fadpas24000). A 4 tagliavano le enumerazioni contate dal
+# parlato (sei definizioni, sette temi, dieci punti) e il giudice bocciava la slide; le altezze restano
+# sorvegliate dal gate d'impaginazione e dal controllo fine anti-taglio.
 n_tot = 0
 # --moduli m01,m07: converte SOLO quei moduli. Il convertitore riscrive i file sul posto e non è
 # idempotente: riconvertire un modulo già convertito ne altererebbe apertura e agenda.
@@ -134,7 +137,7 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
                      "sottotitolo": lead, "agenda": [v["h"] or v["d"] for v in p][:5] or
                      [s.get("titolo","") for s in dati[1:6]]}
         elif l == "chiusura":
-            base |= {"modNum": mod[1:], "punti": p[:4],
+            base |= {"modNum": mod[1:], "punti": p[:8],
                      # build-slide vuole {modulo, titolo}: con una stringa la slide mostrava
                      # "Prossimo → Modulo —" vuoto (ESG ed Energy, scoperto il 05/10/2026).
                      # Ultimo modulo (dallo skeleton, non fisso a 10): niente riquadro.
@@ -156,11 +159,11 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
         elif l == "numeri":
             nn = x.get("numeri") or []
             out_n = []
-            for j, v in enumerate(nn[:4], 1):
+            for j, v in enumerate(nn[:5], 1):
                 if isinstance(v, dict):
                     out_n.append({"n": str(v.get("n") or j), "h": (v.get("h") or v.get("eti") or "").strip(),
                                   "d": (v.get("d") or v.get("eti") or "").strip()})
-            if not out_n: out_n = [{"n": str(j), "h": v["h"], "d": v["d"]} for j, v in enumerate(p[:4], 1)]
+            if not out_n: out_n = [{"n": str(j), "h": v["h"], "d": v["d"]} for j, v in enumerate(p[:5], 1)]
             # una sola frase dal generatore = solo titolo: con h == d la slide la mostrerebbe due
             # volte (titolo in grassetto + stessa riga in grigio). Difetto visto su ESG/Energy.
             for v in out_n:
@@ -170,9 +173,9 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
             base |= {"intro": lead, "passi": p[:5]}
         elif l == "timeline":
             base |= {"intro": lead, "tappe": [{"t": f"{j:02d}", "h": v["h"], "d": v["d"]}
-                                              for j, v in enumerate(p[:5], 1)]}
+                                              for j, v in enumerate(p[:6], 1)]}
         elif l == "cards":
-            base |= {"intro": lead, "cards": p[:4]}
+            base |= {"intro": lead, "cards": p[:6]}
         elif l == "tabella":
             cols = x.get("intestazioni") or x.get("cols") or []
             righe = [[str(c) for c in r] for r in (x.get("righe") or []) if isinstance(r, list)]
@@ -185,7 +188,7 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
         elif l == "evidenza":
             base |= {"eyebrow": "", "testo": lead, "dark": True}
         elif l == "split":
-            base |= {"lead": lead, "punti": p[:4]}
+            base |= {"lead": lead, "punti": p[:6]}
         elif l in GRAFICI:
             campi, motivo = grafico(l, x)
             if campi:
@@ -195,7 +198,7 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
                 print(f"  ! {x['id']}: {motivo} → tabella con gli stessi dati")
                 base |= {"layout": "tabella", **tabella_da(x)}
         else:
-            base |= {"layout": "punti", "intro": lead, "punti": p[:4]}
+            base |= {"layout": "punti", "intro": lead, "punti": p[:8]}
         out.append(base)
     json.dump(out, open(f, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     n_tot += len(out)

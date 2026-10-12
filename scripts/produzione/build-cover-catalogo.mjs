@@ -43,7 +43,26 @@ const ICONE = {
       ${bilancia(150, 150, 120)}
       ${coccarda(262, 248, 62)}`,
   },
+  // tre persone affiancate + coccarda: il sistema di gestione sociale certificato (PAS 24000)
+  sociale: {
+    centro: [176, 190], scala: 1.62,
+    disegna: () => `
+      ${persone(150, 160, 120)}
+      ${coccarda(268, 252, 60)}`,
+  },
 };
+
+// tre figure (testa + busto), quella centrale più grande e in primo piano
+function persone(cx, cy, r) {
+  const figura = (x, y, k, colore) => `
+    <circle cx="${x}" cy="${y - r * 0.42 * k}" r="${r * 0.26 * k}" fill="${colore}"/>
+    <path d="M${x - r * 0.46 * k},${y + r * 0.62 * k} C${x - r * 0.46 * k},${y - r * 0.02 * k} ${x + r * 0.46 * k},${y - r * 0.02 * k} ${x + r * 0.46 * k},${y + r * 0.62 * k} Z" fill="${colore}"/>`;
+  return `<g filter="url(#rilievo)">
+    ${figura(cx - r * 0.62, cy + r * 0.10, 0.78, "#EDE0D0")}
+    ${figura(cx + r * 0.62, cy + r * 0.10, 0.78, C.arancioCaldo)}
+    ${figura(cx, cy, 1, C.arancio)}
+  </g>`;
+}
 
 function bilancia(cx, cy, r) {
   const t = C.arancio, sp = r * 0.11;
@@ -164,6 +183,7 @@ const CORSI = {
   "9001v26": ICONE.qualita,
   agg9001: ICONE.aggiornamento,
   fadpdr125: ICONE.parita,
+  fadpas24000: ICONE.sociale,
 };
 
 const DISCO = { x: 790, y: 478 };
