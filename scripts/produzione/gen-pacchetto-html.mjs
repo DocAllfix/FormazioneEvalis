@@ -43,6 +43,13 @@ const esempi = rif.slides.filter((s) => ["19011_m02_s005", "19011_m02_s017"].inc
 const regole = readFileSync("docs/produzione-corsi/FABBRICA-MODULO.md", "utf8");
 const quizStd = readFileSync("docs/produzione-corsi/QUIZ-STANDARD.md", "utf8");
 
+// ripartizione VINCOLANTE delle slide per sezione (blocco "### Mn — …" dello skeleton), come nei
+// pacchetti ISO: senza, su moduli lunghi il modello dilata le prime sezioni e non arriva in fondo
+// alla fonte (fadpas24000 m02: 34 slide spese sulle sezioni 1-7 di 12). Facoltativo: i corsi il cui
+// skeleton non ha gli argomenti slide per slide restano come prima.
+const bloccoArg = md.split(/### /).slice(1).find((x) => x.match(/^M(\d+)/)?.[1] === String(nMod));
+const argomenti = bloccoArg ? bloccoArg.split("\n").slice(1).join("\n").split("## ")[0].trim() : "";
+
 const budgetParole = Math.round(parseInt(minuti, 10) * 60 * 2.35);
 const out = `# PACCHETTO MODULO (fonte HTML) — corso ${corso} · ${mod.toUpperCase()}
 
@@ -54,7 +61,12 @@ const out = `# PACCHETTO MODULO (fonte HTML) — corso ${corso} · ${mod.toUpper
 - Modulo successivo (per l'aggancio finale): ${titoloNext}
 - Output: SOLO \`produzione/${corso}/_bozze/${mod}.json\` (formato in fondo). NON toccare altri file.
 
-## Come usare la FONTE (leggi bene)
+${argomenti ? `## Struttura del modulo (vincolante — OGNI blocco va sviluppato, coi conteggi slide indicati, nell'ordine)
+Ogni riga è una sezione della fonte con le slide che le spettano: copri TUTTE le sezioni fino all'ultima,
+rispettando i conteggi. Non dilatare le prime sezioni a spese delle ultime.
+${argomenti}
+
+` : ""}## Come usare la FONTE (leggi bene)
 La fonte qui sotto è il contenuto didattico ORIGINALE del cliente, già organizzato in slide brevi.
 È il tuo **backbone**: rispettane l'ordine e i concetti. MA è **breve** (pensata per la lettura):
 il tuo compito è **ESPANDERLA fino al budget** trasformandola in narrazione parlata ricca.

@@ -114,9 +114,14 @@ def tabella_da(x):
 GRAFICI = ("barre", "ciambella", "linee", "matrice", "gantt", "piramide", "ciclo", "organigramma")
 ripieghi = 0
 n_tot = 0
+# --moduli m01,m07: converte SOLO quei moduli. Il convertitore riscrive i file sul posto e non è
+# idempotente: riconvertire un modulo già convertito ne altererebbe apertura e agenda.
+MODULI = sys.argv[sys.argv.index("--moduli") + 1].split(",") if "--moduli" in sys.argv else None
 for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
-    dati = json.load(open(f, encoding="utf-8"))
     mod = re.search(r"-(m\d\d)-", f).group(1)
+    if MODULI and mod not in MODULI:
+        continue
+    dati = json.load(open(f, encoding="utf-8"))
     out = []
     for i, x in enumerate(dati):
         l = x.get("layout", "punti")

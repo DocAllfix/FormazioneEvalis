@@ -42,6 +42,8 @@ REGOLE
 4. Il titolo dice la cosa, non la annuncia ("Le quattro condizioni della tassonomia",
    non "Parliamo della tassonomia").
 5. I contenuti devono derivare dal parlato di QUELLA slide, mai da altre.
+   La PRIMA slide del modulo è sempre "apertura" (punti = 4-5 voci dell'agenda del modulo);
+   l'ULTIMA è sempre "chiusura" (punti = 3-4 concetti da portare via, {h,d}).
 6. GRAFICI E DIAGRAMMI: usali SOLO se il parlato di quella slide cita quei valori o quella
    struttura; ogni numero del grafico deve essere detto nel parlato (anche in lettere) e, se
    esiste il MATERIALE VISIVO DEL COMMITTENTE, deve coincidere con quello: mai stimare, mai
@@ -94,6 +96,9 @@ def materiale_visivo(corso: str, mod: str) -> str:
 async def genera_modulo(mdl, corso: str, mod: str, slides: list[dict]) -> list[dict]:
     out: list[dict] = []
     materiale = materiale_visivo(corso, mod)
+    tutte = sorted(s["id"] for s in json.loads((PROD / corso / "copioni.json").read_text(encoding="utf-8"))["slides"]
+                   if s["id"].split("_")[1] == mod)
+    primo, ultimo = tutte[0], tutte[-1]
     for i in range(0, len(slides), BLOCCO):
         blocco = slides[i:i + BLOCCO]
         fatti = ", ".join(s["layout"] for s in out[-6:]) or "nessuna"
@@ -112,6 +117,9 @@ async def genera_modulo(mdl, corso: str, mod: str, slides: list[dict]) -> list[d
         for s, d in zip(blocco, dati):
             d["id"] = s["id"]                       # l'id è quello canonico, mai inventato
             if d.get("layout") not in LAYOUT: d["layout"] = "punti"
+            # apertura in testa e chiusura (riepilogo + prossimo modulo) in coda a OGNI modulo
+            if s["id"] == primo: d["layout"] = "apertura"
+            elif s["id"] == ultimo: d["layout"] = "chiusura"
             out.append(d)
         print(f"  [{mod}] {len(out)}/{len(slides)} slide")
     return out
