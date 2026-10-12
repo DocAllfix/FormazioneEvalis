@@ -5,7 +5,7 @@
 //
 // Uso: node scripts/produzione/merge-bozza.mjs <corso> <mNN>
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, renameSync, writeFileSync } from "node:fs";
 
 const corso = process.argv[2];
 const mod = process.argv[3];
@@ -41,7 +41,9 @@ if (!bozza.checkpoint?.banca?.length) { console.error("checkpoint mancante nella
 c.slides.push(...bozza.slides);
 c.checkpoint = c.checkpoint || {};
 c.checkpoint[mod] = bozza.checkpoint;
-writeFileSync(path, JSON.stringify(c, null, 2) + "\n", "utf8");
+// atomico (tmp + rename): gli orchestratori in corso leggono copioni.json e non devono mai trovarlo a metà
+writeFileSync(`${path}.tmp`, JSON.stringify(c, null, 2) + "\n", "utf8");
+renameSync(`${path}.tmp`, path);
 const parole = bozza.slides.reduce((a, s) => a + s.testo.split(/\s+/).filter(Boolean).length, 0);
 console.log(`merge ok: ${mod} → ${attesi} slide, ${parole} parole (~${(parole / 2.35 / 60).toFixed(1)} min), banca ${bozza.checkpoint.banca.length} domande`);
 console.log("ORA: node scripts/produzione/lint-copioni.mjs " + corso + " --modulo " + mod);
