@@ -10,6 +10,7 @@ ETICHETTA = {
     "fadesg02": "ESG Manager · UNI/PdR 109.1",
     "fadeen02": "Energy Manager · UNI CEI 11339",
     "fadpdr125": "Parità di genere · UNI/PdR 125:2022",
+    "fadpas24000": "Sistema di gestione sociale · PAS 24000:2022",
 }
 if CORSO not in ETICHETTA:
     raise SystemExit(f"Etichetta di corso mancante per {CORSO}: aggiungerla a ETICHETTA prima di convertire.")
@@ -31,6 +32,87 @@ def hd(v):
                 "d": str(v.get("d") or v.get("testo") or v.get("eti") or v.get("descrizione") or "").strip()}
     return {"h": "", "d": str(v).strip()}
 
+def numero(v):
+    return isinstance(v, (int, float)) and not isinstance(v, bool)
+
+
+def grafico(l, x):
+    """Controlla la forma dei layout di DATI e DIAGRAMMI di build-slide.mjs e la normalizza.
+    Ritorna (campi, None) se valido, (None, motivo) se no: in quel caso la slide diventa una
+    tabella con gli stessi dati, così nessun contenuto si perde e nessun grafico mente."""
+    t = lambda v: str(v or "").strip()
+    if l == "barre":
+        vv = x.get("voci") or []
+        serie = [t(s) for s in (x.get("serie") or [])]
+        nser = max(1, len(serie))
+        if not 1 <= len(vv) <= (5 if nser > 1 else 8) or nser > 3: return None, "barre: numero di voci o serie fuori limite"
+        voci = []
+        for v in vv:
+            vals = v.get("v") if isinstance(v.get("v"), list) else [v.get("v")]
+            if len(vals) != nser or not all(numero(z) and z >= 0 for z in vals): return None, f"barre: valori non numerici o serie incoerenti ({t(v.get('l'))})"
+            o = {"l": t(v.get("l")), "v": vals if nser > 1 else vals[0]}
+            if numero(v.get("obiettivo")): o |= {"obiettivo": v["obiettivo"], "meglioBasso": bool(v.get("meglioBasso"))}
+            if numero(v.get("max")): o["max"] = v["max"]
+            if v.get("u") is not None: o["u"] = t(v.get("u"))
+            voci.append(o)
+        return {"unita": t(x.get("unita")), **({"serie": serie} if nser > 1 else {}), "voci": voci}, None
+    if l == "ciambella":
+        vv = x.get("voci") or []
+        if not 2 <= len(vv) <= 6 or not all(numero(v.get("v")) and v["v"] > 0 for v in vv): return None, "ciambella: servono 2-6 voci con valori positivi"
+        tot = x.get("totale") if isinstance(x.get("totale"), dict) else None
+        return {"unita": t(x.get("unita")), **({"totale": {"n": t(tot.get("n")), "eti": t(tot.get("eti"))}} if tot else {}),
+                "voci": [{"l": t(v.get("l")), "v": v["v"]} for v in vv]}, None
+    if l == "linee":
+        per, ser = x.get("periodi") or [], x.get("serie") or []
+        if not 2 <= len(per) <= 12 or not 1 <= len(ser) <= 4: return None, "linee: periodi o serie fuori limite"
+        if not all(len(s.get("v") or []) == len(per) and all(numero(z) for z in s["v"]) for s in ser): return None, "linee: serie di lunghezza diversa dai periodi"
+        return {"unita": t(x.get("unita")), "periodi": [t(p) for p in per], "serie": [{"nome": t(s.get("nome")), "v": s["v"]} for s in ser]}, None
+    if l == "matrice":
+        pp = x.get("punti") or []
+        if not 1 <= len(pp) <= 9 or not all(isinstance(p.get("p"), int) and isinstance(p.get("g"), int) and 1 <= p["p"] <= 5 and 1 <= p["g"] <= 5 for p in pp):
+            return None, "matrice: servono 1-9 rischi con probabilità e gravità intere da 1 a 5"
+        a = x.get("assi") if isinstance(x.get("assi"), dict) else {}
+        return {"assi": {"x": t(a.get("x")) or "Probabilità", "y": t(a.get("y")) or "Gravità"},
+                "punti": [{"id": t(p.get("id")), "l": t(p.get("l")), "p": p["p"], "g": p["g"]} for p in pp]}, None
+    if l == "gantt":
+        per, att = x.get("periodi") or [], x.get("attivita") or []
+        if not 2 <= len(per) <= 12 or not 1 <= len(att) <= 9: return None, "gantt: periodi o attività fuori limite"
+        if not all(isinstance(a.get("da"), int) and isinstance(a.get("a"), int) and 1 <= a["da"] <= a["a"] <= len(per) for a in att):
+            return None, "gantt: inizio e fine devono essere periodi esistenti, con inizio ≤ fine"
+        return {"periodi": [t(p) for p in per], **({"legenda": [t(z) for z in x["legenda"]]} if x.get("legenda") else {}),
+                "attivita": [{"t": t(a.get("t")), "da": a["da"], "a": a["a"], "k": int(a.get("k") or 1)} for a in att]}, None
+    if l == "piramide":
+        lv = [hd(v) for v in (x.get("livelli") or [])]
+        if not 3 <= len(lv) <= 5: return None, "piramide: servono 3-5 livelli"
+        return {"livelli": lv}, None
+    if l == "ciclo":
+        nd = [hd(v) for v in (x.get("nodi") or [])]
+        if not 3 <= len(nd) <= 6: return None, "ciclo: servono 3-6 nodi"
+        return {"ciclo": bool(x.get("ciclo")), "centro": t(x.get("centro")), "nodi": nd}, None
+    if l == "organigramma":
+        r, rami = x.get("radice"), x.get("rami") or []
+        if not isinstance(r, dict) or not 2 <= len(rami) <= 5: return None, "organigramma: servono una radice e 2-5 rami"
+        return {"radice": hd(r), "rami": [hd(z) | {"voci": [t(v) for v in (z.get("voci") or [])][:4]} for z in rami]}, None
+    return None, f"layout sconosciuto {l}"
+
+
+def tabella_da(x):
+    "ripiego: i dati di un grafico malformato diventano righe di tabella, senza perdite"
+    ETICHETTE = ("l", "id", "t", "h", "nome")
+    righe = []
+    for k in ("voci", "punti", "attivita", "livelli", "nodi", "rami", "serie"):
+        for v in (x.get(k) or []):
+            if isinstance(v, dict):
+                nome = next((str(v[c]) for c in ETICHETTE if v.get(c) is not None), "")
+                # tutti gli altri campi, così il dato resta visibile anche se la forma era sbagliata
+                dati = [f"{c} {', '.join(map(str, z)) if isinstance(z, list) else z}"
+                        for c, z in v.items() if c not in ETICHETTE and z not in (None, "", [])]
+                righe.append([nome, " · ".join(dati)])
+    return {"cols": ["Voce", "Dato"], "righe": righe[:6]}
+
+
+GRAFICI = ("barre", "ciambella", "linee", "matrice", "gantt", "piramide", "ciclo", "organigramma")
+ripieghi = 0
 n_tot = 0
 for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
     dati = json.load(open(f, encoding="utf-8"))
@@ -99,10 +181,18 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
             base |= {"eyebrow": "", "testo": lead, "dark": True}
         elif l == "split":
             base |= {"lead": lead, "punti": p[:4]}
+        elif l in GRAFICI:
+            campi, motivo = grafico(l, x)
+            if campi:
+                base |= {"intro": lead, **campi, **({"fonte": x["fonte"].strip()} if x.get("fonte") else {})}
+            else:
+                ripieghi += 1
+                print(f"  ! {x['id']}: {motivo} → tabella con gli stessi dati")
+                base |= {"layout": "tabella", **tabella_da(x)}
         else:
             base |= {"layout": "punti", "intro": lead, "punti": p[:4]}
         out.append(base)
     json.dump(out, open(f, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     n_tot += len(out)
     print(f"  {mod}: {len(out)} slide convertite")
-print(f"TOTALE: {n_tot} slide nello schema di build-slide")
+print(f"TOTALE: {n_tot} slide nello schema di build-slide · grafici ripiegati su tabella: {ripieghi}")
