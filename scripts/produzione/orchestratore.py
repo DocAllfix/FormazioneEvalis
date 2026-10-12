@@ -305,6 +305,17 @@ NOTA_CANALE = (
 )
 
 
+def piano_slide(pacchetto: str, n_slide: int) -> list[str]:
+    """Sezione assegnata a OGNI slide, dalla ripartizione vincolante dello skeleton ("— N slide").
+    Lista vuota se il pacchetto non ce l'ha o se i conteggi non tornano col numero di slide.
+    Serve a dire a ciascun blocco QUALI sezioni deve coprire: senza, il modello scivola in avanti
+    sulle prime sezioni e schiaccia le ultime (fadpas24000, 13/10/2026)."""
+    righe = re.findall(r"^- (.*?) — (\d+) slide\s*$", blocco_skeleton(pacchetto), re.M)
+    piano = [re.sub(r"^(Benvenuto|Bentornato)[^.]*\. ", "", t).split(": ")[0].strip()
+             for t, k in righe for _ in range(int(k))]
+    return piano if len(piano) == n_slide else []
+
+
 async def genera_blocchi(mdl: Modello, corso: str, mod: str, pacchetto: str,
                          n_slide: int) -> list[dict]:
     """Blocchi sequenziali (~10 slide): ogni blocco vede le slide già scritte."""
@@ -312,20 +323,39 @@ async def genera_blocchi(mdl: Modello, corso: str, mod: str, pacchetto: str,
     inizio = 1
     blocco_n = 0
     n_blocchi = (n_slide + BLOCCO_SLIDE - 1) // BLOCCO_SLIDE
+    piano = piano_slide(pacchetto, n_slide)
+    # lunghezza per slide dal BUDGET del modulo (+3/+8%: il modello scrive ~5% meno di quanto chiesto).
+    # Prima era fissa a 660-690, tarata sui corsi IA (budget ~629/slide): su budget diversi spingeva
+    # i moduli oltre il tetto E6.
+    m_bud = re.search(r"~(\d+) parole totali", pacchetto)
+    per_slide = int(m_bud.group(1)) / n_slide if m_bud else 640
+    lo, hi = round(per_slide * 1.03), round(per_slide * 1.08)
     while inizio <= n_slide:
         fine = min(inizio + BLOCCO_SLIDE - 1, n_slide)
         blocco_n += 1
         ids = [f"{corso}_{mod}_s{i:03d}" for i in range(inizio, fine + 1)]
         precedenti = "\n\n".join(
             f"### {s['id']} — {s['titolo']}\n{s['testo']}" for s in slides) or "(nessuna: sei all'inizio)"
+        piano_blocco = ""
+        if piano:
+            gruppi: list[list] = []  # slide consecutive della stessa sezione
+            for i in range(inizio, fine + 1):
+                if gruppi and gruppi[-1][2] == piano[i - 1]:
+                    gruppi[-1][1] = i
+                else:
+                    gruppi.append([i, i, piano[i - 1]])
+            piano_blocco = ("PIANO VINCOLANTE DI QUESTO BLOCCO (dalla struttura del modulo: rispettalo slide per "
+                            "slide, non anticipare e non rimandare sezioni):\n" + "\n".join(
+                f"- s{a:03d}{'' if a == b else f'-s{b:03d}'}: {sez}" for a, b, sez in gruppi) + "\n\n")
         istruzione = (
             f"{NOTA_CANALE}\n\n"
             f"Scrivi ORA il blocco {blocco_n} di {n_blocchi}: le slide da {ids[0]} a {ids[-1]} "
             f"(tutte, nessuna esclusa), seguendo lo skeleton e riprendendo il filo dalle slide "
             f"già scritte, senza ripeterne i contenuti.\n\n"
+            f"{piano_blocco}"
             f"LUNGHEZZA (ritaratura 2026-07-25: i draft dei corsi IA uscivano CORTI del cinque-otto "
             f"per cento e il gate E6 li respinge, portando il corso sotto il monte-ore legale): "
-            f"scrivi PIENO — ogni slide tra 660 e 690 parole; una slide sotto 640 è un errore. "
+            f"scrivi PIENO — ogni slide tra {lo} e {hi} parole; una slide sotto {lo - 20} è un errore. "
             f"Punta al pieno. Riempi con sostanza (esempi sviluppati, casi concreti, "
             f"passaggi spiegati fino in fondo), mai con giri di parole.\n\n"
             f"SLIDE GIÀ SCRITTE DEI BLOCCHI PRECEDENTI (per continuità e anti-ripetizione):\n{precedenti}"
