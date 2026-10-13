@@ -51,6 +51,14 @@ async function slidesOf(courseId: string) {
 
 async function checkSlide(browser: Browser, s: { id: string; hasClip: boolean }, file: string) {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  // consenso cookie già dato (stesso valore dei test e2e): senza, il banner copriva il fondo di
+  // ogni slide nei fotogrammi del collaudo
+  await ctx.addInitScript(() => {
+    try {
+      localStorage.setItem("evalis-consenso-cookie",
+        JSON.stringify({ necessari: true, statistiche: false, quando: new Date().toISOString(), versione: 2 }));
+    } catch { /* storage non disponibile */ }
+  });
   const page = await ctx.newPage();
   const errors: string[] = [];
   page.on("console", (m) => { if (m.type() === "error") errors.push(m.text().slice(0, 120)); });
