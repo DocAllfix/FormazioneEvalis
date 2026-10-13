@@ -41,6 +41,10 @@ if (!bozza.checkpoint?.banca?.length) { console.error("checkpoint mancante nella
 c.slides.push(...bozza.slides);
 c.checkpoint = c.checkpoint || {};
 c.checkpoint[mod] = bozza.checkpoint;
+// ordine canonico per ID: make-manifest costruisce i moduli nell'ordine in cui le slide compaiono,
+// e i moduli uniti fuori sequenza (fadpas24000, 13/10/2026) davano un corso che partiva dal modulo 9
+c.slides.sort((a, b) => a.id.localeCompare(b.id));
+c.checkpoint = Object.fromEntries(Object.entries(c.checkpoint).sort(([a], [b]) => a.localeCompare(b)));
 // atomico (tmp + rename): gli orchestratori in corso leggono copioni.json e non devono mai trovarlo a metà
 writeFileSync(`${path}.tmp`, JSON.stringify(c, null, 2) + "\n", "utf8");
 renameSync(`${path}.tmp`, path);
