@@ -55,7 +55,7 @@ def istanze():
 def offerta_libera(usate):
     o = subprocess.run(["vastai", "search", "offers",
         "gpu_name=RTX_4090 num_gpus=1 verified=true reliability>=0.995 cpu_cores_effective>=14 "
-        "pcie_bw>=12 inet_down>=800 disk_space>=80 rentable=true dph<=0.60", "-o", "dph", "--raw"],
+        f"pcie_bw>=12 inet_down>=800 disk_space>=80 rentable=true dph<={os.environ.get('GUARDIA_MAX_PREZZO', '0.60')}", "-o", "dph", "--raw"],
         capture_output=True, text=True, timeout=240)
     try:
         d = json.loads(o.stdout)
@@ -90,6 +90,10 @@ def crea(shard, usate):
 mappa = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
 ultimo_progresso = time.time()
 prec = -1
+# un pod che resta in caricamento troppo a lungo (immagine che non scende, errore docker) non parte più:
+# lo si sostituisce invece di aspettarlo per sempre
+CARICAMENTO_MAX_MIN = int(os.environ.get("GUARDIA_CARICAMENTO_MAX", "20"))
+in_caricamento = {}
 log(f"guardia avviata su {len(mappa)} pod, shard di {TOTALE_SHARD}")
 
 while True:
@@ -111,7 +115,10 @@ while True:
                 if st == "running":
                     vivi += 1; continue
                 if st in ("loading", "created", None) and i is not None:
-                    continue                      # sta ancora avviandosi: si aspetta
+                    da = in_caricamento.setdefault(str(iid), time.time())
+                    if time.time() - da < CARICAMENTO_MAX_MIN * 60:
+                        continue                  # sta ancora avviandosi: si aspetta
+                    st = f"{st} da oltre {CARICAMENTO_MAX_MIN} min"
                 log(f"shard {shard}: istanza {iid} in stato '{st}' -> sostituzione")
                 if i is not None:
                     subprocess.run(["vastai", "destroy", "instance", str(iid)],
