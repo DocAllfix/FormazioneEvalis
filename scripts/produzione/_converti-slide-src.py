@@ -1,6 +1,6 @@
 # Rimappa i contenuti slide generati nello schema ESATTO atteso da build-slide.mjs
 # (verificato sui corsi già in produzione: fadai02 e 19011).
-import json, glob, sys, re
+import json, glob, os, sys, re
 sys.stdout.reconfigure(encoding="utf-8")
 
 CORSO = sys.argv[1] if len(sys.argv) > 1 else "fadesg02"
@@ -11,6 +11,7 @@ ETICHETTA = {
     "fadeen02": "Energy Manager · UNI CEI 11339",
     "fadpdr125": "Parità di genere · UNI/PdR 125:2022",
     "fadpas24000": "Sistema di gestione sociale · PAS 24000:2022",
+    "fadcfp01": "Carbon Footprint · ISO 14064-1 · ISO 14067",
 }
 if CORSO not in ETICHETTA:
     raise SystemExit(f"Etichetta di corso mancante per {CORSO}: aggiungerla a ETICHETTA prima di convertire.")
@@ -31,6 +32,12 @@ def hd(v):
         return {"h": str(v.get("h") or v.get("titolo") or v.get("n") or "").strip(),
                 "d": str(v.get("d") or v.get("testo") or v.get("eti") or v.get("descrizione") or "").strip()}
     return {"h": "", "d": str(v).strip()}
+
+def cifra_it(v):
+    "\"2257.8\" (punto con 1-2 decimali = decimale all'inglese del modello) → \"2.257,8\"; il resto invariato"
+    m = re.match(r"^(-?\d+)\.(\d{1,2})$", str(v).strip())
+    return f"{int(m.group(1)):,}".replace(",", ".") + "," + m.group(2) if m else str(v).strip()
+
 
 def numero(v):
     return isinstance(v, (int, float)) and not isinstance(v, bool)
@@ -60,7 +67,7 @@ def grafico(l, x):
         vv = x.get("voci") or []
         if not 2 <= len(vv) <= 6 or not all(numero(v.get("v")) and v["v"] > 0 for v in vv): return None, "ciambella: servono 2-6 voci con valori positivi"
         tot = x.get("totale") if isinstance(x.get("totale"), dict) else None
-        return {"unita": t(x.get("unita")), **({"totale": {"n": t(tot.get("n")), "eti": t(tot.get("eti"))}} if tot else {}),
+        return {"unita": t(x.get("unita")), **({"totale": {"n": cifra_it(t(tot.get("n"))), "eti": t(tot.get("eti"))}} if tot else {}),
                 "voci": [{"l": t(v.get("l")), "v": v["v"]} for v in vv]}, None
     if l == "linee":
         per, ser = x.get("periodi") or [], x.get("serie") or []
@@ -113,6 +120,10 @@ def tabella_da(x):
 
 GRAFICI = ("barre", "ciambella", "linee", "matrice", "gantt", "piramide", "ciclo", "organigramma")
 ripieghi = 0
+# calcoli svolti e calcolatori interattivi: i numeri arrivano dalla fonte del committente
+# (_fonte/calcoli.json, scritto dall'estrattore), per numero di schermata. Mai dal modello.
+CALCOLI = json.load(open(f"produzione/{CORSO}/_fonte/calcoli.json", encoding="utf-8")) if os.path.exists(f"produzione/{CORSO}/_fonte/calcoli.json") else {}
+usate = set()
 # Limiti degli elenchi: alzati il 13/10/2026 (fadpas24000). A 4 tagliavano le enumerazioni contate dal
 # parlato (sei definizioni, sette temi, dieci punti) e il giudice bocciava la slide; le altezze restano
 # sorvegliate dal gate d'impaginazione e dal controllo fine anti-taglio.
@@ -137,6 +148,8 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
                      "sottotitolo": lead, "agenda": [v["h"] or v["d"] for v in p][:5] or
                      [s.get("titolo","") for s in dati[1:6]]}
         elif l == "chiusura":
+            # una chiusura senza punti mostra solo il titolo: va rigenerata, non lasciata passare
+            if not p: raise SystemExit(f"{x['id']}: chiusura senza punti — rigenerare la slide (gen-slide-src)")
             base |= {"modNum": mod[1:], "punti": p[:8],
                      # build-slide vuole {modulo, titolo}: con una stringa la slide mostrava
                      # "Prossimo → Modulo —" vuoto (ESG ed Energy, scoperto il 05/10/2026).
@@ -161,7 +174,7 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
             out_n = []
             for j, v in enumerate(nn[:5], 1):
                 if isinstance(v, dict):
-                    out_n.append({"n": str(v.get("n") or j), "h": (v.get("h") or v.get("eti") or "").strip(),
+                    out_n.append({"n": cifra_it(v.get("n") or j), "h": (v.get("h") or v.get("eti") or "").strip(),
                                   "d": (v.get("d") or v.get("eti") or "").strip()})
             if not out_n: out_n = [{"n": str(j), "h": v["h"], "d": v["d"]} for j, v in enumerate(p[:5], 1)]
             # una sola frase dal generatore = solo titolo: con h == d la slide la mostrerebbe due
@@ -189,6 +202,19 @@ for f in sorted(glob.glob(f"produzione/{CORSO}/_slide-src/*.json")):
             base |= {"eyebrow": "", "testo": lead, "dark": True}
         elif l == "split":
             base |= {"lead": lead, "punti": p[:6]}
+        elif l in ("calcolo", "simulatore"):
+            c = CALCOLI.get(mod, {}).get(str(x.get("schermata")))
+            if c and c["tipo"] == l and (mod, x.get("schermata")) not in usate:
+                usate.add((mod, x.get("schermata")))
+                base |= {"intro": lead, "unita": c.get("unita"), "righe": c["righe"],
+                         **({"etichette": c["etichette"], "dec": c.get("dec"), "totale": c["totale"], "_atteso": c["atteso"]} if l == "calcolo" else {}),
+                         # nota a piè di tabella solo se breve: l'altezza della slide resta sotto il limite
+                         **({"piede": c["piede"]} if c.get("piede") and len(c["piede"]) <= 170 else {}),
+                         **({"fonte": c["fonte"]} if c.get("fonte") else {})}
+            else:
+                ripieghi += 1
+                print(f"  ! {x['id']}: {l} senza schermata valida ({x.get('schermata')}) → punti")
+                base |= {"layout": "punti", "intro": lead, "punti": p[:8]}
         elif l in GRAFICI:
             campi, motivo = grafico(l, x)
             if campi:

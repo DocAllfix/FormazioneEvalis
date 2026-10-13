@@ -1,0 +1,865 @@
+[
+ {
+  "id": "fadcfp01_m07_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 7",
+  "titolo": "Dal calcolo al quadro di sintesi",
+  "corsoLabel": "Carbon Footprint · ISO 14064-1 · ISO 14067",
+  "eyebrow": "Modulo 7",
+  "sottotitolo": "Dopo il lavoro voce per voce, l’inventario va ricomposto in una struttura unica: tracciabile, leggibile e difendibile. Qui conta meno produrre righe isolate e molto di più farle tornare tra loro.",
+  "agenda": [
+   "Dal foglio all’inventario",
+   "Tracciabilità completa",
+   "Quattro piani di ordine",
+   "Confini del totale",
+   "Errori tipici di chiusura"
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s002",
+  "layout": "calcolo",
+  "kicker": "Consolidamento",
+  "titolo": "I tre scope chiudono l’inventario 2025",
+  "intro": "Ventotto righe diventano inventario quando restano in chilogrammi fino all’ultimo, si chiudono in tre blocchi coerenti e arrivano a un totale finale che può essere letto, discusso e verificato.",
+  "unita": "t CO2e",
+  "righe": [
+   {
+    "l": "Scope 1 – emissioni dirette",
+    "n": "6 voci: gas naturale, gasolio, benzina, gas refrigeranti (unità 4)",
+    "a": 2257787,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   },
+   {
+    "l": "Scope 2 – elettricità acquistata, location-based",
+    "n": "3.200.000 kWh × 0,235 kg CO2e/kWh (unità 5)",
+    "a": 752000,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   },
+   {
+    "l": "Scope 3 – catena del valore",
+    "n": "21 voci, categorie 1–7, 9 e 12; esclusa la fase d’uso (unità 6)",
+    "a": 18682694,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   }
+  ],
+  "etichette": {
+   "r": "Emissioni",
+   "a": "Emissioni (dal foglio)",
+   "ef": "Conversione"
+  },
+  "dec": 1,
+  "totale": "Totale inventario (Scope 2 location-based)",
+  "_atteso": 21692.5,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m07_s003",
+  "layout": "confronto",
+  "kicker": "Quadratura",
+  "titolo": "Nel totale una vista, fuori le altre",
+  "intro": "La quadratura torna in due modi: per scope e per categorie ISO. Inoltre, la categoria dei prodotti utilizzati pesa il 76,4% del totale, segnalando che il baricentro è soprattutto nella filiera.",
+  "a": {
+   "h": "Entra nel totale dichiarato",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Scope 1: emissioni dirette"
+    },
+    {
+     "d": "Scope 2 location based"
+    },
+    {
+     "d": "Scope 3: catena del valore"
+    }
+   ]
+  },
+  "b": {
+   "h": "Va esposto separatamente",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Scope 2 market based: vista aggiuntiva"
+    },
+    {
+     "d": "Fase d’uso: informativa fuori perimetro"
+    },
+    {
+     "d": "Mai sommare le due viste elettriche"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m07_s004",
+  "layout": "barre",
+  "kicker": "Hotspot",
+  "titolo": "Le otto voci che guidano l’inventario",
+  "intro": "Ordinare le sorgenti dalla più grande alla più piccola cambia la lettura del dato. Per Terrafelix le prime otto voci valgono il 92,8% del totale: il resto completa, ma non orienta le priorità.",
+  "unita": "t CO2e",
+  "voci": [
+   {
+    "l": "Semola di grano duro",
+    "v": 14420
+   },
+   {
+    "l": "Gas naturale (combustione)",
+    "v": 2100
+   },
+   {
+    "l": "Astucci e cartoni",
+    "v": 810
+   },
+   {
+    "l": "Elettricità (location-based)",
+    "v": 752
+   },
+   {
+    "l": "Distribuzione Italia su gomma",
+    "v": 630
+   },
+   {
+    "l": "Distribuzione Europa su gomma",
+    "v": 600
+   },
+   {
+    "l": "Film plastico",
+    "v": 448
+   },
+   {
+    "l": "Trasporto della semola",
+    "v": 370.8
+   }
+  ],
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m07_s005",
+  "layout": "numeri",
+  "kicker": "Sintesi manageriale",
+  "titolo": "Quattro numeri da portare in riunione",
+  "intro": "Per una direzione servono pochi messaggi memorabili: dimensione del tema, peso della filiera, hotspot dominante e quota sotto controllo operativo diretto. Se questi quattro passano, la discussione parte dal punto giusto.",
+  "numeri": [
+   {
+    "n": "21.692,5 t",
+    "h": "Totale inventario 2025",
+    "d": ""
+   },
+   {
+    "n": "86,1%",
+    "h": "Scope 3 sul totale: 18.682,7 t",
+    "d": ""
+   },
+   {
+    "n": "66,5%",
+    "h": "Semola sul totale: 14.420 t",
+    "d": ""
+   },
+   {
+    "n": "3.009,8 t",
+    "h": "Scope 1+2: 13,9% del totale",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s006",
+  "layout": "confronto",
+  "kicker": "Indicatori",
+  "titolo": "Assoluto e intensità rispondono a domande diverse",
+  "intro": "Le tonnellate assolute misurano il peso complessivo dell’azienda sul clima. L’intensità serve invece a confrontare anni, prodotti o interlocutori diversi, ma solo se numeratore e denominatore sono dichiarati con precisione.",
+  "a": {
+   "h": "Dato assoluto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Misura le tonnellate annue complessive"
+    },
+    {
+     "d": "Serve al bilancio climatico reale"
+    },
+    {
+     "d": "Resta essenziale anche se l’efficienza migliora"
+    },
+    {
+     "d": "Non va sostituito dall’intensità"
+    }
+   ]
+  },
+  "b": {
+   "h": "Indicatore di intensità",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Emissioni per unità di riferimento"
+    },
+    {
+     "d": "Confronta anni con produzioni diverse"
+    },
+    {
+     "d": "Dipende dal denominatore scelto"
+    },
+    {
+     "d": "Richiede numeratore chiaramente definito"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m07_s007",
+  "layout": "calcolo",
+  "kicker": "Efficienza operativa",
+  "titolo": "Scope 1 più 2 per tonnellata di pasta",
+  "intro": "L’indicatore più utile per chi gestisce produzione, manutenzione ed energia mette in rapporto le emissioni dirette e l’elettricità acquistata con la produzione fisica dell’anno.",
+  "unita": "kg CO2e/t",
+  "righe": [
+   {
+    "l": "Scope 1",
+    "a": 2257.8,
+    "au": "t CO2e",
+    "ef": 1000,
+    "efu": "kg/t",
+    "d": 20000,
+    "du": "t di pasta"
+   },
+   {
+    "l": "Scope 2 (location-based)",
+    "a": 752,
+    "au": "t CO2e",
+    "ef": 1000,
+    "efu": "kg/t",
+    "d": 20000,
+    "du": "t di pasta"
+   }
+  ],
+  "etichette": {
+   "r": "Intensità",
+   "a": "Emissioni",
+   "ef": "Conversione",
+   "d": "Produzione"
+  },
+  "dec": 2,
+  "totale": "Scope 1+2 per tonnellata di pasta",
+  "_atteso": 150.49,
+  "piede": "Arrotondato: 150,5 kg CO2e per tonnellata di pasta, cioè circa 0,15 kg CO2e per chilo.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m07_s008",
+  "layout": "definizione",
+  "kicker": "Affidabilità",
+  "titolo": "L’incertezza è un margine dichiarato",
+  "eyebrow": "",
+  "definizione": "Misura il dubbio ragionevole che resta anche quando il conto è corretto. Si esprime come più o meno, si valuta prima in modo qualitativo e si approfondisce sulle sorgenti più rilevanti.",
+  "punti": []
+ },
+ {
+  "id": "fadcfp01_m07_s009",
+  "layout": "calcolo",
+  "kicker": "Esempio",
+  "titolo": "Il gas naturale come caso a bassa incertezza",
+  "intro": "Un dato di attività misurato bene e un fattore standard affidabile producono una voce relativamente solida. La regola semplificata combina i due margini e restituisce un’incertezza leggibile anche per non specialisti.",
+  "unita": " ",
+  "righe": [
+   {
+    "l": "Dato di attività: 1.050.000 Sm³",
+    "n": "contatore fiscale e bollette: incertezza bassa, ± 2%",
+    "a": 2,
+    "au": "%",
+    "ef": 2,
+    "efu": "%"
+   },
+   {
+    "l": "Fattore di emissione: 2,0 kg CO2e/Sm³",
+    "n": "combustibile standard: incertezza bassa, ± 5%",
+    "a": 5,
+    "au": "%",
+    "ef": 5,
+    "efu": "%"
+   }
+  ],
+  "etichette": {
+   "r": "Quadrato",
+   "a": "Incertezza",
+   "ef": "Incertezza (ripetuta)"
+  },
+  "dec": null,
+  "totale": "Somma dei quadrati",
+  "_atteso": 29,
+  "piede": "Radice quadrata di 29 = 5,4. Incertezza della voce: ± 5,4%, cioè 2.100 t CO2e ± 113 t (da 1.987 a 2.213 t).",
+  "fonte": "Caso studio Pastificio Terrafelix – valori di incertezza illustrativi (modello didattico)"
+ },
+ {
+  "id": "fadcfp01_m07_s010",
+  "layout": "calcolo",
+  "kicker": "Incertezza",
+  "titolo": "La semola concentra l’incertezza decisiva",
+  "intro": "La quantità acquistata è ben tracciata, ma il fattore emissivo resta generico. Quando una componente è molto più incerta dell’altra, è quella a guidare quasi tutto il margine della voce.",
+  "unita": " ",
+  "righe": [
+   {
+    "l": "Dato di attività: 20.600.000 kg",
+    "n": "fatture del molino con i pesi: incertezza bassa, ± 2%",
+    "a": 2,
+    "au": "%",
+    "ef": 2,
+    "efu": "%"
+   },
+   {
+    "l": "Fattore di emissione: 0,70 kg CO2e/kg",
+    "n": "valore generico per una materia prima agricola: incertezza alta, ± 30%",
+    "a": 30,
+    "au": "%",
+    "ef": 30,
+    "efu": "%"
+   }
+  ],
+  "etichette": {
+   "r": "Quadrato",
+   "a": "Incertezza",
+   "ef": "Incertezza (ripetuta)"
+  },
+  "dec": null,
+  "totale": "Somma dei quadrati",
+  "_atteso": 904,
+  "piede": "Radice quadrata di 904 = 30,1. Incertezza della voce: ± 30,1%, cioè 14.420 t CO2e ± 4.340 t (da 10.080 a 18.760 t).",
+  "fonte": "Caso studio Pastificio Terrafelix – valori di incertezza illustrativi (modello didattico)"
+ },
+ {
+  "id": "fadcfp01_m07_s011",
+  "layout": "cards",
+  "kicker": "Qualità dei dati",
+  "titolo": "Dove il profilo è solido, dove si apre il divario",
+  "intro": "Separare qualità del dato di attività e qualità del fattore evita diagnosi superficiali. Il punto critico non è dove misuri male le quantità, ma dove usi ancora fattori poco specifici.",
+  "cards": [
+   {
+    "h": "Aree forti",
+    "d": "Gas ed elettricità 5 sul dato, 4 sul fattore"
+   },
+   {
+    "h": "Tracciabilità buona",
+    "d": "Flotta 5 e 4; refrigeranti 4 e 5"
+   },
+   {
+    "h": "Segnale chiave",
+    "d": "Semola 5 sul dato, 2 sul fattore"
+   },
+   {
+    "h": "Zone da migliorare",
+    "d": "Imballaggi 5 e 3; trasporti 3 e 3; viaggi e pendolarismo 2 e 3"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s012",
+  "layout": "calcolo",
+  "kicker": "Piano dati 2026",
+  "titolo": "Quanto vale un fattore migliore per la semola",
+  "intro": "La prova di sensibilità mostra dove conviene investire tempo e relazioni interne. Un piccolo scostamento su una voce dominante può muovere il totale più di interi gruppi spesso molto discussi.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Semola acquistata nel 2025",
+    "n": "10% del fattore generico: 0,70 × 10% = 0,07 kg CO2e/kg",
+    "a": 20600000,
+    "au": "kg",
+    "ef": 0.07,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": false,
+  "_atteso": 1442000,
+  "piede": "1.442 t CO2e sono il 6,6% del totale dell’inventario. La stessa prova sul pendolarismo sposta 8,1 t CO2e: lo 0,04%.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m07_s013",
+  "layout": "flusso",
+  "kicker": "Controlli interni",
+  "titolo": "I quattro controlli prima della chiusura",
+  "intro": "Gli errori più frequenti nascono da omissioni ordinarie, non da formule complesse. Per questo conviene ripetere sempre gli stessi quattro passaggi, nello stesso ordine, lasciando traccia delle verifiche svolte.",
+  "passi": [
+   {
+    "h": "Riconciliazione",
+    "d": "Le quantità devono tornare ai documenti originari"
+   },
+   {
+    "h": "Plausibilità",
+    "d": "Indicatori e intensità devono avere senso operativo"
+   },
+   {
+    "h": "Ricalcolo a campione",
+    "d": "Una seconda persona ricontrolla voci sensibili"
+   },
+   {
+    "h": "Confronto",
+    "d": "Ogni variazione significativa richiede una spiegazione credibile"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s014",
+  "layout": "tabella",
+  "kicker": "Checklist di chiusura",
+  "titolo": "Le domande che fermano gli errori banali",
+  "cols": [
+   "Domanda chiave",
+   "Errore evitato"
+  ],
+  "righe": [
+   [
+    "Dodici mesi completi per ogni flusso",
+    "buchi, duplicazioni, periodi a cavallo d’anno"
+   ],
+   [
+    "Stime sostituite con dati effettivi",
+    "incertezza inutile dopo il conguaglio"
+   ],
+   [
+    "Unità di misura coerenti",
+    "fattori corretti applicati alla scala sbagliata"
+   ],
+   [
+    "Fattori di anno, Paese e fonte giusti",
+    "uso di valori non ricostruibili"
+   ],
+   [
+    "Nessun doppio conteggio",
+    "stessa attività sommata in righe diverse"
+   ],
+   [
+    "Scope 2 location-based e market-based separati",
+    "totali mescolati e non leggibili"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s015",
+  "layout": "numeri",
+  "kicker": "Serie storica",
+  "titolo": "Anno base e regola di ricalcolo",
+  "intro": "Per confrontare gli anni serve un punto di partenza stabile e una soglia dichiarata. Così distingui i cambiamenti reali dell’azienda dai cambiamenti del perimetro o del metodo di misura.",
+  "numeri": [
+   {
+    "n": "2025",
+    "h": "Primo inventario completo scelto come anno base",
+    "d": ""
+   },
+   {
+    "n": "21.692,5 t",
+    "h": "Valore consolidato con Scope 2 location-based",
+    "d": ""
+   },
+   {
+    "n": "5%",
+    "h": "Soglia di significatività per ricalcoli metodologici",
+    "d": ""
+   },
+   {
+    "n": "No",
+    "h": "Ricalcolo se cambiano volumi, mix o efficienza reali",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s016",
+  "layout": "calcolo",
+  "kicker": "Anno base",
+  "titolo": "Ricalcolo sì quando cambia il metro",
+  "intro": "Se un fattore più accurato modifica in modo significativo il valore dell’anno base, il confronto storico va riallineato. Altrimenti una correzione metodologica sembrerebbe una riduzione che l’azienda non ha ottenuto.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Semola acquistata nell’anno base",
+    "n": "differenza tra i due fattori: 0,70 − 0,63 = 0,07 kg CO2e/kg (valori didattici)",
+    "a": 10000000,
+    "au": "kg",
+    "ef": 0.07,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": false,
+  "_atteso": 700000,
+  "piede": "700 t ÷ 12.000 t = 5,8%: sopra la soglia del 5%. L’anno base si ricalcola con il nuovo fattore: 12.000 − 700 = 11.300 t CO2e.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m07_s017",
+  "layout": "simulatore",
+  "kicker": "Scope 2 nel tempo",
+  "titolo": "Separare effetto attività ed effetto fattore",
+  "intro": "Il calo totale dello Scope 2 non basta: bisogna distinguere ciò che dipende dai chilowattora risparmiati da ciò che dipende dal fattore della rete. Solo così il commento resta onesto e utile alla direzione.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "kWh risparmiati rispetto all’anno base (effetto attività)",
+    "v": 160000,
+    "u": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   },
+   {
+    "l": "kWh consumati nel nuovo anno (effetto fattore: 0,235 − 0,199)",
+    "v": 3040000,
+    "u": "kWh",
+    "ef": 0.036,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "piede": "Con i valori iniziali: 37,6 t per i consumi ridotti e 109,4 t per il fattore; in tutto 147,0 t in meno, da 752 a 605,0 t CO2e.",
+  "fonte": "Caso studio Pastificio Terrafelix – scenario illustrativo; fattori: ISPRA, Rapporto 413/2025"
+ },
+ {
+  "id": "fadcfp01_m07_s018",
+  "layout": "organigramma",
+  "kicker": "Rapporto GHG",
+  "titolo": "I blocchi indispensabili del rapporto",
+  "intro": "Il rapporto GHG deve permettere a chi non ha costruito il file di capire che cosa è stato contato, con quali confini, con quali criteri e con quale affidabilità. Altrimenti anche un buon inventario resta debole.",
+  "radice": {
+   "h": "Rapporto GHG 2025",
+   "d": "Documento che rende leggibile, ricostruibile e affidabile l’inventario"
+  },
+  "rami": [
+   {
+    "h": "Identità del rapporto",
+    "d": "Organizzazione, responsabile e periodo coperto",
+    "voci": []
+   },
+   {
+    "h": "Confini",
+    "d": "Approccio di consolidamento, sedi, attività ed emissioni incluse",
+    "voci": []
+   },
+   {
+    "h": "Esclusioni e significatività",
+    "d": "Categorie non incluse nominate e motivate",
+    "voci": []
+   },
+   {
+    "h": "Risultati",
+    "d": "Dirette per gas e indirette per categoria",
+    "voci": []
+   },
+   {
+    "h": "Anno base e ricalcoli",
+    "d": "Punto di partenza dichiarato ed eventuali aggiornamenti",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s019",
+  "layout": "ciclo",
+  "kicker": "Rapporto GHG",
+  "titolo": "Le cinque sezioni del rapporto GHG",
+  "intro": "Un buon rapporto resta leggibile anche a lettura selettiva: chiarisce perimetro, metodo, risultati, affidabilità e dichiarazioni finali, lasciando agli allegati il dettaglio tecnico e le evidenze.",
+  "ciclo": false,
+  "centro": "Rapporto GHG 2025",
+  "nodi": [
+   {
+    "h": "Chi e che cosa",
+    "d": "Identità, periodo, anno base, confini"
+   },
+   {
+    "h": "Come",
+    "d": "Metodi, fattori, GWP, ipotesi, esclusioni"
+   },
+   {
+    "h": "Risultati",
+    "d": "Totale, scope, categorie ISO, voci separate"
+   },
+   {
+    "h": "Affidabilità",
+    "d": "Incertezza, controlli interni, piano dati"
+   },
+   {
+    "h": "Dichiarazioni",
+    "d": "Conformità, verifica, garanzia, allegati"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s020",
+  "layout": "evidenza",
+  "kicker": "Trasparenza",
+  "titolo": "Le quattro domande della trasparenza",
+  "eyebrow": "",
+  "testo": "Un numero corretto non basta: il rapporto diventa difendibile solo se il lettore capisce perimetro, metodo, limiti e cambiamenti, senza dover ricostruire ciò che manca.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m07_s021",
+  "layout": "confronto",
+  "kicker": "Scrittura",
+  "titolo": "Dal numero nudo al numero leggibile",
+  "intro": "Scrivere bene significa collocare ogni valore nel suo contesto: perimetro, metodo e limiti devono stare accanto al numero, soprattutto nelle voci sensibili e nelle esclusioni che generano domande.",
+  "a": {
+   "h": "Da evitare",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Circa ventunomila tonnellate"
+    },
+    {
+     "d": "Market-based nello stesso totale"
+    },
+    {
+     "d": "Fattori da fonti ufficiali"
+    },
+    {
+     "d": "Esclusioni taciute o vaghe"
+    }
+   ]
+  },
+  "b": {
+   "h": "Da scrivere",
+   "sub": "",
+   "punti": [
+    {
+     "d": "21.692,5 t CO2e, Scope 2 location-based"
+    },
+    {
+     "d": "900 t market-based riportate a parte"
+    },
+    {
+     "d": "Semola: quantità solida, fattore generico"
+    },
+    {
+     "d": "Cottura fuori totale, categorie motivate"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m07_s022",
+  "layout": "cards",
+  "kicker": "Verifica",
+  "titolo": "Le quattro parole della verifica",
+  "intro": "ISO 14064-3 mette alla prova inventario e rapporto, ma la responsabilità resta dell’azienda. La conclusione può essere a garanzia limitata o ragionevole, mai come promessa di precisione assoluta.",
+  "cards": [
+   {
+    "h": "Verifica",
+    "d": "Valutazione indipendente della dichiarazione GHG"
+   },
+   {
+    "h": "Evidenze",
+    "d": "Bollette, fatture, registri, ricalcoli, interviste"
+   },
+   {
+    "h": "Materialità",
+    "d": "Errori oltre soglia influenzano decisioni"
+   },
+   {
+    "h": "Dichiarazione",
+    "d": "Oggetto, criteri, garanzia, conclusione"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s023",
+  "layout": "timeline",
+  "kicker": "Processo",
+  "titolo": "Le cinque fasi della verifica",
+  "intro": "Una verifica ben condotta segue una sequenza stabile: chiarisce subito oggetto e profondità del lavoro, concentra i controlli dove il rischio pesa di più e chiude con una conclusione formale.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Accordo iniziale",
+    "d": "Oggetto, criteri, garanzia, materialità, tempi"
+   },
+   {
+    "t": "02",
+    "h": "Piano e rischi",
+    "d": "Dove un errore è più probabile o pesante"
+   },
+   {
+    "t": "03",
+    "h": "Raccolta evidenze",
+    "d": "Documenti, ricalcoli, formule, visita"
+   },
+   {
+    "t": "04",
+    "h": "Rilievi e risposte",
+    "d": "Chiarire, integrare, correggere"
+   },
+   {
+    "t": "05",
+    "h": "Dichiarazione finale",
+    "d": "Oggetto, criteri, garanzia, conclusione"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s024",
+  "layout": "matrice",
+  "kicker": "Preparazione",
+  "titolo": "Dove il verificatore può trovare errori",
+  "intro": "Il fascicolo delle evidenze serve a ricostruire ogni numero rapidamente, ma la preparazione migliore è guardare l’inventario con occhi esterni: probabilità di errore ed effetto sul totale indicano dove concentrare prove e chiarimenti.",
+  "assi": {
+   "x": "Probabilità di errore",
+   "y": "Effetto sul totale"
+  },
+  "punti": [
+   {
+    "id": "R1",
+    "l": "Semola: fattore generico",
+    "p": 3,
+    "g": 5
+   },
+   {
+    "id": "R2",
+    "l": "Gas naturale: mesi mancanti",
+    "p": 2,
+    "g": 3
+   },
+   {
+    "id": "R3",
+    "l": "Distribuzione a valle: distanze medie",
+    "p": 4,
+    "g": 2
+   },
+   {
+    "id": "R4",
+    "l": "Elettricità: fattore anno sbagliato",
+    "p": 2,
+    "g": 2
+   },
+   {
+    "id": "R5",
+    "l": "Gasolio flotta: fatture doppie",
+    "p": 3,
+    "g": 1
+   },
+   {
+    "id": "R6",
+    "l": "Refrigeranti: ricariche non registrate",
+    "p": 3,
+    "g": 1
+   },
+   {
+    "id": "R7",
+    "l": "Pendolarismo: questionario parziale",
+    "p": 4,
+    "g": 1
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s025",
+  "layout": "simulatore",
+  "kicker": "Materialità",
+  "titolo": "Quanto sposta il totale un errore del dieci per cento",
+  "intro": "La prova più utile, prima della chiusura, è misurare l’effetto di un errore ipotetico sulle voci chiave e confrontarlo con la soglia di rilevanza della verifica.",
+  "unita": "t CO2e",
+  "righe": [
+   {
+    "l": "Semola (14.420 t CO2e)",
+    "v": 10,
+    "u": "%",
+    "ef": 144.2,
+    "efu": "t CO2e per 1%"
+   },
+   {
+    "l": "Gas naturale (2.100 t CO2e)",
+    "v": 10,
+    "u": "%",
+    "ef": 21,
+    "efu": "t CO2e per 1%"
+   },
+   {
+    "l": "Distribuzione a valle (1.486 t CO2e)",
+    "v": 10,
+    "u": "%",
+    "ef": 14.86,
+    "efu": "t CO2e per 1%"
+   },
+   {
+    "l": "Elettricità (752 t CO2e)",
+    "v": 10,
+    "u": "%",
+    "ef": 7.52,
+    "efu": "t CO2e per 1%"
+   },
+   {
+    "l": "Pendolarismo (80,8 t CO2e)",
+    "v": 10,
+    "u": "%",
+    "ef": 0.808,
+    "efu": "t CO2e per 1%"
+   },
+   {
+    "l": "Gas refrigeranti (39,3 t CO2e)",
+    "v": 10,
+    "u": "%",
+    "ef": 0.393,
+    "efu": "t CO2e per 1%"
+   }
+  ],
+  "piede": "Con il 10% su ogni riga: semola 1.442 t, gas 210 t, distribuzione 148,6 t, elettricità 75,2 t, pendolarismo 8,1 t, refrigeranti 3,9 t.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m07_s026",
+  "layout": "split",
+  "kicker": "Sintesi operativa",
+  "titolo": "Competenze chiave ed errori da evitare",
+  "lead": "La domanda finale non è ricordare tutte le cifre del caso, ma saper rifare il processo con ordine, prudenza e trasparenza: calcolare, leggere, documentare e non confondere numeri diversi.",
+  "punti": [
+   {
+    "h": "Totali coerenti",
+    "d": "Somma Scope 1, 2 location-based e 3"
+   },
+   {
+    "h": "Indicatori leggibili",
+    "d": "Intensità con dato assoluto, perimetro, denominatore"
+   },
+   {
+    "h": "Incertezza e anno base",
+    "d": "Limiti, errori, ricalcoli, variazioni reali"
+   },
+   {
+    "h": "Numero difendibile",
+    "d": "Rapporto GHG, evidenze, garanzia appropriata"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m07_s027",
+  "layout": "chiusura",
+  "kicker": "Da portare via",
+  "titolo": "Quattro idee chiave sul processo GHG",
+  "modNum": "07",
+  "punti": [
+   {
+    "h": "Architettura chiara",
+    "d": "Totale location-based, market-based e voci fuori totale separati"
+   },
+   {
+    "h": "Gerarchia dei risultati",
+    "d": "Poche voci guidano priorità, piano dati e riduzioni"
+   },
+   {
+    "h": "Qualità mirata",
+    "d": "Entità e incertezza dicono dove migliorare"
+   },
+   {
+    "h": "Ciclo annuale",
+    "d": "Raccogliere, calcolare, controllare, rendicontare, verificare"
+   }
+  ],
+  "prossimo": {
+   "modulo": "08",
+   "titolo": "La carbon footprint di prodotto (ISO 14067)"
+  }
+ }
+]

@@ -1,0 +1,613 @@
+# UNITÀ 1 — Clima, gas serra e carbon footprint: i concetti di base (2 ore)
+Che cosa sono i gas serra e la CO2 equivalente, che cos’è una carbon footprint, perché le aziende la calcolano e con quali norme. Si parte da zero e si fanno subito i primi conti.
+Obiettivi di apprendimento:
+- Spiegare con parole semplici l’effetto serra, i sette gas serra degli inventari e da dove provengono in un’azienda
+- Convertire in CO2 equivalente una quantità di gas serra usando il GWP a 100 anni
+- Distinguere la carbon footprint di un’organizzazione da quella di un prodotto
+- Riconoscere gli ordini di grandezza: che cosa «vale» un chilogrammo o una tonnellata di CO2e
+- Orientarsi tra GHG Protocol, ISO 14064-1, ISO 14064-3, ISO 14067 e ISO 14068-1 e tra Scope 1, 2 e 3
+- Applicare la formula base «dato di attività × fattore di emissione» a un primo esempio semplice
+
+## SEZIONE 1 — Perché parlare di carbonio
+### SCHERMATA 1 — Perché parlare di carbonio [section]
+Benvenuti nel corso. Prima di imparare a contare le emissioni serve capire che cosa si conta e perché: in questa sezione vediamo l’effetto serra in parole semplici, tre numeri che danno la misura del problema e gli impegni presi a livello mondiale ed europeo.
+- L’effetto serra spiegato senza formule
+- Tre numeri da ricordare
+- Da Rio a Parigi alla legge europea sul clima
+- Che cosa c’entra una piccola o media impresa
+### SCHERMATA 2 — L’effetto serra in quattro passaggi [flow]
+L’effetto serra è un fenomeno naturale e utile: il problema nasce quando le attività umane lo rafforzano.
+1. 1. Il Sole scalda la Terra: La radiazione solare attraversa l’atmosfera e riscalda suolo e oceani.
+2. 2. La Terra restituisce calore: La superficie riscaldata emette calore verso lo spazio.
+3. 3. I gas serra lo trattengono: Alcuni gas presenti nell’aria assorbono parte di quel calore, come una coperta.
+4. 4. Più gas, più calore trattenuto: Combustibili fossili, agricoltura e industria aggiungono gas: la coperta si ispessisce e la temperatura media sale.
+Si chiamano «gas serra» (in inglese greenhouse gases, sigla GHG) perché si comportano come i vetri di una serra.
+Commento del docente: Conviene chiarire subito un equivoco frequente in aula: l’effetto serra in sé non è un danno, anzi senza di esso il pianeta sarebbe troppo freddo per la vita che conosciamo. Ciò che misuriamo con la carbon footprint è il contributo aggiuntivo delle attività umane. La sigla GHG tornerà in tutto il corso: inventario GHG, rapporto GHG, GHG Protocol. Non serve conoscere la fisica: ci basta sapere che ogni chilogrammo di gas emesso resta in atmosfera a lungo e si somma a quelli già presenti.
+### SCHERMATA 3 — Tre numeri per capire la dimensione del problema [stats]
+- circa 1,1 °C: riscaldamento già osservato nel decennio 2011–2020 rispetto al periodo 1850–1900 (IPCC, Sesto rapporto di valutazione (AR6))
+- 57 miliardi di t: emissioni globali di gas serra nel 2023, espresse in CO2 equivalente (CO2e) (UNEP, Emissions Gap Report 2024)
+- −55% al 2030: obiettivo dell’Unione europea: riduzione netta di almeno il 55% rispetto al 1990 e neutralità climatica entro il 2050 (Regolamento (UE) 2021/1119)
+Fonte dei dati: IPCC AR6; UNEP, Emissions Gap Report 2024; Regolamento (UE) 2021/1119 («legge europea sul clima»)
+Commento del docente: Tre numeri bastano per inquadrare il tema senza perdersi nei rapporti scientifici. Il primo dice che il riscaldamento non è una previsione ma una misura. Il secondo introduce l’unità che useremo sempre, la tonnellata di CO2 equivalente: tra poche slide vedremo che cosa significa «equivalente». Il terzo spiega perché la pressione su imprese e filiere cresce: l’obiettivo europeo è fissato per legge e si traduce, a cascata, in richieste di dati a chi produce, trasporta e vende.
+### SCHERMATA 4 — Le tappe: da Rio alla legge europea sul clima [timeline]
+- 1992 — Convenzione quadro ONU: Gli Stati riconoscono il problema dei cambiamenti climatici e si impegnano a contenerlo.
+- 1997 — Protocollo di Kyoto: Primi obiettivi di riduzione per i Paesi industrializzati; nasce l’elenco dei gas da contare.
+- 2015 — Accordo di Parigi: Contenere l’aumento ben al di sotto dei 2 °C e proseguire gli sforzi per limitarlo a 1,5 °C.
+- 2019 — Green Deal europeo: La strategia dell’Unione per un’economia climaticamente neutra.
+- 2021 — Legge europea sul clima: Almeno −55% netto al 2030 rispetto al 1990 e neutralità climatica al 2050.
+Fonte dei dati: ONU; Unione europea, Regolamento (UE) 2021/1119
+Commento del docente: La linea del tempo mostra un passaggio importante: dagli impegni generici degli Stati si è arrivati a obiettivi numerici fissati per legge. Per chi lavora in azienda la conseguenza pratica è una sola: per ridurre bisogna prima misurare, e per misurare servono regole comuni. È esattamente ciò che fanno gli standard che incontreremo nella sezione 7. L’elenco dei gas serra che si usa ancora oggi negli inventari aziendali deriva proprio dal Protocollo di Kyoto.
+### SCHERMATA 5 — Dal clima all’azienda: perché ci riguarda [key]
+Gli obiettivi climatici si raggiungono solo se ogni organizzazione conosce le proprie emissioni. Non si può ridurre ciò che non si misura: la carbon footprint è prima di tutto un conto, fatto con regole condivise.
+- I grandi clienti chiedono i numeri ai fornitori
+- Banche e bandi li usano per valutare le imprese
+- Misurare fa emergere sprechi di energia e di materiali
+Commento del docente: Chi segue questo corso di solito non è un climatologo: è un consulente, un responsabile ambiente o amministrativo che deve rispondere a una richiesta concreta, spesso un questionario di un cliente. Il messaggio da portare a casa è rassicurante: contare le emissioni non richiede strumenti sofisticati. Servono dati che l’azienda ha già (bollette, fatture, schede carburante), fattori pubblicati da fonti ufficiali e un foglio di calcolo. Il resto è metodo, ed è ciò che impareremo.
+
+## SEZIONE 2 — I gas serra
+### SCHERMATA 6 — I gas serra [section]
+Si parla sempre di «carbonio» e di CO2, ma i gas da contare sono sette. Vediamo quali sono, come si chiamano e soprattutto dove si nascondono in un’azienda qualunque.
+- I sette gas (o famiglie di gas) degli inventari
+- Da quali attività provengono
+- Dove cercarli in azienda
+- Il primo giro nello stabilimento del caso studio
+### SCHERMATA 7 — I sette gas serra degli inventari [table]
+Sono i gas (o le famiglie di gas) del Protocollo di Kyoto, ripresi dal GHG Protocol e dalle norme ISO.
+Colonne: Gas | Sigla | Da dove viene, tipicamente
+- Anidride carbonica | CO2 | Combustione di gas naturale, gasolio, benzina, GPL, carbone; alcuni processi industriali
+- Metano | CH4 | Allevamenti, discariche, perdite dalle reti e dagli impianti a gas, depurazione
+- Protossido di azoto | N2O | Fertilizzanti azotati in agricoltura; in piccola parte ogni combustione
+- Idrofluorocarburi | HFC | Gas refrigeranti di climatizzatori, celle frigorifere, pompe di calore
+- Perfluorocarburi | PFC | Alcune lavorazioni industriali (per esempio elettronica e alluminio)
+- Esafluoruro di zolfo | SF6 | Isolante in quadri e apparecchiature elettriche di media e alta tensione
+- Trifluoruro di azoto | NF3 | Produzione di componenti elettronici
+HFC, PFC, SF6 e NF3 sono detti nel loro insieme gas fluorurati: quantità piccole, effetto molto grande.
+Commento del docente: Nella grande maggioranza delle piccole e medie imprese i gas che si incontrano davvero sono tre: la CO2 delle combustioni, gli HFC dei climatizzatori e degli impianti frigoriferi e, più raramente, l’SF6 delle cabine elettriche. Metano e protossido di azoto pesano molto in agricoltura, allevamento e gestione dei rifiuti. PFC e NF3 riguardano settori specifici e sono citati per completezza. L’errore tipico è fermarsi alla CO2 e dimenticare i gas refrigeranti: vedremo tra poco che pochi chilogrammi contano come migliaia di litri di carburante.
+### SCHERMATA 8 — Dove cercare i gas serra in un’azienda [hub]
+Una mappa mentale da usare al primo sopralluogo: a ogni attività corrisponde un gas.
+Al centro: Le sorgenti in azienda
+- Caldaie, forni, essiccatoi: Bruciano combustibili: soprattutto CO2
+- Auto, furgoni, carrelli: Gasolio, benzina, GPL: soprattutto CO2
+- Climatizzatori e frigoriferi: Perdite di gas refrigeranti: HFC
+- Cabine e quadri elettrici: Possibili perdite di isolante: SF6
+- Reti e impianti a gas: Perdite di gas naturale: CH4
+- Campi, stalle, rifiuti: Fertilizzanti e fermentazioni: N2O e CH4
+Commento del docente: Suggerisco di usare questa mappa come lista di domande nel primo giro in azienda: che cosa bruciate, e dove? Quanti veicoli avete? Quali impianti contengono gas refrigerante? C’è una cabina di trasformazione? Ogni risposta positiva è una sorgente da inserire nell’inventario. Ricordate che ogni combustione produce anche piccole quantità di metano e di protossido di azoto: per questo i fattori di emissione che useremo sono espressi in CO2 equivalente e li comprendono già.
+### SCHERMATA 9 — Caso studio: il primo giro nello stabilimento [case]
+Il Pastificio Terrafelix S.r.l., azienda di fantasia della provincia di Caserta, deve preparare il suo primo inventario dei gas serra. Davide Russo, responsabile Ambiente ed energia, percorre lo stabilimento con un taccuino e annota tutto ciò che può emettere gas serra.
+- Essiccatoi e centrale termica a gas naturale; un gruppo elettrogeno e una motopompa antincendio a gasolio: CO2
+- Flotta di 4 furgoni e 8 auto, a gasolio e a benzina: CO2
+- Climatizzatori degli uffici con gas R-410A e gruppo frigorifero di processo con HFC-134a: HFC
+- Nessun allevamento, nessuna discarica, nessun processo chimico: metano e protossido di azoto non hanno sorgenti proprie rilevanti
+Domanda di lavoro: Quali gas serra dovrà contare Davide, e quale rischia di dimenticare?
+Come ha operato l'azienda: Davide individua due gas principali: la CO2 delle combustioni (impianti e veicoli) e gli HFC dei circuiti frigoriferi. Il manutentore gli conferma che nell’anno sono stati reintegrati 12 kg di R-410A e 8 kg di HFC-134a: senza quella telefonata la voce sarebbe rimasta fuori dal conto.
+Commento del docente: Il Pastificio Terrafelix ci accompagnerà per tutte le dieci unità: lo presenteremo per bene nella sezione 9. Qui interessa il metodo: prima di fare qualunque conto si fa l’elenco delle sorgenti, camminando per l’azienda e parlando con chi gestisce impianti e manutenzioni. Notate che i 20 kg di gas refrigerante sembrano trascurabili accanto a oltre un milione di metri cubi di gas naturale: nella prossima sezione scopriremo quanto valgono in realtà.
+
+## SEZIONE 3 — La CO2 equivalente e il GWP
+### SCHERMATA 10 — La CO2 equivalente e il GWP [section]
+Sette gas diversi non si possono sommare così come sono: un chilogrammo di metano non scalda quanto un chilogrammo di anidride carbonica. Serve un’unità comune. In questa sezione facciamo i primi conti del corso.
+- Perché serve un’unità di misura comune
+- Il GWP: il «cambio» tra un gas e la CO2
+- Primo conto: da chilogrammi di gas a chilogrammi di CO2e
+- Prova tu con il calcolatore
+### SCHERMATA 11 — Tre parole da non confondere più [defs]
+Sommare gas diversi è come sommare euro, dollari e sterline: prima si convertono tutti in una sola moneta. La «moneta» del clima è la CO2 equivalente.
+- CO2: L’anidride carbonica: un gas serra, il più diffuso. È il gas di riferimento, a cui si assegna valore 1.
+- CO2e (CO2 equivalente): L’unità comune: esprime l’effetto di qualunque gas serra come la quantità di CO2 che produrrebbe lo stesso riscaldamento.
+- GWP (Global Warming Potential): Potenziale di riscaldamento globale: dice quante volte un gas scalda più della CO2, a parità di massa. È il «tasso di cambio» verso la CO2e.
+- GWP a 100 anni: L’effetto si misura su un periodo convenzionale di cento anni: è l’orizzonte usato negli inventari e nelle norme di questo corso.
+Commento del docente: La formula è una sola moltiplicazione: CO2e = massa del gas × GWP. Se il GWP del metano di origine fossile è 29,8, un chilogrammo di metano «vale» 29,8 kg di CO2e. L’errore di linguaggio più diffuso è usare CO2 e CO2e come sinonimi: un inventario espresso in CO2e comprende tutti i gas, uno espresso in sola CO2 no. Quando leggete un dato altrui controllate sempre quale delle due unità è indicata: la differenza può essere di qualche punto percentuale o, dove ci sono gas refrigeranti, molto di più.
+### SCHERMATA 12 — I valori di GWP a 100 anni: tre edizioni dei rapporti IPCC [table · IPCC · GWP a 100 anni]
+L’IPCC, il gruppo di esperti dell’ONU sul clima, aggiorna periodicamente i valori: AR4, AR5 e AR6 sono il quarto, quinto e sesto rapporto di valutazione.
+Colonne: Gas | AR4 (2007) | AR5 (2013) | AR6 (2021)
+- CO2 | 1 | 1 | 1
+- CH4 di origine fossile | — | 30 | 29,8
+- CH4 di origine non fossile | 25 | 28 | 27,0
+- N2O | 298 | 265 | 273
+- HFC-32 | 675 | 677 | 771
+- HFC-125 | 3.500 | 3.170 | 3.740
+- HFC-134a | 1.430 | 1.300 | 1.530
+- SF6 | 22.800 | 23.500 | 24.300
+Regola: si dichiara sempre quale rapporto IPCC si usa e non si mescolano serie diverse nello stesso inventario. In questo corso usiamo i valori AR6.
+Commento del docente: Non occorre imparare la tabella a memoria: basta sapere dove trovarla e leggerla nel modo giusto. Lo stesso gas ha valori diversi a seconda del rapporto IPCC, perché la scienza affina le stime. Le norme chiedono di usare i valori più recenti dell’IPCC oppure di giustificare una scelta diversa, e di dichiararla nel rapporto. Attenzione ai documenti dei frigoristi: la normativa europea sui gas fluorurati usa ancora i valori AR4, quindi sulle schede degli impianti si possono trovare numeri diversi da quelli dell’inventario. Fonte dei valori: IPCC, nel riepilogo pubblicato dal GHG Protocol.
+### SCHERMATA 13 — Quanto «pesa» un chilogrammo di gas: i GWP a confronto [bar · IPCC AR6]
+Chilogrammi di CO2e per ogni chilogrammo di gas emesso (valori AR6). L’SF6, con 24.300, è fuori scala e non è rappresentato.
+- CO2: 1
+- Metano (CH4) fossile: 29,8
+- Protossido di azoto (N2O): 273
+- HFC-32: 771
+- HFC-134a: 1530
+- R-410A (miscela): 2256
+- HFC-125: 3740
+Fonte dei dati: IPCC AR6, GWP a 100 anni (riepilogo GHG Protocol, 2024); R-410A calcolato dalla composizione
+Commento del docente: Il grafico rende visibile ciò che la tabella nasconde: la barra della CO2 quasi non si vede. Un chilogrammo di R-410A, il gas dei comuni climatizzatori, vale 2.256 kg di CO2e, cioè più di due tonnellate. Per confronto, con i fattori del corso servono circa 851 litri di gasolio bruciati per arrivare alla stessa cifra (2.256 ÷ 2,65). Ecco perché nel giro in stabilimento la telefonata al manutentore degli impianti frigoriferi è importante quanto la raccolta delle bollette.
+### SCHERMATA 14 — Primo conto: quanto vale 1 kg di tre gas diversi [calc · CO2e = massa × GWP]
+La formula è una moltiplicazione: massa del gas × GWP. Proviamo con un chilogrammo di metano, di protossido di azoto e di HFC-134a.
+Formula: CO2 equivalente = Massa del gas × GWP (AR6)
+- Metano (CH4) di origine fossile (per esempio una perdita di gas naturale): 1 kg × 29,8 kg CO2e/kg = 29,8 kg CO2e
+- Protossido di azoto (N2O) (per esempio da fertilizzanti azotati): 1 kg × 273 kg CO2e/kg = 273 kg CO2e
+- HFC-134a (gas refrigerante di un gruppo frigorifero): 1 kg × 1530 kg CO2e/kg = 1530 kg CO2e
+Tre chilogrammi di gas, in tutto: 1832,8 kg CO2e
+In tonnellate: 1,8328 t CO2e
+Fonte dei dati: IPCC AR6, GWP a 100 anni (riepilogo GHG Protocol, 2024)
+Commento del docente: Leggete la tabella riga per riga: il dato è la massa del gas in chilogrammi, il moltiplicatore è il GWP, il risultato è in chilogrammi di CO2e. Tre chilogrammi di gas diventano 1.832,8 kg di CO2e, cioè circa 1,83 tonnellate: il motore divide per 1.000 e lo mostra sotto la tabella. Questo passaggio da chilogrammi a tonnellate lo faremo in ogni calcolo del corso. Errore tipico: sommare i chilogrammi dei gas prima di convertirli. Prima si converte ciascun gas con il suo GWP, poi si somma.
+### SCHERMATA 15 — Le miscele: da dove viene il 2.256 dell’R-410A [calc · CO2e = massa × GWP]
+Molti gas refrigeranti sono miscele. Il GWP della miscela si calcola dalla composizione: l’R-410A è metà HFC-32 e metà HFC-125.
+Formula: CO2 equivalente = Quota in 1 kg di miscela × GWP (AR6)
+- HFC-32 (50% della miscela): 0,5 kg × 771 kg CO2e/kg = 385,5 kg CO2e
+- HFC-125 (50% della miscela): 0,5 kg × 3740 kg CO2e/kg = 1870 kg CO2e
+1 kg di R-410A: 2255,5 kg CO2e
+In tonnellate: 2,2555 t CO2e
+2.255,5 si arrotonda a 2.256 kg CO2e per kg: è il valore che useremo in tutto il corso per l’R-410A.
+Fonte dei dati: IPCC AR6, GWP a 100 anni; composizione dell’R-410A: 50% HFC-32, 50% HFC-125
+Commento del docente: Il conto è 0,5 × 771 = 385,5 più 0,5 × 3.740 = 1.870: in tutto 2.255,5, arrotondato a 2.256. Lo stesso calcolo con i valori AR4 dà circa 2.088, che è il numero usato dalla normativa europea sui gas fluorurati: se lo trovate su un registro o su una targa non è un errore, è un’altra serie di GWP. Applichiamolo al caso: i 12 kg di R-410A reintegrati al Pastificio Terrafelix valgono 12 × 2.256 = 27.072 kg di CO2e, cioè 27,1 tonnellate. Nell’unità 4 riprenderemo il calcolo completo delle emissioni dei gas refrigeranti.
+### SCHERMATA 16 — Prova tu: da chilogrammi di gas a CO2 equivalente [sim]
+Cambia i chilogrammi di ciascun gas e osserva il totale. Prova ad azzerare tutto e a inserire solo 1 kg di SF6: quante tonnellate di CO2e ottieni?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Metano (CH4) di origine fossile: 10 kg × 29,8 kg CO2e/kg = 298 kg CO2e
+- Protossido di azoto (N2O): 1 kg × 273 kg CO2e/kg = 273 kg CO2e
+- HFC-134a: 2 kg × 1530 kg CO2e/kg = 3060 kg CO2e
+- R-410A: 3 kg × 2256 kg CO2e/kg = 6768 kg CO2e
+- Esafluoruro di zolfo (SF6): 0,1 kg × 24.300 kg CO2e/kg = 2430 kg CO2e
+Totale iniziale: 12.829 kg CO2e
+In tonnellate: 12,829 t CO2e
+Con i valori iniziali il totale è 12.829 kg CO2e, cioè circa 12,8 t CO2e.
+Fonte dei dati: IPCC AR6, GWP a 100 anni (riepilogo GHG Protocol, 2024)
+Commento del docente: Il calcolatore serve a farsi l’occhio. Con i valori iniziali: 10 kg di metano danno 298 kg di CO2e, 1 kg di N2O 273 kg, 2 kg di HFC-134a 3.060 kg, 3 kg di R-410A 6.768 kg e appena un etto di SF6 ben 2.430 kg; in tutto 12.829 kg, circa 12,8 tonnellate. Un chilogrammo intero di SF6 vale 24.300 kg, cioè 24,3 tonnellate di CO2e. Invitate gli allievi a notare quale riga domina il totale: non è quella con più chilogrammi, è quella con il GWP più alto.
+
+## SEZIONE 4 — Che cos’è una carbon footprint
+### SCHERMATA 17 — Che cos’è una carbon footprint [section]
+«Carbon footprint» significa impronta di carbonio: il totale dei gas serra legati a qualcosa. Ma a che cosa, esattamente? A un’azienda o a un prodotto: sono due conti diversi, con regole diverse.
+- Una definizione operativa
+- Organizzazione e prodotto: due oggetti, due domande
+- Lo stesso pastificio, due numeri
+- Misurare, ridurre, compensare: l’ordine giusto
+### SCHERMATA 18 — Una definizione operativa [text]
+La carbon footprint è la somma delle emissioni di gas serra (al netto delle eventuali rimozioni) associate a un’organizzazione o a un prodotto, espressa in CO2 equivalente.
+- È un numero con un’unità di misura: Tonnellate di CO2e per un’azienda in un anno; chilogrammi o grammi di CO2e per un’unità di prodotto.
+- Comprende tutti i gas serra: Non solo la CO2: ogni gas viene convertito con il suo GWP, come abbiamo appena visto.
+- Si ottiene con un calcolo, non con uno strumento: Nessuno misura al camino: si moltiplicano dati di consumo per fattori di emissione.
+- Vale quanto le regole con cui è calcolata: Confini, dati e fattori vanno dichiarati: due numeri sono confrontabili solo se calcolati allo stesso modo.
+Riquadro «Che cosa non è»: Non è un giudizio ambientale complessivo. Guarda un solo impatto, il cambiamento climatico: non dice nulla su acqua, suolo, rifiuti o biodiversità. Altri metodi, come l’impronta ambientale di prodotto dell’Unione europea (PEF), considerano 16 categorie di impatto.
+Commento del docente: Il termine «rimozioni» indica i gas serra sottratti all’atmosfera, per esempio da un bosco in crescita: le norme chiedono di tenerle distinte dalle emissioni, e per la grande maggioranza delle aziende sono pari a zero. Insisto sul terzo punto perché sorprende sempre: la carbon footprint non si misura con sonde o analizzatori, si calcola a tavolino partendo da documenti amministrativi. Per questo chi tiene la contabilità e gli acquisti è prezioso quanto il tecnico ambientale.
+### SCHERMATA 19 — Organizzazione e prodotto: due oggetti, due domande [two]
+Colonna «Carbon footprint di organizzazione»:
+- Domanda: quanto emette l’azienda in un anno?
+- Oggetto: l’insieme delle attività dell’organizzazione, entro confini dichiarati
+- Risultato: un inventario dei gas serra, in t CO2e all’anno
+- Riferimenti: ISO 14064-1 e GHG Protocol
+- Serve per: obiettivi di riduzione, rendicontazione, richieste di banche e clienti
+Colonna «Carbon footprint di prodotto»:
+- Domanda: quanto emette un’unità di prodotto lungo la sua vita?
+- Oggetto: il ciclo di vita, dalle materie prime allo smaltimento
+- Risultato: kg CO2e per unità (1 kg, 1 pezzo, 1 confezione)
+- Riferimento: ISO 14067, basata sulla valutazione del ciclo di vita (LCA)
+- Serve per: confronti tra prodotti, richieste dei clienti, progettazione
+Commento del docente: Questa distinzione è la più importante dell’unità e torna nell’esame. I due calcoli usano la stessa formula di base ma rispondono a domande diverse e non sono intercambiabili: dividere le emissioni annue dell’azienda per i chilogrammi prodotti dà un utile indicatore di controllo, non la carbon footprint del prodotto. LCA è la sigla inglese di Life Cycle Assessment, valutazione del ciclo di vita. Le unità da 3 a 7 del corso sono dedicate all’organizzazione, l’unità 8 al prodotto.
+### SCHERMATA 20 — Lo stesso pastificio, due numeri diversi [stats]
+Anticipiamo i risultati del caso studio per vedere la differenza con i numeri.
+- 21.692,5 t CO2e: carbon footprint dell’organizzazione: tutte le emissioni del Pastificio Terrafelix nell’anno 2025 (Scope 1 + Scope 2 + Scope 3, senza la cottura a casa del consumatore)
+- 1,47 kg CO2e: carbon footprint di prodotto: 1 kg di pasta dal campo di grano al piatto, cottura e fine vita dell’imballaggio compresi (dalla culla alla tomba)
+- 0,97 kg CO2e: carbon footprint parziale: lo stesso kg di pasta fino all’uscita dallo stabilimento (dalla culla al cancello)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il primo numero è grande e si esprime in tonnellate, perché riguarda un anno intero e 20.000 tonnellate di pasta prodotte. Il secondo e il terzo riguardano un solo chilogrammo. Notate che per lo stesso prodotto esistono due valori corretti, 1,47 e 0,97: cambia il confine, cioè quali fasi della vita del prodotto sono incluse. Chi riceve un numero deve sempre chiedere: riferito a che cosa, e fino a dove? Vedremo come si arriva a ciascun valore nelle unità 7 e 8.
+### SCHERMATA 21 — Misurare, ridurre, compensare: l’ordine giusto [pyramid]
+Buona prassi condivisa: la carbon footprint è la base di ogni strategia climatica. Si legge dal basso verso l’alto.
+Livelli, dall'alto al basso:
+- Compensare il residuo: Solo ciò che non si riesce a eliminare
+- Sostituire: Energie rinnovabili, materiali a minore impatto
+- Ridurre: Efficienza di impianti, trasporti, processi
+- Evitare: Eliminare consumi e attività non necessari
+- Misurare: Inventario dell’organizzazione e carbon footprint dei prodotti
+Ridurre e compensare non sono la stessa cosa: la compensazione non abbassa le emissioni dell’azienda e non entra nel calcolo.
+Commento del docente: La piramide anticipa le ultime due unità del corso, dedicate alla riduzione e alla compensazione. La collochiamo qui per un motivo: chi inizia a contare deve sapere a che cosa serve il conto. Un errore frequente è partire dal vertice, comprando crediti di carbonio prima di sapere quanto e dove si emette. I crediti acquistati non si sottraggono dall’inventario né dalla carbon footprint di prodotto: si dichiarano a parte. È un punto su cui anche la normativa europea sulle asserzioni ambientali è diventata severa.
+
+## SEZIONE 5 — Ordini di grandezza
+### SCHERMATA 22 — Ordini di grandezza [section]
+Una tonnellata di CO2e è tanto o poco? Finché il numero resta astratto è difficile ragionarci. In questa sezione costruiamo i riferimenti che servono per capire al volo se un risultato è plausibile.
+- Dal grammo al miliardo di tonnellate
+- Che cosa «vale» una tonnellata di CO2e
+- Un anno di consumi di una famiglia
+- I gesti quotidiani a confronto
+### SCHERMATA 23 — La scala delle unità: dal grammo al miliardo di tonnellate [flow]
+Le unità sono sempre le stesse tre: 1 t = 1.000 kg e 1 kg = 1.000 g. Cambia solo la dimensione di ciò che si misura.
+1. Grammi (g CO2e): Una porzione di pasta da 80 g, dal campo al piatto: 118 g CO2e.
+2. Chilogrammi (kg CO2e): Un litro di gasolio bruciato: 2,65 kg CO2e.
+3. Tonnellate (t CO2e): 500 metri cubi di gas naturale bruciati: 1 t CO2e.
+4. Migliaia di tonnellate: Un pastificio con 90 dipendenti in un anno: 21.692,5 t CO2e.
+5. Miliardi di tonnellate: Il mondo intero nel 2023: circa 57 miliardi di t CO2e.
+I calcoli si fanno in chilogrammi e il risultato si presenta in tonnellate: si divide per 1.000 alla fine.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori didattici del corso; UNEP, Emissions Gap Report 2024
+Commento del docente: La regola pratica è semplice: i fattori di emissione sono quasi sempre in chilogrammi di CO2e per unità di attività, quindi il prodotto esce in chilogrammi; gli inventari si presentano in tonnellate. L’errore più comune di chi comincia è dimenticare la divisione per 1.000, oppure farla due volte: un’azienda di 90 persone che dichiara 21 milioni di tonnellate, o 21 tonnellate, ha sbagliato le unità. Avere in testa questa scala aiuta a riconoscere subito un risultato impossibile.
+### SCHERMATA 24 — Quanti chilometri in auto valgono 1 tonnellata di CO2e [calc]
+Un conto «al contrario»: partiamo dalle emissioni e cerchiamo l’attività. Si divide la quantità di CO2e per il fattore di emissione.
+Formula: Chilometri = Emissioni × Conversione in kg ÷ Fattore di emissione
+- Auto media (fattore per chilometro: valore didattico arrotondato): 1 t CO2e × 1000 kg CO2e/t ÷ 0,17 kg CO2e/km = 5882 km
+1.000 kg CO2e ÷ 0,17 kg CO2e/km = 5.882 km: una tonnellata di CO2e si raggiunge prima di quanto si pensi.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Il fattore di emissione dice quanti chilogrammi di CO2e produce un’unità di attività: 0,17 kg per ogni chilometro di un’auto media. Se moltiplico i chilometri per il fattore ottengo le emissioni; se divido le emissioni per il fattore ottengo i chilometri. È la stessa formula letta in due versi. Il valore 0,17 è arrotondato a scopo didattico: in un inventario reale si usa il fattore della fonte ufficiale aggiornata, scelto in base al tipo di veicolo e di carburante. Lo vedremo nell’unità 2.
+### SCHERMATA 25 — Che cosa vale 1 tonnellata di CO2e [table]
+Lo stesso conto, 1.000 kg CO2e diviso il fattore, per altre attività comuni.
+Colonne: Attività | Fattore di emissione (didattico) | Conto | Quantità che vale 1 t CO2e
+- Gas naturale bruciato | 2,0 kg CO2e/Sm³ | 1.000 ÷ 2,0 | 500 Sm³
+- Elettricità prelevata dalla rete | 0,235 kg CO2e/kWh | 1.000 ÷ 0,235 | 4.255 kWh
+- Gasolio bruciato | 2,65 kg CO2e/l | 1.000 ÷ 2,65 | 377 litri
+- Benzina bruciata | 2,3 kg CO2e/l | 1.000 ÷ 2,3 | 435 litri
+- Viaggio in aereo (corto raggio) | 0,18 kg CO2e/pkm | 1.000 ÷ 0,18 | 5.556 km di un passeggero
+- Viaggio in treno | 0,035 kg CO2e/pkm | 1.000 ÷ 0,035 | 28.571 km di un passeggero
+- Semola di grano duro acquistata | 0,7 kg CO2e/kg | 1.000 ÷ 0,7 | 1.429 kg
+- Gas refrigerante R-410A disperso | 2.256 kg CO2e/kg | 1.000 ÷ 2.256 | 0,44 kg
+Sm³ = standard metro cubo, l’unità delle bollette del gas. pkm = passeggero-chilometro: un passeggero trasportato per un chilometro. I fattori sono arrotondati a scopo didattico.
+Commento del docente: Questa tabella vale la pena di stamparla. Dà tre informazioni: quali attività «costano» di più in termini di carbonio, in quali unità si misurano i dati e quanto diversi sono i fattori. Meno di mezzo chilogrammo di gas refrigerante vale quanto 377 litri di gasolio o 28.571 chilometri in treno. Il fattore dell’elettricità, 0,235, è l’arrotondamento del dato ISPRA sui consumi elettrici nazionali del 2023, pari a 234,7 g CO2 per kWh; gli altri sono ordini di grandezza. Tutti i fattori del corso sono raccolti in un’unica tabella che useremo dall’unità 2.
+### SCHERMATA 26 — Un anno di consumi di una famiglia: quanto fa? [calc]
+Esempio inventato ma plausibile, per mettere in fila gli ordini di grandezza. Per ogni riga: dato di attività × fattore di emissione.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Automobile (chilometri dal contachilometri): 10.000 km × 0,17 kg CO2e/km = 1700 kg CO2e
+- Gas per riscaldamento e cucina (somma delle bollette dell’anno): 800 Sm³ × 2 kg CO2e/Sm³ = 1600 kg CO2e
+- Elettricità di casa (somma delle bollette dell’anno): 2500 kWh × 0,235 kg CO2e/kWh = 587,5 kg CO2e
+- Un viaggio in aereo, corto raggio (andata e ritorno di due persone: 2.000 pkm in tutto): 2000 pkm × 0,18 kg CO2e/pkm = 360 kg CO2e
+Totale: 4247,5 kg CO2e
+In tonnellate: 4,2475 t CO2e
+Sono contati solo i consumi diretti di energia e i viaggi: mancano cibo, acquisti e servizi.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Seguite i quattro prodotti: 10.000 × 0,17 = 1.700 kg; 800 × 2,0 = 1.600 kg; 2.500 × 0,235 = 587,5 kg; 2.000 × 0,18 = 360 kg. La somma è 4.247,5 kg, cioè circa 4,2 tonnellate di CO2e. Non è una statistica nazionale, è un esercizio: serve a mostrare che auto e riscaldamento pesano ciascuno circa tre volte l’elettricità di casa. Lo stesso schema a righe, voce per voce, è quello che useremo per l’inventario di un’azienda: cambiano le voci e le quantità, non il metodo.
+### SCHERMATA 27 — I gesti quotidiani a confronto [bar]
+Chilogrammi di CO2e per alcune attività comuni, calcolati con i fattori didattici del corso.
+- Una notte in hotel: 15kg
+- 100 km in auto: 17kg
+- 1.000 km in treno (un passeggero): 35kg
+- Un pieno di 50 litri di gasolio: 132,5kg
+- 1.000 km in aereo (un passeggero): 180kg
+- 100 Sm³ di gas naturale: 200kg
+- 1.000 kWh di elettricità di rete: 235kg
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Ogni barra è una moltiplicazione che potete rifare: 100 km × 0,17 = 17 kg; 50 litri × 2,65 = 132,5 kg; 1.000 km × 0,18 = 180 kg in aereo contro 1.000 × 0,035 = 35 kg in treno, cioè circa cinque volte meno a parità di distanza. Un megawattora di elettricità, 1.000 kWh, vale 235 kg. Questi riferimenti servono come controllo di plausibilità: se un calcolo attribuisce a un pieno di gasolio 13 kg oppure 1.300 kg di CO2e, c’è un errore di unità da cercare.
+### SCHERMATA 28 — Tre scale da tenere a mente [stats]
+- 1 t CO2e: circa 5.882 km in auto, oppure 500 Sm³ di gas naturale, oppure 4.255 kWh di elettricità di rete (scala della persona e del singolo consumo)
+- 21.692,5 t CO2e: un anno del Pastificio Terrafelix: come circa 127,6 milioni di km percorsi in auto (scala dell’azienda di medie dimensioni)
+- 57 miliardi di t CO2e: le emissioni di gas serra del mondo intero nel 2023 (scala planetaria)
+Fonte dei dati: Esempio didattico – fattori arrotondati; Caso studio Pastificio Terrafelix – dati illustrativi; UNEP, Emissions Gap Report 2024
+Commento del docente: Il conto del secondo riquadro è 21.692.500 kg ÷ 0,17 kg per chilometro = circa 127,6 milioni di chilometri. Usate questi confronti quando presentate un risultato a chi non è del mestiere: una direzione aziendale capisce meglio «come migliaia di auto in circolazione per un anno» che una cifra in tonnellate. Attenzione però a dichiarare sempre il fattore usato per l’equivalenza: i paragoni sono strumenti di comunicazione, non dati dell’inventario.
+
+## SEZIONE 6 — Chi chiede i numeri e perché
+### SCHERMATA 29 — Chi chiede i numeri e perché [section]
+Poche piccole e medie imprese calcolano la carbon footprint per curiosità: quasi sempre c’è qualcuno che chiede un dato. Capire chi lo chiede, e per farne che cosa, permette di scegliere il calcolo giusto.
+- I soggetti che chiedono dati di emissione
+- A ogni richiesta il suo strumento
+- Obbligo di legge o scelta volontaria?
+- Le tre richieste arrivate al pastificio
+### SCHERMATA 30 — Chi chiede oggi i dati di emissione a un’impresa [hub]
+Al centro: I numeri dell’azienda
+- Clienti e filiere: Questionari ai fornitori, dati per kg di prodotto
+- Banche e investitori: Finanziamenti legati a obiettivi di sostenibilità
+- Bandi e gare: Criteri premianti per chi misura e riduce
+- Regole europee: Rendicontazione di sostenibilità, ETS, CBAM
+- Direzione aziendale: Costi dell’energia, rischi, piano di riduzione
+- Consumatori e territorio: Reputazione e comunicazione corretta
+Commento del docente: Nella pratica la prima richiesta arriva quasi sempre da un cliente più grande, che deve a sua volta rendicontare le emissioni della propria catena di fornitura: il fornitore diventa una riga del suo calcolo. Subito dopo vengono le banche. C’è poi una ragione interna che spesso si scopre strada facendo: le emissioni seguono i consumi di energia e di materiali, quindi misurarle significa anche trovare costi da tagliare. ETS e CBAM sono sigle che spieghiamo tra due slide.
+### SCHERMATA 31 — A ogni richiesta il suo strumento [table]
+Colonne: Chi chiede | Che cosa chiede | Che cosa serve | Riferimento
+- Cliente della grande distribuzione | Emissioni per kg di prodotto | Carbon footprint di prodotto | ISO 14067
+- Cliente capofiliera | Emissioni dell’azienda fornitrice | Inventario GHG dell’organizzazione | ISO 14064-1, GHG Protocol
+- Banca | Emissioni dirette e da energia, obiettivi | Inventario GHG e piano di riduzione | ISO 14064-1, GHG Protocol
+- Impresa tenuta alla rendicontazione di sostenibilità | Emissioni lorde di Scope 1, 2 e 3 | Inventario GHG completo | ESRS E1
+- Investitori e grandi clienti | Questionario sul clima | Inventario GHG, obiettivi, rischi | CDP (volontario)
+- Direzione aziendale | Dove e quanto si può ridurre | Inventario dettagliato per sorgente | Buona prassi
+ESRS E1 è lo standard europeo di rendicontazione sui cambiamenti climatici (Regolamento delegato (UE) 2023/2772). «Scope» indica le classi di emissioni: le vediamo nella sezione 8.
+Commento del docente: La tabella risponde alla domanda che ogni consulente dovrebbe porre al primo incontro: chi vi chiede il dato, e in quale forma? Se il cliente vuole i grammi di CO2e per confezione, un inventario aziendale non basta; se la banca vuole le emissioni dell’impresa, una carbon footprint di prodotto non serve. Sbagliare strumento significa rifare il lavoro. Il perimetro e i tempi della rendicontazione di sostenibilità sono stati oggetto di revisione: va sempre verificato il testo vigente.
+### SCHERMATA 32 — Obbligo di legge o scelta volontaria? [quad · Direttiva 2003/87/CE · Reg. (UE) 2023/956 · Direttiva (UE) 2024/825]
+Per la maggior parte delle PMI calcolare la carbon footprint non è un obbligo di legge: è una richiesta di mercato. Gli obblighi riguardano casi specifici.
+Assi: Organizzazione → Prodotto / Volontario → Obbligo
+- Obbligo di legge · organizzazione: EU ETS: scambio di quote per impianti industriali ed energetici, con monitoraggio e verifica annuale; Rendicontazione di sostenibilità (ESRS E1) per le imprese che vi rientrano
+- Obbligo di legge · prodotto: CBAM: adeguamento del carbonio alle frontiere per alcune merci importate (acciaio, alluminio, cemento, fertilizzanti…); Regole sulle asserzioni ambientali: niente vanti «verdi» non dimostrati
+- Scelta volontaria · organizzazione: Inventario secondo ISO 14064-1 o GHG Protocol; Questionario CDP; Obiettivi di riduzione
+- Scelta volontaria · prodotto: Carbon footprint di prodotto secondo ISO 14067; Dichiarazione ambientale di prodotto (EPD)
+Commento del docente: ETS sta per Emissions Trading System, il sistema europeo di scambio delle quote di emissione istituito dalla Direttiva 2003/87/CE. CBAM è il meccanismo di adeguamento del carbonio alle frontiere del Regolamento (UE) 2023/956. Qui bastano due righe: sono regimi regolati con regole proprie, diversi dall’inventario volontario di cui si occupa il corso. La Direttiva (UE) 2024/825 limita le asserzioni ambientali generiche e quelle fondate sulla sola compensazione: ne parleremo nell’unità 10; il recepimento nazionale va verificato. «Volontario» non significa «senza regole»: chi dichiara conformità a una norma deve rispettarne i requisiti.
+### SCHERMATA 33 — Caso studio: tre richieste in poche settimane [case]
+All’inizio del 2026 al Pastificio Terrafelix arrivano, quasi insieme, tre sollecitazioni diverse. L’amministratrice delegata Elena Marotta riunisce i responsabili per decidere come rispondere.
+- Giorgio Ferri (Commerciale): due clienti della grande distribuzione chiedono i dati di emissione dell’azienda e il valore per kg di pasta
+- Chiara Vitale (Amministrazione): la banca propone un finanziamento con condizioni legate a obiettivi di sostenibilità
+- Elena Marotta: la direzione vuole un piano di riduzione credibile, non uno slogan
+Domanda di lavoro: Basta un solo calcolo per rispondere a tutti e tre?
+Come ha operato l'azienda: No. La direzione decide due lavori distinti: l’inventario dei gas serra dell’organizzazione per l’anno 2025, secondo la ISO 14064-1, e la carbon footprint di 1 kg di pasta, secondo la ISO 14067. L’inventario servirà anche alla banca e sarà la base del piano di riduzione. Il coordinamento è affidato a Davide Russo, con il supporto del consulente EVALIS.
+Commento del docente: Il caso mostra una situazione molto comune: richieste diverse che sembrano uguali. Il cliente chiede sia il dato dell’azienda sia quello del prodotto, cioè entrambe le carbon footprint; la banca guarda all’organizzazione e ai suoi obiettivi; la direzione ha bisogno del dettaglio per decidere dove investire. Partire dall’inventario di organizzazione è la scelta più efficiente, perché molti dati raccolti (gas, elettricità, materie prime, trasporti) saranno riutilizzati per il calcolo di prodotto.
+
+## SEZIONE 7 — Le norme di riferimento
+### SCHERMATA 34 — Le norme di riferimento [section]
+Per contare allo stesso modo servono regole comuni. Le famiglie sono due, il GHG Protocol e le norme ISO, e si parlano tra loro. Qui costruiamo la mappa: i dettagli arriveranno nelle unità successive.
+- Due famiglie di standard, una sola logica
+- Quale norma per quale oggetto
+- Quando sono nate le regole
+- Standard volontari, non leggi
+### SCHERMATA 35 — La mappa degli standard sui gas serra [tree]
+Sono tutti standard volontari: dicono come si conta, non obbligano a contare.
+Radice: Le regole del conteggio (standard internazionali)
+- GHG Protocol (elaborato da WRI e WBCSD): Corporate Standard: l’organizzazione; Scope 2 Guidance: l’energia acquistata; Scope 3 Standard: la catena del valore; Product Standard: il prodotto
+- ISO 14064 (organizzazioni, progetti, verifica): Parte 1: inventario dell’organizzazione; Parte 2: progetti di riduzione o rimozione; Parte 3: verifica e validazione
+- ISO 14067 (prodotti): Carbon footprint di prodotto; Basata sulla LCA (ISO 14040 e ISO 14044)
+- ISO 14068-1 (neutralità carbonica): Quantificare, ridurre, compensare il residuo; Ha sostituito la PAS 2060
+In Italia la ISO 14064-1:2018 è pubblicata come UNI EN ISO 14064-1:2019.
+Commento del docente: Il GHG Protocol nasce dalla collaborazione tra due organizzazioni internazionali, il World Resources Institute (WRI) e il World Business Council for Sustainable Development (WBCSD): è il riferimento più diffuso nel mondo e ha introdotto il linguaggio degli «scope». Le norme ISO sono quelle su cui si basano la verifica accreditata e la certificazione. Non sono alternative in conflitto: la ISO 14064-1 e il GHG Protocol portano a risultati coerenti, con una classificazione delle emissioni diversa. Molte aziende calcolano secondo la ISO e presentano i risultati anche per scope.
+### SCHERMATA 36 — Quale norma per quale oggetto [table · GHG Protocol · ISO 14064 · ISO 14067 · ISO 14068-1]
+Colonne: Standard | Oggetto | Che cosa si ottiene | Nel corso
+- GHG Protocol Corporate Standard | Organizzazione | Inventario delle emissioni per Scope 1, 2 e 3 | Unità 3–7
+- ISO 14064-1 | Organizzazione | Inventario e rapporto GHG, con emissioni in sei categorie | Unità 3–7
+- ISO 14064-2 | Progetto | Riduzioni o rimozioni di gas serra ottenute da un progetto | Unità 10 (cenni)
+- ISO 14064-3 | Dichiarazioni sui gas serra | Verifica o validazione indipendente, con garanzia ragionevole o limitata | Unità 7
+- ISO 14067 | Prodotto | Carbon footprint di prodotto, completa o parziale | Unità 8
+- ISO 14068-1 | Neutralità carbonica | Percorso: quantificare, ridurre, compensare solo il residuo, dichiarare | Unità 10
+Distinguere sempre: requisito di una norma (vale per chi sceglie di applicarla), obbligo di legge, buona prassi.
+Commento del docente: La colonna «oggetto» è la chiave di lettura: organizzazione, progetto, prodotto. Chi verifica un inventario lo fa secondo la ISO 14064-3, e gli organismi di verifica sono a loro volta accreditati, in Italia da ACCREDIA. In questo corso le norme sono presentate in forma sintetica e rielaborata: per applicarle occorre il testo ufficiale. Quando in aula qualcuno dice «la norma obbliga a…» chiedete sempre: quale norma, e per chi? Una norma volontaria contiene requisiti, non obblighi di legge.
+### SCHERMATA 37 — Quando sono nate le regole [timeline]
+- 2004 — GHG Protocol Corporate Standard: Edizione riveduta: principi, confini, Scope 1, 2 e 3.
+- 2011 — Scope 3 e Product Standard: Le 15 categorie della catena del valore e il ciclo di vita dei prodotti.
+- 2015 — Scope 2 Guidance: Doppio calcolo dell’elettricità: per rete e per contratto.
+- 2018 — ISO 14064-1 e ISO 14067: Inventario dell’organizzazione e carbon footprint di prodotto.
+- 2019 — ISO 14064-3: Verifica e validazione delle dichiarazioni sui gas serra.
+- 2023 — ISO 14068-1: Neutralità carbonica; sostituisce la PAS 2060.
+Fonte dei dati: WRI/WBCSD, GHG Protocol; ISO
+Commento del docente: Le date servono a due cose pratiche. La prima: riconoscere i documenti superati. Chi cita ancora la PAS 2060 per la neutralità carbonica usa un riferimento sostituito dalla ISO 14068-1. La seconda: capire perché gli standard si somigliano. Le norme ISO sono arrivate dopo il GHG Protocol e ne hanno ripreso l’impostazione, aggiungendo requisiti più stringenti sulle emissioni indirette e sul rapporto finale. Nei documenti di gara o nei questionari dei clienti controllate sempre l’edizione richiesta.
+
+## SEZIONE 8 — Scope 1, 2 e 3 a colpo d’occhio
+### SCHERMATA 38 — Scope 1, 2 e 3 a colpo d’occhio [section]
+È la classificazione più usata al mondo: divide le emissioni in tre classi secondo il punto in cui avvengono rispetto all’azienda. Qui serve solo l’immagine d’insieme; l’unità 3 la tratterà in dettaglio.
+- L’immagine dei cancelli dello stabilimento
+- Emissioni dirette e indirette
+- Esempi per ciascuno scope
+- Le sei categorie della ISO 14064-1 in anteprima
+### SCHERMATA 39 — Dentro i cancelli, energia comprata, tutto il resto [flow · GHG Protocol · Scope 1, 2, 3]
+Seguiamo il percorso di un prodotto: dai fornitori, attraverso lo stabilimento, fino al cliente. «Scope» significa ambito.
+1. A monte · Scope 3: Ciò che i fornitori emettono per produrre e consegnare materie prime, imballaggi, macchinari, carburanti.
+2. Energia comprata · Scope 2: Le emissioni delle centrali che producono l’elettricità o il calore che l’azienda acquista e consuma.
+3. Dentro i cancelli · Scope 1: Ciò che esce da camini, tubi di scarico e impianti posseduti o controllati dall’azienda.
+4. A valle · Scope 3: Distribuzione, uso e fine vita dei prodotti venduti.
+Scope 1 = emissioni dirette. Scope 2 e Scope 3 = emissioni indirette: conseguenza delle attività dell’azienda, ma prodotte da sorgenti di altri.
+Commento del docente: L’immagine dei cancelli funziona bene in aula. Scope 1: l’azienda brucia o disperde qualcosa con impianti e veicoli propri. Scope 2: l’azienda accende un interruttore, ma il camino è quello della centrale. Scope 3: tutto ciò che accade prima e dopo, nelle mani di fornitori, trasportatori, clienti. L’ordine dei numeri non indica l’importanza: per moltissime aziende lo Scope 3 è di gran lunga la parte più grande, come vedremo tra poco nel caso studio.
+### SCHERMATA 40 — Esempi per ciascuno scope [quad · GHG Protocol · Scope 1, 2, 3]
+Quattro riquadri per orientarsi: le emissioni dirette, l’energia acquistata e le due metà dello Scope 3.
+- Scope 1 · emissioni dirette: Gas naturale bruciato in caldaie e forni; Carburante dei veicoli aziendali; Perdite di gas refrigeranti; Emissioni di processi chimici
+- Scope 2 · energia acquistata: Elettricità prelevata dalla rete; Calore o vapore acquistati; Raffrescamento acquistato
+- Scope 3 · a monte: Materie prime e imballaggi acquistati; Trasporti in arrivo; Rifiuti prodotti; Viaggi di lavoro e pendolarismo
+- Scope 3 · a valle: Trasporto e distribuzione dei prodotti; Uso dei prodotti venduti; Fine vita dei prodotti venduti
+Commento del docente: Lo Scope 1 comprende quattro tipi di sorgente: combustione in impianti fissi, combustione nei veicoli, emissioni di processo ed emissioni fuggitive, cioè le perdite. Lo Scope 3 è articolato dal GHG Protocol in 15 categorie, otto a monte e sette a valle: le vedremo una per una nelle unità 3 e 6. Un caso che genera sempre domande: l’auto del dipendente usata per venire al lavoro è Scope 3 (pendolarismo), l’auto aziendale è Scope 1. La differenza la fa chi possiede o controlla il veicolo, non chi lo guida.
+### SCHERMATA 41 — Anteprima: gli scope e le sei categorie ISO 14064-1 [table · ISO 14064-1 · categorie 1–6]
+La ISO 14064-1 non parla di scope ma di sei categorie. La corrispondenza è di massima, non un’identità.
+Colonne: GHG Protocol | In parole semplici | ISO 14064-1 (corrispondenza indicativa)
+- Scope 1 | Ciò che l’azienda brucia o disperde | Categoria 1 – emissioni e rimozioni dirette
+- Scope 2 | Elettricità, calore e vapore acquistati | Categoria 2 – emissioni indirette da energia importata
+- Scope 3 (trasporti e spostamenti) | Trasporti a monte e a valle, viaggi di lavoro, pendolarismo | Categoria 3 – emissioni indirette da trasporto
+- Scope 3 (acquisti) | Beni e servizi acquistati, beni strumentali, rifiuti, energia a monte | Categoria 4 – emissioni indirette da prodotti utilizzati dall’organizzazione
+- Scope 3 (prodotti venduti) | Uso e fine vita dei prodotti venduti, investimenti | Categoria 5 – emissioni indirette associate all’uso dei prodotti dell’organizzazione
+- Scope 3 (altro) | Ciò che non rientra nelle voci precedenti | Categoria 6 – emissioni indirette da altre sorgenti
+Nel corso useremo entrambe le classificazioni, indicando sempre quale.
+Commento del docente: Non serve memorizzare ora la tabella: basta sapere che le due classificazioni esistono e che si possono tradurre l’una nell’altra con buona approssimazione. La ISO 14064-1 chiede inoltre di valutare le emissioni indirette delle categorie da 3 a 6 con criteri di significatività definiti dall’organizzazione: quelle significative si quantificano, le esclusioni si motivano. Errore tipico: scrivere «Scope 3, categoria 4» senza precisare se la categoria è quella della ISO o una delle 15 del GHG Protocol. I numeri coincidono, i contenuti no.
+
+## SEZIONE 9 — Il caso studio: Pastificio Terrafelix
+### SCHERMATA 42 — Il caso studio: Pastificio Terrafelix [section]
+Per tutto il corso faremo i conti di una sola azienda, di fantasia ma realistica. Qui la presentiamo e, come in un giallo raccontato dalla fine, mostriamo subito il risultato: nelle prossime unità ricostruiremo come ci si arriva.
+- Il profilo dell’azienda
+- Le persone del progetto
+- I risultati in anteprima
+- Che cosa ci insegna la prima lettura
+### SCHERMATA 43 — Caso studio: il profilo dell’azienda [case]
+Il Pastificio Terrafelix S.r.l. ha sede in una zona industriale della provincia di Caserta. Produce pasta secca di semola di grano duro, in astucci di cartoncino e sacchetti in film, a marchio proprio e per la grande distribuzione.
+- 90 dipendenti, 36 milioni di euro di fatturato, 20.000 t di pasta prodotte nel 2025
+- Tre linee di produzione ed essiccazione alimentate a gas naturale
+- Impianto fotovoltaico da 450 kWp sul tetto: 600.000 kWh autoconsumati nell’anno
+- Flotta di 4 furgoni e 8 auto; carrelli elevatori elettrici
+- Vendite: Italia 70%, Europa 20%, oltremare 10%
+- Sistemi già presenti: ISO 9001, ISO 14001, IFS Food
+Come ha operato l'azienda: Il 2025 è il primo anno per cui l’azienda calcola l’inventario dei gas serra: diventerà l’anno di riferimento (anno base) per misurare i progressi futuri. Lo stabilimento è uno solo e non ci sono società partecipate.
+Commento del docente: Abbiamo scelto un pastificio perché ha tutto ciò che serve per imparare: un grande consumo di gas per l’essiccazione, molta elettricità, una flotta, impianti frigoriferi, una materia prima agricola, imballaggi, trasporti in Italia e all’estero e un prodotto che il consumatore deve cuocere. I dati sono inventati ma coerenti tra loro, e resteranno identici in tutte le unità. Segnatevi i due numeri che useremo più spesso: 20.000 tonnellate di pasta e 90 dipendenti.
+### SCHERMATA 44 — Le persone del progetto [tree]
+L’amministratrice delegata Elena Marotta affida il coordinamento dell’inventario a Davide Russo. I dati arrivano da quattro uffici.
+Radice: Davide Russo (Responsabile Ambiente ed energia · coordinatore dell’inventario)
+- Chiara Vitale (Amministrazione e controllo): Bollette; Fatture; Spese
+- Michele Santoro (Acquisti e logistica): Materie prime; Imballaggi; Trasporti
+- Rosa Iannone (Produzione): Quantità prodotte; Consumi delle linee
+- Giorgio Ferri (Commerciale): Richieste dei clienti; Mercati di vendita
+- Consulente EVALIS (Supporto esterno): Metodo; Fattori di emissione
+Un inventario è un lavoro di squadra: chi coordina raramente possiede i dati.
+Commento del docente: L’organigramma di progetto insegna una cosa che i manuali dicono poco: la difficoltà di un inventario non è matematica, è organizzativa. Le moltiplicazioni sono semplici; il lavoro vero è ottenere il dato giusto dalla persona giusta, nel formato giusto. Per questo conviene coinvolgere fin dall’inizio l’amministrazione, che ha bollette e fatture, e gli acquisti, che conoscono quantità e fornitori. Nell’unità 3 vedremo come si prepara un piano di raccolta dei dati con ruoli e scadenze.
+### SCHERMATA 45 — I risultati in anteprima: le emissioni del 2025 per scope [donut]
+Totale dell’inventario: 21.692,5 t CO2e (con l’elettricità calcolata con il fattore medio della rete nazionale).
+Totale al centro: 21.692,5 t CO2e
+- Scope 1 – emissioni dirette: 2257,8t (10,4%)
+- Scope 2 – elettricità acquistata: 752t (3,5%)
+- Scope 3 – catena del valore: 18.682,7t (86,1%)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: La somma è 2.257,8 + 752 + 18.682,7 = 21.692,5 tonnellate di CO2e. In percentuale: Scope 1 10,4%, Scope 2 3,5%, Scope 3 86,1%. Il valore dello Scope 2 è quello calcolato con il metodo detto location-based, cioè con il fattore medio della rete elettrica nazionale; esiste un secondo metodo, basato sui contratti di fornitura, che studieremo nell’unità 5. Le emissioni della cottura della pasta a casa dei consumatori, 8.416 t CO2e, non sono comprese nel totale: l’azienda le riporta a parte, e nell’unità 6 vedremo perché.
+### SCHERMATA 46 — Le tre voci più grandi del pastificio, una per scope [calc]
+Tre moltiplicazioni spiegano quasi l’80% dell’inventario. Sono già la formula che useremo per tutto il corso.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Scope 1 · Gas naturale di essiccatoi e centrale termica (dato: bollette del gas dell’anno): 1.050.000 Sm³ × 2 kg CO2e/Sm³ = 2.100.000 kg CO2e
+- Scope 2 · Elettricità prelevata dalla rete (dato: bollette elettriche dell’anno): 3.200.000 kWh × 0,235 kg CO2e/kWh = 752.000 kg CO2e
+- Scope 3 · Semola di grano duro acquistata (dato: fatture e documenti di trasporto del molino): 20.600.000 kg × 0,7 kg CO2e/kg = 14.420.000 kg CO2e
+Totale delle tre voci: 17.272.000 kg CO2e
+In tonnellate: 17.272 t CO2e
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: I tre risultati sono 2.100 t, 752 t e 14.420 t di CO2e: insieme 17.272 t, cioè il 79,6% del totale di 21.692,5 t. È una lezione di metodo: in ogni inventario poche voci fanno la maggior parte del risultato, ed è su quelle che conviene avere i dati migliori. Guardate anche dove si trovano i dati: bollette e fatture, documenti che l’amministrazione ha già. I fattori sono arrotondati a scopo didattico; nella pratica si usa la fonte ufficiale aggiornata all’anno dell’inventario e la si cita nel rapporto.
+### SCHERMATA 47 — Tre percentuali che sorprendono [stats]
+- 86,1%: quota dello Scope 3: la maggior parte delle emissioni avviene fuori dai cancelli (18.682,7 t su 21.692,5 t)
+- 66,5%: quota della sola semola di grano duro: una materia prima pesa due terzi del totale (14.420 t su 21.692,5 t)
+- 13,9%: quota di Scope 1 e Scope 2 insieme: ciò che l’azienda controlla direttamente (3.009,8 t su 21.692,5 t)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Chi entra in un pastificio vede essiccatoi, tubazioni del gas, quadri elettrici: viene naturale pensare che le emissioni siano lì. I numeri dicono altro: 2.257,8 + 752 = 3.009,8 tonnellate, meno di un settimo del totale. Il resto è nei campi di grano, nei molini, negli imballaggi e nei trasporti. Non vale per tutte le aziende: un’impresa che brucia molto combustibile e compra poche materie prime ha un profilo opposto. Proprio per questo si misura: l’intuizione non basta.
+### SCHERMATA 48 — Caso studio: la prima lettura dei risultati [case]
+Davide Russo presenta l’anteprima all’amministratrice delegata. Elena Marotta si aspettava che il gas degli essiccatoi fosse di gran lunga la voce principale.
+- Gas naturale: 2.100 t CO2e, pari al 9,7% del totale
+- Semola acquistata: 14.420 t CO2e, pari al 66,5% del totale
+- Cottura della pasta a casa dei consumatori: 8.416 t CO2e, riportate a parte
+Domanda di lavoro: Su che cosa deve lavorare l’azienda, se la voce più grande non dipende direttamente da lei?
+Come ha operato l'azienda: La direzione decide di lavorare su due fronti. Sul gas e sull’elettricità, che l’azienda controlla direttamente, fisserà obiettivi di riduzione. Sulla semola avvierà un confronto con il molino per ottenere dati specifici e valutare filiere a minore impatto. La cottura resta un’informazione a parte, utile per la carbon footprint del prodotto.
+Commento del docente: Il 9,7% si ottiene da 2.100 ÷ 21.692,5; il 66,5% da 14.420 ÷ 21.692,5. È il tipo di lettura che un inventario rende possibile: senza numeri, la discussione si sarebbe fermata agli essiccatoi. Notate la prudenza sulla semola: il fattore usato è un valore medio, e prima di prendere decisioni su una voce così grande conviene chiedere dati al fornitore. Il piano di riduzione completo è materia dell’unità 9; qui interessa capire che contare serve a decidere.
+
+## SEZIONE 10 — Il metodo del corso e gli strumenti
+### SCHERMATA 49 — Il metodo del corso e gli strumenti [section]
+Tutti i calcoli del corso, dal più semplice al più complesso, usano la stessa formula e le stesse cinque domande. Lo strumento è un normale foglio di calcolo. In questa sezione li proviamo su una piccola azienda.
+- La formula base in anteprima
+- Le cinque domande di ogni calcolo
+- Un primo esempio completo
+- Prova tu con il calcolatore
+- Come si scrive una riga del foglio di calcolo
+### SCHERMATA 50 — Una sola formula per tutto il corso [key · Formula base]
+Emissioni (kg CO2e) = dato di attività × fattore di emissione. Il dato di attività dice quanto si è consumato o percorso; il fattore di emissione dice quanti kg di CO2e produce ogni unità di quel consumo.
+- Dato di attività: Sm³ di gas, litri di carburante, kWh, km, kg di materiali
+- Fattore di emissione: kg CO2e per Sm³, per litro, per kWh, per km, per kg
+- Le unità devono combaciare: litri con «per litro», kWh con «per kWh»
+Commento del docente: L’abbiamo già usata senza dirlo: 10.000 km × 0,17 kg CO2e/km, 800 Sm³ × 2,0 kg CO2e/Sm³. Anche la conversione dei gas con il GWP è la stessa cosa: la massa del gas è il dato, il GWP è il fattore. L’unità 2 è dedicata per intero a questa formula: dove si trovano i dati, come si scelgono i fattori, come si gestiscono le unità di misura. Per ora basta un’abitudine: prima di moltiplicare, leggere l’unità del dato e quella del fattore e controllare che si corrispondano.
+### SCHERMATA 51 — Le cinque domande di ogni calcolo [flow]
+Una traccia da seguire sempre, per ogni riga dell’inventario.
+1. 1. Che cosa?: Quale sorgente sto contando: la caldaia, il furgone, la bolletta elettrica.
+2. 2. Quanto?: Il dato di attività con la sua unità, e il documento da cui lo leggo.
+3. 3. Quale fattore?: Il fattore di emissione adatto, espresso nella stessa unità del dato.
+4. 4. Quale fonte?: Chi pubblica il fattore e a quale anno si riferisce: lo scrivo accanto al conto.
+5. 5. Quale risultato?: Moltiplico, ottengo i kg di CO2e, divido per 1.000. Il numero è plausibile?
+Se manca la risposta a una delle cinque domande, il calcolo non è finito.
+Commento del docente: Le prime due domande riguardano l’azienda, la terza e la quarta le fonti esterne, la quinta il controllo. La quarta è quella che i principianti saltano più spesso: un numero senza fonte non è verificabile, e in un inventario reale chi controlla chiederà da dove viene ogni fattore. La quinta domanda contiene il controllo di plausibilità: è qui che servono gli ordini di grandezza della sezione 5. Ritroverete questo schema in tutte le slide di calcolo del corso: voce, dato con il suo documento, fattore con la sua fonte, risultato.
+### SCHERMATA 52 — Un primo esempio completo: una piccola azienda di impiantistica [calc]
+Dieci addetti, un ufficio con magazzino riscaldato a gas, due furgoni a gasolio. Applichiamo le cinque domande a tre sorgenti.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Gas naturale per il riscaldamento (dato: somma delle bollette del gas dell’anno): 3000 Sm³ × 2 kg CO2e/Sm³ = 6000 kg CO2e
+- Elettricità prelevata dalla rete (dato: somma delle bollette elettriche dell’anno): 20.000 kWh × 0,235 kg CO2e/kWh = 4700 kg CO2e
+- Gasolio dei due furgoni (dato: schede carburante e fatture dei rifornimenti): 2500 l × 2,65 kg CO2e/l = 6625 kg CO2e
+Totale: 17.325 kg CO2e
+In tonnellate: 17,325 t CO2e
+Gas e gasolio sono emissioni dirette (Scope 1); l’elettricità acquistata è Scope 2.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Riga per riga: 3.000 × 2,0 = 6.000 kg; 20.000 × 0,235 = 4.700 kg; 2.500 × 2,65 = 6.625 kg. Totale 17.325 kg, cioè circa 17,3 tonnellate di CO2e. È plausibile? Una tonnellata vale 500 Sm³ di gas: 3.000 Sm³ danno sei tonnellate, il conto torna. Notate che due furgoni emettono più del riscaldamento di tutta la sede. Mancano ancora i gas refrigeranti e tutto lo Scope 3: è un primo passo, non un inventario completo. I fattori sono arrotondati a scopo didattico.
+### SCHERMATA 53 — Prova tu: le emissioni di una piccola azienda [sim]
+Parti dai dati dell’esempio e cambiali. Che cosa succede al totale se i furgoni diventano quattro (5.000 litri)? E se i consumi elettrici si dimezzano?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Gas naturale: 3000 Sm³ × 2 kg CO2e/Sm³ = 6000 kg CO2e
+- Elettricità prelevata dalla rete: 20.000 kWh × 0,235 kg CO2e/kWh = 4700 kg CO2e
+- Gasolio: 2500 l × 2,65 kg CO2e/l = 6625 kg CO2e
+- Benzina: 0 l × 2,3 kg CO2e/l = 0 kg CO2e
+Totale iniziale: 17.325 kg CO2e
+In tonnellate: 17,325 t CO2e
+Con i valori iniziali il totale è 17.325 kg CO2e, cioè circa 17,3 t CO2e.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Il calcolatore fa ciò che farà il vostro foglio di calcolo: una moltiplicazione per riga e una somma. Provate i due scenari proposti. Con 5.000 litri di gasolio la riga dei furgoni sale a 13.250 kg e il totale a 23.950 kg; dimezzando l’elettricità a 10.000 kWh la riga scende a 2.350 kg e il totale, con i dati di partenza, a 14.975 kg. Si capisce subito su quale voce un intervento sposta di più il risultato. Potete anche inserire i dati di un’azienda che conoscete: le bollette di un anno bastano.
+### SCHERMATA 54 — Lo strumento: una riga del foglio di calcolo [table]
+Non serve un software dedicato: un foglio di calcolo ordinato è sufficiente. Ogni sorgente è una riga, con queste colonne.
+Colonne: Colonna | Che cosa contiene | Esempio
+- Sorgente | Che cosa sto contando | Riscaldamento a gas della sede
+- Dato di attività | Quantità e unità di misura | 3.000 Sm³
+- Documento | Dove ho letto il dato | Bollette da gennaio a dicembre
+- Fattore di emissione | Valore e unità di misura | 2,0 kg CO2e/Sm³
+- Fonte del fattore | Chi lo pubblica e per quale anno | Fonte ufficiale dell’anno dell’inventario
+- Emissioni | Dato × fattore, in kg e in t | 6.000 kg CO2e = 6,0 t CO2e
+- Note | Stime, ipotesi, dati mancanti | Dicembre stimato sul consumo dell’anno precedente
+Le sette colonne corrispondono alle cinque domande, più il documento di origine e le note.
+Commento del docente: Un foglio costruito così ha due pregi. Chiunque può rifare il conto e arrivare allo stesso numero, e l’anno successivo basta aggiornare dati e fattori. L’errore tipico è scrivere solo il risultato, o inserire il fattore dentro la formula della cella senza indicarne la fonte: dopo sei mesi nessuno sa più da dove venga quel 2,0. Nell’unità 2 vedremo in dettaglio come documentare dati e ipotesi; per ora ricordate la regola: un numero, una fonte.
+### SCHERMATA 55 — Avvertenza sui fattori di emissione del corso [key · ISPRA, Rapporto 413/2025]
+I fattori usati negli esempi sono valori arrotondati a scopo didattico, scelti per rendere leggibili i conti. In un inventario reale si usa la fonte ufficiale aggiornata all’anno di riferimento e la si cita nel rapporto.
+- Elettricità: 0,235 è l’arrotondamento del dato ISPRA 2023 (234,7 g CO2/kWh)
+- Gas naturale: 2,0 arrotonda il parametro nazionale ISPRA (circa 1,98 kg CO2/Sm³)
+- Fonti tipiche: ISPRA, DEFRA, IPCC, AIB, banche dati LCA, dati dei fornitori
+Commento del docente: Ripeteremo questa avvertenza più volte, perché è il punto su cui un corso può fare danni: i numeri degli esempi non vanno copiati in un inventario vero. I fattori cambiano ogni anno. Quello dei consumi elettrici italiani pubblicato da ISPRA era 293,0 g CO2/kWh nel 2022, 234,7 nel 2023 e 198,9 nel 2024 come stima preliminare: a parità di consumi, il risultato cambia. DEFRA è il ministero britannico che pubblica ogni anno una raccolta di fattori molto usata; AIB è l’associazione europea che pubblica i dati sui mix elettrici residui. Delle fonti parleremo nell’unità 2.
+
+## SEZIONE 11 — Il percorso in dieci unità
+### SCHERMATA 56 — Il percorso in dieci unità [section]
+Ora che il quadro è chiaro, vediamo come è organizzato il corso: dieci unità, ventiquattro ore, una logica che segue il lavoro reale di chi costruisce un inventario e una carbon footprint di prodotto.
+- Le dieci unità e le ore
+- La logica: capire, impostare, calcolare, usare i risultati
+- Il calendario del progetto al pastificio
+- Come è fatta ogni unità
+### SCHERMATA 57 — Le dieci unità del corso: 24 ore in tutto [bar]
+Le unità più lunghe sono quelle di calcolo: Scope 1, Scope 3 e carbon footprint di prodotto.
+- 1 · Concetti di base: 2h
+- 2 · La formula del conteggio: 2,5h
+- 3 · Impostare l’inventario: 2h
+- 4 · Calcolare lo Scope 1: 3h
+- 5 · Calcolare lo Scope 2: 2,5h
+- 6 · Calcolare lo Scope 3: 3h
+- 7 · Rapporto, incertezza, verifica: 2h
+- 8 · Carbon footprint di prodotto: 3h
+- 9 · Ridurre le emissioni: 2h
+- 10 · Compensare e comunicare: 2h
+Fonte dei dati: Programma del corso FAD-CFP-01, EVALIS Academy
+Commento del docente: Ogni unità ha la stessa struttura: dodici sezioni, cinque verifiche intermedie che sbloccano le slide successive e un esame finale di dodici domande, superato con almeno nove risposte corrette. Le unità 4, 5 e 6 sono il cuore operativo: lì si fanno, voce per voce, tutti i conti dell’inventario del pastificio. Consiglio di seguire l’ordine: ogni unità usa strumenti introdotti nelle precedenti, a partire dalla formula e dalle unità di misura dell’unità 2.
+### SCHERMATA 58 — La logica del percorso [flow]
+Il corso segue l’ordine con cui si lavora davvero in azienda.
+1. Capire: Unità 1–2: concetti, formula, dati, fattori, unità di misura.
+2. Impostare: Unità 3: confini, scope e categorie, anno base.
+3. Calcolare: Unità 4–6: Scope 1, Scope 2, Scope 3, voce per voce.
+4. Consolidare: Unità 7: totali, incertezza, rapporto GHG, verifica.
+5. Passare al prodotto: Unità 8: carbon footprint di 1 kg di pasta.
+6. Ridurre: Unità 9: obiettivi e piano di decarbonizzazione.
+7. Comunicare: Unità 10: compensazione, dichiarazioni, esercitazione finale.
+Commento del docente: La sequenza non è casuale: è quella di un progetto reale. Prima si decide che cosa contare, poi si conta, poi si mette insieme e si controlla, infine si usano i risultati per ridurre e per comunicare. Saltare l’impostazione, cioè l’unità 3, è l’errore più costoso: chi parte a raccogliere dati senza aver definito i confini scopre a metà lavoro di aver dimenticato una sede o di aver contato due volte un consumo. L’ultima unità si chiude con un inventario completo da svolgere in autonomia su una nuova azienda.
+### SCHERMATA 59 — Il calendario del progetto al Pastificio Terrafelix (2026) [gantt]
+L’inventario riguarda il 2025 e si calcola l’anno successivo, quando tutti i dati sono disponibili.
+- Avvio e confini: Gen → Gen
+- Raccolta dati Scope 1 e 2: Feb → Mar
+- Scope 3: Apr → Mag
+- Consolidamento, incertezza, rapporto GHG: Giu → Giu
+- Verifica di terza parte: Lug → Lug
+- Carbon footprint di prodotto: Set → Ott
+- Piano di riduzione e obiettivi: Nov → Nov
+- Comunicazione ai clienti: Dic → Dic
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il calendario dà un’idea realistica dei tempi: un primo inventario completo richiede circa sei mesi di lavoro non continuativo, più la verifica. La parte più lunga è la raccolta dei dati, soprattutto per lo Scope 3, che dipende dalle risposte dei fornitori. La carbon footprint di prodotto viene dopo, perché riutilizza molti dati dell’inventario. Notate l’ordine delle ultime due attività: prima il piano di riduzione, poi la comunicazione ai clienti. Comunicare numeri non ancora verificati è un rischio da evitare.
+
+## SEZIONE 12 — Sintesi dell’unità
+### SCHERMATA 60 — Sintesi dell’unità [section]
+Abbiamo costruito il vocabolario e fatto i primi conti. Prima dell’esame ripassiamo ciò che occorre saper fare, gli errori di linguaggio da evitare e un ultimo calcolo che mette insieme tutto.
+- Che cosa occorre saper fare
+- Le parole giuste e quelle sbagliate
+- Un ultimo conto di ripasso
+- I punti chiave e la prossima unità
+### SCHERMATA 61 — Autovalutazione: che cosa so fare dopo questa unità [checklist]
+- Elencare i sette gas serra: e dire dove si trovano in un’azienda
+- Spiegare la differenza tra CO2 e CO2e: un gas contro l’unità comune a tutti i gas
+- Convertire un gas in CO2e: massa del gas × GWP, dichiarando la serie IPCC usata
+- Passare da kg a tonnellate: dividendo per 1.000 alla fine del calcolo
+- Distinguere organizzazione e prodotto: ISO 14064-1 e GHG Protocol da una parte, ISO 14067 dall’altra
+- Collocare una sorgente nello scope giusto: dentro i cancelli, energia comprata, tutto il resto
+- Applicare la formula base: dato di attività × fattore di emissione
+- Giudicare la plausibilità di un risultato: con gli ordini di grandezza: 1 t = 500 Sm³ di gas
+Commento del docente: Usate questa lista come controllo onesto prima dell’esame. Se una voce non è chiara, tornate alla sezione corrispondente: i gas alla sezione 2, la CO2 equivalente alla 3, la distinzione tra organizzazione e prodotto alla 4, gli ordini di grandezza alla 5, gli scope alla 8, la formula alla 10. Le ultime due voci sono le più importanti per il seguito del corso: saper moltiplicare un dato per un fattore e saper dire, a occhio, se il risultato sta in piedi.
+### SCHERMATA 62 — Le parole giuste e quelle sbagliate [two]
+Colonna «Corretto»:
+- «L’inventario 2025 è di 21.692,5 t CO2e»: unità, anno e oggetto dichiarati
+- «1 kg di pasta: 1,47 kg CO2e dalla culla alla tomba»: confine dichiarato
+- «Abbiamo ridotto le emissioni del 10% rispetto all’anno base»
+- «Compensiamo le emissioni residue con crediti, dichiarati a parte»
+- «GWP dell’IPCC, Sesto rapporto (AR6)»: serie dichiarata
+Colonna «Sbagliato»:
+- «Emettiamo 21.692,5 tonnellate di CO2»: è CO2e, comprende tutti i gas
+- «La nostra pasta emette 1,47»: manca l’unità e manca il confine
+- «Azienda a impatto zero», senza numeri né metodo
+- «Abbiamo ridotto le emissioni comprando crediti»: compensare non è ridurre
+- «Carbon footprint» usato per dire «impatto ambientale» in generale
+Commento del docente: Gli errori di linguaggio non sono dettagli di forma: un’unità sbagliata o un confine non dichiarato rendono il numero inutilizzabile per chi lo riceve. Le espressioni come «impatto zero» o «neutro per il clima», quando si fondano sulla sola compensazione, sono oggi nel mirino della normativa europea sulle asserzioni ambientali e possono configurare comunicazione ingannevole. Il 10% della terza riga è un esempio di formulazione, non un dato del caso studio. Dedicheremo a dichiarazioni e comunicazione l’unità 10.
+### SCHERMATA 63 — Caso studio: la frase per il sito aziendale [case]
+Giorgio Ferri, responsabile Commerciale, propone di pubblicare subito sul sito del Pastificio Terrafelix la frase: «La nostra pasta è a impatto zero: emissioni di CO2 sotto controllo». Davide Russo chiede di fermarsi un momento.
+- L’inventario 2025 è appena stato calcolato: 21.692,5 t CO2e, non ancora verificato da terzi
+- Il risultato è in CO2e, non in CO2: comprende anche i gas refrigeranti
+- Nessuna azione di riduzione è stata ancora realizzata e non sono stati acquistati crediti
+Domanda di lavoro: Che cosa c’è di sbagliato nella frase, e che cosa si può dire correttamente oggi?
+Come ha operato l'azienda: La frase viene ritirata: «impatto zero» non è dimostrabile e confonde misura e risultato. L’azienda decide di comunicare, dopo la verifica di luglio, solo ciò che può documentare: che ha misurato le proprie emissioni di gas serra per il 2025 secondo la ISO 14064-1, quanto valgono e che sta preparando un piano di riduzione.
+Commento del docente: È un caso tipico: l’entusiasmo commerciale arriva prima dei numeri. Misurare non significa essere «verdi», significa sapere da dove si parte. Una comunicazione corretta dice che cosa è stato misurato, con quale norma, per quale anno e con quale risultato, e non promette più di ciò che è stato fatto. Notate i tre errori concentrati in una riga: CO2 al posto di CO2e, «impatto zero» senza fondamento, una carbon footprint presentata come giudizio ambientale complessivo.
+### SCHERMATA 64 — Un ultimo conto di ripasso: tre righe, due tipi di calcolo [calc]
+Un piccolo laboratorio alimentare. Due righe usano un fattore di emissione, la terza un GWP: la moltiplicazione è la stessa.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Gas naturale del forno (dato: bollette dell’anno · fattore di emissione): 1200 Sm³ × 2 kg CO2e/Sm³ = 2400 kg CO2e
+- Elettricità prelevata dalla rete (dato: bollette dell’anno · fattore di emissione): 15.000 kWh × 0,235 kg CO2e/kWh = 3525 kg CO2e
+- Ricarica di R-410A della cella frigorifera (dato: rapporto del frigorista · GWP AR6): 0,5 kg × 2256 kg CO2e/kg = 1128 kg CO2e
+Totale: 7053 kg CO2e
+In tonnellate: 7,053 t CO2e
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); GWP: IPCC AR6
+Commento del docente: I tre prodotti: 1.200 × 2,0 = 2.400 kg; 15.000 × 0,235 = 3.525 kg; 0,5 × 2.256 = 1.128 kg. Totale 7.053 kg, cioè circa 7,1 tonnellate di CO2e. Mezzo chilogrammo di gas refrigerante pesa il 16% del totale: quasi la metà di tutto il gas bruciato in un anno. Chi avesse dimenticato quella riga avrebbe dichiarato 5.925 kg, sottostimando di oltre una tonnellata. È il riassunto dell’unità: stessi passaggi, unità giuste, nessuna sorgente dimenticata.
+### SCHERMATA 65 — I punti chiave dell’unità [summary]
+1. L’effetto serra è naturale; le attività umane lo rafforzano emettendo gas serra (GHG). Riscaldamento osservato: circa 1,1 °C.
+2. I gas degli inventari sono sette: CO2, CH4, N2O, HFC, PFC, SF6, NF3. In una PMI contano soprattutto la CO2 delle combustioni e gli HFC dei circuiti frigoriferi.
+3. La CO2e è l’unità comune: massa del gas × GWP a 100 anni. Si dichiara la serie IPCC usata e non se ne mescolano due.
+4. La carbon footprint è un numero calcolato: di organizzazione (t CO2e in un anno) o di prodotto (kg CO2e per unità, lungo il ciclo di vita).
+5. Ordini di grandezza: 1 t CO2e vale circa 5.882 km in auto, 500 Sm³ di gas, 4.255 kWh, 377 litri di gasolio (fattori didattici).
+6. Norme: GHG Protocol e ISO 14064-1 per l’organizzazione, ISO 14067 per il prodotto, ISO 14064-3 per la verifica, ISO 14068-1 per la neutralità.
+7. Scope 1 dentro i cancelli, Scope 2 energia comprata, Scope 3 tutto il resto. Pastificio Terrafelix: 21.692,5 t CO2e, per l’86,1% Scope 3.
+8. Formula base: emissioni = dato di attività × fattore di emissione; si calcola in kg e si presenta in tonnellate.
+9. I fattori del corso sono arrotondati a scopo didattico: nella pratica si usa la fonte ufficiale aggiornata e la si cita.
+Commento del docente: Nella prossima unità apriamo la cassetta degli attrezzi: la formula del conteggio vista da vicino. Impareremo dove si trovano i dati di attività in azienda, come si legge e si sceglie un fattore di emissione, come si convertono le unità di misura e come si documenta un calcolo perché altri possano verificarlo. Portate con voi tre cose da questa unità: la differenza tra CO2 e CO2e, la distinzione tra organizzazione e prodotto e l’abitudine di chiedersi sempre se un risultato è plausibile.

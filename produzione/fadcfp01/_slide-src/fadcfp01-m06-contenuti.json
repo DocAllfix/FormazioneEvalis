@@ -1,0 +1,1354 @@
+[
+ {
+  "id": "fadcfp01_m06_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 6",
+  "titolo": "Scope 3 sposta il baricentro climatico",
+  "corsoLabel": "Carbon Footprint · ISO 14064-1 · ISO 14067",
+  "eyebrow": "Modulo 6",
+  "sottotitolo": "Nel modulo: perché lo Scope 3 domina il totale; come leggere interno, monte e valle; dove si concentra Terrafelix; perché acquisti e filiera diventano centrali; come trasformare influenza indiretta in priorità operative.",
+  "agenda": [
+   "Lo stesso inventario in due linguaggi",
+   "I quattro metodi di calcolo Scope 3",
+   "Quando la spesa altera il segnale climatico",
+   "Il metodo si sceglie voce per voce",
+   "Precisione utile, non falsa precisione"
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s002",
+  "layout": "organigramma",
+  "kicker": "Classificazione",
+  "titolo": "Lo stesso inventario in due linguaggi",
+  "intro": "GHG Protocol e ISO 14064-1 non creano due inventari diversi: riordinano lo stesso Scope 3 con logiche differenti. Conoscerle entrambe serve a dialogare con clienti, consulenti e verificatori senza rifare i conti.",
+  "radice": {
+   "h": "Scope 3 Terrafelix",
+   "d": "18.682,7 t CO2e"
+  },
+  "rami": [
+   {
+    "h": "ISO 3 — Trasporti",
+    "d": "1.998,3 t CO2e",
+    "voci": [
+     "A monte 402,6 t",
+     "A valle 1.486 t",
+     "Viaggi 28,9 t",
+     "Pendolarismo 80,8 t"
+    ]
+   },
+   {
+    "h": "ISO 4 — Prodotti utilizzati",
+    "d": "16.578,4 t CO2e",
+    "voci": [
+     "Acquisti 15.696 t",
+     "Beni strumentali 280 t",
+     "Energia a monte 566,6 t",
+     "Rifiuti 35,8 t"
+    ]
+   },
+   {
+    "h": "ISO 5 — Uso dei prodotti",
+    "d": "106 t CO2e",
+    "voci": [
+     "Fine vita imballaggi 106 t",
+     "Cottura 8.416 t, a parte"
+    ]
+   },
+   {
+    "h": "ISO 6 — Altre sorgenti",
+    "d": "Nessuna voce",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s003",
+  "layout": "piramide",
+  "kicker": "Metodi di calcolo",
+  "titolo": "I quattro metodi di calcolo Scope 3",
+  "intro": "I quattro metodi non sono alternative ideologiche: indicano quanto il dato descrive la filiera reale e quanta fatica richiede raccoglierlo. Si migliora dove il peso emissivo giustifica lo sforzo.",
+  "livelli": [
+   {
+    "h": "Specifico del fornitore",
+    "d": "Emissioni dichiarate dal fornitore per il suo prodotto"
+   },
+   {
+    "h": "Ibrido",
+    "d": "Dati del fornitore dove esistono, dati medi per il resto"
+   },
+   {
+    "h": "Dati medi",
+    "d": "Quantità acquistata moltiplicata per fattore medio di banca dati"
+   },
+   {
+    "h": "Spesa",
+    "d": "Euro spesi per fattore per euro: rapido, meno preciso"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s004",
+  "layout": "calcolo",
+  "kicker": "Metodi di calcolo",
+  "titolo": "Quando la spesa altera il segnale climatico",
+  "intro": "Lo stesso acquisto può sembrare più o meno emissivo solo perché cambia il metodo. Qui il focus è sul conteggio basato sull’importo, il più rapido ma anche il più esposto a prezzi e condizioni commerciali.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Cartone per imballaggi",
+    "n": "euro dalla contabilità · fattore per euro: valore didattico",
+    "a": 48000,
+    "au": "€",
+    "ef": 0.6,
+    "efu": "kg CO2e/€"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 28800,
+  "fonte": "Esempio didattico – prezzo e fattore per euro sono valori didattici"
+ },
+ {
+  "id": "fadcfp01_m06_s005",
+  "layout": "confronto",
+  "kicker": "Scelta del metodo",
+  "titolo": "Il metodo si sceglie voce per voce",
+  "intro": "La scelta del metodo non parte da preferenze teoriche. Parte dal dato davvero disponibile e cambia da voce a voce, anche dentro la stessa categoria, seguendo una logica semplice e difendibile.",
+  "a": {
+   "h": "Tre domande guida",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Quale dato abbiamo già"
+    },
+    {
+     "d": "È quantità, distanza o sola spesa"
+    },
+    {
+     "d": "Il fornitore può dare un dato credibile"
+    }
+   ]
+  },
+  "b": {
+   "h": "Applicazione Terrafelix",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Semola, imballaggi, acqua: dati medi"
+    },
+    {
+     "d": "Linea di confezionamento: spesa"
+    },
+    {
+     "d": "Trasporti, viaggi, pendolarismo: chilometri e distanze"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m06_s006",
+  "layout": "cards",
+  "kicker": "Qualità del dato",
+  "titolo": "Precisione utile, non falsa precisione",
+  "intro": "Uno Scope 3 utile deve essere solido, spiegabile e migliorabile. La gerarchia dei metodi serve a distribuire lo sforzo di raccolta, non a premiare dati sofisticati ma opachi.",
+  "cards": [
+   {
+    "h": "Dato del fornitore",
+    "d": "Affidabile solo con anno, confini e unità chiari"
+   },
+   {
+    "h": "Metodo ibrido",
+    "d": "Normale quando migliori prima le voci grandi"
+   },
+   {
+    "h": "Dati medi",
+    "d": "Robusti e ripetibili se la quantità è affidabile"
+   },
+   {
+    "h": "Spend-based",
+    "d": "Utile dove manca altro, non per forzare precisione"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s007",
+  "layout": "flusso",
+  "kicker": "Screening",
+  "titolo": "Screening in cinque passi",
+  "intro": "Prima del dettaglio serve una stima rapida dell’intero perimetro. Lo screening evita di partire dalle voci più comode e aiuta a concentrare tempo, dati e verifiche dove l’impatto è davvero significativo.",
+  "passi": [
+   {
+    "h": "1. Mappa completa",
+    "d": "Elenca tutte le quindici categorie"
+   },
+   {
+    "h": "2. Stima rapida",
+    "d": "Usa dati già disponibili, anche grezzi"
+   },
+   {
+    "h": "3. Criteri ex ante",
+    "d": "Definisci la significatività prima dei risultati"
+   },
+   {
+    "h": "4. Decisione",
+    "d": "Quantifica, escludi o dichiara non applicabile"
+   },
+   {
+    "h": "5. Approfondimento",
+    "d": "Raffina solo le categorie che contano"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s008",
+  "layout": "tabella",
+  "kicker": "Priorità",
+  "titolo": "Dove pesa davvero lo Scope 3",
+  "cols": [
+   "Categoria GHG",
+   "t CO2e"
+  ],
+  "righe": [
+   [
+    "1 — Beni e servizi acquistati",
+    "15.696"
+   ],
+   [
+    "9 — Trasporto a valle",
+    "1.486"
+   ],
+   [
+    "3 — Energia a monte",
+    "566,6"
+   ],
+   [
+    "4 — Trasporto a monte",
+    "402,6"
+   ],
+   [
+    "2 — Beni strumentali",
+    "280"
+   ],
+   [
+    "12 — Fine vita dei prodotti",
+    "106"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s009",
+  "layout": "tabella",
+  "kicker": "Confini e trasparenza",
+  "titolo": "Che cosa resta fuori dal totale",
+  "cols": [
+   "Categoria",
+   "Trattamento",
+   "Motivo"
+  ],
+  "righe": [
+   [
+    "8 — Leasing a monte",
+    "Non applicabile",
+    "Stabilimento di proprietà; veicoli già in Scope 1"
+   ],
+   [
+    "10 — Lavorazione da terzi",
+    "Non applicabile",
+    "La pasta è un prodotto finito"
+   ],
+   [
+    "13 — Leasing a valle",
+    "Non applicabile",
+    "Nessun bene dato in leasing"
+   ],
+   [
+    "14 — Franchising",
+    "Non applicabile",
+    "Nessuna rete in franchising"
+   ],
+   [
+    "15 — Investimenti",
+    "Non applicabile",
+    "Nessuna partecipazione o attività finanziaria"
+   ],
+   [
+    "11 — Uso dei prodotti",
+    "Riportata a parte",
+    "Cottura del cliente con ipotesi dichiarate"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s010",
+  "layout": "evidenza",
+  "kicker": "Scope 3 · Categoria 1",
+  "titolo": "Categoria 1: l’acquistato guida il risultato",
+  "eyebrow": "",
+  "testo": "Per molte aziende manifatturiere la voce decisiva dello Scope 3 nasce fuori dal cancello: quantità acquistate, non output di produzione. È qui che si decide la qualità dell’inventario e dove conviene cercare dati migliori.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m06_s011",
+  "layout": "calcolo",
+  "kicker": "Scope 3 · Categoria 1",
+  "titolo": "La semola concentra il cuore dell’inventario",
+  "intro": "La semola concentra la maggior parte dello Scope 3 di Terrafelix. Il conto mostra perché il dato di attività corretto è l’acquistato annuo e non i chilogrammi di pasta prodotta.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Semola di grano duro",
+    "n": "20.600 t = 20.600.000 kg · fattore medio: coltivazione del grano e molitura",
+    "a": 20600000,
+    "au": "kg",
+    "ef": 0.7,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 14420000,
+  "piede": "Errore tipico: usare i 20.000.000 kg di pasta prodotta al posto dei 20.600.000 kg di semola acquistata. Per fare 1 kg di pasta servono 1,03 kg di semola.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s012",
+  "layout": "calcolo",
+  "kicker": "Scope 3 · Categoria 1",
+  "titolo": "Imballaggi e acqua si calcolano separatamente",
+  "intro": "Dopo la semola, la categoria uno resta leggibile solo se ogni materiale mantiene la propria unità e il proprio fattore. Tre righe distinte evitano errori e rendono il risultato ripetibile.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Astucci e cartoni",
+    "n": "900 t da fatture e DDT",
+    "a": 900000,
+    "au": "kg",
+    "ef": 0.9,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Film plastico",
+    "n": "160 t da fatture e DDT",
+    "a": 160000,
+    "au": "kg",
+    "ef": 2.8,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Acqua di rete",
+    "n": "m³ fatturati nell’anno",
+    "a": 60000,
+    "au": "m³",
+    "ef": 0.3,
+    "efu": "kg CO2e/m³"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 1276000,
+  "piede": "Categoria 1 in totale: 14.420 + 810 + 448 + 18 = 15.696 t CO2e.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s013",
+  "layout": "confronto",
+  "kicker": "Qualità del dato",
+  "titolo": "Quando passare dal medio al fornitore",
+  "intro": "Nella categoria uno conviene migliorare prima la voce che pesa di più. La richiesta al fornitore deve essere tecnica, precisa e deve chiarire anche se il trasporto è già incluso.",
+  "a": {
+   "h": "Dato medio",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Disponibile subito"
+    },
+    {
+     "d": "Richiede quantità acquistata"
+    },
+    {
+     "d": "Adatto al primo inventario"
+    },
+    {
+     "d": "Descrive la categoria, non il fornitore"
+    }
+   ]
+  },
+  "b": {
+   "h": "Dato del fornitore",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Numero coerente con l’unità usata"
+    },
+    {
+     "d": "Anno di riferimento attuale"
+    },
+    {
+     "d": "Confine: dal campo all’uscita molino"
+    },
+    {
+     "d": "Metodo chiaro, meglio se verificato"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m06_s014",
+  "layout": "calcolo",
+  "kicker": "Scope 3 · Categoria 2",
+  "titolo": "I beni strumentali contano nell’anno d’acquisto",
+  "intro": "Nella categoria due si guarda alla fabbricazione e consegna del bene acquistato. Le emissioni si riconoscono interamente nell’anno d’investimento, non lungo l’ammortamento contabile.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Linea di confezionamento",
+    "n": "investimento 2025, dal registro dei beni ammortizzabili · fattore per euro dei macchinari",
+    "a": 800000,
+    "au": "€",
+    "ef": 0.35,
+    "efu": "kg CO2e/€"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 280000,
+  "piede": "Tutte le 280 t CO2e entrano nell’inventario 2025. Un anno senza investimenti avrà questa categoria vicina a zero: è normale, e va spiegato nel rapporto.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s015",
+  "layout": "ciclo",
+  "kicker": "Scope 3 · Categoria 3",
+  "titolo": "Categoria 3: la filiera prima del contatore",
+  "intro": "Qui non compri un bene nuovo: allarghi il perimetro a ciò che accade prima dell’uso finale di gas, carburanti ed elettricità. I dati di attività restano gli stessi; cambia il fattore.",
+  "ciclo": false,
+  "centro": "Energia a monte",
+  "nodi": [
+   {
+    "h": "Gas naturale",
+    "d": "Estrazione, trattamento, trasporto prima della combustione"
+   },
+   {
+    "h": "Carburanti liquidi",
+    "d": "Estrazione, raffinazione e distribuzione del combustibile"
+   },
+   {
+    "h": "Elettricità acquistata",
+    "d": "Filiera dei combustibili e perdite di rete"
+   },
+   {
+    "h": "Regola operativa",
+    "d": "Usare fattori di filiera, non di combustione"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s016",
+  "layout": "calcolo",
+  "kicker": "Scope 3 · Categoria 3",
+  "titolo": "Il conto completo della filiera energetica",
+  "intro": "Con gli stessi consumi già raccolti per Scope 1 e 2 si aggiunge la filiera a monte dell’energia. Il numero finale non sostituisce gli altri scope: li completa.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gas naturale",
+    "n": "gli stessi Sm³ dello Scope 1",
+    "a": 1050000,
+    "au": "Sm³",
+    "ef": 0.33,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Gasolio",
+    "n": "38.000 l della flotta + 1.500 l del gruppo elettrogeno",
+    "a": 39500,
+    "au": "l",
+    "ef": 0.62,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Benzina",
+    "n": "gli stessi litri dello Scope 1",
+    "a": 6000,
+    "au": "l",
+    "ef": 0.6,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Elettricità di rete",
+    "n": "gli stessi kWh dello Scope 2 · filiera a monte e perdite di rete",
+    "a": 3200000,
+    "au": "kWh",
+    "ef": 0.06,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 566590,
+  "piede": "566.590 kg = 566,6 t CO2e. Errore tipico: dimenticare la categoria, oppure usare il fattore di combustione (2 kg CO2e/Sm³) e contare così due volte lo Scope 1.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s017",
+  "layout": "numeri",
+  "kicker": "Trasporti · Unità di misura",
+  "titolo": "Tre esempi per capire la tonnellata-chilometro",
+  "intro": "La tkm unisce peso e distanza in una misura sola. Funziona solo se il peso è espresso in tonnellate: lasciare i chilogrammi nel conto moltiplica l’errore per mille.",
+  "numeri": [
+   {
+    "n": "0,1 tkm",
+    "h": "20 kg per 5 km",
+    "d": ""
+   },
+   {
+    "n": "200 tkm",
+    "h": "Bancale da 800 kg per 250 km",
+    "d": ""
+   },
+   {
+    "n": "10.000 tkm",
+    "h": "25 tonnellate per 400 km",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s018",
+  "layout": "calcolo",
+  "kicker": "Scope 3 · Categoria 4",
+  "titolo": "Il trasporto in entrata dipende da peso, km e mezzo",
+  "intro": "Nel trasporto in entrata contano insieme tonnellate, distanza e mezzo scelto. Il caso Terrafelix mostra anche un ordine di grandezza ricorrente: la logistica pesa meno della produzione della materia prima.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Semola dal molino",
+    "n": "20.600 t × 180 km = 3.708.000 tkm",
+    "a": 20600,
+    "au": "t",
+    "ef": 0.1,
+    "efu": "kg CO2e/tkm",
+    "k": 180,
+    "ku": "km"
+   },
+   {
+    "l": "Imballaggi dai fornitori",
+    "n": "900 t di cartone + 160 t di film = 1.060 t × 300 km = 318.000 tkm",
+    "a": 1060,
+    "au": "t",
+    "ef": 0.1,
+    "efu": "kg CO2e/tkm",
+    "k": 300,
+    "ku": "km"
+   }
+  ],
+  "etichette": {
+   "a": "Peso trasportato",
+   "k": "Distanza"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 402600,
+  "piede": "402.600 kg = 402,6 t CO2e. Errore tipico: contare il trasporto due volte, qui e dentro un fattore del fornitore che lo comprende già.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s019",
+  "layout": "calcolo",
+  "kicker": "Categoria 9",
+  "titolo": "La distribuzione della pasta a valle",
+  "intro": "Nella distribuzione la formula non cambia, ma cambia la classificazione: queste emissioni stanno in categoria nove solo perché il trasporto è acquistato dal cliente dopo la vendita.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Italia, su gomma",
+    "n": "70% delle vendite · 6.300.000 tkm",
+    "a": 14000,
+    "au": "t",
+    "ef": 0.1,
+    "efu": "kg CO2e/tkm",
+    "k": 450,
+    "ku": "km"
+   },
+   {
+    "l": "Europa, su gomma",
+    "n": "20% delle vendite · 6.000.000 tkm",
+    "a": 4000,
+    "au": "t",
+    "ef": 0.1,
+    "efu": "kg CO2e/tkm",
+    "k": 1500,
+    "ku": "km"
+   },
+   {
+    "l": "Oltremare, via nave",
+    "n": "10% delle vendite · 16.000.000 tkm",
+    "a": 2000,
+    "au": "t",
+    "ef": 0.016,
+    "efu": "kg CO2e/tkm",
+    "k": 8000,
+    "ku": "km"
+   }
+  ],
+  "etichette": {
+   "a": "Peso trasportato",
+   "k": "Distanza"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 1486000,
+  "piede": "L’oltremare percorre 8.000 km ma emette meno dell’Europa (256 t contro 600 t): la nave ha un fattore oltre sei volte più basso del camion.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s020",
+  "layout": "simulatore",
+  "kicker": "Trasporti",
+  "titolo": "Stesso flusso, mezzo diverso, risultato diverso",
+  "intro": "A parità di tonnellate-chilometro, spostare una quota del flusso europeo dal camion al treno riduce molto il totale. Il simulatore serve a vedere l’effetto senza cambiare il volume.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Su gomma (camion)",
+    "v": 6000000,
+    "u": "tkm",
+    "ef": 0.1,
+    "efu": "kg CO2e/tkm"
+   },
+   {
+    "l": "Su ferro (treno merci)",
+    "v": 0,
+    "u": "tkm",
+    "ef": 0.028,
+    "efu": "kg CO2e/tkm"
+   },
+   {
+    "l": "Via nave",
+    "v": 0,
+    "u": "tkm",
+    "ef": 0.016,
+    "efu": "kg CO2e/tkm"
+   }
+  ],
+  "piede": "Il dato di attività qui è già in tkm: tonnellate × km. Dividere a metà le tonnellate tra due mezzi sulla stessa distanza significa dividere a metà le tkm.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m06_s021",
+  "layout": "organigramma",
+  "kicker": "Classificazione",
+  "titolo": "La categoria segue chi compra il trasporto",
+  "intro": "Tra categoria quattro e categoria nove decide il contratto, non la direzione della merce. Per classificare bene una tratta devono allinearsi condizioni di vendita, organizzazione del flusso e fattura del vettore.",
+  "radice": {
+   "h": "Domanda standard",
+   "d": "Il servizio di trasporto è pagato da noi oppure da cliente o fornitore?"
+  },
+  "rami": [
+   {
+    "h": "Commerciale",
+    "d": "Legge le condizioni di vendita",
+    "voci": [
+     "Ritiro del cliente",
+     "Consegna resa al cliente"
+    ]
+   },
+   {
+    "h": "Logistica",
+    "d": "Conosce tratta, mezzo e momento",
+    "voci": [
+     "Flussi a monte",
+     "Flussi a valle"
+    ]
+   },
+   {
+    "h": "Amministrazione",
+    "d": "Verifica chi riceve la fattura",
+    "voci": [
+     "Vettore pagato dall’azienda",
+     "Vettore pagato da terzi"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s022",
+  "layout": "tabella",
+  "kicker": "Raccolta dati",
+  "titolo": "Le sette colonne della scheda trasporti",
+  "cols": [
+   "Colonna",
+   "Contenuto",
+   "Funzione"
+  ],
+  "righe": [
+   [
+    "1",
+    "Flusso",
+    "Identifica la tratta"
+   ],
+   [
+    "2",
+    "Peso in tonnellate",
+    "Base del dato"
+   ],
+   [
+    "3",
+    "Distanza in chilometri",
+    "Reale, stimata o media"
+   ],
+   [
+    "4",
+    "Mezzo prevalente",
+    "Camion, treno, nave"
+   ],
+   [
+    "5",
+    "Chi paga",
+    "Distingue cat. 4 e 9"
+   ],
+   [
+    "6",
+    "Fattore usato",
+    "Rende l’ipotesi leggibile"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s023",
+  "layout": "flusso",
+  "kicker": "Categoria 5",
+  "titolo": "I quattro passaggi della categoria rifiuti",
+  "intro": "Per i rifiuti il dato di attività esiste già nei registri aziendali. Il lavoro corretto consiste nel recuperarlo, separare i destini, applicare i fattori e sommare.",
+  "passi": [
+   {
+    "h": "Raccogliere i pesi annui",
+    "d": "Registro, formulari, dichiarazione annuale"
+   },
+   {
+    "h": "Separare per destino",
+    "d": "Recupero e smaltimento non equivalgono"
+   },
+   {
+    "h": "Associare il fattore corretto",
+    "d": "Coerente con l’unità di misura"
+   },
+   {
+    "h": "Moltiplicare e sommare",
+    "d": "Il trattamento esterno entra nello Scope 3"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s024",
+  "layout": "calcolo",
+  "kicker": "Categoria 5",
+  "titolo": "Recupero e smaltimento non pesano uguale",
+  "intro": "La categoria cinque pesa poco nello Scope 3, ma mostra una regola molto istruttiva: il destino finale può contare più della massa complessiva del rifiuto.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Rifiuti avviati a recupero",
+    "n": "sfridi, carta e cartone, plastica, legno · kg dal registro",
+    "a": 420000,
+    "au": "kg",
+    "ef": 0.021,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Rifiuti avviati a smaltimento",
+    "n": "rifiuti misti · kg dal registro",
+    "a": 60000,
+    "au": "kg",
+    "ef": 0.45,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 35820,
+  "piede": "Lo smaltimento è il 12,5% dei chili ma il 75,4% delle emissioni: il destino conta più del peso. Errore tipico: applicare un solo fattore a tutti i 480.000 kg.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s025",
+  "layout": "split",
+  "kicker": "Categoria 6",
+  "titolo": "Che cosa entra nella categoria sei",
+  "lead": "Nei viaggi di lavoro cambi unità di misura: non tonnellate-chilometro ma passeggeri-chilometro. La categoria comprende servizi di mobilità acquistati all’esterno e lascia fuori i mezzi sotto controllo diretto.",
+  "punti": [
+   {
+    "h": "Unità di calcolo",
+    "d": "Una persona trasportata per un chilometro"
+   },
+   {
+    "h": "Dentro categoria 6",
+    "d": "Voli, treni, taxi, auto privata in trasferta, hotel"
+   },
+   {
+    "h": "Fuori categoria 6",
+    "d": "Auto aziendali e carburanti già nello Scope 1"
+   },
+   {
+    "h": "Dato minimo",
+    "d": "Tratta, mezzo, persone, andata-ritorno, notti"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s026",
+  "layout": "calcolo",
+  "kicker": "Categoria 6",
+  "titolo": "La stessa trasferta in treno",
+  "intro": "La stessa missione può dare risultati molto diversi anche con distanze maggiori. Qui il punto non è quanto si viaggia, ma l’intensità emissiva del mezzo scelto.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Treno andata e ritorno",
+    "n": "800 km a tratta × 2 = 1.600 km (distanza indicativa)",
+    "a": 1600,
+    "au": "km",
+    "ef": 0.035,
+    "efu": "kg CO2e/pkm",
+    "k": 2,
+    "ku": "persone"
+   },
+   {
+    "l": "Hotel",
+    "n": "una notte a testa",
+    "a": 2,
+    "au": "notti",
+    "ef": 15,
+    "efu": "kg CO2e/notte"
+   }
+  ],
+  "etichette": {
+   "a": "Dato di attività",
+   "k": "Persone"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 142,
+  "piede": "142 kg CO2e contro 498 kg. Il treno percorre più chilometri, ma per il solo trasporto emette meno di un quarto dell’aereo: 112 kg contro 468 kg.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); distanze indicative"
+ },
+ {
+  "id": "fadcfp01_m06_s027",
+  "layout": "calcolo",
+  "kicker": "Categoria 6",
+  "titolo": "I viaggi annuali in tre blocchi",
+  "intro": "Per chiudere la categoria sei non serve inseguire ogni titolo di viaggio: basta aggregare le trasferte in poche famiglie omogenee e ricostruire passeggeri-chilometro e notti.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Voli a corto raggio",
+    "n": "per esempio 100 viaggi di andata e ritorno da 1.200 km in media (ripartizione illustrativa)",
+    "a": 120000,
+    "au": "pkm",
+    "ef": 0.18,
+    "efu": "kg CO2e/pkm"
+   },
+   {
+    "l": "Treno",
+    "n": "per esempio 50 viaggi di andata e ritorno da 1.600 km (ripartizione illustrativa)",
+    "a": 80000,
+    "au": "pkm",
+    "ef": 0.035,
+    "efu": "kg CO2e/pkm"
+   },
+   {
+    "l": "Pernottamenti",
+    "n": "notti in hotel dalle note spese",
+    "a": 300,
+    "au": "notti",
+    "ef": 15,
+    "efu": "kg CO2e/notte"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 28900,
+  "piede": "Errore tipico: contare solo l’andata, oppure inserire qui il carburante delle auto aziendali, che è già nello Scope 1.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s028",
+  "layout": "cards",
+  "kicker": "Categoria 7",
+  "titolo": "Le quattro domande del questionario pendolarismo",
+  "intro": "Nel pendolarismo il dato va costruito: questionario corto, supporto HR e ipotesi dichiarate. Con 72 risposte su 90, Terrafelix ottiene una base credibile da estendere con prudenza all'intero personale.",
+  "cards": [
+   {
+    "h": "Distanza giornaliera",
+    "d": "Andata e ritorno, non sola andata"
+   },
+   {
+    "h": "Mezzo abituale",
+    "d": "Auto, treno o altro mezzo prevalente"
+   },
+   {
+    "h": "Condivisione dell'auto",
+    "d": "Da soli o con altri passeggeri"
+   },
+   {
+    "h": "Giorni di presenza",
+    "d": "Presenze settimanali in sede"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s029",
+  "layout": "calcolo",
+  "kicker": "Categoria 7",
+  "titolo": "Chilometri annui del pendolarismo",
+  "intro": "Prima delle emissioni serve il dato di attività: persone, chilometri giornalieri completi e giorni di presenza. Il conto corretto evita sia la sola andata sia i 365 giorni.",
+  "unita": "km",
+  "righe": [
+   {
+    "l": "Tragitti casa-lavoro",
+    "n": "dal questionario: 24 km al giorno tra andata e ritorno",
+    "a": 90,
+    "au": "persone",
+    "ef": 24,
+    "efu": "km/giorno",
+    "k": 220,
+    "ku": "giorni"
+   }
+  ],
+  "etichette": {
+   "r": "Chilometri annui",
+   "a": "Persone",
+   "ef": "Km al giorno a persona",
+   "k": "Giorni di presenza"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 475200,
+  "piede": "Ogni dipendente percorre 24 × 220 = 5.280 km l’anno per venire al lavoro. Errore tipico: inserire i km di sola andata, oppure moltiplicare per 365 giorni.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s030",
+  "layout": "simulatore",
+  "kicker": "Categoria 7",
+  "titolo": "Quanto cambia il pendolarismo se cambia il mezzo",
+  "intro": "A parità di 5.280 chilometri annui per persona, l'impatto cambia molto con mezzo e occupazione del veicolo. È una categoria ideale per simulare abitudini diverse prima di agire.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "In auto, da soli",
+    "v": 90,
+    "u": "persone",
+    "ef": 897.6,
+    "efu": "kg CO2e/persona"
+   },
+   {
+    "l": "In auto, in due (auto condivisa)",
+    "v": 0,
+    "u": "persone",
+    "ef": 448.8,
+    "efu": "kg CO2e/persona"
+   },
+   {
+    "l": "In treno",
+    "v": 0,
+    "u": "persone",
+    "ef": 184.8,
+    "efu": "kg CO2e/persona"
+   },
+   {
+    "l": "A piedi o in bicicletta",
+    "v": 0,
+    "u": "persone",
+    "ef": 0,
+    "efu": "kg CO2e/persona"
+   }
+  ],
+  "piede": "Fattori annui a persona: 5.280 km × 0,17 = 897,6 kg in auto da soli; la metà (448,8 kg) viaggiando in due; 5.280 km × 0,035 = 184,8 kg in treno.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m06_s031",
+  "layout": "confronto",
+  "kicker": "Categoria 11",
+  "titolo": "Uso diretto e uso indiretto dei prodotti venduti",
+  "intro": "La distinzione decide come leggere la fase d'uso: quando l'energia è consumata dal prodotto venduto, il legame è diretto; quando dipende da attrezzature del cliente, il conteggio richiede uno scenario separato.",
+  "a": {
+   "h": "Uso diretto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Il prodotto consuma energia per funzionare"
+    },
+    {
+     "d": "Esempi: caldaia, automobile, frigorifero"
+    },
+    {
+     "d": "La fase d'uso rientra naturalmente nella categoria 11"
+    }
+   ]
+  },
+  "b": {
+   "h": "Uso indiretto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "L'energia è dell'attrezzatura del cliente"
+    },
+    {
+     "d": "Esempio: pasta cotta su fornello o piano"
+    },
+    {
+     "d": "Dato utile, ma da riportare separatamente"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m06_s032",
+  "layout": "calcolo",
+  "kicker": "Categoria 11",
+  "titolo": "La cottura della pasta come scenario dichiarato",
+  "intro": "Per la pasta non esiste una misura osservata in azienda: il risultato dipende da quote gas-elettricità, consumi per chilogrammo e fattori emissivi. Se cambiano le ipotesi, cambia il numero.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Cottura su fornello a gas (70%)",
+    "n": "0,22 Sm³ per kg di pasta × 2 kg CO2e/Sm³ = 0,44",
+    "a": 14000000,
+    "au": "kg pasta",
+    "ef": 0.44,
+    "efu": "kg CO2e/kg pasta"
+   },
+   {
+    "l": "Cottura su piano elettrico (30%)",
+    "n": "1,6 kWh per kg di pasta × 0,235 kg CO2e/kWh = 0,376",
+    "a": 6000000,
+    "au": "kg pasta",
+    "ef": 0.376,
+    "efu": "kg CO2e/kg pasta"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 8416000,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s033",
+  "layout": "calcolo",
+  "kicker": "Categoria 12",
+  "titolo": "Il fine vita degli imballaggi venduti",
+  "intro": "Qui non si contano i rifiuti dello stabilimento, ma il destino degli imballaggi che escono con il prodotto. La stessa massa può comparire in più categorie, purché riferita a fasi diverse.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Imballaggi venduti con la pasta",
+    "n": "1.060.000 kg · fattore medio tra riciclo e smaltimento",
+    "a": 1060000,
+    "au": "kg",
+    "ef": 0.1,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 106000,
+  "piede": "Errore tipico: confondere questa voce con la categoria 5. Lì ci sono i rifiuti dello stabilimento; qui gli imballaggi che il consumatore butta a casa propria.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s034",
+  "layout": "numeri",
+  "kicker": "Comunicazione al cliente",
+  "titolo": "Tre numeri, due perimetri, una risposta chiara",
+  "intro": "Quando il cliente chiede anche la fase d'uso, non si risponde con un solo totale: servono perimetro principale, cottura separata, eventuale somma estesa e nota sullo scenario utilizzato.",
+  "numeri": [
+   {
+    "n": "18.682,7",
+    "h": "Scope 3 principale",
+    "d": ""
+   },
+   {
+    "n": "8.416",
+    "h": "Cottura, riportata a parte",
+    "d": ""
+   },
+   {
+    "n": "27.098,7",
+    "h": "Totale esteso, solo se dichiarato",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s035",
+  "layout": "calcolo",
+  "kicker": "Riepilogo",
+  "titolo": "Il totale Scope 3 nasce dai conti completi",
+  "intro": "Il controllo finale si fa sui chilogrammi completi, poi si converte in tonnellate e si arrotonda alla fine. Così il totale resta coerente con tutti i calcoli precedenti.",
+  "unita": "t CO2e",
+  "righe": [
+   {
+    "l": "Cat. 1 – Beni e servizi acquistati",
+    "a": 15696000,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   },
+   {
+    "l": "Cat. 2 – Beni strumentali",
+    "a": 280000,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   },
+   {
+    "l": "Cat. 3 – Energia a monte",
+    "a": 566590,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   },
+   {
+    "l": "Cat. 4 – Trasporto a monte",
+    "a": 402600,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   },
+   {
+    "l": "Cat. 5 – Rifiuti",
+    "a": 35820,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   },
+   {
+    "l": "Cat. 6 – Viaggi di lavoro",
+    "a": 28900,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   },
+   {
+    "l": "Cat. 7 – Pendolarismo",
+    "a": 80784,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   },
+   {
+    "l": "Cat. 9 – Trasporto a valle",
+    "a": 1486000,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   },
+   {
+    "l": "Cat. 12 – Fine vita dei prodotti",
+    "a": 106000,
+    "au": "kg CO2e",
+    "ef": 0.001,
+    "efu": "t/kg"
+   }
+  ],
+  "etichette": {
+   "r": "Emissioni",
+   "a": "Emissioni calcolate",
+   "ef": "Conversione"
+  },
+  "dec": 1,
+  "totale": "Totale Scope 3",
+  "_atteso": 18682.694,
+  "piede": "Fuori dal totale, riportata a parte: fase d’uso (cottura) 8.416 t CO2e.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s036",
+  "layout": "ciambella",
+  "kicker": "Priorità",
+  "titolo": "Le priorità reali dello Scope 3",
+  "intro": "La lettura gestionale non segue la visibilità interna delle voci, ma il loro peso relativo. Qui quattro blocchi spiegano quasi tutto il profilo emissivo, mentre le altre cinque categorie restano marginali.",
+  "unita": "t CO2e",
+  "totale": {
+   "n": "18.682,7",
+   "eti": "Scope 3"
+  },
+  "voci": [
+   {
+    "l": "Cat. 1 – Beni e servizi acquistati",
+    "v": 15696
+   },
+   {
+    "l": "Cat. 9 – Trasporto a valle",
+    "v": 1486
+   },
+   {
+    "l": "Cat. 3 – Energia a monte",
+    "v": 566.6
+   },
+   {
+    "l": "Cat. 4 – Trasporto a monte",
+    "v": 402.6
+   },
+   {
+    "l": "Altre cinque categorie",
+    "v": 531.5
+   }
+  ],
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m06_s037",
+  "layout": "cards",
+  "kicker": "Governance del dato",
+  "titolo": "Scope 3 come processo distribuito",
+  "intro": "Il coordinatore dell’inventario presidia metodo e coerenza, ma i dati di attività stanno nelle funzioni. Per questo lo Scope 3 si governa come un processo aziendale, non come un foglio centralizzato.",
+  "cards": [
+   {
+    "h": "Metodo al coordinatore",
+    "d": "Perimetro, regole, fattori e riconciliazioni"
+   },
+   {
+    "h": "Dati alle funzioni",
+    "d": "Acquisti, logistica, HR, amministrazione, commerciale"
+   },
+   {
+    "h": "Richiesta standard",
+    "d": "Dato, unità, fonte interna, metodo previsto"
+   },
+   {
+    "h": "Beneficio operativo",
+    "d": "Meno file vaghi, meno versioni, più collaborazione"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s038",
+  "layout": "split",
+  "kicker": "Confini dell’inventario",
+  "titolo": "Il doppio conteggio si distingue così",
+  "lead": "La stessa emissione può comparire in inventari diversi lungo la filiera senza errore. Il problema nasce solo quando, nello stesso perimetro aziendale, duplico la medesima attività o la stessa riga contabile.",
+  "punti": [
+   {
+    "h": "Tra aziende diverse",
+    "d": "Normale: uno Scope 3 spesso è Scope 1 o 2 altrui"
+   },
+   {
+    "h": "Dentro lo stesso inventario",
+    "d": "Errore: stessa attività emissiva contata due volte"
+   },
+   {
+    "h": "Domanda guida",
+    "d": "È una fase diversa della filiera o la stessa già registrata"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s039",
+  "layout": "tabella",
+  "kicker": "Formula operativa",
+  "titolo": "Stessa formula, unità diverse",
+  "cols": [
+   "Categoria",
+   "Dato di attività",
+   "Fattore usato"
+  ],
+  "righe": [
+   [
+    "1 Acquisti",
+    "kg o m³ acquistati",
+    "0,7 semola; 0,9 cartone; 2,8 film; 0,3 acqua"
+   ],
+   [
+    "2 Beni strumentali",
+    "€ investiti nell’anno",
+    "0,35 per euro"
+   ],
+   [
+    "3 Energia a monte",
+    "Sm³, litri, kWh",
+    "0,33 gas; 0,62 gasolio; 0,6 benzina; 0,06 elettricità"
+   ],
+   [
+    "4 e 9 Trasporti",
+    "tonnellate-chilometro",
+    "0,1 camion; 0,028 treno; 0,016 nave"
+   ],
+   [
+    "5 Rifiuti",
+    "kg per destino finale",
+    "0,021 recupero; 0,45 smaltimento"
+   ],
+   [
+    "6 Viaggi di lavoro",
+    "pkm e notti",
+    "0,18 aereo; 0,035 treno; 15 per notte"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s040",
+  "layout": "flusso",
+  "kicker": "Verifica finale",
+  "titolo": "Checklist per uno Scope 3 difendibile",
+  "intro": "Prima del report finale, una verifica strutturata intercetta quasi tutti gli errori reali: categorie dimenticate, criteri opportunistici, unità incoerenti, fattori senza fonte, confini ambigui e ipotesi non documentate.",
+  "passi": [
+   {
+    "h": "Copertura e criteri",
+    "d": "Quindici categorie viste, applicabilità ed esclusioni motivate"
+   },
+   {
+    "h": "Unità e metodo",
+    "d": "Kg, m³, euro, tkm e pkm coerenti"
+   },
+   {
+    "h": "Fattori e fonti",
+    "d": "Origine, periodo e confine sempre espliciti"
+   },
+   {
+    "h": "Confini e presentazione",
+    "d": "Niente duplicazioni; ipotesi e tassi dichiarati"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m06_s041",
+  "layout": "chiusura",
+  "kicker": "Da portare con sé",
+  "titolo": "Le idee chiave sullo Scope 3",
+  "modNum": "06",
+  "punti": [
+   {
+    "h": "Catena del valore decisiva",
+    "d": "Lo Scope 3 definisce il profilo emissivo"
+   },
+   {
+    "h": "Formula stabile",
+    "d": "Dato di attività × fattore, cambia l’unità"
+   },
+   {
+    "h": "Metodo proporzionato",
+    "d": "Più precisione dove il peso è maggiore"
+   },
+   {
+    "h": "Priorità chiare",
+    "d": "Semola e logistica guidano le azioni"
+   }
+  ],
+  "prossimo": {
+   "modulo": "07",
+   "titolo": "Dai calcoli al rapporto: consolidare, valutare l’incertezza, verificare"
+  }
+ }
+]

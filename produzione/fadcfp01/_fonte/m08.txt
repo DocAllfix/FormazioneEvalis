@@ -1,0 +1,625 @@
+# UNITÀ 8 — La carbon footprint di prodotto (ISO 14067) (3 ore)
+Dall’azienda al prodotto: ciclo di vita, unità funzionale, confini, allocazione e il calcolo completo di 1 kg di pasta.
+Obiettivi di apprendimento:
+- Distinguere l’inventario di organizzazione dalla carbon footprint di prodotto e spiegare perché non sono intercambiabili
+- Definire unità funzionale, unità dichiarata, confine del sistema e criteri di esclusione con esempi numerici
+- Trasformare i dati annui dello stabilimento in dati per unità di prodotto
+- Applicare la gerarchia dell’allocazione e calcolare una ripartizione per massa e per valore economico
+- Calcolare fase per fase la carbon footprint di 1 kg di pasta, dalla culla al cancello e dalla culla alla tomba
+- Leggere, documentare e comunicare correttamente il risultato, senza confronti impropri e senza compensazioni
+
+## SEZIONE 1 — Dall’organizzazione al prodotto
+### SCHERMATA 1 — Dall’organizzazione al prodotto [section]
+Con l’unità 7 Terrafelix ha chiuso e fatto verificare l’inventario 2025: 21.692,5 t CO2e. Ora i clienti della grande distribuzione fanno una domanda diversa: quanto «pesa» un chilo di pasta? Per rispondere cambia l’oggetto del conto: non più un anno di attività dell’azienda, ma la vita di un prodotto.
+- Due domande diverse, due norme diverse
+- Il conto rapido: inventario diviso per la produzione
+- Perché quel conto non è una carbon footprint di prodotto
+- ISO 14067: la valutazione del ciclo di vita, solo per il clima
+### SCHERMATA 2 — Due oggetti, due conti [two · ISO 14064-1 · ISO 14067]
+Colonna «Inventario di organizzazione»:
+- Domanda: quanto emette l’azienda in un anno?
+- Oggetto: tutte le attività dentro i confini organizzativi
+- Classificazione: Scope 1, 2, 3 o categorie ISO 14064-1
+- Risultato: t CO2e per anno
+- Norme: ISO 14064-1, GHG Protocol
+Colonna «Carbon footprint di prodotto (CFP)»:
+- Domanda: quanto emette un’unità di prodotto nella sua vita?
+- Oggetto: i processi del ciclo di vita di quel prodotto
+- Classificazione: fasi del ciclo di vita
+- Risultato: kg CO2e per unità funzionale
+- Norma: ISO 14067, basata sulla valutazione del ciclo di vita (LCA)
+Commento del docente: La differenza non è di scala, è di prospettiva. L’inventario segue i confini dell’azienda e un anno solare: dentro c’è tutto ciò che l’organizzazione fa, compresi i viaggi dei commerciali e la nuova linea di confezionamento. La CFP segue un chilo di pasta dal campo al piatto: dentro c’è solo ciò che serve a quel chilo, ma anche ciò che accade dopo la vendita, come la cottura. Molti dati di partenza sono gli stessi (bollette, fatture, DDT): per questo chi ha già un inventario fa metà della strada.
+### SCHERMATA 3 — Il conto rapido: l’inventario diviso per la produzione [calc · Indicatore di intensità]
+È l’indicatore di intensità calcolato nell’unità 7: totale dell’inventario 2025 (Scope 1 + 2 location-based + 3, senza la cottura) diviso per i chili di pasta prodotti.
+Formula: Emissioni per kg = Totale dell’inventario × Conversione in kg ÷ Produzione annua
+- Inventario 2025 di Terrafelix (rapporto GHG verificato · produzione: 20.000 t di pasta): 21.692,5 t CO2e × 1000 kg/t ÷ 20.000.000 kg di pasta = 1,085 kg CO2e/kg
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: 21.692,5 t sono 21.692.500 kg; divisi per 20.000.000 kg di pasta danno 1,085 kg CO2e per kg. È un numero vero e utile: dice quanta parte dell’inventario «viaggia» con ogni chilo venduto e serve come controllo di plausibilità. Ma non è la carbon footprint del prodotto, e non va chiamato così. Tenetelo a mente: alla fine dell’unità lo confronteremo con il risultato calcolato secondo la ISO 14067 e spiegheremo la differenza voce per voce, fino all’ultimo grammo.
+### SCHERMATA 4 — Perché il conto rapido non basta [table · ISO 14067]
+Stessi dati di partenza, confini diversi: alcune voci dell’inventario non appartengono al prodotto, altre appartengono al prodotto ma non sono nell’inventario.
+Colonne: Aspetto | Inventario ÷ produzione | CFP secondo la ISO 14067
+- Confine | Quello dell’organizzazione | Quello del ciclo di vita del prodotto
+- Fase d’uso (cottura) | Fuori dal totale: 8.416 t riportate a parte | Dentro, se il confine è dalla culla alla tomba
+- Macchinari, viaggi, pendolarismo | Dentro (Scope 3) | Di norma fuori dal sistema prodotto, con scelta dichiarata
+- Più prodotti nello stesso impianto | Una media su tutto | Dati per prodotto, con regole di allocazione
+- Riferimento | Un anno di attività | Un’unità funzionale definita
+- Regole di confronto | Nessuna tra prodotti | Stessa unità funzionale, stessi confini, regole di categoria
+L’esclusione di beni strumentali e attività generali è una scelta dello studio (buona prassi diffusa): va dichiarata nel rapporto.
+Commento del docente: La riga più istruttiva è quella della cottura. Nell’inventario, secondo il GHG Protocol, le emissioni indirette della fase d’uso sono facoltative e Terrafelix le riporta a parte; in una CFP dalla culla alla tomba sono obbligatoriamente dentro, e valgono più di un quarto del risultato. Al contrario, la linea di confezionamento acquistata nel 2025 pesa 280 t nell’inventario ma non è «consumata» da un chilo di pasta. Dividere l’inventario per i chili mescola quindi cose che la CFP tiene separate.
+### SCHERMATA 5 — ISO 14067: le quattro fasi dello studio [flow · ISO 14067 · ISO 14040/14044]
+La CFP si quantifica con il metodo della valutazione del ciclo di vita (LCA: ISO 14040 e ISO 14044), limitato alla sola categoria di impatto «cambiamento climatico».
+1. Obiettivo e campo di applicazione: Perché si fa lo studio, per chi; unità funzionale, confine del sistema, criteri di esclusione.
+2. Analisi di inventario: Raccolta dei dati per ogni processo del ciclo di vita, riferiti all’unità funzionale.
+3. Valutazione dell’impatto: Conversione dei gas serra in CO2e con i GWP a 100 anni dell’IPCC.
+4. Interpretazione: Lettura dei risultati: fasi dominanti, limiti, qualità dei dati, conclusioni.
+Il conteggio resta quello di sempre: dato di attività × fattore di emissione. Cambiano il riferimento (l’unità di prodotto) e i confini (il ciclo di vita).
+Commento del docente: Chi conosce la LCA riconosce le quattro fasi classiche; chi non la conosce può leggerle così: decidere che cosa contare, raccogliere i dati, fare le moltiplicazioni, capire il risultato. In questa unità la prima fase occupa le sezioni 2 e 3, la seconda le sezioni 4 e 5, la terza le sezioni da 6 a 8, la quarta le sezioni 9–11. Una LCA completa guarda molte categorie di impatto (acqua, suolo, tossicità…); la ISO 14067 ne guarda una sola, il clima. Terrafelix svolge lo studio tra settembre e ottobre 2026, con i dati del 2025 già verificati.
+
+## SEZIONE 2 — Il ciclo di vita
+### SCHERMATA 6 — Il ciclo di vita [section]
+Un chilo di pasta non nasce nello stabilimento e non finisce sullo scaffale. Prima ci sono il campo e il molino, dopo ci sono il camion, la pentola e il bidone della raccolta differenziata. Il ciclo di vita è l’elenco ordinato di queste tappe.
+- Sei fasi, dalla materia prima al fine vita
+- Dalla culla al cancello e dalla culla alla tomba
+- La CFP parziale
+- L’anteprima dei risultati di Terrafelix
+### SCHERMATA 7 — Le sei fasi del ciclo di vita della pasta [flow · ISO 14067 · ciclo di vita]
+1. 1. Materie prime: Coltivazione del grano duro, molitura, trasporto della semola allo stabilimento.
+2. 2. Produzione: Impasto, trafilatura, essiccazione: gas naturale ed elettricità, con le loro filiere a monte.
+3. 3. Imballaggio: Astucci, cartoni e film plastico, compreso il loro trasporto.
+4. 4. Distribuzione: Dallo stabilimento ai mercati: Italia, Europa, oltremare.
+5. 5. Uso: La cottura a casa del consumatore: gas o elettricità.
+6. 6. Fine vita: Raccolta e trattamento dell’imballaggio usato.
+Le fasi 1–3 arrivano fino al cancello dello stabilimento («dalla culla al cancello»); con le fasi 4–6 si arriva «alla tomba».
+Commento del docente: Useremo queste sei fasi come indice del calcolo: una slide di conto per ciascuna, poi la somma. La suddivisione in fasi non è imposta in questa forma dalla norma: è una scelta dello studio (o delle regole di categoria, quando esistono) e serve a leggere il risultato. Notate che l’imballaggio è tenuto distinto dalla produzione: così si vede subito quanto vale e che cosa cambierebbe alleggerendo l’astuccio. Per chi ha seguito l’unità 6, le fasi 1, 3, 4, 5 e 6 sono in gran parte «pezzi» dello Scope 3 riletti per chilo.
+### SCHERMATA 8 — Fino al cancello o fino alla tomba? [two · ISO 14067 · confine del sistema]
+Colonna «Dalla culla al cancello (CFP parziale)»:
+- Comprende materie prime, produzione, imballaggio
+- Si ferma all’uscita dallo stabilimento
+- Si riferisce a un’unità dichiarata, per esempio 1 kg di pasta confezionata al cancello
+- Adatta ai rapporti tra aziende: il cliente aggiunge le sue fasi
+- Va sempre presentata come parziale
+Colonna «Dalla culla alla tomba (CFP completa)»:
+- Comprende tutte le sei fasi
+- Arriva fino a distribuzione, uso e fine vita
+- Si riferisce a un’unità funzionale, per esempio 1 kg di pasta cotta e consumata
+- Richiede scenari dichiarati su uso e fine vita
+- È il quadro intero del prodotto
+Commento del docente: Nessuno dei due confini è «più giusto»: rispondono a domande diverse. Il buyer della grande distribuzione che deve sommare la pasta al proprio trasporto e ai propri negozi chiede di solito il dato al cancello; chi vuole capire dove intervenire sull’intero prodotto guarda il dato alla tomba, perché solo lì compare la cottura. L’errore tipico è confrontare un numero al cancello con uno alla tomba: per la pasta di Terrafelix sono 0,97 e 1,47 kg CO2e per kg, lo stesso identico prodotto con una differenza di circa mezzo chilo di CO2e.
+### SCHERMATA 9 — Anteprima: i numeri che calcoleremo [stats · ISO 14067]
+- 0,97 kg: CO2e per kg di pasta, dalla culla al cancello (valore esatto 0,9736)
+- 1,47 kg: CO2e per kg di pasta, dalla culla alla tomba (valore esatto 1,474)
+- 50,2%: quota delle materie prime sul totale (quasi tutta semola)
+- 28,5%: quota della cottura a casa (fuori dal controllo dell’azienda)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico
+Commento del docente: Conviene conoscere il punto di arrivo prima di partire: nelle prossime sezioni ricostruiremo questi numeri riga per riga, tredici moltiplicazioni in tutto. Guardate già ora la sproporzione: lo stabilimento, cioè la parte che l’azienda vede e paga ogni mese in bolletta, vale poco più di un decimo del risultato; campo, molino e cucina di casa fanno insieme quasi quattro quinti. Avvertenza valida per tutta l’unità: sono dati di un caso di fantasia con fattori arrotondati, non valori di riferimento per la pasta in commercio.
+
+## SEZIONE 3 — Obiettivo, unità funzionale, confine del sistema
+### SCHERMATA 10 — Obiettivo, unità funzionale, confine del sistema [section]
+Prima di qualsiasi moltiplicazione si prendono tre decisioni: a che cosa serve lo studio, a quale quantità di prodotto si riferisce il risultato, quali processi stanno dentro il conto. Chi cambia queste decisioni cambia il numero.
+- Unità funzionale e unità dichiarata
+- Un esempio numerico: per litro o per metro quadrato?
+- La mappa dei processi: dentro e fuori dal confine
+- I criteri di esclusione (cut-off) con i numeri
+### SCHERMATA 11 — Le parole dell’impostazione [defs · ISO 14067 · definizioni (parafrasi)]
+- Unità funzionale: Prestazione quantificata del prodotto, usata come riferimento per tutti i dati e per il risultato. Per Terrafelix: 1 kg di pasta, confezionata, cotta e consumata.
+- Unità dichiarata: Quantità di prodotto usata come riferimento quando lo studio è parziale. Esempio: 1 kg di pasta confezionata al cancello dello stabilimento.
+- Confine del sistema: Elenco dei processi del ciclo di vita compresi nel calcolo: dalla culla alla tomba, oppure dalla culla al cancello.
+- CFP parziale: Carbon footprint riferita solo ad alcune fasi del ciclo di vita, tipicamente dalla culla al cancello.
+- Criteri di esclusione (cut-off): Regole dichiarate con cui si lasciano fuori voci di peso trascurabile, dopo averne stimato l’entità.
+Commento del docente: La parola chiave è «funzionale»: non si misura un oggetto, ma un servizio reso. Un chilo di pasta serve a essere mangiato, quindi l’unità funzionale completa comprende cottura e consumo. Quando lo studio si ferma al cancello non si può parlare di funzione, perché il prodotto non l’ha ancora svolta: si usa allora l’unità dichiarata. Scrivete sempre l’unità per esteso accanto al numero: «1,47 kg CO2e per kg di pasta cotta e consumata, dalla culla alla tomba» è un dato; «1,47» da solo non lo è.
+### SCHERMATA 12 — L’unità funzionale dipende dalla funzione [table · ISO 14067 · unità funzionale]
+Esempi didattici: per ogni prodotto, la funzione svolta e una possibile unità di riferimento.
+Colonne: Prodotto | Funzione | Unità funzionale possibile | Unità che inganna
+- Pasta secca | Nutrire: essere cotta e mangiata | 1 kg di pasta cotta e consumata | 1 confezione (da 500 g o da 1 kg?)
+- Vernice murale | Coprire e proteggere una parete | 1 m² di parete coperta per un numero dichiarato di anni | 1 litro di vernice
+- Detersivo per bucato | Lavare i capi | 1 lavaggio a dose consigliata | 1 litro di detersivo
+- Lampadina | Illuminare | Una quantità di luce per un numero dichiarato di ore | 1 lampadina
+- Bottiglia per bevande | Contenere e proteggere la bevanda | 1 litro di bevanda consegnata al consumatore | 1 bottiglia
+Quando esistono regole di categoria di prodotto (PCR), l’unità è indicata lì e va adottata.
+Commento del docente: L’ultima colonna raccoglie le unità «comode» che rendono i confronti ingannevoli. Un detersivo concentrato emette di più per litro, ma se ne usa meno per lavaggio; una lampadina che dura il triplo sostituisce tre lampadine. Per la pasta il problema è più semplice, perché un chilo è un chilo, ma resta l’insidia del formato: se un cliente chiede il dato «per confezione» bisogna sapere quanti grammi contiene. Sono esempi di ragionamento, senza valori numerici di prodotti reali.
+### SCHERMATA 13 — Esempio: per litro perde, per metro quadrato vince [calc · Unità funzionale]
+Due vernici di fantasia. Vernice A: 2,0 kg CO2e per litro, resa 8 m² per litro. Per 100 m² servono 100 ÷ 8 = 12,5 litri, cioè 12,5 × 2,0 = 25 kg CO2e. Vernice B: 2,6 kg CO2e per litro, ma resa 13 m² per litro. Calcoliamola.
+Formula: Emissioni = Superficie da coprire × Emissioni per litro ÷ Resa
+- Vernice B per 100 m² di parete (litri necessari: 100 ÷ 13 = 7,7): 100 m² × 2,6 kg CO2e/l ÷ 13 m²/l = 20 kg CO2e
+Per litro la vernice B emette il 30% in più (2,6 contro 2,0); per la funzione «coprire 100 m²» emette il 20% in meno (20 contro 25 kg CO2e).
+Fonte dei dati: Esempio didattico – prodotti di fantasia, valori inventati per mostrare il ragionamento
+Commento del docente: È l’esempio che conviene ricordare quando qualcuno propone un confronto. Il dato per litro è corretto, ma risponde alla domanda sbagliata: nessuno compra vernice per avere litri, la compra per coprire una parete. Con l’unità funzionale giusta la classifica si rovescia: 100 ÷ 13 × 2,6 = 20 kg CO2e contro 25. Lo stesso accade ogni volta che due prodotti hanno rese, durate o dosi diverse. Per la pasta la funzione è la stessa per tutti i produttori; ciò che cambia i confronti, come vedremo, è soprattutto il confine.
+### SCHERMATA 14 — La mappa dei processi: dentro e fuori dal confine [tree · ISO 14067 · confine del sistema]
+Lo studio di Terrafelix: confine dalla culla alla tomba, tredici voci di calcolo in sei fasi.
+Radice: Sistema prodotto: 1 kg di pasta (cotta e consumata)
+- Dentro: a monte (fasi 1 e 3): Semola (coltivazione e molitura); Trasporto della semola; Cartone e film; Trasporto degli imballaggi
+- Dentro: stabilimento (fase 2): Gas naturale: combustione; Gas naturale: filiera a monte; Elettricità di rete; Elettricità: filiera e perdite
+- Dentro: a valle (fasi 4, 5 e 6): Trasporto ai mercati; Cottura a gas; Cottura elettrica; Fine vita dell’imballaggio
+- Fuori (dichiarato) (esclusioni motivate): Macchinari e fabbricati; Auto aziendali, viaggi, pendolarismo; Voci minori sotto la soglia di cut-off
+Ogni esclusione va scritta nel rapporto di studio con la sua motivazione: è la trasparenza a rendere confrontabile il numero.
+Commento del docente: Disegnare la mappa prima di calcolare evita due errori opposti: dimenticare un processo (tipicamente la filiera a monte dell’energia) e contarne uno due volte. Il quarto ramo è importante quanto i primi tre: dice che cosa non c’è. Macchinari, auto aziendali, trasferte e tragitti casa-lavoro fanno parte dell’inventario dell’organizzazione, ma non sono processi del chilo di pasta: lo studio li lascia fuori e lo dichiara. Le voci minori dello stabilimento sono invece escluse con un criterio numerico, che vediamo tra due slide.
+### SCHERMATA 15 — Terrafelix imposta lo studio [case]
+Settembre 2026. Giorgio Ferri porta in riunione la richiesta di due clienti della grande distribuzione: le emissioni per chilo di pasta. Davide Russo e il consulente EVALIS scrivono in una pagina le decisioni di impostazione, prima di aprire il foglio di calcolo.
+- Obiettivo: rispondere ai clienti e individuare le fasi su cui agire; nessun confronto pubblico con altri prodotti
+- Unità funzionale: 1 kg di pasta secca, confezionata, cotta e consumata
+- Confine: dalla culla alla tomba; risultato parziale dalla culla al cancello riportato a parte
+- Dati: anno 2025, gli stessi dell’inventario verificato; GWP a 100 anni dell’IPCC AR6
+- Cut-off: voci singolarmente sotto l’1% del risultato, con stima del loro peso complessivo (soglia fissata dallo studio)
+Domanda di lavoro: Perché riportare due risultati, al cancello e alla tomba?
+Come ha operato l'azienda: Perché i due clienti chiedono cose diverse: uno integra il dato nel proprio Scope 3 e vuole il valore al cancello; l’altro vuole comunicare il prodotto e chiede il ciclo di vita intero. Terrafelix calcola tutto una volta sola e presenta i due numeri con il confine scritto accanto.
+Commento del docente: Questa pagina è l’equivalente, per il prodotto, del documento di impostazione dell’inventario visto nell’unità 3. Notate due scelte prudenti. La prima: usare l’anno 2025 e gli stessi dati già verificati, così la CFP e l’inventario si possono riconciliare. La seconda: dichiarare che lo studio non serve a confronti pubblici; se un giorno Terrafelix volesse affermare che la sua pasta emette meno di un’altra, servirebbero regole di categoria comuni e un riesame critico o una verifica di terza parte. La soglia dell’1% è una scelta dello studio, non un valore fissato dalla norma.
+### SCHERMATA 16 — Il cut-off con i numeri: quanto pesano le voci escluse [calc · ISO 14067 · criteri di esclusione]
+Prima di escludere una voce se ne stima il peso. Sei voci minori dello stabilimento, con i dati dell’inventario 2025 divisi per la produzione.
+Formula: Emissioni = Dato di attività × Fattore di emissione ÷ Produzione annua
+- Acqua di rete (bollette dell’acquedotto): 60.000 m³ × 0,3 kg CO2e/m³ ÷ 20.000.000 kg = 0,00090 kg CO2e/kg
+- Rifiuti avviati a recupero (registro rifiuti): 420.000 kg × 0,021 kg CO2e/kg ÷ 20.000.000 kg = 0,00044 kg CO2e/kg
+- Rifiuti avviati a smaltimento (registro rifiuti): 60.000 kg × 0,45 kg CO2e/kg ÷ 20.000.000 kg = 0,00135 kg CO2e/kg
+- Ricariche di R-410A (rapporti del frigorista · GWP AR6): 12 kg × 2256 kg CO2e/kg ÷ 20.000.000 kg = 0,00135 kg CO2e/kg
+- Ricariche di HFC-134a (rapporti del frigorista · GWP AR6): 8 kg × 1530 kg CO2e/kg ÷ 20.000.000 kg = 0,00061 kg CO2e/kg
+- Gasolio del gruppo elettrogeno (fatture di acquisto): 1500 l × 2,65 kg CO2e/l ÷ 20.000.000 kg = 0,00020 kg CO2e/kg
+Totale delle voci escluse: 0,00486 kg CO2e/kg
+0,00486 kg CO2e per kg sono lo 0,33% del risultato finale (1,474). Nessuna voce supera lo 0,1%: esclusione ammessa dal criterio dichiarato (ciascuna sotto l’1%).
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il cut-off non è «tralascio ciò che è scomodo»: è «stimo, confronto con la soglia, dichiaro». Qui le sei voci valgono insieme 97,1 t nell’inventario, cioè meno di 5 millesimi di chilo di CO2e per chilo di pasta. Un’osservazione onesta: i dati c’erano già, quindi includerli sarebbe costato poco; lo studio didattico li esclude per tenere il conto su tredici righe e per mostrare come si motiva un’esclusione. Nella pratica, se il dato è disponibile e affidabile, includerlo è la scelta più semplice da difendere davanti a un verificatore.
+
+## SEZIONE 4 — I dati per unità di prodotto
+### SCHERMATA 17 — I dati per unità di prodotto [section]
+Le bollette parlano di anni, la carbon footprint di prodotto parla di chili. Il passaggio è una divisione: dato annuo diviso per la produzione dell’anno. Semplice, a patto di usare il divisore giusto e di sapere quali dati sono misurati e quali presi da una banca dati.
+- Dal dato annuo al dato per kg
+- La tabella dei dati per 1 kg di pasta
+- Dati primari e dati secondari
+- Quale produzione usare come divisore
+### SCHERMATA 18 — Dal dato annuo al contributo per kg: quattro passi [flow · ISO 14067 · analisi di inventario]
+1. Raccogliere il dato annuo: Bollette, fatture, DDT: lo stesso dato di attività dell’inventario.
+2. Dividere per la produzione: Chili di prodotto finito dello stesso anno: si ottiene il consumo per kg.
+3. Moltiplicare per il fattore: Consumo per kg × fattore di emissione = kg CO2e per kg di prodotto.
+4. Sommare per fase: I contributi delle voci si sommano fase per fase, poi le fasi tra loro.
+L’ordine di divisione e moltiplicazione è indifferente: (dato annuo ÷ produzione) × fattore = (dato annuo × fattore) ÷ produzione.
+Commento del docente: Sono due strade per lo stesso numero. Chi ha già l’inventario può partire dalle emissioni annue di ogni voce e dividerle per i chili prodotti; chi parte da zero trova più naturale calcolare prima il consumo specifico (quanti Sm³ per chilo) e poi moltiplicare. Il consumo specifico ha un vantaggio: è un indicatore tecnico che il responsabile di produzione conosce e sa giudicare, quindi un errore salta all’occhio. Nelle slide di calcolo delle prossime sezioni vedrete tutto in una riga: dato annuo × fattore ÷ produzione.
+### SCHERMATA 19 — Quanto gas serve per 1 kg di pasta [calc · Dato per unità di prodotto]
+Primo passo svolto: il consumo annuo di gas naturale di Terrafelix riferito a 1 kg di pasta prodotta.
+Formula: Consumo per kg = Consumo annuo × Riferito a ÷ Produzione annua
+- Gas naturale (essiccatoi e centrale termica) (12 bollette del 2025 · produzione dal consuntivo di stabilimento): 1.050.000 Sm³ × 1 kg di pasta ÷ 20.000.000 kg di pasta = 0,0525 Sm³
+0,0525 Sm³ sono 52,5 litri di gas per ogni chilo di pasta. Moltiplicati per il fattore di combustione (2 kg CO2e/Sm³) danno 0,105 kg CO2e per kg.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: 1.050.000 ÷ 20.000.000 = 0,0525 Sm³ per kg. Abituatevi a questi numeri piccoli e a non arrotondarli troppo presto: se scriveste 0,05 invece di 0,0525 perdereste quasi il 5% del gas. Per questo nelle CFP si lavora con quattro decimali e si arrotonda solo il risultato finale. Un controllo di plausibilità utile, visto nell’unità 4: 52,5 Sm³ per tonnellata di pasta corrispondono a circa 514,5 kWh termici per tonnellata, un valore che Rosa Iannone riconosce come normale per le sue linee.
+### SCHERMATA 20 — I dati di attività per 1 kg di pasta [table · ISO 14067 · analisi di inventario]
+Tutti i dati annui dell’inventario 2025 che servono alla CFP, divisi per 20.000.000 kg di pasta prodotta.
+Colonne: Voce | Dato annuo | Dato per kg di pasta | Documento di origine
+- Semola di grano duro | 20.600.000 kg | 1,03 kg | Fatture e DDT del molino
+- Gas naturale | 1.050.000 Sm³ | 0,0525 Sm³ | Bollette del gas
+- Elettricità prelevata dalla rete | 3.200.000 kWh | 0,16 kWh | Bollette elettriche
+- Astucci e cartoni | 900.000 kg | 0,045 kg | Fatture dei fornitori
+- Film plastico | 160.000 kg | 0,008 kg | Fatture dei fornitori
+- Imballaggi a fine vita (cartone + film) | 1.060.000 kg | 0,053 kg | Somma delle due righe precedenti
+Il fotovoltaico autoconsumato (600.000 kWh, cioè 0,03 kWh per kg) ha emissioni pari a zero in fase d’uso ed è riportato a parte come informazione.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: La riga della semola merita attenzione: 1,03 kg di semola per 1 kg di pasta è la resa di trasformazione, ricavata dai consuntivi (20.600 t di semola per 20.000 t di pasta). Chi stimasse «un chilo di semola per un chilo di pasta» sottovaluterebbe del 3% la voce più grande del conto. Ogni prodotto ha la sua resa: nella CFP conta la quantità di materia prima che entra, non quella che resta nel prodotto. Notate anche l’ultima riga: per ogni chilo di pasta viaggiano 53 grammi di imballaggio, che torneranno nella fase di fine vita.
+### SCHERMATA 21 — Dati primari e dati secondari nel caso della pasta [quad · ISO 14067 · qualità dei dati]
+Assi: Processi propri → processi di altri / Dato medio → dato specifico
+- Primari, processi propri: Gas ed elettricità da bollette; Quantità di semola e imballaggi; Produzione dell’anno
+- Primari, dalla filiera: Distanze e tonnellate trasportate; Dato del molino, se disponibile; Dichiarazioni (EPD) dei fornitori
+- Secondari, processi propri: Da evitare: i consumi propri si misurano
+- Secondari, processi di altri: Fattore medio della semola; Fattori di cartone e film; Scenario di cottura e di fine vita
+Commento del docente: La norma chiede di preferire dati primari per i processi sotto il controllo dell’organizzazione: per lo stabilimento non ci sono scuse, i consumi si leggono in bolletta. Per i processi di altri si usano dati secondari, purché adatti per epoca, area geografica e tecnologia: sono i tre criteri di copertura (temporale, geografica, tecnologica) con cui si giudica un fattore. Nel caso Terrafelix le quantità sono primarie, mentre il fattore della semola (0,7 kg CO2e/kg) è un valore medio didattico: è il dato secondario che pesa di più, quindi il primo da migliorare.
+### SCHERMATA 22 — Quale produzione mettere al denominatore? [case]
+Chiara Vitale consegna i dati annui; Rosa Iannone porta tre numeri diversi di «produzione 2025» e chiede quale usare come divisore.
+- Semola entrata in stabilimento: 20.600 t
+- Pasta prodotta e confezionata: 20.000 t
+- Pasta spedita ai clienti nell’anno: 20.000 t (scorte invariate, ipotesi del caso)
+- Differenza tra semola e pasta: resa di trasformazione, sfridi e scarti
+Domanda di lavoro: Per quale quantità si dividono gas, elettricità e imballaggi?
+Come ha operato l'azienda: Per la pasta prodotta e confezionata nello stesso periodo dei consumi: 20.000.000 kg. È il prodotto finito che «porta via» le emissioni; gli scarti non sono prodotto e il loro carico resta sui chili buoni. Dividere per la semola in ingresso darebbe un consumo per kg più basso del 3% circa e un risultato non corretto.
+Commento del docente: Sembra un dettaglio, ed è uno degli errori più comuni: dividere per le tonnellate lavorate invece che per quelle buone uscite. La regola è coerenza tra numeratore e denominatore: stessi dodici mesi, stesso perimetro, prodotto finito. Se in un anno le scorte cambiano molto, la produzione resta il riferimento per i consumi di stabilimento, mentre per la distribuzione contano le quantità spedite. Nel caso didattico prodotto e venduto coincidono, e questo ci permetterà a fine unità di riconciliare la CFP con l’inventario.
+
+## SEZIONE 5 — L’allocazione
+### SCHERMATA 23 — L’allocazione [section]
+Finora lo stabilimento faceva un solo prodotto. Ma quando lo stesso processo produce più cose (due formati, un prodotto e un sottoprodotto) le emissioni comuni vanno ripartite. La norma indica un ordine preciso: prima si prova a non ripartire, poi si usa un criterio fisico, solo alla fine uno economico.
+- Che cos’è l’allocazione e quando serve
+- La gerarchia: evitare, criterio fisico, criterio economico
+- Un esempio svolto: semola e crusca
+- Evitare l’allocazione con i contatori di linea
+### SCHERMATA 24 — La gerarchia dell’allocazione [pyramid · ISO 14067 · allocazione]
+Si parte dal vertice e si scende solo se il livello superiore non è praticabile.
+Livelli, dall'alto al basso:
+- 1. Evitare l’allocazione: Suddividere il processo (misure separate per prodotto) o espandere il sistema
+- 2. Relazioni fisiche: Ripartire in proporzione a massa o energia dei prodotti
+- 3. Relazioni economiche: In subordine: ripartire in proporzione al valore economico
+Qualunque criterio si scelga va dichiarato nel rapporto e applicato in modo uniforme a tutto lo studio.
+Commento del docente: Allocare significa dividere una torta sola tra più commensali: le emissioni totali non cambiano, cambia la fetta di ciascuno. Per questo la scelta del criterio è delicata, e la norma la disciplina con una gerarchia. Il primo livello è il più solido: se ogni linea ha il suo contatore, non c’è nulla da ripartire. Il criterio fisico richiede che massa o energia descrivano davvero il legame tra prodotti ed emissioni. Il criterio economico arriva per ultimo perché i prezzi oscillano: lo stesso prodotto cambierebbe impronta da un anno all’altro senza che nulla sia cambiato in fabbrica.
+### SCHERMATA 25 — Semola e crusca: allocazione per massa [calc · ISO 14067 · allocazione fisica]
+Esempio didattico, fuori dal caso studio. Un molino di fantasia macina 1.000 kg di grano e ottiene 750 kg di semola e 250 kg di crusca venduta come mangime. Coltivazione e molitura hanno emesso in tutto 600 kg CO2e.
+Formula: Emissioni assegnate = Emissioni da ripartire × Quota in massa
+- Semola (750 kg su 1.000 kg di prodotti = 75%): 600 kg CO2e × 0,75 quota = 450 kg CO2e
+- Crusca per mangimi (250 kg su 1.000 kg di prodotti = 25%): 600 kg CO2e × 0,25 quota = 150 kg CO2e
+Totale: 600 kg CO2e
+Per kg: semola 450 ÷ 750 = 0,60 kg CO2e/kg; crusca 150 ÷ 250 = 0,60 kg CO2e/kg. Con la massa, ogni chilo che esce dal molino porta lo stesso carico.
+Fonte dei dati: Esempio didattico – molino di fantasia, valori inventati per mostrare il ragionamento
+Commento del docente: Il primo controllo di ogni allocazione è la somma: 450 + 150 = 600, nulla si crea e nulla si perde. Con il criterio della massa la quota è il peso di ciascun prodotto sul totale dei prodotti: 75% e 25%. Il risultato per chilo è identico per semola e crusca, 0,60 kg CO2e, ed è questa la caratteristica (e il limite) della massa: tratta allo stesso modo il prodotto per cui il molino esiste e il sottoprodotto che ne deriva. Quantità ed emissioni sono inventate per avere conti tondi.
+### SCHERMATA 26 — Semola e crusca: allocazione economica [calc · ISO 14067 · allocazione economica]
+Stesso molino, stessi 600 kg CO2e. Ora si ripartisce secondo i ricavi: semola 750 kg × 0,50 €/kg = 375 €; crusca 250 kg × 0,10 €/kg = 25 €; totale 400 €.
+Formula: Emissioni assegnate = Emissioni da ripartire × Quota dei ricavi
+- Semola (375 € su 400 € = 93,75%): 600 kg CO2e × 0,9375 quota = 562,5 kg CO2e
+- Crusca per mangimi (25 € su 400 € = 6,25%): 600 kg CO2e × 0,0625 quota = 37,5 kg CO2e
+Totale: 600,0 kg CO2e
+Per kg: semola 562,5 ÷ 750 = 0,75 kg CO2e/kg; crusca 37,5 ÷ 250 = 0,15 kg CO2e/kg.
+Fonte dei dati: Esempio didattico – molino di fantasia, prezzi e valori inventati per mostrare il ragionamento
+Commento del docente: La somma è sempre 600, ma la fetta della semola sale da 450 a 562,5 kg CO2e: il prodotto che vale di più si prende quasi tutto il carico. Per chilo, la semola passa da 0,60 a 0,75 kg CO2e, il 25% in più, senza che il molino abbia cambiato nulla. Ecco perché, quando Terrafelix chiederà al molino un dato specifico, dovrà chiedere anche con quale criterio è stato allocato: due fattori della semola calcolati con criteri diversi non sono confrontabili, e la semola è metà della carbon footprint della pasta.
+### SCHERMATA 27 — Stesso molino, due criteri: il carico per chilo [gbar · ISO 14067 · allocazione]
+Grammi di CO2e per kg di prodotto, secondo il criterio di allocazione scelto.
+Serie: Per massa | Per valore economico
+- Semola: 600g | 750g
+- Crusca per mangimi: 600g | 150g
+Fonte dei dati: Esempio didattico – molino di fantasia, valori inventati per mostrare il ragionamento
+Commento del docente: Il grafico riassume le due slide precedenti: con la massa i due prodotti sono alla pari, con il valore economico la crusca scende a un quarto e la semola sale. Nessuno dei due risultati è «falso»: sono risposte diverse alla domanda «di chi sono queste emissioni?». La norma chiede di preferire il criterio fisico e di usare quello economico in subordine; le regole di categoria di prodotto, quando esistono, indicano quale usare proprio per evitare che ogni produttore scelga il criterio più favorevole. Buona prassi: mostrare l’effetto del criterio alternativo in un’analisi di sensibilità.
+### SCHERMATA 28 — Evitare l’allocazione: i contatori di linea [case]
+Terrafelix produce pasta lunga e pasta corta sulle sue linee. L’essiccazione della pasta lunga richiede più gas. Rosa Iannone dispone dei contatori di linea (ripartizione illustrativa, coerente con il totale annuo di 1.050.000 Sm³).
+- Pasta lunga: 8.000 t prodotte, 480.000 Sm³ di gas → 0,0600 Sm³ per kg
+- Pasta corta: 12.000 t prodotte, 570.000 Sm³ di gas → 0,0475 Sm³ per kg
+- Media di stabilimento: 1.050.000 Sm³ ÷ 20.000.000 kg = 0,0525 Sm³ per kg
+- Fattore del gas, combustione più filiera a monte: 2 + 0,33 = 2,33 kg CO2e/Sm³
+Domanda di lavoro: Quanto cambia il contributo del gas tra i due formati?
+Come ha operato l'azienda: Pasta lunga: 0,0600 × 2,33 = 0,1398 kg CO2e/kg. Pasta corta: 0,0475 × 2,33 = 0,1107 kg CO2e/kg. Differenza: circa 0,029 kg CO2e per kg. Con le misure separate non serve alcuna allocazione: è la suddivisione del processo, primo livello della gerarchia. Lo studio del corso prosegue con il chilo medio di stabilimento (0,0525 Sm³).
+Commento del docente: Il contatore di linea è lo strumento più semplice per evitare l’allocazione: ciò che si misura separatamente non si deve ripartire. Senza contatori, Terrafelix avrebbe dovuto dividere il gas per massa, attribuendo 0,0525 Sm³ a ogni chilo e nascondendo una differenza reale tra i formati. Quello che resta comune a tutte le linee (illuminazione, aria compressa, uffici) si ripartisce in proporzione ai chili prodotti. Nel resto dell’unità calcoliamo il prodotto medio, come indicato nello studio; i dati per formato restano un’analisi interna utile alla produzione.
+
+## SEZIONE 6 — Fase 1 – Materie prime
+### SCHERMATA 29 — Fase 1 – Materie prime [section]
+Comincia il calcolo vero e proprio. La prima fase è anche la più pesante: la semola, dal campo al molino fino al cancello dello stabilimento. Due righe di conto, più di metà del risultato finale.
+- Semola: quantità per kg × fattore
+- Il trasporto dal molino in tonnellate-chilometro
+- Perché questa fase vale il 50,2%
+- Che cosa chiedere al fornitore
+### SCHERMATA 30 — Fase 1: semola e trasporto della semola [calc · ISO 14067 · fase 1]
+Dati annui dell’inventario 2025, fattori del corso, divisione per i chili di pasta prodotti. Per il trasporto: tonnellate × chilometri × fattore.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Distanza ÷ Produzione annua
+- Semola di grano duro (coltivazione e molitura) (per kg di pasta: 1,03 kg × 0,7 · fattore medio didattico): 20.600.000 kg × 0,7 kg CO2e/kg ÷ 20.000.000 kg = 0,7210 kg CO2e/kg
+- Trasporto della semola dal molino (autoarticolato · per kg di pasta: 0,00103 t × 180 km × 0,1): 20.600 t × 0,1 kg CO2e/tkm × 180 km ÷ 20.000.000 kg = 0,0185 kg CO2e/kg
+Fase 1 – Materie prime: 0,7395 kg CO2e/kg
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico
+Commento del docente: Prima riga: 20.600.000 kg × 0,7 = 14.420.000 kg CO2e, divisi per 20.000.000 kg di pasta fanno 0,721. È lo stesso conto di 1,03 kg × 0,7. Seconda riga: 20.600 t × 180 km × 0,1 = 370.800 kg CO2e, cioè 0,0185 per kg. Totale della fase: 0,7395 kg CO2e per kg di pasta. Riconoscete le cifre: sono la semola (14.420 t) e il trasporto a monte della semola (370,8 t) dell’unità 6, riletti per chilo. La semola da sola è il 97,5% della fase; il camion, su 180 km, conta pochissimo.
+### SCHERMATA 31 — E se metà della semola avesse un fattore più basso? [calc · Interpretazione · sensibilità]
+Analisi di sensibilità. Il molino propone una filiera con pratiche agronomiche migliorative e dichiara 0,63 kg CO2e/kg invece di 0,70, per metà dei volumi: 0,515 kg su 1,03 kg di semola per kg di pasta.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Semola da filiera migliorativa (50%) (fattore dichiarato dal fornitore (dato illustrativo)): 0,515 kg × 0,63 kg CO2e/kg = 0,32445 kg CO2e/kg
+- Semola convenzionale (50%) (fattore medio didattico): 0,515 kg × 0,7 kg CO2e/kg = 0,36050 kg CO2e/kg
+Semola per kg di pasta: 0,68495 kg CO2e/kg
+Rispetto a 0,721 la semola scende a 0,685: 0,036 kg CO2e in meno per kg di pasta: la carbon footprint totale passerebbe da 1,474 a 1,438 kg CO2e/kg.
+Fonte dei dati: Caso studio Pastificio Terrafelix – scenario illustrativo
+Commento del docente: 0,515 × 0,63 + 0,515 × 0,70 = 0,32445 + 0,3605 = 0,68495, cioè 0,685 kg CO2e. Il risparmio è 0,721 − 0,685 = 0,036 kg per chilo di pasta: sembra poco, ma moltiplicato per 20.000.000 kg sono 721 t CO2e l’anno, oltre sei volte le emissioni dell’intera flotta aziendale (114,5 t). È la leva che ritroveremo nel piano di riduzione dell’unità 9. Il messaggio di metodo: sulla voce dominante un miglioramento del 10% del fattore vale più di qualunque intervento sulle voci piccole. Attenzione però alla confrontabilità: il dato del fornitore deve avere gli stessi confini del fattore che sostituisce.
+### SCHERMATA 32 — Che cosa chiedere al molino [case]
+La semola vale quasi metà della carbon footprint della pasta e nel primo studio è calcolata con un fattore medio. Michele Santoro prepara la richiesta al molino per avere un dato specifico per lo studio dell’anno successivo.
+- Valore dichiarato in kg CO2e per kg di semola, con l’anno dei dati
+- Confine: dalla culla al cancello del molino (coltivazione, trasporto del grano, molitura)
+- Criterio di allocazione tra semola e sottoprodotti (massa o valore economico)
+- Fonte: dichiarazione ambientale di prodotto (EPD) o studio conforme alla ISO 14067
+- Se il dato è stato verificato da una terza parte
+Domanda di lavoro: Perché non basta farsi dire «il numero»?
+Come ha operato l'azienda: Perché un fattore senza confini, anno e criterio di allocazione non si può né usare né confrontare. Come visto nell’esempio del molino, lo stesso chilo di semola può valere 0,60 o 0,75 kg CO2e solo cambiando criterio. Terrafelix userà il dato del fornitore solo se documentato; altrimenti resta sul fattore medio e lo dichiara.
+Commento del docente: Il fattore della semola racchiude tutto ciò che accade prima del molino: fertilizzanti azotati e relative emissioni di protossido di azoto dai suoli, gasolio dei mezzi agricoli, trasporto del grano, energia della molitura. È un numero che dipende dalle rese agricole e cambia da un’annata all’altra e da un’area all’altra: per questo la copertura temporale e geografica del dato conta. Il valore 0,7 del corso è didattico, dell’ordine di grandezza di dichiarazioni di settore; in uno studio reale la fonte va citata con anno e versione.
+
+## SEZIONE 7 — Fasi 2 e 3 – Produzione e imballaggio
+### SCHERMATA 33 — Fasi 2 e 3 – Produzione e imballaggio [section]
+Entriamo nello stabilimento: gas ed elettricità per impastare, trafilare ed essiccare, poi astucci, cartoni e film. Sono le fasi su cui l’azienda ha i dati migliori. Con la loro somma si chiude il primo traguardo: la carbon footprint dalla culla al cancello.
+- Produzione: quattro righe, combustione e filiere a monte
+- Imballaggio: cartone, film e loro trasporto
+- Il parziale dalla culla al cancello: 0,97 kg CO2e/kg
+- Come rispondere al cliente che chiede il dato al cancello
+### SCHERMATA 34 — Fase 2: l’energia dello stabilimento [calc · ISO 14067 · fase 2]
+Per ogni vettore energetico due righe: l’emissione diretta o da rete e la filiera a monte (estrazione, trasporto, perdite). In una CFP vanno contate entrambe.
+Formula: Emissioni = Dato di attività × Fattore di emissione ÷ Produzione annua
+- Gas naturale – combustione (per kg di pasta: 0,0525 Sm³): 1.050.000 Sm³ × 2 kg CO2e/Sm³ ÷ 20.000.000 kg = 0,1050 kg CO2e/kg
+- Gas naturale – filiera a monte (stesso consumo, fattore della filiera): 1.050.000 Sm³ × 0,33 kg CO2e/Sm³ ÷ 20.000.000 kg = 0,0173 kg CO2e/kg
+- Elettricità di rete (per kg di pasta: 0,16 kWh · fattore medio nazionale): 3.200.000 kWh × 0,235 kg CO2e/kWh ÷ 20.000.000 kg = 0,0376 kg CO2e/kg
+- Elettricità – filiera a monte e perdite di rete (stesso consumo, fattore della filiera): 3.200.000 kWh × 0,06 kg CO2e/kWh ÷ 20.000.000 kg = 0,0096 kg CO2e/kg
+Fase 2 – Produzione: 0,1695 kg CO2e/kg
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico
+Commento del docente: Quattro contributi: 0,105 + 0,0173 + 0,0376 + 0,0096 = 0,1695 kg CO2e per kg. Nell’inventario queste voci stavano in tre posti diversi: il gas bruciato nello Scope 1, l’elettricità nello Scope 2, le due filiere a monte nello Scope 3 (categoria 3). Nella CFP gli scope non esistono: conta il processo, e tutto ciò che serve a far funzionare lo stabilimento sta nella stessa fase. Il gas, tra combustione e filiera, vale 0,1223 kg, oltre due volte e mezza l’elettricità (0,0472): l’essiccazione è il cuore energetico di un pastificio.
+### SCHERMATA 35 — Fase 3: l’imballaggio [calc · ISO 14067 · fase 3]
+Per ogni chilo di pasta: 45 g di cartone (astuccio e cartone da trasporto) e 8 g di film plastico, più il loro viaggio dai fornitori allo stabilimento.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Distanza ÷ Produzione annua
+- Astucci e cartoni (per kg di pasta: 0,045 kg × 0,9): 900.000 kg × 0,9 kg CO2e/kg ÷ 20.000.000 kg = 0,0405 kg CO2e/kg
+- Film plastico (per kg di pasta: 0,008 kg × 2,8): 160.000 kg × 2,8 kg CO2e/kg ÷ 20.000.000 kg = 0,0224 kg CO2e/kg
+- Trasporto degli imballaggi (autoarticolato · 900 t + 160 t = 1.060 t): 1060 t × 0,1 kg CO2e/tkm × 300 km ÷ 20.000.000 kg = 0,0016 kg CO2e/kg
+Fase 3 – Imballaggio: 0,0645 kg CO2e/kg
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico
+Commento del docente: 0,0405 + 0,0224 + 0,0016 = 0,0645 kg CO2e per kg di pasta. Osservate il rapporto tra peso e impronta: il film è meno di un quinto del cartone in peso (8 g contro 45 g), ma vale più di metà del suo contributo, perché il fattore della plastica è circa tre volte quello del cartone. È il tipo di informazione che serve a chi progetta l’imballaggio: ridurre i grammi conta, ma conta anche di quale materiale. Il trasporto degli imballaggi, 1.060 t per 300 km, è la riga più piccola dell’intero studio.
+### SCHERMATA 36 — Il primo traguardo: dalla culla al cancello [calc · ISO 14067 · CFP parziale]
+Somma delle prime tre fasi. I risultati di fase sono espressi in grammi di CO2e per kg di pasta e riconvertiti in chilogrammi.
+Formula: Emissioni = Risultato della fase × Conversione
+- Fase 1 – Materie prime: 739,54 g CO2e × 0,001 kg/g = 0,7395 kg CO2e/kg
+- Fase 2 – Produzione: 169,525 g CO2e × 0,001 kg/g = 0,1695 kg CO2e/kg
+- Fase 3 – Imballaggio: 64,49 g CO2e × 0,001 kg/g = 0,0645 kg CO2e/kg
+CFP parziale, dalla culla al cancello: 0,9736 kg CO2e/kg
+Arrotondato: 0,97 kg CO2e per kg di pasta confezionata al cancello dello stabilimento (unità dichiarata).
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico
+Commento del docente: 0,7395 + 0,1695 + 0,0645 = 0,9736: quasi un chilo di CO2e per ogni chilo di pasta che esce dal cancello. La somma si fa con i valori completi e si arrotonda solo alla fine: 0,97. Questo è il numero che interessa a un cliente che acquista la pasta e poi la trasporta, la vende e la comunica per conto proprio. Va sempre accompagnato dalla dicitura «CFP parziale, dalla culla al cancello»: senza distribuzione, uso e fine vita non è la carbon footprint completa del prodotto.
+### SCHERMATA 37 — Dentro il cancello: di chi sono i 974 grammi [donut · ISO 14067 · CFP parziale]
+Composizione della CFP parziale, in grammi di CO2e per kg di pasta.
+Totale al centro: 0,97 kg CO2e/kg
+- Materie prime (semola e suo trasporto): 739,5g (76%)
+- Produzione (gas ed elettricità): 169,5g (17,4%)
+- Imballaggio (cartone, film, trasporto): 64,5g (6,6%)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Tre quarti del dato al cancello (76,0%) arrivano già «dentro» la semola quando il camion del molino entra in stabilimento; la produzione vale il 17,4% e l’imballaggio il 6,6%. Per un’azienda di trasformazione è un quadro tipico: la parte che si governa direttamente è minoritaria. Ne derivano due conseguenze pratiche. La prima: la qualità del risultato dipende dalla qualità del fattore della materia prima. La seconda: chi vuole ridurre davvero deve lavorare con il fornitore, oltre che sui propri consumi.
+### SCHERMATA 38 — La risposta al cliente che chiede il dato «al cancello» [case]
+Un cliente della grande distribuzione sta costruendo il proprio Scope 3 e chiede a Giorgio Ferri le emissioni per chilo di pasta acquistata. Al trasporto fino ai suoi magazzini provvede lui stesso, con un proprio operatore logistico.
+- Dato richiesto: kg CO2e per kg di pasta acquistata
+- Il cliente calcola da sé trasporto, punti vendita e fine vita
+- Terrafelix dispone dei due risultati: 0,97 al cancello e 1,47 alla tomba
+Domanda di lavoro: Quale numero si comunica, e con quali informazioni di contorno?
+Come ha operato l'azienda: Si comunica 0,97 kg CO2e per kg di pasta confezionata, CFP parziale dalla culla al cancello, dati 2025, GWP IPCC AR6, con il dettaglio per fase (0,74 materie prime; 0,17 produzione; 0,064 imballaggio) e la nota che il fattore della semola è un dato medio. Comunicare 1,47 farebbe contare al cliente due volte il trasporto, che lui aggiunge per conto suo.
+Commento del docente: È un caso concreto di doppio conteggio evitato grazie alla chiarezza sul confine. Il cliente inserirà 0,97 nella propria categoria «beni e servizi acquistati» e poi aggiungerà le sue voci a valle; se ricevesse il dato alla tomba, il trasporto e la cottura comparirebbero due volte nel suo inventario. Per questo insieme al numero si consegnano sempre unità, confine, anno e fonti dei fattori. Il dettaglio per fase è un servizio in più: permette al cliente di capire da dove viene il dato e di giudicarne la solidità.
+
+## SEZIONE 8 — Fasi 4, 5 e 6 – Distribuzione, uso, fine vita
+### SCHERMATA 39 — Fasi 4, 5 e 6 – Distribuzione, uso, fine vita [section]
+Oltre il cancello l’azienda non misura più: stima. Dove va la pasta, come viene cotta, che fine fa l’astuccio sono scenari, cioè ipotesi ragionevoli e dichiarate. Il conto resta una moltiplicazione, ma il dato di attività è un’ipotesi scritta nero su bianco.
+- Distribuzione: la media ponderata di tre mercati
+- Uso: lo scenario di cottura, gas ed elettricità
+- Prova tu: cambiare lo scenario
+- Fine vita dell’imballaggio
+### SCHERMATA 40 — Fase 4: la distribuzione ai mercati [calc · ISO 14067 · fase 4]
+Tonnellate spedite × chilometri × fattore del mezzo, divise per tutti i chili prodotti: si ottiene il trasporto medio di un chilo di pasta, ovunque vada.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Distanza ÷ Produzione annua
+- Italia, su gomma (70% dei volumi) (distanza media dichiarata): 14.000 t × 0,1 kg CO2e/tkm × 450 km ÷ 20.000.000 kg = 0,0315 kg CO2e/kg
+- Europa, su gomma (20%) (distanza media dichiarata): 4000 t × 0,1 kg CO2e/tkm × 1500 km ÷ 20.000.000 kg = 0,0300 kg CO2e/kg
+- Oltremare, via nave (10%) (nave portacontainer): 2000 t × 0,016 kg CO2e/tkm × 8000 km ÷ 20.000.000 kg = 0,0128 kg CO2e/kg
+Fase 4 – Distribuzione: 0,0743 kg CO2e/kg
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico
+Commento del docente: 0,0315 + 0,0300 + 0,0128 = 0,0743 kg CO2e per kg. È una media ponderata: equivale a dividere per 20.000.000 kg le 1.486 t della categoria 9 dell’unità 6. Nessun chilo reale percorre questo viaggio «medio»; il valore rappresenta il prodotto venduto nel suo insieme. Se un cliente estero chiedesse la CFP della pasta consegnata nel suo Paese, si userebbe la sola riga che lo riguarda. Tonnellate, distanze e mezzi sono dati dell’ufficio logistica; il fattore per tonnellata-chilometro è un valore medio arrotondato.
+### SCHERMATA 41 — Un chilo di pasta, tre destinazioni [bar · ISO 14067 · fase 4]
+Grammi di CO2e per kg di pasta consegnata in ciascun mercato, e media ponderata usata nello studio.
+- Italia – 450 km su gomma: 45g
+- Europa – 1.500 km su gomma: 150g
+- Oltremare – 8.000 km via nave: 128g
+- Media ponderata (70% · 20% · 10%): 74,3g
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico
+Commento del docente: Per un chilo, cioè 0,001 t: in Italia 0,001 × 450 × 0,1 = 0,045 kg; in Europa 0,001 × 1.500 × 0,1 = 0,150 kg; oltremare 0,001 × 8.000 × 0,016 = 0,128 kg. La sorpresa è la nave: percorre una distanza più di cinque volte maggiore del camion europeo ed emette meno, perché il suo fattore per tonnellata-chilometro è circa un sesto. La media ponderata è 0,7 × 45 + 0,2 × 150 + 0,1 × 128 = 74,3 g. Conta il mezzo almeno quanto la distanza: per questo il piano di riduzione guarderà al treno per le consegne europee.
+### SCHERMATA 42 — Fase 5: la cottura a casa del consumatore [calc · ISO 14067 · fase d’uso]
+Scenario d’uso dichiarato: il 70% della pasta è cotto su fornello a gas, il 30% su piano elettrico. Cuocere 1 kg di pasta richiede 0,22 Sm³ di gas (0,22 × 2 = 0,44 kg CO2e) oppure 1,6 kWh (1,6 × 0,235 = 0,376 kg CO2e).
+Formula: Emissioni = Quota di 1 kg di pasta × Fattore di emissione
+- Cottura su fornello a gas (70%) (0,22 Sm³ per kg di pasta × 2 kg CO2e/Sm³): 0,7 kg × 0,44 kg CO2e/kg pasta = 0,3080 kg CO2e/kg
+- Cottura su piano elettrico o a induzione (30%) (1,6 kWh per kg di pasta × 0,235 kg CO2e/kWh): 0,3 kg × 0,376 kg CO2e/kg pasta = 0,1128 kg CO2e/kg
+Fase 5 – Uso: 0,4208 kg CO2e/kg
+Consumi di cottura e quote dei consumatori sono ipotesi dello scenario: vanno scritte nel rapporto, perché chi le cambia cambia il risultato.
+Fonte dei dati: Caso studio Pastificio Terrafelix – scenario d’uso illustrativo; fattori di emissione arrotondati a scopo didattico
+Commento del docente: 0,7 × 0,44 = 0,308; 0,3 × 0,376 = 0,1128; totale 0,4208 kg CO2e per kg di pasta. È la seconda voce dell’intero ciclo di vita, due volte e mezza l’energia dello stabilimento (0,1695), e l’azienda non la vede in nessuna bolletta. Qui il dato di attività è una stima: quanta acqua, quanti minuti, quale fornello. Per questo lo scenario va dichiarato con le sue fonti e, quando esistono regole di categoria di prodotto, va preso da lì, così che tutti i produttori usino le stesse ipotesi. È la stessa voce riportata a parte nell’inventario: 8.416 t.
+### SCHERMATA 43 — Prova tu: cambiare lo scenario di cottura [sim · Fase d’uso · scenari]
+Su 100 kg di pasta venduta, distribuisci i chili tra i quattro modi di cottura (la somma deve restare 100). Prova: tutti a gas; tutti elettrici; poi sposta i chili sulle righe «con coperchio e meno acqua». Dividi il totale per 100 per avere il valore per kg.
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Fornello a gas, modo abituale: 70 kg di pasta × 0,44 kg CO2e/kg pasta = 30,8 kg CO2e per 100 kg di pasta
+- Piano elettrico, modo abituale: 30 kg di pasta × 0,376 kg CO2e/kg pasta = 11,28 kg CO2e per 100 kg di pasta
+- Fornello a gas, con coperchio e meno acqua: 0 kg di pasta × 0,352 kg CO2e/kg pasta = 0 kg CO2e per 100 kg di pasta
+- Piano elettrico, con coperchio e meno acqua: 0 kg di pasta × 0,3008 kg CO2e/kg pasta = 0 kg CO2e per 100 kg di pasta
+Totale iniziale: 42,08 kg CO2e per 100 kg di pasta
+Le righe «con coperchio e meno acqua» ipotizzano un consumo di energia inferiore del 20%: valore illustrativo, non misurato.
+Fonte dei dati: Esempio didattico – scenario illustrativo; fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Con i valori iniziali il totale è 42,08 kg CO2e per 100 kg (il calcolatore mostra 42,1), cioè 0,4208 per kg. Tutti a gas: 44,0; tutti elettrici: 37,6, e la carbon footprint totale scenderebbe da 1,474 a 1,429. Se tutti adottassero gli accorgimenti, con le stesse quote 70 e 30: 70 × 0,352 + 30 × 0,3008 = 33,66, cioè 0,337 per kg, e il totale diventerebbe 1,390. Il −20% è un’ipotesi illustrativa per far vedere il meccanismo. Il punto di metodo: sull’uso l’azienda non decide, ma può informare, per esempio con le indicazioni di cottura sull’astuccio.
+### SCHERMATA 44 — Fase 6: il fine vita dell’imballaggio [calc · ISO 14067 · fine vita]
+La pasta viene mangiata; resta l’imballaggio: 53 g per ogni chilo di pasta. Il fattore è una media tra riciclo e smaltimento.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Astuccio e cartone a fine vita (raccolta differenziata della carta): 0,045 kg × 0,1 kg CO2e/kg = 0,0045 kg CO2e/kg
+- Film plastico a fine vita (raccolta differenziata della plastica): 0,008 kg × 0,1 kg CO2e/kg = 0,0008 kg CO2e/kg
+Fase 6 – Fine vita: 0,0053 kg CO2e/kg
+È lo stesso conto di 0,053 kg × 0,1. Le sei fasi sono complete: nella prossima sezione la somma.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattore medio didattico
+Commento del docente: 0,0045 + 0,0008 = 0,0053 kg CO2e per kg di pasta: lo 0,4% del totale, la fase più piccola. Verrebbe voglia di tralasciarla, ma una CFP dalla culla alla tomba deve arrivare fino in fondo, e mostrare che il fine vita pesa poco è già un’informazione. Attenzione a non confondere il fine vita dell’imballaggio con la sua produzione: produrre cartone e film vale 0,0629 kg (fase 3), smaltirli 0,0053. Il fattore 0,1 è un valore didattico medio; in uno studio reale lo scenario di fine vita distingue le quote avviate a riciclo, recupero energetico e discarica nel Paese di vendita.
+
+## SEZIONE 9 — Il risultato e la sua lettura
+### SCHERMATA 45 — Il risultato e la sua lettura [section]
+Sei fasi calcolate, tredici moltiplicazioni. Ora si sommano, si controlla che il numero stia in piedi e soprattutto lo si legge: dove sono le emissioni, chi le governa, che cosa conviene fare. È la quarta fase dello studio, l’interpretazione.
+- La somma: 1,47 kg CO2e per kg di pasta
+- Il peso di ogni fase e di ogni voce
+- Dal chilo alla confezione e alla porzione
+- Il controllo di coerenza con l’inventario
+### SCHERMATA 46 — La carbon footprint di 1 kg di pasta: la somma [calc · ISO 14067 · risultato]
+I risultati delle sei fasi, in grammi di CO2e per kg di pasta, sommati e riconvertiti in chilogrammi.
+Formula: Emissioni = Risultato della fase × Conversione
+- Fase 1 – Materie prime: 739,54 g CO2e × 0,001 kg/g = 0,7395 kg CO2e/kg
+- Fase 2 – Produzione: 169,525 g CO2e × 0,001 kg/g = 0,1695 kg CO2e/kg
+- Fase 3 – Imballaggio: 64,49 g CO2e × 0,001 kg/g = 0,0645 kg CO2e/kg
+- Fase 4 – Distribuzione: 74,3 g CO2e × 0,001 kg/g = 0,0743 kg CO2e/kg
+- Fase 5 – Uso (cottura): 420,8 g CO2e × 0,001 kg/g = 0,4208 kg CO2e/kg
+- Fase 6 – Fine vita: 5,3 g CO2e × 0,001 kg/g = 0,0053 kg CO2e/kg
+CFP dalla culla alla tomba: 1,4740 kg CO2e/kg
+Arrotondato: 1,47 kg CO2e per kg di pasta, confezionata, cotta e consumata. Di cui dalla culla al cancello: 0,97.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico
+Commento del docente: 0,7395 + 0,1695 + 0,0645 + 0,0743 + 0,4208 + 0,0053 = 1,474. Produrre, portare in tavola e cuocere un chilo di pasta emette circa un chilo e mezzo di CO2e. Il risultato si scrive sempre con la sua carta d’identità: unità funzionale, confine, anno dei dati, GWP usati. E con la sua avvertenza: è il valore di un caso di fantasia con fattori arrotondati. Non usatelo come riferimento per la pasta in commercio, e non stupitevi se studi reali riportano valori diversi: cambiano dati, confini e scenari.
+### SCHERMATA 47 — Il peso di ogni fase [donut · ISO 14067 · interpretazione]
+Grammi di CO2e per kg di pasta e quota percentuale sul totale dalla culla alla tomba.
+Totale al centro: 1,47 kg CO2e/kg
+- 1. Materie prime: 739,5g (50,2%)
+- 2. Produzione: 169,5g (11,5%)
+- 3. Imballaggio: 64,5g (4,4%)
+- 4. Distribuzione: 74,3g (5%)
+- 5. Uso (cottura): 420,8g (28,6%)
+- 6. Fine vita: 5,3g (0,4%)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Due fasi fanno il 78,7% del risultato: le materie prime (50,2%) e la cottura (28,5%). Lo stabilimento vale l’11,5%, la distribuzione il 5,0%, l’imballaggio il 4,4%, il fine vita lo 0,4%. Queste due fasi dominanti si chiamano spesso «hotspot»: i punti caldi su cui si concentra l’attenzione. Il grafico corregge un’impressione comune: molti pensano che l’impronta di un alimento confezionato stia soprattutto nell’imballaggio e nel trasporto, che qui insieme non arrivano al 10%. Ogni prodotto ha però il suo profilo: non generalizzate quello della pasta.
+### SCHERMATA 48 — Le voci in ordine di peso [bar · ISO 14067 · interpretazione]
+Le tredici voci di calcolo, in grammi di CO2e per kg di pasta; le sei minori sono raggruppate.
+- Semola di grano duro: 721g
+- Cottura a gas: 308g
+- Cottura elettrica: 112,8g
+- Gas naturale – combustione: 105g
+- Distribuzione ai mercati: 74,3g
+- Astuccio e cartone: 40,5g
+- Elettricità di rete: 37,6g
+- Altre sei voci: 74,8g
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: La semola da sola vale 721 g su 1.474, il 48,9%; con le due righe della cottura si arriva al 77,5%. Le «altre sei voci» sono film plastico (22,4 g), trasporto della semola (18,5 g), filiera a monte del gas (17,3 g), filiera dell’elettricità (9,6 g), fine vita (5,3 g) e trasporto degli imballaggi (1,6 g): 74,8 g in tutto. È il principio di Pareto già incontrato nell’unità 7: poche voci spiegano quasi tutto. Ne discende una regola per la qualità dei dati: la precisione va spesa sulle prime tre barre, non sulle ultime.
+### SCHERMATA 49 — Prova tu: dalla confezione alla porzione [sim · ISO 14067 · unità funzionale]
+Il risultato è proporzionale alla quantità. Inserisci i chili di pasta: 0,5 per una confezione da 500 g, 0,08 per una porzione da 80 g, 1 per tornare all’unità funzionale. Quanta pasta mangia in un anno la tua famiglia?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Quantità di pasta: 0,5 kg × 1,474 kg CO2e/kg = 0,737 kg CO2e, dalla culla alla tomba
+Totale iniziale: 0,737 kg CO2e, dalla culla alla tomba
+Confezione da 500 g: 0,74 kg CO2e. Porzione da 80 g: 0,118 kg CO2e, cioè 118 g.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico
+Commento del docente: 0,5 × 1,474 = 0,737, cioè 0,74 kg CO2e per la confezione da mezzo chilo; 0,08 × 1,474 = 0,118 kg, cioè 118 g di CO2e per un piatto di pasta. Passare da un’unità all’altra è una semplice proporzione, purché si dica sempre a che cosa si riferisce il numero: lo stesso prodotto «vale» 1,47, 0,74 oppure 0,118 secondo l’unità scelta. Un ordine di grandezza per la memoria: con il fattore dell’auto media del corso (0,17 kg CO2e/km), una porzione corrisponde a circa 700 metri in auto. Il condimento, naturalmente, non è compreso.
+### SCHERMATA 50 — Controllo di coerenza: dall’inventario alla CFP [calc · Interpretazione · controllo di coerenza]
+Si parte dal conto rapido della sezione 1 (inventario ÷ produzione), si tolgono le voci che non appartengono al prodotto, si aggiunge la cottura. Se il metodo è coerente, si deve ritrovare 1,474.
+Formula: Emissioni = Emissioni annue × Conversione in kg (± segno) ÷ Produzione annua
+- Totale dell’inventario 2025 (Scope 1 + 2 location-based + 3, senza la cottura): 21.692,5 t CO2e × 1000 kg/t ÷ 20.000.000 kg = 1,0846 kg CO2e/kg
+- Meno: voci fuori dal confine del prodotto (macchinari 280 t · flotta e filiera dei carburanti 142,6 t · viaggi 28,9 t · pendolarismo 80,8 t): 532,274 t CO2e × -1000 kg/t ÷ 20.000.000 kg = -0,0266 kg CO2e/kg
+- Meno: voci minori escluse per cut-off (acqua, rifiuti, gas refrigeranti, gasolio del gruppo elettrogeno): 97,107 t CO2e × -1000 kg/t ÷ 20.000.000 kg = -0,0049 kg CO2e/kg
+- Più: fase d’uso (cottura) (riportata a parte nell’inventario): 8416 t CO2e × 1000 kg/t ÷ 20.000.000 kg = 0,4208 kg CO2e/kg
+CFP dalla culla alla tomba: 1,4740 kg CO2e/kg
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: 1,0846 − 0,0266 − 0,0049 + 0,4208 = 1,474: i due conti si incontrano. È il controllo più convincente che si possa mostrare a un verificatore o a un cliente: la CFP non è un numero «a parte», discende dagli stessi dati dell’inventario, con confini diversi e dichiarati. Funziona così bene perché Terrafelix fa un solo prodotto e nel caso didattico produzione e vendite coincidono; in un’azienda con molti prodotti la riconciliazione passa dall’allocazione ed è più laboriosa, ma resta un’ottima prova di plausibilità.
+### SCHERMATA 51 — Leggere il risultato: peso e possibilità di intervento [quad · Interpretazione · modello didattico]
+Assi: Controllo dell’azienda: basso → alto / Peso sul risultato: basso → alto
+- Pesa molto, si governa poco: Semola: 48,9% → lavorare con il molino e la filiera agricola; Cottura: 28,5% → informare il consumatore
+- Pesa abbastanza, si governa: Gas dello stabilimento, con la sua filiera: 8,3% → efficienza e recupero di calore
+- Pesa poco, si governa poco: Trasporto della semola: 1,3%; Fine vita dell’imballaggio: 0,4%
+- Pesa poco, si governa: Distribuzione: 5,0% → mezzi e carichi; Imballaggio: 4,4% → pesi e materiali; Elettricità, con la sua filiera: 3,2% → fotovoltaico
+Commento del docente: La matrice è un modello didattico per passare dai numeri alle decisioni; le percentuali sommano a 100. Le leve più comode (elettricità, imballaggio) stanno in basso: utili, ma spostano poco. Le voci grandi stanno a sinistra, dove l’azienda non comanda: si può però scegliere il fornitore, chiedere dati, scrivere contratti di filiera, dare indicazioni di cottura sull’astuccio. È la stessa lezione dell’inventario, dove lo Scope 3 valeva l’86,1%: la riduzione vera passa dalla catena del valore. L’unità 9 trasformerà questa lettura in un piano con obiettivi e numeri.
+
+## SEZIONE 10 — Carbonio biogenico, uso del suolo e voci separate
+### SCHERMATA 52 — Carbonio biogenico, uso del suolo e voci separate [section]
+Un numero solo non basta a un lettore esperto. La ISO 14067 chiede di mostrare a parte alcune componenti del risultato, perché hanno natura diversa, e vieta di «alleggerire» la carbon footprint con i crediti di compensazione.
+- Le quattro voci da riportare separatamente
+- Il carbonio biogenico del grano: un ciclo breve
+- Il cambiamento d’uso del suolo
+- La compensazione resta fuori dal calcolo
+### SCHERMATA 53 — Le voci che il rapporto di studio riporta a parte [table · ISO 14067 · voci separate]
+Colonne: Voce | Che cos’è | Nel caso della pasta
+- Emissioni e rimozioni di origine fossile | Gas serra da combustibili fossili e da materiali di origine fossile | Gas naturale, elettricità, gasolio dei trasporti, plastica: la gran parte del risultato
+- Emissioni e rimozioni di origine biogenica | Carbonio assorbito o rilasciato da piante e biomassa | Carbonio contenuto nel grano e nel cartone
+- Cambiamento diretto dell’uso del suolo (dLUC) | Emissioni dovute alla conversione di un terreno, per esempio da bosco a seminativo | Da verificare con la filiera; non rilevante se il grano viene da terreni coltivati da lungo tempo (ipotesi del caso)
+- Emissioni degli aeromobili | Gas serra dei trasporti aerei compresi nel ciclo di vita | Nessun trasporto aereo: zero
+Requisito ISO 14067: queste componenti sono documentate separatamente nel rapporto di studio. I fattori didattici del corso sono espressi in CO2e complessiva e non mostrano il dettaglio, che in uno studio reale è fornito dalle banche dati.
+Commento del docente: Perché separare? Perché un chilo di CO2 dal metano di un essiccatoio e un chilo di CO2 dalla respirazione di chi ha mangiato la pasta non raccontano la stessa storia: il primo aggiunge all’atmosfera carbonio che era sottoterra, il secondo restituisce carbonio che la pianta aveva assorbito pochi mesi prima. Lo stesso vale per il suolo: convertire un bosco in campo libera in pochi anni carbonio accumulato in decenni. Il lettore esperto vuole vedere queste componenti distinte per giudicare il risultato; il totale da solo le nasconderebbe.
+### SCHERMATA 54 — Il carbonio biogenico del grano: un ciclo breve [cycle · ISO 14067 · carbonio biogenico]
+Al centro: Carbonio biogenico
+- Crescita del grano: La pianta assorbe CO2 dall’aria con la fotosintesi
+- Semola e pasta: Parte di quel carbonio resta nel chicco e poi nel prodotto
+- Consumo: La pasta è mangiata e digerita nel giro di pochi mesi
+- Ritorno all’atmosfera: Il carbonio torna all’aria come CO2 con la respirazione
+Assorbimento e rilascio si bilanciano in tempi brevi: per questo il carbonio biogenico è tenuto distinto da quello fossile e riportato a parte.
+Commento del docente: È un cenno, non un metodo di calcolo: il trattamento del carbonio biogenico segue le regole della norma e delle eventuali regole di categoria, e nel rapporto assorbimenti e rilasci vanno documentati separatamente. Due avvertenze contro le semplificazioni. La prima: «biogenico» non significa «a zero emissioni»: la coltivazione emette protossido di azoto dai fertilizzanti e CO2 dai mezzi agricoli, che sono già dentro il fattore della semola. La seconda: il ciclo breve vale per un alimento; per prodotti di lunga durata, come il legno da costruzione, il discorso è diverso.
+### SCHERMATA 55 — Compensazione e carbon footprint di prodotto [two · ISO 14067 · compensazione esclusa]
+Colonna «Corretto»:
+- Calcolare la CFP senza sottrarre alcun credito di carbonio
+- Dichiarare 1,47 kg CO2e/kg anche se l’azienda acquista crediti
+- Riportare a parte, in altra sede, i crediti acquistati e ritirati
+- Ridurre il numero agendo sulle fasi: semola, energia, imballaggio
+- Rimandare alle regole sulla neutralità per le dichiarazioni (unità 10)
+Colonna «Sbagliato»:
+- Sottrarre i crediti dal risultato e dichiarare «CFP pari a zero»
+- Togliere dal conto le emissioni «compensate» della distribuzione
+- Sommare le emissioni evitate dal fotovoltaico come valore negativo
+- Presentare come riduzione ciò che è solo compensazione
+- Confondere una CFP bassa con un prodotto «a impatto zero»
+Commento del docente: La regola è netta: la compensazione non può entrare nel calcolo della CFP. Un esempio numerico: se Terrafelix acquistasse crediti per 0,5 kg CO2e per ogni chilo di pasta, la carbon footprint resterebbe 1,474, non 0,974. I crediti sono un’altra partita contabile, con regole proprie, che vedremo nell’unità 10 insieme ai limiti posti alle asserzioni di «neutralità» basate sulla sola compensazione. Tenere distinti i due piani protegge anche l’azienda: un numero «ripulito» dai crediti non è confrontabile con nessun altro e non regge a una verifica.
+
+## SEZIONE 11 — Rapporto di studio, PCR, comunicazione
+### SCHERMATA 56 — Rapporto di studio, PCR, comunicazione [section]
+Il numero è pronto, ma una carbon footprint vale quanto la sua documentazione. Come si scrive il rapporto di studio, che cosa sono le regole di categoria di prodotto, quando serve una verifica e, soprattutto, quando due prodotti si possono confrontare.
+- Il rapporto di studio: che cosa contiene
+- PCR, EPD, riesame critico: le regole del gioco
+- Confronti corretti e confronti impropri
+- La scheda dati per il cliente
+### SCHERMATA 57 — Il rapporto di studio della CFP: l’indice [tree · ISO 14067 · rapporto di studio]
+Contenuti tipici di un rapporto di studio (buona prassi coerente con la ISO 14067): chi legge deve poter rifare il conto.
+Radice: Rapporto di studio (1 kg di pasta Terrafelix)
+- Impostazione: Obiettivo e destinatari; Unità funzionale o dichiarata; Confine del sistema; Criteri di esclusione
+- Dati e metodi: Dati primari e secondari, con fonti; Criteri di allocazione; GWP utilizzati; Scenari di uso e fine vita
+- Risultati: Totale e risultati per fase; CFP parziale, se presente; Voci separate: fossile, biogenico, dLUC, aerei
+- Interpretazione: Fasi e voci dominanti; Qualità dei dati e limiti; Analisi di sensibilità
+Nessuna compensazione nel risultato; ogni ipotesi e ogni esclusione è scritta e motivata.
+Commento del docente: Il rapporto di studio è per la CFP ciò che il rapporto GHG è per l’inventario: il documento che rende il numero verificabile. La prova di qualità è semplice: una persona competente, con il rapporto in mano, deve poter ricostruire il risultato e capire quali scelte lo hanno determinato. Per Terrafelix sono una ventina di pagine: l’impostazione decisa a settembre, la tabella dei dati per chilo, le tredici righe di calcolo, i risultati per fase, i limiti (primo fra tutti il fattore medio della semola) e lo scenario di cottura con le sue fonti.
+### SCHERMATA 58 — Regole e strumenti attorno alla CFP [hub · ISO 14067 · ISO 14025 · ISO 14026]
+Al centro: CFP di prodotto
+- PCR: Regole comuni per una famiglia di prodotti: se pertinenti, si adottano
+- EPD (ISO 14025): Dichiarazione ambientale di prodotto, verificata da terza parte
+- ISO 14026: Regole per comunicare le impronte ambientali dei prodotti
+- Riesame critico o verifica: Di terza parte: necessari per i confronti destinati al pubblico
+- Carbon Footprint Italy: Programma italiano per la registrazione delle CFP
+- PEF e Made Green in Italy: Metodo UE a 16 categorie di impatto e schema nazionale che lo usa
+Commento del docente: Le regole di categoria di prodotto (PCR) sono il pezzo che rende confrontabili gli studi: fissano per una famiglia di prodotti unità funzionale, confini, criterio di allocazione, scenari di uso e fine vita. Se per il proprio prodotto esistono e sono pertinenti, vanno adottate. L’EPD è una dichiarazione più ampia della CFP, perché copre più categorie di impatto; il metodo europeo PEF ne considera sedici. Altri riferimenti che potete incontrare: il Product Standard del GHG Protocol e la PAS 2050. Prima di impostare uno studio, la prima ricerca da fare è proprio se esistono PCR applicabili.
+### SCHERMATA 59 — Confrontare due prodotti: quando si può [two · ISO 14067 · confronti]
+Colonna «Confronto corretto»:
+- Stessa unità funzionale
+- Stesso confine del sistema
+- Stesse regole di categoria (PCR), stesso criterio di allocazione
+- Dati di qualità e periodo comparabili
+- Riesame critico o verifica di terza parte se il confronto è pubblico
+Colonna «Confronto improprio»:
+- Un dato al cancello contro un dato alla tomba
+- Per confezione contro per chilo
+- Scenari di cottura diversi senza dirlo
+- Un valore con crediti sottratti contro uno senza
+- Il proprio studio contro un numero letto in rete senza conoscerne le regole
+Commento del docente: Confrontare CFP con unità funzionali o confini diversi è uno degli errori tipici dell’intero corso, e il più insidioso perché i numeri sembrano parlare da soli. Nel caso Terrafelix la sola scelta del confine sposta il risultato da 0,97 a 1,47; l’esempio del molino ha mostrato che il criterio di allocazione sposta un fattore del 25%. Due studi fatti con regole diverse possono dare numeri diversi per lo stesso identico prodotto. Per questo le affermazioni comparative rivolte al pubblico richiedono regole comuni e un controllo indipendente.
+### SCHERMATA 60 — Riportare due dichiarazioni allo stesso confine [calc · ISO 14067 · confronti]
+Un concorrente di fantasia, il Pastificio B, dichiara 1,10 kg CO2e/kg «dalla culla al cancello». Terrafelix dichiara 1,47 «dalla culla alla tomba». Chi emette meno? Prima si allineano i confini: dal totale di Terrafelix si tolgono le fasi dopo il cancello.
+Formula: Emissioni = Risultato × Conversione (± segno)
+- Terrafelix, dalla culla alla tomba: 1473,955 g CO2e × 0,001 kg/g = 1,4740 kg CO2e/kg
+- Meno: distribuzione: 74,3 g CO2e × -0,001 kg/g = -0,0743 kg CO2e/kg
+- Meno: uso (cottura): 420,8 g CO2e × -0,001 kg/g = -0,4208 kg CO2e/kg
+- Meno: fine vita: 5,3 g CO2e × -0,001 kg/g = -0,0053 kg CO2e/kg
+Terrafelix, dalla culla al cancello: 0,9736 kg CO2e/kg
+A confini allineati: 0,97 contro 1,10. Il confronto «1,47 contro 1,10» avrebbe dato la risposta opposta. E resta da verificare che i due studi usino le stesse regole.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; il Pastificio B e il suo valore sono inventati
+Commento del docente: 1,474 − 0,0743 − 0,4208 − 0,0053 = 0,9736. Letto in fretta, 1,47 sembra peggiore di 1,10; a parità di confine il risultato di Terrafelix è più basso di circa 0,13 kg CO2e per kg. Ma nemmeno questo basta per dire che una pasta «è migliore» dell’altra: bisognerebbe sapere se il Pastificio B ha usato lo stesso anno, gli stessi criteri di allocazione, dati primari o medi per la semola. Senza regole di categoria comuni, il confronto resta un’indicazione di massima da usare all’interno, non un’affermazione da stampare sull’astuccio.
+### SCHERMATA 61 — La scheda dati consegnata ai clienti [case]
+Dicembre 2026. Giorgio Ferri invia ai due clienti della grande distribuzione una scheda di una pagina, preparata con Davide Russo e con il consulente EVALIS a partire dal rapporto di studio.
+- Prodotto e unità: 1 kg di pasta secca di semola di grano duro, confezionata, cotta e consumata
+- Risultato dalla culla alla tomba: 1,47 kg CO2e/kg; di cui dalla culla al cancello: 0,97 kg CO2e/kg
+- Risultati per fase: 0,74 · 0,17 · 0,064 · 0,074 · 0,421 · 0,005 kg CO2e/kg
+- Dati 2025; GWP a 100 anni IPCC AR6; scenario di cottura 70% gas e 30% elettrico
+- Limiti dichiarati: fattore medio per la semola; nessuna PCR adottata; studio non verificato da terza parte
+Domanda di lavoro: Il marketing propone di scrivere sull’astuccio «la pasta con meno CO2». Si può?
+Come ha operato l'azienda: No. È un’affermazione comparativa rivolta al pubblico: richiederebbe regole di categoria comuni, uno studio comparabile sui prodotti concorrenti e un riesame critico o una verifica di terza parte. Terrafelix decide di comunicare il dato ai clienti in forma tecnica, di registrare lo studio dopo una verifica indipendente e di rimandare ogni messaggio al consumatore.
+Commento del docente: La scheda contiene più avvertenze che aggettivi, ed è questo a renderla credibile agli occhi di un buyer. Dichiarare i limiti non indebolisce il dato: dice al cliente come usarlo. La proposta del marketing è il punto in cui molte aziende scivolano: dal numero calcolato per uso interno allo slogan. Le asserzioni ambientali generiche e non dimostrate sono oggi limitate anche dalla normativa europea a tutela dei consumatori; ne parleremo nell’unità 10, insieme al greenwashing. Per ora la regola è: un dato tecnico si comunica con la sua carta d’identità.
+
+## SEZIONE 12 — Sintesi dell’unità
+### SCHERMATA 62 — Sintesi dell’unità [section]
+Abbiamo seguito un chilo di pasta dal campo al bidone della carta e gli abbiamo assegnato un numero, sapendo come è fatto. Fissiamo le formule, la lista di controllo e gli errori da evitare, prima dell’esame e dell’unità 9.
+- Il formulario della carbon footprint di prodotto
+- La lista di controllo prima di consegnare
+- Gli errori tipici
+- I punti chiave e l’unità 9
+### SCHERMATA 63 — Il formulario della CFP [table · ISO 14067]
+Colonne: Passaggio | Formula in parole | Esempio dal caso
+- Dato per unità di prodotto | Dato annuo ÷ produzione annua | 1.050.000 Sm³ ÷ 20.000.000 kg = 0,0525 Sm³/kg
+- Contributo di una voce | Dato per kg × fattore di emissione | 0,0525 × 2 = 0,105 kg CO2e/kg
+- Trasporto | t × km × fattore ÷ produzione | 20.600 × 180 × 0,1 ÷ 20.000.000 = 0,0185
+- Allocazione | Emissioni comuni × quota (massa, poi valore) | 600 kg CO2e × 75% = 450 kg CO2e
+- Scenario d’uso | Somma di quota × fattore | 0,7 × 0,44 + 0,3 × 0,376 = 0,4208
+- CFP parziale (al cancello) | Somma delle fasi 1–3 | 0,7395 + 0,1695 + 0,0645 = 0,9736
+- CFP completa (alla tomba) | Somma delle sei fasi | 0,9736 + 0,0743 + 0,4208 + 0,0053 = 1,474
+- Altra quantità di prodotto | CFP per kg × kg | 0,08 kg × 1,474 = 0,118 kg CO2e
+Fattori del corso: valori arrotondati a scopo didattico. In uno studio reale si usano fonti aggiornate e documentate, e le regole di categoria se esistono.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Otto righe, e nessuna formula nuova rispetto alle unità precedenti: sono moltiplicazioni e divisioni. La difficoltà della CFP non sta nell’aritmetica ma nelle decisioni che la precedono: che cosa è dentro, a quale unità ci si riferisce, come si ripartisce ciò che è comune, quali scenari si assumono a valle. Chi sa costruire questa tabella per la pasta la sa costruire per un biscotto, una piastrella o un flacone: cambiano le righe del conto, non il metodo. Tenetela come promemoria per l’esame.
+### SCHERMATA 64 — Prima di consegnare una CFP [checklist · ISO 14067 · buona prassi]
+- Unità scritta per esteso: funzionale o dichiarata, accanto a ogni numero
+- Confine dichiarato: culla–cancello o culla–tomba; la CFP parziale è indicata come tale
+- Esclusioni motivate: criterio di cut-off e stima del peso delle voci escluse
+- Divisore corretto: prodotto finito dello stesso periodo dei consumi
+- Filiere a monte dell’energia incluse: non solo combustione ed elettricità in bolletta
+- Allocazione dichiarata: evitata dove possibile; criterio scritto e applicato in modo uniforme
+- Scenari di uso e fine vita con le fonti: da regole di categoria, se esistono
+- Nessun credito sottratto: voci fossili, biogeniche, dLUC e aerei riportate a parte
+- Somma verificata e riconciliata: fasi, totale, confronto con l’inventario dove possibile
+Commento del docente: È la lista che Davide Russo ha usato prima di far uscire la scheda per i clienti. I primi tre punti sono quelli su cui cade la maggior parte delle contestazioni: un numero senza unità e senza confine non è contestabile, è semplicemente inutilizzabile. L’ultimo punto è il più trascurato: rifare la somma per fase e, quando l’azienda ha un inventario, verificare che i due conti si parlino. Nel caso Terrafelix la riconciliazione ha richiesto quattro righe e ha ritrovato 1,474 al millesimo.
+### SCHERMATA 65 — Gli errori tipici della CFP [two · ISO 14067]
+Colonna «Corretto»:
+- Calcolare per fasi del ciclo di vita, con dati per unità di prodotto
+- Dividere per i chili di prodotto finito
+- Contare combustione e filiera a monte dell’energia
+- Dichiarare scenari, allocazione, esclusioni
+- Arrotondare solo il risultato finale: 1,474 → 1,47
+Colonna «Sbagliato»:
+- Chiamare «CFP» l’inventario diviso per la produzione
+- Dividere per la materia prima in ingresso
+- Dimenticare la fase d’uso in uno studio «alla tomba»
+- Confrontare 0,97 al cancello con 1,47 alla tomba
+- Sottrarre i crediti di carbonio dal risultato
+Commento del docente: Ogni voce della colonna di destra è stata incontrata in questa unità con i suoi numeri: il conto rapido dà 1,085 invece di 1,474; dividere per la semola abbassa i consumi per chilo del 3%; dimenticare la cottura toglie il 28,5% del risultato; confrontare confini diversi rovescia una classifica. Sono errori di impostazione, non di calcolo: nessuna calcolatrice li segnala. L’antidoto è sempre lo stesso: scrivere le decisioni prima di contare e portarle con sé insieme al numero.
+### SCHERMATA 66 — I punti chiave e l’unità 9 [summary]
+1. L’inventario risponde a «quanto emette l’azienda in un anno», la CFP a «quanto emette un’unità di prodotto nella sua vita»: non sono intercambiabili
+2. La ISO 14067 applica la valutazione del ciclo di vita al solo cambiamento climatico, in quattro fasi: obiettivo e campo, inventario, valutazione dell’impatto, interpretazione
+3. Unità funzionale (o dichiarata) e confine del sistema si decidono prima di contare e si scrivono accanto al risultato
+4. I dati annui si dividono per la produzione di prodotto finito; il conteggio resta dato di attività × fattore di emissione
+5. Allocazione: prima evitarla, poi criterio fisico, in subordine economico; il criterio cambia il risultato e va dichiarato
+6. Pasta Terrafelix: 0,97 kg CO2e/kg dalla culla al cancello, 1,47 dalla culla alla tomba; materie prime 50,2%, cottura 28,5%
+7. Carbonio fossile, biogenico, uso del suolo e aerei si riportano a parte; la compensazione non entra mai nel calcolo
+8. Si confrontano solo prodotti con stessa unità funzionale, stessi confini e stesse regole; i confronti pubblici richiedono un controllo indipendente
+9. Nell’unità 9: dai numeri alle decisioni, con obiettivi di riduzione e piano di decarbonizzazione
+Commento del docente: Con questa unità Terrafelix ha due strumenti: l’inventario, che dice quanto emette l’azienda, e la carbon footprint della pasta, che dice dove nasce l’impronta di ogni chilo. Entrambi indicano le stesse priorità: la semola, l’energia termica, la catena del valore. Nell’unità 9 queste priorità diventano un piano: obiettivi al 2030, leve con le riduzioni calcolate una per una, compresa la semola da filiera migliorativa che abbiamo anticipato nell’analisi di sensibilità. Prima di proseguire, affrontate l’esame finale dell’unità: sette domande su dodici chiedono un calcolo.

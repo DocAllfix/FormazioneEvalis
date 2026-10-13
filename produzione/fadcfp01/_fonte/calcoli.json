@@ -1,0 +1,4986 @@
+{
+ "m01": {
+  "14": {
+   "tipo": "calcolo",
+   "titolo": "Primo conto: quanto vale 1 kg di tre gas diversi",
+   "etichette": {
+    "r": "CO2 equivalente",
+    "a": "Massa del gas",
+    "ef": "GWP (AR6)"
+   },
+   "totale": "Tre chilogrammi di gas, in tutto",
+   "righe": [
+    {
+     "l": "Metano (CH4) di origine fossile",
+     "n": "per esempio una perdita di gas naturale",
+     "a": 1,
+     "au": "kg",
+     "ef": 29.8,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Protossido di azoto (N2O)",
+     "n": "per esempio da fertilizzanti azotati",
+     "a": 1,
+     "au": "kg",
+     "ef": 273,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "HFC-134a",
+     "n": "gas refrigerante di un gruppo frigorifero",
+     "a": 1,
+     "au": "kg",
+     "ef": 1530,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 1832.8,
+   "piede": "",
+   "fonte": "IPCC AR6, GWP a 100 anni (riepilogo GHG Protocol, 2024)"
+  },
+  "15": {
+   "tipo": "calcolo",
+   "titolo": "Le miscele: da dove viene il 2.256 dell’R-410A",
+   "etichette": {
+    "r": "CO2 equivalente",
+    "a": "Quota in 1 kg di miscela",
+    "ef": "GWP (AR6)"
+   },
+   "totale": "1 kg di R-410A",
+   "righe": [
+    {
+     "l": "HFC-32",
+     "n": "50% della miscela",
+     "a": 0.5,
+     "au": "kg",
+     "ef": 771,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "HFC-125",
+     "n": "50% della miscela",
+     "a": 0.5,
+     "au": "kg",
+     "ef": 3740,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 2255.5,
+   "piede": "2.255,5 si arrotonda a 2.256 kg CO2e per kg: è il valore che useremo in tutto il corso per l’R-410A.",
+   "fonte": "IPCC AR6, GWP a 100 anni; composizione dell’R-410A: 50% HFC-32, 50% HFC-125"
+  },
+  "16": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: da chilogrammi di gas a CO2 equivalente",
+   "righe": [
+    {
+     "l": "Metano (CH4) di origine fossile",
+     "v": 10,
+     "u": "kg",
+     "ef": 29.8,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Protossido di azoto (N2O)",
+     "v": 1,
+     "u": "kg",
+     "ef": 273,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "HFC-134a",
+     "v": 2,
+     "u": "kg",
+     "ef": 1530,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "R-410A",
+     "v": 3,
+     "u": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Esafluoruro di zolfo (SF6)",
+     "v": 0.1,
+     "u": "kg",
+     "ef": 24300,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "piede": "Con i valori iniziali il totale è 12.829 kg CO2e, cioè circa 12,8 t CO2e.",
+   "fonte": "IPCC AR6, GWP a 100 anni (riepilogo GHG Protocol, 2024)"
+  },
+  "24": {
+   "tipo": "calcolo",
+   "titolo": "Quanti chilometri in auto valgono 1 tonnellata di CO2e",
+   "etichette": {
+    "r": "Chilometri",
+    "a": "Emissioni",
+    "ef": "Conversione in kg",
+    "d": "Fattore di emissione"
+   },
+   "unita": "km",
+   "dec": 0,
+   "totale": false,
+   "righe": [
+    {
+     "l": "Auto media",
+     "n": "fattore per chilometro: valore didattico arrotondato",
+     "a": 1,
+     "au": "t CO2e",
+     "ef": 1000,
+     "efu": "kg CO2e/t",
+     "d": 0.17,
+     "du": "kg CO2e/km"
+    }
+   ],
+   "atteso": 5882.35,
+   "piede": "1.000 kg CO2e ÷ 0,17 kg CO2e/km = 5.882 km: una tonnellata di CO2e si raggiunge prima di quanto si pensi.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "26": {
+   "tipo": "calcolo",
+   "titolo": "Un anno di consumi di una famiglia: quanto fa?",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Automobile",
+     "n": "chilometri dal contachilometri",
+     "a": 10000,
+     "au": "km",
+     "ef": 0.17,
+     "efu": "kg CO2e/km"
+    },
+    {
+     "l": "Gas per riscaldamento e cucina",
+     "n": "somma delle bollette dell’anno",
+     "a": 800,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Elettricità di casa",
+     "n": "somma delle bollette dell’anno",
+     "a": 2500,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Un viaggio in aereo, corto raggio",
+     "n": "andata e ritorno di due persone: 2.000 pkm in tutto",
+     "a": 2000,
+     "au": "pkm",
+     "ef": 0.18,
+     "efu": "kg CO2e/pkm"
+    }
+   ],
+   "atteso": 4247.5,
+   "piede": "Sono contati solo i consumi diretti di energia e i viaggi: mancano cibo, acquisti e servizi.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "46": {
+   "tipo": "calcolo",
+   "titolo": "Le tre voci più grandi del pastificio, una per scope",
+   "etichette": {},
+   "totale": "Totale delle tre voci",
+   "righe": [
+    {
+     "l": "Scope 1 · Gas naturale di essiccatoi e centrale termica",
+     "n": "dato: bollette del gas dell’anno",
+     "a": 1050000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Scope 2 · Elettricità prelevata dalla rete",
+     "n": "dato: bollette elettriche dell’anno",
+     "a": 3200000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Scope 3 · Semola di grano duro acquistata",
+     "n": "dato: fatture e documenti di trasporto del molino",
+     "a": 20600000,
+     "au": "kg",
+     "ef": 0.7,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 17272000,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "52": {
+   "tipo": "calcolo",
+   "titolo": "Un primo esempio completo: una piccola azienda di impiantistica",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Gas naturale per il riscaldamento",
+     "n": "dato: somma delle bollette del gas dell’anno",
+     "a": 3000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Elettricità prelevata dalla rete",
+     "n": "dato: somma delle bollette elettriche dell’anno",
+     "a": 20000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Gasolio dei due furgoni",
+     "n": "dato: schede carburante e fatture dei rifornimenti",
+     "a": 2500,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    }
+   ],
+   "atteso": 17325,
+   "piede": "Gas e gasolio sono emissioni dirette (Scope 1); l’elettricità acquistata è Scope 2.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "53": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: le emissioni di una piccola azienda",
+   "righe": [
+    {
+     "l": "Gas naturale",
+     "v": 3000,
+     "u": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Elettricità prelevata dalla rete",
+     "v": 20000,
+     "u": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Gasolio",
+     "v": 2500,
+     "u": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Benzina",
+     "v": 0,
+     "u": "l",
+     "ef": 2.3,
+     "efu": "kg CO2e/l"
+    }
+   ],
+   "piede": "Con i valori iniziali il totale è 17.325 kg CO2e, cioè circa 17,3 t CO2e.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "64": {
+   "tipo": "calcolo",
+   "titolo": "Un ultimo conto di ripasso: tre righe, due tipi di calcolo",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Gas naturale del forno",
+     "n": "dato: bollette dell’anno · fattore di emissione",
+     "a": 1200,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Elettricità prelevata dalla rete",
+     "n": "dato: bollette dell’anno · fattore di emissione",
+     "a": 15000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Ricarica di R-410A della cella frigorifera",
+     "n": "dato: rapporto del frigorista · GWP AR6",
+     "a": 0.5,
+     "au": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 7053,
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); GWP: IPCC AR6"
+  }
+ },
+ "m02": {
+  "3": {
+   "tipo": "calcolo",
+   "titolo": "Primo esempio svolto: la caldaia a gas di un’azienda",
+   "etichette": {},
+   "totale": false,
+   "righe": [
+    {
+     "l": "Gas naturale bruciato in caldaia",
+     "n": "dato: somma delle 12 bollette dell’anno · fattore: valore didattico arrotondato",
+     "a": 48000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    }
+   ],
+   "atteso": 96000,
+   "piede": "Ogni Sm³ bruciato produce circa 2 kg di CO2e: 48.000 Sm³ ne producono 96.000 kg, cioè 96 tonnellate.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "13": {
+   "tipo": "calcolo",
+   "titolo": "Conversioni di energia: tutto in kWh",
+   "etichette": {
+    "r": "Energia",
+    "a": "Quantità",
+    "ef": "Fattore di conversione"
+   },
+   "unita": "kWh",
+   "totale": "Energia totale",
+   "righe": [
+    {
+     "l": "Gas naturale",
+     "n": "dalle bollette del gas · potere calorifico indicativo",
+     "a": 12000,
+     "au": "Sm³",
+     "ef": 9.8,
+     "efu": "kWh/Sm³"
+    },
+    {
+     "l": "Elettricità",
+     "n": "dalla bolletta annuale riepilogativa",
+     "a": 85,
+     "au": "MWh",
+     "ef": 1000,
+     "efu": "kWh/MWh"
+    },
+    {
+     "l": "Calore acquistato",
+     "n": "dal contratto di teleriscaldamento",
+     "a": 250,
+     "au": "GJ",
+     "ef": 277.8,
+     "efu": "kWh/GJ"
+    }
+   ],
+   "atteso": 272050,
+   "piede": "",
+   "fonte": "Esempio didattico – conversioni: 1 MWh = 1.000 kWh; 1 GJ = 277,8 kWh; gas naturale circa 9,8 kWh/Sm³ (ISPRA, parametri standard nazionali, valore arrotondato)"
+  },
+  "14": {
+   "tipo": "calcolo",
+   "titolo": "Carburanti: dai litri ai chilogrammi",
+   "etichette": {
+    "r": "Massa",
+    "a": "Quantità",
+    "ef": "Densità (valore indicativo)"
+   },
+   "unita": "kg",
+   "totale": "Totale carburanti",
+   "righe": [
+    {
+     "l": "Gasolio",
+     "n": "litri dalle schede carburante",
+     "a": 5000,
+     "au": "l",
+     "ef": 0.84,
+     "efu": "kg/l"
+    },
+    {
+     "l": "Benzina",
+     "n": "litri dalle schede carburante",
+     "a": 1200,
+     "au": "l",
+     "ef": 0.74,
+     "efu": "kg/l"
+    }
+   ],
+   "atteso": 5088,
+   "piede": "Al contrario, da kg a litri si divide per la densità: 4.200 kg di gasolio ÷ 0,84 = 5.000 l.",
+   "fonte": "Esempio didattico – densità dei carburanti: valori indicativi"
+  },
+  "15": {
+   "tipo": "calcolo",
+   "titolo": "Trasporti: tonnellate-chilometro e passeggeri-chilometro",
+   "etichette": {
+    "k": "Distanza"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Consegna di merci con autoarticolato",
+     "n": "24 t × 450 km = 10.800 tkm",
+     "a": 24,
+     "au": "t",
+     "k": 450,
+     "ku": "km",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm"
+    },
+    {
+     "l": "Trasferta in treno di tre persone",
+     "n": "3 passeggeri × 800 km = 2.400 pkm",
+     "a": 3,
+     "au": "passeggeri",
+     "k": 800,
+     "ku": "km",
+     "ef": 0.035,
+     "efu": "kg CO2e/pkm"
+    }
+   ],
+   "atteso": 1164,
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "16": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: l’unità del dato deve essere quella del fattore",
+   "righe": [
+    {
+     "l": "Elettricità, espressa in kWh",
+     "v": 1000,
+     "u": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Elettricità, espressa in MWh",
+     "v": 1,
+     "u": "MWh",
+     "ef": 235,
+     "efu": "kg CO2e/MWh"
+    },
+    {
+     "l": "Gas naturale, espresso in Sm³",
+     "v": 100,
+     "u": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Gas naturale, espresso in kWh",
+     "v": 980,
+     "u": "kWh",
+     "ef": 0.2041,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Gasolio, espresso in litri",
+     "v": 100,
+     "u": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Gasolio, espresso in kg",
+     "v": 84,
+     "u": "kg",
+     "ef": 3.155,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "piede": "I fattori per MWh, per kWh di gas e per kg di gasolio sono ricavati da quelli del corso con le conversioni indicative: 1 MWh = 1.000 kWh; 1 Sm³ ≈ 9,8 kWh; gasolio ≈ 0,84 kg/l.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso) e conversioni indicative"
+  },
+  "21": {
+   "tipo": "calcolo",
+   "titolo": "Mille litri di gasolio: combustione più filiera a monte",
+   "etichette": {},
+   "totale": "Totale delle due voci",
+   "righe": [
+    {
+     "l": "Combustione nel motore",
+     "n": "emissione diretta: Scope 1, se il veicolo è dell’azienda",
+     "a": 1000,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Filiera a monte del gasolio",
+     "n": "estrazione, raffinazione, distribuzione: Scope 3, categoria 3",
+     "a": 1000,
+     "au": "l",
+     "ef": 0.62,
+     "efu": "kg CO2e/l"
+    }
+   ],
+   "atteso": 3270,
+   "piede": "Le due voci si calcolano con lo stesso dato ma si riportano separatamente, ciascuna nel proprio scope: lo vedremo nelle unità 4 e 6.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "30": {
+   "tipo": "calcolo",
+   "titolo": "Ricarica di 12 kg di R-410A: il calcolo con i GWP AR6",
+   "etichette": {
+    "a": "Massa di gas",
+    "ef": "GWP"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "R-410A reintegrato",
+     "n": "dato: rapporti di intervento del frigorista · GWP della miscela: 0,5 × 771 + 0,5 × 3.740 ≈ 2.256",
+     "a": 12,
+     "au": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg (AR6)"
+    }
+   ],
+   "atteso": 27072,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; GWP: IPCC AR6"
+  },
+  "31": {
+   "tipo": "calcolo",
+   "titolo": "Gli stessi 12 kg con i GWP AR4: il risultato cambia",
+   "etichette": {
+    "a": "Massa di gas",
+    "ef": "GWP"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "R-410A reintegrato",
+     "n": "stessa quantità, serie di GWP diversa",
+     "a": 12,
+     "au": "kg",
+     "ef": 2088,
+     "efu": "kg CO2e/kg (AR4)"
+    }
+   ],
+   "atteso": 25056,
+   "piede": "Differenza: 27.072 − 25.056 = 2.016 kg CO2e. Con AR6 il risultato è più alto dell’8% circa: stesso gas, stessa quantità.",
+   "fonte": "Esempio didattico; GWP: IPCC AR4"
+  },
+  "32": {
+   "tipo": "calcolo",
+   "titolo": "Metano: 100 kg di origine fossile e 100 kg non fossile",
+   "etichette": {
+    "a": "Massa di gas",
+    "ef": "GWP"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Metano di origine fossile",
+     "n": "es. perdita da una tubazione di gas naturale",
+     "a": 100,
+     "au": "kg",
+     "ef": 29.8,
+     "efu": "kg CO2e/kg (AR6)"
+    },
+    {
+     "l": "Metano di origine non fossile",
+     "n": "es. perdita di biogas da un digestore",
+     "a": 100,
+     "au": "kg",
+     "ef": 27,
+     "efu": "kg CO2e/kg (AR6)"
+    }
+   ],
+   "atteso": 5680,
+   "piede": "Un chilogrammo di metano disperso «pesa» come 27–30 kg di CO2: per questo anche le piccole perdite contano.",
+   "fonte": "Esempio didattico; GWP: IPCC AR6"
+  },
+  "36": {
+   "tipo": "calcolo",
+   "titolo": "Quando mancano i litri: chilometri × consumo medio × fattore",
+   "etichette": {
+    "k": "Consumo medio"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Furgone a gasolio",
+     "n": "30.000 km × 0,08 l/km = 2.400 l stimati (8 l ogni 100 km)",
+     "a": 30000,
+     "au": "km",
+     "k": 0.08,
+     "ku": "l/km",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Auto a benzina",
+     "n": "18.000 km × 0,06 l/km = 1.080 l stimati (6 l ogni 100 km)",
+     "a": 18000,
+     "au": "km",
+     "k": 0.06,
+     "ku": "l/km",
+     "ef": 2.3,
+     "efu": "kg CO2e/l"
+    }
+   ],
+   "atteso": 8844,
+   "piede": "I consumi medi sono ipotesi (valori indicativi): vanno scritti nel registro con la loro origine, per esempio il libretto del veicolo o la media dei mesi documentati.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); consumi medi: valori indicativi"
+  },
+  "40": {
+   "tipo": "calcolo",
+   "titolo": "Sei piccole sorgenti sommate nel modo corretto",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Gasolio del gruppo elettrogeno",
+     "a": 500,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Benzina dell’auto di servizio",
+     "a": 630,
+     "au": "l",
+     "ef": 2.3,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Gasolio del carrello elevatore",
+     "a": 900,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "GPL per il riscaldamento di un locale",
+     "a": 1000,
+     "au": "l",
+     "ef": 1.6,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Trasferte in treno",
+     "a": 12800,
+     "au": "pkm",
+     "ef": 0.035,
+     "efu": "kg CO2e/pkm"
+    },
+    {
+     "l": "Ricarica di R-410A",
+     "a": 1.5,
+     "au": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 10591,
+   "piede": "10.591 kg CO2e ÷ 1.000 = 10,591 t, che si presenta come 10,6 t CO2e: l’arrotondamento arriva solo adesso.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "45": {
+   "tipo": "calcolo",
+   "titolo": "Aurora, passo 1: l’energia della sede",
+   "etichette": {},
+   "totale": "Energia della sede",
+   "righe": [
+    {
+     "l": "Gas naturale",
+     "n": "somma delle bollette dell’anno",
+     "a": 3200,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Elettricità prelevata dalla rete",
+     "n": "somma delle bollette dell’anno · fattore medio nazionale",
+     "a": 18000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 10630,
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "46": {
+   "tipo": "calcolo",
+   "titolo": "Aurora, passo 2: i furgoni e il viaggio in aereo",
+   "etichette": {
+    "k": "Distanza"
+   },
+   "totale": "Mobilità",
+   "righe": [
+    {
+     "l": "Gasolio dei due furgoni",
+     "n": "litri dalle schede carburante",
+     "a": 5400,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Volo di due tecnici per un corso",
+     "n": "corto raggio, andata e ritorno · distanza illustrativa",
+     "a": 2,
+     "au": "passeggeri",
+     "k": 1400,
+     "ku": "km",
+     "ef": 0.18,
+     "efu": "kg CO2e/pkm"
+    }
+   ],
+   "atteso": 14814,
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "47": {
+   "tipo": "calcolo",
+   "titolo": "Aurora, passo 3: la ricarica di gas refrigerante",
+   "etichette": {
+    "a": "Massa di gas",
+    "ef": "GWP (AR6)"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "R-410A reintegrato nel climatizzatore",
+     "n": "1,5 kg dal rapporto di intervento del frigorista",
+     "a": 1.5,
+     "au": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 3384,
+   "piede": "",
+   "fonte": "Esempio didattico; GWP: IPCC AR6"
+  },
+  "49": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: cambia i dati di Aurora",
+   "righe": [
+    {
+     "l": "Gas naturale",
+     "v": 3200,
+     "u": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Elettricità di rete",
+     "v": 18000,
+     "u": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Gasolio dei furgoni",
+     "v": 5400,
+     "u": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Volo (passeggeri × km)",
+     "v": 2800,
+     "u": "pkm",
+     "ef": 0.18,
+     "efu": "kg CO2e/pkm"
+    },
+    {
+     "l": "Ricarica di R-410A",
+     "v": 1.5,
+     "u": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "53": {
+   "tipo": "calcolo",
+   "titolo": "Trova l’errore: la bolletta in MWh",
+   "etichette": {
+    "r": "Emissioni (risultato errato)"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "Elettricità prelevata dalla rete",
+     "n": "ERRORE: dato in MWh, fattore per kWh",
+     "a": 420,
+     "au": "MWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 98.7,
+   "piede": "98,7 kg CO2e per l’elettricità di un anno? È quanto emette un’auto media in circa 580 km: l’ordine di grandezza non è credibile.",
+   "fonte": "Esempio didattico – calcolo volutamente errato"
+  },
+  "54": {
+   "tipo": "calcolo",
+   "titolo": "La correzione: prima i kWh, poi il fattore",
+   "etichette": {
+    "k": "Conversione"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "Elettricità prelevata dalla rete",
+     "n": "420 MWh × 1.000 = 420.000 kWh",
+     "a": 420,
+     "au": "MWh",
+     "k": 1000,
+     "ku": "kWh/MWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 98700,
+   "piede": "Il risultato corretto è mille volte più grande: 98,7 tonnellate, non 98,7 chilogrammi.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  }
+ },
+ "m03": {
+  "8": {
+   "tipo": "calcolo",
+   "titolo": "Consolidare con la quota di partecipazione",
+   "etichette": {
+    "r": "Emissioni consolidate",
+    "a": "Emissioni della società",
+    "ef": "Quota posseduta"
+   },
+   "unita": "t CO2e",
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Attività proprie della capogruppo",
+     "n": "possedute al 100%",
+     "a": 1200,
+     "au": "t CO2e",
+     "ef": 1,
+     "efu": "(100%)"
+    },
+    {
+     "l": "Beta Logistica",
+     "n": "quota dal libro soci: 60%",
+     "a": 500,
+     "au": "t CO2e",
+     "ef": 0.6,
+     "efu": "(60%)"
+    },
+    {
+     "l": "Gamma Energia",
+     "n": "quota dal libro soci: 30%",
+     "a": 800,
+     "au": "t CO2e",
+     "ef": 0.3,
+     "efu": "(30%)"
+    }
+   ],
+   "atteso": 1740,
+   "piede": "Con questo approccio non conta chi gestisce l’impianto: conta la percentuale di proprietà.",
+   "fonte": "Esempio didattico – gruppo di fantasia, dati illustrativi"
+  },
+  "9": {
+   "tipo": "calcolo",
+   "titolo": "Lo stesso gruppo consolidato con il controllo",
+   "etichette": {
+    "r": "Emissioni consolidate",
+    "a": "Emissioni della società",
+    "ef": "Quota consolidata"
+   },
+   "unita": "t CO2e",
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Attività proprie della capogruppo",
+     "n": "controllate",
+     "a": 1200,
+     "au": "t CO2e",
+     "ef": 1,
+     "efu": "(100%)"
+    },
+    {
+     "l": "Beta Logistica",
+     "n": "controllata, anche se posseduta al 60%",
+     "a": 500,
+     "au": "t CO2e",
+     "ef": 1,
+     "efu": "(100%)"
+    },
+    {
+     "l": "Gamma Energia",
+     "n": "non controllata: fuori dal confine",
+     "a": 800,
+     "au": "t CO2e",
+     "ef": 0,
+     "efu": "(0%)"
+    }
+   ],
+   "atteso": 1700,
+   "piede": "Gamma Energia non sparisce: è un investimento, da valutare tra le emissioni indirette (Scope 3, categoria 15).",
+   "fonte": "Esempio didattico – gruppo di fantasia, dati illustrativi"
+  },
+  "25": {
+   "tipo": "calcolo",
+   "titolo": "La categoria 3 ISO di Terrafelix: tutto il trasporto insieme",
+   "etichette": {
+    "k": "Distanza"
+   },
+   "totale": "Totale categoria 3 ISO",
+   "righe": [
+    {
+     "l": "Semola dal molino",
+     "n": "Scope 3 cat. 4",
+     "a": 20600,
+     "au": "t",
+     "k": 180,
+     "ku": "km",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm"
+    },
+    {
+     "l": "Imballaggi dai fornitori",
+     "n": "Scope 3 cat. 4",
+     "a": 1060,
+     "au": "t",
+     "k": 300,
+     "ku": "km",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm"
+    },
+    {
+     "l": "Voli di lavoro",
+     "n": "Scope 3 cat. 6",
+     "a": 120000,
+     "au": "pkm",
+     "ef": 0.18,
+     "efu": "kg CO2e/pkm"
+    },
+    {
+     "l": "Treno",
+     "n": "Scope 3 cat. 6",
+     "a": 80000,
+     "au": "pkm",
+     "ef": 0.035,
+     "efu": "kg CO2e/pkm"
+    },
+    {
+     "l": "Pernottamenti",
+     "n": "Scope 3 cat. 6",
+     "a": 300,
+     "au": "notti",
+     "ef": 15,
+     "efu": "kg CO2e/notte"
+    },
+    {
+     "l": "Tragitti casa-lavoro in auto",
+     "n": "Scope 3 cat. 7",
+     "a": 475200,
+     "au": "km",
+     "ef": 0.17,
+     "efu": "kg CO2e/km"
+    },
+    {
+     "l": "Consegne in Italia su gomma",
+     "n": "Scope 3 cat. 9",
+     "a": 14000,
+     "au": "t",
+     "k": 450,
+     "ku": "km",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm"
+    },
+    {
+     "l": "Consegne in Europa su gomma",
+     "n": "Scope 3 cat. 9",
+     "a": 4000,
+     "au": "t",
+     "k": 1500,
+     "ku": "km",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm"
+    },
+    {
+     "l": "Consegne oltremare via nave",
+     "n": "Scope 3 cat. 9",
+     "a": 2000,
+     "au": "t",
+     "k": 8000,
+     "ku": "km",
+     "ef": 0.016,
+     "efu": "kg CO2e/tkm"
+    }
+   ],
+   "atteso": 1998284,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "32": {
+   "tipo": "calcolo",
+   "titolo": "Una bolletta, due caselle: il gas naturale di Terrafelix",
+   "etichette": {},
+   "totale": "Totale legato al gas naturale",
+   "righe": [
+    {
+     "l": "Combustione negli essiccatoi",
+     "n": "Scope 1 · categoria 1 ISO · dato: 12 bollette del gas",
+     "a": 1050000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Filiera a monte del gas",
+     "n": "Scope 3 cat. 3 · categoria 4 ISO · stesso dato",
+     "a": 1050000,
+     "au": "Sm³",
+     "ef": 0.33,
+     "efu": "kg CO2e/Sm³"
+    }
+   ],
+   "atteso": 2446500,
+   "piede": "Non è un doppio conteggio: sono emissioni diverse, avvenute in luoghi diversi.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "43": {
+   "tipo": "calcolo",
+   "titolo": "Verifica della soglia: un’acquisizione che aggiunge 1.300 t",
+   "etichette": {
+    "r": "Variazione sull’anno base",
+    "a": "Variazione",
+    "ef": "Per cento",
+    "d": "Anno base"
+   },
+   "unita": "%",
+   "dec": 2,
+   "totale": false,
+   "righe": [
+    {
+     "l": "Emissioni 2025 della società acquisita",
+     "n": "dal suo inventario o da una stima documentata",
+     "a": 1300,
+     "au": "t CO2e",
+     "ef": 100,
+     "efu": "%",
+     "d": 21692.5,
+     "du": "t CO2e"
+    }
+   ],
+   "atteso": 5.993,
+   "piede": "5,99% supera la soglia del 5%: l’anno base si ricalcola. Nuovo anno base: 21.692,5 + 1.300 = 22.992,5 t CO2e.",
+   "fonte": "Esempio didattico su dati del caso studio Pastificio Terrafelix – ipotesi illustrativa"
+  },
+  "44": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: da quante tonnellate scatta il ricalcolo?",
+   "unita": "% dell’anno base",
+   "righe": [
+    {
+     "l": "Emissioni spostate dall’evento, riferite al 2025",
+     "v": 1300,
+     "u": "t CO2e",
+     "ef": 0.004609888,
+     "efu": "% per t (100 ÷ 21.692,5)"
+    }
+   ],
+   "piede": "La soglia del 5% corrisponde a 21.692,5 × 0,05 = 1.084,6 t CO2e.",
+   "fonte": "Esempio didattico su dati del caso studio Pastificio Terrafelix – ipotesi illustrativa"
+  },
+  "59": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: quanto pesa ogni scope di Terrafelix",
+   "righe": [
+    {
+     "l": "Scope 1 · gas naturale",
+     "v": 1050000,
+     "u": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Scope 1 · gasolio della flotta",
+     "v": 38000,
+     "u": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Scope 2 · elettricità di rete (location-based)",
+     "v": 3200000,
+     "u": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Scope 3 · semola acquistata",
+     "v": 20600000,
+     "u": "kg",
+     "ef": 0.7,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Scope 3 · astucci e cartoni",
+     "v": 900000,
+     "u": "kg",
+     "ef": 0.9,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Scope 3 · consegne in Italia su gomma",
+     "v": 6300000,
+     "u": "tkm",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm"
+    }
+   ],
+   "piede": "Valori iniziali: dati del caso studio. Totale delle sei voci: 18.812,7 t CO2e su 21.692,5 t dell’inventario.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)"
+  }
+ },
+ "m04": {
+  "10": {
+   "tipo": "calcolo",
+   "titolo": "Terrafelix: il gas naturale di un anno, trimestre per trimestre",
+   "etichette": {},
+   "totale": "Totale anno: 1.050.000 Sm³",
+   "righe": [
+    {
+     "l": "1° trimestre",
+     "n": "bollette di gennaio, febbraio, marzo",
+     "a": 287000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "2° trimestre",
+     "n": "bollette di aprile, maggio, giugno",
+     "a": 259000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "3° trimestre",
+     "n": "luglio, agosto (fermata), settembre",
+     "a": 221000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "4° trimestre",
+     "n": "bollette di ottobre, novembre, dicembre",
+     "a": 283000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    }
+   ],
+   "atteso": 2100000,
+   "piede": "Fattore del corso: 2,0 kg CO2e/Sm³, valore arrotondato a scopo didattico.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattore arrotondato (vedi tabella dei fattori del corso)"
+  },
+  "11": {
+   "tipo": "calcolo",
+   "titolo": "Quanto pesa la scelta del fattore: il valore ISPRA",
+   "etichette": {},
+   "unita": "kg CO2",
+   "totale": false,
+   "righe": [
+    {
+     "l": "Gas naturale di Terrafelix",
+     "n": "ISPRA, parametri standard nazionali: circa 1,98 kg CO2 per Sm³",
+     "a": 1050000,
+     "au": "Sm³",
+     "ef": 1.98,
+     "efu": "kg CO2/Sm³"
+    }
+   ],
+   "atteso": 2079000,
+   "piede": "2.079.000 kg CO2 = 2.079 t CO2: 21 t in meno (−1,0%) rispetto al conto con il fattore arrotondato del corso.",
+   "fonte": "ISPRA, tabella dei parametri standard nazionali (valore indicativo); dato di attività del caso studio"
+  },
+  "15": {
+   "tipo": "calcolo",
+   "titolo": "Terrafelix: il gasolio del gruppo elettrogeno e della motopompa",
+   "etichette": {},
+   "totale": "Totale: 1.500 l",
+   "righe": [
+    {
+     "l": "Gruppo elettrogeno",
+     "n": "prove mensili e interruzioni di rete · registro delle ore di funzionamento",
+     "a": 1100,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Motopompa antincendio",
+     "n": "prove periodiche · registro antincendio",
+     "a": 400,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    }
+   ],
+   "atteso": 3975,
+   "piede": "La ripartizione tra le due macchine è illustrativa; il totale di 1.500 litri è il dato dell’inventario.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattore arrotondato (vedi tabella dei fattori del corso)"
+  },
+  "16": {
+   "tipo": "calcolo",
+   "titolo": "GPL fatturato in chilogrammi: prima i litri, poi le emissioni",
+   "etichette": {
+    "d": "Densità"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "GPL acquistato nell’anno",
+     "n": "fatture del fornitore: 4.160 kg · densità indicativa del GPL liquido: 0,52 kg/l",
+     "a": 4160,
+     "au": "kg",
+     "ef": 1.6,
+     "efu": "kg CO2e/l",
+     "d": 0.52,
+     "du": "kg/l"
+    }
+   ],
+   "atteso": 12800,
+   "piede": "Passaggio intermedio: 4.160 kg ÷ 0,52 kg/l = 8.000 litri; 8.000 l × 1,6 = 12.800 kg CO2e.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); densità: valore illustrativo"
+  },
+  "17": {
+   "tipo": "calcolo",
+   "titolo": "Biomassa: che cosa entra nello Scope 1 e che cosa va a parte",
+   "etichette": {},
+   "totale": "Nello Scope 1",
+   "righe": [
+    {
+     "l": "Pellet – CH4 e N2O della combustione",
+     "n": "fatture di acquisto: 40 t · fattore: valore didattico",
+     "a": 40000,
+     "au": "kg",
+     "ef": 0.05,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 2000,
+   "piede": "Riportata a parte, fuori dagli scope: CO2 biogenica = 40.000 kg × 1,7 kg CO2/kg (valore didattico) = 68.000 kg, cioè 68 t CO2.",
+   "fonte": "Esempio didattico – fattori della biomassa: valori didattici arrotondati"
+  },
+  "18": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: tre combustibili in una centrale termica",
+   "righe": [
+    {
+     "l": "Gas naturale",
+     "v": 48000,
+     "u": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Gasolio",
+     "v": 2000,
+     "u": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "GPL",
+     "v": 5000,
+     "u": "l",
+     "ef": 1.6,
+     "efu": "kg CO2e/l"
+    }
+   ],
+   "piede": "Con i valori iniziali: 96.000 + 5.300 + 8.000 = 109.300 kg CO2e, cioè 109,3 t CO2e.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "21": {
+   "tipo": "calcolo",
+   "titolo": "Terrafelix: gasolio e benzina della flotta aziendale",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Gasolio – 4 furgoni e 5 auto",
+     "n": "estratto carte carburante 2025, somma dei rifornimenti di gasolio",
+     "a": 38000,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Benzina – 3 auto",
+     "n": "estratto carte carburante 2025, somma dei rifornimenti di benzina",
+     "a": 6000,
+     "au": "l",
+     "ef": 2.3,
+     "efu": "kg CO2e/l"
+    }
+   ],
+   "atteso": 114500,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "25": {
+   "tipo": "calcolo",
+   "titolo": "Metodo A: chilometri × fattore per chilometro",
+   "etichette": {
+    "a": "Percorrenza"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Auto 2 (gasolio)",
+     "n": "contachilometri: 48.000 km nell’anno · fattore «auto media»",
+     "a": 48000,
+     "au": "km",
+     "ef": 0.17,
+     "efu": "kg CO2e/km"
+    }
+   ],
+   "atteso": 8160,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi (percorrenza); fattore arrotondato (vedi tabella dei fattori del corso)"
+  },
+  "26": {
+   "tipo": "calcolo",
+   "titolo": "Metodo B: chilometri × consumo medio × fattore per litro",
+   "etichette": {
+    "a": "Percorrenza",
+    "ef": "Consumo medio",
+    "k": "Fattore di emissione"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Auto 2 (gasolio)",
+     "n": "48.000 km × 0,052 l/km = 2.496 litri stimati",
+     "a": 48000,
+     "au": "km",
+     "ef": 0.052,
+     "efu": "l/km",
+     "k": 2.65,
+     "ku": "kg CO2e/l"
+    }
+   ],
+   "atteso": 6614.4,
+   "piede": "Per passare da «litri ogni 100 km» a «litri per km» si divide per 100: 5,2 ÷ 100 = 0,052.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi (percorrenza e consumo); fattore arrotondato (vedi tabella dei fattori del corso)"
+  },
+  "33": {
+   "tipo": "calcolo",
+   "titolo": "Terrafelix: le ricariche di gas refrigerante del 2025",
+   "etichette": {
+    "a": "Gas reintegrato",
+    "ef": "GWP (fattore di emissione)"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "R-410A – climatizzazione degli uffici",
+     "n": "rapporti di intervento del frigorista · GWP AR6 della miscela",
+     "a": 12,
+     "au": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "HFC-134a – gruppo frigo di processo",
+     "n": "registro dell’apparecchiatura · GWP AR6",
+     "a": 8,
+     "au": "kg",
+     "ef": 1530,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 39312,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; GWP: IPCC AR6"
+  },
+  "35": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: quanto pesa una ricarica",
+   "righe": [
+    {
+     "l": "R-410A",
+     "v": 12,
+     "u": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "HFC-134a",
+     "v": 8,
+     "u": "kg",
+     "ef": 1530,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "HFC-32",
+     "v": 0,
+     "u": "kg",
+     "ef": 771,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "SF6",
+     "v": 0,
+     "u": "kg",
+     "ef": 24300,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "piede": "I valori iniziali riproducono il calcolo di Terrafelix: 39.312 kg CO2e.",
+   "fonte": "GWP: IPCC AR6 (riepilogo GHG Protocol, 2024); dati iniziali del caso studio"
+  },
+  "39": {
+   "tipo": "calcolo",
+   "titolo": "Tre gas, tre pesi: SF6, CO2 degli estintori, metano",
+   "etichette": {
+    "a": "Gas disperso",
+    "ef": "GWP (fattore di emissione)"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "SF6 reintegrato in un quadro elettrico",
+     "n": "rapporto del manutentore della cabina",
+     "a": 0.5,
+     "au": "kg",
+     "ef": 24300,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "CO2 di sei estintori da 5 kg ricaricati",
+     "n": "rapporto della ditta antincendio",
+     "a": 30,
+     "au": "kg",
+     "ef": 1,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Metano disperso dalla rete interna del gas",
+     "n": "stima tecnica dopo la riparazione di una perdita",
+     "a": 10,
+     "au": "kg",
+     "ef": 29.8,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 12478,
+   "piede": "",
+   "fonte": "Esempio didattico – quantità illustrative; GWP: IPCC AR6 (CH4 fossile 29,8; SF6 24.300)"
+  },
+  "43": {
+   "tipo": "calcolo",
+   "titolo": "Una fornace da calce: processo e combustione a confronto",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Processo – decarbonatazione del calcare",
+     "n": "registro di produzione: 5.000 t di CaCO3 · fattore stechiometrico 0,44",
+     "a": 5000000,
+     "au": "kg",
+     "ef": 0.44,
+     "efu": "kg CO2/kg"
+    },
+    {
+     "l": "Combustione – gas naturale del forno",
+     "n": "bollette del gas · fattore del corso",
+     "a": 300000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    }
+   ],
+   "atteso": 2800000,
+   "piede": "Il fattore 0,44 viene dalle masse molecolari: 44 (CO2) ÷ 100 (CaCO3). Vale per carbonato di calcio puro: il calcare reale richiede il dato di purezza.",
+   "fonte": "Esempio didattico – quantità illustrative; fattore stechiometrico del carbonato di calcio; fattore del gas arrotondato"
+  },
+  "47": {
+   "tipo": "calcolo",
+   "titolo": "Lo Scope 1 di Terrafelix: sei voci, un totale",
+   "etichette": {},
+   "totale": "Totale Scope 1",
+   "righe": [
+    {
+     "l": "Gas naturale – essiccatoi e centrale termica",
+     "n": "stazionaria · bollette",
+     "a": 1050000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Gasolio – gruppo elettrogeno e motopompa",
+     "n": "stazionaria · fatture e giacenze",
+     "a": 1500,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Gasolio – flotta aziendale",
+     "n": "mobile · carte carburante",
+     "a": 38000,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Benzina – flotta aziendale",
+     "n": "mobile · carte carburante",
+     "a": 6000,
+     "au": "l",
+     "ef": 2.3,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "R-410A – climatizzazione uffici",
+     "n": "fuggitive · rapporti del frigorista",
+     "a": 12,
+     "au": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "HFC-134a – gruppo frigo di processo",
+     "n": "fuggitive · registro dell’apparecchiatura",
+     "a": 8,
+     "au": "kg",
+     "ef": 1530,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 2257787,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso); GWP: IPCC AR6"
+  },
+  "50": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: «e se…» sullo Scope 1 di Terrafelix",
+   "righe": [
+    {
+     "l": "Gas naturale",
+     "v": 1050000,
+     "u": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Gasolio impianti fissi",
+     "v": 1500,
+     "u": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Gasolio flotta",
+     "v": 38000,
+     "u": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Benzina flotta",
+     "v": 6000,
+     "u": "l",
+     "ef": 2.3,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "R-410A",
+     "v": 12,
+     "u": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "HFC-134a",
+     "v": 8,
+     "u": "kg",
+     "ef": 1530,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "piede": "Valori iniziali: l’inventario 2025, totale 2.257.787 kg CO2e.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "54": {
+   "tipo": "calcolo",
+   "titolo": "Un indicatore di plausibilità: kWh termici per tonnellata di pasta",
+   "etichette": {
+    "r": "Consumo specifico",
+    "a": "Gas consumato",
+    "ef": "Potere calorifico",
+    "d": "Produzione"
+   },
+   "unita": "kWh/t",
+   "totale": false,
+   "righe": [
+    {
+     "l": "Gas naturale per tonnellata di pasta",
+     "n": "bollette: 1.050.000 Sm³ · produzione: 20.000 t · circa 9,8 kWh per Sm³",
+     "a": 1050000,
+     "au": "Sm³",
+     "ef": 9.8,
+     "efu": "kWh/Sm³",
+     "d": 20000,
+     "du": "t"
+    }
+   ],
+   "atteso": 514.5,
+   "piede": "1.050.000 Sm³ × 9,8 = 10.290.000 kWh termici; ÷ 20.000 t = 514,5 kWh per tonnellata di pasta.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; potere calorifico: ISPRA, parametri standard nazionali (valore arrotondato)"
+  },
+  "55": {
+   "tipo": "calcolo",
+   "titolo": "Quando la scheda riporta solo gli euro",
+   "etichette": {
+    "a": "Spesa",
+    "d": "Prezzo medio"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Gasolio della flotta",
+     "n": "contabilità: 66.500 € (IVA inclusa) · prezzo medio alla pompa: 1,75 €/l, valore illustrativo",
+     "a": 66500,
+     "au": "€",
+     "ef": 2.65,
+     "efu": "kg CO2e/l",
+     "d": 1.75,
+     "du": "€/l"
+    }
+   ],
+   "atteso": 100700,
+   "piede": "Passaggio intermedio: 66.500 € ÷ 1,75 €/l = 38.000 litri. Spesa e prezzo devono essere omogenei: entrambi con IVA oppure entrambi senza.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi (spesa e prezzo medio); fattore arrotondato (vedi tabella dei fattori del corso)"
+  },
+  "60": {
+   "tipo": "calcolo",
+   "titolo": "Esercizio: lo Scope 1 di un’officina meccanica",
+   "etichette": {},
+   "totale": "Totale Scope 1",
+   "righe": [
+    {
+     "l": "Gas naturale – riscaldamento del capannone",
+     "n": "stazionaria · bollette",
+     "a": 18000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Gasolio – due furgoni",
+     "n": "mobile · carte carburante",
+     "a": 5200,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Benzina – un’auto",
+     "n": "mobile · schede carburante",
+     "a": 1100,
+     "au": "l",
+     "ef": 2.3,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "GPL – carrello elevatore",
+     "n": "mobile · bombole, già convertite in litri",
+     "a": 1500,
+     "au": "l",
+     "ef": 1.6,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "R-410A – ricarica del climatizzatore",
+     "n": "fuggitive · rapporto del frigorista",
+     "a": 3,
+     "au": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "CO2 tecnica – gas di protezione per saldatura",
+     "n": "processo · bombole acquistate nell’anno",
+     "a": 400,
+     "au": "kg",
+     "ef": 1,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 61878,
+   "piede": "",
+   "fonte": "Esempio didattico – azienda di fantasia, quantità illustrative; fattori arrotondati (vedi tabella dei fattori del corso); GWP: IPCC AR6"
+  }
+ },
+ "m05": {
+  "9": {
+   "tipo": "calcolo",
+   "titolo": "Dalla somma dei trimestri al totale annuo",
+   "etichette": {
+    "r": "Energia",
+    "a": "Energia prelevata",
+    "ef": "Fattore di conversione"
+   },
+   "unita": "MWh",
+   "totale": "Totale 2025",
+   "righe": [
+    {
+     "l": "1° trimestre",
+     "n": "gennaio 285.000 + febbraio 270.000 + marzo 280.000",
+     "a": 835000,
+     "au": "kWh",
+     "ef": 0.001,
+     "efu": "MWh/kWh"
+    },
+    {
+     "l": "2° trimestre",
+     "n": "aprile 262.000 + maggio 258.000 + giugno 250.000",
+     "a": 770000,
+     "au": "kWh",
+     "ef": 0.001,
+     "efu": "MWh/kWh"
+    },
+    {
+     "l": "3° trimestre",
+     "n": "luglio 255.000 + agosto 190.000 + settembre 268.000",
+     "a": 713000,
+     "au": "kWh",
+     "ef": 0.001,
+     "efu": "MWh/kWh"
+    },
+    {
+     "l": "4° trimestre",
+     "n": "ottobre 285.000 + novembre 295.000 + dicembre 302.000",
+     "a": 882000,
+     "au": "kWh",
+     "ef": 0.001,
+     "efu": "MWh/kWh"
+    }
+   ],
+   "atteso": 3200,
+   "piede": "3.200 MWh = 3.200.000 kWh: è il dato di attività dello Scope 2 di Terrafelix.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "11": {
+   "tipo": "calcolo",
+   "titolo": "Lo Scope 2 location-based di Terrafelix",
+   "etichette": {},
+   "totale": false,
+   "righe": [
+    {
+     "l": "Elettricità prelevata dalla rete",
+     "n": "dato: somma delle 12 bollette 2025 · fattore: ISPRA, consumi elettrici nazionali 2023, 234,7 g CO2/kWh, arrotondato",
+     "a": 3200000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 752000,
+   "piede": "Il contratto di fornitura non conta: con o senza «energia verde», il risultato location-based è lo stesso.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattore ISPRA, Rapporto 413/2025 (valore arrotondato)"
+  },
+  "14": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: il location-based di una piccola azienda con tre sedi",
+   "righe": [
+    {
+     "l": "Officina",
+     "v": 180000,
+     "u": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Magazzino",
+     "v": 60000,
+     "u": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Uffici",
+     "v": 45000,
+     "u": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "piede": "Sedi in Paesi diversi userebbero ciascuna il fattore medio della propria rete nazionale.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "19": {
+   "tipo": "calcolo",
+   "titolo": "Esempio svolto: una bolletta, tre contratti, tre fattori",
+   "etichette": {},
+   "totale": "Scope 2 market-based",
+   "righe": [
+    {
+     "l": "kWh coperti da Garanzie d’Origine",
+     "n": "attestato di annullamento di 500 GO",
+     "a": 500000,
+     "au": "kWh",
+     "ef": 0,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "kWh con fattore dichiarato dal fornitore",
+     "n": "dichiarazione del venditore · valore didattico",
+     "a": 300000,
+     "au": "kWh",
+     "ef": 0.1,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "kWh senza alcuno strumento",
+     "n": "residual mix · valore arrotondato",
+     "a": 200000,
+     "au": "kWh",
+     "ef": 0.45,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 120000,
+   "piede": "Per confronto, il location-based della stessa azienda è 1.000.000 kWh × 0,235 = 235.000 kg, cioè 235 t CO2e.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); il fattore del fornitore è un valore didattico"
+  },
+  "22": {
+   "tipo": "calcolo",
+   "titolo": "Lo Scope 2 market-based di Terrafelix",
+   "etichette": {},
+   "totale": "Scope 2 market-based",
+   "righe": [
+    {
+     "l": "Elettricità con Garanzie d’Origine",
+     "n": "attestato di annullamento delle GO · strumento contrattuale",
+     "a": 1200000,
+     "au": "kWh",
+     "ef": 0,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Elettricità senza garanzie",
+     "n": "residual mix · valore arrotondato, ordine di grandezza AIB 2024",
+     "a": 2000000,
+     "au": "kWh",
+     "ef": 0.45,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 900000,
+   "piede": "Location-based, per gli stessi kWh: 752 t CO2e. Market-based: 900 t CO2e, cioè 148 t in più.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "24": {
+   "tipo": "calcolo",
+   "titolo": "E se Terrafelix non avesse nessuna garanzia?",
+   "etichette": {},
+   "totale": false,
+   "righe": [
+    {
+     "l": "Elettricità senza garanzie",
+     "n": "tutto il prelievo 2025 · residual mix, valore arrotondato",
+     "a": 3200000,
+     "au": "kWh",
+     "ef": 0.45,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 1440000,
+   "piede": "Le 1.200 garanzie acquistate hanno quindi ridotto il market-based di 540 t: da 1.440 a 900 t CO2e.",
+   "fonte": "Caso studio Pastificio Terrafelix – scenario illustrativo"
+  },
+  "30": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: sposta i kWh dal residual mix alle garanzie",
+   "righe": [
+    {
+     "l": "Elettricità senza garanzie (residual mix)",
+     "v": 2000000,
+     "u": "kWh",
+     "ef": 0.45,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Elettricità con Garanzie d’Origine",
+     "v": 1200000,
+     "u": "kWh",
+     "ef": 0,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "piede": "Il calcolatore mostra solo il market-based. Il location-based resta 752 t CO2e qualunque sia la ripartizione.",
+   "fonte": "Caso studio Pastificio Terrafelix – scenari illustrativi"
+  },
+  "35": {
+   "tipo": "calcolo",
+   "titolo": "Quanto ha evitato il fotovoltaico: un’informazione a parte",
+   "etichette": {
+    "r": "Emissioni evitate"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "Elettricità autoprodotta e autoconsumata",
+     "n": "contatore di produzione meno energia immessa · fattore medio di rete, arrotondato",
+     "a": 600000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 141000,
+   "piede": "Sono emissioni evitate, non un credito: non si sottraggono dallo Scope 2 né dal totale dell’inventario.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "40": {
+   "tipo": "calcolo",
+   "titolo": "Esempio svolto: un’azienda allacciata al teleriscaldamento",
+   "etichette": {},
+   "totale": false,
+   "righe": [
+    {
+     "l": "Calore acquistato",
+     "n": "fatture del gestore: 800 MWh termici = 800.000 kWh · fattore dichiarato dal gestore (valore didattico)",
+     "a": 800000,
+     "au": "kWh",
+     "ef": 0.2,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 160000,
+   "piede": "",
+   "fonte": "Esempio didattico – il fattore del calore (0,20 kg CO2e/kWh) è un valore didattico"
+  },
+  "41": {
+   "tipo": "calcolo",
+   "titolo": "Vapore fatturato in gigajoule: prima convertire, poi moltiplicare",
+   "etichette": {
+    "k": "Conversione in kWh"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "Vapore acquistato",
+     "n": "fatture annuali del fornitore · fattore del calore: valore didattico",
+     "a": 1000,
+     "au": "GJ",
+     "k": 277.8,
+     "ku": "kWh/GJ",
+     "ef": 0.2,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 55560,
+   "piede": "",
+   "fonte": "Esempio didattico – il fattore del calore (0,20 kg CO2e/kWh) è un valore didattico"
+  },
+  "42": {
+   "tipo": "calcolo",
+   "titolo": "Quando il fornitore non comunica il fattore: la stima",
+   "etichette": {
+    "d": "Calore utile per Sm³"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "Calore acquistato",
+     "n": "800.000 kWh ÷ 8,82 = 90.703 Sm³ di gas bruciati dal fornitore · fattore del gas: valore arrotondato",
+     "a": 800000,
+     "au": "kWh",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³",
+     "d": 8.82,
+     "du": "kWh/Sm³"
+    }
+   ],
+   "atteso": 181405.9,
+   "piede": "Fattore equivalente: 2,0 ÷ 8,82 = 0,227 kg CO2e per kWh di calore. Il rendimento del 90% è un’ipotesi didattica.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); PCI del gas naturale: ISPRA, parametri standard nazionali"
+  },
+  "43": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: lo Scope 2 di un’azienda con due vettori energetici",
+   "righe": [
+    {
+     "l": "Elettricità prelevata dalla rete (location-based)",
+     "v": 400000,
+     "u": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Calore dal teleriscaldamento",
+     "v": 800000,
+     "u": "kWh termici",
+     "ef": 0.2,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati; il fattore del calore è un valore didattico"
+  },
+  "46": {
+   "tipo": "calcolo",
+   "titolo": "Auto elettrica aziendale ricaricata fuori sede: dai km ai kg",
+   "etichette": {
+    "k": "Consumo dell’auto"
+   },
+   "totale": "Scope 2 location-based",
+   "righe": [
+    {
+     "l": "Auto elettrica del commerciale",
+     "n": "km dal contachilometri · consumo medio: valore didattico · fattore di rete arrotondato",
+     "a": 15000,
+     "au": "km",
+     "k": 0.18,
+     "ku": "kWh/km",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 634.5,
+   "piede": "Passaggio intermedio: 15.000 km × 0,18 kWh/km = 2.700 kWh. Market-based senza garanzie: 2.700 × 0,45 = 1.215 kg CO2e.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); consumo di 0,18 kWh/km: valore didattico"
+  },
+  "51": {
+   "tipo": "calcolo",
+   "titolo": "Filiera a monte e perdite di rete: Scope 3, non Scope 2",
+   "etichette": {},
+   "totale": false,
+   "righe": [
+    {
+     "l": "Elettricità – filiera a monte e perdite di rete",
+     "n": "stesso dato di attività dello Scope 2 · fattore arrotondato",
+     "a": 3200000,
+     "au": "kWh",
+     "ef": 0.06,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 192000,
+   "piede": "Questa voce si riporta nello Scope 3, categoria 3 «attività legate a combustibili ed energia» (categoria 4 della ISO 14064-1).",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "52": {
+   "tipo": "calcolo",
+   "titolo": "Ufficio in affitto: stimare la propria quota di kWh",
+   "etichette": {
+    "k": "Quota di superficie"
+   },
+   "totale": "Scope 2 location-based dello studio",
+   "righe": [
+    {
+     "l": "Elettricità dell’intero edificio",
+     "n": "kWh annui comunicati dall’amministratore · quota: 250 m² su 1.000 m² · fattore di rete arrotondato",
+     "a": 120000,
+     "au": "kWh",
+     "k": 0.25,
+     "ku": "(25%)",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 7050,
+   "piede": "Passaggio intermedio: 120.000 kWh × 0,25 = 30.000 kWh attribuiti allo studio.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "56": {
+   "tipo": "calcolo",
+   "titolo": "L’intensità dello Scope 2 per tonnellata di pasta",
+   "etichette": {
+    "d": "Produzione"
+   },
+   "unita": "kg CO2e/t",
+   "dec": 1,
+   "totale": false,
+   "righe": [
+    {
+     "l": "Scope 2 location-based per tonnellata",
+     "n": "kWh dalle bollette · produzione dal consuntivo 2025",
+     "a": 3200000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh",
+     "d": 20000,
+     "du": "t di pasta"
+    }
+   ],
+   "atteso": 37.6,
+   "piede": "Con il metodo market-based: 900.000 kg CO2e ÷ 20.000 t = 45 kg CO2e per tonnellata.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "58": {
+   "tipo": "calcolo",
+   "titolo": "Scenario efficienza: il market-based con il 10% di prelievi in meno",
+   "etichette": {},
+   "totale": "Scope 2 market-based dopo l’intervento",
+   "righe": [
+    {
+     "l": "Elettricità con Garanzie d’Origine",
+     "n": "invariata: 1.200 GO",
+     "a": 1200000,
+     "au": "kWh",
+     "ef": 0,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Elettricità senza garanzie",
+     "n": "2.000.000 − 320.000 kWh risparmiati · residual mix arrotondato",
+     "a": 1680000,
+     "au": "kWh",
+     "ef": 0.45,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 756000,
+   "piede": "Location-based dopo l’intervento: 2.880.000 kWh × 0,235 = 676.800 kg, cioè 676,8 t CO2e.",
+   "fonte": "Caso studio Pastificio Terrafelix – scenario illustrativo"
+  }
+ },
+ "m06": {
+  "8": {
+   "tipo": "calcolo",
+   "titolo": "Stesso acquisto, primo metodo: dalla quantità",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Cartone per imballaggi",
+     "n": "kg da fatture e DDT · fattore medio per kg di cartone",
+     "a": 40000,
+     "au": "kg",
+     "ef": 0.9,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 36000,
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "9": {
+   "tipo": "calcolo",
+   "titolo": "Stesso acquisto, secondo metodo: dalla spesa",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Cartone per imballaggi",
+     "n": "euro dalla contabilità · fattore per euro: valore didattico",
+     "a": 48000,
+     "au": "€",
+     "ef": 0.6,
+     "efu": "kg CO2e/€"
+    }
+   ],
+   "atteso": 28800,
+   "piede": "Stesso acquisto, due risultati: 36 t con la quantità, 28,8 t con la spesa (il 20% in meno). Se l’anno dopo il prezzo sale del 10%, la spesa diventa 52.800 € e il calcolo dà 31,7 t: emissioni «aumentate» senza un chilo di cartone in più.",
+   "fonte": "Esempio didattico – prezzo e fattore per euro sono valori didattici"
+  },
+  "17": {
+   "tipo": "calcolo",
+   "titolo": "La semola: la voce più grande dell’inventario",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Semola di grano duro",
+     "n": "20.600 t = 20.600.000 kg · fattore medio: coltivazione del grano e molitura",
+     "a": 20600000,
+     "au": "kg",
+     "ef": 0.7,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 14420000,
+   "piede": "Errore tipico: usare i 20.000.000 kg di pasta prodotta al posto dei 20.600.000 kg di semola acquistata. Per fare 1 kg di pasta servono 1,03 kg di semola.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "18": {
+   "tipo": "calcolo",
+   "titolo": "Imballaggi e acqua: tre righe, tre fattori",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Astucci e cartoni",
+     "n": "900 t da fatture e DDT",
+     "a": 900000,
+     "au": "kg",
+     "ef": 0.9,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Film plastico",
+     "n": "160 t da fatture e DDT",
+     "a": 160000,
+     "au": "kg",
+     "ef": 2.8,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Acqua di rete",
+     "n": "m³ fatturati nell’anno",
+     "a": 60000,
+     "au": "m³",
+     "ef": 0.3,
+     "efu": "kg CO2e/m³"
+    }
+   ],
+   "atteso": 1276000,
+   "piede": "Categoria 1 in totale: 14.420 + 810 + 448 + 18 = 15.696 t CO2e.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "24": {
+   "tipo": "calcolo",
+   "titolo": "La nuova linea di confezionamento",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Linea di confezionamento",
+     "n": "investimento 2025, dal registro dei beni ammortizzabili · fattore per euro dei macchinari",
+     "a": 800000,
+     "au": "€",
+     "ef": 0.35,
+     "efu": "kg CO2e/€"
+    }
+   ],
+   "atteso": 280000,
+   "piede": "Tutte le 280 t CO2e entrano nell’inventario 2025. Un anno senza investimenti avrà questa categoria vicina a zero: è normale, e va spiegato nel rapporto.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "26": {
+   "tipo": "calcolo",
+   "titolo": "La filiera a monte di gas, carburanti ed elettricità",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Gas naturale",
+     "n": "gli stessi Sm³ dello Scope 1",
+     "a": 1050000,
+     "au": "Sm³",
+     "ef": 0.33,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Gasolio",
+     "n": "38.000 l della flotta + 1.500 l del gruppo elettrogeno",
+     "a": 39500,
+     "au": "l",
+     "ef": 0.62,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Benzina",
+     "n": "gli stessi litri dello Scope 1",
+     "a": 6000,
+     "au": "l",
+     "ef": 0.6,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Elettricità di rete",
+     "n": "gli stessi kWh dello Scope 2 · filiera a monte e perdite di rete",
+     "a": 3200000,
+     "au": "kWh",
+     "ef": 0.06,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 566590,
+   "piede": "566.590 kg = 566,6 t CO2e. Errore tipico: dimenticare la categoria, oppure usare il fattore di combustione (2 kg CO2e/Sm³) e contare così due volte lo Scope 1.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "29": {
+   "tipo": "calcolo",
+   "titolo": "Primo conto: un bancale consegnato a 250 km",
+   "etichette": {
+    "a": "Peso trasportato",
+    "k": "Distanza"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Un bancale su camion",
+     "n": "800 kg = 0,8 t (dal DDT) · distanza indicativa",
+     "a": 0.8,
+     "au": "t",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm",
+     "k": 250,
+     "ku": "km"
+    }
+   ],
+   "atteso": 20,
+   "piede": "0,8 t × 250 km = 200 tkm; 200 tkm × 0,1 = 20 kg CO2e. Errore tipico: lasciare il peso in kg. 800 × 250 × 0,1 = 20.000 kg, cioè 20 t: mille volte troppo.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "31": {
+   "tipo": "calcolo",
+   "titolo": "Categoria 4: il trasporto di semola e imballaggi",
+   "etichette": {
+    "a": "Peso trasportato",
+    "k": "Distanza"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Semola dal molino",
+     "n": "20.600 t × 180 km = 3.708.000 tkm",
+     "a": 20600,
+     "au": "t",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm",
+     "k": 180,
+     "ku": "km"
+    },
+    {
+     "l": "Imballaggi dai fornitori",
+     "n": "900 t di cartone + 160 t di film = 1.060 t × 300 km = 318.000 tkm",
+     "a": 1060,
+     "au": "t",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm",
+     "k": 300,
+     "ku": "km"
+    }
+   ],
+   "atteso": 402600,
+   "piede": "402.600 kg = 402,6 t CO2e. Errore tipico: contare il trasporto due volte, qui e dentro un fattore del fornitore che lo comprende già.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "32": {
+   "tipo": "calcolo",
+   "titolo": "Categoria 9: la distribuzione della pasta",
+   "etichette": {
+    "a": "Peso trasportato",
+    "k": "Distanza"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Italia, su gomma",
+     "n": "70% delle vendite · 6.300.000 tkm",
+     "a": 14000,
+     "au": "t",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm",
+     "k": 450,
+     "ku": "km"
+    },
+    {
+     "l": "Europa, su gomma",
+     "n": "20% delle vendite · 6.000.000 tkm",
+     "a": 4000,
+     "au": "t",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm",
+     "k": 1500,
+     "ku": "km"
+    },
+    {
+     "l": "Oltremare, via nave",
+     "n": "10% delle vendite · 16.000.000 tkm",
+     "a": 2000,
+     "au": "t",
+     "ef": 0.016,
+     "efu": "kg CO2e/tkm",
+     "k": 8000,
+     "ku": "km"
+    }
+   ],
+   "atteso": 1486000,
+   "piede": "L’oltremare percorre 8.000 km ma emette meno dell’Europa (256 t contro 600 t): la nave ha un fattore oltre sei volte più basso del camion.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "34": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: stesso carico, mezzi diversi",
+   "righe": [
+    {
+     "l": "Su gomma (camion)",
+     "v": 6000000,
+     "u": "tkm",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm"
+    },
+    {
+     "l": "Su ferro (treno merci)",
+     "v": 0,
+     "u": "tkm",
+     "ef": 0.028,
+     "efu": "kg CO2e/tkm"
+    },
+    {
+     "l": "Via nave",
+     "v": 0,
+     "u": "tkm",
+     "ef": 0.016,
+     "efu": "kg CO2e/tkm"
+    }
+   ],
+   "piede": "Il dato di attività qui è già in tkm: tonnellate × km. Dividere a metà le tonnellate tra due mezzi sulla stessa distanza significa dividere a metà le tkm.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "38": {
+   "tipo": "calcolo",
+   "titolo": "I rifiuti di Terrafelix: recupero e smaltimento",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Rifiuti avviati a recupero",
+     "n": "sfridi, carta e cartone, plastica, legno · kg dal registro",
+     "a": 420000,
+     "au": "kg",
+     "ef": 0.021,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Rifiuti avviati a smaltimento",
+     "n": "rifiuti misti · kg dal registro",
+     "a": 60000,
+     "au": "kg",
+     "ef": 0.45,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 35820,
+   "piede": "Lo smaltimento è il 12,5% dei chili ma il 75,4% delle emissioni: il destino conta più del peso. Errore tipico: applicare un solo fattore a tutti i 480.000 kg.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "39": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: che cosa succede migliorando la raccolta",
+   "righe": [
+    {
+     "l": "Rifiuti avviati a recupero",
+     "v": 420000,
+     "u": "kg",
+     "ef": 0.021,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Rifiuti avviati a smaltimento",
+     "v": 60000,
+     "u": "kg",
+     "ef": 0.45,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "42": {
+   "tipo": "calcolo",
+   "titolo": "Due persone da Napoli a Milano e ritorno: in aereo",
+   "etichette": {
+    "a": "Dato di attività",
+    "k": "Persone"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Volo andata e ritorno",
+     "n": "650 km a tratta × 2 = 1.300 km (distanza indicativa) · corto raggio, economy",
+     "a": 1300,
+     "au": "km",
+     "ef": 0.18,
+     "efu": "kg CO2e/pkm",
+     "k": 2,
+     "ku": "persone"
+    },
+    {
+     "l": "Hotel",
+     "n": "una notte a testa",
+     "a": 2,
+     "au": "notti",
+     "ef": 15,
+     "efu": "kg CO2e/notte"
+    }
+   ],
+   "atteso": 498,
+   "piede": "498 kg CO2e, di cui 468 kg per il volo: 234 kg a persona.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); distanze indicative"
+  },
+  "43": {
+   "tipo": "calcolo",
+   "titolo": "La stessa trasferta in treno",
+   "etichette": {
+    "a": "Dato di attività",
+    "k": "Persone"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Treno andata e ritorno",
+     "n": "800 km a tratta × 2 = 1.600 km (distanza indicativa)",
+     "a": 1600,
+     "au": "km",
+     "ef": 0.035,
+     "efu": "kg CO2e/pkm",
+     "k": 2,
+     "ku": "persone"
+    },
+    {
+     "l": "Hotel",
+     "n": "una notte a testa",
+     "a": 2,
+     "au": "notti",
+     "ef": 15,
+     "efu": "kg CO2e/notte"
+    }
+   ],
+   "atteso": 142,
+   "piede": "142 kg CO2e contro 498 kg. Il treno percorre più chilometri, ma per il solo trasporto emette meno di un quarto dell’aereo: 112 kg contro 468 kg.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); distanze indicative"
+  },
+  "44": {
+   "tipo": "calcolo",
+   "titolo": "I viaggi di lavoro di Terrafelix in un anno",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Voli a corto raggio",
+     "n": "per esempio 100 viaggi di andata e ritorno da 1.200 km in media (ripartizione illustrativa)",
+     "a": 120000,
+     "au": "pkm",
+     "ef": 0.18,
+     "efu": "kg CO2e/pkm"
+    },
+    {
+     "l": "Treno",
+     "n": "per esempio 50 viaggi di andata e ritorno da 1.600 km (ripartizione illustrativa)",
+     "a": 80000,
+     "au": "pkm",
+     "ef": 0.035,
+     "efu": "kg CO2e/pkm"
+    },
+    {
+     "l": "Pernottamenti",
+     "n": "notti in hotel dalle note spese",
+     "a": 300,
+     "au": "notti",
+     "ef": 15,
+     "efu": "kg CO2e/notte"
+    }
+   ],
+   "atteso": 28900,
+   "piede": "Errore tipico: contare solo l’andata, oppure inserire qui il carburante delle auto aziendali, che è già nello Scope 1.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "47": {
+   "tipo": "calcolo",
+   "titolo": "Primo passo: quanti chilometri in un anno",
+   "etichette": {
+    "r": "Chilometri annui",
+    "a": "Persone",
+    "ef": "Km al giorno a persona",
+    "k": "Giorni di presenza"
+   },
+   "unita": "km",
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Tragitti casa-lavoro",
+     "n": "dal questionario: 24 km al giorno tra andata e ritorno",
+     "a": 90,
+     "au": "persone",
+     "ef": 24,
+     "efu": "km/giorno",
+     "k": 220,
+     "ku": "giorni"
+    }
+   ],
+   "atteso": 475200,
+   "piede": "Ogni dipendente percorre 24 × 220 = 5.280 km l’anno per venire al lavoro. Errore tipico: inserire i km di sola andata, oppure moltiplicare per 365 giorni.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "48": {
+   "tipo": "calcolo",
+   "titolo": "Secondo passo: dai chilometri alle emissioni",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Tragitti casa-lavoro in auto",
+     "n": "90 persone × 220 giorni × 24 km · fattore dell’auto media",
+     "a": 475200,
+     "au": "km",
+     "ef": 0.17,
+     "efu": "kg CO2e/km"
+    }
+   ],
+   "atteso": 80784,
+   "piede": "80.784 kg = 80,8 t CO2e: quasi 900 kg a testa (5.280 km × 0,17 = 897,6 kg). È quasi il triplo dei viaggi di lavoro (28,9 t).",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "49": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: se cambiano le abitudini di viaggio",
+   "righe": [
+    {
+     "l": "In auto, da soli",
+     "v": 90,
+     "u": "persone",
+     "ef": 897.6,
+     "efu": "kg CO2e/persona"
+    },
+    {
+     "l": "In auto, in due (auto condivisa)",
+     "v": 0,
+     "u": "persone",
+     "ef": 448.8,
+     "efu": "kg CO2e/persona"
+    },
+    {
+     "l": "In treno",
+     "v": 0,
+     "u": "persone",
+     "ef": 184.8,
+     "efu": "kg CO2e/persona"
+    },
+    {
+     "l": "A piedi o in bicicletta",
+     "v": 0,
+     "u": "persone",
+     "ef": 0,
+     "efu": "kg CO2e/persona"
+    }
+   ],
+   "piede": "Fattori annui a persona: 5.280 km × 0,17 = 897,6 kg in auto da soli; la metà (448,8 kg) viaggiando in due; 5.280 km × 0,035 = 184,8 kg in treno.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "52": {
+   "tipo": "calcolo",
+   "titolo": "La cottura della pasta venduta",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Cottura su fornello a gas (70%)",
+     "n": "0,22 Sm³ per kg di pasta × 2 kg CO2e/Sm³ = 0,44",
+     "a": 14000000,
+     "au": "kg pasta",
+     "ef": 0.44,
+     "efu": "kg CO2e/kg pasta"
+    },
+    {
+     "l": "Cottura su piano elettrico (30%)",
+     "n": "1,6 kWh per kg di pasta × 0,235 kg CO2e/kWh = 0,376",
+     "a": 6000000,
+     "au": "kg pasta",
+     "ef": 0.376,
+     "efu": "kg CO2e/kg pasta"
+    }
+   ],
+   "atteso": 8416000,
+   "piede": "8.416 t CO2e: riportate a parte, fuori dal totale dello Scope 3 (18.682,7 t). Errore tipico: sommarle al totale senza dirlo, oppure tacere le ipotesi sullo scenario d’uso.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "54": {
+   "tipo": "calcolo",
+   "titolo": "Categoria 12: il fine vita degli imballaggi venduti",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Imballaggi venduti con la pasta",
+     "n": "1.060.000 kg · fattore medio tra riciclo e smaltimento",
+     "a": 1060000,
+     "au": "kg",
+     "ef": 0.1,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 106000,
+   "piede": "Errore tipico: confondere questa voce con la categoria 5. Lì ci sono i rifiuti dello stabilimento; qui gli imballaggi che il consumatore butta a casa propria.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "57": {
+   "tipo": "calcolo",
+   "titolo": "Lo Scope 3 di Terrafelix: il riepilogo per categoria",
+   "etichette": {
+    "r": "Emissioni",
+    "a": "Emissioni calcolate",
+    "ef": "Conversione"
+   },
+   "unita": "t CO2e",
+   "dec": 1,
+   "totale": "Totale Scope 3",
+   "righe": [
+    {
+     "l": "Cat. 1 – Beni e servizi acquistati",
+     "a": 15696000,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Cat. 2 – Beni strumentali",
+     "a": 280000,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Cat. 3 – Energia a monte",
+     "a": 566590,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Cat. 4 – Trasporto a monte",
+     "a": 402600,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Cat. 5 – Rifiuti",
+     "a": 35820,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Cat. 6 – Viaggi di lavoro",
+     "a": 28900,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Cat. 7 – Pendolarismo",
+     "a": 80784,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Cat. 9 – Trasporto a valle",
+     "a": 1486000,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Cat. 12 – Fine vita dei prodotti",
+     "a": 106000,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    }
+   ],
+   "atteso": 18682.694,
+   "piede": "Fuori dal totale, riportata a parte: fase d’uso (cottura) 8.416 t CO2e.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  }
+ },
+ "m07": {
+  "3": {
+   "tipo": "calcolo",
+   "titolo": "Il totale dell’inventario 2025 di Terrafelix",
+   "etichette": {
+    "r": "Emissioni",
+    "a": "Emissioni (dal foglio)",
+    "ef": "Conversione"
+   },
+   "unita": "t CO2e",
+   "dec": 1,
+   "totale": "Totale inventario (Scope 2 location-based)",
+   "righe": [
+    {
+     "l": "Scope 1 – emissioni dirette",
+     "n": "6 voci: gas naturale, gasolio, benzina, gas refrigeranti (unità 4)",
+     "a": 2257787,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Scope 2 – elettricità acquistata, location-based",
+     "n": "3.200.000 kWh × 0,235 kg CO2e/kWh (unità 5)",
+     "a": 752000,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Scope 3 – catena del valore",
+     "n": "21 voci, categorie 1–7, 9 e 12; esclusa la fase d’uso (unità 6)",
+     "a": 18682694,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    }
+   ],
+   "atteso": 21692.5,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "6": {
+   "tipo": "calcolo",
+   "titolo": "Controllo di quadratura: la somma per categoria ISO",
+   "etichette": {
+    "r": "Emissioni",
+    "a": "Emissioni (dal foglio)",
+    "ef": "Conversione"
+   },
+   "unita": "t CO2e",
+   "dec": 1,
+   "totale": "Totale inventario (uguale al totale per scope)",
+   "righe": [
+    {
+     "l": "Categoria 1 – emissioni dirette",
+     "a": 2257787,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Categoria 2 – energia importata",
+     "a": 752000,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Categoria 3 – trasporto",
+     "n": "trasporti a monte e a valle, viaggi di lavoro, pendolarismo",
+     "a": 1998284,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Categoria 4 – prodotti utilizzati",
+     "n": "beni e servizi acquistati, beni strumentali, energia a monte, rifiuti",
+     "a": 16578410,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Categoria 5 – uso dei prodotti",
+     "n": "fine vita degli imballaggi venduti",
+     "a": 106000,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    }
+   ],
+   "atteso": 21692.5,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "15": {
+   "tipo": "calcolo",
+   "titolo": "Scope 1+2 per tonnellata di pasta",
+   "etichette": {
+    "r": "Intensità",
+    "a": "Emissioni",
+    "ef": "Conversione",
+    "d": "Produzione"
+   },
+   "unita": "kg CO2e/t",
+   "dec": 2,
+   "totale": "Scope 1+2 per tonnellata di pasta",
+   "righe": [
+    {
+     "l": "Scope 1",
+     "a": 2257.8,
+     "au": "t CO2e",
+     "ef": 1000,
+     "efu": "kg/t",
+     "d": 20000,
+     "du": "t di pasta"
+    },
+    {
+     "l": "Scope 2 (location-based)",
+     "a": 752,
+     "au": "t CO2e",
+     "ef": 1000,
+     "efu": "kg/t",
+     "d": 20000,
+     "du": "t di pasta"
+    }
+   ],
+   "atteso": 150.49,
+   "piede": "Arrotondato: 150,5 kg CO2e per tonnellata di pasta, cioè circa 0,15 kg CO2e per chilo.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "16": {
+   "tipo": "calcolo",
+   "titolo": "Totale dell’inventario per chilo di pasta",
+   "etichette": {
+    "r": "Intensità",
+    "a": "Emissioni",
+    "ef": "Conversione",
+    "d": "Produzione"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": "Totale inventario per kg di pasta",
+   "righe": [
+    {
+     "l": "Scope 1",
+     "a": 2257.8,
+     "au": "t CO2e",
+     "ef": 1000,
+     "efu": "kg/t",
+     "d": 20000000,
+     "du": "kg di pasta"
+    },
+    {
+     "l": "Scope 2 (location-based)",
+     "a": 752,
+     "au": "t CO2e",
+     "ef": 1000,
+     "efu": "kg/t",
+     "d": 20000000,
+     "du": "kg di pasta"
+    },
+    {
+     "l": "Scope 3",
+     "a": 18682.7,
+     "au": "t CO2e",
+     "ef": 1000,
+     "efu": "kg/t",
+     "d": 20000000,
+     "du": "kg di pasta"
+    }
+   ],
+   "atteso": 1.0846,
+   "piede": "Arrotondato: 1,085 kg CO2e per kg di pasta. Non comprende la cottura, riportata a parte.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "21": {
+   "tipo": "calcolo",
+   "titolo": "Combinare dato e fattore: il gas naturale",
+   "etichette": {
+    "r": "Quadrato",
+    "a": "Incertezza",
+    "ef": "Incertezza (ripetuta)"
+   },
+   "unita": " ",
+   "totale": "Somma dei quadrati",
+   "righe": [
+    {
+     "l": "Dato di attività: 1.050.000 Sm³",
+     "n": "contatore fiscale e bollette: incertezza bassa, ± 2%",
+     "a": 2,
+     "au": "%",
+     "ef": 2,
+     "efu": "%"
+    },
+    {
+     "l": "Fattore di emissione: 2,0 kg CO2e/Sm³",
+     "n": "combustibile standard: incertezza bassa, ± 5%",
+     "a": 5,
+     "au": "%",
+     "ef": 5,
+     "efu": "%"
+    }
+   ],
+   "atteso": 29,
+   "piede": "Radice quadrata di 29 = 5,4. Incertezza della voce: ± 5,4%, cioè 2.100 t CO2e ± 113 t (da 1.987 a 2.213 t).",
+   "fonte": "Caso studio Pastificio Terrafelix – valori di incertezza illustrativi (modello didattico)"
+  },
+  "22": {
+   "tipo": "calcolo",
+   "titolo": "Combinare dato e fattore: la semola",
+   "etichette": {
+    "r": "Quadrato",
+    "a": "Incertezza",
+    "ef": "Incertezza (ripetuta)"
+   },
+   "unita": " ",
+   "totale": "Somma dei quadrati",
+   "righe": [
+    {
+     "l": "Dato di attività: 20.600.000 kg",
+     "n": "fatture del molino con i pesi: incertezza bassa, ± 2%",
+     "a": 2,
+     "au": "%",
+     "ef": 2,
+     "efu": "%"
+    },
+    {
+     "l": "Fattore di emissione: 0,70 kg CO2e/kg",
+     "n": "valore generico per una materia prima agricola: incertezza alta, ± 30%",
+     "a": 30,
+     "au": "%",
+     "ef": 30,
+     "efu": "%"
+    }
+   ],
+   "atteso": 904,
+   "piede": "Radice quadrata di 904 = 30,1. Incertezza della voce: ± 30,1%, cioè 14.420 t CO2e ± 4.340 t (da 10.080 a 18.760 t).",
+   "fonte": "Caso studio Pastificio Terrafelix – valori di incertezza illustrativi (modello didattico)"
+  },
+  "27": {
+   "tipo": "calcolo",
+   "titolo": "Quanto vale un fattore migliore per la semola",
+   "etichette": {},
+   "totale": false,
+   "righe": [
+    {
+     "l": "Semola acquistata nel 2025",
+     "n": "10% del fattore generico: 0,70 × 10% = 0,07 kg CO2e/kg",
+     "a": 20600000,
+     "au": "kg",
+     "ef": 0.07,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 1442000,
+   "piede": "1.442 t CO2e sono il 6,6% del totale dell’inventario. La stessa prova sul pendolarismo sposta 8,1 t CO2e: lo 0,04%.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "33": {
+   "tipo": "calcolo",
+   "titolo": "Quanto pesa una fattura di gasolio contata due volte",
+   "etichette": {},
+   "totale": "Emissioni contate in più nella bozza",
+   "righe": [
+    {
+     "l": "Combustione del gasolio (Scope 1)",
+     "n": "2.400 l contati in più",
+     "a": 2400,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Filiera a monte del gasolio (Scope 3, categoria 3)",
+     "n": "gli stessi 2.400 l entravano anche in questa riga",
+     "a": 2400,
+     "au": "l",
+     "ef": 0.62,
+     "efu": "kg CO2e/l"
+    }
+   ],
+   "atteso": 7848,
+   "piede": "Errore corretto prima della chiusura: l’inventario riporta 38.000 l e 100,7 t CO2e per il gasolio della flotta.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "37": {
+   "tipo": "calcolo",
+   "titolo": "Serve ricalcolare l’anno base? Un esempio svolto",
+   "etichette": {},
+   "totale": false,
+   "righe": [
+    {
+     "l": "Semola acquistata nell’anno base",
+     "n": "differenza tra i due fattori: 0,70 − 0,63 = 0,07 kg CO2e/kg (valori didattici)",
+     "a": 10000000,
+     "au": "kg",
+     "ef": 0.07,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 700000,
+   "piede": "700 t ÷ 12.000 t = 5,8%: sopra la soglia del 5%. L’anno base si ricalcola con il nuovo fattore: 12.000 − 700 = 11.300 t CO2e.",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "38": {
+   "tipo": "calcolo",
+   "titolo": "Stesso consumo, fattore diverso: l’effetto sul risultato",
+   "etichette": {},
+   "totale": false,
+   "righe": [
+    {
+     "l": "Elettricità prelevata dalla rete",
+     "n": "ISPRA 2024, stima preliminare: 198,9 g CO2/kWh, arrotondato a 0,199",
+     "a": 3200000,
+     "au": "kWh",
+     "ef": 0.199,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 636800,
+   "piede": "Da 752 a 636,8 t CO2e: 115,2 t in meno (−15,3%) senza aver risparmiato un solo chilowattora.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori: ISPRA, Rapporto 413/2025"
+  },
+  "40": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: quanta riduzione è merito dell’azienda?",
+   "righe": [
+    {
+     "l": "kWh risparmiati rispetto all’anno base (effetto attività)",
+     "v": 160000,
+     "u": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "kWh consumati nel nuovo anno (effetto fattore: 0,235 − 0,199)",
+     "v": 3040000,
+     "u": "kWh",
+     "ef": 0.036,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "piede": "Con i valori iniziali: 37,6 t per i consumi ridotti e 109,4 t per il fattore; in tutto 147,0 t in meno, da 752 a 605,0 t CO2e.",
+   "fonte": "Caso studio Pastificio Terrafelix – scenario illustrativo; fattori: ISPRA, Rapporto 413/2025"
+  },
+  "44": {
+   "tipo": "calcolo",
+   "titolo": "La tabella delle emissioni dirette per gas",
+   "etichette": {
+    "r": "Emissioni",
+    "a": "Emissioni (dal foglio)",
+    "ef": "Conversione"
+   },
+   "unita": "t CO2e",
+   "dec": 1,
+   "totale": "Totale emissioni dirette (categoria 1)",
+   "righe": [
+    {
+     "l": "Combustione: CO2, CH4 e N2O",
+     "n": "gas naturale, gasolio, benzina; i fattori didattici in CO2e non separano i tre gas",
+     "a": 2218475,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "HFC: R-410A e HFC-134a",
+     "n": "ricariche di gas refrigeranti: 12 kg e 8 kg",
+     "a": 39312,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "PFC, SF6, NF3",
+     "n": "nessuna sorgente individuata (dato illustrativo)",
+     "a": 0,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    }
+   ],
+   "atteso": 2257.8,
+   "piede": "In un inventario reale i fattori ufficiali forniscono CO2, CH4 e N2O separati: nel rapporto compaiono su tre righe distinte.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "59": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: quanto sposta il totale un errore del 10%",
+   "unita": "t CO2e",
+   "righe": [
+    {
+     "l": "Semola (14.420 t CO2e)",
+     "v": 10,
+     "u": "%",
+     "ef": 144.2,
+     "efu": "t CO2e per 1%"
+    },
+    {
+     "l": "Gas naturale (2.100 t CO2e)",
+     "v": 10,
+     "u": "%",
+     "ef": 21,
+     "efu": "t CO2e per 1%"
+    },
+    {
+     "l": "Distribuzione a valle (1.486 t CO2e)",
+     "v": 10,
+     "u": "%",
+     "ef": 14.86,
+     "efu": "t CO2e per 1%"
+    },
+    {
+     "l": "Elettricità (752 t CO2e)",
+     "v": 10,
+     "u": "%",
+     "ef": 7.52,
+     "efu": "t CO2e per 1%"
+    },
+    {
+     "l": "Pendolarismo (80,8 t CO2e)",
+     "v": 10,
+     "u": "%",
+     "ef": 0.808,
+     "efu": "t CO2e per 1%"
+    },
+    {
+     "l": "Gas refrigeranti (39,3 t CO2e)",
+     "v": 10,
+     "u": "%",
+     "ef": 0.393,
+     "efu": "t CO2e per 1%"
+    }
+   ],
+   "piede": "Con il 10% su ogni riga: semola 1.442 t, gas 210 t, distribuzione 148,6 t, elettricità 75,2 t, pendolarismo 8,1 t, refrigeranti 3,9 t.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  }
+ },
+ "m08": {
+  "3": {
+   "tipo": "calcolo",
+   "titolo": "Il conto rapido: l’inventario diviso per la produzione",
+   "etichette": {
+    "r": "Emissioni per kg",
+    "a": "Totale dell’inventario",
+    "ef": "Conversione in kg",
+    "d": "Produzione annua"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 3,
+   "totale": false,
+   "righe": [
+    {
+     "l": "Inventario 2025 di Terrafelix",
+     "n": "rapporto GHG verificato · produzione: 20.000 t di pasta",
+     "a": 21692.5,
+     "au": "t CO2e",
+     "ef": 1000,
+     "efu": "kg/t",
+     "d": 20000000,
+     "du": "kg di pasta"
+    }
+   ],
+   "atteso": 1.0846,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "13": {
+   "tipo": "calcolo",
+   "titolo": "Esempio: per litro perde, per metro quadrato vince",
+   "etichette": {
+    "r": "Emissioni",
+    "a": "Superficie da coprire",
+    "ef": "Emissioni per litro",
+    "d": "Resa"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "Vernice B per 100 m² di parete",
+     "n": "litri necessari: 100 ÷ 13 = 7,7",
+     "a": 100,
+     "au": "m²",
+     "ef": 2.6,
+     "efu": "kg CO2e/l",
+     "d": 13,
+     "du": "m²/l"
+    }
+   ],
+   "atteso": 20,
+   "piede": "Per litro la vernice B emette il 30% in più (2,6 contro 2,0); per la funzione «coprire 100 m²» emette il 20% in meno (20 contro 25 kg CO2e).",
+   "fonte": "Esempio didattico – prodotti di fantasia, valori inventati per mostrare il ragionamento"
+  },
+  "16": {
+   "tipo": "calcolo",
+   "titolo": "Il cut-off con i numeri: quanto pesano le voci escluse",
+   "etichette": {
+    "d": "Produzione annua"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 5,
+   "totale": "Totale delle voci escluse",
+   "righe": [
+    {
+     "l": "Acqua di rete",
+     "n": "bollette dell’acquedotto",
+     "a": 60000,
+     "au": "m³",
+     "ef": 0.3,
+     "efu": "kg CO2e/m³",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Rifiuti avviati a recupero",
+     "n": "registro rifiuti",
+     "a": 420000,
+     "au": "kg",
+     "ef": 0.021,
+     "efu": "kg CO2e/kg",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Rifiuti avviati a smaltimento",
+     "n": "registro rifiuti",
+     "a": 60000,
+     "au": "kg",
+     "ef": 0.45,
+     "efu": "kg CO2e/kg",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Ricariche di R-410A",
+     "n": "rapporti del frigorista · GWP AR6",
+     "a": 12,
+     "au": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Ricariche di HFC-134a",
+     "n": "rapporti del frigorista · GWP AR6",
+     "a": 8,
+     "au": "kg",
+     "ef": 1530,
+     "efu": "kg CO2e/kg",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Gasolio del gruppo elettrogeno",
+     "n": "fatture di acquisto",
+     "a": 1500,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l",
+     "d": 20000000,
+     "du": "kg"
+    }
+   ],
+   "atteso": 0.004855,
+   "piede": "0,00486 kg CO2e per kg sono lo 0,33% del risultato finale (1,474). Nessuna voce supera lo 0,1%: esclusione ammessa dal criterio dichiarato (ciascuna sotto l’1%).",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "19": {
+   "tipo": "calcolo",
+   "titolo": "Quanto gas serve per 1 kg di pasta",
+   "etichette": {
+    "r": "Consumo per kg",
+    "a": "Consumo annuo",
+    "ef": "Riferito a",
+    "d": "Produzione annua"
+   },
+   "unita": "Sm³",
+   "dec": 4,
+   "totale": false,
+   "righe": [
+    {
+     "l": "Gas naturale (essiccatoi e centrale termica)",
+     "n": "12 bollette del 2025 · produzione dal consuntivo di stabilimento",
+     "a": 1050000,
+     "au": "Sm³",
+     "ef": 1,
+     "efu": "kg di pasta",
+     "d": 20000000,
+     "du": "kg di pasta"
+    }
+   ],
+   "atteso": 0.0525,
+   "piede": "0,0525 Sm³ sono 52,5 litri di gas per ogni chilo di pasta. Moltiplicati per il fattore di combustione (2 kg CO2e/Sm³) danno 0,105 kg CO2e per kg.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "25": {
+   "tipo": "calcolo",
+   "titolo": "Semola e crusca: allocazione per massa",
+   "etichette": {
+    "r": "Emissioni assegnate",
+    "a": "Emissioni da ripartire",
+    "ef": "Quota in massa"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Semola",
+     "n": "750 kg su 1.000 kg di prodotti = 75%",
+     "a": 600,
+     "au": "kg CO2e",
+     "ef": 0.75,
+     "efu": "quota"
+    },
+    {
+     "l": "Crusca per mangimi",
+     "n": "250 kg su 1.000 kg di prodotti = 25%",
+     "a": 600,
+     "au": "kg CO2e",
+     "ef": 0.25,
+     "efu": "quota"
+    }
+   ],
+   "atteso": 600,
+   "piede": "Per kg: semola 450 ÷ 750 = 0,60 kg CO2e/kg; crusca 150 ÷ 250 = 0,60 kg CO2e/kg. Con la massa, ogni chilo che esce dal molino porta lo stesso carico.",
+   "fonte": "Esempio didattico – molino di fantasia, valori inventati per mostrare il ragionamento"
+  },
+  "26": {
+   "tipo": "calcolo",
+   "titolo": "Semola e crusca: allocazione economica",
+   "etichette": {
+    "r": "Emissioni assegnate",
+    "a": "Emissioni da ripartire",
+    "ef": "Quota dei ricavi"
+   },
+   "dec": 1,
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Semola",
+     "n": "375 € su 400 € = 93,75%",
+     "a": 600,
+     "au": "kg CO2e",
+     "ef": 0.9375,
+     "efu": "quota"
+    },
+    {
+     "l": "Crusca per mangimi",
+     "n": "25 € su 400 € = 6,25%",
+     "a": 600,
+     "au": "kg CO2e",
+     "ef": 0.0625,
+     "efu": "quota"
+    }
+   ],
+   "atteso": 600,
+   "piede": "Per kg: semola 562,5 ÷ 750 = 0,75 kg CO2e/kg; crusca 37,5 ÷ 250 = 0,15 kg CO2e/kg.",
+   "fonte": "Esempio didattico – molino di fantasia, prezzi e valori inventati per mostrare il ragionamento"
+  },
+  "30": {
+   "tipo": "calcolo",
+   "titolo": "Fase 1: semola e trasporto della semola",
+   "etichette": {
+    "k": "Distanza",
+    "d": "Produzione annua"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": "Fase 1 – Materie prime",
+   "righe": [
+    {
+     "l": "Semola di grano duro (coltivazione e molitura)",
+     "n": "per kg di pasta: 1,03 kg × 0,7 · fattore medio didattico",
+     "a": 20600000,
+     "au": "kg",
+     "ef": 0.7,
+     "efu": "kg CO2e/kg",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Trasporto della semola dal molino",
+     "n": "autoarticolato · per kg di pasta: 0,00103 t × 180 km × 0,1",
+     "a": 20600,
+     "au": "t",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm",
+     "k": 180,
+     "ku": "km",
+     "d": 20000000,
+     "du": "kg"
+    }
+   ],
+   "atteso": 0.7395,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico"
+  },
+  "31": {
+   "tipo": "calcolo",
+   "titolo": "E se metà della semola avesse un fattore più basso?",
+   "etichette": {},
+   "unita": "kg CO2e/kg",
+   "dec": 5,
+   "totale": "Semola per kg di pasta",
+   "righe": [
+    {
+     "l": "Semola da filiera migliorativa (50%)",
+     "n": "fattore dichiarato dal fornitore (dato illustrativo)",
+     "a": 0.515,
+     "au": "kg",
+     "ef": 0.63,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Semola convenzionale (50%)",
+     "n": "fattore medio didattico",
+     "a": 0.515,
+     "au": "kg",
+     "ef": 0.7,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 0.68495,
+   "piede": "Rispetto a 0,721 la semola scende a 0,685: 0,036 kg CO2e in meno per kg di pasta: la carbon footprint totale passerebbe da 1,474 a 1,438 kg CO2e/kg.",
+   "fonte": "Caso studio Pastificio Terrafelix – scenario illustrativo"
+  },
+  "34": {
+   "tipo": "calcolo",
+   "titolo": "Fase 2: l’energia dello stabilimento",
+   "etichette": {
+    "d": "Produzione annua"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": "Fase 2 – Produzione",
+   "righe": [
+    {
+     "l": "Gas naturale – combustione",
+     "n": "per kg di pasta: 0,0525 Sm³",
+     "a": 1050000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Gas naturale – filiera a monte",
+     "n": "stesso consumo, fattore della filiera",
+     "a": 1050000,
+     "au": "Sm³",
+     "ef": 0.33,
+     "efu": "kg CO2e/Sm³",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Elettricità di rete",
+     "n": "per kg di pasta: 0,16 kWh · fattore medio nazionale",
+     "a": 3200000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Elettricità – filiera a monte e perdite di rete",
+     "n": "stesso consumo, fattore della filiera",
+     "a": 3200000,
+     "au": "kWh",
+     "ef": 0.06,
+     "efu": "kg CO2e/kWh",
+     "d": 20000000,
+     "du": "kg"
+    }
+   ],
+   "atteso": 0.1695,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico"
+  },
+  "35": {
+   "tipo": "calcolo",
+   "titolo": "Fase 3: l’imballaggio",
+   "etichette": {
+    "k": "Distanza",
+    "d": "Produzione annua"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": "Fase 3 – Imballaggio",
+   "righe": [
+    {
+     "l": "Astucci e cartoni",
+     "n": "per kg di pasta: 0,045 kg × 0,9",
+     "a": 900000,
+     "au": "kg",
+     "ef": 0.9,
+     "efu": "kg CO2e/kg",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Film plastico",
+     "n": "per kg di pasta: 0,008 kg × 2,8",
+     "a": 160000,
+     "au": "kg",
+     "ef": 2.8,
+     "efu": "kg CO2e/kg",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Trasporto degli imballaggi",
+     "n": "autoarticolato · 900 t + 160 t = 1.060 t",
+     "a": 1060,
+     "au": "t",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm",
+     "k": 300,
+     "ku": "km",
+     "d": 20000000,
+     "du": "kg"
+    }
+   ],
+   "atteso": 0.0645,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico"
+  },
+  "36": {
+   "tipo": "calcolo",
+   "titolo": "Il primo traguardo: dalla culla al cancello",
+   "etichette": {
+    "r": "Emissioni",
+    "a": "Risultato della fase",
+    "ef": "Conversione"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": "CFP parziale, dalla culla al cancello",
+   "righe": [
+    {
+     "l": "Fase 1 – Materie prime",
+     "a": 739.54,
+     "au": "g CO2e",
+     "ef": 0.001,
+     "efu": "kg/g"
+    },
+    {
+     "l": "Fase 2 – Produzione",
+     "a": 169.525,
+     "au": "g CO2e",
+     "ef": 0.001,
+     "efu": "kg/g"
+    },
+    {
+     "l": "Fase 3 – Imballaggio",
+     "a": 64.49,
+     "au": "g CO2e",
+     "ef": 0.001,
+     "efu": "kg/g"
+    }
+   ],
+   "atteso": 0.9736,
+   "piede": "Arrotondato: 0,97 kg CO2e per kg di pasta confezionata al cancello dello stabilimento (unità dichiarata).",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico"
+  },
+  "40": {
+   "tipo": "calcolo",
+   "titolo": "Fase 4: la distribuzione ai mercati",
+   "etichette": {
+    "k": "Distanza",
+    "d": "Produzione annua"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": "Fase 4 – Distribuzione",
+   "righe": [
+    {
+     "l": "Italia, su gomma (70% dei volumi)",
+     "n": "distanza media dichiarata",
+     "a": 14000,
+     "au": "t",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm",
+     "k": 450,
+     "ku": "km",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Europa, su gomma (20%)",
+     "n": "distanza media dichiarata",
+     "a": 4000,
+     "au": "t",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm",
+     "k": 1500,
+     "ku": "km",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Oltremare, via nave (10%)",
+     "n": "nave portacontainer",
+     "a": 2000,
+     "au": "t",
+     "ef": 0.016,
+     "efu": "kg CO2e/tkm",
+     "k": 8000,
+     "ku": "km",
+     "d": 20000000,
+     "du": "kg"
+    }
+   ],
+   "atteso": 0.0743,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico"
+  },
+  "42": {
+   "tipo": "calcolo",
+   "titolo": "Fase 5: la cottura a casa del consumatore",
+   "etichette": {
+    "a": "Quota di 1 kg di pasta"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": "Fase 5 – Uso",
+   "righe": [
+    {
+     "l": "Cottura su fornello a gas (70%)",
+     "n": "0,22 Sm³ per kg di pasta × 2 kg CO2e/Sm³",
+     "a": 0.7,
+     "au": "kg",
+     "ef": 0.44,
+     "efu": "kg CO2e/kg pasta"
+    },
+    {
+     "l": "Cottura su piano elettrico o a induzione (30%)",
+     "n": "1,6 kWh per kg di pasta × 0,235 kg CO2e/kWh",
+     "a": 0.3,
+     "au": "kg",
+     "ef": 0.376,
+     "efu": "kg CO2e/kg pasta"
+    }
+   ],
+   "atteso": 0.4208,
+   "piede": "Consumi di cottura e quote dei consumatori sono ipotesi dello scenario: vanno scritte nel rapporto, perché chi le cambia cambia il risultato.",
+   "fonte": "Caso studio Pastificio Terrafelix – scenario d’uso illustrativo; fattori di emissione arrotondati a scopo didattico"
+  },
+  "43": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: cambiare lo scenario di cottura",
+   "unita": "kg CO2e per 100 kg di pasta",
+   "righe": [
+    {
+     "l": "Fornello a gas, modo abituale",
+     "v": 70,
+     "u": "kg di pasta",
+     "ef": 0.44,
+     "efu": "kg CO2e/kg pasta"
+    },
+    {
+     "l": "Piano elettrico, modo abituale",
+     "v": 30,
+     "u": "kg di pasta",
+     "ef": 0.376,
+     "efu": "kg CO2e/kg pasta"
+    },
+    {
+     "l": "Fornello a gas, con coperchio e meno acqua",
+     "v": 0,
+     "u": "kg di pasta",
+     "ef": 0.352,
+     "efu": "kg CO2e/kg pasta"
+    },
+    {
+     "l": "Piano elettrico, con coperchio e meno acqua",
+     "v": 0,
+     "u": "kg di pasta",
+     "ef": 0.3008,
+     "efu": "kg CO2e/kg pasta"
+    }
+   ],
+   "piede": "Le righe «con coperchio e meno acqua» ipotizzano un consumo di energia inferiore del 20%: valore illustrativo, non misurato.",
+   "fonte": "Esempio didattico – scenario illustrativo; fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "44": {
+   "tipo": "calcolo",
+   "titolo": "Fase 6: il fine vita dell’imballaggio",
+   "etichette": {},
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": "Fase 6 – Fine vita",
+   "righe": [
+    {
+     "l": "Astuccio e cartone a fine vita",
+     "n": "raccolta differenziata della carta",
+     "a": 0.045,
+     "au": "kg",
+     "ef": 0.1,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Film plastico a fine vita",
+     "n": "raccolta differenziata della plastica",
+     "a": 0.008,
+     "au": "kg",
+     "ef": 0.1,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 0.0053,
+   "piede": "È lo stesso conto di 0,053 kg × 0,1. Le sei fasi sono complete: nella prossima sezione la somma.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattore medio didattico"
+  },
+  "46": {
+   "tipo": "calcolo",
+   "titolo": "La carbon footprint di 1 kg di pasta: la somma",
+   "etichette": {
+    "r": "Emissioni",
+    "a": "Risultato della fase",
+    "ef": "Conversione"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": "CFP dalla culla alla tomba",
+   "righe": [
+    {
+     "l": "Fase 1 – Materie prime",
+     "a": 739.54,
+     "au": "g CO2e",
+     "ef": 0.001,
+     "efu": "kg/g"
+    },
+    {
+     "l": "Fase 2 – Produzione",
+     "a": 169.525,
+     "au": "g CO2e",
+     "ef": 0.001,
+     "efu": "kg/g"
+    },
+    {
+     "l": "Fase 3 – Imballaggio",
+     "a": 64.49,
+     "au": "g CO2e",
+     "ef": 0.001,
+     "efu": "kg/g"
+    },
+    {
+     "l": "Fase 4 – Distribuzione",
+     "a": 74.3,
+     "au": "g CO2e",
+     "ef": 0.001,
+     "efu": "kg/g"
+    },
+    {
+     "l": "Fase 5 – Uso (cottura)",
+     "a": 420.8,
+     "au": "g CO2e",
+     "ef": 0.001,
+     "efu": "kg/g"
+    },
+    {
+     "l": "Fase 6 – Fine vita",
+     "a": 5.3,
+     "au": "g CO2e",
+     "ef": 0.001,
+     "efu": "kg/g"
+    }
+   ],
+   "atteso": 1.474,
+   "piede": "Arrotondato: 1,47 kg CO2e per kg di pasta, confezionata, cotta e consumata. Di cui dalla culla al cancello: 0,97.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico"
+  },
+  "49": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: dalla confezione alla porzione",
+   "unita": "kg CO2e, dalla culla alla tomba",
+   "righe": [
+    {
+     "l": "Quantità di pasta",
+     "v": 0.5,
+     "u": "kg",
+     "ef": 1.474,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "piede": "Confezione da 500 g: 0,74 kg CO2e. Porzione da 80 g: 0,118 kg CO2e, cioè 118 g.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico"
+  },
+  "50": {
+   "tipo": "calcolo",
+   "titolo": "Controllo di coerenza: dall’inventario alla CFP",
+   "etichette": {
+    "a": "Emissioni annue",
+    "ef": "Conversione in kg (± segno)",
+    "d": "Produzione annua"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": "CFP dalla culla alla tomba",
+   "righe": [
+    {
+     "l": "Totale dell’inventario 2025",
+     "n": "Scope 1 + 2 location-based + 3, senza la cottura",
+     "a": 21692.5,
+     "au": "t CO2e",
+     "ef": 1000,
+     "efu": "kg/t",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Meno: voci fuori dal confine del prodotto",
+     "n": "macchinari 280 t · flotta e filiera dei carburanti 142,6 t · viaggi 28,9 t · pendolarismo 80,8 t",
+     "a": 532.274,
+     "au": "t CO2e",
+     "ef": -1000,
+     "efu": "kg/t",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Meno: voci minori escluse per cut-off",
+     "n": "acqua, rifiuti, gas refrigeranti, gasolio del gruppo elettrogeno",
+     "a": 97.107,
+     "au": "t CO2e",
+     "ef": -1000,
+     "efu": "kg/t",
+     "d": 20000000,
+     "du": "kg"
+    },
+    {
+     "l": "Più: fase d’uso (cottura)",
+     "n": "riportata a parte nell’inventario",
+     "a": 8416,
+     "au": "t CO2e",
+     "ef": 1000,
+     "efu": "kg/t",
+     "d": 20000000,
+     "du": "kg"
+    }
+   ],
+   "atteso": 1.474,
+   "piede": "",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "60": {
+   "tipo": "calcolo",
+   "titolo": "Riportare due dichiarazioni allo stesso confine",
+   "etichette": {
+    "r": "Emissioni",
+    "a": "Risultato",
+    "ef": "Conversione (± segno)"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": "Terrafelix, dalla culla al cancello",
+   "righe": [
+    {
+     "l": "Terrafelix, dalla culla alla tomba",
+     "a": 1473.955,
+     "au": "g CO2e",
+     "ef": 0.001,
+     "efu": "kg/g"
+    },
+    {
+     "l": "Meno: distribuzione",
+     "a": 74.3,
+     "au": "g CO2e",
+     "ef": -0.001,
+     "efu": "kg/g"
+    },
+    {
+     "l": "Meno: uso (cottura)",
+     "a": 420.8,
+     "au": "g CO2e",
+     "ef": -0.001,
+     "efu": "kg/g"
+    },
+    {
+     "l": "Meno: fine vita",
+     "a": 5.3,
+     "au": "g CO2e",
+     "ef": -0.001,
+     "efu": "kg/g"
+    }
+   ],
+   "atteso": 0.9736,
+   "piede": "A confini allineati: 0,97 contro 1,10. Il confronto «1,47 contro 1,10» avrebbe dato la risposta opposta. E resta da verificare che i due studi usino le stesse regole.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; il Pastificio B e il suo valore sono inventati"
+  }
+ },
+ "m09": {
+  "9": {
+   "tipo": "calcolo",
+   "titolo": "L’obiettivo assoluto: −42% di Scope 1+2 market-based",
+   "etichette": {
+    "r": "Emissioni massime 2030",
+    "a": "Emissioni 2025",
+    "ef": "Quota residua"
+   },
+   "unita": "t CO2e",
+   "dec": 1,
+   "totale": false,
+   "righe": [
+    {
+     "l": "Scope 1 + Scope 2 market-based",
+     "n": "2.257,8 + 900 t CO2e, dall’inventario dell’anno base",
+     "a": 3157.8,
+     "au": "t CO2e",
+     "ef": 0.58,
+     "efu": "(1 − 0,42)"
+    }
+   ],
+   "atteso": 1831.5,
+   "piede": "Riduzione richiesta: 3.157,8 − 1.831,5 = 1.326,3 t CO2e, in media 265,3 t in meno ogni anno per cinque anni.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "10": {
+   "tipo": "calcolo",
+   "titolo": "L’obiettivo di intensità: −25% di Scope 3 per kg di pasta",
+   "etichette": {
+    "r": "Intensità obiettivo",
+    "a": "Emissioni 2025",
+    "ef": "Quota residua",
+    "d": "Produzione"
+   },
+   "unita": "kg CO2e/kg",
+   "dec": 4,
+   "totale": false,
+   "righe": [
+    {
+     "l": "Scope 3 dell’anno base",
+     "n": "18.682,7 t CO2e, esclusa la cottura (riportata a parte)",
+     "a": 18682700,
+     "au": "kg CO2e",
+     "ef": 0.75,
+     "efu": "(1 − 0,25)",
+     "d": 20000000,
+     "du": "kg di pasta"
+    }
+   ],
+   "atteso": 0.7006,
+   "piede": "L’obiettivo è scendere da 0,934 a circa 0,70 kg CO2e per kg di pasta (700,6 g).",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "15": {
+   "tipo": "calcolo",
+   "titolo": "Leva 1 – Recupero di calore: quanto vale il 12% di gas in meno",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Combustione evitata",
+     "n": "Scope 1 · fattore di combustione del gas naturale",
+     "a": 126000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Filiera a monte evitata",
+     "n": "Scope 3, categoria 3 · estrazione e trasporto del gas",
+     "a": 126000,
+     "au": "Sm³",
+     "ef": 0.33,
+     "efu": "kg CO2e/Sm³"
+    }
+   ],
+   "atteso": 293580,
+   "piede": "−252 t CO2e nello Scope 1 e −41,6 t CO2e nello Scope 3 (41.580 kg). Per l’obiettivo su Scope 1+2 conta solo la prima riga.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "16": {
+   "tipo": "calcolo",
+   "titolo": "Elettrificare il calore: il gas scende, l’elettricità sale",
+   "etichette": {
+    "r": "Variazione"
+   },
+   "totale": "Effetto netto (location-based)",
+   "righe": [
+    {
+     "l": "Gas non più bruciato",
+     "n": "Scope 1",
+     "a": -100000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Elettricità in più per la pompa di calore",
+     "n": "Scope 2 location-based · 100.000 Sm³ × 2,8 kWh/Sm³",
+     "a": 280000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": -134200,
+   "piede": "Lettura market-based: con il residual mix la seconda riga vale 280.000 × 0,45 = 126.000 kg (netto −74 t CO2e); con Garanzie d’Origine vale zero (netto −200 t CO2e).",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); rendimento della pompa di calore: valore didattico"
+  },
+  "20": {
+   "tipo": "calcolo",
+   "titolo": "Leve 2 e 3 – La lettura market-based",
+   "etichette": {},
+   "totale": "Riduzione dello Scope 2 market-based",
+   "righe": [
+    {
+     "l": "Leva 2 – Fotovoltaico: kWh non più prelevati",
+     "n": "+500.000 kWh autoconsumati; prima erano acquistati senza garanzie",
+     "a": 500000,
+     "au": "kWh",
+     "ef": 0.45,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Leva 3 – Garanzie d’Origine sui kWh restanti",
+     "n": "2.000.000 − 500.000 = 1.500.000 kWh: il fattore passa da 0,45 a 0",
+     "a": 1500000,
+     "au": "kWh",
+     "ef": 0.45,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 900000,
+   "piede": "Leva 2: −225 t CO2e. Leva 3: −675 t CO2e. Insieme portano lo Scope 2 market-based da 900 a 0 t CO2e.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "21": {
+   "tipo": "calcolo",
+   "titolo": "Leve 2 e 3 – La lettura location-based",
+   "etichette": {},
+   "totale": "Riduzione dello Scope 2 location-based",
+   "righe": [
+    {
+     "l": "Leva 2 – Fotovoltaico: kWh non più prelevati",
+     "n": "il prelievo scende da 3.200.000 a 2.700.000 kWh",
+     "a": 500000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Leva 3 – Garanzie d’Origine",
+     "n": "nessun kWh risparmiato: il fattore medio della rete resta lo stesso",
+     "a": 0,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 117500,
+   "piede": "Leva 2: −117,5 t CO2e (117.500 kg). Leva 3: nessun effetto. Lo Scope 2 location-based passa da 752 a 634,5 t CO2e (2.700.000 kWh × 0,235).",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "25": {
+   "tipo": "calcolo",
+   "titolo": "Leva 4 – Quattro auto elettriche: i litri di gasolio evitati",
+   "etichette": {
+    "k": "Consumo medio"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "Gasolio non più acquistato",
+     "n": "Scope 1, combustione mobile · km dal contachilometri, consumo dalle schede carburante",
+     "a": 128000,
+     "au": "km",
+     "k": 0.0625,
+     "ku": "l/km",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    }
+   ],
+   "atteso": 21200,
+   "piede": "−21,2 t CO2e nello Scope 1. Ma le auto elettriche consumano elettricità: il conto non è finito.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "26": {
+   "tipo": "calcolo",
+   "titolo": "Il bilancio della sostituzione: gasolio tolto, elettricità aggiunta",
+   "etichette": {
+    "r": "Variazione"
+   },
+   "totale": "Effetto netto (Scope 1 + Scope 2 location-based)",
+   "righe": [
+    {
+     "l": "Gasolio non più bruciato",
+     "n": "Scope 1",
+     "a": -8000,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Elettricità per le ricariche",
+     "n": "Scope 2 location-based",
+     "a": 23040,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": -15785.6,
+   "piede": "Lettura market-based: con le Garanzie d’Origine della leva 3 le ricariche valgono zero e l’effetto netto resta −21,2 t CO2e. Lo scenario del caso trascura questi 23.040 kWh: sono meno dell’1% dell’elettricità prelevata.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; consumo dell’auto elettrica: valore didattico"
+  },
+  "27": {
+   "tipo": "calcolo",
+   "titolo": "Leva 6 – Metà delle consegne europee dal camion al treno",
+   "etichette": {
+    "k": "Distanza"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "Consegne europee spostate su ferro",
+     "n": "Scope 3, categoria 9 · 50% delle 4.000 t vendute in Europa",
+     "a": 2000,
+     "au": "t",
+     "k": 1500,
+     "ku": "km",
+     "ef": 0.072,
+     "efu": "kg CO2e/tkm (0,10 − 0,028)"
+    }
+   ],
+   "atteso": 216000,
+   "piede": "Prima: 3.000.000 × 0,10 = 300.000 kg. Dopo: 3.000.000 × 0,028 = 84.000 kg. Differenza: −216 t CO2e nello Scope 3. La distribuzione in Europa passa da 600 a 384 t CO2e.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "31": {
+   "tipo": "calcolo",
+   "titolo": "Leva 5 – Semola da filiera con pratiche agronomiche migliorative",
+   "etichette": {
+    "k": "Quota dei volumi"
+   },
+   "totale": false,
+   "righe": [
+    {
+     "l": "Semola da filiera migliorata",
+     "n": "Scope 3, categoria 1 · kg dalle fatture di acquisto; fattore dal fornitore",
+     "a": 20600000,
+     "au": "kg",
+     "k": 0.5,
+     "ku": "(50%)",
+     "ef": 0.07,
+     "efu": "kg CO2e/kg (0,70 − 0,63)"
+    }
+   ],
+   "atteso": 721000,
+   "piede": "−721 t CO2e nello Scope 3: quasi tre volte la leva 1 sul gas. Non incide sull’obiettivo Scope 1+2, ma su quello di intensità dello Scope 3.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "32": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: quanta semola spostare sulla filiera migliorata",
+   "righe": [
+    {
+     "l": "Semola da filiera convenzionale",
+     "v": 20600000,
+     "u": "kg",
+     "ef": 0.7,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Semola da filiera migliorata",
+     "v": 0,
+     "u": "kg",
+     "ef": 0.63,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "piede": "Con il 100% dei volumi sulla filiera migliorata: 20.600.000 × 0,63 = 12.978.000 kg CO2e, cioè 1.442 t in meno.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "37": {
+   "tipo": "calcolo",
+   "titolo": "Quanto costa una tonnellata evitata: il conto per la leva 1",
+   "etichette": {
+    "r": "Costo per tonnellata",
+    "a": "Quantità",
+    "ef": "Prezzo o quota annua",
+    "d": "Tonnellate evitate"
+   },
+   "unita": "€/t CO2e",
+   "dec": 1,
+   "totale": "Costo netto di abbattimento",
+   "righe": [
+    {
+     "l": "Quota annua dell’investimento",
+     "n": "280.000 € ripartiti su 10 anni di vita utile",
+     "a": 280000,
+     "au": "€",
+     "ef": 0.1,
+     "efu": "all’anno",
+     "d": 252,
+     "du": "t CO2e"
+    },
+    {
+     "l": "Gas risparmiato ogni anno",
+     "n": "segno meno: è un risparmio · prezzo del gas illustrativo",
+     "a": -126000,
+     "au": "Sm³",
+     "ef": 0.45,
+     "efu": "€/Sm³",
+     "d": 252,
+     "du": "t CO2e"
+    }
+   ],
+   "atteso": -113.89,
+   "piede": "Risultato negativo: l’intervento fa risparmiare circa 113,9 € per ogni tonnellata evitata. Tempo di rientro semplice: 280.000 € ÷ 56.700 € l’anno ≈ 4,9 anni.",
+   "fonte": "Esempio didattico – costi e prezzi illustrativi, non riferiti a offerte o listini reali"
+  },
+  "41": {
+   "tipo": "calcolo",
+   "titolo": "Scope 1+2 market-based: quanto tolgono le leve 1–4",
+   "etichette": {},
+   "totale": "Riduzione totale",
+   "righe": [
+    {
+     "l": "Leva 1 – Gas risparmiato",
+     "n": "Scope 1",
+     "a": 126000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Leve 2 e 3 – Elettricità non più a residual mix",
+     "n": "Scope 2 market-based · 500.000 + 1.500.000 kWh",
+     "a": 2000000,
+     "au": "kWh",
+     "ef": 0.45,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Leva 4 – Gasolio risparmiato",
+     "n": "Scope 1",
+     "a": 8000,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    }
+   ],
+   "atteso": 1173200,
+   "piede": "3.157,8 − 1.173,2 = 1.984,6 t CO2e. In percentuale: 1.173,2 ÷ 3.157,8 = −37,2%. L’obiettivo è −42%.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "43": {
+   "tipo": "calcolo",
+   "titolo": "Mancano 153,1 t: quanto gas bisogna ancora eliminare",
+   "etichette": {
+    "r": "Gas da eliminare",
+    "a": "Emissioni da tagliare",
+    "ef": "Inverso del fattore"
+   },
+   "unita": "Sm³",
+   "totale": false,
+   "righe": [
+    {
+     "l": "Gas naturale",
+     "n": "fattore 2,0 kg CO2e/Sm³ → 1 ÷ 2,0 = 0,5 Sm³ per kg CO2e",
+     "a": 153100,
+     "au": "kg CO2e",
+     "ef": 0.5,
+     "efu": "Sm³/kg CO2e"
+    }
+   ],
+   "atteso": 76550,
+   "piede": "Servono altri 76.550 Sm³ in meno: circa l’8,3% del gas che resta dopo la leva 1 (924.000 Sm³).",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "45": {
+   "tipo": "calcolo",
+   "titolo": "E lo Scope 3? Il contributo delle leve 1, 5 e 6",
+   "etichette": {},
+   "totale": "Riduzione dello Scope 3",
+   "righe": [
+    {
+     "l": "Leva 1 – Filiera a monte del gas risparmiato",
+     "n": "categoria 3",
+     "a": 126000,
+     "au": "Sm³",
+     "ef": 0.33,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Leva 5 – Semola da filiera migliorata",
+     "n": "categoria 1 · fattore: 0,70 − 0,63",
+     "a": 10300000,
+     "au": "kg",
+     "ef": 0.07,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Leva 6 – Consegne europee su ferro",
+     "n": "categoria 9 · 2.000 t × 1.500 km; fattore: 0,10 − 0,028",
+     "a": 3000000,
+     "au": "tkm",
+     "ef": 0.072,
+     "efu": "kg CO2e/tkm"
+    }
+   ],
+   "atteso": 978580,
+   "piede": "Scope 3: da 18.682,7 a 17.704,1 t CO2e, cioè da 0,934 a 0,885 kg CO2e per kg di pasta (−5,2%). L’obiettivo è −25%: la strada è ancora lunga.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "46": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: componi il mix di leve",
+   "righe": [
+    {
+     "l": "Gas naturale risparmiato (Scope 1)",
+     "v": 126000,
+     "u": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Elettricità non più a residual mix (Scope 2 market-based)",
+     "v": 2000000,
+     "u": "kWh",
+     "ef": 0.45,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Gasolio risparmiato (Scope 1)",
+     "v": 8000,
+     "u": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    }
+   ],
+   "piede": "Soluzione con il solo gas: 126.000 + 76.550 = 202.550 Sm³ risparmiati, il 19,3% del consumo 2025.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "54": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: se la produzione cambia",
+   "righe": [
+    {
+     "l": "Produzione annua di pasta",
+     "v": 20000,
+     "u": "t",
+     "ef": 99.23,
+     "efu": "kg CO2e/t"
+    }
+   ],
+   "piede": "Con 22.000 t le emissioni salgono a 2.183.060 kg (2.183,1 t): la distanza dall’obiettivo assoluto passa da 153,1 a 351,6 t CO2e.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "55": {
+   "tipo": "calcolo",
+   "titolo": "Volume e intensità: scomporre la variazione",
+   "etichette": {
+    "r": "Variazione delle emissioni",
+    "a": "Produzione",
+    "ef": "Intensità o sua variazione"
+   },
+   "totale": "Variazione totale rispetto al 2025",
+   "righe": [
+    {
+     "l": "Effetto intensità: le leve",
+     "n": "produzione 2025 × variazione dell’intensità (99,23 − 157,89)",
+     "a": 20000,
+     "au": "t",
+     "ef": -58.66,
+     "efu": "kg CO2e/t"
+    },
+    {
+     "l": "Effetto volume: più pasta prodotta",
+     "n": "2.000 t in più × intensità dopo le leve",
+     "a": 2000,
+     "au": "t",
+     "ef": 99.23,
+     "efu": "kg CO2e/t"
+    }
+   ],
+   "atteso": -974740,
+   "piede": "Da 3.157,8 a 2.183,1 t CO2e: −30,9% in valore assoluto, anche se l’intensità è scesa del 37,2%. La crescita ha assorbito 198,5 t di riduzione.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  }
+ },
+ "m10": {
+  "13": {
+   "tipo": "calcolo",
+   "titolo": "Quanti crediti servono e quanto costano: un esempio",
+   "etichette": {
+    "r": "Costo annuo",
+    "a": "Crediti da ritirare",
+    "ef": "Prezzo illustrativo"
+   },
+   "unita": "€",
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Emissioni fuggitive 2025",
+     "n": "39,3 t CO2e → 40 crediti (1 credito = 1 t CO2e, arrotondato per eccesso)",
+     "a": 40,
+     "au": "crediti",
+     "ef": 20,
+     "efu": "€/credito"
+    }
+   ],
+   "atteso": 800,
+   "piede": "Il prezzo di 20 € per credito è puramente illustrativo: serve solo a mostrare il conto. I prezzi reali cambiano molto con il tipo di progetto e con la qualità, e vanno chiesti al mercato.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; prezzo del credito ipotetico"
+  },
+  "14": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: quanti crediti servirebbero ogni anno",
+   "righe": [
+    {
+     "l": "Gas naturale (dopo il recupero di calore)",
+     "v": 924000,
+     "u": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Gasolio della flotta (dopo le auto elettriche)",
+     "v": 30000,
+     "u": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Gasolio di gruppo elettrogeno e motopompa",
+     "v": 1500,
+     "u": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Benzina della flotta",
+     "v": 6000,
+     "u": "l",
+     "ef": 2.3,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Ricariche di R-410A",
+     "v": 12,
+     "u": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Ricariche di HFC-134a",
+     "v": 8,
+     "u": "kg",
+     "ef": 1530,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "piede": "Lo Scope 2 market-based è pari a zero grazie alle garanzie d’origine: per questo l’elettricità non compare. 1 credito = 1 t CO2e.",
+   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  },
+  "40": {
+   "tipo": "calcolo",
+   "titolo": "Scope 1 di Officine Sannio: cinque sorgenti dirette",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Gas naturale",
+     "n": "riscaldamento e forno di verniciatura · 12 bollette",
+     "a": 42000,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Gasolio – furgoni e autocarro",
+     "n": "combustione mobile · carte carburante",
+     "a": 14000,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Gasolio – carrelli elevatori",
+     "n": "combustione mobile · fatture della cisterna",
+     "a": 2000,
+     "au": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "CO2 del gas di saldatura",
+     "n": "processo · il GWP della CO2 è 1",
+     "a": 2500,
+     "au": "kg",
+     "ef": 1,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Ricarica di R-410A",
+     "n": "fuggitive · GWP dell’IPCC AR6",
+     "a": 3,
+     "au": "kg",
+     "ef": 2256,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 135668,
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "41": {
+   "tipo": "calcolo",
+   "titolo": "Scope 2 location-based: il fattore medio della rete",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Elettricità prelevata dalla rete",
+     "n": "somma di 12 bollette · fattore ISPRA arrotondato",
+     "a": 420000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 98700,
+   "piede": "",
+   "fonte": "Esempio didattico – fattore ISPRA dei consumi elettrici 2023 (234,7 g CO2/kWh) arrotondato"
+  },
+  "42": {
+   "tipo": "calcolo",
+   "titolo": "Scope 2 market-based: senza garanzie vale il residual mix",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Elettricità senza garanzie d’origine",
+     "n": "contratto standard · residual mix arrotondato",
+     "a": 420000,
+     "au": "kWh",
+     "ef": 0.45,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 189000,
+   "piede": "I due valori si riportano entrambi e non si sommano: 98,7 t CO2e (location-based) e 189,0 t CO2e (market-based).",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "43": {
+   "tipo": "calcolo",
+   "titolo": "Scope 3, categoria 1: l’acciaio acquistato",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Acciaio: travi, lamiere, tubolari",
+     "n": "fatture e DDT · fattore: valore didattico",
+     "a": 1200000,
+     "au": "kg",
+     "ef": 2,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 2400000,
+   "piede": "Il fattore di 2,0 kg CO2e per kg di acciaio è un valore didattico: nella pratica si usa il dato del fornitore (EPD) o una banca dati aggiornata.",
+   "fonte": "Esempio didattico – fattore dell’acciaio: valore didattico dichiarato"
+  },
+  "44": {
+   "tipo": "calcolo",
+   "titolo": "Scope 3, categoria 4: il trasporto dell’acciaio",
+   "etichette": {
+    "k": "Distanza"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Dai fornitori allo stabilimento, su gomma",
+     "n": "DDT · distanza media stimata dalle sedi dei fornitori",
+     "a": 1200,
+     "au": "t",
+     "k": 400,
+     "ku": "km",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm"
+    }
+   ],
+   "atteso": 48000,
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "45": {
+   "tipo": "calcolo",
+   "titolo": "Scope 3, categoria 3: la filiera a monte dell’energia",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Gas naturale – filiera a monte",
+     "a": 42000,
+     "au": "Sm³",
+     "ef": 0.33,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Gasolio – filiera a monte",
+     "n": "14.000 + 2.000 litri",
+     "a": 16000,
+     "au": "l",
+     "ef": 0.62,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Elettricità – filiera a monte e perdite di rete",
+     "a": 420000,
+     "au": "kWh",
+     "ef": 0.06,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 48980,
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "46": {
+   "tipo": "calcolo",
+   "titolo": "Scope 3, categorie 5 e 7: rifiuti e pendolarismo",
+   "etichette": {},
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Sfridi e rottami metallici a recupero",
+     "n": "registro dei rifiuti",
+     "a": 90000,
+     "au": "kg",
+     "ef": 0.021,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Rifiuti misti a smaltimento",
+     "n": "registro dei rifiuti",
+     "a": 6000,
+     "au": "kg",
+     "ef": 0.45,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Tragitti casa-lavoro in auto",
+     "n": "35 persone × 220 giorni × 24 km = 184.800 km",
+     "a": 184800,
+     "au": "km",
+     "ef": 0.17,
+     "efu": "kg CO2e/km"
+    }
+   ],
+   "atteso": 36006,
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "47": {
+   "tipo": "simulatore",
+   "titolo": "Prova tu: l’inventario di Officine Sannio in sei righe",
+   "righe": [
+    {
+     "l": "Gas naturale",
+     "v": 42000,
+     "u": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Gasolio (furgoni, autocarro, carrelli)",
+     "v": 16000,
+     "u": "l",
+     "ef": 2.65,
+     "efu": "kg CO2e/l"
+    },
+    {
+     "l": "Elettricità (location-based)",
+     "v": 420000,
+     "u": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Acciaio acquistato",
+     "v": 1200000,
+     "u": "kg",
+     "ef": 2,
+     "efu": "kg CO2e/kg"
+    },
+    {
+     "l": "Trasporto dell’acciaio",
+     "v": 480000,
+     "u": "tkm",
+     "ef": 0.1,
+     "efu": "kg CO2e/tkm"
+    },
+    {
+     "l": "Pendolarismo in auto",
+     "v": 184800,
+     "u": "km",
+     "ef": 0.17,
+     "efu": "kg CO2e/km"
+    }
+   ],
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); acciaio: valore didattico"
+  },
+  "49": {
+   "tipo": "calcolo",
+   "titolo": "Il totale dell’inventario 2025 di Officine Sannio",
+   "etichette": {
+    "r": "Emissioni",
+    "a": "Emissioni (dal foglio)",
+    "ef": "Conversione"
+   },
+   "unita": "t CO2e",
+   "dec": 1,
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Scope 1 – emissioni dirette",
+     "n": "gas, gasolio, CO2 di saldatura, refrigerante",
+     "a": 135668,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Scope 2 – elettricità (location-based)",
+     "n": "420.000 kWh × 0,235",
+     "a": 98700,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    },
+    {
+     "l": "Scope 3 – catena del valore",
+     "n": "acciaio, trasporto, energia a monte, rifiuti, pendolarismo",
+     "a": 2532986,
+     "au": "kg CO2e",
+     "ef": 0.001,
+     "efu": "t/kg"
+    }
+   ],
+   "atteso": 2767.4,
+   "piede": "Con lo Scope 2 market-based (189,0 t) il totale è 2.857,7 t CO2e. Quote sul totale location-based: Scope 1 4,9% · Scope 2 3,6% · Scope 3 91,5%.",
+   "fonte": "Esempio didattico – azienda di fantasia, quantità illustrative"
+  },
+  "51": {
+   "tipo": "calcolo",
+   "titolo": "Gli indicatori: Scope 1+2 per tonnellata di acciaio lavorata",
+   "etichette": {
+    "r": "Intensità",
+    "a": "Emissioni",
+    "ef": "Conversione",
+    "d": "Acciaio lavorato"
+   },
+   "unita": "kg CO2e/t",
+   "dec": 2,
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Scope 1",
+     "a": 135.668,
+     "au": "t CO2e",
+     "ef": 1000,
+     "efu": "kg/t",
+     "d": 1200,
+     "du": "t"
+    },
+    {
+     "l": "Scope 2 (location-based)",
+     "a": 98.7,
+     "au": "t CO2e",
+     "ef": 1000,
+     "efu": "kg/t",
+     "d": 1200,
+     "du": "t"
+    }
+   ],
+   "atteso": 195.31,
+   "piede": "Altri due indicatori: totale per addetto 2.767,4 ÷ 35 = 79,1 t CO2e; totale per tonnellata lavorata 2.767,4 ÷ 1.200 = 2,31 t CO2e.",
+   "fonte": "Esempio didattico – azienda di fantasia, quantità illustrative"
+  },
+  "52": {
+   "tipo": "calcolo",
+   "titolo": "Leva 1: un impianto fotovoltaico sul tetto del capannone",
+   "etichette": {
+    "r": "Riduzione",
+    "a": "Dato risparmiato"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Scope 2 location-based",
+     "n": "minore prelievo dalla rete",
+     "a": 180000,
+     "au": "kWh",
+     "ef": 0.235,
+     "efu": "kg CO2e/kWh"
+    },
+    {
+     "l": "Scope 3 – filiera a monte dell’elettricità",
+     "n": "categoria 3: stessi chilowattora",
+     "a": 180000,
+     "au": "kWh",
+     "ef": 0.06,
+     "efu": "kg CO2e/kWh"
+    }
+   ],
+   "atteso": 53100,
+   "piede": "Con il metodo market-based la riduzione di Scope 2 è maggiore: 180.000 × 0,45 = 81.000 kg CO2e (81,0 t).",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  },
+  "53": {
+   "tipo": "calcolo",
+   "titolo": "Leva 2: acciaio a minori emissioni, con il dato del fornitore",
+   "etichette": {
+    "r": "Riduzione",
+    "a": "Quantità interessata",
+    "ef": "Differenza tra i fattori"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Acciaio con dato specifico del fornitore",
+     "n": "50% dei volumi · 2,0 − 1,2 = 0,8 kg CO2e/kg",
+     "a": 600000,
+     "au": "kg",
+     "ef": 0.8,
+     "efu": "kg CO2e/kg"
+    }
+   ],
+   "atteso": 480000,
+   "piede": "",
+   "fonte": "Esempio didattico – fattori dell’acciaio: valori didattici dichiarati"
+  },
+  "54": {
+   "tipo": "calcolo",
+   "titolo": "Leva 3: meno gas per il forno e per il riscaldamento",
+   "etichette": {
+    "r": "Riduzione",
+    "a": "Dato risparmiato"
+   },
+   "totale": "Totale",
+   "righe": [
+    {
+     "l": "Gas naturale – combustione",
+     "n": "Scope 1",
+     "a": 6300,
+     "au": "Sm³",
+     "ef": 2,
+     "efu": "kg CO2e/Sm³"
+    },
+    {
+     "l": "Gas naturale – filiera a monte",
+     "n": "Scope 3, categoria 3",
+     "a": 6300,
+     "au": "Sm³",
+     "ef": 0.33,
+     "efu": "kg CO2e/Sm³"
+    }
+   ],
+   "atteso": 14679,
+   "piede": "",
+   "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+  }
+ }
+}

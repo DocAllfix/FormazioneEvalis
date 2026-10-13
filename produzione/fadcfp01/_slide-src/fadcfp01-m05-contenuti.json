@@ -1,0 +1,1014 @@
+[
+ {
+  "id": "fadcfp01_m05_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 5",
+  "titolo": "Che cosa rientra davvero nello Scope 2",
+  "corsoLabel": "Carbon Footprint · ISO 14064-1 · ISO 14067",
+  "eyebrow": "Modulo 5",
+  "sottotitolo": "Confini della categoria, lettura corretta delle bollette, formula di calcolo, differenza tra location-based e market-based, casi pratici che generano errori ricorrenti nell’inventario.",
+  "agenda": [
+   "Dall’impianto esterno al contatore aziendale",
+   "La bolletta utile allo Scope 2",
+   "Quattro scelte corrette sulle bollette 2025",
+   "Dal trimestre al totale annuo",
+   "Lo Scope 2 location-based di Terrafelix"
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s002",
+  "layout": "flusso",
+  "kicker": "Mappa fisica",
+  "titolo": "Dall’impianto esterno al contatore aziendale",
+  "intro": "L’emissione nasce fuori sito, ma il dato utile nasce al contatore: questa sequenza separa l’energia acquistata e consumata da ciò che appartiene ad altre voci dell’inventario.",
+  "passi": [
+   {
+    "h": "Produzione esterna",
+    "d": "Centrale, impianto, rete calore, vapore o raffrescamento"
+   },
+   {
+    "h": "Rete di fornitura",
+    "d": "Trasporto e mescolamento dei flussi energetici"
+   },
+   {
+    "h": "Contatore aziendale",
+    "d": "Qui trovi il dato di attività"
+   },
+   {
+    "h": "Usi interni",
+    "d": "Processi, motori, uffici, ricariche, ventilazione"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s003",
+  "layout": "confronto",
+  "kicker": "Dati utili",
+  "titolo": "La bolletta utile allo Scope 2",
+  "intro": "Per il calcolo servono pochi elementi ben scelti: il rischio più comune è confondere dati di fatturazione, potenza o rettifiche economiche con il vero dato di attività.",
+  "a": {
+   "h": "Serve al calcolo",
+   "sub": "",
+   "punti": [
+    {
+     "d": "POD come controllo di completezza"
+    },
+    {
+     "d": "Periodo di consumo, non data fattura"
+    },
+    {
+     "d": "Energia attiva espressa in kWh"
+    },
+    {
+     "d": "Letture effettive e conguagli ricondotti all’anno"
+    }
+   ]
+  },
+  "b": {
+   "h": "Non entra nel calcolo",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Energia reattiva"
+    },
+    {
+     "d": "Potenza impegnata o picco prelevato"
+    },
+    {
+     "d": "Importi, imposte, oneri contrattuali"
+    },
+    {
+     "d": "Fasce orarie lette separatamente"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m05_s004",
+  "layout": "tabella",
+  "kicker": "Caso Terrafelix",
+  "titolo": "Quattro scelte corrette sulle bollette 2025",
+  "cols": [
+   "Voce",
+   "Dato",
+   "Trattamento"
+  ],
+  "righe": [
+   [
+    "Gennaio",
+    "F1 128.000 + F2 71.000 + F3 86.000",
+    "Sommare i kWh di energia attiva"
+   ],
+   [
+    "Dicembre",
+    "302.000 kWh da lettura reale",
+    "Sostituire la stima iniziale"
+   ],
+   [
+    "Marzo",
+    "Conguaglio 18.400 kWh riferito al 2024",
+    "Escludere dal dato 2025"
+   ],
+   [
+    "Energia reattiva",
+    "41.000 unità in bolletta",
+    "Ignorare ai fini Scope 2"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s005",
+  "layout": "calcolo",
+  "kicker": "Dato di attività",
+  "titolo": "Dal trimestre al totale annuo",
+  "intro": "Dopo la pulizia delle bollette, il lavoro diventa meccanico: sommare i dodici mesi, verificare i quattro trimestri e convertire in MWh solo se coerente con il fattore successivo.",
+  "unita": "MWh",
+  "righe": [
+   {
+    "l": "1° trimestre",
+    "n": "gennaio 285.000 + febbraio 270.000 + marzo 280.000",
+    "a": 835000,
+    "au": "kWh",
+    "ef": 0.001,
+    "efu": "MWh/kWh"
+   },
+   {
+    "l": "2° trimestre",
+    "n": "aprile 262.000 + maggio 258.000 + giugno 250.000",
+    "a": 770000,
+    "au": "kWh",
+    "ef": 0.001,
+    "efu": "MWh/kWh"
+   },
+   {
+    "l": "3° trimestre",
+    "n": "luglio 255.000 + agosto 190.000 + settembre 268.000",
+    "a": 713000,
+    "au": "kWh",
+    "ef": 0.001,
+    "efu": "MWh/kWh"
+   },
+   {
+    "l": "4° trimestre",
+    "n": "ottobre 285.000 + novembre 295.000 + dicembre 302.000",
+    "a": 882000,
+    "au": "kWh",
+    "ef": 0.001,
+    "efu": "MWh/kWh"
+   }
+  ],
+  "etichette": {
+   "r": "Energia",
+   "a": "Energia prelevata",
+   "ef": "Fattore di conversione"
+  },
+  "dec": null,
+  "totale": "Totale 2025",
+  "_atteso": 3200,
+  "piede": "3.200 MWh = 3.200.000 kWh: è il dato di attività dello Scope 2 di Terrafelix.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m05_s006",
+  "layout": "calcolo",
+  "kicker": "Metodo 1",
+  "titolo": "Lo Scope 2 location-based di Terrafelix",
+  "intro": "Un solo prelievo annuo, un solo fattore medio di rete: il metodo descrive il legame fisico con il sistema elettrico, non il contratto commerciale sottoscritto.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Elettricità prelevata dalla rete",
+    "n": "dato: somma delle 12 bollette 2025 · fattore: ISPRA, consumi elettrici nazionali 2023, 234,7 g CO2/kWh, arrotondato",
+    "a": 3200000,
+    "au": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": false,
+  "_atteso": 752000,
+  "piede": "Il contratto di fornitura non conta: con o senza «energia verde», il risultato location-based è lo stesso.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattore ISPRA, Rapporto 413/2025 (valore arrotondato)"
+ },
+ {
+  "id": "fadcfp01_m05_s007",
+  "layout": "linee",
+  "kicker": "Fattore di rete",
+  "titolo": "La rete cambia, cambia anche il risultato",
+  "intro": "A parità di 3.200.000 kWh, la discesa del fattore di rete sposta il location-based da 937,6 a 636,8 tonnellate anche senza alcuna azione interna.",
+  "unita": "g CO2/kWh",
+  "periodi": [
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "serie": [
+   {
+    "nome": "Consumi elettrici Italia",
+    "v": [
+     293,
+     234.7,
+     198.9
+    ]
+   }
+  ],
+  "fonte": "ISPRA, Rapporto 413/2025"
+ },
+ {
+  "id": "fadcfp01_m05_s008",
+  "layout": "simulatore",
+  "kicker": "Prova pratica",
+  "titolo": "Tre sedi, stesso criterio location-based",
+  "intro": "Quando tutte le sedi consumano sulla stessa rete nazionale, cambia il volume dei kWh, non il fattore applicato. Il simulatore rende immediato l’effetto di ogni riduzione di consumo.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Officina",
+    "v": 180000,
+    "u": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   },
+   {
+    "l": "Magazzino",
+    "v": 60000,
+    "u": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   },
+   {
+    "l": "Uffici",
+    "v": 45000,
+    "u": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "piede": "Sedi in Paesi diversi userebbero ciascuna il fattore medio della propria rete nazionale.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m05_s009",
+  "layout": "flusso",
+  "kicker": "Metodo 2",
+  "titolo": "Le quattro scelte del market-based",
+  "intro": "Nel market-based contano i documenti, non gli elettroni: la gerarchia si applica ai chilowattora coperti da prove valide nell’anno di inventario.",
+  "passi": [
+   {
+    "h": "1. Garanzie d’origine",
+    "d": "Annullate a favore dell’azienda, fattore zero"
+   },
+   {
+    "h": "2. PPA con attributi",
+    "d": "Accordo e prove riferite ai kWh coperti"
+   },
+   {
+    "h": "3. Fattore del fornitore",
+    "d": "Usabile solo se dichiarato e documentato"
+   },
+   {
+    "h": "4. Residual mix",
+    "d": "Per i kWh privi di strumenti validi"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s010",
+  "layout": "calcolo",
+  "kicker": "Metodo market-based",
+  "titolo": "Residual mix alto, impatto immediato sul risultato",
+  "intro": "Nel market-based gli attributi rinnovabili documentati vengono assegnati in modo esclusivo. La quota scoperta non può restare sulla media di rete: prende il residual mix, e per questo il totale può cambiare in modo netto.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "kWh coperti da Garanzie d’Origine",
+    "n": "attestato di annullamento di 500 GO",
+    "a": 500000,
+    "au": "kWh",
+    "ef": 0,
+    "efu": "kg CO2e/kWh"
+   },
+   {
+    "l": "kWh con fattore dichiarato dal fornitore",
+    "n": "dichiarazione del venditore · valore didattico",
+    "a": 300000,
+    "au": "kWh",
+    "ef": 0.1,
+    "efu": "kg CO2e/kWh"
+   },
+   {
+    "l": "kWh senza alcuno strumento",
+    "n": "residual mix · valore arrotondato",
+    "a": 200000,
+    "au": "kWh",
+    "ef": 0.45,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Scope 2 market-based",
+  "_atteso": 120000,
+  "piede": "Per confronto, il location-based della stessa azienda è 1.000.000 kWh × 0,235 = 235.000 kg, cioè 235 t CO2e.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); il fattore del fornitore è un valore didattico"
+ },
+ {
+  "id": "fadcfp01_m05_s011",
+  "layout": "flusso",
+  "kicker": "Metodo market-based",
+  "titolo": "Le quattro verifiche operative del market-based",
+  "intro": "Il calcolo parte sempre dai chilowattora misurati, ma si regge sulla qualità delle prove. Il punto decisivo non è il nome commerciale dell'offerta: è la riconciliazione tra volumi, documenti e anno di inventario.",
+  "passi": [
+   {
+    "h": "Dato di attività",
+    "d": "Prelievi effettivi dell'anno, prima di ogni attribuzione"
+   },
+   {
+    "h": "Copertura contrattuale",
+    "d": "Blocchi con GO, fattore venditore, PPA, quote scoperte"
+   },
+   {
+    "h": "Coerenza temporale",
+    "d": "Prove riferite proprio all'anno rendicontato"
+   },
+   {
+    "h": "Riconciliazione finale",
+    "d": "Contatore e documenti devono combaciare senza vuoti"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s012",
+  "layout": "calcolo",
+  "kicker": "Caso Terrafelix",
+  "titolo": "Quota coperta e quota scoperta di Terrafelix",
+  "intro": "Prima si ricostruisce la copertura effettiva dell'anno, poi si applicano i fattori ai blocchi omogenei. Il risultato dipende da due controlli chiave: completezza dei volumi e prova documentale dell'annullamento.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Elettricità con Garanzie d’Origine",
+    "n": "attestato di annullamento delle GO · strumento contrattuale",
+    "a": 1200000,
+    "au": "kWh",
+    "ef": 0,
+    "efu": "kg CO2e/kWh"
+   },
+   {
+    "l": "Elettricità senza garanzie",
+    "n": "residual mix · valore arrotondato, ordine di grandezza AIB 2024",
+    "a": 2000000,
+    "au": "kWh",
+    "ef": 0.45,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Scope 2 market-based",
+  "_atteso": 900000,
+  "piede": "Location-based, per gli stessi kWh: 752 t CO2e. Market-based: 900 t CO2e, cioè 148 t in più.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m05_s013",
+  "layout": "calcolo",
+  "kicker": "Lettura del risultato",
+  "titolo": "Perché il market-based può salire",
+  "intro": "Il fattore zero funziona sulla quota coperta, ma la parte senza strumenti contrattuali resta esposta al residual mix. Per capire il senso del dato, il confronto utile è anche con lo scenario senza alcuna copertura.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Elettricità senza garanzie",
+    "n": "tutto il prelievo 2025 · residual mix, valore arrotondato",
+    "a": 3200000,
+    "au": "kWh",
+    "ef": 0.45,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": false,
+  "_atteso": 1440000,
+  "piede": "Le 1.200 garanzie acquistate hanno quindi ridotto il market-based di 540 t: da 1.440 a 900 t CO2e.",
+  "fonte": "Caso studio Pastificio Terrafelix – scenario illustrativo"
+ },
+ {
+  "id": "fadcfp01_m05_s014",
+  "layout": "tabella",
+  "kicker": "Scenari di copertura",
+  "titolo": "La copertura che cambia il market-based",
+  "cols": [
+   "Voce",
+   "Dato"
+  ],
+  "righe": [
+   [
+    "Nessuna garanzia",
+    "v 752, 1440"
+   ],
+   [
+    "25% con GO",
+    "v 752, 1080"
+   ],
+   [
+    "37,5% con GO",
+    "v 752, 900"
+   ],
+   [
+    "50% con GO",
+    "v 752, 720"
+   ],
+   [
+    "75% con GO",
+    "v 752, 360"
+   ],
+   [
+    "100% con GO",
+    "v 752, 0"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s015",
+  "layout": "confronto",
+  "kicker": "Doppia rendicontazione",
+  "titolo": "Due numeri distinti, stesso prelievo elettrico",
+  "intro": "I due risultati descrivono lo stesso consumo da prospettive diverse. Per questo vanno sempre etichettati, riportati entrambi e mai sommati: la buona rendicontazione non sceglie il numero più comodo, chiarisce il metodo.",
+  "a": {
+   "h": "Location-based",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Intensità media della rete"
+    },
+    {
+     "d": "Riferimento stabile per confronti"
+    },
+    {
+     "d": "Nella ISO resta il dato base"
+    },
+    {
+     "d": "Non cambia con il contratto"
+    }
+   ]
+  },
+  "b": {
+   "h": "Market-based",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Attributi contrattuali documentati"
+    },
+    {
+     "d": "Misura l'effetto delle coperture"
+    },
+    {
+     "d": "Nel GHG Protocol va affiancato"
+    },
+    {
+     "d": "Dipende da prove, volumi e anno"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m05_s016",
+  "layout": "split",
+  "kicker": "Scrittura del dato",
+  "titolo": "Scrivere bene i dati, evitare quattro errori",
+  "lead": "Il numero corretto diventa utile solo se è presentato con etichetta chiara e con totali coerenti. Gli errori più frequenti non sono aritmetici: nascono da formule ibride, prove mancanti e criteri cambiati per convenienza.",
+  "punti": [
+   {
+    "h": "Etichetta completa",
+    "d": "Scope 2 location-based e market-based separati"
+   },
+   {
+    "h": "Totali coerenti",
+    "d": "Cambia solo lo Scope 2, non il resto"
+   },
+   {
+    "h": "Mai numeri ibridi",
+    "d": "Gli scoperti prendono residual mix, non media rete"
+   },
+   {
+    "h": "Zero solo con prova",
+    "d": "Senza annullamento documentato, niente fattore zero"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s017",
+  "layout": "ciambella",
+  "kicker": "Claim e comunicazione",
+  "titolo": "Origini dell'elettricità e claim difendibile",
+  "intro": "Per dichiarare quanta elettricità è rinnovabile in modo documentato bisogna ricostruire l'intero consumo. Nel caso Terrafelix, la somma di fotovoltaico autoconsumato e quota coperta da GO porta al quarantasette virgola quattro per cento.",
+  "unita": "kWh",
+  "totale": {
+   "n": "3800000",
+   "eti": "kWh consumati nel 2025"
+  },
+  "voci": [
+   {
+    "l": "Rete, senza garanzie",
+    "v": 2000000
+   },
+   {
+    "l": "Rete, con Garanzie d’Origine",
+    "v": 1200000
+   },
+   {
+    "l": "Fotovoltaico autoconsumato",
+    "v": 600000
+   }
+  ],
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m05_s018",
+  "layout": "organigramma",
+  "kicker": "Fotovoltaico e confini",
+  "titolo": "Fotovoltaico: tre flussi, tre regole",
+  "intro": "Produzione interna, autoconsumo, immissione in rete e attributi ambientali non vanno mescolati. Lo Scope 2 continua a guardare solo all'energia acquistata e consumata: il resto si legge come informazione distinta, con regole proprie.",
+  "radice": {
+   "h": "Fotovoltaico Terrafelix",
+   "d": "650.000 kWh prodotti nel 2025; impianto da 450 kWp"
+  },
+  "rami": [
+   {
+    "h": "Autoconsumo",
+    "d": "600.000 kWh nello stabilimento",
+    "voci": [
+     "Non è energia acquistata",
+     "Fuori dallo Scope 2",
+     "Zero emissioni operative d'uso"
+    ]
+   },
+   {
+    "h": "Immissione in rete",
+    "d": "50.000 kWh ceduti",
+    "voci": [
+     "Non si sottraggono dal prelievo",
+     "Non riducono il dato di attività",
+     "Sono uno scambio, non un acquisto"
+    ]
+   },
+   {
+    "h": "Garanzie d'origine",
+    "d": "Attributi della produzione propria",
+    "voci": [
+     "Se restano all'azienda, claim rinnovabile",
+     "Se cedute, l'attributo passa a terzi",
+     "Mai doppio conteggio degli attributi"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s019",
+  "layout": "tabella",
+  "kicker": "Fotovoltaico e perimetro",
+  "titolo": "Tre origini, tre trattamenti nel calcolo",
+  "cols": [
+   "Origine dell'elettricità",
+   "kWh 2025",
+   "Trattamento emissivo"
+  ],
+  "righe": [
+   [
+    "Rete senza Garanzie d'Origine",
+    "2.000.000",
+    "Residual mix nel market-based"
+   ],
+   [
+    "Rete con Garanzie d'Origine",
+    "1.200.000",
+    "Fattore zero nel market-based"
+   ],
+   [
+    "Fotovoltaico autoconsumato",
+    "600.000",
+    "Fuori dallo Scope 2"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s020",
+  "layout": "cards",
+  "kicker": "Errore frequente",
+  "titolo": "Il beneficio del fotovoltaico entra già nel totale",
+  "intro": "Gli errori nascono quando l'impianto viene trattato come un credito extra. La verifica professionale più chiara è affiancare lo scenario con impianto a quello senza impianto e leggere la differenza.",
+  "cards": [
+   {
+    "h": "Saldo con l'energia immessa",
+    "d": "I 50.000 kWh ceduti non cancellano prelievi in altri momenti"
+   },
+   {
+    "h": "Autoconsumo sommato alla rete",
+    "d": "Così lo Scope 2 si gonfia fino al consumo totale"
+   },
+   {
+    "h": "Emissioni evitate sottratte a parte",
+    "d": "Le 141 tonnellate sono già nel minor prelievo"
+   },
+   {
+    "h": "Prova corretta",
+    "d": "Con impianto 752 t, senza 893 t, beneficio 141 t"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s021",
+  "layout": "definizione",
+  "kicker": "Altri vettori energetici",
+  "titolo": "Calore, vapore e raffrescamento sono Scope 2",
+  "eyebrow": "",
+  "definizione": "Se acquisti calore, vapore o raffrescamento già generati da un gestore esterno, sei nello Scope 2; se compri il combustibile e lo bruci in impianti che controlli, resti nello Scope 1.",
+  "punti": []
+ },
+ {
+  "id": "fadcfp01_m05_s022",
+  "layout": "calcolo",
+  "kicker": "Esempio svolto",
+  "titolo": "Sul vapore l'errore nasce dall'unità",
+  "intro": "L'esempio più istruttivo è quello fatturato in gigajoule: prima converti in chilowattora, poi applichi il fattore del fornitore. La sequenza logica resta la stessa anche nel teleriscaldamento.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Vapore acquistato",
+    "n": "fatture annuali del fornitore · fattore del calore: valore didattico",
+    "a": 1000,
+    "au": "GJ",
+    "k": 277.8,
+    "ku": "kWh/GJ",
+    "ef": 0.2,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {
+   "k": "Conversione in kWh"
+  },
+  "dec": null,
+  "totale": false,
+  "_atteso": 55560,
+  "fonte": "Esempio didattico – il fattore del calore (0,20 kg CO2e/kWh) è un valore didattico"
+ },
+ {
+  "id": "fadcfp01_m05_s023",
+  "layout": "calcolo",
+  "kicker": "Stima documentata",
+  "titolo": "Stimare il fattore da combustibile e rendimento",
+  "intro": "Se il gestore non comunica il fattore, la stima deve restare tracciabile: ipotesi sul combustibile, rendimento dichiarato, conversione in fattore equivalente e distinzione esplicita tra dato reale e valore stimato.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Calore acquistato",
+    "n": "800.000 kWh ÷ 8,82 = 90.703 Sm³ di gas bruciati dal fornitore · fattore del gas: valore arrotondato",
+    "a": 800000,
+    "au": "kWh",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³",
+    "d": 8.82,
+    "du": "kWh/Sm³"
+   }
+  ],
+  "etichette": {
+   "d": "Calore utile per Sm³"
+  },
+  "dec": null,
+  "totale": false,
+  "_atteso": 181405.9,
+  "piede": "Fattore equivalente: 2,0 ÷ 8,82 = 0,227 kg CO2e per kWh di calore. Il rendimento del 90% è un’ipotesi didattica.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); PCI del gas naturale: ISPRA, parametri standard nazionali"
+ },
+ {
+  "id": "fadcfp01_m05_s024",
+  "layout": "ciclo",
+  "kicker": "Veicoli elettrici",
+  "titolo": "Quattro casi di ricarica, quattro perimetri",
+  "intro": "Per classificare bene le emissioni non basta sapere che il veicolo è elettrico. Conta dove passa l'energia e chi la acquista davvero, così eviti omissioni e doppio conteggio.",
+  "ciclo": false,
+  "centro": "Ricariche EV",
+  "nodi": [
+   {
+    "h": "Veicolo aziendale in sede",
+    "d": "Già nella bolletta aziendale, non si aggiunge"
+   },
+   {
+    "h": "Veicolo aziendale fuori sede",
+    "d": "kWh esterni da raccogliere e includere"
+   },
+   {
+    "h": "Auto del dipendente in sede",
+    "d": "Energia aziendale, da trattare con coerenza"
+   },
+   {
+    "h": "Auto del dipendente fuori sede",
+    "d": "Non è energia acquistata dall'azienda"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s025",
+  "layout": "calcolo",
+  "kicker": "Stima da percorrenza",
+  "titolo": "Dai chilometri ai chilogrammi di CO2e",
+  "intro": "Quando mancano i chilowattora fatturati, la stima passa dalla percorrenza: prima converti i chilometri in consumo elettrico, poi scegli il fattore coerente con il metodo applicato.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Auto elettrica del commerciale",
+    "n": "km dal contachilometri · consumo medio: valore didattico · fattore di rete arrotondato",
+    "a": 15000,
+    "au": "km",
+    "k": 0.18,
+    "ku": "kWh/km",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {
+   "k": "Consumo dell’auto"
+  },
+  "dec": null,
+  "totale": "Scope 2 location-based",
+  "_atteso": 634.5,
+  "piede": "Passaggio intermedio: 15.000 km × 0,18 kWh/km = 2.700 kWh. Market-based senza garanzie: 2.700 × 0,45 = 1.215 kg CO2e.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); consumo di 0,18 kWh/km: valore didattico"
+ },
+ {
+  "id": "fadcfp01_m05_s026",
+  "layout": "numeri",
+  "kicker": "Contatori interni",
+  "titolo": "Tre numeri che smascherano il doppio conteggio",
+  "intro": "Un sottocontatore interno è prezioso per ripartire i consumi, ma non rappresenta nuova energia acquistata. Se lo sommi al prelievo esterno, alteri totale, indicatori di reparto e confronto annuale.",
+  "numeri": [
+   {
+    "n": "3.200.000 kWh",
+    "h": "prelievo esterno da contabilizzare",
+    "d": ""
+   },
+   {
+    "n": "96.000 kWh",
+    "h": "carrelli elettrici già inclusi nel totale",
+    "d": ""
+   },
+   {
+    "n": "22.560 kg CO2e",
+    "h": "errore aggiunto col fattore location-based",
+    "d": ""
+   },
+   {
+    "n": "circa 3%",
+    "h": "sovrastima dello Scope 2 elettrico",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s027",
+  "layout": "cards",
+  "kicker": "Casi di confine",
+  "titolo": "Sei casi di confine da non confondere con lo Scope 2",
+  "intro": "Lo Scope 2 richiede due condizioni insieme: energia acquistata e consumata dall'organizzazione. Se manca l'acquisto o manca il consumo, la voce cambia perimetro e va ricollocata.",
+  "cards": [
+   {
+    "h": "Perdite di rete e filiera a monte",
+    "d": "Scope 3, attività legate a combustibili ed energia"
+   },
+   {
+    "h": "Combustibili bruciati in azienda",
+    "d": "Scope 1: la combustione è in impianti propri"
+   },
+   {
+    "h": "Elettricità autoprodotta e autoconsumata",
+    "d": "Manca l'acquisto: si riporta a parte"
+   },
+   {
+    "h": "Energia acquistata e rivenduta",
+    "d": "Manca il consumo: si scorpora e si documenta"
+   },
+   {
+    "h": "Uffici in affitto, consumi nelle spese",
+    "d": "La quota dell'ufficio resta Scope 2, spesso stimata"
+   },
+   {
+    "h": "Lavoro da casa dei dipendenti",
+    "d": "Energia acquistata dal dipendente: Scope 3"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s028",
+  "layout": "calcolo",
+  "kicker": "Casi limite",
+  "titolo": "Filiera a monte: stesso kWh, altro Scope",
+  "intro": "Due domande guidano anche i casi difficili: chi acquista l’energia e chi la consuma davvero. Da qui dipende il confine corretto tra Scope 2 e Scope 3.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Elettricità – filiera a monte e perdite di rete",
+    "n": "stesso dato di attività dello Scope 2 · fattore arrotondato",
+    "a": 3200000,
+    "au": "kWh",
+    "ef": 0.06,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": false,
+  "_atteso": 192000,
+  "piede": "Questa voce si riporta nello Scope 3, categoria 3 «attività legate a combustibili ed energia» (categoria 4 della ISO 14064-1).",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m05_s029",
+  "layout": "confronto",
+  "kicker": "Indicatori elettrici",
+  "titolo": "Prelievo e consumo raccontano cose diverse",
+  "intro": "Gli stessi volumi produttivi generano due indicatori elettrici diversi: uno misura dipendenza dalla rete, l’altro efficienza reale del sito. Vanno letti insieme, non messi in competizione.",
+  "a": {
+   "h": "Prelievo dalla rete",
+   "sub": "",
+   "punti": [
+    {
+     "d": "3,2 GWh acquistati dalla rete"
+    },
+    {
+     "d": "160 kWh per tonnellata prodotta"
+    },
+    {
+     "d": "Indicatore chiave per lo Scope 2"
+    }
+   ]
+  },
+  "b": {
+   "h": "Consumo totale del sito",
+   "sub": "",
+   "punti": [
+    {
+     "d": "3,8 GWh consumati complessivamente"
+    },
+    {
+     "d": "190 kWh per tonnellata prodotta"
+    },
+    {
+     "d": "Include 600 MWh fotovoltaici autoconsumati"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m05_s030",
+  "layout": "tabella",
+  "kicker": "Leve di riduzione",
+  "titolo": "Le quattro leve di riduzione dello Scope 2",
+  "cols": [
+   "Leva",
+   "Effetto sul prelievo",
+   "Location-based",
+   "Market-based"
+  ],
+  "righe": [
+   [
+    "Efficienza",
+    "Prelievo -10%",
+    "676,8 t",
+    "756 t"
+   ],
+   [
+    "Più fotovoltaico autoconsumato",
+    "-500.000 kWh rete",
+    "-117,5 t",
+    "-225 t"
+   ],
+   [
+    "Copertura totale con GO",
+    "kWh invariati",
+    "752 t",
+    "0 t"
+   ],
+   [
+    "PPA rinnovabile",
+    "kWh invariati",
+    "non cambia",
+    "beneficio contrattuale"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s031",
+  "layout": "organigramma",
+  "kicker": "Governare l’inventario",
+  "titolo": "Il cruscotto che collega numeri e decisioni",
+  "intro": "Il valore dello Scope 2 cresce quando i numeri diventano lettura operativa. Un cruscotto essenziale aiuta funzioni diverse a vedere la stessa realtà con domande diverse.",
+  "radice": {
+   "h": "Cruscotto mensile o trimestrale",
+   "d": "Anticipa il risultato prima della chiusura annuale."
+  },
+  "rami": [
+   {
+    "h": "Stabilimento",
+    "d": "Legge efficienza e prestazioni operative.",
+    "voci": [
+     "kWh consumati totali",
+     "kWh per tonnellata"
+    ]
+   },
+   {
+    "h": "Acquisti e reporting",
+    "d": "Misura rete residua e copertura verde.",
+    "voci": [
+     "kWh prelevati dalla rete",
+     "Quota coperta da GO"
+    ]
+   },
+   {
+    "h": "Direzione",
+    "d": "Confronta impatti e priorità d’intervento.",
+    "voci": [
+     "Produzione fisica del periodo",
+     "kg CO2e/t LB e MB"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s032",
+  "layout": "evidenza",
+  "kicker": "Formulario minimo",
+  "titolo": "Quattro righe del formulario Scope 2",
+  "eyebrow": "",
+  "testo": "La struttura è quasi sempre la stessa: dato di attività per fattore di emissione. L’errore non sta nella formula, ma nel dato, nel fattore o nella collocazione sbagliata.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m05_s033",
+  "layout": "flusso",
+  "kicker": "Procedura operativa",
+  "titolo": "Lo Scope 2 in sei passi",
+  "intro": "Una sequenza ordinata riduce errori, rende il calcolo difendibile e migliora la qualità del dato. Il punto non è solo fare il conto, ma chiuderlo con controlli coerenti.",
+  "passi": [
+   {
+    "h": "Perimetro",
+    "d": "Elenca punti di prelievo e altri vettori"
+   },
+   {
+    "h": "Anno corretto",
+    "d": "Ricostruisci dodici mesi di competenza"
+   },
+   {
+    "h": "Location-based",
+    "d": "Moltiplica i kWh per il fattore rete"
+   },
+   {
+    "h": "Market-based",
+    "d": "Riconcilia blocchi coperti e scoperti"
+   },
+   {
+    "h": "Revisione",
+    "d": "Cerca doppi conteggi e falsi Scope 2"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m05_s034",
+  "layout": "chiusura",
+  "kicker": "Da portare via",
+  "titolo": "Lo Scope 2 senza errori ricorrenti",
+  "modNum": "05",
+  "punti": [
+   {
+    "h": "Il numero giusto in bolletta",
+    "d": "chilowattora di energia attiva, nei dodici mesi giusti"
+   },
+   {
+    "h": "Due metodi, due risultati",
+    "d": "752 t location-based e 900 t market-based per Terrafelix, mai sommati"
+   },
+   {
+    "h": "Fattore zero solo con prova",
+    "d": "garanzie d'origine su volumi documentati; il resto prende il residual mix"
+   },
+   {
+    "h": "Fotovoltaico a parte",
+    "d": "l'autoconsumo non è Scope 2, l'immissione non si sottrae"
+   },
+   {
+    "h": "Niente doppi conteggi",
+    "d": "contatori interni e ricariche in sede sono già nel prelievo"
+   },
+   {
+    "h": "Confini netti",
+    "d": "perdite di rete, filiera a monte e lavoro da casa sono Scope 3"
+   }
+  ],
+  "prossimo": {
+   "modulo": "06",
+   "titolo": "Calcolare le emissioni della catena del valore (Scope 3)"
+  }
+ }
+]

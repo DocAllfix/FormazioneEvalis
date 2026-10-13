@@ -1,0 +1,580 @@
+# UNITÀ 5 — Calcolare le emissioni da energia acquistata (Scope 2) (2 ore e 30)
+Elettricità, calore e vapore comprati: il doppio calcolo location-based e market-based spiegato con i numeri.
+Obiettivi di apprendimento:
+- Riconoscere che cosa rientra nello Scope 2 (categoria 2 della ISO 14064-1) e che cosa invece appartiene allo Scope 1 o allo Scope 3
+- Ricavare dalle bollette il dato di attività corretto: i kWh di energia attiva prelevati dalla rete nell’anno
+- Calcolare lo Scope 2 con il metodo location-based, scegliendo e citando il fattore medio della rete
+- Calcolare lo Scope 2 con il metodo market-based, usando Garanzie d’Origine, contratti e residual mix, e spiegare perché i due risultati sono diversi
+- Trattare correttamente fotovoltaico, calore e vapore acquistati, veicoli elettrici, perdite di rete e sedi in affitto
+- Presentare la doppia rendicontazione e leggere l’effetto delle leve di riduzione sui due metodi
+
+## SEZIONE 1 — Che cos’è lo Scope 2
+### SCHERMATA 1 — Che cos’è lo Scope 2 [section]
+Nell’unità 4 abbiamo contato ciò che l’azienda brucia o disperde direttamente: per il Pastificio Terrafelix 2.257,8 t CO2e di Scope 1. Ora contiamo l’energia che l’azienda compra già pronta: qualcun altro ha emesso per produrla, ma è l’azienda a consumarla.
+- Energia prodotta altrove e consumata in azienda
+- Elettricità, calore, vapore, raffrescamento
+- Categoria 2 della ISO 14064-1
+- Un consumo, due modi di contarlo
+### SCHERMATA 2 — Energia comprata, emissioni di qualcun altro [text · GHG Protocol · Scope 2 — ISO 14064-1 · categoria 2]
+Lo Scope 2 raccoglie le emissioni indirette dovute all’energia che l’organizzazione acquista e consuma.
+- Quattro vettori energetici: Elettricità, calore (per esempio teleriscaldamento), vapore e raffrescamento forniti da terzi.
+- Perché «indirette»: Il camino è quello della centrale, che non appartiene all’azienda: per chi produce l’energia sono emissioni dirette, per chi la consuma sono indirette.
+- Stesso oggetto, due nomi: Scope 2 nel GHG Protocol; categoria 2 «emissioni indirette da energia importata» nella ISO 14064-1.
+- La formula non cambia: Emissioni = kWh consumati × fattore di emissione. La difficoltà è scegliere il fattore giusto.
+- Che cosa resta fuori: I combustibili bruciati in azienda (Scope 1) e la filiera a monte dell’energia con le perdite di rete (Scope 3).
+Riquadro «Dove eravamo»: Unità 4: Scope 1 di Terrafelix = 2.257,8 t CO2e. In questa unità aggiungiamo lo Scope 2: 752 t oppure 900 t, a seconda del metodo.
+Commento del docente: Il modo più semplice per spiegarlo a un collega: lo Scope 1 è ciò che esce dai nostri camini e dai nostri tubi di scarico, lo Scope 2 è ciò che esce dal camino della centrale per accendere le nostre luci e far girare i nostri motori. Il contatore elettrico è il punto in cui quella responsabilità entra in azienda. Attenzione a non allargare troppo: lo Scope 2 riguarda solo l’energia acquistata e consumata, non tutto ciò che ha a che fare con l’elettricità. Lo vedremo nella sezione 10.
+### SCHERMATA 3 — Dalla centrale al contatore: dove nascono le emissioni [flow · GHG Protocol · Scope 2]
+Le emissioni avvengono all’inizio della catena, ma si attribuiscono a chi consuma l’energia.
+1. Centrale: Brucia gas o altri combustibili, oppure usa sole, vento, acqua. Qui avviene l’emissione fisica.
+2. Rete: L’energia di tutti gli impianti si mescola e viaggia su linee di trasmissione e distribuzione, con qualche perdita.
+3. Contatore: Il punto di prelievo misura i kWh che entrano in azienda: è il dato di attività.
+4. Usi in azienda: Motori, compressori, illuminazione, uffici, ricarica dei carrelli e dei veicoli.
+5. Scope 2: kWh prelevati × fattore di emissione = emissioni indirette da energia acquistata.
+Le perdite lungo la rete e la filiera dei combustibili usati dalle centrali non sono Scope 2: vanno nello Scope 3 (sezione 10).
+Commento del docente: Sulla rete gli elettroni non hanno etichetta: quelli prodotti da una centrale a gas e quelli di un parco eolico sono indistinguibili. È il motivo per cui servono delle convenzioni per decidere «quanta CO2 c’è» in un kWh prelevato. Le convenzioni sono due e danno due risultati: una guarda alla media fisica della rete, l’altra ai contratti firmati dall’azienda. Tutta l’unità ruota attorno a questa distinzione, che conviene avere chiara fin da ora.
+### SCHERMATA 4 — Terrafelix: i quattro numeri dell’unità [stats]
+- 3.200.000 kWh: elettricità prelevata dalla rete nel 2025 (somma delle bollette)
+- 600.000 kWh: elettricità autoprodotta dal fotovoltaico e autoconsumata (non è Scope 2)
+- 752 t CO2e: Scope 2 location-based (3.200.000 kWh × 0,235)
+- 900 t CO2e: Scope 2 market-based (2.000.000 kWh × 0,45)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Mostrare subito il punto di arrivo aiuta a non perdersi. Lo stesso prelievo di 3.200.000 kWh produce due risultati, 752 e 900 tonnellate, ed entrambi sono corretti: rispondono a due domande diverse. Notate anche ciò che manca: Terrafelix non acquista calore né vapore, perché il calore per gli essiccatoi lo produce da sé bruciando gas naturale, già contato nello Scope 1. Per calore e vapore acquistati useremo quindi esempi di altre aziende nella sezione 8.
+
+## SEZIONE 2 — Leggere la bolletta elettrica
+### SCHERMATA 5 — Leggere la bolletta elettrica [section]
+Il dato di attività dello Scope 2 è scritto in bolletta, ma in mezzo a molti altri numeri. Bisogna prendere quello giusto, per tutti i punti di prelievo e per tutti i dodici mesi dell’anno di inventario.
+- Quali voci servono e quali no
+- Fasce orarie F1, F2, F3
+- Letture stimate e conguagli
+- Dalla somma mensile al totale annuo
+### SCHERMATA 6 — Che cosa c’è in bolletta e che cosa serve al calcolo [table]
+Colonne: Voce della bolletta | Serve? | Che cosa farne
+- Codice POD (punto di prelievo) | Sì | Identifica il contatore: elencare tutti i POD dell’azienda e verificare di avere le bollette di ciascuno
+- Periodo di consumo | Sì | Conta il periodo in cui l’energia è stata consumata, non la data della fattura
+- Energia attiva in kWh (F1, F2, F3) | Sì | È il dato di attività: si sommano le tre fasce orarie
+- Lettura effettiva o stimata | Sì | Le stime vanno sostituite con le letture reali appena disponibili
+- Conguagli | Sì | Attribuirli all’anno a cui si riferiscono, non a quello in cui arrivano
+- Energia reattiva (kvarh) | No | Non è energia consumata: non entra nel calcolo
+- Potenza impegnata o prelevata (kW) | No | È una potenza, non un’energia: non confonderla con i kWh
+- Importo in euro | No | Serve solo come controllo di plausibilità: il calcolo si fa sulle quantità
+F1, F2, F3 sono le fasce orarie di consumo: cambiano il prezzo, non le emissioni. Per l’inventario conta la loro somma.
+Commento del docente: Gli errori più frequenti in questa fase sono tre: prendere i kvarh dell’energia reattiva al posto dei kWh, dimenticare un punto di prelievo secondario (il deposito, la cabina del pozzo, l’ufficio distaccato) e sommare le fatture per data di emissione invece che per periodo di consumo. Un consiglio pratico: molti fornitori e distributori mettono a disposizione un portale da cui scaricare i consumi mensili e le curve di prelievo; è più veloce e più affidabile che ricopiare dodici documenti in formato PDF.
+### SCHERMATA 7 — Chiara Vitale mette in fila le dodici bollette [case]
+A febbraio 2026 Chiara Vitale, responsabile Amministrazione e controllo, raccoglie le bollette elettriche 2025 dell’unico punto di prelievo dello stabilimento e le passa a Davide Russo insieme a due segnalazioni.
+- La bolletta di gennaio riporta: F1 128.000 kWh, F2 71.000 kWh, F3 86.000 kWh, per un totale di 285.000 kWh
+- La bolletta di dicembre è basata su una lettura stimata
+- La bolletta di marzo contiene un conguaglio di 18.400 kWh riferito a dicembre 2024
+- La bolletta riporta anche 41.000 kvarh di energia reattiva
+Domanda di lavoro: Quali numeri entrano nel dato di attività del 2025?
+Come ha operato l'azienda: Davide somma le tre fasce di ogni mese; sostituisce la stima di dicembre con la lettura reale scaricata dal portale del distributore (302.000 kWh); esclude il conguaglio perché riguarda il 2024; ignora l’energia reattiva. Annota ogni scelta nel registro dei dati, con il riferimento alla bolletta.
+Commento del docente: I dettagli delle singole bollette sono dati illustrativi, coerenti con il totale annuo del caso. Il punto didattico è la competenza temporale: l’inventario 2025 contiene l’energia consumata dal 1° gennaio al 31 dicembre 2025, comunque sia stata fatturata. Se il conguaglio di marzo fosse stato sommato, il dato sarebbe salito di 18.400 kWh, cioè di circa 4,3 t CO2e: poco sul totale, ma è proprio il tipo di errore che un verificatore cerca confrontando bollette e letture del contatore.
+### SCHERMATA 8 — I prelievi mensili di Terrafelix nel 2025 [bar]
+kWh prelevati dalla rete ogni mese (somma delle fasce F1, F2 e F3).
+- Gennaio: 285.000kWh
+- Febbraio: 270.000kWh
+- Marzo: 280.000kWh
+- Aprile: 262.000kWh
+- Maggio: 258.000kWh
+- Giugno: 250.000kWh
+- Luglio: 255.000kWh
+- Agosto: 190.000kWh
+- Settembre: 268.000kWh
+- Ottobre: 285.000kWh
+- Novembre: 295.000kWh
+- Dicembre: 302.000kWh
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi (ripartizione mensile coerente con il totale annuo di 3.200.000 kWh)
+Commento del docente: Guardare l’andamento mese per mese è il primo controllo di plausibilità. Qui si leggono due fenomeni: il calo di agosto, dovuto alla fermata estiva per manutenzione, e i prelievi più bassi tra aprile e luglio, quando il fotovoltaico produce di più e copre una parte maggiore dei consumi. Un mese anomalo senza spiegazione (un valore doppio, uno zero, due mesi identici) segnala quasi sempre una bolletta mancante, duplicata o stimata: va chiarito prima di fare qualunque moltiplicazione.
+### SCHERMATA 9 — Dalla somma dei trimestri al totale annuo [calc]
+Si sommano i kWh dei dodici mesi (qui raggruppati per trimestre) e, se serve, si converte in MWh: 1 MWh = 1.000 kWh.
+Formula: Energia = Energia prelevata × Fattore di conversione
+- 1° trimestre (gennaio 285.000 + febbraio 270.000 + marzo 280.000): 835.000 kWh × 0,001 MWh/kWh = 835 MWh
+- 2° trimestre (aprile 262.000 + maggio 258.000 + giugno 250.000): 770.000 kWh × 0,001 MWh/kWh = 770 MWh
+- 3° trimestre (luglio 255.000 + agosto 190.000 + settembre 268.000): 713.000 kWh × 0,001 MWh/kWh = 713 MWh
+- 4° trimestre (ottobre 285.000 + novembre 295.000 + dicembre 302.000): 882.000 kWh × 0,001 MWh/kWh = 882 MWh
+Totale 2025: 3200 MWh
+3.200 MWh = 3.200.000 kWh: è il dato di attività dello Scope 2 di Terrafelix.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Sembra un passaggio banale, ma l’errore di unità tra kWh e MWh è tra i più diffusi: molte bollette industriali e molti portali riportano i consumi in MWh, mentre i fattori di emissione sono quasi sempre per kWh. Se si moltiplicano 3.200 MWh per 0,235 kg CO2e/kWh si ottengono 752 kg invece di 752 tonnellate: un errore di mille volte. Regola pratica: prima di moltiplicare, scrivere accanto a ogni numero la sua unità e controllare che quella del dato coincida con il denominatore del fattore.
+
+## SEZIONE 3 — Il metodo location-based
+### SCHERMATA 10 — Il metodo location-based [section]
+Il primo metodo guarda a dove si trova l’azienda. Ogni kWh prelevato vale quanto la media di tutti i kWh immessi nella rete di quel Paese, qualunque sia il contratto di fornitura. In parole: emissioni = kWh prelevati × fattore medio della rete.
+- Il fattore medio della rete nazionale
+- Il calcolo di Terrafelix: 752 t CO2e
+- Perché il fattore cambia ogni anno
+- Prova tu con una piccola azienda
+### SCHERMATA 11 — Lo Scope 2 location-based di Terrafelix [calc · GHG Protocol · Scope 2 location-based — ISO 14064-1 · categoria 2]
+Un solo dato (i kWh prelevati dalla rete nel 2025) e un solo fattore (la media della rete italiana).
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Elettricità prelevata dalla rete (dato: somma delle 12 bollette 2025 · fattore: ISPRA, consumi elettrici nazionali 2023, 234,7 g CO2/kWh, arrotondato): 3.200.000 kWh × 0,235 kg CO2e/kWh = 752.000 kg CO2e
+In tonnellate: 752 t CO2e
+Il contratto di fornitura non conta: con o senza «energia verde», il risultato location-based è lo stesso.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattore ISPRA, Rapporto 413/2025 (valore arrotondato)
+Commento del docente: Il fattore ISPRA è pubblicato in grammi di CO2 per kWh: 234,7 g equivalgono a 0,2347 kg, che nel corso arrotondiamo a 0,235 e trattiamo come CO2e per semplicità. In un inventario reale si verifica quali gas comprende il fattore scelto e lo si dichiara nel rapporto. Il risultato, 752 t CO2e, è circa un terzo dello Scope 1 dello stabilimento: per un pastificio che essicca a gas l’elettricità pesa meno del calore, ma resta la seconda sorgente «dentro i cancelli».
+### SCHERMATA 12 — Il fattore della rete italiana scende di anno in anno [line · ISPRA · Rapporto 413/2025]
+Fattore di emissione dei consumi elettrici in Italia, in grammi di CO2 per kWh. Il valore 2024 è una stima preliminare.
+Periodi: 2022 | 2023 | 2024
+- Consumi elettrici: 293g | 234,7g | 198,9g
+Fonte dei dati: ISPRA, «Le emissioni di CO2 nel settore elettrico nazionale e regionale», Rapporto 413/2025
+Commento del docente: In due anni il fattore è sceso di circa il 32%, da 293,0 a 198,9 g CO2/kWh: più rinnovabili e meno combustibili fossili nella produzione nazionale. Ne derivano due regole pratiche. Primo: si usa il fattore dell’anno di inventario o, se non è ancora pubblicato, il più recente disponibile, e lo si dichiara. Secondo: quando si confrontano due anni bisogna distinguere quanto della variazione dipende dai kWh dell’azienda e quanto dal fattore della rete. Su questo torneremo nell’unità 7.
+### SCHERMATA 13 — Stessi kWh, fattore diverso: il risultato cambia [bar]
+I 3.200.000 kWh di Terrafelix moltiplicati per il fattore dei tre anni (arrotondato a 0,293 – 0,235 – 0,199 kg/kWh).
+- Con il fattore 2022: 937,6t
+- Con il fattore 2023 (usato nel corso): 752t
+- Con il fattore 2024 (preliminare): 636,8t
+Fonte dei dati: Elaborazione didattica su fattori ISPRA arrotondati (Rapporto 413/2025) – consumo del caso studio Pastificio Terrafelix
+Commento del docente: L’azienda non ha cambiato nulla, eppure tra la prima e la terza barra ci sono circa 300 tonnellate di differenza: 937,6 contro 636,8. È l’effetto del fattore. Chi presenta alla direzione una «riduzione dello Scope 2» deve saper dire se viene da interventi propri (meno kWh prelevati) o dal miglioramento della rete nazionale, che non è merito dell’azienda. L’errore opposto è altrettanto comune: usare per anni lo stesso fattore vecchio perché «era già nel foglio di calcolo».
+### SCHERMATA 14 — Prova tu: il location-based di una piccola azienda con tre sedi [sim]
+Tre punti di prelievo, tutti in Italia: stesso fattore per tutti. Prova a ridurre del 10% i kWh dell’officina e osserva di quanto scende il totale.
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Officina: 180.000 kWh × 0,235 kg CO2e/kWh = 42.300 kg CO2e
+- Magazzino: 60.000 kWh × 0,235 kg CO2e/kWh = 14.100 kg CO2e
+- Uffici: 45.000 kWh × 0,235 kg CO2e/kWh = 10.575 kg CO2e
+Totale iniziale: 66.975 kg CO2e
+In tonnellate: 66,975 t CO2e
+Sedi in Paesi diversi userebbero ciascuna il fattore medio della propria rete nazionale.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Con i valori iniziali il totale è 66.975 kg, cioè circa 67 t CO2e: 42,3 t dall’officina, 14,1 t dal magazzino e 10,6 t dagli uffici. Ridurre del 10% i consumi dell’officina (18.000 kWh in meno) toglie 4,2 t. Il calcolatore serve a fissare un’idea semplice: nel metodo location-based l’unica leva dell’azienda è il numero di kWh prelevati. Se un’azienda ha sedi all’estero, per ognuna si usa il fattore medio della rete in cui avviene il consumo, non quello italiano.
+
+## SEZIONE 4 — Il metodo market-based
+### SCHERMATA 15 — Il metodo market-based [section]
+Il secondo metodo guarda a che cosa l’azienda ha comprato. Sulla rete l’energia è tutta uguale, ma i contratti possono assegnare a un cliente l’origine di una certa quantità di kWh. Chi non ha nessun contratto di questo tipo riceve ciò che resta: il residual mix.
+- Gli strumenti contrattuali
+- Il residual mix
+- Quale fattore uso? La scala delle scelte
+- Un esempio con tre contratti
+### SCHERMATA 16 — Le quattro parole del metodo market-based [defs · GHG Protocol · Scope 2 market-based]
+- Garanzia d’Origine (GO): Certificato elettronico che attesta l’origine rinnovabile di una quantità di elettricità. Chi la utilizza la fa annullare a proprio favore: quei kWh valgono 0 kg CO2e nel metodo market-based.
+- Contratto con il fornitore: Fornitura con un’origine o un fattore di emissione dichiarati e documentati dal venditore, per esempio un’offerta «verde» coperta da GO annullate dal fornitore per conto del cliente.
+- PPA (Power Purchase Agreement): Contratto di lungo periodo con il produttore di uno specifico impianto, di norma rinnovabile, accompagnato dalle relative garanzie d’origine.
+- Residual mix: Il mix di produzione che resta dopo aver tolto l’energia già assegnata con le garanzie d’origine. È il fattore per i kWh che non hanno alcuno strumento contrattuale.
+Commento del docente: Tutti gli strumenti hanno una cosa in comune: sono documenti, non flussi fisici. Per questo nel market-based ogni kWh a fattore ridotto deve avere una prova: l’attestato di annullamento delle GO, il contratto, la dichiarazione del fornitore riferita all’anno di inventario. Nella prassi europea una GO corrisponde a 1 MWh, quindi 1.200.000 kWh richiedono 1.200 garanzie. Senza documento il kWh non è «verde»: prende il residual mix, che è più alto della media di rete.
+### SCHERMATA 17 — Quale fattore uso? La scala delle scelte per ogni kWh [flow · GHG Protocol · Scope 2 Guidance]
+Si parte dall’alto e ci si ferma al primo caso che descrive i kWh che si stanno contando.
+1. 1. Ho GO annullate?: Per i kWh coperti da garanzie d’origine rinnovabili: fattore 0 kg CO2e/kWh.
+2. 2. Ho un PPA?: Per i kWh del contratto: fattore dell’impianto, con le relative garanzie.
+3. 3. Ho un fattore del fornitore?: Per i kWh della fornitura: fattore dichiarato e documentato dal venditore.
+4. 4. Nessuno strumento: Per tutti i kWh rimanenti: residual mix (nel corso 0,45 kg CO2e/kWh).
+Buona prassi: se per un Paese non esiste un residual mix pubblicato, si usa il fattore medio della rete e lo si dichiara nel rapporto.
+Commento del docente: La scala va applicata ai kWh, non all’azienda nel suo insieme: la stessa bolletta può contenere una parte coperta da garanzie e una parte no, come vedremo tra poco per Terrafelix. L’errore tipico è fermarsi al nome commerciale dell’offerta: «energia verde» scritto sul contratto non basta, serve sapere quanti kWh sono coperti e con quali garanzie annullate. Il residual mix nazionale cambia ogni anno e si legge nella pubblicazione dell’associazione europea AIB; il valore del corso è un arrotondamento didattico.
+### SCHERMATA 18 — Fattori a confronto: perché il residual mix è così alto [bar]
+Grammi di CO2 per kWh: dati reali di fonte ISPRA e AIB.
+- Garanzie d’Origine rinnovabili: 0g
+- Consumi elettrici in Italia (2023): 234,7g
+- Residual mix medio europeo (2024): 452g
+- Termoelettrico da soli fossili, Italia (2023): 460,2g
+Fonte dei dati: ISPRA, Rapporto 413/2025; AIB, European Residual Mixes 2024
+Commento del docente: Il grafico spiega da solo il meccanismo. La media di rete (234,7 g) è bassa perché contiene anche idroelettrico, solare ed eolico. Ma una parte di quell’energia rinnovabile è già stata «prenotata» da chi ha comprato le garanzie d’origine: tolta quella, ciò che rimane assomiglia molto alla produzione da combustibili fossili. Per questo il residual mix medio europeo (452 g) è quasi il doppio della media italiana. I due dati hanno anni e perimetri diversi: servono a capire l’ordine di grandezza, non a fare confronti al decimale.
+### SCHERMATA 19 — Esempio svolto: una bolletta, tre contratti, tre fattori [calc]
+Un’azienda di servizi consuma 1.000.000 kWh. Per ogni blocco di kWh si applica la scala delle scelte.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- kWh coperti da Garanzie d’Origine (attestato di annullamento di 500 GO): 500.000 kWh × 0 kg CO2e/kWh = 0 kg CO2e
+- kWh con fattore dichiarato dal fornitore (dichiarazione del venditore · valore didattico): 300.000 kWh × 0,1 kg CO2e/kWh = 30.000 kg CO2e
+- kWh senza alcuno strumento (residual mix · valore arrotondato): 200.000 kWh × 0,45 kg CO2e/kWh = 90.000 kg CO2e
+Scope 2 market-based: 120.000 kg CO2e
+In tonnellate: 120 t CO2e
+Per confronto, il location-based della stessa azienda è 1.000.000 kWh × 0,235 = 235.000 kg, cioè 235 t CO2e.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); il fattore del fornitore è un valore didattico
+Commento del docente: Qui il market-based (120 t) è circa la metà del location-based (235 t), perché l’80% dei kWh ha uno strumento contrattuale. Tenete a mente questo risultato: tra poco vedremo che per Terrafelix succede il contrario. Il metodo è sempre lo stesso: si divide il consumo in blocchi, a ogni blocco si assegna il suo fattore, si sommano i risultati. La somma dei blocchi deve dare esattamente i kWh della bolletta: è il controllo da fare prima di chiudere il calcolo.
+
+## SEZIONE 5 — Il calcolo market-based di Terrafelix
+### SCHERMATA 20 — Il calcolo market-based di Terrafelix [section]
+Applichiamo la scala delle scelte alla bolletta del pastificio. Il risultato sorprende molti: chi ha comprato una parte di «energia verde» si ritrova con uno Scope 2 market-based più alto di quello location-based. Vediamo perché, con i numeri.
+- Che cosa dice il contratto di fornitura
+- Il calcolo: 900 t CO2e
+- Perché 900 è più di 752
+- Quanta energia garantita serve per scendere
+### SCHERMATA 21 — Il contratto elettrico di Terrafelix: verde solo in parte [case · GHG Protocol · Scope 2 market-based]
+Davide Russo chiede a Chiara Vitale il contratto di fornitura 2025 e la documentazione sull’origine dell’energia. Il fornitore ha venduto un’opzione rinnovabile, ma non sull’intero volume.
+- Elettricità prelevata dalla rete nel 2025: 3.200.000 kWh
+- Opzione rinnovabile del contratto: 1.200.000 kWh coperti da Garanzie d’Origine annullate dal fornitore a favore di Terrafelix (1.200 GO da 1 MWh)
+- Restanti 2.000.000 kWh: nessuna garanzia, nessun fattore dichiarato dal fornitore
+- Quota coperta da garanzie: 1.200.000 ÷ 3.200.000 = 37,5%
+Domanda di lavoro: Quali fattori si applicano ai due blocchi di kWh?
+Come ha operato l'azienda: Ai 1.200.000 kWh con garanzie si applica il fattore 0. Ai 2.000.000 kWh senza strumenti contrattuali si applica il residual mix, 0,45 kg CO2e/kWh. Davide archivia l’attestato di annullamento delle GO nel fascicolo delle evidenze.
+Commento del docente: È una situazione molto comune nelle PMI: l’ufficio acquisti sottoscrive un’opzione verde su un volume fisso stimato a inizio anno, i consumi reali sono più alti e la parte eccedente resta scoperta. Altre volte la garanzia copre solo alcune fasce orarie o alcuni mesi. Il primo lavoro è quindi contare i kWh garantiti partendo dai documenti, non dalla brochure del fornitore. Se l’attestato di annullamento non si trova, quei kWh vanno trattati come non coperti.
+### SCHERMATA 22 — Lo Scope 2 market-based di Terrafelix [calc · GHG Protocol · Scope 2 market-based]
+Due blocchi di kWh, due fattori. La somma dei blocchi è il prelievo totale: 1.200.000 + 2.000.000 = 3.200.000 kWh.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Elettricità con Garanzie d’Origine (attestato di annullamento delle GO · strumento contrattuale): 1.200.000 kWh × 0 kg CO2e/kWh = 0 kg CO2e
+- Elettricità senza garanzie (residual mix · valore arrotondato, ordine di grandezza AIB 2024): 2.000.000 kWh × 0,45 kg CO2e/kWh = 900.000 kg CO2e
+Scope 2 market-based: 900.000 kg CO2e
+In tonnellate: 900 t CO2e
+Location-based, per gli stessi kWh: 752 t CO2e. Market-based: 900 t CO2e, cioè 148 t in più.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il primo blocco vale zero, eppure il totale supera il location-based di 148 t, quasi il 20% in più. Il motivo è tutto nel secondo fattore: i 2.000.000 kWh scoperti non prendono la media di rete (0,235) ma il residual mix (0,45), quasi doppio. In pratica il fattore medio market-based di Terrafelix è 900.000 ÷ 3.200.000 = 0,281 kg CO2e/kWh, più alto dello 0,235 della rete. Comprare garanzie su poco più di un terzo dei consumi non è bastato a compensare.
+### SCHERMATA 23 — Perché 900 è più di 752: il ragionamento in quattro passi [flow · GHG Protocol · Scope 2 Guidance]
+1. La rete è un mix: La media nazionale (0,235) comprende sia l’energia fossile sia quella rinnovabile.
+2. Le rinnovabili si assegnano: Chi compra garanzie d’origine si attribuisce una parte di quell’energia rinnovabile, a fattore 0.
+3. Resta il residuo: Tolta l’energia già assegnata, ciò che rimane è più «fossile»: residual mix 0,45.
+4. Chi è scoperto prende il residuo: Il 62,5% dei kWh di Terrafelix non ha garanzie: 2.000.000 × 0,45 = 900 t.
+Il residual mix esiste per evitare che la stessa energia rinnovabile sia contata due volte: da chi ha le garanzie e, dentro la media, da tutti gli altri.
+Commento del docente: Un’immagine che funziona in aula: una cassa di mele rosse e verdi mescolate. Se alcuni clienti pagano per avere solo mele verdi, nella cassa di chi non ha chiesto nulla la quota di mele rosse aumenta. Il location-based dà a tutti la cassa media; il market-based dà a ciascuno ciò che ha contrattato e agli altri il resto. Nessuno dei due risultati è «quello vero»: il primo descrive l’impatto fisico medio della rete, il secondo le scelte di acquisto dell’azienda.
+### SCHERMATA 24 — E se Terrafelix non avesse nessuna garanzia? [calc]
+Senza strumenti contrattuali tutti i kWh prelevati prendono il residual mix.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Elettricità senza garanzie (tutto il prelievo 2025 · residual mix, valore arrotondato): 3.200.000 kWh × 0,45 kg CO2e/kWh = 1.440.000 kg CO2e
+In tonnellate: 1440 t CO2e
+Le 1.200 garanzie acquistate hanno quindi ridotto il market-based di 540 t: da 1.440 a 900 t CO2e.
+Fonte dei dati: Caso studio Pastificio Terrafelix – scenario illustrativo
+Commento del docente: Questo scenario mostra il vero punto di partenza del metodo market-based: non 752 ma 1.440 t CO2e. Le garanzie d’origine hanno fatto il loro lavoro, perché ogni MWh garantito ha tolto 450 kg dal conto (1.200.000 × 0,45 = 540.000 kg). Semplicemente non erano abbastanza. Molte aziende scoprono con il primo inventario di avere un market-based più alto del location-based proprio perché non avevano mai contato il residual mix: è normale, e va spiegato alla direzione prima che lo chieda un cliente.
+### SCHERMATA 25 — Location-based e market-based al variare della quota di garanzie [gbar]
+Prelievo fisso di 3.200.000 kWh; cambia solo la quota coperta da Garanzie d’Origine. Tonnellate di CO2e.
+Serie: Location-based | Market-based
+- Nessuna garanzia: 752t | 1440t
+- 25% con GO: 752t | 1080t
+- 37,5% con GO (Terrafelix 2025): 752t | 900t
+- 50% con GO: 752t | 720t
+- 75% con GO: 752t | 360t
+- 100% con GO: 752t | 0t
+Fonte dei dati: Caso studio Pastificio Terrafelix – scenari illustrativi (fattori 0,235 e 0,45 kg CO2e/kWh)
+Commento del docente: La barra blu non si muove mai: le garanzie non cambiano il location-based. La barra arancione scende di 4,5 t per ogni 10.000 kWh garantiti in più. Le due barre si incontrano quando la quota scoperta moltiplicata per 0,45 è uguale a 0,235, cioè con circa il 48% di kWh garantiti (1 − 0,235 ÷ 0,45 = 0,478): per Terrafelix circa 1.530.000 kWh. Sotto quella soglia il market-based è più alto, sopra è più basso. La soglia vale per questi due fattori e cambia quando cambiano.
+
+## SEZIONE 6 — La doppia rendicontazione
+### SCHERMATA 26 — La doppia rendicontazione [section]
+Due metodi, due numeri: quale va nel rapporto? Entrambi, ciascuno con il suo nome e mai sommati. In questa sezione vediamo che cosa chiedono gli standard, come si scrive il dato e quali errori evitare.
+- Che cosa chiedono GHG Protocol e ISO 14064-1
+- Come si scrive nel rapporto
+- Corretto e sbagliato
+- Prova tu: la quota di garanzie
+### SCHERMATA 27 — Chi chiede che cosa [table · GHG Protocol · Scope 2 Guidance — ISO 14064-1 · categoria 2]
+Colonne: Riferimento | Che cosa chiede | Che cosa fa Terrafelix
+- GHG Protocol – Scope 2 Guidance (requisito dello standard) | Riportare entrambi i risultati, location-based e market-based | Riporta 752 t e 900 t in due righe distinte
+- ISO 14064-1 (requisito di norma) | Approccio location-based; il dato market-based può essere aggiunto, separatamente | Usa 752 t nel totale dell’inventario; riporta 900 t a parte
+- Obiettivi di riduzione (buona prassi) | Dichiarare quale metodo si usa per l’obiettivo e mantenerlo nel tempo | Fissa l’obiettivo su Scope 1+2 market-based
+- Clienti, banche, questionari (richieste di mercato) | Dipende dal questionario: spesso il market-based, a volte entrambi | Fornisce sempre i due dati con l’etichetta del metodo
+Nessuno di questi riferimenti consente di sommare i due risultati o di scegliere di volta in volta quello più conveniente.
+Commento del docente: Conviene tenere distinti i tre livelli: ciò che chiede lo standard, ciò che chiede la norma e ciò che è buona prassi. Il GHG Protocol vuole la doppia rendicontazione; la ISO 14064-1 chiede il location-based e ammette il market-based in aggiunta. In pratica chi segue entrambe le impostazioni calcola sempre i due numeri. Per gli obiettivi la regola di buon senso è la coerenza: se l’anno base è market-based, anche gli anni successivi si misurano con il market-based.
+### SCHERMATA 28 — Come si scrive nel rapporto: due righe, due totali [stats]
+- 752 t: Scope 2 location-based (3.200.000 kWh × 0,235)
+- 900 t: Scope 2 market-based (2.000.000 kWh × 0,45)
+- 21.692,5 t: totale inventario con Scope 2 location-based (2.257,8 + 752 + 18.682,7)
+- 21.840,5 t: totale inventario con Scope 2 market-based (2.257,8 + 900 + 18.682,7)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Nel rapporto GHG di Terrafelix il totale di riferimento è 21.692,5 t CO2e, costruito con il location-based come chiede la ISO 14064-1; subito sotto compare il totale alternativo con il market-based, 21.840,5 t. La differenza tra i due totali è esattamente la differenza tra i due Scope 2: 148 t. Chi legge deve poter capire in pochi secondi quale metodo sta dietro ogni numero: per questo l’etichetta «location-based» o «market-based» va ripetuta in ogni tabella, grafico e indicatore.
+### SCHERMATA 29 — Doppia rendicontazione: corretto e sbagliato [two]
+Colonna «Corretto»:
+- Riportare i due risultati in righe separate, ciascuno con il nome del metodo
+- Indicare per ogni fattore la fonte e l’anno (ISPRA, AIB, attestato delle GO)
+- Conservare le prove degli strumenti contrattuali riferite all’anno di inventario
+- Usare lo stesso metodo per anno base, obiettivo e monitoraggio
+- Dichiarare la quota di kWh coperta da garanzie: per Terrafelix 37,5%
+Colonna «Sbagliato»:
+- Sommare 752 + 900 e riportare 1.652 t come Scope 2
+- Scegliere ogni anno il metodo che dà il numero più basso
+- Scrivere «energia 100% verde» quando le garanzie coprono solo una parte
+- Applicare il fattore zero senza l’attestato di annullamento delle GO
+- Usare la media di rete per i kWh scoperti nel calcolo market-based
+Commento del docente: L’ultimo errore della colonna di destra è il più insidioso, perché sembra prudente: applicare 0,235 ai 2.000.000 kWh scoperti darebbe 470 t invece di 900. È un risultato ibrido che non è né location-based né market-based e conta due volte l’energia rinnovabile già assegnata ad altri. Quanto alla comunicazione: Terrafelix può dire che il 37,5% dell’elettricità acquistata è coperto da garanzie d’origine; sommando il fotovoltaico, il 47,4% dell’elettricità consumata è rinnovabile documentata. Non il 100%.
+### SCHERMATA 30 — Prova tu: sposta i kWh dal residual mix alle garanzie [sim]
+Mantieni fissa la somma di 3.200.000 kWh e sposta i kWh dalla prima alla seconda riga. A quale quota di garanzie il market-based scende sotto le 752 t del location-based?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Elettricità senza garanzie (residual mix): 2.000.000 kWh × 0,45 kg CO2e/kWh = 900.000 kg CO2e
+- Elettricità con Garanzie d’Origine: 1.200.000 kWh × 0 kg CO2e/kWh = 0 kg CO2e
+Totale iniziale: 900.000 kg CO2e
+In tonnellate: 900 t CO2e
+Il calcolatore mostra solo il market-based. Il location-based resta 752 t CO2e qualunque sia la ripartizione.
+Fonte dei dati: Caso studio Pastificio Terrafelix – scenari illustrativi
+Commento del docente: Provate tre ripartizioni. Con 1.600.000 kWh per riga (50% di garanzie) il market-based è 720 t, già sotto il location-based. Con 1.671.000 kWh scoperti si è al punto di pareggio, circa 752 t. Con zero kWh scoperti il risultato è zero. Notate che la seconda riga non produce mai emissioni, qualunque numero scriviate: nel market-based conta solo quanti kWh restano senza strumento contrattuale. È il motivo per cui il piano di Terrafelix, nell’unità 9, punta a coprire con garanzie tutto il prelievo residuo.
+### SCHERMATA 31 — «Usiamo energia 100% verde»: la frase da correggere [case]
+Giorgio Ferri, responsabile Commerciale, prepara la risposta al questionario di un cliente della grande distribuzione e propone di scrivere che lo stabilimento usa solo energia verde, perché «il contratto è quello rinnovabile e abbiamo anche il fotovoltaico».
+- Elettricità consumata in totale: 3.800.000 kWh (3.200.000 dalla rete + 600.000 dal fotovoltaico)
+- Rinnovabile documentata: 1.200.000 kWh con garanzie + 600.000 kWh autoprodotti = 1.800.000 kWh
+- Quota rinnovabile documentata: 1.800.000 ÷ 3.800.000 = 47,4%
+- Scope 2: 752 t CO2e location-based; 900 t CO2e market-based
+Domanda di lavoro: Che cosa può scrivere Terrafelix senza esporsi a contestazioni?
+Come ha operato l'azienda: Davide Russo riscrive la risposta: «Nel 2025 il 47,4% dell’elettricità consumata è di origine rinnovabile documentata (fotovoltaico proprio e garanzie d’origine). Scope 2: 752 t CO2e location-based, 900 t CO2e market-based». Allega l’attestato delle garanzie.
+Commento del docente: Una dichiarazione generica non dimostrata è il terreno tipico del greenwashing, di cui parleremo nell’unità 10. Qui interessa il metodo: una frase sull’energia deve poter essere ricostruita con i kWh e con i documenti. Il cliente che riceve un numero preciso, la quota e i due valori di Scope 2 ha tutto ciò che gli serve per il proprio Scope 3 e si fida di più di un fornitore che dichiara il 47,4% documentato che di uno che dichiara il 100% senza prove.
+
+## SEZIONE 7 — L’elettricità autoprodotta
+### SCHERMATA 32 — L’elettricità autoprodotta [section]
+Terrafelix ha 450 kWp di fotovoltaico sul tetto. L’energia che produce e consuma non passa dal contatore di prelievo e non è energia acquistata: quindi non è Scope 2. Ma come si conta, e che cosa succede all’energia ceduta alla rete?
+- Autoconsumo: riduce il prelievo
+- Energia immessa in rete: non si sottrae
+- Emissioni evitate: un’informazione, non un credito
+- Garanzie d’origine cedute
+### SCHERMATA 33 — Dove va l’energia del fotovoltaico e come si conta [tree · GHG Protocol · Scope 2 Guidance]
+Radice: Fotovoltaico Terrafelix (650.000 kWh prodotti nel 2025)
+- Autoconsumo (600.000 kWh): Non è energia acquistata; Zero emissioni in fase d’uso; Riportato a parte nel rapporto
+- Immissione in rete (50.000 kWh): Energia ceduta, non consumata; Non si sottrae dal prelievo; Lo Scope 2 resta 752 t
+- Garanzie d’origine (legate alla produzione): Se restano all’azienda: energia rinnovabile; Se cedute: l’attributo passa ad altri
+I 50.000 kWh immessi in rete sono un dato illustrativo; i 600.000 kWh autoconsumati sono il dato del caso studio.
+Commento del docente: Il contatore di produzione e quello di scambio danno tre numeri: prodotto, immesso, prelevato. L’autoconsumo si ricava per differenza: 650.000 − 50.000 = 600.000 kWh. Nell’inventario entrano i kWh prelevati (Scope 2) e, come informazione separata, quelli autoconsumati. Sulle garanzie d’origine vale il principio di non contare due volte lo stesso attributo: se l’azienda cedesse a terzi le garanzie legate alla propria produzione, non potrebbe più presentare quell’energia come rinnovabile nel metodo market-based.
+### SCHERMATA 34 — Da dove viene l’elettricità consumata da Terrafelix [donut]
+3.800.000 kWh consumati nel 2025: tre origini, tre trattamenti diversi nel calcolo.
+Totale al centro: 3,8 mln kWh consumati
+- Rete, senza garanzie (residual mix nel market-based): 2.000.000kWh (52,6%)
+- Rete, con Garanzie d’Origine (zero nel market-based): 1.200.000kWh (31,6%)
+- Fotovoltaico autoconsumato (fuori dallo Scope 2): 600.000kWh (15,8%)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il grafico tiene insieme tutto ciò che abbiamo visto. Nel location-based le prime due fette sono trattate allo stesso modo: 3.200.000 kWh × 0,235. Nel market-based si separano: 52,6% del consumo a 0,45 e 31,6% a zero. La terza fetta, il 15,8%, non entra in nessuno dei due calcoli. Per l’indicatore di efficienza energetica, invece, contano tutte e tre: lo stabilimento ha consumato 3.800.000 kWh, non 3.200.000. Confondere consumo e prelievo è un errore frequente nei confronti tra stabilimenti.
+### SCHERMATA 35 — Quanto ha evitato il fotovoltaico: un’informazione a parte [calc]
+Se i 600.000 kWh autoconsumati fossero stati prelevati dalla rete, con il metodo location-based avrebbero prodotto queste emissioni.
+Formula: Emissioni evitate = Dato di attività × Fattore di emissione
+- Elettricità autoprodotta e autoconsumata (contatore di produzione meno energia immessa · fattore medio di rete, arrotondato): 600.000 kWh × 0,235 kg CO2e/kWh = 141.000 kg CO2e
+In tonnellate: 141 t CO2e
+Sono emissioni evitate, non un credito: non si sottraggono dallo Scope 2 né dal totale dell’inventario.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il beneficio del fotovoltaico è già dentro i numeri: senza l’impianto il prelievo sarebbe stato di 3.800.000 kWh e lo Scope 2 location-based di 893 t invece di 752. Sottrarre anche le 141 t significherebbe contare il vantaggio due volte. Con l’ottica market-based il vantaggio è ancora maggiore, perché i kWh evitati sarebbero stati kWh scoperti: 600.000 × 0,45 = 270 t. Il dato si riporta in una riga a parte, con il metodo usato, come informazione utile a chi legge.
+### SCHERMATA 36 — Fotovoltaico: come si conta e come non si conta [two]
+Colonna «Corretto»:
+- Scope 2 calcolato sui kWh prelevati: 3.200.000 × 0,235 = 752 t
+- Autoconsumo riportato a parte: 600.000 kWh, zero emissioni in fase d’uso
+- Emissioni evitate (141 t) indicate come informazione, senza sottrarle
+- Energia immessa in rete (50.000 kWh) citata come dato, senza effetti sul calcolo
+Colonna «Sbagliato»:
+- Sottrarre l’energia immessa: (3.200.000 − 50.000) × 0,235 = 740,3 t
+- Sottrarre le emissioni evitate: 752 − 141 = 611 t
+- Sommare l’autoconsumo al prelievo: 3.800.000 × 0,235 = 893 t
+- Applicare ai kWh autoprodotti il fattore della rete o il residual mix
+Commento del docente: I tre errori numerici della colonna di destra portano a 740,3, 611 e 893 tonnellate: nessuno è lo Scope 2 di Terrafelix, che resta 752 t. Il primo è il più diffuso: si ragiona «a saldo», come fa la bolletta economica, ma l’energia immessa alle 13 di una domenica di giugno e quella prelevata alle 6 di un lunedì di gennaio non sono la stessa energia. L’inventario conta tutta l’energia prelevata; quella ceduta alla rete riduce semmai le emissioni di chi la consumerà.
+### SCHERMATA 37 — «Togliamo le 141 tonnellate del fotovoltaico?» [case]
+Alla riunione di avanzamento di marzo l’amministratrice delegata Elena Marotta vede la riga «emissioni evitate dal fotovoltaico: 141 t CO2e» e chiede di sottrarla dal totale: «L’impianto l’abbiamo pagato noi, quel beneficio è nostro».
+- Scope 2 location-based con il fotovoltaico: 3.200.000 kWh × 0,235 = 752 t CO2e
+- Scope 2 location-based senza il fotovoltaico: 3.800.000 kWh × 0,235 = 893 t CO2e
+- Differenza: 893 − 752 = 141 t CO2e
+Domanda di lavoro: Il beneficio dell’impianto è già contato oppure no?
+Come ha operato l'azienda: Davide Russo mostra i due calcoli affiancati: il beneficio è la differenza tra 893 e 752 t ed è già nel risultato, perché i kWh autoprodotti non sono mai entrati dal contatore. Nel rapporto resta la riga informativa «emissioni evitate: 141 t CO2e (location-based)», fuori dal totale.
+Commento del docente: Il caso insegna a rispondere a una richiesta legittima con un calcolo, non con un «la norma non lo permette». La direzione vuole vedere il valore dell’investimento: lo si mostra con il confronto «con e senza impianto» e con l’indicatore di autoproduzione, il 15,8% dell’elettricità consumata. Nell’unità 9 l’ampliamento del fotovoltaico sarà una delle leve del piano di riduzione, e lo conteremo allo stesso modo: come minore prelievo dalla rete.
+
+## SEZIONE 8 — Calore, vapore e raffrescamento acquistati
+### SCHERMATA 38 — Calore, vapore e raffrescamento acquistati [section]
+Lo Scope 2 non è solo elettricità. Chi è allacciato a una rete di teleriscaldamento, o compra vapore o acqua refrigerata da un impianto di terzi, consuma energia prodotta altrove. Il conto è lo stesso: kWh termici × fattore.
+- Dove si trova il dato
+- Il fattore del fornitore
+- Attenzione alle unità: MWh e GJ
+- Che cosa fare quando il fattore manca
+### SCHERMATA 39 — Come si contano calore e vapore comprati [text · GHG Protocol · Scope 2 — ISO 14064-1 · categoria 2]
+Emissioni = energia termica acquistata (kWh termici) × fattore di emissione del calore fornito.
+- Il dato di attività: kWh o MWh termici letti dal contatore di calore e riportati nelle fatture del gestore; per il vapore a volte tonnellate o GJ.
+- Il fattore: Va chiesto al fornitore: dipende da come produce il calore (caldaia a gas, cogenerazione, biomassa, recupero di calore industriale).
+- Le unità: 1 MWh = 1.000 kWh; 1 GJ = 277,8 kWh. Convertire tutto in kWh prima di moltiplicare.
+- Se il fattore manca: Buona prassi: stimarlo dal combustibile usato dalla centrale e dal suo rendimento, dichiarando l’ipotesi.
+- Terrafelix: Non acquista calore né vapore: il calore degli essiccatoi viene dal gas naturale bruciato in stabilimento, che è Scope 1.
+Riquadro «Scope 1 o Scope 2?»: Conta chi brucia il combustibile. Caldaia propria: Scope 1. Calore comprato da una centrale di terzi: Scope 2.
+Commento del docente: La domanda da farsi è sempre la stessa: il combustibile lo compro e lo brucio io, oppure compro direttamente il calore? Nel primo caso il dato di attività sono gli Sm³ di gas (unità 4), nel secondo i kWh termici. Capita di trovare aziende che contano due volte: il gas della propria caldaia nello Scope 1 e anche «il calore» nello Scope 2. Per il calore acquistato, di norma, esiste un solo fornitore e nessuno strumento contrattuale: in quel caso location-based e market-based coincidono.
+### SCHERMATA 40 — Esempio svolto: un’azienda allacciata al teleriscaldamento [calc · GHG Protocol · Scope 2]
+Una tintoria industriale acquista calore dalla rete di teleriscaldamento della zona. Il gestore comunica il fattore di emissione del calore fornito.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Calore acquistato (fatture del gestore: 800 MWh termici = 800.000 kWh · fattore dichiarato dal gestore (valore didattico)): 800.000 kWh × 0,2 kg CO2e/kWh = 160.000 kg CO2e
+In tonnellate: 160 t CO2e
+Fonte dei dati: Esempio didattico – il fattore del calore (0,20 kg CO2e/kWh) è un valore didattico
+Commento del docente: Il risultato, 160 t CO2e, va nello Scope 2 accanto all’elettricità, in una riga distinta. Il fattore 0,20 è un valore didattico, dell’ordine di grandezza del calore prodotto con una caldaia a gas; i fattori reali delle reti di teleriscaldamento variano moltissimo, da valori vicini a zero per il recupero di calore di scarto a valori ben più alti per impianti vecchi a combustibili fossili. Per questo il dato va sempre chiesto al gestore, per iscritto e riferito all’anno di inventario.
+### SCHERMATA 41 — Vapore fatturato in gigajoule: prima convertire, poi moltiplicare [calc]
+Un caseificio compra vapore dalla centrale termica di uno stabilimento vicino. La fattura è in GJ: si convertono in kWh (1 GJ = 277,8 kWh) e si applica il fattore.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Conversione in kWh
+- Vapore acquistato (fatture annuali del fornitore · fattore del calore: valore didattico): 1000 GJ × 0,2 kg CO2e/kWh × 277,8 kWh/GJ = 55.560 kg CO2e
+In tonnellate: 55,56 t CO2e
+Fonte dei dati: Esempio didattico – il fattore del calore (0,20 kg CO2e/kWh) è un valore didattico
+Commento del docente: I passaggi sono due: 1.000 GJ × 277,8 = 277.800 kWh; 277.800 kWh × 0,20 = 55.560 kg, cioè 55,6 t CO2e. L’errore tipico è moltiplicare direttamente i GJ per un fattore espresso per kWh: si otterrebbero 200 kg, quasi trecento volte meno. Un controllo utile: se il fornitore comunica il fattore per GJ, lo si può usare direttamente sui GJ, ma mai mescolare le due unità nella stessa riga di calcolo.
+### SCHERMATA 42 — Quando il fornitore non comunica il fattore: la stima [calc]
+Ipotesi dichiarata: il calore è prodotto con una caldaia a gas naturale con rendimento del 90%. Da 1 Sm³ (9,8 kWh) si ottengono 9,8 × 0,90 = 8,82 kWh utili.
+Formula: Emissioni = Dato di attività × Fattore di emissione ÷ Calore utile per Sm³
+- Calore acquistato (800.000 kWh ÷ 8,82 = 90.703 Sm³ di gas bruciati dal fornitore · fattore del gas: valore arrotondato): 800.000 kWh × 2 kg CO2e/Sm³ ÷ 8,82 kWh/Sm³ = 181.405,895692 kg CO2e
+In tonnellate: 181,405896 t CO2e
+Fattore equivalente: 2,0 ÷ 8,82 = 0,227 kg CO2e per kWh di calore. Il rendimento del 90% è un’ipotesi didattica.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); PCI del gas naturale: ISPRA, parametri standard nazionali
+Commento del docente: La stima dà 181,4 t CO2e, contro le 160 t ottenute con il fattore didattico del gestore: stesso ordine di grandezza, come ci si aspetta. È una soluzione di ripiego e va dichiarata come tale nel rapporto, con le ipotesi su combustibile e rendimento. La buona prassi è scegliere ipotesi prudenti, che non sottostimino le emissioni, e inserire nel piano di miglioramento dei dati la richiesta del fattore reale al fornitore per l’anno successivo.
+### SCHERMATA 43 — Prova tu: lo Scope 2 di un’azienda con due vettori energetici [sim]
+Elettricità e calore acquistati si calcolano su righe separate e poi si sommano. Prova a spostare 100.000 kWh dal calore all’elettricità: il totale sale o scende?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Elettricità prelevata dalla rete (location-based): 400.000 kWh × 0,235 kg CO2e/kWh = 94.000 kg CO2e
+- Calore dal teleriscaldamento: 800.000 kWh termici × 0,2 kg CO2e/kWh = 160.000 kg CO2e
+Totale iniziale: 254.000 kg CO2e
+In tonnellate: 254 t CO2e
+Fonte dei dati: Esempio didattico – fattori arrotondati; il fattore del calore è un valore didattico
+Commento del docente: Con i valori iniziali lo Scope 2 è 254 t CO2e: 94 t dall’elettricità e 160 t dal calore. Spostando 100.000 kWh dal calore all’elettricità il totale sale di 3,5 t, perché il fattore elettrico del corso (0,235) è un po’ più alto di quello del calore (0,20). L’esercizio serve a ricordare che un kWh elettrico e un kWh termico non sono intercambiabili: hanno fattori diversi e vanno tenuti su righe distinte, anche quando arrivano dallo stesso fornitore.
+
+## SEZIONE 9 — Veicoli elettrici e ricariche
+### SCHERMATA 44 — Veicoli elettrici e ricariche [section]
+Un’auto elettrica non ha tubo di scarico: le sue emissioni si spostano dallo Scope 1 allo Scope 2. Per contarle bene bisogna sapere dove viene ricaricata, perché una parte dei kWh è quasi sempre già dentro la bolletta dello stabilimento.
+- Ricarica in sede: già in bolletta
+- Ricarica esterna: da aggiungere
+- Dal chilometraggio ai kWh
+- Il rischio del doppio conteggio
+### SCHERMATA 45 — Dove si ricarica e di chi è il veicolo: quattro casi [quad · GHG Protocol · Scope 2]
+Assi: Ricarica: in sede → fuori sede / Veicolo: del dipendente → aziendale
+- Veicolo aziendale, ricarica in sede: kWh già compresi nella bolletta; Sono Scope 2, già contati; Non aggiungere una seconda riga
+- Veicolo aziendale, ricarica fuori sede: Colonnine pubbliche, ricarica a casa rimborsata; kWh da fatture, carte o app di ricarica; Scope 2, da aggiungere alla bolletta
+- Auto del dipendente, ricarica in sede: kWh prelevati dal contatore aziendale; Restano nello Scope 2 dell’azienda; Non ricontarli nel pendolarismo
+- Auto del dipendente, ricarica fuori sede: Energia non acquistata dall’azienda; Scope 3: pendolarismo o viaggi di lavoro; Si calcola nell’unità 6
+Commento del docente: La griglia riassume l’impostazione più diffusa, che l’azienda deve dichiarare nel rapporto: conta chi acquista l’energia e chi controlla il veicolo. Per le ibride plug-in aziendali i conti sono due: i litri di benzina o gasolio vanno nello Scope 1, come visto nell’unità 4, e i kWh ricaricati nello Scope 2. Il dato migliore per le ricariche esterne sono i kWh riportati nelle fatture del gestore delle colonnine; se sono disponibili solo i chilometri, si stima come nella slide seguente.
+### SCHERMATA 46 — Auto elettrica aziendale ricaricata fuori sede: dai km ai kg [calc]
+Quando mancano i kWh fatturati si parte dai chilometri: km × consumo (kWh/km) × fattore dell’elettricità.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Consumo dell’auto
+- Auto elettrica del commerciale (km dal contachilometri · consumo medio: valore didattico · fattore di rete arrotondato): 15.000 km × 0,235 kg CO2e/kWh × 0,18 kWh/km = 634,5 kg CO2e
+Scope 2 location-based: 634,5 kg CO2e
+Passaggio intermedio: 15.000 km × 0,18 kWh/km = 2.700 kWh. Market-based senza garanzie: 2.700 × 0,45 = 1.215 kg CO2e.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); consumo di 0,18 kWh/km: valore didattico
+Commento del docente: Il calcolo ha un passaggio in più rispetto alla bolletta: prima si ricavano i kWh (2.700), poi si applica il fattore. Il risultato, 634,5 kg CO2e, è circa un quarto di quanto emetterebbe un’auto media a combustione sugli stessi chilometri: 15.000 km × 0,17 kg CO2e/km = 2.550 kg, che però sarebbero Scope 1. Quando un’azienda elettrifica la flotta, quindi, lo Scope 1 scende e lo Scope 2 sale: è corretto, e va spiegato a chi legge l’andamento dei due scope.
+### SCHERMATA 47 — 15.000 km: quanto pesa la stessa percorrenza [bar]
+kg CO2e per 15.000 km con i fattori del corso. La prima barra è Scope 1, le altre sono Scope 2.
+- Auto media a combustione (Scope 1): 2550kg
+- Elettrica, market-based con residual mix: 1215kg
+- Elettrica, location-based: 634,5kg
+- Elettrica, market-based con Garanzie d’Origine: 0kg
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); consumo di 0,18 kWh/km: valore didattico
+Commento del docente: Le tre barre dell’auto elettrica descrivono la stessa auto e gli stessi chilometri: cambia solo il metodo di conteggio dell’elettricità. Il grafico considera le sole emissioni di uso; la produzione del veicolo e della batteria e la filiera a monte dei carburanti e dell’energia appartengono allo Scope 3. È un buon esempio per ricordare che ogni confronto va fatto a parità di confini e dichiarando il metodo: «zero emissioni» vale solo nel market-based e solo se le ricariche sono coperte da garanzie documentate.
+### SCHERMATA 48 — I carrelli elevatori elettrici: una riga di troppo [case]
+Nel foglio di calcolo in bozza Davide Russo trova, sotto la riga della bolletta, una seconda riga inserita in buona fede dalla Produzione: «Ricarica carrelli elevatori elettrici». Rosa Iannone ha letto i kWh dal contatore dedicato alla sala ricarica.
+- Riga 1 – Elettricità prelevata dalla rete: 3.200.000 kWh
+- Riga 2 – Ricarica dei carrelli elevatori: 96.000 kWh (lettura del contatore interno)
+- La sala ricarica è alimentata dal quadro generale dello stabilimento
+Domanda di lavoro: La seconda riga va sommata alla prima?
+Come ha operato l'azienda: No. I 96.000 kWh dei carrelli sono già dentro i 3.200.000 kWh misurati dal contatore di prelievo: sommarli significherebbe contarli due volte, con 22.560 kg CO2e in più (96.000 × 0,235), cioè il 3% dello Scope 2. Davide elimina la riga dal calcolo e conserva il dato come ripartizione interna dei consumi.
+Commento del docente: Il dato dei carrelli è illustrativo. La regola generale: nello Scope 2 entra ciò che misura il contatore di prelievo; i contatori interni servono a capire come si ripartisce il consumo tra reparti e usi, non ad aggiungere energia. Lo stesso vale per le colonnine di ricarica delle auto installate nel piazzale e collegate all’impianto dello stabilimento. Il doppio conteggio nasce quasi sempre così: due persone forniscono lo stesso dato da due fonti diverse.
+
+## SEZIONE 10 — Che cosa non è Scope 2
+### SCHERMATA 49 — Che cosa non è Scope 2 [section]
+Attorno all’energia ci sono emissioni che assomigliano allo Scope 2 ma appartengono ad altre voci dell’inventario. Metterle nel posto sbagliato non cambia il totale, ma rende i dati non confrontabili e confonde chi li legge.
+- Perdite di rete e filiera a monte: Scope 3
+- Energia rivenduta a terzi
+- Sedi in affitto e spese condominiali
+- Lavoro da casa
+### SCHERMATA 50 — Sei voci «di confine» e il loro posto nell’inventario [table · GHG Protocol · Scope 2 e Scope 3 — ISO 14064-1 · categorie 2 e 4]
+Colonne: Voce | Dove va | Perché
+- Perdite di rete e filiera a monte dell’elettricità | Scope 3, categoria 3 (categoria 4 ISO) | Avvengono prima del contatore, in attività di altri soggetti
+- Gas e gasolio bruciati in azienda | Scope 1 | La combustione avviene in impianti dell’azienda
+- Elettricità autoprodotta e autoconsumata | Fuori dallo Scope 2, riportata a parte | Non è energia acquistata
+- Energia acquistata e rivenduta a terzi | Fuori dallo Scope 2 dell’azienda | È acquistata ma non consumata dall’azienda: i kWh rivenduti si scorporano e si documentano
+- Uffici in affitto con consumi nelle spese condominiali | Scope 2 per gli spazi che l’azienda controlla, con stima della quota | Conta chi consuma l’energia, non a chi è intestata la bolletta
+- Lavoro da casa dei dipendenti | Scope 3, categoria 7, se incluso | L’energia è acquistata dal dipendente, non dall’azienda
+Le scelte sui casi di confine dipendono dall’approccio di consolidamento (unità 3) e vanno dichiarate nel rapporto.
+Commento del docente: Lo Scope 2 ha una definizione stretta: energia acquistata e consumata dall’organizzazione. Basta che manchi una delle due condizioni e la voce si sposta. Sugli spazi in affitto l’impostazione più diffusa con il controllo operativo è questa: se l’azienda decide come usare gli spazi, l’energia consumata lì è Scope 2 anche se la bolletta è intestata al proprietario; le parti comuni dell’edificio vanno di norma nello Scope 3. È una scelta da dichiarare e da mantenere uguale negli anni.
+### SCHERMATA 51 — Filiera a monte e perdite di rete: Scope 3, non Scope 2 [calc · GHG Protocol · Scope 3, categoria 3]
+Gli stessi kWh della bolletta generano anche emissioni «a monte»: estrazione e trasporto dei combustibili usati dalle centrali ed energia dissipata lungo la rete.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Elettricità – filiera a monte e perdite di rete (stesso dato di attività dello Scope 2 · fattore arrotondato): 3.200.000 kWh × 0,06 kg CO2e/kWh = 192.000 kg CO2e
+In tonnellate: 192 t CO2e
+Questa voce si riporta nello Scope 3, categoria 3 «attività legate a combustibili ed energia» (categoria 4 della ISO 14064-1).
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Le 192 t CO2e non si sommano alle 752 t dello Scope 2: sono un’altra riga dell’inventario, che ritroveremo nell’unità 6 insieme alla filiera a monte di gas e carburanti. Valgono circa un quarto dello Scope 2 location-based, quindi non sono trascurabili. Un errore opposto è usare per lo Scope 2 un fattore «ciclo di vita» che comprende già la filiera a monte: si finirebbe per contarla due volte. Prima di usare un fattore bisogna sempre leggere che cosa include.
+### SCHERMATA 52 — Ufficio in affitto: stimare la propria quota di kWh [calc]
+Uno studio tecnico occupa un quarto di una palazzina. La bolletta è unica, intestata al proprietario, e non ci sono contatori separati: si ripartisce per superficie.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Quota di superficie
+- Elettricità dell’intero edificio (kWh annui comunicati dall’amministratore · quota: 250 m² su 1.000 m² · fattore di rete arrotondato): 120.000 kWh × 0,235 kg CO2e/kWh × 0,25 (25%) = 7050 kg CO2e
+Scope 2 location-based dello studio: 7050 kg CO2e
+In tonnellate: 7,05 t CO2e
+Passaggio intermedio: 120.000 kWh × 0,25 = 30.000 kWh attribuiti allo studio.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: La ripartizione per superficie è una stima: buona prassi è dichiararla e migliorarla nel tempo, per esempio chiedendo l’installazione di un contatore dedicato. Il risultato, 7.050 kg, cioè circa 7 t CO2e, dipende tutto dalla quota scelta: se nell’edificio c’è un’attività che consuma molto più delle altre, come un bar o un centro di calcolo, la superficie non è un buon criterio e conviene usare le ore di utilizzo o la potenza installata. L’importante è non rinunciare al calcolo perché «la bolletta non è nostra».
+### SCHERMATA 53 — Acquistata? Consumata? La mappa per decidere [quad]
+Assi: Consumata dall’azienda: no → sì / Acquistata dall’azienda: no → sì
+- Acquistata, non consumata: Energia rivenduta a terzi; Fuori dallo Scope 2 dell’azienda
+- Acquistata e consumata: Scope 2: Elettricità prelevata dalla rete; Calore, vapore, raffrescamento di terzi; Ricariche esterne dei veicoli aziendali
+- Né acquistata né consumata: Perdite di rete e filiera a monte; Energia di fornitori e trasportatori; Lavoro da casa: Scope 3
+- Consumata, non acquistata: Fotovoltaico autoconsumato: a parte; Caldaia e gruppo elettrogeno propri: Scope 1
+Commento del docente: Due domande bastano a classificare quasi ogni caso: l’energia è stata acquistata dall’azienda? È stata consumata dall’azienda? Solo due «sì» portano allo Scope 2. Per Terrafelix la mappa dà tre numeri legati all’elettricità, in tre posti diversi: 752 t nello Scope 2, 192 t nello Scope 3 per la filiera a monte e le perdite, 141 t di emissioni evitate dal fotovoltaico come informazione a parte. Tenerli distinti è ciò che rende l’inventario leggibile e confrontabile.
+
+## SEZIONE 11 — Indicatori e leve
+### SCHERMATA 54 — Indicatori e leve [section]
+Un numero assoluto dice poco se non lo si rapporta alla produzione e se non si sa come farlo scendere. Chiudiamo il calcolo con gli indicatori di intensità e con un primo sguardo alle leve, che hanno effetti diversi sui due metodi.
+- kWh per tonnellata di pasta
+- kg CO2e per tonnellata, nei due metodi
+- Efficienza, fotovoltaico, garanzie, PPA
+- Che cosa chiede la banca
+### SCHERMATA 55 — Gli indicatori elettrici di Terrafelix [stats]
+- 160 kWh/t: elettricità prelevata dalla rete per tonnellata di pasta (3.200.000 kWh ÷ 20.000 t)
+- 190 kWh/t: elettricità consumata in totale, fotovoltaico compreso (3.800.000 kWh ÷ 20.000 t)
+- 37,6 kg/t: Scope 2 location-based per tonnellata di pasta (752.000 kg CO2e ÷ 20.000 t)
+- 45 kg/t: Scope 2 market-based per tonnellata di pasta (900.000 kg CO2e ÷ 20.000 t)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: I primi due indicatori sono energetici e servono a due scopi diversi. I 190 kWh/t misurano l’efficienza dello stabilimento: quanta elettricità serve per produrre una tonnellata di pasta, da qualunque fonte arrivi. I 160 kWh/t misurano la dipendenza dalla rete, ed è su questi che si calcola lo Scope 2. Se l’anno prossimo il fotovoltaico producesse di più, i 160 scenderebbero senza che lo stabilimento sia diventato più efficiente: per questo conviene seguirli entrambi.
+### SCHERMATA 56 — L’intensità dello Scope 2 per tonnellata di pasta [calc · Indicatori di intensità]
+Si divide il risultato annuo per la produzione dell’anno: così il dato resta confrontabile anche se i volumi cambiano.
+Formula: Emissioni = Dato di attività × Fattore di emissione ÷ Produzione
+- Scope 2 location-based per tonnellata (kWh dalle bollette · produzione dal consuntivo 2025): 3.200.000 kWh × 0,235 kg CO2e/kWh ÷ 20.000 t di pasta = 37,6 kg CO2e/t
+Con il metodo market-based: 900.000 kg CO2e ÷ 20.000 t = 45 kg CO2e per tonnellata.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Per kg di pasta sono 37,6 g CO2e con il location-based e 45 g con il market-based: l’elettricità di stabilimento è una parte piccola dell’impronta di un chilo di pasta, come vedremo nell’unità 8. L’indicatore va sempre accompagnato dal metodo: «45 kg CO2e/t market-based». Sommando lo Scope 1 si ottiene l’indicatore che Terrafelix comunica ai clienti: 150,5 kg CO2e per tonnellata con lo Scope 2 location-based, 157,9 con il market-based.
+### SCHERMATA 57 — Quattro leve, due effetti: location-based e market-based [table]
+Colonne: Leva | Che cosa cambia | Effetto sul location-based | Effetto sul market-based
+- Efficienza: −10% dei prelievi (ipotesi) | 320.000 kWh in meno dalla rete | −75,2 t (da 752 a 676,8 t) | −144 t (da 900 a 756 t)
+- Più fotovoltaico: +500.000 kWh autoconsumati | 500.000 kWh in meno dalla rete | −117,5 t (da 752 a 634,5 t) | −225 t (da 900 a 675 t)
+- Garanzie d’Origine sul 100% del prelievo | I kWh non cambiano | Nessuno: resta 752 t | Si azzera: da 900 a 0 t
+- PPA con un impianto rinnovabile | I kWh non cambiano | Nessuno | Zero sui kWh coperti dal contratto
+Ipotesi: i kWh risparmiati sono quelli senza garanzie (le 1.200 GO restano). Le leve sono valutate una per volta; nell’unità 9 verranno combinate nel piano di riduzione.
+Commento del docente: La tabella contiene il messaggio più utile per chi deve decidere. Le leve fisiche, cioè consumare meno e autoprodurre, riducono entrambi i numeri. Le leve contrattuali, cioè garanzie e PPA, riducono solo il market-based: la rete da cui si preleva resta la stessa. Per questo un’azienda che ha azzerato il market-based con le garanzie continua ad avere un location-based pieno, e deve riportarlo. Il piano di Terrafelix userà entrambe le famiglie di leve: lo vedremo nell’unità 9.
+### SCHERMATA 58 — Scenario efficienza: il market-based con il 10% di prelievi in meno [calc]
+Motori ad alta efficienza e interventi sull’aria compressa riducono il prelievo a 2.880.000 kWh. Le garanzie restano 1.200.000 kWh: scendono i kWh scoperti.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Elettricità con Garanzie d’Origine (invariata: 1.200 GO): 1.200.000 kWh × 0 kg CO2e/kWh = 0 kg CO2e
+- Elettricità senza garanzie (2.000.000 − 320.000 kWh risparmiati · residual mix arrotondato): 1.680.000 kWh × 0,45 kg CO2e/kWh = 756.000 kg CO2e
+Scope 2 market-based dopo l’intervento: 756.000 kg CO2e
+In tonnellate: 756 t CO2e
+Location-based dopo l’intervento: 2.880.000 kWh × 0,235 = 676.800 kg, cioè 676,8 t CO2e.
+Fonte dei dati: Caso studio Pastificio Terrafelix – scenario illustrativo
+Commento del docente: Lo stesso risparmio di 320.000 kWh vale 75,2 t nel location-based e 144 t nel market-based, quasi il doppio: ogni kWh risparmiato è un kWh scoperto in meno, che valeva 0,45 e non 0,235. È un argomento concreto a favore dell’efficienza anche per chi ragiona solo in market-based. Il 10% è un’ipotesi illustrativa, non un dato del piano: serve a mostrare il metodo dello scenario, che consiste nel rifare il calcolo con i nuovi kWh e confrontare prima e dopo.
+### SCHERMATA 59 — La banca chiede il dato market-based [case · Caso studio · obiettivo 2030]
+La banca che propone a Terrafelix il finanziamento legato a obiettivi di sostenibilità chiede il valore di partenza di «Scope 1 + Scope 2 market-based». Chiara Vitale, che cura il rapporto con la banca, ha sul tavolo due numeri e chiede a Davide Russo quale inviare.
+- Scope 1: 2.257,8 t CO2e
+- Scope 1 + Scope 2 location-based: 2.257,8 + 752 = 3.009,8 t CO2e
+- Scope 1 + Scope 2 market-based: 2.257,8 + 900 = 3.157,8 t CO2e
+- Obiettivo approvato dalla direzione: −42% entro il 2030 sul dato market-based, cioè 1.831,5 t CO2e
+Domanda di lavoro: Quale valore va comunicato, e come?
+Come ha operato l'azienda: Si comunica 3.157,8 t CO2e, perché la banca chiede il market-based e l’obiettivo aziendale è fissato su quel metodo. Nella stessa scheda Davide riporta anche il dato location-based (3.009,8 t), la quota di kWh coperta da garanzie (37,5%) e i fattori usati con le fonti.
+Commento del docente: Inviare 3.009,8 al posto di 3.157,8 avrebbe abbassato il valore di partenza di 148 t, rendendo poi più difficile dimostrare la riduzione. Con l’anno base market-based ogni garanzia d’origine in più e ogni kWh risparmiato si vedranno nel monitoraggio annuale. Il caso mostra perché non si sceglie il metodo secondo la convenienza del momento: l’anno base, l’obiettivo e i dati che la banca verificherà ogni anno devono parlare la stessa lingua.
+
+## SEZIONE 12 — Sintesi dell’unità
+### SCHERMATA 60 — Sintesi dell’unità [section]
+Lo Scope 2 di Terrafelix è calcolato: 752 t CO2e location-based e 900 t CO2e market-based. Ripassiamo le formule, il percorso in sei passi, i controlli e gli errori da evitare prima di affrontare la parte più grande dell’inventario.
+- Il formulario dello Scope 2
+- Il percorso in sei passi
+- La lista di controllo
+- Gli errori tipici
+### SCHERMATA 61 — Il formulario dello Scope 2 [table]
+Colonne: Che cosa si calcola | Formula | Fattore del corso | Terrafelix 2025
+- Elettricità, location-based | kWh prelevati × fattore medio di rete | 0,235 kg CO2e/kWh | 752 t CO2e
+- Elettricità con garanzie, market-based | kWh garantiti × 0 | 0 kg CO2e/kWh | 0 t CO2e
+- Elettricità senza garanzie, market-based | kWh scoperti × residual mix | 0,45 kg CO2e/kWh | 900 t CO2e
+- Calore o vapore acquistati | kWh termici × fattore del fornitore | 0,20 kg CO2e/kWh (didattico) | non presente
+- Veicoli elettrici ricaricati fuori sede | km × kWh/km × fattore dell’elettricità | 0,18 kWh/km (didattico) | non presente
+- Emissioni evitate dall’autoconsumo (a parte) | kWh autoconsumati × fattore medio di rete | 0,235 kg CO2e/kWh | 141 t CO2e, non sottratte
+- Filiera a monte e perdite (Scope 3) | kWh prelevati × fattore a monte | 0,06 kg CO2e/kWh | 192 t CO2e
+I fattori sono valori arrotondati a scopo didattico: in un inventario reale si usa la fonte ufficiale aggiornata all’anno di riferimento (ISPRA, AIB, dati del fornitore) e la si cita nel rapporto.
+Commento del docente: Il formulario mostra che tutta l’unità sta in una sola moltiplicazione ripetuta con fattori diversi. Ciò che cambia da una riga all’altra è la domanda che ci si pone: quanta energia, da dove viene, con quale prova. Le ultime due righe non sono Scope 2: sono nel formulario perché usano lo stesso dato di attività e perché sono quelle che più spesso finiscono nel posto sbagliato. Conviene tenere questa tabella come prima pagina del foglio di calcolo dell’elettricità.
+### SCHERMATA 62 — Lo Scope 2 in sei passi [flow]
+1. 1. Elencare: Tutti i punti di prelievo e i vettori acquistati: elettricità, calore, vapore, raffrescamento.
+2. 2. Sommare: I kWh consumati nei 12 mesi dell’anno, con letture reali e conguagli attribuiti all’anno giusto.
+3. 3. Location-based: kWh prelevati × fattore medio della rete, con fonte e anno.
+4. 4. Market-based: kWh divisi per strumento contrattuale; ai kWh scoperti il residual mix.
+5. 5. Controllare: Unità, doppi conteggi, fotovoltaico, ricariche, voci che spettano allo Scope 3.
+6. 6. Riportare: Due righe distinte, con etichetta del metodo, fattori, fonti e prove.
+Commento del docente: Per Terrafelix i sei passi hanno richiesto poche ore di lavoro: un solo punto di prelievo, dodici bollette, un contratto, un attestato di garanzie d’origine. In aziende con molte sedi il lavoro vero è il primo passo, cioè costruire e tenere aggiornato l’elenco dei punti di prelievo: ogni apertura, chiusura o trasloco lo modifica. Un buon controllo finale è confrontare i kWh totali con quelli dell’anno precedente e con la spesa elettrica in contabilità: scostamenti senza spiegazione vanno chiariti.
+### SCHERMATA 63 — Lista di controllo prima di chiudere lo Scope 2 [checklist]
+- Tutti i punti di prelievo sono compresi: elenco dei POD confrontato con contratti e contabilità
+- I kWh sono di energia attiva e coprono 12 mesi: niente kvarh, niente kW, competenza corretta di stime e conguagli
+- Le unità sono coerenti: kWh con fattori per kWh; MWh e GJ convertiti prima di moltiplicare
+- Il fattore location-based ha fonte e anno: media della rete del Paese in cui avviene il consumo
+- Ogni kWh a fattore ridotto ha una prova: attestato di annullamento delle garanzie, contratto, dichiarazione del fornitore
+- Ai kWh scoperti è applicato il residual mix: non la media di rete
+- Fotovoltaico e ricariche non sono contati due volte: autoconsumo a parte; energia immessa non sottratta; ricariche in sede già in bolletta
+- I due risultati sono riportati separati: con l’etichetta del metodo, mai sommati
+Commento del docente: La lista segue l’ordine con cui un verificatore esamina lo Scope 2: prima la completezza dei dati, poi le unità, poi i fattori, infine la presentazione. Vale la pena usarla come pagina di controllo firmata da chi ha fatto il calcolo e da una seconda persona che lo ha riletto. Nell’unità 7 vedremo come questi controlli entrano nella gestione della qualità dell’inventario e nel fascicolo delle evidenze per la verifica di terza parte.
+### SCHERMATA 64 — Gli errori tipici dello Scope 2 [two]
+Colonna «Corretto»:
+- Verificare l’unità del dato: kWh, MWh o GJ
+- Usare il fattore più recente disponibile per l’anno di inventario e citarlo
+- Tenere distinti location-based e market-based in ogni tabella
+- Riportare la filiera a monte e le perdite nello Scope 3
+- Spiegare alla direzione perché i due numeri sono diversi
+Colonna «Sbagliato»:
+- Moltiplicare i MWh per un fattore espresso per kWh
+- Riusare per anni lo stesso fattore perché «è già nel foglio»
+- Presentare un solo numero senza dire con quale metodo è calcolato
+- Sottrarre l’energia immessa in rete o le emissioni evitate
+- Considerare «a zero emissioni» l’azienda che ha solo comprato garanzie
+Commento del docente: L’ultimo errore merita una riflessione. Un’azienda che copre con garanzie tutto il prelievo ha un market-based pari a zero, ed è un risultato legittimo; ma il suo location-based è intatto, lo Scope 1 e lo Scope 3 pure, e i suoi consumi non sono diminuiti di un kWh. Per Terrafelix lo Scope 2 vale il 3,5% dell’inventario: azzerarlo sulla carta lascerebbe il restante 96,5%. Le garanzie sono una leva utile, non un punto di arrivo.
+### SCHERMATA 65 — I punti chiave dell’unità [summary]
+1. Lo Scope 2 (categoria 2 della ISO 14064-1) conta le emissioni indirette dell’energia acquistata e consumata: elettricità, calore, vapore, raffrescamento.
+2. Il dato di attività sono i kWh di energia attiva prelevati nell’anno, per tutti i punti di prelievo: per Terrafelix 3.200.000 kWh.
+3. Location-based: kWh × fattore medio della rete. Terrafelix: 3.200.000 × 0,235 = 752 t CO2e. Il contratto non conta.
+4. Market-based: kWh divisi per strumento contrattuale; ai kWh scoperti il residual mix. Terrafelix: 2.000.000 × 0,45 = 900 t CO2e.
+5. Il market-based può essere più alto del location-based: succede quando molti kWh restano senza garanzie e prendono il residual mix.
+6. I due risultati si riportano entrambi, separati e mai sommati; la ISO 14064-1 chiede il location-based e ammette il market-based in aggiunta.
+7. Il fotovoltaico autoconsumato riduce il prelievo e si riporta a parte; l’energia immessa in rete e le emissioni evitate non si sottraggono.
+8. Ricariche in sede e contatori interni sono già nella bolletta; filiera a monte e perdite di rete (192 t) vanno nello Scope 3.
+9. Efficienza e autoproduzione riducono entrambi i numeri; garanzie d’origine e PPA riducono solo il market-based.
+10. Prossima unità: lo Scope 3, la catena del valore, che per Terrafelix vale l’86,1% dell’inventario.
+Commento del docente: Con questa unità Terrafelix ha chiuso i conti «dentro i cancelli»: 2.257,8 t di Scope 1 e 752 t di Scope 2 location-based, in tutto 3.009,8 t CO2e, cioè meno del 14% dell’inventario. Nell’unità 6 usciremo dallo stabilimento per contare acquisti, trasporti, rifiuti, viaggi e pendolarismo: metodi più semplici di quanto si creda, ma dati più difficili da raccogliere. Prima di proseguire conviene rifare da soli, su un foglio, i due calcoli di questa unità: 752 e 900 devono tornare senza guardare le slide.

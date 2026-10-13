@@ -1,0 +1,871 @@
+[
+ {
+  "id": "fadcfp01_m01_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 1",
+  "titolo": "Le basi del conteggio climatico",
+  "corsoLabel": "Carbon Footprint · ISO 14064-1 · ISO 14067",
+  "eyebrow": "Modulo 1",
+  "sottotitolo": "Effetto serra naturale e contributo umano; carbonio come scorciatoia dei gas serra; CO2e come misura comune; organizzazione e prodotto come oggetti distinti; errori iniziali da evitare.",
+  "agenda": [
+   "Tre numeri che portano in azienda",
+   "I sette gas degli inventari",
+   "Il primo sopralluogo al pastificio",
+   "CO2, CO2e e GWP distinti",
+   "I valori cambiano con la serie IPCC"
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s002",
+  "layout": "timeline",
+  "kicker": "Contesto",
+  "titolo": "Tre numeri che portano in azienda",
+  "intro": "1,1 °C già osservato, 57 miliardi di tonnellate CO2e globali, -55% UE entro il 2030: dai dati scientifici nascono richieste concrete a filiere, banche e bandi.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "1992 · Convenzione quadro ONU",
+    "d": "Il problema climatico entra nel quadro internazionale"
+   },
+   {
+    "t": "02",
+    "h": "1997 · Protocollo di Kyoto",
+    "d": "Primi obiettivi quantitativi e gas degli inventari"
+   },
+   {
+    "t": "03",
+    "h": "2015 · Accordo di Parigi",
+    "d": "Ben sotto 2 °C, sforzi verso 1,5"
+   },
+   {
+    "t": "04",
+    "h": "2021 · Legge europea sul clima",
+    "d": "Obiettivi vincolanti: -55% al 2030, neutralità 2050"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s003",
+  "layout": "cards",
+  "kicker": "Inventario GHG",
+  "titolo": "I sette gas degli inventari",
+  "intro": "Negli inventari non c'è solo la CO2 della combustione: i sette gas o famiglie vanno cercati dove l'azienda brucia, raffredda, isola elettricamente, gestisce reti gas o processi biologici.",
+  "cards": [
+   {
+    "h": "CO2",
+    "d": "Combustibili, forni, caldaie, motori"
+   },
+   {
+    "h": "CH4",
+    "d": "Reti gas, discariche, depurazione, allevamenti"
+   },
+   {
+    "h": "N2O",
+    "d": "Agricoltura e alcune combustioni"
+   },
+   {
+    "h": "HFC",
+    "d": "Climatizzatori, celle frigorifere, pompe di calore"
+   },
+   {
+    "h": "PFC",
+    "d": "Elettronica e metallurgia specialistiche"
+   },
+   {
+    "h": "SF6",
+    "d": "Apparecchiature elettriche media o alta tensione"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s004",
+  "layout": "flusso",
+  "kicker": "Caso studio",
+  "titolo": "Il primo sopralluogo al pastificio",
+  "intro": "Davide Russo non parte da formule: percorre il sito, distingue sorgenti visibili e meno intuitive, verifica che cosa è presente e documenta anche ciò che può escludere con tracciabilità.",
+  "passi": [
+   {
+    "h": "Combustioni fisse",
+    "d": "Essiccatoi, centrale termica, gruppo elettrogeno, motopompa"
+   },
+   {
+    "h": "Mezzi aziendali",
+    "d": "Furgoni e auto: gasolio e benzina"
+   },
+   {
+    "h": "Circuiti frigoriferi",
+    "d": "Climatizzatori R-410A e gruppo con HFC-134a"
+   },
+   {
+    "h": "Assenze rilevanti",
+    "d": "Niente allevamenti, discariche, processi chimici dedicati"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s005",
+  "layout": "numeri",
+  "kicker": "Lessico essenziale",
+  "titolo": "CO2, CO2e e GWP distinti",
+  "intro": "Sono tre livelli diversi dello stesso linguaggio climatico: il gas specifico, l'unità comune con cui si somma e il fattore che traduce masse diverse nello stesso conto.",
+  "numeri": [
+   {
+    "n": "CO2",
+    "h": "Un gas serra specifico, tipico delle combustioni",
+    "d": ""
+   },
+   {
+    "n": "CO2e",
+    "h": "L'unità comune che somma gas diversi",
+    "d": ""
+   },
+   {
+    "n": "GWP",
+    "h": "Il tasso di cambio verso la CO2 equivalente",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s006",
+  "layout": "tabella",
+  "kicker": "GWP AR6",
+  "titolo": "I valori cambiano con la serie IPCC",
+  "cols": [
+   "Gas",
+   "GWP AR6"
+  ],
+  "righe": [
+   [
+    "CO2",
+    "1"
+   ],
+   [
+    "CH4 fossile",
+    "29,8"
+   ],
+   [
+    "N2O",
+    "273"
+   ],
+   [
+    "HFC-32",
+    "771"
+   ],
+   [
+    "HFC-134a",
+    "1.530"
+   ],
+   [
+    "HFC-125",
+    "3.740"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s007",
+  "layout": "calcolo",
+  "kicker": "Calcolo base",
+  "titolo": "Dalla massa del gas alla CO2e",
+  "intro": "Quando la formula è chiara, la differenza la fanno identificazione del gas, serie IPCC, unità corrette e trasparenza del passaggio. Qui vedi il primo conto completo, dai chilogrammi alle tonnellate.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Metano (CH4) di origine fossile",
+    "n": "per esempio una perdita di gas naturale",
+    "a": 1,
+    "au": "kg",
+    "ef": 29.8,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Protossido di azoto (N2O)",
+    "n": "per esempio da fertilizzanti azotati",
+    "a": 1,
+    "au": "kg",
+    "ef": 273,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "HFC-134a",
+    "n": "gas refrigerante di un gruppo frigorifero",
+    "a": 1,
+    "au": "kg",
+    "ef": 1530,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {
+   "r": "CO2 equivalente",
+   "a": "Massa del gas",
+   "ef": "GWP (AR6)"
+  },
+  "dec": null,
+  "totale": "Tre chilogrammi di gas, in tutto",
+  "_atteso": 1832.8,
+  "fonte": "IPCC AR6, GWP a 100 anni (riepilogo GHG Protocol, 2024)"
+ },
+ {
+  "id": "fadcfp01_m01_s008",
+  "layout": "split",
+  "kicker": "Definizione operativa",
+  "titolo": "I quattro elementi della carbon footprint",
+  "lead": "È la somma delle emissioni di gas serra, al netto delle eventuali rimozioni, riferita a un oggetto preciso e riportata in CO2e. Senza questi quattro elementi, il numero resta ambiguo.",
+  "punti": [
+   {
+    "h": "Oggetto",
+    "d": "Organizzazione, prodotto, sito, servizio o evento"
+   },
+   {
+    "h": "Riferimento",
+    "d": "Anno, periodo o unità funzionale"
+   },
+   {
+    "h": "Confini",
+    "d": "Che cosa entra e che cosa resta fuori"
+   },
+   {
+    "h": "Regole",
+    "d": "Metodi, fattori e criteri di calcolo"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s009",
+  "layout": "confronto",
+  "kicker": "Distinzione chiave",
+  "titolo": "Organizzazione e prodotto non coincidono",
+  "intro": "Stessa espressione, domande diverse: un inventario annuale dell'impresa e un conto per unità funzionale lungo il ciclo di vita. I dati si parlano, ma non si sostituiscono.",
+  "a": {
+   "h": "Organizzazione",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Quanto emette l'impresa in un anno"
+    },
+    {
+     "d": "Unità tipica: t CO2e/anno"
+    },
+    {
+     "d": "Serve a obiettivi, banche, clienti"
+    },
+    {
+     "d": "Terrafelix 2025: 21.692,5 t CO2e"
+    }
+   ]
+  },
+  "b": {
+   "h": "Prodotto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Quanto emette una unità funzionale"
+    },
+    {
+     "d": "Unità tipica: kg o g CO2e"
+    },
+    {
+     "d": "Guarda il ciclo di vita"
+    },
+    {
+     "d": "1 kg pasta: 1,47 culla-tomba; 0,97 uscita"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m01_s010",
+  "layout": "evidenza",
+  "kicker": "Ordini di grandezza",
+  "titolo": "Tre scale per leggere le emissioni",
+  "eyebrow": "",
+  "testo": "Gli ordini di grandezza servono a togliere nebbia ai numeri: collegano il risultato a una scala riconoscibile, aiutano a controllare errori di unità e rendono il dato spiegabile a chi decide.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m01_s011",
+  "layout": "numeri",
+  "kicker": "Ordini di grandezza",
+  "titolo": "Cinque ancore per capire una tonnellata",
+  "intro": "Leggere una tonnellata al contrario significa chiedersi quale consumo la genera: così il totale diventa un’immagine concreta, utile per distinguere una voce marginale da una voce strutturale.",
+  "numeri": [
+   {
+    "n": "500 Sm³",
+    "h": "gas naturale",
+    "d": ""
+   },
+   {
+    "n": "4.255 kWh",
+    "h": "elettricità di rete",
+    "d": ""
+   },
+   {
+    "n": "377 l",
+    "h": "gasolio",
+    "d": ""
+   },
+   {
+    "n": "435 l",
+    "h": "benzina",
+    "d": ""
+   },
+   {
+    "n": "5.882 km",
+    "h": "auto media",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s012",
+  "layout": "calcolo",
+  "kicker": "Ordini di grandezza",
+  "titolo": "Un anno familiare vale poco più di quattro tonnellate",
+  "intro": "Un piccolo inventario domestico mostra la gerarchia delle voci: auto e gas di casa pesano molto più dell’elettricità, mentre il volo breve è significativo ma non domina il totale annuo.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Automobile",
+    "n": "chilometri dal contachilometri",
+    "a": 10000,
+    "au": "km",
+    "ef": 0.17,
+    "efu": "kg CO2e/km"
+   },
+   {
+    "l": "Gas per riscaldamento e cucina",
+    "n": "somma delle bollette dell’anno",
+    "a": 800,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Elettricità di casa",
+    "n": "somma delle bollette dell’anno",
+    "a": 2500,
+    "au": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   },
+   {
+    "l": "Un viaggio in aereo, corto raggio",
+    "n": "andata e ritorno di due persone: 2.000 pkm in tutto",
+    "a": 2000,
+    "au": "pkm",
+    "ef": 0.18,
+    "efu": "kg CO2e/pkm"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 4247.5,
+  "piede": "Sono contati solo i consumi diretti di energia e i viaggi: mancano cibo, acquisti e servizi.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m01_s013",
+  "layout": "ciclo",
+  "kicker": "Perché le imprese misurano",
+  "titolo": "Chi chiede i numeri di emissione",
+  "intro": "La stessa parola, emissioni, può nascondere richieste molto diverse. Identificare chi formula la domanda è il primo passo per scegliere il conto giusto e non produrre un dato formalmente corretto ma inutile.",
+  "ciclo": false,
+  "centro": "I numeri dell’azienda",
+  "nodi": [
+   {
+    "h": "Clienti e filiere",
+    "d": "dati per fornitura e prodotto"
+   },
+   {
+    "h": "Banche e investitori",
+    "d": "rischio climatico e traiettoria"
+   },
+   {
+    "h": "Bandi e gare",
+    "d": "requisiti o criteri premianti"
+   },
+   {
+    "h": "Regole europee",
+    "d": "rendicontazione e sistemi regolati"
+   },
+   {
+    "h": "Direzione aziendale",
+    "d": "priorità, costi, investimenti"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s014",
+  "layout": "cards",
+  "kicker": "Scelta dello strumento",
+  "titolo": "La domanda decide lo strumento",
+  "intro": "Prima di contare, va chiarito l’oggetto: organizzazione, prodotto, percorso di riduzione o adempimento regolato. Volontario e obbligatorio possono convergere nel mercato, ma non sono la stessa cosa.",
+  "cards": [
+   {
+    "h": "Organizzazione",
+    "d": "quando la domanda riguarda l’impresa intera"
+   },
+   {
+    "h": "Prodotto",
+    "d": "quando conta l’unità venduta"
+   },
+   {
+    "h": "Dichiarazioni e obiettivi",
+    "d": "servono verificabilità e comunicazione prudente"
+   },
+   {
+    "h": "Regimi regolati",
+    "d": "ETS, CBAM, ESRS hanno logiche proprie"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s015",
+  "layout": "organigramma",
+  "kicker": "Standard GHG",
+  "titolo": "Le quattro famiglie di standard GHG",
+  "intro": "GHG Protocol e norme ISO non competono tra loro: organizzano oggetti diversi del conteggio e rendono il dato leggibile, verificabile e confrontabile.",
+  "radice": {
+   "h": "Le regole del conteggio GHG",
+   "d": "standard volontari per organizzazioni, prodotti, progetti e claim"
+  },
+  "rami": [
+   {
+    "h": "GHG Protocol",
+    "d": "il lessico più diffuso in azienda",
+    "voci": [
+     "Corporate Standard",
+     "Scope 2 Guidance",
+     "Scope 3 Standard",
+     "Product Standard"
+    ]
+   },
+   {
+    "h": "ISO 14064",
+    "d": "organizzazione, progetti, verifica",
+    "voci": [
+     "Parte 1: inventario",
+     "Parte 2: progetti",
+     "Parte 3: verifica e validazione",
+     "In Italia: UNI EN ISO 14064-1:2019"
+    ]
+   },
+   {
+    "h": "ISO 14067",
+    "d": "carbon footprint di prodotto",
+    "voci": [
+     "Basata sulla logica LCA"
+    ]
+   },
+   {
+    "h": "ISO 14068-1",
+    "d": "neutralità carbonica strutturata",
+    "voci": [
+     "Quantificare",
+     "Ridurre",
+     "Compensare il residuo",
+     "Sostituisce PAS 2060"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s016",
+  "layout": "timeline",
+  "kicker": "Cronologia dei riferimenti",
+  "titolo": "Sei date che aiutano a orientarsi",
+  "intro": "Le date non sono un dettaglio editoriale: aiutano a capire se un riferimento è attuale, se un capitolato cita un’edizione precisa e se una prassi è stata poi superata.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "2004",
+    "d": "GHG Protocol Corporate Standard"
+   },
+   {
+    "t": "02",
+    "h": "2011",
+    "d": "Scope 3 Standard e Product Standard"
+   },
+   {
+    "t": "03",
+    "h": "2015",
+    "d": "Scope 2 Guidance"
+   },
+   {
+    "t": "04",
+    "h": "2018",
+    "d": "ISO 14064-1 e ISO 14067"
+   },
+   {
+    "t": "05",
+    "h": "2019",
+    "d": "ISO 14064-3"
+   },
+   {
+    "t": "06",
+    "h": "2023",
+    "d": "ISO 14068-1 sostituisce PAS 2060"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s017",
+  "layout": "ciclo",
+  "kicker": "Classificazione per scope",
+  "titolo": "I tre scope visti dai cancelli",
+  "intro": "L’immagine dei cancelli rende intuitiva la logica: ciò che l’azienda possiede o controlla sta dentro, l’energia acquistata fa da ponte, il resto si distribuisce lungo la catena del valore.",
+  "ciclo": false,
+  "centro": "I cancelli dell’azienda",
+  "nodi": [
+   {
+    "h": "Scope 1",
+    "d": "emissioni dirette da sorgenti controllate"
+   },
+   {
+    "h": "Scope 2",
+    "d": "energia acquistata e consumata"
+   },
+   {
+    "h": "Scope 3",
+    "d": "catena del valore a monte e a valle"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s018",
+  "layout": "cards",
+  "kicker": "Esempi operativi",
+  "titolo": "Quattro esempi per classificare gli scope",
+  "intro": "Gli esempi concreti evitano l’errore più comune: classificare in base alla vicinanza fisica invece che al controllo della sorgente e alla posizione nella catena del valore.",
+  "cards": [
+   {
+    "h": "Scope 1",
+    "d": "caldaie, veicoli aziendali, processi, perdite refrigeranti"
+   },
+   {
+    "h": "Scope 2",
+    "d": "elettricità, calore, vapore o raffrescamento acquistati"
+   },
+   {
+    "h": "Scope 3 a monte",
+    "d": "fornitori, imballaggi, trasporti, rifiuti, commuting"
+   },
+   {
+    "h": "Scope 3 a valle",
+    "d": "distribuzione, uso dei prodotti, fine vita"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s019",
+  "layout": "split",
+  "kicker": "Caso studio",
+  "titolo": "Pastificio Terrafelix: profilo e squadra di progetto",
+  "lead": "Un caso didattico credibile: media impresa alimentare, un solo stabilimento, flussi materiali ed energetici rilevanti e un coordinatore che deve raccogliere dati distribuiti in funzioni diverse.",
+  "punti": [
+   {
+    "h": "Profilo 2025",
+    "d": "90 dipendenti, 36 milioni, 20.000 tonnellate di pasta"
+   },
+   {
+    "h": "Sito produttivo",
+    "d": "Tre linee a gas, fotovoltaico da 450 kWp"
+   },
+   {
+    "h": "Confini semplici",
+    "d": "Un solo stabilimento, nessuna partecipata, anno base 2025"
+   },
+   {
+    "h": "Squadra di progetto",
+    "d": "Elena Marotta affida a Davide Russo; supporto da amministrazione e logistica"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s020",
+  "layout": "ciambella",
+  "kicker": "Caso studio",
+  "titolo": "Le emissioni 2025 per scope",
+  "intro": "Il totale conta solo quando lo scomponi. Nel pastificio la quota dominante non è nello stabilimento ma nella catena del valore: è il primo segnale utile per decidere dove approfondire dati e priorità.",
+  "unita": "t CO2e",
+  "totale": {
+   "n": "21.692,5",
+   "eti": "Totale inventario 2025"
+  },
+  "voci": [
+   {
+    "l": "Scope 1",
+    "v": 2257.8
+   },
+   {
+    "l": "Scope 2",
+    "v": 752
+   },
+   {
+    "l": "Scope 3",
+    "v": 18682.7
+   }
+  ],
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m01_s021",
+  "layout": "confronto",
+  "kicker": "Lettura manageriale",
+  "titolo": "Che cosa insegnano i primi risultati",
+  "intro": "I numeri iniziano a contare quando separi peso climatico, grado di controllo e tempi di azione. La direzione deve capire subito che cosa gestire internamente e che cosa presidiare lungo la filiera.",
+  "a": {
+   "h": "Ciò che controlli",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Scope 1 e 2: 13,9%"
+    },
+    {
+     "d": "Gas, elettricità, impianti"
+    },
+    {
+     "d": "Leve rapide: efficienza e gestione"
+    }
+   ]
+  },
+  "b": {
+   "h": "Ciò che devi influenzare",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Scope 3: 86,1%"
+    },
+    {
+     "d": "Semola circa due terzi del totale"
+    },
+    {
+     "d": "Fornitori, criteri, tempi più lunghi"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m01_s022",
+  "layout": "flusso",
+  "kicker": "Metodo",
+  "titolo": "Le cinque domande del conteggio",
+  "intro": "La formula resta sempre una: emissioni uguale dato di attività per fattore di emissione. Per renderla affidabile, ogni riga dell'inventario deve superare sempre le stesse cinque verifiche.",
+  "passi": [
+   {
+    "h": "Che cosa conto",
+    "d": "Nomina la sorgente senza ambiguità"
+   },
+   {
+    "h": "Quanto vale",
+    "d": "Dato, unità e documento di origine"
+   },
+   {
+    "h": "Quale fattore",
+    "d": "Stessa unità del dato di attività"
+   },
+   {
+    "h": "Da dove viene",
+    "d": "Fonte del fattore e anno di riferimento"
+   },
+   {
+    "h": "È plausibile",
+    "d": "Controllo finale in chilogrammi e tonnellate"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s023",
+  "layout": "simulatore",
+  "kicker": "Strumenti",
+  "titolo": "Scenari semplici con un foglio ordinato",
+  "intro": "All'inizio basta un foglio leggibile e rifacibile. Il vero salto di qualità è usarlo per testare scenari, capire quali righe spostano il totale e decidere dove agire prima.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gas naturale",
+    "v": 3000,
+    "u": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Elettricità prelevata dalla rete",
+    "v": 20000,
+    "u": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   },
+   {
+    "l": "Gasolio",
+    "v": 2500,
+    "u": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Benzina",
+    "v": 0,
+    "u": "l",
+    "ef": 2.3,
+    "efu": "kg CO2e/l"
+   }
+  ],
+  "piede": "Con i valori iniziali il totale è 17.325 kg CO2e, cioè circa 17,3 t CO2e.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m01_s024",
+  "layout": "tabella",
+  "kicker": "Percorso del corso",
+  "titolo": "Le dieci unità del percorso",
+  "cols": [
+   "Unità",
+   "Focus",
+   "Durata"
+  ],
+  "righe": [
+   [
+    "1",
+    "Concetti di base",
+    "2 h"
+   ],
+   [
+    "2",
+    "La formula del conteggio",
+    "2,5 h"
+   ],
+   [
+    "3",
+    "Impostare l'inventario",
+    "2 h"
+   ],
+   [
+    "4",
+    "Calcolare lo Scope 1",
+    "3 h"
+   ],
+   [
+    "5",
+    "Calcolare lo Scope 2",
+    "2,5 h"
+   ],
+   [
+    "6",
+    "Calcolare lo Scope 3",
+    "3 h"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m01_s025",
+  "layout": "gantt",
+  "kicker": "Caso studio",
+  "titolo": "Il calendario 2026 del progetto",
+  "intro": "L'inventario del 2025 si costruisce l'anno dopo, quando bollette, fatture, registri e dati logistici sono finalmente completi. Il tempo si distribuisce in modo diverso tra avvio, raccolta, consolidamento e uso dei risultati.",
+  "periodi": [
+   "Gen",
+   "Feb",
+   "Mar",
+   "Apr",
+   "Mag",
+   "Giu",
+   "Lug",
+   "Ago",
+   "Set",
+   "Ott",
+   "Nov",
+   "Dic"
+  ],
+  "attivita": [
+   {
+    "t": "Avvio e confini",
+    "da": 1,
+    "a": 1,
+    "k": 1
+   },
+   {
+    "t": "Raccolta dati Scope 1 e 2",
+    "da": 2,
+    "a": 3,
+    "k": 1
+   },
+   {
+    "t": "Scope 3",
+    "da": 4,
+    "a": 5,
+    "k": 1
+   },
+   {
+    "t": "Consolidamento, incertezza, rapporto GHG",
+    "da": 6,
+    "a": 6,
+    "k": 1
+   },
+   {
+    "t": "Verifica di terza parte",
+    "da": 7,
+    "a": 7,
+    "k": 1
+   },
+   {
+    "t": "Carbon footprint di prodotto",
+    "da": 9,
+    "a": 10,
+    "k": 1
+   },
+   {
+    "t": "Piano di riduzione e obiettivi",
+    "da": 11,
+    "a": 11,
+    "k": 1
+   },
+   {
+    "t": "Comunicazione ai clienti",
+    "da": 12,
+    "a": 12,
+    "k": 1
+   }
+  ],
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m01_s026",
+  "layout": "evidenza",
+  "kicker": "Autovalutazione",
+  "titolo": "Le abilità da verificare ora",
+  "eyebrow": "",
+  "testo": "Prima del test dovresti saper fare due cose insieme: calcolare correttamente e parlare con precisione. Se manca una delle due, il numero resta fragile o comunica il messaggio sbagliato.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m01_s027",
+  "layout": "chiusura",
+  "kicker": "Chiusura modulo",
+  "titolo": "Quello da portare alla prossima unità",
+  "modNum": "01",
+  "punti": [
+   {
+    "h": "Fenomeno e causa",
+    "d": "L'effetto serra è naturale; l'uomo lo rafforza"
+   },
+   {
+    "h": "Unità comune",
+    "d": "Si sommano gas diversi in CO2e con il GWP"
+   },
+   {
+    "h": "Metodo unico",
+    "d": "Ogni riga nasce da dato di attività per fattore"
+   },
+   {
+    "h": "Attenzione alle sorgenti piccole",
+    "d": "Una massa minima può pesare molto sul totale"
+   }
+  ],
+  "prossimo": {
+   "modulo": "02",
+   "titolo": "La formula del conteggio: dati di attività, fattori di emissione, unità di misura"
+  }
+ }
+]

@@ -1,0 +1,962 @@
+[
+ {
+  "id": "fadcfp01_m09_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 09",
+  "titolo": "Dai numeri alle priorità di riduzione",
+  "corsoLabel": "Carbon Footprint · ISO 14064-1 · ISO 14067",
+  "eyebrow": "Modulo 09",
+  "sottotitolo": "In questo modulo: priorità sulle voci che pesano davvero; gerarchia di mitigazione; target assoluti e di intensità; leve su calore ed elettricità; lettura corretta dei risultati tra location-based e market-based.",
+  "agenda": [
+   "I quattro numeri che orientano il piano",
+   "Obiettivo assoluto o di intensità",
+   "La soglia massima da raggiungere nel 2030",
+   "L'intensità obiettivo per ogni chilogrammo di pasta",
+   "Leva 1: recupero di calore sugli essiccatoi"
+  ]
+ },
+ {
+  "id": "fadcfp01_m09_s002",
+  "layout": "numeri",
+  "kicker": "Punti di partenza",
+  "titolo": "I quattro numeri che orientano il piano",
+  "intro": "Quattro valori orientano subito le scelte: grandezza del problema, perimetro del target principale, peso della filiera e impronta del prodotto. Servono per capire dove agire e quale totale stai davvero cercando di cambiare.",
+  "numeri": [
+   {
+    "n": "21.692,5 t CO2e",
+    "h": "Inventario 2025 complessivo",
+    "d": ""
+   },
+   {
+    "n": "3.157,8 t CO2e",
+    "h": "Base del target Scope 1+2 market-based",
+    "d": ""
+   },
+   {
+    "n": "86,1%",
+    "h": "Quota dello Scope 3 sul totale",
+    "d": ""
+   },
+   {
+    "n": "1,47 kg CO2e/kg",
+    "h": "Carbon footprint del prodotto",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m09_s003",
+  "layout": "confronto",
+  "kicker": "Target",
+  "titolo": "Obiettivo assoluto o di intensità",
+  "intro": "Un target è credibile solo se dichiara anno base, anno di arrivo, perimetro e metodo di calcolo. Le due famiglie di obiettivi rispondono a domande diverse e, spesso, conviene leggerle insieme.",
+  "a": {
+   "h": "Assoluto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Misura le tonnellate totali emesse"
+    },
+    {
+     "d": "Parla direttamente il linguaggio del clima"
+    },
+    {
+     "d": "Più esigente se l'azienda cresce"
+    }
+   ]
+  },
+  "b": {
+   "h": "Intensità",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Misura emissioni per unità di attività"
+    },
+    {
+     "d": "Legge l'efficienza emissiva del sistema"
+    },
+    {
+     "d": "Può migliorare mentre il totale cresce"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m09_s004",
+  "layout": "calcolo",
+  "kicker": "Target assoluto",
+  "titolo": "La soglia massima da raggiungere nel 2030",
+  "intro": "L'obiettivo assoluto non è la quantità da togliere, ma il livello massimo da non superare a fine periodo. La traiettoria annuale serve poi a trasformare il target in un controllo operativo continuo.",
+  "unita": "t CO2e",
+  "righe": [
+   {
+    "l": "Scope 1 + Scope 2 market-based",
+    "n": "2.257,8 + 900 t CO2e, dall’inventario dell’anno base",
+    "a": 3157.8,
+    "au": "t CO2e",
+    "ef": 0.58,
+    "efu": "(1 − 0,42)"
+   }
+  ],
+  "etichette": {
+   "r": "Emissioni massime 2030",
+   "a": "Emissioni 2025",
+   "ef": "Quota residua"
+  },
+  "dec": 1,
+  "totale": false,
+  "_atteso": 1831.5,
+  "piede": "Riduzione richiesta: 3.157,8 − 1.831,5 = 1.326,3 t CO2e, in media 265,3 t in meno ogni anno per cinque anni.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s005",
+  "layout": "calcolo",
+  "kicker": "Target Scope 3",
+  "titolo": "L'intensità obiettivo per ogni chilogrammo di pasta",
+  "intro": "Sul perimetro più esposto alla crescita, la direzione sceglie un target per chilogrammo di pasta. Il vantaggio è leggere il miglioramento unitario; il presidio necessario è continuare a monitorare anche il totale annuo.",
+  "unita": "kg CO2e/kg",
+  "righe": [
+   {
+    "l": "Scope 3 dell’anno base",
+    "n": "18.682,7 t CO2e, esclusa la cottura (riportata a parte)",
+    "a": 18682700,
+    "au": "kg CO2e",
+    "ef": 0.75,
+    "efu": "(1 − 0,25)",
+    "d": 20000000,
+    "du": "kg di pasta"
+   }
+  ],
+  "etichette": {
+   "r": "Intensità obiettivo",
+   "a": "Emissioni 2025",
+   "ef": "Quota residua",
+   "d": "Produzione"
+  },
+  "dec": 4,
+  "totale": false,
+  "_atteso": 0.7006,
+  "piede": "L’obiettivo è scendere da 0,934 a circa 0,70 kg CO2e per kg di pasta (700,6 g).",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s006",
+  "layout": "calcolo",
+  "kicker": "Calore",
+  "titolo": "Leva 1: recupero di calore sugli essiccatoi",
+  "intro": "Nel calore si concentra la leva industriale decisiva. Il recupero di calore entra nel piano perché riduce prima i consumi evitabili e produce un effetto misurabile su due righe dell'inventario.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Combustione evitata",
+    "n": "Scope 1 · fattore di combustione del gas naturale",
+    "a": 126000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Filiera a monte evitata",
+    "n": "Scope 3, categoria 3 · estrazione e trasporto del gas",
+    "a": 126000,
+    "au": "Sm³",
+    "ef": 0.33,
+    "efu": "kg CO2e/Sm³"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 293580,
+  "piede": "−252 t CO2e nello Scope 1 e −41,6 t CO2e nello Scope 3 (41.580 kg). Per l’obiettivo su Scope 1+2 conta solo la prima riga.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s007",
+  "layout": "calcolo",
+  "kicker": "Cambio vettore",
+  "titolo": "Elettrificare il calore richiede un bilancio a due righe",
+  "intro": "Quando cambi vettore energetico, il bilancio non ha mai una sola riga: togli combustione diretta, aggiungi elettricità. Il risultato dipende dal metodo con cui leggi lo Scope due e dai contratti che lo sostengono.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gas non più bruciato",
+    "n": "Scope 1",
+    "a": -100000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Elettricità in più per la pompa di calore",
+    "n": "Scope 2 location-based · 100.000 Sm³ × 2,8 kWh/Sm³",
+    "a": 280000,
+    "au": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {
+   "r": "Variazione"
+  },
+  "dec": null,
+  "totale": "Effetto netto (location-based)",
+  "_atteso": -134200,
+  "piede": "Lettura market-based: con il residual mix la seconda riga vale 280.000 × 0,45 = 126.000 kg (netto −74 t CO2e); con Garanzie d’Origine vale zero (netto −200 t CO2e).",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); rendimento della pompa di calore: valore didattico"
+ },
+ {
+  "id": "fadcfp01_m09_s008",
+  "layout": "confronto",
+  "kicker": "Scope 2",
+  "titolo": "Leve elettriche: dato di attività o fattore",
+  "intro": "Sulle leve elettriche la domanda chiave è sempre la stessa: diminuiscono i chilowattora prelevati dalla rete oppure cambiano solo il fattore usato dal market based. Da qui nasce la differenza tra le due letture.",
+  "a": {
+   "h": "Riduce i kWh prelevati",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Efficienza energetica"
+    },
+    {
+     "d": "Fotovoltaico in autoconsumo"
+    },
+    {
+     "d": "Scende location-based e market-based"
+    }
+   ]
+  },
+  "b": {
+   "h": "Cambia il fattore contrattuale",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Garanzie d'origine"
+    },
+    {
+     "d": "Contratti rinnovabili di lungo periodo"
+    },
+    {
+     "d": "Resta invariato il location-based"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m09_s009",
+  "layout": "calcolo",
+  "kicker": "Scope 2 market-based",
+  "titolo": "Fotovoltaico e Garanzie d'Origine sullo stesso perimetro",
+  "intro": "Nel market based fotovoltaico e Garanzie d'Origine agiscono sugli stessi chilowattora in due modi diversi. Per attribuire bene il merito devi rispettare la sequenza: prima il prelievo evitato, poi la copertura del residuo.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Leva 2 – Fotovoltaico: kWh non più prelevati",
+    "n": "+500.000 kWh autoconsumati; prima erano acquistati senza garanzie",
+    "a": 500000,
+    "au": "kWh",
+    "ef": 0.45,
+    "efu": "kg CO2e/kWh"
+   },
+   {
+    "l": "Leva 3 – Garanzie d’Origine sui kWh restanti",
+    "n": "2.000.000 − 500.000 = 1.500.000 kWh: il fattore passa da 0,45 a 0",
+    "a": 1500000,
+    "au": "kWh",
+    "ef": 0.45,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Riduzione dello Scope 2 market-based",
+  "_atteso": 900000,
+  "piede": "Leva 2: −225 t CO2e. Leva 3: −675 t CO2e. Insieme portano lo Scope 2 market-based da 900 a 0 t CO2e.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s010",
+  "layout": "calcolo",
+  "kicker": "Scope 2",
+  "titolo": "La lettura location-based delle leve elettriche",
+  "intro": "Lo stesso intervento cambia significato quando cambia il metodo: il fotovoltaico riduce il prelievo di rete, le Garanzie d’Origine no. Per comunicare bene serve mostrare insieme risultato numerico e perimetro della lettura.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Leva 2 – Fotovoltaico: kWh non più prelevati",
+    "n": "il prelievo scende da 3.200.000 a 2.700.000 kWh",
+    "a": 500000,
+    "au": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   },
+   {
+    "l": "Leva 3 – Garanzie d’Origine",
+    "n": "nessun kWh risparmiato: il fattore medio della rete resta lo stesso",
+    "a": 0,
+    "au": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Riduzione dello Scope 2 location-based",
+  "_atteso": 117500,
+  "piede": "Leva 2: −117,5 t CO2e (117.500 kg). Leva 3: nessun effetto. Lo Scope 2 location-based passa da 752 a 634,5 t CO2e (2.700.000 kWh × 0,235).",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s011",
+  "layout": "calcolo",
+  "kicker": "Trasporti diretti",
+  "titolo": "Auto elettriche: riduzione lorda e bilancio netto",
+  "intro": "Sostituire il vettore energetico richiede sempre un doppio controllo: ciò che elimini nello Scope 1 e ciò che riappare nello Scope 2. Il risultato utile è il saldo netto, non il solo carburante evitato.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gasolio non più bruciato",
+    "n": "Scope 1",
+    "a": -8000,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Elettricità per le ricariche",
+    "n": "Scope 2 location-based",
+    "a": 23040,
+    "au": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {
+   "r": "Variazione"
+  },
+  "dec": null,
+  "totale": "Effetto netto (Scope 1 + Scope 2 location-based)",
+  "_atteso": -15785.6,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; consumo dell’auto elettrica: valore didattico"
+ },
+ {
+  "id": "fadcfp01_m09_s012",
+  "layout": "calcolo",
+  "kicker": "Scope 3 categoria 9",
+  "titolo": "Stesse tonnellate-chilometro, fattore molto diverso",
+  "intro": "Nella logistica affidata a terzi il dato di attività può restare identico. La leva nasce dal cambio di mezzo: il conto corretto confronta due fattori di emissione applicati allo stesso volume trasportato.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Consegne europee spostate su ferro",
+    "n": "Scope 3, categoria 9 · 50% delle 4.000 t vendute in Europa",
+    "a": 2000,
+    "au": "t",
+    "k": 1500,
+    "ku": "km",
+    "ef": 0.072,
+    "efu": "kg CO2e/tkm (0,10 − 0,028)"
+   }
+  ],
+  "etichette": {
+   "k": "Distanza"
+  },
+  "dec": null,
+  "totale": false,
+  "_atteso": 216000,
+  "piede": "Prima: 3.000.000 × 0,10 = 300.000 kg. Dopo: 3.000.000 × 0,028 = 84.000 kg. Differenza: −216 t CO2e nello Scope 3. La distribuzione in Europa passa da 600 a 384 t CO2e.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s013",
+  "layout": "calcolo",
+  "kicker": "Acquisti",
+  "titolo": "La semola è la leva dominante dello Scope 3",
+  "intro": "Quando una voce pesa la gran parte dell’impronta, il piano cambia scala. La priorità non è cercare molti interventi minori, ma agire sulla categoria dominante con dati specifici documentati dal fornitore.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Semola da filiera migliorata",
+    "n": "Scope 3, categoria 1 · kg dalle fatture di acquisto; fattore dal fornitore",
+    "a": 20600000,
+    "au": "kg",
+    "k": 0.5,
+    "ku": "(50%)",
+    "ef": 0.07,
+    "efu": "kg CO2e/kg (0,70 − 0,63)"
+   }
+  ],
+  "etichette": {
+   "k": "Quota dei volumi"
+  },
+  "dec": null,
+  "totale": false,
+  "_atteso": 721000,
+  "piede": "−721 t CO2e nello Scope 3: quasi tre volte la leva 1 sul gas. Non incide sull’obiettivo Scope 1+2, ma su quello di intensità dello Scope 3.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s014",
+  "layout": "simulatore",
+  "kicker": "Filiera migliorata",
+  "titolo": "Quanto vale spostare più semola sulla filiera",
+  "intro": "La forza della leva si capisce bene per proporzioni: cambiare quota di volumi permette di leggere subito ordini di grandezza, target realistici e distanza rispetto a opzioni minori come imballaggi alleggeriti o scarti evitati.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Semola da filiera convenzionale",
+    "v": 20600000,
+    "u": "kg",
+    "ef": 0.7,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Semola da filiera migliorata",
+    "v": 0,
+    "u": "kg",
+    "ef": 0.63,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "piede": "Con il 100% dei volumi sulla filiera migliorata: 20.600.000 × 0,63 = 12.978.000 kg CO2e, cioè 1.442 t in meno.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s015",
+  "layout": "calcolo",
+  "kicker": "Economia delle leve",
+  "titolo": "Il costo netto per tonnellata evitata",
+  "intro": "La classifica per tonnellate è utile, ma non basta a decidere. Il passaggio successivo è tradurre ogni intervento in euro per tonnellata evitata, distinguendo quota annua dell’investimento e risparmi operativi generati.",
+  "unita": "€/t CO2e",
+  "righe": [
+   {
+    "l": "Quota annua dell’investimento",
+    "n": "280.000 € ripartiti su 10 anni di vita utile",
+    "a": 280000,
+    "au": "€",
+    "ef": 0.1,
+    "efu": "all’anno",
+    "d": 252,
+    "du": "t CO2e"
+   },
+   {
+    "l": "Gas risparmiato ogni anno",
+    "n": "segno meno: è un risparmio · prezzo del gas illustrativo",
+    "a": -126000,
+    "au": "Sm³",
+    "ef": 0.45,
+    "efu": "€/Sm³",
+    "d": 252,
+    "du": "t CO2e"
+   }
+  ],
+  "etichette": {
+   "r": "Costo per tonnellata",
+   "a": "Quantità",
+   "ef": "Prezzo o quota annua",
+   "d": "Tonnellate evitate"
+  },
+  "dec": 1,
+  "totale": "Costo netto di abbattimento",
+  "_atteso": -113.89,
+  "piede": "Risultato negativo: l’intervento fa risparmiare circa 113,9 € per ogni tonnellata evitata. Tempo di rientro semplice: 280.000 € ÷ 56.700 € l’anno ≈ 4,9 anni.",
+  "fonte": "Esempio didattico – costi e prezzi illustrativi, non riferiti a offerte o listini reali"
+ },
+ {
+  "id": "fadcfp01_m09_s016",
+  "layout": "matrice",
+  "kicker": "Priorità",
+  "titolo": "Impatto e fattibilità guidano l’ordine di avvio",
+  "intro": "Il costo di abbattimento è una lente importante, ma va affiancato a una lettura organizzativa. Leve facili e grandi danno slancio iniziale; leve grandi ma difficili vanno negoziate presto per non arrivare tardi.",
+  "assi": {
+   "x": "Fattibilità",
+   "y": "Impatto"
+  },
+  "punti": [
+   {
+    "id": "L3",
+    "l": "Garanzie d’Origine",
+    "p": 5,
+    "g": 5
+   },
+   {
+    "id": "L1",
+    "l": "Recupero di calore",
+    "p": 4,
+    "g": 4
+   },
+   {
+    "id": "L2",
+    "l": "Fotovoltaico",
+    "p": 4,
+    "g": 4
+   },
+   {
+    "id": "L4",
+    "l": "Auto elettriche",
+    "p": 4,
+    "g": 2
+   },
+   {
+    "id": "L5",
+    "l": "Semola da filiera",
+    "p": 2,
+    "g": 5
+   },
+   {
+    "id": "L6",
+    "l": "Europa su ferro",
+    "p": 2,
+    "g": 4
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m09_s017",
+  "layout": "calcolo",
+  "kicker": "Target 2030",
+  "titolo": "Il piano non basta ancora al traguardo",
+  "intro": "Per verificare l’obiettivo principale vanno sommate solo le leve che incidono su Scope 1 più Scope 2 market-based. Il risultato è solido e rilevante, ma resta sotto la riduzione approvata dalla direzione.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Leva 1 – Gas risparmiato",
+    "n": "Scope 1",
+    "a": 126000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Leve 2 e 3 – Elettricità non più a residual mix",
+    "n": "Scope 2 market-based · 500.000 + 1.500.000 kWh",
+    "a": 2000000,
+    "au": "kWh",
+    "ef": 0.45,
+    "efu": "kg CO2e/kWh"
+   },
+   {
+    "l": "Leva 4 – Gasolio risparmiato",
+    "n": "Scope 1",
+    "a": 8000,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Riduzione totale",
+  "_atteso": 1173200,
+  "piede": "3.157,8 − 1.173,2 = 1.984,6 t CO2e. In percentuale: 1.173,2 ÷ 3.157,8 = −37,2%. L’obiettivo è −42%.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s018",
+  "layout": "calcolo",
+  "kicker": "Gap residuo",
+  "titolo": "La distanza dall’obiettivo va tradotta in gas",
+  "intro": "Una differenza espressa solo in tonnellate resta astratta. Riportarla al dato fisico da eliminare rende il gap discutibile in termini tecnici, economici e impiantistici, e chiarisce subito dove intervenire davvero.",
+  "unita": "Sm³",
+  "righe": [
+   {
+    "l": "Gas naturale",
+    "n": "fattore 2,0 kg CO2e/Sm³ → 1 ÷ 2,0 = 0,5 Sm³ per kg CO2e",
+    "a": 153100,
+    "au": "kg CO2e",
+    "ef": 0.5,
+    "efu": "Sm³/kg CO2e"
+   }
+  ],
+  "etichette": {
+   "r": "Gas da eliminare",
+   "a": "Emissioni da tagliare",
+   "ef": "Inverso del fattore"
+  },
+  "dec": null,
+  "totale": false,
+  "_atteso": 76550,
+  "piede": "Servono altri 76.550 Sm³ in meno: circa l’8,3% del gas che resta dopo la leva 1 (924.000 Sm³).",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s019",
+  "layout": "calcolo",
+  "kicker": "Scope 3",
+  "titolo": "Progresso reale, distanza ancora ampia",
+  "intro": "Le tre leve già quantificate migliorano l’intensità, ma coprono solo una parte del traguardo al 2030. Il valore gestionale del piano sta nel rendere misurabile il gap residuo, non nel nasconderlo.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Leva 1 – Filiera a monte del gas risparmiato",
+    "n": "categoria 3",
+    "a": 126000,
+    "au": "Sm³",
+    "ef": 0.33,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Leva 5 – Semola da filiera migliorata",
+    "n": "categoria 1 · fattore: 0,70 − 0,63",
+    "a": 10300000,
+    "au": "kg",
+    "ef": 0.07,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Leva 6 – Consegne europee su ferro",
+    "n": "categoria 9 · 2.000 t × 1.500 km; fattore: 0,10 − 0,028",
+    "a": 3000000,
+    "au": "tkm",
+    "ef": 0.072,
+    "efu": "kg CO2e/tkm"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Riduzione dello Scope 3",
+  "_atteso": 978580,
+  "piede": "Scope 3: da 18.682,7 a 17.704,1 t CO2e, cioè da 0,934 a 0,885 kg CO2e per kg di pasta (−5,2%). L’obiettivo è −25%: la strada è ancora lunga.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s020",
+  "layout": "organigramma",
+  "kicker": "Struttura del piano",
+  "titolo": "Le cinque parti del piano di decarbonizzazione",
+  "intro": "Il piano nasce quando i conti diventano governo: obiettivi chiari, azioni assegnate, risorse dedicate, tempi verificabili e controllo periodico. Senza questa architettura, l’inventario resta un esercizio tecnico ben fatto ma isolato.",
+  "radice": {
+   "h": "Piano 2026–2030",
+   "d": "Ponte tra inventario e gestione aziendale"
+  },
+  "rami": [
+   {
+    "h": "Obiettivi",
+    "d": "Che cosa si dichiara",
+    "voci": [
+     "Anno base 2025",
+     "Traguardo 2030",
+     "Perimetri dichiarati",
+     "Metodo Scope 2 scelto"
+    ]
+   },
+   {
+    "h": "Azioni",
+    "d": "Che cosa si fa",
+    "voci": [
+     "Sei leve quantificate",
+     "Ipotesi ancora allo studio"
+    ]
+   },
+   {
+    "h": "Risorse",
+    "d": "Con che mezzi",
+    "voci": [
+     "Investimenti e budget",
+     "Contratti di fornitura",
+     "Responsabili assegnati"
+    ]
+   },
+   {
+    "h": "Tempi",
+    "d": "Quando accade",
+    "voci": [
+     "Tappe annuali",
+     "Avvio e completamento",
+     "Dipendenze tra azioni"
+    ]
+   },
+   {
+    "h": "Controllo",
+    "d": "Come si corregge",
+    "voci": [
+     "Indicatori",
+     "Inventario annuale",
+     "Riesame della direzione"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m09_s021",
+  "layout": "gantt",
+  "kicker": "Dal conto alle azioni",
+  "titolo": "Il calendario operativo delle leve 2026–2030",
+  "intro": "La sequenza segue la fattibilità: prima la leva contrattuale immediata, poi gli interventi strutturali, mentre gli studi sulle opzioni mancanti partono in parallelo per non arrivare scoperti all’ultimo anno.",
+  "periodi": [
+   "2026",
+   "2027",
+   "2028",
+   "2029",
+   "2030"
+  ],
+  "attivita": [
+   {
+    "t": "Garanzie d’Origine sul 100%",
+    "da": 1,
+    "a": 5,
+    "k": 1
+   },
+   {
+    "t": "Ampliamento del fotovoltaico",
+    "da": 2,
+    "a": 2,
+    "k": 1
+   },
+   {
+    "t": "Recupero di calore",
+    "da": 2,
+    "a": 2,
+    "k": 1
+   },
+   {
+    "t": "Auto elettriche",
+    "da": 2,
+    "a": 3,
+    "k": 1
+   },
+   {
+    "t": "Semola da filiera migliorata",
+    "da": 2,
+    "a": 4,
+    "k": 1
+   },
+   {
+    "t": "Consegne europee su ferro",
+    "da": 2,
+    "a": 3,
+    "k": 1
+   },
+   {
+    "t": "Studi: pompe di calore e biometano",
+    "da": 2,
+    "a": 3,
+    "k": 1
+   },
+   {
+    "t": "Inventario annuale e riesame",
+    "da": 1,
+    "a": 5,
+    "k": 1
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m09_s022",
+  "layout": "calcolo",
+  "kicker": "Monitoraggio",
+  "titolo": "Il totale cambia per due motivi",
+  "intro": "Per leggere bene i progressi bisogna separare il merito delle leve dall’effetto dei volumi. Solo così una crescita produttiva non viene scambiata per inefficacia del piano, o viceversa.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Effetto intensità: le leve",
+    "n": "produzione 2025 × variazione dell’intensità (99,23 − 157,89)",
+    "a": 20000,
+    "au": "t",
+    "ef": -58.66,
+    "efu": "kg CO2e/t"
+   },
+   {
+    "l": "Effetto volume: più pasta prodotta",
+    "n": "2.000 t in più × intensità dopo le leve",
+    "a": 2000,
+    "au": "t",
+    "ef": 99.23,
+    "efu": "kg CO2e/t"
+   }
+  ],
+  "etichette": {
+   "r": "Variazione delle emissioni",
+   "a": "Produzione",
+   "ef": "Intensità o sua variazione"
+  },
+  "dec": null,
+  "totale": "Variazione totale rispetto al 2025",
+  "_atteso": -974740,
+  "piede": "Da 3.157,8 a 2.183,1 t CO2e: −30,9% in valore assoluto, anche se l’intensità è scesa del 37,2%. La crescita ha assorbito 198,5 t di riduzione.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m09_s023",
+  "layout": "tabella",
+  "kicker": "Cruscotto 2028",
+  "titolo": "Il cruscotto distingue risultati e cause",
+  "cols": [
+   "Indicatore",
+   "Rilevato",
+   "Obiettivo",
+   "Lettura"
+  ],
+  "righe": [
+   [
+    "Scope 1+2 market-based",
+    "1984,6 t",
+    "1831,5 t",
+    "ancora alto"
+   ],
+   [
+    "Gas per tonnellata di pasta",
+    "46,2 Sm³/t",
+    "46,2 Sm³/t",
+    "in linea"
+   ],
+   [
+    "Elettricità coperta da GO",
+    "100%",
+    "100%",
+    "in linea"
+   ],
+   [
+    "Semola con fattore documentato",
+    "30%",
+    "50% entro 2029",
+    "in ritardo"
+   ],
+   [
+    "Consegne europee su ferro",
+    "25%",
+    "50% entro 2028",
+    "in ritardo"
+   ],
+   [
+    "Intensità Scope 3",
+    "905 g/kg",
+    "700,6 g/kg",
+    "lontana dal target"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m09_s024",
+  "layout": "ciclo",
+  "kicker": "Stakeholder",
+  "titolo": "Chi coinvolgere e che cosa chiedere",
+  "intro": "Quando lo Scope 3 pesa di più, la qualità del piano dipende dalla qualità delle richieste rivolte all’esterno e all’interno. Servono dati specifici, impegni operativi e criteri che entrino davvero nelle decisioni.",
+  "ciclo": false,
+  "centro": "Piano di decarbonizzazione",
+  "nodi": [
+   {
+    "h": "Fornitori materie prime",
+    "d": "Fattori documentati, confini chiari, metodo stabile"
+   },
+   {
+    "h": "Trasportatori",
+    "d": "Tratte, volumi, consumi reali, viaggi a vuoto"
+   },
+   {
+    "h": "Clienti",
+    "d": "Dati per kg, obiettivi, logistica condivisa"
+   },
+   {
+    "h": "Dipendenti",
+    "d": "Formazione, mobilità, idee di risparmio"
+   },
+   {
+    "h": "Banca",
+    "d": "Indicatori concordati, dati verificati, tappe annuali"
+   },
+   {
+    "h": "Direzione",
+    "d": "Risorse, priorità, riesame dei risultati"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m09_s025",
+  "layout": "numeri",
+  "kicker": "Errori da evitare",
+  "titolo": "Sei errori che indeboliscono il piano",
+  "intro": "La credibilità si perde quando i numeri vengono raccontati male. Gli errori tecnici diventano subito errori di comunicazione verso clienti, banca e direzione, soprattutto quando una riga dell’inventario viene scambiata per l’intera azienda.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Obiettivo senza anno base e perimetro",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Leve senza attività, fattore e fonte",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Location based e market based confusi",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Doppio conteggio degli stessi kWh",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "Scope 3 ignorato perché esterno",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m09_s026",
+  "layout": "cards",
+  "kicker": "Formulario essenziale",
+  "titolo": "Le sei formule indispensabili del piano",
+  "intro": "Dietro quasi tutti i conti torna la stessa logica: dato di attività per fattore, oppure confronto tra fattori. Tenere in vista queste sei formule rende il metodo più controllabile e trasferibile.",
+  "cards": [
+   {
+    "h": "Obiettivo assoluto",
+    "d": "Anno base × quota residua"
+   },
+   {
+    "h": "Risparmio di attività",
+    "d": "Dato evitato × fattore"
+   },
+   {
+    "h": "Cambio di fattore",
+    "d": "Volumi × differenza fra fattori"
+   },
+   {
+    "h": "Sostituzione di vettore",
+    "d": "Una riga scende, un’altra sale"
+   },
+   {
+    "h": "Risultato atteso",
+    "d": "Base meno riduzioni dello stesso perimetro"
+   },
+   {
+    "h": "Gap residuo",
+    "d": "Emissioni mancanti ÷ fattore inverso"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m09_s027",
+  "layout": "chiusura",
+  "kicker": "Punti chiave",
+  "titolo": "Che cosa portare con te",
+  "modNum": "09",
+  "punti": [
+   {
+    "h": "Obiettivo verificabile",
+    "d": "Anno base, arrivo, scope e metodo dichiarati"
+   },
+   {
+    "h": "Leve dimostrate",
+    "d": "Dato di attività, fattore, fonte, attribuzione corretta"
+   },
+   {
+    "h": "Letture distinte",
+    "d": "Location e market based, volume e intensità"
+   },
+   {
+    "h": "Gestione operativa",
+    "d": "Responsabili, budget, calendario, riesame e gap residuo"
+   }
+  ],
+  "prossimo": {
+   "modulo": "10",
+   "titolo": "Compensare, dichiarare, comunicare — ed esercitazione finale"
+  }
+ }
+]

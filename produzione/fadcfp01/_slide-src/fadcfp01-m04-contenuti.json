@@ -1,0 +1,1356 @@
+[
+ {
+  "id": "fadcfp01_m04_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 4",
+  "titolo": "La mappa operativa dello Scope 1",
+  "corsoLabel": "Carbon Footprint · ISO 14064-1 · ISO 14067",
+  "eyebrow": "Modulo 4",
+  "sottotitolo": "Quattro famiglie dello Scope 1; mappa delle sorgenti Terrafelix; bollette del gas naturale; altri combustibili fissi e veicoli; refrigeranti, processo e controlli di credibilità.",
+  "agenda": [
+   "Le quattro famiglie dello Scope 1",
+   "Le sei sorgenti dirette da presidiare",
+   "I dati che contano davvero",
+   "Gas naturale 2025: un profilo leggibile",
+   "Gas naturale: il conto per trimestre"
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s002",
+  "layout": "organigramma",
+  "kicker": "Classificazione",
+  "titolo": "Le quattro famiglie dello Scope 1",
+  "intro": "Quattro famiglie per non dimenticare nulla, una formula per tutte, cinque passi da ripetere senza scorciatoie. Cambiano documenti, unità e fattori; non cambia la logica del calcolo.",
+  "radice": {
+   "h": "Scope 1",
+   "d": "Emissioni dirette da sorgenti possedute o controllate"
+  },
+  "rami": [
+   {
+    "h": "Combustione stazionaria",
+    "d": "Impianti fissi che bruciano combustibili",
+    "voci": [
+     "Caldaie e forni",
+     "Essiccatoi",
+     "Gruppi elettrogeni"
+    ]
+   },
+   {
+    "h": "Combustione mobile",
+    "d": "Mezzi aziendali che consumano carburante",
+    "voci": [
+     "Auto e furgoni",
+     "Carrelli elevatori",
+     "Macchine operatrici"
+    ]
+   },
+   {
+    "h": "Emissioni fuggitive",
+    "d": "Perdite non intenzionali di gas serra",
+    "voci": [
+     "Gas refrigeranti",
+     "SF6 dei quadri",
+     "Perdite di metano"
+    ]
+   },
+   {
+    "h": "Emissioni di processo",
+    "d": "Gas rilasciati da trasformazioni tecniche",
+    "voci": [
+     "Calce e cemento",
+     "Vetro e ceramica",
+     "CO2 tecnica"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s003",
+  "layout": "cards",
+  "kicker": "Caso Terrafelix",
+  "titolo": "Le sei sorgenti dirette da presidiare",
+  "intro": "La mappa iniziale unisce sorgenti, documenti e persone. Il sopralluogo serve a incrociare ciò che l’amministrazione possiede nei file con ciò che manutenzione e impianti conoscono sul campo.",
+  "cards": [
+   {
+    "h": "Gas naturale",
+    "d": "Essiccatoi e centrale termica; bollette del fornitore"
+   },
+   {
+    "h": "Gasolio impianti",
+    "d": "Gruppo elettrogeno e motopompa; fatture più giacenze"
+   },
+   {
+    "h": "Gasolio flotta",
+    "d": "Quattro furgoni e cinque auto; carte carburante"
+   },
+   {
+    "h": "Benzina flotta",
+    "d": "Tre auto; estratti carburante annuali"
+   },
+   {
+    "h": "Climatizzatori uffici",
+    "d": "Rapporti frigorista e registri apparecchiature"
+   },
+   {
+    "h": "Gruppo frigo processo",
+    "d": "Manutenzioni, registro impianto, dati tecnici"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s004",
+  "layout": "tabella",
+  "kicker": "Bolletta gas",
+  "titolo": "I dati che contano davvero",
+  "cols": [
+   "Campo da leggere",
+   "Usa per",
+   "Attenzione"
+  ],
+  "righe": [
+   [
+    "Consumo in Sm³",
+    "Dato di attività",
+    "Non usare gli euro"
+   ],
+   [
+    "Periodo di consumo",
+    "Anno solare corretto",
+    "Non la data di emissione"
+   ],
+   [
+    "Lettura effettiva o stimata",
+    "Gestire conguagli",
+    "Evitare buchi o doppie conte"
+   ],
+   [
+    "Sm³ standardizzati o coefficiente C",
+    "Volume corretto",
+    "Non copiare i m³ grezzi"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s005",
+  "layout": "linee",
+  "kicker": "Caso Terrafelix",
+  "titolo": "Gas naturale 2025: un profilo leggibile",
+  "intro": "Dodici bollette raccontano una storia coerente: produzione abbastanza stabile, più fabbisogno termico nei mesi freddi, fermata estiva evidente ad agosto. Il grafico mensile è già un controllo di qualità.",
+  "unita": "Sm³",
+  "periodi": [
+   "Gen",
+   "Feb",
+   "Mar",
+   "Apr",
+   "Mag",
+   "Giu",
+   "Lug",
+   "Ago",
+   "Set",
+   "Ott",
+   "Nov",
+   "Dic"
+  ],
+  "serie": [
+   {
+    "nome": "Gas naturale",
+    "v": [
+     100000,
+     93000,
+     94000,
+     88000,
+     87000,
+     84000,
+     85000,
+     50000,
+     86000,
+     90000,
+     95000,
+     98000
+    ]
+   }
+  ],
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m04_s006",
+  "layout": "calcolo",
+  "kicker": "Calcolo",
+  "titolo": "Gas naturale: il conto per trimestre",
+  "intro": "Scomporre l’anno in trimestri non cambia il totale, ma rende più leggibili fermate, conguagli e scostamenti. È un modo utile per vedere da quali parti nasce il risultato finale.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "1° trimestre",
+    "n": "bollette di gennaio, febbraio, marzo",
+    "a": 287000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "2° trimestre",
+    "n": "bollette di aprile, maggio, giugno",
+    "a": 259000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "3° trimestre",
+    "n": "luglio, agosto (fermata), settembre",
+    "a": 221000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "4° trimestre",
+    "n": "bollette di ottobre, novembre, dicembre",
+    "a": 283000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale anno: 1.050.000 Sm³",
+  "_atteso": 2100000,
+  "piede": "Fattore del corso: 2,0 kg CO2e/Sm³, valore arrotondato a scopo didattico.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattore arrotondato (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m04_s007",
+  "layout": "calcolo",
+  "kicker": "Fattori",
+  "titolo": "Il fattore scelto sposta il risultato",
+  "intro": "Stesso dato di attività, fonte diversa del fattore: il numero finale cambia. In un inventario ufficiale vanno sempre dichiarati con precisione fonte, anno, unità e grandezza misurata.",
+  "unita": "kg CO2",
+  "righe": [
+   {
+    "l": "Gas naturale di Terrafelix",
+    "n": "ISPRA, parametri standard nazionali: circa 1,98 kg CO2 per Sm³",
+    "a": 1050000,
+    "au": "Sm³",
+    "ef": 1.98,
+    "efu": "kg CO2/Sm³"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": false,
+  "_atteso": 2079000,
+  "piede": "2.079.000 kg CO2 = 2.079 t CO2: 21 t in meno (−1,0%) rispetto al conto con il fattore arrotondato del corso.",
+  "fonte": "ISPRA, tabella dei parametri standard nazionali (valore indicativo); dato di attività del caso studio"
+ },
+ {
+  "id": "fadcfp01_m04_s008",
+  "layout": "confronto",
+  "kicker": "Qualità del dato",
+  "titolo": "Gas naturale: buone pratiche ed errori",
+  "intro": "Un calcolo robusto nasce da quantità fisiche, periodi corretti e controlli indipendenti. Gli errori più comuni sembrano innocui nel file, ma alterano il totale senza avvisi evidenti.",
+  "a": {
+   "h": "Pratica robusta",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Somma gli Sm³ di tutti i PDR"
+    },
+    {
+     "d": "Ricostruisci l’anno solare"
+    },
+    {
+     "d": "Usa fattore coerente, fonte e anno"
+    },
+    {
+     "d": "Verifica con letture o contatori"
+    }
+   ]
+  },
+  "b": {
+   "h": "Errore tipico",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Lavorare sugli euro di bolletta"
+    },
+    {
+     "d": "Mescolare Sm³ e kWh"
+    },
+    {
+     "d": "Ignorare conguagli di gennaio"
+    },
+    {
+     "d": "Sommare rettifiche e fatture sostituite"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m04_s009",
+  "layout": "evidenza",
+  "kicker": "Altri combustibili fissi",
+  "titolo": "Serbatoi, unità e giacenze",
+  "eyebrow": "",
+  "testo": "Fuori dal gas di rete il metodo resta lo stesso, ma la raccolta dati cambia. Conta ciò che esce davvero dal serbatoio o dal deposito, non ciò che è stato semplicemente acquistato.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m04_s010",
+  "layout": "calcolo",
+  "kicker": "Caso Terrafelix",
+  "titolo": "Gasolio da serbatoio comune: conta il bilancio",
+  "intro": "Per combustibili acquistati a lotti, la fattura non basta: il dato corretto nasce dal bilancio del serbatoio. La ripartizione tra macchine viene dopo, usando registri di funzionamento e documenti tecnici coerenti.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gruppo elettrogeno",
+    "n": "prove mensili e interruzioni di rete · registro delle ore di funzionamento",
+    "a": 1100,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Motopompa antincendio",
+    "n": "prove periodiche · registro antincendio",
+    "a": 400,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale: 1.500 l",
+  "_atteso": 3975,
+  "piede": "La ripartizione tra le due macchine è illustrativa; il totale di 1.500 litri è il dato dell’inventario.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattore arrotondato (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m04_s011",
+  "layout": "calcolo",
+  "kicker": "Unità di misura",
+  "titolo": "GPL fatturato in kg: conversione obbligata",
+  "intro": "Quando il fornitore fattura in chilogrammi e il fattore è per litro, il conto richiede una conversione intermedia. La regola chiave è semplice: dato di attività e fattore devono parlare la stessa unità.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "GPL acquistato nell’anno",
+    "n": "fatture del fornitore: 4.160 kg · densità indicativa del GPL liquido: 0,52 kg/l",
+    "a": 4160,
+    "au": "kg",
+    "ef": 1.6,
+    "efu": "kg CO2e/l",
+    "d": 0.52,
+    "du": "kg/l"
+   }
+  ],
+  "etichette": {
+   "d": "Densità"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 12800,
+  "piede": "Passaggio intermedio: 4.160 kg ÷ 0,52 kg/l = 8.000 litri; 8.000 l × 1,6 = 12.800 kg CO2e.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); densità: valore illustrativo"
+ },
+ {
+  "id": "fadcfp01_m04_s012",
+  "layout": "calcolo",
+  "kicker": "Biomassa",
+  "titolo": "Biomassa: Scope 1 sì, CO2 biogenica a parte",
+  "intro": "Con la biomassa la precisione è concettuale prima che numerica: nello Scope 1 entrano CH4 e N2O della combustione, mentre la CO2 biogenica si calcola e si riporta separatamente, fuori dagli scope.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Pellet – CH4 e N2O della combustione",
+    "n": "fatture di acquisto: 40 t · fattore: valore didattico",
+    "a": 40000,
+    "au": "kg",
+    "ef": 0.05,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Nello Scope 1",
+  "_atteso": 2000,
+  "piede": "Riportata a parte, fuori dagli scope: CO2 biogenica = 40.000 kg × 1,7 kg CO2/kg (valore didattico) = 68.000 kg, cioè 68 t CO2.",
+  "fonte": "Esempio didattico – fattori della biomassa: valori didattici arrotondati"
+ },
+ {
+  "id": "fadcfp01_m04_s013",
+  "layout": "confronto",
+  "kicker": "Combustione mobile",
+  "titolo": "Per i veicoli contano prima i litri",
+  "intro": "Per i veicoli aziendali, i litri acquistati sono il dato di partenza più solido. I chilometri restano utili per stime e controlli, ma non descrivono da soli il carburante effettivamente bruciato.",
+  "a": {
+   "h": "Litri acquistati",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Misurano il carburante davvero bruciato"
+    },
+    {
+     "d": "Lasciano traccia contabile e fiscale"
+    },
+    {
+     "d": "Separano bene gasolio e benzina"
+    },
+    {
+     "d": "Incorporano traffico, carico, stile di guida"
+    }
+   ]
+  },
+  "b": {
+   "h": "Chilometri percorsi",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Dato intuitivo ma solo indiretto"
+    },
+    {
+     "d": "Stessa distanza, consumi anche molto diversi"
+    },
+    {
+     "d": "Richiedono fattori medi o consumi"
+    },
+    {
+     "d": "Scelta di ripiego se i litri mancano"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m04_s014",
+  "layout": "calcolo",
+  "kicker": "Caso Terrafelix",
+  "titolo": "Flotta Terrafelix: due carburanti, un totale",
+  "intro": "Le carte carburante permettono un conto semplice e documentato: due righe, due fattori, un totale. Il risultato aiuta anche a ridimensionare intuizioni visive che sovrastimano il peso della flotta.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gasolio – 4 furgoni e 5 auto",
+    "n": "estratto carte carburante 2025, somma dei rifornimenti di gasolio",
+    "a": 38000,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Benzina – 3 auto",
+    "n": "estratto carte carburante 2025, somma dei rifornimenti di benzina",
+    "a": 6000,
+    "au": "l",
+    "ef": 2.3,
+    "efu": "kg CO2e/l"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 114500,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m04_s015",
+  "layout": "flusso",
+  "kicker": "Qualità del dato",
+  "titolo": "Pulire le carte carburante prima di analizzare",
+  "intro": "Il dettaglio per mezzo non serve solo a ripartire i consumi: aumenta la fiducia nel totale, intercetta anomalie e prepara analisi gestionali più utili delle sole somme annue per carburante.",
+  "passi": [
+   {
+    "h": "Scarica l'estratto completo",
+    "d": "Base unica dei rifornimenti annuali"
+   },
+   {
+    "h": "Elimina le righe non carburante",
+    "d": "Lavaggi, pedaggi, additivi, accessori"
+   },
+   {
+    "h": "Applica il criterio di competenza",
+    "d": "Conta i rifornimenti fatti nel 2025"
+   },
+   {
+    "h": "Verifica anomalie per targa",
+    "d": "Scambi carta, officina, usi anomali"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s016",
+  "layout": "calcolo",
+  "kicker": "Metodo A",
+  "titolo": "Stima dai chilometri con fattore medio",
+  "intro": "Se i litri mancano davvero, si può stimare dalle percorrenze annuali. È un metodo rapido e spesso sufficiente per una prima base, purché la stima sia dichiarata e la categoria del veicolo sia esplicita.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Auto 2 (gasolio)",
+    "n": "contachilometri: 48.000 km nell’anno · fattore «auto media»",
+    "a": 48000,
+    "au": "km",
+    "ef": 0.17,
+    "efu": "kg CO2e/km"
+   }
+  ],
+  "etichette": {
+   "a": "Percorrenza"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 8160,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi (percorrenza); fattore arrotondato (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m04_s017",
+  "layout": "calcolo",
+  "kicker": "Metodo B",
+  "titolo": "Dai chilometri ai litri stimati",
+  "intro": "Questo metodo aggiunge un'informazione reale del mezzo: prima ricostruisce i litri dalla percorrenza e dal consumo, poi applica il fattore per litro. È più aderente del semplice fattore medio per chilometro.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Auto 2 (gasolio)",
+    "n": "48.000 km × 0,052 l/km = 2.496 litri stimati",
+    "a": 48000,
+    "au": "km",
+    "ef": 0.052,
+    "efu": "l/km",
+    "k": 2.65,
+    "ku": "kg CO2e/l"
+   }
+  ],
+  "etichette": {
+   "a": "Percorrenza",
+   "ef": "Consumo medio",
+   "k": "Fattore di emissione"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 6614.4,
+  "piede": "Per passare da «litri ogni 100 km» a «litri per km» si divide per 100: 5,2 ÷ 100 = 0,052.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi (percorrenza e consumo); fattore arrotondato (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m04_s018",
+  "layout": "piramide",
+  "kicker": "Buona prassi",
+  "titolo": "La scala di preferenza dei dati veicolo",
+  "intro": "Confrontare più metodi sulla stessa auto mostra una regola semplice: quando esiste il dato misurato, la stima deve arretrare. La gerarchia riflette l'affidabilità del dato, non un obbligo formale.",
+  "livelli": [
+   {
+    "h": "Litri acquistati",
+    "d": "Carte carburante, fatture, cisterna: dato misurato"
+   },
+   {
+    "h": "Chilometri × consumo del veicolo",
+    "d": "Consumo misurato o dichiarato: dato calcolato"
+   },
+   {
+    "h": "Chilometri × fattore medio per km",
+    "d": "Veicolo tipo di banca dati: dato stimato"
+   },
+   {
+    "h": "Spesa carburante ÷ prezzo medio",
+    "d": "Solo euro disponibili: stima da migliorare"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s019",
+  "layout": "tabella",
+  "kicker": "Confini dell'inventario",
+  "titolo": "Quattro casi per collocare i veicoli",
+  "cols": [
+   "Controllo",
+   "Energia",
+   "Scope",
+   "Esempi tipici"
+  ],
+  "righe": [
+   [
+    "Azienda",
+    "Carburante",
+    "Scope 1",
+    "Flotta, noleggio lungo termine, quota benzina plug-in"
+   ],
+   [
+    "Azienda",
+    "Elettricità",
+    "Scope 2",
+    "EV ricaricati in sede, quota elettrica plug-in"
+   ],
+   [
+    "Altri",
+    "Carburante",
+    "Scope 3",
+    "Auto private, taxi, NCC, corrieri"
+   ],
+   [
+    "Altri",
+    "Elettricità",
+    "Scope 3",
+    "Auto private EV, corrieri elettrici"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s020",
+  "layout": "barre",
+  "kicker": "Emissioni fuggitive",
+  "titolo": "Il GWP cambia la scala del problema",
+  "intro": "Su cento anni, un chilogrammo di gas può valere da uno a migliaia di chilogrammi di CO2e. Per questo perdite piccole in massa possono pesare moltissimo nel bilancio climatico.",
+  "unita": "kg CO2e per kg di gas",
+  "voci": [
+   {
+    "l": "CO2",
+    "v": 1
+   },
+   {
+    "l": "HFC-32",
+    "v": 771
+   },
+   {
+    "l": "HFC-134a",
+    "v": 1530
+   },
+   {
+    "l": "R-410A",
+    "v": 2256
+   },
+   {
+    "l": "HFC-125",
+    "v": 3740
+   },
+   {
+    "l": "HFC-143a",
+    "v": 5810
+   }
+  ],
+  "fonte": "IPCC AR6, GWP a 100 anni (riepilogo GHG Protocol, 2024); R-410A da composizione 50% HFC-32 e 50% HFC-125"
+ },
+ {
+  "id": "fadcfp01_m04_s021",
+  "layout": "flusso",
+  "kicker": "Metodo operativo",
+  "titolo": "Dalla ricarica documentata al risultato",
+  "intro": "Il metodo non misura la perdita nel momento in cui avviene: usa il gas reintegrato come evidenza documentale della dispersione avvenuta nell'anno.",
+  "passi": [
+   {
+    "h": "Censire le macchine",
+    "d": "Luogo, gas, carica nominale, referente documentale"
+   },
+   {
+    "h": "Recuperare le evidenze",
+    "d": "Targa tecnica, registro, rapporti di intervento"
+   },
+   {
+    "h": "Verificare le ricariche",
+    "d": "Servono chilogrammi aggiunti e tipo di gas"
+   },
+   {
+    "h": "Sommarle per refrigerante",
+    "d": "Righe separate per ogni gas significativo"
+   },
+   {
+    "h": "Applicare il GWP",
+    "d": "Kg reintegrati × GWP = kg CO2e"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s022",
+  "layout": "calcolo",
+  "kicker": "Caso Terrafelix",
+  "titolo": "Le ricariche refrigeranti di Terrafelix",
+  "intro": "Nel 2025 bastano due interventi di ricarica per generare quasi quaranta tonnellate di CO2e: la massa è piccola, l'impatto climatico no.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "R-410A – climatizzazione degli uffici",
+    "n": "rapporti di intervento del frigorista · GWP AR6 della miscela",
+    "a": 12,
+    "au": "kg",
+    "ef": 2256,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "HFC-134a – gruppo frigo di processo",
+    "n": "registro dell’apparecchiatura · GWP AR6",
+    "a": 8,
+    "au": "kg",
+    "ef": 1530,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {
+   "a": "Gas reintegrato",
+   "ef": "GWP (fattore di emissione)"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 39312,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; GWP: IPCC AR6"
+ },
+ {
+  "id": "fadcfp01_m04_s023",
+  "layout": "tabella",
+  "kicker": "Metodo e controlli",
+  "titolo": "Cinque pratiche corrette e cinque errori",
+  "cols": [
+   "Buona pratica",
+   "Errore da evitare"
+  ],
+  "righe": [
+   [
+    "Usare kg reintegrati documentati",
+    "Usare la carica totale della macchina"
+   ],
+   [
+    "Distinguere i refrigeranti",
+    "Usare il GWP di un gas simile"
+   ],
+   [
+    "Mantenere la stessa base GWP",
+    "Copiare CO2e senza verificarne la fonte"
+   ],
+   [
+    "Censire anche macchine piccole",
+    "Dimenticare la voce senza bolletta"
+   ],
+   [
+    "Dichiarare zero ricariche se verificate",
+    "Trattare la carica iniziale come perdita"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s024",
+  "layout": "cards",
+  "kicker": "Altre fuggitive",
+  "titolo": "Quattro sorgenti oltre i refrigeranti",
+  "intro": "Le emissioni fuggitive non finiscono nei climatizzatori. Possono nascere anche da quadri elettrici, sistemi antincendio, reti interne del gas o impianti reflui gestiti in sito.",
+  "cards": [
+   {
+    "h": "SF6 nei quadri elettrici",
+    "d": "Poco gas, GWP altissimo; verificare targa o manutentore"
+   },
+   {
+    "h": "CO2 negli estintori",
+    "d": "Conta il gas effettivamente rilasciato o ricaricato"
+   },
+   {
+    "h": "Perdite di metano",
+    "d": "Sono fuggitive se il gas sfugge senza combustione"
+   },
+   {
+    "h": "Depurazione reflui interna",
+    "d": "Possono emergere CH4 e N2O; spesso serve supporto tecnico"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s025",
+  "layout": "calcolo",
+  "kicker": "Confronto pratico",
+  "titolo": "Tre gas, tre pesi",
+  "intro": "Mezzo chilogrammo di SF6, trenta chilogrammi di CO2 e dieci chilogrammi di metano non si giudicano a occhio: conta il GWP, non la sola massa.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "SF6 reintegrato in un quadro elettrico",
+    "n": "rapporto del manutentore della cabina",
+    "a": 0.5,
+    "au": "kg",
+    "ef": 24300,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "CO2 di sei estintori da 5 kg ricaricati",
+    "n": "rapporto della ditta antincendio",
+    "a": 30,
+    "au": "kg",
+    "ef": 1,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Metano disperso dalla rete interna del gas",
+    "n": "stima tecnica dopo la riparazione di una perdita",
+    "a": 10,
+    "au": "kg",
+    "ef": 29.8,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {
+   "a": "Gas disperso",
+   "ef": "GWP (fattore di emissione)"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 12478,
+  "fonte": "Esempio didattico – quantità illustrative; GWP: IPCC AR6 (CH4 fossile 29,8; SF6 24.300)"
+ },
+ {
+  "id": "fadcfp01_m04_s026",
+  "layout": "definizione",
+  "kicker": "Scope 1",
+  "titolo": "Quando una CO2 è di processo",
+  "eyebrow": "",
+  "definizione": "Sono emissioni dirette da reazioni chimiche o rilascio di gas tecnici. Se uscirebbero comunque anche con calore elettrico, non dipendono dal combustibile.",
+  "punti": []
+ },
+ {
+  "id": "fadcfp01_m04_s027",
+  "layout": "calcolo",
+  "kicker": "Esempio didattico",
+  "titolo": "Processo e combustione nella stessa fornace",
+  "intro": "Nella produzione di calce il forno brucia combustibile, ma il materiale trattato libera CO2 comunque. Il totale diretto ha quindi due origini e due leve di riduzione diverse.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Processo – decarbonatazione del calcare",
+    "n": "registro di produzione: 5.000 t di CaCO3 · fattore stechiometrico 0,44",
+    "a": 5000000,
+    "au": "kg",
+    "ef": 0.44,
+    "efu": "kg CO2/kg"
+   },
+   {
+    "l": "Combustione – gas naturale del forno",
+    "n": "bollette del gas · fattore del corso",
+    "a": 300000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 2800000,
+  "piede": "Il fattore 0,44 viene dalle masse molecolari: 44 (CO2) ÷ 100 (CaCO3). Vale per carbonato di calcio puro: il calcare reale richiede il dato di purezza.",
+  "fonte": "Esempio didattico – quantità illustrative; fattore stechiometrico del carbonato di calcio; fattore del gas arrotondato"
+ },
+ {
+  "id": "fadcfp01_m04_s028",
+  "layout": "confronto",
+  "kicker": "Distinzione operativa",
+  "titolo": "Combustione e processo non sono la stessa cosa",
+  "intro": "Tenere separate le due famiglie evita decisioni sbagliate. Nel caso Terrafelix, la riga \"emissioni di processo\" resta in inventario come non applicabile, con una nota che documenta l'assenza.",
+  "a": {
+   "h": "Combustione",
+   "sub": "",
+   "punti": [
+    {
+     "d": "CO2 dal carbonio del combustibile"
+    },
+    {
+     "d": "Dato: Sm³, litri o kg di combustibile"
+    },
+    {
+     "d": "Fonti: bollette, fatture, giacenze, carte carburante"
+    },
+    {
+     "d": "Leve e ruoli: energia, manutenzione, utility"
+    }
+   ]
+  },
+  "b": {
+   "h": "Processo",
+   "sub": "",
+   "punti": [
+    {
+     "d": "CO2 dalla materia trasformata o dal gas tecnico"
+    },
+    {
+     "d": "Dato: materia prima o gas usato nel ciclo"
+    },
+    {
+     "d": "Fonti: produzione, magazzino, specifiche, laboratorio"
+    },
+    {
+     "d": "Leve e ruoli: produzione, qualità, R&S, laboratorio"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m04_s029",
+  "layout": "calcolo",
+  "kicker": "Caso Terrafelix",
+  "titolo": "Sei voci costruiscono lo Scope 1",
+  "intro": "Qui i conti separati diventano inventario: due righe di combustione stazionaria, due di mobile, due di fuggitive. Le emissioni di processo sono state valutate e dichiarate non applicabili.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gas naturale – essiccatoi e centrale termica",
+    "n": "stazionaria · bollette",
+    "a": 1050000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Gasolio – gruppo elettrogeno e motopompa",
+    "n": "stazionaria · fatture e giacenze",
+    "a": 1500,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Gasolio – flotta aziendale",
+    "n": "mobile · carte carburante",
+    "a": 38000,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Benzina – flotta aziendale",
+    "n": "mobile · carte carburante",
+    "a": 6000,
+    "au": "l",
+    "ef": 2.3,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "R-410A – climatizzazione uffici",
+    "n": "fuggitive · rapporti del frigorista",
+    "a": 12,
+    "au": "kg",
+    "ef": 2256,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "HFC-134a – gruppo frigo di processo",
+    "n": "fuggitive · registro dell’apparecchiatura",
+    "a": 8,
+    "au": "kg",
+    "ef": 1530,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale Scope 1",
+  "_atteso": 2257787,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso); GWP: IPCC AR6"
+ },
+ {
+  "id": "fadcfp01_m04_s030",
+  "layout": "ciambella",
+  "kicker": "Lettura del totale",
+  "titolo": "La composizione per famiglia di sorgenti",
+  "intro": "La prima lettura è immediata: una famiglia domina quasi tutto lo Scope 1. Poi conviene guardare concentrazione sulla voce principale e intensità per tonnellata di prodotto.",
+  "unita": "t CO2e",
+  "totale": {
+   "n": "2.257,8",
+   "eti": "Scope 1 2025"
+  },
+  "voci": [
+   {
+    "l": "Combustione stazionaria",
+    "v": 2104
+   },
+   {
+    "l": "Combustione mobile",
+    "v": 114.5
+   },
+   {
+    "l": "Emissioni fuggitive",
+    "v": 39.3
+   }
+  ],
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi (inventario 2025)"
+ },
+ {
+  "id": "fadcfp01_m04_s031",
+  "layout": "simulatore",
+  "kicker": "Scenari gestionali",
+  "titolo": "Quanto si muove il totale se cambia una voce",
+  "intro": "Provare scenari aiuta a distinguere le leve che cambiano davvero il quadro da quelle che incidono solo ai margini. Il gas naturale sposta il totale; le fuggitive spostano il rischio operativo.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gas naturale",
+    "v": 1050000,
+    "u": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Gasolio impianti fissi",
+    "v": 1500,
+    "u": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Gasolio flotta",
+    "v": 38000,
+    "u": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Benzina flotta",
+    "v": 6000,
+    "u": "l",
+    "ef": 2.3,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "R-410A",
+    "v": 12,
+    "u": "kg",
+    "ef": 2256,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "HFC-134a",
+    "v": 8,
+    "u": "kg",
+    "ef": 1530,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "piede": "Valori iniziali: l’inventario 2025, totale 2.257.787 kg CO2e.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m04_s032",
+  "layout": "evidenza",
+  "kicker": "Messaggi al vertice",
+  "titolo": "Tre messaggi utili per la direzione",
+  "eyebrow": "",
+  "testo": "In dieci minuti il totale va trasformato in priorità leggibili. L'obiettivo non è sommare dettagli tecnici, ma correggere percezioni intuitive e collegare i numeri a decisioni realistiche.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m04_s033",
+  "layout": "ciclo",
+  "kicker": "Qualità del dato",
+  "titolo": "La fiducia nasce dall'incrocio",
+  "intro": "Un documento ufficiale non basta. Il dato diventa affidabile quando fonti indipendenti convergono, oppure quando gli scarti tra fonti vengono riconosciuti, spiegati e documentati con metodo.",
+  "ciclo": false,
+  "centro": "Dato di attività affidabile",
+  "nodi": [
+   {
+    "h": "Bollette e fatture",
+    "d": "Quantità fatturate nel periodo"
+   },
+   {
+    "h": "Contatori e letture",
+    "d": "Letture effettive di inizio e fine anno"
+   },
+   {
+    "h": "Contabilità",
+    "d": "Fatture complete, nessuna mancante o doppia"
+   },
+   {
+    "h": "Registri tecnici",
+    "d": "Libretti, serbatoi, registri F-gas"
+   },
+   {
+    "h": "Indicatori",
+    "d": "Consumi plausibili per tonnellata o per km"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s034",
+  "layout": "calcolo",
+  "kicker": "Plausibilità",
+  "titolo": "kWh termici per tonnellata di pasta",
+  "intro": "Affiancare al totale un indicatore specifico rende il dato leggibile. Qui il gas naturale viene trasformato in energia termica e rapportato alla produzione annua di Terrafelix.",
+  "unita": "kWh/t",
+  "righe": [
+   {
+    "l": "Gas naturale per tonnellata di pasta",
+    "n": "bollette: 1.050.000 Sm³ · produzione: 20.000 t · circa 9,8 kWh per Sm³",
+    "a": 1050000,
+    "au": "Sm³",
+    "ef": 9.8,
+    "efu": "kWh/Sm³",
+    "d": 20000,
+    "du": "t"
+   }
+  ],
+  "etichette": {
+   "r": "Consumo specifico",
+   "a": "Gas consumato",
+   "ef": "Potere calorifico",
+   "d": "Produzione"
+  },
+  "dec": null,
+  "totale": false,
+  "_atteso": 514.5,
+  "piede": "1.050.000 Sm³ × 9,8 = 10.290.000 kWh termici; ÷ 20.000 t = 514,5 kWh per tonnellata di pasta.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; potere calorifico: ISPRA, parametri standard nazionali (valore arrotondato)"
+ },
+ {
+  "id": "fadcfp01_m04_s035",
+  "layout": "calcolo",
+  "kicker": "Stima da migliorare",
+  "titolo": "Dagli euro ai litri senza errori",
+  "intro": "Quando mancano i litri, il conto si può ricostruire partendo dalla spesa e da un prezzo medio coerente. Ma resta una stima, e spesa e prezzo devono essere omogenei.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gasolio della flotta",
+    "n": "contabilità: 66.500 € (IVA inclusa) · prezzo medio alla pompa: 1,75 €/l, valore illustrativo",
+    "a": 66500,
+    "au": "€",
+    "ef": 2.65,
+    "efu": "kg CO2e/l",
+    "d": 1.75,
+    "du": "€/l"
+   }
+  ],
+  "etichette": {
+   "a": "Spesa",
+   "d": "Prezzo medio"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 100700,
+  "piede": "Passaggio intermedio: 66.500 € ÷ 1,75 €/l = 38.000 litri. Spesa e prezzo devono essere omogenei: entrambi con IVA oppure entrambi senza.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi (spesa e prezzo medio); fattore arrotondato (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m04_s036",
+  "layout": "flusso",
+  "kicker": "Verifica finale",
+  "titolo": "Sei controlli prima di chiudere lo Scope 1",
+  "intro": "Prima di chiudere l'inventario, verifica sei punti essenziali. Poi documenta fonti, fattori e autore del dato, e fai una seconda lettura indipendente: è lì che emergono buchi, doppioni e conguagli trascurati.",
+  "passi": [
+   {
+    "h": "Sorgenti complete",
+    "d": "Quattro famiglie esaminate, assenze motivate"
+   },
+   {
+    "h": "Periodo coperto",
+    "d": "Dodici mesi pieni, stime e conguagli inclusi"
+   },
+   {
+    "h": "Unità coerenti",
+    "d": "Dato e fattore parlano la stessa lingua"
+   },
+   {
+    "h": "Logica di consumo",
+    "d": "Giacenze considerate, acquisti non scambiati per uso"
+   },
+   {
+    "h": "Riconciliazione",
+    "d": "Fatture, contatori e registri tornano plausibilmente"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s037",
+  "layout": "cards",
+  "kicker": "Casi limite",
+  "titolo": "Cinque casi di confine classificati con il controllo",
+  "intro": "Per orientarti nei casi dubbi, usa sempre due domande: chi controlla la sorgente e che cosa brucia o viene rilasciato. Da qui discendono scope, famiglia emissiva e dato da cercare.",
+  "cards": [
+   {
+    "h": "Carrelli a GPL o gasolio",
+    "d": "Scope 1 mobile; litri o kg convertiti coerentemente"
+   },
+   {
+    "h": "Carrelli e mezzi elettrici",
+    "d": "Niente Scope 1; ricarica inclusa nello Scope 2"
+   },
+   {
+    "h": "Taxi, corrieri, noleggio con conducente",
+    "d": "Scope 3: conta chi controlla il mezzo"
+   },
+   {
+    "h": "Caldaia in immobile in affitto",
+    "d": "Scope 1 se gestita operativamente dall'azienda"
+   },
+   {
+    "h": "Cogeneratore aziendale",
+    "d": "Tutto il combustibile bruciato resta nello Scope 1"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s038",
+  "layout": "calcolo",
+  "kicker": "Esercizio",
+  "titolo": "Lo Scope 1 di Officina Volturno",
+  "intro": "Applicazione completa su un profilo emissivo diverso: quattro famiglie presenti, sei righe di inventario e un totale finale da ricostruire senza salti logici.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gas naturale – riscaldamento del capannone",
+    "n": "stazionaria · bollette",
+    "a": 18000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Gasolio – due furgoni",
+    "n": "mobile · carte carburante",
+    "a": 5200,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Benzina – un’auto",
+    "n": "mobile · schede carburante",
+    "a": 1100,
+    "au": "l",
+    "ef": 2.3,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "GPL – carrello elevatore",
+    "n": "mobile · bombole, già convertite in litri",
+    "a": 1500,
+    "au": "l",
+    "ef": 1.6,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "R-410A – ricarica del climatizzatore",
+    "n": "fuggitive · rapporto del frigorista",
+    "a": 3,
+    "au": "kg",
+    "ef": 2256,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "CO2 tecnica – gas di protezione per saldatura",
+    "n": "processo · bombole acquistate nell’anno",
+    "a": 400,
+    "au": "kg",
+    "ef": 1,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale Scope 1",
+  "_atteso": 61878,
+  "fonte": "Esempio didattico – azienda di fantasia, quantità illustrative; fattori arrotondati (vedi tabella dei fattori del corso); GWP: IPCC AR6"
+ },
+ {
+  "id": "fadcfp01_m04_s039",
+  "layout": "tabella",
+  "kicker": "Formulario",
+  "titolo": "Formulario minimo e qualità del dato",
+  "cols": [
+   "Sorgente",
+   "Dato di attività",
+   "Attenzione operativa"
+  ],
+  "righe": [
+   [
+    "Gas naturale",
+    "Sm³ annui",
+    "Bollette più letture contatore"
+   ],
+   [
+    "Gasolio e GPL fissi",
+    "Litri consumati",
+    "Giacenza iniziale + acquisti − finale"
+   ],
+   [
+    "Veicoli",
+    "Litri; poi km",
+    "Meglio litri, peggio euro"
+   ],
+   [
+    "Refrigeranti e SF6",
+    "Kg reintegrati o dispersi",
+    "Mai usare la carica totale"
+   ],
+   [
+    "Emissioni di processo",
+    "Materia trattata o gas rilasciato",
+    "CaCO3 × 0,44; CO2 tecnica = massa"
+   ],
+   [
+    "Biomassa",
+    "CH4 e N2O in Scope 1",
+    "CO2 biogenica calcolata ma separata"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s040",
+  "layout": "numeri",
+  "kicker": "Rischi tipici",
+  "titolo": "Sei errori che falsano lo Scope 1",
+  "intro": "Gli inventari fragili si rompono quasi sempre negli stessi punti: censimento incompleto, unità sbagliate, classificazioni errate, refrigeranti trascurati, periodo di competenza confuso, zeri dichiarati senza base tecnica.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Partire dai documenti, non dalle sorgenti",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Scambiare euro per dati fisici",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Confondere famiglie emissive e scope",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Trattare i refrigeranti come nota marginale",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "Seguire le fatture, non la competenza",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m04_s041",
+  "layout": "chiusura",
+  "kicker": "Sintesi",
+  "titolo": "La mappa operativa prima dello Scope 2",
+  "modNum": "04",
+  "punti": [
+   {
+    "h": "Quattro famiglie",
+    "d": "combustione stazionaria e mobile, fuggitive, processo"
+   },
+   {
+    "h": "Cinque passi, sempre uguali",
+    "d": "sorgente, dato, fattore, calcolo, plausibilità e provenienza"
+   },
+   {
+    "h": "Il dato giusto",
+    "d": "quantità fisiche, non euro; chili reintegrati, non carica nominale"
+   },
+   {
+    "h": "Nessuna gerarchia a priori",
+    "d": "Terrafelix e Officina Volturno pesano in modo diverso"
+   },
+   {
+    "h": "Trasparenza",
+    "d": "una sorgente assente si dichiara"
+   }
+  ],
+  "prossimo": {
+   "modulo": "05",
+   "titolo": "Calcolare le emissioni da energia acquistata (Scope 2)"
+  }
+ }
+]

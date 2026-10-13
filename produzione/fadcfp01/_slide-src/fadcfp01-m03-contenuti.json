@@ -1,0 +1,811 @@
+[
+ {
+  "id": "fadcfp01_m03_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 3",
+  "titolo": "Dall’idea di calcolo all’inventario GHG",
+  "corsoLabel": "Carbon Footprint · ISO 14064-1 · ISO 14067",
+  "eyebrow": "Modulo 3",
+  "sottotitolo": "Prima dei fattori e dei totali conta la struttura: perimetro, classificazione, righe da includere ed esclusioni motivate. Un inventario utile non è solo corretto nei conti: è leggibile, confrontabile e ricostruibile.",
+  "agenda": [
+   "Che cos’è l’inventario",
+   "Confini organizzativi",
+   "Confini di reporting",
+   "Linguaggi di classificazione",
+   "Qualità del risultato"
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s002",
+  "layout": "ciclo",
+  "kicker": "ISO 14064-1 e GHG Protocol",
+  "titolo": "I cinque principi dell’inventario GHG",
+  "intro": "Nei casi semplici bastano le regole. Nei casi ambigui servono criteri stabili per decidere che cosa includere, come misurarlo e come difendere le scelte nel tempo.",
+  "ciclo": false,
+  "centro": "Inventario GHG credibile",
+  "nodi": [
+   {
+    "h": "Pertinenza",
+    "d": "Sorgenti, dati e metodi adatti allo scopo"
+   },
+   {
+    "h": "Completezza",
+    "d": "Tutte le emissioni pertinenti; esclusioni motivate"
+   },
+   {
+    "h": "Coerenza",
+    "d": "Stessi criteri negli anni, confronti sensati"
+   },
+   {
+    "h": "Accuratezza",
+    "d": "Errori e incertezze ridotti quanto possibile"
+   },
+   {
+    "h": "Trasparenza",
+    "d": "Fonti, ipotesi e metodi dichiarati e ricostruibili"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s003",
+  "layout": "numeri",
+  "kicker": "Confine organizzativo",
+  "titolo": "Tre approcci di consolidamento",
+  "intro": "La prima scelta strutturale è decidere quali entità entrano nell’inventario. I metodi ammessi sono tre: il punto chiave non è quale conviene, ma sceglierne uno e applicarlo in modo uniforme.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Controllo operativo",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Controllo finanziario",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Quota di partecipazione",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s004",
+  "layout": "calcolo",
+  "kicker": "Consolidamento",
+  "titolo": "Quota di partecipazione sul gruppo di esempio",
+  "intro": "Con questo approccio ogni entità entra in inventario secondo la quota posseduta dalla capogruppo. La logica è economica, ma richiede di ottenere dati anche da partecipate non controllate.",
+  "unita": "t CO2e",
+  "righe": [
+   {
+    "l": "Attività proprie della capogruppo",
+    "n": "possedute al 100%",
+    "a": 1200,
+    "au": "t CO2e",
+    "ef": 1,
+    "efu": "(100%)"
+   },
+   {
+    "l": "Beta Logistica",
+    "n": "quota dal libro soci: 60%",
+    "a": 500,
+    "au": "t CO2e",
+    "ef": 0.6,
+    "efu": "(60%)"
+   },
+   {
+    "l": "Gamma Energia",
+    "n": "quota dal libro soci: 30%",
+    "a": 800,
+    "au": "t CO2e",
+    "ef": 0.3,
+    "efu": "(30%)"
+   }
+  ],
+  "etichette": {
+   "r": "Emissioni consolidate",
+   "a": "Emissioni della società",
+   "ef": "Quota posseduta"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 1740,
+  "piede": "Con questo approccio non conta chi gestisce l’impianto: conta la percentuale di proprietà.",
+  "fonte": "Esempio didattico – gruppo di fantasia, dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m03_s005",
+  "layout": "calcolo",
+  "kicker": "Confronto di metodo",
+  "titolo": "Lo stesso gruppo con il controllo",
+  "intro": "Il totale cambia perché cambia la regola di consolidamento. Nel caso Terrafelix, oggi i tre approcci darebbero lo stesso numero, ma la scelta va comunque formalizzata: l’azienda adotta il controllo operativo.",
+  "unita": "t CO2e",
+  "righe": [
+   {
+    "l": "Attività proprie della capogruppo",
+    "n": "controllate",
+    "a": 1200,
+    "au": "t CO2e",
+    "ef": 1,
+    "efu": "(100%)"
+   },
+   {
+    "l": "Beta Logistica",
+    "n": "controllata, anche se posseduta al 60%",
+    "a": 500,
+    "au": "t CO2e",
+    "ef": 1,
+    "efu": "(100%)"
+   },
+   {
+    "l": "Gamma Energia",
+    "n": "non controllata: fuori dal confine",
+    "a": 800,
+    "au": "t CO2e",
+    "ef": 0,
+    "efu": "(0%)"
+   }
+  ],
+  "etichette": {
+   "r": "Emissioni consolidate",
+   "a": "Emissioni della società",
+   "ef": "Quota consolidata"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 1700,
+  "piede": "Gamma Energia non sparisce: è un investimento, da valutare tra le emissioni indirette (Scope 3, categoria 15).",
+  "fonte": "Esempio didattico – gruppo di fantasia, dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m03_s006",
+  "layout": "organigramma",
+  "kicker": "Confine di reporting",
+  "titolo": "Dirette, indirette e beni gestiti",
+  "intro": "Dopo avere deciso chi entra nell’organizzazione, la domanda diventa un’altra: da dove esce fisicamente il gas serra e chi gestisce il bene che lo genera.",
+  "radice": {
+   "h": "Emissioni legate all’organizzazione",
+   "d": "Criterio fisico e gestionale, non semplice vicinanza all’azienda"
+  },
+  "rami": [
+   {
+    "h": "Dirette",
+    "d": "Da sorgenti possedute o controllate",
+    "voci": [
+     "Caldaie, forni, essiccatoi",
+     "Veicoli aziendali",
+     "Perdite di refrigeranti"
+    ]
+   },
+   {
+    "h": "Indirette da energia",
+    "d": "Prodotte da altri, consumate internamente",
+    "voci": [
+     "Elettricità di rete",
+     "Calore, vapore, raffrescamento"
+    ]
+   },
+   {
+    "h": "Altre indirette",
+    "d": "Sorgenti di altri nella catena del valore",
+    "voci": [
+     "Materie prime e imballaggi",
+     "Trasporti affidati a terzi",
+     "Viaggi, pendolarismo, rifiuti",
+     "Uso e fine vita dei prodotti"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s007",
+  "layout": "flusso",
+  "kicker": "Metodo operativo",
+  "titolo": "Quattro verifiche per classificare una sorgente",
+  "intro": "È la sequenza usata nel censimento di Terrafelix, prima di bollette e fatture: stabilimento, impianti, flotta, refrigeranti, carrelli, fotovoltaico e trasporti affidati a terzi.",
+  "passi": [
+   {
+    "h": "Il bene rientra nel confine",
+    "d": "È gestito dall’organizzazione?"
+   },
+   {
+    "h": "Il gas esce fisicamente da lì",
+    "d": "Combustione, processo o perdita"
+   },
+   {
+    "h": "È energia acquistata e consumata",
+    "d": "Elettricità, calore o vapore"
+   },
+   {
+    "h": "Non è già contata altrove",
+    "d": "Controllo finale contro il doppio conteggio"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s008",
+  "layout": "cards",
+  "kicker": "GHG Protocol",
+  "titolo": "Le quattro famiglie dello Scope 1",
+  "intro": "Gli scope indicano la posizione delle emissioni rispetto all’azienda, non il loro peso. Per lo Scope 1, quattro famiglie funzionano come lista di controllo e aiutano a non dimenticare sorgenti meno visibili.",
+  "cards": [
+   {
+    "h": "Combustione stazionaria",
+    "d": "Essiccatoi, centrale termica, gruppi elettrogeni"
+   },
+   {
+    "h": "Combustione mobile",
+    "d": "Auto, furgoni, camion, mezzi a carburante"
+   },
+   {
+    "h": "Emissioni di processo",
+    "d": "Reazioni fisiche o chimiche, non combustione"
+   },
+   {
+    "h": "Emissioni fuggitive",
+    "d": "Perdite di refrigeranti e altri gas"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s009",
+  "layout": "confronto",
+  "kicker": "Scope 3",
+  "titolo": "A monte e a valle della catena",
+  "intro": "Lo Scope 3 non è una categoria residuale: è una mappa ordinata delle emissioni generate da altri soggetti. Due nodi richiedono attenzione: la filiera dell’energia e l’uso dei prodotti venduti.",
+  "a": {
+   "h": "A monte",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Beni e servizi acquistati"
+    },
+    {
+     "d": "Beni strumentali"
+    },
+    {
+     "d": "Filiera combustibili ed energia"
+    },
+    {
+     "d": "Trasporti in entrata"
+    }
+   ]
+  },
+  "b": {
+   "h": "A valle",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Trasporto dei prodotti venduti"
+    },
+    {
+     "d": "Lavorazione successiva"
+    },
+    {
+     "d": "Uso dei prodotti venduti"
+    },
+    {
+     "d": "Fine vita dei prodotti"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m03_s010",
+  "layout": "numeri",
+  "kicker": "ISO 14064-1",
+  "titolo": "Le sei categorie ISO dello stesso inventario",
+  "intro": "La norma non cambia i numeri dell’inventario GHG: cambia il modo in cui li raggruppi. La lettura ISO è una seconda mappa utile per chi deve leggere il rapporto in ottica di conformità.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Dirette: emissioni e rimozioni proprie",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Energia importata: elettricità, calore, vapore, raffrescamento",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Trasporto di merci e persone su mezzi terzi",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Prodotti utilizzati: acquisti, beni strumentali, energia a monte, rifiuti",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "Uso, fine vita dei venduti, investimenti",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s011",
+  "layout": "barre",
+  "kicker": "Caso studio Terrafelix",
+  "titolo": "Terrafelix: stesso totale, sei categorie ISO",
+  "intro": "La prova decisiva è numerica: cambiando classificazione il totale resta 21.692,5 t CO2e. Nella vista ISO cambiano solo le famiglie in cui ricadono le stesse righe già presenti nell’inventario.",
+  "unita": "t CO2e",
+  "voci": [
+   {
+    "l": "1 Dirette",
+    "v": 2257.8
+   },
+   {
+    "l": "2 Energia importata",
+    "v": 752
+   },
+   {
+    "l": "3 Trasporto",
+    "v": 1998.3
+   },
+   {
+    "l": "4 Prodotti utilizzati",
+    "v": 16578.4
+   },
+   {
+    "l": "5 Uso dei prodotti",
+    "v": 106
+   },
+   {
+    "l": "6 Altre sorgenti",
+    "v": 0
+   }
+  ],
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m03_s012",
+  "layout": "tabella",
+  "kicker": "Metodo di classificazione",
+  "titolo": "Quattro domande per classificare ogni sorgente",
+  "cols": [
+   "Domanda guida",
+   "Se la risposta è sì"
+  ],
+  "righe": [
+   [
+    "Chi controlla bene o attività?",
+    "La sorgente è gestita dall’organizzazione"
+   ],
+   [
+    "Il gas serra esce fisicamente da lì?",
+    "Dirette: Scope 1, categoria 1 ISO"
+   ],
+   [
+    "È energia prodotta da altri e consumata qui?",
+    "Scope 2, categoria 2 ISO"
+   ],
+   [
+    "È nella catena del valore?",
+    "Scope 3, categorie ISO da 3 a 6"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s013",
+  "layout": "evidenza",
+  "kicker": "Catena del valore",
+  "titolo": "Le indirette si leggono con due etichette",
+  "eyebrow": "",
+  "testo": "Per mantenere coerenza tra GHG Protocol e ISO 14064-1 conviene partire dalla natura dell’attività e assegnare a ogni riga entrambe le classificazioni. È qui che, per Terrafelix, si concentra la quota più rilevante dell’inventario.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m03_s014",
+  "layout": "calcolo",
+  "kicker": "Casi dubbi e doppio conteggio",
+  "titolo": "Una bolletta, due emissioni diverse",
+  "intro": "Lo stesso dato di attività può alimentare due righe corrette se descrive due fenomeni distinti: ciò che avviene nel sito e ciò che avviene a monte nella filiera del combustibile.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Combustione negli essiccatoi",
+    "n": "Scope 1 · categoria 1 ISO · dato: 12 bollette del gas",
+    "a": 1050000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Filiera a monte del gas",
+    "n": "Scope 3 cat. 3 · categoria 4 ISO · stesso dato",
+    "a": 1050000,
+    "au": "Sm³",
+    "ef": 0.33,
+    "efu": "kg CO2e/Sm³"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale legato al gas naturale",
+  "_atteso": 2446500,
+  "piede": "Non è un doppio conteggio: sono emissioni diverse, avvenute in luoghi diversi.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m03_s015",
+  "layout": "ciclo",
+  "kicker": "ISO 14064-1",
+  "titolo": "Sei criteri per la significatività indiretta",
+  "intro": "La norma non impone una soglia universale: chiede all’organizzazione di definire e documentare i propri criteri. Una matrice semplice aiuta poi a trasformare questi criteri in priorità di lavoro.",
+  "ciclo": false,
+  "centro": "Emissione indiretta significativa?",
+  "nodi": [
+   {
+    "h": "Entità",
+    "d": "Peso sul totale stimato, in t CO2e"
+   },
+   {
+    "h": "Livello di influenza",
+    "d": "Quanto puoi misurare, gestire, ridurre"
+   },
+   {
+    "h": "Rischio o opportunità",
+    "d": "Clienti, costi, regole, reputazione"
+   },
+   {
+    "h": "Indicazioni di settore",
+    "d": "Prassi e linee guida del comparto"
+   },
+   {
+    "h": "Esternalizzazione",
+    "d": "Attività spostate a terzi, non sparite"
+   },
+   {
+    "h": "Coinvolgimento del personale",
+    "d": "Voci utili ad attivare comportamenti"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s016",
+  "layout": "split",
+  "kicker": "Esito della significatività",
+  "titolo": "Che cosa entra, che cosa resta fuori",
+  "lead": "Terrafelix applica una regola semplice ma non meccanica: conta la soglia dell’uno per cento, ma contano anche influenza, richieste dei clienti e capacità di attivare azioni interne.",
+  "punti": [
+   {
+    "h": "Regola aziendale",
+    "d": "Significativa oltre 1% o per altri criteri rilevanti"
+   },
+   {
+    "h": "Entrano per peso",
+    "d": "Beni e servizi, trasporto valle, energia monte, trasporto monte, beni strumentali"
+   },
+   {
+    "h": "Entrano comunque",
+    "d": "Fine vita, pendolarismo, viaggi, rifiuti"
+   },
+   {
+    "h": "Non applicabili",
+    "d": "Leasing, lavorazione venduti, franchising, investimenti"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s017",
+  "layout": "definizione",
+  "kicker": "Confronto nel tempo",
+  "titolo": "L’anno base si ricalcola quando cambia il metro",
+  "eyebrow": "",
+  "definizione": "Il primo anno credibile di confronto. Per Terrafelix è il 2025. Si ricalcola solo per cambiamenti strutturali, modifiche metodologiche o di GWP, oppure errori significativi sopra la soglia definita.",
+  "punti": []
+ },
+ {
+  "id": "fadcfp01_m03_s018",
+  "layout": "calcolo",
+  "kicker": "Politica di ricalcolo",
+  "titolo": "La soglia di ricalcolo in pratica",
+  "intro": "Per verificare se un evento impone il ricalcolo non guardi l’anno corrente: guardi il suo effetto sull’anno base. Nell’esempio, l’acquisizione supera la soglia del cinque per cento fissata da Terrafelix.",
+  "unita": "%",
+  "righe": [
+   {
+    "l": "Emissioni 2025 della società acquisita",
+    "n": "dal suo inventario o da una stima documentata",
+    "a": 1300,
+    "au": "t CO2e",
+    "ef": 100,
+    "efu": "%",
+    "d": 21692.5,
+    "du": "t CO2e"
+   }
+  ],
+  "etichette": {
+   "r": "Variazione sull’anno base",
+   "a": "Variazione",
+   "ef": "Per cento",
+   "d": "Anno base"
+  },
+  "dec": 2,
+  "totale": false,
+  "_atteso": 5.993,
+  "piede": "5,99% supera la soglia del 5%: l’anno base si ricalcola. Nuovo anno base: 21.692,5 + 1.300 = 22.992,5 t CO2e.",
+  "fonte": "Esempio didattico su dati del caso studio Pastificio Terrafelix – ipotesi illustrativa"
+ },
+ {
+  "id": "fadcfp01_m03_s019",
+  "layout": "barre",
+  "kicker": "Politica anno base",
+  "titolo": "Il ricalcolo protegge il confronto nel tempo",
+  "intro": "Lo stesso dato 2027 cambia segno se il punto di partenza viene reso omogeneo al nuovo perimetro. Il ricalcolo non abbellisce il risultato: evita confronti falsati tra organizzazioni diverse nel tempo.",
+  "unita": "t CO2e",
+  "serie": [
+   "Senza ricalcolo",
+   "Con anno base ricalcolato"
+  ],
+  "voci": [
+   {
+    "l": "Anno base 2025",
+    "v": [
+     21692.5,
+     22992.5
+    ]
+   },
+   {
+    "l": "Anno 2027",
+    "v": [
+     22400,
+     22400
+    ]
+   }
+  ],
+  "fonte": "Esempio didattico su dati del caso studio Pastificio Terrafelix – scenario illustrativo"
+ },
+ {
+  "id": "fadcfp01_m03_s020",
+  "layout": "cards",
+  "kicker": "Voci separate",
+  "titolo": "CO2 biogenica e rimozioni non fanno netting",
+  "intro": "Alcune informazioni climatiche vanno misurate e dichiarate, ma non fuse nel totale principale degli scope. La regola da ricordare è una: nulla si sottrae in silenzio.",
+  "cards": [
+   {
+    "h": "CO2 biogenica",
+    "d": "Si quantifica e si riporta separatamente dal totale"
+   },
+   {
+    "h": "CH4 e N2O da biomassa",
+    "d": "Restano nell’inventario, convertiti in CO2e"
+   },
+   {
+    "h": "Rimozioni",
+    "d": "Solo con metodo documentato e stime prudenti"
+   },
+   {
+    "h": "Energia autoprodotta",
+    "d": "Va raccontata con chiarezza, non come rimozione"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s021",
+  "layout": "ciambella",
+  "kicker": "Fotovoltaico",
+  "titolo": "Autoconsumo sì, sottrazione no",
+  "intro": "Il beneficio del fotovoltaico è già dentro uno Scope 2 più basso, perché riduce il prelievo dalla rete. Sottrarlo di nuovo, o sommarvi alberi non quantificati, rende il totale ingannevole.",
+  "unita": "kWh",
+  "voci": [
+   {
+    "l": "Fotovoltaico autoconsumato",
+    "v": 600000
+   },
+   {
+    "l": "Prelievo da rete",
+    "v": 3200000
+   }
+  ],
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m03_s022",
+  "layout": "organigramma",
+  "kicker": "Piano di raccolta",
+  "titolo": "Il coordinamento distribuisce il lavoro dove nasce",
+  "intro": "Il coordinatore dell’inventario fa regia, non accentra tutto. Qualità e tempi migliorano quando ogni funzione porta i dati che già gestisce, con responsabilità esplicite e controlli di coerenza.",
+  "radice": {
+   "h": "Davide Russo",
+   "d": "Ambiente ed energia · coordinamento, richieste dati, controlli e consolidamento"
+  },
+  "rami": [
+   {
+    "h": "Chiara Vitale",
+    "d": "Amministrazione e controllo",
+    "voci": [
+     "Bollette gas ed elettricità",
+     "Fatture carburanti",
+     "Note spese viaggi",
+     "Conguagli e competenza annuale"
+    ]
+   },
+   {
+    "h": "Michele Santoro",
+    "d": "Acquisti e logistica",
+    "voci": [
+     "Quantità acquistate",
+     "Documenti di trasporto",
+     "Tratte ricorrenti",
+     "Rese commerciali e prassi operative"
+    ]
+   },
+   {
+    "h": "Rosa Iannone",
+    "d": "Produzione",
+    "voci": [
+     "Tonnellate di pasta prodotte",
+     "Configurazione impianti",
+     "Refrigeranti reintegrati"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s023",
+  "layout": "tabella",
+  "kicker": "Richieste dati",
+  "titolo": "Ogni richiesta deve dire quattro cose",
+  "cols": [
+   "Fonte interna",
+   "Dato richiesto",
+   "Unità e documento",
+   "Quando"
+  ],
+  "righe": [
+   [
+    "Amministrazione",
+    "Gas naturale",
+    "Sm³ · 12 bollette",
+    "Feb 2026"
+   ],
+   [
+    "Amministrazione",
+    "Elettricità di rete",
+    "kWh · bollette, contratto, garanzie d’origine",
+    "Feb 2026"
+   ],
+   [
+    "Produzione",
+    "Pasta prodotta e refrigeranti",
+    "t e kg · consuntivi, registro impianti, manutentore",
+    "Mar 2026"
+   ],
+   [
+    "Acquisti, logistica e personale",
+    "Trasporti, rifiuti, viaggi, pendolarismo",
+    "t, km, notti · DDT, registri, note spese, agenzia, questionari",
+    "Apr-Mag 2026"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s024",
+  "layout": "ciclo",
+  "kicker": "Documento di impostazione",
+  "titolo": "Sei blocchi da fissare prima dei calcoli",
+  "intro": "Poche pagine approvate evitano improvvisazioni a metà lavoro. Il documento di impostazione rende visibili le decisioni essenziali su perimetro, classificazione, criteri e fonti prima che inizino i calcoli.",
+  "ciclo": false,
+  "centro": "Documento di impostazione",
+  "nodi": [
+   {
+    "h": "Confini organizzativi",
+    "d": "Approccio di consolidamento, società e sedi incluse"
+   },
+   {
+    "h": "Confini di reporting",
+    "d": "Periodo ed emissioni dirette e indirette considerate"
+   },
+   {
+    "h": "Classificazione",
+    "d": "Scope, categorie Scope 3, categorie ISO o entrambe"
+   },
+   {
+    "h": "Significatività",
+    "d": "Criteri per le indirette ed esclusioni motivate"
+   },
+   {
+    "h": "Anno base",
+    "d": "Anno scelto, politica e soglia di ricalcolo"
+   },
+   {
+    "h": "Fattori, GWP e ruoli",
+    "d": "Fonti dei fattori, serie GWP, responsabilità operative"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s025",
+  "layout": "cards",
+  "kicker": "Caso Terrafelix",
+  "titolo": "Sei sorgenti spiegano quasi tutto l’inventario",
+  "intro": "Con il documento approvato, il lavoro si concentra dove conta davvero: controllo operativo, anno base 2025, soglia di ricalcolo al 5% e lettura coerente fanno emergere sei voci che valgono circa l’87% del totale.",
+  "cards": [
+   {
+    "h": "Gas naturale impianti fissi",
+    "d": "Grande driver dello Scope 1"
+   },
+   {
+    "h": "Gasolio della flotta",
+    "d": "Combustione mobile aziendale"
+   },
+   {
+    "h": "Elettricità di rete",
+    "d": "Nel totale principale, criterio location based"
+   },
+   {
+    "h": "Semola acquistata",
+    "d": "Voce dominante della catena del valore"
+   },
+   {
+    "h": "Astucci e cartoni",
+    "d": "Imballaggi con peso emissivo rilevante"
+   },
+   {
+    "h": "Consegne in Italia su gomma",
+    "d": "Logistica a valle tra le priorità operative"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s026",
+  "layout": "piramide",
+  "kicker": "Sintesi operativa",
+  "titolo": "Le decisioni si prendono in questo ordine",
+  "intro": "Ogni scelta si appoggia alla precedente: se inverti la sequenza, raccogli dati inutili, classifichi male le sorgenti e costruisci confronti fragili. L’impostazione va poi riesaminata a ogni nuovo inventario.",
+  "livelli": [
+   {
+    "h": "Confine organizzativo",
+    "d": "Chi siamo: controllo o quota di partecipazione"
+   },
+   {
+    "h": "Confine di reporting",
+    "d": "Emissioni dirette e indirette, sede per sede"
+   },
+   {
+    "h": "Classificazione",
+    "d": "Scope 1, 2, 3 e categorie ISO senza doppi conteggi"
+   },
+   {
+    "h": "Significatività e anno base",
+    "d": "Che cosa quantificare e rispetto a quale anno confrontare"
+   },
+   {
+    "h": "Piano di raccolta dei dati",
+    "d": "Chi fornisce che cosa, da quale documento, entro quando"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m03_s027",
+  "layout": "chiusura",
+  "kicker": "Da portare via",
+  "titolo": "Impostazione solida prima dei calcoli",
+  "modNum": "03",
+  "punti": [
+   {
+    "h": "Confini e criteri dichiarati",
+    "d": "Niente perimetri comodi o categorie lasciate implicite"
+   },
+   {
+    "h": "Scope 3 valutato per intero",
+    "d": "Ogni esclusione va motivata, non liquidata"
+   },
+   {
+    "h": "Mai netting o doppi conteggi",
+    "d": "Fotovoltaico, alberi e voci già incluse restano separati"
+   },
+   {
+    "h": "Autoverifica prima di procedere",
+    "d": "Sai spiegare, classificare e tradurre ogni sorgente?"
+   }
+  ],
+  "prossimo": {
+   "modulo": "04",
+   "titolo": "Calcolare le emissioni dirette (Scope 1)"
+  }
+ }
+]

@@ -14,6 +14,7 @@ mkdirSync(out, { recursive: true });
 
 const pulisci = (s) => String(s ?? "").replace(/\*\*(.+?)\*\*/g, "$1").replace(/\s+/g, " ").trim();
 const num = (v) => (typeof v === "number" ? v.toLocaleString("it-IT", { maximumFractionDigits: 1 }) : pulisci(v));
+const cifre = (v) => v.toLocaleString("it-IT", { maximumFractionDigits: 6 });
 const voci = (lista) => (lista ?? []).map((b) => (typeof b === "string" ? `- ${pulisci(b)}` : `- ${pulisci(b.t)}${b.d ? `: ${pulisci(b.d)}` : ""}`));
 
 // un renderer per ogni tipo di schermata del motore del committente (stessi campi di R.* nell'HTML)
@@ -55,11 +56,29 @@ const R = {
   gantt: (s) => [pulisci(s.lead), ...s.tasks.map((t) => `- ${pulisci(t.t)}: ${s.periods[t.start - 1]} → ${s.periods[t.end - 1]}`)],
   meters: (s) => [pulisci(s.lead), ...s.rows.map((r) => `- ${pulisci(r.l)}: rilevato ${num(r.v)}${pulisci(r.unit)}, obiettivo ${num(r.target)}${pulisci(r.unit)}${r.lowerIsBetter ? " (meglio se più basso)" : ""}`)],
   summary: (s) => [pulisci(s.lead), ...s.points.map((p, i) => `${i + 1}. ${pulisci(p)}`)],
+  // calcolo svolto (FAD-CFP-01): dato × fattore [× secondo fattore] [÷ divisore], stessa formula di rowVal nell'HTML
+  calc: (s) => {
+    const ru = pulisci(s.ru || "kg CO2e"), dec = (v) => (s.dec != null ? v.toLocaleString("it-IT", { minimumFractionDigits: s.dec, maximumFractionDigits: s.dec }) : cifre(v));
+    const val = (r) => (r.a * r.ef * (r.k == null ? 1 : r.k)) / (r.d == null ? 1 : r.d);
+    const tot = s.rows.reduce((a, r) => a + val(r), 0);
+    if (Math.abs(tot - s.total) > Math.max(0.51, Math.abs(s.total) * 0.001) && Math.abs(tot - s.total) > 10 ** -(s.dec ?? 0) * 0.6) throw new Error(`calcolo «${s.title}»: ricalcolato ${tot}, dichiarato ${s.total}`);
+    return [pulisci(s.lead), `Formula: ${pulisci(s.rLabel || "Emissioni")} = ${pulisci(s.aLabel || "Dato di attività")} × ${pulisci(s.efLabel || "Fattore di emissione")}${s.rows.some((r) => r.k != null) ? ` × ${pulisci(s.kLabel || "Secondo fattore")}` : ""}${s.rows.some((r) => r.d != null) ? ` ÷ ${pulisci(s.dLabel || "Divisore")}` : ""}`,
+      ...s.rows.map((r) => `- ${pulisci(r.l)}${r.n ? ` (${pulisci(r.n)})` : ""}: ${cifre(r.a)} ${pulisci(r.au)} × ${cifre(r.ef)} ${pulisci(r.efu)}${r.k != null ? ` × ${cifre(r.k)} ${pulisci(r.ku)}` : ""}${r.d != null ? ` ÷ ${cifre(r.d)} ${pulisci(r.du)}` : ""} = ${dec(val(r))} ${ru}`),
+      s.rows.length > 1 || s.showTotal ? `${pulisci(s.totalLabel || "Totale")}: ${dec(tot)} ${ru}` : "",
+      ru === "kg CO2e" && tot >= 1000 ? `In tonnellate: ${cifre(tot / 1000)} t CO2e` : "", pulisci(s.foot)];
+  },
+  // calcolatore interattivo: nella fonte entrano i valori iniziali dell'esempio
+  sim: (s) => {
+    const ru = pulisci(s.ru || "kg CO2e"), tot = s.inputs.reduce((a, r) => a + r.v * r.ef, 0);
+    return [pulisci(s.lead), "Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:",
+      ...s.inputs.map((r) => `- ${pulisci(r.l)}: ${cifre(r.v)} ${pulisci(r.unit)} × ${cifre(r.ef)} ${pulisci(r.efu)} = ${cifre(r.v * r.ef)} ${ru}`),
+      `Totale iniziale: ${cifre(tot)} ${ru}`, ru === "kg CO2e" && tot >= 1000 ? `In tonnellate: ${cifre(tot / 1000)} t CO2e` : "", pulisci(s.foot)];
+  },
 };
 
-const file = readdirSync(dir).filter((f) => /^FAD-PAS24000-01_UD\d\d\.html$/.test(f)).sort();
+const file = readdirSync(dir).filter((f) => /^FAD-[A-Z0-9]+-\d\d_UD\d\d\.html$/.test(f)).sort();
 if (file.length !== 10) throw new Error(`attese 10 unità, trovate ${file.length}`);
-const checkpoint = [], esame = [], tipi = {};
+const checkpoint = [], esame = [], tipi = {}, calcoli = {};
 let totale = 0;
 for (const f of file) {
   const html = readFileSync(`${dir}/${f}`, "utf8");
@@ -67,7 +86,7 @@ for (const f of file) {
   if (!m) throw new Error(`${f}: blocco window.UNIT non trovato`);
   const U = JSON.parse(m[1]);
   const mod = `m${String(U.unit).padStart(2, "0")}`;
-  if (f !== `FAD-PAS24000-01_UD${mod.slice(1)}.html`) throw new Error(`${f}: numero di unità ${U.unit} non coerente col nome`);
+  if (!f.endsWith(`_UD${mod.slice(1)}.html`)) throw new Error(`${f}: numero di unità ${U.unit} non coerente col nome`);
   const righe = [`# UNITÀ ${U.unit} — ${pulisci(U.title)} (${pulisci(U.hours)})`, pulisci(U.subtitle),
     "Obiettivi di apprendimento:", ...U.objectives.map((o) => `- ${pulisci(o)}`)];
   let n = 0;
@@ -82,6 +101,16 @@ for (const f of file) {
       const fn = R[s.type];
       if (!fn) throw new Error(`${f}: tipo di schermata sconosciuto «${s.type}»`);
       n++;
+      // calcoli e calcolatori: i dati esatti, per numero di schermata. Le slide li prendono DA QUI
+      // (layout calcolo/simulatore di build-slide.mjs), mai ritrascritti a mano o da un modello.
+      if (s.type === "calc") (calcoli[mod] ??= {})[n] = { tipo: "calcolo", titolo: pulisci(s.title),
+        etichette: { r: s.rLabel, a: s.aLabel, ef: s.efLabel, k: s.kLabel, d: s.dLabel }, unita: s.ru, dec: s.dec,
+        totale: s.rows.length > 1 || s.showTotal ? pulisci(s.totalLabel || "Totale") : false,
+        righe: s.rows.map((r) => ({ ...r, l: pulisci(r.l), n: r.n ? pulisci(r.n) : undefined })),
+        atteso: s.total, piede: pulisci(s.foot), fonte: pulisci(s.source) };
+      if (s.type === "sim") (calcoli[mod] ??= {})[n] = { tipo: "simulatore", titolo: pulisci(s.title), unita: s.ru,
+        righe: s.inputs.map((r) => ({ l: pulisci(r.l), v: r.v, u: r.unit, ef: r.ef, efu: r.efu })),
+        piede: pulisci(s.foot), fonte: pulisci(s.source) };
       const corpo = fn(s).filter(Boolean);
       righe.push(`### SCHERMATA ${n} — ${pulisci(s.title)} [${s.type}${s.ref ? ` · ${pulisci(s.ref)}` : ""}]`, ...corpo,
         s.source ? `Fonte dei dati: ${pulisci(s.source)}` : "", s.note ? `Commento del docente: ${pulisci(s.note)}` : "");
@@ -96,5 +125,6 @@ for (const f of file) {
   console.log(`${mod}: ${pulisci(U.hours)} · ${U.sections.length} sezioni · ${n} schermate · ${parole} parole · ${pulisci(U.title)}`);
 }
 writeFileSync(`${out}/quiz.json`, JSON.stringify({ checkpoint, esame }, null, 2) + "\n");
+if (Object.keys(calcoli).length) writeFileSync(`${out}/calcoli.json`, JSON.stringify(calcoli, null, 1) + "\n");
 console.log(`totale ${totale} parole · checkpoint ${checkpoint.length} · domande d'esame ${esame.length}`);
 console.log(`tipi di schermata: ${JSON.stringify(tipi)}`);

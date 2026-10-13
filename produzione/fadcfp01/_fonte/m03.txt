@@ -1,0 +1,641 @@
+# UNITÀ 3 — Impostare l’inventario di organizzazione: confini, scope e categorie (2 ore)
+Prima di contare bisogna decidere che cosa contare e dove metterlo: principi, confini organizzativi e di reporting, Scope 1-2-3, sei categorie ISO 14064-1, significatività e anno base.
+Obiettivi di apprendimento:
+- Spiegare che cos’è un inventario GHG e applicare i cinque principi che lo rendono credibile
+- Scegliere l’approccio di consolidamento (controllo o quota di partecipazione) e calcolarne l’effetto sui numeri
+- Distinguere emissioni dirette e indirette e collocare ogni sorgente nello Scope 1, 2 o 3 e nelle 15 categorie dello Scope 3
+- Tradurre gli scope nelle sei categorie della ISO 14064-1 usando la corrispondenza indicativa
+- Valutare la significatività delle emissioni indirette e motivare le esclusioni
+- Fissare l’anno base, verificare la soglia di ricalcolo e organizzare il piano di raccolta dei dati
+
+## SEZIONE 1 — Che cos’è un inventario GHG
+### SCHERMATA 1 — Che cos’è un inventario GHG [section]
+Nell’unità 2 abbiamo imparato la formula: dato di attività × fattore di emissione. Ora serve l’elenco delle voci a cui applicarla. L’inventario GHG è questo elenco, costruito con regole dichiarate.
+- Un elenco quantificato di sorgenti, per un anno
+- Due riferimenti: GHG Protocol e ISO 14064-1
+- Cinque principi che guidano ogni scelta
+- Le fasi di lavoro, dai confini alla verifica
+### SCHERMATA 2 — Dalla formula all’inventario: che cosa cambia [text]
+Un inventario dei gas serra (GHG) è l’elenco quantificato delle emissioni – e delle eventuali rimozioni – di un’organizzazione in un periodo definito, di norma un anno solare.
+- Ogni riga è una sorgente: Una caldaia, una flotta, un acquisto, un trasporto: per ciascuna un dato di attività, un fattore e un risultato in CO2e.
+- Prima dei conti vengono le regole: Quali società e sedi entrano, quali emissioni si considerano, come si classificano, rispetto a quale anno si confronta.
+- Due riferimenti, la stessa logica: Il GHG Protocol (Corporate Standard) e la norma ISO 14064-1:2018 chiedono le stesse decisioni di fondo e usano classificazioni diverse.
+- Il risultato è un rapporto, non solo un numero: Il totale vale quanto la chiarezza con cui sono dichiarati confini, esclusioni, fonti e ipotesi.
+Riquadro «In questa unità»: Pochi calcoli e molte decisioni: che cosa contare e in quale casella metterlo. I conti veri, sorgente per sorgente, arrivano nelle unità 4, 5 e 6.
+Commento del docente: Conviene dirlo subito agli allievi: la maggior parte degli errori di un inventario non nasce da una moltiplicazione sbagliata, ma da una sorgente dimenticata, contata due volte o messa nella casella sbagliata. Per questo dedichiamo un’intera unità all’impostazione. Chi ha familiarità con la contabilità riconoscerà la logica: prima il piano dei conti, poi le registrazioni. Il Pastificio Terrafelix ci accompagna: a gennaio 2026 il gruppo di lavoro deve decidere come impostare l’inventario dell’anno 2025.
+### SCHERMATA 3 — I cinque principi dell’inventario [hub · ISO 14064-1 · principi]
+ISO 14064-1 e GHG Protocol indicano gli stessi cinque principi: servono a decidere nei casi che nessuna regola prevede.
+Al centro: Inventario GHG credibile
+- Pertinenza: Sorgenti, dati e metodi adatti a chi userà i risultati
+- Completezza: Tutte le emissioni pertinenti; esclusioni motivate
+- Coerenza: Stessi criteri negli anni, per confronti sensati
+- Accuratezza: Errori e incertezze ridotti per quanto possibile
+- Trasparenza: Fonti, ipotesi e metodi dichiarati e ricostruibili
+Commento del docente: I principi non sono una premessa da saltare: sono il criterio con cui un verificatore giudica le scelte. Esempio pratico: un’azienda esclude i gas refrigeranti «perché sono pochi chili». La completezza chiede di includerli o di motivare l’esclusione con un numero; la trasparenza chiede di scriverlo. Nel GHG Protocol il primo principio si chiama rilevanza, nella ISO 14064-1 pertinenza: il significato è lo stesso. Quando in aula nasce un dubbio di classificazione, tornate qui: quale scelta è più completa, coerente e trasparente?
+### SCHERMATA 4 — Le fasi di un inventario: dove siamo [flow · ISO 14064-1 · struttura]
+Questa unità copre i primi due passi. Senza di essi i passi successivi non hanno un perimetro.
+1. 1. Confini: Quali società e sedi, quali emissioni: questa unità.
+2. 2. Sorgenti: Identificare e classificare ogni sorgente: questa unità.
+3. 3. Dati: Raccogliere i dati di attività dai documenti aziendali.
+4. 4. Calcolo: Dato × fattore, sorgente per sorgente: unità 4, 5, 6.
+5. 5. Rapporto: Consolidare, valutare l’incertezza, scrivere: unità 7.
+6. 6. Verifica: Controllo indipendente di terza parte: unità 7.
+Il percorso ricalca la struttura della ISO 14064-1: confini dell’inventario, quantificazione, qualità, rendicontazione, verifica.
+Commento del docente: Mostrate il flusso come una mappa del corso. A Terrafelix il calendario segue gli stessi passi: gennaio per avvio e confini, febbraio e marzo per i dati di Scope 1 e 2, aprile e maggio per lo Scope 3, giugno per consolidamento e rapporto, luglio per la verifica. Errore tipico: partire dal passo 3, chiedendo bollette e fatture a tutti, senza aver deciso che cosa serve. Il risultato sono settimane perse, dati inutili raccolti e dati necessari dimenticati.
+
+## SEZIONE 2 — I confini organizzativi
+### SCHERMATA 5 — I confini organizzativi [section]
+La prima domanda è «chi siamo?»: quali società, stabilimenti e attività fanno parte dell’organizzazione che dichiara le emissioni. La risposta si chiama approccio di consolidamento.
+- Tre approcci: due di controllo, uno di quota
+- Un gruppo di esempio con due partecipate
+- Lo stesso gruppo, due totali diversi
+- La scelta di Terrafelix
+### SCHERMATA 6 — Tre modi di tracciare il confine organizzativo [cards · ISO 14064-1 · confini organizzativi]
+GHG Protocol e ISO 14064-1 ammettono gli stessi approcci: se ne sceglie uno solo e lo si applica a tutto il gruppo.
+- [Controllo] Controllo operativo: Si conta il 100% delle emissioni delle attività di cui l’organizzazione decide e applica le regole di gestione. Con un solo sito gestito in proprio è la scelta più semplice.
+- [Controllo] Controllo finanziario: Si conta il 100% delle emissioni delle attività di cui l’organizzazione dirige le politiche finanziarie e operative per trarne i benefici economici.
+- [Quota] Quota di partecipazione: Si conta una parte delle emissioni di ogni società, in proporzione alla quota posseduta: il 60% del capitale porta il 60% delle emissioni.
+Commento del docente: La differenza si vede solo quando ci sono partecipate, joint venture o impianti gestiti da altri. Con il controllo la logica è «tutto o niente»: se controllo conto il 100%, altrimenti zero. Con la quota di partecipazione (in inglese equity share) conto sempre una percentuale. Nessun approccio è «migliore»: conta dichiararlo, applicarlo in modo uniforme e non cambiarlo da un anno all’altro senza ricalcolare l’anno base. Le definizioni qui sono parafrasi didattiche: per i casi societari complessi si leggono i testi ufficiali.
+### SCHERMATA 7 — Un gruppo di esempio: capogruppo e due partecipate [tree]
+Gruppo di fantasia. Le emissioni indicate sono quelle totali di ciascuna società nell’anno (Scope 1 e 2).
+Radice: Delta Alimentare S.p.A. (capogruppo: redige l’inventario)
+- Attività proprie (stabilimento e uffici della capogruppo): Quota: 100%; Emissioni: 1.200 t CO2e
+- Beta Logistica S.r.l. (posseduta al 60% · controllata): La capogruppo ne decide la gestione; Emissioni: 500 t CO2e
+- Gamma Energia S.r.l. (posseduta al 30% · non controllata): La gestione spetta a un altro socio; Emissioni: 800 t CO2e
+Esempio didattico: società e numeri sono inventati.
+Commento del docente: Disegnare l’organigramma societario è il primo gesto concreto dell’inventario: si chiede all’amministrazione l’elenco delle partecipazioni con le quote e si annota, per ciascuna, chi ne decide la gestione. In questo esempio le situazioni sono tre: attività proprie, una società controllata ma non posseduta per intero, una partecipazione di minoranza. Nelle due slide successive lo stesso gruppo viene consolidato nei due modi: osservate come cambia soprattutto il trattamento di Gamma Energia.
+### SCHERMATA 8 — Consolidare con la quota di partecipazione [calc · GHG Protocol · quota di partecipazione]
+Ogni società entra per la percentuale di capitale posseduta dalla capogruppo.
+Formula: Emissioni consolidate = Emissioni della società × Quota posseduta
+- Attività proprie della capogruppo (possedute al 100%): 1200 t CO2e × 1 (100%) = 1200 t CO2e
+- Beta Logistica (quota dal libro soci: 60%): 500 t CO2e × 0,6 (60%) = 300 t CO2e
+- Gamma Energia (quota dal libro soci: 30%): 800 t CO2e × 0,3 (30%) = 240 t CO2e
+Totale: 1740 t CO2e
+Con questo approccio non conta chi gestisce l’impianto: conta la percentuale di proprietà.
+Fonte dei dati: Esempio didattico – gruppo di fantasia, dati illustrativi
+Commento del docente: Il conto è una media pesata: 1.200 × 1 = 1.200 t; 500 × 0,6 = 300 t; 800 × 0,3 = 240 t; in totale 1.740 t CO2e. Il dato di partenza è l’inventario completo di ogni società, che va quindi chiesto anche a quelle che non si controllano: è la difficoltà pratica di questo approccio. Errore tipico: applicare la quota ai soli consumi «comodi» da ottenere. La percentuale va applicata a tutte le emissioni dirette e da energia della partecipata.
+### SCHERMATA 9 — Lo stesso gruppo consolidato con il controllo [calc · GHG Protocol · controllo]
+Qui la domanda per ogni società è una sola: la capogruppo la controlla? Se sì entra al 100%, se no non entra.
+Formula: Emissioni consolidate = Emissioni della società × Quota consolidata
+- Attività proprie della capogruppo (controllate): 1200 t CO2e × 1 (100%) = 1200 t CO2e
+- Beta Logistica (controllata, anche se posseduta al 60%): 500 t CO2e × 1 (100%) = 500 t CO2e
+- Gamma Energia (non controllata: fuori dal confine): 800 t CO2e × 0 (0%) = 0 t CO2e
+Totale: 1700 t CO2e
+Gamma Energia non sparisce: è un investimento, da valutare tra le emissioni indirette (Scope 3, categoria 15).
+Fonte dei dati: Esempio didattico – gruppo di fantasia, dati illustrativi
+Commento del docente: Stesso gruppo, totale diverso: 1.200 + 500 + 0 = 1.700 t CO2e, contro le 1.740 t della quota di partecipazione. La differenza di 40 t nasce da due effetti opposti: Beta entra per 500 t invece di 300 t, Gamma per zero invece di 240 t. Messaggio per gli allievi: due inventari si possono confrontare solo se usano lo stesso approccio. Quando un cliente o una banca chiede «le vostre emissioni», la prima informazione da dare insieme al numero è il confine organizzativo adottato.
+### SCHERMATA 10 — Terrafelix sceglie il controllo operativo [case · Caso studio · confine organizzativo]
+Nella riunione di avvio di gennaio 2026 Davide Russo, coordinatore dell’inventario, porta la prima decisione al tavolo dell’amministratrice delegata Elena Marotta: quale approccio di consolidamento adottare per l’inventario 2025.
+- Un solo stabilimento, in provincia di Caserta, gestito direttamente
+- Nessuna società partecipata, nessuna joint venture
+- Impianti, flotta e fotovoltaico sotto la gestione dell’azienda
+Domanda di lavoro: Se i tre approcci danno lo stesso risultato, serve davvero sceglierne uno e scriverlo?
+Come ha operato l'azienda: Sì. Terrafelix dichiara il controllo operativo: entra nel confine il 100% delle attività che l’azienda gestisce. Oggi il risultato non cambierebbe con gli altri approcci, ma la scelta scritta vale per il futuro: se domani arrivasse una partecipata, la regola per trattarla esiste già e l’inventario resta confrontabile.
+Commento del docente: Per la grande maggioranza delle PMI italiane la situazione è questa: una società, uno o pochi siti, nessuna partecipata. La decisione richiede cinque minuti, ma va presa e verbalizzata. In verifica la domanda arriva sempre: «quale approccio di consolidamento avete adottato e dove è scritto?». Suggerite agli allievi di allegare al documento di impostazione una visura o un organigramma societario: è l’evidenza più semplice del fatto che non esistono altre entità da consolidare.
+
+## SEZIONE 3 — I confini di reporting
+### SCHERMATA 11 — I confini di reporting [section]
+Deciso chi siamo, si decide quali emissioni considerare. La distinzione di base è tra emissioni dirette, che escono da sorgenti nostre, ed emissioni indirette, che sono conseguenza delle nostre attività ma escono da sorgenti di altri.
+- Dirette, indirette da energia, altre indirette
+- Possedere e gestire non sono la stessa cosa
+- Tre domande per decidere
+- Il censimento di sedi e beni di Terrafelix
+### SCHERMATA 12 — Emissioni dirette e indirette: la prima divisione [tree · ISO 14064-1 · confini di reporting]
+Il criterio non è «quanto mi riguarda», ma da dove esce fisicamente il gas serra.
+Radice: Emissioni legate all’organizzazione
+- Dirette (da sorgenti possedute o controllate): Caldaie, forni, essiccatoi; Veicoli aziendali; Perdite di gas refrigeranti
+- Indirette da energia (energia prodotta da altri e consumata da noi): Elettricità di rete; Calore o vapore acquistati
+- Altre indirette (sorgenti di altri, lungo la catena del valore): Materie prime e imballaggi; Trasporti affidati a terzi; Viaggi, pendolarismo, rifiuti; Uso e fine vita dei prodotti
+Le emissioni dirette di un’azienda sono le indirette di un’altra: il camion del vettore è diretto per il vettore, indiretto per chi spedisce.
+Commento del docente: L’immagine più efficace in aula è quella del camino e del tubo di scarico: se il gas esce da un camino, da uno scarico o da una perdita di un impianto che gestisco io, è un’emissione diretta. L’elettricità è il caso che confonde di più: la consumo io, ma la CO2 esce dal camino della centrale; per questo è indiretta. Fate notare la frase in calce: la stessa tonnellata compare negli inventari di più aziende con etichette diverse. Non è un errore: è il modo in cui il sistema fa emergere le responsabilità lungo la filiera.
+### SCHERMATA 13 — Possedere e gestire: quattro situazioni [quad · GHG Protocol · beni in leasing]
+Con l’approccio del controllo operativo conta chi gestisce il bene, non chi ne è proprietario.
+Assi: Gestione: dell’azienda → di altri / Proprietà: di terzi → dell’azienda
+- Di proprietà, gestito dall’azienda: Essiccatoi, centrale termica; Furgoni e auto di proprietà; Emissioni dirette ed energia acquistata
+- Di proprietà, gestito da altri: Capannone dato in affitto a terzi; Macchinario dato in locazione; Emissioni indirette (beni in leasing a valle)
+- Di terzi, gestito dall’azienda: Auto a noleggio a lungo termine; Sede in affitto con utenze intestate; Si tratta come un bene proprio
+- Di terzi, gestito da terzi: Camion dei trasportatori; Impianti dei fornitori; Emissioni indirette della catena del valore
+Commento del docente: Questa matrice risolve la maggior parte dei dubbi su affitti e noleggi. La domanda pratica è: chi decide come si usa il bene, chi lo rifornisce, a chi è intestata l’utenza? L’auto a noleggio a lungo termine guidata dai commerciali e rifornita con la carta carburante aziendale si comporta come un’auto di proprietà: il carburante è un’emissione diretta. Attenzione: la matrice vale per chi consolida con il controllo operativo, come Terrafelix; con altri approcci alcune caselle cambiano e va verificato caso per caso.
+### SCHERMATA 14 — Diretta o indiretta? Tre domande in fila [flow · ISO 14064-1 · confini di reporting]
+1. Il bene è nel confine?: Sede, impianto o veicolo è gestito dall’organizzazione? Se no: emissione indiretta.
+2. Il gas esce da lì?: Camino, scarico, perdita di un impianto nostro: emissione diretta.
+3. È energia comprata?: Elettricità, calore, vapore prodotti da altri e consumati da noi: indiretta da energia.
+4. Altrimenti: Altra emissione indiretta: si valuta se è significativa (sezione 7).
+Le emissioni dirette e quelle da energia si quantificano sempre; le altre indirette si quantificano se significative.
+Commento del docente: Fate applicare le tre domande a esempi veloci: il muletto a gasolio (nostro, il gas esce da lì: diretta); il muletto elettrico (nostro, ma non emette: conta l’elettricità che lo ricarica, indiretta da energia); il corriere (non è nostro: indiretta); la trasferta in aereo (non è nostro: indiretta). La frase in calce anticipa una regola della ISO 14064-1 che riprenderemo: per le emissioni indirette diverse dall’energia l’organizzazione definisce criteri di significatività, quantifica quelle significative e giustifica le esclusioni.
+### SCHERMATA 15 — Il censimento di sedi e beni di Terrafelix [case · Caso studio · confine di reporting]
+Prima di chiedere un solo dato, Davide Russo percorre lo stabilimento con Rosa Iannone (Produzione) e compila l’elenco di sedi, impianti e veicoli, annotando per ciascuno chi lo possiede e chi lo gestisce.
+- Uno stabilimento con uffici, di proprietà: 3 linee di produzione ed essiccazione a gas naturale
+- Gruppo elettrogeno e motopompa antincendio a gasolio; climatizzatori e gruppo frigo con gas refrigeranti
+- Flotta di 4 furgoni e 8 auto; 2 delle auto sono a noleggio a lungo termine (dato illustrativo)
+- Carrelli elevatori elettrici; impianto fotovoltaico da 450 kWp sul tetto
+- Trasporti di semola, imballaggi e prodotto finito affidati a vettori terzi
+Domanda di lavoro: Le 2 auto a noleggio e i camion dei vettori stanno dalla stessa parte del confine?
+Come ha operato l'azienda: No. Le auto a noleggio sono usate e rifornite dall’azienda: sono gestite da Terrafelix e il loro carburante rientra tra le emissioni dirette, insieme a quello degli altri veicoli. I camion dei vettori sono gestiti da terzi: le loro emissioni sono indirette. I carrelli elettrici non hanno una riga propria: la loro ricarica è già nell’elettricità prelevata dalla rete.
+Commento del docente: Il sopralluogo è il metodo più sicuro per non dimenticare sorgenti: la motopompa antincendio e i climatizzatori degli uffici non compaiono in nessun elenco contabile, ma si vedono camminando. Suggerite di usare come traccia il registro dei cespiti, il libretto degli impianti termici, il registro delle apparecchiature con gas fluorurati e l’elenco dei veicoli assicurati. Il dettaglio delle 2 auto a noleggio è aggiunto a scopo didattico: non cambia i litri di carburante del caso studio, che comprendono tutta la flotta.
+
+## SEZIONE 4 — Gli scope del GHG Protocol
+### SCHERMATA 16 — Gli scope del GHG Protocol [section]
+Il GHG Protocol ordina le emissioni in tre «ambiti», gli scope: è la classificazione più usata da clienti, banche e questionari. Lo scope non dice quanto pesa una sorgente: dice dove si trova rispetto all’azienda.
+- Scope 1: quattro tipi di sorgente diretta
+- Scope 2: l’energia acquistata
+- Scope 3: quindici categorie, a monte e a valle
+- I tre scope di Terrafelix
+### SCHERMATA 17 — La catena del valore: dove sta ogni scope [flow · GHG Protocol · Scope 1, 2, 3]
+Leggete il flusso da sinistra a destra, seguendo materiali ed energia fino al prodotto consumato.
+1. A monte: Fornitori, trasporti in arrivo, servizi acquistati: Scope 3, categorie 1–8.
+2. Energia acquistata: Elettricità, calore, vapore o raffrescamento comprati e consumati: Scope 2.
+3. L’azienda: Combustione, veicoli, gas refrigeranti, processi gestiti in proprio: Scope 1.
+4. A valle: Distribuzione, lavorazione, uso e fine vita dei prodotti venduti: Scope 3, categorie 9–15.
+Scope 1 = emissioni dirette. Scope 2 e Scope 3 = emissioni indirette.
+Commento del docente: È l’immagine da far memorizzare: dentro i cancelli lo Scope 1, il contatore dell’energia lo Scope 2, tutto il resto lo Scope 3. Lo Scope 2 comprende solo l’energia acquistata e consumata dall’organizzazione; si calcola in due modi, location-based e market-based, che vedremo nell’unità 5. Errore tipico: pensare che lo Scope 3 sia «facoltativo perché non è nostro». Per un’azienda che trasforma materie prime è quasi sempre la parte più grande dell’impronta, come vedremo tra poco con i numeri del pastificio.
+### SCHERMATA 18 — Scope 1: quattro tipi di sorgente [tree · GHG Protocol · Scope 1]
+Radice: Scope 1 – emissioni dirette (da fonti possedute o controllate)
+- Combustione stazionaria (impianti fissi): Caldaie, forni, essiccatoi; Gruppi elettrogeni
+- Combustione mobile (mezzi che si muovono): Auto, furgoni, camion; Carrelli a gasolio o GPL
+- Emissioni di processo (reazioni, non combustione): Calce, cemento, vetro; Reazioni chimiche
+- Emissioni fuggitive (perdite non volute): Gas refrigeranti; Metano, SF6
+Terrafelix: combustione stazionaria 2.104 t CO2e · mobile 114,5 t · fuggitive 39,3 t · nessuna emissione di processo rilevante.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Le quattro famiglie servono come lista di controllo durante il sopralluogo: per ogni reparto ci si chiede se c’è qualcosa che brucia da fermo, qualcosa che brucia muovendosi, una reazione che libera gas, un impianto che può perdere gas. La famiglia più dimenticata è l’ultima: i chili di gas refrigerante reintegrati dal frigorista sono pochi, ma valgono migliaia di volte la CO2. Per Terrafelix le fuggitive pesano 39,3 t CO2e. L’unità 4 è dedicata per intero ai calcoli di queste quattro famiglie.
+### SCHERMATA 19 — Scope 3 a monte: le categorie da 1 a 8 [table · GHG Protocol · Scope 3, categorie 1–8]
+«A monte» è ciò che l’azienda compra o che serve per farla funzionare.
+Colonne: N. | Categoria | Che cosa comprende | Esempio a Terrafelix
+- 1 | Beni e servizi acquistati | Produzione di materie prime, imballaggi, servizi | Semola, astucci, film, acqua
+- 2 | Beni strumentali | Produzione di macchinari, edifici, veicoli acquistati | Nuova linea di confezionamento
+- 3 | Attività legate a combustibili ed energia | Filiera a monte di combustibili ed elettricità, perdite di rete (ciò che non è già negli Scope 1 e 2) | Estrazione e trasporto del gas
+- 4 | Trasporto e distribuzione a monte | Trasporti dei beni acquistati e servizi di trasporto pagati dall’azienda | Camion che porta la semola
+- 5 | Rifiuti generati dalle attività | Trattamento dei rifiuti affidato a terzi | Rifiuti a recupero e a smaltimento
+- 6 | Viaggi di lavoro | Trasferte con mezzi non aziendali, pernottamenti | Voli, treni, hotel
+- 7 | Pendolarismo dei dipendenti | Tragitti casa-lavoro | 90 persone in auto
+- 8 | Beni in leasing a monte | Beni presi in locazione non già contati negli Scope 1 e 2 | Non applicabile
+Gli esempi sono parafrasi didattiche: per i casi limite fa fede il testo dello standard sullo Scope 3.
+Commento del docente: Non serve imparare a memoria i numeri: serve capire la logica di ogni riga. Due categorie creano spesso confusione. La 3 non è l’energia consumata, che sta già negli Scope 1 e 2, ma ciò che è servito per portarla fino a noi: estrazione, raffinazione, trasporto, perdite di rete. La 6 riguarda i viaggi su mezzi di altri: se la trasferta si fa con l’auto aziendale, il carburante è già nello Scope 1 e contarlo anche qui sarebbe un doppio conteggio.
+### SCHERMATA 20 — Scope 3 a valle: le categorie da 9 a 15 [table · GHG Protocol · Scope 3, categorie 9–15]
+«A valle» è ciò che accade ai prodotti dopo la vendita, più i beni e i capitali affidati ad altri.
+Colonne: N. | Categoria | Che cosa comprende | Esempio a Terrafelix
+- 9 | Trasporto e distribuzione a valle | Trasporto e stoccaggio dei prodotti venduti, non pagati dall’azienda | Consegne in Italia, Europa, oltremare
+- 10 | Lavorazione dei prodotti venduti | Lavorazioni di terzi su semilavorati venduti | Non applicabile: prodotto finito
+- 11 | Uso dei prodotti venduti | Emissioni durante l’uso: dirette (obbligatorie) e indirette (facoltative) | Cottura della pasta: indiretta, a parte
+- 12 | Fine vita dei prodotti venduti | Smaltimento e riciclo di prodotti e imballaggi | Astucci e film dopo il consumo
+- 13 | Beni in leasing a valle | Beni di proprietà dati in locazione a terzi | Non applicabile
+- 14 | Franchising | Emissioni dei punti in franchising | Non applicabile
+- 15 | Investimenti | Partecipazioni e finanziamenti | Non applicabile: nessuna partecipata
+Nel caso studio la distribuzione è in categoria 9 nell’ipotesi che i trasporti siano organizzati e pagati dai clienti; se li pagasse l’azienda, andrebbero in categoria 4.
+Commento del docente: La categoria 11 merita una spiegazione. Un’auto o una caldaia emettono mentre si usano: sono emissioni dirette della fase d’uso e chi le produce deve contarle. La pasta invece non consuma energia: è il consumatore che accende il fornello. È un’emissione indiretta della fase d’uso, la cui inclusione è facoltativa. Terrafelix la quantifica (8.416 t CO2e) ma la riporta a parte, fuori dal totale di Scope 3. Cinque categorie non si applicano al pastificio: va scritto, con una riga di motivazione ciascuna.
+### SCHERMATA 21 — I tre scope di Terrafelix: dove sta l’impronta [donut · Caso studio · totali per scope]
+Inventario 2025, con lo Scope 2 calcolato con il metodo location-based.
+Totale al centro: 21.692,5 t CO2e
+- Scope 1 – dirette: 2257,8t (10,4%)
+- Scope 2 – energia acquistata: 752t (3,5%)
+- Scope 3 – catena del valore: 18.682,7t (86,1%)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Ecco perché lo scope non misura l’importanza: lo Scope 3 vale l’86,1% del totale, lo Scope 1 il 10,4%, lo Scope 2 il 3,5%. Se Terrafelix si fermasse a «ciò che esce dai nostri camini e dal nostro contatore» vedrebbe circa 3.010 t su 21.692,5: meno di un settimo dell’impronta. La sola semola pesa 14.420 t, il 66,5%. Questi numeri sono il punto di arrivo delle unità 4, 5 e 6: qui servono solo a mostrare che una buona impostazione deve guardare fin dall’inizio oltre i cancelli.
+
+## SEZIONE 5 — Le sei categorie ISO 14064-1
+### SCHERMATA 22 — Le sei categorie ISO 14064-1 [section]
+La norma ISO 14064-1:2018 non usa la parola «scope»: divide l’inventario in sei categorie. La sostanza è la stessa, cambia la disposizione delle caselle. Chi lavora con entrambe deve saper tradurre.
+- Una categoria per le dirette, cinque per le indirette
+- La corrispondenza indicativa con gli scope
+- La categoria 3 di Terrafelix, voce per voce
+- Quando usare una classificazione o l’altra
+### SCHERMATA 23 — Le sei categorie, in una figura [hub · ISO 14064-1 · sei categorie]
+La categoria 1 raccoglie le emissioni (e rimozioni) dirette; le categorie da 2 a 6 raccolgono le indirette, ordinate per origine.
+Al centro: Inventario ISO 14064-1
+- 1 · Dirette: Emissioni e rimozioni dirette da sorgenti proprie
+- 2 · Energia importata: Elettricità, calore, vapore acquistati
+- 3 · Trasporto: Merci e persone su mezzi di altri
+- 4 · Prodotti utilizzati: Beni e servizi che l’organizzazione acquista e usa
+- 5 · Uso dei prodotti: Uso e fine vita di ciò che l’organizzazione vende
+- 6 · Altre sorgenti: Ciò che non rientra nelle categorie precedenti
+Commento del docente: La logica della norma è intuitiva: dopo le dirette e l’energia, le indirette sono divise per «tipo di cosa». Tutto ciò che è trasporto sta insieme, a monte o a valle che sia; tutto ciò che l’organizzazione compra sta insieme; tutto ciò che riguarda i prodotti venduti sta insieme. Per molti allievi è più naturale delle quindici categorie dello Scope 3. Le descrizioni sono parafrasi sintetiche dei titoli della norma. La categoria 6 è residuale: in molti inventari di PMI resta vuota, ed è corretto così.
+### SCHERMATA 24 — Tradurre gli scope in categorie ISO [table · ISO 14064-1 e GHG Protocol · corrispondenza]
+Corrispondenza indicativa: è una mappa di massima, non un’identità.
+Colonne: Categoria ISO 14064-1 | GHG Protocol | Voci tipiche
+- 1 – Emissioni e rimozioni dirette | Scope 1 | Combustione stazionaria e mobile, processo, fuggitive
+- 2 – Indirette da energia importata | Scope 2 | Elettricità, calore, vapore acquistati
+- 3 – Indirette da trasporto | Scope 3: categorie 4, 6, 7, 9 | Trasporti a monte e a valle, viaggi di lavoro, pendolarismo
+- 4 – Indirette da prodotti utilizzati | Scope 3: categorie 1, 2, 3, 5 | Beni e servizi acquistati, beni strumentali, energia a monte, rifiuti
+- 5 – Indirette dall’uso dei prodotti | Scope 3: categorie 11, 12, 15 | Uso e fine vita dei prodotti venduti, investimenti
+- 6 – Indirette da altre sorgenti | Scope 3: voci residue | Ciò che non trova posto altrove
+Per l’elettricità la ISO 14064-1 chiede l’approccio location-based; i dati market-based si possono riportare in aggiunta, separatamente.
+Commento del docente: Questa tabella va tenuta sulla scrivania. Il punto delicato è lo Scope 3, che si «spacchetta» in quattro categorie ISO: il trasporto della semola (categoria 4 dello Scope 3) finisce nella categoria 3 ISO, mentre la produzione della semola (categoria 1 dello Scope 3) finisce nella categoria 4 ISO. Errore tipico: confondere i numeri, perché «categoria 4» significa cose diverse nei due sistemi. Regola pratica: scrivere sempre il sistema accanto al numero, ad esempio «cat. 4 ISO» oppure «Scope 3 cat. 4».
+### SCHERMATA 25 — La categoria 3 ISO di Terrafelix: tutto il trasporto insieme [calc · ISO 14064-1 · categoria 3]
+Quattro categorie dello Scope 3 (4, 6, 7 e 9) confluiscono in una sola categoria ISO. I singoli calcoli saranno spiegati nell’unità 6.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Distanza
+- Semola dal molino (Scope 3 cat. 4): 20.600 t × 0,1 kg CO2e/tkm × 180 km = 370.800 kg CO2e
+- Imballaggi dai fornitori (Scope 3 cat. 4): 1060 t × 0,1 kg CO2e/tkm × 300 km = 31.800 kg CO2e
+- Voli di lavoro (Scope 3 cat. 6): 120.000 pkm × 0,18 kg CO2e/pkm = 21.600 kg CO2e
+- Treno (Scope 3 cat. 6): 80.000 pkm × 0,035 kg CO2e/pkm = 2800 kg CO2e
+- Pernottamenti (Scope 3 cat. 6): 300 notti × 15 kg CO2e/notte = 4500 kg CO2e
+- Tragitti casa-lavoro in auto (Scope 3 cat. 7): 475.200 km × 0,17 kg CO2e/km = 80.784 kg CO2e
+- Consegne in Italia su gomma (Scope 3 cat. 9): 14.000 t × 0,1 kg CO2e/tkm × 450 km = 630.000 kg CO2e
+- Consegne in Europa su gomma (Scope 3 cat. 9): 4000 t × 0,1 kg CO2e/tkm × 1500 km = 600.000 kg CO2e
+- Consegne oltremare via nave (Scope 3 cat. 9): 2000 t × 0,016 kg CO2e/tkm × 8000 km = 256.000 kg CO2e
+Totale categoria 3 ISO: 1.998.284 kg CO2e
+In tonnellate: 1998,284 t CO2e
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Non spaventatevi per le nove righe: qui interessa la colonna di sinistra. Sommando trasporto a monte (402,6 t), viaggi di lavoro (28,9 t), pendolarismo (80,8 t) e trasporto a valle (1.486 t) si ottengono 1.998.284 kg, cioè 1.998,3 t CO2e: la categoria 3 ISO. I numeri sono gli stessi dell’inventario per scope: cambia solo il raggruppamento. È la prova che riclassificare non significa ricalcolare. I pernottamenti seguono i viaggi di lavoro a cui appartengono. I fattori sono valori didattici arrotondati.
+### SCHERMATA 26 — L’inventario di Terrafelix letto per categorie ISO [bar · Caso studio · totali per categoria ISO]
+Stesso totale di prima, 21.692,5 t CO2e, distribuito nelle sei categorie della norma.
+- 1 – Dirette: 2257,8t
+- 2 – Energia importata: 752t
+- 3 – Trasporto: 1998,3t
+- 4 – Prodotti utilizzati: 16.578,4t
+- 5 – Uso dei prodotti (fine vita): 106t
+- 6 – Altre sorgenti: 0t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi (elettricità location-based; fase d’uso riportata a parte)
+Commento del docente: La lettura per categorie ISO rende evidente ciò che il grafico per scope nascondeva dentro un unico «Scope 3»: la categoria 4, i prodotti che il pastificio acquista e utilizza, vale 16.578,4 t, cioè il 76,4% del totale; il trasporto 1.998,3 t, il 9,2%. La categoria 5 contiene qui solo il fine vita degli imballaggi (106 t): la cottura della pasta, 8.416 t, appartiene alla stessa categoria ma è riportata a parte. Controllo di quadratura: 2.257,8 + 752 + 1.998,3 + 16.578,4 + 106 = 21.692,5 t.
+### SCHERMATA 27 — Scope o categorie ISO: quale usare [two]
+Non sono alternative: molte aziende presentano i risultati in entrambi i modi, partendo dallo stesso foglio di calcolo.
+Colonna «Scope 1, 2, 3 (GHG Protocol)»:
+- Linguaggio di clienti, banche e questionari
+- Usato per la rendicontazione di sostenibilità e per gli obiettivi di riduzione
+- Quindici categorie per descrivere la catena del valore
+- Scope 2 con doppio dato: location-based e market-based
+Colonna «Sei categorie (ISO 14064-1)»:
+- Necessarie se si dichiara la conformità alla norma
+- Base per la verifica di terza parte secondo la ISO 14064-3
+- Indirette ordinate per origine: trasporto, acquisti, prodotti venduti
+- Elettricità location-based; market-based in aggiunta, a parte
+Commento del docente: Consiglio operativo: nel foglio di calcolo ogni riga deve avere due colonne di classificazione, una con scope e categoria GHG Protocol, una con la categoria ISO. In questo modo lo stesso inventario produce due prospetti senza rifare alcun conto: l’unità 7 mostrerà la tabella doppia. Terrafelix fa così: ai clienti della grande distribuzione comunica Scope 1, 2 e 3; al verificatore presenta il rapporto per categorie ISO. Errore da evitare: tenere due file separati, che dopo la prima correzione smettono di coincidere.
+
+## SEZIONE 6 — Classificare le sorgenti: esercizi
+### SCHERMATA 28 — Classificare le sorgenti: esercizi [section]
+È il momento di allenarsi. Prendiamo le sorgenti di Terrafelix una per una e decidiamo in quale casella vanno, nei due sistemi. Poi affrontiamo i casi che fanno discutere.
+- Quattro domande per ogni sorgente
+- Diciotto sorgenti del pastificio classificate
+- Una bolletta, due caselle
+- I casi dubbi e chi paga il trasporto
+### SCHERMATA 29 — Quattro domande per classificare qualunque sorgente [flow]
+1. Chi la gestisce?: Se il bene è gestito dall’azienda si prosegue; se è di altri, la sorgente è indiretta: vai alla domanda 4.
+2. Brucia o perde?: Combustione, processo o perdita in un impianto nostro: Scope 1, categoria 1 ISO.
+3. Consuma energia comprata?: Elettricità, calore, vapore: Scope 2, categoria 2 ISO. Una sola volta, dal contatore.
+4. Che cosa è, e dove sta?: Trasporto, acquisto o prodotto venduto? A monte o a valle? Scope 3 e categorie ISO 3–6.
+Domanda di controllo finale: questa emissione è già contata in un’altra riga?
+Commento del docente: Fate usare le quattro domande ad alta voce, sempre nello stesso ordine: l’ordine evita gli errori. La domanda di controllo in calce è quella che salva dal doppio conteggio: il carburante dell’auto aziendale usata per una trasferta è già nello Scope 1; la ricarica del carrello elettrico è già nei kWh della bolletta. Nelle prossime due slide le domande sono applicate a diciotto sorgenti del pastificio: prima di leggere la soluzione di ogni riga, coprite le colonne di destra e provate a rispondere.
+### SCHERMATA 30 — Esercizio 1: sorgenti dirette ed energia [table · Caso studio · classificazione]
+Sorgenti gestite da Terrafelix. Per ognuna: perché sta lì, scope e categoria ISO.
+Colonne: Sorgente | Ragionamento | GHG Protocol | ISO
+- Essiccatoi e centrale termica a gas naturale | Brucia in un impianto nostro, fisso | Scope 1 – combustione stazionaria | 1
+- Gruppo elettrogeno e motopompa antincendio | Gasolio bruciato in impianti fissi | Scope 1 – combustione stazionaria | 1
+- 4 furgoni e 8 auto della flotta | Carburante bruciato in mezzi gestiti da noi | Scope 1 – combustione mobile | 1
+- Climatizzatori degli uffici (R-410A) | Gas reintegrato = gas disperso | Scope 1 – fuggitive | 1
+- Gruppo frigo di processo (HFC-134a) | Gas reintegrato = gas disperso | Scope 1 – fuggitive | 1
+- Elettricità prelevata dalla rete | Energia prodotta da altri, consumata da noi | Scope 2 | 2
+- Carrelli elevatori elettrici | Ricaricati in stabilimento: già nei kWh della bolletta | Scope 2 (nessuna riga in più) | 2
+- Fotovoltaico autoconsumato | Nessuna emissione in fase d’uso | Informazione a parte | —
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Le prime cinque righe sono lo Scope 1 completo del pastificio: 2.257,8 t CO2e. Due righe meritano un commento. I carrelli elettrici: non emettono nulla sul posto e la loro energia passa dal contatore generale, quindi non hanno una riga propria; aggiungerla sarebbe un doppio conteggio. Il fotovoltaico: i 600.000 kWh autoconsumati non generano emissioni in fase d’uso e non sono «energia acquistata»; si indicano come informazione, senza sottrarre nulla. Ne riparliamo nella sezione 9 e nell’unità 5.
+### SCHERMATA 31 — Esercizio 2: sorgenti indirette lungo la catena del valore [table · Caso studio · classificazione]
+Sorgenti gestite da altri. Attenzione alla doppia numerazione: categoria dello Scope 3 e categoria ISO.
+Colonne: Sorgente | Ragionamento | Scope 3 | ISO
+- Semola, astucci, film, acqua acquistati | Emissioni di chi li produce | Cat. 1 | 4
+- Nuova linea di confezionamento | Emissioni di chi ha costruito il macchinario | Cat. 2 | 4
+- Filiera a monte di gas, carburanti, elettricità | Estrazione, raffinazione, trasporto, perdite di rete | Cat. 3 | 4
+- Camion che porta la semola dal molino | Mezzo di un vettore, merce in arrivo | Cat. 4 | 3
+- Rifiuti ritirati dal gestore | Trattamento svolto da terzi | Cat. 5 | 4
+- Trasferte in aereo e treno, hotel | Mezzi e strutture di altri | Cat. 6 | 3
+- Tragitti casa-lavoro dei 90 dipendenti | Auto private, non aziendali | Cat. 7 | 3
+- Consegna della pasta ai clienti | Mezzi di vettori, merce venduta | Cat. 9 | 3
+- Cottura della pasta a casa | Uso indiretto del prodotto: facoltativo, a parte | Cat. 11 | 5
+- Astucci e film gettati dopo il consumo | Fine vita di ciò che è stato venduto | Cat. 12 | 5
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Osservate la colonna ISO: i quattro «3» sono tutti trasporti di merci o persone, i quattro «4» sono tutti acquisti o servizi utilizzati, i due «5» riguardano il prodotto dopo la vendita. È la logica per origine vista nella sezione precedente. Esercizio utile: far classificare agli allievi le sorgenti della propria azienda con la stessa tabella a quattro colonne. Chi lavora in un’impresa di servizi scoprirà che viaggi, pendolarismo e acquisti di servizi diventano le voci principali.
+### SCHERMATA 32 — Una bolletta, due caselle: il gas naturale di Terrafelix [calc · Scope 1 e Scope 3 cat. 3]
+Lo stesso dato di attività alimenta due righe dell’inventario, con due fattori diversi e due classificazioni diverse.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Combustione negli essiccatoi (Scope 1 · categoria 1 ISO · dato: 12 bollette del gas): 1.050.000 Sm³ × 2 kg CO2e/Sm³ = 2.100.000 kg CO2e
+- Filiera a monte del gas (Scope 3 cat. 3 · categoria 4 ISO · stesso dato): 1.050.000 Sm³ × 0,33 kg CO2e/Sm³ = 346.500 kg CO2e
+Totale legato al gas naturale: 2.446.500 kg CO2e
+In tonnellate: 2446,5 t CO2e
+Non è un doppio conteggio: sono emissioni diverse, avvenute in luoghi diversi.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: È l’esempio che chiarisce meglio la differenza tra «contare due volte» e «contare due cose». I 2.100.000 kg (2.100 t) sono la CO2e che esce dai camini del pastificio; i 346.500 kg (346,5 t) sono le emissioni avvenute prima, per estrarre e trasportare quel gas fino al contatore. In tutto 2.446,5 t CO2e legate al gas, in due caselle diverse. Lo stesso vale per gasolio, benzina ed elettricità. Il doppio conteggio vero sarebbe inserire due volte la riga della combustione, per esempio da una bolletta e dal suo conguaglio.
+### SCHERMATA 33 — Quattro casi dubbi, quattro risposte [quad · GHG Protocol · casi particolari]
+Sono le domande che arrivano in ogni aula. La risposta dipende da chi gestisce il bene e da che cosa è già stato contato.
+- Auto in leasing o a noleggio: Usata e rifornita dall’azienda: carburante nello Scope 1; Scope 3 cat. 8 solo se non è già negli Scope 1 e 2; Mai in tutte e due le caselle
+- Corriere pagato dal cliente: Trasporto di merce venduta, non pagato da noi: Scope 3 cat. 9; Se lo paga l’azienda: Scope 3 cat. 4; ISO: categoria 3 in entrambi i casi
+- Lavoro da casa: Non è Scope 1 né Scope 2 dell’azienda; Se si quantifica: Scope 3 cat. 7, facoltativo; Dichiarare la scelta e mantenerla negli anni
+- Carrelli elevatori elettrici: Ricarica in sede: già nei kWh della bolletta; Scope 2, nessuna riga aggiuntiva; A gasolio o GPL sarebbero Scope 1
+Commento del docente: Dietro i quattro casi c’è lo stesso metodo: prima chi gestisce, poi che cosa è già contato. Per le auto a noleggio il criterio pratico è la carta carburante: se i litri sono pagati dall’azienda, sono già nel dato di Scope 1. Per il lavoro da casa il GHG Protocol consente di includere i consumi domestici nella categoria del pendolarismo, ma non lo impone: è una scelta da dichiarare. Queste risposte valgono con il controllo operativo; in situazioni contrattuali particolari conviene leggere il testo dello standard e documentare il ragionamento.
+### SCHERMATA 34 — Chi paga il trasporto? La domanda di Michele Santoro [case · Scope 3 cat. 4 e 9 · categoria 3 ISO]
+Michele Santoro, responsabile Acquisti e logistica, guarda l’elenco delle categorie e chiede: «I camion non sono nostri né in arrivo né in partenza. Perché la semola in arrivo è in una categoria e la pasta in partenza in un’altra?»
+- Semola dal molino: 20.600 t per 180 km, trasporto compreso nel prezzo di acquisto
+- Imballaggi: 1.060 t per 300 km
+- Pasta ai clienti: 20.000 t tra Italia, Europa e oltremare
+- Ipotesi del caso: consegne organizzate e pagate dai clienti o dalle loro piattaforme
+Domanda di lavoro: In quali categorie vanno i tre flussi, e che cosa cambierebbe se il trasporto in uscita lo pagasse Terrafelix?
+Come ha operato l'azienda: Semola e imballaggi sono beni acquistati in arrivo: Scope 3 categoria 4 (402,6 t CO2e). La pasta venduta, con trasporto non pagato dall’azienda, è Scope 3 categoria 9 (1.486 t CO2e). Se il trasporto in uscita fosse pagato da Terrafelix, il GHG Protocol lo collocherebbe in categoria 4: il totale dello Scope 3 non cambierebbe, cambierebbe solo la casella. Nella ISO 14064-1 tutti e tre i flussi stanno comunque nella categoria 3.
+Commento del docente: Il criterio «chi acquista il servizio di trasporto» è una delle regole meno intuitive dello Scope 3: il nome «a monte» fa pensare solo alle merci in arrivo, mentre comprende anche i trasporti in uscita pagati dall’azienda. Fate notare due cose. Primo: sbagliare casella non cambia il totale, ma rende l’inventario meno confrontabile. Secondo: la classificazione ISO, che mette tutto il trasporto insieme, qui è più semplice. L’ipotesi sulle consegne pagate dai clienti è un dettaglio didattico del caso: nella realtà si verifica sui contratti di vendita.
+
+## SEZIONE 7 — La significatività delle emissioni indirette
+### SCHERMATA 35 — La significatività delle emissioni indirette [section]
+Le emissioni dirette e quelle da energia si quantificano sempre. Per le altre indirette la ISO 14064-1 chiede un passaggio in più: definire criteri di significatività, quantificare ciò che è significativo e motivare ciò che si esclude.
+- I criteri indicati come esempio dalla norma
+- Una matrice entità × influenza
+- Quanto pesa ogni categoria di Terrafelix
+- Che cosa si esclude e come lo si scrive
+### SCHERMATA 36 — I criteri per decidere che cosa è significativo [hub · ISO 14064-1 · criteri di significatività]
+La norma non fissa soglie: chiede all’organizzazione di definire e documentare i propri criteri. Questi sono gli esempi più usati.
+Al centro: Emissione indiretta significativa?
+- Entità: Quanto pesa, in t CO2e, sul totale stimato
+- Livello di influenza: Quanto l’organizzazione può misurarla e ridurla
+- Rischio od opportunità: Costi, regole, reputazione, richieste dei clienti
+- Indicazioni di settore: Ciò che linee guida e associazioni considerano rilevante
+- Esternalizzazione: Attività affidate a terzi che di norma sarebbero interne
+- Coinvolgimento del personale: Voci che motivano le persone ad agire
+Commento del docente: Il messaggio per gli allievi è duplice. Primo: la significatività non è solo una questione di tonnellate; una categoria piccola può essere significativa perché i clienti la chiedono o perché coinvolge i dipendenti. Secondo: i criteri si scrivono prima di guardare i risultati, non dopo, altrimenti diventano un modo per giustificare esclusioni comode. Il criterio dell’esternalizzazione evita un trucco frequente: affidare a un terzo la logistica o la produzione di vapore non fa sparire le emissioni, le sposta tra le indirette, dove vanno valutate.
+### SCHERMATA 37 — Una matrice per le categorie indirette di Terrafelix [matrix · Buona prassi · matrice di significatività]
+Modello didattico. Colonne: entità (1 = meno di 50 t; 2 = 50–200 t; 3 = 200–1.000 t; 4 = 1.000–5.000 t; 5 = oltre 5.000 t CO2e). Righe: livello di influenza stimato dal gruppo di lavoro.
+Assi: Entità delle emissioni × Livello di influenza
+- A Beni e servizi acquistati (15.696 t): P5 × G3 = 15
+- B Trasporto a valle (1.486 t): P4 × G3 = 12
+- C Energia a monte (566,6 t): P3 × G2 = 6
+- D Trasporto a monte (402,6 t): P3 × G3 = 9
+- E Beni strumentali (280 t): P3 × G2 = 6
+- F Fine vita degli imballaggi (106 t): P2 × G3 = 6
+- G Pendolarismo (80,8 t): P2 × G3 = 6
+- H Rifiuti (35,8 t): P1 × G4 = 4
+- I Viaggi di lavoro (28,9 t): P1 × G5 = 5
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; scala e punteggi: modello didattico
+Commento del docente: La matrice incrocia due dei criteri: il prodotto dei punteggi indica la priorità di lavoro, non un obbligo di norma. Gli acquisti (A) dominano per entità: 5 × 3 = 15. I viaggi di lavoro (I) sono minuscoli ma dipendono interamente dalle scelte aziendali: 1 × 5 = 5; i rifiuti (H) seguono con 1 × 4 = 4. In un primo inventario le entità non si conoscono ancora: si parte da stime grossolane, spesso basate sulla spesa, e si affina. Le classi della scala e i punteggi di influenza sono scelte di Terrafelix, da dichiarare come tali.
+### SCHERMATA 38 — Quanto pesa ogni categoria indiretta di Terrafelix [bar · Caso studio · Scope 3 per categoria]
+Emissioni dello Scope 3 per categoria, in t CO2e. Tra parentesi la quota sul totale dell’inventario (21.692,5 t).
+- Cat. 1 – Beni e servizi acquistati (72,4%): 15.696t
+- Cat. 9 – Trasporto a valle (6,9%): 1486t
+- Cat. 3 – Energia a monte (2,6%): 566,6t
+- Cat. 4 – Trasporto a monte (1,9%): 402,6t
+- Cat. 2 – Beni strumentali (1,3%): 280t
+- Cat. 12 – Fine vita imballaggi (0,5%): 106t
+- Cat. 7 – Pendolarismo (0,4%): 80,8t
+- Cat. 5 – Rifiuti (0,2%): 35,8t
+- Cat. 6 – Viaggi di lavoro (0,1%): 28,9t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il grafico mostra il criterio dell’entità in azione. Una sola categoria, i beni e servizi acquistati, vale 15.696 t su 21.692,5, cioè il 72,4% dell’intero inventario; le ultime quattro insieme valgono 251,5 t, circa l’1,2%. La percentuale si calcola sempre allo stesso modo: emissioni della categoria ÷ totale × 100. Per il trasporto a valle: 1.486 ÷ 21.692,5 × 100 = 6,9%. Attenzione al denominatore: sul solo Scope 3 (18.682,7 t) gli acquisti peserebbero l’84,0%. Va sempre dichiarato rispetto a che cosa si calcola la quota.
+### SCHERMATA 39 — L’esito: che cosa quantifica e che cosa esclude Terrafelix [case · ISO 14064-1 · esclusioni motivate]
+Il gruppo di lavoro fissa per iscritto la regola (scelta aziendale, dato illustrativo): una categoria indiretta è significativa se supera l’1% del totale stimato oppure se soddisfa almeno un altro criterio tra influenza elevata, richiesta dei clienti e coinvolgimento del personale.
+- Sopra l’1% per entità: acquisti, trasporto a valle, energia a monte, trasporto a monte, beni strumentali
+- Sotto l’1% ma incluse: fine vita degli imballaggi (richiesta dei clienti), pendolarismo e viaggi (coinvolgimento del personale), rifiuti (influenza elevata, dati già disponibili)
+- Non applicabili: beni in leasing a monte e a valle, lavorazione dei prodotti venduti, franchising, investimenti
+- Fase d’uso (cottura): quantificata, 8.416 t CO2e, riportata a parte
+Domanda di lavoro: Che cosa deve restare scritto per le categorie escluse?
+Come ha operato l'azienda: Per ciascuna una riga di motivazione: nessun bene in locazione che non sia già negli Scope 1 e 2; la pasta è un prodotto finito e non subisce lavorazioni di terzi; nessun bene dato in locazione; nessun franchising; nessuna partecipata o investimento. La cottura non è esclusa: è dichiarata come emissione indiretta della fase d’uso, facoltativa, e mostrata separatamente dal totale.
+Commento del docente: «Non applicabile» e «non significativa» sono due motivazioni diverse e vanno tenute distinte: la prima dice che la sorgente non esiste, la seconda che esiste ma è stata valutata e lasciata fuori, con un numero a sostegno. Un verificatore accetta entrambe, purché siano scritte. Ciò che non accetta è il silenzio: una categoria che manca senza spiegazione. Notate che Terrafelix include anche voci sotto l’1%: quando il dato è facile da ottenere, quantificare costa meno che giustificare l’esclusione.
+
+## SEZIONE 8 — L’anno base
+### SCHERMATA 40 — L’anno base [section]
+Un inventario isolato dice quanto si emette; per dire se si sta migliorando serve un punto di partenza fisso. L’anno base è questo riferimento, e va protetto con una regola di ricalcolo.
+- A che cosa serve e come si sceglie
+- Quando si ricalcola e quando no
+- La verifica della soglia, con i numeri
+- La politica di ricalcolo di Terrafelix
+### SCHERMATA 41 — A che cosa serve l’anno base e come si sceglie [text · ISO 14064-1 · inventario dell’anno base]
+L’anno base è l’anno di riferimento con cui si confrontano le emissioni degli anni successivi e rispetto al quale si fissano gli obiettivi di riduzione.
+- Deve avere dati affidabili: Buona prassi: scegliere il primo anno per cui esistono dati completi e verificabili per tutte le sorgenti.
+- Deve essere un anno «normale»: Buona prassi: evitare anni anomali per fermi impianto, eventi eccezionali o produzioni fuori scala.
+- Va dichiarato nel rapporto: Il rapporto GHG indica l’anno base, il suo inventario e gli eventuali ricalcoli.
+- Va accompagnato da una politica di ricalcolo: Regole e soglia di significatività definite dall’organizzazione: il 5% è un esempio ricorrente, non un obbligo.
+Riquadro «Terrafelix»: Il 2025 è il primo anno con un inventario completo: diventa l’anno base. Totale: 21.692,5 t CO2e.
+Commento del docente: Paragone utile: l’anno base è come la prima pesata all’inizio di una dieta. Se cambio bilancia a metà percorso, devo ripesare anche il punto di partenza, altrimenti il confronto non dice nulla. Per chi parte oggi l’anno base coincide quasi sempre con il primo inventario fatto bene. Errore tipico: scegliere a posteriori l’anno con le emissioni più alte per far sembrare maggiori le riduzioni. I criteri di scelta indicati come «buona prassi» non sono requisiti di norma: la norma chiede di fissare l’anno base e di spiegare la scelta.
+### SCHERMATA 42 — Quando si ricalcola l’anno base, e quando no [table · GHG Protocol · ricalcolo dell’anno base]
+Si ricalcola quando cambia il metro, non quando cambiano le emissioni.
+Colonne: Che cosa succede | Esempio | Si ricalcola?
+- Cambiamento strutturale | Acquisizione, fusione o cessione di un ramo d’azienda | Sì, se supera la soglia
+- Cambiamento di metodo | Dal metodo basato sulla spesa ai dati del fornitore; nuova serie di GWP | Sì, se supera la soglia
+- Errore scoperto | Una sorgente dimenticata o una doppia fattura negli anni passati | Sì, se supera la soglia
+- Crescita o calo dell’attività | La produzione di pasta aumenta del 10% | No: è una variazione reale
+- Nuovi impianti nella stessa azienda | Una quarta linea di essiccazione | No: è una variazione reale
+- Aggiornamento annuale di un fattore | Nuovo fattore nazionale dell’elettricità | No: riflette un cambiamento reale del mix
+La soglia e le regole sono definite dall’organizzazione nella propria politica di ricalcolo e applicate in modo coerente negli anni.
+Commento del docente: La distinzione chiave è tra ciò che cambia il perimetro o il metodo e ciò che cambia davvero le emissioni. Se compro un’azienda, le sue emissioni esistevano già nell’anno base: per confrontare «mele con mele» devo aggiungerle anche lì. Se invece produco più pasta, sto emettendo di più: è esattamente ciò che il confronto deve mostrare. Le ultime tre righe seguono la logica del GHG Protocol; l’effetto dell’aggiornamento dei fattori si spiega nel commento ai risultati, come vedremo nell’unità 7.
+### SCHERMATA 43 — Verifica della soglia: un’acquisizione che aggiunge 1.300 t [calc · Politica di ricalcolo · soglia]
+Ipotesi didattica, fuori dal caso studio: nel 2027 Terrafelix acquisisce un piccolo pastificio che nel 2025 emetteva 1.300 t CO2e. La politica fissa la soglia al 5%.
+Formula: Variazione sull’anno base = Variazione × Per cento ÷ Anno base
+- Emissioni 2025 della società acquisita (dal suo inventario o da una stima documentata): 1300 t CO2e × 100 % ÷ 21.692,5 t CO2e = 5,99 %
+5,99% supera la soglia del 5%: l’anno base si ricalcola. Nuovo anno base: 21.692,5 + 1.300 = 22.992,5 t CO2e.
+Fonte dei dati: Esempio didattico su dati del caso studio Pastificio Terrafelix – ipotesi illustrativa
+Commento del docente: Il conto è una semplice percentuale: 1.300 ÷ 21.692,5 × 100 = 5,99%, cioè circa il 6,0%. Poiché supera la soglia del 5% scelta dall’azienda, l’anno base va ricalcolato aggiungendo le emissioni che la società acquisita aveva nel 2025: 22.992,5 t CO2e. Attenzione al dato giusto: non servono le emissioni attuali della società acquisita, ma quelle dell’anno base. Se non esiste un suo inventario 2025 si ricostruisce una stima da bollette e fatture di quell’anno, dichiarandone i limiti.
+### SCHERMATA 44 — Prova tu: da quante tonnellate scatta il ricalcolo? [sim · Politica di ricalcolo · soglia]
+Modifica le emissioni che l’evento aggiunge (o toglie) all’anno base di Terrafelix e leggi la variazione percentuale. Con 150 t che cosa succede? Qual è il valore minimo che supera il 5%?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Emissioni spostate dall’evento, riferite al 2025: 1300 t CO2e × 0,00461 % per t (100 ÷ 21.692,5) = 5,992854 % dell’anno base
+Totale iniziale: 5,992854 % dell’anno base
+La soglia del 5% corrisponde a 21.692,5 × 0,05 = 1.084,6 t CO2e.
+Fonte dei dati: Esempio didattico su dati del caso studio Pastificio Terrafelix – ipotesi illustrativa
+Commento del docente: Il calcolatore moltiplica le tonnellate per 100 ÷ 21.692,5, cioè 0,0046 punti percentuali per ogni tonnellata. Con 1.300 t si ottiene 5,99%; con 150 t, per esempio l’acquisto di un piccolo deposito, 0,69%: sotto soglia, nessun ricalcolo, ma l’evento va comunque annotato. Il punto di svolta è 1.084,6 t. Fate notare che molte politiche chiedono di considerare anche l’effetto cumulato: tre eventi da 2% ciascuno, sommati, superano la soglia. È una buona prassi da scrivere nella politica.
+### SCHERMATA 45 — Perché ricalcolare: lo stesso 2027 letto in due modi [gbar · Coerenza · confronto nel tempo]
+Scenario illustrativo: dopo l’acquisizione, nel 2027 il gruppo emette 22.400 t CO2e. È un aumento o una riduzione?
+Serie: Anno base 2025 | Anno 2027
+- Senza ricalcolo: 21.692,5t | 22.400t
+- Con anno base ricalcolato: 22.992,5t | 22.400t
+Fonte dei dati: Esempio didattico su dati del caso studio Pastificio Terrafelix – scenario illustrativo
+Commento del docente: Senza ricalcolo l’azienda sembrerebbe peggiorata: da 21.692,5 a 22.400 t, +3,3%. Ma il confronto è falsato, perché il 2027 contiene uno stabilimento che nel 2025 non era nel perimetro. Con l’anno base ricalcolato a 22.992,5 t il risultato si capovolge: −2,6%, una riduzione reale. Vale anche al contrario: chi cede un ramo d’azienda e non ricalcola mostra una riduzione che non ha realizzato. È il principio di coerenza applicato ai numeri. Il valore 2027 è inventato per l’esempio.
+### SCHERMATA 46 — La politica di ricalcolo di Terrafelix [case · Caso studio · anno base]
+Chiara Vitale, responsabile Amministrazione e controllo, osserva che la banca legherà il tasso del finanziamento alla riduzione delle emissioni rispetto al 2025: «Se il punto di partenza può cambiare, voglio sapere in anticipo con quali regole».
+- Anno base: 2025, primo inventario completo, 21.692,5 t CO2e (Scope 2 location-based)
+- Soglia di ricalcolo scelta dall’azienda: 5% del totale dell’anno base (dato illustrativo)
+- Eventi che fanno ricalcolare: cambiamenti strutturali, di metodo, errori; singoli o cumulati
+- Eventi che non fanno ricalcolare: variazioni di produzione, nuovi impianti, aggiornamento annuale dei fattori
+Domanda di lavoro: Chi decide il ricalcolo e dove resta traccia?
+Come ha operato l'azienda: La politica, di una pagina, è approvata dall’amministratrice delegata e allegata al documento di impostazione. Ogni anno Davide Russo verifica se si sono verificati eventi rilevanti e annota l’esito, anche quando è «nessun ricalcolo». Un eventuale ricalcolo viene descritto nel rapporto GHG, con il vecchio e il nuovo valore dell’anno base, e comunicato alla banca.
+Commento del docente: Il collegamento con il finanziamento rende concreto un tema che sembra burocratico: quando un tasso di interesse o un premio dipendono dalla riduzione, le regole del ricalcolo diventano una clausola da concordare prima. Suggerite agli allievi tre righe indispensabili per ogni politica: quali eventi contano, quale soglia si applica, chi approva. La soglia del 5% qui è una scelta dell’azienda di fantasia: nessuna norma la impone, e un’organizzazione può sceglierne una più bassa.
+
+## SEZIONE 9 — Emissioni biogeniche e rimozioni
+### SCHERMATA 47 — Emissioni biogeniche e rimozioni [section]
+Non tutto entra nel totale allo stesso modo. Alcune voci si quantificano ma si riportano su righe separate: la CO2 di origine biogenica, le rimozioni, l’energia autoprodotta. Sapere che cosa tenere a parte evita totali «gonfiati» o «scontati».
+- CO2 biogenica: fuori dagli scope, ma dichiarata
+- Rimozioni: mai sottratte in silenzio
+- Il fotovoltaico autoconsumato
+- Una proposta da respingere
+### SCHERMATA 48 — Due voci che si riportano a parte [two · GHG Protocol e ISO 14064-1 · voci separate]
+Regola comune: si quantificano se presenti, si mostrano su una riga propria, non si mescolano con il totale delle emissioni.
+Colonna «CO2 biogenica»:
+- È la CO2 emessa bruciando biomassa: legna, cippato, pellet, biogas
+- Il carbonio era stato assorbito dalla pianta durante la crescita
+- GHG Protocol: riportata separatamente dagli scope
+- ISO 14064-1: indicata separatamente nel rapporto GHG
+- CH4 e N2O della stessa combustione restano nell’inventario
+Colonna «Rimozioni»:
+- Sono gli assorbimenti di CO2 dall’atmosfera, ad esempio in boschi o suoli gestiti dall’organizzazione
+- La ISO 14064-1 riguarda emissioni e rimozioni: se quantificate, si riportano nel rapporto
+- Buona prassi: metodo documentato e stime prudenti
+- Si mostrano separate dalle emissioni, non «al netto»
+- Non sono crediti di carbonio: quelli non entrano nell’inventario
+Commento del docente: Due errori opposti da prevenire. Il primo: sommare la CO2 biogenica a quella fossile, penalizzando chi usa biomassa. Il secondo, più frequente: considerare la biomassa «a zero emissioni» e dimenticare tutto, compresi metano e protossido di azoto della combustione e le emissioni di filiera e trasporto. Per le rimozioni la parola d’ordine è prudenza: un filare di alberi nel piazzale non è una rimozione quantificata. E i crediti acquistati da progetti esterni sono un’altra cosa ancora: li vedremo nell’unità 10.
+### SCHERMATA 49 — Esempio: come si tratta una caldaia a cippato [flow · GHG Protocol · emissioni biogeniche]
+Un’azienda di esempio sostituisce una caldaia a gasolio con una a cippato di legno. Che cosa succede alle righe dell’inventario?
+1. Riconoscere il combustibile: Il cippato è biomassa: la CO2 del camino è di origine biogenica.
+2. CO2 del camino: Si quantifica e si riporta su una riga separata, fuori dal totale degli scope.
+3. CH4 e N2O del camino: Restano nello Scope 1 (categoria 1 ISO), convertiti in CO2e con i GWP.
+4. Filiera del cippato: Taglio, cippatura e trasporto: emissioni indirette, da valutare per significatività.
+5. Nel rapporto: Totale delle emissioni e, a parte, la riga «CO2 biogenica» con il suo valore.
+Terrafelix non usa biomassa: nel suo rapporto la riga della CO2 biogenica riporta zero.
+Commento del docente: L’esempio serve a fissare l’idea che «a parte» non significa «dimenticato». Lo Scope 1 dell’azienda scende molto, perché scompare la CO2 fossile del gasolio, ma non si azzera: restano metano e protossido di azoto, e compaiono le emissioni indirette della filiera del legno. Chi legge il rapporto deve trovare entrambi i numeri: il totale e la CO2 biogenica. I calcoli sui combustibili, biomassa compresa, sono nell’unità 4. Anche quando una voce vale zero, come per Terrafelix, conviene scriverlo: dimostra che la domanda è stata posta.
+### SCHERMATA 50 — Il fotovoltaico di Terrafelix: che cosa entra nell’inventario [stats · Caso studio · energia autoprodotta]
+L’energia autoprodotta e autoconsumata non è «energia acquistata»: non entra nello Scope 2 e non si sottrae da nulla.
+- 600.000 kWh: autoprodotti e autoconsumati nel 2025 (0 kg CO2e in fase d’uso)
+- 3.200.000 kWh: prelevati dalla rete: gli unici che entrano nello Scope 2 (752 t CO2e (location-based))
+- 15,8%: quota del fabbisogno elettrico coperta dall’impianto (600.000 ÷ 3.800.000 kWh)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il beneficio del fotovoltaico è già dentro il numero: senza l’impianto Terrafelix preleverebbe dalla rete 3.800.000 kWh invece di 3.200.000. Lo Scope 2 si calcola solo sui kWh letti dal contatore di prelievo. Per questo l’autoconsumo si riporta come informazione a parte, utile a spiegare l’indicatore (il 15,8% del fabbisogno), ma non genera alcuna riga negativa. Il calcolo delle emissioni evitate e il trattamento dell’energia immessa in rete e delle garanzie d’origine sono argomenti dell’unità 5.
+### SCHERMATA 51 — «Togliamo il fotovoltaico e gli alberi dal totale?» [case · Caso studio · trasparenza]
+Giorgio Ferri, responsabile Commerciale, deve rispondere a un cliente della grande distribuzione e propone: «Abbiamo il fotovoltaico e abbiamo piantato alberi lungo il perimetro: sottraiamoli dal totale, così il numero è più basso».
+- Fotovoltaico: 600.000 kWh autoconsumati, già fuori dai kWh prelevati
+- Alberi lungo il perimetro: nessuna quantificazione dell’assorbimento (dato illustrativo)
+- Il cliente chiede Scope 1, 2 e 3 secondo il GHG Protocol
+Domanda di lavoro: Si può presentare un totale «al netto» di queste due voci?
+Come ha operato l'azienda: No. Sottrarre il fotovoltaico significherebbe contarne il beneficio due volte: i kWh autoprodotti hanno già ridotto il prelievo dalla rete. Gli alberi non sono una rimozione quantificata con un metodo documentato: si possono citare come iniziativa, non come numero. Davide Russo propone di comunicare il totale dell’inventario e, accanto, le informazioni separate: energia autoprodotta e fase d’uso.
+Commento del docente: È una situazione reale: la pressione commerciale spinge a cercare il numero più basso. La risposta non è un rifiuto, ma un’alternativa corretta: il fotovoltaico si valorizza mostrando quanta energia non è stata prelevata e l’indicatore per tonnellata di pasta; gli alberi si raccontano tra le iniziative. Un totale «al netto» costruito in casa espone invece l’azienda a contestazioni di greenwashing, tema dell’unità 10. Ricordate la regola: nell’inventario le emissioni non si compensano con voci di altra natura.
+
+## SEZIONE 10 — Il piano di raccolta dei dati
+### SCHERMATA 52 — Il piano di raccolta dei dati [section]
+Deciso che cosa contare, bisogna organizzare chi fornisce ogni dato, da quale documento, in quale unità di misura ed entro quando. Un inventario è un lavoro di squadra: il coordinatore non possiede quasi nessuno dei dati che gli servono.
+- Il gruppo di lavoro e i ruoli
+- Chi fornisce che cosa, e da quale documento
+- Il calendario del progetto
+### SCHERMATA 53 — Il gruppo di lavoro di Terrafelix [tree · Caso studio · ruoli]
+Ogni funzione porta i dati che già gestisce per altri scopi: contabilità, acquisti, produzione, vendite.
+Radice: Davide Russo (Ambiente ed energia · coordinatore dell’inventario)
+- Chiara Vitale (Amministrazione e controllo): Bollette di gas ed elettricità; Fatture dei carburanti; Note spese dei viaggi
+- Michele Santoro (Acquisti e logistica): Quantità acquistate; Trasporti: tonnellate e chilometri
+- Rosa Iannone (Produzione): Tonnellate di pasta prodotte; Ricariche dei gas refrigeranti
+- Giorgio Ferri (Commerciale): Vendite per mercato; Richieste dei clienti
+- Consulente EVALIS (supporto esterno): Metodo e fattori di emissione; Controllo dei calcoli
+Sponsor del progetto: Elena Marotta, amministratrice delegata, che approva confini, criteri e risultati.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Lo schema mostra una regola pratica: il dato va chiesto a chi lo produce, non a chi lo riassume. Le bollette le ha l’amministrazione, i chili di gas refrigerante li conosce chi segue la manutenzione, i chilometri dei trasporti li ricostruisce la logistica. Il coordinatore definisce le regole, controlla e consolida. Senza uno sponsor in direzione le richieste di dati finiscono in fondo alle priorità di tutti: la riunione di avvio con l’amministratrice delegata serve anche a questo. Davide Russo tiene per sé rifiuti e pendolarismo.
+### SCHERMATA 54 — Chi fornisce che cosa: il piano dei dati [table · Buona prassi · piano di raccolta dati]
+Per ogni dato quattro informazioni: unità di misura, documento di origine, responsabile, scadenza.
+Colonne: Dato (unità) | Documento di origine | Chi lo fornisce | Entro
+- Gas naturale (Sm³) | 12 bollette dell’anno | Chiara Vitale | Febbraio
+- Elettricità (kWh) e garanzie d’origine | Bollette, contratto di fornitura | Chiara Vitale | Febbraio
+- Produzione (t di pasta) | Consuntivo di produzione | Rosa Iannone | Febbraio
+- Carburanti della flotta (litri) | Carte carburante, fatture | Chiara Vitale | Marzo
+- Gas refrigeranti reintegrati (kg) | Registro delle apparecchiature, rapporti del frigorista | Rosa Iannone | Marzo
+- Semola e imballaggi (kg) | Fatture di acquisto, documenti di trasporto | Michele Santoro | Aprile
+- Rifiuti per destino (kg) | Registro di carico e scarico | Davide Russo | Aprile
+- Trasporti (t e km) | Documenti di trasporto, distanze stradali | Michele Santoro, Giorgio Ferri | Maggio
+- Viaggi di lavoro (km, notti) | Note spese, agenzia di viaggio | Chiara Vitale | Maggio
+- Pendolarismo (km, mezzo) | Questionario ai dipendenti | Davide Russo | Maggio
+Scadenze coerenti con il calendario del progetto: Scope 1 e 2 entro marzo, Scope 3 entro maggio.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Una richiesta dati ben fatta specifica sempre unità di misura e periodo: «i consumi di gas» produce risposte in euro, in Sm³, in kWh, per anno termico o solare. Meglio chiedere «Sm³ fatturati dal 1° gennaio al 31 dicembre 2025, con copia delle bollette». Chiedete anche il documento di origine: servirà in verifica e permette di controllare letture stimate e conguagli. Consiglio: un unico modulo condiviso, una riga per dato, con la colonna «note e ipotesi» che chi compila tende a dimenticare e che invece vale oro un anno dopo.
+### SCHERMATA 55 — Il calendario del progetto: dodici mesi del 2026 [gantt · Caso studio · calendario]
+L’inventario dell’anno 2025 si costruisce nel 2026, quando bollette e fatture dell’anno sono complete.
+- Avvio e confini: Gen → Gen
+- Raccolta dati Scope 1 e 2: Feb → Mar
+- Raccolta dati Scope 3: Apr → Mag
+- Consolidamento, incertezza, rapporto GHG: Giu → Giu
+- Verifica di terza parte: Lug → Lug
+- Carbon footprint di prodotto: Set → Ott
+- Piano di riduzione e obiettivi: Nov → Nov
+- Comunicazione ai clienti: Dic → Dic
+Fonte dei dati: Caso studio Pastificio Terrafelix – calendario illustrativo
+Commento del docente: Il calendario insegna due cose. La prima: l’impostazione occupa un solo mese, ma condiziona tutti gli altri; un confine cambiato a maggio obbliga a rifare le richieste di dati. La seconda: lo Scope 3 richiede più tempo dello Scope 1 e 2 non perché i conti siano più difficili, ma perché i dati stanno presso fornitori, vettori e dipendenti. Per un primo inventario sei mesi dalla riunione di avvio al rapporto sono un tempo realistico per una PMI; dal secondo anno, con ruoli e moduli già pronti, i tempi si riducono molto.
+
+## SEZIONE 11 — Il documento di impostazione dell’inventario
+### SCHERMATA 56 — Il documento di impostazione dell’inventario [section]
+Tutte le decisioni di questa unità vanno raccolte in poche pagine, approvate dalla direzione prima di iniziare i calcoli. È una buona prassi: i contenuti confluiranno poi nel rapporto GHG richiesto dalla norma.
+- I contenuti minimi
+- Le decisioni prese da Terrafelix a gennaio
+- Un calcolatore per vedere il peso di ogni scope
+### SCHERMATA 57 — Che cosa contiene il documento di impostazione [hub · Buona prassi · documento di impostazione]
+Sei blocchi di decisioni. Se uno manca, prima o poi qualcuno dovrà improvvisare la risposta a metà lavoro.
+Al centro: Documento di impostazione
+- Confini organizzativi: Approccio di consolidamento, società e sedi incluse
+- Confini di reporting: Periodo, emissioni dirette e indirette considerate
+- Classificazione: Scope e categorie Scope 3, categorie ISO, o entrambe
+- Significatività: Criteri per le indirette ed esclusioni motivate
+- Anno base: Anno scelto, politica e soglia di ricalcolo
+- Fattori, GWP e ruoli: Fonti dei fattori, serie di GWP, chi fa che cosa
+Commento del docente: La norma non chiede un documento con questo nome: chiede però che il rapporto GHG dichiari confini, criteri di significatività, anno base, metodologie, fattori e GWP con le relative fonti. Scriverli all’inizio, invece che a consuntivo, ha due vantaggi: le decisioni vengono prese a mente fredda e il rapporto finale è già scritto per un terzo. Sui GWP la regola è semplice: si dichiara il rapporto IPCC usato e non si mescolano serie diverse nello stesso inventario. I fattori si prendono da fonti ufficiali aggiornate all’anno dell’inventario.
+### SCHERMATA 58 — Le decisioni di gennaio: l’impostazione di Terrafelix [case · Caso studio · impostazione]
+Il 30 gennaio 2026 (data illustrativa) Elena Marotta approva il documento di impostazione preparato da Davide Russo con il consulente EVALIS: quattro pagine, più l’elenco delle sorgenti.
+- Confine organizzativo: controllo operativo; un solo stabilimento, nessuna partecipata
+- Periodo: 1° gennaio – 31 dicembre 2025; anno base 2025, soglia di ricalcolo 5%
+- Classificazione doppia: Scope 1, 2, 3 per i clienti; sei categorie ISO 14064-1 per il rapporto e la verifica
+- Elettricità: location-based nel totale; market-based riportato in aggiunta, separatamente
+- Indirette: tutte le categorie applicabili quantificate; cinque dichiarate non applicabili; fase d’uso a parte
+- GWP: IPCC AR6 a 100 anni; fattori da fonti ufficiali aggiornate (ISPRA, DEFRA, AIB) e da dati dei fornitori
+Domanda di lavoro: Che cosa succede se a maggio emerge una sorgente non prevista?
+Come ha operato l'azienda: Si aggiorna il documento, non lo si aggira: la nuova sorgente viene classificata con le stesse regole, il documento riceve una nuova revisione con data e motivo della modifica, e chi fornisce i dati viene informato. La tracciabilità delle decisioni è parte dell’inventario quanto i numeri.
+Commento del docente: Fate notare quanto poco spazio serve: quattro pagine. Il valore non sta nella lunghezza ma nel fatto che ogni scelta è scritta, datata e approvata. Nei calcoli del corso i fattori sono arrotondati a scopo didattico; nel documento reale di un’azienda vanno indicate la banca dati, l’edizione e l’anno di ogni fattore. La scelta dei GWP dell’AR6 è coerente con i valori usati nel caso studio per i gas refrigeranti: 2.256 per l’R-410A e 1.530 per l’HFC-134a.
+### SCHERMATA 59 — Prova tu: quanto pesa ogni scope di Terrafelix [sim · Caso studio · peso degli scope]
+Sei sorgenti che insieme fanno circa l’87% dell’inventario. Riduci del 10% il gas, poi ripristina e riduci del 10% la semola: quale delle due mosse sposta di più il totale?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Scope 1 · gas naturale: 1.050.000 Sm³ × 2 kg CO2e/Sm³ = 2.100.000 kg CO2e
+- Scope 1 · gasolio della flotta: 38.000 l × 2,65 kg CO2e/l = 100.700 kg CO2e
+- Scope 2 · elettricità di rete (location-based): 3.200.000 kWh × 0,235 kg CO2e/kWh = 752.000 kg CO2e
+- Scope 3 · semola acquistata: 20.600.000 kg × 0,7 kg CO2e/kg = 14.420.000 kg CO2e
+- Scope 3 · astucci e cartoni: 900.000 kg × 0,9 kg CO2e/kg = 810.000 kg CO2e
+- Scope 3 · consegne in Italia su gomma: 6.300.000 tkm × 0,1 kg CO2e/tkm = 630.000 kg CO2e
+Totale iniziale: 18.812.700 kg CO2e
+In tonnellate: 18.812,7 t CO2e
+Valori iniziali: dati del caso studio. Totale delle sei voci: 18.812,7 t CO2e su 21.692,5 t dell’inventario.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Con i valori iniziali le sei voci danno 18.812.700 kg, cioè 18.812,7 t CO2e: l’86,7% dell’inventario. Riducendo il gas del 10% (105.000 Sm³ in meno) il totale scende di 210 t; riducendo la semola del 10% (2.060.000 kg in meno) scende di 1.442 t, quasi sette volte tanto. È la dimostrazione numerica del perché l’impostazione deve includere lo Scope 3: la leva più grande è fuori dai cancelli. I fattori sono valori didattici arrotondati; in un inventario reale si usa la fonte ufficiale aggiornata.
+
+## SEZIONE 12 — Sintesi dell’unità
+### SCHERMATA 60 — Sintesi dell’unità [section]
+Abbiamo deciso che cosa contare e dove metterlo. Ripercorriamo le decisioni nell’ordine in cui si prendono, gli errori da evitare e i punti da portare con sé nelle unità di calcolo.
+- Cinque decisioni, dalla più generale alla più operativa
+- Un’impostazione che si riesamina ogni anno
+- Errori tipici e lista di autovalutazione
+- I punti chiave e il ponte verso l’unità 4
+### SCHERMATA 61 — Le decisioni dell’impostazione, in ordine [pyramid]
+Ogni livello poggia su quello precedente: non si classificano le sorgenti prima di avere deciso il confine.
+Livelli, dall'alto al basso:
+- Confine organizzativo: Chi siamo: controllo o quota di partecipazione
+- Confine di reporting: Emissioni dirette e indirette, sede per sede
+- Classificazione: Scope 1-2-3 e sei categorie ISO, senza doppi conteggi
+- Significatività e anno base: Che cosa quantificare e rispetto a quale anno confrontare
+- Piano di raccolta dei dati: Chi fornisce che cosa, da quale documento, entro quando
+Risultato: un elenco di sorgenti classificate, pronto per applicare la formula dato di attività × fattore di emissione.
+Commento del docente: Usate la piramide per un ripasso veloce: fate dire agli allievi, per ogni livello, la decisione presa da Terrafelix. Controllo operativo; un solo stabilimento con dirette, energia e nove categorie indirette quantificate; classificazione doppia; criteri di significatività scritti e 2025 come anno base con soglia al 5%; dieci dati richiesti a cinque persone entro maggio. Se un allievo sa ricostruire questa catena per la propria azienda, l’obiettivo dell’unità è raggiunto.
+### SCHERMATA 62 — Un’impostazione che si riesamina ogni anno [cycle · Buona prassi · riesame]
+Il documento di impostazione non si scrive una volta per tutte: a ogni nuovo inventario si ripassano cinque domande.
+Al centro: Riesame annuale dell’impostazione
+- Confini: Nuove società, sedi o attività gestite?
+- Sorgenti: Nuovi impianti, veicoli, gas, fornitori?
+- Significatività: Le categorie indirette pesano come prima?
+- Anno base: Qualche evento supera la soglia di ricalcolo?
+- Piano dei dati: Ruoli, moduli e scadenze sono aggiornati?
+Commento del docente: Il riesame annuale richiede un’ora se l’impostazione è scritta bene, e previene il problema più insidioso degli inventari ripetuti: il confine che cambia senza che nessuno lo decida. Un nuovo magazzino in affitto, un’auto elettrica in più, un fornitore che sostituisce un altro: piccole novità che, non registrate, rendono gli anni non confrontabili. Collegate questo ciclo al principio di coerenza della prima sezione e alla politica di ricalcolo dell’anno base: sono tre facce della stessa esigenza.
+### SCHERMATA 63 — Impostazione: corretto e sbagliato [two]
+Colonna «Corretto»:
+- Dichiarare l’approccio di consolidamento e applicarlo a tutte le società
+- Passare in rassegna tutte le 15 categorie dello Scope 3 e motivare le esclusioni
+- Scrivere accanto a ogni numero il sistema: «cat. 4 ISO» o «Scope 3 cat. 4»
+- Fissare l’anno base insieme a una politica di ricalcolo con soglia
+- Riportare a parte CO2 biogenica, rimozioni ed energia autoprodotta
+Colonna «Sbagliato»:
+- Scegliere confini «comodi», lasciando fuori la sede o la società che emette di più
+- Ignorare lo Scope 3 perché «non dipende da noi»
+- Contare due volte: carburante nello Scope 1 e di nuovo nei viaggi di lavoro
+- Cambiare metodo o perimetro senza ricalcolare l’anno base
+- Sottrarre dal totale fotovoltaico, alberi o crediti di compensazione
+Commento del docente: Tre di questi errori sono i più frequenti nei primi inventari. I confini comodi: un’azienda con due capannoni che dichiara solo quello nuovo ed efficiente. Lo Scope 3 ignorato: per Terrafelix significherebbe mostrare 3.009,8 t invece di 21.692,5, cioè meno del 14% dell’impronta. L’anno base senza politica di ricalcolo: alla prima acquisizione o al primo cambio di metodo il confronto storico diventa indifendibile. Chiedete agli allievi quale di questi rischi è più concreto nella loro realtà.
+### SCHERMATA 64 — Autovalutazione: sono pronto a passare ai calcoli? [checklist]
+Se la risposta è «sì» a tutte le voci, l’impostazione regge e si può cominciare a contare.
+- So spiegare i cinque principi: e usarli per risolvere un caso dubbio
+- So scegliere l’approccio di consolidamento: e calcolare l’effetto di una quota di partecipazione
+- So distinguere dirette e indirette: guardando chi gestisce il bene e da dove esce il gas
+- So collocare una sorgente nei tre scope: e nelle 15 categorie dello Scope 3
+- So tradurre gli scope nelle sei categorie ISO: con la corrispondenza indicativa
+- So applicare criteri di significatività: e motivare un’esclusione
+- So verificare la soglia di ricalcolo: con una percentuale sull’anno base
+- So preparare un piano di raccolta dei dati: con unità, documento, responsabile e scadenza
+Commento del docente: Proponete la lista come esercizio individuale di due minuti. Dove un allievo esita, indicate la sezione da rivedere: consolidamento nella 2, classificazione nelle 4, 5 e 6, significatività nella 7, anno base nella 8. Chi vuole mettersi alla prova può ripetere gli esercizi di classificazione sulla propria organizzazione: elencare dieci sorgenti e assegnare a ciascuna scope, categoria dello Scope 3 e categoria ISO. È il miglior allenamento prima dell’esame di fine unità e dei calcoli dell’unità 4.
+### SCHERMATA 65 — I punti chiave dell’unità [summary]
+1. Un inventario GHG è un elenco quantificato di sorgenti in un anno, costruito secondo cinque principi: pertinenza, completezza, coerenza, accuratezza, trasparenza
+2. Il confine organizzativo si traccia con il controllo (100% o zero) o con la quota di partecipazione (la percentuale posseduta): stesso gruppo, totali diversi
+3. Dirette se il gas esce da una sorgente che gestiamo; indirette se esce da sorgenti di altri, energia acquistata compresa
+4. GHG Protocol: Scope 1 (quattro tipi di sorgente), Scope 2 (energia acquistata), Scope 3 (15 categorie a monte e a valle)
+5. ISO 14064-1: sei categorie; la corrispondenza con gli scope è indicativa e il numero di categoria va sempre accompagnato dal sistema
+6. Ogni sorgente va in una sola casella: prima di aggiungere una riga ci si chiede se l’emissione è già contata altrove
+7. Le emissioni indirette si valutano con criteri di significatività scritti; le esclusioni si motivano una per una
+8. L’anno base si ricalcola quando cambia il metro (struttura, metodo, errori oltre la soglia), non quando cambiano le emissioni
+9. CO2 biogenica, rimozioni ed energia autoprodotta si riportano a parte; nulla si sottrae dal totale
+10. Prossima unità: con l’elenco delle sorgenti in mano, calcoliamo lo Scope 1 di Terrafelix, voce per voce
+Commento del docente: Chiudete collegando l’unità alle successive: tutto ciò che abbiamo deciso qui diventa la struttura del foglio di calcolo. Nell’unità 4 riempiremo le righe dello Scope 1, cioè la categoria 1 ISO: gas naturale, gasolio, benzina e gas refrigeranti, fino a ricostruire le 2.257,8 t CO2e di Terrafelix. Nell’unità 5 toccherà all’energia acquistata, nella 6 alla catena del valore. Ricordate agli allievi che una buona impostazione non si vede nel risultato finale: si vede nel fatto che nessuno, in verifica, trova una sorgente mancante.

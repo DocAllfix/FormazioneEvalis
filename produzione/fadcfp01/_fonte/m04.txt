@@ -1,0 +1,628 @@
+# UNITÀ 4 — Calcolare le emissioni dirette (Scope 1) (3 ore)
+Caldaie, forni, veicoli, gas refrigeranti, processi: dove si trovano i dati e come si fanno i conti, un passo alla volta.
+Obiettivi di apprendimento:
+- Riconoscere le quattro famiglie di sorgenti dello Scope 1 e collocarvi le sorgenti di un’azienda
+- Calcolare le emissioni dei combustibili fissi partendo da bollette, fatture e giacenze
+- Calcolare le emissioni dei veicoli dai litri di carburante oppure, quando mancano, dai chilometri
+- Calcolare le emissioni fuggitive dei gas refrigeranti con il metodo delle ricariche e il GWP
+- Riconoscere le emissioni di processo e svolgere un calcolo stechiometrico semplice
+- Comporre lo Scope 1 completo, controllarne la plausibilità ed evitare gli errori tipici
+
+## SEZIONE 1 — Le quattro famiglie dello Scope 1
+### SCHERMATA 1 — Le quattro famiglie dello Scope 1 [section]
+Nell’unità 3 Terrafelix ha fissato i confini dell’inventario con l’approccio del controllo operativo. Ora si comincia a contare, partendo da ciò che l’azienda brucia o disperde direttamente: lo Scope 1, che nella ISO 14064-1 corrisponde alla categoria 1.
+- Che cosa sono le emissioni dirette
+- Combustione stazionaria, combustione mobile, fuggitive, processo
+- La mappa delle sorgenti di Terrafelix
+- I cinque passi di ogni calcolo
+### SCHERMATA 2 — Scope 1: quattro famiglie di sorgenti [tree · GHG Protocol · Scope 1]
+Sono dirette le emissioni che escono da sorgenti possedute o controllate dall’azienda: un camino, uno scarico, una valvola che perde.
+Radice: Scope 1 – emissioni dirette (ISO 14064-1: categoria 1)
+- Combustione stazionaria (impianti fissi): caldaie e forni; essiccatoi; gruppi elettrogeni
+- Combustione mobile (mezzi che si muovono): auto e furgoni; carrelli elevatori; macchine operatrici
+- Emissioni fuggitive (perdite non volute): gas refrigeranti; SF6 dei quadri elettrici; perdite di metano
+- Emissioni di processo (reazioni chimiche): calce e cemento; vetro e ceramica; CO2 tecnica
+Per tutte vale la stessa formula: dato di attività × fattore di emissione.
+Commento del docente: Le quattro famiglie sono una classificazione del GHG Protocol che la pratica ha adottato anche per la categoria 1 della ISO 14064-1. Serve soprattutto come promemoria: quasi tutte le aziende pensano subito alla caldaia e ai furgoni, molte dimenticano i climatizzatori, poche sanno di avere emissioni di processo. Chiedetevi per ogni famiglia: «ne abbiamo?». Se la risposta è no, scrivetelo nel rapporto: anche un’assenza va dichiarata e motivata.
+### SCHERMATA 3 — La mappa delle sorgenti dirette di Terrafelix [table · Caso studio · inventario 2025]
+Sei voci, tre famiglie. Per ciascuna: che cosa si misura e chi possiede il documento.
+Colonne: Sorgente | Famiglia | Dato di attività | Documento | Chi lo fornisce
+- Essiccatoi e centrale termica | Stazionaria | Sm³ di gas naturale | Bollette del gas | Chiara Vitale
+- Gruppo elettrogeno e motopompa antincendio | Stazionaria | Litri di gasolio | Fatture e registro del serbatoio | Rosa Iannone
+- 4 furgoni e 5 auto a gasolio | Mobile | Litri di gasolio | Carte carburante | Chiara Vitale
+- 3 auto a benzina | Mobile | Litri di benzina | Carte carburante | Chiara Vitale
+- Climatizzatori degli uffici | Fuggitive | kg di R-410A reintegrati | Rapporti del frigorista | Davide Russo
+- Gruppo frigo di processo | Fuggitive | kg di HFC-134a reintegrati | Registro dell’apparecchiatura | Davide Russo
+Emissioni di processo: nessuna sorgente rilevante (vedi sezione 8). I carrelli elevatori sono elettrici: i loro consumi sono nella bolletta elettrica (Scope 2, unità 5).
+Commento del docente: Questa tabella è il vero punto di partenza del lavoro: prima di aprire il foglio di calcolo bisogna sapere quali sorgenti esistono e chi ha in mano il dato. Notate che quattro voci su sei passano dall’amministrazione: bollette e carte carburante sono documenti contabili prima che ambientali. Le due voci dei gas refrigeranti, invece, vivono nei registri tecnici della manutenzione, ed è lì che di solito si perdono.
+### SCHERMATA 4 — I cinque passi di ogni calcolo dello Scope 1 [flow]
+1. 1. Individua la sorgente: Che cosa brucia o perde gas? In quale famiglia rientra?
+2. 2. Trova il dato: Quantità dell’anno, nell’unità giusta: Sm³, litri, kg.
+3. 3. Scegli il fattore: Stessa unità del dato; fonte e anno dichiarati.
+4. 4. Moltiplica: Dato × fattore = kg CO2e; diviso 1.000 = tonnellate.
+5. 5. Controlla e annota: Il risultato è plausibile? Da dove viene ogni numero?
+È il metodo dell’unità 2 applicato a ogni sorgente: in questa unità lo ripetiamo quindici volte.
+Commento del docente: Lo schema è volutamente ripetitivo: chi impara a fare bene questi cinque passi su una caldaia sa già fare l’ottanta per cento di un inventario. Il passo più trascurato è il quinto. Un risultato non annotato (quale bolletta, quale fattore, quale versione della fonte) dopo un anno non lo sa ricostruire nemmeno chi lo ha calcolato, e in verifica un numero che non si sa ricostruire vale quanto un numero sbagliato.
+### SCHERMATA 5 — Il sopralluogo: cercare le sorgenti dove sono davvero [case]
+A febbraio 2026 Davide Russo percorre lo stabilimento con Rosa Iannone e con il consulente EVALIS, planimetria alla mano, per elencare tutto ciò che brucia un combustibile o contiene gas serra.
+- Centrale termica e tre linee di essiccazione: gas naturale
+- Gruppo elettrogeno e motopompa antincendio: un serbatoio di gasolio in comune
+- Parcheggio: 4 furgoni e 8 auto aziendali
+- Tetto e cortile: unità esterne dei climatizzatori e gruppo frigo di processo
+Domanda di lavoro: Che cosa sarebbe sfuggito lavorando solo sulle fatture dell’energia?
+Come ha operato l'azienda: La motopompa antincendio (pochi litri l’anno, provati ogni mese) e i gas refrigeranti: nessuna bolletta li segnala. Il sopralluogo li ha portati nell’elenco; per i refrigeranti è partita la richiesta dei rapporti di intervento al frigorista.
+Commento del docente: Il sopralluogo non è una formalità. Le sorgenti minori non compaiono nei conti dell’energia e proprio per questo sono quelle che un verificatore va a cercare per prime. Un’ora in stabilimento con chi conosce gli impianti evita di scoprire a luglio, durante la verifica, che esisteva un secondo gruppo frigo. Conviene fotografare le targhe delle macchine: riportano il tipo di gas e la carica in kg, dati che serviranno nella sezione 6.
+
+## SEZIONE 2 — Combustione stazionaria: il gas naturale
+### SCHERMATA 6 — Combustione stazionaria: il gas naturale [section]
+Per molte aziende manifatturiere il gas naturale è la prima voce dello Scope 1. Il dato è quasi sempre disponibile e di buona qualità: basta saper leggere la bolletta e sommare dodici mesi senza buchi né doppioni.
+- Dalla bolletta al risultato in cinque mosse
+- Che cosa leggere (e che cosa ignorare) in bolletta
+- I consumi mensili di Terrafelix
+- Il calcolo: 1.050.000 Sm³
+- Quanto pesa la scelta del fattore
+### SCHERMATA 7 — Dalla bolletta al risultato [flow]
+1. Raccogli le bollette: Tutte quelle che coprono dal 1° gennaio al 31 dicembre, per ogni punto di riconsegna.
+2. Leggi gli Sm³: Il consumo fatturato in standard metri cubi, non l’importo in euro.
+3. Somma i dodici mesi: Attenzione a stime, conguagli e mesi a cavallo d’anno.
+4. Moltiplica per il fattore: Nel corso: 2,0 kg CO2e per Sm³ (valore arrotondato).
+5. Converti e annota: kg ÷ 1.000 = t CO2e; registra fonte del dato e del fattore.
+Commento del docente: Sembra banale, eppure gli errori si concentrano nei primi tre passi, non nella moltiplicazione. Il caso tipico: la bolletta di gennaio dell’anno dopo contiene il conguaglio di dicembre e nessuno la guarda perché «è dell’altro anno». Se lo stabilimento ha più contatori, per esempio uno per la produzione e uno per la mensa, vanno sommati tutti: il punto di riconsegna è indicato in bolletta con un codice, il PDR.
+### SCHERMATA 8 — Leggere la bolletta del gas [text]
+In una bolletta ci sono decine di numeri: per l’inventario ne servono pochissimi.
+- Consumo in Sm³: Lo standard metro cubo è il metro cubo riportato a condizioni di riferimento di temperatura e pressione: è l’unità a cui si applica il fattore.
+- Periodo di fatturazione: Le date di inizio e fine: servono a ricostruire l’anno solare senza sovrapposizioni.
+- Lettura effettiva o stimata: Una lettura stimata è un’ipotesi del fornitore: verrà corretta da un conguaglio successivo.
+- Coefficiente C: Converte i metri cubi misurati dal contatore in Sm³. Esempio illustrativo: 100.000 m³ letti × 1,02 = 102.000 Sm³.
+- Che cosa ignorare: Importi, imposte, quote fisse: all’inventario servono le quantità fisiche.
+Riquadro «Regola pratica»: Se copi il dato dal contatore invece che dalla bolletta, verifica se la lettura è già in Sm³: i contatori con correttore di volume lo sono, gli altri no.
+Commento del docente: Il coefficiente C è il dettaglio che sorprende di più: chi legge il contatore a mano e moltiplica direttamente per il fattore può sbagliare di qualche punto percentuale senza accorgersene. Il valore 1,02 dell’esempio è illustrativo: quello vero è stampato in bolletta e dipende dalla località e dalla pressione di fornitura. La via più sicura resta usare gli Sm³ fatturati e tenere le letture del contatore come controllo incrociato.
+### SCHERMATA 9 — Terrafelix: i consumi mensili di gas naturale nel 2025 [line]
+Dodici bollette, un andamento leggibile: produzione costante, più riscaldamento in inverno, fermata di agosto.
+Periodi: Gen | Feb | Mar | Apr | Mag | Giu | Lug | Ago | Set | Ott | Nov | Dic
+- Gas naturale (Sm³): 100.000Sm³ | 93.000Sm³ | 94.000Sm³ | 88.000Sm³ | 87.000Sm³ | 84.000Sm³ | 85.000Sm³ | 50.000Sm³ | 86.000Sm³ | 90.000Sm³ | 95.000Sm³ | 98.000Sm³
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi (la somma dei dodici mesi è 1.050.000 Sm³)
+Commento del docente: Mettere i consumi in un grafico mensile è il controllo più economico che esista. Un mese mancante, una bolletta registrata due volte o un valore dieci volte più grande si vedono a colpo d’occhio, mentre in una colonna di numeri passano inosservati. Qui la forma è coerente con la realtà dello stabilimento: il minimo di agosto corrisponde alle due settimane di fermata. Se agosto fosse stato il mese più alto, prima di calcolare avremmo dovuto capire perché.
+### SCHERMATA 10 — Terrafelix: il gas naturale di un anno, trimestre per trimestre [calc · ISO 14064-1 · categoria 1]
+Il dato annuo è la somma delle dodici bollette; qui le raggruppiamo per trimestre per seguire il conto riga per riga.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- 1° trimestre (bollette di gennaio, febbraio, marzo): 287.000 Sm³ × 2 kg CO2e/Sm³ = 574.000 kg CO2e
+- 2° trimestre (bollette di aprile, maggio, giugno): 259.000 Sm³ × 2 kg CO2e/Sm³ = 518.000 kg CO2e
+- 3° trimestre (luglio, agosto (fermata), settembre): 221.000 Sm³ × 2 kg CO2e/Sm³ = 442.000 kg CO2e
+- 4° trimestre (bollette di ottobre, novembre, dicembre): 283.000 Sm³ × 2 kg CO2e/Sm³ = 566.000 kg CO2e
+Totale anno: 1.050.000 Sm³: 2.100.000 kg CO2e
+In tonnellate: 2100 t CO2e
+Fattore del corso: 2,0 kg CO2e/Sm³, valore arrotondato a scopo didattico.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattore arrotondato (vedi tabella dei fattori del corso)
+Commento del docente: Il risultato è lo stesso che si ottiene con una sola riga: 1.050.000 Sm³ × 2,0 = 2.100.000 kg, cioè 2.100 t CO2e. Da sola questa voce vale il 93% dello Scope 1 di Terrafelix. Un ordine di grandezza da tenere a mente: mille Sm³ di gas valgono circa 2 tonnellate di CO2e. Con questa regola potete stimare in pochi secondi il peso di qualunque caldaia guardando soltanto il totale annuo delle bollette.
+### SCHERMATA 11 — Quanto pesa la scelta del fattore: il valore ISPRA [calc]
+Rifacciamo lo stesso conto con il parametro standard nazionale pubblicato da ISPRA, che è riferito alla sola CO2.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Gas naturale di Terrafelix (ISPRA, parametri standard nazionali: circa 1,98 kg CO2 per Sm³): 1.050.000 Sm³ × 1,98 kg CO2/Sm³ = 2.079.000 kg CO2
+2.079.000 kg CO2 = 2.079 t CO2: 21 t in meno (−1,0%) rispetto al conto con il fattore arrotondato del corso.
+Fonte dei dati: ISPRA, tabella dei parametri standard nazionali (valore indicativo); dato di attività del caso studio
+Commento del docente: Due insegnamenti in una slide. Primo: il fattore del corso è arrotondato per rendere i conti leggibili; in un inventario reale si usa il valore ufficiale dell’anno di riferimento e lo si cita nel rapporto. Secondo: attenzione all’unità del risultato. Il valore ISPRA è in kg di CO2, mentre un fattore in CO2e comprende anche le piccole quantità di metano e protossido di azoto prodotte dalla combustione. Sono grandezze diverse: non vanno confuse né mescolate nella stessa tabella senza dirlo.
+### SCHERMATA 12 — Gas naturale: corretto e sbagliato [two]
+Colonna «Corretto»:
+- Sommare gli Sm³ di tutte le bollette e di tutti i punti di riconsegna
+- Ricostruire l’anno solare usando letture effettive e conguagli
+- Usare un fattore espresso nella stessa unità del dato
+- Annotare fonte, anno e unità del fattore
+- Confrontare il totale con le letture del contatore al 31 dicembre
+Colonna «Sbagliato»:
+- Moltiplicare gli euro della bolletta per un fattore in Sm³
+- Applicare un fattore per kWh a un dato in Sm³ (o viceversa)
+- Dimenticare il conguaglio arrivato a gennaio dell’anno dopo
+- Contare due volte una bolletta rettificata e riemessa
+- Usare i metri cubi del contatore senza il coefficiente C
+Commento del docente: L’errore di unità è il più pericoloso perché produce numeri enormi o minuscoli ma apparentemente ordinati. Alcuni fornitori fatturano in kWh o riportano entrambe le unità: 1 Sm³ vale circa 9,8 kWh, quindi scambiare le due colonne significa sbagliare di quasi dieci volte. Per riconoscere al volo il problema usate la regola dei mille metri cubi: se 50.000 Sm³ vi danno 10 tonnellate oppure 1.000, c’è un errore di unità.
+
+## SEZIONE 3 — Altri combustibili fissi
+### SCHERMATA 13 — Altri combustibili fissi [section]
+Non tutto arriva da un tubo con un contatore. Gasolio, GPL e biomassa si comprano a lotti, si tengono in un serbatoio o in un deposito e si misurano in unità diverse: il metodo è lo stesso, cambiano le insidie.
+- Gasolio di gruppi elettrogeni e motopompe
+- GPL: attenzione a chilogrammi e litri
+- Biomassa: la CO2 biogenica si riporta a parte
+- Prova tu con tre combustibili
+### SCHERMATA 14 — Combustibili fissi: unità, fattori e trappole [table]
+Prima di moltiplicare, controlla che dato e fattore parlino la stessa unità.
+Colonne: Combustibile | Unità tipica in fattura | Fattore del corso | Attenzione a
+- Gas naturale | Sm³ (a volte kWh) | 2,0 kg CO2e/Sm³ | Stime, conguagli, coefficiente C
+- Gasolio | Litri | 2,65 kg CO2e/l | Acquistato non vuol dire consumato: contano le giacenze
+- GPL | Litri oppure kg | 1,6 kg CO2e/l | Se la fattura è in kg, convertire in litri con la densità
+- Biomassa (pellet, cippato) | kg o tonnellate | Fattori separati | CO2 biogenica a parte; CH4 e N2O restano nello Scope 1
+Fattori arrotondati a scopo didattico: nella pratica si usa la fonte ufficiale aggiornata all’anno dell’inventario.
+Commento del docente: Per i combustibili acquistati a lotti la regola è: consumo = giacenza iniziale + acquisti − giacenza finale. Se il serbatoio era quasi vuoto a gennaio e pieno a dicembre, gli acquisti sopravvalutano il consumo. Per piccole quantità la differenza è trascurabile e si può dichiarare che acquisti e consumi coincidono; per una cisterna da decine di migliaia di litri no. La lettura dell’asta di livello a fine anno costa un minuto e chiude la questione.
+### SCHERMATA 15 — Terrafelix: il gasolio del gruppo elettrogeno e della motopompa [calc · GHG Protocol · combustione stazionaria]
+Il serbatoio è unico; il registro delle prove periodiche permette di dividere i litri tra le due macchine.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Gruppo elettrogeno (prove mensili e interruzioni di rete · registro delle ore di funzionamento): 1100 l × 2,65 kg CO2e/l = 2915 kg CO2e
+- Motopompa antincendio (prove periodiche · registro antincendio): 400 l × 2,65 kg CO2e/l = 1060 kg CO2e
+Totale: 1.500 l: 3975 kg CO2e
+In tonnellate: 3,975 t CO2e
+La ripartizione tra le due macchine è illustrativa; il totale di 1.500 litri è il dato dell’inventario.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattore arrotondato (vedi tabella dei fattori del corso)
+Commento del docente: Sono 3.975 kg, cioè circa 4 t CO2e: lo 0,2% dello Scope 1. Perché calcolarla, allora? Perché la completezza è un principio: una sorgente piccola si quantifica con un metodo semplice, non si ignora. I 1.500 litri derivano dal bilancio del serbatoio (valori illustrativi): 400 litri di giacenza a inizio anno, più 1.600 acquistati, meno 500 rimasti a fine anno. Notate la classificazione: gruppo elettrogeno e motopompa sono impianti fissi, quindi combustione stazionaria, anche se usano lo stesso gasolio dei furgoni.
+### SCHERMATA 16 — GPL fatturato in chilogrammi: prima i litri, poi le emissioni [calc]
+Un caseificio riscalda con GPL in serbatoio. Il fornitore fattura in kg, ma il fattore del corso è per litro.
+Formula: Emissioni = Dato di attività × Fattore di emissione ÷ Densità
+- GPL acquistato nell’anno (fatture del fornitore: 4.160 kg · densità indicativa del GPL liquido: 0,52 kg/l): 4160 kg × 1,6 kg CO2e/l ÷ 0,52 kg/l = 12.800 kg CO2e
+Totale: 12.800 kg CO2e
+In tonnellate: 12,8 t CO2e
+Passaggio intermedio: 4.160 kg ÷ 0,52 kg/l = 8.000 litri; 8.000 l × 1,6 = 12.800 kg CO2e.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); densità: valore illustrativo
+Commento del docente: Chi salta la conversione e moltiplica direttamente 4.160 × 1,6 ottiene 6.656 kg: quasi la metà del valore corretto, perché un litro di GPL liquido pesa circa mezzo chilo. La densità di 0,52 kg/l è un valore indicativo dichiarato come tale; nella pratica si usa quella indicata dal fornitore oppure, più semplicemente, un fattore di emissione espresso per kg, così da non dover convertire nulla. La regola non cambia: l’unità del dato deve coincidere con quella al denominatore del fattore.
+### SCHERMATA 17 — Biomassa: che cosa entra nello Scope 1 e che cosa va a parte [calc · GHG Protocol · CO2 biogenica]
+Un’azienda agricola brucia pellet in caldaia. La CO2 della biomassa è biogenica: si calcola, ma non si somma agli scope.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Pellet – CH4 e N2O della combustione (fatture di acquisto: 40 t · fattore: valore didattico): 40.000 kg × 0,05 kg CO2e/kg = 2000 kg CO2e
+Nello Scope 1: 2000 kg CO2e
+In tonnellate: 2 t CO2e
+Riportata a parte, fuori dagli scope: CO2 biogenica = 40.000 kg × 1,7 kg CO2/kg (valore didattico) = 68.000 kg, cioè 68 t CO2.
+Fonte dei dati: Esempio didattico – fattori della biomassa: valori didattici arrotondati
+Commento del docente: La logica: il carbonio del legno è stato assorbito dall’atmosfera durante la crescita della pianta, perciò la CO2 che torna in aria bruciandolo non si somma a quella fossile. Ma non sparisce: GHG Protocol e ISO 14064-1 chiedono di riportarla separatamente. Metano e protossido di azoto, invece, non sarebbero stati emessi senza la combustione e restano nello Scope 1. L’errore tipico è scrivere «biomassa = zero» e fermarsi lì: mancano sia i 2.000 kg sia le 68 tonnellate dichiarate a parte.
+### SCHERMATA 18 — Prova tu: tre combustibili in una centrale termica [sim]
+Cambia le quantità e osserva il totale. Quanti litri di gasolio servono per emettere quanto 1.000 Sm³ di gas? Prova con 755 litri.
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Gas naturale: 48.000 Sm³ × 2 kg CO2e/Sm³ = 96.000 kg CO2e
+- Gasolio: 2000 l × 2,65 kg CO2e/l = 5300 kg CO2e
+- GPL: 5000 l × 1,6 kg CO2e/l = 8000 kg CO2e
+Totale iniziale: 109.300 kg CO2e
+In tonnellate: 109,3 t CO2e
+Con i valori iniziali: 96.000 + 5.300 + 8.000 = 109.300 kg CO2e, cioè 109,3 t CO2e.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Usate il calcolatore per costruirvi degli ordini di grandezza. Azzerate due righe e lavorate su una sola: 1.000 Sm³ di gas danno 2.000 kg; per arrivare alla stessa cifra bastano circa 755 litri di gasolio oppure 1.250 litri di GPL. Attenzione però a non leggere questi numeri come una classifica dei combustibili: un litro e uno standard metro cubo contengono quantità di energia diverse. Il confronto corretto tra combustibili si fa a parità di energia utile, non a parità di volume.
+
+## SEZIONE 4 — Combustione mobile: partire dai litri
+### SCHERMATA 19 — Combustione mobile: partire dai litri [section]
+Per i veicoli controllati dall’azienda il dato migliore non è la strada percorsa ma il carburante acquistato: ogni litro bruciato emette la stessa quantità di CO2, comunque si guidi.
+- Perché i litri battono i chilometri
+- Dove si trovano: carte carburante, schede, fatture
+- Il calcolo della flotta di Terrafelix
+- Chi consuma di più: la ripartizione per veicolo
+### SCHERMATA 20 — Dove si trovano i litri [text]
+Metodo preferito: carburante acquistato × fattore per litro. Il dato è quasi sempre in amministrazione.
+- Carte carburante: L’estratto del gestore riporta data, targa, tipo di carburante, litri e importo: è la fonte più comoda e completa.
+- Schede carburante e fatture elettroniche: Verifica che siano indicati i litri e non soltanto gli euro.
+- Cisterna aziendale: Vale la regola delle giacenze: iniziale + acquisti − finale; i prelievi per targa vengono dal contalitri.
+- Tenere separati i carburanti: Gasolio e benzina hanno fattori diversi: 2,65 e 2,3 kg CO2e per litro nel corso.
+- Che cosa resta fuori: I rimborsi chilometrici ai dipendenti che usano la propria auto: sono Scope 3 (unità 6).
+Riquadro «Perché i litri»: I chilometri dicono quanta strada, non quanto carburante: carico, traffico e stile di guida cambiano il consumo. I litri contengono già tutto.
+Commento del docente: Il metodo basato sul carburante è anche il più semplice da difendere in verifica: c’è un documento fiscale per ogni litro. Il lavoro vero è di pulizia: gli estratti delle carte contengono spesso voci che non sono carburante, come lavaggi, pedaggi e additivi, registrate in euro. Vanno filtrate prima di sommare. Controllate anche che tutte le targhe della flotta compaiano: un veicolo senza rifornimenti per un anno intero è un veicolo fermo oppure un veicolo che fa il pieno con un’altra carta.
+### SCHERMATA 21 — Terrafelix: gasolio e benzina della flotta aziendale [calc · GHG Protocol · combustione mobile]
+Dodici veicoli, due carburanti, due righe: i litri vengono dall’estratto annuale delle carte carburante.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Gasolio – 4 furgoni e 5 auto (estratto carte carburante 2025, somma dei rifornimenti di gasolio): 38.000 l × 2,65 kg CO2e/l = 100.700 kg CO2e
+- Benzina – 3 auto (estratto carte carburante 2025, somma dei rifornimenti di benzina): 6000 l × 2,3 kg CO2e/l = 13.800 kg CO2e
+Totale: 114.500 kg CO2e
+In tonnellate: 114,5 t CO2e
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Gasolio: 38.000 × 2,65 = 100.700 kg, cioè 100,7 t. Benzina: 6.000 × 2,3 = 13.800 kg, cioè 13,8 t. In totale la combustione mobile vale 114,5 t CO2e, circa il 5% dello Scope 1. Un litro di gasolio emette più di un litro di benzina perché contiene più carbonio; questo non significa che un’auto a gasolio emetta di più per chilometro, perché di norma consuma meno litri. È il motivo per cui si parte dai litri: il confronto per chilometro richiede un dato in più.
+### SCHERMATA 22 — Chi consuma di più: i litri per veicolo [bar]
+La stessa fonte permette di scendere al singolo veicolo: utile per i controlli e, più avanti, per scegliere le azioni di riduzione.
+- Furgone 1 (gasolio): 7200l
+- Furgone 2 (gasolio): 6800l
+- Furgone 3 (gasolio): 6300l
+- Furgone 4 (gasolio): 5700l
+- Auto 1 (gasolio): 3100l
+- Auto 2 (gasolio): 2700l
+- Auto 3 (gasolio): 2400l
+- Auto 4 (gasolio): 2100l
+- Auto 5 (gasolio): 1700l
+- Auto 6 (benzina): 2400l
+- Auto 7 (benzina): 2000l
+- Auto 8 (benzina): 1600l
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi (i litri per veicolo sommano a 38.000 l di gasolio e 6.000 l di benzina)
+Commento del docente: I quattro furgoni consumano 26.000 litri su 44.000, il 59% del carburante, e producono 68,9 t CO2e: il 60% della combustione mobile. Le cinque auto a gasolio ne consumano 12.000 e le tre a benzina 6.000. La ripartizione non cambia il totale dell’inventario, ma serve due volte: oggi come controllo (un’auto da 7.000 litri sarebbe sospetta), domani per decidere da quali veicoli cominciare la sostituzione, tema dell’unità 9.
+### SCHERMATA 23 — Le carte carburante di Chiara Vitale [case]
+Chiara Vitale scarica dal portale del gestore l’estratto 2025 delle dodici carte carburante: oltre mille righe con data, targa, prodotto, quantità e importo.
+- Alcune righe riguardano lavaggi, pedaggi e additivi: hanno un importo ma non sono carburante
+- Due rifornimenti di dicembre sono stati fatturati a gennaio 2026
+- Un furgone ha usato per tre mesi la carta di un altro mezzo, fermo in officina
+Domanda di lavoro: Quali righe entrano nel dato di attività, e con quale criterio?
+Come ha operato l'azienda: Entrano tutti e soli i rifornimenti di gasolio e benzina con data dal 1° gennaio al 31 dicembre 2025, qualunque sia la data della fattura. Le voci non carburante vengono filtrate. Lo scambio di carte non modifica il totale: viene annotato perché altera soltanto la ripartizione per veicolo. Risultato: 38.000 litri di gasolio e 6.000 litri di benzina.
+Commento del docente: Il criterio da fissare e scrivere è quello della competenza: conta la data del rifornimento, non quella del documento contabile. È una differenza che chi lavora in amministrazione conosce bene, e conviene dirlo con le loro parole. Lo scambio di carte tra veicoli è frequentissimo e non è un problema per l’inventario; lo diventa solo se si vogliono indicatori per singolo mezzo. In quel caso va corretto a mano e la correzione va documentata.
+
+## SEZIONE 5 — Combustione mobile: partire dai chilometri
+### SCHERMATA 24 — Combustione mobile: partire dai chilometri [section]
+A volte i litri non ci sono: veicoli senza carta carburante, rifornimenti pagati in contanti, dati persi. Allora si parte dai chilometri, sapendo che si sta facendo una stima e dichiarandolo.
+- Metodo A: chilometri × fattore per chilometro
+- Metodo B: chilometri × consumo medio × fattore per litro
+- Tre metodi sullo stesso veicolo: quanto cambiano i risultati
+- Elettriche, ibride, auto dei dipendenti: dove vanno
+### SCHERMATA 25 — Metodo A: chilometri × fattore per chilometro [calc]
+Proviamo sull’auto 2 di Terrafelix come se non avessimo i litri. I chilometri si leggono dal contachilometri o dai tagliandi.
+Formula: Emissioni = Percorrenza × Fattore di emissione
+- Auto 2 (gasolio) (contachilometri: 48.000 km nell’anno · fattore «auto media»): 48.000 km × 0,17 kg CO2e/km = 8160 kg CO2e
+Totale: 8160 kg CO2e
+In tonnellate: 8,16 t CO2e
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi (percorrenza); fattore arrotondato (vedi tabella dei fattori del corso)
+Commento del docente: È il metodo più rapido: basta un numero. Il risultato, 8.160 kg cioè circa 8,2 t CO2e, dipende però da quanto il veicolo reale somiglia all’«auto media» del fattore. Una citycar e un grosso fuoristrada con la stessa percorrenza darebbero lo stesso risultato, ed è evidentemente falso. Le banche dati serie offrono fattori per chilometro distinti per carburante e dimensione del veicolo: se usate questo metodo, scegliete il fattore più vicino al vostro mezzo e scrivete quale avete scelto.
+### SCHERMATA 26 — Metodo B: chilometri × consumo medio × fattore per litro [calc]
+Stessa auto, un dato in più: il consumo dichiarato dal costruttore, 5,2 litri ogni 100 km, cioè 0,052 l/km.
+Formula: Emissioni = Percorrenza × Consumo medio × Fattore di emissione
+- Auto 2 (gasolio) (48.000 km × 0,052 l/km = 2.496 litri stimati): 48.000 km × 0,052 l/km × 2,65 kg CO2e/l = 6614,4 kg CO2e
+Totale: 6614,4 kg CO2e
+In tonnellate: 6,6144 t CO2e
+Per passare da «litri ogni 100 km» a «litri per km» si divide per 100: 5,2 ÷ 100 = 0,052.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi (percorrenza e consumo); fattore arrotondato (vedi tabella dei fattori del corso)
+Commento del docente: Qui il conto ricostruisce prima i litri (2.496) e poi applica il solito fattore del gasolio: 6.614 kg, circa 6,6 t CO2e. È un metodo più aderente al veicolo, ma eredita un limite noto: il consumo dichiarato è misurato in prova e di solito è più basso di quello reale su strada. Se avete un consumo misurato, per esempio dal computer di bordo o da qualche mese di rifornimenti registrati, usate quello. L’errore classico è dimenticare la divisione per 100 e ottenere un risultato cento volte più grande.
+### SCHERMATA 27 — Tre metodi, la stessa auto: quanto cambia il risultato [bar]
+Per l’auto 2 i litri reali esistono (2.700 l dalla carta carburante): possiamo misurare l’errore dei due metodi di stima.
+- Litri reali × 2,65: 7155kg
+- Metodo B: km × consumo dichiarato: 6614,4kg
+- Metodo A: km × fattore medio: 8160kg
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Il valore di riferimento è 2.700 × 2,65 = 7.155 kg. Il metodo B sottostima del 7,6% perché l’auto consuma in realtà 5,6 litri ogni 100 km e non 5,2; il metodo A sovrastima del 14% perché l’auto media del fattore è più assetata di questa. Scarti del genere sono normali e accettabili per una voce piccola, purché dichiarati. Non sono accettabili quando i litri esistono e semplicemente nessuno li ha chiesti all’amministrazione.
+### SCHERMATA 28 — La scala di preferenza dei metodi per i veicoli [pyramid]
+Buona prassi: salire il più in alto possibile, e scrivere a quale gradino ci si è fermati.
+Livelli, dall'alto al basso:
+- Litri acquistati: Carte carburante, fatture, cisterna: dato misurato
+- Chilometri × consumo del veicolo: Consumo misurato o dichiarato: dato calcolato
+- Chilometri × fattore medio per km: Veicolo «tipo» della banca dati: dato stimato
+- Spesa per carburante ÷ prezzo medio: Solo euro disponibili: stima da migliorare
+Modello didattico: l’ordine riflette l’affidabilità del dato, non un obbligo di norma.
+Commento del docente: La piramide riprende la distinzione dell’unità 2 tra dato misurato, calcolato e stimato. Nella stessa flotta si possono usare metodi diversi per veicoli diversi: litri per i mezzi con carta carburante, chilometri per la vecchia utilitaria del custode. L’importante è non sommare due volte lo stesso veicolo e indicare il metodo riga per riga. Il gradino più basso, la spesa, lo ritroveremo nella sezione 10: funziona, ma solo se si conosce il prezzo medio pagato.
+### SCHERMATA 29 — Di chi è il veicolo, che cosa lo muove: dove vanno le emissioni [quad · GHG Protocol · Scope 1, 2 e 3]
+Non tutti i veicoli che lavorano per l’azienda finiscono nello Scope 1.
+Assi: A sinistra: carburante · a destra: elettricità / In alto: veicoli dell’azienda · in basso: veicoli di altri
+- Azienda + carburante: Scope 1: Furgoni e auto della flotta; Ibride plug-in: la benzina consumata; Noleggio a lungo termine guidato dal personale
+- Azienda + elettricità: Scope 2: Auto elettriche ricaricate in sede; Ibride plug-in: l’energia di ricarica; Attenzione: è già nella bolletta
+- Altri + carburante: Scope 3: Auto del dipendente in trasferta; Taxi e noleggio con conducente; Corrieri e trasportatori; Tragitti casa-lavoro
+- Altri + elettricità: Scope 3: Auto elettrica del dipendente; Corriere con furgoni elettrici
+Commento del docente: La domanda che decide è: chi controlla il veicolo? Con l’approccio del controllo operativo scelto da Terrafelix, il carburante dei mezzi che l’azienda gestisce va nello Scope 1 anche se il veicolo è a noleggio; i casi dubbi sono stati discussi nell’unità 3. L’auto elettrica aziendale non ha tubo di scarico: le sue emissioni stanno nell’elettricità, cioè nello Scope 2, e se si ricarica in sede sono già dentro la bolletta. Contarle di nuovo sarebbe un doppio conteggio, come vedremo nell’unità 5.
+
+## SEZIONE 6 — Emissioni fuggitive: i gas refrigeranti
+### SCHERMATA 30 — Emissioni fuggitive: i gas refrigeranti [section]
+Climatizzatori, celle e gruppi frigo contengono gas che, se escono dal circuito, scaldano il clima migliaia di volte più della CO2. Pochi chilogrammi bastano a pesare quanto migliaia di litri di carburante.
+- Perché pochi chili contano tanto: il GWP
+- Il metodo delle ricariche
+- Dove si trova il dato: registri e rapporti del frigorista
+- Il calcolo di Terrafelix: 20 kg, 39,3 t CO2e
+- Gli errori tipici
+### SCHERMATA 31 — Perché pochi chili contano tanto: il GWP dei refrigeranti [bar · IPCC AR6 · GWP a 100 anni]
+Chilogrammi di CO2 che scaldano quanto 1 kg di gas, su un orizzonte di 100 anni.
+- CO2 (riferimento): 1
+- HFC-32: 771
+- HFC-134a: 1530
+- R-410A (miscela): 2256
+- HFC-125: 3740
+- HFC-143a: 5810
+Fonte dei dati: IPCC AR6, GWP a 100 anni (riepilogo GHG Protocol, 2024); R-410A calcolato dalla composizione: 50% HFC-32 e 50% HFC-125
+Commento del docente: La barra della CO2 non si vede nemmeno: è questo il punto. Il GWP è già un fattore di emissione, espresso in kg CO2e per kg di gas disperso. Per le miscele si fa la media pesata dei componenti: l’R-410A è metà HFC-32 e metà HFC-125, quindi 0,5 × 771 + 0,5 × 3.740 = 2.255,5, arrotondato a 2.256. Il tipo di gas è scritto sulla targa della macchina. Ricordate la regola dell’unità 2: un solo rapporto IPCC per tutto l’inventario, dichiarato.
+### SCHERMATA 32 — Il metodo delle ricariche: dal rapporto del frigorista al risultato [flow]
+Un circuito frigorifero è sigillato: se il tecnico ha dovuto aggiungere gas, quel gas era uscito.
+1. Elenca le macchine: Climatizzatori, celle, gruppi frigo: tipo di gas e carica in kg, dalla targa.
+2. Raccogli gli interventi: Registro dell’apparecchiatura, rapporti del frigorista, banca dati F-gas.
+3. Somma i kg reintegrati: Per tipo di gas, per tutti gli interventi dell’anno.
+4. Moltiplica per il GWP: kg di gas × GWP del gas = kg CO2e.
+Il dato che serve è il gas aggiunto nell’anno, non la carica totale della macchina.
+Commento del docente: Il metodo si basa su un’ipotesi semplice e prudente: tutto il gas reintegrato sostituisce gas disperso in atmosfera. Il dato sta nei documenti che il manutentore compila a ogni intervento. Se l’azienda non li ha archiviati, li ha il frigorista: basta una richiesta scritta con l’elenco delle macchine. Se in un anno non ci sono state ricariche, l’emissione stimata con questo metodo è zero: si scrive zero, indicando che il controllo è stato fatto e su quali documenti.
+### SCHERMATA 33 — Terrafelix: le ricariche di gas refrigerante del 2025 [calc · GHG Protocol · emissioni fuggitive]
+Due interventi di ricarica nell’anno, due gas diversi, ciascuno con il proprio GWP.
+Formula: Emissioni = Gas reintegrato × GWP (fattore di emissione)
+- R-410A – climatizzazione degli uffici (rapporti di intervento del frigorista · GWP AR6 della miscela): 12 kg × 2256 kg CO2e/kg = 27.072 kg CO2e
+- HFC-134a – gruppo frigo di processo (registro dell’apparecchiatura · GWP AR6): 8 kg × 1530 kg CO2e/kg = 12.240 kg CO2e
+Totale: 39.312 kg CO2e
+In tonnellate: 39,312 t CO2e
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; GWP: IPCC AR6
+Commento del docente: R-410A: 12 × 2.256 = 27.072 kg, cioè 27,1 t. HFC-134a: 8 × 1.530 = 12.240 kg, cioè 12,2 t. In totale 39.312 kg: 39,3 t CO2e per venti chili di gas. Oltre al numero conviene guardare il tasso di perdita: se gli impianti degli uffici contengono in tutto 80 kg di gas (valore illustrativo), 12 kg reintegrati sono il 15% della carica in un anno. È un segnale tecnico prima che ambientale: c’è una perdita da cercare e riparare.
+### SCHERMATA 34 — Venti chili di gas: un confronto per ricordare [stats]
+- 20 kg: di gas refrigeranti reintegrati da Terrafelix nel 2025 (12 kg di R-410A + 8 kg di HFC-134a)
+- 39,3 t CO2e: di emissioni fuggitive (39.312 kg CO2e)
+- ≈ 14.800 l: di gasolio che emettono altrettanto (39.312 ÷ 2,65 = 14.835 litri)
+- ≈ 231.000 km: percorsi da un’auto media (39.312 ÷ 0,17 = 231.247 km)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Il confronto serve a convincere chi pensa che i gas refrigeranti siano un dettaglio: due bombole di gas equivalgono a più di un terzo del gasolio consumato in un anno dall’intera flotta aziendale. Un solo chilogrammo di R-410A disperso vale quanto circa 850 litri di gasolio bruciati. Per questo la manutenzione preventiva dei circuiti e la ricerca periodica delle perdite sono tra le azioni di riduzione con il miglior rapporto tra costo e risultato.
+### SCHERMATA 35 — Prova tu: quanto pesa una ricarica [sim]
+Modifica i chilogrammi reintegrati. Che cosa succede se la stessa perdita di 12 kg riguarda un impianto a HFC-32 invece che a R-410A? E con 1 kg di SF6?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- R-410A: 12 kg × 2256 kg CO2e/kg = 27.072 kg CO2e
+- HFC-134a: 8 kg × 1530 kg CO2e/kg = 12.240 kg CO2e
+- HFC-32: 0 kg × 771 kg CO2e/kg = 0 kg CO2e
+- SF6: 0 kg × 24.300 kg CO2e/kg = 0 kg CO2e
+Totale iniziale: 39.312 kg CO2e
+In tonnellate: 39,312 t CO2e
+I valori iniziali riproducono il calcolo di Terrafelix: 39.312 kg CO2e.
+Fonte dei dati: GWP: IPCC AR6 (riepilogo GHG Protocol, 2024); dati iniziali del caso studio
+Commento del docente: Spostando i 12 kg dalla riga dell’R-410A a quella dell’HFC-32 l’emissione di quella perdita scende da 27.072 a 9.252 kg: a parità di chili dispersi, il tipo di gas conta quasi tre volte. È la ragione per cui la sostituzione dei refrigeranti ad alto GWP è una leva di riduzione reale, oltre che una tendenza spinta dalla normativa europea sui gas fluorurati. L’ultima riga anticipa la prossima sezione: provate un solo chilogrammo di SF6.
+### SCHERMATA 36 — Gas refrigeranti: corretto e sbagliato [two]
+Colonna «Corretto»:
+- Usare i kg reintegrati nell’anno, presi dai rapporti di intervento
+- Distinguere i gas: ogni refrigerante ha il suo GWP
+- Usare i GWP dello stesso rapporto IPCC in tutto l’inventario
+- Censire tutte le macchine, compresi i piccoli split
+- Scrivere «zero ricariche» quando il controllo è stato fatto
+Colonna «Sbagliato»:
+- Moltiplicare per il GWP la carica totale della macchina
+- Dimenticare la voce perché «non c’è una bolletta»
+- Copiare le t CO2e dell’etichetta senza verificare quale GWP usa
+- Usare il GWP di un gas simile «per fare prima»
+- Contare come emissione il gas caricato in una macchina nuova
+Commento del docente: Sull’etichetta delle apparecchiature e nei registri la quantità di gas è spesso espressa anche in tonnellate di CO2 equivalente. Attenzione: la normativa europea sui gas fluorurati usa i GWP del quarto rapporto IPCC, per cui l’R-410A vale 2.088 e non 2.256. Dodici chili darebbero 25.056 kg invece di 27.072: l’8% in meno. Nessuno dei due numeri è «sbagliato», ma nell’inventario si usa una sola serie di GWP: si prendono i chilogrammi dal registro e si moltiplicano per il GWP scelto.
+
+## SEZIONE 7 — Altre fuggitive e gas particolari
+### SCHERMATA 37 — Altre fuggitive e gas particolari [section]
+I refrigeranti sono la fuggitiva più comune, non l’unica. Alcuni gas compaiono in quantità minime ma con GWP altissimi; altri, come la CO2 degli estintori, sono quasi irrilevanti. Bisogna saperli riconoscere per decidere con criterio.
+- SF6, estintori a CO2, perdite di metano, depurazione
+- Un calcolo con tre gas molto diversi
+- Il metodo del bilancio di massa
+### SCHERMATA 38 — Quattro sorgenti fuggitive da conoscere [cards · IPCC AR6 · GWP a 100 anni]
+- [SF6] Quadri elettrici di media e alta tensione: L’esafluoruro di zolfo è un isolante. GWP 24.300: il più alto tra i gas dell’inventario. Dato: kg reintegrati dal manutentore della cabina.
+- [CO2] Estintori e impianti di spegnimento: La CO2 scaricata in prove, ricariche o interventi vale 1 kg CO2e per kg. Dato: kg ricaricati dalla ditta di manutenzione antincendio.
+- [CH4] Perdite di metano: Reti interne del gas, impianti di biogas, serbatoi. Il metano fossile ha GWP 29,8. Dato: stime tecniche o misure di perdita.
+- [CH4 · N2O] Depurazione delle acque: Gli impianti di trattamento dei reflui possono emettere metano e protossido di azoto. Servono metodi specifici: qui solo un cenno.
+Commento del docente: L’SF6 è il caso da manuale di sorgente «invisibile»: sta nei quadri della cabina elettrica, che spesso è gestita da un manutentore esterno, e nessuno in azienda sa che c’è. Non tutti i quadri lo contengono: si verifica sulla targa o chiedendo al manutentore. Per le perdite di metano e per la depurazione i metodi di stima sono più complessi e vanno oltre gli scopi di questo corso: l’importante è saper riconoscere la sorgente e chiedere il supporto giusto.
+### SCHERMATA 39 — Tre gas, tre pesi: SF6, CO2 degli estintori, metano [calc · GHG Protocol · emissioni fuggitive]
+Un’azienda di esempio registra nell’anno tre piccole dispersioni. Il conto è sempre lo stesso: massa del gas × GWP.
+Formula: Emissioni = Gas disperso × GWP (fattore di emissione)
+- SF6 reintegrato in un quadro elettrico (rapporto del manutentore della cabina): 0,5 kg × 24.300 kg CO2e/kg = 12.150 kg CO2e
+- CO2 di sei estintori da 5 kg ricaricati (rapporto della ditta antincendio): 30 kg × 1 kg CO2e/kg = 30 kg CO2e
+- Metano disperso dalla rete interna del gas (stima tecnica dopo la riparazione di una perdita): 10 kg × 29,8 kg CO2e/kg = 298 kg CO2e
+Totale: 12.478 kg CO2e
+In tonnellate: 12,478 t CO2e
+Fonte dei dati: Esempio didattico – quantità illustrative; GWP: IPCC AR6 (CH4 fossile 29,8; SF6 24.300)
+Commento del docente: Mezzo chilo di SF6 vale 12.150 kg CO2e: 405 volte i trenta chili di CO2 degli estintori, che ne valgono appunto 30. Dieci chili di metano ne valgono 298. Il totale è 12.478 kg, circa 12,5 t, e dipende quasi tutto dalla voce più leggera in chilogrammi. Morale: per i gas diversi dalla CO2 non si giudica mai «a peso». Prima si guarda il GWP, poi si decide se la sorgente è trascurabile.
+### SCHERMATA 40 — Quando mancano i rapporti: il bilancio di massa [flow]
+Se l’azienda acquista e gestisce in proprio il gas, la dispersione si ricava per differenza. Esempio didattico con R-410A.
+1. Scorta iniziale: Gas in bombole a magazzino al 1° gennaio: 10 kg.
+2. + Acquisti: Gas comprato nell’anno, dalle fatture: 25 kg.
+3. − Scorta finale: Gas in bombole a magazzino al 31 dicembre: 15 kg.
+4. − Nuove cariche: Gas immesso in macchine nuove: resta nel circuito, non è una perdita. 8 kg.
+5. = Gas disperso: 10 + 25 − 15 − 8 = 12 kg, da moltiplicare per il GWP.
+12 kg × 2.256 = 27.072 kg CO2e. Dal conto va tolto anche il gas recuperato dalle macchine dismesse e consegnato per la rigenerazione o lo smaltimento.
+Commento del docente: È lo stesso ragionamento delle giacenze di gasolio, applicato al gas: ciò che è entrato e non è né in magazzino né dentro una macchina nuova è finito in atmosfera. Il metodo è utile per chi ha molte apparecchiature e un proprio magazzino di gas; per la maggior parte delle PMI, che si affidano a un frigorista esterno, il metodo delle ricariche è più semplice. I due metodi, con dati coerenti, devono dare lo stesso ordine di grandezza: usarli entrambi è un ottimo controllo incrociato.
+
+## SEZIONE 8 — Emissioni di processo
+### SCHERMATA 41 — Emissioni di processo [section]
+In alcune lavorazioni la CO2 non nasce da un combustibile che brucia, ma dalla materia prima che si trasforma. È la quarta famiglia dello Scope 1: assente in molte aziende, dominante in altre.
+- Che cosa sono e in quali settori si trovano
+- Un esempio semplice: la cottura del calcare
+- Combustione e processo: due conti distinti
+- Terrafelix: come si documenta un’assenza
+### SCHERMATA 42 — Dove nasce la CO2 di processo [hub · GHG Protocol · emissioni di processo]
+Reazioni chimiche o usi tecnici che liberano gas serra senza che nulla venga bruciato per produrre energia.
+Al centro: CO2 di processo
+- Calce e cemento: Il calcare cotto in forno si scompone e libera CO2
+- Vetro: Carbonati contenuti nella miscela che viene fusa
+- Ceramica e laterizi: Carbonati presenti nelle argille e negli impasti
+- CO2 tecnica: Acquistata in bombole e poi rilasciata durante l’uso
+- Saldatura: Gas di protezione con CO2 che si disperde nel lavoro
+Commento del docente: Il criterio per riconoscerle: se spegnessi il bruciatore e scaldassi il forno con elettricità rinnovabile, quella CO2 uscirebbe lo stesso? Se sì, è di processo. Per questo sono le emissioni più difficili da ridurre: non basta cambiare energia, bisogna cambiare materia prima o tecnologia. Per la CO2 tecnica acquistata in bombole il conto è immediato: ogni chilogrammo rilasciato vale 1 kg CO2e, e il dato sono i chili comprati nell’anno, al netto delle giacenze.
+### SCHERMATA 43 — Una fornace da calce: processo e combustione a confronto [calc · GHG Protocol · emissioni di processo]
+Cuocendo, il carbonato di calcio (CaCO3) diventa calce (CaO) e libera CO2: 0,44 kg per ogni kg di carbonato. Il forno brucia gas naturale.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Processo – decarbonatazione del calcare (registro di produzione: 5.000 t di CaCO3 · fattore stechiometrico 0,44): 5.000.000 kg × 0,44 kg CO2/kg = 2.200.000 kg CO2e
+- Combustione – gas naturale del forno (bollette del gas · fattore del corso): 300.000 Sm³ × 2 kg CO2e/Sm³ = 600.000 kg CO2e
+Totale: 2.800.000 kg CO2e
+In tonnellate: 2800 t CO2e
+Il fattore 0,44 viene dalle masse molecolari: 44 (CO2) ÷ 100 (CaCO3). Vale per carbonato di calcio puro: il calcare reale richiede il dato di purezza.
+Fonte dei dati: Esempio didattico – quantità illustrative; fattore stechiometrico del carbonato di calcio; fattore del gas arrotondato
+Commento del docente: Il processo emette 2.200 t, la combustione 600 t: su 2.800 t totali il 78,6% non dipende dal combustibile. Entrambe le voci stanno nello Scope 1, ma in famiglie diverse e con dati di attività diversi: per il processo si usano le tonnellate di materia prima trasformata, prese dai registri di produzione, non le bollette. Chi calcola soltanto il gas, in un’azienda come questa, dichiara meno di un quarto delle emissioni dirette reali.
+### SCHERMATA 44 — Combustione e processo: due conti distinti [two]
+Colonna «Combustione»:
+- La CO2 viene dal carbonio del combustibile
+- Dato di attività: Sm³, litri, kg di combustibile
+- Fonte del dato: bollette e fatture dell’energia
+- Si riduce con efficienza e cambio di combustibile
+- Presente in quasi tutte le aziende
+Colonna «Processo»:
+- La CO2 viene dalla materia prima o dal gas usato
+- Dato di attività: kg di materia trasformata o di gas rilasciato
+- Fonte del dato: registri di produzione e acquisti
+- Si riduce cambiando materiali o tecnologia
+- Presente solo in alcuni settori
+Commento del docente: Tenere separate le due voci non è pignoleria. Hanno fonti diverse, responsabili diversi in azienda e soprattutto leve di riduzione diverse: per la combustione parla il responsabile dell’energia, per il processo il responsabile della produzione o della ricerca. Un inventario che le fonde in un unico numero rende impossibile capire dove intervenire. I settori con forti emissioni di processo sono spesso anche quelli soggetti a regole specifiche di monitoraggio, come il sistema europeo ETS.
+### SCHERMATA 45 — Terrafelix: come si documenta un’assenza [case]
+Davide Russo deve compilare la riga «emissioni di processo» dell’inventario. Rosa Iannone descrive il ciclo produttivo: impasto di semola e acqua, trafilatura, essiccazione con aria calda, confezionamento.
+- Nessuna materia prima che liberi CO2 per reazione chimica
+- Nessun uso di CO2 tecnica o di altri gas serra in produzione
+- Il calore degli essiccatoi viene dal gas naturale: è combustione, già calcolata
+Domanda di lavoro: La riga si lascia vuota?
+Come ha operato l'azienda: No. Nel foglio dell’inventario la riga resta, con valore «non applicabile» e una nota di due righe che descrive il ciclo produttivo e spiega perché non esistono sorgenti di processo. La nota è firmata dalla responsabile di produzione e datata.
+Commento del docente: Una cella vuota e una cella con scritto «non applicabile, perché…» sono due cose molto diverse per chi legge. La prima lascia il dubbio di una dimenticanza; la seconda dimostra che la domanda è stata posta e ha avuto risposta. È il principio di completezza applicato alle assenze, ed è anche ciò che chiede il principio di trasparenza. Lo stesso vale per l’SF6: se i quadri elettrici non lo contengono, lo si scrive, indicando chi lo ha verificato.
+
+## SEZIONE 9 — Mettere insieme lo Scope 1 di Terrafelix
+### SCHERMATA 46 — Mettere insieme lo Scope 1 di Terrafelix [section]
+Sei voci calcolate una per una diventano un unico quadro. Il totale è importante, ma lo è altrettanto la sua composizione: quale famiglia pesa di più, quale gas, quanto per tonnellata di pasta.
+- La tabella completa: sei righe, un totale
+- La composizione per famiglia e per gas
+- Prova tu: «e se…»
+- Il messaggio per la direzione
+### SCHERMATA 47 — Lo Scope 1 di Terrafelix: sei voci, un totale [calc · ISO 14064-1 · categoria 1]
+Tutte le righe calcolate finora, nell’ordine delle famiglie: stazionaria, mobile, fuggitive.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Gas naturale – essiccatoi e centrale termica (stazionaria · bollette): 1.050.000 Sm³ × 2 kg CO2e/Sm³ = 2.100.000 kg CO2e
+- Gasolio – gruppo elettrogeno e motopompa (stazionaria · fatture e giacenze): 1500 l × 2,65 kg CO2e/l = 3975 kg CO2e
+- Gasolio – flotta aziendale (mobile · carte carburante): 38.000 l × 2,65 kg CO2e/l = 100.700 kg CO2e
+- Benzina – flotta aziendale (mobile · carte carburante): 6000 l × 2,3 kg CO2e/l = 13.800 kg CO2e
+- R-410A – climatizzazione uffici (fuggitive · rapporti del frigorista): 12 kg × 2256 kg CO2e/kg = 27.072 kg CO2e
+- HFC-134a – gruppo frigo di processo (fuggitive · registro dell’apparecchiatura): 8 kg × 1530 kg CO2e/kg = 12.240 kg CO2e
+Totale Scope 1: 2.257.787 kg CO2e
+In tonnellate: 2257,787 t CO2e
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso); GWP: IPCC AR6
+Commento del docente: Il totale è 2.257.787 kg, cioè 2.257,8 t CO2e: è il numero che entrerà nel rapporto GHG come Scope 1, o categoria 1 della ISO 14064-1. Per famiglia: combustione stazionaria 2.104,0 t (2.100 + 3,975), combustione mobile 114,5 t (100,7 + 13,8), fuggitive 39,3 t (27,1 + 12,2). Regola dell’unità 2: si sommano i chilogrammi esatti e si arrotonda soltanto alla fine. Sommando le tonnellate già arrotondate delle sei righe si otterrebbe lo stesso 2.257,8 solo per caso.
+### SCHERMATA 48 — La composizione per famiglia di sorgenti [donut]
+Tre famiglie presenti su quattro; una domina nettamente.
+Totale al centro: 2.257,8 t CO2e
+- Combustione stazionaria: 2104t (93,2%)
+- Combustione mobile: 114,5t (5,1%)
+- Emissioni fuggitive: 39,3t (1,7%)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi (inventario 2025)
+Commento del docente: In percentuale: combustione stazionaria 93,2%, mobile 5,1%, fuggitive 1,7%. È il profilo tipico di uno stabilimento che usa molto calore: lo Scope 1 coincide quasi con la bolletta del gas. Un’azienda di logistica mostrerebbe il grafico rovesciato, con la combustione mobile dominante; un supermercato vedrebbe crescere molto lo spicchio delle fuggitive, per via dei banchi frigoriferi. Leggere la forma del grafico prima dei numeri aiuta a capire che azienda si ha davanti.
+### SCHERMATA 49 — Tre modi di leggere lo stesso totale [stats · ISO 14064-1 · rapporto GHG]
+- 93,0%: dello Scope 1 viene da una sola voce: il gas naturale (2.100 t su 2.257,8 t)
+- 98,3% e 1,7%: la quota dei combustibili e quella dei gas fluorurati (HFC) (2.218,5 t e 39,3 t CO2e)
+- 112,9 kg CO2e: di Scope 1 per ogni tonnellata di pasta prodotta (2.257.787 kg ÷ 20.000 t)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; elaborazione dai totali dell’inventario 2025
+Commento del docente: La ISO 14064-1 chiede di riportare le emissioni dirette separatamente per gas: CO2, CH4, N2O e gli altri gruppi. Con i fattori didattici del corso, già espressi in CO2e, possiamo separare solo i combustibili dagli HFC. In un inventario reale si usano fattori distinti per CO2, metano e protossido di azoto, che le banche dati ufficiali forniscono, e la tabella per gas si compila senza difficoltà. L’indicatore per tonnellata di pasta tornerà nell’unità 7, insieme allo Scope 2.
+### SCHERMATA 50 — Prova tu: «e se…» sullo Scope 1 di Terrafelix [sim]
+Parti dai dati reali. Riduci il gas del 12% (924.000 Sm³): quante tonnellate si risparmiano? Poi raddoppia le ricariche di refrigerante: quanto cresce il totale?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Gas naturale: 1.050.000 Sm³ × 2 kg CO2e/Sm³ = 2.100.000 kg CO2e
+- Gasolio impianti fissi: 1500 l × 2,65 kg CO2e/l = 3975 kg CO2e
+- Gasolio flotta: 38.000 l × 2,65 kg CO2e/l = 100.700 kg CO2e
+- Benzina flotta: 6000 l × 2,3 kg CO2e/l = 13.800 kg CO2e
+- R-410A: 12 kg × 2256 kg CO2e/kg = 27.072 kg CO2e
+- HFC-134a: 8 kg × 1530 kg CO2e/kg = 12.240 kg CO2e
+Totale iniziale: 2.257.787 kg CO2e
+In tonnellate: 2257,787 t CO2e
+Valori iniziali: l’inventario 2025, totale 2.257.787 kg CO2e.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Con 924.000 Sm³ il totale scende a 2.005.787 kg: 252 t in meno, più del doppio di tutta la flotta. Raddoppiando le ricariche (24 e 16 kg) sale invece a 2.297.099 kg: 39,3 t in più, quanto una quindicina di migliaia di litri di gasolio. Il calcolatore mostra dove ha senso concentrare gli sforzi, sia di riduzione sia di precisione del dato: un errore dell’1% sul gas sposta il totale di 21 t, un errore del 10% sulla benzina di appena 1,4 t.
+### SCHERMATA 51 — Dieci minuti con la direzione [case]
+Davide Russo presenta a Elena Marotta il primo risultato dell’inventario. L’amministratrice delegata si aspettava che la voce principale fossero i furgoni, «che sono sempre in giro».
+- Scope 1 totale: 2.257,8 t CO2e
+- Gas naturale degli essiccatoi: 2.100 t, il 93,0%
+- Flotta aziendale: 114,5 t, il 5,1%
+- Gas refrigeranti: 39,3 t, l’1,7%, da soli 20 kg di gas
+Domanda di lavoro: Quali due messaggi portare alla direzione, oltre al numero?
+Come ha operato l'azienda: Primo: l’essiccazione è il cuore delle emissioni dirette; ogni punto percentuale di gas risparmiato vale 21 t, più di tutta la benzina dell’anno. Secondo: le perdite di refrigerante costano poco da riparare e valgono un terzo abbondante della flotta a gasolio. La direzione chiede uno studio sul recupero di calore dagli essiccatoi e un controllo straordinario dei circuiti frigoriferi.
+Commento del docente: Il caso mostra a che cosa serve il conteggio: a correggere le percezioni. Ciò che si vede, come i furgoni in cortile, sembra sempre più importante di ciò che non si vede, come il gas che arriva da un tubo o il refrigerante che esce da un giunto. L’1% del gas corrisponde a 10.500 Sm³, cioè 21 t, mentre tutta la benzina dell’anno ne vale 13,8. Lo studio sul recupero di calore è la leva che ritroveremo, con i suoi numeri, nell’unità 9.
+
+## SEZIONE 10 — Qualità dei dati e controlli
+### SCHERMATA 52 — Qualità dei dati e controlli [section]
+Una moltiplicazione giusta su un dato sbagliato dà un risultato sbagliato. Prima di chiudere lo Scope 1 conviene incrociare le fonti e chiedersi se i numeri sono plausibili: bastano pochi controlli semplici.
+- Incrociare bollette, contatori e contabilità
+- Un indicatore di plausibilità: i kWh termici per tonnellata
+- Quando ci sono solo gli euro
+- La lista dei controlli e il caso del conguaglio
+### SCHERMATA 53 — Da dove arriva la fiducia in un dato [hub]
+Un dato di attività è affidabile quando più fonti indipendenti raccontano la stessa storia.
+Al centro: Dato di attività affidabile
+- Bollette e fatture: Quantità fatturate dal fornitore nel periodo
+- Contatori e letture: Letture effettive al 1° gennaio e al 31 dicembre
+- Contabilità: Tutte le fatture registrate: nessuna mancante o doppia
+- Registri tecnici: Libretti di impianto, registri F-gas, livelli dei serbatoi
+- Indicatori: Consumi per tonnellata o per km: sono valori plausibili?
+Commento del docente: Riconciliare significa confrontare due fonti che dovrebbero dare lo stesso numero e spiegare la differenza. La somma degli Sm³ fatturati deve avvicinarsi alla differenza tra le letture del contatore a inizio e a fine anno; il numero di fatture deve coincidere con quello registrato in contabilità. Piccoli scarti sono normali, per esempio per le letture stimate. Uno scarto grande indica quasi sempre un documento mancante, uno doppio o un’unità di misura diversa.
+### SCHERMATA 54 — Un indicatore di plausibilità: kWh termici per tonnellata di pasta [calc]
+Trasformiamo il gas in energia e lo rapportiamo alla produzione: il risultato si può confrontare con gli anni precedenti e con i dati degli impianti.
+Formula: Consumo specifico = Gas consumato × Potere calorifico ÷ Produzione
+- Gas naturale per tonnellata di pasta (bollette: 1.050.000 Sm³ · produzione: 20.000 t · circa 9,8 kWh per Sm³): 1.050.000 Sm³ × 9,8 kWh/Sm³ ÷ 20.000 t = 514,5 kWh/t
+1.050.000 Sm³ × 9,8 = 10.290.000 kWh termici; ÷ 20.000 t = 514,5 kWh per tonnellata di pasta.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; potere calorifico: ISPRA, parametri standard nazionali (valore arrotondato)
+Commento del docente: Il numero in sé non dice se Terrafelix è efficiente: dice se il dato è credibile. Se l’anno prossimo, a parità di produzione, l’indicatore risultasse 51 oppure 5.000 kWh/t, sapremmo subito che c’è un errore di unità o una bolletta mancante, prima ancora di cercarlo. Rosa Iannone può inoltre confrontarlo con i consumi di targa degli essiccatoi. Lo stesso controllo vale per i veicoli: litri diviso chilometri deve dare un consumo realistico per quel tipo di mezzo.
+### SCHERMATA 55 — Quando la scheda riporta solo gli euro [calc]
+Supponiamo che per il gasolio della flotta esistano soltanto gli importi. Si ricostruiscono i litri con il prezzo medio pagato, poi si applica il fattore per litro.
+Formula: Emissioni = Spesa × Fattore di emissione ÷ Prezzo medio
+- Gasolio della flotta (contabilità: 66.500 € (IVA inclusa) · prezzo medio alla pompa: 1,75 €/l, valore illustrativo): 66.500 € × 2,65 kg CO2e/l ÷ 1,75 €/l = 100.700 kg CO2e
+Totale: 100.700 kg CO2e
+In tonnellate: 100,7 t CO2e
+Passaggio intermedio: 66.500 € ÷ 1,75 €/l = 38.000 litri. Spesa e prezzo devono essere omogenei: entrambi con IVA oppure entrambi senza.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi (spesa e prezzo medio); fattore arrotondato (vedi tabella dei fattori del corso)
+Commento del docente: Il conto restituisce gli stessi 100.700 kg ottenuti dai litri, perché qui il prezzo medio è esatto per costruzione. Nella realtà il prezzo cambia ogni settimana e da un distributore all’altro: la stima può sbagliare di diversi punti percentuali e va dichiarata come tale. L’errore grave è un altro: moltiplicare direttamente gli euro per il fattore al litro. Darebbe 66.500 × 2,65 = 176.225 kg, il 75% in più. Gli euro non sono litri.
+### SCHERMATA 56 — I controlli prima di chiudere lo Scope 1 [checklist]
+- Completezza delle sorgenti: Tutte le quattro famiglie esaminate; le assenze dichiarate e motivate.
+- Completezza del periodo: Dodici mesi per ogni contatore, conguagli compresi; nessuna bolletta contata due volte.
+- Unità di misura: Dato e fattore nella stessa unità: Sm³, litri, kg.
+- Giacenze: Per i combustibili in serbatoio: iniziale + acquisti − finale.
+- Riconciliazione: Quantità fatturate confrontate con contatori e contabilità.
+- Plausibilità: Indicatori specifici e confronto con l’anno precedente.
+- Tracciabilità: Per ogni riga: documento di origine, fattore, fonte, chi ha inserito il dato.
+- Seconda lettura: Una persona diversa ricontrolla formule e totali.
+Commento del docente: Questa lista è buona prassi, non un elenco di requisiti di norma; la ISO 14064-1 chiede però di gestire la qualità dell’inventario, e questi sono i controlli minimi con cui farlo. Il più efficace è l’ultimo: chi ha costruito il foglio non vede più i propri errori. A Terrafelix la seconda lettura è affidata a Chiara Vitale, che non ha inserito le formule ma conosce bene i documenti di origine. Riprenderemo il tema dei controlli interni nell’unità 7.
+### SCHERMATA 57 — Il gas che non tornava: la riconciliazione di Chiara Vitale [case]
+Sommando le dodici bollette del gas del 2025, Chiara Vitale ottiene 1.046.800 Sm³. Le letture del contatore al 1° gennaio e al 31 dicembre, annotate dalla manutenzione, danno invece 1.050.000 Sm³.
+- Differenza: 3.200 Sm³, lo 0,3% del totale
+- La bolletta di dicembre riporta la dicitura «lettura stimata»
+- A gennaio 2026 arriva una bolletta con un conguaglio di 3.200 Sm³ riferito a dicembre
+Domanda di lavoro: Quale dato entra nell’inventario 2025?
+Come ha operato l'azienda: 1.050.000 Sm³: il consumo effettivo dell’anno, confermato sia dalle letture del contatore sia dal conguaglio. La bolletta di gennaio 2026 viene allegata al fascicolo del 2025 e il conguaglio viene escluso dai consumi del 2026, per non contarlo due volte.
+Commento del docente: Lo scarto vale 6,4 t CO2e: non cambia il quadro, ma il metodo sì. Una differenza piccola e spiegata rafforza il dato; la stessa differenza non spiegata lo indebolisce. Notate i due gesti finali: il documento del 2026 archiviato con l’anno a cui si riferisce, e la nota per l’inventario successivo. Senza la seconda, tra un anno qualcuno sommerà quel conguaglio ai consumi del 2026. I valori di questo caso sono illustrativi e coerenti con il totale dell’inventario.
+
+## SEZIONE 11 — Casi particolari ed esercizio riepilogativo
+### SCHERMATA 58 — Casi particolari ed esercizio riepilogativo [section]
+Le regole sono poche, i casi concreti molti. Vediamo quelli che generano più dubbi e poi mettiamo alla prova il metodo su un’azienda diversa da Terrafelix: una piccola officina meccanica.
+- Carrelli, noleggi, impianti in affitto, cogenerazione, carburanti con quota bio
+- L’esercizio: lo Scope 1 di un’officina meccanica
+- La composizione del risultato
+### SCHERMATA 59 — Sei casi che fanno discutere [table · GHG Protocol · confini operativi]
+Per ogni caso: dove si collocano le emissioni e quale dato cercare.
+Colonne: Caso | Dove va | Dato da cercare
+- Carrelli elevatori a GPL o a gasolio | Scope 1, combustione mobile | Litri, oppure kg di GPL delle bombole da convertire
+- Carrelli e mezzi elettrici | Scope 2: sono nella bolletta | Nessun dato aggiuntivo se ricaricati in sede
+- Mezzi a noleggio con conducente, taxi, corrieri | Scope 3: il veicolo è controllato da altri | Chilometri, tonnellate-chilometro o spesa (unità 6)
+- Caldaia di un immobile in affitto, gestita dall’azienda | Scope 1 con l’approccio del controllo operativo | Bollette del gas intestate all’azienda
+- Cogeneratore gestito dall’azienda | Scope 1: tutto il combustibile bruciato | Sm³ del contatore dedicato
+- Gasolio o benzina con una quota di biocarburante | Scope 1 la parte fossile; CO2 biogenica a parte | Litri, con un fattore coerente con la miscela
+La classificazione dipende dall’approccio di consolidamento scelto (unità 3): qui si assume il controllo operativo.
+Commento del docente: Due precisazioni. Cogenerazione: chi gestisce l’impianto conta nello Scope 1 tutto il combustibile, anche se cede a terzi una parte dell’energia; l’elettricità autoprodotta e consumata non genera Scope 2. Carburanti con quota bio: alcune banche dati pubblicano fattori riferiti alla miscela media venduta alla pompa, che tengono già conto della parte biogenica, e fattori per il carburante interamente fossile. Bisogna sapere quale si sta usando: applicare un’ulteriore riduzione a un fattore già riferito alla miscela sarebbe un doppio sconto.
+### SCHERMATA 60 — Esercizio: lo Scope 1 di un’officina meccanica [calc]
+Officina Meccanica Volturno, 18 addetti: carpenteria leggera e manutenzioni. Prova a svolgere il conto prima di guardare i risultati.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Gas naturale – riscaldamento del capannone (stazionaria · bollette): 18.000 Sm³ × 2 kg CO2e/Sm³ = 36.000 kg CO2e
+- Gasolio – due furgoni (mobile · carte carburante): 5200 l × 2,65 kg CO2e/l = 13.780 kg CO2e
+- Benzina – un’auto (mobile · schede carburante): 1100 l × 2,3 kg CO2e/l = 2530 kg CO2e
+- GPL – carrello elevatore (mobile · bombole, già convertite in litri): 1500 l × 1,6 kg CO2e/l = 2400 kg CO2e
+- R-410A – ricarica del climatizzatore (fuggitive · rapporto del frigorista): 3 kg × 2256 kg CO2e/kg = 6768 kg CO2e
+- CO2 tecnica – gas di protezione per saldatura (processo · bombole acquistate nell’anno): 400 kg × 1 kg CO2e/kg = 400 kg CO2e
+Totale Scope 1: 61.878 kg CO2e
+In tonnellate: 61,878 t CO2e
+Fonte dei dati: Esempio didattico – azienda di fantasia, quantità illustrative; fattori arrotondati (vedi tabella dei fattori del corso); GWP: IPCC AR6
+Commento del docente: Risultati riga per riga: 36.000; 13.780; 2.530; 2.400; 6.768; 400 kg. Totale 61.878 kg, cioè 61,9 t CO2e. Qui compaiono tutte e quattro le famiglie, compresa quella di processo con la CO2 delle bombole. Osservate la ricarica del climatizzatore: tre chili di gas valgono quasi la metà del gasolio dei due furgoni. E il carrello a GPL: è un mezzo mobile, anche se non esce mai dal capannone, e i suoi litri vengono dalla conversione dei chilogrammi delle bombole.
+### SCHERMATA 61 — Officina Volturno: la composizione dello Scope 1 [donut]
+Un profilo diverso da quello del pastificio: il riscaldamento pesa meno, veicoli e gas pesano di più.
+Totale al centro: 61,9 t CO2e
+- Combustione stazionaria: 36t (58,2%)
+- Combustione mobile: 18,7t (30,2%)
+- Fuggitive e processo: 7,2t (11,6%)
+Fonte dei dati: Esempio didattico – azienda di fantasia, quantità illustrative
+Commento del docente: In percentuale: stazionaria 58,2%, mobile 30,2%, fuggitive e processo 11,6%. Nel pastificio le stesse famiglie valevano 93,2%, 5,1% e 1,7%. Più l’azienda è piccola e meno calore usa, più crescono le voci che di solito vengono dimenticate. Per l’officina, trascurare il climatizzatore e le bombole di saldatura vorrebbe dire perdere oltre un decimo dello Scope 1: una quota che un verificatore considererebbe con ogni probabilità rilevante.
+
+## SEZIONE 12 — Sintesi dell’unità
+### SCHERMATA 62 — Sintesi dell’unità [section]
+Quattro famiglie, una formula, quindici calcoli svolti. Fissiamo il formulario dello Scope 1, la lista di autovalutazione e gli errori da non ripetere, prima di passare all’energia acquistata.
+- Il formulario dello Scope 1
+- La lista di autovalutazione
+- Gli errori tipici
+- I punti chiave e il passaggio all’unità 5
+### SCHERMATA 63 — Il formulario dello Scope 1 [table]
+Per ogni famiglia: il dato, il fattore, il documento da cui partire.
+Colonne: Sorgente | Formula | Fattore del corso | Dove si trova il dato
+- Gas naturale | Sm³ × fattore | 2,0 kg CO2e/Sm³ | Bollette, letture del contatore
+- Gasolio e GPL fissi | Litri × fattore | 2,65 e 1,6 kg CO2e/l | Fatture e giacenze del serbatoio
+- Veicoli – dai litri | Litri × fattore | 2,65 (gasolio) e 2,3 (benzina) kg CO2e/l | Carte e schede carburante
+- Veicoli – dai chilometri | km × consumo × fattore, oppure km × fattore per km | 0,17 kg CO2e/km (auto media) | Contachilometri, dati del veicolo
+- Gas refrigeranti e SF6 | kg reintegrati × GWP | R-410A 2.256; HFC-134a 1.530; SF6 24.300 | Rapporti del manutentore, registri
+- Processo – carbonati | kg di CaCO3 × 0,44 | 0,44 kg CO2/kg | Registri di produzione
+- Biomassa | kg × fattore di CH4 e N2O; CO2 biogenica a parte | Fattori dedicati | Fatture di acquisto
+Fattori arrotondati a scopo didattico e GWP dell’IPCC AR6: in un inventario reale si usa la fonte ufficiale aggiornata all’anno di riferimento e la si cita nel rapporto.
+Commento del docente: Stampate questa tabella e tenetela accanto al foglio di calcolo: copre la quasi totalità delle sorgenti dirette di una PMI. La colonna più importante non è quella dei fattori, che cambiano ogni anno e vanno riletti dalla fonte, ma l’ultima: sapere a chi chiedere quale documento è ciò che fa partire davvero un inventario. I fattori del corso servono per imparare il metodo; il metodo resta identico quando si sostituiscono con quelli ufficiali.
+### SCHERMATA 64 — Autovalutazione: so calcolare uno Scope 1? [checklist]
+- So elencare le quattro famiglie e portare un esempio per ciascuna
+- So ricavare il consumo annuo di gas dalle bollette, gestendo stime e conguagli
+- So ricavare un consumo da acquisti e giacenze di un serbatoio
+- So convertire i chilogrammi di GPL in litri prima di applicare un fattore per litro
+- So calcolare le emissioni di una flotta dai litri e, quando mancano, dai chilometri
+- So calcolare una ricarica di gas refrigerante con il GWP corretto
+- So distinguere un’emissione di processo da una di combustione
+- So dire quali veicoli non entrano nello Scope 1 e perché
+- So costruire un controllo di plausibilità e una riconciliazione
+Commento del docente: Se su una voce esitate, tornate alla sezione corrispondente e rifate il calcolo svolto coprendo il risultato: in questa materia si impara facendo i conti, non rileggendoli. Un buon esercizio finale è applicare la lista alla propria azienda o a un cliente: per ogni riga, chiedetevi quale documento aprireste domani mattina e chi ve lo deve dare. Dove non sapete rispondere, lì c’è il primo lavoro da fare.
+### SCHERMATA 65 — Scope 1: gli errori da non ripetere [two]
+Colonna «Corretto»:
+- Partire dal censimento delle sorgenti, non dalle bollette disponibili
+- Usare quantità fisiche: Sm³, litri, kg
+- Tenere distinti i combustibili e i gas, ciascuno con il suo fattore
+- Dichiarare stime, ipotesi e sorgenti assenti
+- Sommare i kg esatti e arrotondare solo il totale in tonnellate
+Colonna «Sbagliato»:
+- Dimenticare refrigeranti, gruppi elettrogeni e motopompe
+- Moltiplicare euro, o unità diverse da quella del fattore
+- Mettere nello Scope 1 le auto dei dipendenti o i corrieri
+- Contare due volte conguagli, bollette riemesse, veicoli
+- Scrivere «biomassa = zero» senza riportare la CO2 biogenica
+Commento del docente: Riletti tutti insieme, gli errori hanno una radice comune: partire dai numeri che si hanno invece che dalle sorgenti che esistono. Chi comincia dalle bollette trova il gas e si ferma; chi comincia dal sopralluogo trova anche ciò che non ha una bolletta. Il secondo gruppo di errori riguarda le unità di misura, e si previene con i controlli di plausibilità della sezione 10. Nessuno di questi errori richiede competenze di chimica per essere evitato: serve ordine.
+### SCHERMATA 66 — I punti chiave dell’unità [summary]
+1. Lo Scope 1 (categoria 1 della ISO 14064-1) raccoglie le emissioni dirette di quattro famiglie: combustione stazionaria, combustione mobile, fuggitive, processo.
+2. Per i combustibili il dato è la quantità fisica dell’anno: Sm³ dalle bollette, litri da fatture e carte carburante, tenendo conto di giacenze, stime e conguagli.
+3. Per i veicoli si parte dai litri; i chilometri servono solo quando i litri mancano, e il risultato è una stima da dichiarare.
+4. Per i gas refrigeranti si moltiplicano i kg reintegrati per il GWP: 20 kg di gas valgono per Terrafelix 39,3 t CO2e.
+5. Le emissioni di processo nascono dalla materia trasformata, non dal combustibile; se non ci sono, lo si scrive e lo si motiva.
+6. La CO2 biogenica della biomassa si riporta a parte; metano e protossido di azoto restano nello Scope 1.
+7. Lo Scope 1 di Terrafelix è 2.257,8 t CO2e: stazionaria 2.104,0 t, mobile 114,5 t, fuggitive 39,3 t; il gas naturale da solo vale il 93,0%.
+8. Riconciliazioni e indicatori di plausibilità (514,5 kWh termici per tonnellata di pasta) intercettano gli errori prima della verifica.
+9. I fattori del corso sono arrotondati a scopo didattico: nella pratica si usa la fonte ufficiale dell’anno e la si cita.
+10. Prossima tappa, unità 5: l’elettricità acquistata e il doppio calcolo location-based e market-based dello Scope 2.
+Commento del docente: Con questa unità Terrafelix ha il primo dei tre numeri dell’inventario. È il più piccolo dei tre e anche il più solido: tutti i dati sono primari e documentati. Nell’unità 5 passeremo ai 3.200.000 kWh prelevati dalla rete, dove la difficoltà non sarà trovare il dato ma scegliere il fattore: lo stesso consumo dà due risultati diversi secondo il metodo, ed entrambi vanno riportati. Portate con voi il metodo dei cinque passi: non cambia.

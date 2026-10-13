@@ -1,0 +1,1459 @@
+[
+ {
+  "id": "fadcfp01_m08_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 8",
+  "titolo": "Dal conto aziendale al conto prodotto",
+  "corsoLabel": "Carbon Footprint · ISO 14064-1 · ISO 14067",
+  "eyebrow": "Modulo 8",
+  "sottotitolo": "In questo modulo cambi prospettiva: dal totale annuo dell’organizzazione al valore climatico di una unità di prodotto, con confini, funzioni e usi decisionali diversi.",
+  "agenda": [
+   "Cambio di oggetto",
+   "Due logiche di conto",
+   "Lettura per fasi",
+   "Valore per unità",
+   "Impostazione CFP"
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s002",
+  "layout": "calcolo",
+  "kicker": "Indicatore di intensità",
+  "titolo": "Il conto rapido produce un’intensità media",
+  "intro": "Dividere l’inventario annuale per i chili prodotti restituisce un valore vero e utile come orientamento, ma non equivale ancora a una carbon footprint di prodotto conforme.",
+  "unita": "kg CO2e/kg",
+  "righe": [
+   {
+    "l": "Inventario 2025 di Terrafelix",
+    "n": "rapporto GHG verificato · produzione: 20.000 t di pasta",
+    "a": 21692.5,
+    "au": "t CO2e",
+    "ef": 1000,
+    "efu": "kg/t",
+    "d": 20000000,
+    "du": "kg di pasta"
+   }
+  ],
+  "etichette": {
+   "r": "Emissioni per kg",
+   "a": "Totale dell’inventario",
+   "ef": "Conversione in kg",
+   "d": "Produzione annua"
+  },
+  "dec": 3,
+  "totale": false,
+  "_atteso": 1.0846,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m08_s003",
+  "layout": "flusso",
+  "kicker": "ISO 14067",
+  "titolo": "Le quattro fasi di uno studio CFP",
+  "intro": "Il conto rapido mescola confini, medie e fasi d’uso. Uno studio CFP rigoroso segue invece l’architettura LCA e guarda solo al cambiamento climatico.",
+  "passi": [
+   {
+    "h": "Obiettivo e campo",
+    "d": "Scopo, destinatari, unità e criteri"
+   },
+   {
+    "h": "Analisi di inventario",
+    "d": "Dati dei processi riferiti all’unità scelta"
+   },
+   {
+    "h": "Valutazione degli impatti",
+    "d": "Gas serra convertiti in CO2 equivalente"
+   },
+   {
+    "h": "Interpretazione",
+    "d": "Lettura critica di risultati, limiti e leve"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s004",
+  "layout": "timeline",
+  "kicker": "Ciclo di vita",
+  "titolo": "Le sei fasi della pasta",
+  "intro": "La CFP legge il prodotto come una storia completa. Per la pasta, la sequenza in sei fasi rende il risultato interpretabile e soprattutto utile per decidere dove intervenire.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Materie prime",
+    "d": "Grano duro, molitura, trasporto della semola"
+   },
+   {
+    "t": "02",
+    "h": "Produzione",
+    "d": "Impasto, trafilatura, essiccazione, energia"
+   },
+   {
+    "t": "03",
+    "h": "Imballaggio",
+    "d": "Astucci, cartoni, film e trasporti"
+   },
+   {
+    "t": "04",
+    "h": "Distribuzione",
+    "d": "Viaggio verso i mercati di vendita"
+   },
+   {
+    "t": "05",
+    "h": "Uso",
+    "d": "Cottura domestica del consumatore"
+   },
+   {
+    "t": "06",
+    "h": "Fine vita",
+    "d": "Raccolta e trattamento dell’imballaggio"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s005",
+  "layout": "confronto",
+  "kicker": "Confine del sistema",
+  "titolo": "Stesso prodotto, due risultati corretti",
+  "intro": "Il numero cambia quando cambia il punto in cui fermi il conto. Per questo due valori sullo stesso prodotto possono essere entrambi corretti e servire decisioni diverse.",
+  "a": {
+   "h": "Dalla culla al cancello",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Fasi 1-3 del ciclo di vita"
+    },
+    {
+     "d": "Prodotto all’uscita dello stabilimento"
+    },
+    {
+     "d": "Base utile per buyer e Scope 3 clienti"
+    },
+    {
+     "d": "0,9736 kg CO2e per kg"
+    }
+   ]
+  },
+  "b": {
+   "h": "Dalla culla alla tomba",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Tutte e sei le fasi considerate"
+    },
+    {
+     "d": "Include distribuzione, cottura e fine vita"
+    },
+    {
+     "d": "Quadro completo del profilo climatico"
+    },
+    {
+     "d": "1,474 kg CO2e per kg"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m08_s006",
+  "layout": "numeri",
+  "kicker": "Scelte iniziali",
+  "titolo": "Le tre decisioni che cambiano il numero",
+  "intro": "Nelle CFP gli errori più seri nascono spesso prima dei calcoli. Se cambi obiettivo, unità di riferimento o confine del sistema, cambia anche il risultato finale.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Obiettivo dello studio e destinatari",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Unità di riferimento completa e interpretabile",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Confine del sistema dichiarato con chiarezza",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s007",
+  "layout": "tabella",
+  "kicker": "Lessico metodologico",
+  "titolo": "Cinque termini da usare con precisione",
+  "cols": [
+   "Termine",
+   "Che cosa fissa nel conto"
+  ],
+  "righe": [
+   [
+    "Unità funzionale",
+    "Prestazione quantificata del prodotto"
+   ],
+   [
+    "Unità dichiarata",
+    "Quantità di bene a un punto del percorso"
+   ],
+   [
+    "Confine del sistema",
+    "Processi inclusi ed esclusi dal calcolo"
+   ],
+   [
+    "CFP parziale",
+    "Solo una parte del ciclo di vita"
+   ],
+   [
+    "Cut-off",
+    "Esclusioni stimate, motivate e dichiarate"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s008",
+  "layout": "evidenza",
+  "kicker": "Unità funzionale",
+  "titolo": "La funzione guida il riferimento corretto",
+  "eyebrow": "",
+  "testo": "L’unità più facile da reperire non è sempre quella giusta da confrontare. Il riferimento corretto rappresenta il servizio reso dal prodotto, non solo il formato venduto.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m08_s009",
+  "layout": "calcolo",
+  "kicker": "Esempio didattico",
+  "titolo": "L’unità sbagliata capovolge il confronto",
+  "intro": "Per litro la vernice B sembra peggiore della A. Quando però il confronto passa alla funzione reale, coprire la stessa superficie, il risultato si rovescia.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Vernice B per 100 m² di parete",
+    "n": "litri necessari: 100 ÷ 13 = 7,7",
+    "a": 100,
+    "au": "m²",
+    "ef": 2.6,
+    "efu": "kg CO2e/l",
+    "d": 13,
+    "du": "m²/l"
+   }
+  ],
+  "etichette": {
+   "r": "Emissioni",
+   "a": "Superficie da coprire",
+   "ef": "Emissioni per litro",
+   "d": "Resa"
+  },
+  "dec": null,
+  "totale": false,
+  "_atteso": 20,
+  "piede": "Per litro la vernice B emette il 30% in più (2,6 contro 2,0); per la funzione «coprire 100 m²» emette il 20% in meno (20 contro 25 kg CO2e).",
+  "fonte": "Esempio didattico – prodotti di fantasia, valori inventati per mostrare il ragionamento"
+ },
+ {
+  "id": "fadcfp01_m08_s010",
+  "layout": "organigramma",
+  "kicker": "Confine del sistema",
+  "titolo": "Tredici voci nel confine del prodotto",
+  "intro": "La CFP di Terrafelix parte da una mappa dei processi: cosa entra nel sistema prodotto, cosa resta fuori con motivazione esplicita e quali voci minori vengono stimate prima di applicare il cut-off.",
+  "radice": {
+   "h": "Sistema prodotto",
+   "d": "1 kg di pasta secca, confezionata, cotta e consumata"
+  },
+  "rami": [
+   {
+    "h": "A monte: materiali",
+    "d": "Fasi iniziali della filiera",
+    "voci": [
+     "Semola: coltivazione e molitura",
+     "Cartone",
+     "Film plastico"
+    ]
+   },
+   {
+    "h": "A monte: trasporti",
+    "d": "Flussi verso lo stabilimento",
+    "voci": [
+     "Trasporto della semola",
+     "Trasporto degli imballaggi"
+    ]
+   },
+   {
+    "h": "Stabilimento",
+    "d": "Energia usata e filiere associate",
+    "voci": [
+     "Gas naturale: combustione",
+     "Gas naturale: filiera a monte",
+     "Elettricità di rete",
+     "Elettricità: filiera e perdite"
+    ]
+   },
+   {
+    "h": "A valle",
+    "d": "Dopo il cancello di fabbrica",
+    "voci": [
+     "Trasporto ai mercati",
+     "Cottura a gas",
+     "Cottura elettrica",
+     "Fine vita dell'imballaggio"
+    ]
+   },
+   {
+    "h": "Fuori confine",
+    "d": "Esclusioni dichiarate e motivate",
+    "voci": [
+     "Macchinari e fabbricati",
+     "Auto aziendali, viaggi, pendolarismo",
+     "Voci minori stimate con cut-off"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s011",
+  "layout": "flusso",
+  "kicker": "Dati per unità di prodotto",
+  "titolo": "Quattro passaggi dal dato annuo al prodotto",
+  "intro": "Bollette, fatture e documenti parlano per anno; la CFP parla per chilogrammo di prodotto. Il metodo resta controllabile se ogni voce segue sempre la stessa sequenza di trasformazione.",
+  "passi": [
+   {
+    "h": "Raccogliere il dato annuo",
+    "d": "Quantità fisiche, consumi, acquisti, trasporti"
+   },
+   {
+    "h": "Riferire alla produzione annua",
+    "d": "Dal totale aziendale al dato per chilogrammo"
+   },
+   {
+    "h": "Applicare il fattore corretto",
+    "d": "Dal consumo specifico al contributo climatico"
+   },
+   {
+    "h": "Sommare nella fase giusta",
+    "d": "Lettura per blocchi, non solo totale finale"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s012",
+  "layout": "calcolo",
+  "kicker": "Esempio svolto",
+  "titolo": "Il gas per chilogrammo, passo per passo",
+  "intro": "Un solo dato di consumo basta per vedere il metodo: dal totale annuo al consumo specifico, poi al contributo climatico di combustione, mantenendo più decimali nei passaggi intermedi.",
+  "unita": "Sm³",
+  "righe": [
+   {
+    "l": "Gas naturale (essiccatoi e centrale termica)",
+    "n": "12 bollette del 2025 · produzione dal consuntivo di stabilimento",
+    "a": 1050000,
+    "au": "Sm³",
+    "ef": 1,
+    "efu": "kg di pasta",
+    "d": 20000000,
+    "du": "kg di pasta"
+   }
+  ],
+  "etichette": {
+   "r": "Consumo per kg",
+   "a": "Consumo annuo",
+   "ef": "Riferito a",
+   "d": "Produzione annua"
+  },
+  "dec": 4,
+  "totale": false,
+  "_atteso": 0.0525,
+  "piede": "0,0525 Sm³ sono 52,5 litri di gas per ogni chilo di pasta. Moltiplicati per il fattore di combustione (2 kg CO2e/Sm³) danno 0,105 kg CO2e per kg.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m08_s013",
+  "layout": "tabella",
+  "kicker": "Base dati dello studio",
+  "titolo": "Sei dati di attività per 1 kg",
+  "cols": [
+   "Voce",
+   "Dato annuo 2025",
+   "Per 1 kg di pasta"
+  ],
+  "righe": [
+   [
+    "Semola di grano duro",
+    "20.600.000 kg",
+    "1,03 kg"
+   ],
+   [
+    "Gas naturale",
+    "1.050.000 Sm³",
+    "0,0525 Sm³"
+   ],
+   [
+    "Elettricità di rete",
+    "3.200.000 kWh",
+    "0,16 kWh"
+   ],
+   [
+    "Astucci e cartoni",
+    "900.000 kg",
+    "0,045 kg"
+   ],
+   [
+    "Film plastico",
+    "160.000 kg",
+    "0,008 kg"
+   ],
+   [
+    "Fotovoltaico autoconsumato",
+    "600.000 kWh",
+    "0,03 kWh"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s014",
+  "layout": "split",
+  "kicker": "Qualità del dato",
+  "titolo": "Origine del dato e denominatore corretto",
+  "lead": "La credibilità della CFP dipende da due scelte iniziali: usare dati il più possibile vicini al processo reale e dividere ciascuna voce per la quantità di prodotto che rappresenta davvero.",
+  "punti": [
+   {
+    "h": "Dati primari",
+    "d": "Misure, bollette, magazzino, produzione, distanze note"
+   },
+   {
+    "h": "Dati secondari",
+    "d": "Fattori medi per semola, imballaggi, uso, fine vita"
+   },
+   {
+    "h": "Tre verifiche essenziali",
+    "d": "Anno, geografia e tecnologia coerenti col caso"
+   },
+   {
+    "h": "Denominatore corretto",
+    "d": "Per i consumi di stabilimento: pasta prodotta e confezionata"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s015",
+  "layout": "piramide",
+  "kicker": "ISO 14067",
+  "titolo": "La gerarchia da seguire nell'allocazione",
+  "intro": "L'allocazione non si sceglie per comodità. Si parte dal criterio metodologicamente più forte e si scende solo quando il livello superiore non è praticabile nel processo reale.",
+  "livelli": [
+   {
+    "h": "1. Evitare l'allocazione",
+    "d": "Suddividere il processo o espandere il sistema"
+   },
+   {
+    "h": "2. Relazioni fisiche",
+    "d": "Ripartire per massa, energia o altra grandezza coerente"
+   },
+   {
+    "h": "3. Relazioni economiche",
+    "d": "Usare il valore dei prodotti solo in subordine"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s016",
+  "layout": "calcolo",
+  "kicker": "Allocazione fisica",
+  "titolo": "Semola e crusca: allocazione per massa",
+  "intro": "Nel molino di esempio, la ripartizione per massa assegna le emissioni comuni in proporzione ai chili prodotti. Il controllo chiave è immediato: la somma delle quote deve restituire il totale.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Semola",
+    "n": "750 kg su 1.000 kg di prodotti = 75%",
+    "a": 600,
+    "au": "kg CO2e",
+    "ef": 0.75,
+    "efu": "quota"
+   },
+   {
+    "l": "Crusca per mangimi",
+    "n": "250 kg su 1.000 kg di prodotti = 25%",
+    "a": 600,
+    "au": "kg CO2e",
+    "ef": 0.25,
+    "efu": "quota"
+   }
+  ],
+  "etichette": {
+   "r": "Emissioni assegnate",
+   "a": "Emissioni da ripartire",
+   "ef": "Quota in massa"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 600,
+  "piede": "Per kg: semola 450 ÷ 750 = 0,60 kg CO2e/kg; crusca 150 ÷ 250 = 0,60 kg CO2e/kg. Con la massa, ogni chilo che esce dal molino porta lo stesso carico.",
+  "fonte": "Esempio didattico – molino di fantasia, valori inventati per mostrare il ragionamento"
+ },
+ {
+  "id": "fadcfp01_m08_s017",
+  "layout": "calcolo",
+  "kicker": "Allocazione economica",
+  "titolo": "Semola e crusca: allocazione economica",
+  "intro": "A processo invariato, cambiare criterio sposta il carico tra i prodotti. Per questo un fattore di emissione non è interpretabile senza sapere anche quale regola di allocazione lo ha generato.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Semola",
+    "n": "375 € su 400 € = 93,75%",
+    "a": 600,
+    "au": "kg CO2e",
+    "ef": 0.9375,
+    "efu": "quota"
+   },
+   {
+    "l": "Crusca per mangimi",
+    "n": "25 € su 400 € = 6,25%",
+    "a": 600,
+    "au": "kg CO2e",
+    "ef": 0.0625,
+    "efu": "quota"
+   }
+  ],
+  "etichette": {
+   "r": "Emissioni assegnate",
+   "a": "Emissioni da ripartire",
+   "ef": "Quota dei ricavi"
+  },
+  "dec": 1,
+  "totale": "Totale",
+  "_atteso": 600,
+  "piede": "Per kg: semola 562,5 ÷ 750 = 0,75 kg CO2e/kg; crusca 37,5 ÷ 250 = 0,15 kg CO2e/kg.",
+  "fonte": "Esempio didattico – molino di fantasia, prezzi e valori inventati per mostrare il ragionamento"
+ },
+ {
+  "id": "fadcfp01_m08_s018",
+  "layout": "confronto",
+  "kicker": "Misura separata dei consumi",
+  "titolo": "I contatori di linea evitano medie fuorvianti",
+  "intro": "Quando i consumi sono misurati per linea, l'attribuzione diventa diretta. La media di stabilimento resta utile come sfondo, ma non deve nascondere differenze reali tra prodotti energeticamente diversi.",
+  "a": {
+   "h": "Pasta lunga",
+   "sub": "",
+   "punti": [
+    {
+     "d": "8.000 t prodotte"
+    },
+    {
+     "d": "480.000 Sm³ di gas"
+    },
+    {
+     "d": "0,0600 Sm³/kg"
+    },
+    {
+     "d": "0,1398 kg CO2e/kg"
+    }
+   ]
+  },
+  "b": {
+   "h": "Pasta corta",
+   "sub": "",
+   "punti": [
+    {
+     "d": "12.000 t prodotte"
+    },
+    {
+     "d": "570.000 Sm³ di gas"
+    },
+    {
+     "d": "0,0475 Sm³/kg"
+    },
+    {
+     "d": "0,1107 kg CO2e/kg"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m08_s019",
+  "layout": "calcolo",
+  "kicker": "Fase 1",
+  "titolo": "Semola e trasporto guidano la CFP",
+  "intro": "La materia prima porta nello stabilimento la quota dominante dell’impronta. Qui si fissa la logica della fase uno: quantità per chilo, fattore emissivo e trasporto espresso in tonnellate-chilometro.",
+  "unita": "kg CO2e/kg",
+  "righe": [
+   {
+    "l": "Semola di grano duro (coltivazione e molitura)",
+    "n": "per kg di pasta: 1,03 kg × 0,7 · fattore medio didattico",
+    "a": 20600000,
+    "au": "kg",
+    "ef": 0.7,
+    "efu": "kg CO2e/kg",
+    "d": 20000000,
+    "du": "kg"
+   },
+   {
+    "l": "Trasporto della semola dal molino",
+    "n": "autoarticolato · per kg di pasta: 0,00103 t × 180 km × 0,1",
+    "a": 20600,
+    "au": "t",
+    "ef": 0.1,
+    "efu": "kg CO2e/tkm",
+    "k": 180,
+    "ku": "km",
+    "d": 20000000,
+    "du": "kg"
+   }
+  ],
+  "etichette": {
+   "k": "Distanza",
+   "d": "Produzione annua"
+  },
+  "dec": 4,
+  "totale": "Fase 1 – Materie prime",
+  "_atteso": 0.7395,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico"
+ },
+ {
+  "id": "fadcfp01_m08_s020",
+  "layout": "calcolo",
+  "kicker": "Sensibilità",
+  "titolo": "Una semola migliore cambia il totale",
+  "intro": "Anche una riduzione parziale del fattore della semola muove il risultato più di molte leve interne. Prima di usarla, però, il dato del molino va letto, contestualizzato e verificato.",
+  "unita": "kg CO2e/kg",
+  "righe": [
+   {
+    "l": "Semola da filiera migliorativa (50%)",
+    "n": "fattore dichiarato dal fornitore (dato illustrativo)",
+    "a": 0.515,
+    "au": "kg",
+    "ef": 0.63,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Semola convenzionale (50%)",
+    "n": "fattore medio didattico",
+    "a": 0.515,
+    "au": "kg",
+    "ef": 0.7,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": 5,
+  "totale": "Semola per kg di pasta",
+  "_atteso": 0.68495,
+  "piede": "Rispetto a 0,721 la semola scende a 0,685: 0,036 kg CO2e in meno per kg di pasta: la carbon footprint totale passerebbe da 1,474 a 1,438 kg CO2e/kg.",
+  "fonte": "Caso studio Pastificio Terrafelix – scenario illustrativo"
+ },
+ {
+  "id": "fadcfp01_m08_s021",
+  "layout": "calcolo",
+  "kicker": "Fase 2",
+  "titolo": "Gas ed elettricità contano due volte",
+  "intro": "Nella CFP dell’energia non basta il sito. Per ogni vettore entrano sia l’uso in stabilimento sia la filiera a monte che rende disponibile quel vettore.",
+  "unita": "kg CO2e/kg",
+  "righe": [
+   {
+    "l": "Gas naturale – combustione",
+    "n": "per kg di pasta: 0,0525 Sm³",
+    "a": 1050000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³",
+    "d": 20000000,
+    "du": "kg"
+   },
+   {
+    "l": "Gas naturale – filiera a monte",
+    "n": "stesso consumo, fattore della filiera",
+    "a": 1050000,
+    "au": "Sm³",
+    "ef": 0.33,
+    "efu": "kg CO2e/Sm³",
+    "d": 20000000,
+    "du": "kg"
+   },
+   {
+    "l": "Elettricità di rete",
+    "n": "per kg di pasta: 0,16 kWh · fattore medio nazionale",
+    "a": 3200000,
+    "au": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh",
+    "d": 20000000,
+    "du": "kg"
+   },
+   {
+    "l": "Elettricità – filiera a monte e perdite di rete",
+    "n": "stesso consumo, fattore della filiera",
+    "a": 3200000,
+    "au": "kWh",
+    "ef": 0.06,
+    "efu": "kg CO2e/kWh",
+    "d": 20000000,
+    "du": "kg"
+   }
+  ],
+  "etichette": {
+   "d": "Produzione annua"
+  },
+  "dec": 4,
+  "totale": "Fase 2 – Produzione",
+  "_atteso": 0.1695,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico"
+ },
+ {
+  "id": "fadcfp01_m08_s022",
+  "layout": "calcolo",
+  "kicker": "Fase 3",
+  "titolo": "Packaging: peso fisico e intensità climatica",
+  "intro": "L’imballaggio si legge bene solo mettendo insieme massa dei materiali, fattori di emissione e viaggio in ingresso. Pochi grammi possono avere effetti non intuitivi.",
+  "unita": "kg CO2e/kg",
+  "righe": [
+   {
+    "l": "Astucci e cartoni",
+    "n": "per kg di pasta: 0,045 kg × 0,9",
+    "a": 900000,
+    "au": "kg",
+    "ef": 0.9,
+    "efu": "kg CO2e/kg",
+    "d": 20000000,
+    "du": "kg"
+   },
+   {
+    "l": "Film plastico",
+    "n": "per kg di pasta: 0,008 kg × 2,8",
+    "a": 160000,
+    "au": "kg",
+    "ef": 2.8,
+    "efu": "kg CO2e/kg",
+    "d": 20000000,
+    "du": "kg"
+   },
+   {
+    "l": "Trasporto degli imballaggi",
+    "n": "autoarticolato · 900 t + 160 t = 1.060 t",
+    "a": 1060,
+    "au": "t",
+    "ef": 0.1,
+    "efu": "kg CO2e/tkm",
+    "k": 300,
+    "ku": "km",
+    "d": 20000000,
+    "du": "kg"
+   }
+  ],
+  "etichette": {
+   "k": "Distanza",
+   "d": "Produzione annua"
+  },
+  "dec": 4,
+  "totale": "Fase 3 – Imballaggio",
+  "_atteso": 0.0645,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico"
+ },
+ {
+  "id": "fadcfp01_m08_s023",
+  "layout": "ciambella",
+  "kicker": "CFP parziale",
+  "titolo": "Al cancello domina ancora la semola",
+  "intro": "Il primo numero utile ai clienti è la somma delle tre fasi fino all’uscita dello stabilimento. La lettura per quote mostra subito dove si concentra davvero il dato.",
+  "unita": "g CO2e/kg",
+  "totale": {
+   "n": "0,97",
+   "eti": "kg CO2e/kg al cancello"
+  },
+  "voci": [
+   {
+    "l": "Materie prime, 76%",
+    "v": 739.5
+   },
+   {
+    "l": "Produzione, 17,4%",
+    "v": 169.5
+   },
+   {
+    "l": "Imballaggio, 6,6%",
+    "v": 64.5
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s024",
+  "layout": "cards",
+  "kicker": "Dati al cliente",
+  "titolo": "Le cinque informazioni da comunicare",
+  "intro": "Quando il cliente chiede il dato per il proprio Scope 3, il numero va consegnato con contesto. Così eviti doppi conteggi, rendi chiaro il confine e faciliti i controlli di plausibilità.",
+  "cards": [
+   {
+    "h": "Unità",
+    "d": "Un chilogrammo di pasta secca confezionata"
+   },
+   {
+    "h": "Confine",
+    "d": "Dalla culla al cancello"
+   },
+   {
+    "h": "Anno dei dati",
+    "d": "Inventario e produzione 2025"
+   },
+   {
+    "h": "Riferimento metodologico",
+    "d": "GWP a cento anni, IPCC AR6"
+   },
+   {
+    "h": "Struttura del risultato",
+    "d": "Dettaglio sintetico per fase"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s025",
+  "layout": "barre",
+  "kicker": "Fase 4",
+  "titolo": "Tre mercati, una media ponderata",
+  "intro": "La distribuzione non descrive il viaggio di un singolo collo, ma il profilo logistico medio del prodotto venduto. Per questo servono quote di mercato, distanze e mezzo prevalente.",
+  "unita": "g CO2e/kg",
+  "voci": [
+   {
+    "l": "Italia, 450 km gomma",
+    "v": 45
+   },
+   {
+    "l": "Europa, 1.500 km gomma",
+    "v": 150
+   },
+   {
+    "l": "Oltremare, 8.000 km nave",
+    "v": 128
+   },
+   {
+    "l": "Media ponderata",
+    "v": 74.3
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s026",
+  "layout": "calcolo",
+  "kicker": "Fase 5",
+  "titolo": "La cottura domestica pesa più del sito",
+  "intro": "La fase d’uso nasce da uno scenario dichiarato, non da misure del produttore. Proprio per questo quote, consumi e vettori di cottura devono restare espliciti.",
+  "unita": "kg CO2e/kg",
+  "righe": [
+   {
+    "l": "Cottura su fornello a gas (70%)",
+    "n": "0,22 Sm³ per kg di pasta × 2 kg CO2e/Sm³",
+    "a": 0.7,
+    "au": "kg",
+    "ef": 0.44,
+    "efu": "kg CO2e/kg pasta"
+   },
+   {
+    "l": "Cottura su piano elettrico o a induzione (30%)",
+    "n": "1,6 kWh per kg di pasta × 0,235 kg CO2e/kWh",
+    "a": 0.3,
+    "au": "kg",
+    "ef": 0.376,
+    "efu": "kg CO2e/kg pasta"
+   }
+  ],
+  "etichette": {
+   "a": "Quota di 1 kg di pasta"
+  },
+  "dec": 4,
+  "totale": "Fase 5 – Uso",
+  "_atteso": 0.4208,
+  "piede": "Consumi di cottura e quote dei consumatori sono ipotesi dello scenario: vanno scritte nel rapporto, perché chi le cambia cambia il risultato.",
+  "fonte": "Caso studio Pastificio Terrafelix – scenario d’uso illustrativo; fattori di emissione arrotondati a scopo didattico"
+ },
+ {
+  "id": "fadcfp01_m08_s027",
+  "layout": "simulatore",
+  "kicker": "Sensibilità d’uso",
+  "titolo": "Cambiando la cottura cambia la CFP",
+  "intro": "Il valore finale resta corretto solo insieme alle ipotesi che lo generano. Spostare le quote tra gas, elettricità e comportamenti efficienti modifica rapidamente il risultato complessivo.",
+  "unita": "kg CO2e per 100 kg di pasta",
+  "righe": [
+   {
+    "l": "Fornello a gas, modo abituale",
+    "v": 70,
+    "u": "kg di pasta",
+    "ef": 0.44,
+    "efu": "kg CO2e/kg pasta"
+   },
+   {
+    "l": "Piano elettrico, modo abituale",
+    "v": 30,
+    "u": "kg di pasta",
+    "ef": 0.376,
+    "efu": "kg CO2e/kg pasta"
+   },
+   {
+    "l": "Fornello a gas, con coperchio e meno acqua",
+    "v": 0,
+    "u": "kg di pasta",
+    "ef": 0.352,
+    "efu": "kg CO2e/kg pasta"
+   },
+   {
+    "l": "Piano elettrico, con coperchio e meno acqua",
+    "v": 0,
+    "u": "kg di pasta",
+    "ef": 0.3008,
+    "efu": "kg CO2e/kg pasta"
+   }
+  ],
+  "piede": "Le righe «con coperchio e meno acqua» ipotizzano un consumo di energia inferiore del 20%: valore illustrativo, non misurato.",
+  "fonte": "Esempio didattico – scenario illustrativo; fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m08_s028",
+  "layout": "calcolo",
+  "kicker": "Fase 6",
+  "titolo": "Il fine vita dell’imballaggio nel risultato",
+  "intro": "La fase finale pesa poco ma completa il profilo dalla culla alla tomba e chiarisce una priorità: nel caso didattico conta molto più produrre l’imballaggio che gestirlo dopo il consumo.",
+  "unita": "kg CO2e/kg",
+  "righe": [
+   {
+    "l": "Astuccio e cartone a fine vita",
+    "n": "raccolta differenziata della carta",
+    "a": 0.045,
+    "au": "kg",
+    "ef": 0.1,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Film plastico a fine vita",
+    "n": "raccolta differenziata della plastica",
+    "a": 0.008,
+    "au": "kg",
+    "ef": 0.1,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": 4,
+  "totale": "Fase 6 – Fine vita",
+  "_atteso": 0.0053,
+  "piede": "È lo stesso conto di 0,053 kg × 0,1. Le sei fasi sono complete: nella prossima sezione la somma.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattore medio didattico"
+ },
+ {
+  "id": "fadcfp01_m08_s029",
+  "layout": "calcolo",
+  "kicker": "Risultato finale",
+  "titolo": "La somma delle sei fasi",
+  "intro": "La somma con i decimali completi restituisce il valore dalla culla alla tomba; da qui puoi leggere il peso relativo delle fasi e tradurre il risultato in quantità più familiari.",
+  "unita": "kg CO2e/kg",
+  "righe": [
+   {
+    "l": "Fase 1 – Materie prime",
+    "a": 739.54,
+    "au": "g CO2e",
+    "ef": 0.001,
+    "efu": "kg/g"
+   },
+   {
+    "l": "Fase 2 – Produzione",
+    "a": 169.525,
+    "au": "g CO2e",
+    "ef": 0.001,
+    "efu": "kg/g"
+   },
+   {
+    "l": "Fase 3 – Imballaggio",
+    "a": 64.49,
+    "au": "g CO2e",
+    "ef": 0.001,
+    "efu": "kg/g"
+   },
+   {
+    "l": "Fase 4 – Distribuzione",
+    "a": 74.3,
+    "au": "g CO2e",
+    "ef": 0.001,
+    "efu": "kg/g"
+   },
+   {
+    "l": "Fase 5 – Uso (cottura)",
+    "a": 420.8,
+    "au": "g CO2e",
+    "ef": 0.001,
+    "efu": "kg/g"
+   },
+   {
+    "l": "Fase 6 – Fine vita",
+    "a": 5.3,
+    "au": "g CO2e",
+    "ef": 0.001,
+    "efu": "kg/g"
+   }
+  ],
+  "etichette": {
+   "r": "Emissioni",
+   "a": "Risultato della fase",
+   "ef": "Conversione"
+  },
+  "dec": 4,
+  "totale": "CFP dalla culla alla tomba",
+  "_atteso": 1.474,
+  "piede": "Arrotondato: 1,47 kg CO2e per kg di pasta, confezionata, cotta e consumata. Di cui dalla culla al cancello: 0,97.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori di emissione arrotondati a scopo didattico"
+ },
+ {
+  "id": "fadcfp01_m08_s030",
+  "layout": "barre",
+  "kicker": "Interpretazione",
+  "titolo": "Le voci che spiegano quasi tutto",
+  "intro": "Scendere sotto le fasi fa emergere la regola operativa della CFP: poche righe guidano davvero il risultato. È su queste che conviene concentrare qualità dei dati, priorità di riduzione e attenzione gestionale.",
+  "unita": "g CO2e/kg di pasta",
+  "voci": [
+   {
+    "l": "Semola di grano duro",
+    "v": 721
+   },
+   {
+    "l": "Cottura a gas",
+    "v": 308
+   },
+   {
+    "l": "Cottura elettrica",
+    "v": 112.8
+   },
+   {
+    "l": "Gas naturale – combustione",
+    "v": 105
+   },
+   {
+    "l": "Distribuzione ai mercati",
+    "v": 74.3
+   },
+   {
+    "l": "Astuccio e cartone",
+    "v": 40.5
+   },
+   {
+    "l": "Elettricità di rete",
+    "v": 37.6
+   },
+   {
+    "l": "Altre sei voci",
+    "v": 74.8
+   }
+  ],
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m08_s031",
+  "layout": "ciambella",
+  "kicker": "Hotspot di fase",
+  "titolo": "Il profilo finale delle sei fasi",
+  "intro": "Il totale diventa utile quando mostra la sua forma. Qui si vedono subito le fasi dominanti, quelle marginali e il motivo per cui materie prime e uso orientano quasi tutte le decisioni.",
+  "unita": "g CO2e/kg di pasta",
+  "totale": {
+   "n": "1,47",
+   "eti": "kg CO2e/kg"
+  },
+  "voci": [
+   {
+    "l": "Materie prime",
+    "v": 739.5
+   },
+   {
+    "l": "Produzione",
+    "v": 169.5
+   },
+   {
+    "l": "Imballaggio",
+    "v": 64.5
+   },
+   {
+    "l": "Distribuzione",
+    "v": 74.3
+   },
+   {
+    "l": "Uso",
+    "v": 420.8
+   },
+   {
+    "l": "Fine vita",
+    "v": 5.3
+   }
+  ],
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m08_s032",
+  "layout": "calcolo",
+  "kicker": "Controllo di coerenza",
+  "titolo": "Il controllo che fa tornare il numero",
+  "intro": "Un risultato robusto non si limita a sommare le fasi: deve anche riconciliarsi con l’inventario di partenza, togliendo ciò che esce dal confine del prodotto e aggiungendo la fase d’uso.",
+  "unita": "kg CO2e/kg",
+  "righe": [
+   {
+    "l": "Totale dell’inventario 2025",
+    "n": "Scope 1 + 2 location-based + 3, senza la cottura",
+    "a": 21692.5,
+    "au": "t CO2e",
+    "ef": 1000,
+    "efu": "kg/t",
+    "d": 20000000,
+    "du": "kg"
+   },
+   {
+    "l": "Meno: voci fuori dal confine del prodotto",
+    "n": "macchinari 280 t · flotta e filiera dei carburanti 142,6 t · viaggi 28,9 t · pendolarismo 80,8 t",
+    "a": 532.274,
+    "au": "t CO2e",
+    "ef": -1000,
+    "efu": "kg/t",
+    "d": 20000000,
+    "du": "kg"
+   },
+   {
+    "l": "Meno: voci minori escluse per cut-off",
+    "n": "acqua, rifiuti, gas refrigeranti, gasolio del gruppo elettrogeno",
+    "a": 97.107,
+    "au": "t CO2e",
+    "ef": -1000,
+    "efu": "kg/t",
+    "d": 20000000,
+    "du": "kg"
+   },
+   {
+    "l": "Più: fase d’uso (cottura)",
+    "n": "riportata a parte nell’inventario",
+    "a": 8416,
+    "au": "t CO2e",
+    "ef": 1000,
+    "efu": "kg/t",
+    "d": 20000000,
+    "du": "kg"
+   }
+  ],
+  "etichette": {
+   "a": "Emissioni annue",
+   "ef": "Conversione in kg (± segno)",
+   "d": "Produzione annua"
+  },
+  "dec": 4,
+  "totale": "CFP dalla culla alla tomba",
+  "_atteso": 1.474,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+ },
+ {
+  "id": "fadcfp01_m08_s033",
+  "layout": "cards",
+  "kicker": "Rapporto di studio",
+  "titolo": "Le quattro componenti da separare nel rapporto",
+  "intro": "Nel rapporto, il totale va accompagnato da componenti con significato climatico diverso. Separarle evita letture fuorvianti e permette a chi verifica di capire che cosa sta davvero dentro al numero.",
+  "cards": [
+   {
+    "h": "Origine fossile",
+    "d": "Combustibili, rete, trasporti, plastica"
+   },
+   {
+    "h": "Origine biogenica",
+    "d": "Carbonio da biomassa e materiali vegetali"
+   },
+   {
+    "h": "Cambiamento d’uso del suolo",
+    "d": "Conversione recente del terreno, se presente"
+   },
+   {
+    "h": "Trasporti aerei",
+    "d": "Voce separata, qui pari a zero"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s034",
+  "layout": "confronto",
+  "kicker": "Lettura corretta",
+  "titolo": "Biogenico, uso del suolo, compensazione",
+  "intro": "Tre temi vicini solo in apparenza. Per non deformare il risultato occorre distinguere il ciclo breve del carbonio biogenico, verificare l’eventuale uso del suolo e tenere la compensazione fuori dal calcolo.",
+  "a": {
+   "h": "Da distinguere",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Carbonio biogenico: ciclo breve"
+    },
+    {
+     "d": "dLUC: verifica lungo la filiera"
+    },
+    {
+     "d": "Prodotti vegetali: tempi climatici diversi"
+    }
+   ]
+  },
+  "b": {
+   "h": "Da non confondere",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Biogenico non significa zero emissioni"
+    },
+    {
+     "d": "Assenza di dLUC mai presunta"
+    },
+    {
+     "d": "Compensazione non riduce la CFP"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m08_s035",
+  "layout": "organigramma",
+  "kicker": "Trasparenza del metodo",
+  "titolo": "La struttura di un rapporto verificabile",
+  "intro": "Un rapporto solido non mostra solo il numero finale: rende ricostruibile il percorso. Chi legge deve poter capire scelte, dati, limiti e uso corretto del risultato.",
+  "radice": {
+   "h": "Rapporto di studio",
+   "d": "Tracciabile, leggibile, ricostruibile"
+  },
+  "rami": [
+   {
+    "h": "Impostazione",
+    "d": "La domanda a cui risponde",
+    "voci": [
+     "Obiettivo e destinatari",
+     "Unità funzionale o dichiarata",
+     "Confine del sistema",
+     "Criteri di esclusione"
+    ]
+   },
+   {
+    "h": "Dati e metodi",
+    "d": "Come nasce il conto",
+    "voci": [
+     "Dati primari e secondari",
+     "Criteri di allocazione",
+     "GWP utilizzati",
+     "Scenari di uso e fine vita"
+    ]
+   },
+   {
+    "h": "Risultati",
+    "d": "Numero e sua scomposizione",
+    "voci": [
+     "Totale e risultati per fase",
+     "CFP parziale, se presente",
+     "Componenti separate richieste"
+    ]
+   },
+   {
+    "h": "Interpretazione",
+    "d": "Che cosa insegna il numero",
+    "voci": [
+     "Fasi e voci dominanti",
+     "Qualità dei dati e limiti",
+     "Analisi di sensibilità"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s036",
+  "layout": "ciclo",
+  "kicker": "Ecosistema della CFP",
+  "titolo": "PCR, EPD e strumenti di confrontabilità",
+  "intro": "La CFP non vive isolata. Regole di categoria, dichiarazioni verificate, norme per la comunicazione e schemi di registrazione o confronto rendono il risultato più leggibile, più difendibile e più coerente.",
+  "ciclo": false,
+  "centro": "CFP di prodotto",
+  "nodi": [
+   {
+    "h": "PCR",
+    "d": "Regole comuni per la categoria"
+   },
+   {
+    "h": "EPD",
+    "d": "Dichiarazione verificata di prodotto"
+   },
+   {
+    "h": "ISO 14026",
+    "d": "Regole per claim e comunicazione"
+   },
+   {
+    "h": "Verifica",
+    "d": "Terza parte per confronti pubblici"
+   },
+   {
+    "h": "Carbon Footprint Italy",
+    "d": "Programma italiano di registrazione"
+   },
+   {
+    "h": "PEF e Made Green in Italy",
+    "d": "Metodo multi-impatto e schema nazionale"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s037",
+  "layout": "calcolo",
+  "kicker": "Confronti",
+  "titolo": "Il confronto corretto nasce dal confine",
+  "intro": "Prima di leggere due valori come migliori o peggiori, va riallineato il perimetro del conto. Se i confini non coincidono, il confronto sembra semplice ma porta a una conclusione sbagliata.",
+  "unita": "kg CO2e/kg",
+  "righe": [
+   {
+    "l": "Terrafelix, dalla culla alla tomba",
+    "a": 1473.955,
+    "au": "g CO2e",
+    "ef": 0.001,
+    "efu": "kg/g"
+   },
+   {
+    "l": "Meno: distribuzione",
+    "a": 74.3,
+    "au": "g CO2e",
+    "ef": -0.001,
+    "efu": "kg/g"
+   },
+   {
+    "l": "Meno: uso (cottura)",
+    "a": 420.8,
+    "au": "g CO2e",
+    "ef": -0.001,
+    "efu": "kg/g"
+   },
+   {
+    "l": "Meno: fine vita",
+    "a": 5.3,
+    "au": "g CO2e",
+    "ef": -0.001,
+    "efu": "kg/g"
+   }
+  ],
+  "etichette": {
+   "r": "Emissioni",
+   "a": "Risultato",
+   "ef": "Conversione (± segno)"
+  },
+  "dec": 4,
+  "totale": "Terrafelix, dalla culla al cancello",
+  "_atteso": 0.9736,
+  "piede": "A confini allineati: 0,97 contro 1,10. Il confronto «1,47 contro 1,10» avrebbe dato la risposta opposta. E resta da verificare che i due studi usino le stesse regole.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; il Pastificio B e il suo valore sono inventati"
+ },
+ {
+  "id": "fadcfp01_m08_s038",
+  "layout": "evidenza",
+  "kicker": "Comunicazione ai clienti",
+  "titolo": "La scheda tecnica che evita ambiguità",
+  "eyebrow": "",
+  "testo": "La versione breve del dato deve restare utilizzabile. Non basta mostrare un numero: servono unità, confini, ipotesi chiave e limiti, così il cliente può leggere il risultato senza fraintendimenti.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m08_s039",
+  "layout": "numeri",
+  "kicker": "Formulario mentale",
+  "titolo": "Le cinque formule da ricordare",
+  "intro": "Le operazioni sono semplici, ma l'ordine conta. E conta anche la lettura dei decimali: uno zero dopo la virgola non è un dettaglio, è parte del risultato.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Dato annuo diviso produzione annua",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Dato per kg per fattore emissivo",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Tonnellate per km per fattore",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Emissioni comuni per quota di ripartizione",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "Scenario d'uso come somma pesata",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s040",
+  "layout": "tabella",
+  "kicker": "Controllo finale",
+  "titolo": "Le dieci verifiche prima della consegna",
+  "cols": [
+   "Verifica",
+   "Che cosa controllare"
+  ],
+  "righe": [
+   [
+    "1. Unità",
+    "Ogni numero porta la sua unità funzionale o dichiarata"
+   ],
+   [
+    "2. Confine del sistema",
+    "Culla-cancello o culla-tomba, scritto accanto al numero"
+   ],
+   [
+    "3. Criteri di esclusione",
+    "Voci escluse stimate e motivate, coerenti con lo studio"
+   ],
+   [
+    "4. Denominatore",
+    "Consumi riferiti al prodotto finito dello stesso periodo"
+   ],
+   [
+    "5. Filiere energetiche",
+    "Incluse le emissioni a monte di gas ed elettricità"
+   ],
+   [
+    "6. Allocazione",
+    "Criterio dichiarato e uniforme, anche nei dati dei fornitori"
+   ],
+   [
+    "7. Scenari a valle",
+    "Distribuzione, uso e fine vita documentati"
+   ],
+   [
+    "8. Voci separate",
+    "Fossile, biogenico, uso del suolo, trasporto aereo"
+   ],
+   [
+    "9. Niente compensazioni",
+    "Nessun credito sottratto al risultato"
+   ],
+   [
+    "10. Coerenza finale",
+    "Somma delle fasi, arrotondamenti, riconciliazione con l'inventario"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m08_s041",
+  "layout": "chiusura",
+  "kicker": "Chiusura del modulo",
+  "titolo": "Quattro criteri da portare nel lavoro",
+  "modNum": "08",
+  "punti": [
+   {
+    "h": "Oggetti diversi",
+    "d": "Inventario aziendale e CFP rispondono a domande diverse"
+   },
+   {
+    "h": "Numero con identità",
+    "d": "Unità e confine rendono il dato utilizzabile"
+   },
+   {
+    "h": "Metodo prima dell'aritmetica",
+    "d": "Divisori, allocazioni e scenari decidono la qualità"
+   },
+   {
+    "h": "Hotspot reali",
+    "d": "Materie prime e uso pesano più dello stabilimento"
+   }
+  ],
+  "prossimo": {
+   "modulo": "09",
+   "titolo": "Ridurre le emissioni: obiettivi e piano di decarbonizzazione"
+  }
+ }
+]

@@ -1,0 +1,3396 @@
+{
+  "checkpoint": [
+    {
+      "modulo": "m01",
+      "sezione": 3,
+      "domanda": "Durante una manutenzione si reintegrano 4 kg di HFC-134a (GWP AR6 = 1.530). A quante tonnellate di CO2e corrisponde la perdita?",
+      "opzioni": [
+        "0,612 t CO2e",
+        "6,12 t CO2e",
+        "61,2 t CO2e",
+        "6.120 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "4 × 1.530 = 6.120 kg CO2e; dividendo per 1.000 si ottengono 6,12 t CO2e."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 3,
+      "domanda": "Che cosa esprime il GWP di un gas serra?",
+      "opzioni": [
+        "La quantità di gas emessa in un anno da un impianto",
+        "La concentrazione del gas nell’atmosfera terrestre",
+        "Quante volte il gas scalda più della CO2 a parità di massa",
+        "Il numero di anni in cui il gas resta in atmosfera"
+      ],
+      "corretta": 2,
+      "spiegazione": "Il GWP è il potenziale di riscaldamento globale: confronta l’effetto di un gas con quello della stessa massa di CO2, su un orizzonte di 100 anni."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 3,
+      "domanda": "Quale tra queste sorgenti emette tipicamente HFC?",
+      "opzioni": [
+        "Il climatizzatore degli uffici",
+        "La caldaia a gas naturale",
+        "Il furgone a gasolio",
+        "Il campo concimato con azoto"
+      ],
+      "corretta": 0,
+      "spiegazione": "Gli HFC sono gas refrigeranti: si trovano in climatizzatori, impianti frigoriferi e pompe di calore, e si emettono con le perdite dei circuiti."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 5,
+      "domanda": "Con il fattore didattico di 0,235 kg CO2e/kWh, quanti kWh di elettricità di rete corrispondono a circa 1 t CO2e?",
+      "opzioni": [
+        "235 kWh",
+        "1.000 kWh",
+        "4.255 kWh",
+        "42.553 kWh"
+      ],
+      "corretta": 2,
+      "spiegazione": "1 t = 1.000 kg; 1.000 ÷ 0,235 = 4.255 kWh circa."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 5,
+      "domanda": "A che cosa si riferisce la carbon footprint di prodotto?",
+      "opzioni": [
+        "Alle emissioni di un anno di attività dell’azienda",
+        "Alle emissioni di un’unità di prodotto lungo il ciclo di vita",
+        "Alle sole emissioni dello stabilimento di produzione",
+        "Alle emissioni compensate con crediti di carbonio"
+      ],
+      "corretta": 1,
+      "spiegazione": "La carbon footprint di prodotto (ISO 14067) riguarda un’unità di prodotto e le fasi del suo ciclo di vita; quella di organizzazione riguarda un anno di attività dell’azienda."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 5,
+      "domanda": "Un agente percorre 15.000 km all’anno con un’auto media (fattore didattico 0,17 kg CO2e/km). Quante tonnellate di CO2e emette?",
+      "opzioni": [
+        "2,55 t CO2e",
+        "0,255 t CO2e",
+        "25,5 t CO2e",
+        "88,2 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "15.000 × 0,17 = 2.550 kg CO2e, cioè 2,55 t CO2e. Chi ottiene 88,2 ha diviso invece di moltiplicare."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 7,
+      "domanda": "Un cliente chiede a un pastificio i grammi di CO2e per ogni confezione di pasta. Quale norma è il riferimento per questo calcolo?",
+      "opzioni": [
+        "ISO 14064-1",
+        "ISO 14064-3",
+        "ISO 14068-1",
+        "ISO 14067"
+      ],
+      "corretta": 3,
+      "spiegazione": "La ISO 14067 riguarda la carbon footprint di prodotto; la ISO 14064-1 riguarda l’inventario dell’organizzazione."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 7,
+      "domanda": "Un fornitore dichiara 0,97 kg CO2e per kg di pasta fino al cancello. Un cliente ne acquista 300 tonnellate: quante t CO2e deve attribuire a quell’acquisto?",
+      "opzioni": [
+        "2,91 t CO2e",
+        "29,1 t CO2e",
+        "291 t CO2e",
+        "309,3 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "300 t = 300.000 kg; 300.000 × 0,97 = 291.000 kg CO2e, cioè 291 t CO2e."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 7,
+      "domanda": "Di che cosa si occupa la ISO 14064-3?",
+      "opzioni": [
+        "Della verifica e validazione delle dichiarazioni sui gas serra",
+        "Della carbon footprint dei prodotti lungo il ciclo di vita",
+        "Della dichiarazione di neutralità carbonica",
+        "Del sistema europeo di scambio delle quote"
+      ],
+      "corretta": 0,
+      "spiegazione": "La parte 3 della ISO 14064 contiene specifiche e guida per verificare e validare le dichiarazioni sui gas serra, con livello di garanzia ragionevole o limitato."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 9,
+      "domanda": "In quale scope rientra il gasolio consumato dai furgoni di proprietà dell’azienda?",
+      "opzioni": [
+        "Scope 1",
+        "Scope 2",
+        "Scope 3 a monte",
+        "Scope 3 a valle"
+      ],
+      "corretta": 0,
+      "spiegazione": "È una combustione in veicoli posseduti o controllati dall’azienda: emissione diretta, Scope 1."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 9,
+      "domanda": "L’inventario del Pastificio Terrafelix vale 21.692,5 t CO2e, di cui 18.682,7 t di Scope 3. Qual è la quota dello Scope 3?",
+      "opzioni": [
+        "13,9%",
+        "66,5%",
+        "96,5%",
+        "86,1%"
+      ],
+      "corretta": 3,
+      "spiegazione": "18.682,7 ÷ 21.692,5 = 0,861, cioè l’86,1%."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 9,
+      "domanda": "A quale categoria della ISO 14064-1 corrisponde, di massima, lo Scope 2 del GHG Protocol?",
+      "opzioni": [
+        "Categoria 1 – emissioni dirette",
+        "Categoria 2 – energia importata",
+        "Categoria 3 – trasporto",
+        "Categoria 6 – altre sorgenti"
+      ],
+      "corretta": 1,
+      "spiegazione": "La categoria 2 della ISO 14064-1 riguarda le emissioni indirette da energia importata e corrisponde in via indicativa allo Scope 2."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 11,
+      "domanda": "Un ufficio consuma in un anno 5.000 Sm³ di gas naturale (fattore didattico 2,0 kg CO2e/Sm³). Quante tonnellate di CO2e emette?",
+      "opzioni": [
+        "1 t CO2e",
+        "2,5 t CO2e",
+        "10 t CO2e",
+        "10.000 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "5.000 × 2,0 = 10.000 kg CO2e; dividendo per 1.000 si ottengono 10 t CO2e."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 11,
+      "domanda": "Perché accanto a ogni fattore di emissione va indicata la fonte e l’anno?",
+      "opzioni": [
+        "Perché il calcolo sia verificabile e aggiornabile",
+        "Perché la fonte modifica l’unità del dato di attività",
+        "Perché senza fonte il fattore vale sempre zero",
+        "Perché lo impone la legge europea sul clima"
+      ],
+      "corretta": 0,
+      "spiegazione": "I fattori cambiano da un anno all’altro e da una fonte all’altra: senza l’indicazione della fonte nessuno può controllare o aggiornare il calcolo."
+    },
+    {
+      "modulo": "m01",
+      "sezione": 11,
+      "domanda": "Un’azienda consuma 1.000 litri di gasolio (2,65 kg CO2e/l) e 10.000 kWh di elettricità di rete (0,235 kg CO2e/kWh). Quanto vale il totale?",
+      "opzioni": [
+        "2,89 t CO2e",
+        "5,0 t CO2e",
+        "50 t CO2e",
+        "5.000 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "1.000 × 2,65 = 2.650 kg; 10.000 × 0,235 = 2.350 kg; in tutto 5.000 kg CO2e, cioè 5,0 t CO2e."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 3,
+      "domanda": "Una caldaia ha bruciato 15.000 Sm³ di gas naturale (fattore 2,0 kg CO2e/Sm³). Quante tonnellate di CO2e ha emesso?",
+      "opzioni": [
+        "3 t CO2e",
+        "30 t CO2e",
+        "300 t CO2e",
+        "30.000 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "15.000 × 2,0 = 30.000 kg CO2e; dividendo per 1.000 si ottengono 30 t CO2e."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 3,
+      "domanda": "Quale di questi è un dato di attività?",
+      "opzioni": [
+        "2,65 kg CO2e per litro di gasolio",
+        "100,7 t CO2e emesse dalla flotta",
+        "38.000 litri di gasolio riforniti",
+        "2.256, il GWP del gas R-410A"
+      ],
+      "corretta": 2,
+      "spiegazione": "Il dato di attività misura quanto si è svolta l’attività, qui i litri riforniti. Gli altri sono un fattore di emissione, un risultato e un GWP."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 3,
+      "domanda": "Un autoarticolato trasporta 12 t di merce per 300 km. Qual è il dato di attività da moltiplicare per un fattore in kg CO2e/tkm?",
+      "opzioni": [
+        "312 tkm",
+        "25 tkm",
+        "36.000 tkm",
+        "3.600 tkm"
+      ],
+      "corretta": 3,
+      "spiegazione": "Le tonnellate-chilometro sono un prodotto: 12 t × 300 km = 3.600 tkm."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 5,
+      "domanda": "Un’auto aziendale ha consumato 2.000 l di benzina (fattore di combustione 2,3 kg CO2e/l). Quanto vale l’emissione?",
+      "opzioni": [
+        "4,6 t CO2e",
+        "5,3 t CO2e",
+        "0,46 t CO2e",
+        "4.600 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "2.000 × 2,3 = 4.600 kg CO2e, cioè 4,6 t CO2e. Il valore 5,3 t si otterrebbe usando per errore il fattore del gasolio (2,65)."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 5,
+      "domanda": "Un fattore è espresso in kg CO2e/tkm. Quale dato di attività richiede?",
+      "opzioni": [
+        "I litri di carburante consumati dal camion",
+        "I chilometri percorsi dal camion",
+        "Le tonnellate trasportate moltiplicate per i chilometri",
+        "Le tonnellate trasportate divise per i chilometri percorsi"
+      ],
+      "corretta": 2,
+      "spiegazione": "L’unità al denominatore indica il dato necessario: tkm significa tonnellate × chilometri."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 5,
+      "domanda": "Per l’elettricità consumata in Italia, quale fattore è preferibile secondo i criteri visti?",
+      "opzioni": [
+        "Un fattore medio europeo pubblicato dieci anni fa",
+        "Il fattore nazionale ufficiale dell’anno più vicino",
+        "Il fattore di un altro Paese con clima simile",
+        "Un valore trovato online senza indicazione della fonte"
+      ],
+      "corretta": 1,
+      "spiegazione": "Contano Paese, anno e possibilità di citare la fonte: per l’Italia il riferimento è il fattore nazionale pubblicato da ISPRA."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 7,
+      "domanda": "In un gruppo frigo sono stati reintegrati 4 kg di HFC-134a (GWP AR6 = 1.530). Quanto vale l’emissione?",
+      "opzioni": [
+        "4 kg CO2e",
+        "612 kg CO2e",
+        "6,1 t CO2e",
+        "6.120 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "4 × 1.530 = 6.120 kg CO2e, cioè circa 6,1 t CO2e."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 7,
+      "domanda": "In quale caso il GWP va applicato in modo esplicito nel calcolo?",
+      "opzioni": [
+        "Quando il dato è una massa di gas serra, come una ricarica",
+        "Quando si usa un fattore in kg CO2e per litro di gasolio",
+        "Quando si convertono i MWh della bolletta in kWh",
+        "Quando si calcolano le tkm di un trasporto di merci"
+      ],
+      "corretta": 0,
+      "spiegazione": "Se il dato di attività sono i kg di gas emessi, il fattore è il GWP. Nei fattori in CO2e di combustibili ed energia il GWP è già compreso."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 7,
+      "domanda": "Mancano le schede carburante di un furgone a gasolio che ha percorso 20.000 km. Con un consumo medio di 0,07 l/km e il fattore 2,65 kg CO2e/l, quanto vale la stima?",
+      "opzioni": [
+        "1.400 kg CO2e",
+        "3.400 kg CO2e",
+        "53.000 kg CO2e",
+        "3.710 kg CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "20.000 × 0,07 = 1.400 l stimati; 1.400 × 2,65 = 3.710 kg CO2e. Moltiplicare i km direttamente per 2,65 darebbe 53.000 kg: un errore di unità."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 9,
+      "domanda": "Tre voci valgono 1.449, 448 e 3.384 kg CO2e. Qual è il totale espresso correttamente in tonnellate?",
+      "opzioni": [
+        "4 t CO2e",
+        "5,3 t CO2e",
+        "52,8 t CO2e",
+        "5.281 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "Si somma in kg (5.281 kg CO2e) e solo dopo si divide per 1.000: 5,3 t CO2e. Arrotondando ogni voce alle tonnellate intere si otterrebbe 4 t."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 9,
+      "domanda": "In quale momento del calcolo si arrotonda?",
+      "opzioni": [
+        "Subito, arrotondando il fattore di emissione",
+        "A ogni riga, prima di fare la somma",
+        "Solo sul risultato finale, dopo la somma",
+        "Mai: si riportano sempre tutti i decimali"
+      ],
+      "corretta": 2,
+      "spiegazione": "I calcoli si fanno con i valori completi; si arrotonda solo il risultato che si presenta, di norma a un decimale per le tonnellate."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 9,
+      "domanda": "Tre persone volano per 1.000 km ciascuna (fattore 0,18 kg CO2e/pkm). Quanto vale l’emissione?",
+      "opzioni": [
+        "540 kg CO2e",
+        "180 kg CO2e",
+        "54 kg CO2e",
+        "5.400 kg CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "3 passeggeri × 1.000 km = 3.000 pkm; 3.000 × 0,18 = 540 kg CO2e."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 11,
+      "domanda": "Un collega calcola: 5.000 kWh × 234,7 = 1.173.500 kg CO2. Il fattore ISPRA è 234,7 g CO2/kWh. Qual è il risultato corretto?",
+      "opzioni": [
+        "1.173.500 kg CO2",
+        "117,35 kg CO2",
+        "11.735 kg CO2",
+        "1.173,5 kg CO2"
+      ],
+      "corretta": 3,
+      "spiegazione": "Il fattore è in grammi: 1.173.500 g = 1.173,5 kg CO2, circa 1,2 t."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 11,
+      "domanda": "Quale di queste situazioni è un doppio conteggio?",
+      "opzioni": [
+        "Riportare l’elettricità in kWh e, accanto, anche in MWh",
+        "Contare il gasolio delle auto dalle schede carburante e di nuovo dai km percorsi",
+        "Calcolare la combustione del gasolio e, in una riga a parte, la sua filiera a monte",
+        "Sommare gas naturale ed elettricità nel totale dell’azienda"
+      ],
+      "corretta": 1,
+      "spiegazione": "I litri delle schede carburante comprendono già tutti i chilometri percorsi: contarli una seconda volta a chilometri raddoppia l’emissione."
+    },
+    {
+      "modulo": "m02",
+      "sezione": 11,
+      "domanda": "Che cosa deve permettere un registro dei dati ben tenuto?",
+      "opzioni": [
+        "Risalire da ogni risultato al documento, al fattore e alla fonte",
+        "Evitare di conservare bollette e fatture una volta finito il calcolo",
+        "Sostituire la verifica di terza parte dell’inventario",
+        "Arrotondare tutti i risultati in modo uniforme"
+      ],
+      "corretta": 0,
+      "spiegazione": "La tracciabilità consente di ripercorrere il calcolo all’indietro: dal risultato al dato, al documento di origine, al fattore e alla sua fonte."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 3,
+      "domanda": "Una holding possiede il 40% di una società che emette 2.000 t CO2e l’anno e non la controlla. Con l’approccio della quota di partecipazione, quante emissioni consolida?",
+      "opzioni": [
+        "0 t CO2e",
+        "800 t CO2e",
+        "1.200 t CO2e",
+        "2.000 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "Con la quota di partecipazione si applica la percentuale posseduta: 2.000 × 0,40 = 800 t CO2e. Con l’approccio del controllo sarebbero state 0 t."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 3,
+      "domanda": "Un’azienda esclude dall’inventario i gas refrigeranti senza spiegare perché. Quale principio è violato per primo?",
+      "opzioni": [
+        "Completezza",
+        "Pertinenza",
+        "Accuratezza",
+        "Coerenza"
+      ],
+      "corretta": 0,
+      "spiegazione": "La completezza chiede di includere tutte le emissioni pertinenti e di motivare le esclusioni; qui manca sia la sorgente sia la motivazione."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 3,
+      "domanda": "Con il controllo operativo, dove va il gasolio di un’auto a noleggio a lungo termine usata e rifornita dall’azienda?",
+      "opzioni": [
+        "Tra le emissioni indirette da energia",
+        "Tra le altre emissioni indirette",
+        "Tra le emissioni dirette",
+        "Fuori dall’inventario"
+      ],
+      "corretta": 2,
+      "spiegazione": "L’auto è gestita dall’azienda e il gas esce dal suo scarico: è un’emissione diretta, come per un’auto di proprietà."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 5,
+      "domanda": "Un’azienda ha stimato: trasporto a monte 120 t, viaggi di lavoro 15 t, pendolarismo 40 t, beni acquistati 900 t CO2e. Quanto vale la categoria 3 ISO (trasporto)?",
+      "opzioni": [
+        "135 t CO2e",
+        "175 t CO2e",
+        "940 t CO2e",
+        "1.075 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "Nella categoria 3 ISO confluiscono trasporti, viaggi di lavoro e pendolarismo: 120 + 15 + 40 = 175 t CO2e. I beni acquistati vanno nella categoria 4 ISO."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 5,
+      "domanda": "Il frigorista reintegra 5 kg di gas refrigerante in un climatizzatore dell’azienda. Di quale tipo di sorgente dello Scope 1 si tratta?",
+      "opzioni": [
+        "Combustione stazionaria",
+        "Emissione di processo",
+        "Combustione mobile",
+        "Emissione fuggitiva"
+      ],
+      "corretta": 3,
+      "spiegazione": "Il gas reintegrato sostituisce quello disperso per perdite: è un’emissione fuggitiva, nello Scope 1 e nella categoria 1 ISO."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 5,
+      "domanda": "A quali voci corrisponde, in via indicativa, la categoria 4 ISO «prodotti utilizzati dall’organizzazione»?",
+      "opzioni": [
+        "Beni e servizi acquistati, beni strumentali, energia a monte, rifiuti",
+        "Trasporti a monte e a valle, viaggi di lavoro, pendolarismo",
+        "Uso e fine vita dei prodotti venduti, investimenti",
+        "Elettricità, calore e vapore acquistati e consumati"
+      ],
+      "corretta": 0,
+      "spiegazione": "La categoria 4 ISO raccoglie ciò che l’organizzazione acquista e utilizza: corrisponde di massima alle categorie 1, 2, 3 e 5 dello Scope 3."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 7,
+      "domanda": "I beni e servizi acquistati da Terrafelix valgono 15.696 t CO2e su un inventario di 21.692,5 t. Quale quota del totale rappresentano?",
+      "opzioni": [
+        "7,2%",
+        "27,6%",
+        "72,4%",
+        "84,0%"
+      ],
+      "corretta": 2,
+      "spiegazione": "15.696 ÷ 21.692,5 × 100 = 72,4%. L’84,0% è la quota sul solo Scope 3 (18.682,7 t), non sul totale dell’inventario."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 7,
+      "domanda": "I carrelli elevatori elettrici vengono ricaricati in stabilimento. Come si trattano nell’inventario?",
+      "opzioni": [
+        "Una riga in più nello Scope 1, combustione mobile",
+        "Una riga in più nello Scope 3, categoria 4",
+        "Si escludono perché non emettono nulla",
+        "Nessuna riga in più: sono già nei kWh dello Scope 2"
+      ],
+      "corretta": 3,
+      "spiegazione": "La ricarica passa dal contatore dello stabilimento: l’energia è già compresa nell’elettricità acquistata. Aggiungere una riga sarebbe un doppio conteggio."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 7,
+      "domanda": "I viaggi di lavoro pesano lo 0,1% del totale. Secondo la logica della ISO 14064-1 possono essere considerati significativi?",
+      "opzioni": [
+        "Sì, se soddisfano un altro criterio definito dall’organizzazione",
+        "No, perché sotto l’1% la norma impone l’esclusione",
+        "Sì, perché la norma obbliga a includere ogni categoria",
+        "No, perché sono già compresi nello Scope 1"
+      ],
+      "corretta": 0,
+      "spiegazione": "La norma non fissa soglie numeriche: i criteri li definisce l’organizzazione e l’entità è solo uno di essi. Influenza o coinvolgimento del personale possono rendere significativa una voce piccola."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 9,
+      "domanda": "Un’azienda ha un anno base di 8.000 t CO2e e una soglia di ricalcolo del 5%. Acquisisce un ramo d’azienda che nell’anno base emetteva 500 t. Che cosa deve fare?",
+      "opzioni": [
+        "Nulla: 500 t sono lo 0,6% dell’anno base",
+        "Nulla: le acquisizioni non modificano l’anno base",
+        "Ricalcolare: 6,25% supera la soglia; nuovo anno base 7.500 t",
+        "Ricalcolare: 6,25% supera la soglia; nuovo anno base 8.500 t"
+      ],
+      "corretta": 3,
+      "spiegazione": "500 ÷ 8.000 × 100 = 6,25%, sopra la soglia del 5%. L’anno base si ricalcola aggiungendo le emissioni del ramo acquisito: 8.000 + 500 = 8.500 t CO2e."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 9,
+      "domanda": "La produzione aumenta del 10% e le emissioni salgono di conseguenza, senza altri cambiamenti. Si ricalcola l’anno base?",
+      "opzioni": [
+        "Sì, perché la variazione supera il 5%",
+        "No, perché è una variazione reale delle emissioni",
+        "Sì, ma solo per lo Scope 1 e lo Scope 2",
+        "No, perché l’anno base si ricalcola ogni cinque anni"
+      ],
+      "corretta": 1,
+      "spiegazione": "La crescita dell’attività non è un cambiamento strutturale né di metodo: è proprio la variazione che il confronto con l’anno base deve mostrare."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 9,
+      "domanda": "Come si tratta la CO2 emessa dalla combustione di biomassa in una caldaia dell’azienda?",
+      "opzioni": [
+        "Si quantifica e si riporta separatamente",
+        "Si somma alla CO2 fossile nello Scope 1",
+        "Si ignora, perché vale sempre zero",
+        "Si inserisce nello Scope 2, come energia"
+      ],
+      "corretta": 0,
+      "spiegazione": "La CO2 biogenica si quantifica e si riporta su una riga separata; CH4 e N2O della stessa combustione restano invece nell’inventario."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 11,
+      "domanda": "Terrafelix riduce del 10% il consumo di gas naturale (1.050.000 Sm³, fattore 2,0 kg CO2e/Sm³). Di quanto scendono le emissioni dirette?",
+      "opzioni": [
+        "21 t CO2e",
+        "105 t CO2e",
+        "210 t CO2e",
+        "2.100 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "Il 10% di 1.050.000 Sm³ è 105.000 Sm³; 105.000 × 2,0 = 210.000 kg CO2e, cioè 210 t CO2e."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 11,
+      "domanda": "Quale richiesta di dati è formulata nel modo più utile per l’inventario?",
+      "opzioni": [
+        "«Mandami i consumi di gas dell’anno scorso»",
+        "«Sm³ fatturati dal 1° gennaio al 31 dicembre 2025, con le bollette»",
+        "«Quanto abbiamo speso di gas nel 2025?»",
+        "«Dimmi all’incirca quanto gas consumiamo»"
+      ],
+      "corretta": 1,
+      "spiegazione": "Una buona richiesta indica unità di misura, periodo e documento di origine: evita risposte in euro o su periodi diversi e lascia l’evidenza per la verifica."
+    },
+    {
+      "modulo": "m03",
+      "sezione": 11,
+      "domanda": "Perché nel documento di impostazione si dichiara quale serie di GWP dell’IPCC verrà usata?",
+      "opzioni": [
+        "Perché serie diverse danno risultati diversi e non vanno mescolate",
+        "Perché la norma impone di usare soltanto i valori dell’AR4",
+        "Perché i GWP servono solo per l’elettricità acquistata",
+        "Perché il GWP cambia a seconda della sede dell’azienda"
+      ],
+      "corretta": 0,
+      "spiegazione": "Lo stesso gas ha GWP diversi nei vari rapporti IPCC: si dichiara la serie scelta e la si usa in tutto l’inventario, senza mescolarle."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 3,
+      "domanda": "Le bollette di una caldaia sommano 30.000 Sm³ di gas naturale nell’anno (fattore 2,0 kg CO2e/Sm³). Quante tonnellate di CO2e emette?",
+      "opzioni": [
+        "6 t CO2e",
+        "15 t CO2e",
+        "60 t CO2e",
+        "600 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "30.000 × 2,0 = 60.000 kg CO2e, cioè 60 t CO2e."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 3,
+      "domanda": "Una fattura riporta 2.600 kg di GPL. Con densità 0,52 kg/l e fattore 1,6 kg CO2e/l, le emissioni sono:",
+      "opzioni": [
+        "2,16 t CO2e",
+        "4,16 t CO2e",
+        "80 t CO2e",
+        "8 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "2.600 ÷ 0,52 = 5.000 litri; 5.000 × 1,6 = 8.000 kg CO2e, cioè 8 t. Moltiplicare i kg per il fattore al litro dà 4,16 t, che è sbagliato."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 3,
+      "domanda": "Una caldaia a pellet: come si tratta la CO2 prodotta dalla combustione della biomassa?",
+      "opzioni": [
+        "Si riporta separatamente, fuori dagli scope",
+        "Si somma allo Scope 1 come quella del gas",
+        "Si ignora, perché vale sempre zero",
+        "Si sposta nello Scope 2 dell’azienda"
+      ],
+      "corretta": 0,
+      "spiegazione": "La CO2 biogenica si quantifica e si riporta a parte; nello Scope 1 restano il metano e il protossido di azoto della combustione."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 5,
+      "domanda": "Una flotta consuma in un anno 10.000 l di gasolio (2,65 kg CO2e/l) e 2.000 l di benzina (2,3 kg CO2e/l). Quanto emette?",
+      "opzioni": [
+        "27,6 t CO2e",
+        "31,1 t CO2e",
+        "31,8 t CO2e",
+        "311 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "10.000 × 2,65 = 26.500 kg; 2.000 × 2,3 = 4.600 kg; in totale 31.100 kg, cioè 31,1 t CO2e. Ogni carburante ha il suo fattore."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 5,
+      "domanda": "Per i veicoli aziendali, quale dato di attività è da preferire quando è disponibile?",
+      "opzioni": [
+        "I chilometri letti dal contachilometri",
+        "La spesa annua per il carburante",
+        "Il numero di veicoli della flotta",
+        "I litri di carburante acquistati"
+      ],
+      "corretta": 3,
+      "spiegazione": "I litri sono un dato misurato e documentato, e contengono già l’effetto di carico, traffico e stile di guida."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 5,
+      "domanda": "Un dipendente va da un cliente con la propria auto e riceve il rimborso chilometrico. Dove si collocano queste emissioni?",
+      "opzioni": [
+        "Nello Scope 3, tra i viaggi di lavoro",
+        "Nello Scope 1, come combustione mobile",
+        "Nello Scope 2, come energia acquistata",
+        "Da nessuna parte: non riguardano l’azienda"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il veicolo non è posseduto né controllato dall’azienda: è un’emissione indiretta della catena del valore, da trattare nell’unità 6."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 7,
+      "domanda": "Nel gruppo frigo sono stati reintegrati 5 kg di HFC-134a (GWP 1.530). Quanto vale questa emissione?",
+      "opzioni": [
+        "0,77 t CO2e",
+        "7,65 t CO2e",
+        "11,28 t CO2e",
+        "7.650 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "5 × 1.530 = 7.650 kg CO2e, cioè 7,65 t CO2e. Il valore 11,28 t si otterrebbe usando per errore il GWP dell’R-410A."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 7,
+      "domanda": "Con il metodo delle ricariche, quale dato si moltiplica per il GWP?",
+      "opzioni": [
+        "La carica totale indicata sulla targa",
+        "La potenza frigorifera della macchina",
+        "Il gas acquistato dal frigorista nell’anno",
+        "I kg di gas reintegrati nell’anno"
+      ],
+      "corretta": 3,
+      "spiegazione": "Si assume che il gas aggiunto durante la manutenzione sostituisca quello disperso: la carica totale resta nel circuito e non è un’emissione."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 7,
+      "domanda": "Bilancio di massa: scorta iniziale 5 kg, acquisti 30 kg, scorta finale 10 kg, 15 kg caricati in un impianto nuovo. Quanto gas è stato disperso?",
+      "opzioni": [
+        "10 kg",
+        "20 kg",
+        "25 kg",
+        "35 kg"
+      ],
+      "corretta": 0,
+      "spiegazione": "5 + 30 − 10 − 15 = 10 kg. Il gas caricato in un impianto nuovo resta nel circuito e va sottratto: dimenticarlo porta a 25 kg."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 9,
+      "domanda": "Una fornace trasforma 200.000 kg di carbonato di calcio (fattore stechiometrico 0,44 kg CO2/kg). Quanta CO2 di processo emette?",
+      "opzioni": [
+        "44 t CO2",
+        "880 t CO2",
+        "88 t CO2",
+        "200 t CO2"
+      ],
+      "corretta": 2,
+      "spiegazione": "200.000 × 0,44 = 88.000 kg, cioè 88 t CO2 di processo, a cui si aggiunge a parte la combustione del forno."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 9,
+      "domanda": "Nello Scope 1 di Terrafelix, quale voce pesa di più e quanto?",
+      "opzioni": [
+        "Il gas naturale, circa il 93%",
+        "La flotta a gasolio, circa il 60%",
+        "I gas refrigeranti, circa il 40%",
+        "Il gruppo elettrogeno, circa il 25%"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il gas naturale vale 2.100 t su 2.257,8 t, cioè il 93,0%: la combustione stazionaria domina il profilo dello stabilimento."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 9,
+      "domanda": "Lo Scope 1 di Terrafelix è 2.257,8 t CO2e, di cui 2.100 t dal gas naturale. Se il solo consumo di gas calasse del 10%, a quanto scenderebbe il totale?",
+      "opzioni": [
+        "1.890,0 t CO2e",
+        "2.032,0 t CO2e",
+        "2.247,8 t CO2e",
+        "2.047,8 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "Il 10% di 2.100 t è 210 t: 2.257,8 − 210 = 2.047,8 t CO2e. Ridurre del 10% l’intero totale (2.032,0 t) è sbagliato, perché le altre voci non cambiano."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 11,
+      "domanda": "Uno stabilimento consuma 400.000 Sm³ di gas (circa 9,8 kWh/Sm³) e produce 8.000 t. Quanto vale l’indicatore di consumo termico specifico?",
+      "opzioni": [
+        "50 kWh/t",
+        "100 kWh/t",
+        "490 kWh/t",
+        "4.900 kWh/t"
+      ],
+      "corretta": 2,
+      "spiegazione": "400.000 × 9,8 = 3.920.000 kWh; diviso 8.000 t = 490 kWh per tonnellata. Dividere i soli Sm³ per le tonnellate dà 50, che non è un dato in kWh."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 11,
+      "domanda": "Per il carburante di un veicolo aziendale esistono solo gli importi in euro. Qual è il modo corretto di procedere?",
+      "opzioni": [
+        "Moltiplicare gli euro per il fattore al litro",
+        "Dividere gli euro per il prezzo medio e dichiarare la stima",
+        "Escludere il veicolo dall’inventario dell’anno",
+        "Spostare la voce nello Scope 3 come acquisto"
+      ],
+      "corretta": 1,
+      "spiegazione": "Si ricostruiscono i litri con un prezzo medio documentato, si applica il fattore per litro e si dichiara che il dato è stimato."
+    },
+    {
+      "modulo": "m04",
+      "sezione": 11,
+      "domanda": "Un carrello elevatore a GPL di proprietà dell’azienda lavora solo dentro il magazzino. Dove si collocano le sue emissioni?",
+      "opzioni": [
+        "Scope 1, combustione mobile",
+        "Scope 1, combustione stazionaria",
+        "Scope 2, energia acquistata",
+        "Scope 3, trasporti a monte"
+      ],
+      "corretta": 0,
+      "spiegazione": "È un mezzo mobile controllato dall’azienda che brucia un combustibile: Scope 1, combustione mobile, anche se non esce dallo stabilimento."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 3,
+      "domanda": "Un’azienda preleva dalla rete 400.000 kWh in un anno. Con il fattore 0,235 kg CO2e/kWh, qual è lo Scope 2 location-based?",
+      "opzioni": [
+        "9,4 t CO2e",
+        "94 t CO2e",
+        "940 t CO2e",
+        "94.000 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "400.000 × 0,235 = 94.000 kg CO2e, che divisi per 1.000 danno 94 t CO2e."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 3,
+      "domanda": "Quale voce della bolletta elettrica è il dato di attività dello Scope 2?",
+      "opzioni": [
+        "I kvarh di energia reattiva",
+        "I kW di potenza impegnata",
+        "I kWh di energia attiva prelevata",
+        "L’importo totale in euro"
+      ],
+      "corretta": 2,
+      "spiegazione": "Si usano i kWh di energia attiva prelevata, sommando le fasce F1, F2 e F3; energia reattiva, potenza e importi non entrano nel calcolo."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 3,
+      "domanda": "Nel metodo location-based, che cosa rappresenta il fattore di emissione?",
+      "opzioni": [
+        "La media della rete in cui avviene il consumo",
+        "Il mix dichiarato dal fornitore scelto",
+        "Le emissioni della centrale più vicina",
+        "Il mix residuo privo di garanzie d’origine"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il location-based usa il fattore medio della rete (per l’Italia, il dato ISPRA dei consumi elettrici), indipendentemente dal contratto di fornitura."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 5,
+      "domanda": "Un’azienda preleva 1.000.000 kWh, di cui 400.000 coperti da Garanzie d’Origine. Con residual mix 0,45 kg CO2e/kWh, qual è lo Scope 2 market-based?",
+      "opzioni": [
+        "141 t CO2e",
+        "180 t CO2e",
+        "270 t CO2e",
+        "450 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "I 400.000 kWh garantiti valgono 0; i restanti 600.000 kWh × 0,45 = 270.000 kg, cioè 270 t CO2e."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 5,
+      "domanda": "Nel metodo market-based, quale fattore si applica ai kWh privi di qualunque strumento contrattuale?",
+      "opzioni": [
+        "Il residual mix",
+        "Il fattore zero",
+        "Il fattore medio europeo dei consumi",
+        "Il fattore del termoelettrico nazionale"
+      ],
+      "corretta": 0,
+      "spiegazione": "In mancanza di garanzie d’origine, PPA o fattori del fornitore si usa il residual mix, cioè il mix che resta dopo aver tolto l’energia già assegnata."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 5,
+      "domanda": "Perché per Terrafelix il market-based (900 t) supera il location-based (752 t)?",
+      "opzioni": [
+        "Perché le garanzie d’origine aumentano il fattore della rete",
+        "Perché nel market-based si conta anche il fotovoltaico",
+        "Perché il location-based esclude le fasce F2 e F3",
+        "Perché il 62,5% dei kWh prende il residual mix, più alto della media"
+      ],
+      "corretta": 3,
+      "spiegazione": "I 2.000.000 kWh senza garanzie prendono 0,45 invece di 0,235 kg CO2e/kWh: il loro peso supera il beneficio dei 1.200.000 kWh a fattore zero."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 7,
+      "domanda": "Che cosa chiede la ISO 14064-1 per le emissioni da elettricità importata?",
+      "opzioni": [
+        "Solo il metodo market-based",
+        "La media aritmetica dei due metodi",
+        "La somma dei due risultati",
+        "Il location-based, con il market-based in aggiunta e a parte"
+      ],
+      "corretta": 3,
+      "spiegazione": "La norma chiede l’approccio location-based; i dati market-based possono essere riportati in aggiunta, separatamente."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 7,
+      "domanda": "Un’azienda autoconsuma 200.000 kWh del proprio fotovoltaico. Con il fattore 0,235 kg CO2e/kWh, a quanto ammontano le emissioni evitate (location-based) da riportare a parte?",
+      "opzioni": [
+        "4,7 t CO2e",
+        "47 t CO2e",
+        "90 t CO2e",
+        "470 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "200.000 × 0,235 = 47.000 kg, cioè 47 t CO2e: si riportano come informazione separata e non si sottraggono dall’inventario."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 7,
+      "domanda": "Come si tratta l’energia fotovoltaica immessa in rete nel calcolo dello Scope 2?",
+      "opzioni": [
+        "Non si sottrae dai kWh prelevati",
+        "Si sottrae dai kWh prelevati",
+        "Si somma ai kWh prelevati",
+        "Si conta con il residual mix"
+      ],
+      "corretta": 0,
+      "spiegazione": "Lo Scope 2 si calcola su tutta l’energia prelevata; l’energia ceduta alla rete non compensa i prelievi."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 9,
+      "domanda": "Un’azienda acquista 500.000 kWh termici dal teleriscaldamento. Il gestore dichiara un fattore di 0,20 kg CO2e/kWh. Quali emissioni vanno nello Scope 2?",
+      "opzioni": [
+        "10 t CO2e",
+        "117,5 t CO2e",
+        "100 t CO2e",
+        "1.000 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "500.000 × 0,20 = 100.000 kg, cioè 100 t CO2e; il fattore 0,235 vale per l’elettricità, non per il calore."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 9,
+      "domanda": "I carrelli elettrici di uno stabilimento si ricaricano dall’impianto interno. Come si trattano i loro kWh?",
+      "opzioni": [
+        "Sono già nella bolletta: non si aggiungono",
+        "Si aggiungono ai kWh della bolletta",
+        "Vanno nello Scope 1 come combustione mobile",
+        "Vanno nello Scope 3 come trasporto a monte"
+      ],
+      "corretta": 0,
+      "spiegazione": "L’energia di ricarica passa dal contatore di prelievo dello stabilimento ed è già compresa nei kWh della bolletta: aggiungerla sarebbe un doppio conteggio."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 9,
+      "domanda": "Un’auto elettrica aziendale percorre 20.000 km ricaricandosi a colonnine esterne. Consumo 0,18 kWh/km, fattore 0,235 kg CO2e/kWh. Qual è lo Scope 2 location-based?",
+      "opzioni": [
+        "3.400 kg CO2e",
+        "3.600 kg CO2e",
+        "4.700 kg CO2e",
+        "846 kg CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "20.000 × 0,18 = 3.600 kWh; 3.600 × 0,235 = 846 kg CO2e. Gli altri valori dimenticano il consumo o il fattore."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 11,
+      "domanda": "Un’azienda preleva 1.000.000 kWh. Con il fattore 0,06 kg CO2e/kWh per filiera a monte e perdite di rete, quanto vale questa voce e dove si riporta?",
+      "opzioni": [
+        "60 t CO2e, nello Scope 2",
+        "60 t CO2e, nello Scope 3 (categoria 3)",
+        "235 t CO2e, nello Scope 3 (categoria 3)",
+        "295 t CO2e, nello Scope 2"
+      ],
+      "corretta": 1,
+      "spiegazione": "1.000.000 × 0,06 = 60.000 kg, cioè 60 t CO2e: sono emissioni a monte del contatore e vanno nello Scope 3, categoria 3."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 11,
+      "domanda": "Un’azienda acquista Garanzie d’Origine per tutta l’elettricità che preleva. Che cosa succede ai due risultati di Scope 2?",
+      "opzioni": [
+        "Si azzerano entrambi",
+        "Si azzera solo il location-based",
+        "Si dimezzano entrambi",
+        "Si azzera solo il market-based"
+      ],
+      "corretta": 3,
+      "spiegazione": "Le garanzie sono uno strumento contrattuale: portano a zero il market-based, mentre il location-based dipende solo dai kWh prelevati e dalla media di rete."
+    },
+    {
+      "modulo": "m05",
+      "sezione": 11,
+      "domanda": "Uno stabilimento preleva 500.000 kWh (fattore 0,235 kg CO2e/kWh) e produce 2.500 t. Qual è l’intensità dello Scope 2 location-based?",
+      "opzioni": [
+        "47 kg CO2e per tonnellata",
+        "4,7 kg CO2e per tonnellata",
+        "200 kg CO2e per tonnellata",
+        "470 kg CO2e per tonnellata"
+      ],
+      "corretta": 0,
+      "spiegazione": "500.000 × 0,235 = 117.500 kg CO2e; 117.500 ÷ 2.500 t = 47 kg CO2e per tonnellata. Il valore 200 è l’indicatore energetico in kWh/t."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 3,
+      "domanda": "Un’azienda acquista 25.000 kg di film plastico. Con il metodo dei dati medi (fattore 2,8 kg CO2e/kg), quante tonnellate di CO2e si attribuiscono all’acquisto?",
+      "opzioni": [
+        "7 t CO2e",
+        "8,9 t CO2e",
+        "70 t CO2e",
+        "700 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "25.000 kg × 2,8 kg CO2e/kg = 70.000 kg CO2e, cioè 70 t CO2e."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 3,
+      "domanda": "Quale metodo di calcolo dello Scope 3 usa come dato di attività gli euro spesi?",
+      "opzioni": [
+        "Il metodo basato sui dati medi",
+        "Il metodo basato sulla spesa",
+        "Il metodo specifico del fornitore",
+        "Il metodo basato sulla distanza"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il metodo basato sulla spesa moltiplica gli euro spesi per un fattore di emissione per euro: è rapido ma risente dei prezzi."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 3,
+      "domanda": "A che cosa serve lo screening delle categorie di Scope 3?",
+      "opzioni": [
+        "A stimare in fretta tutte le categorie per decidere dove approfondire",
+        "A sostituire il calcolo di dettaglio delle categorie maggiori",
+        "A escludere le categorie per le quali mancano i dati",
+        "A ripartire le emissioni tra i fornitori e i clienti"
+      ],
+      "corretta": 0,
+      "spiegazione": "Lo screening dà l’ordine di grandezza di ogni categoria: serve a concentrare il lavoro di dettaglio sulle voci significative e a motivare le esclusioni."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 5,
+      "domanda": "Un biscottificio acquista 3.000 t di semola (fattore 0,7 kg CO2e/kg). Quanto vale questa voce della categoria 1?",
+      "opzioni": [
+        "2,1 t CO2e",
+        "210 t CO2e",
+        "2.100 t CO2e",
+        "4.286 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "3.000 t = 3.000.000 kg; 3.000.000 × 0,7 = 2.100.000 kg CO2e, cioè 2.100 t CO2e. Il fattore è per kg: le tonnellate vanno convertite."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 5,
+      "domanda": "Un’azienda consuma 200.000 Sm³ di gas naturale, già contati nello Scope 1. Quanto vale la filiera a monte (0,33 kg CO2e/Sm³) da inserire nella categoria 3?",
+      "opzioni": [
+        "6,6 t CO2e",
+        "66 t CO2e",
+        "400 t CO2e",
+        "466 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "200.000 × 0,33 = 66.000 kg CO2e, cioè 66 t. Le 400 t della combustione (200.000 × 2) restano nello Scope 1 e non si ricontano."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 5,
+      "domanda": "Nel 2025 un’azienda compra un macchinario da 500.000 €, che ammortizza in dieci anni. Come si trattano le emissioni legate alla sua produzione?",
+      "opzioni": [
+        "Si contano tutte nell’inventario 2025, nella categoria 2",
+        "Si ripartiscono in dieci quote annuali, come il costo",
+        "Si contano nello Scope 1, perché il bene è dell’azienda",
+        "Si contano soltanto quando il macchinario viene dismesso"
+      ],
+      "corretta": 0,
+      "spiegazione": "Le emissioni dei beni strumentali si attribuiscono per intero all’anno di acquisto: non seguono l’ammortamento contabile."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 7,
+      "domanda": "Un fornitore consegna 12 t di merce su camion da 350 km di distanza (fattore 0,1 kg CO2e/tkm). Quanto vale il trasporto?",
+      "opzioni": [
+        "420 kg CO2e",
+        "4.200 kg CO2e",
+        "42.000 kg CO2e",
+        "420.000 kg CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "12 t × 350 km = 4.200 tkm; 4.200 × 0,1 = 420 kg CO2e. Con il peso in kg si otterrebbe un valore mille volte più alto."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 7,
+      "domanda": "Un’azienda conferisce 50.000 kg di rifiuti a recupero (0,021 kg CO2e/kg) e 10.000 kg a smaltimento in discarica (0,45 kg CO2e/kg). Quanto vale la categoria 5?",
+      "opzioni": [
+        "1,26 t CO2e",
+        "5,55 t CO2e",
+        "27 t CO2e",
+        "5.550 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "50.000 × 0,021 = 1.050 kg; 10.000 × 0,45 = 4.500 kg; totale 5.550 kg CO2e, cioè 5,55 t CO2e."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 7,
+      "domanda": "Un pastificio vende la pasta con trasporto organizzato e pagato dal cliente. In quale categoria del GHG Protocol rientrano queste emissioni?",
+      "opzioni": [
+        "Scope 1, combustione mobile",
+        "Categoria 4, trasporto a monte",
+        "Categoria 1, beni e servizi acquistati",
+        "Categoria 9, trasporto a valle"
+      ],
+      "corretta": 3,
+      "spiegazione": "Il trasporto dei prodotti venduti non acquistato dall’azienda è nella categoria 9 (a valle). Se lo pagasse l’azienda sarebbe nella categoria 4."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 9,
+      "domanda": "Quattro persone volano a una fiera e ritorno: 900 km a tratta, volo a corto raggio (0,18 kg CO2e/pkm). Quanto vale il viaggio?",
+      "opzioni": [
+        "324 kg CO2e",
+        "648 kg CO2e",
+        "1.296 kg CO2e",
+        "7.200 kg CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "4 persone × 1.800 km (andata e ritorno) = 7.200 pkm; 7.200 × 0,18 = 1.296 kg CO2e. Con la sola andata si otterrebbe la metà."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 9,
+      "domanda": "Un’azienda ha 40 dipendenti che vengono al lavoro in auto da soli: 30 km al giorno tra andata e ritorno, per 200 giorni (0,17 kg CO2e/km). Quanto vale il pendolarismo?",
+      "opzioni": [
+        "20,4 t CO2e",
+        "40,8 t CO2e",
+        "74,5 t CO2e",
+        "408 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "40 × 200 × 30 = 240.000 km; 240.000 × 0,17 = 40.800 kg CO2e, cioè 40,8 t CO2e."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 9,
+      "domanda": "Un commerciale va in trasferta con l’auto aziendale, il cui gasolio è già contato nello Scope 1. Che cosa si inserisce nella categoria 6 per quella trasferta?",
+      "opzioni": [
+        "I km percorsi, moltiplicati per il fattore dell’auto media",
+        "Il gasolio consumato, moltiplicato per il fattore di combustione",
+        "I costi di pedaggio e parcheggio, con il metodo a spesa",
+        "Nulla per l’auto; gli eventuali pernottamenti sì"
+      ],
+      "corretta": 3,
+      "spiegazione": "Il carburante dell’auto aziendale è già nello Scope 1: ricontarlo nei viaggi di lavoro sarebbe un doppio conteggio. Restano da inserire le voci non ancora contate, come l’hotel."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 11,
+      "domanda": "Un pastificio vende 5.000.000 kg di pasta. Ipotizzando la cottura tutta su fornello a gas (0,44 kg CO2e per kg di pasta), quanto vale la fase d’uso?",
+      "opzioni": [
+        "220 t CO2e",
+        "1.880 t CO2e",
+        "2.200 t CO2e",
+        "22.000 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "5.000.000 × 0,44 = 2.200.000 kg CO2e, cioè 2.200 t CO2e. Il risultato dipende dallo scenario d’uso, che va dichiarato."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 11,
+      "domanda": "Come tratta Terrafelix le emissioni della cottura della pasta nel proprio inventario?",
+      "opzioni": [
+        "Le calcola e le riporta a parte, fuori dal totale dello Scope 3",
+        "Le somma alla categoria 1, perché dipendono dalla semola",
+        "Le inserisce nello Scope 1, perché derivano da combustione di gas",
+        "Non le calcola, perché il GHG Protocol non lo consente"
+      ],
+      "corretta": 0,
+      "spiegazione": "Sono emissioni indirette della fase d’uso, facoltative nel GHG Protocol: Terrafelix le calcola (8.416 t CO2e) e le riporta separate, con le ipotesi."
+    },
+    {
+      "modulo": "m06",
+      "sezione": 11,
+      "domanda": "Il gasolio bruciato dal camion che consegna la semola è Scope 1 del trasportatore e Scope 3 di Terrafelix. Come va considerato?",
+      "opzioni": [
+        "È un errore: va tolto dall’inventario di Terrafelix",
+        "È un errore: va tolto dall’inventario del trasportatore",
+        "È ammesso solo se le due aziende lo dividono a metà",
+        "È normale: la stessa emissione compare in inventari diversi"
+      ],
+      "corretta": 3,
+      "spiegazione": "Lo Scope 3 di un’azienda coincide con gli Scope 1 e 2 di altre: è previsto. L’errore è contare due volte la stessa emissione dentro lo stesso inventario."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 3,
+      "domanda": "Un’azienda ha calcolato: Scope 1 = 300 t CO2e; Scope 2 location-based = 120 t; Scope 2 market-based = 150 t; Scope 3 = 1.580 t. Qual è il totale dell’inventario con Scope 2 location-based?",
+      "opzioni": [
+        "2.000 t CO2e",
+        "2.030 t CO2e",
+        "2.150 t CO2e",
+        "420 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "300 + 120 + 1.580 = 2.000 t CO2e. Il dato market-based si riporta in aggiunta e non si somma mai al location-based."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 3,
+      "domanda": "Nel quadro di sintesi di Terrafelix, come viene trattata la cottura della pasta da parte dei consumatori (8.416 t CO2e)?",
+      "opzioni": [
+        "È sommata allo Scope 1, perché usa gas",
+        "È riportata a parte, fuori dal totale",
+        "È sommata allo Scope 2, perché usa energia",
+        "È omessa, perché non è calcolabile"
+      ],
+      "corretta": 1,
+      "spiegazione": "È un’emissione indiretta della fase d’uso: Terrafelix l’ha quantificata e la riporta a parte, dichiarandolo nel rapporto."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 3,
+      "domanda": "Scope 1+2 = 1.260 t CO2e; produzione dell’anno = 9.000 t. Qual è l’intensità per tonnellata di prodotto?",
+      "opzioni": [
+        "0,14 kg CO2e/t",
+        "7,1 kg CO2e/t",
+        "140 kg CO2e/t",
+        "1.400 kg CO2e/t"
+      ],
+      "corretta": 2,
+      "spiegazione": "1.260 t = 1.260.000 kg; 1.260.000 ÷ 9.000 = 140 kg CO2e per tonnellata. Dividere tonnellate per tonnellate dà 0,14, che sono tonnellate e non chilogrammi."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 5,
+      "domanda": "Con la somma in quadratura (modello didattico), quale incertezza ha una voce con dato di attività ± 6% e fattore di emissione ± 8%?",
+      "opzioni": [
+        "± 7%",
+        "± 10%",
+        "± 14%",
+        "± 48%"
+      ],
+      "corretta": 1,
+      "spiegazione": "6 × 6 = 36; 8 × 8 = 64; 36 + 64 = 100; radice quadrata di 100 = 10, quindi ± 10%."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 5,
+      "domanda": "Una voce vale 500 t CO2e con incertezza ± 20%. Tra quali valori si colloca ragionevolmente il dato vero?",
+      "opzioni": [
+        "Tra 480 e 520 t CO2e",
+        "Tra 490 e 510 t CO2e",
+        "Tra 250 e 750 t CO2e",
+        "Tra 400 e 600 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "Il 20% di 500 è 100 t: l’intervallo va da 500 − 100 = 400 a 500 + 100 = 600 t CO2e."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 5,
+      "domanda": "Su quale voce conviene investire per prima in dati migliori?",
+      "opzioni": [
+        "Una voce grande con incertezza alta",
+        "Una voce grande con incertezza bassa",
+        "Una voce piccola con incertezza alta",
+        "Una voce piccola con incertezza bassa"
+      ],
+      "corretta": 0,
+      "spiegazione": "Un dato migliore sposta il risultato solo dove la voce pesa molto ed è poco precisa: per Terrafelix, la semola."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 7,
+      "domanda": "Un’azienda preleva 2.000.000 kWh in due anni consecutivi. Il fattore location-based passa da 0,235 a 0,199 kg CO2e/kWh. Di quanto cambia lo Scope 2?",
+      "opzioni": [
+        "Scende di 72 t CO2e",
+        "Scende di 36 t CO2e",
+        "Scende di 72.000 t CO2e",
+        "Resta uguale, perché i consumi non cambiano"
+      ],
+      "corretta": 0,
+      "spiegazione": "2.000.000 × (0,235 − 0,199) = 2.000.000 × 0,036 = 72.000 kg, cioè 72 t CO2e in meno, dovute al solo fattore."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 7,
+      "domanda": "Quale di questi eventi richiede di valutare il ricalcolo dell’anno base?",
+      "opzioni": [
+        "Un aumento della produzione del 10%",
+        "Un inverno più freddo del solito",
+        "L’acquisizione di un altro stabilimento",
+        "Un calo delle vendite all’estero"
+      ],
+      "corretta": 2,
+      "spiegazione": "L’acquisizione è un cambiamento strutturale: se supera la soglia definita dall’azienda, l’anno base si ricalcola. Crescita e clima sono variazioni vere."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 7,
+      "domanda": "Nella bozza di un inventario una fattura da 1.000 l di gasolio è registrata due volte. Di quanto sono sovrastimate le emissioni da combustione (fattore 2,65 kg CO2e/l)?",
+      "opzioni": [
+        "26,5 t CO2e",
+        "0,265 t CO2e",
+        "2.650 t CO2e",
+        "2,65 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "1.000 × 2,65 = 2.650 kg CO2e, cioè 2,65 t CO2e contate in più."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 9,
+      "domanda": "Secondo la ISO 14064-1, come vanno riportate nel rapporto GHG le emissioni dirette?",
+      "opzioni": [
+        "In un solo totale in CO2e, senza dettagli",
+        "Separate per gas, in tonnellate di CO2e",
+        "Solo come CO2, senza gli altri gas",
+        "Sommate alle emissioni da energia importata"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il rapporto riporta le emissioni dirette quantificate separatamente per gas (CO2, CH4, N2O e gli altri gruppi), espresse in t CO2e."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 9,
+      "domanda": "Come tratta la ISO 14064-1 i due metodi di calcolo dell’elettricità?",
+      "opzioni": [
+        "Chiede il location-based; il market-based si aggiunge a parte",
+        "Chiede il market-based; il location-based resta facoltativo",
+        "Chiede di riportare nel totale la media dei due valori",
+        "Lascia libera la scelta, purché se ne usi soltanto uno"
+      ],
+      "corretta": 0,
+      "spiegazione": "La norma chiede l’approccio location-based; i dati market-based possono essere riportati in aggiunta, separatamente."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 9,
+      "domanda": "Nel rapporto di un’azienda le emissioni dirette sono: combustione 1.240,0 t CO2e e HFC 18,5 t CO2e. La CO2 biogenica da biomassa è 60,0 t. Qual è il totale delle emissioni dirette da riportare?",
+      "opzioni": [
+        "1.318,5 t CO2e",
+        "1.300,0 t CO2e",
+        "1.221,5 t CO2e",
+        "1.258,5 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "1.240,0 + 18,5 = 1.258,5 t CO2e. La CO2 biogenica si riporta separatamente e non entra nel totale."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 11,
+      "domanda": "Quali sono i due livelli di garanzia previsti dalla ISO 14064-3?",
+      "opzioni": [
+        "Base e avanzata",
+        "Interna ed esterna",
+        "Limitata e ragionevole",
+        "Parziale e totale"
+      ],
+      "corretta": 2,
+      "spiegazione": "La ISO 14064-3 prevede due livelli di garanzia: limitata e ragionevole. Si concordano prima di iniziare la verifica."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 11,
+      "domanda": "Il fattore della semola (voce da 14.420 t CO2e) risulta sbagliato del 10%. Il totale dell’inventario è 21.692,5 t CO2e. Quanto pesa l’errore sul totale?",
+      "opzioni": [
+        "Circa lo 0,7%",
+        "Circa il 6,6%",
+        "Circa il 10%",
+        "Circa il 66,5%"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il 10% di 14.420 è 1.442 t; 1.442 ÷ 21.692,5 = 6,6%. Il 66,5% è invece la quota della semola sul totale."
+    },
+    {
+      "modulo": "m07",
+      "sezione": 11,
+      "domanda": "Secondo quali norme sono accreditati gli organismi che verificano gli inventari GHG?",
+      "opzioni": [
+        "ISO/IEC 17029 e ISO 14065",
+        "ISO 9001 e ISO 14001",
+        "ISO 14067 e ISO 14040",
+        "ISO 14064-1 e ISO 14064-2"
+      ],
+      "corretta": 0,
+      "spiegazione": "Gli organismi di verifica sono accreditati secondo ISO/IEC 17029 e ISO 14065; in Italia l’ente di accreditamento è ACCREDIA."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 3,
+      "domanda": "Il detersivo A emette 0,60 kg CO2e per litro e richiede 100 ml per lavaggio; il detersivo B emette 0,90 kg CO2e per litro e richiede 50 ml per lavaggio. Con l’unità funzionale «1 lavaggio», quale emette meno?",
+      "opzioni": [
+        "A: 60 g CO2e contro 90 g CO2e",
+        "B: 45 g CO2e contro 60 g CO2e",
+        "A: 6 g CO2e contro 45 g CO2e",
+        "Sono uguali: 60 g CO2e ciascuno"
+      ],
+      "corretta": 1,
+      "spiegazione": "A: 0,60 × 0,1 l = 0,060 kg = 60 g CO2e per lavaggio. B: 0,90 × 0,05 l = 0,045 kg = 45 g CO2e. Per litro vince A, per lavaggio vince B."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 3,
+      "domanda": "Uno studio si ferma all’uscita dallo stabilimento. A quale quantità va riferito il risultato?",
+      "opzioni": [
+        "A un’unità funzionale che comprende l’uso",
+        "Al fatturato annuo dell’azienda",
+        "A un’unità dichiarata, per esempio 1 kg di prodotto al cancello",
+        "Alla produzione totale dell’anno"
+      ],
+      "corretta": 2,
+      "spiegazione": "Quando lo studio è parziale (dalla culla al cancello) il prodotto non ha ancora svolto la sua funzione: si usa un’unità dichiarata e il risultato va presentato come CFP parziale."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 3,
+      "domanda": "Che cosa richiede un’esclusione per cut-off fatta correttamente?",
+      "opzioni": [
+        "Un criterio dichiarato e una stima del peso della voce esclusa",
+        "Che il dato sia difficile da reperire in azienda",
+        "Che la voce appartenga allo Scope 3",
+        "L’autorizzazione preventiva del cliente che riceve il dato"
+      ],
+      "corretta": 0,
+      "spiegazione": "Si esclude ciò che pesa poco, non ciò che è scomodo: serve un criterio scritto e una stima che mostri che la voce resta sotto la soglia; l’esclusione va riportata nel rapporto."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 5,
+      "domanda": "Un biscottificio consuma in un anno 2.400.000 kWh di elettricità di rete e produce 12.000.000 kg di biscotti. Con il fattore 0,235 kg CO2e/kWh, quanto vale il contributo dell’elettricità per kg di prodotto?",
+      "opzioni": [
+        "0,2 kg CO2e per kg",
+        "0,47 kg CO2e per kg",
+        "0,047 kg CO2e per kg",
+        "47 kg CO2e per kg"
+      ],
+      "corretta": 2,
+      "spiegazione": "2.400.000 ÷ 12.000.000 = 0,2 kWh per kg; 0,2 × 0,235 = 0,047 kg CO2e per kg. 0,2 è il consumo in kWh, non l’emissione."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 5,
+      "domanda": "Un processo emette 1.000 kg CO2e e produce 800 kg di prodotto principale e 200 kg di coprodotto. Con l’allocazione per massa, quante emissioni spettano al prodotto principale?",
+      "opzioni": [
+        "800 kg CO2e",
+        "200 kg CO2e",
+        "500 kg CO2e",
+        "1.000 kg CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "Quota in massa del prodotto principale: 800 ÷ 1.000 = 80%; 1.000 × 0,80 = 800 kg CO2e. I restanti 200 kg CO2e vanno al coprodotto: la somma resta 1.000."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 5,
+      "domanda": "Secondo la gerarchia indicata dalla ISO 14067, qual è la prima cosa da fare davanti a un processo che genera più prodotti?",
+      "opzioni": [
+        "Ripartire le emissioni in proporzione ai ricavi di vendita",
+        "Ripartire le emissioni in parti uguali tra tutti i prodotti",
+        "Assegnare tutte le emissioni al solo prodotto principale",
+        "Cercare di evitare l’allocazione, per esempio con misure separate"
+      ],
+      "corretta": 3,
+      "spiegazione": "Prima si prova a evitare l’allocazione (suddivisione dei processi, espansione del sistema); poi si usano relazioni fisiche come massa o energia; solo in subordine quelle economiche."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 7,
+      "domanda": "Un biscottificio di fantasia consuma 300.000 Sm³ di gas l’anno e produce 5.000.000 kg di biscotti. Con il fattore di combustione 2 kg CO2e/Sm³, quanto vale la combustione del gas per kg di prodotto?",
+      "opzioni": [
+        "0,06 kg CO2e per kg",
+        "1,2 kg CO2e per kg",
+        "0,03 kg CO2e per kg",
+        "0,12 kg CO2e per kg"
+      ],
+      "corretta": 3,
+      "spiegazione": "300.000 × 2 = 600.000 kg CO2e; 600.000 ÷ 5.000.000 = 0,12 kg CO2e per kg. 0,06 è il consumo in Sm³ per kg, non l’emissione."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 7,
+      "domanda": "Un prodotto usa per ogni chilo 0,030 kg di cartone (0,9 kg CO2e/kg) e 0,010 kg di film plastico (2,8 kg CO2e/kg). Quanto vale l’imballaggio, senza trasporto?",
+      "opzioni": [
+        "0,055 kg CO2e per kg",
+        "0,040 kg CO2e per kg",
+        "0,148 kg CO2e per kg",
+        "0,55 kg CO2e per kg"
+      ],
+      "corretta": 0,
+      "spiegazione": "0,030 × 0,9 = 0,027; 0,010 × 2,8 = 0,028; somma 0,055 kg CO2e per kg. 0,040 è la somma dei pesi dei materiali, non delle emissioni."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 7,
+      "domanda": "Quali fasi comprende la CFP parziale «dalla culla al cancello» della pasta di Terrafelix?",
+      "opzioni": [
+        "Solo la produzione nello stabilimento",
+        "Materie prime, produzione e imballaggio",
+        "Produzione, imballaggio e distribuzione",
+        "Tutte le fasi tranne il fine vita"
+      ],
+      "corretta": 1,
+      "spiegazione": "Dalla culla al cancello si contano materie prime, produzione e imballaggio: 0,7395 + 0,1695 + 0,0645 = 0,9736 ≈ 0,97 kg CO2e per kg. Distribuzione, uso e fine vita restano fuori."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 9,
+      "domanda": "Con una CFP di 1,474 kg CO2e per kg di pasta (dalla culla alla tomba), quanto vale una confezione da 250 g?",
+      "opzioni": [
+        "Circa 0,24 kg CO2e",
+        "Circa 3,7 kg CO2e",
+        "Circa 0,37 kg CO2e",
+        "Circa 5,9 kg CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "0,25 kg × 1,474 kg CO2e/kg = 0,3685 ≈ 0,37 kg CO2e. Il risultato è proporzionale alla quantità: si moltiplica, non si divide."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 9,
+      "domanda": "Nel caso Terrafelix la fase d’uso vale 0,4208 kg CO2e/kg con lo scenario 70% gas e 30% elettrico. Se tutta la pasta fosse cotta su piano elettrico (0,376 kg CO2e per kg di pasta), quanto varrebbe la CFP totale?",
+      "opzioni": [
+        "Circa 1,43 kg CO2e/kg",
+        "Circa 1,05 kg CO2e/kg",
+        "Circa 1,85 kg CO2e/kg",
+        "Circa 0,38 kg CO2e/kg"
+      ],
+      "corretta": 0,
+      "spiegazione": "Si sostituisce la fase d’uso: 1,474 − 0,4208 + 0,376 = 1,4292 ≈ 1,43 kg CO2e/kg. Le altre cinque fasi non cambiano."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 9,
+      "domanda": "L’inventario di Terrafelix diviso per la produzione dà 1,085 kg CO2e/kg; la CFP dalla culla alla tomba dà 1,474. Qual è la ragione principale della differenza?",
+      "opzioni": [
+        "La CFP usa fattori di emissione più alti",
+        "L’inventario usa GWP di un rapporto IPCC diverso",
+        "La CFP conta due volte i trasporti",
+        "La CFP comprende la cottura, che nell’inventario è riportata a parte"
+      ],
+      "corretta": 3,
+      "spiegazione": "La fase d’uso vale 0,4208 kg CO2e/kg ed è dentro la CFP dalla culla alla tomba; nell’inventario è riportata a parte. In senso opposto, la CFP esclude alcune voci dell’organizzazione (macchinari, viaggi, pendolarismo)."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 11,
+      "domanda": "Un prodotto dichiara 2,40 kg CO2e per unità dalla culla alla tomba, di cui 0,20 di distribuzione, 0,90 di uso e 0,10 di fine vita. Quanto vale la CFP parziale dalla culla al cancello?",
+      "opzioni": [
+        "1,50 kg CO2e",
+        "1,20 kg CO2e",
+        "2,20 kg CO2e",
+        "3,60 kg CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "Si tolgono le fasi dopo il cancello: 2,40 − 0,20 − 0,90 − 0,10 = 1,20 kg CO2e. Togliere solo l’uso (1,50) lascerebbe dentro distribuzione e fine vita."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 11,
+      "domanda": "A che cosa servono le regole di categoria di prodotto (PCR)?",
+      "opzioni": [
+        "A fissare un limite massimo di emissioni per prodotto",
+        "A sostituire il rapporto di studio con un modulo",
+        "A stabilire regole comuni di calcolo per una famiglia di prodotti",
+        "A certificare che un prodotto è neutro per il clima"
+      ],
+      "corretta": 2,
+      "spiegazione": "Le PCR definiscono per una famiglia di prodotti regole comuni (unità, confini, allocazione, scenari): se esistono e sono pertinenti vanno adottate, ed è ciò che rende confrontabili gli studi."
+    },
+    {
+      "modulo": "m08",
+      "sezione": 11,
+      "domanda": "Un’azienda acquista crediti di carbonio pari a metà delle emissioni del suo prodotto. Come cambia la CFP calcolata secondo la ISO 14067?",
+      "opzioni": [
+        "Non cambia: la compensazione non entra nel calcolo",
+        "Si dimezza, se i crediti sono verificati",
+        "Si riduce solo per la parte di Scope 1",
+        "Diventa zero se i crediti vengono ritirati"
+      ],
+      "corretta": 0,
+      "spiegazione": "La compensazione non può essere inclusa nella quantificazione della CFP: i crediti si rendicontano separatamente e il risultato resta invariato."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 3,
+      "domanda": "Un’azienda ha emesso 2.000 t CO2e di Scope 1+2 nell’anno base e fissa un obiettivo di −42%. Qual è il valore massimo di emissioni nell’anno obiettivo?",
+      "opzioni": [
+        "840 t CO2e",
+        "1.160 t CO2e",
+        "1.580 t CO2e",
+        "1.916 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "2.000 × (1 − 0,42) = 2.000 × 0,58 = 1.160 t CO2e. 840 t è la riduzione richiesta, non il livello obiettivo."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 3,
+      "domanda": "Un recupero di calore fa risparmiare 50.000 Sm³ di gas naturale (combustione 2,0 kg CO2e/Sm³; filiera a monte 0,33 kg CO2e/Sm³). Di quanto scende lo Scope 1?",
+      "opzioni": [
+        "16,5 t CO2e",
+        "116,5 t CO2e",
+        "100 t CO2e",
+        "100.000 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "50.000 × 2,0 = 100.000 kg = 100 t CO2e nello Scope 1. Le 16,5 t della filiera a monte (50.000 × 0,33) si tolgono dallo Scope 3, categoria 3."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 3,
+      "domanda": "Nella gerarchia di mitigazione, quale posto occupa la compensazione?",
+      "opzioni": [
+        "Il primo: si compensa subito e poi si misura",
+        "Il secondo: precede gli interventi di efficienza",
+        "È alternativa alla riduzione, a scelta dell’azienda",
+        "L’ultimo: riguarda solo le emissioni residue"
+      ],
+      "corretta": 3,
+      "spiegazione": "Prima si misura, si evita, si riduce e si sostituisce; la compensazione riguarda soltanto le emissioni che restano dopo questi passi."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 5,
+      "domanda": "Con motori più efficienti e lampade LED un’azienda risparmia 200.000 kWh prelevati dalla rete (fattore medio 0,235 kg CO2e/kWh). Di quanto scende lo Scope 2 location-based?",
+      "opzioni": [
+        "4,7 t CO2e",
+        "47 t CO2e",
+        "90 t CO2e",
+        "47.000 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "200.000 × 0,235 = 47.000 kg = 47 t CO2e. Il valore 90 t si otterrebbe con il residual mix (0,45), che riguarda la lettura market-based."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 5,
+      "domanda": "Un’azienda acquista Garanzie d’Origine per tutta l’elettricità che preleva, senza cambiare i consumi. Che cosa succede allo Scope 2?",
+      "opzioni": [
+        "Il location-based resta invariato, il market-based scende a zero",
+        "Si azzerano sia il location-based sia il market-based",
+        "Il location-based scende a zero, il market-based non cambia",
+        "Restano invariati entrambi i valori dello Scope 2"
+      ],
+      "corretta": 0,
+      "spiegazione": "Le garanzie cambiano il fattore contrattuale del metodo market-based; il location-based dipende solo dai kWh prelevati e dal fattore medio della rete."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 5,
+      "domanda": "Un’azienda sposta dal camion (0,10 kg CO2e/tkm) al treno (0,028 kg CO2e/tkm) 1.000 t di merce su 1.200 km. Di quanto si riducono le emissioni?",
+      "opzioni": [
+        "33,6 t CO2e",
+        "120 t CO2e",
+        "86.400 t CO2e",
+        "86,4 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "1.000 × 1.200 = 1.200.000 tkm; 1.200.000 × (0,10 − 0,028) = 86.400 kg = 86,4 t CO2e. 120 t e 33,6 t sono le emissioni prima e dopo."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 7,
+      "domanda": "Un pastificio acquista 1.000.000 kg di semola da un fornitore che documenta un fattore di 0,63 kg CO2e/kg, contro lo 0,70 usato finora. Qual è la riduzione?",
+      "opzioni": [
+        "7 t CO2e",
+        "70 t CO2e",
+        "630 t CO2e",
+        "700 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "1.000.000 × (0,70 − 0,63) = 70.000 kg = 70 t CO2e. 630 t e 700 t sono le emissioni totali dopo e prima, non la differenza."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 7,
+      "domanda": "Un intervento ha un costo netto di 12.000 € l’anno (importo illustrativo) ed evita 150 t CO2e l’anno. Qual è il costo di abbattimento?",
+      "opzioni": [
+        "8 € per t CO2e",
+        "12,5 € per t CO2e",
+        "80 € per t CO2e",
+        "800 € per t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "12.000 € ÷ 150 t = 80 € per tonnellata evitata. Dividere le tonnellate per le migliaia di euro (150 ÷ 12 = 12,5) è l’errore tipico."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 7,
+      "domanda": "Perché la leva sulla semola compare nell’inventario solo se il fornitore documenta un fattore specifico?",
+      "opzioni": [
+        "Perché con il fattore medio il risultato dipende solo dai kg acquistati",
+        "Perché i dati dei fornitori sono sempre obbligatori per legge",
+        "Perché lo Scope 3 si calcola soltanto con il metodo della spesa",
+        "Perché il fattore medio si può usare soltanto per lo Scope 1"
+      ],
+      "corretta": 0,
+      "spiegazione": "Con il metodo dei dati medi le emissioni sono kg × fattore medio: finché il fattore resta 0,70 nessuna pratica migliorativa cambia il risultato. Serve un dato specifico e documentato."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 9,
+      "domanda": "Anno base: 1.000 t CO2e di Scope 1+2. Obiettivo: −42%. Le leve approvate tolgono 150, 200 e 30 t. Quanto manca all’obiettivo?",
+      "opzioni": [
+        "0 t: l’obiettivo è raggiunto",
+        "40 t CO2e",
+        "380 t CO2e",
+        "620 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "Obiettivo: 1.000 × 0,58 = 580 t. Risultato atteso: 1.000 − 380 = 620 t. Distanza: 620 − 580 = 40 t CO2e."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 9,
+      "domanda": "Per tagliare altre 60 t CO2e agendo solo sul gas naturale (2,0 kg CO2e/Sm³), quanti Sm³ bisogna ancora eliminare?",
+      "opzioni": [
+        "30 Sm³",
+        "3.000 Sm³",
+        "30.000 Sm³",
+        "120.000 Sm³"
+      ],
+      "corretta": 2,
+      "spiegazione": "60 t = 60.000 kg; 60.000 ÷ 2,0 = 30.000 Sm³. Moltiplicare invece di dividere porta a 120.000."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 9,
+      "domanda": "Il piano di Terrafelix riduce lo Scope 1+2 del 37,2% in market-based ma solo del 13,0% in location-based. Perché?",
+      "opzioni": [
+        "Perché il fotovoltaico conta solo nel metodo market-based",
+        "Perché il recupero di calore non rientra nel location-based",
+        "Perché il metodo location-based esclude tutto lo Scope 1",
+        "Perché le garanzie non cambiano il fattore medio della rete"
+      ],
+      "corretta": 3,
+      "spiegazione": "Le Garanzie d’Origine valgono 675 t nel market-based e zero nel location-based, che dipende solo dai kWh prelevati e dal fattore medio nazionale."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 11,
+      "domanda": "Un’azienda emette 100 kg CO2e per tonnellata di prodotto. La produzione passa da 10.000 a 12.000 t con la stessa intensità. Quanto emette?",
+      "opzioni": [
+        "120 t CO2e",
+        "1.000 t CO2e",
+        "1.200 t CO2e",
+        "1.200.000 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "12.000 t × 100 kg CO2e/t = 1.200.000 kg = 1.200 t CO2e: 200 t in più a intensità invariata, per il solo effetto volume."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 11,
+      "domanda": "Un’azienda raggiunge il suo obiettivo di intensità (−15% per unità di prodotto) ma le emissioni totali aumentano. Come è possibile?",
+      "opzioni": [
+        "La produzione è cresciuta più di quanto è scesa l’intensità",
+        "I fattori di emissione usati erano stati arrotondati",
+        "L’intensità è stata calcolata con il metodo market-based",
+        "Nel calcolo c’è sicuramente un errore di unità di misura"
+      ],
+      "corretta": 0,
+      "spiegazione": "Emissioni = produzione × intensità: se i volumi crescono più del 15% circa, il totale sale anche con un’intensità più bassa."
+    },
+    {
+      "modulo": "m09",
+      "sezione": 11,
+      "domanda": "Quale di questi obiettivi è formulato in modo verificabile?",
+      "opzioni": [
+        "−50% delle emissioni entro il 2030, con perimetro da definire",
+        "−42% di Scope 1+2 market-based entro il 2030 rispetto al 2025",
+        "−42% di Scope 1+2 entro il 2030 rispetto a un anno da scegliere",
+        "−30% di emissioni per unità, senza indicare quale unità"
+      ],
+      "corretta": 1,
+      "spiegazione": "Un obiettivo è verificabile se dichiara anno base, anno di arrivo, perimetro (scope) e metodo: solo la seconda formulazione li contiene tutti."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 3,
+      "domanda": "Un’azienda vuole compensare 128,4 t CO2e di emissioni residue. Quanti crediti deve ritirare?",
+      "opzioni": [
+        "128 crediti",
+        "129 crediti",
+        "1.284 crediti",
+        "13 crediti"
+      ],
+      "corretta": 1,
+      "spiegazione": "1 credito = 1 t CO2e e i crediti sono interi: 128,4 t si arrotondano per eccesso a 129 crediti, altrimenti 0,4 t resterebbero scoperte."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 3,
+      "domanda": "Che cosa significa che un progetto è «addizionale»?",
+      "opzioni": [
+        "Che senza i crediti il progetto non sarebbe stato realizzato",
+        "Che i suoi crediti si sommano alle emissioni dell’inventario",
+        "Che produce ogni anno più crediti dell’anno precedente",
+        "Che lo stesso credito può essere usato da più aziende"
+      ],
+      "corretta": 0,
+      "spiegazione": "L’addizionalità indica che la riduzione o la rimozione esiste grazie ai crediti: senza quei proventi il progetto non ci sarebbe stato."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 3,
+      "domanda": "Terrafelix compra e ritira 40 crediti. Come cambia lo Scope 1 dell’inventario 2025 (2.257,8 t CO2e)?",
+      "opzioni": [
+        "Scende a 2.217,8 t CO2e",
+        "Scende soltanto la voce dei gas refrigeranti",
+        "Resta 2.257,8 t CO2e: i crediti si riportano a parte",
+        "Passa per 40 t CO2e allo Scope 3"
+      ],
+      "corretta": 2,
+      "spiegazione": "I crediti non entrano nell’inventario: le emissioni restano quelle calcolate e la compensazione si rendiconta separatamente."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 5,
+      "domanda": "Secondo la ISO 14068-1, quali emissioni si compensano con i crediti?",
+      "opzioni": [
+        "Tutte le emissioni dell’anno base, prima di ogni intervento",
+        "Soltanto le emissioni indirette della catena del valore",
+        "Quelle che costa meno compensare rispetto a ridurre",
+        "Solo le emissioni residue, dando priorità alla riduzione"
+      ],
+      "corretta": 3,
+      "spiegazione": "La neutralità richiede quantificazione, un piano con obiettivi di riduzione, priorità alle riduzioni e compensazione delle sole emissioni residue."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 5,
+      "domanda": "Quale di queste frasi è a rischio di greenwashing?",
+      "opzioni": [
+        "«Scope 1 del 2025: 2.257,8 t CO2e»",
+        "«CFP: 1,47 kg CO2e per kg di pasta, ISO 14067»",
+        "«Pasta a impatto zero sul clima»",
+        "«Obiettivo: −42% di Scope 1+2 entro il 2030 sul 2025»"
+      ],
+      "corretta": 2,
+      "spiegazione": "«Impatto zero» è un’asserzione generica e non dimostrabile: la pasta ha una carbon footprint di 1,47 kg CO2e per kg."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 5,
+      "domanda": "Un’azienda emette 500 t CO2e, ne elimina 180 con il piano di riduzione e vuole compensare il residuo. Quanti crediti deve ritirare?",
+      "opzioni": [
+        "180 crediti",
+        "320 crediti",
+        "500 crediti",
+        "680 crediti"
+      ],
+      "corretta": 1,
+      "spiegazione": "Si compensa solo il residuo: 500 − 180 = 320 t CO2e, cioè 320 crediti."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 7,
+      "domanda": "Terrafelix comunica l’intensità di Scope 1+2 location-based: 2.257,8 t + 752 t di CO2e su 20.000 t di pasta. Quanto vale?",
+      "opzioni": [
+        "150,5 kg CO2e per tonnellata di pasta",
+        "112,9 kg CO2e per tonnellata di pasta",
+        "157,9 kg CO2e per tonnellata di pasta",
+        "1.505 kg CO2e per tonnellata di pasta"
+      ],
+      "corretta": 0,
+      "spiegazione": "(2.257,8 + 752) = 3.009,8 t = 3.009.800 kg; diviso 20.000 t di pasta dà 150,5 kg CO2e per tonnellata."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 7,
+      "domanda": "Un cliente chiede «il dato di CO2 per kg di pasta». Quale numero risponde alla domanda?",
+      "opzioni": [
+        "Lo Scope 1 diviso per i chili prodotti",
+        "Lo Scope 2 market-based dell’anno",
+        "La CFP del prodotto, con i confini dichiarati",
+        "Il numero di crediti ritirati nell’anno"
+      ],
+      "corretta": 2,
+      "spiegazione": "Il dato per unità di prodotto è la carbon footprint di prodotto (1,47 kg CO2e per kg dalla culla alla tomba), sempre con unità funzionale e confini."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 7,
+      "domanda": "In una scheda dati, come si presentano i due valori dello Scope 2?",
+      "opzioni": [
+        "Si sommano in un unico totale",
+        "Si riporta solo il più basso dei due",
+        "Si riporta la media dei due valori",
+        "Si riportano entrambi, senza sommarli"
+      ],
+      "corretta": 3,
+      "spiegazione": "Location-based e market-based sono due letture dello stesso consumo: si riportano entrambe, dichiarando il metodo, e non si sommano."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 9,
+      "domanda": "Officine Sannio preleva 420.000 kWh senza garanzie d’origine. Quanto vale lo Scope 2 market-based (residual mix: 0,45 kg CO2e/kWh)?",
+      "opzioni": [
+        "98,7 t CO2e",
+        "189,0 t CO2e",
+        "18,9 t CO2e",
+        "189.000 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "420.000 × 0,45 = 189.000 kg CO2e, cioè 189,0 t. 98,7 t è il valore location-based (fattore 0,235)."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 9,
+      "domanda": "Il trasporto dell’acciaio: 1.200 t per 400 km su gomma (0,1 kg CO2e/tkm). Quante tonnellate di CO2e?",
+      "opzioni": [
+        "4,8 t CO2e",
+        "480 t CO2e",
+        "48,0 t CO2e",
+        "120 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "1.200 t × 400 km = 480.000 tkm; × 0,1 = 48.000 kg CO2e, cioè 48,0 t."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 9,
+      "domanda": "Perché le consegne ai clienti, fatte con i furgoni aziendali, non compaiono nello Scope 3?",
+      "opzioni": [
+        "Perché sono già nello Scope 1, con il gasolio dei mezzi",
+        "Perché i trasporti a valle sono sempre esclusi",
+        "Perché il loro costo è addebitato al cliente",
+        "Perché rientrano nello Scope 2 dell’azienda"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il gasolio dei mezzi aziendali è combustione mobile, già contata nello Scope 1: riportarla anche nello Scope 3 sarebbe un doppio conteggio."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 11,
+      "domanda": "Una ricarica di 5 kg di R-410A (GWP 2.256): a quante tonnellate di CO2e corrisponde?",
+      "opzioni": [
+        "1,1 t CO2e",
+        "11,3 t CO2e",
+        "113 t CO2e",
+        "11.280 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "5 kg × 2.256 = 11.280 kg CO2e, cioè 11,3 t CO2e: bisogna ricordarsi di dividere per 1.000."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 11,
+      "domanda": "Quale di queste operazioni è un errore?",
+      "opzioni": [
+        "Riportare lo Scope 2 con i due metodi",
+        "Citare fonte e anno di ogni fattore",
+        "Sottrarre dal totale i crediti ritirati",
+        "Riportare a parte la CO2 biogenica"
+      ],
+      "corretta": 2,
+      "spiegazione": "I crediti di compensazione non entrano nell’inventario: le emissioni restano quelle calcolate e i crediti si rendicontano separatamente."
+    },
+    {
+      "modulo": "m10",
+      "sezione": 11,
+      "domanda": "In quale ordine si costruisce un inventario?",
+      "opzioni": [
+        "Calcolo, confini, rapporto, raccolta dei dati",
+        "Rapporto, calcolo, raccolta dei dati, confini",
+        "Raccolta dei dati, verifica, confini, calcolo",
+        "Confini, raccolta dei dati, calcolo, rapporto"
+      ],
+      "corretta": 3,
+      "spiegazione": "Prima si decide che cosa contare (confini), poi si raccolgono i dati, si calcola e infine si scrive il rapporto, che può essere verificato."
+    }
+  ],
+  "esame": [
+    {
+      "modulo": "m01",
+      "domanda": "Quale obiettivo di temperatura fissa l’Accordo di Parigi del 2015?",
+      "opzioni": [
+        "Riportare la temperatura media ai livelli del 1990 entro il 2030",
+        "Fermare l’aumento a 1,1 °C entro il 2050",
+        "Restare ben al di sotto dei 2 °C, puntando a 1,5 °C",
+        "Ridurre la temperatura media di 2 °C entro fine secolo"
+      ],
+      "corretta": 2,
+      "spiegazione": "L’Accordo di Parigi impegna a contenere l’aumento della temperatura media globale ben al di sotto dei 2 °C e a proseguire gli sforzi per limitarlo a 1,5 °C."
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Quali gas vengono chiamati, nel loro insieme, «gas fluorurati»?",
+      "opzioni": [
+        "HFC, PFC, SF6 e NF3",
+        "CO2, CH4 e N2O",
+        "CH4, N2O e HFC",
+        "CO2, SF6 e NF3"
+      ],
+      "corretta": 0,
+      "spiegazione": "HFC, PFC, SF6 e NF3 sono i gas fluorurati: si emettono in piccole quantità ma hanno GWP molto elevati."
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Da un climatizzatore si disperdono 5 kg di R-410A (GWP AR6 = 2.256). A quante tonnellate di CO2e corrisponde la perdita?",
+      "opzioni": [
+        "1,128 t CO2e",
+        "11,28 t CO2e",
+        "112,8 t CO2e",
+        "11.280 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "5 × 2.256 = 11.280 kg CO2e, cioè 11,28 t CO2e."
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Una tubazione perde 20 kg di metano di origine fossile (GWP AR6 = 29,8). Quanto vale la perdita in CO2 equivalente?",
+      "opzioni": [
+        "596 kg CO2e",
+        "20 kg CO2e",
+        "59,6 kg CO2e",
+        "5.960 kg CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "20 × 29,8 = 596 kg CO2e. Rispondere 20 kg significa confondere la massa del gas con la CO2 equivalente."
+    },
+    {
+      "modulo": "m01",
+      "domanda": "A quale domanda risponde la carbon footprint di un’organizzazione?",
+      "opzioni": [
+        "Quanto emette un’unità di prodotto dal campo al piatto",
+        "Quanti crediti di carbonio servono per la neutralità",
+        "Quanto emette il solo stabilimento per kg prodotto",
+        "Quanto emette l’azienda, entro i suoi confini, in un anno"
+      ],
+      "corretta": 3,
+      "spiegazione": "L’inventario di organizzazione (ISO 14064-1, GHG Protocol) quantifica le emissioni dell’azienda in un anno, entro confini dichiarati; il prodotto è oggetto della ISO 14067."
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Una palestra consuma in un anno 1.800 Sm³ di gas naturale (fattore didattico 2,0 kg CO2e/Sm³). Quante tonnellate di CO2e emette?",
+      "opzioni": [
+        "0,9 t CO2e",
+        "3,6 t CO2e",
+        "36 t CO2e",
+        "3.600 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "1.800 × 2,0 = 3.600 kg CO2e; dividendo per 1.000 si ottengono 3,6 t CO2e."
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Con il fattore didattico di 2,65 kg CO2e per litro, quanti litri di gasolio bruciati corrispondono a circa 1 t CO2e?",
+      "opzioni": [
+        "265 litri",
+        "2.650 litri",
+        "377 litri",
+        "3.774 litri"
+      ],
+      "corretta": 2,
+      "spiegazione": "1 t = 1.000 kg; 1.000 ÷ 2,65 = 377 litri circa."
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Una banca chiede a un’impresa le emissioni complessive dell’azienda e un obiettivo di riduzione. Quale strumento serve?",
+      "opzioni": [
+        "La carbon footprint di un prodotto secondo la ISO 14067",
+        "Una dichiarazione di neutralità secondo la ISO 14068-1",
+        "Una dichiarazione ambientale di prodotto (EPD)",
+        "L’inventario GHG dell’organizzazione (ISO 14064-1)"
+      ],
+      "corretta": 3,
+      "spiegazione": "La richiesta riguarda l’azienda nel suo insieme: serve l’inventario di organizzazione, secondo la ISO 14064-1 o il GHG Protocol, su cui fissare gli obiettivi."
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Qual è l’oggetto della ISO 14068-1?",
+      "opzioni": [
+        "La neutralità carbonica",
+        "La verifica degli inventari",
+        "I progetti di riduzione",
+        "La valutazione del ciclo di vita"
+      ],
+      "corretta": 0,
+      "spiegazione": "La ISO 14068-1 riguarda la neutralità carbonica: quantificazione, piano di riduzione e compensazione delle sole emissioni residue. Ha sostituito la PAS 2060."
+    },
+    {
+      "modulo": "m01",
+      "domanda": "In quale scope rientra l’elettricità che l’azienda acquista dalla rete e consuma?",
+      "opzioni": [
+        "Scope 1, perché è consumata dentro i cancelli",
+        "Scope 3 a monte, perché è prodotta da un fornitore",
+        "Scope 2, perché è energia acquistata",
+        "Scope 3 a valle, perché alimenta i prodotti"
+      ],
+      "corretta": 2,
+      "spiegazione": "Lo Scope 2 comprende le emissioni indirette da elettricità, calore, vapore o raffrescamento acquistati e consumati dall’azienda."
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Un’officina consuma in un anno 4.000 Sm³ di gas naturale (2,0 kg CO2e/Sm³) e 30.000 kWh di elettricità di rete (0,235 kg CO2e/kWh). Quanto vale il totale?",
+      "opzioni": [
+        "1,505 t CO2e",
+        "8,0 t CO2e",
+        "150,5 t CO2e",
+        "15,05 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "4.000 × 2,0 = 8.000 kg; 30.000 × 0,235 = 7.050 kg; in tutto 15.050 kg CO2e, cioè 15,05 t CO2e."
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Un’azienda acquista crediti di carbonio. Come vanno trattati rispetto all’inventario delle emissioni?",
+      "opzioni": [
+        "Si sottraggono dallo Scope 1 dell’anno di acquisto",
+        "Si dichiarano a parte, senza sottrarli dall’inventario",
+        "Si sommano allo Scope 3 come beni acquistati",
+        "Si sottraggono dal totale se il progetto è verificato"
+      ],
+      "corretta": 1,
+      "spiegazione": "Compensare non è ridurre: i crediti non entrano nel calcolo dell’inventario né della carbon footprint di prodotto e vanno dichiarati separatamente."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Che cosa esprime la formula base del conteggio delle emissioni?",
+      "opzioni": [
+        "La somma di tutti i consumi di energia dell’azienda in un anno",
+        "La quantità di attività moltiplicata per le emissioni di ogni unità",
+        "Il rapporto tra le emissioni dell’azienda e il suo fatturato annuo",
+        "La differenza tra le emissioni prodotte e quelle compensate"
+      ],
+      "corretta": 1,
+      "spiegazione": "Emissioni = dato di attività × fattore di emissione: quanto si è svolta l’attività, moltiplicato per quanto emette ogni unità."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Una flotta ha consumato 8.500 l di gasolio (fattore 2,65 kg CO2e/l). Quanto vale l’emissione?",
+      "opzioni": [
+        "2,25 t CO2e",
+        "19,6 t CO2e",
+        "22,5 t CO2e",
+        "22.525 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "8.500 × 2,65 = 22.525 kg CO2e, cioè 22,5 t CO2e. Il valore 19,6 t deriva dal fattore della benzina; 22.525 t dalla mancata conversione da kg a tonnellate."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "In quale documento si trova di norma il dato di attività per i gas refrigeranti?",
+      "opzioni": [
+        "Nei rapporti di intervento del frigorista",
+        "Nelle bollette dell’energia elettrica",
+        "Nelle schede carburante della flotta",
+        "Nei documenti di trasporto dei fornitori"
+      ],
+      "corretta": 0,
+      "spiegazione": "I kg di gas reintegrati sono riportati nei rapporti di intervento del frigorista e nel registro dell’apparecchiatura."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Un contratto di fornitura di calore riporta 180 GJ. A quanti kWh corrispondono, sapendo che 1 GJ = 277,8 kWh?",
+      "opzioni": [
+        "648 kWh",
+        "1.764 kWh",
+        "180.000 kWh",
+        "50.004 kWh"
+      ],
+      "corretta": 3,
+      "spiegazione": "180 × 277,8 = 50.004 kWh. Gli altri valori nascono da fattori di conversione sbagliati (3,6; 9,8; 1.000)."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Una fattura riporta 1.500 kg di gasolio, ma il fattore di emissione è per litro. Con una densità indicativa di 0,84 kg/l, a quanti litri corrispondono?",
+      "opzioni": [
+        "1.260 l",
+        "1.786 l",
+        "1.500 l",
+        "2.027 l"
+      ],
+      "corretta": 1,
+      "spiegazione": "Da kg a litri si divide per la densità: 1.500 ÷ 0,84 ≈ 1.786 l. Moltiplicando si otterrebbe 1.260 l, il verso sbagliato."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Come si legge il fattore «0,035 kg CO2e/pkm» del treno?",
+      "opzioni": [
+        "0,035 kg di CO2e per ogni chilometro percorso dal treno",
+        "0,035 kg di CO2e per ogni passeggero, qualunque sia la distanza",
+        "0,035 kg di CO2e per ogni passeggero trasportato per un chilometro",
+        "0,035 kg di CO2e per ogni chilogrammo di bagaglio trasportato"
+      ],
+      "corretta": 2,
+      "spiegazione": "Il denominatore pkm è il prodotto passeggeri × chilometri: il fattore vale per un passeggero trasportato per un chilometro."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Un inventario italiano del 2025 usa per l’elettricità un fattore di un altro Paese, pubblicato nel 2012. Quali criteri di scelta non sono rispettati?",
+      "opzioni": [
+        "Paese e anno di riferimento del fattore",
+        "Unità di misura del dato di attività",
+        "Numero di cifre decimali del fattore",
+        "Distinzione tra dati misurati e stimati"
+      ],
+      "corretta": 0,
+      "spiegazione": "Un fattore deve riferirsi al Paese in cui avviene il consumo e all’anno più vicino a quello dell’inventario: il fattore dell’elettricità cambia molto da un Paese all’altro e da un anno all’altro."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Da un impianto sono sfuggiti 50 kg di metano di origine fossile (GWP AR6 = 29,8). Quanto vale l’emissione?",
+      "opzioni": [
+        "50 kg CO2e",
+        "1.350 kg CO2e",
+        "14.900 kg CO2e",
+        "1.490 kg CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "50 × 29,8 = 1.490 kg CO2e. Il valore 1.350 kg userebbe il GWP del metano non fossile (27,0)."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Quale di questi è un dato primario?",
+      "opzioni": [
+        "Il consumo medio di un furgone tratto da una banca dati",
+        "I kWh letti sulle bollette elettriche dell’azienda",
+        "Il fattore di emissione medio di un materiale",
+        "La distanza media casa-lavoro di un’indagine nazionale"
+      ],
+      "corretta": 1,
+      "spiegazione": "Sono primari i dati misurati o specifici dell’azienda, come le bollette; i valori medi tratti da banche dati o indagini sono dati secondari."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Un ufficio ha consumato 2.500 Sm³ di gas (2,0 kg CO2e/Sm³) e 12.000 kWh di elettricità (0,235 kg CO2e/kWh). Qual è il totale delle emissioni?",
+      "opzioni": [
+        "7,8 t CO2e",
+        "14,5 t CO2e",
+        "29 t CO2e",
+        "7.820 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "2.500 × 2,0 = 5.000 kg; 12.000 × 0,235 = 2.820 kg; totale 7.820 kg CO2e, cioè 7,8 t CO2e."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Un calcolo riporta: 300 MWh × 0,235 kg CO2e/kWh = 70,5 kg CO2e. Qual è il risultato corretto?",
+      "opzioni": [
+        "70,5 kg CO2e, come calcolato",
+        "705 kg CO2e",
+        "70,5 t CO2e",
+        "705 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "I MWh vanno prima convertiti: 300 MWh = 300.000 kWh; 300.000 × 0,235 = 70.500 kg CO2e, cioè 70,5 t CO2e."
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Quali informazioni deve riportare ogni riga di un registro di calcolo ben documentato?",
+      "opzioni": [
+        "Solo il risultato finale, espresso in tonnellate di CO2e",
+        "Il prezzo unitario pagato per il combustibile o l’energia",
+        "Il nome e la versione del programma usato per i conti",
+        "Dato con unità e documento, fattore con fonte, risultato"
+      ],
+      "corretta": 3,
+      "spiegazione": "La tracciabilità richiede, per ogni voce, il dato di attività con unità e documento di origine, il fattore con la sua fonte e il risultato."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un’azienda vuole confrontare l’inventario di quest’anno con quello dell’anno scorso. Quale principio chiede di usare gli stessi confini e metodi nei due anni?",
+      "opzioni": [
+        "Coerenza",
+        "Pertinenza",
+        "Completezza",
+        "Trasparenza"
+      ],
+      "corretta": 0,
+      "spiegazione": "La coerenza chiede criteri e metodi uguali nel tempo, perché i confronti abbiano senso; se qualcosa cambia lo si dichiara e, oltre la soglia, si ricalcola l’anno base."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Una capogruppo emette 2.000 t CO2e; possiede il 70% di una società controllata che ne emette 1.000 e il 25% di una società non controllata che ne emette 400. Quanto consolida con la quota di partecipazione?",
+      "opzioni": [
+        "2.700 t CO2e",
+        "2.800 t CO2e",
+        "3.000 t CO2e",
+        "3.400 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "Ogni società entra per la percentuale posseduta: 2.000 + 1.000 × 0,70 + 400 × 0,25 = 2.800 t CO2e. Con l’approccio del controllo sarebbero state 3.000 t."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Con il controllo operativo, un’azienda possiede un capannone che ha affittato a un’altra impresa, la quale lo gestisce e paga le utenze. Come tratta le emissioni di quel capannone?",
+      "opzioni": [
+        "Come emissioni dirette, perché ne è proprietaria",
+        "Come indirette da energia, per le utenze consumate",
+        "Come altre indirette, da bene dato in locazione",
+        "Non le considera in alcun modo nell’inventario"
+      ],
+      "corretta": 2,
+      "spiegazione": "Con il controllo operativo conta chi gestisce il bene, non chi lo possiede: il capannone gestito da terzi genera emissioni indirette (beni in leasing a valle), da valutare per significatività."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Quale di questi prodotti genera emissioni dirette della fase d’uso, che chi lo vende deve includere nella categoria 11 dello Scope 3?",
+      "opzioni": [
+        "Un pacco di pasta da cuocere",
+        "Una maglietta da lavare",
+        "Un detersivo per lavatrice",
+        "Una caldaia a gas naturale"
+      ],
+      "corretta": 3,
+      "spiegazione": "La caldaia brucia combustibile ed emette mentre viene usata: è un’emissione diretta della fase d’uso. Pasta, capi e detersivi richiedono energia solo indirettamente e la loro inclusione è facoltativa."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un’azienda ha stimato per lo Scope 3: beni e servizi acquistati 2.400 t, beni strumentali 150 t, energia a monte 90 t, rifiuti 20 t, trasporto a monte 300 t CO2e. Quanto vale la categoria 4 ISO?",
+      "opzioni": [
+        "2.400 t CO2e",
+        "2.550 t CO2e",
+        "2.660 t CO2e",
+        "2.960 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "Nella categoria 4 ISO confluiscono acquisti, beni strumentali, energia a monte e rifiuti: 2.400 + 150 + 90 + 20 = 2.660 t CO2e. Il trasporto a monte, categoria 4 dello Scope 3, va nella categoria 3 ISO."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un’azienda consuma 200.000 Sm³ di gas naturale. Fattori: combustione 2,0 e filiera a monte 0,33 kg CO2e/Sm³. Come si ripartiscono le emissioni?",
+      "opzioni": [
+        "400 t nello Scope 1 e 66 t nello Scope 3",
+        "466 t nello Scope 1 e nulla nello Scope 3",
+        "66 t nello Scope 1 e 400 t nello Scope 3",
+        "400.000 t nello Scope 1 e 66.000 t nello Scope 3"
+      ],
+      "corretta": 0,
+      "spiegazione": "Combustione: 200.000 × 2,0 = 400.000 kg, cioè 400 t (Scope 1). Filiera a monte: 200.000 × 0,33 = 66.000 kg, cioè 66 t (Scope 3, categoria 3): stesso dato, due caselle."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un’azienda ha un inventario stimato di 4.000 t CO2e e considera significativa per entità ogni categoria indiretta sopra il 2% del totale. Il pendolarismo vale 60 t. Qual è l’esito?",
+      "opzioni": [
+        "0,15%: sotto la soglia di entità",
+        "1,5%: sotto la soglia di entità",
+        "15%: sopra la soglia di entità",
+        "66,7%: sopra la soglia di entità"
+      ],
+      "corretta": 1,
+      "spiegazione": "60 ÷ 4.000 × 100 = 1,5%, sotto il 2%: per entità non è significativa. Può però esserlo per un altro criterio scritto dall’azienda, come il coinvolgimento del personale."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Dopo un’acquisizione un’azienda ricalcola l’anno base da 9.000 a 10.000 t CO2e. Nell’anno corrente emette 9.400 t. Qual è la variazione corretta rispetto all’anno base?",
+      "opzioni": [
+        "+6,0%",
+        "+4,4%",
+        "−6,4%",
+        "−6,0%"
+      ],
+      "corretta": 3,
+      "spiegazione": "Si confronta con l’anno base ricalcolato: (9.400 − 10.000) ÷ 10.000 × 100 = −6,0%. Il +4,4% si ottiene con il vecchio anno base, che non comprende la società acquisita."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un’azienda brucia cippato: dal camino escono 300 t di CO2 biogenica, più CH4 e N2O per 4 t CO2e. La flotta a gasolio emette 46 t CO2e. Come si riportano queste voci?",
+      "opzioni": [
+        "Scope 1 di 350 t; nessuna voce a parte",
+        "Scope 1 di 50 t; a parte 300 t di CO2 biogenica",
+        "Scope 1 di 46 t; a parte 304 t da biomassa",
+        "Scope 1 di 346 t; a parte 4 t di CH4 e N2O"
+      ],
+      "corretta": 1,
+      "spiegazione": "La CO2 biogenica si quantifica e si riporta separatamente; CH4 e N2O della stessa combustione restano nello Scope 1: 46 + 4 = 50 t CO2e, con 300 t di CO2 biogenica a parte."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "A chi conviene chiedere i chili di gas refrigerante reintegrati nell’anno, e da quale documento?",
+      "opzioni": [
+        "All’amministrazione, dagli importi delle fatture del frigorista",
+        "Agli acquisti, dal numero di climatizzatori comprati nell’anno",
+        "Al fornitore di elettricità, dai kWh assorbiti dagli impianti",
+        "A chi segue la manutenzione, dal registro delle apparecchiature"
+      ],
+      "corretta": 3,
+      "spiegazione": "Il dato va chiesto a chi lo produce e in unità fisiche: i kg reintegrati si leggono nel registro delle apparecchiature e nei rapporti del frigorista, non negli importi o nei consumi elettrici."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un’azienda vuole dichiarare la conformità alla ISO 14064-1. Come imposta il dato dell’elettricità nel documento di impostazione?",
+      "opzioni": [
+        "Market-based nel totale; location-based non riportato",
+        "Somma dei due metodi nel totale dell’inventario",
+        "Location-based nel totale; market-based in aggiunta, a parte",
+        "Il metodo che dà il valore più basso, scelto ogni anno"
+      ],
+      "corretta": 2,
+      "spiegazione": "La norma chiede l’approccio location-based; i dati market-based possono essere riportati in aggiunta, separatamente, senza sommarli."
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un commerciale va in trasferta con l’auto aziendale, rifornita con la carta carburante dell’azienda. Dove si contano le emissioni del viaggio?",
+      "opzioni": [
+        "Solo nello Scope 1, con i litri della flotta",
+        "Solo nello Scope 3, tra i viaggi di lavoro",
+        "Nello Scope 1 e anche tra i viaggi di lavoro",
+        "Nello Scope 2, insieme all’energia acquistata"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il carburante dell’auto aziendale è già nei litri dello Scope 1: aggiungerlo ai viaggi di lavoro (Scope 3, categoria 6) sarebbe un doppio conteggio."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Quale di queste sorgenti NON appartiene allo Scope 1 di un’azienda?",
+      "opzioni": [
+        "La caldaia a gas naturale dello stabilimento",
+        "I furgoni aziendali alimentati a gasolio",
+        "L’elettricità prelevata dalla rete nazionale",
+        "Le perdite di gas dai climatizzatori"
+      ],
+      "corretta": 2,
+      "spiegazione": "L’elettricità acquistata è un’emissione indiretta da energia: Scope 2. Caldaia, furgoni e perdite di refrigerante sono sorgenti dirette."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Le dodici bollette di uno stabilimento sommano 85.000 Sm³ di gas naturale (fattore 2,0 kg CO2e/Sm³). Qual è l’emissione annua?",
+      "opzioni": [
+        "17 t CO2e",
+        "170 t CO2e",
+        "42,5 t CO2e",
+        "1.700 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "85.000 × 2,0 = 170.000 kg CO2e, cioè 170 t CO2e."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "La bolletta del gas di dicembre riporta una lettura stimata; a gennaio arriva il conguaglio. Come si determina il consumo dell’anno?",
+      "opzioni": [
+        "Con il consumo effettivo: bollette più conguaglio",
+        "Con le sole bollette emesse entro dicembre",
+        "Con la media dei consumi degli ultimi tre anni",
+        "Con l’importo pagato diviso per il prezzo del gas"
+      ],
+      "corretta": 0,
+      "spiegazione": "Conta il consumo effettivo dal 1° gennaio al 31 dicembre: il conguaglio corregge la stima e va attribuito all’anno a cui si riferisce."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Serbatoio del gruppo elettrogeno: giacenza iniziale 300 l, acquisti 1.000 l, giacenza finale 500 l. Con 2,65 kg CO2e/l, quanto vale l’emissione?",
+      "opzioni": [
+        "0,80 t CO2e",
+        "2,65 t CO2e",
+        "4,77 t CO2e",
+        "2,12 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "Consumo = 300 + 1.000 − 500 = 800 litri; 800 × 2,65 = 2.120 kg, cioè 2,12 t CO2e. Usare i soli acquisti darebbe 2,65 t."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "In un anno quattro furgoni consumano 22.000 l di gasolio (2,65 kg CO2e/l) e due auto 3.000 l di benzina (2,3 kg CO2e/l). Quanto emette la flotta?",
+      "opzioni": [
+        "57,5 t CO2e",
+        "65,2 t CO2e",
+        "66,3 t CO2e",
+        "652 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "22.000 × 2,65 = 58.300 kg; 3.000 × 2,3 = 6.900 kg; totale 65.200 kg, cioè 65,2 t CO2e."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Di un’auto a gasolio si conoscono solo i chilometri: 40.000 km, consumo medio 6 litri ogni 100 km. Con il metodo km × consumo × 2,65 kg CO2e/l si ottiene:",
+      "opzioni": [
+        "6,36 t CO2e",
+        "6,80 t CO2e",
+        "0,64 t CO2e",
+        "63,6 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "40.000 × 0,06 = 2.400 litri; 2.400 × 2,65 = 6.360 kg, cioè 6,36 t CO2e. Il valore 6,80 t si ottiene con il fattore medio per km, che è un altro metodo."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Un’auto elettrica aziendale viene ricaricata alla colonnina dello stabilimento. Come si trattano le sue emissioni?",
+      "opzioni": [
+        "Scope 1, come combustione mobile",
+        "Scope 3, tra i viaggi di lavoro",
+        "Scope 1, tra le emissioni fuggitive",
+        "Scope 2: sono già nella bolletta elettrica"
+      ],
+      "corretta": 3,
+      "spiegazione": "L’auto elettrica non brucia carburante: le emissioni sono quelle dell’elettricità, già compresa nei kWh prelevati dalla rete. Aggiungerle di nuovo sarebbe un doppio conteggio."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Nell’anno il frigorista ha reintegrato 4 kg di R-410A (GWP 2.256) e 2 kg di HFC-134a (GWP 1.530). Quanto valgono le emissioni fuggitive?",
+      "opzioni": [
+        "1,2 t CO2e",
+        "9,2 t CO2e",
+        "12,1 t CO2e",
+        "13,5 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "4 × 2.256 = 9.024 kg; 2 × 1.530 = 3.060 kg; totale 12.084 kg, cioè 12,1 t CO2e. Ogni gas va moltiplicato per il proprio GWP."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Sull’etichetta di un climatizzatore la carica di R-410A è indicata anche in t CO2e. Perché non conviene copiare quel valore nell’inventario?",
+      "opzioni": [
+        "Perché l’etichetta riporta sempre la CO2 e mai la CO2e",
+        "Perché può usare GWP di un rapporto IPCC diverso",
+        "Perché le fuggitive si calcolano dalla potenza",
+        "Perché i gas fluorurati vanno nello Scope 3"
+      ],
+      "corretta": 1,
+      "spiegazione": "La normativa europea sui gas fluorurati usa i GWP del quarto rapporto IPCC (R-410A: 2.088); nell’inventario si usa una sola serie di GWP, applicata ai kg di gas reintegrati."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Quale di queste è un’emissione di processo?",
+      "opzioni": [
+        "La CO2 liberata dal calcare cotto in una fornace",
+        "La CO2 del gas naturale bruciato nel forno",
+        "Il refrigerante perso da un gruppo frigo",
+        "La CO2 del gasolio di un gruppo elettrogeno"
+      ],
+      "corretta": 0,
+      "spiegazione": "La decarbonatazione libera CO2 dalla materia prima per reazione chimica: non dipende dal combustibile. Le altre sono combustione o fuggitive."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Un’azienda consuma 20.000 Sm³ di gas (2,0 kg CO2e/Sm³), 3.000 l di gasolio (2,65 kg CO2e/l) e reintegra 2 kg di R-410A (GWP 2.256). Scope 1 totale?",
+      "opzioni": [
+        "40,0 t CO2e",
+        "48,0 t CO2e",
+        "52,5 t CO2e",
+        "524,6 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "40.000 + 7.950 + 4.512 = 52.462 kg, cioè 52,5 t CO2e. Senza il refrigerante si otterrebbe 48,0 t: due chili di gas valgono 4,5 t."
+    },
+    {
+      "modulo": "m04",
+      "domanda": "A che cosa serve calcolare i kWh termici per tonnellata di prodotto prima di chiudere lo Scope 1?",
+      "opzioni": [
+        "A sostituire il fattore di emissione del gas",
+        "A convertire le emissioni da CO2 a CO2e",
+        "A ripartire il gas tra Scope 1 e Scope 2",
+        "A controllare la plausibilità del dato di attività"
+      ],
+      "corretta": 3,
+      "spiegazione": "È un indicatore di plausibilità: un valore molto diverso dagli anni precedenti o dai dati degli impianti segnala errori di unità, bollette mancanti o doppie."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Quale di queste voci rientra nello Scope 2 di un’azienda?",
+      "opzioni": [
+        "Il gas naturale bruciato nella caldaia aziendale",
+        "Il vapore acquistato da una centrale di terzi",
+        "Le perdite di energia lungo la rete elettrica",
+        "L’elettricità autoprodotta e autoconsumata"
+      ],
+      "corretta": 1,
+      "spiegazione": "Lo Scope 2 comprende l’energia acquistata e consumata: elettricità, calore, vapore, raffrescamento. Il gas bruciato in azienda è Scope 1, le perdite di rete sono Scope 3, l’autoconsumo si riporta a parte."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "La bolletta annuale di un magazzino riporta: F1 52.000 kWh, F2 30.000 kWh, F3 38.000 kWh ed energia reattiva 15.000 kvarh. Con 0,235 kg CO2e/kWh, qual è lo Scope 2 location-based?",
+      "opzioni": [
+        "12,2 t CO2e",
+        "31,7 t CO2e",
+        "28,2 t CO2e",
+        "28.200 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "Si sommano le tre fasce di energia attiva: 120.000 kWh × 0,235 = 28.200 kg, cioè 28,2 t CO2e. L’energia reattiva non entra nel calcolo."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Un’azienda preleva 500.000 kWh sia nel primo sia nel secondo anno. Il fattore medio di rete passa da 0,235 a 0,199 kg CO2e/kWh. Di quanto scende lo Scope 2 location-based?",
+      "opzioni": [
+        "18 t CO2e",
+        "1,8 t CO2e",
+        "99,5 t CO2e",
+        "117,5 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "500.000 × 0,235 = 117.500 kg e 500.000 × 0,199 = 99.500 kg: la differenza è 18.000 kg, cioè 18 t CO2e, dovute solo al fattore della rete e non a interventi dell’azienda."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Un’azienda preleva 800.000 kWh: 300.000 coperti da Garanzie d’Origine, 200.000 con fattore dichiarato dal fornitore di 0,15 kg CO2e/kWh, il resto senza strumenti (residual mix 0,45). Qual è lo Scope 2 market-based?",
+      "opzioni": [
+        "135 t CO2e",
+        "188 t CO2e",
+        "225 t CO2e",
+        "165 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "300.000 × 0 = 0; 200.000 × 0,15 = 30.000 kg; 300.000 × 0,45 = 135.000 kg: in totale 165.000 kg, cioè 165 t CO2e."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Un’azienda preleva 1.000.000 kWh, di cui il 20% coperto da Garanzie d’Origine. Con media di rete 0,235 e residual mix 0,45 kg CO2e/kWh, quali sono i due risultati di Scope 2?",
+      "opzioni": [
+        "Location-based 235 t; market-based 360 t",
+        "Location-based 235 t; market-based 188 t",
+        "Location-based 188 t; market-based 360 t",
+        "Location-based 235 t; market-based 90 t"
+      ],
+      "corretta": 0,
+      "spiegazione": "Location-based: 1.000.000 × 0,235 = 235 t, qualunque sia il contratto. Market-based: 800.000 kWh scoperti × 0,45 = 360 t, più alto perché i kWh senza garanzie prendono il residual mix."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Un’azienda calcola uno Scope 2 location-based di 300 t e uno market-based di 120 t CO2e. Come vanno riportati secondo il GHG Protocol?",
+      "opzioni": [
+        "Solo il più basso, che premia gli acquisti verdi",
+        "La somma, 420 t, come Scope 2 complessivo",
+        "La media, 210 t, come valore di sintesi",
+        "Entrambi, su righe separate con il nome del metodo"
+      ],
+      "corretta": 3,
+      "spiegazione": "La Scope 2 Guidance chiede la doppia rendicontazione: i due risultati si riportano entrambi, distinti, e non si sommano né si mediano."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Uno stabilimento preleva dalla rete 900.000 kWh, autoconsuma 300.000 kWh del proprio fotovoltaico e ne immette in rete 100.000. Con 0,235 kg CO2e/kWh, qual è lo Scope 2 location-based?",
+      "opzioni": [
+        "141 t CO2e",
+        "188 t CO2e",
+        "211,5 t CO2e",
+        "282 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "Conta solo l’energia prelevata: 900.000 × 0,235 = 211.500 kg, cioè 211,5 t CO2e. L’energia immessa non si sottrae e l’autoconsumo non si somma."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Un caseificio acquista 500 GJ di vapore (1 GJ = 277,8 kWh). Il fornitore dichiara 0,20 kg CO2e per kWh di calore. Quali emissioni vanno nello Scope 2?",
+      "opzioni": [
+        "0,1 t CO2e",
+        "27,8 t CO2e",
+        "32,6 t CO2e",
+        "27.780 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "Prima si converte: 500 × 277,8 = 138.900 kWh; poi 138.900 × 0,20 = 27.780 kg, cioè 27,8 t CO2e. Moltiplicare i GJ per un fattore per kWh darebbe solo 100 kg."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Un’auto ibrida plug-in aziendale consuma benzina e viene ricaricata a colonnine esterne a spese dell’azienda. Dove si contano le due voci?",
+      "opzioni": [
+        "Tutto nello Scope 1, perché il veicolo è aziendale",
+        "Tutto nello Scope 2, perché il veicolo ha una batteria",
+        "Benzina nello Scope 1, kWh ricaricati nello Scope 2",
+        "Benzina nello Scope 1, kWh ricaricati nello Scope 3"
+      ],
+      "corretta": 2,
+      "spiegazione": "I conti sono due: i litri di carburante bruciati sono combustione mobile (Scope 1), i kWh acquistati per la ricarica sono energia acquistata (Scope 2)."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Un dipendente lavora da casa due giorni a settimana e usa l’elettricità della propria abitazione. Dove si collocano queste emissioni?",
+      "opzioni": [
+        "Nello Scope 2, perché l’energia serve al lavoro",
+        "Nello Scope 1, come per le altre sedi aziendali",
+        "Nello Scope 2 market-based, con il residual mix",
+        "Nello Scope 3, categoria 7, se l’azienda le include"
+      ],
+      "corretta": 3,
+      "spiegazione": "L’energia è acquistata dal dipendente, non dall’azienda: non è Scope 2. Se si decide di quantificarla, va nello Scope 3 insieme al pendolarismo, dichiarando la scelta."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Un’azienda preleva 1.000.000 kWh, di cui 400.000 coperti da garanzie. Con l’efficienza taglia 100.000 kWh e mantiene le stesse garanzie. Di quanto scendono i due risultati (0,235 e 0,45 kg CO2e/kWh)?",
+      "opzioni": [
+        "Location-based −23,5 t; market-based −45 t",
+        "Location-based −45 t; market-based −23,5 t",
+        "Location-based −23,5 t; market-based −23,5 t",
+        "Location-based −45 t; market-based −45 t"
+      ],
+      "corretta": 0,
+      "spiegazione": "Nel location-based ogni kWh vale 0,235: 100.000 × 0,235 = 23,5 t. Nel market-based i kWh risparmiati sono kWh scoperti, che valevano 0,45: 100.000 × 0,45 = 45 t."
+    },
+    {
+      "modulo": "m05",
+      "domanda": "In un foglio di calcolo si legge: 2.400 MWh × 0,235 kg CO2e/kWh = 564 kg CO2e. Che cosa non va, e qual è il valore corretto?",
+      "opzioni": [
+        "Il fattore: serve il residual mix; sono 1.080 kg CO2e",
+        "L’unità: i MWh vanno convertiti in kWh; sono 564 t CO2e",
+        "Nulla: il conto è giusto e il valore è 564 kg CO2e",
+        "L’unità: i MWh vanno divisi per 1.000; sono 0,564 kg CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il fattore è per kWh: 2.400 MWh = 2.400.000 kWh; 2.400.000 × 0,235 = 564.000 kg, cioè 564 t CO2e. L’errore di unità vale mille volte."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Nell’inventario 2025 di Terrafelix lo Scope 3 vale 18.682,7 t CO2e su un totale di 21.692,5 t CO2e. Qual è la sua quota sul totale?",
+      "opzioni": [
+        "13,9%",
+        "46,3%",
+        "86,1%",
+        "116,1%"
+      ],
+      "corretta": 2,
+      "spiegazione": "18.682,7 ÷ 21.692,5 = 0,861, cioè l’86,1%. Il 13,9% è la quota di Scope 1 e 2 insieme."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Un’azienda compra ogni anno la stessa quantità di cartone, ma il prezzo aumenta del 10%. Con quale metodo le emissioni calcolate aumentano anche se fisicamente nulla è cambiato?",
+      "opzioni": [
+        "Con il metodo basato sulla spesa",
+        "Con il metodo basato sui dati medi",
+        "Con il metodo specifico del fornitore",
+        "Con il metodo basato sulla distanza"
+      ],
+      "corretta": 0,
+      "spiegazione": "Il metodo a spesa moltiplica gli euro per un fattore per euro: se sale il prezzo, sale il risultato. Per questo si preferiscono le quantità quando esistono."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Dallo screening risulta che una categoria di Scope 3 non riguarda l’attività dell’azienda. Che cosa si fa nel rapporto?",
+      "opzioni": [
+        "La si omette, perché vale zero",
+        "La si indica come esclusa, con la motivazione",
+        "Le si attribuisce un valore medio di settore",
+        "La si accorpa alla categoria più simile"
+      ],
+      "corretta": 1,
+      "spiegazione": "Le esclusioni vanno dichiarate e giustificate: un rapporto che tace su una categoria lascia il dubbio che sia stata dimenticata."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Un’azienda acquista 1.200 t di cartone (0,9 kg CO2e/kg) e 300 t di film plastico (2,8 kg CO2e/kg). Quanto vale in totale questa parte della categoria 1?",
+      "opzioni": [
+        "1,92 t CO2e",
+        "1.500 t CO2e",
+        "5.550 t CO2e",
+        "1.920 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "1.200.000 kg × 0,9 = 1.080.000 kg; 300.000 kg × 2,8 = 840.000 kg; totale 1.920.000 kg CO2e, cioè 1.920 t CO2e."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Un’azienda brucia 100.000 Sm³ di gas naturale. La combustione (2 kg CO2e/Sm³) è nello Scope 1. Quanto vale la filiera a monte (0,33 kg CO2e/Sm³) e dove si riporta?",
+      "opzioni": [
+        "33 t CO2e, nello Scope 1",
+        "33 t CO2e, nello Scope 3 (categoria 3)",
+        "200 t CO2e, nello Scope 3 (categoria 3)",
+        "233 t CO2e, nello Scope 1"
+      ],
+      "corretta": 1,
+      "spiegazione": "100.000 × 0,33 = 33.000 kg CO2e, cioè 33 t, da riportare nella categoria 3 dello Scope 3. Le 200 t della combustione restano nello Scope 1."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Un carico di 500 t viaggia via nave per 6.000 km (0,016 kg CO2e/tkm). Quanto vale il trasporto?",
+      "opzioni": [
+        "48 t CO2e",
+        "300 t CO2e",
+        "4,8 t CO2e",
+        "48.000 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "500 t × 6.000 km = 3.000.000 tkm; 3.000.000 × 0,016 = 48.000 kg CO2e, cioè 48 t CO2e. Con il fattore del camion (0,1) sarebbero 300 t."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Quale di questi trasporti rientra nella categoria 4 (trasporto a monte) dell’inventario di un’azienda?",
+      "opzioni": [
+        "Le consegne ai clienti fatte con i furgoni aziendali",
+        "Il ritiro dei prodotti venduti, organizzato e pagato dal cliente",
+        "La consegna delle materie prime dal fornitore allo stabilimento",
+        "Il tragitto casa-lavoro dei dipendenti in auto"
+      ],
+      "corretta": 2,
+      "spiegazione": "La categoria 4 comprende il trasporto delle merci acquistate fino all’azienda. I furgoni aziendali sono Scope 1, il ritiro pagato dal cliente è categoria 9, il pendolarismo è categoria 7."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Un’azienda conferisce 200.000 kg di rifiuti a recupero (0,021 kg CO2e/kg) e 40.000 kg a smaltimento (0,45 kg CO2e/kg). Quanto vale la categoria 5?",
+      "opzioni": [
+        "5,04 t CO2e",
+        "108 t CO2e",
+        "22.200 t CO2e",
+        "22,2 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "200.000 × 0,021 = 4.200 kg; 40.000 × 0,45 = 18.000 kg; totale 22.200 kg CO2e, cioè 22,2 t CO2e. Ogni destino ha il suo fattore."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Tre persone vanno a una riunione in treno: 400 km a tratta, andata e ritorno (0,035 kg CO2e/pkm). Quanto vale il viaggio?",
+      "opzioni": [
+        "28 kg CO2e",
+        "84 kg CO2e",
+        "42 kg CO2e",
+        "432 kg CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "3 persone × 800 km = 2.400 pkm; 2.400 × 0,035 = 84 kg CO2e. Con la sola andata si otterrebbero 42 kg."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Un’azienda ha 60 dipendenti che vengono al lavoro in auto da soli: 20 km al giorno tra andata e ritorno, per 210 giorni (0,17 kg CO2e/km). Quanto vale la categoria 7?",
+      "opzioni": [
+        "42,8 t CO2e",
+        "21,4 t CO2e",
+        "4,3 t CO2e",
+        "428,4 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "60 × 210 × 20 = 252.000 km; 252.000 × 0,17 = 42.840 kg CO2e, cioè 42,8 t CO2e."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Perché la cottura della pasta è classificata come emissione «indiretta» della fase d’uso?",
+      "opzioni": [
+        "Perché avviene in un Paese diverso da quello di produzione",
+        "Perché è calcolata con dati medi e non con dati misurati",
+        "Perché riguarda l’imballaggio e non il prodotto venduto",
+        "Perché la pasta non consuma energia da sé: la consuma chi la cuoce"
+      ],
+      "corretta": 3,
+      "spiegazione": "Sono dirette le emissioni dei prodotti che consumano energia o emettono gas da sé; la pasta richiede energia solo indirettamente. Per questo l’inclusione è facoltativa e Terrafelix la riporta a parte."
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Quale di queste situazioni è un doppio conteggio da correggere?",
+      "opzioni": [
+        "Il gasolio di un trasportatore compare nel suo Scope 1 e nello Scope 3 del cliente",
+        "Le emissioni del molino sono comprese nel fattore della semola usato dal pastificio",
+        "Il carburante delle auto aziendali è contato nello Scope 1 e di nuovo nei viaggi di lavoro",
+        "L’elettricità di rete è nello Scope 2 e la sua filiera a monte nella categoria 3"
+      ],
+      "corretta": 2,
+      "spiegazione": "È un errore contare la stessa emissione due volte nello stesso inventario. Che un’emissione compaia negli inventari di aziende diverse è invece normale nello Scope 3."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Un inventario riporta: categoria 1 ISO = 480 t CO2e; categoria 2 = 220 t; categoria 3 = 900 t; categoria 4 = 2.300 t; categoria 5 = 100 t. A quanto ammonta, con la corrispondenza di massima, lo Scope 3 del GHG Protocol?",
+      "opzioni": [
+        "4.000 t CO2e",
+        "3.520 t CO2e",
+        "3.300 t CO2e",
+        "700 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "Le categorie ISO da 3 a 6 corrispondono in via di massima allo Scope 3: 900 + 2.300 + 100 = 3.300 t CO2e. Il totale dell’inventario è 4.000 t."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Durante i controlli interni si scopre che una bolletta da 30.000 Sm³ di gas naturale è stata inserita due volte (fattore 2,0 kg CO2e/Sm³). Di quanto era sovrastimato lo Scope 1?",
+      "opzioni": [
+        "60 t CO2e",
+        "6 t CO2e",
+        "15 t CO2e",
+        "60.000 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "30.000 × 2,0 = 60.000 kg CO2e, cioè 60 t CO2e contate in più."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Totale dell’inventario = 5.400 t CO2e; fatturato = 9 milioni di euro. Qual è l’intensità economica?",
+      "opzioni": [
+        "0,6 t CO2e per milione di euro",
+        "48.600 t CO2e per milione di euro",
+        "60 t CO2e per milione di euro",
+        "600 t CO2e per milione di euro"
+      ],
+      "corretta": 3,
+      "spiegazione": "5.400 t ÷ 9 M€ = 600 t CO2e per milione di euro di fatturato."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "La produzione di un’azienda cresce e l’intensità per tonnellata di prodotto scende. Che cosa si può dire delle emissioni assolute?",
+      "opzioni": [
+        "Sono certamente diminuite",
+        "Potrebbero anche essere aumentate",
+        "Sono rimaste uguali a quelle dell’anno base",
+        "Non sono più confrontabili con l’anno base"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’intensità può scendere mentre le emissioni totali salgono, se la produzione cresce più delle emissioni: per questo i due dati si riportano insieme."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Una voce ha dato di attività con incertezza ± 3% e fattore di emissione con incertezza ± 4%. Con la somma in quadratura (modello didattico), l’incertezza della voce è:",
+      "opzioni": [
+        "± 3,5%",
+        "± 5%",
+        "± 7%",
+        "± 12%"
+      ],
+      "corretta": 1,
+      "spiegazione": "3 × 3 = 9; 4 × 4 = 16; 9 + 16 = 25; radice quadrata di 25 = 5, quindi ± 5%."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Terrafelix vuole migliorare la qualità dei dati. Quale intervento aumenta di più l’affidabilità del totale?",
+      "opzioni": [
+        "Un fattore specifico del molino per la semola",
+        "Un questionario più dettagliato sui pernottamenti",
+        "Una seconda lettura dei contatori del gas",
+        "Un fattore più preciso per i viaggi in treno"
+      ],
+      "corretta": 0,
+      "spiegazione": "La semola vale il 66,5% del totale e ha il fattore più incerto: è la voce grande con incertezza alta, dove un dato migliore sposta davvero il risultato."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Un’azienda passa da 1.000.000 kWh a 900.000 kWh prelevati dalla rete; il fattore resta 0,235 kg CO2e/kWh. Quanto vale la riduzione dovuta ai minori consumi?",
+      "opzioni": [
+        "211,5 t CO2e",
+        "235 t CO2e",
+        "23.500 t CO2e",
+        "23,5 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "100.000 kWh risparmiati × 0,235 = 23.500 kg CO2e, cioè 23,5 t CO2e (effetto attività)."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Anno base: 9.000 t CO2e. Un cambiamento di metodo lo modificherebbe di 540 t. La politica dell’azienda prevede il ricalcolo oltre il 5%. Che cosa si fa?",
+      "opzioni": [
+        "0,6%: nessun ricalcolo",
+        "4,6%: nessun ricalcolo",
+        "6,0%: si ricalcola l’anno base",
+        "16,7%: si ricalcola l’anno base"
+      ],
+      "corretta": 2,
+      "spiegazione": "540 ÷ 9.000 = 6,0%, sopra la soglia del 5% fissata dall’azienda: l’anno base va ricalcolato con il nuovo metodo."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Quale di questi contenuti è richiesto dalla ISO 14064-1 nel rapporto GHG?",
+      "opzioni": [
+        "Il prezzo dei crediti di carbonio acquistati",
+        "I fattori di emissione e i GWP usati, con le fonti",
+        "Il confronto con le emissioni dei concorrenti",
+        "La carbon footprint di ogni prodotto venduto"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il rapporto deve indicare metodologie, fattori di emissione e GWP utilizzati con le rispettive fonti; gli altri contenuti non sono richiesti dalla norma."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Nel quadro di sintesi di Terrafelix, dove compare lo Scope 2 market-based (900 t CO2e)?",
+      "opzioni": [
+        "Sommato al location-based nello Scope 2",
+        "Al posto del location-based nel totale",
+        "Da nessuna parte: non va riportato",
+        "In aggiunta, separato dal location-based"
+      ],
+      "corretta": 3,
+      "spiegazione": "La ISO 14064-1 chiede il dato location-based; il market-based si riporta in aggiunta e separatamente, senza sommarlo."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Che cosa indica la materialità in una verifica?",
+      "opzioni": [
+        "La soglia di rilevanza degli errori",
+        "Il numero di documenti da campionare",
+        "La durata della visita in stabilimento",
+        "Il costo della verifica per l’azienda"
+      ],
+      "corretta": 0,
+      "spiegazione": "La materialità è la soglia oltre la quale errori e omissioni sono considerati rilevanti per chi usa il dato."
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Chi può rilasciare una dichiarazione di verifica di terza parte sull’inventario GHG?",
+      "opzioni": [
+        "Il consulente che ha costruito l’inventario",
+        "Il responsabile ambiente dell’azienda",
+        "Un organismo indipendente e accreditato",
+        "Il fornitore di energia elettrica"
+      ],
+      "corretta": 2,
+      "spiegazione": "La verifica di terza parte è svolta da un organismo indipendente, accreditato secondo ISO/IEC 17029 e ISO 14065; chi ha costruito l’inventario non può verificarlo."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Qual è la differenza essenziale tra l’inventario GHG di un’organizzazione e la carbon footprint di un prodotto?",
+      "opzioni": [
+        "L’inventario usa i GWP dell’IPCC, la CFP usa fattori propri",
+        "L’inventario è obbligatorio per legge, la CFP è sempre volontaria",
+        "L’inventario riguarda un anno di attività dell’azienda, la CFP il ciclo di vita di un’unità di prodotto",
+        "L’inventario si esprime in CO2, la CFP in CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "Cambia l’oggetto: un anno di attività entro i confini organizzativi (ISO 14064-1) contro il ciclo di vita di un’unità funzionale di prodotto (ISO 14067). Entrambi si esprimono in CO2e."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Un’azienda consuma in un anno 480.000 kWh di elettricità di rete e produce 2.000.000 kg di prodotto. Con il fattore 0,235 kg CO2e/kWh, quanto vale il contributo dell’elettricità per kg di prodotto?",
+      "opzioni": [
+        "0,0564 kg CO2e",
+        "0,24 kg CO2e",
+        "0,564 kg CO2e",
+        "56,4 kg CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "480.000 ÷ 2.000.000 = 0,24 kWh per kg; 0,24 × 0,235 = 0,0564 kg CO2e per kg. 0,24 è il consumo specifico in kWh, non l’emissione."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Che cos’è l’unità funzionale in uno studio di carbon footprint di prodotto?",
+      "opzioni": [
+        "Il reparto dell’azienda in cui si realizza il prodotto",
+        "La prestazione quantificata del prodotto a cui si riferiscono dati e risultato",
+        "L’unità di misura del fattore di emissione principale",
+        "La quantità di prodotto venduta nell’anno di riferimento"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’unità funzionale è la prestazione quantificata del sistema prodotto, usata come riferimento: per esempio 1 kg di pasta cotta e consumata. Negli studi parziali si usa invece un’unità dichiarata."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Un processo emette 2.000 kg CO2e e genera un prodotto principale (ricavi 9.000 €) e un coprodotto (ricavi 1.000 €). Con l’allocazione economica, quante emissioni spettano al prodotto principale?",
+      "opzioni": [
+        "200 kg CO2e",
+        "1.000 kg CO2e",
+        "2.000 kg CO2e",
+        "1.800 kg CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "Quota dei ricavi del prodotto principale: 9.000 ÷ 10.000 = 90%; 2.000 × 0,90 = 1.800 kg CO2e. Al coprodotto vanno i restanti 200 kg CO2e."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Per ogni unità di prodotto si usano 0,2 kg di cartone (0,9 kg CO2e/kg) e 0,02 kg di film plastico (2,8 kg CO2e/kg). Quanto vale la produzione dell’imballaggio per unità?",
+      "opzioni": [
+        "0,198 kg CO2e",
+        "0,236 kg CO2e",
+        "0,616 kg CO2e",
+        "2,36 kg CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "0,2 × 0,9 = 0,18; 0,02 × 2,8 = 0,056; somma 0,236 kg CO2e. Ogni materiale va moltiplicato per il proprio fattore: non si sommano prima i pesi."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "In uno scenario d’uso metà dei consumatori cuoce la pasta a gas (0,44 kg CO2e per kg di pasta) e metà su piano elettrico (0,376 kg CO2e per kg di pasta). Quanto vale la fase d’uso per kg di pasta?",
+      "opzioni": [
+        "0,816 kg CO2e",
+        "0,44 kg CO2e",
+        "0,408 kg CO2e",
+        "0,204 kg CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "Media ponderata sulle quote: 0,5 × 0,44 + 0,5 × 0,376 = 0,22 + 0,188 = 0,408 kg CO2e per kg. Sommare i due fattori (0,816) significherebbe cuocere la pasta due volte."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Le fasi di un prodotto valgono, in kg CO2e per unità: materie prime 0,80; produzione 0,25; imballaggio 0,10; distribuzione 0,05; uso 0,30; fine vita 0,01. Quanto vale la CFP parziale dalla culla al cancello?",
+      "opzioni": [
+        "1,15 kg CO2e",
+        "1,51 kg CO2e",
+        "1,20 kg CO2e",
+        "0,80 kg CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "Dalla culla al cancello: materie prime + produzione + imballaggio = 0,80 + 0,25 + 0,10 = 1,15 kg CO2e. 1,51 è il totale dalla culla alla tomba."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "La CFP di una pasta è 1,474 kg CO2e per kg, dalla culla alla tomba. Quanto vale una porzione da 100 g?",
+      "opzioni": [
+        "Circa 14,7 g CO2e",
+        "Circa 68 g CO2e",
+        "Circa 1.474 g CO2e",
+        "Circa 147 g CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "0,1 kg × 1,474 kg CO2e/kg = 0,1474 kg CO2e, cioè circa 147 g CO2e. Il risultato è proporzionale alla quantità di prodotto."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Un’azienda vuole sottrarre dalla carbon footprint del prodotto i crediti di carbonio che ha acquistato. Che cosa prevede la ISO 14067?",
+      "opzioni": [
+        "La compensazione non può essere inclusa nel calcolo della CFP",
+        "I crediti si possono sottrarre se verificati da terza parte",
+        "I crediti si sottraggono solo dalla fase di produzione",
+        "I crediti si possono sottrarre fino al 50% del risultato"
+      ],
+      "corretta": 0,
+      "spiegazione": "La compensazione resta fuori dalla quantificazione della CFP: i crediti si rendicontano a parte e non riducono il risultato."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Due produttori pubblicano la CFP della loro pasta: il primo 1,10 kg CO2e/kg dalla culla al cancello, il secondo 1,47 kg CO2e/kg dalla culla alla tomba. Che cosa si può concludere?",
+      "opzioni": [
+        "Il primo prodotto emette certamente meno",
+        "Il secondo prodotto emette certamente meno",
+        "Nulla, finché i due dati non sono riportati allo stesso confine e alle stesse regole",
+        "I due valori si possono mediare per avere un dato di settore"
+      ],
+      "corretta": 2,
+      "spiegazione": "Confini diversi non sono confrontabili: servono stessa unità funzionale, stesso confine del sistema e regole comuni (PCR). I confronti pubblici richiedono anche un riesame critico o una verifica di terza parte."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Quali componenti la ISO 14067 chiede di riportare separatamente nel rapporto di studio?",
+      "opzioni": [
+        "Le emissioni del prodotto suddivise in Scope 1, Scope 2 e Scope 3",
+        "Le emissioni da elettricità con i metodi location-based e market-based",
+        "Le emissioni dirette, quelle indirette da energia e quelle da trasporto",
+        "Le componenti fossile, biogenica, da cambio d’uso del suolo e degli aeromobili"
+      ],
+      "corretta": 3,
+      "spiegazione": "Nel rapporto di studio si documentano a parte le componenti fossile, biogenica, da cambiamento diretto dell’uso del suolo (dLUC) e le emissioni degli aeromobili. Gli scope appartengono all’inventario di organizzazione."
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Un chilo di prodotto (0,001 t) viaggia per 500 km su un autoarticolato, con fattore 0,1 kg CO2e/tkm. Quanto vale il trasporto per kg di prodotto?",
+      "opzioni": [
+        "0,5 kg CO2e",
+        "0,05 kg CO2e",
+        "5 kg CO2e",
+        "50 kg CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "0,001 t × 500 km × 0,1 kg CO2e/tkm = 0,05 kg CO2e. L’errore tipico è dimenticare di convertire il chilo in tonnellate: 1 × 500 × 0,1 darebbe 50."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Qual è l’ordine corretto della gerarchia di mitigazione?",
+      "opzioni": [
+        "Compensare, misurare, ridurre, evitare, sostituire",
+        "Misurare, evitare, ridurre, sostituire, compensare il residuo",
+        "Misurare, compensare, sostituire, ridurre, evitare il residuo",
+        "Sostituire, misurare, compensare, evitare, ridurre il residuo"
+      ],
+      "corretta": 1,
+      "spiegazione": "Prima si misura, poi si evita, si riduce e si sostituisce; la compensazione viene per ultima e riguarda solo le emissioni residue."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Anno base: 5.000 t CO2e di Scope 1+2. Con una riduzione lineare del 4,2% dell’anno base ogni anno, qual è il valore massimo di emissioni dopo cinque anni?",
+      "opzioni": [
+        "1.050 t CO2e",
+        "2.900 t CO2e",
+        "3.950 t CO2e",
+        "4.790 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "4,2% × 5 anni = 21%; 5.000 × (1 − 0,21) = 3.950 t CO2e. 1.050 t è la riduzione, 4.790 t il valore dopo un solo anno."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Secondo i criteri SBTi richiamati nell’unità, quando è richiesto un obiettivo anche sullo Scope 3?",
+      "opzioni": [
+        "Quando lo Scope 3 è almeno il 40% delle emissioni totali",
+        "Quando lo Scope 3 supera le emissioni dello Scope 1",
+        "Solo quando l’azienda ha più di 250 dipendenti",
+        "Quando lo Scope 2 market-based è pari a zero"
+      ],
+      "corretta": 0,
+      "spiegazione": "L’obiettivo sullo Scope 3 è richiesto quando questo rappresenta almeno il 40% del totale: per Terrafelix è l’86,1%."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Una caldaia più efficiente fa risparmiare 80.000 Sm³ di gas (combustione 2,0 kg CO2e/Sm³; filiera a monte 0,33 kg CO2e/Sm³). Qual è la riduzione complessiva, Scope 1 più Scope 3?",
+      "opzioni": [
+        "26,4 t CO2e",
+        "160 t CO2e",
+        "186.400 t CO2e",
+        "186,4 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "80.000 × 2,0 = 160.000 kg (Scope 1) più 80.000 × 0,33 = 26.400 kg (Scope 3, categoria 3): 186.400 kg, cioè 186,4 t CO2e."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Un’azienda preleva 1.000.000 kWh senza Garanzie d’Origine (residual mix 0,45 kg CO2e/kWh; fattore medio di rete 0,235). Un impianto fotovoltaico le fa autoconsumare 300.000 kWh. Di quanto scende lo Scope 2 market-based?",
+      "opzioni": [
+        "70,5 t CO2e",
+        "135 t CO2e",
+        "315 t CO2e",
+        "13,5 t CO2e"
+      ],
+      "corretta": 1,
+      "spiegazione": "300.000 × 0,45 = 135.000 kg = 135 t CO2e. 70,5 t è la riduzione location-based (× 0,235); 315 t è ciò che resta dopo l’intervento."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Quale leva sull’elettricità riduce sia lo Scope 2 location-based sia quello market-based?",
+      "opzioni": [
+        "L’acquisto di Garanzie d’Origine a parità di consumi",
+        "Un contratto PPA rinnovabile a parità di consumi",
+        "La riduzione dei kWh prelevati dalla rete",
+        "Il passaggio a un altro fornitore di energia"
+      ],
+      "corretta": 2,
+      "spiegazione": "Solo prelevare meno kWh abbassa entrambi i valori; garanzie e contratti cambiano il fattore del market-based, non quello medio della rete."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Un furgone a gasolio (2.000 l l’anno; 2,65 kg CO2e/l) è sostituito da uno elettrico che consuma 6.000 kWh ricaricati in sede (0,235 kg CO2e/kWh). Qual è l’effetto netto su Scope 1 + Scope 2 location-based?",
+      "opzioni": [
+        "−3,9 t CO2e",
+        "−5,3 t CO2e",
+        "−6,7 t CO2e",
+        "+1,4 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "Gasolio tolto: 2.000 × 2,65 = 5.300 kg. Elettricità aggiunta: 6.000 × 0,235 = 1.410 kg. Netto: −3.890 kg, circa −3,9 t CO2e."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Un pastificio acquista 5.000.000 kg di semola. Il 40% passa a un fornitore con fattore documentato di 0,63 kg CO2e/kg invece di 0,70. Qual è la riduzione?",
+      "opzioni": [
+        "14 t CO2e",
+        "350 t CO2e",
+        "1.260 t CO2e",
+        "140 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "5.000.000 × 40% = 2.000.000 kg; 2.000.000 × (0,70 − 0,63) = 140.000 kg = 140 t CO2e. 350 t varrebbe per il 100% dei volumi."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Nella curva dei costi di abbattimento una leva ha un costo di −100 € per t CO2e. Che cosa significa?",
+      "opzioni": [
+        "Che la leva aumenta le emissioni di 100 kg per ogni euro speso",
+        "Che la leva riceve un contributo di 100 € per ogni tonnellata",
+        "Che i risparmi superano i costi: ogni tonnellata evitata fa risparmiare 100 €",
+        "Che il calcolo è sbagliato, perché un costo non può essere negativo"
+      ],
+      "corretta": 2,
+      "spiegazione": "Il costo di abbattimento è (costi annui − risparmi annui) ÷ tonnellate evitate: se è negativo, i risparmi superano i costi."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Anno base: 4.000 t CO2e; obiettivo −42%. Le leve approvate riducono in totale 1.400 t. Qual è il risultato?",
+      "opzioni": [
+        "−35%: mancano 280 t all’obiettivo",
+        "−35%: l’obiettivo è raggiunto",
+        "−42%: l’obiettivo è raggiunto",
+        "−65%: l’obiettivo è superato"
+      ],
+      "corretta": 0,
+      "spiegazione": "1.400 ÷ 4.000 = 35%. Risultato atteso 2.600 t; obiettivo 4.000 × 0,58 = 2.320 t; distanza 280 t CO2e."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "In un anno l’intensità di emissione scende del 10% e la produzione cresce del 20%. Come cambiano le emissioni assolute?",
+      "opzioni": [
+        "Diminuiscono del 10%",
+        "Aumentano dell’8%",
+        "Aumentano del 10%",
+        "Restano invariate"
+      ],
+      "corretta": 1,
+      "spiegazione": "0,90 × 1,20 = 1,08: le emissioni salgono dell’8%. L’effetto volume supera l’effetto intensità."
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Che cosa distingue un piano di decarbonizzazione credibile da una dichiarazione di intenti?",
+      "opzioni": [
+        "L’acquisto di crediti di carbonio per tutte le emissioni",
+        "La scelta di comunicare solo il valore market-based",
+        "L’esclusione dello Scope 3, non controllato direttamente",
+        "Azioni quantificate con responsabili, tempi, risorse e indicatori"
+      ],
+      "corretta": 3,
+      "spiegazione": "Un piano credibile traduce l’obiettivo in azioni con riduzione calcolata, responsabile, scadenza, budget e indicatori, e dichiara la distanza che resta."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Dopo il piano di riduzione, lo Scope 1+2 market-based di Terrafelix è 1.984,6 t CO2e; l’obiettivo 2030 è 1.831,5 t CO2e. Quante tonnellate mancano all’obiettivo?",
+      "opzioni": [
+        "1.173,2 t CO2e",
+        "1.326,3 t CO2e",
+        "153,1 t CO2e",
+        "3.816,1 t CO2e"
+      ],
+      "corretta": 2,
+      "spiegazione": "1.984,6 − 1.831,5 = 153,1 t CO2e: è la distanza che le leve ulteriori devono ancora coprire."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Quando un credito di carbonio vale come compensazione per l’azienda che lo ha acquistato?",
+      "opzioni": [
+        "Quando la fattura è stata pagata al venditore",
+        "Quando è stato ritirato (cancellato) sul registro",
+        "Quando il progetto che lo genera è stato avviato",
+        "Quando è stato iscritto tra le attività di bilancio"
+      ],
+      "corretta": 1,
+      "spiegazione": "Conta solo il ritiro: la cancellazione definitiva sul registro, documentata da un attestato con i numeri di serie."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Un’azienda deve compensare 212,3 t CO2e residue. Con un prezzo illustrativo di 18 € per credito, quanto spende?",
+      "opzioni": [
+        "3.816 €",
+        "3.821,40 €",
+        "3.834 €",
+        "38.340 €"
+      ],
+      "corretta": 2,
+      "spiegazione": "212,3 t si arrotondano per eccesso a 213 crediti; 213 × 18 = 3.834 €."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Quale criterio di qualità è violato se la stessa tonnellata evitata viene venduta a due aziende diverse?",
+      "opzioni": [
+        "Addizionalità",
+        "Permanenza",
+        "Quantificazione prudente",
+        "Assenza di doppio conteggio"
+      ],
+      "corretta": 3,
+      "spiegazione": "Ogni credito può essere usato una sola volta: vendere o dichiarare due volte la stessa tonnellata è doppio conteggio."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Secondo la ISO 14068-1, che cosa deve precedere la compensazione?",
+      "opzioni": [
+        "La quantificazione e un piano con obiettivi di riduzione",
+        "L’acquisto di garanzie d’origine per tutta l’elettricità",
+        "La certificazione ISO 14001 dello stabilimento",
+        "L’azzeramento completo delle emissioni di Scope 3"
+      ],
+      "corretta": 0,
+      "spiegazione": "La neutralità richiede di quantificare, di avere un piano di gestione con obiettivi di riduzione e di dare priorità alle riduzioni: si compensa solo il residuo."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Sull’astuccio si vuole scrivere «pasta climate neutral» grazie ai soli crediti acquistati. Perché non va bene?",
+      "opzioni": [
+        "Perché i crediti di carbonio valgono soltanto per lo Scope 1",
+        "Perché un prodotto non si dichiara «neutro» con la sola compensazione",
+        "Perché la carbon footprint si esprime soltanto in grammi",
+        "Perché prima serve una certificazione di qualità del prodotto"
+      ],
+      "corretta": 1,
+      "spiegazione": "La Direttiva (UE) 2024/825 vieta di presentare un prodotto come neutro per il clima sulla base della sola compensazione; inoltre la compensazione non entra nel calcolo della CFP."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "La rendicontazione secondo l’ESRS E1 chiede le emissioni «lorde» di Scope 1, 2 e 3. Che cosa significa?",
+      "opzioni": [
+        "Emissioni al netto dei crediti ritirati nell’anno",
+        "Emissioni dei soli impianti soggetti all’EU ETS",
+        "Emissioni coperte da garanzie d’origine",
+        "Emissioni calcolate, senza sottrarre i crediti"
+      ],
+      "corretta": 3,
+      "spiegazione": "Lorde significa così come risultano dall’inventario: i crediti di carbonio non si sottraggono e si riportano a parte."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Il gas di saldatura di Officine Sannio contiene 2.500 kg di CO2. Dove si riporta e quanto vale?",
+      "opzioni": [
+        "Scope 1: 2,5 t CO2e",
+        "Scope 3: 2,5 t CO2e",
+        "Scope 1: 5.640 t CO2e",
+        "Scope 2: 0,6 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "È un’emissione diretta di processo (Scope 1). Il GWP della CO2 è 1: 2.500 kg × 1 = 2.500 kg CO2e, cioè 2,5 t."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Officine Sannio brucia 42.000 Sm³ di gas naturale (2,0 kg CO2e/Sm³) e 16.000 l di gasolio (2,65 kg CO2e/l). Quanto vale la combustione?",
+      "opzioni": [
+        "126,4 t CO2e",
+        "116,0 t CO2e",
+        "153,7 t CO2e",
+        "12,6 t CO2e"
+      ],
+      "corretta": 0,
+      "spiegazione": "42.000 × 2,0 = 84.000 kg; 16.000 × 2,65 = 42.400 kg; totale 126.400 kg CO2e, cioè 126,4 t."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Dopo il fotovoltaico, Officine Sannio preleva dalla rete 240.000 kWh senza garanzie d’origine. Quanto vale lo Scope 2 market-based (residual mix: 0,45 kg CO2e/kWh)?",
+      "opzioni": [
+        "56,4 t CO2e",
+        "189,0 t CO2e",
+        "10,8 t CO2e",
+        "108,0 t CO2e"
+      ],
+      "corretta": 3,
+      "spiegazione": "240.000 × 0,45 = 108.000 kg CO2e, cioè 108,0 t. 56,4 t è il valore location-based (240.000 × 0,235)."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "L’inventario di Officine Sannio vale 2.767,4 t CO2e e gli addetti sono 35. Qual è l’intensità per addetto?",
+      "opzioni": [
+        "6,7 t CO2e per addetto",
+        "7,9 t CO2e per addetto",
+        "79,1 t CO2e per addetto",
+        "790,7 t CO2e per addetto"
+      ],
+      "corretta": 2,
+      "spiegazione": "2.767,4 ÷ 35 = 79,1 t CO2e per addetto. 6,7 t si otterrebbe considerando solo gli Scope 1 e 2."
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Dal secondo anno Terrafelix adotta per la semola il fattore specifico del molino al posto di quello generico. Che cosa deve fare per confrontare gli anni?",
+      "opzioni": [
+        "Lasciare invariato l’anno base e segnalare il nuovo valore",
+        "Ricalcolare l’anno base secondo la politica di ricalcolo",
+        "Escludere la semola dal confronto tra i due anni",
+        "Compensare con crediti la differenza tra i due valori"
+      ],
+      "corretta": 1,
+      "spiegazione": "Un cambiamento metodologico significativo richiede il ricalcolo dell’anno base, secondo la politica e la soglia definite dall’organizzazione: altrimenti il confronto non è coerente."
+    }
+  ]
+}

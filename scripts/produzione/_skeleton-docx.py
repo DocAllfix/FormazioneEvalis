@@ -133,6 +133,57 @@ CORSI = {
         "piede": "PAS 24000:2022 Sistema di gestione sociale — Evalis Academy",
         "file": "Evalis_Academy_PAS24000_Sistema_gestione_sociale_Approvazione.docx",
     },
+    "fadcfp01": {
+        # standard di riferimento di ogni unità (programma delle dieci unità del committente)
+        "copertura": {
+            1: "quadro generale: GHG Protocol, ISO 14064, 14067, 14068-1",
+            2: "formula del conteggio, fattori, GWP IPCC AR6",
+            3: "ISO 14064-1 (confini, sei categorie), GHG Protocol",
+            4: "Scope 1 · categoria 1 ISO 14064-1",
+            5: "Scope 2 · GHG Protocol Scope 2 Guidance",
+            6: "Scope 3 · GHG Protocol, 15 categorie",
+            7: "rapporto GHG, incertezza, ISO 14064-3",
+            8: "ISO 14067",
+            9: "obiettivi e piano di riduzione",
+            10: "ISO 14068-1, dichiarazioni, esercitazione",
+        },
+        "tipo_documento": "norma",
+        "titolo_corso": "CARBON FOOTPRINT — MISURARE, CALCOLARE E RIDURRE LE EMISSIONI DI ORGANIZZAZIONI E PRODOTTI",
+        "titolo_doc": "PROPOSTA DIDATTICA — CORSO CARBON FOOTPRINT DI ORGANIZZAZIONE E DI PRODOTTO",
+        "presentazione": "Il presente documento raccoglie la struttura didattica del corso FAD-CFP-01 sulla carbon footprint "
+            "di organizzazione e di prodotto. Il corso nasce dal materiale didattico già redatto (dieci unità, centoventi "
+            "sezioni, il caso ricorrente del Pastificio Terrafelix) e segue GHG Protocol, ISO 14064-1, ISO 14067 e ISO 14068-1. "
+            "Tutti i centotrenta calcoli svolti del materiale sono stati ricalcolati riga per riga e coincidono con i totali "
+            "dichiarati. Ogni unità diventa un modulo della piattaforma con la stessa durata del programma, e ogni slide è "
+            "narrata dal relatore avatar, con lo stesso standard di voce, impaginazione e verifica dei corsi già in catalogo. "
+            "I calcolatori «Prova tu» restano interattivi anche in piattaforma.",
+        "titolo_sintesi": "Carbon Footprint — misurare, calcolare e ridurre le emissioni di organizzazioni e prodotti",
+        "ore": 24,
+        "verifiche": "Ogni modulo è una lezione della piattaforma e si chiude con un checkpoint di verifica (quiz con domande "
+            "estratte da banca dati, non conteggiato nel monte ore), costruito sulle verifiche intermedie dell'unità. Il corso "
+            "si chiude con l'esame finale: 20 domande estratte dalla banca delle 120 domande degli esami di unità, soglia del 75%.",
+        "obiettivi": [
+            "Spiegare effetto serra, gas serra e CO2 equivalente, e convertire una quantità di gas con il GWP a 100 anni",
+            "Applicare la formula dato di attività per fattore di emissione, scegliendo unità di misura, fattori e fonti corrette",
+            "Impostare l'inventario di un'organizzazione: confini, Scope 1, 2 e 3, le sei categorie della ISO 14064-1, anno base",
+            "Calcolare le emissioni dirette: combustione fissa e mobile, gas refrigeranti, emissioni di processo",
+            "Calcolare le emissioni da energia acquistata con i metodi location-based e market-based",
+            "Calcolare le emissioni della catena del valore, scegliendo metodo e priorità fra le 15 categorie",
+            "Consolidare l'inventario, valutare l'incertezza, preparare il rapporto GHG e la verifica",
+            "Calcolare la carbon footprint di un prodotto secondo la ISO 14067: unità funzionale, confine, allocazione",
+            "Fissare obiettivi di riduzione e costruire un piano di decarbonizzazione con costi e priorità",
+            "Usare correttamente crediti, neutralità carbonica e comunicazione, applicando tutto al caso Terrafelix",
+        ],
+        "dettagli": [
+            "Destinatari: responsabili ambiente, energia e sostenibilità, consulenti di sistemi di gestione, responsabili qualità, amministrazione e acquisti che forniscono i dati, auditor interni. Nessun prerequisito: si parte da zero",
+            "Checkpoint: uno per modulo, bloccante, cinque domande estratte da una banca di almeno dieci, soglia 80%",
+            "Esame finale: venti domande estratte dalla banca delle centoventi domande degli esami di unità, soglia 75%",
+            "Area di catalogo: manageriale · Modalità: FAD asincrona con relatore avatar su ogni slide, calcolatori interattivi",
+            "Prezzo: 300 € (prezzo di listino 549 €), IVA esclusa",
+        ],
+        "piede": "Carbon Footprint di organizzazione e di prodotto — Evalis Academy",
+        "file": "Evalis_Academy_Carbon_Footprint_Approvazione.docx",
+    },
 }
 if corso not in CORSI:
     sys.exit(f"{corso}: testi del corso mancanti in CORSI (copertura, presentazione, obiettivi...)")

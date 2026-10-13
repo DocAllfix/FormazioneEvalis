@@ -341,13 +341,16 @@ for (const [mod, blocco] of Object.entries(checkpoint)) {
       err(mod, "Q2", `domanda ${i}: indice risposta corretta non valido`);
     else posizioni.add(q.corretta);
     if (!q.tipo || !(q.tipo in tipi)) err(mod, "Q3", `domanda ${i}: tipo mancante o non valido`);
-    else tipi[q.tipo]++;
+    // il mix si misura sulle domande GENERATE: quelle del committente (origine «committente», verificate
+    // sul copione da _banche-committente.py) sono la sua scelta didattica e non si riequilibrano
+    // (fadcfp01, 13/10/2026: un corso di calcolo chiede soprattutto di fare i conti)
+    else if (q.origine !== "committente") tipi[q.tipo]++;
     if (!q.slide || !slideIdsMod.has(q.slide))
       err(mod, "Q4", `domanda ${i}: slide di tracciabilità "${q.slide ?? "-"}" inesistente nel modulo`);
     if ((q.opzioni || []).some((o) => /tutte le precedenti|nessuna delle precedenti/i.test(o)))
       err(mod, "Q2", `domanda ${i}: vietato "tutte/nessuna delle precedenti"`);
   });
-  const n = banca.length;
+  const n = banca.filter((q) => q.origine !== "committente").length;
   if (tipi.riconoscimento < Math.floor(n * 0.4) - 1 || tipi.comprensione < Math.floor(n * 0.4) - 1
       || tipi.applicazione < Math.max(1, Math.floor(n * 0.2) - 1))
     err(mod, "Q3", `mix tipi sbilanciato: ${JSON.stringify(tipi)} su ${n} (atteso ~40/40/20)`);

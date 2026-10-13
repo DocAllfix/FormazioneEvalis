@@ -26,7 +26,10 @@ BLOCCO = 9  # slide per chiamata
 LAYOUT = ["apertura", "punti", "cards", "numeri", "confronto", "flusso", "definizione",
           "split", "evidenza", "timeline", "tabella", "chiusura",
           # dati e diagrammi (build-slide.mjs): solo quando il parlato porta davvero quei dati
-          "barre", "ciambella", "linee", "matrice", "gantt", "piramide", "ciclo", "organigramma"]
+          "barre", "ciambella", "linee", "matrice", "gantt", "piramide", "ciclo", "organigramma",
+          # calcoli svolti e calcolatori del committente: la slide indica la SCHERMATA, i numeri li
+          # mette il convertitore da _fonte/calcoli.json
+          "calcolo", "simulatore"]
 
 SISTEMA = """Sei il progettista delle slide di un corso video professionale in italiano.
 Ogni slide accompagna un relatore che parla: la slide NON ripete il parlato, ne fissa
@@ -53,9 +56,16 @@ REGOLE
    (5 se più serie, massimo 3 serie); ciambella 2-6 voci; linee al massimo 12 periodi e 4 serie;
    matrice al massimo 9 rischi; gantt al massimo 12 periodi e 9 attività; piramide 3-5 livelli;
    ciclo 3-6 nodi; organigramma 2-5 rami con al massimo 4 voci brevi ciascuno.
+7. CALCOLI: se il MATERIALE VISIVO DEL COMMITTENTE contiene una schermata di tipo [calc] (calcolo
+   svolto) o [sim] (calcolatore interattivo) e il parlato di quella slide SVOLGE quel conto, usa il
+   layout "calcolo" o "simulatore" e indica SOLO il numero della schermata: la tabella con dati,
+   fattori e risultati viene presa dall'originale, tu NON riscrivi nessun numero. Una schermata
+   [calc] vuole "calcolo", una [sim] vuole "simulatore". Se il parlato svolge due conti, scegli
+   quello a cui dedica più tempo. Ogni schermata si usa al massimo una volta nel modulo.
 
 FORMATO per slide (JSON):
- apertura/chiusura: {id, layout, kicker, titolo, lead}
+ apertura:          {id, layout, kicker, titolo, lead, punti:[{h,d}]}   (punti = agenda, 4-5 voci)
+ chiusura:          {id, layout, kicker, titolo, lead, punti:[{h,d}]}   (punti OBBLIGATORI: 3-4 concetti da portare via)
  punti/cards:       {id, layout, kicker, titolo, lead, punti:[{h,d}]}
  confronto:         {id, layout, kicker, titolo, lead, colonne:[{h,voci:[...]},{h,voci:[...]}]}
  numeri:            {id, layout, kicker, titolo, lead, numeri:[{n,eti}]}
@@ -71,12 +81,13 @@ FORMATO per slide (JSON):
   piramide:  {id, layout, kicker, titolo, lead, livelli:[{h,d}]}   (dall'alto, il più stretto, al basso)
   ciclo:     {id, layout, kicker, titolo, lead, ciclo: true|false, centro?, nodi:[{h,d}]}  (true = fasi che ripartono, false = elementi attorno a un centro)
   organigramma: {id, layout, kicker, titolo, lead, radice:{h,d}, rami:[{h, d, voci?:[...]}]}
+  calcolo/simulatore: {id, layout, kicker, titolo, lead, schermata: N}   (N = numero dopo "SCHERMATA")
 Rispondi SOLO con {"slides":[...]}."""
 
 
 # tipi di schermata del committente che portano DATI o STRUTTURE (vedi _estrai-fonte-pas24000.mjs)
 TIPI_VISIVI = ("bar", "gbar", "meters", "funnel", "radar", "donut", "line", "matrix", "gantt",
-               "pyramid", "cycle", "hub", "tree")
+               "pyramid", "cycle", "hub", "tree", "calc", "sim")
 
 
 def materiale_visivo(corso: str, mod: str) -> str:

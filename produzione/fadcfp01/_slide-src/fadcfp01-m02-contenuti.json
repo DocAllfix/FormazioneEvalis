@@ -1,0 +1,1130 @@
+[
+ {
+  "id": "fadcfp01_m02_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 2",
+  "titolo": "La formula base del conteggio",
+  "corsoLabel": "Carbon Footprint · ISO 14064-1 · ISO 14067",
+  "eyebrow": "Modulo 2",
+  "sottotitolo": "Emissioni = dato di attività × fattore di emissione. In questo modulo: cinque passi operativi; scelta del dato; controllo delle unità; conversioni più frequenti; lettura corretta del fattore di emissione.",
+  "agenda": [
+   "La caldaia: un conto completo",
+   "Stessa formula, tre righe molto diverse",
+   "Il dato di attività si riconosce così",
+   "Il dato è sparso: va chiesto bene",
+   "Le unità giuste prima del fattore"
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s002",
+  "layout": "calcolo",
+  "kicker": "Esempio guidato",
+  "titolo": "La caldaia: un conto completo",
+  "intro": "Un caso semplice basta per fissare il metodo: definire la sorgente, usare un dato annuale coerente, moltiplicare, convertire in tonnellate e verificare il risultato leggendo bene anche le unità.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gas naturale bruciato in caldaia",
+    "n": "dato: somma delle 12 bollette dell’anno · fattore: valore didattico arrotondato",
+    "a": 48000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": false,
+  "_atteso": 96000,
+  "piede": "Ogni Sm³ bruciato produce circa 2 kg di CO2e: 48.000 Sm³ ne producono 96.000 kg, cioè 96 tonnellate.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m02_s003",
+  "layout": "tabella",
+  "kicker": "Logica dell'inventario",
+  "titolo": "Stessa formula, tre righe molto diverse",
+  "cols": [
+   "Voce",
+   "Dato di attività",
+   "Fattore",
+   "Risultato"
+  ],
+  "righe": [
+   [
+    "Gas naturale essiccatoi",
+    "1.050.000 Sm³",
+    "2 kg CO2e/Sm³",
+    "2.100 t CO2e"
+   ],
+   [
+    "Elettricità di rete",
+    "3.200.000 kWh",
+    "0,235 kg CO2e/kWh",
+    "752 t CO2e"
+   ],
+   [
+    "Semola acquistata",
+    "20.600.000 kg",
+    "0,7 kg CO2e/kg",
+    "14.420 t CO2e"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s004",
+  "layout": "cards",
+  "kicker": "Dato di attività",
+  "titolo": "Il dato di attività si riconosce così",
+  "intro": "Il dato di attività è quasi sempre già presente in azienda. Il lavoro consiste nel riconoscere la quantità che descrive davvero l'attività, collocarla nel periodo corretto e valutarne la qualità.",
+  "cards": [
+   {
+    "h": "Misura l'attività reale",
+    "d": "Quantità che descrive il fatto fisico o economico"
+   },
+   {
+    "h": "Prima scelta: quantità fisica",
+    "d": "kWh, Sm³, litri, km, kg, tonnellate"
+   },
+   {
+    "h": "Periodo corretto",
+    "d": "Conta solo ciò che ricade nell'anno"
+   },
+   {
+    "h": "Qualità del dato",
+    "d": "Diretto, costruito o stimato: sempre dichiarato"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s005",
+  "layout": "organigramma",
+  "kicker": "Raccolta dati",
+  "titolo": "Il dato è sparso: va chiesto bene",
+  "intro": "I dati non abitano in un solo ufficio. Per raccoglierli bene servono richieste precise, riferite ai documenti giusti e soprattutto al periodo di consumo o di attività effettiva.",
+  "radice": {
+   "h": "Raccolta del dato di attività",
+   "d": "Documenti distribuiti tra funzioni diverse"
+  },
+  "rami": [
+   {
+    "h": "Amministrazione",
+    "d": "Bollette e fatture periodiche",
+    "voci": [
+     "Gas naturale",
+     "Elettricità",
+     "Periodo di consumo"
+    ]
+   },
+   {
+    "h": "Flotta",
+    "d": "Schede carburante e sistemi veicolo",
+    "voci": [
+     "Gasolio",
+     "Benzina",
+     "Litri annui"
+    ]
+   },
+   {
+    "h": "Manutenzione",
+    "d": "Rapporti tecnici e registri",
+    "voci": [
+     "Refrigeranti",
+     "Interventi",
+     "Ricariche"
+    ]
+   },
+   {
+    "h": "Acquisti e trasferte",
+    "d": "DDT, note spese, agenzia viaggi",
+    "voci": [
+     "Materie prime",
+     "Imballaggi",
+     "Viaggi"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s006",
+  "layout": "confronto",
+  "kicker": "Unità di misura",
+  "titolo": "Le unità giuste prima del fattore",
+  "intro": "La formula resta semplice solo se le unità coincidono. Il denominatore del fattore ti dice quale lingua deve parlare il dato; se non coincide, la conversione viene prima della moltiplicazione.",
+  "a": {
+   "h": "Conversioni esatte",
+   "sub": "",
+   "punti": [
+    {
+     "d": "1 MWh = 1.000 kWh"
+    },
+    {
+     "d": "1 kWh = 3,6 MJ"
+    },
+    {
+     "d": "1 t = 1.000 kg"
+    }
+   ]
+  },
+  "b": {
+   "h": "Conversioni indicative",
+   "sub": "",
+   "punti": [
+    {
+     "d": "1 GJ ≈ 277,8 kWh"
+    },
+    {
+     "d": "1 Sm³ gas ≈ 9,8 kWh"
+    },
+    {
+     "d": "Litri e kg dipendono dalla densità"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m02_s007",
+  "layout": "calcolo",
+  "kicker": "Conversioni di energia",
+  "titolo": "Confrontare l'energia in una sola unità",
+  "intro": "Portare gas, elettricità e calore in chilowattora aiuta a confrontare i consumi energetici. È una lingua comune per l'energia, non un invito a usare un fattore emissivo unico.",
+  "unita": "kWh",
+  "righe": [
+   {
+    "l": "Gas naturale",
+    "n": "dalle bollette del gas · potere calorifico indicativo",
+    "a": 12000,
+    "au": "Sm³",
+    "ef": 9.8,
+    "efu": "kWh/Sm³"
+   },
+   {
+    "l": "Elettricità",
+    "n": "dalla bolletta annuale riepilogativa",
+    "a": 85,
+    "au": "MWh",
+    "ef": 1000,
+    "efu": "kWh/MWh"
+   },
+   {
+    "l": "Calore acquistato",
+    "n": "dal contratto di teleriscaldamento",
+    "a": 250,
+    "au": "GJ",
+    "ef": 277.8,
+    "efu": "kWh/GJ"
+   }
+  ],
+  "etichette": {
+   "r": "Energia",
+   "a": "Quantità",
+   "ef": "Fattore di conversione"
+  },
+  "dec": null,
+  "totale": "Energia totale",
+  "_atteso": 272050,
+  "fonte": "Esempio didattico – conversioni: 1 MWh = 1.000 kWh; 1 GJ = 277,8 kWh; gas naturale circa 9,8 kWh/Sm³ (ISPRA, parametri standard nazionali, valore arrotondato)"
+ },
+ {
+  "id": "fadcfp01_m02_s008",
+  "layout": "calcolo",
+  "kicker": "Trasporti",
+  "titolo": "Carburanti e trasporti: l'unità decide",
+  "intro": "Litri, chilogrammi, tonnellate-chilometro e passeggeri-chilometro non sono intercambiabili. Se manca un pezzo dell'unità richiesta dal fattore, il risultato nasce già sbagliato.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Consegna di merci con autoarticolato",
+    "n": "24 t × 450 km = 10.800 tkm",
+    "a": 24,
+    "au": "t",
+    "k": 450,
+    "ku": "km",
+    "ef": 0.1,
+    "efu": "kg CO2e/tkm"
+   },
+   {
+    "l": "Trasferta in treno di tre persone",
+    "n": "3 passeggeri × 800 km = 2.400 pkm",
+    "a": 3,
+    "au": "passeggeri",
+    "k": 800,
+    "ku": "km",
+    "ef": 0.035,
+    "efu": "kg CO2e/pkm"
+   }
+  ],
+  "etichette": {
+   "k": "Distanza"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 1164,
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m02_s009",
+  "layout": "flusso",
+  "kicker": "Fattore di emissione",
+  "titolo": "Quattro verifiche su ogni fattore",
+  "intro": "Un fattore di emissione non è solo un numero. Va letto per unità, gas inclusi, confine metodologico e campo di applicazione, altrimenti il foglio appare ordinato ma resta concettualmente fragile.",
+  "passi": [
+   {
+    "h": "Denominatore",
+    "d": "Dice quale dato di attività serve"
+   },
+   {
+    "h": "Numeratore",
+    "d": "Grammi e chilogrammi cambiano la scala"
+   },
+   {
+    "h": "Gas compresi",
+    "d": "CO2 non coincide sempre con CO2e"
+   },
+   {
+    "h": "Copertura",
+    "d": "Solo combustione o anche filiera a monte"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s010",
+  "layout": "barre",
+  "kicker": "Fattore di emissione",
+  "titolo": "Due fattori per lo stesso combustibile",
+  "intro": "Combustione e filiera a monte descrivono pezzi diversi della stessa storia emissiva. Il punto chiave non è scegliere quale usare sempre, ma assegnare ciascun fattore alla voce corretta dell’inventario.",
+  "unita": "g CO2e per unità di combustibile",
+  "serie": [
+   "Combustione",
+   "Filiera a monte (WTT)"
+  ],
+  "voci": [
+   {
+    "l": "Gas naturale",
+    "v": [
+     2000,
+     330
+    ],
+    "u": "per Sm³"
+   },
+   {
+    "l": "Gasolio",
+    "v": [
+     2650,
+     620
+    ],
+    "u": "per litro"
+   },
+   {
+    "l": "Benzina",
+    "v": [
+     2300,
+     600
+    ],
+    "u": "per litro"
+   }
+  ],
+  "fonte": "Tabella dei fattori del corso – valori arrotondati a scopo didattico (1 kg = 1.000 g)"
+ },
+ {
+  "id": "fadcfp01_m02_s011",
+  "layout": "evidenza",
+  "kicker": "Fattore di emissione",
+  "titolo": "Quattro controlli prima della moltiplicazione",
+  "eyebrow": "",
+  "testo": "Un fattore di emissione sembra un numero solo, ma funziona come una scheda tecnica. Se lo leggi fino in fondo, ti dice quale dato serve, che cosa misura e dove finirà il risultato.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m02_s012",
+  "layout": "tabella",
+  "kicker": "Fonti dei fattori",
+  "titolo": "Le fonti cambiano con la voce",
+  "cols": [
+   "Fonte",
+   "Uso tipico",
+   "Nota di lettura"
+  ],
+  "righe": [
+   [
+    "ISPRA",
+    "Elettricità e combustibili in Italia",
+    "Parla il contesto nazionale"
+   ],
+   [
+    "DEFRA / DESNZ",
+    "Trasporti, viaggi, rifiuti, WTT",
+    "Ampia e pratica, ma nasce altrove"
+   ],
+   [
+    "IPCC",
+    "GWP e riferimenti metodologici",
+    "Base scientifica di molte altre fonti"
+   ],
+   [
+    "AIB",
+    "Residual mix europeo",
+    "Rilevante nel metodo market based"
+   ],
+   [
+    "ADEME, ecoinvent, EPD, fornitore",
+    "Materiali, prodotti, servizi acquistati",
+    "Meglio se il dato è specifico"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s013",
+  "layout": "numeri",
+  "kicker": "Scelta del fattore",
+  "titolo": "Le sette domande per scegliere il fattore",
+  "intro": "L’ordine di scelta aiuta: prima dati specifici documentati, poi fonti nazionali ufficiali, quindi banche dati riconosciute e, solo in fondo, fattori generici o basati sulla spesa.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "È del Paese giusto",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "È dell’anno giusto",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Descrive la tecnologia giusta",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Indica CO2 o CO2e",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "Chiarisce che cosa copre",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s014",
+  "layout": "barre",
+  "kicker": "Anno del fattore",
+  "titolo": "Stessi 100.000 kWh, risultati molto diversi",
+  "intro": "Quando il fattore della rete cambia, cambiano anche le emissioni a parità di consumo. Per questo l’anno del fattore non è un dettaglio editoriale, ma una condizione per confronti credibili nel tempo.",
+  "unita": "t CO2",
+  "voci": [
+   {
+    "l": "2022",
+    "v": 29.3
+   },
+   {
+    "l": "2023",
+    "v": 23.5
+   },
+   {
+    "l": "2024",
+    "v": 19.9
+   }
+  ],
+  "fonte": "Calcolo didattico su fattori ISPRA, «Le emissioni di CO2 nel settore elettrico nazionale e regionale», Rapporto 413/2025"
+ },
+ {
+  "id": "fadcfp01_m02_s015",
+  "layout": "confronto",
+  "kicker": "GWP nei calcoli",
+  "titolo": "Quando il GWP è già nel fattore",
+  "intro": "Nei conti con litri, chilowattora o standard metri cubi il GWP è quasi sempre incorporato nel fattore pubblicato. Quando invece il dato aziendale è la massa di un gas, il GWP diventa il fattore stesso.",
+  "a": {
+   "h": "GWP già incorporato",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Dato in litri, kWh o Sm³"
+    },
+    {
+     "d": "Fattore in CO2e per unità"
+    },
+    {
+     "d": "Non aggiungere un secondo GWP"
+    },
+    {
+     "d": "Esempi: gasolio, elettricità, gas"
+    }
+   ]
+  },
+  "b": {
+   "h": "GWP da applicare",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Dato in kg di gas serra"
+    },
+    {
+     "d": "Fattore = GWP a 100 anni"
+    },
+    {
+     "d": "Usa una sola serie nell’inventario"
+    },
+    {
+     "d": "Miscele: valore coerente con i componenti"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m02_s016",
+  "layout": "calcolo",
+  "kicker": "GWP nei calcoli",
+  "titolo": "Dodici chili di R-410A pesano molto",
+  "intro": "Il dato aziendale è la massa reintegrata. Se usi AR6, dodici chilogrammi di miscela diventano oltre ventisette tonnellate di CO2e: un esempio utile per capire quanto il GWP possa amplificare una perdita piccola.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "R-410A reintegrato",
+    "n": "dato: rapporti di intervento del frigorista · GWP della miscela: 0,5 × 771 + 0,5 × 3.740 ≈ 2.256",
+    "a": 12,
+    "au": "kg",
+    "ef": 2256,
+    "efu": "kg CO2e/kg (AR6)"
+   }
+  ],
+  "etichette": {
+   "a": "Massa di gas",
+   "ef": "GWP"
+  },
+  "dec": null,
+  "totale": false,
+  "_atteso": 27072,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; GWP: IPCC AR6"
+ },
+ {
+  "id": "fadcfp01_m02_s017",
+  "layout": "calcolo",
+  "kicker": "GWP nei calcoli",
+  "titolo": "Cento chilogrammi di metano non valgono uguale",
+  "intro": "A parità di massa, il metano cambia peso climatico secondo l’origine. L’esempio mette a confronto cento chilogrammi fossili e cento non fossili, mostrando perché una fuga può contare quasi quanto molte combustioni.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Metano di origine fossile",
+    "n": "es. perdita da una tubazione di gas naturale",
+    "a": 100,
+    "au": "kg",
+    "ef": 29.8,
+    "efu": "kg CO2e/kg (AR6)"
+   },
+   {
+    "l": "Metano di origine non fossile",
+    "n": "es. perdita di biogas da un digestore",
+    "a": 100,
+    "au": "kg",
+    "ef": 27,
+    "efu": "kg CO2e/kg (AR6)"
+   }
+  ],
+  "etichette": {
+   "a": "Massa di gas",
+   "ef": "GWP"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 5680,
+  "piede": "Un chilogrammo di metano disperso «pesa» come 27–30 kg di CO2: per questo anche le piccole perdite contano.",
+  "fonte": "Esempio didattico; GWP: IPCC AR6"
+ },
+ {
+  "id": "fadcfp01_m02_s018",
+  "layout": "piramide",
+  "kicker": "Qualità del dato",
+  "titolo": "La scala di qualità del dato",
+  "intro": "Primario e secondario non significano buono e cattivo: indicano quanto il numero descrive direttamente la tua realtà. La priorità è migliorare prima le voci grandi ancora basate su stime deboli.",
+  "livelli": [
+   {
+    "h": "5 · Misurato",
+    "d": "Contatore, lettura effettiva, pesata documentata"
+   },
+   {
+    "h": "4 · Calcolato da documenti",
+    "d": "Somma di fatture, schede carburante, DDT"
+   },
+   {
+    "h": "3 · Stimato da dati aziendali",
+    "d": "Km per consumo medio, ore per potenza"
+   },
+   {
+    "h": "2 · Stimato da medie esterne",
+    "d": "Medie di settore, fattori per euro"
+   },
+   {
+    "h": "1 · Ipotesi non documentata",
+    "d": "Numero senza fonte, da sostituire presto"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s019",
+  "layout": "calcolo",
+  "kicker": "Qualità del dato",
+  "titolo": "Stima dichiarata, inventario completo",
+  "intro": "Quando il dato primario manca, il vuoto sottostima con certezza. Una stima costruita su chilometri reali, consumo medio esplicito e fattore coerente mantiene completo il conto e resta verificabile.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Furgone a gasolio",
+    "n": "30.000 km × 0,08 l/km = 2.400 l stimati (8 l ogni 100 km)",
+    "a": 30000,
+    "au": "km",
+    "k": 0.08,
+    "ku": "l/km",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Auto a benzina",
+    "n": "18.000 km × 0,06 l/km = 1.080 l stimati (6 l ogni 100 km)",
+    "a": 18000,
+    "au": "km",
+    "k": 0.06,
+    "ku": "l/km",
+    "ef": 2.3,
+    "efu": "kg CO2e/l"
+   }
+  ],
+  "etichette": {
+   "k": "Consumo medio"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 8844,
+  "piede": "I consumi medi sono ipotesi (valori indicativi): vanno scritti nel registro con la loro origine, per esempio il libretto del veicolo o la media dei mesi documentati.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); consumi medi: valori indicativi"
+ },
+ {
+  "id": "fadcfp01_m02_s020",
+  "layout": "evidenza",
+  "kicker": "Caso Terrafelix",
+  "titolo": "Due mesi mancanti, stima proporzionata",
+  "eyebrow": "",
+  "testo": "La scelta corretta non è aspettare né lasciare un buco. È ricostruire il dato con passaggi tracciabili e segnare chiaramente che cosa è stimato, da dove arriva e quanto pesa sul totale.",
+  "dark": true
+ },
+ {
+  "id": "fadcfp01_m02_s021",
+  "layout": "flusso",
+  "kicker": "Arrotondamenti",
+  "titolo": "Prima calcoli bene, poi presenti bene",
+  "intro": "La precisione si difende nell'ordine dei passaggi. Il foglio di lavoro conserva i valori pieni in chilogrammi; il riepilogo mostra solo le cifre utili, coerenti con la qualità del dato.",
+  "passi": [
+   {
+    "h": "Calcola ogni riga in kg",
+    "d": "Mantieni i decimali utili di dato e fattore"
+   },
+   {
+    "h": "Somma ancora in kg",
+    "d": "Le tonnellate arrivano solo dopo il totale"
+   },
+   {
+    "h": "Converti e arrotonda alla fine",
+    "d": "Il riepilogo è leggibile, senza fingere troppa precisione"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s022",
+  "layout": "calcolo",
+  "kicker": "Arrotondamenti",
+  "titolo": "Sei voci piccole, un totale rilevante",
+  "intro": "Prese da sole sembrano marginali. Calcolate correttamente in chilogrammi e sommate senza tagli anticipati, mostrano che le sorgenti minori possono costruire un totale tutt'altro che trascurabile.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gasolio del gruppo elettrogeno",
+    "a": 500,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Benzina dell’auto di servizio",
+    "a": 630,
+    "au": "l",
+    "ef": 2.3,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Gasolio del carrello elevatore",
+    "a": 900,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "GPL per il riscaldamento di un locale",
+    "a": 1000,
+    "au": "l",
+    "ef": 1.6,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Trasferte in treno",
+    "a": 12800,
+    "au": "pkm",
+    "ef": 0.035,
+    "efu": "kg CO2e/pkm"
+   },
+   {
+    "l": "Ricarica di R-410A",
+    "a": 1.5,
+    "au": "kg",
+    "ef": 2256,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 10591,
+  "piede": "10.591 kg CO2e ÷ 1.000 = 10,591 t, che si presenta come 10,6 t CO2e: l’arrotondamento arriva solo adesso.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m02_s023",
+  "layout": "tabella",
+  "kicker": "Errore tipico",
+  "titolo": "Arrotondare presto fa sparire emissioni",
+  "cols": [
+   "Voce",
+   "Valore corretto",
+   "Arrotondato riga per riga"
+  ],
+  "righe": [
+   [
+    "Gruppo elettrogeno",
+    "1,3 t",
+    "1 t"
+   ],
+   [
+    "Auto di servizio",
+    "1,4 t",
+    "1 t"
+   ],
+   [
+    "Carrello elevatore",
+    "2,4 t",
+    "2 t"
+   ],
+   [
+    "GPL del locale",
+    "1,6 t",
+    "2 t"
+   ],
+   [
+    "Treno (448 kg)",
+    "0,4 t",
+    "0 t: sparisce"
+   ],
+   [
+    "Ricarica di R-410A",
+    "3,4 t",
+    "3 t"
+   ],
+   [
+    "Totale",
+    "10,6 t",
+    "9 t: mancano 1,6 t"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s024",
+  "layout": "organigramma",
+  "kicker": "Caso Aurora",
+  "titolo": "Sorgenti e documenti di Idrotermica Aurora",
+  "intro": "Prima dei calcoli viene la mappa delle fonti. Ogni voce nasce da un documento diverso, con un'unità diversa e spesso con un responsabile diverso da coinvolgere nel lavoro di raccolta.",
+  "radice": {
+   "h": "Idrotermica Aurora S.n.c.",
+   "d": "Azienda di fantasia · 8 addetti · dati di un anno"
+  },
+  "rami": [
+   {
+    "h": "Sede",
+    "d": "Ufficio e magazzino",
+    "voci": [
+     "Gas naturale: 3.200 Sm³",
+     "Elettricità: 18.000 kWh"
+    ]
+   },
+   {
+    "h": "Mobilità",
+    "d": "Furgoni e trasferte",
+    "voci": [
+     "Gasolio dei 2 furgoni: 5.400 l",
+     "Un volo: 2 persone × 1.400 km"
+    ]
+   },
+   {
+    "h": "Climatizzazione",
+    "d": "Impianto dell'ufficio",
+    "voci": [
+     "Ricarica di R-410A: 1,5 kg"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s025",
+  "layout": "calcolo",
+  "kicker": "Caso Aurora",
+  "titolo": "Aurora: gas ed elettricità della sede",
+  "intro": "Due dati ordinari, recuperati dalle bollette, producono già oltre dieci tonnellate annue. È un buon esempio di righe semplici da calcolare ma decisive per leggere l'ordine di grandezza dell'inventario.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gas naturale",
+    "n": "somma delle bollette dell’anno",
+    "a": 3200,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Elettricità prelevata dalla rete",
+    "n": "somma delle bollette dell’anno · fattore medio nazionale",
+    "a": 18000,
+    "au": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Energia della sede",
+  "_atteso": 10630,
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m02_s026",
+  "layout": "calcolo",
+  "kicker": "Caso Aurora",
+  "titolo": "Aurora: furgoni e viaggio aereo",
+  "intro": "Qui convivono due forme diverse di dato di attività: litri riforniti e passeggeri-chilometro. Cambia l'unità, non la logica del metodo; e il risultato rimette subito le priorità nelle giuste proporzioni.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gasolio dei due furgoni",
+    "n": "litri dalle schede carburante",
+    "a": 5400,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Volo di due tecnici per un corso",
+    "n": "corto raggio, andata e ritorno · distanza illustrativa",
+    "a": 2,
+    "au": "passeggeri",
+    "k": 1400,
+    "ku": "km",
+    "ef": 0.18,
+    "efu": "kg CO2e/pkm"
+   }
+  ],
+  "etichette": {
+   "k": "Distanza"
+  },
+  "dec": null,
+  "totale": "Mobilità",
+  "_atteso": 14814,
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m02_s027",
+  "layout": "tabella",
+  "kicker": "Caso Aurora",
+  "titolo": "Aurora: 28,8 t e priorità chiare",
+  "cols": [
+   "Voce",
+   "kg CO2e",
+   "Lettura"
+  ],
+  "righe": [
+   [
+    "Gasolio dei furgoni",
+    "14.310",
+    "Quasi metà del totale"
+   ],
+   [
+    "Gas naturale",
+    "6.400",
+    "Poco più di un quinto"
+   ],
+   [
+    "Elettricità",
+    "4.230",
+    "Significativa, sotto il gas"
+   ],
+   [
+    "Gas refrigerante",
+    "3.384",
+    "Molto più del volo"
+   ],
+   [
+    "Viaggio in aereo",
+    "504",
+    "Voce più piccola"
+   ],
+   [
+    "Totale annuo",
+    "28.828",
+    "28,8 t CO2e"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s028",
+  "layout": "ciclo",
+  "kicker": "Sezione 10 · Errori tipici",
+  "titolo": "Le cinque famiglie di errore ricorrenti",
+  "intro": "Per intercettarle presto bastano due domande: le unità tornano e l’ordine di grandezza è credibile. Quasi tutti gli errori di inventario ricadono in cinque famiglie che conviene riconoscere a colpo d’occhio.",
+  "ciclo": false,
+  "centro": "Errori tipici del conteggio",
+  "nodi": [
+   {
+    "h": "Unità sbagliate",
+    "d": "Formula corretta, significato fisico errato"
+   },
+   {
+    "h": "Fattore fuori posto",
+    "d": "Paese, anno, tecnologia o perimetro sbagliati"
+   },
+   {
+    "h": "Doppio conteggio",
+    "d": "La stessa voce è già compresa altrove"
+   },
+   {
+    "h": "CO2 o CO2e",
+    "d": "Gas e refrigeranti letti in modo incoerente"
+   },
+   {
+    "h": "Fonti non annotate",
+    "d": "Fattori e ipotesi non più verificabili"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s029",
+  "layout": "numeri",
+  "kicker": "Errori applicati",
+  "titolo": "Cinque casi per allenare l’occhio",
+  "intro": "Nei primi quattro esempi l’aritmetica può sembrare corretta: il problema nasce da unità, conversioni o GWP mancanti. Il quinto caso mostra quanto una bolletta letta male possa rimpicciolire artificialmente il risultato.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "8.000 litri × 2,65 letti come tonnellate",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "50.000 kWh × 234,7 g letti come chilogrammi",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "2.000 kg di gasolio con fattore per litro",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "5 kg di refrigerante trattati come 5 kg CO2e",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "420 MWh moltiplicati con un fattore per kWh",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s030",
+  "layout": "calcolo",
+  "kicker": "Correzione dell’errore",
+  "titolo": "Prima converti, poi moltiplichi",
+  "intro": "Quando il dato e il fattore non parlano la stessa unità, il conto va corretto prima di tutto lì. Poi l’ordine di grandezza deve confermare che il risultato finale è credibile.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Elettricità prelevata dalla rete",
+    "n": "420 MWh × 1.000 = 420.000 kWh",
+    "a": 420,
+    "au": "MWh",
+    "k": 1000,
+    "ku": "kWh/MWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {
+   "k": "Conversione"
+  },
+  "dec": null,
+  "totale": false,
+  "_atteso": 98700,
+  "piede": "Il risultato corretto è mille volte più grande: 98,7 tonnellate, non 98,7 chilogrammi.",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m02_s031",
+  "layout": "flusso",
+  "kicker": "Tracciabilità",
+  "titolo": "Dal documento al risultato, senza salti",
+  "intro": "Un calcolo diventa difendibile quando ogni anello della catena resta leggibile in avanti e all’indietro. Se manca un passaggio, il numero finale perde forza tecnica e verificabilità.",
+  "passi": [
+   {
+    "h": "Documento originario",
+    "d": "Bolletta, fattura, DDT, rapporto tecnico"
+   },
+   {
+    "h": "Dato di attività",
+    "d": "Quantità, unità, periodo, referente"
+   },
+   {
+    "h": "Fattore di emissione",
+    "d": "Valore, unità, fonte, anno, GWP"
+   },
+   {
+    "h": "Calcolo",
+    "d": "Formula, conversioni, stime dichiarate"
+   },
+   {
+    "h": "Risultato",
+    "d": "Esposto in chilogrammi e tonnellate"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s032",
+  "layout": "organigramma",
+  "kicker": "Architettura del file",
+  "titolo": "Un file robusto, in quattro parti",
+  "intro": "Non serve un software complesso: serve separare dati, fattori, formule e ipotesi. Quando ogni elemento ha il suo posto, il file si aggiorna meglio e si controlla più in fretta.",
+  "radice": {
+   "h": "File dell’inventario",
+   "d": "Un solo file ordinato per anno"
+  },
+  "rami": [
+   {
+    "h": "Dati di attività",
+    "d": "Una riga per ogni sorgente",
+    "voci": [
+     "Quantità e unità",
+     "Periodo",
+     "Documento di origine",
+     "Responsabile del dato"
+    ]
+   },
+   {
+    "h": "Fattori",
+    "d": "Una tabella unica",
+    "voci": [
+     "Valore e unità",
+     "Fonte ed edizione",
+     "Anno o serie GWP",
+     "Campo di applicazione"
+    ]
+   },
+   {
+    "h": "Calcoli",
+    "d": "Solo formule e risultati",
+    "voci": [
+     "Richiami a dati e fattori",
+     "Conversioni visibili",
+     "Risultato in kg e t"
+    ]
+   },
+   {
+    "h": "Ipotesi e note",
+    "d": "Il diario del file",
+    "voci": [
+     "Stime dichiarate",
+     "Esclusioni motivate",
+     "Modifiche tra versioni"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s033",
+  "layout": "ciclo",
+  "kicker": "Sintesi operativa",
+  "titolo": "La formula madre e i sei gesti",
+  "intro": "Tutte le righe, dalle bollette ai refrigeranti, passano dallo stesso ciclo operativo. Cambia il dato di attività, non la logica di fondo: emissioni uguale dato di attività per fattore di emissione.",
+  "ciclo": true,
+  "centro": "Emissioni = dato × fattore",
+  "nodi": [
+   {
+    "h": "Raccogli il dato",
+    "d": "Documento giusto, anno completo"
+   },
+   {
+    "h": "Controlla l’unità",
+    "d": "Converti se non coincide"
+   },
+   {
+    "h": "Scegli il fattore",
+    "d": "Paese, anno, tecnologia, copertura"
+   },
+   {
+    "h": "Moltiplica",
+    "d": "Mantieni il risultato in kg"
+   },
+   {
+    "h": "Passa alle tonnellate",
+    "d": "Solo alla fine, con plausibilità"
+   },
+   {
+    "h": "Documenta",
+    "d": "Fonte, ipotesi, qualità, versione"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m02_s034",
+  "layout": "chiusura",
+  "kicker": "Checkpoint finale",
+  "titolo": "Chiudi una riga solo quando regge",
+  "modNum": "02",
+  "punti": [
+   {
+    "h": "Dato completo",
+    "d": "tutto l'anno, senza buchi e senza doppioni"
+   },
+   {
+    "h": "Unità coerente",
+    "d": "quella del dato coincide con il denominatore del fattore"
+   },
+   {
+    "h": "Fattore letto per intero",
+    "d": "CO2 o CO2e, che cosa copre, Paese e anno, fonte citata"
+   },
+   {
+    "h": "Una sola serie di GWP",
+    "d": "per tutti i gas misurati in massa"
+   },
+   {
+    "h": "Chilogrammi fino alla fine",
+    "d": "si arrotonda solo il totale in tonnellate"
+   },
+   {
+    "h": "Plausibilità e tracciabilità",
+    "d": "ordine di grandezza credibile, ogni numero torna al suo documento"
+   }
+  ],
+  "prossimo": {
+   "modulo": "03",
+   "titolo": "Impostare l’inventario di organizzazione: confini, scope e categorie"
+  }
+ }
+]

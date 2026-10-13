@@ -1,0 +1,606 @@
+# UNITÀ 7 — Dai calcoli al rapporto: consolidare, valutare l’incertezza, verificare (2 ore)
+Mettere insieme i numeri, capire quanto sono affidabili, scrivere il rapporto GHG e prepararsi alla verifica.
+Obiettivi di apprendimento:
+- Consolidare i risultati di Scope 1, 2 e 3 in un quadro di sintesi, per scope e per categoria ISO 14064-1
+- Leggere l’inventario: sorgenti maggiori, quote sul totale e indicatori di intensità
+- Valutare in modo semplice l’incertezza dei dati e decidere dove conviene migliorarli
+- Applicare i controlli interni, fissare l’anno base e leggere correttamente le variazioni nel tempo
+- Impostare un rapporto GHG con i contenuti richiesti dalla ISO 14064-1, scritto in modo trasparente
+- Descrivere la verifica di terza parte secondo la ISO 14064-3 e preparare il fascicolo delle evidenze
+
+## SEZIONE 1 — Consolidare l’inventario
+### SCHERMATA 1 — Consolidare l’inventario [section]
+Nelle unità 4, 5 e 6 abbiamo calcolato una voce alla volta. Ora si mettono insieme i risultati: un solo quadro di sintesi, con un totale che chiunque possa ricostruire a ritroso fino ai fogli di calcolo.
+- Dal foglio di calcolo al quadro di sintesi
+- Il totale di Terrafelix: 21.692,5 t CO2e
+- Due modi di presentare: scope e categorie ISO
+- Che cosa entra nel totale e che cosa va a parte
+### SCHERMATA 2 — Dal foglio di calcolo al quadro di sintesi [flow]
+Consolidare significa sommare senza perdere il filo: ogni totale deve poter essere ripercorso all’indietro fino al documento di origine.
+1. Una riga per sorgente: Dato di attività, unità, fattore, fonte, risultato in kg CO2e: 28 righe per Terrafelix.
+2. Subtotali per famiglia: Combustione, flotta, refrigeranti, elettricità, acquisti, trasporti, rifiuti, viaggi.
+3. Totali per scope: Scope 1, Scope 2 location-based, Scope 3: qui si passa dai chilogrammi alle tonnellate.
+4. Quadro di sintesi: Una pagina con totale, quote percentuali e voci riportate a parte.
+5. Controllo di quadratura: La somma per scope e la somma per categoria ISO devono dare lo stesso totale.
+Regola pratica: nel foglio si lavora in kg CO2e con tutti i decimali; si arrotonda solo nel quadro di sintesi, in tonnellate.
+Commento del docente: Siamo a giugno nel calendario di Terrafelix: Scope 1 e 2 calcolati a febbraio–marzo, Scope 3 ad aprile–maggio. Il consolidamento non aggiunge calcoli nuovi, ma è il momento in cui emergono le incoerenze: una voce finita in due fogli, un’unità diversa da una scheda all’altra, un arrotondamento fatto troppo presto. Per questo conviene che la somma sia fatta dal foglio con formule, mai ricopiando i numeri a mano da una scheda all’altra.
+### SCHERMATA 3 — Il totale dell’inventario 2025 di Terrafelix [calc · ISO 14064-1 · quantificazione]
+I tre totali calcolati nelle unità 4, 5 e 6, in chilogrammi come escono dal foglio di calcolo, convertiti in tonnellate.
+Formula: Emissioni = Emissioni (dal foglio) × Conversione
+- Scope 1 – emissioni dirette (6 voci: gas naturale, gasolio, benzina, gas refrigeranti (unità 4)): 2.257.787 kg CO2e × 0,001 t/kg = 2257,8 t CO2e
+- Scope 2 – elettricità acquistata, location-based (3.200.000 kWh × 0,235 kg CO2e/kWh (unità 5)): 752.000 kg CO2e × 0,001 t/kg = 752,0 t CO2e
+- Scope 3 – catena del valore (21 voci, categorie 1–7, 9 e 12; esclusa la fase d’uso (unità 6)): 18.682.694 kg CO2e × 0,001 t/kg = 18.682,7 t CO2e
+Totale inventario (Scope 2 location-based): 21.692,5 t CO2e
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il totale è 21.692,5 t CO2e: 2.257,8 + 752 + 18.682,7. Notate che è dichiarato «con Scope 2 location-based»: un totale senza questa precisazione è incompleto. Ricordo l’avvertenza valida per tutto il corso: i fattori usati sono arrotondati a scopo didattico; in un inventario reale si usa la fonte ufficiale aggiornata all’anno di riferimento e la si cita nel rapporto. Il metodo di consolidamento, invece, è esattamente quello che userete in azienda.
+### SCHERMATA 4 — Dove sono le emissioni: i tre scope [donut]
+Le quote sul totale location-based: Scope 1 10,4%, Scope 2 3,5%, Scope 3 86,1%.
+Totale al centro: 21.692,5 t CO2e
+- Scope 1 – dirette: 2257,8t (10,4%)
+- Scope 2 – elettricità (location-based): 752t (3,5%)
+- Scope 3 – catena del valore: 18.682,7t (86,1%)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: È il grafico che finirà nella prima pagina del rapporto e nella presentazione alla direzione. Il messaggio è immediato: quasi nove decimi delle emissioni nascono fuori dai cancelli. Succede spesso quando la materia prima, qui la semola, pesa più dell’energia consumata in stabilimento. Attenzione però a non concludere che Scope 1 e 2 «non contano»: sono le emissioni su cui l’azienda decide da sola, e saranno il cuore degli obiettivi dell’unità 9.
+### SCHERMATA 5 — Lo stesso inventario in due classificazioni [table · ISO 14064-1 · sei categorie]
+A sinistra gli scope del GHG Protocol, a destra le categorie della ISO 14064-1: cambiano i cassetti, non il contenuto.
+Colonne: Scope (GHG Protocol) | t CO2e | Categoria ISO 14064-1 | t CO2e | Quota
+- Scope 1 | 2.257,8 | 1 – Emissioni dirette | 2.257,8 | 10,4%
+- Scope 2 (location-based) | 752,0 | 2 – Energia importata | 752,0 | 3,5%
+- Scope 3 | 18.682,7 | 3 – Trasporto | 1.998,3 | 9,2%
+- — | — | 4 – Prodotti utilizzati dall’organizzazione | 16.578,4 | 76,4%
+- — | — | 5 – Uso dei prodotti dell’organizzazione (qui: fine vita degli imballaggi) | 106,0 | 0,5%
+- — | — | 6 – Altre sorgenti | 0 | —
+- Totale | 21.692,5 | Totale | 21.692,5 | 100%
+Corrispondenza di massima, non identità. La fase d’uso (cottura: 8.416 t CO2e) è riportata a parte, fuori dal totale.
+Commento del docente: Chi vi chiede i dati può volerli in una classificazione o nell’altra: i clienti e le banche parlano quasi sempre di scope, un rapporto conforme alla ISO 14064-1 usa le sei categorie. Lo Scope 3 di Terrafelix si distribuisce su tre categorie ISO: i trasporti (comprese trasferte e pendolarismo) nella 3, gli acquisti, l’energia a monte e i rifiuti nella 4, il fine vita degli imballaggi nella 5. Conviene tenere nel foglio due colonne di classificazione per ogni riga: così entrambe le viste si ottengono con una somma.
+### SCHERMATA 6 — Controllo di quadratura: la somma per categoria ISO [calc · ISO 14064-1 · sei categorie]
+Le stesse 28 righe, raggruppate per categoria ISO 14064-1: il totale deve coincidere con quello per scope.
+Formula: Emissioni = Emissioni (dal foglio) × Conversione
+- Categoria 1 – emissioni dirette: 2.257.787 kg CO2e × 0,001 t/kg = 2257,8 t CO2e
+- Categoria 2 – energia importata: 752.000 kg CO2e × 0,001 t/kg = 752,0 t CO2e
+- Categoria 3 – trasporto (trasporti a monte e a valle, viaggi di lavoro, pendolarismo): 1.998.284 kg CO2e × 0,001 t/kg = 1998,3 t CO2e
+- Categoria 4 – prodotti utilizzati (beni e servizi acquistati, beni strumentali, energia a monte, rifiuti): 16.578.410 kg CO2e × 0,001 t/kg = 16.578,4 t CO2e
+- Categoria 5 – uso dei prodotti (fine vita degli imballaggi venduti): 106.000 kg CO2e × 0,001 t/kg = 106,0 t CO2e
+Totale inventario (uguale al totale per scope): 21.692,5 t CO2e
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Stesso totale, 21.692,5 t CO2e: la quadratura è riuscita. Se le due somme non coincidono, c’è una riga classificata due volte o dimenticata in una delle due viste. Guardate la categoria 4: con 16.578,4 t vale da sola il 76,4% del totale, perché contiene la semola. È un controllo banale ma prezioso: nella mia esperienza la maggior parte degli errori di consolidamento nasce da righe aggiunte all’ultimo momento e non agganciate ai totali.
+### SCHERMATA 7 — Che cosa entra nel totale e che cosa si riporta a parte [tree · ISO 14064-1 · rendicontazione]
+Radice: Quadro di sintesi 2025 (Pastificio Terrafelix)
+- Nel totale (21.692,5 t CO2e): Scope 1: 2.257,8 t; Scope 2 location-based: 752 t; Scope 3: 18.682,7 t
+- In aggiunta, separato (Scope 2 market-based): 900 t CO2e; Totale alternativo: 21.840,5 t; Mai sommato al location-based
+- Riportato a parte (informazioni fuori dal totale): Cottura della pasta: 8.416 t CO2e; Fotovoltaico autoconsumato: 600.000 kWh; CO2 biogenica, se presente
+La ISO 14064-1 chiede il dato location-based; il market-based si può riportare in aggiunta, separatamente.
+Commento del docente: Tre cassetti distinti. Nel totale entra un solo valore di Scope 2: sommare location-based e market-based significherebbe contare due volte la stessa elettricità. Il market-based di Terrafelix (900 t) è più alto del location-based perché l’energia non coperta da Garanzie d’Origine prende il residual mix: va riportato lo stesso, con trasparenza. La cottura è un’emissione indiretta della fase d’uso: l’azienda l’ha quantificata e la mostra a parte, spiegando perché.
+
+## SEZIONE 2 — Leggere i risultati
+### SCHERMATA 8 — Leggere i risultati [section]
+Un totale da solo dice poco. Per decidere serve sapere quali voci lo compongono, quanto pesa ciascuna e che cosa raccontare a chi deve prendere le decisioni.
+- Le sorgenti maggiori, in ordine
+- Poche voci fanno quasi tutto il totale
+- I numeri da ricordare
+- Che cosa dire alla direzione
+### SCHERMATA 9 — Le sorgenti maggiori di Terrafelix [bar]
+Le prime otto voci su 28, in tonnellate di CO2e. Insieme valgono il 92,8% del totale.
+- Semola di grano duro: 14.420t
+- Gas naturale (combustione): 2100t
+- Astucci e cartoni: 810t
+- Elettricità (location-based): 752t
+- Distribuzione Italia su gomma: 630t
+- Distribuzione Europa su gomma: 600t
+- Film plastico: 448t
+- Trasporto della semola: 370,8t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il primo gesto di lettura è ordinare le voci dalla più grande alla più piccola. Le quote: semola 66,5%, gas naturale 9,7%, astucci e cartoni 3,7%, elettricità 3,5%, distribuzione in Italia 2,9%. Notate la distanza tra la prima barra e tutte le altre: la semola vale quasi sette volte il gas. In un foglio di calcolo bastano una colonna «quota sul totale» e un ordinamento decrescente; fatelo sempre prima di commentare i risultati.
+### SCHERMATA 10 — Poche voci fanno quasi tutto il totale [funnel]
+Emissioni coperte considerando tutte le voci, le prime dieci, le prime cinque, le prime due, la sola semola.
+- Tutte le 28 voci: 21.692,5t
+- Le prime 10 voci: 20.757,3t
+- Le prime 5 voci: 18.712t
+- Le prime 2 voci: semola e gas: 16.520t
+- La sola semola: 14.420t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: È il principio di Pareto applicato all’inventario: le prime dieci voci coprono il 95,7% del totale, le prime cinque l’86,3%, le prime due il 76,2%. Le altre 18 voci, tutte insieme, valgono 935,2 t CO2e, cioè il 4,3%. La conseguenza pratica è doppia: l’attenzione sulla qualità dei dati va concentrata in alto, e il piano di riduzione che non tocca le prime cinque voci non può cambiare il risultato. Le voci piccole vanno comunque calcolate: la completezza è un principio dell’inventario.
+### SCHERMATA 11 — I numeri da ricordare [stats]
+- 21.692,5 t: totale dell’inventario 2025 in CO2e (Scope 1 + Scope 2 location-based + Scope 3)
+- 86,1%: quota dello Scope 3: le emissioni fuori dai cancelli (18.682,7 t CO2e)
+- 66,5%: quota della sola semola (14.420 t CO2e)
+- 13,9%: quota di Scope 1 + Scope 2: ciò che l’azienda decide da sola (3.009,8 t CO2e)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Quattro numeri bastano per raccontare l’inventario a chiunque. Suggerisco di prepararli sempre in questa forma: un totale, la quota fuori dai cancelli, la voce dominante, la parte sotto controllo diretto. Per Terrafelix Scope 1 e 2 insieme fanno 3.009,8 t, il 13,9%: è la base su cui l’azienda fisserà i primi obiettivi. Dentro lo Scope 1, il gas naturale da solo vale il 93,0%: anche lì, una voce domina.
+### SCHERMATA 12 — Che cosa dire alla direzione [case]
+Giugno 2026. Davide Russo ha dieci minuti per presentare a Elena Marotta, amministratrice delegata, il risultato del primo inventario. Ha 28 righe di calcolo, ma sa che la direzione ricorderà al massimo tre messaggi.
+- Totale 2025: 21.692,5 t CO2e; Scope 3 pari all’86,1%
+- Semola: 14.420 t CO2e, il 66,5% del totale
+- Gas naturale: 2.100 t CO2e, il 93,0% dello Scope 1
+- Le 18 voci minori insieme valgono 935,2 t CO2e, il 4,3% del totale
+Domanda di lavoro: Quali tre messaggi portare alla direzione, e in quale ordine?
+Come ha operato l'azienda: Primo: l’impronta di Terrafelix è soprattutto fuori dai cancelli, quindi il piano di riduzione passa dal lavoro con i fornitori, a partire dal molino. Secondo: dentro i cancelli la leva principale è il gas degli essiccatoi. Terzo: i numeri sono pronti per clienti e banca, con un punto debole dichiarato, cioè il fattore generico della semola, che sarà migliorato nel 2026.
+Commento del docente: L’errore tipico di chi ha fatto i calcoli è mostrare tutti i calcoli. Alla direzione servono dimensione, priorità e affidabilità: quanto emettiamo, dove conviene agire, quanto possiamo fidarci del dato. Dichiarare subito il punto debole non indebolisce la presentazione, la rafforza: chi decide deve sapere che la voce più grande è anche la meno precisa, e che per questo il primo investimento sarà un dato migliore dal fornitore.
+
+## SEZIONE 3 — Gli indicatori di intensità
+### SCHERMATA 13 — Gli indicatori di intensità [section]
+Le tonnellate totali dicono quanto emette l’azienda. Gli indicatori di intensità dicono quanto emette per unità di qualcosa: una tonnellata di prodotto, un chilo di pasta, un milione di euro di fatturato.
+- Emissioni assolute e intensità
+- La formula: emissioni diviso una grandezza di riferimento
+- Gli indicatori di Terrafelix, calcolati
+- Quando usarli e con quali cautele
+### SCHERMATA 14 — Assoluto e intensità: due letture dello stesso inventario [text]
+Intensità = emissioni ÷ grandezza di riferimento (produzione, fatturato, addetti). Attenzione alle unità: emissioni in kg o in t, produzione in t o in kg.
+- Emissioni assolute: Le tonnellate di CO2e dell’anno: il dato che conta per il clima e per gli obiettivi di riduzione.
+- Intensità fisica: Emissioni per unità di prodotto, per esempio kg CO2e per tonnellata di pasta. Misura l’efficienza.
+- Intensità economica: Emissioni per milione di euro di fatturato. Utile a banche e investitori, ma risente dei prezzi di vendita.
+- Numeratore dichiarato: Si scrive sempre che cosa c’è sopra la linea di frazione: Scope 1+2, oppure il totale con lo Scope 3.
+- Sempre in coppia: L’intensità affianca il dato assoluto, non lo sostituisce.
+Riquadro «Esempio»: Se la produzione cresce del 10% e le emissioni del 5%, l’intensità scende, ma in atmosfera finisce più CO2e di prima.
+Commento del docente: Gli indicatori di intensità sono buona prassi e vengono chiesti spesso da clienti e banche, perché permettono confronti tra anni con produzioni diverse. Terrafelix ne ha bisogno subito: i due clienti della grande distribuzione vogliono un dato per chilo di prodotto. Il rischio è usarli per nascondere una crescita delle emissioni assolute: per questo vanno sempre presentati insieme alle tonnellate. Gli obiettivi assoluti e di intensità saranno ripresi nell’unità 9.
+### SCHERMATA 15 — Scope 1+2 per tonnellata di pasta [calc]
+Le emissioni che l’azienda controlla direttamente, portate da tonnellate a chilogrammi e divise per la produzione dell’anno: 20.000 t di pasta.
+Formula: Intensità = Emissioni × Conversione ÷ Produzione
+- Scope 1: 2257,8 t CO2e × 1000 kg/t ÷ 20.000 t di pasta = 112,89 kg CO2e/t
+- Scope 2 (location-based): 752 t CO2e × 1000 kg/t ÷ 20.000 t di pasta = 37,60 kg CO2e/t
+Scope 1+2 per tonnellata di pasta: 150,49 kg CO2e/t
+Arrotondato: 150,5 kg CO2e per tonnellata di pasta, cioè circa 0,15 kg CO2e per chilo.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il conto: 3.009,8 t CO2e, cioè 3.009.800 kg, divise per 20.000 t di pasta danno 150,49, arrotondato a 150,5 kg CO2e/t. Di questi, 112,89 vengono dallo Scope 1 e 37,6 dall’elettricità. È l’indicatore che descrive l’efficienza dello stabilimento. Va sempre dichiarato quale Scope 2 si usa: con il dato market-based (900 t) lo stesso indicatore salirebbe a 157,9 kg CO2e/t. L’errore più frequente è dividere tonnellate per tonnellate e leggere 0,15 come se fossero chilogrammi per tonnellata.
+### SCHERMATA 16 — Totale dell’inventario per chilo di pasta [calc]
+Tutte le emissioni dell’inventario (Scope 2 location-based) divise per i chili prodotti: 20.000.000 kg.
+Formula: Intensità = Emissioni × Conversione ÷ Produzione
+- Scope 1: 2257,8 t CO2e × 1000 kg/t ÷ 20.000.000 kg di pasta = 0,1129 kg CO2e/kg
+- Scope 2 (location-based): 752 t CO2e × 1000 kg/t ÷ 20.000.000 kg di pasta = 0,0376 kg CO2e/kg
+- Scope 3: 18.682,7 t CO2e × 1000 kg/t ÷ 20.000.000 kg di pasta = 0,9341 kg CO2e/kg
+Totale inventario per kg di pasta: 1,0846 kg CO2e/kg
+Arrotondato: 1,085 kg CO2e per kg di pasta. Non comprende la cottura, riportata a parte.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Ogni chilo di pasta uscito dallo stabilimento «porta con sé» 1,085 kg di CO2e dell’inventario aziendale: 0,934 kg vengono dalla catena del valore. È un dato utile per rispondere in fretta ai clienti, ma non è la carbon footprint di prodotto: quella si calcola con le regole della ISO 14067, lungo il ciclo di vita e con confini diversi, e per la pasta di Terrafelix darà 1,47 kg CO2e per kg dalla culla alla tomba. Lo vedremo nell’unità 8: per ora ricordate di non chiamare «CFP» questo indicatore.
+### SCHERMATA 17 — Quale indicatore, per chi, con quali cautele [table]
+Colonne: Indicatore | Valore 2025 | A chi serve | Cautela
+- Scope 1+2 per tonnellata di pasta | 150,5 kg CO2e/t | Direzione, produzione, banca | Dichiarare se lo Scope 2 è location-based o market-based
+- Totale inventario per kg di pasta | 1,085 kg CO2e/kg | Clienti della grande distribuzione | Non è la carbon footprint di prodotto (unità 8)
+- Totale inventario per milione di euro | 603 t CO2e/M€ | Banca, investitori, questionari | Cambia con i prezzi di vendita, anche a parità di emissioni
+- Totale inventario per dipendente | 241,0 t CO2e | Poco utile in un’industria | Adatto a uffici e servizi, non a confronti tra settori
+Calcoli: 21.692,5 t ÷ 36 M€ = 602,6, arrotondato a 603; 21.692,5 t ÷ 90 dipendenti = 241,0.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Non esiste l’indicatore giusto in assoluto: esiste quello adatto alla domanda. Per un’industria la grandezza più onesta è la produzione fisica, perché non risente dei prezzi. L’intensità economica serve nei questionari finanziari, ma un aumento dei listini la farebbe scendere senza alcun miglioramento reale. Evitate i confronti tra aziende basati su indicatori calcolati con confini diversi: prima di paragonare due numeri, verificate che numeratore e denominatore siano costruiti allo stesso modo.
+
+## SEZIONE 4 — L’incertezza in parole semplici
+### SCHERMATA 18 — L’incertezza in parole semplici [section]
+Nessun inventario è esatto al chilogrammo. Ogni risultato nasce da un dato di attività e da un fattore di emissione, e tutti e due hanno un margine di dubbio. Valutare l’incertezza significa dire quanto è largo quel margine, voce per voce.
+- Da dove nasce l’incertezza
+- Una scala semplice: bassa, media, alta
+- Combinare dato e fattore, con due esempi
+- Guardare insieme entità e incertezza
+### SCHERMATA 19 — Da dove nasce l’incertezza di una voce [text · ISO 14064-1 · qualità dell’inventario]
+Pensa a una ricetta: se pesi la pasta con la bilancia sbagli di pochi grammi, se la dosi a occhio sbagli di molto. Negli inventari succede lo stesso, due volte.
+- Incertezza del dato di attività: Dipende da come è stato ottenuto: contatori fiscali e fatture con le quantità sono molto affidabili; questionari, stime e distanze medie lo sono meno.
+- Incertezza del fattore di emissione: Un fattore è una media: descrive bene un combustibile standard, meno bene una materia prima agricola che cambia con zona, annata e pratiche di coltivazione.
+- Si scrive con un «più o meno»: 1.000 t CO2e ± 5% significa che il valore vero sta ragionevolmente tra 950 e 1.050 t.
+- Che cosa chiede la norma: La ISO 14064-1 chiede di valutare l’incertezza e di riportarla nel rapporto GHG.
+Riquadro «Incertezza non è errore»: L’errore si corregge: una fattura contata due volte. L’incertezza resta anche quando il calcolo è giusto: si può solo ridurre con dati migliori.
+Commento del docente: È il tema che spaventa di più, e a torto. Per una PMI la valutazione dell’incertezza non richiede statistica avanzata: basta chiedersi, per ogni voce, quanto ci fidiamo del dato e quanto del fattore. La buona prassi è partire da un giudizio qualitativo su tutte le voci e aggiungere una stima numerica solo sulle maggiori. Il verificatore non si aspetta numeri perfetti: si aspetta che l’azienda sappia dove sono i suoi numeri deboli e lo dichiari.
+### SCHERMATA 20 — Una scala a tre livelli (modello didattico) [table]
+Valori indicativi, scelti per rendere leggibili gli esempi del corso: in un inventario reale si usano le incertezze dichiarate dalle fonti dei dati e dei fattori.
+Colonne: Livello | Valore usato nel corso | Dati di attività tipici | Fattori di emissione tipici
+- Bassa | ± 2–5% | Contatori fiscali, fatture con le quantità: gas, elettricità, litri, kg di semola | Combustibili, elettricità di rete nazionale
+- Media | ± 15–20% | Distanze e carichi medi dei trasporti, registri parziali | Fattori medi per trasporti, imballaggi e materiali
+- Alta | ± 30% e oltre | Questionari a campione, stime, dati in euro al posto delle quantità | Materie prime agricole con fattori generici, fattori basati sulla spesa
+Modello didattico: non è una scala definita dalle norme.
+Commento del docente: Questa scala è uno strumento di lavoro, non un requisito. Serve a tradurre un giudizio («dato buono», «fattore generico») in un numero che si possa usare nei conti. Negli esempi che seguono useremo ± 2% per i dati letti da contatori e fatture, ± 5% per i fattori dei combustibili, ± 20% per i fattori medi, ± 30% per il fattore generico della semola. Se la fonte del fattore dichiara una propria incertezza, quella ha la precedenza sui valori della tabella.
+### SCHERMATA 21 — Combinare dato e fattore: il gas naturale [calc]
+Regola semplificata (modello didattico): si eleva al quadrato ciascuna incertezza, si sommano i quadrati e si estrae la radice quadrata della somma.
+Formula: Quadrato = Incertezza × Incertezza (ripetuta)
+- Dato di attività: 1.050.000 Sm³ (contatore fiscale e bollette: incertezza bassa, ± 2%): 2 % × 2 % = 4 
+- Fattore di emissione: 2,0 kg CO2e/Sm³ (combustibile standard: incertezza bassa, ± 5%): 5 % × 5 % = 25 
+Somma dei quadrati: 29 
+Radice quadrata di 29 = 5,4. Incertezza della voce: ± 5,4%, cioè 2.100 t CO2e ± 113 t (da 1.987 a 2.213 t).
+Fonte dei dati: Caso studio Pastificio Terrafelix – valori di incertezza illustrativi (modello didattico)
+Commento del docente: Tre tasti sulla calcolatrice: 2 × 2 = 4; 5 × 5 = 25; radice di 29 = 5,4. Perché non sommare semplicemente 2 + 5 = 7? Perché è improbabile che dato e fattore sbaglino entrambi al massimo e nella stessa direzione: la somma in quadratura ne tiene conto. È una semplificazione valida quando le due incertezze sono indipendenti, e la presentiamo come modello didattico. In tonnellate: 2.100 × 5,4% = 113,4 t. Il gas di Terrafelix è una voce grande ma solida.
+### SCHERMATA 22 — Combinare dato e fattore: la semola [calc]
+Stessa regola, voce diversa: la quantità è certa quanto quella del gas, il fattore no.
+Formula: Quadrato = Incertezza × Incertezza (ripetuta)
+- Dato di attività: 20.600.000 kg (fatture del molino con i pesi: incertezza bassa, ± 2%): 2 % × 2 % = 4 
+- Fattore di emissione: 0,70 kg CO2e/kg (valore generico per una materia prima agricola: incertezza alta, ± 30%): 30 % × 30 % = 900 
+Somma dei quadrati: 904 
+Radice quadrata di 904 = 30,1. Incertezza della voce: ± 30,1%, cioè 14.420 t CO2e ± 4.340 t (da 10.080 a 18.760 t).
+Fonte dei dati: Caso studio Pastificio Terrafelix – valori di incertezza illustrativi (modello didattico)
+Commento del docente: Guardate il risultato: 30,1%, praticamente uguale all’incertezza del solo fattore. Quando una delle due incertezze è molto più grande dell’altra, comanda lei. La lezione pratica è importante: pesare la semola con più precisione non servirebbe a nulla, perché il dato di attività è già buono. L’unico modo di restringere il margine è ottenere un fattore migliore, cioè un dato specifico dal molino. In tonnellate: 14.420 × 30,1% = 4.340,4 t, arrotondato a 4.340.
+### SCHERMATA 23 — L’incertezza in tonnellate: dove pesa davvero [bar]
+Emissioni della voce × incertezza combinata (modello didattico). Valori in tonnellate di CO2e, da leggere come «più o meno».
+- Semola (± 30,1%): 4340,4t
+- Distribuzione a valle (± 25,0%): 371,5t
+- Imballaggi: cartone e film (± 20,1%): 252,9t
+- Linea di confezionamento, da spesa (± 50,0%): 140t
+- Gas naturale (± 5,4%): 113,4t
+- Elettricità (± 5,4%): 40,6t
+- Pendolarismo (± 36,1%): 29,2t
+Fonte dei dati: Caso studio Pastificio Terrafelix – valori di incertezza illustrativi (modello didattico)
+Commento del docente: La percentuale da sola inganna: la linea di confezionamento ha l’incertezza più alta (± 50,0%, perché calcolata dalla spesa), ma in tonnellate vale 140 t. Il margine della semola, circa 4.340 t, è quasi il doppio dell’intero Scope 1 (2.257,8 t). Combinando in quadratura queste sette voci, che coprono il 93,9% dell’inventario, l’incertezza complessiva è dell’ordine del ± 20% del totale, quasi tutta dovuta alla semola. È una stima di larga massima, ma indica con chiarezza dove lavorare.
+### SCHERMATA 24 — Entità e incertezza: la mappa delle priorità [matrix]
+Modello didattico. Colonne: entità (1 = meno di 100 t; 2 = da 100 a 1.000 t; 3 = da 1.000 a 5.000 t; 4 = da 5.000 a 10.000 t; 5 = oltre 10.000 t). Righe: incertezza (1 = molto bassa, 5 = molto alta).
+Assi: Entità delle emissioni × Incertezza
+- A Semola: 14.420 t, ± 30,1%: P5 × G4 = 20
+- B Gas naturale: 2.100 t, ± 5,4%: P3 × G1 = 3
+- C Distribuzione a valle: 1.486 t, ± 25,0%: P3 × G3 = 9
+- D Imballaggi: 1.258 t, ± 20,1%: P3 × G3 = 9
+- E Elettricità: 752 t, ± 5,4%: P2 × G1 = 2
+- F Linea di confezionamento: 280 t, ± 50,0%: P2 × G5 = 10
+- G Pendolarismo: 80,8 t, ± 36,1%: P1 × G4 = 4
+Commento del docente: La matrice mette insieme le due domande: quanto è grande la voce e quanto è incerta. Nell’angolo in alto a destra, zona critica, c’è solo la semola. Gas ed elettricità sono in basso: grandi o medie, ma solide. Il pendolarismo è molto incerto ma piccolo: migliorarlo è utile per coinvolgere le persone, non per l’affidabilità del totale. Questa mappa è il ponte verso la prossima sezione: il piano di miglioramento dei dati si scrive leggendo la matrice dall’angolo in alto a destra verso il basso.
+
+## SEZIONE 5 — Migliorare la qualità dei dati
+### SCHERMATA 25 — Migliorare la qualità dei dati [section]
+Migliorare tutti i dati insieme costa troppo e serve poco. Conviene investire dove un dato migliore sposta davvero il risultato: voci grandi con incertezza alta.
+- Il profilo di qualità per famiglia di voci
+- Quanto vale un fattore migliore per la semola
+- Gli obiettivi del piano dati
+- Le priorità per l’inventario 2026
+### SCHERMATA 26 — Il profilo di qualità dei dati di Terrafelix [radar]
+Punteggio da 1 (stimato, generico) a 5 (misurato, specifico), come nella scala di qualità dell’unità 2. Modello didattico, valutazione del gruppo di lavoro.
+Scala 0-5
+- Dato di attività: Gas ed elettricità 5; Flotta aziendale 5; Gas refrigeranti 4; Semola 5; Imballaggi 5; Trasporti merci 3; Viaggi e pendolarismo 2; Beni strumentali 3
+- Fattore di emissione: Gas ed elettricità 4; Flotta aziendale 4; Gas refrigeranti 5; Semola 2; Imballaggi 3; Trasporti merci 3; Viaggi e pendolarismo 3; Beni strumentali 1
+Fonte dei dati: Caso studio Pastificio Terrafelix – valutazione illustrativa (modello didattico)
+Commento del docente: Il radar separa le due componenti e mostra subito dove sono i punti deboli. Per la semola la forbice è massima: dato di attività da 5 (fatture con i pesi), fattore da 2 (valore generico). Per i beni strumentali il fattore vale 1, perché è basato sulla spesa. Dove le due linee sono entrambe vicine al bordo, come per gas ed elettricità, non c’è nulla da migliorare. Fate questo esercizio con chi ha fornito i dati: Chiara Vitale e Michele Santoro sanno meglio di chiunque quanto sono solidi i loro numeri.
+### SCHERMATA 27 — Quanto vale un fattore migliore per la semola [calc]
+Prova di sensibilità: se il fattore reale della semola fosse diverso del 10% da quello generico (0,70 kg CO2e/kg), di quanto cambierebbe l’inventario?
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Semola acquistata nel 2025 (10% del fattore generico: 0,70 × 10% = 0,07 kg CO2e/kg): 20.600.000 kg × 0,07 kg CO2e/kg = 1.442.000 kg CO2e
+In tonnellate: 1442 t CO2e
+1.442 t CO2e sono il 6,6% del totale dell’inventario. La stessa prova sul pendolarismo sposta 8,1 t CO2e: lo 0,04%.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: La prova di sensibilità è lo strumento più semplice per decidere dove investire: si cambia un dato del 10% e si guarda di quanto si muove il totale. Per la semola bastano sette centesimi di chilogrammo sul fattore per spostare 1.442 t, più dello Scope 2 e dei trasporti a monte messi insieme. Sul pendolarismo, lo stesso 10% vale 8,1 t. Non è un nuovo risultato dell’inventario: i totali restano quelli calcolati. È un modo per misurare quanto il totale dipende da ciascun dato.
+### SCHERMATA 28 — Gli obiettivi del piano dati per l’inventario 2026 [meters]
+Tre indicatori per seguire il miglioramento della qualità dei dati (quote calcolate sulle emissioni totali).
+- Emissioni calcolate con fattori specifici del fornitore: rilevato 0%, obiettivo 66,5%
+- Emissioni calcolate da quantità fisiche di contatori e fatture: rilevato 89%, obiettivo 95%
+- Incertezza della voce maggiore (semola): rilevato 30,1%, obiettivo 15,1% (meglio se più basso)
+Fonte dei dati: Caso studio Pastificio Terrafelix – obiettivi illustrativi (modello didattico)
+Commento del docente: Gli obiettivi sui dati rendono il miglioramento misurabile. Il primo indicatore oggi è a zero: nessun fattore viene da un fornitore; se il molino fornirà un dato specifico, la quota coperta salirà al 66,5%, cioè al peso della semola. Il secondo dice che l’89% delle emissioni nasce già da quantità fisiche misurate; il resto viene da distanze medie, stime e dati di spesa. Il terzo traduce l’effetto atteso: con un fattore di qualità media (± 15%) l’incertezza della semola scenderebbe da ± 30,1% a ± 15,1%.
+### SCHERMATA 29 — Le priorità del piano dati 2026 [case]
+Chiuso il calcolo, Davide Russo e Michele Santoro guardano la mappa entità–incertezza e decidono dove investire tempo nel 2026. Le ore disponibili sono poche: vanno spese dove spostano il risultato.
+- Semola: 14.420 t CO2e con fattore generico (± 30,1%)
+- Distribuzione a valle: 1.486 t CO2e calcolate con distanze medie
+- Pendolarismo: 80,8 t CO2e da una stima su 90 persone
+- Pernottamenti e treno: 7,3 t CO2e in tutto
+Domanda di lavoro: Quali dati migliorare per primi, e quali lasciare come sono?
+Come ha operato l'azienda: Priorità 1: chiedere al molino un fattore specifico per la semola (una EPD o un calcolo del fornitore). Priorità 2: ricavare dai documenti di trasporto le distanze reali delle consegne. Priorità 3: un questionario sul pendolarismo a tutti i dipendenti, perché costa poco e coinvolge le persone. Nessun approfondimento su pernottamenti e treno: anche un errore del 50% sposterebbe il totale di meno dello 0,02%.
+Commento del docente: Il criterio è il rapporto tra fatica e spostamento del risultato. Una telefonata al molino può dimezzare l’incertezza di due terzi dell’inventario; settimane passate a raffinare i pernottamenti non cambierebbero nulla di visibile. Nell’unità 6 Michele Santoro aveva già avviato la richiesta di dati al fornitore: qui quella richiesta diventa la prima riga di un piano scritto, con responsabile e scadenza. Un piano dati allegato al rapporto è anche un ottimo biglietto da visita davanti al verificatore.
+
+## SEZIONE 6 — Controlli interni prima di chiudere
+### SCHERMATA 30 — Controlli interni prima di chiudere [section]
+Prima di scrivere il rapporto, l’inventario va controllato da chi lo ha costruito e da una seconda persona. Gli errori più comuni non sono di metodo: sono righe doppie, unità sbagliate, mesi mancanti.
+- Quattro controlli e una registrazione
+- La lista di controllo di chiusura
+- Quanto pesa una fattura contata due volte
+- Un errore intercettato in tempo
+### SCHERMATA 31 — Quattro controlli prima di chiudere [flow · ISO 14064-1 · qualità dell’inventario]
+1. Riconciliare: Le quantità del foglio coincidono con bollette, fatture ed estratti delle carte carburante?
+2. Verificare la plausibilità: Gli indicatori hanno senso? Terrafelix: 514,5 kWh termici e 160 kWh elettrici per tonnellata di pasta.
+3. Ricalcolare a campione: Una seconda persona rifà alcune moltiplicazioni e controlla unità, fattori e formule.
+4. Confrontare: Mese su mese e, dal secondo anno, anno su anno: i salti vanno spiegati.
+5. Registrare: Ogni correzione si annota: che cosa, chi, quando, perché.
+Buona prassi: questi controlli fanno parte della gestione della qualità dell’inventario.
+Commento del docente: Nessuno di questi controlli richiede competenze sul clima: sono gli stessi che un buon ufficio amministrativo fa sulla contabilità. Gli indicatori di plausibilità li abbiamo già incontrati: 514,5 kWh termici per tonnellata di pasta nell’unità 4 e 160 kWh elettrici nell’unità 5. Se un anno il valore raddoppia senza che sia cambiato l’impianto, quasi certamente c’è un errore nei dati. Al primo inventario manca il confronto con l’anno precedente: per questo riconciliazione e plausibilità contano ancora di più.
+### SCHERMATA 32 — La lista di controllo di chiusura [checklist]
+- Dodici mesi per ogni utenza: nessuna bolletta mancante o doppia; periodo dal 1° gennaio al 31 dicembre
+- Letture stimate conguagliate: i consumi stimati in bolletta sono stati sostituiti da quelli effettivi
+- Unità di misura coerenti: kWh e non MWh, litri e non euro, chilogrammi e non tonnellate, nella riga giusta
+- Fattori dell’anno e del Paese corretti: con fonte e versione annotate accanto a ogni riga
+- Nessun doppio conteggio: carburante già in Scope 1 non ripetuto nei viaggi; ricariche elettriche già comprese in bolletta
+- Location-based e market-based separati: mai sommati nello stesso totale
+- Somme di quadratura: totale per scope uguale al totale per categoria ISO
+- Revisione di una seconda persona: diversa da chi ha inserito i dati, con data e firma
+Commento del docente: Questa lista raccoglie gli errori tipici visti nelle unità precedenti e li trasforma in domande a cui rispondere con un sì o con un no. Consiglio di allegarla al fascicolo dell’inventario, compilata e firmata: è una registrazione semplice che dimostra l’esistenza di un controllo. La revisione di una seconda persona è il punto più trascurato nelle piccole aziende, dove spesso una sola persona fa tutto: in quel caso può farla il consulente o un collega dell’amministrazione.
+### SCHERMATA 33 — Quanto pesa una fattura di gasolio contata due volte [calc]
+In bozza i litri di gasolio della flotta erano 40.400; l’estratto delle carte carburante ne riporta 38.000. La differenza, 2.400 litri, è una fattura registrata due volte.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Combustione del gasolio (Scope 1) (2.400 l contati in più): 2400 l × 2,65 kg CO2e/l = 6360 kg CO2e
+- Filiera a monte del gasolio (Scope 3, categoria 3) (gli stessi 2.400 l entravano anche in questa riga): 2400 l × 0,62 kg CO2e/l = 1488 kg CO2e
+Emissioni contate in più nella bozza: 7848 kg CO2e
+In tonnellate: 7,848 t CO2e
+Errore corretto prima della chiusura: l’inventario riporta 38.000 l e 100,7 t CO2e per il gasolio della flotta.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il conto: 2.400 × 2,65 = 6.360 kg per la combustione, 2.400 × 0,62 = 1.488 kg per la filiera a monte; in tutto 7.848 kg, cioè 7,8 t CO2e. Sul totale pesa lo 0,04%: poco. Ma l’esempio insegna due cose. La prima: un errore sul dato di attività si propaga a tutte le righe che usano quel dato, qui due. La seconda: lo stesso tipo di errore su una bolletta del gas o su una fattura di semola peserebbe decine o centinaia di volte di più. Il controllo vale per il metodo, non per i litri.
+### SCHERMATA 34 — Un errore intercettato prima della chiusura [case]
+Giugno 2026. Prima di chiudere il calcolo, Chiara Vitale riconcilia i litri di gasolio della flotta registrati nel foglio con l’estratto annuale delle carte carburante. I due numeri non coincidono.
+- Foglio di calcolo, in bozza: 40.400 l
+- Estratto delle carte carburante: 38.000 l
+- Differenza: 2.400 l, pari a 7,8 t CO2e tra combustione e filiera a monte
+Domanda di lavoro: Come si gestisce una differenza trovata durante i controlli interni?
+Come ha operato l'azienda: Chiara risale alla causa: una fattura riepilogativa registrata due volte. Davide Russo corregge la riga, annota la correzione nel registro dei dati e fa ricontrollare i totali al consulente EVALIS. L’inventario chiuso riporta 38.000 l: i totali sono quelli che abbiamo consolidato. La correzione documentata diventerà un’evidenza utile durante la verifica.
+Commento del docente: Questo episodio (illustrativo) mostra come dovrebbe funzionare il sistema: l’errore c’era, il controllo lo ha trovato, la correzione è stata registrata. Un inventario senza alcuna correzione in bozza non è un inventario perfetto: più spesso è un inventario che nessuno ha controllato. Notate i ruoli: chi riconcilia non è chi ha inserito i dati, e chi corregge lascia traccia. Ritroveremo questa fattura nella sezione 11, quando il verificatore campionerà proprio le fatture del gasolio.
+
+## SEZIONE 7 — Anno base e confronto nel tempo
+### SCHERMATA 35 — Anno base e confronto nel tempo [section]
+Un inventario diventa utile quando si può confrontare con quelli degli anni successivi. Per farlo servono un punto di partenza fisso, l’anno base, e una regola chiara su quando ricalcolarlo.
+- Il 2025 come anno base di Terrafelix
+- La politica di ricalcolo e la soglia
+- Stesso consumo, fattore diverso
+- Effetto attività ed effetto fattore
+### SCHERMATA 36 — L’anno base e la politica di ricalcolo [text · ISO 14064-1 · anno base]
+L’anno base è l’anno di riferimento con cui si confrontano le emissioni future. Per Terrafelix è il 2025, anno del primo inventario.
+- Si dichiara nel rapporto: La ISO 14064-1 chiede di indicare l’anno base e gli eventuali ricalcoli.
+- Si ricalcola per cambiamenti strutturali: Acquisizioni, cessioni, attività spostate dentro o fuori dai confini.
+- Si ricalcola per cambiamenti di metodo: Fattori più accurati, nuove fonti di dati, errori scoperti: quando l’effetto è significativo.
+- Non si ricalcola per la crescita: Più o meno produzione sono variazioni vere: devono restare visibili nel confronto.
+- Serve una soglia scritta: Terrafelix ricalcola se l’effetto supera il 5% delle emissioni dell’anno base: una scelta dell’azienda, non un obbligo di norma.
+Riquadro «Perché ricalcolare»: Per confrontare grandezze omogenee: se cambia il metro, si rimisura anche il punto di partenza.
+Commento del docente: L’anno base è stato impostato nell’unità 3; qui lo «fissiamo» con i numeri consolidati: 21.692,5 t CO2e. La politica di ricalcolo va scritta prima che serva, altrimenti ogni decisione futura sembrerà presa per convenienza. Il 5% è un esempio ricorrente nella prassi del GHG Protocol, non una soglia imposta: l’azienda può sceglierne un’altra, purché la dichiari e la applichi sempre allo stesso modo, sia quando il ricalcolo fa salire l’anno base sia quando lo fa scendere.
+### SCHERMATA 37 — Serve ricalcolare l’anno base? Un esempio svolto [calc · GHG Protocol · anno base]
+Un altro pastificio (esempio didattico) ha un anno base di 12.000 t CO2e. Al terzo anno il molino fornisce un fattore specifico per la semola: 0,63 invece di 0,70 kg CO2e/kg. La soglia scritta nella politica è il 5%.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Semola acquistata nell’anno base (differenza tra i due fattori: 0,70 − 0,63 = 0,07 kg CO2e/kg (valori didattici)): 10.000.000 kg × 0,07 kg CO2e/kg = 700.000 kg CO2e
+In tonnellate: 700 t CO2e
+700 t ÷ 12.000 t = 5,8%: sopra la soglia del 5%. L’anno base si ricalcola con il nuovo fattore: 12.000 − 700 = 11.300 t CO2e.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Senza ricalcolo, il confronto mostrerebbe 700 t di «riduzione» che nessuno ha mai ottenuto: è cambiato il metro, non le emissioni. Ricalcolando l’anno base con lo stesso fattore, la variazione dovuta al metodo sparisce e resta solo quella reale. Attenzione a un caso diverso: se il fattore del molino scende perché il fornitore ha davvero cambiato le pratiche agricole, quella è una riduzione vera e l’anno base non si tocca. Distinguere i due casi richiede di chiedere al fornitore a quale anno si riferisce il suo dato.
+### SCHERMATA 38 — Stesso consumo, fattore diverso: l’effetto sul risultato [calc · GHG Protocol · Scope 2 location-based]
+Terrafelix preleva dalla rete 3.200.000 kWh. Con il fattore del corso (0,235, da ISPRA 2023) lo Scope 2 location-based vale 752 t CO2e. E con il fattore 2024, più basso?
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Elettricità prelevata dalla rete (ISPRA 2024, stima preliminare: 198,9 g CO2/kWh, arrotondato a 0,199): 3.200.000 kWh × 0,199 kg CO2e/kWh = 636.800 kg CO2e
+In tonnellate: 636,8 t CO2e
+Da 752 a 636,8 t CO2e: 115,2 t in meno (−15,3%) senza aver risparmiato un solo chilowattora.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; fattori: ISPRA, Rapporto 413/2025
+Commento del docente: Il fattore della rete elettrica cambia ogni anno, perché cambia il modo in cui il Paese produce elettricità: ISPRA riporta 293,0 g CO2/kWh per il 2022, 234,7 per il 2023 e 198,9 per il 2024 (stima preliminare). Con il metodo location-based questo calo entra nell’inventario anche se l’azienda non ha fatto nulla. Non è un errore e non va «corretto»: va spiegato. Nel commento ai risultati si scrive quanta parte della variazione viene dai consumi e quanta dal fattore, come vediamo nelle prossime due slide.
+### SCHERMATA 39 — Effetto attività ed effetto fattore a confronto [gbar]
+Scope 2 location-based in tonnellate di CO2e, in due scenari di consumo e con i due fattori.
+Serie: Fattore 0,235 (ISPRA 2023) | Fattore 0,199 (ISPRA 2024)
+- Consumi invariati: 3.200.000 kWh: 752t | 636,8t
+- Consumi ridotti del 5%: 3.040.000 kWh: 714,4t | 605t
+Fonte dei dati: Caso studio Pastificio Terrafelix – scenario illustrativo; fattori: ISPRA, Rapporto 413/2025
+Commento del docente: Quattro barre, due effetti. Passando dalla prima alla terza barra cambia solo il consumo: da 752 a 714,4 t, cioè 37,6 t in meno, merito dell’azienda. Passando dalla terza alla quarta cambia solo il fattore: da 714,4 a 605,0 t, cioè 109,4 t in meno, merito della rete. In uno scenario così, presentare l’intero calo come risultato dell’efficienza aziendale sarebbe scorretto: tre quarti della variazione non dipendono dall’azienda. È un punto su cui i lettori esperti e i verificatori sono molto attenti.
+### SCHERMATA 40 — Prova tu: quanta riduzione è merito dell’azienda? [sim]
+Scenario: l’anno dopo Terrafelix consuma 3.040.000 kWh (160.000 in meno) e il fattore scende da 0,235 a 0,199. Prima riga: effetto attività. Seconda riga: effetto fattore. Prova a portare i kWh risparmiati a 320.000 e quelli consumati a 2.880.000: quale riga cresce?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- kWh risparmiati rispetto all’anno base (effetto attività): 160.000 kWh × 0,235 kg CO2e/kWh = 37.600 kg CO2e
+- kWh consumati nel nuovo anno (effetto fattore: 0,235 − 0,199): 3.040.000 kWh × 0,036 kg CO2e/kWh = 109.440 kg CO2e
+Totale iniziale: 147.040 kg CO2e
+In tonnellate: 147,04 t CO2e
+Con i valori iniziali: 37,6 t per i consumi ridotti e 109,4 t per il fattore; in tutto 147,0 t in meno, da 752 a 605,0 t CO2e.
+Fonte dei dati: Caso studio Pastificio Terrafelix – scenario illustrativo; fattori: ISPRA, Rapporto 413/2025
+Commento del docente: La scomposizione si fa in due mosse: i chilowattora risparmiati si moltiplicano per il fattore vecchio (160.000 × 0,235 = 37.600 kg), quelli ancora consumati per la differenza tra i fattori (3.040.000 × 0,036 = 109.440 kg). La somma, 147.040 kg, coincide con la variazione totale: 752 − 605,0 = 147,0 t, pari al 19,6% in meno, di cui 5,0 punti per l’attività e 14,6 per il fattore. Ricordate di cambiare insieme le due righe: i kWh risparmiati e quelli consumati devono sempre sommare 3.200.000.
+
+## SEZIONE 8 — Il rapporto GHG
+### SCHERMATA 41 — Il rapporto GHG [section]
+Il rapporto GHG è il documento che racconta l’inventario a chi non lo ha costruito. La ISO 14064-1 ne elenca i contenuti: il lettore deve trovare i numeri e tutto ciò che serve per capirli.
+- I contenuti richiesti dalla ISO 14064-1
+- Un indice consigliato
+- La tabella delle emissioni dirette per gas
+- Chi legge il rapporto e che cosa cerca
+### SCHERMATA 42 — Che cosa deve indicare il rapporto GHG [table · ISO 14064-1 · rapporto GHG]
+I contenuti richiesti dalla ISO 14064-1, in sintesi, e come li sviluppa Terrafelix.
+Colonne: Contenuto richiesto | Nel rapporto di Terrafelix
+- Organizzazione, responsabile del rapporto, periodo | Pastificio Terrafelix; Davide Russo; anno 2025
+- Confini organizzativi e di reporting | Controllo operativo, un solo stabilimento; emissioni dirette e indirette
+- Criteri di significatività; esclusioni e motivazioni | Criteri applicati alle emissioni indirette; categorie non applicabili spiegate
+- Emissioni dirette separate per gas, in t CO2e | Tabella per gas: totale 2.257,8 t CO2e
+- CO2 biogenica a parte; rimozioni, se quantificate | Nessun impianto a biomassa; nessuna rimozione quantificata
+- Emissioni indirette per categoria | Categorie 2, 3, 4 e 5: 19.434,7 t CO2e
+- Anno base ed eventuali ricalcoli | 2025, primo inventario; soglia di ricalcolo 5%
+- Metodi, fattori di emissione e GWP, con le fonti | Tabella dei fattori; GWP dell’IPCC, sesto rapporto (AR6)
+- Incertezza | Valutazione per voce e voci critiche
+- Conformità alla norma; verifica e livello di garanzia | Dichiarazione di conformità; esito della verifica di luglio
+Sintesi didattica: per redigere un rapporto reale fare riferimento al testo della norma.
+Commento del docente: Usate questa tabella come lista di controllo: ogni riga della colonna di sinistra deve avere una risposta nel vostro rapporto, anche quando la risposta è «non presente». Scrivere «nessun impianto a biomassa» è diverso dal non scrivere nulla: nel primo caso il lettore sa che la voce è stata considerata. Le emissioni indirette di Terrafelix, 19.434,7 t CO2e, sono la somma delle categorie da 2 a 5: 752 + 1.998,3 + 16.578,4 + 106. Tutti questi contenuti li abbiamo già prodotti: ora vanno solo messi in ordine.
+### SCHERMATA 43 — Un indice consigliato per il rapporto [tree]
+Radice: Rapporto GHG 2025 (Pastificio Terrafelix S.r.l.)
+- 1. Chi e che cosa: Organizzazione e responsabile; Periodo e anno base; Confini e significatività
+- 2. Come: Metodi di calcolo; Fattori e GWP con le fonti; Ipotesi ed esclusioni
+- 3. Risultati: Dirette per gas; Indirette per categoria; Voci riportate a parte
+- 4. Affidabilità: Incertezza; Controlli interni; Piano dati
+- 5. Dichiarazioni: Conformità alla norma; Verifica e garanzia; Allegati di calcolo
+Struttura consigliata (buona prassi): la norma elenca i contenuti, l’ordine lo sceglie l’organizzazione.
+Commento del docente: Cinque capitoli che rispondono a cinque domande del lettore: chi siete e che cosa avete contato, come avete contato, che cosa è risultato, quanto ci si può fidare, che cosa dichiarate. Per una PMI il rapporto può stare in quindici o venti pagine più gli allegati di calcolo. Un consiglio: scrivete prima il capitolo 2, quello sul metodo, mentre i calcoli sono freschi; a distanza di mesi è difficile ricordare perché si è scelta una certa fonte o una certa ipotesi.
+### SCHERMATA 44 — La tabella delle emissioni dirette per gas [calc · ISO 14064-1 · rapporto GHG]
+Le emissioni dirette si riportano separate per gas, in tonnellate di CO2e. Per Terrafelix i gruppi in gioco sono due: i gas della combustione e gli HFC dei circuiti frigoriferi.
+Formula: Emissioni = Emissioni (dal foglio) × Conversione
+- Combustione: CO2, CH4 e N2O (gas naturale, gasolio, benzina; i fattori didattici in CO2e non separano i tre gas): 2.218.475 kg CO2e × 0,001 t/kg = 2218,5 t CO2e
+- HFC: R-410A e HFC-134a (ricariche di gas refrigeranti: 12 kg e 8 kg): 39.312 kg CO2e × 0,001 t/kg = 39,3 t CO2e
+- PFC, SF6, NF3 (nessuna sorgente individuata (dato illustrativo)): 0 kg CO2e × 0,001 t/kg = 0,0 t CO2e
+Totale emissioni dirette (categoria 1): 2257,8 t CO2e
+In un inventario reale i fattori ufficiali forniscono CO2, CH4 e N2O separati: nel rapporto compaiono su tre righe distinte.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: La combustione vale 2.218,5 t CO2e, gli HFC 39,3 t: insieme fanno le 2.257,8 t dello Scope 1. Qui il corso mostra un proprio limite, ed è giusto dirlo: i fattori didattici sono espressi direttamente in CO2e e non permettono di separare CO2, metano e protossido di azoto. Le banche dati ufficiali riportano invece i tre contributi distinti, e la tabella del rapporto reale avrà una riga per ciascun gas. I venti chilogrammi di refrigeranti ricaricati pesano l’1,7% delle emissioni dirette.
+### SCHERMATA 45 — Chi legge il rapporto e che cosa cerca [hub]
+Al centro: Rapporto GHG 2025
+- Clienti della distribuzione: Scope 1, 2 e 3 e il dato per kg di prodotto
+- Banca: Anno base e indicatori per gli obiettivi del finanziamento
+- Direzione: Sorgenti maggiori e priorità del piano di riduzione
+- Verificatore: Metodi, fonti dei fattori, evidenze dei dati
+- Dipendenti: Risultati in sintesi e impegni dell’azienda
+Commento del docente: Un solo rapporto, lettori diversi. Per Terrafelix i destinatari sono quelli che hanno fatto nascere il progetto: i due clienti della grande distribuzione, la banca che propone un finanziamento legato a obiettivi di sostenibilità, la direzione. Sapere in anticipo chi userà il rapporto aiuta a decidere quanto dettaglio dare e quali indicatori aggiungere. Il rapporto completo resta uno solo; per ciascun lettore si può preparare una sintesi di una pagina, coerente con il documento principale.
+
+## SEZIONE 9 — Scrivere bene: la trasparenza
+### SCHERMATA 46 — Scrivere bene: la trasparenza [section]
+Un buon rapporto non è quello con il numero più basso: è quello che permette a un lettore esterno di capire come è stato ottenuto ogni numero e che cosa è rimasto fuori.
+- Frasi corrette e frasi da evitare
+- Le quattro cose da dichiarare sempre
+- Un estratto del rapporto di Terrafelix
+- La prova del lettore esterno
+### SCHERMATA 47 — Scrivere il rapporto: corretto e sbagliato [two · ISO 14064-1 · principio di trasparenza]
+Colonna «Corretto»:
+- Totale 21.692,5 t CO2e con Scope 2 location-based; market-based (900 t) riportato a parte
+- Fattore della semola: valore medio di letteratura, incertezza alta
+- Fase d’uso (cottura) quantificata e riportata a parte: 8.416 t CO2e
+- GWP a 100 anni dell’IPCC, sesto rapporto (AR6)
+- Categorie non applicabili: elenco e motivazione
+Colonna «Sbagliato»:
+- «Emissioni totali: circa 21.000 tonnellate», senza dire quali scope
+- «Fattori da fonti ufficiali», senza citarle
+- Tacere le categorie escluse o le voci stimate
+- Sommare location-based e market-based
+- Presentare il dato market-based come unico Scope 2
+Commento del docente: La trasparenza è uno dei cinque principi della ISO 14064-1, insieme a pertinenza, completezza, coerenza e accuratezza. In pratica significa che ogni numero del rapporto porta con sé la sua spiegazione: quale perimetro, quale metodo, quale fonte. Le frasi della colonna di destra non sono necessariamente false: sono incomplete, e un lettore attento le legge come un segnale di debolezza. Un dato dichiarato come incerto è più credibile di un dato presentato senza alcuna cautela.
+### SCHERMATA 48 — Le quattro cose da dichiarare sempre [quad]
+- Confini: Approccio di consolidamento; Sedi e attività incluse; Periodo e anno base
+- Dati e metodi: Origine dei dati di attività; Fattori con fonte e anno; GWP utilizzati
+- Limiti: Esclusioni e motivazioni; Stime e ipotesi; Incertezza delle voci maggiori
+- Cambiamenti: Differenze di metodo rispetto all’anno prima; Ricalcoli dell’anno base; Errori corretti
+Commento del docente: Quattro riquadri da tenere davanti mentre si scrive. I primi due dicono che cosa è stato contato e come; il terzo dice che cosa non è stato contato o è stato stimato; il quarto, vuoto al primo inventario, diventerà il più letto dal secondo anno in poi. Per Terrafelix il riquadro «Limiti» contiene tre righe: le categorie di Scope 3 non applicabili, le ipotesi sulla cottura e sul pendolarismo, l’incertezza alta sul fattore della semola. Scriverle costa mezza pagina ed evita settimane di domande.
+### SCHERMATA 49 — Un estratto del rapporto GHG di Terrafelix [case]
+Davide Russo scrive la pagina di sintesi del rapporto. Il consulente EVALIS gli propone una prova: farla leggere a Giorgio Ferri, responsabile commerciale, che non ha seguito i calcoli. Se Giorgio riesce a rispondere alle domande dei clienti con quella pagina, la pagina funziona.
+- Periodo: 1° gennaio–31 dicembre 2025; consolidamento: controllo operativo
+- Totale: 21.692,5 t CO2e (Scope 1: 2.257,8; Scope 2 location-based: 752; Scope 3: 18.682,7)
+- In aggiunta: Scope 2 market-based 900 t CO2e; con questo dato il totale sarebbe 21.840,5 t
+- A parte: cottura della pasta 8.416 t CO2e; fotovoltaico autoconsumato 600.000 kWh
+- GWP: IPCC AR6; fattori: tabella allegata con fonte e anno
+Domanda di lavoro: Che cosa manca perché la pagina sia completa?
+Come ha operato l'azienda: Giorgio pone tre domande che un cliente farebbe: quali categorie indirette sono escluse e perché, quanto è affidabile il dato della semola, se il rapporto è stato verificato. Davide aggiunge una riga per ciascuna: categorie non applicabili con la motivazione, incertezza alta dichiarata sul fattore della semola, verifica di terza parte prevista a luglio con il livello di garanzia concordato.
+Commento del docente: La «prova del lettore esterno» è la tecnica più efficace che conosco per migliorare un rapporto. Chi ha fatto i calcoli dà per scontate molte cose; chi legge per la prima volta inciampa esattamente dove inciamperà il cliente. Giorgio Ferri è il lettore ideale: conosce l’azienda, riceve le richieste della grande distribuzione, ma non sa che cosa sia un residual mix. Se una frase gli richiede una spiegazione a voce, quella spiegazione va scritta nel rapporto.
+
+## SEZIONE 10 — La verifica di terza parte
+### SCHERMATA 50 — La verifica di terza parte [section]
+Un inventario verificato da un soggetto indipendente vale di più per clienti, banche e direzione. La norma di riferimento per chi verifica è la ISO 14064-3; l’inventario resta responsabilità dell’azienda.
+- Le parole della verifica
+- Garanzia limitata e garanzia ragionevole
+- Le fasi tipiche e chi fa che cosa
+- Il mese di luglio di Terrafelix
+### SCHERMATA 51 — Le parole della verifica [defs · ISO 14064-3:2019]
+- Verifica: Valutazione indipendente di una dichiarazione sui gas serra: qui, l’inventario 2025 e il suo rapporto. Norma di riferimento: ISO 14064-3:2019.
+- Livello di garanzia: Il grado di fiducia che il verificatore fornisce sulla dichiarazione. La norma ne prevede due: ragionevole e limitata.
+- Materialità: La soglia di rilevanza degli errori: oltre quella soglia, errori e omissioni possono cambiare le decisioni di chi usa il dato.
+- Evidenze: Documenti, registrazioni, ricalcoli, interviste e osservazioni su cui il verificatore basa le proprie conclusioni.
+- Dichiarazione di verifica: Il documento finale dell’organismo: che cosa è stato verificato, con quali criteri, con quale livello di garanzia e con quale conclusione.
+Commento del docente: Cinque parole che ritroverete in ogni offerta di un organismo di verifica. La ISO 14064-1 non obbliga a far verificare l’inventario: chiede di dichiarare nel rapporto se è stato verificato e con quale livello di garanzia. Sono clienti, banche e programmi a chiedere la verifica. Sulla materialità un esempio illustrativo: con una soglia del 5% del totale, per Terrafelix sarebbero rilevanti errori oltre 1.084,6 t CO2e. La soglia non è fissata in generale: dipende dal programma e dalle esigenze di chi userà il dato.
+### SCHERMATA 52 — Garanzia limitata e garanzia ragionevole [two · ISO 14064-3:2019 · livelli di garanzia]
+Colonna «Garanzia limitata»:
+- Livello di fiducia più contenuto
+- Meno prove, campioni più piccoli
+- Conclusione in forma negativa: non sono emersi elementi che facciano ritenere il dato non corretto
+- Tempi e costi minori
+- Scelta frequente per i primi inventari
+Colonna «Garanzia ragionevole»:
+- Livello di fiducia alto, mai assoluto
+- Più prove, campioni più ampi, controlli più profondi
+- Conclusione in forma positiva: il dato è corretto in tutti gli aspetti rilevanti
+- Tempi e costi maggiori
+- Adatta quando il dato sostiene impegni importanti
+Commento del docente: La differenza non è tra una verifica «seria» e una «leggera»: è nella quantità di prove raccolte e, di conseguenza, nella forza della conclusione. Nessuna delle due garantisce che il dato sia esatto al chilogrammo. Terrafelix, al primo inventario, concorda con l’organismo la garanzia limitata (scelta illustrativa del caso). Il livello va deciso prima di iniziare e scritto nell’incarico, insieme alla materialità: non si può cambiare a verifica conclusa perché l’esito è stato migliore del previsto.
+### SCHERMATA 53 — Le fasi tipiche di una verifica [flow · ISO 14064-3:2019]
+1. Accordo: Oggetto, criteri (ISO 14064-1), livello di garanzia, materialità, tempi.
+2. Piano e analisi dei rischi: Il verificatore studia l’inventario e decide dove gli errori sono più probabili o più pesanti.
+3. Raccolta delle evidenze: Campionamento di bollette e fatture, ricalcoli, interviste, visita in stabilimento.
+4. Rilievi: Richieste di chiarimento o di correzione: l’azienda risponde e, se serve, corregge.
+5. Dichiarazione di verifica: Conclusione dell’organismo, con il livello di garanzia concordato.
+Sequenza tipica nella prassi degli organismi: i dettagli cambiano con il programma e con l’organismo.
+Commento del docente: Il verificatore non rifà l’inventario: lo mette alla prova. Con il piano di verifica decide dove guardare, partendo dalle voci più grandi e da quelle dove un errore è più probabile; poi campiona. Per questo la prima cosa che chiederà è il foglio di calcolo con le formule visibili e l’elenco delle fonti. La fase dei rilievi non è un esame fallito: è il momento in cui l’azienda chiarisce o corregge. Ciò che conta è che, alla fine, il rapporto non contenga errori rilevanti.
+### SCHERMATA 54 — Chi fa che cosa nella verifica [tree · ISO/IEC 17029 · ISO 14065]
+Radice: Verifica dell’inventario GHG (ruoli distinti e indipendenti)
+- Ente di accreditamento (in Italia ACCREDIA): Accredita gli organismi; ISO/IEC 17029 e ISO 14065
+- Organismo di verifica (terza parte indipendente): Verifica secondo ISO 14064-3; Emette la dichiarazione
+- Organizzazione (Terrafelix): Prepara inventario e rapporto; Fornisce evidenze e accessi; Resta responsabile dei dati
+- Utilizzatori (clienti, banca, direzione): Leggono rapporto e dichiarazione; Decidono in base ai dati
+Gli organismi di verifica sono accreditati secondo ISO/IEC 17029 e ISO 14065.
+Commento del docente: Quattro ruoli che non si confondono. L’accreditamento è la garanzia che l’organismo sia competente e imparziale: prima di firmare un incarico, chiedete sempre per quale schema e secondo quali norme l’organismo è accreditato. Un punto delicato è l’indipendenza: chi ha aiutato a costruire l’inventario non può verificarlo. Nel nostro caso il consulente EVALIS affianca Terrafelix nella preparazione, mentre la verifica è affidata a un organismo diverso, che non ha partecipato ai calcoli.
+### SCHERMATA 55 — Luglio 2026: la verifica di Terrafelix [timeline]
+- Giugno — Rapporto chiuso: Inventario consolidato, controlli interni, fascicolo pronto.
+- 1ª settimana — Accordo e piano: Garanzia limitata, materialità, elenco dei documenti richiesti.
+- 2ª settimana — Esame dei documenti: Foglio di calcolo, fattori, campione di bollette e fatture.
+- 3ª settimana — Visita in stabilimento: Contatori, impianti, registri, colloqui con i responsabili.
+- 4ª settimana — Rilievi e risposte: Chiarimenti e osservazioni; nessuna correzione ai totali.
+- Fine luglio — Dichiarazione di verifica: Garanzia limitata sul totale di 21.692,5 t CO2e.
+Fonte dei dati: Caso studio Pastificio Terrafelix – calendario illustrativo
+Commento del docente: Il calendario del progetto prevede il consolidamento e il rapporto a giugno e la verifica a luglio. La scansione in settimane è illustrativa: i tempi reali dipendono dalla dimensione dell’azienda e dall’organismo. Il messaggio è un altro: la verifica si prepara prima. Se a giugno il fascicolo è in ordine, luglio scorre senza affanni; se i documenti vanno cercati mentre il verificatore aspetta, ogni richiesta diventa un’emergenza. Nella prossima sezione vediamo che cosa mettere nel fascicolo.
+
+## SEZIONE 11 — Prepararsi alla verifica: il caso
+### SCHERMATA 56 — Prepararsi alla verifica: il caso [section]
+La verifica va bene quando l’azienda sa già dove il verificatore andrà a guardare e ha le evidenze in ordine. Vediamo che cosa preparare, dove si annidano gli errori e come è andata a Terrafelix.
+- Il fascicolo delle evidenze
+- Dove guarda il verificatore: i rischi di errore
+- Quanto sposta il totale un errore del 10%
+- L’esito della verifica di luglio
+### SCHERMATA 57 — Il fascicolo delle evidenze [checklist]
+- Rapporto GHG e foglio di calcolo: con le formule visibili, non solo i valori incollati
+- Documento di impostazione: confini, criteri di significatività, anno base, scelte di metodo
+- Bollette e fatture dell’anno: gas, elettricità, carburanti, materie prime, imballaggi
+- Registri e documenti tecnici: apparecchiature con gas refrigeranti, rifiuti, documenti di trasporto
+- Tabella dei fattori di emissione: fonte, anno, versione e unità di ogni fattore; GWP utilizzati
+- Stime e ipotesi scritte: pendolarismo, distanze medie dei trasporti, quote di cottura
+- Registro delle correzioni: errori trovati nei controlli interni e modo in cui sono stati corretti
+- Persone di riferimento: chi ha fornito ogni dato e chi lo ha controllato
+Commento del docente: Il fascicolo è la risposta anticipata alla domanda che il verificatore farà per ogni numero: «da dove viene?». Non serve un sistema documentale sofisticato: una cartella ordinata per scope e per voce, con i documenti in formato elettronico e il foglio di calcolo che rimanda a ciascuno, è più che sufficiente per una PMI. Chi ha seguito l’unità 2 riconoscerà il registro dei dati e delle ipotesi: se è stato tenuto durante i calcoli, il fascicolo è già fatto per tre quarti.
+### SCHERMATA 58 — Dove guarda il verificatore: i rischi di errore [matrix]
+Modello didattico. Colonne: probabilità che il dato contenga un errore. Righe: effetto sul totale, se l’errore c’è.
+Assi: Probabilità di errore × Effetto sul totale
+- R1 Semola: fattore generico da letteratura: P3 × G5 = 15
+- R2 Gas naturale: letture stimate o mesi mancanti: P2 × G3 = 6
+- R3 Distribuzione a valle: distanze medie: P4 × G2 = 8
+- R4 Elettricità: fattore di un anno sbagliato: P2 × G2 = 4
+- R5 Gasolio della flotta: fatture doppie: P3 × G1 = 3
+- R6 Gas refrigeranti: ricariche non registrate: P3 × G1 = 3
+- R7 Pendolarismo: questionario parziale: P4 × G1 = 4
+Commento del docente: Mettersi nei panni del verificatore è il modo migliore per prepararsi. La sua analisi dei rischi assomiglia a questa matrice: quali dati possono contenere errori e quanto peserebbero. In alto c’è di nuovo la semola, seguita dal gas. Le voci in basso a destra, come il pendolarismo, hanno errori probabili ma poco pesanti: il verificatore le guarderà per capire come lavora l’azienda, più che per l’effetto sui numeri. Costruite la vostra matrice prima della verifica e preparate le evidenze partendo dall’alto.
+### SCHERMATA 59 — Prova tu: quanto sposta il totale un errore del 10% [sim]
+In ogni riga l’errore iniziale è del 10%. Cambia le percentuali e confronta ogni risultato con una soglia di materialità del 5% del totale (esempio illustrativo): 1.084,6 t CO2e. Quale voce la supera da sola?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Semola (14.420 t CO2e): 10 % × 144,2 t CO2e per 1% = 1442 t CO2e
+- Gas naturale (2.100 t CO2e): 10 % × 21 t CO2e per 1% = 210 t CO2e
+- Distribuzione a valle (1.486 t CO2e): 10 % × 14,86 t CO2e per 1% = 148,6 t CO2e
+- Elettricità (752 t CO2e): 10 % × 7,52 t CO2e per 1% = 75,2 t CO2e
+- Pendolarismo (80,8 t CO2e): 10 % × 0,808 t CO2e per 1% = 8,08 t CO2e
+- Gas refrigeranti (39,3 t CO2e): 10 % × 0,393 t CO2e per 1% = 3,93 t CO2e
+Totale iniziale: 1887,81 t CO2e
+Con il 10% su ogni riga: semola 1.442 t, gas 210 t, distribuzione 148,6 t, elettricità 75,2 t, pendolarismo 8,1 t, refrigeranti 3,9 t.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Qui il «dato di attività» è la percentuale di errore e il «fattore» sono le tonnellate che corrispondono a un punto percentuale della voce. Con il 10%, solo la semola supera la soglia: 1.442 t contro 1.084,6. Per la semola basta un errore del 7,5%; per il gas servirebbe un errore di oltre il 50%. Un errore del 10% su tutte e sei le voci, nella stessa direzione, sposterebbe il totale di 1.887,8 t, cioè dell’8,7%. Ecco perché verificatore e azienda dedicano alla semola la maggior parte dell’attenzione.
+### SCHERMATA 60 — L’esito della verifica di luglio [case]
+Luglio 2026. L’organismo di verifica, accreditato e indipendente, esamina l’inventario 2025 di Terrafelix con livello di garanzia limitata. Tra i campioni sceglie le fatture del gasolio della flotta, le bollette del gas e il calcolo della semola.
+- Gasolio: il verificatore somma le fatture e ottiene 38.000 l, come nel rapporto
+- Nel registro delle correzioni trova la fattura doppia da 2.400 l, eliminata a giugno
+- Gas ed elettricità: i consumi coincidono con le bollette
+- Semola: quantità confermate dalle fatture; fattore da fonte generica, dichiarato come tale
+Domanda di lavoro: Quali rilievi ci si può aspettare, e che cosa cambia nei numeri?
+Come ha operato l'azienda: Nessuna correzione: i totali restano quelli del rapporto, 21.692,5 t CO2e. Il verificatore formula due osservazioni: documentare meglio il metodo di stima del pendolarismo e acquisire dal molino un fattore specifico per la semola. Terrafelix le inserisce nel piano dati 2026 e riceve la dichiarazione di verifica. La fattura doppia non compare tra i rilievi: era già stata corretta, e il registro lo dimostra.
+Commento del docente: L’esito è illustrativo, ma realistico per un’azienda che ha fatto bene i controlli interni: nessun errore rilevante, qualche osservazione sul metodo. Notate che cosa ha reso semplice la verifica: i numeri coincidevano con i documenti, il punto debole era già dichiarato nel rapporto, l’errore del gasolio era stato trovato e registrato dall’azienda. Le osservazioni del verificatore coincidono con le priorità del piano dati: è il segno che Terrafelix conosceva già i propri limiti.
+
+## SEZIONE 12 — Sintesi dell’unità
+### SCHERMATA 61 — Sintesi dell’unità [section]
+Abbiamo trasformato 28 righe di calcolo in un inventario che si può leggere, difendere e confrontare nel tempo. Ripassiamo i passaggi, gli errori da evitare e i punti chiave prima di passare al prodotto.
+- Autovalutazione: che cosa sai fare
+- Gli errori tipici della fase finale
+- Il ciclo annuale dell’inventario
+- I punti chiave e l’unità 8
+### SCHERMATA 62 — Autovalutazione: che cosa devi saper fare [checklist]
+- Sommare Scope 1, Scope 2 location-based e Scope 3 e ritrovare lo stesso totale per categoria ISO
+- Indicare le sorgenti maggiori di un inventario e la loro quota sul totale
+- Calcolare un indicatore di intensità dichiarando numeratore e denominatore
+- Stimare l’incertezza di una voce combinando quella del dato e quella del fattore
+- Riconoscere quando l’anno base va ricalcolato e quando no
+- Separare l’effetto dei consumi dall’effetto del fattore in una variazione
+- Elencare i contenuti del rapporto GHG richiesti dalla ISO 14064-1
+- Spiegare la differenza tra garanzia limitata e garanzia ragionevole
+- Preparare il fascicolo delle evidenze per il verificatore
+Commento del docente: Scorrete la lista e, per ogni voce, chiedetevi se sapreste farlo domani su un’azienda vera. Se la risposta è incerta su un punto, tornate alla sezione corrispondente prima dell’esame: le domande finali riprendono proprio queste capacità, e circa metà richiede un piccolo calcolo. Tenete a portata di mano una calcolatrice: servono solo somme, divisioni, percentuali e una radice quadrata. Nessuna domanda richiede di ricordare a memoria i numeri di Terrafelix.
+### SCHERMATA 63 — Gli errori tipici della fase finale [two]
+Colonna «Corretto»:
+- Un solo totale dichiarato, con Scope 2 location-based; market-based a parte
+- Intensità sempre accompagnata dal dato assoluto
+- Incertezza dichiarata sulle voci maggiori
+- Anno base ricalcolato quando il metodo cambia in modo significativo
+- Correzioni annotate nel registro dei dati
+Colonna «Sbagliato»:
+- Sommare location-based e market-based
+- Presentare come riduzione l’effetto di un fattore più basso
+- Dare tutte le cifre con la stessa sicurezza
+- Cambiare metodo senza ricalcolare l’anno base
+- Sottrarre crediti di compensazione dall’inventario
+Commento del docente: Sono gli errori che fanno perdere credibilità a un inventario costruito bene. Hanno una radice comune: la tentazione di presentare un numero più semplice o più favorevole di quello reale. L’ultimo punto anticipa l’unità 10: i crediti di compensazione non riducono l’inventario, si rendicontano a parte. Un rapporto che dichiara limiti, incertezze e cambi di metodo regge alla verifica e alle domande dei clienti; uno che li nasconde regge fino alla prima lettura attenta.
+### SCHERMATA 64 — Il ciclo annuale dell’inventario [cycle]
+Al centro: Inventario GHG di ogni anno
+- Raccogliere: Bollette, fatture, registri, questionari
+- Calcolare: Dato di attività × fattore, voce per voce
+- Consolidare: Totali per scope e per categoria ISO
+- Controllare: Riconciliazioni, plausibilità, incertezza
+- Rendicontare: Rapporto GHG trasparente e completo
+- Verificare e migliorare: Verifica di terza parte e piano dati
+Commento del docente: L’inventario non è un progetto che si chiude: è un ciclo che si ripete ogni anno, e ogni giro costa meno del precedente. Al secondo anno Terrafelix avrà i modelli pronti, le persone formate, il confronto con l’anno base e un piano dati con tre priorità. Le unità da 2 a 6 hanno coperto i primi due passi del ciclo, questa unità gli altri quattro. Con l’inventario verificato in mano, l’azienda può affrontare le due domande successive: quanto emette un chilo di pasta, e come ridurre.
+### SCHERMATA 65 — I punti chiave dell’unità [summary]
+1. Consolidare significa sommare in modo ripercorribile: Terrafelix chiude il 2025 con 21.692,5 t CO2e (Scope 1: 2.257,8; Scope 2 location-based: 752; Scope 3: 18.682,7).
+2. Lo stesso totale si presenta per scope e per categoria ISO 14064-1; market-based (900 t), cottura (8.416 t) e fotovoltaico si riportano a parte.
+3. Poche voci fanno il risultato: la semola vale il 66,5%, le prime cinque voci l’86,3%.
+4. Gli indicatori di intensità (150,5 kg CO2e/t per Scope 1+2; 1,085 kg CO2e/kg; 603 t CO2e/M€) affiancano il dato assoluto, non lo sostituiscono.
+5. L’incertezza nasce dal dato e dal fattore e conta dove la voce è grande: semola ± 30,1%, circa ± 4.340 t (modello didattico).
+6. L’anno base (2025) si ricalcola per cambiamenti strutturali o di metodo significativi; un fattore di rete più basso non è una riduzione ottenuta dall’azienda.
+7. Il rapporto GHG segue i contenuti della ISO 14064-1: confini, emissioni dirette per gas, indirette per categoria, fattori e GWP con le fonti, incertezza, esclusioni motivate.
+8. La verifica di terza parte segue la ISO 14064-3, con garanzia limitata o ragionevole, ed è svolta da organismi accreditati (ISO/IEC 17029 e ISO 14065).
+9. Prossima unità: dall’organizzazione al prodotto, con la carbon footprint di 1 kg di pasta secondo la ISO 14067.
+Commento del docente: Con questa unità si chiude la parte del corso dedicata all’inventario di organizzazione: dall’unità 3 a qui avete impostato, calcolato, consolidato, controllato, scritto e fatto verificare. Dall’unità 8 cambia l’oggetto: non più un anno di attività dell’azienda, ma il ciclo di vita di un chilo di pasta, con regole proprie. Molti dati saranno gli stessi, divisi per la produzione; i confini e il risultato saranno diversi. Prima di proseguire, affrontate l’esame finale dell’unità.

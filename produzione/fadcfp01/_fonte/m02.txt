@@ -1,0 +1,612 @@
+# UNITÀ 2 — La formula del conteggio: dati di attività, fattori di emissione, unità di misura (2 ore e 30)
+La «cassetta degli attrezzi» per ogni calcolo: una formula, tre ingredienti, le unità giuste, le fonti affidabili. Con esempi svolti passo per passo, dal metro cubo di gas alla tonnellata di CO2e.
+Obiettivi di apprendimento:
+- Applicare la formula base «dato di attività × fattore di emissione» a qualunque sorgente
+- Individuare i dati di attività e i documenti aziendali in cui si trovano
+- Convertire correttamente le unità di misura: kWh, MWh, GJ, Sm³, litri, kg, tkm, pkm
+- Leggere, scegliere e citare un fattore di emissione, distinguendo CO2 e CO2e, combustione e filiera a monte
+- Usare il GWP per i gas misurati in massa e gestire arrotondamenti e conversione in tonnellate
+- Riconoscere gli errori tipici del conteggio e documentare ogni calcolo in modo tracciabile
+
+## SEZIONE 1 — Una sola formula
+### SCHERMATA 1 — Una sola formula [section]
+Nell’unità 1 abbiamo visto che cosa sono i gas serra, la CO2 equivalente e gli Scope. Ora impariamo a contare: ogni emissione, dalla caldaia al camion, si calcola con la stessa moltiplicazione.
+- Emissioni = dato di attività × fattore di emissione
+- L’anatomia di un calcolo in cinque passi
+- Il primo esempio svolto: una caldaia a gas
+- La stessa formula per tutte le righe dell’inventario
+### SCHERMATA 2 — L’anatomia di un calcolo: cinque passi sempre uguali [flow · Formula base]
+Emissioni (kg CO2e) = dato di attività × fattore di emissione. Per applicarla bastano cinque passi, identici per ogni sorgente.
+1. 1. Che cosa emette?: Individua la sorgente: caldaia, furgone, climatizzatore, energia o materiale acquistato.
+2. 2. Quanto?: Trova il dato di attività e la sua unità: Sm³, litri, kWh, km, kg.
+3. 3. Quale fattore?: Scegli il fattore di emissione riferito alla stessa unità e annota la fonte.
+4. 4. Moltiplica: Dato × fattore = chilogrammi di CO2e.
+5. 5. Converti e leggi: Dividi per 1.000 per avere le tonnellate e chiediti se il risultato è credibile.
+Per i gas misurati direttamente in massa (refrigeranti, metano) il fattore è il GWP: lo vediamo nella sezione 6.
+Commento del docente: Sono le cinque domande già anticipate alla fine dell’unità 1, ora trasformate in una procedura. Conviene abituarsi a ripeterle a voce per ogni riga: quando un calcolo non torna, quasi sempre è saltato il passo 2 (unità del dato non controllata) oppure il passo 3 (fattore riferito a un’altra unità). Il passo 5 è il più trascurato: un risultato va sempre guardato con occhio critico, chiedendosi se l’ordine di grandezza ha senso per quell’azienda.
+### SCHERMATA 3 — Primo esempio svolto: la caldaia a gas di un’azienda [calc · Formula base]
+Un’azienda riscalda il capannone con una caldaia a gas naturale. Le 12 bollette dell’anno riportano in totale 48.000 Sm³.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Gas naturale bruciato in caldaia (dato: somma delle 12 bollette dell’anno · fattore: valore didattico arrotondato): 48.000 Sm³ × 2 kg CO2e/Sm³ = 96.000 kg CO2e
+In tonnellate: 96 t CO2e
+Ogni Sm³ bruciato produce circa 2 kg di CO2e: 48.000 Sm³ ne producono 96.000 kg, cioè 96 tonnellate.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Tutto il corso è una variazione di questa riga. Il dato di attività (48.000 Sm³) arriva dalle bollette; il fattore (2,0 kg CO2e/Sm³) è il valore arrotondato del corso, vicino al parametro nazionale ISPRA di circa 1,98 kg CO2 per Sm³. La moltiplicazione dà 96.000 kg, che divisi per 1.000 fanno 96 t CO2e. Fate notare agli allievi che le unità «si semplificano»: Sm³ per kg al Sm³ dà kg. Se le unità non si semplificano, il calcolo è sbagliato prima ancora di farlo.
+### SCHERMATA 4 — Leggere il risultato: che cosa dicono i quattro numeri [stats]
+- 48.000 Sm³: il dato di attività: quanto gas è stato bruciato (dalle bollette)
+- 2,0 kg CO2e: per ogni Sm³: è il fattore di emissione (valore didattico)
+- 96 t CO2e: il risultato: 96.000 kg ÷ 1.000 (emissioni dell’anno)
+- ≈ 565.000 km: percorsi da un’auto media per emettere altrettanto (96.000 ÷ 0,17 kg CO2e/km)
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Un numero isolato non dice nulla: 96 tonnellate sono tante o poche? Il confronto aiuta la memoria: con il fattore dell’auto media (0,17 kg CO2e/km) servono circa 565.000 km per emettere la stessa quantità, cioè una quarantina di auto che percorrono 14.000 km l’anno. Abituatevi a tradurre ogni risultato in un ordine di grandezza familiare: è anche il modo più rapido per accorgersi di un errore di mille volte, come vedremo nella sezione 10.
+### SCHERMATA 5 — I tre ingredienti di ogni calcolo e il risultato [defs]
+- Dato di attività: La misura di quanto si è svolta l’attività che genera emissioni: Sm³ di gas, litri di carburante, kWh, chilometri, chilogrammi di materiale, euro spesi.
+- Fattore di emissione: Le emissioni prodotte da una unità di attività: per esempio 2,65 kg CO2e per ogni litro di gasolio bruciato.
+- Unità di misura: Il legame tra i due: l’unità del dato deve coincidere con quella al denominatore del fattore (litri con «per litro», kWh con «per kWh»).
+- CO2 equivalente (CO2e): L’unità del risultato: esprime l’effetto di tutti i gas serra come quantità di CO2 con lo stesso effetto sul riscaldamento.
+- GWP: Potenziale di riscaldamento globale: trasforma i kg di un gas in kg di CO2e. Serve quando il gas è misurato direttamente in massa.
+Commento del docente: Le definizioni sono quelle dell’unità 1, rilette dal punto di vista di chi deve fare i conti. La divisione dei compiti è netta: il dato di attività lo cerca l’azienda nei propri documenti; il fattore di emissione lo si prende da una fonte esterna; l’unità di misura è il punto in cui i due devono incontrarsi. Le sezioni 2, 3 e 4 sono dedicate ciascuna a uno di questi tre ingredienti; il GWP, che è un fattore un po’ speciale, ha la sua sezione più avanti.
+### SCHERMATA 6 — Terrafelix: una formula per tutte le righe dell’inventario [case]
+A gennaio 2026 Davide Russo, responsabile Ambiente ed energia del Pastificio Terrafelix, imposta il foglio di calcolo dell’inventario 2025. Il consulente EVALIS gli suggerisce di costruire ogni riga nello stesso modo: dato di attività, unità, fattore, risultato. Ecco come appariranno, a dati raccolti, tre delle righe più importanti.
+- Gas naturale degli essiccatoi: 1.050.000 Sm³ × 2,0 kg CO2e/Sm³ = 2.100.000 kg CO2e (2.100 t)
+- Elettricità prelevata dalla rete: 3.200.000 kWh × 0,235 kg CO2e/kWh = 752.000 kg CO2e (752 t)
+- Semola di grano duro: 20.600.000 kg × 0,7 kg CO2e/kg = 14.420.000 kg CO2e (14.420 t)
+Domanda di lavoro: Tre sorgenti diversissime: che cosa cambia nel calcolo dall’una all’altra?
+Come ha operato l'azienda: Cambiano solo il dato di attività, la sua unità e il fattore: la moltiplicazione è identica. Davide costruisce un’unica tabella con le stesse colonne per tutte le voci, così ogni riga si controlla allo stesso modo.
+Commento del docente: Le tre righe appartengono a tre parti diverse dell’inventario (emissioni dirette, energia acquistata, catena del valore), che studieremo nelle unità 4, 5 e 6. Qui interessa solo il metodo: se sapete calcolare una riga, sapete calcolarle tutte. La difficoltà vera non è la matematica, ma trovare il dato giusto e scegliere il fattore giusto. Notate anche la proporzione: la semola, che non brucia nulla dentro lo stabilimento, pesa quasi sette volte il gas degli essiccatoi.
+
+## SEZIONE 2 — Il dato di attività
+### SCHERMATA 7 — Il dato di attività [section]
+Il dato di attività è la quantità che misura «quanto» si è svolta un’attività che genera emissioni. È l’ingrediente che l’azienda deve cercare in casa propria: quasi sempre esiste già, in un documento amministrativo o tecnico.
+- I tipi di dato: energia, carburanti, distanze, masse, spesa
+- Dove si trova: documenti e uffici
+- Quantità fisiche prima della spesa
+- Il periodo: dal 1° gennaio al 31 dicembre
+### SCHERMATA 8 — I tipi di dato di attività [hub]
+Al centro: Dato di attività
+- Energia: kWh di elettricità, Sm³ di gas, GJ di calore acquistato
+- Carburanti: Litri di gasolio, benzina o GPL riforniti nell’anno
+- Distanze: Chilometri percorsi; passeggeri × km per i viaggi (pkm)
+- Trasporto merci: Tonnellate × chilometri (tkm) per ogni tratta
+- Masse: kg di materie prime, imballaggi, rifiuti, gas refrigeranti
+- Spesa: Euro spesi, quando la quantità fisica non è disponibile
+Regola pratica: quando esistono le quantità fisiche si usano quelle; la spesa è l’ultima risorsa.
+Commento del docente: La varietà è solo apparente: ogni dato di attività è una quantità con la sua unità. L’ordine dei raggi non è casuale: energia e carburanti sono i dati più facili e più affidabili, perché vengono fatturati; distanze e masse richiedono un po’ di ricostruzione; la spesa in euro è il dato più comodo ma anche il più grossolano, perché il prezzo cambia senza che cambino le emissioni. Usare la spesa quando esistono le quantità è uno degli errori tipici che un verificatore segnala.
+### SCHERMATA 9 — Dove si trova il dato: sorgente, documento, ufficio [table]
+Colonne: Sorgente | Dato di attività | Documento | Chi lo custodisce
+- Caldaie, forni, essiccatoi | Sm³ di gas naturale | Bollette del gas, letture del contatore | Amministrazione
+- Elettricità | kWh prelevati dalla rete | Bollette elettriche | Amministrazione
+- Veicoli aziendali | Litri di carburante | Schede e carte carburante, fatture | Amministrazione, gestione flotta
+- Climatizzatori e gruppi frigo | kg di gas ricaricato | Registro dell’apparecchiatura, rapporti del frigorista | Manutenzione
+- Materie prime e imballaggi | kg o t acquistati | Fatture, documenti di trasporto (DDT) | Acquisti
+- Trasporti affidati a terzi | t trasportate e km | DDT, fatture dei vettori | Logistica
+- Viaggi di lavoro | km o pkm, notti in hotel | Note spese, estratti dell’agenzia viaggi | Amministrazione
+- Rifiuti | kg per destino | Registro di carico e scarico, formulari | Ambiente
+- Beni strumentali e servizi | Euro spesi | Contabilità, registro dei cespiti | Amministrazione
+Se manca la quantità, prima di ricorrere alla spesa si chiede al fornitore o si stima da dati tecnici (sezione 7).
+Commento del docente: Questa tabella è il primo strumento operativo del corso: stampatela e portatela alla riunione di avvio. Mostra che l’inventario non è un lavoro del solo responsabile ambiente: i dati stanno in amministrazione, negli acquisti, in logistica, in manutenzione. Il consiglio pratico è chiedere a ogni ufficio un dato già totalizzato sull’anno, insieme alla copia dei documenti di origine. Il piano di raccolta completo, con ruoli e scadenze, è argomento dell’unità 3.
+### SCHERMATA 10 — Terrafelix: Chiara Vitale raccoglie le bollette [case]
+A febbraio 2026 Chiara Vitale, responsabile Amministrazione e controllo, riceve da Davide Russo la richiesta dei consumi 2025 di gas, elettricità e carburanti. I documenti ci sono tutti, ma sono ordinati per data di fattura, non per periodo di consumo.
+- 12 bollette del gas: 1.050.000 Sm³ in totale
+- 12 bollette elettriche: 3.200.000 kWh prelevati dalla rete
+- Schede carburante della flotta: 38.000 l di gasolio e 6.000 l di benzina
+- La bolletta di dicembre 2025 è arrivata a gennaio 2026; quella di dicembre 2024 è stata pagata a gennaio 2025
+Domanda di lavoro: Quali bollette entrano nell’inventario 2025?
+Come ha operato l'azienda: Conta il periodo di consumo, non la data della fattura o del pagamento: entrano i consumi dal 1° gennaio al 31 dicembre 2025. Chiara compila una tabella mensile con Sm³ e kWh, segnala le letture stimate e allega le copie delle bollette: ogni numero ha il suo documento.
+Commento del docente: L’errore di competenza è frequentissimo quando i dati arrivano dalla contabilità, che ragiona per data di registrazione. Per un inventario conta quando l’energia è stata consumata. Un controllo semplice: le bollette devono essere dodici, una per ciascun mese dell’anno, senza buchi e senza doppioni. Attenzione anche alle letture stimate e ai conguagli, che spostano consumi da un mese all’altro: sull’anno intero di solito si compensano, ma a cavallo di dicembre vanno guardati con cura.
+
+## SEZIONE 3 — Le unità di misura e le conversioni
+### SCHERMATA 11 — Le unità di misura e le conversioni [section]
+La maggior parte degli errori di conteggio non nasce dalla formula, ma dalle unità: kWh scambiati per MWh, litri per chilogrammi. Regola d’oro: l’unità del dato deve essere la stessa che compare al denominatore del fattore.
+- Energia: kWh, MWh, GJ e Sm³
+- Carburanti: litri e chilogrammi
+- Trasporti: tkm e pkm
+- Prova tu: stessa quantità, unità diverse
+### SCHERMATA 12 — Le unità che si incontrano e le equivalenze da ricordare [table]
+Colonne: Grandezza | Unità | Equivalenza | Dove si incontra
+- Energia elettrica | kWh, MWh | 1 MWh = 1.000 kWh | Bollette elettriche
+- Calore ed energia dei combustibili | MJ, GJ | 1 kWh = 3,6 MJ · 1 GJ = 277,8 kWh | Contratti di calore, schede tecniche
+- Gas naturale | Sm³ (standard metro cubo) | 1 Sm³ ≈ 9,8 kWh (potere calorifico indicativo) | Bollette del gas
+- Carburanti liquidi | litri, kg | gasolio ≈ 0,84 kg/l · benzina ≈ 0,74 kg/l (valori indicativi) | Schede carburante, fatture
+- Masse | g, kg, t | 1 t = 1.000 kg · 1 kg = 1.000 g | Fatture, DDT, registro rifiuti
+- Trasporto di merci | tkm | tonnellate × chilometri | DDT, fatture dei vettori
+- Trasporto di persone | pkm | passeggeri × chilometri | Note spese, biglietti
+- Emissioni | kg CO2e, t CO2e | 1 t CO2e = 1.000 kg CO2e | Risultato del calcolo
+Densità e potere calorifico sono valori indicativi: cambiano con la qualità del combustibile. In un inventario reale si usano i valori della stessa fonte da cui si prendono i fattori.
+Commento del docente: Non serve imparare decine di conversioni: queste otto righe coprono quasi tutto ciò che si incontra in una PMI. Lo standard metro cubo (Sm³) è il volume di gas riportato a condizioni di riferimento di temperatura e pressione: è l’unità che compare in bolletta ed è quella a cui sono riferiti i fattori del gas. Il potere calorifico di circa 9,8 kWh per Sm³ è un valore indicativo dei parametri nazionali ISPRA; le densità dei carburanti sono anch’esse indicative e vanno sempre dichiarate come ipotesi.
+### SCHERMATA 13 — Conversioni di energia: tutto in kWh [calc]
+Un’officina riceve tre documenti con tre unità diverse: gas in Sm³, elettricità in MWh, calore del teleriscaldamento in GJ. Per confrontare e sommare i consumi li porta tutti in kWh.
+Formula: Energia = Quantità × Fattore di conversione
+- Gas naturale (dalle bollette del gas · potere calorifico indicativo): 12.000 Sm³ × 9,8 kWh/Sm³ = 117.600 kWh
+- Elettricità (dalla bolletta annuale riepilogativa): 85 MWh × 1000 kWh/MWh = 85.000 kWh
+- Calore acquistato (dal contratto di teleriscaldamento): 250 GJ × 277,8 kWh/GJ = 69.450 kWh
+Energia totale: 272.050 kWh
+Fonte dei dati: Esempio didattico – conversioni: 1 MWh = 1.000 kWh; 1 GJ = 277,8 kWh; gas naturale circa 9,8 kWh/Sm³ (ISPRA, parametri standard nazionali, valore arrotondato)
+Commento del docente: La tabella ha la stessa forma della formula delle emissioni: quantità per fattore. Cambia solo il significato del fattore, che qui converte un’unità in un’altra. Risultati: 117.600 kWh di gas, 85.000 kWh di elettricità, 69.450 kWh di calore, in totale 272.050 kWh. Attenzione: sommare i kWh serve a confrontare i consumi, non a calcolare le emissioni. Per le emissioni ogni vettore energetico mantiene il proprio fattore: un kWh elettrico e un kWh di gas non emettono la stessa quantità.
+### SCHERMATA 14 — Carburanti: dai litri ai chilogrammi [calc]
+La scheda carburante riporta i litri, ma alcune banche dati esprimono il fattore per kg o per tonnellata di carburante. Si converte con la densità: kg = litri × densità.
+Formula: Massa = Quantità × Densità (valore indicativo)
+- Gasolio (litri dalle schede carburante): 5000 l × 0,84 kg/l = 4200 kg
+- Benzina (litri dalle schede carburante): 1200 l × 0,74 kg/l = 888 kg
+Totale carburanti: 5088 kg
+Al contrario, da kg a litri si divide per la densità: 4.200 kg di gasolio ÷ 0,84 = 5.000 l.
+Fonte dei dati: Esempio didattico – densità dei carburanti: valori indicativi
+Commento del docente: Un litro di carburante pesa meno di un chilogrammo: 5.000 l di gasolio sono circa 4.200 kg, 1.200 l di benzina circa 888 kg. La differenza è del 16% per il gasolio e del 26% per la benzina: usare i litri con un fattore «per kg», o viceversa, sbaglia il risultato della stessa misura. Le densità qui usate sono valori indicativi, non presi da una norma: nella pratica si adotta la densità indicata dalla fonte del fattore. Il caso più insidioso è il GPL, venduto a volte in litri e a volte in kg: lo vedremo nell’unità 4.
+### SCHERMATA 15 — Trasporti: tonnellate-chilometro e passeggeri-chilometro [calc]
+Nei trasporti il dato di attività è un prodotto: tkm = tonnellate × km per le merci, pkm = passeggeri × km per le persone. Il fattore è riferito a quella unità composta.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Distanza
+- Consegna di merci con autoarticolato (24 t × 450 km = 10.800 tkm): 24 t × 0,1 kg CO2e/tkm × 450 km = 1080 kg CO2e
+- Trasferta in treno di tre persone (3 passeggeri × 800 km = 2.400 pkm): 3 passeggeri × 0,035 kg CO2e/pkm × 800 km = 84 kg CO2e
+Totale: 1164 kg CO2e
+In tonnellate: 1,164 t CO2e
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: La tonnellata-chilometro spiazza chi la incontra per la prima volta, ma è solo una moltiplicazione: quanto peso, per quanta strada. La consegna vale 10.800 tkm e 1.080 kg CO2e; la trasferta 2.400 pkm e 84 kg CO2e; insieme 1.164 kg. Due errori tipici: usare solo i chilometri dimenticando le tonnellate (o i passeggeri), e contare i km di sola andata quando il viaggio è di andata e ritorno. I trasporti saranno approfonditi nell’unità 6; qui importa capire come si costruisce il dato.
+### SCHERMATA 16 — Prova tu: l’unità del dato deve essere quella del fattore [sim]
+Ogni coppia di righe descrive la stessa quantità in due unità diverse: il risultato è uguale perché il fattore cambia insieme all’unità. Prova a scrivere 1.000 nella riga dell’elettricità in MWh: di quante volte cresce il risultato?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Elettricità, espressa in kWh: 1000 kWh × 0,235 kg CO2e/kWh = 235 kg CO2e
+- Elettricità, espressa in MWh: 1 MWh × 235 kg CO2e/MWh = 235 kg CO2e
+- Gas naturale, espresso in Sm³: 100 Sm³ × 2 kg CO2e/Sm³ = 200 kg CO2e
+- Gas naturale, espresso in kWh: 980 kWh × 0,2041 kg CO2e/kWh = 200,018 kg CO2e
+- Gasolio, espresso in litri: 100 l × 2,65 kg CO2e/l = 265 kg CO2e
+- Gasolio, espresso in kg: 84 kg × 3,155 kg CO2e/kg = 265,02 kg CO2e
+Totale iniziale: 1400,038 kg CO2e
+In tonnellate: 1,400038 t CO2e
+I fattori per MWh, per kWh di gas e per kg di gasolio sono ricavati da quelli del corso con le conversioni indicative: 1 MWh = 1.000 kWh; 1 Sm³ ≈ 9,8 kWh; gasolio ≈ 0,84 kg/l.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso) e conversioni indicative
+Commento del docente: L’esercizio fa toccare con mano la regola della sezione: 1.000 kWh e 1 MWh sono la stessa energia e danno gli stessi 235 kg CO2e, purché il fattore sia espresso nella stessa unità del dato. Se nella riga in MWh si scrive 1.000 al posto di 1, il risultato diventa 235.000 kg: mille volte di più. È l’errore più comune con le bollette. I fattori 0,2041 (2,0 ÷ 9,8) e 3,155 (2,65 ÷ 0,84) sono derivati a scopo didattico: le piccole differenze tra le righe di una coppia dipendono solo dagli arrotondamenti.
+
+## SEZIONE 4 — Il fattore di emissione
+### SCHERMATA 17 — Il fattore di emissione [section]
+Il fattore di emissione dice quante emissioni produce una unità di attività. Non si misura in azienda: si prende da una fonte autorevole. Saperlo leggere, prima ancora che sceglierlo, evita gli errori più costosi.
+- Come si legge: l’unità al denominatore
+- CO2 oppure CO2e: non è la stessa cosa
+- I fattori usati nel corso
+- Combustione e filiera a monte
+### SCHERMATA 18 — Come si legge un fattore di emissione [text]
+Un fattore è sempre un rapporto: emissioni al numeratore, unità di attività al denominatore.
+- Guarda il denominatore: «kg CO2e/l» vuole i litri, «kg CO2e/kWh» i kWh, «kg CO2e/tkm» le tonnellate-chilometro. Se il dato è in un’altra unità, prima si converte.
+- Guarda il numeratore: Chilogrammi oppure grammi? Un fattore di 234,7 g CO2/kWh equivale a 0,2347 kg CO2/kWh.
+- CO2 oppure CO2e: Un fattore in sola CO2 non comprende metano e protossido di azoto; uno in CO2e li comprende già, convertiti con il GWP. Va sempre dichiarato quale si usa.
+- Che cosa copre: Solo la combustione, oppure anche la filiera a monte del combustibile? Sono due fattori diversi, da non confondere.
+- A che cosa è riferito: Paese, anno, tecnologia: il fattore dell’elettricità italiana cambia ogni anno ed è diverso da quello di un altro Paese.
+Riquadro «Regola d’oro»: Prima di moltiplicare, leggi ad alta voce le unità: «litri, per chilogrammi di CO2e al litro». Se le unità non si semplificano, il calcolo è sbagliato.
+Commento del docente: Leggere un fattore è come leggere un’etichetta: bisogna guardarla tutta. Un esempio concreto: il fattore ISPRA dei consumi elettrici è pubblicato in grammi di CO2 per kWh (234,7 nel 2023). Nel corso lo usiamo arrotondato a 0,235 kg per kWh e, per semplicità didattica, lo trattiamo come CO2e. In un inventario reale si verifica nella fonte se il fattore comprende anche metano e protossido di azoto e lo si dichiara nel rapporto: confondere CO2 e CO2e è uno degli errori che un verificatore cerca per primo.
+### SCHERMATA 19 — I fattori di emissione del corso: una selezione [table]
+Per ogni fattore, l’unità al denominatore dice quale dato di attività serve.
+Colonne: Voce | Fattore | Unità | Dato di attività richiesto
+- Gas naturale – combustione | 2,0 | kg CO2e/Sm³ | volume in Sm³
+- Gasolio – combustione | 2,65 | kg CO2e/l | volume in litri
+- Benzina – combustione | 2,3 | kg CO2e/l | volume in litri
+- Elettricità di rete (location-based) | 0,235 | kg CO2e/kWh | energia in kWh
+- Auto media | 0,17 | kg CO2e/km | distanza in km
+- Treno passeggeri | 0,035 | kg CO2e/pkm | passeggeri × km
+- Trasporto merci su gomma | 0,1 | kg CO2e/tkm | tonnellate × km
+- Semola di grano duro | 0,7 | kg CO2e/kg | massa in kg
+- R-410A (GWP AR6) | 2.256 | kg CO2e/kg | massa di gas in kg
+- Macchinari – basato sulla spesa | 0,35 | kg CO2e/€ | spesa in euro
+Valori arrotondati a scopo didattico. In un inventario reale si usa la fonte ufficiale aggiornata all’anno di riferimento e la si cita nel rapporto.
+Commento del docente: È la tabella che useremo in tutto il corso: tenetela a portata di mano. I valori sono arrotondati per rendere i conti leggibili: il gas naturale, per esempio, è 2,0 al posto di circa 1,98 kg CO2 per Sm³ dei parametri nazionali ISPRA. Guardate la varietà dei denominatori: volume, energia, distanza, massa, euro. Ogni volta che cambia il denominatore cambia il dato che dovete procurarvi. Il fattore più alto della tabella, 2.256, non è un errore di stampa: è un GWP, e ne parliamo nella sezione 6.
+### SCHERMATA 20 — Combustione e filiera a monte: due fattori per lo stesso combustibile [gbar]
+Bruciare un combustibile emette CO2e (fattore di combustione). Estrarlo, raffinarlo e portarlo fino al serbatoio ne emette altra: è la filiera a monte, in inglese WTT (well-to-tank, «dal pozzo al serbatoio»). Valori in grammi di CO2e per unità di combustibile.
+Serie: Combustione | Filiera a monte (WTT)
+- Gas naturale (per Sm³): 2000g | 330g
+- Gasolio (per litro): 2650g | 620g
+- Benzina (per litro): 2300g | 600g
+Fonte dei dati: Tabella dei fattori del corso – valori arrotondati a scopo didattico (1 kg = 1.000 g)
+Commento del docente: La filiera a monte vale tra un sesto e un quarto della combustione: 0,33 contro 2,0 kg CO2e per Sm³ di gas (16,5%), 0,62 contro 2,65 per litro di gasolio (23,4%), 0,6 contro 2,3 per litro di benzina (26,1%). Non è un dettaglio. Quando prendete un fattore da una banca dati controllate sempre quale dei due state leggendo: le raccolte più usate li pubblicano in tabelle separate, con nomi simili. Sommare per sbaglio i due fattori, o usare quello a monte al posto della combustione, è un errore classico.
+### SCHERMATA 21 — Mille litri di gasolio: combustione più filiera a monte [calc · GHG Protocol · Scope 1 e Scope 3]
+Lo stesso dato di attività (1.000 l) si moltiplica per due fattori diversi, che finiscono in due parti diverse dell’inventario.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Combustione nel motore (emissione diretta: Scope 1, se il veicolo è dell’azienda): 1000 l × 2,65 kg CO2e/l = 2650 kg CO2e
+- Filiera a monte del gasolio (estrazione, raffinazione, distribuzione: Scope 3, categoria 3): 1000 l × 0,62 kg CO2e/l = 620 kg CO2e
+Totale delle due voci: 3270 kg CO2e
+In tonnellate: 3,27 t CO2e
+Le due voci si calcolano con lo stesso dato ma si riportano separatamente, ciascuna nel proprio scope: lo vedremo nelle unità 4 e 6.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Un solo dato di attività, due righe di calcolo: 2.650 kg CO2e dalla combustione e 620 kg dalla filiera a monte, 3.270 kg in tutto. È un buon esempio di come lavora un inventario ben costruito: i litri si raccolgono una volta sola e si riusano. Il totale qui serve a capire quanto pesa davvero un litro di gasolio lungo l’intera filiera; nell’inventario le due voci restano distinte, perché la prima è un’emissione diretta dell’azienda e la seconda un’emissione indiretta della catena del valore.
+
+## SEZIONE 5 — Dove si trovano i fattori di emissione
+### SCHERMATA 22 — Dove si trovano i fattori di emissione [section]
+I fattori non si inventano e non si copiano da una pagina qualsiasi: si prendono da fonti riconosciute, si scelgono con criteri chiari e si citano. È ciò che rende un calcolo verificabile.
+- Le fonti: ISPRA, DEFRA, IPCC, AIB, ADEME, banche dati LCA, fornitori
+- L’ordine di preferenza
+- I criteri di scelta: Paese, anno, tecnologia, gas compresi
+- Come si cita una fonte
+### SCHERMATA 23 — Le principali fonti di fattori di emissione [table]
+Colonne: Fonte | Che cos’è | Per che cosa si usa di solito
+- ISPRA | Istituto pubblico italiano per la protezione e la ricerca ambientale | Elettricità consumata in Italia, parametri nazionali dei combustibili
+- DEFRA/DESNZ «GHG Conversion Factors» | Raccolta del governo del Regno Unito, aggiornata ogni anno | Carburanti, veicoli, viaggi, trasporti, rifiuti, filiera a monte
+- IPCC Emission Factor Database | Banca dati del gruppo intergovernativo sul clima | Fattori di riferimento generali quando manca un dato nazionale
+- AIB | Associazione europea degli organismi che emettono le Garanzie d’Origine | Residual mix per l’elettricità con il metodo market-based (unità 5)
+- ADEME Base Empreinte | Banca dati pubblica francese | Materiali, prodotti e servizi
+- ecoinvent | Banca dati LCA a pagamento | Materiali e processi per gli studi di ciclo di vita (unità 8)
+- EPD e dati dei fornitori | Dichiarazioni ambientali e dati specifici di prodotto | Materie prime e imballaggi acquistati
+Gli usi indicati sono quelli più comuni nella pratica: ogni fonte va consultata nell’edizione aggiornata e citata.
+Commento del docente: Non esiste un’unica banca dati che contenga tutto: un inventario tipico usa tre o quattro fonti. Per un’azienda italiana il punto di partenza è ISPRA per elettricità e combustibili; per trasporti, viaggi e rifiuti molti usano la raccolta britannica DEFRA, apprezzata perché gratuita, completa e aggiornata ogni anno, pur essendo riferita a un altro Paese. Per materie prime e imballaggi il dato migliore è quello del fornitore. L’importante è che la scelta sia dichiarata e mantenuta coerente da un anno all’altro.
+### SCHERMATA 24 — Quale fattore preferire: l’ordine di scelta (buona prassi) [pyramid]
+Più si sale, più il fattore descrive la realtà dell’azienda e della sua filiera.
+Livelli, dall'alto al basso:
+- Dato specifico del fornitore: EPD, carbon footprint di prodotto, fattore dichiarato e documentato
+- Fattore nazionale ufficiale: Per l’Italia ISPRA: stesso Paese, anno più vicino all’inventario
+- Banca dati internazionale riconosciuta: DEFRA, IPCC, ADEME, banche dati LCA: dato medio di buona qualità
+- Fattore generico o basato sulla spesa: Medie molto ampie, kg CO2e per euro: per stime iniziali o voci minori
+È una buona prassi, non un requisito di norma. Qualunque livello si usi, la fonte va annotata.
+Commento del docente: La piramide vale soprattutto per materiali e servizi acquistati: tra un fattore medio per «il cartone» e la dichiarazione del proprio fornitore di astucci, il secondo descrive meglio la realtà. Un’avvertenza importante: per l’elettricità calcolata con il metodo location-based il fattore corretto è per definizione quello medio della rete nazionale, non quello del fornitore; i dati del fornitore entrano nel metodo market-based. È la distinzione al centro dell’unità 5. Alla base della piramide si scende solo quando non c’è di meglio.
+### SCHERMATA 25 — Sette domande prima di adottare un fattore [checklist]
+- È del Paese giusto?: L’elettricità italiana non ha il fattore di quella di un altro Paese.
+- È dell’anno giusto?: Si usa l’edizione più vicina all’anno dell’inventario e la si dichiara.
+- Descrive la tecnologia giusta?: Autoarticolato o furgone, aereo a corto o a lungo raggio, cartone o plastica.
+- Quali gas comprende?: Solo CO2 oppure CO2e? E con quale serie di GWP?
+- Che cosa copre?: Solo la combustione, o anche la filiera a monte?
+- In quale unità è espresso?: Deve coincidere con l’unità del dato di attività; altrimenti si converte.
+- Si può citare?: Nome della fonte, edizione o anno, tabella, unità: se non si può citare, non si usa.
+Commento del docente: Una citazione fatta bene ha quattro elementi: chi pubblica, quale documento ed edizione, quale voce, quale valore con la sua unità. Per esempio: «ISPRA, Le emissioni di CO2 nel settore elettrico nazionale e regionale, Rapporto 413/2025, fattore di emissione dei consumi elettrici 2023: 234,7 g CO2/kWh». Chi legge deve poter ritrovare il numero in cinque minuti. Diffidate dei fattori trovati in presentazioni o articoli che non indicano la fonte: anche se plausibili, non reggono a una verifica.
+### SCHERMATA 26 — Perché l’anno conta: stessi 100.000 kWh, tre fattori ISPRA [bar · ISPRA · Rapporto 413/2025]
+Fattore di emissione dei consumi elettrici in Italia: 293,0 g CO2/kWh nel 2022, 234,7 nel 2023, 198,9 nel 2024 (stima preliminare). A parità di consumo, il risultato cambia di quasi un terzo.
+- Con il fattore 2022 (293,0 g CO2/kWh): 29,3t CO2
+- Con il fattore 2023 (234,7 g CO2/kWh): 23,5t CO2
+- Con il fattore 2024 (198,9 g CO2/kWh, preliminare): 19,9t CO2
+Fonte dei dati: Calcolo didattico su fattori ISPRA, «Le emissioni di CO2 nel settore elettrico nazionale e regionale», Rapporto 413/2025
+Commento del docente: I conti: 100.000 kWh × 293,0 g = 29.300 kg, cioè 29,3 t CO2; con 234,7 g si ottengono 23.470 kg (23,5 t); con 198,9 g si scende a 19.890 kg (19,9 t). Tra il primo e il terzo valore c’è il 32% di differenza senza che l’azienda abbia cambiato nulla: è la rete elettrica che si è «pulita». Due lezioni: usare un fattore vecchio falsa il risultato, e nel confrontare due anni bisogna distinguere l’effetto dei consumi da quello del fattore. Notate anche l’unità: il dato ISPRA è in CO2, non in CO2e.
+
+## SEZIONE 6 — Il GWP nei calcoli
+### SCHERMATA 27 — Il GWP nei calcoli [section]
+Quando conosciamo direttamente i chilogrammi di gas serra emessi (una ricarica di gas refrigerante, una perdita di metano) non serve un fattore per litro o per kWh: serve il GWP, che trasforma i kg di gas in kg di CO2e.
+- Quando il GWP entra nel calcolo
+- AR4, AR5, AR6: stesso gas, numeri diversi
+- Esempi svolti: R-410A e metano
+- Una sola serie di GWP per tutto l’inventario
+### SCHERMATA 28 — Quando serve il GWP e quando è già dentro il fattore [text · IPCC · GWP a 100 anni]
+Emissioni (kg CO2e) = massa del gas (kg) × GWP. È la formula di sempre: il dato di attività sono i kg di gas, il fattore è il GWP.
+- Serve in modo esplicito: Gas refrigeranti ricaricati negli impianti (HFC), perdite di metano, SF6 dei quadri elettrici: il dato è una massa di gas.
+- È già dentro il fattore: Nei fattori in CO2e di combustibili, elettricità, trasporti e materiali: metano e protossido di azoto sono già stati convertiti da chi ha pubblicato il fattore.
+- Dipende dal rapporto IPCC: I valori vengono aggiornati: il metano non fossile vale 25 nel rapporto AR4, 28 nell’AR5, 27,0 nell’AR6.
+- Le miscele si calcolano dalla composizione: R-410A = 50% HFC-32 + 50% HFC-125. Con AR6: 0,5 × 771 + 0,5 × 3.740 = 2.255,5, arrotondato a 2.256.
+- Una serie sola, dichiarata: Le norme chiedono i GWP più recenti dell’IPCC, o di giustificare una scelta diversa; non si mescolano serie diverse nello stesso inventario.
+Riquadro «A 100 anni»: I GWP usati negli inventari confrontano l’effetto di 1 kg di gas con quello di 1 kg di CO2 su un orizzonte di 100 anni.
+Commento del docente: Il GWP è stato introdotto nell’unità 1; qui lo guardiamo come ingrediente di calcolo. La distinzione pratica è questa: se state moltiplicando litri, kWh o chilometri, il GWP è già «nascosto» dentro il fattore in CO2e e non dovete fare nulla. Se invece il vostro dato è una massa di gas serra, il GWP diventa il fattore. L’errore tipico è dimenticare del tutto i gas refrigeranti perché «sono pochi chili»: con GWP nell’ordine delle migliaia, pochi chili diventano tonnellate.
+### SCHERMATA 29 — Stesso gas, tre rapporti IPCC: come cambia il GWP [gbar · IPCC · AR4, AR5, AR6]
+GWP a 100 anni di quattro gas nei rapporti IPCC AR4 (2007), AR5 (2013) e AR6 (2021).
+Serie: AR4 (2007) | AR5 (2013) | AR6 (2021)
+- Protossido di azoto (N2O): 298 | 265 | 273
+- HFC-32: 675 | 677 | 771
+- HFC-134a: 1430 | 1300 | 1530
+- HFC-125: 3500 | 3170 | 3740
+Fonte dei dati: IPCC, riepilogo GHG Protocol «IPCC Global Warming Potential Values» (2024)
+Commento del docente: I GWP non sono costanti fisiche immutabili: a ogni rapporto l’IPCC li ricalcola con conoscenze scientifiche aggiornate, e non sempre nella stessa direzione. L’HFC-134a scende da 1.430 a 1.300 tra AR4 e AR5, poi risale a 1.530 con AR6. Per questo un inventario deve dire quale serie usa. Nel corso usiamo AR6; nella pratica incontrerete spesso anche AR4, perché la normativa europea sui gas fluorurati e molte etichette degli impianti riportano ancora quei valori: non sono «sbagliati», sono di un’altra serie.
+### SCHERMATA 30 — Ricarica di 12 kg di R-410A: il calcolo con i GWP AR6 [calc · ISO 14064-1 · categoria 1]
+Il frigorista ha reintegrato 12 kg di gas nei climatizzatori degli uffici di Terrafelix: si assume che la stessa quantità sia uscita in atmosfera. Il dato di attività è la massa, il fattore è il GWP.
+Formula: Emissioni = Massa di gas × GWP
+- R-410A reintegrato (dato: rapporti di intervento del frigorista · GWP della miscela: 0,5 × 771 + 0,5 × 3.740 ≈ 2.256): 12 kg × 2256 kg CO2e/kg (AR6) = 27.072 kg CO2e
+In tonnellate: 27,072 t CO2e
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; GWP: IPCC AR6
+Commento del docente: Dodici chilogrammi di gas, quanto pesa una cassa d’acqua, diventano 27.072 kg CO2e, cioè 27,1 t. Per confronto, con il fattore del gasolio servirebbero oltre 10.000 litri bruciati per emettere altrettanto (27.072 ÷ 2,65 ≈ 10.216 l). Il metodo usato si chiama «delle ricariche»: si assume che il gas reintegrato durante l’anno corrisponda a quello disperso. Lo approfondiremo nell’unità 4, insieme al secondo gas di Terrafelix; qui interessa la struttura del conto: massa per GWP.
+### SCHERMATA 31 — Gli stessi 12 kg con i GWP AR4: il risultato cambia [calc · IPCC · AR4]
+Con i valori del rapporto AR4, ancora usati dalla normativa europea sui gas fluorurati, il GWP di R-410A è 0,5 × 675 + 0,5 × 3.500 ≈ 2.088.
+Formula: Emissioni = Massa di gas × GWP
+- R-410A reintegrato (stessa quantità, serie di GWP diversa): 12 kg × 2088 kg CO2e/kg (AR4) = 25.056 kg CO2e
+In tonnellate: 25,056 t CO2e
+Differenza: 27.072 − 25.056 = 2.016 kg CO2e. Con AR6 il risultato è più alto dell’8% circa: stesso gas, stessa quantità.
+Fonte dei dati: Esempio didattico; GWP: IPCC AR4
+Commento del docente: Nessuno dei due risultati è «sbagliato»: sono calcolati con due serie diverse. L’errore sarebbe usarle insieme, per esempio AR6 per R-410A e AR4 per un altro gas, oppure cambiare serie da un anno all’altro senza dirlo: la variazione di 2.016 kg sembrerebbe un aumento delle emissioni mentre è solo un cambio di metodo. La regola: una serie sola per tutto l’inventario, dichiarata nel rapporto; se la si cambia, si ricalcolano anche gli anni precedenti per poterli confrontare, come vedremo parlando di anno base nell’unità 3.
+### SCHERMATA 32 — Metano: 100 kg di origine fossile e 100 kg non fossile [calc]
+Nel rapporto AR6 il metano ha due GWP: 29,8 se è di origine fossile (gas naturale), 27,0 se non lo è (per esempio il metano del biogas).
+Formula: Emissioni = Massa di gas × GWP
+- Metano di origine fossile (es. perdita da una tubazione di gas naturale): 100 kg × 29,8 kg CO2e/kg (AR6) = 2980 kg CO2e
+- Metano di origine non fossile (es. perdita di biogas da un digestore): 100 kg × 27 kg CO2e/kg (AR6) = 2700 kg CO2e
+Totale: 5680 kg CO2e
+In tonnellate: 5,68 t CO2e
+Un chilogrammo di metano disperso «pesa» come 27–30 kg di CO2: per questo anche le piccole perdite contano.
+Fonte dei dati: Esempio didattico; GWP: IPCC AR6
+Commento del docente: I risultati: 2.980 kg CO2e per il metano fossile e 2.700 kg per quello non fossile, 5.680 kg in tutto. Il confronto più istruttivo è con la combustione: bruciare gas naturale produce soprattutto CO2, mentre disperderlo senza bruciarlo libera metano, che a parità di massa riscalda circa trenta volte di più. Ecco perché le perdite delle reti e degli impianti a biogas sono sorvegliate. In una PMI manifatturiera il caso è raro; è frequente invece in agricoltura, nella gestione dei rifiuti e nella depurazione.
+
+## SEZIONE 7 — Dati primari e secondari: la qualità del dato
+### SCHERMATA 33 — Dati primari e secondari: la qualità del dato [section]
+Non tutti i numeri hanno lo stesso valore: una bolletta vale più di una stima, un dato del fornitore più di una media di settore. Sapere quanto è buono un dato serve a decidere dove migliorare e a dichiarare i limiti del risultato.
+- Dati primari e dati secondari
+- Una scala di qualità da 5 a 1 (modello didattico)
+- Stimare quando il dato manca
+- Dichiarare sempre le ipotesi
+### SCHERMATA 34 — Dati primari e dati secondari [two]
+In quasi ogni calcolo convivono: il dato di attività è spesso primario, il fattore di emissione quasi sempre secondario.
+Colonna «Dati primari»:
+- Misurati o specifici dell’azienda e della sua filiera
+- Bollette e letture dei contatori
+- Fatture e schede carburante
+- Rapporti di intervento del frigorista
+- Dati forniti dal fornitore sul proprio prodotto
+Colonna «Dati secondari»:
+- Medi, tratti da banche dati o dalla letteratura
+- Fattori di emissione medi nazionali o internazionali
+- Consumi medi per tipo di veicolo
+- Distanze stimate e medie di settore
+- Fattori basati sulla spesa
+Commento del docente: La distinzione non è tra dati «buoni» e dati «cattivi»: un fattore nazionale ufficiale è un dato secondario di ottima qualità. Il punto è la specificità. La carbon footprint di prodotto, che studieremo nell’unità 8, chiede di preferire i dati primari per i processi che l’azienda controlla direttamente. Per l’inventario di organizzazione vale la stessa logica: dati primari dove contano di più, cioè sulle voci grandi; dati secondari, dichiarati, dove il dato primario costerebbe troppo rispetto al peso della voce.
+### SCHERMATA 35 — Una scala di qualità del dato da 5 a 1 (modello didattico) [pyramid]
+Livelli, dall'alto al basso:
+- 5 · Misurato: Contatore, bolletta su lettura effettiva, pesata: strumento e documento identificati
+- 4 · Calcolato da documenti: Somma di fatture, schede carburante, DDT: dato completo ma ricostruito
+- 3 · Stimato da dati aziendali: Chilometri × consumo medio, ore di funzionamento × potenza: ipotesi dichiarate
+- 2 · Stimato da medie esterne: Medie di settore, dati di aziende simili, spesa × fattore per euro
+- 1 · Ipotesi non documentata: Numero «a occhio», senza fonte: da sostituire appena possibile
+Modello didattico, non un requisito di norma: serve a ordinare i dati e a pianificare i miglioramenti.
+Commento del docente: Assegnare un voto a ogni dato richiede due minuti e ripaga molto. Primo: obbliga a chiedersi da dove viene ogni numero. Secondo: incrociando il voto con il peso della voce si capisce dove investire. Un dato di livello 2 su una voce che vale lo 0,5% del totale può restare com’è; lo stesso livello su una voce che vale metà dell’inventario è la prima cosa da migliorare. Riprenderemo l’idea nell’unità 7, quando parleremo di incertezza e di piano di miglioramento dei dati.
+### SCHERMATA 36 — Quando mancano i litri: chilometri × consumo medio × fattore [calc]
+Per due veicoli non ci sono le schede carburante, ma si conoscono i chilometri percorsi (contachilometri). Si stimano i litri con il consumo medio e poi si applica il fattore.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Consumo medio
+- Furgone a gasolio (30.000 km × 0,08 l/km = 2.400 l stimati (8 l ogni 100 km)): 30.000 km × 2,65 kg CO2e/l × 0,08 l/km = 6360 kg CO2e
+- Auto a benzina (18.000 km × 0,06 l/km = 1.080 l stimati (6 l ogni 100 km)): 18.000 km × 2,3 kg CO2e/l × 0,06 l/km = 2484 kg CO2e
+Totale: 8844 kg CO2e
+In tonnellate: 8,844 t CO2e
+I consumi medi sono ipotesi (valori indicativi): vanno scritti nel registro con la loro origine, per esempio il libretto del veicolo o la media dei mesi documentati.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); consumi medi: valori indicativi
+Commento del docente: La stima procede in due tempi: prima i litri (2.400 per il furgone, 1.080 per l’auto), poi le emissioni (6.360 e 2.484 kg CO2e, in totale 8.844 kg). Nella scala appena vista è un dato di livello 3: non misurato, ma costruito su dati aziendali e ipotesi esplicite. Attenzione all’unità del consumo: i costruttori lo dichiarano in litri ogni 100 km, quindi 8 l/100 km diventano 0,08 l/km. Dimenticare questa divisione per cento moltiplica il risultato per cento: di nuovo un errore di unità.
+### SCHERMATA 37 — Terrafelix: due mesi di schede carburante mancanti [case]
+Riordinando le schede carburante 2025, Chiara Vitale si accorge che per uno dei quattro furgoni mancano quelle di novembre e dicembre. Il dato annuo della flotta rischia di essere incompleto.
+- Chilometri percorsi dal furgone nei due mesi (contachilometri): 4.000 km
+- Consumo medio dello stesso furgone nei dieci mesi documentati: 0,09 l/km
+- Stima dei litri mancanti: 4.000 × 0,09 = 360 l
+- Emissioni corrispondenti: 360 × 2,65 = 954 kg CO2e
+Domanda di lavoro: Meglio lasciare un vuoto nei dati o inserire una stima?
+Come ha operato l'azienda: Davide Russo inserisce la stima: i 38.000 l di gasolio della flotta comprendono questi 360 l, meno dell’1% del totale. Nel registro annota che il dato è «stimato», con quali numeri e perché. Il principio di completezza chiede di non lasciare vuoti; quello di trasparenza, di dichiarare l’ipotesi. (Ripartizione illustrativa.)
+Commento del docente: Un vuoto nei dati è peggio di una stima dichiarata: il vuoto sottostima le emissioni in modo certo, la stima introduce solo un’incertezza. Qui la stima è particolarmente solida perché usa il consumo dello stesso veicolo negli altri dieci mesi. Notate la proporzione: 360 litri su 38.000 sono lo 0,9%, quindi anche un errore del 20% sulla stima sposterebbe il dato della flotta di meno dello 0,2%. Quando la voce è piccola, una stima ragionevole e documentata è la scelta giusta: non serve inseguire la perfezione.
+
+## SEZIONE 8 — Arrotondamenti, cifre significative, tonnellate
+### SCHERMATA 38 — Arrotondamenti, cifre significative, tonnellate [section]
+Il risultato di un calcolo si esprime in chilogrammi e poi in tonnellate di CO2e. Sembra un dettaglio, ma arrotondare nel momento sbagliato può spostare il totale di parecchi punti percentuali.
+- Da kg a tonnellate: dividere per 1.000
+- Arrotondare solo il risultato finale
+- L’errore dell’arrotondamento riga per riga
+- Quante cifre mostrare
+### SCHERMATA 39 — Dai chilogrammi alle tonnellate: tre passi in ordine [flow]
+1. 1. Calcola ogni riga in kg: Dato × fattore con tutti i decimali: 630 l × 2,3 = 1.449 kg CO2e. Nessun arrotondamento.
+2. 2. Somma in kg: Il totale si fa sui valori completi, non su quelli arrotondati.
+3. 3. Converti e arrotonda alla fine: Totale ÷ 1.000 = tonnellate. Solo ora si arrotonda, di norma a un decimale.
+1 t CO2e = 1.000 kg CO2e; 1 kg = 1.000 g. Nel foglio di calcolo restano i numeri completi: l’arrotondamento riguarda solo la presentazione.
+Commento del docente: La regola è semplice: l’arrotondamento è l’ultimo gesto, non il primo. In un foglio di calcolo questo significa non scrivere mai a mano un risultato intermedio arrotondato, ma lasciare che le celle si richiamino tra loro; il formato della cella decide quante cifre mostrare senza toccare il valore. Perché i chilogrammi nel foglio e le tonnellate nel rapporto? Perché i fattori sono quasi tutti in kg, mentre chi legge ragiona in tonnellate: 2.257,8 t si legge meglio di 2.257.787 kg.
+### SCHERMATA 40 — Sei piccole sorgenti sommate nel modo corretto [calc]
+Un’azienda ha sei voci minori. Si calcola ogni riga in kg, si somma e solo alla fine si passa alle tonnellate.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Gasolio del gruppo elettrogeno: 500 l × 2,65 kg CO2e/l = 1325 kg CO2e
+- Benzina dell’auto di servizio: 630 l × 2,3 kg CO2e/l = 1449 kg CO2e
+- Gasolio del carrello elevatore: 900 l × 2,65 kg CO2e/l = 2385 kg CO2e
+- GPL per il riscaldamento di un locale: 1000 l × 1,6 kg CO2e/l = 1600 kg CO2e
+- Trasferte in treno: 12.800 pkm × 0,035 kg CO2e/pkm = 448 kg CO2e
+- Ricarica di R-410A: 1,5 kg × 2256 kg CO2e/kg = 3384 kg CO2e
+Totale: 10.591 kg CO2e
+In tonnellate: 10,591 t CO2e
+10.591 kg CO2e ÷ 1.000 = 10,591 t, che si presenta come 10,6 t CO2e: l’arrotondamento arriva solo adesso.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Le sei righe valgono 1.325, 1.449, 2.385, 1.600, 448 e 3.384 kg CO2e: in totale 10.591 kg, cioè 10,6 t. Ogni voce, presa da sola, sembra trascurabile; insieme superano le dieci tonnellate. Guardate la riga del treno: 448 kg sono meno di mezza tonnellata. Se la arrotondassimo subito a tonnellate intere diventerebbe zero e sparirebbe dall’inventario. È esattamente ciò che succede nella slide seguente, dove rifacciamo lo stesso conto nel modo sbagliato.
+### SCHERMATA 41 — L’errore: arrotondare ogni riga alle tonnellate intere [gbar]
+Le stesse sei voci: il valore calcolato in tonnellate e, accanto, quello arrotondato all’unità prima di sommare. Il totale passa da 10,6 a 9 t: il 15% in meno.
+Serie: Valore calcolato | Arrotondato riga per riga
+- Gruppo elettrogeno: 1,3t | 1t
+- Auto di servizio: 1,4t | 1t
+- Carrello elevatore: 2,4t | 2t
+- GPL: 1,6t | 2t
+- Treno: 0,4t | 0t
+- R-410A: 3,4t | 3t
+- Totale: 10,6t | 9t
+Fonte dei dati: Esempio didattico – stessi dati della slide precedente
+Commento del docente: Arrotondando ogni riga all’unità si ottiene 1 + 1 + 2 + 2 + 0 + 3 = 9 t al posto di 10,6: mancano 1,6 t, il 15% del totale. Gli errori di arrotondamento non sempre si compensano: qui cinque voci su sei scendono e una sola sale. Più le voci sono piccole rispetto all’unità scelta, più il danno cresce. Lo stesso accade arrotondando i fattori: usare 0,2 al posto di 0,2347 per l’elettricità toglie il 15% circa a quella riga. La precisione si conserva nel foglio e si riduce solo nella tabella finale.
+### SCHERMATA 42 — Arrotondamenti e cifre: corretto e sbagliato [two]
+Colonna «Corretto»:
+- Tenere nel foglio di calcolo i valori completi di dati, fattori e risultati
+- Sommare i chilogrammi e convertire in tonnellate solo il totale
+- Mostrare le tonnellate con un decimale nelle tabelle di sintesi
+- Usare 2–3 decimali per i valori per unità di prodotto, come 1,085 kg CO2e/kg
+- Scrivere sempre l’unità accanto al numero
+Colonna «Sbagliato»:
+- Arrotondare il fattore: 0,2347 che diventa 0,2
+- Arrotondare ogni riga alle tonnellate intere prima di sommare
+- Scrivere 2.257,787 t: troppe cifre suggeriscono una precisione che il dato non ha
+- Ricopiare a mano numeri arrotondati da un foglio all’altro
+- Confondere il punto delle migliaia con la virgola dei decimali
+Commento del docente: Quante cifre mostrare è una questione di onestà verso chi legge. Se il dato di partenza è una stima, presentare il risultato al chilogrammo fa credere a una precisione che non esiste. Una buona prassi: tonnellate con un decimale nei riepiloghi, chilogrammi interi nel foglio di lavoro, due o tre decimali solo per gli indicatori per unità di prodotto. L’ultimo punto della colonna rossa è più frequente di quanto si pensi: fogli impostati in inglese leggono «1.050» come uno virgola zero cinque.
+
+## SEZIONE 9 — Un calcolo completo guidato
+### SCHERMATA 43 — Un calcolo completo guidato [section]
+Mettiamo insieme tutti gli attrezzi su una piccola azienda di fantasia: Idrotermica Aurora S.n.c., installatore di impianti con un ufficio-magazzino, otto addetti e due furgoni. Cinque sorgenti, cinque righe, un totale.
+- Raccogliere dati e documenti
+- Calcolare sorgente per sorgente
+- Sommare e leggere il risultato
+- Prova tu: che cosa succede se…
+### SCHERMATA 44 — Idrotermica Aurora: le sorgenti e i dati raccolti [tree]
+Radice: Idrotermica Aurora S.n.c. (azienda di fantasia · 8 addetti · dati di un anno)
+- Sede (ufficio e magazzino): Gas naturale: 3.200 Sm³ (bollette); Elettricità: 18.000 kWh (bollette)
+- Mobilità (furgoni e trasferte): Gasolio dei 2 furgoni: 5.400 l (schede carburante); Un volo: 2 persone × 1.400 km (note spese)
+- Climatizzazione (impianto dell’ufficio): Ricarica di R-410A: 1,5 kg (rapporto del frigorista)
+Dati illustrativi. La distanza del volo (andata e ritorno) è un valore di esempio.
+Commento del docente: Prima di calcolare, l’elenco: quali sorgenti, quale dato, quale documento. È il passo 1 e il passo 2 della nostra anatomia. In un’azienda così piccola bastano un pomeriggio e cinque documenti: le bollette di gas ed elettricità, le schede carburante, una nota spese e il rapporto del frigorista. Notate che per ogni dato è già indicata l’unità: Sm³, kWh, litri, passeggeri e chilometri, chilogrammi. Con l’elenco fatto bene, il calcolo è solo una serie di moltiplicazioni.
+### SCHERMATA 45 — Aurora, passo 1: l’energia della sede [calc]
+Gas per il riscaldamento ed elettricità per uffici e magazzino: due bollette, due righe.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Gas naturale (somma delle bollette dell’anno): 3200 Sm³ × 2 kg CO2e/Sm³ = 6400 kg CO2e
+- Elettricità prelevata dalla rete (somma delle bollette dell’anno · fattore medio nazionale): 18.000 kWh × 0,235 kg CO2e/kWh = 4230 kg CO2e
+Energia della sede: 10.630 kg CO2e
+In tonnellate: 10,63 t CO2e
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Il gas vale 6.400 kg CO2e, l’elettricità 4.230 kg: insieme 10.630 kg, cioè 10,6 t. Osservate i due fattori: per unità sembrano molto diversi (2,0 contro 0,235), ma le unità non sono le stesse. Un Sm³ di gas contiene circa 9,8 kWh di energia, quindi i due numeri non si confrontano direttamente. Mai giudicare un fattore «alto» o «basso» senza guardare il denominatore. In un inventario completo le due righe apparterranno a parti diverse: emissioni dirette il gas, energia acquistata l’elettricità.
+### SCHERMATA 46 — Aurora, passo 2: i furgoni e il viaggio in aereo [calc]
+Per i furgoni il dato sono i litri riforniti. Per il volo, passeggeri × chilometri: 2 × 1.400 = 2.800 pkm.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Distanza
+- Gasolio dei due furgoni (litri dalle schede carburante): 5400 l × 2,65 kg CO2e/l = 14.310 kg CO2e
+- Volo di due tecnici per un corso (corto raggio, andata e ritorno · distanza illustrativa): 2 passeggeri × 0,18 kg CO2e/pkm × 1400 km = 504 kg CO2e
+Mobilità: 14.814 kg CO2e
+In tonnellate: 14,814 t CO2e
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: I furgoni emettono 14.310 kg CO2e, il volo 504 kg: 14.814 kg in tutto. Il volo fa spesso notizia in azienda, ma qui vale quanto 190 litri di gasolio (504 ÷ 2,65), cioè meno di due settimane di lavoro dei furgoni. È il valore dei numeri: riportano la discussione sulle proporzioni reali. Per i furgoni abbiamo usato i litri, il dato migliore; se avessimo solo i chilometri, useremmo la stima vista nella sezione 7, dichiarandola.
+### SCHERMATA 47 — Aurora, passo 3: la ricarica di gas refrigerante [calc]
+Un chilo e mezzo di gas sembra poco. Moltiplicato per il GWP diventa la quarta voce dell’azienda.
+Formula: Emissioni = Massa di gas × GWP (AR6)
+- R-410A reintegrato nel climatizzatore (1,5 kg dal rapporto di intervento del frigorista): 1,5 kg × 2256 kg CO2e/kg = 3384 kg CO2e
+In tonnellate: 3,384 t CO2e
+Fonte dei dati: Esempio didattico; GWP: IPCC AR6
+Commento del docente: Il risultato, 3.384 kg CO2e, è pari all’80% dell’elettricità di tutto l’anno (4.230 kg). Chi compila un primo inventario spesso si ferma a bollette e carburanti e dimentica i gas refrigeranti: è uno degli errori tipici. Basta chiedere al manutentore i rapporti di intervento: se nell’anno non ci sono state ricariche, il dato è zero ed è comunque un’informazione da registrare. Se invece il gas è stato reintegrato, quella quantità va moltiplicata per il GWP della serie scelta.
+### SCHERMATA 48 — Aurora: il risultato, 28,8 t CO2e in un anno [donut]
+10.630 + 14.814 + 3.384 = 28.828 kg CO2e. Quasi metà viene dai due furgoni.
+Totale al centro: 28,8 t CO2e
+- Gasolio dei furgoni: 14.310kg (49,6%)
+- Gas naturale: 6400kg (22,2%)
+- Elettricità: 4230kg (14,7%)
+- Gas refrigerante: 3384kg (11,7%)
+- Viaggio in aereo: 504kg (1,7%)
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Il totale è 28.828 kg, cioè 28,8 t CO2e: circa 3,6 t per addetto. Le quote: furgoni 49,6%, gas 22,2%, elettricità 14,7%, refrigerante 11,7%, volo 1,7%. Leggere il risultato è il quinto passo del metodo: dove conviene agire? Sui furgoni, prima di tutto. È un calcolo limitato alle cinque sorgenti più immediate: mancano tutti gli acquisti e i trasporti della catena del valore, che per molte aziende sono la parte più grande. Capire che cosa includere è il tema dell’unità 3.
+### SCHERMATA 49 — Prova tu: cambia i dati di Aurora [sim]
+Parti dai dati dell’esempio e prova: che cosa succede al totale se i furgoni consumano il 20% in meno (4.320 l)? E se la ricarica di gas sale a 3 kg?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Gas naturale: 3200 Sm³ × 2 kg CO2e/Sm³ = 6400 kg CO2e
+- Elettricità di rete: 18.000 kWh × 0,235 kg CO2e/kWh = 4230 kg CO2e
+- Gasolio dei furgoni: 5400 l × 2,65 kg CO2e/l = 14.310 kg CO2e
+- Volo (passeggeri × km): 2800 pkm × 0,18 kg CO2e/pkm = 504 kg CO2e
+- Ricarica di R-410A: 1,5 kg × 2256 kg CO2e/kg = 3384 kg CO2e
+Totale iniziale: 28.828 kg CO2e
+In tonnellate: 28,828 t CO2e
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Due prove da fare. Con 4.320 litri di gasolio la riga dei furgoni scende a 11.448 kg e il totale a 25.966 kg: quasi tre tonnellate in meno. Con una ricarica di 3 kg al posto di 1,5 la riga del refrigerante raddoppia a 6.768 kg e il totale sale a 32.212 kg: un chilo e mezzo di gas in più annulla, e supera, il risparmio sui furgoni. Provate poi a raddoppiare il volo: il totale si muove appena. Il calcolatore serve a sviluppare il senso delle proporzioni, più utile di qualsiasi formula.
+
+## SEZIONE 10 — Gli errori tipici del conteggio
+### SCHERMATA 50 — Gli errori tipici del conteggio [section]
+Gli errori che ricorrono sono sempre gli stessi, e quasi tutti si scoprono con due domande: le unità tornano? L’ordine di grandezza è credibile? Alleniamoci a riconoscerli.
+- Unità di misura sbagliate
+- Fattore di un altro anno o di un altro Paese
+- Doppio conteggio
+- CO2 al posto di CO2e, fonti dimenticate
+### SCHERMATA 51 — I cinque errori più frequenti [hub]
+Al centro: Errori tipici del conteggio
+- Unità sbagliate: MWh per kWh, kg per litri, grammi per chilogrammi, km per miglia
+- Fattore fuori posto: Di un altro Paese, di un anno lontano, di un’altra tecnologia
+- Doppio conteggio: La stessa emissione contata due volte in due voci diverse
+- CO2 invece di CO2e: Fattori in sola CO2, gas refrigeranti dimenticati
+- Fonti non annotate: Fattori e ipotesi senza origine: calcolo non verificabile
+Buona prassi: far rileggere il foglio di calcolo a una seconda persona, con questa mappa davanti.
+Commento del docente: Due esempi di doppio conteggio che capitano spesso. Primo: il carburante delle auto aziendali è già nei litri delle schede carburante; se le stesse trasferte vengono contate anche a chilometri tra i viaggi di lavoro, l’emissione raddoppia. Secondo: l’elettricità che ricarica in sede le auto elettriche è già nella bolletta; aggiungerla come voce separata la conta due volte. Il rimedio è chiedersi, per ogni nuova riga: questo consumo è già compreso in un dato che ho raccolto?
+### SCHERMATA 52 — Trova l’errore: quattro calcoli da correggere [table]
+Per ciascun calcolo, prova a individuare l’errore prima di leggere la seconda colonna.
+Colonne: Calcolo proposto | Che cosa non va | Calcolo corretto
+- 8.000 l di gasolio × 2,65 = 21.200 t CO2e | Il risultato della moltiplicazione è in kg, non in tonnellate | 21.200 kg CO2e = 21,2 t CO2e
+- 50.000 kWh × 234,7 = 11.735.000 kg CO2 | Il fattore è in grammi per kWh: il risultato è in grammi | 11.735.000 g = 11.735 kg = 11,7 t CO2
+- 2.000 kg di gasolio × 2,65 kg CO2e/l = 5.300 kg CO2e | Dato in kg, fattore per litro: prima si converte | 2.000 ÷ 0,84 = 2.381 l; × 2,65 ≈ 6.310 kg CO2e
+- 5 kg di R-410A dispersi = 5 kg CO2e | Manca il GWP: un gas refrigerante non è CO2 | 5 × 2.256 = 11.280 kg CO2e = 11,3 t CO2e
+Densità del gasolio 0,84 kg/l: valore indicativo. In tutti e quattro i casi l’errore si vede leggendo le unità.
+Commento del docente: I quattro errori hanno dimensioni molto diverse. Il primo e il secondo sbagliano di mille volte: sono i più facili da scoprire, perché il risultato è assurdo. Il terzo sbaglia «solo» del 16%: nessun controllo di plausibilità lo intercetta, serve la lettura attenta delle unità. Il quarto sottostima di oltre duemila volte una voce che sembrava irrilevante. Morale: gli errori grossolani si vedono dall’ordine di grandezza, quelli sottili solo con il metodo. Servono entrambi i controlli.
+### SCHERMATA 53 — Trova l’errore: la bolletta in MWh [calc]
+Un collega legge sulla bolletta annuale 420 MWh e li moltiplica per il fattore del corso. Il risultato gli sembra piccolo: ha ragione di insospettirsi?
+Formula: Emissioni (risultato errato) = Dato di attività × Fattore di emissione
+- Elettricità prelevata dalla rete (ERRORE: dato in MWh, fattore per kWh): 420 MWh × 0,235 kg CO2e/kWh = 98,7 kg CO2e
+98,7 kg CO2e per l’elettricità di un anno? È quanto emette un’auto media in circa 580 km: l’ordine di grandezza non è credibile.
+Fonte dei dati: Esempio didattico – calcolo volutamente errato
+Commento del docente: Il calcolo è aritmeticamente giusto (420 × 0,235 = 98,7) e proprio per questo inganna. L’errore sta nelle unità: megawattora moltiplicati per chilogrammi al chilowattora non danno chilogrammi. Il campanello d’allarme è l’ordine di grandezza: un’azienda che consuma 420.000 kWh non può emettere meno di cento chili di CO2e. Insegnate a fare sempre un controllo mentale approssimato: circa 400.000 kWh per circa un quarto di chilo al kWh fa intorno a 100.000 kg, cioè un centinaio di tonnellate.
+### SCHERMATA 54 — La correzione: prima i kWh, poi il fattore [calc]
+Si convertono i MWh in kWh (× 1.000) e solo dopo si applica il fattore per kWh.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Conversione
+- Elettricità prelevata dalla rete (420 MWh × 1.000 = 420.000 kWh): 420 MWh × 0,235 kg CO2e/kWh × 1000 kWh/MWh = 98.700 kg CO2e
+In tonnellate: 98,7 t CO2e
+Il risultato corretto è mille volte più grande: 98,7 tonnellate, non 98,7 chilogrammi.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Ora le unità si semplificano: MWh per kWh al MWh dà kWh; kWh per kg al kWh dà kg. Il risultato è 98.700 kg CO2e, cioè 98,7 t. La cifra è la stessa di prima, cambia l’unità: è la firma tipica dell’errore kWh/MWh. Un consiglio per il foglio di calcolo: prevedere una colonna «unità» accanto a ogni dato e una colonna «dato convertito» nell’unità del fattore. Costa due colonne in più, ma rende visibile la conversione a chiunque rilegga, verificatore compreso.
+### SCHERMATA 55 — Terrafelix: una ricarica da 27.000 tonnellate? [case]
+Nella prima bozza del foglio di calcolo, la riga del gas refrigerante dei climatizzatori mostra un risultato enorme. Davide Russo aveva copiato il dato dal rapporto del frigorista, che riportava la quantità reintegrata in grammi.
+- Dato copiato nel foglio: 12.000 (il rapporto dice «12.000 g»)
+- Calcolo della bozza: 12.000 × 2.256 = 27.072.000 kg CO2e, cioè 27.072 t CO2e
+- Per confronto: tutto il gas naturale degli essiccatoi vale 2.100 t CO2e
+Domanda di lavoro: Come ci si accorge dell’errore senza rifare tutti i conti?
+Come ha operato l'azienda: Con un controllo di plausibilità: la ricarica dei climatizzatori degli uffici non può valere quasi tredici volte il gas che essicca 20.000 t di pasta. Il dato corretto è 12 kg: 12 × 2.256 = 27.072 kg CO2e, cioè 27,1 t CO2e. Da allora nel foglio ogni dato ha la sua colonna «unità».
+Commento del docente: È lo stesso errore della bolletta in MWh, con un’altra coppia di unità: grammi e chilogrammi. Il rapporto del frigorista non era sbagliato; è stato copiato il numero senza la sua unità. Per questo insistiamo: un dato di attività è sempre una coppia, numero più unità, e si trascrive intera. Il confronto con le altre voci dell’inventario è il controllo più rapido che esista: ordinare le righe dalla più grande alla più piccola e chiedersi se la classifica ha senso per quel tipo di azienda.
+
+## SEZIONE 11 — Documentare il calcolo
+### SCHERMATA 56 — Documentare il calcolo [section]
+Un numero senza storia non vale nulla: chi legge l’inventario (la direzione, un cliente, un verificatore) deve poter risalire dal risultato al documento di partenza. Documentare non è burocrazia: è ciò che rende il calcolo ripetibile l’anno dopo.
+- La catena della tracciabilità
+- Come organizzare il foglio di calcolo
+- Il modello di riga del registro
+- Il registro delle ipotesi
+### SCHERMATA 57 — La catena della tracciabilità: dal documento al risultato [flow · ISO 14064-1 · rendicontazione]
+1. Documento: Bolletta, fattura, scheda carburante, rapporto del frigorista: archiviato e identificato.
+2. Dato di attività: Valore, unità, periodo, chi lo ha fornito e quando.
+3. Fattore di emissione: Valore, unità, fonte, edizione o anno, serie di GWP.
+4. Calcolo: Formula visibile nel foglio, conversioni e ipotesi annotate.
+5. Risultato: kg e t CO2e, con la data e la versione del file.
+Requisito di norma: il rapporto GHG secondo la ISO 14064-1 deve indicare metodologie, fattori di emissione e GWP usati, con le loro fonti. Senza registro non si riesce a scriverlo.
+Commento del docente: La catena si percorre in due sensi. In avanti, quando si calcola: dal documento al risultato. All’indietro, quando qualcuno chiede «da dove viene questo numero?»: dal risultato al documento. Se in un punto la catena si interrompe, per esempio un fattore senza fonte o un dato senza documento, quel numero non è difendibile. Trasparenza e accuratezza sono due dei cinque principi sia della ISO 14064-1 sia del GHG Protocol: il registro è lo strumento che li mette in pratica.
+### SCHERMATA 58 — Un foglio di calcolo ben fatto: quattro fogli, un solo file [tree]
+Radice: File dell’inventario GHG (un file per anno, con numero di versione)
+- 1 · Dati di attività (una riga per sorgente): quantità e unità; documento di origine; responsabile del dato
+- 2 · Fattori (una tabella unica): valore e unità; fonte ed edizione; GWP e rapporto IPCC
+- 3 · Calcoli (solo formule): dato × fattore; risultato in kg e in t; totali per categoria
+- 4 · Ipotesi e note (il diario del calcolo): stime e conversioni; esclusioni motivate; modifiche tra le versioni
+Buona prassi: ogni fattore si scrive una volta sola, nel foglio «Fattori», e i calcoli lo richiamano.
+Commento del docente: Per un inventario di PMI un foglio di calcolo è uno strumento sufficiente, a patto di tenerlo in ordine. La regola più importante è separare i dati dai fattori e dai calcoli: se un fattore è scritto a mano in venti celle, l’anno dopo ne aggiornerete diciannove. Con la tabella unica dei fattori basta cambiare un valore e tutto il file si ricalcola. Il quarto foglio è quello che di solito manca: è il diario in cui si annota perché si è scelta una stima, che cosa è stato escluso e che cosa è cambiato tra una versione e l’altra.
+### SCHERMATA 59 — Il modello di riga: che cosa registrare per ogni voce [table]
+Colonne: Voce | Dato di attività | Documento e responsabile | Fattore e fonte | Emissioni
+- Gas naturale (essiccatoi e centrale termica) | 1.050.000 Sm³ | Bollette 2025 · C. Vitale | 2,0 kg CO2e/Sm³ · valore didattico (rif. ISPRA) | 2.100.000 kg = 2.100 t CO2e
+- Elettricità prelevata dalla rete | 3.200.000 kWh | Bollette 2025 · C. Vitale | 0,235 kg CO2e/kWh · ISPRA, dato 2023 arrotondato | 752.000 kg = 752 t CO2e
+- Gasolio della flotta aziendale | 38.000 l | Schede carburante 2025 · C. Vitale | 2,65 kg CO2e/l · valore didattico | 100.700 kg = 100,7 t CO2e
+- R-410A (climatizzazione uffici) | 12 kg | Rapporti del frigorista · D. Russo | 2.256 kg CO2e/kg · GWP IPCC AR6 | 27.072 kg = 27,1 t CO2e
+Estratto illustrativo del registro Terrafelix. In un registro reale si aggiungono la qualità del dato, la data di inserimento e le note.
+Commento del docente: Quattro righe vere dell’inventario Terrafelix, scritte come andrebbero scritte. Ogni riga risponde da sola alle cinque domande: che cosa, quanto, quale fattore, quale fonte, quale risultato. Nel corso i fattori sono valori didattici arrotondati e lo dichiariamo; in un inventario reale la colonna «Fattore e fonte» riporterebbe la pubblicazione ufficiale con l’edizione. Provate a coprire una colonna qualsiasi: la riga diventa inutilizzabile per chi deve controllare. È il test più semplice per capire se un registro è completo.
+### SCHERMATA 60 — Terrafelix: il registro delle ipotesi di Davide Russo [case]
+A giugno 2026, prima del consolidamento, il consulente EVALIS chiede a Davide di rileggere il file come se fosse un verificatore: per ogni numero deve esistere una riga che dica da dove viene.
+- Furgone senza schede di novembre e dicembre: 360 l stimati da 4.000 km × 0,09 l/km
+- GWP: una sola serie per tutto l’inventario, IPCC AR6
+- Elettricità: fattore nazionale ISPRA riferito al 2023, arrotondato a 0,235 kg CO2e/kWh
+- Conversioni: nessuna densità usata, tutti i carburanti sono registrati in litri
+Domanda di lavoro: Perché questo lavoro conviene farlo prima della verifica di terza parte?
+Come ha operato l'azienda: Perché un verificatore lavora proprio così: sceglie una riga, chiede il documento, rifà il conto e si aspetta lo stesso numero. Con il registro delle ipotesi ogni domanda trova risposta in pochi minuti; le stime sono dichiarate, quindi discutibili ma non contestabili come omissioni. E l’anno successivo Davide potrà ripetere il calcolo con lo stesso metodo.
+Commento del docente: Il registro delle ipotesi è il documento che più distingue un inventario professionale da un conto fatto in fretta. Non deve essere lungo: poche righe datate, una per ogni scelta non ovvia. Serve a tre persone: al verificatore, che troverà già scritte le risposte; alla direzione, che vedrà i limiti del risultato; e soprattutto a chi rifarà il calcolo tra dodici mesi, che spesso è la stessa persona e non ricorderà più perché aveva scelto proprio quel numero. Della verifica parleremo nell’unità 7.
+
+## SEZIONE 12 — Sintesi dell’unità
+### SCHERMATA 61 — Sintesi dell’unità [section]
+Abbiamo costruito la cassetta degli attrezzi del conteggio: una formula, tre ingredienti, le unità giuste, le fonti affidabili. Prima di passare all’inventario vero e proprio, fissiamo formule, controlli e punti chiave.
+- Il formulario dell’unità
+- Il ciclo di ogni riga di calcolo
+- La lista di controllo prima di chiudere
+- Che cosa ci aspetta nell’unità 3
+### SCHERMATA 62 — Il formulario dell’unità [table]
+Colonne: Che cosa si calcola | Formula | Esempio svolto
+- Emissioni di una sorgente | dato di attività × fattore di emissione | 48.000 Sm³ × 2,0 = 96.000 kg CO2e
+- Gas misurati in massa | kg di gas × GWP | 12 kg di R-410A × 2.256 = 27.072 kg CO2e
+- Trasporto di merci | t × km × fattore per tkm | 24 t × 450 km × 0,1 = 1.080 kg CO2e
+- Viaggi di persone | passeggeri × km × fattore per pkm | 3 × 800 km × 0,035 = 84 kg CO2e
+- Carburante stimato dai km | km × consumo medio × fattore per litro | 30.000 km × 0,08 l/km × 2,65 = 6.360 kg CO2e
+- Energia in kWh | MWh × 1.000 · GJ × 277,8 · Sm³ × 9,8 | 250 GJ × 277,8 = 69.450 kWh
+- Carburanti in kg | litri × densità (valore indicativo) | 5.000 l di gasolio × 0,84 = 4.200 kg
+- Tonnellate di CO2e | kg CO2e ÷ 1.000 | 96.000 kg CO2e = 96 t CO2e
+Fattori e conversioni sono valori arrotondati o indicativi a scopo didattico: in un inventario reale si usa e si cita la fonte ufficiale aggiornata.
+Commento del docente: Tutte le formule dell’unità stanno in otto righe, e le prime cinque sono la stessa moltiplicazione con dati di attività costruiti in modo diverso. Conviene tenere questa tabella accanto alla tabella dei fattori: insieme sono sufficienti per affrontare i calcoli delle unità 4, 5 e 6, dove applicheremo il metodo a tutte le sorgenti di Terrafelix. Gli esempi della terza colonna sono quelli svolti nelle slide: se un risultato non vi è chiaro, tornate alla sezione corrispondente.
+### SCHERMATA 63 — Il ciclo di ogni riga di calcolo [cycle]
+Al centro: Una riga dell’inventario
+- 1. Raccogli il dato: Dal documento giusto, per l’anno intero
+- 2. Controlla l’unità: Converti se non coincide con quella del fattore
+- 3. Scegli il fattore: Paese, anno, tecnologia, gas compresi, fonte
+- 4. Moltiplica: Dato × fattore, senza arrotondare
+- 5. Converti in tonnellate: Dividi per 1.000 e valuta l’ordine di grandezza
+- 6. Documenta: Documento, fonte, ipotesi, versione
+Poi si ricomincia con la riga successiva: sempre gli stessi sei gesti.
+Commento del docente: Rispetto ai cinque passi della prima sezione abbiamo reso esplicito il controllo dell’unità e aggiunto l’ultimo gesto: documentare. Il metodo è volutamente ripetitivo: un inventario di trenta voci è lo stesso ciclo ripetuto trenta volte. La ripetizione è una garanzia: se ogni riga è costruita nello stesso modo, un errore salta all’occhio. Nell’unità 3 faremo un passo indietro per rispondere a una domanda che finora abbiamo dato per scontata: quali righe devono entrare nell’inventario?
+### SCHERMATA 64 — Autovalutazione: prima di considerare chiuso un calcolo [checklist]
+- Il dato di attività copre tutto l’anno, dal 1° gennaio al 31 dicembre
+- L’unità del dato coincide con quella al denominatore del fattore
+- So se il fattore è in CO2 o in CO2e e che cosa copre: combustione o anche filiera a monte
+- Il fattore è del Paese e dell’anno giusti, e ne ho annotato la fonte
+- Per i gas misurati in massa ho usato i GWP di una sola serie IPCC, dichiarata
+- Ho calcolato in kg con i valori completi e arrotondato solo il totale in tonnellate
+- Ho controllato l’ordine di grandezza con un confronto semplice
+- Nessuna emissione è contata due volte
+- Stime e ipotesi sono scritte nel registro
+Commento del docente: Usate la lista come autovalutazione: se a una voce non sapete rispondere con sicurezza, tornate alla sezione corrispondente prima dell’esame finale. Le prime sei voci riguardano la singola riga di calcolo, le ultime tre il foglio nel suo insieme. Nella pratica professionale questa lista diventa il controllo di chiusura: prima di consegnare un inventario la si ripercorre riga per riga, meglio se a farlo è una persona diversa da chi ha fatto i conti.
+### SCHERMATA 65 — I punti chiave dell’unità [summary]
+1. Ogni emissione si calcola con la stessa formula: dato di attività × fattore di emissione
+2. Il dato di attività si trova in azienda: bollette, fatture, schede carburante, DDT, rapporti del frigorista
+3. L’unità del dato deve coincidere con quella al denominatore del fattore: se non coincide, prima si converte
+4. Un fattore si legge tutto: kg o grammi, CO2 o CO2e, combustione o filiera a monte, Paese e anno
+5. I fattori si prendono da fonti riconosciute e si citano; quelli del corso sono arrotondati a scopo didattico
+6. Per i gas misurati in massa il fattore è il GWP: una sola serie IPCC, dichiarata
+7. Quando un dato manca si stima con ipotesi dichiarate, annotando la qualità del dato
+8. Si calcola in kg, si somma e solo alla fine si converte in tonnellate e si arrotonda
+9. Unità sbagliate, fattori fuori posto e doppi conteggi si scoprono controllando unità e ordine di grandezza
+10. Ogni numero deve avere una storia: documento, fonte, ipotesi, versione
+Commento del docente: Con questa unità avete il metodo di calcolo dell’intero corso: d’ora in poi cambieranno le sorgenti, non la formula. Nell’unità 3 decideremo che cosa contare: i confini dell’organizzazione, gli Scope del GHG Protocol e le sei categorie della ISO 14064-1, l’anno base e i criteri di significatività. Dall’unità 4 torneremo ai conti, applicando gli attrezzi di oggi a tutte le sorgenti del Pastificio Terrafelix, una famiglia alla volta. Prima di proseguire, affrontate la verifica finale: sei delle dodici domande chiedono un calcolo.

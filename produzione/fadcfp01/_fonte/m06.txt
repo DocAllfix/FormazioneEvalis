@@ -1,0 +1,635 @@
+# UNITÀ 6 — Calcolare le emissioni della catena del valore (Scope 3) (3 ore)
+Acquisti, trasporti, rifiuti, viaggi, pendolarismo, uso e fine vita dei prodotti: metodi semplici per la parte più grande dell’impronta.
+Obiettivi di apprendimento:
+- Spiegare perché lo Scope 3 è di solito la parte maggiore dell’inventario e come si articola tra monte e valle
+- Scegliere per ogni voce il metodo di calcolo adatto: specifico del fornitore, dati medi, spesa, distanza
+- Impostare uno screening delle 15 categorie e motivare le esclusioni
+- Calcolare passo per passo acquisti, beni strumentali, energia a monte, trasporti, rifiuti, viaggi e pendolarismo
+- Usare correttamente la tonnellata-chilometro e il passeggero-chilometro
+- Trattare uso e fine vita dei prodotti venduti e riconoscere i doppi conteggi
+
+## SEZIONE 1 — Perché lo Scope 3 conta
+### SCHERMATA 1 — Perché lo Scope 3 conta [section]
+Nelle unità 4 e 5 abbiamo contato ciò che Terrafelix brucia e l’energia che compra: 2.257,8 t CO2e di Scope 1 e 752 t CO2e di Scope 2 (location-based). Ora contiamo tutto il resto: le emissioni che avvengono fuori dai cancelli, presso fornitori, trasportatori, dipendenti e clienti, ma a causa dell’attività dell’azienda.
+- Quanto pesa lo Scope 3 per Terrafelix
+- A monte e a valle: la catena del valore
+- Categorie del GHG Protocol e categorie ISO 14064-1
+- La formula non cambia: dato di attività × fattore
+### SCHERMATA 2 — Terrafelix: dove sono le emissioni [donut · GHG Protocol · Scope 3]
+Inventario 2025 con Scope 2 location-based: lo Scope 3 vale l’86,1% del totale.
+Totale al centro: 21.692,5 t CO2e
+- Scope 1 – emissioni dirette: 2257,8t (10,4%)
+- Scope 2 – energia acquistata: 752t (3,5%)
+- Scope 3 – catena del valore: 18.682,7t (86,1%)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Lo Scope 3 di Terrafelix vale 18.682,7 t CO2e: oltre otto volte lo Scope 1 e più di sei volte la somma di Scope 1 e 2 (3.009,8 t). Non è un caso particolare: in un’azienda che trasforma materie prime agricole la parte maggiore delle emissioni nasce nei campi e nei molini, non nello stabilimento. Un inventario che si fermasse ai primi due scope vedrebbe meno del 14% del quadro. Ricordate anche la soglia della Science Based Targets initiative: quando lo Scope 3 è almeno il 40% del totale, serve un obiettivo anche su di esso.
+### SCHERMATA 3 — La catena del valore: a monte, in azienda, a valle [flow · GHG Protocol · 15 categorie]
+Lo Scope 3 segue il prodotto prima e dopo lo stabilimento. Tra parentesi le categorie del GHG Protocol calcolate da Terrafelix.
+1. Fornitori: Semola, imballaggi, acqua (cat. 1); macchinari (cat. 2); filiera dell’energia (cat. 3).
+2. Trasporti in entrata: Dal molino e dai fornitori di imballaggi allo stabilimento (cat. 4).
+3. Attorno all’azienda: Rifiuti (cat. 5), viaggi di lavoro (cat. 6), tragitti casa-lavoro (cat. 7).
+4. Trasporti in uscita: Consegne in Italia, Europa e oltremare (cat. 9).
+5. Uso e fine vita: Cottura della pasta (cat. 11, a parte) e smaltimento degli imballaggi (cat. 12).
+A monte (categorie 1–7): 17.090,7 t CO2e, il 91,5% dello Scope 3. A valle (categorie 9 e 12): 1.592 t CO2e.
+Commento del docente: «A monte» è tutto ciò che l’azienda compra o che serve per farla funzionare; «a valle» è ciò che accade ai prodotti dopo la vendita. La distinzione aiuta a capire chi possiede i dati: per le categorie a monte bastano quasi sempre l’ufficio acquisti e l’amministrazione; per quelle a valle servono il commerciale e qualche ipotesi dichiarata su come i clienti trasportano, usano e buttano il prodotto. L’elenco completo delle 15 categorie è nell’unità 3: qui ci concentriamo su come si calcolano.
+### SCHERMATA 4 — Le stesse emissioni nelle categorie ISO 14064-1 [tree · ISO 14064-1 · categorie 3–6]
+Chi rendiconta secondo la ISO 14064-1 distribuisce le emissioni indirette nelle categorie da 3 a 6. La corrispondenza con il GHG Protocol è indicativa.
+Radice: Scope 3 di Terrafelix (18.682,7 t CO2e)
+- Categoria ISO 3 – trasporto (1.998,3 t CO2e): Trasporto a monte 402,6 t; Trasporto a valle 1.486 t; Viaggi di lavoro 28,9 t; Pendolarismo 80,8 t
+- Categoria ISO 4 – prodotti utilizzati (16.578,4 t CO2e): Beni e servizi acquistati 15.696 t; Beni strumentali 280 t; Energia a monte 566,6 t; Rifiuti 35,8 t
+- Categoria ISO 5 – uso dei prodotti (106 t CO2e): Fine vita degli imballaggi 106 t; Cottura: 8.416 t, a parte
+- Categoria ISO 6 – altre sorgenti (nessuna voce)
+Requisito ISO 14064-1: le emissioni indirette si valutano con criteri di significatività documentati; quelle significative si quantificano, le esclusioni si giustificano.
+Commento del docente: I calcoli sono identici, cambia solo lo scaffale su cui si ripongono i risultati. Un consiglio pratico: nel foglio di calcolo tenete due colonne, una con la categoria del GHG Protocol e una con la categoria ISO. Così lo stesso inventario risponde sia al cliente che chiede «Scope 1, 2 e 3», sia al verificatore che lavora sulla ISO 14064-1. Notate che la categoria ISO 3 riunisce tutti i trasporti, a monte e a valle, insieme a viaggi e pendolarismo: 402,6 + 1.486 + 28,9 + 80,8 = 1.998,3 t.
+
+## SEZIONE 2 — I quattro metodi di calcolo
+### SCHERMATA 5 — I quattro metodi di calcolo [section]
+Lo Scope 3 non si legge su un contatore: si ricostruisce con i dati che l’azienda ha già (quantità, chilometri, euro) e con fattori di emissione. Il GHG Protocol indica quattro metodi, dal più preciso al più rapido.
+- Specifico del fornitore
+- Ibrido
+- Dati medi: quantità × fattore medio
+- Spesa: euro × fattore per euro
+### SCHERMATA 6 — Dal più preciso al più rapido [pyramid · GHG Protocol · Scope 3, metodi di calcolo]
+Più si sale, più il dato descrive davvero la propria filiera; più si scende, meno fatica costa raccoglierlo.
+Livelli, dall'alto al basso:
+- Specifico del fornitore: Emissioni dichiarate dal fornitore per il suo prodotto
+- Ibrido: Dati del fornitore dove esistono, dati medi per il resto
+- Dati medi: Quantità acquistata (kg, m³, tkm) × fattore medio di banca dati
+- Spesa: Euro spesi × fattore per euro: rapido, ma il meno preciso
+Buona prassi: si sale di livello dove le emissioni sono grandi; per le voci piccole si resta alla base.
+Commento del docente: Nessun inventario usa un solo metodo. La regola pratica è proporzionare la fatica al peso della voce: per la semola, che vale due terzi dell’inventario di Terrafelix, ha senso inseguire il dato del molino; per la cancelleria basta una stima a spesa, o nulla. Attenzione a non leggere la piramide come una classifica morale: un calcolo a spesa dichiarato con onestà vale più di un dato «del fornitore» di cui non si conoscono confini, anno e metodo.
+### SCHERMATA 7 — Quale dato serve per ciascun metodo [table · GHG Protocol · Scope 3, metodi di calcolo]
+Colonne: Metodo | Dato di attività | Fattore di emissione | Quando usarlo
+- Specifico del fornitore | Quantità acquistata | kg CO2e per unità, dichiarato dal fornitore | Voci maggiori, fornitori che collaborano
+- Ibrido | Quantità e dati parziali del fornitore | In parte del fornitore, in parte medio | Passaggio graduale a dati migliori
+- Dati medi | Quantità fisica: kg, m³, tkm, pkm | Medio, da banca dati | Metodo di base per quasi tutte le voci
+- Spesa | Euro spesi, dalla contabilità | kg CO2e per euro | Screening, servizi, voci minori
+Per i trasporti i metodi sono: carburante consumato, distanza (tkm o pkm), spesa.
+Commento del docente: Guardate la colonna del dato di attività: è lì che si decide il metodo. Se l’ufficio acquisti sa dire quanti chili ha comprato, si usano i dati medi; se in contabilità c’è solo un importo, si ripiega sulla spesa. Per questo la prima domanda da fare a chi fornisce i dati non è «quanto abbiamo emesso?», ma «in quale unità registriamo questo acquisto?». Tra gli errori tipici del conteggio c’è proprio usare la spesa quando le quantità esistono e basterebbe chiederle.
+### SCHERMATA 8 — Stesso acquisto, primo metodo: dalla quantità [calc · Metodo dei dati medi]
+Un’azienda alimentare acquista in un anno 40.000 kg di cartone per imballaggi. Il dato si legge su fatture e documenti di trasporto (DDT).
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Cartone per imballaggi (kg da fatture e DDT · fattore medio per kg di cartone): 40.000 kg × 0,9 kg CO2e/kg = 36.000 kg CO2e
+Totale: 36.000 kg CO2e
+In tonnellate: 36 t CO2e
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: È il metodo dei dati medi: quantità fisica per fattore medio. 40.000 kg × 0,9 = 36.000 kg CO2e, cioè 36 t. Il risultato dipende solo da quanti chili sono stati comprati: se l’anno prossimo l’azienda riduce il peso degli astucci, il numero scende, ed è giusto così. Il fattore 0,9 kg CO2e/kg è un valore didattico arrotondato: in un inventario reale si prende da una banca dati aggiornata e si cita nel rapporto, con l’anno.
+### SCHERMATA 9 — Stesso acquisto, secondo metodo: dalla spesa [calc · Metodo basato sulla spesa]
+Per gli stessi 40.000 kg l’azienda ha speso 48.000 € (1,20 €/kg). Se conoscessimo solo l’importo, useremmo un fattore per euro.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Cartone per imballaggi (euro dalla contabilità · fattore per euro: valore didattico): 48.000 € × 0,6 kg CO2e/€ = 28.800 kg CO2e
+Totale: 28.800 kg CO2e
+In tonnellate: 28,8 t CO2e
+Stesso acquisto, due risultati: 36 t con la quantità, 28,8 t con la spesa (il 20% in meno). Se l’anno dopo il prezzo sale del 10%, la spesa diventa 52.800 € e il calcolo dà 31,7 t: emissioni «aumentate» senza un chilo di cartone in più.
+Fonte dei dati: Esempio didattico – prezzo e fattore per euro sono valori didattici
+Commento del docente: Il metodo a spesa misura il portafoglio, non la merce. Il fattore per euro è una media di settore: non distingue chi paga caro da chi paga poco, né un cartone leggero da uno pesante. In più risente di prezzi, sconti e inflazione: con un aumento del 10% del prezzo, 52.800 € × 0,6 = 31.680 kg CO2e, cioè 2.880 kg in più a parità di chili. Resta utile dove non c’è alternativa: servizi, voci minori, primo screening. Dove le quantità esistono, vanno usate.
+### SCHERMATA 10 — Terrafelix sceglie un metodo per ogni voce [case]
+Ad aprile 2026 Davide Russo e il consulente EVALIS impostano il calcolo dello Scope 3 dell’inventario 2025. Per ogni voce si fanno tre domande: quale dato abbiamo già? È una quantità o solo una spesa? Il fornitore può darci un dato suo?
+- Semola, imballaggi, acqua: quantità note da fatture e DDT → dati medi
+- Nuova linea di confezionamento: è nota solo la spesa (800.000 €) → metodo a spesa
+- Trasporti: tonnellate e distanze medie note → metodo della distanza (tkm)
+- Viaggi e pendolarismo: chilometri per mezzo → dati medi per passeggero o per km
+Domanda di lavoro: Per quale voce vale la pena chiedere un dato specifico al fornitore?
+Come ha operato l'azienda: Per la semola: da sola vale 14.420 t CO2e, il 77,2% dello Scope 3. Il primo inventario usa il fattore medio (0,7 kg CO2e/kg); il piano di miglioramento prevede la richiesta al molino di un dato specifico. Per le voci piccole restano i dati medi: la precisione va spesa dove sposta il risultato.
+Commento del docente: Questa tabella di scelte è il primo documento che un verificatore chiede: per ogni voce, quale metodo e perché. Scriverla prima di calcolare evita di cambiare metodo a metà strada. Notate che il metodo non è per categoria ma per voce: dentro la stessa categoria 1 potranno convivere, l’anno prossimo, il dato del molino per la semola e i dati medi per gli imballaggi. È il metodo ibrido, ed è il modo normale in cui un inventario matura.
+
+## SEZIONE 3 — Screening e priorità
+### SCHERMATA 11 — Screening e priorità [section]
+Quindici categorie sono tante. Lo screening serve a non perdersi: prima una stima rapida di tutte, poi il lavoro di dettaglio solo dove le emissioni sono grandi o dove l’azienda può incidere.
+- Una stima rapida di tutte le categorie
+- Criteri di significatività dichiarati
+- Categorie non applicabili: dirlo e motivarlo
+- Approfondire le voci maggiori
+### SCHERMATA 12 — Lo screening in cinque passi [flow · ISO 14064-1 · significatività]
+1. Elencare: Le 15 categorie, una per una: l’azienda ha attività di questo tipo? Sì, no, in parte.
+2. Stimare in fretta: Dati già disponibili (quantità o spesa) × fattori medi: basta l’ordine di grandezza.
+3. Applicare i criteri: Entità, influenza, rischio, richieste di clienti e settore: criteri scritti prima di guardare i numeri.
+4. Decidere: Le categorie significative si quantificano; le altre si escludono con una motivazione.
+5. Approfondire: Dati migliori sulle voci maggiori; le minori restano stimate.
+Requisito ISO 14064-1: i criteri di significatività delle emissioni indirette vanno definiti e documentati; le esclusioni vanno giustificate.
+Commento del docente: Lo screening si fa in pochi giorni e con dati grezzi: l’elenco degli acquisti per importo, i chili delle voci principali, una stima dei chilometri. L’obiettivo non è il numero giusto, ma l’ordine di grandezza: sapere se una categoria vale decine, centinaia o migliaia di tonnellate. I criteri di significatività sono stati impostati nell’unità 3: qui li applichiamo. L’errore da evitare è il percorso inverso, cioè calcolare con cura le categorie comode (viaggi, rifiuti) e ignorare quelle grandi perché difficili.
+### SCHERMATA 13 — Lo Scope 3 di Terrafelix per categoria [bar · GHG Protocol · Scope 3]
+Tonnellate di CO2e per categoria del GHG Protocol, inventario 2025 (fase d’uso esclusa).
+- Cat. 1 – Beni e servizi acquistati: 15.696t
+- Cat. 9 – Trasporto a valle: 1486t
+- Cat. 3 – Energia a monte: 566,6t
+- Cat. 4 – Trasporto a monte: 402,6t
+- Cat. 2 – Beni strumentali: 280t
+- Cat. 12 – Fine vita dei prodotti: 106t
+- Cat. 7 – Pendolarismo: 80,8t
+- Cat. 5 – Rifiuti: 35,8t
+- Cat. 6 – Viaggi di lavoro: 28,9t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il grafico anticipa i risultati che calcoleremo uno per uno nelle prossime sezioni. Due categorie, gli acquisti e il trasporto a valle, fanno insieme il 92,0% dello Scope 3; aggiungendo l’energia a monte si arriva al 95,0%. Viaggi di lavoro e rifiuti, che sono le prime voci a cui tutti pensano, valgono insieme meno dello 0,4%. È la lezione dello screening: l’intuizione su che cosa «inquina» è spesso sbagliata, e solo i numeri dicono dove concentrare il lavoro.
+### SCHERMATA 14 — Entità e influenza: la matrice delle priorità [matrix · ISO 14064-1 · criteri di significatività]
+Modello didattico: ogni categoria riceve un punteggio da 1 a 5 per entità delle emissioni e per capacità dell’azienda di influenzarle.
+Assi: Entità delle emissioni × Capacità di influenza
+- A Cat. 1 – Acquisti (semola, imballaggi): P5 × G3 = 15
+- B Cat. 9 – Trasporto a valle: P4 × G2 = 8
+- C Cat. 3 – Energia a monte: P3 × G4 = 12
+- D Cat. 4 – Trasporto a monte: P3 × G3 = 9
+- E Cat. 2 – Beni strumentali: P2 × G2 = 4
+- F Cat. 12 – Fine vita degli imballaggi: P2 × G4 = 8
+- G Cat. 7 – Pendolarismo: P1 × G3 = 3
+- H Cat. 5 – Rifiuti: P1 × G5 = 5
+- I Cat. 6 – Viaggi di lavoro: P1 × G4 = 4
+Commento del docente: La matrice è un modello didattico, non un requisito: la ISO 14064-1 chiede criteri definiti e documentati, non uno strumento preciso. Qui l’entità è a scaglioni (5 = oltre 5.000 t, 4 = da 1.000 a 5.000 t, 3 = da 300 a 1.000 t, 2 = da 100 a 300 t, 1 = sotto 100 t); l’influenza è un giudizio motivato. L’energia a monte ha influenza alta perché dipende dai consumi propri; il trasporto a valle l’ha bassa perché lo organizzano i clienti. Le sigle P e G accanto ai punti indicano i due punteggi, entità e influenza.
+### SCHERMATA 15 — Le categorie che Terrafelix non quantifica nel totale [table · GHG Protocol · categorie 8, 10, 11, 13, 14, 15]
+Colonne: Categoria | Che cosa comprende | Situazione di Terrafelix | Decisione
+- 8 – Beni in leasing a monte | Beni presi in affitto o in leasing, se non già negli Scope 1 e 2 | Stabilimento di proprietà; i veicoli sono già nello Scope 1 | Non applicabile
+- 10 – Lavorazione dei prodotti venduti | Trasformazioni fatte da altri su prodotti intermedi | La pasta è un prodotto finito | Non applicabile
+- 13 – Beni in leasing a valle | Beni propri dati in affitto a terzi | Nessun bene affittato | Non applicabile
+- 14 – Franchising | Attività dei punti in franchising | Nessuna rete in franchising | Non applicabile
+- 15 – Investimenti | Società partecipate, finanziamenti | Nessuna partecipata | Non applicabile
+- 11 – Uso dei prodotti venduti | Per la pasta: la cottura, emissione indiretta della fase d’uso | Facoltativa nel GHG Protocol | Calcolata, riportata a parte
+Motivazioni illustrative del caso studio. Nel rapporto ogni categoria compare: quantificata, oppure esclusa con la sua motivazione.
+Commento del docente: «Non applicabile» non significa «non mi interessa»: significa che l’azienda non svolge quell’attività, e lo scrive. Un rapporto che elenca nove categorie e tace sulle altre sei lascia il dubbio che siano state dimenticate. Diverso è il caso della categoria 11: per la pasta l’uso è la cottura, che il prodotto non compie da sé. Il GHG Protocol lascia facoltative queste emissioni indirette della fase d’uso; Terrafelix le calcola comunque, ma le tiene fuori dal totale. Ci torniamo nella sezione 10.
+
+## SEZIONE 4 — Categoria 1: beni e servizi acquistati
+### SCHERMATA 16 — Categoria 1: beni e servizi acquistati [section]
+La categoria 1 comprende le emissioni generate per produrre ciò che l’azienda compra: materie prime, imballaggi, materiali ausiliari, servizi. Per un’azienda alimentare è quasi sempre la voce maggiore: per Terrafelix vale 15.696 t CO2e, l’84,0% dello Scope 3.
+- Il dato: kg acquistati, da fatture e DDT
+- Chi lo possiede: Acquisti e Amministrazione
+- Il metodo: dati medi oggi, dato del fornitore domani
+- L’errore tipico: kg di prodotto al posto dei kg acquistati
+### SCHERMATA 17 — La semola: la voce più grande dell’inventario [calc · GHG Protocol · Scope 3, categoria 1]
+Il dato: i kg di semola acquistati nel 2025, sommando fatture e DDT del molino. Lo fornisce Michele Santoro (Acquisti); Chiara Vitale lo riconcilia con la contabilità.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Semola di grano duro (20.600 t = 20.600.000 kg · fattore medio: coltivazione del grano e molitura): 20.600.000 kg × 0,7 kg CO2e/kg = 14.420.000 kg CO2e
+Totale: 14.420.000 kg CO2e
+In tonnellate: 14.420 t CO2e
+Errore tipico: usare i 20.000.000 kg di pasta prodotta al posto dei 20.600.000 kg di semola acquistata. Per fare 1 kg di pasta servono 1,03 kg di semola.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Un solo prodotto, una sola moltiplicazione: 20.600.000 kg × 0,7 = 14.420.000 kg CO2e, cioè 14.420 t, il 66,5% dell’intero inventario. Il fattore copre ciò che accade prima del cancello di Terrafelix: fertilizzanti, lavorazioni agricole, molitura. Due attenzioni. Prima: il dato di attività è l’acquistato, non il prodotto; usando i kg di pasta mancherebbero 600.000 kg, cioè 420 t CO2e. Seconda: le fatture sono in tonnellate e il fattore è per kg, quindi si converte prima di moltiplicare.
+### SCHERMATA 18 — Imballaggi e acqua: tre righe, tre fattori [calc · GHG Protocol · Scope 3, categoria 1]
+Stesso metodo per le altre voci: quantità acquistate nell’anno, ciascuna con il proprio fattore. Attenzione alle unità: kg per gli imballaggi (fatture dei fornitori), m³ per l’acqua (bollette idriche).
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Astucci e cartoni (900 t da fatture e DDT): 900.000 kg × 0,9 kg CO2e/kg = 810.000 kg CO2e
+- Film plastico (160 t da fatture e DDT): 160.000 kg × 2,8 kg CO2e/kg = 448.000 kg CO2e
+- Acqua di rete (m³ fatturati nell’anno): 60.000 m³ × 0,3 kg CO2e/m³ = 18.000 kg CO2e
+Totale: 1.276.000 kg CO2e
+In tonnellate: 1276 t CO2e
+Categoria 1 in totale: 14.420 + 810 + 448 + 18 = 15.696 t CO2e.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Qui si vede perché serve un fattore per ogni materiale. Il film pesa meno di un quinto del cartone (160 t contro 900 t), ma ogni chilo emette circa il triplo (2,8 contro 0,9): alla fine vale 448 t contro 810 t, più della metà. L’acqua, 60.000 m³, pesa pochissimo: 18 t. Errore tipico: sommare i chili di tutti gli imballaggi e applicare un solo fattore «medio». Con 0,9 su tutti i 1.060.000 kg si otterrebbero 954 t invece di 1.258 t.
+### SCHERMATA 19 — Categoria 1: chi pesa di più [donut]
+La semola da sola vale il 91,9% della categoria; gli imballaggi (cartone e film) l’8,0%; l’acqua lo 0,1%.
+Totale al centro: 15.696 t CO2e
+- Semola di grano duro: 14.420t (91,9%)
+- Astucci e cartoni: 810t (5,2%)
+- Film plastico: 448t (2,9%)
+- Acqua di rete: 18t (0,1%)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Quando una voce vale oltre il 90% di una categoria, la qualità dell’intero risultato dipende da quel solo fattore. Se il fattore della semola fosse sbagliato del 10%, l’errore sarebbe di 1.442 t CO2e: più di tutto lo Scope 2 e quasi quanto l’intero trasporto a valle. Se fosse sbagliato del 10% il fattore dell’acqua, l’errore sarebbe di 1,8 t. Ecco perché il lavoro sui dati dei fornitori comincia sempre dalla materia prima principale. Nel primo inventario la categoria copre materie prime, imballaggi e acqua; i servizi sono rinviati al piano di miglioramento.
+### SCHERMATA 20 — Dato medio o dato del fornitore? [two · GHG Protocol · Scope 3, metodi di calcolo]
+Colonna «Dato medio (banca dati)»:
+- Un fattore uguale per tutti i fornitori dello stesso prodotto
+- Disponibile subito: basta la quantità acquistata
+- Non premia il fornitore migliore: cambiando molino il risultato non cambia
+- Adatto al primo inventario e alle voci minori
+Colonna «Dato specifico del fornitore»:
+- kg CO2e per kg del suo prodotto, calcolato dal fornitore (per esempio in una EPD)
+- Va chiesto e capito: stesso confine? stesso anno? verificato da terzi?
+- Rende visibili i miglioramenti della filiera
+- Da cercare per le voci maggiori: per Terrafelix, la semola
+Commento del docente: Una EPD è una dichiarazione ambientale di prodotto: un documento in cui il fornitore pubblica, tra l’altro, le emissioni per unità del suo prodotto, di norma verificate da un terzo. È la fonte migliore per un dato specifico. E i servizi (manutenzioni, pulizie, consulenze, assicurazioni)? Di solito non hanno una quantità fisica: si stimano con il metodo a spesa, euro per fattore. Per un’azienda manifatturiera valgono poco rispetto ai materiali; per una società di servizi possono essere la voce principale della categoria.
+### SCHERMATA 21 — Michele Santoro scrive al molino [case]
+La semola vale 14.420 t CO2e: il 91,9% della categoria 1 e il 66,5% dell’intero inventario. Il fattore usato (0,7 kg CO2e/kg) è un valore medio. Michele Santoro, responsabile Acquisti e logistica, prepara una richiesta di dati al molino fornitore.
+- Che cosa chiede: kg CO2e per kg di semola consegnata, anno di riferimento, confine del calcolo (dal campo all’uscita dal molino)
+- Con quale documento: EPD, studio di carbon footprint di prodotto, oppure una dichiarazione con metodo e fonti
+- Che cosa verifica: se il trasporto fino a Terrafelix è già compreso, per non contarlo due volte nella categoria 4
+Domanda di lavoro: Se il molino dichiarasse un fattore diverso da 0,7, che cosa cambierebbe?
+Come ha operato l'azienda: Cambierebbero il metodo (da dati medi a specifico del fornitore) e il risultato della voce più grande: ogni centesimo di fattore in più o in meno vale 206 t CO2e (20.600.000 kg × 0,01). Il cambio di metodo va dichiarato nel rapporto e valutato rispetto alla politica di ricalcolo dell’anno base (unità 7).
+Commento del docente: La richiesta ai fornitori funziona se è breve, precisa e motivata. Tre righe bastano: quale numero serve, in quale unità, con quale documento a supporto. Chiedere genericamente «i vostri dati di sostenibilità» produce brochure, non fattori. Conviene anche spiegare perché si chiede: il molino che riceve la stessa domanda da più clienti capisce che il dato sta diventando un requisito commerciale. Le leve di riduzione sugli acquisti sono tema dell’unità 9.
+
+## SEZIONE 5 — Categorie 2 e 3: beni strumentali ed energia a monte
+### SCHERMATA 22 — Categorie 2 e 3: beni strumentali ed energia a monte [section]
+Due categorie poco visibili, che si calcolano con dati già presenti in azienda: gli investimenti in macchinari e impianti (categoria 2) e ciò che è servito per estrarre, produrre e portare fino all’azienda i combustibili e l’elettricità già contati negli Scope 1 e 2 (categoria 3).
+- Beni strumentali: la spesa dell’anno
+- Energia a monte: gli stessi Sm³, litri e kWh degli Scope 1 e 2
+- Fattori «di filiera», non di combustione
+- Nessun doppio conteggio con gli Scope 1 e 2
+### SCHERMATA 23 — Categoria 2: i beni strumentali [text · GHG Protocol · Scope 3, categoria 2]
+Macchinari, impianti, veicoli, edifici, attrezzature informatiche: beni che durano più anni e che in contabilità si ammortizzano.
+- Che cosa si conta: Le emissioni generate per produrre il bene (materiali, fabbricazione, consegna), non quelle del suo funzionamento.
+- Quale dato serve: Gli investimenti dell’anno: elenco dei beni acquistati con il loro importo.
+- Chi lo possiede: L’Amministrazione: registro dei beni ammortizzabili e fatture di acquisto.
+- Quale metodo: Di solito la spesa (euro × fattore per euro); se il costruttore fornisce un dato specifico, si usa quello.
+- Quando si conta: Regola pratica: tutto nell’anno di acquisto. Le emissioni non si «ammortizzano» come il costo.
+Riquadro «Errore tipico»: Ripartire le emissioni sugli anni di ammortamento, oppure contare qui i consumi del macchinario: quelli sono Scope 1 o Scope 2.
+Commento del docente: La differenza tra categoria 1 e categoria 2 è la stessa che in contabilità separa i costi d’esercizio dagli investimenti: per questo il dato si chiede a chi tiene il registro dei beni ammortizzabili. Contare tutto nell’anno di acquisto ha una conseguenza: la categoria 2 procede a gradini, alta negli anni di investimento e quasi nulla negli altri. Non è un errore né un peggioramento: va spiegato nel rapporto, così chi confronta due anni non trae conclusioni sbagliate.
+### SCHERMATA 24 — La nuova linea di confezionamento [calc · GHG Protocol · Scope 3, categoria 2]
+Nel 2025 Terrafelix ha acquistato una nuova linea di confezionamento. Il dato: l’importo delle fatture, fornito da Chiara Vitale (Amministrazione). Metodo: spesa.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Linea di confezionamento (investimento 2025, dal registro dei beni ammortizzabili · fattore per euro dei macchinari): 800.000 € × 0,35 kg CO2e/€ = 280.000 kg CO2e
+Totale: 280.000 kg CO2e
+In tonnellate: 280 t CO2e
+Tutte le 280 t CO2e entrano nell’inventario 2025. Un anno senza investimenti avrà questa categoria vicina a zero: è normale, e va spiegato nel rapporto.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: 800.000 € × 0,35 = 280.000 kg CO2e, cioè 280 t: l’1,5% dello Scope 3. È l’unica voce dell’inventario di Terrafelix calcolata a spesa, perché di una linea su misura non esiste un «peso» da moltiplicare per un fattore medio. Il fattore 0,35 kg CO2e/€ è un valore didattico: quelli reali si trovano in banche dati dedicate, sono distinti per settore e vanno usati con l’anno e la valuta a cui si riferiscono. Chi ripartisse le 280 t su dieci anni di ammortamento ne dichiarerebbe 28: l’errore tipico da evitare.
+### SCHERMATA 25 — Categoria 3: che cosa c’è «a monte» dell’energia [flow · GHG Protocol · Scope 3, categoria 3]
+Prima di bruciare nel bruciatore o nel motore, un combustibile ha già generato emissioni lungo la sua filiera.
+1. Estrazione: Gas e petrolio vengono estratti: energia consumata e perdite di metano.
+2. Lavorazione: Trattamento del gas, raffinazione di gasolio e benzina.
+3. Trasporto: Gasdotti, navi, autobotti: fino al contatore o al distributore.
+4. Uso in azienda: La combustione è Scope 1, l’elettricità consumata è Scope 2: non si ricontano qui.
+Per l’elettricità la categoria 3 comprende la filiera dei combustibili usati dalle centrali e le perdite della rete. Sigla ricorrente: WTT, dall’inglese «well-to-tank», dal pozzo al serbatoio.
+Commento del docente: Il nome completo della categoria è «attività legate a combustibili ed energia non incluse negli Scope 1 e 2». In pratica: i primi tre passi di questo schema. La categoria è spesso dimenticata perché non corrisponde a nessun acquisto distinto: il gas si paga una volta sola. Eppure il conto è il più facile dello Scope 3, perché i dati di attività sono già stati raccolti nelle unità 4 e 5. Cambia soltanto il fattore: non quello di combustione, ma quello della filiera a monte.
+### SCHERMATA 26 — La filiera a monte di gas, carburanti ed elettricità [calc · GHG Protocol · Scope 3, categoria 3]
+Nessun dato nuovo da cercare: sono le quantità degli Scope 1 e 2 (bollette del gas, schede carburante, bollette elettriche), raccolte da Davide Russo, moltiplicate per i fattori della filiera a monte.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Gas naturale (gli stessi Sm³ dello Scope 1): 1.050.000 Sm³ × 0,33 kg CO2e/Sm³ = 346.500 kg CO2e
+- Gasolio (38.000 l della flotta + 1.500 l del gruppo elettrogeno): 39.500 l × 0,62 kg CO2e/l = 24.490 kg CO2e
+- Benzina (gli stessi litri dello Scope 1): 6000 l × 0,6 kg CO2e/l = 3600 kg CO2e
+- Elettricità di rete (gli stessi kWh dello Scope 2 · filiera a monte e perdite di rete): 3.200.000 kWh × 0,06 kg CO2e/kWh = 192.000 kg CO2e
+Totale: 566.590 kg CO2e
+In tonnellate: 566,59 t CO2e
+566.590 kg = 566,6 t CO2e. Errore tipico: dimenticare la categoria, oppure usare il fattore di combustione (2 kg CO2e/Sm³) e contare così due volte lo Scope 1.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Le quattro righe danno 346.500 + 24.490 + 3.600 + 192.000 = 566.590 kg CO2e. È come un supplemento sugli Scope 1 e 2: per il gas la filiera aggiunge il 16,5% alla combustione (0,33 su 2), per l’elettricità il 25,5% (0,06 su 0,235). Nel complesso 566,6 t equivalgono al 18,8% della somma di Scope 1 e 2. Notate il gasolio: 39.500 litri, perché si sommano flotta e gruppo elettrogeno. L’energia del fotovoltaico autoconsumata non entra: non ha combustibili a monte.
+
+## SEZIONE 6 — Categorie 4 e 9: i trasporti
+### SCHERMATA 27 — Categorie 4 e 9: i trasporti [section]
+Categoria 4 (a monte) e categoria 9 (a valle): camion, treni e navi di altri, che portano le merci verso l’azienda e dai suoi magazzini ai clienti. L’unità di misura che fa tutto il lavoro è la tonnellata-chilometro.
+- La tonnellata-chilometro (tkm)
+- Gomma, ferro, nave, aereo a confronto
+- A monte: semola e imballaggi
+- A valle: Italia, Europa, oltremare
+- Chi compra il trasporto decide la categoria
+### SCHERMATA 28 — La tonnellata-chilometro, spiegata semplice [text · Metodo basato sulla distanza]
+Una tonnellata-chilometro (tkm) è una tonnellata di merce trasportata per un chilometro. Si ottiene moltiplicando il peso (in tonnellate) per la distanza (in km).
+- La spesa del sabato: 20 kg di spesa portati a casa per 5 km: 0,02 t × 5 km = 0,1 tkm.
+- Un bancale: 800 kg consegnati a 250 km: 0,8 t × 250 km = 200 tkm.
+- Un autoarticolato pieno: 25 t per 400 km: 25 × 400 = 10.000 tkm.
+- Stesso lavoro, combinazioni diverse: 10 t per 100 km e 1 t per 1.000 km valgono entrambe 1.000 tkm.
+- Perché si usa: Il fattore dei trasporti è in kg CO2e per tkm: tiene conto insieme di quanto pesa la merce e di quanta strada fa.
+Riquadro «La formula»: Emissioni = tonnellate × chilometri × fattore (kg CO2e/tkm). Il peso va sempre in tonnellate, non in kg.
+Commento del docente: La tkm misura il «lavoro di trasporto», come il kWh misura l’energia. Con il fattore della gomma (0,1 kg CO2e/tkm) l’autoarticolato dell’esempio emette 10.000 × 0,1 = 1.000 kg CO2e: una tonnellata di CO2e per portare 25 tonnellate a 400 km. Non serve sapere quanti camion sono partiti né quanto gasolio hanno bruciato: il fattore medio per tkm incorpora un carico medio del mezzo. Se invece il trasportatore comunica i litri consumati per le nostre consegne, il metodo basato sul carburante è più preciso.
+### SCHERMATA 29 — Primo conto: un bancale consegnato a 250 km [calc · Metodo basato sulla distanza]
+Il peso si legge sul documento di trasporto; la distanza si stima dal percorso stradale tra partenza e arrivo.
+Formula: Emissioni = Peso trasportato × Fattore di emissione × Distanza
+- Un bancale su camion (800 kg = 0,8 t (dal DDT) · distanza indicativa): 0,8 t × 0,1 kg CO2e/tkm × 250 km = 20 kg CO2e
+Totale: 20 kg CO2e
+0,8 t × 250 km = 200 tkm; 200 tkm × 0,1 = 20 kg CO2e. Errore tipico: lasciare il peso in kg. 800 × 250 × 0,1 = 20.000 kg, cioè 20 t: mille volte troppo.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Venti chili di CO2e per un bancale a 250 km: un ordine di grandezza da tenere a mente. È quanto emette un’auto media in circa 118 km (20 ÷ 0,17). L’errore delle unità è il più frequente nei trasporti, perché le bolle riportano i chili e i fattori sono per tonnellata-chilometro. Un controllo rapido: se un singolo trasporto su gomma supera qualche tonnellata di CO2e, quasi certamente il peso è rimasto in kg. La distanza va dichiarata come stima, indicando come è stata ottenuta.
+### SCHERMATA 30 — Quanto emette ogni mezzo per portare 1 tonnellata per 1 km [bar · Fattori per tonnellata-chilometro]
+Grammi di CO2e per tonnellata-chilometro, secondo i fattori didattici del corso.
+- Nave portacontainer: 16g
+- Treno merci: 28g
+- Camion (autoarticolato): 100g
+- Aereo cargo: 1000g
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); aereo cargo: valore didattico di ordine di grandezza
+Commento del docente: Il mezzo conta più della distanza. Portare 1 tonnellata per 1.000 km costa circa 16 kg CO2e in nave, 28 kg in treno, 100 kg in camion e 1.000 kg in aereo: il camion emette oltre sei volte la nave e circa tre volte e mezza il treno; l’aereo dieci volte il camion. Sono valori arrotondati a scopo didattico (quello dell’aereo indica solo l’ordine di grandezza): i fattori reali dipendono da tipo di mezzo, carico e tratta, e vanno presi da una fonte aggiornata.
+### SCHERMATA 31 — Categoria 4: il trasporto di semola e imballaggi [calc · GHG Protocol · Scope 3, categoria 4]
+Il dato: tonnellate consegnate (DDT, fatture) e distanza media tra fornitore e stabilimento. Lo possiede Michele Santoro (Acquisti e logistica). Le distanze sono medie indicative del caso studio.
+Formula: Emissioni = Peso trasportato × Fattore di emissione × Distanza
+- Semola dal molino (20.600 t × 180 km = 3.708.000 tkm): 20.600 t × 0,1 kg CO2e/tkm × 180 km = 370.800 kg CO2e
+- Imballaggi dai fornitori (900 t di cartone + 160 t di film = 1.060 t × 300 km = 318.000 tkm): 1060 t × 0,1 kg CO2e/tkm × 300 km = 31.800 kg CO2e
+Totale: 402.600 kg CO2e
+In tonnellate: 402,6 t CO2e
+402.600 kg = 402,6 t CO2e. Errore tipico: contare il trasporto due volte, qui e dentro un fattore del fornitore che lo comprende già.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Semola: 370.800 kg CO2e; imballaggi: 31.800 kg. Il trasporto della semola vale 370,8 t contro le 14.420 t della sua produzione: meno del 3%. È un rapporto tipico delle materie prime agricole, ed è il motivo per cui scegliere un fornitore «a chilometro zero» sposta poco se non cambia anche il modo di coltivare. Le tonnellate sono le stesse già usate nella categoria 1: un controllo di coerenza immediato. Le distanze medie vanno scritte nel registro delle ipotesi.
+### SCHERMATA 32 — Categoria 9: la distribuzione della pasta [calc · GHG Protocol · Scope 3, categoria 9]
+Il dato: tonnellate vendute per mercato (statistiche di vendita, Giorgio Ferri) e distanza media di consegna (Michele Santoro). Distanze medie indicative del caso studio; per l’oltremare è considerata la tratta via nave.
+Formula: Emissioni = Peso trasportato × Fattore di emissione × Distanza
+- Italia, su gomma (70% delle vendite · 6.300.000 tkm): 14.000 t × 0,1 kg CO2e/tkm × 450 km = 630.000 kg CO2e
+- Europa, su gomma (20% delle vendite · 6.000.000 tkm): 4000 t × 0,1 kg CO2e/tkm × 1500 km = 600.000 kg CO2e
+- Oltremare, via nave (10% delle vendite · 16.000.000 tkm): 2000 t × 0,016 kg CO2e/tkm × 8000 km = 256.000 kg CO2e
+Totale: 1.486.000 kg CO2e
+In tonnellate: 1486 t CO2e
+L’oltremare percorre 8.000 km ma emette meno dell’Europa (256 t contro 600 t): la nave ha un fattore oltre sei volte più basso del camion.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: 630 + 600 + 256 = 1.486 t CO2e, la seconda categoria dello Scope 3. Dividendo per le tonnellate si legge l’intensità di ogni mercato: 45 kg CO2e per tonnellata di pasta in Italia, 150 in Europa, 128 oltremare. Se quelle 2.000 t viaggiassero per 8.000 km in camion varrebbero 1.600 t. Semplificazione del caso: per l’oltremare si conta solo la nave; in un inventario reale si aggiunge la tratta su gomma fino al porto e dal porto al cliente, ciascuna con il suo fattore.
+### SCHERMATA 33 — A monte o a valle? Dipende da chi compra il trasporto [table · GHG Protocol · categorie 4 e 9 · ISO 14064-1 · categoria 3]
+Colonne: Situazione | Dove va | Esempio Terrafelix
+- Merci acquistate che viaggiano dal fornitore all’azienda | Categoria 4 – a monte | Semola dal molino, imballaggi
+- Trasporto dei prodotti venduti, acquistato e pagato dall’azienda | Categoria 4 – a monte | Non presente
+- Trasporto dei prodotti venduti, organizzato e pagato dal cliente | Categoria 9 – a valle | Consegne in Italia, Europa e oltremare
+- Trasporto con mezzi propri o sotto il proprio controllo | Scope 1 (carburante) | I 4 furgoni della flotta: già contati
+Criterio pratico: «a monte» è il trasporto che l’azienda compra; «a valle» quello che avviene dopo la vendita e che paga qualcun altro. Nella ISO 14064-1 entrambi rientrano nella categoria 3 (trasporto).
+Commento del docente: Il nome inganna: «a monte» e «a valle» qui non indicano la direzione della merce, ma chi acquista il servizio. Nel caso studio si assume, come dato illustrativo, che i clienti di Terrafelix organizzino e paghino il ritiro della pasta: per questo la distribuzione è nella categoria 9. Se Terrafelix pagasse i vettori, le stesse 1.486 t passerebbero nella categoria 4, senza cambiare il totale dello Scope 3. L’importante è contarle una volta sola e dichiarare il criterio usato.
+### SCHERMATA 34 — Prova tu: stesso carico, mezzi diversi [sim · Metodo basato sulla distanza]
+Le consegne europee di Terrafelix valgono 6.000.000 tkm (4.000 t × 1.500 km), oggi tutte su gomma. Sposta 3.000.000 tkm dal camion al treno: di quanto scende il totale? Mantieni costante la somma delle tkm.
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Su gomma (camion): 6.000.000 tkm × 0,1 kg CO2e/tkm = 600.000 kg CO2e
+- Su ferro (treno merci): 0 tkm × 0,028 kg CO2e/tkm = 0 kg CO2e
+- Via nave: 0 tkm × 0,016 kg CO2e/tkm = 0 kg CO2e
+Totale iniziale: 600.000 kg CO2e
+In tonnellate: 600 t CO2e
+Il dato di attività qui è già in tkm: tonnellate × km. Dividere a metà le tonnellate tra due mezzi sulla stessa distanza significa dividere a metà le tkm.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Con metà del flusso su ferro il totale passa da 600.000 a 384.000 kg CO2e: 3.000.000 × 0,1 + 3.000.000 × 0,028. Sono 216 t in meno, il 36%, senza ridurre di un chilo la merce consegnata. È il ragionamento alla base delle leve logistiche che ritroveremo nell’unità 9. Fate provare anche il caso estremo, tutto su ferro (168.000 kg), e fate notare ciò che il calcolatore non dice: il treno richiede quasi sempre una tratta su gomma all’inizio e alla fine, che va aggiunta.
+### SCHERMATA 35 — Trasporti: gli errori che cambiano il risultato [two · Buona prassi]
+Colonna «Corretto»:
+- Peso in tonnellate, distanza in km: il prodotto è in tkm
+- Distanza stradale reale o media per zona, dichiarata come stima
+- Un fattore per ogni mezzo: gomma, ferro, nave
+- Ogni flusso calcolato per conto suo: tonnellate × i propri km
+- Mezzi aziendali lasciati nello Scope 1
+Colonna «Sbagliato»:
+- Moltiplicare kg × km con un fattore per tkm
+- Usare la distanza in linea d’aria per un viaggio su strada
+- Applicare a tutto il fattore del camion, anche alla nave
+- Moltiplicare il totale delle tonnellate per la somma delle distanze
+- Ricontare qui il gasolio dei furgoni aziendali
+Commento del docente: Il quarto errore è subdolo e merita un numero. Terrafelix consegna 20.000 t; le tre distanze sommate fanno 9.950 km. Moltiplicando i due totali si ottengono 199.000.000 tkm, contro i 28.300.000 tkm veri (6.300.000 + 6.000.000 + 16.000.000): sette volte tanto. Le tkm si calcolano riga per riga e solo dopo si sommano. Altro punto: le consegne fatte con i furgoni aziendali sono già nello Scope 1 attraverso il gasolio; aggiungerle qui sarebbe un doppio conteggio interno.
+
+## SEZIONE 7 — Categoria 5: rifiuti generati dalle attività
+### SCHERMATA 36 — Categoria 5: rifiuti generati dalle attività [section]
+La categoria 5 riguarda il trattamento, affidato a terzi, dei rifiuti prodotti dall’azienda: recupero, riciclo, incenerimento, discarica. Per Terrafelix è una voce piccola (35,8 t CO2e), ma il calcolo è semplice e i dati sono già registrati.
+- Il dato: kg per tipo di rifiuto e per destino
+- Chi lo possiede: il responsabile Ambiente
+- Due fattori molto diversi: recupero e smaltimento
+- L’errore tipico: un solo fattore per tutti i rifiuti
+### SCHERMATA 37 — Dal registro dei rifiuti al calcolo [flow · GHG Protocol · Scope 3, categoria 5]
+1. Raccogliere i pesi: Registro di carico e scarico, formulari, dichiarazione annuale (MUD): kg per ogni rifiuto conferito.
+2. Dividere per destino: Recupero o riciclo da una parte, smaltimento (discarica, incenerimento) dall’altra: lo indica il formulario.
+3. Scegliere i fattori: Un fattore per ogni destino, in kg CO2e per kg di rifiuto.
+4. Moltiplicare e sommare: kg × fattore per ogni riga, poi il totale in tonnellate.
+In Terrafelix i dati sono di Davide Russo (Ambiente ed energia): 480.000 kg di rifiuti nel 2025, di cui 420.000 kg a recupero e 60.000 kg a smaltimento.
+Commento del docente: È una delle poche categorie di Scope 3 in cui il dato di attività è già pesato e registrato: basta sommare i formulari dell’anno. Un controllo di plausibilità: 480.000 kg su 20.000 t di pasta sono 24 kg di rifiuti per tonnellata prodotta, un indicatore da seguire nel tempo. Attenzione a ciò che il fattore copre: il trattamento del rifiuto, non la produzione del materiale buttato, che è già nella categoria 1. Il cartone di scarto è stato contato quando è stato comprato.
+### SCHERMATA 38 — I rifiuti di Terrafelix: recupero e smaltimento [calc · GHG Protocol · Scope 3, categoria 5]
+Due righe, perché i destini sono due: ciascuno ha il suo fattore.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Rifiuti avviati a recupero (sfridi, carta e cartone, plastica, legno · kg dal registro): 420.000 kg × 0,021 kg CO2e/kg = 8820 kg CO2e
+- Rifiuti avviati a smaltimento (rifiuti misti · kg dal registro): 60.000 kg × 0,45 kg CO2e/kg = 27.000 kg CO2e
+Totale: 35.820 kg CO2e
+In tonnellate: 35,82 t CO2e
+Lo smaltimento è il 12,5% dei chili ma il 75,4% delle emissioni: il destino conta più del peso. Errore tipico: applicare un solo fattore a tutti i 480.000 kg.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: 8.820 + 27.000 = 35.820 kg CO2e, cioè 35,8 t. Il fattore dello smaltimento è oltre venti volte quello del recupero (0,45 contro 0,021): per questo 60 t di rifiuti misti emettono il triplo di 420 t di rifiuti recuperati. Con un solo fattore si sbaglia in entrambe le direzioni: 480.000 × 0,021 darebbe 10,1 t, 480.000 × 0,45 darebbe 216 t. La ripartizione dei tipi di rifiuto a recupero è illustrativa. Fattori arrotondati: in un inventario reale si usano quelli per tipo di rifiuto e trattamento.
+### SCHERMATA 39 — Prova tu: che cosa succede migliorando la raccolta [sim · GHG Protocol · Scope 3, categoria 5]
+Sposta 30.000 kg dallo smaltimento al recupero (scrivi 450.000 e 30.000): di quanto scende il totale? Poi prova a raddoppiare tutti i rifiuti.
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Rifiuti avviati a recupero: 420.000 kg × 0,021 kg CO2e/kg = 8820 kg CO2e
+- Rifiuti avviati a smaltimento: 60.000 kg × 0,45 kg CO2e/kg = 27.000 kg CO2e
+Totale iniziale: 35.820 kg CO2e
+In tonnellate: 35,82 t CO2e
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Con 450.000 kg a recupero e 30.000 kg a smaltimento il totale scende a 22.950 kg CO2e: 12.870 kg in meno, il 35,9%, a parità di rifiuti prodotti. Raddoppiando tutto, invece, il totale raddoppia: la formula è lineare. L’esercizio mostra due cose. Una buona separazione dei rifiuti si vede subito nel numero. E, per onestà, il numero resta piccolo: 12,9 t su uno Scope 3 di 18.682,7 t. Ridurre i rifiuti conviene per molte ragioni; per il clima, a Terrafelix, la leva decisiva è altrove.
+
+## SEZIONE 8 — Categoria 6: viaggi di lavoro
+### SCHERMATA 40 — Categoria 6: viaggi di lavoro [section]
+La categoria 6 conta gli spostamenti del personale per lavoro su mezzi non dell’azienda: aerei, treni, taxi, auto propria del dipendente. Terrafelix vi include anche i pernottamenti. In tutto vale 28,9 t CO2e.
+- Il passeggero-chilometro (pkm)
+- Il dato: note spese e agenzia viaggi
+- Una trasferta Napoli–Milano: aereo o treno?
+- I viaggi di Terrafelix in un anno
+### SCHERMATA 41 — Il passeggero-chilometro, spiegato semplice [text · Metodo basato sulla distanza]
+Un passeggero-chilometro (pkm) è una persona trasportata per un chilometro. Si ottiene moltiplicando il numero di persone per i km percorsi da ciascuna.
+- Un viaggio da soli: 1 persona in treno per 200 km = 200 pkm.
+- Una trasferta in tre: 3 colleghi sullo stesso treno per 200 km = 600 pkm; 600 × 0,035 = 21 kg CO2e.
+- Andata e ritorno: Il biglietto è uno, i viaggi sono due: i km si raddoppiano.
+- Aereo e treno: Il fattore è per passeggero: 0,18 kg CO2e/pkm per un volo a corto raggio, 0,035 per il treno.
+- Auto: Il fattore del corso è per km del veicolo (0,17 kg CO2e/km): in due sulla stessa auto, a testa vale la metà (0,085).
+Riquadro «Dove si trova il dato»: Note spese, estratti dell’agenzia viaggi, biglietti: tratta, mezzo, numero di persone, notti. In Terrafelix li raccoglie Chiara Vitale (Amministrazione).
+Commento del docente: Tkm per le merci, pkm per le persone: la logica è la stessa. La trappola è l’auto, perché il suo fattore non è per passeggero ma per veicolo: i km dell’auto si contano una volta sola, comunque sia piena. Due avvertenze sui confini. Le trasferte con auto aziendali non entrano qui: il carburante è già nello Scope 1. Entrano invece i km fatti dal dipendente con la propria auto per conto dell’azienda, che si ricavano dai rimborsi chilometrici: km × 0,17.
+### SCHERMATA 42 — Due persone da Napoli a Milano e ritorno: in aereo [calc · GHG Protocol · Scope 3, categoria 6]
+Due colleghi vanno a una fiera a Milano e dormono una notte. Passeggeri-chilometro del volo: 2 persone × 1.300 km = 2.600 pkm.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Persone
+- Volo andata e ritorno (650 km a tratta × 2 = 1.300 km (distanza indicativa) · corto raggio, economy): 1300 km × 0,18 kg CO2e/pkm × 2 persone = 468 kg CO2e
+- Hotel (una notte a testa): 2 notti × 15 kg CO2e/notte = 30 kg CO2e
+Totale: 498 kg CO2e
+498 kg CO2e, di cui 468 kg per il volo: 234 kg a persona.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); distanze indicative
+Commento del docente: Il dato si costruisce dalla nota spese: tratta, mezzo, quante persone, quante notti. La distanza aerea Napoli–Milano è indicata in modo approssimativo (circa 650 km a tratta): negli inventari si usa la distanza tra gli aeroporti fornita dall’agenzia o da un calcolatore, e si dichiara la fonte. Il fattore del corso per l’aereo comprende anche gli effetti sul clima diversi dalla CO2: quando si sceglie un fattore reale bisogna verificare se li include, e dirlo nel rapporto.
+### SCHERMATA 43 — La stessa trasferta in treno [calc · GHG Protocol · Scope 3, categoria 6]
+La linea ferroviaria è più lunga della rotta aerea: circa 800 km a tratta (valore indicativo). Passeggeri-chilometro: 2 persone × 1.600 km = 3.200 pkm.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Persone
+- Treno andata e ritorno (800 km a tratta × 2 = 1.600 km (distanza indicativa)): 1600 km × 0,035 kg CO2e/pkm × 2 persone = 112 kg CO2e
+- Hotel (una notte a testa): 2 notti × 15 kg CO2e/notte = 30 kg CO2e
+Totale: 142 kg CO2e
+142 kg CO2e contro 498 kg. Il treno percorre più chilometri, ma per il solo trasporto emette meno di un quarto dell’aereo: 112 kg contro 468 kg.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); distanze indicative
+Commento del docente: Il confronto insegna due cose. La prima: mezzi diversi fanno distanze diverse tra le stesse città, e ciascuno va calcolato con i propri km, non con quelli dell’altro. La seconda: la scelta del mezzo vale 356 kg CO2e per una sola trasferta di due persone. L’hotel pesa 30 kg in entrambi i casi, il 21% del totale in treno e il 6% in aereo: una voce piccola che diventa visibile quando il trasporto è a basse emissioni. Le distanze sono indicative e servono solo all’esempio.
+### SCHERMATA 44 — I viaggi di lavoro di Terrafelix in un anno [calc · GHG Protocol · Scope 3, categoria 6]
+Il dato: passeggeri-chilometro per mezzo e notti in hotel, ricostruiti da Chiara Vitale con l’estratto dell’agenzia viaggi e le note spese del 2025.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Voli a corto raggio (per esempio 100 viaggi di andata e ritorno da 1.200 km in media (ripartizione illustrativa)): 120.000 pkm × 0,18 kg CO2e/pkm = 21.600 kg CO2e
+- Treno (per esempio 50 viaggi di andata e ritorno da 1.600 km (ripartizione illustrativa)): 80.000 pkm × 0,035 kg CO2e/pkm = 2800 kg CO2e
+- Pernottamenti (notti in hotel dalle note spese): 300 notti × 15 kg CO2e/notte = 4500 kg CO2e
+Totale: 28.900 kg CO2e
+In tonnellate: 28,9 t CO2e
+Errore tipico: contare solo l’andata, oppure inserire qui il carburante delle auto aziendali, che è già nello Scope 1.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: 21.600 + 2.800 + 4.500 = 28.900 kg CO2e, cioè 28,9 t: lo 0,15% dello Scope 3. I voli sono il 60% dei passeggeri-chilometro ma il 74,7% delle emissioni della categoria. È una voce piccola per un’azienda manifatturiera, mentre per uno studio di consulenza può essere tra le maggiori: il peso di una categoria dipende dal mestiere. Se l’agenzia viaggi non fornisce i km, si ricostruiscono dalle tratte; solo in ultima istanza si ricorre alla spesa, che per i biglietti aerei varia molto a parità di distanza.
+
+## SEZIONE 9 — Categoria 7: pendolarismo dei dipendenti
+### SCHERMATA 45 — Categoria 7: pendolarismo dei dipendenti [section]
+La categoria 7 conta i tragitti casa-lavoro dei dipendenti, con mezzi propri o pubblici. Nessun documento aziendale riporta questi chilometri: bisogna chiederli alle persone, con un questionario semplice.
+- Il dato: persone × giorni × km al giorno
+- Lo strumento: il questionario
+- Il calcolo per Terrafelix: 80,8 t CO2e
+- Auto condivisa, treno, lavoro da casa: quanto incidono
+### SCHERMATA 46 — Il questionario sul pendolarismo di Terrafelix [case]
+A maggio 2026 Davide Russo, con l’ufficio del personale, invia ai 90 dipendenti un questionario di quattro domande: quanti km percorri ogni giorno tra casa e stabilimento, andata e ritorno? Con quale mezzo? Viaggi da solo? Quanti giorni la settimana vieni in sede?
+- Risposte: 72 su 90 (80%), estese a tutto il personale (dato illustrativo)
+- Distanza media: 24 km al giorno tra andata e ritorno
+- Mezzo: quasi tutti in auto, da soli (dato illustrativo)
+- Giorni di presenza: 220 all’anno, al netto di ferie e festività
+Domanda di lavoro: Come si passa dalle risposte al dato di attività annuo?
+Come ha operato l'azienda: Con una scelta prudente e dichiarata: tutti i 90 dipendenti considerati in auto da soli, 24 km al giorno, 220 giorni. Il dato di attività sono i km annui: 90 × 220 × 24. Ipotesi e tasso di risposta si scrivono nel registro dei dati, così l’anno prossimo il calcolo sarà ripetibile e confrontabile.
+Commento del docente: Il questionario deve essere corto: quattro domande ricevono risposta, venti no. Conviene chiedere i km di andata e ritorno in modo esplicito, perché metà delle persone risponde d’istinto con la sola andata. Con un tasso di risposta dell’80% estendere la media a tutti è ragionevole; con il 20% bisognerebbe dichiarare un’incertezza alta. Considerare tutti in auto da soli è un’ipotesi prudente: sovrastima un po’, ma non rischia di nascondere emissioni. Fa parte del lavoro dichiararla.
+### SCHERMATA 47 — Primo passo: quanti chilometri in un anno [calc · GHG Protocol · Scope 3, categoria 7]
+Prima di parlare di emissioni serve il dato di attività: i chilometri percorsi in un anno da tutti i dipendenti per venire al lavoro.
+Formula: Chilometri annui = Persone × Km al giorno a persona × Giorni di presenza
+- Tragitti casa-lavoro (dal questionario: 24 km al giorno tra andata e ritorno): 90 persone × 24 km/giorno × 220 giorni = 475.200 km
+Totale: 475.200 km
+Ogni dipendente percorre 24 × 220 = 5.280 km l’anno per venire al lavoro. Errore tipico: inserire i km di sola andata, oppure moltiplicare per 365 giorni.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: 475.200 km in un anno, cioè 2.160 km ogni giorno lavorativo (90 × 24): tanto percorrono, tutti insieme, i dipendenti di Terrafelix solo per andare al lavoro e tornare. I due errori tipici spostano molto: con la sola andata (12 km) il dato si dimezza a 237.600 km; con 365 giorni al posto di 220 sale a 788.400 km. I giorni di presenza vanno chiesti o stimati al netto di ferie, festività, malattia e lavoro da casa: è il numero su cui l’azienda può agire, per esempio con un giorno di lavoro a distanza per chi ha mansioni d’ufficio.
+### SCHERMATA 48 — Secondo passo: dai chilometri alle emissioni [calc · GHG Protocol · Scope 3, categoria 7]
+Tutti i tragitti sono considerati in auto, con un solo occupante: il fattore è quello dell’auto media, per km percorso dal veicolo.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Tragitti casa-lavoro in auto (90 persone × 220 giorni × 24 km · fattore dell’auto media): 475.200 km × 0,17 kg CO2e/km = 80.784 kg CO2e
+Totale: 80.784 kg CO2e
+In tonnellate: 80,784 t CO2e
+80.784 kg = 80,8 t CO2e: quasi 900 kg a testa (5.280 km × 0,17 = 897,6 kg). È quasi il triplo dei viaggi di lavoro (28,9 t).
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Quasi 900 kg di CO2e a persona, ogni anno, per un tragitto di 12 km a tratta: un numero che colpisce chi lo sente per la prima volta, e che funziona bene nella comunicazione interna. Per l’inventario di Terrafelix resta una voce piccola, lo 0,4% dello Scope 3. Attenzione ai confini: le auto aziendali assegnate ai dipendenti e usate anche per venire al lavoro sono già nello Scope 1 attraverso il carburante; quei tragitti non si aggiungono qui.
+### SCHERMATA 49 — Prova tu: se cambiano le abitudini di viaggio [sim · GHG Protocol · Scope 3, categoria 7]
+Ogni persona vale 5.280 km l’anno. Sposta le persone tra le righe mantenendo il totale a 90: prova 60 da soli, 20 in auto in due, 10 in treno.
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- In auto, da soli: 90 persone × 897,6 kg CO2e/persona = 80.784 kg CO2e
+- In auto, in due (auto condivisa): 0 persone × 448,8 kg CO2e/persona = 0 kg CO2e
+- In treno: 0 persone × 184,8 kg CO2e/persona = 0 kg CO2e
+- A piedi o in bicicletta: 0 persone × 0 kg CO2e/persona = 0 kg CO2e
+Totale iniziale: 80.784 kg CO2e
+In tonnellate: 80,784 t CO2e
+Fattori annui a persona: 5.280 km × 0,17 = 897,6 kg in auto da soli; la metà (448,8 kg) viaggiando in due; 5.280 km × 0,035 = 184,8 kg in treno.
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)
+Commento del docente: Con 60 persone da sole, 20 in auto condivisa e 10 in treno il totale scende da 80.784 a 64.680 kg CO2e: 16.104 kg in meno, il 19,9%. Il lavoro da casa si prova riducendo le persone: un giorno la settimana per 30 impiegati toglie 30 × 44 × 24 = 31.680 km, cioè 5.385,6 kg CO2e, come se sei persone smettessero di venire in auto. Buona prassi: se si considera il lavoro da casa, dichiarare come sono trattati i consumi domestici di energia che esso comporta.
+
+## SEZIONE 10 — Categorie 11 e 12: uso e fine vita dei prodotti venduti
+### SCHERMATA 50 — Categorie 11 e 12: uso e fine vita dei prodotti venduti [section]
+Dopo la vendita il prodotto continua a generare emissioni: quando viene usato (categoria 11) e quando viene buttato (categoria 12). Per la pasta, usare significa cuocere; buttare significa smaltire l’imballaggio.
+- Uso diretto e uso indiretto: una distinzione che decide
+- La cottura: 8.416 t CO2e, riportate a parte
+- Il fine vita degli imballaggi: 106 t CO2e
+- Le ipotesi sullo scenario d’uso vanno dichiarate
+### SCHERMATA 51 — Categoria 11: emissioni dirette e indirette della fase d’uso [two · GHG Protocol · Scope 3, categoria 11]
+Colonna «Uso diretto: da includere»:
+- Prodotti che consumano elettricità: elettrodomestici, macchinari, apparecchi
+- Prodotti che bruciano combustibili: caldaie, veicoli, motori
+- Prodotti che rilasciano gas serra durante l’uso, come gli apparecchi con gas refrigeranti
+- Sono emissioni proprie del prodotto: rientrano nella categoria 11
+Colonna «Uso indiretto: facoltativo»:
+- Prodotti che richiedono energia senza consumarla da sé
+- Alimenti da cuocere
+- Capi di abbigliamento da lavare
+- Se si calcolano: dichiararlo, con le ipotesi, e tenerle distinguibili dal resto
+Commento del docente: La domanda per classificare è: il prodotto consuma energia o emette gas da sé? Una caldaia sì: le sue emissioni in fase d’uso sono dirette e vanno incluse. Un pacco di pasta no: per essere consumato richiede il fornello di qualcun altro. Per questo la cottura è un’emissione indiretta della fase d’uso, che il GHG Protocol lascia facoltativa. Terrafelix sceglie di calcolarla e di riportarla a parte. Nella carbon footprint di prodotto «dalla culla alla tomba», che vedremo nell’unità 8, la cottura è invece compresa.
+### SCHERMATA 52 — La cottura della pasta venduta [calc · GHG Protocol · Scope 3, categoria 11]
+Scenario d’uso (ipotesi dichiarate): il 70% della pasta viene cotto su fornello a gas, il 30% su piano elettrico. Per 1 kg di pasta: 0,22 Sm³ di gas oppure 1,6 kWh. Il dato dei kg venduti è di Giorgio Ferri (Commerciale).
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Cottura su fornello a gas (70%) (0,22 Sm³ per kg di pasta × 2 kg CO2e/Sm³ = 0,44): 14.000.000 kg pasta × 0,44 kg CO2e/kg pasta = 6.160.000 kg CO2e
+- Cottura su piano elettrico (30%) (1,6 kWh per kg di pasta × 0,235 kg CO2e/kWh = 0,376): 6.000.000 kg pasta × 0,376 kg CO2e/kg pasta = 2.256.000 kg CO2e
+Totale: 8.416.000 kg CO2e
+In tonnellate: 8416 t CO2e
+8.416 t CO2e: riportate a parte, fuori dal totale dello Scope 3 (18.682,7 t). Errore tipico: sommarle al totale senza dirlo, oppure tacere le ipotesi sullo scenario d’uso.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: 6.160.000 + 2.256.000 = 8.416.000 kg CO2e. Qui il fattore di emissione è costruito in due passi: un consumo per kg di pasta (quanta energia serve per cuocerla) per il fattore dell’energia. In media sono 0,42 kg CO2e per ogni kg di pasta cotto. A differenza di tutte le altre voci, nessuno ha misurato nulla: quote gas/elettrico e consumi per kg sono ipotesi. Vanno scritte, perché chi cambia scenario cambia risultato. Il calcolatore sullo scenario di cottura è nell’unità 8.
+### SCHERMATA 53 — Perché la fase d’uso si riporta a parte [bar · GHG Protocol · Scope 3, categoria 11]
+Tonnellate di CO2e: i tre scope dell’inventario 2025 e, separata, la cottura della pasta venduta.
+- Scope 1: 2257,8t
+- Scope 2 (location-based): 752t
+- Scope 3 (senza fase d’uso): 18.682,7t
+- Cottura della pasta (a parte): 8416t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: La cottura vale 3,7 volte lo Scope 1 e il 45,0% dello Scope 3: sommata, porterebbe l’inventario da 21.692,5 a 30.108,5 t CO2e. Tre ragioni per tenerla separata. È facoltativa, quindi molte aziende non la calcolano: sommarla renderebbe i totali non confrontabili. Dipende da ipotesi sui consumatori, non da dati misurati. E l’azienda può influenzarla poco, se non con le istruzioni di cottura sulla confezione. Separata e dichiarata, è un’informazione utile; nascosta nel totale, confonde.
+### SCHERMATA 54 — Categoria 12: il fine vita degli imballaggi venduti [calc · GHG Protocol · Scope 3, categoria 12]
+La pasta viene mangiata; restano astucci e film. Il dato: i kg di imballaggi venduti insieme al prodotto, già noti dagli acquisti (900.000 kg di cartone + 160.000 kg di film).
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Imballaggi venduti con la pasta (1.060.000 kg · fattore medio tra riciclo e smaltimento): 1.060.000 kg × 0,1 kg CO2e/kg = 106.000 kg CO2e
+Totale: 106.000 kg CO2e
+In tonnellate: 106 t CO2e
+Errore tipico: confondere questa voce con la categoria 5. Lì ci sono i rifiuti dello stabilimento; qui gli imballaggi che il consumatore butta a casa propria.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: 1.060.000 kg × 0,1 = 106.000 kg CO2e, cioè 106 t: lo 0,6% dello Scope 3. Il fattore è una media tra i destini possibili dell’imballaggio dopo l’uso, riciclo e smaltimento: un valore didattico. In un calcolo più fine si separano cartone e film, ciascuno con le proprie quote di riciclo nel Paese di vendita. Lo stesso chilo di cartone compare quindi tre volte nell’inventario, in tre momenti diversi della sua vita: produzione (categoria 1), trasporto (categoria 4), fine vita (categoria 12). Non è un doppio conteggio.
+### SCHERMATA 55 — Il cliente chiede: «E la cottura?» [case]
+Uno dei due clienti della grande distribuzione chiede a Giorgio Ferri, responsabile Commerciale, il dato di Scope 3 di Terrafelix «comprensivo della fase d’uso». Giorgio gira la richiesta a Davide Russo.
+- Scope 3 dell’inventario 2025: 18.682,7 t CO2e (categorie 1–7, 9, 12)
+- Fase d’uso (cottura): 8.416 t CO2e, calcolata e riportata a parte
+- Scenario: 70% gas, 30% elettrico; 0,22 Sm³ oppure 1,6 kWh per kg di pasta
+Domanda di lavoro: Quale numero si comunica al cliente?
+Come ha operato l'azienda: Entrambi, separati e con le ipotesi: 18.682,7 t di Scope 3 e, a parte, 8.416 t per la cottura. Chi vuole sommarli ottiene 27.098,7 t, ma sa che cosa sta sommando. Davide allega lo scenario d’uso: se il cliente raccoglie da altri fornitori dati costruiti con ipotesi diverse, i numeri non sono confrontabili.
+Commento del docente: Il caso mostra perché «riportare a parte» non significa nascondere: significa dare il numero con la sua etichetta. Un cliente della grande distribuzione che somma i dati dei propri fornitori ha bisogno di sapere che cosa c’è dentro ciascuno. Rispondere con un solo totale, senza spiegazioni, espone a due rischi opposti: sembrare peggiori di un concorrente che ha escluso la cottura, oppure essere accusati di aver omesso una voce. La trasparenza sulle ipotesi protegge da entrambi.
+
+## SEZIONE 11 — Il quadro completo dello Scope 3 di Terrafelix
+### SCHERMATA 56 — Il quadro completo dello Scope 3 di Terrafelix [section]
+Mettiamo in fila le nove categorie calcolate, controlliamo il totale e impariamo a leggerlo: che cosa pesa, chi possiede ogni dato, dove si annidano i doppi conteggi e dove conviene migliorare.
+- Il totale: 18.682,7 t CO2e
+- Due categorie fanno il 92% dello Scope 3
+- Chi possiede ogni dato
+- Doppio conteggio: quando è normale e quando è un errore
+### SCHERMATA 57 — Lo Scope 3 di Terrafelix: il riepilogo per categoria [calc · GHG Protocol · Scope 3]
+I totali in kg delle slide precedenti, convertiti in tonnellate (÷ 1.000, cioè × 0,001) e sommati.
+Formula: Emissioni = Emissioni calcolate × Conversione
+- Cat. 1 – Beni e servizi acquistati: 15.696.000 kg CO2e × 0,001 t/kg = 15.696,0 t CO2e
+- Cat. 2 – Beni strumentali: 280.000 kg CO2e × 0,001 t/kg = 280,0 t CO2e
+- Cat. 3 – Energia a monte: 566.590 kg CO2e × 0,001 t/kg = 566,6 t CO2e
+- Cat. 4 – Trasporto a monte: 402.600 kg CO2e × 0,001 t/kg = 402,6 t CO2e
+- Cat. 5 – Rifiuti: 35.820 kg CO2e × 0,001 t/kg = 35,8 t CO2e
+- Cat. 6 – Viaggi di lavoro: 28.900 kg CO2e × 0,001 t/kg = 28,9 t CO2e
+- Cat. 7 – Pendolarismo: 80.784 kg CO2e × 0,001 t/kg = 80,8 t CO2e
+- Cat. 9 – Trasporto a valle: 1.486.000 kg CO2e × 0,001 t/kg = 1486,0 t CO2e
+- Cat. 12 – Fine vita dei prodotti: 106.000 kg CO2e × 0,001 t/kg = 106,0 t CO2e
+Totale Scope 3: 18.682,7 t CO2e
+Fuori dal totale, riportata a parte: fase d’uso (cottura) 8.416 t CO2e.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: La somma esatta è 18.682.694 kg CO2e, cioè 18.682,7 t arrotondando a un decimale: il numero che avevamo visto all’inizio dell’unità. Regola già nota dall’unità 2: si sommano i valori completi e si arrotonda solo alla fine. Sommando i totali di categoria già arrotondati si arriverebbe comunque vicino, ma con più voci gli scarti si accumulano. Questo riepilogo è il foglio che passa all’unità 7, dove verrà unito agli Scope 1 e 2 per ottenere le 21.692,5 t dell’inventario.
+### SCHERMATA 58 — Che cosa pesa davvero nello Scope 3 [donut · GHG Protocol · Scope 3]
+Quote sul totale di 18.682,7 t CO2e: acquisti 84,0%, trasporto a valle 8,0%, energia a monte 3,0%, trasporto a monte 2,2%, altre cinque categorie 2,8%.
+Totale al centro: 18.682,7 t CO2e
+- Cat. 1 – Beni e servizi acquistati: 15.696t (84%)
+- Cat. 9 – Trasporto a valle: 1486t (8%)
+- Cat. 3 – Energia a monte: 566,6t (3%)
+- Cat. 4 – Trasporto a monte: 402,6t (2,2%)
+- Altre cinque categorie: 531,5t (2,8%)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Le «altre cinque categorie» sono beni strumentali (280 t), fine vita (106 t), pendolarismo (80,8 t), rifiuti (35,8 t) e viaggi di lavoro (28,9 t): 531,5 t in tutto. Cinque calcoli su nove spiegano meno del 3% del risultato. Non per questo sono inutili: dimostrano che le categorie sono state valutate, e alcune (viaggi, pendolarismo, rifiuti) coinvolgono direttamente le persone. Ma il tempo dedicato a migliorare i dati deve seguire il grafico: prima la semola, poi i trasporti.
+### SCHERMATA 59 — Ogni categoria ha il suo dato e il suo proprietario [table · Buona prassi · registro dei dati]
+Colonne: Categoria | Dato di attività | Chi lo possiede | Metodo
+- 1 – Acquisti | kg e m³ acquistati (fatture, DDT) | Acquisti – M. Santoro | Dati medi
+- 2 – Beni strumentali | Euro investiti nell’anno | Amministrazione – C. Vitale | Spesa
+- 3 – Energia a monte | Sm³, litri e kWh degli Scope 1 e 2 | Ambiente ed energia – D. Russo | Dati medi
+- 4 – Trasporto a monte | Tonnellate × km dai fornitori | Acquisti e logistica – M. Santoro | Distanza (tkm)
+- 5 – Rifiuti | kg per destino (registro, MUD) | Ambiente – D. Russo | Dati medi
+- 6 – Viaggi di lavoro | pkm per mezzo, notti in hotel | Amministrazione – C. Vitale | Distanza (pkm)
+- 7 – Pendolarismo | Persone × giorni × km (questionario) | Ambiente, con il personale | Distanza (km)
+- 9 – Trasporto a valle | Tonnellate vendute × km per mercato | Commerciale e logistica | Distanza (tkm)
+- 12 – Fine vita | kg di imballaggi venduti | Acquisti – M. Santoro | Dati medi
+A parte: categoria 11, kg di pasta venduti (Commerciale – G. Ferri) × fattore di cottura, con scenario d’uso dichiarato.
+Commento del docente: Questa tabella è il cuore organizzativo dello Scope 3: nessun dato è nelle mani del coordinatore, tutti sono in qualche ufficio che li registra per altri scopi. Il lavoro di Davide Russo è chiedere il dato giusto, nell’unità giusta, alla persona giusta, e una volta l’anno alla stessa data. Conviene trasformare la tabella in una richiesta formale con scadenze, come nel piano di raccolta visto nell’unità 3. Quando il proprietario del dato cambia, il registro delle ipotesi evita di ripartire da zero.
+### SCHERMATA 60 — Doppio conteggio: quando è normale e quando è un errore [two · GHG Protocol · Scope 3]
+Colonna «Normale: tra aziende diverse»:
+- Il gasolio del camion è Scope 1 del trasportatore e Scope 3 di Terrafelix
+- Il gas del molino è Scope 1 del molino ed è dentro il fattore della semola
+- La stessa tonnellata compare in più inventari: lo Scope 3 è costruito così
+- Per questo gli inventari di aziende diverse non si sommano tra loro
+Colonna «Errore: dentro lo stesso inventario»:
+- Carburante delle auto aziendali contato nello Scope 1 e di nuovo nei viaggi di lavoro
+- Trasporto della semola contato nella categoria 4 e già compreso nel fattore del fornitore
+- Ricarica delle auto elettriche in sede contata in bolletta e di nuovo a parte
+- Scarti di imballaggio dello stabilimento contati nei rifiuti e anche nel fine vita
+Commento del docente: Lo Scope 3 di un’azienda è, per definizione, lo Scope 1 e 2 di qualcun altro: ogni emissione della filiera compare nell’inventario di tutti quelli che ne dipendono. È voluto: serve a dare a ciascuno la misura della propria responsabilità indiretta, non a fare la somma mondiale. L’errore vero è interno: la stessa emissione contata due volte nello stesso inventario. La difesa è semplice: per ogni voce chiedersi se il dato di attività, o una sua parte, è già stato usato in un’altra riga.
+### SCHERMATA 61 — Davide Russo presenta lo Scope 3 alla direzione [case]
+A fine maggio 2026 Davide Russo porta a Elena Marotta, amministratrice delegata, il quadro dello Scope 3: 18.682,7 t CO2e, l’86,1% dell’inventario. La domanda della direzione è immediata: «Quanto sono solidi questi numeri, e su che cosa possiamo agire?»
+- Categoria 1: 15.696 t, di cui 14.420 t di semola calcolate con un fattore medio
+- Trasporti (categorie 4 e 9): 1.888,6 t, con distanze medie stimate
+- Energia a monte: 566,6 t, su quantità misurate
+- Le altre cinque categorie insieme: 531,5 t
+Domanda di lavoro: Dove conviene investire per migliorare i dati?
+Come ha operato l'azienda: Dove il numero è grande e il dato è debole: la semola. Il piano di miglioramento (dati illustrativi) prevede la richiesta al molino di un dato specifico, distanze reali per zona di consegna chieste a clienti e trasportatori, la stima dei servizi acquistati con il metodo a spesa e il questionario sul pendolarismo ripetuto ogni anno. Viaggi e rifiuti restano con i dati medi: insieme valgono meno dello 0,4% dello Scope 3.
+Commento del docente: Alla direzione non serve l’elenco dei calcoli: servono tre messaggi. Primo: la maggior parte delle nostre emissioni è nella materia prima. Secondo: quel numero oggi poggia su un fattore medio, quindi è corretto come ordine di grandezza ma non distingue il nostro molino dagli altri. Terzo: per ridurlo dovremo lavorare con i fornitori. È il ponte verso l’unità 7, dove valuteremo l’incertezza, e verso l’unità 9, dove le leve sugli acquisti diventeranno obiettivi.
+
+## SEZIONE 12 — Sintesi dell’unità
+### SCHERMATA 62 — Sintesi dell’unità [section]
+Abbiamo calcolato nove categorie di Scope 3 con una sola formula e pochi tipi di dato: chili, euro, tonnellate-chilometro, passeggeri-chilometro. Fissiamo il formulario, i controlli e gli errori da evitare.
+- Il formulario dello Scope 3
+- La lista di controllo prima di chiudere
+- Gli errori tipici, in quattro famiglie
+- Verso l’unità 7: dai calcoli al rapporto
+### SCHERMATA 63 — Il formulario dello Scope 3 [table · Formulario dell’unità 6]
+Colonne: Categoria | Formula | Fattori del corso | Terrafelix
+- 1 – Acquisti | kg acquistati × fattore | semola 0,7 · cartone 0,9 · film 2,8 kg CO2e/kg | 15.696 t
+- 2 – Beni strumentali | euro × fattore per euro | macchinari 0,35 kg CO2e/€ | 280 t
+- 3 – Energia a monte | Sm³, litri, kWh × fattore di filiera | gas 0,33 · gasolio 0,62 · elettricità 0,06 | 566,6 t
+- 4 e 9 – Trasporti | tonnellate × km × fattore | gomma 0,1 · ferro 0,028 · nave 0,016 kg CO2e/tkm | 402,6 t e 1.486 t
+- 5 – Rifiuti | kg per destino × fattore | recupero 0,021 · smaltimento 0,45 kg CO2e/kg | 35,8 t
+- 6 – Viaggi di lavoro | persone × km × fattore; notti × fattore | aereo 0,18 · treno 0,035 kg CO2e/pkm · hotel 15 | 28,9 t
+- 7 – Pendolarismo | persone × giorni × km × fattore | auto 0,17 kg CO2e/km | 80,8 t
+- 12 – Fine vita | kg di imballaggi × fattore | 0,1 kg CO2e/kg | 106 t
+- 11 – Uso (a parte) | kg venduti × fattore di cottura | gas 0,44 · elettrico 0,376 kg CO2e/kg | 8.416 t
+Fattori arrotondati a scopo didattico: in un inventario reale si usa la fonte ufficiale aggiornata all’anno di riferimento e la si cita nel rapporto.
+Commento del docente: Tutte le righe sono la stessa formula dell’unità 2, dato di attività per fattore di emissione: cambia soltanto l’unità in cui si misura l’attività. Per questo, davanti a una categoria nuova, le domande sono sempre le stesse: in quale unità posso misurare questa attività? Chi in azienda ha quel numero? Esiste un fattore espresso nella stessa unità? Ripetiamo l’avvertenza: i fattori della tabella sono valori didattici arrotondati. Vanno bene per imparare il metodo, non per un inventario da far verificare.
+### SCHERMATA 64 — Lista di controllo prima di chiudere lo Scope 3 [checklist · Buona prassi]
+- Tutte le 15 categorie esaminate: quantificate, oppure escluse con una motivazione scritta
+- Criteri di significatività dichiarati: definiti prima di guardare i risultati
+- Un metodo per ogni voce: fornitore, dati medi, spesa o distanza: scritto nel registro
+- Unità coerenti con il fattore: kg, m³, euro, tkm, pkm; peso in tonnellate nei trasporti
+- Fonte, anno e confine di ogni fattore: che cosa comprende e che cosa no
+- Nessun doppio conteggio interno: con gli Scope 1 e 2 e tra una categoria e l’altra
+- Ipotesi documentate: distanze medie, scenario d’uso, risposte al questionario
+- Fase d’uso indiretta separata: se calcolata: fuori dal totale e con il suo scenario
+Commento del docente: Usate la lista come controllo finale, voce per voce, prima di passare i numeri al consolidamento. Nella pratica consulenziale i rilievi più frequenti su uno Scope 3 non riguardano errori di moltiplicazione, ma mancanze di documentazione: una categoria esclusa senza una riga di spiegazione, un fattore di cui nessuno ricorda la fonte, una distanza media che non si sa come sia stata stimata. Un calcolo semplice e ben documentato regge alla verifica meglio di uno sofisticato e opaco.
+### SCHERMATA 65 — Gli errori tipici dello Scope 3, in quattro famiglie [quad · Buona prassi]
+- Dati di attività: kg di prodotto al posto dei kg acquistati; Solo andata invece di andata e ritorno; Peso in kg con un fattore per tkm; Spesa usata quando esistono le quantità
+- Fattori di emissione: Fattore di combustione al posto di quello di filiera; Un solo fattore per tutti i rifiuti o per tutti i mezzi; Fattore senza fonte, anno e confine
+- Confini e doppi conteggi: Categorie ignorate senza motivazione; Carburante aziendale ricontato nei viaggi; Trasporto contato due volte; Rifiuti di stabilimento e fine vita confusi
+- Presentazione dei risultati: Fase d’uso sommata senza dichiararlo; Ipotesi non scritte; Emissioni dei beni strumentali «ammortizzate»
+Commento del docente: Ogni errore di questa mappa lo abbiamo incontrato con un numero: 420 t in meno usando i kg di pasta al posto della semola; un risultato mille volte più alto lasciando il peso in kg; tkm sette volte troppe moltiplicando i totali; 216 t contro 35,8 t applicando ai rifiuti un solo fattore. Il consiglio è far rifare un calcolo campione a una seconda persona, partendo dai documenti: è il controllo che intercetta la maggior parte degli errori delle prime due famiglie.
+### SCHERMATA 66 — I punti chiave dell’unità [summary]
+1. Lo Scope 3 comprende le emissioni indirette della catena del valore: per Terrafelix 18.682,7 t CO2e, l’86,1% dell’inventario
+2. Quattro metodi: specifico del fornitore, ibrido, dati medi, spesa. Si usa la quantità quando esiste; la spesa per servizi, voci minori e screening
+3. Lo screening stima tutte le 15 categorie; quelle significative si quantificano, le altre si escludono con una motivazione
+4. Categoria 1: kg acquistati × fattore. La semola vale 14.420 t CO2e: è la voce su cui cercare il dato del fornitore
+5. Beni strumentali: tutto nell’anno di acquisto. Energia a monte: stesse quantità degli Scope 1 e 2 con i fattori di filiera (566,6 t CO2e)
+6. Trasporti: tonnellate × km × fattore del mezzo. La nave emette per tkm oltre sei volte meno del camion
+7. Viaggi e pendolarismo: persone × km × fattore, sempre andata e ritorno; le auto aziendali restano nello Scope 1
+8. La cottura della pasta (8.416 t CO2e) è un’emissione indiretta della fase d’uso: facoltativa, calcolata e riportata a parte
+9. Tra aziende diverse la stessa emissione compare in più inventari; dentro lo stesso inventario il doppio conteggio è un errore
+10. Prossima unità: consolidare Scope 1, 2 e 3, valutare l’incertezza, scrivere il rapporto e prepararsi alla verifica
+Commento del docente: Con questa unità i calcoli dell’inventario di Terrafelix sono completi: 2.257,8 t di Scope 1, 752 t di Scope 2 location-based e 18.682,7 t di Scope 3. Nell’unità 7 li metteremo insieme nel totale di 21.692,5 t CO2e, ci chiederemo quanto ogni numero è affidabile e costruiremo il rapporto GHG da presentare al verificatore. Prima di proseguire, suggerite agli allievi di rifare da soli, con la calcolatrice, almeno tre calcoli di questa unità: la semola, la distribuzione e il pendolarismo.

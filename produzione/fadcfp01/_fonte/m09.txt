@@ -1,0 +1,585 @@
+# UNITÀ 9 — Ridurre le emissioni: obiettivi e piano di decarbonizzazione (2 ore)
+Dai numeri alle decisioni: scegliere le leve, calcolare le riduzioni attese, fissare obiettivi credibili e seguirli nel tempo.
+Obiettivi di apprendimento:
+- Applicare la gerarchia evitare, ridurre, sostituire, compensare il residuo e leggere l’inventario come mappa delle priorità
+- Fissare obiettivi assoluti e di intensità con anno base, perimetro e metodo dichiarati, e calcolarne il valore
+- Calcolare la riduzione attesa di ogni leva (dato di attività risparmiato × fattore) e attribuirla allo scope corretto
+- Distinguere l’effetto di ogni leva sull’elettricità con il metodo location-based e con il metodo market-based
+- Confrontare le leve per tonnellate evitate, costo e fattibilità e misurare la distanza dall’obiettivo
+- Impostare un piano di decarbonizzazione con responsabili, tempi, indicatori e monitoraggio annuale
+
+## SEZIONE 1 — Dalla misura all’azione
+### SCHERMATA 1 — Dalla misura all’azione [section]
+L’inventario 2025 e la carbon footprint della pasta hanno detto dove nascono le emissioni di Terrafelix. Ora i numeri servono a decidere: che cosa ridurre per primo, di quanto, entro quando e con quali azioni.
+- I numeri di partenza
+- La gerarchia: evitare, ridurre, sostituire, compensare il residuo
+- L’inventario come mappa delle priorità
+- Il metodo per calcolare la riduzione di una leva
+### SCHERMATA 2 — Dove eravamo rimasti: i numeri di partenza di Terrafelix [stats]
+- 21.692,5 t: CO2e: totale dell’inventario 2025 (Scope 1 + Scope 2 location-based + Scope 3) (anno base)
+- 3.157,8 t: CO2e: Scope 1 + Scope 2 market-based (2.257,8 + 900) (la base dell’obiettivo)
+- 86,1%: quota dello Scope 3 sul totale; la sola semola pesa il 66,5% (18.682,7 t CO2e)
+- 1,47 kg: CO2e per kg di pasta, dalla culla alla tomba (unità 8)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Sono i quattro numeri da tenere a portata di mano per tutta l’unità. Il secondo merita attenzione: 3.157,8 t è la somma dello Scope 1 con lo Scope 2 calcolato con il metodo market-based (900 t), non con il location-based (752 t). È su questa base che la direzione fisserà l’obiettivo. Chi ha saltato l’unità 5 ripassi la differenza tra i due metodi: qui la useremo a ogni passo, perché alcune leve muovono un valore e non l’altro.
+### SCHERMATA 3 — La gerarchia di mitigazione: in che ordine si agisce [pyramid · Buona prassi]
+Si parte dalla base e si sale: ogni gradino viene dopo aver fatto il possibile su quello sotto.
+Livelli, dall'alto al basso:
+- Compensare il residuo: Solo ciò che non si riesce a eliminare (unità 10)
+- Sostituire: Energia rinnovabile, combustibili e materiali a minori emissioni
+- Ridurre: Efficienza: stesso prodotto con meno energia e meno materia
+- Evitare: Eliminare consumi, viaggi e sprechi non necessari
+- Misurare: Inventario e carbon footprint di prodotto: la base di tutto
+È una buona prassi condivisa, non un requisito di calcolo: aiuta a ordinare le decisioni.
+Commento del docente: L’errore più diffuso è leggere la piramide dall’alto: comprare crediti di carbonio prima di aver ridotto. La logica è opposta. Prima si misura (unità 3–8), poi si eliminano gli sprechi, si migliora l’efficienza, si cambiano fonti di energia e materiali; solo per ciò che resta si valuta la compensazione, che tratteremo nell’unità 10. Nelle prossime sezioni vedremo che le sei leve di Terrafelix appartengono tutte ai gradini «ridurre» e «sostituire».
+### SCHERMATA 4 — L’inventario come mappa: le nove voci più grandi [bar]
+Tonnellate di CO2e nel 2025 (elettricità con il metodo market-based). Una leva conta in proporzione alla voce che tocca.
+- Semola di grano duro: 14.420t
+- Gas naturale (combustione): 2100t
+- Elettricità acquistata: 900t
+- Astucci e cartoni: 810t
+- Distribuzione in Italia: 630t
+- Distribuzione in Europa: 600t
+- Film plastico: 448t
+- Trasporto della semola: 370,8t
+- Gas naturale (filiera a monte): 346,5t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il grafico dice due cose. La prima: la semola schiaccia tutto il resto, quindi un piano che la ignora lavora su circa un terzo dell’impronta. La seconda: dentro i cancelli la voce dominante è il gas degli essiccatoi, che da solo vale più del doppio dell’elettricità. Per questo le sezioni 3 e 6 saranno le più importanti. Un consiglio pratico: prima di proporre un’azione, chiedetevi sempre quale barra accorcia e di quanto.
+### SCHERMATA 5 — Il metodo in cinque passi per calcolare una leva [flow]
+È la stessa formula del corso, applicata a ciò che si risparmia.
+1. Parti dalla riga dell’inventario: Quale voce tocca la leva? Riprendi dato di attività e fattore dell’anno base.
+2. Stima il dato risparmiato: Sm³, kWh, litri, tkm o kg in meno, oppure spostati su un fattore più basso.
+3. Moltiplica per il fattore: Dato risparmiato × fattore, oppure dato × differenza tra due fattori.
+4. Assegna lo scope: Scope 1, Scope 2 (location-based e market-based separati) o Scope 3.
+5. Cerca gli effetti collaterali: Consumi che aumentano altrove: elettricità al posto di gas o gasolio.
+Riduzione (kg CO2e) = dato di attività risparmiato × fattore di emissione
+Commento del docente: Useremo questi cinque passi per tutte e sei le leve del caso. Il passo che viene dimenticato più spesso è l’ultimo: un’auto elettrica non brucia gasolio, ma consuma chilowattora che finiscono nello Scope 2. Ricordo anche l’avvertenza generale del corso: i fattori che usiamo sono arrotondati a scopo didattico; in un piano reale si usa la fonte ufficiale aggiornata e la si cita, esattamente come nell’inventario.
+
+## SEZIONE 2 — Gli obiettivi
+### SCHERMATA 6 — Gli obiettivi [section]
+Un obiettivo di riduzione è un numero con quattro etichette: anno base, anno di arrivo, perimetro e metodo di calcolo. Senza queste etichette non si può verificare.
+- Obiettivi assoluti e obiettivi di intensità
+- I riferimenti SBTi in breve
+- Il calcolo dei due obiettivi di Terrafelix
+- La traiettoria anno per anno
+### SCHERMATA 7 — Obiettivi assoluti e obiettivi di intensità [two]
+Colonna «Obiettivo assoluto»:
+- Si esprime in t CO2e: «−42% di Scope 1+2 entro il 2030»
+- Misura ciò che conta per il clima: le tonnellate emesse
+- Non dipende dai volumi: se la produzione cresce è più difficile da raggiungere
+- Terrafelix: da 3.157,8 a 1.831,5 t CO2e
+Colonna «Obiettivo di intensità»:
+- Si esprime per unità: kg CO2e per kg di pasta o per euro di fatturato
+- Misura l’efficienza: quanto emette ogni unità prodotta
+- Può essere raggiunto anche se le tonnellate totali aumentano
+- Terrafelix: −25% di Scope 3 per kg di pasta
+Commento del docente: Nessuno dei due tipi è «giusto» in assoluto: rispondono a domande diverse. L’obiettivo assoluto dice se l’azienda emette meno; quello di intensità dice se produce meglio. Un’azienda in forte crescita può migliorare l’intensità e aumentare comunque le tonnellate: lo calcoleremo nella sezione 10. La buona prassi è dichiarare entrambi i numeri, anche quando l’obiettivo formale è uno solo, così chi legge non viene tratto in inganno.
+### SCHERMATA 8 — I riferimenti della Science Based Targets initiative, in breve [table · SBTi · sintesi]
+La Science Based Targets initiative (SBTi) propone criteri per fissare obiettivi aziendali di riduzione allineati al limite di 1,5 °C.
+Colonne: Tema | Che cosa prevede | Lettura per Terrafelix
+- Orizzonte di breve termine | Obiettivi a 5–10 anni | 2025 → 2030: cinque anni
+- Scope 1+2, percorso allineato a 1,5 °C | Riduzione lineare di almeno il 4,2% all’anno (42% in dieci anni) | In cinque anni il minimo sarebbe il 21%; la direzione ha scelto il 42%
+- Scope 3 | Obiettivo richiesto quando lo Scope 3 è almeno il 40% del totale | Scope 3 = 86,1%: serve un obiettivo anche sulla catena del valore
+- Net zero | Riduzione di almeno il 90% entro il 2050; si neutralizzano solo le emissioni residue | Il 2030 è una tappa, non l’arrivo
+Sintesi a scopo didattico: chi vuole fissare un obiettivo secondo questi criteri deve consultare i documenti ufficiali in vigore.
+Commento del docente: Qui interessa il senso dei numeri, non la procedura. «Lineare» significa che ogni anno si toglie la stessa quantità, calcolata sull’anno base: il 4,2% di 3.157,8 t sono 132,6 t l’anno. In cinque anni fanno il 21%. Terrafelix ha scelto di raddoppiare il passo: 42% in cinque anni. Attenzione a non confondere ambizione e riconoscimento: nel caso studio l’obiettivo è una decisione della direzione, e come tale lo presentiamo.
+### SCHERMATA 9 — L’obiettivo assoluto: −42% di Scope 1+2 market-based [calc]
+Ridurre del 42% significa poter emettere, al massimo, il 58% dell’anno base: 1 − 0,42 = 0,58.
+Formula: Emissioni massime 2030 = Emissioni 2025 × Quota residua
+- Scope 1 + Scope 2 market-based (2.257,8 + 900 t CO2e, dall’inventario dell’anno base): 3157,8 t CO2e × 0,58 (1 − 0,42) = 1831,5 t CO2e
+Riduzione richiesta: 3.157,8 − 1.831,5 = 1.326,3 t CO2e, in media 265,3 t in meno ogni anno per cinque anni.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Due modi per arrivare allo stesso numero: moltiplicare la base per 0,58, oppure calcolare la riduzione (3.157,8 × 0,42 = 1.326,3) e sottrarla. Conviene il primo, perché dà subito il valore da confrontare con gli inventari futuri. L’errore tipico è presentare 1.326,3 t come «obiettivo»: quella è la riduzione, mentre l’obiettivo è il livello massimo di emissioni, 1.831,5 t. L’obiettivo vale sulla somma dei due scope, non su ciascuno separatamente.
+### SCHERMATA 10 — L’obiettivo di intensità: −25% di Scope 3 per kg di pasta [calc]
+Intensità di partenza: 18.682.700 kg CO2e ÷ 20.000.000 kg di pasta = 0,934 kg CO2e per kg.
+Formula: Intensità obiettivo = Emissioni 2025 × Quota residua ÷ Produzione
+- Scope 3 dell’anno base (18.682,7 t CO2e, esclusa la cottura (riportata a parte)): 18.682.700 kg CO2e × 0,75 (1 − 0,25) ÷ 20.000.000 kg di pasta = 0,7006 kg CO2e/kg
+L’obiettivo è scendere da 0,934 a circa 0,70 kg CO2e per kg di pasta (700,6 g).
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Qui la formula ha un passaggio in più: si divide per la produzione. Se nel 2030 Terrafelix producesse ancora 20.000 t, l’obiettivo equivarrebbe a togliere 4.670,7 t dallo Scope 3 (il 25% di 18.682,7). Ma se la produzione cresce, le tonnellate ammesse crescono con lei: è il vantaggio, e insieme il limite, degli obiettivi di intensità. Notate che la fase d’uso resta fuori dal perimetro, come nell’inventario: va scritto nell’obiettivo.
+### SCHERMATA 11 — La traiettoria 2025–2030 [line]
+Scope 1+2 market-based in tonnellate di CO2e. Riduzione lineare: 265,3 t in meno ogni anno per l’obiettivo di Terrafelix, 132,6 t per il ritmo minimo del 4,2%.
+Periodi: 2025 | 2026 | 2027 | 2028 | 2029 | 2030
+- Obiettivo Terrafelix: 3157,8t | 2892,5t | 2627,3t | 2362t | 2096,8t | 1831,5t
+- Ritmo minimo 4,2%: 3157,8t | 3025,2t | 2892,5t | 2759,9t | 2627,3t | 2494,7t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; ritmo minimo: sintesi dei criteri SBTi
+Commento del docente: La traiettoria trasforma un traguardo lontano in tappe annuali: 2.892,5 t nel 2026, 2.627,3 t nel 2027 e così via. Serve a capire per tempo se si è in ritardo. Nella realtà le emissioni non scendono lungo una retta: scendono a gradini, quando un impianto entra in funzione o un contratto cambia. Nella sezione 10 confronteremo questa retta con l’andamento previsto dal piano e vedremo che i gradini possono stare sopra o sotto la linea.
+### SCHERMATA 12 — La direzione approva gli obiettivi [case]
+Novembre 2026. Con l’inventario 2025 verificato e la carbon footprint della pasta conclusa, Davide Russo porta alla direzione la proposta di obiettivi. Elena Marotta deve decidere prima dell’incontro con la banca.
+- Scope 1+2: 3.009,8 t CO2e con il metodo location-based, 3.157,8 t con il market-based
+- Scope 3: 18.682,7 t CO2e, legato quasi per intero ai volumi di semola
+- La banca e due clienti chiedono un obiettivo al 2030 con anno base dichiarato
+Domanda di lavoro: Con quale metodo misurare l’obiettivo su Scope 1+2? E perché scegliere l’intensità per lo Scope 3?
+Come ha operato l'azienda: La direzione fissa −42% di Scope 1+2 market-based entro il 2030 rispetto al 2025 e continua a riportare ogni anno anche il valore location-based. Per lo Scope 3 sceglie −25% per kg di pasta: l’azienda prevede di crescere e vuole misurare i progressi della filiera a parità di volumi. Anno base, perimetro e metodo sono scritti nel verbale.
+Commento del docente: La scelta del market-based ha una conseguenza che vedremo nella sezione 4: l’acquisto di Garanzie d’Origine conta per l’obiettivo. È una scelta legittima se è dichiarata e se il location-based continua a essere riportato; diventa un problema quando l’azienda mostra solo il numero più favorevole. Altro punto: l’obiettivo si misura sempre con lo stesso metodo dell’anno base. Se il metodo cambia, si applica la politica di ricalcolo vista nell’unità 3.
+
+## SEZIONE 3 — Le leve sull’energia termica
+### SCHERMATA 13 — Le leve sull’energia termica [section]
+Il gas naturale degli essiccatoi vale 2.100 t CO2e, il 93% dello Scope 1 di Terrafelix. Senza agire sul calore l’obiettivo non si raggiunge.
+- Tre strade: consumare meno, cambiare vettore, cambiare combustibile
+- Leva 1: il recupero di calore dagli essiccatoi
+- Elettrificare: un conto con due righe
+- Come si verifica il risparmio a consuntivo
+### SCHERMATA 14 — Tre strade per ridurre le emissioni del calore [tree]
+Radice: Gas naturale: 2.100 t CO2e (1.050.000 Sm³ nel 2025)
+- Consumare meno (stesso calore utile, meno Sm³): Isolamento e regolazione; Recupero di calore (leva 1); Manutenzione dei bruciatori
+- Cambiare vettore (dal gas all’elettricità): Pompe di calore; Scope 1 scende, Scope 2 sale
+- Cambiare combustibile (dal gas fossile al biometano): CO2 biogenica riportata a parte; Servono prove dell’origine
+Nel piano di Terrafelix entra la prima strada; le altre due sono allo studio.
+Commento del docente: Le tre strade hanno conti diversi. La prima è la più semplice: meno metri cubi, stesso fattore. La seconda sposta emissioni dallo Scope 1 allo Scope 2 e richiede il bilancio a due righe che faremo tra poco. La terza cambia la natura del combustibile: la CO2 da biomassa si riporta separatamente dagli scope, e per il biometano acquistato servono prove documentate dell’origine. Su quest’ultimo punto conviene confrontarsi per tempo con l’organismo di verifica.
+### SCHERMATA 15 — Leva 1 – Recupero di calore: quanto vale il 12% di gas in meno [calc · GHG Protocol · Scope 1 e Scope 3 cat. 3]
+Dato risparmiato: 12% di 1.050.000 Sm³ = 126.000 Sm³. Lo stesso dato si moltiplica per due fattori, perché tocca due righe dell’inventario.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Combustione evitata (Scope 1 · fattore di combustione del gas naturale): 126.000 Sm³ × 2 kg CO2e/Sm³ = 252.000 kg CO2e
+- Filiera a monte evitata (Scope 3, categoria 3 · estrazione e trasporto del gas): 126.000 Sm³ × 0,33 kg CO2e/Sm³ = 41.580 kg CO2e
+Totale: 293.580 kg CO2e
+In tonnellate: 293,58 t CO2e
+−252 t CO2e nello Scope 1 e −41,6 t CO2e nello Scope 3 (41.580 kg). Per l’obiettivo su Scope 1+2 conta solo la prima riga.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: È il calcolo modello dell’unità: un dato risparmiato, il suo fattore, lo scope. Ogni metro cubo non bruciato evita 2,0 kg di CO2e al camino e altri 0,33 kg lungo la filiera del gas. Il totale di 293,6 t è reale, ma appartiene a due perimetri diversi: 252 t entrano nel conto dell’obiettivo Scope 1+2, le 41,6 t migliorano lo Scope 3. Sommare tutto e confrontarlo con l’obiettivo sarebbe un errore di perimetro.
+### SCHERMATA 16 — Elettrificare il calore: il gas scende, l’elettricità sale [calc]
+Esempio didattico, non compreso nel piano: una pompa di calore sostituisce 100.000 Sm³ di gas. Ipotesi: per ogni Sm³ sostituito servono 2,8 kWh elettrici. Il segno meno indica ciò che si toglie.
+Formula: Variazione = Dato di attività × Fattore di emissione
+- Gas non più bruciato (Scope 1): -100.000 Sm³ × 2 kg CO2e/Sm³ = -200.000 kg CO2e
+- Elettricità in più per la pompa di calore (Scope 2 location-based · 100.000 Sm³ × 2,8 kWh/Sm³): 280.000 kWh × 0,235 kg CO2e/kWh = 65.800 kg CO2e
+Effetto netto (location-based): -134.200 kg CO2e
+Lettura market-based: con il residual mix la seconda riga vale 280.000 × 0,45 = 126.000 kg (netto −74 t CO2e); con Garanzie d’Origine vale zero (netto −200 t CO2e).
+Fonte dei dati: Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso); rendimento della pompa di calore: valore didattico
+Commento del docente: Il valore 2,8 nasce da un conto semplice: 1 Sm³ contiene circa 9,8 kWh termici; se la pompa di calore rende 3,5 kWh di calore per ogni kWh elettrico (valore didattico), servono 9,8 ÷ 3,5 = 2,8 kWh. Il messaggio è nel confronto dei tre risultati: −134,2 t, −74 t oppure −200 t secondo il metodo e il contratto elettrico. Quando si cambia vettore energetico il bilancio ha sempre due righe, e la seconda va letta in entrambi i modi.
+### SCHERMATA 17 — Come nasce il 12%: lo studio sugli essiccatoi [case]
+Rosa Iannone, responsabile Produzione, fa analizzare le tre linee di essiccazione: l’aria calda e umida espulsa dagli essiccatoi porta con sé calore che oggi si disperde. Uno scambiatore può usarlo per preriscaldare l’aria in ingresso.
+- Consumo 2025: 1.050.000 Sm³, cioè 52,5 Sm³ per tonnellata di pasta
+- Risparmio stimato dallo studio di fattibilità: 12%, pari a 126.000 Sm³ l’anno (dato illustrativo)
+- Consumo atteso dopo l’intervento: 924.000 Sm³, cioè 46,2 Sm³ per tonnellata
+Domanda di lavoro: Come dimostrare, a intervento fatto, che il risparmio è reale e non dipende da un anno con meno produzione?
+Come ha operato l'azienda: Terrafelix installa un contatore dedicato sulle linee e sceglie come indicatore i Sm³ per tonnellata di pasta: 46,2 contro 52,5. Il confronto si fa a parità di produzione. Nell’inventario entra comunque il consumo reale di bolletta: la stima serve per pianificare, la misura per rendicontare.
+Commento del docente: Nel piano la riduzione è una stima; nell’inventario dell’anno successivo conterà solo ciò che dicono le bollette. Se la produzione sale, i metri cubi totali possono scendere meno del previsto anche se l’intervento funziona benissimo. Per questo serve un indicatore specifico, i Sm³ per tonnellata, che isola l’effetto dell’intervento dall’effetto dei volumi. È lo stesso ragionamento che riprenderemo nella sezione 10 con l’intensità di emissione.
+
+## SEZIONE 4 — Le leve sull’elettricità
+### SCHERMATA 18 — Le leve sull’elettricità [section]
+Sull’elettricità ogni leva va letta due volte: con il fattore medio della rete (location-based) e con i fattori dei contratti (market-based). Alcune leve muovono entrambi i valori, altre uno solo.
+- Quattro leve, due letture
+- Leva 2: più fotovoltaico in autoconsumo
+- Leva 3: Garanzie d’Origine sull’elettricità residua
+- Lo Scope 2 prima e dopo
+### SCHERMATA 19 — Quattro leve sull’elettricità, due letture [table · GHG Protocol · Scope 2]
+Colonne: Leva | Che cosa cambia | Location-based | Market-based
+- Efficienza (motori, aria compressa, LED) | Meno kWh consumati | Scende | Scende
+- Fotovoltaico in autoconsumo | Meno kWh prelevati dalla rete | Scende | Scende, se sostituisce energia senza garanzie
+- Garanzie d’Origine | Il fattore contrattuale, non i kWh | Invariato | Scende fino a zero sulla quota coperta
+- PPA rinnovabile (contratto di lungo periodo) | Il fattore contrattuale, non i kWh | Invariato | Scende sulla quota coperta dal contratto
+Regola pratica: per ogni leva elettrica chiediti se riduce i kWh prelevati o se cambia soltanto il fattore.
+Commento del docente: Questa tabella è la chiave della sezione. Le prime due leve agiscono sul dato di attività: i chilowattora prelevati. Le ultime due agiscono sul fattore di emissione del metodo market-based e lasciano identici i consumi. Entrambe le famiglie sono utili, ma raccontano cose diverse: la prima dice che l’azienda consuma meno energia di rete, la seconda che ha scelto e documentato l’origine di quella che compra. Un buon piano le usa tutte e due, in quest’ordine.
+### SCHERMATA 20 — Leve 2 e 3 – La lettura market-based [calc · GHG Protocol · Scope 2 market-based]
+Nel 2025 Terrafelix preleva 2.000.000 kWh senza garanzie, contati al residual mix (0,45). Le due leve agiscono proprio su questi kWh.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Leva 2 – Fotovoltaico: kWh non più prelevati (+500.000 kWh autoconsumati; prima erano acquistati senza garanzie): 500.000 kWh × 0,45 kg CO2e/kWh = 225.000 kg CO2e
+- Leva 3 – Garanzie d’Origine sui kWh restanti (2.000.000 − 500.000 = 1.500.000 kWh: il fattore passa da 0,45 a 0): 1.500.000 kWh × 0,45 kg CO2e/kWh = 675.000 kg CO2e
+Riduzione dello Scope 2 market-based: 900.000 kg CO2e
+In tonnellate: 900 t CO2e
+Leva 2: −225 t CO2e. Leva 3: −675 t CO2e. Insieme portano lo Scope 2 market-based da 900 a 0 t CO2e.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Dopo le due leve Terrafelix preleva 2.700.000 kWh, tutti coperti da Garanzie d’Origine: 1.200.000 lo erano già, 1.500.000 sono nuovi. L’ordine delle due righe cambia l’attribuzione ma non il totale: se le garanzie arrivassero prima del fotovoltaico, varrebbero da sole 900 t e i pannelli non aggiungerebbero nulla al market-based. È il motivo per cui la stessa tonnellata non va mai contata due volte, una per ciascuna leva.
+### SCHERMATA 21 — Leve 2 e 3 – La lettura location-based [calc · GHG Protocol · Scope 2 location-based]
+Stesse leve, stesso anno, altro metodo: contano solo i kWh prelevati dalla rete, moltiplicati per il fattore medio nazionale (0,235).
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Leva 2 – Fotovoltaico: kWh non più prelevati (il prelievo scende da 3.200.000 a 2.700.000 kWh): 500.000 kWh × 0,235 kg CO2e/kWh = 117.500 kg CO2e
+- Leva 3 – Garanzie d’Origine (nessun kWh risparmiato: il fattore medio della rete resta lo stesso): 0 kWh × 0,235 kg CO2e/kWh = 0 kg CO2e
+Riduzione dello Scope 2 location-based: 117.500 kg CO2e
+In tonnellate: 117,5 t CO2e
+Leva 2: −117,5 t CO2e (117.500 kg). Leva 3: nessun effetto. Lo Scope 2 location-based passa da 752 a 634,5 t CO2e (2.700.000 kWh × 0,235).
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Mettete le due slide una accanto all’altra: gli stessi 500.000 kWh valgono 117,5 t con un metodo e 225 t con l’altro, perché cambia il fattore (0,235 contro 0,45). E le garanzie valgono 675 t da una parte e zero dall’altra. Nessuno dei due risultati è sbagliato: rispondono a domande diverse. Sbagliato sarebbe sommarli, oppure usare il fattore di un metodo nel totale dell’altro. La ISO 14064-1 chiede il location-based; il market-based si riporta in aggiunta.
+### SCHERMATA 22 — Lo Scope 2 di Terrafelix prima e dopo le leve [gbar]
+Tonnellate di CO2e. Il fotovoltaico abbassa entrambe le barre; le Garanzie d’Origine solo quella market-based.
+Serie: Location-based | Market-based
+- Anno base 2025: 752t | 900t
+- Dopo la leva 2: 634,5t | 675t
+- Dopo le leve 2 e 3: 634,5t | 0t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Nel 2025 il market-based è più alto del location-based, perché 2.000.000 kWh prendono il residual mix. A fine piano la situazione si rovescia: zero contro 634,5 t. Chi guarda solo il market-based conclude che il problema elettrico è risolto; chi guarda il location-based vede che l’azienda preleva ancora 2.700.000 kWh da una rete che emette. Entrambe le letture vanno in rapporto: è la doppia rendicontazione dell’unità 5 applicata a un piano.
+### SCHERMATA 23 — Il messaggio della sezione [key]
+Le leve che riducono i kWh prelevati (efficienza, fotovoltaico) abbassano tutti e due i valori dello Scope 2. Le leve che cambiano il contratto (Garanzie d’Origine, PPA) abbassano solo il market-based.
+- Ogni 100.000 kWh risparmiati: −23,5 t CO2e location-based
+- Gli stessi kWh, se erano a residual mix: −45 t CO2e market-based
+- Le garanzie contano solo se documentate, anno per anno
+Commento del docente: I due numeri in evidenza si ottengono con la formula di sempre: 100.000 × 0,235 = 23.500 kg e 100.000 × 0,45 = 45.000 kg. Sono utili come ordine di grandezza quando si valuta un intervento di efficienza su motori, aria compressa o illuminazione. Sulle garanzie: sono uno strumento contrattuale che si rinnova ogni anno. Se un anno non vengono acquistate, lo Scope 2 market-based torna al residual mix, e l’obiettivo si allontana di colpo.
+
+## SEZIONE 5 — Le leve sui trasporti e sulla flotta
+### SCHERMATA 24 — Le leve sui trasporti e sulla flotta [section]
+Nei trasporti si interviene su tre grandezze: i litri bruciati dai mezzi propri (Scope 1), le tonnellate-chilometro affidate ai vettori (Scope 3) e il mezzo con cui viaggiano le merci.
+- Leva 4: quattro auto elettriche al posto di quattro a gasolio
+- Il bilancio di una sostituzione
+- Leva 6: metà delle consegne europee su ferro
+- Carichi pieni e percorsi: leve che il metodo deve saper vedere
+### SCHERMATA 25 — Leva 4 – Quattro auto elettriche: i litri di gasolio evitati [calc · GHG Protocol · Scope 1]
+Le quattro auto sostituite percorrono insieme 128.000 km l’anno con un consumo medio di 6,25 litri ogni 100 km (dati illustrativi): 128.000 × 0,0625 = 8.000 litri.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Consumo medio
+- Gasolio non più acquistato (Scope 1, combustione mobile · km dal contachilometri, consumo dalle schede carburante): 128.000 km × 2,65 kg CO2e/l × 0,0625 l/km = 21.200 kg CO2e
+In tonnellate: 21,2 t CO2e
+−21,2 t CO2e nello Scope 1. Ma le auto elettriche consumano elettricità: il conto non è finito.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Se l’azienda ha le schede carburante delle quattro auto, il dato risparmiato si legge direttamente: 8.000 litri. La catena km × consumo serve quando i litri per veicolo non sono disponibili, come visto nell’unità 4. La leva è piccola rispetto al gas: 21,2 t contro 252. Ha però un valore di segnale, perché riguarda mezzi che tutti in azienda vedono e usano. Nel piano va presentata per quello che è, senza gonfiarne il peso.
+### SCHERMATA 26 — Il bilancio della sostituzione: gasolio tolto, elettricità aggiunta [calc]
+Le nuove auto consumano circa 0,18 kWh per km (valore didattico): 128.000 km × 0,18 = 23.040 kWh, ricaricati in sede e quindi compresi nella bolletta.
+Formula: Variazione = Dato di attività × Fattore di emissione
+- Gasolio non più bruciato (Scope 1): -8000 l × 2,65 kg CO2e/l = -21.200 kg CO2e
+- Elettricità per le ricariche (Scope 2 location-based): 23.040 kWh × 0,235 kg CO2e/kWh = 5414,4 kg CO2e
+Effetto netto (Scope 1 + Scope 2 location-based): -15.785,6 kg CO2e
+Lettura market-based: con le Garanzie d’Origine della leva 3 le ricariche valgono zero e l’effetto netto resta −21,2 t CO2e. Lo scenario del caso trascura questi 23.040 kWh: sono meno dell’1% dell’elettricità prelevata.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi; consumo dell’auto elettrica: valore didattico
+Commento del docente: È lo stesso schema a due righe della pompa di calore: ciò che tolgo, ciò che aggiungo. In location-based l’elettricità «restituisce» 5,4 t delle 21,2 t tolte, e il beneficio netto scende a 15,8 t. Attenzione al doppio conteggio nell’inventario futuro: le ricariche fatte in sede sono già nei kWh di bolletta e non vanno aggiunte una seconda volta. Le ricariche esterne, pagate dall’azienda, vanno invece raccolte a parte.
+### SCHERMATA 27 — Leva 6 – Metà delle consegne europee dal camion al treno [calc · GHG Protocol · Scope 3 cat. 9]
+Le tonnellate-chilometro restano le stesse: 2.000 t × 1.500 km = 3.000.000 tkm. Cambia il fattore: da 0,10 (gomma) a 0,028 (ferro). Si moltiplica per la differenza tra i due fattori.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Distanza
+- Consegne europee spostate su ferro (Scope 3, categoria 9 · 50% delle 4.000 t vendute in Europa): 2000 t × 0,072 kg CO2e/tkm (0,10 − 0,028) × 1500 km = 216.000 kg CO2e
+In tonnellate: 216 t CO2e
+Prima: 3.000.000 × 0,10 = 300.000 kg. Dopo: 3.000.000 × 0,028 = 84.000 kg. Differenza: −216 t CO2e nello Scope 3. La distribuzione in Europa passa da 600 a 384 t CO2e.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Qui il dato di attività non diminuisce: le tonnellate-chilometro sono identiche. Si riduce il fattore, e la riduzione è dato × differenza tra fattori. Lo scenario è semplificato: si assume la stessa distanza per i due mezzi. Nella pratica il treno richiede tratte iniziali e finali su gomma e spesso un percorso più lungo: in un calcolo reale si divide il viaggio in tratte e a ciascuna si applica il suo fattore, come fatto nell’unità 6.
+### SCHERMATA 28 — Carichi pieni e percorsi migliori: quando l’inventario non li vede [text]
+Saturare i camion e ottimizzare i giri riduce davvero i consumi dei vettori. Ma il metodo di calcolo deve essere in grado di registrarlo.
+- Con il metodo basato sulla distanza: Emissioni = tkm × fattore medio. Se tonnellate e chilometri restano uguali, il risultato non cambia anche se i camion viaggiano più pieni.
+- Con i dati del trasportatore: Litri consumati per le consegne di Terrafelix, o un fattore specifico per tkm: qui il miglioramento compare.
+- Che cosa chiedere ai vettori: Consumi o fattori specifici, tasso di riempimento, quota di viaggi a vuoto.
+- Regola generale: Una leva si può rendicontare solo se cambia un dato di attività o un fattore documentato.
+Riquadro «Attenzione»: Passare dal fattore medio al dato del vettore è un cambio di metodo: va valutato il ricalcolo dell’anno base, per confrontare grandezze omogenee.
+Commento del docente: È una delle sorprese più frequenti per chi prepara un piano: l’azienda fa un’azione utile e l’inventario dell’anno dopo non si muove. Succede ogni volta che il calcolo usa un fattore medio che non «sente» il miglioramento. La soluzione è migliorare il dato, passando a valori specifici del fornitore. Vale per i trasporti come per la semola, che vedremo nella prossima sezione. Qualità del dato e riduzione delle emissioni camminano insieme.
+
+## SEZIONE 6 — Le leve sugli acquisti e sul prodotto
+### SCHERMATA 29 — Le leve sugli acquisti e sul prodotto [section]
+Per un pastificio la parte più grande dell’impronta nasce nei campi di grano, non nello stabilimento. Ridurla significa lavorare con i fornitori e sul progetto di prodotto e imballaggi.
+- Dove sta lo Scope 3 di Terrafelix
+- Leva 5: semola da filiera con pratiche migliorative
+- Prova tu: quanta semola spostare
+- Imballaggi e scarti: ordini di grandezza
+### SCHERMATA 30 — Lo Scope 3 di Terrafelix: dove agire [donut]
+Tonnellate di CO2e nel 2025, esclusa la fase d’uso (cottura), riportata a parte.
+Totale al centro: 18.683 t CO2e
+- Semola di grano duro: 14.420t (77,2%)
+- Trasporti a monte e a valle: 1888,6t (10,1%)
+- Imballaggi (cartone e film): 1258t (6,7%)
+- Energia: filiera a monte: 566,6t (3%)
+- Altre voci: 549,5t (2,9%)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: La semola è il 77% dello Scope 3: nessun’altra leva di filiera può avvicinarsi a ciò che si ottiene migliorando anche di poco il suo fattore. I trasporti sono la seconda fetta, e lì agisce la leva 6. «Altre voci» raccoglie acqua, beni strumentali, rifiuti, viaggi di lavoro, pendolarismo e fine vita degli imballaggi: 549,5 t in tutto. Sono voci su cui si può lavorare, ma che da sole non spostano l’obiettivo di intensità.
+### SCHERMATA 31 — Leva 5 – Semola da filiera con pratiche agronomiche migliorative [calc · GHG Protocol · Scope 3 cat. 1]
+Metà della semola (10.300.000 kg) arriva da una filiera il cui fattore, dichiarato e documentato dal fornitore, è 0,63 invece di 0,70 kg CO2e/kg. Si moltiplica per la differenza: 0,07.
+Formula: Emissioni = Dato di attività × Fattore di emissione × Quota dei volumi
+- Semola da filiera migliorata (Scope 3, categoria 1 · kg dalle fatture di acquisto; fattore dal fornitore): 20.600.000 kg × 0,07 kg CO2e/kg (0,70 − 0,63) × 0,5 (50%) = 721.000 kg CO2e
+In tonnellate: 721 t CO2e
+−721 t CO2e nello Scope 3: quasi tre volte la leva 1 sul gas. Non incide sull’obiettivo Scope 1+2, ma su quello di intensità dello Scope 3.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Un miglioramento del 10% del fattore, applicato a metà dei volumi, vale 721 t: più di tutto ciò che Terrafelix può ottenere dal recupero di calore, dal fotovoltaico in location-based e dalla flotta messi insieme. È il motivo per cui la leva più grande sta fuori dai cancelli. Ha però due condizioni: il fornitore deve cambiare davvero le pratiche, e deve saperlo documentare con un dato specifico. Ne parliamo nel caso alla fine della sezione.
+### SCHERMATA 32 — Prova tu: quanta semola spostare sulla filiera migliorata [sim]
+Sposta i chilogrammi dalla prima alla seconda riga mantenendo la somma a 20.600.000 kg. Con 10.300.000 kg per riga ritrovi la leva 5: da 14.420.000 a 13.699.000 kg CO2e. E con il 100%?
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Semola da filiera convenzionale: 20.600.000 kg × 0,7 kg CO2e/kg = 14.420.000 kg CO2e
+- Semola da filiera migliorata: 0 kg × 0,63 kg CO2e/kg = 0 kg CO2e
+Totale iniziale: 14.420.000 kg CO2e
+In tonnellate: 14.420 t CO2e
+Con il 100% dei volumi sulla filiera migliorata: 20.600.000 × 0,63 = 12.978.000 kg CO2e, cioè 1.442 t in meno.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: L’esercizio mostra che la riduzione cresce in proporzione ai volumi spostati: 144,2 t per ogni 10% di semola. Provate anche a ragionare al contrario: per ottenere 1.000 t di riduzione servirebbero 1.000.000 ÷ 0,07, cioè circa 14,3 milioni di kg, il 69% degli acquisti. È un modo rapido per capire se un obiettivo di filiera è realistico prima di discuterlo con il fornitore.
+### SCHERMATA 33 — Imballaggi e scarti: ordini di grandezza di altre idee [table]
+Non fanno parte delle sei leve dello scenario: sono conti rapidi per capire quanto potrebbero valere.
+Colonne: Idea | Dato risparmiato | Fattore | Riduzione stimata
+- Astucci più leggeri: −5% di cartone | 900.000 kg × 5% = 45.000 kg | 0,9 kg CO2e/kg | 40,5 t CO2e
+- Film più sottile: −10% di plastica | 160.000 kg × 10% = 16.000 kg | 2,8 kg CO2e/kg | 44,8 t CO2e
+- Meno scarti di lavorazione: −1% di semola acquistata | 20.600.000 kg × 1% = 206.000 kg | 0,7 kg CO2e/kg | 144,2 t CO2e
+Stime illustrative da confermare con prove tecniche: l’imballaggio deve continuare a proteggere il prodotto.
+Commento del docente: Tre conti da fare a mente in riunione, tutti con la stessa formula. Colpisce il terzo: un solo punto percentuale di semola sprecata in meno vale più di tre volte l’alleggerimento degli astucci. Succede perché la semola porta con sé tutte le emissioni della coltivazione. Ridurre gli scarti è la leva «evitare» della gerarchia, spesso a costo negativo. Un imballaggio troppo leggero che fa rompere il prodotto, al contrario, aumenta le emissioni invece di ridurle.
+### SCHERMATA 34 — Il molino e il dato che fa la differenza [case]
+Michele Santoro, responsabile Acquisti, propone al molino un accordo di filiera triennale: metà della semola da aziende agricole che applicano pratiche migliorative, come rotazioni delle colture e concimazione calibrata sulle analisi del terreno.
+- Fattore medio usato nell’inventario 2025: 0,70 kg CO2e per kg di semola (dato secondario)
+- Fattore dichiarato dal molino per la filiera migliorata: 0,63 kg CO2e/kg (dato illustrativo)
+- Volume interessato: 10.300.000 kg l’anno
+Domanda di lavoro: A quali condizioni Terrafelix può usare 0,63 nel proprio inventario?
+Come ha operato l'azienda: Davide Russo chiede al molino lo studio da cui nasce il valore: confini, anno, dati primari delle aziende agricole, verifica di terza parte o dichiarazione ambientale di prodotto. Solo con questa documentazione il fattore specifico sostituisce quello medio. Senza, la pratica migliorativa esiste nei campi ma non compare nei conti.
+Commento del docente: C’è un’insidia da conoscere. Se il molino calcola per la prima volta la propria semola e trova 0,66 anche per la filiera convenzionale, una parte della «riduzione» da 0,70 è solo un dato migliore, non un cambiamento reale. Buona prassi: chiedere al fornitore entrambi i valori, prima e dopo, calcolati con lo stesso metodo, e valutare il ricalcolo dell’anno base se il fattore di partenza cambia in modo significativo.
+
+## SEZIONE 7 — Mettere in fila le leve
+### SCHERMATA 35 — Mettere in fila le leve [section]
+Sei leve, tre scope, costi e tempi diversi. Per decidere da dove partire servono tre domande: quante tonnellate, a quale costo, con quale difficoltà.
+- Le sei leve per dimensione
+- Il costo per tonnellata evitata
+- La curva dei costi di abbattimento come modello didattico
+- Impatto e fattibilità
+### SCHERMATA 36 — Le sei leve per tonnellate evitate ogni anno [bar]
+Tonnellate di CO2e in meno ogni anno, a regime (per lo Scope 2: valori market-based). Scope diversi non si sommano in un unico obiettivo.
+- Leva 5 – Semola da filiera (Scope 3): 721t
+- Leva 3 – Garanzie d’Origine (Scope 2): 675t
+- Leva 1 – Recupero di calore (Scope 1): 252t
+- Leva 2 – Fotovoltaico (Scope 2): 225t
+- Leva 6 – Europa su ferro (Scope 3): 216t
+- Leva 4 – Auto elettriche (Scope 1): 21,2t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il grafico mette le leve in ordine di grandezza, ma va letto con una cautela: le barre appartengono a perimetri diversi. Le leve 1, 2, 3 e 4 contano per l’obiettivo su Scope 1+2 market-based; le leve 5 e 6 per l’obiettivo di intensità dello Scope 3. In location-based la leva 3 varrebbe zero e la leva 2 scenderebbe a 117,5 t. Chi presenta questo grafico alla direzione deve dirlo, altrimenti il totale di 2.110,2 t sembra un unico risultato.
+### SCHERMATA 37 — Quanto costa una tonnellata evitata: il conto per la leva 1 [calc]
+Costo di abbattimento = (costo annuo dell’intervento − risparmi annui) ÷ tonnellate evitate all’anno. Tutti gli importi sono illustrativi.
+Formula: Costo per tonnellata = Quantità × Prezzo o quota annua ÷ Tonnellate evitate
+- Quota annua dell’investimento (280.000 € ripartiti su 10 anni di vita utile): 280.000 € × 0,1 all’anno ÷ 252 t CO2e = 111,1 €/t CO2e
+- Gas risparmiato ogni anno (segno meno: è un risparmio · prezzo del gas illustrativo): -126.000 Sm³ × 0,45 €/Sm³ ÷ 252 t CO2e = -225,0 €/t CO2e
+Costo netto di abbattimento: -113,9 €/t CO2e
+Risultato negativo: l’intervento fa risparmiare circa 113,9 € per ogni tonnellata evitata. Tempo di rientro semplice: 280.000 € ÷ 56.700 € l’anno ≈ 4,9 anni.
+Fonte dei dati: Esempio didattico – costi e prezzi illustrativi, non riferiti a offerte o listini reali
+Commento del docente: Il costo di abbattimento permette di confrontare interventi molto diversi con una sola unità: euro per tonnellata evitata. Qui la quota annua dell’investimento pesa 111,1 € per tonnellata e il gas risparmiato ne restituisce 225: il saldo è negativo, quindi l’intervento si ripaga. Il conto è volutamente semplice: non considera oneri finanziari, manutenzione o variazioni del prezzo del gas. In un caso reale questi elementi vanno aggiunti con l’ufficio amministrativo.
+### SCHERMATA 38 — La curva dei costi di abbattimento, in forma di tabella [table]
+Modello didattico: le leve si ordinano dal costo per tonnellata più basso al più alto. Costi netti annui illustrativi.
+Colonne: Leva | Scope | t CO2e evitate/anno | Costo netto annuo | € per t evitata | Tempi
+- 2 – Fotovoltaico | 2 | 225 (market-based) | −54.000 € | −240,0 | 1 anno
+- 4 – Auto elettriche | 1 | 21,2 | −4.000 € | −188,7 | 2 anni
+- 1 – Recupero di calore | 1 | 252 | −28.700 € | −113,9 | 1 anno
+- 3 – Garanzie d’Origine | 2 | 675 (market-based) | +3.000 € | +4,4 | subito, ogni anno
+- 6 – Europa su ferro | 3 | 216 | +10.800 € | +50,0 | 2 anni
+- 5 – Semola da filiera | 3 | 721 | +103.000 € | +142,9 | 3 anni
+Segno meno: l’intervento si ripaga con i risparmi. Importi inventati per mostrare il metodo: nella realtà si usano preventivi, prezzi dell’energia e vita utile degli impianti.
+Commento del docente: Nella forma grafica classica ogni leva è un rettangolo: la larghezza indica le tonnellate evitate, l’altezza il costo per tonnellata, e i rettangoli si mettono in fila dal più conveniente al più costoso. La lettura è immediata: prima ciò che fa risparmiare, poi ciò che costa poco, infine le leve care ma grandi. Il limite è che il costo non è tutto: la semola costa di più per tonnellata, ma è l’unica via per muovere davvero lo Scope 3.
+### SCHERMATA 39 — Impatto e fattibilità: da dove partire [quad]
+Modello didattico: la posizione di ogni leva è una valutazione qualitativa dell’azienda.
+Assi: Tonnellate evitate → / Facilità di realizzazione →
+- Facili, impatto contenuto: Leva 4 – Auto elettriche: 21,2 t
+- Facili, impatto alto: partire da qui: Leva 3 – Garanzie d’Origine: 675 t; Leva 1 – Recupero di calore: 252 t; Leva 2 – Fotovoltaico: 225 t
+- Difficili, impatto contenuto: rinviare: Completare la flotta elettrica (allo studio)
+- Difficili, impatto alto: pianificare per tempo: Leva 5 – Semola da filiera: 721 t; Leva 6 – Europa su ferro: 216 t; Pompe di calore e biometano (allo studio)
+Commento del docente: La matrice completa la tabella dei costi con il criterio della fattibilità: tempi, competenze, dipendenza da terzi. Le leve in alto a destra dipendono solo dall’azienda e si avviano subito. Quelle in basso a destra richiedono accordi con fornitori e trasportatori, o tecnologie da provare: vanno messe in calendario presto proprio perché sono lente. Rinviare le leve difficili ma grandi è il modo più sicuro per mancare l’obiettivo all’ultimo anno.
+
+## SEZIONE 8 — Il conto finale: obiettivo raggiunto?
+### SCHERMATA 40 — Il conto finale: obiettivo raggiunto? [section]
+Si sommano le riduzioni delle leve che toccano Scope 1 e Scope 2 market-based e si confronta il risultato con l’obiettivo di 1.831,5 t CO2e.
+- La somma delle leve 1–4
+- La discesa a cascata
+- La distanza dall’obiettivo e come colmarla
+- Lo stesso piano in location-based
+- E lo Scope 3?
+### SCHERMATA 41 — Scope 1+2 market-based: quanto tolgono le leve 1–4 [calc]
+Le leve 5 e 6 restano fuori da questo conto: agiscono sullo Scope 3, che ha un obiettivo separato.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Leva 1 – Gas risparmiato (Scope 1): 126.000 Sm³ × 2 kg CO2e/Sm³ = 252.000 kg CO2e
+- Leve 2 e 3 – Elettricità non più a residual mix (Scope 2 market-based · 500.000 + 1.500.000 kWh): 2.000.000 kWh × 0,45 kg CO2e/kWh = 900.000 kg CO2e
+- Leva 4 – Gasolio risparmiato (Scope 1): 8000 l × 2,65 kg CO2e/l = 21.200 kg CO2e
+Riduzione totale: 1.173.200 kg CO2e
+In tonnellate: 1173,2 t CO2e
+3.157,8 − 1.173,2 = 1.984,6 t CO2e. In percentuale: 1.173,2 ÷ 3.157,8 = −37,2%. L’obiettivo è −42%.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Tre righe, tre dati risparmiati, tre fattori: 252 + 900 + 21,2 = 1.173,2 t. Nella riga delle tonnellate il totale è arrotondato all’unità: il valore esatto è 1.173,2 t. Il risultato atteso, 1.984,6 t, è tutto Scope 1: lo Scope 2 market-based è sceso a zero. Da qui in avanti ogni ulteriore tonnellata dovrà venire dal gas o dai carburanti. Il piano arriva al −37,2%: un buon risultato, ma non l’obiettivo. Dirlo con chiarezza è parte della credibilità.
+### SCHERMATA 42 — La discesa a cascata verso il 2030 [funnel]
+Scope 1+2 market-based in tonnellate di CO2e, una leva alla volta. Il traguardo è 1.831,5 t.
+- Anno base 2025: 3157,8t
+- Dopo la leva 1 – recupero di calore (−252): 2905,8t
+- Dopo la leva 2 – fotovoltaico (−225): 2680,8t
+- Dopo la leva 3 – Garanzie d’Origine (−675): 2005,8t
+- Dopo la leva 4 – auto elettriche (−21,2): 1984,6t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: La cascata fa vedere il peso relativo dei gradini. Il salto più grande è quello delle Garanzie d’Origine: 675 t con una firma su un contratto. È anche il gradino più fragile, perché dipende da un acquisto che va rinnovato ogni anno e non riduce di un chilowattora i consumi. I gradini del recupero di calore e del fotovoltaico sono più piccoli ma strutturali: una volta realizzati restano. Un piano solido non si regge solo sul gradino più comodo.
+### SCHERMATA 43 — Mancano 153,1 t: quanto gas bisogna ancora eliminare [calc]
+Formula inversa: dato di attività = emissioni da tagliare ÷ fattore. Distanza dall’obiettivo: 1.984,6 − 1.831,5 = 153,1 t CO2e, cioè 153.100 kg.
+Formula: Gas da eliminare = Emissioni da tagliare × Inverso del fattore
+- Gas naturale (fattore 2,0 kg CO2e/Sm³ → 1 ÷ 2,0 = 0,5 Sm³ per kg CO2e): 153.100 kg CO2e × 0,5 Sm³/kg CO2e = 76.550 Sm³
+Servono altri 76.550 Sm³ in meno: circa l’8,3% del gas che resta dopo la leva 1 (924.000 Sm³).
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Girare la formula è utilissimo nella pianificazione: dalle tonnellate che mancano si risale al dato fisico da eliminare, e si capisce subito se è alla portata. Qui 76.550 Sm³ sono un altro 8,3% di efficienza sul gas residuo, oppure una pompa di calore di taglia adeguata, oppure una quota di biometano. La stessa distanza, espressa in gasolio, sarebbe 153.100 ÷ 2,65 = circa 57.800 litri: più di tutto il carburante della flotta. La strada passa per forza dal calore.
+### SCHERMATA 44 — Lo stesso piano letto con i due metodi [gbar]
+Scope 1+2 in tonnellate di CO2e. Market-based: −37,2%. Location-based: −13,0%, perché le Garanzie d’Origine non modificano il fattore medio della rete.
+Serie: Location-based | Market-based
+- Anno base 2025: 3009,8t | 3157,8t
+- Dopo le leve 1–4: 2619,1t | 1984,6t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: In location-based le leve valgono 252 + 117,5 + 0 + 21,2 = 390,7 t su 3.009,8: il 13,0%. Lo stesso piano, gli stessi interventi, due percentuali molto diverse. Non c’è contraddizione: il market-based premia la scelta contrattuale, il location-based misura quanta energia di rete si usa ancora. Per trasparenza Terrafelix riporta entrambe le percentuali accanto all’obiettivo. Chi comunica solo il −37,2% dice una cosa vera, ma incompleta.
+### SCHERMATA 45 — E lo Scope 3? Il contributo delle leve 1, 5 e 6 [calc]
+L’obiettivo sullo Scope 3 è di intensità: da 0,934 a 0,70 kg CO2e per kg di pasta. Vediamo quanto avvicinano il traguardo le leve del piano.
+Formula: Emissioni = Dato di attività × Fattore di emissione
+- Leva 1 – Filiera a monte del gas risparmiato (categoria 3): 126.000 Sm³ × 0,33 kg CO2e/Sm³ = 41.580 kg CO2e
+- Leva 5 – Semola da filiera migliorata (categoria 1 · fattore: 0,70 − 0,63): 10.300.000 kg × 0,07 kg CO2e/kg = 721.000 kg CO2e
+- Leva 6 – Consegne europee su ferro (categoria 9 · 2.000 t × 1.500 km; fattore: 0,10 − 0,028): 3.000.000 tkm × 0,072 kg CO2e/tkm = 216.000 kg CO2e
+Riduzione dello Scope 3: 978.580 kg CO2e
+In tonnellate: 978,58 t CO2e
+Scope 3: da 18.682,7 a 17.704,1 t CO2e, cioè da 0,934 a 0,885 kg CO2e per kg di pasta (−5,2%). L’obiettivo è −25%: la strada è ancora lunga.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il conto è impietoso: 978,6 t di riduzione (978.580 kg) sono circa un quinto di quanto servirebbe a volumi costanti (4.670,7 t). Per avvicinarsi al −25% Terrafelix dovrà estendere la filiera migliorata a tutta la semola, ottenere fattori ancora più bassi e lavorare su imballaggi e trasporti. Per prudenza lo scenario non conta altri piccoli effetti a monte, come la filiera dell’elettricità non più prelevata. Meglio un piano che dichiara la distanza di uno che la nasconde.
+### SCHERMATA 46 — Prova tu: componi il mix di leve [sim]
+La riduzione richiesta è 1.326.300 kg CO2e (1.326,3 t). Con i valori del piano ti fermi a 1.173.200 kg. Aumenta il gas risparmiato finché il totale raggiunge l’obiettivo. I kWh a residual mix sono al massimo 2.000.000.
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Gas naturale risparmiato (Scope 1): 126.000 Sm³ × 2 kg CO2e/Sm³ = 252.000 kg CO2e
+- Elettricità non più a residual mix (Scope 2 market-based): 2.000.000 kWh × 0,45 kg CO2e/kWh = 900.000 kg CO2e
+- Gasolio risparmiato (Scope 1): 8000 l × 2,65 kg CO2e/l = 21.200 kg CO2e
+Totale iniziale: 1.173.200 kg CO2e
+In tonnellate: 1173,2 t CO2e
+Soluzione con il solo gas: 126.000 + 76.550 = 202.550 Sm³ risparmiati, il 19,3% del consumo 2025.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Fate qualche prova. Portando il gasolio a 38.000 litri, cioè eliminando tutto il gasolio della flotta, si aggiungono solo 79,5 t: non basta. L’elettricità è già al massimo: non si può azzerare due volte. Resta il gas: servono 202.550 Sm³ di risparmio complessivo, quasi un quinto del consumo. L’esercizio insegna a ragionare per vincoli: ogni leva ha un tetto fisico, dato dalla voce dell’inventario che tocca.
+### SCHERMATA 47 — Le leve allo studio per colmare la distanza [cards]
+Tre ipotesi che Terrafelix sta valutando: non hanno ancora una riduzione quantificata nel piano.
+- [Gas] Pompe di calore ad alta temperatura: Sostituiscono parte del gas degli essiccatoi con elettricità. Lo Scope 1 scende; lo Scope 2 market-based resta a zero se l’elettricità è coperta da garanzie.
+- [Gas] Biometano: Combustibile di origine biologica al posto del gas fossile. La CO2 biogenica si riporta a parte; servono prove documentate dell’origine.
+- [Flotta] Completare la flotta elettrica: Restano 30.000 litri di gasolio e 6.000 di benzina: al massimo 93,3 t CO2e. Da sola non copre le 153,1 t mancanti.
+Commento del docente: Il dato sulla flotta si calcola così: 30.000 × 2,65 + 6.000 × 2,3 = 93.300 kg. È un tetto: anche elettrificando ogni veicolo non si chiude la distanza. Per le prime due ipotesi il piano prevede studi di fattibilità nel 2027 e nel 2028. Finché non ci sono numeri affidabili, è corretto tenerle fuori dal risultato atteso e dichiararle come «allo studio». Promettere riduzioni non ancora calcolate è il modo più rapido per perdere credibilità con banca e clienti.
+
+## SEZIONE 9 — Il piano di decarbonizzazione
+### SCHERMATA 48 — Il piano di decarbonizzazione [section]
+Un obiettivo senza piano è una promessa. Il piano trasforma ogni leva in un’azione con un responsabile, un budget, una scadenza e un indicatore da controllare.
+- La struttura del piano
+- Il calendario 2026–2030
+- Chi fa che cosa
+- Il legame con il finanziamento della banca
+### SCHERMATA 49 — Che cosa contiene un piano di decarbonizzazione [tree · Buona prassi]
+Radice: Piano 2026–2030 (approvato dalla direzione)
+- Obiettivi: −42% Scope 1+2 market-based; −25% intensità Scope 3; Anno base 2025
+- Azioni: Sei leve con riduzione calcolata; Leve allo studio
+- Risorse: Investimenti e budget; Un responsabile per azione
+- Tempi: Tappe annuali; Scadenza di ogni azione
+- Controllo: Indicatori; Inventario annuale; Riesame della direzione
+Buona prassi: ogni azione del piano richiama il calcolo della sua riduzione, con dati, fattori e fonti.
+Commento del docente: Sono i cinque blocchi che un lettore esterno, banca o cliente, cerca in un piano. Se ne manca uno, il documento perde valore: obiettivi senza azioni sono dichiarazioni, azioni senza risorse sono desideri, risorse senza controllo sono spese. Chi ha un sistema di gestione ISO 14001 riconoscerà la logica di obiettivi, programmi e riesame: il piano può esserne un capitolo. Chi redige la rendicontazione di sostenibilità ritroverà gli stessi elementi nell’ESRS E1, che chiede emissioni, obiettivi e piano di transizione.
+### SCHERMATA 50 — Il calendario del piano 2026–2030 [gantt]
+Tempi illustrativi. Il piano è approvato a fine 2026: le garanzie coprono già l’elettricità di quell’anno, gli interventi partono dal 2027.
+- Garanzie d’Origine sul 100% (leva 3): 2026 → 2030
+- Ampliamento del fotovoltaico (leva 2): 2027 → 2027
+- Recupero di calore (leva 1): 2027 → 2027
+- Auto elettriche (leva 4): 2027 → 2028
+- Semola da filiera migliorata (leva 5): 2027 → 2029
+- Consegne europee su ferro (leva 6): 2027 → 2028
+- Studi: pompe di calore e biometano: 2027 → 2028
+- Inventario annuale e riesame: 2026 → 2030
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il calendario segue la matrice della sezione 7. Le garanzie si acquistano già per l’elettricità del 2026 e si rinnovano ogni anno; fotovoltaico e recupero di calore si realizzano nel 2027 e danno il pieno effetto dal 2028; la filiera della semola cresce per gradi fino al 50% nel 2029. Gli studi sulle leve mancanti si chiudono entro il 2028: se l’esito è positivo, restano due anni per realizzare un intervento. Lasciarli all’ultimo anno renderebbe l’obiettivo irraggiungibile.
+### SCHERMATA 51 — Chi fa che cosa: le schede azione [table]
+Colonne: Azione | Responsabile | Indicatore | Traguardo
+- Recupero di calore (leva 1) | Rosa Iannone | Sm³ di gas per tonnellata di pasta | da 52,5 a 46,2 dal 2028
+- Fotovoltaico e garanzie (leve 2 e 3) | Davide Russo | kWh prelevati; quota coperta da garanzie | 2.700.000 kWh dal 2028; 100% dal 2026
+- Auto elettriche (leva 4) | Chiara Vitale | litri di gasolio della flotta | da 38.000 a 30.000 entro il 2028
+- Semola da filiera (leva 5) | Michele Santoro | quota di semola con fattore specifico documentato | 50% entro il 2029
+- Europa su ferro (leva 6) | Michele Santoro | quota di tkm europee su ferro | 50% entro il 2028
+- Monitoraggio e riesame | Davide Russo, Elena Marotta | Scope 1+2 market-based; intensità Scope 3 | inventario ogni anno
+Ogni indicatore è un dato di attività o una quota: grandezze che i responsabili controllano direttamente.
+Commento del docente: Notate che quasi nessun indicatore operativo è espresso in tonnellate di CO2e. A chi gestisce gli essiccatoi si chiedono Sm³ per tonnellata di pasta, a chi compra la semola una percentuale di volumi con dato documentato. Le tonnellate di CO2e sono il risultato, calcolato da Davide Russo con l’inventario annuale. Assegnare a un reparto un obiettivo in CO2e, senza tradurlo nel dato fisico che il reparto governa, è il modo più sicuro per non ottenere nulla.
+### SCHERMATA 52 — Il finanziamento legato agli obiettivi [case]
+La banca di Terrafelix propone un finanziamento per gli investimenti del piano, con condizioni collegate al raggiungimento di obiettivi di sostenibilità concordati. Chiara Vitale e Davide Russo preparano i dati richiesti.
+- Indicatore scelto: Scope 1+2 market-based, in t CO2e
+- Tappe lungo la traiettoria: 2.892,5 t nel 2026, 2.627,3 t nel 2027, fino a 1.831,5 t nel 2030
+- Ogni anno l’inventario viene verificato da un organismo di terza parte
+Domanda di lavoro: Che cosa deve garantire l’azienda perché l’indicatore sia credibile per la banca?
+Come ha operato l'azienda: Terrafelix si impegna a calcolare l’indicatore ogni anno con lo stesso metodo dell’anno base, a dichiarare eventuali ricalcoli e a far verificare il dato. Alla banca dichiara anche ciò che il piano non copre ancora: con le leve approvate si arriva a 1.984,6 t, e per le ultime 153,1 t servono interventi sul gas ancora allo studio.
+Commento del docente: Quando un numero dell’inventario entra in un contratto, la qualità del dato diventa un tema anche economico. Tre attenzioni: il perimetro deve restare quello dell’anno base, altrimenti si ricalcola; il metodo per lo Scope 2 va scritto nel contratto, perché location-based e market-based danno risultati molto diversi; la verifica di terza parte, vista nell’unità 7, protegge sia l’azienda sia la banca. Le condizioni economiche del caso sono volutamente lasciate generiche.
+
+## SEZIONE 10 — Monitorare e rendicontare i progressi
+### SCHERMATA 53 — Monitorare e rendicontare i progressi [section]
+Il piano si controlla con l’inventario annuale, calcolato sempre con lo stesso metodo. E si impara a leggere le variazioni: quanto dipende dalle azioni, quanto dai volumi prodotti.
+- Prova tu: che cosa succede se la produzione cambia
+- Volume e intensità: due effetti da separare
+- Il cruscotto degli indicatori
+- Il confronto con la traiettoria
+### SCHERMATA 54 — Prova tu: se la produzione cambia [sim]
+Dopo le leve 1–4 l’intensità è 1.984.600 kg ÷ 20.000 t = 99,23 kg CO2e per tonnellata di pasta (era 157,89). Porta la produzione a 22.000 t (+10%) e confronta il totale con l’obiettivo di 1.831.500 kg.
+Calcolatore interattivo (l'allievo può cambiare i dati di attività). Valori iniziali:
+- Produzione annua di pasta: 20.000 t × 99,23 kg CO2e/t = 1.984.600 kg CO2e
+Totale iniziale: 1.984.600 kg CO2e
+In tonnellate: 1984,6 t CO2e
+Con 22.000 t le emissioni salgono a 2.183.060 kg (2.183,1 t): la distanza dall’obiettivo assoluto passa da 153,1 a 351,6 t CO2e.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: L’esercizio assume che l’intensità resti costante al crescere dei volumi: è una semplificazione, perché una parte dei consumi è fissa. Serve però a fissare il concetto: con un obiettivo assoluto, ogni tonnellata di pasta in più richiede riduzioni in più. Provate anche la domanda inversa: con questa intensità, quale produzione rispetterebbe l’obiettivo? Circa 18.457 t. Ovviamente la risposta giusta non è produrre meno, ma abbassare ancora l’intensità.
+### SCHERMATA 55 — Volume e intensità: scomporre la variazione [calc]
+Scenario: nel 2030 le leve 1–4 sono a regime e la produzione è salita a 22.000 t. Rispetto al 2025 lo Scope 1+2 market-based cambia per due motivi, che si calcolano separatamente.
+Formula: Variazione delle emissioni = Produzione × Intensità o sua variazione
+- Effetto intensità: le leve (produzione 2025 × variazione dell’intensità (99,23 − 157,89)): 20.000 t × -58,66 kg CO2e/t = -1.173.200 kg CO2e
+- Effetto volume: più pasta prodotta (2.000 t in più × intensità dopo le leve): 2000 t × 99,23 kg CO2e/t = 198.460 kg CO2e
+Variazione totale rispetto al 2025: -974.740 kg CO2e
+Da 3.157,8 a 2.183,1 t CO2e: −30,9% in valore assoluto, anche se l’intensità è scesa del 37,2%. La crescita ha assorbito 198,5 t di riduzione.
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Questa scomposizione è lo strumento per spiegare alla direzione perché «abbiamo fatto tutto e il numero è sceso meno del previsto». La prima riga misura il merito delle azioni: −1.173,2 t. La seconda misura l’effetto della crescita: +198,5 t. Vale anche al contrario: in un anno di calo produttivo le emissioni scendono senza merito. Nel rapporto annuale conviene mostrare sempre le due righe, così nessuno scambia una crisi di mercato per un successo ambientale.
+### SCHERMATA 56 — Il cruscotto del piano a fine 2028 [meters]
+Dati illustrativi di monitoraggio, a produzione invariata (20.000 t). Gli obiettivi indicati sono quelli finali del piano.
+- Scope 1+2 market-based (t CO2e): rilevato 1984,6, obiettivo 1831,5 (meglio se più basso)
+- Gas per tonnellata di pasta (Sm³/t): rilevato 46,2, obiettivo 46,2 (meglio se più basso)
+- Elettricità prelevata coperta da garanzie: rilevato 100%, obiettivo 100%
+- Semola con fattore specifico documentato: rilevato 30%, obiettivo 50%
+- Consegne europee su ferro: rilevato 25%, obiettivo 50%
+- Intensità Scope 3 (g CO2e per kg di pasta): rilevato 905, obiettivo 700,6 (meglio se più basso)
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il cruscotto mescola di proposito indicatori di risultato (le tonnellate, l’intensità) e indicatori operativi (Sm³ per tonnellata, quote di semola e di ferro). I primi dicono dove siamo, i secondi perché. A fine 2028 il valore di 1.984,6 t è sotto la tappa annuale della traiettoria (2.362,0 t) ma sopra l’obiettivo finale: il segnale «da migliorare» va letto così. Le consegne su ferro sono al 25% contro il 50% previsto per quell’anno: è lì che il riesame deve concentrarsi.
+### SCHERMATA 57 — A che punto siamo: emissioni previste e traiettoria [line]
+Scope 1+2 market-based, t CO2e. Ipotesi illustrative: garanzie sul 100% dal 2026; prime due auto elettriche dal 2027; recupero di calore a regime e altre due auto dal 2028.
+Periodi: 2025 | 2026 | 2027 | 2028 | 2029 | 2030
+- Traiettoria obiettivo: 3157,8t | 2892,5t | 2627,3t | 2362t | 2096,8t | 1831,5t
+- Emissioni previste: 3157,8t | 2257,8t | 2247,2t | 1984,6t | 1984,6t | 1984,6t
+Fonte dei dati: Caso studio Pastificio Terrafelix – dati illustrativi
+Commento del docente: Il grafico racconta bene il rischio del piano. Nei primi anni Terrafelix è avanti rispetto alla retta, grazie alle garanzie e poi al recupero di calore. Dal 2028 la linea diventa piatta: le leve approvate sono esaurite. Tra il 2029 e il 2030 la traiettoria scende sotto le emissioni previste e l’obiettivo viene mancato di 153,1 t. Un monitoraggio che guarda solo l’anno in corso direbbe «tutto bene» fino al 2029. Per questo si confrontano sempre le due linee fino all’arrivo.
+
+## SEZIONE 11 — Coinvolgere fornitori, clienti e persone
+### SCHERMATA 58 — Coinvolgere fornitori, clienti e persone [section]
+Il piano non si realizza da soli: l’86,1% delle emissioni nasce fuori dai cancelli, e anche dentro servono le scelte quotidiane di chi lavora.
+- Chi coinvolgere e che cosa chiedere
+- Gli errori tipici dei piani di riduzione
+- Rispondere al cliente con numeri corretti
+### SCHERMATA 59 — Chi coinvolgere e che cosa chiedere [hub]
+Al centro: Piano di decarbonizzazione
+- Fornitori di materie prime: Dati specifici documentati, pratiche migliorative, accordi
+- Trasportatori: Ferro dove possibile, carichi pieni, consumi reali
+- Clienti: Dati per kg di prodotto, obiettivi e logistica condivisi
+- Dipendenti: Formazione, mobilità casa-lavoro, idee di risparmio
+- Banca: Indicatori concordati, dati verificati, tappe annuali
+- Direzione: Risorse, priorità, riesame annuale dei risultati
+Buona prassi: inserire le richieste di dati e di miglioramento nei contratti di fornitura e di trasporto.
+Commento del docente: Ogni raggio corrisponde a una richiesta concreta. Ai fornitori si chiedono dati specifici e pratiche migliori; in cambio l’azienda può offrire contratti più lunghi o volumi garantiti. Ai dipendenti si chiedono comportamenti e idee: se il 20% dei chilometri casa-lavoro fosse evitato condividendo l’auto, il pendolarismo scenderebbe di 95.040 km × 0,17 = 16,2 t CO2e. Poco sul totale, molto per far sentire le persone parte del piano.
+### SCHERMATA 60 — Gli errori tipici dei piani di riduzione [two]
+Colonna «Corretto»:
+- Obiettivo con anno base, anno di arrivo, perimetro e metodo dichiarati
+- Ogni leva con il suo calcolo: dato risparmiato × fattore, e lo scope su cui incide
+- Scope 2 riportato con i due metodi, senza sommarli
+- Scope 3 nel piano, a partire dalle voci più grandi
+- Compensazione solo per le emissioni residue, tenuta fuori dall’inventario
+Colonna «Sbagliato»:
+- «Ridurremo le emissioni del 50%», senza dire rispetto a che cosa
+- Dichiararsi «verdi» perché si acquistano Garanzie d’Origine: il gas e la filiera restano
+- Contare due volte la stessa riduzione: fotovoltaico e garanzie sugli stessi kWh
+- Ignorare lo Scope 3 perché «non dipende da noi»
+- Presentare i crediti di carbonio come riduzione delle proprie emissioni
+Commento del docente: Tre di questi errori hanno a che fare con i conti e li abbiamo già incontrati: perimetri mescolati, doppio conteggio, metodi confusi. Gli altri due riguardano l’onestà del racconto. Le Garanzie d’Origine sono uno strumento valido, ma agiscono su una sola riga dell’inventario; e la compensazione, come vedremo nell’unità 10, non è mai una riduzione. Un piano che evita questi cinque errori regge all’esame di un auditor, di una banca e di un cliente esigente.
+### SCHERMATA 61 — La risposta al cliente: che cosa si può dire [case]
+Un cliente della grande distribuzione chiede a Giorgio Ferri se Terrafelix ha un obiettivo climatico e un piano. La prima bozza di risposta dice: «Dal 2026 produciamo a zero emissioni grazie all’energia 100% rinnovabile».
+- Scope 2 market-based dal 2026: 0 t CO2e, con garanzie su tutta l’elettricità prelevata
+- Scope 2 location-based dopo il fotovoltaico: 634,5 t CO2e
+- Scope 1 dopo le leve: 1.984,6 t CO2e; Scope 3: 17.704,1 t CO2e
+Domanda di lavoro: Che cosa c’è di sbagliato nella bozza e come va riscritta?
+Come ha operato l'azienda: Davide Russo corregge: le garanzie azzerano solo lo Scope 2 market-based. La risposta inviata riporta l’obiettivo (−42% di Scope 1+2 market-based al 2030 sul 2025), il risultato atteso delle azioni approvate (−37,2%), i due valori dello Scope 2 e l’obiettivo di intensità sullo Scope 3. Le regole sulle dichiarazioni ambientali sono trattate nell’unità 10.
+Commento del docente: La bozza del commerciale non nasce da malafede: nasce dal leggere una sola riga dell’inventario. È il rischio di ogni comunicazione fatta senza chi ha fatto i conti. La regola pratica è che ogni frase rivolta all’esterno deve poter essere ricondotta a un numero dell’inventario, con il suo scope e il suo metodo. «Zero emissioni» non corrisponde ad alcun totale di Terrafelix: restano quasi 2.000 t di Scope 1 e oltre 17.000 t di Scope 3.
+
+## SEZIONE 12 — Sintesi dell’unità
+### SCHERMATA 62 — Sintesi dell’unità [section]
+Abbiamo trasformato l’inventario in un piano: obiettivi, sei leve calcolate una per una, un conto finale onesto e gli strumenti per seguirlo nel tempo.
+- Il formulario dell’unità
+- L’autovalutazione del piano
+- I punti chiave e il collegamento con l’unità 10
+### SCHERMATA 63 — Il formulario dell’unità [table]
+Colonne: Che cosa calcolo | Formula | Esempio Terrafelix
+- Obiettivo assoluto | emissioni dell’anno base × (1 − riduzione %) | 3.157,8 × 0,58 = 1.831,5 t CO2e
+- Riduzione di una leva | dato di attività risparmiato × fattore | 126.000 Sm³ × 2,0 = 252 t CO2e
+- Cambio di fattore | dato di attività × (fattore vecchio − fattore nuovo) | 10.300.000 kg × 0,07 = 721 t CO2e
+- Sostituzione di vettore | emissioni tolte − emissioni aggiunte | 21.200 − 5.414,4 = 15.785,6 kg CO2e
+- Risultato atteso | anno base − riduzioni dello stesso perimetro | 3.157,8 − 1.173,2 = 1.984,6 t CO2e
+- Dato ancora da eliminare | emissioni da tagliare ÷ fattore | 153.100 kg ÷ 2,0 = 76.550 Sm³
+- Costo di abbattimento | costo netto annuo ÷ tonnellate evitate | −28.700 € ÷ 252 t = −113,9 €/t (illustrativo)
+- Intensità | emissioni ÷ produzione | 1.984.600 kg ÷ 20.000 t = 99,23 kg CO2e/t
+Fattori arrotondati a scopo didattico: in un piano reale si usano le fonti ufficiali aggiornate, le stesse dell’inventario.
+Commento del docente: Otto formule, tutte varianti della stessa moltiplicazione. Se dovete ricordarne una sola, tenete la seconda: dato di attività risparmiato per fattore. Le altre ne discendono. Suggerisco di costruire un foglio di calcolo con una riga per leva e queste colonne: voce dell’inventario toccata, dato risparmiato, fattore, fonte, scope, riduzione location-based, riduzione market-based. È lo stesso schema del registro dei dati dell’unità 2, applicato al futuro.
+### SCHERMATA 64 — Autovalutazione: il mio piano regge? [checklist]
+- Anno base e perimetro: L’obiettivo dichiara anno base, anno di arrivo, scope e metodo per lo Scope 2?
+- Calcolo di ogni leva: Per ogni azione ci sono un dato risparmiato, un fattore e una fonte?
+- Scope corretto: Ogni riduzione è attribuita a Scope 1, 2 o 3, senza sommare perimetri diversi?
+- Due letture per l’elettricità: Location-based e market-based sono calcolati entrambi, prima e dopo?
+- Effetti collaterali: Sono contati i consumi che aumentano, come l’elettricità al posto di gas o gasolio?
+- Distanza dall’obiettivo: Il piano dice quanto manca e con quali leve ulteriori si pensa di arrivare?
+- Responsabili, tempi, risorse: Ogni azione ha un nome, una scadenza, un budget e un indicatore?
+- Monitoraggio: L’inventario si ripete ogni anno con lo stesso metodo e separa volume e intensità?
+Commento del docente: Usate questa lista come griglia di lettura per qualunque piano, vostro o di un cliente. Se a una domanda la risposta è «no», quello è il punto da sistemare prima di comunicare l’obiettivo all’esterno. Le domande più trascurate nella pratica sono la quinta e la sesta: gli effetti collaterali vengono dimenticati, e la distanza dall’obiettivo viene taciuta. Il piano di Terrafelix dichiara entrambe le cose, ed è per questo che è credibile pur non essendo completo.
+### SCHERMATA 65 — I punti chiave dell’unità [summary]
+1. La gerarchia di mitigazione ordina le decisioni: misurare, evitare, ridurre, sostituire; la compensazione riguarda solo il residuo
+2. Un obiettivo è verificabile se dichiara anno base, anno di arrivo, perimetro e metodo; Terrafelix: −42% di Scope 1+2 market-based al 2030, cioè 1.831,5 t CO2e
+3. La riduzione di ogni leva si calcola come dato di attività risparmiato × fattore, e si attribuisce a uno scope preciso
+4. Sull’elettricità ogni leva va letta due volte: il fotovoltaico vale −117,5 t location-based e −225 t market-based; le garanzie solo −675 t market-based
+5. Quando si cambia vettore (pompe di calore, auto elettriche) il bilancio ha due righe: ciò che si toglie e ciò che si aggiunge
+6. La leva più grande è fuori dai cancelli: la semola da filiera migliorata vale −721 t, ma solo con un dato del fornitore documentato
+7. Il conto finale: 3.157,8 − 1.173,2 = 1.984,6 t CO2e (−37,2%); mancano 153,1 t, da cercare nel gas; in location-based la riduzione è del 13,0%
+8. Lo Scope 3 scende di 978,6 t (−5,2% per kg di pasta) contro un obiettivo di −25%: la distanza va dichiarata
+9. Il piano assegna a ogni azione responsabile, tempi, risorse e indicatori, e si controlla ogni anno separando effetto volume ed effetto intensità
+Commento del docente: Terrafelix chiude l’unità con un piano che porta a 1.984,6 t di Scope 1+2 market-based e con una distanza dichiarata dall’obiettivo. Che cosa fare delle emissioni che restano? È la domanda dell’unità 10: vedremo che cosa sono i crediti di carbonio, a quali condizioni si può parlare di neutralità carbonica secondo la ISO 14068-1 e come comunicare i risultati senza cadere nel greenwashing. Chiuderemo il corso con un’esercitazione completa su una nuova azienda.

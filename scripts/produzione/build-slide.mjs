@@ -80,6 +80,11 @@ const RAMPA = {
 }[temaNome];
 const CELLA = "box-sizing:border-box; min-width:0; overflow-wrap:anywhere;";
 const numIt = (v) => (typeof v === "number" ? v.toLocaleString("it-IT", { maximumFractionDigits: 1 }) : esc(v));
+// numeri dei calcoli (layout calcolo e simulatore): stessi arrotondamenti del materiale del committente
+const numDec = (v, d) => (typeof v === "number" ? v.toLocaleString("it-IT", { maximumFractionDigits: d, useGrouping: "always" }) : esc(v));
+const numRis = (v) => { const a = Math.abs(v); return numDec(v, a >= 100 ? 0 : a >= 10 ? 1 : a >= 1 ? 2 : 3); };
+const numTon = (kg) => { const t = kg / 1000, a = Math.abs(t); return numDec(t, a >= 100 ? 1 : a >= 1 ? 2 : 3); };
+const valRiga = (r) => (r.a * r.ef * (r.k == null ? 1 : r.k)) / (r.d == null ? 1 : r.d);
 function niceMax(m) {
   if (!(m > 0)) return 1;
   const p = Math.pow(10, Math.floor(Math.log10(m))), f = m / p;
@@ -483,6 +488,76 @@ const LAYOUTS = {
       `</div>`).join("");
     const nota = s.nota ? `<p style="font-size:15px; line-height:1.5; color:${C.muted}; margin:18px 0 0; max-width:90ch;">${esc(s.nota)}</p>` : "";
     return pagina(s, radice + stelo + raccordo + `<div style="display:grid; grid-template-columns:repeat(${n},minmax(0,1fr)); gap:12px;">${rami}</div>` + nota);
+  },
+
+  // calcolo svolto (cream): dato × fattore [× secondo fattore] [÷ divisore] = risultato, riga per riga.
+  // I RISULTATI LI CALCOLA IL GENERATORE dai fattori (mai trascritti): una tabella non deve poter mentire.
+  // { titolo, intro?, etichette?: { r, a, ef, k?, d? }, unita?, dec?, totale?: eti | false,
+  //   righe: [{ l, n?, a, au, ef, efu, k?, ku?, d?, du? }], piede?, fonte? }
+  calcolo(s) {
+    const ru = s.unita ?? "kg CO2e", e = s.etichette ?? {};
+    const hasK = s.righe.some((r) => r.k != null), hasD = s.righe.some((r) => r.d != null);
+    const fr = (v) => (s.dec != null ? numDec(v, s.dec) : numRis(v));
+    const tot = s.righe.reduce((t, r) => t + valRiga(r), 0);
+    const th = (t, dx) => `<th style="text-align:${dx ? "right" : "left"}; font-family:${F.mono}; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:${C.accent}; padding:0 12px 10px; border-bottom:2px solid ${C.line}; ${CELLA}">${esc(t)}</th>`;
+    const td = (v, u) => `<td style="padding:10px 12px; border-bottom:1px solid ${C.line}; text-align:right; font-size:15px; color:${C.body}; font-variant-numeric:tabular-nums; vertical-align:top; ${CELLA}">${v}${u ? ` <span style="font-size:12px; color:${C.muted};">${esc(u)}</span>` : ""}</td>`;
+    const righe = s.righe.map((r) =>
+      `<tr><td style="padding:10px 12px; border-bottom:1px solid ${C.line}; font-size:15px; font-weight:600; color:${C.ink}; line-height:1.35; vertical-align:top; ${CELLA}">${esc(r.l)}${r.n ? `<div style="font-weight:400; font-size:12.5px; color:${C.muted}; margin-top:2px;">${esc(r.n)}</div>` : ""}</td>` +
+      td(numDec(r.a, 6), r.au) + td(numDec(r.ef, 4), r.efu) +
+      (hasK ? td(r.k == null ? "—" : numDec(r.k, 4), r.k == null ? "" : r.ku) : "") +
+      (hasD ? td(r.d == null ? "—" : numDec(r.d, 4), r.d == null ? "" : r.du) : "") +
+      `<td style="padding:10px 12px; border-bottom:1px solid ${C.line}; text-align:right; font-family:${F.grot}; font-weight:600; font-size:16px; color:${C.ink}; font-variant-numeric:tabular-nums; vertical-align:top; ${CELLA}">${fr(valRiga(r))} <span style="font-family:${F.sans}; font-weight:400; font-size:12px; color:${C.muted};">${esc(ru)}</span></td></tr>`).join("");
+    const colonne = 3 + (hasK ? 1 : 0) + (hasD ? 1 : 0);
+    const piedeTab = s.totale !== false && (s.righe.length > 1 || s.totale)
+      ? `<tfoot><tr><td colspan="${colonne}" style="padding:12px; font-family:${F.mono}; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:${C.accent}; ${CELLA}">${esc(s.totale || "Totale")}</td><td style="padding:12px; text-align:right; font-family:${F.grot}; font-weight:700; font-size:19px; color:${C.ink}; font-variant-numeric:tabular-nums; ${CELLA}">${fr(tot)} <span style="font-family:${F.sans}; font-weight:400; font-size:12px; color:${C.muted};">${esc(ru)}</span></td></tr></tfoot>` : "";
+    const tonn = ru === "kg CO2e" && tot >= 1000
+      ? `<div style="margin-top:14px; font-size:16px; color:${C.body}; ${CELLA}">${numRis(tot)} kg CO2e ÷ 1.000 = <strong style="font-family:${F.grot}; color:${C.accent};">${numTon(tot)} t CO2e</strong></div>` : "";
+    const formula = `<div style="font-size:15px; color:${C.body}; margin:0 0 16px; ${CELLA}"><span style="font-family:${F.mono}; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:${C.accent};">${esc(e.r || "Emissioni")}</span> = <strong>${esc(e.a || "Dato di attività")}</strong> × <strong>${esc(e.ef || "Fattore di emissione")}</strong>${hasK ? ` × <strong>${esc(e.k || "Secondo fattore")}</strong>` : ""}${hasD ? ` ÷ <strong>${esc(e.d || "Divisore")}</strong>` : ""}</div>`;
+    const tabella = `<table style="width:100%; border-collapse:collapse; table-layout:auto;"><thead><tr>${th("Voce")}${th(e.a || "Dato di attività", 1)}${th("× " + (e.ef || "Fattore di emissione"), 1)}${hasK ? th("× " + (e.k || "Secondo fattore"), 1) : ""}${hasD ? th("÷ " + (e.d || "Divisore"), 1) : ""}${th("= " + (e.r || "Emissioni"), 1)}</tr></thead><tbody>${righe}</tbody>${piedeTab}</table>`;
+    const piede = s.piede ? `<p style="font-size:15px; line-height:1.5; color:${C.muted}; margin:14px 0 0; max-width:95ch;">${esc(s.piede)}</p>` : "";
+    return pagina(s, formula + tabella + tonn + piede);
+  },
+
+  // calcolatore interattivo «Prova tu» (cream): l'allievo cambia i dati di attività e il totale si ricalcola.
+  // La slide nasce GIÀ COMPILATA coi valori dell'esempio (senza script è una tabella completa: è ciò che
+  // vedono gate, giudice e fotogrammi di collaudo). Lo script sta DENTRO la <section> (l'ingest tiene solo
+  // quella) e gira nell'iframe isolato del player: non vede la piattaforma né il tracciamento del tempo.
+  // { titolo, intro?, unita?, righe: [{ l, v, u, ef, efu }], piede?, fonte? }
+  simulatore(s) {
+    const ru = s.unita ?? "kg CO2e";
+    const tot = s.righe.reduce((t, r) => t + r.v * r.ef, 0);
+    const th = (t, dx) => `<th style="text-align:${dx ? "right" : "left"}; font-family:${F.mono}; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:${C.accent}; padding:0 12px 10px; border-bottom:2px solid ${C.line}; ${CELLA}">${esc(t)}</th>`;
+    const unita = (u) => `<span style="font-size:12px; color:${C.muted};">${esc(u)}</span>`;
+    const righe = s.righe.map((r, i) =>
+      `<tr><td style="padding:9px 12px; border-bottom:1px solid ${C.line}; font-size:15px; font-weight:600; color:${C.ink}; line-height:1.35; ${CELLA}">${esc(r.l)}</td>` +
+      `<td style="padding:9px 12px; border-bottom:1px solid ${C.line}; text-align:right; white-space:nowrap;"><input data-sim="${i}" data-ef="${r.ef}" data-v="${r.v}" type="number" inputmode="decimal" min="0" step="any" value="${r.v}" aria-label="${esc(r.l)}" style="box-sizing:border-box; width:150px; padding:8px 10px; font-family:${F.grot}; font-weight:600; font-size:16px; text-align:right; color:${C.ink}; background:${C.card}; border:2px solid ${C.accent}; border-radius:8px;"> ${unita(r.u)}</td>` +
+      `<td style="padding:9px 12px; border-bottom:1px solid ${C.line}; text-align:right; font-size:15px; color:${C.body}; font-variant-numeric:tabular-nums; ${CELLA}">${numDec(r.ef, 4)} ${unita(r.efu)}</td>` +
+      `<td style="padding:9px 12px; border-bottom:1px solid ${C.line}; text-align:right; font-family:${F.grot}; font-weight:600; font-size:16px; color:${C.ink}; font-variant-numeric:tabular-nums; ${CELLA}"><span data-ris="${i}">${numRis(r.v * r.ef)}</span> ${unita(ru)}</td></tr>`).join("");
+    const guida = `<div style="display:flex; gap:10px; align-items:baseline; margin:0 0 16px; font-size:15px; color:${C.body}; ${CELLA}"><span style="font-family:${F.mono}; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:${C.card}; background:${C.accent}; padding:4px 9px; border-radius:5px; flex:0 0 auto;">Prova tu</span><span>Modifica i dati di attività nelle caselle e osserva come cambia il risultato.</span></div>`;
+    const tabella = `<table style="width:100%; border-collapse:collapse;"><thead><tr>${th("Voce")}${th("Dato di attività", 1)}${th("× Fattore di emissione", 1)}${th("= Emissioni", 1)}</tr></thead><tbody>${righe}</tbody>` +
+      `<tfoot><tr><td colspan="3" style="padding:12px; font-family:${F.mono}; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:${C.accent};">Totale</td><td style="padding:12px; text-align:right; font-family:${F.grot}; font-weight:700; font-size:19px; color:${C.ink}; font-variant-numeric:tabular-nums; ${CELLA}"><span data-tot>${numRis(tot)}</span> ${unita(ru)}</td></tr></tfoot></table>`;
+    // riga delle tonnellate ad altezza FISSA: compare e scompare senza muovere la slide
+    const stileTon = `font-family:${F.grot}; color:${C.accent};`;
+    const tonn = ru === "kg CO2e"
+      ? `<div data-ton data-stile="${stileTon}" style="margin-top:12px; min-height:24px; font-size:16px; color:${C.body};">${tot >= 1000 ? `${numRis(tot)} kg CO2e ÷ 1.000 = <strong style="${stileTon}">${numTon(tot)} t CO2e</strong>` : ""}</div>` : "";
+    const ripristina = `<div style="margin-top:12px;"><button data-reset type="button" style="font-family:${F.sans}; font-size:14px; font-weight:600; color:${C.accent}; background:transparent; border:1px solid ${C.accent}; border-radius:8px; padding:7px 14px; cursor:pointer;">Ripristina i valori dell’esempio</button></div>`;
+    const piede = s.piede ? `<p style="font-size:15px; line-height:1.5; color:${C.muted}; margin:12px 0 0; max-width:95ch;">${esc(s.piede)}</p>` : "";
+    // stessi arrotondamenti di numRis/numTon, riscritti per il browser (lo script non vede questo file)
+    const script = "<script>(function(){var S=document.currentScript.closest('section');if(!S)return;" +
+      "function nf(v,d){return v.toLocaleString('it-IT',{maximumFractionDigits:d,useGrouping:'always'});}" +
+      "function rs(v){var a=Math.abs(v);return nf(v,a>=100?0:a>=10?1:a>=1?2:3);}" +
+      "function tn(k){var t=k/1000,a=Math.abs(t);return nf(t,a>=100?1:a>=1?2:3);}" +
+      "var ins=S.querySelectorAll('input[data-sim]'),T=S.querySelector('[data-tot]'),N=S.querySelector('[data-ton]');" +
+      "function upd(){var tot=0;ins.forEach(function(el){var v=parseFloat(String(el.value).replace(',','.'));if(!(v>=0))v=0;" +
+      "var r=v*Number(el.getAttribute('data-ef'));tot+=r;S.querySelector('[data-ris=\"'+el.getAttribute('data-sim')+'\"]').textContent=rs(r);});" +
+      "T.textContent=rs(tot);if(N){N.textContent='';if(tot>=1000){N.appendChild(document.createTextNode(rs(tot)+' kg CO2e ÷ 1.000 = '));" +
+      "var b=document.createElement('strong');b.setAttribute('style',N.getAttribute('data-stile'));b.textContent=tn(tot)+' t CO2e';N.appendChild(b);}}}" +
+      "ins.forEach(function(el){el.addEventListener('input',upd);});" +
+      "S.querySelector('[data-reset]').addEventListener('click',function(){ins.forEach(function(el){el.value=el.getAttribute('data-v');});upd();});})();</script>";
+    // lo script va DENTRO la section: si inserisce prima della sua chiusura
+    const html = pagina(s, guida + tabella + tonn + ripristina + piede);
+    const ix = html.lastIndexOf("</section>");
+    return html.slice(0, ix) + script + html.slice(ix);
   },
 };
 

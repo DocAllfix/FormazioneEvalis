@@ -1,0 +1,971 @@
+[
+ {
+  "id": "fadcfp01_m10_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 10",
+  "titolo": "Che cosa resta dopo la riduzione",
+  "corsoLabel": "Carbon Footprint · ISO 14064-1 · ISO 14067",
+  "eyebrow": "Modulo 10",
+  "sottotitolo": "Risultati Terrafelix, quota residua, target 2030 ancora distante, zero market-based da interpretare, Scope 3 fuori scala rispetto a Scope 1 e 2: qui si gioca il senso dei numeri e delle parole.",
+  "agenda": [
+   "La compensazione è l’ultimo gradino",
+   "Le quattro parole che cambiano il senso",
+   "Dal progetto al ritiro del credito",
+   "I sei criteri di un credito solido",
+   "Da 39,3 tonnellate a 40 crediti"
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s002",
+  "layout": "piramide",
+  "kicker": "Buona prassi",
+  "titolo": "La compensazione è l’ultimo gradino",
+  "intro": "Le emissioni residue non sono inerzia: sono la quota che resta dopo misure già attivate. Per questo la compensazione viene dopo inventario, evitamento, riduzione e sostituzione, non prima.",
+  "livelli": [
+   {
+    "h": "Compensare il residuo",
+    "d": "Questa unità: crediti di carbonio, solo per ciò che resta"
+   },
+   {
+    "h": "Sostituire",
+    "d": "Fotovoltaico, garanzie d’origine, auto elettriche, ferrovia"
+   },
+   {
+    "h": "Ridurre",
+    "d": "Recupero di calore dagli essiccatoi: −252 t CO2e"
+   },
+   {
+    "h": "Evitare",
+    "d": "Sprechi, viaggi e consumi non necessari"
+   },
+   {
+    "h": "Misurare",
+    "d": "Inventario 2025 e carbon footprint di 1 kg di pasta"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s003",
+  "layout": "tabella",
+  "kicker": "Vocabolario minimo",
+  "titolo": "Le quattro parole che cambiano il senso",
+  "cols": [
+   "Termine",
+   "Che cosa fissa"
+  ],
+  "righe": [
+   [
+    "Standard",
+    "Regole di approvazione, quantificazione, verifica, emissione"
+   ],
+   [
+    "Registro",
+    "Serie, proprietario, stato, tracciabilità"
+   ],
+   [
+    "Ritiro",
+    "Uso definitivo, fuori dalla circolazione"
+   ],
+   [
+    "Compensazione",
+    "Bilancia il residuo, non riduce l’inventario"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s004",
+  "layout": "flusso",
+  "kicker": "Ciclo del credito",
+  "titolo": "Dal progetto al ritiro del credito",
+  "intro": "Il credito nasce prima dell’acquisto e attraversa un percorso verificato. Può derivare da riduzione o evitamento, oppure da rimozione: cambia la natura del beneficio climatico che stai usando.",
+  "passi": [
+   {
+    "h": "Progetto",
+    "d": "Beneficio climatico quantificabile e attribuibile"
+   },
+   {
+    "h": "Quantificazione",
+    "d": "Regole dello standard, scenario di riferimento, prudenza"
+   },
+   {
+    "h": "Verifica indipendente",
+    "d": "Un terzo controlla dati e calcoli"
+   },
+   {
+    "h": "Emissione sul registro",
+    "d": "Ogni tonnellata riceve un numero di serie"
+   },
+   {
+    "h": "Ritiro",
+    "d": "Il credito esce dalla circolazione a tuo nome"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s005",
+  "layout": "ciclo",
+  "kicker": "Buona prassi",
+  "titolo": "I sei criteri di un credito solido",
+  "intro": "Una tonnellata sulla carta non basta. La qualità si legge verificando pochi criteri chiave: se uno manca, cresce subito il rischio metodologico, documentale e comunicativo.",
+  "ciclo": false,
+  "centro": "Credito di qualità",
+  "nodi": [
+   {
+    "h": "Addizionalità",
+    "d": "Senza i crediti il progetto non sarebbe stato realizzato"
+   },
+   {
+    "h": "Permanenza",
+    "d": "L’effetto dura nel tempo e non si annulla"
+   },
+   {
+    "h": "Nessun doppio conteggio",
+    "d": "La stessa tonnellata non è venduta o dichiarata due volte"
+   },
+   {
+    "h": "Quantificazione prudente",
+    "d": "Stime caute: meglio contare meno che troppo"
+   },
+   {
+    "h": "Verifica indipendente",
+    "d": "Un soggetto terzo controlla progetto e calcoli"
+   },
+   {
+    "h": "Ritiro su registro",
+    "d": "Cancellazione tracciabile a nome di chi compensa"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s006",
+  "layout": "calcolo",
+  "kicker": "Esempio didattico",
+  "titolo": "Da 39,3 tonnellate a 40 crediti",
+  "intro": "Prima del prezzo serve una checklist minima. Poi il conto: i crediti sono interi, si arrotonda per eccesso e il costo va rifatto ogni anno finché quel residuo continua a ripresentarsi.",
+  "unita": "€",
+  "righe": [
+   {
+    "l": "Emissioni fuggitive 2025",
+    "n": "39,3 t CO2e → 40 crediti (1 credito = 1 t CO2e, arrotondato per eccesso)",
+    "a": 40,
+    "au": "crediti",
+    "ef": 20,
+    "efu": "€/credito"
+   }
+  ],
+  "etichette": {
+   "r": "Costo annuo",
+   "a": "Crediti da ritirare",
+   "ef": "Prezzo illustrativo"
+  },
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 800,
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; prezzo del credito ipotetico"
+ },
+ {
+  "id": "fadcfp01_m10_s007",
+  "layout": "ciclo",
+  "kicker": "ISO 14068-1:2023",
+  "titolo": "Il percorso ISO verso la neutralità carbonica",
+  "intro": "La neutralità carbonica non è una scorciatoia commerciale. È un ciclo ordinato che parte dalla misura, passa da piano e riduzioni reali, e arriva alla compensazione del solo residuo dichiarato.",
+  "ciclo": true,
+  "centro": "Neutralità carbonica (ISO 14068-1)",
+  "nodi": [
+   {
+    "h": "Quantificare",
+    "d": "Inventario o CFP del soggetto dichiarato, con confini e metodo"
+   },
+   {
+    "h": "Pianificare",
+    "d": "Piano di gestione con obiettivi di riduzione"
+   },
+   {
+    "h": "Ridurre",
+    "d": "Priorità alle riduzioni reali delle proprie emissioni"
+   },
+   {
+    "h": "Compensare il residuo",
+    "d": "Solo le emissioni residue, con crediti di qualità ritirati"
+   },
+   {
+    "h": "Dichiarare",
+    "d": "Rendicontazione trasparente di numeri, piano e crediti"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s008",
+  "layout": "confronto",
+  "kicker": "Due logiche diverse",
+  "titolo": "Neutralità carbonica e net zero non coincidono",
+  "intro": "Nel caso Terrafelix il piano esiste, ma le riduzioni non sono ancora realizzate. È proprio qui che si vede perché le due etichette non sono intercambiabili.",
+  "a": {
+   "h": "Neutralità carbonica",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Guarda al periodo dichiarato"
+    },
+    {
+     "d": "Inventario, piano e riduzioni reali"
+    },
+    {
+     "d": "Compensa solo il residuo del periodo"
+    },
+    {
+     "d": "Può valere durante il percorso"
+    }
+   ]
+  },
+  "b": {
+   "h": "Net zero",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Richiede taglio molto profondo"
+    },
+    {
+     "d": "Didatticamente: almeno 90% entro 2050"
+    },
+    {
+     "d": "Neutralizza solo il residuo finale"
+    },
+    {
+     "d": "Dirlo troppo presto svuota il termine"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m10_s009",
+  "layout": "split",
+  "kicker": "Comunicazione ambientale",
+  "titolo": "Ogni asserzione deve reggere ai fatti",
+  "lead": "Il rischio non nasce solo da dati falsi. Più spesso nasce da parole troppo larghe, perimetri impliciti o metodi taciuti: per questo servono riferimenti chiari e una disciplina minima del messaggio.",
+  "punti": [
+   {
+    "h": "Riferimenti utili",
+    "d": "Direttiva UE 2024/825, Codice del consumo, ISO 14021"
+   },
+   {
+    "h": "Regola delle tre domande",
+    "d": "Che cosa, quanto, rispetto a che cosa"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s010",
+  "layout": "tabella",
+  "kicker": "Greenwashing",
+  "titolo": "Frasi ambientali che reggono, frasi che cedono",
+  "cols": [
+   "Ambito",
+   "Regge se dice",
+   "Fragile se dice",
+   "Errore chiave"
+  ],
+  "righe": [
+   [
+    "Azienda",
+    "Numeri, anno, perimetro, metodo",
+    "Azienda a impatto zero",
+    "Assoluto senza confini"
+   ],
+   [
+    "Azienda",
+    "37,5% elettricità coperta da GO",
+    "Energia 100% pulita",
+    "Parziale comunicato come totale"
+   ],
+   [
+    "Prodotto",
+    "1,47 kg CO2e/kg, culla-tomba, ISO 14067",
+    "Pasta a zero emissioni",
+    "Mancano unità e confini"
+   ],
+   [
+    "Prodotto",
+    "0,97 kg CO2e/kg, culla-cancello",
+    "Climate neutral solo crediti",
+    "Compensazione scambiata per prestazione"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s011",
+  "layout": "organigramma",
+  "kicker": "Comunicazione",
+  "titolo": "Un solo dato, cinque letture utili",
+  "intro": "Il dato non cambia: cambia il modo di usarlo. Ogni destinatario legge gli stessi numeri con domande diverse, quindi la comunicazione deve partire da una sola fonte ufficiale.",
+  "radice": {
+   "h": "Rapporto GHG unico",
+   "d": "Fonte ufficiale con confini, metodo, fattori e note"
+  },
+  "rami": [
+   {
+    "h": "Cliente GDO",
+    "d": "Valuta l’impronta del fornitore",
+    "voci": [
+     "Scope 1, 2 e 3",
+     "Indicatori di intensità",
+     "CFP del prodotto, se disponibile"
+    ]
+   },
+   {
+    "h": "Banca",
+    "d": "Legge rischio e traiettoria",
+    "voci": [
+     "Scope 1 + 2 market based",
+     "Obiettivo al 2030",
+     "Avanzamento annuale e investimenti"
+    ]
+   },
+   {
+    "h": "Direzione",
+    "d": "Vuole sintesi operativa",
+    "voci": [
+     "Totale e voci principali",
+     "Distanza dall’obiettivo",
+     "Costo leve e priorità"
+    ]
+   },
+   {
+    "h": "Dipendenti",
+    "d": "Devono vedere il proprio impatto",
+    "voci": [
+     "Azioni in corso",
+     "Pochi indicatori chiari",
+     "Comportamenti influenzabili"
+    ]
+   },
+   {
+    "h": "Consumatore",
+    "d": "Cerca informazione leggibile sul prodotto",
+    "voci": [
+     "Confini dichiarati",
+     "Meglio CFP che slogan",
+     "Niente parole assolute"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s012",
+  "layout": "numeri",
+  "kicker": "Terrafelix 2025",
+  "titolo": "I quattro numeri della scheda 2025",
+  "intro": "Quattro numeri aprono quasi tutte le conversazioni. Diventano davvero spendibili solo se indichi metodo, perimetro e logica del totale organizzativo, la stessa base richiesta da clienti, ESRS E1 e CDP.",
+  "numeri": [
+   {
+    "n": "2.257,8 t",
+    "h": "Scope 1, emissioni dirette",
+    "d": ""
+   },
+   {
+    "n": "752 / 900 t",
+    "h": "Scope 2, location based e market based",
+    "d": ""
+   },
+   {
+    "n": "18.682,7 t",
+    "h": "Scope 3, con cottura domestica separata",
+    "d": ""
+   },
+   {
+    "n": "1,47 / 0,97 kg",
+    "h": "CFP di 1 kg di pasta",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s013",
+  "layout": "ciclo",
+  "kicker": "Buona prassi",
+  "titolo": "Il ciclo annuale che rende utile l’inventario",
+  "intro": "Dal secondo anno l’inventario smette di essere un progetto speciale: funziona solo se entra in un ritmo stabile di raccolta, controllo, confronto e decisione.",
+  "ciclo": true,
+  "centro": "Gestione annuale delle emissioni",
+  "nodi": [
+   {
+    "h": "Raccogliere i dati",
+    "d": "Bollette, fatture, registri dell’anno appena chiuso"
+   },
+   {
+    "h": "Calcolare",
+    "d": "Inventario con fattori aggiornati e fonti citate"
+   },
+   {
+    "h": "Controllare e verificare",
+    "d": "Controlli interni, poi verifica di terza parte"
+   },
+   {
+    "h": "Confrontare",
+    "d": "Anno base, obiettivo, indicatori di intensità"
+   },
+   {
+    "h": "Decidere",
+    "d": "Riesame della direzione: leve, risorse, priorità"
+   },
+   {
+    "h": "Comunicare",
+    "d": "Scheda dati per clienti, banca e dipendenti"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s014",
+  "layout": "gantt",
+  "kicker": "Tempi e responsabilità",
+  "titolo": "Il calendario operativo dell’anno tipo",
+  "intro": "Il calendario funziona quando anticipa le richieste esterne, assegna responsabilità chiare e si appoggia a una procedura scritta che rende il processo ripetibile anche se cambiano le persone.",
+  "periodi": [
+   "Gen",
+   "Feb",
+   "Mar",
+   "Apr",
+   "Mag",
+   "Giu",
+   "Lug",
+   "Ago",
+   "Set",
+   "Ott",
+   "Nov",
+   "Dic"
+  ],
+  "attivita": [
+   {
+    "t": "Raccolta dei dati dell’anno chiuso",
+    "da": 1,
+    "a": 2,
+    "k": 1
+   },
+   {
+    "t": "Calcolo di Scope 1, 2 e 3",
+    "da": 2,
+    "a": 3,
+    "k": 1
+   },
+   {
+    "t": "Controlli interni e rapporto GHG",
+    "da": 4,
+    "a": 4,
+    "k": 1
+   },
+   {
+    "t": "Verifica di terza parte",
+    "da": 5,
+    "a": 5,
+    "k": 1
+   },
+   {
+    "t": "Riesame della direzione e piano",
+    "da": 6,
+    "a": 6,
+    "k": 1
+   },
+   {
+    "t": "Comunicazione a clienti e banca",
+    "da": 6,
+    "a": 7,
+    "k": 1
+   },
+   {
+    "t": "Aggiornamento della CFP di prodotto",
+    "da": 9,
+    "a": 10,
+    "k": 1
+   },
+   {
+    "t": "Monitoraggio dei consumi",
+    "da": 1,
+    "a": 12,
+    "k": 1
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s015",
+  "layout": "cards",
+  "kicker": "Esercitazione",
+  "titolo": "Le cinque decisioni prima dei conti",
+  "intro": "Officine Sannio è una carpenteria da trentacinque addetti che nel 2025 ha lavorato milleduecento tonnellate di acciaio. L’inventario nasce da una richiesta cliente, ma prima dei calcoli servono cinque scelte.",
+  "cards": [
+   {
+    "h": "Confini organizzativi",
+    "d": "Controllo operativo del solo stabilimento"
+   },
+   {
+    "h": "Periodo",
+    "d": "2025 come anno di riferimento e base"
+   },
+   {
+    "h": "Classificazione",
+    "d": "Scope GHG Protocol, con categorie ISO quando serve"
+   },
+   {
+    "h": "Scope 3 significativo",
+    "d": "Acciaio, trasporto, energia a monte, rifiuti, pendolarismo"
+   },
+   {
+    "h": "Fattori e GWP",
+    "d": "Tabella del corso e IPCC AR6"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s016",
+  "layout": "split",
+  "kicker": "Officine Sannio",
+  "titolo": "Dalle sorgenti ai documenti di origine",
+  "lead": "La mappa delle sorgenti non è teorica: serve a trasformare l’azienda in righe di lavoro, ciascuna collegata a un dato di attività e a un documento verificabile.",
+  "punti": [
+   {
+    "h": "Scope 1",
+    "d": "Gas naturale, gasolio, CO2 di saldatura, R-410A"
+   },
+   {
+    "h": "Scope 2",
+    "d": "Elettricità di rete, con due metodi distinti"
+   },
+   {
+    "h": "Scope 3 selezionato",
+    "d": "Acciaio, trasporto, energia a monte, rifiuti, pendolarismo"
+   },
+   {
+    "h": "Origine dei dati",
+    "d": "Bollette, carte carburante, fatture, DDT, registro rifiuti"
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s017",
+  "layout": "calcolo",
+  "kicker": "Officine Sannio",
+  "titolo": "Scope 1: cinque righe, stesso metodo",
+  "intro": "Cinque righe, un solo metodo: dato di attività per fattore di emissione. La varietà delle sorgenti mostra come combustione, processo e fuggitive entrino nello stesso inventario con logiche coerenti.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Gas naturale",
+    "n": "riscaldamento e forno di verniciatura · 12 bollette",
+    "a": 42000,
+    "au": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
+   },
+   {
+    "l": "Gasolio – furgoni e autocarro",
+    "n": "combustione mobile · carte carburante",
+    "a": 14000,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Gasolio – carrelli elevatori",
+    "n": "combustione mobile · fatture della cisterna",
+    "a": 2000,
+    "au": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "CO2 del gas di saldatura",
+    "n": "processo · il GWP della CO2 è 1",
+    "a": 2500,
+    "au": "kg",
+    "ef": 1,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Ricarica di R-410A",
+    "n": "fuggitive · GWP dell’IPCC AR6",
+    "a": 3,
+    "au": "kg",
+    "ef": 2256,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 135668,
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m10_s018",
+  "layout": "calcolo",
+  "kicker": "Officine Sannio",
+  "titolo": "Scope 2 senza mescolare i due metodi",
+  "intro": "Con la stessa elettricità prelevata, cambiano la domanda a cui risponde il calcolo e il fattore applicato. Per questo location based e market based si riportano entrambi, senza sommarli.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Elettricità senza garanzie d’origine",
+    "n": "contratto standard · residual mix arrotondato",
+    "a": 420000,
+    "au": "kWh",
+    "ef": 0.45,
+    "efu": "kg CO2e/kWh"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 189000,
+  "piede": "I due valori si riportano entrambi e non si sommano: 98,7 t CO2e (location-based) e 189,0 t CO2e (market-based).",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m10_s019",
+  "layout": "calcolo",
+  "kicker": "Officine Sannio · Scope 3",
+  "titolo": "L'acciaio acquistato sposta l'ordine di grandezza",
+  "intro": "Nello Scope 3 il baricentro passa dagli usi interni agli acquisti. L'acciaio domina, il trasporto a monte richiede unità corrette e la filiera energetica riusa i dati già raccolti per Scope 1 e 2.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Acciaio: travi, lamiere, tubolari",
+    "n": "fatture e DDT · fattore: valore didattico",
+    "a": 1200000,
+    "au": "kg",
+    "ef": 2,
+    "efu": "kg CO2e/kg"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 2400000,
+  "piede": "Il fattore di 2,0 kg CO2e per kg di acciaio è un valore didattico: nella pratica si usa il dato del fornitore (EPD) o una banca dati aggiornata.",
+  "fonte": "Esempio didattico – fattore dell’acciaio: valore didattico dichiarato"
+ },
+ {
+  "id": "fadcfp01_m10_s020",
+  "layout": "calcolo",
+  "kicker": "Officine Sannio · Scope 3",
+  "titolo": "Rifiuti e pendolarismo chiudono il perimetro",
+  "intro": "Sono voci piccole rispetto all'acciaio, ma molto istruttive: il destino del rifiuto cambia il peso climatico e il pendolarismo rende visibile una parte spesso ignorata della catena del valore.",
+  "unita": null,
+  "righe": [
+   {
+    "l": "Sfridi e rottami metallici a recupero",
+    "n": "registro dei rifiuti",
+    "a": 90000,
+    "au": "kg",
+    "ef": 0.021,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Rifiuti misti a smaltimento",
+    "n": "registro dei rifiuti",
+    "a": 6000,
+    "au": "kg",
+    "ef": 0.45,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "Tragitti casa-lavoro in auto",
+    "n": "35 persone × 220 giorni × 24 km = 184.800 km",
+    "a": 184800,
+    "au": "km",
+    "ef": 0.17,
+    "efu": "kg CO2e/km"
+   }
+  ],
+  "etichette": {},
+  "dec": null,
+  "totale": "Totale",
+  "_atteso": 36006,
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
+ },
+ {
+  "id": "fadcfp01_m10_s021",
+  "layout": "ciambella",
+  "kicker": "Inventario 2025",
+  "titolo": "Da dove vengono le 2.767,4 tonnellate",
+  "intro": "Il totale location based è oltre dieci volte Scope 1 più Scope 2. La lettura utile per la direzione è la composizione: l'impronta è quasi interamente determinata dagli acquisti di acciaio.",
+  "unita": "t CO2e",
+  "totale": {
+   "n": "2.767,4",
+   "eti": "Totale inventario"
+  },
+  "voci": [
+   {
+    "l": "Acciaio acquistato",
+    "v": 2400
+   },
+   {
+    "l": "Scope 1",
+    "v": 135.7
+   },
+   {
+    "l": "Elettricità location based",
+    "v": 98.7
+   },
+   {
+    "l": "Energia a monte",
+    "v": 49
+   },
+   {
+    "l": "Trasporto dell'acciaio",
+    "v": 48
+   },
+   {
+    "l": "Rifiuti e pendolarismo",
+    "v": 36
+   }
+  ],
+  "fonte": "Esempio didattico – azienda di fantasia, quantità illustrative"
+ },
+ {
+  "id": "fadcfp01_m10_s022",
+  "layout": "calcolo",
+  "kicker": "Indicatori",
+  "titolo": "L'intensità rende il totale leggibile",
+  "intro": "Gli indicatori traducono l'inventario in numeri confrontabili nel tempo e comprensibili per chi produce o acquista. Il KPI operativo chiave è Scope 1 più Scope 2 location based per tonnellata lavorata.",
+  "unita": "kg CO2e/t",
+  "righe": [
+   {
+    "l": "Scope 1",
+    "a": 135.668,
+    "au": "t CO2e",
+    "ef": 1000,
+    "efu": "kg/t",
+    "d": 1200,
+    "du": "t"
+   },
+   {
+    "l": "Scope 2 (location-based)",
+    "a": 98.7,
+    "au": "t CO2e",
+    "ef": 1000,
+    "efu": "kg/t",
+    "d": 1200,
+    "du": "t"
+   }
+  ],
+  "etichette": {
+   "r": "Intensità",
+   "a": "Emissioni",
+   "ef": "Conversione",
+   "d": "Acciaio lavorato"
+  },
+  "dec": 2,
+  "totale": "Totale",
+  "_atteso": 195.31,
+  "piede": "Altri due indicatori: totale per addetto 2.767,4 ÷ 35 = 79,1 t CO2e; totale per tonnellata lavorata 2.767,4 ÷ 1.200 = 2,31 t CO2e.",
+  "fonte": "Esempio didattico – azienda di fantasia, quantità illustrative"
+ },
+ {
+  "id": "fadcfp01_m10_s023",
+  "layout": "barre",
+  "kicker": "Piano di riduzione",
+  "titolo": "Prima e dopo le tre leve",
+  "intro": "La riduzione totale è 547,8 tonnellate, pari al 19,8%. Il beneficio si concentra soprattutto nello Scope 3 per l'acciaio e nello Scope 2 per il fotovoltaico, con un contributo più piccolo dal gas.",
+  "unita": "t CO2e",
+  "serie": [
+   "Inventario 2025",
+   "Dopo le tre leve"
+  ],
+  "voci": [
+   {
+    "l": "Scope 1",
+    "v": [
+     135.7,
+     123.1
+    ]
+   },
+   {
+    "l": "Scope 2 location based",
+    "v": [
+     98.7,
+     56.4
+    ]
+   },
+   {
+    "l": "Scope 3",
+    "v": [
+     2533,
+     2040.1
+    ]
+   },
+   {
+    "l": "Totale",
+    "v": [
+     2767.4,
+     2219.6
+    ]
+   }
+  ],
+  "fonte": "Esempio didattico – azienda di fantasia, quantità illustrative"
+ },
+ {
+  "id": "fadcfp01_m10_s024",
+  "layout": "organigramma",
+  "kicker": "Sintesi del corso",
+  "titolo": "Dieci unità, un solo metodo",
+  "intro": "Le unità cambiano oggetto e prospettiva, ma seguono sempre la stessa sequenza: definire il perimetro, raccogliere dati, applicare fattori, controllare il risultato e usarlo per decidere o comunicare.",
+  "radice": {
+   "h": "Carbon footprint",
+   "d": "Misurare, calcolare, ridurre, comunicare"
+  },
+  "rami": [
+   {
+    "h": "Le basi",
+    "d": "Unità 1–3",
+    "voci": [
+     "Gas serra, CO2e e GWP",
+     "Dato di attività × fattore",
+     "Confini, scope e categorie"
+    ]
+   },
+   {
+    "h": "L'inventario",
+    "d": "Unità 4–7",
+    "voci": [
+     "Scope 1: emissioni dirette",
+     "Scope 2: due metodi",
+     "Scope 3: catena del valore",
+     "Rapporto, incertezza, verifica"
+    ]
+   },
+   {
+    "h": "Il prodotto",
+    "d": "Unità 8",
+    "voci": [
+     "Ciclo di vita e unità funzionale",
+     "CFP di 1 kg di pasta"
+    ]
+   },
+   {
+    "h": "L'azione",
+    "d": "Unità 9–10",
+    "voci": [
+     "Obiettivi e leve di riduzione",
+     "Crediti, neutralità, comunicazione",
+     "Esercitazione finale"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s025",
+  "layout": "tabella",
+  "kicker": "Promemoria operativo",
+  "titolo": "Formula madre e dieci regole d'oro",
+  "cols": [
+   "Regole 1–5",
+   "Regole 6–10"
+  ],
+  "righe": [
+   [
+    "1 Confini prima del conto",
+    "6 Scope 2: due metodi"
+   ],
+   [
+    "2 Riga, dato, fattore, fonte",
+    "7 Blocca il doppio conteggio"
+   ],
+   [
+    "3 Verifica sempre le unità",
+    "8 Preferisci quantità, non spesa"
+   ],
+   [
+    "4 Fonte, anno, contesto coerenti",
+    "9 Ricalcola l'anno base"
+   ],
+   [
+    "5 Misura CO2e, non sola CO2",
+    "10 Crediti fuori dai totali"
+   ]
+  ]
+ },
+ {
+  "id": "fadcfp01_m10_s026",
+  "layout": "confronto",
+  "kicker": "Pratica professionale",
+  "titolo": "Checklist finale e errori da bloccare",
+  "intro": "Autonomia professionale significa due cose insieme: saper documentare ogni numero e saper riconoscere le scorciatoie che rendono fragile un inventario o una dichiarazione.",
+  "a": {
+   "h": "Checklist professionale",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Confini chiari: dentro, fuori, motivazioni"
+    },
+    {
+     "d": "Tracciabilità completa di ogni numero"
+    },
+    {
+     "d": "Inventario distinto dalla CFP; Scope 2 e 3 ben separati"
+    },
+    {
+     "d": "Leve con numeri, crediti separati, limiti dichiarati"
+    }
+   ]
+  },
+  "b": {
+   "h": "Errori tipici",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Compensare al posto di ridurre"
+    },
+    {
+     "d": "Sottrarre i crediti dall'inventario"
+    },
+    {
+     "d": "Dire carbon neutral solo per compensazione"
+    },
+    {
+     "d": "Arrotondare i crediti per difetto"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadcfp01_m10_s027",
+  "layout": "chiusura",
+  "kicker": "Chiusura del corso",
+  "titolo": "Le idee da portare via dal corso",
+  "modNum": "10",
+  "punti": [
+   {
+    "h": "Compensare non è ridurre",
+    "d": "i crediti coprono il residuo, non cambiano l'inventario"
+   },
+   {
+    "h": "Un credito, una tonnellata",
+    "d": "conta se è di qualità e ritirato su registro"
+   },
+   {
+    "h": "La qualità si verifica",
+    "d": "addizionalità, permanenza, niente doppio conteggio, verifica, ritiro"
+   },
+   {
+    "h": "Neutralità con metodo",
+    "d": "quantificare, ridurre, compensare il residuo, dichiarare (ISO 14068-1)"
+   },
+   {
+    "h": "Net zero non è neutralità",
+    "d": "chiede una riduzione molto più profonda"
+   },
+   {
+    "h": "Dichiarazioni con i numeri",
+    "d": "valore, perimetro, anno e metodo; mai aggettivi generici"
+   },
+   {
+    "h": "Una sola fonte dei dati",
+    "d": "destinatari diversi, numeri dallo stesso impianto"
+   },
+   {
+    "h": "Una formula per tutto",
+    "d": "emissioni = dato di attività × fattore di emissione"
+   }
+  ],
+  "prossimo": null
+ }
+]
