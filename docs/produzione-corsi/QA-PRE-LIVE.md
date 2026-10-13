@@ -150,6 +150,10 @@ confidenza superiore a una visione integrale distratta.
 - [ ] Scansione contact sheet fatta (C.4).
 - [ ] Revisione umana mirata fatta (D): FLAGGED + prime/ultime + campione.
 - [ ] Fruizione di prova reale: 2-3 slide come discente di test (tracking accredita, checkpoint funziona).
+- [ ] **Account revisore del titolare iscritto al corso in produzione** (su sviluppo l'account non esiste) (richiesta del
+      titolare, 13/10/2026, vale per OGNI corso nuovo):
+      `npx tsx scripts/produzione/_iscrivi-revisore.ts --prod dilonardoa28@gmail.com <slug>`.
+      L'account è nella lista dei revisori del player: salta il tempo minimo e apre l'esame, solo per lui.
 - [ ] → Pubblica.
 
 ## Note costi della finestra QA
