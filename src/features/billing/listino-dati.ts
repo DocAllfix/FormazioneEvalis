@@ -58,6 +58,7 @@ const S = {
   fadesg02: "esg-manager-uni-pdr-109-1",
   fadeen02: "energy-manager-esperto-in-gestione-dell-energia",
   fadpdr125: "parita-di-genere-uni-pdr-125-2022",
+  fadpas24000: "pas-24000-2022-sistema-di-gestione-sociale",
 } as const;
 
 export const CORSI: CorsoListino[] = [
@@ -84,6 +85,8 @@ export const CORSI: CorsoListino[] = [
   { slug: S.fadeen02, attivoCents: 35000, listinoCents: 45000 },
   // parità di genere UNI/PdR 125 (8h, 05/10): 300 € con 549 € barrato
   { slug: S.fadpdr125, attivoCents: 30000, listinoCents: 54900 },
+  // PAS 24000:2022 sistema di gestione sociale (24h, 13/10): 300 € con 549 € barrato
+  { slug: S.fadpas24000, attivoCents: 30000, listinoCents: 54900 },
 ];
 
 // Nei pacchetti entra l'EDIZIONE CORRENTE di ogni norma: dalla 9001 è la 2026. La 2015 resta
