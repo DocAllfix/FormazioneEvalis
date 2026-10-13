@@ -476,28 +476,30 @@
  },
  {
   "id": "fadcfp01_m05_s016",
-  "layout": "split",
   "kicker": "Scrittura del dato",
   "titolo": "Scrivere bene i dati, evitare quattro errori",
-  "lead": "Il numero corretto diventa utile solo se è presentato con etichetta chiara e con totali coerenti. Gli errori più frequenti non sono aritmetici: nascono da formule ibride, prove mancanti e criteri cambiati per convenienza.",
-  "punti": [
+  "layout": "simulatore",
+  "unita": null,
+  "righe": [
    {
-    "h": "Etichetta completa",
-    "d": "Scope 2 location-based e market-based separati"
+    "l": "Elettricità senza garanzie (residual mix)",
+    "v": 2000000,
+    "u": "kWh",
+    "ef": 0.45,
+    "efu": "kg CO2e/kWh"
    },
    {
-    "h": "Totali coerenti",
-    "d": "Cambia solo lo Scope 2, non il resto"
-   },
-   {
-    "h": "Mai numeri ibridi",
-    "d": "Gli scoperti prendono residual mix, non media rete"
-   },
-   {
-    "h": "Zero solo con prova",
-    "d": "Senza annullamento documentato, niente fattore zero"
+    "l": "Elettricità con Garanzie d’Origine",
+    "v": 1200000,
+    "u": "kWh",
+    "ef": 0,
+    "efu": "kg CO2e/kWh"
    }
-  ]
+  ],
+  "_schermata": "30",
+  "piede": "Il calcolatore mostra solo il market-based. Il location-based resta 752 t CO2e qualunque sia la ripartizione.",
+  "fonte": "Caso studio Pastificio Terrafelix – scenari illustrativi",
+  "intro": "Il numero corretto diventa utile solo se è presentato con etichetta chiara e con totali coerenti. Gli errori più frequenti non sono aritmetici: nascono da formule ibride, prove mancanti e criteri cambiati per convenienza."
  },
  {
   "id": "fadcfp01_m05_s017",

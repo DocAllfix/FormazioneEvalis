@@ -739,39 +739,50 @@
  },
  {
   "id": "fadcfp01_m02_s024",
-  "layout": "organigramma",
   "kicker": "Caso Aurora",
   "titolo": "Sorgenti e documenti di Idrotermica Aurora",
   "intro": "Prima dei calcoli viene la mappa delle fonti. Ogni voce nasce da un documento diverso, con un'unità diversa e spesso con un responsabile diverso da coinvolgere nel lavoro di raccolta.",
-  "radice": {
-   "h": "Idrotermica Aurora S.n.c.",
-   "d": "Azienda di fantasia · 8 addetti · dati di un anno"
-  },
-  "rami": [
+  "layout": "simulatore",
+  "unita": null,
+  "righe": [
    {
-    "h": "Sede",
-    "d": "Ufficio e magazzino",
-    "voci": [
-     "Gas naturale: 3.200 Sm³",
-     "Elettricità: 18.000 kWh"
-    ]
+    "l": "Gas naturale",
+    "v": 3200,
+    "u": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
    },
    {
-    "h": "Mobilità",
-    "d": "Furgoni e trasferte",
-    "voci": [
-     "Gasolio dei 2 furgoni: 5.400 l",
-     "Un volo: 2 persone × 1.400 km"
-    ]
+    "l": "Elettricità di rete",
+    "v": 18000,
+    "u": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
    },
    {
-    "h": "Climatizzazione",
-    "d": "Impianto dell'ufficio",
-    "voci": [
-     "Ricarica di R-410A: 1,5 kg"
-    ]
+    "l": "Gasolio dei furgoni",
+    "v": 5400,
+    "u": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
+   },
+   {
+    "l": "Volo (passeggeri × km)",
+    "v": 2800,
+    "u": "pkm",
+    "ef": 0.18,
+    "efu": "kg CO2e/pkm"
+   },
+   {
+    "l": "Ricarica di R-410A",
+    "v": 1.5,
+    "u": "kg",
+    "ef": 2256,
+    "efu": "kg CO2e/kg"
    }
-  ]
+  ],
+  "_schermata": "49",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
  },
  {
   "id": "fadcfp01_m02_s025",

@@ -59,6 +59,7 @@ const S = {
   fadeen02: "energy-manager-esperto-in-gestione-dell-energia",
   fadpdr125: "parita-di-genere-uni-pdr-125-2022",
   fadpas24000: "pas-24000-2022-sistema-di-gestione-sociale",
+  fadcfp01: "carbon-footprint-misurare-calcolare-e-ridurre-le-emissioni",
 } as const;
 
 export const CORSI: CorsoListino[] = [
@@ -87,6 +88,8 @@ export const CORSI: CorsoListino[] = [
   { slug: S.fadpdr125, attivoCents: 30000, listinoCents: 54900 },
   // PAS 24000:2022 sistema di gestione sociale (24h, 13/10): 300 € con 549 € barrato
   { slug: S.fadpas24000, attivoCents: 30000, listinoCents: 54900 },
+  // Carbon Footprint di organizzazione e di prodotto (24h, 13/10): 300 € con 549 € barrato
+  { slug: S.fadcfp01, attivoCents: 30000, listinoCents: 54900 },
 ];
 
 // Nei pacchetti entra l'EDIZIONE CORRENTE di ogni norma: dalla 9001 è la 2026. La 2015 resta

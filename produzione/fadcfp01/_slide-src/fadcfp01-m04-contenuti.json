@@ -663,37 +663,44 @@
  },
  {
   "id": "fadcfp01_m04_s022",
-  "layout": "calcolo",
   "kicker": "Caso Terrafelix",
   "titolo": "Le ricariche refrigeranti di Terrafelix",
   "intro": "Nel 2025 bastano due interventi di ricarica per generare quasi quaranta tonnellate di CO2e: la massa è piccola, l'impatto climatico no.",
+  "layout": "simulatore",
   "unita": null,
   "righe": [
    {
-    "l": "R-410A – climatizzazione degli uffici",
-    "n": "rapporti di intervento del frigorista · GWP AR6 della miscela",
-    "a": 12,
-    "au": "kg",
+    "l": "R-410A",
+    "v": 12,
+    "u": "kg",
     "ef": 2256,
     "efu": "kg CO2e/kg"
    },
    {
-    "l": "HFC-134a – gruppo frigo di processo",
-    "n": "registro dell’apparecchiatura · GWP AR6",
-    "a": 8,
-    "au": "kg",
+    "l": "HFC-134a",
+    "v": 8,
+    "u": "kg",
     "ef": 1530,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "HFC-32",
+    "v": 0,
+    "u": "kg",
+    "ef": 771,
+    "efu": "kg CO2e/kg"
+   },
+   {
+    "l": "SF6",
+    "v": 0,
+    "u": "kg",
+    "ef": 24300,
     "efu": "kg CO2e/kg"
    }
   ],
-  "etichette": {
-   "a": "Gas reintegrato",
-   "ef": "GWP (fattore di emissione)"
-  },
-  "dec": null,
-  "totale": "Totale",
-  "_atteso": 39312,
-  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; GWP: IPCC AR6"
+  "_schermata": "35",
+  "piede": "I valori iniziali riproducono il calcolo di Terrafelix: 39.312 kg CO2e.",
+  "fonte": "GWP: IPCC AR6 (riepilogo GHG Protocol, 2024); dati iniziali del caso studio"
  },
  {
   "id": "fadcfp01_m04_s023",

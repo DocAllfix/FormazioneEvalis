@@ -719,36 +719,58 @@
  },
  {
   "id": "fadcfp01_m03_s025",
-  "layout": "cards",
   "kicker": "Caso Terrafelix",
   "titolo": "Sei sorgenti spiegano quasi tutto l’inventario",
   "intro": "Con il documento approvato, il lavoro si concentra dove conta davvero: controllo operativo, anno base 2025, soglia di ricalcolo al 5% e lettura coerente fanno emergere sei voci che valgono circa l’87% del totale.",
-  "cards": [
+  "layout": "simulatore",
+  "unita": null,
+  "righe": [
    {
-    "h": "Gas naturale impianti fissi",
-    "d": "Grande driver dello Scope 1"
+    "l": "Scope 1 · gas naturale",
+    "v": 1050000,
+    "u": "Sm³",
+    "ef": 2,
+    "efu": "kg CO2e/Sm³"
    },
    {
-    "h": "Gasolio della flotta",
-    "d": "Combustione mobile aziendale"
+    "l": "Scope 1 · gasolio della flotta",
+    "v": 38000,
+    "u": "l",
+    "ef": 2.65,
+    "efu": "kg CO2e/l"
    },
    {
-    "h": "Elettricità di rete",
-    "d": "Nel totale principale, criterio location based"
+    "l": "Scope 2 · elettricità di rete (location-based)",
+    "v": 3200000,
+    "u": "kWh",
+    "ef": 0.235,
+    "efu": "kg CO2e/kWh"
    },
    {
-    "h": "Semola acquistata",
-    "d": "Voce dominante della catena del valore"
+    "l": "Scope 3 · semola acquistata",
+    "v": 20600000,
+    "u": "kg",
+    "ef": 0.7,
+    "efu": "kg CO2e/kg"
    },
    {
-    "h": "Astucci e cartoni",
-    "d": "Imballaggi con peso emissivo rilevante"
+    "l": "Scope 3 · astucci e cartoni",
+    "v": 900000,
+    "u": "kg",
+    "ef": 0.9,
+    "efu": "kg CO2e/kg"
    },
    {
-    "h": "Consegne in Italia su gomma",
-    "d": "Logistica a valle tra le priorità operative"
+    "l": "Scope 3 · consegne in Italia su gomma",
+    "v": 6300000,
+    "u": "tkm",
+    "ef": 0.1,
+    "efu": "kg CO2e/tkm"
    }
-  ]
+  ],
+  "_schermata": "59",
+  "piede": "Valori iniziali: dati del caso studio. Totale delle sei voci: 18.812,7 t CO2e su 21.692,5 t dell’inventario.",
+  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi; fattori arrotondati (vedi tabella dei fattori del corso)"
  },
  {
   "id": "fadcfp01_m03_s026",

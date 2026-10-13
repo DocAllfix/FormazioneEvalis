@@ -514,42 +514,36 @@
  },
  {
   "id": "fadcfp01_m09_s017",
-  "layout": "calcolo",
   "kicker": "Target 2030",
   "titolo": "Il piano non basta ancora al traguardo",
   "intro": "Per verificare l’obiettivo principale vanno sommate solo le leve che incidono su Scope 1 più Scope 2 market-based. Il risultato è solido e rilevante, ma resta sotto la riduzione approvata dalla direzione.",
+  "layout": "simulatore",
   "unita": null,
   "righe": [
    {
-    "l": "Leva 1 – Gas risparmiato",
-    "n": "Scope 1",
-    "a": 126000,
-    "au": "Sm³",
+    "l": "Gas naturale risparmiato (Scope 1)",
+    "v": 126000,
+    "u": "Sm³",
     "ef": 2,
     "efu": "kg CO2e/Sm³"
    },
    {
-    "l": "Leve 2 e 3 – Elettricità non più a residual mix",
-    "n": "Scope 2 market-based · 500.000 + 1.500.000 kWh",
-    "a": 2000000,
-    "au": "kWh",
+    "l": "Elettricità non più a residual mix (Scope 2 market-based)",
+    "v": 2000000,
+    "u": "kWh",
     "ef": 0.45,
     "efu": "kg CO2e/kWh"
    },
    {
-    "l": "Leva 4 – Gasolio risparmiato",
-    "n": "Scope 1",
-    "a": 8000,
-    "au": "l",
+    "l": "Gasolio risparmiato (Scope 1)",
+    "v": 8000,
+    "u": "l",
     "ef": 2.65,
     "efu": "kg CO2e/l"
    }
   ],
-  "etichette": {},
-  "dec": null,
-  "totale": "Riduzione totale",
-  "_atteso": 1173200,
-  "piede": "3.157,8 − 1.173,2 = 1.984,6 t CO2e. In percentuale: 1.173,2 ÷ 3.157,8 = −37,2%. L’obiettivo è −42%.",
+  "_schermata": "46",
+  "piede": "Soluzione con il solo gas: 126.000 + 76.550 = 202.550 Sm³ risparmiati, il 19,3% del consumo 2025.",
   "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
  },
  {

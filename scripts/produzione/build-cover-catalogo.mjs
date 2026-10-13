@@ -43,6 +43,13 @@ const ICONE = {
       ${bilancia(150, 150, 120)}
       ${coccarda(262, 248, 62)}`,
   },
+  // nuvola con la scritta CO2 + foglia: la carbon footprint, misurare e ridurre le emissioni
+  carbonio: {
+    centro: [180, 185], scala: 1.6,
+    disegna: () => `
+      ${nuvolaCO2(160, 150, 120)}
+      ${foglia(292, 268, 60)}`,
+  },
   // tre persone affiancate + coccarda: il sistema di gestione sociale certificato (PAS 24000)
   sociale: {
     centro: [176, 190], scala: 1.62,
@@ -51,6 +58,27 @@ const ICONE = {
       ${coccarda(268, 252, 60)}`,
   },
 };
+
+// nuvola piena con la scritta CO2 in chiaro (testo SVG: le copertine si rasterizzano nel browser)
+function nuvolaCO2(cx, cy, r) {
+  return `<g filter="url(#rilievo)">
+    <circle cx="${cx - r * 0.55}" cy="${cy + r * 0.12}" r="${r * 0.48}" fill="${C.arancio}"/>
+    <circle cx="${cx - r * 0.05}" cy="${cy - r * 0.22}" r="${r * 0.62}" fill="${C.arancio}"/>
+    <circle cx="${cx + r * 0.55}" cy="${cy + r * 0.08}" r="${r * 0.5}" fill="${C.arancio}"/>
+    <rect x="${cx - r * 1.03}" y="${cy + r * 0.1}" width="${r * 2.08}" height="${r * 0.5}" rx="${r * 0.25}" fill="${C.arancio}"/>
+    <text x="${cx}" y="${cy + r * 0.3}" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700"
+      font-size="${r * 0.62}" fill="${C.disco}">CO<tspan font-size="${r * 0.36}" dy="${r * 0.12}">2</tspan></text>
+  </g>`;
+}
+
+// foglia con nervatura, nel colore oro delle coccarde
+function foglia(cx, cy, r) {
+  return `<g filter="url(#rilievo)" transform="rotate(-35 ${cx} ${cy})">
+    <path d="M${cx},${cy - r} C${cx + r * 0.9},${cy - r * 0.5} ${cx + r * 0.9},${cy + r * 0.5} ${cx},${cy + r}
+             C${cx - r * 0.9},${cy + r * 0.5} ${cx - r * 0.9},${cy - r * 0.5} ${cx},${cy - r} Z" fill="${C.oro}"/>
+    <path d="M${cx},${cy - r * 0.8} L${cx},${cy + r * 1.25}" stroke="${C.disco}" stroke-width="${r * 0.08}" stroke-linecap="round"/>
+  </g>`;
+}
 
 // tre figure (testa + busto), quella centrale più grande e in primo piano
 function persone(cx, cy, r) {
@@ -184,6 +212,7 @@ const CORSI = {
   agg9001: ICONE.aggiornamento,
   fadpdr125: ICONE.parita,
   fadpas24000: ICONE.sociale,
+  fadcfp01: ICONE.carbonio,
 };
 
 const DISCO = { x: 790, y: 478 };

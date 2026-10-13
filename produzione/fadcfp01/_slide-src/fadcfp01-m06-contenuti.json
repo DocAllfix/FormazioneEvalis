@@ -746,35 +746,29 @@
  },
  {
   "id": "fadcfp01_m06_s024",
-  "layout": "calcolo",
   "kicker": "Categoria 5",
   "titolo": "Recupero e smaltimento non pesano uguale",
   "intro": "La categoria cinque pesa poco nello Scope 3, ma mostra una regola molto istruttiva: il destino finale può contare più della massa complessiva del rifiuto.",
+  "layout": "simulatore",
   "unita": null,
   "righe": [
    {
     "l": "Rifiuti avviati a recupero",
-    "n": "sfridi, carta e cartone, plastica, legno · kg dal registro",
-    "a": 420000,
-    "au": "kg",
+    "v": 420000,
+    "u": "kg",
     "ef": 0.021,
     "efu": "kg CO2e/kg"
    },
    {
     "l": "Rifiuti avviati a smaltimento",
-    "n": "rifiuti misti · kg dal registro",
-    "a": 60000,
-    "au": "kg",
+    "v": 60000,
+    "u": "kg",
     "ef": 0.45,
     "efu": "kg CO2e/kg"
    }
   ],
-  "etichette": {},
-  "dec": null,
-  "totale": "Totale",
-  "_atteso": 35820,
-  "piede": "Lo smaltimento è il 12,5% dei chili ma il 75,4% delle emissioni: il destino conta più del peso. Errore tipico: applicare un solo fattore a tutti i 480.000 kg.",
-  "fonte": "Caso studio Pastificio Terrafelix – dati illustrativi"
+  "_schermata": "39",
+  "fonte": "Esempio didattico – fattori arrotondati (vedi tabella dei fattori del corso)"
  },
  {
   "id": "fadcfp01_m06_s025",
