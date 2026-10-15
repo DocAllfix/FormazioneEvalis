@@ -106,6 +106,8 @@ export type MyCertificate = {
   number: string | null;
   issuedAt: Date | null;
   courseTitle: string;
+  /** corso con attestato SOLO EVALIS (nessun accreditamento esterno) */
+  soloEvalis: boolean;
 };
 
 /** I certificati dell'utente in sessione (qualsiasi stato). */
@@ -120,6 +122,7 @@ export async function getMyCertificates(): Promise<MyCertificate[]> {
         number: sql<string | null>`coalesce(${certificate.accreditatoNumero}, ${certificate.number})`,
         issuedAt: certificate.issuedAt,
         courseTitle: course.title,
+        soloEvalis: course.attestatoSoloEvalis,
       })
       .from(certificate)
       .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId))

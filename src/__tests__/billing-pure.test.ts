@@ -6,6 +6,7 @@ import type Stripe from "stripe";
 import { planFromEvent, datiPagamentoDaEvento } from "../features/billing/events";
 import { resolveBundleCourseIds, type BundleLink } from "../features/billing/bundles";
 import { companyDiscountPercent, COMPANY_COUPONS } from "../features/billing/discounts";
+import { CORSI, COUPONS_AZIENDA } from "../features/billing/listino-dati";
 import { chiaveIdempotenza } from "../features/billing/idempotenza";
 
 const ev = (type: string, object: unknown) => ({ type, data: { object } }) as unknown as Stripe.Event;
@@ -169,9 +170,32 @@ describe("companyDiscountPercent (sconto azienda automatico)", () => {
     expect(companyDiscountPercent({ isCompanyOrg: true, priorCoursePurchases: 9 })).toBe(30); // 10°
   });
 
+  it("corso con sconto proprio (privacy): fisso dal 2° iscritto, mai dal 1°, mai ai privati", () => {
+    for (const fisso of [20, 40] as const) {
+      expect(companyDiscountPercent({ isCompanyOrg: true, priorCoursePurchases: 0, scontoFisso: fisso })).toBe(0);
+      expect(companyDiscountPercent({ isCompanyOrg: true, priorCoursePurchases: 1, scontoFisso: fisso })).toBe(fisso);
+      expect(companyDiscountPercent({ isCompanyOrg: true, priorCoursePurchases: 9, scontoFisso: fisso })).toBe(fisso);
+      expect(companyDiscountPercent({ isCompanyOrg: false, priorCoursePurchases: 5, scontoFisso: fisso })).toBe(0);
+    }
+  });
+
+  it("listino privacy: 50 € → 30 € e 25 € → 20 € per le aziende", () => {
+    const priv = (s: string) => CORSI.find((c) => c.slug === s)!;
+    const p1 = priv("privacy-e-protezione-dei-dati-per-il-personale");
+    const p2 = priv("aggiornamento-annuale-privacy-per-il-personale");
+    expect(p1.attivoCents * (100 - p1.scontoAzienda!) / 100).toBe(3000);
+    expect(p2.attivoCents * (100 - p2.scontoAzienda!) / 100).toBe(2000);
+    const p3 = priv("privacy-per-manager-e-amministratori-di-sistema");
+    expect(p3.attivoCents).toBe(25000);
+    expect(p3.scontoAzienda).toBeUndefined(); // regola generale −20% / −30%
+  });
+
   it("le % mappano su coupon Stripe con ID fisso", () => {
     expect(COMPANY_COUPONS[20]).toBe("azienda-20");
     expect(COMPANY_COUPONS[30]).toBe("azienda-30");
+    expect(COMPANY_COUPONS[40]).toBe("azienda-40");
+    // ogni coupon usato dal checkout esiste nel listino, che lo crea su Stripe
+    for (const id of Object.values(COMPANY_COUPONS)) expect(COUPONS_AZIENDA.some((c) => c.id === id)).toBe(true);
   });
 });
 

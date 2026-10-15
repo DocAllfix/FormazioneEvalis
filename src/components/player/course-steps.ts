@@ -24,7 +24,7 @@ export type Quiz = {
 };
 
 export type Data = {
-  course: { id: string; title: string; requiredMinutes: number };
+  course: { id: string; title: string; requiredMinutes: number; soloEvalis?: boolean };
   timer: { effectiveSeconds: number; requiredSeconds: number };
   slides: Slide[];
   quizzes: Quiz[];

@@ -19,7 +19,7 @@ export async function getCourseForPlayer(enrollmentId: string, ctx: TenantCtx) {
   const courseId = enr.courseId;
 
   const [crs] = await tx
-    .select({ id: course.id, title: course.title, requiredMinutes: course.requiredMinutes })
+    .select({ id: course.id, title: course.title, requiredMinutes: course.requiredMinutes, soloEvalis: course.attestatoSoloEvalis })
     .from(course)
     .where(eq(course.id, courseId))
     .limit(1);
@@ -67,7 +67,7 @@ export async function getCourseForPlayer(enrollmentId: string, ctx: TenantCtx) {
   const effectiveSeconds = await courseEffectiveSeconds(enrollmentId, courseId, tx);
 
   return {
-    course: { id: crs.id, title: crs.title, requiredMinutes: crs.requiredMinutes },
+    course: { id: crs.id, title: crs.title, requiredMinutes: crs.requiredMinutes, soloEvalis: crs.soloEvalis },
     timer: { effectiveSeconds, requiredSeconds: crs.requiredMinutes * 60 },
     slides,
     quizzes,

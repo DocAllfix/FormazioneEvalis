@@ -28,7 +28,7 @@ export default async function CourseDetailPage({ params }: { params: Promise<{ i
     ctx ? getMyEnrollmentForCourse(ctx.user.id, c.id) : Promise.resolve(null),
     ctx ? iso19011Advisory(ctx.user.id, c.id) : Promise.resolve(null),
     listActiveBundles(),
-    (async (): Promise<0 | 20 | 30> => {
+    (async (): Promise<0 | 20 | 30 | 40> => {
       if (!ctx) return 0;
       // stessa regola del checkout (spazioAcquisti): lo sconto aziendale vale solo per chi
       // compra per l'azienda, cioè titolare e amministratori

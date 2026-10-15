@@ -2,16 +2,18 @@
 
 // Console certificati (staff): ricerca per nome, email o numero; per ogni certificato scarica il
 // provvisorio, CARICA IL CERTIFICATO ACCREDITATO (PDF, caricato direttamente su Storage con un
-// link firmato dal server) e revoca. Consuma preparaCaricamentoAction / confermaCaricamentoAction /
-// revokeCertificateAction.
+// link firmato dal server) e revoca. Per i corsi con attestato SOLO EVALIS, invece del caricamento,
+// EMETTE l'attestato EVALIS generato dalla piattaforma. Consuma preparaCaricamentoAction /
+// confermaCaricamentoAction / emettiAttestatoEvalisAction / revokeCertificateAction.
 
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { esegui } from "@/lib/esito";
-import { FileDown, Loader2, Search, ShieldX, Upload } from "lucide-react";
+import { BadgeCheck, FileDown, Loader2, Search, ShieldX, Upload } from "lucide-react";
 import {
   preparaCaricamentoAction,
   confermaCaricamentoAction,
+  emettiAttestatoEvalisAction,
   revokeCertificateAction,
 } from "@/features/certificates/server-actions";
 
@@ -23,6 +25,8 @@ export type StaffCert = {
   learnerName: string;
   learnerEmail: string;
   courseTitle: string;
+  /** corso con attestato SOLO EVALIS: si emette, non si carica */
+  soloEvalis: boolean;
   completatoLabel: string;
   accreditatoLabel: string;
   anagrafica: string;
@@ -33,6 +37,11 @@ const STATO: Record<string, { text: string; cls: string }> = {
   ready_for_review: { text: "Provvisorio · da caricare", cls: "bg-warning/10 text-warning" },
   issued: { text: "Accreditato", cls: "bg-success/10 text-success" },
   revoked: { text: "Revocato", cls: "bg-danger/10 text-danger" },
+};
+// corsi con attestato SOLO EVALIS: niente da caricare, l'attestato si emette
+const STATO_EVALIS: Record<string, { text: string; cls: string }> = {
+  ready_for_review: { text: "Provvisorio · da emettere", cls: "bg-warning/10 text-warning" },
+  issued: { text: "Attestato EVALIS emesso", cls: "bg-success/10 text-success" },
 };
 const FILTRI = [
   ["tutti", "Tutti"],
@@ -99,6 +108,22 @@ Chi verifica il certificato sul sito cercherà questo numero.`,
       setBusy(null);
       target.current = null;
       if (fileRef.current) fileRef.current.value = "";
+    }
+  }
+
+  async function emetti(c: StaffCert) {
+    if (!window.confirm(`Emettere l'attestato EVALIS di ${c.learnerName} per «${c.courseTitle}»? Controlla prima nome e dati: l'attestato definitivo parte subito via email all'utente.`)) return;
+    setBusy(c.id);
+    setError("");
+    setOk("");
+    try {
+      const emesso = await esegui(emettiAttestatoEvalisAction(c.id));
+      setOk(`Attestato ${emesso.number} emesso: l'utente lo trova nella sua area privata e lo riceve via email.`);
+      router.refresh();
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Errore nell'emissione.");
+    } finally {
+      setBusy(null);
     }
   }
 
@@ -174,7 +199,9 @@ Chi verifica il certificato sul sito cercherà questo numero.`,
             </thead>
             <tbody>
               {items.map((c) => {
-                const s = STATO[c.status] ?? { text: c.status, cls: "bg-secondary text-muted-foreground" };
+                const s = c.soloEvalis
+                  ? (STATO_EVALIS[c.status] ?? STATO[c.status])
+                  : (STATO[c.status] ?? { text: c.status, cls: "bg-secondary text-muted-foreground" });
                 return (
                   <tr key={c.id} className="border-b border-border/60 last:border-0 hover:bg-secondary/30">
                     <td className="px-4 py-3">
@@ -207,7 +234,17 @@ Chi verifica il certificato sul sito cercherà questo numero.`,
                             {c.status === "issued" ? "Scarica" : "Provvisorio"}
                           </a>
                         ) : null}
-                        {c.status !== "revoked" ? (
+                        {c.soloEvalis && c.status === "ready_for_review" ? (
+                          <button
+                            onClick={() => emetti(c)}
+                            disabled={busy !== null}
+                            className="inline-flex min-h-9 items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-xs font-medium text-white transition hover:brightness-110 disabled:opacity-50"
+                          >
+                            {busy === c.id ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <BadgeCheck className="h-3.5 w-3.5" />}
+                            Emetti attestato EVALIS
+                          </button>
+                        ) : null}
+                        {c.status !== "revoked" && !c.soloEvalis ? (
                           <button
                             onClick={() => scegliFile(c)}
                             disabled={busy !== null}

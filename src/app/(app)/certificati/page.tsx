@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { requireSession } from "@/features/auth/guards";
 import { getMyCertificates } from "@/features/learner/queries";
 import { assicuraCertificatiDi } from "@/features/certificates/lifecycle";
-import { NOTA_PROVVISORIO } from "@/features/certificates/testi";
+import { notaProvvisorio } from "@/features/certificates/testi";
 import { CertificateDownloadButton } from "@/components/app/certificate-download-button";
 import { dataBreve as formatDate } from "@/lib/formato";
 
@@ -52,7 +52,7 @@ export default async function CertificatiPage() {
       ) : (
         <div className="mt-8 space-y-4">
           {certs.map((c) => {
-            const info = statusInfo[c.status] ?? {
+            const info = (c.soloEvalis && c.status === "issued" ? { text: "Attestato EVALIS", cls: statusInfo.issued.cls } : statusInfo[c.status]) ?? {
               text: c.status,
               cls: "bg-secondary text-muted-foreground",
             };
@@ -70,10 +70,10 @@ export default async function CertificatiPage() {
                   </div>
                   <p className="mt-1 text-sm text-muted-foreground">
                     {c.number ? `N. ${c.number}` : "Numero non ancora assegnato"}
-                    {c.issuedAt ? ` · Accreditato il ${formatDate(c.issuedAt)}` : ""}
+                    {c.issuedAt ? ` · ${c.soloEvalis ? "Emesso" : "Accreditato"} il ${formatDate(c.issuedAt)}` : ""}
                   </p>
                   {c.status === "ready_for_review" && (
-                    <p className="mt-2 max-w-xl text-sm text-foreground/80">{NOTA_PROVVISORIO}</p>
+                    <p className="mt-2 max-w-xl text-sm text-foreground/80">{notaProvvisorio(c.soloEvalis)}</p>
                   )}
                 </div>
                 {c.status === "issued" && <CertificateDownloadButton id={c.id} />}

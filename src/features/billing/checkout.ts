@@ -15,6 +15,7 @@ import { inVendita } from "@/features/catalog/vendibile";
 import { ensureStripeCustomer } from "./customers";
 import { loadBundleWithCourses, resolveBundleCourseIds } from "./bundles";
 import { COMPANY_COUPONS, companyDiscountPercent } from "./discounts";
+import { CORSI } from "./listino-dati";
 import { chiaveIdempotenza } from "./idempotenza";
 import { ErroreUtente } from "@/lib/esito";
 
@@ -77,8 +78,8 @@ export async function haGiaIlCorso(userId: string, courseId: string): Promise<bo
   return Boolean(e);
 }
 
-/** % sconto azienda per l'acquisto di un corso da parte dell'org attiva (0 | 20 | 30). */
-export async function courseCompanyDiscountPercent(orgId: string, courseId: string): Promise<0 | 20 | 30> {
+/** % sconto azienda per l'acquisto di un corso da parte dell'org attiva (0 | 20 | 30 | 40). */
+export async function courseCompanyDiscountPercent(orgId: string, courseId: string): Promise<0 | 20 | 30 | 40> {
   const [org] = await db
     .select({ metadata: organization.metadata })
     .from(organization)
@@ -97,7 +98,10 @@ export async function courseCompanyDiscountPercent(orgId: string, courseId: stri
         eq(enrollment.status, "active"),
       ),
     );
-  return companyDiscountPercent({ isCompanyOrg, priorCoursePurchases: prior?.n ?? 0 });
+  // sconto proprio del corso, se il listino ne ha uno (corsi privacy); altrimenti la regola generale
+  const [crs] = await db.select({ slug: course.slug }).from(course).where(eq(course.id, courseId)).limit(1);
+  const scontoFisso = CORSI.find((x) => x.slug === crs?.slug)?.scontoAzienda;
+  return companyDiscountPercent({ isCompanyOrg, priorCoursePurchases: prior?.n ?? 0, scontoFisso });
 }
 
 /**

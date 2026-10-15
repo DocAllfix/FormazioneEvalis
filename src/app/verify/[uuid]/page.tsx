@@ -57,8 +57,8 @@ export default async function VerifyPage({
           ) : result.provvisorio ? (
             <div>
               <Esito icona={<Clock className="h-7 w-7" />} tono="bg-primary/10 text-primary" titolo="Completamento verificato">
-                Certificato provvisorio: il corso è stato completato e l&apos;esame finale superato. Il certificato
-                accreditato è in emissione (entro {GIORNI_ACCREDITATO} giorni lavorativi).
+                Certificato provvisorio: il corso è stato completato e l&apos;esame finale superato. Il documento
+                definitivo è in emissione (entro {GIORNI_ACCREDITATO} giorni lavorativi).
               </Esito>
               <dl className="mt-6 space-y-3 text-sm">
                 <Row label="Titolare" value={result.learnerName} />

@@ -6,7 +6,7 @@
 
 import { renderEmail, esc } from "@/lib/email/layout";
 import { DESTINATARI_INTERNI } from "@/features/billing/notifica-vendita";
-import { NOTA_PROVVISORIO, GIORNI_ACCREDITATO } from "./testi";
+import { notaProvvisorio, GIORNI_ACCREDITATO } from "./testi";
 import { dataNascitaLeggibile } from "./anagrafica";
 
 /**
@@ -32,6 +32,8 @@ export type DatiCertificato = {
   codiceFiscale: string | null;
   dataNascita: string | null; // "AAAA-MM-GG"
   luogoNascita: string | null;
+  /** corso con attestato SOLO EVALIS: il definitivo lo emette la piattaforma dopo la verifica dello staff */
+  soloEvalis: boolean;
 };
 
 const data = (d: Date) => d.toLocaleDateString("it-IT", { timeZone: "Europe/Rome", day: "2-digit", month: "long", year: "numeric" });
@@ -42,15 +44,16 @@ export function nomeFileCertificato(number: string, provvisorio: boolean): strin
 }
 
 export function mailProvvisorioUtente(d: DatiCertificato, base: string): { subject: string; html: string } {
+  const doc = d.soloEvalis ? "attestato" : "certificato";
   return {
-    subject: `Corso completato: il tuo certificato provvisorio — ${d.courseTitle}`,
+    subject: `Corso completato: il tuo ${doc} provvisorio — ${d.courseTitle}`,
     html: renderEmail({
-      previewText: `Hai completato ${d.courseTitle}. In allegato il certificato provvisorio.`,
+      previewText: `Hai completato ${d.courseTitle}. In allegato ${d.soloEvalis ? "l'attestato" : "il certificato"} provvisorio.`,
       heading: "Hai completato il corso",
       body: [
         `Complimenti <strong>${esc(d.learnerName)}</strong>, hai completato il corso <strong>${esc(d.courseTitle)}</strong> e superato l'esame finale.`,
-        `In allegato trovi il tuo <strong>certificato provvisorio</strong> n. <strong>${esc(d.number)}</strong>.`,
-        esc(NOTA_PROVVISORIO),
+        `In allegato trovi il tuo <strong>${doc} provvisorio</strong> n. <strong>${esc(d.number)}</strong>.`,
+        esc(notaProvvisorio(d.soloEvalis)),
       ],
       button: { label: "Vai ai tuoi certificati", url: `${base}/certificati` },
       footerExtra: `Il codice del certificato si può verificare in ogni momento su ${esc(base.replace(/^https?:\/\//, ""))}, nella sezione "Verifica certificato".`,
@@ -62,13 +65,18 @@ export function mailProvvisorioCommittente(d: DatiCertificato, base: string): { 
   const riga = (etichetta: string, valore: string) =>
     `<tr><td style="padding:6px 12px 6px 0;color:#8A8073;white-space:nowrap;vertical-align:top;">${etichetta}</td>` +
     `<td style="padding:6px 0;color:#1A1209;"><strong>${esc(valore)}</strong></td></tr>`;
+  const evalis = d.soloEvalis;
   return {
-    subject: `Certificato da preparare: ${d.learnerName} · ${d.courseTitle}`,
+    subject: evalis ? `Attestato EVALIS da verificare: ${d.learnerName} · ${d.courseTitle}` : `Certificato da preparare: ${d.learnerName} · ${d.courseTitle}`,
     html: renderEmail({
-      previewText: `${d.learnerName} ha completato ${d.courseTitle}. Va preparato il certificato accreditato.`,
-      heading: "Corso completato: certificato da preparare",
+      previewText: evalis
+        ? `${d.learnerName} ha completato ${d.courseTitle}. Va verificato ed emesso l'attestato EVALIS.`
+        : `${d.learnerName} ha completato ${d.courseTitle}. Va preparato il certificato accreditato.`,
+      heading: evalis ? "Corso completato: attestato EVALIS da verificare" : "Corso completato: certificato da preparare",
       body: [
-        `Un utente ha completato il corso e ha ricevuto il certificato provvisorio. Va preparato il <strong>certificato accreditato</strong> entro ${GIORNI_ACCREDITATO} giorni lavorativi.`,
+        evalis
+          ? `Un utente ha completato il corso e ha ricevuto l'attestato provvisorio. Il corso rilascia l'<strong>attestato EVALIS Academy</strong> (nessun accreditamento esterno): va verificato ed emesso entro ${GIORNI_ACCREDITATO} giorni lavorativi.`
+          : `Un utente ha completato il corso e ha ricevuto il certificato provvisorio. Va preparato il <strong>certificato accreditato</strong> entro ${GIORNI_ACCREDITATO} giorni lavorativi.`,
         `<table role="presentation" cellpadding="0" cellspacing="0" style="font-size:15px;line-height:1.5;">${[
           riga("Nome", d.learnerName),
           riga("Email", d.learnerEmail),
@@ -82,9 +90,14 @@ export function mailProvvisorioCommittente(d: DatiCertificato, base: string): { 
           riga("Numero certificato", d.number),
           riga("Verifica", d.verifyUrl),
         ].join("")}</table>`,
-        "In allegato il certificato provvisorio. Quando l'accreditato è pronto, caricalo dalla console: l'utente lo riceve via email e lo trova nella sua area privata al posto del provvisorio.",
+        evalis
+          ? "In allegato l'attestato provvisorio. Verificati i dati, dalla console premi «Emetti attestato EVALIS»: la piattaforma genera l'attestato definitivo con lo stesso numero e lo stesso QR, l'utente lo riceve via email e lo trova nella sua area privata al posto del provvisorio."
+          : "In allegato il certificato provvisorio. Quando l'accreditato è pronto, caricalo dalla console: l'utente lo riceve via email e lo trova nella sua area privata al posto del provvisorio.",
       ],
-      button: { label: "Carica il certificato accreditato", url: `${base}/staff/certificati?q=${encodeURIComponent(d.number)}` },
+      button: {
+        label: evalis ? "Verifica ed emetti l'attestato" : "Carica il certificato accreditato",
+        url: `${base}/staff/certificati?q=${encodeURIComponent(d.number)}`,
+      },
       footerExtra: "Notifica interna per lo staff Evalis Academy.",
     }),
   };
@@ -106,6 +119,26 @@ export function mailAccreditatoUtente(
           ? `abbiamo aggiornato il certificato accreditato del corso <strong>${esc(d.courseTitle)}</strong>: in allegato trovi la versione corretta, che sostituisce la precedente.`
           : `in allegato trovi il <strong>certificato accreditato</strong> del corso <strong>${esc(d.courseTitle)}</strong>. Sostituisce il certificato provvisorio.`,
         `Numero certificato: <strong>${esc(d.number)}</strong>. Lo trovi anche nella tua area privata, pronto da scaricare.`,
+      ],
+      button: { label: "Vai ai tuoi certificati", url: `${base}/certificati` },
+    }),
+  };
+}
+
+/** All'emissione dell'attestato EVALIS (corsi senza accreditamento esterno), all'UTENTE. */
+export function mailAttestatoEvalisUtente(
+  d: Pick<DatiCertificato, "learnerName" | "courseTitle" | "number">,
+  base: string,
+): { subject: string; html: string } {
+  return {
+    subject: `Il tuo attestato EVALIS Academy — ${d.courseTitle}`,
+    html: renderEmail({
+      previewText: `L'attestato di formazione per ${d.courseTitle} è pronto.`,
+      heading: "Il tuo attestato è pronto",
+      body: [
+        `Ciao <strong>${esc(d.learnerName)}</strong>,`,
+        `in allegato trovi l'<strong>attestato di formazione EVALIS Academy</strong> del corso <strong>${esc(d.courseTitle)}</strong>. Sostituisce l'attestato provvisorio.`,
+        `Numero attestato: <strong>${esc(d.number)}</strong>. Lo trovi anche nella tua area privata, pronto da scaricare.`,
       ],
       button: { label: "Vai ai tuoi certificati", url: `${base}/certificati` },
     }),

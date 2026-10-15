@@ -27,7 +27,9 @@ export function fineLancio(ora: number = Date.now()): number {
   return comeUtc - scarto;
 }
 
-export type CorsoListino = { slug: string; attivoCents: number; listinoCents: number };
+// scontoAzienda: sconto aziendale PROPRIO del corso, fisso dal 2° iscritto della stessa azienda, al
+// posto della regola generale −20%/−30% (corsi privacy obbligatori, prezzi decisi dal committente).
+export type CorsoListino = { slug: string; attivoCents: number; listinoCents: number; scontoAzienda?: 20 | 40 };
 export type BundleListino = {
   slug: string;
   title: string;
@@ -60,6 +62,9 @@ const S = {
   fadpdr125: "parita-di-genere-uni-pdr-125-2022",
   fadpas24000: "pas-24000-2022-sistema-di-gestione-sociale",
   fadcfp01: "carbon-footprint-misurare-calcolare-e-ridurre-le-emissioni",
+  fadpriv01: "privacy-e-protezione-dei-dati-per-il-personale",
+  fadpriv02: "aggiornamento-annuale-privacy-per-il-personale",
+  fadpriv03: "privacy-per-manager-e-amministratori-di-sistema",
 } as const;
 
 export const CORSI: CorsoListino[] = [
@@ -90,6 +95,11 @@ export const CORSI: CorsoListino[] = [
   { slug: S.fadpas24000, attivoCents: 30000, listinoCents: 54900 },
   // Carbon Footprint di organizzazione e di prodotto (24h, 13/10): 300 € con 549 € barrato
   { slug: S.fadcfp01, attivoCents: 30000, listinoCents: 54900 },
+  // corsi privacy (15/10, prezzi del committente, nessun barrato). Aziende dal 2° dipendente:
+  // 30 € per FAD-PRIV-01 (−40%) e 20 € per FAD-PRIV-02 (−20%); FAD-PRIV-03 con la regola generale.
+  { slug: S.fadpriv01, attivoCents: 5000, listinoCents: 5000, scontoAzienda: 40 },
+  { slug: S.fadpriv02, attivoCents: 2500, listinoCents: 2500, scontoAzienda: 20 },
+  { slug: S.fadpriv03, attivoCents: 25000, listinoCents: 25000 },
 ];
 
 // Nei pacchetti entra l'EDIZIONE CORRENTE di ogni norma: dalla 9001 è la 2026. La 2015 resta
@@ -150,4 +160,5 @@ export const BUNDLES: BundleListino[] = [
 export const COUPONS_AZIENDA = [
   { id: "azienda-20", percentOff: 20, name: "Sconto azienda −20% (dal 2° iscritto)" },
   { id: "azienda-30", percentOff: 30, name: "Sconto azienda −30% (dal 5° iscritto)" },
+  { id: "azienda-40", percentOff: 40, name: "Prezzo aziende −40% (dal 2° iscritto, corsi privacy)" },
 ];

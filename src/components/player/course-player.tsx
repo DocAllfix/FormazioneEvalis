@@ -16,7 +16,7 @@ import {
 import { SlideStep } from "./slide-step";
 import { QuizStep } from "./quiz-step";
 import { requestMyCertificateAction } from "@/features/learner/server-actions";
-import { NOTA_PROVVISORIO } from "@/features/certificates/testi";
+import { notaProvvisorio } from "@/features/certificates/testi";
 import { buildSteps, type Data, type Step } from "./course-steps";
 
 export function CoursePlayer({
@@ -130,11 +130,11 @@ export function CoursePlayer({
                 {certId ? (
                   <>
                     <p className="mt-2 max-w-md text-muted-foreground">
-                      Hai superato l&apos;esame finale. Il tuo certificato provvisorio è pronto e te
-                      l&apos;abbiamo inviato anche via email.
+                      Hai superato l&apos;esame finale. Il tuo {data.course.soloEvalis ? "attestato" : "certificato"} provvisorio
+                      è pronto e te l&apos;abbiamo inviato anche via email.
                     </p>
                     <p className="mt-3 max-w-md rounded-lg bg-primary/5 px-4 py-3 text-sm text-foreground/80">
-                      {NOTA_PROVVISORIO}
+                      {notaProvvisorio(!!data.course.soloEvalis)}
                     </p>
                   </>
                 ) : (

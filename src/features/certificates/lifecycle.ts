@@ -5,6 +5,9 @@
 //  2. CERTIFICATO ACCREDITATO (sempre una persona): lo staff carica il PDF accreditato, che
 //     sostituisce il provvisorio nell'area privata e parte via mail all'utente. Stesso numero e
 //     stesso QR del provvisorio.
+//     Corsi con attestato SOLO EVALIS (course.attestatoSoloEvalis): niente PDF da caricare; dopo la
+//     verifica lo staff preme un pulsante e la piattaforma genera l'attestato EVALIS definitivo,
+//     stesso numero e stesso QR (emettiAttestatoEvalisById). La persona che verifica resta.
 //  3. Verifica pubblica per QR o per numero; revoca. Ogni passaggio nella catena di audit.
 // Il provvisorio automatico è una scelta esplicita dell'utente (02/10/2026): dichiara sempre di
 // esserlo, e il certificato vero resta subordinato alla revisione umana.
@@ -19,13 +22,14 @@ import { buildCertificatePdf } from "./pdf";
 import {
   destinatarioCommittente,
   mailAccreditatoUtente,
+  mailAttestatoEvalisUtente,
   mailProvvisorioCommittente,
   mailProvvisorioUtente,
   nomeFileCertificato,
   type DatiCertificato,
 } from "./notifiche";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
-import { signedCertificateUrl, linkCaricamentoCertificato, leggiCertificatoPdf, deleteCertificatePdf } from "@/lib/supabase/storage";
+import { signedCertificateUrl, linkCaricamentoCertificato, leggiCertificatoPdf, deleteCertificatePdf, uploadCertificatePdf } from "@/lib/supabase/storage";
 import { inviaEmailConAllegati } from "@/lib/email/resend";
 import { requirePlatformAdmin, requireSession, isPlatformAdmin } from "@/features/auth/guards";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
@@ -147,6 +151,7 @@ async function datiCertificato(certificateId: string, ctx: TenantCtx): Promise<D
         courseTitle: course.title,
         courseId: course.id,
         requiredMinutes: course.requiredMinutes,
+        soloEvalis: course.attestatoSoloEvalis,
         codiceFiscale: sql<string | null>`coalesce(${certificate.codiceFiscale}, ${anagraficaCertificato.codiceFiscale})`,
         dataNascita: sql<string | null>`coalesce(${certificate.dataNascita}, ${anagraficaCertificato.dataNascita})::text`,
         luogoNascita: sql<string | null>`coalesce(${certificate.luogoNascita}, ${anagraficaCertificato.luogoNascita})`,
@@ -185,6 +190,7 @@ async function datiCertificato(certificateId: string, ctx: TenantCtx): Promise<D
       codiceFiscale: r.codiceFiscale,
       dataNascita: r.dataNascita,
       luogoNascita: r.luogoNascita,
+      soloEvalis: r.soloEvalis,
     };
   });
 }
@@ -197,6 +203,7 @@ function pdfProvvisorio(d: DatiCertificato): Promise<Uint8Array> {
     number: d.number,
     verifyUrl: d.verifyUrl,
     provvisorio: true,
+    soloEvalis: d.soloEvalis,
     ...(d.luogoNascita && d.dataNascita ? { nascita: `nato/a a ${d.luogoNascita} il ${dataNascitaLeggibile(d.dataNascita)}` } : {}),
   });
 }
@@ -264,6 +271,7 @@ export async function listCertificatiStaff(filtro: { q?: string; stato?: StatoFi
         learnerName: sql<string>`coalesce(${certificate.learnerName}, ${user.name})`,
         learnerEmail: user.email,
         courseTitle: course.title,
+        soloEvalis: course.attestatoSoloEvalis,
         createdAt: certificate.createdAt,
         issuedAt: certificate.issuedAt,
         codiceFiscale: sql<string | null>`coalesce(${certificate.codiceFiscale}, ${anagraficaCertificato.codiceFiscale})`,
@@ -407,6 +415,72 @@ export async function preparaCaricamento(certificateId: string) {
 export async function confermaCaricamento(certificateId: string, path: string, sostituisci: boolean, numeroAccreditato?: string) {
   const ctx = await requirePlatformAdmin();
   return confermaCaricamentoById(certificateId, path, ctx.user.id, { sostituisci, numeroAccreditato });
+}
+
+/**
+ * Corsi con attestato SOLO EVALIS: dopo la verifica dello staff la piattaforma genera l'attestato
+ * definitivo (stesso numero e stesso QR del provvisorio), lo salva, lo emette e lo manda via mail.
+ * Solo da `ready_for_review`: un attestato già emesso o revocato non si riemette, e su un corso
+ * con certificato accreditato si rifiuta (lì il PDF lo carica lo staff). Testabile, senza guard.
+ */
+export async function emettiAttestatoEvalisById(
+  certificateId: string,
+  reviewerUserId: string,
+  ctx: TenantCtx = { platformAdmin: true },
+) {
+  const d = await datiCertificato(certificateId, ctx);
+  if (!d) throw new Error("Certificato inesistente.");
+  if (!d.soloEvalis) throw new ErroreUtente("Questo corso rilascia il certificato accreditato: va caricato il PDF dell'ente.");
+  if (d.status === "revoked") throw new ErroreUtente("Certificato revocato: non si può emettere.");
+  if (d.status !== "ready_for_review") throw new ErroreUtente(`L'attestato ${d.number} è già stato emesso.`);
+
+  const now = new Date();
+  const pdf = await buildCertificatePdf({
+    learnerName: d.learnerName,
+    courseTitle: d.courseTitle,
+    issuedAt: now,
+    number: d.number,
+    verifyUrl: d.verifyUrl,
+    soloEvalis: true,
+    ...(d.luogoNascita && d.dataNascita ? { nascita: `nato/a a ${d.luogoNascita} il ${dataNascitaLeggibile(d.dataNascita)}` } : {}),
+  });
+  const path = await uploadCertificatePdf(d.verifyUuid, pdf);
+
+  const emesso = await withTenant(ctx, async (tx) => {
+    // solo se è ancora in attesa: due clic contemporanei non emettono due volte
+    const righe = await tx
+      .update(certificate)
+      .set({ status: "issued", number: d.number, pdfPath: path, approvedBy: reviewerUserId, approvedAt: now, issuedAt: now, updatedAt: now })
+      .where(and(eq(certificate.id, certificateId), eq(certificate.status, "ready_for_review")))
+      .returning({ id: certificate.id });
+    if (righe.length === 0) return false;
+    const { organizationId, userId } = await auditContextFromEnrollment(tx, d.enrollmentId);
+    await appendActivity(tx, {
+      organizationId,
+      userId,
+      verb: "certificate-issued",
+      object: `certificate:${certificateId}`,
+      payload: { number: d.number, tipo: "attestato-evalis", file: path },
+    });
+    return true;
+  });
+  if (!emesso) throw new ErroreUtente(`L'attestato ${d.number} è già stato emesso.`);
+
+  // mail best-effort: l'attestato è già emesso e scaricabile dall'area privata
+  const mail = mailAttestatoEvalisUtente(d, baseUrl());
+  await inviaEmailConAllegati({
+    to: d.learnerEmail,
+    ...mail,
+    allegati: [{ nome: nomeFileCertificato(d.number, false), contenuto: pdf }],
+  }).catch((e) => console.error(`[certificati] mail attestato EVALIS non inviata (${d.number})`, e));
+
+  return { id: certificateId, status: "issued" as const, number: d.number };
+}
+
+/** Server Action: emissione dell'attestato EVALIS (solo staff piattaforma). */
+export async function emettiAttestatoEvalis(certificateId: string) {
+  const ctx = await requirePlatformAdmin();
+  return emettiAttestatoEvalisById(certificateId, ctx.user.id);
 }
 
 /** Logica di revoca (testabile, senza guard). */

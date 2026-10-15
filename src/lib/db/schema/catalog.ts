@@ -62,6 +62,9 @@ export const course = pgTable(
     durationHours: integer("duration_hours"),
     // Monte ore legale del tipo corso (Accordo): la fruizione deve raggiungerlo.
     requiredMinutes: integer("required_minutes").notNull().default(0),
+    // Attestato SOLO EVALIS (nessun accreditamento esterno): il definitivo lo genera la piattaforma
+    // dopo la verifica dello staff, invece del PDF accreditato caricato (migrazione 0035).
+    attestatoSoloEvalis: boolean("attestato_solo_evalis").notNull().default(false),
     // Slug SEO-friendly per la pagina pubblica teaser (/corso/[slug]). Unico.
     slug: text("slug").unique(),
     // Categoria per il filtro del catalogo (es. auditor/mestieri/bancario). null = nessuna.

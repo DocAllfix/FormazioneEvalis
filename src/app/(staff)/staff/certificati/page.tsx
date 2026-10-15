@@ -42,6 +42,7 @@ export default async function StaffCertificatiPage({
     learnerName: c.learnerName,
     learnerEmail: c.learnerEmail,
     courseTitle: c.courseTitle,
+    soloEvalis: c.soloEvalis,
     completatoLabel: giorno(c.createdAt),
     accreditatoLabel: giorno(c.issuedAt),
     anagrafica: c.codiceFiscale && c.dataNascita && c.luogoNascita
@@ -53,7 +54,7 @@ export default async function StaffCertificatiPage({
     <div className="flex flex-col gap-6">
       <PageHeader
         title="Certificati"
-        description="Chi completa un corso riceve subito il certificato provvisorio. Carica qui il certificato accreditato: sostituisce il provvisorio nell'area privata e parte via email all'utente."
+        description="Chi completa un corso riceve subito il certificato provvisorio. Carica qui il certificato accreditato (o, per i corsi con attestato solo EVALIS, emettilo con un clic): sostituisce il provvisorio nell'area privata e parte via email all'utente."
       />
       <CertReviewList items={items} q={q} stato={stato} />
     </div>

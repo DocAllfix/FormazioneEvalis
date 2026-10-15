@@ -5,7 +5,7 @@
 import { PDFDocument, StandardFonts, rgb, type PDFFont } from "pdf-lib";
 import fontkit from "@pdf-lib/fontkit";
 import QRCode from "qrcode";
-import { RIGA_PROVVISORIO_1, RIGA_PROVVISORIO_2 } from "./testi";
+import { RIGA_PROVVISORIO_1, RIGA_PROVVISORIO_2, RIGA_PROVVISORIO_EVALIS_1, RIGA_PROVVISORIO_EVALIS_2 } from "./testi";
 import { NOTO_SANS_REGULAR, NOTO_SANS_BOLD } from "./font-certificato";
 
 // lettere senza scomposizione Unicode, per il ripiego su Helvetica
@@ -49,6 +49,9 @@ export interface CertificateData {
   provvisorio?: boolean;
   /** "nato/a a Roma il 1 gennaio 1980", sotto il nome (se i dati ci sono) */
   nascita?: string;
+  /** Corso con attestato SOLO EVALIS: il provvisorio rimanda all'attestato EVALIS (non a un
+   * accreditamento) e il definitivo dichiara chi lo rilascia. */
+  soloEvalis?: boolean;
 }
 
 export async function buildCertificatePdf(d: CertificateData): Promise<Uint8Array> {
@@ -86,8 +89,10 @@ export async function buildCertificatePdf(d: CertificateData): Promise<Uint8Arra
   if (d.provvisorio) {
     // fascia: deve essere impossibile scambiarlo per il certificato accreditato
     page.drawRectangle({ x: 60, y: 180, width: width - 120, height: 44, color: rgb(1, 0.95, 0.88), borderColor: rgb(0.92, 0.35, 0.05), borderWidth: 1 });
-    center(RIGA_PROVVISORIO_1, 205, 11, bold);
-    center(RIGA_PROVVISORIO_2, 189, 10);
+    center(d.soloEvalis ? RIGA_PROVVISORIO_EVALIS_1 : RIGA_PROVVISORIO_1, 205, 11, bold);
+    center(d.soloEvalis ? RIGA_PROVVISORIO_EVALIS_2 : RIGA_PROVVISORIO_2, 189, 10);
+  } else if (d.soloEvalis) {
+    center("Attestato di formazione rilasciato da EVALIS Academy", 200, 11);
   }
 
   // QR verso la pagina di verifica pubblica

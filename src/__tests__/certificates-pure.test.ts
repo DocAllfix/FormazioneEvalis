@@ -5,7 +5,7 @@ import { buildCertificatePdf } from "../features/certificates/pdf";
 import { isPlatformStaffEmail } from "../features/auth/guards";
 import { codiceFiscaleValido, validaAnagrafica } from "../features/certificates/anagrafica";
 import {
-  destinatarioCommittente, mailProvvisorioUtente, mailProvvisorioCommittente, mailAccreditatoUtente, nomeFileCertificato,
+  destinatarioCommittente, mailProvvisorioUtente, mailProvvisorioCommittente, mailAccreditatoUtente, mailAttestatoEvalisUtente, nomeFileCertificato,
 } from "../features/certificates/notifiche";
 
 describe("buildCertificatePdf", () => {
@@ -53,6 +53,7 @@ describe("certificato provvisorio e mail", () => {
     codiceFiscale: "RSSMRA80A01H501U",
     dataNascita: "1980-01-01",
     luogoNascita: "Roma",
+    soloEvalis: false,
   };
 
   it("il PDF provvisorio è un PDF vero, diverso dal definitivo", async () => {
@@ -89,6 +90,32 @@ describe("certificato provvisorio e mail", () => {
     expect(mailAccreditatoUtente(dati, "https://x", false).subject).toContain("accreditato");
     expect(mailAccreditatoUtente(dati, "https://x", true).subject).toContain("aggiornato");
     expect(nomeFileCertificato("EVALIS-2026-ABCD1234", true)).toBe("Certificato-provvisorio-EVALIS-2026-ABCD1234.pdf");
+  });
+
+  it("corso con attestato solo EVALIS: nessun accreditamento nei testi, emissione dalla console", () => {
+    const ev = { ...dati, soloEvalis: true };
+    const utente = mailProvvisorioUtente(ev, "https://x");
+    expect(utente.subject).toContain("attestato provvisorio");
+    expect(utente.html).toContain("attestato definitivo EVALIS Academy");
+    expect(utente.html).not.toContain("accreditato");
+    const comm = mailProvvisorioCommittente(ev, "https://x");
+    expect(comm.subject).toContain("Attestato EVALIS da verificare");
+    expect(comm.html).toContain("Emetti attestato EVALIS");
+    expect(comm.html).toContain("/staff/certificati?q=EVALIS-2026-ABCD1234");
+    const def = mailAttestatoEvalisUtente(ev, "https://x");
+    expect(def.subject).toContain("attestato EVALIS Academy");
+    expect(def.html).toContain("EVALIS-2026-ABCD1234");
+    // i corsi con accreditamento restano come prima
+    expect(mailProvvisorioUtente(dati, "https://x").html).toContain("certificato accreditato");
+  });
+
+  it("PDF solo EVALIS: provvisorio e definitivo sono PDF veri e diversi da quelli accreditati", async () => {
+    const base = { learnerName: "Mario Rossi", courseTitle: "Corso", issuedAt: new Date("2026-10-15T10:00:00Z"), number: "EVALIS-2026-ABCD1234", verifyUrl: "https://example.test/verify/abcd" };
+    const provEv = await buildCertificatePdf({ ...base, provvisorio: true, soloEvalis: true });
+    const prov = await buildCertificatePdf({ ...base, provvisorio: true });
+    const defEv = await buildCertificatePdf({ ...base, soloEvalis: true });
+    expect(Buffer.from(defEv.slice(0, 5)).toString("latin1")).toBe("%PDF-");
+    expect(Buffer.from(provEv).equals(Buffer.from(prov))).toBe(false);
   });
 });
 
