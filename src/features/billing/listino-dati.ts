@@ -160,5 +160,5 @@ export const BUNDLES: BundleListino[] = [
 export const COUPONS_AZIENDA = [
   { id: "azienda-20", percentOff: 20, name: "Sconto azienda −20% (dal 2° iscritto)" },
   { id: "azienda-30", percentOff: 30, name: "Sconto azienda −30% (dal 5° iscritto)" },
-  { id: "azienda-40", percentOff: 40, name: "Prezzo aziende −40% (dal 2° iscritto, corsi privacy)" },
+  { id: "azienda-40", percentOff: 40, name: "Sconto azienda −40% (corsi privacy)" }, // Stripe: nome max 40 caratteri
 ];
