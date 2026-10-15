@@ -50,6 +50,27 @@ const ICONE = {
       ${nuvolaCO2(160, 150, 120)}
       ${foglia(292, 268, 60)}`,
   },
+  // scudo con lucchetto + coccarda: privacy e protezione dei dati per il personale (FAD-PRIV-01)
+  privacy: {
+    centro: [170, 185], scala: 1.6,
+    disegna: () => `
+      ${scudo(160, 160, 130)}
+      ${coccarda(276, 256, 58)}`,
+  },
+  // scudo + freccia circolare: l'aggiornamento annuale privacy (FAD-PRIV-02)
+  privacyAggiornamento: {
+    centro: [176, 180], scala: 1.6,
+    disegna: () => `
+      ${scudo(160, 160, 130)}
+      ${frecciaCircolare(272, 262, 70)}`,
+  },
+  // scudo + ingranaggio: privacy per manager e amministratori di sistema (FAD-PRIV-03)
+  privacySistemi: {
+    centro: [176, 180], scala: 1.6,
+    disegna: () => `
+      ${scudo(155, 160, 130)}
+      ${ingranaggio(282, 262, 62, 9, C.arancioCaldo)}`,
+  },
   // tre persone affiancate + coccarda: il sistema di gestione sociale certificato (PAS 24000)
   sociale: {
     centro: [176, 190], scala: 1.62,
@@ -122,6 +143,23 @@ function ingranaggio(cx, cy, r, denti, tinta) {
   return `<g filter="url(#rilievo)">
     <path d="${d}Z" fill="${tinta}" stroke="${tinta}" stroke-width="${r * 0.10}" stroke-linejoin="round"/>
     <circle cx="${cx}" cy="${cy}" r="${rForo}" fill="${C.disco}"/>
+  </g>`;
+}
+
+// scudo con lucchetto: la protezione dei dati personali (corsi privacy FAD-PRIV)
+function scudo(cx, cy, r) {
+  const w = r * 0.86, top = cy - r, bot = cy + r;
+  const forma = `M${cx},${top} L${cx + w},${top + r * 0.28} L${cx + w},${cy + r * 0.05} ` +
+    `Q${cx + w},${bot - r * 0.38} ${cx},${bot} Q${cx - w},${bot - r * 0.38} ${cx - w},${cy + r * 0.05} ` +
+    `L${cx - w},${top + r * 0.28} Z`;
+  return `<g filter="url(#rilievo)">
+    <path d="${forma}" fill="${C.arancio}"/>
+    <path d="M${cx},${top + r * 0.16} L${cx + w * 0.78},${top + r * 0.38} L${cx + w * 0.78},${cy + r * 0.05} Q${cx + w * 0.78},${bot - r * 0.5} ${cx},${bot - r * 0.16} Z" fill="${C.arancioScuro}" opacity=".35"/>
+    <rect x="${cx - r * 0.34}" y="${cy - r * 0.05}" width="${r * 0.68}" height="${r * 0.52}" rx="${r * 0.08}" fill="#F3E8DB"/>
+    <path d="M${cx - r * 0.22},${cy - r * 0.05} v${-r * 0.16} a${r * 0.22},${r * 0.22} 0 0 1 ${r * 0.44},0 v${r * 0.16}"
+      fill="none" stroke="#F3E8DB" stroke-width="${r * 0.1}"/>
+    <circle cx="${cx}" cy="${cy + r * 0.16}" r="${r * 0.07}" fill="${C.arancioScuro}"/>
+    <rect x="${cx - r * 0.025}" y="${cy + r * 0.18}" width="${r * 0.05}" height="${r * 0.15}" fill="${C.arancioScuro}"/>
   </g>`;
 }
 
@@ -213,6 +251,9 @@ const CORSI = {
   fadpdr125: ICONE.parita,
   fadpas24000: ICONE.sociale,
   fadcfp01: ICONE.carbonio,
+  fadpriv01: ICONE.privacy,
+  fadpriv02: ICONE.privacyAggiornamento,
+  fadpriv03: ICONE.privacySistemi,
 };
 
 const DISCO = { x: 790, y: 478 };

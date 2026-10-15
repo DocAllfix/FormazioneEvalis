@@ -35,6 +35,9 @@ const COURSES: Record<string, string> = {
   fadpdr125: "ebd7649c-a40f-4ead-9db1-9ebd87fa0032",
   fadpas24000: "e0438660-45a2-4a07-8849-5f09ac54930b",
   fadcfp01: "96cb1885-e7b5-428b-80f0-5fd907613645",
+  fadpriv01: "da857c5c-f9a8-469c-b52d-19ec742c6d73",
+  fadpriv02: "8c5267bf-433e-4160-b5e4-fd50abae563c",
+  fadpriv03: "eb72ebbf-dae3-4267-b99f-60ef8c1cbee5",
 };
 
 async function slidesOf(courseId: string) {
