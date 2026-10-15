@@ -93,7 +93,7 @@ const scheda = (v: Voce) => `
   </div>
 </article>`;
 
-const html = `<title>Collaudo PAS 24000</title>
+const html = `<title>Collaudo ${esc(c.title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -134,7 +134,7 @@ section h2 small{font-family:var(--mono);font-size:12.5px;color:var(--muted);fon
 </style>
 <div class="wrap">
 <header>
-  <h1>Collaudo PAS 24000:2022 — Sistema di gestione sociale</h1>
+  <h1>Collaudo ${esc(c.title)}</h1>
   <p>Ogni scheda è una slide del corso in produzione: a sinistra il fotogramma reale del player su evalisacademy.it, a destra un fotogramma dell'avatar preso dalla clip vera su Cloudflare Stream, a metà durata.</p>
   <div class="esito">
     <span class="ok">${voci.length} slide</span><span>${moduli.length} moduli</span><span>${totMin} minuti di audio</span>
