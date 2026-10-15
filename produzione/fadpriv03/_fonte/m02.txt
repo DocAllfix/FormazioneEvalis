@@ -1,0 +1,65 @@
+## SEZIONE 1 — Modulo 2 del committente — Il manager responsabile di funzione (55 min)
+
+### SCHERMATA 1 — Autorizzazioni per ruolo e principio del minimo privilegio
+Chi può vedere cosa non si decide “a chi serve”, ma per profili : la mansione determina i dati accessibili, le operazioni consentite e i sistemi utilizzabili. Il manager designato definisce i profili della propria area con l’IT e li rivede a ogni cambio di mansione, trasferimento o cessazione.
+Evento | Azione del manager | Termine
+Assunzione / ingresso | Richiesta profilo minimo, consegna istruzioni, formazione prima dell’accesso ai dati | Prima del primo accesso
+Cambio mansione | Richiesta revisione profilo (rimozione accessi non più necessari) | Entro 5 giorni lavorativi
+Cessazione | Disattivazione account, restituzione dispositivi, revoca accessi fisici, chiusura casella email con messaggio automatico | Il giorno stesso
+Verifica periodica | Riesame dell’elenco autorizzati e dei profili attivi (access review) | Almeno annuale
+Caso ricorrente. Il collaboratore passato dall’amministrazione al commerciale conserva per anni l’accesso alle buste paga perché nessuno ha chiesto la revoca. In ispezione è un accesso non autorizzato continuativo; in caso di breach è un’aggravante.
+
+### SCHERMATA 2 — Istruzioni, formazione, vigilanza
+Istruzioni scritte
+Specifiche per area: HR (dati particolari, fascicoli), commerciale (contatti, marketing, CRM), produzione (presenze, sicurezza), IT (sistemi). Consegna tracciata con firma o accettazione elettronica.
+Formazione
+Base all’ingresso, aggiornamento annuale, specifica per ruolo. Registro formativo con date, contenuti, attestati: è la prova richiesta in ispezione.
+Vigilanza
+Il manager verifica che le istruzioni siano rispettate: controlli a campione su scrivanie, stampanti, condivisioni, invii; segnalazione delle anomalie. Non è controllo del lavoratore ma delle misure.
+Conseguenze disciplinari
+La violazione delle istruzioni privacy è inadempimento contrattuale: deve essere prevista nel regolamento aziendale/codice disciplinare affisso (art. 7 Stat. Lav.), altrimenti le sanzioni non sono applicabili.
+
+### SCHERMATA 3 — Fornitori: il contratto art. 28
+Ogni soggetto esterno che tratta dati personali per conto dell’azienda (paghe, software gestionale, cloud, assistenza IT, agenzia marketing, società di selezione, medico competente per alcune attività, corriere per i dati di spedizione) è responsabile del trattamento e va vincolato da un contratto scritto con i contenuti dell’art. 28 par. 3:
+oggetto, durata, natura e finalità del trattamento; tipo di dati e categorie di interessati;
+trattamento solo su istruzione documentata del titolare;
+riservatezza del personale; misure di sicurezza art. 32;
+sub-responsabili solo con autorizzazione scritta (generale o specifica) e stessi obblighi;
+assistenza per diritti degli interessati, data breach, DPIA;
+cancellazione o restituzione a fine contratto; audit e ispezioni del titolare.
+Prima di firmare
+Due diligence: dove sono i server, chi sono i sub-fornitori, certificazioni (ISO 27001, SOC 2), tempi di notifica breach (max 24-48 h al titolare), clausole di trasferimento extra-UE.
+Segnali di allarme
+Fornitore che si qualifica “titolare autonomo” per tutto; DPA assente o generico; sub-fornitori non elencati; nessun impegno su tempi di notifica; dati usati “per migliorare il servizio”.
+
+### SCHERMATA 4 — Esercizio · Titolare autonomo o responsabile?
+[ESERCIZIO PRECLUSIVO]
+Per ciascun fornitore indica se è Responsabile (art. 28, serve il DPA) o Titolare autonomo (serve solo verificare la base giuridica della comunicazione).
+- Software house che ospita il gestionale HR in cloud → Responsabile
+- Medico competente per la sorveglianza sanitaria → Titolare autonomo
+- Agenzia che invia newsletter con la nostra lista contatti → Responsabile
+- Banca che riceve l’IBAN per i bonifici degli stipendi → Titolare autonomo
+- Consulente del lavoro che elabora le buste paga → Responsabile
+- Studio legale che assiste in un contenzioso → Titolare autonomo
+- Società di vigilanza che gestisce la videosorveglianza per conto nostro → Responsabile
+- INPS che riceve le denunce contributive → Titolare autonomo
+Esito: Corretto. Criterio: decide finalità e mezzi in autonomia (professionisti con obblighi propri, enti pubblici, banche) = titolare autonomo; esegue il nostro trattamento secondo le nostre istruzioni = responsabile.
+
+### SCHERMATA 5 — Trasferimenti di dati fuori dall’UE (artt. 44-49)
+Qualsiasi servizio con server, assistenza o sub-fornitori fuori dallo Spazio Economico Europeo comporta un trasferimento che richiede una base specifica. Casi tipici: cloud e SaaS statunitensi, assistenza tecnica da paesi terzi, gruppo multinazionale con capogruppo extra-UE.
+Strumento | Quando | Cosa verificare
+Decisione di adeguatezza (art. 45) | Paese riconosciuto (es. Regno Unito, Svizzera, Giappone; USA solo per aziende certificate Data Privacy Framework) | Che il fornitore USA sia effettivamente nella lista DPF
+Clausole contrattuali standard (art. 46) | Tutti gli altri casi | Modello 2021 della Commissione, modulo corretto, valutazione d’impatto del trasferimento (TIA), misure supplementari (cifratura con chiavi in UE)
+Norme vincolanti d’impresa (BCR) | Gruppi multinazionali | Approvazione dell’autorità capofila
+Deroghe (art. 49) | Casi occasionali e non ripetitivi | Mai per flussi strutturali
+Regola per il manager
+Nel registro dei trattamenti e nel DPA ogni fornitore extra-UE deve avere lo strumento di trasferimento indicato. “Non lo sappiamo” non è una risposta accettabile in ispezione.
+
+### SCHERMATA 6 — Gestire le richieste degli interessati nella propria area
+Il manager designato è spesso chi materialmente deve reperire i dati per rispondere. Flusso standard:
+1 Ricezione da qualsiasi canale → protocollo con data (il mese decorre da qui)
+2 Verifica dell’identità proporzionata (non chiedere il documento se l’interessato scrive dalla mail già nota)
+3 Ricerca nei sistemi dell’area: gestionali, email, archivi cartacei, backup se ragionevole
+4 Valutazione limiti: diritti di terzi, segreto industriale, obblighi di conservazione, difesa in giudizio
+5 Risposta scritta entro 1 mese (prorogabile di 2 con avviso), gratuita salvo richieste manifestamente eccessive
+Esempio di accesso di un dipendente. Ha diritto a copia del fascicolo, delle valutazioni che lo riguardano, dei log che lo identificano; non ha diritto alle valutazioni di altri colleghi, alle note interne coperte da segreto professionale dell’avvocato, né a una ricerca illimitata in tutte le caselle email aziendali: la ricerca deve essere ragionevole e documentata.

@@ -1,0 +1,56 @@
+## SEZIONE 1 — Modulo 6 del committente — Gestione del data breach (55 min)
+
+### SCHERMATA 1 — La procedura di gestione delle violazioni
+Il manager e l’ADS sono i primi anelli: ricevono le segnalazioni, contengono l’incidente, raccolgono le informazioni per la decisione del titolare. La procedura scritta deve prevedere:
+1 Rilevazione e segnalazione interna da chiunque, a un canale unico, senza filtri gerarchici (ora 0 = conoscenza del titolare)
+2 Contenimento da parte dell’IT: isolamento, revoca credenziali, blocco invii, conservazione delle evidenze
+3 Valutazione del rischio per gli interessati: team con referente privacy/DPO, IT, funzione coinvolta, legale
+4 Decisione del titolare : notifica al Garante (72 h), comunicazione agli interessati, altre notifiche (ACN per NIS2, assicurazione, autorità giudiziaria)
+5 Registrazione nel registro delle violazioni, anche se non notificata, con motivazione
+6 Lezioni apprese : cause radice, azioni correttive, aggiornamento dell’analisi dei rischi
+
+### SCHERMATA 2 — Valutare il rischio per gli interessati
+La notifica al Garante è dovuta salvo che sia improbabile un rischio; la comunicazione agli interessati è dovuta se il rischio è elevato . Criteri (EDPB 9/2022; metodologia ENISA):
+Fattore | Alza il rischio | Abbassa il rischio
+Tipo di dati | Particolari, finanziari, credenziali, documenti d’identità, minori | Soli dati di contatto professionali
+Volume e identificabilità | Molti interessati, dati direttamente identificativi | Pochi, pseudonimizzati
+Gravità delle conseguenze | Furto d’identità, frode, discriminazione, danno reputazionale, pericolo fisico | Disagio minimo
+Circostanze | Destinatario malintenzionato o ignoto, dati pubblicati, nessuna cifratura | Destinatario affidabile che conferma la distruzione, dati cifrati con chiave non compromessa
+Durata | Esposizione prolungata, perdita permanente di disponibilità | Rimedio immediato, backup disponibile
+Due casi a confronto. Portatile cifrato con BitLocker rubato, password robusta, dispositivo cancellato da remoto: rischio improbabile, registro sì, notifica no. Stesso portatile non cifrato con l’anagrafica dipendenti: rischio elevato, notifica al Garante e comunicazione ai dipendenti.
+
+### SCHERMATA 3 — Esercizio · Notifica o solo registro?
+[ESERCIZIO PRECLUSIVO]
+Per ciascun evento indica se richiede la notifica al Garante (oltre al registro) o solo la registrazione.
+- Ransomware che cifra il gestionale; backup ripristinato in 2 giorni; nessuna prova di esfiltrazione ma non escludibile → Notifica Garante
+- Email con l’IBAN di un fornitore inviata a un altro fornitore, che conferma per iscritto la cancellazione → Solo registro
+- Chiavetta USB non cifrata con 300 CV di candidati smarrita in un luogo pubblico → Notifica Garante
+- Portatile cifrato rubato, credenziali robuste, cancellazione remota riuscita entro un’ora → Solo registro
+- Elenco dipendenti con stipendi pubblicato per errore per 3 ore sulla intranet accessibile a tutti i 200 dipendenti → Notifica Garante
+- Password di accesso al CRM condivisa su chat da un dipendente con un collega già autorizzato allo stesso CRM → Solo registro
+Esito: Corretto. In caso di dubbio il criterio è l’improbabilità del rischio: se non è dimostrabile, si notifica. Una notifica cautelativa non è sanzionata; una mancata notifica sì.
+
+### SCHERMATA 4 — Contenuto della notifica e della comunicazione
+Notifica al Garante (art. 33 par. 3)
+Natura della violazione, categorie e numero approssimativo di interessati e di record; contatti del DPO/referente; probabili conseguenze; misure adottate o proposte. Tramite il modello online del Garante. Se non si hanno tutte le informazioni, notifica in fasi : non si aspetta per completare.
+Comunicazione agli interessati (art. 34)
+Linguaggio semplice e chiaro, stesse informazioni, consigli pratici (cambiare password, attenzione a contatti sospetti, blocco carte). Non dovuta se i dati erano cifrati in modo efficace, se misure successive hanno eliminato il rischio elevato, o se richiederebbe sforzi sproporzionati (allora comunicazione pubblica).
+Oltre le 72 ore
+Si notifica comunque, motivando il ritardo. Il ritardo non motivato è una violazione autonoma, spesso sanzionata più della violazione originaria.
+Il registro delle violazioni (art. 33 par. 5) contiene per ogni evento: data e ora di scoperta e di segnalazione, descrizione, dati e interessati coinvolti, valutazione del rischio e sua motivazione, misure adottate, decisione su notifica e comunicazione, responsabile della gestione.
+
+### SCHERMATA 5 — Esercitazione · Il venerdì sera
+[ESERCIZIO PRECLUSIVO]
+Venerdì ore 18:30. L’ADS riceve un alert: un account di un commerciale ha scaricato 4.000 schede clienti dal CRM in 20 minuti da un indirizzo IP estero. Il commerciale è in ferie e non risponde. Il referente privacy è irraggiungibile fino a lunedì. Cosa fa l’ADS?
+- Attende lunedì per parlarne con il referente privacy: non si possono prendere decisioni senza di lui.
+- Disattiva subito l’account, revoca le sessioni, conserva i log e i dettagli dell’alert, avvisa il titolare o il delegato reperibile e documenta data e ora: le 72 ore sono già partite. → CORRETTA
+- Resetta la password del commerciale e cancella l’alert per non generare allarmismi.
+Spiegazione: Corretto: contenimento immediato, conservazione delle prove, escalation a chi può decidere. L’ora 0 è venerdì 18:30, non lunedì mattina.
+
+### SCHERMATA 6 — Esercitazione · La chiavetta
+[ESERCIZIO PRECLUSIVO]
+Un responsabile di produzione ti riferisce, come manager HR, che un capoturno ha perso una chiavetta USB con il file Excel dei turni, contenente nomi, telefoni e annotazioni su assenze per malattia di 60 operai. È passata una settimana: “pensavano di ritrovarla”. Cosa fai?
+- Chiedo di continuare a cercarla ancora qualche giorno prima di segnalare.
+- Segnalo immediatamente al referente privacy/DPO con tutti i dettagli, incluso il ritardo di una settimana; avvio con l’IT la verifica se il file era cifrato; preparo l’elenco degli interessati per la probabile comunicazione. → CORRETTA
+- Comunico subito io ai 60 operai la perdita, prima che lo sappiano da altri.
+Spiegazione: Corretto: la segnalazione va fatta subito, anche in ritardo, documentando il ritardo. Dati sulla salute non cifrati = rischio elevato: probabile notifica e comunicazione, decise dal titolare.

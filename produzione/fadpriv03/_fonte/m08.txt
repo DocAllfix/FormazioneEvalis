@@ -1,0 +1,59 @@
+## SEZIONE 1 — Modulo 8 del committente — Ispezioni, sanzioni, audit (40 min)
+
+### SCHERMATA 1 — Poteri del Garante e ispezioni
+Il Garante esercita poteri di indagine (art. 58): richieste di informazioni, ispezioni anche a sorpresa, tramite il Nucleo speciale privacy della Guardia di Finanza. Le ispezioni seguono un piano semestrale pubblicato per temi (es. videosorveglianza, telemarketing, sanità, metadati, IA) e le segnalazioni ricevute, in particolare dai dipendenti.
+Cosa chiedono
+Registro dei trattamenti · organigramma e designazioni · elenco ADS e verbale di verifica · DPA con i fornitori · informative · DPIA · registro violazioni · politiche IT e log · attestati di formazione · accordi sindacali per i controlli.
+Come comportarsi
+Accogliere, identificare, chiamare referente privacy e legale · fornire ciò che si ha, senza produrre documenti in fretta durante la visita · rispondere al vero (le dichiarazioni false sono reato) · chiedere copia del verbale · rispettare i termini per le memorie (di norma 30 giorni).
+Le prime tre domande in quasi tutte le ispezioni: “Mostrate il registro dei trattamenti”, “Chi sono i vostri amministratori di sistema e quando li avete verificati”, “Come avete formato il personale”.
+
+### SCHERMATA 2 — Sanzioni e responsabilità
+Violazione | Massimo edittale
+Obblighi del titolare e responsabile (artt. 25-39, 42, 43): sicurezza, registro, DPA, DPIA, notifica breach, ADS | 10 milioni di euro o 2% del fatturato mondiale annuo
+Principi, basi giuridiche, diritti degli interessati, trasferimenti, inosservanza di ordini del Garante | 20 milioni di euro o 4% del fatturato mondiale annuo
+Criteri di quantificazione (art. 83): natura e durata, dolo o colpa, misure adottate per attenuare, grado di cooperazione, precedenti, categorie di dati, modo in cui il Garante è venuto a conoscenza (notifica spontanea vs. segnalazione). L’Italia è tra i paesi con il maggior numero di sanzioni in Europa, con importi frequenti tra 10.000 e 1 milione di euro per PMI.
+Responsabilità penali (Codice privacy)
+Trattamento illecito (art. 167), comunicazione e diffusione illecita di dati su larga scala (art. 167-bis), acquisizione fraudolenta (art. 167-ter), falsità nelle dichiarazioni al Garante (art. 168), inosservanza di provvedimenti (art. 170). Controlli a distanza illeciti: art. 4 Stat. Lav. e art. 171 Codice.
+Responsabilità personale del manager e dell’ADS
+Oltre alla responsabilità dell’azienda: disciplinare, civile per danno (rivalsa), penale per le condotte sopra. L’ADS che cancella log o accede senza autorizzazione risponde anche di accesso abusivo (art. 615-ter c.p.).
+
+### SCHERMATA 3 — L’audit interno annuale
+La verifica periodica è la prova che il sistema vive. Un audit interno privacy, svolto dal referente/DPO o da un auditor con la collaborazione dei manager, copre almeno:
+Area | Evidenze verificate | Indicatore
+Governo | Registro aggiornato, designazioni, DPA, informative | % trattamenti censiti; % fornitori con DPA
+Persone | Formazione erogata, istruzioni consegnate, access review | % personale formato nell’anno; account dormienti
+Tecnologia | Log ADS, MFA, backup testati, patch, VA/PT | Copertura MFA; esito test ripristino; vulnerabilità aperte > 30 gg
+Diritti e incidenti | Registro richieste e tempi, registro violazioni | % risposte entro 1 mese; tempo medio di segnalazione interna
+Controlli lavoratori | Accordi sindacali, retention videosorveglianza e metadati | Conformità configurazioni
+Il rapporto di audit, con non conformità e piano di azioni, viene riesaminato dalla direzione: questo riesame è l’equivalente privacy del riesame di direzione ISO.
+
+### SCHERMATA 4 — Esercizio · Il piano d’azione del manager
+[ESERCIZIO PRECLUSIVO]
+Audit interno concluso. Per ciascuna azione indica se è di competenza del Manager di area o dell’ADS/IT.
+- Rivedere e firmare i profili di accesso dei propri collaboratori → Manager di area
+- Estrarre i log di accesso degli ultimi 6 mesi per la verifica ADS → ADS / IT
+- Comunicare al referente privacy il nuovo fornitore di selezione del personale → Manager di area
+- Configurare la retention a 21 giorni dei metadati della posta → ADS / IT
+- Consegnare le istruzioni aggiornate e tracciare la formazione del team → Manager di area
+- Attivare la MFA sugli account amministrativi e documentarlo → ADS / IT
+- Verificare che l’accordo sindacale copra le nuove telecamere del parcheggio → Manager di area
+- Testare il ripristino dei backup e verbalizzarlo → ADS / IT
+Esito: Corretto. Le due figure sono complementari: il manager governa persone, finalità e fornitori; l’ADS governa sistemi, log e misure tecniche. Entrambi rispondono al titolare.
+
+### SCHERMATA 5 — Sintesi finale
+Manager
+Nessun nuovo trattamento senza passare dal referente privacy
+Profili per ruolo, revoca immediata alla cessazione, access review annuale
+DPA e trasferimenti verificati prima di firmare
+Controlli sui lavoratori solo con accordo/ITL, informativa, DPIA
+Richieste degli interessati tracciate e chiuse entro un mese
+Segnalazione immediata di ogni violazione
+Amministratore di sistema
+Designazione scritta, elenco aggiornato, verifica annuale
+Log completi, inalterabili, ≥ 6 mesi, fuori dal proprio controllo
+Account nominativi, doppio account, MFA, PAM
+Backup 3-2-1 testati, cifratura dispositivi, patch tempestive
+Contenimento e conservazione delle prove negli incidenti; mai cancellare tracce
+Retention di metadati, videosorveglianza e log configurate secondo le regole
+Esame finale: 20 domande, 40 minuti, soglia 75% (15 risposte corrette). Ripetibile.

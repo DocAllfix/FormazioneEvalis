@@ -184,6 +184,134 @@ CORSI = {
         "piede": "Carbon Footprint di organizzazione e di prodotto — Evalis Academy",
         "file": "Evalis_Academy_Carbon_Footprint_Approvazione.docx",
     },
+    "fadpriv01": {
+        # articoli del GDPR e del Codice privacy di ogni modulo
+        "copertura": {
+            1: "GDPR artt. 4, 5, 6, 9, 10, 13-14, 30",
+            2: "GDPR artt. 15-22, 28, 29; art. 2-quaterdecies Codice",
+            3: "GDPR art. 32 (misure comportamentali)",
+            4: "GDPR artt. 4 n. 12, 33, 34",
+            5: "casi pratici su tutto il corso",
+        },
+        "tipo_documento": "norma",
+        "titolo_corso": "PRIVACY E PROTEZIONE DEI DATI PER IL PERSONALE (GDPR)",
+        "titolo_doc": "PROPOSTA DIDATTICA — CORSO PRIVACY E PROTEZIONE DEI DATI PER IL PERSONALE",
+        "presentazione": "Il presente documento raccoglie la struttura didattica del corso FAD-PRIV-01, la formazione "
+            "obbligatoria del personale autorizzato al trattamento prevista dagli articoli 29 e 32 del Regolamento UE 2016/679 "
+            "(GDPR) e dall'articolo 2-quaterdecies del D.Lgs. 196/2003. Il corso nasce dal materiale didattico già redatto "
+            "(cinque moduli, il caso ricorrente di Officine Meridiana) e ne conserva ordine, regole ed esempi. Ogni slide è "
+            "narrata dal relatore avatar, con lo stesso standard di voce, impaginazione e verifica dei corsi già in catalogo. "
+            "Gli esercizi del materiale diventano esercizi guidati spiegati dal relatore e alimentano le verifiche bloccanti.",
+        "titolo_sintesi": "Privacy e protezione dei dati per il personale",
+        "ore": 3,
+        "verifiche": "Ogni modulo è una lezione della piattaforma e si chiude con un checkpoint di verifica (quiz con domande "
+            "estratte da banca dati, non conteggiato nel monte ore), costruito sulle verifiche del materiale didattico. Il corso "
+            "si chiude con l'esame finale: 12 domande estratte dalla banca, soglia del 75% (9 su 12), e con l'attestato di "
+            "formazione EVALIS Academy.",
+        "obiettivi": [
+            "Riconoscere un dato personale e distinguere dati comuni, categorie particolari e dati giudiziari",
+            "Collocare i ruoli: titolare, responsabile, autorizzato, DPO e referente privacy, interessato",
+            "Applicare i principi del GDPR nel lavoro quotidiano: finalità, minimizzazione, conservazione",
+            "Gestire in sicurezza password, posta elettronica, dispositivi e lavoro da remoto; riconoscere il phishing",
+            "Riconoscere un data breach e segnalarlo subito, nel rispetto delle 72 ore",
+            "Riconoscere una richiesta di esercizio dei diritti e inoltrarla nei tempi giusti",
+        ],
+        "dettagli": [
+            "Destinatari: tutto il personale autorizzato al trattamento. Corso obbligatorio per le aziende (artt. 29 e 32 GDPR)",
+            "Checkpoint: uno per modulo, bloccante, cinque domande estratte da una banca di almeno dieci, soglia 80%",
+            "Esame finale: dodici domande estratte dalla banca, soglia 75% (9 su 12)",
+            "Attestato: attestato di formazione EVALIS Academy (nessun accreditamento CERTIS)",
+            "Area di catalogo: privacy e compliance · Modalità: FAD asincrona con relatore avatar su ogni slide",
+            "Prezzo: 50 € a persona; 30 € a persona nei pacchetti aziendali con più dipendenti, IVA esclusa",
+        ],
+        "piede": "Privacy e protezione dei dati per il personale — Evalis Academy",
+        "file": "Evalis_Academy_Privacy_Personale_FAD-PRIV-01_Approvazione.docx",
+    },
+    "fadpriv02": {
+        "copertura": {
+            1: "GDPR artt. 5, 28, 29, 33; ripasso",
+            2: "GDPR art. 32 (minacce attuali, IA generativa)",
+            3: "Reg. UE 2024/1689, D.Lgs. 138/2024, Garante",
+            4: "casi pratici; GDPR artt. 15-17, 33",
+        },
+        "tipo_documento": "norma",
+        "titolo_corso": "AGGIORNAMENTO ANNUALE PRIVACY PER IL PERSONALE (GDPR)",
+        "titolo_doc": "PROPOSTA DIDATTICA — AGGIORNAMENTO ANNUALE PRIVACY PER IL PERSONALE",
+        "presentazione": "Il presente documento raccoglie la struttura didattica del corso FAD-PRIV-02, l'aggiornamento annuale "
+            "obbligatorio della formazione del personale autorizzato al trattamento (artt. 29 e 32 GDPR; art. 2-quaterdecies "
+            "D.Lgs. 196/2003), rivolto a chi ha completato il corso base FAD-PRIV-01 o una formazione equivalente. Il corso nasce "
+            "dal materiale didattico già redatto e ne conserva ordine, regole ed esempi. Ogni slide è narrata dal relatore "
+            "avatar, con lo stesso standard dei corsi già in catalogo.",
+        "titolo_sintesi": "Aggiornamento annuale privacy per il personale",
+        "ore": 1,
+        "verifiche": "Ogni modulo è una lezione della piattaforma e si chiude con un checkpoint di verifica (quiz con domande "
+            "estratte da banca dati, non conteggiato nel monte ore). Il corso si chiude con l'esame finale: 8 domande estratte "
+            "dalla banca, soglia del 75% (6 su 8), e con l'attestato di formazione EVALIS Academy.",
+        "obiettivi": [
+            "Ripassare principi, ruoli, diritti e segnalazione delle violazioni",
+            "Riconoscere le minacce attuali: phishing mirato, quishing, deepfake vocali, MFA fatigue, pagine clonate",
+            "Usare l'intelligenza artificiale generativa senza esporre dati personali",
+            "Conoscere le novità: Regolamento IA, NIS2, provvedimenti del Garante, istruzioni interne aggiornate",
+            "Applicare le regole ai casi dell'anno",
+        ],
+        "dettagli": [
+            "Destinatari: personale che ha già completato FAD-PRIV-01 o una formazione equivalente. Aggiornamento obbligatorio annuale",
+            "Checkpoint: uno per modulo, bloccante, cinque domande estratte da una banca di almeno dieci, soglia 80%",
+            "Esame finale: otto domande estratte dalla banca, soglia 75% (6 su 8)",
+            "Attestato: attestato di formazione EVALIS Academy (nessun accreditamento CERTIS)",
+            "Area di catalogo: privacy e compliance · Modalità: FAD asincrona con relatore avatar su ogni slide",
+            "Prezzo: 25 € a persona; 20 € a persona nei pacchetti aziendali con più dipendenti, IVA esclusa",
+        ],
+        "piede": "Aggiornamento annuale privacy — Evalis Academy",
+        "file": "Evalis_Academy_Aggiornamento_Privacy_FAD-PRIV-02_Approvazione.docx",
+    },
+    "fadpriv03": {
+        "copertura": {
+            1: "GDPR artt. 5, 24, 30, 35, 37-39; art. 2-quaterdecies",
+            2: "GDPR artt. 28, 29, 44-49, 15-22",
+            3: "L. 300/1970 art. 4; Garante; D.Lgs. 24/2023",
+            4: "Provvedimento Garante 27/11/2008",
+            5: "GDPR art. 32; NIS2; ISO/IEC 27001",
+            6: "GDPR artt. 33, 34; EDPB 9/2022",
+            7: "Reg. UE 2024/1689; GDPR art. 28 e 44",
+            8: "GDPR artt. 58, 83; Codice artt. 166-171",
+        },
+        "tipo_documento": "norma",
+        "titolo_corso": "PRIVACY PER MANAGER E AMMINISTRATORI DI SISTEMA",
+        "titolo_doc": "PROPOSTA DIDATTICA — CORSO PRIVACY PER MANAGER E AMMINISTRATORI DI SISTEMA",
+        "presentazione": "Il presente documento raccoglie la struttura didattica del corso FAD-PRIV-03 per chi decide, organizza "
+            "o amministra trattamenti di dati personali: responsabili di funzione, dirigenti, referenti privacy interni e "
+            "amministratori di sistema. Il corso nasce dal materiale didattico già redatto (otto moduli) e ne conserva ordine, "
+            "regole ed esempi; integra la formazione base FAD-PRIV-01. Ogni slide è narrata dal relatore avatar, con lo stesso "
+            "standard di voce, impaginazione e verifica dei corsi già in catalogo. Esercizi ed esercitazioni del materiale "
+            "diventano esercizi guidati spiegati dal relatore e alimentano le verifiche bloccanti.",
+        "titolo_sintesi": "Privacy per manager e amministratori di sistema",
+        "ore": 8,
+        "verifiche": "Ogni modulo è una lezione della piattaforma e si chiude con un checkpoint di verifica (quiz con domande "
+            "estratte da banca dati, non conteggiato nel monte ore), costruito sulle verifiche del materiale didattico. Il corso "
+            "si chiude con l'esame finale: 20 domande estratte dalla banca, soglia del 75% (15 su 20), e con l'attestato di "
+            "formazione EVALIS Academy.",
+        "obiettivi": [
+            "Governare il sistema privacy della propria area: accountability, registro, DPIA, informative, designazioni",
+            "Autorizzare per ruolo, istruire e vigilare; scegliere e contrattualizzare i fornitori; gestire i trasferimenti extra-UE",
+            "Impostare controlli sui lavoratori leciti: art. 4 dello Statuto, videosorveglianza, metadati, whistleblowing",
+            "Applicare il Provvedimento del Garante sugli amministratori di sistema: designazione, log, verifica annuale",
+            "Scegliere e verificare le misure dell'art. 32, in raccordo con NIS2 e ISO/IEC 27001",
+            "Gestire un data breach: contenimento, valutazione del rischio, notifica e comunicazione",
+            "Introdurre IA e servizi cloud nel rispetto di GDPR e Regolamento IA",
+            "Affrontare ispezioni, conoscere sanzioni e responsabilità, condurre l'audit interno annuale",
+        ],
+        "dettagli": [
+            "Destinatari: responsabili di funzione, dirigenti, referenti privacy interni e amministratori di sistema",
+            "Checkpoint: uno per modulo, bloccante, cinque domande estratte da una banca di almeno dieci, soglia 80%",
+            "Esame finale: venti domande estratte dalla banca, soglia 75% (15 su 20)",
+            "Attestato: attestato di formazione EVALIS Academy (nessun accreditamento CERTIS)",
+            "Area di catalogo: privacy e compliance · Modalità: FAD asincrona con relatore avatar su ogni slide",
+            "Prezzo: 250 €, IVA esclusa",
+        ],
+        "piede": "Privacy per manager e amministratori di sistema — Evalis Academy",
+        "file": "Evalis_Academy_Privacy_Manager_ADS_FAD-PRIV-03_Approvazione.docx",
+    },
 }
 if corso not in CORSI:
     sys.exit(f"{corso}: testi del corso mancanti in CORSI (copertura, presentazione, obiettivi...)")

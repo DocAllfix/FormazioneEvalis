@@ -1,0 +1,326 @@
+{
+  "checkpoint": [
+    {
+      "modulo": "m01",
+      "domanda": "La targa di un veicolo è un dato personale?",
+      "opzioni": [
+        "No, non contiene il nome",
+        "Sì, perché rende identificabile una persona",
+        "Solo se associata alla foto del conducente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Quale di questi è un dato di categoria particolare?",
+      "opzioni": [
+        "Codice fiscale",
+        "IBAN",
+        "Certificato medico"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Il principio di minimizzazione impone di:",
+      "opzioni": [
+        "Cifrare tutti i dati",
+        "Raccogliere e conservare solo i dati necessari",
+        "Chiedere sempre il consenso"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "In azienda la base giuridica più comune per i dati dei dipendenti è:",
+      "opzioni": [
+        "Il consenso",
+        "Il contratto di lavoro e gli obblighi di legge",
+        "Il legittimo interesse del dipendente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Lo studio di consulenza del lavoro che elabora le buste paga per l’azienda è:",
+      "opzioni": [
+        "Titolare",
+        "Responsabile del trattamento",
+        "Autorizzato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Un dipendente autorizzato al trattamento può:",
+      "opzioni": [
+        "Accedere a tutti i dati aziendali",
+        "Accedere solo ai dati necessari alla propria mansione",
+        "Condividere dati con colleghi senza limiti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Entro quanto tempo va data risposta a una richiesta di accesso?",
+      "opzioni": [
+        "72 ore",
+        "1 mese, prorogabile",
+        "6 mesi"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Ricevi via telefono una richiesta di cancellazione. Cosa fai?",
+      "opzioni": [
+        "Cancello subito i dati",
+        "La ignoro: le richieste valgono solo per iscritto",
+        "La inoltro subito al referente privacy annotando data e ora"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Una password sicura è:",
+      "opzioni": [
+        "“Meridiana2026!” perché contiene numero e simbolo",
+        "Una frase lunga, unica per ogni servizio",
+        "La stessa ovunque, ma cambiata ogni mese"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Ricevi una mail del “direttore” che chiede un bonifico urgente su un nuovo IBAN. Cosa fai?",
+      "opzioni": [
+        "Eseguo: è urgente",
+        "Rispondo alla mail per chiedere conferma",
+        "Telefono al direttore al numero che conosco e segnalo all’IT"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Devi inviare una comunicazione a 40 clienti. Come inserisci gli indirizzi?",
+      "opzioni": [
+        "In “A”, così si vedono tutti",
+        "In “Ccn” (copia nascosta)",
+        "In “Cc”"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Hai perso lo smartphone aziendale. Cosa fai?",
+      "opzioni": [
+        "Aspetto qualche giorno: magari lo ritrovo",
+        "Lo segnalo subito: è un possibile data breach",
+        "Lo segnalo solo se non era protetto da PIN"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Inviare per errore una busta paga a un collega sbagliato:",
+      "opzioni": [
+        "Non è un data breach: resta in azienda",
+        "È un data breach di riservatezza",
+        "È un data breach solo se il collega la apre"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Il termine di 72 ore per la notifica al Garante decorre:",
+      "opzioni": [
+        "Da quando il titolare viene a conoscenza della violazione",
+        "Da quando il dipendente decide di segnalarla",
+        "Dal lunedì successivo"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Scopri un possibile data breach ma non sei sicuro. Cosa fai?",
+      "opzioni": [
+        "Aspetto di avere la certezza prima di disturbare",
+        "Segnalo subito al referente privacy, anche nel dubbio",
+        "Lo risolvo da solo e non ne parlo"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Chi decide se notificare la violazione al Garante?",
+      "opzioni": [
+        "Il dipendente che l’ha scoperta",
+        "Il titolare, con il supporto del DPO",
+        "L’IT"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Un collega chiede via WhatsApp personale il certificato medico di un dipendente per i turni. Cosa fai?",
+      "opzioni": [
+        "Lo invio",
+        "Comunico solo le date di assenza sul canale aziendale",
+        "Lo invio e cancello il messaggio"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Prima di inviare dati del personale a un consulente esterno devi verificare che:",
+      "opzioni": [
+        "Sia simpatico e affidabile",
+        "Sia nominato responsabile del trattamento e usare un canale sicuro",
+        "Abbia la partita IVA"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Le foto dei dipendenti sui social aziendali richiedono:",
+      "opzioni": [
+        "Niente: sono dipendenti",
+        "Consenso specifico e informato",
+        "Solo l’approvazione del titolare"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Un cliente chiede di non ricevere più offerte. Si tratta di:",
+      "opzioni": [
+        "Una lamentela da ignorare",
+        "Una richiesta di opposizione al marketing da gestire entro 1 mese",
+        "Una richiesta che vale solo con raccomandata"
+      ],
+      "corretta": 1
+    }
+  ],
+  "esame": [
+    {
+      "modulo": "m01",
+      "domanda": "Il GDPR si applica ai dati di:",
+      "opzioni": [
+        "Sole persone fisiche",
+        "Persone fisiche e società",
+        "Solo cittadini UE"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Quale operazione NON è un trattamento?",
+      "opzioni": [
+        "Consultare un dato a video",
+        "Conservare un file",
+        "Nessuna: sono tutti trattamenti"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Il principio di limitazione della finalità vieta di:",
+      "opzioni": [
+        "Conservare dati per più di un anno",
+        "Usare i dati per scopi diversi da quelli per cui sono stati raccolti",
+        "Raccogliere dati senza consenso"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "L’informativa va fornita:",
+      "opzioni": [
+        "Prima o al momento della raccolta dei dati",
+        "Entro un mese dalla raccolta",
+        "Solo su richiesta"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Il responsabile del trattamento (art. 28) è:",
+      "opzioni": [
+        "Il dipendente che gestisce i dati",
+        "Un soggetto esterno che tratta dati per conto del titolare, con contratto",
+        "Il DPO"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Una richiesta di accesso ai dati ricevuta per telefono:",
+      "opzioni": [
+        "Non è valida",
+        "Va inoltrata subito al referente privacy",
+        "Va evasa dall’operatore"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Quale di queste password è la più sicura?",
+      "opzioni": [
+        "Meridiana2026!",
+        "Password123",
+        "Treno-Verde-Lampada-74!"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un segnale tipico di phishing è:",
+      "opzioni": [
+        "Il logo aziendale nella firma",
+        "Urgenza, dominio del mittente simile ma diverso, richiesta insolita",
+        "La presenza di un allegato PDF"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Il lavoro da remoto su dati aziendali richiede:",
+      "opzioni": [
+        "Dispositivo aziendale o autorizzato e connessione VPN",
+        "Qualsiasi dispositivo purché con antivirus",
+        "Il Wi-Fi del bar se protetto da password"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m04",
+      "domanda": "La notifica di un data breach al Garante va fatta entro:",
+      "opzioni": [
+        "24 ore",
+        "72 ore dalla conoscenza",
+        "30 giorni"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Se scopri un data breach in cui hai una responsabilità diretta:",
+      "opzioni": [
+        "Lo risolvo da solo per evitare problemi",
+        "Lo segnalo subito comunque",
+        "Lo segnalo solo se coinvolge dati particolari"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "A fine giornata i documenti con dati personali devono essere:",
+      "opzioni": [
+        "Impilati ordinatamente sulla scrivania",
+        "Riposti in armadi chiusi (clean desk)",
+        "Portati a casa per sicurezza"
+      ],
+      "corretta": 1
+    }
+  ]
+}

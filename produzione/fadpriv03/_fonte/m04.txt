@@ -1,0 +1,60 @@
+## SEZIONE 1 — Modulo 4 del committente — Amministratori di sistema (60 min)
+
+### SCHERMATA 1 — Chi è amministratore di sistema
+Il Provvedimento del Garante del 27 novembre 2008 (modificato il 25 giugno 2009) definisce ADS chi gestisce e manutiene sistemi di elaborazione o loro componenti: amministratori di rete, di database, di sistemi operativi, di applicativi complessi, di sicurezza , inclusi i tecnici di fornitori esterni con accesso privilegiato. Non conta il titolo, conta il privilegio : chi può accedere a dati che non gli competono per mansione, o alterare i log, è ADS.
+Interni
+Responsabile IT, sistemisti, DBA, help desk con credenziali amministrative, chi gestisce backup, firewall, Active Directory, posta.
+Esterni
+Software house con accesso remoto al gestionale, MSP, fornitore cloud per la parte da esso amministrata, consulente che gestisce il server: vanno designati dal fornitore e comunicati al titolare.
+Perché il Garante li tratta a parte
+L’ADS può vedere tutto, copiare tutto e cancellare le tracce. Le misure del provvedimento servono a rendere tracciabile e verificabile il suo operato, a tutela sua e dell’azienda.
+
+### SCHERMATA 2 — Le cinque misure del Provvedimento
+Misura | Contenuto | Evidenza da conservare
+1. Valutazione delle caratteristiche soggettive | L’ADS va scelto per esperienza, capacità e affidabilità, con valutazione documentata | Scheda di valutazione, CV, certificazioni
+2. Designazione individuale | Atto scritto, nominativo, con elenco analitico degli ambiti di operatività (sistemi, banche dati, reti) | Lettera di designazione firmata, aggiornata a ogni cambio
+3. Elenco degli ADS | Elenco con estremi identificativi e funzioni, riportato in un documento interno; i lavoratori devono poterne conoscere l’identità quando l’ADS può accedere ai loro dati (informativa o intranet) | Elenco datato, informativa ai dipendenti
+4. Verifica annuale dell’operato | Il titolare verifica almeno una volta l’anno la rispondenza dell’attività degli ADS alle misure e alle istruzioni | Verbale di verifica con esito, campione di log esaminati, azioni correttive
+5. Registrazione degli accessi (access log) | Log degli accessi logici (login, logout, tentativi falliti) ai sistemi e agli archivi, completi, inalterabili, verificabili , conservati almeno 6 mesi | Sistema di log centralizzato con integrità garantita (WORM, hash, SIEM)
+Il provvedimento si applica anche ai fornitori: il contratto art. 28 deve imporre loro le stesse misure e la comunicazione dei nominativi.
+
+### SCHERMATA 3 — Esercizio · È un amministratore di sistema?
+[ESERCIZIO PRECLUSIVO]
+Indica per ciascuna figura se va designata come ADS.
+- Sistemista interno con credenziali di dominio → ADS
+- Impiegata HR che usa il gestionale paghe con profilo utente → Non ADS
+- Tecnico della software house che accede in remoto al database del gestionale → ADS
+- Responsabile marketing amministratore della pagina social aziendale → Non ADS
+- Help desk con password di amministratore locale su tutti i PC → ADS
+- Addetto backup che gestisce le copie di tutti i server → ADS
+- Dirigente con accesso in sola lettura ai report del CRM → Non ADS
+- Consulente che amministra il firewall e la VPN → ADS
+Esito: Corretto. Il criterio è il privilegio tecnico sui sistemi, non l’inquadramento: anche il tecnico esterno e l’addetto backup sono ADS.
+
+### SCHERMATA 4 — Access log: requisiti tecnici
+Cosa registrare
+Timestamp (sincronizzato NTP), identificativo utente, sistema, evento (login, logout, fallimento), origine (IP/host). Per i sistemi che lo consentono anche escalation di privilegio (sudo, run as) e accesso ai database.
+Completezza
+Tutti i sistemi in ambito: server, AD, DB, applicativi, VPN, firewall, hypervisor, console cloud, strumenti di accesso remoto.
+Inalterabilità
+Invio in tempo reale a un repository centrale su cui l’ADS stesso non ha privilegi di modifica: SIEM o syslog con storage WORM, firma/hash periodica, segregazione dei ruoli.
+Verificabilità e conservazione
+Ricerca per utente e periodo; conservazione ≥ 6 mesi (molte aziende adottano 12 per raccordo con NIS2 e ISO 27001); procedura di estrazione per la verifica annuale.
+Errore frequente. Log attivi ma conservati sullo stesso server amministrato dall’ADS, cancellabili da lui: la misura è formalmente presente ma inefficace. In ispezione viene contestata.
+
+### SCHERMATA 5 — Account privilegiati e separazione dei compiti
+Account nominativi : nessun “admin” condiviso; se un account tecnico è inevitabile, gestirlo con password vault con check-out tracciato.
+Doppio account : uno ordinario per posta e lavoro quotidiano, uno privilegiato solo per le attività amministrative.
+MFA obbligatoria per tutti gli accessi privilegiati e remoti.
+Minimo privilegio e just-in-time : privilegi elevati attivati solo per il tempo necessario (PAM).
+Separazione : chi amministra non è chi verifica i log; chi sviluppa non amministra la produzione, ove possibile.
+Fornitori : accessi remoti su richiesta, con sessione approvata, registrata e disattivata a fine intervento; nessun accesso permanente non monitorato.
+Uscita dell’ADS : revoca immediata, rotazione delle password dei sistemi e delle chiavi che conosceva, verifica di eventuali backdoor o account dormienti.
+
+### SCHERMATA 6 — La verifica annuale: come si fa
+1 Aggiornare l’elenco ADS (interni ed esterni) e confrontarlo con gli account privilegiati realmente attivi
+2 Estrarre un campione di access log per ciascun ADS (es. 2 settimane per trimestre) e verificare orari, sistemi, anomalie
+3 Verificare integrità e conservazione dei log (≥ 6 mesi), MFA, doppio account, vault
+4 Intervistare gli ADS sulle istruzioni ricevute e sugli incidenti dell’anno
+5 Verbale con esito, non conformità, azioni correttive e date; firma del titolare o del delegato
+La verifica può essere svolta dal referente privacy/DPO o da un auditor, mai dall’ADS su sé stesso. Il verbale è uno dei primi documenti richiesti dal Garante in ispezione insieme all’elenco ADS.

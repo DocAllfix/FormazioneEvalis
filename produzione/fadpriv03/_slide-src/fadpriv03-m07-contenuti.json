@@ -1,0 +1,353 @@
+[
+  {
+    "id": "fadpriv03_m07_s001",
+    "layout": "apertura",
+    "kicker": "Modulo 07",
+    "titolo": "IA, cloud e dati: la doppia lente",
+    "corsoLabel": "Privacy per manager e ADS · GDPR",
+    "eyebrow": "Modulo 07",
+    "sottotitolo": "In questo modulo i progetti digitali vengono letti con due criteri insieme: il sistema di IA e il trattamento dei dati personali. Da qui discendono ruolo del deployer, limiti d’uso e responsabilità operative.",
+    "agenda": [
+      "Due regolamenti",
+      "Ruolo del deployer",
+      "Responsabilità d’uso",
+      "Pratiche vietate",
+      "Valutazione integrata"
+    ]
+  },
+  {
+    "id": "fadpriv03_m07_s002",
+    "layout": "cards",
+    "kicker": "Alto rischio",
+    "titolo": "Deployer nei processi di lavoro",
+    "intro": "Quando la IA incide su accesso al lavoro, carriera o permanenza, non è più un software neutro. Il deployer deve governare uso conforme, controllo umano, informazione alle persone e ricostruibilità delle decisioni.",
+    "cards": [
+      {
+        "h": "Ambiti critici",
+        "d": "Selezione, prestazioni, compiti, promozioni, licenziamenti, credito"
+      },
+      {
+        "h": "Uso conforme",
+        "d": "Dentro limiti, scenari e istruzioni del fornitore"
+      },
+      {
+        "h": "Sorveglianza reale",
+        "d": "Capire l’output, fermare, correggere, deviare"
+      },
+      {
+        "h": "Informazione e log",
+        "d": "Lavoratori, rappresentanze e tracce dell’uso"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m07_s003",
+    "layout": "confronto",
+    "kicker": "Rischio limitato",
+    "titolo": "Trasparenza esterna, competenza interna",
+    "intro": "Anche gli usi a rischio limitato o minimo richiedono regole chiare. La disciplina qui si regge su due pilastri complementari: far riconoscere la IA a chi interagisce e formare chi la usa.",
+    "a": {
+      "h": "Trasparenza",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Chatbot riconoscibile come sistema automatizzato"
+        },
+        {
+          "d": "Contenuti generati con etichette adeguate"
+        },
+        {
+          "d": "Output IA non scambiato per fatto validato"
+        }
+      ]
+    },
+    "b": {
+      "h": "Alfabetizzazione",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Obbligo richiamato dall’articolo 4"
+        },
+        {
+          "d": "Dal febbraio 2025 livello sufficiente"
+        },
+        {
+          "d": "Sapere scopo, limiti, errori, quando fermarsi"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv03_m07_s004",
+    "layout": "tabella",
+    "kicker": "Policy operativa",
+    "titolo": "Strumenti ammessi e dati in ingresso",
+    "cols": [
+      "Area",
+      "Decisione di policy",
+      "Soglia minima"
+    ],
+    "righe": [
+      [
+        "Strumenti",
+        "Elenco chiuso approvato",
+        "Solo contratto aziendale"
+      ],
+      [
+        "Fornitore",
+        "DPA coerente",
+        "Ruoli e trattamento chiariti"
+      ],
+      [
+        "Dati e training",
+        "Nessun riuso del provider",
+        "Addestramento escluso"
+      ],
+      [
+        "Localizzazione",
+        "Server o trasferimento governati",
+        "UE o copertura adeguata"
+      ],
+      [
+        "Input",
+        "No dati identificabili o riservati",
+        "Uso solo dopo anonimizzazione"
+      ]
+    ]
+  },
+  {
+    "id": "fadpriv03_m07_s005",
+    "layout": "flusso",
+    "kicker": "Governance dell’output",
+    "titolo": "Responsabilità umana e tracciabilità",
+    "intro": "Autorizzare uno strumento non basta. La policy deve trasformare l’uso della IA in una catena verificabile: chi controlla il contenuto, chi decide sulle persone, chi approva all’esterno e come l’organizzazione lascia traccia.",
+    "passi": [
+      {
+        "h": "Verificare i fatti",
+        "d": "Non solo tono, forma o plausibilità"
+      },
+      {
+        "h": "Controllo sostanziale",
+        "d": "Obbligatorio se l’output riguarda persone"
+      },
+      {
+        "h": "Approvazione esterna",
+        "d": "Chi diffonde il contenuto deve essere identificabile"
+      },
+      {
+        "h": "Correggere e segnalare",
+        "d": "Errore gestito nel canale previsto"
+      },
+      {
+        "h": "Tracciare l’uso",
+        "d": "Registro, DPIA e audit periodici"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m07_s006",
+    "layout": "numeri",
+    "kicker": "Caso HR",
+    "titolo": "Cinque condizioni per partire",
+    "intro": "La preselezione dei CV con IA entra nell’alto rischio perché incide sull’accesso al lavoro. Il progetto può partire solo se le condizioni preventive sono chiare, documentate e realmente applicabili.",
+    "numeri": [
+      {
+        "n": "1",
+        "h": "DPIA preventiva",
+        "d": ""
+      },
+      {
+        "n": "2",
+        "h": "Informativa ai candidati",
+        "d": ""
+      },
+      {
+        "n": "3",
+        "h": "Sorveglianza umana effettiva",
+        "d": ""
+      },
+      {
+        "n": "4",
+        "h": "Log del percorso di selezione",
+        "d": ""
+      },
+      {
+        "n": "5",
+        "h": "Verifica concreta dei bias",
+        "d": ""
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m07_s007",
+    "layout": "tabella",
+    "kicker": "Cloud e SaaS",
+    "titolo": "Le verifiche prima della firma",
+    "cols": [
+      "Area",
+      "Che cosa verificare",
+      "Perché conta"
+    ],
+    "righe": [
+      [
+        "Geografia",
+        "Dove stanno dati e supporto",
+        "Possibili accessi o sub-fornitori extra UE"
+      ],
+      [
+        "Contratto",
+        "DPA e copertura del trasferimento",
+        "Articolo 28, DPF o SCC con TIA"
+      ],
+      [
+        "Sicurezza",
+        "Cifratura, MFA, SSO, chiavi",
+        "Presidio tecnico e accessi governati"
+      ],
+      [
+        "Log",
+        "Esportabilità e livello di dettaglio",
+        "Ricostruzione di eventi e configurazioni"
+      ],
+      [
+        "Incidenti",
+        "Notifica e procedura di breach",
+        "Idealmente entro 24 o 48 ore"
+      ]
+    ]
+  },
+  {
+    "id": "fadpriv03_m07_s008",
+    "layout": "confronto",
+    "kicker": "Rischi invisibili",
+    "titolo": "Training del provider e shadow IT",
+    "intro": "Nei servizi cloud o SaaS i problemi più seri spesso non sono visibili nell’interfaccia. Due rischi ricorrenti sono il riuso dei dati da parte del fornitore e gli strumenti attivati fuori dalla governance aziendale.",
+    "a": {
+      "h": "Uso dei dati del provider",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Può diventare finalità propria del fornitore"
+        },
+        {
+          "d": "Training o miglioramento da escludere"
+        },
+        {
+          "d": "No a rassicurazioni solo commerciali"
+        },
+        {
+          "d": "Serve testo contrattuale preciso"
+        }
+      ]
+    },
+    "b": {
+      "h": "Shadow IT",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Attivazioni autonome fuori da IT"
+        },
+        {
+          "d": "Prove rapide pagate con carta"
+        },
+        {
+          "d": "Trattamenti e trasferimenti non censiti"
+        },
+        {
+          "d": "Account e fornitori senza qualifica"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv03_m07_s009",
+    "layout": "timeline",
+    "kicker": "Esercizio guidato",
+    "titolo": "Piattaforma marketing: sequenza prima della firma",
+    "intro": "Davanti a una piattaforma statunitense di analisi comportamentale con IA predittiva, il compito manageriale è chiudere i presidi nell’ordine corretto. La firma arriva solo dopo che trasferimento, contratto e rischio sono stati verificati.",
+    "tappe": [
+      {
+        "t": "01",
+        "h": "Trasferimento",
+        "d": "Verificare DPF oppure SCC con TIA"
+      },
+      {
+        "t": "02",
+        "h": "DPA",
+        "d": "Articolo 28 ed esclusione dell’addestramento"
+      },
+      {
+        "t": "03",
+        "h": "DPIA",
+        "d": "Necessaria per profilazione su larga scala"
+      },
+      {
+        "t": "04",
+        "h": "Tavolo interfunzionale",
+        "d": "Marketing, acquisti, privacy, sicurezza, dato"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m07_s010",
+    "layout": "organigramma",
+    "kicker": "Esercizio guidato",
+    "titolo": "Adempimenti tra avvio del servizio ed esercizio",
+    "intro": "Dopo la firma, gli adempimenti si separano in due tempi diversi: ciò che rende il trattamento pronto all’uso con dati reali e ciò che ne controlla coerenza, tracciabilità e aggiornamento nel tempo.",
+    "radice": {
+      "h": "Dopo la firma",
+      "d": "Ordina gli adempimenti per fase operativa"
+    },
+    "rami": [
+      {
+        "h": "All’avvio",
+        "d": "Il trattamento entra nel perimetro reale",
+        "voci": [
+          "Informativa clienti aggiornata",
+          "Registro dei trattamenti aggiornato",
+          "Formazione degli utenti",
+          "Designazione come autorizzati"
+        ]
+      },
+      {
+        "h": "In esercizio",
+        "d": "Controllo continuo del servizio",
+        "voci": [
+          "Access review semestrale",
+          "Verifica dei log",
+          "Riesame annuale della DPIA",
+          "Riesame annuale del contratto"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m07_s011",
+    "layout": "chiusura",
+    "kicker": "Sintesi operativa",
+    "titolo": "Le quattro regole da portare via",
+    "modNum": "07",
+    "punti": [
+      {
+        "h": "Inquadra prima lo strumento",
+        "d": "Funzione reale, dati toccati, persone coinvolte, processo impattato"
+      },
+      {
+        "h": "Leggi il caso con due lenti",
+        "d": "AI Act e GDPR si intrecciano nel contesto concreto"
+      },
+      {
+        "h": "Classifica prima di acquistare",
+        "d": "Vietato, alto rischio o uso meno severo cambiano gli obblighi"
+      },
+      {
+        "h": "Trasforma la policy in pratica",
+        "d": "Strumenti ammessi, dati vietati, responsabilità e verifiche nel tempo"
+      }
+    ],
+    "prossimo": {
+      "modulo": "08",
+      "titolo": "Ispezioni, sanzioni, responsabilità e audit interno"
+    }
+  }
+]

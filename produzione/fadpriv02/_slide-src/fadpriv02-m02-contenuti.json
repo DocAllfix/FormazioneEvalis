@@ -1,0 +1,124 @@
+[
+ {
+  "id": "fadpriv02_m02_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 2",
+  "titolo": "Le minacce che imitano il lavoro",
+  "corsoLabel": "Aggiornamento privacy · GDPR",
+  "eyebrow": "Modulo 2",
+  "sottotitolo": "Le frodi attuali usano contesto reale, tono credibile e tempi opportuni. La difesa non è più cercare errori vistosi: è verificare la sostanza della richiesta, il canale usato e la procedura che ti viene chiesto di aggirare.",
+  "agenda": [
+   "Phishing mirato e CEO fraud",
+   "QR, SMS e chiamate ingannevoli",
+   "Login clonati, deepfake, MFA fatigue",
+   "Tre domande prima di agire",
+   "Canale indipendente come regola"
+  ]
+ },
+ {
+  "id": "fadpriv02_m02_s002",
+  "layout": "numeri",
+  "kicker": "Criterio di verifica",
+  "titolo": "Cinque casi: legittimo o sospetto",
+  "intro": "Non serve indovinare. Conta il motivo per cui un messaggio merita fiducia oppure va trattato come rischio: contesto, richiesta, urgenza, canale e possibilità di verifica indipendente.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "SMS pacco con link abbreviato: sospetto",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Email aziendale su riunione interna: legittima",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Chiamata IT che chiede OTP: sospetta",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Fornitore con nuovo IBAN: sospetto",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "Notifica MFA dopo password inserita: legittima",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpriv02_m02_s003",
+  "layout": "confronto",
+  "kicker": "Strumenti pubblici",
+  "titolo": "Uso utile e confini netti",
+  "intro": "Gli assistenti online possono aiutare su bozze e sintesi, ma ogni contenuto inserito esce dal perimetro aziendale. Il criterio pratico è semplice: usare solo materiale generico, anonimizzato e non riconducibile a persone o pratiche reali.",
+  "a": {
+   "h": "Puoi usare",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Bozze da testi già pubblici"
+    },
+    {
+     "d": "Riassunti di contenuti pubblici"
+    },
+    {
+     "d": "Testi anonimizzati e generici"
+    },
+    {
+     "d": "Riformulazioni senza dati identificativi"
+    }
+   ]
+  },
+  "b": {
+   "h": "Non inserire",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Nomi, contatti, codici fiscali, IBAN"
+    },
+    {
+     "d": "Contratti, buste paga, valutazioni"
+    },
+    {
+     "d": "Verbali, reclami, dati sanitari"
+    },
+    {
+     "d": "Credenziali, chiavi, documenti interni"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpriv02_m02_s004",
+  "layout": "chiusura",
+  "kicker": "Da portare via",
+  "titolo": "Le abitudini che riducono il rischio",
+  "modNum": "02",
+  "punti": [
+   {
+    "h": "Aggiorna senza rimandare",
+    "d": "Ogni rinvio lascia aperte vulnerabilità già note"
+   },
+   {
+    "h": "MFA solo per azioni avviate da te",
+    "d": "Mai approvare richieste inattese o comunicare OTP"
+   },
+   {
+    "h": "Password diverse, gestite bene",
+    "d": "Il password manager evita il riuso tra privato e lavoro"
+   },
+   {
+    "h": "Proteggi schermo, rete e videocamera",
+    "d": "VPN sempre, niente wifi aperti, attenzione a ciò che si vede"
+   }
+  ],
+  "prossimo": {
+   "modulo": "03",
+   "titolo": "Novità normative e aziendali"
+  }
+ }
+]

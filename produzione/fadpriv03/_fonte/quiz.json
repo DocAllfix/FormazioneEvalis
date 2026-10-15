@@ -1,0 +1,526 @@
+{
+  "checkpoint": [
+    {
+      "modulo": "m01",
+      "domanda": "Il principio di accountability richiede al titolare di:",
+      "opzioni": [
+        "Spuntare le misure minime di legge",
+        "Scegliere misure adeguate e poterne dimostrare l’adozione",
+        "Chiedere l’autorizzazione al Garante per ogni trattamento"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Un’impresa con 40 dipendenti che tratta i certificati medici del personale:",
+      "opzioni": [
+        "È esente dal registro dei trattamenti",
+        "Deve tenere il registro perché tratta dati particolari in modo non occasionale",
+        "Deve tenere il registro solo se ha un DPO"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "La DPIA va avviata:",
+      "opzioni": [
+        "Dopo il go-live, per verificare i rischi reali",
+        "Prima dell’avvio del trattamento, dal manager proponente con referente privacy e IT",
+        "Solo su richiesta del Garante"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Un responsabile di funzione può autorizzare i propri collaboratori al trattamento:",
+      "opzioni": [
+        "Sempre, in quanto superiore gerarchico",
+        "Solo se designato per iscritto dal titolare (art. 2-quaterdecies)",
+        "Solo se è anche DPO"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Alla cessazione di un dipendente gli accessi vanno disattivati:",
+      "opzioni": [
+        "Entro 30 giorni",
+        "Il giorno stesso",
+        "Entro la fine del mese"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Il consulente del lavoro che elabora le buste paga è:",
+      "opzioni": [
+        "Titolare autonomo",
+        "Responsabile del trattamento con contratto art. 28",
+        "Autorizzato interno"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Un fornitore SaaS con server negli USA può essere usato se:",
+      "opzioni": [
+        "È una grande azienda nota",
+        "Ha una base di trasferimento valida (DPF o clausole standard con TIA)",
+        "I dati sono solo di dipendenti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Le sanzioni disciplinari per violazione delle istruzioni privacy sono applicabili se:",
+      "opzioni": [
+        "Il DPO le propone",
+        "Sono previste nel codice disciplinare affisso (art. 7 Stat. Lav.)",
+        "Il Garante le autorizza"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Per installare telecamere in un reparto dove lavorano dipendenti serve:",
+      "opzioni": [
+        "Solo il cartello",
+        "Accordo sindacale o autorizzazione dell’Ispettorato del lavoro, oltre a informativa",
+        "Il consenso di ogni dipendente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "I metadati della posta elettronica dei dipendenti possono essere conservati per esigenze tecniche di norma fino a:",
+      "opzioni": [
+        "21 giorni",
+        "6 mesi",
+        "Illimitatamente"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un software di controllo installato su un PC aziendale senza accordo:",
+      "opzioni": [
+        "È lecito perché il PC è strumento di lavoro",
+        "Trasforma lo strumento in impianto di controllo e viola l’art. 4",
+        "È lecito se il dipendente è informato a posteriori"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "L’IT può analizzare i log per identificare l’autore di una segnalazione whistleblowing?",
+      "opzioni": [
+        "Sì, su ordine della direzione",
+        "No, mai: l’identità del segnalante è protetta",
+        "Solo se la segnalazione è infondata"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Il tecnico esterno della software house con accesso remoto al database:",
+      "opzioni": [
+        "Non è ADS perché non è dipendente",
+        "Va designato ADS dal fornitore e comunicato al titolare",
+        "È ADS solo se accede ogni giorno"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Gli access log degli ADS devono essere conservati per almeno:",
+      "opzioni": [
+        "30 giorni",
+        "6 mesi",
+        "5 anni"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "La verifica dell’operato degli ADS è:",
+      "opzioni": [
+        "Facoltativa",
+        "Almeno annuale, documentata con verbale",
+        "Svolta dall’ADS stesso"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Log conservati sul server amministrato dall’ADS, da lui modificabili:",
+      "opzioni": [
+        "Soddisfano il provvedimento",
+        "Non soddisfano il requisito di inalterabilità",
+        "Vanno bene se cifrati"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "domanda": "L’art. 32 GDPR:",
+      "opzioni": [
+        "Elenca le misure minime obbligatorie",
+        "Richiede misure adeguate al rischio e la verifica periodica della loro efficacia",
+        "Impone la certificazione ISO 27001"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "domanda": "La regola 3-2-1 per i backup prevede:",
+      "opzioni": [
+        "3 copie, 2 supporti diversi, 1 copia offline o immutabile",
+        "3 backup al giorno",
+        "1 backup ogni 3 settimane"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Per NIS2 la pre-notifica di un incidente significativo all’ACN va inviata entro:",
+      "opzioni": [
+        "24 ore",
+        "72 ore",
+        "30 giorni"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Gli account amministrativi condivisi (“admin” unico):",
+      "opzioni": [
+        "Sono accettabili se la password è robusta",
+        "Vanno eliminati o gestiti tramite vault con check-out tracciato",
+        "Sono obbligatori per i backup"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Il termine di 72 ore decorre:",
+      "opzioni": [
+        "Dalla conoscenza da parte del titolare (anche tramite l’ADS o un manager)",
+        "Dalla riunione del team privacy",
+        "Dal lunedì successivo se l’evento avviene nel fine settimana"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Un portatile cifrato rubato, con cancellazione remota riuscita:",
+      "opzioni": [
+        "Va notificato sempre",
+        "Va registrato nel registro delle violazioni; notifica non necessaria se il rischio è improbabile",
+        "Non va neppure registrato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Se dopo 72 ore mancano ancora informazioni:",
+      "opzioni": [
+        "Si attende di averle tutte",
+        "Si notifica in fasi, integrando successivamente",
+        "Si rinuncia alla notifica"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "domanda": "La comunicazione agli interessati è dovuta quando:",
+      "opzioni": [
+        "Sempre",
+        "Il rischio per i loro diritti è elevato",
+        "Il Garante la ordina"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "domanda": "L’uso di un sistema di IA per valutare le prestazioni dei dipendenti è:",
+      "opzioni": [
+        "Vietato",
+        "Ad alto rischio: DPIA, sorveglianza umana, informazione ai lavoratori",
+        "A rischio minimo"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Il Regolamento IA impone al datore che usa sistemi di IA:",
+      "opzioni": [
+        "Nulla fino al 2030",
+        "L’alfabetizzazione del personale coinvolto",
+        "La nomina di un ADS"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Uno strumento di IA generativa consumer gratuito può essere usato con dati dei clienti?",
+      "opzioni": [
+        "Sì, se la chat viene cancellata",
+        "No: serve uno strumento con contratto aziendale e comunque dati anonimizzati",
+        "Sì, solo per bozze"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Un SaaS attivato dal marketing con carta aziendale senza passare dall’IT:",
+      "opzioni": [
+        "È un trattamento non censito di cui risponde il manager dell’area",
+        "Non riguarda la privacy",
+        "È lecito se costa meno di 100 € al mese"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Durante un’ispezione del Garante:",
+      "opzioni": [
+        "Si producono rapidamente i documenti mancanti",
+        "Si forniscono i documenti esistenti, si risponde al vero e si coinvolgono referente privacy e legale",
+        "Si rifiuta l’accesso senza avvocato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "domanda": "La mancata notifica di un data breach rientra nella fascia sanzionatoria:",
+      "opzioni": [
+        "Fino a 10 milioni o 2% del fatturato",
+        "Fino a 20 milioni o 4%",
+        "Non è sanzionata"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m08",
+      "domanda": "L’ADS che cancella i log per nascondere un accesso:",
+      "opzioni": [
+        "Commette solo una violazione disciplinare",
+        "Può rispondere anche penalmente (accesso abusivo, falsità verso il Garante)",
+        "Non ha responsabilità personale"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "domanda": "L’audit interno privacy va:",
+      "opzioni": [
+        "Fatto solo dopo un’ispezione",
+        "Svolto periodicamente, con rapporto e riesame della direzione",
+        "Delegato al fornitore IT"
+      ],
+      "corretta": 1
+    }
+  ],
+  "esame": [
+    {
+      "modulo": "m01",
+      "domanda": "Il principio di accountability (art. 5.2 e 24) impone al titolare di:",
+      "opzioni": [
+        "Notificare i trattamenti al Garante",
+        "Adottare misure adeguate e poterne dimostrare l’efficacia",
+        "Ottenere sempre il consenso"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Il registro dei trattamenti è obbligatorio per una PMI quando:",
+      "opzioni": [
+        "Ha più di 250 dipendenti",
+        "Tratta dati non occasionalmente o dati particolari (quasi sempre)",
+        "Ha nominato un DPO"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "La DPIA è sempre obbligatoria per:",
+      "opzioni": [
+        "Qualsiasi software gestionale",
+        "Monitoraggio sistematico dei lavoratori o uso di IA per decisioni sulle persone",
+        "L’invio di newsletter"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Il responsabile di funzione può autorizzare i collaboratori se:",
+      "opzioni": [
+        "È dirigente",
+        "È designato per iscritto ai sensi dell’art. 2-quaterdecies",
+        "Il DPO lo approva"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Il contratto art. 28 deve prevedere tra l’altro:",
+      "opzioni": [
+        "Il prezzo del servizio",
+        "Sub-responsabili solo con autorizzazione, assistenza per breach e diritti, cancellazione a fine contratto",
+        "La nomina del fornitore a DPO"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Per trasferire dati a un fornitore USA non aderente al DPF servono:",
+      "opzioni": [
+        "Clausole contrattuali standard con valutazione d’impatto del trasferimento",
+        "Solo il DPA",
+        "Il consenso dei dipendenti"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Telecamere in un reparto con lavoratori richiedono:",
+      "opzioni": [
+        "Solo cartelli",
+        "Accordo sindacale o autorizzazione ITL, informativa, retention breve",
+        "Autorizzazione del Garante"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un keylogger installato sui PC aziendali senza accordo sindacale:",
+      "opzioni": [
+        "È lecito perché il PC è strumento di lavoro",
+        "Viola l’art. 4 Stat. Lav. e il GDPR",
+        "È lecito con informativa"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "La conservazione ordinaria dei metadati della posta elettronica dei dipendenti è di norma fino a:",
+      "opzioni": [
+        "21 giorni",
+        "90 giorni",
+        "1 anno"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Chi va designato amministratore di sistema?",
+      "opzioni": [
+        "Solo i dipendenti dell’IT",
+        "Chiunque, interno o esterno, abbia privilegi tecnici sui sistemi contenenti dati personali",
+        "Solo il responsabile IT"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Gli access log degli ADS devono essere:",
+      "opzioni": [
+        "Completi, inalterabili, verificabili, conservati almeno 6 mesi",
+        "Attivati solo su richiesta del Garante",
+        "Conservati sul server amministrato dall’ADS"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m04",
+      "domanda": "La verifica annuale dell’operato degli ADS:",
+      "opzioni": [
+        "È svolta dagli ADS stessi",
+        "È svolta dal titolare o da un soggetto indipendente, con verbale",
+        "Non è obbligatoria se esiste la ISO 27001"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "domanda": "L’art. 32 GDPR richiede:",
+      "opzioni": [
+        "Un elenco fisso di misure minime",
+        "Misure adeguate al rischio, inclusa la verifica periodica dell’efficacia",
+        "La cifratura di tutti i dati senza eccezioni"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Il backup immutabile o offline serve principalmente contro:",
+      "opzioni": [
+        "Il phishing",
+        "Il ransomware",
+        "I guasti di rete"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Per NIS2 la pre-notifica di un incidente significativo va inviata all’ACN entro:",
+      "opzioni": [
+        "24 ore",
+        "72 ore",
+        "7 giorni"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Il termine di 72 ore per la notifica di un breach decorre:",
+      "opzioni": [
+        "Dalla conoscenza del titolare, anche tramite ADS o manager",
+        "Dalla riunione del team",
+        "Dalla conferma del fornitore"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m06",
+      "domanda": "Un portatile cifrato rubato con cancellazione remota riuscita:",
+      "opzioni": [
+        "Va notificato sempre al Garante",
+        "Va registrato; la notifica può non essere dovuta se il rischio è improbabile",
+        "Non va registrato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "domanda": "L’uso di IA per la preselezione dei CV è:",
+      "opzioni": [
+        "Vietato dal Regolamento IA",
+        "Ad alto rischio: DPIA, sorveglianza umana, informazione a candidati e RSU",
+        "Libero"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Dati dei clienti incollati in uno strumento di IA consumer gratuito:",
+      "opzioni": [
+        "Sono consentiti per bozze",
+        "Costituiscono comunicazione a terzi non autorizzata",
+        "Sono consentiti se la chat è cancellata"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Le dichiarazioni false rese al Garante durante un’ispezione:",
+      "opzioni": [
+        "Sono una violazione amministrativa minore",
+        "Sono reato (art. 168 Codice privacy)",
+        "Non hanno conseguenze"
+      ],
+      "corretta": 1
+    }
+  ]
+}

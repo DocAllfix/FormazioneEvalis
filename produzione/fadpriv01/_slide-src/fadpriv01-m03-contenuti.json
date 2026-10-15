@@ -1,0 +1,279 @@
+[
+  {
+    "id": "fadpriv01_m03_s001",
+    "layout": "apertura",
+    "kicker": "Modulo 3",
+    "titolo": "Il fattore umano",
+    "corsoLabel": "Privacy per il personale · GDPR",
+    "eyebrow": "Modulo 3",
+    "sottotitolo": "Chi attacca sfrutta abitudini, fretta e fiducia: le misure tecniche dell'IT e i tuoi comportamenti funzionano solo insieme.",
+    "agenda": [
+      "Difese dell'IT: antivirus, firewall, backup",
+      "Difese tue: password, phishing, schermo bloccato",
+      "Piccole leggerezze che diventano incidenti",
+      "Anche chi è esperto si fida troppo degli automatismi"
+    ]
+  },
+  {
+    "id": "fadpriv01_m03_s002",
+    "layout": "cards",
+    "kicker": "Credenziali",
+    "titolo": "Password robuste senza scorciatoie",
+    "intro": "La password efficace non è solo difficile da indovinare: deve essere lunga, unica e sostenibile nel tempo. Il password manager serve proprio a evitare riuso, semplificazioni e appunti impropri.",
+    "cards": [
+      {
+        "h": "Lunga",
+        "d": "Almeno dodici caratteri, meglio una frase"
+      },
+      {
+        "h": "Unica",
+        "d": "Mai riusarla tra servizi personali e lavoro"
+      },
+      {
+        "h": "Non ovvia",
+        "d": "Escludi nomi, date, azienda, schemi banali"
+      },
+      {
+        "h": "Gestita bene",
+        "d": "Password manager, non post-it o memoria"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m03_s003",
+    "layout": "definizione",
+    "kicker": "Phishing",
+    "titolo": "Che cos'è il phishing",
+    "eyebrow": "",
+    "definizione": "Messaggio costruito per farti agire prima di verificare: può arrivare via email, SMS, telefonata o chat e sfrutta urgenza, fiducia e automatismi.",
+    "punti": []
+  },
+  {
+    "id": "fadpriv01_m03_s004",
+    "layout": "flusso",
+    "kicker": "Phishing",
+    "titolo": "La verifica in quattro passaggi",
+    "intro": "Quando un messaggio chiede un'azione concreta, la verifica va fatta su quattro fronti. Link, allegati e richieste sensibili si controllano con calma, poi si conferma tutto fuori dal messaggio.",
+    "passi": [
+      {
+        "h": "Controlla il link",
+        "d": "Destinazione reale coerente con il testo"
+      },
+      {
+        "h": "Valuta l'allegato",
+        "d": "Zip, html o file inattesi: fermati"
+      },
+      {
+        "h": "Esamina la richiesta",
+        "d": "IBAN, pagamenti, dati: cautela massima"
+      },
+      {
+        "h": "Cambia canale",
+        "d": "Non cliccare: verifica con contatto noto"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m03_s005",
+    "layout": "numeri",
+    "kicker": "Esercizio guidato",
+    "titolo": "I 4 segnali della falsa mail",
+    "intro": "Nel caso del falso direttore, la storia appare credibile solo finché la guardi di fretta. Appena rallenti, emergono quattro indicatori che bloccano l'azione e impongono verifica esterna.",
+    "numeri": [
+      {
+        "n": "1",
+        "h": "Dominio del mittente non autentico",
+        "d": ""
+      },
+      {
+        "n": "2",
+        "h": "Urgenza con scadenza immediata",
+        "d": ""
+      },
+      {
+        "n": "3",
+        "h": "Cambio IBAN solo via email",
+        "d": ""
+      },
+      {
+        "n": "4",
+        "h": "Allegato zip inatteso",
+        "d": ""
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m03_s006",
+    "layout": "ciclo",
+    "kicker": "Postazione fisica",
+    "titolo": "Quattro difese della postazione fisica",
+    "intro": "Una postazione sicura riduce esposizioni silenziose ma molto concrete. Schermo, monitor, documenti e stampe devono restare sotto controllo anche quando nessuno sta compiendo un attacco visibile.",
+    "ciclo": false,
+    "centro": "Postazione sicura",
+    "nodi": [
+      {
+        "h": "Blocco schermo",
+        "d": "Sempre, anche per assenze brevissime"
+      },
+      {
+        "h": "Monitor protetto",
+        "d": "Orientamento corretto o filtro privacy"
+      },
+      {
+        "h": "Clean desk",
+        "d": "Niente documenti lasciati in vista"
+      },
+      {
+        "h": "Stampe e scarti",
+        "d": "Ritiro immediato e distruzione corretta"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m03_s007",
+    "layout": "confronto",
+    "kicker": "Mobilità operativa",
+    "titolo": "Proteggere dispositivi e comunicazioni",
+    "intro": "Nei dispositivi mobili il rischio sta sia nell'accesso locale sia negli invii frettolosi. Protezione tecnica e attenzione operativa lavorano insieme per limitare furti, smarrimenti ed errori di comunicazione.",
+    "a": {
+      "h": "Sul dispositivo",
+      "sub": "",
+      "punti": [
+        {
+          "d": "PIN o biometria attivi"
+        },
+        {
+          "d": "Cifratura dei dati"
+        },
+        {
+          "d": "Aggiornamenti senza rinvii"
+        },
+        {
+          "d": "USB ignote mai collegate"
+        }
+      ]
+    },
+    "b": {
+      "h": "Negli invii e negli incidenti",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Segnala subito furto o smarrimento"
+        },
+        {
+          "d": "Rileggi sempre i destinatari"
+        },
+        {
+          "d": "Attenzione ai nomi simili"
+        },
+        {
+          "d": "Dati sensibili: verifica prima dell'invio"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv01_m03_s008",
+    "layout": "tabella",
+    "kicker": "Smart working",
+    "titolo": "Cinque regole per il lavoro remoto",
+    "cols": [
+      "Ambito",
+      "Regola essenziale"
+    ],
+    "righe": [
+      [
+        "Dispositivi",
+        "Usa solo strumenti aziendali o autorizzati"
+      ],
+      [
+        "Dati",
+        "Niente cloud personali o email private"
+      ],
+      [
+        "Connessione",
+        "VPN sì, wifi pubblici no"
+      ],
+      [
+        "Ambiente",
+        "Schermo riservato, sfondo neutro, microfono spento"
+      ],
+      [
+        "Stampe",
+        "Solo se necessarie, poi distruzione corretta"
+      ]
+    ]
+  },
+  {
+    "id": "fadpriv01_m03_s009",
+    "layout": "confronto",
+    "kicker": "Esercizio guidato",
+    "titolo": "Le 8 situazioni del controllo finale",
+    "intro": "A fine giornata la sicurezza si misura nei dettagli lasciati o rimossi dalla postazione. In questo controllo, quattro situazioni sono corrette e quattro aprono una violazione evitabile.",
+    "a": {
+      "h": "Corrette",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Monitor bloccato"
+        },
+        {
+          "d": "Armadio del personale chiuso a chiave"
+        },
+        {
+          "d": "Chiavetta USB personale nel cassetto chiuso"
+        },
+        {
+          "d": "Agenda con appuntamenti riposta nel cassetto"
+        }
+      ]
+    },
+    "b": {
+      "h": "Violazioni",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Password su post-it sul monitor"
+        },
+        {
+          "d": "Buste paga lasciate in stampante"
+        },
+        {
+          "d": "Portatile aziendale acceso e sbloccato"
+        },
+        {
+          "d": "Oggetto di accesso lasciato esposto"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv01_m03_s010",
+    "layout": "chiusura",
+    "kicker": "Chiusura",
+    "titolo": "Quattro regole operative da portare al checkpoint",
+    "modNum": "03",
+    "punti": [
+      {
+        "h": "Credenziali solide, mai condivise",
+        "d": "Password uniche e robuste, password manager e due fattori."
+      },
+      {
+        "h": "Sul phishing prevale la verifica",
+        "d": "Non cliccare né rispondere nel dubbio; conferma da altro canale e segnala."
+      },
+      {
+        "h": "Postazione e carta richiedono disciplina",
+        "d": "Schermo bloccato, clean desk, stampe ritirate, documenti distrutti o chiusi."
+      },
+      {
+        "h": "Dispositivi e comunicazioni vanno protetti",
+        "d": "PIN o biometria, cifratura, aggiornamenti, attenzione ai destinatari e segnalazione immediata di smarrimenti."
+      }
+    ],
+    "prossimo": {
+      "modulo": "04",
+      "titolo": "Data breach: riconoscerlo e segnalarlo"
+    }
+  }
+]

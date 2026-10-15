@@ -1,0 +1,396 @@
+[
+  {
+    "id": "fadpriv03_m03_s001",
+    "layout": "apertura",
+    "kicker": "Modulo 3",
+    "titolo": "Articolo 4: perimetro, finalità, procedura",
+    "corsoLabel": "Privacy per manager e ADS · GDPR",
+    "eyebrow": "Modulo 3",
+    "sottotitolo": "In questo modulo distinguiamo controlli a distanza, strumenti di lavoro e uso dei dati: la domanda chiave non è quale tecnologia adottare, ma quale problema legittimo risolvere.",
+    "agenda": [
+      "Perimetro dell'articolo 4",
+      "Finalità ammesse",
+      "Tecnologie coinvolte",
+      "Filtro preventivo",
+      "Errore da evitare"
+    ]
+  },
+  {
+    "id": "fadpriv03_m03_s002",
+    "layout": "confronto",
+    "kicker": "Distinzione",
+    "titolo": "Strumento di lavoro o strumento di controllo",
+    "intro": "Non basta guardare il nome del dispositivo: devi valutarne la funzione concreta, i dati raccolti e il grado di sorveglianza che rende possibile sulla persona.",
+    "a": {
+      "h": "Permette l'attività",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Computer, email, gestionali, badge"
+        },
+        {
+          "d": "Serve a svolgere la prestazione"
+        },
+        {
+          "d": "In generale senza accordo o ITL"
+        }
+      ]
+    },
+    "b": {
+      "h": "Osserva l'attività",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Keylogger, tracking occulto, classifiche"
+        },
+        {
+          "d": "Raccoglie dati granulari e sistematici"
+        },
+        {
+          "d": "Rientra nelle garanzie del controllo"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv03_m03_s003",
+    "layout": "numeri",
+    "kicker": "Checklist",
+    "titolo": "Le sette domande prima del controllo",
+    "intro": "Quando c'è urgenza, la checklist evita decisioni impulsive: prima di introdurre strumenti o consultare dati, il manager deve verificare sette condizioni operative e documentali.",
+    "numeri": [
+      {
+        "n": "1",
+        "h": "Esigenza concreta e documentata",
+        "d": ""
+      },
+      {
+        "n": "2",
+        "h": "Accordo sindacale o autorizzazione ITL",
+        "d": ""
+      },
+      {
+        "n": "3",
+        "h": "Informativa e regolamento d'uso",
+        "d": ""
+      },
+      {
+        "n": "4",
+        "h": "Monitoraggio sistematico e DPIA",
+        "d": ""
+      },
+      {
+        "n": "5",
+        "h": "Registro trattamenti aggiornato",
+        "d": ""
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m03_s004",
+    "layout": "ciclo",
+    "kicker": "Videosorveglianza",
+    "titolo": "I quattro pilastri della videosorveglianza",
+    "intro": "La telecamera non si progetta partendo dall'hardware: la correttezza dipende da finalità, inquadrature, tempi di conservazione e informativa resa prima dell'ingresso nell'area ripresa.",
+    "ciclo": false,
+    "centro": "Impianto video",
+    "nodi": [
+      {
+        "h": "Finalità",
+        "d": "Sicurezza, patrimonio, esigenze organizzative"
+      },
+      {
+        "h": "Inquadrature",
+        "d": "Solo aree a rischio e varchi"
+      },
+      {
+        "h": "Conservazione",
+        "d": "Di regola 24-72 ore; fino a 7 giorni motivati"
+      },
+      {
+        "h": "Informativa",
+        "d": "Cartello prima del raggio d'azione"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m03_s005",
+    "layout": "cards",
+    "kicker": "Uso delle immagini",
+    "titolo": "Dalle immagini contano soprattutto accessi e uso",
+    "intro": "Dopo l'installazione, il rischio si sposta sulla consultazione dei filmati, sull'estrazione delle clip e sulle funzioni intelligenti che aumentano pervasività e automatismo.",
+    "cards": [
+      {
+        "h": "Accessi nominativi",
+        "d": "Solo soggetti designati e istruiti"
+      },
+      {
+        "h": "Consultazioni tracciate",
+        "d": "Chi vede cosa, quando e perché"
+      },
+      {
+        "h": "Antifurto non basta",
+        "d": "Con lavoratori serve accordo o ITL"
+      },
+      {
+        "h": "Analisi intelligente",
+        "d": "DPIA centrale; facciale dei dipendenti di fatto precluso"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m03_s006",
+    "layout": "flusso",
+    "kicker": "Email aziendale",
+    "titolo": "Regolare la casella lungo tutto il ciclo",
+    "intro": "La casella email è strumento di lavoro, ma richiede regole chiare: uso personale, assenze e cessazioni vanno disciplinati prima che sorga l'emergenza operativa.",
+    "passi": [
+      {
+        "h": "Uso ordinario",
+        "d": "Definire se l'uso privato è vietato o tollerato"
+      },
+      {
+        "h": "Assenza",
+        "d": "Accesso mirato, soggetti autorizzati, verbale"
+      },
+      {
+        "h": "Risposta automatica",
+        "d": "Reindirizza contatti e riduce intrusioni"
+      },
+      {
+        "h": "Cessazione",
+        "d": "Disattivazione rapida e selezione dei soli messaggi necessari"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m03_s007",
+    "layout": "confronto",
+    "kicker": "Metadati 2024",
+    "titolo": "Metadati email: la soglia dei 21 giorni",
+    "intro": "Mittenti, destinatari, orari e volumi non sono dati innocui: se osservati sistematicamente, possono ricostruire relazioni, ritmi di lavoro e comportamenti individuali.",
+    "a": {
+      "h": "Fino a 21 giorni",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Esigenze tecniche documentate"
+        },
+        {
+          "d": "Perimetro di funzionamento e sicurezza"
+        },
+        {
+          "d": "Retention da verificare nei sistemi"
+        }
+      ]
+    },
+    "b": {
+      "h": "Oltre 21 giorni",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Muta la natura del trattamento"
+        },
+        {
+          "d": "Serve accordo sindacale o ITL"
+        },
+        {
+          "d": "Non bastano inerzia o default del fornitore"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv03_m03_s008",
+    "layout": "cards",
+    "kicker": "Web, GPS, difesa",
+    "titolo": "Tre logiche per web, GPS e difesa",
+    "intro": "Navigazione, geolocalizzazione e controlli difensivi vanno letti con la stessa domanda: stai prevenendo un rischio concreto oppure stai monitorando ordinariamente la prestazione.",
+    "cards": [
+      {
+        "h": "Navigazione web",
+        "d": "Prima filtri e dati aggregati; poi eventuali approfondimenti mirati"
+      },
+      {
+        "h": "Geolocalizzazione",
+        "d": "Solo nel turno; accordo o ITL, informativa, DPIA"
+      },
+      {
+        "h": "Controlli difensivi",
+        "d": "Valutarli contro rischi reali, non per sorvegliare"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m03_s009",
+    "layout": "tabella",
+    "kicker": "Esercizio guidato",
+    "titolo": "Quattro casi: esito e criterio decisivo",
+    "cols": [
+      "Caso",
+      "Esito",
+      "Snodo"
+    ],
+    "righe": [
+      [
+        "Telecamere in magazzino, accordo, cartelli, 72 ore",
+        "Tende al lecito",
+        "Area di rischio, no audio, accessi ristretti"
+      ],
+      [
+        "Keylogger senza accordo, dichiarato sicurezza",
+        "Illecito",
+        "Controllo continuo e sproporzionato"
+      ],
+      [
+        "Accesso totale alla casella in malattia",
+        "Illecito",
+        "Nessuna procedura, nessun limite di scopo"
+      ],
+      [
+        "Filtro siti di gioco d'azzardo con informativa",
+        "Tende al lecito",
+        "Misura tecnica preventiva, non osservazione individuale"
+      ]
+    ]
+  },
+  {
+    "id": "fadpriv03_m03_s010",
+    "layout": "cards",
+    "kicker": "Esercizio guidato",
+    "titolo": "Quattro casi tra lecito e illecito",
+    "intro": "I casi più sanzionati si chiariscono guardando quattro snodi pratici: durata del controllo, finalità tecnica reale, perimetro dell'indagine e uso di strumenti eccessivamente invasivi.",
+    "cards": [
+      {
+        "h": "GPS 24 ore",
+        "d": "Illecito: monitora anche vita privata e tempi extra-lavoro"
+      },
+      {
+        "h": "Metadati email 21 giorni",
+        "d": "Tende al lecito se tecnica, informata, senza riuso prestazionale"
+      },
+      {
+        "h": "Log dopo anomalia",
+        "d": "Lecito se mirato, successivo al sospetto, verbalizzato"
+      },
+      {
+        "h": "Facciale per presenze",
+        "d": "Illecito: biometria sproporzionata rispetto alla finalità"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m03_s011",
+    "layout": "organigramma",
+    "kicker": "Whistleblowing",
+    "titolo": "Canale interno e perimetro di accesso",
+    "intro": "Nel whistleblowing la tutela non dipende da una policy ben scritta, ma da una progettazione concreta di obbligo, ruoli, tecnologia e accessi. La riservatezza del segnalante va resa operativa.",
+    "radice": {
+      "h": "Canale interno riservato",
+      "d": "Protegge chi segnala prima che emerga un caso"
+    },
+    "rami": [
+      {
+        "h": "Chi è obbligato",
+        "d": "Imprese con almeno 50 dipendenti o modello 231",
+        "voci": []
+      },
+      {
+        "h": "Accessi",
+        "d": "Solo pochissimi soggetti designati",
+        "voci": [
+          "perimetro strettissimo",
+          "esclusi curiosi e superiori coinvolti"
+        ]
+      },
+      {
+        "h": "Tecnologia",
+        "d": "Canale separato dagli strumenti ordinari",
+        "voci": [
+          "meglio piattaforma dedicata",
+          "cifratura e flussi distinti"
+        ]
+      },
+      {
+        "h": "Ruolo IT",
+        "d": "Supporto tecnico senza leggere i contenuti",
+        "voci": [
+          "manutenzione non è gestione",
+          "nessun accesso sostanziale"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m03_s012",
+    "layout": "confronto",
+    "kicker": "Whistleblowing",
+    "titolo": "Tutela reale contro tutela apparente",
+    "intro": "Un canale è credibile solo se impedisce di risalire al segnalante per via tecnica, documenta i rischi con la DPIA e limita davvero tempi, accessi e iniziative improprie.",
+    "a": {
+      "h": "Richiesto",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Sicurezza tecnica senza identificazione del segnalante"
+        },
+        {
+          "d": "DPIA obbligatoria costruita sul canale"
+        },
+        {
+          "d": "Informativa specifica sul trattamento"
+        },
+        {
+          "d": "Conservazione massima: cinque anni dalla chiusura"
+        }
+      ]
+    },
+    "b": {
+      "h": "Da evitare",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Log nominativi della piattaforma"
+        },
+        {
+          "d": "Analisi di rete per risalire agli accessi"
+        },
+        {
+          "d": "Archiviazione indefinita per prudenza"
+        },
+        {
+          "d": "Manager che cercano autonomamente l'autore"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv03_m03_s013",
+    "layout": "chiusura",
+    "kicker": "Da portare via",
+    "titolo": "La griglia decisionale sui controlli",
+    "modNum": "03",
+    "punti": [
+      {
+        "h": "Parti dalla finalità",
+        "d": "Rischio reale, concreto, documentabile"
+      },
+      {
+        "h": "Distingui lo strumento",
+        "d": "Lavoro necessario o controllo a distanza"
+      },
+      {
+        "h": "Valuta prima la procedura",
+        "d": "Accordo o autorizzazione quando richiesti"
+      },
+      {
+        "h": "Limita dati e utilizzi",
+        "d": "Informativa, accessi ristretti, tempi brevi, no derive sulla produttività"
+      }
+    ],
+    "prossimo": {
+      "modulo": "04",
+      "titolo": "Amministratori di sistema"
+    }
+  }
+]

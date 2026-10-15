@@ -1,0 +1,409 @@
+[
+ {
+  "id": "fadpriv03_m04_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 4",
+  "titolo": "Amministratore di sistema: perimetro e controlli",
+  "corsoLabel": "Privacy per manager e ADS · GDPR",
+  "eyebrow": "Modulo 4",
+  "sottotitolo": "La figura non si riconosce dal titolo in organigramma, ma dai privilegi reali sui sistemi. Questo modulo mette a fuoco perimetro, misure richieste, log di accesso e verifica dell'operato.",
+  "agenda": [
+   "Perimetro reale",
+   "Ragione del presidio",
+   "Misure da adottare",
+   "Tracce operative",
+   "Controllo periodico"
+  ]
+ },
+ {
+  "id": "fadpriv03_m04_s002",
+  "layout": "confronto",
+  "kicker": "Perimetro",
+  "titolo": "Interni ed esterni: stesso rischio, governo diverso",
+  "intro": "Interni ed esterni condividono l'impatto dei privilegi elevati. Cambia invece il modello di governo: responsabilità, istruzioni, contratto, nominativi e modalità di verifica devono essere gestiti in modo coerente.",
+  "a": {
+   "h": "Interni",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Operano dentro l'organizzazione"
+    },
+    {
+     "d": "Spesso cumulano più funzioni critiche"
+    },
+    {
+     "d": "Designazione, istruzioni, verifiche dirette"
+    },
+    {
+     "d": "Rischio se controllano anche i propri log"
+    }
+   ]
+  },
+  "b": {
+   "h": "Esterni",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Tecnici di terze parti con privilegi"
+    },
+    {
+     "d": "Spesso remoti o attivi su chiamata"
+    },
+    {
+     "d": "Contratto con misure equivalenti"
+    },
+    {
+     "d": "Nominativi reali sempre comunicati"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpriv03_m04_s003",
+  "layout": "cards",
+  "kicker": "Prima misura",
+  "titolo": "Esperienza, capacità, affidabilità operative",
+  "intro": "Prima di assegnare privilegi amministrativi, l'organizzazione deve accertare e documentare tre profili distinti. Non conta la disponibilità del momento: conta l'idoneità concreta a operare in ambienti critici.",
+  "cards": [
+   {
+    "h": "Esperienza",
+    "d": "Piattaforme note, incidenti gestiti, contesti critici"
+   },
+   {
+    "h": "Capacità",
+    "d": "Metodo, perimetro autorizzato, tracce, change"
+   },
+   {
+    "h": "Affidabilità",
+    "d": "Credenziali curate, istruzioni rispettate, niente scorciatoie"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m04_s004",
+  "layout": "confronto",
+  "kicker": "Seconda e terza misura",
+  "titolo": "Designazione analitica ed elenco aggiornato",
+  "intro": "La scelta della persona va tradotta in atti chiari e aggiornati. Servono un perimetro individuale di operatività e una vista d'insieme che renda confrontabili persone, account, sistemi e fornitori.",
+  "a": {
+   "h": "Designazione individuale",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Collega nome, privilegi e sistemi"
+    },
+    {
+     "d": "Perimetro analitico, non generico"
+    },
+    {
+     "d": "Aggiornata a ogni cambio rilevante"
+    },
+    {
+     "d": "Allinea incarico effettivo e accessi"
+    }
+   ]
+  },
+  "b": {
+   "h": "Elenco amministratori",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Vista d'insieme dei soggetti abilitati"
+    },
+    {
+     "d": "Riporta identità, funzioni, collocazione"
+    },
+    {
+     "d": "Confronta persone, account e fornitori"
+    },
+    {
+     "d": "Supporta trasparenza interna e verifiche"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpriv03_m04_s005",
+  "layout": "evidenza",
+  "kicker": "Quarta misura",
+  "titolo": "La verifica annuale su tre piani",
+  "eyebrow": "",
+  "testo": "La verifica annuale rende reale il principio di responsabilità. Non basta nominare e tracciare: bisogna controllare se privilegi, log, fornitori e comportamenti sono rimasti coerenti con misure e istruzioni.",
+  "dark": true
+ },
+ {
+  "id": "fadpriv03_m04_s006",
+  "layout": "flusso",
+  "kicker": "Quinta misura",
+  "titolo": "Access log e fornitori nello stesso controllo",
+  "intro": "La registrazione degli accessi vale solo se si integra con identità, account e rapporto contrattuale. Per i fornitori, la tracciabilità deve essere imposta e resa verificabile lungo tutta la catena tecnica.",
+  "passi": [
+   {
+    "h": "Tracciare",
+    "d": "Quando, da dove, con quale identità"
+   },
+   {
+    "h": "Collegare",
+    "d": "Log, designazioni, elenco, account reali"
+   },
+   {
+    "h": "Vincolare il fornitore",
+    "d": "Misure coerenti nel contratto articolo 28"
+   },
+   {
+    "h": "Attribuire",
+    "d": "Nominativi delle persone che operano"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m04_s007",
+  "layout": "numeri",
+  "kicker": "Esercizio guidato",
+  "titolo": "Sei casi per riconoscere l'amministratore",
+  "intro": "Ogni caso si risolve con la stessa domanda: il profilo consente di superare i limiti ordinari della mansione, amministrare sistemi o incidere sulle tracce dell'attività?",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Credenziali di dominio: sì",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Profilo paghe applicativo: no",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Software house sul database: sì",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Pagina social aziendale: no",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "Admin locale su tutti i PC: sì",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m04_s008",
+  "layout": "tabella",
+  "kicker": "Access log",
+  "titolo": "Cinque dati minimi per un log utile",
+  "cols": [
+   "Dato",
+   "Funzione di controllo"
+  ],
+  "righe": [
+   [
+    "Timestamp coerente via NTP",
+    "Ordina gli eventi tra sistemi"
+   ],
+   [
+    "Account attribuibile",
+    "Riconduce l'accesso a una persona"
+   ],
+   [
+    "Sistema coinvolto",
+    "Indica dove si è operato"
+   ],
+   [
+    "Tipo di evento",
+    "Login, logout, falliti, elevazioni"
+   ],
+   [
+    "Origine connessione",
+    "Distingue sede interna e accesso remoto"
+   ]
+  ]
+ },
+ {
+  "id": "fadpriv03_m04_s009",
+  "layout": "definizione",
+  "kicker": "Integrità dei log",
+  "titolo": "Inalterabilità tramite raccolta separata dei log",
+  "eyebrow": "",
+  "definizione": "Raccolta dedicata, distinta dai sistemi sorgente, su cui l'amministratore monitorato non ha diritti di modifica o cancellazione; integrità rafforzata con WORM, firma o hash.",
+  "punti": []
+ },
+ {
+  "id": "fadpriv03_m04_s010",
+  "layout": "cards",
+  "kicker": "Access log",
+  "titolo": "Verificabilità e conservazione dei log",
+  "intro": "Un log utile non basta che esista: deve essere ricercabile, correlabile e disponibile nel tempo, senza dipendere dalla memoria del singolo tecnico o da ambienti controllati dalla stessa persona verificata.",
+  "cards": [
+   {
+    "h": "Ricerca efficace",
+    "d": "Estrazione per utente, periodo, sistema, evento"
+   },
+   {
+    "h": "Controllo ripetibile",
+    "d": "Recupero rapido, procedure chiare, minore dipendenza personale"
+   },
+   {
+    "h": "Conservazione minima",
+    "d": "Almeno sei mesi; spesso dodici come buona pratica"
+   },
+   {
+    "h": "Errore critico",
+    "d": "Log sullo stesso server o ambiente cancellabile"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m04_s011",
+  "layout": "organigramma",
+  "kicker": "Identità tecnica",
+  "titolo": "L'account privilegiato deve essere personale",
+  "intro": "La tracciabilità regge solo se il privilegio è collegato a una persona riconoscibile. Dove l'utenza tecnica comune è inevitabile, serve almeno un controllo forte sull'uso della credenziale.",
+  "radice": {
+   "h": "Account privilegiato nominativo",
+   "d": "Ogni azione deve essere attribuibile al singolo operatore"
+  },
+  "rami": [
+   {
+    "h": "Utenze condivise",
+    "d": "Creano ambiguità e indeboliscono responsabilità e sicurezza",
+    "voci": [
+     "password scambiata facilmente",
+     "cambi difficili al turnover",
+     "eventi non attribuibili con rigore"
+    ]
+   },
+   {
+    "h": "Eccezioni tecniche",
+    "d": "Se l'account comune resta, governa la credenziale",
+    "voci": [
+     "vault con check out tracciato",
+     "accesso limitato nel tempo",
+     "intervento motivato e registrato"
+    ]
+   },
+   {
+    "h": "Doppio account",
+    "d": "Separare lavoro quotidiano e attività amministrative",
+    "voci": [
+     "posta e web con profilo ordinario",
+     "privilegi solo per compiti tecnici",
+     "minore esposizione a errori banali"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m04_s012",
+  "layout": "ciclo",
+  "kicker": "Governance dei privilegi",
+  "titolo": "Privilegi minimi e ruoli separati",
+  "intro": "Ridurre i poteri permanenti e distribuire i controlli rende più leggibili i log, limita l'esposizione e protegge anche il professionista corretto da zone grigie organizzative.",
+  "ciclo": false,
+  "centro": "Controllo del potere tecnico",
+  "nodi": [
+   {
+    "h": "Minimo privilegio",
+    "d": "Solo poteri strettamente necessari e temporanei"
+   },
+   {
+    "h": "Just in time",
+    "d": "Elevazione via PAM per una finestra operativa precisa"
+   },
+   {
+    "h": "Separazione dei compiti",
+    "d": "Esecuzione e verifica non coincidono dove possibile"
+   },
+   {
+    "h": "Compensazioni ragionevoli",
+    "d": "Approvazioni e tracciamenti nelle strutture piccole"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m04_s013",
+  "layout": "timeline",
+  "kicker": "Verifica annuale",
+  "titolo": "La sequenza operativa della verifica",
+  "intro": "Il controllo annuale funziona quando parte dalla riconciliazione tra documenti e sistemi, passa da campioni realistici e verifica prima la qualità dell'ambiente di controllo.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Riconciliare ADS e account attivi",
+    "d": "Allineare elenco formale e privilegi realmente presenti"
+   },
+   {
+    "t": "02",
+    "h": "Analizzare un campione di log",
+    "d": "Orari, sistemi raggiunti, anomalie, periodi significativi"
+   },
+   {
+    "t": "03",
+    "h": "Controllare i presidi tecnici",
+    "d": "Integrità, sei mesi di log, MFA, doppio account, vault"
+   },
+   {
+    "t": "04",
+    "h": "Intervistare gli ADS",
+    "d": "Verifica operativa, non interrogatorio formale"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m04_s014",
+  "layout": "split",
+  "kicker": "Metodo e responsabilità",
+  "titolo": "Indipendenza del controllo e verbale utile",
+  "lead": "La verifica vale davvero solo se chi controlla è competente e autonomo, e se il verbale trasforma osservazioni e criticità in evidenze chiare, azioni correttive e responsabilità definite.",
+  "punti": [
+   {
+    "h": "Chi verifica",
+    "d": "L'ADS non può controllare sé stesso"
+   },
+   {
+    "h": "Profilo adeguato",
+    "d": "Competenza tecnica e autonomia dall'oggetto esaminato"
+   },
+   {
+    "h": "Verbale completo",
+    "d": "Perimetro, periodo, campione, strumenti, interviste, esito"
+   },
+   {
+    "h": "Follow up formale",
+    "d": "Azioni, responsabili, scadenze, firma del titolare o delegato"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m04_s015",
+  "layout": "chiusura",
+  "kicker": "Sintesi del modulo",
+  "titolo": "I capisaldi da portare al checkpoint",
+  "modNum": "04",
+  "punti": [
+   {
+    "h": "ADS = privilegio effettivo",
+    "d": "Conta ciò che può fare, non il titolo"
+   },
+   {
+    "h": "Cinque misure integrate",
+    "d": "Valutazione, designazione, elenco, verifica, registrazione accessi"
+   },
+   {
+    "h": "Log davvero probatori",
+    "d": "Completezza, inalterabilità, verificabilità, conservazione minima"
+   },
+   {
+    "h": "Account e ruoli sotto governo",
+    "d": "Nominativi, doppio account, MFA, minimo privilegio"
+   }
+  ],
+  "prossimo": {
+   "modulo": "05",
+   "titolo": "Misure tecniche e organizzative dell'articolo 32"
+  }
+ }
+]

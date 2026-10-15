@@ -1,0 +1,204 @@
+[
+  {
+    "id": "fadpriv01_m02_s001",
+    "layout": "apertura",
+    "kicker": "Modulo 2",
+    "titolo": "Chi decide e chi esegue: titolare e responsabile",
+    "corsoLabel": "Privacy per il personale · GDPR",
+    "eyebrow": "Modulo 2",
+    "sottotitolo": "Il titolare decide perché e come si trattano i dati; il responsabile esterno li tratta per suo conto, dentro un contratto scritto e istruzioni precise.",
+    "agenda": [
+      "Titolare: decide finalità e mezzi",
+      "Responsabile: tratta per conto, art. 28",
+      "Contratto scritto: attività, limiti, istruzioni",
+      "Esempio: presenze e cedolini in outsourcing",
+      "Non ogni soggetto esterno è responsabile"
+    ]
+  },
+  {
+    "id": "fadpriv01_m02_s002",
+    "layout": "organigramma",
+    "kicker": "Figure operative",
+    "titolo": "Autorizzato, DPO e referente privacy",
+    "intro": "Nel trattamento quotidiano contano tre presìdi distinti: chi opera entro istruzioni, chi orienta e controlla, chi raccoglie e instrada le esigenze operative.",
+    "radice": {
+      "h": "Ruoli diversi, confini chiari",
+      "d": "Ogni figura interviene con compiti propri, senza sovrapporsi né assorbire responsabilità altrui."
+    },
+    "rami": [
+      {
+        "h": "Autorizzato",
+        "d": "Tratta dati sotto l'autorità del titolare",
+        "voci": [
+          "Solo dati necessari",
+          "Finalità assegnate",
+          "Istruzioni scritte"
+        ]
+      },
+      {
+        "h": "DPO",
+        "d": "Controllo, consulenza e punto di riferimento",
+        "voci": [
+          "Dubbi e richieste",
+          "Incidenti privacy",
+          "Criticità e orientamento"
+        ]
+      },
+      {
+        "h": "Referente privacy",
+        "d": "Presidio operativo interno",
+        "voci": [
+          "Inoltro anomalie",
+          "Supporto quotidiano",
+          "Raccordo organizzativo"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m02_s003",
+    "layout": "tabella",
+    "kicker": "Caso guidato",
+    "titolo": "I quattro ruoli in Officine Meridiana",
+    "cols": [
+      "Soggetto",
+      "Ruolo",
+      "Perché"
+    ],
+    "righe": [
+      [
+        "Officine Meridiana",
+        "Titolare",
+        "Decide finalità, mezzi e trattamenti del personale"
+      ],
+      [
+        "Studio paghe",
+        "Responsabile",
+        "Opera per conto dell'azienda su paghe e adempimenti"
+      ],
+      [
+        "Anna, amministrazione",
+        "Autorizzata",
+        "Usa il gestionale entro mansione e istruzioni"
+      ],
+      [
+        "Signor Russo",
+        "Interessato",
+        "I dati trattati si riferiscono alla sua persona"
+      ]
+    ]
+  },
+  {
+    "id": "fadpriv01_m02_s004",
+    "layout": "cards",
+    "kicker": "Istruzioni operative",
+    "titolo": "Tre limiti operativi per gli autorizzati",
+    "intro": "Le istruzioni scritte trasformano i principi privacy in comportamenti verificabili: accesso mirato, comunicazioni solo necessarie, strumenti coerenti con le policy aziendali.",
+    "cards": [
+      {
+        "h": "Accesso selettivo",
+        "d": "Solo i dati utili alla mansione assegnata"
+      },
+      {
+        "h": "Comunicazioni verificate",
+        "d": "Colleghi e terzi solo se autorizzati"
+      },
+      {
+        "h": "Niente canali personali",
+        "d": "WhatsApp, email private, chiavette solo se previste"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m02_s005",
+    "layout": "flusso",
+    "kicker": "Ciclo quotidiano dei dati",
+    "titolo": "Quattro presìdi da mantenere sempre",
+    "intro": "Molti incidenti non nascono da attacchi complessi, ma da abitudini ordinarie: copie fuori controllo, custodia debole, ritardi nelle segnalazioni, chiusure gestite male.",
+    "passi": [
+      {
+        "h": "Evita copie non autorizzate",
+        "d": "Fuori dai canali previsti il controllo si perde"
+      },
+      {
+        "h": "Custodisci documenti e dispositivi",
+        "d": "Schermo bloccato, stampe recuperate, credenziali protette"
+      },
+      {
+        "h": "Segnala subito le anomalie",
+        "d": "Errori, smarrimenti, accessi sospetti, invii errati"
+      },
+      {
+        "h": "Alla cessazione, chiudi il perimetro",
+        "d": "Nessun uso residuo di dati, strumenti e accessi"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m02_s006",
+    "layout": "numeri",
+    "kicker": "Diritti degli interessati",
+    "titolo": "Quattro diritti da saper riconoscere",
+    "intro": "Gli articoli dal quindici al ventidue traducono la tutela in richieste concrete: vedere i dati, correggerli, cancellarli quando possibile, sospenderne temporaneamente l'uso.",
+    "numeri": [
+      {
+        "n": "1",
+        "h": "Accesso: dati, finalità, tempi, destinatari, copia",
+        "d": ""
+      },
+      {
+        "n": "2",
+        "h": "Rettifica: correzione di dati inesatti o incompleti",
+        "d": ""
+      },
+      {
+        "n": "3",
+        "h": "Cancellazione: possibile, ma non assoluta",
+        "d": ""
+      },
+      {
+        "n": "4",
+        "h": "Limitazione: trattamento sospeso nei casi previsti",
+        "d": ""
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m02_s007",
+    "layout": "evidenza",
+    "kicker": "Altri diritti e tempi",
+    "titolo": "Tre diritti meno frequenti e una scadenza",
+    "eyebrow": "",
+    "testo": "Alcune richieste arrivano raramente, ma vanno riconosciute subito: portabilità, opposizione, decisioni automatizzate. Su tutte vale una regola comune di tempo e tracciabilità.",
+    "dark": true
+  },
+  {
+    "id": "fadpriv01_m02_s008",
+    "layout": "chiusura",
+    "kicker": "Sintesi operativa",
+    "titolo": "Gestire bene una richiesta, subito",
+    "modNum": "02",
+    "punti": [
+      {
+        "h": "Riconosci il diritto",
+        "d": "Vale qualsiasi canale e qualsiasi formulazione"
+      },
+      {
+        "h": "Non agire da solo",
+        "d": "Niente risposte nel merito o cancellazioni autonome"
+      },
+      {
+        "h": "Inoltra in giornata",
+        "d": "Referente privacy o DPO, con data e ora"
+      },
+      {
+        "h": "Niente verifiche superflue",
+        "d": "L'identità si controlla solo se necessario"
+      }
+    ],
+    "prossimo": {
+      "modulo": "03",
+      "titolo": "Sicurezza quotidiana: password, phishing, dispositivi, lavoro da remoto"
+    }
+  }
+]

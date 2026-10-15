@@ -1,0 +1,52 @@
+## SEZIONE 1 — Modulo 2 del committente — Minacce attuali (18 min)
+
+### SCHERMATA 1 — Il phishing è cambiato
+I messaggi fraudolenti non hanno più errori di ortografia: sono scritti con l’intelligenza artificiale, in italiano perfetto, con il tono del tuo direttore e i riferimenti giusti presi dai social e dal sito aziendale. I segnali da osservare sono cambiati:
+Spear phishing / CEO fraud
+Mail mirata che cita progetti e persone reali. Chiede bonifici, cambio IBAN, dati del personale.
+Quishing
+Codice QR in mail, cartelli, bollette false: porta a un sito che ruba credenziali. Non inquadrare QR non attesi.
+Smishing e vishing
+SMS “pacco in giacenza”, chiamate dal “servizio IT” o dalla “banca” che chiedono codici OTP o di installare un software.
+Deepfake vocali e video
+Voce del dirigente clonata in una chiamata o in un vocale WhatsApp: “approva subito il pagamento”.
+MFA fatigue
+Decine di notifiche di autenticazione finché non ne approvi una. Se non hai avviato tu l’accesso: rifiuta e segnala.
+Pagine di login clonate
+Copie identiche del portale aziendale o di Microsoft 365: controlla l’indirizzo nella barra, non la grafica.
+Regola invariata
+Qualsiasi richiesta di denaro, credenziali, codici o dati del personale si verifica su un canale diverso da quello su cui è arrivata, e il numero lo prendi tu dalla rubrica, non dal messaggio.
+
+### SCHERMATA 2 — Esercizio · Quale messaggio è legittimo?
+Esercizio Per ciascun messaggio indica se è Sospetto o Legittimo . Tutte le risposte corrette per proseguire.
+[ESERCIZIO PRECLUSIVO]
+- SMS: “Il tuo pacco è in giacenza, paga 1,99 € qui: bit.ly/…” → Sospetto
+- Mail dal dominio aziendale che ricorda la riunione di lunedì con link al calendario interno → Legittimo
+- Chiamata dal “servizio IT” che chiede di leggere il codice OTP appena ricevuto → Sospetto
+- Mail del fornitore abituale che comunica un nuovo IBAN “da usare da oggi” → Sospetto
+- Notifica dell’app di autenticazione aziendale subito dopo che hai inserito la password → Legittimo
+- Vocale del direttore che chiede di pagare entro un’ora senza passare dalla procedura → Sospetto
+Esito: Tutte corrette. Il nuovo IBAN comunicato via mail e l’OTP chiesto al telefono sono le frodi più frequenti dell’anno.
+
+### SCHERMATA 3 — Intelligenza artificiale generativa al lavoro
+Strumenti come ChatGPT, Copilot, Gemini e i traduttori automatici sono utili, ma ciò che incolli in uno strumento pubblico esce dall’azienda e può essere conservato o usato per addestrare il servizio.
+Mai inserire
+Nomi, contatti, codici fiscali, IBAN di clienti o dipendenti
+Contratti, buste paga, certificati, valutazioni del personale
+Verbali, reclami, dati sanitari, segnalazioni
+Credenziali, chiavi, documenti riservati
+Consentito
+Testi e dati anonimizzati (“il cliente X”, importi fittizi)
+Strumenti aziendali autorizzati dalla policy IT, con account aziendale
+Bozze generiche, riformulazioni, sintesi di documenti pubblici
+Esempio. Per rispondere a un reclamo, Luca incolla l’intera email del cliente (nome, indirizzo, numero d’ordine, problema di salute causato dal prodotto) in un chatbot gratuito. Ha comunicato dati particolari a un terzo non autorizzato: è un data breach. Avrebbe dovuto anonimizzare il testo o usare lo strumento aziendale.
+Regola
+Prima di usare un nuovo strumento di IA sul lavoro: è autorizzato dalla policy? Se no, chiedi. Se sì, comunque niente dati personali identificabili.
+
+### SCHERMATA 4 — Dispositivi, remoto, badge
+Aggiornamenti : installali quando richiesti; un dispositivo non aggiornato è la porta d’ingresso più usata.
+Autenticazione a due fattori attiva su posta, VPN, gestionali; app di autenticazione preferibile agli SMS.
+Password manager aziendale : una password diversa per ogni servizio, mai riusare quelle personali.
+Lavoro da remoto : VPN sempre, niente Wi-Fi pubblici aperti, schermo non visibile, riunioni video senza documenti alle spalle.
+Badge e accessi fisici : non far entrare sconosciuti “al seguito”, non prestare il badge, segnala persone non accompagnate nelle aree riservate.
+Dismissione : dispositivi, chiavette e documenti non si buttano: si consegnano all’IT o si distruggono secondo procedura.

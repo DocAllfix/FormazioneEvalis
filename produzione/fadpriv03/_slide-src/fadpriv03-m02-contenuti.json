@@ -1,0 +1,393 @@
+[
+  {
+    "id": "fadpriv03_m02_s001",
+    "layout": "apertura",
+    "kicker": "Modulo 2",
+    "titolo": "Ruoli di accesso e minimo privilegio",
+    "corsoLabel": "Privacy per manager e ADS · GDPR",
+    "eyebrow": "Modulo 2",
+    "sottotitolo": "In questo modulo metti a fuoco come definire profili coerenti con le mansioni, collegare manager e IT, evitare accessi ereditati e trasformare le autorizzazioni in un presidio operativo verificabile.",
+    "agenda": [
+      "Principio guida",
+      "Profili di accesso",
+      "Ruolo reale",
+      "Competenze da integrare",
+      "Benefici organizzativi"
+    ]
+  },
+  {
+    "id": "fadpriv03_m02_s002",
+    "layout": "timeline",
+    "kicker": "Ciclo di vita",
+    "titolo": "Il governo degli accessi nel tempo",
+    "intro": "Gli accessi non si assegnano una volta sola: vanno gestiti dall'ingresso alla cessazione, con revisioni puntuali quando il ruolo cambia e con un riesame periodico dell'esistente.",
+    "tappe": [
+      {
+        "t": "01",
+        "h": "Ingresso",
+        "d": "Profilo richiesto prima del primo accesso"
+      },
+      {
+        "t": "02",
+        "h": "Cambio o trasferimento",
+        "d": "Togli il superfluo, poi integra entro cinque giorni"
+      },
+      {
+        "t": "03",
+        "h": "Cessazione",
+        "d": "Account, dispositivi e accessi fisici chiusi il giorno stesso"
+      },
+      {
+        "t": "04",
+        "h": "Access review",
+        "d": "Riesame serio almeno una volta all'anno"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m02_s003",
+    "layout": "split",
+    "kicker": "Istruzioni e formazione",
+    "titolo": "Indicazioni pertinenti, apprendimento tracciato",
+    "lead": "Permessi corretti non bastano se mancano istruzioni aderenti al lavoro e formazione documentata. L'efficacia nasce da regole pratiche per area, consegna verificabile e aggiornamento lungo il rapporto.",
+    "punti": [
+      {
+        "h": "Per area",
+        "d": "Rischi e cautele cambiano con i compiti"
+      },
+      {
+        "h": "Testi pratici",
+        "d": "Dati, strumenti, finalità, limiti, divieti"
+      },
+      {
+        "h": "Consegna tracciata",
+        "d": "Ricezione verificabile con firma o accettazione"
+      },
+      {
+        "h": "Tre livelli",
+        "d": "Ingresso, aggiornamento annuale, formazione di ruolo"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m02_s004",
+    "layout": "evidenza",
+    "kicker": "Presidio manageriale",
+    "titolo": "Vigilanza organizzativa e reazione alle anomalie",
+    "eyebrow": "",
+    "testo": "Il presidio resta vivo solo se qualcuno verifica l'applicazione concreta delle misure. Il focus è sui processi e sugli strumenti, con controlli proporzionati e conseguenze coerenti con il quadro disciplinare.",
+    "dark": true
+  },
+  {
+    "id": "fadpriv03_m02_s005",
+    "layout": "definizione",
+    "kicker": "Fornitori esterni",
+    "titolo": "Chi tratta per conto dell'azienda",
+    "eyebrow": "",
+    "definizione": "Soggetto esterno che tratta dati personali per conto dell'azienda, secondo finalità di business e limiti operativi definiti dal titolare.",
+    "punti": []
+  },
+  {
+    "id": "fadpriv03_m02_s006",
+    "layout": "cards",
+    "kicker": "Articolo 28",
+    "titolo": "Cinque contenuti indispensabili del contratto",
+    "intro": "Il rapporto con il responsabile non può restare implicito. Il contratto serve a fissare perimetro, istruzioni, garanzie e catena del servizio, così da rendere controllabile il trattamento affidato.",
+    "cards": [
+      {
+        "h": "Trattamento affidato",
+        "d": "Oggetto, durata, natura, finalità, dati, interessati"
+      },
+      {
+        "h": "Istruzioni documentate",
+        "d": "Uso solo entro il perimetro deciso dall'azienda"
+      },
+      {
+        "h": "Riservatezza del personale",
+        "d": "Confidenzialità vincolante per chi accede"
+      },
+      {
+        "h": "Misure adeguate",
+        "d": "Sicurezza tecnica e organizzativa ex articolo trentadue"
+      },
+      {
+        "h": "Sub responsabili",
+        "d": "Autorizzazione scritta e obblighi equivalenti"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m02_s007",
+    "layout": "cards",
+    "kicker": "Prima della firma",
+    "titolo": "Due diligence minima e primo allarme",
+    "intro": "Un buon contratto non compensa un fornitore opaco. Prima di firmare servono verifiche proporzionate sul servizio, sulla catena tecnica e sui flussi di dati che possono cambiare il rischio reale.",
+    "cards": [
+      {
+        "h": "Dove stanno i dati",
+        "d": "Server, localizzazione, continuità operativa, Paesi terzi"
+      },
+      {
+        "h": "Chi sostiene il servizio",
+        "d": "Sub fornitori, hosting, help desk, piattaforme terze"
+      },
+      {
+        "h": "Che garanzie offre",
+        "d": "ISO IEC 27001 o SOC 2 come indizi"
+      },
+      {
+        "h": "Quando avvisa",
+        "d": "Tempi chiari di notifica del data breach"
+      },
+      {
+        "h": "Segnale d'allarme",
+        "d": "Si dichiara titolare autonomo in modo automatico"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m02_s008",
+    "layout": "tabella",
+    "kicker": "Esercizio guidato",
+    "titolo": "Otto casi, titolare autonomo o responsabile",
+    "cols": [
+      "Caso",
+      "Qualifica",
+      "Criterio chiave"
+    ],
+    "righe": [
+      [
+        "Software house cloud HR",
+        "Responsabile",
+        "Finalità aziendali del cliente"
+      ],
+      [
+        "Medico competente",
+        "Titolare autonomo",
+        "Obblighi e autonomia professionale"
+      ],
+      [
+        "Agenzia newsletter",
+        "Responsabile",
+        "Campagna definita dall'azienda"
+      ],
+      [
+        "Banca per stipendi",
+        "Titolare autonomo",
+        "Servizio bancario con obblighi propri"
+      ],
+      [
+        "Studio legale",
+        "Titolare autonomo",
+        "Autonomia tecnica nel contenzioso"
+      ],
+      [
+        "Consulente del lavoro",
+        "Responsabile",
+        "Elabora buste paga per conto"
+      ],
+      [
+        "Società di vigilanza",
+        "Responsabile",
+        "Gestisce l'impianto nel perimetro del cliente"
+      ],
+      [
+        "INPS, denunce contributive",
+        "Titolare autonomo",
+        "Funzioni pubbliche proprie"
+      ]
+    ]
+  },
+  {
+    "id": "fadpriv03_m02_s009",
+    "layout": "ciclo",
+    "kicker": "Paesi terzi",
+    "titolo": "Quando esiste davvero un trasferimento",
+    "intro": "Il trasferimento fuori dall'Unione Europea non coincide solo con un invio esplicito. Esiste anche quando architettura, assistenza o organizzazione rendono i dati accessibili o trattati in un Paese terzo.",
+    "ciclo": false,
+    "centro": "Dati accessibili fuori dallo SEE",
+    "nodi": [
+      {
+        "h": "Server esteri",
+        "d": "Infrastrutture cloud o SaaS fuori Europa"
+      },
+      {
+        "h": "Supporto remoto",
+        "d": "Tecnici extra SEE con accesso ai dati"
+      },
+      {
+        "h": "Sub fornitori globali",
+        "d": "Ticketing, sviluppo, monitoraggio, continuità"
+      },
+      {
+        "h": "Gruppo multinazionale",
+        "d": "Flussi verso capogruppo o società collegate"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m02_s010",
+    "layout": "numeri",
+    "kicker": "Trasferimenti",
+    "titolo": "Le tre basi del trasferimento",
+    "intro": "Quando il dato esce dall'Unione Europea, la domanda chiave non è quanto il fornitore sia noto, ma quale base giuridica copra davvero quel flusso e se il caso concreto rientri nello strumento scelto.",
+    "numeri": [
+      {
+        "n": "1",
+        "h": "Adeguatezza applicabile al caso concreto",
+        "d": ""
+      },
+      {
+        "n": "2",
+        "h": "Data Privacy Framework con destinatario certificato",
+        "d": ""
+      },
+      {
+        "n": "3",
+        "h": "Clausole standard corrette più TIA",
+        "d": ""
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m02_s011",
+    "layout": "confronto",
+    "kicker": "Gruppi ed eccezioni",
+    "titolo": "BCR e deroghe hanno logiche opposte",
+    "intro": "BCR e deroghe vengono spesso citate insieme, ma servono in scenari opposti. Tenere distinta questa logica evita due errori frequenti: presumere coperture infragruppo inesistenti e usare eccezioni come soluzione ordinaria.",
+    "a": {
+      "h": "BCR",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Flussi stabili infragruppo"
+        },
+        {
+          "d": "Regole interne approvate"
+        },
+        {
+          "d": "Base organizzata e continuativa"
+        },
+        {
+          "d": "Stesso gruppo non basta"
+        }
+      ]
+    },
+    "b": {
+      "h": "Deroghe art. 49",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Casi occasionali e non ripetitivi"
+        },
+        {
+          "d": "Porta di emergenza, non routine"
+        },
+        {
+          "d": "Mai per cloud o help desk stabili"
+        },
+        {
+          "d": "Scorciatoia da evitare"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv03_m02_s012",
+    "layout": "flusso",
+    "kicker": "Diritti degli interessati",
+    "titolo": "Le cinque fasi della gestione operativa",
+    "intro": "Nelle richieste degli interessati il manager è spesso il nodo operativo, perché conosce sistemi, archivi e percorsi interni. Un flusso semplice in cinque passi riduce ritardi, verifiche e ricerche improvvisate.",
+    "passi": [
+      {
+        "h": "Ricezione",
+        "d": "Registra arrivo e data iniziale"
+      },
+      {
+        "h": "Verifica dell'identità",
+        "d": "Controlli proporzionati al caso"
+      },
+      {
+        "h": "Ricerca",
+        "d": "Sistemi e archivi ragionevoli"
+      },
+      {
+        "h": "Valutazione dei limiti",
+        "d": "Esclusioni e tutele applicabili"
+      },
+      {
+        "h": "Risposta",
+        "d": "Esito chiaro, completo e tracciato"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m02_s013",
+    "layout": "organigramma",
+    "kicker": "Diritto di accesso",
+    "titolo": "Accesso del dipendente: perimetro corretto",
+    "intro": "Nelle richieste di accesso del dipendente il criterio non è chiudere o aprire tutto. Occorre distinguere i dati personali che lo riguardano dai contenuti di terzi e dalle ricerche senza perimetro.",
+    "radice": {
+      "h": "Accesso del dipendente",
+      "d": "Dati personali pertinenti, non esplorazione illimitata"
+    },
+    "rami": [
+      {
+        "h": "Ciò che spetta",
+        "d": "Dati personali che lo riguardano",
+        "voci": [
+          "Fascicolo personale",
+          "Valutazioni riferite alla persona",
+          "Log che lo identificano"
+        ]
+      },
+      {
+        "h": "Ciò che non spetta",
+        "d": "Contenuti di terzi o protetti",
+        "voci": [
+          "Valutazioni di altri colleghi",
+          "Note coperte da segreto professionale",
+          "Ricerca in tutte le caselle email"
+        ]
+      },
+      {
+        "h": "Ricerca ragionevole",
+        "d": "Perimetro plausibile e documentato",
+        "voci": [
+          "Sistemi coerenti con la richiesta",
+          "Archivi realmente pertinenti",
+          "Nessuna apertura indiscriminata"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m02_s014",
+    "layout": "chiusura",
+    "kicker": "Sintesi operativa",
+    "titolo": "Le quattro priorità del manager",
+    "modNum": "02",
+    "punti": [
+      {
+        "h": "Accessi",
+        "d": "Minimo privilegio dall'ingresso alla cessazione"
+      },
+      {
+        "h": "Istruzioni e vigilanza",
+        "d": "Formazione documentata e controlli sulle prassi"
+      },
+      {
+        "h": "Fornitori",
+        "d": "Articolo 28, due diligence, ruoli corretti"
+      },
+      {
+        "h": "Trasferimenti",
+        "d": "Base valida; deroghe solo eccezionali"
+      }
+    ],
+    "prossimo": {
+      "modulo": "03",
+      "titolo": "Controlli sui lavoratori"
+    }
+  }
+]

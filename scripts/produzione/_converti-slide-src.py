@@ -12,6 +12,9 @@ ETICHETTA = {
     "fadpdr125": "Parità di genere · UNI/PdR 125:2022",
     "fadpas24000": "Sistema di gestione sociale · PAS 24000:2022",
     "fadcfp01": "Carbon Footprint · ISO 14064-1 · ISO 14067",
+    "fadpriv01": "Privacy per il personale · GDPR",
+    "fadpriv02": "Aggiornamento privacy · GDPR",
+    "fadpriv03": "Privacy per manager e ADS · GDPR",
 }
 if CORSO not in ETICHETTA:
     raise SystemExit(f"Etichetta di corso mancante per {CORSO}: aggiungerla a ETICHETTA prima di convertire.")

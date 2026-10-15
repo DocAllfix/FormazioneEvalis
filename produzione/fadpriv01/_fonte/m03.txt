@@ -1,0 +1,99 @@
+## SEZIONE 1 — Modulo 3 del committente — Sicurezza quotidiana (40 min)
+
+### SCHERMATA 1 — Il fattore umano
+La grande maggioranza degli incidenti di sicurezza parte da un’azione umana: una password riutilizzata, un clic su un allegato, un documento lasciato sulla stampante, un portatile dimenticato sul treno. Le misure tecniche (antivirus, firewall, backup) le mette l’IT; le misure comportamentali le metti tu.
+Credenziali
+Password robuste, uniche, mai condivise. Autenticazione a due fattori ove disponibile.
+Posta e web
+Riconoscere phishing, verificare mittenti e link, non aprire allegati inattesi.
+Dispositivi e documenti
+Blocco schermo, cifratura, scrivania pulita, distruggidocumenti.
+Lavoro da remoto
+VPN, rete sicura, nessuno strumento personale non autorizzato, riservatezza negli spazi pubblici.
+
+### SCHERMATA 2 — Password: regole e verifica
+Esercizio Digita una password di prova (non quella vera) e osserva la valutazione. Per proseguire deve raggiungere il livello Robusta .
+Lunghezza minima consigliata: 12 caratteri.
+Fai così
+Almeno 12 caratteri, meglio una frase : CaffèAlleSette!Sempre2026
+Una password diversa per ogni servizio
+Usa il password manager aziendale
+Attiva l’autenticazione a due fattori (2FA)
+Mai
+Nome, data di nascita, nome azienda, “Estate2026!”
+Post-it sotto la tastiera o sul monitor
+Condividere la password con un collega “per fare prima”
+Riutilizzare la password personale per il lavoro
+[ESERCIZIO PRECLUSIVO]
+Valutatore di robustezza: almeno 12 caratteri, maiuscole e minuscole, cifre, simboli, nessuna parola prevedibile (nome azienda, anno, password).
+
+### SCHERMATA 3 — Phishing: come riconoscerlo
+Il phishing è un messaggio (email, SMS, chiamata, chat) costruito per farti compiere un’azione: cliccare, aprire, pagare, dare credenziali. I segnali ricorrenti:
+Urgenza e minaccia
+“Entro 24 ore”, “account sospeso”, “ultimo avviso”.
+Mittente anomalo
+Dominio simile ma diverso ( postaitaliane-sicurezza.com ), indirizzo che non corrisponde al nome visualizzato.
+Link e allegati
+Link che portano altrove (passa il mouse senza cliccare), allegati .zip, .html, .exe, fatture inattese.
+Richieste insolite
+Cambio IBAN di un fornitore, bonifico urgente “dal direttore”, invio di dati del personale.
+Regola d’oro
+In caso di dubbio: non cliccare, non rispondere, verifica con un canale diverso (telefona al numero che già conosci) e segnala all’IT / referente privacy. Nessuno ti rimprovererà per una segnalazione in più.
+
+### SCHERMATA 4 — Esercizio · Trova i segnali nella mail
+Esercizio Questa mail è arrivata in amministrazione. Clicca sui 4 elementi sospetti per proseguire.
+Da: Direzione Amministrativa < direzione@officine-meridiana-pagamenti.net >
+A: amministrazione@officinemeridiana.it
+Oggetto: URGENTE – bonifico da eseguire entro le 12:00
+Buongiorno,
+sono in riunione e non posso telefonare. Serve un bonifico immediato di 18.400 € al fornitore Metalsud, il cui IBAN è cambiato: IT60 X054 2811 1010 0000 0123 456 . Procedete senza attendere la mia firma, confermo tutto io al rientro.
+Allegato: Fattura_Metalsud.zip
+Cordiali saluti
+Il Direttore
+Trovati: 0 /4
+[ESERCIZIO PRECLUSIVO]
+- segnale: Dominio del mittente diverso da quello aziendale (officinemeridiana.it).
+- segnale: Urgenza e scadenza immediata.
+- segnale: Cambio IBAN comunicato via mail: va sempre verificato per telefono.
+- segnale: Allegato .zip inatteso: può contenere malware.
+
+### SCHERMATA 5 — Dispositivi, documenti e scrivania pulita
+Postazione
+Win+L / Ctrl+Cmd+Q ogni volta che ti alzi
+Monitor non visibile dal pubblico o filtro privacy
+Niente documenti con dati personali in vista a fine giornata (clean desk)
+Carta
+Ritira subito le stampe
+Distruggidocumenti, non cestino, per fogli con dati personali
+Archivi e armadi chiusi a chiave; chiavi non lasciate nella serratura
+Dispositivi mobili
+PIN/biometria e cifratura attivi
+Aggiornamenti installati
+Nessuna chiavetta USB di provenienza ignota
+Smarrimento o furto: segnalazione immediata (è un possibile data breach)
+Comunicazioni
+Verifica i destinatari prima di inviare; usa Ccn per invii multipli
+Allegati con dati particolari: cifrati o tramite canale sicuro aziendale
+Non discutere dati personali al telefono in luoghi pubblici
+
+### SCHERMATA 6 — Lavoro da remoto e smart working
+Usa solo dispositivi aziendali o autorizzati dalla policy; nessun salvataggio su cloud o email personali.
+Connessione tramite VPN ; evita Wi-Fi pubblici non protetti (bar, stazioni) per dati aziendali.
+In casa: schermo non visibile a familiari o ospiti; videochiamate con sfondo neutro se ci sono documenti alle spalle; microfono spento quando non parli.
+Stampe domestiche di documenti con dati personali: solo se necessarie, e distrutte a fine uso.
+Il dispositivo aziendale non è per uso familiare (figli, giochi, streaming).
+Esempio. Marco lavora dal treno con la lista clienti aperta a tutto schermo. La persona accanto fotografa lo schermo. È una violazione di riservatezza causata da una condotta evitabile: filtro privacy, finestra ridotta, oppure non lavorare su quei dati in luoghi pubblici.
+
+### SCHERMATA 7 — Esercizio · Controllo postazione
+Esercizio Fine giornata in ufficio. Seleziona tutte le situazioni che violano le regole di sicurezza (ce ne sono 4), poi conferma.
+Conferma
+[ESERCIZIO PRECLUSIVO]
+- Monitor bloccato con Win+L → corretto
+- Post-it con la password sul monitor → violazione
+- Stampa delle buste paga lasciata nella stampante → violazione
+- Armadio del personale chiuso a chiave → corretto
+- Portatile aziendale lasciato acceso e sbloccato → violazione
+- Documenti con dati clienti nel cestino della carta → violazione
+- Chiavetta USB personale nel cassetto chiuso → corretto
+- Agenda con appuntamenti riposta nel cassetto → corretto
+Esito: Corretto: password esposta, stampe abbandonate, portatile sbloccato e documenti nel cestino sono le 4 violazioni. Puoi proseguire.

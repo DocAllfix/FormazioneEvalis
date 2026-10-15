@@ -1,0 +1,371 @@
+[
+  {
+    "id": "fadpriv03_m06_s001",
+    "layout": "apertura",
+    "kicker": "Modulo 06",
+    "titolo": "Gestione del data breach: percorso operativo",
+    "corsoLabel": "Privacy per manager e ADS · GDPR",
+    "eyebrow": "Modulo 06",
+    "sottotitolo": "Nei primi minuti si decide se l'evento resta contenuto o diventa crisi. Il modulo fissa una sequenza semplice: segnalare subito, contenere senza perdere tracce, valutare il rischio e decidere gli adempimenti corretti.",
+    "agenda": [
+      "Rilevazione",
+      "Canale interno",
+      "Contenimento",
+      "Valutazione del rischio",
+      "Decisione finale"
+    ]
+  },
+  {
+    "id": "fadpriv03_m06_s002",
+    "layout": "organigramma",
+    "kicker": "Decisione formale",
+    "titolo": "Chi decide e su quali elementi",
+    "intro": "La decisione non nasce da un solo punto di vista. Serve una raccolta rapida di fatti affidabili, poi il titolare o un delegato effettivo sceglie tra notifica, comunicazione e altri adempimenti collegati.",
+    "radice": {
+      "h": "Decisione del titolare",
+      "d": "Sintesi rapida, prudente e documentata"
+    },
+    "rami": [
+      {
+        "h": "Area tecnica",
+        "d": "Ricostruzione operativa dell'evento",
+        "voci": [
+          "Origine dell'accesso",
+          "Dati toccati",
+          "Evento ancora in corso"
+        ]
+      },
+      {
+        "h": "Funzione coinvolta",
+        "d": "Contesto d'uso dei dati",
+        "voci": [
+          "Perché i dati erano lì",
+          "Come vengono utilizzati",
+          "Peso del contesto"
+        ]
+      },
+      {
+        "h": "Privacy o DPO",
+        "d": "Traduzione in rischio",
+        "voci": [
+          "Impatto sugli interessati",
+          "Soglia di notifica",
+          "Motivazione della scelta"
+        ]
+      },
+      {
+        "h": "Area legale",
+        "d": "Riflessi ulteriori",
+        "voci": [
+          "Clausole contrattuali",
+          "Rapporti con partner",
+          "Altre autorità da attivare"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m06_s003",
+    "layout": "piramide",
+    "kicker": "Soglie di rischio",
+    "titolo": "Le tre soglie della decisione",
+    "intro": "La distinzione decisiva non è il disagio dell'organizzazione, ma l'effetto plausibile sulle persone. Tre livelli guidano l'esito: sola registrazione, notifica al Garante, oppure notifica più comunicazione diretta.",
+    "livelli": [
+      {
+        "h": "Rischio elevato",
+        "d": "Notifica al Garante e comunicazione agli interessati"
+      },
+      {
+        "h": "Rischio non improbabile",
+        "d": "Notifica al Garante dovuta"
+      },
+      {
+        "h": "Rischio improbabile",
+        "d": "Registrazione interna, senza notifica"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m06_s004",
+    "layout": "cards",
+    "kicker": "Valutazione",
+    "titolo": "Quattro fattori guidano la valutazione",
+    "intro": "Per evitare giudizi intuitivi serve una griglia stabile. Il rischio sale o scende combinando natura dei dati, ampiezza del coinvolgimento, conseguenze plausibili e circostanze concrete dell'evento.",
+    "cards": [
+      {
+        "h": "Tipo di dati",
+        "d": "Credenziali, finanziari, minori, fragilità alzano il rischio"
+      },
+      {
+        "h": "Volume e identificabilità",
+        "d": "Contano numero di persone e facilità di riconoscerle"
+      },
+      {
+        "h": "Conseguenze plausibili",
+        "d": "Frode, discriminazione, reputazione, uso improprio, disagio"
+      },
+      {
+        "h": "Circostanze e misure",
+        "d": "Destinatario, cifratura, chiavi, conferme di cancellazione"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m06_s005",
+    "layout": "confronto",
+    "kicker": "Stesso evento, esiti diversi",
+    "titolo": "Portatile rubato: perché l'esito cambia",
+    "intro": "Il fatto materiale può essere identico, ma il rischio privacy cambia radicalmente. La differenza non è il furto in sé: è la reale leggibilità dei dati e la qualità delle misure che li proteggono.",
+    "a": {
+      "h": "Portatile cifrato",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Cifratura forte attiva"
+        },
+        {
+          "d": "Chiavi non compromesse"
+        },
+        {
+          "d": "Cancellazione remota attivata"
+        },
+        {
+          "d": "Esito: rischio improbabile"
+        }
+      ]
+    },
+    "b": {
+      "h": "Portatile non cifrato",
+      "sub": "",
+      "punti": [
+        {
+          "d": "File leggibili senza ostacoli"
+        },
+        {
+          "d": "Dati identificativi o retributivi"
+        },
+        {
+          "d": "Uso lesivo concretamente possibile"
+        },
+        {
+          "d": "Esito: notifica, talvolta comunicazione"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv03_m06_s006",
+    "layout": "tabella",
+    "kicker": "Esercizio guidato",
+    "titolo": "Tre scenari, tre esiti motivati",
+    "cols": [
+      "Scenario",
+      "Segnali decisivi",
+      "Esito"
+    ],
+    "righe": [
+      [
+        "Ransomware sul gestionale",
+        "Esfiltrazione non esclusa; due giorni di indisponibilità",
+        "Notifica al Garante"
+      ],
+      [
+        "IBAN inviato al fornitore sbagliato",
+        "Destinatario noto; cancellazione confermata per iscritto",
+        "Solo registro"
+      ],
+      [
+        "Chiavetta USB non cifrata con 300 CV",
+        "Supporto leggibile, luogo pubblico, molte persone",
+        "Notifica al Garante"
+      ]
+    ]
+  },
+  {
+    "id": "fadpriv03_m06_s007",
+    "layout": "cards",
+    "kicker": "Esercizio guidato",
+    "titolo": "Tre casi e la soglia corretta",
+    "intro": "Quando il quadro non è netto, la prudenza risolve il dubbio. I tre scenari mostrano che l'obbligo di notifica dipende dal rischio aggiuntivo per gli interessati, non dalla sola scorrettezza del fatto.",
+    "cards": [
+      {
+        "h": "Portatile cifrato rubato",
+        "d": "Solo registro, se chiavi integre e wipe riuscito"
+      },
+      {
+        "h": "Stipendi esposti in intranet",
+        "d": "Notifica, per impatto reputazionale e professionale"
+      },
+      {
+        "h": "Password CRM condivisa",
+        "d": "Solo registro, se autorizzazioni davvero identiche"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m06_s008",
+    "layout": "numeri",
+    "kicker": "Articolo 33",
+    "titolo": "I cinque blocchi della notifica",
+    "intro": "La notifica non richiede un quadro perfetto, ma un racconto ordinato e onesto. Nelle prime ore contano chiarezza, cronologia e stime serie, anche approssimative, da integrare appena il quadro si consolida.",
+    "numeri": [
+      {
+        "n": "1",
+        "h": "Natura della violazione",
+        "d": ""
+      },
+      {
+        "n": "2",
+        "h": "Categorie e numero delle persone",
+        "d": ""
+      },
+      {
+        "n": "3",
+        "h": "Punto di contatto",
+        "d": ""
+      },
+      {
+        "n": "4",
+        "h": "Probabili conseguenze",
+        "d": ""
+      },
+      {
+        "n": "5",
+        "h": "Misure adottate o proposte",
+        "d": ""
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m06_s009",
+    "layout": "evidenza",
+    "kicker": "Rischio elevato",
+    "titolo": "Comunicare agli interessati in modo utile",
+    "eyebrow": "",
+    "testo": "Quando il rischio è elevato, la comunicazione serve alle persone prima che alla compliance. Deve spiegare l'essenziale, aiutare a reagire e usare un linguaggio comprensibile, non formule giuridiche che schermano l'organizzazione.",
+    "dark": true
+  },
+  {
+    "id": "fadpriv03_m06_s010",
+    "layout": "flusso",
+    "kicker": "Ritardo e accountability",
+    "titolo": "Se il ritardo emerge, si notifica comunque",
+    "intro": "Superate le 72 ore, l'obbligo non svanisce: contano la trasparenza sul ritardo, la tenuta della filiera interna e una registrazione completa che renda difendibile ogni decisione.",
+    "passi": [
+      {
+        "h": "Notifica se dovuta",
+        "d": "Anche oltre le 72 ore"
+      },
+      {
+        "h": "Motiva il ritardo",
+        "d": "Spiega perché la conoscenza è arrivata tardi"
+      },
+      {
+        "h": "Registra i fatti essenziali",
+        "d": "Orari, evento, categorie di dati e interessati"
+      },
+      {
+        "h": "Correggi la filiera interna",
+        "d": "Canale unico, reperibilità, escalation chiara"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m06_s011",
+    "layout": "timeline",
+    "kicker": "Esercitazione",
+    "titolo": "Venerdì sera: la sequenza che non aspetta",
+    "intro": "Nel caso di accesso anomalo al CRM, la procedura si misura sulla prontezza: il weekend non sospende né il contenimento tecnico né l'attivazione della catena decisionale.",
+    "tappe": [
+      {
+        "t": "01",
+        "h": "18:30: conoscenza utile",
+        "d": "L'alert è sufficiente per attivarsi"
+      },
+      {
+        "t": "02",
+        "h": "Subito",
+        "d": "Disattiva account, revoca sessioni, ferma i download"
+      },
+      {
+        "t": "03",
+        "h": "In parallelo",
+        "d": "Conserva log, IP, volumi, alert e azioni"
+      },
+      {
+        "t": "04",
+        "h": "Senza attendere lunedì",
+        "d": "Avvisa titolare o delegato reperibile"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m06_s012",
+    "layout": "confronto",
+    "kicker": "Esercitazione",
+    "titolo": "Chiavetta smarrita: ritardare peggiora il caso",
+    "intro": "Una settimana di silenzio non autorizza altre attese: con dati sulla salute, supporto non cifrato e smarrimento in luogo pubblico, la gestione corretta accelera valutazione e verifiche.",
+    "a": {
+      "h": "Errori da evitare",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Aspettare ancora qualche giorno"
+        },
+        {
+          "d": "Avvisare subito i lavoratori, da soli"
+        },
+        {
+          "d": "Addolcire o nascondere il ritardo interno"
+        }
+      ]
+    },
+    "b": {
+      "h": "Traiettoria corretta",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Segnalare subito a privacy o DPO"
+        },
+        {
+          "d": "Coinvolgere IT per le verifiche tecniche"
+        },
+        {
+          "d": "Valutare cifratura, contenuto e contesto"
+        },
+        {
+          "d": "Rimettere al titolare le decisioni finali"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv03_m06_s013",
+    "layout": "chiusura",
+    "kicker": "Concetti da portare via",
+    "titolo": "Quattro regole per reggere un data breach",
+    "modNum": "06",
+    "punti": [
+      {
+        "h": "Agisci subito",
+        "d": "Canale unico, contenimento, escalation reperibile"
+      },
+      {
+        "h": "Guarda il rischio vero",
+        "d": "Conta l'impatto sugli interessati, non l'imbarazzo"
+      },
+      {
+        "h": "Documenta ogni scelta",
+        "d": "Log, orari, misure e motivazioni nel registro"
+      },
+      {
+        "h": "Comunica quando serve",
+        "d": "Se il rischio è elevato, avvisa con chiarezza"
+      }
+    ],
+    "prossimo": {
+      "modulo": "07",
+      "titolo": "IA, cloud e nuovi trattamenti"
+    }
+  }
+]

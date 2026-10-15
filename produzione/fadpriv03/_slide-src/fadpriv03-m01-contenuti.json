@@ -1,0 +1,495 @@
+[
+  {
+    "id": "fadpriv03_m01_s001",
+    "layout": "apertura",
+    "kicker": "Modulo 1",
+    "titolo": "Dal lessico al governo quotidiano",
+    "corsoLabel": "Privacy per manager e ADS · GDPR",
+    "eyebrow": "Modulo 1",
+    "sottotitolo": "La privacy entra nelle decisioni di funzione e di sistema: serve vedere effetti operativi, far emergere le informazioni giuste e dimostrare con evidenze che il trattamento è sotto controllo.",
+    "agenda": [
+      "Ruolo decisionale",
+      "Scelte con effetti immediati",
+      "Metodo concreto",
+      "Verifica dell'apprendimento",
+      "Focus della prima parte"
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s002",
+    "layout": "timeline",
+    "kicker": "Mappa del corso",
+    "titolo": "Le otto tappe del percorso",
+    "intro": "Il percorso segue una sequenza logica: dalla cornice di governo alle decisioni operative, poi controlli, sicurezza, incidenti, tecnologie emergenti e responsabilità finali.",
+    "tappe": [
+      {
+        "t": "01",
+        "h": "1. Sistema privacy aziendale",
+        "d": "Accountability, registro, informative, consensi, ruoli"
+      },
+      {
+        "t": "02",
+        "h": "2. Manager di funzione",
+        "d": "Autorizzazioni, istruzioni, fornitori, trasferimenti extra UE"
+      },
+      {
+        "t": "03",
+        "h": "3. Controlli sui lavoratori",
+        "d": "Articolo 4, videosorveglianza, geolocalizzazione, metadati"
+      },
+      {
+        "t": "04",
+        "h": "4. Amministratori di sistema",
+        "d": "Designazione, log, verifiche periodiche, presidio tecnico"
+      },
+      {
+        "t": "05",
+        "h": "5. Misure tecniche e organizzative",
+        "d": "Articolo 32, accessi, cifratura, backup, logging"
+      },
+      {
+        "t": "06",
+        "h": "6. Data breach",
+        "d": "Procedura, rischio, notifica, comunicazione, esercitazione"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s003",
+    "layout": "ciclo",
+    "kicker": "Quadro delle fonti",
+    "titolo": "Una cornice normativa coordinata",
+    "intro": "Le decisioni solide non nascono da una norma isolata: il GDPR resta centrale, ma va letto insieme a fonti nazionali, regole sul lavoro, provvedimenti del Garante e riferimenti di sicurezza.",
+    "ciclo": false,
+    "centro": "Decisioni sui trattamenti",
+    "nodi": [
+      {
+        "h": "GDPR 679/2016",
+        "d": "Principi, basi giuridiche, sicurezza, DPIA, trasferimenti"
+      },
+      {
+        "h": "Codice Privacy italiano",
+        "d": "D.lgs. 196/2003, coordinato con D.lgs. 101/2018"
+      },
+      {
+        "h": "Statuto dei lavoratori",
+        "d": "Articolo 4 e controlli a distanza"
+      },
+      {
+        "h": "Provvedimento ADS",
+        "d": "Garante 27 novembre 2008, poi aggiornato"
+      },
+      {
+        "h": "Linee guida, sicurezza, IA",
+        "d": "Fonti europee e regole sempre più connesse"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s004",
+    "layout": "evidenza",
+    "kicker": "Principio chiave",
+    "titolo": "Accountability come prova nel tempo",
+    "eyebrow": "",
+    "testo": "Si passa dalla logica della checklist alla responsabilizzazione: il titolare sceglie misure adeguate al rischio e deve dimostrare perché sono coerenti, applicate e mantenute nel tempo.",
+    "dark": true
+  },
+  {
+    "id": "fadpriv03_m01_s005",
+    "layout": "confronto",
+    "kicker": "Evidenze di compliance",
+    "titolo": "Due famiglie di evidenze",
+    "intro": "Per dimostrare il controllo servono insieme una cornice documentale chiara e tracce operative coerenti. Se manca una delle due, la compliance resta incompleta o poco credibile.",
+    "a": {
+      "h": "Documenti di governo",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Registro dei trattamenti"
+        },
+        {
+          "d": "Politiche e procedure interne"
+        },
+        {
+          "d": "Designazioni e nomine ai fornitori"
+        },
+        {
+          "d": "DPIA, registro violazioni, verifiche"
+        }
+      ]
+    },
+    "b": {
+      "h": "Prove operative",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Informative e consensi tracciati"
+        },
+        {
+          "d": "Log, cancellazioni, profili autorizzativi"
+        },
+        {
+          "d": "Ticket e risposte agli interessati"
+        },
+        {
+          "d": "Attestati, configurazioni, verbali ADS"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv03_m01_s006",
+    "layout": "flusso",
+    "kicker": "Documento chiave",
+    "titolo": "Il registro guida il sistema",
+    "intro": "Il registro dei trattamenti non è un archivio statico: rende visibile il percorso dei dati e sostiene informative, nomine, istruzioni, tempi di conservazione, verifiche e valutazioni d'impatto.",
+    "passi": [
+      {
+        "h": "Mappare",
+        "d": "Finalità, interessati, dati, basi giuridiche"
+      },
+      {
+        "h": "Rendere visibile",
+        "d": "Destinatari, fornitori, trasferimenti, misure, conservazione"
+      },
+      {
+        "h": "Far discendere",
+        "d": "Informative, nomine, istruzioni, verifiche, DPIA"
+      },
+      {
+        "h": "Aggiornare",
+        "d": "Ogni nuovo software, processo o fornitore"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s007",
+    "layout": "cards",
+    "kicker": "Alimentare il registro",
+    "titolo": "I quattro campi che il manager presidia",
+    "intro": "Il registro si compila bene solo se le informazioni corrette arrivano dai processi. Gli errori più comuni nascono quando funzione, acquisti, privacy e IT non mettono insieme i pezzi.",
+    "cards": [
+      {
+        "h": "Finalità e base giuridica",
+        "d": "Errore tipico: usare il consenso per abitudine"
+      },
+      {
+        "h": "Interessati e categorie di dati",
+        "d": "Attenzione ai dati particolari nascosti nel quotidiano"
+      },
+      {
+        "h": "Destinatari e responsabili esterni",
+        "d": "Consulenti, cloud e outsourcer da qualificare"
+      },
+      {
+        "h": "Trasferimenti fuori dall'Unione Europea",
+        "d": "Verificare dove i dati sono archiviati o accessibili"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s008",
+    "layout": "tabella",
+    "kicker": "Esercizio guidato",
+    "titolo": "Una riga del registro ben compilata",
+    "cols": [
+      "Campo",
+      "Contenuto",
+      "Attenzione"
+    ],
+    "righe": [
+      [
+        "Interessati",
+        "Dipendenti e collaboratori",
+        "Categoria chiara, non elenco di nomi"
+      ],
+      [
+        "Base giuridica",
+        "Contratto, obblighi di legge, articolo 9",
+        "Non consenso"
+      ],
+      [
+        "Categorie di dati",
+        "Nominativi, orari, giustificativi, certificati medici",
+        "Emergono dati particolari"
+      ],
+      [
+        "Destinatari",
+        "Consulente del lavoro, fornitore cloud",
+        "Qualificazione privacy e sicurezza"
+      ],
+      [
+        "Conservazione",
+        "Tempi distinti per tipologia",
+        "Non un termine unico"
+      ]
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s009",
+    "layout": "flusso",
+    "kicker": "Valutazione preventiva",
+    "titolo": "La DPIA prima del go live",
+    "intro": "La valutazione d'impatto serve quando il rischio per diritti e libertà può diventare elevato. Funziona solo se parte prima della decisione finale e coinvolge chi conosce business e rischi.",
+    "passi": [
+      {
+        "h": "Attivare prima",
+        "d": "Non a progetto avviato o già operativo"
+      },
+      {
+        "h": "Descrivere il trattamento",
+        "d": "Che cosa facciamo con i dati e perché"
+      },
+      {
+        "h": "Verificare necessità e proporzionalità",
+        "d": "Raccolta giustificata, finalità chiare, trasparenza"
+      },
+      {
+        "h": "Stimare rischi e mitigazioni",
+        "d": "Possibili effetti negativi e misure adeguate"
+      },
+      {
+        "h": "Lavorare in modo trasversale",
+        "d": "Manager, privacy, IT e parere del DPO"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s010",
+    "layout": "numeri",
+    "kicker": "Trigger DPIA",
+    "titolo": "Cinque situazioni aziendali che attivano la DPIA",
+    "intro": "I rischi elevati spesso entrano in azienda con il linguaggio del progetto, dell'efficienza o dell'innovazione. Questi sono i contesti in cui conviene alzare subito il livello di attenzione.",
+    "numeri": [
+      {
+        "n": "1",
+        "h": "Scoring e valutazioni individuali",
+        "d": ""
+      },
+      {
+        "n": "2",
+        "h": "Monitoraggio sistematico dei lavoratori",
+        "d": ""
+      },
+      {
+        "n": "3",
+        "h": "Dati particolari su larga scala",
+        "d": ""
+      },
+      {
+        "n": "4",
+        "h": "Videosorveglianza estesa o intelligente",
+        "d": ""
+      },
+      {
+        "n": "5",
+        "h": "IA per decisioni sulle persone",
+        "d": ""
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s011",
+    "layout": "ciclo",
+    "kicker": "Contenuto essenziale",
+    "titolo": "I quattro elementi minimi della DPIA",
+    "intro": "Una DPIA utile non è una relazione generica sul rischio. È un percorso strutturato che descrive, giustifica, valuta gli impatti sulle persone e fissa le misure prima dell'avvio.",
+    "ciclo": false,
+    "centro": "DPIA prima del progetto",
+    "nodi": [
+      {
+        "h": "Descrizione del trattamento",
+        "d": "Dati, persone, strumenti, flussi interni ed esterni"
+      },
+      {
+        "h": "Necessità e proporzionalità",
+        "d": "Verificare utilità reale e alternative meno invasive"
+      },
+      {
+        "h": "Rischi per gli interessati",
+        "d": "Impatti concreti su diritti, libertà e trasparenza"
+      },
+      {
+        "h": "Misure di mitigazione",
+        "d": "Presidi tecnici e organizzativi definiti in anticipo"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s012",
+    "layout": "tabella",
+    "kicker": "Trasparenza e basi giuridiche",
+    "titolo": "Informativa e consenso non coincidono",
+    "cols": [
+      "Contesto",
+      "Informativa",
+      "Consenso"
+    ],
+    "righe": [
+      [
+        "Dipendenti e collaboratori",
+        "All'avvio e a ogni cambio rilevante",
+        "Di regola non è la base corretta"
+      ],
+      [
+        "Candidati",
+        "Già in annuncio, form o primo contatto",
+        "Non automatico per ogni curriculum"
+      ],
+      [
+        "Clienti e prospect",
+        "Al primo contatto utile",
+        "Non per contratto o obblighi normativi"
+      ]
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s013",
+    "layout": "punti",
+    "kicker": "Trasparenza operativa",
+    "titolo": "Quattro contesti da presidiare subito",
+    "intro": "Visitatori, telecamere, sito e marketing coinvolgono funzioni diverse ma devono seguire una regia unica. La trasparenza si gioca spesso nei primi secondi di contatto.",
+    "punti": [
+      {
+        "h": "Visitatori",
+        "d": "Dati d'ingresso chiari, accessibili e coerenti"
+      },
+      {
+        "h": "Videosorveglianza",
+        "d": "Avviso prima dell'area ripresa, informativa completa disponibile"
+      },
+      {
+        "h": "Sito web e cookie",
+        "d": "Rifiuto facile quanto accettazione, nessun cookie non necessario prima della scelta"
+      },
+      {
+        "h": "Contatti di assistenza",
+        "d": "Assistenza e reclami non diventano marketing automaticamente"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s014",
+    "layout": "organigramma",
+    "kicker": "Ruoli e responsabilità",
+    "titolo": "La mappa dei soggetti privacy interni",
+    "intro": "L'organigramma privacy rende leggibili i compiti e i confini di responsabilità. Senza ruoli chiari, registro, informative, istruzioni e controlli restano solo intenzioni.",
+    "radice": {
+      "h": "Titolare del trattamento",
+      "d": "Definisce finalità, mezzi essenziali e governo complessivo"
+    },
+    "rami": [
+      {
+        "h": "Referente privacy interno",
+        "d": "Coordina registro, informative, nomine e gestione operativa",
+        "voci": []
+      },
+      {
+        "h": "Designati art. 2 quaterdecies",
+        "d": "Presidiano funzioni con compiti specifici formalizzati",
+        "voci": []
+      },
+      {
+        "h": "Autorizzati art. 29",
+        "d": "Trattano dati con istruzioni adeguate",
+        "voci": []
+      },
+      {
+        "h": "Amministratori di sistema",
+        "d": "Privilegi elevati, tracciabilità e verifiche dedicate",
+        "voci": []
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s015",
+    "layout": "confronto",
+    "kicker": "Atto scritto",
+    "titolo": "Che cosa fa la designazione ex 2 quaterdecies",
+    "intro": "La designazione è il ponte tra responsabilità generale del titolare e presidio operativo della funzione. Vale se chiarisce compiti, perimetro, limiti e catena delle istruzioni.",
+    "a": {
+      "h": "Non fa",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Non trasferisce la titolarità"
+        },
+        {
+          "d": "Non è un titolo onorifico"
+        },
+        {
+          "d": "Non basta la sola gerarchia"
+        }
+      ]
+    },
+    "b": {
+      "h": "Fa",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Attribuisce compiti specifici"
+        },
+        {
+          "d": "Definisce perimetro, limiti e segnalazioni"
+        },
+        {
+          "d": "Legittima istruzioni nella funzione"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv03_m01_s016",
+    "layout": "split",
+    "kicker": "DPO",
+    "titolo": "Quando serve e perché non sostituisce i manager",
+    "lead": "Il DPO non è uno scudo generale. Ha un ruolo di sorveglianza, consulenza e contatto qualificato, ma non assorbe la responsabilità del titolare né il presidio delle funzioni.",
+    "punti": [
+      {
+        "h": "Obbligo",
+        "d": "Enti pubblici; monitoraggio regolare su larga scala; dati particolari su larga scala"
+      },
+      {
+        "h": "Nomina volontaria",
+        "d": "Richiede competenza, autonomia, accesso alle informazioni e assenza di conflitti"
+      },
+      {
+        "h": "Che cosa fa",
+        "d": "Informa, consiglia, sorveglia e supporta il metodo nelle DPIA"
+      },
+      {
+        "h": "Che cosa non fa",
+        "d": "Non diventa proprietario dei trattamenti né sostituisce il management"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv03_m01_s017",
+    "layout": "chiusura",
+    "kicker": "Da portare al checkpoint",
+    "titolo": "Quattro idee operative da fissare",
+    "modNum": "01",
+    "punti": [
+      {
+        "h": "Accountability",
+        "d": "Per ogni trattamento: perché lo fai, con quali limiti, come lo dimostri"
+      },
+      {
+        "h": "Registro dei trattamenti",
+        "d": "È la mappa da cui discendono informative, tempi, misure e nomine"
+      },
+      {
+        "h": "DPIA anticipata",
+        "d": "Si apre prima del progetto, quando puoi ancora ridurre il rischio"
+      },
+      {
+        "h": "Trasparenza e ruoli",
+        "d": "Informative aderenti ai processi, consenso non universale, responsabilità assegnate"
+      }
+    ],
+    "prossimo": {
+      "modulo": "02",
+      "titolo": "Il manager responsabile di funzione"
+    }
+  }
+]

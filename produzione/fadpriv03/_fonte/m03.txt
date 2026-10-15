@@ -1,0 +1,55 @@
+## SEZIONE 1 — Modulo 3 del committente — Controlli sui lavoratori (55 min)
+
+### SCHERMATA 1 — Art. 4 Statuto dei lavoratori dopo il Jobs Act
+L’art. 4 L. 300/1970 (come riscritto dal D.Lgs. 151/2015, richiamato dall’art. 114 Codice privacy) regola gli strumenti da cui derivi anche la possibilità di controllo a distanza dell’attività dei lavoratori. Tre livelli:
+Comma 1 · Impianti di controllo
+Videosorveglianza, geolocalizzazione, software di monitoraggio, badge evoluti. Ammessi solo per esigenze organizzative/produttive, sicurezza del lavoro, tutela del patrimonio, previo accordo sindacale o, in mancanza, autorizzazione dell’Ispettorato del lavoro .
+Comma 2 · Strumenti di lavoro
+PC, telefono, email, gestionali, badge di accesso: nessun accordo necessario, purché usati per rendere la prestazione. Se vi si aggiungono funzioni di controllo (keylogger, tracciamento continuo) tornano al comma 1.
+Comma 3 · Utilizzabilità
+Le informazioni raccolte sono utilizzabili a tutti i fini del rapporto (anche disciplinari) solo se al lavoratore è stata data adeguata informazione sulle modalità d’uso e di controllo, e nel rispetto del Codice privacy.
+Checklist per il manager
+Esigenza documentata · accordo o autorizzazione ITL · informativa e regolamento d’uso consegnati · DPIA se monitoraggio sistematico · registro aggiornato · conservazione limitata · accessi ai dati di controllo riservati a pochi designati.
+
+### SCHERMATA 2 — Videosorveglianza
+Finalità ammesse : sicurezza, tutela del patrimonio, esigenze organizzative. Mai controllo della produttività.
+Inquadrature : aree a rischio; no spogliatoi, bagni, postazioni fisse di lavoro se non strettamente necessario; no audio.
+Conservazione : di regola 24-72 ore, fino a 7 giorni se motivato; oltre, solo su autorizzazione del Garante o per esigenze investigative specifiche.
+Informativa : cartello semplificato prima del raggio d’azione (modello Garante/EDPB) + informativa completa disponibile.
+Accessi : designati nominativamente, log delle consultazioni, estrazioni solo su richiesta dell’autorità o per difesa.
+Accordo sindacale o ITL se nelle aree operano lavoratori, anche se la finalità è antifurto.
+Analisi intelligente (riconoscimento facciale, targhe, comportamenti): DPIA obbligatoria; il riconoscimento facciale dei dipendenti è di fatto precluso.
+Sanzione tipica. Telecamere installate “solo per antifurto” senza accordo sindacale, con registrazioni conservate 30 giorni e consultate dal titolare per verificare gli orari di un dipendente: violazione dell’art. 4 (reato contravvenzionale) e del GDPR (sanzione amministrativa); inutilizzabilità delle immagini nel procedimento disciplinare.
+
+### SCHERMATA 3 — Email, internet, metadati e dispositivi
+Casella email aziendale
+È strumento di lavoro. Regolamento che chiarisca: uso privato tollerato o no, risposta automatica e disattivazione alla cessazione (entro tempi brevi, non mesi di accesso da parte dell’azienda), chi può accedere in assenza e con quale procedura (fiduciario, verbale).
+Metadati della posta (Garante 6/6/2024)
+Log di mittente, destinatario, orari, dimensioni: conservazione di norma fino a 21 giorni per esigenze tecniche; oltre, serve accordo sindacale o autorizzazione ITL perché diventa controllo a distanza. Il manager IT deve configurare la retention di conseguenza.
+Navigazione web
+Filtri preventivi (blacklist) preferibili ai log nominativi; log aggregati o anonimi; controlli nominativi solo graduali e in caso di anomalie documentate.
+Geolocalizzazione
+Veicoli e dispositivi: accordo/ITL, attivazione limitata all’orario di lavoro con possibilità di disattivazione nelle pause, informativa, DPIA.
+Controlli difensivi
+La giurisprudenza ammette controlli mirati su condotte illecite già sospettate (non sulla prestazione), proporzionati e successivi all’insorgere del sospetto. Vanno condotti con il referente privacy e il legale, con verbale.
+
+### SCHERMATA 4 — Esercizio · Lecito o illecito?
+[ESERCIZIO PRECLUSIVO]
+Valuta ciascuna situazione.
+- Telecamere nel magazzino con accordo sindacale, cartelli, registrazioni cancellate dopo 72 ore → Lecito
+- Software che registra ogni tasto premuto dai dipendenti, installato senza accordo, “per sicurezza” → Illecito
+- Accesso alla casella di un dipendente in malattia da parte del manager, senza procedura, per leggere tutta la corrispondenza → Illecito
+- Filtro che blocca siti di gioco d’azzardo sulla rete aziendale, con informativa → Lecito
+- GPS sui furgoni attivo 24 ore su 24, anche nei fine settimana in cui il mezzo è in uso privato autorizzato → Illecito
+- Conservazione dei metadati email per 21 giorni per esigenze di sicurezza, con informativa → Lecito
+- Analisi dei log di accesso al gestionale dopo la scoperta di estrazioni anomale, con verbale e supporto legale → Lecito
+- Badge con riconoscimento facciale per marcare le presenze → Illecito
+Esito: Corretto. Keylogger, accesso indiscriminato alla posta, GPS fuori orario e biometria per le presenze sono i casi più sanzionati dal Garante.
+
+### SCHERMATA 5 — Whistleblowing (D.Lgs. 24/2023)
+Le imprese con almeno 50 dipendenti (e quelle con modello 231) devono avere un canale interno di segnalazione. Le implicazioni privacy sono stringenti:
+riservatezza dell’identità del segnalante: accesso al canale limitato al gestore designato; nessun accesso dell’IT ai contenuti (cifratura, piattaforma dedicata);
+divieto di tracciare chi segnala (no log nominativi sulla piattaforma, no analisi di rete sugli accessi);
+DPIA obbligatoria; informativa specifica; conservazione max 5 anni dalla chiusura;
+il manager che venga a conoscenza di una segnalazione non può fare indagini autonome né ritorsioni: le ritorsioni sono sanzionate dall’ANAC.
+Esempio. Il responsabile IT, su richiesta della direzione, controlla i log del server per capire chi ha inviato una segnalazione anonima. È una violazione sia della normativa whistleblowing sia del GDPR, con responsabilità personale di chi ha ordinato e di chi ha eseguito.

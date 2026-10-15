@@ -1,0 +1,54 @@
+## SEZIONE 1 — Modulo 5 del committente — Misure tecniche art. 32 (60 min)
+
+### SCHERMATA 1 — Art. 32: sicurezza adeguata al rischio
+Il GDPR non elenca misure obbligatorie ma esiti da garantire: riservatezza, integrità, disponibilità e resilienza dei sistemi; ripristino tempestivo dopo incidenti; verifica periodica dell’efficacia. Cita espressamente pseudonimizzazione e cifratura. La scelta si giustifica con un’ analisi dei rischi documentata.
+Metodo
+1. Inventario asset e trattamenti · 2. Minacce e vulnerabilità · 3. Probabilità × impatto sugli interessati · 4. Misure e rischio residuo · 5. Riesame annuale e a ogni cambiamento
+Riferimenti utili
+ISO/IEC 27001:2022 (Annex A, 93 controlli) · ISO/IEC 27701 · Framework Nazionale Cybersecurity · misure ACN per NIS2 · ENISA
+Per il manager IT la domanda in ispezione è sempre la stessa: “Perché avete scelto queste misure e come sapete che funzionano?”. Analisi dei rischi, piano delle misure, test e verifiche sono la risposta.
+
+### SCHERMATA 2 — Identità e accessi
+Controllo | Standard atteso
+Autenticazione | Password ≥ 12 caratteri o passphrase, blocco dopo tentativi falliti, nessuna scadenza forzata frequente se c’è MFA, controllo contro password compromesse
+MFA | Obbligatoria per posta, VPN, accessi remoti, console cloud, account privilegiati; app o token preferibili a SMS
+Provisioning | Profili per ruolo (RBAC), richiesta approvata dal manager, revoca automatica alla cessazione (integrazione HR-IT)
+Access review | Riesame semestrale/annuale dei profili con firma del manager di area; rimozione account dormienti > 90 giorni
+Sessioni | Blocco automatico dopo inattività (5-15 min), logout automatico
+Accessi di terzi | Account nominativi temporanei, VPN dedicata, sessioni registrate
+
+### SCHERMATA 3 — Cifratura, backup, patch, rete
+Cifratura
+Dischi di portatili e smartphone (BitLocker/FileVault/MDM) · trasmissioni (TLS, VPN) · archivi con dati particolari · chiavi gestite separatamente dai dati; per il cloud valutare chiavi gestite dal cliente.
+Backup
+Regola 3-2-1 (3 copie, 2 supporti, 1 offline/immutabile) · test di ripristino periodico documentato · RPO/RTO definiti · backup cifrati e con accessi separati (il ransomware cerca prima i backup).
+Aggiornamenti
+Patch di sicurezza critiche entro giorni, non mesi · inventario software · dismissione di sistemi fuori supporto o loro segregazione.
+Rete e endpoint
+Segmentazione (uffici, produzione, ospiti, server) · firewall con regole riviste · EDR/antivirus gestito centralmente · controllo dispositivi USB · filtro email e web · Wi-Fi ospiti isolato.
+
+### SCHERMATA 4 — Esercizio · Priorità delle misure
+[ESERCIZIO PRECLUSIVO]
+Azienda di 80 dipendenti, gestionale on-premise, posta in cloud, nessuna MFA, backup su NAS in rete, portatili non cifrati. Ordina gli interventi dal più urgente al meno urgente, secondo il rapporto rischio/sforzo.
+Ordine corretto:
+1. Attivare la MFA su posta, VPN e account privilegiati
+2. Rendere i backup offline o immutabili e testare un ripristino
+3. Cifrare i dischi di portatili e smartphone tramite MDM
+4. Centralizzare i log in un repository non modificabile dagli ADS
+5. Segmentare la rete e isolare i sistemi fuori supporto
+Esito: Sequenza coerente: MFA e backup immutabili bloccano le due cause principali di breach (furto credenziali e ransomware), poi la cifratura dei dispositivi mobili, poi tracciabilità e segmentazione.
+
+### SCHERMATA 5 — Logging, monitoraggio e test
+Log di autenticazione, accessi ai dati, modifiche di configurazione, attività privilegiate; centralizzati, con orario sincronizzato, conservati 6-12 mesi, protetti da modifica.
+Monitoraggio : alert su accessi anomali (orari, geografie, volumi di estrazione), tentativi ripetuti, creazione di account privilegiati, disattivazione di antivirus o backup.
+Vulnerability assessment almeno annuale e dopo cambiamenti rilevanti; penetration test per sistemi esposti; gestione delle vulnerabilità con tempi di rimedio per gravità.
+Test di phishing simulato e formazione; test di ripristino dei backup; esercitazioni di gestione incidenti.
+Riesame annuale dell’analisi dei rischi e delle misure, con verbale: è la “verifica periodica dell’efficacia” dell’art. 32 par. 1 lett. d.
+
+### SCHERMATA 6 — Raccordo con NIS2 e ISO/IEC 27001
+NIS2 (D.Lgs. 138/2024)
+Per i soggetti essenziali e importanti (e, per contratto, per i loro fornitori rilevanti): misure di gestione del rischio su 10 ambiti (politiche, incidenti, continuità, supply chain, sviluppo sicuro, valutazione efficacia, igiene e formazione, crittografia, risorse umane e accessi, MFA). Segnalazione incidenti significativi all’ACN: pre-notifica entro 24 ore , notifica entro 72 ore, relazione finale entro un mese. Gli organi di amministrazione rispondono personalmente e devono formarsi.
+ISO/IEC 27001:2022
+Sistema di gestione certificabile: contesto, rischi, 93 controlli dell’Annex A, audit interni, riesame. Copre integralmente l’art. 32 e il provvedimento ADS; la ISO/IEC 27701 aggiunge i requisiti privacy. Certificazione utile come evidenza di accountability e nei DPA con i clienti.
+Un solo sistema
+Analisi dei rischi, misure, log, incidenti e formazione vanno gestiti in un unico impianto documentale che serva GDPR, NIS2 e ISO 27001: tre registri separati e incoerenti sono la prima non conformità rilevata in audit.

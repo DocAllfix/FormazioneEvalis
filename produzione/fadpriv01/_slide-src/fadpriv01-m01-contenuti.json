@@ -1,0 +1,235 @@
+[
+  {
+    "id": "fadpriv01_m01_s001",
+    "layout": "apertura",
+    "kicker": "Modulo 1",
+    "titolo": "Cinque tappe per lavorare bene sui dati",
+    "corsoLabel": "Privacy per il personale · GDPR",
+    "eyebrow": "Modulo 1",
+    "sottotitolo": "Il percorso dura tre ore e costruisce competenze operative in sequenza: prima il linguaggio essenziale, poi ruoli, principi, sicurezza, gestione degli incidenti e casi concreti con verifica progressiva.",
+    "agenda": [
+      "Concetti fondamentali",
+      "Ruoli e regole",
+      "Sicurezza quotidiana",
+      "Incidenti e richieste",
+      "Casi e checkpoint"
+    ]
+  },
+  {
+    "id": "fadpriv01_m01_s002",
+    "layout": "cards",
+    "kicker": "Obiettivi",
+    "titolo": "Sei abilità operative del percorso",
+    "intro": "L’obiettivo non è formare giuristi o tecnici specialisti, ma persone affidabili nelle situazioni ordinarie: quelle in cui un errore piccolo può generare conseguenze molto più grandi.",
+    "cards": [
+      {
+        "h": "Riconoscere il dato",
+        "d": "Distinguere persona fisica, dato comune, categoria particolare"
+      },
+      {
+        "h": "Collocare i ruoli",
+        "d": "Titolare, responsabile, autorizzato, DPO, interessato"
+      },
+      {
+        "h": "Applicare i principi",
+        "d": "Tradurre il GDPR in scelte quotidiane"
+      },
+      {
+        "h": "Proteggere gli strumenti",
+        "d": "Password, email, dispositivi, smart working"
+      },
+      {
+        "h": "Vedere il data breach",
+        "d": "Cogliere segnali e attivare la segnalazione"
+      },
+      {
+        "h": "Gestire le richieste",
+        "d": "Riconoscere e instradare l’istanza correttamente"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m01_s003",
+    "layout": "evidenza",
+    "kicker": "Perimetro",
+    "titolo": "Tre parole che rendono la privacy quotidiana",
+    "eyebrow": "",
+    "testo": "La protezione dei dati entra in email, telefonate, pratiche, archivi e conversazioni. I rischi nascono spesso da gesti abituali, anche se le sanzioni per l’organizzazione possono arrivare molto in alto.",
+    "dark": true
+  },
+  {
+    "id": "fadpriv01_m01_s004",
+    "layout": "split",
+    "kicker": "Classificazione",
+    "titolo": "Tre classi, cautele diverse",
+    "lead": "Non tutti i dati personali espongono la persona allo stesso rischio. Conta il contenuto informativo, anche quando emerge indirettamente da documenti, immagini, note interne o altri elementi solo apparentemente neutri.",
+    "punti": [
+      {
+        "h": "Dati comuni",
+        "d": "Nome, email, telefono, targa, IP, matricola"
+      },
+      {
+        "h": "Categorie particolari",
+        "d": "Salute, biometria, convinzioni, sindacato, orientamento"
+      },
+      {
+        "h": "Dati giudiziari",
+        "d": "Condanne, reati, misure di sicurezza"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m01_s005",
+    "layout": "tabella",
+    "kicker": "Metodo",
+    "titolo": "Otto esempi di classificazione corretta",
+    "cols": [
+      "Informazione",
+      "Esito"
+    ],
+    "righe": [
+      [
+        "Codice fiscale",
+        "Dato comune"
+      ],
+      [
+        "Certificato medico",
+        "Categoria particolare"
+      ],
+      [
+        "Numero di telefono",
+        "Dato comune"
+      ],
+      [
+        "Iscrizione al sindacato",
+        "Categoria particolare"
+      ],
+      [
+        "Fatturato azienda cliente",
+        "Non dato personale"
+      ],
+      [
+        "Impronta digitale per badge",
+        "Categoria particolare"
+      ],
+      [
+        "Targa dell'auto",
+        "Dato comune"
+      ],
+      [
+        "Temperatura del forno in produzione",
+        "Non dato personale"
+      ]
+    ]
+  },
+  {
+    "id": "fadpriv01_m01_s006",
+    "layout": "ciclo",
+    "kicker": "Articolo 5",
+    "titolo": "I quattro principi che fanno nascere bene il trattamento",
+    "intro": "Questi principi non restano nei documenti: orientano ogni operazione concreta. Servono a verificare se il trattamento ha un fondamento corretto, uno scopo coerente, un perimetro proporzionato e dati affidabili nel tempo.",
+    "ciclo": false,
+    "centro": "Primi quattro principi",
+    "nodi": [
+      {
+        "h": "Liceità, correttezza, trasparenza",
+        "d": "Base adeguata, nessun uso opaco o sorprendente"
+      },
+      {
+        "h": "Limitazione della finalità",
+        "d": "Ogni dato resta legato allo scopo dichiarato"
+      },
+      {
+        "h": "Minimizzazione",
+        "d": "Si chiede e conserva solo ciò che serve"
+      },
+      {
+        "h": "Esattezza",
+        "d": "Dati aggiornati per evitare errori operativi"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m01_s007",
+    "layout": "flusso",
+    "kicker": "Articolo 5",
+    "titolo": "I tre principi che governano il dopo",
+    "intro": "Dopo raccolta e uso corretto, il problema diventa gestione nel tempo. I dati non devono restare in giro inutilmente, né essere esposti, né essere trattati senza una responsabilità chiara e dimostrabile.",
+    "passi": [
+      {
+        "h": "Limitazione della conservazione",
+        "d": "Tempi definiti, niente archivi dimenticati o copie superflue"
+      },
+      {
+        "h": "Integrità e riservatezza",
+        "d": "Accessi controllati, protezioni tecniche, comportamenti prudenti"
+      },
+      {
+        "h": "Responsabilizzazione",
+        "d": "Regole applicate e capacità di dimostrarle"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m01_s008",
+    "layout": "organigramma",
+    "kicker": "Articolo 6",
+    "titolo": "Quattro basi giuridiche del lavoro quotidiano",
+    "intro": "Nessun trattamento è lecito senza un fondamento preciso. Nel contesto aziendale il consenso non è la risposta automatica: spesso la base corretta è contratto, legge o legittimo interesse ben valutato.",
+    "radice": {
+      "h": "Base giuridica",
+      "d": "Il perché legittimo del trattamento"
+    },
+    "rami": [
+      {
+        "h": "Contratto",
+        "d": "Dati necessari per rapporto, ordine, consegna, assistenza",
+        "voci": []
+      },
+      {
+        "h": "Obbligo di legge",
+        "d": "Adempimenti fiscali, previdenziali, sicurezza sul lavoro",
+        "voci": []
+      },
+      {
+        "h": "Legittimo interesse",
+        "d": "Interesse reale, bilanciamento, proporzione, documentazione",
+        "voci": []
+      },
+      {
+        "h": "Consenso",
+        "d": "Libero, specifico, informato, revocabile",
+        "voci": []
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m01_s009",
+    "layout": "chiusura",
+    "kicker": "Sintesi",
+    "titolo": "Informativa e registro rendono governabile il trattamento",
+    "modNum": "01",
+    "punti": [
+      {
+        "h": "Informativa tempestiva",
+        "d": "Chi, perché, quanto tempo, quali diritti"
+      },
+      {
+        "h": "Registro dei trattamenti",
+        "d": "Finalità, dati, destinatari, tempi, misure"
+      },
+      {
+        "h": "Nuove iniziative da segnalare",
+        "d": "Software, fornitori, raccolte, finalità non si avviano da soli"
+      },
+      {
+        "h": "Trasparenza dentro e fuori",
+        "d": "Comunicare bene e governare bene coincidono"
+      }
+    ],
+    "prossimo": {
+      "modulo": "02",
+      "titolo": "Ruoli, istruzioni e diritti degli interessati"
+    }
+  }
+]

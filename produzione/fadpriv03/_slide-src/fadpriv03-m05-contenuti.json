@@ -1,0 +1,402 @@
+[
+ {
+  "id": "fadpriv03_m05_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 5",
+  "titolo": "Sicurezza adeguata al rischio: quadro operativo",
+  "corsoLabel": "Privacy per manager e ADS · GDPR",
+  "eyebrow": "Modulo 5",
+  "sottotitolo": "L’articolo trentadue chiede risultati da garantire e scelte da motivare. Il focus passa dai prodotti acquistati agli esiti di sicurezza, alla capacità di ripristino e alla prova che le misure restino efficaci nel tempo.",
+  "agenda": [
+   "Esiti da proteggere",
+   "Ripristino ragionevole",
+   "Verifiche periodiche",
+   "Misure tipiche",
+   "Accountability"
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s002",
+  "layout": "flusso",
+  "kicker": "Metodo",
+  "titolo": "I cinque passi dell’analisi dei rischi",
+  "intro": "Un’analisi utile collega trattamenti, minacce, impatti e misure in modo leggibile per chi decide. Se il percorso è semplice e ripetibile, diventa uno strumento di governo e di difesa delle priorità adottate.",
+  "passi": [
+   {
+    "h": "Inventario",
+    "d": "Asset e trattamenti realmente coinvolti"
+   },
+   {
+    "h": "Minacce e vulnerabilità",
+    "d": "Eventi dannosi e punti deboli specifici"
+   },
+   {
+    "h": "Probabilità e impatto",
+    "d": "Effetti sugli interessati, non solo sui sistemi"
+   },
+   {
+    "h": "Misure",
+    "d": "Scelte concrete per ridurre i rischi principali"
+   },
+   {
+    "h": "Rischio residuo",
+    "d": "Priorità ragionevoli dopo gli interventi"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s003",
+  "layout": "cards",
+  "kicker": "Identità e accessi",
+  "titolo": "Autenticazione forte con attrito sostenibile",
+  "intro": "Molti incidenti iniziano da credenziali rubate o deboli. L’obiettivo non è complicare la vita agli utenti, ma ridurre con poche misure ben scelte la probabilità di accessi indebiti a posta, cloud e account privilegiati.",
+  "cards": [
+   {
+    "h": "Passphrase robuste",
+    "d": "Almeno dodici caratteri, facili da ricordare"
+   },
+   {
+    "h": "Tentativi falliti gestiti",
+    "d": "Limiti, attese progressive, eventi anomali monitorati"
+   },
+   {
+    "h": "Stop ai cambi meccanici",
+    "d": "Reset immediato solo se c’è sospetto concreto"
+   },
+   {
+    "h": "Qualità reale della credenziale",
+    "d": "Password compromesse bloccate, MFA diffusa"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s004",
+  "layout": "organigramma",
+  "kicker": "Autorizzazioni",
+  "titolo": "Provisioning governato per ruolo",
+  "intro": "Una buona autenticazione vale poco se i privilegi sono eccessivi o restano attivi troppo a lungo. Il provisioning deve tradurre esigenze di business in accessi approvati, minimizzati e tempestivamente rivisti.",
+  "radice": {
+   "h": "Accessi coerenti con il ruolo",
+   "d": "Chi entra è identificato, chi opera è autorizzato correttamente"
+  },
+  "rami": [
+   {
+    "h": "Richiesta approvata",
+    "d": "Il manager conferma il bisogno reale",
+    "voci": []
+   },
+   {
+    "h": "Profili RBAC",
+    "d": "Accessi standard per funzione, eccezioni motivate",
+    "voci": []
+   },
+   {
+    "h": "Variazioni interne",
+    "d": "Cambio ruolo o progetto, permessi aggiornati",
+    "voci": []
+   },
+   {
+    "h": "Revoca e review",
+    "d": "Disabilitazione rapida e controlli periodici",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s005",
+  "layout": "confronto",
+  "kicker": "Operatività quotidiana",
+  "titolo": "Sessioni presidiate e terzi sotto controllo",
+  "intro": "Due dettagli operativi generano incidenti evitabili: sessioni lasciate aperte e accessi esterni gestiti per comodità. In entrambi i casi il rischio cresce perché cala il presidio su riservatezza, uso corretto e tracciabilità.",
+  "a": {
+   "h": "Sessioni utente",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Blocco automatico dopo inattività"
+    },
+    {
+     "d": "Logout per applicazioni esposte o remote"
+    },
+    {
+     "d": "Schermo bloccato quando ci si allontana"
+    },
+    {
+     "d": "Impostazioni predefinite, non sola attenzione individuale"
+    }
+   ]
+  },
+  "b": {
+   "h": "Accessi di terzi",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Account nominativi, mai condivisi"
+    },
+    {
+     "d": "Accessi temporanei e limitati allo scopo"
+    },
+    {
+     "d": "Logica just in time per la finestra operativa"
+    },
+    {
+     "d": "VPN dedicata ai soggetti esterni"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpriv03_m05_s006",
+  "layout": "ciclo",
+  "kicker": "Protezione dei dati",
+  "titolo": "Dove la cifratura cambia il rischio",
+  "intro": "La cifratura non rende tutto sicuro per definizione, ma riduce drasticamente gli effetti di furto, smarrimento e intercettazione quando è applicata nei punti giusti e accompagnata da una buona gestione di chiavi e accessi.",
+  "ciclo": false,
+  "centro": "Dato leggibile solo con chiave corretta",
+  "nodi": [
+   {
+    "h": "Dispositivi mobili",
+    "d": "Portatili e smartphone aziendali"
+   },
+   {
+    "h": "Trasmissioni",
+    "d": "TLS e VPN durante il transito"
+   },
+   {
+    "h": "Archivi",
+    "d": "Database, export, backup, cloud"
+   },
+   {
+    "h": "Gestione chiavi",
+    "d": "Senza controllo degli accessi perde valore"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s007",
+  "layout": "evidenza",
+  "kicker": "Disponibilità e ripristino",
+  "titolo": "Backup progettati per tornare operativi",
+  "eyebrow": "",
+  "testo": "Una copia vale solo se può essere ripristinata davvero. I backup servono contro guasti, errori e ransomware, ma funzionano solo quando sono separati, protetti, coerenti con il business e provati nel tempo.",
+  "dark": true
+ },
+ {
+  "id": "fadpriv03_m05_s008",
+  "layout": "cards",
+  "kicker": "Superficie d’attacco",
+  "titolo": "Aggiornare, segregare e segmentare bene",
+  "intro": "Molti attacchi sfruttano debolezze note e movimenti laterali facili. La riduzione del rischio passa da patch tempestive, visibilità sul software installato, disciplina sui sistemi legacy e separazione effettiva degli ambienti di rete.",
+  "cards": [
+   {
+    "h": "Patch critiche rapide",
+    "d": "Entro giorni, con test proporzionati"
+   },
+   {
+    "h": "Inventario software",
+    "d": "Sapere cosa c’è e in quale versione"
+   },
+   {
+    "h": "Legacy segregato",
+    "d": "Fuori supporto isolato e sotto monitoraggio"
+   },
+   {
+    "h": "Rete segmentata",
+    "d": "Uffici, ospiti e server non comunicano liberamente"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s009",
+  "layout": "numeri",
+  "kicker": "Esercizio guidato",
+  "titolo": "Quattro priorità per partire bene",
+  "intro": "Nel caso di un’azienda di ottanta dipendenti, l’ordine conta più della perfezione. Le prime mosse vanno scelte con un criterio semplice: massimo abbattimento del rischio iniziale con uno sforzo organizzativo ancora sostenibile.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "MFA su posta, VPN e account privilegiati",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Backup offline o immutabili con test di ripristino",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Cifratura dei dischi su portatili e smartphone",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Log centralizzati e non modificabili dagli ADS",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s010",
+  "layout": "tabella",
+  "kicker": "Tracce affidabili",
+  "titolo": "I log che rendono governabile la sicurezza",
+  "cols": [
+   "Area",
+   "Eventi da tracciare"
+  ],
+  "righe": [
+   [
+    "Autenticazione",
+    "Accessi, fallimenti, password, MFA, remoto"
+   ],
+   [
+    "Dati",
+    "Consultazioni massive, esportazioni, cancellazioni, modifiche"
+   ],
+   [
+    "Configurazioni",
+    "Firewall, cloud, server, backup, sicurezza"
+   ],
+   [
+    "Privilegi",
+    "Attività di account con poteri estesi"
+   ]
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s011",
+  "layout": "flusso",
+  "kicker": "Verifica periodica",
+  "titolo": "Come verificare davvero l'efficacia delle difese",
+  "intro": "La verifica periodica non è un report da archiviare: combina assessment, test realistici e gestione coerente delle evidenze, soprattutto dopo cambiamenti rilevanti come nuovi portali esposti, migrazioni cloud o reti riorganizzate.",
+  "passi": [
+   {
+    "h": "Vulnerability assessment",
+    "d": "Debolezze note, errori, versioni obsolete, servizi esposti"
+   },
+   {
+    "h": "Penetration test",
+    "d": "Percorsi d'attacco reali e catene di sfruttamento"
+   },
+   {
+    "h": "Perimetro prioritario",
+    "d": "Internet, applicazioni critiche, VPN, accessi remoti"
+   },
+   {
+    "h": "Gestione degli esiti",
+    "d": "Classifica, assegna priorità, pianifica correzioni"
+   },
+   {
+    "h": "Riesame",
+    "d": "Almeno annuale e dopo cambiamenti rilevanti"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s012",
+  "layout": "tabella",
+  "kicker": "Perimetro NIS2",
+  "titolo": "I dieci ambiti NIS2 di gestione del rischio",
+  "cols": [
+   "Ambiti 1-5",
+   "Ambiti 6-10"
+  ],
+  "righe": [
+   [
+    "Politiche e governance",
+    "Valutazione dell'efficacia"
+   ],
+   [
+    "Gestione degli incidenti",
+    "Igiene informatica e formazione"
+   ],
+   [
+    "Continuità operativa",
+    "Crittografia"
+   ],
+   [
+    "Supply chain",
+    "Sicurezza delle risorse umane"
+   ],
+   [
+    "Sviluppo o acquisizione sicura",
+    "Controllo accessi e MFA"
+   ]
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s013",
+  "layout": "split",
+  "kicker": "Responsabilità del vertice",
+  "titolo": "Il board governa il rischio cyber",
+  "lead": "NIS2 sposta la cybersicurezza nel perimetro del vertice: responsabilità personale e dovere di formarsi. Il punto non è fare configurazione tecnica, ma decidere priorità, deleghe, indicatori e riesami con continuità.",
+  "punti": [
+   {
+    "h": "Responsabilità",
+    "d": "Il vertice risponde di decisioni e omissioni"
+   },
+   {
+    "h": "Formazione",
+    "d": "Capire lessico, dipendenze, scenari e impatti"
+   },
+   {
+    "h": "Domande giuste",
+    "d": "Servizi critici, fornitori sensibili, backup, MFA, recupero"
+   },
+   {
+    "h": "Flussi e follow up",
+    "d": "Indicatori leggibili, piani approvati, riesami periodici"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s014",
+  "layout": "piramide",
+  "kicker": "Standard integrati",
+  "titolo": "Un solo sistema documentale, due riferimenti",
+  "intro": "Le norme aiutano a evitare regole sparse e incoerenti. L'obiettivo non è accumulare documenti, ma collegare rischi, ruoli, controlli, registrazioni, verifiche e decisioni della direzione in un impianto leggibile.",
+  "livelli": [
+   {
+    "h": "ISO IEC 27701",
+    "d": "Estende il sistema alla dimensione privacy"
+   },
+   {
+    "h": "ISO IEC 27001",
+    "d": "Sistema certificabile con novantatré controlli e riesame"
+   },
+   {
+    "h": "Sistema documentale unico",
+    "d": "Rischi, misure, ruoli, incidenti, formazione ed evidenze coerenti"
+   }
+  ]
+ },
+ {
+  "id": "fadpriv03_m05_s015",
+  "layout": "chiusura",
+  "kicker": "Chiusura modulo",
+  "titolo": "Quattro checkpoint prima del data breach",
+  "modNum": "05",
+  "punti": [
+   {
+    "h": "Metodo",
+    "d": "Asset, minacce, impatto, misure, rischio residuo, riesame"
+   },
+   {
+    "h": "Priorità",
+    "d": "Identità e accessi spesso riducono rischio più rapidamente"
+   },
+   {
+    "h": "Tenuta operativa",
+    "d": "Cifratura, backup provati, patch, rete ed endpoint"
+   },
+   {
+    "h": "Governance",
+    "d": "Log, test di efficacia e responsabilità guidano il breach response"
+   }
+  ],
+  "prossimo": {
+   "modulo": "06",
+   "titolo": "Gestione del data breach"
+  }
+ }
+]

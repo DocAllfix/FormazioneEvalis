@@ -1,0 +1,169 @@
+[
+  {
+    "id": "fadpriv01_m04_s001",
+    "layout": "apertura",
+    "kicker": "Modulo 4",
+    "titolo": "Data breach: definizione, lenti e impatto",
+    "corsoLabel": "Privacy per il personale · GDPR",
+    "eyebrow": "Modulo 4",
+    "sottotitolo": "In questo modulo chiarisci che cosa rientra davvero in un data breach, perché può nascere da errori ordinari e come riconoscerlo attraverso riservatezza, integrità e disponibilità.",
+    "agenda": [
+      "Definizione ampia",
+      "Non serve un hacker",
+      "Riservatezza",
+      "Integrità",
+      "Disponibilità"
+    ]
+  },
+  {
+    "id": "fadpriv01_m04_s002",
+    "layout": "cards",
+    "kicker": "Casi reali",
+    "titolo": "Quattro scene tipiche di routine",
+    "intro": "Le violazioni spesso nascono da gesti abituali: posta elettronica, carta, dispositivi portatili e schermate lasciate esposte. Riconoscerle nella routine è il primo passo per non sottovalutarle.",
+    "cards": [
+      {
+        "h": "Busta paga errata",
+        "d": "Accesso interno non autorizzato"
+      },
+      {
+        "h": "Foglio sulla fotocopiatrice",
+        "d": "Dati esposti in area condivisa"
+      },
+      {
+        "h": "Chiavetta smarrita",
+        "d": "Supporto portatile fuori controllo"
+      },
+      {
+        "h": "Portale o schermata aperti",
+        "d": "Visibilità oltre il necessario"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m04_s003",
+    "layout": "flusso",
+    "kicker": "Tempi e ruoli",
+    "titolo": "La finestra delle 72 ore",
+    "intro": "Quando emerge una possibile violazione, il valore decisivo è la rapidità interna: la segnalazione fa partire la valutazione del rischio e consente all'organizzazione di decidere nei tempi corretti.",
+    "passi": [
+      {
+        "h": "Possibile violazione",
+        "d": "L'evento emerge o viene rilevato"
+      },
+      {
+        "h": "Segnalazione immediata",
+        "d": "Referente privacy, DPO, area IT"
+      },
+      {
+        "h": "Valutazione del rischio",
+        "d": "Dati, persone coinvolte, conseguenze, contenimento"
+      },
+      {
+        "h": "Esiti formali",
+        "d": "Notifica, eventuale comunicazione, registro"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m04_s004",
+    "layout": "flusso",
+    "kicker": "Esercizio guidato",
+    "titolo": "Cinque passi dopo un invio sbagliato",
+    "intro": "Davanti a un errore che crea imbarazzo, la priorità non è improvvisare ma seguire una sequenza chiara. Questi cinque passaggi trasformano una reazione istintiva in un processo gestibile.",
+    "passi": [
+      {
+        "h": "1. Segnala subito",
+        "d": "Attiva referente privacy, DPO, area IT"
+      },
+      {
+        "h": "2. Contieni il danno",
+        "d": "Richiama la mail, chiedi cancellazione"
+      },
+      {
+        "h": "3. Ricostruisci i fatti",
+        "d": "Data, ora, file, destinatario, dati"
+      },
+      {
+        "h": "4. Valutazione del titolare",
+        "d": "Rischio e decisione sulla notifica"
+      },
+      {
+        "h": "5. Registra la violazione",
+        "d": "Traccia l'evento nel registro"
+      }
+    ]
+  },
+  {
+    "id": "fadpriv01_m04_s005",
+    "layout": "confronto",
+    "kicker": "Comportamenti",
+    "titolo": "Cosa fare e cosa evitare subito",
+    "intro": "Dopo la scoperta o il sospetto di una violazione, la differenza la fanno comportamenti semplici ma rigorosi: alcune azioni aiutano la gestione corretta, altre la complicano immediatamente.",
+    "a": {
+      "h": "Da fare",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Segnalare anche nel dubbio"
+        },
+        {
+          "d": "Annotare fatti, tempi e soggetti"
+        },
+        {
+          "d": "Conservare mail, log e risposte"
+        },
+        {
+          "d": "Limitare il danno senza improvvisare"
+        }
+      ]
+    },
+    "b": {
+      "h": "Da evitare",
+      "sub": "",
+      "punti": [
+        {
+          "d": "Nascondere l'errore o rimandare"
+        },
+        {
+          "d": "Gestire tutto da soli"
+        },
+        {
+          "d": "Cancellare tracce per imbarazzo"
+        },
+        {
+          "d": "Contattare Garante o interessati autonomamente"
+        }
+      ]
+    }
+  },
+  {
+    "id": "fadpriv01_m04_s006",
+    "layout": "chiusura",
+    "kicker": "Da ricordare",
+    "titolo": "La mappa operativa del data breach",
+    "modNum": "04",
+    "punti": [
+      {
+        "h": "Nozione ampia",
+        "d": "Anche errori ordinari possono essere violazioni"
+      },
+      {
+        "h": "Tre criteri",
+        "d": "Riservatezza, integrità, disponibilità"
+      },
+      {
+        "h": "Velocità interna",
+        "d": "Le 72 ore decorrono dalla conoscenza"
+      },
+      {
+        "h": "Sequenza pratica",
+        "d": "Segnala, contieni, annota, conserva prove"
+      }
+    ],
+    "prossimo": {
+      "modulo": "05",
+      "titolo": "Casi pratici e istruzioni operative"
+    }
+  }
+]

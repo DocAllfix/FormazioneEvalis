@@ -1,0 +1,216 @@
+{
+  "checkpoint": [
+    {
+      "modulo": "m01",
+      "domanda": "Un numero di matricola interno è un dato personale?",
+      "opzioni": [
+        "No, è un codice aziendale",
+        "Sì, rende identificabile il dipendente",
+        "Solo se abbinato alla foto"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Quanto tempo ha l’azienda per rispondere a una richiesta di accesso?",
+      "opzioni": [
+        "72 ore",
+        "1 mese",
+        "Nessun termine"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Prima di inviare dati a un nuovo fornitore devi:",
+      "opzioni": [
+        "Verificare che sia nominato responsabile tramite il referente privacy",
+        "Chiedergli la partita IVA",
+        "Nulla: i fornitori sono sempre autorizzati"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Ricevi decine di notifiche di autenticazione che non hai richiesto. Cosa fai?",
+      "opzioni": [
+        "Ne approvo una per farle smettere",
+        "Le rifiuto tutte e segnalo all’IT",
+        "Spengo il telefono"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Un vocale WhatsApp con la voce del direttore chiede di approvare subito un pagamento. Cosa fai?",
+      "opzioni": [
+        "Eseguo: la voce è la sua",
+        "Verifico chiamando il direttore al numero in rubrica",
+        "Rispondo al vocale chiedendo conferma"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Puoi incollare la mail di un cliente in un chatbot gratuito per preparare la risposta?",
+      "opzioni": [
+        "Sì, è solo una bozza",
+        "Solo dopo aver tolto ogni dato identificativo, o usando lo strumento aziendale autorizzato",
+        "Sì, se cancello la chat dopo"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Un codice QR su un cartello in ufficio invita ad “aggiornare le credenziali”. Cosa fai?",
+      "opzioni": [
+        "Lo inquadro e aggiorno",
+        "Non lo inquadro e segnalo all’IT",
+        "Lo inquadro ma non inserisco la password"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Il Regolamento IA si somma al GDPR o lo sostituisce?",
+      "opzioni": [
+        "Lo sostituisce",
+        "Si somma: entrambi si applicano",
+        "Non riguarda le aziende italiane"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "I CV dei candidati non selezionati:",
+      "opzioni": [
+        "Si conservano per sempre",
+        "Si cancellano entro il termine fissato dalle istruzioni interne",
+        "Si inviano ad altre aziende"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "I metadati delle email dei dipendenti:",
+      "opzioni": [
+        "Possono essere usati liberamente per controllare il lavoro",
+        "Hanno tempi di conservazione brevi e non servono al controllo del lavoratore",
+        "Non esistono"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Hai cliccato su un link sospetto ma non hai inserito nulla. Cosa fai?",
+      "opzioni": [
+        "Niente: non ho inserito dati",
+        "Segnalo comunque all’IT: il dispositivo potrebbe essere compromesso",
+        "Cancello la cronologia"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Un ex dipendente ha ancora diritti sui propri dati?",
+      "opzioni": [
+        "No",
+        "Sì, come qualsiasi interessato",
+        "Solo per un anno"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Dati del personale condivisi per errore a video con un cliente:",
+      "opzioni": [
+        "Non sono un data breach",
+        "Sono un data breach da segnalare subito",
+        "Sono un problema solo se registrato"
+      ],
+      "corretta": 1
+    }
+  ],
+  "esame": [
+    {
+      "modulo": "m01",
+      "domanda": "Quale di queste operazioni NON richiede una base giuridica?",
+      "opzioni": [
+        "Consultare l’anagrafica clienti",
+        "Archiviare un contratto",
+        "Nessuna: ogni trattamento la richiede"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Un messaggio senza errori di ortografia e con riferimenti a progetti reali:",
+      "opzioni": [
+        "È sicuramente legittimo",
+        "Può comunque essere phishing mirato",
+        "È legittimo se arriva da un collega"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Le notifiche di autenticazione ripetute che non hai richiesto vanno:",
+      "opzioni": [
+        "Approvate",
+        "Rifiutate e segnalate",
+        "Ignorate senza segnalare"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Dati personali di clienti in un chatbot gratuito:",
+      "opzioni": [
+        "Consentiti se cancelli la chat",
+        "Vietati: equivalgono a comunicarli a un terzo",
+        "Consentiti per bozze"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Il Regolamento IA impone al datore anche:",
+      "opzioni": [
+        "L’alfabetizzazione del personale che usa sistemi di IA",
+        "Il divieto di qualsiasi IA",
+        "Nulla che riguardi i dipendenti"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Il termine per la notifica al Garante di un data breach è:",
+      "opzioni": [
+        "24 ore",
+        "72 ore dalla conoscenza",
+        "7 giorni"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Una richiesta di accesso da parte di un ex dipendente:",
+      "opzioni": [
+        "Va inoltrata al referente e gestita entro 1 mese",
+        "Non è valida",
+        "Va evasa inviando tutto l’archivio"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m03",
+      "domanda": "I CV non selezionati e scaduti i tempi di conservazione:",
+      "opzioni": [
+        "Si tengono per future selezioni",
+        "Si cancellano secondo le istruzioni interne",
+        "Si inviano all’agenzia per il lavoro"
+      ],
+      "corretta": 1
+    }
+  ]
+}

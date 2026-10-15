@@ -1,0 +1,44 @@
+## SEZIONE 1 — Modulo 7 del committente — IA, cloud e nuovi trattamenti (45 min)
+
+### SCHERMATA 1 — Regolamento IA e GDPR insieme
+Il Reg. UE 2024/1689 si applica a chi sviluppa o usa (deployer) sistemi di IA. Per l’azienda che li adotta:
+Pratiche vietate
+Riconoscimento delle emozioni sul luogo di lavoro, social scoring, categorizzazione biometrica su dati sensibili, manipolazione subliminale.
+Alto rischio (Allegato III)
+IA per selezione del personale, valutazione delle prestazioni, assegnazione dei compiti, promozioni e licenziamenti, accesso al credito. Obblighi del deployer: uso conforme alle istruzioni, sorveglianza umana, informazione ai lavoratori e alle rappresentanze, conservazione dei log, DPIA.
+Rischio limitato / minimo
+Chatbot e contenuti generati: obbligo di trasparenza (dire che si interagisce con una IA; etichettare i contenuti).
+Alfabetizzazione (art. 4)
+Dal febbraio 2025 chi usa sistemi di IA deve assicurare un livello sufficiente di alfabetizzazione del personale coinvolto: formazione documentata, come per il GDPR.
+
+### SCHERMATA 2 — Policy aziendale per l’IA generativa
+Il manager deve definire e far rispettare una policy che risponda a quattro domande:
+Domanda | Risposta tipica
+Quali strumenti sono ammessi? | Elenco chiuso di strumenti con contratto aziendale (DPA, dati non usati per addestramento, server UE o trasferimento coperto). Versioni gratuite consumer vietate per dati aziendali.
+Quali dati possono entrare? | Mai dati personali identificabili, dati particolari, segreti industriali, codice proprietario, documenti riservati. Anonimizzazione obbligatoria prima dell’input.
+Chi risponde dell’output? | L’utente: verifica, correzione, nessuna decisione su persone basata solo sull’output (art. 22 GDPR).
+Come si traccia? | Registro degli strumenti nel registro dei trattamenti; DPIA per usi su dati personali; formazione; audit periodico.
+Esempio. HR vuole usare un assistente IA per preselezionare i CV. È uso ad alto rischio: DPIA, informativa ai candidati, sorveglianza umana effettiva (non un semplice “ok” sulla lista), log conservati, verifica dei bias, informazione alle RSU. Senza questi passaggi il progetto non parte.
+
+### SCHERMATA 3 — Cloud e SaaS: le domande da fare prima di firmare
+Dove sono ospitati i dati (regione) e dove opera l’assistenza? Esistono sub-fornitori extra-UE?
+C’è un DPA conforme all’art. 28 e uno strumento di trasferimento valido (DPF, SCC + TIA)?
+Cifratura a riposo e in transito; possibilità di chiavi gestite dal cliente; MFA e SSO; log di accesso esportabili (per il provvedimento ADS).
+Certificazioni (ISO 27001, SOC 2 tipo II, CSA STAR) e report di audit disponibili.
+Tempi di notifica degli incidenti al titolare (24-48 h), procedure di breach.
+Portabilità ed esportazione dei dati, cancellazione certificata a fine contratto, tempi di conservazione dei backup del fornitore.
+Il fornitore usa i dati per migliorare i propri servizi o addestrare modelli? Se sì, è un trattamento per finalità proprie da escludere contrattualmente.
+Shadow IT
+Strumenti attivati dalle funzioni con carta di credito, senza l’IT: sono la principale fonte di trattamenti non censiti e di trasferimenti non coperti. Il manager è responsabile di ciò che la sua area attiva.
+
+### SCHERMATA 4 — Esercizio · Valuta il nuovo strumento
+[ESERCIZIO PRECLUSIVO]
+Il marketing propone una piattaforma SaaS statunitense di analisi del comportamento dei clienti con IA predittiva. Assegna ciascun adempimento alla fase corretta.
+- Verificare DPF o clausole standard con TIA → Prima della firma
+- Firmare il DPA art. 28 escludendo l’uso dei dati per addestramento → Prima della firma
+- Svolgere la DPIA (profilazione su larga scala) → Prima della firma
+- Aggiornare informativa clienti e registro dei trattamenti → All’avvio
+- Formare gli utenti e designarli come autorizzati → All’avvio
+- Access review semestrale e verifica dei log → In esercizio
+- Riesame annuale della DPIA e del contratto → In esercizio
+Esito: Corretto. Trasferimento, DPA e DPIA sono condizioni della firma: dopo il go-live diventano sanatorie, non adempimenti.

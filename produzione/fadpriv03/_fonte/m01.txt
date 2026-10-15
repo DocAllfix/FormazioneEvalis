@@ -1,0 +1,110 @@
+## SEZIONE 1 — Modulo 0 del committente — Presentazione (10 min)
+
+### SCHERMATA 1 — Privacy per ruoli di responsabilità
+Corso avanzato per chi decide, organizza o amministra trattamenti di dati personali: responsabili di funzione, dirigenti, referenti privacy interni e amministratori di sistema . Integra la formazione base (FAD-PRIV-01) con gli obblighi che gravano su chi esercita autorità sui dati o sui sistemi che li contengono.
+8 h durata
+8 moduli
+8 checkpoint
+20 domande esame
+75% soglia (15/20)
+Modulo | Argomento | Destinatari principali | Durata
+1 | Il sistema privacy aziendale: accountability, registro, DPIA, informative, designazioni | Manager · ADS | 60 min
+2 | Il manager come responsabile di funzione: autorizzazioni, istruzioni, fornitori art. 28, trasferimenti extra-UE | Manager | 55 min
+3 | Controlli sui lavoratori: art. 4 Stat. Lav., videosorveglianza, geolocalizzazione, email e metadati, whistleblowing | Manager · ADS | 55 min
+4 | Amministratori di sistema: Provvedimento Garante 27/11/2008, designazione, log, verifica annuale | ADS · Manager IT | 60 min
+5 | Misure tecniche e organizzative art. 32: identità e accessi, cifratura, backup, logging, raccordo NIS2 e ISO/IEC 27001 | ADS · Manager IT | 60 min
+6 | Gestione del data breach: procedura, valutazione del rischio, notifica e comunicazione, esercitazione | Manager · ADS | 55 min
+7 | IA, cloud e nuovi trattamenti: Regolamento IA, SaaS, policy per l’IA generativa | Manager · ADS | 45 min
+8 | Ispezioni, sanzioni, responsabilità e audit interno | Manager | 40 min
+— | Esame finale e attestato | Tutti | 40 min
+Moduli in sequenza, checkpoint bloccanti di 4 domande, esercizi preclusivi; progresso salvato nel browser.
+
+### SCHERMATA 2 — Riferimenti normativi del corso
+Fonte | Oggetto
+Reg. UE 2016/679 (GDPR) | Artt. 5, 6, 9, 24, 25, 28, 29, 30, 32, 33, 34, 35, 37-39, 44-49, 83
+D.Lgs. 196/2003 (Codice privacy) come modificato dal D.Lgs. 101/2018 | Art. 2-quaterdecies (designazione), art. 114 (richiamo all’art. 4 Stat. Lav.), art. 166 (sanzioni)
+L. 300/1970 art. 4 (Statuto dei lavoratori), D.Lgs. 151/2015 | Controlli a distanza, strumenti di lavoro
+Provvedimento Garante 27/11/2008 (mod. 25/6/2009) | Amministratori di sistema
+Provvedimento Garante 8/4/2010 e linee guida | Videosorveglianza; FAQ 2020
+Provvedimento Garante 6/6/2024 (documento di indirizzo) | Metadati della posta elettronica dei dipendenti
+Linee guida EDPB 9/2022 e 1/2021 | Notifica dei data breach; esempi di violazioni
+D.Lgs. 138/2024 (NIS2) | Sicurezza delle reti e segnalazione incidenti
+Reg. UE 2024/1689 (Regolamento IA) | Sistemi di IA, alfabetizzazione, usi ad alto rischio nel lavoro
+D.Lgs. 24/2023 | Whistleblowing
+ISO/IEC 27001:2022, ISO/IEC 27701 | Sistemi di gestione sicurezza e privacy (riferimento volontario)
+
+## SEZIONE 2 — Modulo 1 del committente — Il sistema privacy aziendale (60 min)
+
+### SCHERMATA 3 — Accountability: dimostrare, non dichiarare
+L’art. 5 par. 2 e l’art. 24 ribaltano la logica della vecchia normativa: non esiste più un elenco di misure minime da spuntare. Il titolare sceglie le misure adeguate al rischio e deve essere in grado di dimostrarlo in ogni momento, documenti alla mano. Un manager risponde di questa dimostrazione per la propria area.
+Documenti di governo
+Registro dei trattamenti · politiche e procedure · organigramma privacy con designazioni · nomine responsabili (art. 28) · DPIA · registro delle violazioni · piano formazione · verbali di audit
+Prove operative
+Informative consegnate e tracciate · consensi archiviati · log di accesso · verbali di verifica ADS · evidenze di cancellazione · risposte agli interessati con date
+Esempio di ispezione. Il Nucleo privacy della Guardia di Finanza chiede: “Chi può accedere alle buste paga e come lo dimostrate?”. La risposta accettabile non è “solo l’ufficio HR”, ma: elenco degli autorizzati HR con data di designazione, profili di accesso del gestionale, log degli accessi dell’ultimo semestre, attestati di formazione.
+
+### SCHERMATA 4 — Il registro dei trattamenti (art. 30)
+Obbligatorio per quasi tutte le imprese (l’esenzione sotto i 250 dipendenti non opera se il trattamento è non occasionale o riguarda dati particolari, caso pressoché universale). È la mappa da cui discende tutto il resto: senza registro non si sa quali informative servono, quali nomine, quali DPIA.
+Campo del registro | Chi fornisce l’informazione | Errore tipico
+Finalità e base giuridica | Responsabile di funzione | “Consenso” scritto ovunque per abitudine
+Categorie di interessati e di dati | Responsabile di funzione | Dati particolari non dichiarati (certificati medici in HR, allergie nella mensa)
+Destinatari e responsabili esterni | Responsabile di funzione + acquisti | Fornitori SaaS e consulenti dimenticati
+Trasferimenti extra-UE | IT + acquisti | Cloud USA non censiti
+Tempi di conservazione | Responsabile di funzione + legale | “Fino a revoca” o “illimitato”
+Misure di sicurezza | IT / ADS | Descrizione generica non verificabile
+Responsabilità del manager
+Ogni nuovo trattamento della tua area (nuovo software, nuova raccolta dati, nuovo fornitore, nuova finalità) va comunicato al referente privacy prima dell’avvio , per aggiornare il registro e valutare DPIA e nomine.
+
+### SCHERMATA 5 — Esercizio · Compila la riga del registro
+[ESERCIZIO PRECLUSIVO]
+Trattamento “Gestione presenze e assenze del personale”. Assegna ciascun elemento al campo corretto del registro.
+- Dipendenti e collaboratori → Interessati
+- Contratto e obblighi di legge (art. 6.1 b, c); art. 9.2 b per i certificati → Base giuridica
+- Consulente del lavoro, software di rilevazione presenze in cloud → Destinatari
+- 10 anni per i dati contabili; certificati medici per il periodo necessario alla giustificazione → Conservazione
+- Profili di accesso per ruolo, MFA, backup giornaliero, log di accesso → Misure di sicurezza
+- Nominativi, orari, giustificativi di assenza, certificati medici → Categorie di dati
+Esito: Riga completa. Nota i certificati medici: la riga rivela un dato particolare che impone accessi ristretti e giustifica la base art. 9.2 b.
+
+### SCHERMATA 6 — DPIA: quando è obbligatoria (art. 35)
+La valutazione d’impatto è dovuta quando un trattamento presenta un rischio elevato, in particolare con nuove tecnologie. Il Garante (provv. 11/10/2018) ha fissato un elenco di casi in cui è sempre obbligatoria. In azienda ricorrono di frequente:
+trattamenti valutativi o di scoring, inclusa profilazione del personale;
+monitoraggio sistematico dei lavoratori (geolocalizzazione, controllo dell’uso di strumenti, badge con biometria);
+dati biometrici e genetici; dati particolari su larga scala;
+videosorveglianza su larga scala o con analisi intelligente;
+uso di sistemi di IA per decisioni su persone (selezione, valutazione, credito);
+incrocio o combinazione di dati da fonti diverse; dati di soggetti vulnerabili.
+Contenuto minimo
+Descrizione del trattamento · necessità e proporzionalità · rischi per gli interessati · misure per attenuarli · parere del DPO · consultazione preventiva del Garante se il rischio residuo resta elevato
+Chi la avvia
+Il manager che propone il trattamento, insieme al referente privacy e all’IT. Prima dell’acquisto, non dopo il go-live.
+
+### SCHERMATA 7 — Informative e consensi: le responsabilità della funzione
+Dipendenti e candidati
+Informativa all’assunzione e nell’annuncio; aggiornamento quando cambiano strumenti (nuovo gestionale, nuovo controllo). Nessun consenso per il rapporto di lavoro: non sarebbe libero.
+Clienti e fornitori
+Informativa al primo contatto (contratto, ordine, sito). Consenso solo per marketing a nuovi contatti; soft spam ammesso verso clienti per prodotti analoghi con opt-out.
+Visitatori e videosorveglianza
+Cartello semplificato prima dell’area ripresa + informativa estesa disponibile.
+Sito web
+Cookie banner conforme (linee guida 2021): rifiuto facile quanto l’accettazione; nessun cookie non necessario prima della scelta.
+Esempio. Il marketing lancia una campagna sui contatti raccolti dal customer service per l’assistenza post-vendita. Il manager marketing deve verificare: l’informativa prevedeva la finalità marketing? C’è consenso o si rientra nel soft spam (stessi prodotti, clienti esistenti, opt-out)? In caso negativo la campagna non parte.
+
+### SCHERMATA 8 — Organigramma privacy e designazioni
+Titolare
+Legale rappresentante / CdA
+DPO (art. 37) se dovuto
+Referente privacy
+coordinamento interno
+Designati (art. 2-quaterdecies)
+responsabili di funzione
+Amministratori di sistema
+Provv. 27/11/2008
+Responsabili esterni
+art. 28, contratto
+Autorizzati (art. 29)
+istruzioni scritte per ruolo
+Sub-responsabili
+autorizzazione scritta
+La designazione del responsabile di funzione (art. 2-quaterdecies) delega compiti specifici: autorizzare il personale della propria area, verificare il rispetto delle istruzioni, segnalare violazioni, proporre aggiornamenti del registro. È un atto scritto, con ambito definito: senza designazione il manager non può “autorizzare” nessuno.
+Il DPO è obbligatorio per enti pubblici, per chi effettua monitoraggio regolare e sistematico su larga scala o tratta dati particolari su larga scala come attività principale (es. sanità, call center, sorveglianza). Se non obbligatorio, può essere nominato volontariamente con gli stessi requisiti.
