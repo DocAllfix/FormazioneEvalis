@@ -76,3 +76,15 @@ La ricetta riduce i difetti, il **QA li azzera**: ogni audio passa Whisper round
 col copione), silence-check e loudness (QA-PRE-LIVE §B). Ciò che sfugge alla ricetta (pronuncia
 stocastica) viene FLAGGED e si rigenera la singola frase/slide. Costo di rigenerazione per frase:
 centesimi. È il matrimonio ricetta+QA che regge la scala, non la perfezione del motore.
+
+## Regola sigle: glossario e lessico non devono rovinare altre parole (15/10/2026)
+
+- Il `map` del glossario si applica SENZA confini di parola, dalle chiavi più lunghe: una chiave corta
+  cade dentro altre parole («IA» dentro DPIA e TIA, «tep» dentro «anteposti», «n. » dentro «slogan. »).
+  Le sigle brevi vanno scritte staccate (" IA ", " IA,", …) o protette da chiavi più lunghe.
+- Il `lessico` IPA di Azure NON distingue maiuscole e minuscole: una sigla che è anche una parola
+  italiana («VA», «PT») cambia la pronuncia di quella parola ovunque. Mai nel lessico.
+- Più termini inglesi nella stessa frase trascinano in inglese anche le parole italiane: per la voce
+  si rendono in italiano, con l'articolo dentro la chiave quando cambia il genere.
+- Controllo automatico: `azure_tts.controllo_glossario` gira in `--dry-run` e prima di ogni sintesi e
+  la blocca se trova uno di questi casi. Eccezioni verificate a mano in `glossario["dentro_parola_ok"]`.

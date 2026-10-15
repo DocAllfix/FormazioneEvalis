@@ -80,6 +80,36 @@ def con_glossario(testo: str, glossario: dict) -> str:
     return testo
 
 
+def controllo_glossario(testi: list[str], glossario: dict, lessico: dict) -> list[str]:
+    """REGOLA SIGLE (15/10/2026, dopo «DPIA» letto «DPI.A.», «va» letto «vu a», «anteposti» letto
+    «an-tonnellate…-osti»): simula con_glossario nello STESSO ordine e segnala ogni sostituzione che cade
+    DENTRO una parola; segnala ogni sigla del lessico IPA (tutta maiuscola) che nel testo compare scritta
+    diversamente, perché Azure applica il lessico senza distinguere maiuscole e minuscole.
+    Le chiavi elencate in glossario["dentro_parola_ok"] sono eccezioni verificate a mano."""
+    ok = set(glossario.get("dentro_parola_ok", []))
+    mappa = glossario.get("map", {})
+    problemi = set()
+    for t in testi:
+        for k in sorted(mappa, key=len, reverse=True):
+            if k in ok or not k.strip():
+                continue
+            pezzi, i = [], 0
+            while (j := t.find(k, i)) >= 0:
+                prima = t[j - 1] if j else " "
+                dopo = t[j + len(k)] if j + len(k) < len(t) else " "
+                if (k[0].isalnum() and prima.isalnum()) or (k[-1].isalnum() and dopo.isalnum()):
+                    problemi.add(f"glossario: «{k}» dentro una parola: …{t[max(0, j - 12):j + len(k) + 10]}…")
+                pezzi.append(t[i:j] + mappa[k]); i = j + len(k)
+            t = "".join(pezzi) + t[i:]
+        for k in lessico:
+            if not (k.isupper() and len(k) >= 2):
+                continue
+            for w in re.findall(r"(?<![\wÀ-ù])" + re.escape(k) + r"(?![\wÀ-ù])", t, re.I):
+                if w != k:
+                    problemi.add(f"lessico: sigla «{k}» applicata anche alla parola «{w}»")
+    return sorted(problemi)
+
+
 def carica_lessico() -> dict:
     """Lessico fonetico IPA del catalogo (omografi): produzione/lessico-fonetico.json."""
     return (leggi_json(PROD / "lessico-fonetico.json", {"map": {}}) or {"map": {}}).get("map", {})
@@ -463,6 +493,13 @@ def main() -> None:
     for m in moduli:
         if m not in per_mod:
             sys.exit(f"modulo {m} non presente nei copioni di {a.corso}")
+
+    # regola sigle: mai sintesi (né prova a secco pulita) se il glossario rovina una parola
+    problemi = controllo_glossario([s["testo"] for m in moduli for s in per_mod[m]], glossario,
+                                   {**carica_lessico(), **glossario.get("lessico", {})})
+    if problemi:
+        print("\n".join(problemi))
+        sys.exit(f"{len(problemi)} problemi di glossario/lessico: correggere le chiavi prima della sintesi")
 
     if a.dry_run:
         voce = env.get("AZURE_SPEECH_VOICE", "<AZURE_SPEECH_VOICE>")
