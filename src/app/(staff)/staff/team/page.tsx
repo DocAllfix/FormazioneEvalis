@@ -1,13 +1,13 @@
-import { getCurrentSession } from "@/lib/auth/server";
 import { PageHeader } from "@/components/admin/page-header";
 import { listPlatformAdmins } from "@/features/platform/admins";
 import { PlatformAdminsManager } from "@/components/admin/platform-admins-manager";
+import { sessioneStaffPagina } from "@/features/auth/pagina";
 
 export const metadata = { title: "Team piattaforma — Evalis Admin" };
 
 // Gestione degli admin di piattaforma (Evalis). Il layout (staff) gate già l'accesso.
 export default async function StaffTeamPage() {
-  const ctx = await getCurrentSession();
+  const ctx = await sessioneStaffPagina();
   const admins = await listPlatformAdmins();
 
   return (

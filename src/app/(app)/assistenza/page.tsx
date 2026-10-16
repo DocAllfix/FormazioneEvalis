@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { LifeBuoy, MessageCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { requireSession } from "@/features/auth/guards";
 import { listMyTickets, type TicketStatus } from "@/features/support/lifecycle";
 import { NewTicketDialog } from "@/components/support/new-ticket-dialog";
+import { sessionePagina } from "@/features/auth/pagina";
 
 export const metadata = { title: "Assistenza — Evalis" };
 
@@ -14,7 +14,7 @@ const statusInfo: Record<TicketStatus, { text: string; cls: string }> = {
 };
 
 export default async function AssistenzaPage() {
-  const { user } = await requireSession();
+  const { user } = await sessionePagina();
   const tickets = await listMyTickets(user.id);
 
   return (

@@ -2,10 +2,12 @@ import { PageHeader } from "@/components/admin/page-header";
 import { PeopleManager } from "@/components/admin/people-manager";
 import { getOrgMembersWithDetails, listOrgInvitations } from "@/features/admin/queries";
 import { listPublishedCourses } from "@/features/catalog/queries";
+import { sessionePagina } from "@/features/auth/pagina";
 
 export const metadata = { title: "Persone — Evalis" };
 
 export default async function PersonePage() {
+  await sessionePagina();
   const [members, invitations, courses] = await Promise.all([
     getOrgMembersWithDetails(),
     listOrgInvitations(),

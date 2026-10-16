@@ -3,12 +3,14 @@ import { ArrowRight, CreditCard, TicketCheck, Users } from "lucide-react";
 import { PageHeader } from "@/components/admin/page-header";
 import { StatCard } from "@/components/app/stat-card";
 import { getOrgOverview } from "@/features/admin/queries";
+import { sessionePagina } from "@/features/auth/pagina";
 
 export const metadata = { title: "Panoramica azienda — Evalis" };
 
 const ROOT = (process.env.NEXT_PUBLIC_ROOT_DOMAIN ?? "evalisacademy.it").split(":")[0];
 
 export default async function AdminOverviewPage() {
+  await sessionePagina();
   const o = await getOrgOverview();
   const available = Math.max(0, o.seatLimit - o.seatsUsed);
   const hasSubscription = o.seatLimit > 1;

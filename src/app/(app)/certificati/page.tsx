@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { Award, FileDown } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { requireSession } from "@/features/auth/guards";
 import { getMyCertificates } from "@/features/learner/queries";
 import { assicuraCertificatiDi } from "@/features/certificates/lifecycle";
 import { notaProvvisorio } from "@/features/certificates/testi";
 import { CertificateDownloadButton } from "@/components/app/certificate-download-button";
 import { dataBreve as formatDate } from "@/lib/formato";
+import { sessionePagina } from "@/features/auth/pagina";
 
 export const metadata = { title: "Certificati — Evalis" };
 
@@ -19,7 +19,7 @@ const statusInfo: Record<string, { text: string; cls: string }> = {
 export default async function CertificatiPage() {
   // rete di sicurezza: chi ha superato l'esame finale e non ha ancora il certificato lo riceve
   // qui, se i requisiti sono tutti soddisfatti (un errore non deve impedire di vedere la pagina)
-  const { user } = await requireSession();
+  const { user } = await sessionePagina();
   await assicuraCertificatiDi(user.id).catch((e) => console.error("[certificati] recupero non riuscito", e));
   const certs = await getMyCertificates();
 

@@ -3,10 +3,12 @@ import { Plus } from "lucide-react";
 import { PageHeader } from "@/components/admin/page-header";
 import { AdminCourseList } from "@/components/admin/admin-course-list";
 import { listGlobalCoursesForAdmin } from "@/features/courses/admin-catalog";
+import { sessioneStaffPagina } from "@/features/auth/pagina";
 
 export const metadata = { title: "Corsi — Evalis Admin" };
 
 export default async function StaffCorsiPage() {
+  await sessioneStaffPagina();
   const courses = await listGlobalCoursesForAdmin();
 
   return (

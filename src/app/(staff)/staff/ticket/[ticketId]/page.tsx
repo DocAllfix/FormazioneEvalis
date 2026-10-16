@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { requirePlatformAdmin } from "@/features/auth/guards";
+import { sessioneStaffPagina } from "@/features/auth/pagina";
 import { getTicket } from "@/features/support/lifecycle";
 import { TicketThread } from "@/components/support/ticket-thread";
 
@@ -11,7 +11,7 @@ export default async function StaffTicketDetailPage({
   params: Promise<{ ticketId: string }>;
 }) {
   const { ticketId } = await params;
-  const ctx = await requirePlatformAdmin();
+  const ctx = await sessioneStaffPagina();
   const ticket = await getTicket(ticketId, { platformAdmin: true });
   if (!ticket) notFound();
 

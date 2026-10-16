@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { MessagesSquare, Pin } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { requireSession } from "@/features/auth/guards";
 import { listCategories, listThreads } from "@/features/community/lifecycle";
 import { NewThreadDialog } from "@/components/community/new-thread-dialog";
+import { sessionePagina } from "@/features/auth/pagina";
 
 export const metadata = { title: "Forum — Evalis" };
 
 export default async function ForumPage() {
-  await requireSession();
+  await sessionePagina();
   const [categories, threads] = await Promise.all([listCategories(), listThreads()]);
   const catName = new Map(categories.map((c) => [c.id, c.name]));
 

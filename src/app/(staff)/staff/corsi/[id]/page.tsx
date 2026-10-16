@@ -4,10 +4,12 @@ import { ArrowLeft, ListTree } from "lucide-react";
 import { PageHeader } from "@/components/admin/page-header";
 import { getAdminCourse } from "@/features/courses/admin-catalog";
 import { CourseEditForm } from "@/components/admin/course-edit-form";
+import { sessioneStaffPagina } from "@/features/auth/pagina";
 
 export const metadata = { title: "Scheda corso — Evalis Admin" };
 
 export default async function CourseEditPage({ params }: { params: Promise<{ id: string }> }) {
+  await sessioneStaffPagina();
   const { id } = await params;
   const course = await getAdminCourse(id);
   if (!course) notFound();

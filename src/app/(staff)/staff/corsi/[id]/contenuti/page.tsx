@@ -4,10 +4,12 @@ import { ArrowLeft } from "lucide-react";
 import { PageHeader } from "@/components/admin/page-header";
 import { getCourseTreeForEdit } from "@/features/courses/admin-catalog";
 import { ContentEditor } from "@/components/admin/content-editor/content-editor";
+import { sessioneStaffPagina } from "@/features/auth/pagina";
 
 export const metadata = { title: "Contenuti corso — Evalis Admin" };
 
 export default async function CourseContentPage({ params }: { params: Promise<{ id: string }> }) {
+  await sessioneStaffPagina();
   const { id } = await params;
   const tree = await getCourseTreeForEdit(id);
   if (!tree) notFound();

@@ -6,10 +6,12 @@ import { CourseCard } from "@/components/app/course-card";
 import { PurchaseBanner } from "@/components/app/purchase-banner";
 import { StatCard } from "@/components/app/stat-card";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { sessionePagina } from "@/features/auth/pagina";
 
 export const metadata = { title: "I miei percorsi — Evalis" };
 
 export default async function DashboardPage() {
+  await sessionePagina();
   const [enrollments, certs] = await Promise.all([
     getMyEnrollments(),
     getMyCertificates(),
