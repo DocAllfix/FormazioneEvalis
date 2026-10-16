@@ -58,7 +58,7 @@ export const CAMPI_FATTURA: {
 // Va nella chiave di idempotenza: per un'ora dopo il rilascio, chi aveva aperto il checkout
 // prima riceverebbe da Stripe un errore (stessa chiave, parametri diversi). Se cambiano i
 // campi, cambia questo valore.
-const VERSIONE_CAMPI = "fatt2";
+const VERSIONE_CAMPI = "fatt3"; // fatt3: campo del codice promozionale (EVALIS70) nel checkout
 
 /**
  * Il destinatario ha GIÀ questo corso? Guardia anti-doppio-addebito.
@@ -166,8 +166,10 @@ export async function createCoursePurchaseCheckout(courseId: string, beneficiary
     mode: "payment",
     customer: customerId,
     line_items: [{ price: c.stripePriceId, quantity: 1 }],
-    // `discounts` è mutuamente esclusivo con allow_promotion_codes (che non usiamo)
-    ...(percent !== 0 ? { discounts: [{ coupon: COMPANY_COUPONS[percent] }] } : {}),
+    // `discounts` è mutuamente esclusivo con allow_promotion_codes: con lo sconto azienda
+    // automatico il campo del codice non compare; senza, il cliente può inserire un codice
+    // promozionale (EVALIS70, riservato allo staff Evalis: _codice-evalis70.ts)
+    ...(percent !== 0 ? { discounts: [{ coupon: COMPANY_COUPONS[percent] }] } : { allow_promotion_codes: true }),
     ...TAX_PARAMS,
     ...CAMPI_FATTURA,
     // userId = destinatario dell'iscrizione (se stesso, o il dipendente per cui si compra)
@@ -220,6 +222,7 @@ export async function createBundlePurchaseCheckout(bundleId: string, chosenCours
     mode: "payment",
     customer: customerId,
     line_items: [{ price: b.stripePriceId, quantity: 1 }],
+    allow_promotion_codes: true, // codice promozionale (EVALIS70): i pacchetti non hanno sconto automatico
     ...TAX_PARAMS,
     ...CAMPI_FATTURA,
     metadata: {
