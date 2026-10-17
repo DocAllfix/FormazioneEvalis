@@ -37,6 +37,14 @@ export async function uploadCertificatePdf(verifyUuid: string, bytes: Uint8Array
   return path;
 }
 
+/** Salva un PDF del bucket certificati a un percorso dato (senza sovrascrivere: il file deve essere nuovo). */
+export async function caricaPdfCertificatoA(path: string, bytes: Uint8Array): Promise<void> {
+  const c = storageClient();
+  await ensureBucket(c);
+  const { error } = await c.storage.from(BUCKET).upload(path, Buffer.from(bytes), { contentType: "application/pdf", upsert: false });
+  if (error) throw error;
+}
+
 export async function signedCertificateUrl(path: string, ttlSeconds = 300): Promise<string> {
   const c = storageClient();
   const { data, error } = await c.storage.from(BUCKET).createSignedUrl(path, ttlSeconds);

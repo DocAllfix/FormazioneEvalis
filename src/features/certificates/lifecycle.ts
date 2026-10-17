@@ -24,13 +24,14 @@ import {
   destinatarioCommittente,
   mailAccreditatoUtente,
   mailAttestatoEvalisUtente,
+  mailAttestatoEvalisFirmato,
   mailProvvisorioCommittente,
   mailProvvisorioUtente,
   nomeFileCertificato,
   type DatiCertificato,
 } from "./notifiche";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
-import { signedCertificateUrl, linkCaricamentoCertificato, leggiCertificatoPdf, deleteCertificatePdf, uploadCertificatePdf, PERCORSO_FIRMA_EVALIS } from "@/lib/supabase/storage";
+import { signedCertificateUrl, linkCaricamentoCertificato, leggiCertificatoPdf, deleteCertificatePdf, uploadCertificatePdf, caricaPdfCertificatoA, PERCORSO_FIRMA_EVALIS } from "@/lib/supabase/storage";
 import { inviaEmailConAllegati } from "@/lib/email/resend";
 import { requirePlatformAdmin, requireSession, isPlatformAdmin } from "@/features/auth/guards";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
@@ -438,35 +439,8 @@ export async function emettiAttestatoEvalisById(
   if (d.status === "revoked") throw new ErroreUtente("Certificato revocato: non si può emettere.");
   if (d.status !== "ready_for_review") throw new ErroreUtente(`L'attestato ${d.number} è già stato emesso.`);
 
-  // la firma sta nello storage PRIVATO (il repository è pubblico): senza firma non si emette
-  const firma = await leggiCertificatoPdf(PERCORSO_FIRMA_EVALIS);
-  if (!firma) throw new ErroreUtente("Firma EVALIS non disponibile: l'attestato non è stato emesso. Riprova o avvisa l'amministratore.");
-
   const now = new Date();
-  const nascita = d.luogoNascita && d.dataNascita ? { nascita: `nato/a a ${d.luogoNascita} il ${dataNascitaLeggibile(d.dataNascita)}` } : {};
-  // i corsi in stile completo (oggi la PdR 125) hanno l'attestato EVALIS Academy col protocollo
-  const pdf =
-    d.courseSlug && CORSI_STILE_COMPLETO.has(d.courseSlug)
-      ? await buildAttestatoEvalisPdf({
-          learnerName: d.learnerName,
-          courseTitle: d.courseTitle,
-          durataMinuti: d.requiredMinutes,
-          issuedAt: now,
-          number: d.number,
-          verifyUrl: d.verifyUrl,
-          firma,
-          ...nascita,
-        })
-      : await buildCertificatePdf({
-          learnerName: d.learnerName,
-          courseTitle: d.courseTitle,
-          issuedAt: now,
-          number: d.number,
-          verifyUrl: d.verifyUrl,
-          soloEvalis: true,
-          firma,
-          ...nascita,
-        });
+  const pdf = await pdfDefinitivoEvalis(d, now);
   const path = await uploadCertificatePdf(d.verifyUuid, pdf);
 
   const emesso = await withTenant(ctx, async (tx) => {
@@ -498,6 +472,94 @@ export async function emettiAttestatoEvalisById(
   }).catch((e) => console.error(`[certificati] mail attestato EVALIS non inviata (${d.number})`, e));
 
   return { id: certificateId, status: "issued" as const, number: d.number };
+}
+
+/**
+ * Il PDF definitivo di un attestato EVALIS, firmato. La firma sta nello storage PRIVATO (il
+ * repository è pubblico): senza firma non si produce nessun definitivo.
+ */
+async function pdfDefinitivoEvalis(d: DatiCompleti, emessoIl: Date): Promise<Uint8Array> {
+  const firma = await leggiCertificatoPdf(PERCORSO_FIRMA_EVALIS);
+  if (!firma) throw new ErroreUtente("Firma EVALIS non disponibile: l'attestato non è stato emesso. Riprova o avvisa l'amministratore.");
+  const nascita = d.luogoNascita && d.dataNascita ? { nascita: `nato/a a ${d.luogoNascita} il ${dataNascitaLeggibile(d.dataNascita)}` } : {};
+  // i corsi in stile completo (oggi la PdR 125) hanno l'attestato EVALIS Academy col protocollo
+  return d.courseSlug && CORSI_STILE_COMPLETO.has(d.courseSlug)
+    ? buildAttestatoEvalisPdf({
+        learnerName: d.learnerName,
+        courseTitle: d.courseTitle,
+        durataMinuti: d.requiredMinutes,
+        issuedAt: emessoIl,
+        number: d.number,
+        verifyUrl: d.verifyUrl,
+        firma,
+        ...nascita,
+      })
+    : buildCertificatePdf({
+        learnerName: d.learnerName,
+        courseTitle: d.courseTitle,
+        issuedAt: emessoIl,
+        number: d.number,
+        verifyUrl: d.verifyUrl,
+        soloEvalis: true,
+        firma,
+        ...nascita,
+      });
+}
+
+/**
+ * Riconsegna FIRMATA di un attestato EVALIS già emesso prima che la firma esistesse (richiesta
+ * dell'utente del 17/10/2026). Stesso numero, stessa data di emissione, stesso QR: cambia solo
+ * il PDF, che ora porta la firma. Il file consegnato prima NON si cancella (resta nello storage
+ * come prova); il certificato punta al nuovo, nel registro resta `certificate-resigned` con
+ * operatore e motivo, e il titolare riceve il PDF firmato. Testabile, senza guard.
+ */
+export async function rifirmaAttestatoEvalisById(
+  certificateId: string,
+  operatore: string,
+  motivo: string,
+  ctx: TenantCtx = { platformAdmin: true },
+) {
+  if (!operatore.trim() || !motivo.trim()) throw new ErroreUtente("Servono operatore e motivo.");
+  const d = await datiCertificato(certificateId, ctx);
+  if (!d) throw new Error("Certificato inesistente.");
+  if (!d.soloEvalis) throw new ErroreUtente("Solo gli attestati EVALIS si rifirmano: l'accreditato è il PDF dell'ente.");
+  if (d.status !== "issued" || !d.pdfPath) throw new ErroreUtente(`L'attestato ${d.number} non è emesso: si emette dalla console, già firmato.`);
+  const [{ emessoIl }] = await withTenant(ctx, (tx) =>
+    tx.select({ emessoIl: certificate.issuedAt }).from(certificate).where(eq(certificate.id, certificateId)),
+  );
+  if (!emessoIl) throw new Error(`Attestato ${d.number} senza data di emissione.`);
+
+  const pdf = await pdfDefinitivoEvalis(d, emessoIl);
+  const path = `${d.verifyUuid}-firmato-${Date.now()}.pdf`;
+  await caricaPdfCertificatoA(path, pdf);
+
+  const aggiornato = await withTenant(ctx, async (tx) => {
+    const righe = await tx
+      .update(certificate)
+      .set({ pdfPath: path, updatedAt: new Date() })
+      .where(and(eq(certificate.id, certificateId), eq(certificate.status, "issued"), eq(certificate.pdfPath, d.pdfPath!)))
+      .returning({ id: certificate.id });
+    if (righe.length === 0) return false;
+    const { organizationId, userId } = await auditContextFromEnrollment(tx, d.enrollmentId);
+    await appendActivity(tx, {
+      organizationId,
+      userId,
+      verb: "certificate-resigned",
+      object: `certificate:${certificateId}`,
+      payload: { number: d.number, file: path, precedente: d.pdfPath, operatore, motivo },
+    });
+    return true;
+  });
+  if (!aggiornato) throw new ErroreUtente(`L'attestato ${d.number} è cambiato nel frattempo: riprova.`);
+
+  const mail = mailAttestatoEvalisFirmato(d, baseUrl());
+  await inviaEmailConAllegati({
+    to: d.learnerEmail,
+    ...mail,
+    allegati: [{ nome: nomeFileCertificato(d.number, false), contenuto: pdf }],
+  }).catch((e) => console.error(`[certificati] mail attestato firmato non inviata (${d.number})`, e));
+
+  return { id: certificateId, number: d.number, file: path, precedente: d.pdfPath };
 }
 
 /** Server Action: emissione dell'attestato EVALIS (solo staff piattaforma). */

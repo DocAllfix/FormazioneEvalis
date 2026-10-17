@@ -26,6 +26,7 @@ import { ingestCourse } from "@/features/courses/ingest";
 import { sampleCourse } from "@/features/courses/seed";
 import {
   ensureCertificateRecord, getCertificatoPerChiave, emettiAttestatoEvalisById, revokeCertificateById, certificatoPerDownload,
+  rifirmaAttestatoEvalisById,
 } from "@/features/certificates/lifecycle";
 import { deleteCertificatePdf, isStorageConfigured, leggiCertificatoPdf } from "@/lib/supabase/storage";
 import { CORSI_STILE_COMPLETO } from "@/features/certificates/attestato-evalis-pdf";
@@ -173,5 +174,32 @@ describe.skipIf(!isStorageConfigured())("attestato solo EVALIS", () => {
     const e = await alProvvisorio("e", c);
     expect(await rifiuto(emettiAttestatoEvalisById(e.certId, "staff-attev"))).toMatch(/certificato accreditato/);
     expect(await riga(e.certId)).toMatchObject({ status: "ready_for_review", pdfPath: null });
+  }, 120_000);
+  it("rifirma di un attestato già emesso: stesso numero e stessa data, PDF nuovo, il vecchio resta, registro e mail", async () => {
+    const [a] = await db.select({ id: certificate.id }).from(certificate)
+      .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId)).where(eq(enrollment.userId, `attev-a-${RUN}`));
+    const prima = await riga(a.id);
+    // servono operatore e motivo; un attestato non emesso non si rifirma
+    expect(await rifiuto(rifirmaAttestatoEvalisById(a.id, "staff-attev", " "))).toMatch(/operatore e motivo/);
+    const r = await alProvvisorio("r", corsi[0]);
+    expect(await rifiuto(rifirmaAttestatoEvalisById(r.certId, "staff-attev", "prova"))).toMatch(/non è emesso/);
+
+    inviate.length = 0;
+    const esito = await rifirmaAttestatoEvalisById(a.id, "staff-attev", "attestato emesso prima della firma");
+    const dopo = await riga(a.id);
+    caricati.push(dopo.pdfPath!);
+    expect(dopo).toMatchObject({ status: "issued", number: prima.number, issuedAt: prima.issuedAt, verifyUuid: prima.verifyUuid });
+    expect(dopo.pdfPath).not.toBe(prima.pdfPath);
+    expect(esito.precedente).toBe(prima.pdfPath);
+    // il PDF consegnato prima non si cancella
+    expect(await leggiCertificatoPdf(prima.pdfPath!)).not.toBeNull();
+    expect(Buffer.from((await leggiCertificatoPdf(dopo.pdfPath!))!.slice(0, 5)).toString("latin1")).toBe("%PDF-");
+
+    const [log] = await db.select().from(activityLog).where(eq(activityLog.object, `certificate:${a.id}`)).orderBy(sql`${activityLog.createdAt} desc`).limit(1);
+    expect(log).toMatchObject({ verb: "certificate-resigned" });
+    expect(log.payload).toMatchObject({ number: prima.number, precedente: prima.pdfPath, operatore: "staff-attev" });
+    expect(inviate).toHaveLength(1);
+    expect(inviate[0].subject).toContain("firmato");
+    expect(await getCertificatoPerChiave(prima.number!)).toMatchObject({ valid: true, number: prima.number });
   }, 120_000);
 });

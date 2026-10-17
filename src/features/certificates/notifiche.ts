@@ -144,3 +144,23 @@ export function mailAttestatoEvalisUtente(
     }),
   };
 }
+
+/** Attestato EVALIS già emesso, riconsegnato con la firma: stesso numero, stessa data. */
+export function mailAttestatoEvalisFirmato(
+  d: Pick<DatiCertificato, "learnerName" | "courseTitle" | "number">,
+  base: string,
+): { subject: string; html: string } {
+  return {
+    subject: `Il tuo attestato EVALIS Academy firmato — ${d.courseTitle}`,
+    html: renderEmail({
+      previewText: `La versione firmata del tuo attestato per ${d.courseTitle}.`,
+      heading: "Il tuo attestato, firmato",
+      body: [
+        `Ciao <strong>${esc(d.learnerName)}</strong>,`,
+        `in allegato trovi l'<strong>attestato di formazione EVALIS Academy</strong> del corso <strong>${esc(d.courseTitle)}</strong> con la firma. Sostituisce quello che hai già ricevuto: numero, data e verifica restano gli stessi.`,
+        `Numero attestato: <strong>${esc(d.number)}</strong>. Lo trovi anche nella tua area privata, pronto da scaricare.`,
+      ],
+      button: { label: "Vai ai tuoi certificati", url: `${base}/certificati` },
+    }),
+  };
+}
