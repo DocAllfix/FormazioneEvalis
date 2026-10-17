@@ -57,7 +57,12 @@ export async function linkCaricamentoCertificato(path: string): Promise<string> 
   return data.signedUrl;
 }
 
-/** Bytes di un PDF del bucket certificati (null se il file non c'è). */
+/** La firma EVALIS stampata sugli attestati definitivi. Sta qui, nel bucket privato, e non nel
+ *  codice: il repository è pubblico e una firma vera non deve essere scaricabile da chiunque.
+ *  Si carica con scripts/produzione/_carica-firma-evalis.ts. */
+export const PERCORSO_FIRMA_EVALIS = "firma/firma-evalis.png";
+
+/** Bytes di un file del bucket certificati (null se il file non c'è). */
 export async function leggiCertificatoPdf(path: string): Promise<Uint8Array | null> {
   const c = storageClient();
   const { data, error } = await c.storage.from(BUCKET).download(path);

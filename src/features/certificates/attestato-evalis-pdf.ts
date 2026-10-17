@@ -29,6 +29,8 @@ export interface AttestatoEvalisData {
   /** Il numero del certificato, stampato come protocollo. */
   number: string;
   verifyUrl: string;
+  /** La firma EVALIS (PNG trasparente), letta dallo storage privato al momento dell'emissione. */
+  firma?: Uint8Array;
 }
 
 const AVORIO = rgb(0.988, 0.973, 0.941);
@@ -170,6 +172,12 @@ export async function buildAttestatoEvalisPdf(d: AttestatoEvalisData): Promise<U
     color: INCHIOSTRO,
   });
 
+  if (d.firma) {
+    const firma = await doc.embedPng(d.firma);
+    const alta = 58;
+    const larga = (firma.width / firma.height) * alta;
+    page.drawImage(firma, { x: cx - larga / 2, y: piede + 20, width: larga, height: alta });
+  }
   page.drawLine({ start: { x: cx - 95, y: piede + 22 }, end: { x: cx + 95, y: piede + 22 }, thickness: 0.6, color: ORO_CHIARO });
   centro("Rilasciato da EVALIS Academy", piede + 4, 13, f.corsivo, GRIGIO);
 

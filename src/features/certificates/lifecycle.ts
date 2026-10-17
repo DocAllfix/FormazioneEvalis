@@ -30,7 +30,7 @@ import {
   type DatiCertificato,
 } from "./notifiche";
 import { appendActivity, auditContextFromEnrollment } from "@/features/audit/log";
-import { signedCertificateUrl, linkCaricamentoCertificato, leggiCertificatoPdf, deleteCertificatePdf, uploadCertificatePdf } from "@/lib/supabase/storage";
+import { signedCertificateUrl, linkCaricamentoCertificato, leggiCertificatoPdf, deleteCertificatePdf, uploadCertificatePdf, PERCORSO_FIRMA_EVALIS } from "@/lib/supabase/storage";
 import { inviaEmailConAllegati } from "@/lib/email/resend";
 import { requirePlatformAdmin, requireSession, isPlatformAdmin } from "@/features/auth/guards";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
@@ -438,6 +438,10 @@ export async function emettiAttestatoEvalisById(
   if (d.status === "revoked") throw new ErroreUtente("Certificato revocato: non si può emettere.");
   if (d.status !== "ready_for_review") throw new ErroreUtente(`L'attestato ${d.number} è già stato emesso.`);
 
+  // la firma sta nello storage PRIVATO (il repository è pubblico): senza firma non si emette
+  const firma = await leggiCertificatoPdf(PERCORSO_FIRMA_EVALIS);
+  if (!firma) throw new ErroreUtente("Firma EVALIS non disponibile: l'attestato non è stato emesso. Riprova o avvisa l'amministratore.");
+
   const now = new Date();
   const nascita = d.luogoNascita && d.dataNascita ? { nascita: `nato/a a ${d.luogoNascita} il ${dataNascitaLeggibile(d.dataNascita)}` } : {};
   // i corsi in stile completo (oggi la PdR 125) hanno l'attestato EVALIS Academy col protocollo
@@ -450,6 +454,7 @@ export async function emettiAttestatoEvalisById(
           issuedAt: now,
           number: d.number,
           verifyUrl: d.verifyUrl,
+          firma,
           ...nascita,
         })
       : await buildCertificatePdf({
@@ -459,6 +464,7 @@ export async function emettiAttestatoEvalisById(
           number: d.number,
           verifyUrl: d.verifyUrl,
           soloEvalis: true,
+          firma,
           ...nascita,
         });
   const path = await uploadCertificatePdf(d.verifyUuid, pdf);
