@@ -99,7 +99,7 @@ function PercorsiView() {
       <div className="space-y-3">
         <PathCard name="ISO 9001 Qualità" subtitle="Auditor sistemi di gestione" progress={85} isActive />
         <PathCard name="ISO 14001 Ambiente" subtitle="Auditor sistemi di gestione" progress={40} />
-        <PathCard name="Elettricista specializzato" subtitle="Corso professionale" completed />
+        <PathCard name="ESG Manager" subtitle="Energia e sostenibilità" completed />
       </div>
     </>
   );
@@ -197,7 +197,7 @@ function ProfiloView() {
         </div>
         <div>
           <p className="font-body font-medium text-sm text-near-black">
-            Elettricista specializzato
+            ESG Manager
           </p>
           <p className="text-xs text-[#766E66]">Certificato ottenuto · 15/03/2026</p>
         </div>

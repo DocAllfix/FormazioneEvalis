@@ -8,14 +8,14 @@ const consoleRows = [
   { name: "Laura Bianchi", email: "l.bianchi@acme.it", initials: "LB", cert: "ISO 14001", progress: 100, status: "Certificato", action: "Vedi certificato" },
   { name: "Giovanni Mele", email: "g.mele@acme.it", initials: "GM", cert: "ISO 45001", progress: 42, status: "In corso", action: "Scarica report" },
   { name: "Sara Conti", email: "s.conti@acme.it", initials: "SC", cert: "ISO 9001", progress: 0, status: "Non iniziato", action: "Assegna" },
-  { name: "Tommaso Ferri", email: "t.ferri@acme.it", initials: "TF", cert: "Elettricista spec.", progress: 67, status: "In corso", action: "Scarica report" },
+  { name: "Tommaso Ferri", email: "t.ferri@acme.it", initials: "TF", cert: "ESG Manager", progress: 67, status: "In corso", action: "Scarica report" },
 ];
 
 const percorsiRows = [
   { name: "ISO 9001 · Auditor", assigned: 3, certified: 1, progress: 67 },
   { name: "ISO 14001 · Auditor", assigned: 1, certified: 1, progress: 100 },
   { name: "ISO 45001 · Auditor", assigned: 1, certified: 0, progress: 42 },
-  { name: "Elettricista specializzato", assigned: 1, certified: 0, progress: 67 },
+  { name: "ESG Manager", assigned: 1, certified: 0, progress: 67 },
 ];
 
 const reportStats = [

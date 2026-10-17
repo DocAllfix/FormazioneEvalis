@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Preparazione online, esame di verifica e certificato verificabile con QR. Auditor ISO, mestieri e professioni, settore bancario.",
+    "Preparazione online, esame di verifica e certificato verificabile con QR. Auditor ISO, energia e sostenibilità, intelligenza artificiale.",
   openGraph: { siteName: "Evalis", locale: "it_IT", type: "website" },
 };
 
@@ -48,7 +48,7 @@ const orgLd = {
   logo: { "@type": "ImageObject", url: `${APP_URL}/brand/monogram.png` },
   image: `${APP_URL}/brand/monogram.png`,
   description:
-    "Piattaforma di formazione e certificazione delle competenze professionali: percorsi Auditor e Lead Auditor ISO, mestieri e professioni, competenze digitali e intelligenza artificiale.",
+    "Piattaforma di formazione e certificazione delle competenze professionali: percorsi Auditor e Lead Auditor ISO, energia e sostenibilità, competenze digitali e intelligenza artificiale.",
   vatID: COMPANY.vat,
   taxID: COMPANY.vat,
   address: {

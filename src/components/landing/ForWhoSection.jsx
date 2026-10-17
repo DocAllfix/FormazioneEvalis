@@ -1,5 +1,5 @@
 import React from "react";
-import { BadgeCheck, HardHat, Briefcase, ArrowRight } from "lucide-react";
+import { BadgeCheck, Leaf, Briefcase, ArrowRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const profiles = [
@@ -12,12 +12,12 @@ const profiles = [
     linkLabel: "Corsi Auditor",
   },
   {
-    icon: HardHat,
-    title: "Tecnici e mestieri",
+    icon: Leaf,
+    title: "Manager e consulenti",
     description:
-      "Elettricisti, idraulici, muratori e altre professioni specialistiche.",
+      "Chi presidia in azienda sostenibilità, energia, parità di genere e intelligenza artificiale.",
     href: "#catalogo",
-    linkLabel: "Corsi professionali",
+    linkLabel: "Corsi manageriali",
   },
   {
     icon: Briefcase,

@@ -23,22 +23,6 @@ const areas = [
   { id: "auditor", label: "Auditor ISO" },
   { id: "ai", label: "Intelligenza Artificiale" },
   { id: "manageriale", label: "Energia e sostenibilità" },
-  { id: "mestieri", label: "Mestieri e professioni" },
-  { id: "bancario", label: "Settore bancario" },
-];
-
-// I corsi Auditor ISO arrivano dal DB (prop `auditorCourses`); qui restano solo
-// le aree non ancora a catalogo (vetrina statica, senza link di dettaglio).
-const staticCerts = [
-  { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Elettricista specializzato", badge: "Professionale", line: "Competenze per interventi elettrici specialistici" },
-  { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Idraulico", badge: "Professionale", line: "Competenze per impianti idraulici e sanitari" },
-  { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Muratore", badge: "Professionale", line: "Competenze per lavori murari e costruzioni" },
-  { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Lavoratore in altezza", badge: "Professionale", line: "Competenze per lavori in quota e su ponteggi" },
-  { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Pittore e Imbianchino", badge: "Professionale", line: "Competenze per trattamenti e finiture superficiali" },
-  { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Addetto alle pulizie", badge: "Professionale", line: "Competenze per pulizia professionale e sanificazione" },
-  { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Operatore turistico", badge: "Professionale", line: "Competenze per accoglienza e servizi turistici" },
-  { area: "mestieri", areaLabel: "Mestieri e professioni", name: "Amministratore di condominio", badge: "Professionale", line: "Competenze per la gestione di condomini" },
-  { area: "bancario", areaLabel: "Settore bancario", name: "Impiegato bancario", badge: "Specialista", line: "Crediti, Operativo, Sicurezza ed Amministrazione" },
 ];
 
 function CertCard({ card, index }) {
@@ -185,7 +169,7 @@ export default function Catalogo({ auditorCourses = [], aiCourses = [], manageri
       hours: c.durationHours,
       ...prezzoDi(c),
     }));
-    return [...dbCards, ...aiCards, ...managerialiCards, ...staticCerts];
+    return [...dbCards, ...aiCards, ...managerialiCards];
   }, [auditorCourses, aiCourses, managerialiCourses]);
 
   const filtered = useMemo(() => {

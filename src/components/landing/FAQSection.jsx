@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "Quali professioni sono certificabili?",
-    a: "Auditor e Lead Auditor per i sistemi di gestione ISO (9001, 14001, 45001, 27001, 22000, 50001), professioni e mestieri specialistici (elettricista, idraulico, muratore, lavoratore in altezza, pittore, addetto pulizie, operatore turistico, amministratore di condominio) e profili del settore bancario.",
+    a: "Auditor e Lead Auditor per i sistemi di gestione ISO (9001, 14001, 45001, 27001, 22000, 50001), figure manageriali su energia e sostenibilità (tra cui ESG Manager ed Energy Manager) e competenze operative e avanzate di intelligenza artificiale.",
   },
 ];
 

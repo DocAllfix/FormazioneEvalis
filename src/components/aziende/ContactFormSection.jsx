@@ -70,8 +70,8 @@ export default function ContactFormSection() {
                     <select id="cf-area" name="area" className={inputClass} required defaultValue="">
                       <option value="" disabled className="bg-near-black">Seleziona…</option>
                       <option className="bg-near-black">Auditor ISO</option>
-                      <option className="bg-near-black">Mestieri e professioni</option>
-                      <option className="bg-near-black">Settore bancario</option>
+                      <option className="bg-near-black">Intelligenza Artificiale</option>
+                      <option className="bg-near-black">Energia e sostenibilità</option>
                       <option className="bg-near-black">Più aree</option>
                     </select>
                   </div>

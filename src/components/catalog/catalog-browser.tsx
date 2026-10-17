@@ -15,8 +15,6 @@ const AREAS = [
   { id: "all", label: "Tutti" },
   { id: "auditor", label: "Auditor ISO" },
   { id: "ai", label: "Intelligenza Artificiale" },
-  { id: "mestieri", label: "Mestieri e professioni" },
-  { id: "bancario", label: "Settore bancario" },
   { id: "sicurezza", label: "Sicurezza" },
 ];
 

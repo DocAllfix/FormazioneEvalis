@@ -8,7 +8,7 @@ export async function GET() {
   const lines = [
     "# Evalis",
     "",
-    "> Piattaforma italiana di certificazione delle competenze professionali: preparazione online con relatore avatar, esame con domande a estrazione casuale e certificato verificabile con QR e codice univoco. Aree: Auditor ISO, mestieri e professioni, settore bancario.",
+    "> Piattaforma italiana di certificazione delle competenze professionali: preparazione online con relatore avatar, esame con domande a estrazione casuale e certificato verificabile con QR e codice univoco. Aree: Auditor ISO, energia e sostenibilità, intelligenza artificiale.",
     "",
     "## Corsi",
     ...courses

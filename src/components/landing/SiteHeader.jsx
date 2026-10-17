@@ -22,12 +22,8 @@ const certAreas = [
     desc: "9001, 14001, 45001, 27001, 22000, 50001",
     href: "/#catalogo",
   },
-  {
-    title: "Mestieri e professioni",
-    desc: "Elettricista, idraulico, muratore e altri",
-    href: "/#catalogo",
-  },
-  { title: "Settore bancario", desc: "Impiegato bancario", href: "/#catalogo" },
+  { title: "Intelligenza Artificiale", desc: "Claude AI operativo e avanzato", href: "/#catalogo" },
+  { title: "Energia e sostenibilità", desc: "ESG Manager, Energy Manager e altri", href: "/#catalogo" },
 ];
 
 export default function SiteHeader() {

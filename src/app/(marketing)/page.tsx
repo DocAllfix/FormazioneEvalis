@@ -5,7 +5,7 @@ import { listActiveBundles } from "@/features/catalog/queries";
 export const metadata = {
   title: "Evalis — Certifica le tue competenze professionali",
   description:
-    "Preparazione online, esame di verifica e certificato verificabile con QR. Auditor ISO, mestieri e professioni, settore bancario.",
+    "Preparazione online, esame di verifica e certificato verificabile con QR. Auditor ISO, energia e sostenibilità, intelligenza artificiale.",
 };
 
 export default async function Page() {

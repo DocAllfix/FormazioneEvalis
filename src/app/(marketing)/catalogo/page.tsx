@@ -5,11 +5,11 @@ import { listActiveBundles } from "@/features/catalog/queries";
 export const metadata = {
   title: "Catalogo corsi — Evalis",
   description:
-    "Esplora i corsi professionali: Auditor ISO, mestieri e professioni, settore bancario. Preparazione online, esame e certificato verificabile.",
+    "Esplora i corsi professionali: Auditor ISO, energia e sostenibilità, intelligenza artificiale. Preparazione online, esame e certificato verificabile.",
 };
 
 // Catalogo PUBBLICO (pre-login): vetrina marketing CON i prezzi, come l'area riservata.
-// I corsi arrivano dal DB (pubblicati); mestieri e bancario restano statici, senza prezzo.
+// I corsi arrivano dal DB (pubblicati).
 // L'acquisto vero resta nell'area riservata: il prezzo porta alla registrazione e poi lì.
 export default async function Page() {
   const [auditorCourses, aiCourses, managerialiCourses, bundles] = await Promise.all([

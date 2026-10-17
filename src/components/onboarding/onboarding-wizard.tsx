@@ -12,8 +12,8 @@ import {
   Users,
   BookOpen,
   ShieldCheck,
-  Briefcase,
-  Landmark,
+  Sparkles,
+  Leaf,
   ArrowRight,
   Check,
 } from "lucide-react";
@@ -33,8 +33,8 @@ import { esegui } from "@/lib/esito";
 
 const GOALS = [
   { id: "auditor_iso", label: "Auditor ISO", desc: "Schemi 9001, 14001, 45001…", icon: ShieldCheck },
-  { id: "mestieri", label: "Mestieri e professioni", desc: "Qualifiche professionali", icon: Briefcase },
-  { id: "bancario", label: "Settore bancario", desc: "Ruoli e compliance bancaria", icon: Landmark },
+  { id: "ai", label: "Intelligenza Artificiale", desc: "Claude AI operativo e avanzato", icon: Sparkles },
+  { id: "manageriale", label: "Energia e sostenibilità", desc: "ESG, energia, parità di genere…", icon: Leaf },
 ] as const;
 
 type StepDef = { key: string; title: string; body: string; icon: typeof BookOpen };

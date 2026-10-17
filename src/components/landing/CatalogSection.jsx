@@ -40,27 +40,6 @@ const areas = [
       { name: "Energy Manager", badge: "EGE", line: "Governare l'energia in azienda: misura e indicatori, diagnosi energetica, usi finali, rinnovabili e valutazione economica degli interventi" },
     ],
   },
-  {
-    id: "mestieri",
-    label: "Mestieri e professioni",
-    cards: [
-      { name: "Elettricista specializzato", badge: "Professionale", line: "Competenze per interventi elettrici specialistici" },
-      { name: "Idraulico", badge: "Professionale", line: "Competenze per impianti idraulici e sanitari" },
-      { name: "Muratore", badge: "Professionale", line: "Competenze per lavori murari e costruzioni" },
-      { name: "Lavoratore in altezza", badge: "Professionale", line: "Competenze per lavori in quota e su ponteggi" },
-      { name: "Pittore e Imbianchino", badge: "Professionale", line: "Competenze per trattamenti e finiture superficiali" },
-      { name: "Addetto alle pulizie", badge: "Professionale", line: "Competenze per pulizia professionale e sanificazione" },
-      { name: "Operatore turistico", badge: "Professionale", line: "Competenze per accoglienza e servizi turistici" },
-      { name: "Amministratore di condominio", badge: "Professionale", line: "Competenze per la gestione di condomini" },
-    ],
-  },
-  {
-    id: "bancario",
-    label: "Settore bancario",
-    cards: [
-      { name: "Impiegato bancario", badge: "Specialista", line: "Crediti, Operativo, Sicurezza ed Amministrazione" },
-    ],
-  },
 ];
 
 // La card intera porta alla scheda (link "esteso" sul titolo, che copre la card con ::after);
