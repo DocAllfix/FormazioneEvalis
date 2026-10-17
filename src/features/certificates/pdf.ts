@@ -13,7 +13,7 @@ const SENZA_ACCENTO: Record<string, string> = { Ł: "L", ł: "l", Đ: "D", đ: "
 
 /** Il testo con i soli caratteri che il font sa disegnare: gli altri perdono l'accento
  *  (ș → s) o diventano "?". Un carattere mancante non deve mai far fallire il PDF. */
-function scrivibile(testo: string, f: PDFFont): string {
+export function scrivibile(testo: string, f: PDFFont): string {
   const ok = new Set(f.getCharacterSet());
   const ha = (s: string) => Array.from(s).every((c) => ok.has(c.codePointAt(0)!));
   return Array.from(testo)
