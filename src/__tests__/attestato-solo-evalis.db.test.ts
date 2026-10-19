@@ -29,7 +29,6 @@ import {
   rifirmaAttestatoEvalisById,
 } from "@/features/certificates/lifecycle";
 import { deleteCertificatePdf, isStorageConfigured, leggiCertificatoPdf } from "@/lib/supabase/storage";
-import { CORSI_STILE_COMPLETO } from "@/features/certificates/attestato-evalis-pdf";
 import { PDFDocument } from "pdf-lib";
 
 const RUN = Date.now();
@@ -73,7 +72,6 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
-  CORSI_STILE_COMPLETO.delete(`attev-stile-${RUN}`);
   for (const p of caricati) await deleteCertificatePdf(p).catch(() => {});
   if (utenti.length) await db.delete(enrollment).where(inArray(enrollment.userId, utenti));
   for (const c of corsi) await db.delete(course).where(eq(course.id, c.id));
@@ -144,29 +142,17 @@ describe.skipIf(!isStorageConfigured())("attestato solo EVALIS", () => {
     caricati.push((await riga(d.certId)).pdfPath!);
   }, 120_000);
 
-  it("stile completo (oggi la PdR 125): stesso flusso, attestato EVALIS Academy col protocollo; gli altri corsi restano col modello di prima", async () => {
-    // il corso di prova entra nell'elenco dello stile completo come la PdR 125
-    const c = await corso(true);
-    await db.update(course).set({ slug: `attev-stile-${RUN}` }).where(eq(course.id, c.id));
-    CORSI_STILE_COMPLETO.add(`attev-stile-${RUN}`);
-    const s = await alProvvisorio("s", c);
-    // il provvisorio non cambia: stesso documento degli altri corsi solo EVALIS
+  it("ogni attestato EVALIS definitivo ha lo stile EVALIS Academy col protocollo; il provvisorio no", async () => {
+    const s = await alProvvisorio("s", corsi[0]);
     expect((await certificatoPerDownload(s.certId, { userId: s.id, staff: false }))?.tipo).toBe("provvisorio");
-
     await emettiAttestatoEvalisById(s.certId, "staff-attev");
     const r = await riga(s.certId);
     caricati.push(r.pdfPath!);
-    const stile = await PDFDocument.load((await leggiCertificatoPdf(r.pdfPath!))!);
-    expect(stile.getTitle()).toBe(`Attestato ${s.number}`);
-    expect(stile.getAuthor()).toBe("EVALIS Academy");
+    const doc = await PDFDocument.load((await leggiCertificatoPdf(r.pdfPath!))!);
+    expect(doc.getTitle()).toBe(`Attestato ${s.number}`);
+    expect(doc.getAuthor()).toBe("EVALIS Academy");
     // il protocollo stampato è il numero che la verifica pubblica riconosce
     expect(await getCertificatoPerChiave(s.number)).toMatchObject({ valid: true, number: s.number });
-
-    // un corso solo EVALIS fuori dall'elenco: il definitivo resta quello di prima
-    const [a] = await db.select({ pdfPath: certificate.pdfPath }).from(certificate)
-      .innerJoin(enrollment, eq(enrollment.id, certificate.enrollmentId)).where(eq(enrollment.userId, `attev-a-${RUN}`));
-    const prima = await PDFDocument.load((await leggiCertificatoPdf(a.pdfPath!))!);
-    expect(prima.getAuthor()).toBeUndefined();
   }, 120_000);
 
   it("su un corso con certificato accreditato l'emissione EVALIS è rifiutata", async () => {

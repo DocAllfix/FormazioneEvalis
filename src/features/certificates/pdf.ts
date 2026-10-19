@@ -52,8 +52,6 @@ export interface CertificateData {
   /** Corso con attestato SOLO EVALIS: il provvisorio rimanda all'attestato EVALIS (non a un
    * accreditamento) e il definitivo dichiara chi lo rilascia. */
   soloEvalis?: boolean;
-  /** La firma EVALIS (PNG trasparente), solo sul definitivo emesso dallo staff. */
-  firma?: Uint8Array;
 }
 
 export async function buildCertificatePdf(d: CertificateData): Promise<Uint8Array> {
@@ -95,14 +93,6 @@ export async function buildCertificatePdf(d: CertificateData): Promise<Uint8Arra
     center(d.soloEvalis ? RIGA_PROVVISORIO_EVALIS_2 : RIGA_PROVVISORIO_2, 189, 10);
   } else if (d.soloEvalis) {
     center("Attestato di formazione rilasciato da EVALIS Academy", 200, 11);
-    if (d.firma) {
-      const firma = await doc.embedPng(d.firma);
-      const alta = 52;
-      const larga = (firma.width / firma.height) * alta;
-      page.drawImage(firma, { x: (width - larga) / 2, y: 134, width: larga, height: alta });
-      page.drawLine({ start: { x: width / 2 - 90, y: 134 }, end: { x: width / 2 + 90, y: 134 }, thickness: 0.6, color: accent });
-      center("EVALIS Academy", 120, 10);
-    }
   }
 
   // QR verso la pagina di verifica pubblica

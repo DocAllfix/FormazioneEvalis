@@ -1,4 +1,4 @@
-// Font e marchio dell'attestato EVALIS Academy in stile completo (oggi solo il corso PdR 125).
+// Font e marchio dell'attestato EVALIS Academy definitivo (attestato-evalis-pdf.ts).
 // In base64 dentro il codice per la stessa ragione di font-certificato.ts: così finiscono sempre
 // nel pacchetto della funzione su Vercel.
 //

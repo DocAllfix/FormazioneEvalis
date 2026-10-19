@@ -1,8 +1,8 @@
 // L'attestato DEFINITIVO EVALIS Academy in stile completo: carta avorio, cornice oro, monogramma,
 // titolo e nome in Cormorant Garamond, protocollo e QR di verifica.
 //
-// ⚠️ Oggi vale SOLO per i corsi in CORSI_STILE_COMPLETO (la PdR 125, richiesta del 17/10/2026):
-// gli altri attestati EVALIS restano col modello di pdf.ts. Il provvisorio non cambia mai.
+// ⚠️ È il definitivo di TUTTI i corsi con attestato solo EVALIS (PdR 125 dal 17/10/2026, tutti dal
+// 19/10/2026). Il provvisorio e il certificato accreditato restano col modello di pdf.ts.
 //
 // ⚠️ Il «Protocollo n.» È il numero del certificato (EVALIS-AAAA-XXXXXXXX), non una numerazione a
 // parte: è lo stesso che la pagina pubblica di verifica riconosce, quindi chi ha in mano solo la
@@ -14,9 +14,6 @@ import QRCode from "qrcode";
 import { scrivibile } from "./pdf";
 import { NOTO_SANS_REGULAR, NOTO_SANS_BOLD } from "./font-certificato";
 import { CORMORANT_SEMIBOLD, CORMORANT_ITALIC, MONOGRAMMA_EVALIS_PNG } from "./grafica-attestato-evalis";
-
-/** I corsi (per slug) che ricevono l'attestato definitivo in stile completo. */
-export const CORSI_STILE_COMPLETO = new Set(["parita-di-genere-uni-pdr-125-2022"]);
 
 export interface AttestatoEvalisData {
   learnerName: string;

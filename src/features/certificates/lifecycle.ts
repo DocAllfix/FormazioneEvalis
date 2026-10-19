@@ -19,7 +19,7 @@ import { certificate, enrollment, course, user, quiz, quizAttempt, anagraficaCer
 import { dataNascitaLeggibile, lucchettoAnagrafica } from "./anagrafica";
 import { isReadyForCertificate } from "./readiness";
 import { buildCertificatePdf } from "./pdf";
-import { buildAttestatoEvalisPdf, CORSI_STILE_COMPLETO } from "./attestato-evalis-pdf";
+import { buildAttestatoEvalisPdf } from "./attestato-evalis-pdf";
 import {
   destinatarioCommittente,
   mailAccreditatoUtente,
@@ -192,7 +192,6 @@ type DatiCompleti = DatiCertificato & {
   enrollmentId: string;
   ownerId: string;
   accreditatoNumero: string | null;
-  courseSlug: string | null;
 };
 
 /** Tutto ciò che serve a PDF, mail e controlli di un certificato. null se non visibile/inesistente. */
@@ -215,7 +214,6 @@ async function datiCertificato(certificateId: string, ctx: TenantCtx): Promise<D
         learnerEmail: user.email,
         courseTitle: course.title,
         courseId: course.id,
-        courseSlug: course.slug,
         requiredMinutes: course.requiredMinutes,
         soloEvalis: course.attestatoSoloEvalis,
         codiceFiscale: sql<string | null>`coalesce(${certificate.codiceFiscale}, ${anagraficaCertificato.codiceFiscale})`,
@@ -257,7 +255,6 @@ async function datiCertificato(certificateId: string, ctx: TenantCtx): Promise<D
       dataNascita: r.dataNascita,
       luogoNascita: r.luogoNascita,
       soloEvalis: r.soloEvalis,
-      courseSlug: r.courseSlug,
     };
   });
 }
@@ -544,28 +541,17 @@ async function pdfDefinitivoEvalis(d: DatiCompleti, emessoIl: Date): Promise<Uin
   const firma = await leggiCertificatoPdf(PERCORSO_FIRMA_EVALIS);
   if (!firma) throw new ErroreUtente("Firma EVALIS non disponibile: l'attestato non è stato emesso. Riprova o avvisa l'amministratore.");
   const nascita = d.luogoNascita && d.dataNascita ? { nascita: `nato/a a ${d.luogoNascita} il ${dataNascitaLeggibile(d.dataNascita)}` } : {};
-  // i corsi in stile completo (oggi la PdR 125) hanno l'attestato EVALIS Academy col protocollo
-  return d.courseSlug && CORSI_STILE_COMPLETO.has(d.courseSlug)
-    ? buildAttestatoEvalisPdf({
-        learnerName: d.learnerName,
-        courseTitle: d.courseTitle,
-        durataMinuti: d.requiredMinutes,
-        issuedAt: emessoIl,
-        number: d.number,
-        verifyUrl: d.verifyUrl,
-        firma,
-        ...nascita,
-      })
-    : buildCertificatePdf({
-        learnerName: d.learnerName,
-        courseTitle: d.courseTitle,
-        issuedAt: emessoIl,
-        number: d.number,
-        verifyUrl: d.verifyUrl,
-        soloEvalis: true,
-        firma,
-        ...nascita,
-      });
+  // tutti gli attestati EVALIS definitivi hanno lo stile EVALIS Academy col protocollo (19/10/2026)
+  return buildAttestatoEvalisPdf({
+    learnerName: d.learnerName,
+    courseTitle: d.courseTitle,
+    durataMinuti: d.requiredMinutes,
+    issuedAt: emessoIl,
+    number: d.number,
+    verifyUrl: d.verifyUrl,
+    firma,
+    ...nascita,
+  });
 }
 
 /**

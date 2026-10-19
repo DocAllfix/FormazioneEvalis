@@ -1,10 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { PDFDocument, PDFName, PDFRawStream } from "pdf-lib";
-import { buildAttestatoEvalisPdf, CORSI_STILE_COMPLETO } from "@/features/certificates/attestato-evalis-pdf";
-import { buildCertificatePdf } from "@/features/certificates/pdf";
+import { buildAttestatoEvalisPdf } from "@/features/certificates/attestato-evalis-pdf";
 import { MONOGRAMMA_EVALIS_PNG } from "@/features/certificates/grafica-attestato-evalis";
 
-// L'attestato EVALIS Academy in stile completo (richiesta del 17/10/2026, oggi solo la PdR 125).
+// L'attestato EVALIS Academy definitivo, lo stesso per tutti i corsi solo EVALIS (19/10/2026).
 
 const base = {
   learnerName: "Maria Rossi",
@@ -16,10 +15,6 @@ const base = {
 };
 
 describe("attestato EVALIS in stile completo", () => {
-  it("vale oggi solo per il corso PdR 125", () => {
-    expect([...CORSI_STILE_COMPLETO]).toEqual(["parita-di-genere-uni-pdr-125-2022"]);
-  });
-
   it("è un PDF vero, una pagina A4 orizzontale, col protocollo nel titolo del documento", async () => {
     const doc = await PDFDocument.load(await buildAttestatoEvalisPdf(base));
     expect(doc.getPageCount()).toBe(1);
@@ -39,7 +34,7 @@ describe("attestato EVALIS in stile completo", () => {
     expect(Buffer.from(bytes.slice(0, 5)).toString("latin1")).toBe("%PDF-");
   });
 
-  it("la firma compare sul definitivo EVALIS (entrambi i modelli) e mai sul provvisorio", async () => {
+  it("la firma compare sul definitivo EVALIS", async () => {
     // qualunque PNG fa da firma di prova: la vera sta solo nello storage privato
     const firma = Buffer.from(MONOGRAMMA_EVALIS_PNG, "base64");
     const immagini = async (bytes: Uint8Array) => {
@@ -47,8 +42,5 @@ describe("attestato EVALIS in stile completo", () => {
       return doc.context.enumerateIndirectObjects().filter(([, o]) => o instanceof PDFRawStream && o.dict.get(PDFName.of("Subtype")) === PDFName.of("Image")).length;
     };
     expect(await immagini(await buildAttestatoEvalisPdf({ ...base, firma }))).toBeGreaterThan(await immagini(await buildAttestatoEvalisPdf(base)));
-    const evalis = { ...base, soloEvalis: true };
-    expect(await immagini(await buildCertificatePdf({ ...evalis, firma }))).toBeGreaterThan(await immagini(await buildCertificatePdf(evalis)));
-    expect(await immagini(await buildCertificatePdf({ ...evalis, provvisorio: true, firma }))).toBe(await immagini(await buildCertificatePdf({ ...evalis, provvisorio: true })));
   });
 });
