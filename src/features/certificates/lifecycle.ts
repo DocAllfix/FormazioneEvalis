@@ -15,7 +15,7 @@
 import { randomUUID } from "node:crypto";
 import { and, desc, eq, ilike, isNull, ne, or, sql } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { certificate, enrollment, course, user, quiz, quizAttempt, anagraficaCertificato } from "@/lib/db/schema";
+import { certificate, enrollment, course, user, quiz, quizAttempt, anagraficaCertificato, slide, lesson, module as courseModule, slideProgress } from "@/lib/db/schema";
 import { dataNascitaLeggibile, lucchettoAnagrafica } from "./anagrafica";
 import { isReadyForCertificate } from "./readiness";
 import { buildCertificatePdf } from "./pdf";
@@ -36,6 +36,7 @@ import { inviaEmailConAllegati } from "@/lib/email/resend";
 import { requirePlatformAdmin, requireSession, isPlatformAdmin } from "@/features/auth/guards";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
 import { ErroreUtente } from "@/lib/esito";
+type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 /** Dimensione massima del certificato accreditato caricato. */
@@ -71,47 +72,7 @@ export async function ensureCertificateRecord(
   const readiness = await isReadyForCertificate(enrollmentId, ctx);
   if (!readiness.ready) return null;
 
-  const esito = await withTenant(ctx, async (tx) => {
-    // stesso lucchetto del salvataggio dell'anagrafica: mentre il certificato nasce i dati del
-    // titolare non possono cambiare (e viceversa)
-    const titolare = await auditContextFromEnrollment(tx, enrollmentId);
-    await tx.execute(lucchettoAnagrafica(titolare.userId));
-    const [existing] = await tx.select(cols).from(certificate).where(eq(certificate.enrollmentId, enrollmentId)).limit(1);
-    if (existing) return { cert: existing, nuovo: false };
-
-    // i dati del titolare si FISSANO qui (sotto il lucchetto dell'anagrafica): da ora il
-    // certificato non dipende più dal profilo, che l'utente può modificare
-    const [chi] = await tx
-      .select({
-        learnerName: user.name,
-        codiceFiscale: anagraficaCertificato.codiceFiscale,
-        dataNascita: anagraficaCertificato.dataNascita,
-        luogoNascita: anagraficaCertificato.luogoNascita,
-      })
-      .from(user)
-      .leftJoin(anagraficaCertificato, eq(anagraficaCertificato.userId, user.id))
-      .where(eq(user.id, titolare.userId))
-      .limit(1);
-
-    // numero e QR nascono qui: provvisorio e accreditato li condividono
-    const verifyUuid = randomUUID();
-    const inserted = await tx
-      .insert(certificate)
-      .values({ enrollmentId, status: "ready_for_review", verifyUuid, number: makeCertificateNumber(new Date(), verifyUuid), ...chi })
-      .onConflictDoNothing({ target: certificate.enrollmentId })
-      .returning(cols);
-    if (inserted.length === 0) {
-      const [c] = await tx.select(cols).from(certificate).where(eq(certificate.enrollmentId, enrollmentId)).limit(1);
-      return { cert: c, nuovo: false };
-    }
-    await appendActivity(tx, {
-      organizationId: titolare.organizationId,
-      userId: titolare.userId,
-      verb: "certificate-requested",
-      object: `certificate:${inserted[0].id}`,
-    });
-    return { cert: inserted[0], nuovo: true };
-  });
+  const esito = await withTenant(ctx, (tx) => nasciCertificato(tx, enrollmentId));
 
   // mail SOLO alla nascita e DOPO il salvataggio: un guasto email non tocca il certificato
   if (esito.nuovo) {
@@ -120,6 +81,107 @@ export async function ensureCertificateRecord(
     );
   }
   return esito.cert;
+}
+
+/**
+ * RIPRISTINO di uno svolgimento perso (decisione dell'utente, 16/10/2026): per un'iscrizione
+ * indicata dallo staff segna completate le slide che non lo sono e fa nascere il provvisorio
+ * SENZA il controllo dei requisiti, perché i dati di tracciamento sono andati persi. Non inventa
+ * tempi né tentativi d'esame: nel registro resta un evento `completion-restored` con operatore e
+ * motivo, così il completamento ripristinato è sempre distinguibile da quello tracciato.
+ * L'accreditato resta come sempre subordinato alla revisione umana. Idempotente.
+ */
+export async function ripristinaCompletamento(
+  enrollmentId: string,
+  opts: { operatore: string; motivo: string },
+): Promise<{ id: string; status: string; number: string | null; nuovo: boolean; slideRipristinate: number }> {
+  const esito = await db.transaction(async (tx) => {
+    const titolare = await auditContextFromEnrollment(tx, enrollmentId);
+    const [enr] = await tx.select({ courseId: enrollment.courseId }).from(enrollment).where(eq(enrollment.id, enrollmentId)).limit(1);
+    const slideDelCorso = await tx
+      .select({ id: slide.id })
+      .from(slide)
+      .innerJoin(lesson, eq(lesson.id, slide.lessonId))
+      .innerJoin(courseModule, eq(courseModule.id, lesson.moduleId))
+      .where(eq(courseModule.courseId, enr.courseId));
+    const adesso = new Date();
+    // le slide già completate restano come sono; quelle senza riga o non completate si completano
+    const ripristinate = slideDelCorso.length === 0 ? [] : await tx
+      .insert(slideProgress)
+      .values(slideDelCorso.map((s) => ({ enrollmentId, slideId: s.id, completedAt: adesso })))
+      .onConflictDoUpdate({
+        target: [slideProgress.enrollmentId, slideProgress.slideId],
+        set: { completedAt: adesso, updatedAt: adesso },
+        setWhere: isNull(slideProgress.completedAt),
+      })
+      .returning({ id: slideProgress.id });
+    await appendActivity(tx, {
+      organizationId: titolare.organizationId,
+      userId: titolare.userId,
+      verb: "completion-restored",
+      object: `enrollment:${enrollmentId}`,
+      payload: {
+        operatore: opts.operatore,
+        motivo: opts.motivo,
+        slideTotali: slideDelCorso.length,
+        slideRipristinate: ripristinate.length,
+      },
+    });
+    const nato = await nasciCertificato(tx, enrollmentId);
+    return { ...nato, slideRipristinate: ripristinate.length };
+  });
+
+  if (esito.nuovo) {
+    await inviaMailCompletamento(esito.cert.id, {}).catch((e) =>
+      console.error(`[certificati] mail di completamento non inviate per ${esito.cert.id}`, e),
+    );
+  }
+  return { ...esito.cert, nuovo: esito.nuovo, slideRipristinate: esito.slideRipristinate };
+}
+
+/** Nascita del record del certificato (numero, QR, dati del titolare fissati, evento nel
+ *  registro). Idempotente. NON controlla i requisiti: lo fa chi la chiama. */
+async function nasciCertificato(tx: Tx, enrollmentId: string) {
+  const cols = { id: certificate.id, status: certificate.status, number: certificate.number };
+  // stesso lucchetto del salvataggio dell'anagrafica: mentre il certificato nasce i dati del
+  // titolare non possono cambiare (e viceversa)
+  const titolare = await auditContextFromEnrollment(tx, enrollmentId);
+  await tx.execute(lucchettoAnagrafica(titolare.userId));
+  const [existing] = await tx.select(cols).from(certificate).where(eq(certificate.enrollmentId, enrollmentId)).limit(1);
+  if (existing) return { cert: existing, nuovo: false };
+
+  // i dati del titolare si FISSANO qui (sotto il lucchetto dell'anagrafica): da ora il
+  // certificato non dipende più dal profilo, che l'utente può modificare
+  const [chi] = await tx
+    .select({
+      learnerName: user.name,
+      codiceFiscale: anagraficaCertificato.codiceFiscale,
+      dataNascita: anagraficaCertificato.dataNascita,
+      luogoNascita: anagraficaCertificato.luogoNascita,
+    })
+    .from(user)
+    .leftJoin(anagraficaCertificato, eq(anagraficaCertificato.userId, user.id))
+    .where(eq(user.id, titolare.userId))
+    .limit(1);
+
+  // numero e QR nascono qui: provvisorio e accreditato li condividono
+  const verifyUuid = randomUUID();
+  const inserted = await tx
+    .insert(certificate)
+    .values({ enrollmentId, status: "ready_for_review", verifyUuid, number: makeCertificateNumber(new Date(), verifyUuid), ...chi })
+    .onConflictDoNothing({ target: certificate.enrollmentId })
+    .returning(cols);
+  if (inserted.length === 0) {
+    const [c] = await tx.select(cols).from(certificate).where(eq(certificate.enrollmentId, enrollmentId)).limit(1);
+    return { cert: c, nuovo: false };
+  }
+  await appendActivity(tx, {
+    organizationId: titolare.organizationId,
+    userId: titolare.userId,
+    verb: "certificate-requested",
+    object: `certificate:${inserted[0].id}`,
+  });
+  return { cert: inserted[0], nuovo: true };
 }
 
 type DatiCompleti = DatiCertificato & {
