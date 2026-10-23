@@ -7,18 +7,38 @@
 // - La Fase 2.4 (middleware) potrà sovrascrivere l'org attiva in base al sottodominio.
 
 import type { BetterAuthOptions } from "better-auth";
+import { APIError } from "better-auth/api";
 import { and, eq, ne } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { member, session as sessionTable } from "@/lib/db/schema";
 import { appendActivity } from "@/features/audit/log";
 import { createPersonalOrg } from "./orgs";
 import { spazioPredefinito } from "./spazio-predefinito";
+import { normalizzaCodicePartner } from "@/features/partner/codici";
 
 export const authDatabaseHooks = {
   user: {
     create: {
+      // Codice partner: si accetta solo un codice conosciuto (codici.ts). Uno sbagliato blocca la
+      // registrazione con un messaggio: accettato in silenzio, il partner perderebbe la provvigione.
+      before: async (user) => {
+        const codice = normalizzaCodicePartner((user as { partnerCode?: unknown }).partnerCode);
+        if (codice === "invalido") {
+          throw new APIError("BAD_REQUEST", { message: "Codice partner non valido: controlla di averlo scritto bene, oppure lascia vuoto il campo." });
+        }
+        return { data: { ...user, partnerCode: codice } };
+      },
       after: async (user) => {
         await createPersonalOrg(user.id);
+      },
+    },
+    // Il partner si sceglie SOLO alla registrazione: qualunque modifica successiva del codice si
+    // scarta, così l'attribuzione delle provvigioni non si può spostare.
+    update: {
+      before: async (data) => {
+        if (!("partnerCode" in data)) return undefined;
+        const { partnerCode: _scartato, ...resto } = data as Record<string, unknown>;
+        return { data: resto };
       },
     },
   },

@@ -4,7 +4,8 @@
 
 import { describe, it, expect } from "vitest";
 import type Stripe from "stripe";
-import { deveNotificare, datiVendita, mailVendita, NOTIFICHE_DAL } from "../features/billing/notifica-vendita";
+import { deveNotificare, datiVendita, mailVendita, NOTIFICHE_DAL, PARTNER_DA_VERIFICARE } from "../features/billing/notifica-vendita";
+import { normalizzaCodicePartner } from "../features/partner/codici";
 import { CAMPI_FATTURA } from "../features/billing/checkout";
 
 const DOPO = Math.floor(NOTIFICHE_DAL.getTime() / 1000) + 60;
@@ -150,5 +151,37 @@ describe("mailVendita con 0000000", () => {
     const s = sessione({ custom_fields: [{ key: "sdipec", text: { value: "0000000" } }] });
     const { html } = mailVendita(datiVendita(s as unknown as Stripe.Checkout.Session, DOPO), "Corso");
     expect(html).toContain("0000000 (privato, nessun codice destinatario)");
+  });
+});
+
+describe("codice partner nella mail di vendita (NGR, 23/10/2026)", () => {
+  const d = () => datiVendita(sessione() as unknown as Stripe.Checkout.Session, DOPO);
+
+  it("con un partner: riga «Partner» e partner nell'oggetto", () => {
+    const { subject, html } = mailVendita(d(), "Corso", "NGR");
+    expect(html).toContain("Partner");
+    expect(html).toContain("NGR");
+    expect(subject).toMatch(/· partner NGR$/);
+  });
+
+  it("senza partner: nessuna riga e oggetto come prima", () => {
+    const { subject, html } = mailVendita(d(), "Corso");
+    expect(html).not.toContain("Partner");
+    expect(subject).not.toContain("partner");
+  });
+
+  it("partner non letto: la mail lo dice, così la provvigione non si perde in silenzio", () => {
+    const { subject, html } = mailVendita(d(), "Corso", PARTNER_DA_VERIFICARE);
+    expect(html).toContain("da verificare");
+    expect(subject).not.toContain("partner");
+  });
+
+  it("il codice si ripulisce e si accetta solo se è di un partner", () => {
+    expect(normalizzaCodicePartner(" ngr ")).toBe("NGR");
+    expect(normalizzaCodicePartner("N G R")).toBe("NGR");
+    expect(normalizzaCodicePartner("")).toBeNull();
+    expect(normalizzaCodicePartner(undefined)).toBeNull();
+    expect(normalizzaCodicePartner("NGX")).toBe("invalido");
+    expect(normalizzaCodicePartner(42)).toBe("invalido");
   });
 });

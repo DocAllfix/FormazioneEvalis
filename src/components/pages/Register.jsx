@@ -5,17 +5,19 @@ import { signUp } from "@/lib/auth/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { UserPlus, User, Mail, Lock, Loader2 } from "lucide-react";
+import { UserPlus, User, Mail, Lock, Loader2, Handshake } from "lucide-react";
 import AuthLayout from "@/components/AuthLayout";
 
-/** @param {{ next?: string | null }} props — percorso interno GIÀ validato dalla pagina server */
-export default function Register({ next = null }) {
+/** @param {{ next?: string | null, partner?: string | null }} props — percorso interno e codice partner
+ *  GIÀ ripuliti dalla pagina server */
+export default function Register({ next = null, partner = null }) {
   // link "Accedi": chi ha già un account non deve perdere la destinazione
   const loginHref = next ? `/login?next=${encodeURIComponent(next)}` : "/login";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [partnerCode, setPartnerCode] = useState(partner ?? "");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false); // signup ok → mostra "controlla la tua email"
@@ -34,7 +36,9 @@ export default function Register({ next = null }) {
     // `next`, perché un utente nuovo lo deve comunque fare, e il guard dell'area riservata
     // intercetterebbe /corsi/<id> perdendo la destinazione. Alla fine del wizard torna lì.
     const callbackURL = next ? `/onboarding?next=${encodeURIComponent(next)}` : "/dashboard";
-    const { error } = await signUp.email({ name, email, password, callbackURL });
+    // codice partner facoltativo: lo valida il server (hooks.ts), un codice sbagliato torna come errore
+    const codice = partnerCode.trim();
+    const { error } = await signUp.email({ name, email, password, callbackURL, ...(codice ? { partnerCode: codice } : {}) });
     setLoading(false);
     if (error) {
       setError(error.message || "Registrazione non riuscita");
@@ -157,6 +161,24 @@ export default function Register({ next = null }) {
               onChange={(e) => setConfirmPassword(e.target.value)}
               className="pl-10 h-12"
               required
+            />
+          </div>
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="partner">
+            Codice partner <span className="font-normal text-muted-foreground">(facoltativo)</span>
+          </Label>
+          <div className="relative">
+            <Handshake className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" aria-hidden="true" />
+            <Input
+              id="partner"
+              type="text"
+              autoComplete="off"
+              placeholder="Solo se te l'ha dato un nostro partner"
+              value={partnerCode}
+              onChange={(e) => setPartnerCode(e.target.value.toUpperCase())}
+              className="pl-10 h-12 uppercase"
+              maxLength={20}
             />
           </div>
         </div>

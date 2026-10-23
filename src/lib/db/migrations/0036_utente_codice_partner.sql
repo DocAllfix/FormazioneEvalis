@@ -1,0 +1,11 @@
+-- Codice PARTNER dell'utente (richiesta del committente, 23/10/2026).
+--
+-- Chi si registra con il codice di un partner (oggi solo NGR) resta legato a lui: a ogni
+-- acquisto la mail di vendita al committente riporta il partner di chi ha pagato, e da lì il
+-- committente calcola la provvigione. Non è uno sconto, il prezzo non cambia.
+-- Si scrive SOLO alla registrazione (hooks.ts: user.create.before lo valida, user.update.before
+-- lo scarta), così l'attribuzione non si può spostare dopo.
+--
+-- Colonna facoltativa: tutti gli utenti esistenti restano senza partner. Additiva e idempotente,
+-- nessun dato esistente toccato. Scritta a mano.
+ALTER TABLE "user" ADD COLUMN IF NOT EXISTS "partner_code" text;

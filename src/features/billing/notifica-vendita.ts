@@ -11,9 +11,9 @@
 //     partita non deve mai far ripetere il provisioning di un corso già pagato.
 
 import type Stripe from "stripe";
-import { eq } from "drizzle-orm";
+import { and, eq, isNotNull } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { bundle, course } from "@/lib/db/schema";
+import { bundle, course, member, user } from "@/lib/db/schema";
 import { inviaEmailAssistenza } from "@/lib/email/resend";
 import { renderEmail, esc } from "@/lib/email/layout";
 import { sessioneIncassata } from "./events";
@@ -90,8 +90,29 @@ export function datiVendita(s: Stripe.Checkout.Session, created: number): DatiVe
 const euro = (cents: number | null, valuta: string) =>
   cents == null ? "—" : new Intl.NumberFormat("it-IT", { style: "currency", currency: valuta }).format(cents / 100);
 
+/**
+ * Il partner della vendita: chi è arrivato con il codice di un partner (codici.ts) gli porta la
+ * provvigione su tutti i suoi acquisti, compresi quelli che fa per i dipendenti da titolare di
+ * un'azienda. Conta CHI PAGA, cioè il titolare dello spazio che compra (`orgId` della sessione:
+ * lo spazio personale per un privato, l'azienda per un acquisto aziendale), non il destinatario.
+ */
+export async function partnerDellaVendita(s: Pick<Stripe.Checkout.Session, "metadata">): Promise<string | null> {
+  const orgId = s.metadata?.orgId;
+  if (!orgId) return null;
+  const [r] = await db
+    .select({ codice: user.partnerCode })
+    .from(member)
+    .innerJoin(user, eq(user.id, member.userId))
+    .where(and(eq(member.organizationId, orgId), eq(member.role, "owner"), isNotNull(user.partnerCode)))
+    .limit(1);
+  return r?.codice ?? null;
+}
+
+/** Il partner non si è potuto leggere: la mail lo dice, la provvigione non si perde in silenzio. */
+export const PARTNER_DA_VERIFICARE = "da verificare (lettura non riuscita)";
+
 /** Oggetto e corpo della mail. PURA: i valori del cliente passano tutti da esc(). */
-export function mailVendita(d: DatiVendita, prodotto: string): { subject: string; html: string } {
+export function mailVendita(d: DatiVendita, prodotto: string, partner: string | null = null): { subject: string; html: string } {
   const quando = d.quando.toLocaleString("it-IT", { timeZone: "Europe/Rome", dateStyle: "long", timeStyle: "short" });
   const cliente = d.ragioneSociale ?? d.nome ?? d.email ?? "cliente";
   const riga = (etichetta: string, valore: string | null) =>
@@ -106,6 +127,7 @@ export function mailVendita(d: DatiVendita, prodotto: string): { subject: string
       `${d.pagato ? "Pagamento ricevuto" : "<strong>Pagamento NON ancora incassato</strong>"} il ${esc(quando)}.`,
       tabella([
         riga("Prodotto", prodotto),
+        ...(partner ? [riga("Partner", partner)] : []),
         riga("Imponibile", euro(d.imponibileCents, d.valuta)),
         ...(d.scontoCents ? [riga("di cui sconto applicato", euro(d.scontoCents, d.valuta))] : []),
         riga("IVA", euro(d.ivaCents, d.valuta)),
@@ -128,7 +150,8 @@ export function mailVendita(d: DatiVendita, prodotto: string): { subject: string
       : {}),
     footerExtra: "Notifica interna di vendita: la ricevuta il cliente l'ha già avuta da Stripe, la fattura elettronica va emessa da voi.",
   });
-  return { subject: `Nuova vendita: ${prodotto} · ${euro(d.totaleCents, d.valuta)} · ${cliente}`, html };
+  const conPartner = partner && partner !== PARTNER_DA_VERIFICARE ? ` · partner ${partner}` : "";
+  return { subject: `Nuova vendita: ${prodotto} · ${euro(d.totaleCents, d.valuta)} · ${cliente}${conPartner}`, html };
 }
 
 async function nomeProdotto(s: Stripe.Checkout.Session): Promise<string> {
@@ -149,6 +172,10 @@ async function nomeProdotto(s: Stripe.Checkout.Session): Promise<string> {
 export async function inviaNotificaVendita(event: Stripe.Event): Promise<{ sent: boolean }> {
   if (!deveNotificare(event)) return { sent: false };
   const s = event.data.object as Stripe.Checkout.Session;
-  const { subject, html } = mailVendita(datiVendita(s, event.created), await nomeProdotto(s));
+  const partner = await partnerDellaVendita(s).catch((e) => {
+    console.error("[vendite] partner della vendita non letto", e);
+    return PARTNER_DA_VERIFICARE;
+  });
+  const { subject, html } = mailVendita(datiVendita(s, event.created), await nomeProdotto(s), partner);
   return inviaEmailAssistenza({ to: DESTINATARI_INTERNI, subject, html });
 }

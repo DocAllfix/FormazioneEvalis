@@ -58,6 +58,9 @@ export const auth = betterAuth({
     additionalFields: {
       // Ruolo di piattaforma: leggibile in sessione, NON impostabile dall'utente (sicurezza).
       platformRole: { type: "string", required: false, input: false },
+      // Codice partner (NGR): impostabile SOLO alla registrazione. Lo valida user.create.before
+      // e lo scarta user.update.before (hooks.ts), così nessuno lo cambia dopo.
+      partnerCode: { type: "string", required: false, input: true },
     },
   },
   emailAndPassword: {

@@ -19,6 +19,9 @@ export const user = pgTable("user", {
   // canale B2C/B2B: null = utente normale, 'admin' = admin piattaforma (catalogo, certificati).
   // Non auto-assegnabile (better-auth additionalFields input:false).
   platformRole: text("platform_role"),
+  // Codice del PARTNER con cui l'utente si è registrato (es. NGR, migrazione 0036): il partner
+  // prende una provvigione sui suoi acquisti. Scritto solo alla registrazione, mai cambiato dopo.
+  partnerCode: text("partner_code"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at")
     .defaultNow()
