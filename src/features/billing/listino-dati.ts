@@ -62,6 +62,7 @@ const S = {
   fadpdr125: "parita-di-genere-uni-pdr-125-2022",
   fadpas24000: "pas-24000-2022-sistema-di-gestione-sociale",
   fadcfp01: "carbon-footprint-misurare-calcolare-e-ridurre-le-emissioni",
+  fadpia01: "piastrellista-posatore-di-pavimenti-e-rivestimenti-ceramici",
   fadpriv01: "privacy-e-protezione-dei-dati-per-il-personale",
   fadpriv02: "aggiornamento-annuale-privacy-per-il-personale",
   fadpriv03: "privacy-per-manager-e-amministratori-di-sistema",
@@ -95,6 +96,8 @@ export const CORSI: CorsoListino[] = [
   { slug: S.fadpas24000, attivoCents: 30000, listinoCents: 54900 },
   // Carbon Footprint di organizzazione e di prodotto (24h, 13/10): 300 € con 549 € barrato
   { slug: S.fadcfp01, attivoCents: 30000, listinoCents: 54900 },
+  // Piastrellista UNI 11493-1:2025 (40h, primo corso mestieri, 29/10): 500 € con 899 € barrato
+  { slug: S.fadpia01, attivoCents: 50000, listinoCents: 89900 },
   // corsi privacy (15/10, prezzi del committente, nessun barrato). Aziende dal 2° dipendente:
   // 30 € per FAD-PRIV-01 (−40%) e 20 € per FAD-PRIV-02 (−20%); FAD-PRIV-03 con la regola generale.
   { slug: S.fadpriv01, attivoCents: 5000, listinoCents: 5000, scontoAzienda: 40 },
