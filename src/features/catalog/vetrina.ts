@@ -78,3 +78,9 @@ export async function listManagerialiVetrina(): Promise<VetrinaCourse[]> {
     .sort((a, b) => ordineManageriale(a.slug!) - ordineManageriale(b.slug!))
     .map(vetrina);
 }
+
+// Vetrina mestieri e professioni (piastrellista e le prossime qualifiche): solo corsi pubblicati dal DB.
+export async function listMestieriVetrina(): Promise<VetrinaCourse[]> {
+  const all = await listPublishedCourses();
+  return all.filter((c) => c.category === "mestieri" && !!c.slug).map(vetrina);
+}

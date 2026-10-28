@@ -12,9 +12,14 @@ from pathlib import Path
 
 REPO = Path(r"c:/Users/user/FormazioneEvalis(working name)")
 SP = Path(sys.argv[1]).parent
-CORSI = os.environ.get("GUARDIA_CORSI","fadesg02,fadeen02").split(",")
-ATTESE = int(os.environ.get("GUARDIA_ATTESE","540"))
-TOTALE_SHARD = int(os.environ.get("GUARDIA_SHARD","8"))
+# corsi, clip attese e shard OBBLIGATORI: i vecchi predefiniti (fadesg02, fadeen02, 540, 8) il 29/10/2026
+# hanno fatto credere completa la flotta di fadpia01 e distruggere i 13 pod appena accesi
+for k in ("GUARDIA_CORSI", "GUARDIA_ATTESE", "GUARDIA_SHARD"):
+    if not os.environ.get(k):
+        sys.exit(f"manca {k}: es. GUARDIA_CORSI=fadpia01 GUARDIA_ATTESE=544 GUARDIA_SHARD=13")
+CORSI = os.environ["GUARDIA_CORSI"].split(",")
+ATTESE = int(os.environ["GUARDIA_ATTESE"])
+TOTALE_SHARD = int(os.environ["GUARDIA_SHARD"])
 GIRO = 300
 # MuseTalk elabora l'INTERO lotto del worker in una sola invocazione e il caricamento su R2
 # avviene solo alla fine: il conteggio resta piatto per ~2,5 h e poi salta di colpo.

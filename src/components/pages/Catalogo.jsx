@@ -128,12 +128,14 @@ function badgeFor(course) {
   return m ? `ISO ${m[0]}` : "Corso";
 }
 
-/** @param {{ auditorCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], aiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], managerialiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], bundles?: import("@/features/catalog/queries").CatalogBundle[] }} props */
-export default function Catalogo({ auditorCourses = [], aiCourses = [], managerialiCourses = [], bundles = [] }) {
+/** @param {{ auditorCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], aiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], managerialiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], mestieriCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], bundles?: import("@/features/catalog/queries").CatalogBundle[] }} props */
+export default function Catalogo({ auditorCourses = [], aiCourses = [], managerialiCourses = [], mestieriCourses = [], bundles = [] }) {
   const [activeArea, setActiveArea] = useState("all");
   const [query, setQuery] = useState("");
   // la scadenza si mostra solo se c'è davvero almeno un corso a prezzo di lancio
-  const inLancio = [...auditorCourses, ...aiCourses, ...managerialiCourses].some(hasLaunchPrice);
+  const inLancio = [...auditorCourses, ...aiCourses, ...managerialiCourses, ...mestieriCourses].some(hasLaunchPrice);
+  // l'area mestieri compare solo quando c'è almeno un corso pubblicato (mai una vetrina vuota)
+  const aree = mestieriCourses.length ? [...areas, { id: "mestieri", label: "Mestieri e professioni" }] : areas;
 
   const allCerts = useMemo(() => {
     const dbCards = auditorCourses.map((c) => ({
@@ -169,8 +171,19 @@ export default function Catalogo({ auditorCourses = [], aiCourses = [], manageri
       hours: c.durationHours,
       ...prezzoDi(c),
     }));
-    return [...dbCards, ...aiCards, ...managerialiCards];
-  }, [auditorCourses, aiCourses, managerialiCourses]);
+    const mestieriCards = mestieriCourses.map((c) => ({
+      area: "mestieri",
+      areaLabel: "Mestieri e professioni",
+      name: c.title.split("—")[0].trim(),
+      badge: "Professionale",
+      line: c.description,
+      slug: c.slug,
+      imageUrl: c.imageUrl,
+      hours: c.durationHours,
+      ...prezzoDi(c),
+    }));
+    return [...dbCards, ...aiCards, ...managerialiCards, ...mestieriCards];
+  }, [auditorCourses, aiCourses, managerialiCourses, mestieriCourses]);
 
   const filtered = useMemo(() => {
     return allCerts.filter((cert) => {
@@ -229,7 +242,7 @@ export default function Catalogo({ auditorCourses = [], aiCourses = [], manageri
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
             <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
               <div className="flex flex-wrap gap-2">
-                {areas.map((area) => (
+                {aree.map((area) => (
                   <button
                     key={area.id}
                     onClick={() => setActiveArea(area.id)}

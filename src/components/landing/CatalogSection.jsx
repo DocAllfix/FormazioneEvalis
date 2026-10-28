@@ -122,12 +122,14 @@ function badgeFor(course) {
   return m ? `ISO ${m[0]}` : "Corso";
 }
 
-/** @param {{ auditorCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], aiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], managerialiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[] }} props */
-export default function CatalogSection({ auditorCourses = [], aiCourses = [], managerialiCourses = [] }) {
+/** @param {{ auditorCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], aiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], managerialiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], mestieriCourses?: import("@/features/catalog/vetrina").VetrinaCourse[] }} props */
+export default function CatalogSection({ auditorCourses = [], aiCourses = [], managerialiCourses = [], mestieriCourses = [] }) {
   const [activeArea, setActiveArea] = useState("auditor");
-  const current = areas.find((a) => a.id === activeArea);
+  // l'area mestieri compare solo con almeno un corso pubblicato: nessuna scheda statica di ripiego
+  const aree = mestieriCourses.length ? [...areas, { id: "mestieri", label: "Mestieri e professioni", cards: [] }] : areas;
+  const current = aree.find((a) => a.id === activeArea);
   // la scadenza si mostra solo se c'è davvero almeno un corso a prezzo di lancio
-  const inLancio = [...auditorCourses, ...aiCourses, ...managerialiCourses].some(hasLaunchPrice);
+  const inLancio = [...auditorCourses, ...aiCourses, ...managerialiCourses, ...mestieriCourses].some(hasLaunchPrice);
   // aree auditor/ai: corsi reali dal DB quando disponibili (fallback alla lista statica)
   const dbAuditorCards = auditorCourses.map((c) => ({
     name: c.title.split("—")[0].trim(),
@@ -150,8 +152,17 @@ export default function CatalogSection({ auditorCourses = [], aiCourses = [], ma
     slug: c.slug,
     ...prezzoDi(c),
   }));
+  const dbMestieriCards = mestieriCourses.map((c) => ({
+    name: c.title.split("—")[0].trim(),
+    badge: "Professionale",
+    line: c.description,
+    slug: c.slug,
+    ...prezzoDi(c),
+  }));
   const cards =
-    activeArea === "manageriale" && dbManagerialiCards.length > 0
+    activeArea === "mestieri"
+      ? dbMestieriCards
+      : activeArea === "manageriale" && dbManagerialiCards.length > 0
       ? dbManagerialiCards
       : activeArea === "auditor" && dbAuditorCards.length > 0
       ? dbAuditorCards
@@ -181,7 +192,7 @@ export default function CatalogSection({ auditorCourses = [], aiCourses = [], ma
 
         <ScrollReveal delay={0.1}>
           <div className="flex flex-wrap gap-2 mb-8">
-            {areas.map((area) => (
+            {aree.map((area) => (
               <button
                 key={area.id}
                 onClick={() => setActiveArea(area.id)}

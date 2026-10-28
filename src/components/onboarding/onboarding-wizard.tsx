@@ -14,6 +14,7 @@ import {
   ShieldCheck,
   Sparkles,
   Leaf,
+  Briefcase,
   ArrowRight,
   Check,
 } from "lucide-react";
@@ -35,6 +36,7 @@ const GOALS = [
   { id: "auditor_iso", label: "Auditor ISO", desc: "Schemi 9001, 14001, 45001…", icon: ShieldCheck },
   { id: "ai", label: "Intelligenza Artificiale", desc: "Claude AI operativo e avanzato", icon: Sparkles },
   { id: "manageriale", label: "Energia e sostenibilità", desc: "ESG, energia, parità di genere…", icon: Leaf },
+  { id: "mestieri", label: "Mestieri e professioni", desc: "Piastrellista, qualifiche professionali", icon: Briefcase },
 ] as const;
 
 type StepDef = { key: string; title: string; body: string; icon: typeof BookOpen };

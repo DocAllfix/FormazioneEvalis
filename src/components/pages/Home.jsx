@@ -17,8 +17,8 @@ import FinalCTA from "@/components/landing/FinalCTA";
 import SiteFooter from "@/components/landing/SiteFooter";
 import { BundleStrip } from "@/components/catalog/bundle-strip";
 
-/** @param {{ auditorCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], aiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], managerialiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], bundles?: import("@/features/catalog/queries").CatalogBundle[] }} props */
-export default function Home({ auditorCourses = [], aiCourses = [], managerialiCourses = [], bundles = [] }) {
+/** @param {{ auditorCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], aiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], managerialiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], mestieriCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], bundles?: import("@/features/catalog/queries").CatalogBundle[] }} props */
+export default function Home({ auditorCourses = [], aiCourses = [], managerialiCourses = [], mestieriCourses = [], bundles = [] }) {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <a href="#main-content" className="skip-link">
@@ -29,7 +29,7 @@ export default function Home({ auditorCourses = [], aiCourses = [], managerialiC
         <BentoHero />
         <StatsSection />
         <ISOStrip />
-        <CatalogSection auditorCourses={auditorCourses} aiCourses={aiCourses} managerialiCourses={managerialiCourses} />
+        <CatalogSection auditorCourses={auditorCourses} aiCourses={aiCourses} managerialiCourses={managerialiCourses} mestieriCourses={mestieriCourses} />
         {bundles.length > 0 ? (
           // pacchetti subito dopo i corsi: stessa vetrina dell'area riservata, prezzo e risparmio compresi
           <section className="w-full bg-background pb-20 md:pb-24">

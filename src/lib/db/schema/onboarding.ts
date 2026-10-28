@@ -28,7 +28,7 @@ export const userOnboarding = pgTable(
       .$type<string[]>()
       .notNull()
       .default(sql`'[]'::jsonb`),
-    // area scelta dal B2C (es. 'auditor_iso' | 'ai' | 'manageriale'); null per gli altri
+    // area scelta dal B2C (es. 'auditor_iso' | 'ai' | 'manageriale' | 'mestieri'); null per gli altri
     goal: text("goal"),
     // Autodichiarazione ISO 19011 (advisory): null = non chiesto, true/false = risposto in onboarding.
     iso19011Certified: boolean("iso19011_certified"),

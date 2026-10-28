@@ -16,6 +16,7 @@ const AREAS = [
   { id: "auditor", label: "Auditor ISO" },
   { id: "ai", label: "Intelligenza Artificiale" },
   { id: "sicurezza", label: "Sicurezza" },
+  { id: "mestieri", label: "Mestieri e professioni" },
 ];
 
 function hoursLabel(c: CatalogCourse): string {

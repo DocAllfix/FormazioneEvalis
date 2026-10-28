@@ -71,6 +71,13 @@ const ICONE = {
       ${scudo(155, 160, 130)}
       ${ingranaggio(282, 262, 62, 9, C.arancioCaldo)}`,
   },
+  // griglia di piastrelle + coccarda: il piastrellista certificato (FAD-PIA-01, UNI 11493-1)
+  piastrelle: {
+    centro: [176, 186], scala: 1.6,
+    disegna: () => `
+      ${piastrelle(160, 160, 130)}
+      ${coccarda(282, 262, 58)}`,
+  },
   // tre persone affiancate + coccarda: il sistema di gestione sociale certificato (PAS 24000)
   sociale: {
     centro: [176, 190], scala: 1.62,
@@ -79,6 +86,14 @@ const ICONE = {
       ${coccarda(268, 252, 60)}`,
   },
 };
+
+// griglia 3×3 di piastrelle con le fughe, in tinte alternate: la posa ceramica (piastrellista)
+function piastrelle(cx, cy, r) {
+  const lato = r * 0.62, fuga = r * 0.08, passo = lato + fuga, x0 = cx - passo * 1.5 + fuga / 2, y0 = cy - passo * 1.5 + fuga / 2;
+  const tinte = [C.arancio, C.arancioCaldo, "#EDE0D0", C.arancioCaldo, C.arancio, C.arancioCaldo, "#EDE0D0", C.arancioCaldo, C.arancio];
+  return `<g filter="url(#rilievo)">${tinte.map((t, i) =>
+    `<rect x="${(x0 + (i % 3) * passo).toFixed(1)}" y="${(y0 + Math.floor(i / 3) * passo).toFixed(1)}" width="${lato.toFixed(1)}" height="${lato.toFixed(1)}" rx="${(r * 0.06).toFixed(1)}" fill="${t}"/>`).join("")}</g>`;
+}
 
 // nuvola piena con la scritta CO2 in chiaro (testo SVG: le copertine si rasterizzano nel browser)
 function nuvolaCO2(cx, cy, r) {
@@ -254,6 +269,7 @@ const CORSI = {
   fadpriv01: ICONE.privacy,
   fadpriv02: ICONE.privacyAggiornamento,
   fadpriv03: ICONE.privacySistemi,
+  fadpia01: ICONE.piastrelle,
 };
 
 const DISCO = { x: 790, y: 478 };
