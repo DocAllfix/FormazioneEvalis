@@ -196,30 +196,21 @@
  },
  {
   "id": "fadpia01_m09_s009",
-  "layout": "numeri",
+  "layout": "esercizio",
   "kicker": "Primo calcolo svolto",
-  "titolo": "I quattro numeri chiave del fugante",
-  "intro": "Sostituendo i dati del soggiorno nella formula, il conto procede in modo lineare: prima i due passaggi geometrici, poi il coefficiente finale, fino al consumo unitario da usare per il totale del locale.",
-  "numeri": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 1 · Consumo di fugante",
+  "intro": "Soggiorno di 45 m², gres 60×60 da 10 mm, fuga 3 mm, spatola da 10 mm con doppia spalmatura, sacchi da 25 kg.",
+  "campi": [
    {
-    "n": "1200",
-    "h": "Somma dei lati: 600 + 600",
-    "d": ""
-   },
-   {
-    "n": "360000",
-    "h": "Prodotto dei lati: 600 × 600",
-    "d": ""
-   },
-   {
-    "n": "1,6",
-    "h": "Coefficiente finale di conversione",
-    "d": ""
-   },
-   {
-    "n": "0,16 kg/m²",
-    "h": "Consumo unitario di fugante",
-    "d": ""
+    "h": "1 · Consumo di fugante",
+    "d": "(A + B) / (A × B) × C × D × 1,6, lati in mm. Tolleranza ±10 %",
+    "tipo": "numero",
+    "u": "kg/m²",
+    "atteso": 0.16,
+    "toll": 0.1,
+    "soluzione": "0,16",
+    "spiega": "(1.200 / 360.000) × 10 × 3 × 1,6 = 0,16 kg/m²."
    }
   ]
  },
@@ -292,30 +283,20 @@
  },
  {
   "id": "fadpia01_m09_s013",
-  "layout": "timeline",
+  "layout": "esercizio",
   "kicker": "Calcolo due",
-  "titolo": "Da zero virgola sedici a sette virgola due",
-  "intro": "Il fabbisogno totale nasce da un passaggio lineare ma decisivo: consumo unitario, superficie netta, moltiplicazione e lettura coerente del risultato finale per il locale completo.",
-  "tappe": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 2 · Fugante totale",
+  "intro": "Soggiorno di 45 m², gres 60×60 da 10 mm, fuga 3 mm, spatola da 10 mm con doppia spalmatura, sacchi da 25 kg.",
+  "campi": [
    {
-    "t": "01",
-    "h": "Dato base",
-    "d": "Zero virgola sedici kg/m²"
-   },
-   {
-    "t": "02",
-    "h": "Superficie netta",
-    "d": "Quarantacinque metri quadrati di soggiorno"
-   },
-   {
-    "t": "03",
-    "h": "Operazione",
-    "d": "Zero virgola sedici per quarantacinque"
-   },
-   {
-    "t": "04",
-    "h": "Esito",
-    "d": "Sette virgola due chilogrammi totali"
+    "h": "2 · Fugante totale",
+    "tipo": "numero",
+    "u": "kg",
+    "atteso": 7.2,
+    "toll": 0.1,
+    "soluzione": "7,2",
+    "spiega": "0,16 × 45 = 7,2 kg."
    }
   ]
  },
@@ -373,23 +354,21 @@
  },
  {
   "id": "fadpia01_m09_s016",
-  "layout": "barre",
+  "layout": "esercizio",
   "kicker": "Calcolo tre",
-  "titolo": "L'adesivo si stima con una logica diversa",
-  "intro": "Con l'adesivo non conta la rete delle fughe, ma la tecnica di posa: letto sul supporto e doppia spalmatura costruiscono insieme il consumo unitario finale.",
-  "unita": "kg/m²",
-  "voci": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 3 · Consumo di adesivo",
+  "intro": "Soggiorno di 45 m², gres 60×60 da 10 mm, fuga 3 mm, spatola da 10 mm con doppia spalmatura, sacchi da 25 kg.",
+  "campi": [
    {
-    "l": "Supporto, spatola 10 mm",
-    "v": 4.5
-   },
-   {
-    "l": "Retro, doppia spalmatura",
-    "v": 1.5
-   },
-   {
-    "l": "Consumo unitario finale",
-    "v": 6
+    "h": "3 · Consumo di adesivo",
+    "d": "Spatola da 10 mm e doppia spalmatura",
+    "tipo": "numero",
+    "u": "kg/m²",
+    "atteso": 6,
+    "toll": 0.1,
+    "soluzione": "6",
+    "spiega": "4,5 + 1,5 = 6 kg/m²."
    }
   ]
  },
@@ -484,26 +463,20 @@
  },
  {
   "id": "fadpia01_m09_s021",
-  "layout": "flusso",
+  "layout": "esercizio",
   "kicker": "Calcolo quattro",
-  "titolo": "Dal consumo unitario all’adesivo totale",
-  "intro": "Il totale dell’adesivo non si indovina: si ottiene portando il dato unitario dentro la superficie reale del soggiorno e verificando subito che il risultato resti plausibile.",
-  "passi": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 4 · Adesivo totale",
+  "intro": "Soggiorno di 45 m², gres 60×60 da 10 mm, fuga 3 mm, spatola da 10 mm con doppia spalmatura, sacchi da 25 kg.",
+  "campi": [
    {
-    "h": "Consumo unitario",
-    "d": "6 kg/m²"
-   },
-   {
-    "h": "Superficie netta",
-    "d": "45 m² di soggiorno"
-   },
-   {
-    "h": "Fabbisogno tecnico",
-    "d": "270 kg di adesivo"
-   },
-   {
-    "h": "Verifica mentale",
-    "d": "40 m² = 240 kg, più 5 m² = 30 kg"
+    "h": "4 · Adesivo totale",
+    "tipo": "numero",
+    "u": "kg",
+    "atteso": 270,
+    "toll": 0.1,
+    "soluzione": "270",
+    "spiega": "6 × 45 = 270 kg."
    }
   ]
  },
@@ -552,30 +525,21 @@
  },
  {
   "id": "fadpia01_m09_s023",
-  "layout": "numeri",
+  "layout": "esercizio",
   "kicker": "Calcolo cinque",
-  "titolo": "Dai chilogrammi ai sacchi ordinabili",
-  "intro": "La traduzione del fabbisogno tecnico in confezioni commerciali richiede un passaggio semplice ma decisivo: dividere per il formato del sacco e arrotondare sempre al primo intero sufficiente.",
-  "numeri": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 5 · Sacchi di adesivo da 25 kg",
+  "intro": "Soggiorno di 45 m², gres 60×60 da 10 mm, fuga 3 mm, spatola da 10 mm con doppia spalmatura, sacchi da 25 kg.",
+  "campi": [
    {
-    "n": "270 kg",
-    "h": "fabbisogno tecnico totale",
-    "d": ""
-   },
-   {
-    "n": "25 kg",
-    "h": "peso del sacco",
-    "d": ""
-   },
-   {
-    "n": "10,8",
-    "h": "sacchi teorici",
-    "d": ""
-   },
-   {
-    "n": "11",
-    "h": "ordine minimo sufficiente",
-    "d": ""
+    "h": "5 · Sacchi di adesivo da 25 kg",
+    "d": "Arrotondati per eccesso",
+    "tipo": "numero",
+    "u": "sacchi",
+    "atteso": 11,
+    "intero": true,
+    "soluzione": "11",
+    "spiega": "270 / 25 = 10,8, quindi 11 sacchi."
    }
   ]
  },
@@ -606,29 +570,20 @@
  },
  {
   "id": "fadpia01_m09_s025",
-  "layout": "organigramma",
+  "layout": "esercizio",
   "kicker": "Calcolo sei",
-  "titolo": "La scorta di piastrelle ha tre funzioni",
-  "intro": "La superficie netta del soggiorno non coincide con la quantità finale da ordinare. La scorta compresa tra cinque e dieci per cento protegge il lavoro oggi e le sostituzioni di domani.",
-  "radice": {
-   "h": "Scorta piastrelle 5%-10%",
-   "d": "oltre i 45 m² netti"
-  },
-  "rami": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 6 · Scorta di piastrelle oltre i 45 m²",
+  "intro": "Soggiorno di 45 m², gres 60×60 da 10 mm, fuga 3 mm, spatola da 10 mm con doppia spalmatura, sacchi da 25 kg.",
+  "campi": [
    {
-    "h": "Tagli",
-    "d": "copre le lavorazioni ai bordi",
-    "voci": []
-   },
-   {
-    "h": "Sfridi",
-    "d": "assorbe i residui non riutilizzabili",
-    "voci": []
-   },
-   {
-    "h": "Sostituzioni future",
-    "d": "lascia pezzi compatibili per riparazioni",
-    "voci": []
+    "h": "6 · Scorta di piastrelle oltre i 45 m²",
+    "tipo": "numero",
+    "u": "%",
+    "min": 5,
+    "max": 10,
+    "soluzione": "10",
+    "spiega": "Scorta dal 5 al 10 % per tagli e sostituzioni future."
    }
   ]
  },

@@ -201,39 +201,37 @@
  },
  {
   "id": "fadpia01_m10_s009",
-  "layout": "evidenza",
-  "kicker": "Calcolo 1",
-  "titolo": "Sul lato da otto metri servono due giunti",
-  "eyebrow": "",
-  "testo": "Il conteggio parte dal numero minimo di campi necessari lungo il lato. Solo dopo si traduce quel dato nel numero dei giunti intermedi richiesti dal frazionamento.",
-  "dark": true
+  "layout": "esercizio",
+  "kicker": "Calcolo uno",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 1 · Giunti intermedi lungo il lato da 8 m",
+  "intro": "Terrazza esterna di 8 × 12 m (96 m²) al sole, gres 30×60. Regola degli esterni: campi fino a 9 m², lato fino a 3 m, giunti perimetrali continui.",
+  "campi": [
+   {
+    "h": "1 · Giunti intermedi lungo il lato da 8 m",
+    "tipo": "numero",
+    "atteso": 2,
+    "intero": true,
+    "soluzione": "2",
+    "spiega": "8 m / 3 m: 3 campi, quindi 2 giunti intermedi."
+   }
+  ]
  },
  {
   "id": "fadpia01_m10_s010",
-  "layout": "numeri",
+  "layout": "esercizio",
   "kicker": "Calcolo due",
-  "titolo": "Tre giunti sul lato da dodici metri",
-  "intro": "Sul lato da dodici metri il metodo resta identico: escludi le ipotesi che superano tre metri, accetti il valore esatto al limite e traduci i campi nei giunti intermedi.",
-  "numeri": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 2 · Giunti intermedi lungo il lato da 12 m",
+  "intro": "Terrazza esterna di 8 × 12 m (96 m²) al sole, gres 30×60. Regola degli esterni: campi fino a 9 m², lato fino a 3 m, giunti perimetrali continui.",
+  "campi": [
    {
-    "n": "12 m",
-    "h": "lato da suddividere",
-    "d": ""
-   },
-   {
-    "n": "3 campi",
-    "h": "ipotesi esclusa: 4 m per campo",
-    "d": ""
-   },
-   {
-    "n": "4 campi",
-    "h": "soluzione corretta: 3 m esatti",
-    "d": ""
-   },
-   {
-    "n": "3 giunti",
-    "h": "linee interne tra quattro campi",
-    "d": ""
+    "h": "2 · Giunti intermedi lungo il lato da 12 m",
+    "tipo": "numero",
+    "atteso": 3,
+    "intero": true,
+    "soluzione": "3",
+    "spiega": "12 m / 3 m: 4 campi, quindi 3 giunti intermedi."
    }
   ]
  },
@@ -321,26 +319,19 @@
  },
  {
   "id": "fadpia01_m10_s015",
-  "layout": "flusso",
+  "layout": "esercizio",
   "kicker": "Calcolo tre",
-  "titolo": "Dodici campi dall'incrocio delle partizioni",
-  "intro": "Per ottenere il totale dei campi non addizioni i risultati dei lati: incroci le partizioni delle due direzioni. La logica corretta della griglia è moltiplicativa.",
-  "passi": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 3 · Campi risultanti",
+  "intro": "Terrazza esterna di 8 × 12 m (96 m²) al sole, gres 30×60. Regola degli esterni: campi fino a 9 m², lato fino a 3 m, giunti perimetrali continui.",
+  "campi": [
    {
-    "h": "Primo verso",
-    "d": "tre campi sul lato da otto metri"
-   },
-   {
-    "h": "Secondo verso",
-    "d": "quattro campi sul lato da dodici metri"
-   },
-   {
-    "h": "Incrocio",
-    "d": "ogni fascia incontra tutte le altre"
-   },
-   {
-    "h": "Totale",
-    "d": "tre per quattro uguale dodici campi"
+    "h": "3 · Campi risultanti",
+    "tipo": "numero",
+    "atteso": 12,
+    "intero": true,
+    "soluzione": "12",
+    "spiega": "3 × 4 = 12 campi."
    }
   ]
  },
@@ -383,30 +374,21 @@
  },
  {
   "id": "fadpia01_m10_s017",
-  "layout": "tabella",
+  "layout": "esercizio",
   "kicker": "Calcolo quattro",
-  "titolo": "Otto metri quadrati per ciascun campo",
-  "cols": [
-   "Verifica",
-   "Dati",
-   "Risultato"
-  ],
-  "righe": [
-   [
-    "Per superficie",
-    "96 m² ÷ 12 campi",
-    "8 m² per campo"
-   ],
-   [
-    "Per geometria",
-    "circa 2,67 m × 3 m",
-    "circa 8 m²"
-   ],
-   [
-    "Esito",
-    "doppio controllo coerente",
-    "suddivisione confermata"
-   ]
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 4 · Superficie di ciascun campo",
+  "intro": "Terrazza esterna di 8 × 12 m (96 m²) al sole, gres 30×60. Regola degli esterni: campi fino a 9 m², lato fino a 3 m, giunti perimetrali continui.",
+  "campi": [
+   {
+    "h": "4 · Superficie di ciascun campo",
+    "tipo": "numero",
+    "u": "m²",
+    "atteso": 8,
+    "tollAss": 0.5,
+    "soluzione": "8",
+    "spiega": "96 / 12 = 8 m², entro i 9 m²."
+   }
   ]
  },
  {
@@ -436,12 +418,27 @@
  },
  {
   "id": "fadpia01_m10_s019",
-  "layout": "evidenza",
+  "layout": "esercizio",
   "kicker": "Giunto perimetrale",
-  "titolo": "Il bordo esterno richiede spazio reale",
-  "eyebrow": "",
-  "testo": "In esterno il perimetro non rifinisce soltanto la terrazza: assorbe movimento. La misura di riferimento è nell'ordine di otto o dieci millimetri, continua lungo tutto il contorno e mai ridotta a una fessura.",
-  "dark": true
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 5 · Giunto perimetrale in esterno",
+  "intro": "Terrazza esterna di 8 × 12 m (96 m²) al sole, gres 30×60. Regola degli esterni: campi fino a 9 m², lato fino a 3 m, giunti perimetrali continui.",
+  "campi": [
+   {
+    "h": "5 · Giunto perimetrale in esterno",
+    "tipo": "scelta",
+    "opzioni": [
+     "2 mm",
+     "5 mm",
+     "8–10 mm",
+     "20 mm"
+    ],
+    "giuste": [
+     "8–10 mm"
+    ],
+    "spiega": "In esterno il giunto perimetrale è di 8–10 mm."
+   }
+  ]
  },
  {
   "id": "fadpia01_m10_s020",
@@ -535,46 +532,27 @@
  },
  {
   "id": "fadpia01_m10_s023",
-  "layout": "confronto",
+  "layout": "esercizio",
   "kicker": "Riempimento dei giunti",
-  "titolo": "Riempire il giunto senza bloccarlo",
-  "intro": "La larghezza da sola non basta. Il giunto funziona quando lo spazio resta elastico anche dopo la finitura, sia al perimetro sia nelle linee di frazionamento tra campi adiacenti.",
-  "a": {
-   "h": "Riempimento corretto",
-   "sub": "",
-   "punti": [
-    {
-     "d": "Sigillante elastico o profilo preformato"
-    },
-    {
-     "d": "Protegge e rifinisce il bordo"
-    },
-    {
-     "d": "Mantiene capacità di deformarsi"
-    },
-    {
-     "d": "Vale anche per i giunti interni"
-    }
-   ]
-  },
-  "b": {
-   "h": "Riempimento scorretto",
-   "sub": "",
-   "punti": [
-    {
-     "d": "Materiali rigidi"
-    },
-    {
-     "d": "Chiudono meccanicamente lo spazio"
-    },
-    {
-     "d": "Il giunto resta visibile ma inutile"
-    },
-    {
-     "d": "Annullano la funzione di compensazione"
-    }
-   ]
-  }
+  "ref": "Prova tu",
+  "titolo": "Prova tu: 6 · Riempimento dei giunti",
+  "intro": "Terrazza esterna di 8 × 12 m (96 m²) al sole, gres 30×60. Regola degli esterni: campi fino a 9 m², lato fino a 3 m, giunti perimetrali continui.",
+  "campi": [
+   {
+    "h": "6 · Riempimento dei giunti",
+    "tipo": "scelta",
+    "opzioni": [
+     "Fugante CG2",
+     "Sigillante elastico / profilo preformato",
+     "Adesivo C2",
+     "Malta cementizia"
+    ],
+    "giuste": [
+     "Sigillante elastico / profilo preformato"
+    ],
+    "spiega": "Sigillante elastico o profilo, mai materiali rigidi."
+   }
+  ]
  },
  {
   "id": "fadpia01_m10_s024",

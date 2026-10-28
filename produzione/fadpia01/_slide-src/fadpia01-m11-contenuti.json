@@ -42,12 +42,29 @@
  },
  {
   "id": "fadpia01_m11_s003",
-  "layout": "evidenza",
+  "layout": "esercizio",
   "kicker": "Caso A",
-  "titolo": "Gres rettificato interno: minimo due millimetri",
-  "eyebrow": "",
-  "testo": "Nel soggiorno con gres sessanta per sessanta rettificato la risposta nasce dall'incrocio delle condizioni del caso, non dall'effetto fotografico desiderato dal cliente.",
-  "dark": true
+  "ref": "Prova tu",
+  "titolo": "Prova tu: A · Gres 60×60 rettificato",
+  "intro": "Indica la fuga minima ammessa per ciascuna situazione.",
+  "campi": [
+   {
+    "h": "A · Gres 60×60 rettificato",
+    "d": "Soggiorno",
+    "tipo": "scelta",
+    "opzioni": [
+     "0 mm (giunto unito)",
+     "2 mm",
+     "3 mm",
+     "5 mm",
+     "8 mm"
+    ],
+    "giuste": [
+     "2 mm"
+    ],
+    "spiega": "Rettificato in interno: 2 mm."
+   }
+  ]
  },
  {
   "id": "fadpia01_m11_s004",
@@ -109,30 +126,27 @@
  },
  {
   "id": "fadpia01_m11_s006",
-  "layout": "numeri",
+  "layout": "esercizio",
   "kicker": "Caso B",
-  "titolo": "Monocottura non rettificata: il minimo sale a tre",
-  "intro": "In cucina il metodo non cambia, ma cambia il bordo. Con un prodotto non rettificato la fuga si apre quel tanto che basta per mantenere la posa leggibile e governabile.",
-  "numeri": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: B · Monocottura 33×33 non rettificata",
+  "intro": "Indica la fuga minima ammessa per ciascuna situazione.",
+  "campi": [
    {
-    "n": "3 mm",
-    "h": "fuga minima ammessa",
-    "d": ""
-   },
-   {
-    "n": "33×33",
-    "h": "formato del caso",
-    "d": ""
-   },
-   {
-    "n": "Interno",
-    "h": "cucina a pavimento",
-    "d": ""
-   },
-   {
-    "n": "Non rettificata",
-    "h": "variabile decisiva",
-    "d": ""
+    "h": "B · Monocottura 33×33 non rettificata",
+    "d": "Cucina",
+    "tipo": "scelta",
+    "opzioni": [
+     "0 mm (giunto unito)",
+     "2 mm",
+     "3 mm",
+     "5 mm",
+     "8 mm"
+    ],
+    "giuste": [
+     "3 mm"
+    ],
+    "spiega": "Non rettificato in interno: 3 mm."
    }
   ]
  },
@@ -188,30 +202,29 @@
  },
  {
   "id": "fadpia01_m11_s009",
-  "layout": "tabella",
+  "layout": "esercizio",
   "kicker": "Caso C",
-  "titolo": "Cotto esterno: minimo cinque, scelta fino a dieci",
-  "cols": [
-   "Parametro",
-   "Valore"
-  ],
-  "righe": [
-   [
-    "Contesto",
-    "Portico esterno"
-   ],
-   [
-    "Minimo ammesso",
-    "5 mm"
-   ],
-   [
-    "Intervallo ragionevole",
-    "5-10 mm"
-   ],
-   [
-    "Risposte corrette esercitazione",
-    "5 mm oppure 8 mm"
-   ]
+  "ref": "Prova tu",
+  "titolo": "Prova tu: C · Cotto 30×30",
+  "intro": "Indica la fuga minima ammessa per ciascuna situazione.",
+  "campi": [
+   {
+    "h": "C · Cotto 30×30",
+    "d": "Portico esterno",
+    "tipo": "scelta",
+    "opzioni": [
+     "0 mm (giunto unito)",
+     "2 mm",
+     "3 mm",
+     "5 mm",
+     "8 mm"
+    ],
+    "giuste": [
+     "5 mm",
+     "8 mm"
+    ],
+    "spiega": "In esterno almeno 5 mm; per il cotto da 5 a 10 mm."
+   }
   ]
  },
  {
@@ -293,12 +306,29 @@
  },
  {
   "id": "fadpia01_m11_s013",
-  "layout": "definizione",
+  "layout": "esercizio",
   "kicker": "Caso D",
-  "titolo": "Lastra 120x240 rettificata: minimo 2 mm",
-  "eyebrow": "",
-  "definizione": "Interno, parete, bordo rettificato: due millimetri. Il grande formato riduce i giunti percepiti, ma non elimina la fuga tecnica.",
-  "punti": []
+  "ref": "Prova tu",
+  "titolo": "Prova tu: D · Lastra 120×240 rettificata",
+  "intro": "Indica la fuga minima ammessa per ciascuna situazione.",
+  "campi": [
+   {
+    "h": "D · Lastra 120×240 rettificata",
+    "d": "Parete interna",
+    "tipo": "scelta",
+    "opzioni": [
+     "0 mm (giunto unito)",
+     "2 mm",
+     "3 mm",
+     "5 mm",
+     "8 mm"
+    ],
+    "giuste": [
+     "2 mm"
+    ],
+    "spiega": "Lastra rettificata in interno: 2 mm."
+   }
+  ]
  },
  {
   "id": "fadpia01_m11_s014",
@@ -375,12 +405,26 @@
  },
  {
   "id": "fadpia01_m11_s016",
-  "layout": "definizione",
+  "layout": "esercizio",
   "kicker": "Caso E",
-  "titolo": "Alla posa senza fuga si risponde no",
-  "eyebrow": "",
-  "definizione": "Richiesta da rifiutare: il giunto unito non è ammesso dalla norma e, anche nello scenario più favorevole, il riferimento corretto parte da due millimetri.",
-  "punti": []
+  "ref": "Prova tu",
+  "titolo": "Prova tu: E · Il cliente chiede la posa «senza fuga»",
+  "intro": "Indica la fuga minima ammessa per ciascuna situazione.",
+  "campi": [
+   {
+    "h": "E · Il cliente chiede la posa «senza fuga»",
+    "tipo": "scelta",
+    "opzioni": [
+     "Accetto: con il rettificato è possibile",
+     "Rifiuto: UNI 11493-1 non ammette il giunto unito, minimo 2 mm",
+     "Accetto con adesivo S2"
+    ],
+    "giuste": [
+     "Rifiuto: UNI 11493-1 non ammette il giunto unito, minimo 2 mm"
+    ],
+    "spiega": "Il giunto unito non è ammesso: minimo 2 mm."
+   }
+  ]
  },
  {
   "id": "fadpia01_m11_s017",

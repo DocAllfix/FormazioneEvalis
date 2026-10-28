@@ -162,26 +162,25 @@
  },
  {
   "id": "fadpia01_m07_s008",
-  "layout": "tabella",
+  "layout": "esercizio",
   "kicker": "Confronto oggettivo",
-  "titolo": "Tre virgola uno per cento oltre due",
-  "cols": [
-   "Voce",
-   "Valore"
-  ],
-  "righe": [
-   [
-    "Lettura al carburo",
-    "3,1%"
-   ],
-   [
-    "Riferimento del caso",
-    "2%"
-   ],
-   [
-    "Esito del confronto",
-    "Superiore al riferimento"
-   ]
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Rilievo 1 · Umidità al carburo",
+  "intro": "Appartamento con massetto cementizio tradizionale di 5 cm e posa di gres 60×60. Giudica questo rilievo.",
+  "campi": [
+   {
+    "h": "Rilievo 1 · Umidità al carburo",
+    "d": "Lettura dell'igrometro: 3,1 %",
+    "tipo": "scelta",
+    "opzioni": [
+     "Conforme",
+     "Non conforme"
+    ],
+    "giuste": [
+     "Non conforme"
+    ],
+    "spiega": "Umidità 3,1 % oltre il 2 %: non conforme."
+   }
   ]
  },
  {
@@ -288,19 +287,24 @@
  },
  {
   "id": "fadpia01_m07_s013",
-  "layout": "barre",
+  "layout": "esercizio",
   "kicker": "Lettura del rilievo",
-  "titolo": "Quattro millimetri contro il limite di due",
-  "intro": "Il giudizio nasce da un confronto numerico, non da impressioni: sotto staggia di due metri, lo scostamento rilevato è quattro millimetri a fronte di un riferimento di due millimetri.",
-  "unita": "mm",
-  "voci": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Rilievo 2 · Planarità",
+  "intro": "Appartamento con massetto cementizio tradizionale di 5 cm e posa di gres 60×60. Giudica questo rilievo.",
+  "campi": [
    {
-    "l": "Scostamento rilevato",
-    "v": 4
-   },
-   {
-    "l": "Riferimento del caso",
-    "v": 2
+    "h": "Rilievo 2 · Planarità",
+    "d": "Scostamento sotto staggia da 2 m: 4 mm",
+    "tipo": "scelta",
+    "opzioni": [
+     "Conforme",
+     "Non conforme"
+    ],
+    "giuste": [
+     "Non conforme"
+    ],
+    "spiega": "Planarità 4 mm oltre i 2 mm su 2 m: non conforme."
    }
   ]
  },
@@ -365,30 +369,24 @@
  },
  {
   "id": "fadpia01_m07_s017",
-  "layout": "timeline",
+  "layout": "esercizio",
   "kicker": "Confronto temporale",
-  "titolo": "Quattordici giorni non bastano",
-  "intro": "Anche un dato molto semplice diventa tecnico solo quando lo confronti con il riferimento del caso. Qui il tempo trascorso dal getto è inferiore al tempo richiesto per la stagionatura.",
-  "tappe": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Rilievo 3 · Stagionatura",
+  "intro": "Appartamento con massetto cementizio tradizionale di 5 cm e posa di gres 60×60. Giudica questo rilievo.",
+  "campi": [
    {
-    "t": "01",
-    "h": "Getto del massetto",
-    "d": "Punto iniziale del conteggio"
-   },
-   {
-    "t": "02",
-    "h": "Rilievo effettuato",
-    "d": "Tempo trascorso: quattordici giorni"
-   },
-   {
-    "t": "03",
-    "h": "Riferimento richiesto",
-    "d": "Stagionatura attesa: ventotto giorni"
-   },
-   {
-    "t": "04",
-    "h": "Esito del confronto",
-    "d": "Requisito temporale non raggiunto"
+    "h": "Rilievo 3 · Stagionatura",
+    "d": "Massetto gettato 14 giorni fa",
+    "tipo": "scelta",
+    "opzioni": [
+     "Conforme",
+     "Non conforme"
+    ],
+    "giuste": [
+     "Non conforme"
+    ],
+    "spiega": "14 giorni contro i 28 richiesti: stagionatura insufficiente."
    }
   ]
  },
@@ -446,24 +444,24 @@
  },
  {
   "id": "fadpia01_m07_s020",
-  "layout": "ciclo",
+  "layout": "esercizio",
   "kicker": "Decisione",
-  "titolo": "Tre azioni, una decisione coerente",
-  "intro": "Con tre non conformità allineate, la scelta professionale non è un’opinione: la decisione si traduce in tre azioni inseparabili che bloccano l’errore, lo rendono tracciabile e aprono la correzione.",
-  "ciclo": false,
-  "centro": "Supporto non idoneo",
-  "nodi": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Decisione del posatore",
+  "intro": "Appartamento con massetto cementizio tradizionale di 5 cm e posa di gres 60×60. I tre rilievi sono tutti fuori riferimento: che cosa decidi?",
+  "campi": [
    {
-    "h": "Sospendo",
-    "d": "Niente posa su base non pronta"
-   },
-   {
-    "h": "Verbalizzo",
-    "d": "Rilievi e decisione diventano tracciabili"
-   },
-   {
-    "h": "Richiedo interventi",
-    "d": "Attesa, rasatura, nuova verifica"
+    "h": "Decisione del posatore",
+    "tipo": "scelta",
+    "opzioni": [
+     "Procedo alla posa con adesivo C2 S1",
+     "Sospendo, verbalizzo e richiedo interventi (attesa stagionatura, rasatura)",
+     "Procedo con membrana desolidarizzante senza altre verifiche"
+    ],
+    "giuste": [
+     "Sospendo, verbalizzo e richiedo interventi (attesa stagionatura, rasatura)"
+    ],
+    "spiega": "Con supporto non idoneo la posa si sospende e si verbalizza."
    }
   ]
  },

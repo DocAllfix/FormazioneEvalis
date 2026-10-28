@@ -74,12 +74,32 @@
  },
  {
   "id": "fadpia01_m12_s004",
-  "layout": "evidenza",
+  "layout": "esercizio",
   "kicker": "Caso A",
-  "titolo": "Camera da letto: R9 basta davvero",
-  "eyebrow": "",
-  "testo": "La camera da letto va letta come ambiente residenziale, con passaggio moderato e condizioni normalmente asciutte: per questo la soglia minima corretta resta R9, senza forzare prestazioni non necessarie.",
-  "dark": true
+  "ref": "Prova tu",
+  "titolo": "Prova tu: A · Camera da letto",
+  "intro": "Scegli la classe antiscivolo minima (DIN 51130, DIN 51097). Il D.M. 236/89 chiede un attrito dinamico di almeno 0,40.",
+  "campi": [
+   {
+    "h": "A · Camera da letto",
+    "tipo": "scelta",
+    "opzioni": [
+     "R9",
+     "R10",
+     "R11",
+     "R12",
+     "R13",
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "giuste": [
+     "R9",
+     "R10"
+    ],
+    "spiega": "Residenziale: R9 è sufficiente."
+   }
+  ]
  },
  {
   "id": "fadpia01_m12_s005",
@@ -108,44 +128,30 @@
  },
  {
   "id": "fadpia01_m12_s006",
-  "layout": "organigramma",
+  "layout": "esercizio",
   "kicker": "Caso B",
-  "titolo": "Cucina professionale: perché il rischio sale",
-  "intro": "Nella cucina di ristorante cambiano insieme uso, ritmo e contaminanti. La valutazione non è più domestica: il pavimento deve restare affidabile durante un'attività ordinariamente gravosa.",
-  "radice": {
-   "h": "Cucina di ristorante",
-   "d": "ambiente di lavoro, non scenario residenziale"
-  },
-  "rami": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: B · Cucina di ristorante",
+  "intro": "Scegli la classe antiscivolo minima (DIN 51130, DIN 51097). Il D.M. 236/89 chiede un attrito dinamico di almeno 0,40.",
+  "campi": [
    {
-    "h": "Uso operativo",
-    "d": "movimenti rapidi e spazi condivisi",
-    "voci": [
-     "operatori",
-     "carrelli",
-     "attrezzature",
-     "carichi"
-    ]
-   },
-   {
-    "h": "Contaminanti",
-    "d": "aderenza messa alla prova continuamente",
-    "voci": [
-     "acqua",
-     "unto",
-     "residui alimentari",
-     "detergenti"
-    ]
-   },
-   {
-    "h": "Condizioni ordinarie",
-    "d": "bagnato e sporco fanno parte del servizio",
-    "voci": []
-   },
-   {
-    "h": "Conseguenze",
-    "d": "uno scivolamento impatta persone e organizzazione",
-    "voci": []
+    "h": "B · Cucina di ristorante",
+    "tipo": "scelta",
+    "opzioni": [
+     "R9",
+     "R10",
+     "R11",
+     "R12",
+     "R13",
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "giuste": [
+     "R12",
+     "R13"
+    ],
+    "spiega": "Cucina professionale: R12, con V4."
    }
   ]
  },
@@ -243,22 +249,31 @@
  },
  {
   "id": "fadpia01_m12_s010",
-  "layout": "split",
+  "layout": "esercizio",
   "kicker": "Caso C",
-  "titolo": "Esterni e rampe: il minimo tecnico è R11",
-  "lead": "Terrazza esterna e rampa carrabile alzano la soglia rispetto agli interni: cambia il contesto d'uso, aumentano le variabili e R11 diventa il punto minimo da cui iniziare la valutazione.",
-  "punti": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: C · Terrazza esterna o rampa carrabile",
+  "intro": "Scegli la classe antiscivolo minima (DIN 51130, DIN 51097). Il D.M. 236/89 chiede un attrito dinamico di almeno 0,40.",
+  "campi": [
    {
-    "h": "Soglia minima",
-    "d": "Per terrazze e rampe si parte da R11"
-   },
-   {
-    "h": "Contesto esterno",
-    "d": "Pioggia, sporco e bagnato cambiano il rischio"
-   },
-   {
-    "h": "Minimo non automatico",
-    "d": "R11 è base comune, poi valuti severità reale"
+    "h": "C · Terrazza esterna o rampa carrabile",
+    "tipo": "scelta",
+    "opzioni": [
+     "R9",
+     "R10",
+     "R11",
+     "R12",
+     "R13",
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "giuste": [
+     "R11",
+     "R12",
+     "R13"
+    ],
+    "spiega": "Esterni e rampe: R11 come minimo."
    }
   ]
  },
@@ -360,55 +375,62 @@
  },
  {
   "id": "fadpia01_m12_s015",
-  "layout": "definizione",
+  "layout": "esercizio",
   "kicker": "Caso D",
-  "titolo": "Il bordo piscina parte almeno da B",
-  "eyebrow": "",
-  "definizione": "Minimo coerente per il bordo piscina. La classe A non basta; la C diventa sensata quando affollamento, geometria o bagnato aumentano la severità.",
-  "punti": []
+  "ref": "Prova tu",
+  "titolo": "Prova tu: D · Bordo piscina, a piedi nudi",
+  "intro": "Scegli la classe antiscivolo minima (DIN 51130, DIN 51097). Il D.M. 236/89 chiede un attrito dinamico di almeno 0,40.",
+  "campi": [
+   {
+    "h": "D · Bordo piscina, a piedi nudi",
+    "tipo": "scelta",
+    "opzioni": [
+     "R9",
+     "R10",
+     "R11",
+     "R12",
+     "R13",
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "giuste": [
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "spiega": "Bordo piscina: classe B."
+   }
+  ]
  },
  {
   "id": "fadpia01_m12_s016",
-  "layout": "confronto",
+  "layout": "esercizio",
   "kicker": "Casi D ed E",
-  "titolo": "Bordo vasca e spogliatoio non partono uguali",
-  "intro": "La vicinanza fisica non basta a renderli equivalenti: cambia la dinamica del movimento, cambia l'esposizione all'acqua, cambia la soglia minima da cui partire.",
-  "a": {
-   "h": "Bordo vasca",
-   "sub": "",
-   "punti": [
-    {
-     "d": "Minimo B"
-    },
-    {
-     "d": "B basta in uso ordinato"
-    },
-    {
-     "d": "C con affollamento o acqua diffusa"
-    },
-    {
-     "d": "Movimenti rapidi e rischio intrinseco"
-    }
-   ]
-  },
-  "b": {
-   "h": "Spogliatoio",
-   "sub": "",
-   "punti": [
-    {
-     "d": "Minimo A"
-    },
-    {
-     "d": "B o C restano possibili"
-    },
-    {
-     "d": "Passo più lento e più attento"
-    },
-    {
-     "d": "Severità minore, non assente"
-    }
-   ]
-  }
+  "ref": "Prova tu",
+  "titolo": "Prova tu: E · Spogliatoio della piscina, a piedi nudi",
+  "intro": "Scegli la classe antiscivolo minima (DIN 51130, DIN 51097). Il D.M. 236/89 chiede un attrito dinamico di almeno 0,40.",
+  "campi": [
+   {
+    "h": "E · Spogliatoio della piscina, a piedi nudi",
+    "tipo": "scelta",
+    "opzioni": [
+     "R9",
+     "R10",
+     "R11",
+     "R12",
+     "R13",
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "giuste": [
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "spiega": "Spogliatoi: classe A, il minimo a piedi nudi."
+   }
+  ]
  },
  {
   "id": "fadpia01_m12_s017",
@@ -466,12 +488,28 @@
  },
  {
   "id": "fadpia01_m12_s019",
-  "layout": "definizione",
+  "layout": "esercizio",
   "kicker": "Caso F",
-  "titolo": "La classe PEI nel traffico intenso",
-  "eyebrow": "",
-  "definizione": "Indice di resistenza all'usura superficiale del gres smaltato. Nel caso, la soglia pratica sale a PEI quattro o cinque; non misura la scivolosità e non sostituisce R, A-B-C o attrito dinamico.",
-  "punti": []
+  "ref": "Prova tu",
+  "titolo": "Prova tu: F · Gres smaltato in un centro commerciale",
+  "intro": "Scegli la classe antiscivolo minima (DIN 51130, DIN 51097). Il D.M. 236/89 chiede un attrito dinamico di almeno 0,40.",
+  "campi": [
+   {
+    "h": "F · Gres smaltato in un centro commerciale",
+    "d": "Classe PEI minima",
+    "tipo": "scelta",
+    "opzioni": [
+     "PEI 1",
+     "PEI 2",
+     "PEI 3",
+     "PEI 4–5"
+    ],
+    "giuste": [
+     "PEI 4–5"
+    ],
+    "spiega": "Traffico intenso: PEI 4 o 5."
+   }
+  ]
  },
  {
   "id": "fadpia01_m12_s020",

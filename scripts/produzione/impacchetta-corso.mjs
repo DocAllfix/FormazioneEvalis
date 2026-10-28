@@ -94,7 +94,8 @@ ${pulito ? "" : ` .stage>section{margin-left:380px!important;width:1280px!import
  function show(n){S[i].classList.remove('on');i=Math.max(0,Math.min(S.length-1,n));S[i].classList.add('on');
    cnt.textContent=(i+1)+' / '+S.length;prev.disabled=i===0;next.disabled=i===S.length-1;fit();}
  prev.onclick=()=>show(i-1);next.onclick=()=>show(i+1);
- addEventListener('keydown',e=>{if(e.key==='ArrowRight')show(i+1);if(e.key==='ArrowLeft')show(i-1);});
+ addEventListener('keydown',e=>{if(/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName))return; // frecce nelle caselle delle slide interattive
+   if(e.key==='ArrowRight')show(i+1);if(e.key==='ArrowLeft')show(i-1);});
  addEventListener('resize',fit);
  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>show(0));
  show(0);

@@ -231,26 +231,30 @@
  },
  {
   "id": "fadpia01_m13_s009",
-  "layout": "piramide",
-  "kicker": "Responsabilità del posatore",
-  "titolo": "Responsabilità professionale prima di dire sì",
-  "intro": "Dire sì o dire non ancora è parte del mestiere. La forza professionale non sta nella fretta né nel conflitto, ma in una catena solida di osservazione, verbalizzazione, comunicazione e scelta motivata.",
-  "livelli": [
+  "layout": "esercizio",
+  "kicker": "Sequenza operativa",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: quale attività viene adesso?",
+  "intro": "Hai concluso: verifica e verbalizzazione del supporto. Scegli l'attività che viene subito dopo nella sequenza.",
+  "campi": [
    {
-    "h": "Scelta responsabile",
-    "d": "Partire o fermarsi con motivazione tecnica"
-   },
-   {
-    "h": "Comunicazione ferma",
-    "d": "Fatti, zona, conseguenze, decisione operativa"
-   },
-   {
-    "h": "Verbalizzazione chiara",
-    "d": "Traccia condivisibile e difendibile"
-   },
-   {
-    "h": "Osservazione iniziale",
-    "d": "Rilevare criticità prima di accettare il fondo"
+    "h": "L'attività successiva",
+    "tipo": "scelta",
+    "opzioni": [
+     "Verifica e verbalizzazione del supporto",
+     "Tracciamento e squadratura, studio dei tagli",
+     "Preparazione dell'adesivo (dosaggio dell'acqua, riposo, rimescolatura)",
+     "Stesura dell'adesivo con spatola dentata (e doppia spalmatura)",
+     "Posa con distanziatori e livellatori, battitura, controllo della bagnatura",
+     "Pulizia delle fughe fresche dall'adesivo in eccesso",
+     "Stuccatura delle fughe (dopo 24 h) e pulizia con spugna",
+     "Pulizia finale, sigillatura dei giunti elastici, protezione"
+    ],
+    "giuste": [
+     "Tracciamento e squadratura, studio dei tagli"
+    ],
+    "errore": "non è l'attività che viene subito dopo.",
+    "spiega": "Subito dopo viene: tracciamento e squadratura, studio dei tagli."
    }
   ]
  },
@@ -438,22 +442,30 @@
  },
  {
   "id": "fadpia01_m13_s016",
-  "layout": "cards",
-  "kicker": "Errori tipici",
-  "titolo": "I tre errori del tracciamento",
-  "intro": "Sembrano scorciatoie che fanno guadagnare tempo all’inizio. In realtà spostano il problema sulla posa, moltiplicano le correzioni e rendono più difficile anche spiegare le scelte al cliente.",
-  "cards": [
+  "layout": "esercizio",
+  "kicker": "Sequenza operativa",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: quale attività viene adesso?",
+  "intro": "Hai concluso: tracciamento e squadratura, studio dei tagli. Scegli l'attività che viene subito dopo nella sequenza.",
+  "campi": [
    {
-    "h": "Asse non deciso",
-    "d": "La posa reagisce agli imprevisti invece di guidarli"
-   },
-   {
-    "h": "Pareti prese per buone",
-    "d": "Il loro difetto entra nella griglia delle fughe"
-   },
-   {
-    "h": "Tagli pensati troppo tardi",
-    "d": "Si tenta di recuperare stringendo o aprendo le fughe"
+    "h": "L'attività successiva",
+    "tipo": "scelta",
+    "opzioni": [
+     "Verifica e verbalizzazione del supporto",
+     "Tracciamento e squadratura, studio dei tagli",
+     "Preparazione dell'adesivo (dosaggio dell'acqua, riposo, rimescolatura)",
+     "Stesura dell'adesivo con spatola dentata (e doppia spalmatura)",
+     "Posa con distanziatori e livellatori, battitura, controllo della bagnatura",
+     "Pulizia delle fughe fresche dall'adesivo in eccesso",
+     "Stuccatura delle fughe (dopo 24 h) e pulizia con spugna",
+     "Pulizia finale, sigillatura dei giunti elastici, protezione"
+    ],
+    "giuste": [
+     "Preparazione dell'adesivo (dosaggio dell'acqua, riposo, rimescolatura)"
+    ],
+    "errore": "non è l'attività che viene subito dopo.",
+    "spiega": "Subito dopo viene: preparazione dell'adesivo (dosaggio dell'acqua, riposo, rimescolatura)."
    }
   ]
  },
@@ -585,49 +597,30 @@
  },
  {
   "id": "fadpia01_m13_s022",
-  "layout": "organigramma",
-  "kicker": "Transizione alla stesura",
-  "titolo": "Dal secchio a un'area pronta",
-  "intro": "Tra secchio e stesura c'è un passaggio decisivo: predisporre il piano di lavoro perché l'adesivo entri su un'area già leggibile, ordinata e davvero governabile.",
-  "radice": {
-   "h": "Piano di lavoro pronto",
-   "d": "La qualità dell'impasto diventa regolarità di stesura solo se l'area immediata è già libera, chiara e utilizzabile senza esitazioni."
-  },
-  "rami": [
+  "layout": "esercizio",
+  "kicker": "Sequenza operativa",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: quale attività viene adesso?",
+  "intro": "Hai concluso: preparazione dell'adesivo (dosaggio dell'acqua, riposo, rimescolatura). Scegli l'attività che viene subito dopo nella sequenza.",
+  "campi": [
    {
-    "h": "Area verificata",
-    "d": "La partenza non deve fermarsi",
-    "voci": [
-     "Superficie già controllata",
-     "Riferimenti leggibili",
-     "Percorso mentale definito"
-    ]
-   },
-   {
-    "h": "Ritualità utile",
-    "d": "Sequenza ordinata che riduce imprevisti",
-    "voci": [
-     "Controllo linea dominante",
-     "Strumenti davvero necessari",
-     "Intralci rimossi"
-    ]
-   },
-   {
-    "h": "Porzione governabile",
-    "d": "Stendi solo ciò che puoi guidare",
-    "voci": [
-     "Partenze delicate",
-     "Soglie e rientranze",
-     "Cambi di geometria"
-    ]
-   },
-   {
-    "h": "Ordine operativo",
-    "d": "Meno caos, più attenzione sul letto",
-    "voci": [
-     "Stress più basso",
-     "Movimento più fluido"
-    ]
+    "h": "L'attività successiva",
+    "tipo": "scelta",
+    "opzioni": [
+     "Verifica e verbalizzazione del supporto",
+     "Tracciamento e squadratura, studio dei tagli",
+     "Preparazione dell'adesivo (dosaggio dell'acqua, riposo, rimescolatura)",
+     "Stesura dell'adesivo con spatola dentata (e doppia spalmatura)",
+     "Posa con distanziatori e livellatori, battitura, controllo della bagnatura",
+     "Pulizia delle fughe fresche dall'adesivo in eccesso",
+     "Stuccatura delle fughe (dopo 24 h) e pulizia con spugna",
+     "Pulizia finale, sigillatura dei giunti elastici, protezione"
+    ],
+    "giuste": [
+     "Stesura dell'adesivo con spatola dentata (e doppia spalmatura)"
+    ],
+    "errore": "non è l'attività che viene subito dopo.",
+    "spiega": "Subito dopo viene: stesura dell'adesivo con spatola dentata (e doppia spalmatura)."
    }
   ]
  },
@@ -771,26 +764,30 @@
  },
  {
   "id": "fadpia01_m13_s029",
-  "layout": "cards",
-  "kicker": "Errori ricorrenti",
-  "titolo": "Quattro errori che preparano i difetti",
-  "intro": "La posa raramente peggiora all'improvviso: spesso eredita problemi già costruiti nella stesura. Collegare errore e conseguenza aiuta a interrompere la catena prima dell'appoggio del pezzo.",
-  "cards": [
+  "layout": "esercizio",
+  "kicker": "Sequenza operativa",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: quale attività viene adesso?",
+  "intro": "Hai concluso: stesura dell'adesivo con spatola dentata (e doppia spalmatura). Scegli l'attività che viene subito dopo nella sequenza.",
+  "campi": [
    {
-    "h": "Gesti discontinui",
-    "d": "Letto irregolare, più compensazioni in posa"
-   },
-   {
-    "h": "Campo troppo aperto",
-    "d": "Fretta, meno controlli, precisione in calo"
-   },
-   {
-    "h": "Doppia spalmatura come rimedio",
-    "d": "Più complessità, non più ordine"
-   },
-   {
-    "h": "Stesura vissuta come fase chiusa",
-    "d": "Il disordine riemerge in ogni gesto successivo"
+    "h": "L'attività successiva",
+    "tipo": "scelta",
+    "opzioni": [
+     "Verifica e verbalizzazione del supporto",
+     "Tracciamento e squadratura, studio dei tagli",
+     "Preparazione dell'adesivo (dosaggio dell'acqua, riposo, rimescolatura)",
+     "Stesura dell'adesivo con spatola dentata (e doppia spalmatura)",
+     "Posa con distanziatori e livellatori, battitura, controllo della bagnatura",
+     "Pulizia delle fughe fresche dall'adesivo in eccesso",
+     "Stuccatura delle fughe (dopo 24 h) e pulizia con spugna",
+     "Pulizia finale, sigillatura dei giunti elastici, protezione"
+    ],
+    "giuste": [
+     "Posa con distanziatori e livellatori, battitura, controllo della bagnatura"
+    ],
+    "errore": "non è l'attività che viene subito dopo.",
+    "spiega": "Subito dopo viene: posa con distanziatori e livellatori, battitura, controllo della bagnatura."
    }
   ]
  },
@@ -985,46 +982,32 @@
  },
  {
   "id": "fadpia01_m13_s037",
-  "layout": "confronto",
-  "kicker": "Riepilogo operativo",
-  "titolo": "Processo coerente prima di toccare le fughe",
-  "intro": "Prima di passare al sesto passaggio, il valore sta nel vedere posa, strumenti, battitura e controllo bagnatura come un blocco unico. Solo dopo ha senso verificare subito le fughe fresche.",
-  "a": {
-   "h": "Il quinto passaggio confermato",
-   "sub": "",
-   "punti": [
-    {
-     "d": "Letto di adesivo costruito bene"
-    },
-    {
-     "d": "Distanziatori coerenti con la fuga"
-    },
-    {
-     "d": "Livellatori usati solo dove servono"
-    },
-    {
-     "d": "Battitura come gesto di assestamento"
-    }
-   ]
-  },
-  "b": {
-   "h": "Errori e responsabilità immediata",
-   "sub": "",
-   "punti": [
-    {
-     "d": "Delegare troppo agli strumenti"
-    },
-    {
-     "d": "Usare la battitura per nascondere problemi"
-    },
-    {
-     "d": "Saltare la bagnatura perché sembra bello"
-    },
-    {
-     "d": "Lasciare adesivo nelle fughe fresche"
-    }
-   ]
-  }
+  "layout": "esercizio",
+  "kicker": "Sequenza operativa",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: quale attività viene adesso?",
+  "intro": "Hai concluso: posa con distanziatori e livellatori, battitura, controllo della bagnatura. Scegli l'attività che viene subito dopo nella sequenza.",
+  "campi": [
+   {
+    "h": "L'attività successiva",
+    "tipo": "scelta",
+    "opzioni": [
+     "Verifica e verbalizzazione del supporto",
+     "Tracciamento e squadratura, studio dei tagli",
+     "Preparazione dell'adesivo (dosaggio dell'acqua, riposo, rimescolatura)",
+     "Stesura dell'adesivo con spatola dentata (e doppia spalmatura)",
+     "Posa con distanziatori e livellatori, battitura, controllo della bagnatura",
+     "Pulizia delle fughe fresche dall'adesivo in eccesso",
+     "Stuccatura delle fughe (dopo 24 h) e pulizia con spugna",
+     "Pulizia finale, sigillatura dei giunti elastici, protezione"
+    ],
+    "giuste": [
+     "Pulizia delle fughe fresche dall'adesivo in eccesso"
+    ],
+    "errore": "non è l'attività che viene subito dopo.",
+    "spiega": "Subito dopo viene: pulizia delle fughe fresche dall'adesivo in eccesso."
+   }
+  ]
  },
  {
   "id": "fadpia01_m13_s038",
@@ -1085,41 +1068,30 @@
  },
  {
   "id": "fadpia01_m13_s041",
-  "layout": "organigramma",
-  "kicker": "Chiusura del sesto passaggio",
-  "titolo": "Chiudere il sesto passaggio con metodo",
-  "intro": "La pulizia delle fughe fresche va trattata come chiusura tecnica della posa appena eseguita. Se entra nel ritmo corretto, prepara la stuccatura e rafforza anche il controllo finale sulla superficie.",
-  "radice": {
-   "h": "Pulizia delle fughe fresche",
-   "d": "Chiusura tecnica della posa fresca"
-  },
-  "rami": [
+  "layout": "esercizio",
+  "kicker": "Sequenza operativa",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: quale attività viene adesso?",
+  "intro": "Hai concluso: pulizia delle fughe fresche dall'adesivo in eccesso. Scegli l'attività che viene subito dopo nella sequenza.",
+  "campi": [
    {
-    "h": "Difende tre risultati insieme",
-    "d": "Non basta la sola pulizia superficiale",
-    "voci": [
-     "Profondità utile disponibile",
-     "Continuità della fuga",
-     "Qualità della stuccatura futura"
-    ]
-   },
-   {
-    "h": "Va fatta nel momento giusto",
-    "d": "Non quando avanza tempo in cantiere",
-    "voci": []
-   },
-   {
-    "h": "Rafforza il controllo finale",
-    "d": "Rivedi da vicino la porzione posata",
-    "voci": []
-   },
-   {
-    "h": "Evita due estremi opposti",
-    "d": "Leggerezza o aggressività nel gesto",
-    "voci": [
-     "Residui lasciati pensando al dopo",
-     "Pulizia troppo forte per paura dei residui"
-    ]
+    "h": "L'attività successiva",
+    "tipo": "scelta",
+    "opzioni": [
+     "Verifica e verbalizzazione del supporto",
+     "Tracciamento e squadratura, studio dei tagli",
+     "Preparazione dell'adesivo (dosaggio dell'acqua, riposo, rimescolatura)",
+     "Stesura dell'adesivo con spatola dentata (e doppia spalmatura)",
+     "Posa con distanziatori e livellatori, battitura, controllo della bagnatura",
+     "Pulizia delle fughe fresche dall'adesivo in eccesso",
+     "Stuccatura delle fughe (dopo 24 h) e pulizia con spugna",
+     "Pulizia finale, sigillatura dei giunti elastici, protezione"
+    ],
+    "giuste": [
+     "Stuccatura delle fughe (dopo 24 h) e pulizia con spugna"
+    ],
+    "errore": "non è l'attività che viene subito dopo.",
+    "spiega": "Subito dopo viene: stuccatura delle fughe (dopo 24 h) e pulizia con spugna."
    }
   ]
  },
@@ -1256,25 +1228,30 @@
  },
  {
   "id": "fadpia01_m13_s047",
-  "layout": "numeri",
-  "kicker": "Chiusura del passaggio 7",
-  "titolo": "Tre segnali di chiusura corretta",
-  "intro": "Prima della fase finale, la stuccatura va letta per esiti verificabili: continuità della fuga, superficie pulita il giusto e punti delicati coerenti con il resto.",
-  "numeri": [
+  "layout": "esercizio",
+  "kicker": "Sequenza operativa",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: quale attività viene adesso?",
+  "intro": "Hai concluso: stuccatura delle fughe (dopo 24 h) e pulizia con spugna. Scegli l'attività che viene subito dopo nella sequenza.",
+  "campi": [
    {
-    "n": "1",
-    "h": "Fuga uniforme, senza tratti più deboli",
-    "d": ""
-   },
-   {
-    "n": "2",
-    "h": "Superficie senza residui diffusi",
-    "d": ""
-   },
-   {
-    "n": "3",
-    "h": "Soglie e spigoli coerenti col resto",
-    "d": ""
+    "h": "L'attività successiva",
+    "tipo": "scelta",
+    "opzioni": [
+     "Verifica e verbalizzazione del supporto",
+     "Tracciamento e squadratura, studio dei tagli",
+     "Preparazione dell'adesivo (dosaggio dell'acqua, riposo, rimescolatura)",
+     "Stesura dell'adesivo con spatola dentata (e doppia spalmatura)",
+     "Posa con distanziatori e livellatori, battitura, controllo della bagnatura",
+     "Pulizia delle fughe fresche dall'adesivo in eccesso",
+     "Stuccatura delle fughe (dopo 24 h) e pulizia con spugna",
+     "Pulizia finale, sigillatura dei giunti elastici, protezione"
+    ],
+    "giuste": [
+     "Pulizia finale, sigillatura dei giunti elastici, protezione"
+    ],
+    "errore": "non è l'attività che viene subito dopo.",
+    "spiega": "Subito dopo viene: pulizia finale, sigillatura dei giunti elastici, protezione."
    }
   ]
  },

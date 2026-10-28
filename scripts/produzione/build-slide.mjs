@@ -643,7 +643,8 @@ const LAYOUTS = {
     // righe riservate all'esito: quante ne servono al messaggio più lungo della slide (stima prudente
     // dei caratteri per riga; _prova-interattive.mjs verifica che l'altezza non cambi con nessun messaggio)
     const lungo = Math.max(...s.campi.map((x) => Math.max(("Da rivedere: " + (x.errore ?? x.spiega)).length, x.spiega.length)));
-    const righeEsito = Math.ceil(lungo / (col === 1 ? 40 : 74));
+    const singola = col !== 1 && s.campi.length === 1; // prova su un solo caso: scheda a tutta larghezza
+    const righeEsito = Math.ceil(lungo / (col === 1 ? 40 : singola ? 150 : 74));
     const campo = (x, i) => {
       const attr = x.tipo === "scelta"
         ? `data-giuste="${escAttr(JSON.stringify(x.giuste))}"`
@@ -663,7 +664,7 @@ const LAYOUTS = {
     };
     const griglia = col === 1
       ? `<div>${s.campi.map(campo).join("")}</div>`
-      : `<div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px;">${s.campi.map(campo).join("")}</div>`;
+      : `<div style="display:grid; grid-template-columns:repeat(${singola ? 1 : 2},minmax(0,1fr)); gap:10px;">${s.campi.map(campo).join("")}</div>`;
     const bottone = (az, t, pieno) => `<button data-azione="${az}" type="button" style="font-family:${F.sans}; font-size:14px; font-weight:600; color:${pieno ? C.card : C.accent}; background:${pieno ? C.accent : "transparent"}; border:1px solid ${C.accent}; border-radius:8px; padding:7px 14px; cursor:pointer;">${t}</button>`;
     const guida = `<div style="display:flex; gap:10px; align-items:baseline; margin:0 0 12px; font-size:15px; color:${C.body}; ${CELLA}"><span style="font-family:${F.mono}; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:${C.card}; background:${C.accent}; padding:4px 9px; border-radius:5px; flex:0 0 auto;">Prova tu</span><span>Rispondi, poi premi «Controlla». Questa prova non conta per il checkpoint e puoi ripeterla quando vuoi.</span></div>`;
     const comandi = `<div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:12px;">${bottone("controlla", "Controlla", true)}${bottone("soluzione", "Mostra la soluzione")}${bottone("ricomincia", "Ricomincia")}<span data-riepilogo style="min-height:20px; font-family:${F.grot}; font-weight:600; font-size:15px; color:${C.ink};"></span></div>`;

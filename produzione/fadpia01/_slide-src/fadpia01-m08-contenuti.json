@@ -80,26 +80,30 @@
  },
  {
   "id": "fadpia01_m08_s004",
-  "layout": "cards",
+  "layout": "esercizio",
   "kicker": "Scenario A",
-  "titolo": "Quattro indizi favorevoli del primo caso",
-  "intro": "Il caso va letto per ciò che è: un contesto ordinato, stabile e senza criticità aggiuntive. Proprio per questo è utile per fissare bene la soglia minima corretta.",
-  "cards": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: A · Gres porcellanato 60×60",
+  "intro": "Per ogni scenario scegli la classe minima adeguata secondo la UNI EN 12004.",
+  "campi": [
    {
-    "h": "Materiale",
-    "d": "gres porcellanato"
-   },
-   {
-    "h": "Formato",
-    "d": "sessanta per sessanta, importante ma gestibile"
-   },
-   {
-    "h": "Posizione",
-    "d": "pavimento interno"
-   },
-   {
-    "h": "Supporto",
-    "d": "massetto cementizio stagionato"
+    "h": "A · Gres porcellanato 60×60",
+    "d": "Pavimento interno su massetto cementizio stagionato",
+    "tipo": "scelta",
+    "opzioni": [
+     "C1",
+     "C1 T",
+     "C2 TE",
+     "C2 S1 (TE)",
+     "C2 S2",
+     "D1 T"
+    ],
+    "giuste": [
+     "C2 TE",
+     "C2 S1 (TE)",
+     "C2 S2"
+    ],
+    "spiega": "Il gres vuole almeno C2: S1 e S2 vanno bene ma non servono."
    }
   ]
  },
@@ -196,26 +200,29 @@
  },
  {
   "id": "fadpia01_m08_s008",
-  "layout": "cards",
+  "layout": "esercizio",
   "kicker": "Scenario B",
-  "titolo": "Tre fattori che alzano la soglia",
-  "intro": "Nel secondo caso la prudenza non è economica ma tecnica: gli indizi si sommano e spostano il minimo richiesto verso una classe deformabile.",
-  "cards": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: B · Gres 120×120",
+  "intro": "Per ogni scenario scegli la classe minima adeguata secondo la UNI EN 12004.",
+  "campi": [
    {
-    "h": "Materiale",
-    "d": "gres porcellanato"
-   },
-   {
-    "h": "Formato",
-    "d": "centoventi per centoventi, grande formato"
-   },
-   {
-    "h": "Ambiente",
-    "d": "terrazza esterna esposta al sole"
-   },
-   {
-    "h": "Esito minimo",
-    "d": "C2 S1, con C2 S2 accettabile"
+    "h": "B · Gres 120×120",
+    "d": "Terrazza esterna esposta al sole",
+    "tipo": "scelta",
+    "opzioni": [
+     "C1",
+     "C1 T",
+     "C2 TE",
+     "C2 S1 (TE)",
+     "C2 S2",
+     "D1 T"
+    ],
+    "giuste": [
+     "C2 S1 (TE)",
+     "C2 S2"
+    ],
+    "spiega": "Esterno e grande formato: C2 deformabile S1, oppure S2."
    }
   ]
  },
@@ -325,28 +332,31 @@
  },
  {
   "id": "fadpia01_m08_s013",
-  "layout": "ciclo",
+  "layout": "esercizio",
   "kicker": "Scenario C",
-  "titolo": "Quattro segnali per leggere la parete bagno",
-  "intro": "Il cambio di scenario impone un cambio di registro. Qui non contano i riflessi dei casi severi, ma gli indizi reali del rivestimento verticale interno.",
-  "ciclo": false,
-  "centro": "Scenario C",
-  "nodi": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: C · Bicottura 20×20 (BIII)",
+  "intro": "Per ogni scenario scegli la classe minima adeguata secondo la UNI EN 12004.",
+  "campi": [
    {
-    "h": "Parete verticale",
-    "d": "Conta il controllo dello scivolamento"
-   },
-   {
-    "h": "Formato 20x20",
-    "d": "Non introduce criticità da grande formato"
-   },
-   {
-    "h": "Bagno interno",
-    "d": "Umidità d'esercizio, non scenario estremo"
-   },
-   {
-    "h": "Intonaco",
-    "d": "Supporto usuale da rivestimento"
+    "h": "C · Bicottura 20×20 (BIII)",
+    "d": "Parete di bagno su intonaco",
+    "tipo": "scelta",
+    "opzioni": [
+     "C1",
+     "C1 T",
+     "C2 TE",
+     "C2 S1 (TE)",
+     "C2 S2",
+     "D1 T"
+    ],
+    "giuste": [
+     "C1 T",
+     "C2 TE",
+     "C2 S1 (TE)",
+     "D1 T"
+    ],
+    "spiega": "Bicottura a parete: basta C1 T o D1 T, con l'opzione T."
    }
   ]
  },
@@ -419,26 +429,29 @@
  },
  {
   "id": "fadpia01_m08_s017",
-  "layout": "flusso",
+  "layout": "esercizio",
   "kicker": "Scenario D",
-  "titolo": "Dal radiante al minimo C2 S1",
-  "intro": "L'interno non basta più a definire un contesto tranquillo. Con il riscaldamento radiante il giudizio cambia, perché il sistema dovrà assorbire movimenti termici nel tempo.",
-  "passi": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: D · Gres 60×120",
+  "intro": "Per ogni scenario scegli la classe minima adeguata secondo la UNI EN 12004.",
+  "campi": [
    {
-    "h": "Interno, ma diverso",
-    "d": "Il radiante cambia la lettura del pavimento"
-   },
-   {
-    "h": "Formato 60x120",
-    "d": "Elemento sensibile e posa più esigente"
-   },
-   {
-    "h": "Cicli termici dal basso",
-    "d": "Riscaldamento e raffreddamento ricorrenti"
-   },
-   {
-    "h": "Esito minimo",
-    "d": "La soglia corretta sale a C2 S1"
+    "h": "D · Gres 60×120",
+    "d": "Pavimento con riscaldamento radiante",
+    "tipo": "scelta",
+    "opzioni": [
+     "C1",
+     "C1 T",
+     "C2 TE",
+     "C2 S1 (TE)",
+     "C2 S2",
+     "D1 T"
+    ],
+    "giuste": [
+     "C2 S1 (TE)",
+     "C2 S2"
+    ],
+    "spiega": "Radiante e formato 60×120: minimo C2 S1."
    }
   ]
  },
@@ -566,30 +579,28 @@
  },
  {
   "id": "fadpia01_m08_s022",
-  "layout": "numeri",
+  "layout": "esercizio",
   "kicker": "Scenario E",
-  "titolo": "Tre indizi portano subito a C2 S2",
-  "intro": "Qui la severità sale perché il caso somma tre fattori non neutri: estensione eccezionale, spessore ridotto e posa in sovrapposizione su un pavimento già esistente.",
-  "numeri": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: E · Lastra 120×240 da 6 mm",
+  "intro": "Per ogni scenario scegli la classe minima adeguata secondo la UNI EN 12004.",
+  "campi": [
    {
-    "n": "120×240",
-    "h": "Lastra di grandissimo formato",
-    "d": ""
-   },
-   {
-    "n": "6 mm",
-    "h": "Spessore ridotto, sensibilità maggiore",
-    "d": ""
-   },
-   {
-    "n": "Su esistente",
-    "h": "Supporto già rivestito, non neutro",
-    "d": ""
-   },
-   {
-    "n": "C2 S2",
-    "h": "Primo livello adeguato",
-    "d": ""
+    "h": "E · Lastra 120×240 da 6 mm",
+    "d": "Su pavimento esistente",
+    "tipo": "scelta",
+    "opzioni": [
+     "C1",
+     "C1 T",
+     "C2 TE",
+     "C2 S1 (TE)",
+     "C2 S2",
+     "D1 T"
+    ],
+    "giuste": [
+     "C2 S2"
+    ],
+    "spiega": "Lastra sottile su pavimento esistente: C2 S2."
    }
   ]
  },
@@ -689,34 +700,23 @@
  },
  {
   "id": "fadpia01_m08_s027",
-  "layout": "organigramma",
+  "layout": "esercizio",
   "kicker": "Tecnica di posa",
-  "titolo": "Doppia spalmatura e bagnatura cento per cento",
-  "intro": "Nei casi B, D ed E la classe scelta va applicata con una tecnica coerente: contatto pieno e continuo tra supporto, adesivo e rivestimento, senza vuoti significativi.",
-  "radice": {
-   "h": "Doppia spalmatura",
-   "d": "Negli scenari B, D ed E con bagnatura cento per cento"
-  },
-  "rami": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: F · Spalmatura per gli scenari B, D ed E",
+  "intro": "Per ogni scenario scegli la classe minima adeguata secondo la UNI EN 12004.",
+  "campi": [
    {
-    "h": "Sul supporto",
-    "d": "Adesivo steso sulla base",
-    "voci": []
-   },
-   {
-    "h": "Sul retro",
-    "d": "Adesivo steso anche sull'elemento ceramico",
-    "voci": []
-   },
-   {
-    "h": "Bagnatura 100%",
-    "d": "Copertura completa dell'interfaccia di adesione",
-    "voci": []
-   },
-   {
-    "h": "Coerenza tecnica",
-    "d": "Classe e stesura vanno decise insieme",
-    "voci": []
+    "h": "F · Spalmatura per gli scenari B, D ed E",
+    "tipo": "scelta",
+    "opzioni": [
+     "Singola spalmatura",
+     "Doppia spalmatura (bagnatura 100 %)"
+    ],
+    "giuste": [
+     "Doppia spalmatura (bagnatura 100 %)"
+    ],
+    "spiega": "Grandi formati, esterni e radiante: doppia spalmatura."
    }
   ]
  },

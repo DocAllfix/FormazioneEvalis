@@ -111,22 +111,28 @@
  },
  {
   "id": "fadpia01_m14_s005",
-  "layout": "cards",
+  "layout": "esercizio",
   "kicker": "Caso uno",
-  "titolo": "I tre indizi forti del caso uno",
-  "intro": "Prima ancora delle verifiche invasive, il quadro iniziale orienta già il ragionamento: formato ampio, suono cavo e rottura localizzata sotto carico convergono verso una perdita di appoggio.",
-  "cards": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Caso 1",
+  "intro": "Per ogni segnalazione individua la causa più probabile; nel caso 6 scegli l'azione corretta per il caso 1.",
+  "campi": [
    {
-    "h": "Ottanta per ottanta",
-    "d": "Il grande formato richiede sostegno continuo"
-   },
-   {
-    "h": "Suono a vuoto",
-    "d": "Indizio di contatto non pieno"
-   },
-   {
-    "h": "Rottura sotto mobile",
-    "d": "Debolezza meccanica emersa sotto carico"
+    "h": "Caso 1",
+    "d": "80×80 posato 6 mesi fa: piastrelle che suonano a vuoto, due rotte sotto un mobile.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Bagnatura insufficiente / adesivo con pelle",
+     "Umidità risalente / massetto non stagionato",
+     "Supporto non planare / assenza livellatori",
+     "Assenza di giunti di frazionamento",
+     "Eccesso d'acqua in stuccatura",
+     "Adesivo di classe insufficiente"
+    ],
+    "giuste": [
+     "Bagnatura insufficiente / adesivo con pelle"
+    ],
+    "spiega": "Suono a vuoto e rotture: vuoti sotto la piastrella."
    }
   ]
  },
@@ -282,22 +288,28 @@
  },
  {
   "id": "fadpia01_m14_s012",
-  "layout": "cards",
-  "kicker": "Caso 2",
-  "titolo": "I tre indizi del secondo caso",
-  "intro": "Il quadro non parla di sporco generico: bianco comparso dopo qualche settimana, sulle fughe e ai bordi, sopra un supporto troppo giovane per essere neutro.",
-  "cards": [
+  "layout": "esercizio",
+  "kicker": "Caso due",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Caso 2",
+  "intro": "Per ogni segnalazione individua la causa più probabile; nel caso 6 scegli l'azione corretta per il caso 1.",
+  "campi": [
    {
-    "h": "Comparsa differita",
-    "d": "Gli aloni emergono dopo tre settimane"
-   },
-   {
-    "h": "Deposito bianco",
-    "d": "Traccia visibile di acqua e sali"
-   },
-   {
-    "h": "Supporto giovane",
-    "d": "Posa eseguita su massetto di dieci giorni"
+    "h": "Caso 2",
+    "d": "Aloni bianchi su fughe e bordi dopo 3 settimane; massetto di 10 giorni.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Bagnatura insufficiente / adesivo con pelle",
+     "Umidità risalente / massetto non stagionato",
+     "Supporto non planare / assenza livellatori",
+     "Assenza di giunti di frazionamento",
+     "Eccesso d'acqua in stuccatura",
+     "Adesivo di classe insufficiente"
+    ],
+    "giuste": [
+     "Umidità risalente / massetto non stagionato"
+    ],
+    "spiega": "Efflorescenze: umidità, massetto non stagionato."
    }
   ]
  },
@@ -461,12 +473,30 @@
  },
  {
   "id": "fadpia01_m14_s019",
-  "layout": "evidenza",
-  "kicker": "Caso 3",
-  "titolo": "Tre segnali che orientano la diagnosi",
-  "eyebrow": "",
-  "testo": "Nel terzo caso il nome del difetto conta meno dei fatti osservabili: formato lungo, sfalsamento a metà e salto di quota alle teste spiegano perché il piano diventa decisivo.",
-  "dark": true
+  "layout": "esercizio",
+  "kicker": "Caso tre",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Caso 3",
+  "intro": "Per ogni segnalazione individua la causa più probabile; nel caso 6 scegli l'azione corretta per il caso 1.",
+  "campi": [
+   {
+    "h": "Caso 3",
+    "d": "Listoni 20×120 sfalsati al 50 %: dislivelli di 2 mm tra le teste.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Bagnatura insufficiente / adesivo con pelle",
+     "Umidità risalente / massetto non stagionato",
+     "Supporto non planare / assenza livellatori",
+     "Assenza di giunti di frazionamento",
+     "Eccesso d'acqua in stuccatura",
+     "Adesivo di classe insufficiente"
+    ],
+    "giuste": [
+     "Supporto non planare / assenza livellatori"
+    ],
+    "spiega": "Lippage: sfalsamento a metà sui listoni e niente livellatori."
+   }
+  ]
  },
  {
   "id": "fadpia01_m14_s020",
@@ -621,26 +651,28 @@
  },
  {
   "id": "fadpia01_m14_s026",
-  "layout": "cards",
-  "kicker": "Caso 4",
-  "titolo": "I segnali di una superficie troppo continua",
-  "intro": "Nel quarto caso il difetto non è locale: un grande ambiente senza interruzioni efficaci accumula tensioni, le fughe si fessurano in linea e alcune piastrelle si sollevano con profilo a tenda.",
-  "cards": [
+  "layout": "esercizio",
+  "kicker": "Caso quattro",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Caso 4",
+  "intro": "Per ogni segnalazione individua la causa più probabile; nel caso 6 scegli l'azione corretta per il caso 1.",
+  "campi": [
    {
-    "h": "Ambiente unico",
-    "d": "Sessanta metri quadrati senza frazionamenti efficaci"
-   },
-   {
-    "h": "Fessure in linea",
-    "d": "Le fughe si aprono secondo un tracciato"
-   },
-   {
-    "h": "Sollevamento",
-    "d": "Alcune piastrelle si inarcano a tenda"
-   },
-   {
-    "h": "Lettura tecnica",
-    "d": "Movimenti trattenuti cercano sfogo"
+    "h": "Caso 4",
+    "d": "Salone di 60 m² senza interruzioni: fughe fessurate in linea, piastrelle sollevate a tenda.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Bagnatura insufficiente / adesivo con pelle",
+     "Umidità risalente / massetto non stagionato",
+     "Supporto non planare / assenza livellatori",
+     "Assenza di giunti di frazionamento",
+     "Eccesso d'acqua in stuccatura",
+     "Adesivo di classe insufficiente"
+    ],
+    "giuste": [
+     "Assenza di giunti di frazionamento"
+    ],
+    "spiega": "Fessure in linea e sollevamento: giunti mancanti."
    }
   ]
  },
@@ -794,25 +826,28 @@
  },
  {
   "id": "fadpia01_m14_s033",
-  "layout": "numeri",
+  "layout": "esercizio",
   "kicker": "Caso cinque",
-  "titolo": "I tre segnali del caso cinque",
-  "intro": "Il quinto caso si legge soprattutto con la cronologia: quando fuga friabile e tono disomogeneo compaiono subito dopo la consegna, il pensiero va prima alla lavorazione della stuccatura.",
-  "numeri": [
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Caso 5",
+  "intro": "Per ogni segnalazione individua la causa più probabile; nel caso 6 scegli l'azione corretta per il caso 1.",
+  "campi": [
    {
-    "n": "1",
-    "h": "Fuga sfarinata: coesione ridotta",
-    "d": ""
-   },
-   {
-    "n": "2",
-    "h": "Colore non uniforme: maturazione irregolare",
-    "d": ""
-   },
-   {
-    "n": "3",
-    "h": "Comparsa immediata: pista esecutiva",
-    "d": ""
+    "h": "Caso 5",
+    "d": "Fughe sfarinate e di colore non uniforme subito dopo la consegna.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Bagnatura insufficiente / adesivo con pelle",
+     "Umidità risalente / massetto non stagionato",
+     "Supporto non planare / assenza livellatori",
+     "Assenza di giunti di frazionamento",
+     "Eccesso d'acqua in stuccatura",
+     "Adesivo di classe insufficiente"
+    ],
+    "giuste": [
+     "Eccesso d'acqua in stuccatura"
+    ],
+    "spiega": "Fughe sfarinate: troppa acqua in stuccatura."
    }
   ]
  },
@@ -943,38 +978,24 @@
  },
  {
   "id": "fadpia01_m14_s039",
-  "layout": "organigramma",
-  "kicker": "Caso 6",
-  "titolo": "Perché le riparazioni apparenti non bastano",
-  "intro": "Nel caso di lastre rotte con suono a vuoto, l'intervento corretto è quello che interrompe il difetto sotto la piastrella. Le scorciatoie rapide trattano il sintomo e lasciano attiva la causa.",
-  "radice": {
-   "h": "Causa da correggere",
-   "d": "Vuoti sotto la piastrella"
-  },
-  "rami": [
+  "layout": "esercizio",
+  "kicker": "Caso sei",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Caso 6 · Azione corretta nel caso 1",
+  "intro": "Per ogni segnalazione individua la causa più probabile; nel caso 6 scegli l'azione corretta per il caso 1.",
+  "campi": [
    {
-    "h": "Sostituire solo il rotto",
-    "d": "Ripristino intuitivo, affidabilità incompleta",
-    "voci": [
-     "Le lastre cave restano",
-     "Il difetto può riapparire"
-    ]
-   },
-   {
-    "h": "Aspettare il prossimo danno",
-    "d": "Il suono cavo ha già valore meccanico",
-    "voci": [
-     "Ci sono già rotture sotto carico",
-     "La zona resta debole"
-    ]
-   },
-   {
-    "h": "Mascherare la lesione",
-    "d": "La superficie non corregge il sottofondo",
-    "voci": [
-     "La causa è nel contatto",
-     "L'estetica non restituisce sostegno"
-    ]
+    "h": "Caso 6 · Azione corretta nel caso 1",
+    "tipo": "scelta",
+    "opzioni": [
+     "Iniezione di resina sotto le piastrelle",
+     "Rimozione e riposa con doppia spalmatura e C2 S1",
+     "Sostituzione del solo fugante"
+    ],
+    "giuste": [
+     "Rimozione e riposa con doppia spalmatura e C2 S1"
+    ],
+    "spiega": "La riposa corretta è l'unica soluzione durevole."
    }
   ]
  },
