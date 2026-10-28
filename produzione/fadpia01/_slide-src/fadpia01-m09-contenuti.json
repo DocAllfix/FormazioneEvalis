@@ -1,0 +1,1089 @@
+[
+ {
+  "id": "fadpia01_m09_s001",
+  "layout": "apertura",
+  "kicker": "Caso pratico",
+  "titolo": "Stima materiali per il soggiorno Le Querce",
+  "corsoLabel": "Piastrellista · UNI 11493-1:2025",
+  "eyebrow": "Caso pratico",
+  "sottotitolo": "Un caso realistico di cantiere: dai dati tecnici del soggiorno alla previsione dei materiali da ordinare, movimentare e controllare, con attenzione a consumi unitari, confezioni acquistabili e margine di sicurezza.",
+  "agenda": [
+   "Dati del caso",
+   "Geometria del giunto",
+   "Tecnica di posa",
+   "Traduzione in ordine",
+   "Margine operativo"
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s002",
+  "layout": "cards",
+  "kicker": "Dati di partenza",
+  "titolo": "I dati contano in modo diverso",
+  "intro": "Prima dell'ordine, il professionista separa ciò che incide sul fugante, ciò che pesa sull'adesivo e ciò che riguarda la logistica. La superficie da sola non basta a stimare correttamente il fabbisogno.",
+  "cards": [
+   {
+    "h": "Superficie",
+    "d": "45 m², base di tutti i totali"
+   },
+   {
+    "h": "Formato e giunto",
+    "d": "60×60, spessore 10 mm, fuga 3 mm"
+   },
+   {
+    "h": "Posa",
+    "d": "Spatola 10 mm, doppia spalmatura"
+   },
+   {
+    "h": "Confezione",
+    "d": "Sacchi da 25 kg, ordine per eccesso"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s003",
+  "layout": "ciclo",
+  "kicker": "Impostazione",
+  "titolo": "Tre famiglie di decisioni da separare",
+  "intro": "Una stima affidabile nasce da un piano di calcolo pulito: stessi dati di rilievo, tre logiche diverse. Separare i livelli evita errori precisi nei numeri ma sbagliati nelle ipotesi.",
+  "ciclo": false,
+  "centro": "Piano di calcolo",
+  "nodi": [
+   {
+    "h": "Fugante",
+    "d": "Volume dei giunti: formato, fuga, spessore"
+   },
+   {
+    "h": "Adesivo",
+    "d": "Consumo superficiale: spatola e doppia spalmatura"
+   },
+   {
+    "h": "Scorta piastrelle",
+    "d": "Tagli, sfridi, riserva e continuità di lotto"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s004",
+  "layout": "flusso",
+  "kicker": "Formula del fugante",
+  "titolo": "La formula descrive un ragionamento fisico",
+  "intro": "Il consumo per metro quadrato non nasce da una sigla astratta: la formula trasforma geometria della piastrella, sezione del giunto e coefficiente di conversione in un fabbisogno leggibile in cantiere.",
+  "passi": [
+   {
+    "h": "Somma dei lati",
+    "d": "Misura lo sviluppo lineare delle fughe"
+   },
+   {
+    "h": "Rapporto con l'area",
+    "d": "Lati sopra, prodotto dei lati sotto"
+   },
+   {
+    "h": "Sezione del giunto",
+    "d": "Spessore e larghezza fanno crescere il volume"
+   },
+   {
+    "h": "Conversione pratica",
+    "d": "Il coefficiente porta il risultato in kg/m²"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s005",
+  "layout": "confronto",
+  "kicker": "A e B nella formula",
+  "titolo": "Il formato cambia davvero il consumo",
+  "intro": "I lati della piastrella non sono un dato anagrafico: definiscono quanta fuga corre in ogni metro quadrato. Per questo il consumo del fugante cambia anche a superficie totale invariata.",
+  "a": {
+   "h": "Formato 60×60",
+   "sub": "",
+   "punti": [
+    {
+     "d": "600 mm × 600 mm"
+    },
+    {
+     "d": "Molta superficie per piastrella"
+    },
+    {
+     "d": "Poche linee di giunto"
+    },
+    {
+     "d": "Consumo più contenuto"
+    }
+   ]
+  },
+  "b": {
+   "h": "Formati piccoli o allungati",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Più elementi nello stesso metro quadrato"
+    },
+    {
+     "d": "Bordo complessivo molto maggiore"
+    },
+    {
+     "d": "Reticolo di fughe più fitto"
+    },
+    {
+     "d": "Consumo di fugante più alto"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m09_s006",
+  "layout": "split",
+  "kicker": "Sezione del giunto",
+  "titolo": "Spessore e fuga fanno volume",
+  "lead": "Nel giunto da riempire contano due misure lineari che agiscono in modo diretto: profondità e larghezza. A parità di formato, basta aumentare uno dei due valori per far salire il consumo.",
+  "punti": [
+   {
+    "h": "Spessore 10 mm",
+    "d": "Definisce l'altezza utile del giunto"
+   },
+   {
+    "h": "Fuga 3 mm",
+    "d": "Definisce l'apertura da colmare"
+   },
+   {
+    "h": "Effetto sul consumo",
+    "d": "I due valori si moltiplicano tra loro"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s007",
+  "layout": "definizione",
+  "kicker": "Termine chiave",
+  "titolo": "Il coefficiente 1,6 traduce la geometria",
+  "eyebrow": "",
+  "definizione": "Valore di riferimento che converte il ragionamento geometrico in consumo espresso in chilogrammi per metro quadrato.",
+  "punti": []
+ },
+ {
+  "id": "fadpia01_m09_s008",
+  "layout": "tabella",
+  "kicker": "Controlli prima del conto",
+  "titolo": "Unità coerenti e passaggi in sequenza",
+  "cols": [
+   "Controllo",
+   "Cosa fare",
+   "Segnale d'errore"
+  ],
+  "righe": [
+   [
+    "Unità di misura",
+    "Usare i millimetri per tutte le grandezze",
+    "Centimetri mescolati ai millimetri"
+   ],
+   [
+    "Ordine dei passaggi",
+    "Somma, prodotto, rapporto, poi moltiplicazioni",
+    "Conto compresso in un solo gesto"
+   ],
+   [
+    "Plausibilità",
+    "Attendersi un consumo contenuto con 60×60",
+    "Valore alto come per piccoli formati"
+   ],
+   [
+    "Ricontrollo",
+    "Verificare subito dati e conversioni",
+    "Numero apparentemente corretto ma incoerente"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s009",
+  "layout": "numeri",
+  "kicker": "Primo calcolo svolto",
+  "titolo": "I quattro numeri chiave del fugante",
+  "intro": "Sostituendo i dati del soggiorno nella formula, il conto procede in modo lineare: prima i due passaggi geometrici, poi il coefficiente finale, fino al consumo unitario da usare per il totale del locale.",
+  "numeri": [
+   {
+    "n": "1200",
+    "h": "Somma dei lati: 600 + 600",
+    "d": ""
+   },
+   {
+    "n": "360000",
+    "h": "Prodotto dei lati: 600 × 600",
+    "d": ""
+   },
+   {
+    "n": "1,6",
+    "h": "Coefficiente finale di conversione",
+    "d": ""
+   },
+   {
+    "n": "0,16 kg/m²",
+    "h": "Consumo unitario di fugante",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s010",
+  "layout": "evidenza",
+  "kicker": "Consumo unitario",
+  "titolo": "Zero virgola sedici è il dato da riusare",
+  "eyebrow": "",
+  "testo": "Il risultato non è ancora l'ordine da fare: è il coefficiente operativo che rende confrontabili varianti, locali simili e scelte di cantiere con un metodo verificabile.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m09_s011",
+  "layout": "cards",
+  "kicker": "Lettura operativa",
+  "titolo": "Zero virgola sedici diventa guida operativa",
+  "intro": "Il consumo unitario corretto vale solo se viene interpretato bene: da questo passaggio dipendono approvvigionamento, tempi, controllo economico e qualità del coordinamento in cantiere.",
+  "cards": [
+   {
+    "h": "Riferimento medio",
+    "d": "Zero virgola sedici kg/m² nelle condizioni date"
+   },
+   {
+    "h": "Non dose per pezzo",
+    "d": "La posa reale mantiene piccole variazioni"
+   },
+   {
+    "h": "Strumento di coordinamento",
+    "d": "Proietta il fabbisogno sulle superfici eseguite o residue"
+   },
+   {
+    "h": "Presidio economico",
+    "d": "Evita avanzi, urgenze e logistica disordinata"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s012",
+  "layout": "organigramma",
+  "kicker": "Verifica del dato",
+  "titolo": "Quattro controlli prima del fabbisogno totale",
+  "intro": "Prima di usare il consumo unitario, conviene fermarsi e validarlo: l'errore iniziale può restare nascosto nei passaggi successivi e sembrare perfino ordinato.",
+  "radice": {
+   "h": "Zero virgola sedici da confermare",
+   "d": "Il primo numero corretto va verificato prima del totale"
+  },
+  "rami": [
+   {
+    "h": "1. Unità",
+    "d": "Tutte le misure lineari rese omogenee",
+    "voci": []
+   },
+   {
+    "h": "2. Formato",
+    "d": "Calcola il sessanta per sessanta realmente posato",
+    "voci": []
+   },
+   {
+    "h": "3. Fuga",
+    "d": "Tre millimetri incidono direttamente sul consumo",
+    "voci": []
+   },
+   {
+    "h": "4. Spessore",
+    "d": "Dieci millimetri non vanno sottovalutati",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s013",
+  "layout": "timeline",
+  "kicker": "Calcolo due",
+  "titolo": "Da zero virgola sedici a sette virgola due",
+  "intro": "Il fabbisogno totale nasce da un passaggio lineare ma decisivo: consumo unitario, superficie netta, moltiplicazione e lettura coerente del risultato finale per il locale completo.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Dato base",
+    "d": "Zero virgola sedici kg/m²"
+   },
+   {
+    "t": "02",
+    "h": "Superficie netta",
+    "d": "Quarantacinque metri quadrati di soggiorno"
+   },
+   {
+    "t": "03",
+    "h": "Operazione",
+    "d": "Zero virgola sedici per quarantacinque"
+   },
+   {
+    "t": "04",
+    "h": "Esito",
+    "d": "Sette virgola due chilogrammi totali"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s014",
+  "layout": "piramide",
+  "kicker": "Lettura del totale",
+  "titolo": "Come leggere bene i sette virgola due",
+  "intro": "Il totale è corretto, ma va tradotto con prudenza: serve come base tecnica di stima e programmazione, non come promessa di consumo identico al decimo in cantiere.",
+  "livelli": [
+   {
+    "h": "7,2 kg",
+    "d": "Fabbisogno teorico del soggiorno"
+   },
+   {
+    "h": "Base di ordine",
+    "d": "Stima fondata, non promessa rigida"
+   },
+   {
+    "h": "Scostamenti fisiologici",
+    "d": "Miscelazione, residui, irregolarità dei giunti"
+   },
+   {
+    "h": "Gestione di lavoro",
+    "d": "Serve a preparazione, fasi e controllo operativo"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s015",
+  "layout": "ciclo",
+  "kicker": "Metodo",
+  "titolo": "Il metodo del fugante da rendere automatico",
+  "intro": "Prima di passare all'adesivo, conviene fissare la sequenza professionale: costruire il dato unitario, scalarlo sulla superficie e riusarlo quando le condizioni restano davvero identiche.",
+  "ciclo": false,
+  "centro": "Metodo trasferibile",
+  "nodi": [
+   {
+    "h": "Passaggio 1",
+    "d": "Calcolo del consumo unitario"
+   },
+   {
+    "h": "Passaggio 2",
+    "d": "Applicazione alla superficie netta"
+   },
+   {
+    "h": "Scalabilità",
+    "d": "Stesso valore su ambienti equivalenti"
+   },
+   {
+    "h": "Lettura tecnica",
+    "d": "Conta la geometria dei giunti, non solo i metri quadrati"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s016",
+  "layout": "barre",
+  "kicker": "Calcolo tre",
+  "titolo": "L'adesivo si stima con una logica diversa",
+  "intro": "Con l'adesivo non conta la rete delle fughe, ma la tecnica di posa: letto sul supporto e doppia spalmatura costruiscono insieme il consumo unitario finale.",
+  "unita": "kg/m²",
+  "voci": [
+   {
+    "l": "Supporto, spatola 10 mm",
+    "v": 4.5
+   },
+   {
+    "l": "Retro, doppia spalmatura",
+    "v": 1.5
+   },
+   {
+    "l": "Consumo unitario finale",
+    "v": 6
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s017",
+  "layout": "cards",
+  "kicker": "Supporto",
+  "titolo": "La spatola da dieci vale quattro virgola cinque",
+  "intro": "Il primo contributo dell'adesivo nasce dalla dentatura: non è un numero astratto, ma l'effetto di una distribuzione precisa e coerente da mantenere anche in posa.",
+  "cards": [
+   {
+    "h": "Dentatura definita",
+    "d": "Crea cordoli regolari sul supporto"
+   },
+   {
+    "h": "Consumo di riferimento",
+    "d": "Quattro virgola cinque kg/m² sul supporto"
+   },
+   {
+    "h": "Coerenza esecutiva",
+    "d": "La tecnica stimata va rispettata in cantiere"
+   },
+   {
+    "h": "Funzione di controllo",
+    "d": "Scostamenti anomali segnalano metodo non allineato"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s018",
+  "layout": "ciambella",
+  "kicker": "Retro piastrella",
+  "titolo": "La doppia spalmatura porta il totale a sei",
+  "intro": "Il secondo apporto non è accessorio: aggiunge materiale misurabile, completa il consumo unitario e va considerato già in stima, ordine e qualità dell'incollaggio.",
+  "unita": "kg/m²",
+  "totale": {
+   "n": "6",
+   "eti": "Totale adesivo"
+  },
+  "voci": [
+   {
+    "l": "Supporto",
+    "v": 4.5
+   },
+   {
+    "l": "Retro piastrella",
+    "v": 1.5
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s019",
+  "layout": "tabella",
+  "kicker": "Calcolo tre",
+  "titolo": "Sei chilogrammi per metro quadrato spiegati",
+  "cols": [
+   "Componente",
+   "kg/m²",
+   "Origine"
+  ],
+  "righe": [
+   [
+    "Supporto con spatola 10 mm",
+    "4,5",
+    "stesura sul supporto"
+   ],
+   [
+    "Retro piastrella, doppia spalmatura",
+    "1,5",
+    "quota aggiuntiva"
+   ],
+   [
+    "Consumo unitario adesivo",
+    "6",
+    "somma dei due contributi"
+   ],
+   [
+    "Fugante 60x60",
+    "0,16",
+    "ordine di grandezza diverso"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s020",
+  "layout": "evidenza",
+  "kicker": "Calcolo tre",
+  "titolo": "Il valore unitario è già completo",
+  "eyebrow": "",
+  "testo": "Sei chilogrammi per metro quadrato non è un numero da ritoccare dopo. Se le condizioni restano quelle definite, il dato incorpora già metodo applicativo, pianificazione iniziale e base di controllo.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m09_s021",
+  "layout": "flusso",
+  "kicker": "Calcolo quattro",
+  "titolo": "Dal consumo unitario all’adesivo totale",
+  "intro": "Il totale dell’adesivo non si indovina: si ottiene portando il dato unitario dentro la superficie reale del soggiorno e verificando subito che il risultato resti plausibile.",
+  "passi": [
+   {
+    "h": "Consumo unitario",
+    "d": "6 kg/m²"
+   },
+   {
+    "h": "Superficie netta",
+    "d": "45 m² di soggiorno"
+   },
+   {
+    "h": "Fabbisogno tecnico",
+    "d": "270 kg di adesivo"
+   },
+   {
+    "h": "Verifica mentale",
+    "d": "40 m² = 240 kg, più 5 m² = 30 kg"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s022",
+  "layout": "confronto",
+  "kicker": "Calcolo quattro",
+  "titolo": "Come leggere i 270 chilogrammi",
+  "intro": "Duecentosettanta chilogrammi è una base tecnica, non una cifra da interpretare a sensazione. La sua utilità cresce quando separi la lettura corretta dagli usi impropri del dato.",
+  "a": {
+   "h": "Lettura corretta",
+   "sub": "",
+   "punti": [
+    {
+     "d": "base tecnica già completa"
+    },
+    {
+     "d": "riferimento per valutare gli scostamenti"
+    },
+    {
+     "d": "utile anche durante la posa"
+    },
+    {
+     "d": "tolleranza del 10% come prudenza"
+    }
+   ]
+  },
+  "b": {
+   "h": "Lettura scorretta",
+   "sub": "",
+   "punti": [
+    {
+     "d": "ritoccare il totale a sensazione"
+    },
+    {
+     "d": "affidarsi solo alle impressioni"
+    },
+    {
+     "d": "usare la tolleranza per coprire errori"
+    },
+    {
+     "d": "ignorare segnali di consumo anomalo"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m09_s023",
+  "layout": "numeri",
+  "kicker": "Calcolo cinque",
+  "titolo": "Dai chilogrammi ai sacchi ordinabili",
+  "intro": "La traduzione del fabbisogno tecnico in confezioni commerciali richiede un passaggio semplice ma decisivo: dividere per il formato del sacco e arrotondare sempre al primo intero sufficiente.",
+  "numeri": [
+   {
+    "n": "270 kg",
+    "h": "fabbisogno tecnico totale",
+    "d": ""
+   },
+   {
+    "n": "25 kg",
+    "h": "peso del sacco",
+    "d": ""
+   },
+   {
+    "n": "10,8",
+    "h": "sacchi teorici",
+    "d": ""
+   },
+   {
+    "n": "11",
+    "h": "ordine minimo sufficiente",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s024",
+  "layout": "split",
+  "kicker": "Calcolo cinque",
+  "titolo": "Undici sacchi non sono spreco",
+  "lead": "L’undicesimo sacco non crea una scorta arbitraria: assorbe soltanto la differenza inevitabile tra fabbisogno tecnico e confezione commerciale. Il riferimento corretto resta il minimo acquistabile che copre il lavoro.",
+  "punti": [
+   {
+    "h": "11 sacchi = 275 kg",
+    "d": "prima quantità intera sufficiente"
+   },
+   {
+    "h": "Eccedenza minima",
+    "d": "5 kg oltre i 270 necessari"
+   },
+   {
+    "h": "10 sacchi = 250 kg",
+    "d": "ordine sotto il fabbisogno tecnico"
+   },
+   {
+    "h": "Scopertura reale",
+    "d": "20 kg mancanti, non 5 eccedenti"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s025",
+  "layout": "organigramma",
+  "kicker": "Calcolo sei",
+  "titolo": "La scorta di piastrelle ha tre funzioni",
+  "intro": "La superficie netta del soggiorno non coincide con la quantità finale da ordinare. La scorta compresa tra cinque e dieci per cento protegge il lavoro oggi e le sostituzioni di domani.",
+  "radice": {
+   "h": "Scorta piastrelle 5%-10%",
+   "d": "oltre i 45 m² netti"
+  },
+  "rami": [
+   {
+    "h": "Tagli",
+    "d": "copre le lavorazioni ai bordi",
+    "voci": []
+   },
+   {
+    "h": "Sfridi",
+    "d": "assorbe i residui non riutilizzabili",
+    "voci": []
+   },
+   {
+    "h": "Sostituzioni future",
+    "d": "lascia pezzi compatibili per riparazioni",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s026",
+  "layout": "tabella",
+  "kicker": "Calcolo sei",
+  "titolo": "Il range applicato ai 45 metri quadrati",
+  "cols": [
+   "Base netta",
+   "Scorta",
+   "Ordine teorico"
+  ],
+  "righe": [
+   [
+    "45 m²",
+    "5% = 2,25 m²",
+    "47,25 m²"
+   ],
+   [
+    "45 m²",
+    "10% = 4,5 m²",
+    "49,5 m²"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s027",
+  "layout": "punti",
+  "kicker": "Calcolo sei",
+  "titolo": "Quattro criteri per scegliere la scorta",
+  "intro": "Tra il cinque e il dieci per cento non decide l’abitudine. Decide il caso concreto, letto con ordine: geometria, distribuzione dei pezzi, necessità future e facilità di eventuale riordino.",
+  "punti": [
+   {
+    "h": "Geometria del locale",
+    "d": "più rientranze e soglie, più scorta utile"
+   },
+   {
+    "h": "Distribuzione delle piastrelle",
+    "d": "tracciamenti diversi generano sfridi diversi"
+   },
+   {
+    "h": "Ricambi nel tempo",
+    "d": "pezzi conservati facilitano manutenzioni future"
+   },
+   {
+    "h": "Logistica del riordino",
+    "d": "se difficile, meglio salire nel range"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s028",
+  "layout": "calcolatore",
+  "kicker": "Simulatore",
+  "ref": "Prova tu",
+  "formula": "consumi",
+  "titolo": "Simulatore: cambia una variabile alla volta",
+  "intro": "Il caso di partenza è il soggiorno di Residenza Le Querce: 45 m² di gres 60×60."
+ },
+ {
+  "id": "fadpia01_m09_s029",
+  "layout": "barre",
+  "kicker": "Simulatore",
+  "titolo": "Fuga e spessore spostano il fugante",
+  "intro": "Sul caso base del soggiorno, due prove mostrano cause diverse dello stesso effetto: allargare la fuga aumenta la larghezza del giunto, aumentare lo spessore ne aumenta la profondità.",
+  "unita": " kg/m² di fugante",
+  "voci": [
+   {
+    "l": "Base 60×60, 10 mm, fuga 3 mm",
+    "v": 0.16
+   },
+   {
+    "l": "Fuga portata a 5 mm",
+    "v": 0.27
+   },
+   {
+    "l": "Spessore portato a 12 mm",
+    "v": 0.19
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s030",
+  "layout": "tabella",
+  "kicker": "Simulatore",
+  "titolo": "Stessa tecnica, nuovi totali operativi",
+  "cols": [
+   "Scenario",
+   "Fugante unitario",
+   "Fugante totale",
+   "Adesivo totale"
+  ],
+  "righe": [
+   [
+    "30 m²",
+    "0,16 kg/m²",
+    "4,8 kg",
+    "180 kg"
+   ],
+   [
+    "72 m²",
+    "0,16 kg/m²",
+    "11,52 kg",
+    "432 kg"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s031",
+  "layout": "flusso",
+  "kicker": "Simulatore",
+  "titolo": "La sequenza corretta quando cambia tutto",
+  "intro": "Quando si muovono insieme formato, spessore, fuga e superficie, il punto chiave non è rifare tutto alla cieca: è aggiornare ogni quantità nell'ordine giusto, senza trascinare basi vecchie.",
+  "passi": [
+   {
+    "h": "Prima il fugante unitario",
+    "d": "Ricalcolo con formato, spessore e fuga aggiornati"
+   },
+   {
+    "h": "Poi il totale del fugante",
+    "d": "Applicazione del nuovo unitario alla nuova superficie"
+   },
+   {
+    "h": "Per l'adesivo conta la tecnica",
+    "d": "Il formato non lo cambia automaticamente"
+   },
+   {
+    "h": "Alla fine l'ordine",
+    "d": "Totali, sacchi e scorta piastrelle"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s032",
+  "layout": "numeri",
+  "kicker": "Caso guidato 1",
+  "titolo": "Trenta per sessanta da nove millimetri",
+  "intro": "Nel soggiorno da 45 metri quadrati, il nuovo rivestimento 30×60 con spessore 9 millimetri e fuga 3 mostra che il reticolo dei giunti può pesare più della lieve riduzione di spessore.",
+  "numeri": [
+   {
+    "n": "45 m²",
+    "h": "superficie invariata del soggiorno",
+    "d": ""
+   },
+   {
+    "n": "900",
+    "h": "somma dei lati in millimetri",
+    "d": ""
+   },
+   {
+    "n": "180000",
+    "h": "prodotto dei lati in millimetri quadrati",
+    "d": ""
+   },
+   {
+    "n": "0,216 kg/m²",
+    "h": "nuovo consumo unitario di fugante",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s033",
+  "layout": "confronto",
+  "kicker": "Caso guidato 1",
+  "titolo": "Dal consumo unitario all'ordine del soggiorno",
+  "intro": "Con la stessa superficie e la stessa tecnica di posa, il nuovo formato modifica in modo netto il fugante ma non sposta il riferimento unitario dell'adesivo. Il confronto rende immediata la distinzione.",
+  "a": {
+   "h": "Fugante",
+   "sub": "",
+   "punti": [
+    {
+     "d": "0,216 kg/m² unitari"
+    },
+    {
+     "d": "45 m² di superficie"
+    },
+    {
+     "d": "Totale 9,72 kg"
+    },
+    {
+     "d": "Prima erano 7,2 kg"
+    }
+   ]
+  },
+  "b": {
+   "h": "Adesivo",
+   "sub": "",
+   "punti": [
+    {
+     "d": "6 kg/m² confermati"
+    },
+    {
+     "d": "45 m² invariati"
+    },
+    {
+     "d": "Totale 270 kg"
+    },
+    {
+     "d": "Ordine: 11 sacchi"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m09_s034",
+  "layout": "cards",
+  "kicker": "Caso guidato 2",
+  "titolo": "Bagno: fuga stretta, fugante più leggero",
+  "intro": "Nel bagno cambia il contesto ma non il metodo: pareti per 22 metri quadrati, stesso formato 30×60 da 9 millimetri, fuga ridotta a 2 millimetri e lettura puntuale dell'effetto sul fugante.",
+  "cards": [
+   {
+    "h": "Superficie netta",
+    "d": "22 m² di pareti da rivestire"
+   },
+   {
+    "h": "Formato e spessore",
+    "d": "30×60 da 9 mm"
+   },
+   {
+    "h": "Consumo unitario",
+    "d": "Fuga 2 mm: 0,144 kg/m²"
+   },
+   {
+    "h": "Totale tecnico",
+    "d": "3,168 kg di fugante"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s035",
+  "layout": "ciclo",
+  "kicker": "Caso guidato 2",
+  "titolo": "Bagno: adesivo, sacchi, scorta ragionata",
+  "intro": "Un ambiente piccolo non coincide con un ordine banale: il totale resta contenuto, ma tagli, nicchie e impianti rendono decisiva la scelta tra fabbisogno tecnico, confezione acquistabile e scorta.",
+  "ciclo": false,
+  "centro": "Bagno 22 m²",
+  "nodi": [
+   {
+    "h": "Adesivo tecnico",
+    "d": "132 kg con riferimento di 6 kg/m²"
+   },
+   {
+    "h": "Confezioni",
+    "d": "5,28 sacchi diventano 6"
+   },
+   {
+    "h": "Scorta minima",
+    "d": "5% pari a 1,1 m²"
+   },
+   {
+    "h": "Scorta alta",
+    "d": "10% pari a 2,2 m²"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s036",
+  "layout": "evidenza",
+  "kicker": "Caso guidato 3",
+  "titolo": "Terrazza: la fuga allarga il fabbisogno",
+  "eyebrow": "",
+  "testo": "La terrazza ha meno superficie del soggiorno, ma la fuga portata a 5 millimetri spinge il fugante in una fascia importante. È la dimostrazione pratica che i metri quadrati, da soli, non bastano.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m09_s037",
+  "layout": "numeri",
+  "kicker": "Caso guidato 3",
+  "titolo": "I quattro numeri chiave della terrazza",
+  "intro": "Nel caso della terrazza il calcolo si chiude unendo fabbisogno tecnico, traduzione in confezioni e scorta prudente: i valori contano, ma conta soprattutto la logica con cui vengono letti.",
+  "numeri": [
+   {
+    "n": "216 kg",
+    "h": "Adesivo totale tecnico su 36 m²",
+    "d": ""
+   },
+   {
+    "n": "9 sacchi",
+    "h": "Quantità minima acquistabile da 25 kg",
+    "d": ""
+   },
+   {
+    "n": "1,8–3,6 m²",
+    "h": "Scorta piastrelle nel range 5–10%",
+    "d": ""
+   },
+   {
+    "n": "10%",
+    "h": "Scelta spesso prudente con tagli e ostacoli",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s038",
+  "layout": "tabella",
+  "kicker": "Dal calcolo all'ordine",
+  "titolo": "Le tre regole di un ordine difendibile",
+  "cols": [
+   "Regola",
+   "Da indicare",
+   "Perché serve"
+  ],
+  "righe": [
+   [
+    "1",
+    "Fabbisogno tecnico e quantità commerciale",
+    "Ordine verificabile e acquistabile"
+   ],
+   [
+    "2",
+    "Superficie, formato, spessore, fuga, posa, consumi",
+    "Numero chiaro e giustificato"
+   ],
+   [
+    "3",
+    "Materiale, colore, finitura corretti",
+    "Meno ambiguità in lettura e fornitura"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s039",
+  "layout": "organigramma",
+  "kicker": "Controlli finali",
+  "titolo": "Cinque controlli prima di confermare l'ordine",
+  "intro": "Prima della conferma basta una checklist breve ma rigorosa: pochi passaggi, ben eseguiti, evitano che un conto corretto si trasformi in una consegna sbagliata.",
+  "radice": {
+   "h": "Conferma ordine",
+   "d": "Verifica rapida, tecnica e difendibile"
+  },
+  "rami": [
+   {
+    "h": "1. Coerenza dati",
+    "d": "Superficie, formato, spessore e fuga allineati",
+    "voci": []
+   },
+   {
+    "h": "2. Sequenza corretta",
+    "d": "Unitario, totale tecnico, quantità commerciale distinti",
+    "voci": []
+   },
+   {
+    "h": "3. Scorta motivata",
+    "d": "Percentuale coerente con tagli e complessità",
+    "voci": []
+   },
+   {
+    "h": "4. Descrizioni precise",
+    "d": "Materiali nominati senza ambiguità operative",
+    "voci": []
+   },
+   {
+    "h": "5. Scheda tecnica",
+    "d": "Controllo finale con i limiti del produttore",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s040",
+  "layout": "esercizio",
+  "kicker": "Sintesi dell'esercitazione",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: i sei consumi del soggiorno",
+  "intro": "Soggiorno di 45 m², gres 60×60 da 10 mm, fuga 3 mm, spatola da 10 mm con doppia spalmatura, sacchi da 25 kg.",
+  "campi": [
+   {
+    "h": "1 · Consumo di fugante",
+    "d": "(A + B) / (A × B) × C × D × 1,6, lati in mm. Tolleranza ±10 %",
+    "tipo": "numero",
+    "u": "kg/m²",
+    "atteso": 0.16,
+    "toll": 0.1,
+    "soluzione": "0,16",
+    "spiega": "(1.200 / 360.000) × 10 × 3 × 1,6 = 0,16 kg/m²."
+   },
+   {
+    "h": "2 · Fugante totale",
+    "tipo": "numero",
+    "u": "kg",
+    "atteso": 7.2,
+    "toll": 0.1,
+    "soluzione": "7,2",
+    "spiega": "0,16 × 45 = 7,2 kg."
+   },
+   {
+    "h": "3 · Consumo di adesivo",
+    "d": "Spatola da 10 mm e doppia spalmatura",
+    "tipo": "numero",
+    "u": "kg/m²",
+    "atteso": 6,
+    "toll": 0.1,
+    "soluzione": "6",
+    "spiega": "4,5 + 1,5 = 6 kg/m²."
+   },
+   {
+    "h": "4 · Adesivo totale",
+    "tipo": "numero",
+    "u": "kg",
+    "atteso": 270,
+    "toll": 0.1,
+    "soluzione": "270",
+    "spiega": "6 × 45 = 270 kg."
+   },
+   {
+    "h": "5 · Sacchi di adesivo da 25 kg",
+    "d": "Arrotondati per eccesso",
+    "tipo": "numero",
+    "u": "sacchi",
+    "atteso": 11,
+    "intero": true,
+    "soluzione": "11",
+    "spiega": "270 / 25 = 10,8, quindi 11 sacchi."
+   },
+   {
+    "h": "6 · Scorta di piastrelle oltre i 45 m²",
+    "tipo": "numero",
+    "u": "%",
+    "min": 5,
+    "max": 10,
+    "soluzione": "10",
+    "spiega": "Scorta dal 5 al 10 % per tagli e sostituzioni future."
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m09_s041",
+  "layout": "chiusura",
+  "kicker": "Checkpoint finale",
+  "titolo": "Quattro riflessi da portare ai giunti",
+  "modNum": "09",
+  "punti": [
+   {
+    "h": "Logiche distinte",
+    "d": "Fugante e adesivo non si stimano allo stesso modo"
+   },
+   {
+    "h": "Doppio livello sempre",
+    "d": "Separare consumo unitario, totale tecnico e quantità commerciale"
+   },
+   {
+    "h": "Scorta motivata",
+    "d": "Tra 5 e 10%, in base a tagli e sostituzioni"
+   },
+   {
+    "h": "Controllo di coerenza",
+    "d": "Ogni variazione di formato, fuga o posa cambia il conto"
+   }
+  ],
+  "prossimo": {
+   "modulo": "10",
+   "titolo": "Esercitazione 4: progetto dei giunti"
+  }
+ }
+]

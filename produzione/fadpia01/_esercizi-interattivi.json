@@ -1,0 +1,780 @@
+{
+  "nota": "Le 8 esercitazioni preclusive del committente (FAD-PIA-01 HTML, funzioni html() e check()) rese come slide interattive (layout esercizio di build-slide.mjs), più i due calcolatori a formula fissa. Dati, opzioni, risposte accettate e tolleranze sono quelli del codice del committente (risposte delle tendine ricavate provando ogni opzione con _estrai-fonte-pia.mjs); il fugante usa i lati in millimetri (scelta dell'utente del 28/10/2026: 0,16 kg/m² e 7,2 kg invece di 1,6 e 72). La prova in slide non conta per l'avanzamento: il blocco resta il checkpoint lato server.",
+  "slide": {
+    "fadpia01_m07_s040": {
+      "titolo": "Prova tu: i rilievi e la decisione",
+      "intro": "Appartamento con massetto cementizio tradizionale di 5 cm e posa di gres 60×60. Giudica i tre rilievi e scegli la decisione.",
+      "campi": [
+        {
+          "h": "Rilievo 1 · Umidità al carburo",
+          "d": "Lettura dell'igrometro: 3,1 %",
+          "tipo": "scelta",
+          "opzioni": [
+            "Conforme",
+            "Non conforme"
+          ],
+          "giuste": [
+            "Non conforme"
+          ],
+          "spiega": "Umidità 3,1 % oltre il 2 %: non conforme."
+        },
+        {
+          "h": "Rilievo 2 · Planarità",
+          "d": "Scostamento sotto staggia da 2 m: 4 mm",
+          "tipo": "scelta",
+          "opzioni": [
+            "Conforme",
+            "Non conforme"
+          ],
+          "giuste": [
+            "Non conforme"
+          ],
+          "spiega": "Planarità 4 mm oltre i 2 mm su 2 m: non conforme."
+        },
+        {
+          "h": "Rilievo 3 · Stagionatura",
+          "d": "Massetto gettato 14 giorni fa",
+          "tipo": "scelta",
+          "opzioni": [
+            "Conforme",
+            "Non conforme"
+          ],
+          "giuste": [
+            "Non conforme"
+          ],
+          "spiega": "14 giorni contro i 28 richiesti: stagionatura insufficiente."
+        },
+        {
+          "h": "Decisione del posatore",
+          "tipo": "scelta",
+          "opzioni": [
+            "Procedo alla posa con adesivo C2 S1",
+            "Sospendo, verbalizzo e richiedo interventi (attesa stagionatura, rasatura)",
+            "Procedo con membrana desolidarizzante senza altre verifiche"
+          ],
+          "giuste": [
+            "Sospendo, verbalizzo e richiedo interventi (attesa stagionatura, rasatura)"
+          ],
+          "spiega": "Con supporto non idoneo la posa si sospende e si verbalizza."
+        }
+      ]
+    },
+    "fadpia01_m08_s040": {
+      "titolo": "Prova tu: la classe minima di adesivo",
+      "intro": "Per ogni scenario scegli la classe minima adeguata secondo la UNI EN 12004.",
+      "campi": [
+        {
+          "h": "A · Gres porcellanato 60×60",
+          "d": "Pavimento interno su massetto cementizio stagionato",
+          "tipo": "scelta",
+          "opzioni": [
+            "C1",
+            "C1 T",
+            "C2 TE",
+            "C2 S1 (TE)",
+            "C2 S2",
+            "D1 T"
+          ],
+          "giuste": [
+            "C2 TE",
+            "C2 S1 (TE)",
+            "C2 S2"
+          ],
+          "spiega": "Il gres vuole almeno C2: S1 e S2 vanno bene ma non servono."
+        },
+        {
+          "h": "B · Gres 120×120",
+          "d": "Terrazza esterna esposta al sole",
+          "tipo": "scelta",
+          "opzioni": [
+            "C1",
+            "C1 T",
+            "C2 TE",
+            "C2 S1 (TE)",
+            "C2 S2",
+            "D1 T"
+          ],
+          "giuste": [
+            "C2 S1 (TE)",
+            "C2 S2"
+          ],
+          "spiega": "Esterno e grande formato: C2 deformabile S1, oppure S2."
+        },
+        {
+          "h": "C · Bicottura 20×20 (BIII)",
+          "d": "Parete di bagno su intonaco",
+          "tipo": "scelta",
+          "opzioni": [
+            "C1",
+            "C1 T",
+            "C2 TE",
+            "C2 S1 (TE)",
+            "C2 S2",
+            "D1 T"
+          ],
+          "giuste": [
+            "C1 T",
+            "C2 TE",
+            "C2 S1 (TE)",
+            "D1 T"
+          ],
+          "spiega": "Bicottura a parete: basta C1 T o D1 T, con l'opzione T."
+        },
+        {
+          "h": "D · Gres 60×120",
+          "d": "Pavimento con riscaldamento radiante",
+          "tipo": "scelta",
+          "opzioni": [
+            "C1",
+            "C1 T",
+            "C2 TE",
+            "C2 S1 (TE)",
+            "C2 S2",
+            "D1 T"
+          ],
+          "giuste": [
+            "C2 S1 (TE)",
+            "C2 S2"
+          ],
+          "spiega": "Radiante e formato 60×120: minimo C2 S1."
+        },
+        {
+          "h": "E · Lastra 120×240 da 6 mm",
+          "d": "Su pavimento esistente",
+          "tipo": "scelta",
+          "opzioni": [
+            "C1",
+            "C1 T",
+            "C2 TE",
+            "C2 S1 (TE)",
+            "C2 S2",
+            "D1 T"
+          ],
+          "giuste": [
+            "C2 S2"
+          ],
+          "spiega": "Lastra sottile su pavimento esistente: C2 S2."
+        },
+        {
+          "h": "F · Spalmatura per gli scenari B, D ed E",
+          "tipo": "scelta",
+          "opzioni": [
+            "Singola spalmatura",
+            "Doppia spalmatura (bagnatura 100 %)"
+          ],
+          "giuste": [
+            "Doppia spalmatura (bagnatura 100 %)"
+          ],
+          "spiega": "Grandi formati, esterni e radiante: doppia spalmatura."
+        }
+      ]
+    },
+    "fadpia01_m09_s040": {
+      "titolo": "Prova tu: i sei consumi del soggiorno",
+      "intro": "Soggiorno di 45 m², gres 60×60 da 10 mm, fuga 3 mm, spatola da 10 mm con doppia spalmatura, sacchi da 25 kg.",
+      "campi": [
+        {
+          "h": "1 · Consumo di fugante",
+          "d": "(A + B) / (A × B) × C × D × 1,6, lati in mm. Tolleranza ±10 %",
+          "tipo": "numero",
+          "u": "kg/m²",
+          "atteso": 0.16,
+          "toll": 0.1,
+          "soluzione": "0,16",
+          "spiega": "(1.200 / 360.000) × 10 × 3 × 1,6 = 0,16 kg/m²."
+        },
+        {
+          "h": "2 · Fugante totale",
+          "tipo": "numero",
+          "u": "kg",
+          "atteso": 7.2,
+          "toll": 0.1,
+          "soluzione": "7,2",
+          "spiega": "0,16 × 45 = 7,2 kg."
+        },
+        {
+          "h": "3 · Consumo di adesivo",
+          "d": "Spatola da 10 mm e doppia spalmatura",
+          "tipo": "numero",
+          "u": "kg/m²",
+          "atteso": 6,
+          "toll": 0.1,
+          "soluzione": "6",
+          "spiega": "4,5 + 1,5 = 6 kg/m²."
+        },
+        {
+          "h": "4 · Adesivo totale",
+          "tipo": "numero",
+          "u": "kg",
+          "atteso": 270,
+          "toll": 0.1,
+          "soluzione": "270",
+          "spiega": "6 × 45 = 270 kg."
+        },
+        {
+          "h": "5 · Sacchi di adesivo da 25 kg",
+          "d": "Arrotondati per eccesso",
+          "tipo": "numero",
+          "u": "sacchi",
+          "atteso": 11,
+          "intero": true,
+          "soluzione": "11",
+          "spiega": "270 / 25 = 10,8, quindi 11 sacchi."
+        },
+        {
+          "h": "6 · Scorta di piastrelle oltre i 45 m²",
+          "tipo": "numero",
+          "u": "%",
+          "min": 5,
+          "max": 10,
+          "soluzione": "10",
+          "spiega": "Scorta dal 5 al 10 % per tagli e sostituzioni future."
+        }
+      ]
+    },
+    "fadpia01_m10_s040": {
+      "titolo": "Prova tu: il progetto dei giunti della terrazza",
+      "intro": "Terrazza esterna di 8 × 12 m (96 m²) al sole, gres 30×60. Regola degli esterni: campi fino a 9 m², lato fino a 3 m, giunti perimetrali continui.",
+      "campi": [
+        {
+          "h": "1 · Giunti intermedi lungo il lato da 8 m",
+          "tipo": "numero",
+          "atteso": 2,
+          "intero": true,
+          "soluzione": "2",
+          "spiega": "8 m / 3 m: 3 campi, quindi 2 giunti intermedi."
+        },
+        {
+          "h": "2 · Giunti intermedi lungo il lato da 12 m",
+          "tipo": "numero",
+          "atteso": 3,
+          "intero": true,
+          "soluzione": "3",
+          "spiega": "12 m / 3 m: 4 campi, quindi 3 giunti intermedi."
+        },
+        {
+          "h": "3 · Campi risultanti",
+          "tipo": "numero",
+          "atteso": 12,
+          "intero": true,
+          "soluzione": "12",
+          "spiega": "3 × 4 = 12 campi."
+        },
+        {
+          "h": "4 · Superficie di ciascun campo",
+          "tipo": "numero",
+          "u": "m²",
+          "atteso": 8,
+          "tollAss": 0.5,
+          "soluzione": "8",
+          "spiega": "96 / 12 = 8 m², entro i 9 m²."
+        },
+        {
+          "h": "5 · Giunto perimetrale in esterno",
+          "tipo": "scelta",
+          "opzioni": [
+            "2 mm",
+            "5 mm",
+            "8–10 mm",
+            "20 mm"
+          ],
+          "giuste": [
+            "8–10 mm"
+          ],
+          "spiega": "In esterno il giunto perimetrale è di 8–10 mm."
+        },
+        {
+          "h": "6 · Riempimento dei giunti",
+          "tipo": "scelta",
+          "opzioni": [
+            "Fugante CG2",
+            "Sigillante elastico / profilo preformato",
+            "Adesivo C2",
+            "Malta cementizia"
+          ],
+          "giuste": [
+            "Sigillante elastico / profilo preformato"
+          ],
+          "spiega": "Sigillante elastico o profilo, mai materiali rigidi."
+        }
+      ]
+    },
+    "fadpia01_m11_s024": {
+      "titolo": "Prova tu: la fuga minima",
+      "intro": "Indica la fuga minima ammessa per ciascuna situazione.",
+      "campi": [
+        {
+          "h": "A · Gres 60×60 rettificato",
+          "d": "Soggiorno",
+          "tipo": "scelta",
+          "opzioni": [
+            "0 mm (giunto unito)",
+            "2 mm",
+            "3 mm",
+            "5 mm",
+            "8 mm"
+          ],
+          "giuste": [
+            "2 mm"
+          ],
+          "spiega": "Rettificato in interno: 2 mm."
+        },
+        {
+          "h": "B · Monocottura 33×33 non rettificata",
+          "d": "Cucina",
+          "tipo": "scelta",
+          "opzioni": [
+            "0 mm (giunto unito)",
+            "2 mm",
+            "3 mm",
+            "5 mm",
+            "8 mm"
+          ],
+          "giuste": [
+            "3 mm"
+          ],
+          "spiega": "Non rettificato in interno: 3 mm."
+        },
+        {
+          "h": "C · Cotto 30×30",
+          "d": "Portico esterno",
+          "tipo": "scelta",
+          "opzioni": [
+            "0 mm (giunto unito)",
+            "2 mm",
+            "3 mm",
+            "5 mm",
+            "8 mm"
+          ],
+          "giuste": [
+            "5 mm",
+            "8 mm"
+          ],
+          "spiega": "In esterno almeno 5 mm; per il cotto da 5 a 10 mm."
+        },
+        {
+          "h": "D · Lastra 120×240 rettificata",
+          "d": "Parete interna",
+          "tipo": "scelta",
+          "opzioni": [
+            "0 mm (giunto unito)",
+            "2 mm",
+            "3 mm",
+            "5 mm",
+            "8 mm"
+          ],
+          "giuste": [
+            "2 mm"
+          ],
+          "spiega": "Lastra rettificata in interno: 2 mm."
+        },
+        {
+          "h": "E · Il cliente chiede la posa «senza fuga»",
+          "tipo": "scelta",
+          "opzioni": [
+            "Accetto: con il rettificato è possibile",
+            "Rifiuto: UNI 11493-1 non ammette il giunto unito, minimo 2 mm",
+            "Accetto con adesivo S2"
+          ],
+          "giuste": [
+            "Rifiuto: UNI 11493-1 non ammette il giunto unito, minimo 2 mm"
+          ],
+          "spiega": "Il giunto unito non è ammesso: minimo 2 mm."
+        }
+      ]
+    },
+    "fadpia01_m12_s026": {
+      "titolo": "Prova tu: la classe antiscivolo minima",
+      "intro": "Scegli la classe antiscivolo minima (DIN 51130, DIN 51097). Il D.M. 236/89 chiede un attrito dinamico di almeno 0,40.",
+      "campi": [
+        {
+          "h": "A · Camera da letto",
+          "tipo": "scelta",
+          "opzioni": [
+            "R9",
+            "R10",
+            "R11",
+            "R12",
+            "R13",
+            "A (piedi nudi)",
+            "B (piedi nudi)",
+            "C (piedi nudi)"
+          ],
+          "giuste": [
+            "R9",
+            "R10"
+          ],
+          "spiega": "Residenziale: R9 è sufficiente."
+        },
+        {
+          "h": "B · Cucina di ristorante",
+          "tipo": "scelta",
+          "opzioni": [
+            "R9",
+            "R10",
+            "R11",
+            "R12",
+            "R13",
+            "A (piedi nudi)",
+            "B (piedi nudi)",
+            "C (piedi nudi)"
+          ],
+          "giuste": [
+            "R12",
+            "R13"
+          ],
+          "spiega": "Cucina professionale: R12, con V4."
+        },
+        {
+          "h": "C · Terrazza esterna o rampa carrabile",
+          "tipo": "scelta",
+          "opzioni": [
+            "R9",
+            "R10",
+            "R11",
+            "R12",
+            "R13",
+            "A (piedi nudi)",
+            "B (piedi nudi)",
+            "C (piedi nudi)"
+          ],
+          "giuste": [
+            "R11",
+            "R12",
+            "R13"
+          ],
+          "spiega": "Esterni e rampe: R11 come minimo."
+        },
+        {
+          "h": "D · Bordo piscina, a piedi nudi",
+          "tipo": "scelta",
+          "opzioni": [
+            "R9",
+            "R10",
+            "R11",
+            "R12",
+            "R13",
+            "A (piedi nudi)",
+            "B (piedi nudi)",
+            "C (piedi nudi)"
+          ],
+          "giuste": [
+            "B (piedi nudi)",
+            "C (piedi nudi)"
+          ],
+          "spiega": "Bordo piscina: classe B."
+        },
+        {
+          "h": "E · Spogliatoio della piscina, a piedi nudi",
+          "tipo": "scelta",
+          "opzioni": [
+            "R9",
+            "R10",
+            "R11",
+            "R12",
+            "R13",
+            "A (piedi nudi)",
+            "B (piedi nudi)",
+            "C (piedi nudi)"
+          ],
+          "giuste": [
+            "A (piedi nudi)",
+            "B (piedi nudi)",
+            "C (piedi nudi)"
+          ],
+          "spiega": "Spogliatoi: classe A, il minimo a piedi nudi."
+        },
+        {
+          "h": "F · Gres smaltato in un centro commerciale",
+          "d": "Classe PEI minima",
+          "tipo": "scelta",
+          "opzioni": [
+            "PEI 1",
+            "PEI 2",
+            "PEI 3",
+            "PEI 4–5"
+          ],
+          "giuste": [
+            "PEI 4–5"
+          ],
+          "spiega": "Traffico intenso: PEI 4 o 5."
+        }
+      ]
+    },
+    "fadpia01_m13_s053": {
+      "titolo": "Prova tu: l'ordine delle otto attività",
+      "intro": "Assegna a ogni attività il suo numero d'ordine, da 1 (la prima) a 8 (l'ultima).",
+      "colonne": 1,
+      "campi": [
+        {
+          "h": "Stuccatura delle fughe (dopo 24 h) e pulizia con spugna",
+          "tipo": "scelta",
+          "opzioni": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "giuste": [
+            "7"
+          ],
+          "errore": "non è la sua posizione nella sequenza.",
+          "spiega": "È l'attività numero 7."
+        },
+        {
+          "h": "Verifica e verbalizzazione del supporto",
+          "tipo": "scelta",
+          "opzioni": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "giuste": [
+            "1"
+          ],
+          "errore": "non è la sua posizione nella sequenza.",
+          "spiega": "È l'attività numero 1."
+        },
+        {
+          "h": "Stesura dell'adesivo con spatola dentata (e doppia spalmatura)",
+          "tipo": "scelta",
+          "opzioni": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "giuste": [
+            "4"
+          ],
+          "errore": "non è la sua posizione nella sequenza.",
+          "spiega": "È l'attività numero 4."
+        },
+        {
+          "h": "Pulizia finale, sigillatura dei giunti elastici, protezione",
+          "tipo": "scelta",
+          "opzioni": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "giuste": [
+            "8"
+          ],
+          "errore": "non è la sua posizione nella sequenza.",
+          "spiega": "È l'attività numero 8."
+        },
+        {
+          "h": "Preparazione dell'adesivo (dosaggio dell'acqua, riposo, rimescolatura)",
+          "tipo": "scelta",
+          "opzioni": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "giuste": [
+            "3"
+          ],
+          "errore": "non è la sua posizione nella sequenza.",
+          "spiega": "È l'attività numero 3."
+        },
+        {
+          "h": "Tracciamento e squadratura, studio dei tagli",
+          "tipo": "scelta",
+          "opzioni": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "giuste": [
+            "2"
+          ],
+          "errore": "non è la sua posizione nella sequenza.",
+          "spiega": "È l'attività numero 2."
+        },
+        {
+          "h": "Posa con distanziatori e livellatori, battitura, controllo della bagnatura",
+          "tipo": "scelta",
+          "opzioni": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "giuste": [
+            "5"
+          ],
+          "errore": "non è la sua posizione nella sequenza.",
+          "spiega": "È l'attività numero 5."
+        },
+        {
+          "h": "Pulizia delle fughe fresche dall'adesivo in eccesso",
+          "tipo": "scelta",
+          "opzioni": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ],
+          "giuste": [
+            "6"
+          ],
+          "errore": "non è la sua posizione nella sequenza.",
+          "spiega": "È l'attività numero 6."
+        }
+      ]
+    },
+    "fadpia01_m14_s051": {
+      "titolo": "Prova tu: dalla segnalazione alla causa",
+      "intro": "Per ogni segnalazione individua la causa più probabile; nel caso 6 scegli l'azione corretta per il caso 1.",
+      "campi": [
+        {
+          "h": "Caso 1",
+          "d": "80×80 posato 6 mesi fa: piastrelle che suonano a vuoto, due rotte sotto un mobile.",
+          "tipo": "scelta",
+          "opzioni": [
+            "Bagnatura insufficiente / adesivo con pelle",
+            "Umidità risalente / massetto non stagionato",
+            "Supporto non planare / assenza livellatori",
+            "Assenza di giunti di frazionamento",
+            "Eccesso d'acqua in stuccatura",
+            "Adesivo di classe insufficiente"
+          ],
+          "giuste": [
+            "Bagnatura insufficiente / adesivo con pelle"
+          ],
+          "spiega": "Suono a vuoto e rotture: vuoti sotto la piastrella."
+        },
+        {
+          "h": "Caso 2",
+          "d": "Aloni bianchi su fughe e bordi dopo 3 settimane; massetto di 10 giorni.",
+          "tipo": "scelta",
+          "opzioni": [
+            "Bagnatura insufficiente / adesivo con pelle",
+            "Umidità risalente / massetto non stagionato",
+            "Supporto non planare / assenza livellatori",
+            "Assenza di giunti di frazionamento",
+            "Eccesso d'acqua in stuccatura",
+            "Adesivo di classe insufficiente"
+          ],
+          "giuste": [
+            "Umidità risalente / massetto non stagionato"
+          ],
+          "spiega": "Efflorescenze: umidità, massetto non stagionato."
+        },
+        {
+          "h": "Caso 3",
+          "d": "Listoni 20×120 sfalsati al 50 %: dislivelli di 2 mm tra le teste.",
+          "tipo": "scelta",
+          "opzioni": [
+            "Bagnatura insufficiente / adesivo con pelle",
+            "Umidità risalente / massetto non stagionato",
+            "Supporto non planare / assenza livellatori",
+            "Assenza di giunti di frazionamento",
+            "Eccesso d'acqua in stuccatura",
+            "Adesivo di classe insufficiente"
+          ],
+          "giuste": [
+            "Supporto non planare / assenza livellatori"
+          ],
+          "spiega": "Lippage: sfalsamento a metà sui listoni e niente livellatori."
+        },
+        {
+          "h": "Caso 4",
+          "d": "Salone di 60 m² senza interruzioni: fughe fessurate in linea, piastrelle sollevate a tenda.",
+          "tipo": "scelta",
+          "opzioni": [
+            "Bagnatura insufficiente / adesivo con pelle",
+            "Umidità risalente / massetto non stagionato",
+            "Supporto non planare / assenza livellatori",
+            "Assenza di giunti di frazionamento",
+            "Eccesso d'acqua in stuccatura",
+            "Adesivo di classe insufficiente"
+          ],
+          "giuste": [
+            "Assenza di giunti di frazionamento"
+          ],
+          "spiega": "Fessure in linea e sollevamento: giunti mancanti."
+        },
+        {
+          "h": "Caso 5",
+          "d": "Fughe sfarinate e di colore non uniforme subito dopo la consegna.",
+          "tipo": "scelta",
+          "opzioni": [
+            "Bagnatura insufficiente / adesivo con pelle",
+            "Umidità risalente / massetto non stagionato",
+            "Supporto non planare / assenza livellatori",
+            "Assenza di giunti di frazionamento",
+            "Eccesso d'acqua in stuccatura",
+            "Adesivo di classe insufficiente"
+          ],
+          "giuste": [
+            "Eccesso d'acqua in stuccatura"
+          ],
+          "spiega": "Fughe sfarinate: troppa acqua in stuccatura."
+        },
+        {
+          "h": "Caso 6 · Azione corretta nel caso 1",
+          "tipo": "scelta",
+          "opzioni": [
+            "Iniezione di resina sotto le piastrelle",
+            "Rimozione e riposa con doppia spalmatura e C2 S1",
+            "Sostituzione del solo fugante"
+          ],
+          "giuste": [
+            "Rimozione e riposa con doppia spalmatura e C2 S1"
+          ],
+          "spiega": "La riposa corretta è l'unica soluzione durevole."
+        }
+      ]
+    },
+    "fadpia01_m09_s028": {
+      "layout": "calcolatore",
+      "formula": "consumi",
+      "titolo": "Simulatore: cambia una variabile alla volta",
+      "intro": "Il caso di partenza è il soggiorno di Residenza Le Querce: 45 m² di gres 60×60."
+    },
+    "fadpia01_m10_s031": {
+      "layout": "calcolatore",
+      "formula": "giunti",
+      "titolo": "Simulatore: cambia le misure della terrazza",
+      "intro": "Il caso di partenza è la terrazza di 8 × 12 m di Residenza Le Querce."
+    }
+  }
+}

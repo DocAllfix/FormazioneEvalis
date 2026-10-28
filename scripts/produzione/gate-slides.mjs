@@ -9,8 +9,8 @@
 //      il gutter dell'avatar: se non è hex la bolla resta su sfondo sbagliato)
 //   S4 nessuna risorsa esterna (immagini/css/js remoti; consentiti solo i font Google
 //      già usati dal player) — il player è sandbox e offline-safe
-//   S5 nessun <script>, tranne quello in linea del calcolatore interattivo (senza rete né accesso
-//      alla pagina ospite): ogni altro script è FAIL
+//   S5 nessun <script>, tranne quello in linea del calcolatore o dell'esercitazione interattiva (senza
+//      rete né accesso alla pagina ospite): ogni altro script è FAIL
 //   S6 [Playwright] altezza naturale della section a 1280px: >900px = W overflow
 //      (testo piccolo a schermo), >1400px = FAIL; screenshot -> thumbnail
 //   S7 titolo dei copioni rintracciabile nel testo della slide (W avviso se assente)
@@ -112,7 +112,8 @@ for (const f of files) {
   // Qualunque accesso alla rete, alla pagina ospite o alla memoria del browser è un FAIL.
   const scripts = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)];
   if (scripts.length) {
-    const sim = /<input[^>]*data-sim=/.test(html);
+    // calcolatore (simulatore, calcolatore a formula fissa) o esercitazione interattiva di build-slide.mjs
+    const sim = /<input[^>]*data-sim=|<(?:input|select)[^>]*data-in=|<div data-esercizio\b/.test(html);
     const vietato = scripts.some((m) => /\bsrc\s*=/.test(m[1]) ||
       /fetch\(|XMLHttpRequest|WebSocket|sendBeacon|import\(|\beval\(|new Function|postMessage|\bparent\b|\btop\b|localStorage|sessionStorage|document\.cookie|window\.open|location\./.test(m[2]));
     if (!sim || scripts.length > 1 || vietato) probs.push("S5: <script> non ammesso (consentito solo quello del calcolatore, senza rete né accesso alla pagina ospite)");

@@ -1,0 +1,240 @@
+{
+  "nota": "Strada A (28/10/2026): ogni voce dell'esercitazione preclusiva del committente è una domanda del checkpoint bloccante del suo modulo, con gli stessi dati e la stessa risposta accettata (fugante coi lati in millimetri). Qui le voci che la banca dell'orchestratore non copriva già in modo esplicito; 'cerca' indica la frase della narrazione che giustifica la risposta (serve a trovare la slide). Applicato da _applica-checkpoint-pia.py.",
+  "sostituisci": {
+    "m01": {
+      "vecchia": "Come vengono trattate le esercitazioni pratiche interattive nel percorso?",
+      "q": "Come funzionano le esercitazioni pratiche del percorso?",
+      "opzioni": [
+        "Ogni esercitazione risolve con te un caso di cantiere e si chiude con un checkpoint bloccante sugli stessi dati",
+        "Sono facoltative e servono solo a ripassare",
+        "Si svolgono soltanto alla fine del corso, dopo l'esame",
+        "Contano solo per il tempo di frequenza, senza verifiche"
+      ],
+      "corretta": 0,
+      "tipo": "comprensione",
+      "cerca": "Il checkpoint che la chiude usa gli stessi dati"
+    }
+  },
+  "aggiungi": {
+    "m07": [
+      {
+        "q": "Nel caso dell'appartamento il massetto è stato gettato da quattordici giorni. Come giudichi la stagionatura?",
+        "opzioni": [
+          "Non conforme, perché ne servono almeno ventotto",
+          "Conforme, perché il massetto è calpestabile",
+          "Conforme, se l'umidità è sotto il due per cento",
+          "Non valutabile senza il produttore dell'adesivo"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "cerca": "ventotto giorni"
+      }
+    ],
+    "m08": [
+      {
+        "q": "Gres sessanta per centoventi su pavimento con riscaldamento radiante: qual è la classe minima di adesivo?",
+        "opzioni": [
+          "C2 S1",
+          "C1 T",
+          "C2 TE",
+          "D1 T"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "cerca": "radiante"
+      },
+      {
+        "q": "Per gli scenari della terrazza al sole, del radiante e della lastra sottile su pavimento esistente, quale tecnica di spalmatura serve?",
+        "opzioni": [
+          "Doppia spalmatura, con bagnatura completa",
+          "Singola spalmatura sul supporto",
+          "Singola spalmatura sul retro della piastrella",
+          "Dipende solo dal colore della piastrella"
+        ],
+        "corretta": 0,
+        "tipo": "comprensione",
+        "cerca": "doppia spalmatura"
+      },
+      {
+        "q": "Gres porcellanato sessanta per sessanta a pavimento interno su massetto cementizio stagionato: quale scelta è adeguata come classe minima?",
+        "opzioni": [
+          "C2 TE",
+          "C1",
+          "C1 T",
+          "D1 T"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "cerca": "almeno C2"
+      }
+    ],
+    "m09": [
+      {
+        "q": "Soggiorno con gres sessanta per sessanta, spessore dieci millimetri, fuga tre millimetri: con i lati in millimetri nella formula, quanto fugante serve per metro quadrato?",
+        "opzioni": [
+          "Zero virgola sedici chilogrammi per metro quadrato",
+          "Uno virgola sei chilogrammi per metro quadrato",
+          "Zero virgola zero sedici chilogrammi per metro quadrato",
+          "Sei chilogrammi per metro quadrato"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "cerca": "zero virgola sedici"
+      },
+      {
+        "q": "Con zero virgola sedici chilogrammi per metro quadrato e un soggiorno di quarantacinque metri quadrati, qual è il fugante totale?",
+        "opzioni": [
+          "Sette virgola due chilogrammi",
+          "Settantadue chilogrammi",
+          "Zero virgola settantadue chilogrammi",
+          "Quarantacinque chilogrammi"
+        ],
+        "corretta": 0,
+        "tipo": "riconoscimento",
+        "cerca": "sette virgola due"
+      },
+      {
+        "q": "Con sei chilogrammi per metro quadrato di adesivo e quarantacinque metri quadrati, qual è l'adesivo totale?",
+        "opzioni": [
+          "Duecentosettanta chilogrammi",
+          "Duecentosettantacinque chilogrammi",
+          "Duecentocinquanta chilogrammi",
+          "Duecentoventicinque chilogrammi"
+        ],
+        "corretta": 0,
+        "tipo": "riconoscimento",
+        "cerca": "duecentosettanta chilogrammi"
+      }
+    ],
+    "m10": [
+      {
+        "q": "Terrazza di otto per dodici metri con lato massimo del campo di tre metri: quanti giunti di frazionamento intermedi servono lungo il lato da dodici metri?",
+        "opzioni": [
+          "Tre",
+          "Quattro",
+          "Due",
+          "Cinque"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "cerca": "quattro campi"
+      },
+      {
+        "q": "Sulla stessa terrazza di otto per dodici metri, quanti campi risultano in tutto?",
+        "opzioni": [
+          "Dodici",
+          "Cinque",
+          "Sette",
+          "Otto"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "cerca": "dodici campi"
+      },
+      {
+        "q": "Novantasei metri quadrati divisi in dodici campi: quanto misura ciascun campo, e rispetta il limite?",
+        "opzioni": [
+          "Otto metri quadrati, entro il limite di nove",
+          "Nove metri quadrati, esattamente al limite",
+          "Dodici metri quadrati, oltre il limite",
+          "Sei metri quadrati, entro il limite"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "cerca": "otto metri quadrati"
+      }
+    ],
+    "m11": [
+      {
+        "q": "Lastra centoventi per duecentoquaranta rettificata, posata a parete in interno: qual è la fuga minima?",
+        "opzioni": [
+          "Due millimetri",
+          "Zero millimetri, giunto unito",
+          "Cinque millimetri",
+          "Otto millimetri"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "cerca": "lastra centoventi per duecentoquaranta rettificata"
+      }
+    ],
+    "m12": [
+      {
+        "q": "Terrazza esterna o rampa carrabile: qual è la classe antiscivolo minima?",
+        "opzioni": [
+          "R11",
+          "R9",
+          "R10",
+          "A, a piedi nudi"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "cerca": "R11"
+      }
+    ],
+    "m13": [
+      {
+        "q": "Nella sequenza operativa, quale attività viene subito dopo la verifica e la verbalizzazione del supporto?",
+        "opzioni": [
+          "Tracciamento e squadratura, con lo studio dei tagli",
+          "Preparazione dell'adesivo",
+          "Stesura dell'adesivo con spatola dentata",
+          "Stuccatura delle fughe"
+        ],
+        "corretta": 0,
+        "tipo": "riconoscimento",
+        "cerca": "tracciamento"
+      },
+      {
+        "q": "Che cosa si fa subito dopo la posa con distanziatori e livellatori, la battitura e il controllo della bagnatura?",
+        "opzioni": [
+          "Si puliscono le fughe fresche dall'adesivo in eccesso",
+          "Si stuccano subito le fughe",
+          "Si sigillano i giunti elastici",
+          "Si prepara un nuovo impasto"
+        ],
+        "corretta": 0,
+        "tipo": "riconoscimento",
+        "cerca": "fughe fresche"
+      },
+      {
+        "q": "Quale attività chiude la sequenza operativa?",
+        "opzioni": [
+          "Pulizia finale, sigillatura dei giunti elastici e protezione",
+          "Stuccatura delle fughe e pulizia con spugna",
+          "Pulizia delle fughe fresche dall'adesivo",
+          "Controllo della bagnatura"
+        ],
+        "corretta": 0,
+        "tipo": "riconoscimento",
+        "cerca": "protezione"
+      }
+    ],
+    "m14": [
+      {
+        "q": "Fughe sfarinate e di colore non uniforme subito dopo la consegna: qual è la causa più probabile?",
+        "opzioni": [
+          "Eccesso d'acqua in stuccatura",
+          "Assenza di giunti di frazionamento",
+          "Supporto non planare",
+          "Adesivo di classe insufficiente"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "cerca": "eccesso d'acqua"
+      },
+      {
+        "q": "Piastrelle ottanta per ottanta che suonano a vuoto e si rompono sotto un mobile: qual è l'azione corretta?",
+        "opzioni": [
+          "Rimozione e riposa con doppia spalmatura e C2 S1",
+          "Iniezione di resina sotto le piastrelle",
+          "Sostituzione del solo fugante",
+          "Nuova battitura delle piastrelle esistenti"
+        ],
+        "corretta": 0,
+        "tipo": "applicazione",
+        "cerca": "riposa"
+      }
+    ]
+  }
+}

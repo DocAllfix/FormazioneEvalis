@@ -1,0 +1,795 @@
+[
+ {
+  "id": "fadpia01_m12_s001",
+  "layout": "apertura",
+  "kicker": "Esercitazione",
+  "titolo": "Sei casi per scegliere la classe minima",
+  "corsoLabel": "Piastrellista · UNI 11493-1:2025",
+  "eyebrow": "Esercitazione",
+  "sottotitolo": "L'esercitazione parte dal contesto reale: non scegli la piastrella più nota, ma la superficie minima sensata per uso, contaminanti, camminamento e conseguenze di una perdita di aderenza.",
+  "agenda": [
+   "Criterio di base",
+   "Sei casi ricorrenti",
+   "Tre famiglie di riferimenti",
+   "Quattro domande guida",
+   "Obiettivo del modulo"
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s002",
+  "layout": "piramide",
+  "kicker": "Classi R",
+  "titolo": "Le classi R in uso reale",
+  "intro": "Le classi R servono nei percorsi con calzature e vanno lette dentro il contesto di esercizio: asciutto o bagnato, domestico o professionale, pulito o contaminato.",
+  "livelli": [
+   {
+    "h": "R13",
+    "d": "condizioni più impegnative"
+   },
+   {
+    "h": "R12",
+    "d": "rischio elevato e contaminanti importanti"
+   },
+   {
+    "h": "R11",
+    "d": "livello intermedio di cautela"
+   },
+   {
+    "h": "R10",
+    "d": "maggiore prudenza in contesti ordinari"
+   },
+   {
+    "h": "R9",
+    "d": "base per ambienti asciutti domestici"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s003",
+  "layout": "tabella",
+  "kicker": "Criteri distinti",
+  "titolo": "Tre riferimenti da non confondere",
+  "cols": [
+   "Riferimento",
+   "Dove si usa",
+   "Lettura utile qui"
+  ],
+  "righe": [
+   [
+    "Classi R",
+    "percorsi con calzature",
+    "camera privata: R9 base, R10 accettabile"
+   ],
+   [
+    "Classi A-B-C",
+    "percorsi a piedi nudi in aree umide",
+    "spogliatoio A, bordo piscina almeno B"
+   ],
+   [
+    "Attrito dinamico DM 236/1989",
+    "fruibilità e accessibilità",
+    "valore pari o superiore a 0,40"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s004",
+  "layout": "evidenza",
+  "kicker": "Caso A",
+  "titolo": "Camera da letto: R9 basta davvero",
+  "eyebrow": "",
+  "testo": "La camera da letto va letta come ambiente residenziale, con passaggio moderato e condizioni normalmente asciutte: per questo la soglia minima corretta resta R9, senza forzare prestazioni non necessarie.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m12_s005",
+  "layout": "flusso",
+  "kicker": "Caso A",
+  "titolo": "Quando R10 in camera è coerente",
+  "intro": "R10 in camera da letto è una scelta ammissibile quando nasce da un progetto coerente. Conta soprattutto come la motivi: prudenza aggiuntiva, non obbligo imposto dal rischio ordinario.",
+  "passi": [
+   {
+    "h": "Uniformità tra locali",
+    "d": "stessa finitura per camere, corridoio e ingresso"
+   },
+   {
+    "h": "Umidità trascinata",
+    "d": "accessi frequenti da giardino o terrazza"
+   },
+   {
+    "h": "Prudenza per l'utenza",
+    "d": "richiesta di maggiore sicurezza percepita"
+   },
+   {
+    "h": "Motivazione documentata",
+    "d": "uso interno residenziale, scelta coerente non necessaria"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s006",
+  "layout": "organigramma",
+  "kicker": "Caso B",
+  "titolo": "Cucina professionale: perché il rischio sale",
+  "intro": "Nella cucina di ristorante cambiano insieme uso, ritmo e contaminanti. La valutazione non è più domestica: il pavimento deve restare affidabile durante un'attività ordinariamente gravosa.",
+  "radice": {
+   "h": "Cucina di ristorante",
+   "d": "ambiente di lavoro, non scenario residenziale"
+  },
+  "rami": [
+   {
+    "h": "Uso operativo",
+    "d": "movimenti rapidi e spazi condivisi",
+    "voci": [
+     "operatori",
+     "carrelli",
+     "attrezzature",
+     "carichi"
+    ]
+   },
+   {
+    "h": "Contaminanti",
+    "d": "aderenza messa alla prova continuamente",
+    "voci": [
+     "acqua",
+     "unto",
+     "residui alimentari",
+     "detergenti"
+    ]
+   },
+   {
+    "h": "Condizioni ordinarie",
+    "d": "bagnato e sporco fanno parte del servizio",
+    "voci": []
+   },
+   {
+    "h": "Conseguenze",
+    "d": "uno scivolamento impatta persone e organizzazione",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s007",
+  "layout": "tabella",
+  "kicker": "Caso B",
+  "titolo": "Perché la soglia è R12 con V4",
+  "cols": [
+   "Scelta",
+   "Come va letta",
+   "Esito in cucina"
+  ],
+  "righe": [
+   [
+    "R9-R10",
+    "logica domestica o poco gravosa",
+    "insufficienti"
+   ],
+   [
+    "R11",
+    "passo avanti, ma sotto soglia",
+    "non basta"
+   ],
+   [
+    "R12 con V4",
+    "ambiente professionale con contaminanti rilevanti",
+    "minimo corretto"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s008",
+  "layout": "ciclo",
+  "kicker": "Caso B",
+  "titolo": "La cucina funziona come sistema",
+  "intro": "La classe corretta è il punto di partenza, non il risultato finale. In cucina la sicurezza reale nasce dall'insieme tra materiale, posa, gestione dell'acqua, pulizia e raccordi tra zone.",
+  "ciclo": false,
+  "centro": "Sicurezza reale",
+  "nodi": [
+   {
+    "h": "Posa rigorosa",
+    "d": "planarità, ristagni, quote vicino agli scarichi"
+   },
+   {
+    "h": "Formato coerente",
+    "d": "pendenze e scarichi più controllabili"
+   },
+   {
+    "h": "Pulizia corretta",
+    "d": "detergenti e risciacqui compatibili"
+   },
+   {
+    "h": "Raccordi tra aree",
+    "d": "dispensa, lavaggio, corridoi, accessi sala"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s009",
+  "layout": "confronto",
+  "kicker": "Caso B",
+  "titolo": "Due cucine, stessa soglia minima",
+  "intro": "La dimensione del locale non cambia il criterio. Se l'attività resta professionale, con acqua, residui e passaggi rapidi, la soglia minima corretta resta la stessa.",
+  "a": {
+   "h": "Cucina centrale",
+   "sub": "",
+   "punti": [
+    {
+     "d": "flussi intensi e lavaggi frequenti"
+    },
+    {
+     "d": "acqua e unto costanti"
+    },
+    {
+     "d": "R12 con V4 coerente"
+    }
+   ]
+  },
+  "b": {
+   "h": "Bistrot compatto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "locale piccolo, rischio non minore"
+    },
+    {
+     "d": "cotture, lavaggi, servizio alimentare"
+    },
+    {
+     "d": "R12 con V4 confermata"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m12_s010",
+  "layout": "split",
+  "kicker": "Caso C",
+  "titolo": "Esterni e rampe: il minimo tecnico è R11",
+  "lead": "Terrazza esterna e rampa carrabile alzano la soglia rispetto agli interni: cambia il contesto d'uso, aumentano le variabili e R11 diventa il punto minimo da cui iniziare la valutazione.",
+  "punti": [
+   {
+    "h": "Soglia minima",
+    "d": "Per terrazze e rampe si parte da R11"
+   },
+   {
+    "h": "Contesto esterno",
+    "d": "Pioggia, sporco e bagnato cambiano il rischio"
+   },
+   {
+    "h": "Minimo non automatico",
+    "d": "R11 è base comune, poi valuti severità reale"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s011",
+  "layout": "cards",
+  "kicker": "Caso C",
+  "titolo": "Quando R11 è coerente e quando no",
+  "intro": "La stessa classe minima non descrive sempre la stessa severità: una terrazza pedonale favorevole può fermarsi a R11, mentre una rampa richiede subito una lettura più prudente.",
+  "cards": [
+   {
+    "h": "Terrazza pedonale ordinaria",
+    "d": "Pendenza moderata, drenaggio buono, uso non critico"
+   },
+   {
+    "h": "Rampa carrabile",
+    "d": "Pendenza, manovre e sporco alzano la severità"
+   },
+   {
+    "h": "Umidità persistente",
+    "d": "Ombra e scarsa ventilazione riducono il margine"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s012",
+  "layout": "numeri",
+  "kicker": "Caso C",
+  "titolo": "Quattro segnali che spingono oltre R11",
+  "intro": "Quando questi fattori si sommano, fermarsi al minimo può diventare una scelta troppo timida rispetto al comportamento reale della superficie esterna.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Pendenza marcata",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Bagnato persistente",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Sporco strutturale prevedibile",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Uso più intenso del normale",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s013",
+  "layout": "piramide",
+  "kicker": "Caso C",
+  "titolo": "Negli esterni conta il sistema, non solo la classe",
+  "intro": "La sicurezza di terrazze e rampe dipende dalla classe antiscivolo, ma si regge davvero su pendenze corrette, acqua ben governata, posa regolare e manutenzione coerente.",
+  "livelli": [
+   {
+    "h": "Classe R adeguata",
+    "d": "R11, R12 o R13 secondo l'uso"
+   },
+   {
+    "h": "Deflusso corretto",
+    "d": "L'acqua non deve ristagnare"
+   },
+   {
+    "h": "Posa regolare",
+    "d": "Quote, fughe e raccordi continui"
+   },
+   {
+    "h": "Esercizio e manutenzione",
+    "d": "Pulizia e controllo mantengono la prestazione"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s014",
+  "layout": "split",
+  "kicker": "Casi D ed E",
+  "titolo": "Nei percorsi a piedi nudi cambiano i criteri",
+  "lead": "Per bordo piscina e spogliatoio non valgono le classi R: si ragiona con A, B e C, leggendo il rischio reale del percorso bagnato a piedi nudi.",
+  "punti": [
+   {
+    "h": "Bordo piscina",
+    "d": "Minimo B, per bagnato continuo e movimenti rapidi"
+   },
+   {
+    "h": "Spogliatoio piscina",
+    "d": "Minimo A, con severità tipicamente inferiore"
+   },
+   {
+    "h": "Scelta unica",
+    "d": "Possibile solo se rispetta la soglia più alta"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s015",
+  "layout": "definizione",
+  "kicker": "Caso D",
+  "titolo": "Il bordo piscina parte almeno da B",
+  "eyebrow": "",
+  "definizione": "Minimo coerente per il bordo piscina. La classe A non basta; la C diventa sensata quando affollamento, geometria o bagnato aumentano la severità.",
+  "punti": []
+ },
+ {
+  "id": "fadpia01_m12_s016",
+  "layout": "confronto",
+  "kicker": "Casi D ed E",
+  "titolo": "Bordo vasca e spogliatoio non partono uguali",
+  "intro": "La vicinanza fisica non basta a renderli equivalenti: cambia la dinamica del movimento, cambia l'esposizione all'acqua, cambia la soglia minima da cui partire.",
+  "a": {
+   "h": "Bordo vasca",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Minimo B"
+    },
+    {
+     "d": "B basta in uso ordinato"
+    },
+    {
+     "d": "C con affollamento o acqua diffusa"
+    },
+    {
+     "d": "Movimenti rapidi e rischio intrinseco"
+    }
+   ]
+  },
+  "b": {
+   "h": "Spogliatoio",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Minimo A"
+    },
+    {
+     "d": "B o C restano possibili"
+    },
+    {
+     "d": "Passo più lento e più attento"
+    },
+    {
+     "d": "Severità minore, non assente"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m12_s017",
+  "layout": "flusso",
+  "kicker": "Casi D ed E",
+  "titolo": "A piedi nudi la sicurezza si costruisce a sistema",
+  "intro": "Nelle aree piscina la classe corretta funziona davvero solo se drenaggio, posa e pulizia sostengono il comportamento della superficie finita nel tempo.",
+  "passi": [
+   {
+    "h": "Classe idonea",
+    "d": "A, B o C secondo il contesto"
+   },
+   {
+    "h": "Drenaggio efficace",
+    "d": "L'acqua va guidata agli scarichi"
+   },
+   {
+    "h": "Posa precisa",
+    "d": "Dislivelli e fughe non disturbano il passo"
+   },
+   {
+    "h": "Pulizia coerente",
+    "d": "Residui e detergenti non falsano la prestazione"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s018",
+  "layout": "numeri",
+  "kicker": "Casi D ed E",
+  "titolo": "Quattro scenari per scegliere tra A, B e C",
+  "intro": "Gli esempi servono a trasformare le soglie minime in giudizio tecnico: si parte dalla funzione del luogo e si adatta la classe alla severità reale.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Condominiale ordinata: bordo B, spogliatoio A o B",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Centro con bambini: bordo C, spogliatoio almeno A",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Area wellness controllata: bordo B, spogliatoio A",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Spogliatoio scolastico intenso: A minimo, B prudente",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s019",
+  "layout": "definizione",
+  "kicker": "Caso F",
+  "titolo": "La classe PEI nel traffico intenso",
+  "eyebrow": "",
+  "definizione": "Indice di resistenza all'usura superficiale del gres smaltato. Nel caso, la soglia pratica sale a PEI quattro o cinque; non misura la scivolosità e non sostituisce R, A-B-C o attrito dinamico.",
+  "punti": []
+ },
+ {
+  "id": "fadpia01_m12_s020",
+  "layout": "confronto",
+  "kicker": "Caso F",
+  "titolo": "Quando PEI quattro, quando PEI cinque",
+  "intro": "La scelta nasce dall'analisi dei flussi, dello sporco abrasivo, della continuità dei passaggi e dell'immagine che il committente vuole mantenere nel tempo nelle aree più battute.",
+  "a": {
+   "h": "PEI quattro",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Traffico intenso ma non estremo"
+    },
+    {
+     "d": "Ingressi filtrati e pulizia efficace"
+    },
+    {
+     "d": "Flussi abbastanza distribuiti"
+    },
+    {
+     "d": "Equilibrio tra prestazione ed estetica"
+    }
+   ]
+  },
+  "b": {
+   "h": "PEI cinque",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Accessi diretti dall'esterno"
+    },
+    {
+     "d": "Sabbia, umidità, sporco ricorrenti"
+    },
+    {
+     "d": "Traiettorie molto concentrate"
+    },
+    {
+     "d": "Maggiore margine contro usura precoce"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m12_s021",
+  "layout": "evidenza",
+  "kicker": "Caso F",
+  "titolo": "L'usura emerge dove il traffico insiste",
+  "eyebrow": "",
+  "testo": "Il campione visto in showroom non vive l'esercizio reale. In galleria commerciale conta la somma dei passaggi, che rende visibile il decadimento proprio nelle zone più osservate.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m12_s022",
+  "layout": "tabella",
+  "kicker": "Caso F",
+  "titolo": "Tre scenari per motivare PEI",
+  "cols": [
+   "Scenario",
+   "Segnali",
+   "Orientamento"
+  ],
+  "righe": [
+   [
+    "Galleria interna gestita",
+    "Accessi protetti, tappeti, pulizia costante",
+    "PEI quattro coerente"
+   ],
+   [
+    "Grande centro esposto",
+    "Affluenza alta, sabbia, umidità, ingressi diretti",
+    "PEI cinque più rassicurante"
+   ],
+   [
+    "Piccola galleria di servizio",
+    "Passaggi regolari, non massivi, percorso lineare",
+    "Fascia alta, evitando classi leggere"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s023",
+  "layout": "numeri",
+  "kicker": "Casi guidati",
+  "titolo": "Quattro casi guidati per analogia corretta",
+  "intro": "Quando il nome del locale confonde, conta la famiglia d'uso reale. Questi quattro esempi mostrano come trovare la classe minima partendo dall'ambiente a cui il caso assomiglia davvero.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Camere albergo: logica R9, R10 possibile",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Laboratorio gastronomico: come cucina professionale",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Ballatoi esterni: partenza vicina a R11",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Docce-vasca: classi A, B, C, non R",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s024",
+  "layout": "flusso",
+  "kicker": "Zone miste",
+  "titolo": "Continuità estetica senza perdere coerenza tecnica",
+  "intro": "Nelle aree collegate il desiderio di un solo prodotto è legittimo, ma la verifica parte sempre dalla zona più severa. Solo dopo valuti unificazione, differenziazione e richiamo all'attrito dinamico.",
+  "passi": [
+   {
+    "h": "Richiesta del progetto",
+    "d": "Una collezione unica per ambienti diversi"
+   },
+   {
+    "h": "Nodo decisivo",
+    "d": "Individua la zona tecnicamente più severa"
+   },
+   {
+    "h": "Verifica del prodotto",
+    "d": "Deve coprire l'area più impegnativa"
+   },
+   {
+    "h": "Esito corretto",
+    "d": "Unifica se regge, separa se le prestazioni divergono"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s025",
+  "layout": "numeri",
+  "kicker": "Metodo rapido",
+  "titolo": "Le cinque domande della prima risposta",
+  "intro": "Per dare un primo orientamento senza banalizzare il caso, usa sempre la stessa sequenza. Le cinque domande ti aiutano a separare famiglie tecniche, severità d'uso e possibilità di unificare i materiali.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Calzature o piedi nudi",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Interno asciutto, esterno esposto o umido operativo",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Traffico lieve, intenso o professionale",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Criticità: scivolamento o usura dello smalto",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "Un solo materiale o materiali distinti",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s026",
+  "layout": "esercizio",
+  "kicker": "Sintesi",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: la classe antiscivolo minima",
+  "intro": "Scegli la classe antiscivolo minima (DIN 51130, DIN 51097). Il D.M. 236/89 chiede un attrito dinamico di almeno 0,40.",
+  "campi": [
+   {
+    "h": "A · Camera da letto",
+    "tipo": "scelta",
+    "opzioni": [
+     "R9",
+     "R10",
+     "R11",
+     "R12",
+     "R13",
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "giuste": [
+     "R9",
+     "R10"
+    ],
+    "spiega": "Residenziale: R9 è sufficiente."
+   },
+   {
+    "h": "B · Cucina di ristorante",
+    "tipo": "scelta",
+    "opzioni": [
+     "R9",
+     "R10",
+     "R11",
+     "R12",
+     "R13",
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "giuste": [
+     "R12",
+     "R13"
+    ],
+    "spiega": "Cucina professionale: R12, con V4."
+   },
+   {
+    "h": "C · Terrazza esterna o rampa carrabile",
+    "tipo": "scelta",
+    "opzioni": [
+     "R9",
+     "R10",
+     "R11",
+     "R12",
+     "R13",
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "giuste": [
+     "R11",
+     "R12",
+     "R13"
+    ],
+    "spiega": "Esterni e rampe: R11 come minimo."
+   },
+   {
+    "h": "D · Bordo piscina, a piedi nudi",
+    "tipo": "scelta",
+    "opzioni": [
+     "R9",
+     "R10",
+     "R11",
+     "R12",
+     "R13",
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "giuste": [
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "spiega": "Bordo piscina: classe B."
+   },
+   {
+    "h": "E · Spogliatoio della piscina, a piedi nudi",
+    "tipo": "scelta",
+    "opzioni": [
+     "R9",
+     "R10",
+     "R11",
+     "R12",
+     "R13",
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "giuste": [
+     "A (piedi nudi)",
+     "B (piedi nudi)",
+     "C (piedi nudi)"
+    ],
+    "spiega": "Spogliatoi: classe A, il minimo a piedi nudi."
+   },
+   {
+    "h": "F · Gres smaltato in un centro commerciale",
+    "d": "Classe PEI minima",
+    "tipo": "scelta",
+    "opzioni": [
+     "PEI 1",
+     "PEI 2",
+     "PEI 3",
+     "PEI 4–5"
+    ],
+    "giuste": [
+     "PEI 4–5"
+    ],
+    "spiega": "Traffico intenso: PEI 4 o 5."
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m12_s027",
+  "layout": "chiusura",
+  "kicker": "Checkpoint",
+  "titolo": "Schema finale per scegliere senza confusione",
+  "modNum": "12",
+  "punti": [
+   {
+    "h": "Prima il contesto",
+    "d": "Uso, sporco, percorso, conseguenze di una scelta debole"
+   },
+   {
+    "h": "Poi la famiglia tecnica",
+    "d": "R per calzature, A-B-C per piedi nudi, PEI per usura"
+   },
+   {
+    "h": "Non confondere i piani",
+    "d": "Camera da letto resta logica R anche se a piedi nudi"
+   },
+   {
+    "h": "La soglia minima nasce dall'uso",
+    "d": "Esempi chiave: R12 V4, R11, A-B, PEI quattro-cinque"
+   }
+  ],
+  "prossimo": {
+   "modulo": "13",
+   "titolo": "Esercitazione 7: sequenza operativa"
+  }
+ }
+]

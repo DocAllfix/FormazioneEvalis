@@ -80,6 +80,9 @@ const RAMPA = {
 }[temaNome];
 const CELLA = "box-sizing:border-box; min-width:0; overflow-wrap:anywhere;";
 const numIt = (v) => (typeof v === "number" ? v.toLocaleString("it-IT", { maximumFractionDigits: 1 }) : esc(v));
+// valori DICHIARATI di grafici e voci: tutti i decimali dati (fino a 3), mai arrotondati a uno
+// (0,16 diventava 0,2 in una barra: fadpia01 m09_s029, 28/10/2026); le tacche degli assi restano numIt
+const numVal = (v) => (typeof v === "number" ? v.toLocaleString("it-IT", { maximumFractionDigits: 3 }) : esc(v));
 // numeri dei calcoli (layout calcolo e simulatore): stessi arrotondamenti del materiale del committente
 const numDec = (v, d) => (typeof v === "number" ? v.toLocaleString("it-IT", { maximumFractionDigits: d, useGrouping: "always" }) : esc(v));
 const numRis = (v) => { const a = Math.abs(v); return numDec(v, a >= 100 ? 0 : a >= 10 ? 1 : a >= 1 ? 2 : 3); };
@@ -99,6 +102,74 @@ const legendaSerie = (nomi) =>
   `<div style="display:flex; flex-wrap:wrap; gap:8px 22px; margin:0 0 16px;">${nomi.map((n, i) =>
     `<span style="display:flex; gap:8px; align-items:center; font-size:14px; color:${C.body}; ${CELLA}">${pastiglia(SERIE[i % SERIE.length])}${esc(n)}</span>`).join("")}</div>`;
 const pagina = (s, corpo) => shell(header(s.kicker || "", s.ref || "", false) + mid(titoloIntro(s) + corpo + fonteDati(s)) + footer(s.footer, false), C.cream, s.label);
+
+const escAttr = (s = "") => esc(s).replace(/"/g, "&quot;");
+
+// formule dei calcolatori: funzioni AUTOSUFFICIENTI (niente variabili esterne), perché il loro testo
+// finisce identico nello script della slide. Dato mancante o non positivo → «—», mai NaN a schermo.
+const CALCOLATORI = {
+  consumi: {
+    guida: "Cambia formato, spessore, fuga, superficie o tecnica di spalmatura: i consumi si ricalcolano.",
+    valori: { a: 60, b: 60, c: 10, d: 3, s: 45, spatola: "10", doppia: "si" },
+    ingressi: {
+      a: { l: "Lato A della piastrella", u: "cm" }, b: { l: "Lato B della piastrella", u: "cm" },
+      c: { l: "Spessore della piastrella", u: "mm" }, d: { l: "Larghezza della fuga", u: "mm" },
+      s: { l: "Superficie da posare", u: "m²" },
+      spatola: { l: "Spatola dentata", opzioni: [["6", "6 mm"], ["8", "8 mm"], ["10", "10 mm"]] },
+      doppia: { l: "Doppia spalmatura", opzioni: [["si", "sì"], ["no", "no"]] },
+    },
+    uscite: {
+      fug: { l: "Fugante per metro quadrato", u: "kg/m²", passo: true }, fugtot: { l: "Fugante totale", u: "kg", passo: true },
+      ad: { l: "Adesivo per metro quadrato", u: "kg/m²", passo: true }, adtot: { l: "Adesivo totale", u: "kg", passo: true },
+      sacchi: { l: "Sacchi di adesivo da 25 kg", u: "sacchi", passo: true },
+    },
+    nota: "Fugante: (A + B) / (A × B) × C × D × 1,6 con i lati in millimetri. Adesivo: spatola da 6, 8 o 10 mm = 3, 3,8 o 4,5 kg/m², più 1,5 con la doppia spalmatura.",
+    calcola: function (v) {
+      function f(x, d) { return x.toLocaleString("it-IT", { maximumFractionDigits: d, useGrouping: true }); }
+      // tetti ragionevoli: lati fino a 300 cm, spessore 50 mm, fuga 30 mm, superficie 10.000 m²
+      function ok(x, max) { return typeof x === "number" && isFinite(x) && x > 0 && x <= max; }
+      var r = { fug: "—", passo_fug: "", fugtot: "—", passo_fugtot: "", ad: "—", passo_ad: "", adtot: "—", passo_adtot: "", sacchi: "—", passo_sacchi: "" };
+      if (ok(v.a, 300) && ok(v.b, 300) && ok(v.c, 50) && ok(v.d, 30)) {
+        var A = v.a * 10, B = v.b * 10, k = (A + B) / (A * B) * v.c * v.d * 1.6;
+        r.fug = f(k, 3); r.passo_fug = "(" + f(A + B, 0) + " / " + f(A * B, 0) + ") × " + f(v.c, 1) + " × " + f(v.d, 1) + " × 1,6";
+        if (ok(v.s, 10000)) { r.fugtot = f(k * v.s, 2); r.passo_fugtot = f(k, 3) + " × " + f(v.s, 2) + " m²"; }
+      }
+      var sp = { "6": 3, "8": 3.8, "10": 4.5 }[String(v.spatola)];
+      if (sp) {
+        var ad = sp + (v.doppia === "si" ? 1.5 : 0);
+        r.ad = f(ad, 1); r.passo_ad = f(sp, 1) + (v.doppia === "si" ? " + 1,5 di doppia spalmatura" : ", spalmatura singola");
+        if (ok(v.s, 10000)) {
+          var t = ad * v.s;
+          r.adtot = f(t, 1); r.passo_adtot = f(ad, 1) + " × " + f(v.s, 2) + " m²";
+          r.sacchi = String(Math.ceil(t / 25 - 1e-9)); r.passo_sacchi = f(t, 1) + " / 25 = " + f(t / 25, 2) + ", per eccesso";
+        }
+      }
+      return r;
+    },
+  },
+  giunti: {
+    guida: "Cambia le misure della terrazza: campi, giunti e superficie dei campi si ricalcolano con la regola degli esterni.",
+    valori: { l1: 8, l2: 12 },
+    ingressi: { l1: { l: "Lato A della terrazza", u: "m" }, l2: { l: "Lato B della terrazza", u: "m" } },
+    uscite: {
+      g1: { l: "Giunti intermedi lungo il lato A", u: "", passo: true }, g2: { l: "Giunti intermedi lungo il lato B", u: "", passo: true },
+      campi: { l: "Campi risultanti", u: "", passo: true }, area: { l: "Superficie di ciascun campo", u: "m²", passo: true },
+    },
+    nota: "Esterni: campi fino a 9 m² con lato fino a 3 m; giunti intermedi = campi − 1 su ogni lato. Giunto perimetrale continuo di 8–10 mm, riempito con sigillante elastico o profilo.",
+    calcola: function (v) {
+      function f(x, d) { return x.toLocaleString("it-IT", { maximumFractionDigits: d, useGrouping: true }); }
+      function ok(x) { return typeof x === "number" && isFinite(x) && x > 0 && x <= 1000; }
+      var r = { g1: "—", passo_g1: "", g2: "—", passo_g2: "", campi: "—", passo_campi: "", area: "—", passo_area: "" };
+      if (!(ok(v.l1) && ok(v.l2))) return r;
+      var n1 = Math.ceil(v.l1 / 3 - 1e-9), n2 = Math.ceil(v.l2 / 3 - 1e-9), a = v.l1 * v.l2 / (n1 * n2);
+      r.g1 = String(n1 - 1); r.passo_g1 = f(v.l1, 2) + " m / 3 m: " + n1 + (n1 === 1 ? " campo" : " campi");
+      r.g2 = String(n2 - 1); r.passo_g2 = f(v.l2, 2) + " m / 3 m: " + n2 + (n2 === 1 ? " campo" : " campi");
+      r.campi = String(n1 * n2); r.passo_campi = n1 + " × " + n2;
+      r.area = f(a, 2); r.passo_area = f(v.l1 * v.l2, 2) + " m² / " + (n1 * n2) + ", campo di " + f(v.l1 / n1, 2) + " × " + f(v.l2 / n2, 2) + " m";
+      return r;
+    },
+  },
+};
 
 const LAYOUTS = {
   // copertina scura: kicker (Modulo NN) + label corso, titolo grande, sottotitolo, agenda opz.
@@ -305,10 +376,10 @@ const LAYOUTS = {
       // l'obiettivo è un segno verticale DENTRO la traccia: nessun testo, non cambia l'altezza
       const segno = x.obiettivo != null
         ? `<div style="position:absolute; top:-5px; bottom:-5px; left:${Math.min(100, (100 * x.obiettivo) / max).toFixed(1)}%; width:3px; margin-left:-1px; background:${C.ink}; border-radius:2px;"></div>` : "";
-      let valore = vs.map((v) => `${numIt(v)}${esc(u)}`).join("<br>");
+      let valore = vs.map((v) => `${numVal(v)}${esc(u)}`).join("<br>");
       if (x.obiettivo != null) {
         const ok = x.meglioBasso ? vs[0] <= x.obiettivo : vs[0] >= x.obiettivo;
-        valore += `<span style="color:${C.muted}; font-weight:400;"> / ob. ${numIt(x.obiettivo)}${esc(u)}</span><br><span style="font-family:${F.mono}; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:${ok ? C.accent : C.ink};">${ok ? "in linea" : "da migliorare"}</span>`;
+        valore += `<span style="color:${C.muted}; font-weight:400;"> / ob. ${numVal(x.obiettivo)}${esc(u)}</span><br><span style="font-family:${F.mono}; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:${ok ? C.accent : C.ink};">${ok ? "in linea" : "da migliorare"}</span>`;
       }
       return `<div style="display:grid; grid-template-columns:minmax(0,30%) minmax(0,1fr) minmax(0,170px); gap:18px; align-items:center; padding:9px 0; border-top:1px solid ${C.line};">` +
         `<div style="font-size:15px; line-height:1.35; color:${C.body}; text-align:right; ${CELLA}">${esc(x.l)}</div>` +
@@ -334,7 +405,7 @@ const LAYOUTS = {
     const legenda = s.voci.map((x, i) =>
       `<div style="display:grid; grid-template-columns:auto minmax(0,1fr) auto auto; gap:14px; align-items:center; padding:11px 0; border-top:1px solid ${C.line};">${pastiglia(SERIE[i % SERIE.length])}` +
       `<span style="font-size:16px; line-height:1.35; color:${C.body}; ${CELLA}">${esc(x.l)}</span>` +
-      `<span style="font-family:${F.grot}; font-weight:600; font-size:16px; color:${C.ink}; font-variant-numeric:tabular-nums;">${numIt(x.v)}${esc(u)}</span>` +
+      `<span style="font-family:${F.grot}; font-weight:600; font-size:16px; color:${C.ink}; font-variant-numeric:tabular-nums;">${numVal(x.v)}${esc(u)}</span>` +
       `<span style="font-family:${F.mono}; font-size:13px; color:${C.muted}; min-width:58px; text-align:right; font-variant-numeric:tabular-nums;">${numIt(Math.round((1000 * x.v) / tot) / 10)}%</span></div>`).join("");
     const totale = s.totale
       ? `<div style="display:flex; gap:14px; align-items:baseline; margin-bottom:10px;"><span style="font-family:${F.grot}; font-weight:700; font-size:48px; line-height:1; color:${C.accent};">${esc(s.totale.n)}</span><span style="font-size:16px; color:${C.muted}; ${CELLA}">${esc(s.totale.eti || "")}</span></div>` : "";
@@ -364,7 +435,7 @@ const LAYOUTS = {
     const tick = [4, 3, 2, 1, 0].map((t) => `<span style="font-family:${F.mono}; font-size:12px; line-height:1; color:${C.muted};">${numIt(min + ((max - min) * t) / 4)}</span>`).join("");
     const etichette = s.periodi.map((p) => `<span style="font-family:${F.mono}; font-size:12px; color:${C.muted}; text-align:center; ${CELLA}">${esc(p)}</span>`).join("");
     const legenda = `<div style="display:flex; flex-wrap:wrap; gap:8px 26px; margin:0 0 16px;">${s.serie.map((x, i) =>
-      `<span style="display:flex; gap:8px; align-items:center; font-size:14px; color:${C.body}; ${CELLA}">${pastiglia(SERIE[i % SERIE.length])}${esc(x.nome)} <b style="font-family:${F.grot}; color:${C.ink};">${numIt(x.v[x.v.length - 1])}${esc(u)}</b></span>`).join("")}</div>`;
+      `<span style="display:flex; gap:8px; align-items:center; font-size:14px; color:${C.body}; ${CELLA}">${pastiglia(SERIE[i % SERIE.length])}${esc(x.nome)} <b style="font-family:${F.grot}; color:${C.ink};">${numVal(x.v[x.v.length - 1])}${esc(u)}</b></span>`).join("")}</div>`;
     return pagina(s, legenda +
       `<div style="display:grid; grid-template-columns:56px ${W}px; gap:0 24px;">` +
       `<div style="display:flex; flex-direction:column; justify-content:space-between; align-items:flex-end; height:${H + 12}px; margin:-6px 0;">${tick}</div>` +
@@ -556,6 +627,116 @@ const LAYOUTS = {
       "S.querySelector('[data-reset]').addEventListener('click',function(){ins.forEach(function(el){el.value=el.getAttribute('data-v');});upd();});})();</script>";
     // lo script va DENTRO la section: si inserisce prima della sua chiusura
     const html = pagina(s, guida + tabella + tonn + ripristina + piede);
+    const ix = html.lastIndexOf("</section>");
+    return html.slice(0, ix) + script + html.slice(ix);
+  },
+
+  // esercitazione interattiva del committente (cream): tendine e caselle con «Controlla», «Mostra la
+  // soluzione», «Ricomincia». Ogni campo dichiara le risposte accettate (scelta) o il valore atteso con la
+  // sua tolleranza (numero): il controllo è SOLO quello, nessuna regola inventata. La slide non tocca
+  // tracciamento né avanzamento (l'avanzamento lo decide il checkpoint lato server): sbagliare qui non
+  // blocca nessuno. Altezza FISSA: ogni esito ha la sua riga riservata, il player misura solo all'avvio.
+  // { titolo, intro?, colonne?: 1|2, campi: [{ h, d?, tipo: "scelta", opzioni, giuste, spiega, errore? }
+  //   | { h, d?, tipo: "numero", u?, atteso, toll?, tollAss?, intero?, min?, max?, soluzione, spiega, errore? }], piede? }
+  esercizio(s) {
+    const col = s.colonne ?? 2;
+    // righe riservate all'esito: quante ne servono al messaggio più lungo della slide (stima prudente
+    // dei caratteri per riga; _prova-interattive.mjs verifica che l'altezza non cambi con nessun messaggio)
+    const lungo = Math.max(...s.campi.map((x) => Math.max(("Da rivedere: " + (x.errore ?? x.spiega)).length, x.spiega.length)));
+    const righeEsito = Math.ceil(lungo / (col === 1 ? 40 : 74));
+    const campo = (x, i) => {
+      const attr = x.tipo === "scelta"
+        ? `data-giuste="${escAttr(JSON.stringify(x.giuste))}"`
+        : `data-atteso="${x.atteso ?? ""}" data-toll="${x.toll ?? ""}" data-tollass="${x.tollAss ?? ""}" data-intero="${x.intero ? 1 : ""}" data-min="${x.min ?? ""}" data-max="${x.max ?? ""}" data-sol="${escAttr(x.soluzione)}"`;
+      const ctrl = x.tipo === "scelta"
+        ? `<select data-ctl aria-label="${escAttr(x.h)}" style="box-sizing:border-box; width:100%; max-width:100%; padding:7px 9px; font-family:${F.sans}; font-size:14px; color:${C.ink}; background:${C.card}; border:2px solid ${C.accent}; border-radius:8px;"><option value="">${col === 1 ? "n." : "Seleziona"}</option>${x.opzioni.map((o) => `<option value="${escAttr(o)}">${esc(o)}</option>`).join("")}</select>`
+        : `<span style="display:flex; gap:8px; align-items:baseline;"><input data-ctl type="text" inputmode="decimal" autocomplete="off" aria-label="${escAttr(x.h)}" style="box-sizing:border-box; width:130px; padding:7px 9px; font-family:${F.grot}; font-weight:600; font-size:16px; text-align:right; color:${C.ink}; background:${C.card}; border:2px solid ${C.accent}; border-radius:8px;">${x.u ? `<span style="font-size:13px; color:${C.muted};">${esc(x.u)}</span>` : ""}</span>`;
+      const testo = col === 1
+        ? `<div style="flex:1; min-width:0; font-size:15px; line-height:1.35; color:${C.ink}; ${CELLA}">${esc(x.h)}</div>`
+        : `<div style="font-family:${F.grot}; font-weight:600; font-size:15px; line-height:1.3; color:${C.ink}; ${CELLA}">${esc(x.h)}</div>` +
+          (x.d ? `<div style="font-size:13px; line-height:1.4; color:${C.body}; margin-top:3px; ${CELLA}">${esc(x.d)}</div>` : "");
+      const esito = `<div data-esito data-spiega="${escAttr(x.spiega)}" data-errore="${escAttr(x.errore ?? x.spiega)}" style="min-height:${righeEsito * 17}px; font-size:12.5px; line-height:1.36; color:${C.muted}; ${CELLA}"></div>`;
+      // una colonna (sequenze): tendina, attività ed esito sulla stessa riga
+      return col === 1
+        ? `<div data-campo="${i}" data-tipo="${x.tipo}" ${attr} style="display:grid; grid-template-columns:86px minmax(0,1fr) 300px; gap:14px; align-items:center; padding:5px 0; border-top:1px solid ${C.line};"><div style="width:86px;">${ctrl}</div>${testo}${esito}</div>`
+        : `<div data-campo="${i}" data-tipo="${x.tipo}" ${attr} style="display:flex; flex-direction:column; gap:5px; min-width:0; background:${C.card}; border:1px solid ${C.line}; border-radius:10px; padding:9px 12px;"><div>${testo}</div>${ctrl}${esito}</div>`;
+    };
+    const griglia = col === 1
+      ? `<div>${s.campi.map(campo).join("")}</div>`
+      : `<div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px;">${s.campi.map(campo).join("")}</div>`;
+    const bottone = (az, t, pieno) => `<button data-azione="${az}" type="button" style="font-family:${F.sans}; font-size:14px; font-weight:600; color:${pieno ? C.card : C.accent}; background:${pieno ? C.accent : "transparent"}; border:1px solid ${C.accent}; border-radius:8px; padding:7px 14px; cursor:pointer;">${t}</button>`;
+    const guida = `<div style="display:flex; gap:10px; align-items:baseline; margin:0 0 12px; font-size:15px; color:${C.body}; ${CELLA}"><span style="font-family:${F.mono}; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:${C.card}; background:${C.accent}; padding:4px 9px; border-radius:5px; flex:0 0 auto;">Prova tu</span><span>Rispondi, poi premi «Controlla». Questa prova non conta per il checkpoint e puoi ripeterla quando vuoi.</span></div>`;
+    const comandi = `<div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:12px;">${bottone("controlla", "Controlla", true)}${bottone("soluzione", "Mostra la soluzione")}${bottone("ricomincia", "Ricomincia")}<span data-riepilogo style="min-height:20px; font-family:${F.grot}; font-weight:600; font-size:15px; color:${C.ink};"></span></div>`;
+    const piede = s.piede ? `<p style="font-size:14px; line-height:1.5; color:${C.muted}; margin:10px 0 0; max-width:95ch;">${esc(s.piede)}</p>` : "";
+    // stessi colori della palette, passati allo script come attributi (lo script non scrive stili propri)
+    const script = "<script>(function(){var S=document.currentScript.closest('section');if(!S)return;" +
+      "var B=S.querySelector('[data-esercizio]'),OK=B.getAttribute('data-ok'),KO=B.getAttribute('data-ko'),MU=B.getAttribute('data-mu');" +
+      "var campi=[].slice.call(S.querySelectorAll('[data-campo]')),R=S.querySelector('[data-riepilogo]');" +
+      "function num(t){t=String(t).replace(/\\s/g,'').replace(',','.');if(!/^-?\\d+(\\.\\d+)?$/.test(t))return NaN;return parseFloat(t);}" +
+      "function giusto(c){var v=c.querySelector('[data-ctl]').value;if(v==='')return null;" +
+      "if(c.getAttribute('data-tipo')==='scelta')return JSON.parse(c.getAttribute('data-giuste')).indexOf(v)>=0;" +
+      "var x=num(v);if(isNaN(x))return false;var g=function(k){var a=c.getAttribute('data-'+k);return a===''?null:Number(a);};" +
+      "if(g('min')!==null&&g('max')!==null)return x>=g('min')&&x<=g('max');var t=g('atteso');" +
+      "if(c.getAttribute('data-intero'))return x===t;if(g('tollass')!==null)return Math.abs(x-t)<=g('tollass')+1e-9;" +
+      "return Math.abs(x-t)<=Math.abs(t)*(g('toll')||0)+1e-9;}" +
+      "function scrivi(c,t,col){var e=c.querySelector('[data-esito]');e.textContent=t;e.style.color=col;}" +
+      "function controlla(){var n=0;campi.forEach(function(c){var r=giusto(c),e=c.querySelector('[data-esito]');" +
+      "if(r===null)scrivi(c,c.getAttribute('data-tipo')==='scelta'?'Scegli una risposta.':'Inserisci un valore.',MU);" +
+      "else if(r){n++;scrivi(c,'Corretto.',OK);}else scrivi(c,'Da rivedere: '+e.getAttribute('data-errore'),KO);});" +
+      "R.textContent='Risposte corrette: '+n+' su '+campi.length;}" +
+      "function soluzione(){campi.forEach(function(c){var k=c.querySelector('[data-ctl]');" +
+      "k.value=c.getAttribute('data-tipo')==='scelta'?JSON.parse(c.getAttribute('data-giuste'))[0]:c.getAttribute('data-sol');" +
+      "scrivi(c,c.querySelector('[data-esito]').getAttribute('data-spiega'),OK);});R.textContent='Ecco la soluzione.';}" +
+      "function ricomincia(){campi.forEach(function(c){c.querySelector('[data-ctl]').value='';scrivi(c,'',MU);});R.textContent='';}" +
+      "var A={controlla:controlla,soluzione:soluzione,ricomincia:ricomincia};" +
+      "[].slice.call(S.querySelectorAll('[data-azione]')).forEach(function(b){b.addEventListener('click',A[b.getAttribute('data-azione')]);});})();</script>";
+    const corpo = `<div data-esercizio data-ok="${C.accent}" data-ko="#B42318" data-mu="${C.muted}">${guida}${griglia}${comandi}${piede}</div>`;
+    const html = pagina(s, corpo);
+    const ix = html.lastIndexOf("</section>");
+    return html.slice(0, ix) + script + html.slice(ix);
+  },
+
+  // calcolatore con formula FISSA del corso (cream): l'allievo cambia i dati e i risultati si ricalcolano.
+  // Le formule sono solo quelle verificate (consumi: fugante coi lati in millimetri, adesivo da spatola e
+  // doppia spalmatura, sacchi per eccesso; giunti: lato massimo del campo, giunti = campi − 1). La STESSA
+  // funzione riempie la slide qui e ricalcola nel browser (toString), così i due non possono divergere.
+  // Nasce compilata coi dati del caso. { titolo, intro?, formula: "consumi" | "giunti", valori, piede? }
+  calcolatore(s) {
+    const def = CALCOLATORI[s.formula];
+    if (!def) throw new Error(`${s.id}: formula sconosciuta ${s.formula}`);
+    const val = { ...def.valori, ...(s.valori || {}) };
+    const ris = def.calcola(val);
+    const ingresso = (k) => {
+      const x = def.ingressi[k];
+      const ctl = x.opzioni
+        ? `<select data-in="${k}" aria-label="${escAttr(x.l)}" style="box-sizing:border-box; width:150px; padding:7px 9px; font-family:${F.sans}; font-size:14px; color:${C.ink}; background:${C.card}; border:2px solid ${C.accent}; border-radius:8px;">${x.opzioni.map(([v, t]) => `<option value="${escAttr(v)}"${String(val[k]) === String(v) ? " selected" : ""}>${esc(t)}</option>`).join("")}</select>`
+        : `<input data-in="${k}" type="text" inputmode="decimal" autocomplete="off" value="${escAttr(String(val[k]).replace(".", ","))}" aria-label="${escAttr(x.l)}" style="box-sizing:border-box; width:110px; padding:7px 9px; font-family:${F.grot}; font-weight:600; font-size:16px; text-align:right; color:${C.ink}; background:${C.card}; border:2px solid ${C.accent}; border-radius:8px;">`;
+      return `<div style="display:flex; justify-content:space-between; gap:12px; align-items:center; padding:7px 0; border-bottom:1px solid ${C.line};"><span style="font-size:14.5px; color:${C.ink}; ${CELLA}">${esc(x.l)}</span><span style="display:flex; gap:8px; align-items:baseline; flex:0 0 auto;">${ctl}<span style="font-size:12px; color:${C.muted}; min-width:24px;">${esc(x.u || "")}</span></span></div>`;
+    };
+    const uscita = (k) => {
+      const y = def.uscite[k];
+      return `<div style="padding:8px 0; border-bottom:1px solid ${C.line};"><div style="display:flex; justify-content:space-between; gap:12px; align-items:baseline;"><span style="font-size:14.5px; font-weight:600; color:${C.ink}; ${CELLA}">${esc(y.l)}</span><span style="font-family:${F.grot}; font-weight:700; font-size:18px; color:${C.ink}; font-variant-numeric:tabular-nums; white-space:nowrap;"><span data-out="${k}">${esc(ris[k])}</span> <span style="font-family:${F.sans}; font-weight:400; font-size:12px; color:${C.muted};">${esc(y.u || "")}</span></span></div>` +
+        (y.passo ? `<div data-passo="${k}" style="min-height:18px; font-family:${F.mono}; font-size:12px; color:${C.muted}; margin-top:2px; ${CELLA}">${esc(ris["passo_" + k] || "")}</div>` : "") + `</div>`;
+    };
+    const etichetta = (t) => `<div style="font-family:${F.mono}; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:${C.accent}; margin-bottom:6px;">${t}</div>`;
+    const guida = `<div style="display:flex; gap:10px; align-items:baseline; margin:0 0 14px; font-size:15px; color:${C.body}; ${CELLA}"><span style="font-family:${F.mono}; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:${C.card}; background:${C.accent}; padding:4px 9px; border-radius:5px; flex:0 0 auto;">Prova tu</span><span>${esc(def.guida)}</span></div>`;
+    const corpo = guida + `<div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:36px;">` +
+      `<div style="min-width:0;">${etichetta("Dati")}${Object.keys(def.ingressi).map(ingresso).join("")}` +
+      `<div style="margin-top:12px;"><button data-reset type="button" style="font-family:${F.sans}; font-size:14px; font-weight:600; color:${C.accent}; background:transparent; border:1px solid ${C.accent}; border-radius:8px; padding:7px 14px; cursor:pointer;">Ripristina i dati del caso</button></div></div>` +
+      `<div style="min-width:0;">${etichetta("Risultati")}${Object.keys(def.uscite).map(uscita).join("")}` +
+      (def.nota ? `<p style="font-size:13.5px; line-height:1.45; color:${C.muted}; margin:10px 0 0;">${esc(def.nota)}</p>` : "") + `</div></div>` +
+      (s.piede ? `<p style="font-size:14px; line-height:1.5; color:${C.muted}; margin:12px 0 0; max-width:95ch;">${esc(s.piede)}</p>` : "");
+    const script = "<script>(function(){var S=document.currentScript.closest('section');if(!S)return;" +
+      `var calcola=${def.calcola.toString()};var V=${JSON.stringify(val)};` +
+      "var ins=[].slice.call(S.querySelectorAll('[data-in]'));" +
+      "function leggi(){var v={};ins.forEach(function(el){var t=String(el.value).replace(/\\s/g,'').replace(',','.');" +
+      "v[el.getAttribute('data-in')]=el.tagName==='SELECT'?el.value:(/^\\d+(\\.\\d+)?$/.test(t)?parseFloat(t):NaN);});return v;}" +
+      "function upd(){var r=calcola(leggi());[].slice.call(S.querySelectorAll('[data-out]')).forEach(function(el){el.textContent=r[el.getAttribute('data-out')];});" +
+      "[].slice.call(S.querySelectorAll('[data-passo]')).forEach(function(el){el.textContent=r['passo_'+el.getAttribute('data-passo')]||'';});}" +
+      "ins.forEach(function(el){el.addEventListener('input',upd);el.addEventListener('change',upd);});" +
+      "S.querySelector('[data-reset]').addEventListener('click',function(){ins.forEach(function(el){var k=el.getAttribute('data-in');" +
+      "el.value=el.tagName==='SELECT'?String(V[k]):String(V[k]).replace('.',',');});upd();});})();</script>";
+    const html = pagina(s, corpo);
     const ix = html.lastIndexOf("</section>");
     return html.slice(0, ix) + script + html.slice(ix);
   },

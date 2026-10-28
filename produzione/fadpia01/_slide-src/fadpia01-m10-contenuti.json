@@ -1,0 +1,1100 @@
+[
+ {
+  "id": "fadpia01_m10_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 10",
+  "titolo": "Progetto dei giunti di una terrazza esterna",
+  "corsoLabel": "Piastrellista · UNI 11493-1:2025",
+  "eyebrow": "Modulo 10",
+  "sottotitolo": "Un caso vicino al lavoro reale: una terrazza regolare, scelte apparentemente semplici e conseguenze decisive sulla durata del rivestimento. Il percorso segue una logica sequenziale, dai dati iniziali ai giunti, senza confondere fuga e movimento.",
+  "agenda": [
+   "Caso reale",
+   "Regole guida",
+   "Primi calcoli",
+   "Risultati attesi",
+   "Distinzione chiave"
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s002",
+  "layout": "numeri",
+  "kicker": "Caso di partenza",
+  "titolo": "I quattro dati della terrazza",
+  "intro": "Il caso è semplice nella geometria ma sensibile nel comportamento: dimensioni chiare, superficie ampia, formato medio e forte esposizione al sole. Da qui parte il progetto dei giunti.",
+  "numeri": [
+   {
+    "n": "8 m",
+    "h": "Lato corto",
+    "d": ""
+   },
+   {
+    "n": "12 m",
+    "h": "Lato lungo",
+    "d": ""
+   },
+   {
+    "n": "96 m²",
+    "h": "Superficie totale",
+    "d": ""
+   },
+   {
+    "n": "30 x 60 cm",
+    "h": "Formato in gres",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s003",
+  "layout": "cards",
+  "kicker": "Obiettivo operativo",
+  "titolo": "Le sei risposte del progetto",
+  "intro": "Le decisioni non sono indipendenti: formano una catena. Prima si governano i lati e i campi, poi si definiscono bordo perimetrale e materiale di riempimento.",
+  "cards": [
+   {
+    "h": "Lato da 8 m",
+    "d": "Giunti intermedi necessari"
+   },
+   {
+    "h": "Lato da 12 m",
+    "d": "Giunti intermedi necessari"
+   },
+   {
+    "h": "Numero dei campi",
+    "d": "Quanti se ne ottengono"
+   },
+   {
+    "h": "Superficie del campo",
+    "d": "Estensione di ogni porzione"
+   },
+   {
+    "h": "Giunto perimetrale",
+    "d": "Larghezza minima in esterno"
+   },
+   {
+    "h": "Riempimento",
+    "d": "Materiale corretto da usare"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s004",
+  "layout": "ciclo",
+  "kicker": "Logica tecnica",
+  "titolo": "Tre capisaldi per progettare i campi",
+  "intro": "Un campo esterno non è una porzione disegnata per comodità: è una parte di pavimentazione che deve muoversi senza trasferire tensioni eccessive alle zone vicine.",
+  "ciclo": false,
+  "centro": "Campo esterno stabile",
+  "nodi": [
+   {
+    "h": "Superficie massima",
+    "d": "Contiene le tensioni nel singolo campo"
+   },
+   {
+    "h": "Lato massimo",
+    "d": "Evita forme troppo lunghe e deboli"
+   },
+   {
+    "h": "Giunti perimetrali continui",
+    "d": "Liberano il bordo dai vincoli rigidi"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s005",
+  "layout": "tabella",
+  "kicker": "Primo limite",
+  "titolo": "Ogni campo resta entro nove metri quadrati",
+  "cols": [
+   "Campo",
+   "Area",
+   "Esito sul limite di 9 m²"
+  ],
+  "righe": [
+   [
+    "3 x 3 m",
+    "9 m²",
+    "Accettabile per area"
+   ],
+   [
+    "2 x 4 m",
+    "8 m²",
+    "Accettabile per area"
+   ],
+   [
+    "3,5 x 3 m",
+    "10,5 m²",
+    "Oltre il limite"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s006",
+  "layout": "confronto",
+  "kicker": "Secondo limite",
+  "titolo": "Perché l'area non basta",
+  "intro": "Il vincolo dei tre metri sul lato completa il controllo dell'area: impedisce campi allungati che, pur restando sotto nove metri quadrati, lavorano peggio in esercizio.",
+  "a": {
+   "h": "Sotto 9 m² ma errato",
+   "sub": "",
+   "punti": [
+    {
+     "d": "2 x 4,5 m = 9 m²"
+    },
+    {
+     "d": "Lato da 4,5 m"
+    },
+    {
+     "d": "Supera il massimo di 3 m"
+    }
+   ]
+  },
+  "b": {
+   "h": "Doppio controllo corretto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "3 x 3 m = 9 m²"
+    },
+    {
+     "d": "Nessun lato oltre 3 m"
+    },
+    {
+     "d": "Campo accettabile"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m10_s007",
+  "layout": "definizione",
+  "kicker": "Perimetro",
+  "titolo": "Il bordo non va chiuso",
+  "eyebrow": "",
+  "definizione": "Separazione elastica e senza interruzioni tra pavimentazione e muri, soglie, pilastri, parapetti o altri elementi che possono vincolare il bordo.",
+  "punti": []
+ },
+ {
+  "id": "fadpia01_m10_s008",
+  "layout": "flusso",
+  "kicker": "Metodo",
+  "titolo": "La sequenza corretta del progetto",
+  "intro": "Una procedura ordinata evita due errori tipici: dividere l'area a intuito e rimandare il perimetro alla finitura. Prima si definisce la maglia logica, poi si coordina la posa.",
+  "passi": [
+   {
+    "h": "Leggi la superficie",
+    "d": "Forma complessiva e lati effettivi"
+   },
+   {
+    "h": "Scansiona i lati",
+    "d": "Suddividi ogni direzione entro 3 m"
+   },
+   {
+    "h": "Verifica i campi",
+    "d": "Controlla che restino entro 9 m²"
+   },
+   {
+    "h": "Chiudi il controllo",
+    "d": "Perimetro continuo e sempre separato"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s009",
+  "layout": "evidenza",
+  "kicker": "Calcolo 1",
+  "titolo": "Sul lato da otto metri servono due giunti",
+  "eyebrow": "",
+  "testo": "Il conteggio parte dal numero minimo di campi necessari lungo il lato. Solo dopo si traduce quel dato nel numero dei giunti intermedi richiesti dal frazionamento.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m10_s010",
+  "layout": "numeri",
+  "kicker": "Calcolo due",
+  "titolo": "Tre giunti sul lato da dodici metri",
+  "intro": "Sul lato da dodici metri il metodo resta identico: escludi le ipotesi che superano tre metri, accetti il valore esatto al limite e traduci i campi nei giunti intermedi.",
+  "numeri": [
+   {
+    "n": "12 m",
+    "h": "lato da suddividere",
+    "d": ""
+   },
+   {
+    "n": "3 campi",
+    "h": "ipotesi esclusa: 4 m per campo",
+    "d": ""
+   },
+   {
+    "n": "4 campi",
+    "h": "soluzione corretta: 3 m esatti",
+    "d": ""
+   },
+   {
+    "n": "3 giunti",
+    "h": "linee interne tra quattro campi",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s011",
+  "layout": "cards",
+  "kicker": "Calcolo uno",
+  "titolo": "Otto metri: tre campi, due giunti",
+  "intro": "Sul lato da otto metri conta prima le porzioni necessarie, non i tagli desiderati. La soluzione corretta è il minimo numero di campi che resta entro il lato massimo.",
+  "cards": [
+   {
+    "h": "Due campi",
+    "d": "quattro metri per campo, oltre limite"
+   },
+   {
+    "h": "Tre campi",
+    "d": "circa 2,67 metri, soluzione minima"
+   },
+   {
+    "h": "Quattro campi",
+    "d": "tecnicamente ammessi, ma non necessari"
+   },
+   {
+    "h": "Due giunti",
+    "d": "separano tre campi consecutivi"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s012",
+  "layout": "split",
+  "kicker": "Lettura spaziale",
+  "titolo": "Due giunti diventano tre tratti utili",
+  "lead": "Il risultato numerico acquista senso solo quando diventa spazio reale: due giunti interni trasformano il lato da otto metri in tre tratti controllati e vanno coordinati prima con lo schema di posa.",
+  "punti": [
+   {
+    "h": "Funzione tecnica",
+    "d": "interrompere continuità e contenere i movimenti"
+   },
+   {
+    "h": "Traduzione geometrica",
+    "d": "otto metri diventano tre campi utili"
+   },
+   {
+    "h": "Coordinamento operativo",
+    "d": "prima criterio tecnico, poi formato e bordi"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s013",
+  "layout": "definizione",
+  "kicker": "Metodo costante",
+  "titolo": "Dodici metri: quattro campi al limite",
+  "eyebrow": "",
+  "definizione": "È un vincolo di conformità: superarlo è errore, raggiungerlo è consentito. Per dodici metri significa quattro campi e tre giunti intermedi.",
+  "punti": []
+ },
+ {
+  "id": "fadpia01_m10_s014",
+  "layout": "ciclo",
+  "kicker": "Lettura progettuale",
+  "titolo": "La griglia nasce da due direzioni",
+  "intro": "I due risultati parziali iniziano a comporre una maglia leggibile: tre campi su un lato e quattro sull'altro trasformano la terrazza in un reticolo ordinato, da leggere per direzioni e non per somme.",
+  "ciclo": false,
+  "centro": "Maglia della terrazza",
+  "nodi": [
+   {
+    "h": "Lato da 8 m",
+    "d": "tre campi, due giunti intermedi"
+   },
+   {
+    "h": "Lato da 12 m",
+    "d": "quattro campi, tre giunti intermedi"
+   },
+   {
+    "h": "Incrocio delle linee",
+    "d": "nascono campi rettangolari regolari"
+   },
+   {
+    "h": "Errore tipico",
+    "d": "giunti e campi non si sommano"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s015",
+  "layout": "flusso",
+  "kicker": "Calcolo tre",
+  "titolo": "Dodici campi dall'incrocio delle partizioni",
+  "intro": "Per ottenere il totale dei campi non addizioni i risultati dei lati: incroci le partizioni delle due direzioni. La logica corretta della griglia è moltiplicativa.",
+  "passi": [
+   {
+    "h": "Primo verso",
+    "d": "tre campi sul lato da otto metri"
+   },
+   {
+    "h": "Secondo verso",
+    "d": "quattro campi sul lato da dodici metri"
+   },
+   {
+    "h": "Incrocio",
+    "d": "ogni fascia incontra tutte le altre"
+   },
+   {
+    "h": "Totale",
+    "d": "tre per quattro uguale dodici campi"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s016",
+  "layout": "confronto",
+  "kicker": "Chiarezza geometrica",
+  "titolo": "Dodici campi, non sette né cinque",
+  "intro": "Il numero dodici si capisce meglio quando distingui linee, fasce e riquadri: ciò che vedi tracciato non coincide con le porzioni risultanti. La rete nasce dalle combinazioni tra le due direzioni.",
+  "a": {
+   "h": "Letture fuorvianti",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Tre più quattro uguale sette"
+    },
+    {
+     "d": "Due più tre uguale cinque"
+    },
+    {
+     "d": "Le linee non sono i campi"
+    }
+   ]
+  },
+  "b": {
+   "h": "Lettura corretta",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Tre fasce per quattro fasce"
+    },
+    {
+     "d": "Le combinazioni totali sono dodici"
+    },
+    {
+     "d": "Il reticolo governa posa e controlli"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m10_s017",
+  "layout": "tabella",
+  "kicker": "Calcolo quattro",
+  "titolo": "Otto metri quadrati per ciascun campo",
+  "cols": [
+   "Verifica",
+   "Dati",
+   "Risultato"
+  ],
+  "righe": [
+   [
+    "Per superficie",
+    "96 m² ÷ 12 campi",
+    "8 m² per campo"
+   ],
+   [
+    "Per geometria",
+    "circa 2,67 m × 3 m",
+    "circa 8 m²"
+   ],
+   [
+    "Esito",
+    "doppio controllo coerente",
+    "suddivisione confermata"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s018",
+  "layout": "piramide",
+  "kicker": "Verifica finale",
+  "titolo": "La geometria finale supera due verifiche",
+  "intro": "La soluzione finale regge perché soddisfa insieme i due vincoli del caso: area massima e lato massimo. Ridurre i giunti farebbe crescere almeno uno dei due valori.",
+  "livelli": [
+   {
+    "h": "Progetto valido",
+    "d": "due verifiche positive sulla stessa maglia"
+   },
+   {
+    "h": "Area del campo",
+    "d": "8 m² entro il limite di 9 m²"
+   },
+   {
+    "h": "Lato maggiore",
+    "d": "3 m, massimo consentito rispettato"
+   },
+   {
+    "h": "Conseguenza",
+    "d": "meno giunti romperebbero l'equilibrio tecnico"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s019",
+  "layout": "evidenza",
+  "kicker": "Giunto perimetrale",
+  "titolo": "Il bordo esterno richiede spazio reale",
+  "eyebrow": "",
+  "testo": "In esterno il perimetro non rifinisce soltanto la terrazza: assorbe movimento. La misura di riferimento è nell'ordine di otto o dieci millimetri, continua lungo tutto il contorno e mai ridotta a una fessura.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m10_s020",
+  "layout": "cards",
+  "kicker": "Controllo in cantiere",
+  "titolo": "Dove il perimetro si perde",
+  "intro": "Tra disegno e posa il valore corretto si perde soprattutto nei bordi più esposti alle correzioni dell'ultima ora. Il controllo professionale non guarda solo la pulizia: verifica che il bordo resti davvero libero di lavorare.",
+  "cards": [
+   {
+    "h": "Zone critiche",
+    "d": "Soglie, pareti, parapetti, spigoli"
+   },
+   {
+    "h": "Controllo utile",
+    "d": "Distanza coerente lungo tutto il contorno"
+   },
+   {
+    "h": "Errore tipico",
+    "d": "Recuperare allineamento mangiando il bordo"
+   },
+   {
+    "h": "Indicazione corretta",
+    "d": "Otto o dieci millimetri continui"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s021",
+  "layout": "organigramma",
+  "kicker": "Bordo funzionale",
+  "titolo": "Il bordo deve lavorare davvero",
+  "intro": "Il giunto perimetrale esterno è una riserva di movimento distribuita lungo il contorno. Funziona solo se resta separato dagli elementi rigidi e se i punti più critici vengono riconosciuti prima della posa.",
+  "radice": {
+   "h": "Giunto perimetrale esterno",
+   "d": "Spazio funzionale che evita la compressione al bordo"
+  },
+  "rami": [
+   {
+    "h": "Vincoli rigidi",
+    "d": "Elementi che possono bloccare il rivestimento",
+    "voci": [
+     "Pareti e zoccolature",
+     "Soglie di porte finestre",
+     "Parapetti laterali",
+     "Pilastri e pilastrini"
+    ]
+   },
+   {
+    "h": "Segnali di blocco",
+    "d": "Il movimento cerca sfogo altrove",
+    "voci": [
+     "Fughe che si aprono male",
+     "Piastrelle che suonano tese",
+     "Sollevamenti in punti localizzati"
+    ]
+   },
+   {
+    "h": "Punti delicati",
+    "d": "Tratti da proteggere con più attenzione",
+    "voci": [
+     "Davanti alla soglia",
+     "Lati contro parapetto",
+     "Spigoli e cambi di direzione"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s022",
+  "layout": "numeri",
+  "kicker": "Misura da conservare",
+  "titolo": "Tre cause di un bordo ristretto",
+  "intro": "Dire otto o dieci millimetri non basta: in cantiere la misura si riduce per abitudini molto concrete. Riconoscerle in anticipo è il modo migliore per difendere continuità e capacità di compensazione.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Allineamento cercato troppo comodamente",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Paura che il giunto si veda troppo",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Fretta nelle ultime file di posa",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s023",
+  "layout": "confronto",
+  "kicker": "Riempimento dei giunti",
+  "titolo": "Riempire il giunto senza bloccarlo",
+  "intro": "La larghezza da sola non basta. Il giunto funziona quando lo spazio resta elastico anche dopo la finitura, sia al perimetro sia nelle linee di frazionamento tra campi adiacenti.",
+  "a": {
+   "h": "Riempimento corretto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Sigillante elastico o profilo preformato"
+    },
+    {
+     "d": "Protegge e rifinisce il bordo"
+    },
+    {
+     "d": "Mantiene capacità di deformarsi"
+    },
+    {
+     "d": "Vale anche per i giunti interni"
+    }
+   ]
+  },
+  "b": {
+   "h": "Riempimento scorretto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Materiali rigidi"
+    },
+    {
+     "d": "Chiudono meccanicamente lo spazio"
+    },
+    {
+     "d": "Il giunto resta visibile ma inutile"
+    },
+    {
+     "d": "Annullano la funzione di compensazione"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m10_s024",
+  "layout": "evidenza",
+  "kicker": "Soluzione corretta",
+  "titolo": "Il sigillante elastico accompagna il movimento",
+  "eyebrow": "",
+  "testo": "Il sigillante elastico chiude il giunto in modo ordinato senza trasformarlo in un vincolo. Resta efficace quando entra in un bordo progettato bene, continuo e realmente lasciato libero di lavorare.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m10_s025",
+  "layout": "split",
+  "kicker": "Alternativa corretta",
+  "titolo": "Il profilo preformato rende leggibile il giunto",
+  "lead": "Il profilo preformato non cambia la funzione del giunto: la rende più esplicita. È utile quando vuoi una linea tecnica chiara, controllabile nel tempo e integrata nel disegno della terrazza.",
+  "punti": [
+   {
+    "h": "Lettura tecnica",
+    "d": "Dichiara dove la superficie si interrompe"
+   },
+   {
+    "h": "Funzione invariata",
+    "d": "Protegge senza perdere elasticità"
+   },
+   {
+    "h": "Quando aiuta",
+    "d": "Giunti regolari, visibili, facili da controllare"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s026",
+  "layout": "numeri",
+  "kicker": "Errore da evitare",
+  "titolo": "Tre equivoci dietro i materiali rigidi",
+  "intro": "La chiusura rigida inganna perché può sembrare più uniforme il giorno della consegna. In realtà svuota di senso campi, perimetro e giunti di movimento, facendo emergere i problemi solo con l'esercizio.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Trattare ogni giunto come una fessura qualunque",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Confondere giunti di movimento e fughe",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Preferire uniformità visiva alla funzione tecnica",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s027",
+  "layout": "tabella",
+  "kicker": "Dati in disegno",
+  "titolo": "Dai calcoli alla griglia dei giunti",
+  "cols": [
+   "Elemento",
+   "Dato",
+   "Esito",
+   "Nota"
+  ],
+  "righe": [
+   [
+    "Lato corto",
+    "8 metri",
+    "3 campi",
+    "2 giunti intermedi"
+   ],
+   [
+    "Lato lungo",
+    "12 metri",
+    "4 campi",
+    "3 giunti intermedi"
+   ],
+   [
+    "Perimetro",
+    "Tutto il contorno",
+    "Giunto continuo",
+    "8 o 10 millimetri"
+   ],
+   [
+    "Schema finale",
+    "Rettangolo semplice",
+    "12 campi",
+    "Prima funzione, poi posa"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s028",
+  "layout": "split",
+  "kicker": "Posa coordinata",
+  "titolo": "Formato trenta per sessanta, giunti prima",
+  "lead": "Il coordinamento funziona quando la maglia tecnica resta prioritaria e la posa la accompagna con ordine. Il formato aiuta ritmo, allineamenti e tagli finali, ma non giustifica spostamenti arbitrari o riduzioni dei giunti.",
+  "punti": [
+   {
+    "h": "Gerarchia corretta",
+    "d": "Prima funzione dei giunti, poi ordine esecutivo"
+   },
+   {
+    "h": "Obiettivo vero",
+    "d": "Evitare tagli scomodi e disegno confuso"
+   },
+   {
+    "h": "Metodo pratico",
+    "d": "Schizzo con giunti, orientamento, soglie, punti delicati"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s029",
+  "layout": "flusso",
+  "kicker": "Cantiere",
+  "titolo": "Tracciamento chiaro, schema rispettato",
+  "intro": "Lo schema diventa esecuzione solo quando viene riportato sul piano di posa con riferimenti certi, condiviso con la squadra e controllato durante l'avanzamento, senza affidarsi a memoria, occhio o correzioni locali.",
+  "passi": [
+   {
+    "h": "Riporta la maglia",
+    "d": "Perimetro continuo e linee principali nelle due direzioni"
+   },
+   {
+    "h": "Verifica i punti critici",
+    "d": "Soglie, spigoli, scarichi, presenze singolari"
+   },
+   {
+    "h": "Condividi con la squadra",
+    "d": "Linee visibili e sequenza di posa coerente"
+   },
+   {
+    "h": "Controlla in corso d'opera",
+    "d": "Posizione dei giunti, bordo, deformazioni della griglia"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s030",
+  "layout": "organigramma",
+  "kicker": "Sistema completo",
+  "titolo": "Terrazza coordinata in un unico schema",
+  "intro": "Quando perimetro, giunti interni, campi e posa vengono letti come un sistema unico, la griglia smette di sembrare un vincolo aggiunto e diventa l'ossatura che rende affidabile la superficie.",
+  "radice": {
+   "h": "Rettangolo 8 × 12 m",
+   "d": "Progetto dei giunti come struttura della posa"
+  },
+  "rami": [
+   {
+    "h": "Perimetro",
+    "d": "Giunto continuo 8-10 mm",
+    "voci": [
+     "Riempimento elastico",
+     "Sigillante o profilo preformato",
+     "Mai materiali rigidi"
+    ]
+   },
+   {
+    "h": "Griglia interna",
+    "d": "Due giunti sul lato da 8 m",
+    "voci": [
+     "Tre giunti sul lato da 12 m",
+     "Maglia tecnica completa"
+    ]
+   },
+   {
+    "h": "Campi",
+    "d": "Dodici porzioni regolari",
+    "voci": [
+     "Circa 2,67 × 3 m",
+     "Circa 8 m² per campo"
+    ]
+   },
+   {
+    "h": "Posa 30 × 60",
+    "d": "Si organizza sulla griglia",
+    "voci": [
+     "Tagli sensati",
+     "Equilibrio visivo",
+     "Nessuna riduzione dei giunti"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s031",
+  "layout": "calcolatore",
+  "kicker": "Variazione lato corto",
+  "ref": "Prova tu",
+  "formula": "giunti",
+  "titolo": "Simulatore: cambia le misure della terrazza",
+  "intro": "Il caso di partenza è la terrazza di 8 × 12 m di Residenza Le Querce."
+ },
+ {
+  "id": "fadpia01_m10_s032",
+  "layout": "cards",
+  "kicker": "Variazione lato lungo",
+  "titolo": "La griglia cambia a scatti",
+  "intro": "Sul lato lungo il progetto resta stabile per intervalli e poi passa alla configurazione successiva quando i campi precedenti non bastano più. È il comportamento a scatti che il simulatore rende subito leggibile.",
+  "cards": [
+   {
+    "h": "Caso 8 × 10 m",
+    "d": "Lungo: 4 campi, 3 giunti intermedi, circa 6,67 m² per campo"
+   },
+   {
+    "h": "Caso 8 × 13 m",
+    "d": "Lungo: 5 campi, 4 giunti intermedi, circa 6,93 m² per campo"
+   },
+   {
+    "h": "Lettura chiave",
+    "d": "Tre campi non bastano a 10 m; quattro non bastano a 13 m"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s033",
+  "layout": "ciclo",
+  "kicker": "Metodo di lettura",
+  "titolo": "I quattro controlli del simulatore",
+  "intro": "Il risultato corretto non nasce dal solo numero dei giunti né dalla sola area totale. Va letto controllando direzioni, griglia, superficie del campo e bordo perimetrale come elementi collegati.",
+  "ciclo": false,
+  "centro": "Risultato corretto",
+  "nodi": [
+   {
+    "h": "Lato corto",
+    "d": "Campi minimi entro 3 m"
+   },
+   {
+    "h": "Lato lungo",
+    "d": "Campi minimi entro 3 m"
+   },
+   {
+    "h": "Griglia complessiva",
+    "d": "Partizioni per partizioni, non linee più linee"
+   },
+   {
+    "h": "Campo e bordo",
+    "d": "Area del singolo campo e perimetro elastico"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s034",
+  "layout": "cards",
+  "kicker": "Interni ampi",
+  "titolo": "Salone interno: leggere prima di disegnare",
+  "intro": "In un grande ambiente interno il bisogno di progettare non scompare. Prima dei giunti, va letta la stanza come sistema: esposizione, forma, collegamenti e vincoli reali che possono guidare una suddivisione coerente.",
+  "cards": [
+   {
+    "h": "Esposizione e calore",
+    "d": "Grandi vetrate possono aumentare le sollecitazioni"
+   },
+   {
+    "h": "Forma e zone d'uso",
+    "d": "Spazio unico o aree percettivamente distinte"
+   },
+   {
+    "h": "Passaggi e collegamenti",
+    "d": "Cucina, ingresso, corridoio, veranda, soglie"
+   },
+   {
+    "h": "Supporto e vincoli",
+    "d": "Sottofondo, setti, pilastri, rientranze, discontinuità"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s035",
+  "layout": "confronto",
+  "kicker": "Consulenza al cliente",
+  "titolo": "Continuità visiva e continuità meccanica",
+  "intro": "In un ambiente giorno ampio, elegante e aperto, il progetto funziona quando distingue ciò che deve apparire fluido da ciò che deve invece governare i movimenti con una separazione intelligente e leggibile.",
+  "a": {
+   "h": "Continuità visiva",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Formato medio o grande"
+    },
+    {
+     "d": "Orientamento costante"
+    },
+    {
+     "d": "Pavimento fluido e ordinato"
+    },
+    {
+     "d": "Eleganza senza frammentazioni arbitrarie"
+    }
+   ]
+  },
+  "b": {
+   "h": "Continuità meccanica",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Giunto in varchi e soglie"
+    },
+    {
+     "d": "Transizioni tra zone della casa"
+    },
+    {
+     "d": "Coordinamento col reticolo di posa"
+    },
+    {
+     "d": "Non nasconderlo a tutti i costi"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m10_s036",
+  "layout": "evidenza",
+  "kicker": "Geometrie allungate",
+  "titolo": "Nel corridoio conta soprattutto la forma",
+  "eyebrow": "",
+  "testo": "Un corridoio lungo può essere delicato anche con poca superficie totale. La direzione dominante, le soglie ripetute e la continuità prospettica impongono di leggere il pavimento per sequenze e punti di interruzione sensati.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m10_s037",
+  "layout": "organigramma",
+  "kicker": "Corridoi lunghi",
+  "titolo": "Il corridoio offre già i nodi utili",
+  "intro": "Nel corridoio lungo il giunto non si appoggia a una linea astratta: trova credibilità dove lo spazio cambia ritmo, funzione o direzione, e dove la posa può essere organizzata in tratte più leggibili.",
+  "radice": {
+   "h": "Nodo spaziale riconoscibile",
+   "d": "La separazione tecnica funziona meglio dove il corridoio cambia lettura"
+  },
+  "rami": [
+   {
+    "h": "Soglie",
+    "d": "Punti di alto valore per coordinare il giunto",
+    "voci": [
+     "cambio di locale",
+     "percezione del pavimento diversa",
+     "uso adiacente diverso"
+    ]
+   },
+   {
+    "h": "Porte e incroci",
+    "d": "Interruzioni già presenti nella continuità d'uso",
+    "voci": [
+     "porte laterali",
+     "svolta verso un'altra ala",
+     "piccolo disimpegno",
+     "allargamento d'ingresso"
+    ]
+   },
+   {
+    "h": "Posa per tratte",
+    "d": "Una logica preventiva rende l'esecuzione più controllabile",
+    "voci": [
+     "chiusura di una tratta",
+     "inizio della successiva",
+     "meno fuori asse amplificati"
+    ]
+   },
+   {
+    "h": "Committente",
+    "d": "Nel corridoio la prospettiva rende visibili le linee",
+    "voci": [
+     "spiegarle come nodi spaziali",
+     "non come tagli casuali"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s038",
+  "layout": "flusso",
+  "kicker": "Impianto radiante",
+  "titolo": "Con il radiante il progetto si legge nel tempo",
+  "intro": "Con il pavimento radiante la superficie appare continua, ma lavora per cicli. Per questo i giunti vanno pensati prima della posa, coordinando planimetria, impianto e comportamento termico nel tempo.",
+  "passi": [
+   {
+    "h": "Movimento invisibile",
+    "d": "Accensioni, spegnimenti e variazioni termiche muovono la superficie"
+   },
+   {
+    "h": "Coordinamento anticipato",
+    "d": "Impianto, zone, soglie e forme vanno letti prima della posa"
+   },
+   {
+    "h": "Domande giuste",
+    "d": "Dove passano i nodi sensibili e le linee più coerenti"
+   },
+   {
+    "h": "Verifica nel tempo",
+    "d": "La qualità emerge quando l'impianto inizia a lavorare"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s039",
+  "layout": "tabella",
+  "kicker": "Metodo operativo",
+  "titolo": "Impianto, stanze e posa con una logica unica",
+  "cols": [
+   "Punto di lettura",
+   "Perché conta"
+  ],
+  "righe": [
+   [
+    "Soglie tra stanze",
+    "Segnalano cambi d'uso, percezione e spesso di comportamento"
+   ],
+   [
+    "Zona giorno-disimpegno",
+    "Più sensata di una linea casuale nel soggiorno"
+   ],
+   [
+    "Tracciamento anticipato",
+    "Riduce conflitti, incomprensioni e correzioni tardive"
+   ],
+   [
+    "Formato e scenari d'uso",
+    "Prima la logica del giunto, poi il disegno di posa"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s040",
+  "layout": "esercizio",
+  "kicker": "Sintesi del caso",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: il progetto dei giunti della terrazza",
+  "intro": "Terrazza esterna di 8 × 12 m (96 m²) al sole, gres 30×60. Regola degli esterni: campi fino a 9 m², lato fino a 3 m, giunti perimetrali continui.",
+  "campi": [
+   {
+    "h": "1 · Giunti intermedi lungo il lato da 8 m",
+    "tipo": "numero",
+    "atteso": 2,
+    "intero": true,
+    "soluzione": "2",
+    "spiega": "8 m / 3 m: 3 campi, quindi 2 giunti intermedi."
+   },
+   {
+    "h": "2 · Giunti intermedi lungo il lato da 12 m",
+    "tipo": "numero",
+    "atteso": 3,
+    "intero": true,
+    "soluzione": "3",
+    "spiega": "12 m / 3 m: 4 campi, quindi 3 giunti intermedi."
+   },
+   {
+    "h": "3 · Campi risultanti",
+    "tipo": "numero",
+    "atteso": 12,
+    "intero": true,
+    "soluzione": "12",
+    "spiega": "3 × 4 = 12 campi."
+   },
+   {
+    "h": "4 · Superficie di ciascun campo",
+    "tipo": "numero",
+    "u": "m²",
+    "atteso": 8,
+    "tollAss": 0.5,
+    "soluzione": "8",
+    "spiega": "96 / 12 = 8 m², entro i 9 m²."
+   },
+   {
+    "h": "5 · Giunto perimetrale in esterno",
+    "tipo": "scelta",
+    "opzioni": [
+     "2 mm",
+     "5 mm",
+     "8–10 mm",
+     "20 mm"
+    ],
+    "giuste": [
+     "8–10 mm"
+    ],
+    "spiega": "In esterno il giunto perimetrale è di 8–10 mm."
+   },
+   {
+    "h": "6 · Riempimento dei giunti",
+    "tipo": "scelta",
+    "opzioni": [
+     "Fugante CG2",
+     "Sigillante elastico / profilo preformato",
+     "Adesivo C2",
+     "Malta cementizia"
+    ],
+    "giuste": [
+     "Sigillante elastico / profilo preformato"
+    ],
+    "spiega": "Sigillante elastico o profilo, mai materiali rigidi."
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m10_s041",
+  "layout": "chiusura",
+  "kicker": "Da portare via",
+  "titolo": "Quattro criteri per il checkpoint",
+  "modNum": "10",
+  "punti": [
+   {
+    "h": "Gerarchia corretta",
+    "d": "Prima ambiente e vincoli, poi campi, infine posa"
+   },
+   {
+    "h": "Distinzioni decisive",
+    "d": "Fughe non sono giunti; campi non sono linee"
+   },
+   {
+    "h": "Perimetro che lavora",
+    "d": "Spazio corretto più riempimento elastico, mai rigido"
+   },
+   {
+    "h": "Ponte verso le fughe",
+    "d": "La larghezza si valuta dentro un sistema già progettato"
+   }
+  ],
+  "prossimo": {
+   "modulo": "11",
+   "titolo": "Esercitazione 5: larghezza delle fughe"
+  }
+ }
+]

@@ -312,6 +312,59 @@ CORSI = {
         "piede": "Privacy per manager e amministratori di sistema — Evalis Academy",
         "file": "Evalis_Academy_Privacy_Manager_ADS_FAD-PRIV-03_Approvazione.docx",
     },
+    "fadpia01": {
+        # norme di ogni modulo; le esercitazioni rimandano al modulo di teoria del materiale
+        "copertura": {
+            1: "L. 4/2013; ISO/IEC 17024; UNI 11493-1; norme di prodotto",
+            2: "UNI EN 14411; ISO 10545-4 e -12; DIN 51130, 51097",
+            3: "UNI 11493-1 (supporti); UNI EN 13813, 13318",
+            4: "UNI EN 12004; UNI EN 13888",
+            5: "UNI 11493-1 (posa, fughe, giunti)",
+            6: "D.Lgs. 81/2008; UNI 11493-1 (manutenzione)",
+            7: "esercitazione 1, rimando al modulo 3",
+            8: "esercitazione 2, rimando al modulo 4",
+            9: "esercitazione 3, rimando al modulo 4",
+            10: "esercitazione 4, rimando al modulo 5",
+            11: "esercitazione 5, rimando al modulo 5",
+            12: "esercitazione 6, rimando al modulo 2",
+            13: "esercitazione 7, rimando al modulo 5",
+            14: "esercitazione 8, rimando al modulo 6",
+        },
+        "tipo_documento": "norma",
+        "titolo_corso": "PIASTRELLISTA — POSATORE DI PAVIMENTI E RIVESTIMENTI CERAMICI (UNI 11493-1)",
+        "titolo_doc": "PROPOSTA DIDATTICA — CORSO PIASTRELLISTA, POSATORE DI PAVIMENTI E RIVESTIMENTI CERAMICI",
+        "presentazione": "Il presente documento raccoglie la struttura didattica del corso FAD-PIA-01 per piastrellisti e posatori "
+            "di pavimenti e rivestimenti ceramici, propedeutico alla certificazione delle competenze secondo la ISO/IEC 17024 "
+            "(schema CERTIS). Il corso nasce dal materiale didattico già redatto (sei moduli di teoria per 16 ore, otto "
+            "esercitazioni pratiche per 24 ore) e ne conserva ordine, regole, esempi e soluzioni. Ogni slide è narrata dal "
+            "relatore avatar, con lo stesso standard di voce, impaginazione e verifica dei corsi già in catalogo. Ogni "
+            "esercitazione diventa un modulo di casi di cantiere guidati dal relatore, con calcoli svolti e simulatori, e si "
+            "chiude con una verifica bloccante costruita sulle voci dell'esercitazione: chi sbaglia non avanza e ripassa il modulo.",
+        "titolo_sintesi": "Piastrellista, posatore di pavimenti e rivestimenti ceramici (UNI 11493-1)",
+        "ore": 40,
+        "verifiche": "Ogni modulo è una lezione della piattaforma e si chiude con un checkpoint di verifica (quiz con domande "
+            "estratte da banca dati, non conteggiato nel monte ore), costruito sulle verifiche e sulle esercitazioni del "
+            "materiale didattico. Il corso si chiude con l'esame finale: 12 domande estratte da una banca di circa 30, soglia "
+            "del 75% (9 su 12), costruito sulle domande del materiale didattico.",
+        "obiettivi": [
+            "Collocare la professione: Legge 4/2013, UNI 11493-1, norme di prodotto, certificazione ISO/IEC 17024",
+            "Scegliere piastrelle, adesivi e sigillanti in funzione di supporto, destinazione d'uso e formato",
+            "Verificare l'idoneità del supporto (umidità, planarità, stagionatura) e verbalizzare le non idoneità",
+            "Calcolare i consumi di adesivo e fugante e ordinare i materiali",
+            "Progettare fughe e giunti di dilatazione, in interno e in esterno",
+            "Eseguire la posa nella sequenza corretta e lavorare in sicurezza, compresa la protezione dalla silice",
+            "Diagnosticare i difetti più frequenti e scegliere l'intervento corretto; consegnare l'opera con le istruzioni di manutenzione",
+        ],
+        "dettagli": [
+            "Destinatari: piastrellisti e posatori che preparano la certificazione delle competenze, imprese di posa. Livello EQF 3",
+            "Checkpoint: uno per modulo, bloccante, cinque domande estratte da una banca di almeno dieci, soglia 80%",
+            "Esame finale: dodici domande estratte dalla banca, soglia 75% (9 su 12)",
+            "Certificato: a fine corso l'attestato provvisorio; la certificazione delle competenze ISO/IEC 17024 si consegue con l'esame CERTIS",
+            "Area di catalogo: mestieri e professioni · Modalità: FAD asincrona con relatore avatar su ogni slide, calcoli svolti e simulatori",
+        ],
+        "piede": "Piastrellista, posatore di pavimenti e rivestimenti ceramici — Evalis Academy",
+        "file": "Evalis_Academy_Piastrellista_FAD-PIA-01_Approvazione.docx",
+    },
 }
 if corso not in CORSI:
     sys.exit(f"{corso}: testi del corso mancanti in CORSI (copertura, presentazione, obiettivi...)")

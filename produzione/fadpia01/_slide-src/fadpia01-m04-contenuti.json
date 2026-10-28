@@ -1,0 +1,1096 @@
+[
+ {
+  "id": "fadpia01_m04_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 4",
+  "titolo": "Adesivo, fugante e sigillante: funzioni distinte",
+  "corsoLabel": "Piastrellista · UNI 11493-1:2025",
+  "eyebrow": "Modulo 4",
+  "sottotitolo": "Nella posa professionale i materiali sotto e tra le piastrelle non sono intercambiabili. Capire che cosa fa ciascun prodotto è il primo passo per prevenire distacchi, fessure, infiltrazioni e ripristini evitabili.",
+  "agenda": [
+   "Adesivo",
+   "Fugante",
+   "Sigillante",
+   "Errori tipici",
+   "Scelta corretta"
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s002",
+  "layout": "flusso",
+  "kicker": "Mappa del modulo",
+  "titolo": "Dal codice prodotto alla posa coerente",
+  "intro": "Il percorso segue una logica precisa: prima leggi famiglie e sigle, poi traduci la classificazione in scelta, preparazione e applicazione, fino all'uso corretto di fuganti e sigillanti.",
+  "passi": [
+   {
+    "h": "1. Famiglie adesivi",
+    "d": "UNI EN 12004 e sigle di base"
+   },
+   {
+    "h": "2. Classi e opzioni",
+    "d": "Normale, migliorata, tempi e scivolamento"
+   },
+   {
+    "h": "3. Deformabilità",
+    "d": "Quando i movimenti entrano nel progetto"
+   },
+   {
+    "h": "4. Scelta e posa",
+    "d": "Supporto, formato, ambiente, stesura"
+   },
+   {
+    "h": "5. Chiusura del sistema",
+    "d": "Fuganti e sigillanti nel punto giusto"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s003",
+  "layout": "organigramma",
+  "kicker": "UNI EN 12004",
+  "titolo": "Tre famiglie per leggere l'adesivo",
+  "intro": "La norma fornisce un lessico tecnico condiviso. La prima lettura distingue la famiglia del prodotto, chiarendo preparazione, presa e contesti d'impiego prima ancora delle classi prestazionali.",
+  "radice": {
+   "h": "Classificazione adesivi",
+   "d": "Primo livello di lettura tecnica"
+  },
+  "rami": [
+   {
+    "h": "C",
+    "d": "Adesivi cementizi",
+    "voci": [
+     "Preparazione con acqua",
+     "Famiglia più diffusa"
+    ]
+   },
+   {
+    "h": "D",
+    "d": "Adesivi in dispersione",
+    "voci": [
+     "Prodotti in pasta",
+     "Uso più selettivo"
+    ]
+   },
+   {
+    "h": "R",
+    "d": "Adesivi reattivi",
+    "voci": [
+     "Epossidici o poliuretanici",
+     "Per casi specialistici"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s004",
+  "layout": "evidenza",
+  "kicker": "Famiglia C",
+  "titolo": "Gli adesivi C richiedono scelta prestazionale",
+  "eyebrow": "",
+  "testo": "La famiglia più usata nella posa ceramica copre molti casi, ma non autorizza soluzioni automatiche. Dentro i cementizi cambiano prestazioni, formati compatibili e risposta alle condizioni di esercizio.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m04_s005",
+  "layout": "confronto",
+  "kicker": "Famiglia D",
+  "titolo": "Adesivi in dispersione entro confini precisi",
+  "intro": "La pasta pronta riduce l'impasto, ma funziona bene solo nel campo per cui è pensata. La comodità non sostituisce compatibilità e prestazione.",
+  "a": {
+   "h": "Dove sì",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Rivestimenti interni"
+    },
+    {
+     "d": "Supporti idonei"
+    },
+    {
+     "d": "Piastrelle assorbenti"
+    }
+   ]
+  },
+  "b": {
+   "h": "Dove no",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Esterni"
+    },
+    {
+     "d": "Gres porcellanato"
+    },
+    {
+     "d": "Acqua, gelo, forti sbalzi termici"
+    },
+    {
+     "d": "Carichi importanti"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m04_s006",
+  "layout": "ciclo",
+  "kicker": "Famiglia R",
+  "titolo": "Adesivi reattivi per esigenze fuori standard",
+  "intro": "I reattivi entrano quando supporti o condizioni d'esercizio escono dallo scenario ordinario. La scelta si giustifica per compatibilità specifica, resistenza chimica e gestione attenta della lavorazione.",
+  "ciclo": false,
+  "centro": "Famiglia R",
+  "nodi": [
+   {
+    "h": "Supporti speciali",
+    "d": "Quando il sottofondo non è convenzionale"
+   },
+   {
+    "h": "Metallo",
+    "d": "Aderenza su materiali non tradizionali"
+   },
+   {
+    "h": "Ambienti aggressivi",
+    "d": "Esposizione a sostanze chimiche"
+   },
+   {
+    "h": "Precisione operativa",
+    "d": "Dosaggio, miscelazione e pulizia più rigorosi"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s007",
+  "layout": "confronto",
+  "kicker": "Classi cementizie",
+  "titolo": "C1 e C2: soglie e contesti",
+  "intro": "Dentro i cementizi, la differenza è prestazionale. La soglia minima di adesione cambia e con essa cambia l'idoneità ai rivestimenti assorbenti, al gres porcellanato, ai pavimenti e agli esterni.",
+  "a": {
+   "h": "C1",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Adesione ≥ 0,5 N/mm²"
+    },
+    {
+     "d": "Classe normale"
+    },
+    {
+     "d": "Interni, piccoli formati assorbenti"
+    }
+   ]
+  },
+  "b": {
+   "h": "C2",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Adesione ≥ 1 N/mm²"
+    },
+    {
+     "d": "Classe migliorata"
+    },
+    {
+     "d": "Gres porcellanato, pavimenti, esterni"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m04_s008",
+  "layout": "tabella",
+  "kicker": "Opzioni di sigla",
+  "titolo": "F, E e T leggono il cantiere",
+  "cols": [
+   "Sigla",
+   "Significato",
+   "Quando conta"
+  ],
+  "righe": [
+   [
+    "F",
+    "Presa rapida",
+    "Interventi rapidi, ridotti tempi di fermo"
+   ],
+   [
+    "E",
+    "Tempo aperto prolungato ≥ 30 minuti",
+    "Clima caldo, grandi superfici"
+   ],
+   [
+    "T",
+    "Scivolamento ridotto ≤ 0,5 mm",
+    "Posa a parete, allineamento più stabile"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s009",
+  "layout": "cards",
+  "kicker": "Deformabilità",
+  "titolo": "S1 e S2 per sistemi che si muovono",
+  "intro": "La deformabilità entra in gioco quando supporti e rivestimenti subiscono variazioni termiche, ritiri o piccole deformazioni. Non corregge errori grossolani: rende l'adesivo più adatto a contesti dinamici.",
+  "cards": [
+   {
+    "h": "S1",
+    "d": "Deformabile, almeno 2,5 millimetri"
+   },
+   {
+    "h": "S2",
+    "d": "Altamente deformabile, almeno 5 millimetri"
+   },
+   {
+    "h": "Grande formato e radiante",
+    "d": "Da 60 centimetri: C2 S1 e doppia spalmatura"
+   },
+   {
+    "h": "Esterni e casi severi",
+    "d": "Piscine, lastre sottili, supporti deformabili: valutare S2"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s010",
+  "layout": "flusso",
+  "kicker": "Lettura della sigla",
+  "titolo": "La sigla si legge in quattro livelli",
+  "intro": "Famiglia, classe, opzioni e deformabilità compongono una sequenza ordinata. Esempi come C2 TE o C2 S1 diventano utili solo quando colleghi ogni parte al cantiere reale.",
+  "passi": [
+   {
+    "h": "Famiglia",
+    "d": "C, D oppure R"
+   },
+   {
+    "h": "Classe",
+    "d": "C1 o C2 nei cementizi"
+   },
+   {
+    "h": "Opzioni",
+    "d": "F, E e T definiscono il comportamento"
+   },
+   {
+    "h": "Deformabilità",
+    "d": "S1 o S2, se presenti"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s011",
+  "layout": "organigramma",
+  "kicker": "Scelta per prestazione",
+  "titolo": "Prestazione attesa, non memoria di sigle",
+  "intro": "La classificazione serve quando anticipa il comportamento in opera. Classe, opzioni e deformabilità vanno lette come leve decisionali: casi semplici, tempi stretti, parete, clima caldo, grandi formati, radiante, esterno.",
+  "radice": {
+   "h": "Decisione di cantiere",
+   "d": "La sigla diventa previsione del comportamento"
+  },
+  "rami": [
+   {
+    "h": "Classe",
+    "d": "Definisce il livello base di prestazione",
+    "voci": [
+     "Normale: lavori semplici",
+     "Migliorata: gres, pavimenti, esterni"
+    ]
+   },
+   {
+    "h": "Opzioni",
+    "d": "Adattano il prodotto al modo di lavorare",
+    "voci": [
+     "F: tempi stretti",
+     "E: più margine di posa",
+     "T: controllo in parete"
+    ]
+   },
+   {
+    "h": "Deformabilità",
+    "d": "Legge i movimenti del sistema",
+    "voci": [
+     "S1: adesivo deformabile",
+     "S2: altamente deformabile"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s012",
+  "layout": "split",
+  "kicker": "Il primo filtro",
+  "titolo": "Il supporto decide il primo filtro",
+  "lead": "La compatibilità del sistema parte dal fondo, non dal rivestimento visibile. Assorbimento, natura del supporto e tendenza a muoversi orientano famiglia dell'adesivo, campo d'uso delle dispersioni e bisogno di deformabilità.",
+  "punti": [
+   {
+    "h": "Prima domanda",
+    "d": "Su che supporto sto incollando davvero"
+   },
+   {
+    "h": "Supporti speciali",
+    "d": "La famiglia R entra quando il fondo lo richiede"
+   },
+   {
+    "h": "Dispersione D",
+    "d": "Solo in interni semplici, assorbenti e compatibili"
+   },
+   {
+    "h": "Supporto in movimento",
+    "d": "La deformabilità dell'adesivo pesa di più"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s013",
+  "layout": "numeri",
+  "kicker": "Rivestimento",
+  "titolo": "Gres e formato cambiano la soglia",
+  "intro": "Con il gres porcellanato la scelta smette di seguire l'apparenza e segue il comportamento. Quando il formato cresce, aumentano esigenze di adesione continua, controllo della posa e gestione delle tensioni.",
+  "numeri": [
+   {
+    "n": "C2",
+    "h": "Riferimento per il gres porcellanato",
+    "d": ""
+   },
+   {
+    "n": "60 cm",
+    "h": "Soglia pratica del grande formato",
+    "d": ""
+   },
+   {
+    "n": "C2 S1",
+    "h": "Verso esterno o pavimento radiante",
+    "d": ""
+   },
+   {
+    "n": "100%",
+    "h": "Bagnatura del retro con doppia spalmatura",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s014",
+  "layout": "punti",
+  "kicker": "Contesto di posa",
+  "titolo": "L'ambiente completa la scelta dell'adesivo",
+  "intro": "La stessa piastrella richiede risposte diverse secondo dove lavora. Parete, caldo, esterno e piscina modificano rischio di scivolamento, tempo utile di posa, tensioni del sistema e severità del servizio.",
+  "punti": [
+   {
+    "h": "Parete",
+    "d": "T limita lo scivolamento e mantiene la quota"
+   },
+   {
+    "h": "Clima caldo",
+    "d": "E allunga il margine utile di posa"
+   },
+   {
+    "h": "Esterno",
+    "d": "Spesso C2; grandi formati verso C2 S1"
+   },
+   {
+    "h": "Piscina",
+    "d": "Servizio severo: valutare anche C2 S2"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s015",
+  "layout": "piramide",
+  "kicker": "Sollecitazioni",
+  "titolo": "Le sollecitazioni alzano il livello richiesto",
+  "intro": "Il sistema va scelto per come lavorerà nel tempo. Traffico, urti, cicli termici, movimenti del supporto e agenti chimici spostano la scelta dalla classe migliorata fino ai reattivi.",
+  "livelli": [
+   {
+    "h": "Supporti speciali",
+    "d": "Possibile uscita dai cementizi verso R"
+   },
+   {
+    "h": "Radiante ed esterno",
+    "d": "I movimenti rendono centrale la deformabilità"
+   },
+   {
+    "h": "Pavimenti trafficati",
+    "d": "Carichi, urti e calpestio alzano la richiesta"
+   },
+   {
+    "h": "Pareti ordinarie",
+    "d": "Sollecitazioni più contenute"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s016",
+  "layout": "flusso",
+  "kicker": "Metodo di scelta",
+  "titolo": "Quattro domande per scegliere bene",
+  "intro": "Un metodo semplice riduce omissioni e abitudini automatiche. Le stesse quattro domande guidano sia casi semplici sia scenari più severi, come gres su radiante o terrazzi esterni con lastre sottili.",
+  "passi": [
+   {
+    "h": "Supporto",
+    "d": "Ordinario o speciale, assorbente o critico"
+   },
+   {
+    "h": "Piastrella",
+    "d": "Gres porcellanato, formato, eventuale lastra sottile"
+   },
+   {
+    "h": "Ambiente",
+    "d": "Interno, esterno, parete, caldo, esposizione"
+   },
+   {
+    "h": "Sollecitazioni",
+    "d": "Traffico, cicli termici, acqua, chimica"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s017",
+  "layout": "confronto",
+  "kicker": "Preparazione",
+  "titolo": "L'acqua d'impasto governa la prestazione",
+  "intro": "Dosaggio preciso, strumenti puliti e costanza tra impasti proteggono le prestazioni del prodotto scelto. Lavorare a sensazione rende ogni secchio diverso e trasferisce il problema direttamente sulla posa.",
+  "a": {
+   "h": "Acqua in eccesso",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Impasto più morbido solo in apparenza"
+    },
+    {
+     "d": "Meno corpo in parete"
+    },
+    {
+     "d": "Spessore utile meno controllabile"
+    },
+    {
+     "d": "Prestazioni del prodotto alterate"
+    }
+   ]
+  },
+  "b": {
+   "h": "Acqua insufficiente",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Impasto duro e faticoso"
+    },
+    {
+     "d": "Spatolatura meno scorrevole"
+    },
+    {
+     "d": "Retro piastrella bagnato peggio"
+    },
+    {
+     "d": "Distribuzione meno uniforme"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m04_s018",
+  "layout": "timeline",
+  "kicker": "Tempo tecnico",
+  "titolo": "Riposo e rimescolatura stabilizzano l'impasto",
+  "intro": "Dopo la miscelazione, il tempo tecnico fa parte della preparazione. Saltarlo spinge spesso a correggere male la consistenza, con aggiunte d'acqua che non risolvono la causa e rendono irregolare il prodotto.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "Miscelazione iniziale",
+    "d": "Distribuisce acqua e componenti"
+   },
+   {
+    "t": "02",
+    "h": "Riposo",
+    "d": "L'impasto si assesta e si regolarizza"
+   },
+   {
+    "t": "03",
+    "h": "Rimescolatura",
+    "d": "Riporta omogeneità e lavorabilità"
+   },
+   {
+    "t": "04",
+    "h": "Stesura",
+    "d": "Senza aggiunte casuali d'acqua"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s019",
+  "layout": "evidenza",
+  "kicker": "Posa",
+  "titolo": "Tempo aperto: finestra utile di contatto",
+  "eyebrow": "",
+  "testo": "L'adesivo steso resta efficace solo per un intervallo limitato. Caldo, aria movimentata e supporto possono ridurlo; la pelle superficiale lo rende visivamente presente ma tecnicamente inadatto, quindi il controllo pratico è indispensabile.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m04_s020",
+  "layout": "definizione",
+  "kicker": "Posa",
+  "titolo": "Tempo di registrabilità: correzioni entro finestra utile",
+  "eyebrow": "",
+  "definizione": "Intervallo utile in cui puoi ancora allineare, mettere in quota e assestare la piastrella appena posata senza alterare il letto di adesivo invece di correggerlo davvero.",
+  "punti": []
+ },
+ {
+  "id": "fadpia01_m04_s021",
+  "layout": "tabella",
+  "kicker": "Attrezzatura",
+  "titolo": "Spatola dentata: scegliere il dente di partenza",
+  "cols": [
+   "Formato piastrella",
+   "Spatola di partenza",
+   "Nota tecnica"
+  ],
+  "righe": [
+   [
+    "Fino a 20 x 20 cm",
+    "6 mm",
+    "Riferimento tipico per formati contenuti"
+   ],
+   [
+    "Fino a 60 x 60 cm",
+    "8-10 mm",
+    "Più margine per contatto e assestamento"
+   ],
+   [
+    "Grandi formati",
+    "10-15 mm",
+    "Da abbinare alla spalmatura sul retro"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s022",
+  "layout": "barre",
+  "kicker": "Pianificazione",
+  "titolo": "Consumi indicativi per dente e tecnica",
+  "intro": "I consumi servono per pianificare ordini e continuità del cantiere, ma restano indicativi. Supporto, formato, regolarità della stesura e doppia spalmatura possono spostare il fabbisogno reale.",
+  "unita": "kg/m²",
+  "voci": [
+   {
+    "l": "Spatola 6 mm",
+    "v": 3
+   },
+   {
+    "l": "Spatola 8 mm",
+    "v": 3.8
+   },
+   {
+    "l": "Spatola 10 mm",
+    "v": 4.5
+   },
+   {
+    "l": "Extra doppia spalmatura",
+    "v": 1.5,
+    "u": "+"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s023",
+  "layout": "cards",
+  "kicker": "Tecnica",
+  "titolo": "Singola spalmatura: valida solo quando coerente",
+  "intro": "È la tecnica più semplice solo in apparenza. Funziona bene quando formato, supporto, ambiente e richiesta di contatto la rendono adeguata; altrimenti diventa una semplificazione che espone a vuoti e posa poco prevedibile.",
+  "cards": [
+   {
+    "h": "Dove funziona",
+    "d": "Formati contenuti, supporti regolari, ambienti non severi"
+   },
+   {
+    "h": "Come stendere",
+    "d": "Cordoli continui, uniformi, senza passaggi casuali"
+   },
+   {
+    "h": "Quanto estendere",
+    "d": "Porzioni compatibili con il tempo aperto"
+   },
+   {
+    "h": "Come assestare",
+    "d": "Pressione e movimento per schiacciare i cordoli"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s024",
+  "layout": "organigramma",
+  "kicker": "Tecnica",
+  "titolo": "Doppia spalmatura: tre casi in cui serve",
+  "intro": "Applicare adesivo sul supporto e sul retro non è un gesto di prudenza generica. Diventa parte del metodo quando i vuoti sotto piastrella sarebbero più critici per formato, esposizione o lavoro termico.",
+  "radice": {
+   "h": "Doppia spalmatura",
+   "d": "Adesivo sul supporto e sul retro"
+  },
+  "rami": [
+   {
+    "h": "Lato almeno 60 cm",
+    "d": "Serve maggiore continuità di contatto",
+    "voci": []
+   },
+   {
+    "h": "Posa in esterno",
+    "d": "Meno tolleranza a vuoti e discontinuità",
+    "voci": []
+   },
+   {
+    "h": "Pavimenti radianti",
+    "d": "Meglio gestire carichi e cicli termici",
+    "voci": []
+   },
+   {
+    "h": "Esecuzione corretta",
+    "d": "Strato sottile sul retro, poi assesta",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s025",
+  "layout": "evidenza",
+  "kicker": "Verifica",
+  "titolo": "Bagnatura del retro: il controllo decisivo",
+  "eyebrow": "",
+  "testo": "La bagnatura del retro verifica se adesivo, spatola e gesto stanno collaborando. Nei casi più impegnativi l'obiettivo è il contatto pieno, perché i vuoti restano invisibili in superficie ma indeboliscono il sistema.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m04_s026",
+  "layout": "cards",
+  "kicker": "Fughe",
+  "titolo": "Le tre classi dei sigillanti per fughe",
+  "intro": "La UNI EN 13888 ordina la scelta dei fuganti in base alla prestazione richiesta. La fuga non incolla la piastrella: protegge i bordi, contribuisce all'igiene e incide sulla durabilità d'uso del rivestimento.",
+  "cards": [
+   {
+    "h": "CG1",
+    "d": "Cementizio normale per impieghi ordinari"
+   },
+   {
+    "h": "CG2",
+    "d": "Cementizio migliorato, anche con opzioni prestazionali"
+   },
+   {
+    "h": "RG",
+    "d": "Reattivo per ambienti molto severi"
+   },
+   {
+    "h": "Ruolo della fuga",
+    "d": "Protezione, pulibilità, finitura, resistenza d'uso"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s027",
+  "layout": "tabella",
+  "kicker": "Scelta prodotto",
+  "titolo": "CG1 e CG2 W negli ambienti comuni",
+  "cols": [
+   "Scenario",
+   "Scelta coerente",
+   "Perché"
+  ],
+  "righe": [
+   [
+    "Soggiorno residenziale ordinario",
+    "CG1",
+    "Sollecitazioni moderate"
+   ],
+   [
+    "Bagni e cucine",
+    "CG2 W",
+    "Meno assorbimento di acqua e sporco"
+   ],
+   [
+    "Esterni",
+    "CG2 W",
+    "Pioggia e variazioni climatiche"
+   ]
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s028",
+  "layout": "confronto",
+  "kicker": "Prestazioni",
+  "titolo": "Usura della fuga tra calma e traffico",
+  "intro": "La resistenza all’abrasione conta quando la fuga affronta passaggio, pulizie energiche e sfregamento ripetuto: la scelta va tarata sul servizio reale, non solo sulla destinazione nominale del locale.",
+  "a": {
+   "h": "Uso contenuto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Camera da letto privata"
+    },
+    {
+     "d": "Sollecitazioni relativamente tranquille"
+    },
+    {
+     "d": "Pulizia ordinaria"
+    },
+    {
+     "d": "Minore pressione su stabilità e aspetto"
+    }
+   ]
+  },
+  "b": {
+   "h": "Uso intenso",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Ingresso molto frequentato"
+    },
+    {
+     "d": "Calpestio e sporco trascinato"
+    },
+    {
+     "d": "Pulizie più energiche, piccoli urti"
+    },
+    {
+     "d": "CG2 con opzione a più coerente"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m04_s029",
+  "layout": "definizione",
+  "kicker": "Famiglie di prodotto",
+  "titolo": "RG per acqua continua, chimica e igiene severa",
+  "eyebrow": "",
+  "definizione": "Fugante reattivo, in pratica soprattutto epossidico, indicato per piscine, industria alimentare ed esposizione a sostanze aggressive.",
+  "punti": []
+ },
+ {
+  "id": "fadpia01_m04_s030",
+  "layout": "split",
+  "kicker": "Scelta operativa",
+  "titolo": "Il fugante corretto e il metodo epossidico",
+  "lead": "La scelta nasce da ambiente e sollecitazioni reali; l’epossidico va riservato ai contesti che lo richiedono e applicato con una sequenza preparata, non improvvisata.",
+  "punti": [
+   {
+    "h": "Parti dal servizio richiesto",
+    "d": "Ambiente, acqua, pulizia, usura, sostanze aggressive"
+   },
+   {
+    "h": "Evita due estremi",
+    "d": "Né fugante base sempre, né epossidico per principio"
+   },
+   {
+    "h": "Tre scenari guida",
+    "d": "Bagno: CG2 W; traffico: abrasione; piscina: RG"
+   },
+   {
+    "h": "Con l’epossidico",
+    "d": "Area pronta, porzioni contenute, pulizia nei tempi"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s031",
+  "layout": "ciclo",
+  "kicker": "Metodo di scelta",
+  "titolo": "Dall’ambiente alla prestazione richiesta",
+  "intro": "Le sigle diventano utili quando le colleghi all’uso reale dell’ambiente: prima identifichi il contesto, poi individui la prestazione dominante e scegli la famiglia di fugante più coerente.",
+  "ciclo": false,
+  "centro": "Uso reale dell’ambiente",
+  "nodi": [
+   {
+    "h": "Semplice",
+    "d": "Interno residenziale ordinario: CG1 coerente"
+   },
+   {
+    "h": "Umido",
+    "d": "Bagno o cucina: sale il peso del ridotto assorbimento"
+   },
+   {
+    "h": "Esterno",
+    "d": "Pioggia e clima rafforzano la scelta di classe superiore"
+   },
+   {
+    "h": "Trafficato",
+    "d": "Ingresso e corridoio: conta la resistenza all’abrasione"
+   },
+   {
+    "h": "Severo",
+    "d": "Acqua continua o chimica: valutazione verso RG"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s032",
+  "layout": "flusso",
+  "kicker": "Applicazione RG",
+  "titolo": "Quando serve RG e come organizzare la posa",
+  "intro": "Nei contesti con acqua continua, igiene molto severa o sostanze aggressive, RG risponde a un servizio diverso; per ottenere il risultato, la posa epossidica va preparata e controllata passo per passo.",
+  "passi": [
+   {
+    "h": "Verifica il contesto",
+    "d": "Piscina, alimentare, ambiente chimicamente aggressivo"
+   },
+   {
+    "h": "Prepara prima di aprire",
+    "d": "Area ordinata, attrezzi puliti, sequenza chiara"
+   },
+   {
+    "h": "Lavora per porzioni contenute",
+    "d": "Superficie compatibile con applicazione e pulizia"
+   },
+   {
+    "h": "Miscela senza scorciatoie",
+    "d": "Dosaggio e uniformità come da produttore"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s033",
+  "layout": "confronto",
+  "kicker": "Stima dei consumi",
+  "titolo": "Consumo del fugante: occhio contro formula",
+  "intro": "Il fabbisogno non nasce dai soli metri quadrati: dipende dal volume da riempire, quindi da formato della piastrella, spessore e larghezza della fuga. Per questo il calcolo a occhio non basta.",
+  "a": {
+   "h": "Stima a occhio",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Sembra accettabile su piccole superfici"
+    },
+    {
+     "d": "Ignora formato, spessore, larghezza"
+    },
+    {
+     "d": "Rischia errori su acquisti e tempi"
+    },
+    {
+     "d": "Confonde area con volume da riempire"
+    }
+   ]
+  },
+  "b": {
+   "h": "Formula utile",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Consumo in kg/m²"
+    },
+    {
+     "d": "[(A+B)/(A×B)] × C × D × 1,6"
+    },
+    {
+     "d": "Piastrella piccola: più linee di fuga"
+    },
+    {
+     "d": "Più spessore o larghezza: più prodotto"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m04_s034",
+  "layout": "cards",
+  "kicker": "Variabili della formula",
+  "titolo": "Le quattro leve del calcolo del consumo",
+  "intro": "Per usare bene la formula devi leggere ogni variabile per ciò che rappresenta: formato, profondità della fuga, ampiezza visibile e densità media di riferimento che trasforma il volume in peso utile.",
+  "cards": [
+   {
+    "h": "A e B",
+    "d": "Lati della piastrella in millimetri: definiscono il formato"
+   },
+   {
+    "h": "C",
+    "d": "Spessore della piastrella: aumenta la profondità da riempire"
+   },
+   {
+    "h": "D",
+    "d": "Larghezza della fuga: allarga il volume di prodotto"
+   },
+   {
+    "h": "1,6",
+    "d": "Densità media di riferimento in kg/m²"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s035",
+  "layout": "flusso",
+  "kicker": "Esempio svolto",
+  "titolo": "Sessanta per sessanta, dieci, tre: il conto guida",
+  "intro": "L’esempio del corso mostra il procedimento completo e chiarisce un punto utile: il grande formato può richiedere più tecnica di posa, ma non implica automaticamente più consumo di fugante.",
+  "passi": [
+   {
+    "h": "Dati iniziali",
+    "d": "A 600, B 600, C 10, D 3, densità 1,6"
+   },
+   {
+    "h": "Rapporto del formato",
+    "d": "(600+600)/(600×600) = circa 0,0033"
+   },
+   {
+    "h": "Consumo unitario",
+    "d": "×10 ×3 ×1,6 = circa 0,16 kg/m²"
+   },
+   {
+    "h": "Lettura pratica",
+    "d": "Su 50 m²: circa 8 kg teorici"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s036",
+  "layout": "numeri",
+  "kicker": "Stima di cantiere",
+  "titolo": "Dal valore unitario al fabbisogno reale",
+  "intro": "Il risultato teorico diventa utile solo quando lo trasformi in stima operativa: moltiplichi per la superficie corretta, separi i formati diversi e aggiungi un margine organizzativo coerente con il cantiere reale.",
+  "numeri": [
+   {
+    "n": "20 m²",
+    "h": "circa 3,2 kg teorici",
+    "d": ""
+   },
+   {
+    "n": "80 m²",
+    "h": "circa 12,8 kg teorici",
+    "d": ""
+   },
+   {
+    "n": "Più formati",
+    "h": "calcoli separati, poi somma finale",
+    "d": ""
+   },
+   {
+    "n": "Stima finale",
+    "h": "valore teorico più margine organizzativo",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s037",
+  "layout": "cards",
+  "kicker": "Giunti",
+  "titolo": "Sigillante elastico e fugante non coincidono",
+  "intro": "Nel rivestimento esistono punti che non vanno trattati come fughe ordinarie. Il sigillante elastico non è un fugante più morbido: serve dove il sistema deve assorbire movimenti e mantenere la tenuta nel tempo.",
+  "cards": [
+   {
+    "h": "Cambio di piano",
+    "d": "Angoli e raccordi assorbono movimenti relativi"
+   },
+   {
+    "h": "Giunti del sistema",
+    "d": "Discontinuità da rispettare, non fughe più larghe"
+   },
+   {
+    "h": "Incontro tra materiali",
+    "d": "Dilatazioni diverse richiedono tenuta elastica"
+   },
+   {
+    "h": "Errore tipico",
+    "d": "Fugante rigido: fessure, distacchi, infiltrazioni"
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s038",
+  "layout": "confronto",
+  "kicker": "Dettaglio di posa",
+  "titolo": "Profilo o sigillante: scelta del dettaglio",
+  "intro": "Il giunto resta una discontinuità progettata del sistema. La scelta tra sigillante elastico e profilo dipende dal risultato tecnico richiesto: assorbire movimento, proteggere il bordo, definire il passaggio tra materiali.",
+  "a": {
+   "h": "Sigillante elastico",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Angoli interni e cambi di piano"
+    },
+    {
+     "d": "Accompagna piccoli movimenti"
+    },
+    {
+     "d": "Mantiene tenuta in punti umidi"
+    },
+    {
+     "d": "Adatto a raccordi sensibili"
+    }
+   ]
+  },
+  "b": {
+   "h": "Profilo",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Protegge bordi e spigoli"
+    },
+    {
+     "d": "Definisce passaggi tra materiali"
+    },
+    {
+     "d": "Utile in soglie e raccordi"
+    },
+    {
+     "d": "Parte del dettaglio tecnico"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpia01_m04_s039",
+  "layout": "organigramma",
+  "kicker": "Compatibilità",
+  "titolo": "Tre verifiche per far funzionare il giunto",
+  "intro": "Un giunto corretto sulla carta può fallire in opera se i prodotti non lavorano bene con superfici, ambiente e sistema di posa. La compatibilità va verificata prima, non corretta dopo.",
+  "radice": {
+   "h": "Compatibilità del giunto",
+   "d": "Elasticità e posizione non bastano"
+  },
+  "rami": [
+   {
+    "h": "Materiali adiacenti",
+    "d": "Ceramica, metallo, vetro, sanitari, serramenti",
+    "voci": []
+   },
+   {
+    "h": "Ambiente di esercizio",
+    "d": "Asciutto, umido, esterno, lavaggi frequenti",
+    "voci": []
+   },
+   {
+    "h": "Sistema di posa",
+    "d": "Fuganti, supporti, profili, manutenzione",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadpia01_m04_s040",
+  "layout": "evidenza",
+  "kicker": "Regola operativa",
+  "titolo": "La scheda tecnica chiude la scelta",
+  "eyebrow": "",
+  "testo": "Classi, sigle e criteri tecnici guidano la scelta, ma l'uso corretto del prodotto si definisce solo leggendo la scheda tecnica. Quando il produttore impone limiti più restrittivi, quell'indicazione prevale.",
+  "dark": true
+ },
+ {
+  "id": "fadpia01_m04_s041",
+  "layout": "chiusura",
+  "kicker": "Sintesi del modulo",
+  "titolo": "Quattro criteri da portare in cantiere",
+  "modNum": "04",
+  "punti": [
+   {
+    "h": "Tre materiali, tre compiti",
+    "d": "Adesivo unisce, fugante completa, sigillante accompagna"
+   },
+   {
+    "h": "Per il gres, riferimento C2",
+    "d": "Opzioni e deformabilità dipendono dal contesto"
+   },
+   {
+    "h": "La scelta parte da quattro domande",
+    "d": "Supporto, piastrella, ambiente, sollecitazioni"
+   },
+   {
+    "h": "Prestazione e posa coincidono",
+    "d": "Preparazione, tempi, tecnica, scheda tecnica"
+   }
+  ],
+  "prossimo": {
+   "modulo": "05",
+   "titolo": "Tecniche di posa, fughe e giunti"
+  }
+ }
+]
