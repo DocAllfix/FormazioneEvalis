@@ -38,6 +38,7 @@ const COURSES: Record<string, string> = {
   fadpriv01: "da857c5c-f9a8-469c-b52d-19ec742c6d73",
   fadpriv02: "8c5267bf-433e-4160-b5e4-fd50abae563c",
   fadpriv03: "eb72ebbf-dae3-4267-b99f-60ef8c1cbee5",
+  fadpia01: "5e765336-281d-40ad-821f-8ec0f18c0554",
 };
 
 async function slidesOf(courseId: string) {
