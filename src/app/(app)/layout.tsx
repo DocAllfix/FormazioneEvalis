@@ -1,4 +1,6 @@
 import { redirect } from "next/navigation";
+import { headers } from "next/headers";
+import { pathInterno } from "@/lib/next-sicuro";
 import { getCurrentSession } from "@/lib/auth/server";
 import { getNavContext } from "@/features/admin/context";
 import { needsOnboarding } from "@/features/onboarding/state";
@@ -17,7 +19,13 @@ export default async function AppLayout({
   children: React.ReactNode;
 }) {
   const ctx = await getCurrentSession();
-  if (!ctx) redirect("/login");
+  if (!ctx) {
+    // dopo il login si torna alla pagina richiesta (es. i Certificati dal pulsante della mail che
+    // chiede l'opinione); l'indirizzo arriva dal proxy e passa dal controllo anti-redirect, come
+    // nel layout dello staff
+    const dove = pathInterno((await headers()).get("x-percorso"), "");
+    redirect(dove ? `/login?next=${encodeURIComponent(dove)}` : "/login");
+  }
 
   const nav = await getNavContext({
     id: ctx.user.id,

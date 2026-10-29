@@ -9,10 +9,14 @@ export {};
 // Uso: npx tsx scripts/produzione/_invita-recensioni.ts                → stampa solo i destinatari
 //      npx tsx scripts/produzione/_invita-recensioni.ts --prova <email> → una mail d'esempio a <email>
 //      npx tsx scripts/produzione/_invita-recensioni.ts --invia         → manda a tutti, una sola volta
+//      aggiungendo --dev legge il DB di SVILUPPO (prova completa) con un registro separato
+//      --anteprima <file.html> salva la mail della prima persona in elenco, senza inviare
 process.env.NEXT_PUBLIC_APP_URL = "https://evalisacademy.it"; // logo e link della mail: il sito vero
 const args = process.argv.slice(2);
 const prova = args.includes("--prova") ? args[args.indexOf("--prova") + 1] : null;
 const invia = args.includes("--invia");
+const dev = args.includes("--dev");
+const anteprima = args.includes("--anteprima") ? args[args.indexOf("--anteprima") + 1] : null;
 if (prova !== null && !prova?.includes("@")) {
   console.error("Uso: [--prova <email> | --invia]");
   process.exit(1);
@@ -24,12 +28,17 @@ const { existsSync, readFileSync, writeFileSync, mkdirSync } = await import("nod
 const { default: postgres } = await import("postgres");
 const { Resend } = await import("resend");
 const { renderEmail, esc } = await import("@/lib/email/layout");
-const { isPlayerReviewerId, isPlatformStaffEmail } = await import("@/features/auth/guards");
+// esclusioni come in features/auth/guards (non importato: si porta dietro sessione e client del DB e
+// lo script non termina). Il revisore del player fisso (dilonardoa28) è anche admin: escluso dal ruolo.
+const lista = (v: string | undefined) => (v ?? "").split(",").map((x) => x.trim().toLowerCase()).filter(Boolean);
+const STAFF_EMAIL = new Set(lista(process.env.PLATFORM_STAFF_EMAILS));
+const REVISORI = new Set(lista(process.env.PLAYER_REVIEWER_USER_IDS));
 
-const REGISTRO = "produzione/_log/inviti-recensioni.json";
+const REGISTRO = dev ? "produzione/_log/inviti-recensioni-dev.json" : "produzione/_log/inviti-recensioni.json";
 const giaInvitati = new Set<string>(existsSync(REGISTRO) ? (JSON.parse(readFileSync(REGISTRO, "utf8")) as string[]) : []);
 
-const sql = postgres(process.env.PROD_DATABASE_URL!, { prepare: false, max: 1, connect_timeout: 10 });
+const sql = postgres((dev ? process.env.DATABASE_URL : process.env.PROD_DATABASE_URL)!, { prepare: false, max: 1, connect_timeout: 10 });
+console.log(dev ? "DB di SVILUPPO" : "DB di PRODUZIONE");
 const righe = await sql<{ user_id: string; email: string; name: string; platform_role: string | null; titolo: string }[]>`
   select u.id as user_id, u.email, u.name, u.platform_role, co.title as titolo
   from certificate c
@@ -43,12 +52,12 @@ await sql.end();
 
 const perPersona = new Map<string, { email: string; name: string; corsi: string[] }>();
 for (const r of righe) {
-  if (r.platform_role === "admin" || isPlatformStaffEmail(r.email) || isPlayerReviewerId(r.user_id) || giaInvitati.has(r.email)) continue;
+  if (r.platform_role === "admin" || STAFF_EMAIL.has(r.email.toLowerCase()) || REVISORI.has(r.user_id.toLowerCase()) || giaInvitati.has(r.email)) continue;
   const p = perPersona.get(r.email) ?? { email: r.email, name: r.name, corsi: [] };
   p.corsi.push(r.titolo);
   perPersona.set(r.email, p);
 }
-console.log(`${perPersona.size} persone da invitare (${giaInvitati.size} già invitate in passato)`);
+console.log(`${perPersona.size} ${perPersona.size === 1 ? "persona" : "persone"} da invitare (${giaInvitati.size} già invitate in passato)`);
 for (const p of perPersona.values()) console.log(`  ${p.email} · ${p.corsi.join(" · ")}`);
 
 const mail = (p: { name: string; corsi: string[] }) => ({
@@ -68,7 +77,12 @@ const mail = (p: { name: string; corsi: string[] }) => ({
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 const FROM = "Evalis Academy <no-reply@evalisacademy.it>";
-if (prova) {
+if (anteprima) {
+  const esempio = [...perPersona.values()][0] ?? { name: "Mario Rossi", corsi: ["Corso di esempio"] };
+  const m = mail(esempio);
+  writeFileSync(anteprima, m.html);
+  console.log(`anteprima salvata in ${anteprima} · oggetto: ${m.subject}`);
+} else if (prova) {
   const esempio = [...perPersona.values()][0] ?? { name: "Mario Rossi", corsi: ["Corso di esempio"] };
   const { error } = await resend.emails.send({ from: FROM, to: prova, ...mail(esempio) });
   console.log(error ? `KO  ${error.message}` : `OK  esempio inviato a ${prova}`);

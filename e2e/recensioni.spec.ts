@@ -115,3 +115,14 @@ test("opinione → approvazione dello staff → landing e scheda del corso → c
 
   expect(errori).toEqual([]);
 });
+
+test("link della mail che chiede l'opinione: da non collegato, login e ritorno ai Certificati", async ({ browser }) => {
+  const pagina = await browser.newPage();
+  const { email } = await registraVerificaLogin(pagina, "Ritorno Certificati");
+  await pagina.context().clearCookies();
+  await pagina.goto("/certificati");
+  await expect(pagina).toHaveURL(/\/login\?next=%2Fcertificati/);
+  await login(pagina, email, undefined, "/certificati");
+  await expect(pagina).toHaveURL(/\/certificati$/);
+  await expect(pagina.getByRole("heading", { name: "Certificati" })).toBeVisible();
+});
