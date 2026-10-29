@@ -9,3 +9,4 @@ export * from "./onboarding";
 export * from "./billing";
 export * from "./security";
 export * from "./anagrafica";
+export * from "./recensioni";

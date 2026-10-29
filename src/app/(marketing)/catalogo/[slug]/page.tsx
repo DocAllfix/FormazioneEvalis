@@ -8,6 +8,8 @@ import { CourseDetailBody, hoursLabel } from "@/components/catalog/course-detail
 import { JsonLd } from "@/components/seo/json-ld";
 import { PrezzoCorso } from "@/components/catalog/prezzo-corso";
 import { registratiPer } from "@/lib/next-sicuro";
+import { opinioniPubbliche, mediaRecensioni } from "@/features/recensioni/pubbliche";
+import { OpinioniCorso } from "@/components/recensioni/opinioni-corso";
 
 const APP = (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
@@ -33,6 +35,11 @@ export default async function CourseTeaserPage({ params }: { params: Promise<{ s
   const c = await getPublicCourseBySlug(slug);
   if (!c) notFound();
   const d = c.details ?? {};
+  // un guasto delle recensioni non deve mai far cadere la scheda del corso
+  const [opinioni, media] = await Promise.all([
+    opinioniPubbliche({ corsoId: c.id, limite: 6 }).catch(() => []),
+    mediaRecensioni(c.id).catch(() => null),
+  ]);
 
   const aside = (
     <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
@@ -105,6 +112,7 @@ export default async function CourseTeaserPage({ params }: { params: Promise<{ s
           </nav>
           <div className="flex flex-col gap-6">
             <CourseDetailBody c={c} aside={aside} />
+            <OpinioniCorso media={media} opinioni={opinioni} />
           </div>
         </div>
       </main>

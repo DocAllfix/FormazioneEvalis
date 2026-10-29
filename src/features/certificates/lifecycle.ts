@@ -36,6 +36,7 @@ import { inviaEmailConAllegati } from "@/lib/email/resend";
 import { requirePlatformAdmin, requireSession, isPlatformAdmin } from "@/features/auth/guards";
 import { withTenant, type TenantCtx } from "@/lib/db/tenant";
 import { ErroreUtente } from "@/lib/esito";
+import { haRecensione } from "@/features/recensioni/recensioni";
 type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -459,7 +460,9 @@ export async function confermaCaricamentoById(
   });
 
   // mail best-effort: il certificato è già emesso e scaricabile dall'area privata
-  const mail = mailAccreditatoUtente({ ...d, number: numeroMostrato }, baseUrl(), sostituzione);
+  // alla prima emissione, se l'opinione sul corso manca, la mail la chiede (un guasto qui non la chiede)
+  const chiedi = !sostituzione && !(await haRecensione(d.enrollmentId).catch(() => true));
+  const mail = mailAccreditatoUtente({ ...d, number: numeroMostrato }, baseUrl(), sostituzione, chiedi);
   await inviaEmailConAllegati({
     to: d.learnerEmail,
     ...mail,
@@ -523,7 +526,8 @@ export async function emettiAttestatoEvalisById(
   if (!emesso) throw new ErroreUtente(`L'attestato ${d.number} è già stato emesso.`);
 
   // mail best-effort: l'attestato è già emesso e scaricabile dall'area privata
-  const mail = mailAttestatoEvalisUtente(d, baseUrl());
+  const chiedi = !(await haRecensione(d.enrollmentId).catch(() => true)); // opinione mancante → la mail la chiede
+  const mail = mailAttestatoEvalisUtente(d, baseUrl(), chiedi);
   await inviaEmailConAllegati({
     to: d.learnerEmail,
     ...mail,

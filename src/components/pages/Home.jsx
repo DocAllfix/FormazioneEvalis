@@ -13,12 +13,13 @@ import WhyEvalisSection from "@/components/landing/WhyEvalisSection";
 import CertisExplainer from "@/components/landing/CertisExplainer";
 import PlatformSection from "@/components/landing/PlatformSection";
 import FAQSection from "@/components/landing/FAQSection";
+import DiconoDiNoiSection from "@/components/landing/DiconoDiNoiSection";
 import FinalCTA from "@/components/landing/FinalCTA";
 import SiteFooter from "@/components/landing/SiteFooter";
 import { BundleStrip } from "@/components/catalog/bundle-strip";
 
-/** @param {{ auditorCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], aiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], managerialiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], mestieriCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], bundles?: import("@/features/catalog/queries").CatalogBundle[] }} props */
-export default function Home({ auditorCourses = [], aiCourses = [], managerialiCourses = [], mestieriCourses = [], bundles = [] }) {
+/** @param {{ auditorCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], aiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], managerialiCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], mestieriCourses?: import("@/features/catalog/vetrina").VetrinaCourse[], bundles?: import("@/features/catalog/queries").CatalogBundle[], opinioni?: import("@/features/recensioni/pubbliche").OpinionePubblica[], mediaPiattaforma?: import("@/features/recensioni/pubbliche").Media }} props */
+export default function Home({ auditorCourses = [], aiCourses = [], managerialiCourses = [], mestieriCourses = [], bundles = [], opinioni = [], mediaPiattaforma = null }) {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <a href="#main-content" className="skip-link">
@@ -45,6 +46,8 @@ export default function Home({ auditorCourses = [], aiCourses = [], managerialiC
         <WhyEvalisSection />
         <CertisExplainer />
         <PlatformSection />
+        {/* «Dicono di noi»: la pagina passa le opinioni solo quando sono abbastanza */}
+        {opinioni.length > 0 ? <DiconoDiNoiSection opinioni={opinioni} mediaPiattaforma={mediaPiattaforma} /> : null}
         <FAQSection />
         <FinalCTA />
       </main>

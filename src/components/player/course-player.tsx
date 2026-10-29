@@ -18,13 +18,17 @@ import { QuizStep } from "./quiz-step";
 import { requestMyCertificateAction } from "@/features/learner/server-actions";
 import { notaProvvisorio } from "@/features/certificates/testi";
 import { buildSteps, type Data, type Step } from "./course-steps";
+import { FormRecensione } from "@/components/recensioni/form-recensione";
 
 export function CoursePlayer({
   enrollmentId,
   data,
+  nomeUtente,
 }: {
   enrollmentId: string;
   data: Data;
+  /** per l'anteprima del nome nella richiesta di opinione a fine corso */
+  nomeUtente: string;
 }) {
   const steps = useMemo(() => buildSteps(data), [data]);
   const initialDone = useMemo(() => {
@@ -122,7 +126,8 @@ export function CoursePlayer({
         <main className="flex flex-1 flex-col overflow-hidden">
           <div className="min-h-0 flex-1 overflow-hidden">
             {courseDone ? (
-              <div className="mx-auto flex h-full w-full max-w-xl flex-col items-center justify-center px-6 py-16 text-center">
+              <div className="h-full overflow-y-auto">
+              <div className="mx-auto flex min-h-full w-full max-w-xl flex-col items-center justify-center px-6 py-16 text-center">
                 <span className="flex h-16 w-16 items-center justify-center rounded-full bg-success/10 text-success">
                   <Award className="h-8 w-8" />
                 </span>
@@ -171,6 +176,15 @@ export function CoursePlayer({
                     Torna ai percorsi
                   </Link>
                 </div>
+                {/* opinione sul corso: solo con il certificato nato, e non blocca nulla */}
+                {certId ? (
+                  <section className="mt-10 w-full">
+                    <h2 className="font-heading text-xl text-near-black">Com&apos;è andato il corso?</h2>
+                    <p className="mb-4 mt-1 text-sm text-muted-foreground">Bastano un minuto e qualche stella: ci aiuti a migliorare.</p>
+                    <FormRecensione enrollmentId={enrollmentId} nomeUtente={nomeUtente} />
+                  </section>
+                ) : null}
+              </div>
               </div>
             ) : step.kind === "slide" ? (
               <SlideStep

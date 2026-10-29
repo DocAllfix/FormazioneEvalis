@@ -7,6 +7,8 @@ import { notaProvvisorio } from "@/features/certificates/testi";
 import { CertificateDownloadButton } from "@/components/app/certificate-download-button";
 import { dataBreve as formatDate } from "@/lib/formato";
 import { sessionePagina } from "@/features/auth/pagina";
+import { leggiMieRecensioni } from "@/features/recensioni/recensioni";
+import { OpinioneCertificato } from "@/components/recensioni/opinione-certificato";
 
 export const metadata = { title: "Certificati — Evalis" };
 
@@ -21,7 +23,7 @@ export default async function CertificatiPage() {
   // qui, se i requisiti sono tutti soddisfatti (un errore non deve impedire di vedere la pagina)
   const { user } = await sessionePagina();
   await assicuraCertificatiDi(user.id).catch((e) => console.error("[certificati] recupero non riuscito", e));
-  const certs = await getMyCertificates();
+  const [certs, recensioni] = await Promise.all([getMyCertificates(), leggiMieRecensioni(user.id)]);
 
   return (
     <div>
@@ -57,10 +59,8 @@ export default async function CertificatiPage() {
               cls: "bg-secondary text-muted-foreground",
             };
             return (
-              <Card
-                key={c.id}
-                className="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between"
-              >
+              <Card key={c.id} className="flex flex-col gap-4 p-6">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <div className="flex items-center gap-3">
                     <h3 className="font-heading text-lg text-near-black">{c.courseTitle}</h3>
@@ -87,6 +87,11 @@ export default async function CertificatiPage() {
                     <FileDown className="h-4 w-4" />
                     Scarica il provvisorio
                   </a>
+                )}
+                </div>
+                {/* opinione sul corso: anche per chi l'ha completato prima che esistesse */}
+                {c.status !== "revoked" && (
+                  <OpinioneCertificato enrollmentId={c.enrollmentId} nomeUtente={user.name} recensione={recensioni.get(c.enrollmentId) ?? null} />
                 )}
               </Card>
             );

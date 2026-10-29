@@ -8,8 +8,9 @@ export const metadata = {
 };
 
 export default function PrivacyPage() {
+  // aggiornata il 29/10/2026 per le opinioni sui corsi: data propria, le altre pagine legali non sono cambiate
   return (
-    <LegalShell title="Privacy Policy" updated={COMPANY.lastUpdated}>
+    <LegalShell title="Privacy Policy" updated="29 ottobre 2026">
       <P>
         La presente informativa descrive le modalità di trattamento dei dati personali degli utenti che
         utilizzano la piattaforma di formazione <strong>{COMPANY.brand}</strong> ({COMPANY.site}), ai sensi
@@ -37,6 +38,7 @@ export default function PrivacyPage() {
         <li><strong>Dati di pagamento:</strong> gestiti direttamente dal fornitore Stripe; {COMPANY.legalName} non conserva i dati completi delle carte.</li>
         <li><strong>Dati tecnici:</strong> indirizzo IP, log di accesso, tipo di dispositivo/browser, per sicurezza e corretto funzionamento.</li>
         <li><strong>Interazioni con l&apos;assistente virtuale:</strong> i messaggi inviati al chatbot di supporto.</li>
+        <li><strong>Opinioni sui corsi:</strong> le stelle e il testo che l&apos;utente sceglie di lasciare dopo aver completato un corso e, solo se acconsente alla pubblicazione, il nome nella forma scelta (nome e cognome, oppure nome e iniziale del cognome) con la data del consenso.</li>
       </UL>
 
       <H2>4. Finalità e basi giuridiche</H2>
@@ -46,6 +48,8 @@ export default function PrivacyPage() {
         <li>Gestione dei pagamenti, fatturazione e adempimenti fiscali — <em>obbligo legale</em> (art. 6.1.c).</li>
         <li>Sicurezza della piattaforma e prevenzione degli abusi — <em>legittimo interesse</em> (art. 6.1.f).</li>
         <li>Comunicazioni di servizio (email transazionali) — <em>esecuzione del contratto</em>.</li>
+        <li>Raccolta delle opinioni sui corsi per migliorare corsi e piattaforma — <em>legittimo interesse</em> (art. 6.1.f). Lasciare un&apos;opinione è facoltativo e non incide su esame né certificato.</li>
+        <li>Pubblicazione dell&apos;opinione sul sito (pagina principale e scheda del corso), con il nome nella forma scelta — <em>consenso</em> (art. 6.1.a), separato e facoltativo. Si può ritirare in qualsiasi momento dalla pagina Certificati: l&apos;opinione viene tolta dal sito, senza pregiudicare la liceità della pubblicazione precedente. Le opinioni vengono verificate dallo staff prima della pubblicazione.</li>
       </UL>
 
       <H2>5. Periodo di conservazione</H2>
@@ -53,7 +57,8 @@ export default function PrivacyPage() {
         I dati sono conservati per il tempo strettamente necessario alle finalità indicate. I dati relativi agli
         attestati e alla tracciabilità della fruizione sono conservati per <strong>almeno 10 anni</strong>, come
         previsto dalla normativa di settore. I dati di account sono conservati per la durata del rapporto e successivamente
-        cancellati o anonimizzati, salvo obblighi di legge.
+        cancellati o anonimizzati, salvo obblighi di legge. Le opinioni sui corsi sono conservate finché esiste l&apos;account
+        o finché l&apos;utente non chiede di cancellarle; il ritiro del consenso le toglie subito dal sito.
       </P>
 
       <H2>6. Destinatari e responsabili esterni</H2>

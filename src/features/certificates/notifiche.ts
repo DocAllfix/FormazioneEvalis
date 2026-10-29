@@ -8,6 +8,7 @@ import { renderEmail, esc } from "@/lib/email/layout";
 import { DESTINATARI_INTERNI } from "@/features/billing/notifica-vendita";
 import { notaProvvisorio, GIORNI_ACCREDITATO } from "./testi";
 import { dataNascitaLeggibile } from "./anagrafica";
+import { rigaChiediOpinione } from "@/features/recensioni/regole";
 
 /**
  * Il committente riceve le mail SOLO dalla produzione vera: in locale, nei test e nelle Preview
@@ -107,6 +108,8 @@ export function mailAccreditatoUtente(
   d: Pick<DatiCertificato, "learnerName" | "courseTitle" | "number">,
   base: string,
   aggiornato: boolean,
+  /** l'utente non ha ancora lasciato la sua opinione sul corso: una riga per chiederla */
+  chiediOpinione = false,
 ): { subject: string; html: string } {
   return {
     subject: `${aggiornato ? "Certificato aggiornato" : "Il tuo certificato accreditato"} — ${d.courseTitle}`,
@@ -121,6 +124,7 @@ export function mailAccreditatoUtente(
         `Numero certificato: <strong>${esc(d.number)}</strong>. Lo trovi anche nella tua area privata, pronto da scaricare.`,
       ],
       button: { label: "Vai ai tuoi certificati", url: `${base}/certificati` },
+      ...(chiediOpinione ? { afterButton: [rigaChiediOpinione(base)] } : {}),
     }),
   };
 }
@@ -129,6 +133,8 @@ export function mailAccreditatoUtente(
 export function mailAttestatoEvalisUtente(
   d: Pick<DatiCertificato, "learnerName" | "courseTitle" | "number">,
   base: string,
+  /** l'utente non ha ancora lasciato la sua opinione sul corso: una riga per chiederla */
+  chiediOpinione = false,
 ): { subject: string; html: string } {
   return {
     subject: `Il tuo attestato EVALIS Academy — ${d.courseTitle}`,
@@ -141,6 +147,7 @@ export function mailAttestatoEvalisUtente(
         `Numero attestato: <strong>${esc(d.number)}</strong>. Lo trovi anche nella tua area privata, pronto da scaricare.`,
       ],
       button: { label: "Vai ai tuoi certificati", url: `${base}/certificati` },
+      ...(chiediOpinione ? { afterButton: [rigaChiediOpinione(base)] } : {}),
     }),
   };
 }

@@ -102,6 +102,8 @@ export async function getMyEnrollments(): Promise<MyEnrollment[]> {
 
 export type MyCertificate = {
   id: string;
+  /** iscrizione del certificato: la recensione del corso è legata a questa */
+  enrollmentId: string;
   status: string;
   number: string | null;
   issuedAt: Date | null;
@@ -117,6 +119,7 @@ export async function getMyCertificates(): Promise<MyCertificate[]> {
     tx
       .select({
         id: certificate.id,
+        enrollmentId: certificate.enrollmentId,
         status: certificate.status,
         // dall'accreditamento l'utente vede il numero dell'attestato, se l'ente ne ha dato uno
         number: sql<string | null>`coalesce(${certificate.accreditatoNumero}, ${certificate.number})`,
