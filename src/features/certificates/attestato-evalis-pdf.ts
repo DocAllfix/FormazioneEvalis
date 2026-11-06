@@ -26,7 +26,8 @@ export interface AttestatoEvalisData {
   /** Il numero del certificato, stampato come protocollo. */
   number: string;
   verifyUrl: string;
-  /** La firma EVALIS (PNG trasparente), letta dallo storage privato al momento dell'emissione. */
+  /** La firma EVALIS (PNG trasparente), letta dallo storage privato. Dal 06/11/2026 il definitivo
+   *  porta il TIMBRO al suo posto: la firma si passa solo per riconsegnare gli attestati emessi prima. */
   firma?: Uint8Array;
 }
 
@@ -35,6 +36,12 @@ const ORO = rgb(0.69, 0.53, 0.2);
 const ORO_CHIARO = rgb(0.85, 0.75, 0.52);
 const INCHIOSTRO = rgb(0.13, 0.11, 0.09);
 const GRIGIO = rgb(0.4, 0.37, 0.33);
+// colori del timbro, dal modello dell'utente (06/11/2026): anello A37A22, anello interno D8CFB8,
+// «EVALIS» 7A5A18, «ACADEMY» 8A8478
+const TIMBRO_ANELLO = rgb(0.639, 0.478, 0.133);
+const TIMBRO_ANELLO_INTERNO = rgb(0.847, 0.812, 0.722);
+const TIMBRO_EVALIS = rgb(0.478, 0.353, 0.094);
+const TIMBRO_ACADEMY = rgb(0.541, 0.518, 0.471);
 
 type Fonts = { titolo: PDFFont; corsivo: PDFFont; testo: PDFFont; forte: PDFFont };
 
@@ -174,9 +181,22 @@ export async function buildAttestatoEvalisPdf(d: AttestatoEvalisData): Promise<U
     const alta = 58;
     const larga = (firma.width / firma.height) * alta;
     page.drawImage(firma, { x: cx - larga / 2, y: piede + 20, width: larga, height: alta });
+    page.drawLine({ start: { x: cx - 95, y: piede + 22 }, end: { x: cx + 95, y: piede + 22 }, thickness: 0.6, color: ORO_CHIARO });
+    centro("Rilasciato da EVALIS Academy", piede + 4, 13, f.corsivo, GRIGIO);
+  } else {
+    // TIMBRO EVALIS Academy al posto della firma (06/11/2026), vettoriale e alla misura del modello
+    // (la pagina del modello è A4 orizzontale come questa): anelli da 72 e 60 pt, «EVALIS» in
+    // Cormorant 12 pt, «ACADEMY» 5,25 pt. Le altezze delle scritte sono quelle del modello in
+    // PowerPoint; «ACADEMY» col passo un po' più largo perché Noto è più stretto del Libre Franklin
+    // del modello e la parola resta larga uguale. Sta fra la riga «Formazione a distanza…» e la
+    // dicitura sotto anche col titolo del corso su due righe e la data di nascita.
+    const cy = piede + 28;
+    page.drawCircle({ x: cx, y: cy, size: 36, borderColor: TIMBRO_ANELLO, borderWidth: 1.5 });
+    page.drawCircle({ x: cx, y: cy, size: 30, borderColor: TIMBRO_ANELLO_INTERNO, borderWidth: 0.75 });
+    spaziato("EVALIS", cy - 2.96, 12, f.titolo, 1.2, TIMBRO_EVALIS);
+    spaziato("ACADEMY", cy - 11.86, 5.25, f.forte, 1.41, TIMBRO_ACADEMY);
+    centro("Rilasciato da EVALIS Academy", piede - 24, 13, f.corsivo, GRIGIO);
   }
-  page.drawLine({ start: { x: cx - 95, y: piede + 22 }, end: { x: cx + 95, y: piede + 22 }, thickness: 0.6, color: ORO_CHIARO });
-  centro("Rilasciato da EVALIS Academy", piede + 4, 13, f.corsivo, GRIGIO);
 
   const qrPng = await doc.embedPng(
     await QRCode.toDataURL(d.verifyUrl, { margin: 1, width: 240, color: { dark: "#211c17", light: "#fcf8f0" } }),

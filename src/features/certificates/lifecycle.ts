@@ -538,12 +538,13 @@ export async function emettiAttestatoEvalisById(
 }
 
 /**
- * Il PDF definitivo di un attestato EVALIS, firmato. La firma sta nello storage PRIVATO (il
- * repository è pubblico): senza firma non si produce nessun definitivo.
+ * Il PDF definitivo di un attestato EVALIS. Dal 06/11/2026 porta il TIMBRO EVALIS Academy al posto
+ * della firma. Solo con `conFirma` (la riconsegna degli attestati emessi prima, `rifirma…`) porta la
+ * firma, che sta nello storage PRIVATO (il repository è pubblico): senza, quel PDF non si produce.
  */
-async function pdfDefinitivoEvalis(d: DatiCompleti, emessoIl: Date): Promise<Uint8Array> {
-  const firma = await leggiCertificatoPdf(PERCORSO_FIRMA_EVALIS);
-  if (!firma) throw new ErroreUtente("Firma EVALIS non disponibile: l'attestato non è stato emesso. Riprova o avvisa l'amministratore.");
+async function pdfDefinitivoEvalis(d: DatiCompleti, emessoIl: Date, conFirma = false): Promise<Uint8Array> {
+  const firma = conFirma ? await leggiCertificatoPdf(PERCORSO_FIRMA_EVALIS) : undefined;
+  if (conFirma && !firma) throw new ErroreUtente("Firma EVALIS non disponibile: l'attestato non è stato emesso. Riprova o avvisa l'amministratore.");
   const nascita = d.luogoNascita && d.dataNascita ? { nascita: `nato/a a ${d.luogoNascita} il ${dataNascitaLeggibile(d.dataNascita)}` } : {};
   // tutti gli attestati EVALIS definitivi hanno lo stile EVALIS Academy col protocollo (19/10/2026)
   return buildAttestatoEvalisPdf({
@@ -553,7 +554,7 @@ async function pdfDefinitivoEvalis(d: DatiCompleti, emessoIl: Date): Promise<Uin
     issuedAt: emessoIl,
     number: d.number,
     verifyUrl: d.verifyUrl,
-    firma,
+    firma: firma ?? undefined,
     ...nascita,
   });
 }
@@ -581,7 +582,7 @@ export async function rifirmaAttestatoEvalisById(
   );
   if (!emessoIl) throw new Error(`Attestato ${d.number} senza data di emissione.`);
 
-  const pdf = await pdfDefinitivoEvalis(d, emessoIl);
+  const pdf = await pdfDefinitivoEvalis(d, emessoIl, true);
   const path = `${d.verifyUuid}-firmato-${Date.now()}.pdf`;
   await caricaPdfCertificatoA(path, pdf);
 

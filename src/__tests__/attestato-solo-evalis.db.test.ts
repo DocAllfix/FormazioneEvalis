@@ -29,7 +29,7 @@ import {
   rifirmaAttestatoEvalisById,
 } from "@/features/certificates/lifecycle";
 import { deleteCertificatePdf, isStorageConfigured, leggiCertificatoPdf } from "@/lib/supabase/storage";
-import { PDFDocument } from "pdf-lib";
+import { PDFDict, PDFDocument, PDFName } from "pdf-lib";
 
 const RUN = Date.now();
 const ORG = `attev-org-${RUN}`;
@@ -65,6 +65,11 @@ async function alProvvisorio(tag: string, c: { id: string; quizIds: string[]; sl
 }
 
 const rifiuto = async (p: Promise<unknown>) => p.then(() => null, (e: Error) => e.message);
+/** Immagini disegnate sulla pagina: monogramma e QR; la firma, quando c'è, è la terza. */
+const immagini = async (bytes: Uint8Array) => {
+  const doc = await PDFDocument.load(bytes);
+  return doc.getPage(0).node.Resources()?.lookupMaybe(PDFName.of("XObject"), PDFDict)?.keys().length ?? 0;
+};
 const riga = async (certId: string) => (await db.select().from(certificate).where(eq(certificate.id, certId)))[0];
 
 beforeAll(async () => {
@@ -142,15 +147,18 @@ describe.skipIf(!isStorageConfigured())("attestato solo EVALIS", () => {
     caricati.push((await riga(d.certId)).pdfPath!);
   }, 120_000);
 
-  it("ogni attestato EVALIS definitivo ha lo stile EVALIS Academy col protocollo; il provvisorio no", async () => {
+  it("ogni attestato EVALIS definitivo ha lo stile EVALIS Academy col protocollo e il timbro, non la firma; il provvisorio no", async () => {
     const s = await alProvvisorio("s", corsi[0]);
     expect((await certificatoPerDownload(s.certId, { userId: s.id, staff: false }))?.tipo).toBe("provvisorio");
     await emettiAttestatoEvalisById(s.certId, "staff-attev");
     const r = await riga(s.certId);
     caricati.push(r.pdfPath!);
-    const doc = await PDFDocument.load((await leggiCertificatoPdf(r.pdfPath!))!);
+    const bytes = (await leggiCertificatoPdf(r.pdfPath!))!;
+    const doc = await PDFDocument.load(bytes);
     expect(doc.getTitle()).toBe(`Attestato ${s.number}`);
     expect(doc.getAuthor()).toBe("EVALIS Academy");
+    // dal 06/11/2026 il timbro (vettoriale) al posto della firma: solo monogramma e QR come immagini
+    expect(await immagini(bytes)).toBe(2);
     // il protocollo stampato è il numero che la verifica pubblica riconosce
     expect(await getCertificatoPerChiave(s.number)).toMatchObject({ valid: true, number: s.number });
   }, 120_000);
@@ -180,6 +188,8 @@ describe.skipIf(!isStorageConfigured())("attestato solo EVALIS", () => {
     // il PDF consegnato prima non si cancella
     expect(await leggiCertificatoPdf(prima.pdfPath!)).not.toBeNull();
     expect(Buffer.from((await leggiCertificatoPdf(dopo.pdfPath!))!.slice(0, 5)).toString("latin1")).toBe("%PDF-");
+    // la riconsegna degli attestati emessi prima resta con la firma
+    expect(await immagini((await leggiCertificatoPdf(dopo.pdfPath!))!)).toBe(3);
 
     const [log] = await db.select().from(activityLog).where(eq(activityLog.object, `certificate:${a.id}`)).orderBy(sql`${activityLog.createdAt} desc`).limit(1);
     expect(log).toMatchObject({ verb: "certificate-resigned" });
