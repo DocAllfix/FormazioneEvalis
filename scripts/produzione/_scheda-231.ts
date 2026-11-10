@@ -1,7 +1,8 @@
 // SCHEDA DI CATALOGO dei corsi 231 FAD-231-01/02/03/04 — descrizione, durata, categoria, copertina e
 // programma modulo per modulo (dalla tabella di produzione/<corso>/struttura.md, la stessa del Word di
 // approvazione, senza le voci di servizio «Presentazione del corso» e «Sintesi del Modulo»).
-// NON tocca stato di pubblicazione, prezzi né il tipo di attestato (decisione dell'utente ancora aperta).
+// Attestato SOLO EVALIS per tutti e quattro (course.attestato_solo_evalis, decisione dell'utente del 10/11/2026).
+// NON tocca stato di pubblicazione né prezzi.
 // Idempotente. Uso: npx tsx scripts/produzione/_scheda-231.ts <fad23101|fad23102|fad23103|fad23104> [--prod]
 const corso = process.argv[2];
 const prod = process.argv.includes("--prod");
@@ -53,8 +54,9 @@ const [c] = await sql`select id, details from course where slug = ${S.slug}`;
 if (!c) { console.error(`corso ${S.slug} non trovato (${prod ? "PRODUZIONE" : "sviluppo"})`); process.exit(1); }
 const details = { ...(c.details ?? {}), program };
 await sql`update course set description = ${S.description}, duration_hours = ${S.durationHours},
-  category = ${"manageriale"}, image_url = ${`/covers/${corso}.webp`}, details = ${sql.json(details)}, updated_at = now()
+  category = ${"manageriale"}, image_url = ${`/covers/${corso}.webp`}, details = ${sql.json(details)},
+  attestato_solo_evalis = true, updated_at = now()
   where id = ${c.id}`;
-console.log(`scheda aggiornata (${prod ? "PRODUZIONE" : "sviluppo"}): ${S.slug} · ${program.length} moduli`);
+console.log(`scheda aggiornata (${prod ? "PRODUZIONE" : "sviluppo"}): ${S.slug} · ${program.length} moduli · attestato solo EVALIS`);
 await sql.end();
 export {};
