@@ -1,0 +1,936 @@
+{
+  "parametri": {
+    "ore": 8,
+    "test": "8/10",
+    "esame": "12/15"
+  },
+  "checkpoint": [
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Per il reato commesso da un amministratore, chi deve provare che il Modello era idoneo ed efficacemente attuato?",
+      "opzioni": [
+        "Il pubblico ministero",
+        "L’ente",
+        "L’OdV",
+        "Nessuno, l’idoneità si presume"
+      ],
+      "corretta": 1,
+      "spiegazione": "Art. 6: per i reati degli apicali l’onere della prova dell’esimente è a carico dell’ente, perché la volontà dell’apicale è considerata volontà dell’ente."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Un CdA non adotta il Modello 231 e la società subisce una sanzione interdittiva. Gli amministratori:",
+      "opzioni": [
+        "Non rispondono: la scelta è discrezionale",
+        "Possono essere chiamati a rispondere del danno verso la società per violazione del dovere di adeguati assetti organizzativi",
+        "Rispondono solo penalmente",
+        "Rispondono solo se la società è quotata"
+      ],
+      "corretta": 1,
+      "spiegazione": "La giurisprudenza (Trib. Milano 2008) ha riconosciuto l’azione di responsabilità verso gli amministratori per il danno da sanzione 231 conseguente all’omessa adozione del Modello."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Secondo Cass. 23401/2022 (Impregilo), il Modello salva l’ente dal reato commesso dai vertici se:",
+      "opzioni": [
+        "Esiste ed è stato comunicato al Ministero",
+        "Prevede controlli reali anche sulle decisioni apicali e i vertici li hanno aggirati con artifici (elusione fraudolenta)",
+        "I vertici si dimettono",
+        "L’OdV è collegiale"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’esimente richiede un Modello idoneo che vincoli anche il vertice e una condotta decettiva di aggiramento; la semplice violazione di regole non presidiate non è elusione fraudolenta."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Il socio fondatore, senza cariche, continua a gestire i rapporti con le stazioni appaltanti. Ai fini 231:",
+      "opzioni": [
+        "È irrilevante perché non è amministratore",
+        "È qualificabile come amministratore di fatto (apicale) per quell’area e il suo ruolo va regolarizzato o cessato",
+        "È un semplice sottoposto",
+        "È un terzo estraneo"
+      ],
+      "corretta": 1,
+      "spiegazione": "Art. 5 lett. a) include chi esercita di fatto la gestione e il controllo; il potere non tracciato espone l’ente e impedisce di dimostrare controlli."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "Dopo la notizia di reato, quale condotta consente all’ente di evitare le sanzioni interdittive?",
+      "opzioni": [
+        "Cambiare ragione sociale",
+        "Prima del dibattimento: risarcire il danno, eliminare le carenze con un Modello idoneo e mettere a disposizione il profitto (art. 17)",
+        "Licenziare l’OdV",
+        "Trasferire la sede all’estero"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’art. 17 esclude le interdittive se concorrono tutte e tre le condotte riparatorie prima dell’apertura del dibattimento."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Sono soggetti apicali ai sensi dell’art. 5 lett. a):",
+      "opzioni": [
+        "Solo gli amministratori iscritti al Registro Imprese",
+        "Chi riveste funzioni di rappresentanza, amministrazione o direzione, anche di una unità autonoma, e chi esercita di fatto gestione e controllo",
+        "Solo i dirigenti con contratto dirigenziale",
+        "Tutti i dipendenti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Per i reati degli apicali, l’ente non risponde se prova, tra l’altro, che:",
+      "opzioni": [
+        "Il reato è stato commesso di notte",
+        "Il reato è stato commesso eludendo fraudolentemente il Modello",
+        "L’apicale ha meno di 5 anni di anzianità",
+        "Il Modello è stato adottato dopo il fatto"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Le sanzioni interdittive per corruzione commessa da apicali durano:",
+      "opzioni": [
+        "3 mesi – 2 anni",
+        "2 – 4 anni",
+        "4 – 7 anni",
+        "1 anno fisso"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "L’adeguatezza degli assetti organizzativi è un dovere degli amministratori previsto da:",
+      "opzioni": [
+        "Art. 2086 c. 2 e 2381 c.c.",
+        "Art. 6 D.Lgs. 231/2001",
+        "Art. 30 D.Lgs. 81/2008",
+        "Art. 2639 c.c."
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Nel caso Thyssenkrupp, il vantaggio dell’ente consisteva:",
+      "opzioni": [
+        "Nell’incendio",
+        "Nel risparmio derivante dal rinvio degli investimenti di sicurezza",
+        "Nel rimborso assicurativo",
+        "Non vi era vantaggio"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Se l’apicale agisce nell’interesse esclusivo proprio:",
+      "opzioni": [
+        "L’ente risponde con sanzione raddoppiata",
+        "L’ente non risponde (art. 5 c. 2)",
+        "L’ente risponde solo con interdittive",
+        "L’OdV risponde al posto dell’ente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Il legale rappresentante indagato per il reato-presupposto:",
+      "opzioni": [
+        "Rappresenta l’ente nel procedimento",
+        "Non può rappresentare l’ente (art. 39): serve un rappresentante ad hoc",
+        "Rappresenta l’ente solo in appello",
+        "Rappresenta l’ente se autorizzato dal PM"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "La holding risponde per il reato commesso nella controllata:",
+      "opzioni": [
+        "Sempre",
+        "Mai",
+        "Se un suo esponente concorre nel reato e sussiste un interesse della holding",
+        "Solo se possiede il 100%"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "La riduzione della sanzione pecuniaria ex art. 12 è possibile se, prima del dibattimento, l’ente:",
+      "opzioni": [
+        "Cambia amministratore",
+        "Risarcisce il danno o adotta un Modello idoneo",
+        "Chiude l’attività",
+        "Paga la metà della sanzione"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Il Modello che lascia all’amministratore decisioni unilaterali e non controllate su gare, pagamenti e consulenze è:",
+      "opzioni": [
+        "Idoneo se approvato dal notaio",
+        "Inidoneo: non vi sono controlli da eludere fraudolentemente",
+        "Idoneo per le PMI",
+        "Idoneo se certificato ISO 9001"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Una procura notarile è ancora intestata a un dirigente uscito dall’azienda da due anni. Quale rischio comporta?",
+      "opzioni": [
+        "Nessuno, non la usa più",
+        "Incoerenza tra poteri formali e reali: l’ex dirigente può ancora impegnare l’ente e il sistema dei poteri non è difendibile; va revocata subito",
+        "Solo un costo notarile",
+        "Un vantaggio fiscale"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’aggiornamento tempestivo dei poteri è un principio 231; la procura non revocata è un difetto di controllo che l’OdV e l’auditor rileveranno."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "L’AU delega la sicurezza al responsabile produzione con atto scritto ma senza budget né poteri di fermata. La delega:",
+      "opzioni": [
+        "È pienamente valida",
+        "Non trasferisce la responsabilità: senza autonomia di spesa e poteri di gestione e controllo l’art. 16 non è rispettato",
+        "È valida se il delegato è laureato",
+        "È valida se comunicata all’ASL"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’art. 16 richiede tutti i requisiti; l’autonomia di spesa è essenziale, altrimenti la posizione di garanzia resta in capo al datore di lavoro."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "Perché un amministratore dovrebbe accettare la firma congiunta sopra soglia e il riesame indipendente dei propri atti?",
+      "opzioni": [
+        "Perché lo impone il notaio",
+        "Perché dimostrano la correttezza delle decisioni, consentono l’esimente per reati altrui e rendono \"elusione fraudolenta\" l’eventuale reato del vertice",
+        "Perché riducono le tasse",
+        "Non dovrebbe: limitano la gestione"
+      ],
+      "corretta": 1,
+      "spiegazione": "I controlli sul vertice sono la condizione perché il Modello sia idoneo anche rispetto ai reati apicali (Impregilo)."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Un partner estero chiede un anticipo in contanti \"per pratiche doganali\". La decisione corretta del CdA è:",
+      "opzioni": [
+        "Accettare, è prassi locale",
+        "Rifiutare: possibile corruzione di pubblici ufficiali stranieri (322-bis), rilevante anche se commessa all’estero; pagamenti solo tracciati e contrattualizzati",
+        "Accettare se l’importo è inferiore a 1.000 €",
+        "Delegare la decisione al responsabile di commessa"
+      ],
+      "corretta": 1,
+      "spiegazione": "I facilitation payments sono corruzione; il reato commesso all’estero nell’interesse dell’ente italiano è perseguibile in Italia (art. 4 D.Lgs. 231/2001)."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Il risparmio d’imposta ottenuto con fatture per operazioni inesistenti viene reinvestito nell’acquisto di un macchinario. Quale ulteriore reato si configura?",
+      "opzioni": [
+        "Nessuno",
+        "Autoriciclaggio (648-ter.1 c.p.), rilevante ex art. 25-octies, con confisca",
+        "Appropriazione indebita",
+        "Abuso d’ufficio"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’impiego in attività economiche del provento del delitto commesso, con ostacolo all’identificazione, integra l’autoriciclaggio."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il sistema di procure e deleghe deve essere:",
+      "opzioni": [
+        "Segreto",
+        "Coerente con l’organigramma, formalizzato, con limiti, aggiornato e conosciuto",
+        "Uguale per tutte le società",
+        "Affidato all’OdV"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Non sono delegabili dal datore di lavoro:",
+      "opzioni": [
+        "Acquisto DPI e manutenzioni",
+        "Valutazione dei rischi e nomina del RSPP",
+        "Formazione e sorveglianza sanitaria",
+        "Gestione appalti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "L’obbligo di vigilanza del delegante si intende assolto con:",
+      "opzioni": [
+        "La sola delega scritta",
+        "L’adozione ed efficace attuazione del modello di verifica e controllo ex art. 30 c. 4 D.Lgs. 81/08",
+        "La certificazione ISO 9001",
+        "La nomina del RSPP"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "La segregazione dei compiti in tesoreria implica che:",
+      "opzioni": [
+        "L’AU disponga e riconcili personalmente i pagamenti",
+        "Chi autorizza, chi dispone, chi registra e chi riconcilia siano soggetti diversi",
+        "Tutti abbiano accesso all’home banking",
+        "I pagamenti siano fatti in contanti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Un compenso al consulente legato all’aggiudicazione di una gara pubblica è:",
+      "opzioni": [
+        "Una prassi commerciale accettabile",
+        "Un red flag di corruzione e traffico di influenze, da escludere",
+        "Obbligatorio per legge",
+        "Ammesso fino al 5%"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "La clausola 231 nei contratti con i terzi prevede tipicamente:",
+      "opzioni": [
+        "Sconti",
+        "Impegno al rispetto del Codice Etico, diritto di audit, risoluzione ex art. 1456 c.c.",
+        "Esclusiva",
+        "Pagamento anticipato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "La corruzione di un pubblico ufficiale straniero commessa all’estero nell’interesse di un ente italiano:",
+      "opzioni": [
+        "Non rileva in Italia",
+        "Rileva ai sensi degli artt. 4 e 25 D.Lgs. 231/2001 (322-bis c.p.)",
+        "Rileva solo se denunciata dal paese estero",
+        "Rileva solo per le quotate"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "La soglia cumulata mensile per fornitore nei pagamenti serve a:",
+      "opzioni": [
+        "Pagare meno IVA",
+        "Prevenire il frazionamento dei pagamenti sotto la soglia di doppia firma",
+        "Ridurre le commissioni bancarie",
+        "Premiare i fornitori fedeli"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il Tax Control Framework in una PMI comprende, tra l’altro:",
+      "opzioni": [
+        "La riduzione dell’aliquota IRES",
+        "Three-way match, qualifica fornitori con verifica VIES e riesame delle dichiarazioni da secondo soggetto",
+        "La nomina di un secondo commercialista",
+        "L’esonero dalla fatturazione elettronica"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "In un’acquisizione societaria, la due diligence 231 serve a:",
+      "opzioni": [
+        "Ridurre il prezzo",
+        "Verificare procedimenti, Modello, rischi SSL/ambiente/fisco della target, perché la responsabilità segue l’ente nelle vicende modificative (artt. 28-33)",
+        "Evitare il notaio",
+        "Sostituire il bilancio"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "L’OdV presenta una raccomandazione che il CdA non intende accogliere. Comportamento corretto del CdA:",
+      "opzioni": [
+        "Ignorarla",
+        "Deliberare motivando per iscritto il mancato accoglimento e le eventuali misure alternative, verbalizzando",
+        "Modificare la raccomandazione e approvarla come propria",
+        "Revocare l’OdV"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il seguito motivato alle raccomandazioni dimostra la funzionalità del sistema; la modifica immotivata delle proposte dell’OdV fu censurata in Impregilo (Cass. 4677/2014)."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Il socio propone di nominare OdV monocratico il commercialista che tiene la contabilità della società. La scelta è:",
+      "opzioni": [
+        "Ottima: conosce i numeri",
+        "Da respingere: conflitto di interessi sui reati societari e tributari, che dovrebbe vigilare sul proprio operato",
+        "Accettabile se il compenso è basso",
+        "Obbligatoria nelle S.r.l."
+      ],
+      "corretta": 1,
+      "spiegazione": "L’indipendenza richiede l’assenza di compiti operativi nelle aree a rischio: chi tiene la contabilità non può vigilarla."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "L’AU chiede al presidente dell’OdV il nome di chi ha inviato una segnalazione. Il presidente:",
+      "opzioni": [
+        "Deve rivelarlo perché l’AU è il suo datore di lavoro",
+        "Deve rifiutare: la riservatezza è imposta dal D.Lgs. 24/2023 e la violazione è sanzionata da ANAC",
+        "Può rivelarlo se la segnalazione è infondata",
+        "Può rivelarlo a voce ma non per iscritto"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’identità del segnalante non può essere rivelata senza il suo consenso espresso, salvo i casi previsti nel procedimento penale o disciplinare; la richiesta stessa va verbalizzata."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Un dirigente viola un protocollo del Modello senza che si configuri reato. Il CdA:",
+      "opzioni": [
+        "Attende l’esito di un eventuale procedimento penale",
+        "Attiva il procedimento disciplinare indipendentemente dal rilievo penale, con misure proporzionate, e informa l’OdV",
+        "Non può sanzionare un dirigente",
+        "Sanziona solo se c’è stato un danno"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il sistema disciplinare è autonomo dal penale e deve essere applicato a tutti i livelli: è un requisito dell’efficace attuazione."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "Quale comportamento del vertice è più efficace per diffondere la cultura 231?",
+      "opzioni": [
+        "Delegare tutta la formazione al consulente",
+        "Partecipare per primo alla formazione, applicare a sé stesso le regole e dare seguito visibile alle segnalazioni",
+        "Aumentare il numero di pagine del Codice Etico",
+        "Inviare un’e-mail annuale"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il tone at the top (ISO 37301/37001 par. 5.1) si misura su comportamenti osservabili, non su documenti."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Chi adotta il Modello e le sue modifiche sostanziali?",
+      "opzioni": [
+        "L’OdV",
+        "L’organo amministrativo con delibera",
+        "Il collegio sindacale",
+        "Il consulente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "La revoca dell’OdV è ammessa:",
+      "opzioni": [
+        "In qualsiasi momento",
+        "Solo per giusta causa, con delibera motivata",
+        "A fine esercizio",
+        "Su richiesta del socio di maggioranza"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Un componente interno dell’OdV deve:",
+      "opzioni": [
+        "Avere poteri di spesa nelle aree a rischio",
+        "Non avere compiti operativi nelle aree a rischio e astenersi nei casi di conflitto",
+        "Essere un amministratore",
+        "Essere il RSPP"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "L’organo dirigente può svolgere le funzioni di OdV (art. 6 c. 4):",
+      "opzioni": [
+        "In qualsiasi ente",
+        "Solo negli enti di piccole dimensioni, con scarsa efficacia probatoria",
+        "Solo nelle quotate",
+        "Mai"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Il vertice che informa preventivamente l’OdV di un’operazione a rischio:",
+      "opzioni": [
+        "Viola la riservatezza",
+        "Dimostra di usare il sistema e beneficia della raccomandazione preventiva",
+        "Perde il potere decisionale",
+        "Deve attendere l’autorizzazione dell’OdV"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Il gestore del canale whistleblowing deve essere:",
+      "opzioni": [
+        "Il direttore generale",
+        "Una persona o ufficio autonomo e formato, interno o esterno",
+        "L’ufficio IT",
+        "Il socio di maggioranza"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Un provvedimento adottato verso un segnalante dopo la segnalazione:",
+      "opzioni": [
+        "È valido se motivato",
+        "Si presume ritorsivo: l’azienda deve provare ragioni estranee; se ritorsivo è nullo",
+        "È valido dopo 30 giorni",
+        "È valido se il segnalante era anonimo"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Le sanzioni ANAC per ritorsioni (10.000-50.000 €) sono irrogate:",
+      "opzioni": [
+        "All’OdV",
+        "Alla persona fisica responsabile, con responsabilità solidale dell’ente",
+        "Al segnalante",
+        "Al sindacato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "\"Zero sanzioni disciplinari in cinque anni\" in un’azienda con infortuni e non conformità è:",
+      "opzioni": [
+        "Segno di eccellenza",
+        "Un indizio di sistema disciplinare non applicato, quindi di Modello non attuato",
+        "Un requisito per il rating di legalità",
+        "Irrilevante"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Secondo ISO 37301/37001 par. 5.1, l’alta direzione dimostra leadership:",
+      "opzioni": [
+        "Approvando il budget",
+        "Stabilendo la politica, assicurando risorse, promuovendo la cultura e dando l’esempio",
+        "Delegando tutto alla funzione conformità",
+        "Aumentando le vendite"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Durante un’ispezione ASL dopo un infortunio, l’AU chiede al preposto di dichiarare che la protezione \"si era rotta quella mattina\" (falso). Quale reato rischia l’ente oltre al 25-septies?",
+      "opzioni": [
+        "Nessuno",
+        "Induzione a non rendere dichiarazioni o a renderle mendaci (377-bis c.p., art. 25-decies)",
+        "Abuso d’ufficio",
+        "Truffa"
+      ],
+      "corretta": 1,
+      "spiegazione": "La pressione sulle dichiarazioni rese all’autorità giudiziaria è reato-presupposto autonomo e aggrava la posizione dell’ente."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Dopo un infortunio grave, la prima cosa da NON fare è:",
+      "opzioni": [
+        "Fermare l’impianto",
+        "Informare l’OdV",
+        "Ripristinare la protezione mancante prima dell’arrivo degli ispettori",
+        "Nominare un difensore"
+      ],
+      "corretta": 2,
+      "spiegazione": "Alterare la scena distrugge prove, è reato e vanifica ogni difesa; la messa a norma avviene dopo i rilievi, in modo tracciato."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "Il legale rappresentante è indagato per il reato-presupposto. Per la difesa dell’ente:",
+      "opzioni": [
+        "Lo stesso avvocato difende ente e amministratore",
+        "Serve un rappresentante ad hoc e un difensore distinto, perché gli interessi possono confliggere",
+        "L’ente non ha bisogno di difesa",
+        "L’OdV rappresenta l’ente"
+      ],
+      "corretta": 1,
+      "spiegazione": "Art. 39 D.Lgs. 231/2001 e conflitto di interessi: la strategia dell’ente (elusione fraudolenta) può contrapporsi a quella della persona fisica."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Una stazione appaltante chiede se vi sono procedimenti 231 pendenti. L’ente:",
+      "opzioni": [
+        "Nega per non perdere la gara",
+        "Dichiara il vero e documenta le misure di self-cleaning (Modello aggiornato, risarcimento, disciplina)",
+        "Non risponde",
+        "Risponde solo se condannato in via definitiva"
+      ],
+      "corretta": 1,
+      "spiegazione": "La dichiarazione falsa in gara è reato e causa di esclusione; il Codice dei contratti ammette il self-cleaning documentato."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "Un consigliere propone di dimezzare il budget dell’OdV perché \"non è successo niente\". Il CdA dovrebbe:",
+      "opzioni": [
+        "Approvare: risparmio evidente",
+        "Respingere: la vigilanza effettiva è condizione dell’esimente e l’assenza di eventi è l’esito atteso di un sistema funzionante",
+        "Approvare ma aumentare il compenso del consulente",
+        "Sospendere l’OdV per un anno"
+      ],
+      "corretta": 1,
+      "spiegazione": "Un OdV senza risorse è un OdV che non vigila (art. 6 c. 1 lett. d): il risparmio costa l’esimente."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Durante un’ispezione il vertice deve:",
+      "opzioni": [
+        "Offrire un pranzo agli ispettori",
+        "Collaborare, consegnare quanto richiesto senza alterazioni, far verbalizzare le osservazioni, non offrire utilità",
+        "Rifiutare l’accesso senza mandato",
+        "Far parlare solo l’avvocato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "L’occultamento o la distruzione di documenti contabili per evitare un accertamento è:",
+      "opzioni": [
+        "Una scelta gestionale",
+        "Reato (art. 10 D.Lgs. 74/2000) rilevante ex art. 25-quinquiesdecies",
+        "Consentito per documenti oltre 5 anni",
+        "Sanzionato solo amministrativamente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Le prescrizioni ex D.Lgs. 758/1994 in materia SSL:",
+      "opzioni": [
+        "Non vanno adempiute se si fa ricorso",
+        "Vanno adempiute nei termini; con il pagamento della sanzione il reato contravvenzionale si estingue",
+        "Riguardano solo i lavoratori",
+        "Sono facoltative"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il \"fascicolo 231\" è:",
+      "opzioni": [
+        "Il fascicolo del processo",
+        "L’archivio ordinato delle evidenze di adozione e attuazione del Modello, alimentato nel tempo",
+        "Il contratto con il consulente",
+        "Il bilancio"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il piano di adeguamento con scadenze superate e non riprogrammate è:",
+      "opzioni": [
+        "Normale",
+        "La prova più semplice della colpa di organizzazione: va riprogrammato per iscritto con misure compensative",
+        "Irrilevante se il Modello è adottato",
+        "Un problema solo dell’OdV"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Le condotte riparatorie ex art. 17 devono essere realizzate:",
+      "opzioni": [
+        "Dopo la sentenza",
+        "Prima della dichiarazione di apertura del dibattimento",
+        "Entro 10 anni",
+        "Solo su richiesta del PM"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il self-cleaning nel Codice dei contratti pubblici consiste in:",
+      "opzioni": [
+        "Pulizia dei cantieri",
+        "Misure dimostrate (risarcimento, collaborazione, misure organizzative come il Modello 231 e la disciplina) per evitare l’esclusione dalle gare",
+        "Cambio di ragione sociale",
+        "Rinuncia all’appalto"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Nelle prime 72 ore dopo un infortunio grave il vertice deve, tra l’altro:",
+      "opzioni": [
+        "Riprendere subito la produzione",
+        "Fermare l’attività pericolosa, informare OdV e legale, vietare alterazioni di luoghi e documenti, separare le difese",
+        "Chiedere il silenzio ai testimoni",
+        "Attendere la convocazione del giudice"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "La comunicazione esterna in crisi deve essere:",
+      "opzioni": [
+        "Affidata a più portavoce",
+        "Unica, veritiera, rispettosa delle persone, rivista anche con l’OdV",
+        "Aggressiva verso le autorità",
+        "Assente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "L’errore di vertice più grave nella vigilanza è:",
+      "opzioni": [
+        "Partecipare alle riunioni OdV",
+        "Chiedere all’OdV di attenuare i rilievi o ignorare le sue raccomandazioni",
+        "Chiedere indicatori",
+        "Approvare il piano di vigilanza"
+      ],
+      "corretta": 1
+    }
+  ],
+  "esame": [
+    {
+      "modulo": "m01",
+      "domanda": "Per i reati commessi dagli apicali, l’ente non risponde se prova che:",
+      "opzioni": [
+        "Il reato è stato commesso da un dipendente",
+        "Ha adottato e attuato un Modello idoneo, istituito un OdV efficace e il reato è stato commesso eludendo fraudolentemente il Modello",
+        "Ha pagato le tasse",
+        "Il fatto è avvenuto all’estero"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "L’omessa adozione del Modello può fondare:",
+      "opzioni": [
+        "Un premio fiscale",
+        "Un’azione di responsabilità verso gli amministratori per il danno da sanzione 231",
+        "L’esenzione dalla 231",
+        "La nomina di un commissario"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Nel caso Thyssenkrupp la Cassazione ha individuato il vantaggio dell’ente:",
+      "opzioni": [
+        "Nell’evento",
+        "Nel risparmio di costi derivante dal rinvio degli investimenti di sicurezza",
+        "Nei premi assicurativi",
+        "Non lo ha individuato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Il socio senza cariche che gestisce di fatto i rapporti con la PA è:",
+      "opzioni": [
+        "Un terzo",
+        "Un amministratore di fatto, apicale ex art. 5 lett. a)",
+        "Un sottoposto",
+        "Irrilevante"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "La delega di funzioni SSL richiede, tra l’altro:",
+      "opzioni": [
+        "Solo la comunicazione verbale",
+        "Forma scritta con data certa, poteri di organizzazione gestione e controllo, autonomia di spesa, accettazione",
+        "L’approvazione dell’ASL",
+        "La laurea del delegato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "I controlli sulle decisioni del vertice (firma congiunta, riesame indipendente):",
+      "opzioni": [
+        "Sono inutili",
+        "Rendono il Modello idoneo anche rispetto ai reati apicali e proteggono l’amministratore",
+        "Riducono la produttività e vanno evitati",
+        "Sono richiesti solo nelle quotate"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Il compenso a successo al consulente sull’aggiudicazione di una gara pubblica:",
+      "opzioni": [
+        "È ammesso fino al 10%",
+        "È un red flag di corruzione e traffico di influenze",
+        "È obbligatorio",
+        "È fiscalmente vantaggioso"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Il reinvestimento nell’impresa del risparmio fiscale da fatture false configura:",
+      "opzioni": [
+        "Nessun reato ulteriore",
+        "Autoriciclaggio (648-ter.1 c.p.)",
+        "Abuso di ufficio",
+        "Appropriazione indebita"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "L’OdV è revocabile:",
+      "opzioni": [
+        "Liberamente",
+        "Solo per giusta causa, con delibera motivata",
+        "A fine anno",
+        "Mai"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Il vertice che chiede al gestore il nome del segnalante:",
+      "opzioni": [
+        "Esercita un suo diritto",
+        "Viola il D.Lgs. 24/2023; la richiesta va rifiutata e può essere sanzionata",
+        "Può farlo se la segnalazione è anonima",
+        "Può farlo dopo 3 mesi"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Il sistema disciplinare deve essere applicato:",
+      "opzioni": [
+        "Solo ai dipendenti",
+        "A tutti i livelli, amministratori inclusi, indipendentemente dal rilievo penale",
+        "Solo dopo condanna",
+        "Solo dall’OdV"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Secondo ISO 37301/37001 par. 5.1, l’alta direzione deve:",
+      "opzioni": [
+        "Delegare la conformità",
+        "Dimostrare leadership e impegno, anche dando l’esempio",
+        "Approvare solo il budget",
+        "Nominare un consulente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Dopo un infortunio grave, ripristinare la protezione mancante prima dei rilievi è:",
+      "opzioni": [
+        "Doveroso",
+        "Alterazione della scena: distrugge prove, è reato e vanifica la difesa",
+        "Consigliato dal legale",
+        "Neutro"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Il legale rappresentante indagato per il reato-presupposto:",
+      "opzioni": [
+        "Rappresenta l’ente",
+        "Non può rappresentare l’ente (art. 39); servono rappresentante ad hoc e difensore distinto",
+        "Rappresenta l’ente solo in primo grado",
+        "Nomina l’OdV come rappresentante"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Il self-cleaning negli appalti pubblici si dimostra con:",
+      "opzioni": [
+        "Una dichiarazione generica",
+        "Risarcimento, collaborazione, misure organizzative (Modello 231 aggiornato, disciplina) documentate",
+        "Il cambio di sede",
+        "La rinuncia alle gare"
+      ],
+      "corretta": 1
+    }
+  ]
+}

@@ -1,0 +1,2357 @@
+{
+  "parametri": {
+    "ore": 40,
+    "test": "soglia 0.75",
+    "esame": "soglia 0.75"
+  },
+  "checkpoint": [
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Un dipendente di una S.r.l. commette un furto in danno di un fornitore per avvantaggiare la società. L’ente risponde ex D.Lgs. 231/2001?",
+      "opzioni": [
+        "Sì, perché il reato è commesso nell’interesse dell’ente",
+        "No, perché il furto non rientra nel catalogo dei reati-presupposto",
+        "Sì, ma solo con sanzione pecuniaria ridotta",
+        "Solo se il dipendente è un soggetto apicale"
+      ],
+      "corretta": 1,
+      "spiegazione": "Vige il principio di legalità (art. 2): l’ente risponde esclusivamente per i reati tassativamente previsti dagli artt. 24 ss. Il furto non vi rientra."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "In un infortunio sul lavoro con lesioni gravi, in che cosa consiste il \"vantaggio\" per l’ente secondo le Sezioni Unite Thyssenkrupp?",
+      "opzioni": [
+        "Nell’evento lesivo subito dal lavoratore",
+        "Nel risparmio di costi o aumento di produttività derivante dalla violazione delle norme cautelari",
+        "Nel risarcimento ottenuto dall’assicurazione",
+        "Non può esistere vantaggio in un reato colposo"
+      ],
+      "corretta": 1,
+      "spiegazione": "Interesse e vantaggio si riferiscono alla condotta violativa delle cautele (es. mancato acquisto DPI, mancata formazione), non all’evento."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "Quale tra queste NON è una condizione dell’esimente ex art. 6 per i reati degli apicali?",
+      "opzioni": [
+        "Adozione ed efficace attuazione del Modello prima del fatto",
+        "Istituzione di un OdV con autonomi poteri di iniziativa e controllo",
+        "Elusione fraudolenta del Modello da parte dell’autore",
+        "Risarcimento integrale del danno prima del dibattimento"
+      ],
+      "corretta": 3,
+      "spiegazione": "Il risarcimento prima del dibattimento è una condotta riparatoria (art. 17) che evita le interdittive, non una condizione dell’esimente ex art. 6."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 8,
+      "domanda": "Qual è il range del valore unitario della quota nella sanzione pecuniaria?",
+      "opzioni": [
+        "Da 100 a 1.000 euro",
+        "Da 258,23 a 1.549,37 euro",
+        "Da 1.000 a 10.000 euro",
+        "Da 25.822 a 1.549.370 euro"
+      ],
+      "corretta": 1,
+      "spiegazione": "Le quote sono da 100 a 1.000 (numero), il valore di ciascuna da 258,23 a 1.549,37 €. Il minimo teorico è quindi 25.823 € e il massimo 1.549.370 €."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 10,
+      "domanda": "Il legale rappresentante di Metalfer Sud è imputato per il reato-presupposto. Può rappresentare la società nel procedimento 231?",
+      "opzioni": [
+        "Sì, sempre",
+        "No: l’ente deve nominare un rappresentante diverso (art. 39)",
+        "Sì, se autorizzato dal CdA",
+        "Sì, se il reato è colposo"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’art. 39 vieta la rappresentanza dell’ente da parte del legale rappresentante imputato del reato da cui dipende l’illecito: conflitto di interessi."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Il D.Lgs. 231/2001 è stato emanato in attuazione della legge delega:",
+      "opzioni": [
+        "L. 300/2000",
+        "L. 190/2012",
+        "L. 146/2006",
+        "L. 3/2019"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "La responsabilità dell’ente è qualificata dalla giurisprudenza come:",
+      "opzioni": [
+        "Responsabilità civile da fatto illecito",
+        "Responsabilità penale in senso stretto",
+        "Tertium genus tra responsabilità penale e amministrativa",
+        "Responsabilità oggettiva senza colpa"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Quale soggetto è escluso dall’ambito di applicazione del decreto?",
+      "opzioni": [
+        "Società in nome collettivo",
+        "Comune",
+        "Fondazione",
+        "Società a partecipazione pubblica"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Il criterio dell’\"interesse\" si valuta:",
+      "opzioni": [
+        "Ex post, in base al beneficio ottenuto",
+        "Ex ante, in base alla finalizzazione della condotta",
+        "Solo nei reati colposi",
+        "Solo per i soggetti sottoposti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Se l’autore del reato ha agito nell’interesse esclusivo proprio o di terzi:",
+      "opzioni": [
+        "L’ente risponde con sanzione ridotta",
+        "L’ente non risponde (art. 5, c. 2)",
+        "L’ente risponde solo con sanzione interdittiva",
+        "L’ente risponde se è una società di capitali"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "L’amministratore di fatto è considerato:",
+      "opzioni": [
+        "Soggetto sottoposto",
+        "Soggetto apicale",
+        "Terzo estraneo",
+        "Sempre escluso dalla 231"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Per i reati commessi dai sottoposti, l’accusa deve provare:",
+      "opzioni": [
+        "L’elusione fraudolenta del Modello",
+        "L’inosservanza degli obblighi di direzione o vigilanza",
+        "La mancanza dell’OdV",
+        "Il dolo dell’ente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Il requisito di \"efficace attuazione\" ex art. 7, c. 4 richiede:",
+      "opzioni": [
+        "Solo l’adozione del Modello con delibera",
+        "Verifica periodica/aggiornamento del Modello e sistema disciplinare",
+        "La certificazione ISO 37301",
+        "La nomina di un OdV collegiale"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "La sanzione pecuniaria è determinata:",
+      "opzioni": [
+        "In percentuale sul fatturato",
+        "Con il sistema bifasico per quote",
+        "In misura fissa per ogni reato",
+        "Dal PM in sede di contestazione"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Quale sanzione interdittiva è potenzialmente più grave per un’impresa che lavora in appalti pubblici?",
+      "opzioni": [
+        "Divieto di pubblicizzare beni o servizi",
+        "Divieto di contrattare con la PA",
+        "Pubblicazione della sentenza",
+        "Confisca del profitto"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Ai sensi dell’art. 17, le sanzioni interdittive non si applicano se prima dell’apertura del dibattimento l’ente:",
+      "opzioni": [
+        "Cambia il legale rappresentante",
+        "Risarcisce il danno, elimina le carenze organizzative con un Modello idoneo e mette a disposizione il profitto",
+        "Si trasforma in altra forma societaria",
+        "Nomina un OdV collegiale"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "In caso di fusione, la responsabilità per gli illeciti commessi dalle società partecipanti:",
+      "opzioni": [
+        "Si estingue",
+        "Passa all’ente risultante dalla fusione",
+        "Resta ai soci",
+        "Si trasferisce ai creditori"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Metalfer Sud presenta una perizia tecnica con dati alterati per ottenere il credito d’imposta 4.0. Quale reato-presupposto viene in rilievo?",
+      "opzioni": [
+        "Art. 25 – Corruzione",
+        "Art. 24 – Indebita percezione di erogazioni / truffa aggravata per erogazioni pubbliche",
+        "Art. 25-ter – False comunicazioni sociali",
+        "Art. 25-quinquiesdecies – Dichiarazione infedele"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’uso di documenti falsi per ottenere erogazioni pubbliche (inclusi i crediti d’imposta) integra il 316-ter o il 640-bis c.p., richiamati dall’art. 24."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Un consulente viene pagato con una provvigione del 6% \"a successo\" sulle gare aggiudicate, senza deliverable documentati. Perché è un red flag 231?",
+      "opzioni": [
+        "Perché le provvigioni sono vietate dal codice civile",
+        "Perché un compenso legato all’esito, senza prestazioni documentate, può costituire la provvista per la corruzione o il traffico di influenze",
+        "Perché i consulenti non possono partecipare alle gare",
+        "Non è un red flag se il consulente è iscritto a un albo"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il compenso sproporzionato o legato all’aggiudicazione è l’indicatore tipico di schermo per il pagamento di utilità al pubblico ufficiale (artt. 319, 346-bis)."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "L’associazione per delinquere (416 c.p.) finalizzata a commettere reati NON inclusi nel catalogo 231:",
+      "opzioni": [
+        "Non rileva mai per l’ente",
+        "È stata usata come \"cavallo di Troia\" per perseguire enti anche per reati-scopo non in catalogo, con limiti posti dalla Cassazione",
+        "Rileva solo per le società quotate",
+        "Rileva solo se i reati-scopo sono tributari"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il 416 c.p. è in catalogo (art. 24-ter) indipendentemente dai reati-scopo; la Cassazione ha però escluso che si possa confiscare il profitto dei reati-scopo non in catalogo."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 8,
+      "domanda": "Il responsabile vendite di Metalfer Sud offre un viaggio al buyer di un cliente privato per ottenere un ordine. Quale reato?",
+      "opzioni": [
+        "Corruzione ex art. 319 c.p.",
+        "Corruzione tra privati ex art. 2635 c.c. (art. 25-ter)",
+        "Truffa ex art. 640 c.p.",
+        "Nessun reato: il cliente è privato"
+      ],
+      "corretta": 1,
+      "spiegazione": "La corruzione tra privati (2635 c.c.) punisce chi dà o promette utilità a amministratori, dirigenti o dipendenti di società private perché compiano atti in violazione dei doveri d’ufficio o di fedeltà."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 9,
+      "domanda": "Quale indice NON è tipico dello sfruttamento lavorativo ex art. 603-bis c.p.?",
+      "opzioni": [
+        "Retribuzione palesemente difforme dai CCNL",
+        "Violazione reiterata delle norme su orario e riposi",
+        "Uso di violenza fisica (requisito necessario)",
+        "Violazioni delle norme su sicurezza e igiene"
+      ],
+      "corretta": 2,
+      "spiegazione": "Dal 2016 la violenza o minaccia è solo un’aggravante: il caporalato si configura anche senza, in presenza di sfruttamento e approfittamento dello stato di bisogno."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Quale legge ha inserito i reati di turbata libertà degli incanti (353, 353-bis c.p.) nell’art. 24?",
+      "opzioni": [
+        "L. 190/2012",
+        "L. 3/2019",
+        "L. 137/2023",
+        "D.Lgs. 75/2020"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "La malversazione di erogazioni pubbliche (316-bis c.p.) punisce:",
+      "opzioni": [
+        "L’ottenimento del finanziamento con documenti falsi",
+        "La mancata destinazione dei fondi ottenuti allo scopo previsto",
+        "La corruzione del funzionario erogante",
+        "La frode informatica ai danni dello Stato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "La corruzione \"per l’esercizio della funzione\" (318 c.p.):",
+      "opzioni": [
+        "Richiede un atto specifico contrario ai doveri",
+        "Non richiede l’individuazione di un atto specifico",
+        "Si applica solo ai pubblici ufficiali stranieri",
+        "È stata abrogata dalla L. 190/2012"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Nell’induzione indebita (319-quater c.p.):",
+      "opzioni": [
+        "È punito solo il pubblico ufficiale",
+        "È punito anche il privato che dà o promette l’utilità",
+        "È punito solo il privato",
+        "Non è prevista responsabilità dell’ente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il traffico di influenze illecite è previsto dall’art.:",
+      "opzioni": [
+        "318 c.p.",
+        "346-bis c.p.",
+        "2635 c.c.",
+        "640-bis c.p."
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Per i reati di corruzione commessi da apicali, le sanzioni interdittive hanno durata:",
+      "opzioni": [
+        "Da 3 mesi a 2 anni",
+        "Da 2 a 4 anni",
+        "Da 4 a 7 anni",
+        "Da 1 a 3 anni"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Quale legge del 2024 ha rafforzato le sanzioni 231 per i reati informatici e introdotto l’estorsione informatica (629 c. 3)?",
+      "opzioni": [
+        "L. 90/2024",
+        "D.Lgs. 138/2024",
+        "L. 114/2024",
+        "D.Lgs. 87/2024"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "L’uso aziendale di software privo di licenza può rilevare ai sensi degli artt.:",
+      "opzioni": [
+        "24 e 25",
+        "24-bis e 25-novies",
+        "25-ter e 25-sexies",
+        "25-quinquies e 25-duodecies"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il reato di frode nell’esercizio del commercio (515 c.p.) si configura quando:",
+      "opzioni": [
+        "Si consegna una cosa diversa per origine, provenienza, qualità o quantità da quella dichiarata o pattuita",
+        "Si contraffà un marchio registrato",
+        "Si vende un prodotto a prezzo inferiore al costo",
+        "Si omette l’emissione della fattura"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il reato di impedito controllo (2625 c.c.) tutela:",
+      "opzioni": [
+        "L’attività dell’OdV",
+        "Le funzioni dei soci, del collegio sindacale e dei revisori",
+        "Le ispezioni della Guardia di Finanza",
+        "I controlli dell’Agenzia delle Entrate"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "La corruzione tra privati (2635 c.c.) è procedibile:",
+      "opzioni": [
+        "Solo a querela della società danneggiata",
+        "D’ufficio dalla L. 3/2019",
+        "Solo se il corrotto è un amministratore",
+        "Solo per società quotate"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il caporalato (603-bis c.p.) è stato inserito nel catalogo 231 dalla:",
+      "opzioni": [
+        "L. 228/2003",
+        "L. 199/2016",
+        "L. 3/2019",
+        "L. 68/2015"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Un infortunio con prognosi di 25 giorni causato da violazione delle norme SSL:",
+      "opzioni": [
+        "Integra l’art. 25-septies",
+        "Non rileva ai fini 231 perché la lesione non è grave (≤ 40 giorni)",
+        "Rileva solo se il lavoratore è un somministrato",
+        "Rileva solo se manca il DVR"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’art. 25-septies richiama solo le lesioni gravi o gravissime (590 c. 3): la lesione semplice non è reato-presupposto, pur restando sanzionabile penalmente per la persona fisica e amministrativamente."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "La certificazione ISO 45001 di un’azienda:",
+      "opzioni": [
+        "Equivale a un Modello 231 idoneo per i reati SSL",
+        "Copre i contenuti dell’art. 30 D.Lgs. 81/08 ma non sostituisce OdV, flussi informativi e sistema disciplinare 231",
+        "È obbligatoria per l’esimente",
+        "Esclude automaticamente la responsabilità dell’ente"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il sistema di gestione certificato fornisce i controlli operativi; il Modello deve richiamarlo e integrarlo con le componenti tipiche della 231."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Metalfer Sud mantiene rifiuti pericolosi in deposito temporaneo per oltre 90 giorni e li affida a un intermediario senza verificare l’impianto di destino. Quale norma rileva?",
+      "opzioni": [
+        "Art. 137 TUA – scarichi",
+        "Art. 256 TUA – gestione non autorizzata / deposito incontrollato (art. 25-undecies)",
+        "Art. 279 TUA – emissioni",
+        "Art. 452-bis c.p. – inquinamento ambientale"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il superamento dei limiti del deposito temporaneo configura deposito incontrollato (256 c. 2) e l’affidamento a soggetti non verificati espone al concorso nella gestione illecita."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Il reinvestimento nell’impresa del risparmio fiscale derivante da fatture per operazioni inesistenti:",
+      "opzioni": [
+        "Non costituisce reato autonomo",
+        "Può integrare autoriciclaggio (648-ter.1 c.p.), rilevante ex art. 25-octies",
+        "Integra solo il reato tributario",
+        "Rileva solo se superiore a 10 milioni di euro"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’autoriciclaggio punisce chi impiega in attività economiche il provento del delitto commesso, ostacolandone l’identificazione: il reato-base tributario si somma al 648-ter.1."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 7,
+      "domanda": "Nel risk assessment, un reato-presupposto estraneo all’attività dell’ente va:",
+      "opzioni": [
+        "Omesso dal documento",
+        "Indicato come \"non applicabile\" con motivazione documentata e previsione di rivalutazione",
+        "Trattato con un protocollo completo comunque",
+        "Rinviato alla valutazione dell’OdV"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’esclusione immotivata è una tipica non conformità: la tracciabilità del ragionamento prova la completezza dell’analisi."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "L’art. 25-septies richiama i reati di:",
+      "opzioni": [
+        "589 e 590 c. 3 c.p. con violazione norme SSL",
+        "437 e 451 c.p.",
+        "589 e 590 c.p. in ogni forma",
+        "Solo 589 c.p."
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Secondo l’art. 30 c. 1 D.Lgs. 81/08, il Modello SSL deve assicurare, tra l’altro:",
+      "opzioni": [
+        "La certificazione ISO 9001",
+        "Attività di sorveglianza sanitaria e di informazione e formazione",
+        "L’assicurazione RC del datore di lavoro",
+        "La nomina di un OdV collegiale"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Quale funzione NON è delegabile dal datore di lavoro (art. 17 D.Lgs. 81/08)?",
+      "opzioni": [
+        "Acquisto DPI",
+        "Valutazione dei rischi e nomina RSPP",
+        "Formazione dei lavoratori",
+        "Sorveglianza sanitaria"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "L’obbligo di vigilanza del delegante sul delegato si intende assolto:",
+      "opzioni": [
+        "Con la sola delega scritta",
+        "Con l’adozione ed efficace attuazione del Modello di verifica e controllo ex art. 30 c. 4",
+        "Con la nomina del RSPP",
+        "Con la certificazione ISO 45001"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Il reato di inquinamento ambientale (452-bis c.p.) richiede:",
+      "opzioni": [
+        "Qualsiasi superamento dei limiti di emissione",
+        "Una compromissione o deterioramento significativi e misurabili di acque, aria, suolo, ecosistema",
+        "Il mancato pagamento della TARI",
+        "La sola assenza di AUA"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "La gestione di rifiuti senza autorizzazione è punita dall’art.:",
+      "opzioni": [
+        "137 TUA",
+        "256 TUA",
+        "279 TUA",
+        "258 TUA"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "L’autoriciclaggio è stato introdotto dalla:",
+      "opzioni": [
+        "L. 186/2014",
+        "L. 190/2012",
+        "D.Lgs. 231/2007",
+        "L. 3/2019"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Il trasferimento fraudolento di valori (512-bis c.p.) è richiamato dall’art.:",
+      "opzioni": [
+        "25-octies",
+        "25-octies.1",
+        "24-ter",
+        "25-ter"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Quale reato tributario NON è richiamato dall’art. 25-quinquiesdecies in via generale (ma solo per frodi IVA transfrontaliere ≥ 10 M€)?",
+      "opzioni": [
+        "Dichiarazione fraudolenta mediante fatture false (art. 2)",
+        "Emissione di fatture false (art. 8)",
+        "Omessa dichiarazione (art. 5)",
+        "Sottrazione fraudolenta al pagamento di imposte (art. 11)"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Il \"three-way match\" nel ciclo passivo consiste nel confronto tra:",
+      "opzioni": [
+        "Fattura, bilancio e dichiarazione IVA",
+        "Ordine, documento di ricezione/benestare e fattura",
+        "Preventivo, contratto e DURC",
+        "Fattura, bonifico e estratto conto"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "L’impiego di lavoratori stranieri privi di permesso di soggiorno rileva ex art. 25-duodecies se:",
+      "opzioni": [
+        "Sempre, anche per un solo lavoratore",
+        "I lavoratori sono più di tre, o minori, o sottoposti a sfruttamento",
+        "Solo in agricoltura",
+        "Solo se assunti tramite agenzia"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Il reato di induzione a non rendere dichiarazioni (377-bis c.p.) è richiamato dall’art.:",
+      "opzioni": [
+        "25-decies",
+        "25-novies",
+        "25-terdecies",
+        "24-ter"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Qual è l’approccio corretto per avviare la mappatura dei rischi 231?",
+      "opzioni": [
+        "Partire dal catalogo reati e cercare dove potrebbero verificarsi",
+        "Partire dai processi aziendali e individuare per ciascuno i reati potenziali e le modalità",
+        "Copiare la mappatura di un’azienda dello stesso settore",
+        "Chiedere al legale rappresentante quali reati teme"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’approccio per processi assicura specificità e completezza, come richiesto dalle Linee Guida Confindustria e dalla giurisprudenza."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "Durante un’intervista, la responsabile amministrativa dice che l’AU paga direttamente i consulenti dall’home banking e lei registra dopo. Quale principio di controllo è violato?",
+      "opzioni": [
+        "Tracciabilità",
+        "Segregazione dei compiti",
+        "Archiviazione",
+        "Regolamentazione"
+      ],
+      "corretta": 1,
+      "spiegazione": "Chi autorizza (AU) coincide con chi esegue il pagamento; manca il controllo di un soggetto diverso. La tracciabilità contabile esiste, ma a posteriori."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Un’area con rischio inerente 12 e controlli \"parziali\" ha un rischio residuo di:",
+      "opzioni": [
+        "12",
+        "9 (riduzione di un livello)",
+        "4 (riduzione di due livelli)",
+        "0"
+      ],
+      "corretta": 1,
+      "spiegazione": "Secondo la convenzione del corso, controlli parziali riducono il rischio di un livello (da Critico 12 ad Alto 9); solo controlli adeguati riducono di due livelli."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "Metalfer Sud vuole adottare il Modello con delibera entro 30 giorni ma alcune azioni del piano di adeguamento (es. ISO 45001) richiedono 12 mesi. È possibile?",
+      "opzioni": [
+        "No, il Modello può essere adottato solo a piano completato",
+        "Sì, purché le azioni siano tracciate nel piano, monitorate dall’OdV e il Modello preveda la fase di transizione",
+        "Sì, ma senza nominare l’OdV",
+        "Sì, omettendo dal Modello le aree non ancora adeguate"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’adozione può precedere il completamento di azioni di lungo periodo; ciò che conta è che i gap siano noti, pianificati e vigilati. Omettere aree o rinviare l’OdV comprometterebbe l’idoneità."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 8,
+      "domanda": "Il consulente per i crediti d’imposta è pagato all’8% \"a successo\" e indica lui il perito. Qual è il presidio più efficace?",
+      "opzioni": [
+        "Vietare il ricorso a consulenti esterni",
+        "Compenso prevalentemente fisso con variabile limitato e condizionato a deliverable; perito scelto dall’ente con sopralluogo verbalizzato; verifica interna prima della firma dell’AU",
+        "Far firmare al consulente una dichiarazione di responsabilità",
+        "Richiedere al consulente la certificazione ISO 9001"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il presidio agisce sull’incentivo distorsivo (compenso a successo), sull’indipendenza del perito e sulla verifica interna: tre controlli concorrenti che rendono il reato commettibile solo con collusione fraudolenta."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il requisito di \"individuare le attività nel cui ambito possono essere commessi reati\" è previsto da:",
+      "opzioni": [
+        "Art. 5 c. 1",
+        "Art. 6 c. 2 lett. a)",
+        "Art. 7 c. 4",
+        "Art. 30 D.Lgs. 81/08"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il rischio residuo \"accettabile\" secondo le Linee Guida Confindustria è quello per cui il reato può essere commesso solo:",
+      "opzioni": [
+        "Da soggetti sottoposti",
+        "Eludendo fraudolentemente il sistema di controllo",
+        "In concorso con un pubblico ufficiale",
+        "Con dolo eventuale"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Le \"attività strumentali\" sono:",
+      "opzioni": [
+        "Le attività in cui il reato si consuma",
+        "Le attività che possono fornire la provvista o gli strumenti per commettere il reato (acquisti, consulenze, omaggi, HR, tesoreria)",
+        "Le attività certificate ISO",
+        "Le attività svolte da consulenti esterni"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Nella fase documentale, il \"sistema di procure e deleghe\" serve a verificare:",
+      "opzioni": [
+        "Il fatturato per area",
+        "La coerenza tra poteri formali e responsabilità organizzative",
+        "La regolarità fiscale",
+        "La formazione dei lavoratori"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Quale tecnica di intervista è raccomandata?",
+      "opzioni": [
+        "Domande chiuse a risposta sì/no",
+        "Domande aperte seguite da richiesta di evidenze e triangolazione tra funzioni",
+        "Questionario anonimo online",
+        "Intervista collettiva a tutta l’azienda"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il parametro \"Impatto\" nella valutazione del rischio 231 considera:",
+      "opzioni": [
+        "Solo la sanzione pecuniaria",
+        "Sanzioni, interdittive, impatto sul business, reputazione, perdita qualificazioni",
+        "Solo il numero di dipendenti coinvolti",
+        "Solo il fatturato dell’area"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Quale dei seguenti NON è uno standard di controllo delle Linee Guida Confindustria?",
+      "opzioni": [
+        "Segregazione dei compiti",
+        "Tracciabilità",
+        "Certificazione di terza parte",
+        "Poteri autorizzativi e di firma"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "La gap analysis contiene:",
+      "opzioni": [
+        "Solo l’elenco dei reati",
+        "Gap rilevati, azioni, responsabili, priorità e scadenze",
+        "Il testo del Codice Etico",
+        "I verbali dell’OdV"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il DVR ex art. 28 D.Lgs. 81/08 e il risk assessment 231 sulla sicurezza:",
+      "opzioni": [
+        "Sono lo stesso documento",
+        "Sono diversi: il DVR valuta i rischi per i lavoratori, il risk assessment 231 valuta il rischio che le misure non siano attuate e si verifichi il reato",
+        "Il DVR sostituisce il risk assessment 231",
+        "Il risk assessment 231 sostituisce il DVR"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Dichiarare un rischio residuo \"nullo\" per tutte le aree è:",
+      "opzioni": [
+        "L’obiettivo del Modello",
+        "Poco credibile e contrario alla logica del rischio accettabile",
+        "Obbligatorio per legge",
+        "Richiesto dalle Linee Guida"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "La valutazione del rischio di corruzione ex ISO 37001 par. 4.5:",
+      "opzioni": [
+        "Non ha relazione con la 231",
+        "Coincide sostanzialmente con la parte anticorruzione della mappatura 231 e può essere riutilizzata",
+        "Sostituisce l’intero risk assessment 231",
+        "È vietata dalla 231"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il risk assessment deve essere:",
+      "opzioni": [
+        "Pubblicato sul sito aziendale",
+        "Datato, approvato, conservato in tutte le versioni e aggiornato ai cambiamenti organizzativi",
+        "Redatto esclusivamente dall’OdV",
+        "Trasmesso al Ministero della Giustizia"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Quale documento del Modello è normalmente riservato e non pubblicato integralmente?",
+      "opzioni": [
+        "Codice Etico",
+        "Parte Generale",
+        "Parte Speciale con protocolli e mappatura dei rischi",
+        "Sistema disciplinare"
+      ],
+      "corretta": 2,
+      "spiegazione": "La Parte Speciale e la mappatura contengono l’analisi di vulnerabilità dell’ente: sono diffuse alle funzioni interessate ma non rese pubbliche; Codice Etico e Parte Generale sono di norma pubblicati."
+    },
+    {
+      "modulo": "m05",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "Un dipendente viola un protocollo 231 senza che si configuri alcun reato. Può essere sanzionato disciplinarmente?",
+      "opzioni": [
+        "No, in assenza di reato",
+        "Sì: il sistema disciplinare 231 è autonomo e sanziona la violazione delle regole del Modello indipendentemente dal reato",
+        "Solo dopo sentenza penale",
+        "Solo se la violazione è dolosa"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’autonomia del sistema disciplinare è un requisito dell’efficace attuazione (art. 7 c. 4 lett. b): la sanzione presidia la regola, non il reato."
+    },
+    {
+      "modulo": "m05",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Quale tra queste è una formulazione corretta di un protocollo di controllo?",
+      "opzioni": [
+        "\"La società opera con trasparenza nei rapporti con la PA\"",
+        "\"Ogni offerta per gara pubblica è approvata con firma congiunta Dir. commerciale e AU sul modulo M-231-03, previa verifica dell’Ufficio tecnico, archiviata nel fascicolo di gara\"",
+        "\"I dipendenti devono comportarsi correttamente\"",
+        "\"È vietato commettere reati di corruzione\""
+      ],
+      "corretta": 1,
+      "spiegazione": "Un protocollo definisce chi fa cosa, come, con quale evidenza e chi controlla; le altre formulazioni sono principi o divieti generici privi di meccanismo di controllo."
+    },
+    {
+      "modulo": "m05",
+      "fonte": "step",
+      "dopoSlide": 7,
+      "domanda": "Nel protocollo SSL di Metalfer Sud, la delega ex art. 16 al Responsabile produzione è valida se:",
+      "opzioni": [
+        "È comunicata verbalmente dall’AU",
+        "È scritta, con data certa, attribuisce poteri di organizzazione/gestione/controllo e autonomia di spesa, accettata per iscritto e pubblicizzata",
+        "È inserita nel contratto di lavoro senza budget",
+        "È firmata dall’RSPP"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’art. 16 D.Lgs. 81/08 richiede tutti questi requisiti; senza autonomia di spesa la delega è inefficace e la responsabilità resta al datore di lavoro."
+    },
+    {
+      "modulo": "m05",
+      "fonte": "step",
+      "dopoSlide": 9,
+      "domanda": "In un gruppo, la capogruppo può adottare un unico Modello valido per tutte le controllate?",
+      "opzioni": [
+        "Sì, è la soluzione raccomandata",
+        "No: ogni società deve adottare il proprio Modello e nominare il proprio OdV; la capogruppo può emanare linee guida e un Codice Etico comune",
+        "Sì, se le controllate hanno meno di 50 dipendenti",
+        "Sì, se l’OdV è collegiale"
+      ],
+      "corretta": 1,
+      "spiegazione": "La responsabilità 231 è per ente: ciascuna società risponde autonomamente e deve dimostrare un Modello proprio, calibrato sui propri rischi."
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "Il Codice Etico:",
+      "opzioni": [
+        "Sostituisce il Modello nelle PMI",
+        "Esprime valori e principi di comportamento ed è parte integrante ma non sostitutiva del Modello",
+        "È obbligatorio solo per le società quotate",
+        "Deve restare riservato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "L’atto che prova l’adozione del Modello \"prima della commissione del fatto\" è:",
+      "opzioni": [
+        "La pubblicazione sul sito",
+        "La delibera dell’organo amministrativo con verbale datato",
+        "La nomina del consulente",
+        "La certificazione ISO 37301"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "Il sistema disciplinare 231 deve rispettare:",
+      "opzioni": [
+        "Solo il codice penale",
+        "L’art. 7 L. 300/1970 e il CCNL applicato",
+        "Solo il regolamento dell’OdV",
+        "Solo le Linee Guida Confindustria"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "Per i terzi (fornitori, consulenti) il sistema disciplinare prevede tipicamente:",
+      "opzioni": [
+        "Multa fino a 3 ore di retribuzione",
+        "Clausola risolutiva espressa ex art. 1456 c.c., penali, sospensione, risarcimento",
+        "Sospensione dal servizio fino a 3 giorni",
+        "Nessuna misura applicabile"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "La formazione 231 deve essere:",
+      "opzioni": [
+        "Uguale per tutti i destinatari",
+        "Differenziata per ruolo ed esposizione al rischio, con evidenze di partecipazione e apprendimento",
+        "Facoltativa per gli apicali",
+        "Erogata solo dall’OdV"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "Chi delibera le modifiche sostanziali del Modello?",
+      "opzioni": [
+        "L’OdV",
+        "L’organo amministrativo (CdA/AU), su proposta dell’OdV",
+        "Il collegio sindacale",
+        "Il consulente esterno"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "Ciascuna sezione della Parte Speciale contiene tipicamente:",
+      "opzioni": [
+        "Solo l’elenco dei reati con il testo di legge",
+        "Reati rilevanti, attività sensibili, principi di comportamento, protocolli, procedure richiamate, flussi all’OdV",
+        "Solo il Codice Etico",
+        "I verbali delle interviste"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "Un buon protocollo deve rinviare alle procedure operative esistenti:",
+      "opzioni": [
+        "Mai, per evitare dipendenze",
+        "Sì, indicando codice e revisione, aggiungendo solo i controlli specifici 231",
+        "Solo se certificate ISO",
+        "Solo per la sicurezza"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "La differenza tra delega e procura:",
+      "opzioni": [
+        "Sono sinonimi",
+        "La delega attribuisce funzioni interne; la procura conferisce poteri di rappresentanza verso terzi con atto notarile iscritto al Registro Imprese",
+        "La procura è interna, la delega è esterna",
+        "La delega richiede il notaio"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "La ISO 37001 apporta al Modello 231 in particolare:",
+      "opzioni": [
+        "La gestione dei rifiuti",
+        "Funzione conformità anticorruzione, due diligence sui terzi e controlli finanziari",
+        "Il DVR",
+        "La valutazione delle emissioni"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "La holding risponde per il reato commesso nella controllata:",
+      "opzioni": [
+        "Sempre",
+        "Mai",
+        "Se un suo esponente concorre nel reato e sussiste un interesse della holding",
+        "Solo se possiede il 100%"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m05",
+      "fonte": "test",
+      "domanda": "Il Modello di una PMI dovrebbe essere:",
+      "opzioni": [
+        "Il più lungo possibile",
+        "Proporzionato alla dimensione (art. 7 c. 3), specifico e leggibile",
+        "Identico a quello di una multinazionale",
+        "Limitato al solo Codice Etico"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Quale di questi poteri NON spetta all’OdV?",
+      "opzioni": [
+        "Accesso senza preavviso a documenti e locali",
+        "Modificare direttamente il Modello",
+        "Proporre aggiornamenti all’organo amministrativo",
+        "Avvalersi di consulenti esterni con budget autonomo"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’OdV \"cura l’aggiornamento\" proponendo; la modifica è deliberata dall’organo amministrativo. Poteri gestionali comprometterebbero l’indipendenza."
+    },
+    {
+      "modulo": "m06",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Metalfer Sud (85 addetti, rischio SSL critico) valuta di affidare le funzioni di OdV all’AU ex art. 6 c. 4. È una scelta adeguata?",
+      "opzioni": [
+        "Sì, è la soluzione più economica",
+        "No: il controllato controllerebbe se stesso; per il profilo di rischio è indicato un OdV collegiale misto o almeno monocratico esterno",
+        "Sì, se l’AU ha una laurea in giurisprudenza",
+        "Sì, purché affiancato dal commercialista"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’opzione dell’organo dirigente è riservata agli enti di piccole dimensioni e ha scarsa efficacia probatoria; con rischi critici e 85 addetti non è difendibile."
+    },
+    {
+      "modulo": "m06",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "In un anno l’OdV ha approvato il piano di vigilanza ma non ha prodotto rapporti di verifica. Qual è la conseguenza principale?",
+      "opzioni": [
+        "Nessuna, basta il piano",
+        "Il piano non eseguito non prova la vigilanza: rischio di contestazione per \"insufficiente vigilanza\" ex art. 6 c. 1 lett. d)",
+        "L’OdV viene automaticamente sostituito dal collegio sindacale",
+        "La sanzione pecuniaria dell’ente è ridotta"
+      ],
+      "corretta": 1,
+      "spiegazione": "La vigilanza si prova con l’attività svolta e documentata (verbali, rapporti), non con la programmazione."
+    },
+    {
+      "modulo": "m06",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "L’OdV nota che da due trimestri non riceve il flusso sugli infortuni dal RSPP. Cosa deve fare?",
+      "opzioni": [
+        "Attendere il flusso successivo",
+        "Trattare il flusso mancante come anomalia: sollecitare per iscritto, verificare direttamente i dati e verbalizzare",
+        "Segnalare all’ASL",
+        "Dimettersi"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’omissione di un flusso dovuto è di per sé un segnale di malfunzionamento del Modello; l’OdV deve reagire e documentare la reazione."
+    },
+    {
+      "modulo": "m06",
+      "fonte": "step",
+      "dopoSlide": 7,
+      "domanda": "Secondo l’orientamento prevalente, il componente dell’OdV che non impedisce un reato commesso dall’AU:",
+      "opzioni": [
+        "Risponde sempre del reato in concorso omissivo",
+        "Non è garante ex art. 40 c. 2 c.p. perché privo di poteri impeditivi; risponde però contrattualmente verso l’ente per omessa vigilanza",
+        "Risponde solo se è un avvocato",
+        "Non ha alcuna responsabilità"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’OdV non ha poteri di impedimento; la sua responsabilità è contrattuale (diligenza) e la sua inerzia fa perdere all’ente l’esimente. Il concorso penale richiede una partecipazione attiva."
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "I compiti dell’OdV sono previsti dall’art.:",
+      "opzioni": [
+        "5 c. 1",
+        "6 c. 1 lett. b)",
+        "7 c. 4",
+        "30 D.Lgs. 81/08"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "Il requisito della \"continuità d’azione\" si garantisce con:",
+      "opzioni": [
+        "La nomina a vita",
+        "Un piano di vigilanza, un calendario di riunioni e una segreteria tecnica o componente interno",
+        "La nomina di soli esterni",
+        "Il pagamento anticipato del compenso"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "Il collegio sindacale può svolgere le funzioni di OdV in base a:",
+      "opzioni": [
+        "Art. 6 c. 4",
+        "Art. 6 c. 4-bis",
+        "Art. 7 c. 2",
+        "Art. 2403 c.c."
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "Una causa tipica di ineleggibilità a componente OdV è:",
+      "opzioni": [
+        "Essere laureato in ingegneria",
+        "Svolgere funzioni operative nelle aree a rischio dell’ente",
+        "Avere più di 60 anni",
+        "Essere iscritto a un ordine professionale"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "La revoca dell’OdV può avvenire:",
+      "opzioni": [
+        "Liberamente in qualsiasi momento",
+        "Solo per giusta causa, con delibera motivata",
+        "Solo a fine mandato",
+        "Su richiesta dell’AU senza motivazione"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "Il piano di vigilanza dell’OdV è:",
+      "opzioni": [
+        "Approvato dal management",
+        "Approvato dall’OdV con approccio risk-based e comunicato all’organo amministrativo",
+        "Imposto dal collegio sindacale",
+        "Facoltativo"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "Quale è un flusso \"ad evento\" verso l’OdV?",
+      "opzioni": [
+        "Elenco semestrale dei consulenti",
+        "Infortunio con prognosi superiore a 30 giorni",
+        "Indici infortunistici trimestrali",
+        "Registro omaggi annuale"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "La relazione dell’OdV è destinata a:",
+      "opzioni": [
+        "Solo al consulente",
+        "All’organo amministrativo e al collegio sindacale",
+        "Al Ministero della Giustizia",
+        "Ai dipendenti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "Il caso Impregilo (Cass. 4677/2014) ha censurato l’OdV perché:",
+      "opzioni": [
+        "Era monocratico",
+        "Il CdA poteva modificare le proposte dell’OdV senza motivazione, privandolo di autonomia",
+        "Non era composto da avvocati",
+        "Si riuniva troppo spesso"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "I flussi informativi dovuti dalle funzioni e le segnalazioni whistleblowing:",
+      "opzioni": [
+        "Sono la stessa cosa",
+        "Sono distinti: i primi obbligatori e strutturati, le seconde volontarie e protette dal D.Lgs. 24/2023",
+        "Le segnalazioni sostituiscono i flussi",
+        "I flussi sono facoltativi"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "Nominare OdV il commercialista che tiene la contabilità dell’ente è:",
+      "opzioni": [
+        "Raccomandato per la conoscenza dei numeri",
+        "Sconsigliato per conflitto di interessi su reati societari e tributari",
+        "Obbligatorio nelle S.r.l.",
+        "Indifferente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "fonte": "test",
+      "domanda": "Il budget dell’OdV serve a:",
+      "opzioni": [
+        "Pagare i dipendenti dell’ente",
+        "Consentire verifiche e consulenze specialistiche in autonomia dal management",
+        "Finanziare la formazione SSL",
+        "Coprire le sanzioni 231"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "MFS Montaggi ha 22 dipendenti e adotta un Modello 231. È tenuta ad attivare un canale interno di whistleblowing?",
+      "opzioni": [
+        "No, è sotto i 50 dipendenti",
+        "Sì, limitatamente alle segnalazioni di violazioni 231 e del Modello",
+        "Sì, per tutte le violazioni di qualsiasi norma",
+        "Solo se richiesto dai sindacati"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’art. 3 c. 2 lett. b) include gli enti che adottano Modelli 231 indipendentemente dalla soglia, con ambito oggettivo limitato alle violazioni rilevanti ex 231."
+    },
+    {
+      "modulo": "m07",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Quale canale interno è conforme al D.Lgs. 24/2023?",
+      "opzioni": [
+        "Casella e-mail aziendale gestita dall’ufficio IT",
+        "Modulo cartaceo consegnato all’ufficio HR",
+        "Piattaforma informatica cifrata con accesso riservato al gestore, affiancata da modalità orale",
+        "Numero di cellulare dell’amministratore"
+      ],
+      "corretta": 2,
+      "spiegazione": "Il canale deve garantire la riservatezza dell’identità anche con crittografia e impedire accessi non autorizzati; deve prevedere forma scritta e orale."
+    },
+    {
+      "modulo": "m07",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "Entro quanto tempo il gestore deve dare riscontro al segnalante sull’esito o sullo stato della segnalazione?",
+      "opzioni": [
+        "7 giorni",
+        "30 giorni",
+        "3 mesi dall’avviso di ricevimento (o dalla scadenza dei 7 giorni)",
+        "6 mesi"
+      ],
+      "corretta": 2,
+      "spiegazione": "Art. 5 c. 1 lett. d): riscontro entro tre mesi; l’avviso di ricevimento va dato entro sette giorni."
+    },
+    {
+      "modulo": "m07",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Un lavoratore viene trasferito un mese dopo aver segnalato. Chi deve provare che il trasferimento non è ritorsivo?",
+      "opzioni": [
+        "Il lavoratore",
+        "Il datore di lavoro (inversione dell’onere della prova)",
+        "ANAC",
+        "L’OdV"
+      ],
+      "corretta": 1,
+      "spiegazione": "Art. 17 c. 2: si presume che la misura sia stata adottata a causa della segnalazione; l’onere di provare ragioni estranee è a carico di chi l’ha posta in essere."
+    },
+    {
+      "modulo": "m07",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "La segnalazione riguarda il Direttore commerciale (apicale). A chi deve essere indirizzata l’escalation?",
+      "opzioni": [
+        "All’AU soltanto",
+        "All’OdV e al CdA (escludendo i soggetti potenzialmente coinvolti), non al solo AU",
+        "Al Direttore commerciale per chiarimenti",
+        "Al sindacato"
+      ],
+      "corretta": 1,
+      "spiegazione": "Per segnalazioni su apicali la procedura deve prevedere un percorso che eviti conflitti di interesse: OdV e organo collegiale, con astensione dei coinvolti."
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "Il D.Lgs. 24/2023 attua la direttiva:",
+      "opzioni": [
+        "2016/680",
+        "2019/1937",
+        "2014/95",
+        "2022/2464"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "Per gli enti privati con 50-249 dipendenti la disciplina è applicabile dal:",
+      "opzioni": [
+        "15 luglio 2023",
+        "17 dicembre 2023",
+        "1 gennaio 2024",
+        "30 marzo 2023"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "Possono segnalare, tra gli altri:",
+      "opzioni": [
+        "Solo i dipendenti a tempo indeterminato",
+        "Lavoratori, autonomi, consulenti, volontari, tirocinanti, azionisti e persone con funzioni di amministrazione e controllo, anche prima e dopo il rapporto",
+        "Solo i dirigenti",
+        "Solo i membri dell’OdV"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "Il canale esterno è gestito da:",
+      "opzioni": [
+        "Ministero del Lavoro",
+        "ANAC",
+        "Garante privacy",
+        "Ispettorato del Lavoro"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "L’avviso di ricevimento della segnalazione va inviato entro:",
+      "opzioni": [
+        "24 ore",
+        "7 giorni",
+        "30 giorni",
+        "3 mesi"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "La gestione del canale interno deve essere affidata a:",
+      "opzioni": [
+        "Il legale rappresentante",
+        "Una persona o ufficio interno autonomo e formato, o un soggetto esterno autonomo e formato",
+        "L’ufficio IT",
+        "Il responsabile HR in ogni caso"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "La protezione del segnalante è esclusa se:",
+      "opzioni": [
+        "La segnalazione risulta infondata",
+        "È accertata la responsabilità penale per diffamazione o calunnia, o civile per dolo o colpa grave",
+        "Il segnalante ha motivi personali",
+        "La segnalazione è anonima"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "La sanzione ANAC per ritorsioni accertate va da:",
+      "opzioni": [
+        "500 a 2.500 €",
+        "1.000 a 10.000 €",
+        "10.000 a 50.000 €",
+        "50.000 a 100.000 €"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "La documentazione delle segnalazioni può essere conservata al massimo:",
+      "opzioni": [
+        "1 anno",
+        "5 anni dalla comunicazione dell’esito finale",
+        "10 anni",
+        "Senza limiti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "La divulgazione pubblica è protetta se:",
+      "opzioni": [
+        "Sempre",
+        "Preceduta da segnalazione interna ed esterna senza riscontro nei termini, oppure in caso di pericolo imminente o fondato rischio di ritorsioni/inefficacia del canale esterno",
+        "Mai",
+        "Solo per i dirigenti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "Quale adempimento privacy è obbligatorio per il canale whistleblowing?",
+      "opzioni": [
+        "Notifica al Garante",
+        "Valutazione d’impatto (DPIA) e informativa specifica",
+        "Consenso scritto del segnalante al trattamento",
+        "Nessuno, è escluso dal GDPR"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "fonte": "test",
+      "domanda": "Il sistema disciplinare 231 deve prevedere sanzioni per:",
+      "opzioni": [
+        "Solo il segnalante in malafede",
+        "Ritorsioni, violazione della riservatezza, ostacolo alla segnalazione e segnalazioni con dolo o colpa grave",
+        "Solo i dirigenti",
+        "Solo l’OdV"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Qual è la durata complessiva realistica di un progetto 231 fino all’adozione per una PMI di 80-100 addetti?",
+      "opzioni": [
+        "2-3 settimane",
+        "5-7 mesi",
+        "3-4 anni",
+        "Dipende solo dal numero di reati"
+      ],
+      "corretta": 1,
+      "spiegazione": "Risk assessment (6-8 settimane), adeguamenti, redazione (6-8 settimane), validazione e adozione richiedono 5-7 mesi; tempi più brevi indicano un Modello non calato sulla realtà."
+    },
+    {
+      "modulo": "m08",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Il momento di maggior rischio di \"scivolamento\" del progetto è:",
+      "opzioni": [
+        "Durante le interviste",
+        "Subito dopo l’adozione, quando il consulente esce e l’OdV non è ancora operativo",
+        "Durante la redazione del Codice Etico",
+        "Prima della delibera di avvio"
+      ],
+      "corretta": 1,
+      "spiegazione": "Senza una transizione pianificata (data prima riunione OdV, primo audit) il Modello rischia di restare sulla carta. Va fissata già nella delibera."
+    },
+    {
+      "modulo": "m08",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "La delibera di adozione del Modello deve contenere, tra l’altro:",
+      "opzioni": [
+        "L’elenco dei clienti",
+        "L’approvazione di tutti i documenti con revisione, la nomina dell’OdV con durata/compenso/budget e il piano di adeguamento residuo",
+        "Il bilancio dell’esercizio",
+        "La nomina del DPO"
+      ],
+      "corretta": 1,
+      "spiegazione": "La delibera è l’atto costitutivo del Modello: deve identificare i documenti approvati, l’OdV e le azioni residue, con data certa."
+    },
+    {
+      "modulo": "m08",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "In un gruppo, la capogruppo svolge amministrazione e HR per la controllata. Come va regolato ai fini 231?",
+      "opzioni": [
+        "Non serve nulla, è lo stesso gruppo",
+        "Con contratto di service scritto, clausole 231 e flussi informativi verso l’OdV della controllata",
+        "Basta un’e-mail interna",
+        "La controllata non deve avere un Modello"
+      ],
+      "corretta": 1,
+      "spiegazione": "I servizi infragruppo sono attività sensibili \"esternalizzate\": la controllata resta responsabile e deve poter vigilare tramite contratto e flussi."
+    },
+    {
+      "modulo": "m08",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "Un consulente dichiara a Metalfer Sud che, con il Modello, \"la società non potrà più essere sanzionata\". È corretto?",
+      "opzioni": [
+        "Sì, l’esimente è automatica",
+        "No: l’esimente dipende dall’idoneità e dall’efficace attuazione valutate dal giudice caso per caso; promettere immunità è scorretto",
+        "Sì, se il Modello è certificato",
+        "Sì, per i reati colposi"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il Modello offre una possibilità di esclusione o riduzione della responsabilità, mai una garanzia; l’onestà professionale impone di spiegarlo."
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "Nel progetto 231 il ruolo di \"sponsor\" spetta a:",
+      "opzioni": [
+        "Il consulente",
+        "L’organo amministrativo (AU/CdA)",
+        "L’OdV",
+        "Il RSPP"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "I process owner sono coinvolti perché:",
+      "opzioni": [
+        "Devono pagare il consulente",
+        "Validano mappatura e protocolli della propria area e ne sono i veri attuatori",
+        "Nominano l’OdV",
+        "Redigono il Codice Etico"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "Il comitato guida del progetto va verbalizzato perché:",
+      "opzioni": [
+        "Lo richiede il notaio",
+        "I verbali provano l’impegno dell’ente nel percorso di adozione",
+        "Serve per il bilancio",
+        "È obbligatorio per legge"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "La clausola 231 nei contratti con i fornitori prevede tipicamente:",
+      "opzioni": [
+        "Uno sconto sul prezzo",
+        "Presa visione del Codice Etico, impegno al rispetto, risoluzione ex art. 1456 c.c. in caso di violazione, informativa sul canale whistleblowing",
+        "La nomina del fornitore nell’OdV",
+        "L’esonero da responsabilità del fornitore"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "Per i contratti esistenti con i fornitori, la clausola 231:",
+      "opzioni": [
+        "Non può essere inserita",
+        "Si inserisce con addendum al rinnovo o entro un termine definito (es. 12 mesi)",
+        "Si applica automaticamente",
+        "È inutile"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "La formazione 231 per gli operai dovrebbe:",
+      "opzioni": [
+        "Durare almeno 16 ore",
+        "Basarsi su casi concreti del lavoro quotidiano, con test finale e materiali in lingua comprensibile",
+        "Essere solo online senza test",
+        "Essere limitata al vertice"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "Nelle organizzazioni quotate il Modello si integra con:",
+      "opzioni": [
+        "Il DVR soltanto",
+        "Codice di Corporate Governance, comitato controllo e rischi, internal audit, dirigente preposto ex L. 262/2005",
+        "Il solo Codice Etico",
+        "Il bilancio di sostenibilità"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "Per le società partecipate pubbliche il Modello 231 va coordinato con:",
+      "opzioni": [
+        "Il PTPCT ex L. 190/2012 e il RPCT",
+        "La Banca d’Italia",
+        "L’IVASS",
+        "Il CONI"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "Il rating di legalità AGCM:",
+      "opzioni": [
+        "È obbligatorio per tutte le imprese",
+        "È accessibile a imprese con fatturato ≥ 2 M€ e valorizza, tra l’altro, l’adozione del Modello 231",
+        "Sostituisce il Modello 231",
+        "È rilasciato da ANAC"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "Un indicatore di \"salute\" del Modello è:",
+      "opzioni": [
+        "Il numero di pagine della Parte Speciale",
+        "La percentuale di flussi informativi ricevuti rispetto a quelli dovuti",
+        "Il fatturato",
+        "Il numero di consulenti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "Quale evento impone un riesame straordinario del Modello?",
+      "opzioni": [
+        "Il cambio del fornitore di cancelleria",
+        "Un’acquisizione, una nuova sede estera o un nuovo reato-presupposto rilevante",
+        "La chiusura annuale del bilancio",
+        "Le ferie estive"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "fonte": "test",
+      "domanda": "Il costo del primo anno del Modello per una PMI rispetto all’esposizione sanzionatoria è tipicamente:",
+      "opzioni": [
+        "Superiore",
+        "Una frazione minima (pochi punti percentuali)",
+        "Equivalente",
+        "Non confrontabile"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "La certificazione ISO 37301 di un’azienda:",
+      "opzioni": [
+        "Certifica l’idoneità del Modello 231 ai sensi dell’art. 6",
+        "Attesta il sistema di gestione per la compliance e supporta, senza sostituirla, la valutazione giudiziale di idoneità del Modello",
+        "Rende superfluo l’OdV",
+        "È obbligatoria per le PMI"
+      ],
+      "corretta": 1,
+      "spiegazione": "Non esiste uno schema di certificazione accreditato del Modello 231; la valutazione di idoneità è del giudice. Le norme ISO sono strumenti di supporto."
+    },
+    {
+      "modulo": "m09",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "Nel costruire il campione per l’audit delle gare, l’auditor dovrebbe:",
+      "opzioni": [
+        "Scegliere solo le gare suggerite dal Direttore commerciale",
+        "Includere sempre gli elementi anomali (risk-based) e completare con una selezione casuale documentata",
+        "Verificare solo l’ultima gara",
+        "Lasciare che l’auditato prepari un riepilogo"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il campionamento risk-based con componente casuale e criterio documentato garantisce copertura delle anomalie e rappresentatività; i riepiloghi preparati dall’auditato non sono evidenze primarie."
+    },
+    {
+      "modulo": "m09",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "L’estrazione dati mostra 7 bonifici tra 4.800 e 4.990 € allo stesso fornitore in 3 settimane, con soglia di doppia firma a 5.000 €. Come classificare?",
+      "opzioni": [
+        "Punto di forza: nessun pagamento ha superato la soglia",
+        "Osservazione/raccomandazione (o NC a seconda del Modello): il controllo è formalmente rispettato ma aggirabile per frazionamento; proporre soglia cumulata",
+        "Nessun rilievo",
+        "NC maggiore per falso in bilancio"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il test di efficacia rivela una debolezza di progettazione del controllo. Non è di per sé prova di reato, ma un rischio da trattare; va inoltre approfondita la natura dei pagamenti."
+    },
+    {
+      "modulo": "m09",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Quale rilievo è formulato correttamente?",
+      "opzioni": [
+        "\"La gestione degli omaggi è carente\"",
+        "\"Criterio: Policy omaggi par. 3 richiede registrazione entro 5 gg. Evidenza: 6 omaggi su 10 campionati (note spese marzo-giugno) non risultano nel registro. Scostamento: 60% non registrato. Rischio: provvista non tracciata, art. 25. NC maggiore\"",
+        "\"Il direttore non rispetta le regole sugli omaggi\"",
+        "\"Si raccomanda maggiore attenzione\""
+      ],
+      "corretta": 1,
+      "spiegazione": "Il rilievo corretto ha criterio, evidenza quantificata, scostamento e rischio, è verificabile e non contiene giudizi sulle persone."
+    },
+    {
+      "modulo": "m09",
+      "fonte": "step",
+      "dopoSlide": 7,
+      "domanda": "In cantiere l’auditor OdV rileva lavoratori del subappaltatore senza DPI anticaduta a 3,2 m. Cosa fa?",
+      "opzioni": [
+        "Lo annota e lo inserisce nel rapporto finale dopo 30 giorni",
+        "Richiede l’intervento immediato del preposto/committente per fermare l’attività pericolosa, documenta, informa AU/CdA e formula il rilievo",
+        "Ignora, perché riguarda il subappaltatore",
+        "Chiama direttamente l’ASL"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il pericolo grave e immediato richiede la cessazione dell’attività (art. 18-19 D.Lgs. 81/08 tramite i soggetti responsabili); l’OdV non ha poteri gestionali ma deve far attivare chi li ha e documentare."
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "La ISO 19011:2018 fornisce:",
+      "opzioni": [
+        "Requisiti certificabili per il Modello 231",
+        "Linee guida per la gestione dei programmi di audit e la conduzione degli audit di sistemi di gestione",
+        "Il catalogo dei reati-presupposto",
+        "Le sanzioni per gli auditor"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "Il principio di \"indipendenza\" dell’auditor implica che:",
+      "opzioni": [
+        "L’auditor deve essere sempre esterno all’ente",
+        "L’auditor non verifica il proprio lavoro e non ha conflitti con l’area auditata",
+        "L’auditor non parla con l’auditato",
+        "L’auditor non legge documenti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "Un’area a rischio residuo \"critico\" dovrebbe essere auditata:",
+      "opzioni": [
+        "Ogni 5 anni",
+        "Semestralmente, con test sostanziali",
+        "Solo su segnalazione",
+        "Mai, perché già presidiata"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "Il \"walkthrough\" consiste nel:",
+      "opzioni": [
+        "Camminare in cantiere",
+        "Seguire una transazione lungo tutto il processo verificando ogni controllo nel punto in cui opera",
+        "Intervistare il direttore",
+        "Leggere il Modello"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "La \"riperformance\" è:",
+      "opzioni": [
+        "La ripetizione dell’audit",
+        "Rifare il controllo per verificarne il risultato (es. ricalcolare una congruità)",
+        "Una sanzione",
+        "La formazione dell’auditor"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "Una non conformità maggiore in ambito 231 è, ad esempio:",
+      "opzioni": [
+        "Un modulo privo di data su 8",
+        "L’OdV non riunito da 9 mesi",
+        "Un registro omaggi in ritardo di 2 settimane",
+        "Una procedura con refuso"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "Di fronte a un’evidenza di possibile reato durante l’audit, l’auditor:",
+      "opzioni": [
+        "Conduce l’indagine penale",
+        "La tratta secondo il protocollo: informativa immediata a OdV/CdA, valutazione legale, conservazione delle prove, senza eccedere le competenze",
+        "La ignora fino al rapporto",
+        "La pubblica sul sito"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "Il piano di azioni correttive è proposto da:",
+      "opzioni": [
+        "L’OdV",
+        "L’auditato, con analisi della causa radice; l’OdV ne valuta l’adeguatezza e verifica l’attuazione",
+        "Il consulente",
+        "Il notaio"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "Nel rapporto di audit è preferibile scrivere:",
+      "opzioni": [
+        "\"Il direttore ha agito illecitamente\"",
+        "\"La condotta rilevata non è conforme al protocollo X (evidenze...)\"",
+        "\"Probabilmente c’è corruzione\"",
+        "\"Tutto regolare\" senza dettagli"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "La rotazione degli auditor sulle aree è raccomandata ogni:",
+      "opzioni": [
+        "Mese",
+        "3 anni circa",
+        "10 anni",
+        "Mai"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "Il campione per una popolazione di 14 gare dovrebbe essere, indicativamente:",
+      "opzioni": [
+        "1 gara",
+        "Almeno 25-30% (4-5 gare), più tutte quelle anomale",
+        "Tutte le gare sempre",
+        "Nessuna, basta l’intervista"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "fonte": "test",
+      "domanda": "Il ciclo rilievo → azione → verifica di chiusura dimostra:",
+      "opzioni": [
+        "Che il Modello è perfetto",
+        "L’aggiornamento e l’efficace attuazione richiesti dall’art. 7 c. 4",
+        "Che l’auditor è severo",
+        "Che non servono altri audit"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Secondo Cass. 23401/2022, la commissione del reato da parte di un apicale:",
+      "opzioni": [
+        "Prova di per sé l’inidoneità del Modello",
+        "Non prova l’inidoneità: il giudice deve valutare il Modello ex ante e verificare l’eventuale elusione fraudolenta",
+        "Esclude sempre la responsabilità dell’ente",
+        "Comporta la revoca dell’OdV"
+      ],
+      "corretta": 1,
+      "spiegazione": "La valutazione è prognostica ex ante (\"prognosi postuma\"); ragionare con il senno di poi renderebbe l’esimente inapplicabile."
+    },
+    {
+      "modulo": "m10",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Quale lezione deriva dal caso Thyssenkrupp per i reati SSL?",
+      "opzioni": [
+        "Il Modello formale è sufficiente",
+        "Il vantaggio dell’ente consiste nel risparmio di costi per la sicurezza e un Modello non attuato mentre si rinviano gli investimenti non difende l’ente",
+        "I reati colposi non generano responsabilità 231",
+        "L’OdV non deve occuparsi di sicurezza"
+      ],
+      "corretta": 1,
+      "spiegazione": "Le Sezioni Unite hanno riferito interesse/vantaggio alla condotta e censurato la discrepanza tra Modello adottato e decisioni gestionali contrarie alla sicurezza."
+    },
+    {
+      "modulo": "m10",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Il legale rappresentante di Metalfer Sud è indagato per il reato-presupposto. Prima mossa corretta dell’ente?",
+      "opzioni": [
+        "Lasciare che il legale rappresentante nomini un difensore comune a sé e all’ente",
+        "Nominare un rappresentante ad hoc e un difensore dell’ente distinto da quello della persona fisica, attivare OdV e conservazione prove",
+        "Distruggere i documenti compromettenti",
+        "Attendere la contestazione dell’illecito"
+      ],
+      "corretta": 1,
+      "spiegazione": "Art. 39 (incompatibilità del rappresentante imputato) e conflitto di interessi tra ente e persona fisica impongono difese separate; la conservazione delle prove evita ulteriori reati (25-decies, art. 10 D.Lgs. 74/2000)."
+    },
+    {
+      "modulo": "m10",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Il piano di adeguamento prevedeva la messa a norma di una pressa entro giugno; l’infortunio avviene in agosto con la pressa non adeguata. Quale è l’implicazione?",
+      "opzioni": [
+        "Nessuna, il Modello era adottato",
+        "Il ritardo documentato e non riprogrammato può provare la colpa di organizzazione: le scadenze del piano vanno rispettate o motivatamente riprogrammate dal CdA",
+        "Il piano di adeguamento non ha valore giuridico",
+        "La responsabilità è solo dell’operaio"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il piano di adeguamento è parte del Modello; una scadenza superata senza riesame dimostra che l’ente conosceva il rischio e non ha agito."
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "La \"prognosi postuma\" nel giudizio sul Modello significa che il giudice:",
+      "opzioni": [
+        "Valuta il Modello con il senno di poi",
+        "Si colloca al momento del fatto e valuta se il Modello era idoneo ex ante",
+        "Valuta solo il Modello aggiornato dopo il fatto",
+        "Non valuta il Modello"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "L’elusione fraudolenta richiede:",
+      "opzioni": [
+        "La semplice violazione di una procedura",
+        "Una condotta ingannevole e artificiosa di aggiramento dei presidi del Modello",
+        "Il concorso di un pubblico ufficiale",
+        "La complicità dell’OdV"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "Nel caso Impregilo, Cass. 4677/2014 aveva censurato il Modello perché:",
+      "opzioni": [
+        "Non era conforme alle Linee Guida",
+        "L’OdV non aveva poteri effettivi sull’area a rischio (comunicati al mercato) e il CdA poteva modificare le sue proposte liberamente",
+        "Era troppo lungo",
+        "Non prevedeva il Codice Etico"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "Cass. 23401/2022 (Impregilo) ha stabilito che la conformità alle Linee Guida Confindustria:",
+      "opzioni": [
+        "È irrilevante",
+        "È un parametro significativo di idoneità, pur non essendo vincolante per il giudice",
+        "Equivale a certificazione di idoneità",
+        "È vietata"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "Secondo Cass. 24583/2011, la holding risponde per il reato commesso nella controllata:",
+      "opzioni": [
+        "Sempre, per l’interesse di gruppo",
+        "Solo se un suo esponente concorre nel reato e vi è un interesse della holding",
+        "Mai",
+        "Solo per i reati colposi"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "Il \"modello di fatto\" non formalizzato in una piccola impresa:",
+      "opzioni": [
+        "È esimente ai sensi dell’art. 6",
+        "Non costituisce esimente: occorrono adozione formale, documenti e OdV",
+        "Vale solo per i reati colposi",
+        "È sufficiente se certificato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "La Corte d’Appello di Milano nel caso MPS ha assolto i componenti dell’OdV perché:",
+      "opzioni": [
+        "Non erano avvocati",
+        "L’OdV non ha poteri impeditivi e quindi non è garante ex art. 40 c. 2 c.p.",
+        "Il reato era prescritto",
+        "Il Modello era perfetto"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "Se il legale rappresentante è imputato del reato-presupposto:",
+      "opzioni": [
+        "Rappresenta comunque l’ente",
+        "L’ente deve nominare un rappresentante ad hoc (art. 39)",
+        "Il procedimento si estingue",
+        "L’OdV rappresenta l’ente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "L’art. 49 D.Lgs. 231/2001 consente:",
+      "opzioni": [
+        "L’archiviazione automatica",
+        "La sospensione delle misure cautelari se l’ente chiede di realizzare le condotte riparatorie ex art. 17",
+        "La revoca del Modello",
+        "La nomina dell’OdV da parte del giudice"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "Dopo la notizia di reato, l’ente deve in particolare:",
+      "opzioni": [
+        "Eliminare i documenti compromettenti",
+        "Conservare le prove, nominare difensore distinto, attivare OdV e valutare le condotte riparatorie",
+        "Licenziare l’OdV",
+        "Cessare l’attività"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "Un errore ricorrente nella vigilanza è:",
+      "opzioni": [
+        "Verbalizzare ogni riunione",
+        "Leggere i flussi senza verifiche, test o controlli a sorpresa",
+        "Richiedere evidenze",
+        "Fare relazione al CdA"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "fonte": "test",
+      "domanda": "La \"regola d’oro\" del Modello secondo il corso è:",
+      "opzioni": [
+        "Più pagine, più sicurezza",
+        "Ogni affermazione del Modello deve avere un’evidenza che la prova",
+        "Il Modello non va mai cambiato",
+        "Il Codice Etico basta"
+      ],
+      "corretta": 1
+    }
+  ],
+  "esame": [
+    {
+      "modulo": "m01",
+      "domanda": "Il D.Lgs. 231/2001 introduce una responsabilità dell’ente qualificata dalle Sezioni Unite come:",
+      "opzioni": [
+        "Responsabilità civile",
+        "Tertium genus tra penale e amministrativo, accertata dal giudice penale",
+        "Responsabilità penale piena",
+        "Responsabilità oggettiva"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "L’ente NON risponde se l’autore ha agito:",
+      "opzioni": [
+        "Nell’interesse esclusivo proprio o di terzi",
+        "Con dolo",
+        "In qualità di dipendente",
+        "In concorso con un terzo"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Il reato di induzione indebita a dare o promettere utilità è previsto dall’art.:",
+      "opzioni": [
+        "318 c.p.",
+        "319-quater c.p.",
+        "346-bis c.p.",
+        "2635 c.c."
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "La corruzione tra privati è richiamata dall’art.:",
+      "opzioni": [
+        "25",
+        "25-ter",
+        "25-octies",
+        "24-bis"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Nei reati colposi SSL, l’interesse o vantaggio dell’ente si riferisce:",
+      "opzioni": [
+        "All’evento lesivo",
+        "Alla condotta violativa delle norme cautelari (es. risparmio di costi)",
+        "Al risarcimento assicurativo",
+        "Non è configurabile"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "L’autoriciclaggio (648-ter.1 c.p.) punisce:",
+      "opzioni": [
+        "Solo chi ricicla denaro altrui",
+        "Chi impiega, sostituisce o trasferisce in attività economiche il provento del delitto da lui commesso, ostacolandone l’identificazione",
+        "Il mero godimento personale del profitto",
+        "Solo le banche"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Il risk assessment 231 segue correttamente un approccio:",
+      "opzioni": [
+        "Per reati, cercando dove potrebbero verificarsi",
+        "Per processi aziendali, individuando attività sensibili, reati e modalità",
+        "Per fatturato",
+        "Per numero di dipendenti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Il rischio residuo accettabile è quello per cui il reato può essere commesso solo:",
+      "opzioni": [
+        "Da sottoposti",
+        "Eludendo fraudolentemente il sistema di controllo",
+        "Con il consenso dell’OdV",
+        "In orario notturno"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "domanda": "L’adozione del Modello è provata da:",
+      "opzioni": [
+        "La pubblicazione sul sito",
+        "La delibera dell’organo amministrativo con data certa",
+        "La nomina del consulente",
+        "Il Codice Etico"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m05",
+      "domanda": "Il sistema disciplinare 231 deve essere:",
+      "opzioni": [
+        "Applicato solo dopo condanna penale",
+        "Autonomo, graduato, conforme all’art. 7 L. 300/1970 e al CCNL",
+        "Riservato ai dirigenti",
+        "Facoltativo"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "domanda": "I requisiti dell’OdV sono:",
+      "opzioni": [
+        "Anzianità e residenza",
+        "Autonomia, indipendenza, professionalità, continuità d’azione, onorabilità",
+        "Laurea in giurisprudenza obbligatoria",
+        "Appartenenza al CdA"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m06",
+      "domanda": "L’OdV riferisce periodicamente a:",
+      "opzioni": [
+        "Ministero della Giustizia",
+        "Organo amministrativo e collegio sindacale",
+        "ANAC",
+        "Dipendenti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Il D.Lgs. 24/2023 obbliga al canale interno di whistleblowing:",
+      "opzioni": [
+        "Solo gli enti pubblici",
+        "Gli enti privati con media ≥ 50 dipendenti, quelli in settori regolati e tutti quelli con Modello 231",
+        "Solo le società quotate",
+        "Solo gli enti con più di 250 dipendenti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m07",
+      "domanda": "Il riscontro al segnalante deve essere fornito entro:",
+      "opzioni": [
+        "7 giorni",
+        "30 giorni",
+        "3 mesi",
+        "1 anno"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m08",
+      "domanda": "La clausola 231 nei contratti con i terzi prevede tipicamente:",
+      "opzioni": [
+        "Uno sconto",
+        "Presa visione del Codice Etico, impegno al rispetto e risoluzione ex art. 1456 c.c. in caso di violazione",
+        "La nomina del fornitore nell’OdV",
+        "Nessun effetto"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m08",
+      "domanda": "Il riesame straordinario del Modello è imposto da:",
+      "opzioni": [
+        "Il cambio stagione",
+        "Nuovi reati-presupposto, riorganizzazioni, operazioni straordinarie, violazioni o procedimenti",
+        "La chiusura del bilancio",
+        "Il rinnovo del contratto del consulente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Un rilievo di audit correttamente formulato contiene:",
+      "opzioni": [
+        "Un giudizio sulla persona",
+        "Criterio, evidenza, scostamento e rischio",
+        "Solo la raccomandazione",
+        "Il nome dell’auditor"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m09",
+      "domanda": "Il Modello 231:",
+      "opzioni": [
+        "È certificabile con schema accreditato",
+        "Non è certificabile in sé; ISO 37301/37001 supportano ma non sostituiscono il giudizio di idoneità",
+        "È certificato dal Ministero",
+        "È certificato da ANAC"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Secondo Cass. 23401/2022 il giudice valuta l’idoneità del Modello:",
+      "opzioni": [
+        "Con il senno di poi",
+        "Con prognosi postuma ex ante, senza desumere l’inidoneità dal solo fatto che il reato è avvenuto",
+        "Solo in base al numero di pagine",
+        "Solo in base alla certificazione"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m10",
+      "domanda": "Le condotte riparatorie ex art. 17 (risarcimento, eliminazione carenze con Modello idoneo, messa a disposizione del profitto) prima del dibattimento:",
+      "opzioni": [
+        "Escludono la responsabilità",
+        "Escludono l’applicazione delle sanzioni interdittive",
+        "Non hanno effetto",
+        "Escludono la confisca"
+      ],
+      "corretta": 1
+    }
+  ]
+}

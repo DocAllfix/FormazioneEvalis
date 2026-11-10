@@ -13,20 +13,22 @@ import orchestratore as O
 PS = O.PAROLE_AL_SECONDO
 PAR_MIN, PAR_MAX = 80, 170
 VIETATI = re.compile(r"[-()/%°\[\]{}<>\\|~^*_=+×÷€²³\d]")
+ELISIONE = re.compile(r"(?<!lettera )\b(dell|nell|all|dall|sull|coll|quell|quest|anch|dov|com|l|d|c|s|m|t|v|n)\s(?=[aeiouàèéìòùAEIOU])")
 FONTE_NOMINATA = re.compile(r"\b(il modulo|questo modulo|il documento|la slide|questa slide|il materiale|la fonte|il committente)\b", re.I)
 
 ISTRUZIONI = (
-    "Sei l'autore dei copioni parlati di un corso professionale per piastrellisti. Ti do il testo di UNA "
+    "Sei l'autore dei copioni parlati del corso professionale «{corso}». Ti do il testo di UNA "
     "slide e il contenuto di riferimento del modulo.\n"
     "COMPITO: scrivi UN SOLO paragrafo nuovo, di circa {target} parole, da inserire prima dell'ultimo "
-    "paragrafo della slide. Deve approfondire ciò che la slide sta già dicendo: il perché tecnico, un "
-    "esempio di cantiere concreto, un controllo pratico, un errore da evitare. Deve dire qualcosa di "
+    "paragrafo della slide. Deve approfondire ciò che la slide sta già dicendo: il perché, un "
+    "esempio concreto di lavoro, un controllo pratico, un errore da evitare. Deve dire qualcosa di "
     "NUOVO rispetto al testo della slide, mai ripeterlo con altre parole.\n\n"
     "REGOLE ASSOLUTE:\n"
     "- Nessun valore numerico nuovo: niente soglie, tolleranze, classi, misure, tempi o quantità che non "
     "siano già nel testo della slide. Se ti serve un numero, riusa uno già detto nella slide, scritto "
     "nello stesso modo. In dubbio, nessun numero.\n"
-    "- Nessun contenuto di norma inventato: non citare punti, prospetti o paragrafi di norme.\n"
+    "- Nessun contenuto di norma inventato: non citare punti, prospetti o paragrafi di norme, articoli, "
+    "leggi, sentenze o importi che non siano già nel testo della slide.\n"
     "- È testo PARLATO da una voce sintetica: mai cifre, trattini, parentesi, barre, simboli, elenchi.\n"
     "- Non nominare mai il modulo, la slide, il documento, il materiale o la fonte: parla al corsista "
     "con il tu, nello stesso tono della slide.\n"
@@ -73,12 +75,15 @@ async def allunga_modulo(mdl, corso: str, mod: str, budget_min: int, scarto: flo
         for tentativo in range(3):
             try:
                 r = await mdl.chiama(
-                    [{"role": "system", "content": ISTRUZIONI.format(target=q)},
+                    [{"role": "system", "content": ISTRUZIONI.format(target=q, corso=TITOLO)},
                      {"role": "user", "content": f"## CONTENUTO DI RIFERIMENTO DEL MODULO\n{fonte}\n\n## TESTO DELLA SLIDE «{s['titolo']}»\n{s['testo']}"}],
                     {"type": "json_object"}, max_tokens=64000)
             except Exception as e:
                 print(f"  [{mod} s{i+1:03d}] chiamata fallita: {str(e)[:80]}"); continue
             par = (r.get("paragrafo") or "").strip().replace("’", "'")  # E4: solo l'apostrofo semplice
+            # il modello, a cui si vietano i simboli, a volte toglie anche l'apostrofo delle elisioni
+            # («l ente», «dell organismo», «c era»): la voce leggerebbe male, si ripristina (corsi 231, 10/11/2026)
+            par = ELISIONE.sub(lambda m: m.group(1) + "'", par)
             motivo = verifica(par)
             if motivo is None:
                 return i, par
@@ -106,7 +111,9 @@ async def main():
     corso, voci = sys.argv[1], sys.argv[2:]
     env = O.carica_env()
     mdl = O.Modello(O.client_azure(env), env, {"input": 0, "output": 0, "chiamate": 0})
-    budget = json.loads(Path(f"produzione/{corso}/copioni.json").read_text(encoding="utf-8"))["budget"]["minutiPerModulo"]
+    global TITOLO
+    cop = json.loads(Path(f"produzione/{corso}/copioni.json").read_text(encoding="utf-8"))
+    budget, TITOLO = cop["budget"]["minutiPerModulo"], cop.get("titolo", corso)
     lavori = []
     for v in voci:
         mod, _, sc = v.partition(":")

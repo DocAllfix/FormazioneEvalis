@@ -1,0 +1,936 @@
+{
+  "parametri": {
+    "ore": 8,
+    "test": "8/10",
+    "esame": "12/15"
+  },
+  "checkpoint": [
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "L’AU chiede all’OdV di redigere e approvare la nuova procedura acquisti \"visto che conoscete bene i rischi\". L’OdV dovrebbe:",
+      "opzioni": [
+        "Accettare: è un contributo utile",
+        "Declinare il compito operativo, limitandosi a indicare i requisiti di controllo che la procedura dovrà avere e a verificarla una volta adottata",
+        "Accettare solo se pagato a parte",
+        "Delegare al componente interno"
+      ],
+      "corretta": 1,
+      "spiegazione": "Redigere e approvare procedure è attività gestionale: comprometterebbe l’indipendenza e renderebbe l’OdV controllore del proprio lavoro."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Un componente dell’OdV viene incaricato dalla società, in corso di mandato, come consulente ambientale operativo. Il Presidente:",
+      "opzioni": [
+        "Non deve fare nulla",
+        "Deve rilevare la sopravvenuta incompatibilità, verbalizzarla e chiedere al CdA la sostituzione o la rinuncia all’incarico operativo",
+        "Deve solo farlo astenere nelle votazioni",
+        "Deve dimettersi lui"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il ruolo operativo in un’area a rischio (25-undecies) fa venir meno l’indipendenza e contamina l’intero organismo se non risolto."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "Il consulente che ha redatto il Modello è proposto come OdV monocratico. Quale è la valutazione più corretta?",
+      "opzioni": [
+        "Ideale: conosce il Modello",
+        "Sconsigliato: verificherebbe il proprio lavoro; se inevitabile, servono verifiche affidate a terzi, trasparenza e nessun incarico operativo",
+        "Obbligatorio per legge",
+        "Indifferente"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’indipendenza richiede che chi vigila non abbia prodotto ciò che vigila; nelle PMI è tollerato con cautele documentate, ma resta un punto debole."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "L’OdV accerta una violazione del Modello da parte dell’AU. A chi riferisce?",
+      "opzioni": [
+        "All’AU stesso",
+        "Al CdA (o, se AU unico, al collegio sindacale/sindaco unico e all’assemblea), evitando il soggetto coinvolto",
+        "A nessuno, non ha competenza sugli apicali",
+        "Direttamente alla Procura in ogni caso"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il Modello deve prevedere un percorso di escalation che eviti il conflitto; l’OdV informa gli organi competenti a decidere sull’apicale."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Ti viene offerto l’incarico di OdV con compenso di 1.000 €/anno, nessun budget e un Modello standard mai adattato. Cosa fai?",
+      "opzioni": [
+        "Accetto: è pur sempre un incarico",
+        "Rifiuto o rinegozio: senza risorse e con un Modello inidoneo l’incarico è ineseguibile ed espone personalmente",
+        "Accetto e non faccio verifiche",
+        "Accetto a condizione di redigere io il Modello"
+      ],
+      "corretta": 1,
+      "spiegazione": "La continuità e l’autonomia richiedono risorse; accettare un mandato impossibile significa assumere la responsabilità di un’\"insufficiente vigilanza\" certa."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Il compito di \"curare l’aggiornamento\" del Modello significa che l’OdV:",
+      "opzioni": [
+        "Modifica direttamente il Modello",
+        "Analizza novità e carenze e propone le modifiche all’organo amministrativo, che delibera",
+        "Approva le modifiche proposte dal consulente",
+        "Non si occupa di aggiornamento"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "L’esimente viene meno, tra l’altro, se:",
+      "opzioni": [
+        "L’OdV ha più di tre componenti",
+        "Vi è stata omessa o insufficiente vigilanza dell’OdV",
+        "L’OdV ha un budget",
+        "L’OdV è esterno"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "L’autonomia dell’OdV si verifica in concreto con:",
+      "opzioni": [
+        "Il numero di pagine del regolamento",
+        "Budget deliberato e spendibile, accessi effettivi, poteri di verifica senza preavviso",
+        "La laurea dei componenti",
+        "La sede legale"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "La professionalità dell’OdV va commisurata a:",
+      "opzioni": [
+        "Il fatturato dell’ente",
+        "I rischi specifici dell’ente (es. SSL, ambiente, PA, fisco)",
+        "Il numero di soci",
+        "La durata del mandato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Il collegio sindacale può svolgere le funzioni di OdV ai sensi di:",
+      "opzioni": [
+        "Art. 6 c. 4",
+        "Art. 6 c. 4-bis",
+        "Art. 7 c. 2",
+        "Art. 2403 c.c."
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Il componente interno dell’OdV:",
+      "opzioni": [
+        "Deve avere poteri di spesa",
+        "Non deve avere compiti operativi nelle aree a rischio e si astiene nei casi di conflitto",
+        "Deve essere un dirigente",
+        "Deve essere il RSPP"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "L’OdV si rapporta con il collegio sindacale:",
+      "opzioni": [
+        "Mai, sono organi separati",
+        "Con scambi informativi periodici verbalizzati e copia delle relazioni",
+        "Solo in caso di reato",
+        "Solo tramite l’AU"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "La polizza RC del componente OdV dovrebbe:",
+      "opzioni": [
+        "Essere pagata dal segnalante",
+        "Includere espressamente l’attività di Organismo di Vigilanza ex D.Lgs. 231/2001",
+        "Coprire anche il dolo",
+        "Non è necessaria"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Nella fase di insediamento, l’OdV effettua:",
+      "opzioni": [
+        "La redazione del Modello",
+        "Una valutazione di adeguatezza iniziale del Modello rispetto all’organizzazione reale",
+        "La nomina del RSPP",
+        "L’approvazione del bilancio"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Se nella Parte Speciale sono richiamate procedure che non esistono, l’OdV:",
+      "opzioni": [
+        "Le redige",
+        "Rileva la carenza e chiede formalmente al CdA il completamento entro un termine, verbalizzando",
+        "Ignora il problema",
+        "Sospende il Modello"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Quale verbale dimostra effettivamente la vigilanza?",
+      "opzioni": [
+        "\"L’OdV ha esaminato la documentazione e non ha rilevato criticità\"",
+        "\"Esaminati i flussi SSL (prot. 12): 2 infortuni, 5 near miss, formazione preposti 11/12; rilevata mancata nomina preposto cantiere Y; richiesta al Datore entro 15/5; verifica a sorpresa entro 30/5\"",
+        "\"L’OdV si è riunito regolarmente\"",
+        "\"Il Modello risulta efficacemente attuato\""
+      ],
+      "corretta": 1,
+      "spiegazione": "Il verbale deve riportare fatti, fonti, decisioni, responsabili e termini: è la prova documentale dell’attività."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Un’area con rischio residuo critico (es. SSL in un’azienda con infortuni recenti) va verificata:",
+      "opzioni": [
+        "Ogni 3 anni",
+        "Semestralmente, con test sostanziali e almeno una visita a sorpresa",
+        "Solo su segnalazione",
+        "Solo documentalmente"
+      ],
+      "corretta": 1,
+      "spiegazione": "La frequenza e la profondità delle verifiche seguono il rischio residuo: le aree critiche richiedono il massimo impegno."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "Il flusso trimestrale dell’area acquisti non arriva per la seconda volta. L’OdV:",
+      "opzioni": [
+        "Attende il trimestre successivo",
+        "Acquisisce direttamente i dati, verbalizza, informa l’AU/CdA e propone il rilievo disciplinare per omissione del flusso",
+        "Cancella il flusso dal piano",
+        "Si dimette"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’omissione di un flusso dovuto è violazione del Modello e segnale di malfunzionamento: l’OdV deve reagire e documentare."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Durante una verifica il responsabile consegna un riepilogo Excel \"preparato per l’OdV\" dei controlli eseguiti. L’auditor:",
+      "opzioni": [
+        "Lo accetta come evidenza sufficiente",
+        "Lo usa come traccia ma verifica i documenti originali/di sistema su un campione",
+        "Lo rifiuta e interrompe la verifica",
+        "Lo allega al rapporto come prova di conformità"
+      ],
+      "corretta": 1,
+      "spiegazione": "I riepiloghi preparati dall’auditato non sono evidenze primarie; l’approccio basato sull’evidenza richiede documenti originali e test."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "In un’azienda con infortuni, non conformità e segnalazioni fondate, il registro disciplinare mostra zero provvedimenti in 4 anni. L’OdV:",
+      "opzioni": [
+        "Registra un punto di forza",
+        "Rileva una probabile non attuazione del sistema disciplinare e chiede al CdA conto delle violazioni note non sanzionate",
+        "Non è competente",
+        "Propone di abolire il sistema disciplinare"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’efficace attuazione (art. 7 c. 4 lett. b) richiede un sistema disciplinare applicato; l’incoerenza tra violazioni e sanzioni è un rilievo."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il regolamento interno dell’OdV è adottato da:",
+      "opzioni": [
+        "Il CdA",
+        "L’OdV stesso (lo statuto è approvato dal CdA)",
+        "Il collegio sindacale",
+        "Il consulente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il dissenso di un componente dell’OdV:",
+      "opzioni": [
+        "Non va registrato",
+        "Va verbalizzato: tutela il dissenziente e documenta la dialettica interna",
+        "Comporta la decadenza",
+        "Va comunicato solo all’AU"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "La frequenza consigliata delle riunioni ordinarie dell’OdV in una PMI a rischio medio-alto è:",
+      "opzioni": [
+        "Annuale",
+        "Bimestrale (almeno 6/anno)",
+        "Settimanale",
+        "Solo su evento"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il piano di vigilanza:",
+      "opzioni": [
+        "Va approvato dal management",
+        "È approvato dall’OdV e comunicato al CdA; le deviazioni si motivano a verbale",
+        "È imposto dal collegio sindacale",
+        "Non è necessario"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Una \"scheda flusso\" definisce:",
+      "opzioni": [
+        "Il bilancio dell’area",
+        "Contenuto, responsabile, periodicità, formato, flussi ad evento e analisi attesa",
+        "La retribuzione del responsabile",
+        "Il piano ferie"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "\"Zero omaggi ricevuti\" in un’azienda con 300 fornitori è:",
+      "opzioni": [
+        "Un dato rassicurante",
+        "Un dato implausibile da verificare incrociando note spese e interviste",
+        "Irrilevante",
+        "Un punto di forza"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il campione per una verifica va:",
+      "opzioni": [
+        "Scelto dall’auditato",
+        "Costruito includendo gli elementi anomali e una selezione casuale documentata",
+        "Limitato all’ultimo caso",
+        "Evitato: si verifica tutto sempre"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Le verifiche a sorpresa:",
+      "opzioni": [
+        "Sono vietate",
+        "Vanno previste dallo statuto e svolte almeno 2 volte l’anno, con verbale sul posto",
+        "Si fanno solo su richiesta dell’AU",
+        "Riguardano solo gli uffici"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Un rilievo di audit ben formulato contiene:",
+      "opzioni": [
+        "Un giudizio sulla persona",
+        "Criterio, evidenza, scostamento, rischio e classificazione",
+        "Solo la raccomandazione",
+        "Il nome del segnalante"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il follow-up delle azioni correttive si chiude:",
+      "opzioni": [
+        "Con la dichiarazione del responsabile",
+        "Con l’evidenza verificata dall’OdV dell’attuazione",
+        "Automaticamente alla scadenza",
+        "Con l’approvazione del consulente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "L’AU chiede al Presidente dell’OdV l’identità del segnalante di una segnalazione whistleblowing. Il Presidente:",
+      "opzioni": [
+        "La comunica, perché l’AU rappresenta l’ente",
+        "Rifiuta, richiama l’obbligo di riservatezza del D.Lgs. 24/2023 e verbalizza la richiesta",
+        "La comunica solo a voce",
+        "La comunica se la segnalazione è infondata"
+      ],
+      "corretta": 1,
+      "spiegazione": "La riservatezza è un obbligo di legge con sanzioni ANAC personali; la richiesta stessa è un segnale da documentare."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Nel corso di un’istruttoria, l’OdV vorrebbe leggere la casella e-mail aziendale del dipendente coinvolto. Come procede?",
+      "opzioni": [
+        "Accede liberamente: è la casella aziendale",
+        "Verifica con il DPO e il legale i limiti (art. 4 Statuto dei lavoratori, policy aziendale, informativa) e procede solo nei limiti consentiti, con tracciabilità",
+        "Chiede la password al dipendente",
+        "Rinuncia a qualsiasi verifica informatica"
+      ],
+      "corretta": 1,
+      "spiegazione": "I controlli sugli strumenti di lavoro sono soggetti a limiti di legge e privacy; un accertamento illecito è inutilizzabile ed espone l’ente e l’OdV."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "Il CdA chiede all’OdV di \"ammorbidire\" un rilievo maggiore prima della relazione. L’OdV:",
+      "opzioni": [
+        "Accetta per mantenere buoni rapporti",
+        "Rifiuta, mantiene il rilievo basato sulle evidenze e verbalizza la richiesta; se l’ostruzione persiste, informa il collegio sindacale",
+        "Elimina il rilievo",
+        "Si dimette senza motivare"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’indipendenza di giudizio è l’essenza del mandato; la verbalizzazione della pressione protegge l’OdV e documenta il funzionamento (o meno) del sistema."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Secondo l’orientamento prevalente (App. Milano 2022, MPS), il componente OdV che non impedisce un reato dei vertici:",
+      "opzioni": [
+        "Risponde sempre in concorso omissivo",
+        "Non è garante ex art. 40 c. 2 c.p. perché privo di poteri impeditivi; resta la responsabilità contrattuale per negligenza e il rischio in caso di passività di fronte a segnali evidenti",
+        "Risponde solo se avvocato",
+        "Non ha alcuna responsabilità"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’OdV non ha poteri di impedimento, ma il primo grado MPS mostra il rischio di un OdV passivo; la diligenza documentata è la protezione."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Nella relazione annuale al CdA, come vanno riportate le segnalazioni whistleblowing?",
+      "opzioni": [
+        "Con nomi di segnalanti e segnalati",
+        "In forma aggregata e anonima: numero, tipologia, esiti, tempi",
+        "Non vanno riportate",
+        "Solo quelle fondate, con i nomi"
+      ],
+      "corretta": 1,
+      "spiegazione": "La relazione documenta il funzionamento del sistema senza violare la riservatezza; i dettagli restano nel fascicolo riservato."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Il protocollo gestore whistleblowing – OdV deve prevedere:",
+      "opzioni": [
+        "La trasmissione all’OdV di tutte le segnalazioni con identità del segnalante",
+        "Quali segnalazioni (rilevanti 231) sono trasmesse, in quale forma (di norma senza identità) e con quali tempi",
+        "Che l’OdV sostituisca il gestore",
+        "Nulla, non serve coordinamento"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "La documentazione delle segnalazioni whistleblowing si conserva al massimo:",
+      "opzioni": [
+        "1 anno",
+        "5 anni dalla comunicazione dell’esito",
+        "10 anni",
+        "Senza limiti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Nell’audizione della persona coinvolta, l’OdV deve:",
+      "opzioni": [
+        "Procedere da solo e senza verbale",
+        "Contestare i fatti, garantire il diritto di replica, verbalizzare, con almeno 2 componenti presenti",
+        "Rivelare chi ha segnalato",
+        "Promettere l’archiviazione in cambio di collaborazione"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "La \"forensic readiness\" consiste nel:",
+      "opzioni": [
+        "Chiamare la polizia",
+        "Assicurare tempestivamente la conservazione di log, e-mail e backup rilevanti, vietandone l’alterazione",
+        "Cancellare i dati sensibili",
+        "Sequestrare i PC"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Se la violazione riguarda l’amministratore unico, l’OdV informa:",
+      "opzioni": [
+        "L’AU stesso",
+        "Il collegio sindacale/sindaco unico e, tramite esso, l’assemblea dei soci",
+        "Solo il consulente",
+        "Nessuno"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Le dimissioni del componente OdV in caso di ostruzione persistente devono essere:",
+      "opzioni": [
+        "Silenziose per evitare conflitti",
+        "Motivate per iscritto e conservate agli atti",
+        "Comunicate solo verbalmente",
+        "Evitate sempre"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "La responsabilità del componente OdV verso l’ente è di natura:",
+      "opzioni": [
+        "Penale oggettiva",
+        "Contrattuale, per violazione della diligenza professionale",
+        "Tributaria",
+        "Amministrativa ANAC"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "La relazione periodica dell’OdV è trasmessa a:",
+      "opzioni": [
+        "Tutti i dipendenti",
+        "Organo amministrativo e collegio sindacale",
+        "ANAC",
+        "Ministero della Giustizia"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "In CdA, per ogni raccomandazione dell’OdV, va verbalizzata:",
+      "opzioni": [
+        "Solo la lettura",
+        "La decisione: accolta, non accolta con motivazione, o rinviata con termine",
+        "La firma del consulente",
+        "Nulla"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Il \"fascicolo personale di diligenza\" del componente OdV contiene:",
+      "opzioni": [
+        "Dati dei segnalanti",
+        "Copia di verbali, lettere, solleciti, relazioni e prove delle verifiche svolte",
+        "Il bilancio dell’ente",
+        "Le buste paga"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Una nuova legge introduce un reato-presupposto rilevante per il settore dell’ente. L’OdV:",
+      "opzioni": [
+        "Modifica direttamente la Parte Speciale",
+        "Predispone una scheda di analisi dell’impatto e propone al CdA l’aggiornamento con priorità e termine, poi verifica l’adozione",
+        "Attende che il consulente se ne accorga",
+        "Non è competente"
+      ],
+      "corretta": 1,
+      "spiegazione": "Curare l’aggiornamento significa monitorare, analizzare, proporre e verificare: la delibera spetta all’organo amministrativo."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Durante un’ispezione ASL, gli ispettori chiedono al componente OdV presente in azienda di rilasciare dichiarazioni \"per conto della società\". Il componente:",
+      "opzioni": [
+        "Rilascia dichiarazioni come rappresentante dell’ente",
+        "Chiarisce di non rappresentare l’ente; se sentito come persona informata, dice la verità; informa il CdA",
+        "Si rifiuta di parlare",
+        "Rilascia dichiarazioni favorevoli all’ente"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’OdV non ha poteri di rappresentanza; come persona informata dei fatti ha il dovere di verità; non deve assumere ruoli operativi o difensivi."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "In un procedimento 231, il contributo principale dell’OdV alla difesa dell’ente è:",
+      "opzioni": [
+        "Testimoniare a favore dell’ente in ogni caso",
+        "Fornire la documentazione completa e ordinata dell’attuazione e della vigilanza (fascicolo 231) e supportare le condotte riparatorie",
+        "Redigere la memoria difensiva",
+        "Negoziare con il PM"
+      ],
+      "corretta": 1,
+      "spiegazione": "La prova dell’efficace attuazione è documentale; l’OdV non è difensore né può alterare la verità."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Il primo grado del caso MPS insegna all’OdV che:",
+      "opzioni": [
+        "L’OdV è sempre garante penale",
+        "Un OdV percepito come passivo di fronte a segnali evidenti rischia la contestazione di concorso omissivo, anche se in appello prevale la tesi dell’assenza di poteri impeditivi",
+        "L’OdV non deve mai reagire ai segnali",
+        "L’OdV deve denunciare sempre alla Procura"
+      ],
+      "corretta": 1,
+      "spiegazione": "La protezione dell’OdV sta nella reazione documentata a ogni segnale: richieste, verifiche, informative, dissensi."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Il componente interno dell’OdV viene promosso responsabile acquisti. Il Presidente:",
+      "opzioni": [
+        "Lo mantiene: conosce bene i fornitori",
+        "Rileva l’incompatibilità sopravvenuta (area a rischio) e chiede al CdA la sostituzione",
+        "Lo fa astenere solo sulle verifiche acquisti",
+        "Riduce il suo compenso"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il responsabile acquisti ha compiti operativi in un’area a rischio (25-ter, 25-octies, 25-quinquiesdecies, 24-ter): l’indipendenza viene meno e l’astensione non basta."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "La verifica del catalogo dei reati-presupposto da parte dell’OdV dovrebbe avvenire:",
+      "opzioni": [
+        "Ogni 5 anni",
+        "Almeno semestralmente",
+        "Solo su richiesta del CdA",
+        "Mai: è compito del consulente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Le modifiche sostanziali del Modello sono deliberate da:",
+      "opzioni": [
+        "L’OdV",
+        "L’organo amministrativo, su proposta dell’OdV",
+        "Il collegio sindacale",
+        "Il gestore whistleblowing"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Se il CdA non accoglie una proposta di aggiornamento che l’OdV ritiene necessaria:",
+      "opzioni": [
+        "L’OdV la adotta comunque",
+        "L’OdV verbalizza il dissenso e informa il collegio sindacale",
+        "L’OdV si dimette senza motivare",
+        "L’OdV non fa nulla"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Dopo un infortunio grave, l’OdV verifica tra l’altro:",
+      "opzioni": [
+        "Il bilancio dell’esercizio",
+        "Attuazione delle misure DVR, vigilanza del preposto, formazione, conformità e manutenzione dell’attrezzatura, assenza di alterazioni",
+        "Le ferie dell’infortunato",
+        "La retribuzione del RSPP"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "L’OdV durante un’ispezione:",
+      "opzioni": [
+        "Rappresenta l’ente",
+        "Non partecipa né rappresenta l’ente; riceve il flusso ad evento e verifica il rispetto della procedura",
+        "Firma il verbale",
+        "Negozia con gli ispettori"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il procedimento 231 a carico dell’ente:",
+      "opzioni": [
+        "Sospende l’attività dell’OdV",
+        "Non sospende la vigilanza ordinaria dell’OdV",
+        "Comporta la revoca dell’OdV",
+        "Trasforma l’OdV in difensore"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il \"fascicolo 231\" va:",
+      "opzioni": [
+        "Costruito dopo la notizia di reato",
+        "Alimentato nel tempo con delibere, verbali, verifiche, flussi, formazione, relazioni",
+        "Tenuto dal PM",
+        "Distrutto ogni 5 anni"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Cass. 4677/2014 (Impregilo) ha censurato l’OdV perché:",
+      "opzioni": [
+        "Era troppo numeroso",
+        "Non aveva poteri sull’area a rischio e il CdA poteva modificare le sue proposte senza vincoli",
+        "Si riuniva troppo",
+        "Era composto da avvocati"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Secondo Cass. 23401/2022 il Modello e l’OdV devono:",
+      "opzioni": [
+        "Azzerare ogni rischio di reato dei vertici",
+        "Ridurre il rischio a livello accettabile con quanto ragionevolmente esigibile",
+        "Impedire fisicamente le decisioni del CdA",
+        "Essere certificati"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "L’acquisizione di una società comporta per l’OdV:",
+      "opzioni": [
+        "Nessuna attività",
+        "Richiesta di due diligence 231 sulla target e proposta di integrazione del Modello e di OdV per la società acquisita",
+        "L’estensione automatica del Modello",
+        "Le dimissioni"
+      ],
+      "corretta": 1
+    }
+  ],
+  "esame": [
+    {
+      "modulo": "m01",
+      "domanda": "Il mandato dell’OdV ex art. 6 c. 1 lett. b) comprende:",
+      "opzioni": [
+        "Adottare il Modello",
+        "Vigilare su funzionamento e osservanza del Modello e curarne l’aggiornamento",
+        "Irrogare sanzioni disciplinari",
+        "Gestire gli acquisti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "L’esimente viene meno se vi è stata:",
+      "opzioni": [
+        "Una riunione OdV in meno",
+        "Omessa o insufficiente vigilanza dell’OdV",
+        "La nomina di un OdV esterno",
+        "La redazione di verbali"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Il componente interno dell’OdV:",
+      "opzioni": [
+        "Deve dirigere un’area a rischio",
+        "Non deve avere compiti operativi nelle aree a rischio e si astiene nei conflitti",
+        "Deve essere il RSPP",
+        "Deve essere il commercialista"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Accettare dal vertice il compito di redigere e approvare procedure:",
+      "opzioni": [
+        "Rafforza l’OdV",
+        "Compromette l’indipendenza trasformando l’OdV in gestore",
+        "È obbligatorio",
+        "È indifferente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Il verbale dell’OdV deve contenere:",
+      "opzioni": [
+        "Formule generiche di regolarità",
+        "Fatti, fonti, decisioni, responsabili, termini e dissensi",
+        "Solo le presenze",
+        "I nomi dei segnalanti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Il piano di vigilanza è:",
+      "opzioni": [
+        "Negoziato con il management",
+        "Risk-based, approvato dall’OdV, comunicato al CdA, eseguito e documentato",
+        "Facoltativo",
+        "Redatto dal consulente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Un flusso informativo dovuto e non pervenuto:",
+      "opzioni": [
+        "Si ignora",
+        "È un’anomalia: sollecito, acquisizione diretta, informativa e proposta di rilievo",
+        "Si cancella dal piano",
+        "Si attende l’anno successivo"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Le verifiche a sorpresa:",
+      "opzioni": [
+        "Sono vietate",
+        "Vanno previste dallo statuto e svolte periodicamente con verbale sul posto",
+        "Si fanno solo su richiesta dell’AU",
+        "Riguardano solo i documenti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "L’identità del segnalante whistleblowing:",
+      "opzioni": [
+        "Può essere comunicata all’AU su richiesta",
+        "Non può essere rivelata senza consenso espresso, salvo i casi di legge; le richieste vanno rifiutate e verbalizzate",
+        "Va inserita nella relazione annuale",
+        "Va comunicata al segnalato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Se la violazione riguarda l’amministratore unico, l’OdV informa:",
+      "opzioni": [
+        "L’AU",
+        "Il collegio sindacale/sindaco unico e l’assemblea",
+        "Il consulente",
+        "Nessuno"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "In caso di ostruzione persistente del vertice, l’ultima forma di vigilanza del componente OdV è:",
+      "opzioni": [
+        "Il silenzio",
+        "Le dimissioni motivate per iscritto, dopo dissensi verbalizzati e informativa al collegio",
+        "La denuncia anonima",
+        "La riduzione del compenso"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Secondo l’orientamento prevalente, il componente OdV:",
+      "opzioni": [
+        "È garante penale ex art. 40 c. 2 c.p.",
+        "Non è garante perché privo di poteri impeditivi; risponde contrattualmente per negligenza",
+        "Risponde sempre del reato dell’ente",
+        "Non ha alcuna responsabilità"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "La relazione periodica dell’OdV è destinata a:",
+      "opzioni": [
+        "ANAC",
+        "Organo amministrativo e collegio sindacale, con decisioni verbalizzate su ogni raccomandazione",
+        "Tutti i dipendenti",
+        "Il PM"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "L’aggiornamento del Modello è:",
+      "opzioni": [
+        "Deliberato dall’OdV",
+        "Proposto dall’OdV e deliberato dall’organo amministrativo; l’OdV verifica l’adozione",
+        "Deciso dal consulente",
+        "Automatico"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Il \"fascicolo 231\" serve a:",
+      "opzioni": [
+        "Pagare le sanzioni",
+        "Provare in giudizio adozione, attuazione e vigilanza; va alimentato nel tempo",
+        "Sostituire il Modello",
+        "Archiviare le buste paga"
+      ],
+      "corretta": 1
+    }
+  ]
+}

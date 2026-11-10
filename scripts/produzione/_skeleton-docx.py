@@ -365,6 +365,171 @@ CORSI = {
         "piede": "Piastrellista, posatore di pavimenti e rivestimenti ceramici — Evalis Academy",
         "file": "Evalis_Academy_Piastrellista_FAD-PIA-01_Approvazione.docx",
     },
+    "fad23101": {
+        "copertura": {
+            1: "D.Lgs. 231/2001 artt. 1-23 e procedimento; Cass. SU 38343/2014",
+            2: "D.Lgs. 231/2001 artt. 24-25-sexies",
+            3: "artt. 25-septies-25-vicies; D.Lgs. 81/2008 artt. 16 e 30",
+            4: "D.Lgs. 231/2001 art. 6, c. 2",
+            5: "D.Lgs. 231/2001 artt. 6-7; D.Lgs. 81/2008 art. 30",
+            6: "D.Lgs. 231/2001 art. 6, c. 1, 4 e 4-bis",
+            7: "D.Lgs. 24/2023; D.Lgs. 231/2001 art. 6, c. 2-bis",
+            8: "D.Lgs. 231/2001 artt. 6-7",
+            9: "D.Lgs. 231/2001 artt. 6-7; ISO 19011",
+            10: "Cass. 23401/2022; Cass. SU 38343/2014; artt. 12, 17, 39",
+        },
+        "tipo_documento": "normativa",
+        "titolo_corso": "MODELLO DI ORGANIZZAZIONE, GESTIONE E CONTROLLO EX D.LGS. 231/2001",
+        "titolo_doc": "PROPOSTA DIDATTICA — CORSO MODELLO 231: PROGETTAZIONE, IMPLEMENTAZIONE E AUDIT",
+        "presentazione": "Il presente documento raccoglie la struttura didattica del corso FAD-231-01 per consulenti che progettano "
+            "Modelli 231, organizzazioni che li implementano, lead auditor e componenti di Organismi di Vigilanza. Il corso nasce "
+            "dal materiale didattico già redatto (dieci moduli da quattro ore con il caso Metalfer Sud S.r.l.) e ne conserva "
+            "ordine, regole, esempi ed esercitazioni. Ogni slide è narrata dal relatore avatar, con lo stesso standard di voce, "
+            "impaginazione e verifica dei corsi già in catalogo. Rispetto al materiale, il corso adegua il catalogo dei "
+            "reati-presupposto al testo in vigore (articoli 25-octies.2, 25-undevicies e 25-vicies, ampliamento dell'articolo "
+            "25-undecies) e cita le norme ISO nelle edizioni correnti.",
+        "titolo_sintesi": "Modello 231: progettazione, implementazione e audit",
+        "ore": 40,
+        "verifiche": "Ogni modulo è una lezione della piattaforma e si chiude con un checkpoint di verifica (quiz con domande "
+            "estratte da banca dati, non conteggiato nel monte ore), costruito sugli step di controllo e sui test di fine "
+            "modulo del materiale didattico. Il corso si chiude con l'esame finale: 20 domande estratte da una banca di circa "
+            "40, soglia del 75% (15 su 20), costruita sulle domande d'esame del materiale didattico.",
+        "obiettivi": [
+            "Conoscere fondamenti, soggetti e criteri di imputazione della responsabilità degli enti, l'esimente e il sistema sanzionatorio",
+            "Riconoscere i reati-presupposto del catalogo in vigore e le attività sensibili in cui possono maturare",
+            "Condurre il risk assessment 231: mappatura dei processi, rischio inerente e residuo, gap analysis e piano di adeguamento",
+            "Costruire il Modello: Parte Generale, Parti Speciali e protocolli, Codice Etico e sistema disciplinare",
+            "Istituire e far funzionare l'Organismo di Vigilanza; integrare il whistleblowing del D.Lgs. 24/2023",
+            "Gestire il progetto di adozione e il mantenimento del Modello nel tempo",
+            "Auditare il Modello e difendere l'ente nel procedimento alla luce della giurisprudenza",
+        ],
+        "dettagli": [
+            "Destinatari: consulenti, organizzazioni che implementano il Modello, lead auditor e componenti di OdV",
+            "Checkpoint: uno per modulo, bloccante, cinque domande estratte da una banca di almeno dieci, soglia 80%",
+            "Esame finale: venti domande estratte dalla banca, soglia 75% (15 su 20)",
+            "Attestato: attestato di formazione EVALIS Academy al superamento dell'esame finale",
+            "Modalità: FAD asincrona con relatore avatar su ogni slide · Prezzo: 500 €, IVA esclusa",
+        ],
+        "piede": "Modello 231: progettazione, implementazione e audit — Evalis Academy",
+        "file": "Evalis_Academy_Modello_231_FAD-231-01_Approvazione.docx",
+    },
+    "fad23102": {
+        "copertura": {
+            1: "D.Lgs. 231/2001 artt. 5-7 e 9",
+            2: "artt. 24, 24-bis, 25, 25-quinquies, 25-duodecies",
+            3: "artt. 25-septies e 25-undecies; D.Lgs. 81/2008",
+            4: "D.Lgs. 24/2023; D.Lgs. 231/2001 art. 6",
+        },
+        "tipo_documento": "normativa",
+        "titolo_corso": "D.LGS. 231/2001 PER IL PERSONALE OPERATIVO",
+        "titolo_doc": "PROPOSTA DIDATTICA — CORSO D.LGS. 231/2001 PER IL PERSONALE OPERATIVO",
+        "presentazione": "Il presente documento raccoglie la struttura didattica del corso FAD-231-02 per il personale operativo: "
+            "operai, addetti di produzione e cantiere, impiegati, magazzinieri, autisti, preposti e collaboratori. Il corso nasce "
+            "dal materiale didattico già redatto (quattro moduli da due ore con gli esempi del caso Metalfer Sud S.r.l.) e ne "
+            "conserva ordine, linguaggio semplice, regole ed esercitazioni. Ogni slide è narrata dal relatore avatar, con lo "
+            "stesso standard di voce, impaginazione e verifica dei corsi già in catalogo. Le esercitazioni diventano esercizi "
+            "guidati spiegati dal relatore e alimentano le verifiche bloccanti.",
+        "titolo_sintesi": "D.Lgs. 231/2001 per il personale operativo",
+        "ore": 8,
+        "verifiche": "Ogni modulo è una lezione della piattaforma e si chiude con un checkpoint di verifica (quiz con domande "
+            "estratte da banca dati, non conteggiato nel monte ore), costruito sugli step di controllo e sui test di fine "
+            "modulo del materiale didattico. Il corso si chiude con l'esame finale: 15 domande estratte da una banca di circa "
+            "30, soglia del 75% (12 su 15, come nel materiale didattico).",
+        "obiettivi": [
+            "Capire che cosa è il D.Lgs. 231/2001 e perché l'azienda può essere punita per un reato commesso da una persona",
+            "Conoscere Codice Etico, Modello organizzativo, sistema disciplinare e Organismo di Vigilanza",
+            "Tenere i comportamenti corretti con enti pubblici, regali, fornitori, documenti, sistemi informatici e persone",
+            "Applicare le regole di sicurezza e ambiente che evitano i reati più frequenti, anche sotto pressione",
+            "Segnalare violazioni e sospetti con il whistleblowing, conoscendo tutele e divieto di ritorsioni",
+        ],
+        "dettagli": [
+            "Destinatari: operai, addetti di produzione e cantiere, impiegati, magazzinieri, autisti, preposti e collaboratori",
+            "Checkpoint: uno per modulo, bloccante, cinque domande estratte da una banca di almeno dieci, soglia 80%",
+            "Esame finale: quindici domande estratte dalla banca, soglia 75% (12 su 15)",
+            "Attestato: attestato di formazione EVALIS Academy al superamento dell'esame finale",
+            "Modalità: FAD asincrona con relatore avatar su ogni slide · Prezzo: 100 €, IVA esclusa",
+        ],
+        "piede": "D.Lgs. 231/2001 per il personale operativo — Evalis Academy",
+        "file": "Evalis_Academy_231_Personale_Operativo_FAD-231-02_Approvazione.docx",
+    },
+    "fad23103": {
+        "copertura": {
+            1: "D.Lgs. 231/2001 artt. 5-17; Cass. SU 38343/2014; Cass. 23401/2022",
+            2: "artt. 6-7; D.Lgs. 81/2008 art. 16; art. 25-octies",
+            3: "D.Lgs. 231/2001 art. 6; D.Lgs. 24/2023",
+            4: "D.Lgs. 231/2001 artt. 12, 17, 39 e 45",
+        },
+        "tipo_documento": "normativa",
+        "titolo_corso": "D.LGS. 231/2001 PER LE FIGURE APICALI",
+        "titolo_doc": "PROPOSTA DIDATTICA — CORSO D.LGS. 231/2001 PER LE FIGURE APICALI",
+        "presentazione": "Il presente documento raccoglie la struttura didattica del corso FAD-231-03 per amministratori, direttori "
+            "generali, dirigenti, responsabili di funzione, procuratori e soggetti con deleghe. Il corso nasce dal materiale "
+            "didattico già redatto (quattro moduli da due ore con il caso Metalfer Sud S.r.l. ed esercitazioni decisionali da "
+            "consiglio di amministrazione) e ne conserva ordine, regole ed esempi. Ogni slide è narrata dal relatore avatar, con "
+            "lo stesso standard di voce, impaginazione e verifica dei corsi già in catalogo. Le esercitazioni diventano esercizi "
+            "guidati spiegati dal relatore e alimentano le verifiche bloccanti.",
+        "titolo_sintesi": "D.Lgs. 231/2001 per le figure apicali",
+        "ore": 8,
+        "verifiche": "Ogni modulo è una lezione della piattaforma e si chiude con un checkpoint di verifica (quiz con domande "
+            "estratte da banca dati, non conteggiato nel monte ore), costruito sugli step di controllo e sui test di fine "
+            "modulo del materiale didattico. Il corso si chiude con l'esame finale: 15 domande estratte da una banca di circa "
+            "30, soglia del 75% (12 su 15, come nel materiale didattico).",
+        "obiettivi": [
+            "Distinguere la responsabilità dell'ente da quella personale di chi decide, con le lezioni dei casi Thyssenkrupp e Impregilo",
+            "Organizzare deleghe, procure e controlli sulle decisioni di vertice perché il potere sia difendibile",
+            "Governare il rapporto con l'Organismo di Vigilanza, i flussi informativi, il whistleblowing e il sistema disciplinare",
+            "Esercitare il tone at the top con formazione, comunicazione ed esempio",
+            "Gestire ispezioni, infortuni gravi, procedimenti e crisi senza compromettere la difesa dell'ente",
+        ],
+        "dettagli": [
+            "Destinatari: amministratori, direttori generali, dirigenti, responsabili di funzione, procuratori e soggetti con deleghe",
+            "Checkpoint: uno per modulo, bloccante, cinque domande estratte da una banca di almeno dieci, soglia 80%",
+            "Esame finale: quindici domande estratte dalla banca, soglia 75% (12 su 15)",
+            "Attestato: attestato di formazione EVALIS Academy al superamento dell'esame finale",
+            "Modalità: FAD asincrona con relatore avatar su ogni slide · Prezzo: 200 €, IVA esclusa",
+        ],
+        "piede": "D.Lgs. 231/2001 per le figure apicali — Evalis Academy",
+        "file": "Evalis_Academy_231_Figure_Apicali_FAD-231-03_Approvazione.docx",
+    },
+    "fad23104": {
+        "copertura": {
+            1: "D.Lgs. 231/2001 art. 6, c. 1, 4 e 4-bis",
+            2: "D.Lgs. 231/2001 artt. 6-7",
+            3: "D.Lgs. 231/2001 art. 6, c. 2-bis; D.Lgs. 24/2023",
+            4: "artt. 6, 7, 17, 39; Cass. 4677/2014 e 23401/2022",
+        },
+        "tipo_documento": "normativa",
+        "titolo_corso": "ORGANISMO DI VIGILANZA EX D.LGS. 231/2001",
+        "titolo_doc": "PROPOSTA DIDATTICA — CORSO ORGANISMO DI VIGILANZA EX D.LGS. 231/2001",
+        "presentazione": "Il presente documento raccoglie la struttura didattica del corso FAD-231-04 per componenti e Presidenti di "
+            "Organismi di Vigilanza, sindaci con funzioni di OdV, professionisti candidati all'incarico, internal auditor e "
+            "compliance officer. Il corso nasce dal materiale didattico già redatto (quattro moduli da due ore con il caso "
+            "dell'OdV di Metalfer Sud S.r.l.) e ne conserva ordine, regole, esempi ed esercitazioni. Ogni slide è narrata dal "
+            "relatore avatar, con lo stesso standard di voce, impaginazione e verifica dei corsi già in catalogo. Rispetto al "
+            "materiale, il perimetro di verifica del catalogo dei reati è adeguato al testo in vigore (fino all'articolo 25-vicies).",
+        "titolo_sintesi": "Organismo di Vigilanza ex D.Lgs. 231/2001",
+        "ore": 8,
+        "verifiche": "Ogni modulo è una lezione della piattaforma e si chiude con un checkpoint di verifica (quiz con domande "
+            "estratte da banca dati, non conteggiato nel monte ore), costruito sugli step di controllo e sui test di fine "
+            "modulo del materiale didattico. Il corso si chiude con l'esame finale: 15 domande estratte da una banca di circa "
+            "30, soglia del 75% (12 su 15, come nel materiale didattico).",
+        "obiettivi": [
+            "Esercitare il mandato dell'OdV e verificare in concreto requisiti, configurazione e incompatibilità",
+            "Redigere il regolamento, pianificare la vigilanza in base al rischio e condurre le verifiche",
+            "Progettare e analizzare i flussi informativi; gestire segnalazioni, whistleblowing e istruttorie",
+            "Gestire le violazioni degli apicali e le pressioni del vertice; conoscere la responsabilità del componente",
+            "Curare l'aggiornamento del Modello e il ruolo dell'OdV in ispezioni, infortuni e procedimento",
+        ],
+        "dettagli": [
+            "Destinatari: componenti e Presidenti di OdV, sindaci con funzioni di OdV, candidati all'incarico, internal auditor e compliance officer",
+            "Checkpoint: uno per modulo, bloccante, cinque domande estratte da una banca di almeno dieci, soglia 80%",
+            "Esame finale: quindici domande estratte dalla banca, soglia 75% (12 su 15)",
+            "Attestato: attestato di formazione EVALIS Academy al superamento dell'esame finale",
+            "Modalità: FAD asincrona con relatore avatar su ogni slide · Prezzo: 200 €, IVA esclusa",
+        ],
+        "piede": "Organismo di Vigilanza ex D.Lgs. 231/2001 — Evalis Academy",
+        "file": "Evalis_Academy_231_Organismo_di_Vigilanza_FAD-231-04_Approvazione.docx",
+    },
 }
 if corso not in CORSI:
     sys.exit(f"{corso}: testi del corso mancanti in CORSI (copertura, presentazione, obiettivi...)")
@@ -435,7 +600,9 @@ def tabella(proto: str, righe: list[list[str]]):
 titolo_corso = C["titolo_corso"]
 par("titolo", C["titolo_doc"])
 par("sottotitolo", "EVALIS ACADEMY")
-par("emesso", "EMESSO A OTTOBRE 2026 — BOZZA PER APPROVAZIONE")
+MESI = "GENNAIO FEBBRAIO MARZO APRILE MAGGIO GIUGNO LUGLIO AGOSTO SETTEMBRE OTTOBRE NOVEMBRE DICEMBRE".split()
+from datetime import date
+par("emesso", f"EMESSO A {MESI[date.today().month - 1]} {date.today().year} — BOZZA PER APPROVAZIONE")
 par("vuoto", "")
 par("testo", C["presentazione"])
 par("vuoto", "")

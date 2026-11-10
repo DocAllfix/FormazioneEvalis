@@ -16,6 +16,10 @@ ETICHETTA = {
     "fadpriv02": "Aggiornamento privacy · GDPR",
     "fadpriv03": "Privacy per manager e ADS · GDPR",
     "fadpia01": "Piastrellista · UNI 11493-1:2025",
+    "fad23101": "Modello 231 · D.Lgs. 231/2001",
+    "fad23102": "231 per il personale operativo · D.Lgs. 231/2001",
+    "fad23103": "231 per le figure apicali · D.Lgs. 231/2001",
+    "fad23104": "Organismo di Vigilanza · D.Lgs. 231/2001",
 }
 if CORSO not in ETICHETTA:
     raise SystemExit(f"Etichetta di corso mancante per {CORSO}: aggiungerla a ETICHETTA prima di convertire.")

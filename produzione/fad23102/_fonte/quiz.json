@@ -1,0 +1,950 @@
+{
+  "parametri": {
+    "ore": 8,
+    "test": "8/10",
+    "esame": "12/15"
+  },
+  "checkpoint": [
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Un operaio commette un reato previsto dalla 231 per far risparmiare tempo e soldi all’azienda. Chi può essere punito?",
+      "opzioni": [
+        "Solo l’operaio",
+        "Solo l’azienda",
+        "Sia l’operaio sia l’azienda",
+        "Nessuno, se non c’era intenzione di fare del male"
+      ],
+      "corretta": 2,
+      "spiegazione": "La persona risponde del reato; l’azienda risponde ex D.Lgs. 231/2001 perché il reato è stato commesso nel suo interesse o a suo vantaggio."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "L’azienda ha adottato il Modello 231 ma nessuno compila i registri e le check-list previste. Il Modello protegge l’azienda?",
+      "opzioni": [
+        "Sì, basta che esista",
+        "No: il giudice verifica che sia applicato davvero; un Modello non rispettato non vale nulla",
+        "Sì, se è stato scritto da un avvocato",
+        "Solo per i reati meno gravi"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’esimente richiede un Modello \"efficacemente attuato\": contano le evidenze dell’applicazione quotidiana."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Un lavoratore interinale (somministrato) deve rispettare il Codice Etico e il Modello dell’azienda in cui lavora?",
+      "opzioni": [
+        "No, dipende dall’agenzia",
+        "Sì: le regole valgono per chiunque lavori sotto la direzione o vigilanza dell’azienda",
+        "Solo dopo 6 mesi",
+        "Solo se è iscritto al sindacato"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’azienda risponde anche dei reati dei soggetti sottoposti alla sua direzione o vigilanza, inclusi somministrati e collaboratori."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "Un collega non usa i DPI ma non si è fatto male. Può essere sanzionato?",
+      "opzioni": [
+        "No, non è successo niente",
+        "Sì: la violazione delle regole del Modello è sanzionata anche senza infortunio e senza reato",
+        "Solo se lo vede l’ispettore ASL",
+        "Solo se è recidivo"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il sistema disciplinare 231 è autonomo: sanziona la violazione della regola, non il danno che ne deriva."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "step",
+      "dopoSlide": 7,
+      "domanda": "Il componente dell’OdV, in visita a sorpresa, ti chiede se conosci la procedura per i rifiuti. Non la ricordi bene. Cosa fai?",
+      "opzioni": [
+        "Dico di conoscerla perfettamente per non fare brutta figura",
+        "Rispondo sinceramente e chiedo di rivederla con il mio responsabile",
+        "Mi rifiuto di rispondere",
+        "Lo mando dal capo"
+      ],
+      "corretta": 1,
+      "spiegazione": "Con l’OdV si collabora dicendo la verità: serve a far emergere le lacune e a correggerle; mentire o ostacolare è una violazione."
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Il D.Lgs. 231/2001 riguarda:",
+      "opzioni": [
+        "Solo la sicurezza sul lavoro",
+        "La responsabilità dell’azienda per reati commessi nel suo interesse o vantaggio da chi lavora per essa",
+        "Le tasse delle società",
+        "I contratti di lavoro"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Quale sanzione può essere più grave per un’azienda che lavora con enti pubblici?",
+      "opzioni": [
+        "Il richiamo scritto",
+        "Il divieto di contrattare con la Pubblica Amministrazione",
+        "La multa di 500 euro",
+        "La lettera di avvertimento"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "L’azienda può essere punita per qualsiasi reato commesso da un dipendente?",
+      "opzioni": [
+        "Sì, per tutti",
+        "No, solo per i reati di una lista precisa (es. sicurezza, ambiente, corruzione, frodi, fisco, caporalato, informatici)",
+        "Solo per i furti",
+        "Solo per i reati stradali"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Il Codice Etico è:",
+      "opzioni": [
+        "Il contratto di lavoro",
+        "Il documento con i valori e le regole di comportamento che l’azienda chiede a tutti",
+        "Il regolamento dei parcheggi",
+        "Il manuale della macchina"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Il Modello organizzativo 231 serve a:",
+      "opzioni": [
+        "Aumentare la produzione",
+        "Prevenire i reati con regole, controlli e responsabilità definite, proteggendo l’azienda e chi ci lavora",
+        "Sostituire il contratto collettivo",
+        "Organizzare le ferie"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "I destinatari del Modello sono:",
+      "opzioni": [
+        "Solo i dirigenti",
+        "Solo gli impiegati",
+        "Tutti: amministratori, dipendenti, interinali, collaboratori, fornitori",
+        "Solo i nuovi assunti"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Se violo una procedura del Modello ma non succede niente di grave:",
+      "opzioni": [
+        "Non posso essere sanzionato",
+        "Posso essere sanzionato comunque, perché la regola va rispettata in sé",
+        "Ricevo un premio",
+        "Devo pagare la multa all’azienda"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "L’Organismo di Vigilanza è:",
+      "opzioni": [
+        "Un ufficio della polizia",
+        "Un organo indipendente che controlla che il Modello sia rispettato e aggiornato",
+        "Il capo del personale",
+        "Il sindacato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Durante un controllo dell’OdV devo:",
+      "opzioni": [
+        "Nascondere i problemi per proteggere i colleghi",
+        "Collaborare e rispondere con sincerità",
+        "Rifiutarmi di parlare",
+        "Rispondere solo per iscritto"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "fonte": "test",
+      "domanda": "Una delle tre domande da farsi sempre è:",
+      "opzioni": [
+        "Quanto guadagno?",
+        "Sarei tranquillo se lo vedesse l’OdV, un ispettore o un giornalista?",
+        "Lo fanno anche gli altri?",
+        "Il capo lo saprà?"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Un ispettore ti fa capire che \"con un pensierino\" il verbale sarà più leggero. Cosa fai?",
+      "opzioni": [
+        "Chiedo al capo se possiamo accontentarlo",
+        "Non rispondo alla richiesta, non prometto nulla e riferisco subito al responsabile e all’OdV",
+        "Gli offro un pranzo invece dei soldi",
+        "Firmo il verbale e basta"
+      ],
+      "corretta": 1,
+      "spiegazione": "Qualsiasi utilità a un pubblico ufficiale è corruzione; la richiesta indebita va riferita immediatamente, senza negoziare."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Dopo che hai accettato un lotto di materiale, il fornitore ti regala un orologio da 300 €. Cosa fai?",
+      "opzioni": [
+        "Lo tengo, è un ringraziamento",
+        "Lo restituisco, informo il responsabile e faccio ricontrollare il lotto",
+        "Lo accetto ma non lo dico a nessuno",
+        "Lo scambio con un buono carburante"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il regalo di valore legato a una decisione (accettazione del lotto) va rifiutato e segnalato; è un possibile tentativo di comprare un controllo meno attento."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Il responsabile ti chiede di firmare in blocco le check-list di controllo di una settimana che non hai eseguito. Cosa fai?",
+      "opzioni": [
+        "Firmo, tanto il materiale era a posto",
+        "Firmo solo i controlli effettivamente eseguiti e registrati; per gli altri si deve fare il controllo",
+        "Faccio firmare un collega",
+        "Firmo ma con una data diversa"
+      ],
+      "corretta": 1,
+      "spiegazione": "Ogni firma è una dichiarazione: firmare controlli non eseguiti è un falso e può diventare reato; documenti veritieri proteggono te e l’azienda."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Il direttore ti chiede di usare le credenziali del titolare per caricare un documento su un portale pubblico. Cosa fai?",
+      "opzioni": [
+        "Lo faccio, me lo ha chiesto il direttore",
+        "Rifiuto e propongo di attivare la delega formale prevista dal portale",
+        "Lo faccio ma avviso il titolare dopo",
+        "Chiedo al titolare la password per e-mail"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’uso di credenziali altrui è accesso abusivo e viola la procedura; esistono strumenti leciti (deleghe) per gestire le assenze."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "Noti che i lavoratori di un subappaltatore dormono in un container del cantiere e lavorano 11 ore al giorno. Non sono dipendenti della tua azienda. Cosa fai?",
+      "opzioni": [
+        "Niente, non sono nostri dipendenti",
+        "Segnalo al preposto/responsabile e, se necessario, tramite il canale whistleblowing",
+        "Chiedo loro quanto sono pagati e basta",
+        "Li aiuto a lavorare più in fretta"
+      ],
+      "corretta": 1,
+      "spiegazione": "Lo sfruttamento del lavoro è reato anche per l’azienda utilizzatrice; i segnali vanno riferiti, non spetta a te indagare."
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Chi tra questi è un pubblico ufficiale con cui va tenuto un comportamento particolarmente attento?",
+      "opzioni": [
+        "Il cliente privato",
+        "L’ispettore dell’ASL",
+        "Il fornitore di bulloneria",
+        "Il collega del turno di notte"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Promettere un favore a un funzionario pubblico che poi rifiuta:",
+      "opzioni": [
+        "Non è reato perché non è successo niente",
+        "È comunque reato (istigazione alla corruzione)",
+        "È reato solo se è denaro",
+        "È reato solo per il funzionario"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Un regalo è accettabile se:",
+      "opzioni": [
+        "È in contanti ma di piccolo importo",
+        "È di modico valore, non in denaro, non legato a una decisione e viene registrato",
+        "È dato di nascosto",
+        "Lo accettano anche i colleghi"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Il trasportatore consegna meno pezzi di quelli indicati sul documento. Cosa fai?",
+      "opzioni": [
+        "Firmo per la quantità indicata",
+        "Firmo per la quantità effettivamente ricevuta indicando la differenza e segnalo all’ufficio",
+        "Rifiuto tutta la consegna senza dire nulla",
+        "Correggo il documento del trasportatore a penna senza avvisare"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Un prezzo molto più basso del normale per materiale senza documenti è:",
+      "opzioni": [
+        "Un affare da cogliere",
+        "Un campanello d’allarme per ricettazione o riciclaggio, da segnalare",
+        "Normale nel settore",
+        "Un problema solo dell’ufficio acquisti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "I lavoratori di un subappaltatore possono entrare in cantiere:",
+      "opzioni": [
+        "Appena arrivano",
+        "Solo dopo la verifica dei documenti da parte dell’ufficio e se corrispondono all’elenco comunicato",
+        "Se lo dice il loro caposquadra",
+        "Se hanno il casco"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "La frase corretta sui documenti è:",
+      "opzioni": [
+        "\"Firmo tutto a fine mese\"",
+        "\"Se non l’ho fatto non lo firmo; se l’ho fatto lo scrivo subito\"",
+        "\"Firmo quello che mi dice il capo\"",
+        "\"I registri non li legge nessuno\""
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Le credenziali informatiche:",
+      "opzioni": [
+        "Si possono prestare ai colleghi fidati",
+        "Sono personali e non si condividono mai, nemmeno con il capo",
+        "Si possono scrivere sul monitor",
+        "Si usano per aiutare chi ha perso la sua"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Installare un programma \"craccato\" sul PC aziendale:",
+      "opzioni": [
+        "È consentito se serve per lavorare",
+        "È un reato (diritto d’autore) e un rischio informatico per l’azienda",
+        "È consentito se è gratis",
+        "È una scelta personale"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "fonte": "test",
+      "domanda": "Se l’azienda utilizza lavoratori sfruttati forniti da una cooperativa:",
+      "opzioni": [
+        "Non rischia nulla perché non sono suoi dipendenti",
+        "Risponde del reato di sfruttamento del lavoro come utilizzatrice",
+        "Rischia solo una multa amministrativa",
+        "Risponde solo la cooperativa"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "In un infortunio grave, in cosa consiste il \"vantaggio\" per l’azienda che fa scattare la responsabilità 231?",
+      "opzioni": [
+        "Nell’infortunio stesso",
+        "Nel risparmio di tempo e denaro ottenuto non rispettando le norme di sicurezza (protezioni, manutenzioni, formazione)",
+        "Nel rimborso dell’assicurazione",
+        "Non esiste vantaggio negli infortuni"
+      ],
+      "corretta": 1,
+      "spiegazione": "La giurisprudenza (Thyssenkrupp) riferisce il vantaggio alla condotta: i costi risparmiati o la maggiore velocità ottenuti violando le cautele."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Chi ha l’obbligo di interrompere il lavoro in caso di pericolo grave e immediato e di correggere i comportamenti non sicuri dei lavoratori?",
+      "opzioni": [
+        "Solo il datore di lavoro",
+        "Il preposto (capo squadra/capo reparto nominato)",
+        "Il medico competente",
+        "L’OdV"
+      ],
+      "corretta": 1,
+      "spiegazione": "Dal 2021 il preposto ha l’obbligo esplicito di intervenire, correggere e interrompere l’attività in caso di pericolo grave e immediato (art. 19 D.Lgs. 81/2008)."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "Hai evitato per poco che un carico sospeso colpisse un collega. Nessun danno. Cosa fai?",
+      "opzioni": [
+        "Niente, non è successo nulla",
+        "Compilo il modulo near miss e avviso il preposto: serve a prevenire",
+        "Lo racconto solo al collega",
+        "Aspetto di vedere se si ripete"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il quasi-incidente è l’informazione più preziosa per la prevenzione; il Modello prevede che sia sempre segnalato e analizzato."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Il capo ti ordina di lavorare sulla pressa con la fotocellula disattivata \"per oggi\". Cosa fai?",
+      "opzioni": [
+        "Obbedisco, la responsabilità è sua",
+        "Non lavoro con la protezione disattivata, fermo la macchina e segnalo; se insiste mi rivolgo al livello superiore, al RSPP/RLS o al canale whistleblowing",
+        "Lavoro ma più lentamente",
+        "Chiedo a un collega di farlo al posto mio"
+      ],
+      "corretta": 1,
+      "spiegazione": "L’ordine del superiore non giustifica la violazione: risponde chi ordina e chi esegue. Il Modello dà al lavoratore gli strumenti per rifiutare e segnalare."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 5,
+      "domanda": "Un furgone si offre di ritirare gratis gli sfridi metallici. Cosa fai?",
+      "opzioni": [
+        "Accetto, risparmiamo lo smaltimento",
+        "Rifiuto: i rifiuti escono solo con trasportatore autorizzato e formulario; segnalo all’ufficio",
+        "Accetto se lascia un documento qualsiasi",
+        "Chiedo una percentuale"
+      ],
+      "corretta": 1,
+      "spiegazione": "La consegna di rifiuti a soggetti non autorizzati è reato ambientale (art. 256 TUA) per chi consegna e per l’azienda; il prezzo \"gratis\" è il campanello d’allarme."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "Prima dell’arrivo degli ispettori, un responsabile ti chiede di dire che la protezione \"si era rotta stamattina\" quando invece era stata rimossa da mesi. Cosa fai?",
+      "opzioni": [
+        "Dico quello che mi è stato chiesto, per proteggere l’azienda",
+        "Dico la verità agli ispettori e segnalo all’OdV la richiesta ricevuta",
+        "Non rispondo a nessuno",
+        "Me ne vado dal cantiere"
+      ],
+      "corretta": 1,
+      "spiegazione": "Indurre a dichiarazioni false è reato (25-decies) e mentire all’autorità espone te; la verità è l’unico comportamento ammesso dal Codice Etico."
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Il reato 231 più frequente nei procedimenti è:",
+      "opzioni": [
+        "La corruzione internazionale",
+        "L’omicidio o le lesioni gravi colpose per violazione delle norme di sicurezza sul lavoro",
+        "Il market abuse",
+        "La frode sportiva"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Una lesione è \"grave\" ai fini penali quando la prognosi supera:",
+      "opzioni": [
+        "3 giorni",
+        "10 giorni",
+        "40 giorni",
+        "6 mesi"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Tra gli obblighi del lavoratore (art. 20 D.Lgs. 81/2008) c’è:",
+      "opzioni": [
+        "Redigere il DVR",
+        "Non rimuovere le protezioni, usare correttamente DPI e attrezzature, segnalare i pericoli",
+        "Nominare il preposto",
+        "Scegliere il medico competente"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Il lavoratore che rimuove una protezione da una macchina:",
+      "opzioni": [
+        "Non rischia nulla se non si fa male",
+        "È sanzionabile penalmente in proprio e disciplinarmente",
+        "Rischia solo se lo vede l’OdV",
+        "È responsabile solo il datore di lavoro"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Di fronte a un pericolo grave e immediato il lavoratore:",
+      "opzioni": [
+        "Deve continuare finché arriva il capo",
+        "Può allontanarsi e deve avvisare colleghi e preposto",
+        "Deve chiamare l’OdV prima di muoversi",
+        "Non può lasciare la postazione"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Rifiuti pericolosi diversi vanno:",
+      "opzioni": [
+        "Miscelati nello stesso fusto per risparmiare spazio",
+        "Tenuti separati, in contenitori chiusi ed etichettati, in area dedicata",
+        "Buttati nel cassone del secco",
+        "Accumulati senza limiti di tempo"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Un piccolo sversamento di solvente va:",
+      "opzioni": [
+        "Lavato verso il tombino",
+        "Contenuto con il kit assorbente, raccolto in contenitore idoneo e segnalato",
+        "Lasciato evaporare",
+        "Coperto con segatura e dimenticato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Lavorare con l’aspirazione/abbattimento spento per \"fare prima\":",
+      "opzioni": [
+        "È consentito per brevi periodi",
+        "Può costituire violazione ambientale e di sicurezza e non è ammesso",
+        "È normale in verniciatura",
+        "Dipende dal turno"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Durante un’ispezione ASL devi:",
+      "opzioni": [
+        "Nascondere i documenti problematici",
+        "Collaborare, dire la verità, non alterare nulla e avvisare il responsabile previsto",
+        "Offrire un caffè e un pranzo",
+        "Firmare qualsiasi verbale"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "fonte": "test",
+      "domanda": "Distruggere o nascondere documenti prima di un controllo:",
+      "opzioni": [
+        "È una scelta aziendale lecita",
+        "È un reato e aggrava la posizione dell’azienda",
+        "È consentito per i documenti vecchi",
+        "È compito dell’OdV"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 1,
+      "domanda": "Hai visto qualcosa di irregolare ma non hai prove certe, solo fondati motivi. Puoi segnalare?",
+      "opzioni": [
+        "No, servono prove certe",
+        "Sì: bastano fondati motivi; descrivi i fatti che conosci senza indagare di nascosto",
+        "Solo se un collega conferma",
+        "Solo per iscritto a un avvocato"
+      ],
+      "corretta": 1,
+      "spiegazione": "La legge tutela chi segnala in buona fede sulla base di fondati motivi; non è richiesto di raccogliere prove né di indagare."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 2,
+      "domanda": "Quale di questi è un canale interno di segnalazione conforme alla legge?",
+      "opzioni": [
+        "L’e-mail aziendale del direttore",
+        "La piattaforma riservata gestita da un soggetto autonomo, con possibilità di segnalazione orale",
+        "Il gruppo WhatsApp del reparto",
+        "La bacheca dello spogliatoio"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il canale deve garantire riservatezza ed essere gestito da persona o soggetto autonomo; prevede forma scritta e orale."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 3,
+      "domanda": "Hai segnalato in buona fede ma i fatti risultano diversi da come li avevi capiti. Cosa succede?",
+      "opzioni": [
+        "Vieni sanzionato per falsa segnalazione",
+        "Nulla: chi segnala in buona fede non subisce conseguenze; solo chi mente consapevolmente perde le tutele",
+        "Devi pagare le spese dell’istruttoria",
+        "Perdi il posto"
+      ],
+      "corretta": 1,
+      "spiegazione": "Le tutele sono escluse solo in caso di accertata calunnia/diffamazione o colpa grave; l’errore in buona fede è protetto."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 4,
+      "domanda": "Due settimane dopo la tua segnalazione vieni spostato al turno peggiore senza motivo. Cosa fai?",
+      "opzioni": [
+        "Accetto, non posso provare che è una ritorsione",
+        "Lo comunico al gestore del canale interno e ad ANAC: è l’azienda a dover dimostrare che il provvedimento non dipende dalla segnalazione",
+        "Ritiro la segnalazione",
+        "Smetto di lavorare"
+      ],
+      "corretta": 1,
+      "spiegazione": "Il D.Lgs. 24/2023 inverte l’onere della prova e dichiara nulli gli atti ritorsivi; ANAC può sanzionare i responsabili."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "step",
+      "dopoSlide": 6,
+      "domanda": "L’ispettore ti chiede se la formazione antincendio è stata svolta; non lo è stata. Cosa rispondi?",
+      "opzioni": [
+        "Che è stata fatta, per proteggere l’azienda",
+        "La verità",
+        "Che non lo so",
+        "Che deve chiederlo al capo"
+      ],
+      "corretta": 1,
+      "spiegazione": "Dire la verità alle autorità è l’unico comportamento ammesso dal Codice Etico; mentire espone te e aggrava la posizione dell’azienda."
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Chi segnala irregolarità in buona fede è:",
+      "opzioni": [
+        "Un delatore da evitare",
+        "Una persona che protegge i colleghi, l’azienda e il proprio posto di lavoro, tutelata dalla legge",
+        "Sempre un anonimo",
+        "Responsabile dei danni"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Quale NON è oggetto di segnalazione whistleblowing?",
+      "opzioni": [
+        "Una violazione del Modello 231",
+        "Una pressione a violare le regole di sicurezza",
+        "Una lamentela personale sui turni di ferie",
+        "Un sospetto di corruzione"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il canale esterno per le segnalazioni è gestito da:",
+      "opzioni": [
+        "Ispettorato del lavoro",
+        "ANAC",
+        "Agenzia delle Entrate",
+        "Il sindacato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il gestore del canale deve inviare l’avviso di ricevimento entro:",
+      "opzioni": [
+        "24 ore",
+        "7 giorni",
+        "30 giorni",
+        "3 mesi"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il riscontro sull’esito o sullo stato della segnalazione arriva entro:",
+      "opzioni": [
+        "7 giorni",
+        "1 mese",
+        "3 mesi",
+        "1 anno"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Una buona segnalazione contiene:",
+      "opzioni": [
+        "Opinioni sul carattere delle persone",
+        "Fatti: chi, cosa, dove, quando e come ne sei venuto a conoscenza",
+        "Accuse generiche",
+        "Richieste di aumento"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Il canale whistleblowing può essere usato anche da:",
+      "opzioni": [
+        "Solo dai dipendenti a tempo indeterminato",
+        "Somministrati, collaboratori, tirocinanti, lavoratori dei fornitori ed ex dipendenti",
+        "Solo dai dirigenti",
+        "Solo dall’OdV"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Un licenziamento ritorsivo verso chi ha segnalato è:",
+      "opzioni": [
+        "Valido se motivato",
+        "Nullo, con diritto alla reintegra",
+        "Convertibile in multa",
+        "Valido dopo 6 mesi"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "Chi viola la riservatezza sull’identità del segnalante:",
+      "opzioni": [
+        "Non rischia nulla",
+        "È sanzionato disciplinarmente e da ANAC fino a 50.000 €",
+        "Deve solo scusarsi",
+        "Riceve un richiamo verbale"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "fonte": "test",
+      "domanda": "La riservatezza va garantita:",
+      "opzioni": [
+        "Solo al segnalante",
+        "Al segnalante e anche alla persona segnalata",
+        "Solo alla persona segnalata",
+        "A nessuno"
+      ],
+      "corretta": 1
+    }
+  ],
+  "esame": [
+    {
+      "modulo": "m01",
+      "domanda": "Con il D.Lgs. 231/2001, se un lavoratore commette un reato previsto dalla legge nell’interesse dell’azienda:",
+      "opzioni": [
+        "Risponde solo il lavoratore",
+        "Rispondono sia il lavoratore sia l’azienda",
+        "Risponde solo l’azienda",
+        "Nessuno risponde"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "L’azienda evita la responsabilità se dimostra di avere:",
+      "opzioni": [
+        "Un buon fatturato",
+        "Un Modello organizzativo applicato davvero, un Codice Etico, un OdV e un sistema disciplinare",
+        "Un’assicurazione",
+        "Un avvocato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Le regole del Modello e del Codice Etico valgono per:",
+      "opzioni": [
+        "Solo i dirigenti",
+        "Tutti: dipendenti, interinali, collaboratori, fornitori",
+        "Solo gli impiegati",
+        "Solo chi ha firmato il contratto a tempo indeterminato"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "La violazione di una procedura del Modello senza che si verifichi alcun reato:",
+      "opzioni": [
+        "Non è sanzionabile",
+        "È sanzionabile disciplinarmente",
+        "Comporta solo un avviso",
+        "È premiata se fa risparmiare"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "L’Organismo di Vigilanza:",
+      "opzioni": [
+        "È un ufficio della direzione",
+        "È indipendente e controlla che il Modello sia rispettato; con lui si collabora",
+        "È il sindacato",
+        "È la polizia"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Offrire o promettere un regalo o favore a un funzionario pubblico:",
+      "opzioni": [
+        "È consentito se di piccolo valore",
+        "È corruzione, anche se il funzionario rifiuta",
+        "È consentito a Natale",
+        "È un uso del settore"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Un regalo da un fornitore è accettabile se:",
+      "opzioni": [
+        "È in contanti",
+        "È di modico valore, non in denaro, non legato a una decisione e registrato",
+        "Viene dato di nascosto",
+        "Lo accettano anche i colleghi"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Firmare un documento che attesta un controllo non eseguito:",
+      "opzioni": [
+        "È normale prassi",
+        "È un falso che può diventare reato: si firma solo ciò che si è fatto davvero",
+        "È consentito se lo chiede il capo",
+        "È consentito se il materiale era a posto"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Le credenziali informatiche:",
+      "opzioni": [
+        "Si possono prestare al capo",
+        "Sono personali e non si condividono mai",
+        "Si possono usare al posto di un collega assente",
+        "Si scrivono sul PC"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Lavoratori di una ditta esterna sfruttati (paghe bassissime, orari eccessivi, senza sicurezza):",
+      "opzioni": [
+        "Non riguardano la tua azienda",
+        "Espongono anche la tua azienda al reato di sfruttamento: i segnali vanno segnalati",
+        "Sono un problema solo loro",
+        "Vanno ignorati"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Il \"vantaggio\" dell’azienda in un infortunio grave consiste in:",
+      "opzioni": [
+        "Nell’infortunio",
+        "Nel risparmio di tempo e denaro ottenuto violando le norme di sicurezza",
+        "Nel rimborso INAIL",
+        "Non esiste"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Il preposto ha l’obbligo di:",
+      "opzioni": [
+        "Redigere il DVR",
+        "Vigilare, correggere i comportamenti non sicuri e interrompere il lavoro in caso di pericolo grave e immediato",
+        "Nominare il RSPP",
+        "Pagare le multe"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "I rifiuti pericolosi del reparto:",
+      "opzioni": [
+        "Si miscelano per risparmiare spazio",
+        "Si tengono separati, etichettati, nei tempi previsti e si affidano solo a trasportatori autorizzati con formulario",
+        "Si consegnano a chi li ritira gratis",
+        "Si bruciano in cantiere"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Durante un’ispezione delle autorità devi:",
+      "opzioni": [
+        "Dire quello che ti suggerisce il capo",
+        "Collaborare e dire la verità, senza alterare documenti o luoghi",
+        "Nascondere i documenti problematici",
+        "Rifiutarti di parlare"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Chi segnala in buona fede tramite il canale whistleblowing:",
+      "opzioni": [
+        "Può essere licenziato",
+        "È tutelato: le ritorsioni sono nulle e l’identità è riservata",
+        "Deve dimostrare di avere ragione",
+        "Perde il bonus"
+      ],
+      "corretta": 1
+    }
+  ]
+}
