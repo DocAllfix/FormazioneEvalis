@@ -65,14 +65,23 @@ for (const s of slides) {
       dettaglio = `${n} campi · sbagliata «${sbagliata.slice(0, 22)}…» · soluzione «${tutte}» · ricomincia ${vuoto ? "ok" : "NO"}`;
       if (!giusto) throw new Error(dettaglio);
     } else {
-      const out = fr.locator("[data-out]").first();
-      const prima = await out.textContent();
-      // 13 cambia il primo risultato di entrambi i calcolatori (7 no: 7 m danno ancora 3 campi, come 8 m)
-      await clicca(p, fr, "input[data-in]"); await p.keyboard.press("Control+A"); await p.keyboard.type("13");
+      // tutti i risultati insieme: non sempre il primo dipende dal primo dato (giornata di Marco, SA8000)
+      const risultati = async () => (await fr.locator("[data-out]").allTextContents()).join(" | ");
+      const prima = await risultati();
+      if (await fr.locator("input[data-in]").count()) {
+        // 13 cambia i risultati di tutti i calcolatori con caselle (7 no: 7 m danno ancora 3 campi, come 8 m)
+        await clicca(p, fr, "input[data-in]"); await p.keyboard.press("Control+A"); await p.keyboard.type("13");
+      } else { // solo tendine (rischio, SA8000): si sceglie un altro valore della prima
+        const sel = fr.locator("select[data-in]").first();
+        await clicca(p, fr, "select[data-in]"); await p.keyboard.press("Escape");
+        const valori = await sel.locator("option").evaluateAll((os) => os.map((o) => (o as HTMLOptionElement).value));
+        const ora = await sel.inputValue();
+        await sel.selectOption(valori.find((v) => v !== ora)!);
+      }
       await p.waitForTimeout(300);
-      const dopo = await out.textContent();
+      const dopo = await risultati();
       await clicca(p, fr, "[data-reset]"); await p.waitForTimeout(300);
-      const rip = await out.textContent();
+      const rip = await risultati();
       dettaglio = `risultato ${prima} → ${dopo} → ripristino ${rip}`;
       if (!(prima !== dopo && rip === prima)) throw new Error(dettaglio);
     }
