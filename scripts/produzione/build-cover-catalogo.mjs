@@ -114,6 +114,14 @@ const ICONE = {
       ${persone(150, 160, 120)}
       ${coccarda(268, 252, 60)}`,
   },
+  // tre persone + spunta: il lavoro dignitoso verificato (SA8000:2026, FAD-SA8000-02)
+  lavoroDignitoso: {
+    centro: [176, 190], scala: 1.62,
+    disegna: () => `
+      ${persone(150, 160, 120)}
+      <g filter="url(#rilievo)"><circle cx="272" cy="258" r="56" fill="${C.arancio}"/>
+      <path d="M244,258 L264,279 L302,236" fill="none" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></g>`,
+  },
 };
 
 // griglia 3×3 di piastrelle con le fughe, in tinte alternate: la posa ceramica (piastrellista)
@@ -303,6 +311,7 @@ const CORSI = {
   fad23102: ICONE.personale231,
   fad23103: ICONE.apicali231,
   fad23104: ICONE.odv231,
+  fadsa800002: ICONE.lavoroDignitoso,
 };
 
 const DISCO = { x: 790, y: 478 };

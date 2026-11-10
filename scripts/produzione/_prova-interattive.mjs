@@ -47,6 +47,33 @@ const CASI = {
     [{ l1: "" }, { g1: "—", campi: "—", area: "—" }],
     [{ l1: "-4" }, { g1: "—", campi: "—" }],
   ],
+  // SA8000:2026 (fadsa800002)
+  rischio: [
+    [{}, { pt: "9", pr: "Media" }],
+    [{ g: "5", p: "1" }, { pt: "5", pr: "Alta" }],
+    [{ g: "4", p: "3" }, { pt: "12", pr: "Alta" }],
+    [{ g: "2", p: "3" }, { pt: "6", pr: "Media" }],
+    [{ g: "1", p: "5" }, { pt: "5", pr: "Bassa" }],
+    [{ g: "4", p: "4" }, { pt: "16", pr: "Alta" }],
+  ],
+  giovane: [
+    [{}, { lav: "5", tot: "10,5", esito: "Non conforme" }],
+    [{ s: "4", l: "6", t: "1" }, { lav: "6", tot: "11", esito: "Non conforme" }],
+    [{ s: "3", l: "5", t: "1" }, { tot: "9", esito: "Conforme" }],
+    [{ s: "0", l: "9", t: "0" }, { lav: "9", tot: "9", esito: "Non conforme" }],
+    [{ s: "3", l: "4", t: "1", n: "si" }, { tot: "8", esito: "Non conforme" }],
+    [{ l: "" }, { lav: "—", tot: "—", esito: "—" }],
+    [{ l: "abc" }, { lav: "—", esito: "—" }],
+  ],
+  settimana: [
+    [{}, { tot: "48", esito: "Conforme" }],
+    [{ o: "48", st: "16", d: "6" }, { tot: "64", esito: "Non conforme" }],
+    [{ o: "44", st: "10", d: "7", vol: "no" }, { tot: "54", esito: "Non conforme" }],
+    [{ o: "48", st: "12", d: "6" }, { tot: "60", esito: "Conforme" }],
+    [{ o: "50", st: "0" }, { tot: "50", esito: "Non conforme" }],
+    [{ st: "0", vol: "no" }, { tot: "40", esito: "Conforme" }],
+    [{ o: "" }, { tot: "—", esito: "—" }],
+  ],
 };
 
 const FONTS = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap";

@@ -70,6 +70,7 @@ const S = {
   fad23102: "formazione-231-per-il-personale-operativo",
   fad23103: "formazione-231-per-le-figure-apicali",
   fad23104: "organismo-di-vigilanza-231-ruolo-metodo-e-responsabilita",
+  fadsa800002: "sa8000-2026-in-pratica-lo-standard-per-il-lavoro-dignitoso",
 } as const;
 
 export const CORSI: CorsoListino[] = [
@@ -114,6 +115,8 @@ export const CORSI: CorsoListino[] = [
   { slug: S.fad23102, attivoCents: 10000, listinoCents: 17900 },
   { slug: S.fad23103, attivoCents: 20000, listinoCents: 35900 },
   { slug: S.fad23104, attivoCents: 20000, listinoCents: 35900 },
+  // SA8000:2026 FAD-SA8000-02 (10/11, prezzo del committente 100 €, barrato come la 231-02: 179 €).
+  { slug: S.fadsa800002, attivoCents: 10000, listinoCents: 17900 },
 ];
 
 // Nei pacchetti entra l'EDIZIONE CORRENTE di ogni norma: dalla 9001 è la 2026. La 2015 resta

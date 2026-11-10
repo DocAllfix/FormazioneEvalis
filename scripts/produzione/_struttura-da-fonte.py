@@ -11,10 +11,12 @@ import re, sys
 from pathlib import Path
 
 # durata dell'unità → (minuti di contenuto, slide): +1,5% sui minuti legali, ~4,5 min a slide
-BUDGET = {"2 ore": (122, 27), "2 ore e 30": (152, 34), "3 ore": (183, 41), "4 ore": (244, 54)}
+BUDGET = {"1 ora": (61, 14), "2 ore": (122, 27), "2 ore e 30": (152, 34), "3 ore": (183, 41), "4 ore": (244, 54)}
 
 corso = sys.argv[1]
 pesi_parole = "--pesi-parole" in sys.argv
+# --min1: minimo 1 slide per sezione (corsi da 1 ora a modulo con una sezione per slide del committente)
+MIN = 1.0 if "--min1" in sys.argv else 2.0
 moduli = []
 for f in sorted(Path(f"produzione/{corso}/_fonte").glob("m[0-9][0-9].txt")):
     righe = f.read_text(encoding="utf-8").splitlines()
@@ -37,9 +39,9 @@ for f in sorted(Path(f"produzione/{corso}/_fonte").glob("m[0-9][0-9].txt")):
         if s[1] and s[1][0] == s[0]:
             s[1] = s[1][1:]
     pesi = parole if pesi_parole else [max(1, len(s[1])) for s in sezioni]
-    quote = [max(2.0, slide * p / sum(pesi)) for p in pesi]
+    quote = [max(MIN, slide * p / sum(pesi)) for p in pesi]
     scala = slide / sum(quote)
-    quote = [max(2.0, q * scala) for q in quote]
+    quote = [max(MIN, q * scala) for q in quote]
     interi = [int(q) for q in quote]
     resti = sorted(range(len(quote)), key=lambda i: quote[i] - interi[i], reverse=True)
     i = 0
@@ -49,7 +51,7 @@ for f in sorted(Path(f"produzione/{corso}/_fonte").glob("m[0-9][0-9].txt")):
     while sum(interi) > slide:
         j = max(range(len(interi)), key=lambda k: interi[k] - quote[k])
         interi[j] -= 1
-    assert sum(interi) == slide and min(interi) >= 2, (n, interi)
+    assert sum(interi) == slide and min(interi) >= MIN, (n, interi)
     moduli.append((n, titolo, minuti, slide, sezioni, interi))
 
 print("| Mod | Titolo | Copre (fonte HTML) | Durata | Slide |\n|---|---|---|---|---|")

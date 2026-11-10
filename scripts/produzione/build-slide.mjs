@@ -169,6 +169,80 @@ const CALCOLATORI = {
       return r;
     },
   },
+  // SA8000:2026 (fadsa800002): le tre regole del calcolatore del committente, verificate sul testo dello standard
+  rischio: {
+    guida: "Cambia gravità e probabilità: punteggio e priorità si ricalcolano.",
+    valori: { g: "3", p: "3" },
+    ingressi: {
+      g: { l: "Gravità (scala, portata, irreversibilità)", opzioni: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]] },
+      p: { l: "Probabilità", opzioni: [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"]] },
+    },
+    uscite: { pt: { l: "Punteggio", u: "su 25", passo: true }, pr: { l: "Priorità", u: "", passo: true } },
+    nota: "Scala da 1 a 5 a scopo didattico: lo standard non impone una matrice numerica, chiede di dare priorità per gravità e probabilità (M5). Con gravità 5 la priorità è alta anche se l'impatto è poco probabile.",
+    calcola: function (v) {
+      var g = Number(v.g), p = Number(v.p), s = g * p, r = { pt: String(s), passo_pt: g + " × " + p };
+      if (g === 5) { r.pr = "Alta"; r.passo_pr = "impatto molto grave o irreversibile: si affronta subito"; }
+      else if (s >= 12) { r.pr = "Alta"; r.passo_pr = "azione immediata, con responsabile e scadenza"; }
+      else if (s >= 6) { r.pr = "Media"; r.passo_pr = "azione pianificata e monitoraggio"; }
+      else { r.pr = "Bassa"; r.passo_pr = "da tenere sotto controllo"; }
+      return r;
+    },
+  },
+  giovane: {
+    guida: "Cambia le ore della giornata di Marco: il controllo dei limiti per i giovani lavoratori si ricalcola.",
+    valori: { s: 4, l: 5, t: 1.5, n: "no" },
+    ingressi: {
+      s: { l: "Ore di scuola", u: "ore" }, l: { l: "Ore di lavoro", u: "ore" }, t: { l: "Ore di trasporto", u: "ore" },
+      n: { l: "Lavoro in orario notturno", opzioni: [["no", "no"], ["si", "sì"]] },
+    },
+    uscite: {
+      lav: { l: "Lavoro (limite 8 ore)", u: "ore", passo: true }, tot: { l: "Scuola + lavoro + trasporto (limite 10 ore)", u: "ore", passo: true },
+      esito: { l: "Giornata", u: "", passo: true },
+    },
+    nota: "D1.3: per chi ha meno di 18 anni al massimo 8 ore di lavoro al giorno, al massimo 10 ore tra scuola, lavoro e trasporto, niente lavoro notturno (o i limiti di legge, se più bassi).",
+    calcola: function (v) {
+      function f(x) { return x.toLocaleString("it-IT", { maximumFractionDigits: 2 }); }
+      function ok(x) { return typeof x === "number" && isFinite(x) && x >= 0 && x <= 24; }
+      var r = { lav: "—", passo_lav: "", tot: "—", passo_tot: "", esito: "—", passo_esito: "" };
+      if (!(ok(v.s) && ok(v.l) && ok(v.t))) return r;
+      var t = v.s + v.l + v.t, pr = [];
+      r.lav = f(v.l); r.passo_lav = v.l > 8 ? "oltre il limite" : "entro il limite";
+      r.tot = f(t); r.passo_tot = f(v.s) + " + " + f(v.l) + " + " + f(v.t) + (t > 10 ? ": oltre il limite" : ": entro il limite");
+      if (v.l > 8) pr.push("lavoro oltre 8 ore");
+      if (t > 10) pr.push("totale oltre 10 ore");
+      if (v.n === "si") pr.push("lavoro notturno");
+      r.esito = pr.length ? "Non conforme" : "Conforme"; r.passo_esito = pr.length ? pr.join(", ") : "limiti rispettati, niente notte";
+      return r;
+    },
+  },
+  settimana: {
+    guida: "Inserisci i dati di una settimana di lavoro: il controllo dei limiti di D4 si ricalcola.",
+    valori: { o: 40, st: 8, d: 5, vol: "si" },
+    ingressi: {
+      o: { l: "Ore ordinarie nella settimana", u: "ore" }, st: { l: "Ore di straordinario", u: "ore" },
+      d: { l: "Giorni lavorati di seguito", u: "giorni" },
+      vol: { l: "Straordinario accettato liberamente", opzioni: [["si", "sì"], ["no", "no"]] },
+    },
+    uscite: {
+      tot: { l: "Ore totali nella settimana", u: "ore", passo: true },
+      esito: { l: "Settimana", u: "", passo: true },
+    },
+    nota: "D4.4 e D4.5: orario regolare al massimo 48 ore, straordinario al massimo 12 ore, volontario e pagato con maggiorazione; D4.6: almeno 24 ore di riposo dopo sei giorni consecutivi di lavoro. Se legge o contratto collettivo sono più favorevoli, vale la regola più favorevole al personale.",
+    calcola: function (v) {
+      function f(x) { return x.toLocaleString("it-IT", { maximumFractionDigits: 2 }); }
+      function ok(x, m) { return typeof x === "number" && isFinite(x) && x >= 0 && x <= m; }
+      var r = { tot: "—", passo_tot: "", esito: "—", passo_esito: "" };
+      if (!(ok(v.o, 168) && ok(v.st, 168) && ok(v.d, 31))) return r;
+      var pr = [];
+      r.tot = f(v.o + v.st); r.passo_tot = f(v.o) + " ordinarie + " + f(v.st) + " di straordinario";
+      if (v.o > 48) pr.push("ordinario oltre 48 ore");
+      if (v.st > 12) pr.push("straordinario oltre 12 ore");
+      if (v.d > 6) pr.push("manca il riposo dopo sei giorni");
+      if (v.st > 0 && v.vol === "no") pr.push("straordinario non volontario");
+      r.esito = pr.length ? "Non conforme" : "Conforme"; r.passo_esito = pr.length ? pr.join(", ") : "limiti rispettati";
+      return r;
+    },
+  },
 };
 
 const LAYOUTS = {

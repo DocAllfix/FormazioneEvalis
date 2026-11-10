@@ -1,0 +1,1148 @@
+{
+ "nota": "Attività del committente FAD-SA8000-02 come slide interattive «Prova tu» (non bloccanti): casi, vero o falso, classificazioni, ordinamenti; 3 calcolatori (rischio, giovane, settimana) in build-slide.mjs.",
+ "slide": {
+  "fadsa800002_m01_s009": {
+   "titolo": "Prova tu: legge o standard?",
+   "intro": "Uno stabilimento all'estero: la legge locale consente 60 ore di lavoro ordinario a settimana, la SA8000:2026 fissa il limite a 48. Quale orario ordinario applica lo stabilimento certificato?",
+   "campi": [
+    {
+     "h": "La tua risposta",
+     "tipo": "scelta",
+     "opzioni": [
+      "60 ore: nel Paese ospitante vale solo la legge locale.",
+      "48 ore: tra legge e standard vale la regola più favorevole al personale.",
+      "54 ore: una via di mezzo concordata con i capi reparto.",
+      "Decide ogni lavoratore firmando una rinuncia."
+     ],
+     "giuste": [
+      "48 ore: tra legge e standard vale la regola più favorevole al personale."
+     ],
+     "spiega": "Esatto. È il criterio F3: la regola più vantaggiosa per chi lavora."
+    }
+   ]
+  },
+  "fadsa800002_m01_s012": {
+   "titolo": "Prova tu: dal 2014 al 2026",
+   "intro": "Per ogni requisito della SA8000:2014 scegli la clausola della versione 2026 in cui confluisce.",
+   "campi": [
+    {
+     "h": "1. Lavoro minorile",
+     "tipo": "scelta",
+     "opzioni": [
+      "D1 · Bambini e giovani lavoratori",
+      "D2 · Libertà di associazione",
+      "D3 · Assunzione, impiego, cessazione",
+      "D4 · Orari, salari e benefici",
+      "D5 · Non discriminazione",
+      "D6 · Salute e sicurezza"
+     ],
+     "giuste": [
+      "D1 · Bambini e giovani lavoratori"
+     ],
+     "spiega": "D1 · Protezione di bambini e giovani lavoratori"
+    },
+    {
+     "h": "2. Lavoro forzato od obbligato",
+     "tipo": "scelta",
+     "opzioni": [
+      "D1 · Bambini e giovani lavoratori",
+      "D2 · Libertà di associazione",
+      "D3 · Assunzione, impiego, cessazione",
+      "D4 · Orari, salari e benefici",
+      "D5 · Non discriminazione",
+      "D6 · Salute e sicurezza"
+     ],
+     "giuste": [
+      "D3 · Assunzione, impiego, cessazione"
+     ],
+     "spiega": "D3 · Assunzione, impiego e cessazione liberi ed equi"
+    },
+    {
+     "h": "3. Salute e sicurezza",
+     "tipo": "scelta",
+     "opzioni": [
+      "D1 · Bambini e giovani lavoratori",
+      "D2 · Libertà di associazione",
+      "D3 · Assunzione, impiego, cessazione",
+      "D4 · Orari, salari e benefici",
+      "D5 · Non discriminazione",
+      "D6 · Salute e sicurezza"
+     ],
+     "giuste": [
+      "D6 · Salute e sicurezza"
+     ],
+     "spiega": "D6 · Salute e sicurezza"
+    },
+    {
+     "h": "4. Libertà di associazione e contrattazione collettiva",
+     "tipo": "scelta",
+     "opzioni": [
+      "D1 · Bambini e giovani lavoratori",
+      "D2 · Libertà di associazione",
+      "D3 · Assunzione, impiego, cessazione",
+      "D4 · Orari, salari e benefici",
+      "D5 · Non discriminazione",
+      "D6 · Salute e sicurezza"
+     ],
+     "giuste": [
+      "D2 · Libertà di associazione"
+     ],
+     "spiega": "D2 · Libertà di associazione e contrattazione collettiva"
+    },
+    {
+     "h": "5. Discriminazione",
+     "tipo": "scelta",
+     "opzioni": [
+      "D1 · Bambini e giovani lavoratori",
+      "D2 · Libertà di associazione",
+      "D3 · Assunzione, impiego, cessazione",
+      "D4 · Orari, salari e benefici",
+      "D5 · Non discriminazione",
+      "D6 · Salute e sicurezza"
+     ],
+     "giuste": [
+      "D5 · Non discriminazione"
+     ],
+     "spiega": "D5 · Libertà dalla discriminazione"
+    },
+    {
+     "h": "6. Pratiche disciplinari",
+     "tipo": "scelta",
+     "opzioni": [
+      "D1 · Bambini e giovani lavoratori",
+      "D2 · Libertà di associazione",
+      "D3 · Assunzione, impiego, cessazione",
+      "D4 · Orari, salari e benefici",
+      "D5 · Non discriminazione",
+      "D6 · Salute e sicurezza"
+     ],
+     "giuste": [
+      "D3 · Assunzione, impiego, cessazione"
+     ],
+     "spiega": "D3: le regole disciplinari fanno parte di un rapporto di lavoro equo"
+    },
+    {
+     "h": "7. Orario di lavoro",
+     "tipo": "scelta",
+     "opzioni": [
+      "D1 · Bambini e giovani lavoratori",
+      "D2 · Libertà di associazione",
+      "D3 · Assunzione, impiego, cessazione",
+      "D4 · Orari, salari e benefici",
+      "D5 · Non discriminazione",
+      "D6 · Salute e sicurezza"
+     ],
+     "giuste": [
+      "D4 · Orari, salari e benefici"
+     ],
+     "spiega": "D4 · Orari, salari e benefici adeguati"
+    },
+    {
+     "h": "8. Retribuzione",
+     "tipo": "scelta",
+     "opzioni": [
+      "D1 · Bambini e giovani lavoratori",
+      "D2 · Libertà di associazione",
+      "D3 · Assunzione, impiego, cessazione",
+      "D4 · Orari, salari e benefici",
+      "D5 · Non discriminazione",
+      "D6 · Salute e sicurezza"
+     ],
+     "giuste": [
+      "D4 · Orari, salari e benefici"
+     ],
+     "spiega": "D4: orario e paga sono ora nella stessa clausola"
+    }
+   ]
+  },
+  "fadsa800002_m01_s014": {
+   "titolo": "Prova tu: vero o falso",
+   "intro": "Cinque affermazioni sulla SA8000:2026.",
+   "campi": [
+    {
+     "h": "La SA8000 è obbligatoria per legge per tutte le imprese.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Falso"
+     ],
+     "spiega": "Falso. È volontaria. Spesso però è richiesta da clienti, bandi e capitolati."
+    },
+    {
+     "h": "Nella versione 2026 il sistema di gestione viene prima dei temi del lavoro dignitoso.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Vero"
+     ],
+     "spiega": "Vero. La Sezione 1 (M1–M10) precede la Sezione 2 (D1–D7)."
+    },
+    {
+     "h": "I Principi dello standard sono requisiti verificati uno a uno in audit.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Falso"
+     ],
+     "spiega": "Falso. I Principi danno il contesto. In audit si verificano i Criteri."
+    },
+    {
+     "h": "La clausola sulla privacy del personale è una novità del 2026.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Vero"
+     ],
+     "spiega": "Vero. È la clausola D7."
+    },
+    {
+     "h": "Il sistema di gestione riguarda solo i dipendenti assunti direttamente.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Falso"
+     ],
+     "spiega": "Falso. Copre tutte le persone su cui attività e rapporti commerciali dell’organizzazione hanno un impatto."
+    }
+   ]
+  },
+  "fadsa800002_m02_s006": {
+   "layout": "calcolatore",
+   "formula": "rischio",
+   "titolo": "Prova tu: la priorità di un rischio",
+   "intro": "Il rischio è per le persone, non per l'azienda: si misura con gravità e probabilità."
+  },
+  "fadsa800002_m02_s009": {
+   "titolo": "Prova tu: causa, contribuisce o è collegata?",
+   "intro": "Per ogni situazione indica il livello di responsabilità dell'azienda protagonista.",
+   "campi": [
+    {
+     "h": "L’azienda non paga gli straordinari ai propri operai.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Causa",
+      "Contribuisce",
+      "Direttamente collegata"
+     ],
+     "giuste": [
+      "Causa"
+     ],
+     "spiega": "Causa: Causa: è una sua decisione diretta."
+    },
+    {
+     "h": "L’azienda cambia gli ordini all’ultimo momento, più volte al mese, e il terzista ricorre a turni notturni non previsti.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Causa",
+      "Contribuisce",
+      "Direttamente collegata"
+     ],
+     "giuste": [
+      "Contribuisce"
+     ],
+     "spiega": "Contribuisce: Contribuisce: le sue pratiche di acquisto creano la pressione."
+    },
+    {
+     "h": "Un subfornitore di secondo livello impiega minori, violando le clausole del contratto e all’insaputa dell’azienda.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Causa",
+      "Contribuisce",
+      "Direttamente collegata"
+     ],
+     "giuste": [
+      "Direttamente collegata"
+     ],
+     "spiega": "Direttamente collegata: Direttamente collegata: nessuna spinta, ma avviene nella sua catena."
+    },
+    {
+     "h": "In un reparto dell’azienda i dispositivi di protezione non vengono forniti.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Causa",
+      "Contribuisce",
+      "Direttamente collegata"
+     ],
+     "giuste": [
+      "Causa"
+     ],
+     "spiega": "Causa: Causa: riguarda i propri luoghi di lavoro."
+    },
+    {
+     "h": "L’azienda impone al fornitore prezzi sotto il costo di produzione e il fornitore taglia le paghe.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Causa",
+      "Contribuisce",
+      "Direttamente collegata"
+     ],
+     "giuste": [
+      "Contribuisce"
+     ],
+     "spiega": "Contribuisce: Contribuisce: il prezzo imposto rende il taglio prevedibile."
+    },
+    {
+     "h": "L’impresa di pulizie in appalto trattiene i documenti dei propri addetti. Il committente non lo sapeva e il contratto lo vieta.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Causa",
+      "Contribuisce",
+      "Direttamente collegata"
+     ],
+     "giuste": [
+      "Direttamente collegata"
+     ],
+     "spiega": "Direttamente collegata: Direttamente collegata: deve usare la propria influenza sull’appaltatore."
+    }
+   ]
+  },
+  "fadsa800002_m02_s012": {
+   "titolo": "Prova tu: il percorso di un reclamo",
+   "intro": "Un lavoratore segnala un problema. Assegna a ogni fase il suo numero d'ordine, da 1 a 6.",
+   "colonne": 1,
+   "campi": [
+    {
+     "h": "Rimedio per la persona e azione correttiva",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "4"
+     ],
+     "spiega": "È il passo 4 di 6."
+    },
+    {
+     "h": "Analisi dei fatti e delle cause radice",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "3"
+     ],
+     "spiega": "È il passo 3 di 6."
+    },
+    {
+     "h": "Registrazione e presa in carico riservata",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "2"
+     ],
+     "spiega": "È il passo 2 di 6."
+    },
+    {
+     "h": "Ricezione della segnalazione, anche anonima",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "1"
+     ],
+     "spiega": "È il passo 1 di 6."
+    },
+    {
+     "h": "Verifica che la soluzione abbia funzionato",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "6"
+     ],
+     "spiega": "È il passo 6 di 6."
+    },
+    {
+     "h": "Risposta a chi ha segnalato",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "5"
+     ],
+     "spiega": "È il passo 5 di 6."
+    }
+   ]
+  },
+  "fadsa800002_m02_s013": {
+   "titolo": "Prova tu: la segnalazione anonima",
+   "intro": "Nella cassetta arriva un biglietto anonimo: un capo reparto insulta e umilia gli operai del turno di notte. Che cosa fa la direzione?",
+   "campi": [
+    {
+     "h": "La tua risposta",
+     "tipo": "scelta",
+     "opzioni": [
+      "Confronta le grafie per scoprire chi ha scritto il biglietto.",
+      "Archivia: senza firma non si può procedere.",
+      "Registra la segnalazione, avvia una verifica riservata con il social performance team, tutela il turno da ritorsioni e comunica l’esito con i canali collettivi.",
+      "Chiede al capo reparto di indagare tra i suoi operai."
+     ],
+     "giuste": [
+      "Registra la segnalazione, avvia una verifica riservata con il social performance team, tutela il turno da ritorsioni e comunica l’esito con i canali collettivi."
+     ],
+     "spiega": "Esatto. Presa in carico, riservatezza, nessuna ritorsione, risposta."
+    }
+   ]
+  },
+  "fadsa800002_m02_s014": {
+   "titolo": "Prova tu: trasparenza e riesame",
+   "intro": "M8 chiede integrità e rendicontazione pubblica, M10 il riesame della direzione e il miglioramento. Vero o falso?",
+   "campi": [
+    {
+     "h": "La comunicazione pubblica periodica riguarda anche come vengono gestiti i rischi e i reclami.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Vero"
+     ],
+     "spiega": "Vero. È uno dei contenuti richiesti da M8.2."
+    },
+    {
+     "h": "Gli auditor possono parlare con i lavoratori solo in presenza della direzione.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Falso"
+     ],
+     "spiega": "Falso. M8.3 chiede di dare alle terze parti autorizzate accesso a documenti, luoghi e persone; nella pratica dell'audit le interviste ai lavoratori sono riservate."
+    },
+    {
+     "h": "Il riesame della direzione si basa su una sola fonte: il rapporto di audit.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Falso"
+     ],
+     "spiega": "Falso. M10.2 chiede più fonti: monitoraggi, reclami, stakeholder, indicatori."
+    },
+    {
+     "h": "Raggiunta la conformità minima, il sistema può restare fermo.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Falso"
+     ],
+     "spiega": "Falso. M10.4 chiede miglioramento continuo, anche oltre i requisiti minimi."
+    }
+   ]
+  },
+  "fadsa800002_m03_s004": {
+   "layout": "calcolatore",
+   "formula": "giovane",
+   "titolo": "Prova tu: la giornata di Marco, 16 anni",
+   "intro": "Marco frequenta un corso serale e lavora in un magazzino. La giornata rispetta D1.3?"
+  },
+  "fadsa800002_m03_s005": {
+   "titolo": "Prova tu: un minore dal fornitore",
+   "intro": "Da un fornitore trovi una ragazza di 14 anni che cuce a una macchina da tre mesi, per aiutare la famiglia. Qual è la risposta corretta?",
+   "campi": [
+    {
+     "h": "La tua risposta",
+     "tipo": "scelta",
+     "opzioni": [
+      "Chiedere al fornitore di mandarla via oggi stesso e chiudere la questione.",
+      "Interrompere subito il contratto con il fornitore.",
+      "Toglierla dal lavoro in sicurezza, garantirle il rientro a scuola e un sostegno al reddito familiare, definire con il fornitore un piano per evitare che si ripeta.",
+      "Lasciarla lavorare fino al compimento dei 15 anni, riducendo l’orario."
+     ],
+     "giuste": [
+      "Toglierla dal lavoro in sicurezza, garantirle il rientro a scuola e un sostegno al reddito familiare, definire con il fornitore un piano per evitare che si ripeta."
+     ],
+     "spiega": "Esatto. È il rimedio: interesse del minore al primo posto, istruzione, sostegno, prevenzione."
+    }
+   ]
+  },
+  "fadsa800002_m03_s006": {
+   "titolo": "Prova tu: libertà di associazione",
+   "intro": "Cinque affermazioni sulla clausola D2. Vero o falso?",
+   "campi": [
+    {
+     "h": "L’azienda può suggerire ai nuovi assunti a quale sindacato iscriversi.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Falso"
+     ],
+     "spiega": "Falso. È un’interferenza (D2.3)."
+    },
+    {
+     "h": "Un delegato sindacale può essere escluso dalle promozioni perché «troppo impegnato».",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Falso"
+     ],
+     "spiega": "Falso. È una discriminazione verso i rappresentanti (D2.4)."
+    },
+    {
+     "h": "Un accordo aziendale può prevedere condizioni migliori del contratto di settore.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Vero"
+     ],
+     "spiega": "Vero. D2.7 lo consente."
+    },
+    {
+     "h": "Se esiste un comitato interno dei lavoratori, il sindacato non serve più.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Falso"
+     ],
+     "spiega": "Falso. Comitati e social performance team non sostituiscono il sindacato e non interferiscono con la contrattazione (D2.8)."
+    },
+    {
+     "h": "I rappresentanti sindacali devono poter incontrare i lavoratori nel luogo di lavoro.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Vero"
+     ],
+     "spiega": "Vero. D2.5 prevede un accesso equo."
+    }
+   ]
+  },
+  "fadsa800002_m03_s009": {
+   "titolo": "Prova tu: ammesso o non ammesso?",
+   "intro": "Otto pratiche di gestione del personale: sono compatibili con D3?",
+   "campi": [
+    {
+     "h": "Consegnare il contratto scritto prima dell’inizio del lavoro, nella lingua del lavoratore.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Ammesso"
+     ],
+     "spiega": "Ammesso: Termini scritti e comprensibili (D3.2)."
+    },
+    {
+     "h": "Trattenere la prima mensilità come cauzione, da restituire a fine rapporto.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Non ammesso"
+     ],
+     "spiega": "Non ammesso: Onere finanziario vietato (D3.5)."
+    },
+    {
+     "h": "Applicare un regolamento disciplinare chiaro, uguale per tutti, con diritto di replica.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Ammesso"
+     ],
+     "spiega": "Ammesso: Regole disciplinari chiare e coerenti (D3.8)."
+    },
+    {
+     "h": "Addebitare al lavoratore straniero il costo del visto e dell’agenzia.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Non ammesso"
+     ],
+     "spiega": "Non ammesso: I costi di reclutamento spettano all’organizzazione (D3.6)."
+    },
+    {
+     "h": "Usare tirocinanti per sei mesi, a rotazione, per coprire un posto stabile.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Non ammesso"
+     ],
+     "spiega": "Non ammesso: I tirocini non sostituiscono posti regolari (D3.11)."
+    },
+    {
+     "h": "Rimproverare un operaio urlando davanti ai colleghi.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Non ammesso"
+     ],
+     "spiega": "Non ammesso: Nessuna molestia o violenza, anche verbale (D3.7)."
+    },
+    {
+     "h": "Pagare tutte le spettanze alla cessazione, nei tempi dovuti.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Ammesso"
+     ],
+     "spiega": "Ammesso: Cessazione equa e pagamenti tempestivi (D3.12)."
+    },
+    {
+     "h": "Ricorrere a licenziamenti collettivi dopo aver valutato ogni alternativa.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Ammesso"
+     ],
+     "spiega": "Ammesso: Ammessi solo come ultima risorsa (D3.12)."
+    }
+   ]
+  },
+  "fadsa800002_m03_s012": {
+   "layout": "calcolatore",
+   "formula": "settimana",
+   "titolo": "Prova tu: verifica la settimana",
+   "intro": "Prova il caso di partenza, poi 48 ore più 16 di straordinario, poi 7 giorni di seguito con straordinario imposto."
+  },
+  "fadsa800002_m03_s014": {
+   "titolo": "Prova tu: il cottimo",
+   "intro": "Un laboratorio paga a pezzo: in 48 ore a ritmo normale si guadagna meno del salario di sussistenza, per arrivarci servono circa 65 ore. Come si valuta?",
+   "campi": [
+    {
+     "h": "La tua risposta",
+     "tipo": "scelta",
+     "opzioni": [
+      "È regolare: il cottimo è una libera scelta e chi vuole guadagnare di più lavora di più.",
+      "Il cottimo è sempre vietato dalla SA8000:2026.",
+      "Non è conforme: le tariffe a pezzo vanno riviste perché l’orario normale garantisca almeno il salario di sussistenza.",
+      "È conforme se i lavoratori firmano una dichiarazione di accettazione."
+     ],
+     "giuste": [
+      "Non è conforme: le tariffe a pezzo vanno riviste perché l’orario normale garantisca almeno il salario di sussistenza."
+     ],
+     "spiega": "Esatto. Il modello è ammesso, ma solo se assicura una paga dignitosa in orario ordinario."
+    }
+   ]
+  },
+  "fadsa800002_m04_s003": {
+   "titolo": "Prova tu: discriminazione, sì o no?",
+   "intro": "Sei decisioni aziendali da valutare alla luce di D5.",
+   "campi": [
+    {
+     "h": "Al colloquio si chiede a una candidata se intende avere figli.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Corretto",
+      "Discriminatorio"
+     ],
+     "giuste": [
+      "Discriminatorio"
+     ],
+     "spiega": "Discriminatorio: Domanda non legata alla capacità di lavorare."
+    },
+    {
+     "h": "Per un posto da carrellista si richiede il patentino del carrello elevatore.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Corretto",
+      "Discriminatorio"
+     ],
+     "giuste": [
+      "Corretto"
+     ],
+     "spiega": "Corretto: Requisito legato alla mansione."
+    },
+    {
+     "h": "A parità di mansione e anzianità, le operaie ricevono un superminimo più basso dei colleghi.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Corretto",
+      "Discriminatorio"
+     ],
+     "giuste": [
+      "Discriminatorio"
+     ],
+     "spiega": "Discriminatorio: Disparità retributiva di genere."
+    },
+    {
+     "h": "Si adattano i turni di un lavoratore che assiste un familiare disabile.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Corretto",
+      "Discriminatorio"
+     ],
+     "giuste": [
+      "Corretto"
+     ],
+     "spiega": "Corretto: È inclusione: si tiene conto dei carichi di cura (D5.4)."
+    },
+    {
+     "h": "Prima dell’assunzione si richiede a tutte le candidate un test di gravidanza.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Corretto",
+      "Discriminatorio"
+     ],
+     "giuste": [
+      "Discriminatorio"
+     ],
+     "spiega": "Discriminatorio: Test invasivo e non pertinente (D5.5)."
+    },
+    {
+     "h": "La promozione va a chi ha i risultati migliori secondo criteri noti a tutti.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Corretto",
+      "Discriminatorio"
+     ],
+     "giuste": [
+      "Corretto"
+     ],
+     "spiega": "Corretto: Criteri oggettivi, trasparenti, uguali per tutti."
+    }
+   ]
+  },
+  "fadsa800002_m04_s006": {
+   "titolo": "Prova tu: che tipo di rischio è?",
+   "intro": "Otto situazioni di lavoro: rischio fisico, psicosociale o emergenza?",
+   "campi": [
+    {
+     "h": "Rumore sopra soglia nel reparto presse.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Fisico",
+      "Psicosociale",
+      "Emergenza"
+     ],
+     "giuste": [
+      "Fisico"
+     ],
+     "spiega": "Fisico: Rischio fisico (D6.4)."
+    },
+    {
+     "h": "Obiettivi di produzione irraggiungibili assegnati ogni settimana.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Fisico",
+      "Psicosociale",
+      "Emergenza"
+     ],
+     "giuste": [
+      "Psicosociale"
+     ],
+     "spiega": "Psicosociale: Rischio psicosociale (D6.7)."
+    },
+    {
+     "h": "Uscite di sicurezza bloccate da bancali.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Fisico",
+      "Psicosociale",
+      "Emergenza"
+     ],
+     "giuste": [
+      "Emergenza"
+     ],
+     "spiega": "Emergenza: Gestione delle emergenze (D6.5)."
+    },
+    {
+     "h": "Movimentazione manuale di carichi pesanti senza ausili.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Fisico",
+      "Psicosociale",
+      "Emergenza"
+     ],
+     "giuste": [
+      "Fisico"
+     ],
+     "spiega": "Fisico: Ergonomia: rischio fisico."
+    },
+    {
+     "h": "Un collega viene deriso ogni giorno in chat di reparto.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Fisico",
+      "Psicosociale",
+      "Emergenza"
+     ],
+     "giuste": [
+      "Psicosociale"
+     ],
+     "spiega": "Psicosociale: Bullismo: rischio psicosociale."
+    },
+    {
+     "h": "Nessun piano per ondate di calore nei cantieri estivi.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Fisico",
+      "Psicosociale",
+      "Emergenza"
+     ],
+     "giuste": [
+      "Emergenza"
+     ],
+     "spiega": "Emergenza: Evento climatico: emergenza da pianificare."
+    },
+    {
+     "h": "Contratti rinnovati di settimana in settimana, senza preavviso.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Fisico",
+      "Psicosociale",
+      "Emergenza"
+     ],
+     "giuste": [
+      "Psicosociale"
+     ],
+     "spiega": "Psicosociale: Instabilità del lavoro: rischio psicosociale."
+    },
+    {
+     "h": "Solventi travasati senza aspirazione.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Fisico",
+      "Psicosociale",
+      "Emergenza"
+     ],
+     "giuste": [
+      "Fisico"
+     ],
+     "spiega": "Fisico: Sostanze pericolose: rischio fisico."
+    }
+   ]
+  },
+  "fadsa800002_m04_s009": {
+   "titolo": "Prova tu: privacy, ammesso o no?",
+   "intro": "Sei usi dei dati del personale da valutare alla luce di D7.",
+   "campi": [
+    {
+     "h": "GPS sul furgone aziendale attivo durante le consegne, con informativa ai conducenti.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Ammesso"
+     ],
+     "spiega": "Ammesso: Finalità lavorativa, limitata, comunicata."
+    },
+    {
+     "h": "Lo stesso GPS resta attivo nel fine settimana, quando il mezzo è in uso privato autorizzato.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Non ammesso"
+     ],
+     "spiega": "Non ammesso: Oltre la finalità lavorativa."
+    },
+    {
+     "h": "Telecamere negli spogliatoi «contro i furti».",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Non ammesso"
+     ],
+     "spiega": "Non ammesso: Viola la ragionevole aspettativa di privacy."
+    },
+    {
+     "h": "Conservare i dati del badge per il tempo necessario a elaborare le paghe.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Ammesso"
+     ],
+     "spiega": "Ammesso: Minimizzazione e conservazione limitata."
+    },
+    {
+     "h": "Controllare i profili social personali per decidere le promozioni.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Non ammesso"
+     ],
+     "spiega": "Non ammesso: Uso non lavorativo e potenzialmente discriminatorio."
+    },
+    {
+     "h": "Spiegare ai nuovi assunti quali dati si raccolgono, perché e chi li vede.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Ammesso",
+      "Non ammesso"
+     ],
+     "giuste": [
+      "Ammesso"
+     ],
+     "spiega": "Ammesso: Informazione al personale (D7.4)."
+    }
+   ]
+  },
+  "fadsa800002_m04_s010": {
+   "titolo": "Prova tu: il percorso verso la certificazione",
+   "intro": "Assegna a ogni tappa il suo numero d'ordine, da 1 a 6.",
+   "colonne": 1,
+   "campi": [
+    {
+     "h": "Audit interno e riesame della direzione",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "4"
+     ],
+     "spiega": "È il passo 4 di 6."
+    },
+    {
+     "h": "Adeguamento del sistema: politiche, rischi, piani, canali di reclamo",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "3"
+     ],
+     "spiega": "È il passo 3 di 6."
+    },
+    {
+     "h": "Analisi degli scostamenti rispetto ai criteri F, M e D",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "2"
+     ],
+     "spiega": "È il passo 2 di 6."
+    },
+    {
+     "h": "Formazione sullo standard e autovalutazione (Self-Assessment SAI)",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "1"
+     ],
+     "spiega": "È il passo 1 di 6."
+    },
+    {
+     "h": "Sorveglianza periodica e miglioramento continuo",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "6"
+     ],
+     "spiega": "È il passo 6 di 6."
+    },
+    {
+     "h": "Audit dell’organismo di certificazione accreditato SAAS",
+     "tipo": "scelta",
+     "opzioni": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "giuste": [
+      "5"
+     ],
+     "spiega": "È il passo 5 di 6."
+    }
+   ]
+  },
+  "fadsa800002_m04_s012": {
+   "titolo": "Prova tu: l'audit SA8000:2026",
+   "intro": "Cinque affermazioni sull'audit e sulla transizione. Vero o falso?",
+   "campi": [
+    {
+     "h": "La valutazione 2026 introduce un punteggio e tiene conto del contesto dell’organizzazione.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Vero"
+     ],
+     "spiega": "Vero. È una delle novità del metodo di audit."
+    },
+    {
+     "h": "Conviene preparare i lavoratori con risposte da imparare a memoria.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Falso"
+     ],
+     "spiega": "Falso. È contrario all’integrità richiesta da M8 e gli auditor se ne accorgono."
+    },
+    {
+     "h": "Per passare alla nuova versione, un’organizzazione già certificata sostiene un audit di ricertificazione sulla SA8000:2026.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Vero"
+     ],
+     "spiega": "Vero. La transizione avviene con una ricertificazione."
+    },
+    {
+     "h": "I criteri fondamentali F1–F5 sono esclusi dall’audit.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Falso"
+     ],
+     "spiega": "Falso. Rientrano negli audit sulla versione 2026."
+    },
+    {
+     "h": "Un sistema solo «di carta» non basta: contano i risultati per le persone.",
+     "tipo": "scelta",
+     "opzioni": [
+      "Vero",
+      "Falso"
+     ],
+     "giuste": [
+      "Vero"
+     ],
+     "spiega": "Vero. Lo standard è orientato ai risultati."
+    }
+   ]
+  }
+ },
+ "casi": {}
+}

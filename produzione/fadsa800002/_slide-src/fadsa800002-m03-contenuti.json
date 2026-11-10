@@ -1,0 +1,467 @@
+[
+ {
+  "id": "fadsa800002_m03_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 3",
+  "titolo": "I primi quattro temi del lavoro dignitoso",
+  "corsoLabel": "SA8000:2026 · Lavoro dignitoso",
+  "eyebrow": "Modulo 3",
+  "sottotitolo": "Il modulo porta i diritti umani nelle decisioni quotidiane sul lavoro: ogni tema unisce principio, criteri operativi e collegamento con il sistema di gestione.",
+  "agenda": [
+   "Struttura comune delle clausole D",
+   "D1: bambini e giovani lavoratori",
+   "D2: libertà di associazione",
+   "D3: lavoro libero ed equo",
+   "D4: orari, salari, benefici"
+  ]
+ },
+ {
+  "id": "fadsa800002_m03_s002",
+  "layout": "cards",
+  "kicker": "D1",
+  "titolo": "Le quattro definizioni chiave di D1",
+  "intro": "Quattro termini vicini solo in apparenza: distinguerli evita errori in assunzione, turni, verifica documentale e controllo dei fornitori.",
+  "cards": [
+   {
+    "h": "Bambino",
+    "d": "Ogni persona con meno di diciotto anni"
+   },
+   {
+    "h": "Età minima",
+    "d": "Quindici anni o fine obbligo scolastico; qui, in pratica, sedici"
+   },
+   {
+    "h": "Giovane lavoratore",
+    "d": "Oltre età minima, sotto diciotto, in condizioni ammesse"
+   },
+   {
+    "h": "Lavoro minorile",
+    "d": "Lavoro che compromette scuola, sviluppo, benessere o dignità"
+   }
+  ]
+ },
+ {
+  "id": "fadsa800002_m03_s003",
+  "layout": "numeri",
+  "kicker": "D1.3",
+  "titolo": "Le sei regole dei giovani lavoratori",
+  "intro": "La tutela non coincide con un orario ridotto: richiede limiti chiari su rischio, tempo, scuola, carico complessivo e trattamento economico.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Nessun lavoro pericoloso",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Nessun lavoro notturno",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Piena compatibilità con la scuola",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Massimo otto ore di lavoro al giorno",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "Massimo dieci ore tra scuola, lavoro e trasporto",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadsa800002_m03_s004",
+  "layout": "calcolatore",
+  "kicker": "Caso applicativo",
+  "ref": "Prova tu",
+  "formula": "giovane",
+  "titolo": "Prova tu: la giornata di Marco, 16 anni",
+  "intro": "Marco frequenta un corso serale e lavora in un magazzino. La giornata rispetta D1.3?"
+ },
+ {
+  "id": "fadsa800002_m03_s005",
+  "layout": "esercizio",
+  "kicker": "D1 in filiera",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: un minore dal fornitore",
+  "intro": "Da un fornitore trovi una ragazza di 14 anni che cuce a una macchina da tre mesi, per aiutare la famiglia. Qual è la risposta corretta?",
+  "campi": [
+   {
+    "h": "La tua risposta",
+    "tipo": "scelta",
+    "opzioni": [
+     "Chiedere al fornitore di mandarla via oggi stesso e chiudere la questione.",
+     "Interrompere subito il contratto con il fornitore.",
+     "Toglierla dal lavoro in sicurezza, garantirle il rientro a scuola e un sostegno al reddito familiare, definire con il fornitore un piano per evitare che si ripeta.",
+     "Lasciarla lavorare fino al compimento dei 15 anni, riducendo l’orario."
+    ],
+    "giuste": [
+     "Toglierla dal lavoro in sicurezza, garantirle il rientro a scuola e un sostegno al reddito familiare, definire con il fornitore un piano per evitare che si ripeta."
+    ],
+    "spiega": "Esatto. È il rimedio: interesse del minore al primo posto, istruzione, sostegno, prevenzione."
+   }
+  ]
+ },
+ {
+  "id": "fadsa800002_m03_s006",
+  "layout": "esercizio",
+  "kicker": "D2",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: libertà di associazione",
+  "intro": "Cinque affermazioni sulla clausola D2. Vero o falso?",
+  "campi": [
+   {
+    "h": "L’azienda può suggerire ai nuovi assunti a quale sindacato iscriversi.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Vero",
+     "Falso"
+    ],
+    "giuste": [
+     "Falso"
+    ],
+    "spiega": "Falso. È un’interferenza (D2.3)."
+   },
+   {
+    "h": "Un delegato sindacale può essere escluso dalle promozioni perché «troppo impegnato».",
+    "tipo": "scelta",
+    "opzioni": [
+     "Vero",
+     "Falso"
+    ],
+    "giuste": [
+     "Falso"
+    ],
+    "spiega": "Falso. È una discriminazione verso i rappresentanti (D2.4)."
+   },
+   {
+    "h": "Un accordo aziendale può prevedere condizioni migliori del contratto di settore.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Vero",
+     "Falso"
+    ],
+    "giuste": [
+     "Vero"
+    ],
+    "spiega": "Vero. D2.7 lo consente."
+   },
+   {
+    "h": "Se esiste un comitato interno dei lavoratori, il sindacato non serve più.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Vero",
+     "Falso"
+    ],
+    "giuste": [
+     "Falso"
+    ],
+    "spiega": "Falso. Comitati e social performance team non sostituiscono il sindacato e non interferiscono con la contrattazione (D2.8)."
+   },
+   {
+    "h": "I rappresentanti sindacali devono poter incontrare i lavoratori nel luogo di lavoro.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Vero",
+     "Falso"
+    ],
+    "giuste": [
+     "Vero"
+    ],
+    "spiega": "Vero. D2.5 prevede un accesso equo."
+   }
+  ]
+ },
+ {
+  "id": "fadsa800002_m03_s007",
+  "layout": "ciclo",
+  "kicker": "D3",
+  "titolo": "I cinque segnali iniziali di D3",
+  "intro": "Per orientarsi nel lavoro forzato basta una domanda guida: la persona è libera di entrare, restare e uscire dal rapporto di lavoro.",
+  "ciclo": false,
+  "centro": "Libertà reale nel rapporto di lavoro",
+  "nodi": [
+   {
+    "h": "Documenti trattenuti",
+    "d": "Accesso sempre in mano al lavoratore"
+   },
+   {
+    "h": "Debito di reclutamento",
+    "d": "I costi non ricadono sul personale"
+   },
+   {
+    "h": "Cauzioni e trattenute",
+    "d": "Vincoli economici alla permanenza"
+   },
+   {
+    "h": "Straordinario imposto",
+    "d": "Il rifiuto non deve avere ritorsioni"
+   },
+   {
+    "h": "Contratto incomprensibile",
+    "d": "Condizioni chiare prima dell'inizio"
+   }
+  ]
+ },
+ {
+  "id": "fadsa800002_m03_s008",
+  "layout": "organigramma",
+  "kicker": "D3",
+  "titolo": "I cinque segnali di coercizione in corso",
+  "intro": "Un rapporto apparentemente regolare può diventare coercitivo dopo l'assunzione, attraverso isolamento, paura, disciplina abusiva o uscita non equa.",
+  "radice": {
+   "h": "Rapporto di lavoro in esecuzione",
+   "d": "La conformità si verifica anche durante impiego e cessazione"
+  },
+  "rami": [
+   {
+    "h": "Isolamento",
+    "d": "Movimenti, visite o comunicazioni private limitati",
+    "voci": []
+   },
+   {
+    "h": "Molestie e violenza",
+    "d": "Umiliazione, minacce, ricatto emotivo o paura",
+    "voci": []
+   },
+   {
+    "h": "Disciplina arbitraria",
+    "d": "Regole opache, selettive o usate per spaventare",
+    "voci": []
+   },
+   {
+    "h": "Formazione usata male",
+    "d": "Tirocini e apprendistati al posto di ruoli regolari",
+    "voci": []
+   },
+   {
+    "h": "Cessazione iniqua",
+    "d": "Uscita non libera o pagamenti non tempestivi",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadsa800002_m03_s009",
+  "layout": "esercizio",
+  "kicker": "D3 in pratica",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: ammesso o non ammesso?",
+  "intro": "Otto pratiche di gestione del personale: sono compatibili con D3?",
+  "campi": [
+   {
+    "h": "Consegnare il contratto scritto prima dell’inizio del lavoro, nella lingua del lavoratore.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Ammesso",
+     "Non ammesso"
+    ],
+    "giuste": [
+     "Ammesso"
+    ],
+    "spiega": "Ammesso: Termini scritti e comprensibili (D3.2)."
+   },
+   {
+    "h": "Trattenere la prima mensilità come cauzione, da restituire a fine rapporto.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Ammesso",
+     "Non ammesso"
+    ],
+    "giuste": [
+     "Non ammesso"
+    ],
+    "spiega": "Non ammesso: Onere finanziario vietato (D3.5)."
+   },
+   {
+    "h": "Applicare un regolamento disciplinare chiaro, uguale per tutti, con diritto di replica.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Ammesso",
+     "Non ammesso"
+    ],
+    "giuste": [
+     "Ammesso"
+    ],
+    "spiega": "Ammesso: Regole disciplinari chiare e coerenti (D3.8)."
+   },
+   {
+    "h": "Addebitare al lavoratore straniero il costo del visto e dell’agenzia.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Ammesso",
+     "Non ammesso"
+    ],
+    "giuste": [
+     "Non ammesso"
+    ],
+    "spiega": "Non ammesso: I costi di reclutamento spettano all’organizzazione (D3.6)."
+   },
+   {
+    "h": "Usare tirocinanti per sei mesi, a rotazione, per coprire un posto stabile.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Ammesso",
+     "Non ammesso"
+    ],
+    "giuste": [
+     "Non ammesso"
+    ],
+    "spiega": "Non ammesso: I tirocini non sostituiscono posti regolari (D3.11)."
+   },
+   {
+    "h": "Rimproverare un operaio urlando davanti ai colleghi.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Ammesso",
+     "Non ammesso"
+    ],
+    "giuste": [
+     "Non ammesso"
+    ],
+    "spiega": "Non ammesso: Nessuna molestia o violenza, anche verbale (D3.7)."
+   },
+   {
+    "h": "Pagare tutte le spettanze alla cessazione, nei tempi dovuti.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Ammesso",
+     "Non ammesso"
+    ],
+    "giuste": [
+     "Ammesso"
+    ],
+    "spiega": "Ammesso: Cessazione equa e pagamenti tempestivi (D3.12)."
+   },
+   {
+    "h": "Ricorrere a licenziamenti collettivi dopo aver valutato ogni alternativa.",
+    "tipo": "scelta",
+    "opzioni": [
+     "Ammesso",
+     "Non ammesso"
+    ],
+    "giuste": [
+     "Ammesso"
+    ],
+    "spiega": "Ammesso: Ammessi solo come ultima risorsa (D3.12)."
+   }
+  ]
+ },
+ {
+  "id": "fadsa800002_m03_s010",
+  "layout": "numeri",
+  "kicker": "Tempi di lavoro",
+  "titolo": "D4: soglie da non trattare come standard",
+  "intro": "Le soglie vanno lette insieme: in Italia conta anche il limite più favorevole applicabile, quindi il massimale resta un confine da non superare, non il modello ordinario di pianificazione.",
+  "numeri": [
+   {
+    "n": "48 h",
+    "h": "Massimo settimanale ordinario",
+    "d": ""
+   },
+   {
+    "n": "12 h",
+    "h": "Massimo settimanale di straordinario",
+    "d": ""
+   },
+   {
+    "n": "24 h",
+    "h": "Riposo minimo dopo sei giorni",
+    "d": ""
+   },
+   {
+    "n": "40 h",
+    "h": "Orario normale in Italia",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadsa800002_m03_s011",
+  "layout": "cards",
+  "kicker": "Straordinario",
+  "titolo": "Lo straordinario corretto non è routine",
+  "intro": "Il punto non è solo quante ore in più si fanno: conta se il tempo aggiuntivo è libero, pagato correttamente, davvero eccezionale e inserito in orari prevedibili con pause adeguate.",
+  "cards": [
+   {
+    "h": "Volontario",
+    "d": "Rifiutabile senza minacce o penalizzazioni"
+   },
+   {
+    "h": "Maggiorato",
+    "d": "Tracciato e pagato oltre l'orario normale"
+   },
+   {
+    "h": "Eccezionale",
+    "d": "Non sostituisce pianificazione o organici adeguati"
+   },
+   {
+    "h": "Prevedibile",
+    "d": "Turni stabili e pause adeguate contano"
+   }
+  ]
+ },
+ {
+  "id": "fadsa800002_m03_s012",
+  "layout": "calcolatore",
+  "kicker": "Verifica settimanale",
+  "ref": "Prova tu",
+  "formula": "settimana",
+  "titolo": "Prova tu: verifica la settimana",
+  "intro": "Prova il caso di partenza, poi 48 ore più 16 di straordinario, poi 7 giorni di seguito con straordinario imposto."
+ },
+ {
+  "id": "fadsa800002_m03_s013",
+  "layout": "split",
+  "kicker": "Retribuzione",
+  "titolo": "La paga dignitosa non dipende dalle ore extra",
+  "lead": "La retribuzione ordinaria di una settimana normale deve sostenere una vita dignitosa, senza fare affidamento sullo straordinario; inoltre vanno riconosciuti benefit, tempi collegati al lavoro e trattenute entro limiti rigorosi.",
+  "punti": [
+   {
+    "h": "Paga ordinaria sufficiente",
+    "d": "Salario di sussistenza o minimo più alto"
+   },
+   {
+    "h": "Pagamenti trasparenti",
+    "d": "Regolari, puntuali e comprensibili in busta paga"
+   },
+   {
+    "h": "Tempi da riconoscere",
+    "d": "Presenza imposta, formazione, malattia e infortunio"
+   },
+   {
+    "h": "Trattenute disciplinari",
+    "d": "Solo legali, proporzionate e con ricorso"
+   }
+  ]
+ },
+ {
+  "id": "fadsa800002_m03_s014",
+  "layout": "esercizio",
+  "kicker": "D4",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: il cottimo",
+  "intro": "Un laboratorio paga a pezzo: in 48 ore a ritmo normale si guadagna meno del salario di sussistenza, per arrivarci servono circa 65 ore. Come si valuta?",
+  "campi": [
+   {
+    "h": "La tua risposta",
+    "tipo": "scelta",
+    "opzioni": [
+     "È regolare: il cottimo è una libera scelta e chi vuole guadagnare di più lavora di più.",
+     "Il cottimo è sempre vietato dalla SA8000:2026.",
+     "Non è conforme: le tariffe a pezzo vanno riviste perché l’orario normale garantisca almeno il salario di sussistenza.",
+     "È conforme se i lavoratori firmano una dichiarazione di accettazione."
+    ],
+    "giuste": [
+     "Non è conforme: le tariffe a pezzo vanno riviste perché l’orario normale garantisca almeno il salario di sussistenza."
+    ],
+    "spiega": "Esatto. Il modello è ammesso, ma solo se assicura una paga dignitosa in orario ordinario."
+   }
+  ]
+ }
+]

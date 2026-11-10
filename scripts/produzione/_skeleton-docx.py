@@ -530,6 +530,45 @@ CORSI = {
         "piede": "Organismo di Vigilanza ex D.Lgs. 231/2001 — Evalis Academy",
         "file": "Evalis_Academy_231_Organismo_di_Vigilanza_FAD-231-04_Approvazione.docx",
     },
+    "fadsa800002": {
+        "copertura": {
+            1: "SA8000:2026 Introduzione, F1-F5, App. A",
+            2: "SA8000:2026 Sez. 1, M1-M10",
+            3: "SA8000:2026 Sez. 2, D1-D4",
+            4: "SA8000:2026 D5-D7; transizione SAI",
+        },
+        "tipo_documento": "normativa",
+        "titolo_corso": "SA8000:2026 IN PRATICA",
+        "titolo_doc": "PROPOSTA DIDATTICA — CORSO SA8000:2026 IN PRATICA",
+        "presentazione": "Il presente documento raccoglie la struttura didattica del corso FAD-SA8000-02, corso base sulla "
+            "SA8000:2026, lo standard di Social Accountability International per il lavoro dignitoso. Il corso nasce dal "
+            "materiale didattico già redatto (quattro moduli con casi, classificazioni, ordinamenti e calcolatori) e ne "
+            "conserva ordine, regole ed esempi. Ogni slide è narrata dal relatore avatar, con lo stesso standard di voce, "
+            "impaginazione e verifica dei corsi già in catalogo; casi, classificazioni, ordinamenti e calcolatori diventano "
+            "esercizi guidati narrati e, sullo schermo, prove interattive. Criteri, numeri e date del materiale sono stati "
+            "verificati sul testo ufficiale dello standard e sulla cronologia di transizione pubblicata da SAI.",
+        "titolo_sintesi": "SA8000:2026 in pratica",
+        "ore": 4,
+        "verifiche": "Ogni modulo è una lezione della piattaforma e si chiude con un checkpoint di verifica (quiz con domande "
+            "estratte da banca dati, non conteggiato nel monte ore), costruito sui test di fine modulo del materiale "
+            "didattico. Il corso si chiude con l'esame finale: 12 domande estratte dalla banca, soglia del 75% (9 su 12, "
+            "come nel materiale didattico).",
+        "obiettivi": [
+            "Spiegare come è costruita la SA8000:2026 e che cosa cambia rispetto alla versione 2014",
+            "Riconoscere i cinque criteri fondamentali e i dieci elementi del sistema di gestione (M1-M10)",
+            "Applicare i sette temi del lavoro dignitoso (D1-D7) a situazioni reali, anche lungo la catena di fornitura",
+            "Prepararsi alla transizione, all'audit e alla certificazione",
+        ],
+        "dettagli": [
+            "Destinatari: lavoratori e loro rappresentanti, responsabili HR, acquisti e qualità, consulenti e aziende che si avvicinano alla SA8000",
+            "Checkpoint: uno per modulo, bloccante, cinque domande estratte da una banca di almeno dieci, soglia 80%",
+            "Esame finale: dodici domande estratte dalla banca, soglia 75% (9 su 12)",
+            "Attestato: attestato di formazione EVALIS Academy al superamento dell'esame finale",
+            "Modalità: FAD asincrona con relatore avatar su ogni slide · Prezzo: 100 €, IVA esclusa",
+        ],
+        "piede": "SA8000:2026 in pratica — Evalis Academy",
+        "file": "Evalis_Academy_SA8000-2026_FAD-SA8000-02_Approvazione.docx",
+    },
 }
 if corso not in CORSI:
     sys.exit(f"{corso}: testi del corso mancanti in CORSI (copertura, presentazione, obiettivi...)")

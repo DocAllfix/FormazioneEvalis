@@ -20,6 +20,7 @@ ETICHETTA = {
     "fad23102": "231 per il personale operativo · D.Lgs. 231/2001",
     "fad23103": "231 per le figure apicali · D.Lgs. 231/2001",
     "fad23104": "Organismo di Vigilanza · D.Lgs. 231/2001",
+    "fadsa800002": "SA8000:2026 · Lavoro dignitoso",
 }
 if CORSO not in ETICHETTA:
     raise SystemExit(f"Etichetta di corso mancante per {CORSO}: aggiungerla a ETICHETTA prima di convertire.")
