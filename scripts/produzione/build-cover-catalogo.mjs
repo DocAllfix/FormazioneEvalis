@@ -71,6 +71,35 @@ const ICONE = {
       ${scudo(155, 160, 130)}
       ${ingranaggio(282, 262, 62, 9, C.arancioCaldo)}`,
   },
+  // corsi 231 (FAD-231-01/02/03/04): bilancia = responsabilità dell'ente, con un segno per ciascun corso
+  // bilancia + ingranaggio: il Modello 231 come sistema da progettare, attuare e verificare
+  modello231: {
+    centro: [170, 190], scala: 1.62,
+    disegna: () => `
+      ${bilancia(150, 150, 120)}
+      ${ingranaggio(270, 258, 60, 9, C.arancioCaldo)}`,
+  },
+  // persone + bilancia: la 231 per il personale operativo
+  personale231: {
+    centro: [176, 190], scala: 1.62,
+    disegna: () => `
+      ${persone(150, 160, 120)}
+      ${bilancia(270, 256, 74)}`,
+  },
+  // persone + ingranaggio: chi decide e governa l'organizzazione (figure apicali)
+  apicali231: {
+    centro: [176, 190], scala: 1.62,
+    disegna: () => `
+      ${persone(150, 160, 120)}
+      ${ingranaggio(270, 258, 60, 9, C.arancioCaldo)}`,
+  },
+  // scudo + bilancia: l'Organismo di Vigilanza
+  odv231: {
+    centro: [176, 180], scala: 1.6,
+    disegna: () => `
+      ${scudo(155, 160, 130)}
+      ${bilancia(272, 256, 74)}`,
+  },
   // griglia di piastrelle + coccarda: il piastrellista certificato (FAD-PIA-01, UNI 11493-1)
   piastrelle: {
     centro: [176, 186], scala: 1.6,
@@ -270,6 +299,10 @@ const CORSI = {
   fadpriv02: ICONE.privacyAggiornamento,
   fadpriv03: ICONE.privacySistemi,
   fadpia01: ICONE.piastrelle,
+  fad23101: ICONE.modello231,
+  fad23102: ICONE.personale231,
+  fad23103: ICONE.apicali231,
+  fad23104: ICONE.odv231,
 };
 
 const DISCO = { x: 790, y: 478 };

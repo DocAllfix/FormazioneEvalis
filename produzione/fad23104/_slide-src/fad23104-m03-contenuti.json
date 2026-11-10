@@ -1,0 +1,814 @@
+[
+ {
+  "id": "fad23104_m03_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 3",
+  "titolo": "Due regimi, un ecosistema di vigilanza",
+  "corsoLabel": "Organismo di Vigilanza · D.Lgs. 231/2001",
+  "eyebrow": "Modulo 3",
+  "sottotitolo": "In questo modulo distinguiamo flussi 231 e whistleblowing, vediamo come raccordarli e impostiamo un'istruttoria interna credibile: riservatezza, prove, audizioni, relazione finale e limiti del ruolo.",
+  "agenda": [
+   "Flussi ordinari",
+   "Segnalazioni dirette",
+   "Canale whistleblowing",
+   "Raccordo operativo",
+   "Fonti esterne"
+  ]
+ },
+ {
+  "id": "fad23104_m03_s002",
+  "layout": "cards",
+  "kicker": "Classificazione iniziale",
+  "titolo": "Quattro ingressi dell'informazione verso l'OdV",
+  "intro": "La prima domanda non è se il fatto sia vero, ma quale tipo di informazione sia: da questa etichetta iniziale dipendono priorità, riservatezza, interlocutori, strumenti di verifica e tempi di risposta.",
+  "cards": [
+   {
+    "h": "Flussi dovuti",
+    "d": "periodici, strutturati, previsti dal Modello"
+   },
+   {
+    "h": "Segnalazione diretta",
+    "d": "un fatto raccontato da una fonte"
+   },
+   {
+    "h": "Transito dal whistleblowing",
+    "d": "rilievo 231, ruoli diversi ma raccordati"
+   },
+   {
+    "h": "Fonti esterne",
+    "d": "stampa, autorità, clienti pubblici, altri segnali"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s003",
+  "layout": "organigramma",
+  "kicker": "Protocollo di raccordo",
+  "titolo": "Regole scritte tra gestore del canale e OdV",
+  "intro": "Il coordinamento non si lascia alla prassi: serve un protocollo chiaro, coerente con ANAC 311 del 2023, che faccia circolare solo le informazioni utili alla vigilanza 231 senza esporre dati superflui.",
+  "radice": {
+   "h": "Protocollo scritto",
+   "d": "coordina canale whistleblowing e vigilanza 231"
+  },
+  "rami": [
+   {
+    "h": "Perimetro",
+    "d": "solo segnalazioni con rilievo 231",
+    "voci": [
+     "Modello",
+     "protocolli sensibili",
+     "codice etico",
+     "rischio reato"
+    ]
+   },
+   {
+    "h": "Forma",
+    "d": "sintesi utile senza identità del segnalante",
+    "voci": [
+     "fatto",
+     "contesto",
+     "gravità"
+    ]
+   },
+   {
+    "h": "Tempi",
+    "d": "trasmissione definita e praticabile",
+    "voci": [
+     "ritardo minimo",
+     "utilità istruttoria"
+    ]
+   },
+   {
+    "h": "Doppio ruolo",
+    "d": "OdV gestore solo con presidi adeguati",
+    "voci": [
+     "formazione specifica",
+     "canale conforme",
+     "risorse sufficienti"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s004",
+  "layout": "evidenza",
+  "kicker": "Tutela delle persone",
+  "titolo": "Riservatezza come obbligo personale dell'OdV",
+  "eyebrow": "",
+  "testo": "Nelle segnalazioni sensibili la riservatezza non è una cortesia interna: protegge identità, istruttoria e diritti di tutte le persone coinvolte, e impone scelte documentali e organizzative molto rigorose.",
+  "dark": true
+ },
+ {
+  "id": "fad23104_m03_s005",
+  "layout": "flusso",
+  "kicker": "Metodo istruttorio",
+  "titolo": "Quattro passaggi dell'istruttoria OdV",
+  "intro": "Quando una notizia merita approfondimento, il metodo viene prima delle conclusioni: l'OdV registra, qualifica, dimensiona gli accertamenti e mantiene l'intervento proporzionato al fatto da verificare.",
+  "passi": [
+   {
+    "h": "Protocollo riservato",
+    "d": "data, provenienza, oggetto, presa in carico"
+   },
+   {
+    "h": "Valutazione preliminare",
+    "d": "pertinenza, circostanza, urgenza, possibili conflitti"
+   },
+   {
+    "h": "Piano di accertamento",
+    "d": "documenti, dati, persone, competenze ulteriori"
+   },
+   {
+    "h": "Esecuzione proporzionata",
+    "d": "evitare inerzia comoda e iper-reazione invasiva"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s006",
+  "layout": "ciclo",
+  "kicker": "Preparazione forense",
+  "titolo": "Preservare prima, acquisire poi",
+  "intro": "Un'istruttoria può fallire anche con un'intuizione corretta, se prove e dati non vengono messi in sicurezza in tempo: servono richieste puntuali, raccolta selettiva e analisi disciplinata.",
+  "ciclo": false,
+  "centro": "Evidenze",
+  "nodi": [
+   {
+    "h": "Messa in sicurezza",
+    "d": "log, messaggi, registri, backup, accessi"
+   },
+   {
+    "h": "Richiesta puntuale",
+    "d": "perimetro, periodo, finalità istruttoria"
+   },
+   {
+    "h": "Acquisizione selettiva",
+    "d": "solo documenti pertinenti alla domanda"
+   },
+   {
+    "h": "Analisi disciplinata",
+    "d": "filtri per date, utenti, parole chiave"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s007",
+  "layout": "confronto",
+  "kicker": "Audizioni interne",
+  "titolo": "Audizioni: metodo corretto e rischi",
+  "intro": "Nell'istruttoria l'OdV non interroga: raccoglie elementi in modo ordinato, rispettoso e difendibile, curando l'ordine delle convocazioni, il diritto di replica e la qualità del verbale.",
+  "a": {
+   "h": "Metodo corretto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Sentire prima i testimoni"
+    },
+    {
+     "d": "Contestare i fatti con precisione"
+    },
+    {
+     "d": "Presenza di due persone al tavolo"
+    },
+    {
+     "d": "Verbale letto e sottoscritto, se possibile"
+    }
+   ]
+  },
+  "b": {
+   "h": "Rischi da evitare",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Anticipare troppo la linea istruttoria"
+    },
+    {
+     "d": "Toni aggressivi o suggestivi"
+    },
+    {
+     "d": "Audizioni senza adeguato presidio"
+    },
+    {
+     "d": "Verbali inutilmente stenografici o incompleti"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fad23104_m03_s008",
+  "layout": "cards",
+  "kicker": "Chiusura dell'istruttoria",
+  "titolo": "Dalla raccolta alla decisione organizzativa",
+  "intro": "Alla fine non basta riassumere i materiali: l'OdV deve distinguere ciò che risulta da ciò che non risulta, collegare i fatti ai protocolli e proporre azioni al destinatario corretto.",
+  "cards": [
+   {
+    "h": "Fatti accertati",
+    "d": "separati da sospetti e punti non confermati"
+   },
+   {
+    "h": "Violazioni del Modello",
+    "d": "protocolli elusi e controlli che hanno ceduto"
+   },
+   {
+    "h": "Relazione riservata",
+    "d": "atti compiuti, evidenze, persone ascoltate, proposte"
+   },
+   {
+    "h": "Follow up corretto",
+    "d": "invio a chi può decidere, senza conflitti"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s009",
+  "layout": "numeri",
+  "kicker": "Perimetro del ruolo",
+  "titolo": "Tre limiti dell'istruttoria OdV",
+  "intro": "Un'accertamento interno resta corretto solo se non supera il proprio confine: prova lecita e minimizzata, controlli sensibili gestiti con i presidi giusti, nessuna promessa sugli esiti della vicenda.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Prove cercate lecitamente e con minimizzazione",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "DPO e legale sui controlli più sensibili",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Nessuna immunità o protezione assoluta promessa",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s010",
+  "layout": "confronto",
+  "kicker": "Escalation",
+  "titolo": "Quando gli apicali cambiano il percorso",
+  "intro": "Nei casi ordinari il flusso informativo regge anche con prassi semplici. Quando l'istruttoria tocca il vertice, invece, serve un percorso scritto che salti il conflitto di interessi e tenga fuori il soggetto coinvolto.",
+  "a": {
+   "h": "Vicenda ordinaria",
+   "sub": "",
+   "punti": [
+    {
+     "d": "OdV accerta e riferisce"
+    },
+    {
+     "d": "Destinatario: organo amministrativo"
+    },
+    {
+     "d": "Raccordo con il disciplinare"
+    },
+    {
+     "d": "Prassi informali ancora reggono"
+    }
+   ]
+  },
+  "b": {
+   "h": "Apicale coinvolto",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Escalation definita in anticipo"
+    },
+    {
+     "d": "Nessuna gestione al soggetto interessato"
+    },
+    {
+     "d": "Prassi informali subito contestabili"
+    },
+    {
+     "d": "Protezione del sistema, non formalismo"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fad23104_m03_s011",
+  "layout": "tabella",
+  "kicker": "Matrice",
+  "titolo": "Percorsi di escalation per ruolo coinvolto",
+  "cols": [
+   "Soggetto coinvolto",
+   "Destinatari",
+   "Regola chiave"
+  ],
+  "righe": [
+   [
+    "Dipendente o dirigente",
+    "Organo amministrativo; funzione disciplinare",
+    "Circuito decisionale integro"
+   ],
+   [
+    "Amministratore delegato o consigliere",
+    "CdA senza interessato; collegio sindacale",
+    "Saltare il conflitto di interessi"
+   ],
+   [
+    "Amministratore unico",
+    "Collegio sindacale o sindaco unico; eventuale assemblea",
+    "Attivare chi può reagire davvero"
+   ],
+   [
+    "Sindaco",
+    "CdA; assemblea",
+    "Doppio presidio societario"
+   ],
+   [
+    "Componente OdV",
+    "Presidente OdV verso CdA",
+    "Nessun autoriferimento"
+   ],
+   [
+    "Presidente OdV",
+    "Altri componenti verso CdA",
+    "Flusso gestito da terzi"
+   ]
+  ]
+ },
+ {
+  "id": "fad23104_m03_s012",
+  "layout": "cards",
+  "kicker": "Pressioni",
+  "titolo": "Quattro pressioni del vertice e la risposta",
+  "intro": "Le pressioni più pericolose arrivano con toni ragionevoli. L'OdV deve riconoscerle, rispondere con fermezza professionale e lasciare sempre una traccia formale della richiesta ricevuta e della reazione adottata.",
+  "cards": [
+   {
+    "h": "Attenuate il rilievo",
+    "d": "Rifiuto netto e verbalizzazione della pressione"
+   },
+   {
+    "h": "Ditemi chi ha segnalato",
+    "d": "Diniego per riservatezza ex d.lgs. 24/2023"
+   },
+   {
+    "h": "Non mettete il tema all'ordine del giorno",
+    "d": "Richiesta scritta, con copia al collegio sindacale"
+   },
+   {
+    "h": "Quest'anno non ci sono risorse",
+    "d": "Segnalare al CdA l'inadeguatezza della vigilanza"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s013",
+  "layout": "timeline",
+  "kicker": "Ostruzione",
+  "titolo": "Cinque mosse contro l'ostruzione sistematica",
+  "intro": "Quando la pressione diventa metodo, l'obiettivo non è gestire una singola tensione ma dimostrare che l'OdV ha reagito in modo ordinato, progressivo e tracciabile fino alle scelte più drastiche.",
+  "tappe": [
+   {
+    "t": "01",
+    "h": "1. Dissenso verbalizzato",
+    "d": "Proposta, rifiuto e rischio messi agli atti"
+   },
+   {
+    "t": "02",
+    "h": "2. Nota al collegio sindacale",
+    "d": "Attivare un presidio ulteriore interno"
+   },
+   {
+    "t": "03",
+    "h": "3. Richiesta scritta con termine",
+    "d": "Trasformare l'inerzia in fatto verificabile"
+   },
+   {
+    "t": "04",
+    "h": "4. Solleciti e escalation",
+    "d": "Costruire la cronologia della mancata collaborazione"
+   },
+   {
+    "t": "05",
+    "h": "5. Dimissioni motivate",
+    "d": "Quando la vigilanza effettiva non è più praticabile"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s014",
+  "layout": "piramide",
+  "kicker": "Responsabilità",
+  "titolo": "La responsabilità verso l'ente si valuta così",
+  "intro": "Verso l'ente conta la diligenza professionale, non l'infallibilità. La posizione del componente si rafforza quando il mandato è tradotto in attività pianificate, reazioni motivate e atti capaci di provare il lavoro svolto.",
+  "livelli": [
+   {
+    "h": "Diligenza professionale",
+    "d": "Cura attesa da un professionista competente"
+   },
+   {
+    "h": "Vigilanza eseguita",
+    "d": "Verifiche, reazioni, richieste, follow up"
+   },
+   {
+    "h": "Prova dell'adempimento",
+    "d": "Piani, verbali, note, informative, evidenze"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s015",
+  "layout": "confronto",
+  "kicker": "Penale",
+  "titolo": "Che cosa non è, e cosa può diventare",
+  "intro": "Sul piano penale l'OdV non è automaticamente responsabile del reato altrui. Ma la passività resta pericolosa e il quadro cambia del tutto se il componente partecipa consapevolmente alla condotta illecita.",
+  "a": {
+   "h": "Non è automaticamente",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Garante ex art. 40, comma 2"
+    },
+    {
+     "d": "Titolare di poteri impeditivi diretti"
+    },
+    {
+     "d": "Responsabile solo perché era nell'OdV"
+    },
+    {
+     "d": "Protetto da formule astratte di estraneità"
+    }
+   ]
+  },
+  "b": {
+   "h": "Può diventare",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Esposto a contestazioni per passività"
+    },
+    {
+     "d": "Coinvolto in procedimenti e costi difensivi"
+    },
+    {
+     "d": "Valutato severamente se ignora segnali evidenti"
+    },
+    {
+     "d": "Responsabile per concorso attivo se partecipa"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fad23104_m03_s016",
+  "layout": "cards",
+  "kicker": "Vulnerabilità",
+  "titolo": "Cinque segnali che rendono vulnerabile l'OdV",
+  "intro": "La vulnerabilità emerge quando omissioni, routine deboli e documentazione povera si sommano. In caso di crisi, questi segnali vengono letti subito come indizi di una vigilanza solo formale.",
+  "cards": [
+   {
+    "h": "Verbali generici o riunioni inconsistenti",
+    "d": "Mancano priorità, richieste e decisioni tracciate"
+   },
+   {
+    "h": "Piano di vigilanza non eseguito",
+    "d": "Scostamenti senza motivazione o rimodulazione"
+   },
+   {
+    "h": "Nessun test reale di funzionamento",
+    "d": "Solo relazioni ricevute, nessuna iniziativa autonoma"
+   },
+   {
+    "h": "Segnali rilevanti ignorati",
+    "d": "Ispezioni, infortuni, anomalie senza reazione"
+   },
+   {
+    "h": "Budget muto o inutilizzato",
+    "d": "Silenzio su carenze o risorse mai attivate"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s017",
+  "layout": "numeri",
+  "kicker": "Polizza",
+  "titolo": "Quattro controlli prima di fidarti della copertura",
+  "intro": "La polizza è una protezione economica e difensiva utile, ma non sostituisce la diligenza. Prima conta il lavoro svolto bene; poi conta verificare se la copertura regge davvero il rischio dell'incarico OdV.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Oggetto: estensione espressa all'attività OdV",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Massimale coerente con rischio e complessità",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Esclusioni, sanzioni personali, costi di difesa",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Copertura per ciascun componente, non solo cumulativa",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s018",
+  "layout": "organigramma",
+  "kicker": "Tutela personale",
+  "titolo": "Il fascicolo personale di diligenza",
+  "intro": "La difesa del componente si prepara prima delle contestazioni. Il fascicolo personale non crea nuovi documenti: seleziona gli atti decisivi, li ordina e li rende leggibili come prova del mandato svolto con cura.",
+  "radice": {
+   "h": "Fascicolo personale",
+   "d": "Raccolta selettiva, ordinata, lecita"
+  },
+  "rami": [
+   {
+    "h": "Incarico",
+    "d": "Base del mandato",
+    "voci": [
+     "Nomina e durata",
+     "Compenso",
+     "Regolamento OdV",
+     "Budget approvato"
+    ]
+   },
+   {
+    "h": "Esecuzione",
+    "d": "Prova del lavoro svolto",
+    "voci": [
+     "Piano di vigilanza",
+     "Verbali sostanziali",
+     "Verifiche e check",
+     "Richieste scritte"
+    ]
+   },
+   {
+    "h": "Eventi critici",
+    "d": "Traccia delle reazioni",
+    "voci": [
+     "Segnalazioni e istruttorie",
+     "Rilievi formulati",
+     "Pressioni subite",
+     "Astensioni per conflitto"
+    ]
+   },
+   {
+    "h": "Consegne",
+    "d": "Evidenza dei flussi inviati",
+    "voci": [
+     "Relazioni periodiche",
+     "Note al CdA",
+     "Informative al collegio",
+     "Solleciti e follow up"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s019",
+  "layout": "flusso",
+  "kicker": "Reporting OdV",
+  "titolo": "La relazione periodica orienta il governo",
+  "intro": "La vigilanza diventa utile al vertice quando il reporting distingue i due formati, apre con la sostanza e rende visibili scostamenti, ritardi e priorità di intervento sul Modello.",
+  "passi": [
+   {
+    "h": "Due formati",
+    "d": "Semestrale governa l'anno, annuale valuta la tenuta"
+   },
+   {
+    "h": "Sintesi esecutiva",
+    "d": "Giudizio sobrio, tre-cinque messaggi, decisioni richieste"
+   },
+   {
+    "h": "Attività svolte",
+    "d": "Coerenza col piano, scostamenti spiegati"
+   },
+   {
+    "h": "Flussi informativi",
+    "d": "Puntualità, ritardi sistematici, anomalie ricorrenti"
+   },
+   {
+    "h": "Esiti verifiche",
+    "d": "Gravità rilievi, correttivi, aperti oltre termine"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s020",
+  "layout": "evidenza",
+  "kicker": "Passaggio in CdA",
+  "titolo": "In CdA il reporting deve impegnare",
+  "eyebrow": "",
+  "testo": "La relazione periodica conta davvero quando entra nel circuito decisionale del consiglio: punto autonomo, linguaggio fattuale, verbalizzazione delle scelte e tracciabilità della consegna.",
+  "dark": true
+ },
+ {
+  "id": "fad23104_m03_s021",
+  "layout": "tabella",
+  "kicker": "Due formati",
+  "titolo": "Semestrale e annuale: stessa funzione, taglio diverso",
+  "cols": [
+   "Snodo",
+   "Semestrale sintetica",
+   "Annuale completa"
+  ],
+  "righe": [
+   [
+    "Finalità",
+    "Governare l'anno in corso",
+    "Valutare la tenuta del sistema"
+   ],
+   [
+    "Focus",
+    "Priorità e decisioni non rinviabili",
+    "Trend, criticità ricorrenti, aggiornamenti"
+   ],
+   [
+    "Stile",
+    "Giudizio sobrio, pochi messaggi chiave",
+    "Profondità con struttura ricorrente"
+   ],
+   [
+    "Dettaglio",
+    "Solo ciò che muove decisioni",
+    "Approfondimenti governabili, fascicoli riservati esclusi"
+   ]
+  ]
+ },
+ {
+  "id": "fad23104_m03_s022",
+  "layout": "ciclo",
+  "kicker": "Presentazione consiliare",
+  "titolo": "Dal quadro alle scelte verbalizzate",
+  "intro": "In consiglio la relazione funziona quando segue una sequenza semplice, resta fattuale e porta ogni raccomandazione a un esito leggibile, responsabilizzante e verificabile nel follow up.",
+  "ciclo": false,
+  "centro": "Capire, discutere, decidere",
+  "nodi": [
+   {
+    "h": "Punto autonomo",
+    "d": "Non tra le varie eventuali"
+   },
+   {
+    "h": "Giudizio iniziale",
+    "d": "Adeguatezza e attuazione del Modello"
+   },
+   {
+    "h": "Messaggi chiave",
+    "d": "Fatti, trend, aree ancora aperte"
+   },
+   {
+    "h": "Richieste al CdA",
+    "d": "Raccomandazioni fondate sul contesto"
+   },
+   {
+    "h": "Esito utile",
+    "d": "Accolta, non accolta motivata, rinviata con termine"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s023",
+  "layout": "flusso",
+  "kicker": "Caso 1",
+  "titolo": "Segnalazione anonima con rischio immediato",
+  "intro": "Quando anonimato, urgenza e rischio operativo si sommano, la priorità non è classificare la fonte ma capire subito se esiste un pericolo attuale da fermare.",
+  "passi": [
+   {
+    "h": "Qualifica del caso",
+    "d": "Anonimato non blocca, priorità al pericolo attuale"
+   },
+   {
+    "h": "Coordinamento iniziale",
+    "d": "Gestore raccoglie dettagli, OdV attiva l'urgenza"
+   },
+   {
+    "h": "Verifica a sorpresa",
+    "d": "Sul campo entro pochi giorni"
+   },
+   {
+    "h": "Evidenze coerenti",
+    "d": "Protezioni, log, manutenzioni, quasi incidenti, formazione"
+   },
+   {
+    "h": "Audizioni progressive",
+    "d": "Operatori, preposto, capo officina, poi altri presidi"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s024",
+  "layout": "tabella",
+  "kicker": "Caso 2",
+  "titolo": "Consulenze opache: sostanza e processo",
+  "cols": [
+   "Snodo",
+   "Cosa verificare",
+   "Domanda guida"
+  ],
+  "righe": [
+   [
+    "Segnali iniziali",
+    "Consulenze marketing da 140.000 euro; fornitore opaco",
+    "Prestazione reale o anomalia rilevante?"
+   ],
+   [
+    "Fascicolo",
+    "Contratto, deliverable, fatture, pagamenti, due diligence",
+    "Quale utilità concreta ha ricevuto l'ente?"
+   ],
+   [
+    "Fornitore e processo",
+    "Visura, bilanci, struttura, comparazione, approvazioni",
+    "Aveva mezzi plausibili e controlli corretti?"
+   ],
+   [
+    "Audizioni",
+    "Amministrazione, funzione richiedente, poi apicale",
+    "Chi ha deciso, come e perché?"
+   ]
+  ]
+ },
+ {
+  "id": "fad23104_m03_s025",
+  "layout": "split",
+  "kicker": "Caso 3",
+  "titolo": "Un segnale anticipato diventa presidio",
+  "lead": "Quando l'apicale informa prima che il rischio si materializzi, l'OdV deve usare quel segnale per rafforzare subito i controlli e verificare se il Modello copre davvero il nuovo scenario.",
+  "punti": [
+   {
+    "h": "Comunicazione utile",
+    "d": "Non fatto compiuto, ma rischio emerso in tempo"
+   },
+   {
+    "h": "Istruttoria preventiva",
+    "d": "Patto, partner, due diligence, ruoli, compensi"
+   },
+   {
+    "h": "Verifica del Modello",
+    "d": "Scenario estero, partner locale, rischio 322-bis"
+   },
+   {
+    "h": "Misure immediate",
+    "d": "No contanti, tracciabilità, clausole, riesame, formazione"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s026",
+  "layout": "ciclo",
+  "kicker": "Sintesi del percorso",
+  "titolo": "La catena coerente della vigilanza",
+  "intro": "La solidità dell'OdV non dipende da singoli atti, ma dall'allineamento tra fonti informative, raccordo organizzativo, tutela della riservatezza, metodo istruttorio e limiti operativi.",
+  "ciclo": false,
+  "centro": "Forza OdV = percorso coerente",
+  "nodi": [
+   {
+    "h": "Fonti distinte",
+    "d": "Flussi, segnalazioni, esterni, whistleblowing"
+   },
+   {
+    "h": "Raccordo scritto",
+    "d": "Gestore del canale e OdV, ruoli diversi"
+   },
+   {
+    "h": "Riservatezza",
+    "d": "Accessi limitati, reporting aggregato e anonimo"
+   },
+   {
+    "h": "Istruttoria proporzionata",
+    "d": "Metodo, prove, audizioni, relazione finale"
+   },
+   {
+    "h": "Limiti operativi",
+    "d": "No abusi, dati eccedenti, controlli impropri"
+   }
+  ]
+ },
+ {
+  "id": "fad23104_m03_s027",
+  "layout": "chiusura",
+  "kicker": "Riferimenti essenziali",
+  "titolo": "Quattro riferimenti da tenere a portata",
+  "modNum": "03",
+  "punti": [
+   {
+    "h": "D.lgs. 24/2023",
+    "d": "Canali, gestione, riservatezza, ritorsioni, sanzioni"
+   },
+   {
+    "h": "Delibera ANAC 311/2023",
+    "d": "Raccordo scritto tra gestore del canale e OdV"
+   },
+   {
+    "h": "Legge 300/1970",
+    "d": "Limiti su strumenti di lavoro e disciplina"
+   },
+   {
+    "h": "GDPR e d.lgs. 196/2003",
+    "d": "Minimizzazione, informativa, limiti ai diritti"
+   }
+  ],
+  "prossimo": {
+   "modulo": "04",
+   "titolo": "Aggiornamento del Modello, OdV nella crisi e nel procedimento, casi e riepilogo"
+  }
+ }
+]

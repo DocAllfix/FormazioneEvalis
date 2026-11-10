@@ -66,6 +66,10 @@ const S = {
   fadpriv01: "privacy-e-protezione-dei-dati-per-il-personale",
   fadpriv02: "aggiornamento-annuale-privacy-per-il-personale",
   fadpriv03: "privacy-per-manager-e-amministratori-di-sistema",
+  fad23101: "modello-231-progettazione-implementazione-e-audit",
+  fad23102: "formazione-231-per-il-personale-operativo",
+  fad23103: "formazione-231-per-le-figure-apicali",
+  fad23104: "organismo-di-vigilanza-231-ruolo-metodo-e-responsabilita",
 } as const;
 
 export const CORSI: CorsoListino[] = [
@@ -103,6 +107,13 @@ export const CORSI: CorsoListino[] = [
   { slug: S.fadpriv01, attivoCents: 5000, listinoCents: 5000, scontoAzienda: 40 },
   { slug: S.fadpriv02, attivoCents: 2500, listinoCents: 2500, scontoAzienda: 20 },
   { slug: S.fadpriv03, attivoCents: 25000, listinoCents: 25000 },
+  // corsi 231 (10/11, prezzi del committente, barrato col sistema solito ≈ +80%): Modello 231 40h
+  // 500 € con 899 €; apicali e OdV 8h 200 € con 359 €; personale operativo 8h 100 € con 179 €.
+  // Aziende: regola generale (−20% dal 2° dipendente, −30% dal 5°).
+  { slug: S.fad23101, attivoCents: 50000, listinoCents: 89900 },
+  { slug: S.fad23102, attivoCents: 10000, listinoCents: 17900 },
+  { slug: S.fad23103, attivoCents: 20000, listinoCents: 35900 },
+  { slug: S.fad23104, attivoCents: 20000, listinoCents: 35900 },
 ];
 
 // Nei pacchetti entra l'EDIZIONE CORRENTE di ogni norma: dalla 9001 è la 2026. La 2015 resta
