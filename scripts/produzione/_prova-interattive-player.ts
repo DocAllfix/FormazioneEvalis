@@ -69,8 +69,10 @@ for (const s of slides) {
       const risultati = async () => (await fr.locator("[data-out]").allTextContents()).join(" | ");
       const prima = await risultati();
       if (await fr.locator("input[data-in]").count()) {
-        // 13 cambia i risultati di tutti i calcolatori con caselle (7 no: 7 m danno ancora 3 campi, come 8 m)
-        await clicca(p, fr, "input[data-in]"); await p.keyboard.press("Control+A"); await p.keyboard.type("13");
+        // 13 cambia i risultati di tutti i calcolatori con caselle (7 no: 7 m danno ancora 3 campi, come 8 m);
+        // se 13 è già il dato del caso (PdR 192: tredici qualitativi) si scrive 7
+        const ora = await fr.locator("input[data-in]").first().inputValue();
+        await clicca(p, fr, "input[data-in]"); await p.keyboard.press("Control+A"); await p.keyboard.type(ora.trim() === "13" ? "7" : "13");
       } else { // solo tendine (rischio, SA8000): si sceglie un altro valore della prima
         const sel = fr.locator("select[data-in]").first();
         await clicca(p, fr, "select[data-in]"); await p.keyboard.press("Escape");
