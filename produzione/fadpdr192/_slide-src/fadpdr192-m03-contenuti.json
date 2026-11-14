@@ -1,0 +1,760 @@
+[
+ {
+  "id": "fadpdr192_m03_s001",
+  "layout": "apertura",
+  "kicker": "Modulo 3",
+  "titolo": "Punteggio KPI: mappa del modulo",
+  "corsoLabel": "Conciliazione vita-lavoro · UNI/PdR 192:2026",
+  "eyebrow": "Modulo 3",
+  "sottotitolo": "Entriamo nella parte che rende il sistema solido: regole di calcolo, qualità tecnica dei KPI, difendibilità delle evidenze e scelte di priorità per superare la soglia senza disperdere risorse.",
+  "agenda": [
+   "Architettura del punteggio",
+   "Due famiglie di KPI",
+   "Quattro livelli di lavoro",
+   "Scelte di investimento",
+   "Caso guida del modulo"
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s002",
+  "layout": "cards",
+  "kicker": "Logica generale",
+  "titolo": "I quattro criteri del cruscotto interno",
+  "intro": "Il punteggio serve a misurare maturità organizzativa, non a decorare una policy. La verifica è almeno annuale e distinta dalla sorveglianza di certificazione: qui conta il controllo interno coerente nel tempo.",
+  "cards": [
+   {
+    "h": "Applicabile",
+    "d": "Usabile davvero nella realtà organizzativa"
+   },
+   {
+    "h": "Pertinente",
+    "d": "Legato alla conciliazione vita-lavoro"
+   },
+   {
+    "h": "Confrontabile",
+    "d": "Leggibile anno dopo anno"
+   },
+   {
+    "h": "Orientante",
+    "d": "Guida decisioni e miglioramento"
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s003",
+  "layout": "tabella",
+  "kicker": "Accesso alla certificazione",
+  "titolo": "Soglie di accesso per fascia dimensionale",
+  "cols": [
+   "Fascia",
+   "Soglia %",
+   "Punti minimi",
+   "Quantitativi minimi"
+  ],
+  "righe": [
+   [
+    "Micro e piccole",
+    "50%",
+    "11,625",
+    "Almeno 1"
+   ],
+   [
+    "Medie e grandi",
+    "60%",
+    "13,95",
+    "Almeno 2"
+   ]
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s004",
+  "layout": "esercizio",
+  "kicker": "Esercizio guidato",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Calcolo del punteggio",
+  "intro": "Un’impresa di 35 addetti soddisfa 10 indicatori qualitativi e 4 quantitativi. Quanti punti totalizza?",
+  "campi": [
+   {
+    "h": "Il tuo risultato",
+    "tipo": "numero",
+    "atteso": 11.5,
+    "tollAss": 0.01,
+    "u": "punti",
+    "soluzione": "11,5",
+    "spiega": "10 × 0,75 + 4 × 1 = 11,5 punti, cioè il 49,5%: per pochissimo sotto la soglia di 11,625. Basta un qualitativo in più.",
+    "errore": "Qualitativi a 0,75, quantitativi a 1."
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s005",
+  "layout": "evidenza",
+  "kicker": "Area 1",
+  "titolo": "Flessibilità oraria: conta la possibilità",
+  "eyebrow": "",
+  "testo": "Il primo quantitativo dell'area uno vale un punto se almeno il 50% degli addetti può accedere a strumenti di flessibilità oraria formalizzati, stabili e riconoscibili.",
+  "dark": true
+ },
+ {
+  "id": "fadpdr192_m03_s006",
+  "layout": "cards",
+  "kicker": "Area 1",
+  "titolo": "Lavoro agile: uso reale su eligibili",
+  "intro": "Il secondo quantitativo cambia denominatore: non tutti gli addetti, ma solo le posizioni eligibili. Il punto si regge su perimetro motivato, soglia corretta per fascia e prove di utilizzo effettivo.",
+  "cards": [
+   {
+    "h": "Denominatore corretto",
+    "d": "Posizioni eligibili, non totale addetti"
+   },
+   {
+    "h": "Micro e piccole",
+    "d": "Soglia almeno 20% degli eligibili"
+   },
+   {
+    "h": "Medie e grandi",
+    "d": "Soglia almeno 40% degli eligibili"
+   },
+   {
+    "h": "Prove richieste",
+    "d": "Elenco motivato, accordi, dati di fruizione"
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s007",
+  "layout": "barre",
+  "kicker": "Caso Conserve Alifane",
+  "titolo": "Nei turni vince la flessibilità del tempo",
+  "intro": "Dove il lavoro agile è poco praticabile, la leva si sposta su banca ore, scambio turni e anticipo della programmazione. Nel caso studio l'estensione a due linee pilota fa superare la soglia del 50%.",
+  "unita": "% addetti con accesso a flessibilità oraria",
+  "voci": [
+   {
+    "l": "Prima dell'intervento",
+    "v": 38.1,
+    "obiettivo": 50,
+    "meglioBasso": false
+   },
+   {
+    "l": "Dopo linee pilota",
+    "v": 61.9,
+    "obiettivo": 50,
+    "meglioBasso": false
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s008",
+  "layout": "esercizio",
+  "kicker": "Esercizio guidato",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Lavoro agile",
+  "intro": "Conserve Alifane (fascia 3) ha 30 posizioni eligibili al lavoro agile; 14 addetti lo utilizzano. Calcola l’indicatore in percentuale (un decimale).",
+  "campi": [
+   {
+    "h": "Il tuo risultato",
+    "tipo": "numero",
+    "atteso": 46.7,
+    "tollAss": 0.15,
+    "u": "%",
+    "soluzione": "46,7",
+    "spiega": "14 / 30 = 46,7%: sopra la soglia del 40% prevista per medie e grandi. Un punto acquisito.",
+    "errore": "Il denominatore sono le posizioni eligibili, non il totale addetti."
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s009",
+  "layout": "cards",
+  "kicker": "Area 2",
+  "titolo": "I quattro indicatori dell'area maternità",
+  "intro": "L'area due vale 3 punti pieni: quattro indicatori qualitativi da 0,75 ciascuno. È un'area rapida da presidiare solo se ogni sì corrisponde a una misura davvero disponibile e documentabile.",
+  "cards": [
+   {
+    "h": "Programmi informativi",
+    "d": "Diritti, tutele, procedure, riferimenti interni"
+   },
+   {
+    "h": "Sanità integrativa",
+    "d": "Screening, check-up, medicina di genere"
+   },
+   {
+    "h": "Supporto al rientro",
+    "d": "Colloquio, allineamento, flessibilità temporanea"
+   },
+   {
+    "h": "Valorizzazione competenze",
+    "d": "Riconoscere capacità maturate nel periodo"
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s010",
+  "layout": "organigramma",
+  "kicker": "Area 3",
+  "titolo": "Genitorialità: risultati e leve sui padri",
+  "intro": "È l’area più pesante, fino a quattro virgola cinquanta punti. Misura comportamenti reali legati alla genitorialità: tre quantitativi sui padri e due leve qualitative pensate per spostarli.",
+  "radice": {
+   "h": "Supporto alla genitorialità",
+   "d": "Fino a 4,50 punti"
+  },
+  "rami": [
+   {
+    "h": "Paternità fruita",
+    "d": "Padri su aventi diritto",
+    "voci": [
+     "Soglia 65%"
+    ]
+   },
+   {
+    "h": "Parentale fruito",
+    "d": "Padri su aventi diritto",
+    "voci": [
+     "Soglia 25%"
+    ]
+   },
+   {
+    "h": "Giorni medi nel primo anno",
+    "d": "Padri con figli nati nell’ultimo biennio",
+    "voci": [
+     "Soglia 35 giorni"
+    ]
+   },
+   {
+    "h": "Leva economica o tempo",
+    "d": "Integra indennità o estende paternità",
+    "voci": []
+   },
+   {
+    "h": "Back to work",
+    "d": "Programmi per entrambi i genitori",
+    "voci": []
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s011",
+  "layout": "flusso",
+  "kicker": "Area 3",
+  "titolo": "Il metodo di calcolo va fissato prima",
+  "intro": "In quest’area il punteggio dipende da scelte metodologiche molto sensibili. Se cambiano perimetro, fonti o denominatori, i dati perdono confrontabilità e la lettura del trend diventa fuorviante.",
+  "passi": [
+   {
+    "h": "Definisci il periodo",
+    "d": "Stesso orizzonte per tutte le rilevazioni"
+   },
+   {
+    "h": "Chiarisci chi è avente diritto",
+    "d": "Perimetro coerente e documentato"
+   },
+   {
+    "h": "Fissa fonti e denominatori",
+    "d": "Soprattutto per la media dei giorni"
+   },
+   {
+    "h": "Mantieni la regola nel tempo",
+    "d": "Evita confronti su basi diverse"
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s012",
+  "layout": "tabella",
+  "kicker": "Caso studio",
+  "titolo": "Tre numeri, una strategia diversa",
+  "cols": [
+   "Indicatore",
+   "Dato",
+   "Soglia",
+   "Esito"
+  ],
+  "righe": [
+   [
+    "Congedo di paternità",
+    "8/10 = 80%",
+    "65%",
+    "Superata"
+   ],
+   [
+    "Congedo parentale",
+    "1/10 = 10%",
+    "25%",
+    "Non superata"
+   ],
+   [
+    "Giorni medi parentale",
+    "22/10 = 2,2 giorni",
+    "35 giorni",
+    "Non superata"
+   ]
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s013",
+  "layout": "esercizio",
+  "kicker": "Esercizio",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Genitorialità",
+  "intro": "In un’azienda, nell’ultimo biennio 12 lavoratori sono diventati padri; 4 hanno usato il congedo parentale. L’indicatore «padri che usufruiscono del congedo parentale» è raggiunto?",
+  "campi": [
+   {
+    "h": "La tua risposta",
+    "tipo": "scelta",
+    "opzioni": [
+     "No: 4 su 12 è il 33,3%, sotto la soglia del 65%",
+     "Sì: 4 su 12 è il 33,3%, sopra la soglia del 25%",
+     "No: servono almeno 35 padri",
+     "Sì, ma vale solo 0,75 punti"
+    ],
+    "giuste": [
+     "Sì: 4 su 12 è il 33,3%, sopra la soglia del 25%"
+    ],
+    "spiega": "La soglia del 65% riguarda il congedo di paternità; per il congedo parentale è il 25%. Indicatore quantitativo: 1 punto."
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s014",
+  "layout": "ciclo",
+  "kicker": "Area 4",
+  "titolo": "Misure credibili per caregiver che non emergono",
+  "intro": "Tutti e tre gli indicatori sono qualitativi, ma il nodo vero è l’emersione del bisogno. Servono strumenti riconoscibili e un canale sicuro perché le persone possano dichiarare e usare i propri carichi di cura.",
+  "ciclo": false,
+  "centro": "Caregiver spesso invisibili",
+  "nodi": [
+   {
+    "h": "Flessibilità dedicata",
+    "d": "Orario, part time, agile, criteri espliciti"
+   },
+   {
+    "h": "Permessi oltre la legge",
+    "d": "Extra fruibili, non solo sulla carta"
+   },
+   {
+    "h": "Orientamento ai servizi",
+    "d": "Consulenza o convenzioni per assistenza"
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s015",
+  "layout": "definizione",
+  "kicker": "Area 5",
+  "titolo": "Il target rende credibile la partecipazione",
+  "eyebrow": "",
+  "definizione": "È il perimetro definito prima della campagna: almeno il quaranta per cento deve aderire. Non coincide sempre con tutta l’azienda; per il KPI bastano le adesioni, non gli esiti clinici individuali.",
+  "punti": []
+ },
+ {
+  "id": "fadpdr192_m03_s016",
+  "layout": "barre",
+  "kicker": "Area 6",
+  "titolo": "Convenzioni attive: la soglia dipende dalla dimensione",
+  "intro": "L’area può valere fino a quattro punti e combina un quantitativo con quattro qualitativi. Per il KPI contano convenzioni valide, comunicate e coerenti con i bisogni familiari, dentro un welfare strutturato e non episodico.",
+  "unita": "convenzioni minime",
+  "voci": [
+   {
+    "l": "Micro",
+    "v": 1
+   },
+   {
+    "l": "Piccole",
+    "v": 2
+   },
+   {
+    "l": "Medie",
+    "v": 3
+   },
+   {
+    "l": "Grandi",
+    "v": 5
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s017",
+  "layout": "confronto",
+  "kicker": "Area 7",
+  "titolo": "Prima il rientro, poi la permanenza",
+  "intro": "L’area vale tre virgola cinquanta punti e unisce due qualitativi a due quantitativi. Monitoraggio annuale e sviluppo post assenza servono a sostenere i due snodi che contano davvero: ritorno e tenuta nel tempo.",
+  "a": {
+   "h": "Rientro post maternità",
+   "sub": "",
+   "punti": [
+    {
+     "d": "Rientrate / congedi terminati"
+    },
+    {
+     "d": "Soglia almeno 90%"
+    },
+    {
+     "d": "Misura il ritorno"
+    },
+    {
+     "d": "Esito subito dopo l’assenza"
+    }
+   ]
+  },
+  "b": {
+   "h": "Retention post congedo",
+   "sub": "",
+   "punti": [
+    {
+     "d": "In forza / rientrate 24 mesi prima"
+    },
+    {
+     "d": "Soglia almeno 80%"
+    },
+    {
+     "d": "Misura la permanenza"
+    },
+    {
+     "d": "Esito nel medio periodo"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fadpdr192_m03_s018",
+  "layout": "esercizio",
+  "kicker": "Esercizio",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Retention",
+  "intro": "In Conserve Alifane, 9 persone sono rientrate da un congedo 24 mesi fa; oggi 7 sono ancora in forza. Calcola il tasso di retention a 24 mesi in percentuale (un decimale).",
+  "campi": [
+   {
+    "h": "Il tuo risultato",
+    "tipo": "numero",
+    "atteso": 77.8,
+    "tollAss": 0.15,
+    "u": "%",
+    "soluzione": "77,8",
+    "spiega": "7 / 9 = 77,8%: sotto la soglia dell’80%. L’indicatore non è raggiunto: zero punti, perché non esistono punteggi parziali.",
+    "errore": "Persone ancora in forza diviso persone rientrate."
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s019",
+  "layout": "cards",
+  "kicker": "Governance del dato",
+  "titolo": "La scheda che rende difendibile il KPI",
+  "intro": "Una buona scheda indicatore concentra in una pagina le informazioni che permettono di calcolare, leggere e sostenere un KPI davanti a direzione, auditor e funzioni coinvolte.",
+  "cards": [
+   {
+    "h": "Collocazione iniziale",
+    "d": "Area, indicatore, tipo e punteggio associato"
+   },
+   {
+    "h": "Cuore metodologico",
+    "d": "Formula di calcolo o criterio sì/no, con definizioni"
+   },
+   {
+    "h": "Replicabilità del dato",
+    "d": "Fonte concreta e periodo di rilevazione stabile"
+   },
+   {
+    "h": "Lettura e presidio",
+    "d": "Soglia, responsabile, evidenze, valore rilevato e storico"
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s020",
+  "layout": "split",
+  "kicker": "Strumenti decisionali",
+  "titolo": "Il simulatore collega fascia, KPI ed esito",
+  "lead": "Il simulatore non somma solo punti: legge la fascia corretta, verifica le due condizioni di accesso e permette di confrontare scenari diversi prima di investire risorse.",
+  "punti": [
+   {
+    "h": "Cornice corretta",
+    "d": "La fascia dimensionale cambia la lettura di più KPI"
+   },
+   {
+    "h": "Tre uscite decisive",
+    "d": "Punti ottenuti, percentuale sul massimo, condizioni di accesso"
+   },
+   {
+    "h": "Scenari prima delle scelte",
+    "d": "Attivare, perdere o rafforzare indicatori senza andare alla cieca"
+   },
+   {
+    "h": "Uso professionale",
+    "d": "Dalle riunioni direzionali alle verifiche interne HR"
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s021",
+  "layout": "calcolatore",
+  "kicker": "Lettura del risultato",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: il simulatore di punteggio",
+  "formula": "pdr192",
+  "intro": "I dati di partenza sono quelli di Conserve Alifane dopo il piano: fascia 3, tredici qualitativi e sei quantitativi.",
+  "piede": "Chiedi sempre all'organismo di certificazione come tratta gli indicatori senza casi nel periodo: la prassi non lo dice."
+ },
+ {
+  "id": "fadpdr192_m03_s022",
+  "layout": "esercizio",
+  "kicker": "Esercizio prudenziale",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Usa il simulatore",
+  "intro": "Torna al simulatore, carica «Caso studio: dopo il piano» e togli l’indicatore sulla partecipazione agli screening (campagna andata sotto il 40%). Quale percentuale ottiene Conserve Alifane? (un decimale)",
+  "campi": [
+   {
+    "h": "Il tuo risultato",
+    "tipo": "numero",
+    "atteso": 63.4,
+    "tollAss": 0.15,
+    "u": "%",
+    "soluzione": "63,4",
+    "spiega": "15,75 − 1 = 14,75 punti su 23,25 = 63,4%. Ancora sopra il 60% con 5 quantitativi: il margine di sicurezza ha funzionato.",
+    "errore": "Usa «Indietro» per tornare al simulatore, carica il preset e deseleziona l’indicatore dell’area 5."
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s023",
+  "layout": "barre",
+  "kicker": "Caso studio",
+  "titolo": "Prime quattro aree: dove cresce il caso",
+  "intro": "Nella prima parte del piano il salto deriva da leve governabili e rapide, distribuite su quattro aree con progressi misurabili prima e dopo l'intervento.",
+  "unita": "punti area",
+  "serie": [
+   "Prima",
+   "Dopo"
+  ],
+  "voci": [
+   {
+    "l": "Area 1 Flessibilità",
+    "v": [
+     1.75,
+     2.75
+    ]
+   },
+   {
+    "l": "Area 2 Maternità",
+    "v": [
+     0.75,
+     1.5
+    ]
+   },
+   {
+    "l": "Area 3 Genitorialità",
+    "v": [
+     1,
+     2.5
+    ]
+   },
+   {
+    "l": "Area 4 Impegni di cura",
+    "v": [
+     0.75,
+     1.5
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s024",
+  "layout": "tabella",
+  "kicker": "Caso studio",
+  "titolo": "Ultime tre aree: spinta e robustezza",
+  "cols": [
+   "Area",
+   "Prima",
+   "Dopo",
+   "Leva chiave"
+  ],
+  "righe": [
+   [
+    "5 Salute e benessere",
+    "0,75",
+    "2,50",
+    "Screening al 45% target + sportello psicologico"
+   ],
+   [
+    "6 Sostegno economico",
+    "0,75",
+    "2,50",
+    "Welfare famiglia + 3 convenzioni attive"
+   ],
+   [
+    "7 Sviluppo e carriera",
+    "1,00",
+    "2,50",
+    "Report post congedo + formazione al rientro"
+   ]
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s025",
+  "layout": "numeri",
+  "kicker": "Rischi ricorrenti",
+  "titolo": "Cinque errori frequenti sui KPI",
+  "intro": "Gli inciampi più costosi nascono da fretta e approssimazione: piccoli difetti di metodo che in verifica possono far perdere un punto intero.",
+  "numeri": [
+   {
+    "n": "1",
+    "h": "Sì qualitativo senza evidenza di applicazione",
+    "d": ""
+   },
+   {
+    "n": "2",
+    "h": "Misura detta aziendale ma limitata agli uffici",
+    "d": ""
+   },
+   {
+    "n": "3",
+    "h": "Lavoro agile con perimetro eligibile opportunistico",
+    "d": ""
+   },
+   {
+    "n": "4",
+    "h": "Convenzioni scadute, teoriche o non comunicate",
+    "d": ""
+   },
+   {
+    "n": "5",
+    "h": "Screening volontari confusi con obblighi sanitari",
+    "d": ""
+   }
+  ]
+ },
+ {
+  "id": "fadpdr192_m03_s026",
+  "layout": "esercizio",
+  "kicker": "Esercizio di classificazione",
+  "ref": "Prova tu",
+  "titolo": "Prova tu: Quantitativo o qualitativo",
+  "intro": "Classifica ciascun indicatore.",
+  "campi": [
+   {
+    "h": "1. Part-time reversibile o temporaneo disponibile",
+    "tipo": "scelta",
+    "opzioni": [
+     "Quantitativo · 1 punto",
+     "Qualitativo · 0,75 punti"
+    ],
+    "giuste": [
+     "Qualitativo · 0,75 punti"
+    ],
+    "spiega": "Qualitativo · 0,75 punti."
+   },
+   {
+    "h": "2. Tasso di rientro dopo il congedo di maternità",
+    "tipo": "scelta",
+    "opzioni": [
+     "Quantitativo · 1 punto",
+     "Qualitativo · 0,75 punti"
+    ],
+    "giuste": [
+     "Quantitativo · 1 punto"
+    ],
+    "spiega": "Quantitativo · 1 punto."
+   },
+   {
+    "h": "3. Numero di convenzioni attive con fornitori di servizi per le famiglie",
+    "tipo": "scelta",
+    "opzioni": [
+     "Quantitativo · 1 punto",
+     "Qualitativo · 0,75 punti"
+    ],
+    "giuste": [
+     "Quantitativo · 1 punto"
+    ],
+    "spiega": "Quantitativo · 1 punto."
+   },
+   {
+    "h": "4. Supporto psicologico o consulenza su temi familiari",
+    "tipo": "scelta",
+    "opzioni": [
+     "Quantitativo · 1 punto",
+     "Qualitativo · 0,75 punti"
+    ],
+    "giuste": [
+     "Qualitativo · 0,75 punti"
+    ],
+    "spiega": "Qualitativo · 0,75 punti."
+   },
+   {
+    "h": "5. Partecipazione a campagne di screening proposte dall’azienda",
+    "tipo": "scelta",
+    "opzioni": [
+     "Quantitativo · 1 punto",
+     "Qualitativo · 0,75 punti"
+    ],
+    "giuste": [
+     "Quantitativo · 1 punto"
+    ],
+    "spiega": "Quantitativo · 1 punto."
+   },
+   {
+    "h": "6. Piano di welfare strutturato con budget per la famiglia",
+    "tipo": "scelta",
+    "opzioni": [
+     "Quantitativo · 1 punto",
+     "Qualitativo · 0,75 punti"
+    ],
+    "giuste": [
+     "Qualitativo · 0,75 punti"
+    ],
+    "spiega": "Qualitativo · 0,75 punti."
+   },
+   {
+    "h": "7. Media dei giorni di congedo parentale dei padri",
+    "tipo": "scelta",
+    "opzioni": [
+     "Quantitativo · 1 punto",
+     "Qualitativo · 0,75 punti"
+    ],
+    "giuste": [
+     "Quantitativo · 1 punto"
+    ],
+    "spiega": "Quantitativo · 1 punto."
+   },
+   {
+    "h": "8. Permessi per caregiver aggiuntivi rispetto alla legge",
+    "tipo": "scelta",
+    "opzioni": [
+     "Quantitativo · 1 punto",
+     "Qualitativo · 0,75 punti"
+    ],
+    "giuste": [
+     "Qualitativo · 0,75 punti"
+    ],
+    "spiega": "Qualitativo · 0,75 punti."
+   }
+  ],
+  "piede": "I 9 quantitativi sono quelli con una soglia numerica: 2 nell’area 1, 3 nell’area 3, 1 nell’area 5, 1 nell’area 6, 2 nell’area 7."
+ },
+ {
+  "id": "fadpdr192_m03_s027",
+  "layout": "chiusura",
+  "kicker": "Da portare via",
+  "titolo": "I riferimenti operativi del sistema KPI",
+  "modNum": "03",
+  "punti": [
+   {
+    "h": "Architettura del punteggio",
+    "d": "28 KPI: 9 quantitativi, 19 qualitativi, massimo 23,25"
+   },
+   {
+    "h": "Doppia soglia di accesso",
+    "d": "Percentuale minima e numero minimo di quantitativi"
+   },
+   {
+    "h": "Nessun punto parziale",
+    "d": "Formule, perimetri ed evidenze devono reggere in verifica"
+   },
+   {
+    "h": "Scheda e simulatore",
+    "d": "Servono a pianificare priorità, margini e sequenza del piano"
+   }
+  ],
+  "prossimo": {
+   "modulo": "04",
+   "titolo": "Applicazione in azienda e certificazione"
+  }
+ }
+]

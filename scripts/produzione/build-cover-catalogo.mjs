@@ -122,6 +122,21 @@ const ICONE = {
       <g filter="url(#rilievo)"><circle cx="272" cy="258" r="56" fill="${C.arancio}"/>
       <path d="M244,258 L264,279 L302,236" fill="none" stroke="#FFFFFF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></g>`,
   },
+  // casa con un cuore + valigetta: la conciliazione tra vita familiare e lavoro (UNI/PdR 192:2026, FAD-PDR192-01)
+  conciliazione: {
+    centro: [176, 184], scala: 1.6,
+    disegna: () => `
+      <g filter="url(#rilievo)">
+        <path d="M60,170 L160,82 L260,170 L236,170 L236,282 L84,282 L84,170 Z" fill="${C.arancio}" stroke="${C.arancio}" stroke-width="10" stroke-linejoin="round"/>
+        <path d="M160,250 C120,222 104,202 104,182 C104,164 118,152 134,152 C146,152 155,159 160,168 C165,159 174,152 186,152 C202,152 216,164 216,182 C216,202 200,222 160,250 Z" fill="#FFFFFF"/>
+      </g>
+      <g filter="url(#rilievo)">
+        <rect x="226" y="222" width="104" height="76" rx="12" fill="${C.arancioScuro}"/>
+        <path d="M256,222 L256,208 Q256,200 264,200 L292,200 Q300,200 300,208 L300,222" fill="none" stroke="${C.arancioScuro}" stroke-width="9"/>
+        <rect x="226" y="250" width="104" height="8" fill="${C.arancioCaldo}"/>
+        <rect x="270" y="244" width="16" height="20" rx="3" fill="#FFFFFF"/>
+      </g>`,
+  },
 };
 
 // griglia 3×3 di piastrelle con le fughe, in tinte alternate: la posa ceramica (piastrellista)
@@ -312,6 +327,7 @@ const CORSI = {
   fad23103: ICONE.apicali231,
   fad23104: ICONE.odv231,
   fadsa800002: ICONE.lavoroDignitoso,
+  fadpdr192: ICONE.conciliazione,
 };
 
 const DISCO = { x: 790, y: 478 };

@@ -1,0 +1,788 @@
+{
+  "parametri": {
+    "ore": 8,
+    "test": "10 domande per modulo, soglia 75%",
+    "esame": "15 domande, soglia 75%"
+  },
+  "checkpoint": [
+    {
+      "modulo": "m01",
+      "domanda": "Secondo i dati richiamati dalla prassi, quali sono le due motivazioni prevalenti delle dimissioni delle lavoratrici madri, su cui l’azienda può intervenire?",
+      "opzioni": [
+        "Retribuzione insufficiente e distanza casa-lavoro",
+        "Assenza di servizi di cura e organizzazione del lavoro",
+        "Mancanza di formazione e scarse prospettive di carriera",
+        "Contratti a termine e stagionalità"
+      ],
+      "corretta": 1,
+      "fonte": "checkpoint"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Un’azienda di 60 addetti raggiunge il 62% del punteggio soddisfacendo solo indicatori qualitativi e un indicatore quantitativo. Può accedere alla certificazione?",
+      "opzioni": [
+        "Sì: ha superato il 60%",
+        "No: in fascia 3 servono almeno 2 indicatori quantitativi soddisfatti",
+        "Sì, purché presenti un piano di miglioramento",
+        "No: in fascia 3 la soglia è il 70%"
+      ],
+      "corretta": 1,
+      "fonte": "checkpoint"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Uno studio professionale ha 2 soci che lavorano nello studio, 4 dipendenti (uno in congedo di maternità) e 1 apprendista. In quale fascia rientra e con quale soglia?",
+      "opzioni": [
+        "Non rientra: sotto i 10 dipendenti la prassi non si applica",
+        "Fascia 1 (micro), 7 addetti, soglia 50% e almeno 1 KPI quantitativo",
+        "Fascia 1 (micro), 4 addetti, soglia 60%",
+        "Fascia 2 (piccola), soglia 50% e almeno 2 KPI quantitativi"
+      ],
+      "corretta": 1,
+      "fonte": "checkpoint"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Quale affermazione sulla UNI/PdR 192:2026 è corretta?",
+      "opzioni": [
+        "È una norma tecnica obbligatoria per le imprese con più di 50 dipendenti",
+        "Si applica solo al settore privato",
+        "È un documento volontario che definisce requisiti di sistema, KPI e regole per la certificazione di terza parte",
+        "Sostituisce la UNI/PdR 125:2022"
+      ],
+      "corretta": 2,
+      "fonte": "checkpoint"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "La UNI/PdR 192:2026 è entrata in vigore:",
+      "opzioni": [
+        "il 1° gennaio 2026",
+        "il 14 aprile 2026",
+        "il 23 giugno 2026",
+        "il 30 aprile 2026"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "A quali organizzazioni la prassi NON si applica?",
+      "opzioni": [
+        "Alle pubbliche amministrazioni",
+        "Alle micro-imprese",
+        "Alle organizzazioni senza addetti/e",
+        "Alle cooperative"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Quali sono i due riferimenti che la prassi integra in un unico sistema di gestione?",
+      "opzioni": [
+        "ISO 9001 e ISO 45001",
+        "Family Audit e Codice per le imprese in favore della maternità",
+        "SA8000 e ISO 26000",
+        "PdR 125 e D.Lgs. 231/2001"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Secondo la definizione della prassi, il caregiver è chi:",
+      "opzioni": [
+        "assiste a pagamento una persona non autosufficiente",
+        "usufruisce dei permessi della legge 104/1992",
+        "assiste gratuitamente, in modo continuativo o prevalente, una persona non autosufficiente o fragile",
+        "ha figli minori di tre anni"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Che cosa distingue il telelavoro dal lavoro agile nelle definizioni della prassi?",
+      "opzioni": [
+        "Il telelavoro ha luogo e orario predeterminati",
+        "Il telelavoro non richiede strumenti informatici",
+        "Il lavoro agile è riservato ai dirigenti",
+        "Non c’è alcuna differenza"
+      ],
+      "corretta": 0,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Un’organizzazione con 250 addetti appartiene alla fascia:",
+      "opzioni": [
+        "2",
+        "3",
+        "4",
+        "dipende dal fatturato"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Per le fasce 1 e 2 il punteggio minimo e il numero minimo di KPI quantitativi sono:",
+      "opzioni": [
+        "60% e 2",
+        "50% e 1",
+        "50% e 2",
+        "40% e 1"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Il metodo ispirato al Family Audit prevede che il piano aziendale sia:",
+      "opzioni": [
+        "redatto dall’organismo di certificazione",
+        "approvato dalle organizzazioni sindacali territoriali",
+        "elaborato in modo partecipato, con il coinvolgimento attivo degli addetti",
+        "depositato presso l’Ispettorato del lavoro"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "La valutazione della conformità di terza parte, per la prassi, è:",
+      "opzioni": [
+        "facoltativa",
+        "prevista: il sistema deve esservi sottoposto",
+        "riservata alle grandi imprese",
+        "sostituibile da un’autodichiarazione"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m01",
+      "domanda": "La correzione del 23 giugno 2026 ha chiarito che la prassi riguarda:",
+      "opzioni": [
+        "solo gli organismi privati",
+        "le organizzazioni pubbliche e private",
+        "solo le imprese con sede in Italia",
+        "solo le società di capitali"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Quale di queste situazioni NON soddisfa i requisiti sulla politica?",
+      "opzioni": [
+        "La politica è firmata dall’amministratore dopo il confronto con il gruppo di lavoro",
+        "La politica è pubblicata sul sito e affissa in bacheca",
+        "La politica è stata scritta dal consulente e archiviata nel manuale, senza formazione ai responsabili",
+        "La politica viene confermata ogni anno nel verbale di revisione"
+      ],
+      "corretta": 2,
+      "fonte": "checkpoint"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Durante un colloquio il titolare di una piccola impresa chiede a una candidata se ha intenzione di avere figli «per organizzare meglio il lavoro». Come va trattato il caso nel sistema?",
+      "opzioni": [
+        "È accettabile se la domanda è posta a tutti i candidati",
+        "È una violazione del requisito 5.3.3: va gestita come situazione non conforme e prevenuta con procedura, traccia di colloquio e formazione",
+        "È accettabile nelle micro e piccole imprese per il principio di proporzionalità",
+        "È rilevante solo se la candidata non viene assunta"
+      ],
+      "corretta": 1,
+      "fonte": "checkpoint"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Quale combinazione di frequenze minime è corretta secondo la prassi?",
+      "opzioni": [
+        "Piano aggiornato ogni tre anni, audit interno annuale, revisione annuale",
+        "Piano aggiornato almeno ogni anno, audit interni annuali, revisione almeno annuale, verifica dei KPI almeno annuale",
+        "Piano aggiornato ogni anno, audit interno triennale, revisione semestrale",
+        "Nessuna frequenza è prescritta: decide l’organizzazione"
+      ],
+      "corretta": 1,
+      "fonte": "checkpoint"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Chi redige il piano strategico?",
+      "opzioni": [
+        "L’alta direzione",
+        "Il gruppo di lavoro interno",
+        "L’organismo di certificazione",
+        "Il consulente del lavoro"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Con quale frequenza minima il piano strategico va aggiornato?",
+      "opzioni": [
+        "Ogni sei mesi",
+        "Ogni anno",
+        "Ogni tre anni",
+        "Solo al rinnovo della certificazione"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Quale di questi elementi è una caratteristica richiesta per la politica?",
+      "opzioni": [
+        "Deposito presso la Camera di commercio",
+        "Disponibilità sul sito dell’organizzazione",
+        "Firma delle rappresentanze sindacali",
+        "Traduzione in inglese"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Durante i colloqui di selezione la prassi vieta domande su:",
+      "opzioni": [
+        "esperienze professionali precedenti",
+        "disponibilità ai turni",
+        "matrimonio, gravidanza e responsabilità di cura",
+        "aspettative retributive"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Il «progetto di sviluppo organizzativo» (interscambiabilità, carichi di lavoro, pianificazione) appartiene al requisito:",
+      "opzioni": [
+        "5.3.2 Cultura aziendale e formazione",
+        "5.3.4 Gestione della carriera",
+        "5.4.1 Documentazione",
+        "5.1.2 Gruppo di lavoro interno"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "I programmi per i congedi devono includere:",
+      "opzioni": [
+        "solo la modulistica per la richiesta",
+        "informazione sui diritti, aggiornamento durante il congedo sui cambiamenti importanti e accompagnamento al rientro",
+        "l’obbligo di reperibilità durante il congedo",
+        "una riduzione del premio di risultato proporzionale all’assenza"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Per lo smart working la prassi richiede di offrirlo:",
+      "opzioni": [
+        "a tutti gli addetti senza eccezioni",
+        "solo ai genitori di figli sotto i 3 anni",
+        "laddove compatibile con le attività lavorative svolte",
+        "solo nelle grandi organizzazioni"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Gli audit interni devono essere condotti:",
+      "opzioni": [
+        "dalla figura responsabile del sistema sui propri processi",
+        "secondo la ISO 19011, da team indipendenti dalle attività verificate e competenti",
+        "esclusivamente da auditor esterni accreditati",
+        "solo in preparazione dell’audit di certificazione"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "La revisione periodica del sistema è svolta:",
+      "opzioni": [
+        "dal gruppo di lavoro, senza la direzione",
+        "dall’alta direzione con il gruppo di lavoro e le funzioni responsabili, almeno una volta l’anno",
+        "dall’organismo di certificazione in sorveglianza",
+        "dal medico competente"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Rispetto alla comunicazione esterna, la prassi chiede che:",
+      "opzioni": [
+        "non si citi mai la certificazione",
+        "le iniziative attuate siano citate e la comunicazione sia coerente con politica e obiettivi",
+        "sia approvata dall’organismo di certificazione",
+        "sia limitata al bilancio di sostenibilità"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m03",
+      "domanda": "In un’azienda, nell’ultimo biennio 12 lavoratori sono diventati padri; 4 hanno usato il congedo parentale. L’indicatore «padri che usufruiscono del congedo parentale» è raggiunto?",
+      "opzioni": [
+        "No: 4 su 12 è il 33,3%, sotto la soglia del 65%",
+        "Sì: 4 su 12 è il 33,3%, sopra la soglia del 25%",
+        "No: servono almeno 35 padri",
+        "Sì, ma vale solo 0,75 punti"
+      ],
+      "corretta": 1,
+      "fonte": "checkpoint"
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Quanti sono gli indicatori della prassi e come sono ripartiti?",
+      "opzioni": [
+        "24: 12 quantitativi e 12 qualitativi",
+        "28: 9 quantitativi e 19 qualitativi",
+        "28: 19 quantitativi e 9 qualitativi",
+        "33: 6 aree"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un indicatore quantitativo raggiunto al 48% su una soglia del 50% vale:",
+      "opzioni": [
+        "0,96 punti",
+        "0,5 punti",
+        "0 punti",
+        "0,75 punti"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Per una media impresa, la soglia dell’indicatore sul lavoro agile/telelavoro è:",
+      "opzioni": [
+        "20% del totale addetti",
+        "40% delle posizioni eligibili",
+        "50% del totale addetti",
+        "65% delle posizioni eligibili"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m03",
+      "domanda": "La soglia del rapporto fra padri che usufruiscono del congedo di paternità e padri aventi diritto è:",
+      "opzioni": [
+        "25%",
+        "40%",
+        "65%",
+        "90%"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Quante convenzioni attive con fornitori di servizi per le famiglie servono a una piccola impresa?",
+      "opzioni": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Il tasso di partecipazione alle campagne di prevenzione o screening si calcola:",
+      "opzioni": [
+        "sul totale degli addetti, sempre",
+        "sulla popolazione target, con soglia del 40%",
+        "sui soli dirigenti",
+        "sugli iscritti al fondo sanitario, con soglia del 50%"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Quale area contiene solo indicatori qualitativi?",
+      "opzioni": [
+        "Organizzazione del lavoro e flessibilità",
+        "Supporto alla genitorialità",
+        "Supporto agli impegni di cura",
+        "Sviluppo professionale e continuità di carriera"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m03",
+      "domanda": "La soglia del tasso di retention post-congedo è:",
+      "opzioni": [
+        "80% a 24 mesi",
+        "90% a 12 mesi",
+        "65% a 24 mesi",
+        "100% a 6 mesi"
+      ],
+      "corretta": 0,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Una grande impresa ottiene il 61% del punteggio con un solo indicatore quantitativo soddisfatto. Esito:",
+      "opzioni": [
+        "Accede alla certificazione",
+        "Non accede: servono almeno 2 quantitativi",
+        "Accede con riserva",
+        "Non accede: la soglia è il 70%"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Con quale frequenza minima l’organizzazione verifica internamente i KPI?",
+      "opzioni": [
+        "Mensile",
+        "Trimestrale",
+        "Annuale",
+        "Triennale"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Un’azienda di 180 addetti offre lavoro agile, sportello psicologico e convenzioni solo al personale della sede direzionale (25 persone); nei due stabilimenti non c’è alcuna misura. Come valuti la situazione?",
+      "opzioni": [
+        "Conforme: la prassi chiede le misure solo dove sono compatibili",
+        "Critica: equilibrio vita-lavoro e flessibilità devono rivolgersi a tutti gli addetti; servono misure adatte agli stabilimenti e i KPI vanno calcolati sull’intera organizzazione",
+        "Conforme, purché la sede direzionale sia l’unica inserita nel certificato",
+        "Critica solo se gli stabilimenti superano i 250 addetti"
+      ],
+      "corretta": 1,
+      "fonte": "checkpoint"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Durante lo stage 1 emerge che l’azienda ha in corso una causa di lavoro per il mancato rinnovo del contratto a una lavoratrice in gravidanza. Che cosa prevede l’Appendice A?",
+      "opzioni": [
+        "La certificazione è automaticamente preclusa",
+        "La presenza di un esperto tecnico giuslavorista nel gruppo di audit diventa obbligatoria, per approfondire il quadro giuridico",
+        "Nulla: le cause in corso non rilevano fino a sentenza definitiva",
+        "L’audit è sospeso fino alla conclusione della causa"
+      ],
+      "corretta": 1,
+      "fonte": "checkpoint"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Alla prima sorveglianza il tasso di rientro post-maternità di un’azienda è sceso dal 100% all’83% (5 rientri su 6): l’indicatore non è più raggiunto e il punteggio scende al 58% (fascia 3). Qual è il comportamento corretto dell’organizzazione?",
+      "opzioni": [
+        "Arrotondare il tasso al 90%, trattandosi di un solo caso",
+        "Non riportare l’indicatore nel cruscotto di quest’anno",
+        "Registrare la situazione non conforme, analizzarne le cause, attivare azioni e recuperare punteggio su altri indicatori pianificati, informando l’organismo",
+        "Chiedere di essere riclassificata in fascia 2"
+      ],
+      "corretta": 2,
+      "fonte": "checkpoint"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "In un certificato di gruppo, quali esclusioni sono ammesse?",
+      "opzioni": [
+        "Singoli processi, come la selezione",
+        "Singole funzioni, come la produzione",
+        "Singole entità giuridiche del gruppo",
+        "Nessuna esclusione di alcun tipo"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "La norma di accreditamento per gli organismi che certificano la PdR 192 è:",
+      "opzioni": [
+        "ISO/IEC 17024",
+        "ISO/IEC 17021-1",
+        "ISO/IEC 17065",
+        "ISO/IEC 17020"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Per il calcolo dei tempi di audit, gli addetti di produzione e degli altri uffici si considerano al:",
+      "opzioni": [
+        "100%",
+        "50%",
+        "10%",
+        "0%"
+      ],
+      "corretta": 2,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "La presenza di un esperto giuslavorista nel gruppo di audit è obbligatoria quando:",
+      "opzioni": [
+        "l’organizzazione supera i 250 addetti",
+        "risultano cause giudiziarie, concluse o in corso, sugli ambiti della prassi",
+        "l’organizzazione è una pubblica amministrazione",
+        "l’audit è integrato con la PdR 125"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Per estendere la flessibilità oraria ai turnisti di una linea produttiva, la leva più coerente è:",
+      "opzioni": [
+        "lavoro agile per tutti",
+        "banca ore e scambio turni regolamentato, sostenuti dalla polivalenza",
+        "riduzione dell’organico",
+        "spostamento delle riunioni al pomeriggio"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Il Marchio UNI «Organizzazioni» attesta che:",
+      "opzioni": [
+        "i prodotti dell’azienda sono conformi a norme UNI",
+        "i requisiti sono stabiliti da UNI e l’organismo di certificazione opera sotto accreditamento",
+        "l’azienda è socia di UNI",
+        "l’azienda ha ottenuto l’esonero contributivo"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Le soluzioni collaborative o di rete previste dalla prassi servono soprattutto a:",
+      "opzioni": [
+        "sostituire l’audit di terza parte",
+        "favorire l’adozione da parte delle PMI con sinergie territoriali o settoriali",
+        "evitare la nomina del gruppo di lavoro",
+        "certificare più aziende con un solo certificato"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "L’organismo di certificazione che chiede l’accreditamento per lo schema deve:",
+      "opzioni": [
+        "essere partecipato da un ente pubblico",
+        "attuare a sua volta un sistema conforme alla PdR 192",
+        "avere almeno 250 addetti",
+        "essere accreditato anche ISO/IEC 17024"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Parlando al cliente dell’esonero contributivo collegato alla certificazione, il consulente deve presentarlo come:",
+      "opzioni": [
+        "un importo certo pari all’1% del fatturato",
+        "un beneficio massimo teorico, soggetto a risorse disponibili e requisiti da verificare sulle fonti ufficiali",
+        "un rimborso dei costi di consulenza",
+        "un credito d’imposta automatico"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Nella documentazione di audit deve risultare, fra l’altro:",
+      "opzioni": [
+        "l’elenco nominativo dei caregiver",
+        "l’analisi di episodi o minacce di violazione dei diritti legati a maternità, paternità e carichi di cura",
+        "il bilancio d’esercizio certificato",
+        "il DVR completo"
+      ],
+      "corretta": 1,
+      "fonte": "test"
+    }
+  ],
+  "esame": [
+    {
+      "modulo": "m01",
+      "domanda": "Quali sono i tre destinatari principali delle politiche previste dalla prassi?",
+      "opzioni": [
+        "Giovani, donne, lavoratori anziani",
+        "Madri, padri e caregiver",
+        "Dirigenti, quadri, impiegati",
+        "Dipendenti, fornitori, clienti"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Rientrano nella definizione di addetto/a:",
+      "opzioni": [
+        "solo i dipendenti a tempo indeterminato",
+        "dipendenti e indipendenti occupati nell’unità giuridica, compresi titolari operativi, coadiuvanti familiari e apprendisti, anche se temporaneamente assenti",
+        "solo i dipendenti presenti alla data dell’audit",
+        "i lavoratori somministrati e i fornitori"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m01",
+      "domanda": "Un’organizzazione con 49 addetti deve raggiungere:",
+      "opzioni": [
+        "il 60% e almeno 2 KPI quantitativi",
+        "il 50% e almeno 1 KPI quantitativo",
+        "il 50% senza altri vincoli",
+        "il 40% e almeno 1 KPI quantitativo"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Il punteggio massimo teorico dei 28 indicatori è:",
+      "opzioni": [
+        "28",
+        "23,25",
+        "21",
+        "100"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "La politica di conciliazione deve essere, fra l’altro:",
+      "opzioni": [
+        "definita dal gruppo di lavoro senza la direzione",
+        "riservata e accessibile ai soli dirigenti",
+        "definita dall’alta direzione, diffusa, oggetto di formazione al management, revisionata periodicamente e disponibile sul sito",
+        "approvata dall’organismo di certificazione"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Quale sequenza descrive correttamente i ruoli sul piano strategico?",
+      "opzioni": [
+        "La direzione redige, il gruppo approva",
+        "Il gruppo di lavoro redige, l’alta direzione approva, aggiornamento almeno annuale",
+        "Il consulente redige, l’organismo approva",
+        "Il responsabile HR redige e approva"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Quale strumento NON è citato dalla prassi fra quelli di rilevazione dei bisogni?",
+      "opzioni": [
+        "Questionari",
+        "Focus group",
+        "Interviste",
+        "Controllo delle e-mail aziendali"
+      ],
+      "corretta": 3
+    },
+    {
+      "modulo": "m03",
+      "domanda": "L’indicatore «addetti che possono usufruire di flessibilità oraria» ha soglia:",
+      "opzioni": [
+        "20%",
+        "40%",
+        "50%",
+        "65%"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Un’azienda di 300 addetti ha 120 posizioni eligibili al lavoro agile e 42 persone che lo utilizzano. L’indicatore è:",
+      "opzioni": [
+        "raggiunto: 42/300 = 14% è sufficiente",
+        "non raggiunto: 42/120 = 35%, sotto la soglia del 40%",
+        "raggiunto: 42/120 = 35%, sopra la soglia del 20%",
+        "non calcolabile"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "Quale di questi è un indicatore dell’area «Supporto agli impegni di cura»?",
+      "opzioni": [
+        "Tasso di rientro post-maternità",
+        "Permessi o congedi per caregiver aggiuntivi rispetto agli obblighi di legge",
+        "Iniziative di educazione finanziaria",
+        "Programmi informativi sulla maternità"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m03",
+      "domanda": "I punteggi parziali sugli indicatori:",
+      "opzioni": [
+        "sono ammessi in proporzione al valore raggiunto",
+        "sono ammessi solo per i quantitativi",
+        "non sono ammessi",
+        "sono decisi dall’auditor"
+      ],
+      "corretta": 2
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Gli audit interni hanno frequenza:",
+      "opzioni": [
+        "annuale",
+        "triennale",
+        "semestrale obbligatoria",
+        "libera"
+      ],
+      "corretta": 0
+    },
+    {
+      "modulo": "m02",
+      "domanda": "Quando un indicatore scende sotto la soglia, l’organizzazione deve:",
+      "opzioni": [
+        "attendere il rinnovo triennale",
+        "attivare i meccanismi di comunicazione previsti e azioni per rimuovere le cause",
+        "eliminare l’indicatore dal piano",
+        "modificare il metodo di calcolo"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "La certificazione deve considerare:",
+      "opzioni": [
+        "solo la sede legale",
+        "tutti i siti, filiali, sedi secondarie, attività e processi con personale operativo",
+        "solo i reparti con lavoro agile",
+        "solo le sedi scelte dall’organizzazione"
+      ],
+      "corretta": 1
+    },
+    {
+      "modulo": "m04",
+      "domanda": "Per un’azienda con 4 addetti nelle funzioni direttamente coinvolte e 96 in produzione e altri uffici, gli addetti equivalenti ai fini dei tempi di audit sono:",
+      "opzioni": [
+        "100",
+        "13,6",
+        "9,6",
+        "50"
+      ],
+      "corretta": 1
+    }
+  ]
+}

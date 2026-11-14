@@ -74,6 +74,18 @@ const CASI = {
     [{ st: "0", vol: "no" }, { tot: "40", esito: "Conforme" }],
     [{ o: "" }, { tot: "—", esito: "—" }],
   ],
+  // UNI/PdR 192:2026 (fadpdr192)
+  pdr192: [
+    [{}, { pt: "15,75", pc: "67,7%", esito: "Possibile" }],
+    [{ ql: "5", qn: "3" }, { pt: "6,75", pc: "29%", esito: "Non ancora" }],
+    [{ ql: "19", qn: "0" }, { pt: "14,25", pc: "61,3%", esito: "Non ancora" }],
+    [{ ql: "13", qn: "5" }, { pt: "14,75", pc: "63,4%", esito: "Possibile" }],
+    [{ f: "2", ql: "14", qn: "1" }, { pt: "11,5", pc: "49,5%", esito: "Non ancora" }],
+    [{ f: "2", ql: "12", qn: "3" }, { pt: "12", pc: "51,6%", esito: "Possibile" }],
+    [{ f: "4", ql: "16", qn: "1" }, { pt: "13", esito: "Non ancora" }],
+    [{ ql: "20" }, { pt: "—", esito: "—" }],
+    [{ qn: "" }, { pt: "—", esito: "—" }],
+  ],
 };
 
 const FONTS = "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap";

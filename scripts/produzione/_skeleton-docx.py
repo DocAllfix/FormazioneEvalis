@@ -569,6 +569,46 @@ CORSI = {
         "piede": "SA8000:2026 in pratica — Evalis Academy",
         "file": "Evalis_Academy_SA8000-2026_FAD-SA8000-02_Approvazione.docx",
     },
+    "fadpdr192": {
+        "copertura": {
+            1: "UNI/PdR 192:2026 Introduzione, punti 1-4",
+            2: "UNI/PdR 192:2026 punto 5",
+            3: "UNI/PdR 192:2026 punto 6",
+            4: "UNI/PdR 192:2026 Appendice A; incentivi",
+        },
+        "tipo_documento": "normativa",
+        "titolo_corso": "CONCILIAZIONE VITA FAMILIARE-LAVORO: LA UNI/PdR 192:2026",
+        "titolo_doc": "PROPOSTA DIDATTICA — CORSO UNI/PdR 192:2026",
+        "presentazione": "Il presente documento raccoglie la struttura didattica del corso FAD-PDR192-01 sulla UNI/PdR "
+            "192:2026, la prassi di riferimento UNI per i sistemi di gestione della conciliazione tra vita familiare e lavoro. "
+            "Il corso nasce dal materiale didattico già redatto (quattro moduli da due ore con checkpoint, simulatore di "
+            "punteggio e il caso studio Conserve Alifane) e ne conserva ordine, regole ed esempi. Ogni slide è narrata dal "
+            "relatore avatar, con lo stesso standard di voce, impaginazione e verifica dei corsi già in catalogo; i checkpoint "
+            "e il simulatore diventano esercizi guidati narrati e, sullo schermo, prove interattive. Requisiti, indicatori, "
+            "soglie, fasce e regole di certificazione del materiale sono stati verificati sul testo ufficiale della prassi; "
+            "gli incentivi sulle fonti ufficiali (Accredia, decreto-legge 62/2026, avviso Unioncamere).",
+        "titolo_sintesi": "Conciliazione vita familiare-lavoro: la UNI/PdR 192:2026",
+        "ore": 8,
+        "verifiche": "Ogni modulo è una lezione della piattaforma e si chiude con un checkpoint di verifica (quiz con domande "
+            "estratte da banca dati, non conteggiato nel monte ore), costruito sui checkpoint e sui test di fine modulo del "
+            "materiale didattico. Il corso si chiude con l'esame finale: 15 domande estratte dalla banca, soglia del 75% "
+            "(12 su 15, come nel materiale didattico).",
+        "obiettivi": [
+            "Spiegare perché esiste la UNI/PdR 192:2026, a chi si applica e come si collega alla UNI/PdR 125:2022",
+            "Impostare politica, gruppo di lavoro, piano strategico e azioni richiesti dal punto 5",
+            "Calcolare e documentare i 28 indicatori e il punteggio di accesso alla certificazione",
+            "Applicare la prassi in organizzazioni di dimensione e settore diversi e preparare la certificazione",
+        ],
+        "dettagli": [
+            "Destinatari: consulenti di sistemi di gestione, responsabili HR e welfare, gruppo di lavoro interno, auditor interni, direzioni aziendali",
+            "Checkpoint: uno per modulo, bloccante, cinque domande estratte da una banca di almeno dieci, soglia 80%",
+            "Esame finale: quindici domande estratte dalla banca, soglia 75% (12 su 15)",
+            "Attestato: attestato di formazione EVALIS Academy al superamento dell'esame finale",
+            "Modalità: FAD asincrona con relatore avatar su ogni slide · Prezzo: 250 €, IVA esclusa",
+        ],
+        "piede": "Conciliazione vita familiare-lavoro: la UNI/PdR 192:2026 — Evalis Academy",
+        "file": "Evalis_Academy_PdR192-2026_FAD-PDR192-01_Approvazione.docx",
+    },
 }
 if corso not in CORSI:
     sys.exit(f"{corso}: testi del corso mancanti in CORSI (copertura, presentazione, obiettivi...)")

@@ -1,0 +1,500 @@
+[
+  {
+    "modulo": "m01",
+    "sezione": 6,
+    "tipo": "scelta",
+    "titolo": "Checkpoint 1 · Il contesto",
+    "dati": {
+      "q": "Secondo i dati richiamati dalla prassi, quali sono le due motivazioni prevalenti delle dimissioni delle lavoratrici madri, su cui l’azienda può intervenire?",
+      "o": [
+        "Retribuzione insufficiente e distanza casa-lavoro",
+        "Assenza di servizi di cura e organizzazione del lavoro",
+        "Mancanza di formazione e scarse prospettive di carriera",
+        "Contratti a termine e stagionalità"
+      ],
+      "a": 1,
+      "f": "Servizi e organizzazione sono le due leve aziendali: su queste si concentrano requisiti e KPI.",
+      "r": 3
+    }
+  },
+  {
+    "modulo": "m01",
+    "sezione": 13,
+    "tipo": "abbina",
+    "titolo": "Checkpoint 2 · I termini",
+    "dati": {
+      "q": "Associa ogni descrizione al termine corretto.",
+      "cats": [
+        "Addetto/a",
+        "Caregiver",
+        "Lavoro agile",
+        "Telelavoro",
+        "Gruppo di lavoro interno"
+      ],
+      "items": [
+        [
+          "Coadiuvante familiare che lavora nell’impresa senza retribuzione contrattuale prefissata",
+          0
+        ],
+        [
+          "Impiegata che lavora da casa tre giorni a settimana, per obiettivi, senza orario fisso, in base a un accordo individuale",
+          2
+        ],
+        [
+          "Operaio che assiste gratuitamente e in modo continuativo il padre non autosufficiente",
+          1
+        ],
+        [
+          "Addetto al data entry che lavora da casa dalle 9 alle 17 con postazione fornita dall’azienda",
+          3
+        ],
+        [
+          "Responsabile HR, RLS, capoturno e referente qualità che seguono il piano e i KPI",
+          4
+        ]
+      ],
+      "f": "La distinzione agile/telelavoro conta per il KPI sul lavoro a distanza; quella di addetto per fasce e percentuali.",
+      "r": 11
+    }
+  },
+  {
+    "modulo": "m01",
+    "sezione": 18,
+    "tipo": "scelta",
+    "titolo": "Checkpoint 3 · Struttura e metodo",
+    "dati": {
+      "q": "Un’azienda di 60 addetti raggiunge il 62% del punteggio soddisfacendo solo indicatori qualitativi e un indicatore quantitativo. Può accedere alla certificazione?",
+      "o": [
+        "Sì: ha superato il 60%",
+        "No: in fascia 3 servono almeno 2 indicatori quantitativi soddisfatti",
+        "Sì, purché presenti un piano di miglioramento",
+        "No: in fascia 3 la soglia è il 70%"
+      ],
+      "a": 1,
+      "f": "In fascia 3 e 4 le condizioni sono due: 60% di punteggio e almeno 2 quantitativi.",
+      "r": 16
+    }
+  },
+  {
+    "modulo": "m01",
+    "sezione": 22,
+    "tipo": "scelta",
+    "titolo": "Checkpoint 4 · Fasce e addetti",
+    "dati": {
+      "q": "Uno studio professionale ha 2 soci che lavorano nello studio, 4 dipendenti (uno in congedo di maternità) e 1 apprendista. In quale fascia rientra e con quale soglia?",
+      "o": [
+        "Non rientra: sotto i 10 dipendenti la prassi non si applica",
+        "Fascia 1 (micro), 7 addetti, soglia 50% e almeno 1 KPI quantitativo",
+        "Fascia 1 (micro), 4 addetti, soglia 60%",
+        "Fascia 2 (piccola), soglia 50% e almeno 2 KPI quantitativi"
+      ],
+      "a": 1,
+      "f": "Titolari operativi, apprendisti e persone temporaneamente assenti sono addetti: 2 + 4 + 1 = 7.",
+      "r": 10
+    }
+  },
+  {
+    "modulo": "m01",
+    "sezione": 23,
+    "tipo": "scelta",
+    "titolo": "Checkpoint 5 · Natura della prassi",
+    "dati": {
+      "q": "Quale affermazione sulla UNI/PdR 192:2026 è corretta?",
+      "o": [
+        "È una norma tecnica obbligatoria per le imprese con più di 50 dipendenti",
+        "Si applica solo al settore privato",
+        "È un documento volontario che definisce requisiti di sistema, KPI e regole per la certificazione di terza parte",
+        "Sostituisce la UNI/PdR 125:2022"
+      ],
+      "a": 2,
+      "f": "Volontaria, applicabile a privato e (compatibilmente) pubblico, complementare alla PdR 125.",
+      "r": 6
+    }
+  },
+  {
+    "modulo": "m02",
+    "sezione": 6,
+    "tipo": "scelta",
+    "titolo": "Checkpoint 1 · Politica e ruoli",
+    "dati": {
+      "q": "Quale di queste situazioni NON soddisfa i requisiti sulla politica?",
+      "o": [
+        "La politica è firmata dall’amministratore dopo il confronto con il gruppo di lavoro",
+        "La politica è pubblicata sul sito e affissa in bacheca",
+        "La politica è stata scritta dal consulente e archiviata nel manuale, senza formazione ai responsabili",
+        "La politica viene confermata ogni anno nel verbale di revisione"
+      ],
+      "a": 2,
+      "f": "Mancano diffusione e formazione/sensibilizzazione al management (5.1.3 b e c).",
+      "r": 3
+    }
+  },
+  {
+    "modulo": "m02",
+    "sezione": 12,
+    "tipo": "abbina",
+    "titolo": "Checkpoint 2 · Pianificazione",
+    "dati": {
+      "q": "Chi fa che cosa? Associa ogni attività al soggetto indicato dalla prassi.",
+      "cats": [
+        "Alta direzione",
+        "Gruppo di lavoro interno",
+        "Auditor interni indipendenti"
+      ],
+      "items": [
+        [
+          "Redige il piano strategico",
+          1
+        ],
+        [
+          "Approva il piano strategico",
+          0
+        ],
+        [
+          "Definisce la politica, in coordinamento con il gruppo",
+          0
+        ],
+        [
+          "Collabora alla raccolta dati e analizza i KPI",
+          1
+        ],
+        [
+          "Verifica l’effettiva applicazione di politica e procedure",
+          2
+        ],
+        [
+          "Nomina la figura responsabile",
+          0
+        ]
+      ],
+      "f": "Redazione al gruppo, approvazione alla direzione, verifica a chi è indipendente dalle attività controllate.",
+      "r": 6
+    }
+  },
+  {
+    "modulo": "m02",
+    "sezione": 15,
+    "tipo": "scelta",
+    "titolo": "Checkpoint 3 · Selezione",
+    "dati": {
+      "q": "Durante un colloquio il titolare di una piccola impresa chiede a una candidata se ha intenzione di avere figli «per organizzare meglio il lavoro». Come va trattato il caso nel sistema?",
+      "o": [
+        "È accettabile se la domanda è posta a tutti i candidati",
+        "È una violazione del requisito 5.3.3: va gestita come situazione non conforme e prevenuta con procedura, traccia di colloquio e formazione",
+        "È accettabile nelle micro e piccole imprese per il principio di proporzionalità",
+        "È rilevante solo se la candidata non viene assunta"
+      ],
+      "a": 1,
+      "f": "Il divieto vale per tutte le dimensioni e a prescindere dall’esito della selezione.",
+      "r": 13
+    }
+  },
+  {
+    "modulo": "m02",
+    "sezione": 19,
+    "tipo": "abbina",
+    "titolo": "Checkpoint 4 · Dove si colloca la misura",
+    "dati": {
+      "q": "A quale punto della prassi risponde ciascuna misura?",
+      "cats": [
+        "5.3.2 Cultura e formazione",
+        "5.3.3 Selezione",
+        "5.3.4 Carriera",
+        "5.3.5 Genitorialità e cura",
+        "5.3.6 Organizzazione del lavoro"
+      ],
+      "items": [
+        [
+          "Matrice di polivalenza per rendere sostituibili le figure critiche",
+          2
+        ],
+        [
+          "Sportello di ascolto HR il martedì e il giovedì",
+          0
+        ],
+        [
+          "Convenzione con un centro estivo e bonus alla nascita",
+          3
+        ],
+        [
+          "Regola: nessuna riunione dopo le 16:30",
+          4
+        ],
+        [
+          "Lista delle domande vietate nei colloqui",
+          1
+        ],
+        [
+          "Colloquio di rientro e affiancamento dopo il congedo",
+          3
+        ],
+        [
+          "Bacheca per lo scambio dei turni",
+          4
+        ]
+      ],
+      "f": "Saper collocare ogni misura sul requisito serve per costruire la matrice requisiti-evidenze dell’audit.",
+      "r": 17
+    }
+  },
+  {
+    "modulo": "m02",
+    "sezione": 24,
+    "tipo": "scelta",
+    "titolo": "Checkpoint 5 · Meccanismi di sistema",
+    "dati": {
+      "q": "Quale combinazione di frequenze minime è corretta secondo la prassi?",
+      "o": [
+        "Piano aggiornato ogni tre anni, audit interno annuale, revisione annuale",
+        "Piano aggiornato almeno ogni anno, audit interni annuali, revisione almeno annuale, verifica dei KPI almeno annuale",
+        "Piano aggiornato ogni anno, audit interno triennale, revisione semestrale",
+        "Nessuna frequenza è prescritta: decide l’organizzazione"
+      ],
+      "a": 1,
+      "f": "Quattro cadenze annuali: aggiornamento del piano, audit interni, revisione, verifica interna dei KPI.",
+      "r": 22
+    }
+  },
+  {
+    "modulo": "m03",
+    "sezione": 4,
+    "tipo": "calcolo",
+    "titolo": "Checkpoint 1 · Calcolo del punteggio",
+    "dati": {
+      "q": "Un’impresa di 35 addetti soddisfa 10 indicatori qualitativi e 4 quantitativi. Quanti punti totalizza?",
+      "a": 11.5,
+      "tol": 0.01,
+      "u": "punti",
+      "f": "10 × 0,75 + 4 × 1 = 11,5 punti, cioè il 49,5%: per pochissimo sotto la soglia di 11,625. Basta un qualitativo in più.",
+      "w": "Qualitativi a 0,75, quantitativi a 1.",
+      "r": 1
+    }
+  },
+  {
+    "modulo": "m03",
+    "sezione": 7,
+    "tipo": "calcolo",
+    "titolo": "Checkpoint 2 · Lavoro agile",
+    "dati": {
+      "q": "Conserve Alifane (fascia 3) ha 30 posizioni eligibili al lavoro agile; 14 addetti lo utilizzano. Calcola l’indicatore in percentuale (un decimale).",
+      "a": 46.7,
+      "tol": 0.15,
+      "u": "%",
+      "f": "14 / 30 = 46,7%: sopra la soglia del 40% prevista per medie e grandi. Un punto acquisito.",
+      "w": "Il denominatore sono le posizioni eligibili, non il totale addetti.",
+      "r": 4
+    }
+  },
+  {
+    "modulo": "m03",
+    "sezione": 11,
+    "tipo": "scelta",
+    "titolo": "Checkpoint 3 · Genitorialità",
+    "dati": {
+      "q": "In un’azienda, nell’ultimo biennio 12 lavoratori sono diventati padri; 4 hanno usato il congedo parentale. L’indicatore «padri che usufruiscono del congedo parentale» è raggiunto?",
+      "o": [
+        "No: 4 su 12 è il 33,3%, sotto la soglia del 65%",
+        "Sì: 4 su 12 è il 33,3%, sopra la soglia del 25%",
+        "No: servono almeno 35 padri",
+        "Sì, ma vale solo 0,75 punti"
+      ],
+      "a": 1,
+      "f": "La soglia del 65% riguarda il congedo di paternità; per il congedo parentale è il 25%. Indicatore quantitativo: 1 punto.",
+      "r": 8
+    }
+  },
+  {
+    "modulo": "m03",
+    "sezione": 16,
+    "tipo": "calcolo",
+    "titolo": "Checkpoint 4 · Retention",
+    "dati": {
+      "q": "In Conserve Alifane, 9 persone sono rientrate da un congedo 24 mesi fa; oggi 7 sono ancora in forza. Calcola il tasso di retention a 24 mesi in percentuale (un decimale).",
+      "a": 77.8,
+      "tol": 0.15,
+      "u": "%",
+      "f": "7 / 9 = 77,8%: sotto la soglia dell’80%. L’indicatore non è raggiunto: zero punti, perché non esistono punteggi parziali.",
+      "w": "Persone ancora in forza diviso persone rientrate.",
+      "r": 14
+    }
+  },
+  {
+    "modulo": "m03",
+    "sezione": 18,
+    "tipo": "simulatore",
+    "titolo": "Simulatore di punteggio"
+  },
+  {
+    "modulo": "m03",
+    "sezione": 19,
+    "tipo": "calcolo",
+    "titolo": "Checkpoint 5 · Usa il simulatore",
+    "dati": {
+      "q": "Torna al simulatore, carica «Caso studio: dopo il piano» e togli l’indicatore sulla partecipazione agli screening (campagna andata sotto il 40%). Quale percentuale ottiene Conserve Alifane? (un decimale)",
+      "a": 63.4,
+      "tol": 0.15,
+      "u": "%",
+      "f": "15,75 − 1 = 14,75 punti su 23,25 = 63,4%. Ancora sopra il 60% con 5 quantitativi: il margine di sicurezza ha funzionato.",
+      "w": "Usa «Indietro» per tornare al simulatore, carica il preset e deseleziona l’indicatore dell’area 5.",
+      "r": 17
+    }
+  },
+  {
+    "modulo": "m03",
+    "sezione": 22,
+    "tipo": "abbina",
+    "titolo": "Checkpoint 6 · Quantitativo o qualitativo",
+    "dati": {
+      "q": "Classifica ciascun indicatore.",
+      "cats": [
+        "Quantitativo · 1 punto",
+        "Qualitativo · 0,75 punti"
+      ],
+      "items": [
+        [
+          "Part-time reversibile o temporaneo disponibile",
+          1
+        ],
+        [
+          "Tasso di rientro dopo il congedo di maternità",
+          0
+        ],
+        [
+          "Numero di convenzioni attive con fornitori di servizi per le famiglie",
+          0
+        ],
+        [
+          "Supporto psicologico o consulenza su temi familiari",
+          1
+        ],
+        [
+          "Partecipazione a campagne di screening proposte dall’azienda",
+          0
+        ],
+        [
+          "Piano di welfare strutturato con budget per la famiglia",
+          1
+        ],
+        [
+          "Media dei giorni di congedo parentale dei padri",
+          0
+        ],
+        [
+          "Permessi per caregiver aggiuntivi rispetto alla legge",
+          1
+        ]
+      ],
+      "f": "I 9 quantitativi sono quelli con una soglia numerica: 2 nell’area 1, 3 nell’area 3, 1 nell’area 5, 1 nell’area 6, 2 nell’area 7.",
+      "r": 1
+    }
+  },
+  {
+    "modulo": "m04",
+    "sezione": 7,
+    "tipo": "scelta",
+    "titolo": "Checkpoint 1 · Proporzionalità",
+    "dati": {
+      "q": "Un’azienda di 180 addetti offre lavoro agile, sportello psicologico e convenzioni solo al personale della sede direzionale (25 persone); nei due stabilimenti non c’è alcuna misura. Come valuti la situazione?",
+      "o": [
+        "Conforme: la prassi chiede le misure solo dove sono compatibili",
+        "Critica: equilibrio vita-lavoro e flessibilità devono rivolgersi a tutti gli addetti; servono misure adatte agli stabilimenti e i KPI vanno calcolati sull’intera organizzazione",
+        "Conforme, purché la sede direzionale sia l’unica inserita nel certificato",
+        "Critica solo se gli stabilimenti superano i 250 addetti"
+      ],
+      "a": 1,
+      "f": "Non si possono escludere siti, processi o funzioni: il sistema copre tutta l’entità giuridica. Per gli stabilimenti servono strumenti diversi dal lavoro agile.",
+      "r": 5
+    }
+  },
+  {
+    "modulo": "m04",
+    "sezione": 11,
+    "tipo": "abbina",
+    "titolo": "Checkpoint 2 · Misure e contesti",
+    "dati": {
+      "q": "Scegli, per ogni situazione, la leva più adatta.",
+      "cats": [
+        "Scambio turni e polivalenza",
+        "Lavoro agile a rotazione",
+        "Rete territoriale di servizi",
+        "Integrazione dell’indennità di congedo",
+        "Campagna in azienda in orario retribuito"
+      ],
+      "items": [
+        [
+          "Operatori di linea che non riescono a gestire visite e colloqui scolastici",
+          0
+        ],
+        [
+          "Cinque piccole imprese della stessa area industriale senza servizi per i figli in estate",
+          2
+        ],
+        [
+          "Padri che non usano il congedo parentale per la perdita di reddito",
+          3
+        ],
+        [
+          "Impiegati amministrativi con lunghi tempi di pendolarismo",
+          1
+        ],
+        [
+          "Adesione agli screening ferma al 20% fra i turnisti",
+          4
+        ]
+      ],
+      "f": "Ogni vincolo ha la sua leva: è il ragionamento da riportare nel piano strategico.",
+      "r": 8
+    }
+  },
+  {
+    "modulo": "m04",
+    "sezione": 16,
+    "tipo": "calcolo",
+    "titolo": "Checkpoint 3 · Addetti equivalenti",
+    "dati": {
+      "q": "Un’azienda di 60 addetti ha 2 persone in Direzione, 2 in HR e 1 nel Sistema di gestione; le altre 55 lavorano in produzione e in altri uffici. Quanti addetti equivalenti si considerano per i tempi di audit?",
+      "a": 10.5,
+      "tol": 0.05,
+      "u": "addetti",
+      "f": "5 al 100% + 55 al 10% = 5 + 5,5 = 10,5 addetti equivalenti.",
+      "w": "100% delle funzioni direttamente coinvolte, 10% delle altre.",
+      "r": 14
+    }
+  },
+  {
+    "modulo": "m04",
+    "sezione": 19,
+    "tipo": "scelta",
+    "titolo": "Checkpoint 4 · Regole di certificazione",
+    "dati": {
+      "q": "Durante lo stage 1 emerge che l’azienda ha in corso una causa di lavoro per il mancato rinnovo del contratto a una lavoratrice in gravidanza. Che cosa prevede l’Appendice A?",
+      "o": [
+        "La certificazione è automaticamente preclusa",
+        "La presenza di un esperto tecnico giuslavorista nel gruppo di audit diventa obbligatoria, per approfondire il quadro giuridico",
+        "Nulla: le cause in corso non rilevano fino a sentenza definitiva",
+        "L’audit è sospeso fino alla conclusione della causa"
+      ],
+      "a": 1,
+      "f": "La causa va dichiarata e analizzata; il gruppo di audit si integra con un giuslavorista.",
+      "r": 16
+    }
+  },
+  {
+    "modulo": "m04",
+    "sezione": 22,
+    "tipo": "scelta",
+    "titolo": "Checkpoint 5 · Gestire uno scostamento",
+    "dati": {
+      "q": "Alla prima sorveglianza il tasso di rientro post-maternità di un’azienda è sceso dal 100% all’83% (5 rientri su 6): l’indicatore non è più raggiunto e il punteggio scende al 58% (fascia 3). Qual è il comportamento corretto dell’organizzazione?",
+      "o": [
+        "Arrotondare il tasso al 90%, trattandosi di un solo caso",
+        "Non riportare l’indicatore nel cruscotto di quest’anno",
+        "Registrare la situazione non conforme, analizzarne le cause, attivare azioni e recuperare punteggio su altri indicatori pianificati, informando l’organismo",
+        "Chiedere di essere riclassificata in fascia 2"
+      ],
+      "a": 2,
+      "f": "È il meccanismo dei punti 5.4.2 e 5.4.5. Per questo conviene certificarsi con margine sopra soglia.",
+      "r": 20
+    }
+  }
+]

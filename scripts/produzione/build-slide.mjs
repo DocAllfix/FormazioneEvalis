@@ -243,6 +243,38 @@ const CALCOLATORI = {
       return r;
     },
   },
+  // UNI/PdR 192:2026 (fadpdr192), punto 6.1: qualitativi 0,75, quantitativi 1, nessun parziale; 28 indicatori
+  // (19 qualitativi, 9 quantitativi) = 23,25 punti; soglia 50% e almeno 1 quantitativo (fasce 1-2), 60% e almeno 2
+  // (fasce 3-4). Il calcolo sul massimo di 23,25 è l'interpretazione operativa dichiarata del committente.
+  pdr192: {
+    guida: "Cambia la fascia e il numero di indicatori soddisfatti: punti, percentuale ed esito si ricalcolano.",
+    valori: { f: "3", ql: 13, qn: 6 },
+    ingressi: {
+      f: { l: "Fascia dimensionale", opzioni: [["1", "1 · micro"], ["2", "2 · piccola"], ["3", "3 · media"], ["4", "4 · grande"]] },
+      ql: { l: "Indicatori qualitativi soddisfatti (su 19)", u: "" },
+      qn: { l: "Indicatori quantitativi soddisfatti (su 9)", u: "" },
+    },
+    uscite: {
+      pt: { l: "Punteggio", u: "su 23,25", passo: true },
+      pc: { l: "Percentuale", u: "", passo: true },
+      esito: { l: "Accesso alla certificazione", u: "", passo: true },
+    },
+    nota: "Qualitativi 0,75 punti, quantitativi 1 punto, nessun punteggio parziale. Fasce 1 e 2: almeno il 50% e almeno 1 quantitativo; fasce 3 e 4: almeno il 60% e almeno 2 quantitativi. Percentuale calcolata sul massimo dei 28 indicatori (23,25 punti).",
+    calcola: function (v) {
+      function f(x, d) { return x.toLocaleString("it-IT", { maximumFractionDigits: d }); }
+      var r = { pt: "—", passo_pt: "", pc: "—", passo_pc: "", esito: "—", passo_esito: "" };
+      var ql = v.ql, qn = v.qn;
+      if (!(typeof ql === "number" && ql % 1 === 0 && ql >= 0 && ql <= 19 && typeof qn === "number" && qn % 1 === 0 && qn >= 0 && qn <= 9)) return r;
+      var fa = Number(v.f), soglia = fa <= 2 ? 0.5 : 0.6, minq = fa <= 2 ? 1 : 2;
+      var pt = ql * 0.75 + qn, pc = pt / 23.25, serve = 23.25 * soglia;
+      r.pt = f(pt, 2); r.passo_pt = ql + " × 0,75 + " + qn + " × 1";
+      r.pc = f(Math.round(pc * 1000) / 10, 1) + "%"; r.passo_pc = "soglia " + (soglia * 100) + "% = " + f(serve, 3) + " punti";
+      if (pc >= soglia && qn >= minq) { r.esito = "Possibile"; r.passo_esito = "punteggio e quantitativi minimi raggiunti"; }
+      else if (pc < soglia) { r.esito = "Non ancora"; r.passo_esito = "mancano " + f(Math.round((serve - pt) * 1000) / 1000, 3) + " punti"; }
+      else { r.esito = "Non ancora"; r.passo_esito = "servono almeno " + minq + " quantitativi"; }
+      return r;
+    },
+  },
 };
 
 const LAYOUTS = {
